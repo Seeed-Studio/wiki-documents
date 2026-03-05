@@ -2,12 +2,15 @@
 description: Rainbowduino拡張ボード v0.9b
 title: Rainbowduino拡張ボード v0.9b
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino_Extension_Board_v0.9b
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Rainbowduino_Extension_Board_v0.9b/
 ---
 
 

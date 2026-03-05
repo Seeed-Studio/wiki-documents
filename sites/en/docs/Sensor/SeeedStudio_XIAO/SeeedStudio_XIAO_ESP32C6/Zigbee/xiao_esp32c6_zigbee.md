@@ -7,6 +7,9 @@ sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024
   author: Citric
+createdAt: '2024-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32c6_zigbee/
 ---
 
 Zigbee is a widely adopted wireless communication protocol that finds extensive use in home automation, smart energy management, and Internet of Things (IoT) applications. Known for its low power consumption, reliable data transmission, and mesh network capabilities, Zigbee is an excellent choice for building scalable and efficient wireless networks.

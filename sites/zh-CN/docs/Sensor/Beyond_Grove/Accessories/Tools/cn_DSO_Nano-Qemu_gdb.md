@@ -1,6 +1,6 @@
 ---
 title: DSO Nano/Qemu gdb
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DSO_Nano-Qemu_gdb
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DSO_Nano-Qemu_gdb/
 ---
 
 ## 在 qemu 模拟器上运行 STM32 代码

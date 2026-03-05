@@ -2,13 +2,16 @@
 description: Grove - 4-Digit Display
 title: Grove - 4-Digit Display
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-4-Digit_Display
 sku: 104030003
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-4-Digit_Display/
 ---
 
 [<p><img src="https://files.seeedstudio.com/wiki/Grove-4-Digit_Display/img/Grove-4_digit_display.jpg" alt="pir" width={600} height="auto" /></p>

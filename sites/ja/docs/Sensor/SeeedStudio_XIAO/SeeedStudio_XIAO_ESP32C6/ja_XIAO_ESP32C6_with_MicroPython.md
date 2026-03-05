@@ -6,6 +6,9 @@ slug: /xiao_esp32c6_micropython
 last_update:
   date: 08/30/2023
   author: Hendra
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_micropython/
 ---
 
 # XIAO ESP32C6 用 Micropython

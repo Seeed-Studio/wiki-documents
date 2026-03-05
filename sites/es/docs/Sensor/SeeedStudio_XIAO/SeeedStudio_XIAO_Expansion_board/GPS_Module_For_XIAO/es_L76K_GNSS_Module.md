@@ -10,8 +10,11 @@ slug: /get_start_l76k_gnss
 sku: 109100021
 sidebar_position: 0
 last_update:
-  date: 2024-10-14
+  date: 2024-10-14T00:00:00.000Z
   author: Spencer
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/get_start_l76k_gnss/
 ---
 
 # Comenzando con el Módulo GNSS L76K para SeeedStudio XIAO

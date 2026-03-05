@@ -3,8 +3,8 @@ sidebar_position: 1
 description: Download APP
 title: SenseCraft Hotspot APP
 keywords:
-- Cloud and Chain
-- SenseCAP 
+  - Cloud and Chain
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app
 aliases:
@@ -12,6 +12,9 @@ aliases:
 last_update:
   date: 09/18/2023
   author: Jessie
+createdAt: '2023-09-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/
 ---
 
 SenseCAP Hotspot APP is a powerful APP mainly used for data visualization and remote device management for SenseCAP MX Hotspot.

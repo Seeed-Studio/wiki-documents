@@ -2,14 +2,17 @@
 description: XIAO 圆形屏动画工作坊
 title: XIAO ESP32-S3 与 LVGL 优化指南
 keywords:
-- XIAO
-- Round Display
-- LVGL
-- Animation
+  - XIAO
+  - Round Display
+  - LVGL
+  - Animation
 slug: /round_display_animation_workshop
 last_update:
- date: 02/23/2026
- author: Sunil Pedapudi
+  date: 02/23/2026
+  author: Sunil Pedapudi
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/round_display_animation_workshop/
 ---
 
 # 动画工作坊：XIAO ESP32-S3 与 LVGL 优化指南

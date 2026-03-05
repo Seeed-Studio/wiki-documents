@@ -11,7 +11,10 @@ sku: 113991274,E24010521
 last_update:
   date: 06/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/
 ---
 
 # Hailo-8LによるreComputer R1000でのYOLOv8オブジェクト検出

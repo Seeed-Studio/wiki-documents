@@ -2,13 +2,16 @@
 description: Proyecto Uno - Doble Parpadeo
 title: Proyecto Uno - Doble Parpadeo
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_One-Double_Blink
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Project_One-Double_Blink/
 ---
 <!-- ---
 name: Project One - Double Blink

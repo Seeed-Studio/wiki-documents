@@ -2,18 +2,21 @@
 description: 本 wiki 展示如何在 reComputer Jetson 上部署和使用 Clawdbot。
 title: 在 reComputer Jetson 上使用 Ollama 运行本地 OpenClaw（Clawdbot）
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Clawdbot
-- Qwen
-- Ollama
+  - reComputer
+  - Jetson
+  - LLM
+  - Clawdbot
+  - Qwen
+  - Ollama
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops_homepage.webp
 slug: /local_openclaw_on_recomputer_jetson
 sku: 114110314, 114090066
 last_update:
   date: 02/3/2026
   author: Youjiang
+createdAt: '2026-02-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/local_openclaw_on_recomputer_jetson/
 ---
 
 ## 概述

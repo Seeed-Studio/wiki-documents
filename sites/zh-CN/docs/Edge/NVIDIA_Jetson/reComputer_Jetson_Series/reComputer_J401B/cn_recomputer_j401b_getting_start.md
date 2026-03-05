@@ -2,13 +2,16 @@
 description: reComputer J401B 是一款紧凑型高性能边缘 AI 设备，搭载 NVIDIA Jetson Orin 模组，提供丰富的 I/O 接口，并支持 JetPack 5.1.3 至 6.2，适用于多种 AI 应用。本指南涵盖其规格参数、刷机说明以及接口使用，便于开发与部署。
 title: reComputer J401B 入门指南
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
 slug: /recomputer_j401b_getting_start
 sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025
   author: Youjiang
+createdAt: '2023-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_j401b_getting_start/
 ---
 
 # reComputer J401B 入门指南

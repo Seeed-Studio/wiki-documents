@@ -2,13 +2,16 @@
 description: 我们继续探索Seeed XIAO家族巨大的新型微型设备ESP32S3 Sense上的机器学习。
 title: XIAO ESP32S3 Sense关键词识别
 keywords:
-- speech
-- keywords
+  - speech
+  - keywords
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_keyword_spotting
 last_update:
   date: 07/20/2023
   author: Citric
+createdAt: '2023-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_keyword_spotting/
 ---
 
 # XIAO ESP32S3 Sense & Edge Impulse关键词识别

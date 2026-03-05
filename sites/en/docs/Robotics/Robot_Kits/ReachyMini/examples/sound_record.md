@@ -3,17 +3,21 @@ description: Example demonstrating audio recording from Reachy Mini's microphone
 title: Sound Recording
 slug: /reachymini_examples_sound_record
 keywords:
-- audio recording
-- microphone
-- wav file
-- soundfile
-- recording
-- microphone array
+  - audio recording
+  - microphone
+  - wav file
+  - soundfile
+  - recording
+  - microphone array
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_sound_record/
 ---
 
 # Sound Recording

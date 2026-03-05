@@ -1,6 +1,6 @@
 ---
 title: 1w 太阳能板 80*100
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /1w_Solar_Panel_80x100
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/1w_Solar_Panel_80x100/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/solarb.jpg)
 

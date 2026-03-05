@@ -2,12 +2,15 @@
 description: Este es un proyecto / plataforma de código abierto enfocado en IA embebida.
 title: Entrena y Despliega Tu Propio Modelo de IA
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /train_and_deploy_model
 last_update:
   date: 09/24/2024
   author: Frank
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/train_and_deploy_model/
 ---
 
 # Entrena y Despliega Tu Propio Modelo de IA

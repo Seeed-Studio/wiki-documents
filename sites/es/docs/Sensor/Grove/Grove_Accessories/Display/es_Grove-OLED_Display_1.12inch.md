@@ -2,13 +2,16 @@
 description: Grove - OLED Display 1.12&#34
 title: Grove - OLED Display 1.12&#34
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED_Display_1.12inch
 sku: 101020452, 104030011
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-OLED_Display_1.12inch/
 ---
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/main.jpg" />

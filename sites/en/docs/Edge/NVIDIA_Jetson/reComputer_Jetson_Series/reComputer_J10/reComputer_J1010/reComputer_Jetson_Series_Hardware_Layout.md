@@ -1,5 +1,5 @@
 ---
-description: reComputer for Jetson Series 
+description: reComputer for Jetson Series
 title: Hardware Layout for reComputer Series
 keywords:
   - Edge
@@ -9,6 +9,9 @@ slug: /reComputer_Jetson_Series_Hardware_Layout
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout/
 ---
 
 # Hardware Layout for reComputer

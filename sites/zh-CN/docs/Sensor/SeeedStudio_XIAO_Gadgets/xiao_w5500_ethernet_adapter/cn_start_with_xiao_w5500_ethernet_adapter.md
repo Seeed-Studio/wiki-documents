@@ -11,6 +11,9 @@ sku: 113100042
 last_update:
   date: 06/04/2025
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_w5500_ethernet_adapter/
 ---
 
 ## 简介

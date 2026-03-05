@@ -3,14 +3,17 @@ sidebar_position: 1
 title: 概述
 description: SenseCraft 数据平台快速入门指南 — 管理您的 SenseCAP 设备并通过安全可靠的云平台可视化传感器数据。
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cloud/sensecraft-data/sensecraft-data-platform/overview
 aliases:
   - /Cloud_Chain/SenseCAP_Portal/QuickStart
 last_update:
   date: 06/06/2025
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
 # SenseCraft 数据平台快速入门

@@ -2,9 +2,9 @@
 description: XIAO ESP32C6（MR60BHA2）を用いた 60GHz mmWave 呼吸・心拍検出センサキット入門
 title: MR60BHA2 入門ガイド
 keywords:
-- mmwave
-- radar
-- MR60BHA2
+  - mmwave
+  - radar
+  - MR60BHA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg
 slug: /getting_started_with_mr60bha2_mmwave_kit
 sku: 114993387
@@ -12,6 +12,9 @@ sidebar_position: 0
 last_update:
   date: 08/19/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_mr60bha2_mmwave_kit/
 ---
 
 # XIAO ESP32C6（MR60BHA2）を用いた 60GHz mmWave 呼吸・心拍検出センサキット入門

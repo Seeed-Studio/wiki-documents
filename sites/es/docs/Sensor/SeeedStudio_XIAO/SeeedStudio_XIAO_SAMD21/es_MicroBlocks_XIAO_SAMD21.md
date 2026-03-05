@@ -6,6 +6,9 @@ slug: /xiao_samd21_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks
+createdAt: '2025-09-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_samd21_microblocks/
 ---
 
 # XIAO SAMD21 con MicroBlocks

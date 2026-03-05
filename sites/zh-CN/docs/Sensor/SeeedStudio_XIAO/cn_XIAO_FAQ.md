@@ -6,6 +6,9 @@ slug: /XIAO_FAQ
 last_update:
   date: 7/6/2023
   author: Seraphina
+createdAt: '2023-11-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO_FAQ/
 ---
 
 本文档包含所有与 XIAO 相关的常见问题。如果您在使用 XIAO 时遇到任何问题，这将非常有帮助。

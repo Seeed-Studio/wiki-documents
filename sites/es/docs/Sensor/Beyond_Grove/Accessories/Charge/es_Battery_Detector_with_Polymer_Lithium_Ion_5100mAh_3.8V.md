@@ -2,12 +2,15 @@
 description: Detector de Batería con Ion de Litio Polímero 5100mAh 3.8V
 title: Detector de Batería con Ion de Litio Polímero 5100mAh 3.8V
 keywords:
-- Accessories charge
+  - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/
 ---
 
 

@@ -6,6 +6,9 @@ slug: /ODYSSEY-X86-TrueNAS
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ODYSSEY-X86-TrueNAS/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/TrueNAS/1.png" alt="pir" width={1000} height="auto" /></p>

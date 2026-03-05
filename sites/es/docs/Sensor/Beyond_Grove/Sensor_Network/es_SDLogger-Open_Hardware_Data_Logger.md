@@ -1,6 +1,6 @@
 ---
 title: SDLogger - Registrador de Datos de Hardware Abierto
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 105990002
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SDLogger-Open_Hardware_Data_Logger/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/sdlogger1.jpg)
 

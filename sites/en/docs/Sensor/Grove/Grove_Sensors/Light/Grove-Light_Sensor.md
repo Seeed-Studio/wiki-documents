@@ -2,13 +2,16 @@
 description: Grove - Light Sensor
 title: Grove - Light Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Light_Sensor
 sku: 101020132, 101020173, 101020022, 101020014, 114993647
 last_update:
   date: 1/5/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Light_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/cover.jpg" /></div>

@@ -6,6 +6,9 @@ slug: /XIAO_ESP32S3_Micropython
 last_update:
   date: 08/30/2023
   author: Hendra
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Micropython/
 ---
 
 # XIAO ESP32S3 Sense用Micropython（カメラ、Wi-Fi）

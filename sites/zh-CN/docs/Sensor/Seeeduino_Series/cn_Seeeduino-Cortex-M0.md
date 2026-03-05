@@ -2,13 +2,16 @@
 description: Seeeduino Cortex M0
 title: Seeeduino Cortex M0
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-Cortex-M0
 sku: 102010248
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino-Cortex-M0/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Cortex-M0-/img/102010248-wiki.jpg)

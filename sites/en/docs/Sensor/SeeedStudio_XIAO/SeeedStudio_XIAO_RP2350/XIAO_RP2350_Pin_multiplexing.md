@@ -2,13 +2,16 @@
 description: Pin Multiplexing on Seeed Studio XIAO RP2350
 title: Pin Multiplexing (Arduino)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png
 slug: /XIAO_RP2350_Pin_Multiplexing
 sidebar_position: 2
 last_update:
   date: 11/02/2024
   author: Allen
+createdAt: '2024-11-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO_RP2350_Pin_Multiplexing/
 ---
 
 # Pin Multiplexing (Arduino)

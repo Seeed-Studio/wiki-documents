@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 11/27/2024
   author: qiuyu wei
+createdAt: '2025-08-07'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/
 ---
 
 # 训练类型 - 目标检测

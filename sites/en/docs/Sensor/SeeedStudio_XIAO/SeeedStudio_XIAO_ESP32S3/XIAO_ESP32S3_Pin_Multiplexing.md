@@ -2,9 +2,9 @@
 description: Pin multiplexing with Seeed Studio XIAO ESP32S3.
 title: Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)
 keywords:
-- esp32s3
-- xiao
-- pin multiple
+  - esp32s3
+  - xiao
+  - pin multiple
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_pin_multiplexing
 sku: 113991114, 113991115
@@ -12,6 +12,9 @@ type: project
 last_update:
   date: 03/30/2023
   author: Citric
+createdAt: '2022-11-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
 ---
 
 # Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)

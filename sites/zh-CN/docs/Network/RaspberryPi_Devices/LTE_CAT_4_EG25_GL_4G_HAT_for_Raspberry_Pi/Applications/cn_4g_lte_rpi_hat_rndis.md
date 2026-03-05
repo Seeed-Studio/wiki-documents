@@ -12,6 +12,9 @@ slug: /raspberry_pi_4g_lte_hat_rndis
 last_update:
   date: 2025/3/17
   author: Kasun Thushara
+createdAt: '2025-03-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/raspberry_pi_4g_lte_hat_rndis/
 ---
 
 ## 介绍

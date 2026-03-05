@@ -1,13 +1,16 @@
 ---
 description: XIAO ESP32C3 con Zephyr(RTOS)
-title:  XIAO ESP32C3 con Zephyr(RTOS)
+title: XIAO ESP32C3 con Zephyr(RTOS)
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-ESP32C3-Zephyr
 last_update:
   date: 4/17/2023
   author: timo614
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-ESP32C3-Zephyr/
 ---
 
 # XIAO ESP32C3 con Zephyr(RTOS)

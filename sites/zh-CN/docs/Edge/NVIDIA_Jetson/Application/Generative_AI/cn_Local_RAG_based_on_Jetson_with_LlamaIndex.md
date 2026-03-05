@@ -12,7 +12,10 @@ slug: /Local_RAG_based_on_Jetson_with_LlamaIndex
 last_update:
   date: 05/15/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-05-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Local_RAG_based_on_Jetson_with_LlamaIndex/
 ---
 
 # 基于 Jetson 和 LlamaIndex 的本地 RAG

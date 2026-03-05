@@ -2,12 +2,15 @@
 description: Train and Deploy Your Own AI Model with Edge Impulse
 title: Train and Deploy Your Own AI Model with Edge Impulse
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /edge-impulse-vision-ai
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/edge-impulse-vision-ai/
 ---
 
 

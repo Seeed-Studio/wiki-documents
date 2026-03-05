@@ -4,9 +4,12 @@ title: RGBW Stripe WireLess Shield V1.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RGBW_Stripe_WireLess_Shield_V1.0
 last_update:
-  date: 02/02/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 02/02/2023
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/RGBW_Stripe_WireLess_Shield_V1.0/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RGBW_Stripe_WireLess_Shield_V1.0/img/RGBW_rev1_face.jpg" alt="pir" width={600} height="auto" /></p>

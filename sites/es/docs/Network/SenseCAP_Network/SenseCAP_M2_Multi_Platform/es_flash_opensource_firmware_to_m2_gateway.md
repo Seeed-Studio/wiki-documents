@@ -6,6 +6,9 @@ slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/flash_opensource_firmware_to_m2_gateway/
 ---
 
 Los gateways SenseCAP M2 representan una solución rentable para gateways LoRa, impulsados por la solución de hardware madura MT7628 y el chip de banda base de largo alcance Semtech SX1302. Los modelos específicos se distinguen por la banda de frecuencia configurada en fábrica (EU868/US915/AS923/AU915), módulo opcional (4G/GPS) y red LoRa compatible (LoRaWAN®/red Helium)

@@ -2,14 +2,17 @@
 description: OpenRemote is a fully open-source IoT platform that simplifies the connection of networked devices to mobile and web applications. With the ability to deploy on Raspberry Pi-powered devices like Recomputer R1000 and R1100, OpenRemote provides a flexible edge solution for managing and controlling IoT devices in your environment
 title: Deploying OpenRemote on reComputer R1x Manage IoT Devices at the Edge
 keywords:
-- IIoT
-- OpenRemote
-- Raspberry-Pi 
+  - IIoT
+  - OpenRemote
+  - Raspberry-Pi
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /openremote_r1x00
 last_update:
   date: 9/30/2025
   author: Kasun Thushara
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/openremote_r1x00/
 ---
 
 ## Introduction

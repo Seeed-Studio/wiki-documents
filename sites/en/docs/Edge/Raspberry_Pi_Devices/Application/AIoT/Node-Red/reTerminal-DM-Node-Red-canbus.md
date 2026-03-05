@@ -10,6 +10,9 @@ slug: /reTerminal-DM-Node-Red-canbus
 last_update:
   date: 04/28/2023
   author: Peter Pan
+createdAt: '2023-04-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-canbus/
 ---
 
 # reTerminal DM CAN BUS with Node-RED

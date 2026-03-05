@@ -2,19 +2,22 @@
 description: Este wiki demuestra cómo usar J501 Mini con el brazo robótico StarAI Viola para tareas de clasificación de frutas usando el framework LeRobot y el modelo ACT.
 title: Clasificación de Frutas con J501 Mini y Brazo StarAI Viola
 keywords:
-- J501 mini
-- Robotics
-- StarAI
-- Viola
-- LeRobot
-- ACT
-- Fruit Sorting
+  - J501 mini
+  - Robotics
+  - StarAI
+  - Viola
+  - LeRobot
+  - ACT
+  - Fruit Sorting
 image: https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png
 slug: /j501_mini_starai_viola_fruit_sorting
 sku: 100020039,114090080
 last_update:
   date: 2026-2-2
   author: Dayu
+createdAt: '2026-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/j501_mini_starai_viola_fruit_sorting/
 ---
 
 # 🍎 Clasificación de Frutas con J501 Mini y Brazo StarAI Viola

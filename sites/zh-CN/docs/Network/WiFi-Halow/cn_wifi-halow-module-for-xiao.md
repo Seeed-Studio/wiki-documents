@@ -8,6 +8,9 @@ sidebar_class_name: hidden
 last_update:
   date: 02/12/2025
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_with_wifi_halow_module_for_xiao/
 ---
 
 

@@ -1,11 +1,13 @@
 ---
 description: XIAO ESP32C3-FAQ
 title: ファクトリーファームウェアでブートローダーを再フラッシュする方法
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reflash_the_bootloader
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reflash_the_bootloader/
 ---
 **USB Type-C**経由でボードをPCに接続し、**ESP RF Test Tool**を使用してファクトリーファームウェアでブートローダーを再フラッシュすることができます。
 

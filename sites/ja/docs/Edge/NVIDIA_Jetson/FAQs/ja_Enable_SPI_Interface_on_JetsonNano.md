@@ -2,14 +2,17 @@
 description: Jetson-NanoでSPIインターフェースを有効にする
 title: Jetson-NanoでSPIインターフェースを有効にする
 keywords:
-- SPI
-- Jetson-nano
-- BSP
+  - SPI
+  - Jetson-nano
+  - BSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /enable_spi_interface_on_jetsonnano
 last_update:
   date: 07/02/2025
   author: Dayu
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/enable_spi_interface_on_jetsonnano/
 ---
 
 ## はじめに

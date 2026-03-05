@@ -3,7 +3,7 @@ description: このwikiでは、速度推定と徘徊検知にYOLOv11を使用�
 title: 速度推定と徘徊検知のためのYOLOv11
 keywords:
   - Edge
-  - reComputer AI 
+  - reComputer AI
   - YOLOv11
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,10 @@ slug: /yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
 last_update:
   date: 12/16/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer/
 ---
 
 # 速度推定と徘徊検知のためのYOLOv11

@@ -6,6 +6,9 @@ slug: /noport_upload_fails
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/noport_upload_fails/
 ---
 
 有时我们可能会因为使用了错误的程序，导致 XIAO 设备端口丢失或无法正常工作。具体表现为：

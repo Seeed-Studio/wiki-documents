@@ -2,13 +2,16 @@
 description: Mbed Shield
 title: Mbed Shield
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /mbed_Shield
 sku: 103030002
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/mbed_Shield/
 ---
 ![](https://files.seeedstudio.com/wiki/mbed_Shield/img/Mbed_Shield_01.jpg)
 

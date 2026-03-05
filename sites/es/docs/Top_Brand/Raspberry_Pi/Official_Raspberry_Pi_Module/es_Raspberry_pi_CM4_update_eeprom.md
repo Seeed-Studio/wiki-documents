@@ -2,13 +2,16 @@
 description: Actualizar eeprom
 title: Actualizar EEPROM para Compute Module 4
 keywords:
-- Raspberry_Pi
-- Official_Raspberry_Pi_Board
+  - Raspberry_Pi
+  - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_pi_CM4_update_eeprom
 last_update:
   date: 2/15/2023
   author: Peter Pan
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Raspberry_pi_CM4_update_eeprom/
 ---
 <!-- ---
 name: Actualizar eeprom

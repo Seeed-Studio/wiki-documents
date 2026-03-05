@@ -2,8 +2,8 @@
 description: Wio_Tracker_Introduction
 title: Introducción al Wio Tracker 1110
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Tracker_Introduction
 sku: 114993186
@@ -11,6 +11,9 @@ sidebar_position: 1
 last_update:
   date: 11/3/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Tracker_Introduction/
 ---
 
 

@@ -2,12 +2,15 @@
 description: FST-01
 title: FST-01
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /FST-01
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/FST-01/
 ---
 
 ![](https://files.seeedstudio.com/wiki/FST-01/img/FST-01_board.jpg)

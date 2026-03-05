@@ -2,13 +2,16 @@
 description: The Things Indoor Gateway
 title: The Things Indoor Gateway
 keywords:
-- Sorftware Mender
+  - Sorftware Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /The-Things-Indoor-Gateway
 sku: 114992464,114992469,114992468
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/The-Things-Indoor-Gateway/
 ---
 
 

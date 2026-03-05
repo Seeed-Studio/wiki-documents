@@ -2,12 +2,15 @@
 description: CUI32Stem
 title: CUI32Stem
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CUI32Stem
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/CUI32Stem/
 ---
 
 The Create USB Interface is an open source microcontroller board that can be programmed in C, BASIC, or Arduino languages. This latest version is called the CUI32Stem, which is designed to work ‘hand-in-hand’ with the GROVE prototyping system including a wide range of sensors and actuators. It utilizes a high-performance Microchip® PIC32 microcontroller, allowing programmable interaction with all sorts of user inventions, no soldering required! :)

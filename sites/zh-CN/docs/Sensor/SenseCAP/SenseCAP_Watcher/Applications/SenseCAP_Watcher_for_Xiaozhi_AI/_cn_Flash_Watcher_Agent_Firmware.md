@@ -3,16 +3,19 @@ description: 为您的SenseCAP Watcher小智版刷写固件的指南
 title: 刷写Watcher 小智版固件
 sidebar_position: 1
 keywords:
-- SenseCAP
-- Watcher
-- Agent
-- Firmware
-- Flash
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Firmware
+  - Flash
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
   date: 10/27/2025
   author: Twelve
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flash_watcher_agent_firmware/
 ---
 
 

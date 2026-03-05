@@ -5,8 +5,11 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RGBW_Stripe_WireLess_Shield_V1.0
 last_update:
   date: 05/15/2025
-  author: Eico 
-no_comments: false # for Disqus
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/RGBW_Stripe_WireLess_Shield_V1.0/
 ---
 
 

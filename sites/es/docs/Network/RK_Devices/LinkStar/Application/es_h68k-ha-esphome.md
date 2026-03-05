@@ -10,6 +10,9 @@ sku: 113991054,102110777,101991030,102010633
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/h68k-ha-esphome/
 ---
 
 <p><meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" /></p>

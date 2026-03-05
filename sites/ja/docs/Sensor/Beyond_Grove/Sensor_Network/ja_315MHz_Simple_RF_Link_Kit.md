@@ -1,6 +1,6 @@
 ---
 title: 315MHz Simple RF Link Kit
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /315MHz_Simple_RF_Link_Kit
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/315MHz_Simple_RF_Link_Kit/
 ---
 
 

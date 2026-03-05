@@ -5,7 +5,7 @@ keywords:
   - reComputer-R1000
   - Getting started
   - IIoT
-  - Industrial 
+  - Industrial
   - Thingsboard
   - Edge Computing
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
@@ -13,6 +13,9 @@ slug: /recomputer_r1000_thingsboard_ce
 last_update:
   date: 10/14/2024
   author: Kasun Thushara
+createdAt: '2024-10-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/thingsboard_blue.png" style={{width:600}}/></div>

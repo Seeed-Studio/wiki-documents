@@ -2,16 +2,19 @@
 description: This wiki provides tutorial for Damiao series motors.
 title: Damiao Series Motors
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /damiao_series
 sku: 100094243,100007512
 last_update:
   date: 06/1/2025
   author: ZhuYaoHui
+createdAt: '2025-06-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/damiao_series/
 ---
 
 # Damiao 43 Series Motors Getting Start

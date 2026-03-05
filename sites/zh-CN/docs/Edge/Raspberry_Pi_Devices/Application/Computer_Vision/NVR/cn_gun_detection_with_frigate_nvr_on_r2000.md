@@ -12,7 +12,10 @@ slug: /gun_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/gun_detection_with_frigate_nvr_on_r2000/
 ---
 
 # 在 R2000 上使用 Frigate NVR 进行枪支检测

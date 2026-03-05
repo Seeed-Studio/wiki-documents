@@ -1,12 +1,15 @@
 ---
 description: 在 Watcher 上部署来自 SenseCraft 的 AI 模型
 title: 为 Watcher 训练模型
-image: "https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png"
+image: https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png
 slug: /training_model_for_watcher
 sidebar_position: 2
 last_update:
   date: 10/9/2024
   author: Jason
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/training_model_for_watcher/
 ---
 
 # 为 Watcher 训练模型

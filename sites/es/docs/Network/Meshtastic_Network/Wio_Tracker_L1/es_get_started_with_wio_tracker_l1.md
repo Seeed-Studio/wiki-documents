@@ -1,8 +1,8 @@
 ---
 description: Primeros pasos con Wio Tracker L1 Serie
-title:  Primeros pasos con Wio Tracker L1
+title: Primeros pasos con Wio Tracker L1
 keywords:
-- Meshtastic
+  - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
@@ -10,6 +10,9 @@ sidebar_position: 2
 last_update:
   date: 12/24/2025
   author: Michelle Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
 :::tip

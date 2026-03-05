@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao/
 ---
 
 # Configurando la Salida del Modelo vía MQTT en SenseCraft AI para XIAO ESP32S3 Sense

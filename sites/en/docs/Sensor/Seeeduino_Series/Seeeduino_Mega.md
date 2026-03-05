@@ -2,13 +2,16 @@
 description: Seeeduino Mega
 title: Seeeduino Mega
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Mega
 sku: 102010007
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Mega/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Mega/img/Seeeduino_Mega_cover.jpg)

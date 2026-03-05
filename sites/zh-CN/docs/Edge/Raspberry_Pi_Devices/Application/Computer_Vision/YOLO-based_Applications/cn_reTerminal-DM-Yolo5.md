@@ -12,6 +12,9 @@ sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 9/7/2023
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal-DM-Yolo5/
 ---
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/yolo/yolov5.gif" /></center>

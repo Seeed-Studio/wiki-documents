@@ -6,6 +6,9 @@ slug: /ArduPy-LCD
 last_update:
   date: 11/20/2022
   author: Matthew
+createdAt: '2023-11-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ArduPy-LCD/
 ---
 
 # LCD - ArduPy API Reference

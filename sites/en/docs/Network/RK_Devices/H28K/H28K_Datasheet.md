@@ -2,12 +2,15 @@
 description: H28K Datasheet
 title: H28K Introduction
 keywords:
-- Network
+  - Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /H28K_Datasheet
 last_update:
   date: 12/07/2023
   author: Parker
+createdAt: '2023-12-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/H28K_Datasheet/
 ---
 
 <!-- ---

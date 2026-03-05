@@ -2,12 +2,15 @@
 description: Quick Start For Model Assistant
 title: Quick Start
 keywords:
-- sscma model assistant ai tinyml 
+  - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug:  /ModelAssistant_Introduce_Quick_Start
+slug: /ModelAssistant_Introduce_Quick_Start
 last_update:
   date: 01/11/2024
   author: LynnL4
+createdAt: '2023-12-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ModelAssistant_Introduce_Quick_Start/
 ---
 # Quick Start
 

@@ -2,14 +2,17 @@
 description: Desplegar Riva y Llama2 en reComputer
 title: Chatbot de Voz Local
 keywords:
-- reComputer
-- LLM
-- Chatbot
+  - reComputer
+  - LLM
+  - Chatbot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Local_Voice_Chatbot
 last_update:
   date: 01/14/2024
   author: Youjiang
+createdAt: '2024-01-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Local_Voice_Chatbot/
 ---
 
 

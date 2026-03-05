@@ -3,19 +3,23 @@ description: Linux、macOS、Windows 上で rpiboot と bmaptool を使用して
 title: Raspberry Pi OS イメージを書き込み直す
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:
-- reflash
-- factory reset
-- os image
-- rpiboot
-- bmaptool
-- cm4
-- expert
-- recovery
+  - reflash
+  - factory reset
+  - os image
+  - rpiboot
+  - bmaptool
+  - cm4
+  - expert
+  - recovery
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
 ---
 
 # 上級者向け: Raspberry Pi OS イメージを書き込み直す

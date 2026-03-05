@@ -2,13 +2,16 @@
 description: Raspberry Pi用8チャンネル12ビットADC（STM32F030）
 title: Raspberry Pi用8チャンネル12ビットADC（STM32F030）
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030
 sku: 103030280
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/
 ---
 
 

@@ -2,6 +2,9 @@
 sidebar_position: 6
 title: 许可证
 slug: /License
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/License/
 ---
 
 ## **重要声明和免责条款**

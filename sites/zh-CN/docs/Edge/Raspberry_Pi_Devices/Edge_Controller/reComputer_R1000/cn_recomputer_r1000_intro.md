@@ -2,14 +2,17 @@
 description: reComputer R1000 边缘物联网控制器，由 Raspberry Pi CM4 驱动，配备四核 A72 处理器、双以太网和多个 RS485 通道，支持 BACnet、Modbus RTU 和 Modbus TCP/IP。具有多样化的无线选项，包括 4G、LoRa® 和 Wi-Fi/BLE，是智能建筑应用中远程设备和能源管理的理想选择。
 title: reComputer R1000 演示
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1000
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_intro
 last_update:
   date: 10/08/2024
   author: Kasun Thushara
+createdAt: '2024-07-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1000_intro/
 ---
 
 reComputer R1000 边缘物联网控制器，由 Raspberry Pi CM4 驱动，配备四核 A72 处理器、双以太网和多个 RS485 通道，支持 BACnet、Modbus RTU 和 Modbus TCP/IP。具有多样化的无线选项，包括 4G、LoRa® 和 Wi-Fi/BLE，确保强大的物联网网络通信。R1000 是远程设备和能源管理的理想选择，非常适合智能建筑应用。

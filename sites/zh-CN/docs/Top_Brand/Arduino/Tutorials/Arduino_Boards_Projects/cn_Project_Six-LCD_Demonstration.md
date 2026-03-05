@@ -2,13 +2,16 @@
 description: 项目六 – LCD 演示
 title: 项目六 – LCD 演示
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Six-LCD_Demonstration
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Project_Six-LCD_Demonstration/
 ---
 <!-- ---
 name: Project Six – LCD Demonstration

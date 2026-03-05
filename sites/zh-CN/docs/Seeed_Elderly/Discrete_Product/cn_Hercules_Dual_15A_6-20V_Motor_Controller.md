@@ -2,13 +2,16 @@
 description: Hercules 双通道 15A 6-20V 电机控制器
 title: Hercules 双通道 15A 6-20V 电机控制器
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Hercules_Dual_15A_6-20V_Motor_Controller
 sku: 105010000
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Hercules_Dual_15A_6-20V_Motor_Controller/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/Hercules_03.jpg)

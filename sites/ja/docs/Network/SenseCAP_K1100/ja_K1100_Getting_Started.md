@@ -7,6 +7,9 @@ sku: 110991748
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/K1100-Getting-Started/
 ---
 
 

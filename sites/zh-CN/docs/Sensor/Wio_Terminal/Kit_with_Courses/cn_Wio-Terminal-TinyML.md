@@ -2,13 +2,16 @@
 description: 什么是 TinyML
 title: 什么是 TinyML
 keywords:
-- Wio_terminal Kit_with_Courses
+  - Wio_terminal Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML
 sku: 114992774
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML/
 ---
 
 # 什么是 TinyML？

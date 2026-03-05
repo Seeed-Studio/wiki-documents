@@ -2,13 +2,16 @@
 description: 如何设置 API 密钥
 title: 如何设置 API 密钥
 keywords:
-- Get Started with SenseCAP Indicator
+  - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key
 sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key/
 ---
 
 # **如何设置 API 密钥**

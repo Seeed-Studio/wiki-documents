@@ -1,6 +1,6 @@
 ---
 title: Grove - Mini I2C Motor Driver v1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 105020010
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Mini_I2C_Motor_Driver_v1.0/
 ---
 
 

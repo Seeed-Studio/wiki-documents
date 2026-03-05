@@ -2,13 +2,16 @@
 description: Grove 入门套件适用于 Azure Sphere MT3620 开发套件
 title: Grove 入门套件适用于 Azure Sphere MT3620 开发套件
 keywords:
-- Azure_Sphere_MT3620_Development_Kit
+  - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit
 sku: 110060947, 103990343
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/img/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit.jpg)

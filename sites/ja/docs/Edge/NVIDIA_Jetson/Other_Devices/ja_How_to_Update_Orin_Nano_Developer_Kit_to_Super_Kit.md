@@ -10,6 +10,9 @@ sku: 102110839
 last_update:
   date: 12/19/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/update_orin_nano_developer_kit_to_super_kit/
 ---
 
 ## Jetson Orin Nano Super Developer Kitとは

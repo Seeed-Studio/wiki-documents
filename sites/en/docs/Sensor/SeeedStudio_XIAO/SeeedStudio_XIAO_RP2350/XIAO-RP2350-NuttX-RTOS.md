@@ -2,13 +2,16 @@
 description: XIAO RP2350 With NuttX(RTOS)
 title: XIAO RP2350 With NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
 slug: /xiao_rp2350_nuttx
 sidebar_position: 3
 last_update:
-    date: 03/11/2025
-    author: rcsim
+  date: 03/11/2025
+  author: rcsim
+createdAt: '2025-02-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_rp2350_nuttx/
 ---
 
 # Seeed Studio XIAO RP2350 with NuttX(RTOS)

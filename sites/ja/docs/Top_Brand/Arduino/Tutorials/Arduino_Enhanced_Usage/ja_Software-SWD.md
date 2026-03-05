@@ -2,12 +2,15 @@
 description: SWDインターフェースを使用してArduinoボードをデバッグする方法
 title: SWDインターフェースを使用してArduinoボードをデバッグする方法
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-SWD
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Software-SWD/
 ---
 # SWDインターフェースを使用してArduinoボードをデバッグする方法
 

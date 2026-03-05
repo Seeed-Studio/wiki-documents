@@ -1,6 +1,6 @@
 ---
 title: Logic DC ジャック
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Logic_DC_Jack
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Logic_DC_Jack/
 ---
 
 

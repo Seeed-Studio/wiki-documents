@@ -2,14 +2,17 @@
 description: デバイスのインストール後、reComputer Industrial R20xxシリーズでハードウェアコンポーネントを設定およびテストする方法を学びます。このwikiでは、GPIOマッピング、USER LEDテスト、SPI通信、Wi-FiおよびBluetoothスキャン、LoRa®、5G、4G、Mini-PCIe経由のZigbee、RS485、RS232、DI/DOテスト、安全なシャットダウンのためのUPSについて説明します。
 title: reComputer Industrial R20xxの設定
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R20xx
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R20xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
 slug: /recomputer_industrial_r20xx_configure_system
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## 概要

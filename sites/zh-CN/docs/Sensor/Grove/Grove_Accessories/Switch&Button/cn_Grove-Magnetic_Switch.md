@@ -2,13 +2,16 @@
 description: Grove - 磁性开关
 title: Grove - 磁性开关
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Magnetic_Switch
 sku: 101020038
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Magnetic_Switch/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Magnetic_Switch/img/45d.jpg)

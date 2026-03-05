@@ -2,12 +2,15 @@
 description: Connect to Datacake via TTN
 title: Connect to Datacake via TTN
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/SenseCAPS210X/Datacake/image1.webp
 slug: /how_to_connect_sensecap_s210x_to_datacake_via_ttn
 last_update:
   date: 6/10/2025
   author: Zeno
+createdAt: '2025-06-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/how_to_connect_sensecap_s210x_to_datacake_via_ttn/
 ---
 
 # Connect to Datacake via TTN

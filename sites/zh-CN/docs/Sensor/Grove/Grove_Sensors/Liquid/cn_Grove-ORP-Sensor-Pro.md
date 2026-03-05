@@ -2,13 +2,16 @@
 description: Grove - ORP 传感器套件专业版
 title: Grove - ORP 传感器套件专业版
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-ORP-Sensor-Pro
 sku: 110020370
 last_update:
   date: 3/2/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-ORP-Sensor-Pro/
 ---
 <!-- ---
 name: Grove - ORP 传感器套件专业版

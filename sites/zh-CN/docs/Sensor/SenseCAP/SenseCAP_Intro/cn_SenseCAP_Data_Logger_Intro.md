@@ -2,12 +2,15 @@
 description: SenseCAP 数据记录器介绍
 title: SenseCAP 数据记录器
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Data_Logger_Intro
 last_update:
   date: 07/24/2024
   author: Frank
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Data_Logger_Intro/
 ---
 
 数据记录器作为连接多达 200+ 种传感器的桥梁，涵盖工业级传感器、Grove 传感器和模拟/RS485/GPIO 传感器。

@@ -2,14 +2,17 @@
 description: This wiki introduces the features of the J501 carrier board and explains how to flash the Jetpack system onto the J501 carrier board.
 title: Flash Jetpack
 keywords:
-- reServer
-- Jetson
+  - reServer
+  - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_j501_getting_started
 sku: 102991854,E24081601
 last_update:
   date: 08/19/2024
   author: Youjiang
+createdAt: '2024-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reserver_j501_getting_started/
 ---
 
 # Getting Started with reServer J501

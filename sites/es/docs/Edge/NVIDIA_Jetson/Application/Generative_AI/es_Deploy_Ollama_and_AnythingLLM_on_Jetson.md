@@ -2,17 +2,20 @@
 description: Este wiki demostrará cómo configurar una base de conocimiento local en dispositivos Jetson con ollama y AnythingLLM. Aprovechando las poderosas capacidades de los modelos de lenguaje grandes, nuestro objetivo es mejorar nuestra eficiencia de trabajo.
 title: Asistente de IA Local
 keywords:
-- reComputer
-- LLM
-- Chatbot
-- ollama
-- AnythingLLM
-- llama
+  - reComputer
+  - LLM
+  - Chatbot
+  - ollama
+  - AnythingLLM
+  - llama
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /local_ai_ssistant
 last_update:
   date: 07/30/2024
   author: Youjiang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/local_ai_ssistant/
 ---
 
 

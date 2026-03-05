@@ -2,21 +2,24 @@
 description: Dispositivos Edge Alimentados por Raspberry Pi
 title: Dispositivos Edge Alimentados por Raspberry Pi
 keywords:
-- Raspberry pi
-- reComputer R
-- reComputer AI R
-- reComputer Industrial R
-- reTerminal
-- reTerminal DM
-- reRouter
-- Raspberry Pi Compatible
-- Respberry Pi Original
+  - Raspberry pi
+  - reComputer R
+  - reComputer AI R
+  - reComputer Industrial R
+  - reTerminal
+  - reTerminal DM
+  - reRouter
+  - Raspberry Pi Compatible
+  - Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
 last_update:
   date: 11/7/2025
   author: Nolan Chen
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/raspberry-pi-devices/
 ---
 
 ## Introducción

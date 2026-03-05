@@ -1,6 +1,6 @@
 ---
 title: 无线桌面氛围灯
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wireless-desktop-atmosphere-lamp/
 ---
 # 无线桌面氛围灯
 

@@ -7,6 +7,9 @@ sidebar_position: 2
 last_update:
   date: 10/17/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_with_watcher/
 ---
 
 # SenseCAP Watcher 快速入门指南

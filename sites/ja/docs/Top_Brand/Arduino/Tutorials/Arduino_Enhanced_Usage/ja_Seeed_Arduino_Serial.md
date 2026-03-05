@@ -2,12 +2,15 @@
 description: Seeed Arduino シリアル
 title: Seeed Arduino シリアル
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Arduino_Serial
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeed_Arduino_Serial/
 ---
 
 

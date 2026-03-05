@@ -6,6 +6,9 @@ slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini
 last_update:
   date: 01/06/2026
   author: youjiang
+createdAt: '2026-01-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/local_voice_llm_on_recomputer_jetson_for_reachy_mini/
 ---
 
 ダブルミニ！このプロジェクトでは、完全にローカライズされた、低遅延、高プライバシーの音声対話型ロボットアシスタントシステムを構築します。reComputer Mini J501エッジコンピューティングデバイスを中心として、ローカル音声認識、大規模言語モデル、音声合成サービスをデプロイします。オープンソースロボットプラットフォームReachy Miniを人間とコンピューターの相互作用の物理的端末として使用し、知覚的、会話的、行動的な具現化されたインテリジェント対話体験を実現します。

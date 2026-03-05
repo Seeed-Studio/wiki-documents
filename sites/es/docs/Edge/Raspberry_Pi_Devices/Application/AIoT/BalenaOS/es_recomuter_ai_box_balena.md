@@ -11,6 +11,9 @@ sku: 114993560,114993627
 last_update:
   date: 11/4/2025
   author: JiahaoLi
+createdAt: '2025-11-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_ai_r2140_balena/
 ---
 
 [balena](https://www.balena.io/) es una plataforma de Internet de las Cosas (IoT) diseñada para ayudar a los desarrolladores a construir, desplegar y gestionar aplicaciones IoT a través de una flota de dispositivos. Soporta una amplia gama de arquitecturas de dispositivos e incluye características para el despliegue de aplicaciones en contenedores, haciendo posible actualizar fácilmente tu software IoT y HostOS, corregir errores e introducir nuevas características en tus aplicaciones IoT. balena proporciona una forma unificada de enviar actualizaciones de código, gestionar configuraciones de dispositivos y asegurar que los dispositivos funcionen de manera confiable y segura en el campo, independientemente de su ubicación o condiciones de red.

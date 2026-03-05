@@ -2,18 +2,21 @@
 title: AI 人体検知と Meshtastic 通知
 description: この Wiki では、AI カメラと XIAO ESP32S3 & Wio SX1262 の Meshtastic ネットワークを用いて、リアルタイムアラートをブロードキャストする AI 駆動の人体検知システムを紹介します。
 keywords:
-    - AI 人体検知
-    - XIAO ESP32S3
-    - ESP-Mesh
-    - エッジ AI
-    - GPIO トリガ
+  - AI 人体検知
+  - XIAO ESP32S3
+  - ESP-Mesh
+  - エッジ AI
+  - GPIO トリガ
 slug: /ai_human_detection_meshtastic_broadcast
 sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
-    date: 2026-01-28
-    author: John Xiang
+  date: 2026-01-28T00:00:00.000Z
+  author: John Xiang
+createdAt: '2026-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## はじめに

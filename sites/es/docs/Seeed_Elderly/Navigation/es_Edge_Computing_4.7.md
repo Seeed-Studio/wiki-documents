@@ -2,12 +2,15 @@
 description: Computación en el Borde
 title: Computación en el Borde
 keywords:
-- edge computing
+  - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Navigation/Edge_Computing_4.7
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeed_Elderly/Navigation/Edge_Computing_4.7/
 ---
 
 Este tema aquí introduce la documentación de productos de Seeed Studio con respecto a la arquitectura de computación en el borde que opera con datos "instantáneos" generados por varios sensores, en aplicaciones donde se requiere procesamiento en tiempo real. Hay múltiples dispositivos con diferente poder de cómputo presentados en esta página.

@@ -2,13 +2,16 @@
 description: Air602_WiFi_Development_Board
 title: Air602 WiFi 開発ボード
 keywords:
-- Air602_WiFi_Development_Board
+  - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Air602_WiFi_Development_Board
 sku: 113990577, 113990576
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Air602_WiFi_Development_Board/
 ---
 
 

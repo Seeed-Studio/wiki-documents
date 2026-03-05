@@ -1,6 +1,6 @@
 ---
 title: Grove - Protoshield
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020035
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Protoshield/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Protoshield/img/Proto1.jpg)
 

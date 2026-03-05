@@ -2,12 +2,15 @@
 description: Introduction
 title: Introduction
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction
 last_update:
   date: 08/28/2023
   author: Jessie
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction/
 ---
 
 

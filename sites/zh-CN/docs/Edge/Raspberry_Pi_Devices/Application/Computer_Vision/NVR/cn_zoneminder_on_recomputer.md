@@ -11,7 +11,10 @@ slug: /zoneminder_on_recomputer
 last_update:
   date: 09/05/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/zoneminder_on_recomputer/
 ---
 
 # 在 reComputer 上使用 Zoneminder

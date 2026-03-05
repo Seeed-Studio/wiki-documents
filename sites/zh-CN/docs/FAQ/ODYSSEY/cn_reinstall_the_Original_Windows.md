@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-常见问题解答
 title: 重新安装原始Windows系统
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /reinstall_the_Original_Windows
 last_update:
   date: 2023.6.25
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reinstall_the_Original_Windows/
 ---
 
 带有eMMC版本的ODYSSEY-X86设备会预装Windows 10。如果您安装了其他操作系统并希望恢复到原始的Windows 10，请参考以下内容：

@@ -2,14 +2,17 @@
 description: 以代码灯为例介绍Matter的开发框架。
 title: Matter开发框架概述
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /matter_development_framework
 last_update:
   date: 05/15/2024
   author: Citric
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/matter_development_framework/
 ---
 
 # Matter开发框架概述

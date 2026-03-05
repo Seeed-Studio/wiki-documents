@@ -2,16 +2,19 @@
 description: Este wiki proporciona una guía paso a paso para desplegar el modelo DeepSeek en dispositivos reComputer Jetson usando MLC para inferencia de IA optimizada en el edge.
 title: Desplegar DeepSeek en reComputer Jetson con MLC
 keywords:
-- reComputer
-- Jetson
-- LLM
-- MLC
-- deepseek
+  - reComputer
+  - Jetson
+  - LLM
+  - MLC
+  - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
 slug: /deploy_deepseek_on_jetson_with_mlc
 last_update:
   date: 02/13/2025
   author: Youjiang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/deploy_deepseek_on_jetson_with_mlc/
 ---
 
 

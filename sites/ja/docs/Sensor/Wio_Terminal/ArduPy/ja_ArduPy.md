@@ -1,13 +1,16 @@
 ---
 description: ArduPy の説明
-title:  ArduPy と Wio Terminal
+title: ArduPy と Wio Terminal
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ArduPy
 last_update:
   date: 05/15/2025
   author: cessarr
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ArduPy/
 ---
 
 

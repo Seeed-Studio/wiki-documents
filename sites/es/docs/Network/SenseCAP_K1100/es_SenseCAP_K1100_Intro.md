@@ -2,13 +2,16 @@
 description: Guía SenseCAP K1100 - El Kit de Prototipo de Sensores
 title: Guía SenseCAP K1100 - El Kit de Prototipo de Sensores
 keywords:
-- SenseCAP Gateway
+  - SenseCAP Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_K1100_Intro
 sku: 110991748
 last_update:
   date: 08/07/2024
   author: Frank
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_K1100_Intro/
 ---
 
 ## Introducción

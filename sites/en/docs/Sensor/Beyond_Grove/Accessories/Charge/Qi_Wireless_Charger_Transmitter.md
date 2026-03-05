@@ -1,6 +1,6 @@
 ---
 title: Qi Wireless Charger Transmitter
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113030020
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Qi_Wireless_Charger_Transmitter/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/img//Qi_Wireless_Charger_Photo.jpg)

@@ -2,12 +2,15 @@
 description: Create a doc page with rich content.
 title: Wiki Template - CN version
 keywords:
-- Template
+  - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/name_your_website
 last_update:
   date: 03/03/2024
   author: 黎孟度
+createdAt: '2024-03-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/name_your_website/
 ---
 
 > 产品图：

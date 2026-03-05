@@ -10,7 +10,10 @@ slug: /benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8
 last_update:
   date: 11/21/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-11-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8/
 ---
 
 # Benchmark de Inferencia Multistream en Raspberrypi 5 con Hailo8

@@ -1,11 +1,14 @@
 ---
 description: XIAO-FAQ
-title:  What to do when upload fails/the program runs abnormally/the device port is not found?
+title: What to do when upload fails/the program runs abnormally/the device port is not found?
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /noport_upload_fails
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2023-07-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/noport_upload_fails/
 ---
 
 

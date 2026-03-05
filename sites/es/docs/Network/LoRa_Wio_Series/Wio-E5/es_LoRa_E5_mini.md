@@ -1,9 +1,9 @@
 ---
 description: Introducción al Wio-E5 mini.
 title: Wio-E5 mini
-nointro:
+nointro: null
 keywords:
-  - wio 
+  - wio
   - docusaurus
 image: https://wiki.seeedstudio.com/es/wio_gps_board/
 slug: /LoRa_E5_mini
@@ -11,6 +11,9 @@ sku: 113990939, 113991156
 last_update:
   date: 01/15/2026
   author: David Du
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/LoRa_E5_mini/
 ---
 <!-- ![](https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png) -->
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png" alt="pir" width={600} height="auto" /></p>

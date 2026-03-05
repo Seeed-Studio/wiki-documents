@@ -1,13 +1,16 @@
 ---
-description:  Small e-Paper Shield
-title:  Small e-Paper Shield
+description: Small e-Paper Shield
+title: Small e-Paper Shield
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Small_e-Paper_Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Small_e-Paper_Shield/
 ---
 
 

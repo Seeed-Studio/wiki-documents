@@ -1,6 +1,6 @@
 ---
 title: Wio Lite RISC V GD32VF103 with ESP8266
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 102991310
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio_Lite_RISC_V_GD32VF103_with_ESP8266/
 ---
 
 

@@ -2,13 +2,16 @@
 description: MT3620 Grove Breakout
 title: MT3620 Grove Breakout
 keywords:
-- Azure_Sphere_MT3620_Development_Kit
+  - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /MT3620_Grove_Breakout
 sku: 103100123, 110061008
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/MT3620_Grove_Breakout/
 ---
 
 

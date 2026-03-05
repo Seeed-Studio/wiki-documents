@@ -5,12 +5,15 @@ keywords:
   - reCamera
   - 体感控制
   - 游戏
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif 
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
   date: 11/27/2025
   author: Xinrui Wu
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/use_the_motion-sensing_function_of_recamera_to_play_games/
 ---
 
 # 使用体感控制玩地铁跑酷

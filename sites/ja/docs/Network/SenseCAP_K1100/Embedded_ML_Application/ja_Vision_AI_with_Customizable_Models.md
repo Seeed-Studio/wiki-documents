@@ -2,12 +2,15 @@
 description: カスタマイズ可能なモデルを使用した Vision AI
 title: カスタマイズ可能なモデルを使用した Vision AI
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Vision_AI_with_Customizable_Models/
 ---
 
 

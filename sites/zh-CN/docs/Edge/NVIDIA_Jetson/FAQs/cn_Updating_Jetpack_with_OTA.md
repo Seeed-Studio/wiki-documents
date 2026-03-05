@@ -1,14 +1,17 @@
 ---
-description: ... 
+description: ...
 title: 使用基于镜像的空中升级更新 Jetson Linux
 keywords:
-- reComputer
-- OTA
+  - reComputer
+  - OTA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /updating_jetpack_with_ota
 last_update:
   date: 3/19/2025
   author: Youjiang
+createdAt: '2025-03-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/updating_jetpack_with_ota/
 ---
 
 

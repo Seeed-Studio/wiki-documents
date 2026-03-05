@@ -3,18 +3,22 @@ description: Referencia completa de la API para el gestor de medios de Reachy Mi
 title: Referencia de la API de Medios
 slug: /reachymini_api_media
 keywords:
-- api
-- media
-- camera
-- audio
-- streaming
-- webrtc
-- gstreamer
+  - api
+  - media
+  - camera
+  - audio
+  - streaming
+  - webrtc
+  - gstreamer
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_api_media/
 ---
 # Medios
 

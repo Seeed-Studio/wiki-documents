@@ -2,13 +2,16 @@
 description: El reComputer J401B es un dispositivo compacto de computación perimetral de alto rendimiento para IA, equipado con módulos NVIDIA Jetson Orin, que ofrece interfaces de E/S abundantes y es compatible con JetPack 5.1.3 hasta 6.2 para aplicaciones de IA versátiles. Esta guía cubre sus especificaciones, instrucciones de flasheo y uso de interfaces para desarrollo y despliegue.
 title: Primeros pasos con reComputer J401B
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
 slug: /recomputer_j401b_getting_start
 sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025
   author: Youjiang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_j401b_getting_start/
 ---
 
 # Primeros pasos con reComputer J401B

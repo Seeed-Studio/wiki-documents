@@ -2,13 +2,16 @@
 description: 4WD麦克纳姆轮机器人套件系列
 title: 4WD麦克纳姆轮机器人套件系列
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 sku: 110070012
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/4WD_Mecanum_Wheel_Robot_Kit_Series/
 ---
 
 4WD麦克纳姆轮机器人套件系列产品是基于麦克纳姆轮的四轮驱动移动平台。每个套件包含两个左麦克纳姆轮以及两个右麦克纳姆轮。四个麦克纳姆轮分别连接到独立控制的电机上。根据每个轮子的方向和速度，移动平台可以向前、向后、侧向以及任何其他所需方向移动或旋转。该套件可以添加两个远程控制模块——BLE模块和RF模块，以实现远程控制。

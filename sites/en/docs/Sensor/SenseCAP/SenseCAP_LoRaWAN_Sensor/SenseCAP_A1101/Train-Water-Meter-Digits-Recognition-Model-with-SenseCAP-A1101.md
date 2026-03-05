@@ -2,12 +2,15 @@
 description: Train Water Meter Digits Recognition Model with SenseCAP A1101
 title: Train Water Meter Digits Recognition Model with SenseCAP A1101
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
 sku: 101990962
 date: 11/26/2025
 author: Twelve
+createdAt: '2023-06-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101/
 ---
 
 # Train Water Meter Digits Recognition Model with SenseCAP A1101

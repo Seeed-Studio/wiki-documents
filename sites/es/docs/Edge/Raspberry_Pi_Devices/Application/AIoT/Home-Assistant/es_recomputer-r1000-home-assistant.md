@@ -1,8 +1,8 @@
 ---
 description: Aprende cómo configurar e instalar Home Assistant en un reComputer R1000
-title: reComputer R1000 con Home Assistant 
+title: reComputer R1000 con Home Assistant
 keywords:
-  - Home Assistant 
+  - Home Assistant
   - reComputer R1000
   - Home Automation
   - Bookworm
@@ -11,6 +11,9 @@ slug: /recomputer_r1000_home_automation
 last_update:
   date: 08/02/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1000_home_automation/
 ---
 
 ## Introducción

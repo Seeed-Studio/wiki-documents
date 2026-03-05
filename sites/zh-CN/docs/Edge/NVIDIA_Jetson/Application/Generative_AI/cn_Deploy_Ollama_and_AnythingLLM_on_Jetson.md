@@ -2,17 +2,20 @@
 description: 本wiki将演示如何在Jetson设备上使用ollama和AnythingLLM搭建本地知识库。通过利用大型语言模型的强大功能，我们旨在提高工作效率。
 title: 本地AI助手
 keywords:
-- reComputer
-- LLM
-- Chatbot
-- ollama
-- AnythingLLM
-- llama
+  - reComputer
+  - LLM
+  - Chatbot
+  - ollama
+  - AnythingLLM
+  - llama
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /local_ai_ssistant
 last_update:
   date: 07/30/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/local_ai_ssistant/
 ---
 
 

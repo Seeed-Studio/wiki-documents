@@ -7,6 +7,9 @@ sku: 100079172,E25121201
 last_update:
   date: 11/27/2025
   author: Brandy
+createdAt: '2025-12-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_with_cob_led_dirver_board/
 ---
 # Getting Started with COB LED Driver Board for Seeed Studio XIAO
 

@@ -7,6 +7,9 @@ sku: E2025123101
 last_update:
   date: 01/06/2026
   author: youjiang
+createdAt: '2026-01-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/
 ---
 
 双重 Mini！本项目将构建一个完全本地化、低延迟、高隐私的语音交互机器人助手系统。以 reComputer Mini J501 边缘计算设备为核心，部署本地语音识别、大语言模型和语音合成服务。使用开源机器人平台 Reachy Mini 作为人机交互的物理终端，实现具有感知、对话和行动能力的具身智能交互体验。

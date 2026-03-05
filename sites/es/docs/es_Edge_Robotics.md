@@ -2,17 +2,20 @@
 description: Este tema presenta la documentación de productos de robótica de Seeed Studio y cursos de aprendizaje.
 title: Robótica
 keywords:
-- robotics
-- nvidia
-- ros
-- isaac
-- learning
-- reinforcement learning
+  - robotics
+  - nvidia
+  - ros
+  - isaac
+  - learning
+  - reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robotics_page
 last_update:
   date: 05/29/2025
   author: ZhuYaohui
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/robotics_page/
 ---
 
 # 🤖 Robótica

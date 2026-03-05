@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 06/20/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher/
 ---
 
 # SenseCAP Watcher Wiki 中心

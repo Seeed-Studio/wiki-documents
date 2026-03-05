@@ -2,14 +2,17 @@
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
 title: BC01 室内蓝牙信标
 keywords:
-- BLE
-- Positioning
+  - BLE
+  - Positioning
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth_Beacon.webp
 slug: /bluetooth_beacon_for_SenseCAP_Traker
 sku: E2025081201,E2025081501
 last_update:
   date: 05/29/2025
   author: Zeke
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/bluetooth_beacon_for_SenseCAP_Traker/
 ---
 
 BLE（低功耗蓝牙）定位信标是一种小型无线设备，定期发送蓝牙信号。这些信号可以被支持蓝牙的设备（如 SenseCAP T1000 Tracker）检测到，使它们能够确定与信标的距离，为室内定位、资产跟踪和其他应用构建基于位置的解决方案。

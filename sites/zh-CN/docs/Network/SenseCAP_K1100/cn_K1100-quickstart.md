@@ -2,13 +2,16 @@
 description: 使用 SenseCraft 快速且无代码启动
 title: 使用 SenseCraft 快速且无代码启动
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-quickstart
 sku: 110991748
 last_update:
   date: 2023/1/12
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/K1100-quickstart/
 ---
 
 # 使用 SenseCAP K1100 快速入门 - 传感器原型套件

@@ -2,15 +2,18 @@
 description: SenseCAP Indicator - Matter アプリケーション開発
 title: Matter - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator
-- Matter
-- ESP32S3
+  - SenseCAP Indicator
+  - Matter
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_Matter
 sidebar_position: 8
 last_update:
   date: 8/28/2023
   author: Tim
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_Application_Matter/
 ---
 
 # SenseCAP Indicator - Matter アプリケーション開発

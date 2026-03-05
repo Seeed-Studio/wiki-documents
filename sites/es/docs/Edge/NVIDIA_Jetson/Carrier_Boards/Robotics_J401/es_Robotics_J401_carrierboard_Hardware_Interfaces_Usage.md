@@ -14,6 +14,9 @@ sku: 100071398, 100001302, 100010971
 last_update:
   date: 06/10/2025
   author: Zibo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/
 ---
 
 # Hardware y primeros pasos con la carrier board Robotics J401

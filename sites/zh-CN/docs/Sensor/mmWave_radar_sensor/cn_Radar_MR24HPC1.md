@@ -2,13 +2,16 @@
 description: 24GHz 毫米波人体静态存在检测传感器 Lite
 title: 24GHz 毫米波人体静态存在检测传感器 Lite
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPC1
 sku: 101991030
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2024-07-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Radar_MR24HPC1/
 ---
 
 

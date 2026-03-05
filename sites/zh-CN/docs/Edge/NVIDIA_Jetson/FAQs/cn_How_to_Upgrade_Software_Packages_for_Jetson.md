@@ -2,12 +2,15 @@
 description: 这是一个关于使用OTA或增量更新可能导致系统不稳定和安全风险的常见问题解答，因此建议执行完整的ROM更新以维护系统安全性和稳定性，避免部分更新。
 title: 为Jetson升级软件包
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/upgrade_software_packages_for_jetson/
 ---
 
 #### 如果你告诉我不能执行apt upgrade，那我如何升级软件包？如果不升级软件会有安全风险吗？

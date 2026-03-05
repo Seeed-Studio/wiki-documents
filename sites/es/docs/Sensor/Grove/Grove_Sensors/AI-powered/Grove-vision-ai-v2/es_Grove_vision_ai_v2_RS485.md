@@ -2,13 +2,16 @@
 description: Guía sobre cómo transferir datos de reconocimiento desde Vision AI V2 a través de RS485
 title: Transmisión RS485 de datos de Vision AI V2
 keywords:
-- RS485
-- Vision AI
+  - RS485
+  - Vision AI
 image: https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.webp
 slug: /grove_vision_ai_v2_rs485
 last_update:
   date: 12/19/2024
   author: Jason
+createdAt: '2024-12-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_rs485/
 ---
 
 

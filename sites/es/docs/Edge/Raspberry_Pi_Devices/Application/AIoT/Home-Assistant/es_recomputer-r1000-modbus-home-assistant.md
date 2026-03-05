@@ -1,8 +1,8 @@
 ---
 description: Aprende cómo configurar y establecer Modbus TCP y Modbus RTU con Home Assistant en un reComputer R1000, una potente solución basada en Raspberry Pi para la integración y control sin problemas de tus dispositivos Modbus en un Sistema de Gestión de Edificios (BMS).
-title: reComputer R1000 y Modbus con Home Assistant 
+title: reComputer R1000 y Modbus con Home Assistant
 keywords:
-  - Home Assistant 
+  - Home Assistant
   - reComputer R1000
   - Home Automation
   - BMS
@@ -12,6 +12,9 @@ slug: /recomputer_r1000_home_assistant_modbus
 last_update:
   date: 08/07/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1000_home_assistant_modbus/
 ---
 
 ## Introducción

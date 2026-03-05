@@ -1,6 +1,6 @@
 ---
 title: Grove - 原型扩展板
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020035
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Protoshield/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Protoshield/img/Proto1.jpg)
 

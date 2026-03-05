@@ -3,13 +3,16 @@ description: Esta página presenta cómo desplegar tecnologías de IA generativa
 title: IA Generativa con reComputer-Jetson®
 keywords:
   - Edge
-  - reComputer 
+  - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Generative_AI_Intro
 last_update:
   date: 08/06/2024
   author: Youjiang
+createdAt: '2024-08-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Generative_AI_Intro/
 ---
 
 <div style={{textAlign:'center'}}>

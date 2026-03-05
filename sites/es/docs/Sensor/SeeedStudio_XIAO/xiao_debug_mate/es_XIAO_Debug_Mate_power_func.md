@@ -8,6 +8,9 @@ sidebar_position: 4
 last_update:
   date: 10/22/2025
   author: Citric
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_debug_mate_power/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" style={{width:800, height:'auto'}}/></div>

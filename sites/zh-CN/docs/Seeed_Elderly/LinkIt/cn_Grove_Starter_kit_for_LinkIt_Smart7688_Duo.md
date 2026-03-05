@@ -2,13 +2,16 @@
 description: Grove LinkIt Smart7688 Duo 入门套件
 title: Grove LinkIt Smart7688 Duo 入门套件
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_kit_for_LinkIt_Smart7688_Duo
 sku: 110020007
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/img/Grove_Starter_kit_for_LinkIt_Smart7688_Duo_Product_view_1200_s.jpg)

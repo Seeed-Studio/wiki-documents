@@ -11,6 +11,9 @@ slug: /reterminal_dm_200_node_red_influxdb
 last_update:
   date: 06/28/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reterminal_dm_200_node_red_influxdb/
 ---
 ## Introducción
 

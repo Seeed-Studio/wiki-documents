@@ -1,13 +1,16 @@
 ---
 description: Grove - Seguidor V3.0
-title: Grove-Sensor Seguidor de Línea IR V3.0 
+title: Grove-Sensor Seguidor de Línea IR V3.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/Grove_Line_Finder/images/top.jpg
 slug: /grove_line_follower
 last_update:
   date: 10/12/2024
   author: Jason
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_line_follower/
 ---
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Grove_Line_Finder/images/top.jpg" /></div>

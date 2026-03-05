@@ -2,17 +2,20 @@
 description: 从现有 Jetson 开发环境创建自定义 BSP
 title: 从 Jetson 开发环境创建自定义 BSP 包
 keywords:
-- reComputer
-- BSP
-- backup
-- Jetson
-- JetPack
-- custom image
+  - reComputer
+  - BSP
+  - backup
+  - Jetson
+  - JetPack
+  - custom image
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /make_diy_bsp_for_jetson
 last_update:
   date: 01/04/2026
   author: Dayu
+createdAt: '2026-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/make_diy_bsp_for_jetson/
 ---
 
 本 wiki 指南演示了如何从现有 Jetson 设备克隆完整的开发环境，并创建可刷写的 BSP（板级支持包），该 BSP 可用于在其他 Jetson 设备上复制相同的环境。使用此方法创建的 BSP 在刷写到其他 Jetson 设备时能够实现完整的环境克隆。

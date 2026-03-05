@@ -2,14 +2,17 @@
 description: A603 Jetson キャリアボードで IMX477 カメラを使用する
 title: A603 Jetson キャリアボードで IMX477 カメラを使用する
 keywords:
-- reComputer
-- IMX477 Camera
-- A603
+  - reComputer
+  - IMX477 Camera
+  - A603
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_IMX477_Camera_with_A603_Jetson_Carrier_Board
 last_update:
   date: 05/22/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board/
 ---
 
 ## Jetpack 5.1.2

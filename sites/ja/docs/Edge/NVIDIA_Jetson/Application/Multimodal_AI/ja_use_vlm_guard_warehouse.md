@@ -2,15 +2,18 @@
 description: このwikiでは、reComputer Industrial J4012でLlavaを使用して倉庫を監視し、RS485経由で警告灯の色を制御して倉庫の安全を確保する方法のチュートリアルを提供します。
 title: Llavaを使用して倉庫を守る
 keywords:
-- Multimodal 
-- LLava
-- RS485
-- VLM
+  - Multimodal
+  - LLava
+  - RS485
+  - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /vlm
 last_update:
   date: 10/10/2025
   author: Jiahao Li
+createdAt: '2025-10-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/vlm/
 ---
 
 # reComputer Industrial J4012でLLaVaを使用して倉庫を監視する方法

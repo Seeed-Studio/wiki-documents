@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 12/21/2025
   author: Allen
+createdAt: '2025-12-31'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/xiao_epaper_display_board_overview/
 ---
 
 # ePaper 驱动板总览

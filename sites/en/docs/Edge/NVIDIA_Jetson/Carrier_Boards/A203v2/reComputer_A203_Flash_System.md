@@ -10,7 +10,10 @@ sku: 114110047,114110049,114110048,103110043
 last_update:
   date: 01/05/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_A203_Flash_System/
 ---
 <!-- ---
 name: 

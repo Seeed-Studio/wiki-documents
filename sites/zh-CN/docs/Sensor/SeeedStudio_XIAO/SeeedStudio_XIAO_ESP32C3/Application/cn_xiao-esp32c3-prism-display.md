@@ -2,13 +2,16 @@
 description: 使用 ESP32C3 的 XIAO 棱镜显示器
 title: XIAO ESP32C3 棱镜显示器
 keywords:
-- Xiao
-- Prism
+  - Xiao
+  - Prism
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-esp32c3-prism-display
 last_update:
   date: 02/01/2024
   author: timo614
+createdAt: '2024-11-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao-esp32c3-prism-display/
 ---
 
 # XIAO ESP32C3 棱镜显示器

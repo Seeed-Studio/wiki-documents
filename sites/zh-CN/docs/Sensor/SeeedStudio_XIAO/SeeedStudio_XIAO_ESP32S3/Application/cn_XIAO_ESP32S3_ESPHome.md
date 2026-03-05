@@ -2,12 +2,15 @@
 description: ESPHome-Support-on-Seeed-Studio-XIAO-ESP32S3
 title: ESPHome Support on Seeed Studio XIAO ESP32S3
 keywords:
-- ESPHome
+  - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_ESP32S3_esphome
 last_update:
   date: 12/25/2023
   author: Zachay-NAU
+createdAt: '2023-12-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO_ESP32S3_esphome/
 ---
 
 # XIAO ESP32S3 sense 通过 ESPHome 连接 Home Assistant（支持所有端口）

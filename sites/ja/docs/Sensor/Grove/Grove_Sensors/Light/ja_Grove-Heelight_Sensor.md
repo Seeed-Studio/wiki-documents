@@ -2,13 +2,16 @@
 description: Grove - Heelight Sensor
 title: Grove - Heelight Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Heelight_Sensor
 sku: 101020312
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Heelight_Sensor/
 ---
 
 

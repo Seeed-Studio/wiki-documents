@@ -2,12 +2,15 @@
 description: Export For Model Assistant
 title: PyTorch to ONNX
 keywords:
-- sscma model assistant ai tinyml 
+  - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug:  /ModelAssistant_Tutorials_Export_PyTorch_2_ONNX
+slug: /ModelAssistant_Tutorials_Export_PyTorch_2_ONNX
 last_update:
   date: 01/11/2024
   author: LynnL4
+createdAt: '2023-12-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Export_PyTorch_2_ONNX/
 ---
 
 import Tabs from '@theme/Tabs';

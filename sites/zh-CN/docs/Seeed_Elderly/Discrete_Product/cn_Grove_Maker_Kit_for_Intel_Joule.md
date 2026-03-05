@@ -2,12 +2,15 @@
 description: Grove 制造者套件适用于 Intel Joule
 title: Grove 制造者套件适用于 Intel Joule
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Maker_Kit_for_Intel_Joule
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/Grove_Maker_Kit_for_Intel_Joule/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/wuVn2N00lFDeHDqruNo2IO3v.jpg)

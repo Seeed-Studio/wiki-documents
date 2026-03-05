@@ -1,13 +1,16 @@
 ---
-description:  Grove - Color Sensor V3.0 - I2C interface - VEML6040 based
-title:  Grove-Color Sensor V3.0 - I2C interface 
+description: Grove - Color Sensor V3.0 - I2C interface - VEML6040 based
+title: Grove-Color Sensor V3.0 - I2C interface
 keywords:
-- Grove
-image: https://files.seeedstudio.com/wiki/Grove_Color/top.jpg 
+  - Grove
+image: https://files.seeedstudio.com/wiki/Grove_Color/top.jpg
 slug: /grove_color_sensor_v3_0_iic
 last_update:
   date: 10/12/2024
   author: Jason
+createdAt: '2024-11-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/grove_color_sensor_v3_0_iic/
 ---
 
 

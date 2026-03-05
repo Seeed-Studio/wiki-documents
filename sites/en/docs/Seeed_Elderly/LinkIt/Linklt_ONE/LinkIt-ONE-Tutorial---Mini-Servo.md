@@ -1,13 +1,16 @@
 ---
-description:  LinkIt ONE Tutorial - Mini Servo
-title:  LinkIt ONE Tutorial - Mini Servo
+description: LinkIt ONE Tutorial - Mini Servo
+title: LinkIt ONE Tutorial - Mini Servo
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt-ONE-Tutorial---Mini-Servo
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/LinkIt-ONE-Tutorial---Mini-Servo/
 ---
 **What We're Doing**
 

@@ -2,16 +2,18 @@
 description: Set_AI_With_A1102
 title: 使用 SenseCraft APP 在 SenseCAP A1102 上设置 AI 模型
 keywords:
-- Sensor Vision_AI_V2
-- SenseCAP A1102
-- SenseCraft AI
+  - Sensor Vision_AI_V2
+  - SenseCAP A1102
+  - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp
 slug: /setting_ai_with_a1102
 sidebar_position: 2
-# sidebar_class_name: hidden
 last_update:
   date: 12/31/2025
   author: Twelve
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/setting_ai_with_a1102/
 ---
 
 # 使用 SenseCraft APP 在 SenseCAP A1102 上设置 AI 模型

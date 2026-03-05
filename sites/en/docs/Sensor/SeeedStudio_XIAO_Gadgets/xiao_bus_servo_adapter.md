@@ -9,6 +9,9 @@ slug: /xiao_bus_servo_adapter
 last_update:
   date: 05/26/2025
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_bus_servo_adapter/
 ---
 
 # Getting Started with Bus Servo Driver Board / XIAO Bus Servo Adapter

@@ -1,6 +1,6 @@
 ---
 title: FSM-55
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /FSM-55
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/FSM-55/
 ---
 ![](https://files.seeedstudio.com/wiki/FSM-55/img/FSM-55_board.jpg)
 

@@ -13,6 +13,9 @@ sidebar_position: 1
 last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recamera_os_version_control/
 ---
 
 # 通过 Web 界面进行操作系统更新/升级指南

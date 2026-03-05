@@ -2,13 +2,16 @@
 description: Grove - UV センサー
 title: Grove - UV センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-UV_Sensor
 sku: 101020043
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-UV_Sensor/
 ---
 
 

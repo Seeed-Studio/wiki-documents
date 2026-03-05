@@ -1,6 +1,6 @@
 ---
-description: Efficiently manage and automate your IIoT solutions with Node-RED on the reComputer-R1000 Raspberry Pi. Seamlessly integrate data from various industrial protocols, visualize in real-time, and enhance operational efficiency with this powerful, user-friendly platform. 
-title: reComputer-R1000 Getting Started with Node Red 
+description: Efficiently manage and automate your IIoT solutions with Node-RED on the reComputer-R1000 Raspberry Pi. Seamlessly integrate data from various industrial protocols, visualize in real-time, and enhance operational efficiency with this powerful, user-friendly platform.
+title: reComputer-R1000 Getting Started with Node Red
 keywords:
   - Edge Controller
   - reComputer
@@ -12,6 +12,9 @@ sku: 113991274,E24010521
 last_update:
   date: 07/01/2024
   author: Kasun Thushara
+createdAt: '2024-05-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/
 ---
 ## Introduction
 

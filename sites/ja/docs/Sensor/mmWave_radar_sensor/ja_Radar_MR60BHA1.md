@@ -2,13 +2,16 @@
 description: 60GHz mmWave 静的呼吸・心拍検出
 title: 60GHz mmWave 静的呼吸・心拍検出
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60BHA1
 sku: 101990886
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Radar_MR60BHA1/
 ---
 
 # 60GHz mmWaveセンサー - 人体静的睡眠呼吸監視 (MR60BHA1)

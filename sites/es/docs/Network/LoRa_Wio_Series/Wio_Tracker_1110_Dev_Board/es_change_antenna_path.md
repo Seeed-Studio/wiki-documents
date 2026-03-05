@@ -1,15 +1,18 @@
 ---
 description: Cambiar la ruta de antena LoRa de la placa Wio Tracker 1110
-title:  Cambiar ruta de antena
+title: Cambiar ruta de antena
 keywords:
-- Antenna
-- Tracker
+  - Antenna
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /change_antenna_path
 sidebar_position: 6
 last_update:
   date: 7/8/2024
   author: Jessie
+createdAt: '2024-07-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/change_antenna_path/
 ---
 
 

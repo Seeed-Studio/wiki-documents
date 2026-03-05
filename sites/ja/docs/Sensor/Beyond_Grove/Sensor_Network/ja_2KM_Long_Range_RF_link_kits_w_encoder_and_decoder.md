@@ -1,6 +1,6 @@
 ---
 title: エンコーダーとデコーダー付き 2KM 長距離 RF リンクキット
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 113990018
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/
 ---
 
 

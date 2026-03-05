@@ -2,14 +2,17 @@
 description: LoRaWAN トラッカー Bluetooth AT コマンド説明書
 title: LoRaWAN トラッカー Bluetooth AT コマンド説明書
 keywords:
-- Tracker
-- App
+  - Tracker
+  - App
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /tracker_at_command
 sidebar_position: 5
 last_update:
   date: 4/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/tracker_at_command/
 ---
 
 この章では、Bluetooth AT コマンドの使用方法を簡潔に説明し、Bluetooth 接続を確立して Bluetooth AT コマンドを通じてデバイス情報を照会/設定する方法を説明します。

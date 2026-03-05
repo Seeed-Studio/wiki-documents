@@ -3,18 +3,22 @@ description: Guía de desarrollo integral para agentes de IA que ayuden a los us
 title: Guía de Desarrollo de Reachy Mini para Agentes de IA
 slug: /reachymini_agents
 keywords:
-- ai agents
-- development guide
-- sdk
-- rest api
-- platform compatibility
-- app development
-- best practices
+  - ai agents
+  - development guide
+  - sdk
+  - rest api
+  - platform compatibility
+  - app development
+  - best practices
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_agents/
 ---
 
 # Guía de Desarrollo de Reachy Mini para Agentes de IA

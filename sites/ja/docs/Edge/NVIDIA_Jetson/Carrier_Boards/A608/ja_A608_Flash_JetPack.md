@@ -10,6 +10,9 @@ sku: 105110001
 last_update:
   date: 12/4/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_A608_Flash_System/
 ---
 
 # A608キャリアボードにJetPack OSをフラッシュする（NVIDIA Jetson Orin NX/Nanoサポート）

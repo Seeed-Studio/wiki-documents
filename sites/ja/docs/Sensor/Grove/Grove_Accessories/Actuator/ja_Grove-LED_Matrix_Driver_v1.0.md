@@ -1,6 +1,6 @@
 ---
 title: Grove - LED マトリックス ドライバ v1.0
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 105020013
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-LED_Matrix_Driver_v1.0/
 ---
 
 

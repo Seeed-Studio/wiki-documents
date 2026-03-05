@@ -2,14 +2,17 @@
 description: 从 Watcher 和 Node-RED 发送数据到 MongoDB
 title: Watcher 和 Node-RED 到 MongoDB
 keywords:
-- Watcher
-- MongoDB
-- Node-RED
+  - Watcher
+  - MongoDB
+  - Node-RED
 image: https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Watcher_MongoDB_Cover.jpg
 slug: /watcher_node_red_to_mongodb
 last_update:
   date: 07/18/2024
   author: Vincent
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher_node_red_to_mongodb/
 ---
 
 # Watcher 到 MongoDB 快速入门

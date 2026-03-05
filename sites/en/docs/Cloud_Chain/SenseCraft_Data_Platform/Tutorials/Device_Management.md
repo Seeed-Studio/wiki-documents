@@ -3,14 +3,17 @@ sidebar_position: 3
 description: SenseCAP Portal Device Management
 title: Device Management
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/tutorials/device-management
 aliases:
   - /Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-03-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-data-platform/tutorials/device-management/
 ---
 
 

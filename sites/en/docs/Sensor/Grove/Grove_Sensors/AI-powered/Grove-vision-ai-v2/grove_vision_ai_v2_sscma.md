@@ -2,14 +2,17 @@
 description: Guidance on how to go from owned datasets, labelling, training and deployment to Grove Vision AI V2.
 title: Deploying Models from Datasets to Grove Vision AI V2
 keywords:
-- SSCMA
-- Vision AI
+  - SSCMA
+  - Vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_sscma
 sku: 101021112,E23011220,104990982
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2024-03-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/grove_vision_ai_v2_sscma/
 ---
 
 

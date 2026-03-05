@@ -2,12 +2,15 @@
 description: Suli
 title: Suli
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Suli
 last_update:
   date: 1/16/2023
   author: hushuxu
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Suli/
 ---
 
 ##  What is Suli

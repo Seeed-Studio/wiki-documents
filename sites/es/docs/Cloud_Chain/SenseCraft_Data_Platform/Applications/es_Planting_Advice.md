@@ -3,9 +3,9 @@ sidebar_position: 2
 description: Usando XIAO ESP32C3 para conectarse a SenseCraft Data Platform AI Advisor para consejos de plantación
 title: Consejos de Plantación
 keywords:
-- sensecraft data platform
-- xiao
-- AI
+  - sensecraft data platform
+  - xiao
+  - AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-data-platform/applications/planting-advice
 aliases:
@@ -13,6 +13,9 @@ aliases:
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2023-08-08'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform/applications/planting-advice/
 ---
 
 :::tip note

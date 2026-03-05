@@ -2,12 +2,15 @@
 description: Wio Lite AI ウィキ
 title: Wio Lite AI の使い方
 keywords:
-- wio lite ai
+  - wio lite ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Wio-Lite-AI-Getting-Started
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Lite-AI-Getting-Started/
 ---
 
 

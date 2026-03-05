@@ -1,6 +1,6 @@
 ---
 title: Grove-Doppler-Radar
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 109020021
 last_update:
   date: 01/04/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Doppler-Radar/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/01.png)

@@ -2,13 +2,16 @@
 description: SenseCAP Indicator ネイティブファームウェアの使用開始
 title: ネイティブファームウェア
 keywords:
-- SenseCAP Indicator
+  - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Native_Firmware
 sidebar_position: 1
 last_update:
   date: 11/16/2023
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_Native_Firmware/
 ---
 
 # **ネイティブファームウェア**

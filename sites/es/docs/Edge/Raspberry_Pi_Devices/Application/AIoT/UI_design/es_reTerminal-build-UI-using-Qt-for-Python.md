@@ -10,6 +10,9 @@ sku: 102110638, 110070048
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-04-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal-build-UI-using-Qt-for-Python/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/final-output.png" alt="pir" width="1000" height="auto"/></p>

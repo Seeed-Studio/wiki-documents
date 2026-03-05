@@ -2,13 +2,16 @@
 description: Atmel AVRISP STK500 USB ISP Programmer
 title: Atmel AVRISP STK500 USB ISP Programmer
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Atmel_AVRISP_STK500_USB_ISP_Programmer
 sku: 105990010
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Atmel_AVRISP_STK500_USB_ISP_Programmer/
 ---
 
 

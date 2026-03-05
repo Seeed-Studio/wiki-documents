@@ -2,14 +2,17 @@
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
 title: BC01 Baliza Bluetooth Interior
 keywords:
-- BLE
-- Posicionamiento
+  - BLE
+  - Posicionamiento
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth_Beacon.webp
 slug: /bluetooth_beacon_for_SenseCAP_Traker
 sku: E2025081201,E2025081501
 last_update:
   date: 05/29/2025
   author: Zeke
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/bluetooth_beacon_for_SenseCAP_Traker/
 ---
 
 Una Baliza de Ubicación BLE (Bluetooth Low Energy) es un pequeño dispositivo inalámbrico que transmite señales Bluetooth a intervalos regulares. Estas señales pueden ser detectadas por dispositivos habilitados para Bluetooth, como el SenseCAP T1000 Tracker, permitiéndoles determinar su proximidad a la baliza, construyendo una solución basada en ubicación para posicionamiento interior, seguimiento de activos y otras aplicaciones.

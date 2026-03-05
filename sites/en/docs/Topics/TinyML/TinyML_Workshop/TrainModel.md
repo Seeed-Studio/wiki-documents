@@ -2,12 +2,15 @@
 description: This is an open-source project / platform focused on embedded AI.
 title: Train and Deploy Your Own AI Model
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /train_and_deploy_model
 last_update:
   date: 09/24/2024
   author: Frank
+createdAt: '2024-09-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/train_and_deploy_model/
 ---
 
 # Train and Deploy Your Own AI Model

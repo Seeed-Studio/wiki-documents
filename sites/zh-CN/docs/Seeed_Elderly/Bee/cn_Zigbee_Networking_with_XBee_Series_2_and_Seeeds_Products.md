@@ -2,12 +2,15 @@
 description: 《Zigbee》网络：使用 XBee Series 2 和 Seeed 产品
 title: 《Zigbee》网络：使用 XBee Series 2 和 Seeed 产品
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/
 ---
 
 <!-- 1. 本教程是一个分步指南，旨在帮助用户学习如何使用 XBee ZB 模块与 [Seeeduino](/cn/Seeeduino_V2.2 "Seeeduino V2.2") / Arduino、[XBee® Shield](/cn/XBee_Shield "XBee® Shield")、[UartSBee_V3.1](/cn/UartSBee_V3.1 "UartSBee_V3.1")、[《Grove》 - XBee Carrier](/cn/Grove-XBee_Carrier "Grove - XBee Carrier")、Seeeduino Stalker v2.0。这些产品让使用 XBee ZB 模块的工作变得更加轻松。 -->

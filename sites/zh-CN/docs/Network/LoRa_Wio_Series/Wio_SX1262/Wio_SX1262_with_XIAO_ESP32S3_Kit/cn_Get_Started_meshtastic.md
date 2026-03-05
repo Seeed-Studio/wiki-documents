@@ -8,6 +8,9 @@ sidebar_position: 2
 last_update:
   date: 09/30/2024
   author: Evelyn Chen
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_for_meshtastic/
 ---
 
 Meshtastic 是一个开源、离网、去中心化的网状网络，专为在经济实惠的低功耗设备上运行而构建。Seeed Studio 为爱好者和工业用户提供了全面的即用型 Meshtastic 设备。XIAO ESP32S3 & Wio-SX1262 套件是为 meshtastic 开发者和创客提供的灵活解决方案。

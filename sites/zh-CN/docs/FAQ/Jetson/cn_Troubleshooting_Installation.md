@@ -1,12 +1,14 @@
 ---
 description: reComputer-常见问题解答
 title: 安装故障排除
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Troubleshooting_Installation
 last_update:
   date: 2023/6/30
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Troubleshooting_Installation/
 ---
 
 

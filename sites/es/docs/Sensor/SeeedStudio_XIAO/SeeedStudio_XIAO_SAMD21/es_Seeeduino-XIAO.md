@@ -2,13 +2,16 @@
 description: Introducción a Seeed Studio XIAO SAMD21
 title: Introducción a Seeed Studio XIAO SAMD21
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO
 sku: 110010004, 102010388, 102010328
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino-XIAO/
 ---
 
 # Introducción a Seeed Studio XIAO SAMD21

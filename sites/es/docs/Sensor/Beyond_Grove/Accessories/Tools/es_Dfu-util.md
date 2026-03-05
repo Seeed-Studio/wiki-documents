@@ -8,6 +8,9 @@ slug: /Dfu-util
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Dfu-util/
 ---
 
 ## Actualizando firmware con dfu-util

@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /W5500_Ethernet_Shield_v1.0
 sku: 103030021
 last_update:
-  date: 01/30/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/30/2023
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/W5500_Ethernet_Shield_v1.0/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/W5500_Ethernet_Shield_v1.0/img/W5500.jpg" alt="pir" width={600} height="auto" /></p>

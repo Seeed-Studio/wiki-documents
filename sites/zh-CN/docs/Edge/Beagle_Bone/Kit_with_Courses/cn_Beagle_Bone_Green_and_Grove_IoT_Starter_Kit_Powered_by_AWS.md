@@ -2,13 +2,16 @@
 description: BeagleBone Green 和 Grove IoT 入门套件，由 AWS 提供支持
 title: BeagleBone Green 和 Grove IoT 入门套件，由 AWS 提供支持
 keywords:
- - Beagle_Bone
- - Kit_with_Courses
+  - Beagle_Bone
+  - Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2023/2/1
   author: jianjing Huang
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/
 ---
 
 <!-- ---

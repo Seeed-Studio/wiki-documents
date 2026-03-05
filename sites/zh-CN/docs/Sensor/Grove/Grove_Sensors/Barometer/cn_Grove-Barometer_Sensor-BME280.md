@@ -2,13 +2,16 @@
 description: Grove - 气压传感器 (BME280)
 title: Grove - 气压传感器 (BME280)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Barometer_Sensor-BME280
 sku: 101020193
 last_update:
   date: 1/4/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Barometer_Sensor-BME280/
 ---
 
 <!-- tags: io_3v3, io_5v, grove_i2c, grove_analog, grove_digital, grove_uart, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit -->

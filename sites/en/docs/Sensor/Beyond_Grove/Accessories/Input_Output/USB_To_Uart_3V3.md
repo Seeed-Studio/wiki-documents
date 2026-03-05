@@ -1,6 +1,6 @@
 ---
 title: USB To Uart 3V3
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /USB_To_Uart_3V3
 last_update:
   date: 02/03/2022
   author: jianjing Huang
+createdAt: '2023-02-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/USB_To_Uart_3V3/
 ---
 
 <!-- ---

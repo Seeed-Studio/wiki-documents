@@ -1,15 +1,18 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa
-title:  SenseCAP Solar Node
+title: SenseCAP Solar Node
 keywords:
-- Meshtastic
-- Solar
+  - Meshtastic
+  - Solar
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
   date: 12/16/2025
   author: Michelle Huang
+createdAt: '2025-04-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/meshtastic_solar_node/
 ---
 
 

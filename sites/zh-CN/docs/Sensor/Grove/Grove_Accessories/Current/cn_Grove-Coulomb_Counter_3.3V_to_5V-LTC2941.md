@@ -2,13 +2,16 @@
 description: Grove - 库仑计 3.3V 至 5V (LTC2941)
 title: Grove - 库仑计 3.3V 至 5V (LTC2941)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Coulomb_Counter_3.3V_to_5V-LTC2941
 sku: 101020593
 last_update:
   date: 1/9/2023
   author: jianjing Huang
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/
 ---
 
 <div align="center"><img width="1000" src="https://files.seeedstudio.com/wiki/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941/img/main.jpg" /></div>

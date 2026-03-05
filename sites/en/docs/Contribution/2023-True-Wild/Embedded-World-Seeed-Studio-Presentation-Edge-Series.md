@@ -2,12 +2,15 @@
 description: Edge Series
 title: Edge Series
 keywords:
-- Embedded World
+  - Embedded World
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Embedded-World-Seeed-Studio-Presentation-Edge-Series
 last_update:
   date: 03/13/2023
   author: Matthew
+createdAt: '2023-03-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Embedded-World-Seeed-Studio-Presentation-Edge-Series/
 ---
 
 ![](https://www.seeedstudio.com/blog/wp-content/uploads/2023/03/edge@2x.png)

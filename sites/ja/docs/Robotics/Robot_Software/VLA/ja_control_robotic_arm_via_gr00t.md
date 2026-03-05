@@ -2,14 +2,17 @@
 description: この記事では、StarAIハードウェアを使用してNVIDIAのGR00T AIプラットフォームを高度なロボットアーム制御に実装する方法を実演し、環境セットアップからモデルファインチューニングとデプロイメントまでの完全なワークフローをカバーします。
 title: NVIDIA Isaac GR00T N1.5を使用した6/7自由度ロボットアーム制御
 keywords:
-- NVIDIA Jetson
-- Isaac GR00T
-- Robotic Arm
+  - NVIDIA Jetson
+  - Isaac GR00T
+  - Robotic Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.webp
 slug: /control_robotic_arm_via_gr00t
 last_update:
   date: 6/16/2025
   author: Youjiang
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/control_robotic_arm_via_gr00t/
 ---
 
 ## はじめに

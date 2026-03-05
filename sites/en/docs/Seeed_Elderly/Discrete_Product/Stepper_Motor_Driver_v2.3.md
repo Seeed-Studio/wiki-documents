@@ -2,12 +2,15 @@
 description: Stepper Motor Driver v2.3
 title: Stepper Motor Driver v2.3
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Stepper_Motor_Driver_v2.3
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Stepper_Motor_Driver_v2.3/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Stepper_Motor_Driver_v2.3/img/Steperdriver.jpg)

@@ -2,13 +2,16 @@
 description: Grove - I2C High Accuracy Temp&Humi Sensor(SHT35)
 title: Grove - I2C High Accuracy Temp&Humi Sensor(SHT35)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35
 sku: 101020592
 last_update:
   date: 12/30/2022
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temp-Humi_Sensor-SHT35/img/main.jpg" /></div>

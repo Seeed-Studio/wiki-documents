@@ -9,6 +9,9 @@ slug: /reComputer_Jetson_GPIO
 last_update:
   date: 04/12/2023
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_Jetson_GPIO/
 ---
 
 # reComputer Jetson ボードで 40 ピン GPIO を使用する方法

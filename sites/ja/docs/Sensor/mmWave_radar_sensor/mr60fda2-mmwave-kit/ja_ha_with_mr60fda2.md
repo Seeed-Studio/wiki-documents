@@ -2,15 +2,18 @@
 title: MR60FDA2 転倒検知センサーとHome Assistant
 description: MR60FDA2 転倒検知mmWaveセンサーとHome Assistant
 keywords:
-- mmwave
-- radar
-- MR60FDA2
+  - mmwave
+  - radar
+  - MR60FDA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
 slug: /ha_with_mr60fda2
 sidebar_position: 1
 last_update:
   date: 10/15/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ha_with_mr60fda2/
 ---
 
 import Tabs from '@theme/Tabs';

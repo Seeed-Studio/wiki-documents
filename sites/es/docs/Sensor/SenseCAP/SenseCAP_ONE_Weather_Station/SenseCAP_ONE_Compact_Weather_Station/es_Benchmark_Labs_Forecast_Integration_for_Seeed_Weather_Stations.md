@@ -2,12 +2,15 @@
 description: Esta guía explica cómo comprar y activar los pronósticos meteorológicos hiper-locales específicos por punto de Benchmark Labs con tu estación meteorológica Seeed. Nuestro sistema impulsado por IA entrega pronósticos horarios de 10 días específicos por punto, adaptados a tu microclima y alimentados por datos de tu estación meteorológica, ayudándote a tomar mejores decisiones ambientales y operacionales.
 title: Integración de Pronósticos de Benchmark Labs para Estaciones Meteorológicas Seeed
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image62.webp
 slug: /benchmark_labs_forecast_integration_for_seeed_weather_stations
 last_update:
   date: 6/3/2025
   author: Zeno
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Integración de Pronósticos de Benchmark Labs para Estaciones Meteorológicas Seeed
 

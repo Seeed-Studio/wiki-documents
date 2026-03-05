@@ -1,6 +1,6 @@
 ---
-title: Grove - Wio-E5 LoRa P2P Example 
-nointro:
+title: Grove - Wio-E5 LoRa P2P Example
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove_Wio_E5_P2P
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2023-08-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Wio_E5_P2P/
 ---
 
 

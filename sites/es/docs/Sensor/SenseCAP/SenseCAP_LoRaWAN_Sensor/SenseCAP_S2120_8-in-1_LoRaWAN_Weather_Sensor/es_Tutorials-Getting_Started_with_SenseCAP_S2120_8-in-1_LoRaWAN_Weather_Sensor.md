@@ -2,12 +2,15 @@
 description: Primeros Pasos con el Sensor Meteorológico LoRaWAN 8-en-1 SenseCAP S2120
 title: Primeros Pasos con el Sensor Meteorológico LoRaWAN 8-en-1 SenseCAP S2120
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor
 last_update:
   date: 7/26/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/
 ---
 
 ## Pre-Instalación

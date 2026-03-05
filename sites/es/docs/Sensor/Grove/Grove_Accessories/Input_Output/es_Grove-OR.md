@@ -1,6 +1,6 @@
 ---
 title: Grove - OR
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-OR
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-OR/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-OR/img/Mixer_v2.0_OR.jpg)

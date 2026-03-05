@@ -2,13 +2,16 @@
 description: Crea tu propia interfaz de usuario basada en codificación LVGL o con Squareline Studio
 title: Cómo Crear tu propia Interfaz de Usuario
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_Indicator_How_to_Create_your_own_UI/
 ---
 # **Cómo Crear tu propia Interfaz de Usuario**
 

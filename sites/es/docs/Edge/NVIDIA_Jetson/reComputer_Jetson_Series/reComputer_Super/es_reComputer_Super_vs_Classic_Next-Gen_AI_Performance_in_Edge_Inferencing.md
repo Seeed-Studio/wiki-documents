@@ -13,6 +13,9 @@ slug: /recomputer_jetson_super_performance
 last_update:
   date: 06/04/2025
   author: Zibo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_jetson_super_performance/
 ---
 
 

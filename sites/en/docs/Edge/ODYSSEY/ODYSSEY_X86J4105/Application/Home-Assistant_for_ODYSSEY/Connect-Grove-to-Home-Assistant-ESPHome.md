@@ -9,6 +9,9 @@ sku: E22011026,110992044
 last_update:
   date: 03/16/2023
   author: Lakshantha
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/
 ---
 
 # Connect Grove Modules to Home Assistant using ESPHome

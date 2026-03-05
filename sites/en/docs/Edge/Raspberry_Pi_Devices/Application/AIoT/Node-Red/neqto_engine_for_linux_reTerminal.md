@@ -7,6 +7,9 @@ sku: 110070048
 last_update:
   date: 04/17/2024
   author: Kazuhiro Ozuchi
+createdAt: '2024-03-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/neqto_engine_for_linux_reTerminal/
 ---
 
 ## Introduction

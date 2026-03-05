@@ -10,6 +10,9 @@ sku: 100003489,E25120101
 last_update:
   date: 11/25/2025
   author: Allen
+createdAt: '2025-09-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/epaper_EN04/
 ---
 
 import Tabs from '@theme/Tabs';

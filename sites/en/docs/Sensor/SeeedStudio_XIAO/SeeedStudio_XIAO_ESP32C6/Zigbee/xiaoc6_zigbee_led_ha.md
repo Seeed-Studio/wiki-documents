@@ -6,6 +6,9 @@ slug: /xiaoc6_zigbee_led_ha
 last_update:
   date: 01/21/2025
   author: Citric
+createdAt: '2025-01-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiaoc6_zigbee_led_ha/
 ---
 
 # Connect to Home Assistant via the Zigbee of the XIAO ESP32C6

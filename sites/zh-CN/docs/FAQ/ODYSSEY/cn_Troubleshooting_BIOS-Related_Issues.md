@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-常见问题解答
 title: 解决与BIOS相关的问题（WiFi/蓝牙/风扇/自动开机/启动保护/GPIO）
-#keywords:
 slug: /Troubleshooting_BIOS-Related_Issues
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 2023/6/26
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Troubleshooting_BIOS-Related_Issues/
 ---
 
 # 解决与BIOS相关的问题

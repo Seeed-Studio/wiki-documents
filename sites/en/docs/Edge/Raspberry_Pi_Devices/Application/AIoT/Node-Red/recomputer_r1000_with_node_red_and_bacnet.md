@@ -11,6 +11,9 @@ slug: /reComputer_r1000_node_red_bacnet_ip
 last_update:
   date: 06/20/2024
   author: ShuishengPeng
+createdAt: '2024-06-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_r1000_node_red_bacnet_ip/
 ---
 
 ## Introduction 

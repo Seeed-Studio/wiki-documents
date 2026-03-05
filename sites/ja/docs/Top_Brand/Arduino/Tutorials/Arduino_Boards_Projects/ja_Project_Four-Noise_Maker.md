@@ -2,13 +2,16 @@
 description: プロジェクト4 – ノイズメーカー
 title: プロジェクト4 – ノイズメーカー
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Four-Noise_Maker
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Project_Four-Noise_Maker/
 ---
 
 

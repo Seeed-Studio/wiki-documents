@@ -3,16 +3,19 @@ sidebar_position: 4
 description: SenseCraft AIプラットフォームでJetsonにモデルをデプロイする
 title: reComputer Jetson用モデルの使用
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson
 aliases:
   - /sensecraft_deploy_model_to_jetson
 last_update:
   date: 08/22/2024
   author: Frank
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson/
 ---
 
 ## はじめに

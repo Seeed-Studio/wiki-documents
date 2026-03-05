@@ -10,6 +10,9 @@ slug: /respeaker_2_mics_pi_hat_v2_speech_recognition
 last_update:
   date: 12/23/2024
   author: Joshua Lee
+createdAt: '2024-12-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_2_mics_pi_hat_v2_speech_recognition/
 ---
 
 ## 介绍

@@ -2,12 +2,15 @@
 description: Comenzando con el Módulo de IA de Visión Grove V2.
 title: Módulo de IA de Visión Grove V2
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2a
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2a/
 ---
 
 # Módulo de IA de Visión Grove V2

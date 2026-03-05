@@ -2,12 +2,15 @@
 description: Descripción general
 title: Primeros pasos con el Buzzer
 keywords:
-- Wio_terminal Buzzer
+  - Wio_terminal Buzzer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Buzzer
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Buzzer/
 ---
 
 # Primeros pasos con el Buzzer

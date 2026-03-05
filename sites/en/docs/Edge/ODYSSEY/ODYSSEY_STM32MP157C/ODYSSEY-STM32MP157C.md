@@ -7,6 +7,9 @@ sku: 102110319
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/
 ---
 
 # ODYSSEY – STM32MP157C

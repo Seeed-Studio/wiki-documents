@@ -2,13 +2,16 @@
 description: TinyMLワークショップコース
 title: AIワークショップ - ほぼすべてにAIを追加する方法
 keywords:
-- tinyml コース
+  - tinyml コース
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_workshop_course_new
 sku: 110992064
 last_update:
   date: 05/15/2025
   author: Citric, Matthew, Frank
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/tinyml_workshop_course_new/
 ---
 
 

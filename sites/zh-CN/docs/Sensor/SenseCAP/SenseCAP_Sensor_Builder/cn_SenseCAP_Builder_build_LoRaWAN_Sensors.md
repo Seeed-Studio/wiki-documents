@@ -2,12 +2,15 @@
 description: 使用 SenseCAP 数据记录器构建 LoRaWAN 传感器
 title: 使用 SenseCAP 数据记录器构建 LoRaWAN 传感器
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Builder_build_LoRaWAN_Sensors
 last_update:
   date: 11/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Builder_build_LoRaWAN_Sensors/
 ---
 
 ## 概述

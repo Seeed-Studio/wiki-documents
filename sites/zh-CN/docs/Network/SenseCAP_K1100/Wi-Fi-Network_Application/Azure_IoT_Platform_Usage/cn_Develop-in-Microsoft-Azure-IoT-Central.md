@@ -2,12 +2,15 @@
 description: 在 Microsoft Azure IoT Central 中开发
 title: 在 Microsoft Azure IoT Central 中开发
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Develop-in-Microsoft-Azure-IoT-Central
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Develop-in-Microsoft-Azure-IoT-Central/
 ---
 # 在 Microsoft Azure IoT Central 中开发
 

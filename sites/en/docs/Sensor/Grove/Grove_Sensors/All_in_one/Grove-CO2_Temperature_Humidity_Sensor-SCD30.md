@@ -2,13 +2,16 @@
 description: Grove - CO2 & Temperature & Humidity Sensor (SCD30)
 title: Grove - CO2 & Temperature & Humidity Sensor (SCD30)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_Temperature_Humidity_Sensor-SCD30
 sku: 101020634
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/main.jpg" /></div>

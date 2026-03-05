@@ -2,12 +2,15 @@
 description: Este artículo describe cómo usar el micrófono en la placa de expansión XIAO ESP32S3 Sense.
 title: Uso del Micrófono para la Versión Sense
 keywords:
-- Template
+  - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_mic
 last_update:
   date: 04/14/2023
   author: Citric
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_mic/
 ---
 
 # Uso del micrófono del Seeed Studio XIAO ESP32S3

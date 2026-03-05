@@ -2,16 +2,19 @@
 description: 使用 Seeed Studio XIAO RA4M1 制作一个简单的时钟。
 title: 由 Seeed Studio XIAO RA4M1 驱动的镂空时钟
 keywords:
-- ra4m1
-- xiao
-- clokc
+  - ra4m1
+  - xiao
+  - clokc
 image: https://files.seeedstudio.com/wiki/RA4M1_Application/top.webp
 side_position: 2
 slug: /xiao_ra4m1_clock
-sidebar_class_name: hidden 
+sidebar_class_name: hidden
 last_update:
   date: 11/12/2024
   author: Jason
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_ra4m1_clock/
 ---
 
 

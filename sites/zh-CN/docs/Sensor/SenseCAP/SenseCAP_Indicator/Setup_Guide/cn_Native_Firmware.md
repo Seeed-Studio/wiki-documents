@@ -2,13 +2,16 @@
 description: 开始使用 SenseCAP Indicator 原生固件
 title: 原生固件
 keywords:
-- SenseCAP Indicator
+  - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Native_Firmware
 sidebar_position: 1
 last_update:
   date: 11/16/2023
   author: Spencer
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_Native_Firmware/
 ---
 
 # **原生固件**

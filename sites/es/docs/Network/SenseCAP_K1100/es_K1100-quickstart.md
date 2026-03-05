@@ -2,13 +2,16 @@
 description: Iniciación Rápida y Sin Código con SenseCraft
 title: Iniciación Rápida y Sin Código con SenseCraft
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-quickstart
 sku: 110991748
 last_update:
   date: 1/12/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1100-quickstart/
 ---
 
 # Inicio Rápido con SenseCAP K1100 - El Kit de Prototipo de Sensores

@@ -2,15 +2,18 @@
 description: OpenEPaperLink設定ジェネレーターを使用してe-paperの設定を生成する
 title: ePaper用OpenEPaperLink設定ビルダー
 keywords:
-- XIAO eInk Expansion
-- XIAO
-- OEPL Config Builder
+  - XIAO eInk Expansion
+  - XIAO
+  - OEPL Config Builder
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp
 slug: /epaper_breakout_board_with_oepl
 sidebar_position: 2
 last_update:
   date: 10/23/2025
   author: Zovey
+createdAt: '2025-10-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/epaper_breakout_board_with_oepl/
 ---
 
 # OpenEPaperLinkとePaper設定ビルダー

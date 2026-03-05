@@ -2,12 +2,15 @@
 description: 本页面是 Seeed Studio 所有开源内容的集合。
 title: 开源
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /open_source_topic
 last_update:
   date: 12/18/2023
   author: Matthew
+createdAt: '2023-12-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/open_source_topic/
 ---
 
 # Seeed Studio 的开源项目

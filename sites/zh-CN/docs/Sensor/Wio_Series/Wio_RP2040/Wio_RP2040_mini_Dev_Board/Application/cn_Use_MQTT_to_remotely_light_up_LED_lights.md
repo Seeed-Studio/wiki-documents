@@ -1,6 +1,6 @@
 ---
 title: 使用 MQTT 远程点亮 LED 灯
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Use_MQTT_to_remotely_light_up_LED_lights/
 ---
 
 MQTT 是一种客户端服务器发布/订阅消息传输协议。客户端可以作为发布者或订阅者或两者兼而有之。

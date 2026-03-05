@@ -2,13 +2,16 @@
 description: Grove - Switch(P)
 title: Grove - Switch(P)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Switch-P
 sku: 101020004
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Switch-P/
 ---
 
 

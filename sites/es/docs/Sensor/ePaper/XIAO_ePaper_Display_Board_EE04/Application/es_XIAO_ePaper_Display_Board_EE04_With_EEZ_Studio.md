@@ -9,6 +9,9 @@ slug: /epaper_ee04_eezstudio
 last_update:
   date: 09/28/2025
   author: Zeller
+createdAt: '2025-10-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/epaper_ee04_eezstudio/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_2_2.jpg" style={{width:600, height:'auto'}}/></div>

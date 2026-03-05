@@ -1,6 +1,6 @@
 ---
-title: Grove - Wio-E5 TTN Demo 
-nointro:
+title: Grove - Wio-E5 TTN Demo
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -8,7 +8,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Wio_E5_TTN_Demo
 last_update:
   date: 08/28/2023
-  author: Salman 
+  author: Salman
+createdAt: '2023-08-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_Wio_E5_TTN_Demo/
 ---
 
 

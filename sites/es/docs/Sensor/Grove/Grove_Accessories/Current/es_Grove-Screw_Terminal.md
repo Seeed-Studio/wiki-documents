@@ -1,6 +1,6 @@
 ---
 title: Grove - Terminal de Tornillo
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020007
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Screw_Terminal/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Screw_Terminal/img/Grove-screw_terminal.jpg).

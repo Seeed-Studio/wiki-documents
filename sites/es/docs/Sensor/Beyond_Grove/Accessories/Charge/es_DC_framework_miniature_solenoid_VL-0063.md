@@ -1,6 +1,6 @@
 ---
 title: Solenoide miniatura de marco DC VL-0063
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DC_framework_miniature_solenoid_VL-0063
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/DC_framework_miniature_solenoid_VL-0063/
 ---
 
 <p style={{textAlign: 'center'}}><a><img src="https://files.seeedstudio.com/wiki/DC_framework_miniature_solenoid_VL-0063/img/DC.png" border={0} /></a></p>

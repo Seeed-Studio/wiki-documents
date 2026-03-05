@@ -6,6 +6,9 @@ slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini
 last_update:
   date: 01/06/2026
   author: youjiang
+createdAt: '2026-01-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/local_voice_llm_on_recomputer_jetson_for_reachy_mini/
 ---
 
 ¡Doble Mini! Este proyecto construirá un sistema de asistente robótico interactivo por voz completamente localizado, de baja latencia y alta privacidad. Centrado en el dispositivo de computación de borde reComputer Mini J501, despliega servicios locales de reconocimiento de voz, modelo de lenguaje grande y síntesis de voz. Utilizando la plataforma robótica de código abierto Reachy Mini como terminal físico para la interacción humano-computadora, logra una experiencia de interacción inteligente encarnada que es perceptiva, conversacional y accionable.

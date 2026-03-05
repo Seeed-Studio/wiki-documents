@@ -2,13 +2,16 @@
 description: JetPack を reComputer J4012（J401 キャリアボード）にフラッシュする
 title: Jetpack をフラッシュする
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J4012_Flash_Jetpack
 sku: 102110769, 102110770
 last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/
 ---
 
 # JetPack OS を J401 キャリアボードにフラッシュする

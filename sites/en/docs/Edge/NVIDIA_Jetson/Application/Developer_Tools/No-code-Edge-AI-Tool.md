@@ -10,7 +10,10 @@ sku: 110061361
 last_update:
   date: 01/04/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/No-code-Edge-AI-Tool/
 ---
 
 # No code Edge AI Tool

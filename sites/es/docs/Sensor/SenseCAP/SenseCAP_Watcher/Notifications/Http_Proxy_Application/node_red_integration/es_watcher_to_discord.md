@@ -2,14 +2,17 @@
 description: Enviar datos desde Watcher & Node-RED a Discord
 title: Watcher & Node-RED a Discord
 keywords:
-- Watcher
-- Discord
-- Node-RED
+  - Watcher
+  - Discord
+  - Node-RED
 image: https://files.seeedstudio.com/wiki/Watcher_Discord_Node_Red/Watcher_Discord_Cover.png
 slug: /watcher_node_red_to_discord
 last_update:
   date: 08/02/2024
   author: Vincent
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/watcher_node_red_to_discord/
 ---
 
 # Inicio Rápido de Watcher a Discord

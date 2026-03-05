@@ -3,19 +3,23 @@ description: Expert guide for reflashing the ReachyMiniOS image to Reachy Mini's
 title: Reflash the Raspberry Pi OS Image
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:
-- reflash
-- factory reset
-- os image
-- rpiboot
-- bmaptool
-- cm4
-- expert
-- recovery
+  - reflash
+  - factory reset
+  - os image
+  - rpiboot
+  - bmaptool
+  - cm4
+  - expert
+  - recovery
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
 ---
 
 # Advanced: Reflash the Raspberry Pi OS image

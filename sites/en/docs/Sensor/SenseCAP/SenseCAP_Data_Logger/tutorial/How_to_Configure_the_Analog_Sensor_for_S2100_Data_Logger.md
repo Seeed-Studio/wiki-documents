@@ -2,12 +2,15 @@
 description: Configure the Analog Sensor
 title: Configure the Analog Sensor
 keywords:
-- SenseCAP data logger
+  - SenseCAP data logger
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger
 last_update:
   date: 4/12/2023
   author: Yvonne
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
 # Getting S2100 started with Analog Input Sensor

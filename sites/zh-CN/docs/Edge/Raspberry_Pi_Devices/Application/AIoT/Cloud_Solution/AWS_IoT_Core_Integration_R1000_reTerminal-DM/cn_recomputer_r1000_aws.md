@@ -3,13 +3,16 @@ description: 了解如何将您的 Computer R1000 连接到 AWS IoT Core，这�
 title: AWS IoT Core 与 reComputer R1000 集成
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 keywords:
-- AWS
-- Getting Start
-- Cloud
+  - AWS
+  - Getting Start
+  - Cloud
 slug: /recomputer_r1000_aws
 last_update:
   date: 7/10/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1000_aws/
 ---
 
 ## 介绍

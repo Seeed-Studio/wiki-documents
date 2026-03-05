@@ -2,12 +2,15 @@
 description: 概述
 title: 加速度计概述
 keywords:
-- Wio_terminal IMU
+  - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-IMU-Overview
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-IMU-Overview/
 ---
 
 # 加速度计概述

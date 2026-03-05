@@ -3,13 +3,16 @@ description: reComputer-Jetson® Guide
 title: reComputer-Jetson® Guide
 keywords:
   - Edge
-  - reComputer 
+  - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Intro
 last_update:
   date: 12/19/2023
   author: Youjiang
+createdAt: '2023-12-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-J4012/5.png" style={{width:800, height:'auto'}}/></div>

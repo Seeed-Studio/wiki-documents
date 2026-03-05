@@ -11,6 +11,9 @@ sku: 102110840
 last_update:
   date: 04/19/2023
   author: Lakshantha
+createdAt: '2023-04-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_A603_Flash_System/
 ---
 
 # Flash JetPack OS to A603 Carrier Board

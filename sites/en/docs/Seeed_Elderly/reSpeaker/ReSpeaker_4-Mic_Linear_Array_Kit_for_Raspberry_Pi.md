@@ -2,13 +2,16 @@
 description: ReSpeaker 4-Mic Linear Array Kit
 title: reSpeaker 4-Mic Linear Array Kit
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi
 sku: 107990056
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)

@@ -2,17 +2,20 @@
 description: Create a Custom BSP from Existing Jetson Development Environment
 title: Creating a Custom BSP Package from Jetson Development Environment
 keywords:
-- reComputer
-- BSP
-- backup
-- Jetson
-- JetPack
-- custom image
+  - reComputer
+  - BSP
+  - backup
+  - Jetson
+  - JetPack
+  - custom image
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /make_diy_bsp_for_jetson
 last_update:
   date: 01/04/2026
   author: Dayu
+createdAt: '2026-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/make_diy_bsp_for_jetson/
 ---
 
 This wiki guide demonstrates how to clone a complete development environment from an existing Jetson device and create a flashable BSP (Board Support Package) that can be used to replicate the same environment on other Jetson devices. The BSP created using this method enables complete environment cloning when flashed to other Jetson devices.

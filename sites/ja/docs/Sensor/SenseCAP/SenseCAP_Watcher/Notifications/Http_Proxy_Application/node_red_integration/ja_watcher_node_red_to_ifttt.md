@@ -2,13 +2,16 @@
 description: WatcherとNode-REDからIFTTTにメッセージを送信
 title: Watcher & Node-RED to IFTTT
 keywords:
-- watcher
-- IFTTT
+  - watcher
+  - IFTTT
 image: https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png
 slug: /watcher_node_red_to_ifttt
 last_update:
   date: 06/28/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_ifttt/
 ---
 
 # Watcher To IFTTT クイックスタート

@@ -2,13 +2,16 @@
 description: Grove - 温湿度传感器 (DHT11)
 title: Grove - 温湿度传感器 (DHT11)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TemperatureAndHumidity_Sensor
 sku: 101020011
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-TemperatureAndHumidity_Sensor/
 ---
 
 

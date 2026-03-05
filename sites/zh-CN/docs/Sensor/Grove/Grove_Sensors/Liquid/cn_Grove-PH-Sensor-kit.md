@@ -2,13 +2,16 @@
 description: Grove - PH 传感器套件 (E-201C-Blue)
 title: Grove - PH 传感器套件 (E-201C-Blue)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-PH-Sensor-kit
 sku: 110020291
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-PH-Sensor-kit/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/IMG/04.png) -->

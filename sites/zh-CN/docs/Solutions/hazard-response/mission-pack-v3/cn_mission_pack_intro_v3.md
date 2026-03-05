@@ -2,13 +2,15 @@
 description: intro
 title: 产品概述
 keywords:
-    - mission-pack
-# image: 
+  - mission-pack
 slug: /mission_pack_intro_v3
 sidebar_position: 0
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-08-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/mission_pack_intro_v3/
 ---
 
 Hazard Response Mission Pack 是一种开源的 AIoT 解决方案，旨在高效地管理和缓解危险场景。 这一紧凑的系统结合了一系列技术，包括传感器网络和边缘计算，以便能够进行有效的遥感、数据传输、处理、推断和分析。

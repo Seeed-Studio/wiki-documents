@@ -2,17 +2,20 @@
 description: 使用 Whisper、Ollama 和 NVIDIA Jetson 构建您自己的本地语音助手。GPU 设置、语音转文本、LLM、TTS 和离线语音 AI 的分步指南。
 title: 端到端部署离线智能语音助手
 keywords:
-- reSpeaker
-- TTS
-- STT
-- LLM
-- Voice Assistant
-- Speech Recognition
+  - reSpeaker
+  - TTS
+  - STT
+  - LLM
+  - Voice Assistant
+  - Speech Recognition
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_voice_assistant
 last_update:
   date: 12/16/2025
   author: Kasun Thushara
+createdAt: '2025-12-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_voice_assistant/
 ---
 
 ## 概述

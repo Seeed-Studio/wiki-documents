@@ -2,13 +2,16 @@
 description: RePhone 介绍
 title: RePhone 介绍
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RePhone
 sku: 113060004, 110040002
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RePhone/
 ---
 
 RePhone Kit 是一个开源的模块化手机套件，它改变了我们使用手机的方式。它提供了一种全新的手机定制形式，以及最简单的可穿戴设备/物联网开发解决方案。

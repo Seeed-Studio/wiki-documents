@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 07/21/2025
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/
 ---
 
 # reTerminal E 系列电子纸显示器概述

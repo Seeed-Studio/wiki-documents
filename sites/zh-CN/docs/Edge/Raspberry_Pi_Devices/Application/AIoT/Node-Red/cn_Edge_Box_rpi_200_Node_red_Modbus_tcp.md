@@ -11,6 +11,9 @@ slug: /edge_box_rpi_200_node_red_modbus_tcp
 last_update:
   date: 05/27/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/edge_box_rpi_200_node_red_modbus_tcp/
 ---
 ## 介绍
 

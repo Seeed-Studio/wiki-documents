@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO nRF54L15 Sense Zigbee
-description: |
+description: ''
 keywords:
   - xiao
   - nrf54l15
@@ -12,6 +12,9 @@ sku: 101991422
 last_update:
   date: 1/27/2026
   author: Brandy
+createdAt: '2026-01-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_zigbee/
 ---
 
 本教程指导您在 Seeed Studio **XIAO nRF54L15** 开发板上实现 [Zigbee](https://en.wikipedia.org/wiki/Zigbee) 应用，该开发板结合了 **Wi-Fi**、**低功耗蓝牙 (BLE)** 和 **Zigbee** 连接功能，非常适合 **物联网应用**。本指南中的示例使用 NCS 来实现 Zigbee 功能。

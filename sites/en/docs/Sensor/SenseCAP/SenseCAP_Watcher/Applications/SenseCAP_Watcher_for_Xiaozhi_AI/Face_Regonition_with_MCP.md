@@ -3,24 +3,28 @@ description: Guide for deploy Face_Regonition with internal MCP tool
 title: Face Regonition with MCP
 sidebar_position: 7
 keywords:
-- AI
-- SenseCAP
-- Watcher
-- Agent
-- Face
-- Model
-- Context
-- protocol
-- recognition
-- MCP
-- reComputer
+  - AI
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Face
+  - Model
+  - Context
+  - protocol
+  - recognition
+  - MCP
+  - reComputer
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /face_regonition_with_mcp
 last_update:
   date: 11/25/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-11-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/face_regonition_with_mcp/
 ---
 # Extending Face Regonition with MCP
 

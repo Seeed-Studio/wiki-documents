@@ -12,6 +12,9 @@ slug: /recomputer_r1000_nodered_opcua_server
 last_update:
   date: 08/14/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1000_nodered_opcua_server/
 ---
 
 ## 介绍

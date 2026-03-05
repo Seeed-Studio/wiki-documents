@@ -1,14 +1,17 @@
 ---
-description:  LinkIt Smart 7688
-title:  LinkIt Smart 7688
+description: LinkIt Smart 7688
+title: LinkIt Smart 7688
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_Smart_7688
 sku: 102110018
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/LinkIt_Smart_7688/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Linkit_Smart_product.jpg)

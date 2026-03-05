@@ -2,13 +2,16 @@
 description: One Wire Temperature Sensor DS18B20
 title: One Wire Temperature Sensor DS18B20
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /One-Wire-Temperature-Sensor-DS18B20
 sku: 101990019
 last_update:
   date: 1/4/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/One-Wire-Temperature-Sensor-DS18B20/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/one-wire.png" /></div>

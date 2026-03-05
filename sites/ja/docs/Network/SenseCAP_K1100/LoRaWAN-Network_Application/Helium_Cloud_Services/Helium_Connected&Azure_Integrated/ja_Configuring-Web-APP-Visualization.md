@@ -2,12 +2,15 @@
 description: Web APP 可視化の設定
 title: Web APP 可視化の設定
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Configuring-Web-APP-Visualization
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Configuring-Web-APP-Visualization/
 ---
 
 

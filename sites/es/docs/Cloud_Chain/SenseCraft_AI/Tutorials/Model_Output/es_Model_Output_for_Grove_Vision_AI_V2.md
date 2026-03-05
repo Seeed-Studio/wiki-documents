@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
 # Configurando la Salida del Modelo en SenseCraft AI para Grove Vision AI V2

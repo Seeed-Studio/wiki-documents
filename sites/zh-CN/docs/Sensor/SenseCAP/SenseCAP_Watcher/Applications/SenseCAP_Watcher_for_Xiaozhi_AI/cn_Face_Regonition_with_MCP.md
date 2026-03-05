@@ -3,22 +3,25 @@ description: 使用内部 MCP 工具部署人脸识别的指南
 title: 使用 MCP 进行人脸识别
 sidebar_position: 7
 keywords:
-- AI
-- SenseCAP
-- Watcher
-- Agent
-- Face
-- Model
-- Context
-- protocol
-- recognition
-- MCP
-- reComputer
+  - AI
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Face
+  - Model
+  - Context
+  - protocol
+  - recognition
+  - MCP
+  - reComputer
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /face_regonition_with_mcp
 last_update:
   date: 11/25/2025
   author: Twelve
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/face_regonition_with_mcp/
 ---
 # 使用 MCP 扩展人脸识别功能
 

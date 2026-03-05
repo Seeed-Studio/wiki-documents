@@ -2,13 +2,16 @@
 description: Esta guía te ayudará a configurar rápidamente la Placa de Expansión RS485 de Seeed Studio XIAO y comenzar con la comunicación RS485.
 title: Placa de Expansión RS485 para XIAO
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.webp
 slug: /XIAO-RS485-Expansion-Board
 sku: 113991354
 last_update:
   date: 11/20/2024
   author: Jason
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-RS485-Expansion-Board/
 ---
 
 

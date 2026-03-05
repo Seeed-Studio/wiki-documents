@@ -2,12 +2,15 @@
 description: Este artículo explica cómo flashear JetPack 6.0 en la Placa Portadora J401-Mini, cubriendo la descripción general del dispositivo, preparación, ingreso al modo Force Recovery, y uso de un script de un clic para flashear, ayudando a los usuarios a desplegar rápidamente dispositivos NVIDIA Jetson Orin.
 title: Flashear Jetpack
 keywords:
-- reComputer Mini
+  - reComputer Mini
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
   date: 03/28/2025
   author: Dayu
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_mini_j401_getting_started/
 ---
 
 # Flashear JetPack a la Placa Portadora J401-Mini

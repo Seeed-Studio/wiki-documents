@@ -2,13 +2,16 @@
 description: WatcherとNode-REDからTwilioにメッセージを送信する
 title: Watcher & Node-RED to Twilio
 keywords:
-- watcher
-- twilio
+  - watcher
+  - twilio
 image: https://files.seeedstudio.com/wiki/watcher_to_twilio_image/tw1.png
 slug: /watcher_node_red_to_twilio
 last_update:
   date: 07/03/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_twilio/
 ---
 
 # Watcher To Twilio クイックスタート

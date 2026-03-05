@@ -2,13 +2,16 @@
 description: H28K Boot Tutorial
 title: Install Operating System
 keywords:
-- Network
+  - Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /H28K-install-system
 sku: 113991236,113991235
 last_update:
   date: 11/24/2023
   author: Parker
+createdAt: '2023-12-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/H28K-install-system/
 ---
 
 <!-- ---

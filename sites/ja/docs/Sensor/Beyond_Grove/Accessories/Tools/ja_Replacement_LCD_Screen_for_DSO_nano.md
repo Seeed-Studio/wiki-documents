@@ -1,6 +1,6 @@
 ---
 title: DSO nano用交換用LCDスクリーン
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Replacement_LCD_Screen_for_DSO_nano
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Replacement_LCD_Screen_for_DSO_nano/
 ---
 
 

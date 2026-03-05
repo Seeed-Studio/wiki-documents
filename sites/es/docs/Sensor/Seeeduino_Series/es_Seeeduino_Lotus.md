@@ -2,13 +2,16 @@
 description: Seeeduino Lotus
 title: Seeeduino Lotus
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Lotus
 sku: 102010168, 102020001
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino_Lotus/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/Seeeduino_Lotus_Cover.jpg)

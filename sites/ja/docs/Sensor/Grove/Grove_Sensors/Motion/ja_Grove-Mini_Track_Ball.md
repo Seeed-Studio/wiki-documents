@@ -2,13 +2,16 @@
 description: Grove - Mini Track Ball
 title: Grove - Mini Track Ball
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mini_Track_Ball
 sku: 101020091
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Mini_Track_Ball/
 ---
 
 

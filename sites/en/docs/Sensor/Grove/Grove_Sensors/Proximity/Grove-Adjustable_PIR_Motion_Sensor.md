@@ -1,6 +1,6 @@
 ---
 title: Grove - Adjustable PIR Motion Sensor
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020617
 last_update:
   date: 01/05/2022
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Adjustable_PIR_Motion_Sensor/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Adjustable_PIR_Motion_Sensor/img/main.jpg)

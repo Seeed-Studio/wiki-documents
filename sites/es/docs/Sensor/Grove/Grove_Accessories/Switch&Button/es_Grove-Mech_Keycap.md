@@ -2,13 +2,16 @@
 description: Tecla mecánica Grove
 title: Tecla mecánica Grove
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mech_Keycap
 sku: 111020049
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Mech_Keycap/
 ---
 <!-- ---
 name: Grove-Mech keycap

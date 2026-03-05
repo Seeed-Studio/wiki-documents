@@ -2,13 +2,16 @@
 description: Grove - Formaldehyde sensor
 title: Grove - Formaldehyde sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg
 slug: /Grove-Formaldehyde-Sensor
 sku: 101020972
 last_update:
   date: 3/7/2024
   author: Spencer Yan
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Formaldehyde-Sensor/
 ---
 <!-- ---
 name: Grove - Formaldehyde sensor

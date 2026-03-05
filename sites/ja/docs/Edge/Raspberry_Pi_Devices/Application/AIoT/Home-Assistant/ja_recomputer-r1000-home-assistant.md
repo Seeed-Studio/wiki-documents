@@ -1,8 +1,8 @@
 ---
 description: reComputer R1000でHome Assistantをセットアップし、設定する方法を学ぶ
-title: reComputer R1000とHome Assistant 
+title: reComputer R1000とHome Assistant
 keywords:
-  - Home Assistant 
+  - Home Assistant
   - reComputer R1000
   - Home Automation
   - Bookworm
@@ -11,6 +11,9 @@ slug: /recomputer_r1000_home_automation
 last_update:
   date: 08/02/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_r1000_home_automation/
 ---
 
 ## はじめに

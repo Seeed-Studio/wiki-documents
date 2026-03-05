@@ -11,6 +11,9 @@ sidebar_class_name: hidden
 last_update:
   date: 01/06/2026
   author: Zeller
+createdAt: '2026-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32c5_buletooth_usage/
 ---
 
 # Uso de Bluetooth con Seeed Studio XIAO ESP32-C5

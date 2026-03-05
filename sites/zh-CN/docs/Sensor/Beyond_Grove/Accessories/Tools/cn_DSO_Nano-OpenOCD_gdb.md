@@ -1,6 +1,6 @@
 ---
 title: 使用 OpenOCD 和 gdb 进行调试
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DSO_Nano-OpenOCD_gdb
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DSO_Nano-OpenOCD_gdb/
 ---
 
 # 使用 OpenOCD 和 gdb 进行调试

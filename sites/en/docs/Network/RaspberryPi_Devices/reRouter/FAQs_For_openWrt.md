@@ -6,6 +6,9 @@ slug: /FAQs_For_openWrt
 last_update:
   date: 7/26/2023
   author: yulu Ji
+createdAt: '2023-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/FAQs_For_openWrt/
 ---
 
 This document contains all the frequently asked questions related to OpenWrt. This will be very helpful if you are suffering from any issues when using the OpenWrt.

@@ -2,12 +2,15 @@
 description: 本主题介绍了 Seeed Studio 关于边缘计算架构的产品文档，该架构处理需要实时处理的应用中各种传感器生成的"即时"数据。
 title: 边缘计算
 keywords:
-- edge computing
+  - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Computing
 last_update:
   date: 05/24/2024
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Edge_Computing/
 ---
 
 本主题介绍了 Seeed Studio 关于边缘计算架构的产品文档，该架构处理需要实时处理的应用中各种传感器生成的"即时"数据。本页面展示了多种具有不同计算能力的设备，以满足不同用户的需求。

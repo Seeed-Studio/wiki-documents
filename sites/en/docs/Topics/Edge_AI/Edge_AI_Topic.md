@@ -2,12 +2,15 @@
 description: This page is a collection of all Seeed Studio Edge AI content.
 title: Edge AI
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /edge_ai_topic
 last_update:
   date: 12/18/2023
   author: Matthew
+createdAt: '2023-12-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/edge_ai_topic/
 ---
 
 # Edge Artificial Intelligence

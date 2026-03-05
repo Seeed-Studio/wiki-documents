@@ -2,13 +2,16 @@
 description: Raspberry Pi用3Dジェスチャートラッキングシールド MGC3130
 title: Raspberry Pi用3Dジェスチャートラッキングシールド MGC3130
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130
 sku: 103100083
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/3D-Gesture-Tracking-Shield-for-Raspberry-Pi-MGC3130/
 ---
 
 

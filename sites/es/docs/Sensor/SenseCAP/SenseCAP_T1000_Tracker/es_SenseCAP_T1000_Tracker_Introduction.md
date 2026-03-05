@@ -2,13 +2,16 @@
 description: SenseCAP_T1000_tracker_Introducción
 title: Introducción
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker/Introduction
 sku: 114993073, 114993169, 114993168, 113991194, 114993207, 114993208, 114993106, E2025081201, E2025081501
 last_update:
   date: 10/11/2025
   author: Twelve
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_T1000_tracker/Introduction/
 ---
 
 

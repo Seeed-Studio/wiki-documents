@@ -6,6 +6,9 @@ slug: /use_cursor_create_zigbee_prj
 last_update:
   date: 03/04/2025
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/use_cursor_create_zigbee_prj/
 ---
 
 import Tabs from '@theme/Tabs';

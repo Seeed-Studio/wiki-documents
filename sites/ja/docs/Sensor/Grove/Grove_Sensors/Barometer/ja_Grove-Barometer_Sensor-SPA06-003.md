@@ -2,12 +2,15 @@
 description: Grove - 気圧センサー (SPA06-003)
 title: Grove - 気圧センサー (SPA06-003)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/show.webp
 slug: /Grove-Barometer_Sensor-SPA06-003
 last_update:
   date: 05/15/2025
   author: robben
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Barometer_Sensor-SPA06-003/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Grove Vision AI V2とソフトウェアプラットフォームの入門ガイド
 title: ソフトウェアサポート
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_software_support
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_software_support/
 ---
 
 # サポートされているソフトウェアの概要

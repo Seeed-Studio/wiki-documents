@@ -2,13 +2,16 @@
 description: Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor
 title: Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor
 keywords:
-- Grove
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png 
+  - Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor
 sku: 101990644
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/
 ---
 
 import Tabs from '@theme/Tabs';

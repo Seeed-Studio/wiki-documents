@@ -2,13 +2,16 @@
 description: Grove - 开关(P)
 title: Grove - 开关(P)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Switch-P
 sku: 101020004
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Switch-P/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Switch-P/img/switch_p.jpg)

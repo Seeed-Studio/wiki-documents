@@ -1,6 +1,6 @@
 ---
 title: 如何使用 LvGL 图形库
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LVGL
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-LVGL/
 ---
 
 # 如何在 Wio Terminal 上使用 LvGL 图形库

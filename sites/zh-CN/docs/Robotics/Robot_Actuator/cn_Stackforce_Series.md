@@ -2,14 +2,17 @@
 description: 本维基提供了 Stackforce 系列电机的教程。
 title: Stackforce系列电机
 keywords:
-- actuator
-- motor
-- robotics
+  - actuator
+  - motor
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp
 slug: /stackforce_series
 last_update:
   date: 12/25/2025
   author: Li Shanghang
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/stackforce_series/
 ---
 
 # Stackforce系列电机入门指南

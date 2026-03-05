@@ -1,17 +1,20 @@
 ---
-description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the Lerobot framework. 
+description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the Lerobot framework.
 title: How to use the SO10xArm robotic arm in Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142
 last_update:
   date: 12/24/2024
   author: ZhuYaoHui
+createdAt: '2025-06-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/lerobot_so100m/
 ---
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot

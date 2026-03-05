@@ -2,12 +2,15 @@
 description: Uso de Bluetooth en Seeed Studio XIAO ESP32C3
 title: Uso de Bluetooth
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Bluetooth_Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Bluetooth_Usage/
 ---
 
 # Uso de Bluetooth

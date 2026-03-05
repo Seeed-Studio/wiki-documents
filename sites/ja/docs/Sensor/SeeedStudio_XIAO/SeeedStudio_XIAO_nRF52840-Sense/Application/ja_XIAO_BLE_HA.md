@@ -6,6 +6,9 @@ slug: /XIAO_BLE_HA
 last_update:
   date: 09/18/2023
   author: Bruno Santos (Feiticeir0)
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_BLE_HA/
 ---
 
 # プロジェクト概要

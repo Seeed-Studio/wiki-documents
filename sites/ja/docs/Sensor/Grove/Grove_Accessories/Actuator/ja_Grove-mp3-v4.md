@@ -2,14 +2,17 @@
 description: Grove MP3 v4 の使い方を始めましょう。
 title: Grove - MP3 v4.0
 keywords:
-- mp3
-- grove
+  - mp3
+  - grove
 image: https://files.seeedstudio.com/wiki/grove-mp3-v4/0.webp
 slug: /grove_mp3_v4
 sku: 107020129
 last_update:
   date: 05/15/2025
   author: Carla
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_mp3_v4/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Capacitance Meter Kit
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Capacitance_Meter_Kit
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Capacitance_Meter_Kit/
 ---
 
 ![https://www.seeedstudio.com/depot/images/product/cmk1.jpg](http://bz.seeedstudio.com/depot/images/product/cmk1.jpg)

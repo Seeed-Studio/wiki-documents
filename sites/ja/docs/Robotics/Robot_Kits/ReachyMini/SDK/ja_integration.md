@@ -3,20 +3,24 @@ description: Reachy Mini アプリの構築と公開、LLM の統合、JavaScrip
 title: 連携とアプリ
 slug: /reachymini_sdk_integration
 keywords:
-- integration
-- apps
-- llm
-- hugging face
-- web apps
-- rest api
-- websocket
-- ai
-- publishing
+  - integration
+  - apps
+  - llm
+  - hugging face
+  - web apps
+  - rest api
+  - websocket
+  - ai
+  - publishing
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_sdk_integration/
 ---
 
 # 連携とアプリ
