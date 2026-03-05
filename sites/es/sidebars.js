@@ -3727,6 +3727,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Rugged J40',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/es_reComputer_Rugged_J40_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer Robotics J40',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Getting_Started',

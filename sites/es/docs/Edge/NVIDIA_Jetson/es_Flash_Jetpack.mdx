@@ -301,10 +301,16 @@ export const productOptions = [
   }}>
     <div className="alert__heading" style={{display: 'flex', alignItems: 'center'}}>
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
-      JetPack 6.2 con MAXN Super Mode
+      JetPack 6.2 con modo MAXN Super
     </div>
-    <p>Configuraciones de rendimiento mejoradas ahora disponibles para los módulos Orin Nano y Orin NX. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Learn more</a></p>
-    <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center'}}>
+    <p>Configuraciones de rendimiento mejoradas ahora disponibles para los módulos Orin Nano y Orin NX. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Más información</a></p>
+    <div className="margin-top--md" style={{display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap'}}>
+      <a href="https://seeedstudio88-my.sharepoint.com/:w:/r/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/Doc.aspx?sourcedoc=%7B152BF560-D35A-4895-86B9-26D71EF7F578%7D&file=Jetson%20BSP%20release%20note.docx&action=default&mobileredirect=true&DefaultItemOpen=1" target="_blank" rel="noopener noreferrer"
+        style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #6fbf3a 0%, #5aaa28 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
+        <span aria-hidden="true" style={{fontSize: '1.05rem', lineHeight: 1, display: 'inline-flex'}}>📋</span>
+        <span style={{lineHeight: 1, display: 'inline-block'}}>Nota de lanzamiento de BSP</span>
+        <span aria-hidden="true" style={{opacity: 0.85, lineHeight: 1, display: 'inline-flex'}}>↗</span>
+      </a>
       <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" target="_blank" rel="noopener noreferrer"
         style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.55rem', height: '44px', padding: '0 18px', borderRadius: '999px', background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', color: '#fff', fontSize: '0.95rem', fontWeight: 700, textDecoration: 'none', border: '1px solid rgba(255,255,255,0.18)', boxShadow: '0 10px 24px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.06) inset', whiteSpace: 'nowrap', lineHeight: 1}}>
         <span aria-hidden="true" style={{fontSize: '1.05rem', lineHeight: 1, display: 'inline-flex'}}>📋</span>
@@ -413,7 +419,7 @@ export const productOptions = [
       <div className="col col--6">
         <div className="admonition admonition-tip">
           <div className="admonition-heading">
-            <h5>Ubuntu 20.04 / 22.04 y posteriores</h5>
+            <h5>Ubuntu 20.04 / 22.04 y superiores</h5>
           </div>
           <div className="admonition-content">
             ```bash
@@ -426,7 +432,7 @@ export const productOptions = [
   </div>
 </div>
 
-## 🚀 Extraer y flashear
+## 🚀 Extraer e grabar
 
 <div className="card margin-bottom--lg" style={{
   borderLeft: '4px solid #8dc21f', 
@@ -447,7 +453,7 @@ export const productOptions = [
         <h3>🚀 Primeros pasos</h3>
       </div>
       <div className="card__body">
-        <p>Guía completa para principiantes sobre el desarrollo con Jetson, con ejemplos prácticos y tutoriales.</p>
+        <p>Guía completa para principiantes sobre el desarrollo con Jetson con ejemplos prácticos y tutoriales.</p>
       </div>
       <div className="card__footer">
         <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" rel="noopener noreferrer"
@@ -491,7 +497,7 @@ export const productOptions = [
         <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" rel="noopener noreferrer"
           className="button button--block"
           style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', lineHeight: 1.2, textDecoration: 'none', whiteSpace: 'normal', overflowWrap: 'anywhere', wordBreak: 'break-word', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
-          <span style={{flex: '1 1 auto', minWidth: 0, textAlign: 'center'}}>Código fuente L4T de Seeed</span>
+          <span style={{flex: '1 1 auto', minWidth: 0, textAlign: 'center'}}>Seeed&apos;s L4T Source</span>
           <span aria-hidden="true" style={{marginLeft: '0.5rem', opacity: 0.9}}>↗</span>
         </a>
       </div>
@@ -499,9 +505,10 @@ export const productOptions = [
   </div>
 </div>
 
-## 🤝 Soporte técnico y debate sobre productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+## 🤝 Soporte técnico y debate sobre el producto
+
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

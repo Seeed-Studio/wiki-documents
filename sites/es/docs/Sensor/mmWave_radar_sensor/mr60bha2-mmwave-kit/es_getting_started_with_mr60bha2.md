@@ -21,7 +21,7 @@ last_update:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
 </div><br />
 
 Presentamos nuestros avanzados **módulos de sensor mmWave** para XIAO, diseñados para ofrecer soluciones de monitorización de vanguardia tanto para [detección de caídas](https://wiki.seeedstudio.com/es/getting_started_with_mr60fda2_mmwave_kit/) como para monitorización de latidos cardíacos. Impulsados por el robusto microcontrolador XIAO ESP32 con conectividad Wi‑Fi y Bluetooth integrada, estos módulos ofrecen capacidades de detección precisas y fiables. Tanto si necesitas monitorizar caídas en tiempo real como seguir los latidos con alta sensibilidad, nuestros módulos están equipados con tecnología de última generación, incluidos LED RGB personalizables y detección de luz ambiental. Con opciones de expansión sencillas mediante puertos Grove GPIO, estos versátiles módulos son perfectos para una amplia gama de aplicaciones, desde la integración en hogares inteligentes hasta la monitorización sanitaria.
