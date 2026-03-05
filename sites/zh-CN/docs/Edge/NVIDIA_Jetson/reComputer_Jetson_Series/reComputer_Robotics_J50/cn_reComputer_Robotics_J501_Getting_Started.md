@@ -1,6 +1,6 @@
 ---
 description: 本维基提供了对 reComputer Jetson Robotics J501 载板硬件特性和接口使用的全面介绍。内容涵盖详细规格、支持的模块、安装设置步骤，以及双 M.2 Key M 插槽、10GbE + 4 路 1GbE 以太网、USB 3.0、四路 CAN 接口（2 路原生 + 2 路 SPI-to-CAN）、UART、DI/DO、I2S 和 GMSL2 摄像头扩展等多种接口的实用使用指南，帮助用户快速在 J501 平台上开展机器人开发。
-title: 刷写 Jetpack 与接口使用
+title: 刷写 JetPack 与接口使用
 tags:
   - reComputer Robotics J501
   - Flash Jetpack
@@ -18,11 +18,11 @@ last_update:
 
 # Robotics J501 硬件与快速上手
 
-reComputer Robotics J501 是一款为高级机器人和工业应用设计的高性能边缘 AI 载板。它在 MAXN 模式下兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB），可提供高达 275 TOPS 的 AI 性能。
+reComputer Robotics J501 是一款为高级机器人和工业应用设计的高性能边缘 AI 载板。它兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB），在 MAXN 模式下可提供高达 275 TOPS 的 AI 性能。
 
-该载板配备了丰富的连接选项——包括 1 路 10GbE 和 4 路 1GbE 以太网端口、用于 NVMe SSD 的双 M.2 Key M 插槽、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、多路 USB 3.0 端口、四路 CAN 接口（2 路原生 + 2 路 SPI-to-CAN）、GMSL2 摄像头扩展，以及包括 DI/DO、I2S、UART 和 RS485 在内的全面 I/O——可作为复杂多传感器融合和实时 AI 处理的强大机器人“大脑”。
+该载板配备了丰富的连接选项——包括 1 路 10GbE 和 4 路 1GbE 以太网端口、用于 NVMe SSD 的双 M.2 Key M 插槽、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、多路 USB 3.0 端口、四路 CAN 接口（2 路原生 + 2 路 SPI-to-CAN）、GMSL2 摄像头扩展，以及包括 DI/DO、I2S、UART 和 RS485 在内的完整 I/O——可作为复杂多传感器融合和实时 AI 处理的强大机器人“大脑”。
 
-预装 JetPack 6.2.1 和 Linux BSP，可确保无缝部署。支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，J501 将大语言模型驱动的决策与物理机器人控制相结合，通过开箱即用的接口和优化的 AI 框架，加速自主机器人的开发。
+预装 JetPack 6.2.1 和 Linux BSP，可确保无缝部署。支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，J501 将大语言模型驱动的决策与物理机器人控制连接起来，通过开箱即用的接口和优化的 AI 框架，加速自主机器人的开发。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
@@ -30,7 +30,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱</font></span></strong>
     </a>
 </div>
 
@@ -40,8 +40,8 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
 - **丰富连接性**：双 M.2 Key M（NVMe）；Key E（WiFi/BT）+ Key B（5G）；1 路 10GbE + 4 路 1GbE；3 路 USB 3.0；2 路 USB-C
 - **四路 CAN-FD**：2 路原生 + 2 路 SPI-to-CAN 接口，具备电气隔离
 - **GMSL2 视觉**：单路 GMSL2 接口（1 路），用于高速摄像头连接
-- **工业级设计**：19-48V DC 输入；-10~60°C 工作温度；隔离接口；预装 JetPack 6.2.1
-- **面向机器人应用**：支持 ROS 2/1、Isaac ROS；DI/DO、I2S、UART、RS485；针对 AMR 和自动化场景优化
+- **工业级设计**：19-48V 直流输入；-10~60°C 工作温度；隔离接口；预装 JetPack 6.2.1
+- **面向机器人**：支持 ROS 2/1、Isaac ROS；DI/DO、I2S、UART、RS485；针对 AMR 和自动化进行了优化
 
 ## 规格参数
 
@@ -83,17 +83,17 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
     </tr>
     <tr>
       <td>视频编码器</td>
-      <td>1x 4K60 / 3x 4K30 / 6x 1080p60 / 12x 1080p30 (H.265)</td>
-      <td>2x 4K60 / 6x 4K30 / 8x 1080p60 / 16x 1080p30 (H.265)</td>
+      <td>1x 4K60 / 3x 4K30 / 6x 1080p60 / 12x 1080p30（H.265）</td>
+      <td>2x 4K60 / 6x 4K30 / 8x 1080p60 / 16x 1080p30（H.265）</td>
     </tr>
     <tr>
       <td>视频解码器</td>
-      <td>1x 8K30 / 2x 4K60 / 4x 4K30 / 9x 1080p60 / 18x 1080p30 (H.265)</td>
-      <td>1x 8K30 / 3x 4K60 / 7x 4K30 / 11x 1080p60 / 22x 1080p30 (H.265)</td>
+      <td>1x 8K30 / 2x 4K60 / 4x 4K30 / 9x 1080p60 / 18x 1080p30（H.265）</td>
+      <td>1x 8K30 / 3x 4K60 / 7x 4K30 / 11x 1080p60 / 22x 1080p30（H.265）</td>
     </tr>
     <tr>
       <td>CSI 摄像头</td>
-      <td colSpan={2}>最多支持 6 路摄像头（通过虚拟通道最多 16 路）<br/>16 通道 MIPI CSI-2<br/>D-PHY 2.1（最高 40Gbps）/ C-PHY 2.0（最高 164Gbps）</td>
+      <td colSpan={2}>最多支持 6 路摄像头（通过虚拟通道可达 16 路）<br/>16 路 MIPI CSI-2<br/>D-PHY 2.1（最高 40Gbps）/ C-PHY 2.0（最高 164Gbps）</td>
     </tr>
     <tr>
       <td>机械尺寸</td>
@@ -109,7 +109,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
     <tr>
       <th>网络</th>
       <td colSpan={2}>1x M.2 Key-E（WiFi/BT）<br/>1x RJ45 10GbE + 4x RJ45 1GbE</td>
-    </tr>
+    </tr]
     <tr>
       <th>USB</th>
       <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C（Recovery）<br/>1x USB 2.0 Type-C（Debug UART）</td>
@@ -148,22 +148,22 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
     </tr>
     <tr>
       <th>电源输入</th>
-      <td colSpan={2}>通过 5.08mm 端子排输入 19-48V DC（不含电源适配器）</td>
+      <td colSpan={2}>通过 5.08mm 端子排输入 19-48V 直流电（不含电源适配器）</td>
     </tr>
     <tr>
       <th>功耗</th>
-      <td colSpan={2}>Jetson AGX Orin 模块：最高 60W（MAXN 模式）<br/>整机峰值：75W（包含外设）</td>
+      <td colSpan={2}>Jetson AGX Orin 模块：最高 60W（MAXN 模式）<br/>整机峰值：75W（包括外设）</td>
     </tr>
     <tr>
       <th>软件</th>
       <td colSpan={2}>Jetpack 6.2.1</td>
     </tr>
     <tr>
-      <th>机械结构</th>
+      <th>机械特性</th>
       <td colSpan={2}>
         尺寸：210mm x 180mm x 87mm（含支架）<br/>
         重量：200g<br/>
-        安装方式：桌面 / 壁挂 / 导轨（DIN 导轨支架包含在配件中）<br/>
+        安装方式：桌面 / 壁挂 / 导轨（导轨支架包含在配件中）<br/>
         工作温度：-10℃~60℃（25W）/ -10℃~55℃（MAXN）
       </td>
     </tr>
@@ -198,7 +198,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
     </tr>
     <tr>
       <th>连接方式</th>
-      <td>GMSL2 Fakra 1-to-4 M-M 线缆</td>
+      <td>GMSL2 Fakra 1 分 4 公对公线缆</td>
     </tr>
     <tr>
       <th>POC 接口特性</th>
@@ -237,7 +237,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
 
 :::info
 
-我们建议使用物理 Ubuntu 主机设备，而不是虚拟机。
+我们建议您使用物理 Ubuntu 主机设备，而不是虚拟机。
 请参考下表准备主机设备。
 
 <table style={{textAlign: 'center'}}>
@@ -262,7 +262,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
 
 :::
 
-### 准备 Jetpack 镜像
+### 准备 JetPack 镜像
 
 在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu 主机上下载对应的系统镜像：
 
@@ -282,25 +282,25 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
       <td rowSpan={4}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">Download</a></td>
-      <td>ed82745decdf554d82bd93441f1f4ad<br/>149f395a4ba5719664ce2351be8201522  </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAXbYCZzHpuRYt4WJFhzqLJAUxZVvEo8cq4OVmZZmEE82E?e=IZ6csg">Download</a></td>
+      <td>46167c63566fa07d9882be338becd44<br/>7021c8fc0a73da18d0291c414cf5c6f4a  </td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">Download</a></td>
-      <td>58fa8b76754449b0a49ad7d5f273edd<br/>f3e1d1f458cdb34994f6d8643da7a1249 </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAWnjh2iWzeRI1rKN5Bb_HxAX3P3GxPMHSb-60VmCPCgx4?e=a5yyXH">Download</a></td>
+      <td>e868fd8c7ad05d3acc8c9808f42e1835<br/>28f11df14f48cb6ae16464adb4f23d1f </td>
     </tr>
   </tbody>
 </table>
 </div>
 
 :::danger
-Jetpack6 镜像文件大小约为 **14.2GB**，下载大约需要 60 分钟，请耐心等待下载完成。
+JetPack 6 镜像文件大小约为 **14.2GB**，下载大约需要 60 分钟，请耐心等待下载完成。
 :::
 
 :::info
-要验证下载固件的完整性，可以对比 SHA256 哈希值。
+要验证下载固件的完整性，您可以对比 SHA256 哈希值。
 
 在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
@@ -317,19 +317,19 @@ Jetpack6 镜像文件大小约为 **14.2GB**，下载大约需要 60 分钟，�
 
 <summary> 分步说明 </summary>
 
-**步骤 1.** 使用 USB Type-C 数据线，将 USB2.0 DEVICE 接口与 Ubuntu 主机 PC 连接。
+**步骤 1.** 使用 USB Type-C 数据线连接 USB2.0 DEVICE 接口和 Ubuntu 主机电脑。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png" />
 </div>
 
-**步骤 2.** 使用针插入 RECOVERY 孔按下恢复按键，并保持按住。
+**步骤 2.** 使用细针插入 RECOVERY 孔按下恢复按键，并保持按住。
 
 **步骤 3.** 接通电源。
 
 **步骤 4.** 松开恢复按键。
 
-**步骤 5.** 在 Linux 主机 PC 上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下输出之一，则说明开发板已进入强制恢复模式。
+**步骤 5.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你所使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 AGX Orin 32GB：**0955:7223 NVidia Corp**
 - 对于 AGX Orin 64GB：**0955:7023 NVidia Corp**
@@ -352,7 +352,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
-**步骤 2：** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
+**步骤 2：** 执行以下命令将 JetPack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -375,7 +375,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-请根据你的需求完成 **System Configuration**。
+请根据你的需求完成 **系统配置（System Configuration）**。
 :::
 
 ## 🔌 接口使用
@@ -384,7 +384,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## M.2 Key M
 
-J501 集成了双 M.2 Key M 插槽，支持 PCIe Gen4x4 NVMe SSD，用于高速存储扩展。
+J501 包含双 M.2 Key M 插槽，支持 PCIe Gen4x4 NVMe SSD，用于高速存储扩展。
 
 ### 支持的 SSD 如下
 
@@ -402,7 +402,7 @@ J501 集成了双 M.2 Key M 插槽，支持 PCIe Gen4x4 NVMe SSD，用于高速�
 
 ### 使用说明
 
-在 Jetson 设备中打开终端，输入以下命令测试 SSD 的读写速度。
+在 Jetson 设备上打开终端，输入以下命令测试 SSD 的读写速度。
 
 **步骤 1.** 创建测试目录和文件：
 
@@ -590,7 +590,7 @@ Robotics J501 提供 1 个 10GbE（原生）和 4 个 1GbE（通过 PCIe 交换�
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/eth_1.png"/>
 </div>
 
-**每个端口的 LED 指示说明：**
+**每个端口的 LED 指示灯：**
 
 - **绿色 LED：** 在 10G/5G/2.5G/1000M 链路时常亮
 - **黄色 LED：** 闪烁表示网络活动
@@ -602,7 +602,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 ```
 
 :::info
-`<server_ip>` 是 iperf3 服务器的 IP 地址。客户端将连接到该服务器以执行带宽测试。
+`<server_ip>` 是 iperf3 服务器的 IP 地址。客户端将连接到此服务器以执行带宽测试。
 `<bind_ip>` 将指定的本地 IP 地址绑定为测试流量的源地址。
 :::
 
@@ -612,7 +612,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 ## LED
 
-J501 配备了多个状态指示 LED：
+J501 配备了多个状态 LED：
 
 - **PWR LED：** 电源状态（绿色）
 - **ACT LED：** 系统活动（黄色）
@@ -648,11 +648,11 @@ LED 控制效果如下图所示：
 
 ## USB
 
-Robotics J501 提供 4 个 USB 3.2 Type-A 端口（通过内部 USB 3.1 Gen1 集线器，实现最高 5Gbps 数据速率，可连接高速外设、存储设备或相机）以及 1 个 USB 2.0 Type-C 调试端口（作为串行控制台，用于访问系统日志、调试启动问题和执行固件更新）。
+Robotics J501 提供 4 个 USB 3.2 Type-A 接口（通过内部 USB 3.1 Gen1 集线器，实现最高 5Gbps 数据速率，可连接高速外设、存储设备或相机）以及 1 个 USB 2.0 Type-C 调试接口（作为串口控制台，用于访问系统日志、调试启动问题和执行固件更新）。
 
 ### USB-A 速度测试
 
-创建一个脚本来测试 USB 设备速度：
+创建脚本以测试 USB 设备速度：
 
 ```bash
 vim test_usb.sh
@@ -719,9 +719,9 @@ sudo chmod +x test_usb.sh
 请先使用 `df -h` 或 `lsblk` 命令确认 USB 设备的实际挂载点！
 :::
 
-### USB 2.0 Type-C 端口
+### USB 2.0 Type-C 接口
 
-通过该串口，使用 USB-C 数据线，可以在 PC 端监控输入和输出的调试信息。
+通过此串口，使用 USB-C 数据线，可以在 PC 端监控输入和输出的调试信息。
 
 <div align="center">
   <img width="300" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/usb_debug.png"/>
@@ -758,7 +758,7 @@ Robotics J501 提供两个 4 针 PWM 风扇接口，用于为 Jetson 模组和�
 - **12V 风扇**：2.54 mm 接口，最大 1.5A，适用于高性能散热
 - **5V 风扇**：1.25 mm JST 接口，最大 1.5A，适用于低功耗静音散热
 
-通过 PWM 控制，可以根据系统温度进行动态且精确的转速调节，在实现高效散热的同时，将噪声和功耗降至最低。
+通过 PWM 控制，可以根据系统温度动态、精确地调节转速，在保证高效散热的同时，将噪声和功耗降到最低。
 
 **12V 风扇引脚定义：**
 
@@ -786,9 +786,9 @@ echo 200 > /sys/bus/platform/devices/pwm-fan/hwmon/hwmon1/pwm1
 默认散热策略已在 `/etc/nvpmodel.conf` 中预配置。若需自定义配置文件，请参考 [NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)。
 :::
 
-此外，我们还可以使用 `jtop` 工具手动设置风扇转速。
+此外，我们可以使用 `jtop` 工具手动设置风扇转速。
 
-你可以在终端中输入以下命令来安装 **jtop**。
+你可以在终端输入以下命令来安装 **jtop**。
 
 ```bash
 sudo apt update
@@ -825,12 +825,12 @@ reComputer Robotics J501 配备了 4 个独立的 CAN 接口（CAN 0、CAN 1、C
 
 ### CAN 通信
 
-本节演示在 Jetson 上连接 CAN0↔CAN1 和 CAN2↔CAN3，并展示如何在 Classic CAN 模式和 CAN‑FD 模式下在这些通道对之间进行数据收发。
+本节演示在 Jetson 上连接 CAN0↔CAN1 和 CAN2↔CAN3，并展示如何在 Classic CAN 模式和 CAN‑FD 模式下在这两对接口之间进行数据收发。
 
 | 通道名称 | 接口类型 | 引脚名称 | GPIO 芯片 | GPIO 编号 | 终端电阻控制 |
 |--------------|----------------|----------|-----------|-------------|------------------------------|
-| CAN0         | Native         | PAA.04   | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)    |
-| CAN1         | Native         | PAA.07   | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)    |
+| CAN0         | 原生           | PAA.04   | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)    |
+| CAN1         | 原生           | PAA.07   | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)    |
 | CAN2         | SPI-to-CAN     | -        | gpiochip2 | 10          | gpiochip2 line10             |
 | CAN3         | SPI-to-CAN     | -        | gpiochip2 | 12          | gpiochip2 line12             |
 
@@ -846,7 +846,7 @@ When `PAA.07 = 1`, the 120 Ω termination resistor of CAN1 is **disconnected**;
 when `PAA.07 = 0`, the 120 Ω termination resistor of CAN1 is **connected**.
 ```
 
-输入以下命令查看 gpiochip 1 上的引脚：
+输入以下命令以查看 gpiochip 1 上的引脚：
 
 ```bash
 gpioinfo gpiochip1
@@ -872,7 +872,7 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 #### Classic CAN 模式
 
-以下脚本实现了 CAN0/CAN1 和 CAN2/CAN3 之间的回环通信测试，包括使能终端电阻、配置比特率以及双向数据传输。
+以下脚本实现 CAN0/CAN1 和 CAN2/CAN3 之间的回环通信测试，包括使能终端电阻、配置比特率以及双向数据传输。
 
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/can_hw_2.png"/>
@@ -1118,7 +1118,7 @@ wait
 
 ## DI/DO
 
-reComputer Robotics J501 的 DI/DO 接口集成在 J25 2x10P 连接器上，与 CAN 接口共用接口。它们支持 4 路数字输入和 4 路数字输出，具有稳定的信号传输和工业级电压适配能力，适合连接数字传感器、继电器等外设设备。
+reComputer Robotics J501 的 DI/DO 接口集成在 J25 2x10P 连接器上，与 CAN 接口共用接口。它们支持 4 路数字输入和 4 路数字输出，具有稳定的信号传输和工业级电压适配能力，适用于连接数字传感器、继电器等外设设备。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/di_do_test.png"/>
@@ -1271,7 +1271,7 @@ sudo modprobe spidev
 :::
 
 **步骤 2：查看 SPI 设备节点**
-在终端中输入以下命令，以查看由 reComputer Robotics J501 的 SPI 接口映射的设备名称：
+在终端中输入以下命令，以查看 reComputer Robotics J501 的 SPI 接口所映射的设备名称：
 
 ```bash
 ls /dev/spidev*
@@ -1305,7 +1305,7 @@ sudo ./spidev_test -v -D /dev/spidev2.0 -s 100000
 
 ## UART
 
-reComputer Robotics J501 配备了 2 个独立的 UART 接口（UART1 和 UART2），支持 RS232、RS422 和 RS485 通信模式，具有信号传输稳定、与外设设备兼容性广等特点。
+reComputer Robotics J501 配备了 2 个独立的 UART 接口（UART1 和 UART2），支持 RS232、RS422 和 RS485 通信模式，具有信号传输稳定、与外设设备兼容性强等特点。
 
 ### 硬件连接
 
@@ -1313,51 +1313,51 @@ reComputer Robotics J501 配备了 2 个独立的 UART 接口（UART1 和 UART2�
 
 | 通道名称 | 设备节点 | 支持模式 | 默认波特率 | GPIO 使能命令 | 模式切换方式 |
 |--------------|-------------|-----------------|-------------------|--------------------|-------------------|
-| UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | SW3 拨码开关（8 位 DIP） |
-| UART2 (DB9-2) | /dev/ttyTHS4 | RS232 (default) | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | 固定 RS232（不可切换） |
+| UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232：115200 bps；RS422/RS485：9600 bps | `gpioset --mode=wait gpiochip0 2=0` | SW3 拨码开关（8 位 DIP） |
+| UART2 (DB9-2) | /dev/ttyTHS4 | RS232（默认） | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | 固定 RS232（不可切换） |
 
 **引脚定义（DB9 接口）**
 
-每个 DB9 引脚的功能会随通信模式变化而不同。请参考下表进行准确接线（引脚编号遵循标准 DB9 公头规格）：
+每个 DB9 引脚的功能会随通信模式而变化。请参考下表进行准确接线（引脚编号遵循标准 DB9 公头接口规范）：
 
 | DB9 引脚号 | RS232 模式功能 | RS422 模式功能 | RS485 模式功能 |
 |----------------|---------------------|---------------------|---------------------|
-| 1              | -                   | TXD- (Transmit Data-) | Data- (Differential Data-) |
-| 2              | RXD (Receive Data)  | TXD+ (Transmit Data+) | Data+ (Differential Data+) |
-| 3              | TXD (Transmit Data) | RXD+ (Receive Data+) | -                   |
-| 4              | -                   | RXD- (Receive Data-) | -                   |
-| 5              | GND (Ground)        | GND (Ground)        | GND (Ground)        |
+| 1              | -                   | TXD-（发送数据-） | Data-（差分数据-） |
+| 2              | RXD（接收数据）  | TXD+（发送数据+） | Data+（差分数据+） |
+| 3              | TXD（发送数据） | RXD+（接收数据+） | -                   |
+| 4              | -                   | RXD-（接收数据-） | -                   |
+| 5              | GND（地）        | GND（地）        | GND（地）        |
 | 6              | -                   | -                   | -                   |
-| 7              | RTS (Request to Send) | -                   | -                   |
-| 8              | CTS (Clear to Send) | -                   | -                   |
+| 7              | RTS（请求发送） | -                   | -                   |
+| 8              | CTS（允许发送） | -                   | -                   |
 | 9              | -                   | -                   | -                   |
 
 **模式配置（SW3 拨码开关）**
 
 只有 UART1（DB9-1）支持通过 SW3 拨码开关进行模式切换（UART2 固定为 RS232）。该开关为 8 位 DIP 类型，在原理图中核心配置引脚标记为 MODE_0、MODE_1 和 MODE_2。
 
-接口实物如下图所示：
+接口位置如下图所示：
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/Switch.png"/>
 </div>
 
 **配置规则**
 
-| 工作模式 | 拨码开关组合 (MODE_2, MODE_1, MODE_0) | 开关状态操作 |
+| 工作模式 | 拨码开关组合（MODE_2, MODE_1, MODE_0） | 开关状态操作 |
 |--------------|------------------------------------------------|------------------------|
 | RS232        | 0 (OFF), 0 (OFF), 1 (ON)                       | MODE_0：拨到 ON；MODE_1/MODE_2：保持 OFF |
-| RS422        | 0 (OFF), 0 (OFF), 0 (OFF) or 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1：保持 OFF；MODE_2：可选（ON/OFF） |
-| RS485        | 0 (OFF), 1 (ON), 0 (OFF) or 1 (ON), 1 (ON), 0 (OFF) | MODE_1：拨到 ON；MODE_0/MODE_2：可选（ON/OFF） |
+| RS422        | 0 (OFF), 0 (OFF), 0 (OFF) 或 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1：保持 OFF；MODE_2：可选（ON/OFF） |
+| RS485        | 0 (OFF), 1 (ON), 0 (OFF) 或 1 (ON), 1 (ON), 0 (OFF) | MODE_1：拨到 ON；MODE_0/MODE_2：可选（ON/OFF） |
 
 :::note
-完成硬件连接后，请使用终端软件（例如 CuteCom）测试 UART 通信功能。如果尚未安装 CuteCom，可运行 `sudo apt-get install cutecom` 进行安装。请确保已通过 GPIO 命令使能对应的 UART 通道。
+完成硬件连接后，使用终端软件（例如 CuteCom）测试 UART 通信功能。如果未安装 CuteCom，可运行 `sudo apt-get install cutecom` 进行安装。请确保已通过 GPIO 命令使能对应的 UART 通道。
 :::
 
 ### 使用说明
 
 **GPIO 使能命令**
 
-在连接前，请在终端中执行 GPIO 使能命令，以激活对应的 UART 通道：
+在连接前，请在终端中执行 GPIO 使能命令以激活对应的 UART 通道：
 
 ```bash
 # Enable UART1 (ttyTHS1)
@@ -1369,13 +1369,13 @@ sudo gpioset --mode=wait gpiochip2 15=0
 
 #### RS232 模式测试
 
-此处可以使用 USB 转 RS232 转换器来测试接口。我们在测试中使用了 [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1)。
+此处可以使用 USB 转 RS232 适配器来测试接口。我们在测试中使用了 [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1)。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs232_1.png"/>
 </div>
 
-接线示意图如下：
+接线示意图如下所示：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/232-PC.png"/>
@@ -1387,9 +1387,9 @@ sudo gpioset --mode=wait gpiochip2 15=0
 **步骤 2：配置串口参数**
 按以下参数配置串口：
 
-- Device: `/dev/ttyTHS1` (UART1) 或 `/dev/ttyTHS4` (UART2)
-- Baud Rate: 115200 bps
-- Data Bits: 8, Parity: None, Stop Bits: 1, Flow Control: None
+- 设备：`/dev/ttyTHS1`（UART1）或 `/dev/ttyTHS4`（UART2）
+- 波特率：115200 bps
+- 数据位：8，校验：无，停止位：1，流控：无
 
 **步骤 3：打开串口**
 点击 "Open Device" 打开串口。
@@ -1406,9 +1406,9 @@ sudo gpioset --mode=wait gpiochip2 15=0
 
 #### RS485 模式测试
 
-此处可以使用 USB 转 RS485 转换器来测试接口。我们在测试中使用了 [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)。
+此处可以使用 USB 转 RS485 适配器来测试接口。我们在测试中使用了 [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)。
 
-接线示意图如下：
+接线示意图如下所示：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/422-485.png"/>
@@ -1420,9 +1420,9 @@ sudo gpioset --mode=wait gpiochip2 15=0
 **步骤 2：配置串口参数**
 按以下参数配置串口：
 
-- Device: `/dev/ttyTHS1`
-- Baud Rate: 9600 bps
-- Data Bits: 8, Parity: None, Stop Bits: 1, Flow Control: None
+- 设备：`/dev/ttyTHS1`
+- 波特率：9600 bps
+- 数据位：8，校验：无，停止位：1，流控：无
 
 **步骤 3：打开串口**
 点击 "Open Device" 打开串口。
@@ -1436,9 +1436,9 @@ sudo gpioset --mode=wait gpiochip2 15=0
 
 #### RS422 模式测试
 
-此处可以使用 USB 转 RS422 转换器来测试接口。我们在测试中使用了 [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)。
+此处可以使用 USB 转 RS422 适配器来测试接口。我们在测试中使用了 [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)。
 
-接线示意图如下：
+接线示意图如下所示：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/422-485.png"/>
@@ -1450,9 +1450,9 @@ sudo gpioset --mode=wait gpiochip2 15=0
 **步骤 2：配置串口参数**
 按以下参数配置串口：
 
-- Device: `/dev/ttyTHS1`
-- Baud Rate: 9600 bps
-- Data Bits: 8, Parity: None, Stop Bits: 1, Flow Control: None
+- 设备：`/dev/ttyTHS1`
+- 波特率：9600 bps
+- 数据位：8，校验：无，停止位：1，流控：无
 
 **步骤 3：打开串口**
 点击 "Open Device" 打开串口。
@@ -1469,21 +1469,21 @@ sudo gpioset --mode=wait gpiochip2 15=0
 reComputer Robotics J501 集成了带电池备份的硬件 RTC，用于精确计时。为 RTC 提供备份电源有两种方式：
 
 1. 使用 CR1220 纽扣电池座（J14）
-2. 使用 RTC 2-Pin Header - J4 连接外部电源
+2. 使用 RTC 2 针排针 J4 连接外部电源
 
 ### 硬件连接
 
 **方法 1：使用 CR1220 纽扣电池座**
 
-将 3V CR1220 纽扣电池按下图所示连接到板载 RTC 插座中。请确保电池正极（+）朝上。
+将一颗 3V CR1220 纽扣电池按下图所示连接到板载 RTC 插座。请确保电池正极（+）朝上。
 
 <div align="center">
   <img width="300" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_0.png"/>
 </div>
 
-**方法 2：使用 RTC 2-Pin Header**
+**方法 2：使用 RTC 2 针排针**
 
-RTC 2-Pin Header 提供了一种为 RTC 连接外部电源的替代方式。
+RTC 2 针排针提供了另一种为 RTC 连接外部电源的方式。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_2pin_pinout.png"/>
@@ -1491,18 +1491,18 @@ RTC 2-Pin Header 提供了一种为 RTC 连接外部电源的替代方式。
 
 ### 使用说明
 
-**步骤 1.** 按上述方法连接 RTC 电池。
+**步骤 1.** 按上述说明连接 RTC 电池。
 
 **步骤 2.** 打开 reComputer Robotics J501。
 
-**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，进入 `Settings > Date & Time`，通过以太网线连接网络，并选择 **Automatic Date & Time** 以自动获取日期/时间。
+**步骤 3.** 在 Ubuntu 桌面上，点击右上角下拉菜单，进入 `Settings > Date & Time`，通过以太网线连接网络，并选择 **Automatic Date & Time** 以自动获取日期/时间。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_1.png"/>
 </div>
 
 :::note
-如果尚未通过以太网连接到互联网，可以在此手动设置日期/时间。
+如果尚未通过以太网连接到互联网，也可以在此手动设置日期/时间。
 :::
 
 **步骤 4.** 打开终端窗口，执行以下命令检查硬件时钟时间：
@@ -1511,7 +1511,7 @@ RTC 2-Pin Header 提供了一种为 RTC 连接外部电源的替代方式。
 cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**步骤 5.** 断开网络连接并重启设备。你会发现系统时间已经失去供电但仍然可以正常工作。
+**步骤 5.** 断开网络连接并重启设备。你会发现系统时间已经失去供电，但系统仍然可以正常运行。
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_2.png"/>
 </div>
@@ -1522,11 +1522,11 @@ Robotics J501 配备了一个 HDMI 接口，用于高分辨率显示输出。
 
 ## 扩展端口
 
-Robotics J501 载板配备了用于 GMSL 扩展板的摄像头扩展排针。它可以同时连接并运行 4 个 GMSL 摄像头。
+Robotics J501 载板配备了一个用于 GMSL 扩展板的摄像头扩展排针。它可以同时连接并运行 4 个 GMSL 摄像头。
 
 ### 硬件连接
 
-下面是 Robotics J501 载板 GMSL 摄像头扩展板的连接插槽（需要提前准备好扩展板）：
+下面是 Robotics J501 载板 GMSL 摄像头扩展板的连接插槽（需要提前准备扩展板）：
 
 <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
   <div>
@@ -1616,7 +1616,7 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/vide
 :::note
 `trig_mode = 1` 启用帧同步，而 `trig_mode = 0` 禁用帧同步。默认设置为禁用帧同步。
 
-`--set-fmt-video` 后面跟随的分辨率是根据所连接的摄像头来选择的。目前有三个 sensor_mode 选项，每个选项对应一种不同的分辨率。
+`--set-fmt-video` 后面跟随的分辨率是根据所连接摄像头选择的。目前有三个 sensor_mode 选项，每个选项对应一种不同的分辨率。
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
