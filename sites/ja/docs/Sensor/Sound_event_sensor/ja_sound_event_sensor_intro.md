@@ -1,5 +1,5 @@
 ---
-description: このエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、Baby Cry、Glass Break、Gunshot、アラーム、Snore をリアルタイムに検出します。XIAO シリーズ向けに設計されており、ESPHome と Home Assistant にシームレスに統合できるため、スマートな監視や自動化に最適です。
+description: このコンパクトなエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、赤ちゃんの泣き声、ガラス破損、銃声、アラーム、いびきをリアルタイムに検出します。XIAO シリーズ向けに設計されており、ESPHome と Home Assistant にシームレスに統合できるため、スマートな監視や自動化に最適です。
 title: Sound Event Detection Module 入門ガイド
 keywords:
   - Sound Event Detection Module
@@ -11,13 +11,13 @@ last_update:
   date: 3/2/2026
   author: Kasun Thushara
 createdAt: '2026-03-02'
-updatedAt: '2026-03-05'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/sound_event_detection_module/
 ---
 
 ## はじめに
 
-コンパクトなエッジオーディオボードが、強力なローカルデータプライバシー保護とともにリアルタイムの音検出を実現します。Baby Cry、Glass Break、Gunshot、T3/T4 Alarms、Snore の 5 種類の異常音イベントを検出し、即時の対応と信頼性の高い早期警告を可能にします。XIAO シリーズ向けにネイティブな ESPHome 統合が施されており、Home Assistant ともシームレスに互換性があるため、家庭のセキュリティ監視や応答性の高い自動化トリガとして理想的です。
+コンパクトなエッジオーディオボードが、強力なローカルデータプライバシー保護とともにリアルタイムの音検出を実現します。赤ちゃんの泣き声、ガラス破損、銃声、T3/T4 アラーム、いびきという 5 種類の異常音イベントを検出し、即時の対応と信頼性の高い早期警告を可能にします。XIAO シリーズ向けに設計されており、ESPHome とのネイティブ統合と Home Assistant とのシームレスな互換性を備えているため、家庭のセキュリティ監視や応答性の高い自動化トリガとして理想的です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -27,17 +27,97 @@ url: https://wiki.seeedstudio.com/ja/sound_event_detection_module/
     </a>
 </div>
 
+## 仕様
+
+| 機能 | 説明 |
+|--------|-------------|
+| コアチップ | XMOS XU316-1024-QF60BC24 |
+| 対応イベント | 赤ちゃんの泣き声 / ガラス破損 / 銃声 / 煙警報 & CO 警報 (T3/T4) / いびき |
+| デジタルマイク | 高性能デジタルマイク × 1 |
+| 感度 | -26 dBFS |
+| 音響過負荷点 | 120 dBL |
+| SNR | 64 dBA |
+| 電源 | USB 5V、外部 5V |
+| 寸法 | 40 × 20 mm |
+| 動作温度 | 0℃ – 65℃ |
+
+## ハードウェア概要と寸法
+
+**表面（フロント）**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/front.png" alt="pir" width={400} height="auto" /></p>
+
+**裏面（バック）**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/back.png" alt="pir" width={400} height="auto" /></p>
+
+## USB の使用方法
+
+このデバイスはスタンドアロンモードで動作でき、USB インターフェースを介して AT コマンドによるプラグアンドプレイ通信をサポートします。
+
+まず、USB Type-C から USB Type-A ケーブルを使用してデバイスをコンピュータに接続します。
+
+- **Step 1** :次に、**PuTTY** などのシリアルターミナルソフトウェアを開きます。まだインストールしていない場合は、次の [リンク](https://putty.org/index.html) から PuTTY をダウンロードできます。
+
+- **Step 2** :シリアルターミナルを開いたら、**正しい COM ポート** を選択し、ボーレートを **115200** に設定します。接続が完了すると、USB インターフェースを介してデバイスと対話できるようになります。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty.png" alt="pir" width={600} height="auto" /></p>
+
+このデバイスは常に音イベントをリッスンしているため、デバイスの近くで対応する音イベントを発生させることでテストできます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty_2.png" alt="pir" width={600} height="auto" /></p>
+
+さらに、AT コマンドを使用してデバイスパラメータを調整できます。以下は、デバイスと対話するために使用できるコマンドの一部です。
+
+| コマンド | 説明 | 例 |
+|---|---|---|
+| `AT+GETDETECT` | 現在有効になっている検出タイプ（1～5 種類）を取得します。 | `AT+GETDETECT` → `+GETDETECT:baby_cry,glass_break` |
+| `AT+SETDETECT=<types>` | 検出するイベントタイプを設定します（カンマ区切り、最大 5 種類）。 | `AT+SETDETECT=baby_cry,snore` |
+| `AT+GETEVENTTHRESHOLD=<type>` | 特定のイベントの信頼度しきい値を取得します。 | `AT+GETEVENTTHRESHOLD=baby_cry` → `+GETEVENTTHRESHOLD:baby_cry,70` |
+| `AT+SETEVENTTHRESHOLD=<type>,<val>` | 特定のイベントの信頼度しきい値を設定します。 | `AT+SETEVENTTHRESHOLD=baby_cry,75` |
+| `AT+GETSUPPORTEDLIST` | デバイスがサポートするすべてのイベントタイプを一覧表示します。 | `AT+GETSUPPORTEDLIST` → `+GETSUPPORTEDLIST:doorbell,glass_break,baby_cry,...` |
+| `AT+SETOUTPUTTYPE=<type>` | イベント検出時に何を出力するかを設定します。 | `AT+SETOUTPUTTYPE=highest_confidence` |
+| `AT+GETINTMODE` | 現在の割り込みモードを取得します。 | `AT+GETINTMODE` → `+GETINTMODE:single` |
+| `AT+SETINTMODE=<mode>` | 割り込み動作モードを設定します。 | `AT+SETINTMODE=continuous` |
+| `AT+RESETINT` | 割り込みステータスをリセットし、INT_N ピンを HIGH にします。 | `AT+RESETINT` |
+| `AT+SAVECONFIG` | 現在の設定を保存し、再起動後も保持されるようにします。 | `AT+SAVECONFIG` |
+| `AT+GETFWVERSION` | ファームウェアバージョン文字列を取得します。 | `AT+GETFWVERSION` → `+GETFWVERSION:1.0.2` |
+| `AT+RESET` | デフォルト設定を復元してデバイスを再起動します（すべてのカスタム設定を消去）。 | `AT+RESET` |
+
+
+イベントが検出されると、デバイスは自動的に次のように送信します：
+
+```
++EVENT: <event_id>,<confidence>
+```
+
+**例:** `+EVENT: 1,87` → イベント ID 1（`baby_cry`）、信頼度 87%
+
+---
+
+ `AT+SETOUTPUTTYPE` の値
+
+| 値 | 動作 |
+|---|---|
+| `highest_confidence` | 信頼度が最も高い単一のイベントのみが報告されます |
+| `all_events` | 検出サイクルごとに検出されたすべてのイベントが報告されます |
+
+ `AT+SETINTMODE` の値
+
+| 値 | 動作 |
+|---|---|
+| `single` | INT_N は 1 回だけ発火し、その後 `AT+RESETINT` でリセットする必要があります |
+| `continuous` | イベントが検出されている間、INT_N は連続して発火します |
+
+
+
 ## Arduino の使用方法 
 
 ### XIAO を接続する
 
-このデバイスは XIAO モジュールをサポートしており、ボード上の任意の利用可能な UART ピンに接続できます。ESP32S3、ESP32C6、ESP32C3 モジュールと互換性があるため、コード内の RX および TX ピン定義をそれぞれのボードに合わせて変更するだけで済みます。画像に示されているのと同じ向きでデバイスを挿し込んでください。
+このデバイスは XIAO モジュールをサポートしており、ボード上の任意の利用可能な UART ピンに接続できます。ESP32S3、ESP32C6、ESP32C3 モジュールと互換性があるため、コード内の RX および TX ピン定義をそれぞれのボードに合わせて変更するだけで済みます。画像に示されているのと同じ向きでデバイスを接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/with_esp.jpg" alt="pir" width={800} height="auto" /></p>
 
-
-
-###  ライブラリをダウンロードする
+###  ライブラリをダウンロード
 
 - GitHub リポジトリ [Link](https://github.com/Seeed-Projects/AudioEventSensor_Library) にアクセスします
 - 緑色の "Code" ボタンをクリックします
@@ -46,9 +126,9 @@ url: https://wiki.seeedstudio.com/ja/sound_event_detection_module/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/library_download.png" alt="pir" width={800} height="auto" /></p>
 
-### Arduino IDE にライブラリをインストールする
+### Arduino IDE にライブラリをインストール
 
-#### Arduino IDE を使う（推奨）
+#### Arduino IDE を使用（推奨）
 
 - Arduino IDE を開きます
 - Sketch → Include Library → Add .ZIP Library... に進みます
@@ -57,13 +137,13 @@ url: https://wiki.seeedstudio.com/ja/sound_event_detection_module/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/arduino_add_library.png" alt="pir" width={800} height="auto" /></p>
 
-### インストールを確認する
+### インストールの確認
 
 File → Examples → AudioEventSensor に移動し、サンプルスケッチを確認します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/verify_arduino.png" alt="pir" width={800} height="auto" /></p>
 
-### UART ピンを変更する
+### UART ピンの変更
 
 使用している XIAO ボードに応じて、コード内の UART ピン定義を変更する必要があります。この例では、XIAO ESP32S3 を使用しています。
 
@@ -74,13 +154,13 @@ File → Examples → AudioEventSensor に移動し、サンプルスケッチ�
 
 ## 基本的な使い方
 
-ESP32 に書き込んだ後、このコードは UART 経由で Audio Event Sensor を初期化し、Gunshot や Glass Break などの特定の音イベントを検出するように設定します。セットアップ中にデバイスをリセットし、ファームウェアバージョンを読み取り、サポートされているサウンドイベントの一覧を取得し、選択した各イベントの検出しきい値を設定します。その後、設定を保存することで、再起動後も設定が保持されます。メインループでは、検出されたサウンドイベントを継続的に監視し、リアルタイムでシリアルモニタに出力します。これにより、異常な音響イベントに対する早期警告および監視ソリューションとしてシステムを機能させることができます。
+ESP32 に書き込んだ後、このコードは UART 経由で Audio Event Sensor を初期化し、銃声やガラス破損などの特定の音イベントを検出するように設定します。セットアップ中にデバイスをリセットし、ファームウェアバージョンを読み取り、サポートされている音イベントの一覧を取得し、選択した各イベントの検出しきい値を設定します。その後、設定を保存して、再起動後も設定が保持されるようにします。メインループでは、検出された音イベントを継続的に監視し、リアルタイムでシリアルモニタに出力します。これにより、異常な音響イベントに対する早期警告および監視ソリューションとしてシステムを機能させることができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/basic_usage.png" alt="pir" width={800} height="auto" /></p>
 
 ## ボーナス : メール通知 
 
-- まず、App Password を作成する必要があります。この[ガイド](https://support.google.com/accounts/answer/185833?hl=en)を参照してください
+- まず、アプリパスワードを作成する必要があります。この [ガイド](https://support.google.com/accounts/answer/185833?hl=en) を参照してください
 - 次に、必要なサポートライブラリをダウンロードしてインストールします。Arduino Library Manager から ESP Mail Client ライブラリをインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/email_client.png" alt="pir" width={800} height="auto" /></p>
@@ -376,14 +456,14 @@ void smtpCallback(SMTP_Status status) {
 
 </details>
 
-次に、コード内の次のパラメータを自分の値に置き換えます：送信者のメールアドレス、UART ピン、App Password、受信者のメールアドレス、そして Wi-Fi の SSID とパスワード。
+次に、コード内の次のパラメータを自分の値に置き換えます：送信者のメールアドレス、UART ピン、App Password、受信者のメールアドレス、そして Wi-Fi の SSID とパスワードです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/credentials.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="video-container">
   <iframe width="800" height="400"
           src="https://www.youtube.com/embed/Fq126JCoQTo"
-          title="オーディオイベントセンサー"
+          title="Audio Event Sensor"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"

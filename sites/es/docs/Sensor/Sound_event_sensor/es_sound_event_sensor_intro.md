@@ -1,6 +1,6 @@
 ---
 description: Esta placa de audio de borde detecta en tiempo real llanto de bebé, rotura de vidrio, disparos, alarmas y ronquidos, manteniendo todos los datos localmente para proteger la privacidad. Diseñada para una integración perfecta de ESPHome y Home Assistant con la serie XIAO, es ideal para monitorización inteligente y automatización.
-title: Introducción al Sound Event Detection Module
+title: Introducción al Módulo de Detección de Eventos de Sonido
 keywords:
   - Sound Event Detection Module
   - Sound IoT
@@ -11,13 +11,13 @@ last_update:
   date: 3/2/2026
   author: Kasun Thushara
 createdAt: '2026-03-02'
-updatedAt: '2026-03-05'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sound_event_detection_module/
 ---
 
 ## Introducción
 
-Una compacta placa de audio de borde ofrece detección de sonido en tiempo real con una sólida protección de privacidad de datos locales. Detecta cinco eventos de sonido anómalos — llanto de bebé, rotura de vidrio, disparo, alarmas T3/T4 y ronquidos, lo que permite una respuesta inmediata y una alerta temprana fiable. Diseñada para una integración nativa con ESPHome y compatibilidad perfecta con Home Assistant mediante la serie XIAO, es ideal para la monitorización de seguridad en el hogar o para disparadores de automatización reactivos.
+Una compacta placa de audio en el borde ofrece detección de sonido en tiempo real con una sólida protección de privacidad de datos locales. Detecta cinco eventos de sonido anómalos — llanto de bebé, rotura de vidrio, disparo, alarmas T3/T4 y ronquidos, lo que permite una respuesta inmediata y una alerta temprana fiable. Diseñada para una integración nativa con ESPHome y compatibilidad perfecta con Home Assistant mediante la serie XIAO, es ideal para la monitorización de seguridad en el hogar o como disparador de automatizaciones reactivas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -27,6 +27,88 @@ Una compacta placa de audio de borde ofrece detección de sonido en tiempo real 
     </a>
 </div>
 
+## Especificaciones
+
+| Característica | Descripción |
+|--------|-------------|
+| Chip principal | XMOS XU316-1024-QF60BC24 |
+| Eventos compatibles | Llanto de bebé / Rotura de vidrio / Disparo / Alarma de humo y alarma de CO (T3/T4) / Ronquidos |
+| Micrófonos digitales | Micrófonos digitales de alto rendimiento × 1 |
+| Sensibilidad | -26 dBFS |
+| Punto de sobrecarga acústica | 120 dBL |
+| SNR | 64 dBA |
+| Alimentación | USB 5V, 5V externa |
+| Dimensiones | 40 × 20 mm |
+| Temperatura de funcionamiento | 0℃ – 65℃ |
+
+## Descripción de hardware y dimensiones
+
+**Vista frontal**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/front.png" alt="pir" width={400} height="auto" /></p>
+
+**Vista trasera**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/back.png" alt="pir" width={400} height="auto" /></p>
+
+## Uso por USB
+
+Este dispositivo puede funcionar en modo independiente y admite comunicación plug-and-play a través de la interfaz USB usando comandos AT.
+
+Primero, conecta el dispositivo a tu ordenador usando un cable USB Type-C a USB Type-A.
+
+- **Paso 1** :A continuación, abre **PuTTY** o cualquier otro software de terminal serie. Si aún no has instalado uno, puedes descargar PuTTY desde el siguiente [enlace](https://putty.org/index.html):
+
+- **Paso 2** :Después de abrir el terminal serie, selecciona el **puerto COM correcto** y ajusta la velocidad en baudios a **115200**. Una vez conectado, podrás interactuar con el dispositivo a través de la interfaz USB.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty.png" alt="pir" width={600} height="auto" /></p>
+
+Dado que el dispositivo escucha continuamente eventos de sonido, puedes probarlo generando cerca de él los eventos de sonido compatibles.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty_2.png" alt="pir" width={600} height="auto" /></p>
+
+Además, puedes ajustar los parámetros del dispositivo usando comandos AT. A continuación se muestran algunos comandos que puedes usar para interactuar con el dispositivo.
+
+| Comando | Descripción | Ejemplo |
+|---|---|---|
+| `AT+GETDETECT` | Obtiene los tipos de detección actualmente habilitados (1–5 tipos). | `AT+GETDETECT` → `+GETDETECT:baby_cry,glass_break` |
+| `AT+SETDETECT=<types>` | Establece los tipos de eventos a detectar (separados por comas, máximo 5). | `AT+SETDETECT=baby_cry,snore` |
+| `AT+GETEVENTTHRESHOLD=<type>` | Obtiene el umbral de confianza para un evento específico. | `AT+GETEVENTTHRESHOLD=baby_cry` → `+GETEVENTTHRESHOLD:baby_cry,70` |
+| `AT+SETEVENTTHRESHOLD=<type>,<val>` | Establece el umbral de confianza para un evento específico. | `AT+SETEVENTTHRESHOLD=baby_cry,75` |
+| `AT+GETSUPPORTEDLIST` | Enumera todos los tipos de eventos compatibles con el dispositivo. | `AT+GETSUPPORTEDLIST` → `+GETSUPPORTEDLIST:doorbell,glass_break,baby_cry,...` |
+| `AT+SETOUTPUTTYPE=<type>` | Define qué se envía como salida cuando se detecta un evento. | `AT+SETOUTPUTTYPE=highest_confidence` |
+| `AT+GETINTMODE` | Obtiene el modo de interrupción actual. | `AT+GETINTMODE` → `+GETINTMODE:single` |
+| `AT+SETINTMODE=<mode>` | Establece el modo de funcionamiento de la interrupción. | `AT+SETINTMODE=continuous` |
+| `AT+RESETINT` | Restablece el estado de la interrupción y pone el pin INT_N en HIGH. | `AT+RESETINT` |
+| `AT+SAVECONFIG` | Guarda la configuración actual para que persista tras el reinicio. | `AT+SAVECONFIG` |
+| `AT+GETFWVERSION` | Obtiene la cadena de versión del firmware. | `AT+GETFWVERSION` → `+GETFWVERSION:1.0.2` |
+| `AT+RESET` | Restaura los ajustes predeterminados y reinicia el dispositivo (borra toda la configuración personalizada). | `AT+RESET` |
+
+
+Cuando se detecta un evento, el dispositivo envía automáticamente:
+
+```
++EVENT: <event_id>,<confidence>
+```
+
+**Ejemplo:** `+EVENT: 1,87` → ID de evento 1 (`baby_cry`), 87% de confianza
+
+---
+
+ `AT+SETOUTPUTTYPE` valores
+
+| Valor | Comportamiento |
+|---|---|
+| `highest_confidence` | Solo se informa el único evento con mayor confianza |
+| `all_events` | Todos los eventos detectados se informan en cada ciclo de detección |
+
+ `AT+SETINTMODE` valores
+
+| Valor | Comportamiento |
+|---|---|
+| `single` | INT_N se activa una vez y luego debe restablecerse con `AT+RESETINT` |
+| `continuous` | INT_N se activa continuamente mientras se detecta el evento |
+
+
+
 ## Uso con Arduino 
 
 ### Conectar XIAO
@@ -34,8 +116,6 @@ Una compacta placa de audio de borde ofrece detección de sonido en tiempo real 
 Este dispositivo es compatible con módulos XIAO y puede conectarse a cualquier pin UART disponible en la placa. Es compatible con los módulos ESP32S3, ESP32C6 y ESP32C3, por lo que solo necesitas modificar en el código las definiciones de los pines RX y TX según corresponda. Conecta el dispositivo con la misma orientación que se muestra en las imágenes.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/with_esp.jpg" alt="pir" width={800} height="auto" /></p>
-
-
 
 ###  Descargar la biblioteca
 
@@ -74,14 +154,14 @@ Según tu placa XIAO, debes cambiar en el código las definiciones de los pines 
 
 ## Uso básico
 
-Después de flashear al ESP32, este código inicializa un Audio Event Sensor a través de UART y lo configura para detectar eventos de sonido específicos como disparos y rotura de vidrio. Durante la configuración, reinicia el dispositivo, lee la versión del firmware, obtiene la lista de eventos de sonido compatibles y establece umbrales de detección para cada evento seleccionado. A continuación, la configuración se guarda para que los ajustes persistan tras el reinicio. En el bucle principal, el programa escucha continuamente los eventos de sonido detectados y los imprime en el monitor serie en tiempo real. Esto permite que el sistema actúe como una solución de alerta temprana y monitorización para eventos acústicos anómalos.
+Después de grabar el código en el ESP32, este inicializa un sensor de eventos de audio sobre UART y lo configura para detectar eventos de sonido específicos como disparos y rotura de vidrio. Durante la fase de configuración, reinicia el dispositivo, lee la versión del firmware, obtiene la lista de eventos de sonido compatibles y establece los umbrales de detección para cada evento seleccionado. A continuación, la configuración se guarda para que los ajustes persistan tras el reinicio. En el bucle principal, el programa escucha continuamente los eventos de sonido detectados y los imprime en el monitor serie en tiempo real. Esto permite que el sistema actúe como una solución de monitorización y alerta temprana para eventos acústicos anómalos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/basic_usage.png" alt="pir" width={800} height="auto" /></p>
 
-## Extra: notificaciones por correo electrónico 
+## Extra : Notificaciones por correo electrónico 
 
-- Primero, necesitas crear una App Password. Consulta esta [guide](https://support.google.com/accounts/answer/185833?hl=en)
-- A continuación, descarga e instala las bibliotecas de soporte necesarias. Instala la biblioteca ESP Mail Client desde el Arduino Library Manager.
+- Primero, necesitas crear una contraseña de aplicación. Consulta esta [guía](https://support.google.com/accounts/answer/185833?hl=en)
+- A continuación, descarga e instala las bibliotecas de soporte necesarias. Instala la biblioteca ESP Mail Client desde el Administrador de Bibliotecas de Arduino.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/email_client.png" alt="pir" width={800} height="auto" /></p>
 
@@ -376,7 +456,7 @@ void smtpCallback(SMTP_Status status) {
 
 </details>
 
-Luego, reemplaza los siguientes parámetros en el código con tus propios valores: la dirección de correo electrónico del remitente, los pines UART, la App Password, la dirección de correo electrónico del destinatario y el SSID y la contraseña de tu red Wi‑Fi.
+Luego, reemplaza los siguientes parámetros en el código con tus propios valores: la dirección de correo electrónico del remitente, los pines UART, la contraseña de la aplicación, la dirección de correo electrónico del destinatario y el SSID y la contraseña de tu red Wi‑Fi.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/credentials.png" alt="pir" width={800} height="auto" /></p>
 
@@ -392,9 +472,9 @@ Luego, reemplaza los siguientes parámetros en el código con tus propios valore
 </div>
 
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

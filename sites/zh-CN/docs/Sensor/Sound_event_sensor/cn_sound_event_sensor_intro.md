@@ -1,9 +1,9 @@
 ---
-description: 这是一款紧凑的边缘音频板，可在本地实时检测婴儿哭声、玻璃破碎声、枪声、警报以及打鼾声，并将所有数据保存在本地以保护隐私。它专为与 XIAO 系列配合，实现与 ESPHome 和 Home Assistant 的无缝集成而设计，非常适合用于智能监控和自动化。
+description: 这是一款紧凑的边缘音频板，可在本地实时检测婴儿哭声、玻璃破碎声、枪声、报警声和打鼾声，并将所有数据保存在本地以保护隐私。专为与 XIAO 系列实现无缝 ESPHome 和 Home Assistant 集成而设计，非常适合智能监控和自动化。
 title: 声音事件检测模块快速上手
 keywords:
   - Sound Event Detection Module
-  - Sound IoT
+  - 声音物联网
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module
 sku: 100049596
@@ -17,25 +17,105 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module/
 
 ## 介绍
 
-一款紧凑的边缘音频板，可实现实时声音检测，并具备强大的本地数据隐私保护能力。它可以检测五种异常声音事件——婴儿哭声、玻璃破碎声、枪声、T3/T4 警报以及打鼾声，从而实现即时响应和可靠的早期预警。该模块为原生 ESPHome 集成而设计，并与搭载 XIAO 系列的 Home Assistant 无缝兼容，非常适合用于家庭安防监控或响应式自动化触发。
+这是一款紧凑的边缘音频板，具备实时声音检测能力，并对本地数据提供强有力的隐私保护。它可以检测五种异常声音事件——婴儿哭声、玻璃破碎声、枪声、T3/T4 报警声以及打鼾声，从而实现即时响应和可靠的早期预警。该模块为原生 ESPHome 集成而设计，并可与 XIAO 系列在 Home Assistant 中实现无缝兼容，非常适合用于家庭安防监控或响应式自动化触发。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Sound-Event-Detection-Module-D1-p-6652.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
-## Arduino 使用方法 
+## 规格参数
 
-### 插入 XIAO
+| 特性 | 描述 |
+|--------|-------------|
+| 核心芯片 | XMOS XU316-1024-QF60BC24 |
+| 支持的事件 | 婴儿哭声 / 玻璃破碎 / 枪声 / 烟雾报警 & 一氧化碳报警（T3/T4）/ 打鼾 |
+| 数字麦克风 | 高性能数字麦克风 × 1 |
+| 灵敏度 | -26 dBFS |
+| 声学过载点 | 120 dBL |
+| 信噪比 | 64 dBA |
+| 电源 | USB 5V，外部 5V |
+| 尺寸 | 40 × 20 mm |
+| 工作温度 | 0℃ – 65℃ |
 
-该设备支持 XIAO 模块，并且可以连接到板上任意可用的 UART 引脚。它兼容 ESP32S3、ESP32C6 和 ESP32C3 模块，因此你只需在代码中相应修改 RX 和 TX 引脚定义即可。请按照图片所示的方向插入设备。
+## 硬件概览与尺寸
+
+**正面视图**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/front.png" alt="pir" width={400} height="auto" /></p>
+
+**背面视图**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/back.png" alt="pir" width={400} height="auto" /></p>
+
+## USB 使用
+
+该设备可以在独立模式下运行，并支持通过 USB 接口使用 AT 指令进行即插即用通信。
+
+首先，使用 USB Type-C 转 USB Type-A 线缆将设备连接到电脑。
+
+- **步骤 1** ：接着，打开 **PuTTY** 或任意其他串口终端软件。如果你尚未安装，可以通过以下[链接](https://putty.org/index.html)下载 PuTTY：
+
+- **步骤 2** ：打开串口终端后，选择**正确的 COM 端口**，并将波特率设置为 **115200**。连接成功后，你就可以通过 USB 接口与设备交互。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty.png" alt="pir" width={600} height="auto" /></p>
+
+由于设备会持续监听声音事件，你可以在设备附近制造受支持的声音事件来进行测试。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty_2.png" alt="pir" width={600} height="auto" /></p>
+
+此外，你还可以使用 AT 指令调整设备参数。下面是一些可用于与设备交互的指令。
+
+| 指令 | 描述 | 示例 |
+|---|---|---|
+| `AT+GETDETECT` | 获取当前启用的检测类型（1–5 种类型）。 | `AT+GETDETECT` → `+GETDETECT:baby_cry,glass_break` |
+| `AT+SETDETECT=<types>` | 设置要检测的事件类型（逗号分隔，最多 5 种）。 | `AT+SETDETECT=baby_cry,snore` |
+| `AT+GETEVENTTHRESHOLD=<type>` | 获取指定事件的置信度阈值。 | `AT+GETEVENTTHRESHOLD=baby_cry` → `+GETEVENTTHRESHOLD:baby_cry,70` |
+| `AT+SETEVENTTHRESHOLD=<type>,<val>` | 设置指定事件的置信度阈值。 | `AT+SETEVENTTHRESHOLD=baby_cry,75` |
+| `AT+GETSUPPORTEDLIST` | 列出设备支持的所有事件类型。 | `AT+GETSUPPORTEDLIST` → `+GETSUPPORTEDLIST:doorbell,glass_break,baby_cry,...` |
+| `AT+SETOUTPUTTYPE=<type>` | 设置在检测到事件时输出的内容。 | `AT+SETOUTPUTTYPE=highest_confidence` |
+| `AT+GETINTMODE` | 获取当前中断模式。 | `AT+GETINTMODE` → `+GETINTMODE:single` |
+| `AT+SETINTMODE=<mode>` | 设置中断工作模式。 | `AT+SETINTMODE=continuous` |
+| `AT+RESETINT` | 重置中断状态并将 INT_N 引脚拉高。 | `AT+RESETINT` |
+| `AT+SAVECONFIG` | 保存当前配置，使其在重启后仍然生效。 | `AT+SAVECONFIG` |
+| `AT+GETFWVERSION` | 获取固件版本字符串。 | `AT+GETFWVERSION` → `+GETFWVERSION:1.0.2` |
+| `AT+RESET` | 恢复默认设置并重启设备（清除所有自定义配置）。 | `AT+RESET` |
+
+
+当检测到事件时，设备会自动发送：
+
+```
++EVENT: <event_id>,<confidence>
+```
+
+**示例：** `+EVENT: 1,87` → 事件 ID 1（`baby_cry`），置信度 87%
+
+---
+
+ `AT+SETOUTPUTTYPE` 取值
+
+| 值 | 行为 |
+|---|---|
+| `highest_confidence` | 仅上报单个置信度最高的事件 |
+| `all_events` | 每个检测周期上报所有检测到的事件 |
+
+ `AT+SETINTMODE` 取值
+
+| 值 | 行为 |
+|---|---|
+| `single` | INT_N 触发一次后，需要通过 `AT+RESETINT` 重置 |
+| `continuous` | 在检测到事件期间，INT_N 持续触发 |
+
+
+
+## Arduino 使用 
+
+### 插接 XIAO
+
+该设备支持 XIAO 模块，并可连接到板上的任意可用 UART 引脚。它兼容 ESP32S3、ESP32C6 和 ESP32C3 模块，因此你只需在代码中相应修改 RX 和 TX 引脚定义。请按照图片所示的方向插入设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/with_esp.jpg" alt="pir" width={800} height="auto" /></p>
-
-
 
 ###  下载库文件
 
@@ -59,13 +139,13 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module/
 
 ### 验证安装
 
-依次点击 File → Examples → AudioEventSensor 查看示例草图
+依次点击 File → Examples → AudioEventSensor 查看示例程序
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/verify_arduino.png" alt="pir" width={800} height="auto" /></p>
 
-### 更改 UART 引脚
+### 修改 UART 引脚
 
-根据你所使用的 XIAO 开发板，你需要在代码中更改 UART 引脚定义。在本示例中，我们使用的是 XIAO ESP32S3。
+根据你所使用的 XIAO 开发板，需要在代码中修改 UART 引脚定义。在本示例中，我们使用的是 XIAO ESP32S3。
 
 ```c
 #define UART1_TX 43
@@ -74,13 +154,13 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module/
 
 ## 基本用法
 
-在你将程序烧录到 ESP32 之后，此代码会通过 UART 初始化一个 Audio Event Sensor，并将其配置为检测特定的声音事件，例如枪声和玻璃破碎声。在 `setup` 过程中，它会复位设备、读取固件版本、获取支持的声音事件列表，并为每个选定事件设置检测阈值。随后会保存配置，使这些设置在重启后仍然生效。在主循环中，程序会持续监听已检测到的声音事件，并实时将其打印到串口监视器。这样，系统就可以作为异常声学事件的早期预警和监控解决方案。
+在你将程序烧录到 ESP32 之后，此代码会通过 UART 初始化音频事件传感器，并将其配置为检测特定声音事件，例如枪声和玻璃破碎声。在 `setup` 过程中，它会重置设备、读取固件版本、获取支持的声音事件列表，并为每个选定事件设置检测阈值。随后会保存配置，使设置在重启后仍然有效。在主循环中，程序会持续监听检测到的声音事件，并实时将其打印到串口监视器。这使系统能够作为异常声学事件的早期预警和监控解决方案。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/basic_usage.png" alt="pir" width={800} height="auto" /></p>
 
 ## 进阶：邮件通知 
 
-- 首先，你需要创建一个 App Password。请参考此[指南](https://support.google.com/accounts/answer/185833?hl=en)
+- 首先，你需要创建一个应用专用密码。请参考此[指南](https://support.google.com/accounts/answer/185833?hl=en)
 - 接着，下载并安装所需的支持库。从 Arduino Library Manager 中安装 ESP Mail Client 库。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/email_client.png" alt="pir" width={800} height="auto" /></p>
@@ -376,7 +456,7 @@ void smtpCallback(SMTP_Status status) {
 
 </details>
 
-然后，将代码中的以下参数替换为你自己的值：发件人邮箱地址、UART 引脚、App Password、收件人邮箱地址，以及你的 Wi-Fi SSID 和密码。
+然后，将代码中的以下参数替换为你自己的值：发件人邮箱地址、UART 引脚、应用专用密码、收件人邮箱地址，以及你的 Wi-Fi SSID 和密码。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/credentials.png" alt="pir" width={800} height="auto" /></p>
 
