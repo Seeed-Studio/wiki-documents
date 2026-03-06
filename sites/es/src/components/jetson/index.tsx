@@ -40,6 +40,12 @@ const COMMUNITY_CATEGORIES = [
   { id: 'managed', key: 'managed' }
 ];
 
+const LANG_PATH_PREFIX = {
+  en: '',
+  zh: '/cn',
+  ja: '/ja',
+  es: '/es'
+};
 
 
 // jetson-examples 模型数据
@@ -62,39 +68,129 @@ const EXAMPLE_MODELS = [
 const FAQ_DATA = [
   {
     Icon: WarningIcon,
-    title: 'System Crashed After apt upgrade',
-    desc: 'Why you should NOT run apt upgrade on custom carrier boards and how to recover',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q8-my-system-crashedunable-to-bootblack-screenlost-peripheral-drivers-after-i-execute-sudo-apt-get-update--sudo-apt-get-upgrade-commands'
+    title: {
+      en: 'System Crashed After apt upgrade',
+      ja: 'apt upgrade 後にシステムがクラッシュ',
+      zh: 'apt upgrade 后系统崩溃',
+      es: 'El sistema falló después de apt upgrade'
+    },
+    desc: {
+      en: 'Why you should NOT run apt upgrade on custom carrier boards and how to recover',
+      ja: 'カスタムキャリアボードで apt upgrade を実行すべきでない理由と復旧方法',
+      zh: '为什么不应在自定义载板上执行 apt upgrade，以及如何恢复',
+      es: 'Por qué NO debe ejecutar apt upgrade en carrier boards personalizados y cómo recuperarse'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q8-my-system-crashedunable-to-bootblack-screenlost-peripheral-drivers-after-i-execute-sudo-apt-get-update--sudo-apt-get-upgrade-commands',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q8-sudo-apt-get-update--sudo-apt-get-upgrade-コマンドを実行した後システムがクラッシュし起動できないブラックスクリーンになったり周辺機器ドライバーが失われたりしました',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q8-执行-sudo-apt-get-update--sudo-apt-get-upgrade-命令后我的系统崩溃无法启动黑屏丢失外设驱动',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q8-mi-sistema-falló-no-puede-arrancar-pantalla-negra-perdió-los-controladores-de-los-periféricos-después-de-ejecutar-los-comandos-sudo-apt-get-update--sudo-apt-get-upgrade'
+    }
   },
   {
     Icon: StorageIcon,
-    title: 'Insufficient eMMC Space',
-    desc: 'Only 2GB left on eMMC? Solutions for expanding storage on reComputer devices',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q2-the-remaining-space-in-the-emmc-in-the-received-recomputer-is-only-about-2gb-how-to-solve-the-problem-of-insufficient-space'
+    title: {
+      en: 'Insufficient eMMC Space',
+      ja: 'eMMC 容量不足',
+      zh: 'eMMC 空间不足',
+      es: 'Espacio insuficiente en eMMC'
+    },
+    desc: {
+      en: 'Only 2GB left on eMMC? Solutions for expanding storage on reComputer devices',
+      ja: 'eMMC の空き容量が 2GB しかない？reComputer デバイスのストレージ拡張方法',
+      zh: 'eMMC 只剩 2GB？reComputer 设备的存储扩展方案',
+      es: '¿Solo quedan 2 GB en eMMC? Soluciones para ampliar el almacenamiento en dispositivos reComputer'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q2-the-remaining-space-in-the-emmc-in-the-received-recomputer-is-only-about-2gb-how-to-solve-the-problem-of-insufficient-space',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q2-受け取った-recomputer-の-emmc-の残り容量が約-2gb-しかありませんストレージ不足の問題をどう解決すればよいですか',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q2-收到的-recomputer-中-emmc-剩余空间只有约-2gb如何解决空间不足问题',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q2-el-espacio-restante-en-la-emmc-del-recomputer-recibido-es-de-solo-unos-2-gb-cómo-resolver-el-problema-de-espacio-insuficiente'
+    }
   },
   {
     Icon: ClockIcon,
-    title: 'Flash Timeout Issues',
-    desc: 'Troubleshooting timeout problems during JetPack flashing process',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q6-timeout-issue-during-flash-jetpack'
+    title: {
+      en: 'Flash Timeout Issues',
+      ja: 'フラッシュ時のタイムアウト問題',
+      zh: '刷机超时问题',
+      es: 'Problemas de tiempo de espera al flashear'
+    },
+    desc: {
+      en: 'Troubleshooting timeout problems during JetPack flashing process',
+      ja: 'JetPack 書き込み中のタイムアウト問題のトラブルシューティング',
+      zh: '排查 JetPack 刷机过程中的超时问题',
+      es: 'Solución de problemas de tiempo de espera durante el proceso de flasheo de JetPack'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q6-timeout-issue-during-flash-jetpack',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q6-jetpack-フラッシュ中のタイムアウト問題',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q6-刷写-jetpack-时出现超时问题',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q6-problema-de-tiempo-de-espera-durante-el-flasheo-de-jetpack'
+    }
   },
   {
     Icon: RefreshIcon,
-    title: 'SSD Boot Issues',
-    desc: 'System fails to boot from SSD after flashing? Solutions for JetPack 5',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q13-why-is-it-that-sometimes-after-completing-the-flashing-process-on-jetson-the-system-fails-to-boot-from-the-ssd'
+    title: {
+      en: 'SSD Boot Issues',
+      ja: 'SSD 起動の問題',
+      zh: 'SSD 启动问题',
+      es: 'Problemas de arranque desde SSD'
+    },
+    desc: {
+      en: 'System fails to boot from SSD after flashing? Solutions for JetPack 5',
+      ja: '書き込み後に SSD から起動できない？JetPack 5 向けの解決策',
+      zh: '刷机后系统无法从 SSD 启动？JetPack 5 的解决方案',
+      es: '¿El sistema no arranca desde SSD después del flasheo? Soluciones para JetPack 5'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q13-why-is-it-that-sometimes-after-completing-the-flashing-process-on-jetson-the-system-fails-to-boot-from-the-ssd',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q13-jetson-でフラッシュ処理を完了した後にssdから起動できないことがあるのはなぜですか',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q13-为什么有时在-jetson-上完成刷机后系统无法从-ssd-启动',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q13-por-qué-a-veces-después-de-completar-el-proceso-de-flasheo-en-jetson-el-sistema-no-arranca-desde-el-ssd'
+    }
   },
   {
     Icon: PlugIcon,
-    title: 'Missing Driver Module',
-    desc: 'How to compile custom .ko driver modules for reComputer/reServer',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q16-if-the-recomputerreserver-does-not-have-the-required-ko-driver-module-how-can-i-compile-a-usable-driver'
+    title: {
+      en: 'Missing Driver Module',
+      ja: '不足しているドライバーモジュール',
+      zh: '缺失驱动模块',
+      es: 'Módulo de controlador faltante'
+    },
+    desc: {
+      en: 'How to compile custom .ko driver modules for reComputer/reServer',
+      ja: 'reComputer/reServer 向けにカスタム .ko ドライバーモジュールをコンパイルする方法',
+      zh: '如何为 reComputer/reServer 编译自定义 .ko 驱动模块',
+      es: 'Cómo compilar módulos de controlador .ko personalizados para reComputer/reServer'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q16-if-the-recomputerreserver-does-not-have-the-required-ko-driver-module-how-can-i-compile-a-usable-driver',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q16-recomputer-reserver-に必要な-ko-ドライバーモジュールがない場合使用可能なドライバーをどのようにコンパイルできますか',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q16-如果-recomputerreserver-没有所需的-ko-驱动模块如何编译可用驱动',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q16-si-recomputerreserver-no-tiene-el-módulo-de-controlador-ko-requerido-cómo-puedo-compilar-un-controlador-utilizable'
+    }
   },
   {
     Icon: HardDriveIcon,
-    title: 'exFAT External Drive',
-    desc: 'Mount exFAT formatted external drives on Jetson with JetPack 6',
-    url: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q17-how-can-i-mount-an-external-hard-drive-formatted-with-exfat-on-jetson-jetpack-6'
+    title: {
+      en: 'exFAT External Drive',
+      ja: 'exFAT 外付けドライブ',
+      zh: 'exFAT 外接硬盘',
+      es: 'Unidad externa exFAT'
+    },
+    desc: {
+      en: 'Mount exFAT formatted external drives on Jetson with JetPack 6',
+      ja: 'JetPack 6 の Jetson で exFAT フォーマットの外付けドライブをマウントする方法',
+      zh: '在 JetPack 6 的 Jetson 上挂载 exFAT 格式的外接硬盘',
+      es: 'Montar unidades externas formateadas en exFAT en Jetson con JetPack 6'
+    },
+    url: {
+      en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q17-how-can-i-mount-an-external-hard-drive-formatted-with-exfat-on-jetson-jetpack-6',
+      ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q17-jetson-jetpack-6-で-exfat-形式の外付けハードドライブをマウントするにはどうすればよいですか',
+      zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q17-如何在-jetson-jetpack-6-上挂载-exfat-格式的外部硬盘',
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q17-cómo-puedo-montar-un-disco-duro-externo-formateado-con-exfat-en-jetson-jetpack-6'
+    }
   }
 ];
 
@@ -160,6 +256,11 @@ export const translations = {
         models: 'Model List'
       }
     },
+    demoHero: {
+      title: 'One-Command AI Deployment',
+      desc: 'Deploy 20+ AI models with a single command. From LLMs to computer vision, run cutting-edge AI on your Jetson device instantly. No complex setup required.',
+      cta: 'Get Started'
+    },
     beginnerGuide: {
       title: 'Beginner\'s Guide',
       desc: 'Comprehensive learning resources from Jetson basics to advanced AI applications',
@@ -200,7 +301,19 @@ export const translations = {
       multimodal: 'Multimodal AI',
       physical: 'Physical AI',
       managed: 'Managed Services',
+      searchPlaceholder: 'Search projects...',
+      searchResults: '{count} projects found',
+      prev: '← Prev',
+      next: 'Next →'
     },
+    common: {
+      clickMe: 'Click me',
+      moreDetail: 'More detail',
+      viewOnGithub: 'View on GitHub',
+      tutorialsAndGuides: 'Tutorials & Guides',
+      aiModels: '20+ AI Models',
+      learnMore: 'Learn more →'
+    }
   },
   ja: {
     tabs: {
@@ -263,6 +376,11 @@ export const translations = {
         models: 'モデルリスト'
       }
     },
+    demoHero: {
+      title: 'ワンコマンドAIデプロイ',
+      desc: '単一コマンドで 20 以上の AI モデルをデプロイ。LLM からコンピュータビジョンまで、最先端の AI を Jetson デバイス上で即座に実行できます。複雑なセットアップは不要です。',
+      cta: 'はじめる'
+    },
     beginnerGuide: {
       title: 'ビギナーズガイド',
       desc: 'Jetsonの基礎から高度なAIアプリケーションまで包括的な学習リソース',
@@ -303,7 +421,19 @@ export const translations = {
       multimodal: 'マルチモーダル AI',
       physical: '物理 AI',
       managed: '管理サービス',
+      searchPlaceholder: 'プロジェクトを検索...',
+      searchResults: '{count} 件のプロジェクト',
+      prev: '← 前へ',
+      next: '次へ →'
     },
+    common: {
+      clickMe: 'クリック',
+      moreDetail: '詳細を見る',
+      viewOnGithub: 'GitHubで見る',
+      tutorialsAndGuides: 'チュートリアルとガイド',
+      aiModels: '20+ AI モデル',
+      learnMore: '詳細はこちら →'
+    }
   },
   zh: {
     tabs: {
@@ -366,6 +496,11 @@ export const translations = {
         models: '模型列表'
       }
     },
+    demoHero: {
+      title: '一键 AI 部署',
+      desc: '只需一条命令即可部署 20+ AI 模型。从大语言模型到计算机视觉，让前沿 AI 在你的 Jetson 设备上即刻运行，无需复杂配置。',
+      cta: '立即开始'
+    },
     beginnerGuide: {
       title: '新手指南',
       desc: '从 Jetson 基础到高级 AI 应用的全面学习资源',
@@ -406,7 +541,19 @@ export const translations = {
       multimodal: '多模态 AI',
       physical: '物理 AI',
       managed: '托管服务',
+      searchPlaceholder: '搜索项目...',
+      searchResults: '找到 {count} 个项目',
+      prev: '← 上一页',
+      next: '下一页 →'
     },
+    common: {
+      clickMe: '点击查看',
+      moreDetail: '更多详情',
+      viewOnGithub: '在 GitHub 查看',
+      tutorialsAndGuides: '教程与指南',
+      aiModels: '20+ AI 模型',
+      learnMore: '了解更多 →'
+    }
   },
   es: {
     tabs: {
@@ -469,6 +616,11 @@ export const translations = {
         models: 'Lista de Modelos'
       }
     },
+    demoHero: {
+      title: 'Despliegue de IA con un Comando',
+      desc: 'Despliegue más de 20 modelos de IA con un solo comando. Desde LLM hasta visión por computadora, ejecute IA de vanguardia en su dispositivo Jetson al instante. No se requiere una configuración compleja.',
+      cta: 'Comenzar'
+    },
     beginnerGuide: {
       title: 'Guía para Principiantes',
       desc: 'Recursos de aprendizaje completos desde fundamentos de Jetson hasta aplicaciones avanzadas de IA',
@@ -509,7 +661,19 @@ export const translations = {
       multimodal: 'IA Multimodal',
       physical: 'IA Física',
       managed: 'Servicios Gestionados',
+      searchPlaceholder: 'Buscar proyectos...',
+      searchResults: '{count} proyectos encontrados',
+      prev: '← Anterior',
+      next: 'Siguiente →'
     },
+    common: {
+      clickMe: 'Haz clic',
+      moreDetail: 'Más detalles',
+      viewOnGithub: 'Ver en GitHub',
+      tutorialsAndGuides: 'Tutoriales y guías',
+      aiModels: '20+ modelos de IA',
+      learnMore: 'Más información →'
+    }
   },
 };
 
@@ -604,8 +768,9 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
     
     const query = searchQuery.toLowerCase();
     return allProjects.filter(project => 
-      project.name?.toLowerCase().includes(query) ||
-      project.category?.some(cat => cat.toLowerCase().includes(query))
+      (project.name?.[lang] || project.name?.en || '').toLowerCase().includes(query) ||
+      (project.category?.[lang] || []).some((cat: string) => cat.toLowerCase().includes(query)) ||
+      (project.category?.en || []).some((cat: string) => cat.toLowerCase().includes(query))
     );
   };
   
@@ -693,7 +858,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             {expandedSections.devices && (
             <>
             {/* Flash Guide CTA - Prominent placement at top */}
-            <a href="/flash/jetpack_to_selected_product" className={styles.flash_guide_promo}>
+            <a href={`${LANG_PATH_PREFIX[lang]}/flash/jetpack_to_selected_product`} className={styles.flash_guide_promo}>
               <div className={styles.flash_guide_promo_icon}><ZapIcon size={40} /></div>
               <div className={styles.flash_guide_promo_content}>
                 <h3 className={styles.flash_guide_promo_title}>{t.flashGuide.ctaTitle}</h3>
@@ -704,7 +869,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                   ))}
                 </div>
               </div>
-              <div className={styles.flash_guide_promo_arrow}>Click me</div>
+              <div className={styles.flash_guide_promo_arrow}>{t.common.clickMe}</div>
             </a>
 
             {/* Product Category Tabs */}
@@ -725,14 +890,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 0 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -744,14 +909,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 1 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -763,14 +928,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 2 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -782,14 +947,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 3 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -801,14 +966,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 4 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -820,14 +985,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 5 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -839,14 +1004,14 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {activeDeviceTab === 6 && (
                 <>
                   {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage} target="_blank" className={styles.device_card}>
+                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
                       <div className={styles.device_image}>
                         <img src={product.img} alt={product.label} />
                       </div>
                       <div className={styles.device_content}>
                         <div className={styles.device_name}>{product.label}</div>
                         <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>More detail</span>
+                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
                           <span className={styles.device_action_arrow}>→</span>
                         </div>
                       </div>
@@ -1003,13 +1168,12 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
           <div className={styles.hero_section}>
             <div className={styles.hero_content}>
               <div className={styles.hero_subtitle}><ZapIcon size={16} /> jetson-examples</div>
-              <h1>One-Command AI Deployment</h1>
+              <h1>{t.demoHero.title}</h1>
               <p className={styles.hero_description}>
-                Deploy 20+ AI models with a single command. From LLMs to computer vision,
-                run cutting-edge AI on your Jetson device instantly. No complex setup required.
+                {t.demoHero.desc}
               </p>
               <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" className={styles.hero_cta}>
-                <span>Get Started</span>
+                <span>{t.demoHero.cta}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -1039,7 +1203,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                       <span className={styles.examples_logo_text}>jetson-examples</span>
                     </div>
                     <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" className={styles.github_link}>
-                      <span>View on GitHub</span>
+                      <span>{t.common.viewOnGithub}</span>
                     </a>
                   </div>
                   
@@ -1087,7 +1251,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                     <div className={styles.link_card_icon}><BookOpenIcon size={24} /></div>
                     <div className={styles.link_card_content}>
                       <h4>{t.examples.quickLinks.docs}</h4>
-                      <p>Tutorials & Guides</p>
+                      <p>{t.common.tutorialsAndGuides}</p>
                     </div>
                     <span className={styles.link_card_arrow}>→</span>
                   </a>
@@ -1095,7 +1259,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                     <div className={styles.link_card_icon}><BotIcon size={24} /></div>
                     <div className={styles.link_card_content}>
                       <h4>{t.examples.quickLinks.models}</h4>
-                      <p>20+ AI Models</p>
+                      <p>{t.common.aiModels}</p>
                     </div>
                     <span className={styles.link_card_arrow}>→</span>
                   </a>
@@ -1123,7 +1287,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                 <input
                   type="text"
                   className={styles.search_input}
-                  placeholder="Search projects..."
+                  placeholder={t.community.searchPlaceholder}
                   value={searchQuery}
                   onChange={handleSearchChange}
                 />
@@ -1137,7 +1301,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                 )}
               </div>
               <span className={styles.search_results}>
-                {getFilteredProjects().length} projects found
+                {t.community.searchResults.replace('{count}', String(getFilteredProjects().length))}
               </span>
             </div>
             
@@ -1157,15 +1321,15 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             {/* Projects Grid */}
             <div className={styles.project_grid}>
               {getPaginatedProjects().map((project, idx) => (
-                <a key={idx} href={project.URL} target="_blank" className={styles.project_card}>
+                <a key={idx} href={project.URL?.[lang] || project.URL?.en} target="_blank" className={styles.project_card}>
                   <div className={styles.project_image}>
-                    <img src={project.img} alt={project.name} />
+                    <img src={project.img} alt={project.name?.[lang] || project.name?.en} />
                   </div>
                   <div className={styles.project_content}>
                     <span className={styles.project_category}>
-                      {project.category?.[0] || 'Jetson'}
+                      {project.category?.[lang]?.[0] || project.category?.en?.[0] || 'Jetson'}
                     </span>
-                    <h3 className={styles.project_title}>{project.name}</h3>
+                    <h3 className={styles.project_title}>{project.name?.[lang] || project.name?.en}</h3>
                   </div>
                 </a>
               ))}
@@ -1179,7 +1343,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
                 >
-                  ← Prev
+                  {t.community.prev}
                 </button>
                 <div className={styles.page_numbers}>
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
@@ -1197,7 +1361,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
                 >
-                  Next →
+                  {t.community.next}
                 </button>
               </div>
             )}
@@ -1243,12 +1407,12 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {FAQ_DATA.map((faq, idx) => {
                 const FaqIconComponent = faq.Icon;
                 return (
-                  <a key={idx} href={faq.url} target="_blank" className={styles.faq_card}>
+                  <a key={idx} href={faq.url[lang] || faq.url.en} target="_blank" className={styles.faq_card}>
                     <div className={styles.faq_icon}><FaqIconComponent size={28} /></div>
                     <div className={styles.faq_content}>
-                      <h3 className={styles.faq_title}>{faq.title}</h3>
-                      <p className={styles.faq_desc}>{faq.desc}</p>
-                      <span className={styles.faq_link}>Learn more →</span>
+                      <h3 className={styles.faq_title}>{faq.title[lang]}</h3>
+                      <p className={styles.faq_desc}>{faq.desc[lang]}</p>
+                      <span className={styles.faq_link}>{t.common.learnMore}</span>
                     </div>
                   </a>
                 );
