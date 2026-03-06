@@ -1,6 +1,6 @@
 ---
 title: Grove - Servo
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 316010005
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Servo/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove—Servo.jpg)
 

@@ -2,13 +2,16 @@
 description: Quick & No-code Initiation with SenseCraft
 title: Quick & No-code Initiation with SenseCraft
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-quickstart
 sku: 110991748
 last_update:
   date: 1/12/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/K1100-quickstart/
 ---
 
 # Quick Start with SenseCAP K1100 - The Sensor Prototype Kit

@@ -2,14 +2,17 @@
 description: SidewalkバージョンをLoRaWANバージョンに書き換える
 title: SidewalkバージョンをLoRaWANバージョンに書き換える
 keywords:
-- トラッカー
-- Sidewalk
-- Amazon
+  - トラッカー
+  - Sidewalk
+  - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_to_wio_tracker
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/flash_to_wio_tracker/
 ---
 
 

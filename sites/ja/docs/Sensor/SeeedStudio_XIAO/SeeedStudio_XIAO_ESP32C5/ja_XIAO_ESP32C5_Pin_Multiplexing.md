@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO ESP32-C5 でのピン多重化
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -10,6 +10,9 @@ slug: /xiao_esp32c5_pin_multiplexing
 last_update:
   date: 12/30/2025
   author: Zeller
+createdAt: '2025-12-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_pin_multiplexing/
 ---
 
 import Tabs from '@theme/Tabs';

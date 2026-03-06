@@ -2,10 +2,10 @@
 description: This wiki provides the debugging tutorial for the StarAI Robot Arm and realizes data collection and training within the Lerobot framework.
 title: StarAI Arm in LeRobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics 
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /lerobot_starai_arm
 sku: 114090081,114090080,100049805,100038899,100028196
@@ -13,7 +13,11 @@ last_update:
   date: 10/13/2025
   author: LiShanghang
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/lerobot_starai_arm/
 ---
 
 # Getting started with StarAI Robot Arm with LeRobot

@@ -2,13 +2,16 @@
 description: Grove - SPDT继电器(30A)
 title: Grove - SPDT继电器(30A)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-SPDT_Relay_30A
 sku: 103020012
 last_update:
   date: 1/10/2023
   author: jianjing Huang
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-SPDT_Relay_30A/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-SPDT_Relay_30A/img/SPDT_Relay_01.jpg" /></div>

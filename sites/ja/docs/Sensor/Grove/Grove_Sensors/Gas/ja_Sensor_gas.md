@@ -2,12 +2,15 @@
 description: センサー - ガス
 title: センサー - ガス
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Gas_Sensor_Selection_Guide
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeed_Gas_Sensor_Selection_Guide/
 ---
 
 

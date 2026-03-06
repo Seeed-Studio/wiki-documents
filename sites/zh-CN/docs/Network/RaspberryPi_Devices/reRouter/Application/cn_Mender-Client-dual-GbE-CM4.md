@@ -2,12 +2,15 @@
 description: 在双千兆以太网 CM4 上使用 Mender 客户端
 title: Mender 使用指南
 keywords:
-- 软件 Mender
+  - 软件 Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Mender-Client-dual-GbE-CM4
 last_update:
   date: 2023/1/13
   author: jianjing Huang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Mender-Client-dual-GbE-CM4/
 ---
 
 我们可以在 Raspberry Pi Compute Module 4 的双千兆以太网载板上设置 Mender 客户端，然后从托管或自托管的 Mender 服务器接收 OTA 更新。

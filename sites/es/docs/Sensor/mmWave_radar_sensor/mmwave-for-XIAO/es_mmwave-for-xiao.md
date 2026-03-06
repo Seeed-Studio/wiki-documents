@@ -2,14 +2,17 @@
 description: Comenzando con Seeed Studio 24GHz mmWave para XIAO
 title: 24GHz mmWave para XIAO
 keywords:
-- mmwave
-- radar
+  - mmwave
+  - radar
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_for_xiao
 sku: 101010001
 last_update:
   date: 11/09/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mmwave_for_xiao/
 ---
 
 # Seeed Studio 24GHz mmWave para XIAO

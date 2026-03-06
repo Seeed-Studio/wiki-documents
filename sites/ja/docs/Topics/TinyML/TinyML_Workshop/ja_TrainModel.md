@@ -2,12 +2,15 @@
 description: これは組み込みAIに焦点を当てたオープンソースプロジェクト/プラットフォームです。
 title: 独自のAIモデルをトレーニングしてデプロイする
 keywords:
-- tinyml コース
+  - tinyml コース
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /train_and_deploy_model
 last_update:
   date: 05/15/2025
   author: Frank
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/train_and_deploy_model/
 ---
 
 

@@ -10,6 +10,9 @@ sku: 105110001
 last_update:
   date: 12/4/2024
   author: Youjiang
+createdAt: '2024-01-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_A608_Flash_System/
 ---
 
 # 将 JetPack 操作系统刷写到 A608 载板（支持 NVIDIA Jetson Orin NX/Nano）

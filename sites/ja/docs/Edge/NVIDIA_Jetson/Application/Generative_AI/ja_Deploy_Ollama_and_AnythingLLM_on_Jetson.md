@@ -2,17 +2,20 @@
 description: このwikiでは、ollamaとAnythingLLMを使用してJetsonデバイス上にローカル知識ベースを設定する方法を説明します。大規模言語モデルの強力な機能を活用して、作業効率の向上を目指します。
 title: ローカルAIアシスタント
 keywords:
-- reComputer
-- LLM
-- Chatbot
-- ollama
-- AnythingLLM
-- llama
+  - reComputer
+  - LLM
+  - Chatbot
+  - ollama
+  - AnythingLLM
+  - llama
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /local_ai_ssistant
 last_update:
   date: 07/30/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/local_ai_ssistant/
 ---
 
 

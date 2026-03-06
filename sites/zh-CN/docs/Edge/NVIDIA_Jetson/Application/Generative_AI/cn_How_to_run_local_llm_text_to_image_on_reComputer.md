@@ -2,12 +2,15 @@
 description: 如何在 reComputer 上运行本地 LLM 文本转图像
 title: 使用 Stable Diffusion 进行文本转图像
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_run_local_llm_text_to_image_on_reComputer
 last_update:
   date: 04/01/2024
   author: Bruno
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How_to_run_local_llm_text_to_image_on_reComputer/
 ---
 
 

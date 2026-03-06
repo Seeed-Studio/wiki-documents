@@ -2,15 +2,18 @@
 description: 介绍如何安装和配置 ESP-Matter 环境。
 title: 使用 XIAO ESP32 系列进行 Matter 开发
 keywords:
-- ESP-IDF
-- matter
-- XIAO
+  - ESP-IDF
+  - matter
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32_matter_env
 sku: 113991254,102010636,101991470
 last_update:
   date: 05/15/2024
   author: Citric
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32_matter_env/
 ---
 
 # 使用 XIAO ESP32 系列进行 Matter 开发

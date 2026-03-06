@@ -2,11 +2,11 @@
 description: Este wiki proporciona el tutorial de ensamblaje y depuración para el SO-ARM101 RynnBot Embodied Intelligence Kit y realiza la recolección de datos y entrenamiento dentro de la última versión del framework Lerobot.
 title: SO-ARM101 RynnBot Developer Kit en LeRobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
-- DAMO
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
+  - DAMO
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_soarm101_Rynnbot_Developer_Kit
 sku: 100068444
@@ -14,7 +14,11 @@ last_update:
   date: 1/12/2026
   author: LiShanghang
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2026-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/lerobot_soarm101_Rynnbot_Developer_Kit/
 ---
 
 # Introducción al SO-ARM101 - RynnBot Developer Kit con LeRobot

@@ -11,6 +11,9 @@ slug: /YOLOv8-TRT-Jetson
 last_update:
   date: 07/17/2023
   author: Lakshantha
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/
 ---
 
 # Deploy YOLOv8 on NVIDIA Jetson using TensorRT

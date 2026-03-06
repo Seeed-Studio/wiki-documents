@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates yolov8s pose estimation and object detection benchmark on Raspberry Pi5 and Raspberry Pi Compute Module 4. 
+description: This wiki demonstrates yolov8s pose estimation and object detection benchmark on Raspberry Pi5 and Raspberry Pi Compute Module 4.
 title: Benchmark on RPi5 and CM4 running yolov8s with rpi ai kit
 keywords:
   - Edge
@@ -11,7 +11,10 @@ sku: 103990663
 last_update:
   date: 07/17/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/
 ---
 
 # Benchmark on RPi5 and CM4 running yolov8s with rpi ai kit

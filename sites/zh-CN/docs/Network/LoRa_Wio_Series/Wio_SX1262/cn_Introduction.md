@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 10/12/2024
   author: Evelyn Chen
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wio_sx1262/
 ---
 
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/33.png" style={{width:900, height:'auto'}}/></div></td>

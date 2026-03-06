@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO ESP32C6 与 CircuitPython
 title: XIAO ESP32C6 与 CircuitPython
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/esp32c6_circuitpython/title.png
 slug: /xiao_esp32c6_with_circuitpython
 last_update:
   date: 08/14/2024
   author: Evelyn Chen
+createdAt: '2024-11-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_with_circuitpython/
 ---
 
 # **Seeed Studio XIAO ESP32C6 与 CircuitPython**

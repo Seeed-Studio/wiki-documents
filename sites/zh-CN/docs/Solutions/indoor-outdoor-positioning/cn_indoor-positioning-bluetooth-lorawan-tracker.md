@@ -1,6 +1,6 @@
 ---
-title: "基于 LoRaWAN 的蓝牙室内定位系统"
-description: "使用 SenseCAP Tracker 的可靠室内定位解决方案。它结合蓝牙进行精确位置跟踪和 LoRaWAN 进行长距离数据传输，实现轻松部署。"
+title: 基于 LoRaWAN 的蓝牙室内定位系统
+description: 使用 SenseCAP Tracker 的可靠室内定位解决方案。它结合蓝牙进行精确位置跟踪和 LoRaWAN 进行长距离数据传输，实现轻松部署。
 keywords:
   - Bluetooth
   - LoRaWAN
@@ -14,6 +14,9 @@ sidebar_position: 1
 last_update:
   date: 09/10/2025
   author: Spencer
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/solutions/indoor-positioning-bluetooth-lorawan-tracker/
 ---
 
 ## 简介

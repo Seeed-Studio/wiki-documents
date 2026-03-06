@@ -6,7 +6,10 @@ slug: /A_Comparison_of_Different_Grove_Temperature_Sensors
 last_update:
   date: 02/02/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/A_Comparison_of_Different_Grove_Temperature_Sensors/
 ---
 
 

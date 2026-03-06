@@ -1,6 +1,6 @@
 ---
 title: Grove Starter Kit for Wio LTE
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove_Starter_Kit_for_Wio_LTE
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove_Starter_Kit_for_Wio_LTE/
 ---
 ![](https://files.seeedstudio.com/wiki/Bazaar_doc/110060873/bazaar683634_img_4745.JPG)
 

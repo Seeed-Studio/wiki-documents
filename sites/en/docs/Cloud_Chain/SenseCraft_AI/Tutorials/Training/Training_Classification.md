@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/03/2024
   author: Citric
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-classification/
 ---
 
 # Type of training - Classification

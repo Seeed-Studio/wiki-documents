@@ -1,6 +1,6 @@
 ---
 title: Gear Stepper Motor Driver Pack
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 105990072, 105990028
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Gear_Stepper_Motor_Driver_Pack/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Gear-Stepper-Motor-Driver-Pack/img/main.jpg)

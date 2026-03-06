@@ -7,6 +7,9 @@ slug: /DSO_Nano-Development
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DSO_Nano-Development/
 ---
 
 一些关于 [DSO Nano](/cn/DSO_Nano "DSO Nano") 开发的资源。

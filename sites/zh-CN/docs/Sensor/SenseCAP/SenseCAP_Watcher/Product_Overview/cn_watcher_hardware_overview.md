@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 10/18/2024
   author: Citric, Djair
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher_hardware_overview/
 ---
 
 # SenseCAP Watcher 硬件概述

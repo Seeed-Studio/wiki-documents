@@ -2,13 +2,16 @@
 description: Cursos del Kit Seeed Studio XIAO
 title: Cursos del Kit Seeed Studio XIAO
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-Kit-Courses
 sku: 110010044
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-Kit-Courses/
 ---
 # XIAO: Gran Potencia, Placa Pequeña
 

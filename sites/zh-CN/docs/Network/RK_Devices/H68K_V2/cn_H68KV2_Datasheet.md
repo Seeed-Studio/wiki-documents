@@ -2,13 +2,16 @@
 description: LinkStar-V2 使用手册
 title: LinkStar-V2 简介
 keywords:
-- 网络
+  - 网络
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /h68kv2_datasheet
 sku: 102110958
 last_update:
   date: 04/18/2024
   author: Parker
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/h68kv2_datasheet/
 ---
 
 <!-- ---

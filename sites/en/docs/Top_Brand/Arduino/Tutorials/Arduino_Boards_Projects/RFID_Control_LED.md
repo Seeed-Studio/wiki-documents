@@ -2,13 +2,16 @@
 description: RFID Control LED
 title: RFID Control LED
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RFID_Control_LED
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/RFID_Control_LED/
 ---
 
 <!-- ---

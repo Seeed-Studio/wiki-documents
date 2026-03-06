@@ -2,13 +2,16 @@
 description: Danger Shield 完全キット
 title: Danger Shield 完全キット
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Danger_Shield_Complete_Kits
 sku: 103990021
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Danger_Shield_Complete_Kits/
 ---
 
 

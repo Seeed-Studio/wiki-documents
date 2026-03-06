@@ -2,12 +2,15 @@
 description: SenseCAP M1 Quick Start
 title: SenseCAP M1 Quick Start
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start/
 ---
 
 **Below you will find the required steps to easily set up your hotspot in a few minutes!**

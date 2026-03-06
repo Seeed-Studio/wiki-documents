@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO ESP32C6 with PlatformIO
 title: XIAO ESP32C6 with PlatformIO
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/esp32c6_circuitpython/title.png
 slug: /xiao_esp32c6_with_platform_io
 last_update:
   date: 08/13/2024
   author: Jason
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_with_platform_io/
 ---
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/7.png" /></div>

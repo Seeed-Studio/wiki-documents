@@ -17,6 +17,9 @@ sku: 101090144,100071398
 last_update:
   date: 07/04/2025
   author: Zibo
+createdAt: '2025-07-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/yolov11_with_depth_camera/
 ---
 
 <div style={{ textAlign: "justify" }}>

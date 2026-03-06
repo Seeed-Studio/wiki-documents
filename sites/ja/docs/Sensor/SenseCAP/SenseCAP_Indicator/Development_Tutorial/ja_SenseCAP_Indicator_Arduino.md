@@ -9,6 +9,9 @@ last_update:
   date: 2/28/2025
   author: Hendra, LongDirtyAnimAlf
 craft: true
+createdAt: '2023-09-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_ESP32_Arduino/
 ---
 
 <!-- :::danger

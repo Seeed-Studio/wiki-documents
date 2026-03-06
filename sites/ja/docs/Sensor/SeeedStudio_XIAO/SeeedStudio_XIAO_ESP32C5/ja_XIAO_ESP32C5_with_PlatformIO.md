@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO ESP32-C5 での Platform IO
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -10,6 +10,9 @@ slug: /xiao_esp32c5_with_platformio
 last_update:
   date: 12/18/2025
   author: Zeller
+createdAt: '2025-12-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_with_platformio/
 ---
 
 import Tabs from '@theme/Tabs';

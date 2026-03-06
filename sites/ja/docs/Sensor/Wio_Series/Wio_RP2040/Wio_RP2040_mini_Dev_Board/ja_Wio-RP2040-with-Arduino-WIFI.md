@@ -1,6 +1,6 @@
 ---
 title: Wio RP2040 mini Dev Board with Arduino
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-RP2040-with-Arduino-WIFI
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-RP2040-with-Arduino-WIFI/
 ---
 
 

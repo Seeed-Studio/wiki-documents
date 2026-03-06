@@ -2,13 +2,16 @@
 description: Grove - サーマルイメージングカメラ IRアレイ MLX90641
 title: Grove - サーマルイメージングカメラ IRアレイ MLX90641
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Thermal-Imaging-Camera-IR-Array
 sku: 114020142, 114020141, 101020892, 101020992
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Thermal-Imaging-Camera-IR-Array/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Grove - 2-Channel Solid State Relay
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020134
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-2-Channel_Solid_State_Relay/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-2-Channel_Solid_State_Relay/img/mian.jpg)

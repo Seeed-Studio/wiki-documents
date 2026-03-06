@@ -2,12 +2,15 @@
 description: このトピックでは、リアルタイム処理を必要とするアプリケーションで、さまざまなセンサーによって生成される「即時」データを処理するエッジコンピューティングアーキテクチャに関する Seeed Studio の製品ドキュメントを紹介します。
 title: エッジコンピューティング
 keywords:
-- エッジコンピューティング
+  - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Computing
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Edge_Computing/
 ---
 
 

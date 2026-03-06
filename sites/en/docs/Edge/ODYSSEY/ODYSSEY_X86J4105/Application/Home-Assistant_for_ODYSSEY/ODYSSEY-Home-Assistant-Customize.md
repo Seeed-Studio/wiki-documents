@@ -8,6 +8,9 @@ slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY-Home-Assistant-Customize/
 ---
 
 # How to Customize Home Assistant

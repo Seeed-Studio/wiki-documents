@@ -2,12 +2,15 @@
 description: BLE氮气模块
 title: BLE氮气模块
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_Nitrogen
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/BLE_Nitrogen/
 ---
 
 ![输入图片描述](https://files.seeedstudio.com/wiki/BLE-Nitrogen/img/cover.png)

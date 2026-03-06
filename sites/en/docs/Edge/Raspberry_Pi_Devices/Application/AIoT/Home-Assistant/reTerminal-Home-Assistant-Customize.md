@@ -1,6 +1,6 @@
 ---
-description:  How to Customize Home Assistant
-title:  How to Customize Home Assistant
+description: How to Customize Home Assistant
+title: How to Customize Home Assistant
 keywords:
   - Edge
   - reTerminal Application
@@ -9,6 +9,9 @@ slug: /reTerminal-Home-Assistant-Customize
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal-Home-Assistant-Customize/
 ---
 
 # How to Customize Home Assistant

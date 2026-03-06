@@ -2,15 +2,18 @@
 description: 高扭矩电机入门指南
 title: 高扭矩电机入门指南
 keywords:
-- actuator
-- motor
-- arm
-- robotics
-image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
+  - actuator
+  - motor
+  - arm
+  - robotics
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong
+createdAt: '2025-12-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/hightorque_getting_started/
 ---
 
 import Tabs from '@theme/Tabs';

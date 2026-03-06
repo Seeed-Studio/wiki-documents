@@ -6,6 +6,9 @@ slug: /local_chatbot_recomputer_bk
 last_update:
   date: 01/29/2025
   author: kourosh
+createdAt: '2025-10-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/local_chatbot_recomputer_bk/
 ---
 
 # Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS

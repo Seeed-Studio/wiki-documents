@@ -2,12 +2,15 @@
 description: MicroPython for Arduino-supported Boards
 title: MicroPython for Arduino-supported Boards
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Compiling_MicroPython_for_embedded_devices
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Compiling_MicroPython_for_embedded_devices/
 ---
 
 

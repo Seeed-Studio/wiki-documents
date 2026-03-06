@@ -2,15 +2,19 @@
 description: Este wiki proporciona tutoriales de ensamblaje y puesta en marcha para el Robot Bípedo con Ruedas Mini StackForce, así como materiales de aprendizaje y enlaces necesarios para su desarrollo.
 title: Robot Bípedo con Ruedas Mini StackForce
 keywords:
-- StackForce
-- Robótica
+  - StackForce
+  - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
 slug: /stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-12-10'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/
 ---
 
 # Introducción al Robot Bípedo de Dos Ruedas Basado en la Plataforma de Desarrollo StackForce

@@ -2,12 +2,15 @@
 description: Grove Arduino 初学者套件 Upverter 指南
 title: Grove Arduino 初学者套件 Upverter 指南
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Beginner-Kit-for-Arduino-Upverter-Guide
 last_update:
   date: 2/14/2023
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/
 ---
 ## 制作您的定制 Arduino 板，价格低于 50 美元
 

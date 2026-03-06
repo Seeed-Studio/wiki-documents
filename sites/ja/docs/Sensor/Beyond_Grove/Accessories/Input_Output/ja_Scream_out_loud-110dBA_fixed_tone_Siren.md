@@ -1,6 +1,6 @@
 ---
 title: 大声で叫ぶ - 110dBA固定音サイレン
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウラス
@@ -9,6 +9,9 @@ slug: /Scream_out_loud-110dBA_fixed_tone_Siren
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Scream_out_loud-110dBA_fixed_tone_Siren/
 ---
 
 

@@ -1,14 +1,17 @@
 ---
-description:  SenseCAP ONE コンパクト気象ステーション紹介
-title:  SenseCAP ONE コンパクト気象ステーション紹介
+description: SenseCAP ONE コンパクト気象ステーション紹介
+title: SenseCAP ONE コンパクト気象ステーション紹介
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP-ONE-Compact-Weather-Station-Introduction
 sku: 101990787, 101990693, 101990784, 101990902, 101991022, 101991021, 101991023, 101991024, 101991044, 101990961, 101991102, 101991050, 101991232, 101991141
 last_update:
   date: 12/11/2025
   author: Michelle Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP-ONE-Compact-Weather-Station-Introduction/
 ---
 # SenseCAP ONE シリーズ コンパクト気象ステーション
 

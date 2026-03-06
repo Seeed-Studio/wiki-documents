@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao/
 ---
 
 # SenseCraft AIでXIAO ESP32S3 SenseをAIセンサーとして使用する

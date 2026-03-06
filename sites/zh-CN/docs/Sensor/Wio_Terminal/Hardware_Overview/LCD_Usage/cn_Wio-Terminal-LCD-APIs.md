@@ -1,6 +1,6 @@
 ---
 title: LCD API 示例
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LCD-APIs
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-LCD-APIs/
 ---
 # TFT LCD API 示例
 

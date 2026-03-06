@@ -3,13 +3,16 @@ description: reTerminal と Pi カメラモジュールの統合
 title: reTerminal と Pi カメラモジュール
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-piCam
 last_update:
   date: 5/17/2023
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal-piCam/
 ---
 # reTerminal と Pi カメラモジュール
 

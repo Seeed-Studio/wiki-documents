@@ -1,6 +1,6 @@
 ---
 title: バッテリーキット 3.7V 520mAh
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Battery_kit_3.7V_520_mAh
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Battery_kit_3.7V_520_mAh/
 ---
 
 

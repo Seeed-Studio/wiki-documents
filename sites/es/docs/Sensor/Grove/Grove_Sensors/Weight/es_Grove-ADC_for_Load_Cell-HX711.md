@@ -2,14 +2,17 @@
 description: El Grove - ADC for Load Cell (HX711) es un convertidor A/D de 24 bits diseñado específicamente para la celda de carga.
 title: Primeros pasos Grove - ADC for Load Cell (HX711)
 keywords:
-- Grove
-- weight sensor 
+  - Grove
+  - weight sensor
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_adc_for_load_cell_hx711
 sku: 101020712
 last_update:
   date: 05/28/2024
   author: Carla
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_adc_for_load_cell_hx711/
 ---
 
 # Grove - ADC for Load Cell (HX711)

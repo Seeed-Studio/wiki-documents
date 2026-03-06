@@ -2,13 +2,16 @@
 description: Kit de Breakout ESP32
 title: Kit de Breakout ESP32
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ESP32_Breakout_Kit
 sku: 110060576
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ESP32_Breakout_Kit/
 ---
 
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/cover.jpg) -->

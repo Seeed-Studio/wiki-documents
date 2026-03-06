@@ -2,12 +2,15 @@
 description: Eclipse IDE 用于 RePhone Kit
 title: Eclipse IDE 用于 RePhone Kit
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Eclipse_IDE_for_RePhone_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Eclipse_IDE_for_RePhone_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Eclipse_IDE_for_RePhone_Kit/img/Xadow_GSMPlusBLE_pingguo.JPG)

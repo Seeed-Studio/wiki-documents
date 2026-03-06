@@ -28,7 +28,8 @@
     "typecheck": "tsc",
     "generatewiki": "node scripts/generateWiki.js",
     "generate-lang-map": "node scripts/generate-language-map.js",
-    "generate-jetson-config": "node scripts/generate-jetson-config.js"
+    "generate-jetson-config": "node scripts/generate-jetson-config.js",
+    "normalize-frontmatter": "node scripts/normalize-frontmatter.js"
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
@@ -73,8 +74,11 @@
     "baseline-browser-mapping": "^2.9.14",
     "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
+    "fast-glob": "^3.3.3",
     "gh-pages": "^6.3.0",
     "glob": "^11.0.2",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.1",
     "typescript": "^4.7.4"
   },
   "browserslist": {

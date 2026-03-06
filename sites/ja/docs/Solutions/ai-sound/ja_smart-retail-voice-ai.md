@@ -1,5 +1,5 @@
 ---
-description: "スマートリテール音声AIサービス。会話を捕捉し、デバイス上で音声テキスト変換を実行し、顧客の声を洞察に変換します。"
+description: スマートリテール音声AIサービス。会話を捕捉し、デバイス上で音声テキスト変換を実行し、顧客の声を洞察に変換します。
 title: スマートリテール音声AI
 keywords:
   - Smart Retail
@@ -20,6 +20,9 @@ last_update:
   author: Spencer
 tags:
   - smart-retail
+createdAt: '2025-12-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/solutions/smart-retail-voice-ai-solution-1/
 ---
 
 Seeedのスマートリテール音声AIソリューションを活用して、店舗内の顧客会話を捕捉・分析しましょう。当社のエッジAI技術により、デバイス上での音声テキスト変換処理が可能になり、クラウドサービスに依存することなく音声データを実用的な洞察に変換できます。小売環境に特化したオフラインAI搭載音声分析により、顧客体験を向上させ、店舗運営を最適化し、貴重なフィードバックを獲得できます。

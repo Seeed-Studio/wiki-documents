@@ -1,6 +1,6 @@
 ---
 title: Módulo Wio RP2040
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991556
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio_RP2040_Module_Build-in_Wireless_2.4G/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Wio_RP2040_Module-Build-in_Wireless_2.4G/module_1.jpg)

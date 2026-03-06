@@ -2,13 +2,16 @@
 description: Grove - Matriz LED Roja con Controlador
 title: Grove - Matriz LED Roja con Controlador
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Red_LED_Matrix_w_Driver
 sku: 104020089
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Red_LED_Matrix_w_Driver/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg" alt="pir" width={600} height="auto" /></p>

@@ -12,6 +12,9 @@ sku: 113991274,E24010521
 last_update:
   date: 10/8/2024
   author: ShuishengPeng
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_modbus_rtu_and_tcp/
 ---
 
 ## はじめに

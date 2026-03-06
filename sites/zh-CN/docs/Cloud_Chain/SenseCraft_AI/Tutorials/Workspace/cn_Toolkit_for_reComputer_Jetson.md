@@ -3,16 +3,19 @@ sidebar_position: 12
 description: SenseCraft AI Jetson
 title: reComputer Jetson 工具包
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-ai/tutorials/sensecraft-ai-jetson
 aliases:
   - /sensecraft_ai_jetson
 last_update:
   date: 08/16/2024
   author: Frank
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
 SenseCraft AI-Jetson 是专为 NVIDIA Jetson 边缘 AI 设备设计的开发工具包和平台。只需运行"快速启动脚本"，您就会看到一个交互式用户界面，可以查看带有预加载视频和预加载 AI 模型的示例应用程序。如果您想添加自己的 USB 摄像头、IP 摄像头，只需点击几下即可完成！

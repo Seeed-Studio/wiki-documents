@@ -2,12 +2,15 @@
 description: Seeeduino購入ガイド
 title: Seeeduino購入ガイド
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Buying_Guide
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeeduino_Buying_Guide/
 ---
 
 

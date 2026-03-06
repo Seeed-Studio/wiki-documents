@@ -10,7 +10,10 @@ slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-06-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/
 ---
 
 # 在reComputer R1000上使用Hailo-8L进行YOLOv8姿态估计

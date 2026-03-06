@@ -2,13 +2,16 @@
 description: Grove - Receptor FM
 title: Grove - Receptor FM
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-FM_Receiver
 sku: 107020005
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-FM_Receiver/
 ---
 <!-- ---
 name: Grove - Receptor FM

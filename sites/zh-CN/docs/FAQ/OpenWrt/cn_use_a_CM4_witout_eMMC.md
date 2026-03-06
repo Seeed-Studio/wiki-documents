@@ -6,6 +6,9 @@ slug: /use_a_CM4_witout_eMMC
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/use_a_CM4_witout_eMMC/
 ---
 
 <!-- Q2: 如果我有非CM4版本的双千兆以太网载板，并连接了一个无eMMC的CM4，该怎么办？ -->

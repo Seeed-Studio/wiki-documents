@@ -2,13 +2,16 @@
 description: Raspberry Pi/reComputerにリモート接続する方法
 title: Raspberry Piにリモート接続する
 keywords:
-- Raspberry_Pi
-- Official_Raspberry_Pi_Board
+  - Raspberry_Pi
+  - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /remote_connect
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/remote_connect/
 ---
 
 

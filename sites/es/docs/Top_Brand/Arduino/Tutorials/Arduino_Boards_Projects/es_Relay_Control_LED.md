@@ -2,13 +2,16 @@
 description: Control de LED con Relé
 title: Control de LED con Relé
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Control_LED
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Relay_Control_LED/
 ---
 
 <!-- ---

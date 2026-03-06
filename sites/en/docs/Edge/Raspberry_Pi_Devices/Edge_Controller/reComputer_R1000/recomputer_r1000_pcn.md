@@ -3,7 +3,7 @@ description: reComputer R1000 V1.1 Product Change Description
 title: reComputer R1000 V1.1 Product change details
 keywords:
   - Edge
-  - reComputer R1000 
+  - reComputer R1000
   - Modbus RTU
   - rs485
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
@@ -11,6 +11,9 @@ slug: /recomputer_r1000_v1_1_description
 last_update:
   date: 10/16/2024
   author: ShuishengPeng
+createdAt: '2024-10-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_v1_1_description/
 ---
 
 ## Introduction

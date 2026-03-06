@@ -2,14 +2,17 @@
 description: 如何在 Jetson 上使用 Langchain 格式化 LLM 的输出
 title: 使用 Langchain 格式化输出
 keywords:
-- reComputer
-- LLM
-- Langchain
+  - reComputer
+  - LLM
+  - Langchain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson
 last_update:
   date: 4/1/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/
 ---
 
 

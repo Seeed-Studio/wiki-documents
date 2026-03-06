@@ -2,12 +2,15 @@
 description: Wio Terminal 指南
 title: Wio Terminal 指南
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio_Terminal_Intro
 last_update:
   date: 08/6/2024
   author: Frank
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_Terminal_Intro/
 ---
 
 ## 介绍

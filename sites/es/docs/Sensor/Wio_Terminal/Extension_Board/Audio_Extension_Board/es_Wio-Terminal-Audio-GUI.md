@@ -2,12 +2,15 @@
 description: Herramienta de Diseño de Sistemas de Audio
 title: Herramienta de Diseño de Sistemas de Audio
 keywords:
-- Wio_terminal Audio
+  - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Audio-GUI
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Audio-GUI/
 ---
 
 # Herramienta de Diseño de Sistemas de Audio

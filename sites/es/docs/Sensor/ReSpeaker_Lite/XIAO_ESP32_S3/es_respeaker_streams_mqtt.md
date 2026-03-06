@@ -2,14 +2,17 @@
 description: Transmisión de Audio por MQTT
 title: Transmisión de Audio por MQTT
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_steams_mqtt
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_steams_mqtt/
 ---
 
 Este proyecto demuestra cómo usar la placa reSpeaker Lite, que incluye un microcontrolador XIAO ESP32S3 integrado, para generar y enviar datos de audio a un broker MQTT.

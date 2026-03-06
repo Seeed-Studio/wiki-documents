@@ -2,12 +2,15 @@
 description: Arduino Introduction
 title: Arduino Introduction
 keywords:
-- Arduino
+  - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino
 last_update:
   date: 7/19/2023
   author: Matthew
+createdAt: '2023-02-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Arduino/
 ---
 <!-- ---
 name: Arduino Introduction

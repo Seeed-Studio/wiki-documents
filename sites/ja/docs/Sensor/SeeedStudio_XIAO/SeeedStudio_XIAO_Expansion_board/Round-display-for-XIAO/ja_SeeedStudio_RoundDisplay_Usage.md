@@ -2,13 +2,16 @@
 description: このチュートリアルでは、円形スクリーンの拡張ボード機能の使用方法を紹介します。
 title: ハードウェアの使用方法
 keywords:
-- Round display
-- XIAO
+  - Round display
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /seeedstudio_round_display_usage
 last_update:
   date: 04/27/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/seeedstudio_round_display_usage/
 ---
 
 # Seeed Studio Round Display拡張機能の使用方法

@@ -2,14 +2,17 @@
 description: YOLOv8 从训练到部署
 title: YOLOv8 姿态估计模型的训练和部署
 keywords:
-- YOLOv8
-- we2 
-- pose detection
+  - YOLOv8
+  - we2
+  - pose detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov8_pose
 last_update:
   date: 04/02/2024
   author: Jack Mu
+createdAt: '2024-04-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ma_deploy_yolov8_pose/
 ---
 
 # YOLOv8 姿态估计模型部署

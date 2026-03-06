@@ -2,13 +2,16 @@
 description: Grove - OLED イエロー＆ブルーディスプレイ 0.96(SSD1315) - SPI/IIC -3.3V/5V
 title: Grove - OLED イエロー＆ブルーディスプレイ 0.96(SSD1315) - SPI/IIC -3.3V/5V
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0
 sku: 104020249
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0/
 ---
 
 

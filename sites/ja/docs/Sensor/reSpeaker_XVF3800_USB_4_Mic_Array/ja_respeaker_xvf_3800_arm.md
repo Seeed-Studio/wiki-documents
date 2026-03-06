@@ -2,14 +2,17 @@
 description: reSpeaker + HorizonArm-Mark で音声制御スマートロボットアームを構築
 title: reSpeaker + HorizonArm-Mark による音声制御スマートロボットアームの展開
 keywords:
-- reSpeaker_XVF3800_USB_4_Mic_Array
-- reSpeaker
+  - reSpeaker_XVF3800_USB_4_Mic_Array
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /respeaker_xvf_3800_arm
 sku: 114993702,114993700
 last_update:
   date: 2/6/2026
   author: Mingxi
+createdAt: '2026-02-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf_3800_arm/
 ---
 
 

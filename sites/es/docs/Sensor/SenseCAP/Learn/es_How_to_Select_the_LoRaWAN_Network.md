@@ -2,12 +2,15 @@
 description: Qué Red LoRaWAN Debo Seleccionar
 title: Qué Red LoRaWAN Debo Seleccionar
 keywords:
-- LoRaWAN
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /select_lorawan_network
 last_update:
   date: 1/9/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/select_lorawan_network/
 ---
 
 

@@ -6,6 +6,9 @@ slug: /ODYSSEY_Getting_Started
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ODYSSEY_Getting_Started/
 ---
 
 Por favor, consulta la versión más reciente: https://wiki.seeedstudio.com/es/ODYSSEY-X86J4105/

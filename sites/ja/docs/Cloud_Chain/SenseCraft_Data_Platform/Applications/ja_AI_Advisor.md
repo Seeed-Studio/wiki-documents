@@ -24,6 +24,9 @@ tags:
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-data-platform/applications/ai-advisor/
 ---
 
 # WebとSenseCraft APPでAI Advisorを使用する方法

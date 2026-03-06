@@ -2,13 +2,16 @@
 description: 本wiki提供了如何在reComputer Jetson上运行VLM的教程。
 title: 如何在reComputer上运行VLM
 keywords:
-- reComputer
-- VLM
+  - reComputer
+  - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /run_vlm_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/run_vlm_on_recomputer/
 ---
 
 # 如何在reComputer上使用Jetson Platform Services运行VLM

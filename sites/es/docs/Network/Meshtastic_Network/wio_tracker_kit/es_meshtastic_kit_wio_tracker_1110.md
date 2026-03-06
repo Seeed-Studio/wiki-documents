@@ -1,15 +1,18 @@
 ---
-description: Comience con el Kit de Desarrollo Wio Tracker para Meshtastic® 
-title:  Primeros Pasos con el Kit Meshtastic®
+description: Comience con el Kit de Desarrollo Wio Tracker para Meshtastic®
+title: Primeros Pasos con el Kit Meshtastic®
 keywords:
-- Meshtastic
-- Tracker
+  - Meshtastic
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_kit_wio_tracker_1110
 sku: E24070201,114993370
 last_update:
   date: 6/17/2024
   author: Jessie
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/meshtastic_kit_wio_tracker_1110/
 ---
 
 ## Introducción

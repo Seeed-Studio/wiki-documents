@@ -2,13 +2,16 @@
 description: DALL·E AI画像生成器
 title: DALL·E AI画像生成器
 keywords:
-- Get Started with SenseCAP Indicator
+  - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_DALL-E
 sidebar_position: 3
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_DALL-E/
 ---
 # **SenseCAP Indicator X DALL·E**
 

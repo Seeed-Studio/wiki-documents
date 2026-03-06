@@ -2,13 +2,16 @@
 description: Grove - 6軸加速度計＆コンパス V2.0
 title: Grove - 6軸加速度計＆コンパス V2.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-6-Axis_AccelerometerAndCompass_V2.0
 sku: 101020081
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-6-Axis_AccelerometerAndCompass_V2.0/
 ---
 
 

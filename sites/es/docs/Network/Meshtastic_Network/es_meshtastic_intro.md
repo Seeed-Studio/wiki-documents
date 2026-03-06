@@ -1,14 +1,17 @@
 ---
 description: Introducción a la Red Meshtastic®
-title:  Introducción a la Red Meshtastic®
+title: Introducción a la Red Meshtastic®
 keywords:
-- Meshtastic
+  - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_introduction
 sidebar_position: 1
 last_update:
   date: 12/11/2025
   author: Michelle
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/meshtastic_introduction/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Covers the device's construction and operation, detailing how each component contributes to the SenseCAP Indicator's overall functionality.
 title: Dive into the Hardware
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 sidebar_position: 1
 last_update:
   date: 11/17/2023
   author: Spencer
+createdAt: '2023-05-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/
 ---
 # **Overview**
 

@@ -2,7 +2,7 @@
 description: Introducción al Módulo Gateway LoRaWAN® WM1302.
 title: Módulo Gateway LoRaWAN® WM1302
 keywords:
-  - wio 
+  - wio
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /WM1302_module
@@ -10,6 +10,9 @@ sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969
 last_update:
   date: 12/15/2025
   author: David Du
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/WM1302_module/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->

@@ -2,18 +2,22 @@
 description: Guía de Desarrollo Profesional del Robot Bípedo con Ruedas Gigante StackForce, incluyendo características avanzadas, tutoriales de desarrollo en profundidad, documentación de API y casos de aplicación práctica
 title: Robot Bípedo con Ruedas Gigante StackForce
 keywords:
-- StackForce
-- Robot con Patas y Ruedas
-- Desarrollo Profesional
-- Robótica Avanzada
-- Inteligencia Artificial
-- Navegación Autónoma
+  - StackForce
+  - Robot con Patas y Ruedas
+  - Desarrollo Profesional
+  - Robótica Avanzada
+  - Inteligencia Artificial
+  - Navegación Autónoma
 slug: /stackforce_giant_bipedal_wheeled_robot
 last_update:
   date: 12/12/2025
   author: TienjuiWong
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-12-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/stackforce_giant_bipedal_wheeled_robot/
 ---
 
 # Guía de Desarrollo del Robot Bípedo con Ruedas Gigante StackForce

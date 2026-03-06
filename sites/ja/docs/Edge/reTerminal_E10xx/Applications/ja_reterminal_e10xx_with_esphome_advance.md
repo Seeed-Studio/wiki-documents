@@ -7,6 +7,9 @@ sidebar_position: 3
 last_update:
   date: 07/24/2025
   author: Citric
+createdAt: '2025-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced/
 ---
 
 

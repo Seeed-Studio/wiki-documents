@@ -11,6 +11,9 @@ slug: /reComputer_r1000_fuxa_opc_ua
 last_update:
   date: 10/8/2024
   author: ShuishengPeng
+createdAt: '2024-07-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/
 ---
 
 ## Introduction 

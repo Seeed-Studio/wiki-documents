@@ -14,6 +14,9 @@ sidebar_position: 5
 last_update:
   author: Hugo
   date: 04/01/2025
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/2_channel_wifi_ac_energy_meter/
 ---
 
 import Tabs from '@theme/Tabs';

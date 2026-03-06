@@ -6,6 +6,9 @@ slug: /use_a_CM4_witout_eMMC
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/use_a_CM4_witout_eMMC/
 ---
 
 <!-- Q2: ¿Qué pasa si tengo la Placa Portadora Dual Gigabit Ethernet versión sin CM4 y conecto un CM4 sin emmC? -->

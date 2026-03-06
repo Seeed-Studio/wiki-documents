@@ -2,12 +2,15 @@
 description: 本页面是所有TinyML内容的合集。
 title: TinyML
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_topic
 last_update:
   date: 05/28/2024
   author: Yaohao
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/tinyml_topic/
 ---
 
 # 微型机器学习(TinyML)

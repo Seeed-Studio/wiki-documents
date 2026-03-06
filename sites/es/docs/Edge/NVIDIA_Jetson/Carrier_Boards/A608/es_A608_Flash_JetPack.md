@@ -10,6 +10,9 @@ sku: 105110001
 last_update:
   date: 12/4/2024
   author: Youjiang
+createdAt: '2024-01-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reComputer_A608_Flash_System/
 ---
 
 # Flashear SO JetPack a la Placa Portadora A608 (Compatible con NVIDIA Jetson Orin NX/Nano)

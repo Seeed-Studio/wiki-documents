@@ -1,6 +1,6 @@
 ---
-description:  Object detection with Edge Impulse and reTerminal
-title:  Object detection with Edge Impulse and reTerminal
+description: Object detection with Edge Impulse and reTerminal
+title: Object detection with Edge Impulse and reTerminal
 keywords:
   - Edge
   - reTerminal Application
@@ -10,6 +10,9 @@ slug: /reTerminal_ML_Edgeimpulse
 last_update:
   date: 9/12/2023
   author: Kasun Thushara
+createdAt: '2023-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal_ML_Edgeimpulse/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/ML/edgeimpulse.gif" alt="pir" width="800" height="auto"/></p>
 

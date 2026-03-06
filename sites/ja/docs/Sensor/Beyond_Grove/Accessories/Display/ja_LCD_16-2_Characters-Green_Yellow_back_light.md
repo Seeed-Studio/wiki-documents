@@ -1,6 +1,6 @@
 ---
 title: LCD_16-2_Characters-Green_Yellow_back_light
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /LCD_16-2_Characters-Green_Yellow_back_light
 last_update:
   date: 05/15/2025
   author: matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/LCD_16-2_Characters-Green_Yellow_back_light/
 ---
 
 

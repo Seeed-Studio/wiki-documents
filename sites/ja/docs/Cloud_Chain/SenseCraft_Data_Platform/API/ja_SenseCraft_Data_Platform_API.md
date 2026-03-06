@@ -3,7 +3,7 @@ sidebar_position: 1
 description: SenseCAP API Introduction
 title: SenseCraft Data Platform API Introduction
 keywords:
-- Cloud and Chain
+  - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api/
 ---
 
 # SenseCraft データプラットフォーム API 概要

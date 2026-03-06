@@ -5,6 +5,9 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Program_loss_by_repeated_power/
 ---
 
 如果您遇到 **Wio Terminal 在多次重启后无法正常启动** 的情况，请参考以下 Wiki 提供的解决方案：

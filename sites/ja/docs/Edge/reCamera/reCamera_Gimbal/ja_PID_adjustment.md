@@ -13,6 +13,9 @@ sidebar_position: 5
 last_update:
   date: 04/08/2025
   author: Dawn Yao
+createdAt: '2025-04-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recamera_pid_adjustment/
 ---
 
 # reCamera Gimbal PID 設定

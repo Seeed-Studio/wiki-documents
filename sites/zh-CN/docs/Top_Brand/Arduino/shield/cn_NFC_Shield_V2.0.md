@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /NFC_Shield_V2.0
 sku: 113030001
 last_update:
-  date: 01/30/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/30/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/NFC_Shield_V2.0/
 ---
 
 <table align="center">

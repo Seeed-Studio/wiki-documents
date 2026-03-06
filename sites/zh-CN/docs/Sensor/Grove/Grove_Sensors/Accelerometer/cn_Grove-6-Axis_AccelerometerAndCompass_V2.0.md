@@ -2,13 +2,16 @@
 description: Grove - 6轴加速度计和电子罗盘 V2.0
 title: Grove - 6轴加速度计和电子罗盘 V2.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-6-Axis_AccelerometerAndCompass_V2.0
 sku: 101020081
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-6-Axis_AccelerometerAndCompass_V2.0/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Accelerometer_And_Compass_v2.JPG) -->

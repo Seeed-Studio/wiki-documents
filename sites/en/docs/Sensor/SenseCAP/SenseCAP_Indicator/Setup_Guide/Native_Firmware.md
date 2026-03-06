@@ -2,13 +2,16 @@
 description: Get Started with SenseCAP Indicator Native Firmware
 title: Native Firmware
 keywords:
-- SenseCAP Indicator
+  - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Native_Firmware
 sidebar_position: 1
 last_update:
   date: 11/16/2023
   author: Spencer
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Indicator_Native_Firmware/
 ---
 
 # **Native Firmware**

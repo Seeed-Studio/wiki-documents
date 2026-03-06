@@ -2,14 +2,17 @@
 description: Reproductor de Tema de Star Wars con XIAO ESP32S3
 title: Reproductor de Tema de Star Wars
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_memory
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_streams_memory/
 ---
 
 Este proyecto demuestra cómo reproducir la canción del tema de Star Wars usando la placa reSpeaker Lite.

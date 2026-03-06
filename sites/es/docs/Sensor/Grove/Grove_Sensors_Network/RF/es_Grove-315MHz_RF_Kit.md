@@ -1,6 +1,6 @@
 ---
 title: Grove - Kit RF de 315MHz
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113020001
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-315MHz_RF_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-315MHz_RF_Kit/img/315MHz-Simple-RF-Link-Kit.jpg)

@@ -2,12 +2,15 @@
 description: SenseCAP プローブ紹介
 title: SenseCAP プローブ
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_probes_intro
 last_update:
   date: 02/28/204
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_probes_intro/
 ---
 
 アプリケーションにより多くの利便性をもたらすため、土壌水分、温度、土壌電気伝導度、pH レベルを検出する RS485 センサープローブも提供しています。今後、さらに多くの RS485 センサーが登場予定です。

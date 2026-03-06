@@ -2,12 +2,15 @@
 description: Rainbowduino_v3.0
 title: Rainbowduino v3.0
 keywords:
-- Rainbowduino_v3.0
+  - Rainbowduino_v3.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino_v3.0
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Rainbowduino_v3.0/
 ---
 
 

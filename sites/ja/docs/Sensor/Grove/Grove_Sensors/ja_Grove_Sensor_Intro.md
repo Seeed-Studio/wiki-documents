@@ -2,12 +2,15 @@
 description: Grove エントリーレベルセンサーガイド
 title: Grove エントリーレベルセンサーガイド
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Sensor_Intro
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Sensor_Intro/
 ---
 
 

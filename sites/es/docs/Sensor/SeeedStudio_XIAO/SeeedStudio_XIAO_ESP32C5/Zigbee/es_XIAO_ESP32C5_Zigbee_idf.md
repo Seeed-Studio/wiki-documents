@@ -1,6 +1,6 @@
 ---
 title: Guía de Inicio Rápido de Zigbee para Seeed Studio XIAO ESP32C5 (ESP-IDF)
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -12,6 +12,9 @@ sku: 100010048
 last_update:
   date: 1/9/2026
   author: Zeller
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32c5_zigbee_idf/
 ---
 
 import Tabs from '@theme/Tabs';

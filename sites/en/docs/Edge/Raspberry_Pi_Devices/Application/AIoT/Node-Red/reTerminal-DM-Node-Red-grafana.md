@@ -12,6 +12,9 @@ slug: /reterminal_dm_grafana
 last_update:
   date: 6/27/2024
   author: Kasun Thushara
+createdAt: '2024-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reterminal_dm_grafana/
 ---
 ## Introduction
 

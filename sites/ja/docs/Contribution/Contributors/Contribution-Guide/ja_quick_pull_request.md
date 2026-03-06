@@ -2,13 +2,16 @@
 description: クイックで簡潔な手順
 title: クイックプルリクエスト
 keywords:
-- コミュニティ
-- プロジェクト
+  - コミュニティ
+  - プロジェクト
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /quick_pull_request
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/quick_pull_request/
 ---
 
 

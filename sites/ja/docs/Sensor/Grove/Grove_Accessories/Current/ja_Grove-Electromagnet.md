@@ -2,13 +2,16 @@
 description: Grove - 電磁石
 title: Grove - 電磁石
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Electromagnet
 sku: 101020073
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Electromagnet/
 ---
 
 

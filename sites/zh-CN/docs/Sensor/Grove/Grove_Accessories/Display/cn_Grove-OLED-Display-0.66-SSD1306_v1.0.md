@@ -2,13 +2,16 @@
 description: Grove - OLED 显示屏 0.66" (SSD1306)
 title: Grove - OLED 显示屏 0.66" (SSD1306)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Display-0.66-SSD1306_v1.0
 sku: 104020248
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-OLED-Display-0.66-SSD1306_v1.0/
 ---
 
 <meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" />

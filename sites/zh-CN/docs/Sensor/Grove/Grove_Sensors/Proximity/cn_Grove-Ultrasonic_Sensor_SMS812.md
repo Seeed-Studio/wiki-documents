@@ -2,14 +2,17 @@
 description: 开始使用 Grove 超声波传感器 (SMS812)
 title: Grove 超声波传感器 (SMS812)
 keywords:
-- ultrasonic
-- sms812
+  - ultrasonic
+  - sms812
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_ultrasonic_sensor_sms812
 sku: 101021097
 last_update:
   date: 08/16/2023
   author: ZouXiong.Xiao
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_ultrasonic_sensor_sms812/
 ---
 
 # Grove 超声波传感器 (SMS812)

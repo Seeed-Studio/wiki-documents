@@ -2,14 +2,17 @@
 description: Edge Controller 入门指南
 title: Edge Box RPI-200 入门指南
 keywords:
-- Raspberry pi
-- Edge Controller
+  - Raspberry pi
+  - Edge Controller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Box_introduction
 sku: 114110227
 last_update:
   date: 2/29/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Edge_Box_introduction/
 ---
 
 ## 介绍

@@ -2,13 +2,16 @@
 description: Caja esqueleto para BeagleBone®
 title: Caja esqueleto para BeagleBone®
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_box_for_Beaglebone
 sku: 111070001
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Skeleton_box_for_Beaglebone/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_01.bmp)

@@ -2,12 +2,15 @@
 description: メーカー向け人工知能の入門
 title: メーカー向け人工知能の入門
 keywords:
-- Wio_terminal Kit_with_Courses
+  - Wio_terminal Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Introduction_to_Artificial_Intelligence_for_Makers
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Introduction_to_Artificial_Intelligence_for_Makers/
 ---
 
 

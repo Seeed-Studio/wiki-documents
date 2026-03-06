@@ -2,12 +2,15 @@
 description: List the possible causes of timeout issues during the Jetson flashing process.
 title: Timeout Issue during Flash Jetpack
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /usb_timeout_during_flash
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-01-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/usb_timeout_during_flash/
 ---
 
 <div align="center">

@@ -2,9 +2,9 @@
 description: APP Settings
 title: Settings
 keywords:
-- Cloud and Chain
-- SenseCraft
-- Blockchain
+  - Cloud and Chain
+  - SenseCraft
+  - Blockchain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/app-settings
 aliases:
@@ -12,6 +12,9 @@ aliases:
 last_update:
   date: 06/06/2025
   author: Matthew
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-blockchain/sensecraft-hotspot-app/app-settings/
 ---
 
 # APP Settings

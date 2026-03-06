@@ -2,13 +2,16 @@
 description: WatcherとNode-REDからOpen Interpreterにメッセージを送信する
 title: Watcher & Node-RED to Open Interpreter
 keywords:
-- watcher
-- Open Interpreter
+  - watcher
+  - Open Interpreter
 image: https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/banner.png
 slug: /watcher_node_red_to_open_interpreter
 last_update:
   date: 08/19/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_open_interpreter/
 ---
 
 # Watcher To Open Interpreter クイックスタート

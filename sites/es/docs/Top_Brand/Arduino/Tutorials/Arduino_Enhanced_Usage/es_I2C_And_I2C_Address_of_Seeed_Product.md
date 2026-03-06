@@ -2,12 +2,15 @@
 description: I2C y Dirección I2C de Productos Seeed
 title: I2C y Dirección I2C de Productos Seeed
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /I2C_And_I2C_Address_of_Seeed_Product
 last_update:
   date: 1/16/2023
   author: hushuxu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/I2C_And_I2C_Address_of_Seeed_Product/
 ---
 ## Qué es I2C
 <!-- ![](https://files.seeedstudio.com/wiki/I2C_And_I2C_Address_of_Seeed_Product/img//I2c_time.jpg) -->

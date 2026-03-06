@@ -2,15 +2,18 @@
 description: 本 wiki 提供 RobStride 电机控制完整指南
 title: RobStride 电机控制完整指南
 keywords:
-- actuator
-- motor
-- arm
-- robotics
-image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
+  - actuator
+  - motor
+  - arm
+  - robotics
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
+createdAt: '2025-11-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/robstride_control/
 ---
 
 # RobStride 控制库 - 完整技术文档

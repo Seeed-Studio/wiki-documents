@@ -2,14 +2,17 @@
 description: Este artículo demuestra cómo implementar la plataforma de IA GR00T de NVIDIA para el control avanzado de brazos robóticos utilizando hardware StarAI, cubriendo el flujo de trabajo completo desde la configuración del entorno hasta el ajuste fino del modelo y el despliegue.
 title: Control de Brazo Robótico 6/7 DOF usando NVIDIA Isaac GR00T N1.5
 keywords:
-- NVIDIA Jetson
-- Isaac GR00T
-- Robotic Arm
+  - NVIDIA Jetson
+  - Isaac GR00T
+  - Robotic Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.webp
 slug: /control_robotic_arm_via_gr00t
 last_update:
   date: 6/16/2025
   author: Youjiang
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/control_robotic_arm_via_gr00t/
 ---
 
 ## Introducción

@@ -2,15 +2,18 @@
 description: 与 Home Assistant 和 SenseCAP 传感器共舞
 title: 与 Home Assistant 和 SenseCAP 传感器共舞
 keywords:
-- LoRaWAN
-- Sensor
-- Home Assistant
-- SenseCAP
+  - LoRaWAN
+  - Sensor
+  - Home Assistant
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /home_assistant_with_sensecap_lorawan_sensors
 last_update:
   date: 9/14/2023
   author: Jessie
+createdAt: '2023-09-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/home_assistant_with_sensecap_lorawan_sensors/
 ---
 
 分享一种将 LoRaWAN® 传感器集成到 Home Assistant 的方法。

@@ -1,14 +1,17 @@
 ---
 title: Grove Serial Bluetooth
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
-image:  https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Grove-Serial_Bluetooth
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Serial_Bluetooth/
 ---
 
 

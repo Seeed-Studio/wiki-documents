@@ -2,12 +2,15 @@
 description: 使用 Wio terminal 的压力传感器
 title: 使用 Wio terminal 的压力传感器
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Barometric-Pressure-sensor-using-the-Wio-terminal
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Barometric-Pressure-sensor-using-the-Wio-terminal/
 ---
 
 # 使用 Wio terminal 的高精度气压传感器

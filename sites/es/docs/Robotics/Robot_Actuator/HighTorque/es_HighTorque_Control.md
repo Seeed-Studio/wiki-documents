@@ -2,15 +2,18 @@
 description: Esta wiki proporciona una Guía Completa de Control de Motores de Alto Torque
 title: Guía Completa de Control de Motores de Alto Torque
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
 slug: /hightorque_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
+createdAt: '2025-11-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/hightorque_control/
 ---
 
 # Guía Completa de Control de Motores de Alto Torque

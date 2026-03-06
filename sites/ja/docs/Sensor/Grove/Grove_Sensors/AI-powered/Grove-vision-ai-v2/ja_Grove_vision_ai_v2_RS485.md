@@ -2,13 +2,16 @@
 description: Vision AI V2からRS485経由で認識データを転送する方法のガイド
 title: Vision AI V2データのRS485伝送
 keywords:
-- RS485
-- Vision AI
+  - RS485
+  - Vision AI
 image: https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.webp
 slug: /grove_vision_ai_v2_rs485
 last_update:
   date: 12/19/2024
   author: Jason
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_rs485/
 ---
 
 

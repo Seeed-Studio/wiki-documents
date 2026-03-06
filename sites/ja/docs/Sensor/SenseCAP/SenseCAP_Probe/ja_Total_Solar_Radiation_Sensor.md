@@ -2,12 +2,15 @@
 description: 全天日射センサー
 title: 全天日射センサー
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/Total_Solar_Radiation_Sensor/image1.webp
 slug: /total_solar_radiation_sensor
 last_update:
   date: 4/23/2025
   author: Leo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/total_solar_radiation_sensor/
 ---
 
 # 全天日射センサー

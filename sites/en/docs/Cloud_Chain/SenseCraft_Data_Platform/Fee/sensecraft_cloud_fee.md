@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 description: SenseCraft Cloud Fee
-title:  SenseCraft Cloud Fee
+title: SenseCraft Cloud Fee
 keywords:
-- SenseCraft
+  - SenseCraft
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-fee/sensecraft-cloud-fee
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 8/16/2024
   author: Jessie
+createdAt: '2024-08-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-fee/sensecraft-cloud-fee/
 ---
 
 

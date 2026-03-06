@@ -1,14 +1,17 @@
 ---
-description: ... 
+description: ...
 title: イメージベースのOTA（Over-the-Air）アップデートによるJetson Linuxの更新
 keywords:
-- reComputer
-- OTA
+  - reComputer
+  - OTA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /updating_jetpack_with_ota
 last_update:
   date: 3/19/2025
   author: Youjiang
+createdAt: '2025-03-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/updating_jetpack_with_ota/
 ---
 
 このwikiでは、[reComputer J3010](https://www.seeedstudio.com/reComputer-J3010-p-5589.html)を例として、イメージベースのOTA（Over-the-Air）アップデートを使用してJetson LinuxをJetPack5.1.3からJetPack6.0に更新する方法を説明します。

@@ -2,13 +2,16 @@
 description: Train and Deploy Your Own AI Model with Roboflow, YOLOv5, TensorFlow Lite
 title: Train and Deploy Your Own AI Model with Roboflow, YOLOv5, TensorFlow Lite
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 sku: 114992866
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Train-Deploy-AI-Model-Grove-Vision-AI/
 ---
 # Train and Deploy Your Own AI Model Into Grove - Vision AI
 

@@ -2,14 +2,17 @@
 description: 本文介绍如何使用 NVIDIA 的 GR00T AI 平台结合 StarAI 硬件实现高级机械臂控制，涵盖从环境搭建到模型微调与部署的完整工作流。
 title: 使用 NVIDIA Isaac GR00T N1.5 控制 6/7 自由度机械臂
 keywords:
-- NVIDIA Jetson
-- Isaac GR00T
-- Robotic Arm
+  - NVIDIA Jetson
+  - Isaac GR00T
+  - Robotic Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.webp
 slug: /control_robotic_arm_via_gr00t
 last_update:
   date: 6/16/2025
   author: Youjiang
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/control_robotic_arm_via_gr00t/
 ---
 
 ## 介绍

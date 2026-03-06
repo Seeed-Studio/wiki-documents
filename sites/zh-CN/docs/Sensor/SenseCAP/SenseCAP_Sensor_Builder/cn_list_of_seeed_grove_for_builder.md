@@ -2,12 +2,15 @@
 description: 向构建器中添加更多 Grove 模块
 title: 向构建器中添加更多 Grove 模块
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /list_of_supported_grove_n_adding_more
 last_update:
   date: 11/24/2023
   author: Matthew
+createdAt: '2023-11-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/list_of_supported_grove_n_adding_more/
 ---
 
 # 概述

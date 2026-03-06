@@ -2,13 +2,16 @@
 description: Project Five – Relay Control
 title: Project Five – Relay Control
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Five-Relay_Control
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Project_Five-Relay_Control/
 ---
 <!-- ---
 name: Project Five – Relay Control

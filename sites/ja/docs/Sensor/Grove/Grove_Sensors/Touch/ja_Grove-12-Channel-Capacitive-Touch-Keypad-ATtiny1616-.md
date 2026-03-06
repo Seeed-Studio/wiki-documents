@@ -2,13 +2,16 @@
 description: Grove 12チャンネル静電容量式タッチキーパッド (ATtiny1616)
 title: Grove 12チャンネル静電容量式タッチキーパッド (ATtiny1616)
 keywords:
-- Grove Grove_Sensors Touch
+  - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-
 sku: 101020636
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/
 ---
 
 

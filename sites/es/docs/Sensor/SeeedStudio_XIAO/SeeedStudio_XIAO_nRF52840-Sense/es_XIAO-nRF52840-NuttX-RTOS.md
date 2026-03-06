@@ -2,12 +2,15 @@
 description: XIAO nRF52840(sense) Con NuttX(RTOS)
 title: XIAO nRF52840(sense) Con NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
 slug: /xiao_nrf52840_nuttx
 last_update:
-    date: 02/12/2025
-    author: rcsim
+  date: 02/12/2025
+  author: rcsim
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_nrf52840_nuttx/
 ---
 
 # Seeed Studio XIAO nRF52840 con NuttX(RTOS)

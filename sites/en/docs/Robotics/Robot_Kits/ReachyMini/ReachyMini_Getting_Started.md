@@ -2,22 +2,28 @@
 description: Build and control ReachyMini, a compact, open-source desktop humanoid robot for AI and robotics learning.
 title: ReachyMini Getting Started
 keywords:
-- Lerobot
-- Huggingface
-- ReachyMini
-- Robotics
-- 3D Printing
-- Open Source
-- Humanoid Robot
-- Python
+  - Lerobot
+  - Huggingface
+  - ReachyMini
+  - Robotics
+  - 3D Printing
+  - Open Source
+  - Humanoid Robot
+  - Python
 image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp
 slug: /reachymini_getting_started
-sku:
+sku: null
 translation:
-  skip: [zh-CN,ja,es]
+  skip:
+    - zh-CN
+    - ja
+    - es
 last_update:
   date: 1/7/2026
   author: TienjuiWong
+createdAt: '2026-01-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_getting_started/
 ---
 
 <div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>

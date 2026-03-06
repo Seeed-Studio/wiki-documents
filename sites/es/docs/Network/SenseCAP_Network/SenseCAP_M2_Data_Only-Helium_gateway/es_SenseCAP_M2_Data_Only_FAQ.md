@@ -2,12 +2,15 @@
 description: SenseCAP M2 Data Only FAQ
 title: SenseCAP M2 Data Only FAQ
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_FAQ
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_FAQ/
 ---
 
 FAQ

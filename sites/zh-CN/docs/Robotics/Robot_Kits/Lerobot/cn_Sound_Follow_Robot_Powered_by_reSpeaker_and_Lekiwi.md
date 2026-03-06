@@ -2,18 +2,21 @@
 description: 本wiki提供了一个全面的实现框架，用于为Lekiwi机器人套件配备声音追踪功能，使用ReSpeaker Mic Array v2.0和reComputer Jetson Mini。内容涵盖硬件集成、环境配置和软件适配，并演示实时音频源追踪功能。
 title: Lekiwi声音追踪
 keywords:
-- Lerobot
-- Huggingface
-- Car
-- Robotics
-- reSpeaker
-- Lekiwi
-- reComputer
+  - Lerobot
+  - Huggingface
+  - Car
+  - Robotics
+  - reSpeaker
+  - Lekiwi
+  - reComputer
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /sound_follow_robot
 last_update:
   date: 8/4/2025
   author: LiShanghang
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sound_follow_robot/
 ---
 
 ## 简介

@@ -1,13 +1,16 @@
 ---
 description: Seeeduino V2.21
-title: Seeeduino V2.21 
+title: Seeeduino V2.21
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_v2.21
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_v2.21/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/img/Seeeduino-168p.jpg) ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_v2.21/img/Seeeduino_fritzing.png)

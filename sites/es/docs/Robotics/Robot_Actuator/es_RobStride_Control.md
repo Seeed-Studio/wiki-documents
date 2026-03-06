@@ -2,17 +2,21 @@
 description: Este wiki proporciona la Guía Completa de Control de Motor RobStride
 title: Guía Completa de Control de Motor RobStride
 keywords:
-- actuador
-- motor
-- brazo
-- robótica
-image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
+  - actuador
+  - motor
+  - brazo
+  - robótica
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-11-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/robstride_control/
 ---
 
 # Biblioteca de Control RobStride - Documentación Técnica Completa

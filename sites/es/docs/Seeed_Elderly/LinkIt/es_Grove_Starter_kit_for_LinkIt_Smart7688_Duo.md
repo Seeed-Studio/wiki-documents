@@ -1,14 +1,17 @@
 ---
-description:  Kit de inicio Grove para LinkIt Smart7688 Duo
+description: Kit de inicio Grove para LinkIt Smart7688 Duo
 title: Kit de inicio Grove para LinkIt Smart7688 Duo
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_kit_for_LinkIt_Smart7688_Duo
 sku: 110020007
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/img/Grove_Starter_kit_for_LinkIt_Smart7688_Duo_Product_view_1200_s.jpg)

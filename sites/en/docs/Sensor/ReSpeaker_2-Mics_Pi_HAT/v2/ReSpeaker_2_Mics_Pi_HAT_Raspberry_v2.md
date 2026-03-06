@@ -2,12 +2,15 @@
 description: Getting Started with Raspberry Pi
 title: Getting Started with Raspberry Pi
 keywords:
-- ReSpeaker_2-Mics_Pi_HAT
+  - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
 slug: /respeaker_2_mics_pi_hat_raspberry_v2
 last_update:
   date: 01/29/2026
   author: Mingxi
+createdAt: '2024-12-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_2_mics_pi_hat_raspberry_v2/
 ---
 
 :::caution

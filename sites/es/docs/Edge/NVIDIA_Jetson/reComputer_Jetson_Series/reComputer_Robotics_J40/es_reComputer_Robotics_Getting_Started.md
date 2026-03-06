@@ -1,5 +1,7 @@
 ---
-description: La reComputer Robotics J401 es una placa portadora de IA de borde de alto rendimiento diseñada para aplicaciones avanzadas de robótica. Es compatible con los módulos NVIDIA Jetson Orin Nano y Orin NX en modo Super/MAXN, ofreciendo hasta 157 TOPS de potencia de cómputo de IA. La placa ofrece amplias opciones de conectividad, incluyendo doble Ethernet Gigabit, múltiples puertos USB 3.2, CAN, ranuras M.2 para módulos 5G/Wi-Fi/BT y compatibilidad opcional con cámaras GMSL2. Con JetPack 6 preinstalado, garantiza un despliegue fluido para el desarrollo de robótica. El diseño robusto admite amplios rangos de temperatura de funcionamiento e incluye un disipador de calor con ventilador preinstalado. La configuración implica grabar el sistema operativo JetPack en un SSD NVMe usando un PC host Ubuntu compatible, seguido de la configuración del hardware y el uso de las interfaces. Se proporcionan especificaciones detalladas de hardware, dibujos mecánicos y recursos técnicos para los desarrolladores, junto con canales de soporte técnico y de comunidad para la resolución de problemas y discusión.
+description: >-
+  La reComputer Robotics J401 es una placa portadora de IA de borde de alto rendimiento diseñada para aplicaciones avanzadas de robótica. Es compatible con los módulos NVIDIA Jetson Orin Nano y Orin NX en modo Super/MAXN, ofreciendo hasta 157 TOPS de potencia de cómputo de IA. La placa ofrece amplias opciones de conectividad, incluyendo doble Ethernet Gigabit, múltiples puertos USB 3.2, CAN, ranuras M.2 para módulos 5G/Wi-Fi/BT y compatibilidad opcional con cámaras GMSL2. Con JetPack 6 preinstalado, garantiza un despliegue fluido para el desarrollo de robótica. El diseño robusto admite amplios rangos de temperatura de funcionamiento e incluye un disipador de calor con ventilador preinstalado. La configuración implica grabar el sistema operativo JetPack en un SSD NVMe usando un PC host Ubuntu compatible, seguido de la configuración del hardware y el uso de las interfaces. Se proporcionan especificaciones detalladas de hardware, dibujos mecánicos y recursos técnicos para los
+  desarrolladores, junto con canales de soporte técnico y de comunidad para la resolución de problemas y discusión.
 title: Introducción a reComputer Robotics
 tags:
   - Placa portadora J401-Robotics
@@ -13,6 +15,9 @@ sku: 100071398, 114110310, 100026552
 last_update:
   date: 08/06/2025
   author: Zibo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/es/recomputer_robotics_j401_getting_started/
 ---
 
 <div style={{ textAlign: "justify" }}>

@@ -2,14 +2,17 @@
 description: This Wiki is about the use of Grove - NFC (ST25DV64).
 title: Grove - NFC(ST25DV64)
 keywords:
-- NFC
-- ST25DV64
+  - NFC
+  - ST25DV64
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-nfc-st25dv64
 sku: 101021093
 last_update:
   date: 5/16/2023
   author: Stephen Lo
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/grove-nfc-st25dv64/
 ---
 
 # Grove - NFC (ST25DV64)

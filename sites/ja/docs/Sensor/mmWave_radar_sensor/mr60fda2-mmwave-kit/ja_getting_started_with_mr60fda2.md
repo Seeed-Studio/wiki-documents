@@ -2,9 +2,9 @@
 description: 60GHz mmWave転倒検知センサーキット XIAO ESP32C6 (MR60FDA2) の使用開始
 title: MR60FDA2の使用開始
 keywords:
-- mmwave
-- radar
-- MR60FDA2
+  - mmwave
+  - radar
+  - MR60FDA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
 slug: /getting_started_with_mr60fda2_mmwave_kit
 sku: 114993388
@@ -12,6 +12,9 @@ sidebar_position: 0
 last_update:
   date: 08/19/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_mr60fda2_mmwave_kit/
 ---
 
 # 60GHz mmWave転倒検知センサーキット XIAO ESP32C6 (MR60FDA2) の使用開始

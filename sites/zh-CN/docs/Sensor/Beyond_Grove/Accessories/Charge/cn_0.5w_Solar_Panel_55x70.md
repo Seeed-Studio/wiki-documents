@@ -1,6 +1,6 @@
 ---
 title: 0.5w 太阳能板 55*70
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 313070004
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/0.5w_Solar_Panel_55x70/
 ---
 ![](https://files.seeedstudio.com/wiki/0.5w_Solar_Panel_55x70/img/solars.jpg)
 

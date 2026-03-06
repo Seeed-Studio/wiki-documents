@@ -2,13 +2,16 @@
 description: EcoEye–Embedded_Vision_Camera の使い方
 title: EcoEye–Embedded_Vision_Camera の使い方
 keywords:
-- EcoEye–Embedded_Vision_Camera
+  - EcoEye–Embedded_Vision_Camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_EcoEye_Embedded_Vision_Camera
 sku: 101991121
 last_update:
   date: 05/15/2025
   author: Yvonne
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Get_Started_with_EcoEye_Embedded_Vision_Camera/
 ---
 
 

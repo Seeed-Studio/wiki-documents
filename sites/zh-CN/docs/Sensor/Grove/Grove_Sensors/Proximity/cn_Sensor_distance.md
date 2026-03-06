@@ -1,6 +1,6 @@
 ---
 title: 传感器 - 距离传感器（介绍）
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Sensor_distance
 last_update:
   date: 12/30/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor_distance/
 ---
 
 # Seeed 距离传感器选择指南

@@ -2,13 +2,16 @@
 description: This wiki provides a tutorial on how to run VLM on reComputer Jetson.
 title: How to Run VLM on reComputer
 keywords:
-- reComputer
-- VLM
+  - reComputer
+  - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /run_vlm_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2024-07-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/run_vlm_on_recomputer/
 ---
 
 # How to Run VLM on reComputer with Jetson Platform Services

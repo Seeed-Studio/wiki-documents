@@ -2,13 +2,16 @@
 description: SenseCAP T1000 TrackerをAkenzaに接続する
 title: Akenza統合（TTS経由）
 keywords:
-- Tracker
-- Akenza
+  - Tracker
+  - Akenza
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_Tracker_Akenza
 last_update:
   date: 8/25/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_Tracker_Akenza/
 ---
 
 [Akenza](https://akenza.io/)は、価値のある優れたIoT製品とサービスの構築を可能にするIoTアプリケーション実現プラットフォームです。IoTデバイスの接続、制御、管理をすべて一箇所で行えます。

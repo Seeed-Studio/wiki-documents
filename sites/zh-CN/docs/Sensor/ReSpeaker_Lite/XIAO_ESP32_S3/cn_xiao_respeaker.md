@@ -2,15 +2,18 @@
 description: 将 ReSpeaker Lite 与 XIAO ESP32S3 集成
 title: ReSpeaker Lite 语音助手套件
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiao_respeaker
 sku: 110061601
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_respeaker/
 ---
 
 

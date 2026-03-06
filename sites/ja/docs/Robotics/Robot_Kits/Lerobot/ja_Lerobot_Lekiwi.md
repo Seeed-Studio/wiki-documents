@@ -2,10 +2,10 @@
 description: このwikiは、Lekiwiの組み立てとデバッグのチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
 title: LerobotでのLekiwi
 keywords:
-- Lerobot
-- Huggingface
-- Car
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Car
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /lerobot_lekiwi
 sku: 114090065,E2025090401
@@ -13,7 +13,11 @@ last_update:
   date: 8/8/2025
   author: LiShanghang
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/lerobot_lekiwi/
 ---
 
 # LerobotでLekiwiを使用する方法

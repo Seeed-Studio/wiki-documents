@@ -1,6 +1,6 @@
 ---
 title: 315Mhzリモートリレー切替キット - 2チャンネル
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /315Mhz_remote_relay_switch_kits-2_channels
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/315Mhz_remote_relay_switch_kits-2_channels/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Flash JetPack to reComputer J4012 (J401 carrier board)
 title: Getting start with reComputer J1020v2
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J1020v2_with_Jetson_getting_start
 last_update:
   date: 6/29/2023
   author: Lakshantha
+createdAt: '2024-04-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_J1020v2_with_Jetson_getting_start/
 ---
 
 # Getting start with reComputer J1020v2

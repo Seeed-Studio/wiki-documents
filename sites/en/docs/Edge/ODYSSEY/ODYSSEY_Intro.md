@@ -2,12 +2,15 @@
 description: ODYSSEY Guide
 title: ODYSSEY Guide
 keywords:
-- ODYSSEY
+  - ODYSSEY
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY_Intro
 last_update:
   date: 08/09/2024
   author: Frank
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/ODYSSEY_Intro.png" style={{width:1000, height:'auto'}}/></div>

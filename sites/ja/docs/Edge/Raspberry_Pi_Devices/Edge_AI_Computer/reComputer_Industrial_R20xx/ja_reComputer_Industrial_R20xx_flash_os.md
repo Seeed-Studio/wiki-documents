@@ -2,15 +2,18 @@
 description: reComputer Industrial R20xx Flash OS
 title: reComputer Industrial R20xx Flash OS
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R20xx
-- Flash OS
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R20xx
+  - Flash OS
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
 slug: /recomputer_industrial_r2000_flash_os
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r2000_flash_os/
 ---
 # reComputer Industrial R20xx Flash OS
 

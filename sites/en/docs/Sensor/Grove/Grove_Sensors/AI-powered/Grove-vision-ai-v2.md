@@ -2,12 +2,15 @@
 description: Getting Started with Grove Vision AI V2.
 title: Grove Vision AI Module V2
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2a
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2023-12-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/grove_vision_ai_v2a/
 ---
 
 # Grove Vision AI Module V2

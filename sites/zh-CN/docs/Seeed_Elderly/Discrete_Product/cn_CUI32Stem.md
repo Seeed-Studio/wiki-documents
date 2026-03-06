@@ -2,12 +2,15 @@
 description: CUI32Stem
 title: CUI32Stem
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CUI32Stem
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/CUI32Stem/
 ---
 
 Create USB Interface 是一个开源的微控制器板，可以使用 C、BASIC 或 Arduino 语言进行编程。最新版本称为 CUI32Stem，专为与 GROVE 原型系统协同工作而设计，包括各种传感器和执行器。它采用高性能的 Microchip® PIC32 微控制器，无需焊接即可实现与各种用户发明的可编程交互！:)

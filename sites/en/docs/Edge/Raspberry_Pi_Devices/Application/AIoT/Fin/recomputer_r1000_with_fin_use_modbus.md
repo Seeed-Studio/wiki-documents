@@ -11,6 +11,9 @@ slug: /reComputer_r1000_fin_modbus_tcp_and_rtu
 last_update:
   date: 07/15/2024
   author: ShuishengPeng
+createdAt: '2024-07-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_r1000_fin_modbus_tcp_and_rtu/
 ---
 
 ## Introduction

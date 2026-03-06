@@ -12,6 +12,9 @@ sku: 100046979,100002634
 last_update:
   date: 03/04/2026
   author: Dayu
+createdAt: '2026-03-05'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 
 # reComputer Rugged J40 入門ガイド

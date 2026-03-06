@@ -2,12 +2,15 @@
 description: Micro_bit bitwear
 title: BitWear
 keywords:
-- Micro_bit
+  - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BitWear
 last_update:
   date: 12/29/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/BitWear/
 ---
 
 

@@ -11,6 +11,9 @@ sku: 113991274,E24010521,113991334,113991375
 last_update:
   date: 06/06/2024
   author: Evelyn Chen
+createdAt: '2023-05-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/
 ---
 # reComputer R1000 Assembly Guide
 

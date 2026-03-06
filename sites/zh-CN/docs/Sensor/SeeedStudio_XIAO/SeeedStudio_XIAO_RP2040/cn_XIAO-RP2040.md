@@ -2,13 +2,16 @@
 description: 概述
 title: Seeed Studio XIAO RP2040 入门指南
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
 slug: /XIAO-RP2040
 sku: 102010428, 100045204
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-RP2040/
 ---
 
 # Seeed Studio XIAO RP2040 入门指南

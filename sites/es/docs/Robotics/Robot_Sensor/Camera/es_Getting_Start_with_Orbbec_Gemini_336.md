@@ -2,21 +2,24 @@
 description: Mostrar a las personas cómo usar Orbbec Gemini 336.
 title: Cámara 3D Orbbec Gemini336
 keywords:
-- Jetson
-- reComputer Robotics
-- Computer Vision
-- Autonomous Driving
-- Industrial Robot
-- Orbbec
-- AI Camera
-- Stereo Camera
-- Depth Camera
-- Visual SLAM
+  - Jetson
+  - reComputer Robotics
+  - Computer Vision
+  - Autonomous Driving
+  - Industrial Robot
+  - Orbbec
+  - AI Camera
+  - Stereo Camera
+  - Depth Camera
+  - Visual SLAM
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp
 slug: /orbbec_gemini336
 last_update:
-  date: 2025-08-22
+  date: 2025-08-22T00:00:00.000Z
   author: Zibo
+createdAt: '2025-12-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/orbbec_gemini336/
 ---
 
 <div align="center">

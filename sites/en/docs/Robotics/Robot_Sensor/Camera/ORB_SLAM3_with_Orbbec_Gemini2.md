@@ -2,19 +2,22 @@
 description: This wiki provides detailed steps to set up and run ORB-SLAM3 algorithm on reComputer Jetson using an Orbbec Gemini2 RGB-D camera for advanced visual SLAM applications.
 title: ORB-SLAM3 with Orbbec Gemini2
 keywords:
-- ORB-SLAM3
-- SLAM
-- reComputer
-- Jetson
-- Orbbec Gemini2
-- RGB-D camera
-- Visual SLAM
+  - ORB-SLAM3
+  - SLAM
+  - reComputer
+  - Jetson
+  - Orbbec Gemini2
+  - RGB-D camera
+  - Visual SLAM
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.webp
 slug: /orb_slam3_orbbec_gemini2
 sku: 101090144, 100071398
 last_update:
-  date: 2025-08-21
+  date: 2025-08-21T00:00:00.000Z
   author: Zibo
+createdAt: '2025-08-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/orb_slam3_orbbec_gemini2/
 ---
 
 <div align="center">

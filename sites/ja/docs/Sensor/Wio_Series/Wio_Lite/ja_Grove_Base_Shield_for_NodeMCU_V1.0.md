@@ -2,14 +2,17 @@
 description: NodeMCU V1.0用 Grove Base Shield
 title: NodeMCU V1.0用 Grove Base Shield
 keywords:
-- Wio_Series 
-- Wio_Lite
+  - Wio_Series
+  - Wio_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Shield_for_NodeMCU_V1.0
 sku: 105020008
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Base_Shield_for_NodeMCU_V1.0/
 ---
 
 

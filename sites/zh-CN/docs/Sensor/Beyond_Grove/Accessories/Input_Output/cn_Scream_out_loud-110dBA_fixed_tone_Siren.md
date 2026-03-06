@@ -1,6 +1,6 @@
 ---
 title: 大声尖叫 - 110dBA固定音调警报器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Scream_out_loud-110dBA_fixed_tone_Siren
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Scream_out_loud-110dBA_fixed_tone_Siren/
 ---
 
 ![https://www.seeedstudio.com/depot/images/product/screamout.jpg](http://bz.seeedstudio.com/depot/images/product/screamout.jpg)

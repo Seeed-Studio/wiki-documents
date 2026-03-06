@@ -2,16 +2,19 @@
 description: XIAO用Seeed Studio Round DisplayでのLVGLとTFTの使用
 title: 全XIAOシリーズ向けLVGLとTFTの使用
 keywords:
-- XIAO
-- Round Dislay
-- lvgl
-- draw dials
+  - XIAO
+  - Round Dislay
+  - lvgl
+  - draw dials
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /using_lvgl_and_tft_on_round_display
 sku: 104030087
 last_update:
   date: 09/12/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/using_lvgl_and_tft_on_round_display/
 ---
 
 # 全XIAOシリーズ向けSeeed Studio Round DisplayでのLVGLとTFTの使用

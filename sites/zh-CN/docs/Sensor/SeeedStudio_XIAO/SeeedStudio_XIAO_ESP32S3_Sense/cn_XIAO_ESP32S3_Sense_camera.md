@@ -2,14 +2,17 @@
 description: 本教程将解释如何正确使用 XIAO ESP32S3 Sense 上的摄像头。
 title: Sense 版本的摄像头使用
 keywords:
-- xiao esp32s3
-- esp32s3
-- camera
+  - xiao esp32s3
+  - esp32s3
+  - camera
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_camera_usage
 last_update:
   date: 04/17/2023
   author: Citric
+createdAt: '2022-11-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/
 ---
 
 # Seeed Studio XIAO ESP32S3 Sense 的摄像头使用

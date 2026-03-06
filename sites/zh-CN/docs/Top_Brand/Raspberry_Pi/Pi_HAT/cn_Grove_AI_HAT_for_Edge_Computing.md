@@ -2,13 +2,16 @@
 description: Grove AI HAT 边缘计算模块
 title: Grove AI HAT 边缘计算模块
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_AI_HAT_for_Edge_Computing
 sku: 102991187
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_AI_HAT_for_Edge_Computing/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-AI-HAT-for-Edge-Computing/img/Grove%20AI%20HAT%20for-Edge-Computing-wiki-front.jpg)

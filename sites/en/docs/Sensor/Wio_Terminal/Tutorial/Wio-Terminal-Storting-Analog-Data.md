@@ -1,13 +1,16 @@
 ---
-description:  Wio Terminal Storing Data
-title:  Wio Terminal Storing Data
+description: Wio Terminal Storing Data
+title: Wio Terminal Storing Data
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Storting-Analog-Data
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Storting-Analog-Data/
 ---
 
 # Wio Terminal displaying and storing analog data

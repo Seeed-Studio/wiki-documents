@@ -8,6 +8,9 @@ type: gettingstarted
 last_update:
   date: 08/14/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/
 ---
 
 # Seeed Studio XIAO ESP32C3 を使い始める

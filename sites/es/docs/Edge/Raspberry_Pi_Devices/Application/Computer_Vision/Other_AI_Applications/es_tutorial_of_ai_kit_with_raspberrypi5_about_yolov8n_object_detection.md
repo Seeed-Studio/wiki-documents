@@ -11,7 +11,10 @@ slug: /tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection
 last_update:
   date: 08/6/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/
 ---
 
 # Tutorial de AI Kit con Raspberry Pi 5 sobre detección de objetos YOLOv8n

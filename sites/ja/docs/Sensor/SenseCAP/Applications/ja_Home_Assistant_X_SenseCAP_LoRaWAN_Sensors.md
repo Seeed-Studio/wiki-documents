@@ -2,15 +2,18 @@
 description: Home AssistantとSenseCAP Sensorsとの連携
 title: Home AssistantとSenseCAP Sensorsとの連携
 keywords:
-- LoRaWAN
-- Sensor
-- Home Assistant
-- SenseCAP
+  - LoRaWAN
+  - Sensor
+  - Home Assistant
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /home_assistant_with_sensecap_lorawan_sensors
 last_update:
   date: 9/14/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/home_assistant_with_sensecap_lorawan_sensors/
 ---
 
 LoRaWAN®センサーをHome Assistantに統合する方法を共有します。

@@ -2,12 +2,15 @@
 description: AT指令测试工具
 title: AT指令测试工具
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /AT_Command_Tester
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/AT_Command_Tester/
 ---
 
 [AT指令测试工具](https://m2msupport.net/m2msupport/module-tester/) 是一个在线工具，用于测试AT指令以及其他模块功能，例如 [数据呼叫](https://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/)、[语音呼叫](https://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/)、[HTTP](https://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/)、[网络注册](https://m2msupport.net/m2msupport/network-registration/)、[短信](https://m2msupport.net/m2msupport/sms-at-commands/)、[电话簿](https://m2msupport.net/m2msupport/sim-phonebook-at-commands/)、[信号质量](https://m2msupport.net/m2msupport/signal-quality/)、[SIM接口](https://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/)、[设备信息](https://m2msupport.net/m2msupport/at-commands-to-get-device-information/)等。

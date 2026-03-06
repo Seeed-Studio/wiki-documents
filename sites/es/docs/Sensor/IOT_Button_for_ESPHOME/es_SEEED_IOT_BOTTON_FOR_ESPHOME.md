@@ -10,6 +10,9 @@ slug: /iot_button_for_esphome
 last_update:
   date: 03/14/2025
   author: qiuyu wei, Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/iot_button_for_esphome/
 ---
 
 # Conectar el Botón IoT de Seeed Studio a ESPHome

@@ -2,12 +2,15 @@
 description: ReSpeaker Solutions
 title: ReSpeaker Solutions
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Solutions
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ReSpeaker_Solutions/
 ---
 
 # **ReSpeaker**

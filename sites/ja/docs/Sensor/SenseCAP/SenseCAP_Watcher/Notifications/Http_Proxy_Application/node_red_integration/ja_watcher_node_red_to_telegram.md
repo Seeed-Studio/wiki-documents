@@ -2,13 +2,16 @@
 description: WatcherとNode-REDからTelegramにメッセージを送信する
 title: Watcher & Node-RED to Telegram
 keywords:
-- watcher
-- Telegram
+  - watcher
+  - Telegram
 image: https://files.seeedstudio.com/wiki/watcher_to_telegram_image/telhead.png
 slug: /watcher_node_red_to_telegram
 last_update:
   date: 06/07/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_telegram/
 ---
 
 # Watcher To Telegram クイックスタート

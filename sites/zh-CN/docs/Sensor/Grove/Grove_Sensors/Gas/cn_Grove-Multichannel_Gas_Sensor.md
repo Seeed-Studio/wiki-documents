@@ -2,13 +2,16 @@
 description: Grove - 多通道气体传感器
 title: Grove - 多通道气体传感器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Multichannel_Gas_Sensor
 sku: 101020088
 last_update:
   date: 1/4/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Multichannel_Gas_Sensor/
 ---
 <table>
   <tbody><tr>

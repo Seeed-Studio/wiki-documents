@@ -10,6 +10,9 @@ slug: /build_balenaOS_for_reComputer_r1000
 last_update:
   date: 10/8/2024
   author: ShuishengPeng
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/build_balenaOS_for_reComputer_r1000/
 ---
 
 ## balenaとは？

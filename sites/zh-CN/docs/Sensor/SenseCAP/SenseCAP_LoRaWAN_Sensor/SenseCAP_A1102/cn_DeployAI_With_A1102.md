@@ -2,17 +2,19 @@
 description: Deploy_AI_With_A1102
 title: 使用 SenseCraft AI 在 SenseCAP A1102 上部署 AI 模型
 keywords:
-- Sensor Vision_AI_V2
-- SenseCAP A1102
-- SenseCraft AI
-- Custom AI model
+  - Sensor Vision_AI_V2
+  - SenseCAP A1102
+  - SenseCraft AI
+  - Custom AI model
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp
 slug: /deploy_ai_with_a1102
 sidebar_position: 3
-# sidebar_class_name: hidden
 last_update:
   date: 12/31/2025
   author: Twelve
+createdAt: '2025-11-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deploy_ai_with_a1102/
 ---
 
 import Tabs from '@theme/Tabs';

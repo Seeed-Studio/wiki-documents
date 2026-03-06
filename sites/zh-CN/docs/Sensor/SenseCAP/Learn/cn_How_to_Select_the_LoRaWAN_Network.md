@@ -2,12 +2,15 @@
 description: 我应该选择哪个 LoRaWAN 网络
 title: 我应该选择哪个 LoRaWAN 网络
 keywords:
-- LoRaWAN
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /select_lorawan_network
 last_update:
   date: 1/9/2023
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/select_lorawan_network/
 ---
 
 

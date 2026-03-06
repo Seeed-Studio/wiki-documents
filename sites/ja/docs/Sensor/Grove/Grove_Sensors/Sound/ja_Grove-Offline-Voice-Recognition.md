@@ -2,13 +2,16 @@
 description: Grove オフライン音声認識センサーの使い方ガイド。
 title: Grove オフライン音声認識センサー
 keywords:
-- ジェスチャー
+  - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Grove-Offline-Voice-Recognition
 sku: 107020149
 last_update:
   date: 05/15/2025
   author: Allen
+createdAt: '2024-01-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Offline-Voice-Recognition/
 ---
 
 

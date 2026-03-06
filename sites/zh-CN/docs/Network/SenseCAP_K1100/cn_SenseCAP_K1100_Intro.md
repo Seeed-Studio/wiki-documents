@@ -2,13 +2,16 @@
 description: SenseCAP K1100 指南 - 传感器原型套件
 title: SenseCAP K1100 指南 - 传感器原型套件
 keywords:
-- SenseCAP 网关
+  - SenseCAP 网关
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_K1100_Intro
 sku: 110991748
 last_update:
   date: 08/07/2024
   author: Frank
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_K1100_Intro/
 ---
 
 ## 简介

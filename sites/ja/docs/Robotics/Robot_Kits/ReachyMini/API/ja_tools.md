@@ -3,17 +3,21 @@ description: モーターセットアップツール、スキャニングツー�
 title: ツール API リファレンス
 slug: /reachymini_api_tools
 keywords:
-- api
-- tools
-- motor setup
-- scanning
-- reflashing
-- utilities
+  - api
+  - tools
+  - motor setup
+  - scanning
+  - reflashing
+  - utilities
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_api_tools/
 ---
 # ツール
 

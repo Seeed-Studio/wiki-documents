@@ -2,14 +2,17 @@
 description: Reconocimiento de Voz y Voz-a-Intención
 title: Reconocimiento de Voz y Voz-a-Intención
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_TensorFlow_Lite
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-TFLM-3
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-TFLM-3/
 ---
 
 # Wio Terminal Tensorflow Lite Micro Reconocimiento de voz en MCU – Voz-a-Intención

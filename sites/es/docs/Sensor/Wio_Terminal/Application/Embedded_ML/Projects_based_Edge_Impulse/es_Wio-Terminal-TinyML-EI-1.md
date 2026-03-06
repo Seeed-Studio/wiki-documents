@@ -2,15 +2,18 @@
 description: Introducción a Edge Impulse
 title: Introducción a Edge Impulse
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_Edge_Impulse
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-EI-1
 sku: 102991299
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-EI-1/
 ---
 
 # Introducción a Edge Impulse con Wio Terminal

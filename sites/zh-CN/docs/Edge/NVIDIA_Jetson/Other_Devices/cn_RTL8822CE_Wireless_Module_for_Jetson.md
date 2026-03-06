@@ -6,13 +6,16 @@ keywords:
   - reComputer
   - Wifi
   - Bluetooth
-  - Wireless 
+  - Wireless
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.webp
 slug: /rtl8822ce_wireless_module_for_jetson
 sku: 114993556,E24121001
 last_update:
   date: 12/3/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/rtl8822ce_wireless_module_for_jetson/
 ---
 
 <div align="center">

@@ -2,12 +2,15 @@
 description: Xadow - IMU 6DOF
 title: Xadow - IMU 6DOF
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_IMU_6DOF
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Xadow_IMU_6DOF/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/Imu_6dof_01.jpg)
 

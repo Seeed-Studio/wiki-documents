@@ -2,13 +2,16 @@
 description: Grove - 红色 LED
 title: Grove - 红色 LED
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Red_LED
 sku: 104030007, 104020002, 104030005, 104020228, 104030014
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Red_LED/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Raspi_wiki/img/red_led.jpg) -->

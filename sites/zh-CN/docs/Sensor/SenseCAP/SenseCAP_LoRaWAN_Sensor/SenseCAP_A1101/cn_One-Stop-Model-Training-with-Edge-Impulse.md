@@ -2,13 +2,16 @@
 description: 使用 Edge Impulse 进行一站式模型训练
 title: 使用 Edge Impulse 进行一站式模型训练
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /One-Stop-Model-Training-with-Edge-Impulse
 sku: 101990962
 last_update:
   date: 3/31/2023
   author: Yvonne
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/One-Stop-Model-Training-with-Edge-Impulse/
 ---
 
 ## 概述

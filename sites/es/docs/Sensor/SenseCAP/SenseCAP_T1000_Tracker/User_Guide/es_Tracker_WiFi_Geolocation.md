@@ -2,12 +2,14 @@
 description: Usar tecnología WiFi para habilitar el rastreador de geolocalización
 title: Cómo obtener ubicación vía Wi-Fi
 keywords:
-- SenseCAP_T1000_tracker
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+  - SenseCAP_T1000_tracker
 slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang
+createdAt: '2023-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Tracker_WiFi_Geolocation/
 ---
 
 # Usar tecnología Wi-Fi para habilitar geolocalización para tu rastreador

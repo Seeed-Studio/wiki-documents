@@ -1,11 +1,11 @@
 ---
-description: Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM100 y permite la recopilación de datos y el entrenamiento dentro de la última versión del framework Lerobot. 
+description: Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM100 y permite la recopilación de datos y el entrenamiento dentro de la última versión del framework Lerobot.
 title: SoArm en Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
@@ -13,7 +13,11 @@ last_update:
   date: 3/2/2026
   author: ZhangJiaQuan
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-09-03'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/es/lerobot_so100m_new/
 ---
 
 # Introducción al brazo robótico SO-ARM100 y SO-ARM101 con LeRobot

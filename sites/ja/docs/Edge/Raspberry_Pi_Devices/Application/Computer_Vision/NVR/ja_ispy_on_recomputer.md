@@ -10,7 +10,10 @@ slug: /ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ispy_on_recomputer/
 ---
 
 # reComputer上のiSpy

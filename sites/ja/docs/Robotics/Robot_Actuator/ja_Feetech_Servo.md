@@ -2,15 +2,18 @@
 description: このwikiはFeetechサーボモーターのチュートリアルを提供します。
 title: Feetechサーボモーター
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
 slug: /feetech_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang
+createdAt: '2025-06-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/feetech_servo/
 ---
 
 # Feetechサーボモーター ドキュメントハブ

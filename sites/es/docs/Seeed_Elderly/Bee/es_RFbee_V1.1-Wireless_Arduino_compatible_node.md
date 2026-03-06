@@ -2,13 +2,16 @@
 description: RFbee V1.1 - Nodo compatible con Arduino inalámbrico
 title: RFbee V1.1 - Nodo compatible con Arduino inalámbrico
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RFbee_V1.1-Wireless_Arduino_compatible_node
 sku: 113050002
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/RFbee_V1.1-Wireless_Arduino_compatible_node/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/img/rfbee1.jpg)

@@ -5,13 +5,16 @@ keywords:
   - reTerminal Dm
   - Getting started
   - SCADA
-  - Industrial 
+  - Industrial
   - FUXA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-DM_intro_FUXA
 last_update:
   date: 1/27/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal-DM_intro_FUXA/
 ---
 
 ## SCADA とは？

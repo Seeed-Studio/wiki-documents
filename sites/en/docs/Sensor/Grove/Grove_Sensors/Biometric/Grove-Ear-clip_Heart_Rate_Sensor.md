@@ -2,13 +2,16 @@
 description: Grove - Ear-clip Heart Rate Sensor
 title: Grove - Ear-clip Heart Rate Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Ear-clip_Heart_Rate_Sensor
 sku: 101020033
 last_update:
   date: 1/6/2023
   author: jianjing Huang
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Ear-clip_Heart_Rate_Sensor/img/Heart_rate_ear_clip_kit.jpg" /></div>

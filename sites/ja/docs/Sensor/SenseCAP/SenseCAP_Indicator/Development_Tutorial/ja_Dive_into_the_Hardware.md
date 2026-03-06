@@ -2,13 +2,16 @@
 description: デバイスの構造と動作について説明し、各コンポーネントがSenseCAP Indicatorの全体的な機能にどのように貢献するかを詳述します。
 title: ハードウェアの詳細
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 sidebar_position: 1
 last_update:
   date: 11/17/2023
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_Dive_into_the_Hardware/
 ---
 # **概要**
 

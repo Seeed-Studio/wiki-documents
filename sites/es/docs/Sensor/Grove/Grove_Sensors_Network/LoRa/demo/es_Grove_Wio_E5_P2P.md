@@ -1,6 +1,6 @@
 ---
-title: Grove - Wio-E5 Ejemplo LoRa P2P 
-nointro:
+title: Grove - Wio-E5 Ejemplo LoRa P2P
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove_Wio_E5_P2P
 last_update:
   date: 08/28/2023
   author: Matthew
+createdAt: '2023-08-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_Wio_E5_P2P/
 ---
 
 ¿Estás buscando una solución simple, flexible y rentable para tu proyecto IoT? Considera probar LoRa P2P.

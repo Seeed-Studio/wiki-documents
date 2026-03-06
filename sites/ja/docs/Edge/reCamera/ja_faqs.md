@@ -12,6 +12,9 @@ sidebar_position: 6
 last_update:
   date: 04/08/2025
   author: Parker Hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recamera_network_connection/
 ---
 
 # よくある質問

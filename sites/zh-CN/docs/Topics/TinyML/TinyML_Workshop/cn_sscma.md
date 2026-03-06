@@ -2,12 +2,15 @@
 description: 这是一个专注于嵌入式AI的开源项目/平台。
 title: AI "Blink"
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sscma
 last_update:
   date: 08/26/2024
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sscma/
 ---
 
 ## 熟悉我们使用的工具

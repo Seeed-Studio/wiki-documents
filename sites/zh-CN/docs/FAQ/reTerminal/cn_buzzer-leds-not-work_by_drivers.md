@@ -6,6 +6,9 @@ slug: /buzzer-leds-not-work_by_drivers
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/buzzer-leds-not-work_by_drivers/
 ---
 
 <!-- Q13: 安装reTerminal驱动后LED灯和蜂鸣器无法工作 -->

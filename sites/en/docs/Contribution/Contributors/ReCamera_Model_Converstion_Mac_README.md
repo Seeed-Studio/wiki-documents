@@ -1,4 +1,6 @@
 ---
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
 ---
 # YOLO11n Model Conversion for reCamera: Complete Guide
 

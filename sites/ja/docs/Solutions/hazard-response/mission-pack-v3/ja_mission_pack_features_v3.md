@@ -2,13 +2,15 @@
 description: intro
 title: 機能
 keywords:
-    - mission-pack
-# image: 
+  - mission-pack
 slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/mission_pack_features_v3/
 ---
 
 **Hazard Response Mission Pack**は、危険が継続的な懸念となる環境での課題に対処するために特別に設計された多用途ソリューションです。最先端のハードウェアとソフトウェアを組み合わせることで、このパックはリアルタイム監視、警告、対応のための包括的なプラットフォームを提供し、ユーザーがリスクを効果的に管理し、安全を確保できるよう支援します。

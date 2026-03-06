@@ -2,14 +2,17 @@
 description: 使用 XIAO ESP32S3 的 MP3 播放器
 title: MP3 播放器
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_player_spiffs
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_player_spiffs/
 ---
 
 

@@ -2,12 +2,15 @@
 description: エッジコンピューティング
 title: エッジコンピューティング
 keywords:
-- エッジコンピューティング
+  - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Navigation/Edge_Computing_4.7
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeed_Elderly/Navigation/Edge_Computing_4.7/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Grove - Sensor Hall
 title: Grove - Sensor Hall
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Hall_Sensor
 sku: 101020046
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Hall_Sensor/
 ---
 <!-- ---
 name: Grove - Hall Sensor

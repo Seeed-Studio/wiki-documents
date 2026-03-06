@@ -2,15 +2,18 @@
 description: このwikiでは、Nvidia GPU搭載のUbuntuでIsaac Labをセットアップし、SO-ARM100/101ロボットアーム用の強化学習ポリシーを訓練する方法を説明します。
 title: IsaacLabでSoArm101ポリシーを訓練する
 keywords:
-- IsaacLab
-- Reinforcement Learning
-- Robotic Arm
-- SOARM100
+  - IsaacLab
+  - Reinforcement Learning
+  - Robotic Arm
+  - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.webp
 slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 9/4/2025
   author: Youjiang
+createdAt: '2025-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/training_soarm101_policy_with_isaacLab/
 ---
 
 ## はじめに

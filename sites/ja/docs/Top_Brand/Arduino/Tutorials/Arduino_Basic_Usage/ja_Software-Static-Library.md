@@ -2,12 +2,15 @@
 description: Arduino ライブラリの事前コンパイル済みライブラリの使用方法
 title: Arduino ライブラリの事前コンパイル済みライブラリの使用方法
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-Static-Library
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Software-Static-Library/
 ---
 
 

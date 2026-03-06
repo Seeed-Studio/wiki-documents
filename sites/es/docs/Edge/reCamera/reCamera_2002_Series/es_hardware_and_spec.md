@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 02/18/2025
   author: Parker Hu
+createdAt: '2024-12-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recamera_hardware_and_specs/
 ---
 
 # Descripción General de reCamera

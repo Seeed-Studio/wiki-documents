@@ -2,12 +2,15 @@
 description: 贡献指南
 title: 贡献指南
 keywords:
-- 贡献者
+  - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Contribution-Guide
 last_update:
   date: 03/01/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Contribution-Guide/
 ---
 
 # 贡献（Pull Request）指南

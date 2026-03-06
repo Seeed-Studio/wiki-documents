@@ -2,13 +2,16 @@
 description: Seeeduino Crypto (ATmega4809 ECC608)
 title: Seeeduino Crypto (ATmega4809 ECC608)
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-Crypto-ATmega4809-ECC608
 sku: 102010288
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeeduino-Crypto-ATmega4809-ECC608/
 ---
 
 

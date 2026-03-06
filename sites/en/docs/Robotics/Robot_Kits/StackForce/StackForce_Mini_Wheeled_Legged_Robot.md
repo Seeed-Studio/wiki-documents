@@ -1,16 +1,20 @@
 ---
 description: This wiki provides assembly and startup tutorials for the StackForce Mini Wheeled Legged Robot , as well as learning materials and links required for its development.
-title: StackForce Mini Wheeled Legged Robot 
+title: StackForce Mini Wheeled Legged Robot
 keywords:
-- StackForce
-- Robotics
+  - StackForce
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
 slug: /stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-12-10'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/
 ---
 
 # Getting started with the Two-Wheeled Biped Robot Based on the StackForce Development Platform

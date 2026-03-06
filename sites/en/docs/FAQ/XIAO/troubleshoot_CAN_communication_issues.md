@@ -1,11 +1,13 @@
 ---
 description: XIAO CAN Bus Expansion Board-FAQ
 title: How can I troubleshoot CAN bus communication issues?
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2023-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/troubleshoot_CAN_communication_issues/
 ---
 
 If you encounter any issues with CAN bus communication, you can follow these steps for troubleshooting:

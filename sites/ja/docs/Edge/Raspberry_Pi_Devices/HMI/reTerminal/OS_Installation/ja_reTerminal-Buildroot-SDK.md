@@ -1,6 +1,6 @@
 ---
-description:  reTerminal用Buildroot
-title:  reTerminal用Buildroot
+description: reTerminal用Buildroot
+title: reTerminal用Buildroot
 keywords:
   - Edge
   - reTerminal OS_Installation
@@ -10,6 +10,9 @@ sku: 102110638
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal-Buildroot-SDK/
 ---
 
 

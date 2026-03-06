@@ -1,6 +1,6 @@
 ---
 title: Grove - Mini Fan
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 108020021, 105020004, 101020084
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Mini_Fan/
 ---
 
 

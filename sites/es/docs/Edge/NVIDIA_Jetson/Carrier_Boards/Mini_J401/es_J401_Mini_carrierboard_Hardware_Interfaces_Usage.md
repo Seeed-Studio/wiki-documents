@@ -8,6 +8,9 @@ slug: /j401_mini_carrierboard_hardware_interfaces_usage
 last_update:
   date: 03/28/2025
   author: Dayu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/j401_mini_carrierboard_hardware_interfaces_usage/
 ---
 
 # Hardware y Uso de Interfaces del reComputer Mini

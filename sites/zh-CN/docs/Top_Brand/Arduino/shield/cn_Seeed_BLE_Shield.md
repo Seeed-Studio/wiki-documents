@@ -2,13 +2,16 @@
 description: Seeed BLE Shield v1
 title: Seeed BLE Shield v1
 keywords:
-- Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_BLE_Shield
 sku: 113030013
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeed_BLE_Shield/
 ---
 
 <!-- ---

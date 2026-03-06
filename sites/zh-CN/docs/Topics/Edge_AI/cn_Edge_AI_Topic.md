@@ -2,12 +2,15 @@
 description: 本页面是所有 Seeed Studio 边缘 AI 内容的集合。
 title: 边缘 AI
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /edge_ai_topic
 last_update:
   date: 12/18/2023
   author: Matthew
+createdAt: '2023-12-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/edge_ai_topic/
 ---
 
 # 边缘人工智能

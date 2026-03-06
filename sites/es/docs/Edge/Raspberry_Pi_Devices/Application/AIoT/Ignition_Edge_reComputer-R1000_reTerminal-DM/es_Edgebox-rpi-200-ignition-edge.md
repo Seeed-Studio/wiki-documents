@@ -10,6 +10,9 @@ slug: /Edgebox-rpi-200-ignition-edge
 last_update:
   date: 10/13/2023
   author: Corey Thompson
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Edgebox-rpi-200-ignition-edge/
 ---
 # Edgebox RPI 200 Primeros pasos con Ignition Edge
 

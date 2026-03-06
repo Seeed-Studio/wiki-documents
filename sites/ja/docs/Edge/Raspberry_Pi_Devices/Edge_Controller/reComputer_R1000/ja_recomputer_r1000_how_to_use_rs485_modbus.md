@@ -11,6 +11,9 @@ slug: /recomputer_r1000_use_rs485_modbus_rtu
 last_update:
   date: 12/20/2024
   author: Jiahao Li
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_r1000_use_rs485_modbus_rtu/
 ---
 
 ## はじめに

@@ -2,12 +2,15 @@
 description: Bees Shield
 title: Bees Shield
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bees_Shield
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Bees_Shield/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Bees_Shield/img/bees%20shield.jpg)

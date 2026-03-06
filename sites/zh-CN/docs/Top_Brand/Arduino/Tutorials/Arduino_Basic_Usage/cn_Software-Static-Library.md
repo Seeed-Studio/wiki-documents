@@ -2,12 +2,15 @@
 description: 预编译 Arduino 库的使用方法
 title: 预编译 Arduino 库的使用方法
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-Static-Library
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Software-Static-Library/
 ---
 
 <!-- # Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino -->

@@ -7,6 +7,9 @@ sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Intel-OpenVINO/
 ---
 
 # Installing Intel® Distribution of OpenVINO™ toolkit for ODYSSEY - X86J4105

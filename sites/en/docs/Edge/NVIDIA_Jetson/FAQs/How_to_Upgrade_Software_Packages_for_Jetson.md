@@ -2,12 +2,15 @@
 description: This is a FAQ about Using OTA or incremental updates may lead to system instability and security risks, so it is recommended to perform full ROM updates to maintain system security and stability, avoiding partial updates.
 title: Upgrade Software Packages for Jetson
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang
+createdAt: '2025-02-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/upgrade_software_packages_for_jetson/
 ---
 
 #### How can I upgrade software packages if you told me that I cannot execute apt upgrade? Will there be security risks if I don't upgrade the software?

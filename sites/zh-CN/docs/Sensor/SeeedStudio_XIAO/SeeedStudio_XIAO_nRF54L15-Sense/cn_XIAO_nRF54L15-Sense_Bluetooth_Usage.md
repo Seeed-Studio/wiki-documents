@@ -14,6 +14,9 @@ last_update:
   date: 7/2/2025
   author: Jason
 sidebar_position: 3
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_bluetooth_usage/
 ---
 
 以下示例代码专为 PlatformIO 设计，但也兼容 nRF Connect SDK。

@@ -2,13 +2,16 @@
 description: Grove - 12キー静電容量式I2CタッチセンサーV2 (MPR121)
 title: Grove - 12キー静電容量式I2CタッチセンサーV2 (MPR121)
 keywords:
-- Grove Grove_Sensors Touch
+  - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121
 sku: 101020534
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/
 ---
 
 

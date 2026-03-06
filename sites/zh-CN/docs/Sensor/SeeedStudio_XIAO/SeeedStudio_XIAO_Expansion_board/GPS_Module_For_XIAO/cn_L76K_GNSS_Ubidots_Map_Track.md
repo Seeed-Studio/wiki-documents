@@ -1,7 +1,7 @@
 ---
 title: L76K 在 Ubidots 上的路径追踪
 description: 连接 L76K GNSS 模块和 SeeedStudio XIAO 到 Ubidots，在地图上进行位置路径追踪
-keywords: 
+keywords:
   - XIAO
   - Expansion Boards for XIAO
   - GPS Module for XIAO
@@ -9,9 +9,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /L76K_Path_Tracking_on_Ubidots
 sku: 109100021
-last_update: 
+last_update:
   date: 03/07/2024
   author: Harrison Xu
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/L76K_Path_Tracking_on_Ubidots/
 ---
 
 

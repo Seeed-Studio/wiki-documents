@@ -12,6 +12,9 @@ sku: 113110044
 last_update:
   date: 03/14/2025
   author: Citric
+createdAt: '2025-03-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/seeed_iot_button_with_zigbee/
 ---
 
 # 通过 Zigbee 将 Seeed Studio IoT 按钮连接到 Home Assistant

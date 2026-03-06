@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO nRF52840 (Sense) 的引脚复用
 title: 两个版本的引脚复用
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-Pin-Multiplexing/
 ---
 
 # Seeed Studio XIAO nRF52840 (Sense) 的引脚复用

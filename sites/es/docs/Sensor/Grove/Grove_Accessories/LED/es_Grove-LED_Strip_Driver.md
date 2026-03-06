@@ -2,13 +2,16 @@
 description: Grove - Controlador de Tira LED
 title: Grove - Controlador de Tira LED
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_Strip_Driver
 sku: 105020002
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-LED_Strip_Driver/
 ---
 
 

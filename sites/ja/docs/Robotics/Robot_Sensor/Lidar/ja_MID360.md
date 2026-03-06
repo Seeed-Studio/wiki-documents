@@ -2,16 +2,19 @@
 description: このwikiは、ROSを使用してreComputer J30/40にMID360 LiDARをインストールし、セットアップするためのステップバイステップガイドを提供します。
 title: Mid360 with ROS
 keywords:
-- Jetson Nano
-- reComputer
-- Mid360
-- Lidar
-- ROS
+  - Jetson Nano
+  - reComputer
+  - Mid360
+  - Lidar
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /mid360
 last_update:
   date: 04/10/2024
   author: ZhuYaoHui
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/mid360/
 ---
 # reComputerでMID360 LiDARを使用する方法
 

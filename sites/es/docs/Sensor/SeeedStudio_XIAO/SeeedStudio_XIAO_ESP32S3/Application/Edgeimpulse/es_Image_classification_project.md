@@ -8,6 +8,9 @@ slug: /tinyml_course_Image_classification_project
 last_update:
   date: 11/29/2024
   author: Salman
+createdAt: '2023-08-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/tinyml_course_Image_classification_project/
 ---
 
 # Clasificación de Imágenes XIAO ESP32S3-Sense

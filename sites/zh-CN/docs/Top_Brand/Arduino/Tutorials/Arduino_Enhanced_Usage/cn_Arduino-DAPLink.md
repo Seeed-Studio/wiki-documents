@@ -2,12 +2,15 @@
 description: 使用 Arduino 开发板作为 DAPLink 设备
 title: 使用 Arduino 开发板作为 DAPLink 设备
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino-DAPLink
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Arduino-DAPLink/
 ---
 
 # 如何使用 Arduino 开发板作为 DAPLink 设备

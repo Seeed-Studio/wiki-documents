@@ -2,12 +2,15 @@
 description: Plataforma IoT AWS Integrada
 title: Plataforma IoT AWS Integrada
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connect_AWS_via_helium
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Connect_AWS_via_helium/
 ---
 # Conectar AWS IOT Core a través de Helium
 

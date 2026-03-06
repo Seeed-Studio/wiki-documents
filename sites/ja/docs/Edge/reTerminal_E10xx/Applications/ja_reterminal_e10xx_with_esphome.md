@@ -8,6 +8,9 @@ sidebar_position: 2
 last_update:
   date: 07/21/2025
   author: Citric
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome/
 ---
 
 import Tabs from '@theme/Tabs';

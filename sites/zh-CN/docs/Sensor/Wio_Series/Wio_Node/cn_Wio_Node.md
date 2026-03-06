@@ -1,6 +1,6 @@
 ---
 title: Wio Node
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102110057
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_Node/
 ---
 
 构建物联网项目是令人兴奋的，因为您可以连接周围几乎所有的东西并控制它们。然而，有时构建物联网应用程序并不容易，因为它需要大量的艰苦工作，如硬件、编程、跳线和焊接等。即使是训练有素的用户也需要花费数小时来处理所有工作，更不用说初学者了。为了简化物联网项目的开发，Seeed 在 **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** 上推出了 **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)**，并取得了巨大成功。Kickstarter 上的口号很好地定义了 Wio link 的主要特性：

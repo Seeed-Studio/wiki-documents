@@ -3,13 +3,16 @@ description: Crear una página de documentación con contenido enriquecido.
 title: GPIO y Grove para la serie reComputer
 keywords:
   - Edge
-  - reComputer 
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_GPIO_Grove
 last_update:
   date: 11/21/2022
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reComputer_Jetson_Series_GPIO_Grove/
 ---
 
 # GPIO y Grove para reComputer Jetson

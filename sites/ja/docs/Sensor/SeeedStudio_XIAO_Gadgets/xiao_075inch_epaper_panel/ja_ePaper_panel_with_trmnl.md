@@ -2,8 +2,8 @@
 description: この記事では、ePaperパネルをTRMNLと連携させる方法について説明します。
 title: TRMNLとの連携
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.webp
 slug: /xiao_7_5_inch_epaper_panel_with_trmnl
 sku: 114993635
@@ -11,6 +11,9 @@ sidebar_position: 4
 last_update:
   date: 05/19/2025
   author: Citric
+createdAt: '2025-09-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_7_5_inch_epaper_panel_with_trmnl/
 ---
 
 # XIAO 7.5インチ ePaperパネル TRMNLとの連携

@@ -12,7 +12,10 @@ slug: /real_time_yolo_object_detection_using_recamera_based_on_cpp
 last_update:
   date: 06/26/2025
   author: Liangyuxin
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/real_time_yolo_object_detection_using_recamera_based_on_cpp/
 ---
 
 # 基于C++的reCamera实时YOLO目标检测

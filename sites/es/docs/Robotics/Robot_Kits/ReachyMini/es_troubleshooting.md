@@ -3,21 +3,25 @@ description: Guía completa de resolución de problemas y FAQ para Reachy Mini q
 title: Resolución de problemas y FAQ
 slug: /reachymini_troubleshooting
 keywords:
-- troubleshooting
-- faq
-- support
-- issues
-- fixes
-- assembly
-- connection
-- motors
-- sdk
-- errors
+  - troubleshooting
+  - faq
+  - support
+  - issues
+  - fixes
+  - assembly
+  - connection
+  - motors
+  - sdk
+  - errors
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_troubleshooting/
 ---
 
 # Resolución de problemas y FAQ

@@ -2,12 +2,15 @@
 description: SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor Introduction
 title: SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor Introduction
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
   date: 12/25/2025
   author: Janet
+createdAt: '2023-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/
 ---
 
 # SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor

@@ -2,13 +2,16 @@
 description: RS485 750cm 超声波液位传感器
 title: RS485 750cm 超声波液位传感器
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RS485_750cm_Ultrasonic_Sensor-1
 sku: 101991041, 101991042
 last_update:
   date: 4/14/2023
   author: Yvonne
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RS485_750cm_Ultrasonic_Sensor-1/
 ---
 
 # RS485 750cm 超声波液位传感器

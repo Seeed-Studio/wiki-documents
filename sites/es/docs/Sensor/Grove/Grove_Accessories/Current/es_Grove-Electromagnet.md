@@ -2,13 +2,16 @@
 description: Grove - Electroimán
 title: Grove - Electroimán
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Electromagnet
 sku: 101020073
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Electromagnet/
 ---
 <!-- ---
 name: Grove - Electroimán

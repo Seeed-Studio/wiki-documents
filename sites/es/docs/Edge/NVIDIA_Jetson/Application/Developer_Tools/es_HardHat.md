@@ -11,6 +11,9 @@ sku: 110061402,110061483
 last_update:
   date: 01/04/2023
   author: Bill
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/HardHat/
 ---
 
 # Detección de Cascos de Seguridad Impulsada por Edge Impulse

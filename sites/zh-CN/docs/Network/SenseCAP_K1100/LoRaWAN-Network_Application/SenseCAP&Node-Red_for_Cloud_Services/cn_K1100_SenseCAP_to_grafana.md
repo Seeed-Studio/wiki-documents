@@ -2,12 +2,15 @@
 description: SenseCAP & Node-RED 到 Grafana
 title: SenseCAP & Node-RED 到 Grafana
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100_SenseCAP_to_grafana
 last_update:
   date: 2023/1/13
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/K1100_SenseCAP_to_grafana/
 ---
 # 通过 Node-RED 将 SenseCAP 连接到 Grafana
 

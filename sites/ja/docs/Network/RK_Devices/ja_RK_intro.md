@@ -2,14 +2,17 @@
 description: Rockchip搭載ネットワークソリューション
 title: Rockchip搭載ネットワークソリューション
 keywords:
-- ネットワーク
-- ルーター
-- Rockchip
+  - ネットワーク
+  - ルーター
+  - Rockchip
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rockchip_network_solutions
 last_update:
   date: 05/15/2025
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Rockchip_network_solutions/
 ---
 
 

@@ -3,13 +3,16 @@ description: 本页面介绍如何在使用 Nvidia Jetson 平台的 reComputer �
 title: 使用 reComputer-Jetson® 的生成式 AI
 keywords:
   - Edge
-  - reComputer 
+  - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Generative_AI_Intro
 last_update:
   date: 08/06/2024
   author: Youjiang
+createdAt: '2024-08-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Generative_AI_Intro/
 ---
 
 <div style={{textAlign:'center'}}>

@@ -1,6 +1,6 @@
 ---
 title: 超音波距離測定モジュール
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Ultra_Sonic_range_measurement_module
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Ultra_Sonic_range_measurement_module/
 ---
 
 

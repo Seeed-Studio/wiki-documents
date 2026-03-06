@@ -2,14 +2,17 @@
 description: XIAO CAN Bus拡張ボードの使用開始
 title: XIAO CAN Bus拡張ボード
 keywords:
-- Grove
-- can bus
+  - Grove
+  - can bus
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-can-bus-expansion
 sku: 105100001
 last_update:
   date: 6/6/2023
   author: Stephen Lo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-can-bus-expansion/
 ---
 
 # XIAO CAN Bus拡張ボード

@@ -2,13 +2,16 @@
 description: 树莓派 RS-485 扩展板
 title: 树莓派 RS-485 扩展板
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RS-485_Shield_for_Raspberry_Pi
 sku: 103030295
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RS-485_Shield_for_Raspberry_Pi/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RS-485_Shield_for_Raspberry_Pi/img/main.jpg)

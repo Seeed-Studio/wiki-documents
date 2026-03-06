@@ -2,13 +2,16 @@
 description: Grove IoT开发者套件 Microsoft Azure版
 title: Grove IoT开发者套件 Microsoft Azure版
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_IoT_Developer_Kit-Microsoft_Azure_Edition
 sku: 110060422
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino_Microsoft-Azure-Edition_cover.jpg)

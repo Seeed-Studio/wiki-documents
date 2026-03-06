@@ -2,13 +2,16 @@
 description: Grove Cape para la Serie BeagleBone®
 title: Grove Cape para la Serie BeagleBone®
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Cape_for_BeagleBone_Series
 sku: 103020015
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_Cape_for_BeagleBone_Series/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Cape_for_BeagleBone_Series/img/Grove%20Cape%20for%20BeagleBone.jpg)

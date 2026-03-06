@@ -2,13 +2,16 @@
 description: Grove - 三色电子墨水显示屏 1.54"
 title: Grove - 三色电子墨水显示屏 1.54"
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Triple_Color_E-Ink_Display_1_54
 sku: 104020129
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Triple_Color_E-Ink_Display_1_54/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Triple_Color_E-Ink_Display_1.54/img/main.jpg) -->

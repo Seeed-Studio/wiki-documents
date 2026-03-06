@@ -1,13 +1,16 @@
 ---
 description: SenseCAP_T1000_tracker_and_Ubidots_Integrated(Helium)
-title:  Ubidots Integrated(via Helium)
+title: Ubidots Integrated(via Helium)
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_Ubidots_Helium
 last_update:
   date: 8/16/2023
   author: Jessie
+createdAt: '2023-08-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Ubidots_Helium/
 ---
 
 

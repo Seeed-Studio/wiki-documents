@@ -1,13 +1,16 @@
 ---
 description: Pre-compiled Arduino Libraries Usage
-title:  Pre-compiled Arduino Libraries Usage
+title: Pre-compiled Arduino Libraries Usage
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-Static-Library
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Software-Static-Library/
 ---
 
 <!-- # Arduino Tutorials - How to Use Static (Pre-compiled) Libraries in Arduino -->

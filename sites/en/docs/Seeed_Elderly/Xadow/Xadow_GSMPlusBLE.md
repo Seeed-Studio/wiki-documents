@@ -2,13 +2,16 @@
 description: Xadow - GSM&#43;BLE
 title: Xadow - GSM&#43;BLE
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_GSMPlusBLE
 sku: 102040005
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Xadow_GSMPlusBLE/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Xadow_GSM-BLE/image/Xadow_GSM%2BBLE_shangjiatu.JPG)

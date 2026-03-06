@@ -11,6 +11,9 @@ slug: /Roboflow-Jetson-Getting-Started
 last_update:
   date: 10/26/2023
   author: Lakshantha
+createdAt: '2023-10-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Roboflow-Jetson-Getting-Started/
 ---
 
 # Getting Started with Roboflow Inference on NVIDIA® Jetson Devices

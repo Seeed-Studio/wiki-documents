@@ -2,15 +2,18 @@
 description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3 と組み合わせることで、スマートデバイス、ロボティクス、IoT アプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
 title: reSpeaker XVF3800 USB Mic Array と XIAO ESP32S3 による HTTP オーディオストリーミング
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
+  - reSpeaker
+  - XIAO
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /respeaker_xvf3800_xiao_http_audio_stream
 sku: 114993702,114993700
 last_update:
   date: 1/19/2025
   author: Kasun Thushara
+createdAt: '2026-01-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_http_audio_stream/
 ---
 
 ## はじめに

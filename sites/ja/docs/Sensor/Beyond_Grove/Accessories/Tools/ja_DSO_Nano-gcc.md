@@ -8,6 +8,9 @@ slug: /DSO_Nano-gcc
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/DSO_Nano-gcc/
 ---
 
 

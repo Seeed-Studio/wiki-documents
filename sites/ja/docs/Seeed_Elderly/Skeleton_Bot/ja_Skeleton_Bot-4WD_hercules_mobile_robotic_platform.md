@@ -2,13 +2,16 @@
 description: Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 title: Skeleton Bot 4WD ヘラクレスモバイルロボットプラットフォーム
 keywords:
-- Skeleton_Bot-4WD_hercules_mobile_robotic_platform
+  - Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 sku: 110010000
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Skeleton_Bot-4WD_hercules_mobile_robotic_platform/
 ---
 
 

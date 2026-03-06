@@ -2,12 +2,15 @@
 description: Micro_bit bitcar
 title: BitCar
 keywords:
-- Micro_bit
+  - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bitcar
 last_update:
   date: 12/29/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Bitcar/
 ---
 
 <!-- ![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607657113289-2b808a5b-f4e6-4205-ba05-f5ef6339f38d.png#align=left&display=inline&height=415&originHeight=415&originWidth=415&size=0&status=done&style=none&width=415) -->

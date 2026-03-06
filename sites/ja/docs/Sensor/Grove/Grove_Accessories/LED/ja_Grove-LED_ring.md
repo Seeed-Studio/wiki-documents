@@ -2,13 +2,16 @@
 description: Grove - RGB LEDリング (20 - WS2813 Mini)
 title: Grove - RGB LEDリング (20 - WS2813 Mini)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_ring
 sku: 104020128,104020171,104020168,104020173
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-LED_ring/
 ---
 
 

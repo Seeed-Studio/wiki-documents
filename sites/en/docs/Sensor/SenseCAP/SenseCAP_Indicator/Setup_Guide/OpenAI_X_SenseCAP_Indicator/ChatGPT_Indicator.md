@@ -2,13 +2,16 @@
 description: ChatGPT Indicator
 title: ChatGPT Indicator
 keywords:
-- Get Started with SenseCAP Indicator
+  - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ChatGPT
 sidebar_position: 2
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Indicator_ChatGPT/
 ---
   # **SenseCAP Indicator X ChatGPT**
 

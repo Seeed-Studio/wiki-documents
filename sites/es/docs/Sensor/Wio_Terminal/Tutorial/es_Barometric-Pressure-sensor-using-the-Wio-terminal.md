@@ -2,12 +2,15 @@
 description: Sensor de presión usando el terminal Wio
 title: Sensor de presión usando el terminal Wio
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Barometric-Pressure-sensor-using-the-Wio-terminal
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Barometric-Pressure-sensor-using-the-Wio-terminal/
 ---
 
 # Sensor de presión barométrica de alta precisión usando el terminal Wio

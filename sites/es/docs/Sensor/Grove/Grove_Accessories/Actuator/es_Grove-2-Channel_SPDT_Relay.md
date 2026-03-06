@@ -1,6 +1,6 @@
 ---
 title: Grove - Relé SPDT de 2 Canales
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020132
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-2-Channel_SPDT_Relay/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/mian.jpg)

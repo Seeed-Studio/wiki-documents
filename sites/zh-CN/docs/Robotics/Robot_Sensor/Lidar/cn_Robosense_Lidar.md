@@ -2,17 +2,20 @@
 description: 本文档提供了在 reComputer J30/40 上使用 ROS 安装和设置 RoboSense 速腾聚创3D雷达 的分步指南。
 title: 使用 ROS 配置 RoboSense LiDAR
 keywords:
-- Jetson Nano
-- reComputer
-- Robosense
-- Lidar
-- 速腾聚创3D雷达
-- ROS
+  - Jetson Nano
+  - reComputer
+  - Robosense
+  - Lidar
+  - 速腾聚创3D雷达
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robosense_lidar
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/robosense_lidar/
 ---
 
 # 如何在 reComputer 上使用 RoboSense速腾聚创3D雷达 LiDAR

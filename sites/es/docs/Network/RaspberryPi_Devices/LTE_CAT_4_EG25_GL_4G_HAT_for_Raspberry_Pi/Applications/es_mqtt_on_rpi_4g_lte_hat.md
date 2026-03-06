@@ -13,6 +13,9 @@ slug: /mqtt_raspberry_pi_4g_lte_hat
 last_update:
   date: 12/18/2024
   author: Kasun Thushara
+createdAt: '2024-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mqtt_raspberry_pi_4g_lte_hat/
 ---
 
 ## Introducción

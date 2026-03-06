@@ -2,19 +2,22 @@
 description: Esta guía proporciona instrucciones paso a paso para ejecutar inferencia distribuida de LLM usando el backend RPC de llama.cpp en múltiples dispositivos reComputer Jetson.
 title: llama.cpp Distribuido en reComputer Jetson (Modo RPC)
 keywords:
-- reComputer Jetson
-- llama.cpp
-- Inferencia Distribuida
-- RPC
-- CUDA
-- LLM
-- Aceleración GPU
+  - reComputer Jetson
+  - llama.cpp
+  - Inferencia Distribuida
+  - RPC
+  - CUDA
+  - LLM
+  - Aceleración GPU
 image: https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg
 slug: /ai_robotics_distributed_llama_cpp_rpc_jetson
 sku: 100090853,100076722,100060802,100032662
 last_update:
-  date: 2026-01-09
+  date: 2026-01-09T00:00:00.000Z
   author: Lorraine
+createdAt: '2026-01-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ai_robotics_distributed_llama_cpp_rpc_jetson/
 ---
 
 <div align="center">

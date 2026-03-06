@@ -9,7 +9,10 @@ slug: /Traffic-Management-DeepStream-SDK
 last_update:
   date: 01/04/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Traffic-Management-DeepStream-SDK/
 ---
 
 # DeepStream SDK を使用したインテリジェント交通管理システム

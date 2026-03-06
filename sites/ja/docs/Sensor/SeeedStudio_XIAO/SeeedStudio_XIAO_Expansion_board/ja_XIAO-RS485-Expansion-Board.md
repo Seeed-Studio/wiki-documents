@@ -2,13 +2,16 @@
 description: このガイドでは、Seeed Studio XIAO RS485拡張ボードを素早くセットアップし、RS485通信を開始する方法を説明します。
 title: XIAO用RS485拡張ボード
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.webp
 slug: /XIAO-RS485-Expansion-Board
 sku: 113991354
 last_update:
   date: 11/20/2024
   author: Jason
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO-RS485-Expansion-Board/
 ---
 
 

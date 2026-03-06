@@ -2,13 +2,16 @@
 description: Photon用Grove Base Shield
 title: Photon用Grove Base Shield
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Shield_for_Photon
 sku: 103020031
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Base_Shield_for_Photon/
 ---
 
 

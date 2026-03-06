@@ -1,6 +1,6 @@
 ---
 title: AVR USB 编程器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /AVR_USB_Programmer
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/AVR_USB_Programmer/
 ---
 ![](https://files.seeedstudio.com/wiki/AVR_USB_Programmer/img/jyeprogrammer.jpg)
 

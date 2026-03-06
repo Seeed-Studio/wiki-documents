@@ -2,13 +2,16 @@
 description: Grove - LinkIt ONE 入门套件
 title: Grove - LinkIt ONE 入门套件
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Starter_Kit_for_LinkIt_ONE
 sku: 110060039
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Starter_Kit_for_LinkIt_ONE/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Starter_Kit_for_LinkIt_ONE/img/Grove_Starter_Kit_for_LinkIt_ONE_530x397.jpg)

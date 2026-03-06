@@ -2,14 +2,17 @@
 description: YOLOv5 from training to deployment
 title: Train and deploy the YOLOv5 object detection model
 keywords:
-- YOLOv5 
-- we2 
-- object detection
+  - YOLOv5
+  - we2
+  - object detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov5
 last_update:
   date: 04/02/2024
   author: Jack Mu
+createdAt: '2024-04-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ma_deploy_yolov5/
 ---
 
 

@@ -3,19 +3,23 @@ description: Usage guide for Reachy Mini Lite covering the desktop application d
 title: Using Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:
-- usage
-- dashboard
-- desktop app
-- applications
-- demos
-- python
-- sdk
-- control
+  - usage
+  - dashboard
+  - desktop app
+  - applications
+  - demos
+  - python
+  - sdk
+  - control
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_usage/
 ---
 
 # Using Reachy Mini Lite

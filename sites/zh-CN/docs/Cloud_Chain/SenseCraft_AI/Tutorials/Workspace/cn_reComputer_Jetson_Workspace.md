@@ -3,9 +3,9 @@ sidebar_position: 13
 description: SenseCraft AI 平台上的 Nvidia Jetson 工作空间
 title: reComputer Jetson 工作空间
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-ai/tutorials/nvidia-jetson-workspace
 aliases:
@@ -13,6 +13,9 @@ aliases:
 last_update:
   date: 08/22/2024
   author: Frank
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
 ## 入门指南

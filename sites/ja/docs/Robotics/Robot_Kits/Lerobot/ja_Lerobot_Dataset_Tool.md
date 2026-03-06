@@ -2,10 +2,10 @@
 description: このWikiでは、エピソードの削除、データセットのマージなどを含むLeRobotデータセットユーティリティについて説明します。
 title: Lerobot データセットツール
 keywords:
-- Lerobot
-- Hugging Face
-- Arm
-- Robotics
+  - Lerobot
+  - Hugging Face
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_dataset_tool
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142, 114090081,114090080,100049805,100038899,100028196
@@ -13,7 +13,11 @@ last_update:
   date: 2/11/2026
   author: ZhangJiaQuan
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2026-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/lerobot_dataset_tool/
 ---
 
 <div align="center">

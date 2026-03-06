@@ -3,16 +3,19 @@ description: 使用 SenseCAP Watcher Agent 网页控制面板的指南
 title: 网页控制面板(β)
 sidebar_position: 3
 keywords:
-- SenseCAP
-- Watcher
-- Web Control Panel
-- Agent Configuration
-- Device Management
+  - SenseCAP
+  - Watcher
+  - Web Control Panel
+  - Agent Configuration
+  - Device Management
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /watcher_web_control_panel
 last_update:
   date: 10/13/2025
   author: Twelve
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher_web_control_panel/
 ---
 
 # 网页控制面板测试版指南

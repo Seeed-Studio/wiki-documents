@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO RP2040 with NuttX
 title: XIAO RP2040 With NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiao-rp2040-with-nuttx
 last_update:
-    date: 8/18/2024
-    author: halyssonJr
+  date: 8/18/2024
+  author: halyssonJr
+createdAt: '2024-07-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/
 ---
 
 # Seeed Studio XIAO RP2040 with NuttX(RTOS)

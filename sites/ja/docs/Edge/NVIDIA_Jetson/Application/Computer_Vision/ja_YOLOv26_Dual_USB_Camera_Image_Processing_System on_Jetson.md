@@ -18,6 +18,9 @@ sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 02/10/2026
   author: Lorraine
+createdAt: '2026-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ai_roboticsyolov26_dual_camera_system/
 ---
 ## はじめに
 

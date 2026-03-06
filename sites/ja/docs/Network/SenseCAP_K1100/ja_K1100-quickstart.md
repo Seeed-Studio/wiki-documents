@@ -2,13 +2,16 @@
 description: SenseCraftを使用した迅速かつコード不要の開始
 title: SenseCraftを使用した迅速かつコード不要の開始
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-quickstart
 sku: 110991748
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/K1100-quickstart/
 ---
 
 

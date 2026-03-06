@@ -2,13 +2,15 @@
 description: intro
 title: 功能特性
 keywords:
-    - mission-pack
-# image: 
+  - mission-pack
 slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-08-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/mission_pack_features_v3/
 ---
 
 Mission Pack是一款全面的AIoT解决方案，专为增强**灾害防备和响应工作**而设计。它将远程传感、数据传输、边缘计算能力集于一体，提供了一个**强大且灵活的系统**，用于实时数据收集、分析和响应，从而实现灾害情况的有效管理和缓解。

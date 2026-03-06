@@ -2,13 +2,16 @@
 description: 带有嵌入式电池管理芯片的 Seeed Studio XIAO Grove 扩展板
 title: 带有电池管理芯片的 XIAO Grove 扩展板
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 sku: 103020312
 last_update:
   date: 1/10/2023
   author: shuxu hu
+createdAt: '2023-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png) -->

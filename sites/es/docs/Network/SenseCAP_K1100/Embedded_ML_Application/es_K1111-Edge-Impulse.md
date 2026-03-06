@@ -2,12 +2,15 @@
 description: Sensores Integrados con Edge Impulse
 title: Sensores Integrados con Edge Impulse
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1111-Edge-Impulse
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1111-Edge-Impulse/
 ---
 # Desarrollar aplicación Edge Impulse a la nube vía Helium
 

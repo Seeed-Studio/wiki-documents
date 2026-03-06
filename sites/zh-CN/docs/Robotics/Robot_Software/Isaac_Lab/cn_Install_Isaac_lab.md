@@ -2,13 +2,16 @@
 description: 本文档提供了安装 Isaac Lab 的分步指南。
 title: 安装 Isaac Lab
 keywords:
-- NVIDIA
-- Isaac Lab
+  - NVIDIA
+  - Isaac Lab
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /install_isaaclab
 last_update:
   date: 2025/5/28
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/install_isaaclab/
 ---
 
 # 安装 Isaac Lab

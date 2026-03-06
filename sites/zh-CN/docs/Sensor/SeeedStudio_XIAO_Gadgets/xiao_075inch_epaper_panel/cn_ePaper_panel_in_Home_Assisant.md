@@ -2,15 +2,18 @@
 description: 基于 XIAO ESP32C3 的 7.5 英寸 E Ink® 显示屏是一个紧凑、节能的解决方案，用于展示 Home Assistant 数据。
 title: 在 Home Assistant 中与 ESPHome 配合使用
 keywords:
-- ePaper display
-- ESPHome
-- Home Assistant
+  - ePaper display
+  - ESPHome
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover.webp
 slug: /xiao_075inch_epaper_panel_esphome
 sidebar_position: 2
 last_update:
   date: 03/12/2025
   author: Allen
+createdAt: '2025-03-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Shield_v3
 sku: 103030009
 last_update:
-  date: 01/11/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/11/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Relay_Shield_v3/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_L_v3.0.jpg" alt="pir" width={600} height="auto" /></p>

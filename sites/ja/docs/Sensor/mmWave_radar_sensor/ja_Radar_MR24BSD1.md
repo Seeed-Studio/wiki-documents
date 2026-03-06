@@ -2,13 +2,16 @@
 description: 24GHz mmWave 睡眠呼吸監視
 title: 24GHz mmWave 睡眠呼吸監視
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24BSD1
 sku: 101990885
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Radar_MR24BSD1/
 ---
 
 # 24GHz mmWave センサー - 睡眠呼吸監視 (MR24BSD1)

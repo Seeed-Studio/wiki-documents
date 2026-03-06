@@ -1,9 +1,9 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa の使用開始
-title:  SenseCAP Solar Node の使用開始
+title: SenseCAP Solar Node の使用開始
 keywords:
-- Meshtastic
-- Solar
+  - Meshtastic
+  - Solar
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 12/24/2025
   author: Michelle Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note

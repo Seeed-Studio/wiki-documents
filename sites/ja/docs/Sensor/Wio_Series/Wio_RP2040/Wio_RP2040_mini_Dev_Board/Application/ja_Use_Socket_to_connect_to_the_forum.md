@@ -1,6 +1,6 @@
 ---
 title: ソケットを使用してフォーラムに接続する
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Use_Socket_to_connect_to_the_forum/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Seeedでは、Seeedersコミュニティを非常に大切にしています。Seeed Studio Contributor Programは、世界中の親愛なる友人たちと協力して革新的なソリューションを共に構築するために開始された共同プログラムです。
 title: Contributor Program
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/contributor/xuanchuan.jpg
 slug: /Contributor
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Contributor/
 ---
 
 

@@ -5,7 +5,7 @@ keywords:
   - Edge Box Rpi 200
   - Getting started
   - IIoT
-  - Industrial 
+  - Industrial
   - N3uron
   - AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,6 +13,9 @@ slug: /Edgebox-Rpi-200_N3uron_AWS
 last_update:
   date: 5/2/2024
   author: Kasun Thushara
+createdAt: '2024-03-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Edgebox-Rpi-200_N3uron_AWS/
 ---
 ## Introduction
 

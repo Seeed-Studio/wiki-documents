@@ -2,13 +2,16 @@
 description: Arnés del kit de inicio V1.0
 title: Arnés del kit de inicio V1.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Starter_bundle_harness_V1
 sku: 110060009
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Starter_bundle_harness_V1/
 ---
 ![](https://files.seeedstudio.com/wiki/Starter_bundle_harness_V1/img/grharn1.jpg)
 

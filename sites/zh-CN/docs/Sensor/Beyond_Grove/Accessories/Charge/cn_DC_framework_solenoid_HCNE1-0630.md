@@ -1,6 +1,6 @@
 ---
 title: DC框架电磁铁 HCNE1-0630
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DC_framework_solenoid_HCNE1-0630
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DC_framework_solenoid_HCNE1-0630/
 ---
 
 这款12伏直流框架电磁铁非常适合各种项目！这种类型的电磁铁通常用于自动门锁、售货机、机器人等。然而，它几乎适用于任何需要直流电磁铁的项目。

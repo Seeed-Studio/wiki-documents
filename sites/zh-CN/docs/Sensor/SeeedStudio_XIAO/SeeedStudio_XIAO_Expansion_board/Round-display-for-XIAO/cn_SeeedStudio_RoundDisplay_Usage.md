@@ -2,13 +2,16 @@
 description: 本教程介绍圆形屏幕扩展板功能的使用。
 title: 硬件使用
 keywords:
-- Round display
-- XIAO
+  - Round display
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /seeedstudio_round_display_usage
 last_update:
   date: 04/27/2023
   author: Citric
+createdAt: '2023-04-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/seeedstudio_round_display_usage/
 ---
 
 # Seeed Studio Round Display 扩展板的使用

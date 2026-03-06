@@ -2,14 +2,17 @@
 description: XIAO ESP32C3 驱动的 7.5 英寸电子墨水显示屏是一个紧凑、节能的解决方案，可通过 Arduino 展示数据。
 title: 与 Arduino 配合使用
 keywords:
-- ePaper display
-- arduino
+  - ePaper display
+  - arduino
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
 slug: /xiao_075inch_epaper_panel_arduino
 sidebar_position: 3
 last_update:
   date: 03/26/2025
   author: Allen
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>

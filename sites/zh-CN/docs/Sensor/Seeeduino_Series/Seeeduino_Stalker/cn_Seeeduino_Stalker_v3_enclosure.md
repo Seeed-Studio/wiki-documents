@@ -2,13 +2,16 @@
 description: Seeeduino Stalker v3 外壳
 title: Seeeduino Stalker v3 外壳
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_v3_enclosure
 sku: 110070015
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino_Stalker_v3_enclosure/
 ---
 
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0738.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0741.JPG)

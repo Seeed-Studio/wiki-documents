@@ -2,12 +2,15 @@
 description: Grove - 五向开关
 title: Grove - 五向开关
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-5-Way_Switch
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-5-Way_Switch/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-5-Way_Switch/img/main.jpg)

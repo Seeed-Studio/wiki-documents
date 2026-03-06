@@ -2,12 +2,15 @@
 description: 将 JetPack 刷写到 reComputer J4012（J401 载板）
 title: reComputer J1020v2 入门指南
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J1020v2_with_Jetson_getting_start
 last_update:
   date: 6/29/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_J1020v2_with_Jetson_getting_start/
 ---
 
 # reComputer J1020v2 入门指南

@@ -2,12 +2,15 @@
 description: Esta es una FAQ sobre el uso de OTA o actualizaciones incrementales que pueden llevar a inestabilidad del sistema y riesgos de seguridad, por lo que se recomienda realizar actualizaciones completas de ROM para mantener la seguridad y estabilidad del sistema, evitando actualizaciones parciales.
 title: Actualizar Paquetes de Software para Jetson
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/upgrade_software_packages_for_jetson/
 ---
 
 #### ¿Cómo puedo actualizar paquetes de software si me dijiste que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?

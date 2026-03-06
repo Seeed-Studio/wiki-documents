@@ -2,14 +2,17 @@
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
 title: BC01 屋内 Bluetooth ビーコン
 keywords:
-- BLE
-- Positioning
+  - BLE
+  - Positioning
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth_Beacon.webp
 slug: /bluetooth_beacon_for_SenseCAP_Traker
 sku: E2025081201,E2025081501
 last_update:
   date: 05/29/2025
   author: Zeke
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/bluetooth_beacon_for_SenseCAP_Traker/
 ---
 
 BLE（Bluetooth Low Energy）ロケーションビーコンは、定期的に Bluetooth 信号を送信する小型のワイヤレスデバイスです。これらの信号は、SenseCAP T1000 Tracker などの Bluetooth 対応デバイスで検出でき、ビーコンとの近接性を判定することで、屋内測位、資産追跡、その他のアプリケーション向けの位置ベースソリューションを構築できます。

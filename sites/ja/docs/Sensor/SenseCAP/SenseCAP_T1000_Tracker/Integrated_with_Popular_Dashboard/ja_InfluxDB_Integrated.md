@@ -2,12 +2,15 @@
 description: SenseCAP_T1000_tracker_and_InfluxDB_Integrated
 title: InfluxDB統合（TTS経由）
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_InfluxDB_TTS
 last_update:
   date: 8/18/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_InfluxDB_TTS/
 ---
 
 

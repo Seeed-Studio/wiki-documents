@@ -2,13 +2,16 @@
 description: Getting started with 1.47 inch LCD SPI Display
 title: 1.47 inch LCD SPI Display
 keywords:
-- oled display
+  - oled display
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /1-47inch_lcd_spi_display
 sku: 104990803
 last_update:
   date: 08/17/2023
   author: Citric
+createdAt: '2023-08-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/1-47inch_lcd_spi_display/
 ---
 
 # 1.47 inch LCD SPI Display

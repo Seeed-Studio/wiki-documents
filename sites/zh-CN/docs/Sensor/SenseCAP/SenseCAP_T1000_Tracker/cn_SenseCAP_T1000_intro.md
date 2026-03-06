@@ -2,13 +2,16 @@
 description: SenseCAP T1000 追踪器
 title: SenseCAP T1000 追踪器
 keywords:
-- Tracker
-- SenseCAP
+  - Tracker
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_tracker
 last_update:
   date: 10/24/2023
   author: Jessie
+createdAt: '2023-10-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sensecap_t1000_tracker/
 ---
 
 

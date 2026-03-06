@@ -2,9 +2,9 @@
 description: Introducción al uso del kit de sensor de detección de respiración y latidos cardíacos mmWave de 60GHz con XIAO ESP32C6 (MR60BHA2)
 title: Introducción al uso de MR60BHA2
 keywords:
-- mmwave
-- radar
-- MR60BHA2
+  - mmwave
+  - radar
+  - MR60BHA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg
 slug: /getting_started_with_mr60bha2_mmwave_kit
 sku: 114993387
@@ -12,6 +12,9 @@ sidebar_position: 0
 last_update:
   date: 08/19/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/es/getting_started_with_mr60bha2_mmwave_kit/
 ---
 
 # Introducción al uso del kit de sensor de detección de respiración y latidos cardíacos mmWave de 60GHz con XIAO ESP32C6 (MR60BHA2)

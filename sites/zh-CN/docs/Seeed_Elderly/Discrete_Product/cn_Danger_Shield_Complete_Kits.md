@@ -2,13 +2,16 @@
 description: Danger Shield 完整套件
 title: Danger Shield 完整套件
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Danger_Shield_Complete_Kits
 sku: 103990021
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Danger_Shield_Complete_Kits/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/DgrSld_13.jpg)
 

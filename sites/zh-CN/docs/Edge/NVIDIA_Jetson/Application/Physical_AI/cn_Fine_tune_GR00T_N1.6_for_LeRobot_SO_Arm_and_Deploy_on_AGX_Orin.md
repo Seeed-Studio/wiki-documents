@@ -2,16 +2,19 @@
 description: 本 wiki 介绍了在 J501 Mini（AGX Orin）上部署 AI 和机器人项目的示例工作流程。还提供了详细的分步说明和参考文档。
 title: 为 LeRobot SO-101 机械臂微调 Isaac GR00T N1.6 并在 AGX Orin 上部署
 keywords:
-- J501 mini
-- Robotics
-- AGX Orin
-- gr00t n1.6
+  - J501 mini
+  - Robotics
+  - AGX Orin
+  - gr00t n1.6
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin
 sku: E2025123101,114993668
 last_update:
   date: 2026-1-6
   author: Dayu
+createdAt: '2026-01-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin/
 ---
 
 # 🤖 为 LeRobot SO-101 机械臂微调 GR00T N1.6 并在 AGX Orin 上部署

@@ -2,13 +2,16 @@
 description: 本维基旨在介绍基于 DM-4310-2EC 电机的可更换夹爪设计
 title: DM_Gripper - 装配指南与演示
 keywords:
-- Gripper
-- Robotics 
+  - Gripper
+  - Robotics
 slug: /dm_gripper
 sku: 100094243,100007512
 last_update:
   date: 9/17/2025
   author: Ylson W
+createdAt: '2025-09-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/dm_gripper/
 ---
 
 # DM_Gripper - 装配指南

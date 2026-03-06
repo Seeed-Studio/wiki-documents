@@ -1,6 +1,6 @@
 ---
 title: Grove - 16通道PWM驱动器 (PCA9685)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 108020102
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-16-Channel_PWM_Driver-PCA9685/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-16-Channel_PWM_Driver-PCA9685/img/main.jpg)

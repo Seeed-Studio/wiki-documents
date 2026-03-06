@@ -2,14 +2,17 @@
 description: 使用 Wio Terminal 进行手势识别
 title: 使用 Wio Terminal 进行手势识别
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_TensorFlow_Lite
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Gesture-Recognition
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Gesture-Recognition/
 ---
 
 # 使用 Wio Terminal 进行机器学习 - 手势识别
