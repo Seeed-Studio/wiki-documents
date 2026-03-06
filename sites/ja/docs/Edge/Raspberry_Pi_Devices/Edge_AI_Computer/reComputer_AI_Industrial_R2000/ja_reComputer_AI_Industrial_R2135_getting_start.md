@@ -2,15 +2,18 @@
 description: reComputer AI R2000は、Raspberry Pi 5をベースとした強力なエッジAIコンピューターです。クアッドコアArm Cortex-A76プロセッサー、8GB RAM、M.2 SSDサポート、最大26 TOPSを提供するHailo-8 AI加速モジュールを搭載し、リアルタイム、低遅延、高効率のAI推論を実現します。AIを活用した映像解析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広いAIアプリケーションに最適な選択肢です。
 title: reComputer AI Industrial R2135シリーズの使用開始
 keywords:
-- Raspberry pi
-- Edge AI Computer
-- reComputer R2000
+  - Raspberry pi
+  - Edge AI Computer
+  - reComputer R2000
 image: https://files.seeedstudio.com/wiki/AI-box-cm5/r2135.webp
 slug: /recomputer_ai_industrial_r2135_getting_start
 sku: 114993595,103990763,E2025081502,E2025081503
 last_update:
   date: 05/06/2025
   author: Jiahao Li
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_ai_industrial_r2135_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial.jpeg" style={{width:800, height:'auto'}}/></div>

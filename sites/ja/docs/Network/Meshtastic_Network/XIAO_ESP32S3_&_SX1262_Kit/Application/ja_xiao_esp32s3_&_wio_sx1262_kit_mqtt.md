@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 3/2/2026
   author: Michelle Huang
+createdAt: '2026-03-02'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 ---
 
 import Tabs from '@theme/Tabs';

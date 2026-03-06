@@ -2,13 +2,16 @@
 description: NPi i.MX6ULL Dev Board - Linux SBC
 title: NPi i.MX6ULL Dev Board - Linux SBC
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /NPi-i.MX6ULL-Dev-Board-Linux-SBC
 sku: 102991305,102991306
 last_update:
   date: 2/15/2023
-  author: jianjing Huang 
+  author: jianjing Huang
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/NPi-i.MX6ULL-Dev-Board-Linux-SBC/
 ---
 <!-- ---
 name: NPi i.MX6ULL Dev Board - Linux SBC

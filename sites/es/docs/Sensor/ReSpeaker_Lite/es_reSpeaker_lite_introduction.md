@@ -2,13 +2,16 @@
 description: Primeros pasos con ReSpeaker Lite
 title: Primeros pasos con reSpeaker Lite
 keywords:
-- ReSpeaker
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/
 ---
 
 ## Introducción

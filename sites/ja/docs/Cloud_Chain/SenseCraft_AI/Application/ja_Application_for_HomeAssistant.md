@@ -2,8 +2,8 @@
 description: Grove Vision AI V2 を HomeAssistant に接続する方法を紹介します。
 title: HomeAssistant 向けアプリケーション
 keywords:
-- vision AI
-- home assistant
+  - vision AI
+  - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
@@ -12,6 +12,9 @@ sidebar_position: 1
 last_update:
   date: 01/10/2024
   author: Citric
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/application/application-for-homeassistant/
 ---
 
 # Grove Vision AI V2 を Home Assistant に接続する

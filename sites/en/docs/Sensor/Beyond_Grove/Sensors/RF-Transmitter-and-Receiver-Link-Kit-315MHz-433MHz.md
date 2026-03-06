@@ -1,6 +1,6 @@
 ---
 title: RF Transmitter and Receiver Link Kit - 315MHz/433MHz
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 114992732
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz/
 ---
 
 # RF Transmitter and Receiver Link Kit - 315MHz/433MHz

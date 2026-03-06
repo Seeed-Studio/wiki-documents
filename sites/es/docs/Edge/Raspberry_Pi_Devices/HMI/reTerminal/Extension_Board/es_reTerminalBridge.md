@@ -1,6 +1,6 @@
 ---
-description:   reTerminal E10-1
-title:   reTerminal E10-1
+description: reTerminal E10-1
+title: reTerminal E10-1
 keywords:
   - Edge
   - reTerminal Extension_Board
@@ -9,6 +9,9 @@ slug: /reTerminalBridge
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminalBridge/
 ---
 
 # **Primeros pasos con reTerminal E10-1**

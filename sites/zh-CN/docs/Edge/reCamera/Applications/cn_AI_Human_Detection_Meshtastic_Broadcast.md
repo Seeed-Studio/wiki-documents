@@ -2,18 +2,21 @@
 title: AI 人体检测与 Meshtastic 通知
 description: 本维基演示了一个由 AI 驱动的人体检测系统，使用 AI 相机与 XIAO ESP32S3 和 Wio SX1262 Meshtastic 网络，实现实时告警广播。
 keywords:
-    - AI Human Detection
-    - XIAO ESP32S3
-    - ESP-Mesh
-    - Edge AI
-    - GPIO Trigger
+  - AI Human Detection
+  - XIAO ESP32S3
+  - ESP-Mesh
+  - Edge AI
+  - GPIO Trigger
 slug: /ai_human_detection_meshtastic_broadcast
 sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
-    date: 2026-01-28
-    author: John Xiang
+  date: 2026-01-28T00:00:00.000Z
+  author: John Xiang
+createdAt: '2026-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## 介绍

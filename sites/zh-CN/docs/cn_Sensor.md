@@ -2,12 +2,15 @@
 description: 感知是从物理世界获取数字化数据的初始步骤，也可能是最关键的步骤。通过在动态感知框架内利用传感器和信息基础设施，我们为监测社会活动和理解物理和自然环境奠定了基础。
 title: 传感器和感知
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_Network
 last_update:
   date: 05/23/2024
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor_Network/
 ---
 
 感知是从物理世界获取数字化数据的初始步骤，也可能是最关键的步骤。通过在动态感知框架内利用传感器和信息基础设施，我们为监测社会活动和理解物理和自然环境奠定了基础。这个感知过程使我们能够收集和理解来自周围世界的数据。

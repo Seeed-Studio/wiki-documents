@@ -2,16 +2,19 @@
 description: 本维基提供华馨京 StarAI 机械臂的调试教程，并在 Lerobot 框架内实现数据收集和训练。
 title: StarAI 机械臂Lerobot入门教程
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics 
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /lerobot_starai_arm
 sku: 114090081,114090080,100049805,100038899,100028196
 last_update:
   date: 10/13/2025
   author: LiShanghang
+createdAt: '2025-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/lerobot_starai_arm/
 ---
 
 

@@ -2,13 +2,16 @@
 description: 涵盖设备的构造和操作，详细说明每个组件如何为 SenseCAP Indicator 的整体功能做出贡献。
 title: 深入了解硬件
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 sidebar_position: 1
 last_update:
   date: 11/17/2023
   author: Spencer
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_Dive_into_the_Hardware/
 ---
 # **概述**
 

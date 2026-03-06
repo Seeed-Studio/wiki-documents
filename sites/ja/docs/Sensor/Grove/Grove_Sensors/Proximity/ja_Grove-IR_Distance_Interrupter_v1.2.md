@@ -1,6 +1,6 @@
 ---
 title: Grove - IR距離インタラプター v1.2
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 101020175, 101020040
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-IR_Distance_Interrupter_v1.2/
 ---
 
 

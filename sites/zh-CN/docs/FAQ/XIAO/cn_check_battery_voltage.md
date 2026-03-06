@@ -1,11 +1,13 @@
 ---
 description: XIAOESP32C3-常见问题解答
 title: 如何检测电池电压
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /check_battery_voltage
 last_update:
   date: 6/28/2023
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/check_battery_voltage/
 ---
 
 由于 ESP32C3 引脚数量的限制，为了确保 XIAO ESP32C3 拥有与其他 XIAO 系列相同数量的 GPIO，引擎师们没有额外的引脚分配给电池进行电压测量。

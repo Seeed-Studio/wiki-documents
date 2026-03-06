@@ -6,7 +6,10 @@ slug: /How_to_use_and_write_a_library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/How_to_use_and_write_a_library/
 ---
 
 La popularidad de Arduino depende en gran medida de un gran número de bibliotecas excelentes y fáciles de usar. La biblioteca de Arduino utiliza bibliotecas de clases C++ orientadas a objetos, puedes usarlas fácilmente sin conocer los detalles de implementación de la biblioteca.

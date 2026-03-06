@@ -9,6 +9,9 @@ slug: /EdgeBox-rpi-200-with-LoRaWAN-module
 last_update:
   date: 7/14/2023
   author: Peter Pan
+createdAt: '2023-06-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/EdgeBox-rpi-200-with-LoRaWAN-module/
 ---
 
 ## Edgebox-RPI-200

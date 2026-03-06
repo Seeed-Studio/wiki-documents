@@ -2,15 +2,18 @@
 description: Seeed Studio XIAO ESP32S3でのBluetooth使用方法。
 title: 両バージョン対応のBluetooth
 keywords:
-- esp32s3
-- xiao
-- ble
-- bluetooth
+  - esp32s3
+  - xiao
+  - ble
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_bluetooth
 last_update:
   date: 04/03/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_bluetooth/
 ---
 
 # Seeed Studio XIAO ESP32S3 (Sense)でのBluetooth使用方法

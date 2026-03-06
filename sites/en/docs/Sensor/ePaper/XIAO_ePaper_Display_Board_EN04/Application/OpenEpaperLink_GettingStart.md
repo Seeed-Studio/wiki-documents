@@ -6,12 +6,15 @@ keywords:
   - opendisplay
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
-sidebar_position: 1 
+sidebar_position: 1
 slug: /EN04_opendisplay
 sku: E25120101
 last_update:
   date: 01/13/2026
   author: Tomasz/Allen
+createdAt: '2026-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/EN04_opendisplay/
 ---
 
 import Tabs from '@theme/Tabs';

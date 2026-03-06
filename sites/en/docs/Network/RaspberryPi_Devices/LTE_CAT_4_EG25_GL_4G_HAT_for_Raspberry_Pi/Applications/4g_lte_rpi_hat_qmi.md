@@ -12,6 +12,9 @@ slug: /raspberry_pi_4g_lte_hat_qmi
 last_update:
   date: 3/20/2025
   author: Kasun Thushara
+createdAt: '2025-03-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/raspberry_pi_4g_lte_hat_qmi/
 ---
 
 ## Introduction

@@ -3,18 +3,22 @@ description: Understanding Reachy Mini's core concepts and architecture includin
 title: Core Concepts & Architecture
 slug: /reachymini_sdk_core-concept
 keywords:
-- architecture
-- coordinate systems
-- safety limits
-- motor modes
-- client-server
-- daemon
-- sdk
+  - architecture
+  - coordinate systems
+  - safety limits
+  - motor modes
+  - client-server
+  - daemon
+  - sdk
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_sdk_core-concept/
 ---
 
 # Core Concepts & Architecture

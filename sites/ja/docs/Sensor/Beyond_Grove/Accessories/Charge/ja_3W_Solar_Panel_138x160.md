@@ -1,6 +1,6 @@
 ---
 title: 3W ソーラーパネル 138*160
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウラス
@@ -10,6 +10,9 @@ sku: 313070001
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/3W_Solar_Panel_138x160/
 ---
 
 

@@ -10,6 +10,9 @@ sidebar_position: 1
 last_update:
   date: 11/27/2024
   author: Citrc
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/sensecraft-ai-main/
 ---
 
 # SenseCraft AI Wiki センター

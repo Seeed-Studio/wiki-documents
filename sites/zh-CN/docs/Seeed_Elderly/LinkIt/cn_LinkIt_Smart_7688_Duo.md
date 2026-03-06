@@ -2,13 +2,16 @@
 description: LinkIt Smart 7688 Duo
 title: LinkIt Smart 7688 Duo
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_Smart_7688_Duo
 sku: 102110017
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/LinkIt_Smart_7688_Duo/
 ---
 
 ![输入图片描述](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Linkit_7688_DUO_Product_view.jpg)

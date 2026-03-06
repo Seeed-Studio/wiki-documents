@@ -1,6 +1,6 @@
 ---
 title: Shield MaTrix V0.9
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Shield-MaTrix-V0.9b
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Shield-MaTrix-V0.9b/
 ---
 
 

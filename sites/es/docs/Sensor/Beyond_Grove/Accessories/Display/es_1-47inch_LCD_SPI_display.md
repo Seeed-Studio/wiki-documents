@@ -2,13 +2,16 @@
 description: Comenzando con la pantalla LCD SPI de 1.47 pulgadas
 title: Pantalla LCD SPI de 1.47 pulgadas
 keywords:
-- oled display
+  - oled display
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /1-47inch_lcd_spi_display
 sku: 104990803
 last_update:
   date: 08/17/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/1-47inch_lcd_spi_display/
 ---
 
 # Pantalla LCD SPI de 1.47 pulgadas

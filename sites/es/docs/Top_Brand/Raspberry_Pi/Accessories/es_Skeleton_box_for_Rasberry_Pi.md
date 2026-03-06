@@ -2,12 +2,15 @@
 description: Caja esqueleto para Raspberry Pi
 title: Caja esqueleto para Raspberry Pi
 keywords:
-- Accessories
+  - Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_box_for_Rasberry_Pi
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Skeleton_box_for_Rasberry_Pi/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Pi_skeleton_02.jpg)

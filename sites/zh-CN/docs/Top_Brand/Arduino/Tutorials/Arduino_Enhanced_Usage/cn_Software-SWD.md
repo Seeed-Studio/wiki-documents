@@ -2,12 +2,15 @@
 description: 如何使用 SWD 接口调试 Arduino 开发板
 title: 如何使用 SWD 接口调试 Arduino 开发板
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-SWD
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Software-SWD/
 ---
 # 如何使用 SWD 接口调试 Arduino 开发板
 

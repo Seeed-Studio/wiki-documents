@@ -2,12 +2,15 @@
 description: Tutorial de Xadow - Detector de Aceleración
 title: Tutorial de Xadow - Detector de Aceleración
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Tutorial_Acceleration_Detector
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Xadow_Tutorial_Acceleration_Detector/
 ---
 Hemos creado un detector de aceleración que detecta la aceleración y recuerda a los usuarios mediante vibración. Cuando la aceleración cambia, el Xadow Vibration vibrará y el OLED mostrará el valor del acelerómetro. También puedes ver el voltaje actual de la batería en la pantalla OLED.
 

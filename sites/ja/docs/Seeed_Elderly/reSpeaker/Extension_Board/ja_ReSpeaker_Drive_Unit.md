@@ -2,12 +2,15 @@
 description: ReSpeaker Drive Unit
 title: ReSpeaker Drive Unit
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Drive_Unit
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ReSpeaker_Drive_Unit/
 ---
 
 

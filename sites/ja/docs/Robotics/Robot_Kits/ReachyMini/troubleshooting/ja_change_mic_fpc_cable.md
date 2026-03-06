@@ -3,17 +3,21 @@ description: Reachy Mini のマイクアセンブリ内の破損した FPC ケ�
 title: マイクの FPC ケーブルを交換する
 slug: /reachymini_troubleshooting_change_mic_fpc_cable
 keywords:
-- fpc cable
-- microphone
-- replacement
-- repair
-- tutorial
-- damaged cable
+  - fpc cable
+  - microphone
+  - replacement
+  - repair
+  - tutorial
+  - damaged cable
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_troubleshooting_change_mic_fpc_cable/
 ---
 
 # チュートリアル：Reachy Mini のマイクの FPC ケーブルを交換する方法

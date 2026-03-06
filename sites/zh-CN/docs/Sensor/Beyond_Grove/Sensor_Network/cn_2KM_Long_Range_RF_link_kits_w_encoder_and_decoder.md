@@ -1,6 +1,6 @@
 ---
 title: 2KM 超长距离 RF 链路套件（带编码器和解码器）
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113990018
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/
 ---
 ![](https://files.seeedstudio.com/wiki/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/img/2kmrf.jpg)
 

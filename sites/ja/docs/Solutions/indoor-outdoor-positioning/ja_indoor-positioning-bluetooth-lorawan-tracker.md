@@ -1,6 +1,6 @@
 ---
-title: "LoRaWANを使用したBluetooth屋内測位システム"
-description: "SenseCAP Trackerを使用した信頼性の高い屋内測位ソリューション。精密な位置追跡のためのBluetoothと長距離データ伝送のためのLoRaWANを組み合わせ、簡単な展開を可能にします。"
+title: LoRaWANを使用したBluetooth屋内測位システム
+description: SenseCAP Trackerを使用した信頼性の高い屋内測位ソリューション。精密な位置追跡のためのBluetoothと長距離データ伝送のためのLoRaWANを組み合わせ、簡単な展開を可能にします。
 keywords:
   - Bluetooth
   - LoRaWAN
@@ -14,6 +14,9 @@ sidebar_position: 1
 last_update:
   date: 09/10/2025
   author: Spencer
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/solutions/indoor-positioning-bluetooth-lorawan-tracker/
 ---
 
 ## はじめに

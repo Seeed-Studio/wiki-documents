@@ -1,5 +1,5 @@
 ---
-description: 'Esta página es la página de navegación para el panel de papel electrónico XIAO de 7.5".'
+description: Esta página es la página de navegación para el panel de papel electrónico XIAO de 7.5".
 title: Primeros Pasos con el Panel ePaper XIAO de 7.5"
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp
 slug: /xiao_075inch_epaper_panel
@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 05/19/2025
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.jpg" style={{width:700, height:'auto'}}/></div>

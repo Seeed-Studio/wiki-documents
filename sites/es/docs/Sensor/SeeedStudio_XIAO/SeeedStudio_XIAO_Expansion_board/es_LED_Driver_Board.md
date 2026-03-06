@@ -2,15 +2,18 @@
 description: La Placa Controladora de LED para XIAO es un módulo inteligente diseñado para personalizar tus espacios con luces LED inteligentes.
 title: Placa Controladora de LED para XIAO
 keywords:
-- xiao
-- light
-- LED
+  - xiao
+  - light
+  - LED
 image: https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/LED_Driver_Board_for_Seeed_Studio_XIAO.webp
 slug: /led_driver_board
 sku: 105100021
-last_update: 
+last_update:
   date: 05/21/2025
   author: Carla
+createdAt: '2025-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/led_driver_board/
 ---
 
 # Primeros Pasos con la Placa Controladora de LED para XIAO

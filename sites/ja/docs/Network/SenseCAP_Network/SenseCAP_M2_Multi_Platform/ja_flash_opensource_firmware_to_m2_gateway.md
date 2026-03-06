@@ -6,6 +6,9 @@ slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/flash_opensource_firmware_to_m2_gateway/
 ---
 
 SenseCAP M2ゲートウェイは、成熟したハードウェアソリューションMT7628とSemtech SX1302ベースバンドLong Rangeチップを搭載した、LoRaゲートウェイのコスト効率的なソリューションです。特定のモデルは、工場設定の周波数帯域（EU868/US915/AS923/AU915）、オプションモジュール（4G/GPS）、サポートされるLoRaネットワーク（LoRaWAN®/Heliumネットワーク）によって区別されます。

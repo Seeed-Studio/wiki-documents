@@ -2,12 +2,15 @@
 description: 2022年可持续星球的野外物联网竞赛
 title: 2022年可持续星球的野外物联网竞赛
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /IoT-into-the-wild-contest
 last_update:
   date: 2023/1/13
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/IoT-into-the-wild-contest/
 ---
 # 2022年可持续星球的野外物联网竞赛
 

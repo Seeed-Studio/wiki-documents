@@ -7,6 +7,9 @@ sku: 103030415
 last_update:
   date: 09/18/2023
   author: Stephen Lo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/io_expander_for_xiao/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/1.jpg" alt="pir" width={500} height="auto" /></p>

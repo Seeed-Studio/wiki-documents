@@ -8,6 +8,9 @@ slug: /Scailable-Jetson-Getting-Started
 last_update:
   date: 03/10/2023
   author: Lakshantha
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Scailable-Jetson-Getting-Started/
 ---
 
 # Primeros pasos con Scailable en dispositivos NVIDIA® Jetson

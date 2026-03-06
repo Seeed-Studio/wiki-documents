@@ -2,14 +2,17 @@
 description: This wiki provides a step-by-step guide to install Isaac ROS.
 title: Install the Isaac ROS
 keywords:
-- NVIDIA
-- Isaac ROS
-- ROS
+  - NVIDIA
+  - Isaac ROS
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /install_isaacros
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui
+createdAt: '2025-05-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/install_isaacros/
 ---
 
 ## Isaac ROS Initial Environment Setup

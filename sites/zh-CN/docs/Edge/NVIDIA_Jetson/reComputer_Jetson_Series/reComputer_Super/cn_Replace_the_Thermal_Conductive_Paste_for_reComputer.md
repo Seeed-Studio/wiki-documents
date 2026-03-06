@@ -9,6 +9,9 @@ slug: /replace_the_thermal_conductive_paste_for_recomputer
 last_update:
   date: 07/18/2025
   author: Youjiang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/replace_the_thermal_conductive_paste_for_recomputer/
 ---
 
 # 更换 reComputer 的导热膏

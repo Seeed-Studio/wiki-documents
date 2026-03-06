@@ -2,12 +2,15 @@
 description: Arch GPRS
 title: Arch GPRS
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_GPRS
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Arch_GPRS/
 ---
 
 

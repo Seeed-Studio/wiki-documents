@@ -3,7 +3,7 @@ sidebar_position: 2
 description: Guía de Acceso a la API HTTP
 title: Guía de Acceso a la API HTTP
 keywords:
-- HTTP API 
+  - HTTP API
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/http-api/http-api-access-guide
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform/api/http-api/http-api-access-guide/
 ---
 
 ## Solicitud y Respuesta HTTP

@@ -3,16 +3,16 @@ description: Guía para integrar sistemas empresariales externos con SenseCAP Wa
 title: Lleva la IA de Voz a tu Sistema Empresarial (MCP)
 sidebar_position: 6
 keywords:
-- MCP
-- API
-- Integration
-- Warehouse
-- Voice Control
-- Watcher
-- External System
-- AI Enabled Devices
-- Qwen
-- OA
+  - MCP
+  - API
+  - Integration
+  - Warehouse
+  - Voice Control
+  - Watcher
+  - External System
+  - AI Enabled Devices
+  - Qwen
+  - OA
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /mcp_external_system_integration
 last_update:
@@ -21,6 +21,9 @@ last_update:
 tags:
   - mcp
   - agents
+createdAt: '2025-12-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mcp_external_system_integration/
 ---
 
 import Tabs from '@theme/Tabs';

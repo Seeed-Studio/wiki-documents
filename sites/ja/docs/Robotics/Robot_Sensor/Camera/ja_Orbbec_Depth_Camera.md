@@ -2,17 +2,20 @@
 description: このwikiは、reComputerでROS上でOrbbec Depthカメラを使用するためのステップバイステップガイドを提供します。
 title: Orbbec Depth Camera with ROS
 keywords:
-- Jetson Nano
-- reComputer
-- Orbbec
-- Depth Camera
-- ROS
+  - Jetson Nano
+  - reComputer
+  - Orbbec
+  - Depth Camera
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /orbbec_depth_camera_on_ros
 sku: 101090144,100010971
 last_update:
   date: 10/10/2024
   author: Lidayu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/orbbec_depth_camera_on_ros/
 ---
 # reComputerでROS上でOrbbec Depthカメラを使用する方法
 

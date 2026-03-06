@@ -2,12 +2,15 @@
 description: Xadow - Storage
 title: Xadow - Storage
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Storage
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Xadow_Storage/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_Storage/img/X_Storage_01.jpg)
 

@@ -2,12 +2,15 @@
 description: Conectar a Helium
 title: Conectar a Helium
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connecting-to-Helium
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Connecting-to-Helium/
 ---
 
 # Conectando a Helium

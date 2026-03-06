@@ -3,18 +3,22 @@ description: Guide for flashing firmware to your SenseCAP Watcher Agent
 title: Please ignore this wiki
 sidebar_position: 10
 keywords:
-- SenseCAP
-- Watcher
-- Agent
-- Firmware
-- Flash
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Firmware
+  - Flash
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
   date: 12/04/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2026-03-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/flash_watcher_agent_firmware/
 ---
 
 # Beta version. Please ignore this wiki.

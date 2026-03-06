@@ -2,13 +2,16 @@
 description: Matriz de micrófonos USB ReSpeaker
 title: reSpeaker USB Mic Array
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker-USB-Mic-Array
 sku: 107990193
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ReSpeaker-USB-Mic-Array/
 ---
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)

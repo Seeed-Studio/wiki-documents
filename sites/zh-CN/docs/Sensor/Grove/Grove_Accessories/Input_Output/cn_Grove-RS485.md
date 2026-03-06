@@ -2,13 +2,16 @@
 description: Grove - RS485
 title: Grove - RS485
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RS485
 sku: 103020193
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-RS485/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-RS485/img/preview.png)

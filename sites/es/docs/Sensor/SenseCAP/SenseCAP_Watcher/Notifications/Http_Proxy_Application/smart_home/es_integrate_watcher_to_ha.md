@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 10/11/2025
   author: Twelve
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/integrate_watcher_to_ha/
 ---
 
 # Integrar Watcher a Home Assistant

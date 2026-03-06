@@ -2,12 +2,15 @@
 description: Intel® Edison 和 Grove IoT 入门套件，由 AWS 提供支持
 title: Intel® Edison 和 Grove IoT 入门套件，由 AWS 提供支持
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/17/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS/
 ---
 
 <!-- ---

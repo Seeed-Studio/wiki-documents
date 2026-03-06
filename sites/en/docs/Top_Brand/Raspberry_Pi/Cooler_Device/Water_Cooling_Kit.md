@@ -2,13 +2,16 @@
 description: Water Cooling Kit install
 title: Water Cooling Kit installation guide
 keywords:
-- Raspberry_Pi
+  - Raspberry_Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cooler_Device
 sku: 110070128,114070261
 last_update:
   date: 1/24/2024
   author: Parker
+createdAt: '2024-01-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Cooler_Device/
 ---
 
 <!-- ---

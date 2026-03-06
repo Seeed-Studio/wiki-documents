@@ -2,12 +2,15 @@
 description: Sidekick 高级套件
 title: Sidekick 高级套件
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sidekick_Advanced_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sidekick_Advanced_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Sidekick_Advanced_Kit/img/SKP-0.jpg)

@@ -2,12 +2,15 @@
 description: Xadow 教程 - 通过 BLE 通信
 title: Xadow 教程 - 通过 BLE 通信
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Tutorial_Communicate_via_BLE
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_Tutorial_Communicate_via_BLE/
 ---
 
 你是否曾想过这样的场景：打开手机，我可以看到当前的气压或运动加速度。Xadow 模块可以帮助你实现这一点。

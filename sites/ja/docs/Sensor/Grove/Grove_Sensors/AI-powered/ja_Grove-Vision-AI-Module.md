@@ -2,13 +2,16 @@
 description: Grove - Vision AI モジュール
 title: Grove Vision AI モジュール
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Vision-AI-Module
 sku: 114992866
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Vision-AI-Module/
 ---
 
 

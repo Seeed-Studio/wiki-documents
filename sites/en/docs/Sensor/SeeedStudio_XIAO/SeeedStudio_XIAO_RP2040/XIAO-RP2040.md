@@ -2,13 +2,16 @@
 description: Overview
 title: Getting Started with Seeed Studio XIAO RP2040
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
 slug: /XIAO-RP2040
 sku: 102010428, 100045204
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO-RP2040/
 ---
 
 # Getting Started with Seeed Studio XIAO RP2040

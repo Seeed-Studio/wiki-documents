@@ -2,14 +2,17 @@
 description: Home AssistantをLoRaWANデバイス（XIAO-ESP32-S3）で拡張する
 title: Home AssistantをLoRaWANデバイス（XIAO-ESP32-S3）で拡張する
 keywords:
-- LoRaWAN
-- Home Assistant
-- XIAO ESP32
+  - LoRaWAN
+  - Home Assistant
+  - XIAO ESP32
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ha_xiao_esp32
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ha_xiao_esp32/
 ---
 
 

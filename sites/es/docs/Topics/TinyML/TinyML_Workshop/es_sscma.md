@@ -2,12 +2,15 @@
 description: Este es un proyecto / plataforma de código abierto enfocado en IA embebida.
 title: El "Parpadeo" de IA
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sscma
 last_update:
   date: 08/26/2024
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sscma/
 ---
 
 ## Familiarízate con las herramientas que estamos usando

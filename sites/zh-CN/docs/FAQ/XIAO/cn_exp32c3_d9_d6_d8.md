@@ -1,11 +1,13 @@
 ---
 description: XIAOESP32C3-常见问题
 title: 关于 XIAO ESP32C3 IO 分配的注意事项
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /exp32c3_d9_d6_d8
 last_update:
   date: 6/28/2023
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/exp32c3_d9_d6_d8/
 ---
 
 ESP32C3 有多种启动模式，电源开启时的启动模式由 GPIO2、GPIO8 和 GPIO9 控制。例如，当 GPIO2=0、GPIO8=0 和 GPIO9=0 时，C3 将进入 UART_BOOT 模式。XIAO esp32c3 仅对 GPIO9 上拉，并添加了一个按钮来控制它。GPIO8 和 GPIO2 没有上拉/下拉，这可能会导致客户在某些特殊使用场景中进入 UART_BOOT 模式，从而导致客户无法上传程序。

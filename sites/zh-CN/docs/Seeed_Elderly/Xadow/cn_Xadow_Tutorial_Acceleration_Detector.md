@@ -2,12 +2,15 @@
 description: Xadow 教程 - 加速度检测器
 title: Xadow 教程 - 加速度检测器
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Tutorial_Acceleration_Detector
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_Tutorial_Acceleration_Detector/
 ---
 
 我们制作了一个加速度检测器，它可以检测加速度并通过振动提醒用户。当加速度发生变化时，Xadow 振动器会振动，OLED 屏幕会显示加速度值。您还可以在 OLED 显示屏上看到当前的电池电压。

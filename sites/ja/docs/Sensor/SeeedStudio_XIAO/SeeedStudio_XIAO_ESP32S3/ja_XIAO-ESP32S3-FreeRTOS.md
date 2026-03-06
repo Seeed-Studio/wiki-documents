@@ -11,6 +11,9 @@ slug: /xiao-esp32s3-freertos
 last_update:
   date: 09/14/2024
   author: Priyanshu Roy
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-esp32s3-freertos/
 ---
 
 # XIAO ESP32S3(Sense) With FreeRTOS

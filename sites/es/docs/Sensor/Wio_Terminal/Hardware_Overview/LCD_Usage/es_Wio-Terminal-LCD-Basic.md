@@ -1,6 +1,6 @@
 ---
 title: Básicos de LCD
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LCD-Basic
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-LCD-Basic/
 ---
 
 # Básicos de la Pantalla TFT LCD

@@ -1,12 +1,14 @@
 ---
 description: Fan is not turning on
 title: Fan is not turning on
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Turn_on_the_Fan
 last_update:
-  date: 2023.6.25   
+  date: 2023.6.25
   author: cheng.tang
+createdAt: '2023-06-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Turn_on_the_Fan/
 ---
 
 ODYSSEY - X86J41x5 fan is controlled by Embedded controller (EC) which role as initialize the device before system is up. The temperature in BIOS is detected by EC and the temperature sensor place close to the intel CPU which do not have the sensor pin. In another word, the temperature is not the CPU's direct value, maybe 5 degrees centigrade error. What you saw the temperature value in system is feedback by CPU internal, temperature in BIOS screen feedback by EC, fan run or stop according the EC value.

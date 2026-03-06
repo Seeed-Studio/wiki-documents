@@ -2,13 +2,16 @@
 description: Grove - 0.54 英寸红色双字母数字显示屏
 title: Grove - 0.54 英寸红色双字母数字显示屏
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-0.54_inch_Red_Dual_Alphanumeric_Display
 sku: 104020132
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-0.54_inch_Red_Dual_Alphanumeric_Display/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-0.54-Red-Dual-Alphanumeric-Display/img/front.png) -->

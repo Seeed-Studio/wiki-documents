@@ -10,7 +10,10 @@ slug: /clip_application_on_rpi5_with_ai_kit
 last_update:
   date: 09/27/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/
 ---
 
 # Aplicación Clip en Raspberry Pi con AI Kit

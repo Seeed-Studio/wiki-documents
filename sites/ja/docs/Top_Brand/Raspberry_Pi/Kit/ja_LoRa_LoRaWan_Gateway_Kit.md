@@ -2,13 +2,16 @@
 description: LoRa/LoRaWAN ゲートウェイキット
 title: LoRa/LoRaWAN ゲートウェイキット
 keywords:
-- キット
+  - キット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LoRa_LoRaWan_Gateway_Kit
 sku: 110060622, 110060623
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/LoRa_LoRaWan_Gateway_Kit/
 ---
 
 

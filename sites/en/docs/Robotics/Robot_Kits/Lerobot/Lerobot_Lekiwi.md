@@ -1,11 +1,11 @@
 ---
-description: This wiki provides the assembly and debugging tutorial for the Lekiwi and realizes data collection and training within the Lerobot framework. 
+description: This wiki provides the assembly and debugging tutorial for the Lekiwi and realizes data collection and training within the Lerobot framework.
 title: Lekiwi in Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Car
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Car
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /lerobot_lekiwi
 sku: 114090065,E2025090401
@@ -13,7 +13,11 @@ last_update:
   date: 11/12/2025
   author: Li shanghang
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-05-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/lerobot_lekiwi/
 ---
 
 # How to use the Lekiwi in Lerobot

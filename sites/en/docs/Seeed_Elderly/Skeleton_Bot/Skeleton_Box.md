@@ -2,12 +2,15 @@
 description: Skeleton Box
 title: Skeleton Box
 keywords:
-- Skeleton_Box
+  - Skeleton_Box
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Skeleton_Box/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_Box/img/Skeleton_box_01.jpg)

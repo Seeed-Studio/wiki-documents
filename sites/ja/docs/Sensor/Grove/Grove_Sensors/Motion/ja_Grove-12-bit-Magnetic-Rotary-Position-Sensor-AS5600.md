@@ -2,13 +2,16 @@
 description: Grove - 12ビット磁気回転位置センサー / エンコーダ (AS5600)
 title: Grove - 12ビット磁気回転位置センサー / エンコーダ (AS5600)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600
 sku: 101020692
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/
 ---
 
 

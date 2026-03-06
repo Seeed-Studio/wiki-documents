@@ -2,13 +2,16 @@
 description: Grove - Sensor de Gas(MQ5)
 title: Grove - Sensor de Gas(MQ5)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor-MQ5
 sku: 101020056
 last_update:
   date: 1/3/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Gas_Sensor-MQ5/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/Twig-Gas_Sensor.bmp) -->

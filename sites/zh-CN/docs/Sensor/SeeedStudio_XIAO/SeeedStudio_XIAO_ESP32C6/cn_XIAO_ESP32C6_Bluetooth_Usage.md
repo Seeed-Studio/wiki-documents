@@ -2,15 +2,18 @@
 description: 使用 Seeed Studio XIAO ESP32C6 的蓝牙功能。
 title: 蓝牙使用
 keywords:
-- esp32c6
-- xiao
-- ble
-- bluetooth
+  - esp32c6
+  - xiao
+  - ble
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32c6_bluetooth
 last_update:
   date: 04/11/2024
   author: Citric
+createdAt: '2024-11-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_bluetooth/
 ---
 
 # 使用 Seeed Studio XIAO ESP32C6 的蓝牙功能

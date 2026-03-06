@@ -2,13 +2,16 @@
 description: Grove - LED String Light
 title: Grove - LED String Light
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_String_Light
 sku: 104020005
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-LED_String_Light/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_String_Light/img/Grove-led-string-light.jpg) -->

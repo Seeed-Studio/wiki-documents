@@ -2,13 +2,16 @@
 description: Continuamos explorando el Aprendizaje Automático en el nuevo dispositivo diminuto gigante de la familia Seeed XIAO, el ESP32S3 Sense.
 title: XIAO ESP32S3 Sense Detección de Palabras Clave
 keywords:
-- speech
-- keywords
+  - speech
+  - keywords
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_keyword_spotting
 last_update:
   date: 07/20/2023
   author: Citric
+createdAt: '2023-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_keyword_spotting/
 ---
 
 # XIAO ESP32S3 Sense & Edge Impulse Detección de Palabras Clave

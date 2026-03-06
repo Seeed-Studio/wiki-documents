@@ -3,18 +3,22 @@ description: Reachy Mini アプリケーションを構築するユーザーを�
 title: AI エージェント向け Reachy Mini 開発ガイド
 slug: /reachymini_agents
 keywords:
-- ai agents
-- development guide
-- sdk
-- rest api
-- platform compatibility
-- app development
-- best practices
+  - ai agents
+  - development guide
+  - sdk
+  - rest api
+  - platform compatibility
+  - app development
+  - best practices
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_agents/
 ---
 
 # AI エージェント向け Reachy Mini 開発ガイド

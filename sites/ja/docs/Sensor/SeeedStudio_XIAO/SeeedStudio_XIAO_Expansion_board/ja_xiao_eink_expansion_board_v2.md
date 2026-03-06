@@ -11,6 +11,9 @@ keywords:
 last_update:
   author: Allen
   date: 12/09/2024
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_eink_expansion_board_v2/
 ---
 
 # ePaper ドライバーボード入門ガイド

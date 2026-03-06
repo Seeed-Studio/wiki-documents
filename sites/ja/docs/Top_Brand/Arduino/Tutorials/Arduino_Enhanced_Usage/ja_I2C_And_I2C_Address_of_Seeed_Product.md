@@ -2,12 +2,15 @@
 description: Seeed製品のI2CおよびI2Cアドレス
 title: Seeed製品のI2CおよびI2Cアドレス
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /I2C_And_I2C_Address_of_Seeed_Product
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/I2C_And_I2C_Address_of_Seeed_Product/
 ---
 
 

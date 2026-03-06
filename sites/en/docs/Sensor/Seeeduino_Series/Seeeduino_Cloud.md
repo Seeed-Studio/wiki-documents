@@ -2,13 +2,16 @@
 description: Seeeduino Cloud
 title: Seeeduino Cloud
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Cloud
 sku: 102010021
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Cloud/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Cloud/img/seeeduino_cloud_cover.jpg)

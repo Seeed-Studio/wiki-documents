@@ -2,13 +2,16 @@
 description: SenseCAP T2000 Tracker
 title: SenseCAP T2000 Tracker
 keywords:
-- Tracker
-- SenseCAP
+  - Tracker
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t2000_tracker
 last_update:
   date: 1/28/2026
   author: Janet
+createdAt: '2025-12-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecap_t2000_tracker/
 ---
 
 

@@ -1,18 +1,19 @@
 ---
 description: Esta placa de audio de borde detecta en tiempo real llanto de bebé, rotura de vidrio, disparos, alarmas y ronquidos, manteniendo todos los datos localmente para proteger la privacidad. En este tutorial, aprenderás cómo integrarla con ESPHome y Home Assistant usando la serie XIAO para monitorización y automatización inteligente.
-
 title: Home Assistant y Módulo de Detección de Eventos de Sonido
 keywords:
-- Módulo de Detección de Eventos de Sonido
-- Sonido IoT
-- Home Assistant
-
+  - Módulo de Detección de Eventos de Sonido
+  - Sonido IoT
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
+createdAt: '2026-03-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sound_event_detection_module_home_assistant/
 ---
 
 ## Introducción

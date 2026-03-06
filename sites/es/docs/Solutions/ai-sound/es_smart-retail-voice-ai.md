@@ -1,5 +1,5 @@
 ---
-description: "Servicio de IA de voz para retail inteligente. Captura conversaciones, ejecuta conversión de voz a texto en el dispositivo y convierte la voz del cliente en insights."
+description: Servicio de IA de voz para retail inteligente. Captura conversaciones, ejecuta conversión de voz a texto en el dispositivo y convierte la voz del cliente en insights.
 title: IA de Voz para Retail Inteligente
 keywords:
   - Smart Retail
@@ -20,6 +20,9 @@ last_update:
   author: Spencer
 tags:
   - smart-retail
+createdAt: '2025-12-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/solutions/smart-retail-voice-ai-solution-1/
 ---
 
 Aprovecha la solución de IA de Voz para Retail Inteligente de Seeed para capturar y analizar conversaciones de clientes en la tienda. Nuestra tecnología de IA de borde permite el procesamiento de voz a texto en el dispositivo, transformando datos de voz en insights accionables sin depender de servicios en la nube. Mejora la experiencia del cliente, optimiza las operaciones de la tienda y obtén retroalimentación valiosa con nuestro análisis de voz impulsado por IA offline diseñado para entornos de retail.

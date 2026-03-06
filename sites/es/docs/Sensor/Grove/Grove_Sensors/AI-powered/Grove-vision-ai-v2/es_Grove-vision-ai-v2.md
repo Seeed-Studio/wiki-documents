@@ -2,13 +2,16 @@
 description: Primeros pasos con el Grove Vision AI V2.
 title: Módulo Grove Vision AI V2
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2
 sku: 101021112,E23011220,104990982
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2/
 ---
 
 # Módulo Grove Vision AI V2

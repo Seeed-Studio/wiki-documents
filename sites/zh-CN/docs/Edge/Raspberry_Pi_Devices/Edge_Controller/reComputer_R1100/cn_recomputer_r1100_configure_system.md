@@ -2,14 +2,17 @@
 description: 了解如何在安装设备后配置和测试 reComputer R1100 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
 title: 配置 reComputer R1100
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg
 slug: /recomputer_r1100_configure_system
 last_update:
   date: 2/26/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1100_configure_system/
 ---
 
 ## 概述

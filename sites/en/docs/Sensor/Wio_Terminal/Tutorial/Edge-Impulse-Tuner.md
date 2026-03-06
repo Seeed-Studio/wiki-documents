@@ -1,13 +1,16 @@
 ---
-description:  Edge Impulse Tuner
-title:  Edge Impulse Tuner
+description: Edge Impulse Tuner
+title: Edge Impulse Tuner
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge-Impulse-Tuner
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Edge-Impulse-Tuner/
 ---
 
 # EON Tuner - Optimized Function in Edge Impulse

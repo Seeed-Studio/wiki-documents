@@ -11,6 +11,9 @@ slug: /reComputer_r1000_use_bacnet_mstp
 last_update:
   date: 10/25/2024
   author: ShuishengPeng
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reComputer_r1000_use_bacnet_mstp/
 ---
 
 # reComputer R1000 usar bacnet MS/TP

@@ -1,6 +1,6 @@
 ---
 title: Grove - 长距离 868MHz
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113060007, 113060006
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_LoRa_Radio/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/img/cover.jpg)

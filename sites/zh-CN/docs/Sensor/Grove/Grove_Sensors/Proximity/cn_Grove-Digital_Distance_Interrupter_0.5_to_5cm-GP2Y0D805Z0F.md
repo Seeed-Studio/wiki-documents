@@ -1,6 +1,6 @@
 ---
 title: Grove - 数字距离中断器 0.5 到 5cm(GP2Y0D805Z0F)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020533
 last_update:
   date: 01/04/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/
 ---
 
 

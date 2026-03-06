@@ -2,12 +2,15 @@
 description: Bluetooth Bee
 title: Bluetooth Bee
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_Bee
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2023-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Bluetooth_Bee/
 ---
 <!-- ---
 name:  Bluetooth Bee

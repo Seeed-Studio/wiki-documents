@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to use YOLO to detect objects in real time on reCamera with C++. 
+description: This wiki demonstrates how to use YOLO to detect objects in real time on reCamera with C++.
 title: Real-time YOLO object detection using reCamera based on Cpp
 keywords:
   - Http
@@ -12,7 +12,10 @@ slug: /real_time_yolo_object_detection_using_recamera_based_on_cpp
 last_update:
   date: 06/26/2025
   author: Liangyuxin
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-06-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/real_time_yolo_object_detection_using_recamera_based_on_cpp/
 ---
 
 # Real-time YOLO object detection using reCamera based on Cpp

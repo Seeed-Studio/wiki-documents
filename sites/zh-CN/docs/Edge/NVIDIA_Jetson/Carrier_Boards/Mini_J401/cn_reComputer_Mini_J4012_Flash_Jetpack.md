@@ -2,12 +2,15 @@
 description: 本文介绍如何在 J401-Mini 载板上刷写 JetPack 6.0，涵盖设备概述、准备工作、进入强制恢复模式以及使用一键脚本进行刷写，帮助用户快速部署 NVIDIA Jetson Orin 设备。
 title: 刷写 Jetpack
 keywords:
-- reComputer Mini
+  - reComputer Mini
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
   date: 03/28/2025
   author: Dayu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_mini_j401_getting_started/
 ---
 
 # 将 JetPack 刷写到 J401-Mini 载板

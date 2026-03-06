@@ -2,14 +2,17 @@
 description: 描述 Seeed 和 NVIDIA 之间 L4T 的差异
 title: Seeed 和 NVIDIA 之间 L4T 的差异
 keywords:
-- jetson
-- BSP
-- L4T
+  - jetson
+  - BSP
+  - L4T
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /differences_of_l4t_between_seeed_and_nvidia
 last_update:
   date: 04/05/2025
   author: Dayu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/differences_of_l4t_between_seeed_and_nvidia/
 ---
 
 Seeed 的 Jetson 板级支持包（BSP）基于 NVIDIA 的 Linux for Tegra（L4T）版本 35.3.1、35.5、36.3、36.4 和 36.4.3，并进行了修改以支持 Seeed 自己的 Jetson 系列产品。以下是 Seeed 的 BSP 与 NVIDIA 官方 BSP 在这些 L4T 版本中的差异。

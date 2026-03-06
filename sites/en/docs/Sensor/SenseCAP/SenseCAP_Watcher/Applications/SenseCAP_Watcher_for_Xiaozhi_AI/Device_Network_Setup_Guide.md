@@ -15,7 +15,11 @@ last_update:
   date: 10/13/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-05-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/device_network_setup/
 ---
 
 # Device Network Setup Guide

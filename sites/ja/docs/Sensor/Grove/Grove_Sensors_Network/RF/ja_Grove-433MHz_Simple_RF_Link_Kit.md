@@ -1,6 +1,6 @@
 ---
 title: Grove - 433MHz Simple RF Link Kit
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113060000
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-433MHz_Simple_RF_Link_Kit/
 ---
 
 

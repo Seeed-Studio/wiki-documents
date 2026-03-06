@@ -2,12 +2,15 @@
 description: 彩虹杜诺
 title: 彩虹杜诺
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Rainbowduino/
 ---
 
 彩虹杜诺系列是一个兼容 Arduino 的控制板，配备专业的多路复用 LED 驱动器。它可以以共阳极模式驱动 8x8 RGB LED 矩阵或 4x4x4 RGB LED 立方体。彩虹杜诺家族包括以下产品：

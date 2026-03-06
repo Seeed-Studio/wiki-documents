@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO ESP32C3 与 MicroPython
 title: XIAO ESP32C3 与 MicroPython
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png
 slug: /xiao_esp32c3_with_micropython
 last_update:
   date: 08/14/2024
   author: Evelyn Chen
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c3_with_micropython/
 ---
 
 # **Seeed Studio XIAO ESP32C3 与 MicroPython**

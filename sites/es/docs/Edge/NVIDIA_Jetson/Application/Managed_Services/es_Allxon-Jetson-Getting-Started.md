@@ -9,6 +9,9 @@ sku: 102110401, 102110406, 102110427, 114110047, 114110049, 114110048, 103110022
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Allxon-Jetson-Getting-Started/
 ---
 
 # Primeros Pasos con Allxon en Dispositivos NVIDIA® Jetson

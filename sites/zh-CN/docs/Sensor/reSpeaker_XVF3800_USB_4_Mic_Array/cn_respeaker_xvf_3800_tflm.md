@@ -2,15 +2,18 @@
 description: 了解如何在搭载 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上训练和部署 TensorFlow Lite Micro (TFLM) 语音模型，实现实时语音识别。本教程涵盖模型训练、将 TFLite 转换为十六进制代码以及烧录流程，从而在微控制器上实现高精度的关键词唤醒。
 title: 在 reSpeaker XVF3800 上使用 TensorFlow Lite
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
-- TensorFlow
+  - reSpeaker
+  - XIAO
+  - ESP32S3
+  - TensorFlow
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_xiao_tensorflow
 last_update:
   date: 9/19/2025
   author: Kasun Thushara
+createdAt: '2025-09-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_tensorflow/
 ---
 
 ## 介绍 

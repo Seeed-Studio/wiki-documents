@@ -6,6 +6,9 @@ slug: /reTerminal-FAQ
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal-FAQ/
 ---
 
 # reTerminal使用に関するFAQ

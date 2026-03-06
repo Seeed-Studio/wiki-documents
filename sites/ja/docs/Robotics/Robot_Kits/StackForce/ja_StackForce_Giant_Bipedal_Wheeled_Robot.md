@@ -2,18 +2,22 @@
 description: StackForce Giant Bipedal Wheeled Robot プロフェッショナル開発ガイド、高度な機能、詳細な開発チュートリアル、API ドキュメント、実用的なアプリケーション事例を含む
 title: StackForce Giant Bipedal Wheeled Robot
 keywords:
-- StackForce
-- Wheel-legged Robot
-- Professional Development
-- Advanced Robotics
-- Artificial Intelligence
-- Autonomous Navigation
+  - StackForce
+  - Wheel-legged Robot
+  - Professional Development
+  - Advanced Robotics
+  - Artificial Intelligence
+  - Autonomous Navigation
 slug: /stackforce_giant_bipedal_wheeled_robot
 last_update:
   date: 12/12/2025
   author: TienjuiWong
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-12-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/stackforce_giant_bipedal_wheeled_robot/
 ---
 
 # StackForce Giant Bipedal Wheeled Robot 開発ガイド

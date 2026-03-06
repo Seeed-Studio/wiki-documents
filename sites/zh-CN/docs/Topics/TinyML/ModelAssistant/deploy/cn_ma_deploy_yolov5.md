@@ -2,14 +2,17 @@
 description: YOLOv5 从训练到部署
 title: 训练和部署 YOLOv5 目标检测模型
 keywords:
-- YOLOv5 
-- we2 
-- object detection
+  - YOLOv5
+  - we2
+  - object detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov5
 last_update:
   date: 04/02/2024
   author: Jack Mu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ma_deploy_yolov5/
 ---
 
 

@@ -1,14 +1,17 @@
 ---
-description:  Starter_Shield_EN
-title:  Starter Shield EN
+description: Starter_Shield_EN
+title: Starter Shield EN
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Starter_Shield_EN
 sku: 104030047
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Starter_Shield_EN/
 ---
 
 <!-- ---

@@ -5,6 +5,9 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_terminal_faq
 date: 2024年1月31日
 author: Seraphina
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wio_terminal_faq/
 ---
 
 

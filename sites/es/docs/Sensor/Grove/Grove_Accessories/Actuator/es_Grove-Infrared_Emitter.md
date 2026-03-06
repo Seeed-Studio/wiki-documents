@@ -1,6 +1,6 @@
 ---
 title: Grove - Emisor Infrarrojo
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020026
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Infrared_Emitter/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/main.jpg)

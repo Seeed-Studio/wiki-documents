@@ -2,14 +2,17 @@
 description: Raspberry Pi CM4を搭載したreComputer R1000エッジIoTコントローラーは、クアッドコアA72プロセッサ、デュアルイーサネット、BACnet、Modbus RTU、Modbus TCP/IPをサポートする複数のRS485チャネルを特徴としています。4G、LoRa®、Wi-Fi/BLEを含む多様なワイヤレスオプションにより、スマートビルディングアプリケーションでのリモートデバイスおよびエネルギー管理に最適です。
 title: reComputer R1000 ウォークスルー
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1000
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_intro
 last_update:
   date: 10/08/2024
   author: Kasun Thushara
+createdAt: '2024-07-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_r1000_intro/
 ---
 
 Raspberry Pi CM4を搭載したreComputer R1000エッジIoTコントローラーは、クアッドコアA72プロセッサ、デュアルイーサネット、BACnet、Modbus RTU、Modbus TCP/IPをサポートする複数のRS485チャネルを特徴としています。4G、LoRa®、Wi-Fi/BLEを含む多様なワイヤレスオプションにより、堅牢なIoTネットワーク通信を確保します。リモートデバイスおよびエネルギー管理に最適で、R1000はスマートビルディングアプリケーションに完璧です。

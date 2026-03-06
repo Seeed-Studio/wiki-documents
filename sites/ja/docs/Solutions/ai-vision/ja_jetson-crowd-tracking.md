@@ -6,6 +6,9 @@ slug: /solutions/jetson-crowd-tracking
 last_update:
   date: 08/15/2025
   author: lian
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/solutions/jetson-crowd-tracking/
 ---
 
 このガイドは**NVIDIA Jetson Ubuntu 22 + JetPack 6.x**環境向けで、迅速なデプロイメントの完了をサポートします。

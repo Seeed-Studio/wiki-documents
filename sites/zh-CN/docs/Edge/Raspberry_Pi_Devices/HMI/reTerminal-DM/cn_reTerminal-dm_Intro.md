@@ -2,14 +2,17 @@
 description: 介绍 reTerminal DM，一款 10.1 英寸开源工业人机界面 (HMI)，作为集成设备主机。这款基于 Raspberry Pi CM4 的一体化设备，集 Panel PC、HMI、PLC 和 IIoT 网关功能于一身。配备 IP65 工业级大屏幕，reTerminal DM 是下一代交互式传感中枢，简化数据流和现场设备管理。
 title: reTerminal DM 指南
 keywords:
-- reTerminal DM
-- Getting Start
+  - reTerminal DM
+  - Getting Start
 image: https://wdcdn.qpic.cn/MTY4ODg1NjEyODQyNTE2Nw_928147_NLYXC-4cRuQd5Tra_1681284617?w=1200&h=713
 slug: /reTerminal-dm_Intro
 sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 07/05/2024
   author: Kasun Thushara
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal-dm_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NjEyODQyNTE2Nw_928147_NLYXC-4cRuQd5Tra_1681284617?w=1200&h=713" style={{width:800, height:'auto'}}/></div>

@@ -1,6 +1,6 @@
 ---
-description:  实时光学字符识别
-title:  使用 reComputer AI 盒子进行实时 OCR
+description: 实时光学字符识别
+title: 使用 reComputer AI 盒子进行实时 OCR
 keywords:
   - Edge
   - reComputer R2000
@@ -11,6 +11,9 @@ slug: /real-time-ocr
 last_update:
   date: 6/16/2025
   author: Jiahao Li
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/real-time-ocr/
 ---
 
 ## 简介

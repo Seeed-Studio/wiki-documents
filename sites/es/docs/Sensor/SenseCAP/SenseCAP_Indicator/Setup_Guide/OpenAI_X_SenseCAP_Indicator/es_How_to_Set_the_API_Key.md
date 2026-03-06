@@ -2,13 +2,16 @@
 description: Cómo Configurar La Clave API
 title: Cómo Configurar La Clave API
 keywords:
-- Get Started with SenseCAP Indicator
+  - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key
 sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key/
 ---
 
 # **Cómo configurar la clave API**

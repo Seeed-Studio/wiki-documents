@@ -2,13 +2,16 @@
 description: 将 JetPack 刷写到 reComputer J4012（J401 载板）
 title: 刷写 Jetpack
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J4012_Flash_Jetpack
 sku: 102110769, 102110770
 last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_J4012_Flash_Jetpack/
 ---
 
 # 将 JetPack OS 刷写到 J401 载板

@@ -3,17 +3,21 @@ description: Example demonstrating how to capture a single frame from Reachy Min
 title: Take Picture
 slug: /reachymini_examples_take_picture
 keywords:
-- camera
-- capture
-- image
-- picture
-- frame
-- save image
+  - camera
+  - capture
+  - image
+  - picture
+  - frame
+  - save image
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_take_picture/
 ---
 
 # Take Picture

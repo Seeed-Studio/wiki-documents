@@ -6,6 +6,9 @@ slug: /upgrade-rpiOS_installed-packages
 last_update:
   date: 6/21/2023
   author: cheng.tang
+createdAt: '2023-06-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/upgrade-rpiOS_installed-packages/
 ---
 
 <!-- ## Q3: How to upgrade Raspberry Pi OS and the installed packages -->

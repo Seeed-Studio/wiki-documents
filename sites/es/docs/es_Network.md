@@ -2,12 +2,15 @@
 description: Las capacidades de red robustas integran perfectamente la diversa gama de sensores y dispositivos de Seeed, permitiendo un flujo cohesivo de datos y comunicación a través de todo el ecosistema de productos, desbloqueando nuevas posibilidades para monitoreo, automatización y toma de decisiones inteligente.
 title: Conectividad de Red
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network
 last_update:
   date: 05/23/2024
   author: Matthew
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Network/
 ---
 
 Las capacidades de red robustas integran perfectamente la diversa gama de sensores y dispositivos de Seeed, permitiendo un flujo cohesivo de datos y comunicación a través de todo el ecosistema de productos, desbloqueando nuevas posibilidades para monitoreo, automatización y toma de decisiones inteligente.

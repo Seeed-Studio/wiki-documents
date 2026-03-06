@@ -2,13 +2,16 @@
 description: Soporte de ESPHome en Seeed Studio XIAO ESP32C3
 title: Soporte de ESPHome en Seeed Studio XIAO ESP32C3
 keywords:
-- ESPHome
+  - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO-ESP32C3-for-ESPHome-Support
 sku: 113991054,110061541,102010633
 last_update:
   date: 10/20/2023
   author: Zachary
+createdAt: '2023-10-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-ESP32C3-for-ESPHome-Support/
 ---
 
 # XIAO ESP32C3 conectándose con Home Assistant a través de ESPHome (todos los puertos soportados)

@@ -2,13 +2,16 @@
 description: Grove - TDS Sensor
 title: Grove - TDS Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TDS-Sensor
 sku: 101020753
 last_update:
   date: 7/12/2024
   author: Harrison Xu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-TDS-Sensor/
 ---
 
 

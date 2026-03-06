@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Seeed Studio XIAO MG24
-description: |
+description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_mg24_getting_started
 sku: 102010590,102010610,102010693,102010690,102010691,102010692
@@ -11,6 +11,9 @@ last_update:
   date: 10/17/2024
   author: Jason
 sidebar_position: 0
+createdAt: '2024-11-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_mg24_getting_started/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg" style={{width:600, height:'auto'}}/></div>

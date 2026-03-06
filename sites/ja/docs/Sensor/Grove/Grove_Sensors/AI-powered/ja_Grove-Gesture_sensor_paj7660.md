@@ -2,13 +2,16 @@
 description: Grove GestureセンサーPAJ7660の使い方。
 title: Grove スマート IR ジェスチャーセンサー (PAJ7660)
 keywords:
-- ジェスチャー
+  - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_gesture_paj7660
 sku: 101991067
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_gesture_paj7660/
 ---
 
 

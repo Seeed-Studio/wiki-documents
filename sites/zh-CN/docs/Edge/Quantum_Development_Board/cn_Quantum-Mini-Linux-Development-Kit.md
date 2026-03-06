@@ -7,6 +7,9 @@ sku: 114992462
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2023-03-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
 ---
 
 # Quantum Mini Linux 开发套件

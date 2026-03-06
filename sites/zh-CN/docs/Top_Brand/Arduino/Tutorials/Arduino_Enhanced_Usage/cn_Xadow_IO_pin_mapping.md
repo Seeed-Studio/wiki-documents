@@ -2,12 +2,15 @@
 description: Xadow IO 引脚映射
 title: Xadow IO 引脚映射
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_IO_pin_mapping
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_IO_pin_mapping/
 ---
 <!-- ---
 name: Xadow IO pin mapping

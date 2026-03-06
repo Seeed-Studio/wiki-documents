@@ -2,13 +2,16 @@
 description: Wio Terminal シャーシバッテリー(650mAh)
 title: Wio Terminal シャーシバッテリー(650mAh)
 keywords:
-- Wio_terminal 拡張ボード
+  - Wio_terminal 拡張ボード
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Chassis-Battery_650mAh
 sku: 103990463, 103990564
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Chassis-Battery_650mAh/
 ---
 
 

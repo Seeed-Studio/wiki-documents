@@ -2,12 +2,15 @@
 description: Seeeduino 驱动程序
 title: Seeeduino 驱动程序
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Driver_for_Seeeduino
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Driver_for_Seeeduino/
 ---
 
 ##   安装驱动程序

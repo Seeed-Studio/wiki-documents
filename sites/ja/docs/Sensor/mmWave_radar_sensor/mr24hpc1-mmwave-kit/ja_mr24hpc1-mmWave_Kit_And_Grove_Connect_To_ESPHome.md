@@ -2,13 +2,16 @@
 description: mmWave Kit And Grove を ESPHome に接続
 title: mmWave Kit And Grove を ESPHome に接続
 keywords:
-- ESPHome
+  - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmWave_Kit_And_Grove_Connect_To_ESPHome
 sidebar_position: 1
 last_update:
   date: 12/09/2023
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/mmWave_Kit_And_Grove_Connect_To_ESPHome/
 ---
 
 ## はじめに

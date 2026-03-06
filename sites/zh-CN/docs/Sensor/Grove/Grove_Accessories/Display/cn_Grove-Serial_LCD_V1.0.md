@@ -2,12 +2,15 @@
 description: Grove 串口 LCD V1.0
 title: Grove 串口 LCD V1.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Serial_LCD_V1.0
 last_update:
   date: 1/29/2023
   author: jianjing Huang
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Serial_LCD_V1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_LCD_V1.0/img/Lcdnew1.jpg)

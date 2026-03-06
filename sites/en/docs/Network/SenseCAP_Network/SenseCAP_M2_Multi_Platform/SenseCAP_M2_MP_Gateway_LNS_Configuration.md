@@ -2,12 +2,15 @@
 description: SenseCAP M2 Multi-Platform Gateway LNS Configuration
 title: SenseCAP M2 Multi-Platform Gateway LNS Configuration
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration
 last_update:
   date: 08/29/2023
   author: Jessie
+createdAt: '2023-08-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/
 ---
 
 

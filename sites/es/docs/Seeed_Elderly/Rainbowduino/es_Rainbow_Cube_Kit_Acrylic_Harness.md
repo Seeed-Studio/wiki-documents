@@ -2,13 +2,16 @@
 description: Arnés Acrílico del Kit Rainbow Cube
 title: Arnés Acrílico del Kit Rainbow Cube
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
 sllug: /Rainbow_Cube_Kit_Acrylic_Harness
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness/
 ---
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_Kit_Acrylic_Harness/img/Rainbow_Cube_Assembled.jpg)
 

@@ -9,7 +9,10 @@ slug: /Traffic-Management-DeepStream-SDK
 last_update:
   date: 01/04/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Traffic-Management-DeepStream-SDK/
 ---
 
 # Sistema Inteligente de Gestión de Tráfico usando SDK DeepStream

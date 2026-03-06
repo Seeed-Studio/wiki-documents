@@ -3,21 +3,25 @@ description: Hoja de datos de hardware de Reachy Mini Lite que incluye dimension
 title: Hoja de Datos de Hardware de Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_hardware
 keywords:
-- hardware
-- datasheet
-- specifications
-- dimensions
-- motors
-- dynamixel
-- camera
-- microphone
-- electronics
-- lite
+  - hardware
+  - datasheet
+  - specifications
+  - dimensions
+  - motors
+  - dynamixel
+  - camera
+  - microphone
+  - electronics
+  - lite
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_platforms_reachy_mini_lite_hardware/
 ---
 
 # Hoja de Datos de Hardware de Reachy Mini Lite

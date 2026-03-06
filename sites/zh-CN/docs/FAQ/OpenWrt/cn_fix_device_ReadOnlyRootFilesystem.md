@@ -6,6 +6,9 @@ slug: /fix_device_ReadOnlyRootFilesystem
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/fix_device_ReadOnlyRootFilesystem/
 ---
 
  <!-- Q4: 当我遇到“只读根文件系统”时，如何修复我的设备？ -->

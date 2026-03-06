@@ -2,12 +2,15 @@
 description: Grove - 颜色传感器 V3.0 - I2C 接口 - 基于 VEML6040
 title: Grove-颜色传感器 V3.0 - I2C 接口
 keywords:
-- Grove
-image: https://files.seeedstudio.com/wiki/Grove_Color/top.jpg 
+  - Grove
+image: https://files.seeedstudio.com/wiki/Grove_Color/top.jpg
 slug: /grove_color_sensor_v3_0_iic
 last_update:
   date: 10/12/2024
   author: Jason
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_color_sensor_v3_0_iic/
 ---
 
 

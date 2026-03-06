@@ -2,13 +2,16 @@
 description: reServer Industrial 入門ガイド
 title: reServer Industrial 入門ガイド
 keywords:
-- reServer
+  - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reServer_Industrial_Getting_Started
 sku: 114110247,114110248,114110250,114110249
 last_update:
   date: 09/22/2023
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/reServer_Industrial_Getting_Started/
 ---
 
 # reServer Industrial を使い始める

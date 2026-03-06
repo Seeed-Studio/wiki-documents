@@ -7,6 +7,9 @@ sku: 109990565
 last_update:
   date: 02/12/2025
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/getting_started_with_wifi_halow_mini_pcie_module/
 ---
 
 # Primeros pasos con el Módulo Wi-Fi HaLow Mini PCIe

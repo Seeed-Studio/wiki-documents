@@ -1,15 +1,18 @@
 ---
-description: reTerminal and Pi camera modules intergration 
+description: reTerminal and Pi camera modules intergration
 title: reTerminal and Pi camera modules
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal-piCam
 last_update:
   date: 5/17/2023
   author: Kasun Thushara
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal-piCam/
 ---
 # reTerminal and Pi camera modules
 

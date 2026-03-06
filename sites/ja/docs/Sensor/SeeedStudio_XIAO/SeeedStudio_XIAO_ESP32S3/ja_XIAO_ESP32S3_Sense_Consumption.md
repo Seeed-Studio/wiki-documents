@@ -2,12 +2,15 @@
 description: XIAO ESP32 Sense 異なるスリープモードの消費電力の使用
 title: XIAO ESP32S3 Sense スリープモード
 keywords:
-- Sleep_Modes
+  - Sleep_Modes
 image: https://files.seeedstudio.com//wiki/ESP32S3_Sense_SleepMode/1.png
 slug: /XIAO_ESP32S3_Consumption
 last_update:
   date: 08/27/2024
   author: Jason
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_ESP32S3_Consumption/
 ---
 
 

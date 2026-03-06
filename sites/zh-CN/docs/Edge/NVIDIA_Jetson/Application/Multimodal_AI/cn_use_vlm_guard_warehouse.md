@@ -2,15 +2,18 @@
 description: 本教程介绍如何在 reComputer Industrial J4012 上使用 Llava 监控您的仓库，并通过 RS485 控制警示灯颜色，帮助确保仓库安全。
 title: 使用 Llava 守护您的仓库
 keywords:
-- Multimodal 
-- LLava
-- RS485
-- VLM
+  - Multimodal
+  - LLava
+  - RS485
+  - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /vlm
 last_update:
   date: 10/10/2025
   author: Jiahao Li
+createdAt: '2025-10-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/vlm/
 ---
 
 # 如何在 reComputer Industrial J4012 上使用 LLaVa 监控您的仓库

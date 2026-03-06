@@ -1,15 +1,18 @@
 ---
 description: Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
-title: Configure reComputer R1100 
+title: Configure reComputer R1100
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg
 slug: /recomputer_r1100_configure_system
 last_update:
   date: 2/26/2024
   author: Kasun Thushara
+createdAt: '2025-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1100_configure_system/
 ---
 
 ## Overview

@@ -9,6 +9,9 @@ sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_j401b_interfaces_usage/
 ---
 
 

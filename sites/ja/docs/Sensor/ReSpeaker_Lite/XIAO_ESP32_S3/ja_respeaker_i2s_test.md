@@ -2,14 +2,17 @@
 description: XIAO ESP32S3 を使用した I2S テスト
 title: I2S テスト
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_i2s_test
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_i2s_test/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Grove - I2C FM 接收器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 107020006
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-I2C_FM_Receiver/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver/img/Grove-I2C_FM_Receiver_Photo.jpg)

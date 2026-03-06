@@ -1,15 +1,18 @@
 ---
 description: Learn how to connect your Computer R1000 to AWS IoT Core, a service that securely connects and manages IoT devices, enabling device-to-cloud communication. This guide simplifies IoT integration into the AWS ecosystem, providing a scalable platform for building smart applications.
-title: AWS IoT Core Intergate With reComputer R1000 
+title: AWS IoT Core Intergate With reComputer R1000
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 keywords:
-- AWS
-- Getting Start
-- Cloud
+  - AWS
+  - Getting Start
+  - Cloud
 slug: /recomputer_r1000_aws
 last_update:
   date: 7/10/2024
   author: Kasun Thushara
+createdAt: '2023-11-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_aws/
 ---
 
 ## Introduction

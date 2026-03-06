@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 description: SenseCraft Cloud Fee
-title:  SenseCraft Cloud Fee
+title: SenseCraft Cloud Fee
 keywords:
-- SenseCraft
+  - SenseCraft
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-fee/sensecraft-cloud-fee
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 8/16/2024
   author: Jessie
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-fee/sensecraft-cloud-fee/
 ---
 
 SenseCaft クラウドサービスは、LoRaWAN IoT 低消費電力通信プロトコルを使用するハードウェアデバイスに基づいています。LoRaWAN デバイスは、データ通信機能を有効にするために従量制の前払いが必要です。ユーザーは製品の使用ニーズに基づいて、月次または年次で前払いできます。

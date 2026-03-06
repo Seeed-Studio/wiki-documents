@@ -2,7 +2,7 @@
 description: リモート再起動
 title: リモート再起動
 keywords:
-- Cloud and Chain
+  - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot
 aliases:
@@ -10,6 +10,9 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot/
 ---
 
 リモート再起動

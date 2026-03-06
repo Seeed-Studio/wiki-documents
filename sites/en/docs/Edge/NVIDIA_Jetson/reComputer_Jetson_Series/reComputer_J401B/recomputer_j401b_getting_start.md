@@ -2,13 +2,16 @@
 description: The reComputer J401B is a compact, high-performance edge AI device featuring NVIDIA Jetson Orin modules, offering rich I/O interfaces and supporting JetPack 5.1.3 through 6.2 for versatile AI applications. This guide covers its specifications, flashing instructions, and interface usage for development and deployment.
 title: Getting start with reComputer J401B
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
 slug: /recomputer_j401b_getting_start
 sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025
   author: Youjiang
+createdAt: '2023-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_j401b_getting_start/
 ---
 
 # Getting start with reComputer J401B

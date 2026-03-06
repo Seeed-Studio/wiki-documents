@@ -6,6 +6,9 @@ slug: /PCB_Design_XIAO
 last_update:
   date: 11/07/2023
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/PCB_Design_XIAO/
 ---
 
 # Flux.aiでXIAOコンポーネントを作成する

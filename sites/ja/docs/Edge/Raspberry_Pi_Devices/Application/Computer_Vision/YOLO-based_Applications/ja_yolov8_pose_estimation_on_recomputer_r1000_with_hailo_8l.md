@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、Raspberry-pi-AI-kitアクセラレーションを使用してreComputer R1000でYOLOv8を使ったポーズ推定を実演します。
-title:  Hailo-8LでreComputer R1000上でのYOLOv8ポーズ推定
+title: Hailo-8LでreComputer R1000上でのYOLOv8ポーズ推定
 keywords:
   - Edge
   - reComputer r1000
@@ -10,7 +10,10 @@ slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/
 ---
 
 # Hailo-8LでreComputer R1000上でのYOLOv8ポーズ推定

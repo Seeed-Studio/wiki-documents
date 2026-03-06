@@ -2,13 +2,16 @@
 description: Grove - 人体存在センサー (AK9753)
 title: Grove - 人体存在センサー (AK9753)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Human_Presence_Sensor-AK9753
 sku: 101020554
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Human_Presence_Sensor-AK9753/
 ---
 
 

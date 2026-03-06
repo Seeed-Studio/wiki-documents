@@ -1,11 +1,13 @@
 ---
 description: XIAO ESP32C3-FAQ
 title: How to reflash the bootloader with factory firmware
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reflash_the_bootloader
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2023-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reflash_the_bootloader/
 ---
 You can simply connect the board to a PC via **USB Type-C** and reflash the bootloader with factory firmware by using **ESP RF Test Tool**.
 

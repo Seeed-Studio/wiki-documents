@@ -2,12 +2,15 @@
 description: Hola y gracias por visitar la Base de Conocimientos de Temas Tecnológicos de Seeed Studio. Este recurso está diseñado para apoyarte en el dominio de nuestra gama de hardware inteligente y dispositivos de computación.
 title: Temas Tecnológicos
 keywords:
-- weeely wiki
+  - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/topicintroduction/
 ---
 
 

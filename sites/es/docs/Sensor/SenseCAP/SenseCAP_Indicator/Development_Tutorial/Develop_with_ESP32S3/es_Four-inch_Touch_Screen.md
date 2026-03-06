@@ -2,12 +2,15 @@
 description: Pantalla Táctil de 4 pulgadas
 title: Pantalla Táctil de 4 pulgadas
 keywords:
-- SenseCAP Indicator ESP32 Development Tutorial
+  - SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ESP32_4_inch_Touch_Screen
 last_update:
   date: 5/23/2023
   author: Thomas
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen/
 ---
 # **Pantalla Táctil de 4 pulgadas**
 

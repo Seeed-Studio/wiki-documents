@@ -2,12 +2,15 @@
 description: Seeeduino Stalker
 title: Seeeduino Stalker
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino_Stalker/
 ---
 
 **Seeeduino Stalker** 是一个功能丰富的 Arduino 兼容**无线传感器网络节点**，具有**数据记录器功能**。其模块化结构和板载外设使其能够方便地定期记录带时间戳的传感器数据。**Seeeduino Stalker** 配备了_温度传感器、带备用电源的 RTC、SD 卡插槽、Bee 插槽和太阳能锂聚合物离子电池充电器_。**Seeeduino Stalker** 是您所有跟踪、监控和控制项目的理想选择。

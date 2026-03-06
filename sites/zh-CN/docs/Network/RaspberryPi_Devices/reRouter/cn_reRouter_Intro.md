@@ -2,12 +2,15 @@
 description: reRouter 指南
 title: reRouter 指南
 keywords:
-- reRouter
+  - reRouter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reRouter_Intro
 last_update:
   date: 2023/10/16
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reRouter_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Mini_Router/mini_router_overview.png" style={{width:500, height:'auto'}}/></div>

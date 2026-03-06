@@ -2,13 +2,16 @@
 description: 将 SenseCAP T1000 追踪器连接到 AWS
 title: AWS 云服务
 keywords:
-- Tracker
-- AWS
+  - Tracker
+  - AWS
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/t1000.webp
 slug: /SenseCAP_T1000_Tracker_AWS
 last_update:
   date: 12/4/2024
   author: Leo
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_T1000_Tracker_AWS/
 ---
 
 # 为 SenseCAP T1000 追踪器使用 AWS 云服务

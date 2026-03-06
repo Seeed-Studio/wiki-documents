@@ -2,14 +2,17 @@
 description: 本文提供了使用 NVIDIA Jetson 平台实现 AI NVR（网络视频录像机）的全面指南。涵盖了从硬件设置和软件安装到配置 DeepStream 和 VST 进行实时视频分析并在视频墙上显示的所有内容。
 title: 基于 Jetson Orin 的 AI NVR
 keywords:
-- reComputer
-- AI NVR
-- Jetpack6.0
+  - reComputer
+  - AI NVR
+  - Jetpack6.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_nvr_with_jetson
 last_update:
   date: 08/12/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ai_nvr_with_jetson/
 ---
 
 # 基于 reServer Jetson 的 AI NVR

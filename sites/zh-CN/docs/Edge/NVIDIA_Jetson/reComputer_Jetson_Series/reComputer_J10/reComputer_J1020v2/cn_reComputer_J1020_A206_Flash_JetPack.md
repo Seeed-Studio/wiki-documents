@@ -9,7 +9,10 @@ slug: /reComputer_J1020_A206_Flash_JetPack
 last_update:
   date: 01/05/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_J1020_A206_Flash_JetPack/
 ---
 
 # 将 JetPack 刷写到 reComputer J1020v1（A206 载板）

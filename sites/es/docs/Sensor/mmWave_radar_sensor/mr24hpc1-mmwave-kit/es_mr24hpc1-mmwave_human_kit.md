@@ -2,8 +2,8 @@
 description: Comenzando con el Kit de Sensor de Detección Humana mmWave
 title: Kit de Sensor de Detección Humana mmWave
 keywords:
-- radar
-- mmwave kit
+  - radar
+  - mmwave kit
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_human_detection_kit
 sku: E23010426,110061541,E24121301
@@ -11,6 +11,9 @@ sidebar_position: 0
 last_update:
   date: 08/17/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mmwave_human_detection_kit/
 ---
 
 # Kit de Sensor de Detección Humana mmWave MR24HPC1

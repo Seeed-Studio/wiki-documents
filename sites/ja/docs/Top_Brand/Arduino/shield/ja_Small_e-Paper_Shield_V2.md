@@ -2,13 +2,16 @@
 description: 小型 e-Paper シールド V2
 title: 小型 e-Paper シールド V2
 keywords:
-- Arduino シールド
+  - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Small_e-Paper_Shield_V2
 sku: 104030019
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Small_e-Paper_Shield_V2/
 ---
 
 

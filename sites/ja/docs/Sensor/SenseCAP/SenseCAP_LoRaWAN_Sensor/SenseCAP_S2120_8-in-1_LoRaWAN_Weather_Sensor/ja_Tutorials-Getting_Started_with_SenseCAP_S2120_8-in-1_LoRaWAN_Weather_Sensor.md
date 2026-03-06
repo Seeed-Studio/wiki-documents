@@ -2,12 +2,15 @@
 description: SenseCAP S2120 8-in-1 LoRaWAN気象センサーの使用開始
 title: SenseCAP S2120 8-in-1 LoRaWAN気象センサーの使用開始
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor
 last_update:
   date: 7/26/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Getting_Started_with_SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/
 ---
 
 ## 設置前の準備

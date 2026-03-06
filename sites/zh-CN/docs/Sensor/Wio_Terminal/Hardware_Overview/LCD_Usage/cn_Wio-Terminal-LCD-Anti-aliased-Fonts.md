@@ -1,6 +1,6 @@
 ---
-title:  平滑字体
-nointro:
+title: 平滑字体
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LCD-Anti-aliased-Fonts
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-LCD-Anti-aliased-Fonts/
 ---
 # 显示抗锯齿字体
 

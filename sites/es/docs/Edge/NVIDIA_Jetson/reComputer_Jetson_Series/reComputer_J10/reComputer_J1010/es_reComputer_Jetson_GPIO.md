@@ -9,6 +9,9 @@ slug: /reComputer_Jetson_GPIO
 last_update:
   date: 04/12/2023
   author: Lakshantha
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reComputer_Jetson_GPIO/
 ---
 
 # Cómo usar el GPIO de 40 pines en las placas reComputer Jetson

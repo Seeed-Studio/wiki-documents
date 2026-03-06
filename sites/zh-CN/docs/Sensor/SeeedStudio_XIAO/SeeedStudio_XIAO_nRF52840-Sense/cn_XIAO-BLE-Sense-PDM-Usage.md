@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO nRF52840 Sense 上的 PDM 麦克风使用方法
 title: XIAO nRF52840 Sense 的 PDM 使用方法
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-PDM-Usage
 last_update:
   date: 06/25/2024
   author: Spencer
+createdAt: '2023-11-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-PDM-Usage/
 ---
 
 # Seeed Studio XIAO nRF52840 Sense 上的 PDM 麦克风使用方法

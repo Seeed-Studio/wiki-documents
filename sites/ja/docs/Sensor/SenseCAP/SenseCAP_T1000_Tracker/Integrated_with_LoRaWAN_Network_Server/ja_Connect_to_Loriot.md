@@ -2,13 +2,16 @@
 description: SenseCAP T1000 TrackerをLoriotに接続する
 title: Loriotに接続する
 keywords:
-- Tracker
-- Loriot
+  - Tracker
+  - Loriot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_Tracker_Loriot
 last_update:
   date: 12/12/2023
   author: KeweiLee
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_Tracker_Loriot/
 ---
 
 

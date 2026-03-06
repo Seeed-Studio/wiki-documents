@@ -2,12 +2,15 @@
 description: Concurso IoT Into the Wild para un Planeta Sostenible 2022
 title: Concurso IoT Into the Wild para un Planeta Sostenible 2022
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /IoT-into-the-wild-contest
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/IoT-into-the-wild-contest/
 ---
 # Concurso IoT Into the Wild para un Planeta Sostenible 2022
 

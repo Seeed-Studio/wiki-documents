@@ -2,13 +2,16 @@
 description: Getting Started with 6x10 RGB MATRIX for XIAO
 title: Getting Started with 6x10 RGB MATRIX for XIAO
 keywords:
-- XIAO RGB
+  - XIAO RGB
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /rgb_matrix_for_xiao
 sku: 104030107
 last_update:
   date: 08/11/2023
   author: Citric
+createdAt: '2023-08-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/rgb_matrix_for_xiao/
 ---
 
 # Getting Started with 6x10 RGB MATRIX for XIAO

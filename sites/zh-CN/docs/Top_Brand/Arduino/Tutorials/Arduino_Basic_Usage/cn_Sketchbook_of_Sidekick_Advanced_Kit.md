@@ -6,7 +6,10 @@ slug: /Sketchbook_of_Sidekick_Advanced_Kit
 last_update:
   date: 02/02/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sketchbook_of_Sidekick_Advanced_Kit/
 ---
 
 Sidekick 高级套件包含一套基础元件以及大量传感器和其他模块。

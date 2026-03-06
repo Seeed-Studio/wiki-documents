@@ -6,6 +6,9 @@ slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Logging_in_OS_using_USB_to_serial_converter/
 ---
 
 <!-- ## Q5: How can I log in to Raspberry Pi OS/ Ubuntu OS or other OS using a USB to serial converter -->

@@ -2,8 +2,8 @@
 description: Wio Tracker 1110 入门指南
 title: Wio Tracker 1110 入门指南
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-Trakcer_1110
 sku: 114993186
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 11/3/2023
   author: Jessie
+createdAt: '2023-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Get_Started_with_Wio-Trakcer_1110/
 ---
 
 在本教程中，我们将指导用户通过出厂固件快速设置 Wio Tracker 1110 开发板，将其连接到 SenseCAP 云并查看数据。

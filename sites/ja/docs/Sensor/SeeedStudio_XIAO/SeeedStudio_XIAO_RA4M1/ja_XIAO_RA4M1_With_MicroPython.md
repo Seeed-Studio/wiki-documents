@@ -11,6 +11,9 @@ last_update:
   date: 12/25/2025
   author: Zeller
   sidebar_position: 9
+createdAt: '2025-12-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_ra4m1_micropython/
 ---
 
 [MicroPython](https://github.com/micropython/micropython/wiki) は、部分的なネイティブコードコンパイル機能を持つ Python インタープリターです。組み込みプロセッサーと制約のあるシステム向けに実装された Python 3.5 機能のサブセットを提供します。CircuitPython とは異なり、違いについては [MicroPython ドキュメント](https://github.com/micropython/micropython/wiki/Differences) で詳しく読むことができます。

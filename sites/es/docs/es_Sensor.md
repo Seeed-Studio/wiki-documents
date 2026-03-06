@@ -2,12 +2,15 @@
 description: La detección es el paso inicial y quizás el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de detección dinámico, sentamos las bases para monitorear las actividades sociales y comprender nuestros entornos físicos y naturales.
 title: Sensores y Detección
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_Network
 last_update:
   date: 05/23/2024
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor_Network/
 ---
 
 La detección es el paso inicial y quizás el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de detección dinámico, sentamos las bases para monitorear las actividades sociales y comprender nuestros entornos físicos y naturales. Este proceso de detección nos permite recopilar y comprender datos del mundo que nos rodea.

@@ -2,12 +2,15 @@
 description: 使用 Wio Terminal 构建红外热成像相机
 title: 使用 Wio Terminal 构建红外热成像相机
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Thermal-Camera
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Thermal-Camera/
 ---
 
 # 使用 Wio Terminal 构建红外热成像相机

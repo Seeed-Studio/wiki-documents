@@ -10,6 +10,9 @@ slug: /model_conversion_guide
 last_update:
   date: 10/28/2025
   author: Peter
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/model_conversion_guide/
 ---
 
 # YOLO11n Model Conversion for reCamera: Complete Guide

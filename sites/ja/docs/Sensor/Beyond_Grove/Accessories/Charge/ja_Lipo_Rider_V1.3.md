@@ -2,13 +2,16 @@
 description: Lipo Rider V1.3
 title: Lipo Rider V1.3
 keywords:
-- アクセサリー充電
+  - アクセサリー充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Lipo_Rider_V1.3
 sku: 106990022
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Lipo_Rider_V1.3/
 ---
 
 

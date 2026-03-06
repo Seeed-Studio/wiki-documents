@@ -1,6 +1,6 @@
 ---
 title: 5V/3.3V ブレッドボード電源
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -10,6 +10,9 @@ sku: 106990021
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/5V-3.3V_Breadboard_Power_Supply/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Overview
 title: Getting Started with Light Sensor
 keywords:
-- Wio_terminal Light_Sensor
+  - Wio_terminal Light_Sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Light
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Light/
 ---
 
 # Getting Started with Light Sensor

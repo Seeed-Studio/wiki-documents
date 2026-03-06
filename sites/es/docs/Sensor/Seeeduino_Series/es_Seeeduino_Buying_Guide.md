@@ -2,12 +2,15 @@
 description: Guía de Compra de Seeeduino
 title: Guía de Compra de Seeeduino
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Buying_Guide
 last_update:
   date: 1/12/2022
   author: hushuxu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino_Buying_Guide/
 ---
 
 Bueno, tenemos muchas placas Seeeduino para lograr todo tipo de funciones. Pero puedes encontrar que es difícil hacer una elección entre todas ellas. Así que hicimos la lista de abajo y esperamos que te pueda ayudar.

@@ -1,14 +1,17 @@
 ---
-description:  Grove - Starter Kit v3
+description: Grove - Starter Kit v3
 title: Grove - Starter Kit v3
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_v3
 sku: 110060024
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_Starter_Kit_v3/
 ---
 
 Grove es una plataforma de electrónica modular para prototipado conveniente y rápido. Muchas configuraciones se pueden ensamblar sin necesidad de soldadura o uso de protoboard. Simplemente conecta los módulos Grove al shield Grove y aprovecha el código de ejemplo proporcionado para cada módulo Grove. El Grove Starter Kit contiene una multitud de sensores y actuadores, incluyendo soporte para audio, luz, movimiento, táctil y otros modos de interacción. Así que puedes empezar a experimentar de inmediato con una amplia variedad de proyectos.

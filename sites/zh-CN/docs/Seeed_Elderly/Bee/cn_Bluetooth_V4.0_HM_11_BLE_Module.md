@@ -2,13 +2,16 @@
 description: 蓝牙 V4.0 HM-11 BLE 模块
 title: 蓝牙 V4.0 HM-11 BLE 模块
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_V4.0_HM_11_BLE_Module
 sku: 317030001
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Bluetooth_V4.0_HM_11_BLE_Module/
 ---
 ![](https://files.seeedstudio.com/wiki/Bluetooth_V4.0_HM_11_BLE_Module/img/HM-11%20BLE%20Module.jpg)
 

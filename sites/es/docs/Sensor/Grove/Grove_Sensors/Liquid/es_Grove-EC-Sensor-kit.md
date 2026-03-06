@@ -2,13 +2,16 @@
 description: Grove - Kit de Sensor EC
 title: Grove - Kit de Sensor EC
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-EC-Sensor-kit
 sku: 110020292
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-EC-Sensor-kit/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.01.png) -->

@@ -2,13 +2,16 @@
 description: reRouter 介绍
 title: reRouter 介绍
 keywords:
-- 设备
+  - 设备
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry-OpenWrt-Getting-Started
 sku: 110110110
 last_update:
   date: 2022/1/10
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Raspberry-OpenWrt-Getting-Started/
 ---
 
 

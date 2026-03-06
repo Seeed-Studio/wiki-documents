@@ -2,12 +2,15 @@
 description: 本指南介绍如何购买和激活 Benchmark Labs 的超本地化特定点天气预报服务，配合您的 Seeed 气象站使用。我们的 AI 驱动系统提供针对您微气候的特定点 10 天逐小时预报，由您的气象站数据提供支持，帮助您做出更好的环境和运营决策。
 title: Seeed 气象站的 Benchmark Labs 预报集成
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image62.webp
 slug: /benchmark_labs_forecast_integration_for_seeed_weather_stations
 last_update:
   date: 6/3/2025
   author: Zeno
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Seeed 气象站的 Benchmark Labs 预报集成
 

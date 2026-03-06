@@ -2,12 +2,15 @@
 description: Grove - Node
 title: Grove - Node
 keywords:
-- Grove_Sensors_Network
+  - Grove_Sensors_Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Node
 last_update:
   date: 1/20/2023
   author: jianjing Huang
+createdAt: '2023-01-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Node/
 ---
 
 

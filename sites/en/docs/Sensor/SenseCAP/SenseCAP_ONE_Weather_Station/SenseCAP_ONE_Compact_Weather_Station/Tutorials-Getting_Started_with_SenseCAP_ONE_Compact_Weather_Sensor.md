@@ -1,14 +1,17 @@
 ---
-description:  Getting Started with SenseCAP ONE Compact Weather Sensor
-title:  Getting Started with SenseCAP ONE Compact Weather Sensor
+description: Getting Started with SenseCAP ONE Compact Weather Sensor
+title: Getting Started with SenseCAP ONE Compact Weather Sensor
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
   date: 12/25/2025
   author: Janet
+createdAt: '2023-04-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
 

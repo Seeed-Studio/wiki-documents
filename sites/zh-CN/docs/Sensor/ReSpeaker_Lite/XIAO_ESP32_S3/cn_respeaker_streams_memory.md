@@ -2,14 +2,17 @@
 description: 使用 XIAO ESP32S3 的星球大战主题播放器
 title: 星球大战主题播放器
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_memory
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_streams_memory/
 ---
 
 本项目演示如何使用 reSpeaker Lite 开发板播放星球大战主题曲。

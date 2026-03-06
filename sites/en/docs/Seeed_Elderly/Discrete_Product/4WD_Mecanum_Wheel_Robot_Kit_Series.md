@@ -2,13 +2,16 @@
 description: 4WD Mecanum Wheel Robot Kit Series
 title: 4WD Mecanum Wheel Robot Kit Series
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 sku: 110070012
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/4WD_Mecanum_Wheel_Robot_Kit_Series/
 ---
 
 4WD Mecanum Wheel Robot Kit series products are 4 wheel drive mobile platforms based on Mecanum wheels. Each kit contains two left mecanum wheels as well as two right mecanum wheels. The four Mecanum wheels are each connected to a separate motor with independent control. Depending on each individual wheel direction and speed, the mobile platform can move forward, backward, sideways and any other desired directions or spin. Two remote control modules – BLE module and RF module – can be added on this kit to allow remote control.

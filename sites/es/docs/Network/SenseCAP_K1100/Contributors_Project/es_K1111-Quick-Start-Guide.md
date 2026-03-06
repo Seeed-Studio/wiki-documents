@@ -2,12 +2,15 @@
 description: Sistema de alarma de monitoreo de humedad del suelo
 title: Sistema de alarma de monitoreo de humedad del suelo
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1111-Quick-Start-Guide
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1111-Quick-Start-Guide/
 ---
 # Sistema de alarma de monitoreo de humedad del suelo
 

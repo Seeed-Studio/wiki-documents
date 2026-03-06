@@ -2,12 +2,15 @@
 description: The Things Network への接続
 title: The Things Network への接続
 keywords:
-- SenseCAP_T2000_tracker
+  - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/sensecap_t2000_connect_to_ttn.png
 slug: /sensecap_t2000_tracker_ttn
 last_update:
   date: 1/28/2026
   author: Janet
+createdAt: '2026-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/sensecap_t2000_tracker_ttn/
 ---
 
 # The Things Network への接続

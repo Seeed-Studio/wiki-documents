@@ -2,12 +2,15 @@
 description: Wifi Bee
 title: Wifi Bee
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wifi_Bee
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wifi_Bee/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/Seeedstudio_Wifibee_MRF24WB0MA.jpg) ![](https://files.seeedstudio.com/wiki/Wifi_Bee/img/SeeedStudio_Wifibee_ATMega328.jpg)

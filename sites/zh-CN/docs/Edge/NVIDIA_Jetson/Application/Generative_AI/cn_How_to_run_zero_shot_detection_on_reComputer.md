@@ -2,13 +2,16 @@
 description: 本wiki提供了如何在reComputer Jetson上运行零样本检测的教程。
 title: 如何在reComputer上运行零样本检测
 keywords:
-- reComputer
-- Zero-Shot Detection
+  - reComputer
+  - Zero-Shot Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /run_zero_shot_detection_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/run_zero_shot_detection_on_recomputer/
 ---
 
 # 如何在reComputer上使用Jetson平台服务运行零样本检测

@@ -1,5 +1,4 @@
 ---
-# 参见：https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs
 description: This article is a brief introduction to the main page of SenseCraft AI.
 title: Overview
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
@@ -7,10 +6,12 @@ slug: /sensecraft-ai/overview
 aliases:
   - /sensecraft_ai_overview
 sidebar_position: 1
-# sidebar_class_name: hidden # 有文件但是不显示在左侧目录
 last_update:
   date: 11/28/2024
   author: Citric
+createdAt: '2024-11-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-ai/overview/
 ---
 
 # SenseCraft AI Overview

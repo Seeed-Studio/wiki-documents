@@ -2,13 +2,16 @@
 description: Sensor de Humedad del Suelo, Temperatura y CE
 title: Sensor de Humedad del Suelo, Temperatura y CE
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor
 sku: 101990667,314990621
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor/
 ---
 
 ![Sensor de Humedad del Suelo, Temperatura y CE](https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png)

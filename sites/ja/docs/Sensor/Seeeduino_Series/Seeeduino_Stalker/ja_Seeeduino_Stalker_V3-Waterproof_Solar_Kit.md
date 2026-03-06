@@ -2,12 +2,15 @@
 description: Seeeduino Stalker V3 - 防水ソーラーキット
 title: Seeeduino Stalker V3 - 防水ソーラーキット
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_V3-Waterproof_Solar_Kit
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Seeeduino_Stalker_V3-Waterproof_Solar_Kit/
 ---
 
 

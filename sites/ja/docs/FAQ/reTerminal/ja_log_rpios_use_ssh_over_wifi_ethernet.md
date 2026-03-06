@@ -6,6 +6,9 @@ slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/log_rpios_use_ssh_over_wifi_ethernet/
 ---
 
 <!-- Log in to Raspberry Pi OS/ Ubuntu OS or Other OS using SSH over Wi-Fi/ Ethernet -->

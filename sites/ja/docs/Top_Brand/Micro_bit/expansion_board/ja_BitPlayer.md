@@ -2,12 +2,15 @@
 description: Micro_bit BitPlayer
 title: BitPlayer
 keywords:
-- Micro_bit
+  - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BitPlayer
 last_update:
   date: 05/15/2025
   author: Seraphina
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/BitPlayer/
 ---
 
 

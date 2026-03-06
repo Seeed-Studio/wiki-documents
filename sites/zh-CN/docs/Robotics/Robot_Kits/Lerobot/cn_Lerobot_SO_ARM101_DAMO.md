@@ -2,17 +2,20 @@
 description: 本wiki提供了 SO-ARM101-乐云具身智能平台适配套件的组装与调试教程，并在最新版 Lerobot 框架内实现数据采集与训练。
 title: Lerobot中使用SO-ARM101-乐云具身智能平台适配套件
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
-- DAMO
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
+  - DAMO
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_soarm101_Rynnbot_Developer_Kit
 sku: 100068444
 last_update:
   date: 1/12/2026
   author: LiShanghang
+createdAt: '2026-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/lerobot_soarm101_Rynnbot_Developer_Kit/
 ---
 
 # 基于 LeRobot 的 SO-ARM101-乐云具身智能平台适配套件入门教程

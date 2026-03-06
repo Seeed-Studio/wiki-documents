@@ -2,14 +2,17 @@
 description: 如何为 Jetson 加密磁盘
 title: 如何为 Jetson 加密磁盘
 keywords:
-- jetson
-- encrypt
-- L4T
+  - jetson
+  - encrypt
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_encrypt_the_disk_for_jetson
 last_update:
   date: 10/11/2025
   author: Dayu
+createdAt: '2025-08-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/how_to_encrypt_the_disk_for_jetson/
 ---
 
 **本教程以 L4T 36.4.3 和 reComputer J401 为例，为 Jetson 磁盘加密提供参考步骤。

@@ -6,6 +6,9 @@ slug: /xiao_esp32c6_zigbee_arduino
 last_update:
   date: 11/25/2024
   author: Spencer
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_zigbee_arduino/
 ---
 
 ## 概述

@@ -2,12 +2,15 @@
 description: 可定制模型的视觉AI
 title: 可定制模型的视觉AI
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Vision_AI_with_Customizable_Models/
 ---
 
 # 将您自己的AI模型训练并部署到 Grove - 视觉AI

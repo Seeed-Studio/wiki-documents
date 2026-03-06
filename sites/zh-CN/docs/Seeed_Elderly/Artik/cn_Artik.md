@@ -2,12 +2,15 @@
 description: Artik
 title: Artik
 keywords:
-- Artik
+  - Artik
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Artik
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Artik/
 ---
 
 三星 ARTIK 智能物联网平台将硬件模块与云服务结合在一起，提供内置的安全性以及工具和合作伙伴生态系统，以加速您的产品上市时间。我们称之为“端到端物联网”。

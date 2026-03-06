@@ -2,14 +2,17 @@
 description: Este wiki presenta las características de la placa portadora J501 y explica cómo flashear el sistema Jetpack en la placa portadora J501.
 title: Flashear Jetpack
 keywords:
-- reServer
-- Jetson
+  - reServer
+  - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_j501_getting_started
 sku: 102991854,E24081601
 last_update:
   date: 08/19/2024
   author: Youjiang
+createdAt: '2024-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reserver_j501_getting_started/
 ---
 
 # Introducción al reServer J501

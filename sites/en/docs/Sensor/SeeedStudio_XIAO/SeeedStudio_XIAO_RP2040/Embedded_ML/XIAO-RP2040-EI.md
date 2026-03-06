@@ -2,12 +2,15 @@
 description: Motion Recognition based on Edge Impulse
 title: Motion Recognition based on Edge Impulse
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-EI
 last_update:
   date: 04/17/2023
   author: Citric
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO-RP2040-EI/
 ---
 
 # TinyML on SEEED XIAO RP2040 (Motion Recognition)

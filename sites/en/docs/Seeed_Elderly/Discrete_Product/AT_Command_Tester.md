@@ -2,12 +2,15 @@
 description: AT Command Tester
 title: AT Command Tester
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /AT_Command_Tester
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/AT_Command_Tester/
 ---
 [AT Command Tester](https://m2msupport.net/m2msupport/module-tester/)   is an online tool for testing AT commands and other module functionalities such as [data call](https://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/), [voice call](https://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/),[HTTP](https://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/), [network registration](https://m2msupport.net/m2msupport/network-registration/), [SMS](https://m2msupport.net/m2msupport/sms-at-commands/), [Phonebook](https://m2msupport.net/m2msupport/sim-phonebook-at-commands/), [signal quality](https://m2msupport.net/m2msupport/signal-quality/), [SIM interface](https://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/), [device info](https://m2msupport.net/m2msupport/at-commands-to-get-device-information/) etc.
 

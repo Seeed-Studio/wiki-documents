@@ -2,17 +2,20 @@
 title: reCamera を使用した AI 駐車スロット監視デモ
 description: この Wiki では、reCamera を使用した AI ベースの駐車スロット監視デモを紹介し、リアルタイムの駐車可能性検出と可視化を実演します。
 keywords:
-    - Parking Slot Detection
-    - reCamera
-    - AI Edge Vision
-    - Smart Parking
+  - Parking Slot Detection
+  - reCamera
+  - AI Edge Vision
+  - Smart Parking
 slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3
 last_update:
-    date: 2025-12-17
-    author: John Xiang
+  date: 2025-12-17T00:00:00.000Z
+  author: John Xiang
+createdAt: '2025-12-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 
 # reCamera を使用した AI 駐車管理デモ

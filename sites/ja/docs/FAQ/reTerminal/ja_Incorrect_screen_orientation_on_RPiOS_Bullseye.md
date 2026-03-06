@@ -6,6 +6,9 @@ slug: /Incorrect_screen_orientation_on_RPiOS_Bullseye
 last_update:
   date: 11/24/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Incorrect_screen_orientation_on_RPiOS_Bullseye/
 ---
 
 <!-- Q11: Raspberry Pi OS Bullseyeインストール後に画面の向きが正しくない -->

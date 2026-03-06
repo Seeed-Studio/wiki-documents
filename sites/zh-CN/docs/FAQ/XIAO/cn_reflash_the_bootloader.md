@@ -1,11 +1,13 @@
 ---
 description: XIAO ESP32C3-常见问题
 title: 如何使用出厂固件重新烧录引导程序
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reflash_the_bootloader
 last_update:
   date: 2023/6/30
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reflash_the_bootloader/
 ---
 
 您可以通过 **USB Type-C** 将开发板连接到电脑，并使用 **ESP RF Test Tool** 重新烧录带有出厂固件的引导程序。

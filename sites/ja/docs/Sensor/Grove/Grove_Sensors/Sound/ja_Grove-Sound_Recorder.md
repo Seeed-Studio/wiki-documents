@@ -1,6 +1,6 @@
 ---
 title: Grove - サウンドレコーダー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Grove-Sound_Recorder
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Sound_Recorder/
 ---
 
 

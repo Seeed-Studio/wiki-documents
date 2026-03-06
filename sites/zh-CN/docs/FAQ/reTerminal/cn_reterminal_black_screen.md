@@ -6,6 +6,9 @@ slug: /reterminal_black_screen
 last_update:
   date: 11/15/2023
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reterminal_black_screen/
 ---
 
 reTerminal 出厂时已预装必要的驱动程序，因此您无需安装任何额外的驱动程序。<br/>

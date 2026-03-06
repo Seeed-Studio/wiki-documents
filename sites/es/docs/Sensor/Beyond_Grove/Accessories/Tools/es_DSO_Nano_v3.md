@@ -1,6 +1,6 @@
 ---
 title: DSO Nano v3
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 109990013
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/DSO_Nano_v3/
 ---
 <!-- ---
 name: DSO Nano v3

@@ -2,12 +2,15 @@
 description: 概述
 title: RTC 概述
 keywords:
-- Wio_terminal RTC
+  - Wio_terminal RTC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-RTC
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-RTC/
 ---
 
 # RTC 概述

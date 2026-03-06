@@ -7,6 +7,9 @@ slug: /DSO_Nano-Development
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/DSO_Nano-Development/
 ---
 
 Algunos recursos para desarrollar (en) el [DSO Nano](/DSO_Nano "DSO Nano").

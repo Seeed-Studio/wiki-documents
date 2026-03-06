@@ -6,6 +6,9 @@ slug: /battery_charging_considerations
 last_update:
   date: 6/28/2023
   author: cheng.tang
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/battery_charging_considerations/
 ---
 
 <!-- ### Q3: What are the considerations when using XIAO nRF52840 (Sense) for battery charging? -->

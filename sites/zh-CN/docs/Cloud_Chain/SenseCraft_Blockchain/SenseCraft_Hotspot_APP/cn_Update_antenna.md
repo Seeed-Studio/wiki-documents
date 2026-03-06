@@ -2,7 +2,7 @@
 description: 更新天线
 title: 更新天线
 keywords:
-- Cloud and Chain
+  - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/update_antenna
 aliases:
@@ -10,6 +10,9 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-blockchain/sensecraft-hotspot-app/update_antenna/
 ---
 
 **如何更新您的热点天线**

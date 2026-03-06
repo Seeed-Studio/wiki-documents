@@ -1,6 +1,6 @@
 ---
 title: Sensor de Respiración-Latido MR60BHA2 con Home Assistant
-description: | 
+description: |
   Sensor mmWave de Latido MR60BHA2 con Home Assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ha_with_mr60bha2
@@ -10,6 +10,9 @@ sidebar_position: 1
 last_update:
   date: 09/23/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ha_with_mr60bha2/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -2,13 +2,16 @@
 description: Grove - 电磁铁
 title: Grove - 电磁铁
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Electromagnet
 sku: 101020073
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Electromagnet/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Electromagnet/img/Grove_Electromagnet_02.jpg)

@@ -2,13 +2,16 @@
 description: HimaxのSDKを使用してGrove Vision AI V2を開発する方法を紹介します。
 title: Himax SDKを使用したGrove Vision AI V2の開発
 keywords:
-- himax
-- vision AI
+  - himax
+  - vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_himax_sdk
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_himax_sdk/
 ---
 
 

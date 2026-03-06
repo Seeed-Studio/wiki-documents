@@ -2,7 +2,7 @@
 description: Guía para flashear el firmware MeshCore en el T1000-E mediante Web USB o arrastrar y soltar, junto con la configuración de la app para la región LoRa, GPS y envío de mensajes.
 title: Primeros pasos con Meshhcore
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e_meshcore
 sku: 114993369
@@ -10,7 +10,11 @@ sidebar_position: 3
 last_update:
   date: 3/2/2026
   author: Michelle Huang
----  
+createdAt: '2026-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/
+---
+  
 
 
 ## Flasheo de firmware

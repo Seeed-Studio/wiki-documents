@@ -6,6 +6,9 @@ slug: /noport_upload_fails
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/noport_upload_fails/
 ---
 
 

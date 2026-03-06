@@ -3,7 +3,7 @@ description: 本 wiki 演示如何在 reComputer 上部署人脸识别。
 title: 在 reComputer 上部署人脸识别
 keywords:
   - Edge
-  - reComputer AI 
+  - reComputer AI
   - face recognition
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,10 @@ slug: /facial_recognition_on_the_recomputer
 last_update:
   date: 11/18/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/facial_recognition_on_the_recomputer/
 ---
 
 # 在 reComputer 上部署人脸识别

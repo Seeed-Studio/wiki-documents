@@ -2,13 +2,16 @@
 description: 介绍如何使用 Grove Vision AI V2 构建智能网络摄像头。
 title: 具有 AI 功能的智能 IP 摄像头
 keywords:
-- vision AI
-- intelligent web camera
+  - vision AI
+  - intelligent web camera
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_webcamera
 last_update:
   date: 05/09/2024
   author: Allen
+createdAt: '2024-05-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_webcamera/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/webcamera/12.png" style={{width:1000, height:'auto'}}/></div>

@@ -2,12 +2,15 @@
 description: 在 ODYSSEY - X86 上安装 Mender 客户端
 title: 在 ODYSSEY - X86 上安装 Mender 客户端
 keywords:
-- 软件 Mender
+  - 软件 Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Mender-Client-ODYSSEY-X86
 last_update:
   date: 2023/1/13
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Mender-Client-ODYSSEY-X86/
 ---
 
 # 在 ODYSSEY - X86 上安装 Mender 客户端

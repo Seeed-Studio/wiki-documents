@@ -3,13 +3,16 @@ description: 创建一个包含丰富内容的文档页面。
 title: reComputer 系列的 GPIO 和 Grove
 keywords:
   - Edge
-  - reComputer 
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Jetson_Series_GPIO_Grove
 last_update:
   date: 11/21/2022
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_Series_GPIO_Grove/
 ---
 
 # reComputer Jetson 的 GPIO 和 Grove

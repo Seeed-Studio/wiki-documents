@@ -2,12 +2,15 @@
 description: Seeeduino 入门指南
 title: Seeeduino 入门指南
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Seeeduino
 last_update:
   date: 1/12/2022
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Getting_Started_with_Seeeduino/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Hello_world.jpg" alt="pir" width={600} height="auto" /></p>
 

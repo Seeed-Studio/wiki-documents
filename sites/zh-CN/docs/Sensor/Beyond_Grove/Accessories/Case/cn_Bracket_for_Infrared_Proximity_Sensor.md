@@ -1,6 +1,6 @@
 ---
 title: 红外接近传感器支架
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Bracket_for_Infrared_Proximity_Sensor
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Bracket_for_Infrared_Proximity_Sensor/
 ---
 ![](https://files.seeedstudio.com/wiki/Bracket_for_Infrared_Proximity_Sensor/img/brkir.jpg)
 

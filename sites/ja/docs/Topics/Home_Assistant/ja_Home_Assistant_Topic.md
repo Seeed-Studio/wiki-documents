@@ -2,13 +2,16 @@
 description: このページは、Home Assistant に関するすべてのコンテンツを集めたものです。
 title: Home Assistant
 keywords:
-- home assistant
+  - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 sku: 113110024
 last_update:
   date: 05/15/2025
   author: Matthew、Jenna、Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/home_assistant_topic/
 ---
 
 

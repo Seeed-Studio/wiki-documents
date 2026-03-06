@@ -2,13 +2,16 @@
 description: 基于树莓派的物联网 Grove 入门套件
 title: 基于树莓派的物联网 Grove 入门套件
 keywords:
-- Kit
+  - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi
 sku: 110060482
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi/
 ---
 <!-- ---
 name: 基于树莓派的物联网 Grove 入门套件

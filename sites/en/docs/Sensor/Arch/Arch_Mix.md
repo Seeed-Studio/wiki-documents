@@ -2,13 +2,16 @@
 description: Arch Mix
 title: Arch Mix
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_Mix
 sku: 102080027
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Arch_Mix/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Arch_Mix/img/main1.jpg)

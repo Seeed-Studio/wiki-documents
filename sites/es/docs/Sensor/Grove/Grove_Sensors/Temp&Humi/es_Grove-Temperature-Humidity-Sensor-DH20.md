@@ -2,13 +2,16 @@
 description: Grove - Sensor de Temperatura y Humedad(DHT20)
 title: Grove - Sensor de Temperatura y Humedad(DHT20)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature-Humidity-Sensor-DH20
 sku: 101020932
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Temperature-Humidity-Sensor-DH20/
 ---
 
 

@@ -11,6 +11,9 @@ sidebar_position: 3
 last_update:
   date: 04/11/2024
   author: Spencer
+createdAt: '2022-11-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_wifi_usage_esp32c6/
 ---
 
 # WiFi Usage with Seeed Studio XIAO ESP32C6

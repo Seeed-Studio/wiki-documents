@@ -7,6 +7,9 @@ sidebar_position: 0
 last_update:
   date: 2023/1/26
   author: Specner
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/M2_Kit_Getting_Started/
 ---
 # **概述**
 

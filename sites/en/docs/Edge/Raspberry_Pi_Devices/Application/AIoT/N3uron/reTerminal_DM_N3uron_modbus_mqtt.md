@@ -1,11 +1,11 @@
 ---
-description: Connect N3uron with MQTT and Modbus Support Devices 
-title: Connect N3uron with MQTT and Modbus Support Devices 
+description: Connect N3uron with MQTT and Modbus Support Devices
+title: Connect N3uron with MQTT and Modbus Support Devices
 keywords:
   - reTerminal DM
   - MQTT
   - IIoT
-  - Industrial 
+  - Industrial
   - N3uron
   - Modbus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,6 +13,9 @@ slug: /reTerminalDM_N3uron_modbus_mqtt
 last_update:
   date: 5/6/2024
   author: Kasun Thushara and Xabier Fernández
+createdAt: '2024-05-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminalDM_N3uron_modbus_mqtt/
 ---
 ## Introduction
 

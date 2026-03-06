@@ -2,13 +2,16 @@
 description: EEPROMを更新する
 title: Compute Module 4のEEPROMを更新する
 keywords:
-- Raspberry_Pi
-- Official_Raspberry_Pi_Board
+  - Raspberry_Pi
+  - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_pi_CM4_update_eeprom
 last_update:
   date: 05/15/2025
   author: Peter Pan
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Raspberry_pi_CM4_update_eeprom/
 ---
 
 

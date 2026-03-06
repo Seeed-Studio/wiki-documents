@@ -11,6 +11,9 @@ last_update:
   date: 12/25/2025
   author: Zeller
   sidebar_position: 9
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_mg24_sense_micropython/
 ---
 
 [MicroPython](https://github.com/micropython/micropython/wiki) 是一个具有部分原生代码编译功能的 Python 解释器。它提供了 Python 3.5 功能的子集，专为嵌入式处理器和受限系统实现。它与 CircuitPython 不同，您可以在 [MicroPython 文档](https://github.com/micropython/micropython/wiki/Differences) 中了解更多差异。

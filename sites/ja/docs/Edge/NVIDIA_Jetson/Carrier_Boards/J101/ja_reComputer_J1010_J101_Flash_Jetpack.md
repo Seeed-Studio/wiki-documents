@@ -7,7 +7,10 @@ sku: 110061362,102991694,110061441,110061481
 last_update:
   date: 01/05/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack/
 ---
 
 # J101 キャリアボード

@@ -10,6 +10,9 @@ slug: /recomputer_r1000_n3uron
 last_update:
   date: 07/08/2023
   author: Kasun Thushara
+createdAt: '2023-07-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_n3uron/
 ---
 
 ## What is N3uron?

@@ -2,13 +2,16 @@
 description: Grove - IMU 10DOF v2.0
 title: Grove - IMU 10DOF v2.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-IMU_10DOF_v2.0
 sku: 101020252
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-IMU_10DOF_v2.0/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-IMU_10DOF_v2.0/img/Grove-imu-10dof-v2.0.jpg" alt="pir" width={600} height="auto" /></p>

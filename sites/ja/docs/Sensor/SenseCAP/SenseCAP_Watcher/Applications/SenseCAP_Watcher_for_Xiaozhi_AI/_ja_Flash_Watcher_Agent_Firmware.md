@@ -3,18 +3,22 @@ description: SenseCAP Watcher Agent にファームウェアをフラッシュ�
 title: Watcher Agent ファームウェアのフラッシュ
 sidebar_position: 1
 keywords:
-- SenseCAP
-- Watcher
-- Agent
-- Firmware
-- Flash
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Firmware
+  - Flash
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
   date: 12/04/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/flash_watcher_agent_firmware/
 ---
 
 # Watcher Agent ファームウェアのフラッシュ

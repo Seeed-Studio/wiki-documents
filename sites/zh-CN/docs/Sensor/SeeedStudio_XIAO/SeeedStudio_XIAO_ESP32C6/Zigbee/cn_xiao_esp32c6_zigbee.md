@@ -7,6 +7,9 @@ sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_zigbee/
 ---
 
 Zigbee 是一种广泛采用的无线通信协议，在家庭自动化、智能能源管理和物联网 (IoT) 应用中得到广泛使用。Zigbee 以其低功耗、可靠的数据传输和网状网络功能而闻名，是构建可扩展且高效的无线网络的绝佳选择。

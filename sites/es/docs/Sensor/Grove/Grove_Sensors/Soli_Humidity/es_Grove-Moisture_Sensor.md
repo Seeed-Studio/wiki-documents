@@ -2,13 +2,16 @@
 description: Grove - Sensor de Humedad
 title: Grove - Sensor de Humedad
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Moisture_Sensor
 sku: 101020008
 last_update:
   date: 1/9/2023
   author: jianjing Huang
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Moisture_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/images/Moisture_sensor_.jpg" /></div>

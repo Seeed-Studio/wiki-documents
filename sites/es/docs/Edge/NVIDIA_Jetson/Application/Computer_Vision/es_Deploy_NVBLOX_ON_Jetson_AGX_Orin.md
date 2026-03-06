@@ -2,24 +2,27 @@
 description: Este wiki proporciona una guía completa paso a paso para desplegar NVBlox con cámara RGB-D Orbbec en dispositivos Jetson AGX Orin. Cubre la configuración del entorno, instalación de dependencias, integración con Isaac ROS y demostraciones de mapeo 3D en tiempo real para aplicaciones robóticas.
 title: Desplegar NVBlox con Cámara Orbbec en Jetson AGX Orin
 keywords:
-- NVBlox
-- Jetson AGX Orin
-- Isaac ROS
-- ROS2
-- Computer Vision
-- Robotics
-- 3D Perception
-- RGB-D Camera
-- Edge AI
-- TSDF
-- ESDF
-- 3D Mapping
+  - NVBlox
+  - Jetson AGX Orin
+  - Isaac ROS
+  - ROS2
+  - Computer Vision
+  - Robotics
+  - 3D Perception
+  - RGB-D Camera
+  - Edge AI
+  - TSDF
+  - ESDF
+  - 3D Mapping
 image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
-  date: 2026-01-20
+  date: 2026-01-20T00:00:00.000Z
   author: Dayu
+createdAt: '2026-01-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/deploy_nvblox_jetson_agx_orin/
 ---
 
 <div align="center">

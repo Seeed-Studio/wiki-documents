@@ -2,13 +2,16 @@
 description: UartSBee V5
 title: UartSBee V5
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /UartSBee_v5
 sku: 103100001
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/UartSBee_v5/
 ---
 
 ![](https://files.seeedstudio.com/wiki/UartSBee_v5/img/UartSBee_V5_New.jpg)

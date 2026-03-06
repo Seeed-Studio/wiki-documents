@@ -2,12 +2,15 @@
 description: 在 Seeed，我们非常重视我们的 Seeeders 社区。Seeed Studio 贡献者计划是一个协作项目，旨在团结来自世界各地的亲爱朋友们，共同构建创新解决方案。
 title: 贡献者计划
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/contributor/xuanchuan.jpg
 slug: /Contributor
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Contributor/
 ---
 
 # ✨ 贡献者计划 ✨ 

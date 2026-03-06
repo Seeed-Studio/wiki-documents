@@ -2,12 +2,15 @@
 description: 矩阵时钟
 title: 矩阵时钟
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Matrix_Clock
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Matrix_Clock/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Matrix_Clock/img/MatrixClock-ProductImagePlain.jpg)

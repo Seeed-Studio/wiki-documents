@@ -1,11 +1,13 @@
 ---
 description: XIAO-ESP32S3-FAQ
 title: ¿Por qué mi XIAO tiene el problema de no estar al ras en las esquinas redondeadas?
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /not_being_flush
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/not_being_flush/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>

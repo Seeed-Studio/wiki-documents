@@ -2,12 +2,15 @@
 description: 传感器 - 运动
 title: 传感器 - 运动（介绍）
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_motion
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor_motion/
 ---
 # Seeed 运动传感器选择指南
 

@@ -2,12 +2,15 @@
 description: Bluetooth Ibeacon
 title: Bluetooth Ibeacon
 keywords:
-- Wio_terminal Bluetooth
+  - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE-ibeacon-using-Wio-terminal
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/BLE-ibeacon-using-Wio-terminal/
 ---
 
 

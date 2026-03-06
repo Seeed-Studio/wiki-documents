@@ -1,11 +1,11 @@
 ---
-description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the latest version of Lerobot framework. 
+description: This wiki provides the assembly and debugging tutorial for the SO ARM100 and realizes data collection and training within the latest version of Lerobot framework.
 title: SoArm in Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
@@ -13,7 +13,11 @@ last_update:
   date: 3/2/2026
   author: ZhangJiaQuan
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-06-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
 
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot

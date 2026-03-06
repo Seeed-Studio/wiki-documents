@@ -6,6 +6,9 @@ slug: /XIAO-BLE-PDM-EI
 last_update:
   date: 10/12/2023
   author: Bruno Santos (Feiticeir0)
+createdAt: '2023-10-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-PDM-EI/
 ---
 
 :::caution

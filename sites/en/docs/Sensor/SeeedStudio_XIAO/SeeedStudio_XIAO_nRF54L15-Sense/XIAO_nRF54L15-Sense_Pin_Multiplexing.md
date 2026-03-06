@@ -1,6 +1,6 @@
 ---
 title: Pin Multiplexing with Seeed Studio XIAO nRF54L15 Sense
-description: |
+description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
 sidebar_position: 2
@@ -10,6 +10,9 @@ keywords:
 last_update:
   date: 7/2/2025
   author: Jason
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
 For ease of use, all of the following examples of pin multiplexing are on **PlatformIO**. Please click on this link for a configuration and usage guide for the [XIAO nRF54L5](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/)

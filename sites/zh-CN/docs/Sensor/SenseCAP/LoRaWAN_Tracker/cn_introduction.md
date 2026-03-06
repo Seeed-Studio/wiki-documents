@@ -2,8 +2,8 @@
 description: LoRaWAN 追踪器介绍
 title: 介绍
 keywords:
-- Tracker
-- LoRaWAN
+  - Tracker
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /t1000e_for_lorawan_introduction
 sku: 114993591
@@ -11,6 +11,9 @@ sidebar_position: 1
 last_update:
   date: 2/4/2026
   author: Janet
+createdAt: '2026-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/t1000e_for_lorawan_introduction/
 ---
 
 # T1000-E for LoRaWAN 介绍

@@ -2,13 +2,16 @@
 description: 使用 Roboflow、YOLOv5 和 TensorFlow Lite 训练并部署您自己的 AI 模型
 title: 使用 Roboflow、YOLOv5 和 TensorFlow Lite 训练并部署您自己的 AI 模型
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 sku: 114992866
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2024-03-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-Grove-Vision-AI/
 ---
 # 将您自己的 AI 模型训练并部署到 Grove - Vision AI
 

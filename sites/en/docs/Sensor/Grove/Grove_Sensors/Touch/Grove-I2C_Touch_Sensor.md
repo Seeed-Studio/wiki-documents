@@ -2,13 +2,16 @@
 description: Grove - I2C Touch Sensor
 title: Grove - I2C Touch Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_Touch_Sensor
 sku: 101020047
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-I2C_Touch_Sensor/
 ---
 <!-- ---
 name: Grove - I2C Touch Sensor

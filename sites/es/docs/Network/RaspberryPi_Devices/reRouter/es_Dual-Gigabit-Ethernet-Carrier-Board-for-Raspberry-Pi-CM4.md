@@ -2,13 +2,16 @@
 description: Placa portadora reRouter
 title: Placa portadora reRouter
 keywords:
-- Device
+  - Device
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
 sku: 102110497,110110090,110110110
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4/
 ---
 
 

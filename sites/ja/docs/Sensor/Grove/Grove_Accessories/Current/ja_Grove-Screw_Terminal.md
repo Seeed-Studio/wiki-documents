@@ -1,6 +1,6 @@
 ---
 title: Grove - スクリュー端子
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 103020007
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Screw_Terminal/
 ---
 
 

@@ -6,6 +6,9 @@ slug: /fix_device_ReadOnlyRootFilesystem
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/fix_device_ReadOnlyRootFilesystem/
 ---
 
  <!-- Q4: How do I fix my device when I faced the "Read Only Root filesystem"? -->

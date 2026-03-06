@@ -2,12 +2,15 @@
 description: このガイドでは、Seeed気象ステーションでBenchmark Labsの超ローカル地点特定気象予報を購入・有効化する方法を説明します。当社のAI駆動システムは、気象ステーションからのデータを活用してマイクロクライメートに合わせた地点特定の10日間時間別予報を提供し、より良い環境・運用判断をサポートします。
 title: Seeed気象ステーション向けBenchmark Labs予報統合
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image62.webp
 slug: /benchmark_labs_forecast_integration_for_seeed_weather_stations
 last_update:
   date: 6/3/2025
   author: Zeno
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Seeed気象ステーション向けBenchmark Labs予報統合
 

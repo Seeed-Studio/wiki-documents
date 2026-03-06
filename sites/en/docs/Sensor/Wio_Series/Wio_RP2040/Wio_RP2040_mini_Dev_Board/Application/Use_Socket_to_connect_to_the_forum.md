@@ -1,6 +1,6 @@
 ---
 title: Use Socket to connect to the forum
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Use_Socket_to_connect_to_the_forum/
 ---
 Socket is almost the base of the entire network communication. In this project, we will use Socket to connect to a designated server to obtain its information from the Internet. You can search many servers with telnet protocol on the Internet. By connecting to these servers, you can browse the web and forums, and even read character animation in the terminal!
 

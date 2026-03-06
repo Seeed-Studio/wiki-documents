@@ -1,6 +1,6 @@
 ---
 title: Nodo de Sensor Inalámbrico - Kit Solar
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 110060005
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wireless_Sensor_Node-Solar_Kit/
 ---
 ![](https://files.seeedstudio.com/wiki/Wireless_Sensor_Node-Solar_Kit/img/Wireless_Sensor_Node-Solar_Kit.jpg)
 

@@ -6,6 +6,9 @@ slug: /Boot_OS_from_USB_flash_drive
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Boot_OS_from_USB_flash_drive/
 ---
 
 <!-- Q7: How can I boot an OS from USB Flash Drive -->

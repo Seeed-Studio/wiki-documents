@@ -8,6 +8,9 @@ slug: /Blynk-wireless-OTA-functionality-to-Wio-Terminal
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Blynk-wireless-OTA-functionality-to-Wio-Terminal/
 ---
 # 在 Wio Terminal 上使用 Blynk 无线 OTA 功能
 

@@ -10,7 +10,10 @@ slug: /benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8
 last_update:
   date: 11/21/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-11-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8/
 ---
 
 # 在配备 Hailo8 的 Raspberry Pi 5 上进行多流推理的基准测试

@@ -8,6 +8,9 @@ sidebar_position: 4
 last_update:
   date: 10/23/2024
   author: Evelyn Chen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_for_lora_sensor_node/
 ---
 
 # XIAO ESP32S3 & Wio-SX1262キットをLoRaWANセンサーノードとして設定する

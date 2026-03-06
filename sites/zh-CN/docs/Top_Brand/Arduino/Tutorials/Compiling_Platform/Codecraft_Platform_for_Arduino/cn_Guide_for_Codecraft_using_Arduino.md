@@ -2,14 +2,17 @@
 description: 使用 Arduino 的 Codecraft 指南
 title: 使用 Arduino 的 Codecraft 指南
 keywords:
-- Arduino
-- Tutorials
-- Codecraft_Platform_for_Arduino
+  - Arduino
+  - Tutorials
+  - Codecraft_Platform_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Guide_for_Codecraft_using_Arduino
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Guide_for_Codecraft_using_Arduino/
 ---
 
 # 使用 Arduino 的 Codecraft 指南

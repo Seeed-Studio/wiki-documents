@@ -2,12 +2,15 @@
 description: 本文介绍如何使用 XIAO ESP32S3 Sense 扩展板上的麦克风。
 title: Sense 版本的麦克风使用
 keywords:
-- Template
+  - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_mic
 last_update:
   date: 04/14/2023
   author: Citric
+createdAt: '2023-11-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_sense_mic/
 ---
 
 # Seeed Studio XIAO ESP32S3 麦克风的使用

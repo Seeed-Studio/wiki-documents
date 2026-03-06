@@ -6,7 +6,10 @@ slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Guide_to_use_demos_downloaded_from_Seeed-s_Github/
 ---
 
 It is necessary to use demos from Seeeduino Github frequently and there some slight difficult for a novice to run the demo well.

@@ -2,13 +2,16 @@
 description: This page is a collection of all Home Assistant content.
 title: Home Assistant
 keywords:
-- home assistant
+  - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 sku: 113110024
 last_update:
   date: 2/26/2024
   author: Matthew, Jenna and Kasun Thushara
+createdAt: '2023-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/home_assistant_topic/
 ---
 
 

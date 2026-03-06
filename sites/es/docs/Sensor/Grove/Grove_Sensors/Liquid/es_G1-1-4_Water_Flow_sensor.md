@@ -2,13 +2,16 @@
 description: Sensor de flujo de agua G5/4 pulgadas
 title: Sensor de flujo de agua G5/4 pulgadas
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /G1-1-4_Water_Flow_sensor
 sku: 314150004
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/G1-1-4_Water_Flow_sensor/
 ---
 ![](http://bz.seeedstudio.com/depot/images/P2231345_01.JPG)
 

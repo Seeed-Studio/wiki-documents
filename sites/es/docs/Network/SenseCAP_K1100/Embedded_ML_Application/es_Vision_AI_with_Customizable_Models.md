@@ -2,12 +2,15 @@
 description: IA de Visión con Modelos Personalizables
 title: IA de Visión con Modelos Personalizables
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Vision_AI_with_Customizable_Models/
 ---
 
 # Entrena e Implementa Tu Propio Modelo de IA en Grove - Vision AI

@@ -1,6 +1,6 @@
 ---
 title: LCD_16-2_Characters-Green_Yellow_back_light
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /LCD_16-2_Characters-Green_Yellow_back_light
 last_update:
   date: 02/03/2022
   author: matthew
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/LCD_16-2_Characters-Green_Yellow_back_light/
 ---
 
 ![](http://bz.seeedstudio.com/depot/images/product/lcd1621n.jpg)

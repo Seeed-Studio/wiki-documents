@@ -2,12 +2,15 @@
 description: SenseCAP & Node-RED 到 Twilio
 title: SenseCAP & Node-RED 到 Twilio
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100_SenseCAP_to_twilio
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/K1100_SenseCAP_to_twilio/
 ---
 
 # 通过 Node-RED 将 SenseCAP 连接到 Twilio

@@ -2,12 +2,15 @@
 description: センシングは、物理世界からデジタル化されたデータを取得するための最初であり、おそらく最も重要なステップです。動的なセンシングフレームワーク内でセンサーと情報インフラを活用することで、社会活動の監視や物理的および自然環境の理解の基盤を築きます。
 title: センサーとセンシング
 keywords:
-- センサーネットワーク
+  - センサーネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_Network
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Sensor_Network/
 ---
 
 

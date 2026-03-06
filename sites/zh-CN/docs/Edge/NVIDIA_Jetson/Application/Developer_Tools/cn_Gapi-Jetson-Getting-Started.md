@@ -8,6 +8,9 @@ slug: /gapi_getting_started-with_jetson
 last_update:
   date: 09/20/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/gapi_getting_started-with_jetson/
 ---
 
 # 在 NVIDIA® Jetson 设备上开始使用 Gapi

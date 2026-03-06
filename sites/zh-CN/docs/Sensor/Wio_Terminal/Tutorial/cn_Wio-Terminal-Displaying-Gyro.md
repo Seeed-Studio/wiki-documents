@@ -2,12 +2,15 @@
 description: Wio Terminal 显示陀螺仪
 title: Wio Terminal 显示陀螺仪
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Displaying-Gyro
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Displaying-Gyro/
 ---
 
 # Wio Terminal 显示加速度计读数

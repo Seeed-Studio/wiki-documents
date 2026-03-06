@@ -2,12 +2,15 @@
 description: SenseCAP Vision AI 入门指南
 title: SenseCAP Vision AI 入门指南
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP-Vision-AI-Get-Started
 last_update:
   date: 1/31/2023
   author: Kewei Li
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP-Vision-AI-Get-Started/
 ---
 
 <div align="center"><img width ={400} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg"/></div>

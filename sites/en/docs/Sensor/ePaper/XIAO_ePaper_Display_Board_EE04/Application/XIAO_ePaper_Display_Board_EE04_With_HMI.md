@@ -7,6 +7,9 @@ sidebar_position: 2
 last_update:
   date: 10/30/2025
   author: Jason
+createdAt: '2025-10-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/EE04_with_hmi/
 ---
 
 import Tabs from '@theme/Tabs';

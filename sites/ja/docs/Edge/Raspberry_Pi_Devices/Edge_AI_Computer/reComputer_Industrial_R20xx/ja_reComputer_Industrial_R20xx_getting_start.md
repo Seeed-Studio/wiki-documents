@@ -2,16 +2,19 @@
 description: reComputer Industrial R20xxは、Raspberry Pi CM5を搭載したAI機能付きIoTゲートウェイ＆コントローラーです。2GB RAM、8GB eMMC、デュアルイーサネット、USB、RS485、RS232、DI/DO、ワイヤレス接続（4G、5G、LoRa®、Wi-Fi/BLE）を搭載し、産業オートメーション＆エッジコンピューティングに最適です。
 title: reComputer Industrial R20xx 入門ガイド
 keywords:
-- Edge Controller
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R20xx
+  - Edge Controller
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R20xx
 image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
 slug: /recomputer_industrial_r20xx_getting_start
 sku: 100020831,100045506,100080766,100026042,E2025091901
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>

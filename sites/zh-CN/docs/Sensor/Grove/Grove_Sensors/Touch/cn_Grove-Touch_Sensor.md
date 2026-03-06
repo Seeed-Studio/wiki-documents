@@ -2,13 +2,16 @@
 description: Grove - 触摸传感器
 title: Grove - 触摸传感器
 keywords:
-- Grove Grove_Sensors Touch
+  - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Touch_Sensor
 sku: 101020037
 last_update:
   date: 1/19/2023
   author: jianjing Huang
+createdAt: '2023-01-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Touch_Sensor/
 ---
 
 

@@ -2,14 +2,17 @@
 description: Grove Vision AI V2 と XIAO ESP32 シリーズを使用したいくつかの例。
 title: Grove Vision AI V2 と XIAO ESP32 の例
 keywords:
-- xiao
-- vision AI
+  - xiao
+  - vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_demo
 sku: 101021112,E23011220,104990982
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_demo/
 ---
 
 

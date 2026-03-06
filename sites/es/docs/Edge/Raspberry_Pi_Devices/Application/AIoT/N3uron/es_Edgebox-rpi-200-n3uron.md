@@ -9,6 +9,9 @@ slug: /Edgebox-rpi-200-n3uron
 last_update:
   date: 07/29/2023
   author: José Granero Nueda & Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Edgebox-rpi-200-n3uron/
 ---
 
 ## ¿Qué es N3uron?
