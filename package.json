@@ -28,8 +28,8 @@
     "typecheck": "tsc",
     "generatewiki": "node scripts/generateWiki.js",
     "generate-lang-map": "node scripts/generate-language-map.js",
+    "generate-jetson-config": "node scripts/generate-jetson-config.js",
     "normalize-frontmatter": "node scripts/normalize-frontmatter.js"
-
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
