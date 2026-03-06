@@ -1,0 +1,179 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+// 定义要搜索的目录（只提取英文版本）
+const APP_DIRS = [
+  'sites/en/docs/Edge/NVIDIA_Jetson/Application'
+];
+
+// 定义分类映射（目录名 -> 配置变量名）
+const CATEGORY_MAPPING = {
+  'Computer_Vision': 'communityList_cv',
+  'Generative_AI': 'communityList_gen',
+  'Robotics': 'communityList_robot',
+  'Developer_Tools': 'developerToolsList',
+  'Multimodal_AI': 'multimodalList',
+  'Physical_AI': 'physicalAIList',
+  'Managed_Services': 'managedServicesList'
+};
+
+// 存储提取的数据
+const data = {
+  communityList_cv: [],
+  communityList_gen: [],
+  communityList_robot: [],
+  developerToolsList: [],
+  multimodalList: [],
+  physicalAIList: [],
+  managedServicesList: []
+};
+
+// 遍历目录提取数据
+function extractData() {
+  APP_DIRS.forEach(dir => {
+    if (fs.existsSync(dir)) {
+      fs.readdirSync(dir, { withFileTypes: true }).forEach(categoryDir => {
+        if (categoryDir.isDirectory()) {
+          const category = categoryDir.name;
+          const categoryKey = CATEGORY_MAPPING[category] || 'communityList_cv';
+          
+          const categoryPath = path.join(dir, category);
+          fs.readdirSync(categoryPath, { withFileTypes: true }).forEach(file => {
+            if (file.isFile() && (file.name.endsWith('.md') || file.name.endsWith('.mdx'))) {
+              const filePath = path.join(categoryPath, file.name);
+              const content = fs.readFileSync(filePath, 'utf8');
+              
+              // 提取项目信息
+              const project = extractProjectInfo(content, filePath, category);
+              if (project) {
+                data[categoryKey].push(project);
+              }
+            }
+          });
+        }
+      });
+    }
+  });
+}
+
+// 从文件内容中提取项目信息
+function extractProjectInfo(content, filePath, category) {
+  // 提取 frontmatter
+  const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
+  const frontmatter = frontmatterMatch ? frontmatterMatch[1] : '';
+  
+  // 提取标题（优先从 frontmatter 的 title 字段，否则从正文）
+  const titleMatch = frontmatter.match(/^title:\s*(.*)$/m) || content.match(/^#\s+(.*)$/m);
+  if (!titleMatch) return null;
+  
+  const name = titleMatch[1].trim();
+  
+  // 提取图片（优先从 frontmatter 的 image 字段）
+  let img = 'https://files.seeedstudio.com/wiki/reComputer-Jetson/default-project.png';
+  const frontmatterImgMatch = frontmatter.match(/^image:\s*(.*)$/m);
+  
+  if (frontmatterImgMatch) {
+    img = frontmatterImgMatch[1].trim();
+    // 如果是临时图片，寻找文档中的首个真实图片
+    if (img === 'https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png') {
+      // 匹配 Markdown 格式图片 ![...](...)
+      const markdownImgMatch = content.match(/!\[.*?\]\((.*?\.(jpg|jpeg|png|webp|gif))\)/i);
+      // 匹配 HTML 格式图片 <img src="..." />（支持 URL 跨行）
+      const htmlImgMatch = content.match(/<img[^>]+src=["']([^"']*?\.(jpg|jpeg|png|webp|gif))["']?[^>]*>/is);
+      // 匹配跨行的 img 标签
+      const htmlImgMatchMultiline = content.match(/<img[^>]*src=["']([^"']*?\.(jpg|jpeg|png|webp|gif))["']?[^>]*>/is);
+      
+      if (markdownImgMatch && markdownImgMatch[1] !== img) {
+        img = markdownImgMatch[1];
+      } else if (htmlImgMatch && htmlImgMatch[1] !== img) {
+        img = htmlImgMatch[1].replace(/\s+/g, '');
+      } else if (htmlImgMatchMultiline && htmlImgMatchMultiline[1] !== img) {
+        img = htmlImgMatchMultiline[1].replace(/\s+/g, '');
+      }
+    }
+  } else {
+    // 如果没有 frontmatter image，从文档内容中提取第一个图片
+    const markdownImgMatch = content.match(/!\[.*?\]\((.*?)\)/);
+    const htmlImgMatch = content.match(/<img[^>]+src=["']([^"']+)["'][^>]*>/i);
+    
+    if (markdownImgMatch) {
+      img = markdownImgMatch[1];
+    } else if (htmlImgMatch) {
+      img = htmlImgMatch[1].replace(/\s+/g, '');
+    }
+  }
+  
+  // 生成 URL（优先使用 frontmatter 中的 slug 字段）
+  let URL;
+  const slugMatch = frontmatter.match(/^slug:\s*(.*)$/m);
+  if (slugMatch) {
+    const slug = slugMatch[1].trim();
+    URL = `https://wiki.seeedstudio.com${slug}`;
+  } else {
+    // 如果没有 slug，从文件路径生成
+    const urlPath = filePath.replace(/^sites\/[a-z-]+\//, '').replace(/^docs\//, '').replace(/\.mdx?$/, '');
+    URL = `https://wiki.seeedstudio.com/${urlPath}`;
+  }
+  
+  // 提取分类标签
+  const categoryMatch = content.match(/categories:\s*\[(.*?)\]/s);
+  const categoryArray = categoryMatch ? 
+    categoryMatch[1].split(',').map(c => c.trim().replace(/['"]/g, '')).filter(Boolean) : 
+    [];
+  
+  // 提取最后更新时间
+  const dateMatch = frontmatter.match(/last_update:\s*\n\s*date:\s*(.*)/) || content.match(/lastUpdated:\s*(.*)/);
+  const lastUpdated = dateMatch ? dateMatch[1].trim() : new Date().toLocaleDateString();
+  
+  // 提取作者
+  const authorMatch = frontmatter.match(/last_update:\s*\n[\s\S]*?author:\s*(.*)/) || content.match(/author:\s*(.*)/);
+  const author = authorMatch ? authorMatch[1].trim() : 'Seeed Studio';
+  
+  return {
+    name,
+    img,
+    URL,
+    category: categoryArray,
+    lastUpdated,
+    author
+  };
+}
+
+// 生成配置文件
+function generateConfig() {
+  let output = `// Auto-generated by generate-jetson-config.js
+// DO NOT EDIT MANUALLY - Run "node scripts/generate-jetson-config.js" to regenerate
+// Generated at: ${new Date().toISOString()}\n\n`;
+  
+  Object.entries(data).forEach(([key, projects]) => {
+    output += `export const ${key} = [\n`;
+    projects.forEach((project, index) => {
+      // 将 JSON 字符串按行分割并添加缩进
+      const jsonStr = JSON.stringify(project, null, 2);
+      const indentedStr = jsonStr.split('\n').map(line => '  ' + line).join('\n');
+      output += indentedStr;
+      if (index < projects.length - 1) {
+        output += ',\n';
+      }
+    });
+    output += '\n]\n\n';
+  });
+  
+  // 写入文件
+  const outputPath = path.join(__dirname, '../src/components/jetson/config.auto.js');
+  fs.writeFileSync(outputPath, output);
+  console.log(`Generated config.auto.js at ${outputPath}`);
+  console.log(`Total projects extracted: ${Object.values(data).reduce((sum, arr) => sum + arr.length, 0)}`);
+}
+
+// 执行提取和生成
+if (require.main === module) {
+  console.log('Extracting Jetson project data...');
+  extractData();
+  generateConfig();
+  console.log('Done!');
+}
+
+module.exports = { extractData, generateConfig };
