@@ -2,12 +2,15 @@
 description: Guía de Usuario de SPI para Placas Arduino
 title: Guía de Usuario de SPI para Placas Arduino
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-SPI
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Software-SPI/
 ---
 
 # Guía de Usuario de SPI por Software para Arduino

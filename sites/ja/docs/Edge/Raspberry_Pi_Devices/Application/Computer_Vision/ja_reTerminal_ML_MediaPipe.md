@@ -11,6 +11,9 @@ sku: 102110638
 last_update:
   date: 1/10/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal_ML_MediaPipe/
 ---
 
 

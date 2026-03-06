@@ -2,14 +2,17 @@
 description: Este artículo proporciona una guía completa sobre la implementación de un NVR con IA (Grabador de Video en Red) utilizando la plataforma NVIDIA Jetson. Cubre todo desde la configuración del hardware y la instalación del software hasta la configuración de DeepStream y VST para análisis de video en tiempo real y visualización en una pared de video.
 title: NVR con IA con Jetson Orin
 keywords:
-- reComputer
-- AI NVR
-- Jetpack6.0
+  - reComputer
+  - AI NVR
+  - Jetpack6.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_nvr_with_jetson
 last_update:
   date: 08/12/2024
   author: Youjiang
+createdAt: '2024-08-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ai_nvr_with_jetson/
 ---
 
 # NVR con IA con reServer Jetson

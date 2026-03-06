@@ -2,13 +2,16 @@
 description: Grove - 三轴数字加速度计(±1.5g)
 title: Grove - 三轴数字加速度计(±1.5g)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Digital_Accelerometer-1.5g
 sku: 101020039
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-3-Axis_Digital_Accelerometer-1.5g/
 ---
 
 <div>

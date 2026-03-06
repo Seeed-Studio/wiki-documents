@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 10/22/2025
   author: Citric
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_xiao_debug_mate/
 ---
 
 import Tabs from '@theme/Tabs';

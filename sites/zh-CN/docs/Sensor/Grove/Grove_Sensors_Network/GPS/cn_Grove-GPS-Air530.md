@@ -1,6 +1,6 @@
 ---
 title: Grove - GPS (Air530 / Air530Z)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 109020022
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-GPS-Air530/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-GPS_Air_530/IMG/03.png" style={{width:600, height:'auto'}}/></div>

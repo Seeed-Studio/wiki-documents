@@ -2,14 +2,17 @@
 description: Pasos Sencillos para Ensamblar la Carcasa del Kit de Asistente de Voz reSpeaker Lite
 title: Guía de Instalación de la Carcasa
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_enclosure
 last_update:
   date: 10/14/2024
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_enclosure/
 ---
 
 

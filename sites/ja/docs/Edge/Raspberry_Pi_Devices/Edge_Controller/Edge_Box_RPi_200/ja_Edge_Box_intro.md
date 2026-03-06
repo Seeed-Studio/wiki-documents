@@ -2,13 +2,16 @@
 description: EdgeBox-RPI-200は、Raspberry PiベースのオールインワンエッジコンピューティングコントローラーおよびIIoTゲートウェイで、高いスケーラビリティ、堅牢な設計、豊富なIOリソースを提供します。スマート自動化とIIoTソリューションに最適で、広範なRaspberry Pi産業用ソフトウェアエコシステムを活用します。
 title: Raspberry Piを搭載したエッジコントローラー
 keywords:
-- Raspberry pi
-- Edge Controller
+  - Raspberry pi
+  - Edge Controller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Box_intro
 last_update:
   date: 6/25/2023
   author: Kasun Thushara
+createdAt: '2023-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Edge_Box_intro/
 ---
 
 EdgeBox-RPI-200は、産業用Raspberry Pi/LinuxゲートウェイおよびIIoTゲートウェイであるだけでなく、複数の産業用途を組み合わせたRaspberry Piベースのオールインワンエッジコンピューティングコントローラーでもあります。高いスケーラビリティと堅牢な産業用ハードウェアとして設計され、豊富なIOリソースを搭載し、優れたRaspberry Pi産業用ソフトウェアエコシステムによってサポートされており、スマート自動化および産業用IoT（IIoT）ソリューションに理想的な選択肢です。

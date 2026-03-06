@@ -2,14 +2,17 @@
 description: OpenRemoteは、ネットワーク接続されたデバイスをモバイルおよびWebアプリケーションに簡単に接続できる完全オープンソースのIoTプラットフォームです。Recomputer R1000やR1100などのRaspberry Pi搭載デバイスにデプロイできる機能により、OpenRemoteは環境内のIoTデバイスを管理・制御するための柔軟なエッジソリューションを提供します
 title: reComputer R1xでのOpenRemoteデプロイ エッジでのIoTデバイス管理
 keywords:
-- IIoT
-- OpenRemote
-- Raspberry-Pi 
+  - IIoT
+  - OpenRemote
+  - Raspberry-Pi
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /openremote_r1x00
 last_update:
   date: 9/30/2025
   author: Kasun Thushara
+createdAt: '2025-09-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/openremote_r1x00/
 ---
 
 ## はじめに

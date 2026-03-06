@@ -8,6 +8,9 @@ sidebar_position: 2
 last_update:
   date: 09/30/2024
   author: Evelyn Chen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wio_sx1262_xiao_esp32s3_for_meshtastic/
 ---
 
 Meshtasticは、手頃な価格で低消費電力のデバイス上で動作するように構築された、オープンソース、オフグリッド、分散型のメッシュネットワークです。Seeed Studioは、ホビイストや産業ユーザー向けに、すぐに使えるMeshtasticデバイスの包括的な範囲を提供しています。XIAO ESP32S3 & Wio-SX1262キットは、meshtastic開発者やメーカーにとって柔軟なソリューションです。

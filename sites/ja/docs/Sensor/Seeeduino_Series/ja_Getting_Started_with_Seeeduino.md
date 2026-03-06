@@ -2,12 +2,15 @@
 description: Seeeduino の使い方ガイド
 title: Seeeduino の使い方ガイド
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Seeeduino
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Getting_Started_with_Seeeduino/
 ---
 
 

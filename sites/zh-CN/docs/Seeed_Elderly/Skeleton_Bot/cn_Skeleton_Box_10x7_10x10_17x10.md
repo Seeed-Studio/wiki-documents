@@ -2,13 +2,16 @@
 description: Skeleton_Box_10x7_10x10_17x10
 title: 骨架盒 10x7 10x10 17x10
 keywords:
-- Skeleton_Box_10x7_10x10_17x10
+  - Skeleton_Box_10x7_10x10_17x10
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box_10x7_10x10_17x10
 sku: 110990160, 110990159, 110990158
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Skeleton_Box_10x7_10x10_17x10/
 ---
 
 当您构建一个演示项目时，是否希望选择一个合适的外壳来提升整体感受？

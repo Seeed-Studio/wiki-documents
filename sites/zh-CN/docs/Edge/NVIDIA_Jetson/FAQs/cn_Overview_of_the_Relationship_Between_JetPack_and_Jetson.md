@@ -2,14 +2,17 @@
 description: jetpack和jetson之间关系的概述
 title: JetPack与Jetson关系概述
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /overview_of_the_relationship_between_jetpack_and_jetson
 last_update:
   date: 06/05/2025
   author: Dayu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/overview_of_the_relationship_between_jetpack_and_jetson/
 ---
 
 本wiki简要介绍了JetPack的组成部分，帮助您快速了解JetPack与Jetson之间的关系，并回答一些最常见的问题。

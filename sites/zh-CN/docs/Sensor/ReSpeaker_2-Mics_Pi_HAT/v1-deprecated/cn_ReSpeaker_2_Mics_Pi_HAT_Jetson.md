@@ -2,12 +2,15 @@
 description: Nvidia Jetson 入门指南
 title: Nvidia Jetson 入门指南
 keywords:
-- ReSpeaker_2-Mics_Pi_HAT
+  - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_2_Mics_Pi_HAT_Jetson
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ReSpeaker_2_Mics_Pi_HAT_Jetson/
 ---
 
 :::caution

@@ -2,12 +2,15 @@
 description: Configurar el Sensor Contador y GPIO
 title: Configurar el Sensor Contador y GPIO
 keywords:
-- SenseCAP data logger
+  - SenseCAP data logger
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger
 last_update:
   date: 4/12/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger/
 ---
 
 # # Comenzando con S2100 usando el Sensor Contador y GPIO

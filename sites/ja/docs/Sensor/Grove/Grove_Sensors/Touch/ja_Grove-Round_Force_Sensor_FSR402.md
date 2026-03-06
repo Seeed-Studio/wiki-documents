@@ -2,13 +2,16 @@
 description: Grove - 円形フォースセンサー FSR402
 title: Grove - 円形フォースセンサー FSR402
 keywords:
-- Grove Grove_Sensors タッチ
+  - Grove Grove_Sensors タッチ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Round_Force_Sensor_FSR402
 sku: 101020553
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Round_Force_Sensor_FSR402/
 ---
 
 

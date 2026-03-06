@@ -1,6 +1,6 @@
 ---
 title: Convertidor RS-232 a TTL (MAX3232IDR)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103990363
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/RS-232_To_TTL_Conveter-MAX3232IDR/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/main.jpg)

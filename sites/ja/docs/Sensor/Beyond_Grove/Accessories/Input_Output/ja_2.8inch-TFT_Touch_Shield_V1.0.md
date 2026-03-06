@@ -1,6 +1,6 @@
 ---
 title: 2.8インチ TFT タッチシールド V1.0
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /2.8inch-TFT_Touch_Shield_V1.0
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/2.8inch-TFT_Touch_Shield_V1.0/
 ---
 
 

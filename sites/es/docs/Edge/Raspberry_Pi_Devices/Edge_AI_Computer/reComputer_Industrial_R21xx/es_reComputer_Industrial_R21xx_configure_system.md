@@ -2,14 +2,17 @@
 description: Aprende cómo configurar y probar componentes de hardware en la serie reComputer Industrial R21xx después de instalar dispositivos. Esta wiki cubre mapeo GPIO, pruebas de LED de usuario, comunicación SPI, escaneo Wi-Fi y Bluetooth, LoRa®, 5G, 4G, Zigbee sobre Mini-PCIe, RS485, RS232, pruebas DI/DO, y UPS para apagado seguro.
 title: Configurar reComputer Industrial R21xx
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R21xx
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_industrial_R21xx_configure_system/
 ---
 
 ## Descripción General

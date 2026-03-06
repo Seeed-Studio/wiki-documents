@@ -1,6 +1,6 @@
 ---
 title: Fuente de Alimentación para Protoboard 5V/3.3V
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 106990021
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/5V-3.3V_Breadboard_Power_Supply/
 ---
 
 |![](https://files.seeedstudio.com/wiki/5V-3.3V_Breadboard_Power_Supply/img/Supply.jpg)|![](https://files.seeedstudio.com/wiki/5V-3.3V_Breadboard_Power_Supply/img/5VAnd3.3V_Breadboard_Power_Supply_v1.2.jpg)|

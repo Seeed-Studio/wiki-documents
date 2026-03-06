@@ -1,11 +1,11 @@
 ---
 description: Wio Tracker Dual Stack Version
-title:  Seguimiento Continuo de Activos con Redes Amazon Sidewalk y LoRaWAN
+title: Seguimiento Continuo de Activos con Redes Amazon Sidewalk y LoRaWAN
 keywords:
-- Tracker
-- AWS
-- Sidewalk
-- LoRaWAN
+  - Tracker
+  - AWS
+  - Sidewalk
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_tracker_dual_stack
 sidebar_position: 8
@@ -13,6 +13,9 @@ sidebar_class_name: hidden
 last_update:
   date: 3/4/2024
   author: Jessie
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/wio_tracker_dual_stack/
 ---
 
 

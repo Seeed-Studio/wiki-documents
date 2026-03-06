@@ -2,17 +2,21 @@
 description: この Wiki は RobStride モーター制御コンプリートガイドを提供します
 title: RobStride モーター制御コンプリートガイド
 keywords:
-- actuator
-- motor
-- arm
-- robotics
-image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
+  - actuator
+  - motor
+  - arm
+  - robotics
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-11-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/robstride_control/
 ---
 
 # RobStride 制御ライブラリ - 完全技術ドキュメント

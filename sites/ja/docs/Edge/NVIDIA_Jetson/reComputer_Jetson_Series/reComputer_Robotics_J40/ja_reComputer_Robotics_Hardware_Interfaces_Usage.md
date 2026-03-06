@@ -14,6 +14,9 @@ sku: 100071398
 last_update:
   date: 08/06/2025
   author: Zibo
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_robotics_j401_hardware_interfaces_usage/
 ---
 
 <div align="center">

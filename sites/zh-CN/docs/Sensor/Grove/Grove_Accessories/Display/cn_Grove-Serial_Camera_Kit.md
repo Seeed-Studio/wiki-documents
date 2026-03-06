@@ -2,12 +2,15 @@
 description: Grove - 串行摄像头套件
 title: Grove - 串行摄像头套件
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Serial_Camera_Kit
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Serial_Camera_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_Camera_Kit/img/GSCK_Introduction.jpg)

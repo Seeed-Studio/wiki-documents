@@ -2,13 +2,16 @@
 description: XIAO ESP32S3 With NuttX(RTOS)
 title: XIAO ESP32S3 With NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
 slug: /xiao_esp32s3_nuttx
 sidebar_position: 2
 last_update:
-    date: 04/08/2025
-    author: rcsim
+  date: 04/08/2025
+  author: rcsim
+createdAt: '2025-02-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32s3_nuttx/
 ---
 
 # Seeed Studio XIAO ESP32S3 with NuttX(RTOS)

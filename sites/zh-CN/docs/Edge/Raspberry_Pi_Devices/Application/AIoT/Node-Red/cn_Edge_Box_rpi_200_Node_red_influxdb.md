@@ -11,6 +11,9 @@ slug: /edge_box_rpi_200_node_red_influxdb
 last_update:
   date: 06/13/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/edge_box_rpi_200_node_red_influxdb/
 ---
 ## 介绍
 

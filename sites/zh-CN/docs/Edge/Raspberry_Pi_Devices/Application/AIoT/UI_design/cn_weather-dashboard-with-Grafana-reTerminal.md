@@ -9,6 +9,9 @@ slug: /weather-dashboard-with-Grafana-reTerminal
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/weather-dashboard-with-Grafana-reTerminal/
 ---
 
 # 使用 Grafana 构建您自己的天气仪表板

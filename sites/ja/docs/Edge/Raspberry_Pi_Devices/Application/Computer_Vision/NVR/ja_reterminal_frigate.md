@@ -11,6 +11,9 @@ slug: /reterminal_frigate
 last_update:
   date: 8/22/2023
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_frigate/
 ---
 
 ## はじめに

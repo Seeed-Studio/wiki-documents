@@ -2,12 +2,15 @@
 description: Grove - Toy Kit
 title: Grove - Toy Kit
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Toy_Kit
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Toy_Kit/
 ---
 
 

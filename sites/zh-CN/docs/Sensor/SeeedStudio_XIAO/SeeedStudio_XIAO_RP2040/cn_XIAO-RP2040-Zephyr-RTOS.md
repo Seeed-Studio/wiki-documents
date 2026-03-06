@@ -1,13 +1,16 @@
 ---
 description: XIAO RP2040 与 Zephyr(RTOS)
-title:  XIAO RP2040 与 Zephyr(RTOS)
+title: XIAO RP2040 与 Zephyr(RTOS)
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-Zephyr-RTOS
 last_update:
   date: 3/20/2024
   author: timo614
+createdAt: '2024-11-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-Zephyr-RTOS/
 ---
 
 # XIAO RP2040 与 Zephyr(RTOS)

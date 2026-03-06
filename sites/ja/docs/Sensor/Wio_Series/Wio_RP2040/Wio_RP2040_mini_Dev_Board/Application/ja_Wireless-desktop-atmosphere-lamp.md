@@ -1,6 +1,6 @@
 ---
 title: ワイヤレスデスクトップ雰囲気ランプ
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wireless-desktop-atmosphere-lamp/
 ---
 
 

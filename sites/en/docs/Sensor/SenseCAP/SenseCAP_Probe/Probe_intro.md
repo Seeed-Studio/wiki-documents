@@ -2,12 +2,15 @@
 description: SenseCAP Probes Introduction
 title: SenseCAP Probes
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_probes_intro
 last_update:
   date: 02/28/204
   author: Jessie
+createdAt: '2024-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_probes_intro/
 ---
 
 To bring more convenience for your applications, we also provide RS485 sensor probes detecting soil moisture, temperature, soil electrical conductivity, and pH level. There will also be more RS485 sensors coming out soon.

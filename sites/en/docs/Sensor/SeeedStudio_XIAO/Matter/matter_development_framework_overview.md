@@ -2,14 +2,17 @@
 description: The code of light is used as an example to introduce the development framework of Matter.
 title: Matter Development Framework Overview
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /matter_development_framework
 last_update:
   date: 05/15/2024
   author: Citric
+createdAt: '2024-05-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/matter_development_framework/
 ---
 
 # Matter Development Framework Overview

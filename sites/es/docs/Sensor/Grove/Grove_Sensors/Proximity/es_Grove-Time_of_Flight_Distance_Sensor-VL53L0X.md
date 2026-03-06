@@ -1,6 +1,6 @@
 ---
 title: Grove - Sensor de Distancia de Tiempo de Vuelo VL53L0X
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020532
 last_update:
   date: 03/01/2023
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Time_of_Flight_Distance_Sensor-VL53L0X-/img/main.JPG)

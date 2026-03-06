@@ -2,13 +2,16 @@
 description: BeagleBone® Green HDMI Cape
 title: BeagleBone® Green HDMI Cape
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green_HDMI_Cape
 sku: 103030034
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/BeagleBone_Green_HDMI_Cape/
 ---
 
 ![](https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape.jpg)

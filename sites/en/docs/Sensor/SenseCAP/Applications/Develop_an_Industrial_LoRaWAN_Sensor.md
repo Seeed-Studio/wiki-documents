@@ -2,14 +2,17 @@
 description: 5 Minutes to Develop an Industrial LoRaWAN Sensor
 title: 5 Minutes to Develop an Industrial LoRaWAN Sensor
 keywords:
-- LoRaWAN
-- Sensor
-- SenseCAP
+  - LoRaWAN
+  - Sensor
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /develop_an_industrial_lorawan_sensor
 last_update:
   date: 9/15/2023
   author: Jessie
+createdAt: '2023-09-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/develop_an_industrial_lorawan_sensor/
 ---
 
 Let's quickly build an industrial-grade LoRaWAN wireless sensor for direct commercial use in 5 minutes.

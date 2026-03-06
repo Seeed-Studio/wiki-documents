@@ -2,13 +2,16 @@
 description: Grove - 霍尔传感器
 title: Grove - 霍尔传感器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Hall_Sensor
 sku: 101020046
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Hall_Sensor/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Hall_Sensor/img/Grove-Hall_Sensor_New.jpg)

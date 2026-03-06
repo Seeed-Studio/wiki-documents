@@ -2,14 +2,17 @@
 description: Guía de Ensamblaje del reComputer R1100
 title: Guía de Ensamblaje del reComputer R1100
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer3.jpg
 slug: /recomputer_r1100_assembly_guide
 last_update:
   date: 2/27/2024
   author: Kasun Thushara
+createdAt: '2023-05-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1100_assembly_guide/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:800, height:'auto'}}/></div>

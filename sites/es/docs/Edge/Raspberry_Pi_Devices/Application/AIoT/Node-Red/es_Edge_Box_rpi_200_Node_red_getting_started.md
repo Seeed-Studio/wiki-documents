@@ -1,6 +1,6 @@
 ---
-description: Edge Box RPi 200 Primeros Pasos con Node Red 
-title: Edge Box RPi 200 Primeros Pasos con Node Red 
+description: Edge Box RPi 200 Primeros Pasos con Node Red
+title: Edge Box RPi 200 Primeros Pasos con Node Red
 keywords:
   - Edge Controller
   - Edge-Box
@@ -10,6 +10,9 @@ slug: /Edge-Box-Getting-Started-with-Node-Red
 last_update:
   date: 05/14/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Edge-Box-Getting-Started-with-Node-Red/
 ---
 ## Introducción
 

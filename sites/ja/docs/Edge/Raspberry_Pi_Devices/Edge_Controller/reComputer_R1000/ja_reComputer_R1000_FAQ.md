@@ -6,6 +6,9 @@ slug: /reComputer_R1000_FAQ
 last_update:
   date: 6/21/2024
   author: Harrison Xu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_R1000_FAQ/
 ---
 
 この文書には、reComputer R1000 シリーズに関するよくある質問がすべて含まれています。reComputer R1000 シリーズを使用する際に何らかの問題が発生している場合、この文書は非常に役立ちます。

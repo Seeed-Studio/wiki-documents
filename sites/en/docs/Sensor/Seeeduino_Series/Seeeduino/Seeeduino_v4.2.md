@@ -2,13 +2,16 @@
 description: Seeeduino v4.2
 title: Seeeduino v4.2
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_v4.2
 sku: 102010026
 last_update:
   date: 1/12/2022
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_v4.2/
 ---
 
 

@@ -2,22 +2,28 @@
 description: 构建并控制 ReachyMini，这是一款专为 AI 和机器人学习设计的紧凑型开源桌面人形机器人。
 title: ReachyMini 入门指南 （网络需可下载HF模型）
 keywords:
-- Lerobot
-- Huggingface
-- ReachyMini
-- 机器人
-- 3D 打印
-- 开源
-- 人形机器人
-- Python
+  - Lerobot
+  - Huggingface
+  - ReachyMini
+  - 机器人
+  - 3D 打印
+  - 开源
+  - 人形机器人
+  - Python
 image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp
 slug: /reachymini_getting_started
-sku:
+sku: null
 translation:
-  skip: [zh-CN,ja,es]
+  skip:
+    - zh-CN
+    - ja
+    - es
 last_update:
   date: 1/7/2026
   author: TienjuiWong
+createdAt: '2026-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reachymini_getting_started/
 ---
 
 <div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>

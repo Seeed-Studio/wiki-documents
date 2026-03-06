@@ -2,15 +2,18 @@
 description: 使用 OpenEPaperLink 配置生成器为电子纸生成配置
 title: 电子纸的 OpenEPaperLink 配置构建器
 keywords:
-- XIAO eInk Expansion
-- XIAO
-- OEPL Config Builder
+  - XIAO eInk Expansion
+  - XIAO
+  - OEPL Config Builder
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp
 slug: /epaper_breakout_board_with_oepl
 sidebar_position: 2
 last_update:
   date: 10/23/2025
   author: Zovey
+createdAt: '2025-10-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/epaper_breakout_board_with_oepl/
 ---
 
 # OpenEPaperLink 和电子纸配置构建器

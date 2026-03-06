@@ -2,12 +2,15 @@
 description: Tutorial de Xadow - Comunicación vía BLE
 title: Tutorial de Xadow - Comunicación vía BLE
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Tutorial_Communicate_via_BLE
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Xadow_Tutorial_Communicate_via_BLE/
 ---
 ¿Alguna vez has pensado en esta escena: Abrir el teléfono, puedo ver la presión barométrica actual o la aceleración del movimiento. El módulo Xadow puede ayudarte a lograr esto.
 

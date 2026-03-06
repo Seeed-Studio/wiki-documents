@@ -6,7 +6,10 @@ slug: /Seeed_Relay_Page
 last_update:
   date: 02/02/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeed_Relay_Page/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/back.jpg)

@@ -2,13 +2,16 @@
 description: LinkIt Smart7688 Duo用のGroveスターターキット
 title: LinkIt Smart7688 Duo用のGroveスターターキット
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_kit_for_LinkIt_Smart7688_Duo
 sku: 110020007
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Starter_kit_for_LinkIt_Smart7688_Duo/
 ---
 
 

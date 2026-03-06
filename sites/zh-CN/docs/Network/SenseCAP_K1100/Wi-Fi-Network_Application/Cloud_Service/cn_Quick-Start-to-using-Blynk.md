@@ -2,12 +2,15 @@
 description: 快速开始使用 Blynk
 title: Blynk 使用指南
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Quick-Start-to-using-Blynk
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Quick-Start-to-using-Blynk/
 ---
 # 快速开始使用 Blynk
 

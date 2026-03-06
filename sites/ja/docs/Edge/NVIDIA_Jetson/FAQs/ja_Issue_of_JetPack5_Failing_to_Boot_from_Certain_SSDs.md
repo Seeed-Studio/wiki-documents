@@ -2,14 +2,17 @@
 description: 特定のSSDからJetPack5が起動に失敗する問題を解決する
 title: 特定のSSDからJetPack5が起動に失敗する問題を解決する
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /issue_of_jetpack5_failing_to_boot_from_certain_ssd
 last_update:
   date: 07/30/2025
   author: Dayu
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd/
 ---
 
 **このwikiではJetPackのコンポーネントについて簡潔に紹介し、JetPackとJetsonの関係を素早く理解し、最もよくある質問にお答えします。**

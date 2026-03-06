@@ -1,15 +1,18 @@
 ---
 description: Change the LoRa Antenna Path of the Wio Tracker 1110 Board
-title:  Change Antenna Path
+title: Change Antenna Path
 keywords:
-- Antenna
-- Tracker
+  - Antenna
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /change_antenna_path
 sidebar_position: 6
 last_update:
   date: 7/8/2024
   author: Jessie
+createdAt: '2024-07-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/change_antenna_path/
 ---
 
 

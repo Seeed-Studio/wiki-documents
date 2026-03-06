@@ -1,6 +1,6 @@
 ---
 title: Grove - 8通道I2C多路复用器/I2C集线器 (TCA9548A)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020293
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A/
 ---
 
 ![](https://files.seeedstudio.com/products/103020293/img/Grove-8-Channel-I2C-Hub-TCA9548A-wiki.jpg)

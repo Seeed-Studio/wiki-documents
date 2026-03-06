@@ -2,14 +2,17 @@
 description: Flashear la versión Sidewalk a la versión LoRaWAN
 title: Flashear la versión Sidewalk a la versión LoRaWAN
 keywords:
-- Tracker
-- sidewalk
-- Amazon
+  - Tracker
+  - sidewalk
+  - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_to_wio_tracker
 last_update:
   date: 12/22/2023
   author: Jessie
+createdAt: '2023-12-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/flash_to_wio_tracker/
 ---
 
 Este tutorial guiará a los usuarios para flashear la LPWAN Dev Board para Amazon Sidewalk a la Wio Tracker 1110 Dev Board, para aquellos que quieran usar la red LoRaWAN.

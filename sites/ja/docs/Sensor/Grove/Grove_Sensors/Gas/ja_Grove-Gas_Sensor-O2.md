@@ -2,13 +2,16 @@
 description: Grove - ガスセンサー(O₂)
 title: Grove - ガスセンサー(O₂)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor-O2
 sku: 101020002
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Gas_Sensor-O2/
 ---
 
 

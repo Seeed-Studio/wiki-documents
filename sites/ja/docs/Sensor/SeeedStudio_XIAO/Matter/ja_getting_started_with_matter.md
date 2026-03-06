@@ -2,13 +2,16 @@
 description: EspressifのMatterデプロイメントツールを使用してMatterライティングを素早く体験する方法の紹介。
 title: XIAO ESP32でMatterを素早く始める
 keywords:
-- ESP-IDF
-- XIAO
+  - ESP-IDF
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_with_matter
 last_update:
   date: 05/11/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_matter/
 ---
 
 # XIAO ESP32シリーズでMatterを素早く始める

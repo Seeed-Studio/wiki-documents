@@ -14,6 +14,9 @@ sku: 100071398, 100001302, 100010971
 last_update:
   date: 06/10/2025
   author: Zibo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/
 ---
 
 # Robotics J401 キャリアボード ハードウェアと入門

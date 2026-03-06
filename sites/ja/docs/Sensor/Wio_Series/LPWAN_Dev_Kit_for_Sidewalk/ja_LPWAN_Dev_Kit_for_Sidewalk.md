@@ -2,14 +2,17 @@
 description: LPWAN Asset Tracker Dev Kit for Amazon Sidewalk – Wio Tracker 1110
 title: Sidewalk向けLPWAN開発キット
 keywords:
-- トラッカー
-- サイドウォーク
-- Amazon
+  - トラッカー
+  - サイドウォーク
+  - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_tracker_for_sidewalk
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wio_tracker_for_sidewalk/
 ---
 
 

@@ -1,16 +1,19 @@
 ---
 title: プロジェクトの作成(ESP-IDF) - SenseCAP Indicator
 description: ESP-IDFまたはSquareline Studioを使用してSenseCAP Indicatorのプロジェクトを開発するためのステップバイステップガイド。
-keywords: 
-- SenseCAP Indicator
-- ESP-IDF
-- Squareline
+keywords:
+  - SenseCAP Indicator
+  - ESP-IDF
+  - Squareline
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_indicator_project
 sidebar_position: 4
 last_update:
   date: 04/12/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/sensecap_indicator_project/
 ---
 
 ## 概要

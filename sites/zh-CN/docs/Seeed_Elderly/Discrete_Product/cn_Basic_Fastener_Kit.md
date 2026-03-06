@@ -2,13 +2,16 @@
 description: 基础紧固件套件
 title: 基础紧固件套件
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Basic_Fastener_Kit
 sku: 110990086
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Basic_Fastener_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Basic_Fastener_Kit/img/Fastener_Kit_01.jpg)

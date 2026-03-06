@@ -3,8 +3,8 @@ sidebar_position: 1
 description: 下载应用程序
 title: SenseCraft Hotspot 应用程序
 keywords:
-- Cloud and Chain
-- SenseCAP 
+  - Cloud and Chain
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app
 aliases:
@@ -12,6 +12,9 @@ aliases:
 last_update:
   date: 09/18/2023
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/
 ---
 
 SenseCAP Hotspot 应用程序是一个功能强大的应用程序，主要用于 SenseCAP MX Hotspot 的数据可视化和远程设备管理。

@@ -2,15 +2,18 @@
 description: Use the OpenEPaperLink configuration generator to generate the configuration for the e-paper
 title: OpenEPaperLink Config Builder for ePaper
 keywords:
-- XIAO eInk Expansion
-- XIAO
-- OEPL Config Builder
+  - XIAO eInk Expansion
+  - XIAO
+  - OEPL Config Builder
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp
 slug: /epaper_breakout_board_with_oepl
 sidebar_position: 2
 last_update:
   date: 10/23/2025
   author: Zovey
+createdAt: '2025-10-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/epaper_breakout_board_with_oepl/
 ---
 
 # OpenEPaperLink and ePaper config builder

@@ -3,21 +3,25 @@ description: libcamerasrc の制御、GStreamer の設定、XMOS XVF3800 のオ�
 title: 高度なメディア制御
 slug: /reachymini_platforms_reachy_mini_media_advanced_controls
 keywords:
-- media
-- camera
-- microphone
-- speaker
-- libcamerasrc
-- gstreamer
-- xmos
-- xvf3800
-- audio
-- dof
+  - media
+  - camera
+  - microphone
+  - speaker
+  - libcamerasrc
+  - gstreamer
+  - xmos
+  - xvf3800
+  - audio
+  - dof
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_media_advanced_controls/
 ---
 
 # 高度なメディア制御

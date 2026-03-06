@@ -2,13 +2,16 @@
 description: LoRa/LoRaWAN 网关套件
 title: LoRa/LoRaWAN 网关套件
 keywords:
-- Kit
+  - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LoRa_LoRaWan_Gateway_Kit
 sku: 110060622, 110060623
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/LoRa_LoRaWan_Gateway_Kit/
 ---
 <!-- ---
 name: LoRa/LoRaWAN Gateway Kit

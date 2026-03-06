@@ -1,6 +1,6 @@
 ---
 title: USB To Uart 5V
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /USB_To_Uart_5V
 last_update:
   date: 02/03/2022
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/USB_To_Uart_5V/
 ---
 <!-- ---
 name: USB To Uart 5V

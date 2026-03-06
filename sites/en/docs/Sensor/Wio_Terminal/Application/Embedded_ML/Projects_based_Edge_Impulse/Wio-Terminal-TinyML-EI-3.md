@@ -1,15 +1,18 @@
 ---
-description:  Audio scene recognition
+description: Audio scene recognition
 title: Audio scene recognition
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_Edge_Impulse
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-EI-3
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-TinyML-EI-3/
 ---
 
 # Wio Terminal Edge Impulse Audio Scene Recognition with Built-in Microphone

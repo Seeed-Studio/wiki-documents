@@ -1,16 +1,20 @@
 ---
 description: Guide to flashing MeshCore firmware on the Wio Tracker L1 Pro via Web USB or drag-and-drop, along with app configuration for LoRa region, GPS, and sending messages.
-title:  Get Started with Meshcore
+title: Get Started with Meshcore
 keywords:
-- Meshcore
+  - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 3
+sidebar_position: 1
 last_update:
-  date: 3/2/2026
+  date: 3/4/2026
   author: Michelle Huang
----       
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
+---
+       
 
 
 ## Firmware Flashing
@@ -171,13 +175,13 @@ You can go to APP `Position Settings` to enable GPS. Or you can go to device GPS
 
 Click the User button four times to control the buzzer turning on or off.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/UserButton.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
 ## Message Transmission
 
 If you have two supported devices, and there are not many MeshCore users near you, flash both to BLE Companion firmware so you can use your devices to communicate with your nearby friends and family.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreFramework.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
 ### Advert
 
@@ -226,7 +230,7 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 - step 4: Flash the firmware
 
-  When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware. You may need to [enter the DFU mode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-firmware-1) to flash the application firmware. You may need to [enter the DFU mode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### Unable to enter DFU & Entering DFU Mode Manually
@@ -248,12 +252,12 @@ Press the `User` button once to exit DFU mode.
 
  #### Troubleshoot
 
-Flash Erase the firmware
+[Flash Erase](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-erase-1) the firmware
 
 ### Factory Reset
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do a factory reset.
 
-- Flash Erase the firmware
+- [Flash Erase](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-erase-1) the firmware
 
 - Click the `Factory Reset` button on the app. The device will reboot with the factory configuration automatically. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>

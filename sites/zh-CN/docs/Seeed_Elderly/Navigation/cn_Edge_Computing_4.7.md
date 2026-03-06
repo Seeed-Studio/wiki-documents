@@ -2,12 +2,15 @@
 description: 边缘计算
 title: 边缘计算
 keywords:
-- edge computing
+  - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Navigation/Edge_Computing_4.7
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeed_Elderly/Navigation/Edge_Computing_4.7/
 ---
 
 本文介绍了 Seeed Studio 产品文档中关于边缘计算架构的内容，该架构处理由各种传感器生成的“即时”数据，适用于需要实时处理的应用场景。本页面展示了多个具有不同计算能力的设备。

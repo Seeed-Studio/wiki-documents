@@ -6,7 +6,10 @@ slug: /How-to-Choose-A-Gas-Sensor
 last_update:
   date: 02/02/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How-to-Choose-A-Gas-Sensor/
 ---
 
 如果您在 [www.seeedstudio.com](https://www.seeedstudio.com) 上搜索"气体传感器"，您会发现很多气体传感器。我们知道空气成分是多样的，某个气体传感器可以检测一种或多种空气成分，所以我们设计了一系列气体传感器。

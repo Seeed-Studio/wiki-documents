@@ -2,13 +2,16 @@
 description: SenseCAP_T2000_tracker 入门指南
 title: 快速开始
 keywords:
-- SenseCAP_T2000_tracker
+  - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /Get_Started_with_SenseCAP_T2000_tracker
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/5/2026
   author: Janet
+createdAt: '2025-12-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T2000_tracker/
 ---
 
 # SenseCAP T2000 Tracker 入门指南

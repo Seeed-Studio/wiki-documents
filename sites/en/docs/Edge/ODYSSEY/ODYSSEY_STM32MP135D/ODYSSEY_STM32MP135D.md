@@ -1,12 +1,15 @@
 ---
 description: ODYSSEY, STM32MP135D
-title: Getting Started with ODYSSEY – STM32MP135D 
+title: Getting Started with ODYSSEY – STM32MP135D
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-STM32MP135D
 sku: 102110701,102110859
 last_update:
   date: 10/13/2023
   author: Xogium
+createdAt: '2023-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY-STM32MP135D/
 ---
 
 # Getting Started with ODYSSEY – STM32MP135D

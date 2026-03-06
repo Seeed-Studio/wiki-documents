@@ -6,6 +6,9 @@ slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flash_opensource_firmware_to_m2_gateway/
 ---
 
 SenseCAP M2 网关代表了 LoRa 网关的经济高效解决方案，采用成熟的硬件解决方案 MT7628 和 Semtech SX1302 基带长距离芯片。具体型号通过出厂设置的频段（EU868/US915/AS923/AU915）、可选模块（4G/GPS）和支持的 LoRa 网络（LoRaWAN®/Helium 网络）来区分

@@ -2,13 +2,16 @@
 description: Atom Node
 title: Atom Node
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Atom_Node
 sku: 102010001
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Atom_Node/
 ---
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Atom_Node.jpg)
 

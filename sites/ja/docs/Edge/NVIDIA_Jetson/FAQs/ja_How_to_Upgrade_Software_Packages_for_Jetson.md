@@ -2,12 +2,15 @@
 description: これは、OTAまたは増分更新の使用がシステムの不安定性とセキュリティリスクを引き起こす可能性があるため、システムのセキュリティと安定性を維持し、部分的な更新を避けるために完全なROM更新を実行することを推奨するFAQです。
 title: Jetson用ソフトウェアパッケージのアップグレード
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/upgrade_software_packages_for_jetson/
 ---
 
 #### apt upgradeを実行できないと言われた場合、ソフトウェアパッケージをどのようにアップグレードできますか？ソフトウェアをアップグレードしないとセキュリティリスクがありますか？

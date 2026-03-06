@@ -2,13 +2,16 @@
 description: Multiplexación de Pines en Seeed Studio XIAO RP2350
 title: Multiplexación de Pines (Arduino)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png
 slug: /XIAO_RP2350_Pin_Multiplexing
 sidebar_position: 2
 last_update:
   date: 11/02/2024
   author: Allen
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO_RP2350_Pin_Multiplexing/
 ---
 
 # Multiplexación de Pines (Arduino)

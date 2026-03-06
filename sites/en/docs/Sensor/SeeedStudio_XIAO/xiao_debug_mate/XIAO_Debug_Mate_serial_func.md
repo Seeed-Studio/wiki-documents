@@ -8,6 +8,9 @@ sidebar_position: 3
 last_update:
   date: 10/22/2025
   author: Citric
+createdAt: '2025-10-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_debug_mate_serial/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>

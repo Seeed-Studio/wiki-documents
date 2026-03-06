@@ -2,13 +2,16 @@
 description: 本教程展示了如何使用 LeIsaac 在 Isaac Lab 中对 SOArm101 机械臂进行远程操作和训练，包括数据收集、使用 NVIDIA Isaac GR00T 对模型进行微调以及部署。
 title: 通过 LeIsaac 仿真 SoArm101
 keywords:
-- NVIDIA
-- Isaac Lab
+  - NVIDIA
+  - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/simulate_soarm101_by_leisaac.webp
 slug: /simulate_soarm101_by_leisaac
 last_update:
   date: 8/4/2025
   author: LiShanghang
+createdAt: '2025-08-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/simulate_soarm101_by_leisaac/
 ---
 
 ## 简介

@@ -2,13 +2,16 @@
 description: Firmata para Placas Compatibles con Arduino
 title: Firmata para Placas Compatibles con Arduino
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-X86J4105-Firmata
 sku: 102110399,102110398,102110397
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ODYSSEY-X86J4105-Firmata/
 ---
 
 # Tutorial de Firmata: Cómo Usar Firmata en Placas Compatibles con Arduino

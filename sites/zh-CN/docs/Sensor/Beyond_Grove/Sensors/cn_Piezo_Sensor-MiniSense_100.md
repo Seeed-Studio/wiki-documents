@@ -1,6 +1,6 @@
 ---
 title: 压电传感器 - MiniSense 100
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Piezo_Sensor-MiniSense_100
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Piezo_Sensor-MiniSense_100/
 ---
 
 ![](http://bz.seeedstudio.com/depot/images/product/vbs1.jpg)

@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao/
 ---
 
 # 在 SenseCraft AI 上为 XIAO ESP32S3 Sense 配置模型输出和 GPIO

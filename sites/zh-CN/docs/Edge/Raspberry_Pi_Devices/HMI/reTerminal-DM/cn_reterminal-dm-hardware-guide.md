@@ -10,6 +10,9 @@ slug: /reterminal-dm-hardware-guide
 last_update:
   date: 05/19/2023
   author: Peter Pan
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reterminal-dm-hardware-guide/
 ---
 # reTerminal DM 硬件概述
 

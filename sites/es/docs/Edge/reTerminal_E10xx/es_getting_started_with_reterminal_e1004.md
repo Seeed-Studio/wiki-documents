@@ -15,6 +15,9 @@ sku: 100064156
 last_update:
   date: 1/28/2026
   author: Allen
+createdAt: '2026-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1004/
 ---
 
 # Introducción a reTerminal E1004

@@ -8,6 +8,9 @@ slug: /vnc_for_recomputer
 last_update:
   date: 9/30/2024
   author: YaoHui Zhu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/vnc_for_recomputer/
 ---
 
 # 如何在reComputer Nvidia Jetson上使用VNC远程桌面工具

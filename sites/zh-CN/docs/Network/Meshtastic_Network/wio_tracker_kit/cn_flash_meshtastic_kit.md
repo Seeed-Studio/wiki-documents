@@ -2,13 +2,16 @@
 description: Wio Tracker Meshtastic® Kit 固件刷写
 title: 刷写固件
 keywords:
-- Meshtastic
-- Tracker
+  - Meshtastic
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_meshtastic_kit
 last_update:
   date: 12/3/2025
   author: Michelle Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flash_meshtastic_kit/
 ---
 :::danger note
 当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。

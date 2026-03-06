@@ -1,6 +1,6 @@
 ---
 title: Wio Link Starter Kit
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 110020051
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio_Link_Starter_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link_Starter_Kit/img/Wio_Link_Starter_Kit_product_view_1200_s.jpg)

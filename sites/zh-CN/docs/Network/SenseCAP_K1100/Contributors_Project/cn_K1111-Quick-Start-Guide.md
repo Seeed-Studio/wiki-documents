@@ -2,12 +2,15 @@
 description: 土壤湿度监测报警系统
 title: 土壤湿度监测报警系统
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1111-Quick-Start-Guide
 last_update:
   date: 2023/1/13
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/K1111-Quick-Start-Guide/
 ---
 # 土壤湿度监测报警系统
 

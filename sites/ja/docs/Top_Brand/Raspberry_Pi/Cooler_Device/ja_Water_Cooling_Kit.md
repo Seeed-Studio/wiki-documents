@@ -2,13 +2,16 @@
 description: 水冷キットのインストール
 title: 水冷キットインストールガイド
 keywords:
-- Raspberry_Pi
+  - Raspberry_Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cooler_Device
 sku: 110070128,114070261
 last_update:
   date: 05/15/2025
   author: Parker
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Cooler_Device/
 ---
 
 

@@ -2,16 +2,19 @@
 description: Build a simplp Clock with Seeed Studio XIAO RA4M1.
 title: Hollow Clock Powered by Seeed Studio XIAO RA4M1
 keywords:
-- ra4m1
-- xiao
-- clokc
+  - ra4m1
+  - xiao
+  - clokc
 image: https://files.seeedstudio.com/wiki/RA4M1_Application/top.webp
 side_position: 2
 slug: /xiao_ra4m1_clock
-sidebar_class_name: hidden 
+sidebar_class_name: hidden
 last_update:
   date: 11/12/2024
   author: Jason
+createdAt: '2024-11-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_ra4m1_clock/
 ---
 
 

@@ -2,13 +2,16 @@
 description: 24GHz Doppler Radar
 title: 24GHz Doppler Radar
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11
 sku: 102110464
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11/
 ---
 
 ![](https://files.seeedstudio.com/wiki/MW2401TR11/img/102110464_Preview-07.png)

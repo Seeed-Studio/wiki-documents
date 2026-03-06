@@ -3,19 +3,23 @@ description: Reachy Mini のモーターに関する問題を検出して修復�
 title: モーターの診断とトラブルシューティング
 slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:
-- motors
-- diagnosis
-- troubleshooting
-- testbench
-- dynamixel
-- motor detection
-- reflashing
-- repair
+  - motors
+  - diagnosis
+  - troubleshooting
+  - testbench
+  - dynamixel
+  - motor detection
+  - reflashing
+  - repair
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_troubleshooting_motors_diagnosis/
 ---
 
 # モーター診断とトラブルシューティングガイド

@@ -2,12 +2,15 @@
 description: Esta wiki proporciona una guía paso a paso sobre cómo recuperar los registros de arranque del reComputer J4012 (o dispositivo similar) utilizando el puerto serie de Jetson.
 title: ¿Cómo obtener el registro del sistema de reComputer J30/J40?
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /get_the_system_log_of_recomputer_j30_and_j40
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-01-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/get_the_system_log_of_recomputer_j30_and_j40/
 ---
 
 

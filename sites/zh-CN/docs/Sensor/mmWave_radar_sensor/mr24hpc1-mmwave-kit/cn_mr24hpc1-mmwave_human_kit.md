@@ -2,8 +2,8 @@
 description: mmWave 人体检测传感器套件入门指南
 title: mmWave 人体检测传感器套件
 keywords:
-- radar
-- mmwave kit
+  - radar
+  - mmwave kit
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_human_detection_kit
 sku: E23010426,110061541,E24121301
@@ -11,6 +11,9 @@ sidebar_position: 0
 last_update:
   date: 08/17/2023
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/mmwave_human_detection_kit/
 ---
 
 # MR24HPC1 mmWave 人体检测传感器套件

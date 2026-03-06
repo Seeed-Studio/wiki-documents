@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO nRF54L15(Sense)
-description: |
+description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /xiao_nrf54l15_sense_getting_started
 sku: 101991421, 101991422, 114993696, 114993697, 100039813
@@ -11,6 +11,9 @@ last_update:
   date: 7/2/2025
   author: Jason
 sidebar_position: 0
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

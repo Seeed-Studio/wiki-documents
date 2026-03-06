@@ -2,12 +2,15 @@
 description: 如何操作 - 快速简化流程
 title: 完整步骤提交 Pull Request
 keywords:
-- 贡献者
+  - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /full_steps_pull_request
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/full_steps_pull_request/
 ---
 
 ### 感谢您考虑为我们的 Seeed Studio 文件做出贡献！

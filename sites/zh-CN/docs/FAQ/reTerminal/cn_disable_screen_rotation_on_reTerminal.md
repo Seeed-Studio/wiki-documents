@@ -6,6 +6,9 @@ slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/disable_screen_rotation_on_reTerminal/
 ---
 
 如果您的屏幕显示正常，但会随着 reTerminal 的旋转而旋转，您可以通过禁用加速度计来关闭屏幕的自动旋转功能，从而实现固定的横向显示。<br/>

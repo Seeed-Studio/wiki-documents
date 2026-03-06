@@ -2,12 +2,15 @@
 description: Robust networking capabilities seamlessly integrate Seeed's diverse range of sensors and devices, enabling a cohesive flow of data and communication across the entire product ecosystem, unlocking new possibilities for monitoring, automation, and intelligent decision-making.
 title: Network Connectivity
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network
 last_update:
   date: 05/23/2024
   author: Matthew
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Network/
 ---
 
 Robust networking capabilities seamlessly integrate Seeed's diverse range of sensors and devices, enabling a cohesive flow of data and communication across the entire product ecosystem, unlocking new possibilities for monitoring, automation, and intelligent decision-making.

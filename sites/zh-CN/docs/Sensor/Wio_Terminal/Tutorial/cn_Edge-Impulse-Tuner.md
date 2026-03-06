@@ -2,12 +2,15 @@
 description: Edge Impulse 调优器
 title: Edge Impulse 调优器
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge-Impulse-Tuner
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Edge-Impulse-Tuner/
 ---
 
 # EON 调优器 - Edge Impulse 中的优化功能

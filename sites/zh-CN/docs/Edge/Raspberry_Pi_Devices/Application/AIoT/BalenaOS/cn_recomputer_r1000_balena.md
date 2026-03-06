@@ -10,6 +10,9 @@ slug: /reComputer_r1000_balena
 last_update:
   date: 06/17/2024
   author: ShuishengPeng and Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_r1000_balena/
 ---
 
 ## 什么是 balena？

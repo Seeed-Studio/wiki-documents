@@ -3,7 +3,7 @@ description: 使用 reTerminal 和 Pi 摄像头通过 OpenCV 进行形状检测
 title: 使用 reTerminal 和 Pi 摄像头通过 OpenCV 进行形状检测
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Shape-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Shape_detection
 last_update:
   date: 2/5/2023
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal_DM_Shape_detection/
 ---
 
 ## 介绍

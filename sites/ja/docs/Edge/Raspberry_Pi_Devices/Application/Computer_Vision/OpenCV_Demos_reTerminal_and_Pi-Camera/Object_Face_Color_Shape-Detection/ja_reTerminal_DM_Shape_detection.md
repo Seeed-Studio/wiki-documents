@@ -3,7 +3,7 @@ description: reTerminalとPiカメラを使用したOpenCVによる形状検出
 title: reTerminalとPiカメラを使用したOpenCVによる形状検出
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Shape-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Shape_detection
 last_update:
   date: 2/5/2023
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal_DM_Shape_detection/
 ---
 
 ## はじめに

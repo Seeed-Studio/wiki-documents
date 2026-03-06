@@ -2,12 +2,15 @@
 description: 使用 Seeed Studio Fusion 扩展您的创作
 title: 使用 Seeed Studio Fusion 扩展您的创作
 keywords:
-- 贡献者
+  - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Scale-up-Your-Creation-with-Fusion
 last_update:
   date: 03/01/2023
   author: Matthew
+createdAt: '2023-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Scale-up-Your-Creation-with-Fusion/
 ---
 
 自成立以来，与社区合作一直是我们的DNA。为了让您更轻松地与我们合作，扩展和商业化您的项目，我们的 Fusion 团队推出了一系列短期和长期计划，最终目标是通过我们的 Fusion 一站式服务（包括硬件原型制作、大规模生产、定制化和其他设计定制服务）帮助更多开发者实现他们的创意、设计、项目甚至解决方案。为实现这一目标，我们精心策划了一些令人惊叹的计划和用户案例，希望能为您扩展创作提供灵感。

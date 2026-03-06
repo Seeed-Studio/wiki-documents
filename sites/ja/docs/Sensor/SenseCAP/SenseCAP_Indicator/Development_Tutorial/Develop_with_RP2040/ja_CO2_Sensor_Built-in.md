@@ -2,12 +2,15 @@
 description: CO2 Sensor Built-in
 title: CO2 Sensor Built-in
 keywords:
-- SenseCAP Indicator RP2040 Development Tutorial
+  - SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
   date: 5/23/2023
   author: Thomas
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_RP2040_CO2/
 ---
 # **CO2センサー（内蔵）**
 

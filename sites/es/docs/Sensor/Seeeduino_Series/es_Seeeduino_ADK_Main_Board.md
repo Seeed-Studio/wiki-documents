@@ -2,13 +2,16 @@
 description: Seeeduino ADK Main Board
 title: Seeeduino ADK Main Board
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_ADK_Main_Board
 sku: 110020001
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino_ADK_Main_Board/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-ADK_Main_Board/img/Seeeduino_ADK_Main_Board.jpeg)

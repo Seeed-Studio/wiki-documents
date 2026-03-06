@@ -2,14 +2,17 @@
 description: 连续动作识别
 title: 连续动作识别
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_Edge_Impulse
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-EI-2
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-2/
 ---
 
 

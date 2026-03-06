@@ -2,7 +2,7 @@
 description: Wio-E5 STM32WLE5JC モジュールの使用開始ガイド。
 title: Wio-E5 STM32WLE5JC モジュール
 keywords:
-  - wio 
+  - wio
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /LoRa-E5_STM32WLE5JC_Module
@@ -10,6 +10,9 @@ sku: 317990687,317990829
 last_update:
   date: 01/30/2023
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/
 ---
 
 <!-- ![Wio E5](https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg) -->

@@ -2,13 +2,16 @@
 description: BeagleBone®用スケルトンボックス
 title: BeagleBone®用スケルトンボックス
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_box_for_Beaglebone
 sku: 111070001
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Skeleton_box_for_Beaglebone/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Get started with the ReSpeaker XVF3800 USB 4-Mic Array—a high-performance voice interface module featuring voice capture and cross-platform support via USB or I2C.
 title: Getting Started with reSpeaker XVF3800 USB Mic Array
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
+createdAt: '2023-08-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
 # Getting Started with ReSpeaker XVF3800

@@ -11,6 +11,9 @@ slug: /reTerminal-DM-Ignition-Edge-Panel-Builder
 last_update:
   date: 09/29/2023
   author: Corey Thompson
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal-DM-Ignition-Edge-Panel-Builder/
 ---
 
 :::note

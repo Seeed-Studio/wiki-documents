@@ -1,6 +1,6 @@
 ---
 title: Grove - デジタル距離センサー 0.5～5cm(GP2Y0D805Z0F)
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -10,6 +10,9 @@ sku: 101020533
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/
 ---
 
 

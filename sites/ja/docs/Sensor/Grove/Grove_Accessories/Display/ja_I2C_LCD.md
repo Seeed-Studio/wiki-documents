@@ -2,13 +2,16 @@
 description: I2C LCD
 title: I2C LCD
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /I2C_LCD
 sku: 114990502, 114990279
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/I2C_LCD/
 ---
 
 

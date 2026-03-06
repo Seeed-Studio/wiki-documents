@@ -7,6 +7,9 @@ sku: 113020031
 last_update:
   date: 05/15/2025
   author: w0x7ce
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ODYSSEY-X86J4105-Frigate/
 ---
 
 

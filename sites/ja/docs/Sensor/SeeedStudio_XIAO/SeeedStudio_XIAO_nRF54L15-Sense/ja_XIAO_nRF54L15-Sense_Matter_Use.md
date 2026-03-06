@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO nRF54L15 Matter
-description: |
+description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /xiao_nrf54l15_sense_matter
 keywords:
@@ -11,6 +11,9 @@ last_update:
   date: 9/22/2025
   author: Jason
 sidebar_position: 0
+createdAt: '2025-09-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_matter/
 ---
 
 import Tabs from '@theme/Tabs';

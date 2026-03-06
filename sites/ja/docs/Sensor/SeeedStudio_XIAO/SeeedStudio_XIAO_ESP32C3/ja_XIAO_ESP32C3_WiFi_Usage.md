@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO ESP32C3でのWiFi使用方法
 title: WiFi使用方法
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_WiFi_Usage
 last_update:
   date: 07/26/2024
   author: Spencer
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_WiFi_Usage/
 ---
 
 import Tabs from '@theme/Tabs';

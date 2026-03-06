@@ -1,16 +1,19 @@
 ---
-description: --
+description: '--'
 title: Phospho教程
 keywords:
-- NVIDIA Jetson
-- Phospho
-- Robotic Arm
-- SOARM100
+  - NVIDIA Jetson
+  - Phospho
+  - Robotic Arm
+  - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/lerobot/so_arm_100.webp
 slug: /control_robotic_arm_via_phospho
 last_update:
   date: 8/4/2025
   author: LiShanghang
+createdAt: '2025-08-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/control_robotic_arm_via_phospho/
 ---
 
 import Tabs from '@theme/Tabs';

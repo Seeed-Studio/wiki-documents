@@ -2,13 +2,16 @@
 description: 在 reComputer 上完成 YOLOv8 模型训练
 title: 如何在 reComputer 上训练和部署 YOLOv8
 keywords:
-- reComputer
-- Train YOLOv8
+  - reComputer
+  - Train YOLOv8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_Train_and_Deploy_YOLOv8_on_reComputer
 last_update:
   date: 12/6/2023
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How_to_Train_and_Deploy_YOLOv8_on_reComputer/
 ---
 
 

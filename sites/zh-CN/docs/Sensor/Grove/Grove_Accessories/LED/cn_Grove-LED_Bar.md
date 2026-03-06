@@ -2,13 +2,16 @@
 description: Grove - LED 灯条
 title: Grove - LED 灯条
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_Bar
 sku: 104020006, 104030002
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-LED_Bar/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Bar/img/Grove-LED_Bar-1.jpg) -->

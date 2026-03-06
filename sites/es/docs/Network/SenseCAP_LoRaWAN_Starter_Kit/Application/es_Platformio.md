@@ -2,16 +2,19 @@
 description: Guía para principiantes de comunicación LoRa con el módulo Wio-E5 y Arduino en PlatformIO
 title: LoRaWAN usando Wio-E5 en PlatformIO
 keywords:
-    - lorawan
-    - grove
-    - platformio
+  - lorawan
+  - grove
+  - platformio
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/4.jpg
 slug: /platformio_wio_e5
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-    date: 2024-01-26T06:59:58.390Z
-    author: Spencer
+  date: 2024-01-26T06:59:58.390Z
+  author: Spencer
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/platformio_wio_e5/
 ---
 
 # Primeros pasos con LoRaWAN usando Wio-E5 y Arduino en PlatformIO

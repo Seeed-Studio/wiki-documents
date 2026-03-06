@@ -2,13 +2,16 @@
 description: Grove - HCHO センサー
 title: Grove - HCHO センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-HCHO_Sensor
 sku: 101020001
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-HCHO_Sensor/
 ---
 
 

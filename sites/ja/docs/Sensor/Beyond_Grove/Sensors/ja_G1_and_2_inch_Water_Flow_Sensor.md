@@ -1,6 +1,6 @@
 ---
 title: G1/2インチ水流センサー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 314150005
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/G1_and_2_inch_Water_Flow_Sensor/
 ---
 
 

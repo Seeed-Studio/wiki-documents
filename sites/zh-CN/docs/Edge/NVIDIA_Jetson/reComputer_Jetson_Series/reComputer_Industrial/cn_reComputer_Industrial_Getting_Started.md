@@ -2,13 +2,16 @@
 description: reComputer 工业版快速上手
 title: reComputer 工业版快速上手
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Industrial_Getting_Started
 sku: 110110190, 110110193, 110110188, 110110191, 110110189, 110110192, B802000101
 last_update:
   date: 05/16/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_Industrial_Getting_Started/
 ---
 
 # reComputer 工业版快速上手

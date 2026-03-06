@@ -2,13 +2,15 @@
 description: intro
 title: Features
 keywords:
-    - mission-pack
-# image: 
+  - mission-pack
 slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-08-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/mission_pack_features_v3/
 ---
 
 The **Hazard Response Mission Pack** is a versatile solution specifically designed to address challenges in environments where hazards are a persistent concern. Combining state-of-the-art hardware and software, this pack provides a comprehensive platform for real-time monitoring, alerting, and response, empowering users to effectively manage risks and ensure safety.

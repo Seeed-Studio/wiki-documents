@@ -2,12 +2,15 @@
 description: Grove 配件指南
 title: Grove 配件指南
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Accessories_Intro
 last_update:
   date: 07/19/2023
   author: Matthew
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Accessories_Intro/
 ---
 
 # Grove 配件指南

@@ -1,6 +1,6 @@
 ---
 title: Connecting to Blynk
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-Blynk
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Blynk/
 ---
 # Connecting Wio Terminal to Blynk
 

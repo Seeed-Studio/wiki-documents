@@ -6,6 +6,9 @@ slug: /xiaoc6_zigbee_led_ha
 last_update:
   date: 01/21/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiaoc6_zigbee_led_ha/
 ---
 
 # XIAO ESP32C6のZigbeeを介してHome Assistantに接続する

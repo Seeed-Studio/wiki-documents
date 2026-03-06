@@ -2,13 +2,16 @@
 description: Enviar mensaje desde Watcher & Node-RED a IFTTT
 title: Watcher & Node-RED a IFTTT
 keywords:
-- watcher
-- IFTTT
+  - watcher
+  - IFTTT
 image: https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/ifttthead.png
 slug: /watcher_node_red_to_ifttt
 last_update:
   date: 06/28/2024
   author: Allen
+createdAt: '2024-07-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/watcher_node_red_to_ifttt/
 ---
 
 # Inicio Rápido de Watcher a IFTTT

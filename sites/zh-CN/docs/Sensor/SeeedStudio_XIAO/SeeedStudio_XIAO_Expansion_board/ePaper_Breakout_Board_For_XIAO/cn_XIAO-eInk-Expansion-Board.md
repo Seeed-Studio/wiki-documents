@@ -2,7 +2,7 @@
 description: ePaper 分线板入门指南
 title: ePaper 分线板
 keywords:
-- XIAO eInk Expansion
+  - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO-eInk-Expansion-Board
 sku: 104990843,104990845,104990846,104990847,104990853,104990855,104990857,104990858,104990859,104990861,105990172
@@ -10,6 +10,9 @@ sidebar_position: 1
 last_update:
   date: 05/23/2023
   author: Carla
+createdAt: '2023-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 ---
 
 # ePaper 分线板入门指南

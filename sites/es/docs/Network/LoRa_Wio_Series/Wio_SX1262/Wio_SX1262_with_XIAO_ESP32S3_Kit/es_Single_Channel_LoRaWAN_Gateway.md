@@ -1,7 +1,11 @@
 ---
 description: Gateway LoRaWAN de Canal Único basado en XIAO ESP32S3 & Kit Wio-SX1262
 title: Gateway LoRaWAN de Canal Único
-keywords: ["XIAO ESP32S3", "LoRa", "Wio SX1262", "Single Channel Gateway"]
+keywords:
+  - XIAO ESP32S3
+  - LoRa
+  - Wio SX1262
+  - Single Channel Gateway
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /wio_sx1262_xiao_esp32s3_for_single_channel_gateway
 sku: 102010611
@@ -9,6 +13,9 @@ sidebar_position: 3
 last_update:
   date: 10/09/2024
   author: Evelyn Chen
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/
 ---
 
 # **Configurando el Kit XIAO ESP32S3 & Wio-SX1262 como Gateway LoRaWAN de Canal Único**

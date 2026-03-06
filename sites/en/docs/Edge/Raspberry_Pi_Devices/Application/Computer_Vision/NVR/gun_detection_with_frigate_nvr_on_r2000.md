@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates implement gun detection based on the Frigate NVR and reComputer AI box. 
+description: This wiki demonstrates implement gun detection based on the Frigate NVR and reComputer AI box.
 title: Gun detection with Frigate NVR on R2000
 keywords:
   - Raspberry pi
@@ -12,7 +12,10 @@ slug: /gun_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/gun_detection_with_frigate_nvr_on_r2000/
 ---
 
 # Gun detection with Frigate NVR on R2000

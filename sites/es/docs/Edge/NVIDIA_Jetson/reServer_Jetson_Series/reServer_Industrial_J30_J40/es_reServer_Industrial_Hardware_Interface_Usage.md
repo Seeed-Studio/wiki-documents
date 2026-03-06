@@ -2,12 +2,15 @@
 description: Uso de la Interfaz de Hardware Industrial de reServer
 title: Uso de la Interfaz de Hardware Industrial de reServer
 keywords:
-- reServer
+  - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_industrial_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reserver_industrial_hardware_interface_usage/
 ---
 
 import Tabs from '@theme/Tabs';

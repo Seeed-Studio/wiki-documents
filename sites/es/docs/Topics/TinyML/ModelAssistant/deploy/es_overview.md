@@ -2,12 +2,15 @@
 description: Despliegue para el Asistente de Modelos
 title: Despliegue
 keywords:
-- sscma model assistant ai tinyml 
+  - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ModelAssistant_Deploy_Overview
 last_update:
   date: 01/11/2024
   author: LynnL4
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ModelAssistant_Deploy_Overview/
 ---
 
 # Despliegue

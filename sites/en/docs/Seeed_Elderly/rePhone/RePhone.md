@@ -1,14 +1,17 @@
 ---
-description:  RePhone Introduction
-title:  RePhone Introduction
+description: RePhone Introduction
+title: RePhone Introduction
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RePhone
 sku: 113060004, 110040002
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/RePhone/
 ---
 RePhone Kit is an open source modular phone kit that changes the way we put our phone into use. It provides a new form of phone customization, and the easiest solution to wearable/IoT development.
 

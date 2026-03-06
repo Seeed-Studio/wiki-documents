@@ -6,6 +6,9 @@ slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2023-06-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/disable_screen_rotation_on_reTerminal/
 ---
 
 If your screen displays properly but rotates with the reTerminal, you can deactivate the screen's automatic rotation by removing the accelerometer, resulting in a static landscape display. <br/>

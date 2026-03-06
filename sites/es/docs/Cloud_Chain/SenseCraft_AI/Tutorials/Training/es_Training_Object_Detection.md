@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 11/27/2024
   author: qiuyu wei
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/
 ---
 
 # Tipo de entrenamiento - Detección de Objetos

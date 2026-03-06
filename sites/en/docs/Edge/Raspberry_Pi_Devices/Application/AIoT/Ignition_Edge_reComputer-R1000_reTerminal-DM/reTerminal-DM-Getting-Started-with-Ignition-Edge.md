@@ -10,6 +10,9 @@ slug: /reTerminal-DM-Getting-Started-with-Ignition-Edge
 last_update:
   date: 09/29/2023
   author: Corey Thompson
+createdAt: '2023-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Ignition-Edge/
 ---
 # reTerminal DM Getting Started with Ignition Edge
 

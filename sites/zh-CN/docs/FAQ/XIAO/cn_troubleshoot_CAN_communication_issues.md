@@ -1,11 +1,13 @@
 ---
 description: XIAO CAN Bus 扩展板-常见问题解答
 title: 如何排查 CAN 总线通信问题？
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 2023/6/30
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/troubleshoot_CAN_communication_issues/
 ---
 
 如果您在使用 CAN 总线通信时遇到问题，可以按照以下步骤进行排查：

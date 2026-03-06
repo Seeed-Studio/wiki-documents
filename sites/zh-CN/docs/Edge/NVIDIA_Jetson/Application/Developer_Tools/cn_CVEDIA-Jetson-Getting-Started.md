@@ -9,6 +9,9 @@ sku: 110110144,110110146,110110184,110110185,110110186,110110187
 last_update:
   date: 03/10/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/CVEDIA-Jetson-Getting-Started/
 ---
 
 # 在 NVIDIA® Jetson 设备上开始使用 CVEDIA-RT

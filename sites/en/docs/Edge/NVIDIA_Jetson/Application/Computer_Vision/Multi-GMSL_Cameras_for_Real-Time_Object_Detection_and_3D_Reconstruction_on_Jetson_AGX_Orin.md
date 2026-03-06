@@ -15,6 +15,9 @@ sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
   date: 06/30/2025
   author: Zibo
+createdAt: '2025-06-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/multiple_cameras_with_jetson/
 ---
 
 <div style={{ textAlign: "justify" }}>

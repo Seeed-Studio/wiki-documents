@@ -1,13 +1,16 @@
 ---
-description:  TFT Touch Shield V1.0
-title:  TFT Touch Shield V1.0
+description: TFT Touch Shield V1.0
+title: TFT Touch Shield V1.0
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /TFT_Touch_Shield_V1.0
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/TFT_Touch_Shield_V1.0/
 ---
 
 

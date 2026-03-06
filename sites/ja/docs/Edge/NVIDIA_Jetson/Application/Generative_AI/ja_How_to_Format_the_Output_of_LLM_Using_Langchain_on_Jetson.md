@@ -2,14 +2,17 @@
 description: JetsonでLangchainを使用してLLMの出力をフォーマットする方法
 title: Langchainで出力をフォーマット
 keywords:
-- reComputer
-- LLM
-- Langchain
+  - reComputer
+  - LLM
+  - Langchain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson
 last_update:
   date: 4/1/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/
 ---
 
 

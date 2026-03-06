@@ -2,14 +2,17 @@
 description: reComputer Industrial R20xx Assembly Guide
 title: reComputer Industrial R20xx Assembly Guide
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R20xx
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R20xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
 slug: /recomputer_industrial_r20xx_assembly_guide
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2023-05-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_industrial_r20xx_assembly_guide/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>

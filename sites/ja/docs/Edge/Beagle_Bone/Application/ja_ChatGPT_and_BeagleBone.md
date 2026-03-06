@@ -2,14 +2,17 @@
 description: LLM - BeagleY-AIとの統合
 title: ChatGPT - BeagleY-AI
 keywords:
-- BeagleY-AI
-- LLM
-- ReSpeaker
+  - BeagleY-AI
+  - LLM
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_beagley-ai_chatgpt
 last_update:
   date: 05/15/2025
   author: ShuishengPeng
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_lite_beagley-ai_chatgpt/
 ---
 
 

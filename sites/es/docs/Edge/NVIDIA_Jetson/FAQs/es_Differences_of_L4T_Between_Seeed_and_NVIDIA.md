@@ -2,14 +2,17 @@
 description: Describe las diferencias en L4T entre Seeed y NVIDIA
 title: Diferencias en L4T entre Seeed y NVIDIA
 keywords:
-- jetson
-- BSP
-- L4T
+  - jetson
+  - BSP
+  - L4T
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /differences_of_l4t_between_seeed_and_nvidia
 last_update:
   date: 04/05/2025
   author: Dayu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/differences_of_l4t_between_seeed_and_nvidia/
 ---
 
 Los Paquetes de Soporte de Placa (BSPs) Jetson de Seeed están basados en las versiones 35.3.1, 35.5, 36.3, 36.4 y 36.4.3 de Linux for Tegra (L4T) de NVIDIA, con modificaciones para soportar los productos de la serie Jetson de Seeed. A continuación se presentan las diferencias entre el BSP de Seeed y el BSP oficial de NVIDIA para cada una de estas versiones de L4T.

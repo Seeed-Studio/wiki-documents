@@ -2,13 +2,16 @@
 description: Grove - Sensor GSR
 title: Grove - Sensor GSR
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-GSR_Sensor
 sku: 101020052
 last_update:
   date: 1/6/2023
   author: Seraphina
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-GSR_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-GSR_Sensor/img/GSR.jpg" /></div>

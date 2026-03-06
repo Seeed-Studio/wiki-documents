@@ -1,14 +1,17 @@
 ---
-description:  Grove - Starter Kit v3
+description: Grove - Starter Kit v3
 title: Grove - Starter Kit v3
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_v3
 sku: 110060024
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Starter_Kit_v3/
 ---
 
 

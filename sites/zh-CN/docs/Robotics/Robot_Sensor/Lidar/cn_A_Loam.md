@@ -2,16 +2,19 @@
 description: 本文档提供了在 reComputer Jetson 上使用 RoboSense RS32 LiDAR 传感器设置并运行 A-LOAM 算法的详细步骤。
 title: 运行 A-LOAM 3D SLAM
 keywords:
-- A-LOAM
-- SLAM
-- reComputer
-- Jetson nano
-- ROS
+  - A-LOAM
+  - SLAM
+  - reComputer
+  - Jetson nano
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /a_loam
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/a_loam/
 ---
 
 # 如何在 reComputer 上运行 A-LOAM 3D SLAM

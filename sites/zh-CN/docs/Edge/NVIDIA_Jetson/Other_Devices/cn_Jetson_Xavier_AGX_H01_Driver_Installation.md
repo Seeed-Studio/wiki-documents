@@ -2,14 +2,17 @@
 description: 在 Jetson Xavier AGX H01 上刷写 Jetpack
 title: Jetson Xavier AGX H01
 tags:
-   - NVIDIA Jetson H01
+  - NVIDIA Jetson H01
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_Xavier_AGX_H01_Driver_Installation
 sku: 110991666
 last_update:
   date: 01/05/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Jetson_Xavier_AGX_H01_Driver_Installation/
 ---
 
 <!-- ---

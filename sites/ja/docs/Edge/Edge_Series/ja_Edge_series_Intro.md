@@ -2,12 +2,15 @@
 description: Edge Series Guide
 title: Edge Series Guide
 keywords:
-- Edge Series
+  - Edge Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_series_Intro
 last_update:
   date: 10/24/2023
   author: Kasun Thushara
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Edge_series_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-platform/collection_page/Edge_Series_wiki_front.png" style={{width:1000, height:'auto'}}/></div>

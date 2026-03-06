@@ -1,13 +1,16 @@
 ---
-description:  Grove Creator Kit
+description: Grove Creator Kit
 title: Grove Creator Kit
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Creator-Kit-1
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Creator-Kit-1/
 ---
 
 

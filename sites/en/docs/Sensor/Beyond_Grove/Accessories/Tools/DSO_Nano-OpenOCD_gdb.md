@@ -1,6 +1,6 @@
 ---
 title: DSO Nano/OpenOCD gdb
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DSO_Nano-OpenOCD_gdb
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/DSO_Nano-OpenOCD_gdb/
 ---
 
 #   Debugging with OpenOCD and gdb

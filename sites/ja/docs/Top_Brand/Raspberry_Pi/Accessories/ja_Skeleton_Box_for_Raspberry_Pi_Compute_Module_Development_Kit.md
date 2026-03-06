@@ -2,13 +2,16 @@
 description: Raspberry Pi Compute Module開発キット用スケルトンボックス
 title: Raspberry Pi Compute Module開発キット用スケルトンボックス
 keywords:
-- アクセサリ
+  - アクセサリ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit
 sku: 110070008, 110070000
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit/
 ---
 
 

@@ -2,13 +2,16 @@
 description: 关于如何从拥有的数据集、标注、训练和部署到 XIAO ESP32S3 的指导。
 title: 从数据集到 XIAO ESP32S3 的模型部署
 keywords:
-- SSCMA
-- xiao
+  - SSCMA
+  - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sscma
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_sscma/
 ---
 
 

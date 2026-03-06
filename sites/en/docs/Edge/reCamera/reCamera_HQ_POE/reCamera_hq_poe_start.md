@@ -15,6 +15,9 @@ sidebar_position: 1
 last_update:
   date: 09/25/2025
   author: Parker Hu
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recamera_hq_poe_getting_started/
 ---
 # reCamera HQ POE Getting Started Guide
 

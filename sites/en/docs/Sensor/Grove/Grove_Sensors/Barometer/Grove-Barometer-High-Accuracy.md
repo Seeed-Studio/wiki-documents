@@ -2,13 +2,16 @@
 description: Grove - Barometer (High-Accuracy)
 title: Grove - Barometer (High-Accuracy)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.webp
 slug: /Grove-Barometer-High-Accuracy
 sku: 101020068
 last_update:
   date: 4/22/2025
   author: carla guo
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Barometer-High-Accuracy/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg) -->

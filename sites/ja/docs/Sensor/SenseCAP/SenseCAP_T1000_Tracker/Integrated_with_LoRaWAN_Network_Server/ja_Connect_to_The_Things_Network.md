@@ -2,12 +2,15 @@
 description: The_Things_Networkに接続する
 title: The Things Networkに接続する
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_TTN
 last_update:
   date: 8/15/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/
 ---
 
 

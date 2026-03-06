@@ -1,6 +1,6 @@
 ---
 title: MR60BHA2 呼吸心跳传感器与 Home Assistant
-description: | 
+description: |
   MR60BHA2 心跳毫米波传感器与 Home Assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ha_with_mr60bha2
@@ -10,6 +10,9 @@ sidebar_position: 1
 last_update:
   date: 09/23/2024
   author: Spencer
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ha_with_mr60bha2/
 ---
 
 import Tabs from '@theme/Tabs';

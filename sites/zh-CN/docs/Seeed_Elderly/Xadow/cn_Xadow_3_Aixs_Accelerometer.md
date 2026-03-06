@@ -2,12 +2,15 @@
 description: Xadow - 三轴加速度计
 title: Xadow - 三轴加速度计
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_3_Aixs_Accelerometer
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_3_Aixs_Accelerometer/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Accelerometer/img/Xadow_Accelerometer_01.jpg)

@@ -2,7 +2,7 @@
 description: Introducción al Kit de Desarrollo Wio-WM1110
 title: Introducción
 keywords:
-- Wio-WM1110 Dev Kit
+  - Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-WM1110_Dev_Kit/Introduction
 sku: 114993082
@@ -10,6 +10,9 @@ sidebar_position: 1
 last_update:
   date: 6/26/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-WM1110_Dev_Kit/Introduction/
 ---
 
 

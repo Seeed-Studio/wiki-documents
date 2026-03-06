@@ -6,7 +6,10 @@ slug: /A_Handy_Serial_Library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/A_Handy_Serial_Library/
 ---
 
 Arduino没有调试功能，这可能是一些软件工程师的第一印象。实际上，我们通常只是使用Arduino来做一些简单的应用，即使没有调试功能，也没有关系。如果你想使用Arduino来做一些复杂的应用，比如人脸识别，那么也许你需要重新考虑是否选择了错误的平台。

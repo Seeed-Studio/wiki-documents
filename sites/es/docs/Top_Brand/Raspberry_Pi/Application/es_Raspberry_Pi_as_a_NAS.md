@@ -2,12 +2,15 @@
 description: Raspberry Pi como un NAS
 title: Raspberry Pi como un NAS
 keywords:
-- Application
+  - Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_as_a_NAS
 last_update:
   date: 8/5/2024
   author: Frank
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Raspberry_Pi_as_a_NAS/
 ---
 
 

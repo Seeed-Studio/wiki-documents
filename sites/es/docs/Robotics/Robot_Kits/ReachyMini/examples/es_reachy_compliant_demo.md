@@ -3,17 +3,21 @@ description: Demostración que muestra el Reachy Mini en modo compliant con comp
 title: Demostración de Modo Compliant
 slug: /reachymini_examples_reachy_compliant_demo
 keywords:
-- compliant mode
-- gravity compensation
-- placo
-- kinematics
-- human-robot interaction
-- soft mode
+  - compliant mode
+  - gravity compensation
+  - placo
+  - kinematics
+  - human-robot interaction
+  - soft mode
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_examples_reachy_compliant_demo/
 ---
 
 # Demostración de Modo Compliant

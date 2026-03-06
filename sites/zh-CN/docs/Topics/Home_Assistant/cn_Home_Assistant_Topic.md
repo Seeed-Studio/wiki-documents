@@ -2,13 +2,16 @@
 description: 本页面是所有 Home Assistant 内容的合集。
 title: Home Assistant
 keywords:
-- home assistant
+  - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /home_assistant_topic
 sku: 113110024
 last_update:
   date: 2/26/2024
   author: Matthew, Jenna and Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/home_assistant_topic/
 ---
 
 

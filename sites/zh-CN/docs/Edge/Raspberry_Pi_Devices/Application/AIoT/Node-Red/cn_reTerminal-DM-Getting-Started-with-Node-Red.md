@@ -10,6 +10,9 @@ slug: /reTerminal-DM-Getting-Started-with-Node-Red
 last_update:
   date: 04/04/2023
   author: Peter Pan
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal-DM-Getting-Started-with-Node-Red/
 ---
 # reTerminal DM Node Red 入门指南
 

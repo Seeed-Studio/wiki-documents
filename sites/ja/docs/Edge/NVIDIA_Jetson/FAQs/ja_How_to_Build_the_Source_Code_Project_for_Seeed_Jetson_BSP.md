@@ -2,14 +2,17 @@
 description: Seeed の Jetson BSP のソースコードプロジェクトをビルドする方法
 title: Seeed の Jetson BSP のソースコードプロジェクトをビルドする方法
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_build_the_source_code_project_for_seeed_jetson_bsp
 last_update:
   date: 08/04/2025
   author: Dayu
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/how_to_build_the_source_code_project_for_seeed_jetson_bsp/
 ---
 
 **この wiki では、Seeed の Jetson 製品用の BSP ソースコードを取得し、完全な BSP ソースパッケージに整理し、Jetson デバイスにコンパイル/フラッシュする方法を説明します。**

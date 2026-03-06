@@ -2,13 +2,16 @@
 description: Use Infineon Wi-Fi Module on reComputer
 title: Use Infineon Wi-Fi Module on reComputer
 keywords:
-- reComputer
-- Wifi
+  - reComputer
+  - Wifi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_Infineon_Wifi_Module_on_reComputer
 last_update:
   date: 01/10/2024
   author: Youjiang
+createdAt: '2024-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Use_Infineon_Wifi_Module_on_reComputer/
 ---
 
 ## Introduction 

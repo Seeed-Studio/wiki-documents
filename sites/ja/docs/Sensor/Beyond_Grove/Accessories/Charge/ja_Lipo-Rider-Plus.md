@@ -2,12 +2,15 @@
 description: Lipo Rider Plus (充電器/ブースター) - 5V/2.4A USB Type C
 title: Lipo Rider Plus (充電器/ブースター) - 5V/2.4A USB Type C
 keywords:
-- アクセサリー充電
+  - アクセサリー充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Lipo-Rider-Plus
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Lipo-Rider-Plus/
 ---
 
 

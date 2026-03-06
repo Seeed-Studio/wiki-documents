@@ -11,7 +11,10 @@ slug: /yolov8_on_ai_box_for_fall_climbing_tracking
 last_update:
   date: 07/29/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-07-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
 # YOLOv8 AI Box：跌倒、攀爬和跟踪检测

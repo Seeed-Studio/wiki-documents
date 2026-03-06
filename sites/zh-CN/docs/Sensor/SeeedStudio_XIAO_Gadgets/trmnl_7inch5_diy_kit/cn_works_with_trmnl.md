@@ -2,8 +2,8 @@
 description: 本文介绍如何使用 TRMNL 7.5inch(OG) DIY Kit 与 TRMNL 配合工作。
 title: 与 TRMNL 配合工作
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /ogdiy_kit_works_with_trmnl
 sku: 104991005
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 06/29/2025
   author: Allen
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_trmnl/
 ---
 
 # TRMNL 7.5inch(OG) DIY Kit 与 TRMNL 配合工作

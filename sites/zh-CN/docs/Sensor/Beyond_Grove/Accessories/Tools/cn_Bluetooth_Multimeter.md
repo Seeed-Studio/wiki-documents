@@ -1,6 +1,6 @@
 ---
 title: 蓝牙万用表
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Bluetooth_Multimeter
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Bluetooth_Multimeter/
 ---
 
 蓝牙万用表是一款专为工程师设计的智能安卓手机外设。它不仅可以轻松采集电压、电流和电阻等数据，还可以通过蓝牙与手机通信，从而将采集到的数据显示在手机上。硬件和软件的持续优化保证了该万用表的测量精度。

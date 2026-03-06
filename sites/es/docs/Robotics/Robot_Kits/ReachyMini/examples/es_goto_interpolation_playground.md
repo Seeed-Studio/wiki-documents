@@ -3,18 +3,22 @@ description: Ejemplo que demuestra diferentes métodos de interpolación (linear
 title: Goto Interpolation Playground
 slug: /reachymini_examples_goto_interpolation_playground
 keywords:
-- interpolación
-- métodos de movimiento
-- linear
-- minjerk
-- ease_in_out
-- cartoon
-- movimiento de la cabeza
+  - interpolación
+  - métodos de movimiento
+  - linear
+  - minjerk
+  - ease_in_out
+  - cartoon
+  - movimiento de la cabeza
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_examples_goto_interpolation_playground/
 ---
 
 # Goto Interpolation Playground

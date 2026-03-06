@@ -2,13 +2,16 @@
 description: Grove 离线语音识别传感器入门指南。
 title: Grove 离线语音识别传感器
 keywords:
-- gesture
+  - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Grove-Offline-Voice-Recognition
 sku: 107020149
 last_update:
   date: 01/02/2024
   author: Allen
+createdAt: '2024-01-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Offline-Voice-Recognition/
 ---
 
 # Grove 离线语音识别

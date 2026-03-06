@@ -2,12 +2,15 @@
 description: Cómo medir niveles de ruido con Wio Terminal
 title: Cómo medir niveles de ruido con Wio Terminal
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Sound-Meter
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Sound-Meter/
 ---
 
 # Cómo medir niveles de ruido con Wio Terminal

@@ -2,13 +2,16 @@
 description: 树莓派 B+ 外壳
 title: 树莓派 B+ 外壳
 keywords:
-- Accessories
+  - Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_PI_Bplus_Case
 sku: 114990084
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Raspberry_PI_Bplus_Case/
 ---
 
 <!-- ---

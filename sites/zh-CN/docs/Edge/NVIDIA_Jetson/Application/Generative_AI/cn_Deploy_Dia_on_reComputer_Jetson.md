@@ -2,16 +2,19 @@
 description: 本wiki提供了在NVIDIA Jetson设备上部署Dia文本转语音模型的分步说明，展示了其令人印象深刻的实时语音合成能力。它涵盖了依赖项安装、配置调整，并包含了使用配备Jetson Orin NX的reComputer J4012展示高质量音频生成的实际演示。
 title: 在reComputer Jetson上部署Dia
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Dia
-- Audio
+  - reComputer
+  - Jetson
+  - LLM
+  - Dia
+  - Audio
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
 slug: /deploy_dia_on_jetson
 last_update:
   date: 05/16/2025
   author: Youjiang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deploy_dia_on_jetson/
 ---
 
 # 在reComputer Jetson上部署Dia

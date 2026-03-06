@@ -2,16 +2,19 @@
 description: 本wiki提供了在reComputer Jetson设备上使用MLC部署DeepSeek模型的分步指南，用于在边缘设备上进行优化的AI推理。
 title: 使用MLC在reComputer Jetson上部署DeepSeek
 keywords:
-- reComputer
-- Jetson
-- LLM
-- MLC
-- deepseek
+  - reComputer
+  - Jetson
+  - LLM
+  - MLC
+  - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
 slug: /deploy_deepseek_on_jetson_with_mlc
 last_update:
   date: 02/13/2025
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deploy_deepseek_on_jetson_with_mlc/
 ---
 
 

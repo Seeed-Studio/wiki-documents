@@ -2,15 +2,18 @@
 description: LLM - integrado con Raspberry Pi5
 title: ChatGPT - Raspberry Pi
 keywords:
-- Raspberry Pi
-- LLM
-- ReSpeaker
+  - Raspberry Pi
+  - LLM
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_pi5
 sku: E2024082601
 last_update:
   date: 8/12/2024
   author: ShuishengPeng
+createdAt: '2024-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_lite_pi5/
 ---
 
 

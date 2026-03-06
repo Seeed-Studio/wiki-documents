@@ -6,6 +6,9 @@ slug: /reTerminal-DM_Azure_IoT
 last_update:
   date: 11/6/2023
   author: Takashi
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal-DM_Azure_IoT/
 ---
 
 # 在运行 Debian 11 (ARM32v7) 的 reTerminal DM 设备上运行 Azure IoT Edge Runtime

@@ -1,21 +1,25 @@
 ---
-description: Guía para flashear el firmware MeshCore en el Wio Tracker L1 Pro vía Web USB o arrastrar‑y‑soltar, junto con la configuración de la app para la región LoRa, GPS y envío de mensajes.
-title:  Primeros pasos con Meshcore
+description: Guía para flashear el firmware MeshCore en el Wio Tracker L1 Pro mediante Web USB o arrastrar y soltar, junto con la configuración de la app para la región LoRa, GPS y envío de mensajes.
+title: Primeros pasos con Meshcore
 keywords:
-- Meshcore
+  - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 3
+sidebar_position: 1
 last_update:
-  date: 3/2/2026
+  date: 3/4/2026
   author: Michelle Huang
----       
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
+---
+
 
 
 ## Flasheo de firmware
 
-### Método 1 vía Web Flasher
+### Método 1 mediante Web Flasher
 
 Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable admite transmisión de datos. 
 
@@ -23,23 +27,23 @@ Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Ve al [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
 
 Elige `Seeed Studio Wio Tracker L1 Pro` en el grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Elige `Companion Bluetooth`. Los dispositivos flasheados con el firmware Companion Bluetooth se pueden conectar a la APP. Si quieres flashear otro firmware, por favor [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) para ver el tutorial.
+Elige `Companion Bluetooth`. Los dispositivos flasheados con el firmware Companion Bluetooth se pueden conectar a la APP. Si quieres flashear otro firmware, por favor [haz clic aquí](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) para ver el tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "L1 Pro" o "TinyUSB serial". Luego haz clic en `Erase Flash` y elige el puerto serie.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-Si has hecho clic en `Erase Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego en `Erase Flash` para asegurarte de que has entrado correctamente en DFU.
+Si has hecho clic en `Erase Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego haz clic en `Erase Flash` para asegurarte de que has entrado correctamente en DFU.
 
 Si ves "Flashing erase firmware:100%", el dispositivo se ha borrado correctamente.
 
@@ -51,7 +55,7 @@ Haz clic en `Enter DFU Mode`, elige el puerto serie llamado "L1 Pro" o "TinyUSB"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-Si has hecho clic en `Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego en `Flash` para asegurarte de que has entrado correctamente en DFU.
+Si has hecho clic en `Flash` pero no hay respuesta, haz clic en `Enter DFU` de nuevo y luego haz clic en `Flash` para asegurarte de que has entrado correctamente en DFU.
 
 Cuando la barra de progreso esté completamente llena, indica que el flasheo se ha completado. Entonces el dispositivo se reiniciará automáticamente.
 
@@ -65,17 +69,17 @@ Conecta tu dispositivo al ordenador con un cable USB. Asegúrate de que el cable
 Mantén el cable USB conectado durante la transmisión de datos, de lo contrario el dispositivo puede dañarse.
 :::
 
-Ve a [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Ve al [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
 
 Elige `Seeed Studio Wio Tracker L1 Pro` en el grupo `Community Firmware`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Elige `Companion Bluetooth`. Los dispositivos flasheados con el firmware Companion Bluetooth se pueden conectar a la APP. Si quieres flashear otro firmware, por favor [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) para ver el tutorial.
+Elige `Companion Bluetooth`. Los dispositivos flasheados con el firmware Companion Bluetooth se pueden conectar a la APP. Si quieres flashear otro firmware, por favor [haz clic aquí](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) para ver el tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
-#### Borrado de la Flash
+#### Borrado de Flash
 
 Descarga el archivo UF2.
 
@@ -85,11 +89,11 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Podrás 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que ha aparecido.
+Arrastra el archivo UF2 descargado al disco que aparece.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NOT` se reiniciará automáticamente.
+El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo `NO` se reiniciará automáticamente.
 
 #### Flashear firmware
 
@@ -105,11 +109,11 @@ Haz doble clic en el botón RST para entrar manualmente en el modo DFU. Podrás 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-Arrastra el archivo UF2 descargado al disco que ha aparecido.
+Arrastra el archivo UF2 descargado al disco que aparece.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo NOT se reiniciará automáticamente.
+El disco desaparecerá después de que el firmware se haya flasheado correctamente. En este punto no hay firmware en el dispositivo, por lo que el dispositivo NO se reiniciará automáticamente.
 
 ## Configuración
 
@@ -118,18 +122,18 @@ El disco desaparecerá después de que el firmware se haya flasheado correctamen
 Levanta el interruptor de encendido hacia arriba para encenderlo.
 
 :::tip
-Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primero. No uses un cargador de carga rápida.
+Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primero. No utilices un cargador de carga rápida.
 :::
 
 ### Obtener la APP
 
-Descárgala desde Google Store o Apple Store. O [click here](https://meshcore.co.uk/apps.html) para obtener la APP de Meshcore.
+Descárgala desde Google Store o Apple Store. O [haz clic aquí](https://meshcore.co.uk/apps.html) para obtener la APP de Meshcore.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
-### Conectar vía App
+### Conectar mediante la App
 
-Haz clic en `Connect` y elige el dispositivo objetivo. El ID de dispositivo predeterminado es `Meshcore-MAC Address`. La dirección MAC se puede ver en la etiqueta en la parte inferior del dispositivo.
+Haz clic en `Connect` y elige el dispositivo de destino. El ID de dispositivo predeterminado es `Meshcore-MAC Address`. La dirección MAC se puede ver en la etiqueta en la parte inferior del dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
@@ -142,7 +146,7 @@ Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `
 
 ### Configurar el LoRa
 
-Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -151,17 +155,17 @@ Luego reinicia el dispositivo, de lo contrario la configuración no surtirá efe
 
 **Lista de regiones**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Código de región**|**Descripción**|**Rango de frecuencia (MHz)**|**Ciclo de trabajo (%)**|**Límite de potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902.0 - 928.0|100|30|
-|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
+|UNSET|Sin configurar|N/A|N/A|N/A|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|Unión Europea 868 MHz|869.4 - 869.65|10|27|
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa parameter](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para adaptarlo a tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [parámetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para adaptarlo a tus necesidades.
 
 ### Configurar el GPS
 
-Si quieres usar el GPS, por favor actívalo.
+Si quieres usar GPS, por favor actívalo. 
 
 Puedes ir a la APP `Position Settings` para activar el GPS. O puedes ir a la página de GPS del dispositivo y pulsar el joystick de cuatro direcciones para encender o apagar el GPS.
 
@@ -169,24 +173,24 @@ Puedes ir a la APP `Position Settings` para activar el GPS. O puedes ir a la pá
 
 ### Configurar el zumbador
 
-Pulsa el botón User cuatro veces para controlar el encendido o apagado del zumbador.
+Pulsa el botón de usuario cuatro veces para controlar el encendido o apagado del zumbador.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/UserButton.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/User.png" alt="pir" width={500} height="auto" /></p>
 
 ## Transmisión de mensajes
 
 Si tienes dos dispositivos compatibles, y no hay muchos usuarios de MeshCore cerca de ti, flashea ambos con el firmware BLE Companion para que puedas usar tus dispositivos para comunicarte con tus amigos y familiares cercanos.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreFramework.png" alt="pir" width={900} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
-### Advert
+### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón advert, se difunden esos datos por LoRa. MeshCore lo llama un Advert. Hay dos formas de hacer advert, "zero hop" y "flood".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, se difunden esos datos por LoRa. MeshCore lo llama un Advert. Hay dos formas de anunciar, "zero hop" y "flood".
 
-- **Zero hop** significa que tu advert se difunde a cualquiera que pueda oírlo, y eso es todo.
+- **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
 - **Flooded** significa que se difunde y luego es repetido por todos los repetidores que lo oyen.
 
-Puedes enviar advert en la APP. También puedes enviar advert directamente en la página de advert del dispositivo.
+Puedes enviar anuncios en la APP. También puedes enviar anuncios directamente en la página de anuncios del dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Advert.png" alt="pir" width={500} height="auto" /></p>
 
@@ -197,12 +201,12 @@ Después de configurar el LoRa, puedes enviar mensajes en el canal principal. To
 
 ### Mensaje privado
 
-Los dos dispositivos solo establecen una conexión cuando ambos han recibido el advert del otro.
+Los dos dispositivos solo establecen una conexión cuando ambos han recibido el anuncio del otro.
 
 
-## Preguntas frecuentes (FAQ)
+## Preguntas frecuentes
 
-### Dispositivo bloqueado (bricked) e instalación del bootloader
+### Dispositivo bloqueado e instalación del bootloader
 
 **Descripción:**
 
@@ -226,10 +230,10 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 - Paso 4: Flashea el firmware
 
-  Cuando hayas completado los pasos anteriores, puedes seguir este [step](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para flashear el firmware de la aplicación. Es posible que necesites [enter the DFU mode manually](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#no-se-puede-entrar-en-dfu--entrar-en-modo-dfu-manualmente)
+  Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#borrar-flash-1) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#incapaz-de-entrar-en-dfu--entrar-en-modo-dfu-manualmente)
 
 
-### No se puede entrar en DFU y Entrar en modo DFU manualmente
+### Incapaz de entrar en DFU y entrar en modo DFU manualmente
 
 Conecta el dispositivo a tu PC y pulsa dos veces el botón `Reset`. El LED amarillo permanecerá fijo y aparecerá en tu PC una nueva unidad USB llamada `Tracker L1`.
 
@@ -244,16 +248,16 @@ Pulsa una vez el botón `User` para salir del modo DFU.
  - Después de que el dispositivo se enciende, se apagará o reiniciará automáticamente después de un tiempo. 
  - El registro del puerto serie funciona durante un tiempo y luego se detiene.
 
- Esto posiblemente se deba a reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y por la fuerza cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
  #### Solución de problemas
 
-Borrar el firmware mediante Flash Erase
+[Borra la Flash](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#borrar-flash-1) del firmware
 
 ### Restablecimiento de fábrica
 Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para hacer un restablecimiento de fábrica.
 
-- Borrar el firmware mediante Flash Erase
+- [Borra la Flash](https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/#borrar-flash-1) del firmware
 
 - Haz clic en el botón `Factory Reset` en la app. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
@@ -269,12 +273,12 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 
 ### Antena compatible
 
-Si necesitas un reemplazo de antena para el L1 Pro, [haz clic aquí](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) para conseguir una.
+Si necesitas un reemplazo de antena para el L1 Pro, [haz clic aquí](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) para conseguir uno.
 
 ## Recursos
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [Archivo de referencia de impresión 3D (V1)](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [Archivo de referencia de impresión 3D (V2 New Four-way Joystick)](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [Archivo de referencia de impresión 3D (V2 Nuevo joystick de cuatro direcciones)](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Desafío de diseño de carcasa L1](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [Archivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [Certificación TELEC](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)

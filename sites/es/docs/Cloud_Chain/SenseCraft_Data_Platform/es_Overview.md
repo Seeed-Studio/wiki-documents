@@ -3,14 +3,17 @@ sidebar_position: 1
 title: Descripción General
 description: Guía de inicio rápido para la Plataforma de Datos SenseCraft — gestiona tus dispositivos SenseCAP y visualiza datos de sensores con una plataforma en la nube segura y confiable.
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cloud/sensecraft-data/sensecraft-data-platform/overview
 aliases:
   - /Cloud_Chain/SenseCAP_Portal/QuickStart
 last_update:
   date: 06/06/2025
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
 # Inicio Rápido de la Plataforma de Datos SenseCraft

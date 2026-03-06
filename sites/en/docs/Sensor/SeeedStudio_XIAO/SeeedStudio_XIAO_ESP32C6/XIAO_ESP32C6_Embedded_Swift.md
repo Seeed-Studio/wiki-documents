@@ -7,6 +7,9 @@ sku: 113991254, 102010636, 101991470
 last_update:
   date: 2024-07-12T02:50:00.462Z
   author: Spencer
+createdAt: '2024-07-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao-esp32-swift/
 ---
 # Guide to Embedded Swift with Seeed Studio XIAO-C6
 

@@ -1,14 +1,17 @@
 ---
-description:  EL Shield
-title:  EL Shield
+description: EL Shield
+title: EL Shield
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /EL_Shield
 sku: 104030000
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/EL_Shield/
 ---
 
 <!-- ---

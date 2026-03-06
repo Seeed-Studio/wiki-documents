@@ -2,14 +2,17 @@
 description: 本wiki提供了如何在reComputer Jetson上使用NVStreamer进行RTSP视频流传输的教程。
 title: NVStreamer入门指南
 keywords:
-- reComputer
-- NVStreamer
-- RTSP
+  - reComputer
+  - NVStreamer
+  - RTSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /getting_started_with_nvstreamer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_with_nvstreamer/
 ---
 # 如何在reComputer上使用Jetson平台服务的NVStreamer进行RTSP流传输
 

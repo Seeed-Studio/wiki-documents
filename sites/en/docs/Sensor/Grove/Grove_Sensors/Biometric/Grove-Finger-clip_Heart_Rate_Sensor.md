@@ -2,13 +2,16 @@
 description: Grove - Finger-clip Heart Rate Sensor
 title: Grove - Finger-clip Heart Rate Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Finger-clip_Heart_Rate_Sensor
 sku: 103020024
 last_update:
   date: 1/6/2023
   author: jianjing Huang
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Finger-clip_Heart_Rate_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor/img/Grove-Finger-clip_Heart_Rate_Sensor.jpg" /></div>

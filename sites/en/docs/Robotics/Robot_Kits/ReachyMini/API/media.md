@@ -3,18 +3,22 @@ description: Complete API reference for Reachy Mini media manager including audi
 title: Media API Reference
 slug: /reachymini_api_media
 keywords:
-- api
-- media
-- camera
-- audio
-- streaming
-- webrtc
-- gstreamer
+  - api
+  - media
+  - camera
+  - audio
+  - streaming
+  - webrtc
+  - gstreamer
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_api_media/
 ---
 # Media
 

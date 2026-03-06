@@ -1,6 +1,6 @@
 ---
 title: Wio RP2040 mini Dev Board の使い方
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/
 ---
 
 

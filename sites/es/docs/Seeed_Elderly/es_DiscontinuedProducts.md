@@ -2,16 +2,19 @@
 description: Productos Descontinuados
 title: Productos Descontinuados
 keywords:
-- Discontinued Products
-- Legacy Products
-- Retired Products
-- Obselete Products
+  - Discontinued Products
+  - Legacy Products
+  - Retired Products
+  - Obselete Products
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5
 last_update:
   date: 05/29/2024
   author: Yaohao
+createdAt: '2024-05-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/discontinuedproducts/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>

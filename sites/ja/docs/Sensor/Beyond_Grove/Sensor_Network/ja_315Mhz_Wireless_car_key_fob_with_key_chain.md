@@ -1,6 +1,6 @@
 ---
 title: 315MHz ワイヤレス車用キー FOB（キーチェーン付き）
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -9,6 +9,9 @@ slug: /315Mhz_Wireless_car_key_fob_with_key_chain
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/315Mhz_Wireless_car_key_fob_with_key_chain/
 ---
 
 

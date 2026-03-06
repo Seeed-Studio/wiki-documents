@@ -2,13 +2,16 @@
 description: Edge Impulseを使用したワンストップモデルトレーニング
 title: Edge Impulseを使用したワンストップモデルトレーニング
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /One-Stop-Model-Training-with-Edge-Impulse
 sku: 101990962
 last_update:
   date: 3/31/2023
   author: Yvonne
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/One-Stop-Model-Training-with-Edge-Impulse/
 ---
 
 ## 概要

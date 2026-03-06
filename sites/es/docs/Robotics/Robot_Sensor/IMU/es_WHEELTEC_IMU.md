@@ -2,13 +2,16 @@
 description: Este wiki proporciona un tutorial para el Sensor IMU WHEELTEC.
 title: Sensor IMU WHEELTEC
 keywords:
-- IMU
-- robotics
+  - IMU
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg
 slug: /wheeltec_imu
 last_update:
   date: 01/12/2025
   author: ZhuYaoHui
+createdAt: '2025-12-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/wheeltec_imu/
 ---
 
 # Introducción al Sensor IMU WHEELTEC IMU

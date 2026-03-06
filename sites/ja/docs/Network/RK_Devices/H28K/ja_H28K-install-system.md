@@ -2,13 +2,16 @@
 description: H28K ブートチュートリアル
 title: オペレーティングシステムのインストール
 keywords:
-- ネットワーク
+  - ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /H28K-install-system
 sku: 113991236,113991235
 last_update:
   date: 05/15/2025
   author: Parker
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/H28K-install-system/
 ---
 
 

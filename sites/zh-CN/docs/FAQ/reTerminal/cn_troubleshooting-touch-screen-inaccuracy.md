@@ -6,6 +6,9 @@ slug: /troubleshooting-touch-screen-inaccuracy
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/troubleshooting-touch-screen-inaccuracy/
 ---
 
  <!-- Q12: 触摸屏不准确问题的故障排除 -->

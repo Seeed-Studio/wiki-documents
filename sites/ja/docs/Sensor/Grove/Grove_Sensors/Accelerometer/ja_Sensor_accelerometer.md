@@ -2,12 +2,15 @@
 description: センサー - 加速度計
 title: センサー - 加速度計
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_accelerometer
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Sensor_accelerometer/
 ---
 
 

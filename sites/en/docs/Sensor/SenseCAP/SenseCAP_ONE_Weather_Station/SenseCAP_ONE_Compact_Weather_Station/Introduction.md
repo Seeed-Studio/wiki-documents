@@ -1,14 +1,17 @@
 ---
-description:  SenseCAP ONE Compact Weather Station Introduction
-title:  SenseCAP ONE Compact Weather Station Introduction
+description: SenseCAP ONE Compact Weather Station Introduction
+title: SenseCAP ONE Compact Weather Station Introduction
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP-ONE-Compact-Weather-Station-Introduction
 sku: 101990787, 101990693, 101990784, 101990902, 101991022, 101991021, 101991023, 101991024, 101991044, 101990961, 101991102, 101991050, 101991232, 101991141
 last_update:
   date: 12/11/2025
   author: Michelle Huang
+createdAt: '2023-04-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP-ONE-Compact-Weather-Station-Introduction/
 ---
 # SenseCAP ONE Series Compact Weather Stations
 

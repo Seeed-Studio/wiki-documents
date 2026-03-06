@@ -2,13 +2,16 @@
 description: 土壌水分・温度・EC センサー
 title: 土壌水分・温度・EC センサー
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor
 sku: 101990667,314990621
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor/
 ---
 
 ![土壌水分・温度・EC センサー](https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png)

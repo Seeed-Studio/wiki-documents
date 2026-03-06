@@ -2,12 +2,15 @@
 description: この記事では、ReSpeaker 2-Mics Pi HATのハードウェアリビジョンを区別する方法を説明します。
 title: ReSpeaker 2-Mics Pi HATのハードウェアリビジョンを区別する方法
 keywords:
-- ReSpeaker_2-Mics_Pi_HAT
+  - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/v2/pcn_1.webp
 slug: /how-to-distinguish-respeaker_2-mics_pi_hat-hardware-revisions
 last_update:
   date: 05/15/2025
   author: Joshua Lee
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/how-to-distinguish-respeaker_2-mics_pi_hat-hardware-revisions/
 ---
 
 

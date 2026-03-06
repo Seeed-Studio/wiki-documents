@@ -1,6 +1,6 @@
 ---
-title: Connecting the Wio Terminal to Microsoft Azure IoT   
-nointro:
+title: Connecting the Wio Terminal to Microsoft Azure IoT
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-Azure-IOT
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Azure-IOT/
 ---
 # Connecting the Wio Terminal to Microsoft Azure IoT
 

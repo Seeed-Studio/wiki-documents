@@ -2,16 +2,19 @@
 description: 本维基提供了通过 ROS 在 reComputer 上使用多个 CSI 摄像头的分步指南。
 title: 使用 ROS 的 CSI 摄像头
 keywords:
-- Jetson Nano
-- reComputer
-- CSI
-- 摄像头
-- ROS
+  - Jetson Nano
+  - reComputer
+  - CSI
+  - 摄像头
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /csi_camera_on_ros
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/csi_camera_on_ros/
 ---
 
 # 如何通过 ROS 在 reComputer 上使用多个 CSI 摄像头

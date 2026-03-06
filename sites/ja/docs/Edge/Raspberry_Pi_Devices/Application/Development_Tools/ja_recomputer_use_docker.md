@@ -10,7 +10,10 @@ slug: /use_docekr_on_recomputer
 last_update:
   date: 08/25/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/use_docekr_on_recomputer/
 ---
 
 # reComputer上でdockerを使用する

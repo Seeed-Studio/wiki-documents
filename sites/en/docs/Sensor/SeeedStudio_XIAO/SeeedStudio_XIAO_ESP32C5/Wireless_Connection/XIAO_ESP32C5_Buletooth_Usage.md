@@ -11,6 +11,9 @@ sidebar_class_name: hidden
 last_update:
   date: 01/06/2026
   author: Zeller
+createdAt: '2026-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32c5_buletooth_usage/
 ---
 
 # Buletooth usage with Seeed Studio XIAO ESP32-C5

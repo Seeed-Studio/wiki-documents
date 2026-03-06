@@ -2,13 +2,16 @@
 description: Raspberry Piを基盤としたIoT向けGroveスターターキット
 title: Raspberry Piを基盤としたIoT向けGroveスターターキット
 keywords:
-- キット
+  - キット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi
 sku: 110060482
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi/
 ---
 
 

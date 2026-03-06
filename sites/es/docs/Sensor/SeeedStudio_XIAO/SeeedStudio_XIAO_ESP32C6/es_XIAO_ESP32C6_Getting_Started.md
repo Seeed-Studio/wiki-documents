@@ -3,9 +3,9 @@ description: Primeros pasos con Seeed Studio XIAO ESP32C6.
 title: Primeros pasos con Seeed Studio XIAO ESP32C6
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
-- XIAO
-- ESP32C6
-- Seeeduino
+  - XIAO
+  - ESP32C6
+  - Seeeduino
 slug: /xiao_esp32c6_getting_started
 sku: 113991254,102010636,101991470
 toc_max_heading_level: 4
@@ -13,6 +13,9 @@ sidebar_position: 1
 last_update:
   date: 08/05/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/
 ---
 
 # Primeros pasos con Seeed Studio XIAO ESP32C6

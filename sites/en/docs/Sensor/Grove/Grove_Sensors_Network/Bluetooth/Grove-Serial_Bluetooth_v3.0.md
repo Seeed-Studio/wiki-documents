@@ -1,6 +1,6 @@
 ---
 title: Grove - Serial Bluetooth v3.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113020008
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2026-03-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Serial_Bluetooth_v3.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_Bluetooth_v3.0/img/Grove-Serial_Bluetooth_v3.0.jpg)

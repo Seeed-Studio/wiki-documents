@@ -2,14 +2,17 @@
 description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
 title: reSpeaker XVF3800 通过 I2C 进行音频播放和音量控制
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
+  - reSpeaker
+  - XIAO
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
 slug: /respeaker_xvf3800_xiao_volume
 last_update:
   date: 7/16/2025
   author: Kasun Thushara
+createdAt: '2025-07-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_volume/
 ---
 
 此代码使 **XIAO ESP32S3** 通过 I2S 接口使用 **外部 AIC3104 音频编解码器芯片** 播放 **440Hz** 音调。它将音频输出发送到 **耳机 (HPLOUT) 或线路输出 (LOP)**，并允许您通过在串行监视器中输入 `+` 或 `-` 来调节音量。音调是在代码中生成的（不是从文件中），使用正弦波。它还允许您通过输入 m 来切换输出模式（耳机或线路输出）。AIC3104 通过 **I2C** 控制，用于设置音量和输出功率的寄存器。

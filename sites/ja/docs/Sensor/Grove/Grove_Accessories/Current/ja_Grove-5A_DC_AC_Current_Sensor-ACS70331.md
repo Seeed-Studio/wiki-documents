@@ -2,13 +2,16 @@
 description: Grove - ±5A DC/AC電流センサー (ACS70331)
 title: Grove - ±5A DC/AC電流センサー (ACS70331)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-5A_DC_AC_Current_Sensor-ACS70331
 sku: 101020615
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-5A_DC_AC_Current_Sensor-ACS70331/
 ---
 
 

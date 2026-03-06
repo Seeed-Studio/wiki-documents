@@ -3,18 +3,22 @@ description: Guía para usar el Panel de Control Web de tu SenseCAP Watcher Agen
 title: Panel de Control Web(β)
 sidebar_position: 3
 keywords:
-- SenseCAP
-- Watcher
-- Web Control Panel
-- Agent Configuration
-- Device Management
+  - SenseCAP
+  - Watcher
+  - Web Control Panel
+  - Agent Configuration
+  - Device Management
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /watcher_web_control_panel
 last_update:
   date: 10/13/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/watcher_web_control_panel/
 ---
 
 # Guía del Panel de Control Web Beta

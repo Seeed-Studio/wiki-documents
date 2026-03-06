@@ -2,13 +2,16 @@
 description: Seeed XIAO ファミリーの巨大な新しい小型デバイス、ESP32S3 Sense で機械学習の探求を続けます。
 title: XIAO ESP32S3 Sense キーワードスポッティング
 keywords:
-- speech
-- keywords
+  - speech
+  - keywords
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_keyword_spotting
 last_update:
   date: 07/20/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_keyword_spotting/
 ---
 
 # XIAO ESP32S3 Sense & Edge Impulse キーワードスポッティング

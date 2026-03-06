@@ -9,6 +9,9 @@ sku: E22011026
 last_update:
   date: 03/16/2023
   author: Lakshantha
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/
 ---
 # 使用 Home Assistant 在 ODYSSEY-X86 上快速入门
 

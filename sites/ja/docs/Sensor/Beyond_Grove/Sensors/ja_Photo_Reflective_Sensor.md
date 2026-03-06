@@ -1,6 +1,6 @@
 ---
 title: フォトリフレクティブセンサー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Photo_Reflective_Sensor
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Photo_Reflective_Sensor/
 ---
 
 

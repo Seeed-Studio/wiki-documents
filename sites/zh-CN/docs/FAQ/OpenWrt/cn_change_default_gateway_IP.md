@@ -6,6 +6,9 @@ slug: /change_default_gateway_IP
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/change_default_gateway_IP/
 ---
 
 <!-- 问题1：如果我将 OpenWrt 路由器连接到默认网关 IP 为 192.168.2.1 的现有路由器，该怎么办？ -->

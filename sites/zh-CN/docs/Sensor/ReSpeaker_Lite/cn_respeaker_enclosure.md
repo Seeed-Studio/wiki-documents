@@ -2,14 +2,17 @@
 description: reSpeaker Lite 语音助手套件外壳组装的简易步骤
 title: 外壳安装指南
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_enclosure
 last_update:
   date: 10/14/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_enclosure/
 ---
 
 

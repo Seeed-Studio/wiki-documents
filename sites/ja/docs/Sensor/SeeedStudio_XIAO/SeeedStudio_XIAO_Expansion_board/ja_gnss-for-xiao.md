@@ -2,13 +2,16 @@
 description: XIAO用L76-L GNSSの使用開始
 title: XIAO用L76-L GNSS
 keywords:
-- gps
-- gnss
+  - gps
+  - gnss
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /gnss_for_xiao
 last_update:
   date: 10/09/2023
   author: Stephen Lo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/gnss_for_xiao/
 ---
 
 # XIAO用L76-L GNSS

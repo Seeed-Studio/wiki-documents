@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 03/20/2023
   author: Matthew
+createdAt: '2024-03-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-app/tutorials/event-management/
 ---
 
 # Event Management in SenseCraft App

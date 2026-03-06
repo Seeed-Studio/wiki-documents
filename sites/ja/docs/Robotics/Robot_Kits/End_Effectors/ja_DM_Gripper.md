@@ -6,13 +6,16 @@ keywords:
   - DM-4310-2EC
   - 3Dプリントグリッパー
   - 交換可能グリッパー
-  - ロボティクス 
+  - ロボティクス
 image: https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.webp
 slug: /dm_gripper
 sku: 100094243,100007512
 last_update:
   date: 9/17/2025
   author: Ylson W
+createdAt: '2025-09-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/dm_gripper/
 ---
 
 # DM_Gripper – オープンソース組み立てガイド

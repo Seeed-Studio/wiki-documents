@@ -2,12 +2,15 @@
 description: Guía de productos ReSpeaker
 title: Guía de productos reSpeaker
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Product_Guide
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ReSpeaker_Product_Guide/
 ---
 
 # **Guía de productos ReSpeaker**

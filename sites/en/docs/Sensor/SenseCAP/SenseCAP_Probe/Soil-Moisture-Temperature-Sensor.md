@@ -2,13 +2,16 @@
 description: Soil Moisture & Temperature Sensor
 title: Soil Moisture & Temperature Sensor
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor
 sku: 101990668,314990620
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor/
 ---
 
 ![Soil Moisture, Temperature Sensor](https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/101990668_2.png)

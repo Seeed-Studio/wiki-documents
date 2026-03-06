@@ -1,6 +1,6 @@
 ---
 title: Grove - IR Distance Interrupter v1.2
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020175, 101020040
 last_update:
   date: 01/03/2022
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-IR_Distance_Interrupter_v1.2/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-IR_Distance_Interrupter_v1.2/img/Grove_-_IR_Distance_Interrupter_v1.2.jpg)

@@ -2,12 +2,14 @@
 description: WiFi技術を使用してジオロケーショントラッカーを有効にする
 title: Wi-Fiを使用して位置情報を取得する方法
 keywords:
-- SenseCAP_T1000_tracker
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+  - SenseCAP_T1000_tracker
 slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Tracker_WiFi_Geolocation/
 ---
 
 # Wi-Fi技術を使用してトラッカーのジオロケーションを有効にする

@@ -14,6 +14,9 @@ sku: 100020039
 last_update:
   date: 11/04/2025
   author: Dayu
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/
 ---
 
 # Hardware de la carrier board Robotics J501 y Guía de Inicio

@@ -2,18 +2,21 @@
 description: OpenThreadネットワークプロトコル上でMatterを使用してHAに接続する
 title: Seeed Studio XIAO MG24でHomeAssistantをMatterで接続する
 keywords:
-- MG24
-- xiao
-- HomeAssistant
-- Matter
-- OpenThread
-- Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E
+  - MG24
+  - xiao
+  - HomeAssistant
+  - Matter
+  - OpenThread
+  - Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E
 image: https://files.seeedstudio.com/wiki/HA_OpenThread/Wiki-XIAO-MG24-HA-Matter.webp
 slug: /xiao_mg24_ha_openthread
 sidebar_position: 8
 last_update:
   date: 05/5/2025
   author: Jason
+createdAt: '2025-05-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_mg24_ha_openthread/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Overview
 title: Getting Started with Infrared Emitter
 keywords:
-- Wio_terminal Infrared_Emitter
+  - Wio_terminal Infrared_Emitter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Infrared-Emitter
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Infrared-Emitter/
 ---
 
 # Getting Started with Infrared Emitter

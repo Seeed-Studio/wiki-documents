@@ -2,12 +2,15 @@
 title: Sensor - Light(introduction)
 description: Sensor - Light(introduction)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_light
 last_update:
   date: 1/5/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor_light/
 ---
 
 # Seeed Light Sensor Selection Guide

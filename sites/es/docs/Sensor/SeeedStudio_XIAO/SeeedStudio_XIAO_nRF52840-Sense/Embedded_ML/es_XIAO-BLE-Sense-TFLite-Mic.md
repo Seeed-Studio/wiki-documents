@@ -2,12 +2,15 @@
 description: Reconocimiento de Voz
 title: Reconocimiento de Voz
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-TFLite-Mic
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-TFLite-Mic/
 ---
 
 # Reconocimiento de Voz en Seeed Studio XIAO nRF52840 Sense

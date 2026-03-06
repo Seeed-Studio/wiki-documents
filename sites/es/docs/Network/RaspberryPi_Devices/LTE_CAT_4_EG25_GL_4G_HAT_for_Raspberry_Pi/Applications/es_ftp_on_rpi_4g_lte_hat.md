@@ -1,6 +1,6 @@
 ---
 description: Eleva tus proyectos IoT con FTP y 4G. Aprende cómo transferir archivos de forma segura, automatizar tareas y monitorear dispositivos remotos usando tu Raspberry Pi 4G HAT.
-title: Conectar y Transferir- FTP en tu Raspberry Pi 4G LTE HAT 
+title: Conectar y Transferir- FTP en tu Raspberry Pi 4G LTE HAT
 keywords:
   - Raspberry Pi Hat
   - Getting started
@@ -13,6 +13,9 @@ slug: /ftp_with_raspberry_pi_4g_lte_hat
 last_update:
   date: 12/17/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ftp_with_raspberry_pi_4g_lte_hat/
 ---
 
 ## Introducción

@@ -2,15 +2,18 @@
 description: 使用 Seeed Studio XIAO ESP32S3 的蓝牙功能。
 title: 两个版本的蓝牙功能
 keywords:
-- esp32s3
-- xiao
-- ble
-- bluetooth
+  - esp32s3
+  - xiao
+  - ble
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_bluetooth
 last_update:
   date: 04/03/2023
   author: Citric
+createdAt: '2022-11-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_bluetooth/
 ---
 
 # 使用 Seeed Studio XIAO ESP32S3 (Sense) 的蓝牙功能

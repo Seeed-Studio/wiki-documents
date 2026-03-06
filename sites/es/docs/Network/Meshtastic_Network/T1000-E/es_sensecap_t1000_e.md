@@ -2,7 +2,7 @@
 description: Comienza con SenseCAP Card Tracker T1000-E para Meshtastic
 title: Comienza con T1000-E Tracker
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sku: 114993369
@@ -10,6 +10,9 @@ sidebar_position: 2
 last_update:
   date: 12/24/2025
   author: Michelle Huang
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecap_t1000_e/
 ---
 :::danger note
 Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizado.

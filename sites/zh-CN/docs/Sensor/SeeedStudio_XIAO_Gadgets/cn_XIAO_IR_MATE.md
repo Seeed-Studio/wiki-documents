@@ -13,6 +13,9 @@ sidebar_position: 5
 last_update:
   author: TienjuiWong
   date: 07/17/2025
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO_IR_Mate_Smart_IR_Remote/
 ---
 
 # XIAO IR Mate 智能红外遥控器入门指南（适用于 Home Assistant）

@@ -2,13 +2,16 @@
 description: 60GHz mmWave Static Breathing and Heartbeat
 title: 60GHz mmWave Static Breathing and Heartbeat
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60BHA1
 sku: 101990886
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Radar_MR60BHA1/
 ---
 
 # Sensor mmWave de 60GHz - Monitoreo de Respiración Estática Humana Durante el Sueño (MR60BHA1)

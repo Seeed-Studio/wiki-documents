@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to use clip on raspberry pi5 with AI kit. 
+description: This wiki demonstrates how to use clip on raspberry pi5 with AI kit.
 title: Clip Application on Raspberry Pi with AI Kit
 keywords:
   - Edge
@@ -10,7 +10,10 @@ slug: /clip_application_on_rpi5_with_ai_kit
 last_update:
   date: 09/27/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/
 ---
 
 # Clip Application on Raspberry Pi with AI Kit

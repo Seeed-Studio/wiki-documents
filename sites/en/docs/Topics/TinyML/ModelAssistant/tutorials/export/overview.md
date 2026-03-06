@@ -2,12 +2,15 @@
 description: Export For Model Assistant
 title: Export
 keywords:
-- sscma model assistant ai tinyml 
+  - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug:  /ModelAssistant_Tutorials_Export_Overview
+slug: /ModelAssistant_Tutorials_Export_Overview
 last_update:
   date: 01/11/2024
   author: LynnL4
+createdAt: '2023-12-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Export_Overview/
 ---
 
 # Model Export

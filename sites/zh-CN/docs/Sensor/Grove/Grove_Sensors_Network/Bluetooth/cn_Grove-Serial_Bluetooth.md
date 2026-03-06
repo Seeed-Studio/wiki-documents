@@ -1,14 +1,17 @@
 ---
 title: Grove 串口蓝牙
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
-image:  https://files.seeedstudio.com/wiki/wiki-platform/S.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Grove-Serial_Bluetooth
 last_update:
   date: 01/29/2022
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Serial_Bluetooth/
 ---
 
 

@@ -2,13 +2,16 @@
 description: 树莓派 4 通道 SPDT 继电器 HAT
 title: 树莓派 4 通道 SPDT 继电器 HAT
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_Relay_Board_v1.0
 sku: 103030029,114992543
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Raspberry_Pi_Relay_Board_v1.0/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry-Relay-Hat/1.png" /></p>

@@ -2,12 +2,15 @@
 description: A MicroPython-based real-time GPIO monitor for the Seeed Studio XIAO ESP32-S3 (Sense). Displays live digital pin states (HIGH/LOW/TOUCH) through a local web interface using Thonny.
 title: Seeed Studio XIAO ESP32-S3 (Sense) GPIO Viewer
 keywords:
-- GPIO Viewer
+  - GPIO Viewer
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp
 slug: /XIAO_ESP32S3_GPIO_Viewer
 last_update:
   date: 01/06/2026
   author: Utkarsh Bhor Patil, Garla Guo
+createdAt: '2026-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO_ESP32S3_GPIO_Viewer/
 ---
 
 # XIAO ESP32-S3 (Sense) GPIO Viewer

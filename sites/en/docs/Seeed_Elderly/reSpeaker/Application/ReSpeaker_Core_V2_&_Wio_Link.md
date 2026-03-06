@@ -2,12 +2,15 @@
 description: ReSpeaker Core V2 & Wio Link
 title: ReSpeaker Core V2 & Wio Link
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Core_V2_&_Wio_Link
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ReSpeaker_Core_V2_&_Wio_Link/
 ---
 
 Here is the tutorial about how to use the ReSpeaker Core V2 to control [Wio Link](https://wiki.seeedstudio.com/Wio_Link/) through [IFTTT](https://ifttt.com/).

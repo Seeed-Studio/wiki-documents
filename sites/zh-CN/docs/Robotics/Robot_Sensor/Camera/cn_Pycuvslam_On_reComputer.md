@@ -2,20 +2,23 @@
 description: 本 wiki 提供了在 reComputer Jetson 系列上设置和运行 PyCuVSLAM 的全面步骤，用于使用 RGB-D 相机进行 GPU 加速的视觉 SLAM 应用。
 title: PyCuVSLAM 与 reComputer
 keywords:
-- PyCuVSLAM
-- cuVSLAM
-- reComputer
-- Jetson
-- GPU acceleration
-- Visual SLAM
-- RGB-D camera
-- Visual Odometry
+  - PyCuVSLAM
+  - cuVSLAM
+  - reComputer
+  - Jetson
+  - GPU acceleration
+  - Visual SLAM
+  - RGB-D camera
+  - Visual Odometry
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif
 slug: /pycuvslam_recomputer_robotics
 sku: 101090144,100071398
 last_update:
-  date: 2025-10-10
+  date: 2025-10-10T00:00:00.000Z
   author: Zibo
+createdAt: '2025-10-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/pycuvslam_recomputer_robotics/
 ---
 
 <div align="center">

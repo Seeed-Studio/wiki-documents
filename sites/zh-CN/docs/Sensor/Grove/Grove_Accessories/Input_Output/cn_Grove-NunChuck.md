@@ -1,6 +1,6 @@
 ---
 title: Grove - NunChuck
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020009
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-NunChuck/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-NunChuck/img/Nunchuck_01.jpg)

@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO RP2040 with MicroPython
 title: MicroPython
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-with-MicroPython
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-MicroPython/
 ---
 
 # **Seeed Studio XIAO RP2040 と MicroPython**

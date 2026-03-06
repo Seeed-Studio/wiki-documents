@@ -2,13 +2,16 @@
 description: SeeedStudio BeagleBone® Green Eco 入门指南
 title: Seeed Studio BeagleBone® Green Eco
 keywords:
-- Beagle_Bone_Green_Eco
+  - Beagle_Bone_Green_Eco
 image: https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Seeed-Studio-BeagleBoneR-Green-Eco.webp
 slug: /getting_started_with_seeedstudio_beaglebone_green_eco
 sku: 102111198
 last_update:
   date: 9/18/2025
   author: Atom Yang
+createdAt: '2025-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_with_seeedstudio_beaglebone_green_eco/
 ---
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" /></div>

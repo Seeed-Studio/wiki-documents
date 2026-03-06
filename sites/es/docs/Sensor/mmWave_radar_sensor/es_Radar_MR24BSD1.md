@@ -2,13 +2,16 @@
 description: Monitoreo de Respiración Durante el Sueño con mmWave de 24GHz
 title: Monitoreo de Respiración Durante el Sueño con mmWave de 24GHz
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24BSD1
 sku: 101990885
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Radar_MR24BSD1/
 ---
 
 # Sensor mmWave de 24GHz - Monitoreo de Respiración Durante el Sueño (MR24BSD1)

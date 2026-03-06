@@ -2,14 +2,17 @@
 description: XIAO Round Dislay Christmas Ball
 title: Crea una pequeña Bola de Navidad para tu Árbol de Navidad
 keywords:
-- XIAO
-- Round Dislay
-- Christmas
+  - XIAO
+  - Round Dislay
+  - Christmas
 image: https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball_1.gif
 slug: /round_display_christmas_ball
 last_update:
   date: 12/08/2024
   author: Bruno Santos
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/round_display_christmas_ball/
 ---
 
 # Bola de Navidad con Seeed Studio Round Display para XIAO

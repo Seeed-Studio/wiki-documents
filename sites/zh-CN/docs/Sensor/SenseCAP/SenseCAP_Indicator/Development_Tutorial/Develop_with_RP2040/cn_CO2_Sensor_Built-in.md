@@ -2,12 +2,15 @@
 description: 内置CO2传感器
 title: 内置CO2传感器
 keywords:
-- SenseCAP Indicator RP2040 Development Tutorial
+  - SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
   date: 5/23/2023
   author: Thomas
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_RP2040_CO2/
 ---
 # **CO2传感器（内置）**
 

@@ -2,13 +2,16 @@
 description: reComputer 与 VEYE 摄像头兼容性问题的解决方案
 title: reComputer 与 VEYE 摄像头兼容性问题的解决方案
 keywords:
-- reComputer
-- VEYE Camera
+  - reComputer
+  - VEYE Camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera
 last_update:
   date: 08/01/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera/
 ---
 
 该问题已追溯到 USB 集线器芯片的固件问题。

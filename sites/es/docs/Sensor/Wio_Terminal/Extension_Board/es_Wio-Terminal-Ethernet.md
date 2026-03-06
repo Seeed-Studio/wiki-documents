@@ -2,13 +2,16 @@
 description: Placa de extensión Ethernet
 title: Placa de extensión Ethernet
 keywords:
-- Wio_terminal Extension_Board
+  - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Ethernet
 sku: 103990283, A1716470
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2023-01-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Ethernet/
 ---
 
 # Conexión Ethernet para Wio Terminal

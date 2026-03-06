@@ -2,14 +2,17 @@
 description: Wio_Tracker_1110をTTNに接続する
 title: TTNに接続する
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /connect_wio_tracker_to_TTN
 sidebar_position: 3
 last_update:
   date: 10/23/2023
   author: Jessie
+createdAt: '2023-09-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/connect_wio_tracker_to_TTN/
 ---
 
 

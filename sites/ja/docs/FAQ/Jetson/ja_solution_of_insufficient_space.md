@@ -1,12 +1,14 @@
 ---
 description: reComputer-FAQ
 title: 受け取ったreComputerのeMMCの残り容量が約2GBしかない場合、容量不足の問題をどのように解決しますか？
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /solution_of_insufficient_space
 last_update:
   date: 2023/6/30
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/solution_of_insufficient_space/
 ---
 
 <!-- ### Q1: The remaining space in the eMMC in the received reComputer is only about 2GB, how can I solve the problem of insufficient space? -->

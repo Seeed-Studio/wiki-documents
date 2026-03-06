@@ -10,6 +10,9 @@ slug: /wordpress_linkstar
 last_update:
   date: 2023/6/8
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wordpress_linkstar/
 ---
 # 简化网页开发，完美组合 - Linkstar 和 WordPress
 欢迎阅读本篇信息丰富的 Wiki，它将指导您如何使用 Docker 安装 WordPress，以及如何访问 WordPress 仪表盘。通过 Linkstar 的变革性力量，您可以自定义本地主机网站，吸引客户并推动销售。准备好体验前所未有的增长、效率和技术能力，利用 Linkstar 的尖端功能迈向成功的第一步。

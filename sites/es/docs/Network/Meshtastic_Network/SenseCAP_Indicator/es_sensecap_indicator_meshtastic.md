@@ -2,14 +2,17 @@
 description: Comenzar con SenseCAP Indicator para Meshtastic
 title: Comenzar con Indicator para Meshtastic
 keywords:
-- Meshtastic
-- Indicator
+  - Meshtastic
+  - Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
   date: 12/3/2024
   author: Michelle Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecap_indicator_meshtastic/
 ---
 
 

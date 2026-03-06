@@ -7,9 +7,12 @@ keywords:
   - XIAO
   - MG24
 last_update:
-  date: 11/20/2024 
+  date: 11/20/2024
   author: Jason
 sidebar_position: 3
+createdAt: '2024-12-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_mg24_sense_built_in_sensor/
 ---
 
 # Uso del sensor integrado del Seeed Studio XIAO MG24 Sense

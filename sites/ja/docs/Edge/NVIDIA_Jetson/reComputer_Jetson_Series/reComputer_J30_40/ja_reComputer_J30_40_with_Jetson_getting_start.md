@@ -2,13 +2,16 @@
 description: reComputer J4012（J401キャリアボード）にJetPackをフラッシュする
 title: reComputer J30/40の使用開始
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J30_40_with_Jetson_getting_start
 sku: 110110145, 110110184, 114993114, 110110144, 110110185, 110110147, 110110186, 110110146, 110110187
 last_update:
   date: 6/29/2023
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_J30_40_with_Jetson_getting_start/
 ---
 
 # reComputer J30/40の使用開始

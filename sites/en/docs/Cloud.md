@@ -2,19 +2,22 @@
 description: Discover Seeed’s SenseCraft Cloud services — a powerful, industrial-grade platform designed for efficient data management, real-time operations, and scalable IoT applications. Learn more about how SenseCraft supports your industrial IoT cloud deployment.
 title: Cloud
 keywords:
-- SenseCraft Matrix
-- SenseCraft
-- SenseCraft AI
-- SenseCraft Cloud
-- Industrial IoT Cloud
-- Data Management
-- Device management
-- Real-Time Operations
+  - SenseCraft Matrix
+  - SenseCraft
+  - SenseCraft AI
+  - SenseCraft Cloud
+  - Industrial IoT Cloud
+  - Data Management
+  - Device management
+  - Real-Time Operations
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cloud
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Cloud/
 ---
 
 Cloud services are a vital component that enable processed data management from computing boards and provide users with real-time operations. This page introduces Seeed’s industrial-grade SenseCraft cloud services, along with other cloud service applications tailored for diverse industrial IoT needs. Through a robust cloud infrastructure, Seeed empowers users to securely store, analyze, and leverage processed data, facilitating data-driven decision-making and enhancing operational efficiency across various domains.

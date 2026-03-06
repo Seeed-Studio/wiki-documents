@@ -2,12 +2,15 @@
 description: 您好，感谢您访问 Seeed Studio 技术主题知识库。本资源旨在帮助您掌握我们的智能硬件和计算设备系列。
 title: 技术主题
 keywords:
-- weeely wiki
+  - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/topicintroduction/
 ---
 
 

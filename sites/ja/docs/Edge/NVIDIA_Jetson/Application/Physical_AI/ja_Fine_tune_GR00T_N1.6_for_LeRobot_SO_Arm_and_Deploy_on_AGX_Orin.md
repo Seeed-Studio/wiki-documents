@@ -2,16 +2,19 @@
 description: このwikiでは、J501 Mini（AGX Orin）でAIとロボティクスプロジェクトをデプロイするためのワークフロー例を紹介します。詳細なステップバイステップの手順と参考文書も提供されています。
 title: LeRobot SO-101 アーム用 Isaac GR00T N1.6 のファインチューニングと AGX Orin でのデプロイ
 keywords:
-- J501 mini
-- Robotics
-- AGX Orin
-- gr00t n1.6
+  - J501 mini
+  - Robotics
+  - AGX Orin
+  - gr00t n1.6
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin
 sku: E2025123101,114993668
 last_update:
   date: 2026-1-6
   author: Dayu
+createdAt: '2026-01-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin/
 ---
 
 # 🤖 LeRobot SO-101 アーム用 GR00T N1.6 のファインチューニングと AGX Orin でのデプロイ

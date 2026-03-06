@@ -1,6 +1,6 @@
 ---
 title: 高度な Wi-Fi 使用法
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-Advanced-Wi-Fi
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Advanced-Wi-Fi/
 ---
 
 

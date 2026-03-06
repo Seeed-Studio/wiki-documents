@@ -2,14 +2,17 @@
 description: MQTT 音频流传输
 title: MQTT 音频流传输
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_steams_mqtt
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_steams_mqtt/
 ---
 
 本项目演示如何使用 reSpeaker Lite 开发板（集成了 XIAO ESP32S3 微控制器）生成音频数据并发送到 MQTT 代理服务器。

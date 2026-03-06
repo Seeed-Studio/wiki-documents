@@ -2,12 +2,15 @@
 description: これは SenseCraft-HomeAssistant ユーザーマニュアルです
 title: SenseCraft-HomeAssistant ユーザーマニュアル
 keywords:
-- home assistant 
+  - home assistant
 slug: /sensecraft_homeassistant_userguide
 sku: E2025081502,E2025081503
 last_update:
   date: 05/15/2025
   author: WenHao
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/sensecraft_homeassistant_userguide/
 ---
 
 

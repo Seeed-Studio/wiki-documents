@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to use ollama to deploy deepseek LLM on Raspberry Pi AI Box. 
+description: This wiki demonstrates how to use ollama to deploy deepseek LLM on Raspberry Pi AI Box.
 title: Deploy DeepSeek on Raspberry Pi AI Box & Industrial box
 keywords:
   - Edge
@@ -11,7 +11,10 @@ slug: /deploy_deepseek_on_raspberry_pi_ai_box
 last_update:
   date: 03/11/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-03-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/
 ---
 
 # Deploy DeepSeek on Raspberry Pi AI Box & Industrial box

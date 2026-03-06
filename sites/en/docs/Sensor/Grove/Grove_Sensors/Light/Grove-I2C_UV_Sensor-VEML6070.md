@@ -2,13 +2,16 @@
 description: Grove - I2C UV Sensor (VEML6070)
 title: Grove - I2C UV Sensor (VEML6070)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_UV_Sensor-VEML6070
 sku: 101020600
 last_update:
   date: 1/5/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-I2C_UV_Sensor-VEML6070/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-I2C_UV_Sensor-VEML6070/img/perspective.jpg" /></div>

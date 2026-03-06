@@ -2,13 +2,16 @@
 description: Grove - 温度＆湿度センサー (HDC1000)
 title: Grove - 温度＆湿度センサー (HDC1000)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TemperatureAndHumidity_Sensor-HDC1000
 sku: 101020087
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-TemperatureAndHumidity_Sensor-HDC1000/
 ---
 
 

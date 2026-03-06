@@ -2,22 +2,25 @@
 description: reComputer Jetson プラットフォームで Orbbec Gemini2 を使用する方法を説明します。
 title: Orbbec Gemini2 3D カメラ
 keywords:
-- Jetson
-- reComputer Robotics
-- Computer Vision
-- Autonomous Driving
-- Industrial Robot
-- Orbbec
-- AI Camera
-- Stereo Camera
-- Depth Camera
-- Visual SLAM
-image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.webp 
+  - Jetson
+  - reComputer Robotics
+  - Computer Vision
+  - Autonomous Driving
+  - Industrial Robot
+  - Orbbec
+  - AI Camera
+  - Stereo Camera
+  - Depth Camera
+  - Visual SLAM
+image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.webp
 slug: /orbbec_gemini2
 sku: 101090144
 last_update:
-  date: 2025-08-22
+  date: 2025-08-22T00:00:00.000Z
   author: Zibo
+createdAt: '2025-08-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/orbbec_gemini2/
 ---
 
 <div align="center">

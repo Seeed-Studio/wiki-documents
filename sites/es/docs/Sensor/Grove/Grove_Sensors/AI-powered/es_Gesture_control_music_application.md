@@ -2,12 +2,15 @@
 description: Aplicación del sensor de gestos Grove PAJ7660 para controlar música.
 title: Gestos para controlar música
 keywords:
-- gesture
+  - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /gesture_control_music_application
 last_update:
   date: 12/27/2023
   author: Allen
+createdAt: '2024-04-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/gesture_control_music_application/
 ---
 
 

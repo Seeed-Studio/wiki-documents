@@ -12,6 +12,9 @@ slug: /reterminal_dm_node_red_modbus_tcp
 last_update:
   date: 05/27/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_dm_node_red_modbus_tcp/
 ---
 ## はじめに
 

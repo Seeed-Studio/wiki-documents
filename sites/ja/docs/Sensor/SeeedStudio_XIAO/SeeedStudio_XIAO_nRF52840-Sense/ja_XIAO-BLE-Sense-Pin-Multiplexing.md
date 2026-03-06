@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO nRF52840 (Sense) のピン多重化
 title: 両バージョンのピン多重化
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-Pin-Multiplexing/
 ---
 
 # Seeed Studio XIAO nRF52840 (Sense) のピン多重化

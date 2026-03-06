@@ -2,12 +2,15 @@
 description: Arduinoボード向けI2Cユーザーガイド
 title: Arduinoボード向けI2Cユーザーガイド
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino_Software_I2C_user_guide
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Arduino_Software_I2C_user_guide/
 ---
 
 

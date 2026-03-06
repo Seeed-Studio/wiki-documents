@@ -2,12 +2,15 @@
 description: 入门指南 Grove Vision AI V2。
 title: Grove Vision AI 模块 V2
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2a
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2024-03-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_vision_ai_v2a/
 ---
 
 # Grove Vision AI 模块 V2

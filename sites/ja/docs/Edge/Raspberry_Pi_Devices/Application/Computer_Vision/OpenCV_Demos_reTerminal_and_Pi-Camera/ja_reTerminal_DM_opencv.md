@@ -3,7 +3,7 @@ description: reTerminalとPiカメラをOpenCVで始める
 title: reTerminalとPiカメラをOpenCVで始める
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,6 +12,9 @@ sku: 110070048
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal_DM_opencv/
 ---
 
 ## はじめに

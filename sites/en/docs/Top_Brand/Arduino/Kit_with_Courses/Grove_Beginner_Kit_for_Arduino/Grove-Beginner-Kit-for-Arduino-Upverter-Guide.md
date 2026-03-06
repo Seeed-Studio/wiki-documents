@@ -2,12 +2,15 @@
 description: Grove Beginner Kit for Arduino Upverter Guide
 title: Grove Beginner Kit for Arduino Upverter Guide
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Beginner-Kit-for-Arduino-Upverter-Guide
 last_update:
   date: 2/14/2023
   author: hushuxu
+createdAt: '2023-02-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/
 ---
 ## Make Your Customized Arduino Board for Under $50
 

@@ -2,13 +2,16 @@
 description: 使用 XIAO ESP32C6 和传感器与 AWS IoT Core 实现能够进行异常检测的 AI 设备。
 title: 为 XIAO ESP32C6 使用 AWS IoT Core 赋能 AI
 keywords:
-- xiao esp32c6
+  - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32c6_aws_iot
 sku: 113991254,102010636,101991470
 last_update:
   date: 03/29/2024
   author: Citric
+createdAt: '2024-03-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_aws_iot/
 ---
 
 # 为 XIAO ESP32C6 使用 AWS IoT Core 赋能 AI

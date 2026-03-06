@@ -1,11 +1,13 @@
 ---
 description: XIAO-ESP32S3-FAQ
 title: Why does my XIAO have the problem of not being flush at the rounded corners
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /not_being_flush
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2023-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/not_being_flush/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>

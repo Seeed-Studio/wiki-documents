@@ -2,12 +2,15 @@
 description: BeagleBone® Introduction
 title: BeagleBone® Introduction
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone
 last_update:
   date: 08/08/2024
   author: Frank
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/BeagleBone/
 ---
 
 ---

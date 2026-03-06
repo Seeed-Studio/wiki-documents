@@ -2,12 +2,15 @@
 description: 本wiki提供了一个逐步指南，介绍如何使用Jetson串口检索reComputer J4012（或类似设备）的启动日志。
 title: 如何获取reComputer J30/J40的系统日志？
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /get_the_system_log_of_recomputer_j30_and_j40
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/get_the_system_log_of_recomputer_j30_and_j40/
 ---
 
 本wiki将以[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)为例，演示如何通过Jetson串口检索设备的启动日志。

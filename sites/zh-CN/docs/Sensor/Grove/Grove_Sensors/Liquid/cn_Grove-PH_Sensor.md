@@ -2,12 +2,15 @@
 description: Grove - PH传感器
 title: Grove - PH传感器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-PH_Sensor
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-PH_Sensor/
 ---
 <!-- ---
 name: Grove - PH传感器

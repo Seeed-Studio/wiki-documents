@@ -2,13 +2,16 @@
 description: Guía sobre cómo ir desde conjuntos de datos propios, etiquetado, entrenamiento y despliegue a XIAO ESP32S3.
 title: Desplegando Modelos desde Conjuntos de Datos a XIAO ESP32S3
 keywords:
-- SSCMA
-- xiao
+  - SSCMA
+  - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sscma
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_sscma/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 description: Explora el papel crítico del envío y recepción de SMS en sistemas de TI usando Quectel 4G HAT. Aprende cómo los SMS aseguran comunicación confiable, mejoran las alertas del sistema, habilitan control remoto y soportan aplicaciones IoT con integración perfecta y escalabilidad. Perfecto para profesionales de TI y entusiastas de IoT.
-title: Envío y Recepción de Mensajes SMS con Quectel 4G Raspberry pi Hat 
+title: Envío y Recepción de Mensajes SMS con Quectel 4G Raspberry pi Hat
 keywords:
   - Raspberry Pi Hat
   - Getting started
@@ -13,6 +13,9 @@ slug: /send_receive_sms_raspberry_pi_4g_lte_hat
 last_update:
   date: 12/11/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/send_receive_sms_raspberry_pi_4g_lte_hat/
 ---
 
 ## Introducción

@@ -2,12 +2,15 @@
 description: Grove GestureセンサーPAJ7660を使用して音楽を制御するアプリケーション。
 title: ジェスチャーで音楽を制御
 keywords:
-- ジェスチャー
+  - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /gesture_control_music_application
 last_update:
   date: 05/15/2025
   author: Allen
+createdAt: '2024-04-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/gesture_control_music_application/
 ---
 
 

@@ -13,6 +13,9 @@ slug: /edgebox_rpi_200_n3uron_bacnet
 last_update:
   date: 6/20/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/edgebox_rpi_200_n3uron_bacnet/
 ---
 
 BACnetは、オープンスタンダードであることから、ビル管理システム（BMS）で広く採用されているプロトコルです。これにより、異なるメーカーのデバイス間でのシームレスな統合と通信が可能になります。その人気は柔軟性によっても支えられており、様々なネットワーク構成をサポートし、堅牢な相互運用性を提供します。[N3uron](https://n3uron.com/)は、強力で多用途なプラットフォームであり、効率的なデータ取得と管理を可能にすることでBACnetの機能を強化します。YABE Room SimulatorとBACnet TCPを使用することで、ユーザーはBACnetデバイスをシミュレートし、視覚化することができ、テストと開発を促進します。この組み合わせにより、各技術の強みを活用した包括的で効果的なBMSソリューションへのアプローチが確保されます。

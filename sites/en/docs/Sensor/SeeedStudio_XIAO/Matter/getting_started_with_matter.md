@@ -2,13 +2,16 @@
 description: An introduction to how to quickly experience Matter Lighting using Espressif's Matter Deployment Tool.
 title: Getting Started with Matter Quickly with XIAO ESP32
 keywords:
-- ESP-IDF
-- XIAO
+  - ESP-IDF
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_with_matter
 last_update:
   date: 05/11/2024
   author: Citric
+createdAt: '2024-05-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_with_matter/
 ---
 
 # Getting Started with Matter Quickly with XIAO ESP32 Series

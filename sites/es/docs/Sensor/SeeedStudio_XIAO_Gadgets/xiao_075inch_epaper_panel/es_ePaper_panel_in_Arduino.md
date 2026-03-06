@@ -2,14 +2,17 @@
 description: La Pantalla E-Ink de 7.5 pulgadas alimentada por XIAO ESP32C3 es una solución compacta y eficiente en energía para mostrar datos a través de Arduino.
 title: Funciona con Arduino
 keywords:
-- ePaper display
-- arduino
+  - ePaper display
+  - arduino
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
 slug: /xiao_075inch_epaper_panel_arduino
 sidebar_position: 3
 last_update:
   date: 03/26/2025
   author: Allen
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>

@@ -1,6 +1,6 @@
 ---
 title: Wio Tracker Introduction
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio_Tracker
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio_Tracker/
 ---
 
 The Wio_Tracker platform was firstly introduced to the world at the end of 2015 when Wio Link was crowd-founding on Kickstarter. As the second product that we launched at Kickstarter, the result of Wio_Tracker was exceeded our expectation a lot. So not long after that, we released the little brother of Wio link----Wio Node. Both has almost the same function but different in size and grove connector quantity, to accommodate to different situations.

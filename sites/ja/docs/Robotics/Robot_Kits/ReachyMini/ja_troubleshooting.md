@@ -3,21 +3,25 @@ description: Reachy Mini のよくある問題、組み立て、接続、ハー�
 title: トラブルシューティング & FAQ
 slug: /reachymini_troubleshooting
 keywords:
-- troubleshooting
-- faq
-- support
-- issues
-- fixes
-- assembly
-- connection
-- motors
-- sdk
-- errors
+  - troubleshooting
+  - faq
+  - support
+  - issues
+  - fixes
+  - assembly
+  - connection
+  - motors
+  - sdk
+  - errors
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_troubleshooting/
 ---
 
 # トラブルシューティング & FAQ

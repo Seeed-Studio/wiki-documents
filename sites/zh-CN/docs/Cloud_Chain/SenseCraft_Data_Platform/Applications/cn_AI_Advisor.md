@@ -24,6 +24,9 @@ tags:
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2025-08-07'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/applications/ai-advisor/
 ---
 
 # 如何在网页端和 SenseCraft 应用程序中使用 AI 顾问

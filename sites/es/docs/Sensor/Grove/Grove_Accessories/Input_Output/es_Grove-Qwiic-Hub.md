@@ -1,6 +1,6 @@
 ---
-title:  Grove - Qwiic Hub
-nointro:
+title: Grove - Qwiic Hub
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020292
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Qwiic-Hub/
 ---
 
 ![](https://files.seeedstudio.com/products/103020292/img/103020292wiki.png)

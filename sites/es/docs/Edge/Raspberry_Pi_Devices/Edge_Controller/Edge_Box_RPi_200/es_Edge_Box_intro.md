@@ -2,13 +2,16 @@
 description: EdgeBox-RPI-200 es un controlador de computación de borde todo en uno basado en Raspberry Pi y una puerta de enlace IIoT, que ofrece alta escalabilidad, diseño robusto y recursos de E/S abundantes. Ideal para automatización inteligente y soluciones IIoT, aprovecha el extenso ecosistema de software industrial de Raspberry Pi.
 title: Controlador de Borde Alimentado por Raspberry Pi
 keywords:
-- Raspberry pi
-- Edge Controller
+  - Raspberry pi
+  - Edge Controller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Box_intro
 last_update:
   date: 6/25/2023
   author: Kasun Thushara
+createdAt: '2023-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Edge_Box_intro/
 ---
 
 EdgeBox-RPI-200 no es solo una puerta de enlace industrial raspberry pi/linux y una puerta de enlace IIoT, sino también un controlador de computación de borde todo en uno basado en Raspberry Pi que combina múltiples propósitos industriales. Diseñado como hardware industrial robusto y de alta escalabilidad, montado con recursos de E/S abundantes, y respaldado por el gran ecosistema de software industrial de Raspberry Pi, es una opción ideal para automatización inteligente y soluciones de Internet Industrial de las Cosas (IIoT).

@@ -2,15 +2,18 @@
 description: Pin multiplexing with Seeed Studio XIAO RA4M1.
 title: Pin Multiplexing with Seeed Studio XIAO RA4M1
 keywords:
-- ra4m1
-- xiao
-- pin multiple
+  - ra4m1
+  - xiao
+  - pin multiple
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 sidebar_position: 1
 slug: /xiao_ra4m1_pin_multiplexing
 last_update:
   date: 08/15/2024
   author: Jason
+createdAt: '2024-08-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_ra4m1_pin_multiplexing/
 ---
 
 ## Digital

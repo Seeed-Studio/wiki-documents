@@ -2,12 +2,15 @@
 description: Descripción general
 title: Primeros pasos con el micrófono
 keywords:
-- Wio_terminal Microphone
+  - Wio_terminal Microphone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Mic
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Mic/
 ---
 
 # Primeros pasos con el micrófono

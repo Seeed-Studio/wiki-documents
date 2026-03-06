@@ -16,6 +16,9 @@ sidebar_position: 3
 last_update:
   date: 11/08/2025
   author: Parker Hu
+createdAt: '2025-11-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recamera_hq_poe_microscope_demo/
 ---
 
 # reCamera_Microscopio

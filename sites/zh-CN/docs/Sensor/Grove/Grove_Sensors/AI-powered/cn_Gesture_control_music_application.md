@@ -2,12 +2,15 @@
 description: 使用 Grove 手势传感器 PAJ7660 控制音乐的应用。
 title: 手势控制音乐
 keywords:
-- gesture
+  - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /gesture_control_music_application
 last_update:
   date: 12/27/2023
   author: Allen
+createdAt: '2024-04-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/gesture_control_music_application/
 ---
 
 ## 入门指南

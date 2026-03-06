@@ -2,13 +2,16 @@
 description: Enviar mensaje desde Watcher & Node-RED a p5js
 title: Watcher & Node-RED a P5JS
 keywords:
-- watcher
-- p5js
+  - watcher
+  - p5js
 image: https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/headpic.png
 slug: /watcher_node_red_to_p5js
 last_update:
   date: 08/12/2024
   author: Allen
+createdAt: '2024-08-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/watcher_node_red_to_p5js/
 ---
 
 # Inicio Rápido de Watcher & Node-RED a p5.js

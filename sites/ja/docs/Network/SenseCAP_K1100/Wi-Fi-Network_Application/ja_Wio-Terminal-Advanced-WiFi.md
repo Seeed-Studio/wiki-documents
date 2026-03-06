@@ -2,12 +2,15 @@
 description: 高度なWiFi使用法
 title: 高度なWiFi使用法
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Advanced-WiFi
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Advanced-WiFi/
 ---
 
 

@@ -2,12 +2,15 @@
 description: SenseCAP データロガーを使用した LoRaWAN センサーの構築
 title: SenseCAP データロガーを使用した LoRaWAN センサーの構築
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Builder_build_LoRaWAN_Sensors
 last_update:
   date: 11/20/2023
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Builder_build_LoRaWAN_Sensors/
 ---
 
 ## 概要

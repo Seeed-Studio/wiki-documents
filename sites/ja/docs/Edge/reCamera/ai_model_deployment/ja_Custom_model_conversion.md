@@ -9,6 +9,9 @@ slug: /recamera_model_conversion
 last_update:
   date: 10/18/2024
   author: Dayu Li
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recamera_model_conversion/
 ---
 
 # AIモデルの変換と量子化

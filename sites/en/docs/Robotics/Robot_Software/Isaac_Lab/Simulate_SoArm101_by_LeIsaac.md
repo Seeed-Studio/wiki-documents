@@ -2,13 +2,16 @@
 description: This tutorial demonstrates how to teleoperate and train the SOArm101 robotic arm in Isaac Lab using LeIsaac, including data collection, model fine-tuning with NVIDIA Isaac GR00T, and deployment.
 title: Lightwheel LeIsaac
 keywords:
-- NVIDIA
-- Isaac Lab
+  - NVIDIA
+  - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/simulate_soarm101_by_leisaac.webp
 slug: /simulate_soarm101_by_leisaac
 last_update:
   date: 8/1/2025
   author: Youjiang
+createdAt: '2025-08-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/simulate_soarm101_by_leisaac/
 ---
 
 # Get started with Lightwheel LeIsaac — Open-source workflow combining Hugging Face LeRobot x GR00T N1.5 x Isaac Sim

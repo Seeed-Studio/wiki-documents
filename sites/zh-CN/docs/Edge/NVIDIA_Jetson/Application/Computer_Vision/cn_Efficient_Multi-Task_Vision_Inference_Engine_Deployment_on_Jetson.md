@@ -2,22 +2,25 @@
 description: 本 wiki 提供了在 reComputer Jetson 系列设备（特别是 Jetson Orin NX 16GB）上部署视觉感知引擎（VPEngine）的全面分步指南。它涵盖了环境设置、关键依赖项安装（PyTorch、TensorRT、CUDA、ROS2）、模型导出以及兼容性问题故障排除。该指南重点介绍了 VPEngine 通过共享骨干网络特征和优化 GPU 资源使用来执行高效并行多任务视觉推理的能力，包括目标检测、深度估计和语义分割。它还包括性能测试脚本、实时多摄像头推理示例，以及在机器人和智能监控应用中最大化边缘 AI 效率的实用技巧。
 title: 在 Jetson 上部署高效多任务视觉推理引擎
 keywords:
-- Visual Perception Engine
-- VPEngine
-- reComputerEngine
-- Jetson
-- Parallel Perception
-- Computer Vision
-- TensorRT
-- CUDA
-- ROS2
-- Robotics
+  - Visual Perception Engine
+  - VPEngine
+  - reComputerEngine
+  - Jetson
+  - Parallel Perception
+  - Computer Vision
+  - TensorRT
+  - CUDA
+  - ROS2
+  - Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video.webp
 slug: /deploy_visual_perception_engine_recomputer
 sku: 101090101, 114110310, 100071398, 100026552
 last_update:
-  date: 2025-10-13
+  date: 2025-10-13T00:00:00.000Z
   author: Zibo
+createdAt: '2025-10-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deploy_visual_perception_engine_recomputer/
 ---
 
 <div align="center">

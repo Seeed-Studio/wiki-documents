@@ -1,6 +1,6 @@
 ---
 title: 1.5W ソーラーパネル 81*137
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -9,6 +9,9 @@ slug: /1.5W_Solar_Panel_81x137
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/1.5W_Solar_Panel_81x137/
 ---
 
 

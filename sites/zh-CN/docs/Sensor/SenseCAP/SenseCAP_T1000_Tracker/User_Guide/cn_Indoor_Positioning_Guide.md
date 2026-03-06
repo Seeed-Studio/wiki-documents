@@ -2,15 +2,18 @@
 description: SenseCAP_Tracker_T1000-A/B_IPS
 title: SenseCAP T1000 室内定位系统指南
 keywords:
-- Tracker
-- BLE
-- Positioning
+  - Tracker
+  - BLE
+  - Positioning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /IPS_For_SenseCAP_T1000_Traker
 sku: E2025081201,E2025081501
 last_update:
   date: 10/20/2023
   author: Jessie
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/IPS_For_SenseCAP_T1000_Traker/
 ---
 
 

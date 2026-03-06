@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_rp2350_arduino/
 ---
 
 import Tabs from '@theme/Tabs';

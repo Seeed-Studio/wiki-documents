@@ -1,13 +1,15 @@
 ---
 name: Seeedについて
 title: Seeedについて
-nointro:
+nointro: null
 authors:
   name: Gao Wei
   title: Docusaurusコアチーム
   url: https://github.com/wgao19
   image_url: https://github.com/wgao19.png
   slug: /About
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
 ---
 [Seeed](https://www.seeedstudio.com)は、アイデアを差別化された製品へと成長させるためのハードウェアイノベーションプラットフォームです。規模を問わず技術提供者と密接に連携することで、Seeedは品質、スピード、そしてサプライチェーンの知識を備えたアクセス可能な技術を提供します。プロトタイプが反復可能な状態になった際には、Seeedは社内のエンジニアリング、サプライチェーン管理、アジャイル製造力を活用して1個から1,000個までの製品化を支援します。また、Seeedはインキュベーター、中国の技術エコシステム、投資家、流通チャネルと協力し、Makerスタートアップを次のステージへと導きます。
 

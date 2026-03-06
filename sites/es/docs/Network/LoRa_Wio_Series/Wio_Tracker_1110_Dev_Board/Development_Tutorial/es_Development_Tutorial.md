@@ -1,9 +1,9 @@
 ---
-description: Development_Tutorial_of_Wio-Tracker 1110 
+description: Development_Tutorial_of_Wio-Tracker 1110
 title: Tutorial de Desarrollo
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /development_tutorial_for_Wio-trakcer
 sidebar_position: 2
@@ -11,6 +11,9 @@ sidebar_class_name: hidden
 last_update:
   date: 9/4/2023
   author: Jessie
+createdAt: '2023-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/development_tutorial_for_Wio-trakcer/
 ---
 
 Antes de comenzar el desarrollo, por favor revisa [Configurar tu cadena de herramientas](https://wiki.seeedstudio.com/es/setup_toolchain_for_wio_tracker/) para configurar las herramientas primero.

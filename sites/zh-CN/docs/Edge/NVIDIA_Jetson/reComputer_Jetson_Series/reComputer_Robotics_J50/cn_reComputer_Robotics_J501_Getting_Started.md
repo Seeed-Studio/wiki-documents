@@ -14,6 +14,9 @@ sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 12/09/2025
   author: Lorraine
+createdAt: '2026-01-14'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
 # Robotics J501 硬件与快速上手

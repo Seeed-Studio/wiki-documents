@@ -1,13 +1,16 @@
 ---
 description: SenseCAP Data Logger 紹介
-title: SenseCAP Data Logger 
+title: SenseCAP Data Logger
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Data_Logger_Intro
 last_update:
   date: 07/24/2024
   author: Frank
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Data_Logger_Intro/
 ---
 
 Data Loggerは、産業レベルセンサー、Groveセンサー、アナログ/RS485/GPIOセンサーを含む200以上のセンサーへの橋渡しとして機能します。
