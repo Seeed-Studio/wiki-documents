@@ -10,7 +10,7 @@ keywords:
   - reTerminal DM
   - reRouter
   - Raspberry Pi Compatible
-  - Respberry Pi Original
+  - Raspberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
@@ -185,11 +185,11 @@ Seeed Studio’s reComputer R and Edge Box families are rugged edge controllers 
       </tr>
       <tr>
         <td>Chip</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
       </tr>
       <tr>
         <td>RAM</td>
@@ -253,8 +253,8 @@ reTerminal and reTerminal DM are advanced devices that integrate high-performanc
       </tr>
       <tr>
         <td>Chip</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
       </tr>
       <tr>
         <td>Introduction</td>
@@ -275,7 +275,7 @@ reRouter is equipped with dual Gigabit Ethernet ports and dual USB 3.0 ports, ma
 <a class="get_one_now_item" href="https://wiki.seeedstudio.com/reRouter_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 Learn More</strong></font></span></strong></a>
 </div>
 
-### Respberry Pi Original
+### Raspberry Pi Original
 
 Raspberry Pi (aka "RPi") was originally designed and created by a non-profit organization with the intention to promote teaching computer science at an affordable cost. Several generations and models of Raspberry Pis have now been released that have expanded their footprints, power and applications.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>
