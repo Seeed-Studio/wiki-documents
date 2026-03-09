@@ -3,7 +3,8 @@ name: PR Translation Workflow
 on:
   pull_request:
     types: [opened, synchronize, labeled, closed]
-    paths: ['docs/**']
+    paths:
+      - "sites/en/docs/**"
   pull_request_target:
     types: [opened, synchronize, labeled, reopened, closed]
   issue_comment:
@@ -15,7 +16,7 @@ permissions:
   issues: write
 
 jobs:
-  # 检测 PR 中的文档变更
+  # 检测 PR 中的文档变更（以英文站点为 source）
   detect-docs-changes:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
@@ -65,7 +66,7 @@ jobs:
           fetch-depth: 2
           fetch-tags: false
           sparse-checkout: |
-            docs
+            sites/en/docs
           sparse-checkout-cone-mode: true
 
       - name: Check for docs changes
@@ -74,12 +75,8 @@ jobs:
         uses: tj-actions/changed-files@v40
         with:
           files: |
-            docs/**/*.{md,mdx}
-            docs/**/_category_.yml
-          files_ignore: |
-            docs/zh-CN/**
-            docs/ja/**
-            docs/es/**
+            sites/en/docs/**/*.{md,mdx}
+            sites/en/docs/**/_category_.yml
 
       - name: Ensure base commit is available
         if: steps.changes.outputs.any_changed == 'true' && steps.check-skip.outputs.skip != 'true'
@@ -101,8 +98,8 @@ jobs:
           renamed_modified_count=0
           all_files=""
 
-          if operations=$(git diff --name-status --find-renames=90 $base_sha..HEAD -- docs/ 2>/dev/null); then
-            filtered_operations=$(echo "$operations" | grep -E '\.(md|mdx)$|_category_\.yml$' | grep -v -E '(zh-CN|ja|es)' || true)
+          if operations=$(git diff --name-status --find-renames=90 $base_sha..HEAD -- sites/en/docs/ 2>/dev/null); then
+            filtered_operations=$(echo "$operations" | grep -E '\.(md|mdx)$|_category_\.yml$' || true)
             if [[ -n "$filtered_operations" ]]; then
               while IFS=$'\t' read -r status file rest || [[ -n "$status" ]]; do
                 [[ -z "$status" ]] && continue
@@ -120,7 +117,11 @@ jobs:
                     all_files="$all_files$file "
                     [[ -n "$rest" ]] && all_files="$all_files$rest "
                     ;;
-                  R*) renamed_count=$((renamed_count + 1)); all_files="$all_files$file "; [[ -n "$rest" ]] && all_files="$all_files$rest " ;;
+                  R*)
+                    renamed_count=$((renamed_count + 1))
+                    all_files="$all_files$file "
+                    [[ -n "$rest" ]] && all_files="$all_files$rest "
+                    ;;
                 esac
               done <<< "$filtered_operations"
             fi
@@ -131,7 +132,7 @@ jobs:
           echo "total_files=$total_count" >> $GITHUB_OUTPUT
           echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count 移动+修改:$renamed_modified_count" >> $GITHUB_OUTPUT
 
-  # 添加翻译提示评论
+  # 添加翻译提示评论（通过 API 快速统计英文 docs 的变更）
   add-translation-comment:
     if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
     runs-on: ubuntu-latest
@@ -186,11 +187,13 @@ jobs:
               files = files.concat(data);
               page++;
             }
+
             const isDocs = f =>
-              /^docs\//.test(f.filename) &&
-              !/^docs\/(zh-CN|ja|es)\//.test(f.filename) &&
+              /^sites\/en\/docs\//.test(f.filename) &&
               (/\.(md|mdx)$/.test(f.filename) || /_category_\.yml$/.test(f.filename));
+
             const picked = files.filter(isDocs);
+
             let added=0, modified=0, deleted=0, renamed=0, renamed_modified=0;
             for (const f of picked) {
               if (f.status === 'added') added++;
@@ -237,7 +240,7 @@ jobs:
     timeout-minutes: 180
     concurrency:
       group: pr-translation-run-${{ github.event.issue.number }}
-      cancel-in-progress: false   # ⭐ 不被后续事件打断
+      cancel-in-progress: false
     permissions:
       contents: write
       pull-requests: write
@@ -313,7 +316,10 @@ jobs:
           fetch-depth: 2
           fetch-tags: false
           sparse-checkout: |
-            docs
+            sites/en/docs
+            sites/zh-CN/docs
+            sites/ja/docs
+            sites/es/docs
           sparse-checkout-cone-mode: true
           filter: blob:none
 
@@ -372,14 +378,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-anthropic-sdk-v1
+          key: ${{ runner.os }}-npm-openai-sdk-v1
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Install dependencies
         if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           echo "📦 安装翻译依赖..."
-          npm install @anthropic-ai/sdk --no-save --legacy-peer-deps
+          npm install openai --no-save --legacy-peer-deps
 
       - name: Run translation
         if: steps.check-permissions.outputs.has_permission == 'true'
@@ -397,14 +403,14 @@ jobs:
           fi
           node _trusted/.github/scripts/translate.js
 
-      # ⭐ 将译文推送到 base 仓库独立分支（只提交改动的文件），并创建/更新翻译 PR
+      # ⭐ 将译文推送到 base 仓库独立分支，并创建/更新翻译 PR
       - name: Prepare translation branch in base repo
         if: steps.check-permissions.outputs.has_permission == 'true'
         id: prep-branch
         env:
           TRANSLATION_PAT: ${{ secrets.TRANSLATION_PAT }}
-          BASE_REPO: ${{ github.repository }}                 # owner/repo
-          BASE_REF: ${{ steps.pr-info.outputs.base-ref }}     # e.g. main
+          BASE_REPO: ${{ github.repository }}
+          BASE_REF: ${{ steps.pr-info.outputs.base-ref }}
           PR_NUMBER: ${{ github.event.issue.number }}
           LANGUAGES: ${{ steps.parse.outputs.languages }}
         run: |
@@ -422,7 +428,7 @@ jobs:
             echo "❌ 缺少可写凭据"
             exit 1
           fi
-          REMOTE_URL="https://${TOKEN}@github.com/${BASE_REPO}.git"
+          REMOTE_URL="https://x-access-token:${TOKEN}@github.com/${BASE_REPO}.git"
 
           git config --global init.defaultBranch main
           git clone --depth=1 "$REMOTE_URL" "$WORKDIR/repo"
@@ -430,20 +436,19 @@ jobs:
           git fetch --depth=1 origin "$BASE_REF"
           git checkout "$BASE_REF"
 
-          # ✅ 镜像三种语言目录（含删除），并防止 symlink 越界
+          # ✅ 镜像三种语言站点的 docs（含删除）
           rsync -a --delete --safe-links --copy-dirlinks \
-            --include='docs/' \
-            --include='docs/zh-CN/***' \
-            --include='docs/ja/***' \
-            --include='docs/es/***' \
+            --include='sites/' \
+            --include='sites/zh-CN/' --include='sites/zh-CN/docs/***' \
+            --include='sites/ja/'    --include='sites/ja/docs/***' \
+            --include='sites/es/'    --include='sites/es/docs/***' \
             --exclude='*' \
             "$GITHUB_WORKSPACE/" .
 
           git config user.email "action@github.com"
           git config user.name "GitHub Action Bot"
 
-          # 只对语言目录进行 add（不存在则忽略）
-          git add docs/zh-CN docs/ja docs/es 2>/dev/null || true
+          git add sites/zh-CN/docs sites/ja/docs sites/es/docs 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "ℹ️ 镜像后无变化"
@@ -468,7 +473,7 @@ jobs:
             const { owner, repo } = context.repo;
             const issue_number = context.payload.issue.number;
             const base = '${{ steps.pr-info.outputs.base-ref }}';
-            const head = '${{ steps.prep-branch.outputs.BRANCH }}'; // auto-translate/pr-<PR号>
+            const head = '${{ steps.prep-branch.outputs.BRANCH }}';
             const title = `🌍 Docs translations for #${issue_number}`;
             const body = [
               `This PR contains machine translations for docs changed in #${issue_number}.`,
@@ -480,7 +485,6 @@ jobs:
               `> Created by GitHub Actions (branch: \`${head}\`)`
             ].join('\n');
 
-            // 复用已存在的翻译 PR，否则新建
             const list = await github.rest.pulls.list({
               owner, repo, state: 'open', head: `${owner}:${head}`, base
             });

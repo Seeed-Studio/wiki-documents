@@ -5,13 +5,13 @@ on:
     branches: [docusaurus-version]
   push:
     branches: [docusaurus-version]
-    
+
 env:
   NODE_OPTIONS: --max-old-space-size=6144
   DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
 
 permissions:
-  contents: read
+  contents: write
   statuses: write
 
 jobs:
@@ -25,26 +25,23 @@ jobs:
           node-version: 20
           cache: yarn
 
-      # ==== 观测与加 swap（放在安装依赖前） ====
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add extra swap (6G)
+      - name: Add extra swap (4G)
         run: |
           set -euxo pipefail
-
           echo "== Before =="
           sudo swapon --show || true
           free -h
 
           SWAP=/mnt/ci.swap
-
           if [ -f "$SWAP" ]; then
             sudo swapoff "$SWAP" || true
             sudo rm -f "$SWAP"
           fi
 
-          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
           sudo chmod 600 "$SWAP"
           sudo mkswap "$SWAP"
           sudo swapon "$SWAP"
@@ -55,8 +52,19 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      - name: Create shared symlinks
+        run: |
+          set -euxo pipefail
+          ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
+          for site in sites/en sites/zh-CN sites/ja sites/es; do
+            rm -rf "$site/assets"
+            ln -s "$ROOT_ASSETS" "$site/assets"
+          done
+
       - name: Test build website
-        run: yarn docusaurus build
+        run: yarn build
+
       - name: Report status to PR
         if: always()
         continue-on-error: true
@@ -95,22 +103,20 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add extra swap (6G)
+      - name: Add extra swap (4G)
         run: |
           set -euxo pipefail
-
           echo "== Before =="
           sudo swapon --show || true
           free -h
 
           SWAP=/mnt/ci.swap
-
           if [ -f "$SWAP" ]; then
             sudo swapoff "$SWAP" || true
             sudo rm -f "$SWAP"
           fi
 
-          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
           sudo chmod 600 "$SWAP"
           sudo mkswap "$SWAP"
           sudo swapon "$SWAP"
@@ -119,14 +125,23 @@ jobs:
           sudo swapon --show || true
           free -h
 
-      - uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Create shared symlinks
+        run: |
+          set -euxo pipefail
+          ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
+          for site in sites/en sites/zh-CN sites/ja sites/es; do
+            rm -rf "$site/assets"
+            ln -s "$ROOT_ASSETS" "$site/assets"
+          done
+
       - name: Deploy to GitHub Pages
         env:
-          USE_SSH: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           git config --global user.email "2768073931@qq.com"
           git config --global user.name "MatthewJeffson"
-          yarn install --frozen-lockfile
           yarn deploy

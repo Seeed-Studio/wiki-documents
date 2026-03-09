@@ -4,21 +4,32 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 docusaurus start --host 0.0.0.0",
-    "start:en": "cross-env NODE_ENV=development DOC_LANGS=en NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
-    "start:cn": "cross-env NODE_ENV=development DOC_LANGS=zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
-    "start:en+cn": "cross-env NODE_ENV=development DOC_LANGS=en,zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=6144 docusaurus build",
+    "setup:links": "node scripts/setup-links.js",
+    "start": "yarn start:all",
+    "start:en": "yarn setup:links && yarn --cwd sites/en start --port 3000",
+    "start:cn": "yarn setup:links && yarn --cwd sites/zh-CN start --port 3001",
+    "start:ja": "yarn setup:links && yarn --cwd sites/ja start --port 3002",
+    "start:es": "yarn setup:links && yarn --cwd sites/es start --port 3003",
+    "start:en+cn": "concurrently -n en,cn -c blue,green \"yarn start:en\" \"yarn start:cn\"",
+    "start:all": "concurrently -n en,cn,ja,es -c blue,green,yellow,magenta \"yarn start:en\" \"yarn start:cn\" \"yarn start:ja\" \"yarn start:es\"",
+    "build": "yarn build:all",
+    "build:en": "yarn --cwd sites/en build -- --out-dir ../../build",
+    "build:cn": "yarn --cwd sites/zh-CN build -- --out-dir ../../build/cn",
+    "build:ja": "yarn --cwd sites/ja build -- --out-dir ../../build/ja",
+    "build:es": "yarn --cwd sites/es build -- --out-dir ../../build/es",
+    "build:all": "yarn build:en && yarn build:cn && yarn build:ja && yarn build:es",
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "yarn build && gh-pages -d build -b gh-pages -r https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git",
     "clear": "docusaurus clear",
     "install:frozen": "yarn install --frozen-lockfile",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "generatewiki": "node scripts/generateWiki.js",
-    "generate-lang-map": "node scripts/generate-language-map.js"
+    "generate-lang-map": "node scripts/generate-language-map.js",
+    "generate-jetson-config": "node scripts/generate-jetson-config.js",
+    "normalize-frontmatter": "node scripts/normalize-frontmatter.js"
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
@@ -58,10 +69,16 @@
   "devDependencies": {
     "@docusaurus/eslint-plugin": "3.8.1",
     "@docusaurus/module-type-aliases": "3.8.1",
+    "@rspack/core": "^1.7.4",
     "@tsconfig/docusaurus": "^1.0.5",
     "baseline-browser-mapping": "^2.9.14",
+    "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
+    "fast-glob": "^3.3.3",
+    "gh-pages": "^6.3.0",
     "glob": "^11.0.2",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.1",
     "typescript": "^4.7.4"
   },
   "browserslist": {
@@ -78,5 +95,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

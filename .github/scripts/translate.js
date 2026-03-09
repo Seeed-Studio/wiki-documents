@@ -1,4 +1,4 @@
-const Anthropic = require('@anthropic-ai/sdk');
+const OpenAI = require('openai');
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,7 +11,7 @@ try {
   console.log('ℹ️ 未安装 js-yaml，将使用简易解析回退逻辑');
 }
 
-const anthropic = new Anthropic({
+const openai = new OpenAI({
   apiKey: process.env.TRANSLATION_API_KEY
 });
 
@@ -33,6 +33,10 @@ const LANGUAGE_CONFIG = {
     pathPrefix: '/es'
   }
 };
+
+// ✅ 新结构路径常量（仅用于路径拼接/计算）
+const SOURCE_DOCS_ROOT = path.join('sites', 'en', 'docs');
+const TARGET_SITE_ROOT = 'sites';
 
 // 术语保护列表
 const PRESERVE_TERMS = {
@@ -72,10 +76,10 @@ let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
 
 // 文档保护列表
 const PROTECTED_PATHS = [
-  'docs/Getting_Started.md',
-  'docs/weekly_wiki.md',
-  'docs/LICENSE.md',
-  'docs/Seeed_Elderly/weekly_wiki/',
+  'sites/en/docs/Getting_Started.md',
+  'sites/en/docs/weekly_wiki.md',
+  'sites/en/docs/LICENSE.md',
+  'sites/en/docs/Seeed_Elderly/weekly_wiki/',
 ];
 
 // 翻译状态跟踪
@@ -369,24 +373,56 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 
 <translation_rules>
 1. **只翻译自然语言文本**，保持以下内容不变：
+
+   **结构性内容（绝对不能修改）：**
    - 所有[LINE_X]标记
    - 所有[EMPTY_LINE]标记
-   - 标记后的所有缩进（空格和制表符）
-   - 代码块内容（\`\`\`之间的内容）
-   - 行内代码（\`...\`）中的内容必须**逐字符原样保留**：包括大小写、空格、标点、连字符等都不得改变；即使反引号内看起来是可翻译的英文单词/状态值（例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`），也禁止翻译/本地化/改写
+   - 标记后的所有缩进（空格或制表符）
    - URL链接
-   - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
-   - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
-   - 专有名词：${termsList.split('\n').slice(0, 5).join(', ')}等
-   - **教程中引用的目标软件或系统界面的英文元素**（如 App 内的菜单项、按钮名称、字段名、设置项等，通常出现在引号 "..."、加粗 **...**、或菜单路径 File > Preferences 等），请保持英文原文，不要翻译，以便与实际界面一致。
-   - 但**网页自身的 HTML 或 JSX 标签内的可见文字**（例如 <span>、<strong>、<font>、导航链接、标题等）若是文档页面展示给读者看的内容，应正常翻译。
+   - HTML / JSX 标签的结构与属性（不要新增、删除或重排标签；不要修改属性名或属性值）
+
+   **代码相关规则：**
+   - 代码块内容（\`\`\`之间的内容）必须完全保持原样
+   - **只有被反引号包裹的内容 \`...\` 才视为行内代码**
+   - 行内代码中的内容必须逐字符保持不变（包括大小写、空格、符号等）
+   - 即使其中包含英文单词，例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`，也禁止翻译
+
+   **重要：如果这些单词没有被反引号包裹，则必须正常翻译。**
+
+   **HTML / JSX 标签文本规则：**
+   - 标签结构与属性必须完全保持不变
+   - 只允许翻译 **标签之间的可见文本内容**
+   - 具体来说，只能修改 **\`>\` 与下一个 \`<\` 之间的文本**
+   - 即使该行包含 JSX 属性（例如 {'FFFFFF'}、{"3"}、{...} 等），也不能跳过翻译标签中的可见文本
+   - 示例：
+
+     输入：
+     <strong><span><font color={'FFFFFF'} size={"3"}>EE03 Driver Board Wiki</font></span></strong>
+
+     正确输出：
+     <strong><span><font color={'FFFFFF'} size={"3"}>EE03 驱动板 Wiki</font></span></strong>
+
+   **普通英文文本规则：**
+   - 任何未被反引号包裹的普通英文文本必须按语义翻译
+   - 即使单词是技术词，例如 **Input、Output、High、Low**，如果没有反引号，也必须翻译
+
+   **专有名词保护：**
+   - 以下专有名词保持原文：${termsList.split('\n').slice(0, 5).join(', ')} 等
+
+   **软件界面元素例外规则：**
+   - 如果文本明确表示软件界面的原始 UI 元素，则保持英文，例如：
+     - "Settings"
+     - "File > Preferences"
+     - 按钮名称或菜单项
+
+   - 但如果文本只是网页内容（例如标题、导航、说明文字），即使位于 HTML 标签内，也必须翻译。
 
 2. **术语表（强制翻译）**：以下术语若出现，必须严格使用右侧译法（不允许其它译法）：
 ${glossaryPairs}
 
 3. **Front Matter处理**：
-   - 只翻译title和description字段的值
-   - slug字段添加前缀：${pathPrefix}
+   - 只翻译 title 和 description 字段的值
+   - **不要修改 slug 字段的值，也不要为 slug 添加任何语言前缀**
 
 4. **缩进保持**：
    - 如果原文有缩进，译文必须保持相同的缩进
@@ -712,18 +748,18 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
-        const response = await anthropic.messages.create({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 20000,
+        const response = await openai.chat.completions.create({
+          model: 'gpt-5.1-2025-11-13',
+          max_completion_tokens: 20000,
           temperature: 0,
-          system: systemPrompt,
           messages: [
+            { role: 'system', content: systemPrompt },
             { role: 'user', content: text }
           ]
         });
 
         // 为了保持调用点一致，这里也返回对象
-        return { text: response.content[0].text, endsInsideCodeBlock: false };
+        return { text: response.choices[0].message.content, endsInsideCodeBlock: false };
       } catch (error) {
         console.error(`❌ Category翻译失败 (尝试 ${attempt}/${maxRetries}): ${error.message}`);
         if (attempt === maxRetries) throw error;
@@ -740,17 +776,17 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     try {
       console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
 
-      const response = await anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 20000,
+      const response = await openai.chat.completions.create({
+        model: 'gpt-5.1-2025-11-13',
+        max_completion_tokens: 20000,
         temperature: 0,
-        system: systemPrompt,
         messages: [
+          { role: 'system', content: systemPrompt },
           { role: 'user', content: processed }
         ]
       });
 
-      let translatedContent = response.content[0].text;
+      let translatedContent = response.choices[0].message.content;
 
       // 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
       translatedContent = fixAnchorLinks(translatedContent);
@@ -836,7 +872,7 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
 4. **link字段处理**：
    - slug：
      - 只修改 slug 的值
-     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+     - **不要添加任何语言前缀，保持 slug 原始值不变**
    - id：
      - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
      - 假设英文原始 id 的格式是： "A/B/C/F"
@@ -1067,12 +1103,13 @@ function isProtectedPath(filePath) {
 // 生成目标文件路径
 function generateTargetPath(originalPath, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
-  const relativePath = path.relative('docs', originalPath);
+
+  const relativePath = path.relative(SOURCE_DOCS_ROOT, originalPath);
   
   const parsedPath = path.parse(relativePath);
   
   if (parsedPath.base === '_category_.yml') {
-    const targetPath = path.join('docs', langConfig.folder, relativePath);
+    const targetPath = path.join(TARGET_SITE_ROOT, langConfig.folder, 'docs', relativePath);
     return targetPath;
   }
   
@@ -1083,7 +1120,7 @@ function generateTargetPath(originalPath, targetLang) {
   const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
   const newRelativePath = path.join(parsedPath.dir, newFileName);
   
-  const targetPath = path.join('docs', langConfig.folder, newRelativePath);
+  const targetPath = path.join(TARGET_SITE_ROOT, langConfig.folder, 'docs', newRelativePath);
   
   return targetPath;
 }
@@ -1313,7 +1350,7 @@ async function detectFileOperations(baseSha) {
     console.log(`🔍 检测文件操作 (基于 ${baseSha})...`);
     
     const statusOutput = execSync(
-      `git diff --name-status -M90 ${baseSha}..HEAD -- docs/`,
+      `git diff --name-status -M90 ${baseSha}..HEAD -- ${SOURCE_DOCS_ROOT}/`,
       { encoding: 'utf8' }
     );
     
@@ -1332,8 +1369,11 @@ async function detectFileOperations(baseSha) {
       const status = parts[0];
       const file = parts[1];
       
-      if ((!file.match(/\.(md|mdx)$/) && !file.endsWith('_category_.yml')) || 
-          file.match(/\/(zh-CN|ja|es)\//)) {
+      const normalized = file.replace(/\\/g, '/');
+      if (
+        !normalized.startsWith('sites/en/docs/') ||
+        (!normalized.match(/\.(md|mdx)$/) && !normalized.endsWith('_category_.yml'))
+      ) {
         continue;
       }
       

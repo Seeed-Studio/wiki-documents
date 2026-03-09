@@ -1,5 +1,0 @@
-position: 4 # float position is supported
-label: 'Model_Output'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
-className: sensecraft_ai_Tutorials_Model_Output
