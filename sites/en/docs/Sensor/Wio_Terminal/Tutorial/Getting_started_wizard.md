@@ -8,7 +8,7 @@ slug: /Getting_started_wizard
 last_update:
   date: 1/31/2023
   author: jianjing Huang
-createdAt: '2026-03-03'
+createdAt: '2023-01-31'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/Getting_started_wizard/
 ---
