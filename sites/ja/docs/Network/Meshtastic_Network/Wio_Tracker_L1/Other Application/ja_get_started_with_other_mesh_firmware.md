@@ -1,6 +1,6 @@
 ---
 description: Web USB またはドラッグ＆ドロップで Wio Tracker L1 Pro に MeshCore ファームウェアを書き込む方法と、LoRa リージョン、GPS、メッセージ送信のためのアプリ設定ガイド。
-title: Meshcore を使い始める
+title: Wio Tracker L1 Pro で始める MeshCore 入門
 keywords:
   - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp

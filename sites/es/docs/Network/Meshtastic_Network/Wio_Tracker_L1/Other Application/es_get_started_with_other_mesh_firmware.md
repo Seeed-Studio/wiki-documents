@@ -1,6 +1,6 @@
 ---
 description: Guía para flashear el firmware MeshCore en el Wio Tracker L1 Pro mediante Web USB o arrastrar y soltar, junto con la configuración de la app para la región LoRa, GPS y envío de mensajes.
-title: Primeros pasos con Meshcore
+title: Guía de inicio de MeshCore en Wio Tracker L1 Pro
 keywords:
   - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp

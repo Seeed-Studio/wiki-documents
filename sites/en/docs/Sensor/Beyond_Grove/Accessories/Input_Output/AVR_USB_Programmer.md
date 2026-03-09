@@ -9,7 +9,7 @@ slug: /AVR_USB_Programmer
 last_update:
   date: 02/03/2022
   author: gunengyu
-createdAt: '2026-03-03'
+createdAt: '2022-02-03'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/AVR_USB_Programmer/
 ---

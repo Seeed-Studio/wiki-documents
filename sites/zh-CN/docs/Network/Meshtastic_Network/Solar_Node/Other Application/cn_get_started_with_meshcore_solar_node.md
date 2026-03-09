@@ -1,6 +1,6 @@
 ---
 description: 开始使用适用于 Meshcore 和 LoRa 的 SenseCAP 太阳能节点。指导设备安装、固件烧录和设备连接。
-title:  开始使用 Meshcore
+title: SenseCAP Solar Node MeshCore 入门指南
 keywords:
 - Meshcore
 - Solar

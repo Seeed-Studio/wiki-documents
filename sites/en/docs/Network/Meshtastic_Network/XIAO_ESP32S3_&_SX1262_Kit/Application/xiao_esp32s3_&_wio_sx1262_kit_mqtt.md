@@ -1,6 +1,6 @@
 ---
 description: Meshtastic MQTT Gateway Setting Tutorial based on XIAO ESP32S3 & Wio-SX1262 Kit. Enables global messaging, provides a backup when mesh signals are weak, and ensures faster message delivery via the internet. 
-title: Setting up MQTT Gateway
+title: Setting up an MQTT Gateway with XIAO ESP32S3 & Wio-SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
