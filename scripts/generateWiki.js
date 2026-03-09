@@ -117,6 +117,23 @@ function tryReadTitle(absFile) {
   }
 }
 
+// 提取文档时间：优先 createdAt，没有则回退到 last_update.date
+function extractDocDate(data) {
+  if (data.createdAt && !isNaN(new Date(data.createdAt).getTime())) {
+    return data.createdAt;
+  }
+
+  if (
+    data.last_update &&
+    data.last_update.date &&
+    !isNaN(new Date(data.last_update.date).getTime())
+  ) {
+    return data.last_update.date;
+  }
+
+  return null;
+}
+
 // 扫描英文文档
 function processDirectory(directory) {
   if (excludedPaths.includes(directory)) return;
@@ -138,14 +155,15 @@ function processDirectory(directory) {
       relPath = relPath.replace(/\.md$/i, ''); // 去掉 .md
 
       const slug = data.slug || relPath;
+      const docDate = extractDocDate(data);
 
-      if (data.last_update && data.last_update.date) {
+      if (docDate) {
         docList.push({
           path: slug.startsWith('/') ? slug : `/${slug}`,
           relPath,
           image: data.image || '',
           title,
-          date: data.last_update.date,
+          date: docDate,
         });
       }
     }

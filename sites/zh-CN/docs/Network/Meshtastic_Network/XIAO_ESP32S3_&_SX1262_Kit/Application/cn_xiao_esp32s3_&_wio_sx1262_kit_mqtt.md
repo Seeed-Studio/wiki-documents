@@ -1,6 +1,6 @@
 ---
 description: 基于 XIAO ESP32S3 和 Wio-SX1262 套件的 Meshtastic MQTT 网关设置教程。可实现全球消息通信，在网状网络信号较弱时提供备份，并通过互联网确保更快速的消息传递。
-title: 设置 MQTT 网关
+title: 使用 XIAO ESP32S3 & Wio-SX1262 Kit 搭建 MQTT 网关
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064

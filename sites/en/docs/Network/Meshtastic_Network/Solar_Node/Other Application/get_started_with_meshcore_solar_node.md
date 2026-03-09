@@ -1,6 +1,6 @@
 ---
 description: Get Started with SenseCAP Solar Node for Meshcore & LoRa.  Guiding for device installation, firmware flashing and device connection.
-title:  Get Started with Meshcore
+title: Get Started with MeshCore on SenseCAP Solar Node
 keywords:
 - Meshcore
 - Solar
