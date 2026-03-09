@@ -9,7 +9,7 @@ slug: /Scream_out_loud-110dBA_fixed_tone_Siren
 last_update:
   date: 02/03/2022
   author: gunengyu
-createdAt: '2026-03-03'
+createdAt: '2022-02-03'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/Scream_out_loud-110dBA_fixed_tone_Siren/
 ---

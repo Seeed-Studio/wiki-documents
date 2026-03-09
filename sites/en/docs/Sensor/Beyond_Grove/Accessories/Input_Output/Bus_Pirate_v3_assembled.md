@@ -10,7 +10,7 @@ sku: 102990041, 102990038
 last_update:
   date: 02/03/2022
   author: gunengyu
-createdAt: '2026-03-03'
+createdAt: '2022-02-03'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/Bus_Pirate_v3_assembled/
 ---

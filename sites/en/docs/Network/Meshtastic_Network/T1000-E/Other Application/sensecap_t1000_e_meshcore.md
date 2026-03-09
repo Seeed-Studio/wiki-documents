@@ -3,7 +3,7 @@ description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore. Guidin
 title: Get Started with MeshCore on SenseCAP T1000-E
 keywords:
   - Tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.webp
 slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
