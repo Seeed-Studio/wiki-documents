@@ -9,7 +9,7 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 3/4/2026
+  date: 3/6/2026
   author: Michelle Huang
 ---
 
@@ -35,7 +35,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) をクリックしてチュートリアルを参照してください。
+`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
@@ -47,7 +47,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 `Erase Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから再度 `Erase Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-"Flashing erase firmware:100%" と表示されれば、デバイスの消去は正常に完了しています。
+"Flashing erase firmware:100%" と表示されたら、デバイスの消去は正常に完了しています。
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
@@ -63,7 +63,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 `Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから再度 `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-進行バーが最後まで埋まれば、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後までいっぱいになったら、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -81,7 +81,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) をクリックしてチュートリアルを参照してください。
+`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してチュートリアルを参照してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
@@ -156,7 +156,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ4: 適切な位置にフープリングを取り付けます。
+- ステップ4: フープリングを適切な位置に取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -202,12 +202,12 @@ P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵さ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ3: ケースを組み立てます。
+- ステップ3: シェルを組み立てます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-デバイスの防水性を維持するため、ケースが正しく取り付けられ、ネジがしっかりと締め付けられていることを確認してください。
+シェルが正しく取り付けられ、ネジがしっかりと締め付けられていることを確認し、デバイスの防水性を維持してください。
 :::
 
 #### （オプション）アンテナのアップグレード
@@ -229,21 +229,22 @@ USB ケーブルを挿してもデバイスが反応しない場合は、まず�
 
 ### 設定
 
-[Click here](https://config.meshcore.dev/) からリピーターを設定します。
+- **ステップ1 初期設定**
+
+MeshCore を LoRa デバイスに初めて書き込む場合は、その国や地域で合法的に使用できる周波数を利用するために、サーバーデバイスの周波数を設定する必要があります。
+
+[ここをクリック](https://config.meshcore.dev/)してリピーターを設定します。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、あなたの地域に合わせて設定する必要があります。
-
-LoRa リージョンを変更して設定を保存します。その後デバイスを `**Reboot**` してください。そうしないと設定が有効になりません。
+LoRa リージョンを変更して設定を保存します。その後デバイスを `Reboot` してください。そうしないと設定は有効になりません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/LoRaSettingg.png" alt="pir" width={600} height="auto" /></p>
 
-
 **リージョン一覧**
 
-|**Region Code**|**説明**|**周波数帯域 (MHz)**|**デューティサイクル (%)**|**出力制限 (dBm)**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -252,23 +253,46 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、これは 1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、ローリング 1 時間ベースで毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa リージョンを設定したので、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
+- **ステップ2 アドバタイズ送信**
 
-### ルートの設定
+"send advert" をクリックして、他の Meshcore デバイスがこのリピーターを認識できるようにします。すると、デバイス一覧にリピーターが表示されます。
 
-リピーターをルートに追加する前に、まずリピーターを使用してアドバタイズを送信する必要がある場合があります。リピーターは一定間隔で自動的にアドバタイズを送信します。この間隔は数時間（デフォルトでは 3 時間）になることがあります。そのため、手動でアドバタイズを送信するか、そうでなければ待つ必要があります。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
+
+初期設定の後、クリックします。 
+
+- **ステップ3（オプション）管理者ログイン**
+
+リピーターのデフォルト管理者パスワードは `password` です。 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={600} height="auto" /></p>
+
+ログイン後、設定ページが表示されます。ここでリピーターの設定を調整できます。
+
+リピーターの位置を表示したい場合は、GPS を有効にすることができます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
+
+また、アドバタイズのブロードキャスト間隔を調整することもできます。`auto zero hop advert` の間隔範囲は 60〜240 分です。`auto flood advert` の間隔範囲は 3〜168 時間です。 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
+
+### パスの設定
+
+リピーターをルートに追加する前に、まずリピーターを使ってアドバタイズを送信する必要がある場合があります。リピーターは一定間隔で自動的にアドバタイズを送信します。この間隔は複数時間（デフォルトでは 3 時間）になることがあります。そのため、手動でアドバタイズを送信するか、そうでなければ待つ必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-メッセージ送信経路を手動で設定することができます。Bluetooth コンパニオンデバイスをスマートフォンのアプリに接続します。プライベートメッセージウィンドウを開きます。その後、検出されたリピーターを選択して経路を構成できます。
+メッセージ送信パスを手動で設定できます。Bluetooth コンパニオンデバイスをスマートフォンのアプリに接続します。プライベートメッセージウィンドウを開きます。その後、検出されたリピーターを選択してパスを構成できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-経路を設定すると、送信方式は「n hop」に変更されます。例えば、ルートに 1 台のリピーターを追加すると、1 hop に変更されます。
+パスを設定すると、伝送方式は「n hop」に変更されます。例えば、ルートにリピーターを 1 台追加すると、1 hop に変更されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -282,9 +306,9 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 
 - トラブルシューティング
 
-ファームウェアを書き直してください。
+ファームウェアを再書き込みするには、[ここをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)してください。
 
-### デバイスが文鎮化した場合
+### デバイスがブリックした
 
 #### 説明
 
@@ -300,7 +324,7 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
 :::
 
-**Step1: Adafruit-nrfutil のインストール**
+**ステップ2: Adafruit-nrfutil のインストール**
 
 **前提条件**
 
@@ -327,7 +351,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下のコマンドでは `python3` を使用していますが、Windows の場合は `python` に変更する必要があるかもしれません。これは、Windows 版の Python 3.x のインストールでは依然として python.exe という名前が使われているためです。
+注意：以下のコマンドは `python3` を使用していますが、Windows の場合は、Python 3.x のインストールでも実行ファイル名が python.exe のままなので、`python` に変更する必要があるかもしれません。
 
 ホームディレクトリのユーザースペースにインストールするには：
 
@@ -366,24 +390,24 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**Step2: ポート番号の確認**
+**ステップ2: ポート番号の確認**
 
 デバイスを PC に接続し、ポート番号を確認します。
 
 例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Step3: ブートローダーの書き込み**
+**ステップ3: ブートローダーの書き込み**
 
 ターミナルまたはコマンドプロンプトで、ブートローダーの zip パッケージをダウンロードしたディレクトリに移動し、次のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
 
-- **Windows の場合**：
+- **Windows の場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
 
-- **その他の場合**：
+- **その他の場合**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -391,15 +415,15 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順を完了したら、アプリケーションファームウェアを書き込むことができます。
+上記の手順を完了したら、[アプリケーションファームウェアを書き込む](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)ことができます。
 
 ### 信号品質
 
 - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。
 
-      最良の信号効果を得るために、開けた障害物の少ないエリアで、干渉が最小限となるようにデバイスを使用してください。
+      最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
 ## リソース
 - [Solar Node バッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
