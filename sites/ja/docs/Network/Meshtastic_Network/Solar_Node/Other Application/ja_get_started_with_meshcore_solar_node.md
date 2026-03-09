@@ -1,6 +1,6 @@
 ---
 description: Meshcore と LoRa 用 SenseCAP Solar Node の使用を開始します。デバイスの設置、ファームウェアの書き込み、デバイス接続について案内します。
-title:  Meshcore を使い始める
+title: SenseCAP Solar Node で始める MeshCore 入門
 keywords:
 - Meshcore
 - Solar
