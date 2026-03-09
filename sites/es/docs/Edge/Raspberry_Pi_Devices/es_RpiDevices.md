@@ -463,7 +463,7 @@ Kit de herramientas de interfaz de usuario de Google para crear aplicaciones des
 
 Framework ligero de Google para ejecutar modelos de ML en dispositivos móviles y de borde.
         </td>
-      </tr]
+      </tr>
       <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/nodered.png" style={{width:80, height:'auto'}}/></td>
         <td>
