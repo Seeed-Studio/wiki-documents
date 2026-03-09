@@ -11,7 +11,7 @@ const docList = [
     },
     {
       "path": "/sound_event_detection_module_home_assistant",
-      "image": "https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png",
+      "image": "https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png",
       "title": "Home Assistant and Sound Event Detection Module",
       "date": "2026-03-04",
       "title_cn": "Home Assistant 与声音事件检测模块",
@@ -101,22 +101,22 @@ const docList = [
   ],
   [
     {
-      "path": "/respeaker_xvf3800_agora_convo_client",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
-      "date": "2026-02-05",
-      "title_cn": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 边缘对话客户端部署指南",
-      "title_ja": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ音声対話クライアント デプロイガイド",
-      "title_es": "Guía de Despliegue del Cliente Conversacional en el Borde reSpeaker XVF3800 + Agora Conversational AI Agent v2"
+      "path": "/respeaker_xvf_3800_openclaw",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
+      "title": "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push",
+      "date": "2026-02-10",
+      "title_cn": "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送",
+      "title_ja": "ReSpeaker + OpenClaw: Lark グループスマート位置特定とインタラクティブ会議カードプッシュ",
+      "title_es": "ReSpeaker + OpenClaw: Localización Inteligente de Grupos Lark y Envío de Tarjetas de Reunión Interactivas"
     },
     {
-      "path": "/j501_mini_starai_viola_fruit_sorting",
-      "image": "https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png",
-      "title": "🍎 Fruit Sorting with J501 Mini and StarAI Viola Arm",
-      "date": "2026-02-02",
-      "title_cn": "🍎 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣",
-      "title_ja": "🍎 J501 MiniとStarAI Violaアームによるフルーツ仕分け",
-      "title_es": "🍎 Clasificación de Frutas con J501 Mini y Brazo StarAI Viola"
+      "path": "/respeaker_xvf3800_agora_ten_framework_client",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
+      "title": "reSpeaker XVF3800 + Agora ten-framework Edge Conversational Client Deployment Guide",
+      "date": "2026-02-09",
+      "title_cn": "reSpeaker XVF3800 + Agora ten-framework 边缘对话客户端部署指南",
+      "title_ja": "reSpeaker XVF3800 + Agora ten-framework エッジ対話クライアント デプロイガイド",
+      "title_es": "Guía de Despliegue del Cliente Conversacional en el Borde reSpeaker XVF3800 + Agora ten-framework"
     }
   ]
 ];
