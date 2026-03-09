@@ -2,12 +2,15 @@
 description: Seeed Arduino 串口
 title: Seeed Arduino 串口
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Arduino_Serial
 last_update:
   date: 1/16/2023
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeed_Arduino_Serial/
 ---
 串口通信为您的 Arduino 开发板与计算机和其他设备之间的交互提供了一种简单灵活的方式。实现串口通信涉及硬件和软件两个方面。硬件在 Arduino 和与其通信的设备之间提供电气信号传输。软件使用硬件发送连接设备能够理解的字节或位。
 

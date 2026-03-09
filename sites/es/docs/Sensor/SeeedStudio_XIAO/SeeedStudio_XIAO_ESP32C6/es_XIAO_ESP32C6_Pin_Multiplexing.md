@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 04/10/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_pin_multiplexing_esp32c6/
 ---
 
 # Programación Arduino con Seeed Studio XIAO ESP32C6

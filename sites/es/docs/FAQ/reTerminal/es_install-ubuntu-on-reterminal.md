@@ -6,6 +6,9 @@ slug: /install-ubuntu-on-reterminal
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/install-ubuntu-on-reterminal/
 ---
 
 <!-- Q10: ¿Cómo puedo instalar Ubuntu en reTerminal? -->

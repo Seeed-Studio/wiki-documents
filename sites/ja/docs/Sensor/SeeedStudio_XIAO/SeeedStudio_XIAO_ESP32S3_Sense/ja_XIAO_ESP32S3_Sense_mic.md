@@ -2,12 +2,15 @@
 description: この記事では、XIAO ESP32S3 Sense拡張ボードのマイクロフォンの使用方法について説明します。
 title: Senseバージョンのマイクロフォン使用方法
 keywords:
-- Template
+  - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_mic
 last_update:
   date: 04/14/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_mic/
 ---
 
 # Seeed Studio XIAO ESP32S3マイクロフォンの使用方法

@@ -2,13 +2,16 @@
 description: Grove - CO2 传感器
 title: Grove - CO2 传感器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_Sensor
 sku: 101020067
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-CO2_Sensor/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/img/Grove_CO2_Sensor.jpg) -->

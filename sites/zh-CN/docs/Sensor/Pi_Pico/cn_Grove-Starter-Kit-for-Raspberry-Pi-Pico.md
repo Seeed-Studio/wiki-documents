@@ -2,13 +2,16 @@
 description: Grove Shield / Grove 入门套件（适用于 Raspberry Pi Pico）
 title: Grove 基础套件（适用于 Raspberry Pi Pico）
 keywords:
-- Pi_Pico
+  - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Starter-Kit-for-Raspberry-Pi-Pico
 sku: 102110537, 110061282, 102110545, 103100142, 110061283
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
 
@@ -378,22 +381,22 @@ class DHT(object):
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-16x2-LCD-White-on-Blue.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
     </tr>
@@ -477,7 +480,7 @@ while True:
 | Pi Pico | Grove Shield for Pi Pico|  Grove-button |Grove-LED|Grove relay|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ledsocket.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/Thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[立即获取](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[立即获取](https://www.seeedstudio.com/Grove-Button-p-766.html)|[立即获取](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[立即获取](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 
 - 步骤 2. 将 Grove button 连接到 Base Shield 的数字引脚 18。
 - 步骤 3. 将 Grove LED 连接到 Base Shield 的 D16 端口。
@@ -525,7 +528,7 @@ while True:
 | Pi Pico | Grove Shield for Pi Pico|  RGB LED WS2813 mini |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/redrgb.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html)|
+|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[立即获取](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[立即获取](https://www.seeedstudio.com/Grove-RGB-LED-WS2813-Mini-p-4269.html)|
 
 - 步骤 2. 将 RGB LED WS2813 mini 连接到 Base Shield 的 18 号端口。
 - 步骤 3. 将 Grove Shield for Pi Pico 插到 Pi Pico 上。
@@ -590,7 +593,7 @@ led.rainbow_cycle(0)
 | Pi Pico | Grove Shield for Pi Pico| grove sound sensor |Grove light sensor|Grove-16x2 LCD|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Sound_Sensor/img/page_small_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16x2_LCD_Series/img/perspective.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|
+|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[立即获取](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[立即获取](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|[立即获取](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[立即获取](https://www.seeedstudio.com/Grove-16-x-2-LCD-Black-on-Yellow.html)|
 
 - 步骤 2. 将 Grove sound sensor 连接到 Base Shield 的模拟口 0。
 - 步骤 3. 将 Grove light 连接到 Base Shield 的 A1 口。
@@ -658,7 +661,7 @@ while True:
 | Pi Pico | Grove Shield for Pi Pico| grove servo |Grove Mini Fan|Grove mini pir motion sensor|
 |--------------|-------------|-----------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/groveminifan.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/minipir.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)|
+|[立即获取](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[立即获取](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[立即获取](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[立即获取](https://www.seeedstudio.com/Grove-Mini-Fan-p-1819.html)|[立即获取](https://www.seeedstudio.com/Grove-mini-PIR-motion-sensor-p-2930.html)|
 
 - 步骤 2. 将 Grove servo 连接到 Base Shield 的模拟口 1。
 - 步骤 3. 将 Grove Mini fan 连接到 Base Shield 的 D16 口。

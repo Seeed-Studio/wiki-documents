@@ -7,6 +7,9 @@ sku: E23010426,E24121301,E2025081502,E2025081503
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/
 ---
 
 # reTerminalでHome Assistantを始める

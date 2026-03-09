@@ -2,14 +2,17 @@
 description: SenseCraft Model Assistant Getting Start with Seeed Studio XIAO ESP32S3.
 title: SenseCraft Model Assistant with XIAO ESP32S3 (Sense)
 keywords:
-- esp32s3
-- xiao
-- tinyml
+  - esp32s3
+  - xiao
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_edgelab
 last_update:
   date: 10/04/2023
   author: LynnL4
+createdAt: '2023-04-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32s3_edgelab/
 ---
 
 # SenseCraft Model Assistant Getting Start with Seeed Studio XIAO ESP32S3

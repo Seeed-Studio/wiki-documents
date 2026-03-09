@@ -2,12 +2,15 @@
 description: 24GHz mmWave 人体静态存在
 title: 24GHz mmWave 人体静态存在
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR24HPB1
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2024-07-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Radar_MR24HPB1/
 ---
 
 # 24GHz mmWave 传感器 - 人体静态存在模块 (MR24HPB1)

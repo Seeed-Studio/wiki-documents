@@ -5,6 +5,9 @@ slug: /CyberDeck_Wio-Terminal
 last_update:
   date: 12/09/2024
   author: Eric Pan
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/CyberDeck_Wio-Terminal/
 ---
 
 # Tutorial de Monitor de PC con Wio Terminal - Estilo Cyberpunk

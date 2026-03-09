@@ -2,16 +2,19 @@
 title: Wifi HaLow を使用した AI リモート無線監視システム
 description: このwikiページでは、Wifi Halowを使用したAIリモート無線監視システムのデモを紹介します。ユーザー独自のシステムを構築するためのステップバイステップガイドです。
 keywords:
-    - Wifi Halow
-    - reCamera
-    - AI edge sensing
+  - Wifi Halow
+  - reCamera
+  - AI edge sensing
 slug: /ai_remote_wireless_monitor_system
 sku: 102991897, 110070108
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 2
 last_update:
-    date: 2025-11-19
-    author: John Xiang
+  date: 2025-11-19T00:00:00.000Z
+  author: John Xiang
+createdAt: '2025-11-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ai_remote_wireless_monitor_system/
 ---
 
 # reCamera と Wifi Halow に基づく AI リモート無線監視システム

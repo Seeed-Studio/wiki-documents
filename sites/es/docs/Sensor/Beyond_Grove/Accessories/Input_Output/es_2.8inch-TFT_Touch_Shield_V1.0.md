@@ -1,6 +1,6 @@
 ---
 title: 2.8inch TFT Touch Shield V1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /2.8inch-TFT_Touch_Shield_V1.0
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/2.8inch-TFT_Touch_Shield_V1.0/
 ---
 
 

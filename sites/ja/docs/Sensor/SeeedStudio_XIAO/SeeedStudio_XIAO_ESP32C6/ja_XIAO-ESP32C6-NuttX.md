@@ -2,12 +2,15 @@
 description: XIAO ESP32C6 With NuttX(RTOS)
 title: XIAO ESP32C6 With NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-ESP32C6-NuttX/nuttx.webp
 slug: /xiao_esp32c6_nuttx
 last_update:
-    date: 05/08/2025
-    author: rcsim
+  date: 05/08/2025
+  author: rcsim
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_nuttx/
 ---
 
 # Seeed Studio XIAO ESP32C6 と NuttX(RTOS)

@@ -2,12 +2,15 @@
 description: Codec-Adaptive Wireless Relay
 title: Codec-Adaptive Wireless Relay
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Codec-Adaptive_Wireless_Relay
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Codec-Adaptive_Wireless_Relay/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/315rfrelay.jpg)
 

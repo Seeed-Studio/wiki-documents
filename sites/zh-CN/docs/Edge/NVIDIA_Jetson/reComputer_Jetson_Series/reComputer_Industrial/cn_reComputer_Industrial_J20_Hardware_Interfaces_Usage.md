@@ -9,6 +9,9 @@ sku: 114993114
 last_update:
   date: 05/16/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_Industrial_J20_Hardware_Interfaces_Usage/
 ---
 
 本文档介绍了 reComputer Industrial J2012、J2011 上各种不同的硬件和接口，以及如何使用它们来扩展您的项目想法。

@@ -6,7 +6,10 @@ slug: /Use_External_Editor
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Use_External_Editor/
 ---
 
 <!-- ---

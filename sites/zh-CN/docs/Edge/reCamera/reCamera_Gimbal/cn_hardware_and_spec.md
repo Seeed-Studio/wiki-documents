@@ -15,6 +15,9 @@ sidebar_position: 2
 last_update:
   date: 03/27/2025
   author: Evelyn Chen
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recamera_gimbal_hardware_and_specs/
 ---
 
 # reCamera 云台概述

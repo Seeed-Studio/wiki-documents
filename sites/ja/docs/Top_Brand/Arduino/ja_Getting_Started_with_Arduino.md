@@ -2,12 +2,15 @@
 description: Arduinoの始め方
 title: Arduinoの始め方
 keywords:
-- Arduino
+  - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Arduino
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/
 ---
 
 

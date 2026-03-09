@@ -2,14 +2,17 @@
 description: I2S to CSV Converter with ReSpeaker Lite
 title: CSV Converter
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_print
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_streams_print/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Grove - 温度传感器
 title: Grove - 温度传感器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature_Sensor
 last_update:
   date: 1/3/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Temperature_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor/img/Temperature1.jpg" /></div>

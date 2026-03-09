@@ -2,13 +2,16 @@
 description: Seeeduino Mega Protoshield Kit
 title: Seeeduino Mega Protoshield Kit
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Mega_Protoshield_Kit
 sku: 110060001
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Mega_Protoshield_Kit/
 ---
 ![](https://www.seeedstudio.com/images/large/product/protomega_LRG.jpg)
 

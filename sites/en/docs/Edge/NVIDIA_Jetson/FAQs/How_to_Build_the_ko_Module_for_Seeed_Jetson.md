@@ -2,14 +2,17 @@
 description: How to Build the Driver Module for Seeed's Jetson BSP
 title: How to Build the Driver Module for Seeed's Jetson BSP
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_build_the_ko_module_for_seeed_jetson
 last_update:
   date: 09/24/2025
   author: Dayu
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/how_to_build_the_ko_module_for_seeed_jetson/
 ---
 
 

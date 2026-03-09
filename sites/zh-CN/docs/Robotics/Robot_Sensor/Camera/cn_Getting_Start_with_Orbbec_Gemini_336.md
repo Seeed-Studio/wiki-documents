@@ -2,21 +2,24 @@
 description: Show people how to use Orbbec Gemini 336.
 title: Orbbec Gemini336 深度相机
 keywords:
-- Jetson
-- reComputer Robotics
-- Computer Vision
-- Autonomous Driving
-- Industrial Robot
-- Orbbec
-- AI Camera
-- Stereo Camera
-- Depth Camera
-- Visual SLAM
+  - Jetson
+  - reComputer Robotics
+  - Computer Vision
+  - Autonomous Driving
+  - Industrial Robot
+  - Orbbec
+  - AI Camera
+  - Stereo Camera
+  - Depth Camera
+  - Visual SLAM
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp
 slug: /orbbec_gemini336
 last_update:
   date: 2025-12-1
   author: yaohui
+createdAt: '2025-12-02'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/orbbec_gemini336/
 ---
 
 <div align="center">
@@ -29,7 +32,7 @@ Gemini 336是Gemini 330系列的全新成员，延续Gemini335出色的深度效
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
 ## 特征

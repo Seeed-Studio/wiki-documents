@@ -7,6 +7,9 @@ sku: 102110701,102110859
 last_update:
   date: 10/13/2023
   author: Xogium
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ODYSSEY-STM32MP135D/
 ---
 
 # ODYSSEY – STM32MP135D 入门指南

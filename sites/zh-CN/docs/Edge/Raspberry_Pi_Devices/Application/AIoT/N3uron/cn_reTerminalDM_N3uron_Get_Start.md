@@ -5,13 +5,16 @@ keywords:
   - reTerminal DM
   - Getting started
   - IIoT
-  - Industrial 
+  - Industrial
   - N3uron
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminalDM_N3uron_Get_Start
 last_update:
   date: 2/27/2024
   author: Xabier Fernández and Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_Get_Start/
 ---
 
 ## 什么是 N3uron？

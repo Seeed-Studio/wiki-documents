@@ -1,6 +1,6 @@
 ---
 title: Grove - 433MHz 简单射频链路套件
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113060000
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-433MHz_Simple_RF_Link_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-433MHz_Simple_RF_Link_Kit/img/433MHz_Simple_RF.jpg)

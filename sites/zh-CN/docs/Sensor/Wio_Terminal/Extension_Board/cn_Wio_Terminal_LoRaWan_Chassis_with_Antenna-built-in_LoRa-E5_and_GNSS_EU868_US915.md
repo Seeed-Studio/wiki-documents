@@ -2,12 +2,15 @@
 description: Wio Terminal LoRaWan 底盘，内置天线的 LoRa-E5 和 GNSS，EU868/US915
 title: Wio Terminal LoRaWan 底盘，内置天线的 LoRa-E5 和 GNSS，EU868/US915
 keywords:
-- Wio_terminal Extension_Board
+  - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915/
 ---
 
 

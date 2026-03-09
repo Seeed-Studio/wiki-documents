@@ -2,13 +2,16 @@
 description: LinkIt Smart 7688 Duo 的 Arduino 扩展板
 title: LinkIt Smart 7688 Duo 的 Arduino 扩展板
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino_Breakout_for_LinkIt_Smart_7688_Duo
 sku: 103030033
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/
 ---
 
 :::danger

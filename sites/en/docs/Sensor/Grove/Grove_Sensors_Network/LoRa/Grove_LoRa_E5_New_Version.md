@@ -12,6 +12,9 @@ sku: 113020091
 last_update:
   date: 07/25/2024
   author: Spencer
+createdAt: '2024-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/
 ---
 
 <div class="table-center">

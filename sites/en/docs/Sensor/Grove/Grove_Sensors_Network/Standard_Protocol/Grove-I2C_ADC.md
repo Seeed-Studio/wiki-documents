@@ -1,6 +1,6 @@
 ---
 title: Grove- I2C ADC
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020013
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2022-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-I2C_ADC/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-RGB-LED-Stick-20-WS2813-Mini/img/ssd.jpg)

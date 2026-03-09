@@ -2,14 +2,17 @@
 description: 从 Watcher 发送消息到 Node-RED
 title: Watcher 到 Node-RED
 keywords:
-- watcher
-- Node-Red
+  - watcher
+  - Node-Red
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/cover.png
 slug: /watcher_to_node_red
 sidebar_position: 1
 last_update:
   date: 06/28/2024
   author: Allen
+createdAt: '2024-07-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher_to_node_red/
 ---
 
 # Watcher 到 Node-RED 快速入门

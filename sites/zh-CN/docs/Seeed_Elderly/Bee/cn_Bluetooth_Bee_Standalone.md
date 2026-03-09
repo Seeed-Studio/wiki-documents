@@ -2,12 +2,15 @@
 description: 蓝牙 Bee
 title: 蓝牙 Bee
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_Bee_Standalone
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Bluetooth_Bee_Standalone/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_Standalone/img/P3302883_02.jpg)

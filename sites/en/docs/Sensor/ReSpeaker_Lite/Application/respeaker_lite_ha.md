@@ -2,16 +2,19 @@
 description: Voice Assistant System for Home Assitant
 title: Voice Assistant System for Home Assitant
 keywords:
-- ESP32S3
-- XIAO
-- reSpeaker
-- Home Assistant
+  - ESP32S3
+  - XIAO
+  - reSpeaker
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
   date: 2/11/2026
   author: Kasun Thushara
+createdAt: '2024-04-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_lite_ha/
 ---
 
 In this tutorial, you will learn how to configure your ReSpeaker Lite to work with Home Assistant.You will learn how to flash the required firmware and how to compile and upload the YAML file.After that, you will be able to control and automate your home appliances using your voice.Just say “Okay Nabu” and start talking to your home.

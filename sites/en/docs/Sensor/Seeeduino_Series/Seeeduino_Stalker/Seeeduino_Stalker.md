@@ -2,12 +2,15 @@
 description: Seeeduino Stalker
 title: Seeeduino Stalker
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Stalker/
 ---
 
 **Seeeduino Stalker** is a feature rich Arduino compatible **Wireless Sensor Network node** with **Data logger functionality**. Its modular structure and onboard peripherals makes it convenient to log time stamped sensor data on a periodic basis. **Seeeduino Stalker** comes with a _Temperature sensor, RTC with backup power, SD Card Socket, Bee Socket and Solar LiPoimer Ion Battery Charger_. The **Seeeduino Stalker** is a good candidate for all your tracking, monitoring and control projects.

@@ -1,6 +1,6 @@
 ---
 title: 3.6V 微型水力发电机
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /3.6V_Micro_hydro_generator
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/3.6V_Micro_hydro_generator/
 ---
 ![https://www.seeedstudio.com/depot/images/large/product/mhg_01_LRG.jpg](http://bz.seeedstudio.com/depot/images/large/product/mhg_01_LRG.jpg)
 

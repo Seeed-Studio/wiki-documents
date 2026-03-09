@@ -2,13 +2,16 @@
 description: Connect_to_The_Things_Network
 title: Heliumに接続
 keywords:
-- SenseCAP_T1000_tracker
-- Helium
+  - SenseCAP_T1000_tracker
+  - Helium
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker.webp
 slug: /SenseCAP_T1000_tracker_Helium
 last_update:
   date: 11/22/2024
   author: Jessie
+createdAt: '2023-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_Helium/
 ---
 
 # SenseCAP T1000をHeliumに接続

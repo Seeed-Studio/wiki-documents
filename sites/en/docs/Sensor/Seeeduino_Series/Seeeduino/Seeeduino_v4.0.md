@@ -2,13 +2,16 @@
 description: Seeeduino v4.0
 title: Seeeduino v4.0
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_v4.0
 sku: 102010004
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_v4.0/
 ---
 
 <!-- <p style="text-align:center"><a href=target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/ARD128D2P_1_02.jpg" border=0 /></a></p>  -->

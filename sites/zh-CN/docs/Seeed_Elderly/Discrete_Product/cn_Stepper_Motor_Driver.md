@@ -2,12 +2,15 @@
 description: 步进电机驱动器
 title: 步进电机驱动器
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Stepper_Motor_Driver
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Stepper_Motor_Driver/
 ---
 ![](https://files.seeedstudio.com/wiki/Stepper_Motor_Driver/img/Motorshield.jpg)
 

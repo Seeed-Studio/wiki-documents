@@ -7,6 +7,9 @@ sku: 114992986
 last_update:
   date: 11/20/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/
 ---
 
 <!-- Esta wiki ha sido dividida en 3 partes. -->

@@ -6,6 +6,9 @@ slug: /check_Encryption_Chip
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/check_Encryption_Chip/
 ---
 
 <!-- Q14: 如何检查加密芯片是 ATECC608A-SSHDA-B 还是 ATECC608A-TNGTLSS-G -->

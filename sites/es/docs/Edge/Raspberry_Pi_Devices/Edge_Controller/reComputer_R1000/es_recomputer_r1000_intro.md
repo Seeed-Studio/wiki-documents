@@ -2,14 +2,17 @@
 description: El controlador IoT edge reComputer R1000, alimentado por Raspberry Pi CM4, cuenta con un procesador quad-core A72, Ethernet dual, y múltiples canales RS485 que soportan BACnet, Modbus RTU, y Modbus TCP/IP. Con opciones inalámbricas versátiles incluyendo 4G, LoRa®, y Wi-Fi/BLE, es ideal para gestión remota de dispositivos y energía en aplicaciones de edificios inteligentes.
 title: Recorrido del reComputer R1000
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1000
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_intro
 last_update:
   date: 10/08/2024
   author: Kasun Thushara
+createdAt: '2024-07-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1000_intro/
 ---
 
 El controlador IoT edge reComputer R1000, alimentado por Raspberry Pi CM4, cuenta con un procesador quad-core A72, Ethernet dual, y múltiples canales RS485 que soportan BACnet, Modbus RTU, y Modbus TCP/IP. Con opciones inalámbricas versátiles incluyendo 4G, LoRa®, y Wi-Fi/BLE, asegura comunicación robusta de red IoT. Ideal para gestión remota de dispositivos y energía, el R1000 es perfecto para aplicaciones de edificios inteligentes.

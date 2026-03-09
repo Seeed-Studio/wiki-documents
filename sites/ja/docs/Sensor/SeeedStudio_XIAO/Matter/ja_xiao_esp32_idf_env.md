@@ -2,13 +2,16 @@
 description: IDF環境のインストールと設定方法を紹介します。
 title: Espressif ESP-IDFを使用したXIAOでの開発
 keywords:
-- ESP-IDF
-- XIAO
+  - ESP-IDF
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_idf
 last_update:
   date: 05/09/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_idf/
 ---
 
 # Espressif ESP-IDFを使用したXIAOでの開発

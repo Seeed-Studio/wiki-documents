@@ -2,17 +2,20 @@
 description: このwikiでは、Jetsonプラットフォームをベースとした音声制御モーターソリューションを紹介し、必要なハードウェア、接続方法、ソフトウェア展開手順について詳しく説明します。
 title: JetsonでのVoice LLMによるモーター制御
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Motor
-- Qwen
-- Function Calling
+  - reComputer
+  - Jetson
+  - LLM
+  - Motor
+  - Qwen
+  - Function Calling
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /control_motor_by_voice_llm_on_jetson
 last_update:
   date: 08/19/2025
   author: Youjiang
+createdAt: '2025-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/control_motor_by_voice_llm_on_jetson/
 ---
 
 

@@ -7,9 +7,12 @@ keywords:
   - XIAO
   - MG24
 last_update:
-  date: 11/20/2024 
+  date: 11/20/2024
   author: Jason
 sidebar_position: 1
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_built_in_sensor/
 ---
 
 # Seeed Studio XIAO nRF54L15 Sense 内置传感器使用指南

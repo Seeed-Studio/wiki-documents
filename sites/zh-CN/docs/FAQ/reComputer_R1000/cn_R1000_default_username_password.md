@@ -3,9 +3,12 @@ description: reComputer R1000-常见问题解答
 title: 默认用户 "recomputer" 的密码是什么？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /R1000_default_username_password
-last_update: 
+last_update:
   date: 2024/6/21
   author: Harrison Xu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/R1000_default_username_password/
 ---
 
 <!-- ### Q1: 默认用户 "recomputer" 的密码是什么？ -->

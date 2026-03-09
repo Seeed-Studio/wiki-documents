@@ -2,14 +2,17 @@
 description: This wiki provides a tutorial on how to use NVStreamer for RTSP video streaming on reComputer Jetson.
 title: Getting Started with NVStreamer
 keywords:
-- reComputer
-- NVStreamer
-- RTSP
+  - reComputer
+  - NVStreamer
+  - RTSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /getting_started_with_nvstreamer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2024-07-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_with_nvstreamer/
 ---
 # How to Use NVStreamer for RTSP Streaming on reComputer with Jetson Platform Services
 

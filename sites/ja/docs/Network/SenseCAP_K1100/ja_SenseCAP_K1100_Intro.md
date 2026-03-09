@@ -2,13 +2,16 @@
 description: SenseCAP K1100 ガイド - センサープロトタイプキット
 title: SenseCAP K1100 ガイド - センサープロトタイプキット
 keywords:
-- SenseCAP Gateway
+  - SenseCAP Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_K1100_Intro
 sku: 110991748
 last_update:
   date: 05/15/2025
   author: Frank
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_K1100_Intro/
 ---
 
 

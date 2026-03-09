@@ -2,12 +2,15 @@
 description: Air602 固件烧录手册
 title: Air602 固件烧录手册
 keywords:
-- Air602_WiFi_Development_Board
+  - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Air602_Firmware_Programming_Manual
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Air602_Firmware_Programming_Manual/
 ---
 
 

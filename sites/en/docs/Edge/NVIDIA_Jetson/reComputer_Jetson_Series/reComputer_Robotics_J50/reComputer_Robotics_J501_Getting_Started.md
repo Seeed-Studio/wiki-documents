@@ -14,6 +14,9 @@ sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 12/09/2025
   author: Lorraine
+createdAt: '2026-01-12'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
 # Robotics J501 Hardware and Getting Started
@@ -282,14 +285,14 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={4}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">Download</a></td>
-      <td>ed82745decdf554d82bd93441f1f4ad<br/>149f395a4ba5719664ce2351be8201522  </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAXbYCZzHpuRYt4WJFhzqLJAUxZVvEo8cq4OVmZZmEE82E?e=IZ6csg">Download</a></td>
+      <td>46167c63566fa07d9882be338becd44<br/>7021c8fc0a73da18d0291c414cf5c6f4a  </td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">Download</a></td>
-      <td>58fa8b76754449b0a49ad7d5f273edd<br/>f3e1d1f458cdb34994f6d8643da7a1249 </td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAWnjh2iWzeRI1rKN5Bb_HxAX3P3GxPMHSb-60VmCPCgx4?e=a5yyXH">Download</a></td>
+      <td>e868fd8c7ad05d3acc8c9808f42e1835<br/>28f11df14f48cb6ae16464adb4f23d1f </td>
     </tr>
   </tbody>
 </table>

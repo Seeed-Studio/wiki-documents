@@ -2,14 +2,17 @@
 description: Guía sobre cómo ir desde conjuntos de datos propios, etiquetado, entrenamiento y despliegue hasta Grove Vision AI V2.
 title: Desplegando Modelos desde Conjuntos de Datos hasta Grove Vision AI V2
 keywords:
-- SSCMA
-- Vision AI
+  - SSCMA
+  - Vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_sscma
 sku: 101021112,E23011220,104990982
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/
 ---
 
 

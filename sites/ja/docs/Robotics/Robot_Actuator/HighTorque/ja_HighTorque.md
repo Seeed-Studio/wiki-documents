@@ -2,16 +2,19 @@
 description: この文書では、HighTorqueシリーズモーターの素早い開始方法を紹介します。
 title: HighTorqueシリーズモーター
 keywords:
-- Joint Module
-- Motor
-- Robotics
-- Robotic Arm
+  - Joint Module
+  - Motor
+  - Robotics
+  - Robotic Arm
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_series
 sku: 114090071,114090072
 last_update:
   date: 06/24/2025
   author: ZhuYaoHui
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/hightorque_series/
 ---
 
 # HighTorqueシリーズモーターユーザーマニュアル

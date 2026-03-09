@@ -2,13 +2,16 @@
 description: 基于 LVGL 编码或使用 Squareline Studio 制作您自己的 UI
 title: 如何创建您自己的 UI
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_How_to_Create_your_own_UI/
 ---
 # **如何创建您自己的 UI**
 

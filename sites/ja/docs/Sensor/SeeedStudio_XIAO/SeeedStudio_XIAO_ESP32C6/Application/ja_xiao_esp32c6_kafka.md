@@ -2,12 +2,15 @@
 description: XIAO ESP32C6とセンサーを使用してデータを収集し、Apache Kafkaに送信する
 title: Apache Kafkaを活用したリアルタイムIoTデータ処理ノード
 keywords:
-- xiao esp32c6
+  - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32c6_kafka
 last_update:
   date: 05/21/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_kafka/
 ---
 
 <div class="table-center">

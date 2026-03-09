@@ -2,12 +2,15 @@
 description: モデルアシスタント用エクスポート
 title: PyTorchからTFLiteへの変換
 keywords:
-- sscma モデルアシスタント AI tinyml 
+  - sscma モデルアシスタント AI tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ModelAssistant_Tutorials_Export_PyTorch_2_TFLite
 last_update:
   date: 05/15/2025
   author: LynnL4
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ModelAssistant_Tutorials_Export_PyTorch_2_TFLite/
 ---
 
 

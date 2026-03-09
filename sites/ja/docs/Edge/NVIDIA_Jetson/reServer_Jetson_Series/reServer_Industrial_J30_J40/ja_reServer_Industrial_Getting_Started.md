@@ -2,37 +2,40 @@
 description: reServer Industrial 入門ガイド
 title: reServer Industrial 入門ガイド
 keywords:
-- reServer
+  - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reServer_Industrial_Getting_Started
 sku: 114110247,114110248,114110250,114110249
 last_update:
   date: 09/22/2023
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/reServer_Industrial_Getting_Started/
 ---
 
-# reServer Industrial 入門ガイド
+# reServer Industrial を使い始める
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png"/></div>
 
-reServer Industrial シリーズは、NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載したファンレス、コンパクト、AI対応NVR（ネットワークビデオレコーダー）サーバーを提供し、20 TOPSから100 TOPSまでのAI性能を実現します。reServer Industrial は JetPack 5.1.1 がプリインストールされており、開発を簡素化し、強力なAI機能と組み合わせたVMS（ビデオ管理システム）の構築に最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの業界にデジタル変革をもたらします。
+reServer Industrial シリーズは、NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載したファンレスでコンパクトな AI 対応 NVR（Network Video Recorder）サーバーを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。reServer Industrial は Jetpack 5.1.1 をプリインストールしており、開発を簡素化し、強力な AI 機能とともに VMS（Video Management System）を構築するのに最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの産業分野におけるデジタル変革をもたらします。
 
-reServer Industrial は、パッシブヒートシンクとファンレス設計を採用しており、過酷な環境での使用に最適です。パッシブヒートシンクにより、ファンを必要とせずに効率的な冷却が可能で、ほこりやその他の汚染物質による部品故障のリスクを軽減します。ファンレス設計により、騒音レベルと消費電力も削減され、騒音に敏感な環境での使用に適し、エネルギーコストを最小限に抑えます。
+reServer Industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを必要とせず効率的な冷却が可能となり、ほこりやその他の汚染物質による部品故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、騒音に敏感な環境での使用に適しており、エネルギーコストの最小化にもつながります。
 
-reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち4つはIPカメラなどのデバイスにイーサネット経由で電力を供給するPoE PSEポートです。これにより、別の電源が不要になり、電源コンセントが容易に利用できない場所でのネットワークデバイスの展開が簡単になります。残りのGbEポートは、ネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
+reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給します。これにより別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。残りの GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
-## 特徴
+## 特長
 
-- **ファンレス コンパクト エッジAIサーバー：** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載、20 TOPSから100 TOPSまでのAI性能、0.7m/sの気流で-20～60°Cの広い温度範囲
-- **マルチストリーム処理：** 5× GbE RJ45（4つは802.3af PSE）、リアルタイム処理で複数のストリームを処理
-- **拡張可能ストレージ：** 2.5" SATA HDD/SSD用の2つのドライブベイ、NVMe SSD用のM.2 2280ソケット
-- **産業用インターフェース：** COMポート、DI/DOポート、CANポート、USB 3.1、オプションのTPM2.0モジュールを含む
-- **ハイブリッド接続：** Nano SIMカードスロット付きで5G/4G/LTE/LoRaWAN®（モジュールオプション）をサポート
+- **ファンレスコンパクト Edge AI サーバー：** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載し、20 TOPS から 100 TOPS までの AI 性能を実現、動作温度範囲は -20 ～ 60°C（0.7m/s の気流条件）
+- **マルチストリーム処理：** 5× GbE RJ45（うち 4 ポートは 802.3af PSE）、複数ストリームをリアルタイム処理
+- **拡張可能なストレージ：** 2.5" SATA HDD/SSD 用の 2 つのドライブベイに加え、NVMe SSD 用の M.2 2280 ソケットを搭載
+- **産業用インターフェース：** COM ポート、DI/DO ポート、CAN ポート、USB 3.1、およびオプションの TPM2.0 モジュールを搭載
+- **ハイブリッド接続性：** Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
 - **認証：** FCC、CE、UKCA、ROHS、KC
 
 ## 仕様
@@ -64,7 +67,7 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td rowSpan={6}>プロセッサー<br />システム</td>
-      <td>AI性能</td>
+      <td>AI 性能</td>
       <td>100 TOPS</td>
       <td>70 TOPS</td>
       <td>40 TOPS</td>
@@ -72,30 +75,30 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td>GPU</td>
-      <td colSpan={3}>1024コア NVIDIA Ampere アーキテクチャ GPU、32 Tensor コア </td>
-      <td>512コア NVIDIA Ampere アーキテクチャ GPU、16 Tensor コア</td>
+      <td colSpan={3}>32 個の Tensor コアを備えた 1024 コア NVIDIA Ampere アーキテクチャ GPU </td>
+      <td>16 個の Tensor コアを備えた 512 コア NVIDIA Ampere アーキテクチャ GPU</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8コア Arm® Cortex®-A78AE v8.2 64ビット CPU; 2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>6コア Arm® Cortex®-A78AE v8.2 64ビット CPU 1.5MB L2 + 4MB L3</td>
+      <td>8 コア Arm® Cortex®-A78AE v8.2 64-bit CPU、2MB L2 + 4MB L3 </td>
+      <td colSpan={3}>6 コア Arm® Cortex®-A78AE v8.2 64-bit CPU、1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>メモリ</td>
-      <td>16GB 128ビット LPDDR5 102.4GB/s</td>
-      <td>8GB 128ビット LPDDR5 102.4GB/s</td>
-      <td>8GB 128ビット LPDDR5 68 GB/s</td>
-      <td>4GB 64ビット LPDDR5 34 GB/s</td>
+      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 68 GB/s</td>
+      <td>4GB 64-bit LPDDR5 34 GB/s</td>
     </tr>
     <tr>
       <td>ビデオエンコード</td>
-      <td colSpan={2}>サポート規格: H.265 (HEVC), H.264, AV1 1×4K60 (H.265) | 3×4K30 (H.265) | 6×1080p60 (H.265) | 12×1080p30 (H.265)</td>
-      <td colSpan={2}>1080p30 は1-2 CPUコアでサポート </td>
+      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, AV1 1×4K60 (H.265) | 3×4K30 (H.265) | 6×1080p60 (H.265) | 12×1080p30 (H.265)</td>
+      <td colSpan={2}>1～2 個の CPU コアで 1080p30 をサポート </td>
     </tr>
     <tr>
       <td>ビデオデコード</td>
-      <td colSpan={2}>サポート規格: H.265 (HEVC), H.264, VP9, AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
-      <td colSpan={2}>サポート規格: H.265 (HEVC), H.264, VP9, AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
+      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, VP9, AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
+      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, VP9, AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
     </tr>
     <tr>
       <td rowSpan={2}>ストレージ</td>
@@ -104,11 +107,11 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td>拡張</td>
-      <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD (M.2 NVMe SSD 128G 付属)</td>
+      <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD（M.2 NVMe SSD 128G 付属）</td>
     </tr>
     <tr>
       <td rowSpan={9}>I/O</td>
-      <td>イーサネット</td>
+      <td>Ethernet</td>
       <td colSpan={4}>1× LAN0 RJ45 GbE (10/100/1000Mbps)</td>
     </tr>
     <tr>
@@ -117,11 +120,11 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={4}>4× USB3.1, 1× USB2.0 Type C(デバイスモード), 1× USB2.0 Type C デバッグUART & RP2040用</td>
+      <td colSpan={4}>4× USB3.1、1× USB2.0 Type C（デバイスモード）、1× USB2.0 Type C（Debug UART &amp; RP2040 用）</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td colSpan={4}>4×DI,4×DO,3×GND_DI,2×GND_DO,1×GND_ISO,1×CAN</td>
+      <td colSpan={4}>4×DI、4×DO、3×GND_DI、2×GND_DO、1×GND_ISO、1×CAN</td>
     </tr>
     <tr>
       <td>COM</td>
@@ -129,53 +132,53 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td>ディスプレイ</td>
-      <td colSpan={2}>1×HDMI 2.1 Type A 7680x4320 30 Hz</td>
-      <td colSpan={2}>1×HDMI 1.4 Type A 3840x2160 30 Hz</td>
+      <td colSpan={2}>1×HDMI 2.1 Type A 7680x4320 @ 30 Hz</td>
+      <td colSpan={2}>1×HDMI 1.4 Type A 3840x2160 @ 30 Hz</td>
     </tr>
     <tr>
       <td>SATA</td>
-      <td colSpan={4}>2.5" SATA HDD/SSD対応の2つのドライブベイ(SATA III 6.0Gbps)</td>
+      <td colSpan={4}>2.5" SATA HDD/SSD（SATA III 6.0Gbps）をサポートする 2 つのドライブベイ</td>
     </tr>
     <tr>
       <td>SIM</td>
-      <td colSpan={4}>1× Nano SIMカードスロット</td>
+      <td colSpan={4}>1× Nano SIM カードスロット</td>
     </tr>
     <tr>
       <td>ボタン</td>
-      <td colSpan={4}>リセットボタン、リカバリーボタン</td>
+      <td colSpan={4}>リセットボタン、リカバリボタン</td>
     </tr>
     <tr>
       <td rowSpan={5}>拡張</td>
       <td>Mini PCIe</td>
-      <td colSpan={4}>LoRaWAN®/4G/シリーズワイヤレス用Mini PCIe (モジュールオプション)</td>
+      <td colSpan={4}>LoRaWAN®/4G/シリーズ無線用 Mini PCIe（モジュールはオプション）</td>
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td colSpan={4}>M.2 Key B (3042/3052) 4G/5G対応 (モジュールオプション) </td>
+      <td colSpan={4}>M.2 Key B (3042/3052) 4G/5G をサポート（モジュールはオプション） </td>
     </tr>
     <tr>
       <td>ファン</td>
-      <td colSpan={4}>ファンレス、パッシブヒートシンク; 1×ファンコネクタ(5V PWM)</td>
+      <td colSpan={4}>ファンレス、パッシブヒートシンク；1×ファンコネクタ（5V PWM）</td>
     </tr>
     <tr>
       <td>TPM</td>
-      <td colSpan={4}>1× TPM 2.0 コネクタ (モジュールオプション)</td>
+      <td colSpan={4}>1× TPM 2.0 コネクタ（モジュールはオプション）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={4}>1× RTCソケット (CR1220 付属),×RTC 2ピン</td>
+      <td colSpan={4}>1× RTC ソケット（CR1220 付属）、×RTC 2 ピン</td>
     </tr>
     <tr>
       <td rowSpan={2}>電源</td>
-      <td>電源供給</td>
-      <td colSpan={4}>DC 12V-36V ターミナルブロック 2ピン</td>
+      <td>電源入力</td>
+      <td colSpan={4}>DC 12V-36V 2 ピン端子台</td>
     </tr>
     <tr>
-      <td>電源アダプタ</td>
-      <td colSpan={4}>24V /5A 電源アダプタ(電源コード別売)</td>
+      <td>電源アダプター</td>
+      <td colSpan={4}>24V /5A 電源アダプター（電源コードなし）</td>
     </tr>
     <tr>
-      <td rowSpan={9}>機械的仕様</td>
+      <td rowSpan={9}>機構</td>
       <td>寸法 (W x D x H)</td>
       <td colSpan={4}>194.33mm×187mm×95.5mm</td>
     </tr>
@@ -184,36 +187,36 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
       <td colSpan={4}>2.8kg</td>
     </tr>
     <tr>
-      <td>設置</td>
-      <td colSpan={4}>デスク、DINレール、VESA</td>
+      <td>設置方法</td>
+      <td colSpan={4}>デスク、DIN レール、VESA</td>
     </tr>
     <tr>
       <td>動作温度</td>
-      <td colSpan={4}>-20 ~ 60°C (0.7m/s気流)</td>
+      <td colSpan={4}>-20 ～ 60°C（0.7m/s 条件）</td>
     </tr>
     <tr>
       <td>動作湿度</td>
-      <td colSpan={4}>95% @ 40 °C (結露なし)</td>
+      <td colSpan={4}>95% @ 40 °C（結露なきこと）</td>
     </tr>
     <tr>
-      <td>保存温度</td>
-      <td colSpan={4}>-40 ~ 85°C</td>
+      <td>保管温度</td>
+      <td colSpan={4}>-40 ～ 85°C</td>
     </tr>
     <tr>
-      <td>保存湿度</td>
-      <td colSpan={4}>60°C@ 95% RH(結露なし)</td>
+      <td>保管湿度</td>
+      <td colSpan={4}>60°C@ 95% RH（結露なきこと）</td>
     </tr>
     <tr>
       <td>振動</td>
-      <td colSpan={4}>3 Grms @ 5 ~ 500 Hz, ランダム, 1 時間/軸</td>
+      <td colSpan={4}>3 Grms @ 5 ～ 500 Hz、ランダム、1 時間/軸</td>
     </tr>
     <tr>
       <td>衝撃</td>
-      <td colSpan={4}>50G ピーク加速度 (11 msec. 持続時間,eMMC,microSD, または mSATA)</td>
+      <td colSpan={4}>50G ピーク加速度（11 msec. 継続時間、eMMC、microSD、または mSATA）</td>
     </tr>
     <tr>
       <td colSpan={2}>OS</td>
-      <td colSpan={4}>JetPack 5.1.1 (以上) プリインストール (ボードサポートパッケージ付きLinux OSを提供) </td>
+      <td colSpan={4}>Jetpack 5.1.1（以上）をプリインストール（ボードサポートパッケージ付き Linux OS を提供） </td>
     </tr>
     <tr>
       <td colSpan={2}>認証</td>
@@ -221,14 +224,14 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
     </tr>
     <tr>
       <td colSpan={2}>保証</td>
-      <td colSpan={4}>2年</td>
+      <td colSpan={4}>2 年</td>
     </tr>
   </tbody>
 </table>
 
 ## ハードウェア概要
 
-### フルシステム
+### システム全体
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
 
@@ -236,56 +239,56 @@ reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
 
-## JetPack のフラッシュ
+## JetPack をフラッシュする
 
 :::danger
-デバイスには JetPack 5.1.1 がプリインストールされています。特別な要件がない限り、システムを再フラッシュする必要はありません。
+本製品には JetPack 5.1.1 がプリインストールされています。特別な要件がない限り、システムを再フラッシュする必要はありません。
 :::
 
-reServer Industrial には、必要なドライバーと共に JetPack 5.1.1 が128GB SSDにプリインストールされています。これには、CUDA、CUDNN、TensorRT などのSDKコンポーネントが含まれています。ただし、付属のSSDまたは新しいSSDにJetPackを再フラッシュしたい場合は、以下の手順に従ってください。現在、JP5.1.1のガイダンスのみを提供しており、今後も継続的に更新していく予定です。
+reServer Industrial には、必要なドライバーとともに JetPack 5.1.1 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD または新しい SSD に Jetpack を再フラッシュしたい場合は、以下の手順に従うことができます。現在、JP5.1.1 向けのガイドのみを提供しており、今後も随時更新していきます。
 
 :::note
-reServer Industrial でSSDを使用する場合は、Seeedの[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、[1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)バージョンのみを選択することをお勧めします。
+reServer Industrial で SSD を使用したい場合は、Seeed の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、および [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) バージョンのみを選択することを推奨します。
 :::
 
 ### 前提条件
 
-reServer Industrialを始める前に、以下のハードウェアを準備する必要があります
+reServer Industrial を使い始める前に、以下のハードウェアを準備する必要があります
 
 - reServer Industrial
-- 付属の電源アダプター（電源コード付き）（[US版](https://www.seeedstudio.com/AC-US-p-5122.html)または[EU版](https://www.seeedstudio.com/AC-EU-p-5121.html)）
-- Ubuntu ホストPC（ネイティブまたはVMware Workstation Playerを使用したVM）
+- 付属の電源コード付き電源アダプタ（[US version](https://www.seeedstudio.com/AC-US-p-5122.html) または [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html)）
+- Ubuntu ホスト PC（ネイティブ環境、または VMware Workstation Player を使用した VM）
 - USB Type-C データ転送ケーブル
-- 外部モニター
-- HDMIケーブル
+- 外部モニタ
+- HDMI ケーブル
 - キーボードとマウス
 
 ### 強制リカバリーモードに入る
 
-デバイスをフラッシュするために、reServer Industrialボードをリカバリーモードに入れる必要があります。**DEVICE**ポートとPCの間にUSB Type-Cケーブルを接続します。ピンを使って**REC**ホールに挿入してリカバリーボタンを押し、これを押し続けながら、付属の**2ピンターミナルブロック電源コネクター**をボードの電源コネクターに接続し（2本のネジでターミナルを所定の位置にねじ込むことを確認してください）、付属の電源アダプターに電源コードを接続してボードの電源を入れます
+次に、デバイスを書き込むために reServer Industrial ボードをリカバリーモードにする必要があります。USB Type-C ケーブルを **DEVICE** ポートと PC の間に接続します。ピンを使用して **REC** ホールに差し込み、リカバリーボタンを押し続けたまま、付属の **2-Pin Terminal block power connector** をボード上の電源コネクタに接続します（端子を固定するために 2 本のネジを必ず締めてください）。その後、付属の電源アダプタと電源コードを接続してボードの電源を入れます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reServer-Industrial/4.jpg"/></div>
 
 :::note
-RECOVERYボタンを押しながらデバイスの電源を入れることを確認してください。そうしないとリカバリーモードに入りません
+RECOVERY ボタンを押し続けた状態で電源を入れていることを確認してください。そうしないとリカバリーモードに入ることができません
 :::
 
-Ubuntu ホストPCで、ターミナルウィンドウを開き、コマンド**lsusb**を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリーモードになっています。
+Ubuntu ホスト PC でターミナルウィンドウを開き、コマンド **lsusb** を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
-- Orin NX 16GBの場合：**0955:7323 NVidia Corp**
-- Orin NX 8GBの場合：**0955:7423 NVidia Corp**
-- Orin Nano 8GBの場合：**0955:7523 NVidia Corp**
-- Orin Nano 4GBの場合：**0955:7623 NVidia Corp**
+- Orin NX 16GB の場合: **0955:7323 NVidia Corp**
+- Orin NX 8GB の場合: **0955:7423 NVidia Corp**
+- Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
+- Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
 
-### フラッシュの異なる方法
+### 書き込みの異なる方法
 
-ここでは2つの異なるフラッシュ方法を提供します。
+ここでは 2 つの異なる書き込み方法を提供します。
 
-1. NVIDIA JetPack、ハードウェア周辺機器ドライバーを含む、準備済みのシステムイメージ全体をダウンロードしてデバイスにフラッシュ
-2. 公式のNVIDIA L4Tをダウンロードし、付属のハードウェア周辺機器ドライバーを使用してデバイスにフラッシュ
+1. NVIDIA JetPack、ハードウェア周辺機器ドライバを含む、当社が用意したシステムイメージ全体をダウンロードしてデバイスに書き込む
+2. 公式の NVIDIA L4T をダウンロードし、付属のハードウェア周辺機器ドライバを使用してデバイスに書き込む
 
 :::note
-最初の方法のダウンロードは約14GB、2番目の方法のダウンロードは約3GBです
+1 つ目の方法のダウンロードサイズは約 14GB、2 つ目の方法のダウンロードサイズは約 3GB です
 :::
 
 <!-- Code -->
@@ -294,21 +297,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="method1" label="方法1">
+<TabItem value="method1" label="Method 1">
 
-#### システムイメージのダウンロード
+#### システムイメージをダウンロード
 
-- **ステップ1：** 使用しているボードに対応するシステムイメージをUbuntu PCにダウンロードします。
+- **Step 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします。
 
 <div class="table-center">
   <table style={{textAlign: 'center'}}>
     <thead>
       <tr>
-        <th>デバイス</th>
-        <th>JetPackバージョン</th>
-        <th>L4Tバージョン</th>
-        <th>イメージリンク</th>
-        <th>代替イメージリンク</th>
+        <th>Device</th>
+        <th>JetPack Version</th>
+        <th>L4T Version</th>
+        <th>Image Link</th>
+        <th>Alternative Image Link</th>
       </tr>
     </thead>
     <tbody>
@@ -327,7 +330,7 @@ import TabItem from '@theme/TabItem';
         <td>5.1.3</td>
         <td>35.5.0</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWcp7ma66_9JmfEjnMrxbfEBZk7LxwoJ2YuN-LDWEITE_g?e=NuKvDr" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQApYwrXCs7WTqZPvGNHA7YuAdAS_5YcEIXv-gnenja-Szk?e=Ub9Pvc" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -357,7 +360,7 @@ import TabItem from '@theme/TabItem';
         <td>6.2</td>
         <td>36.4.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVOMzCf8ulxAgCOCN9jlsUcBNR29X1dB6ILeYngqVHtwVA?e=UVc1qc" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDs10njGAUER7nbpqF6dI7ZAceK7lnySeHU9k7KIySj6HA?e=iMWtO8" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -378,7 +381,7 @@ import TabItem from '@theme/TabItem';
         <td>5.1.3</td>
         <td>35.5.0</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcbD8zqcSTpAjBmjHZTAvU8BBd80FekQMV9jMD35xU4Arw?e=DNWcyn" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDP0PJc34WXRLzV7VqXzinRAWDanqL6CzmSPfSILTojKBI?e=XYR9ee" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -408,7 +411,7 @@ import TabItem from '@theme/TabItem';
         <td>6.2</td>
         <td>36.4.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeSEdyl9XTNEkea8ntTsqM8B8w_Hs8JV-toT71bgvR3V0A?e=9P4ZAw" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDoOdZqBdvLQaQ45yKI9a7zAVwIdyxIrU_Sk2xicLYy6QE?e=cepk9Z" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -429,7 +432,7 @@ import TabItem from '@theme/TabItem';
         <td>5.1.3</td>
         <td>35.5.0</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eeg04qGBxQNOjC2Q0hvfvugBx_V05xFkYM5ThVH9ECMZ6A?e=8fDLxZ" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA4HdvfMZwTQY0Aceq3uygRAVlGI13-oGlSRHRxDpxanUU?e=fCJ8ww" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -459,7 +462,7 @@ import TabItem from '@theme/TabItem';
         <td>6.2</td>
         <td>36.4.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EahC2mJQOQRBtoqG7fhuIecBSEo7w_Py8nGy_FB51QdtHg?e=W0U23d" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBZKkQtQMJiRYcOfA3DzOtEAV7O4ayXgVWrMKAclHYO-HQ?e=LWfgcH" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
           -
@@ -473,14 +476,14 @@ import TabItem from '@theme/TabItem';
           <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETo-G6kS2atGpfsWK6uX2HIBcrwsAboHjDBB_rypE4iyTA?e=GZyglq" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
-        <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">Download2</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">ダウンロード2</a>
         </td>
       </tr>
       <tr>
         <td>5.1.3</td>
         <td>35.5.0</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVqo37I8yiNEjpo14kR5kYAB0ZhMNUhIN8X5pZCEjk4f6A?e=0XGC0W" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQADLFrAQ2RAQb74nXNq6MlnAeaN-qPzaTk0Sg21ZqawFxA?e=KXkWZZ" target="_blank" rel="noopener noreferrer">ダウンロード1</a>
         </td>
         <td>
           -
@@ -490,17 +493,17 @@ import TabItem from '@theme/TabItem';
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQgrBDUICyZCnKBI_qVeupoBYqQJ1dP7_lcxUwxUphg6Qw?e=ObUzPI" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQgrBDUICyZCnKBI_qVeupoBYqQJ1dP7_lcxUwxUphg6Qw?e=ObUzPI" target="_blank" rel="noopener noreferrer">ダウンロード1</a>
         </td>
         <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">Download2</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">ダウンロード2</a>
         </td>
       </tr>
       <tr>
         <td>6.1</td>
         <td>36.4</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ET-LxPOYaNtIjoJQ4I-gKEcBxU-AmFX9R-mWPH1p-eyBdA?e=EpAopw" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ET-LxPOYaNtIjoJQ4I-gKEcBxU-AmFX9R-mWPH1p-eyBdA?e=EpAopw" target="_blank" rel="noopener noreferrer">ダウンロード1</a>
         </td>
         <td>
           -
@@ -510,7 +513,7 @@ import TabItem from '@theme/TabItem';
         <td>6.2</td>
         <td>36.4.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQd4hYwgVPxEk8CtZgfU2SsBzn18zMuQOHXq45yq6gykYw?e=sAoguo" target="_blank" rel="noopener noreferrer">Download1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBUl_MHgm8YSY6OQyCuNEf-AfgUPNTd9-rd2I6pimkcraE?e=KzSPtW" target="_blank" rel="noopener noreferrer">ダウンロード1</a>
         </td>
         <td>
           -
@@ -521,37 +524,37 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * Download1とDownload2のイメージファイルは同じです。ダウンロード速度の速いリンクを選択してください。
+  * Download1 と Download2 の両方のイメージファイルは同じです。ダウンロード速度が速い方のリンクを選択できます。
 </p>
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
-- **ステップ 2:** 生成されたファイルを展開する
+- **Step 2:** 生成されたファイルを解凍します
 
 ```sh
 tar -xvf <file_name>.tar.gz
 ```
 
-#### Jetsonにフラッシュする
+#### Jetson へのフラッシュ
 
-- **ステップ 1:** 先ほど展開したファイルに移動し、以下のようにフラッシュコマンドを実行する
+- **Step 1:** 先ほど解凍したファイルへ移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd mfi_reserver-orin-industrial
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下の出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **ステップ 2:** ボードのHDMIコネクタを使用してディスプレイに接続し、初期設定セットアップを完了する
+- **Step 2:** ボードを HDMI コネクタ経由でディスプレイに接続し、初期設定を完了します
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-その後、ボードが再起動し、使用準備が完了します！
+その後、ボードは再起動し、使用できる状態になります！
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
@@ -560,7 +563,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </TabItem>
 <TabItem value="method2" label="方法 2">
 
-#### NVIDIA L4Tとrootfsをダウンロードして準備する
+#### NVIDIA L4T と rootfs のダウンロードと準備
 
 ```sh
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/jetson_linux_r35.3.1_aarch64.tbz2
@@ -572,17 +575,17 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-#### ドライバーをダウンロードして準備する
+#### ドライバのダウンロードと準備
 
-- **ステップ 1:** 使用しているボードに対応するドライバーファイルをUbuntu PCにダウンロードする
+- **Step 1:** 使用しているボードに対応するドライバファイルを Ubuntu PC にダウンロードします
 
 <table>
   <thead>
     <tr>
-      <th>Jetsonモジュール</th>
+      <th>Jetson モジュール</th>
       <th>ダウンロードリンク</th>
-      <th>JetPackバージョン</th>
-      <th>L4Tバージョン</th>
+      <th>JetPack バージョン</th>
+      <th>L4T バージョン</th>
     </tr>
   </thead>
   <tbody>
@@ -605,45 +608,45 @@ sudo ./tools/l4t_flash_prerequisites.sh
   </tbody>
 </table>
 
-- **ステップ 2:** ダウンロードした周辺機器ドライバーを**Linux_For_Tegra**ディレクトリと同じフォルダに移動する
+- **Step 2:** ダウンロードした周辺機器ドライバを **Linux_For_Tegra** ディレクトリと同じフォルダに移動します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
 
-- **ステップ 3:** ダウンロードしたドライバーの.zipファイルを展開する。ここでは.zipファイルの解凍に必要な**unzip**パッケージを追加でインストールします
+- **Step 3:** ダウンロードしたドライバの .zip ファイルを解凍します。ここでは、.zip ファイルを解凍するために必要な **unzip** パッケージも追加でインストールします
 
 ```sh
 sudo apt install unzip
 sudo unzip xxxx.zip # Replace xxxx with the driver file name
 ```
 
-ここでファイルを置き換えるかどうか尋ねられます。Aを入力してENTERを押し、必要なファイルを置き換えます
+ここでファイルを置き換えるかどうかを尋ねられます。必要なファイルを置き換えるために A と入力し、ENTER キーを押します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/30.png"/></div>
 
-#### Jetsonにフラッシュする
+#### Jetson へのフラッシュ
 
-- **ステップ 1:** **Linux_for_Tegra**ディレクトリに移動し、以下のようにフラッシュコマンドを実行する
+- **Step 1:** **Linux_for_Tegra** ディレクトリへ移動し、次のようにフラッシュコマンドを実行します
 
 ```sh
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml --no-systemimg" --network usb0  reserver-orin-industrial external
 ```
 
-これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下の出力が表示されます
+これでボードへのシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **ステップ 2:** ボードのHDMIコネクタを使用してディスプレイに接続し、初期設定セットアップを完了する
+- **Step 2:** ボードを HDMI コネクタ経由でディスプレイに接続し、初期設定を完了します
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-その後、ボードが再起動し、以下が表示されます
+その後、ボードは再起動し、次の画面が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **ステップ 3:** デバイス内でターミナルウィンドウを開き、以下を実行すると、デバイスが再起動し、使用準備が完了します！
+- **Step 3:** デバイス上でターミナルウィンドウを開き、次を実行します。デバイスは再起動し、使用できる状態になります！
 
 ```sh
 systemctl disable nvgetty.service
@@ -651,7 +654,7 @@ sudo depmod -a
 sudo reboot
 ```
 
-さらに、CUDA、cuDNN、TensorRTなどのSDKコンポーネントをインストールしたい場合は、以下を実行してください
+さらに、CUDA、cuDNN、TensorRT などの SDK コンポーネントをインストールしたい場合は、次を実行してください
 
 ```sh
 sudo apt update
@@ -665,24 +668,24 @@ sudo apt install nvidia-jetpack -y
 
 <!-- Code END -->
 
-## ハードウェアとインターフェースの使用方法
+## ハードウェアおよびインターフェースの使用方法
 
 :::info
-  reServer Industrialボード上のすべてのハードウェアとインターフェースの使用方法について詳しく学ぶには、この[**wiki**](/ja/reserver_industrial_hardware_interface_usage)に従ってください：
+  reServer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、この[**wiki**](/ja/reserver_industrial_hardware_interface_usage)に従ってください：
 :::
 
 ## リソース
 
-(change the links)
+(リンクを変更してください)
 
 - [reServer Industrial データシート](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [reServer Industrial リファレンスガイド](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
-- [NVIDIA Jetsonデバイスとキャリアボードの比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
-- [reServer Industrial 3Dファイル](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
+- [NVIDIA Jetson デバイスおよびキャリアボードの比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [reServer Industrial 3D ファイル](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 
 ## 技術サポート
 
-お気軽に私たちの[フォーラム](https://forum.seeedstudio.com/)に問題を投稿してください。
+ご不明な点がありましたら、遠慮なく私たちの[フォーラム](https://forum.seeedstudio.com/)に issue を投稿してください。
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

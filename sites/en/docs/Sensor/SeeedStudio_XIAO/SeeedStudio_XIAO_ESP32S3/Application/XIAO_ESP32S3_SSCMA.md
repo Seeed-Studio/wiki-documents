@@ -2,13 +2,16 @@
 description: Guidance on how to go from owned datasets, labelling, training and deployment to XIAO ESP32S3.
 title: Deploying Models from Datasets to XIAO ESP32S3
 keywords:
-- SSCMA
-- xiao
+  - SSCMA
+  - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sscma
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2024-03-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_esp32s3_sscma/
 ---
 
 

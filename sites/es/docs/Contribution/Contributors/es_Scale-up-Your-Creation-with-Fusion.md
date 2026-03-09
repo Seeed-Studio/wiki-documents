@@ -2,12 +2,15 @@
 description: Escala tu Creación con Seeed Studio Fusion
 title: Escala tu Creación con Seeed Studio Fusion
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Scale-up-Your-Creation-with-Fusion
 last_update:
   date: 03/01/2023
   author: Matthew
+createdAt: '2023-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Scale-up-Your-Creation-with-Fusion/
 ---
 
 Colaborar con la comunidad ha estado en nuestro ADN desde el primer día. Para ofrecer una manera más fácil de trabajar con nosotros para escalar y comercializar tus proyectos, nuestro equipo en Fusion ha estado ejecutando una serie de programas a corto y largo plazo con el objetivo final de ayudar a más desarrolladores a realizar sus ideas, diseños, proyectos e incluso soluciones con nuestros servicios integrales de Fusion de prototipado de hardware, producción en masa, personalización y otros servicios de personalización de diseño. Para hacer frente a este objetivo, aquí hay algunos programas increíblemente curados y casos de usuario que nos encantaría destacar como inspiraciones para escalar tus creaciones.

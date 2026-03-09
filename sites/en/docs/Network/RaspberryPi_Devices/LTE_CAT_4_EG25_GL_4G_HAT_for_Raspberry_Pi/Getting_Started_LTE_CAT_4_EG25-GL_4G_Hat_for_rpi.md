@@ -1,6 +1,6 @@
 ---
 description: The Quectel EG25-GL-powered 4G LTE Raspberry Pi HAT delivers high-speed connectivity and precise GNSS positioning, making it perfect for IoT and M2M applications. Compatible with Raspberry Pi and PCs, it supports global frequency bands, real-time tracking, and reliable communication for versatile use across industries.
-title: Getting Started with the Raspberry Pi 4G LTE HAT 
+title: Getting Started with the Raspberry Pi 4G LTE HAT
 keywords:
   - Raspberry Pi Hat
   - Getting started
@@ -14,6 +14,9 @@ sku: 114993408
 last_update:
   date: 12/10/2024
   author: Kasun Thushara
+createdAt: '2024-12-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 ---
 title: LTE Cat 1 Pi HAT
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113990454, 113990496, 102991015
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/LTE_Cat_1_Pi_HAT/
 ---
 
 

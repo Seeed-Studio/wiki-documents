@@ -6,7 +6,10 @@ slug: /Download-Arduino-and-install-Arduino_Driver
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Download-Arduino-and-install-Arduino_Driver/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Arduino_quickstart.jpg)

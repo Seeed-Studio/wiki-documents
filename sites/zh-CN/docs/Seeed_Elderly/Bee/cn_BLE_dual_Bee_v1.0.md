@@ -2,13 +2,16 @@
 description: BLE（双模）Bee v1.0
 title: BLE（双模）Bee v1.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_dual_Bee_v1.0
 sku: 113050013
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/BLE_dual_Bee_v1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/Editing_BLE-dual-Bee_v1.0_PhotoBottom.jpg)

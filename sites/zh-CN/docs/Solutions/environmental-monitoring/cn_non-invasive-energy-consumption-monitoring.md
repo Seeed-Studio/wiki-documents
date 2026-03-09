@@ -2,14 +2,17 @@
 description: 免布线家庭/办公无痛能源监控
 title: 非侵入式能耗监测（Home Assistant）
 keywords:
-    - CT
-    - energy consumption monitoring
-    - Home Assistant
+  - CT
+  - energy consumption monitoring
+  - Home Assistant
 slug: /non_invasive_ct_energy_consumption
 sidebar_position: 2
 last_update:
-    date: 08/18/2025
-    author: Spencer
+  date: 08/18/2025
+  author: Spencer
+createdAt: '2025-08-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/non_invasive_ct_energy_consumption/
 ---
 
 ## 1. 方案概述

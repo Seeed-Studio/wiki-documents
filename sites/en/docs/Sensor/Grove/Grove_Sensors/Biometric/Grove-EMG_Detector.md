@@ -2,13 +2,16 @@
 description: Grove - EMG Detector
 title: Grove - EMG Detector
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-EMG_Detector
 sku: 101020058
 last_update:
   date: 1/6/2023
   author: jianjing Huang
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-EMG_Detector/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_product.jpg" /></div>

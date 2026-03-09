@@ -2,13 +2,16 @@
 description: Grove - 容量性指紋スキャナー/センサー
 title: Grove - 容量性指紋スキャナー/センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Capacitive-Fingerprint-Sensor
 sku: 101020713
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Capacitive-Fingerprint-Sensor/
 ---
 
 

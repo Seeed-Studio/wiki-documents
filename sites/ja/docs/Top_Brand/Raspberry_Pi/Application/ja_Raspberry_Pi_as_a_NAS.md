@@ -2,12 +2,15 @@
 description: Raspberry PiをNASとして使用する
 title: Raspberry PiをNASとして使用する
 keywords:
-- アプリケーション
+  - アプリケーション
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_as_a_NAS
 last_update:
   date: 05/15/2025
   author: Frank
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Raspberry_Pi_as_a_NAS/
 ---
 
 

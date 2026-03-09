@@ -2,13 +2,16 @@
 description: Grove SEN5X オールインワン
 title: Grove SEN5X オールインワン
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_SEN5X_All_in_One
 sku: 101021014,101021013
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2023-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_SEN5X_All_in_One/
 ---
 
 

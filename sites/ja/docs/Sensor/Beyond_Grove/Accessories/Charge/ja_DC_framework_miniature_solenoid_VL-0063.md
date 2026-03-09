@@ -1,6 +1,6 @@
 ---
 title: DCフレームワーク小型ソレノイド VL-0063
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /DC_framework_miniature_solenoid_VL-0063
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/DC_framework_miniature_solenoid_VL-0063/
 ---
 
 

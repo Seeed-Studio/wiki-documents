@@ -2,14 +2,17 @@
 description: JetsonとEtherCATデバイス間の通信を確立する方法
 title: JetsonとEtherCATデバイス間の通信を確立する方法
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg
 slug: /how_to_establish_the_ethercat_on_jetson
 last_update:
   date: 11/14/2025
   author: Dayu
+createdAt: '2025-11-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/how_to_establish_the_ethercat_on_jetson/
 ---
 
 **EtherCAT（Ethernet for Control Automation Technology）**は、**IEEE 802.3 Ethernetスタンダード**に基づくオープンソースの高性能リアルタイム産業用Ethernetフィールドバスプロトコルです。**マスター・スレーブアーキテクチャ**で動作し、産業オートメーション環境における優れた速度、精度、柔軟性で知られています。

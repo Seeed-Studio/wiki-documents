@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO nRF52840 Sense 上的 6 轴 IMU 使用方法
 title: XIAO nRF52840 Sense 的 IMU 使用方法
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-11-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-IMU-Usage/
 ---
 
 # Seeed Studio XIAO nRF52840 Sense 上的 6 轴 IMU 使用方法

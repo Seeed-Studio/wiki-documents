@@ -12,6 +12,9 @@ slug: /xiao_esp32s3_sense_filesystem
 last_update:
   date: 09/15/2024
   author: Priyanshu Roy
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem/
 ---
 
 # Sistema de Archivos y XIAO ESP32S3 Sense

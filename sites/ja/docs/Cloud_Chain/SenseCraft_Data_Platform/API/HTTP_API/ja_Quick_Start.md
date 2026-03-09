@@ -3,7 +3,7 @@ sidebar_position: 1
 description: HTTP API クイックスタート
 title: HTTP API クイックスタート
 keywords:
-- HTTP API 
+  - HTTP API
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/http-api/quick-start
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-data-platform/api/http-api/quick-start/
 ---
 
 ## 前提条件

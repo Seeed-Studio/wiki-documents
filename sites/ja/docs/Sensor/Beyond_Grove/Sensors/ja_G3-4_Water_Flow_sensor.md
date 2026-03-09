@@ -1,6 +1,6 @@
 ---
 title: G3-4 水流センサー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 314150003
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/G3-4_Water_Flow_sensor/
 ---
 
 

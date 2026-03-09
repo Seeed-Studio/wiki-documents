@@ -2,12 +2,15 @@
 description: SenseCAP T1000 Tracker ペイロード形式
 title: ペイロード形式
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /T1000_payload
 last_update:
   date: 2/21/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/T1000_payload/
 ---
 
 ## アップリンクパケット解析

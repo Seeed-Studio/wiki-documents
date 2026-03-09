@@ -2,12 +2,15 @@
 description: Guía de Linkstar
 title: Guía de Linkstar
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Linkstar_Intro
 last_update:
   date: 07/19/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Linkstar_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/file_11.jpg" style={{width:600, height:'auto'}}/></div>

@@ -10,6 +10,9 @@ slug: /recomputer_ai_industrial_r2000_flash_os
 last_update:
   date: 05/06/2025
   author: Jiahao Li
+createdAt: '2025-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_ai_industrial_r2000_flash_os/
 ---
 # reComputer AI Industrial R2000 Flash OS
 

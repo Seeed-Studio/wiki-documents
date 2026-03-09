@@ -2,12 +2,15 @@
 description: Which LoRaWAN Network Should I Select
 title: Which LoRaWAN Network Should I Select
 keywords:
-- LoRaWAN
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /select_lorawan_network
 last_update:
   date: 1/9/2023
   author: Jessie
+createdAt: '2024-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/select_lorawan_network/
 ---
 
 

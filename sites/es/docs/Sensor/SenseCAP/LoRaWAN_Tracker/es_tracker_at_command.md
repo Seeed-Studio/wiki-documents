@@ -2,14 +2,17 @@
 description: Instrucciones de Comandos AT Bluetooth del Rastreador LoRaWAN
 title: Instrucciones de Comandos AT Bluetooth del Rastreador LoRaWAN
 keywords:
-- Tracker
-- App
+  - Tracker
+  - App
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /tracker_at_command
 sidebar_position: 5
 last_update:
   date: 4/15/2025
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/tracker_at_command/
 ---
 
 Este capítulo explicará brevemente el uso de comandos AT Bluetooth, establecer una conexión Bluetooth y consultar/configurar información del dispositivo a través de los comandos AT Bluetooth.

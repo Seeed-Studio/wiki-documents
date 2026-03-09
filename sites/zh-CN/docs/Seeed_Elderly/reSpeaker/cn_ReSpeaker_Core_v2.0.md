@@ -2,13 +2,16 @@
 description: ReSpeaker Core v2.0
 title: reSpeaker Core v2.0
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_Core_v2.0
 sku: 102990883
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/ReSpeaker_Core_v2.0/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_front.JPG)
 
@@ -692,7 +695,7 @@ respeaker@v2:~$ mraa-gpio list
 | ReSpeaker Core v2.0 |  Grove - Buzzer |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+|[立即获取](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[立即获取](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
 使用跳线将 Grove PIR 传感器的 **SIG** 引脚连接到 ReSpeaker Core v2.0 的排针引脚 **0**。不要忘记同时连接 VCC 和 GND。然后在控制台中输入下面的代码
 
@@ -721,7 +724,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 | ReSpeaker Core v2.0 |  Grove -  PIR Motion Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
+|[立即获取](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[立即获取](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 在这个示例中，我们将使用 Python 代码来监听 Grove PIR 传感器的触发。
 使用跳线将 Grove PIR 传感器的 **D1** 引脚连接到 ReSpeaker Core v2.0 的排针引脚 **0**。不要忘记同时连接 VCC 和 GND。
@@ -776,7 +779,7 @@ UPM 项目基于 MRAA 库实现了传感器驱动，因此我们不再需要关�
 | ReSpeaker Core v2 |  Grove - Digital Light Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Digital_Light_Sensor.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+|[立即获取](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[立即获取](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 这是一个 Grove 数字光照传感器的示例，代码拷贝自 UPM 的 github 仓库。
 

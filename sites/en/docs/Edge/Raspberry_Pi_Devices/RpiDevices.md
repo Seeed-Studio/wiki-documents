@@ -2,21 +2,24 @@
 description: Edge Devices Powered By Raspberry Pi
 title: Edge Devices Powered By Raspberry Pi
 keywords:
-- Raspberry pi
-- reComputer R
-- reComputer AI R
-- reComputer Industrial R
-- reTerminal
-- reTerminal DM
-- reRouter
-- Raspberry Pi Compatible
-- Respberry Pi Original
+  - Raspberry pi
+  - reComputer R
+  - reComputer AI R
+  - reComputer Industrial R
+  - reTerminal
+  - reTerminal DM
+  - reRouter
+  - Raspberry Pi Compatible
+  - Raspberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
 sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
 last_update:
   date: 11/7/2025
   author: Nolan Chen
+createdAt: '2023-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/raspberry-pi-devices/
 ---
 
 ## Introduction
@@ -45,6 +48,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
     <thead>
       <tr>
         <th>Name</th>
+        <th>reComputer AI Industrial R22xx-12</th>
         <th>reComputer Industrial R20xx-12</th>
         <th>reComputer Industrial R21xx-12</th>
         <th>reComputer AI R21xx-12</th>
@@ -54,13 +58,15 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
     <tbody>
       <tr>
         <td>Product</td>
-        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R21.png" style={{width:300, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R21.png" style={{width:300, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R2130.png" style={{width:300, height:'auto'}}/></td>
-        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/12312312AI_R.png" style={{width:300, height:'auto'}}/></td>
+        <td><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-recomputer-industrial-r2200_1.jpg" style={{width:200, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R21.png" style={{width:200, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R21.png" style={{width:200, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/R2130.png" style={{width:200, height:'auto'}}/></td>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/12312312AI_R.png" style={{width:200, height:'auto'}}/></td>
       </tr>
       <tr>
         <td>SKU</td>
+        <td>100079040</td>
         <td>100080766</td>
         <td>100061305</td>
         <td>114993560</td>
@@ -68,6 +74,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Get One</td>
+        <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html"><strong>Get One Now 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html"><strong>Get One Now 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html"><strong>Get One Now 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html"><strong>Get One Now 🖱️</strong></a></td>
@@ -75,6 +82,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Wiki</td>
+        <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r22xx_getting_start/"><strong>📚 Learn More</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/recomputer_industrial_r20xx_getting_start/"><strong>📚 Learn More</strong></a></td>
         <td ><a href="https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/"><strong>📚 Learn More</strong></a></td>
         <td><a href="https://wiki.seeedstudio.com/r2000_series_getting_start/"><strong>📚 Learn More</strong></a></td>
@@ -82,13 +90,15 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Chip</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi 5</td>
-        <td>RespBerry Pi CM5</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi 5</td>
+        <td>RaspBerry Pi CM5</td>
       </tr>
       <tr>
         <td>RAM</td>
+        <td>8GB/16GB</td>
         <td>8GB/16GB</td>
         <td>8GB/16GB</td>
         <td>8GB/16GB</td>
@@ -100,9 +110,11 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
         <td>26TOPS</td>
         <td>26TOPS</td>
         <td>26TOPS</td>
+        <td>26TOPS</td>
       </tr>
       <tr>
         <td>Interface</td>
+        <td>2x RS485,1x RS232,1x CAN FD,4x DI/DO</td>
         <td>3x RS485,1x RS232,8x DI/DO</td>
         <td>2x RS485,2x RS232,2xCAN FD,4x DI/DO</td>
         <td>/</td>
@@ -110,6 +122,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
       </tr>
       <tr>
         <td>Other interfaces</td>
+        <td> 4 x 10/100/1000 Mbps(supports PoE PSE), <br/>1 x 10/100/1000 Mbps IEEE 802.3/802.3u. <br/>2x HDMI 2.0. <br/>4x Type-A USB3.0, <br/> 1x Type-C USB2.0 (for OS update). <br/>1x Nano SIM card slot.</td>
         <td> 1x 10M/100M/1000M Ethernet (PoE), <br/>1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0,<br/> 1x Type-C USB2.0 (for OS update). <br/>1x Nano SIM card slot.</td>
         <td>1x 10M/100M/1000M Ethernet (PoE),<br/> 1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0, <br/>1x Type-C USB2.0 (for OS update). <br/>1x Nano SIM card slot.</td>
         <td>1x 10/100/1000 Mbps Ethernet,<br/>2x USB 3.0(USB-A), <br/>2x USB 2.0(USB-A),<br/>2 x micro HDMl ports(4Kp60),<br/> 2 × 4-lane MIPI camera/display transceivers,<br/>1 x microSD card slot(with support for high-speed SDR104 mode); <br/>2 x M.2 slot(supports PCIe 3.0 M.2 NVMe SSD).</td>
@@ -172,11 +185,11 @@ Seeed Studio’s reComputer R and Edge Box families are rugged edge controllers 
       </tr>
       <tr>
         <td>Chip</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi CM5</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM5</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
       </tr>
       <tr>
         <td>RAM</td>
@@ -240,8 +253,8 @@ reTerminal and reTerminal DM are advanced devices that integrate high-performanc
       </tr>
       <tr>
         <td>Chip</td>
-        <td>RespBerry Pi CM4</td>
-        <td>RespBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
+        <td>RaspBerry Pi CM4</td>
       </tr>
       <tr>
         <td>Introduction</td>
@@ -262,7 +275,7 @@ reRouter is equipped with dual Gigabit Ethernet ports and dual USB 3.0 ports, ma
 <a class="get_one_now_item" href="https://wiki.seeedstudio.com/reRouter_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 Learn More</strong></font></span></strong></a>
 </div>
 
-### Respberry Pi Original
+### Raspberry Pi Original
 
 Raspberry Pi (aka "RPi") was originally designed and created by a non-profit organization with the intention to promote teaching computer science at an affordable cost. Several generations and models of Raspberry Pis have now been released that have expanded their footprints, power and applications.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>

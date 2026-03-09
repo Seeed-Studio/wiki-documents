@@ -2,12 +2,15 @@
 description: Guía de Contribución
 title: Guía de Contribución
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Contribution-Guide
 last_update:
   date: 03/01/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Contribution-Guide/
 ---
 
 # Guía de Contribución (Pull Request)

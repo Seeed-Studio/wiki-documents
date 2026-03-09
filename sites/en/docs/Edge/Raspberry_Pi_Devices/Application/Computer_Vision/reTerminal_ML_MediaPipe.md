@@ -1,6 +1,6 @@
 ---
-description:  Getting started with Google MediaPipe
-title:  Getting started with Google MediaPipe
+description: Getting started with Google MediaPipe
+title: Getting started with Google MediaPipe
 keywords:
   - Edge
   - reTerminal Application
@@ -11,6 +11,9 @@ sku: 102110638
 last_update:
   date: 1/10/2024
   author: Kasun Thushara
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal_ML_MediaPipe/
 ---
 
 

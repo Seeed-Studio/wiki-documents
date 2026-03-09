@@ -2,14 +2,17 @@
 description: 如何在 Home Assistant 上使用 Arduino Uno R4 与 LoRa 模块
 title: Grove - Wio-E5 与 Arduino Uno R4 演示
 keywords:
-- LoRaWAN
-- Home Assistant
-- Arduino UNO R4
-- Wio E5
+  - LoRaWAN
+  - Home Assistant
+  - Arduino UNO R4
+  - Wio E5
 slug: /Grove_Wio_E5_SenseCAP_Cloud_Demo
 last_update:
   date: 2/02/2024
   author: JoJang
+createdAt: '2024-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Wio_E5_SenseCAP_Cloud_Demo/
 ---
 
 # 如何在 Home Assistant 上使用 Arduino Uno R4 与 LoRa 模块

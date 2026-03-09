@@ -1,6 +1,6 @@
 ---
 title: DSO Quad:构建固件
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DSO_Quad-Building_Firmware
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DSO_Quad-Building_Firmware/
 ---
 
 ## 从源码构建 DSO Quad 固件

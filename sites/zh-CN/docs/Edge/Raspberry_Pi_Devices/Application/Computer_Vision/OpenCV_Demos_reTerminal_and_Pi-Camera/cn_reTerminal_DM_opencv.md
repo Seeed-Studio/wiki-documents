@@ -3,7 +3,7 @@ description: 开始使用 reTerminal 和 Pi 摄像头配合 OpenCV
 title: 开始使用 reTerminal 和 Pi 摄像头配合 OpenCV
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,6 +12,9 @@ sku: 110070048
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal_DM_opencv/
 ---
 
 ## 介绍

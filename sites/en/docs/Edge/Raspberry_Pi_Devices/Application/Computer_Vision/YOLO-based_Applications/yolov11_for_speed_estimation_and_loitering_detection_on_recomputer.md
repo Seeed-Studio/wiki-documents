@@ -1,9 +1,9 @@
 ---
-description: This wiki demonstrates how to uses YOLOv11 for speed estimation and loitering detection.. 
+description: This wiki demonstrates how to uses YOLOv11 for speed estimation and loitering detection..
 title: YOLOv11 for Speed Estimation and Loitering Detection
 keywords:
   - Edge
-  - reComputer AI 
+  - reComputer AI
   - YOLOv11
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,10 @@ slug: /yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
 last_update:
   date: 12/16/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer/
 ---
 
 # YOLOv11 for Speed Estimation and Loitering Detection

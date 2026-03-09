@@ -2,16 +2,19 @@
 description: 本Wiki提供SO ARM100的组装和调试教程，并在最新的Lerobot框架内实现数据收集和训练。
 title: Lerobot中使用SO10xArm机械臂
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/2/2026
   author: ZhangJiaQuan
+createdAt: '2025-01-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
 
 # 基于 LeRobot 的 SO-ARM100 and SO-ARM101 机械臂入门教程

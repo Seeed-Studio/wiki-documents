@@ -2,12 +2,15 @@
 description: TTNに接続する
 title: TTNに接続する
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connecting-to-TTN
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Connecting-to-TTN/
 ---
 
 

@@ -2,8 +2,8 @@
 description: This article describes how to use the epaper panel to work with TRMNL.
 title: Works with TRMNL
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.webp
 slug: /xiao_7_5_inch_epaper_panel_with_trmnl
 sku: 114993635
@@ -11,6 +11,9 @@ sidebar_position: 4
 last_update:
   date: 05/19/2025
   author: Citric
+createdAt: '2025-05-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/
 ---
 
 # XIAO 7.5-Inch ePaper Panel Works with TRMNL

@@ -1,11 +1,13 @@
 ---
 description: Seeed Studio Round Display para XIAO-FAQ
 title: ¿Por qué obtengo un error cuando uso XIAO nRF52840 (Sense)?
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /error_when_use_XIAOnRF52840
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/error_when_use_XIAOnRF52840/
 ---
 Al usar el contenido de este tutorial, pueden ocurrir dos tipos diferentes de problemas para el XIAO nRF52840.
 

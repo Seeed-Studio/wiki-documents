@@ -2,12 +2,15 @@
 description: Xadow - RGB OLED 96*64
 title: Xadow - RGB OLED 96*64
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_RGB_OLED_96multiply64
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Xadow_RGB_OLED_96multiply64/
 ---
 
 

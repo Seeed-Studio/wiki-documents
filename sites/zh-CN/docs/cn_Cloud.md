@@ -2,19 +2,22 @@
 description: 探索 Seeed 的 SenseCraft 云服务——一个强大的工业级平台，专为高效数据管理、实时操作和可扩展的物联网应用而设计。了解更多关于 SenseCraft 如何支持您的工业物联网云部署。
 title: 云服务
 keywords:
-- SenseCraft Matrix
-- SenseCraft
-- SenseCraft AI
-- SenseCraft Cloud
-- Industrial IoT Cloud
-- Data Management
-- Device management
-- Real-Time Operations
+  - SenseCraft Matrix
+  - SenseCraft
+  - SenseCraft AI
+  - SenseCraft Cloud
+  - Industrial IoT Cloud
+  - Data Management
+  - Device management
+  - Real-Time Operations
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Cloud
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Cloud/
 ---
 
 云服务是一个重要组件，能够实现来自计算板的处理数据管理，并为用户提供实时操作。本页面介绍 Seeed 的工业级 SenseCraft 云服务，以及为各种工业物联网需求量身定制的其他云服务应用。通过强大的云基础设施，Seeed 使用户能够安全地存储、分析和利用处理后的数据，促进数据驱动的决策制定，并提高各个领域的运营效率。

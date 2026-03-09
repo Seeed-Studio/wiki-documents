@@ -1,6 +1,6 @@
 ---
 title: 高级 Wi-Fi 使用
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-Advanced-Wi-Fi
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Advanced-Wi-Fi/
 ---
 # 高级 Wi-Fi 使用
 

@@ -2,14 +2,17 @@
 description: Rockchip-Powered Network Solutions
 title: Rockchip-Powered Network Solutions
 keywords:
-- Network
-- router
-- Rockchip
+  - Network
+  - router
+  - Rockchip
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rockchip_network_solutions
 last_update:
   date: 12/14/2023
   author: Kasun Thushara
+createdAt: '2023-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Rockchip_network_solutions/
 ---
 
 Welcome to Seeed Studios' Rockchip-powered network solutions. Explore efficient connectivity with devices like the LinkStar-H68K-1432 Router, featuring Wi-Fi 6, 4GB RAM, 32GB eMMC, and versatile Ethernet options. Dive into user-friendly Android 11, Lubuntu 20.04, and OpenWRT support. The LinkStar-H28K offers dual Gigabit ports, a Quad-core chip, 4GB memory, and 8GB storage. Join us in discovering the simplicity and power of Rockchip-driven networks.

@@ -2,13 +2,16 @@
 description: SenseCAP A1101に独自のAIモデルを訓練・デプロイする
 title: SenseCAP A1101に独自のAIモデルを訓練・デプロイする
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-A1101
 sku: 101990962
 last_update:
   date: 5/10/2023
   author: Yvonne
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-A1101/
 ---
 
 # SenseCAP A1101に独自のAIモデルを訓練・デプロイする

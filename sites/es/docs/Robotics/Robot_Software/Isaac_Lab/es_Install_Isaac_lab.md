@@ -2,13 +2,16 @@
 description: Esta wiki proporciona una guía paso a paso para instalar Isaac Lab.
 title: Instalar Isaac Lab
 keywords:
-- NVIDIA
-- Isaac Lab
+  - NVIDIA
+  - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/1.webp
 slug: /install_isaaclab
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/install_isaaclab/
 ---
 
 # Instalar Isaac Lab

@@ -3740,6 +3740,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Rugged J40',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Rugged_J40/reComputer_Rugged_J40_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer Robotics J40',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Getting_Started',
@@ -3916,6 +3923,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/J501_Mini_StarAI_Viola_Fruit_Sorting',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Control_SoArm_by_OpenClaw_on_Jetson_Thor'
               ]
             },
             // Managed Services

@@ -8,6 +8,9 @@ slug: /LCD_8-2_Characters-Blue_back_light
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/LCD_8-2_Characters-Blue_back_light/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/lcd821n.jpg)
 

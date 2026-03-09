@@ -2,12 +2,14 @@
 description: Using WiFi technology to enable geolocate tracker
 title: How to get location via Wi-Fi
 keywords:
-- SenseCAP_T1000_tracker
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+  - SenseCAP_T1000_tracker
 slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang
+createdAt: '2023-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Tracker_WiFi_Geolocation/
 ---
 
 # Using Wi-Fi technology to enable geolocation for your tracker

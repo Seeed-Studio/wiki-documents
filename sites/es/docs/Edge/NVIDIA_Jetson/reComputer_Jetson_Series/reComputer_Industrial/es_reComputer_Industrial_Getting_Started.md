@@ -2,13 +2,16 @@
 description: Introducción a reComputer Industrial
 title: Introducción a reComputer Industrial
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_Industrial_Getting_Started
 sku: 110110190, 110110193, 110110188, 110110191, 110110189, 110110192, B802000101
 last_update:
   date: 05/16/2023
   author: Lakshantha
+createdAt: '2025-06-05'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/es/reComputer_Industrial_Getting_Started/
 ---
 
 # Introducción a reComputer Industrial
@@ -23,7 +26,7 @@ reComputer industrial dispone de 2 puertos RJ45 GbE, uno de los cuales es un pue
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
 
 ## Características

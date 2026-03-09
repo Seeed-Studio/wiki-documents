@@ -1,6 +1,6 @@
 ---
 description: Enhance your IoT applications with our Raspberry Pi 4G LTE and GNSS HAT module. This integrated solution delivers robust cellular connectivity and accurate real-time positioning, ideal for tracking assets, monitoring remote environments, and optimizing field operations.
-title: Getting Started with Raspberry Pi 4G HAT GNSS Functionalities 
+title: Getting Started with Raspberry Pi 4G HAT GNSS Functionalities
 keywords:
   - Raspberry Pi Hat
   - Getting started
@@ -12,6 +12,9 @@ slug: /raspberry_pi_4g_hat_gnss_functionlities
 last_update:
   date: 12/12/2024
   author: Kasun Thushara
+createdAt: '2024-12-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/raspberry_pi_4g_hat_gnss_functionlities/
 ---
 
 ## Introduction

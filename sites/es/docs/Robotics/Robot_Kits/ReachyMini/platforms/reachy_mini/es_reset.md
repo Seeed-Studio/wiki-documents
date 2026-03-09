@@ -3,18 +3,22 @@ description: Guía para restablecer la conexión inalámbrica de Reachy Mini usa
 title: Restablecer Reachy Mini vía Bluetooth
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:
-- reset
-- bluetooth
-- nrf connect
-- hotspot
-- daemon
-- wireless
-- troubleshoot
+  - reset
+  - bluetooth
+  - nrf connect
+  - hotspot
+  - daemon
+  - wireless
+  - troubleshoot
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_platforms_reachy_mini_reset/
 ---
 
 # Panel sencillo de Bluetooth para smartphone

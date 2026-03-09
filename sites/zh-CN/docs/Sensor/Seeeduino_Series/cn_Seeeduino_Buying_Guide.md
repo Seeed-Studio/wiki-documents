@@ -2,12 +2,15 @@
 description: Seeeduino 购买指南
 title: Seeeduino 购买指南
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Buying_Guide
 last_update:
   date: 1/12/2022
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino_Buying_Guide/
 ---
 
 我们有很多 Seeeduino 开发板来实现各种功能。但您可能会发现在众多选择中做出决定是困难的。因此我们制作了下面的列表，希望能对您有所帮助。

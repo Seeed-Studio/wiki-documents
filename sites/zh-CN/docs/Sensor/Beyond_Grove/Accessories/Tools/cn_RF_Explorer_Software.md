@@ -1,6 +1,6 @@
 ---
 title: RF Explorer 软件
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 109990009, 109990011, 109990010
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RF_Explorer_Software/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RF_Explorer_Software/img/RF%20Explorer.jpg)

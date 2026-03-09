@@ -1,6 +1,6 @@
 ---
 title: Grove - 長距離通信 868MHz
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 113060007, 113060006
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_LoRa_Radio/
 ---
 
 

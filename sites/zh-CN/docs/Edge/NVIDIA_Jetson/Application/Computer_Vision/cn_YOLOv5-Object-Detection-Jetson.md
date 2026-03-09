@@ -11,6 +11,9 @@ slug: /YOLOv5-Object-Detection-Jetson
 last_update:
   date: 01/04/2023
   author: w0x7ce
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/YOLOv5-Object-Detection-Jetson/
 ---
 
 # 使用 YOLOv5 和 Roboflow 进行少样本目标检测

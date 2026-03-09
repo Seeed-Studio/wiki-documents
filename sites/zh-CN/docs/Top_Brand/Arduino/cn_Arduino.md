@@ -2,12 +2,15 @@
 description: Arduino 介绍
 title: Arduino 介绍
 keywords:
-- Arduino
+  - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino
 last_update:
   date: 7/19/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Arduino/
 ---
 <!-- ---
 name: Arduino 介绍

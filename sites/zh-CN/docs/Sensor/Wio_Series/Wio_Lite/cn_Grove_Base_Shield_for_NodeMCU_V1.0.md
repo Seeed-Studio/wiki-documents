@@ -2,14 +2,17 @@
 description: Grove NodeMCU V1.0 底板扩展板
 title: Grove NodeMCU V1.0 底板扩展板
 keywords:
-- Wio_Series 
-- Wio_Lite
+  - Wio_Series
+  - Wio_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Shield_for_NodeMCU_V1.0
 sku: 105020008
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Base_Shield_for_NodeMCU_V1.0/
 ---
 <!-- ---
 name: Grove Base Shield for NodeMCU V1.0

@@ -2,12 +2,15 @@
 description: 心音传感器
 title: 心音传感器
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Heart-Sound_Sensor
 last_update:
   date: 2/1/2023
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Heart-Sound_Sensor/
 ---
 
 Arch Max 是一个支持 mbed 的开发板，用于快速原型开发。它基于 STM32F407VET6 微控制器，配备 ARM Cortex-M4F 核心，运行频率为 168MHz。它包含一个开放链接，用于提供 SWD 调试、拖放编程和 USB 串行通信。

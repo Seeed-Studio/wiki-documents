@@ -2,12 +2,15 @@
 description: Xadow - IMU 9DOF 是一款高性能的9轴运动追踪模块
 title: Xadow - IMU 9DOF
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_IMU_9DOF
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_IMU_9DOF/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Xadow_IMU_9DOF/img/Xadow_9dof.jpg)

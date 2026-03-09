@@ -3,13 +3,16 @@ description: Grove - 静電容量式タッチスライドセンサー(CY8C4014LQ
 title: Grove - 静電容量式タッチスライドセンサー(CY8C4014LQI)
 category: センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI
 sku: 101020552
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI/
 ---
 
 

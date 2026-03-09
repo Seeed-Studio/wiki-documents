@@ -1,6 +1,6 @@
 ---
 title: Grove - DC 插孔电源
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-DC_Jack_Power
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-DC_Jack_Power/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-DC_Jack_Power/img/Power_photo1.jpg)
 

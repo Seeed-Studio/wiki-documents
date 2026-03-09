@@ -1,8 +1,8 @@
 ---
 description: Flashear el Firmware Nativo
-title: Actualizar y Flashear Firmware  
+title: Actualizar y Flashear Firmware
 keywords:
-- SenseCAP Indicator
+  - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 toc_max_heading_level: 4
@@ -10,6 +10,9 @@ sidebar_position: 3
 last_update:
   date: 11/17/2023
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

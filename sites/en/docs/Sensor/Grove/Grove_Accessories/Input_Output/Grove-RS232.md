@@ -2,13 +2,16 @@
 description: Grove - RS232
 title: Grove - RS232
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RS232
 sku: 103020192
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-RS232/
 ---
 <!-- ---
 name: Grove - RS232

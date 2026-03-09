@@ -2,12 +2,15 @@
 description: Guía de Módulos de Red Grove
 title: Guía de Módulos de Red Grove
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_network_module_intro
 last_update:
   date: 07/19/2023
   author: Matthew
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove_network_module_intro/
 ---
 
 # Guía de Módulos de Red Grove

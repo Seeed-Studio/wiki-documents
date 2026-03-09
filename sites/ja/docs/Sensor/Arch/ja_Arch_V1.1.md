@@ -2,12 +2,15 @@
 description: Arch V1.1
 title: Arch V1.1
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_V1.1
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Arch_V1.1/
 ---
 
 

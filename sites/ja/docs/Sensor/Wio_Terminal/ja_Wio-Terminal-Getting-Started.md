@@ -1,6 +1,6 @@
 ---
 title: Wio Terminal の使い方を始める
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 102991299
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Getting-Started/
 ---
 
 

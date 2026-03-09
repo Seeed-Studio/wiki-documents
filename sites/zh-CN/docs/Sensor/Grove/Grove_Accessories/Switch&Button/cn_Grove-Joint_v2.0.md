@@ -2,12 +2,15 @@
 description: Grove - Joint v2.0
 title: Grove - Joint v2.0
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Joint_v2.0
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Joint_v2.0/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Joint_v2.0/img/Grove-Joint.jpg)
 

@@ -2,13 +2,16 @@
 description: Seeed Studio XIAO RP2350のピン多重化
 title: ピン多重化 (Arduino)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png
 slug: /XIAO_RP2350_Pin_Multiplexing
 sidebar_position: 2
 last_update:
   date: 11/02/2024
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_RP2350_Pin_Multiplexing/
 ---
 
 # ピン多重化 (Arduino)

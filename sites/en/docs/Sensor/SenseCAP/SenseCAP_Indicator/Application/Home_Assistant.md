@@ -2,9 +2,9 @@
 description: SenseCAP Indicator - Home Assistant Application Development
 title: Home Assistant - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator
-- Home Assistant
-- ESP32S3
+  - SenseCAP Indicator
+  - Home Assistant
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-ha-thumbnail.jpg
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 sku: E23010426,E24121301
@@ -12,6 +12,9 @@ sidebar_position: 1
 last_update:
   date: 10/09/2024
   author: Spencer
+createdAt: '2023-05-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Home_Assistant/
 ---
 
 import Tabs from '@theme/Tabs';

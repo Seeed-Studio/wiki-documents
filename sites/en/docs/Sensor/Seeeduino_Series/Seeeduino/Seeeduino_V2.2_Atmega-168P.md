@@ -2,12 +2,15 @@
 description: Seeeduino V2.2 Atmega 168P
 title: Seeeduino V2.2 Atmega 168P
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_V2.2_Atmega-168P
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_V2.2_Atmega-168P/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_V2.2_Atmega-168P/img/Seeeduino-168p.jpg)

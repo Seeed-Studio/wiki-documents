@@ -2,12 +2,15 @@
 description: Seeed の多様なセンサーやデバイスをシームレスに統合する堅牢なネットワーク機能により、製品エコシステム全体でデータと通信の一貫したフローを実現し、モニタリング、自動化、インテリジェントな意思決定の新たな可能性を切り開きます。
 title: ネットワーク接続
 keywords:
-- センサーネットワーク
+  - センサーネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network
 last_update:
   date: 05/15/2025
   author: Matthew
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Network/
 ---
 
 

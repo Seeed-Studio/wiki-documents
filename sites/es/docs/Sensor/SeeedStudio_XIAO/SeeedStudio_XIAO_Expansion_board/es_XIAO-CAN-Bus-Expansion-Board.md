@@ -2,14 +2,17 @@
 description: Comenzando con la Placa de Expansión CAN Bus XIAO
 title: Placa de Expansión CAN Bus XIAO
 keywords:
-- Grove
-- can bus
+  - Grove
+  - can bus
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-can-bus-expansion
 sku: 105100001
 last_update:
   date: 6/6/2023
   author: Stephen Lo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao-can-bus-expansion/
 ---
 
 # Placa de Expansión CAN Bus XIAO

@@ -2,15 +2,18 @@
 description: Este wiki proporciona un tutorial para motores servo Feetech.
 title: Motor Servo Feetech
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
 slug: /feetech_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang
+createdAt: '2025-06-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/feetech_servo/
 ---
 
 # Centro de Documentos de Motores Servo Feetech

@@ -2,17 +2,20 @@
 description: Construye tu propio agente de voz local usando Whisper, Ollama y NVIDIA Jetson. Guía paso a paso para configuración de GPU, speech-to-text, LLM, TTS e IA de voz offline.
 title: Desplegando un Asistente de Voz Inteligente Offline de Extremo a Extremo
 keywords:
-- reSpeaker
-- TTS
-- STT
-- LLM
-- Voice Assistant
-- Speech Recognition
+  - reSpeaker
+  - TTS
+  - STT
+  - LLM
+  - Voice Assistant
+  - Speech Recognition
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_voice_assistant
 last_update:
   date: 12/16/2025
   author: Kasun Thushara
+createdAt: '2025-12-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_voice_assistant/
 ---
 
 ## Descripción General

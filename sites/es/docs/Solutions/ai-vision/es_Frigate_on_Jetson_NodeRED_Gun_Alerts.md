@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 10/22/2025
   author: Spencer Y
+createdAt: '2025-09-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/solutions/frigate-on-jetson-nodered-gun-alerts/
 ---
 
 :::note[Aviso]

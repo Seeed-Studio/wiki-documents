@@ -12,6 +12,9 @@ sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/11/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_jetson_mini_getting_started/
 ---
 
 # reComputer Mini 入門ガイド

@@ -1,6 +1,6 @@
 ---
 title: Kits de interruptor de relé remoto de 315Mhz - 2 canales
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /315Mhz_remote_relay_switch_kits-2_channels
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/315Mhz_remote_relay_switch_kits-2_channels/
 ---
 
 ![](http://bz.seeedstudio.com/depot/images/P2130781.jpg)

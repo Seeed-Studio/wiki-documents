@@ -2,15 +2,18 @@
 description: reComputer AI R2000 是一款基于 Raspberry Pi 5 的强大边缘 AI 计算机。配备四核 Arm Cortex-A76 处理器、8GB RAM、M.2 SSD 支持，以及提供高达 26 TOPS 的 Hailo-8 AI 加速模块，实现实时、低延迟和高效的 AI 推理。它是各种 AI 应用的完美选择，包括 AI 驱动的视频分析、机器视觉和智能边缘计算。
 title: reComputer AI R2000 系列入门指南
 keywords:
-- Raspberry pi
-- Edge AI Computer
-- reComputer R2000
+  - Raspberry pi
+  - Edge AI Computer
+  - reComputer R2000
 image: https://files.seeedstudio.com/wiki/recomputer-r2000-getting-start/1_24_1.webp
 slug: /r2000_series_getting_start
 sku: 114993560, 114993627
 last_update:
   date: 1/09/2025
   author: Jiahao Li
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/r2000_series_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:800, height:'auto'}}/></div>

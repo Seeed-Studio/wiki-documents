@@ -2,13 +2,16 @@
 description: Nota de Lanzamiento del Firmware del Rastreador SenseCAP T1000-A/B
 title: Actualización de Firmware y Nota de Lanzamiento
 keywords:
-- Tracker
-- Firmware
+  - Tracker
+  - Firmware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /fm_release_for_SenseCAP_T1000
 last_update:
   date: 1/1/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/fm_release_for_SenseCAP_T1000/
 ---
 
 ### Actualización de Firmware

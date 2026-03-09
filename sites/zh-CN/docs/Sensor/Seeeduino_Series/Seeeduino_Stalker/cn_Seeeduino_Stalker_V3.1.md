@@ -2,13 +2,16 @@
 description: Seeeduino Stalker V3.1
 title: Seeeduino Stalker V3.1
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_V3.1
 sku: 102010070
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino_Stalker_V3.1/
 ---
 
 也许您对 Seeeduino stalker 系列非常熟悉，或者您对这个功能丰富的无线传感器网络节点完全陌生。无论您处于哪种情况，如果您要制作户外数据记录应用，您会发现 Seeeduino Stalker 是最好的开发板。

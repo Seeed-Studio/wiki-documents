@@ -2,16 +2,19 @@
 description: Home Assistant 用音声アシスタントシステム
 title: Home Assistant 用音声アシスタントシステム
 keywords:
-- ESP32S3
-- XIAO
-- reSpeaker
-- Home Assistant
+  - ESP32S3
+  - XIAO
+  - reSpeaker
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
   date: 2/11/2026
   author: Kasun Thushara
+createdAt: '2024-04-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_lite_ha/
 ---
 
 このチュートリアルでは、ReSpeaker Lite を Home Assistant と連携させる方法を学習します。必要なファームウェアのフラッシュ方法と YAML ファイルのコンパイル・アップロード方法を学習します。その後、音声を使用して家電製品を制御・自動化できるようになります。「Okay Nabu」と言って、あなたの家と会話を始めましょう。

@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Protoshield_Kit_for_Arduino
 sku: 103060000
 last_update:
-  date: 01/30/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/30/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Protoshield_Kit_for_Arduino/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/ProtoShield.jpg" alt="pir" width={600} height="auto" /></p>

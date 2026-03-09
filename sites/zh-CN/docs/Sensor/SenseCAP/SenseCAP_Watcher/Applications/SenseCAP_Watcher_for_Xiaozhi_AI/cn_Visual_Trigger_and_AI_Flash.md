@@ -3,18 +3,21 @@ description: 为您的 SenseCAP Watcher Agent 刷写固件的指南
 title: 视觉触发和 AI 刷写
 sidebar_position: 4
 keywords:
-- SenseCAP
-- Watcher
-- Agent
-- Firmware
-- Flash
-- Visual
-- Activate
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Firmware
+  - Flash
+  - Visual
+  - Activate
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
   date: 12/04/2025
   author: Twelve
+createdAt: '2025-10-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/visual_trigger_and_ai_flash/
 ---
 
 import Tabs from '@theme/Tabs';

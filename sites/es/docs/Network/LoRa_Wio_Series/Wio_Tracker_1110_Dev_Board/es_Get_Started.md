@@ -1,9 +1,9 @@
 ---
-description: Comenzar con Wio Tracker 1110 
-title: Comenzar con Wio Tracker 1110 
+description: Comenzar con Wio Tracker 1110
+title: Comenzar con Wio Tracker 1110
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-Trakcer_1110
 sku: 114993186
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 11/3/2023
   author: Jessie
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Get_Started_with_Wio-Trakcer_1110/
 ---
 
 En este tutorial, guiaremos a los usuarios para configurar rápidamente la placa de desarrollo Wio Tracker 1110 a través del firmware de fábrica, conectarla a la nube SenseCAP y verificar los datos.

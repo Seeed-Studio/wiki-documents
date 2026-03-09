@@ -2,13 +2,16 @@
 description: Grove - 二氧化碳、温度和湿度传感器 (SCD41)
 title: Grove - 二氧化碳、温度和湿度传感器 (SCD41)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41
 sku: 101020952
 last_update:
   date: 12/30/2022
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41/
 ---
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-CO2&Temperature&HumiditySensor-SCD4/img/101020952_Preview-07.png" /></div>

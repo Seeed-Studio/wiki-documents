@@ -2,13 +2,15 @@
 description: introducción
 title: Características
 keywords:
-    - paquete-de-misión
-# image: 
+  - paquete-de-misión
 slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mission_pack_features_v3/
 ---
 
 El **Hazard Response Mission Pack** es una solución versátil diseñada específicamente para abordar los desafíos en entornos donde los peligros son una preocupación constante. Al combinar hardware y software de vanguardia, este pack ofrece una plataforma integral para la monitorización, las alertas y la respuesta en tiempo real, permitiendo a los usuarios gestionar eficazmente los riesgos y garantizar la seguridad.

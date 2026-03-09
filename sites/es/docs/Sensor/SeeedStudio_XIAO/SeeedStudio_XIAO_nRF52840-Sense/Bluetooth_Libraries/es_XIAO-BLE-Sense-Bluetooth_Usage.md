@@ -2,12 +2,15 @@
 description: Para la Biblioteca de Placas nRF52 de Seeed
 title: Para la Biblioteca de Placas nRF52 de Seeed
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-Bluetooth_Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-Bluetooth_Usage/
 ---
 
 # Uso de Bluetooth (Biblioteca de Placas nRF52 de Seeed)

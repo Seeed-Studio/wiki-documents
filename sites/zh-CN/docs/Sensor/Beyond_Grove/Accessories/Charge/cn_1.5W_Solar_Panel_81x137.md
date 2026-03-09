@@ -1,6 +1,6 @@
 ---
 title: 1.5W 太阳能板 81*137
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /1.5W_Solar_Panel_81x137
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/1.5W_Solar_Panel_81x137/
 ---
 ![](https://files.seeedstudio.com/wiki/1.5W_Solar_Panel_81x137/img/1.5W.jpg)
 

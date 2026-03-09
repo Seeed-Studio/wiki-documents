@@ -1,13 +1,16 @@
 ---
-description:  Xadow - Motor Driver
+description: Xadow - Motor Driver
 title: Xadow - Motor Driver
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Motor_Driver
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Xadow_Motor_Driver/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Motor_Driver/img/x%20motor.jpg)

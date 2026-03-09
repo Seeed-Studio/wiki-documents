@@ -2,12 +2,15 @@
 description: XIAO ESP32C3 Flash-storage
 title: XIAO ESP32C3 Flash-storage
 keywords:
-- XIAO ESP32C3
+  - XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaoesp32c3-flash-storage
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiaoesp32c3-flash-storage/
 ---
 
 # XIAO ESP32C3 データを異なる方法で永続的に保存する

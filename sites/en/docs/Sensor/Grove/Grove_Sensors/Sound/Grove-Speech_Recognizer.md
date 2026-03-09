@@ -1,6 +1,6 @@
 ---
-title:  Grove - Speech Recognizer
-nointro:
+title: Grove - Speech Recognizer
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020232
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Speech_Recognizer/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer/img/cover.jpg)

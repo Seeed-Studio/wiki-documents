@@ -2,12 +2,15 @@
 description: Cómo Hacer - Rápido y Simplificado
 title: Pasos Completos Pull Request
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /full_steps_pull_request
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/full_steps_pull_request/
 ---
 
 ### ¡Gracias por considerar contribuir a nuestros archivos de seeed-studio!

@@ -6,6 +6,9 @@ slug: /ODYSSEY_FAQ
 last_update:
   date: 7/5/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ODYSSEY_FAQ/
 ---
 
 本文档包含与 ODYSSEY 系列产品相关的所有常见问题。如果您在使用 ODYSSEY 时遇到任何问题，这将非常有帮助。

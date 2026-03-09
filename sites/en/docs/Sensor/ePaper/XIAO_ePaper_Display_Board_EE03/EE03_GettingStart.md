@@ -13,6 +13,9 @@ sku: 100080566
 last_update:
   date: 2026-03-1
   author: Jackson.Li
+createdAt: '2026-03-02'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -2,13 +2,16 @@
 description: Arduino examples for T1000-E user guide
 title: Get Started with Arduino
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/tracker-t1000-e-for-meshtastic.webp
 slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
   date: 2/4/2026
   author: Janet
+createdAt: '2025-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/t1000_e_arduino_examples/
 ---
 
 

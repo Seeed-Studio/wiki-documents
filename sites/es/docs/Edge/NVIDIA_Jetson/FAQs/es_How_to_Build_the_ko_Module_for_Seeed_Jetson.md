@@ -2,14 +2,17 @@
 description: Cómo Construir el Módulo de Controlador para el BSP Jetson de Seeed
 title: Cómo Construir el Módulo de Controlador para el BSP Jetson de Seeed
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_build_the_ko_module_for_seeed_jetson
 last_update:
   date: 09/24/2025
   author: Dayu
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/how_to_build_the_ko_module_for_seeed_jetson/
 ---
 
 

@@ -7,6 +7,9 @@ sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 03/16/2023
   author: Lakshantha
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ODYSSEY-X86J4105-AzureIOT/
 ---
 
 <!-- ---

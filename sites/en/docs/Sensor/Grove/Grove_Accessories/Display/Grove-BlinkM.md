@@ -2,12 +2,15 @@
 description: Grove BlinkM
 title: Grove BlinkM
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-BlinkM
 last_update:
   date: 1/29/2023
   author: jianjing Huang
+createdAt: '2023-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-BlinkM/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-BlinkM/img/Tbkms.jpg) ![](https://files.seeedstudio.com/wiki/Grove-BlinkM/img/Tbkms_01.jpg) ![](https://files.seeedstudio.com/wiki/Grove-BlinkM/img/Tbkms_02.jpg)

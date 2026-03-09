@@ -6,7 +6,10 @@ slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Guide_to_use_demos_downloaded_from_Seeed-s_Github/
 ---
 
 经常需要使用 Seeeduino Github 上的演示程序，对于新手来说，要顺利运行演示程序可能会有一些困难。

@@ -13,6 +13,9 @@ slug: /send_receive_sms_raspberry_pi_4g_lte_hat
 last_update:
   date: 12/11/2024
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/send_receive_sms_raspberry_pi_4g_lte_hat/
 ---
 
 ## 简介

@@ -3,14 +3,17 @@ sidebar_position: 1
 title: 概要
 description: SenseCraft Data Platform のクイックスタートガイド — SenseCAP デバイスを管理し、安全で信頼性の高いクラウドプラットフォームでセンサーデータを可視化します。
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cloud/sensecraft-data/sensecraft-data-platform/overview
 aliases:
   - /Cloud_Chain/SenseCAP_Portal/QuickStart
 last_update:
   date: 06/06/2025
   author: Matthew
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 
 # SenseCraft Data Platform クイックスタート

@@ -2,12 +2,15 @@
 description: Introducción a las Sondas SenseCAP
 title: Sondas SenseCAP
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_probes_intro
 last_update:
   date: 02/28/204
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_probes_intro/
 ---
 
 Para brindar más conveniencia a sus aplicaciones, también proporcionamos sondas de sensores RS485 que detectan humedad del suelo, temperatura, conductividad eléctrica del suelo y nivel de pH. También habrá más sensores RS485 disponibles próximamente.

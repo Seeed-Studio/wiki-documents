@@ -1,6 +1,6 @@
 ---
-description:  Getting started with TensorFlow Lite
-title:  Getting started with TensorFlow Lite
+description: Getting started with TensorFlow Lite
+title: Getting started with TensorFlow Lite
 keywords:
   - Edge
   - reTerminal Application
@@ -11,6 +11,9 @@ sku: 102110638, 110070048
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal_ML_TFLite/
 ---
 
 

@@ -2,16 +2,19 @@
 description: 本维基提供了 Lekiwi 的组装和调试教程，并在 Lerobot 框架内实现数据收集和训练。
 title: Lekiwi入门教程
 keywords:
-- Lerobot
-- Huggingface
-- 小车
-- 机器人
+  - Lerobot
+  - Huggingface
+  - 小车
+  - 机器人
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.png
 slug: /lerobot_lekiwi
 sku: 114090065,E2025090401
 last_update:
   date: 2025/12/11
   author: Li shanghang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/lerobot_lekiwi/
 ---
 
 # 如何在 Lerobot 中使用 Lekiwi

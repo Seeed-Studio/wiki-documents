@@ -2,8 +2,8 @@
 description: LoRaWAN 追踪器入门指南
 title: LoRaWAN 追踪器入门指南
 keywords:
-- Tracker
-- LoRaWAN
+  - Tracker
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /get_started_with_lorawan_tracker
 sku: 114993591
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 1/9/2026
   author: Janet
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/get_started_with_lorawan_tracker/
 ---
 
 # LoRaWAN 追踪器入门指南

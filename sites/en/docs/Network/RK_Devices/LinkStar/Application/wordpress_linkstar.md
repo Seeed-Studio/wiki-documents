@@ -6,10 +6,13 @@ keywords:
   - Getting started
   - WordPress
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /wordpress_linkstar 
+slug: /wordpress_linkstar
 last_update:
   date: 6/8/2023
   author: Kasun Thushara
+createdAt: '2023-06-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/wordpress_linkstar/
 ---
 # Streamlining Web Development The Perfect Duo - Linkstar and WordPress
 

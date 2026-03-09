@@ -2,17 +2,20 @@
 description: This wiki introduces a voice-controlled motor solution based on the Jetson platform, detailing the required hardware, connection methods, and software deployment steps.
 title: Control Motor by Voice LLM on Jetson
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Motor
-- Qwen
-- Function Calling
+  - reComputer
+  - Jetson
+  - LLM
+  - Motor
+  - Qwen
+  - Function Calling
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /control_motor_by_voice_llm_on_jetson
 last_update:
   date: 08/19/2025
   author: Youjiang
+createdAt: '2025-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/control_motor_by_voice_llm_on_jetson/
 ---
 
 

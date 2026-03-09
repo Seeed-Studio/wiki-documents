@@ -1,6 +1,6 @@
 ---
 title: Grove - TF Mini LiDAR
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 114991434, 101990656, 101990620, 101990388
 last_update:
   date: 12/30/2022
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR.JPG" alt="pir" width={600} height="auto" /></p>

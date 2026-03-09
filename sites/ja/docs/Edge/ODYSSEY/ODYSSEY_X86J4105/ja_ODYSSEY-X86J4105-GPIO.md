@@ -1,12 +1,15 @@
 ---
-description: ODYSSEY - X86J41x5  
-title: 40ピンGPIOへのアクセス  
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png  
+description: ODYSSEY - X86J41x5
+title: 40ピンGPIOへのアクセス
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ODYSSEY-X86J4105-GPIO
 sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,102110479
-last_update:  
+last_update:
   date: 05/15/2025
-  author: Lakshantha  
+  author: Lakshantha
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ODYSSEY-X86J4105-GPIO/
 ---
 
 

@@ -6,7 +6,10 @@ slug: /How_To_Use_Sketchbook
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How_To_Use_Sketchbook/
 ---
 
 在另一个文档中，我们详细介绍了库的使用，我们知道库真的很容易使用！下载一个库，将其放到 Arduino 库目录中，打开示例就可以工作了。

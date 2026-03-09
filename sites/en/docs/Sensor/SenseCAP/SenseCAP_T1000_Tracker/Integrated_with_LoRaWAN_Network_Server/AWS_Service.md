@@ -2,13 +2,16 @@
 description: Connect SenseCAP T1000 Tracker to AWS
 title: AWS Cloud Services
 keywords:
-- Tracker
-- AWS
+  - Tracker
+  - AWS
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/t1000.webp
 slug: /SenseCAP_T1000_Tracker_AWS
 last_update:
   date: 12/4/2024
   author: Leo
+createdAt: '2023-08-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_AWS/
 ---
 
 # Using AWS Cloud Services for SenseCAP T1000 Tracker

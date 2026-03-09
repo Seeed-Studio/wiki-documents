@@ -1,11 +1,11 @@
 ---
-description: このWikiでは、SO ARM100 の組み立てとデバッグのチュートリアルを提供し、最新バージョンの Lerobot フレームワーク内でのデータ収集と学習を実現します。 
+description: このWikiでは、SO ARM100 の組み立てとデバッグのチュートリアルを提供し、最新バージョンの Lerobot フレームワーク内でのデータ収集と学習を実現します。
 title: Lerobot における SoArm
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
@@ -13,7 +13,11 @@ last_update:
   date: 3/2/2026
   author: ZhangJiaQuan
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-09-12'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/lerobot_so100m_new/
 ---
 
 # SO-ARM100 および SO-ARM101 ロボットアームと LeRobot の入門
@@ -42,7 +46,7 @@ SO-ARM10x と reComputer Jetson AI インテリジェントロボットキット
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 ## 主な特長
@@ -651,7 +655,7 @@ teleoperate コマンドは自動的に次のことを行います：
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 - 🚀 ステップ 1: Orbbec SDK 依存環境をインストールする

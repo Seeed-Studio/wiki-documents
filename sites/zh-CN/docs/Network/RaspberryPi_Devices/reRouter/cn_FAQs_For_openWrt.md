@@ -6,6 +6,9 @@ slug: /FAQs_For_openWrt
 last_update:
   date: 2023/7/26
   author: yulu Ji
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/FAQs_For_openWrt/
 ---
 
 本文档包含与 OpenWrt 相关的所有常见问题。如果您在使用 OpenWrt 时遇到任何问题，这将对您非常有帮助。

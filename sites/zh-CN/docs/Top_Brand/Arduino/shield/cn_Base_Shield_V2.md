@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Base_Shield_V2
 sku: 103030000
 last_update:
-  date: 01/11/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/11/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Base_Shield_V2/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-1.png" alt="pir" width={600} height="auto" /></p>

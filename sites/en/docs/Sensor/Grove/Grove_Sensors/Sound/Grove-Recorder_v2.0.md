@@ -9,6 +9,9 @@ sku: 107020007
 last_update:
   date: 01/20/2023
   author: jianjing huang
+createdAt: '2023-01-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Recorder_v2.0/
 ---
 
 

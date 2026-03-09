@@ -2,12 +2,15 @@
 description: Arduinoボードを使用してMosquitto MQTTブローカーをAWS IoTにブリッジする
 title: Arduinoボードを使用してMosquitto MQTTブローカーをAWS IoTにブリッジする
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino-AWS-IOT-Bridge
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Arduino-AWS-IOT-Bridge/
 ---
 
 

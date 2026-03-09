@@ -1,6 +1,6 @@
 ---
 title: Guía de Inicio Rápido de Zigbee para Seeed Studio XIAO ESP32C5 (Arduino)
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -12,6 +12,9 @@ sku: 100010048
 last_update:
   date: 1/9/2026
   author: Zeller
+createdAt: '2026-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32c5_zigbee_arduino/
 ---
 
 Este tutorial te guía a través de la implementación de aplicaciones [Zigbee](https://en.wikipedia.org/wiki/Zigbee) en la placa de desarrollo Seeed Studio **XIAO ESP32-C5**, esta placa combina conectividad **Wi-Fi**, **Bluetooth Low Energy (BLE)** y **Zigbee**, haciéndola perfecta para **aplicaciones IoT**. Los ejemplos en esta guía utilizan el **esp-arduino Zigbee SDK** para dar vida a la funcionalidad Zigbee.

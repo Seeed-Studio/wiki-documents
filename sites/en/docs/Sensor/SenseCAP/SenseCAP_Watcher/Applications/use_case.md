@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 07/08/2024
   author: Citric
+createdAt: '2024-07-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/use_case/
 ---
 
 # What does SenseCAP Watcher do

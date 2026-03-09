@@ -2,22 +2,25 @@
 description: このプロジェクトでは、Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）をエッジ音声デバイスとして使用する方法を示します。Agora を介してリアルタイムの双方向オーディオリンクを確立し、Agora Conversational AI Agent API v2（LLM/ASR/TTS）に直接接続して、低遅延なリアルタイム音声対話を実現します。
 title: reSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ音声対話クライアント デプロイガイド
 keywords:
-- reSpeaker
-- XVF3800
-- XIAO
-- ESP32S3
-- Agora
-- Conversational AI
-- AI Agent
-- RTC
-- ESP-IDF
-- ESP-ADF
+  - reSpeaker
+  - XVF3800
+  - XIAO
+  - ESP32S3
+  - Agora
+  - Conversational AI
+  - AI Agent
+  - RTC
+  - ESP-IDF
+  - ESP-ADF
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_agora_convo_client
 sku: 114993702,114993700
 last_update:
   date: 2/04/2026
   author: Jiayu Zhan(Jack)
+createdAt: '2026-02-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_agora_convo_client/
 ---
 
 > 目標：ESP32S3 と reSpeaker XVF3800 を連携させて、**Agora RTC** を介した安定した低遅延の双方向オーディオリンクを構築します。

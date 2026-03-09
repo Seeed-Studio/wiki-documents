@@ -2,12 +2,15 @@
 description: 这是一个专注于嵌入式AI的开源项目/平台。
 title: 训练和部署您自己的AI模型
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /train_and_deploy_model
 last_update:
   date: 09/24/2024
   author: Frank
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/train_and_deploy_model/
 ---
 
 # 训练和部署您自己的AI模型

@@ -2,13 +2,16 @@
 description: Eagleye_530s
 title: Eagleye 530s
 keywords:
-- Eagleye_530s
+  - Eagleye_530s
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Eagleye_530s
 sku: 114991433
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Eagleye_530s/
 ---
 
 ![输入图片描述](https://files.seeedstudio.com/wiki/Eagleye_530s/img/eagleye_530s.JPG)

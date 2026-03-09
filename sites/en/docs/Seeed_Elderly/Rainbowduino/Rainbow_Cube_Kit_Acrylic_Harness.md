@@ -1,14 +1,17 @@
 ---
-description:  Rainbow Cube Kit Acrylic Harness
-title:  Rainbow Cube Kit Acrylic Harness
+description: Rainbow Cube Kit Acrylic Harness
+title: Rainbow Cube Kit Acrylic Harness
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
 sllug: /Rainbow_Cube_Kit_Acrylic_Harness
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness/
 ---
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_Kit_Acrylic_Harness/img/Rainbow_Cube_Assembled.jpg)
 

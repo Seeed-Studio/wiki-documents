@@ -7,6 +7,9 @@ sidebar_position: 6
 last_update:
   date: 09/11/2025
   author: Jason
+createdAt: '2025-09-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio/
 ---
 
 import Tabs from '@theme/Tabs';

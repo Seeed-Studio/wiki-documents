@@ -1,6 +1,6 @@
 ---
-title: Grove - Wio-E5 Helium Demo 
-nointro:
+title: Grove - Wio-E5 Helium Demo
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -8,7 +8,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Wio_E5_Helium_Demo
 last_update:
   date: 08/30/2023
-  author: Salman 
+  author: Salman
+createdAt: '2023-08-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove_Wio_E5_Helium_Demo/
 ---
 
 ## Getting Started

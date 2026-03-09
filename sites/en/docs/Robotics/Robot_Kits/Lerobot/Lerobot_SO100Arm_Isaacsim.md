@@ -2,15 +2,18 @@
 description: This wiki provides instructions on how to import the SO100 Arm Kit robotic arm into NVIDIA's Isaac Sim simulation platform and control it using ROS2 and Python scripts.
 title: SO100Arm Kit in Isaac Sim
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Isaac_sim_import_success.webp
 slug: /lerobot_so100m_isaacsim
 last_update:
   date: 01/16/2025
   author: ZhuYaoHui
+createdAt: '2025-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/lerobot_so100m_isaacsim/
 ---
 
 # How to Import and Control SO100Arm Kit in Isaac Sim 4.2(Only)

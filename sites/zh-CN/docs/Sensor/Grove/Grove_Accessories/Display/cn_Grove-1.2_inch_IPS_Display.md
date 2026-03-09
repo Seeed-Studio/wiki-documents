@@ -2,14 +2,17 @@
 description: 入门指南 Grove 1.2英寸 IPS 显示屏
 title: Grove 1.2英寸 IPS 显示屏
 keywords:
-- ips
-- display
+  - ips
+  - display
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_1.2inch_ips_display
 sku: 104020268
 last_update:
   date: 06/13/2023
   author: Stephen Lo
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_1.2inch_ips_display/
 ---
 
 # Grove 1.2英寸 IPS 显示屏

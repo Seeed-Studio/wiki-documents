@@ -1,15 +1,18 @@
 ---
-description: Getting Started Edge Controller 
+description: Getting Started Edge Controller
 title: Getting Started Edge Box RPI-200
 keywords:
-- Raspberry pi
-- Edge Controller
+  - Raspberry pi
+  - Edge Controller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edge_Box_introduction
 sku: 114110227
 last_update:
   date: 2/29/2024
   author: Kasun Thushara
+createdAt: '2024-02-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Edge_Box_introduction/
 ---
 
 ## Introduction

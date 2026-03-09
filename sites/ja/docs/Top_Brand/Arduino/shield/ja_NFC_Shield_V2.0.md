@@ -6,8 +6,11 @@ slug: /NFC_Shield_V2.0
 sku: 113030001
 last_update:
   date: 05/15/2025
-  author: Eico 
-no_comments: false # for Disqus
+  author: Eico
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/NFC_Shield_V2.0/
 ---
 
 

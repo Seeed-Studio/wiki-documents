@@ -1,15 +1,18 @@
 ---
-description: "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送"
-title: "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送"
+description: ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送
+title: ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送
 keywords:
-- reSpeaker_XVF3800_USB_4_Mic_Array
-- reSpeaker
+  - reSpeaker_XVF3800_USB_4_Mic_Array
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /respeaker_xvf_3800_openclaw
 sku: 114993702,114993700
 last_update:
   date: 2/10/2026
   author: Mingxi
+createdAt: '2026-02-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_xvf_3800_openclaw/
 ---
 
 # ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送

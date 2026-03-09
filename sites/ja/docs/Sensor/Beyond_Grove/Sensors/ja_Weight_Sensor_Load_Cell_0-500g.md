@@ -1,6 +1,6 @@
 ---
 title: 重量センサー（ロードセル）0-500g
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 314990000
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Weight_Sensor_Load_Cell_0-500g/
 ---
 
 

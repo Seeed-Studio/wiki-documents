@@ -2,13 +2,16 @@
 description: 入门指南：1.47英寸LCD SPI 显示屏
 title: 1.47英寸LCD SPI 显示屏
 keywords:
-- oled display
+  - oled display
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /1-47inch_lcd_spi_display
 sku: 104990803
 last_update:
   date: 08/17/2023
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/1-47inch_lcd_spi_display/
 ---
 
 # 1.47英寸LCD SPI 显示屏

@@ -1,5 +1,5 @@
 ---
-description: "Smart retail voice AI service. Capture conversations, run on-device speech-to-text, and turn customer voice into insights."
+description: Smart retail voice AI service. Capture conversations, run on-device speech-to-text, and turn customer voice into insights.
 title: Smart Retail Voice AI
 keywords:
   - Smart Retail
@@ -20,6 +20,9 @@ last_update:
   author: Spencer
 tags:
   - smart-retail
+createdAt: '2025-12-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/solutions/smart-retail-voice-ai-solution-1/
 ---
 
 Leverage Seeed's Smart Retail Voice AI solution to capture and analyze in-store customer conversations. Our edge AI technology enables on-device speech-to-text processing, transforming voice data into actionable insights without relying on cloud services. Enhance customer experience, optimize store operations, and gain valuable feedback with our offline AI-powered voice analytics tailored for retail environments.

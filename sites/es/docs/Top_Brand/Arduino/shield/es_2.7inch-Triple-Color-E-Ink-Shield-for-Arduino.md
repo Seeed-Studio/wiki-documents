@@ -2,12 +2,15 @@
 description: Shield E-link Tricolor de 2.7 pulgadas para Arduino
 title: Shield E-link Tricolor de 2.7 pulgadas para Arduino
 keywords:
-- Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /2.7inch-Triple-Color-E-Ink-Shield-for-Arduino
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/2.7inch-Triple-Color-E-Ink-Shield-for-Arduino/
 ---
 <!-- ---
 nam2.7'' Triple-color E-link Shield for Arduinoe: 2.7'' Triple-Color E-Ink Shield for Arduino

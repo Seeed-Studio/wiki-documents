@@ -1,15 +1,18 @@
 ---
 description: Connect_Wio_Tracker_1110_to_TTN
 title: Connect Wio Tracker to LoRa Cloud™ Locator
-keywords: 
-- Tracker
-- Wio
+keywords:
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /connect_wio_tracker_to_locator
 sidebar_position: 4
 last_update:
   date: 10/23/2023
   author: Jessie
+createdAt: '2023-08-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/connect_wio_tracker_to_locator/
 ---
 
 

@@ -12,6 +12,9 @@ sku: 100010048,113991254,113991114, 113991054
 last_update:
   date: 01/26/2026
   author: Carla Guo
+createdAt: '2026-01-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao-esp32--series-espresense/
 ---
 
 # 在 Seeed Studio XIAO ESP32 系列上使用 ESPHome 部署 Espectre

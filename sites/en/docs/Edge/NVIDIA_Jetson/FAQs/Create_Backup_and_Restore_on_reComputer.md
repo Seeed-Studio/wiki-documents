@@ -2,16 +2,19 @@
 description: This guide explains how to back up and restore the system on a reComputer J3011 to transfer your configured environment and software to a new device. The backup process includes entering recovery mode, downloading the JetPack BSP, and using a backup script to copy the data. During restoration, insert a new SSD, re-enter recovery mode, and run the restore command. This process allows for efficient replication of the configured system environment.
 title: Create Backup and Restore on reComputer
 keywords:
-- jetson
-- BSP
-- L4T
-- Backup
-- Restore
+  - jetson
+  - BSP
+  - L4T
+  - Backup
+  - Restore
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
 slug: /create_backup_and_restore_on_recomputer
 last_update:
   date: 04/11/2025
   author: Zibo
+createdAt: '2025-04-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/
 ---
 
 # Create Backup and Restore on reComputer

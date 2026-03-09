@@ -2,19 +2,22 @@
 description: 本 wiki 演示如何使用 J501 Mini 与 StarAI Viola 机械臂，通过 LeRobot 框架和 ACT 模型执行水果分拣任务。
 title: 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣
 keywords:
-- J501 mini
-- Robotics
-- StarAI
-- Viola
-- LeRobot
-- ACT
-- Fruit Sorting
+  - J501 mini
+  - Robotics
+  - StarAI
+  - Viola
+  - LeRobot
+  - ACT
+  - Fruit Sorting
 image: https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png
 slug: /j501_mini_starai_viola_fruit_sorting
 sku: 100020039,114090080
 last_update:
   date: 2026-2-2
   author: Dayu
+createdAt: '2026-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/j501_mini_starai_viola_fruit_sorting/
 ---
 
 # 🍎 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣

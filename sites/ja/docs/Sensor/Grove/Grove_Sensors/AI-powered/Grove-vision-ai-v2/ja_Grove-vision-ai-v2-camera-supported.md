@@ -2,12 +2,15 @@
 description: Grove Vision AI V2 の使い方を始めましょう。
 title: 外部カメラ対応
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Grove-vision-ai-v2-camera-supported
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-vision-ai-v2-camera-supported/
 ---
 
 

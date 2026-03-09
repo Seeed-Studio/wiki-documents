@@ -2,13 +2,16 @@
 description: SenseCAP T1000 tracker y Thingsboard Integrado
 title: ThingsBoard Integrado(vía TTS)
 keywords:
-- ThingsBoard
-- SenseCAP_T1000_tracker
+  - ThingsBoard
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /thingsboard_integrated
 last_update:
   date: 8/20/2024
   author: Jessie
+createdAt: '2024-08-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/thingsboard_integrated/
 ---
 
 

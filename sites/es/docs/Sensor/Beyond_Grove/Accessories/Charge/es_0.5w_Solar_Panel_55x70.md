@@ -1,6 +1,6 @@
 ---
 title: Panel Solar 0.5w 55*70
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 313070004
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/0.5w_Solar_Panel_55x70/
 ---
 ![](https://files.seeedstudio.com/wiki/0.5w_Solar_Panel_55x70/img/solars.jpg)
 

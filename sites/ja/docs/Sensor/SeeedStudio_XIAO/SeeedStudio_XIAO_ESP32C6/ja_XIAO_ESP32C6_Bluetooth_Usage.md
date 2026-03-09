@@ -2,15 +2,18 @@
 description: Seeed Studio XIAO ESP32C6でのBluetooth使用方法。
 title: Bluetooth使用方法
 keywords:
-- esp32c6
-- xiao
-- ble
-- bluetooth
+  - esp32c6
+  - xiao
+  - ble
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32c6_bluetooth
 last_update:
   date: 04/11/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_bluetooth/
 ---
 
 # Seeed Studio XIAO ESP32C6でのBluetooth使用方法

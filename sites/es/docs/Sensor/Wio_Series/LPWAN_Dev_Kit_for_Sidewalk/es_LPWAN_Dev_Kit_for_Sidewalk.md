@@ -2,14 +2,17 @@
 description: LPWAN Asset Tracker Dev Kit para Amazon Sidewalk – Wio Tracker 1110
 title: LPWAN Dev Kit para Sidewalk
 keywords:
-- Tracker
-- sidewalk
-- Amazon
+  - Tracker
+  - sidewalk
+  - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_tracker_for_sidewalk
 last_update:
   date: 12/4/2023
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/wio_tracker_for_sidewalk/
 ---
 
 El kit de desarrollo LPWAN Asset Tracker está basado en el [Módulo Inalámbrico Wio-WM1110](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html), recopila datos de ubicación mediante escaneo pasivo de WiFi o GNSS, y se comunica con los puentes de red de Amazon Sidewalk utilizando las radios BLE y/o LoRa.

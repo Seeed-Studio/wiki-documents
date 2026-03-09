@@ -2,13 +2,16 @@
 description: Grove - Sensor Táctil Capacitivo I2C de 12 Teclas V2 (MPR121)
 title: Grove - Sensor Táctil Capacitivo I2C de 12 Teclas V2 (MPR121)
 keywords:
-- Grove Grove_Sensors Touch
+  - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121
 sku: 101020534
 last_update:
   date: 1/19/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-12_Key_Capacitive_I2C_Touch_Sensor_V2-MPR121/
 ---
 
 

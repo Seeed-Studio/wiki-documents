@@ -2,13 +2,16 @@
 description: Grove - LED灯带驱动器
 title: Grove - LED灯带驱动器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_Strip_Driver
 sku: 105020002
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-LED_Strip_Driver/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Strip_Driver/img/Grove-LED_Strip_Driver.jpg) -->

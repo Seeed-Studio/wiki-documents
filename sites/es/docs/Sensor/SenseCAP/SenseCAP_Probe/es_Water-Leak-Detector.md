@@ -2,13 +2,16 @@
 description: Detector de Fugas de Agua
 title: Detector de Fugas de Agua
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector
 sku: 314990618
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector/
 ---
 
 ![Detector de Fugas de Agua](https://files.seeedstudio.com/wiki/Water_Leak_Detector/pic.PNG)

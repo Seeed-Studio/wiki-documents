@@ -11,6 +11,9 @@ last_update:
   date: 12/25/2025
   author: Zeller
   sidebar_position: 9
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_mg24_sense_micropython/
 ---
 
 [MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una función de compilación de código nativo parcial. Proporciona un subconjunto de características de Python 3.5, implementado para procesadores embebidos y sistemas restringidos. Es diferente de CircuitPython y puedes leer más sobre las diferencias en la [documentación de MicroPython](https://github.com/micropython/micropython/wiki/Differences).

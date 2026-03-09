@@ -6,7 +6,10 @@ slug: /A_Handy_Serial_Library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/A_Handy_Serial_Library/
 ---
 
 Arduino hadn’t debugging function, maybe this is the first impression of some software engineers. In fact, often we just use the Arduino to do some simple application, even there’s no debugging, and it does not matter. If you want to use the Arduino to do some complex application, such as face recognition, then maybe you have to rethink if you had chosen the wrong platform.

@@ -1,14 +1,17 @@
 ---
-description:  RePhone Strap Kit for Pebble
-title:  RePhone Strap Kit for Pebble
+description: RePhone Strap Kit for Pebble
+title: RePhone Strap Kit for Pebble
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RePhone_Strap_Kit_for_Pebble
 sku: 113060005
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RePhone_Strap_Kit_for_Pebble/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RePhone_Strap_Kit_for_Pebble/img/Pebble3-04.png)

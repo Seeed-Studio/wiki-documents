@@ -6,6 +6,9 @@ slug: /llm_interface_control_jetson
 last_update:
   date: 01/29/2025
   author: kourosh
+createdAt: '2025-12-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/llm_interface_control_jetson/
 ---
 
 

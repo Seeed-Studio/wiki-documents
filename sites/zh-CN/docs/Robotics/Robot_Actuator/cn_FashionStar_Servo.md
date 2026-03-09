@@ -2,15 +2,18 @@
 description: This wiki provides tutorial for FashionStar Servo motors.
 title: 华馨京舵机
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
 slug: /fashionstar_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang
+createdAt: '2025-06-23'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/fashionstar_servo/
 ---
 
 # 华馨京舵机文档中心
@@ -22,7 +25,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-RP6-U15H-M-Servo-p-6514.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱</font></span></strong>
     </a>
 </div>
 

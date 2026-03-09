@@ -2,13 +2,16 @@
 description: Seeeduino Nano
 title: Seeeduino Nano
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-Nano
 sku: 102010268
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino-Nano/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/seeeduino-Nano-wiki.jpg)
 

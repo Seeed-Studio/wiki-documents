@@ -2,13 +2,16 @@
 description: Seeeduino GPRS
 title: Seeeduino GPRS
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_GPRS
 sku: 102010016
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino_GPRS/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/seeeduino_gprs_cover.jpg)

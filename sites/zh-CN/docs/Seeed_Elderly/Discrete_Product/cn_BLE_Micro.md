@@ -2,13 +2,16 @@
 description: BLE Micro 模块
 title: BLE Micro 模块
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_Micro
 sku: 113050012
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/BLE_Micro/
 ---
 ![](https://files.seeedstudio.com/wiki/BLE_Micro/img/BLE%20Micro_03.jpg)
 

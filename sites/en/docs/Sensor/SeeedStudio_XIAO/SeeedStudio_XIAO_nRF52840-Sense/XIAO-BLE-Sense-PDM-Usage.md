@@ -2,12 +2,15 @@
 description: PDM Microphone Usage on Seeed Studio XIAO nRF52840 Sense
 title: PDM Usage for XIAO nRF52840 Sense
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-PDM-Usage
 last_update:
   date: 06/25/2024
   author: Spencer
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO-BLE-Sense-PDM-Usage/
 ---
 
 # The PDM Microphone Usage on Seeed Studio XIAO nRF52840 Sense

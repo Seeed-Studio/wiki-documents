@@ -9,6 +9,9 @@ slug: /Mender-Client-reTerminal
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Mender-Client-reTerminal/
 ---
 
 # reTerminal上のMender Clientのインストール

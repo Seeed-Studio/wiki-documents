@@ -2,13 +2,16 @@
 description: 适用于 Seeed nRF52 mbed-enabled 开发板
 title: 适用于 Seeed nRF52 mbed-enabled 开发板
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-Bluetooth-Usage
 sku: 101990885
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-Bluetooth-Usage/
 ---
 
 # 蓝牙使用方法（Seeed nrf52 mbed-enabled 开发板库）

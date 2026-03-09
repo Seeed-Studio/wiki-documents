@@ -2,12 +2,15 @@
 description: Grove - Mixer Pack V2
 title: Grove - Mixer Pack V2
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mixer_Pack_V2
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Mixer_Pack_V2/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Mixer_Pack_V2/img/U8GUZNb9TVZ14lLRW6ialXEV.jpg)
 

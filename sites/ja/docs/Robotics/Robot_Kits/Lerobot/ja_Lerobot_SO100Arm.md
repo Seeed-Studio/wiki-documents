@@ -2,16 +2,19 @@
 description: このwikiは、SO ARM100の組み立てとデバッグのチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
 title: LerobotでSO10xArmロボットアームを使用する方法
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142
 last_update:
   date: 12/24/2024
   author: ZhuYaoHui
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/lerobot_so100m/
 ---
 
 # SO-ARM100およびSO-ARM101ロボットアームとLeRobotの入門ガイド

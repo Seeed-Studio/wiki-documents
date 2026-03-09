@@ -7,9 +7,12 @@ keywords:
   - XIAO
   - MG24
 last_update:
-  date: 11/6/2024 
+  date: 11/6/2024
   author: Jason
 sidebar_position: 1
+createdAt: '2024-11-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_mg24_pin_multiplexing/
 ---
 
 import Tabs from '@theme/Tabs';

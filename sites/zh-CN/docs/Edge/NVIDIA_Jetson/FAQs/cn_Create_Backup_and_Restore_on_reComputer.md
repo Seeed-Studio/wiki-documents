@@ -2,16 +2,19 @@
 description: 本指南介绍如何在 reComputer J3011 上备份和恢复系统，以便将您配置的环境和软件传输到新设备。备份过程包括进入恢复模式、下载 JetPack BSP，并使用备份脚本复制数据。在恢复过程中，插入新的 SSD，重新进入恢复模式，并运行恢复命令。此过程允许高效复制已配置的系统环境。
 title: 在 reComputer 上创建备份和恢复
 keywords:
-- jetson
-- BSP
-- L4T
-- Backup
-- Restore
+  - jetson
+  - BSP
+  - L4T
+  - Backup
+  - Restore
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
 slug: /create_backup_and_restore_on_recomputer
 last_update:
   date: 04/11/2025
   author: Zibo
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/create_backup_and_restore_on_recomputer/
 ---
 
 # 在 reComputer 上创建备份和恢复

@@ -2,14 +2,17 @@
 description: XIAO 圆形显示屏基础教程
 title: Seeed Studio XIAO 圆形显示屏入门指南
 keywords:
-- XIAO
-- Round Dislay
+  - XIAO
+  - Round Dislay
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /get_start_round_display
 sku: 104030087
 last_update:
   date: 07/11/2024
   author: Spencer
+createdAt: '2023-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/get_start_round_display/
 ---
 
 # Seeed Studio XIAO 圆形显示屏入门指南

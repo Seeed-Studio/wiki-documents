@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 07/21/2025
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecraft_hmi_overview/
 ---
 
 # Descripción General de SenseCraft HMI

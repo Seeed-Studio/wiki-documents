@@ -2,13 +2,16 @@
 description: Quick_Start
 title: Quick Start
 keywords:
-- gateway
-- SenseCAP
+  - gateway
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /quick_start_with_M2_MP
 last_update:
   date: 9/26/2023
   author: Jessie
+createdAt: '2023-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/quick_start_with_M2_MP/
 ---
 
 

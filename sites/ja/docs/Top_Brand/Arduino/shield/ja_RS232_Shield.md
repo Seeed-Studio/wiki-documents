@@ -6,8 +6,11 @@ slug: /RS232_Shield
 sku: 113030016
 last_update:
   date: 05/15/2025
-  author: Eico 
-no_comments: false # for Disqus
+  author: Eico
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/RS232_Shield/
 ---
 
 

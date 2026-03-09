@@ -2,14 +2,17 @@
 description: XIAO ESP32C3搭載の7.5インチE-Inkディスプレイは、Arduino経由でデータを表示するためのコンパクトで省エネルギーなソリューションです。
 title: Arduinoとの連携
 keywords:
-- ePaper display
-- arduino
+  - ePaper display
+  - arduino
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
 slug: /xiao_075inch_epaper_panel_arduino
 sidebar_position: 3
 last_update:
   date: 03/26/2025
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>

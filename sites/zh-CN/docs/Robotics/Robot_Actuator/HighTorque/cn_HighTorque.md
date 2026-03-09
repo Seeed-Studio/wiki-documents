@@ -1,17 +1,20 @@
 ---
 description: 本文档将介绍如何快速上手高擎系列电机.
-title:  高擎系列电机
+title: 高擎系列电机
 keywords:
-- 关节模组
-- 电机
-- 机器人
-- 机械臂
+  - 关节模组
+  - 电机
+  - 机器人
+  - 机械臂
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /hightorque_series
 sku: 114090071,114090072
 last_update:
   date: 06/24/2025
   author: ZhuYaoHui
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/hightorque_series/
 ---
 
 

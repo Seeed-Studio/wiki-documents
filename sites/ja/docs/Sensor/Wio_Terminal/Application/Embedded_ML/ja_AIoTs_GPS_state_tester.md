@@ -2,13 +2,16 @@
 description: LoRaノードとAIoTs GPS
 title: LoRaノードとAIoTs GPS
 keywords:
-- Wio_terminal 
-- Embedded_ML 
+  - Wio_terminal
+  - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /AIoTs_GPS_state_tester
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/AIoTs_GPS_state_tester/
 ---
 
 

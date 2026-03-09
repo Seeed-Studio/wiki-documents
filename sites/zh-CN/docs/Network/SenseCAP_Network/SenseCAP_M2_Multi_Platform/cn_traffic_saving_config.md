@@ -2,13 +2,16 @@
 description: 低数据消耗模式配置（适用于4G版本）
 title: 低数据消耗模式配置（适用于4G版本）
 keywords:
-- SenseCAP_M2
-- Gateway
+  - SenseCAP_M2
+  - Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/sensecap_m2.jpg
 slug: /traffic_saving_config
 last_update:
   date: 12/4/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/traffic_saving_config/
 ---
 
 

@@ -2,16 +2,19 @@
 description: 本wiki演示了如何在NVIDIA Jetson Orin NX上使用llama.cpp部署开源GPT-OSS-20B大语言模型，展示边缘AI能力。它提供了安装、模型转换、量化和运行推理的分步说明，并可选择集成Web UI。
 title: GPT-OSS在reComputer Jetson上实时运行！
 keywords:
-- reComputer
-- Jetson
-- LLM
-- GPT-OSS
-- llamacpp
+  - reComputer
+  - Jetson
+  - LLM
+  - GPT-OSS
+  - llamacpp
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp
 slug: /deploy_gptoss_on_jetson
 last_update:
   date: 08/14/2025
   author: Youjiang
+createdAt: '2025-08-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deploy_gptoss_on_jetson/
 ---
 
 

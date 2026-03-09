@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 description: SenseCraft App
-title:  Overview
+title: Overview
 keywords:
-- App
+  - App
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-app/overview
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 1/7/2026
   author: Janet
+createdAt: '2024-07-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-app/overview/
 ---
 
 :::tip note

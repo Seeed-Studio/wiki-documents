@@ -3,7 +3,7 @@ description: Shape Detection with reTerminal and Pi camera with OpenCV
 title: Shape Detection with reTerminal and Pi camera with OpenCV
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Shape-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Shape_detection
 last_update:
   date: 2/5/2023
   author: Kasun Thushara
+createdAt: '2024-02-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal_DM_Shape_detection/
 ---
 
 ## Introduction

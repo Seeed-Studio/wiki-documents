@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、yolov8を使用したポーズ推定でライトを制御する方法を説明します。
-title:  Node-RedとRaspberry Pi with AIkitを使用したポーズベースライト制御
+title: Node-RedとRaspberry Pi with AIkitを使用したポーズベースライト制御
 keywords:
   - Edge
   - reComputer r1000
@@ -11,7 +11,10 @@ slug: /pose_based_light_control_with_nodered_and_rpi_with_aikit
 last_update:
   date: 07/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/pose_based_light_control_with_nodered_and_rpi_with_aikit/
 ---
 
 # Node-RedとRaspberry Pi with AIkitを使用したポーズベースライト制御

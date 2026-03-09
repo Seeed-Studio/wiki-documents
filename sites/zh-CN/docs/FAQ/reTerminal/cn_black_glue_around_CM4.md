@@ -6,6 +6,9 @@ slug: /black_glue_around_CM4
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/black_glue_around_CM4/
 ---
 
 <!-- Q8: 为什么 CM4 芯片周围有黑色胶水？ -->

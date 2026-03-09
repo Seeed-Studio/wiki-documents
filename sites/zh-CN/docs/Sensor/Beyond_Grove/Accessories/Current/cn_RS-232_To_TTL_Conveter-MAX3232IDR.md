@@ -1,6 +1,6 @@
 ---
 title: RS-232 转 TTL 转换器 (MAX3232IDR)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103990363
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RS-232_To_TTL_Conveter-MAX3232IDR/
 ---
 
 ![](https://files.seeedstudio.com/wiki/RS-232_To_TTL_Conveter-MAX3232IDR/img/main.jpg)

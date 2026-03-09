@@ -10,7 +10,10 @@ slug: /distributed_inference_of_deepseek_model_on_raspberrypi
 last_update:
   date: 03/17/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-03-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/distributed_inference_of_deepseek_model_on_raspberrypi/
 ---
 
 # 在 Raspberry Pi AI box 和工业盒子上进行 DeepSeek 模型的分布式推理

@@ -1,16 +1,19 @@
 ---
 title: Crear un Proyecto(ESP-IDF) - SenseCAP Indicator
 description: Guía paso a paso para desarrollar un proyecto para el SenseCAP Indicator usando ESP-IDF o Squareline Studio.
-keywords: 
-- SenseCAP Indicator
-- ESP-IDF
-- Squareline
+keywords:
+  - SenseCAP Indicator
+  - ESP-IDF
+  - Squareline
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_indicator_project
 sidebar_position: 4
 last_update:
   date: 04/12/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/sensecap_indicator_project/
 ---
 
 ## Descripción General

@@ -2,15 +2,18 @@
 description: Este artículo describe cómo implementar Live VLM WebUI en un dispositivo reComputer Jetson para habilitar la interacción y evaluación en tiempo real de Modelos de Visión-Lenguaje (VLM). Las pruebas muestran que todo el flujo de trabajo puede ejecutarse en hardware con 16GB de memoria, pero la velocidad de inferencia es relativamente lenta.
 title: Implementar Live VLM WebUI en reComputer Jetson
 keywords:
-- reComputer
-- Jetson
-- VLM
-- Live VLM WebUI
+  - reComputer
+  - Jetson
+  - VLM
+  - Live VLM WebUI
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp
 slug: /deploy_live_vlm_webui_on_jetson
 last_update:
   date: 12/26/2025
   author: Youjiang
+createdAt: '2025-12-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/deploy_live_vlm_webui_on_jetson/
 ---
 
 

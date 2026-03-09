@@ -2,13 +2,16 @@
 description: 项目三 – 模拟输入 v1.0b
 title: 项目三 – 模拟输入 v1.0b
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Three-Analog_Input_v1b
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Project_Three-Analog_Input_v1b/
 ---
 <!-- ---
 name: Project Three – Analog Input v1.0b

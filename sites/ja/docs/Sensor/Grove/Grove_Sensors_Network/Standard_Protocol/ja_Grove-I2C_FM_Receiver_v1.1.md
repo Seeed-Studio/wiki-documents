@@ -1,6 +1,6 @@
 ---
 title: Grove - I2C FM Receiver v1.1
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -10,6 +10,9 @@ sku: 107020049
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-I2C_FM_Receiver_v1.1/
 ---
 
 

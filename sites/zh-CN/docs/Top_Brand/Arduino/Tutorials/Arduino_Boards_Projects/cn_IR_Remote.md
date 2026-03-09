@@ -2,13 +2,16 @@
 description: 红外遥控器
 title: 红外遥控器
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /IR_Remote
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/IR_Remote/
 ---
 <!-- ---
 name: IR Remote

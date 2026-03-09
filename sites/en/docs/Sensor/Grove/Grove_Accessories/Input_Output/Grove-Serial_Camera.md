@@ -1,6 +1,6 @@
 ---
 title: Grove - Serial Camera
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-Serial_Camera
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Serial_Camera/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Serial_Camera/img/Serial_camera.jpg)

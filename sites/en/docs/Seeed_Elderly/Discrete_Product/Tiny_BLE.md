@@ -1,14 +1,17 @@
 ---
-description:  Tiny BLE
-title:  Tiny BLE
+description: Tiny BLE
+title: Tiny BLE
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Tiny_BLE
 sku: 102080005
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Tiny_BLE/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/BLE_Smurfs_Photo.png)

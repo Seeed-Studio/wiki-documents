@@ -2,12 +2,15 @@
 description: BLE Bee
 title: BLE Bee
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BLE_Bee
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/BLE_Bee/
 ---
 
 ![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Ble_bee.jpg)

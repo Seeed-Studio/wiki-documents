@@ -2,12 +2,15 @@
 description: Inicio Rápido del SenseCAP M2 Light Gateway
 title: Inicio Rápido del SenseCAP M2 Light Gateway
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/Quick_Start
 last_update:
   date: 03/23/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/Quick_Start/
 ---
 
 ## **Paso 1: Conectar el SenseCAP M2**

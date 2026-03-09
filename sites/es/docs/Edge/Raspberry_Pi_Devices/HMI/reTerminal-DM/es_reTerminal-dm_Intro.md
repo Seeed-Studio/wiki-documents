@@ -2,14 +2,17 @@
 description: Presentamos reTerminal DM, una interfaz humano-máquina (HMI) industrial de código abierto de 10.1" que sirve como un Maestro de Dispositivo Integrado. Este dispositivo todo en uno, basado en Raspberry Pi CM4, funciona como un PC de Panel, HMI, PLC y Gateway IIoT. Con una pantalla grande de grado industrial IP65, reTerminal DM es un hub de detección interactivo de próxima generación, optimizando el flujo de datos y la gestión de dispositivos en sitio.
 title: Guía de reTerminal DM
 keywords:
-- reTerminal DM
-- Getting Start
+  - reTerminal DM
+  - Getting Start
 image: https://wdcdn.qpic.cn/MTY4ODg1NjEyODQyNTE2Nw_928147_NLYXC-4cRuQd5Tra_1681284617?w=1200&h=713
 slug: /reTerminal-dm_Intro
 sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 07/05/2024
   author: Kasun Thushara
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal-dm_Intro/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NjEyODQyNTE2Nw_928147_NLYXC-4cRuQd5Tra_1681284617?w=1200&h=713" style={{width:800, height:'auto'}}/></div>

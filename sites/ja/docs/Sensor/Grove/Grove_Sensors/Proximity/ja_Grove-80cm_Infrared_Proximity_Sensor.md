@@ -1,6 +1,6 @@
 ---
 title: Grove - 80cm 赤外線近接センサー
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020042
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-80cm_Infrared_Proximity_Sensor/
 ---
 
 

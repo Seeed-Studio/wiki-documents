@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO ESP32C5 Zigbee 快速入门指南（Arduino）
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -12,6 +12,9 @@ sku: 100010048
 last_update:
   date: 1/9/2026
   author: Zeller
+createdAt: '2026-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_zigbee_arduino/
 ---
 
 本教程指导您在 Seeed Studio **XIAO ESP32-C5** 开发板上实现 [Zigbee](https://en.wikipedia.org/wiki/Zigbee) 应用，该开发板结合了 **Wi-Fi**、**低功耗蓝牙（BLE）** 和 **Zigbee** 连接功能，非常适合 **物联网应用**。本指南中的示例使用 **esp-arduino Zigbee SDK** 来实现 Zigbee 功能。

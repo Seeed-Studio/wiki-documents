@@ -7,6 +7,9 @@ sidebar_position: 2
 last_update:
   date: 11/5/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/watcher_software_framework/
 ---
 
 # Watcher 软件架构

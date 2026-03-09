@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Hotspot Registration
 title: Hotspot Registration
 keywords:
-- Cloud and Chain
+  - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/blockchain-dashboard/hotspot-registration
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 06/06/2025
   author: Matthew
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-blockchain/blockchain-dashboard/hotspot-registration/
 ---
 
 # Hotspot Registration

@@ -1,6 +1,6 @@
 ---
 title: 315Mhz Wireless car key fob with key chain
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /315Mhz_Wireless_car_key_fob_with_key_chain
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/315Mhz_Wireless_car_key_fob_with_key_chain/
 ---
 ![](https://files.seeedstudio.com/wiki/315Mhz_Wireless_car_key_fob_with_key_chain/img/carkey_LRG.jpg)
 

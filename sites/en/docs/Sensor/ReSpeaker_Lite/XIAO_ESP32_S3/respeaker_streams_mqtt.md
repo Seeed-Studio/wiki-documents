@@ -2,14 +2,17 @@
 description: MQTT Audio Streaming
 title: MQTT Audio Streaming
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_steams_mqtt
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_steams_mqtt/
 ---
 
 This project demonstrates how to use the reSpeaker Lite board, which includes an integrated XIAO ESP32S3 microcontroller, to generate and send audio data to an MQTT broker.

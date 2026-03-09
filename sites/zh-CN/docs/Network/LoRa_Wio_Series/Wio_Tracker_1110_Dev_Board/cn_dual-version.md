@@ -2,10 +2,10 @@
 description: Wio Tracker 双栈版本
 title: 使用 Amazon Sidewalk 和 LoRaWAN 网络实现无缝资产跟踪
 keywords:
-- Tracker
-- AWS
-- Sidewalk
-- LoRaWAN
+  - Tracker
+  - AWS
+  - Sidewalk
+  - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_tracker_dual_stack
 sidebar_position: 8
@@ -13,6 +13,9 @@ sidebar_class_name: hidden
 last_update:
   date: 3/4/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wio_tracker_dual_stack/
 ---
 
 

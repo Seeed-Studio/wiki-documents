@@ -3,16 +3,16 @@ description: 通过 MCP 将外部业务系统与 SenseCAP Watcher 集成的指�
 title: 为您的业务系统带来语音 AI（MCP）
 sidebar_position: 6
 keywords:
-- MCP
-- API
-- Integration
-- Warehouse
-- Voice Control
-- Watcher
-- External System
-- AI Enabled Devices
-- Qwen
-- OA
+  - MCP
+  - API
+  - Integration
+  - Warehouse
+  - Voice Control
+  - Watcher
+  - External System
+  - AI Enabled Devices
+  - Qwen
+  - OA
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /mcp_external_system_integration
 last_update:
@@ -21,6 +21,9 @@ last_update:
 tags:
   - mcp
   - agents
+createdAt: '2025-12-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/mcp_external_system_integration/
 ---
 
 import Tabs from '@theme/Tabs';

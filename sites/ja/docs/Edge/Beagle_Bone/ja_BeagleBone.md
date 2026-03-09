@@ -2,12 +2,15 @@
 description: BeagleBone®の紹介
 title: BeagleBone®の紹介
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone
 last_update:
   date: 05/15/2025
   author: Frank
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/BeagleBone/
 ---
 
 

@@ -2,13 +2,16 @@
 description: pH传感器
 title: pH传感器
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor
 sku: 101990666,314990622
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor/
 ---
 
 ![Liquid Level Sensor](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png)

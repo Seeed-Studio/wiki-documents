@@ -2,12 +2,15 @@
 description: この記事では、J401-Mini キャリアボードに JetPack 6.0 をフラッシュする方法について説明します。デバイスの概要、準備、Force Recovery モードへの入り方、ワンクリックスクリプトを使用したフラッシュ方法を含み、ユーザーが NVIDIA Jetson Orin デバイスを迅速にデプロイできるよう支援します。
 title: Jetpack のフラッシュ
 keywords:
-- reComputer Mini
+  - reComputer Mini
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
   date: 03/28/2025
   author: Dayu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_mini_j401_getting_started/
 ---
 
 # J401-Mini キャリアボードに JetPack をフラッシュする

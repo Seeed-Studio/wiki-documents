@@ -10,7 +10,10 @@ sku: 110991666, 110061363, 110061401, 110061361, 110061481
 last_update:
   date: 01/04/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Security_Scan/
 ---
 
 # 刀具检测：基于reComputer在Triton推理服务器上部署的目标检测模型

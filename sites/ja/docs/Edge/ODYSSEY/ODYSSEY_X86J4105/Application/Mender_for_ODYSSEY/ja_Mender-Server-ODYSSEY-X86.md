@@ -2,12 +2,15 @@
 description: ODYSSEY - X86でのMender Server
 title: ODYSSEY - X86でのMender Server
 keywords:
-- ソフトウェア Mender
+  - ソフトウェア Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Mender-Server-ODYSSEY-X86
 last_update:
   date: 05/15/2025
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Mender-Server-ODYSSEY-X86/
 ---
 
 

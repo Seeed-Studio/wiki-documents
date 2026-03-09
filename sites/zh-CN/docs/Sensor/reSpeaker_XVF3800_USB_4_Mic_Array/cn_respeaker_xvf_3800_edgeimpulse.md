@@ -2,17 +2,20 @@
 description: 通过 ReSpeaker XVF3800 USB 4-Mic Array 和 XIAO ESP32S3 解锁强大的语音控制功能。具备 360° 音频捕获、噪声抑制和通过 Edge Impulse 实现的 TinyML 唤醒词检测——非常适合智能设备、机器人和物联网项目。
 title: 基于 Edge Impulse 的 TinyML 语音识别
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
-- Edge Impulse
-- TinyML
-- Speech Recognition
+  - reSpeaker
+  - XIAO
+  - ESP32S3
+  - Edge Impulse
+  - TinyML
+  - Speech Recognition
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_xiao_edge_impulse
 last_update:
   date: 8/7/2025
   author: Kasun Thushara
+createdAt: '2025-08-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_edge_impulse/
 ---
 
 ## 概述

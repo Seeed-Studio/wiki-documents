@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates how to use pose estimation with yolov8 to control your lights.
-title:  Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit
+title: Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit
 keywords:
   - Edge
   - reComputer r1000
@@ -11,7 +11,10 @@ slug: /pose_based_light_control_with_nodered_and_rpi_with_aikit
 last_update:
   date: 07/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/pose_based_light_control_with_nodered_and_rpi_with_aikit/
 ---
 
 # Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit

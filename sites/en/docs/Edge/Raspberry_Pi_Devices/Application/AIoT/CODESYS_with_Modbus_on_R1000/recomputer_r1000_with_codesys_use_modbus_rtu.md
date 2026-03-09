@@ -11,6 +11,9 @@ slug: /recomputer_r1000_use_modbus_rtu_with_codesys
 last_update:
   date: 10/10/2024
   author: ShuishengPeng
+createdAt: '2024-10-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_r1000_use_modbus_rtu_with_codesys/
 ---
 ## Introduction
 

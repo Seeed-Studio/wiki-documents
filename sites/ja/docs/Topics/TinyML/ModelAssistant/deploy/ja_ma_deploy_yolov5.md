@@ -2,14 +2,17 @@
 description: YOLOv5のトレーニングからデプロイまで
 title: YOLOv5物体検出モデルのトレーニングとデプロイ
 keywords:
-- YOLOv5 
-- we2 
-- 物体検出
+  - YOLOv5
+  - we2
+  - 物体検出
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov5
 last_update:
   date: 05/15/2025
   author: Jack Mu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ma_deploy_yolov5/
 ---
 
 

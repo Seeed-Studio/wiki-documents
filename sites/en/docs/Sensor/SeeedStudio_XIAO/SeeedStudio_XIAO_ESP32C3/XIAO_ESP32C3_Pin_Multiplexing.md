@@ -2,12 +2,15 @@
 description: Pin Multiplexing on Seeed Studio XIAO ESP32C3
 title: Pin Multiplexing
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
   date: 07/25/2024
   author: Spencer
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO_ESP32C3_Pin_Multiplexing/
 ---
 
 # Pin Multiplexing

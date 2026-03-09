@@ -2,13 +2,16 @@
 description: SenseCAP_Tracker_T1000-A/B_TTN_Mapper
 title: Configuración de Mapper TTN
 keywords:
-- Tracker
-- TTN
+  - Tracker
+  - TTN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ttn_mapper_for_SenseCAP_T1000
 last_update:
   date: 10/13/2023
   author: Jessie
+createdAt: '2023-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ttn_mapper_for_SenseCAP_T1000/
 ---
 
 [TTN Mapper](https://ttnmapper.org/) es una herramienta conveniente utilizada para mapear la cobertura de red de gateways conectados a The Things Stack. Consulta el sitio oficial de [documentación de TTN Mapper](https://docs.ttnmapper.org/) para más detalles.

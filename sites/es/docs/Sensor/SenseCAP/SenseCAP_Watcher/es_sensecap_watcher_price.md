@@ -7,6 +7,9 @@ sidebar_position: 3
 last_update:
   date: 10/18/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/watcher_price/
 ---
 
 # Planes y Beneficios de SenseCraft AI para Watcher

@@ -10,7 +10,10 @@ slug: /frigate_nvr_with_raspberrypi_5
 last_update:
   date: 04/03/2025
   author: Joshua Lee
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/frigate_nvr_with_raspberrypi_5/
 ---
 
 

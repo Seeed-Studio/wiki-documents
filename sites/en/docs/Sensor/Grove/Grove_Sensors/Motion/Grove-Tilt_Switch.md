@@ -2,13 +2,16 @@
 description: Grove - Tilt Switch
 title: Grove - Tilt Switch
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Tilt_Switch
 sku: 101020025
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Tilt_Switch/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Tilt1.jpg) -->

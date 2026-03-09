@@ -2,14 +2,17 @@
 description: This article demonstrates how to implement NVIDIA's GR00T AI platform for advanced robotic arm control using StarAI hardware, covering the complete workflow from environment setup to model fine-tuning and deployment.
 title: Control 6/7 DOF Robot Arm using NVIDIA Isaac GR00T N1.5
 keywords:
-- NVIDIA Jetson
-- Isaac GR00T
-- Robotic Arm
+  - NVIDIA Jetson
+  - Isaac GR00T
+  - Robotic Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.webp
 slug: /control_robotic_arm_via_gr00t
 last_update:
   date: 6/16/2025
   author: Youjiang
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/control_robotic_arm_via_gr00t/
 ---
 
 ## Introduction

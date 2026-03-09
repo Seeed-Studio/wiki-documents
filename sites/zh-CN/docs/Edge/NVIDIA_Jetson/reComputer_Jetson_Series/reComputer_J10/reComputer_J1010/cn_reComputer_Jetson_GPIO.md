@@ -9,6 +9,9 @@ slug: /reComputer_Jetson_GPIO
 last_update:
   date: 04/12/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_GPIO/
 ---
 
 # 如何在 reComputer Jetson 开发板上使用 40 引脚 GPIO

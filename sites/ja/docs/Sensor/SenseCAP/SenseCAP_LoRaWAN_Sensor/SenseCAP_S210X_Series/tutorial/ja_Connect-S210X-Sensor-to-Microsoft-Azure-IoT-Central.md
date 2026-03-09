@@ -2,12 +2,15 @@
 description: Node-REDを介してS210XセンサーをMicrosoft Azure IoT Centralに接続する
 title: Node-REDを介してS210XセンサーをMicrosoft Azure IoT Centralに接続する
 keywords:
-- SenseCAP LoRaWAN Sensor& Microsoft Azure IoT Central
+  - SenseCAP LoRaWAN Sensor& Microsoft Azure IoT Central
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central
 last_update:
   date: 7/26/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central/
 ---
 
 

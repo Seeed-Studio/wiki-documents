@@ -1,6 +1,6 @@
 ---
-description:  Deploy Whisper on NVIDIA Jetson Orin for Real time Speech to Text
-title:  Speech2Text with Whisper
+description: Deploy Whisper on NVIDIA Jetson Orin for Real time Speech to Text
+title: Speech2Text with Whisper
 keywords:
   - Edge
   - reComputer
@@ -11,7 +11,10 @@ slug: /Whisper_on_Jetson_for_Real_Time_Speech_to_Text
 last_update:
   date: 03/14/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-03-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/
 ---
 
 # Deploy Whisper on NVIDIA Jetson Orin for Real time Speech to Text

@@ -2,14 +2,17 @@
 description: reComputer R1100 是一款基于 Raspberry Pi CM4 的物联网网关和控制器，具备 AI 功能。配备 2GB RAM、8GB eMMC、双以太网、USB、RS485、RS232、DI/DO 以及无线连接（4G、LoRa®、Wi-Fi/BLE），非常适合工业自动化和边缘计算。
 title: reComputer R1100 入门指南
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer2.jpg
 slug: /recomputer_r1100_intro
 last_update:
   date: 2/25/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/
 ---
 
 ## 概述

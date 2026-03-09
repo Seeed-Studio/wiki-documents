@@ -2,12 +2,15 @@
 description: Grove - 非门
 title: Grove - 非门
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-NOT
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-NOT/
 ---
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/act-4.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Grove-2-Channel_SPDT_Relay/img/20180823144904.jpg" /></a></p> -->

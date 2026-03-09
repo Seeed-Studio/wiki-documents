@@ -1,9 +1,9 @@
 ---
-description: Configure_the_Parameters_of_Wio_Tracker_1110 
+description: Configure_the_Parameters_of_Wio_Tracker_1110
 title: Parameters  Configuration
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /configure_param_for_wio_tracker
 sidebar_position: 9
@@ -11,6 +11,9 @@ sidebar_class_name: hidden
 last_update:
   date: 9/14/2023
   author: Jessie
+createdAt: '2023-09-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/configure_param_for_wio_tracker/
 ---
 
 

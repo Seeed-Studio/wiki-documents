@@ -2,16 +2,19 @@
 description: Home Assistant 语音助手系统
 title: Home Assistant 语音助手系统
 keywords:
-- ESP32S3
-- XIAO
-- reSpeaker
-- Home Assistant
+  - ESP32S3
+  - XIAO
+  - reSpeaker
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
   date: 2/11/2026
   author: Kasun Thushara
+createdAt: '2024-04-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_lite_ha/
 ---
 
 在本教程中，您将学习如何配置您的 ReSpeaker Lite 与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家对话。

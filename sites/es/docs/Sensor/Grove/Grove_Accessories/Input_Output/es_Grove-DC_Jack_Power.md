@@ -1,6 +1,6 @@
 ---
 title: Grove - DC Jack Power
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-DC_Jack_Power
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-DC_Jack_Power/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-DC_Jack_Power/img/Power_photo1.jpg)
 

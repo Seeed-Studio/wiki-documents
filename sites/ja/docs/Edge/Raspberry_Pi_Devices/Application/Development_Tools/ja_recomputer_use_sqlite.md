@@ -10,7 +10,10 @@ slug: /use_sqlite_on_recomputer
 last_update:
   date: 09/25/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/use_sqlite_on_recomputer/
 ---
 
 # reComputer上でSQLiteを使用する

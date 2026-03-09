@@ -2,13 +2,16 @@
 description: Bluetooth V4.0 HM-11 BLEモジュール
 title: Bluetooth V4.0 HM-11 BLEモジュール
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_V4.0_HM_11_BLE_Module
 sku: 317030001
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Bluetooth_V4.0_HM_11_BLE_Module/
 ---
 
 

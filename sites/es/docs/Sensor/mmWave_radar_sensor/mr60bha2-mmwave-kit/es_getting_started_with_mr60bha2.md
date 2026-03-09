@@ -2,9 +2,9 @@
 description: Introducción al uso del kit de sensor de detección de respiración y latidos cardíacos mmWave de 60GHz con XIAO ESP32C6 (MR60BHA2)
 title: Introducción al uso de MR60BHA2
 keywords:
-- mmwave
-- radar
-- MR60BHA2
+  - mmwave
+  - radar
+  - MR60BHA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg
 slug: /getting_started_with_mr60bha2_mmwave_kit
 sku: 114993387
@@ -12,6 +12,9 @@ sidebar_position: 0
 last_update:
   date: 08/19/2024
   author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/es/getting_started_with_mr60bha2_mmwave_kit/
 ---
 
 # Introducción al uso del kit de sensor de detección de respiración y latidos cardíacos mmWave de 60GHz con XIAO ESP32C6 (MR60BHA2)
@@ -21,7 +24,7 @@ last_update:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
 </div><br />
 
 Presentamos nuestros avanzados **módulos de sensor mmWave** para XIAO, diseñados para ofrecer soluciones de monitorización de vanguardia tanto para [detección de caídas](https://wiki.seeedstudio.com/es/getting_started_with_mr60fda2_mmwave_kit/) como para monitorización de latidos cardíacos. Impulsados por el robusto microcontrolador XIAO ESP32 con conectividad Wi‑Fi y Bluetooth integrada, estos módulos ofrecen capacidades de detección precisas y fiables. Tanto si necesitas monitorizar caídas en tiempo real como seguir los latidos con alta sensibilidad, nuestros módulos están equipados con tecnología de última generación, incluidos LED RGB personalizables y detección de luz ambiental. Con opciones de expansión sencillas mediante puertos Grove GPIO, estos versátiles módulos son perfectos para una amplia gama de aplicaciones, desde la integración en hogares inteligentes hasta la monitorización sanitaria.

@@ -2,12 +2,15 @@
 description: はじめに
 title: Seeed Studio XIAO nRF52840 Sense での TensorFlow Lite 入門
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-TFLite-Getting-Started
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-TFLite-Getting-Started/
 ---
 
 # Seeed Studio XIAO nRF52840 Sense での TensorFlow Lite 入門

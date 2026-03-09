@@ -12,6 +12,9 @@ sku: 113991054
 last_update:
   date: 01/16/2026
   author: Carla Guo
+createdAt: '2026-01-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-esp32c3-espresense/
 ---
 
 # Seeed Studio XIAO ESP32-C3でESPresenseをHome Assistantと連携してデプロイする

@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Music_Shield_V2.2
 sku: 107020003
 last_update:
-  date: 01/30/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/30/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Music_Shield_V2.2/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Music_Shield_V2.2/img/Music_Shield_Picture.jpg" alt="pir" width={600} height="auto" /></p>

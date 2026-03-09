@@ -2,12 +2,15 @@
 description: Sidekick Basic Kit for TI LaunchPad
 title: Sidekick Basic Kit for TI LaunchPad
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sidekick_Basic_Kit_for_TI_LaunchPad
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sidekick_Basic_Kit_for_TI_LaunchPad/
 ---
 ![](https://files.seeedstudio.com/wiki/Sidekick_Basic_Kit_for_TI_LaunchPad/img/Sidekick_Basic_Kit_for_TI_LaunchPad_product_view_1200_s.jpg)
 

@@ -2,14 +2,17 @@
 description: I2S RGB 与 XIAO ESP32S3
 title: I2S RGB 使用方法
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_i2s_rgb
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_i2s_rgb/
 ---
 
 本项目演示如何使用 reSpeaker 开发板根据通过 I2S 接口接收的音频输入强度来控制 NeoPixel LED 灯带。LED 灯带会根据音频样本的平均强度调整其亮度和颜色来响应音频。

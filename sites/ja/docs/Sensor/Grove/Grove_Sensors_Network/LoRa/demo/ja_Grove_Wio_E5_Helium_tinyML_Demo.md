@@ -1,6 +1,6 @@
 ---
 title: Grove - Wio-E5 Helium と TinyML アプリケーションデモ
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /Grove_Wio_E5_Helium_tinyML_Demo
 last_update:
   date: 05/15/2025
   author: Salman
+createdAt: '2023-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Wio_E5_Helium_tinyML_Demo/
 ---
 
 

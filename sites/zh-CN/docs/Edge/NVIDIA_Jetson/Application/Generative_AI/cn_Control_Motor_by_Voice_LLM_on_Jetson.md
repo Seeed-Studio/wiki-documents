@@ -2,17 +2,20 @@
 description: 本wiki介绍了基于Jetson平台的语音控制电机解决方案，详细说明了所需硬件、连接方法和软件部署步骤。
 title: 在Jetson上通过语音LLM控制电机
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Motor
-- Qwen
-- Function Calling
+  - reComputer
+  - Jetson
+  - LLM
+  - Motor
+  - Qwen
+  - Function Calling
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /control_motor_by_voice_llm_on_jetson
 last_update:
   date: 08/19/2025
   author: Youjiang
+createdAt: '2025-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/control_motor_by_voice_llm_on_jetson/
 ---
 
 

@@ -2,12 +2,15 @@
 description: 传感器 - 气体
 title: 传感器 - 气体
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Gas_Sensor_Selection_Guide
 last_update:
   date: 1/4/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeed_Gas_Sensor_Selection_Guide/
 ---
 <!-- ![](https://files.seeedstudio.com/wiki/Seeed_Gas_Sensor_Selection_Guide/img/Seeed_Gas_Sensor_Selection_Guide.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed_Gas_Sensor_Selection_Guide/img/Seeed_Gas_Sensor_Selection_Guide.jpg" alt="pir" width={600} height="auto" /></p>

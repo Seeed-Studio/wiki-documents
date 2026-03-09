@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/02/2024
   author: Citric
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2/
 ---
 
 # Grove Vision AI V2 でモデルを使用する

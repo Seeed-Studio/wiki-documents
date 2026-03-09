@@ -9,6 +9,9 @@ sku: 104020000
 last_update:
   date: 11/30/2023
   author: gunengyu
+createdAt: '2023-11-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Voltage_Divider/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Voltage_Divider/img/Voltage_Divider_01.jpg)

@@ -6,6 +6,9 @@ slug: /reServer-Update-BIOS-Install-Drivers
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reServer-Update-BIOS-Install-Drivers/
 ---
 
 <!-- ---

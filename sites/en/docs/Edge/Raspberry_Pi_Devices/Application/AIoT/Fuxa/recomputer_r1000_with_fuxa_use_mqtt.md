@@ -11,6 +11,9 @@ slug: /reComputer_r1000_fuxa_mqtt_client
 last_update:
   date: 10/8/2024
   author: ShuishengPeng
+createdAt: '2024-06-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/
 ---
 
 ## Introduction

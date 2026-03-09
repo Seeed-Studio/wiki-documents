@@ -2,12 +2,15 @@
 description: XIAO シリーズの Wiki 機能ページ。
 title: XIAO シリーズ展示
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_topic_page
 last_update:
   date: 02/04/2026
   author: Carla Guo
+createdAt: '2023-07-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_topic_page/
 ---
 
 # Seeed Studio XIAO 展示

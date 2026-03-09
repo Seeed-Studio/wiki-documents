@@ -2,13 +2,16 @@
 description: Raspberry Pi用2チャンネルCAN BUS FDシールド
 title: Raspberry Pi用2チャンネルCAN BUS FDシールド
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
 sku: 103030296, 103990563
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/
 ---
 
 

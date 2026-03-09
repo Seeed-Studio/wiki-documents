@@ -2,13 +2,16 @@
 description: Grove - Acelerómetro y Giroscopio de 6 Ejes
 title: Grove - Acelerómetro y Giroscopio de 6 Ejes
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-6-Axis_AccelerometerAndGyroscope
 sku: 105020012
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-6-Axis_AccelerometerAndGyroscope/
 ---
 
 <!-- tags: io_3v3, io_5v, grove_i2c, grove_analog, grove_digital, grove_uart, plat_duino, plat_bbg, plat_pi, plat_wio, plat_linkit -->

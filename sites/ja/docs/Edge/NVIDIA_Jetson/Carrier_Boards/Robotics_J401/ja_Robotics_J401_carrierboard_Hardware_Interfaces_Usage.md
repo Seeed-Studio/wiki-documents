@@ -14,6 +14,9 @@ sku: 100071398, 100001302, 100010971
 last_update:
   date: 06/10/2025
   author: Zibo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/
 ---
 
 # Robotics J401 キャリアボード ハードウェアと入門
@@ -28,7 +31,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワー�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J401-Carrier-Board-optional-accessories.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱</font></span></strong>
     </a>
 </div>
 

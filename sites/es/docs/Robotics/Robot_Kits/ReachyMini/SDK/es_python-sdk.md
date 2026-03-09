@@ -3,20 +3,24 @@ description: Referencia completa del SDK de Python para Reachy Mini que cubre co
 title: Referencia del SDK de Python
 slug: /reachymini_sdk_python-sdk
 keywords:
-- python
-- sdk
-- movement
-- camera
-- imu
-- audio
-- media backend
-- goto_target
-- set_target
+  - python
+  - sdk
+  - movement
+  - camera
+  - imu
+  - audio
+  - media backend
+  - goto_target
+  - set_target
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_sdk_python-sdk/
 ---
 
 # Referencia del SDK de Python

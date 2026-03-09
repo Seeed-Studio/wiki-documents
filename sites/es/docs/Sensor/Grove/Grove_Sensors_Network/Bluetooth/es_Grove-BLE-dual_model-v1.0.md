@@ -1,6 +1,6 @@
 ---
 title: Grove - BLE (modelo dual) v1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113020009
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-BLE-dual_model-v1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0.jpg)

@@ -2,12 +2,15 @@
 description: SenseCAP_Sensor_Probes_Product_Catalogue
 title: SenseCAP Sensor Probes Product Catalogue
 keywords:
-- SenseCAP_Sensor_Probes
+  - SenseCAP_Sensor_Probes
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Sensor_Probes_Product_Catalogue
 last_update:
   date: 10/13/2023
   author: Yvonne
+createdAt: '2023-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Sensor_Probes_Product_Catalogue/
 ---
 
 ## About SenseCAP

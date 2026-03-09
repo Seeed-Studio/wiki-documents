@@ -2,23 +2,26 @@
 description: reComputer Industrial R22xx 是一款基于 Raspberry Pi CM5 的工业级 AI NVR，内置 Hailo-8 AI 加速器，提供高达 26 TOPS 的算力。其配备 4 个支持 PoE PSE 的千兆以太网端口以及 1 个额外的千兆以太网端口，可实现高带宽视频流传输，并简化 IP 摄像机的 PoE 部署。提供丰富的工业 I/O、灵活的无线连接、无风扇散热设计，以及 -20 °C 至 50 °C 的宽工作温度范围，确保在严苛场景下实现可靠的 AI 视频分析和持续稳定运行。
 title: reComputer Industrial R22xx 入门指南
 keywords:
-- Edge AI NVR
-- Raspberry pi
-- Edge AI NVR
-- reComputer Industrial R22xx
+  - Edge AI NVR
+  - Raspberry pi
+  - Edge AI NVR
+  - reComputer Industrial R22xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg
 slug: /recomputer_industrial_r22xx_getting_start
 sku: 100077451,100079040
 last_update:
   date: 02/09/2026
   author: Nolan Chen
+createdAt: '2026-02-27'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r22xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 

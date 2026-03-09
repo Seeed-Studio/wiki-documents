@@ -2,13 +2,16 @@
 description: Grove - 0.54 inch Red Quad Alphanumeric Display
 title: Grove - 0.54 inch Red Quad Alphanumeric Display
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-0.54_inch_Red_Quad_Alphanumeric_Display
 sku: 104020133
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-0.54_inch_Red_Quad_Alphanumeric_Display/
 ---
 
 

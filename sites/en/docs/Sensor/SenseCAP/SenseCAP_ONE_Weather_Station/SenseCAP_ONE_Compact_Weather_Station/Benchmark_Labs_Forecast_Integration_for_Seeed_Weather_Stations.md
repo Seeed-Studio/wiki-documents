@@ -1,13 +1,16 @@
 ---
-description:  This guide explains how to purchase and activate Benchmark Labs’ hyper-local point specific weather forecasts with your Seeed weather station. Our AI-powered system delivers point-specific 10-day hourly forecasts tailored to your microclimate powered by data from your weather station, helping you make better environmental and operational decisions.
-title:  Benchmark Labs Forecast Integration for Seeed Weather Stations
+description: This guide explains how to purchase and activate Benchmark Labs’ hyper-local point specific weather forecasts with your Seeed weather station. Our AI-powered system delivers point-specific 10-day hourly forecasts tailored to your microclimate powered by data from your weather station, helping you make better environmental and operational decisions.
+title: Benchmark Labs Forecast Integration for Seeed Weather Stations
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image62.webp
 slug: /benchmark_labs_forecast_integration_for_seeed_weather_stations
 last_update:
   date: 6/3/2025
   author: Zeno
+createdAt: '2025-06-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Benchmark Labs Forecast Integration for Seeed Weather Stations
 

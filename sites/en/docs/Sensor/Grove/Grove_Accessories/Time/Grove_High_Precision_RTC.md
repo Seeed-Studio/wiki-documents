@@ -1,6 +1,6 @@
 ---
 title: Grove - High Precision RTC (Real Time Clock)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102020083
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove_High_Precision_RTC/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-High_Precision_RTC/img/Grove-High_Precision_RTC.jpg)

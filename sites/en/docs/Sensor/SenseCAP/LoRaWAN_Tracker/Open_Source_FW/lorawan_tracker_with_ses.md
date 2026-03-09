@@ -1,14 +1,17 @@
 ---
 description: Get Started with SenseCAP Card Tracker T1000-E for LoRaWAN via SES
-title: Get Started with SES 
+title: Get Started with SES
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opensource.webp
 slug: /open_source_lorawan
 sidebar_position: 3
 last_update:
   date: 2/4/2026
   author: Janet
+createdAt: '2025-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/open_source_lorawan/
 ---
 
 

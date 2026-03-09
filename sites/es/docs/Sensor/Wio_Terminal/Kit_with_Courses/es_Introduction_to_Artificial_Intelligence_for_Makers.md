@@ -2,12 +2,15 @@
 description: Introducción a la Inteligencia Artificial para Makers
 title: Introducción a la Inteligencia Artificial para Makers
 keywords:
-- Wio_terminal Kit_with_Courses
+  - Wio_terminal Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Introduction_to_Artificial_Intelligence_for_Makers
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Introduction_to_Artificial_Intelligence_for_Makers/
 ---
 
 **Número de palabras:** 2000

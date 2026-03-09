@@ -1,6 +1,6 @@
 ---
 title: Módulo de medición de distancia ultrasónico
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Ultra_Sonic_range_measurement_module
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Ultra_Sonic_range_measurement_module/
 ---
 ![](https://files.seeedstudio.com/wiki/Ultra_Sonic_range_measurement_module/img/front.jpg)
 

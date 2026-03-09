@@ -1,6 +1,6 @@
 ---
 title: Bus Pirate v3 (assembled)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102990041, 102990038
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2022-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Bus_Pirate_v3_assembled/
 ---
 ![](https://files.seeedstudio.com/wiki/Bus_Pirate_v3_assembled/img/Bus%20Pirate%20v3.6interface.jpg)
 

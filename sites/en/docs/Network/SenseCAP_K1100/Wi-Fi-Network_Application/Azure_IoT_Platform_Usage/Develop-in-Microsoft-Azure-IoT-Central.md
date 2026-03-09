@@ -2,12 +2,15 @@
 description: Develop in Microsoft Azure IoT Central
 title: Develop in Microsoft Azure IoT Central
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Develop-in-Microsoft-Azure-IoT-Central
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Develop-in-Microsoft-Azure-IoT-Central/
 ---
 # Develop in Microsoft Azure IoT Central
 

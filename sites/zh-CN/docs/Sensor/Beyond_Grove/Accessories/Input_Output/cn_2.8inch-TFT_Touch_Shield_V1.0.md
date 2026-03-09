@@ -1,6 +1,6 @@
 ---
 title: 2.8英寸TFT触摸屏盾牌 V1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /2.8inch-TFT_Touch_Shield_V1.0
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/2.8inch-TFT_Touch_Shield_V1.0/
 ---
 
 2.8英寸TFT触摸屏盾牌是一款兼容Arduino / Arduino Mega的多彩TFT显示屏，配备4线电阻式触摸屏。它包括一个兼容Arduino盾牌的脚位设计以便连接。TFT驱动基于专业驱动IC，采用8位数据和4位控制接口。

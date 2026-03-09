@@ -1,6 +1,6 @@
 ---
 title: LAN_Communications
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/LAN_Communications/
 ---
 
 ### 1. 配置局域网服务器

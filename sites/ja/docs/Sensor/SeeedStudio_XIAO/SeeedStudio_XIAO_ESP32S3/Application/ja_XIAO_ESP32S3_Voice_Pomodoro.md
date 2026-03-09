@@ -8,6 +8,9 @@ slug: /xiao_esp32s3_voice_pomodoro
 last_update:
   date: 04/17/2025
   author: Peter Machona
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_voice_pomodoro/
 ---
 
 # AskLou.io ポモドーロタイマー

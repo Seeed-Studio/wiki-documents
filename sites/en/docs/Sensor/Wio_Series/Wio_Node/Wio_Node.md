@@ -1,6 +1,6 @@
 ---
 title: Wio Node
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102110057
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio_Node/
 ---
 
 Building IoT projects is exciting, as you can connect almost everything around you and control them. However sometime it is not easy to build IoT applications since it requires a lot of hard works, such as hardware,  programming, jump wires and soldering etc. Even a well-trained user would spend hours to handle all the work, let alone beginners. In order to simplify the development of IoT project, Seeed launched **[Wio Link](https://www.seeedstudio.com/wiki/Wio_Link)** on **[kickstarter](https://www.kickstarter.com/projects/seeed/wio-link-3-steps-5-minutes-build-your-iot-applicat?ref=nav_search)** and it turn out a big success. The slogan on Kickstarter well defined the main feature of Wio link:

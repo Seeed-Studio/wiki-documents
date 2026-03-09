@@ -2,13 +2,16 @@
 description: DS1307 RTC (Real Time Clock) for Raspberry Pi
 title: DS1307 RTC (Real Time Clock) for Raspberry Pi
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Pi_RTC-DS1307
 sku: 103030277
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Pi_RTC-DS1307/
 ---
 
 

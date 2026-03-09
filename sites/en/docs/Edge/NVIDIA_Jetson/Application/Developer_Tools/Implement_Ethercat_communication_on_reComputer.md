@@ -2,18 +2,21 @@
 description: This wiki provides detailed steps to implement EtherCAT communication on reComputer Jetson for real-time industrial automation control applications.
 title: Implement Ethercat Communication on reComputer
 keywords:
-- EtherCAT
-- reComputer
-- Jetson
-- Real-time communication
-- Industrial automation
-- SOEM
-- Robotics control
+  - EtherCAT
+  - reComputer
+  - Jetson
+  - Real-time communication
+  - Industrial automation
+  - SOEM
+  - Robotics control
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp
 slug: /recomputer_ethercat_communication
 last_update:
-  date: 2025-09-05
+  date: 2025-09-05T00:00:00.000Z
   author: Zibo
+createdAt: '2025-09-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_ethercat_communication/
 ---
 
 <div align="center">

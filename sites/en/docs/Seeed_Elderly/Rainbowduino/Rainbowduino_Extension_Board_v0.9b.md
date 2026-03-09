@@ -1,13 +1,16 @@
 ---
-description:  Rainbowduino Extension Board v0.9b
-title:  Rainbowduino Extension Board v0.9b
+description: Rainbowduino Extension Board v0.9b
+title: Rainbowduino Extension Board v0.9b
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino_Extension_Board_v0.9b
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Rainbowduino_Extension_Board_v0.9b/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Rainbowduino_Extension_Board_v0.9b/img/Rainbowshield.jpg)

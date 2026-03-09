@@ -2,12 +2,15 @@
 description: キーボード
 title: キーボード
 keywords:
-- Wio_terminal USB_Client
+  - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-USBCLIENT-Keyboard
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-USBCLIENT-Keyboard/
 ---
 
 

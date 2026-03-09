@@ -2,12 +2,15 @@
 description: LinkIt ONE チュートリアル - SMSでLEDを制御
 title: LinkIt ONE チュートリアル - SMSでLEDを制御
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_ONE_Tutorial-SMS_control_the_LED
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/LinkIt_ONE_Tutorial-SMS_control_the_LED/
 ---
 
 

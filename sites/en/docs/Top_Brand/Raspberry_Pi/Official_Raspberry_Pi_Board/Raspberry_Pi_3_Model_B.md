@@ -2,14 +2,17 @@
 description: Raspberry Pi 3 Model B
 title: Raspberry Pi 3 Model B
 keywords:
-- Raspberry_Pi
-- Official_Raspberry_Pi_Board
+  - Raspberry_Pi
+  - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_3_Model_B
 sku: 110060867
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Raspberry_Pi_3_Model_B/
 ---
 <!-- ---
 name: Raspberry Pi getting started

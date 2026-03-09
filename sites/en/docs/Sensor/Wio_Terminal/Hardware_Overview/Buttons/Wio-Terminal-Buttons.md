@@ -2,12 +2,15 @@
 description: Overview
 title: Getting Started with Configurable Buttons
 keywords:
-- Wio_terminal Configurable_Buttons
+  - Wio_terminal Configurable_Buttons
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Buttons
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Buttons/
 ---
 
 # Getting Started with Configurable Buttons

@@ -4,9 +4,12 @@ title: Shield Introduction
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Shield_Introduction
 last_update:
-  date: 01/10/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/10/2023
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Shield_Introduction/
 ---
 
 ---

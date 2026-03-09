@@ -3,14 +3,17 @@ sidebar_position: 2
 description: Gestión de Datos del Portal SenseCAP
 title: Gestión de Datos
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/tutorials/data-management
 aliases:
   - /Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform/tutorials/data-management/
 ---
 
 

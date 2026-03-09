@@ -3,19 +3,23 @@ description: Reachy Mini Lite のセットアップガイド。組み立て手�
 title: Reachy Mini Lite セットアップガイド
 slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:
-- lite
-- setup
-- assembly
-- usb
-- desktop app
-- connection
-- education
-- development
+  - lite
+  - setup
+  - assembly
+  - usb
+  - desktop app
+  - connection
+  - education
+  - development
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_lite_get_started/
 ---
 
 # Reachy Mini Lite - セットアップガイド

@@ -2,12 +2,15 @@
 description: Edge Impulseに基づくモーション認識
 title: Edge Impulseに基づくモーション認識
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-EI
 last_update:
   date: 04/17/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO-RP2040-EI/
 ---
 
 # SEEED XIAO RP2040でのTinyML（モーション認識）

@@ -2,15 +2,18 @@
 description: This wiki provides a tutorial on how to run a visual language model with speech interaction on the reComputer AGX Orin 64G.
 title: Run VLM with speech interaction
 keywords:
-- Multimodal 
-- NanoVLM
-- TTS
-- STT
+  - Multimodal
+  - NanoVLM
+  - TTS
+  - STT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /speech_vlm
 last_update:
   date: 08/23/2024
   author: YaoHui Zhu
+createdAt: '2024-08-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/speech_vlm/
 ---
 
 # How to run VLM with speech interaction on reComputer Jetson

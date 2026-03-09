@@ -2,12 +2,15 @@
 description: Wio-WM1110 Dev Kit Hardware Overview
 title: Hardware Overview
 keywords:
-- Wio-WM1110 Dev Kit
+  - Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-WM1110_Dev_Kit_Hardware_Overview
 last_update:
   date: 8/8/2023
   author: Jessie
+createdAt: '2023-06-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-WM1110_Dev_Kit_Hardware_Overview/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Wio Lite AI 百科
 title: Wio Lite AI 入门指南
 keywords:
-- wio lite ai
+  - wio lite ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Wio-Lite-AI-Getting-Started
 last_update:
   date: 04/26/2023
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Lite-AI-Getting-Started/
 ---
 
 # Wio Lite AI 入门指南

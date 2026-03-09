@@ -6,6 +6,9 @@ slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Logging_in_OS_using_USB_to_serial_converter/
 ---
 
 <!-- ## Q5: 如何使用 USB 转串口转换器登录到 Raspberry Pi OS/ Ubuntu OS 或其他操作系统 -->

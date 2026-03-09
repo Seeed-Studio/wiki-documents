@@ -2,13 +2,16 @@
 description: Seeed Studio XIAO 扩展板
 title: XIAO 扩展底板
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-Expansion-Board
 sku: 103030356
 last_update:
   date: 07/18/2024
   author: Spencer
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board/
 ---
 
 ## 概述

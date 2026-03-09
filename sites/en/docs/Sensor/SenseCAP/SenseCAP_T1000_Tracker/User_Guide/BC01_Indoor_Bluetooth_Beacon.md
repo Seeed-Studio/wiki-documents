@@ -2,14 +2,17 @@
 description: SenseCAP_Tracker_T1000-A/B_Bluetooth_Beacon
 title: BC01 Indoor Bluetooth Beacon
 keywords:
-- BLE
-- Positioning
+  - BLE
+  - Positioning
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth_Beacon.webp
 slug: /bluetooth_beacon_for_SenseCAP_Traker
 sku: E2025081201,E2025081501
 last_update:
   date: 05/29/2025
   author: Zeke
+createdAt: '2023-10-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/bluetooth_beacon_for_SenseCAP_Traker/
 ---
 
 A BLE (Bluetooth Low Energy) Location Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as SenseCAP T1000 Tracker, allowing them to determine their proximity to the beacon， building a location-based solution for indoor positioning, asset tracking and other applications.

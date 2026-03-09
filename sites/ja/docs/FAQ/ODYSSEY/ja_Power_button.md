@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-FAQ
 title: ODYSSEY - X86J41x5の電源ボタンの異なるステータス
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Power_button
 last_update:
-  date: 2023.6.25   
+  date: 2023.6.25
   author: cheng.tang
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Power_button/
 ---
 他のコンピュータと同じ電源ボタンの状態を持っています：
 

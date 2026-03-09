@@ -2,12 +2,15 @@
 description: 读取和写入
 title: 读取和写入
 keywords:
-- Wio_terminal File_System
+  - Wio_terminal File_System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-FS-ReadWrite
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-FS-ReadWrite/
 ---
 
 # 从SD卡读取/写入数据

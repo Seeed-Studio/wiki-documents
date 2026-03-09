@@ -7,6 +7,9 @@ sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32c6_zigbee/
 ---
 
 Zigbee es un protocolo de comunicación inalámbrica ampliamente adoptado que encuentra un uso extensivo en automatización del hogar, gestión inteligente de energía y aplicaciones de Internet de las Cosas (IoT). Conocido por su bajo consumo de energía, transmisión confiable de datos y capacidades de red de malla, Zigbee es una excelente opción para construir redes inalámbricas escalables y eficientes.

@@ -2,13 +2,16 @@
 description: Kit de Inicio IoT BeagleBone Green y Grove Powered by AWS
 title: Kit de Inicio IoT BeagleBone Green y Grove Powered by AWS
 keywords:
- - Beagle_Bone
- - Kit_with_Courses
+  - Beagle_Bone
+  - Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/1/2023
   author: jianjing Huang
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/
 ---
 
 <!-- ---

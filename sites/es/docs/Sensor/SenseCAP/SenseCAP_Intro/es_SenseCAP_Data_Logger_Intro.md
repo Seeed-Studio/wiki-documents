@@ -1,13 +1,16 @@
 ---
 description: Introducción al SenseCAP Data Logger
-title: SenseCAP Data Logger 
+title: SenseCAP Data Logger
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Data_Logger_Intro
 last_update:
   date: 07/24/2024
   author: Frank
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_Data_Logger_Intro/
 ---
 
 El Data Logger sirve como puente para hasta más de 200 sensores que cubren sensores de nivel industrial, sensores Grove y sensores Analógicos/RS485/GPIO.

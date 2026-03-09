@@ -2,14 +2,17 @@
 description: Generador de Onda Senoidal con ReSpeaker Lite
 title: Generador de Onda Senoidal con ReSpeaker Lite
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_generator
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_streams_generator/
 ---
 
 

@@ -2,14 +2,17 @@
 description: Data_OpenStream_API_Quickstart
 title: Data OpenStream API 快速入门
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart
 aliases:
   - /Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Quickstart
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-03-01'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart/
 ---
 
 <div class="post-content">

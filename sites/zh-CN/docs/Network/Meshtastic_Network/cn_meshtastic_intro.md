@@ -1,14 +1,17 @@
 ---
 description: Meshtastic® 网络介绍
-title:  Meshtastic® 网络介绍
+title: Meshtastic® 网络介绍
 keywords:
-- Meshtastic
+  - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_introduction
 sidebar_position: 1
 last_update:
   date: 12/11/2025
   author: Michelle
+createdAt: '2025-04-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/meshtastic_introduction/
 ---
 
 

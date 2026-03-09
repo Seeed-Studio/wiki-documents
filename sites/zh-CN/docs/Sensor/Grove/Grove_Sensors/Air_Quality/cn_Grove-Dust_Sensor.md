@@ -2,13 +2,16 @@
 description: Grove - 灰尘传感器
 title: Grove - 灰尘传感器
 keywords:
-- Grove Grove_Sensors Air_Quality
+  - Grove Grove_Sensors Air_Quality
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Dust_Sensor
 sku: 101020012
 last_update:
   date: 1/20/2023
   author: jianjing huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Dust_Sensor/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Dust_Sensor/img/Dust1.JPG)

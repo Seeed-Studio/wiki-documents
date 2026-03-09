@@ -2,12 +2,15 @@
 description: Cómo construir un router suave doméstico y NAS con ReComputer
 title: Cómo construir un router suave doméstico y NAS con ReComputer
 keywords:
-- ReComputer_Alpha
+  - ReComputer_Alpha
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How-to-build-a-home-soft-router-and-NAS-With-ReComputer
 last_update:
   date: 01/20/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/How-to-build-a-home-soft-router-and-NAS-With-ReComputer/
 ---
 
 # Cómo construir un router suave doméstico y NAS con ReComputer  

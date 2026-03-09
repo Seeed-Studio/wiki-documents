@@ -2,13 +2,15 @@
 description: 概要
 title: 概要
 keywords:
-    - mission-pack
-# image: 
+  - mission-pack
 slug: /mission_pack_intro_v3
 sidebar_position: 0
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/mission_pack_intro_v3/
 ---
 
 Hazard Response Mission Packは、災害シナリオを効率的に管理・軽減するために設計されたオープンソースのAIoTソリューションです。このコンパクトなシステムは、センサーネットワークやエッジコンピューティングを含む様々な技術を組み合わせ、効果的なリモートセンシング、データ伝送、処理、推論、分析を可能にします。

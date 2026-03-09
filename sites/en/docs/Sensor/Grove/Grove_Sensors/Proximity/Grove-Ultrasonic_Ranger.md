@@ -1,6 +1,6 @@
 ---
 title: Grove - Ultrasonic Ranger
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020010
 last_update:
   date: 03/01/2023
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/V2.jpg" alt="pir" width={600} height="auto" /></p>

@@ -2,12 +2,15 @@
 description: MIDI
 title: MIDI
 keywords:
-- Wio_terminal USB_Client
+  - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-USBCLIENT-MIDI
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-USBCLIENT-MIDI/
 ---
 
 # Usando Wio Terminal como un Dispositivo USB MIDI

@@ -2,13 +2,16 @@
 description: ポリマーリチウムイオン 1050mAh 3.7V バッテリーデテクター
 title: ポリマーリチウムイオン 1050mAh 3.7V バッテリーデテクター
 keywords:
-- アクセサリー充電
+  - アクセサリー充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V
 sku: 114990576
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V/
 ---
 
 

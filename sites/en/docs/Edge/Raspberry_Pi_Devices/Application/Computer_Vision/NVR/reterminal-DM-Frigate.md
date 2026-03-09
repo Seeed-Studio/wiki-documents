@@ -12,6 +12,9 @@ sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 8/25/2023
   author: Kasun Thushara
+createdAt: '2023-08-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reterminal-DM-Frigate/
 ---
 
 ## Introduction

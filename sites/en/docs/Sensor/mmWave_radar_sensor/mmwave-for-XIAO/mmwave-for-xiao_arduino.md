@@ -2,13 +2,16 @@
 description: Introduction of how to develop mmWave Sensor on XIAO.
 title: Development of 24GHz mmWave in XIAO and Arduino
 keywords:
-- mmwave
-- radar
+  - mmwave
+  - radar
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_for_xiao_arduino
 last_update:
   date: 11/13/2023
   author: Citric
+createdAt: '2023-11-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/mmwave_for_xiao_arduino/
 ---
 
 # Development of 24GHz mmWave Sensor in XIAO and Arduino

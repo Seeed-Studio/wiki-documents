@@ -2,12 +2,15 @@
 description: Connect to The Things Network
 title: Connect to The Things Network
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/003.webp
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network
 last_update:
   date: 11/25/2024
   author: Leo
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network/
 ---
 
 # Connect to The Things Network

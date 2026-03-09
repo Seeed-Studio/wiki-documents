@@ -2,14 +2,17 @@
 description: 基于 Rockchip 的网络解决方案
 title: 基于 Rockchip 的网络解决方案
 keywords:
-- 网络
-- 路由器
-- Rockchip
+  - 网络
+  - 路由器
+  - Rockchip
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rockchip_network_solutions
 last_update:
   date: 2023/12/14
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Rockchip_network_solutions/
 ---
 
 欢迎来到 Seeed Studio 的基于 Rockchip 的网络解决方案。探索高效的连接设备，例如 LinkStar-H68K-1432 路由器，支持 Wi-Fi 6，配备 4GB RAM、32GB eMMC 和多种以太网选项。体验用户友好的 Android 11、Lubuntu 20.04 和 OpenWRT 支持。LinkStar-H28K 提供双千兆端口、四核芯片、4GB 内存和 8GB 存储。加入我们，发现 Rockchip 驱动网络的简单与强大。

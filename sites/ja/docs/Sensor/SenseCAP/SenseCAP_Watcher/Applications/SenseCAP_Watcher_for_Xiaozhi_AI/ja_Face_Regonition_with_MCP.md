@@ -3,24 +3,28 @@ description: 内部MCPツールを使用した顔認識のデプロイガイド
 title: MCPを使用した顔認識
 sidebar_position: 7
 keywords:
-- AI
-- SenseCAP
-- Watcher
-- Agent
-- Face
-- Model
-- Context
-- protocol
-- recognition
-- MCP
-- reComputer
+  - AI
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Face
+  - Model
+  - Context
+  - protocol
+  - recognition
+  - MCP
+  - reComputer
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /face_regonition_with_mcp
 last_update:
   date: 11/25/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/face_regonition_with_mcp/
 ---
 # MCPを使用した顔認識の拡張
 
