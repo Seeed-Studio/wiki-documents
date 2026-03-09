@@ -9,8 +9,8 @@ sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
-createdAt: '2023-08-20'
-updatedAt: '2026-03-03'
+createdAt: '2025-08-20'
+updatedAt: '2026-03-06'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
@@ -192,24 +192,71 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 
 ### Update Firmware
 
-Connect the reSpeaker XVF3800 to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to 3.5mm jack port) to flash XMOS’s firmware.
+Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
+
+:::note 
+Please make sure that you will need to download whole repository. 
+:::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="USB" label="USB">
+
+The USB firmware is designed for use with host operating systems such as **Windows, Linux, and macOS** when communicating through the USB hardware interface.
+
+Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**, which provides **2-channel** audio, and **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**, which provides **6-channel** audio. Both firmware versions operate at a **16 kHz** sampling rate with **32-bit** depth.
+
+You can explore these firmware files in [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
+
+
 
 | Firmware | Channels | Notes |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: Processed audio (Conference) <br /> Channel 1: Processed audio (ASR) <br /> Channel 2: Mic 0 raw data <br /> Channel 3: Mic 1 raw data <br /> Channel 4: Mic 2 raw data <br /> Channel 5: Mic 3 raw data |
+
+
+</TabItem>
+
+ <TabItem value="I2S" label="I2S">
+
+The I2S firmware is intended for use when the device is connected to a microcontroller host such as the **XIAO ESP32S3**. In this configuration, voice data is transmitted using the I2S protocol.
+
+The firmware file **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** is available in [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s). This firmware supports **2-channel** audio with a **32-bit** depth.
+
+| Firmware | Channels | Notes |
+|---------|----------|-------|
 | respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+
+</TabItem>
+
+<TabItem value="HA" label="HA">
+
+The Home Assistant firmware is another I2S-based firmware specifically designed for integration with Home Assistant. This optimized firmware uses 2-channel audio with a 48 kHz sampling rate, providing better compatibility and performance within the Home Assistant environment.
+You can view the firmware from [here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
+
+
+
+| Firmware | Channels | Notes |
+|---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Processed 2-channel output <br /> Channel 0: ASR <br /> Channel 1: Wake word |
 
-Users can modify the processed output channel selection for the firmware variants mentioned above.
-Please refer to the [XMOS documentation](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection) for details:
+  </TabItem>
+</Tabs>
+
+
+
+Connect the reSpeaker XVF3800 to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to 3.5mm jack port) to flash XMOS’s firmware.
+
+
 
 #### Install DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) is a command line tool for Device Firmware Upgrade via USB.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -316,7 +363,7 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 
 #### Flash Firmware
 
-Download Firmware From Here.[`XMOS XVF 3800`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
+Download the complete firmware repository from GitHub here[`XMOS XVF 3800`](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
 - Run the following command to flash the firmware
 
