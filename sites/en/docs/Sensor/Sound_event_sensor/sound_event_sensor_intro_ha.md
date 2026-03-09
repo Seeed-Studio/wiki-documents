@@ -5,7 +5,7 @@ keywords:
   - Sound Event Detection Module
   - Sound IoT
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
+image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:

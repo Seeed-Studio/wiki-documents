@@ -1,6 +1,6 @@
 ---
 description: Get Started with SenseCAP Solar Node for Meshcore & LoRa.  Guiding for device installation, firmware flashing and device connection.
-title:  Get Started with Meshcore
+title: Get Started with MeshCore on SenseCAP Solar Node
 keywords:
 - Meshcore
 - Solar
@@ -9,7 +9,7 @@ slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
 sidebar_position: 1
 last_update:
-  date: 3/4/2026
+  date: 3/6/2026
   author: Michelle Huang
 ---
 
@@ -229,17 +229,18 @@ If the device doesn't respond when you insert the USB cable, please charge it fi
 
 ### Configuration
 
+- **Step1 Initial Configuration**
+
+When MeshCore is flashed onto a LoRa device is for the first time, it is necessary to set the server device's frequency to make it utilize the frequency that is legal in your country or region.
+
 [Click here](https://config.meshcore.dev/) to configure the repeater.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
-
-Change the LoRa region and save setting. Then `**Reboot**` the device, or else the setting will not take effect.
+Change the LoRa region and save setting. Then `Reboot` the device, or else the setting will not take effect.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/LoRaSettingg.png" alt="pir" width={600} height="auto" /></p>
-
 
 **Region List**
 
@@ -257,8 +258,31 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
+- **Step2 Send Advert**
 
-### Set Rout
+Click "send advert" to enable other Meshcore devices to see this repeater. Then the repeater can be seen in the device list.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
+
+After the initialization setting, click 
+
+- **Step3(Optional) Admin Log in**
+
+The default admin password to a repeater is `password`. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={600} height="auto" /></p>
+
+After logging in, you can see the configuration page. You can now adjust the configuration for the repeater.
+
+If you want to show the position of the repeater, you can enable the GPS.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
+
+Also, you can adjust the advert broadcast interval. The interval range of `auto zero hop advert` is 60-240 mins. The interval range of `auto flood advert` is 3-168 hours. 
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
+
+### Set Path
 
 Before adding the repeater to your route, you may need to use the repeater to send advert first. Repeater will automatically send automatically at regular intervals. This interval can be multiple hours (default 3 hours). So you need to manually send advert or else you need to wait.
 
@@ -282,7 +306,7 @@ This is usually caused by the firmware flashing failure. When flashing the firmw
 
 - Troubleshoot
 
-Re-flash the firmware.
+[Click here](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/#flash-erase) to re-flash the firmware.
 
 ### Device bricked
 
@@ -391,7 +415,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, then you can flash the application firmware.
+When you have completed the above steps, then you can [flash the application firmware](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/#flash-erase).
 
 ### Signal Quality
 
