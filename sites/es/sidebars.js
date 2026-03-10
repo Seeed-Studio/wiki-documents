@@ -3068,6 +3068,23 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Dispositivos RK',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          type: 'category',
+          label: 'Aplicaciones',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/RockChip_Devices/Application/es_object_detection_with_yolov11_on_recomputer_rk'
+            ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Dispositivos Raspberry Pi',
       collapsed: true,
       collapsible: true,
