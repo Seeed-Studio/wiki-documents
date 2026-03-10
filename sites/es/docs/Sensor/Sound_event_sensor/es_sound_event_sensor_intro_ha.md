@@ -625,6 +625,18 @@ Haz clic en Add y luego en Submit para finalizar la configuración.
 
 Después, podrás interactuar con el dispositivo a través de la interfaz de Home Assistant y crear tus propias automatizaciones con otros periféricos. Por ejemplo, puedes activar un zumbador cuando se detecte rotura de cristal, o reproducir automáticamente música de cuna relajante en un altavoz inteligente cuando se detecte el llanto de un bebé.
 
+## Demostración
+
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/Bb8Jq9ShVJk"
+          title="Audio Event Sensor"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
 
 ## Soporte técnico y debate sobre el producto
 
