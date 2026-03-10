@@ -3068,6 +3068,23 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'RK デバイス',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          type: 'category',
+          label: 'アプリケーション',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/RockChip_Devices/Application/ja_object_detection_with_yolov11_on_recomputer_rk'
+            ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Raspberry Piデバイス',
       collapsed: true,
       collapsible: true,
