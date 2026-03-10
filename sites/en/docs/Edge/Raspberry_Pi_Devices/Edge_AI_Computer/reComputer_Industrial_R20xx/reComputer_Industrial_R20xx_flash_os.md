@@ -240,56 +240,6 @@ You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
-## Flash ubuntu to NVME
-
-### First: Update EEPROM with SD card
-
-Please refer this [link](https://wiki.seeedstudio.com/r2000_series_getting_start/#update-eeprom).
-
-To set the NVMe boot order as the highest priority, use the following command:
-
-```
-sudo rpi-eeprom-config --edit
-```
-
-And then change rpi-eeprom-config like below:
-
-```
-BOOT_UART=1
-BOOT_ORDER=0xf461
-NET_INSTALL_AT_POWER_ON=1
-PCIE_PROBE=1
-```
-
-Use `Ctrl+X` and input `y` to store the result. And the result is as follows:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="800" height="auto" /></div>
-
-### Second: Burn Ubuntu onto the NVMe
-
-Open Raspberry Pi Imager:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos1.png" alt="pir" width="800" height="auto" /></div>
-
-Choose Ubuntu os:
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="800" height="auto" /></div>
-
-Finally, click `Next` and wait for the flashing process to complete.
-
-### Third: Replace the OS file
-
-Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
-
-Copy pcie-fix.dtbo to /overlays file like below:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="800" height="auto" /></div>
-
-Modify the `config.txt`, add `dtoverlay=pcie-fix` at the end of the file like below:
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="800" height="auto" /></div>
-
-And then Use `Ctrl+X` and input `y` to store this file.
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
