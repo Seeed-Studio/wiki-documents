@@ -625,6 +625,18 @@ Add をクリックし、その後 Submit をクリックしてセットアッ�
 
 その後、Home Assistant のインターフェースを通じてデバイスと連携し、他の周辺機器と組み合わせて独自のオートメーションを作成できるようになります。例えば、ガラスの破損が検知されたときにブザーを鳴らしたり、赤ちゃんの泣き声が検知されたときにスマートスピーカーで落ち着いた子守唄を自動再生したりできます。
 
+## デモ
+
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/Bb8Jq9ShVJk"
+          title="Audio Event Sensor"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
 
 ## 技術サポートと製品ディスカッション
 

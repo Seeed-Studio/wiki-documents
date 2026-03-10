@@ -625,7 +625,7 @@ Click Add, then Submit to finish setup.
 
 Then, you will be able to interact with the device through the Home Assistant interface and create your own automations with other peripherals. For example, you can trigger a buzzer when glass break is detected, or automatically play calm lullaby music on a smart speaker when a baby’s cry is detected.
 
-## Demo 
+## Demo
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -637,7 +637,6 @@ Then, you will be able to interact with the device through the Home Assistant in
           allowfullscreen>
   </iframe>
 </div>
-
 
 ## Tech Support & Product Discussion
 
