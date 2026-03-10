@@ -125,6 +125,38 @@ Wire sequence of Rain Gauge sensor:
 
 We've finished the wiring at this point. Now, let's set up the S2100 and configure it on our APP
 
+## Connect to the Water Leak Detector
+
+Wire sequence of the water leak detector sensor:
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/37.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/38.png"/></div>
+
+|Wire Type|Description|
+| --- | --- |
+|Red|V+|
+|Blue|NC (normally closed signal)|
+|Yellow|COM|
+|White|IN IO|
+|Brown|V-|
+
+1. Pass the 5-core cable through the bottom cover, and connect it to the Data Logger base according to the wiring order requirements;
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/39.png"/></div>
+
+| **Sensor Wire Color** | **Function** | **Terminal on S2100** |
+| --- | --- | --- |
+| **Red** | Positive supply | **`5V OUT`** |
+| **Brown** | Negative supply | **`GND`** |
+| **Yellow** | Signal common | **`GND`** |
+| **White** | Digital switch signal | **`IO IN`** |
+| **Blue** | Normally closed signal | *(Leave unconnected and insulate with tape)* |
+
+2. Reinstall the upper cover, rubber ring, and cable nut in sequence.
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/41.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/42.png"/></div>
+
 # Setup the S2100
 
 ## Connect to Sensor to App
@@ -135,16 +167,21 @@ We've finished the wiring at this point. Now, let's set up the S2100 and configu
 
 2. Please select "S2100 Data Logger".
 
-Please click the "Setup" button to turn on Bluetooth and click "Scan" to start scanning the sensor's Bluetooth.
+Please click the "User" button to enter User Settings, and then click "Bluetooth Configuration" to start scanning the sensor's Bluetooth.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/17.png"/></div>
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/18.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/50.png"/></div>
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/51.png"/></div>
 
 3. Select the Sensor by S/N (S/N is on the front label of the sensor). Then, the basic information of the sensor will be displayed after entering.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/19.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/52.png"/></div>
 
- <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/20.png"/></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/53.png"/></div>
+
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/54.png"/></div>
+
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/55.png"/></div>
 
 4. Enter configuration mode after Bluetooth connection is successful: LED flashes at 2s frequency.
 
@@ -160,21 +197,17 @@ Here we select the "SenseCAP for Helium" or "SenseCAP for TTN". The Frequency Pl
 
 SenseCAP for TTN platform needs to be used with SenseCAP LoRaWAN outdoor [gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/21.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/56.png"/></div>
 
 ### Set the Interval
 
 The working mode of device: wake up the device every interval and collect measurement values and upload them through LoRa.
 
-For example, the device collects and uploads data **every 60 minutes by default**.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/22.png"/></div>
+For example, the device collects and uploads data **every 5 minutes by default**.
 
 ### Set the Packet Policy
 
 The sensor uplink packet strategy has three modes, we select 1N here or you can according to your own requirement.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/23.png"/></div>
 
 | **Parameter** | **Description** |
 | --- | --- |
@@ -186,7 +219,7 @@ The sensor uplink packet strategy has three modes, we select 1N here or you can 
 
 When selecting the SenseCAP platform, you must use the fixed EUI/App EUI/App Key. Therefore, you need to restore the factory Settings before switching back to the SenseCAP platform from other platforms.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/24.png"/></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/57.png"/></div>
 
 When we make a mistake or want to reset everything, we can click the button. The device will be restored to the factory's default configuration.
 
