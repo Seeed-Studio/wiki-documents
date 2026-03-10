@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-03 17:29:16 (北京时间)
-// 多语言页面: 2199 个
+// 生成时间: 2026-03-09 14:04:02 (北京时间)
+// 多语言页面: 2202 个
 
 (function() {
   'use strict';
@@ -844,7 +844,7 @@
     "es",
     "ja"
   ],
-  "/Real Time Subtitle Recoder on Nvidia Jetson": [
+  "/Real_Time_Subtitle_Recoder_on_Nvidia_Jetson": [
     "cn",
     "en",
     "es",
@@ -1361,6 +1361,12 @@
     "ja"
   ],
   "/ai_robotics_recomputer_j501_robotics_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_recomputer_rugged_j40_getting_started": [
     "cn",
     "en",
     "es",
@@ -3424,19 +3430,25 @@
     "es",
     "ja"
   ],
+  "/get_started_with_meshcore_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/meshtastic_solar_node": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/sensecap_t1000_e": [
+  "/sensecap_t1000_e_meshcore": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/sensecap_t1000_e_meshcore": [
+  "/sensecap_t1000_e": [
     "cn",
     "en",
     "es",
@@ -3460,13 +3472,13 @@
     "es",
     "ja"
   ],
-  "/get_started_with_other_mesh_firmware": [
+  "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/get_started_with_meshtastic_wio_tracker_l1": [
+  "/get_started_with_other_mesh_firmware": [
     "cn",
     "en",
     "es",
@@ -5022,7 +5034,7 @@
     "es",
     "ja"
   ],
-  "/Grove Maker Kit for Intel Joule": [
+  "/Grove_Maker_Kit_for_Intel_Joule": [
     "cn",
     "en",
     "es",
@@ -5040,7 +5052,7 @@
     "es",
     "ja"
   ],
-  "/IoT_Fast_Prototyping_Kit S5D9": [
+  "/IoT_Fast_Prototyping_Kit_S5D9": [
     "cn",
     "en",
     "es",
@@ -5388,7 +5400,7 @@
     "es",
     "ja"
   ],
-  "/Retro Phone Kit": [
+  "/Retro_Phone_Kit": [
     "cn",
     "en",
     "es",
@@ -11100,6 +11112,12 @@
     "ja"
   ],
   "/sound_event_detection_module": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sound_event_detection_module_home_assistant": [
     "cn",
     "en",
     "es",

@@ -10,7 +10,7 @@ sku: 113990014
 last_update:
   date: 02/03/2022
   author: gunengyu
-createdAt: '2026-03-03'
+createdAt: '2022-03-02'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/125Khz_RFID_module-UART/
 ---

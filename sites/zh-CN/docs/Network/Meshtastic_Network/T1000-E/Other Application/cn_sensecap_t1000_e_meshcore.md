@@ -1,6 +1,6 @@
 ---
 description: 使用适用于 Meshcore 的 SenseCAP Card Tracker T1000-E 入门。指导设备安装、固件烧录和设备连接。
-title: Meshhcore 入门
+title: SenseCAP T1000-E MeshCore 入门指南
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

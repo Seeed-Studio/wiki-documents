@@ -20,75 +20,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'sensecap_t1000_e.md'), //10.29
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'get_started_with_wio_tracker_l1.md'), //10.29
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'wio_tracker_node.md'), //11.5
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'Get_Started_meshtastic.md'), //11.5
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Introduction.md'), //11.12
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'wio_tracker_kit', 'flash_meshtastic_kit.md'), //11.11
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'get_started_with_solar_node.md'), //11.11
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor.md'), //11.25
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'nrf52840_1262.md'), //11.24
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Face_Regonition_with_MCP.md'), //11.24
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'get_started_with_lorawan_tracker.md'), //11.26
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'DeployAI_With_A1102.md'), //11.26
-  path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'EN04_GettingStart.md'), //11.25
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'SenseCAP_T2000_intro.md'), //12.1
-  path.join(docsDirectory, 'Robotics', 'Robot_Actuator', 'HighTorque', 'HighTorque_Getting_Started.md'), //12.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Flash_Watcher_Agent_Firmware.md'), //12.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Visual_Trigger_and_AI_Flash.md'), //12.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'SenseCAP_T2000_Tracker_Introduction.md'), //12.1
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'StackForce', 'StackForce_Giant_Bipedal_Wheeled_Robot.md'), //12.12
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'meshtastic_intro.md'), //12.11
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'solar_node.md'), //12.16
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_ESP-Mesh_Audio.md'), //12.12
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'User_Guide', 'Get_Started.md'), //12.24
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Accessories', 'Display', 'Grove-OLED_Display_0.96inch.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'All_in_one', 'Grove-CO2_Temperature_Humidity_Sensor-SCD30.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Light', 'Grove-I2C_Color_Sensor.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-TempAndHumi_Sensor-SHT31.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature-Humidity-Sensor-DH20.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-TemperatureAndHumidity_Sensor.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature_and_Humidity_Sensor_Pro.md'), //12.29
-  path.join(docsDirectory, 'Top_Brand', 'Raspberry_Pi', 'Pi_HAT', 'Grove_Base_Hat_for_Raspberry_Pi.md'), //12.29
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction.md'), //12.29
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_for_Jetson.md'), //1.4
-  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_introduction.md'), //1.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'SettingAI_With_A1102.md'), //12.31
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Wireless_Connection', 'XIAO_ESP32C5_WiFi_Usage.md'), //12.30
-  path.join(docsDirectory, 'Sensor', 'ePaper', 'epaper_driver_board_main_page.md'), //12.21
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Deal_the_Issue_of_UUID_error.md'), //1.8
-  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'SenseCAP_Gateway_Intro.md'), //1.8
-  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_APP', 'overview.md'), //1.8
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_The_Things_Network.md'), //1.6
-  path.join(docsDirectory, 'Network', 'LoRa_Wio_Series', 'Wio-E5', 'LoRa_E5_mini.md'), //1.15
-  path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'Application', 'OpenEpaperLink_GettingStart.md'), //1.13
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_arduino.md'), //1.9
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_homeassistant.md'), //1.9
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_idf.md'), //1.9  
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_WiFi_Throughput_tester.md'), //1.16
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_SO_ARM101_DAMO.md'), //1.12
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Decoder.md'), //1.26
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_AWS_IoT_Core.md'), //1.23
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_Helium.md'), //1.23
-  path.join(docsDirectory, 'Sensor', 'ReSpeaker_2-Mics_Pi_HAT', 'v1-deprecated', 'ReSpeaker_2_Mics_Pi_HAT_Raspberry.md'), //1.29
-  path.join(docsDirectory, 'Sensor', 'ReSpeaker_2-Mics_Pi_HAT', 'v2', 'ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2.md'), //1.29
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_nRF54L15-Sense', 'XIAO_nRF54L15-Sense_Zigbee.md'), //1.27
-  path.join(docsDirectory, 'Sensor', 'ReSpeaker_Lite', 'Application', 'respeaker_lite_ha.md'), //2.6
-  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_Series_Projects.md'), //2.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'introduction.md'), //2.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 'lorawan_tracker_with_ses.md'), //2.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 't1000_e_arduino_examples.md'), //2.4
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Local_OpenClaw(Clawdbot)_on_reComputer_Jetson.md'), //2.3
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_agora_ten_framework.md'), //2.9
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_openclaw.md'), //2.10
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_arm.md'), //2.6
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'ReSpeaker.md'), //2.26
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'FAQ.md'), //2.14
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_assembly_guide.md'), //2.9
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_configure_system.md'), //2.9
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_flash_os.md'), //2.9
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'reComputer_Jetson_Series', 'reComputer_Rugged_J40', 'reComputer_Rugged_J40_Getting_Started.md'), //3.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', '_Flash_Watcher_Agent_Firmware.md'), //3.4
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
@@ -117,6 +50,23 @@ function tryReadTitle(absFile) {
   }
 }
 
+// 提取文档时间：优先 createdAt，没有则回退到 last_update.date
+function extractDocDate(data) {
+  if (data.createdAt && !isNaN(new Date(data.createdAt).getTime())) {
+    return data.createdAt;
+  }
+
+  if (
+    data.last_update &&
+    data.last_update.date &&
+    !isNaN(new Date(data.last_update.date).getTime())
+  ) {
+    return data.last_update.date;
+  }
+
+  return null;
+}
+
 // 扫描英文文档
 function processDirectory(directory) {
   if (excludedPaths.includes(directory)) return;
@@ -138,14 +88,15 @@ function processDirectory(directory) {
       relPath = relPath.replace(/\.md$/i, ''); // 去掉 .md
 
       const slug = data.slug || relPath;
+      const docDate = extractDocDate(data);
 
-      if (data.last_update && data.last_update.date) {
+      if (docDate) {
         docList.push({
           path: slug.startsWith('/') ? slug : `/${slug}`,
           relPath,
           image: data.image || '',
           title,
-          date: data.last_update.date,
+          date: docDate,
         });
       }
     }
