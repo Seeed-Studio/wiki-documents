@@ -1,7 +1,7 @@
 ---
 description: This article is a collection page for the reTerminal D Series.
 title: reTerminal D Series
-image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/6-reTeriminal-D1001.jpg
+image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/6-reTeriminal-D1001.webp
 slug: /reterminal_d10xx_main_page
 sidebar_position: 1
 last_update:
