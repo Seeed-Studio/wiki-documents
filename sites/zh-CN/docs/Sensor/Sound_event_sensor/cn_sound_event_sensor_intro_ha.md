@@ -625,6 +625,18 @@ YAML 保存后，点击 **INSTALL**。
 
 然后，你就可以通过 Home Assistant 界面与设备交互，并与其他外设一起创建自己的自动化。例如，当检测到玻璃破碎时触发蜂鸣器，或者在检测到婴儿哭声时，自动在智能音箱上播放舒缓的摇篮曲。
 
+## 演示
+
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/Bb8Jq9ShVJk"
+          title="Audio Event Sensor"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
 
 ## 技术支持与产品讨论
 

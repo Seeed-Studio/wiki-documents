@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/4/2026
+  date: 3/10/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
 updatedAt: '2026-03-03'
@@ -135,7 +135,11 @@ The disk will disappear after the firmware is successfully flashed. At this poin
 
 ### Power on the device
 
-Press the button to turn it on. The LED will be on and there is a rising melody.
+Press the button to turn it on. The LED will be on and there is a descending melody melody.
+
+### Power off the device
+
+Press the button for 3s to turn it off. The LED will be off and there is a dec melody.
 
 :::tip
 If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
