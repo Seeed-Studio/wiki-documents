@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
 last_update:
-  date: 3/2/2026
+  date: 3/11/2026
   author: ZhangJiaQuan
 translation:
   skip:
@@ -1683,6 +1683,484 @@ For advanced configuration and troubleshooting, see the Accelerate documentation
 
 </details>
 
+<details>
+
+<summary>(Optional) Asynchronous Inference</summary>
+
+  
+
+When asynchronous inference is not enabled, LeRobot’s control flow can be understood as **conventional sequential / synchronous inference**: the policy first predicts a segment of actions, then executes that segment, and only after that waits for the next prediction.
+
+  
+
+For larger models, this can cause the robot to noticeably pause while waiting for the next action chunk.
+
+  
+
+The goal of asynchronous inference is to let the robot execute the current action chunk while computing the next one in advance, thereby reducing idle time and improving responsiveness.
+
+  
+
+Asynchronous inference is applicable to policies supported by LeRobot, including **chunk-based action policies** such as **ACT, OpenVLA, Pi0, and SmolVLA**.
+
+  
+
+Since inference is decoupled from actual control, asynchronous inference also helps leverage machines with stronger compute resources to perform inference for the robot.
+
+  
+
+You can read more about asynchronous inference in the [blog by Hugging Face](https://huggingface.co/blog/async-robot-inference)
+
+  
+
+Let us first introduce some basic concepts:
+
+  
+
+- **Client**: connects to the robotic arm and cameras, collects observation data (such as images and robot poses), sends these observations to the server, and receives the action chunks returned by the server and executes them in order.
+
+  
+
+- **Server**: the device that provides compute resources. It receives camera data and robotic arm data, performs inference (that is, computation) to produce action chunks, and sends them back to the client. It can be the same device connected to the robotic arm and cameras, another computer on the same local network, or a rented cloud server on the Internet.
+
+  
+
+- **Action chunk**: a sequence of robotic arm action commands obtained by policy inference on the server side.
+
+  
+  
+
+Three deployment scenarios for asynchronous inference
+
+1. Single-machine deployment
+
+  
+
+The robot, cameras, client, and server are all on the same device.
+
+This is the simplest case: the server can listen on 127.0.0.1, and the client can also connect to 127.0.0.1:port. The command example in the official documentation is for this scenario.
+
+  
+
+2. LAN deployment
+
+  
+
+The robot and cameras are connected to a lightweight device, while the policy server runs on another high-compute machine in the same local network.
+
+In this case, the server must listen on an address that is accessible by other machines, and the client must also connect to the server’s LAN IP, rather than 127.0.0.1.
+
+  
+
+3. Cross-network / cloud deployment
+
+  
+
+The policy server runs on a publicly accessible cloud host, and the client connects to it over the public Internet.
+
+This approach can use the stronger GPU of the cloud host. When network conditions are good, the round-trip network time (network latency) can sometimes be relatively small compared with inference time, but this depends on your actual network environment.
+
+  
+
+Security note: the LeRobot async inference pipeline has a risk related to unauthenticated gRPC + pickle deserialization. If there is important information or important services on the server, it is not recommended to expose the service directly to the Internet in a public deployment. A safer approach is to use VPN or SSH tunneling, or at least restrict the allowed source IPs in the security group to your own client public IP.
+
+  
+
+### Getting started with asynchronous inference deployment
+
+#### Step 1: Environment setup
+
+  
+
+First, use pip to install the additional dependencies required for asynchronous inference. Both the client and the server need to have lerobot installed along with the extra dependencies:
+
+```bash
+pip install -e ".[async]"
+```
+
+#### Step 2: Network configuration and checks
+
+1. **Proxy issues**
+
+  
+
+If your current terminal is configured to use a proxy and the connection behaves abnormally, you can temporarily unset the proxy environment variables:
+
+```bash
+unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY
+```
+
+Note: the command above only affects the current terminal session. If you open another terminal window, you need to run it again.
+
+  
+
+2. **Open the port in the firewall / security group**
+
+  
+
+Single-machine deployment: this can usually be skipped.
+
+  
+
+LAN deployment: you need to open the listening port on the server side.
+
+Example for opening the listening port on a LAN setup (run on the server side):
+
+```bash
+sudo ufw allow 8080/tcp
+```
+
+Cloud deployment: you need to open this port in the cloud server security group, and it is recommended to restrict the source IPs as much as possible.
+
+  
+
+If you are running on a cloud server:
+
+Open port 8080 in the server management console’s security group, or use another port that is already open. Different cloud service platforms handle this differently; refer to your cloud provider’s documentation.
+
+  
+
+3. **Confirm the IP address**
+
+  
+
+This step can be skipped for single-machine deployment (the IP address for a single machine is always 127.0.0.1).
+
+  
+
+If this is a LAN deployment:
+
+You need to confirm and remember the LAN IP address of the server side. When the client connects, what should be filled in is the LAN IP of the machine running policy_server, not the client’s own IP.
+
+  
+
+Linux / Jetson / Raspberry Pi:
+
+```bash
+hostname -I
+```
+
+If multiple addresses are shown, generally choose the one corresponding to the current LAN network interface, for example 192.168.x.x.
+
+You can also use:
+
+```bash
+ip addr
+```
+
+to view the inet field under the currently connected network interface.
+
+  
+
+Windows:
+
+```shell
+ipconfig
+```
+
+Find a field like IPv4 Address . . . . . . . . . . . : 192.168.14.140; that is the LAN IP address of that machine.
+
+
+macOS:
+
+```bash
+ifconfig
+```
+
+Find the inet field corresponding to the currently connected network interface; that is the LAN IP address.
+
+  
+
+We need to remember the server-side LAN IP address. We will use `<LAN IP address>` to refer to it.
+
+  
+
+If this is a cloud server deployment:
+
+Look for the public IP in the server control panel. It is usually called one of the following:
+
+  
+
+Public IPv4
+
+  
+
+External IP
+
+  
+
+Public IP address
+
+  
+
+EIP
+
+  
+
+Public IP
+
+  
+
+We need to remember the public IP address. We will use` <server public IP> `to refer to it.
+
+  
+
+4. **Connection test**
+
+
+Single-machine deployment: this step can be skipped
+
+LAN / cloud deployment: it is recommended to test from the client side whether the server port is reachable. Example tests are as follows:
+
+  
+
+LAN example: run on the client side
+
+```bash
+nc -vz <LAN IP address> 8080
+```
+
+Cloud example: run on the client side
+
+```bash
+nc -vz <server public IP> 8080
+```
+
+#### Step 3: Start the service
+
+**Scenario A: Single-machine deployment**
+
+  
+
+Start the local service in one terminal:
+```bash
+python -m lerobot.async_inference.policy_server \
+--host=127.0.0.1 \
+--port=8080
+```
+
+After it starts successfully, you need to keep this terminal open. You will need to open a new terminal to run other commands.
+
+  
+
+**Scenario B: LAN deployment**
+
+  
+
+Run on the server side:
+
+```bash
+python -m lerobot.async_inference.policy_server \
+--host=0.0.0.0 \
+--port=8080
+```
+
+In this case, when the client connects, the --server_address should be the server-side LAN IP address, that is,` <LAN IP address>:8080`.
+
+  
+
+**Scenario C: Cloud server deployment**
+
+  
+
+Run on the server side:
+
+```bash
+python -m lerobot.async_inference.policy_server \
+--host=0.0.0.0 \
+--port=8080
+```
+
+In this case, when the client connects, the --server_address should be the server’s public IP address, that is, `<server public IP>:8080`.
+
+#### Step 4: Choose inference parameters
+
+  
+
+Run on the client side:
+
+```bash
+python -m lerobot.async_inference.robot_client \
+--server_address=<ip address>:8080 \
+--robot.type=so100_follower \
+--robot.port=/dev/tty.usbmodem585A0076841 \
+--robot.id=follower_so100 \
+--robot.cameras="{ laptop: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}, phone: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \
+--task="dummy" \
+--policy_type=your_policy_type \
+--pretrained_name_or_path=user/model \
+--policy_device=cuda \
+--actions_per_chunk=50 \
+--chunk_size_threshold=0.5 \
+--aggregate_fn_name=weighted_average \
+--debug_visualize_queue_size=True
+```
+
+Parameter explanations:
+
+  
+
+- `--server_address`
+
+Specifies the address and port of the policy server. `<ip address>` should be replaced with 127.0.0.1 (local machine), `<LAN IP address> `(LAN), or` <server public IP>` (cloud server).
+
+  
+
+- `--robot.type, --robot.port, --robot.id, --robot.cameras`
+
+Hardware device parameters. These should be kept consistent with the parameters used during dataset collection.
+
+  
+
+- `--task`
+
+The task description. Vision-language policies such as SmolVLA can determine the action target based on the task text.
+
+  
+
+- `--policy_type`
+
+Replace this with the specific policy name, for example:
+- smolvla
+
+  
+
+- act
+
+  
+
+- `--pretrained_name_or_path`
+
+This value should be replaced with the model path on the server side, or a model path on Hugging Face.
+
+  
+
+- `--policy_device`
+
+Specifies the inference device used on the server side.
+
+It can be cuda, mps, or cpu.
+
+  
+
+- `--actions_per_chunk=50`
+
+Specifies how many actions are output in each inference.
+
+The larger this value is:
+
+Advantage: the action buffer is more sufficient, making it less likely to run out
+Disadvantage: the prediction horizon is longer, so control error may accumulate more noticeably
+
+  
+
+- `--chunk_size_threshold=0.5`
+
+Specifies when to request the next action chunk from the server.
+
+This is a threshold, usually in the range 0 to 1.
+
+It can be understood as: when the remaining proportion of the current action queue falls below this threshold, the client will send a new observation in advance and request the next action chunk.
+
+  
+
+Setting it to 0.5 here means:
+
+  
+
+when the current action chunk is about half consumed
+
+  
+
+the client starts requesting the next action chunk
+
+  
+
+The larger this value is, the more frequently requests are sent, and the more responsive the system becomes, but the load on the server also increases.
+
+The smaller this value is, the closer the behavior gets to synchronous inference.
+
+  
+
+- `--aggregate_fn_name=weighted_average`
+
+Specifies the aggregation method for overlapping action intervals.
+
+  
+
+In asynchronous inference, when the old action chunk has not yet been fully executed, the new action chunk may already have arrived.
+
+In that case, the two chunks overlap over part of the time interval, and an aggregation function is needed to combine them into the final executed action.
+
+  
+
+The meaning of weighted_average is:
+
+use a weighted average to fuse the overlapping part.
+
+  
+
+This usually makes action switching smoother and reduces abrupt changes.
+
+  
+
+- `--debug_visualize_queue_size=True`
+
+Whether to visualize the action queue size at runtime.
+
+When enabled, it allows you to see more directly whether the queue frequently hits the bottom, which helps you tune actions_per_chunk and chunk_size_threshold.
+
+  
+
+#### Step 5: Adjust parameters based on robot behavior
+
+  
+
+In asynchronous inference, there are two additional parameters that need adjustment which do not exist in synchronous inference:
+
+  
+
+Parameter Suggested initial value Description
+
+actions_per_chunk 50 How many actions the policy outputs at one time. Typical values: 10–50.
+
+chunk_size_threshold 0.5 When the remaining proportion of the action queue is ≤ chunk_size_threshold, the client sends a new action chunk request. The value range is [0, 1].
+
+  
+
+When --debug_visualize_queue_size=True, the change in action queue size will be plotted at runtime.
+
+  
+
+What asynchronous inference needs to balance is: the speed at which the server generates action chunks must be greater than or equal to the speed at which the client consumes action chunks. Otherwise, the action queue will empty, and the robot will begin to stutter again (this can be seen as the curve hitting the bottom in the queue visualization).
+
+  
+
+The speed at which the server generates action chunks is affected by factors such as model size, device type, VRAM / memory, and GPU compute power.
+
+The speed at which the client consumes action chunks is affected by the configured execution fps.
+
+  
+
+If the queue frequently runs empty, you need to increase actions_per_chunk, increase chunk_size_threshold, or reduce fps.
+
+If the queue curve fluctuates frequently but the remaining actions in the queue are always sufficient, you can appropriately decrease chunk_size_threshold.
+
+  
+
+In general:
+
+  
+
+the empirical range for actions_per_chunk is 10–50
+
+  
+
+the empirical range for chunk_size_threshold is 0.5–0.7; when tuning, it is recommended to start from 0.5 and gradually increase it
+
+  
+
+</details>
 
 
 If you encounter the following error:

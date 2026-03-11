@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
 last_update:
-  date: 3/2/2026
+  date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-01-08'
 updatedAt: '2026-03-03'
@@ -980,7 +980,7 @@ pip install pynput==1.6.8
 假设你正在执行“将红色方块抓取并放入盒子”的任务：
 
 - 如果在操作过程中不慎将方块弄掉，或出现任何可能导致该剧集数据质量较差的情况，可以先将机械臂操控至休息状态（即弯曲并折叠回初始位置），然后按下左箭头键。此时系统将返回到环境准备阶段，刚刚录制的动作数据会被直接舍弃。
-- 如果本次任务完成得较快，机械臂已经成功完成操作并回到休息状态，而你不希望等待剩余时间结束，也可以按下左箭头键，以跳过剩余等待时间，直接进入下一个剧集前的环境准备阶段。
+- 如果本次任务完成得较快，机械臂已经成功完成操作并回到休息状态，而你不希望等待剩余时间结束，也可以按下右箭头键，以跳过剩余等待时间，直接进入下一个剧集前的环境准备阶段。
 
 在录制过程中合理使用方向键，有助于避免失败动作污染数据集，并有效提升整体录制效率。
 
@@ -1803,6 +1803,295 @@ accelerate launch --num_processes=2 $(which lerobot-train) \
 </details>
 
 
+
+<details>
+<summary> （可选）在部署时使用异步推理 </summary>
+
+在不启用异步推理时，LeRobot 的控制流程可以理解为常规的顺序式 / 同步式推理：策略先预测一段动作，再执行这段动作，之后再等待下一次预测。对于较大的模型，这会导致机器人在等待新动作块时出现明显停顿。异步推理的目标，就是让机器人一边执行当前动作块，一边提前计算下一块动作，从而减少空等并提升响应性。异步推理适用于 LeRobot 支持的策略；包括 ACT、OpenVLA、Pi0、SmolVLA 这类按 chunk 输出动作的策略。由于推理和实际控制解耦，异步推理也有助于利用具有更强算力的机器来为机器人进行推理。
+
+你可以在 Hugging Face 提供的[博客文章](https://huggingface.co/blog/async-robot-inference)中阅读更多关于异步推理的信息。
+
+先让我们介绍一些基本概念：
+
+- 客户端：连接机械臂和相机，采集观测数据（如图像、机器人位姿等），把这些观测发送到服务器；同时接收服务器返回的动作块，并按顺序执行。
+- 服务器端：提供算力的设备，接收相机数据和机械臂数据，推理（也就是计算）出动作块发回客户端。它可以是连接机械臂和摄像头的设备本身，也可以是局域网内的另一台电脑，或是网上租赁的云端服务器。
+- 动作块：一系列的机械臂动作指令，由策略经过服务器端推理得到。
+- 同步推理：预测一块动作块、执行一块动作块；机器人在等待下一块动作时会出现等待动作块推理的间隙，这时候机械臂不会移动。在模型参数量更大并且算力不足的时候，推理的时间间隙是显著的，这时候机械臂会运动一段时间，然后停滞一段时间（推理），然后继续运动。
+- 异步推理：不同于同步推理，机器人执行当前动作块的同时，服务器已经在计算下一块动作；重叠部分会做聚合，以得到更及时的控制。
+
+### 异步推理的三种部署场景
+
+#### 1. 单机部署
+
+机器人、相机、客户端、服务器都在同一台设备上。  
+这是最简单的情况，服务器监听 127.0.0.1 即可，客户端也连接 127.0.0.1:端口。官方文档中的命令示例就是这个场景。
+
+#### 2. 局域网部署
+
+机器人和相机接在一台轻量设备上，策略服务器运行在同一局域网中的另一台高算力设备上。  
+此时服务器必须监听一个可被其他机器访问的地址，客户端也必须连接服务器的局域网 IP，而不能再写 127.0.0.1。
+
+#### 3. 跨网络 / 云端部署
+
+策略服务器运行在公网可访问的云主机上，客户端通过公网连接它。  
+这种方式可以使用云主机更强的 GPU。在网络状况良好的情况下，网络往返时间（网络延时）有时相对推理耗时较小，但这取决于你的实际网络环境。
+
+> 安全提醒：LeRobot async inference 管线存在未认证 gRPC + pickle 反序列化的风险。如果服务器上有重要信息或者重要服务，公网部署时，不建议把服务直接裸露到互联网；更稳妥的做法是 VPN、SSH 隧道，或至少把安全组来源 IP 限制到你自己的客户端公网地址。
+
+### 开始异步推理部署
+
+#### Step1: 环境配置
+
+首先，使用 pip 安装运行异步推理所需的额外依赖。客户端和服务器端均需要安装 lerobot 并安装额外依赖：
+
+```bash
+pip install -e ".[async]"
+```
+
+#### Step2: 网络配置与检查
+
+##### 1. 代理问题
+
+如果你当前终端配置了代理，并且连接出现异常，可以临时取消代理环境变量：
+
+```bash
+unset http_proxy https_proxy ftp_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY
+```
+
+注意：以上的命令只对一个终端生效，如果你重新开了另一个终端窗口，需要重新运行该命令。
+
+##### 2. 在防火墙 / 安全组放行端口
+
+- 单机部署：通常可以跳过。
+- 局域网部署：需要在服务器端放行监听端口。  
+  局域网放行监听端口示例（在服务器端运行）：
+
+```bash
+sudo ufw allow 8080/tcp
+```
+
+- 云端部署：需要在云服务器安全组中放行该端口，并尽量限制来源 IP。
+
+如果是在云端服务器上运行：  
+在服务器管理页面的安全组放行 8080 端口，或使用其他已经放行的端口。不同云服务平台的方式并不统一，详见云平台服务商。
+
+##### 3. 确认 IP 地址
+
+单机部署可以跳过这一步（单机的 IP 地址恒为 127.0.0.1）。
+
+如果是局域网部署：  
+需要确认并记住服务器端的局域网 IP 地址。客户端连接时，填写的应当是运行 policy_server 的那台机器的局域网 IP，而不是客户端自己的 IP。
+
+Linux / Jetson / 树莓派：
+
+```bash
+hostname -I
+```
+
+如果输出多个地址，一般选择当前局域网网卡对应的那个，例如 192.168.x.x。  
+也可以使用：
+
+```bash
+ip addr
+```
+
+查看当前联网网卡下的 inet 字段。
+
+Windows：
+
+```bash
+ipconfig
+```
+
+找到类似 IPv4 地址 . . . . . . . . . . . : 192.168.14.140 的字段，它就是该机器的局域网 IP 地址。
+
+macOS：
+
+```bash
+ifconfig
+```
+
+找到当前联网网卡对应的 inet 字段，它就是局域网 IP 地址。
+
+我们需要将服务器端的局域网 IP 地址记住。我们将用`<局域网IP地址>`来指代它。
+
+如果是云端服务器部署：  
+在服务器控制台寻找公网 IP，一般是这些名字之一：
+
+- Public IPv4
+- External IP
+- Public IP address
+- EIP
+- 公网 IP
+
+我们需要将公网 IP 地址记住。我们将用`<服务器公网IP>`来指代它。
+
+##### 4. 连接测试
+
+- 单机部署：可跳过这一步
+- 局域网 / 云端部署：建议在客户端测试是否能访问服务器端口，测试例子如下：
+
+局域网示例：在客户端运行
+
+```bash
+nc -vz <局域网IP地址> 8080
+```
+
+云端示例：在客户端运行
+
+```bash
+nc -vz <服务器公网IP> 8080
+```
+
+#### Step3: 启动服务
+
+##### 场景 A：单机部署
+
+在一个终端中启动本地服务：
+
+```bash
+python -m lerobot.async_inference.policy_server \
+  --host=127.0.0.1 \
+  --port=8080
+```
+
+运行成功后，你需要保持这个终端打开，你需要新建新的终端才可以执行其他命令。
+
+##### 场景 B：局域网内部署
+
+在服务器端运行：
+
+```bash
+python -m lerobot.async_inference.policy_server \
+  --host=0.0.0.0 \
+  --port=8080
+```
+
+此时客户端连接时，--server_address 中填写的应当是服务器端的局域网 IP 地址，即 `<局域网IP地址>:8080`。
+
+##### 场景 C：云端服务器部署
+
+在服务器端运行：
+
+```bash
+python -m lerobot.async_inference.policy_server \
+  --host=0.0.0.0 \
+  --port=8080
+```
+
+此时客户端连接时，--server_address 中填写的应当是服务器的公网 IP 地址，即` <服务器公网IP>:8080`。
+
+#### Step4: 选择推理参数
+
+在客户端运行：
+
+```bash
+python -m lerobot.async_inference.robot_client \
+  --server_address=<ip地址>:8080 \
+  --robot.type=so100_follower \
+  --robot.port=/dev/tty.usbmodem585A0076841 \
+  --robot.id=follower_so100 \
+  --robot.cameras="{ laptop: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}, phone: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \
+  --task="dummy" \
+  --policy_type=your_policy_type \
+  --pretrained_name_or_path=user/model \
+  --policy_device=cuda \
+  --actions_per_chunk=50 \
+  --chunk_size_threshold=0.5 \
+  --aggregate_fn_name=weighted_average \
+  --debug_visualize_queue_size=True
+```
+
+参数解释：
+
+- --server_address  
+  指定策略服务器的地址和端口。`<ip地址> `应该换为 127.0.0.1（本机）或 `<局域网IP地址>`（局域网）或 `<服务器公网IP>`（云服务器）。
+
+- --robot.type、--robot.port、--robot.id、--robot.cameras  
+  硬件设备参数，与数据集采集时的参数保持一致。
+
+- --task  
+  任务的描述，SmolVLA 等视觉语言策略可以根据任务文本决定动作目标。
+
+- --policy_type  
+  替换成具体策略名，例如：
+
+  - smolvla
+  - act
+
+- --pretrained_name_or_path  
+  这个的值要替换为服务器端的模型路径，或者 Hugging Face 上的模型路径。
+
+- --policy_device  
+  指定服务器端使用的推理设备。  
+  可以是 cuda、mps 或 cpu。
+
+- --actions_per_chunk=50  
+  指定每次推理输出多少个动作。  
+  这个值越大：
+
+  - 优点：动作缓存更充足，不容易断流
+  - 缺点：预测跨度更长，控制误差可能累计得更明显
+
+- --chunk_size_threshold=0.5  
+  指定何时向服务器请求下一块动作。  
+  这是一个阈值，范围通常在 0 到 1 之间。  
+  可以理解为：当当前动作队列剩余比例低于这个阈值时，客户端就会提前发送新的观测，请求下一块动作。
+
+  这里设置为 0.5，表示：
+
+  - 当当前动作块大约消耗到一半时
+  - 客户端就开始请求下一块动作
+
+  这个值越大，请求会越频繁，系统更灵敏，但服务器负载也更高。  
+  这个值越小，就越接近同步推理的行为。
+
+- --aggregate_fn_name=weighted_average  
+  指定重叠动作区间的聚合方式。
+
+  在异步推理中，旧动作块还没完全执行完时，新动作块可能已经回来了。  
+  这时两块动作会有一部分时间区间重叠，需要用一个聚合函数把它们合成最终执行动作。
+
+  weighted_average 的含义就是：  
+  对重叠部分使用加权平均的方式进行融合。
+
+  这样通常能让动作切换更平滑，减少突变。
+
+- --debug_visualize_queue_size=True  
+  是否在运行时可视化动作队列大小。  
+  打开后可以更直观地看到队列是否频繁触底，从而帮助你调整 actions_per_chunk 和 chunk_size_threshold。
+
+#### Step5: 根据机器人表现调整参数
+
+在异步推理中，有两个同步推理没有的额外参数需要调整：
+
+| 参数 | 建议初始值 | 说明 |
+|---|---:|---|
+| actions_per_chunk | 50 | 策略一次输出多少动作。典型值：10-50。 |
+| chunk_size_threshold | 0.5 | 当动作队列剩余比例 ≤ chunk_size_threshold 时，客户端会发送一个新的动作块。值的范围为 [0, 1]。 |
+
+当 --debug_visualize_queue_size=True 时，会在运行时绘制动作队列大小的变化情况。
+
+异步推理需要平衡的是：服务器生成动作块的速度必须大于等于客户端消耗动作块的速度，否则动作队列会空，机器人将重新出现卡顿（可以在队列可视化中看到曲线触底）。
+
+服务器生成动作块的速度受模型大小、设备类型、显存/内存、GPU 算力等影响。  
+客户端消耗动作块的速度受设定的执行 fps 影响。
+
+如果队列频繁空，需要加大 actions_per_chunk、chunk_size_threshold，或者减少 fps。  
+当队列曲线波动频繁，但是队列剩余动作一直充足时，可以适当降低 chunk_size_threshold。
+
+一般来说：
+
+- actions_per_chunk 经验值在 10-50
+- chunk_size_threshold 经验值在 0.5-0.7，建议调整时从 0.5 开始，慢慢加大。
+</details>
+
+
+<div class="video-container ">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
 如果你遇到了以下报错：
 
 <div align="center">
@@ -1824,12 +2113,6 @@ lerobot-train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
-
-
-
-<div class="video-container ">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 
 ## FAQ
