@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 12/16/2025
+  date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
 updatedAt: '2026-03-03'
@@ -49,11 +49,15 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
 
 <table>
   <tr>
-    <th><b>Main controller</b></th>
+    <td><b>Main Controller</b></td>
     <th>
       <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html" target="_blank">XIAO nRF52840 Plus</a><br />
       (Nordic nRF52840, ARM® Cortex®-M4 32-bit processor with FPU, 64 MHz, 256KB RAM, 1MB Flash, 2MB onboard Flash)
     </th>
+  </tr>
+  <tr>
+    <td><b>Charging Management Chip</b></td>
+    <td>CN3165 (0.99A)</td>
   </tr>
   <tr>
     <td><b>LoRa Module</b></td>
