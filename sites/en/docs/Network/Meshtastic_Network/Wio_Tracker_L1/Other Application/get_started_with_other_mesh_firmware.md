@@ -21,13 +21,13 @@ url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
 
 ### Method1 via Web Flasher
 
-Connect your device with a USB cable to the computer. Please make sure the cable supports data transmission. 
+Connect your device with a USB cable to the computer. Please make sure the cable supports data transmission.
 
 :::warning
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/).
 
 Choose `Seeed Studio Wio Tracker L1 Pro` in the `Community Firmware` group.
 
@@ -63,13 +63,13 @@ When the progress bar is completely filled, it indicates that Flash has complete
 
 ### Method2 Drag and Drop
 
-Connect your device with a USB cable to the computer. Please make sure the cable supports data transmission. 
+Connect your device with a USB cable to the computer. Please make sure the cable supports data transmission.
 
 :::warning
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/).
 
 Choose `Seeed Studio Wio Tracker L1 Pro` in the `Community Firmware` group.
 
@@ -85,7 +85,7 @@ Download the UF2 file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Double click the RST button to manually enter DFU mode. You can see a disk named `TRACKER L1` will pop out after 10~15 s. 
+Double click the RST button to manually enter DFU mode. You can see a disk named `TRACKER L1` will pop out after 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -105,7 +105,7 @@ Download the UF2 file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/CompanionUF2Download.png" alt="pir" width={800} height="auto" /></p>
 
-Double click the RST button to manually enter DFU mode. You can see a disk named `TRACKER L1` will pop out after 10~15 s. 
+Double click the RST button to manually enter DFU mode. You can see a disk named `TRACKER L1` will pop out after 10~15 s.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -144,10 +144,31 @@ If the connection fails, open your phone's Bluetooth list and `forget` or `Unpai
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
+### Connect via the web interface（BLE）
+
+1. Open the [MeshCore Web App](https://app.meshcore.nz/) and click the **Settings** icon.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue1.png" alt="pir" width={600} height="auto" /></p>
+
+2. Select the **BLE** tab, then click **Scan Now**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue2.png" alt="pir" width={600} height="auto" /></p>
+
+3. In the system Bluetooth popup, select your device (for example, MeshCore-xxxxxx) and click **Pair**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
+
+4. When prompted, enter the Bluetooth passkey shown on the device screen, then click ok.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
+
+5. Wait until the status changes to connected and your node appears in the MeshCore interface.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue5.png" alt="pir" width={600} height="auto" /></p>
+
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
@@ -165,7 +186,7 @@ Now that you have set the LoRa region on your device, you can continue with conf
 
 ### Configure GPS
 
-If you want to use GPS, please set it enabled. 
+If you want to use GPS, please set it enabled.
 
 You can go to APP `Position Settings` to enable GPS. Or you can go to device GPS page and press the four-way joystick to turn on or off the GPS.
 
@@ -198,11 +219,9 @@ You can send advert on the APP. Also you can send advert directly on the device 
 
 After you configure the LoRa, you can send messages in the primary channel. All nearby people in the same frequency band will hear it.
 
-
 ### Private Message
 
 The two devices only establish a connection when they have both received each other's advert.
-
 
 ## FAQ
 
@@ -232,7 +251,6 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
   When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-firmware-1) to flash the application firmware. You may need to [enter the DFU mode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
-
 ### Unable to enter DFU & Entering DFU Mode Manually
 
 Connect the device to your PC, double-press the `Reset` button. The yellow LED will stay solid, and a new USB drive named `Tracker L1` will appear on your PC.
@@ -241,27 +259,27 @@ Connect the device to your PC, double-press the `Reset` button. The yellow LED w
 
 Press the `User` button once to exit DFU mode.
 
- ### Device automatically turns off
+### Device automatically turns off
 
- #### Description
+#### Description
 
- - After the device turns on, it will turn off or reboot automatically after a while. 
- - The serial port log ran for a while and then stopped.
+- After the device turns on, it will turn off or reboot automatically after a while.
+- The serial port log ran for a while and then stopped.
 
  This is possibly caused by manually and forcibly rebooting or turning off the device when the device is in the following states: not finishing the message transmission process, being configured......
 
- #### Troubleshoot
+#### Troubleshoot
 
 [Flash Erase](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-erase-1) the firmware
 
 ### Factory Reset
+
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do a factory reset.
 
 - [Flash Erase](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/#flash-erase-1) the firmware
 
-- Click the `Factory Reset` button on the app. The device will reboot with the factory configuration automatically. 
+- Click the `Factory Reset` button on the app. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
-
 
 ### Signal Quality
 
@@ -276,9 +294,10 @@ If you want to restore to the default settings, you can do the factory reset. Th
 If you need an antenna replacement for the L1 Pro, [click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) to get one.
 
 ## Resource
+
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 Enclosure Design Challenge](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC Certification](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
