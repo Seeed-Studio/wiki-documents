@@ -1,6 +1,6 @@
 ---
-description: Meshcore と LoRa 用 SenseCAP Solar Node の使用を開始します。デバイスの設置、ファームウェアの書き込み、デバイス接続について案内します。
-title: SenseCAP Solar Node で始める MeshCore 入門
+description: Meshcore と LoRa 用 SenseCAP Solar Node の使用を開始します。デバイスの取り付け、ファームウェアの書き込み、デバイス接続について案内します。
+title: SenseCAP Solar Node で MeshCore を使い始める
 keywords:
 - Meshcore
 - Solar
@@ -26,7 +26,7 @@ last_update:
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。 
 
 :::warning
-データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを必ず接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/) にアクセスします。 
@@ -35,13 +35,13 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してチュートリアルを参照してください。
+`Repeater` を選択します。ほかのファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### フラッシュの消去
+#### Flash 消去
 
-`Enter DFU Mode` をクリックし、「Solar Node」または「TinyUSB serial」という名前のシリアルポートを選択します。その後、`Erase Flash` をクリックしてシリアルポートを選択します。
+`Enter DFU Mode` をクリックし、「Solar Node」または「TinyUSB serial」という名前のシリアルポートを選択します。次に `Erase Flash` をクリックし、シリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseSelect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -57,13 +57,13 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareVersion.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode` をクリックし、「P1 Pro」または「TinyUSB」 serial という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
+`Enter DFU Mode` をクリックし、「P1 Pro」または「TinyUSB」シリアルという名前のシリアルポートを選択します。次に `Flash` をクリックし、シリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
 `Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから再度 `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-進行バーが最後までいっぱいになったら、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後まで埋まったら、Flash が完了したことを示します。その後、デバイスは自動的に再起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -72,7 +72,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。 
 
 :::warning
-データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを必ず接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/) にアクセスします。 
@@ -81,11 +81,11 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Repeater` を選択します。別のファームウェアを書き込みたい場合は、[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してチュートリアルを参照してください。
+`Repeater` を選択します。ほかのファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
-#### フラッシュの消去
+#### Flash 消去
 
 UF2 ファイルをダウンロードします。
 
@@ -95,7 +95,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -115,7 +115,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
@@ -156,7 +156,7 @@ RST ボタンをダブルクリックして、手動で DFU モードに入り�
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ4: フープリングを適切な位置に取り付けます。
+- ステップ4: 適切な位置にフープリングを取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -202,12 +202,12 @@ P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵さ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ3: シェルを組み立てます。
+- ステップ3: ケースを組み立てます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-シェルが正しく取り付けられ、ネジがしっかりと締め付けられていることを確認し、デバイスの防水性を維持してください。
+デバイスの防水性能を維持するため、ケースが正しく取り付けられ、ネジがしっかりと締め付けられていることを確認してください。
 :::
 
 #### （オプション）アンテナのアップグレード
@@ -233,12 +233,12 @@ USB ケーブルを挿してもデバイスが反応しない場合は、まず�
 
 MeshCore を LoRa デバイスに初めて書き込む場合は、その国や地域で合法的に使用できる周波数を利用するために、サーバーデバイスの周波数を設定する必要があります。
 
-[ここをクリック](https://config.meshcore.dev/)してリピーターを設定します。
+[Click here](https://config.meshcore.dev/) をクリックしてリピーターを設定します。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-LoRa リージョンを変更して設定を保存します。その後デバイスを `Reboot` してください。そうしないと設定は有効になりません。
+LoRa リージョンを変更して設定を保存します。その後デバイスを `Reboot` してください。そうしないと設定が有効になりません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/LoRaSettingg.png" alt="pir" width={600} height="auto" /></p>
 
@@ -253,10 +253,10 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、ローリング 1 時間ベースで毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、これは 1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+デバイス上で LoRa リージョンを設定したので、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
 - **ステップ2 アドバタイズ送信**
 
@@ -284,7 +284,7 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 
 ### パスの設定
 
-リピーターをルートに追加する前に、まずリピーターを使ってアドバタイズを送信する必要がある場合があります。リピーターは一定間隔で自動的にアドバタイズを送信します。この間隔は複数時間（デフォルトでは 3 時間）になることがあります。そのため、手動でアドバタイズを送信するか、そうでなければ待つ必要があります。
+リピーターをルートに追加する前に、まずリピーターを使ってアドバタイズを送信する必要がある場合があります。リピーターは一定間隔で自動的にアドバタイズを送信します。この間隔は数時間（デフォルトでは 3 時間）になることがあります。そのため、手動でアドバタイズを送信するか、そうでなければ待つ必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -302,13 +302,13 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 
 - 原因 
 
-これは通常、ファームウェアの書き込み失敗が原因です。ファームウェアを書き込む際は、安定した接続を維持してください。 
+これは通常、ファームウェアの書き込み失敗が原因です。ファームウェアを書き込む際は、接続を安定した状態に保ってください。 
 
 - トラブルシューティング
 
-ファームウェアを再書き込みするには、[ここをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)してください。
+ファームウェアを再書き込みするには、[Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase) をクリックしてください。
 
-### デバイスがブリックした
+### デバイスが文鎮化した場合
 
 #### 説明
 
@@ -324,7 +324,7 @@ LoRa リージョンを変更して設定を保存します。その後デバイ
 ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
 :::
 
-**ステップ2: Adafruit-nrfutil のインストール**
+**ステップ1: Adafruit-nrfutil のインストール**
 
 **前提条件**
 
@@ -351,9 +351,9 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下のコマンドは `python3` を使用していますが、Windows の場合は、Python 3.x のインストールでも実行ファイル名が python.exe のままなので、`python` に変更する必要があるかもしれません。
+注意：以下のコマンドでは `python3` を使用していますが、Windows の場合は、Python 3.x のインストールでも実行ファイル名が python.exe のままなので、`python` に変更する必要があるかもしれません。
 
-ホームディレクトリのユーザースペースにインストールするには：
+ホームディレクトリ内のユーザースペースにインストールするには：
 
 ```
 pip3 install -r requirements.txt
@@ -415,7 +415,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-上記の手順を完了したら、[アプリケーションファームウェアを書き込む](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase)ことができます。
+上記の手順を完了したら、[flash the application firmware](https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/#flash-erase) を実行できます。
 
 ### 信号品質
 
@@ -423,7 +423,13 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは、性能が低いと見なされます。
 
-      最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
+      最良の信号状態を得るために、開けた障害物の少ない場所で、干渉が最小限となるようにデバイスを使用してください。
+
+### 充電電流
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99A です。したがって最大充電電流は 1A です。
 
 ## リソース
 - [Solar Node バッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
