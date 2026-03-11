@@ -1,7 +1,7 @@
 ---
 description: This article will guide you to quickly get started with reTerminal E1001.
 title: Getting Started with reTerminal E1001
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg
 slug: /getting_started_with_reterminal_e1001
 sidebar_position: 2
 last_update:
