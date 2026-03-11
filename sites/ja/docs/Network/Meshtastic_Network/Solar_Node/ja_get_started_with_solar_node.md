@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Solar Node for Meshtastic & LoRa の使用開始
-title: SenseCAP Solar Node の使用開始
+description: SenseCAP Solar Node を使って Meshtastic と LoRa を始める
+title: SenseCAP Solar Node を使い始める
 keywords:
   - Meshtastic
   - Solar
@@ -9,110 +9,110 @@ slug: /get_started_with_meshtastic_solar_node
 sku: 114993633,114993643
 sidebar_position: 2
 last_update:
-  date: 12/24/2025
+  date: 3/10/2026
   author: Michelle Huang
-createdAt: '2025-05-27'
+createdAt: '2025-05-13'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
-デバイスが以下の状態にある場合は、手動で再起動または電源を切らないでください。そうしないと、デバイスが故障する可能性があります。
+デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
 1. メッセージ送信プロセスが完了していない
-2. 設定中
+2. 設定中である
 :::
-## 使用開始
+## はじめに
 
-正式な展開の前に、まずノードをテストして設定してください。
+本格的な設置の前に、まずノードのテストと設定を行ってください。
 
-### ファームウェアのフラッシュ
+### ファームウェアを書き込む
 
 :::caution note
-ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に故障する可能性があります。
-ファームウェアをフラッシュする前に、まず消去ファームウェアをフラッシュしてください！
+ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に故障する可能性があります。
+ファームウェアを書き込む前に、必ず消去用ファームウェアを先に書き込んでください！
 :::
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。対象デバイスを `Seeed SenseCAP Solar Node` に選択します。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。ターゲットデバイスとして `Seeed SenseCAP Solar Node` を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-#### フラッシュ消去
+#### 消去ファームウェアの書き込み
 
-`ゴミ箱` シンボルをクリックします。
+`trash` シンボルをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
-消去ファームウェアをダウンロードしてコピーします。
+消去用ファームウェアをダウンロードしてコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx` という名前のドライバが表示されるはずです。消去ファームウェアをディスクに貼り付けます。
+`Enter DFU Mode` をクリックすると、`XIAO-xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、`XIAO-xxx` という名前のドライブが表示されます。そのディスクに消去用ファームウェアを貼り付けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-このプロセスには時間がかかる場合があります。「XIAO-XXX」ディスクが消えるまでお待ちください。
+この処理には少し時間がかかる場合があります。"XIAO-XXX" ディスクが消えるまでお待ちください。
 
-#### アプリケーションファームウェアのフラッシュ
+#### アプリケーションファームウェアの書き込み
 
-希望するファームウェアバージョンを選択します。`flash` をクリックします。
+使用したいファームウェアバージョンを選択し、`flash` をクリックします。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをダウンロードしてDFUに入ります。UF2ファイルをDFUドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
+UF2 ファイルをダウンロードして DFU モードに入ります。UF2 ファイルを DFU ドライブにドラッグします。ファイルのコピー完了後、デバイスが再起動するとファームウェアの書き込みが完了します。
 
-### バッテリーとGPSモジュールの取り付け（オプション）
+### バッテリーと GPS モジュールの取り付け（オプション）
 
 :::tip
-バッテリーを取り付けまたは交換する必要がある場合は、`Button-top` 18650（3.6V）バッテリーを使用してください。
+バッテリーを取り付ける、または交換する必要がある場合は、`Button-top` 18650（3.6V）バッテリーを使用してください。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Proバージョンには内蔵バッテリーとGPSモジュールがあります。P1バージョンの場合、必要に応じてユーザーがバッテリーとGPSモジュールを手動で取り付ける必要があります。
+P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵されています。P1 バージョンでは、必要に応じてユーザーがバッテリーと GPS モジュールを手動で取り付ける必要があります。
 :::
 
 
 
-- ステップ1：すべてのネジとカバーを取り外します。
+- ステップ 1: すべてのネジとカバーを取り外します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ2：バッテリーとGPSモジュールを取り付けます。
+- ステップ 2: バッテリーと GPS モジュールを取り付けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/install-bat-gps.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ3：シェルを組み立てます。
+- ステップ 3: ケースを組み立てます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-シェルが適切に取り付けられ、ネジがしっかりと締められていることを確認して、デバイスの防水性を維持してください。
+防水性能を維持するために、ケースが正しく取り付けられ、ネジがしっかりと締め付けられていることを確認してください。
 :::
 
-### デバイスの電源投入
+### デバイスの電源を入れる
 
-初回使用時は、USBケーブルを接続してデバイスをアクティベートする必要があります。青いMeshライトが点滅すれば、デバイスが正常に電源投入されたことを意味します。以下の動画のとおりです：
+初回使用時は、USB ケーブルを接続してデバイスをアクティベートする必要があります。青色の Mesh ライトが点滅すれば、デバイスの電源が正常に入ったことを意味します。以下の動画のようになります。
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::tip
-ボタンを押してもデバイスが応答しない場合は、まず充電してください。急速充電器は使用しないでください。
+ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
 :::
 
-### アプリ経由での接続
+### アプリ経由で接続する
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="IOS アプリ">
 
-- Bluetoothパネルで対象デバイスを選択します。
+- Bluetooth パネルでターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -120,11 +120,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-- `+` をクリックして対象デバイスを選択します。
+- `+` をクリックし、ターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -132,43 +132,43 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
-### ウェブサイト経由での接続
+### Web サイト経由で接続する
 
-ウェブサイトでテキストメッセージを送信し、他のノードと通信したい場合は、デバイスを [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) に接続できます。
+Web サイト上でメッセージを送信し、他のノードと通信したい場合は、デバイスを [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) に接続できます。
 
-  ステップ1：ウェブサイトを開く
+  ステップ 1: Web サイトを開く
 
-[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0) してウェブサイトにアクセスします。
+[Click here](https://client.meshtastic.org/messages/broadcast/0) をクリックして Web サイトにアクセスします。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  ステップ2：新しいデバイスを追加
+  ステップ 2: 新しいデバイスを追加する
 
     "+ New Connection" をクリックします。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は2つあります。お好みの方法を選択できます。
+    接続方法は 2 通りあります。お好みの方法を選択してください。
 
- 方法1：Bluetooth経由
+ 方法 1: Bluetooth 経由
 
-    Bluetooth方法を選択します。ポップアップウィンドウでデバイスIDを選択します。
+    Bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- 方法2：シリアル経由
+ 方法 2: シリアル経由
 
-    シリアル方法を選択します。デバイスマネージャーを開いて、デバイスが接続されているポートを確認します。ポップアップウィンドウでそのポートを選択します。
+    シリアル方法を選択します。デバイスマネージャーを開き、デバイスがどのポートに接続されているかを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    デバイスがリストに表示されます。クリックして接続します。接続が成功すると、ウェブサイト上でデバイスの状態を直接確認できます。
+    デバイスがリストに表示されます。クリックして接続します。接続に成功すると、Web サイト上でデバイスのステータスを直接確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-### LoRaの設定
+### LoRa を設定する
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="iOS アプリ">
+<TabItem value="ios" label="IOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -180,29 +180,29 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-**地域リスト**
+**リージョン一覧**
 
-|**地域コード**|**説明**|**周波数範囲（MHz）**|**デューティサイクル（%）**|**電力制限（dBm）**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
+より包括的な一覧については、[LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスでLoRa地域を設定したので、ニーズに合わせて [LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
-### GPSの設定
+### GPS を設定する
 
-GPSを有効に設定してください。更新間隔とブロードキャスト間隔を調整して、より最新の位置情報を取得できます。
+GPS を有効に設定してください。より最新の位置情報を取得するために、更新間隔とブロードキャスト間隔を調整できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-iOSの場合は、`Accurate Location` をオンにしてください。そうしないと、測位が偏差する可能性があります。
+IOS の場合は、`Accurate Location` をオンにしてください。そうしないと、位置がずれる可能性があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -210,33 +210,33 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
 
 |ボタン操作|説明|
 |--|--|
-|PWRを3秒間押す|電源オン|
-|PWRを2回押す|ノード/位置情報の更新|
-|PWRを3回押す|GPSのオン/オフ切り替え|
-|PWRを5秒間押す|電源オフ|
-|RSTを2回押す|手動でDFUに入る|
+|PWR を 3 秒押す|電源オン|
+|PWR を 2 回押す|ノード／位置情報を更新|
+|PWR を 3 回押す|GPS のオン／オフを切り替え|
+|PWR を 5 秒押す|電源オフ|
+|RST を 2 回押す|手動で DFU に入る|
 
-## 設置
+## 取り付け
 
 :::danger note
-デバイスは長期間屋外で使用されるため、パネルを水平位置に設置することは避けてください。水の蓄積を防ぐため、傾斜または斜めの設置をお勧めします。さらに、すべてのネジがしっかりと締められ、カバーが適切に設置されていることを確認してください。防水保護を強化するため、追加のシール対策を検討することもできます。
+デバイスは長期間屋外で使用されるため、パネルを水平に設置することは避けてください。水たまりを防ぐため、傾斜または斜めに設置することを推奨します。さらに、すべてのネジがしっかりと締め付けられ、カバーが正しく取り付けられていることを確認してください。防水性をさらに高めるために、追加のシーリング処理を検討してもよいでしょう。
 :::
 
-- **部品リスト**
+- **パーツ一覧**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 
 
-### ステップバイステップ設置ガイド
+### 手順付き取り付けガイド
 
-- ステップ1：ワッシャーとネジを使用して、パーツ1をデバイスの底部に接続します。
+- ステップ 1: ワッシャーとネジを使って、パーツ 1 をデバイス底面に取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ2：ユニバーサルジョイント（パーツ2）とブラケット（パーツ3）をネジで接続します。
+- ステップ2：ユニバーサルジョイント（パーツ2）とブラケット（パーツ3）をネジで固定します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -260,7 +260,7 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ6：ネジを緩め、ユニバーサルジョイントを適切な位置に調整してから、ネジを締めます。
+- ステップ6：ネジを緩めてユニバーサルジョイントを適切な位置に調整し、その後ネジを締めます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -272,23 +272,23 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完全なインストールガイダンス
+### 完全なインストールガイド
 
-- ビデオを通じて、インストールと初期化プロセス全体を完了できます。
+- 動画を通して、インストールと初期化の全工程を完了できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### ソーラーノードにセンサーを追加（オプション）
+### ソーラーノードへのセンサー追加（オプション）
 
-- このビデオを通じてセンサーを取り付けることができます。
+- この動画を参考にセンサーを取り付けることができます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下のセンサーは、デバイス上の Grove インターフェースとの互換性が確認されています。
+- 以下のセンサーは、本デバイス上のGroveインターフェースとの互換性が検証されています。
 
 <table>
   <tr>
@@ -297,7 +297,7 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
   </tr>
   <tr>
     <td rowspan="4">環境センサー</td>
-    <td>圧力</td>
+    <td>気圧</td>
     <td>BMP085</td>
   </tr>
   <tr>
@@ -305,29 +305,29 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
     <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
   </tr>
   <tr>
-    <td>温度・湿度</td>
+    <td>温度 & 湿度</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度・湿度・圧力</td>
+    <td>温度 & 湿度 & 気圧</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
     <td rowspan="2">その他</td>
-    <td>心拍数・SpO₂</td>
+    <td>心拍数 & SpO₂</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
-    <td>I2Cキーボード</td>
+    <td>I2C キーボード</td>
     <td>CardKB</td>
   </tr>
 </table>
 
 ### アンテナのアップグレード（オプション）
 
-- このビデオを見て、アンテナをファイバーグラス製のものに交換できます。
+- この動画を見ながら、アンテナをガラス繊維製アンテナに交換できます。
 
-より高いゲインのアンテナが必要な場合は、[860-930MHz 3dBi ファイバーグラス](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html)アンテナと[902-928MHz 5.8dBi ファイバーグラス](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html)アンテナをお勧めします。
+より高利得のアンテナが必要な場合は、[860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) アンテナおよび [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) アンテナをお勧めします。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -337,31 +337,31 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
 
 ### ブートループ
 
-- 原因
+- 原因 
 
-これは通常、ファームウェアの書き込み失敗によって引き起こされます。ファームウェアを書き込む際は、安定した接続を維持してください。
+これは通常、ファームウェアの書き込み失敗によって発生します。ファームウェアを書き込む際は、接続を安定した状態に保ってください。 
 
 - トラブルシューティング
 
-[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware)してファームウェアを再書き込みしてください。
+[Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware) をクリックして、ファームウェアを書き直してください。
 
-### デバイスの故障
+### デバイスがブリックした
 
 #### 説明
 
-デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない。
+デバイスが反応せず、LEDも点灯せず、アプリとペアリングできません。
 
-**1) デバイスがまだDFUモードに入ることができる場合は、ブートローダーの書き込みを試してください**。
+**1) デバイスがまだDFUモードに入れる場合は、ブートローダーの書き込みを試してください。**
 
 #### ブートローダーの書き込み
 
 - [ブートローダーダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込みプロセス中は**絶対に**切断しないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で**絶対に**切断しないでください。
 :::
 
-**ステップ1：Adafruit-nrfutilのインストール**
+**ステップ1：Adafruit-nrfutil のインストール**
 
 **前提条件**
 
@@ -369,9 +369,9 @@ iOSの場合は、`Accurate Location` をオンにしてください。そうし
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 <Tabs>
-<TabItem value="pypi" label="PyPIからのインストール">
+<TabItem value="pypi" label="PyPI からインストール">
 
-これは推奨される方法で、最新バージョンをインストールします：
+これは推奨される方法で、最新バージョンをインストールできます：
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -379,39 +379,39 @@ pip3 install --user adafruit-nrfutil
 
 </TabItem>
 
-<TabItem value="sou" label="ソースからのインストール">
+<TabItem value="sou" label="ソースからインストール">
 
-PyPiでのインストールに問題がある場合やツールを変更したい場合は、この方法を使用してください。まず、このリポジトリをクローンしてそのフォルダに移動します。
+PyPi でのインストールに問題がある場合や、ツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下のコマンドは`python3`を使用していますが、Windowsの場合、Python 3.xのWindowsインストールではまだpython.exeという名前を使用しているため、`python`に変更する必要がある場合があります。
+注意：以下のコマンドでは `python3` を使用していますが、Windows の場合は `python` に変更する必要があるかもしれません。これは、Windows での Python 3.x のインストールでは依然として python.exe という名前が使われているためです。
 
-ホームディレクトリのユーザー空間にインストールするには：
+ホームディレクトリのユーザースペースにインストールするには：
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-`pip3 install`を実行する際に権限エラーが発生する場合、`pip3`が古いかシステムディレクトリにインストールしようとしています。その場合は`--user`フラグを使用してください：
+`pip3 install` 実行時にパーミッションエラーが発生する場合、`pip3` が古いか、システムディレクトリにインストールしようと設定されている可能性があります。その場合は `--user` フラグを使用してください：
 
 ```
 pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-システムディレクトリにインストールしたい場合（一般的には推奨されません）：
+システムディレクトリにインストールしたい場合（一般的には非推奨）：
 
 ```
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-ユーティリティの自己完結型実行可能バイナリを生成するには（WindowsとmacOS）、以下のコマンドを実行します：
+ユーティリティの自己完結型実行バイナリ（Windows および MacOS）を生成するには、次のコマンドを実行します：
 
 ```
 pip3 install pyinstaller
@@ -421,8 +421,8 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-.exeは`Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`にあります（Windowsの場合は`.exe`付き）。
-便利なように、%PATH%内のディレクトリなど、他の場所にコピーまたは移動してください。
+`.exe` ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`（Windows の場合は `.exe` 付き）にあります。
+利便性のために、%PATH% に含まれるディレクトリなど、別の場所にコピーまたは移動してください。
 
 </TabItem>
 </Tabs>
@@ -436,15 +436,15 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **ステップ3：ブートローダーの書き込み**
 
-ターミナルまたはコマンドプロンプトで、ブートローダーzipパッケージをダウンロードしたディレクトリに移動し、デバイスの正しいポートに置き換えて以下のコマンドを実行します：
+ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダーzipパッケージのディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
 
-- **Windows用**：
+- **Windows の場合**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
 
-- **その他**：
+- **その他の場合**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -454,41 +454,41 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware)に従ってアプリケーションファームウェアを書き込むことができます。
 
- ### デバイスの自動電源オフ
+ ### デバイスが自動的に電源オフになる
 
  #### 説明
 
- - デバイスの電源を入れた後、しばらくすると自動的に電源が切れたり再起動したりします。
- - シリアルポートログがしばらく実行された後、停止します。
+ - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
+ - シリアルポートログがしばらく動作した後に停止します。
 
- これは、デバイスが以下の状態にあるときに手動で強制的に再起動または電源を切ったことが原因である可能性があります：メッセージ送信プロセスが完了していない、設定中......
+ これは、メッセージ送信処理が完了していない、設定中であるなど、以下の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因の可能性があります。
 
  #### トラブルシューティング
 
-[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase)してフラッシュ消去を実行してください。その後、最新のファームウェアを再書き込みしてください。
+[click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase) をクリックしてフラッシュ消去を実行し、その後最新のファームウェアを書き込んでください。
 
 
-### ファクトリーリセット
+### 工場出荷時設定へのリセット
 
-デフォルト設定に復元したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを実行する方法は2つあります。
+デフォルト設定に戻したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを行う方法は2つあります。
 
-- [こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase)してフラッシュ消去を実行してください。その後、最新のファームウェアを再書き込みしてください。
+- [click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase) をクリックしてフラッシュ消去を実行し、その後最新のファームウェアを書き込んでください。
 
-- アプリの`Factory Reset`ボタンをクリックします。デバイスは工場出荷時設定で自動的に再起動します。
+- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### 消費電力
 
-消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値のみです。実際の消費量は実際の使用条件によって異なる場合があります。
+消費電力は主に、データ送信頻度やGPSの更新レートなどの要因に依存します。
+以下の数値はあくまで参考値であり、実際の消費電力は実運用条件によって異なる場合があります。
 
-- **シャットダウンスリープモード消費電力**
+- **シャットダウンスリープモード時の消費電力**
 
-|説明|消費電力|
+|説明|消費電流|
 |---|---|
-|GPS_LED動作電流|1.02 mA|
-|電源投入済みだが非アクティブ|56.195 μA|
-|電源投入済みでアクティブ|611 μA|
+|GPS_LED 動作電流|1.02 mA|
+|給電されているが動作していない状態|56.195 μA|
+|給電され動作している状態|611 μA|
 
 **例：**
 
@@ -497,23 +497,29 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 |3350|136.8|
 |12000|490.2|
 
-- **アクティブモード消費電力**
+- **アクティブモード時の消費電流**
 
 |モード|電流|
 |---|---|
-|静的電流|10.65 mA|
-|EU868送信電流|157.74 mA|
-|US915送信電流|205.22 mA|
-|GPS動作電流|50 mA|
-|GPS_LED動作電流|1.02 mA|
+|静止電流|10.65 mA|
+|EU868 送信電流|157.74 mA|
+|US915 送信電流|205.22 mA|
+|GPS 動作電流|50 mA|
+|GPS_LED 動作電流|1.02 mA|
 
 ### 信号品質
 
-- **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
+- **SNR** は通信リンクの品質を表します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-- **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
+- **RSSI** はデバイスとその周囲の環境によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
 
-      最良の信号効果を得るために、干渉が最小限で開放的で障害物のない場所でデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限で開けた障害物のない場所でデバイスを使用してください。
+
+### 充電電流
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99A です。したがって最大充電電流は 1A です。
 
 ## リソース
-- [ソーラーノードバッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Solar Node バッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

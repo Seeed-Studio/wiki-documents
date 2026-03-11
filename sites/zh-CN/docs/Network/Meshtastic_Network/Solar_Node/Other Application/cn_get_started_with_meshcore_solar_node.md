@@ -1,6 +1,6 @@
 ---
-description: 开始使用适用于 Meshcore 和 LoRa 的 SenseCAP 太阳能节点。指导设备安装、固件烧录和设备连接。
-title: SenseCAP Solar Node MeshCore 入门指南
+description: 开始使用适用于 Meshcore 和 LoRa 的 SenseCAP Solar Node。指导设备安装、固件烧录和设备连接。
+title: 在 SenseCAP Solar Node 上开始使用 MeshCore
 keywords:
 - Meshcore
 - Solar
@@ -14,7 +14,7 @@ last_update:
 ---
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关闭设备，否则设备可能会损坏。
 1. 尚未完成消息传输过程
 2. 正在被配置
 :::
@@ -121,7 +121,7 @@ last_update:
 
 固件烧录成功后，该磁盘会自动消失。此时设备中还没有固件，因此设备不会自动重启。
 
-## 入门
+## 入门指南
 
 在正式部署前，请先对节点进行测试和配置。
 
@@ -130,7 +130,7 @@ last_update:
 #### 组装设备
 
 :::danger note
-由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且外壳盖板安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
+由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且上盖安装到位。为增强防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -192,7 +192,7 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 
 
-- 步骤 1：卸下所有螺丝并取下外壳盖板。
+- 步骤 1：卸下所有螺丝并取下上盖。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -202,23 +202,23 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：组装外壳。
+- 步骤 3：装回外壳。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-请确保外壳安装到位且螺丝拧紧，以保持设备的防水性能。
+请确保外壳安装到位且螺丝拧紧，以保证设备的防水性能。
 :::
 
-#### （可选）升级天线
+####（可选）升级天线
 
-- 你可以观看此视频，将天线更换为玻璃钢天线。
+- 你可以通过观看此视频，将天线更换为玻璃钢天线。
 
 如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 ### 启动设备
 
-设备需要通过连接 USB 线来激活。蓝色 Mesh LED 将点亮约 3 秒，这意味着设备已成功开启。
+设备需要通过连接 USB 线来激活。蓝色 Mesh LED 将点亮约 3 秒，这意味着设备已成功开机。 
 
 蓝色 Mesh LED 指示灯在发送 advert 之前不会点亮。
 
@@ -231,7 +231,7 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 - **步骤 1 初始配置**
 
-当 MeshCore 第一次烧录到 LoRa 设备上时，需要设置服务器设备的频率，使其使用在你所在国家或地区合法的频段。
+当 MeshCore 第一次烧录到 LoRa 设备上时，需要设置服务器设备的频率，使其使用在你所在国家或地区合法的频率。
 
 [点击这里](https://config.meshcore.dev/) 来配置中继器。
 
@@ -246,14 +246,14 @@ import TabItem from '@theme/TabItem';
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|未设置|N/A|N/A|N/A|
-|US|美国|902.0 - 928.0|100|30|
-|EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
-更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当你的设备达到该限制时，将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到该限制，你的设备将停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
@@ -264,11 +264,11 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
-完成初始化设置后，点击
+在完成初始化设置后，点击 
 
 - **步骤 3（可选）管理员登录**
 
-中继器的默认管理员密码是 `password`。
+中继器的默认管理员密码是 `password`。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AAdmin.png" alt="pir" width={600} height="auto" /></p>
 
@@ -278,13 +278,13 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-此外，你可以调整 advert 广播间隔。`auto zero hop advert` 的间隔范围为 60-240 分钟。`auto flood advert` 的间隔范围为 3-168 小时。
+此外，你可以调整 advert 广播间隔。`auto zero hop advert` 的间隔范围为 60-240 分钟。`auto flood advert` 的间隔范围为 3-168 小时。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### 设置路径
 
-在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会以固定间隔自动发送。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
+在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会自动以固定间隔自动发送。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
@@ -292,7 +292,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-设置路径后，传输方式将变为 "n hop"。例如，如果你在路由中添加 1 个中继器，它将变为 1 hop。
+设置路径后，传输方式将变为 "n hop"。例如，如果你在路由中添加了 1 个中继器，它将变为 1 hop。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -300,9 +300,9 @@ import TabItem from '@theme/TabItem';
 
 ### 启动循环
 
-- 原因
+- 原因 
 
-这通常是由固件烧录失败引起的。烧录固件时，请保持连接稳定。
+这通常是由固件烧录失败引起的。烧录固件时，请保持连接稳定。 
 
 - 故障排查
 
@@ -314,7 +314,7 @@ import TabItem from '@theme/TabItem';
 
 设备无响应，没有 LED，无法与你的 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
+**1) 设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
 
 #### 烧录 Bootloader
 
@@ -326,7 +326,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-**先决条件**
+**前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
@@ -344,14 +344,14 @@ pip3 install --user adafruit-nrfutil
 
 <TabItem value="sou" label="从源码安装">
 
-如果你在通过 PyPi 安装时遇到问题，或想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
+如果你在使用 PyPi 安装时遇到问题，或者想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上安装的 python 3.x 仍然使用 python.exe 这个名称。
+注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上安装的 python 3.x 仍然使用 python.exe 这个名称
 
 要在你的主目录用户空间中安装：
 
@@ -385,7 +385,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 你将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe（如果你在 Windows 上，则带有 `.exe`）。
-为了方便使用，请将其复制或移动到其他位置，例如你的 %PATH% 中的某个目录。
+为了方便使用，请将其复制或移动到其他位置，例如在你的 %PATH% 中的某个目录。
 
 </TabItem>
 </Tabs>
@@ -401,13 +401,13 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 在终端或命令提示符中，导航到你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
 
-- **对于 Windows**：
+- **适用于 Windows**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
 
-- **对于其他系统**：
+- **适用于其他系统**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -415,7 +415,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，你就可以 [烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase) 了。
+完成以上步骤后，你就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
 
 ### 信号质量
 
@@ -424,6 +424,12 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
       为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
+
+### 充电电流
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+Xiao nRF-52840 Plus 的最大充电电流为 200 mA。充电管理芯片 CN3165 为 0.99A。因此最大充电电流为 1A。
 
 ## 资源
 - [Solar Node 电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
