@@ -425,5 +425,11 @@ When you have completed the above steps, then you can [flash the application fir
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Charging Current
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
+
+The Xiao nRF-52840 Plus maximum charging current is 200 mA. The charging management chip CN3165 is 0.99A. So the maximum charging current is 1A.
+
 ## Resource
 - [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
