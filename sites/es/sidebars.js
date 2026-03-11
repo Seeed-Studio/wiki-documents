@@ -3068,6 +3068,23 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Dispositivos RK',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          type: 'category',
+          label: 'Aplicaciones',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Edge/RockChip_Devices/Application/es_object_detection_with_yolov11_on_recomputer_rk'
+            ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Dispositivos Raspberry Pi',
       collapsed: true,
       collapsible: true,
@@ -3910,6 +3927,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/es_J501_Mini_StarAI_Viola_Fruit_Sorting',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/es_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
               ]
             },
             // Managed Services
