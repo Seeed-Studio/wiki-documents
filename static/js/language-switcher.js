@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-10 10:07:43 (北京时间)
-// 多语言页面: 2203 个
+// 生成时间: 2026-03-11 13:45:57 (北京时间)
+// 多语言页面: 2207 个
 
 (function() {
   'use strict';
@@ -2854,6 +2854,18 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_reterminal_d1001": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_d10xx_main_page": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reterminal_e10xx_with_arduino": [
     "cn",
     "en",
@@ -2915,6 +2927,18 @@
     "ja"
   ],
   "/reterminal_e10xx_main_page": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/object_detection_with_yolov11_on_recomputer_rk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/rockchip-devices": [
     "cn",
     "en",
     "es",
