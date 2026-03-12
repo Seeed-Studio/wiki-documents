@@ -31,6 +31,11 @@ const LANGUAGE_CONFIG = {
     folder: 'es',
     name: 'Español',
     pathPrefix: '/es'
+  },
+  'pt-BR': {
+    folder: 'pt-BR',
+    name: 'Português (Brasil)',
+    pathPrefix: '/pt-br'
   }
 };
 
@@ -62,7 +67,7 @@ const PRESERVE_TERMS = {
 };
 
 // 术语表：强制把英文术语译成指定目标语言短语（优先从 .github/scripts/glossary.json 读取；不存在则使用内置空表）
-let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
+let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {}, "pt-BR": {} };
 (async () => {
   try {
     const gPath = path.join(__dirname, 'glossary.json');
@@ -523,7 +528,7 @@ ${glossaryPairs}
     ' 输出；不得混用其它自然语言。若发生混用，改译为目标语言。\n';
   prompt = prompt.replace('<translation_rules>', '<translation_rules>\n' + LANGUAGE_GUARD);
 
-  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
+  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja / pt-BR 覆盖；默认保留中文示例） ===
   function getLocalizedExampleBlock(lang) {
     if (lang === 'es') {
       return (
@@ -609,6 +614,50 @@ Salida incorrecta (prohibido):
 [LINE_10] <TabItem value='Install through host'>        ❌ label がない場合、value は翻訳する必要がある
 [LINE_11] [イントロ](#/Sensor/Guide/ハードウェア概要)   ❌ 「#」より前の URL 構造を変更しない
 [LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ 中国語混在
+</example>`
+      );
+    }
+
+    if (lang === 'pt-BR') {
+      return (
+`<example>
+Entrada:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+Saída correta:
+[LINE_0] ## Introdução
+[LINE_1][EMPTY_LINE]
+[LINE_2] Este é um tutorial sobre:
+[LINE_3]   - Primeiro item
+[LINE_4]   - [Scanner BLE](#BLE-Scanner)
+[LINE_5]     - Item aninhado
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+[LINE_7] Clique em "Settings" no aplicativo (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Central do Desenvolvedor</span></a>
+[LINE_9] <TabItem value="For E1002" label="Para E1002">
+[LINE_10] <TabItem value='Instalar pelo host'>
+[LINE_11] Veja mais: [Introdução](/Sensor/Guide/#visão-geral-do-hardware)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#Primeiros-passos">Open</a>
+
+Saída incorreta (proibido):
+[LINE_3] - Primeiro item                              ❌ Recuo perdido
+[LINE_4]   - [Scanner BLE](#BLE Scanner)               ❌ Espaço no fragmento
+[LINE_9] <TabItem value="Para E1002" label="Para E1002"> ❌ Com label, não alterar value
+[LINE_10] <TabItem value='Install through host'>         ❌ Sem label, value deve ser traduzido
+[LINE_11] [Introdução](#/Sensor/Guide/visão-geral-do-hardware) ❌ Não alterar nada antes de "#"
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ Não misturar chinês
 </example>`
       );
     }
@@ -856,7 +905,8 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
   const langFilePrefix =
     targetLang === 'zh-CN' ? 'cn_' :
     targetLang === 'ja'    ? 'ja_' :
-    targetLang === 'es'    ? 'es_' : '';
+    targetLang === 'es'    ? 'es_' :
+    targetLang === 'pt-BR' ? 'pt_' : '';
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -944,7 +994,7 @@ function processInternalLinks(content, targetLang) {
   
   // 处理各种链接格式
   content = content.replace(
-    /https:\/\/wiki\.seeedstudio\.com\/((?!zh-CN|ja|es|cn)[^#\s"')]*)/gi,
+    /https:\/\/wiki\.seeedstudio\.com\/((?!zh-CN|ja|es|pt-BR|cn|pt-br)[^#\s"')]*)/gi,
     (match, path) => {
       const cleanPath = path.startsWith('/') ? path.slice(1) : path;
       return `https://wiki.seeedstudio.com${pathPrefix}/${cleanPath}`;
@@ -954,7 +1004,7 @@ function processInternalLinks(content, targetLang) {
   content = content.replace(
     /<a\s+([^>]*\s+)?href="(\/[^"]*)"([^>]*)>/gi, 
     (match, beforeAttrs, url, afterAttrs) => {
-      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|cn)\//)) {
+      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|pt-BR|cn|pt-br)\//)) {
         return match;
       }
       const newUrl = pathPrefix + url;
@@ -967,7 +1017,7 @@ function processInternalLinks(content, targetLang) {
   content = content.replace(
     /\[([^\]]*)\]\((\/[^)]*)\)/gi,
     (match, text, url) => {
-      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|cn)\//)) {
+      if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|pt-BR|cn|pt-br)\//)) {
         return match;
       }
       const newUrl = pathPrefix + url;
@@ -1115,7 +1165,8 @@ function generateTargetPath(originalPath, targetLang) {
   
   const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
                     targetLang === 'ja' ? 'ja_' : 
-                    targetLang === 'es' ? 'es_' : '';
+                    targetLang === 'es' ? 'es_' :
+                    targetLang === 'pt-BR' ? 'pt_' : '';
   
   const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
   const newRelativePath = path.join(parsedPath.dir, newFileName);
