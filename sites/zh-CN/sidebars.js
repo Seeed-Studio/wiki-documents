@@ -714,6 +714,8 @@ const sidebars = {
               label: '用户指南',
               items: [
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Quick_Start',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Payload_Format',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_FAQ',
               ],
             },
             {
