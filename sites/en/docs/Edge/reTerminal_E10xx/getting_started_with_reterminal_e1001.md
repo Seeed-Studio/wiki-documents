@@ -1,9 +1,10 @@
 ---
 description: This article will guide you to quickly get started with reTerminal E1001.
 title: Getting Started with reTerminal E1001
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.webp
 slug: /getting_started_with_reterminal_e1001
 sidebar_position: 2
+sku: 100073581
 last_update:
   date: 07/21/2025
   author: Citric
@@ -468,8 +469,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - If unable to reconnect, follow the Network Reset procedure above
 
 ## Resources
-
-- [reTerminal E1001 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1.0_SCH_250805.pdf)
+- [reTerminal E1001 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1_2_SCH_251120.pdf)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [Exterior overall 3D model STP file](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
