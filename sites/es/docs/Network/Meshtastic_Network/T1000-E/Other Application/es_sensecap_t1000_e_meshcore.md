@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/10/2026
+  date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
 updatedAt: '2026-03-03'
@@ -88,7 +88,7 @@ Descarga el archivo UF2.
 Entra en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
 
 :::warning
-Para entrar correctamente en modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -116,7 +116,7 @@ Descarga el archivo UF2.
 Intenta entrar en modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido fijo.
 
 :::warning
-Para entrar correctamente en modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -142,7 +142,7 @@ Pulsa el botón para encenderlo. El LED se encenderá y sonará una melodía des
 Mantén pulsado el botón durante 3 s para apagarlo. El LED se apagará y sonará una melodía descendente.
 
 :::tip
-Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primero. No utilices un cargador de carga rápida.
+Si el dispositivo no responde cuando pulsas el botón, por favor cárgalo primero. No uses un cargador de carga rápida.
 :::
 
 ### Obtener la APP
@@ -166,12 +166,12 @@ Si la conexión falla, abre la lista de Bluetooth de tu teléfono y `forget` o `
 
 ### Configurar LoRa
 
-Para empezar a comunicarte a través de la malla, debes configurar tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe establecerse de acuerdo con tu ubicación regional.
+Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias usa tu dispositivo y debe configurarse de acuerdo con tu ubicación regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
-Luego reinicia el dispositivo, de lo contrario la configuración no surtirá efecto.
+Luego reinicia el dispositivo, de lo contrario la configuración no tendrá efecto.
 
 **Lista de regiones**
 
@@ -181,9 +181,9 @@ Luego reinicia el dispositivo, de lo contrario la configuración no surtirá efe
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868 MHz|869.4 - 869.65|10|27|
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [parámetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-configuración-general) para adaptarlo a tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [parámetro LoRa](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general) para adaptarlo a tus necesidades.
 
-### Configurar el GPS
+### Configurar GPS
 
 Si quieres usar GPS, por favor actívalo. 
 
@@ -199,7 +199,7 @@ Si tienes dos dispositivos compatibles y no hay muchos usuarios de MeshCore cerc
 
 ### Anuncio
 
-MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, se difunden esos datos a través de LoRa. MeshCore llama a esto un Advert. Hay dos formas de anunciar, "zero hop" y "flood".
+MeshCore te permite difundir manualmente tu nombre, posición y clave pública de cifrado, que también se firma para evitar suplantaciones. Cuando haces clic en el botón de anuncio, difunde esos datos a través de LoRa. MeshCore llama a eso un Anuncio. Hay dos formas de anunciar, "zero hop" y "flood".
 
 - **Zero hop** significa que tu anuncio se difunde a cualquiera que pueda oírlo, y eso es todo.
 - **Flooded** significa que se difunde y luego es repetido por todos los repetidores que lo oyen.
@@ -210,7 +210,7 @@ Puedes enviar anuncios en la APP. También puedes enviar anuncios directamente e
 
 ### Mensaje público
 
-Después de configurar LoRa, puedes enviar mensajes en el canal principal. Todas las personas cercanas en la misma banda de frecuencia lo escucharán.
+Después de configurar LoRa, puedes enviar mensajes en el canal principal. Todas las personas cercanas en la misma banda de frecuencia lo oirán.
 
 
 ### Mensaje privado
@@ -234,7 +234,7 @@ import TabItem from '@theme/TabItem';
 
 - Cambia el cable de carga
 
- - Si aún no tienes suerte, mantén pulsado el botón del dispositivo y luego conecta el cable de carga, y comprueba si aparece un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader) para volver a instalar el bootloader.
+ - Si aún no tienes suerte, mantén pulsado el botón del dispositivo y luego conecta el cable de carga, comprueba si aparece o no un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader) para volver a instalar el bootloader.
 
 ### El dispositivo se queda atascado en un bucle de arranque
 
@@ -244,7 +244,7 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 
 **Solución:**
 
-- Paso 1: Intenta entrar en el modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces; el LED verde se quedará encendido de forma fija.
+- Paso 1: Intenta entrar en el modo DFU manualmente: mantén pulsado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde se quedará encendido de forma fija.
 
 :::note
 Para entrar correctamente en el modo DFU, debes realizar esta operación rápidamente. Es posible que tengas que intentarlo varias veces.
@@ -296,14 +296,14 @@ pip3 install --user adafruit-nrfutil
 
 <TabItem value="sou" label="Instalación desde el código fuente">
 
-Utiliza este método si tienes problemas para instalar con PyPi o si quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
+Utiliza este método si tienes problemas para instalar con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: los siguientes comandos usan `python3`; sin embargo, si estás en Windows, es posible que tengas que cambiarlo a `python` ya que la instalación de python 3.x en Windows sigue usando el nombre python.exe
+Nota: los siguientes comandos usan `python3`, sin embargo, si estás en Windows, es posible que tengas que cambiarlo a `python` ya que la instalación de python 3.x en Windows sigue usando el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio personal:
 
@@ -312,7 +312,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso, usa la opción `--user`:
+Si obtienes errores de permisos al ejecutar `pip3 install`, tu `pip3` es antiguo o está configurado para intentar instalar en los directorios del sistema. En ese caso usa la opción `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -351,7 +351,7 @@ Ejemplo:
 
 **Paso 3: Grabar el bootloader**
 
-En la terminal o en el símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
+En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, sustituyendo el puerto correcto para tu dispositivo:
 
 - **Para Windows**:
 
@@ -367,7 +367,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#firmware-flashing) para grabar el firmware de la aplicación.
+Cuando hayas completado los pasos anteriores, entonces [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#firmware-flashing) para grabar el firmware de la aplicación.
 
 **2) El dispositivo no puede entrar en modo DFU, pero se puede detectar el puerto serie**.
 
@@ -376,13 +376,13 @@ Cuando hayas completado los pasos anteriores, [haz clic aquí](https://wiki.seee
 - Ajusta la velocidad en baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU; luego graba el [bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Borrar la flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) -> [grabar el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-firmware)
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentándolo hasta que la luz permanezca encendida, lo que significa que el dispositivo puede volver al modo DFU, luego graba el [bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Borrar la flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) -> [grabar el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serie**
 
 - Mantén pulsado el botón del dispositivo y luego conecta el cable de carga. Después de que aparezca un disco en tu PC, es posible que veas el puerto serie.
 
-- Si aún no tienes suerte, desconecta el cable de carga y deja el dispositivo durante unos días hasta que la batería se agote por completo; luego conecta el cable de carga e intenta emparejarlo de nuevo.
+- Si aún no tienes suerte, desconecta el cable de carga y deja el dispositivo durante unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
 **4) Si ninguno de los pasos anteriores funciona, ponte en contacto con el soporte técnico: support@sensecapmx.com**
 
@@ -392,7 +392,7 @@ Cuando hayas completado los pasos anteriores, [haz clic aquí](https://wiki.seee
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Comprueba si el dispositivo está en modo DFU; la luz verde permanecerá fija cuando el dispositivo esté en modo DFU.
+ Comprueba si el dispositivo está en modo DFU, la luz verde permanecerá fija cuando el dispositivo esté en modo DFU.
 
 - **No se puede abrir el puerto serie**
 
@@ -414,7 +414,7 @@ Cuando hayas completado los pasos anteriores, [haz clic aquí](https://wiki.seee
 Realiza un [borrado de la flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase). 
 
  ### Restablecimiento de fábrica
-Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
 
 - [Borra la flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e_meshcore/#flash-erase) del dispositivo. Y luego vuelve a grabar el firmware más reciente.
 
@@ -427,17 +427,21 @@ Si quieres restaurar la configuración predeterminada, puedes hacer un restablec
 
   - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente. 
 
-      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstáculos, con una interferencia mínima.
+      Para conseguir el mejor efecto de señal, utiliza el dispositivo en una zona abierta y sin obstáculos, con una interferencia mínima.
+
+### Definición del pin pogo
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
 ## Recursos
 
 - [Hoja de datos del SenseCAP T1000 Tracker](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
-
+- [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

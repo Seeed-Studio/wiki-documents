@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/10/2026
+  date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
 updatedAt: '2026-03-03'
@@ -450,11 +450,15 @@ If you want to restore to the default settings, you can do the factory reset. Th
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Pogo Pin Definition
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
+
 ## Resource
 
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
-
+- [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 ## Tech Support & Product Discussion
 
