@@ -158,8 +158,7 @@ If the connection fails, open your phone's Bluetooth list and `forget` or `Unpai
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
 
-4. When prompted, enter the Bluetooth passkey shown on the device screen, then click ok.
-
+4. When prompted, enter the Bluetooth passkey shown on the device screen, then click **OK**. This passkey is not `123456`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
 
 5. Wait until the status changes to connected and your node appears in the MeshCore interface.
