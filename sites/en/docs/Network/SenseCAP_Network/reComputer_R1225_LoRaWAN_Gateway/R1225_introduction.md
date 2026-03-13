@@ -15,16 +15,15 @@ url: https://wiki.seeedstudio.com/r1225_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={500} height="auto" /></p>
 
-<!--缺少商详链接，待产品上架后补上-->
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1225-LoRaWAN-Gateway-Industrial-Controller-US915-p-6722.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Description
-reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
 
+reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
 
 ## Feature
 
@@ -58,12 +57,11 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 
 - Mini-PCIe2: Pre-installed SPI LoRa® module
   - EU868: Wio-WM1302 LoRaWAN Gateway Module (SPI) - EU868
-  - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915 
+  - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915
   
 ### Rich Interfaces
 
 - 3x RS485 (isolated)
-
 - 1x 10M/100M/1000M Ethernet (Support PoE)
 - 1x 10M/100M Ethernet
 - 1x HDMI 2.0
@@ -74,15 +72,12 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 ### Safety and Reliability
 
 - Hardware Watchdog
-
 - UPS Supercapacitor(**included**)
 - Metal casing with PC side panels
 - ESD: EN61000-4-2,level 3
 - EFT: EN61000-4-4, level 2
 - Surge: EN61000-4-5, level 2
 - Production Lifetime: reComputer R1225 will remain in production until at least December 2030
-
-
 
 ## Naming Conventions
 
@@ -326,27 +321,28 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Weight(Net)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>待重新称重补充</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>           </td>
     </tr>
   </tbody>
 </table>
 </div>
+<!--待重新称重后补充-->
 
 ### Statement
 
 **Options marked with * require additional purchase according to the accessories list.**
-    
 
 ## Hardware Overview
 
-<!--缺少3天线接口照片，待更新后补充-->
-<div align="center"><img width={800} src="" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Hardware_Overview03.jpg" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig031.png" /></div>
+## Mainboard Overview
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Mainboard_Overview02.jpg" /></div>
 
 ## Power Diagram
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
 The reComputer R1225 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1225 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506), while **the PoE power supply(PoE module, SKU:110991925) is included**. This provides flexibility in power supply selection and allows for easy integration with various power sources.
 
@@ -377,11 +373,11 @@ Please refer to the table below for the tested power consumption of reComputer R
 
 待测试
 
-| Status   | Voltage | Current | Power Consumption | Description |
-|   ---    |    ---  |   ---   |         ---       |      ---    |
-|Shutdown  |24V      |  mA   |    W         | Static power consumption test in shutdown and power-off state.|
-|Idle      |24V      |  mA  |    W          | To test the input current when supplying 24V power to the reComputer R1225 device without running any test programs.|
-|Full Load |24V      |  mA  |    W          | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected. |
+| Status   | Voltage | Current | Power Consumption | Description                                                                                                         |
+|   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
+|Shutdown  |24V      |  mA     |    W              | Static power consumption test in shutdown and power-off state.                                                      |
+|Idle      |24V      |  mA     |    W              | To test the input current when supplying 24V power to the reComputer R1225 device without running any test programs.|
+|Full Load |24V      |  mA     |    W              | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected.                   |
 
 ### Power On and Power Off
 
@@ -392,8 +388,8 @@ Please note that after shutting down, please wait for **at least 10 seconds** be
 :::
 
 ## Block Diagram
-<!--缺少最新照片，待更新后补充-->
-<div align="center"><img width={800} src="" /></div>
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Block_Diagram05.jpg" /></div>
 
 ### IIC Diagram
 
@@ -473,20 +469,20 @@ cat /sys/kernel/debug/gpio
 
 The reComputer R1225 features 6 LED indicators that serve to signal the machine's operational status. Please refer to the table below for the specific functions and status of each LED:
 
-| LED Indicator | Color          | Status | Description                                                  |
-| ------------- | -------------- | ------ | ------------------------------------------------------------ |
-| PWR           | Green          | On     | The device has been connected to power.                      |
-|               |                | Off    | The device is not connnected to power.                       |
+| LED Indicator | Color          | Status | Description                                                                |
+| ------------- | -------------- | ------ | -------------------------------------------------------------------------- |
+| PWR           | Green          | On     | The device has been connected to power.                                    |
+|               |                | Off    | The device is not connnected to power.                                     |
 | ACT           | Green          |        | Under Linux this pin will flash to signify eMMC access.<br /> If any error occurs during booting, then this LED will flash an <br />error pattern which can be decoded using the look up [table on the Raspberry Pi website](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). |
-| USER          | Green/Red/Blue |        | Need to be defined by user.                                  |
-| RS485-1       | Green          | Off    | No data transfer on RS485 channel 1.                         |
-|               |                | Blink  | RS485 channel 1 is receiveing or sending data.               |
-| RS485-2       | Green          | Off    | No data transfer on RS485 channel 2.                         |
-|               |                | Blink  | RS485 channel 2 is receiveing or sending data.               |
-| RS485-3       | Green          | Off    | No data transfer on RS485 channel 3.                         |
-|               |                | Blink  | RS485 channel 3 is receiveing or sending data.               |
+| USER          | Green/Red/Blue |        | Need to be defined by user.                                                |
+| RS485-1       | Green          | Off    | No data transfer on RS485 channel 1.                                       |
+|               |                | Blink  | RS485 channel 1 is receiveing or sending data.                             |
+| RS485-2       | Green          | Off    | No data transfer on RS485 channel 2.                                       |
+|               |                | Blink  | RS485 channel 2 is receiveing or sending data.                             |
+| RS485-3       | Green          | Off    | No data transfer on RS485 channel 3.                                       |
+|               |                | Blink  | RS485 channel 3 is receiveing or sending data.                             |
 
-**ACT Status table**
+#### ACT Status table
 
 | **Long flashes** | **Short flashes** | **Status**                          |
 | ---------------- | ----------------- | ----------------------------------- |
@@ -510,7 +506,6 @@ If the ACT LED blinks in an irregular pattern then booting has started.
 If the ACT LED doesn't blink, then the EEPROM code might be corrupted, try again without anything connected to make sure. For more detail please check the Raspberry Pi forum:
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
-
 
 #### Customizable LED lights via the Luci interface
 
@@ -541,7 +536,7 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
-The reComputer R1225 features an active buzzer, which can be used for various purposes such as alarm and event notifications. 
+The reComputer R1225 features an active buzzer, which can be used for various purposes such as alarm and event notifications.
 
 For reComputer R1225 users(**R1225 is based on the R1000 v1.1 hardware platform**), the buzzer is connected to PCA9535 P15, to turn off(on) the buzzer, Please enter following command in the Terminal :
 
@@ -606,8 +601,8 @@ The Boot Switch of the reComputer R1225 is connected to the nRPI_BOOT pin of CM4
 
 <div class="table-center">
 
-| Switch Position                                              | Mode        | Description    | nRPI-BOOT |
-| ------------------------------------------------------------ | ----------- | -------------- | --------- |
+| Switch Position                                                                                                        | Mode        | Description    | nRPI-BOOT |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- | --------- |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Normal mode | Boot from eMMC | Low       |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Flash mode  | Boot from USB  | High      |
 
@@ -623,9 +618,9 @@ The Boot Switch of the reComputer R1225 is connected to the nRPI_BOOT pin of CM4
 
 The reComputer R1225 is equipped with one USB Type-C port and two USB Type-A ports. Please refer to the table below for their functions and descriptions.
 
-| **Type**   | **Quantity** | **Protocol** | **Function** | **Description**                                              |
-| ---------- | ------------ | ------------ | ------------ | ------------------------------------------------------------ |
-| **Type-C** | *1           | USB2.0       | USB-Device   | Used for serial port debugging, burning image, etc.          |
+| **Type**   | **Quantity** | **Protocol** | **Function** | **Description**                                                                    |
+| ---------- | ------------ | ------------ | ------------ | ---------------------------------------------------------------------------------- |
+| **Type-C** | *1           | USB2.0       | USB-Device   | Used for serial port debugging, burning image, etc.                                |
 | **Type-A** | *2           | USB2.0       | USB-Host     | Connect different USB devices such as flash drives,<br /> USB keyboards or mouses. |
 
 Check if the USB hub is detected by running the **lsusb** command. This command lists all connected USB devices, including hubs.
@@ -697,8 +692,6 @@ It's important to note that not all SSD cards available in the market support th
 :::note
 The reComputer R1225 comes in standard and 4G versions: For the standard version, Mini-PCIe 1 is left vacant; For the 4G version, Mini-PCIe 1 is pre-installed with 4G LTE.
 :::
-
-
 
 This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-PCIe Slot 2. Slot 1 connects to SIM card slot and supports USB protocols, while Slot 2 supports both USB and SPI protocols but doesn't connect to SIM card slot. Therefore, devices such as 4G LTE can be connected through Slot 1, while SPI LoRa® devices can be connected through Slot 2.
 
@@ -869,7 +862,6 @@ step3. After the device is powered on, it will automatically connect to wifi.
 
   After the connection is disconnected, connect to another wifi.
 
-
 #### Connect bluetooth devices
 
 Before adding a Bluetooth device, the Bluetooth service on your computer must be started and running. You can check this with the systemctl command.
@@ -984,7 +976,6 @@ There are two main uses for SSD cards:<br />
 It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended **1TB SSD(<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>)**.  This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 :::
 
-
 ### Encryption Chip TPM 2.0(optional)
 
 The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommened as encryption chip to the reComputer R1225. The chip features an SPI interface applied for port J13 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
@@ -1010,10 +1001,10 @@ The UPS is 7F, which operates in series. The UPS module is positioned between th
 The backup duration provided by the UPS heavily relies on the system load. Below are some typical scenarios tested with a CM4 module featuring 4GB RAM, 32GB eMMC storage, and a Wi-Fi module.
 <br />
 
-| Mode of Operation | Time(s) | Remark                                                       |
-| ----------------- | ------- | ------------------------------------------------------------ |
+| Mode of Operation | Time(s) | Remark                                                            |
+| ----------------- | ------- | ----------------------------------------------------------------- |
 | Idle              | 37      | Testing under idle conditions with official driver program loaded |
-| Full load of CPU  | 18      | stress -c 4 -t 10m -v &                                      |
+| Full load of CPU  | 18      | stress -c 4 -t 10m -v &                                           |
 
 :::note
 For UPS function please contact us for more information, and the alarm signal is active LOW.
@@ -1061,7 +1052,7 @@ while True:
     os.system('sudo shutdown -h now')
 ```
 
-### DSI(optional) 
+### DSI(optional)
 
 One DSI (J24) are reserved on board, for special usage. Users are requested to purchase plug-ins according to your own needs.
 
