@@ -1,0 +1,10 @@
+position: 7
+label: 'Posicionamento Indoor-Outdoor'
+collapsible: true
+collapsed: true
+className: _indoor-outdoor-positioning
+# link:
+#   type: generated-index
+#   slug: indoor-outdoor-positioning
+#   title: Posicionamento Indoor-Outdoor
+#   description: Soluções de posicionamento e rastreamento em ambientes internos e externos.
