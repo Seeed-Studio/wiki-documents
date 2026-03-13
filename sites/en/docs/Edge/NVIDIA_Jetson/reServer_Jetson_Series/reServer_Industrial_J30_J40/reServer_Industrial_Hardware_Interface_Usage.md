@@ -80,34 +80,49 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   </TabItem>
   </Tabs>
 
+
 ### Binding Physical Network IP to eth Numbers
 
-  **The interfaces eth0 to eth3 are designated for PoE, with eth3 specifically referred to as PoE4.**
+  **The interfaces LAN1 to LAN4 are designated for PoE.**
 
-  If you need to configure different IP addresses for each POE interface, follow these instructions:
+  If you need to configure different IP addresses for each PoE interface, follow these instructions:
 
-  **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth4 to POE3.
+  :::warning
+  The interface names (e.g. `enP1p1s0`) may vary depending on your system. Before proceeding, run the following command to check the actual interface names on your device. The commands below are for reference only — replace the interface name with the one shown on your system.
 
   ```bash
-  sudo nmcli connection add type ethernet ifname eth4 con-name POE3
+  ifconfig
+  ```
+  :::
+
+  **Step 1**: Connect the PoE device to the reServer Industrial. Create a new connection for the target interface. For example, to configure the interface `enP1p1s0` and name it `POE1`:
+
+  ```bash
+  sudo nmcli connection add type ethernet ifname enP1p1s0 con-name POE1
   ```
 
-  **Step 2**: Configure the IP address of POE3 to **192.168.6.6**. The IP address can be customized according to actual usage.
+  **Step 2**: Configure the IP address. The IP address can be customized according to actual usage.
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
+  sudo nmcli connection modify POE1 ipv4.addresses 192.168.6.6/24
   ```
 
-  **Step3**: To set POE3's IPv4 address to manual configuration.
+  **Step 3**: Set the IPv4 method to manual (static IP).
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.method manual
+  sudo nmcli connection modify POE1 ipv4.method manual
   ```
 
-  **Step4**: Start the connection
+  **Step 4**: Bring up the connection.
 
   ```bash
-  sudo nmcli connection up POE3
+  sudo nmcli connection up POE1
+  ```
+
+  **Step 5**: Verify the configuration.
+
+  ```bash
+  ifconfig
   ```
 
 ## SATA Connectors
@@ -1871,4 +1886,3 @@ Please do not hesitate to submit issues into our [forum](https://forum.seeedstud
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
-
