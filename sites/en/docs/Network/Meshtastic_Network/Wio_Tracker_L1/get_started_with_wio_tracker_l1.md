@@ -337,6 +337,90 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
+### NodeDB Reset
+
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+
+- **Node ID**
+- **User Name**
+- **Location Information**
+- **Signal Information (SNR)**
+- **Last Seen Time**
+
+**When to reset**
+
+Reset NodeDB when:
+
+- The node list contains outdated, duplicate, or invalid entries.
+- You move to a different Mesh environment and want to rediscover nearby nodes.
+- Node information in the app appears incorrect or incomplete.
+
+:::danger
+Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
+:::
+
+**Method 1: Reset from the Device**
+
+1. Open the menu on the device.
+2. Go to **Node Actions / Settings**.
+3. Select **Reset NodeDB**.
+4. Confirm the reset.
+
+**Example Screens**
+
+Step 1: Press the device button to enter the menu.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB1.png" alt="Device button to enter the menu" width={300} height="auto" /></p>
+
+Step 2: Find `Reset NodeDB` in the menu.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB2.png" alt="Reset NodeDB option in the device menu" width={300} height="auto" /></p>
+
+**Method 2: Reset from the App**
+
+1. Open the app and connect to the target device.
+2. Go to **Settings**.
+3. Tap **Device**.
+4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
+5. Tap it and confirm the action.
+
+**App Path**
+
+`Settings > Device > Reset NodeDB`
+
+**Example Screens**
+
+Step 1: Open **Device** from the **Settings** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+Step 2: Tap `Reset NodeDB` on the **Device Config** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+Please note the difference between the following options:
+
+- **Reset NodeDB**: Only clears the node database.
+- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+:::
+
+**What happens after reset**
+
+After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
+
+You may observe the following:
+
+- The node list may temporarily become empty or smaller.
+- Nodes will gradually reappear as the device continues operating.
+- Previously stored historical node records will no longer be available.
+
+**Notes**
+
+- Before resetting, make sure the issue is actually related to an abnormal node list.
+- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
+- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
+- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Signal Quality
 
