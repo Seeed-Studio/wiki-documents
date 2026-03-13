@@ -1,6 +1,6 @@
 ---
 description: 通过 Web USB 或拖放方式在 Wio Tracker L1 Pro 上烧录 MeshCore 固件的指南，以及在应用中配置 LoRa 区域、GPS 和发送消息的步骤。
-title: Wio Tracker L1 Pro MeshCore 入门指南
+title: 在 Wio Tracker L1 Pro 上开始使用 MeshCore
 keywords:
   - Meshcore
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
@@ -21,13 +21,13 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 ### 方法 1：通过 Web Flasher
 
-使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。 
+使用 USB 线将设备连接到电脑。请确保数据线支持数据传输功能。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。 
+前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。
 
 在 `Community Firmware` 分组中选择 `Seeed Studio Wio Tracker L1 Pro`。
 
@@ -45,7 +45,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 如果你点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已经成功进入 DFU 模式。
 
-如果你看到 "Flashing erase firmware:100%"，说明设备已经成功擦除。
+如果你看到 "Flashing erase firmware:100%"，说明设备已经成功完成擦除。
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSuccess.png" alt="pir" width={800} height="auto" /></p>
 
@@ -57,19 +57,19 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 如果你点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已经成功进入 DFU 模式。
 
-当进度条完全填满时，表示 Flash 已完成。然后设备会自动重启。
+当进度条完全填满时，表示 Flash 已完成。随后设备会自动重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
 ### 方法 2：拖放方式
 
-使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。 
+使用 USB 线将设备连接到电脑。请确保数据线支持数据传输功能。
 
 :::warning
-请在数据传输过程中保持 USB 线连接，否则设备可能会损坏。
+在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。 
+前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。
 
 在 `Community Firmware` 分组中选择 `Seeed Studio Wio Tracker L1 Pro`。
 
@@ -85,7 +85,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。 
+双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -93,7 +93,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-固件成功烧录后，该磁盘会消失。此时设备中没有固件，所以设备`不会`自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备`不会`自动重启。
 
 #### 烧录固件
 
@@ -105,7 +105,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/CompanionUF2Download.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。 
+双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `TRACKER L1` 的磁盘弹出。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
@@ -113,7 +113,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-固件成功烧录后，该磁盘会消失。此时设备中没有固件，所以设备不会自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备不会自动重启。
 
 ## 配置
 
@@ -122,12 +122,12 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 将电源开关向上拨动以开启设备。
 
 :::tip
-如果按下按钮设备没有响应，请先为其充电。不要使用快充充电器。
+如果按下按键后设备没有响应，请先为其充电。不要使用快充充电器。
 :::
 
 ### 获取 APP
 
-从 Google Store 或 Apple Store 下载。或者[点击这里](https://meshcore.co.uk/apps.html)获取 Meshcore APP。
+可从 Google Store 或 Apple Store 下载。也可以[点击这里](https://meshcore.co.uk/apps.html)获取 Meshcore APP。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -140,14 +140,34 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 输入设备屏幕上显示的 PIN 码，然后点击 `Pair` 以连接设备。
 
 :::tip
-如果连接失败，请打开手机的蓝牙列表并 `forget` 或 `Unpair` 该设备，然后再尝试重新连接。
+如果连接失败，请打开手机的蓝牙列表并对设备执行 `forget` 或 `Unpair` 操作，然后再尝试重新连接。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
 
+### 通过 Web 界面连接（BLE）
+
+1. 打开 [MeshCore Web App](https://app.meshcore.nz/) 并点击 **Settings** 图标。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue1.png" alt="pir" width={600} height="auto" /></p>
+
+2. 选择 **BLE** 选项卡，然后点击 **Scan Now**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue2.png" alt="pir" width={600} height="auto" /></p>
+
+3. 在系统蓝牙弹窗中选择你的设备（例如 MeshCore-xxxxxx），然后点击 **Pair**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
+
+4. 按提示输入设备屏幕上显示的蓝牙密码，然后点击 **OK**。该密码不是 `123456`。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
+
+5. 等待状态变为已连接，并在 MeshCore 界面中看到你的节点。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue5.png" alt="pir" width={600} height="auto" /></p>
+
 ### 配置 LoRa
 
-为了开始通过 mesh 通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
-
+为了开始通过 mesh 进行通信，你必须先设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
@@ -157,17 +177,17 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|未设置|N/A|N/A|N/A|
-|US|美国|902.0 - 928.0|100|30|
-|EU_868|欧盟 868 MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868 MHz|869.4 - 869.65|10|27|
 
-现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 参数](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)以满足你的需求。
+现在你已经在设备上设置好了 LoRa 区域，可以继续配置任意[LoRa 参数](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)以满足你的需求。
 
 ### 配置 GPS
 
-如果你想使用 GPS，请将其设置为启用。 
+如果你想使用 GPS，请将其设置为启用状态。
 
-你可以在 APP 的 `Position Settings` 中启用 GPS。或者你也可以进入设备的 GPS 页面，通过按下四向摇杆来打开或关闭 GPS。
+你可以在 APP 的 `Position Settings` 中启用 GPS。也可以进入设备的 GPS 页面，通过按下四向摇杆来打开或关闭 GPS。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
@@ -179,30 +199,28 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 
 ## 消息传输
 
-如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都烧录为 BLE Companion 固件，这样你就可以使用这些设备与附近的朋友和家人进行通信。
+如果你有两台受支持的设备，并且你附近没有太多 MeshCore 用户，可以将两台设备都烧录为 BLE Companion 固件，这样你就可以使用这些设备与身边的朋友和家人进行通信。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
-### Advert
+### 广播
 
-MeshCore 允许你手动广播你的姓名、位置和公共加密密钥，这些信息也会被签名以防止伪造。当你点击 advert 按钮时，它会通过 LoRa 广播这些数据。MeshCore 将其称为 Advert。有两种 advert 方式：“zero hop”和“flood”。
+MeshCore 允许你手动广播你的名称、位置和公共加密密钥，这些信息也会被签名以防止伪造。当你点击广播按钮时，它会通过 LoRa 广播这些数据。MeshCore 将此称为一次广播（Advert）。有两种广播方式，“零跳”（zero hop）和“泛洪”（flood）。
 
-- **Zero hop** 意味着你的 advert 只会广播给能听到它的人，仅此而已。
-- **Flooded** 意味着它会被广播出去，然后由所有听到它的中继节点重复转发。
+- **Zero hop** 意味着你的广播只会发给所有能听到它的设备，仅此而已。
+- **Flooded** 意味着它会被广播出去，然后由所有听到它的中继器重复转发。
 
-你可以在 APP 中发送 advert，也可以直接在设备的 advert 页面上发送。
+你可以在 APP 上发送广播。你也可以在设备的广播页面上直接发送广播。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Advert.png" alt="pir" width={500} height="auto" /></p>
 
 ### 公共消息
 
-在你配置好 LoRa 之后，你可以在主通道中发送消息。同一频段内附近的所有人都能收到。
-
+在你配置好 LoRa 之后，你可以在主信道中发送消息。同一频段内的所有附近人员都能听到它。
 
 ### 私密消息
 
-只有当两台设备都收到了对方的 advert 时，它们之间才会建立连接。
-
+只有当两个设备都接收到对方的广播后，它们之间才会建立连接。
 
 ## 常见问题
 
@@ -210,10 +228,10 @@ MeshCore 允许你手动广播你的姓名、位置和公共加密密钥，这�
 
 **问题描述：**
 
-设备没有响应，没有 LED 指示灯，无法与你的应用配对。如果你在烧录自定义固件后发现设备完全“死机”，也可以尝试重新安装 bootloader。
+设备没有响应，没有 LED 指示灯，无法与你的应用配对。如果你在烧录自己的固件后发现设备完全失效，你也可以尝试重新安装 bootloader。
 
-:::danger 注意
-当你烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+:::danger note
+在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 - 步骤 1：[点击此处下载 Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -230,38 +248,37 @@ MeshCore 允许你手动广播你的姓名、位置和公共加密密钥，这�
 
 - 步骤 4：烧录固件
 
-  完成以上步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#烧录固件-1)来烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#无法进入-dfu--手动进入-dfu-模式)
-
+  当你完成上述步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#flash-firmware-1)来烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 ### 无法进入 DFU & 手动进入 DFU 模式
 
-将设备连接到电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，并且在电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到你的电脑，双击按下 `Reset` 按钮。黄色 LED 将保持常亮，并且在你的电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
 按一次 `User` 按钮即可退出 DFU 模式。
 
- ### 设备自动关机
+### 设备自动关机
 
- #### 描述
+#### 问题描述
 
- - 设备开机后，过一段时间会自动关机或重启。 
- - 串口日志运行一段时间后停止。
+- 设备开机后，过一段时间会自动关机或重启。
+- 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：未完成消息传输过程、正在配置中……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息发送过程、正在配置中......
 
- #### 故障排查
+#### 故障排查
 
-[Flash Erase](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#Flash-Erase-1) 固件
+[Flash Erase](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#flash-erase-1) 固件
 
 ### 恢复出厂设置
-如果你想恢复默认设置，可以执行恢复出厂设置。你可以通过两种方法进行恢复出厂设置。
 
-- [Flash Erase](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#Flash-Erase-1) 固件
+如果你想恢复到默认设置，可以执行恢复出厂设置。你有两种方法可以进行恢复出厂设置。
 
-- 点击应用中的 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
+- [Flash Erase](https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/#flash-erase-1) 固件
+
+- 在应用中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FactoryReset.jpg" alt="pir" width={400} height="auto" /></p>
-
 
 ### 信号质量
 
@@ -276,9 +293,10 @@ MeshCore 允许你手动广播你的姓名、位置和公共加密密钥，这�
 如果你需要为 L1 Pro 更换天线，[点击此处](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)获取一个。
 
 ## 资源
+
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 外壳设计挑战赛](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [外形轮廓文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)

@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/10/2026
+  date: 3/11/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
 updatedAt: '2026-03-03'
@@ -163,6 +163,27 @@ Enter the default pin code `123456` and then click `Pair` to connect the device.
 If the connection fails, open your phone's Bluetooth list and `forget` or `Unpair` the device. Then try to reconnect again.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Unpair.jpg" alt="pir" width={300} height="auto" /></p>
 :::
+
+### Connect via the web interface（BLE）
+
+1. Open the [MeshCore Web App](https://app.meshcore.nz/) and click the **Settings** icon.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue1.png" alt="pir" width={600} height="auto" /></p>
+
+2. Select the **BLE** tab, then click **Scan Now**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue2.png" alt="pir" width={600} height="auto" /></p>
+
+3. In the system Bluetooth popup, select your device (for example, Meshcore-xxxxxx) and click **Pair**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
+
+4. When prompted, enter the default Bluetooth passkey `123456`, then click **OK**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
+
+5. Wait until the status changes to connected and your node appears in the MeshCore interface.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue5.png" alt="pir" width={600} height="auto" /></p>
 
 ### Configure the LoRa
 
@@ -429,11 +450,15 @@ If you want to restore to the default settings, you can do the factory reset. Th
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
+### Pogo Pin Definition
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
+
 ## Resource
 
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
-
+- [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 ## Tech Support & Product Discussion
 
