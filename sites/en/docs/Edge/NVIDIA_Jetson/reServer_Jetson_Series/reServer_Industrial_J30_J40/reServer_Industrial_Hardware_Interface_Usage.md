@@ -2,15 +2,12 @@
 description: reServer Industrial Hardware Interface Usage
 title: reServer Industrial Hardware Interface Usage
 keywords:
-  - reServer
+- reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_industrial_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
-createdAt: '2023-06-08'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/reserver_industrial_hardware_interface_usage/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -89,7 +86,7 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 
   If you need to configure different IP addresses for each POE interface, follow these instructions:
 
-  **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth3 to POE3.
+  **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth4 to POE3.
 
   ```bash
   sudo nmcli connection add type ethernet ifname eth4 con-name POE3
@@ -1874,3 +1871,4 @@ Please do not hesitate to submit issues into our [forum](https://forum.seeedstud
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
 </div>
+
