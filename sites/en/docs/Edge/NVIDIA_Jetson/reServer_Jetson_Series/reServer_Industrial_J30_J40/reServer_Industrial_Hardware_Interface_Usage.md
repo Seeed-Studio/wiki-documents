@@ -8,6 +8,7 @@ slug: /reserver_industrial_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
+sku: 114110247
 ---
 
 import Tabs from '@theme/Tabs';
