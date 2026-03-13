@@ -19,12 +19,12 @@ url: https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/
 
 ## ファームウェアの書き込み
 
-### 方法1 Web Flasher 経由
+### 方法1 Web Flasher を使用
 
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。
 
 :::warning
-データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを必ず接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/) にアクセスします。
@@ -33,7 +33,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -43,7 +43,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-`Erase Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Erase Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
+`Erase Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから再度 `Erase Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
 "Flashing erase firmware:100%" と表示されれば、デバイスの消去は正常に完了しています。
 
@@ -51,22 +51,22 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 #### ファームウェアの書き込み
 
-`Enter DFU Mode` をクリックし、「L1 Pro」または「TinyUSB」 serial という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
+`Enter DFU Mode` をクリックし、「L1 Pro」または「TinyUSB」serial という名前のシリアルポートを選択します。その後、`Flash` をクリックしてシリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-`Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
+`Flash` をクリックしても反応がない場合は、`Enter DFU` をもう一度クリックしてから再度 `Flash` をクリックし、DFU モードに正常に入っていることを確認してください。
 
-進行バーが最後まで埋まれば、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
+進行バーが最後まで埋まったら、フラッシュが完了したことを示します。その後、デバイスは自動的に再起動します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
 ### 方法2 ドラッグ＆ドロップ
 
 USB ケーブルでデバイスをコンピュータに接続します。ケーブルがデータ通信に対応していることを確認してください。
 
 :::warning
-データ転送中は USB ケーブルを抜かないでください。そうしないとデバイスが破損する可能性があります。
+データ転送中は USB ケーブルを必ず接続したままにしてください。そうしないとデバイスが破損する可能性があります。
 :::
 
 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/) にアクセスします。
@@ -75,7 +75,7 @@ USB ケーブルでデバイスをコンピュータに接続します。ケー�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
 
-`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。ほかのファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
+`Companion Bluetooth` を選択します。Bluetooth Companion ファームウェアを書き込んだデバイスは APP に接続できます。その他のファームウェアを書き込みたい場合は、チュートリアルを見るために[こちらをクリック](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md)してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -85,15 +85,15 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンをダブルクリックして、手動で DFU モードに入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、ディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 #### ファームウェアの書き込み
 
@@ -105,21 +105,21 @@ UF2 ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/CompanionUF2Download.png" alt="pir" width={800} height="auto" /></p>
 
-RST ボタンをダブルクリックして、手動で DFU モードに入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
+RST ボタンをダブルクリックして DFU モードに手動で入ります。10〜15 秒後に `TRACKER L1` という名前のディスクがポップアップ表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
-ダウンロードした UF2 ファイルを、ポップアップしたディスクにドラッグします。
+ダウンロードした UF2 ファイルをポップアップしたディスクにドラッグします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1FlashDragDrop.png" alt="pir" width={800} height="auto" /></p>
 
-ファームウェアの書き込みが正常に完了すると、そのディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは NOT 自動的には再起動しません。
+ファームウェアの書き込みが正常に完了すると、ディスクは消えます。この時点ではデバイス内にファームウェアがないため、デバイスは自動的には再起動しません。
 
 ## 設定
 
 ### デバイスの電源を入れる
 
-電源スイッチを上に上げてオンにします。
+電源スイッチを上に持ち上げてオンにします。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -158,21 +158,20 @@ Google Store または Apple Store からダウンロードします。または
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
 
-4. 指示に従い、デバイス画面に表示されている Bluetooth パスキーを入力し、ok をクリックします。
-
+4. プロンプトが表示されたら、デバイス画面に表示されている Bluetooth パスキーを入力し、**OK** をクリックします。このパスキーは `123456` ではありません。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
 
-5. ステータスが connected に変わり、MeshCore インターフェースにあなたのノードが表示されるまで待ちます。
+5. ステータスが接続済みに変わり、MeshCore インターフェースにあなたのノードが表示されるまで待ちます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/meshcorewebblue5.png" alt="pir" width={600} height="auto" /></p>
 
 ### LoRa の設定
 
-メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯を制御し、あなたの地域に合わせて設定する必要があります。
+メッシュ上で通信を開始するには、まずリージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、あなたの地域に合わせて設定する必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
 
-その後、デバイスを再起動してください。再起動しないと設定が反映されません。
+その後、デバイスを再起動してください。再起動しないと設定は有効になりません。
 
 **リージョン一覧**
 
@@ -182,13 +181,13 @@ Google Store または Apple Store からダウンロードします。または
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868 MHz|869.4 - 869.65|10|27|
 
-これでデバイスの LoRa リージョンを設定できたので、必要に応じて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)を引き続き設定できます。
+これでデバイスの LoRa リージョンを設定できたので、ニーズに合わせて任意の[LoRa パラメータ](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md#5-general)を引き続き設定できます。
 
 ### GPS の設定
 
 GPS を使用したい場合は、有効に設定してください。
 
-APP の `Position Settings` から GPS を有効にできます。または、デバイスの GPS ページに移動し、四方向ジョイスティックを押して GPS をオンまたはオフにすることもできます。
+APP の `Position Settings` に移動して GPS を有効にできます。または、デバイスの GPS ページに移動し、四方向ジョイスティックを押して GPS をオンまたはオフにすることもできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/GPSSetting.png" alt="pir" width={500} height="auto" /></p>
 
@@ -200,7 +199,7 @@ User ボタンを 4 回押すことで、ブザーのオン／オフを切り替
 
 ## メッセージ送信
 
-対応デバイスを 2 台持っていて、近くに MeshCore ユーザーがあまりいない場合は、両方を BLE Companion ファームウェアに書き換えることで、近くの友人や家族との通信にデバイスを利用できます。
+対応デバイスが 2 台あり、近くに MeshCore ユーザーがあまりいない場合は、両方を BLE Companion ファームウェアに書き換えることで、近くの友人や家族との通信にデバイスを使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/Frame.png" alt="pir" width={900} height="auto" /></p>
 
@@ -208,8 +207,8 @@ User ボタンを 4 回押すことで、ブザーのオン／オフを切り替
 
 MeshCore では、名前、位置情報、および公開暗号鍵を手動でブロードキャストできます。これらはなりすましを防ぐために署名されています。アドバタイズボタンをクリックすると、そのデータが LoRa 経由でブロードキャストされます。MeshCore ではこれを Advert と呼びます。アドバタイズには「ゼロホップ」と「フラッド」の 2 つの方法があります。
 
-- **Zero hop** は、あなたのアドバタイズが届く範囲の相手に一度だけ送信され、それで終了することを意味します。
-- **Flooded** は、一度送信された後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
+- **Zero hop** は、あなたのアドバタイズが届く範囲のすべての相手に対して一度だけブロードキャストされ、それで終了することを意味します。
+- **Flooded** は、一度ブロードキャストされた後、それを受信したすべてのリピーターによって繰り返し送信されることを意味します。
 
 アプリ上でアドバタイズを送信できます。また、デバイスのアドバタイズページから直接送信することもできます。
 
@@ -221,25 +220,25 @@ LoRa を設定した後、プライマリチャネルでメッセージを送信
 
 ### プライベートメッセージ
 
-2 台のデバイスは、互いのアドバタイズを両方とも受信したときにのみ接続を確立します。
+2 台のデバイスは、お互いのアドバタイズを両方とも受信したときにのみ接続を確立します。
 
 ## FAQ
 
-### デバイスがブリック状態 & ブートローダーのインストール
+### デバイスがブリックした & ブートローダーのインストール
 
 **説明：**
 
 デバイスが反応せず、LED も点灯せず、アプリとペアリングできません。独自のファームウェアを書き込んだ後にデバイスが完全に動作しなくなった場合は、ブートローダーを再インストールしてみてください。
 
 :::danger note
-ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で**絶対に**切断しないでください。
+ブートローダーを書き込む際は、ケーブル接続が安定していることを確認し、書き込み処理の途中で **絶対に** 取り外さないでください。
 :::
 
-- ステップ 1: [ブートローダーをダウンロードするにはここをクリック](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- ステップ 1: [ここをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - ステップ 2: DFU モードに入る
 
-  RST ボタンを素早く 2 回クリックして DFU モードに入ります。"Tracker L1" という名前のディスクが表示されます。
+  RST ボタンをダブルクリックして DFU モードに入ります。"Tracker L1" という名前のディスクが表示されます。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
@@ -251,13 +250,13 @@ LoRa を設定した後、プライマリチャネルでメッセージを送信
 
   上記の手順を完了したら、この[手順](https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/#フラッシュ-ファームウェア-1)に従ってアプリケーションファームウェアを書き込むことができます。[DFU モードに手動で入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#dfu-モードに入れない--dfu-モードへの手動での移行)必要がある場合があります。
 
-### DFU モードに入れない & DFU モードへの手動での移行
+### DFU に入れない & DFU モードへの手動での移行
 
 デバイスを PC に接続し、`Reset` ボタンを 2 回押します。黄色の LED が点灯したままになり、`Tracker L1` という名前の新しい USB ドライブが PC 上に表示されます。
 
 ### DFU モードの終了
 
-`User` ボタンを 1 回押して DFU モードを終了します。
+DFU モードを終了するには、`User` ボタンを 1 回押します。
 
 ### デバイスが自動的に電源オフになる
 
@@ -266,7 +265,7 @@ LoRa を設定した後、プライマリチャネルでメッセージを送信
 - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
 - シリアルポートログがしばらく動作した後に停止します。
 
- これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが次の状態にあるときに手動で強制的に再起動または電源オフしたことが原因である可能性があります。
+ これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態にあるときにデバイスを手動で強制的に再起動または電源オフしたことが原因である可能性があります。
 
 #### トラブルシューティング
 
@@ -289,7 +288,7 @@ LoRa を設定した後、プライマリチャネルでメッセージを送信
 
     最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
-### 対応アンテナ
+### 互換アンテナ
 
 L1 Pro 用のアンテナ交換が必要な場合は、[ここをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
 
