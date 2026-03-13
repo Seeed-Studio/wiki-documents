@@ -96,14 +96,18 @@ Use Espressif's latest cross-platform installation tool, **ESP-IDF Installation 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/5.png" style={{width:600, height:'auto'}}/></div>
 
 ### Get the Firmware Repository
-Open your terminal or Git Bash and clone the official reTerminal D1001 repository:
-```bash
-git clone https://github.com/Seeed-Studio/reTerminal-D1001-alpha
-```
+Download the official reTerminal D1001 repository from GitHub.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/6.png" style={{width:800, height:'auto'}}/></div>
 
+<div align="center">
+<a href="https://github.com/Seeed-Studio/reTerminal-D1001" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+</a>
+</div>
+
 ### Build and Flash Demo Firmware
-1.  **Open Project**: Use VS Code to open the cloned `reTerminal-D1001-alpha` folder.
+1.  **Open Project**: Use VS Code to open the cloned `reTerminal-D1001` folder.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/7.png" style={{width:600, height:'auto'}}/></div>
     
     :::tip
@@ -114,7 +118,10 @@ git clone https://github.com/Seeed-Studio/reTerminal-D1001-alpha
 2.  **Set Target Chip**:
     *   In the VS Code status bar at the bottom, select the target chip as `esp32p4`.
     *   Or run in the terminal: `idf.py set-target esp32p4`.
-3.  **Build, Flash and Monitor**:
+3.  **Select Flashing Mode**:
+    *   Select the correct flashing mode before flashing.
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/uart.jpg" style={{width:800, height:'auto'}}/></div>
+4.  **Build, Flash and Monitor**:
     *   Connect the device to your computer via USB Type-C.
     *   Click the **"Flash" (flame icon)** button in the VS Code status bar to build, flash, and start the monitor in one step.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/9.jpg" style={{width:800, height:'auto'}}/></div>
@@ -135,13 +142,13 @@ After the firmware is successfully flashed, the device will automatically restar
 
 *   **Hardware Documents**:
     *   [reTerminal D1001 Main Board V1.0 SCH & PCB](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_main_board_V1.0_SCH_&_PCB_251128.zip)
+    *   [reTerminal D1001 Schematic (PDF)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal%20D1001_sch.pdf)
 *   **Datasheets**:
-    *   [ESP32-P4 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ESP32P4-Datasheet-V0.4.pdf)
     *   [ESP32-P4NRW32 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-P4NRW32_Datasheet.pdf)
-    *   [ESP32-C6FH4 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-C6FH4_Datasheet.pdf)
+    *   [ESP32-C6 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/esp32-c6_datasheet_en.pdf)
     *   [Display Datasheet (GJX080C13-31BY)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/GangJingXin_GJX080C13-31BY_Datasheet.pdf.pdf)
     *   [IMU Sensor Datasheet (LSM6DS3TR)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ST_LSM6DS3TR_Datasheet.pdf)
-    *   [reTerminal D1001 V2.0 Datasheet](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ZD2481-D1001-V2.0_Datasheet.pdf)
+    *   [Camera Module Datasheet (SC2356)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ZD2481-D1001-V2.0_Datasheet.pdf)
 
 ## Tech Support & Product Discussion
 
