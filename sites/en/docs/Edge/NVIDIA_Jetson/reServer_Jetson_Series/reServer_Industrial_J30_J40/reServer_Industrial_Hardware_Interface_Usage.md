@@ -9,6 +9,9 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 sku: 114110247
+createdAt: '2023-06-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reserver_industrial_hardware_interface_usage/
 ---
 
 import Tabs from '@theme/Tabs';
