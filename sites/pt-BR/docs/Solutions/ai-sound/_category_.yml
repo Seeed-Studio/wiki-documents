@@ -1,0 +1,10 @@
+position: 1.2
+label: 'Som com IA'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: ai-sound
+  title: Som com IA
+  description: Soluções de percepção de som.
