@@ -1,0 +1,10 @@
+position: 1.1
+label: 'Visão de IA'
+collapsible: true
+collapsed: true
+className: _ai-perception
+link:
+  type: generated-index
+  slug: ai-vision
+  title: Visão de IA
+  description: Soluções de percepção de visão.

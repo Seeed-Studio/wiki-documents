@@ -1,0 +1,10 @@
+position: 6
+label: 'Resposta a Perigos'
+collapsible: true
+collapsed: true
+className: _hazard-response
+link:
+  type: generated-index
+  slug: hazard-response
+  title: Resposta a Perigos
+  description: Soluções para detectar e responder a perigos.
