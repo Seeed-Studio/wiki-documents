@@ -22,6 +22,10 @@ const excludedPaths = [
   // 排除指定文档
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'reComputer_Jetson_Series', 'reComputer_Rugged_J40', 'reComputer_Rugged_J40_Getting_Started.md'), //3.4
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', '_Flash_Watcher_Agent_Firmware.md'), //3.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'User_Guide', 'FAQ.md'), //3.12
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'User_Guide', 'Payload_Format.md'), //3.12
+  path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'Application', 'object_detection_with_yolov11_on_recomputer_rk.md'), //3.9
+  path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'RK_Devices_Intro.md'), //3.9
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
