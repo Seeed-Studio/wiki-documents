@@ -8,7 +8,7 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 12/24/2025
+  date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
 updatedAt: '2026-03-03'
@@ -229,6 +229,8 @@ For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may 
 
 ### Sensor connection
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
+
 You can add sensor to the device via the grove interface. The following sensors have been verified to be compatible with the Grove interface on the device.
 
 <table>
@@ -263,6 +265,30 @@ You can add sensor to the device via the grove interface. The following sensors 
     <td>CardKB</td>
   </tr>
 </table>
+
+
+<Tabs>
+
+<TabItem value="ios" label="IOS">
+
+- Enable Telemetry to get sensor data. If you want to show sensor data on the OLED screen, enale `on screen`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="Android" label="Android">
+
+- Enable Telemetry to get sensor data. If you want to show sensor data on the OLED screen, enale `on screen`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryAndroid.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+The OLED will show sensor data if you enable `on screen`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Telemetryscreen.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### Screen Connection
  - E-Ink Screen
