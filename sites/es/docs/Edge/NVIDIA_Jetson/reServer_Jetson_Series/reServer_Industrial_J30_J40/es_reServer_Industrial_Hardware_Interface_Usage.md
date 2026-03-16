@@ -2,13 +2,14 @@
 description: Uso de la Interfaz de Hardware Industrial de reServer
 title: Uso de la Interfaz de Hardware Industrial de reServer
 keywords:
-  - reServer
+- reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_industrial_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
-createdAt: '2025-09-03'
+sku: 114110247
+createdAt: '2023-06-08'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/reserver_industrial_hardware_interface_usage/
 ---
@@ -16,44 +17,44 @@ url: https://wiki.seeedstudio.com/es/reserver_industrial_hardware_interface_usag
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Uso de Hardware e Interfaces
+# Uso del Hardware e Interfaces
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
 
-reServer Industrial cuenta con 2 bahías de unidades SATA HDD/SSD de 2.5" para almacenar fácilmente cientos de grabaciones de video locales en una aplicación de análisis de video. También habilita múltiples opciones de conectividad incluyendo 5 puertos Ethernet RJ-45, 1 RS232/422/485, 4x DI/DO aislados, 1x CAN, 4× USB3.1. El diseño sin ventilador con opciones de montaje versátiles permite el despliegue desde -20 a 60 ℃, lo cual es ideal para entornos más duros y cargas más pesadas.
+reServer Industrial incorpora 2 bahías para unidades SATA HDD/ SSD de 2,5" para almacenar fácilmente cientos de grabaciones de vídeo locales en una aplicación de análisis de vídeo. También permite múltiples opciones de conectividad, incluyendo 5 puertos Ethernet RJ-45, 1 RS232/422/485, 4 DI/DO aislados, 1 CAN, 4× USB3.1. El diseño sin ventilador con opciones de montaje versátiles permite el despliegue de -20 a 60 ℃, lo que es ideal para entornos más duros y cargas más pesadas.
 
-reServer Industrial viene con un disipador de calor pasivo y un diseño sin ventilador, haciéndolo ideal para uso en entornos exigentes. El disipador de calor pasivo permite un enfriamiento eficiente sin la necesidad de un ventilador, reduciendo el riesgo de falla de componentes debido al polvo u otros contaminantes. El diseño sin ventilador también reduce los niveles de ruido y el consumo de energía, haciéndolo adecuado para uso en entornos sensibles al ruido y minimizando los costos de energía.
+reServer Industrial viene con un disipador de calor pasivo y un diseño sin ventilador, lo que lo hace ideal para su uso en entornos exigentes. El disipador de calor pasivo permite una refrigeración eficiente sin necesidad de ventilador, reduciendo el riesgo de fallo de componentes debido al polvo u otros contaminantes. El diseño sin ventilador también reduce los niveles de ruido y el consumo de energía, lo que lo hace adecuado para su uso en entornos sensibles al ruido y minimiza los costes energéticos.
 
-reServer industrial tiene 5 puertos GbE RJ45, 4 de los cuales son puertos PoE PSE para proporcionar energía sobre Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación separada y hace más fácil desplegar dispositivos de red en áreas sin tomas de corriente fácilmente disponibles. El puerto GbE restante se usa para conectar a un switch de red o router, habilitando la comunicación con otros dispositivos en la red y acceso a Internet.
+reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación independiente y facilita el despliegue de dispositivos de red en áreas sin tomas de corriente fácilmente disponibles. El puerto GbE restante se utiliza para conectarse a un switch de red o router, permitiendo la comunicación con otros dispositivos en la red y el acceso a Internet.
 
-- **Servidor Edge AI Compacto sin Ventilador:** Alimentado por módulos NVIDIA Jetson™ Orin Nano/Orin NX, con rendimiento de IA que va desde 20 TOPS hasta 100 TOPS, rango de temperatura más amplio de -20 ~ 60°C con flujo de aire de 0.7m/s
-- **Procesamiento Multi-Stream:** 5× GbE RJ45(4 para 802.3af PSE ), maneja múltiples streams con procesamiento en tiempo real
-- **Almacenamiento Expandible:** 2 bahías de unidades para HDD/SSD SATA de 2.5", más un socket M.2 2280 para SSD NVMe
-- **Interfaces Industriales:** Incluye puerto COM, puertos DI/DO, puerto CAN, USB 3.1, y módulo TPM2.0 opcional
-- **Conectividad Híbrida:** Soporta 5G/4G/LTE/LoRaWAN® (módulo opcional) con ranura para tarjeta Nano SIM
+- **Servidor Compacto Edge AI sin Ventilador:** Impulsado por módulos NVIDIA Jetson™ Orin Nano/Orin NX, con un rendimiento de IA que va de 20 TOPS a 100 TOPS, rango de temperatura más amplio de -20 ~ 60°C con flujo de aire de 0.7m/s
+- **Procesamiento Multicanal:** 5× GbE RJ45 (4 para 802.3af PSE), maneja múltiples flujos con procesamiento en tiempo real
+- **Almacenamiento Expandible:** 2 bahías para unidades SATA HDD/SSD de 2,5", más un zócalo M.2 2280 para SSD NVMe
+- **Interfaces Industriales:** Incluye puerto COM, puertos DI/DO, puerto CAN, USB 3.1 y módulo TPM2.0 opcional
+- **Conectividad Híbrida:** Compatible con 5G/4G/LTE/LoRaWAN® (módulo opcional) con ranura para tarjeta Nano SIM
 - **Certificaciones:** FCC, CE, UKCA, ROHS, KC
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 </a></div>
 
-## Desensamblar reServer Industrial
+## Desmontar reServer Industrial
 
-Primero que todo, es mejor desensamblar la carcasa exterior para acceder a todas las interfaces. Sigue [este documento](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) para aprender más.
+En primer lugar, es mejor desmontar la carcasa exterior para acceder a todas las interfaces. Sigue [este documento](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) para aprender más.
 
 ## Conectores Gigabit Ethernet
 
-Hay 5 puertos Ethernet en el reServer Industrial con especificación de 10/100/1000Mbps y 4 de ellos están clasificados con PSE 802.3 af 15 W donde puedes conectar directamente cámaras PoE a estos puertos (LAN1-LAN4). Estos están conectados a través de un módulo PCIe a Ethernet (LAN7430-I/Y9X). Sin embargo, el puerto Ethernet restante (LAN0) en el lado izquierdo solo se usa para conectar a un router para internet.
+Hay 5 puertos Ethernet en el reServer Industrial con especificación de 10/100/1000Mbps y 4 de ellos están clasificados como PSE 802.3 af 15 W donde puedes conectar directamente cámaras PoE a estos puertos (LAN1-LAN4). Estos están conectados a través de un módulo PCIe a Ethernet (LAN7430-I/Y9X). Sin embargo, el puerto Ethernet restante (LAN0) en el lado más a la izquierda solo se utiliza para conectarse a un router para internet.
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg"/></div>
 
-Hay 2 LEDs (verde y amarillo) en cada puerto Ethernet que indican lo siguiente
+Hay 2 LED (verde y amarillo) en cada puerto Ethernet que indican lo siguiente
 
-- LED Verde: ENCENDIDO solo cuando está conectado a una red de 1000M
-- LED Amarillo: Muestra el estado de actividad de la red
+- LED verde: ENCENDIDO solo cuando está conectado a una red de 1000M
+- LED amarillo: Muestra el estado de actividad de la red
 
 ### Uso
 
@@ -83,45 +84,60 @@ Hay 2 LEDs (verde y amarillo) en cada puerto Ethernet que indican lo siguiente
   </TabItem>
   </Tabs>
 
-### Vinculación de IP de Red Física a Números eth
 
-  **Las interfaces eth0 a eth3 están designadas para PoE, con eth3 específicamente referida como PoE4.**
+### Vincular la IP de Red Física a Números eth
 
-  Si necesitas configurar diferentes direcciones IP para cada interfaz POE, sigue estas instrucciones:
+  **Las interfaces LAN1 a LAN4 están designadas para PoE.**
 
-  **Paso 1**: Conecta el POE al dispositivo reServer Industrial. Por ejemplo, para configurar eth3, establece el nombre de eth3 como POE3.
+  Si necesitas configurar diferentes direcciones IP para cada interfaz PoE, sigue estas instrucciones:
+
+  :::warning
+  Los nombres de las interfaces (por ejemplo, `enP1p1s0`) pueden variar según tu sistema. Antes de continuar, ejecuta el siguiente comando para comprobar los nombres reales de las interfaces en tu dispositivo. Los comandos siguientes son solo de referencia — reemplaza el nombre de la interfaz con el que se muestre en tu sistema.
 
   ```bash
-  sudo nmcli connection add type ethernet ifname eth4 con-name POE3
+  ifconfig
+  ```
+  :::
+
+  **Paso 1**: Conecta el dispositivo PoE al reServer Industrial. Crea una nueva conexión para la interfaz de destino. Por ejemplo, para configurar la interfaz `enP1p1s0` y nombrarla `POE1`:
+
+  ```bash
+  sudo nmcli connection add type ethernet ifname enP1p1s0 con-name POE1
   ```
 
-  **Paso 2**: Configure la dirección IP de POE3 a **192.168.6.6**. La dirección IP se puede personalizar según el uso real.
+  **Paso 2**: Configura la dirección IP. La dirección IP se puede personalizar según el uso real.
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
+  sudo nmcli connection modify POE1 ipv4.addresses 192.168.6.6/24
   ```
 
-  **Paso 3**: Configurar la dirección IPv4 de POE3 como configuración manual.
+  **Paso 3**: Establece el método IPv4 en manual (IP estática).
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.method manual
+  sudo nmcli connection modify POE1 ipv4.method manual
   ```
 
-  **Paso 4**: Iniciar la conexión
+  **Paso 4**: Levanta la conexión.
 
   ```bash
-  sudo nmcli connection up POE3
+  sudo nmcli connection up POE1
+  ```
+
+  **Paso 5**: Verifica la configuración.
+
+  ```bash
+  ifconfig
   ```
 
 ## Conectores SATA
 
-reServer Industrial soporta 2 SATA 2.5" HDD/SSD y viene con conectores tanto de datos como de alimentación SATA. Puedes conectar HDD/SSD de la siguiente manera
+reServer Industrial es compatible con 2 HDD/SSD SATA de 2,5" y viene con conectores tanto de datos como de alimentación SATA. Puedes conectar a HDD/ SSD de la siguiente manera
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/23.jpg"/></div>
 
 ### Uso
 
-Después de que el sistema arranque, puedes verificar las unidades SATA conectadas mediante
+Después de que el sistema se inicie, puedes verificar las unidades SATA conectadas mediante
 
 ```sh
 lsblk
@@ -131,19 +147,19 @@ lsblk
 
 ## RTC
 
-reServer Industrial está equipado con 2 formas diferentes de conectar a una batería RTC
+reServer Industrial está equipado con 2 formas diferentes de conectarse a una batería RTC
 
-### Descripción de la Conexión
+### Descripción General de la Conexión
 
 - Método 1:
 
-Conecta una **batería de celda tipo moneda CR1220 de 3V** al socket RTC en la placa como se muestra a continuación. Asegúrate de que el extremo **positivo (+)** de la batería esté mirando hacia arriba
+Conecta una **batería de botón CR1220 de 3V** al zócalo RTC en la placa como se muestra a continuación. Asegúrate de que el extremo **positivo (+)** de la batería esté orientado hacia arriba
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/6.jpg"/></div>
 
 - Método 2:
 
-Conecta una **batería de celda tipo moneda CR2302 de 3V con conector JST** al socket JST de 1.25mm de 2 pines en la placa como se muestra a continuación
+Conecta una **batería de botón CR2302 de 3V con conector JST** al zócalo JST de 2 pines y 1.25mm en la placa como se muestra a continuación
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/7.jpg"/></div>
 
@@ -153,47 +169,47 @@ Conecta una **batería de celda tipo moneda CR2302 de 3V con conector JST** al s
 
 - **Paso 2:** Enciende reServer Industrial
 
-- **Paso 3:** En el Escritorio de Ubuntu, haz clic en el menú desplegable en la esquina superior derecha, navega a `Settings > Date & Time`, conéctate a una red mediante un cable Ethernet y selecciona **Automatic Date & Time** para obtener la fecha/hora automáticamente
+- **Paso 3:** En el Escritorio de Ubuntu, haz clic en el menú desplegable en la esquina superior derecha, navega a `Settings > Date & Time`, conéctate a una red mediante un cable Ethernet y selecciona **Automatic Date & Time** para obtener la fecha y hora automáticamente
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
 :::note
-Si no te has conectado a internet mediante Ethernet, puedes configurar manualmente la fecha/hora aquí
+Si no te has conectado a internet mediante Ethernet, puedes configurar manualmente la fecha y hora aquí
 :::
 
-- **Paso 4:** Abre una ventana de terminal y ejecuta el siguiente comando para verificar la hora del reloj de hardware
+- **Paso 4:** Abre una ventana de terminal y ejecuta el siguiente comando para comprobar la hora del reloj de hardware
 
 ```sh
 sudo hwclock
 ```
 
-Verás una salida similar a la siguiente que no es la fecha/hora correcta
+Verás una salida similar a la siguiente, que no es la fecha y hora correctas
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/14.png"/></div>
 
-- **Paso 5:** Cambia la hora del reloj de hardware a la hora actual del reloj del sistema ingresando el siguiente comando
+- **Paso 5:** Cambia la hora del reloj de hardware a la hora actual del reloj del sistema introduciendo el siguiente comando
 
 ```sh
 sudo hwclock --systohc
 ```
 
-- **Paso 6:** Retire cualquier cable Ethernet conectado para asegurarse de que no obtenga la hora de internet y reinicie la placa
+- **Paso 6:** Retira cualquier cable Ethernet conectado para asegurarte de que no obtendrá la hora de internet y reinicia la placa
 
 ```sh
 sudo reboot
 ```
 
-- **Paso 7:** Verificar la hora del reloj de hardware para confirmar que la fecha/hora permanece igual aunque el dispositivo haya sido apagado
+- **Paso 7:** Comprueba la hora del reloj de hardware para verificar que la fecha y hora se mantienen igual aunque el dispositivo se haya apagado
 
 Ahora crearemos un script para sincronizar siempre el reloj del sistema desde el reloj de hardware en cada arranque.
 
-- **Paso 8:** Crear un nuevo script de shell usando cualquier editor de texto de su preferencia. Aquí usamos el editor de texto **vi**
+- **Paso 8:** Crea un nuevo script de shell utilizando cualquier editor de texto de tu preferencia. Aquí usamos el editor de texto **vi**
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **Paso 9:** Ingresa al **modo de inserción** presionando **i**, copia y pega el siguiente contenido dentro del archivo
+- **Paso 9:** Entra en **modo de inserción** presionando **i**, copia y pega el siguiente contenido dentro del archivo
 
 ```sh
 #!/bin/bash
@@ -201,19 +217,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Paso 10:** Hacer el script ejecutable
+- **Paso 10:** Haz que el script sea ejecutable
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Paso 11:** Crear un archivo systemd
+- **Paso 11:** Crea un archivo systemd
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-**Paso 12:** Añade lo siguiente dentro del archivo
+- **Paso 12:** Añade lo siguiente dentro del archivo
 
 ```sh
 [Unit]
@@ -226,20 +242,20 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Paso 13:** Recargar el daemon de systemctl
+- **Paso 13:** Recarga el demonio de systemctl
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-- **Paso 14:** Habilitar el servicio recién creado para que se inicie al arrancar y iniciar el servicio
+- **Paso 14:** Habilita el servicio recién creado para que se inicie al arrancar y arranca el servicio
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Paso 15:** Verificar que el script esté funcionando como un servicio systemd
+- **Paso 15:** Verifica que el script esté en ejecución como un servicio systemd
 
 ```sh
 sudo systemctl status hwtosys.service
@@ -249,17 +265,17 @@ sudo systemctl status hwtosys.service
 
 ## M.2 Key M
 
-De fábrica, reServer Industrial incluye un SSD de 128GB conectado al slot M.2 Key M, que viene preinstalado con el sistema JetPack.
+Fuera de la caja, reServer Industrial incluye un SSD de 128GB conectado a la ranura M.2 Key M, que viene preinstalado con el sistema JetPack.
 
-### Descripción general de la conexión
+### Descripción General de la Conexión
 
-Si deseas quitar el SSD incluido e instalar uno nuevo, puedes seguir los pasos a continuación. Aquí solo recomendamos usar SSDs de Seeed con [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) y [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) de almacenamiento porque solo hemos probado esos SSDs. Además, esta interfaz soporta SSDs PCIe Gen4.0.
+Si quieres retirar el SSD incluido e instalar uno nuevo, puedes seguir los pasos a continuación. Aquí solo recomendamos usar SSD de Seeed con almacenamiento de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) y [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) porque solo hemos probado esos SSD. Además, esta interfaz es compatible con SSD PCIe Gen4.0.
 
-- **Paso 1:** Quita el tornillo del SSD preinstalado
+- **Paso 1:** Retira el tornillo del SSD preinstalado
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/8.jpg"/></div>
 
-- **Paso 2:** Retira el SSD deslizándolo alejándolo del conector SSD
+- **Paso 2:** Retira el SSD deslizándolo fuera del conector SSD
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/9.jpg"/></div>
 
@@ -267,15 +283,15 @@ Si deseas quitar el SSD incluido e instalar uno nuevo, puedes seguir los pasos a
 
 ### Uso
 
-Explicaremos cómo hacer un benchmark simple en el SSD conectado
+Explicaremos cómo hacer un benchmark sencillo en el SSD conectado
 
-- **Paso 1:** Verifica la velocidad de escritura ejecutando el siguiente comando
+- **Paso 1:** Comprueba la velocidad de escritura ejecutando el siguiente comando
 
 ```sh
 sudo dd if=/dev/zero of=/home/$USER/test bs=1M count=512 conv=fdatasync
 ```
 
-- **Paso 2:** Verifica la velocidad de lectura ejecutando los siguientes comandos. Asegúrate de ejecutar esto después de ejecutar el comando anterior para la velocidad de escritura.
+- **Paso 2:** Comprueba la velocidad de lectura ejecutando los siguientes comandos. Asegúrate de ejecutarlos después de ejecutar el comando anterior para la velocidad de escritura.
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -284,19 +300,19 @@ sudo dd if=/home/$USER/test of=/dev/null bs=1M count=512
 
 ### mini PCIe
 
-reServer Industrial viene con un conector mini PCIe que soporta módulos 4G y LoRa. Sin embargo, solo puedes conectar un módulo 4G o un módulo LoRa a la vez. Algunos de los módulos 4G vienen integrados con funcionalidad GPS. También discutiremos esto.
+reServer Industrial viene con un conector mini PCIe que admite módulos 4G y LoRa. Sin embargo, solo puedes conectar un módulo 4G o un módulo LoRa a la vez. Algunos de los módulos 4G vienen con funcionalidad GPS integrada. También hablaremos de esto.
 
-#### Descripción General de la Conexión del Módulo 4G
+#### Descripción general de la conexión del módulo 4G
 
-Actualmente esta placa soporta los módulos EC25EUXGA y EC20CEHCLG.
+Actualmente esta placa es compatible con los módulos EC25EUXGA y EC20CEHCLG.
 
 - **Paso 1:** Apaga la placa si ya está encendida
 
-- **Paso 2:** Retira el separador incluido. Este separador solo es necesario si estás usando la interfaz M.2 Key B
+- **Paso 2:** Retira el separador incluido. Este separador solo es necesario si estás utilizando la interfaz M.2 Key B
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/10.jpg"/></div>
 
-- **Paso 3:** Desliza el módulo 4G en la ranura mini PCIe, usa los tornillos preinstalados y atorníllelos en los 2 agujeros para asegurar el módulo 4G en su lugar
+- **Paso 3:** Inserta el módulo 4G en la ranura mini PCIe, utiliza los tornillos preinstalados y atorníllalos en los 2 orificios para fijar el módulo 4G en su lugar
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/11.jpg"/></div>
 
@@ -304,25 +320,25 @@ Actualmente esta placa soporta los módulos EC25EUXGA y EC20CEHCLG.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/12.jpg"/></div>
 
-- **Paso 5:** Inserta una tarjeta nano SIM habilitada para 4G en la ranura de tarjeta SIM en la placa asegurándote de que la superficie dorada de la tarjeta SIM esté mirando hacia arriba. Aquí inserta la tarjeta completamente para que rebote después de golpear el resorte interno y se bloquee en su lugar.
+- **Paso 5:** Inserta una tarjeta nano SIM con capacidad 4G en la ranura SIM de la placa asegurándote de que la superficie dorada de la tarjeta SIM mire hacia arriba. Inserta la tarjeta hasta el fondo para que rebote después de golpear el muelle interno y quede bloqueada en su lugar.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/13.jpg"/></div>
 
 :::note
-Si quieres retirar la tarjeta SIM, empuja la tarjeta hacia adentro para presionar el resorte interno de modo que la SIM salga de la ranura
+Si quieres retirar la tarjeta SIM, empuja la tarjeta hacia dentro hasta golpear el muelle interno para que la SIM salga de la ranura
 :::
 
-- **Paso 6:** Añade un puente entre los pines **SIM_MUX_SEL** y **GND** en el **Conector J8 (Control y UART)**
+- **Paso 6:** Añade un jumper entre los pines **SIM_MUX_SEL** y **GND** en el **Header J8 (Control and UART)**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/14.jpg"/></div>
 
 - **Paso 6:** Enciende la placa
 
-#### Uso del Módulo 4G - Prueba de Marcado
+#### Uso del módulo 4G - Prueba de marcación
 
-Cuando uses el módulo EC25, el módulo se iniciará automáticamente y estará listo para usar. Sin embargo, cuando uses el módulo EC20, necesitas reiniciar el módulo para que funcione
+Cuando se utiliza el módulo EC25, el módulo se iniciará automáticamente y estará listo para usar. Sin embargo, cuando se utiliza el módulo EC20, es necesario reiniciar el módulo para que funcione
 
-- **Paso 1:** Si estás usando el módulo EC25, puedes omitir este paso. Sin embargo, si estás usando el módulo EC20, ingresa los siguientes comandos para acceder al pin GPIO309 que es responsable de reiniciar el módulo 4G
+- **Paso 1:** Si estás utilizando el módulo EC25, puedes omitir este paso. Sin embargo, si estás utilizando el módulo EC20, introduce los siguientes comandos para acceder al pin GPIO309 que es responsable de reiniciar el módulo 4G
 
 ```sh
 sudo su 
@@ -333,34 +349,34 @@ echo out > direction
 echo 1 > value
 ```
 
-Para el módulo EC25, LED2 se encenderá en verde tan pronto como la placa se inicie. Para el módulo EC20, LED2 se encenderá en verde después de reiniciar el módulo como se explicó anteriormente
+Para el módulo EC25, el LED2 se encenderá en verde tan pronto como la placa se inicie. Para el módulo EC20, el LED2 se encenderá en verde después de reiniciar el módulo como se explicó anteriormente
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/15.jpg"/></div>
 
-- **Paso 2:** Instalar minicom
+- **Paso 2:** Instala minicom
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **Paso 3:** Ingresa a la consola serie del módulo 4G conectado para que podamos introducir comandos AT e interactuar con el módulo 4G
+- **Paso 3:** Entra en la consola serie del módulo 4G conectado para poder introducir comandos AT e interactuar con el módulo 4G
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Paso 4:** Presiona **Ctrl+A** y luego presiona **E** para activar el eco local
+- **Paso 4:** Pulsa **Ctrl+A** y luego pulsa **E** para activar el eco local
 
-- **Paso 5:** Ingresa el comando **"AT"** y presiona enter. Si ves la respuesta como "OK", el módulo 4G está funcionando correctamente
+- **Paso 5:** Introduce el comando **"AT"** y pulsa intro. Si ves la respuesta "OK", el módulo 4G está funcionando correctamente
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/></div>
 
-- **Paso 6:** Ingresa el comando **"ATI"** para verificar la información del módulo
+- **Paso 6:** Introduce el comando **"ATI"** para comprobar la información del módulo
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-- **Paso 7:** Para probar el módulo, ingresa el siguiente comando para llamar a otro número de teléfono
+- **Paso 7:** Para probar el módulo, introduce el siguiente comando para llamar a otro número de teléfono
 
 ```sh
 ATD<phone_number>;
@@ -370,15 +386,15 @@ Y verás la siguiente salida
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/24.jpg"/></div>
 
-Si el número de teléfono ingresado puede recibir la llamada, el módulo está funcionando como se esperaba
+Si el número de teléfono introducido puede recibir la llamada, el módulo está funcionando como se espera
 
-#### Uso del Módulo 4G - Conectar a Internet
+#### Uso del módulo 4G - Conectarse a Internet
 
 ##### Módulo EC25
 
-Si estás usando el módulo EC25, sigue los siguientes pasos
+Si estás utilizando el módulo EC25, sigue los pasos siguientes
 
-- **Paso 1:** Después de abrir la consola serie del módulo 4G como se explicó anteriormente (sección Uso del Módulo 4G - Probar Marcado), ejecuta el siguiente comando para conectarte a internet. Aquí reemplaza **YOUR_APN** con el APN de tu proveedor de red
+- **Paso 1:** Después de abrir la consola serie del módulo 4G como se explicó anteriormente (sección Uso del módulo 4G - Prueba de marcación), ejecuta el siguiente comando para conectarte a Internet. Aquí sustituye **YOUR_APN** por el APN de tu proveedor de red
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
@@ -386,7 +402,7 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/89.jpg"/></div>
 
-En una conexión exitosa, debería mostrar **OK** como puedes ver en la imagen anterior
+Si la conexión es correcta, debería mostrar **OK** como puedes ver en la imagen anterior
 
 - **Paso 2:** Reinicia el módulo 4G ejecutando lo siguiente
 
@@ -394,15 +410,15 @@ En una conexión exitosa, debería mostrar **OK** como puedes ver en la imagen a
 AT+CFUN=1,1
 ```
 
-Ahora perderás la conexión al módulo 4G en las terminales serie
+Ahora perderás la conexión con el módulo 4G en los terminales serie
 
-- **Paso 3:** Cierra **minicom** presionando **CTRL + A** y luego **Q**
+- **Paso 3:** Cierra **minicom** pulsando **CTRL + A** y luego **Q**
 
 - **Paso 4:** Escribe **ifconfig** y verás una dirección IP en la interfaz **usb0**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/93.png"/></div>
 
-- **Paso 5:** Puedes intentar hacer ping a un sitio web como se muestra a continuación para verificar si hay conectividad a internet
+- **Paso 5:** Puedes intentar hacer ping a un sitio web como se indica a continuación para comprobar si hay conectividad a Internet
 
 ```sh
 ping -I usb0 www.bing.com -c 5
@@ -412,11 +428,11 @@ ping -I usb0 www.bing.com -c 5
 
 ##### Módulo EC20
 
-Si estás usando el módulo EC20, sigue los pasos a continuación
+Si estás utilizando el módulo EC20, sigue los pasos siguientes
 
-- **Paso 1:** Si ya has reiniciado el módulo 4G como se explicó en la sección anterior (sección Uso del Módulo 4G - Prueba de Marcado) para el módulo EC20, puedes omitir este paso. Sin embargo, si aún no lo has hecho, por favor hazlo ahora
+- **Paso 1:** Si ya has reiniciado el módulo 4G como se explicó en la sección anterior (sección Uso del módulo 4G - Prueba de marcación) para el módulo EC20, puedes omitir este paso. Sin embargo, si aún no lo has hecho, hazlo ahora
 
-- **Paso 2:** Ingresa a la consola serie del módulo 4G e introduce el siguiente comando para configurar al modo ECM
+- **Paso 2:** Entra en la consola serie del módulo 4G e introduce el siguiente comando para establecer el modo ECM
 
 ```sh
 AT+QCFG="usbnet",1
@@ -424,7 +440,7 @@ AT+QCFG="usbnet",1
 
 - **Paso 3:** Reinicia el módulo 4G
 
-- **Paso 4:** Dentro de la consola del módulo 4G, ejecuta el siguiente comando para conectarte a internet. Aquí reemplaza **YOUR_APN** con el APN de tu proveedor de red
+- **Paso 4:** Dentro de la consola del módulo 4G, ejecuta el siguiente comando para conectarte a Internet. Aquí sustituye **YOUR_APN** por el APN de tu proveedor de red
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
@@ -434,13 +450,13 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/90.jpg"/></div>
 
-- **Paso 7:** Puedes intentar hacer ping a una URL como se muestra a continuación para verificar si hay conectividad a internet
+- **Paso 7:** Puedes intentar hacer ping a una URL como se indica a continuación para comprobar si hay conectividad a Internet
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/92.png"/></div>
 
-#### Uso del Módulo 4G - Conectar a GPS
+#### Uso del módulo 4G - Conectarse al GPS
 
-Algunos módulos 4G vienen con módulos GPS integrados. Tanto los módulos EC25EUXGA como EC20CEHCLG vienen con módulos 4G en ellos.
+Algunos módulos 4G vienen con módulos GPS integrados. Tanto los módulos EC25EUXGA como EC20CEHCLG vienen con módulos 4G integrados.
 
 - **Paso 1:** Reinicia el módulo GPS ejecutando los siguientes comandos
 
@@ -471,13 +487,13 @@ $GPRMC,,V,,,,,,,,,,N*53
 $GPVTG,,T,,M,,N,,K,N*2C
 ```
 
-#### Descripción General de la Conexión del Módulo LoRa
+#### Descripción general de la conexión del módulo LoRa
 
-Actualmente esta placa soporta el módulo WM1302 SPI. Puedes usar ya sea la [versión US](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html) o la [versión EU](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html) que está disponible en nuestro Bazaar.
+Actualmente esta placa es compatible con el módulo WM1302 SPI. Puedes usar la [versión US](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html) o la [versión EU](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html) que están disponibles en nuestro Bazaar.
 
 - **Paso 1:** Apaga la placa si ya está encendida
 
-- **Paso 2:** Desliza el módulo LoRa en la ranura mini PCIe y usa los tornillos preinstalados y atorníllelos en los 2 agujeros para asegurar el módulo LoRa en su lugar
+- **Paso 2:** Inserta el módulo LoRa en la ranura mini PCIe y utiliza los tornillos preinstalados y atorníllalos en los 2 orificios para fijar el módulo LoRa en su lugar
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/16.jpg"/></div>
 
@@ -486,26 +502,26 @@ Actualmente esta placa soporta el módulo WM1302 SPI. Puedes usar ya sea la [ver
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/17.jpg"/></div>
 
 :::note
-Asegúrate de que no haya ningún puente entre los pines **SIM_MUX_SEL** y **GND** en el **J8 (Control y UART) Header**. Este puente solo es necesario cuando se usan módulos 4G
+Asegúrate de que no haya ningún jumper entre los pines **SIM_MUX_SEL** y **GND** en el **Header J8 (Control and UART)**. Este jumper solo es necesario cuando se utilizan módulos 4G
 :::
 
 - **Paso 4:** Enciende la placa
 
-#### Uso del Módulo LoRa - Prueba de RF LoRa
+#### Uso del módulo LoRa - Prueba de RF LoRa
 
-Cuando el módulo LoRa esté conectado, verás que los LEDs verde y azul del módulo se encienden
+Cuando el módulo LoRa está conectado, verás que los LED verde y azul del módulo se encienden
 
-- **Paso 1:** Ingresa el siguiente comando para verificar si el módulo LoRa es detectado por el sistema
+- **Paso 1:** Introduce el siguiente comando para comprobar si el sistema detecta el módulo LoRa
 
 ```sh
 i2cdetect -r -y 7
 ```
 
-Si ves la siguiente salida, el módulo es detectado por el sistema
+Si ves la siguiente salida, el sistema ha detectado el módulo
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/29.png"/></div>
 
-- **Paso 2:** Ingresa los siguientes comandos para compilar y construir la herramienta de transmisión de señales LoRa
+- **Paso 2:** Introduce los siguientes comandos para compilar y construir la herramienta de transmisión de señales LoRa
 
 ```sh
 git clone https://github.com/lakshanthad/sx1302_hal
@@ -516,17 +532,17 @@ cp ../tools/reset_lgw.sh .
 sudo ./test_loragw_hal_tx -r 1250 -m LORA -f 867.1 -s 12 -b 125 -n 1000 -z 100 --dig 3 --pa 0 --pwid 13 -d /dev/spidev2.0
 ```
 
-Si ves el resultado de abajo y el LED en el módulo LoRa se vuelve ROJO, eso significa que el módulo está transmitiendo señales RF exitosamente
+Si ves el siguiente resultado y el LED del módulo LoRa se vuelve ROJO, significa que el módulo está transmitiendo señales RF correctamente
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/78.jpg"/></div>
 
-Para detener la transmisión, puedes presionar **CTRL + C** en el teclado.
+Para dejar de transmitir, puedes pulsar **CTRL + C** en el teclado.
 
-#### Uso del Módulo LoRa - Conectar a TTN
+#### Uso del módulo LoRa - Conectarse a TTN
 
-Ahora nos conectaremos a TTN (The Things Network) y usaremos el reServer Industrial como un gateway LoRaWAN de TTN
+Ahora nos conectaremos a TTN (The Things Network) y utilizaremos el reServer Industrial como una pasarela LoRaWAN de TTN
 
-- **Paso 1:** Ingresa lo siguiente para preparar el reenviador de paquetes
+- **Paso 1:** Introduce lo siguiente para preparar el packet forwarder
 
 ```sh
 cd ..
@@ -534,7 +550,7 @@ cd packet_forwarder
 cp ../tools/reset_lgw.sh .
 ```
 
-- **Paso 2:** Ejecuta lo siguiente según el módulo LoRa que estés usando. Aquí hemos probado la versión SPI US915
+- **Paso 2:** Ejecuta lo siguiente según el módulo LoRa que estés utilizando. Aquí hemos probado la versión SPI US915
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
@@ -553,15 +569,15 @@ sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
-Después de ejecutar el comando anterior, verás la siguiente salida con la última línea mostrando la información del **EUI del concentrador**. Por favor, conserva esta información porque la usaremos más tarde al configurar la puerta de enlace con TTN
+Después de ejecutar el comando anterior, verás la siguiente salida con la última línea mostrando la información del **concentrator EUI**. Por favor guarda esta información porque la usaremos más tarde al configurar la gateway con TTN
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/79.jpg"/></div>
 
-- **Paso 3:** Visita [esta URL](https://console.cloud.thethings.network) para ingresar a la consola de TTN y selecciona una región de tu elección
+- **Paso 3:** Visita [este enlace](https://console.cloud.thethings.network) para entrar en la consola de TTN y selecciona la región de tu preferencia
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/80.png"/></div>
 
-- **Paso 4:** Inicia sesión si ya tienes una cuenta, o regístrate para una nueva cuenta si no tienes una
+- **Paso 4:** Inicia sesión si ya tienes una cuenta, o regístrate para una nueva cuenta si aún no tienes una
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/81.png"/></div>
 
@@ -573,38 +589,38 @@ Después de ejecutar el comando anterior, verás la siguiente salida con la últ
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/83.png"/></div>
 
-- **Paso 7:** Ingresa el **EUI del Concentrador** que obtuviste anteriormente dentro de la sección **Gateway EUI** y haz clic en **Confirm**
+- **Paso 7:** Introduce el **Concentrator EUI** que obtuviste antes dentro de la sección **Gateway EUI** y haz clic en **Confirm**
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-- **Paso 8:** Ingresa el **Plan de frecuencia** según el módulo LoRa que estés usando. Aquí estamos usando la versión US915 del módulo y por lo tanto hemos seleccionado **United Stated 902-928 MHz, FSB 2 (used by TTN)**. Después de eso haz clic en **Register gateway**
+- **Paso 8:** Introduce el **Frequency plan** de acuerdo con el módulo LoRa que estés utilizando. Aquí estamos usando la versión US915 del módulo y por lo tanto hemos seleccionado **United Stated 902-928 MHz, FSB 2 (used by TTN)**. Después de eso haz clic en **Register gateway**
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
 
 :::note
-El **ID de Gateway** se ha rellenado automáticamente para ti. Sin embargo, puedes cambiarlo a lo que prefieras. El **nombre de Gateway** no es obligatorio de completar. Sin embargo, también puedes llenarlo según tu preferencia
+El **Gateway ID** se ha rellenado automáticamente por ti. Sin embargo, puedes cambiarlo a lo que prefieras. **Gateway name** no es obligatorio de rellenar. Sin embargo, también puedes rellenarlo según tu preferencia
 :::
 
-- **Paso 9:** Toma nota de la **Dirección del Servidor de Gateway** en la página principal del gateway
+- **Paso 9:** Toma nota de la **Gateway Server Address** en la página principal de la gateway
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **Paso 9:** En el reTerminal Industrial, edita el archivo **global_conf_json** que usamos junto con el comando **lora_pkt_fwd**. Aquí necesitas cambiar las opciones **gateway_ID**, **server_address**, **serv_port_up** y **serv_port_down** como sigue
+- **Paso 9:** En la reTerminal Industrial, edita el archivo **global_conf_json** que usamos junto con el comando **lora_pkt_fwd**. Aquí necesitas cambiar las opciones **gateway_ID**, **server_address**, **serv_port_up** y **serv_port_down** como se indica a continuación
 
-  - gateway_ID: EUI del Concentrador del dispositivo
-  - server_address: Dirección del Servidor de Gateway de TTN
+  - gateway_ID: Concentrator EUI del dispositivo
+  - server_address: Gateway Server Address de TTN
   - serv_port_up: 1700
   - serv_port_down: 1700
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/87.png"/></div>
 
-- **Paso 10:** Vuelve a ejecutar el reenviador de paquetes
+- **Paso 10:** Vuelve a ejecutar el packet forwarder
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-Si ves la siguiente salida, eso significa que el dispositivo se ha conectado exitosamente con TTN
+Si ves la siguiente salida, significa que el dispositivo se ha conectado correctamente con TTN
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/88.jpg"/></div>
 
@@ -612,7 +628,7 @@ Si ves la siguiente salida, eso significa que el dispositivo se ha conectado exi
 
 reServer Industrial viene con un conector M.2 Key B que soporta módulos 4G y 5G. Actualmente hemos probado el **módulo 5G SIM8202G-M2**
 
-### Descripción General de la Conexión del Módulo 5G
+### Descripción general de la conexión del módulo 5G
 
 - **Paso 1:** Apaga la placa si ya está encendida
 
@@ -620,29 +636,29 @@ reServer Industrial viene con un conector M.2 Key B que soporta módulos 4G y 5G
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/18.jpg"/></div>
 
-- **Paso 2:** Desliza el módulo 5G en la ranura M.2 Key B y atornilla el tornillo del separador para asegurar el módulo 5G en su lugar (hablar sobre el separador)
+- **Paso 2:** Inserta el módulo 5G en la ranura M.2 Key B y atornilla el tornillo del separador para fijar el módulo 5G en su lugar (hablar sobre el separador)
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/19.jpg"/></div>
 
-- **Paso 3:** Conecta 4 antenas a los conectores de antena en el módulo. Aquí necesitas usar un conector IPEX 4
+- **Paso 3:** Conecta 4 antenas a los conectores de antena del módulo. Aquí necesitas usar un conector IPEX 4
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/20.jpg"/></div>
 
-- **Paso 4:** Inserta una tarjeta nano SIM habilitada para 5G en la ranura de tarjeta SIM en la placa asegurándote de que la superficie dorada de la tarjeta SIM esté mirando hacia abajo. Aquí inserta la tarjeta completamente para que rebote después de golpear el resorte interno y se bloquee en su lugar.
+- **Paso 4:** Inserta una tarjeta nano SIM habilitada para 5G en la ranura de la tarjeta SIM de la placa asegurándote de que la superficie dorada de la tarjeta SIM esté hacia abajo. Aquí inserta la tarjeta hasta el fondo para que rebote después de golpear el muelle interno y quede bloqueada en su lugar.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/13.jpg"/></div>
 
 :::note
-Si quieres retirar la tarjeta SIM, empuja la tarjeta hacia adentro para presionar el resorte interno de modo que la SIM salga de la ranura
+Si quieres retirar la tarjeta SIM, empuja la tarjeta hacia dentro para golpear el muelle interno de modo que la SIM salga de la ranura
 :::
 
 - **Paso 5:** Enciende la placa
 
-### Uso del Módulo 5G - Prueba de Marcado
+### Uso del módulo 5G - Prueba de llamada
 
-Al usar el módulo 5G SIM8202G-M2, el módulo no se iniciará automáticamente. Por lo tanto, primero necesitamos alternar algunos GPIOs para hacerlo iniciar
+Cuando se utiliza el módulo 5G SIM8202G-M2, el módulo no se iniciará automáticamente. Así que primero necesitamos conmutar algunos GPIO para que arranque
 
-- **Paso 1:** Ingresa lo siguiente para iniciar el módulo 5G
+- **Paso 1:** Introduce lo siguiente para iniciar el módulo 5G
 
 ```sh
 sudo su 
@@ -665,32 +681,32 @@ echo out > direction
 echo 0 > value
 ```
 
-Una vez que se ejecute lo anterior, el LED2 se encenderá en verde
+Una vez que lo anterior se ejecute, el LED2 se encenderá en verde
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/15.jpg"/></div>
 
-- **Paso 2:** Instalar minicom
+- **Paso 2:** Instala minicom
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **Paso 3:** Ingresa a la consola serie del módulo 5G conectado para que podamos introducir comandos AT e interactuar con el módulo 5G
+- **Paso 3:** Entra en la consola serie del módulo 5G conectado para que podamos introducir comandos AT e interactuar con el módulo 5G
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Paso 4:** Ingresa el comando **"AT"** y presiona enter. Si ves la respuesta como "OK", el módulo 5G está funcionando correctamente
+- **Paso 4:** Introduce el comando **"AT"** y pulsa intro. Si ves la respuesta "OK", el módulo 5G está funcionando correctamente
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/107.png"/></div>
 
-- **Paso 6:** Ingresa el comando **"ATI"** para verificar la información del módulo
+- **Paso 6:** Introduce el comando **"ATI"** para comprobar la información del módulo
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-- **Paso 7:** Para probar el módulo, ingresa el siguiente comando para llamar a otro número de teléfono
+- **Paso 7:** Para probar el módulo, introduce el siguiente comando para llamar a otro número de teléfono
 
 ```sh
 ATD<phone_number>;
@@ -700,41 +716,41 @@ Y verás la siguiente salida
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
-### Uso del Módulo 5G - Conectar a Internet
+### Uso del módulo 5G - Conectarse a Internet
 
 Próximamente
 
 ## DI/ DO
 
-reServer Industrial soporta 4 canales de entrada digital y 4 canales de salida digital, todos los cuales están aislados ópticamente para proteger efectivamente la placa principal de picos de voltaje u otras perturbaciones eléctricas. También hay una interfaz CAN en este mismo conector que discutiremos más adelante en esta wiki
+reServer Industrial soporta 4 canales de entrada digital y 4 canales de salida digital, todos los cuales están ópticamente aislados para proteger eficazmente la placa principal de picos de tensión u otras perturbaciones eléctricas. También hay una interfaz CAN en este mismo conector que trataremos más adelante en este wiki
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/37.png"/></div>
 
-### Tabla de Asignación de Pines DI/ DO
+### Tabla de asignación de pines DI/ DO
 
 <table>
   <thead>
     <tr>
-      <th>Tipo</th>
-      <th>Nombre de Etiqueta</th>
-      <th>Señal de Esquemático</th>
-      <th>Número de Pin del Módulo</th>
-      <th>Número BGA</th>
-      <th>Número GPIO</th>
-      <th>Límites V/A</th>
-      <th>Nota</th>
+      <th>Type</th>
+      <th>Label Name</th>
+      <th>Schematic Signal</th>
+      <th>Module Pin Number</th>
+      <th>BGA Number</th>
+      <th>GPIO Number</th>
+      <th>V/A Limits</th>
+      <th>Note</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>Entrada</td>
+      <td rowSpan={4}>Input</td>
       <td>DI1</td>
       <td>DI_1_GPIO01</td>
       <td>118</td>
       <td>PQ.05</td>
       <td>453</td>
-      <td rowSpan={4}>12V/ 20mA corriente en total</td>
-      <td rowSpan={4}>Entrada Digital de 12V, la señal de tierra necesita<br />estar conectada a GND_DI (Pin2/4/6)</td>
+      <td rowSpan={4}>12V/ 20mA current in total</td>
+      <td rowSpan={4}>Entrada digital de 12V, la señal de tierra debe<br />estar conectada a GND_DI (Pin2/4/6)</td>
     </tr>
     <tr>
       <td>DI2</td>
@@ -758,14 +774,14 @@ reServer Industrial soporta 4 canales de entrada digital y 4 canales de salida d
       <td>391</td>
     </tr>
     <tr>
-      <td rowSpan={4}>Salida</td>
+      <td rowSpan={4}>Output</td>
       <td>DO1</td>
       <td>DO_1_GPIO</td>
       <td>193</td>
       <td>PI.00</td>
       <td>399</td>
-      <td rowSpan={4}>40V/40mA carga por pin</td>
-      <td rowSpan={4}>Salida digital, voltaje máximo de resistencia<br />40V, la señal de tierra necesita estar<br />conectada a GND_DO(Pin8/10)</td>
+      <td rowSpan={4}>40V/40mA load per pin</td>
+      <td rowSpan={4}>Salida digital, tensión máxima soportada<br />40V, la señal de tierra debe estar conectada a<br />GND_DO(Pin8/10)</td>
     </tr>
     <tr>
       <td>DO2</td>
@@ -792,17 +808,17 @@ reServer Industrial soporta 4 canales de entrada digital y 4 canales de salida d
       <td>CAN</td>
       <td>CH</td>
       <td colSpan={5} rowSpan={2}>/</td>
-      <td rowSpan={2}>Bus CAN con señales diferenciales estándar, <br />la señal de tierra necesita estar conectada a GND_ISO (Pin 12)</td>
+      <td rowSpan={2}>Bus CAN con señales diferenciales estándar, <br />la señal de tierra debe estar conectada a GND_ISO (Pin 12)</td>
     </tr>
     <tr>
       <td />
       <td>CL</td>
     </tr>
     <tr>
-      <td>Tierra</td>
+      <td>Ground</td>
       <td>GND_DI</td>
       <td colSpan={5} rowSpan={3}>/</td>
-      <td>La señal de tierra de referencia para la Entrada<br />Digital de 12V, que también es la ruta de retorno para el DI</td>
+      <td>La señal de tierra de referencia para la entrada digital de 12V,<br />que también es la ruta de retorno para el DI</td>
     </tr>
     <tr>
       <td />
@@ -817,19 +833,24 @@ reServer Industrial soporta 4 canales de entrada digital y 4 canales de salida d
   </tbody>
 </table>
 
-### Descripción general de conexión para DI
+### Descripción general de la conexión para DI
 
-Puedes realizar la conexión para DI siguiendo el diagrama a continuación. Es mejor agregar una resistencia en serie para la línea DI. Aquí hemos probado con una resistencia de 4.7kΩ conectada al pin DI1.
+Puedes realizar la conexión para DI siguiendo el diagrama de abajo. Es mejor añadir una resistencia en serie para la línea DI. Aquí hemos probado con una resistencia de 4,7kΩ conectada al pin DI1.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/38.png"/></div>
 
 ### Uso para DI
 
-Necesitas ingresar un voltaje de 12V en la línea DI para que sea detectado como una entrada
+Necesitas introducir un voltaje de 12V en la línea DI para que sea detectada como una entrada. El comando para habilitar DI / DO es diferente entre Jetpack 5 y Jetpack 6. 
 
-- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DI1** e ingresa **12V**
 
-- **Paso 2:** Abre el GPIO para DI1 de la siguiente manera
+
+<Tabs>
+<TabItem value="Jetpack 5" label="Jetpack 5">
+
+- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DI1** e introduce **12V**
+
+- **Paso 2:** Abre el GPIO para DI1 como se indica a continuación
 
 ```sh
 sudo su 
@@ -839,30 +860,65 @@ cd PQ.05
 ```
 
 :::note
-Puedes consultar la **Tabla de Asignación de Pines DI/DO** para encontrar el número GPIO y el número BGA. En el ejemplo anterior, para el pin DI1, el número GPIO es 453 y el número BGA es PQ.05
+Puedes consultar la **Tabla de asignación de pines DI/ DO** para encontrar el número de GPIO y el número BGA. En el ejemplo anterior, para el pin DI1, el número de GPIO es 453 y el número BGA es PQ.05
 :::
 
-**Paso 3:** Ejecuta lo siguiente para verificar el estado
+- **Paso 3:** Ejecuta lo siguiente para comprobar el estado
 
 ```sh
 cat value
 ```
 
-Si devuelve 0, significa que hay entrada de 12V. Si devuelve 1, significa que no hay voltaje de entrada.
+Si la salida es 0, significa que hay una entrada de 12V. Si la salida es 1, significa que no hay voltaje de entrada.
 
-### Descripción General de Conexión para DO
+</TabItem>
+<TabItem value="Jetpack 6" label="Jetpack 6">
 
-Puedes realizar la conexión para DO siguiendo el diagrama a continuación. Es mejor añadir una resistencia en serie para la línea DO. Aquí hemos probado con una resistencia de 4.7kΩ
+- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DI1** e introduce **12V**
+
+- **Paso 2:** Comprueba el **line offset** de DI1 en chip0:
+
+```sh
+gpioinfo gpiochip0
+```
+Encuentra el **line offset** correspondiente según el número BGA. El **line offset** de DI1 es `105`.
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-di.jpg"/></div>
+
+
+:::note
+Puedes consultar la **Tabla de asignación de pines DI/ DO** para encontrar el número de GPIO y el número BGA. En el ejemplo anterior, para el pin DI1, el número de GPIO es 453 y el número BGA es PQ.05	
+:::
+
+- **Paso 3:**
+Para leer el **line offset 105** en gpiochip0, correspondiente a DI1:
+```sh
+sudo gpioget gpiochip0 105
+```
+Una salida de 0 indica un nivel bajo. Una salida de 1 indica un nivel alto.  
+El formato del comando es el siguiente `sudo gpioset <gpiochip> <line>`.
+
+</TabItem>
+</Tabs>
+
+
+### Descripción general de la conexión para DO
+
+Puedes realizar la conexión para DO siguiendo el diagrama de abajo. Es mejor añadir una resistencia en serie para la línea DO. Aquí hemos probado con una resistencia de 4.7kΩ
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/39.png"/></div>
 
 ### Uso para DO
 
-Aquí necesitas conectar una carga como se menciona en el diagrama anterior. La forma más fácil de probar esto sería conectar un multímetro si tienes acceso a uno, o de lo contrario conectar una carga que requiera menos de 40V de voltaje máximo
+Aquí necesitas conectar una carga como se indica en el diagrama anterior. La forma más sencilla de probar esto sería conectar un multímetro si tienes acceso a uno, o bien conectar una carga que requiera menos de 40V de voltaje máximo. El comando para habilitar DI / DO es diferente entre Jetpack 5 y Jetpack 6. 
 
-- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DO1** e ingresa **40V como máximo**
 
-- **Paso 2:** Abre el GPIO para D01 de la siguiente manera
+<Tabs>
+<TabItem value="Jetpack 5" label="Jetpack 5">
+
+- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DO1** e introduce **40V como máximo**
+
+- **Paso 2:** Abre el GPIO para D01 como se indica a continuación
 
 ```sh
 sudo su 
@@ -873,36 +929,70 @@ echo out > direction
 ```
 
 :::note
-Puedes consultar la **Tabla de Asignación de Pines DI/DO** para encontrar el número GPIO y el número BGA. En el ejemplo anterior, para el pin DO1, el número GPIO es 399 y el número BGA es PI.00
+Puedes consultar la **Tabla de asignación de pines DI/ DO** para encontrar el número de GPIO y el número BGA. En el ejemplo anterior, para el pin DO1, el número de GPIO es 399 y el número BGA es PI.00
 :::
 
-- **Paso 3:** Ejecuta lo siguiente para activar el pin
+- **Paso 3:** Ejecuta lo siguiente para encender el pin
 
 ```sh
 echo 1 > value
 ```
 
-Si la carga está encendida o el multímetro muestra el voltaje que has introducido, la prueba indica que está funcionando correctamente.
+</TabItem>
+<TabItem value="Jetpack 6" label="Jetpack 6">
+
+- **Paso 1:** Realiza las conexiones como se muestra arriba al **pin DO1** e introduce **40V como máximo**
+
+- **Paso 2:** Comprueba el **line offset** de DO1 en chip0:
+
+```sh
+gpioinfo gpiochip0
+```
+Encuentra el **line offset** correspondiente según el número BGA. El **line offset** de DO1 es `51`.
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-do.jpg"/></div>
+
+
+
+:::note
+Puedes consultar la **Tabla de asignación de pines DI/ DO** para encontrar el número de GPIO y el número BGA. En el ejemplo anterior, para el pin DO1, el número de GPIO es 399 y el número BGA es PI.00
+:::
+
+- **Paso 3:**
+Utiliza el siguiente comando para controlar el estado de DO1:
+```sh
+# set to 12v
+sudo gpioset --mode=wait gpiochip0 51=0
+
+# set to 0v
+sudo gpioset --mode=wait gpiochip0 51=1
+```
+El formato del comando es el siguiente `sudo gpioset <gpiochip> <line>=<value>`.
+
+</TabItem>
+</Tabs>
+
+Si la carga se enciende o el multímetro muestra el voltaje que has introducido, la prueba está funcionando correctamente.
 
 ## CAN
 
-reServer Industrial cuenta con una interfaz CAN que soporta el protocolo CAN FD (Controller Area Network Flexible Data-Rate) a 5Mbps. La interfaz CAN está aislada usando aislamiento capacitivo, lo que proporciona excelente protección EMI y asegura comunicación confiable en aplicaciones industriales y de automatización. Una resistencia terminal de 120Ω ha sido instalada por defecto y puedes activar y desactivar esta resistencia usando GPIO.
+reServer Industrial incorpora una interfaz CAN que soporta el protocolo CAN FD (Controller Area Network Flexible Data-Rate) a 5Mbps. La interfaz CAN está aislada mediante aislamiento capacitivo, lo que proporciona una excelente protección EMI y garantiza una comunicación fiable en aplicaciones industriales y de automatización. Se ha instalado por defecto una resistencia terminal de 120Ω y puedes activar o desactivar esta resistencia usando GPIO.
 
-Nota: La interfaz CAN usa una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz CAN debe conectarse al pin CG
+Nota: La interfaz CAN utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra para los dispositivos externos conectados a la interfaz CAN debe conectarse al pin CG
 
-### Descripción General de Conexión con Adaptador USB a CAN
+### Descripción general de la conexión con adaptador USB a CAN
 
-Para probar e interfaz con el bus CAN, conecta un adaptador USB a CAN a los conectores CAN en la placa como se muestra a continuación
+Para probar e interconectarse con el bus CAN, conecta un adaptador USB a CAN a los conectores CAN de la placa como se muestra a continuación
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/40.png"/></div>
 
-Aquí hemos usado [Adaptador Analizador USB a CAN con Cable USB](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) disponible en nuestro Bazaar.
+Aquí hemos utilizado el [USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) disponible en nuestro Bazaar.
 
-### Uso con Adaptador USB a CAN
+### Uso con adaptador USB a CAN
 
-- **Paso 1:** Descarga el controlador para el adaptador USB a CAN que estás usando desde el sitio web del fabricante e instálalo. En nuestro caso, según el adaptador que usamos, los controladores se pueden encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)
+- **Paso 1:** Descarga el controlador para el adaptador USB a CAN que estés utilizando desde la página web del fabricante e instálalo. En nuestro caso, según el adaptador que usamos, los controladores se pueden encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)
 
-- **Paso 2:** Algunos adaptadores también vienen con el software necesario para la PC para comunicarse con el dispositivo CAN. En nuestro caso, según el adaptador que usamos, hemos descargado e instalado el software que se puede encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
+- **Paso 2:** Algunos adaptadores también incluyen el software necesario para el PC con el fin de comunicarse con el dispositivo CAN. En nuestro caso, según el adaptador que usamos, hemos descargado e instalado el software que se puede encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
 
 - **Paso 3:** Abre una ventana de terminal en el reServer Industrial y ejecuta los siguientes comandos para configurar y habilitar la interfaz CAN
 
@@ -912,27 +1002,27 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **Paso 4:** Escribe **ifconfig** en la terminal y verás la interfaz CAN habilitada
+- **Paso 4:** Escribe **ifconfig** en el terminal y verás que la interfaz CAN está habilitada
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **Paso 5:** Abre el software CAN que instalaste anteriormente. En este caso, abriremos el software que instalamos según el adaptador CAN que estamos usando
+- **Paso 5:** Abre el software CAN que has instalado antes. En este caso, abriremos el software que instalamos según el adaptador CAN que estamos utilizando
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/></div>
 
-- **Paso 6:** Conecta el adaptador USB a CAN a la PC y abre el **Administrador de dispositivos** buscándolo en la barra de búsqueda de Windows. Ahora verás el adaptador conectado bajo **Puertos (COM y LPT)**. Anota el puerto serie que aparece aquí. Según la imagen de abajo, el puerto serie es **COM9**
+- **Paso 6:** Conecta el adaptador USB a CAN al PC y abre el **Device Manager** buscándolo en la barra de búsqueda de Windows. Ahora verás el adaptador conectado bajo **Ports (COM & LPT)**. Toma nota del puerto serie que aparece aquí. Según la imagen de abajo, el puerto serie es **COM9**
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/></div>
 
-- **Paso 7:** Abre el software CAN, haz clic en **Refresh** junto a la sección **COM**, haz clic en el menú desplegable y selecciona el puerto serie según el adaptador conectado. Mantén el **COM bps** en el valor predeterminado y haz clic en **Open**
+- **Paso 7:** Abre el software CAN, haz clic en **Refresh** junto a la sección **COM**, haz clic en el menú desplegable y selecciona el puerto serie según el adaptador conectado. Mantén **COM bps** por defecto y haz clic en **Open**
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/></div>
 
-- **Paso 8:** Mantén el **Mode** y **CAN bps** en los valores predeterminados, cambia el **Type** a **Standard frame** y haz clic en **Set and Start**
+- **Paso 8:** Mantén **Mode** y **CAN bps** por defecto, cambia **Type** a **Standard frame** y haz clic en **Set and Start**
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/></div>
 
-- **Paso 9:** En reServer Industrial, ejecuta el siguiente comando para enviar una señal CAN a la PC
+- **Paso 9:** En el reServer Industrial, ejecuta el siguiente comando para enviar una señal CAN al PC
 
 ```sh
 cansend can0 123#abcdabcd
@@ -942,7 +1032,7 @@ Ahora verás la señal anterior recibida por el software como se muestra a conti
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/></div>
 
-- **Paso 10:** En reServer Industrial, ejecuta el siguiente comando para esperar a recibir señales CAN desde la PC
+- **Paso 10:** En el reServer Industrial, ejecuta el siguiente comando para esperar a recibir señales CAN desde el PC
 
 ```sh
 candump can0 &
@@ -952,7 +1042,7 @@ candump can0 &
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/></div>
 
-Ahora verás que es recibido por reServer Industrial como se muestra a continuación
+Ahora verás que es recibido por el reServer Industrial como se indica a continuación
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
@@ -960,13 +1050,13 @@ Ahora verás que es recibido por reServer Industrial como se muestra a continuac
 
 Si tienes acceso a un [reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-p-5616.html), puedes comunicarte con él directamente porque reTerminal DM también tiene una interfaz CAN.
 
-Consulta la imagen a continuación para conectar reServer Industrial y reTerminal DM a través de CAN
+Consulta la imagen de abajo para conectar reServer Industrial y reTerminal DM mediante CAN
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/49.png"/></div>
 
 ### Uso con reTerminal DM
 
-- **Paso 1:** Antes de usar reTerminal DM, visita [esta wiki](https://wiki.seeedstudio.com/es/reterminal-dm) para comenzar con reTerminal DM
+- **Paso 1:** Antes de usar reTerminal DM, visita [este wiki](https://wiki.seeedstudio.com/es/reterminal-dm) para comenzar con reTerminal DM
 
 - **Paso 2:** Abre una ventana de terminal en el reServer Industrial y ejecuta los siguientes comandos para configurar y habilitar la interfaz CAN
 
@@ -996,7 +1086,7 @@ sudo ip link set can0 up
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **Paso 6:** En el reTerminal DM, ejecuta lo siguiente para esperar a recibir señales CAN del reServer Industrial
+- **Paso 6:** En el reTerminal DM, ejecuta lo siguiente para esperar a recibir señales CAN desde el reServer Industrial
 
 ```sh
 candump can0 &
@@ -1008,21 +1098,21 @@ candump can0 &
 cansend can0 123#abcdabcd
 ```
 
-Ahora lo verás recibido por reTerminal DM de la siguiente manera
+Ahora verás que es recibido por el reTerminal DM como se muestra a continuación
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
-- **Paso 8:** Repite el **paso 6 y paso 7** pero intercambiando los dispositivos. Usa reTerminal DM para enviar señales CAN y usa reServer Industrial para recibirlas
+- **Paso 8:** Repite el **paso 6 y el paso 7** pero intercambiando los dispositivos. Usa el reTerminal DM para enviar señales CAN y usa el reServer Industrial para recibirlas
 
 ## Interfaces RS232/ RS422/ RS485
 
-reServer Industrial tiene un conector DB9 que soporta los protocolos de comunicación RS232, RS422 y RS485 y hay un panel de interruptores DIP a bordo para cambiar entre las diferentes opciones de interfaz
+reServer Industrial tiene un conector DB9 que admite los protocolos de comunicación RS232, RS422 y RS485 y hay un panel de interruptores DIP a bordo para cambiar entre las diferentes opciones de interfaz
 
 Puedes ver el panel de interruptores DIP como se muestra a continuación:
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/21.jpg"/></div>
 
-Y la siguiente tabla explica los diferentes modos basados en las posiciones de los interruptores DIP
+Y la siguiente tabla explica los diferentes modos según las posiciones de los interruptores DIP
 
 <table>
   <thead>
@@ -1049,7 +1139,7 @@ Y la siguiente tabla explica los diferentes modos basados en las posiciones de l
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>RS-232 Puro</td>
+      <td>Pure RS-232</td>
       <td>3T/5R RS-232</td>
     </tr>
     <tr>
@@ -1058,7 +1148,7 @@ Y la siguiente tabla explica los diferentes modos basados en las posiciones de l
       <td>1</td>
       <td>0</td>
       <td>RS-485 Half Duplex</td>
-      <td>1T/1R RS-485 ,TX ENABLE Activo Bajo</td>
+      <td>1T/1R RS-485 ,TX ENABLE Low Active</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/55.png" alt="Image" width={200} height={127} /></td>
@@ -1066,7 +1156,7 @@ Y la siguiente tabla explica los diferentes modos basados en las posiciones de l
       <td>1</td>
       <td>1</td>
       <td>RS-485 Half Duplex</td>
-      <td>1T/1R RS-485 ,TX ENABLE Activo Alto</td>
+      <td>1T/1R RS-485 ,TX ENABLE High Active</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/56.png" alt="Image" width={200} height={127} /></td>
@@ -1074,21 +1164,21 @@ Y la siguiente tabla explica los diferentes modos basados en las posiciones de l
       <td>0</td>
       <td>0</td>
       <td>RS-422 Full Duplex</td>
-      <td>1T/1R RS-422 con resistor de terminación</td>
+      <td>1T/1R RS-422 with termination resistor</td>
     </tr>
     <tr>
       <td rowSpan={3}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/57.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={3}>1</td>
       <td rowSpan={3}>0</td>
       <td rowSpan={3}>1</td>
-      <td rowSpan={3}>RS-232 Puro</td>
-      <td>1T/1R RS-232 coexiste con RS485</td>
+      <td rowSpan={3}>Pure RS-232</td>
+      <td>1T/1R RS-232 co-exists with RS485</td>
     </tr>
     <tr>
-      <td>aplicación sin la necesidad del bus</td>
+      <td>application without the need for the bus</td>
     </tr>
     <tr>
-      <td>IC conmutador (para uso especial).</td>
+      <td>switch IC (for special usage).</td>
     </tr>
     <tr>
       <td rowSpan={2}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/58.png" alt="Image" width={200} height={127} /></td>
@@ -1096,30 +1186,30 @@ Y la siguiente tabla explica los diferentes modos basados en las posiciones de l
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>0</td>
       <td rowSpan={2}>RS-485 Half Duplex</td>
-      <td>1T/1R RS-485 con resistor de terminación</td>
+      <td>1T/1R RS-485 with termination resistor</td>
     </tr>
     <tr>
-      <td>TX ENABLE Activo Bajo</td>
+      <td>TX ENABLE Low Active</td>
     </tr>
     <tr>
       <td rowSpan={2}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/59.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
-      <td>Bajo Consumo</td>
-      <td rowSpan={2}>Todos los pines I/O están en Alta Impedancia</td>
+      <td>Low Power</td>
+      <td rowSpan={2}>All I/O pins are High Impedance</td>
     </tr>
     <tr>
-      <td>Apagado</td>
+      <td>Shutdown</td>
     </tr>
   </tbody>
 </table>
 
 :::note
-De fábrica, el modo predeterminado de los interruptores estará configurado en RS485 con 010
+Recién sacado de la caja, el modo predeterminado de los interruptores estará configurado en RS485 con 010 desde fábrica
 :::
 
-La tabla anterior tiene en cuenta los primeros tres interruptores del panel de interruptores DIP. Sin embargo, el cuarto interruptor es responsable de alternar la velocidad de cambio que está directamente relacionada con la velocidad de datos
+La tabla anterior tiene en cuenta los primeros tres interruptores del panel de interruptores DIP. Sin embargo, el cuarto interruptor es responsable de alternar la velocidad de transición (slew rate), que está directamente relacionada con la velocidad de datos
 
 <table>
   <thead>
@@ -1133,27 +1223,27 @@ La tabla anterior tiene en cuenta los primeros tres interruptores del panel de i
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/62.png" alt="Image" width={200} height={127} /></td>
       <td>1</td>
-      <td>SLEW= Vcc<br />Este Transceptor Multiprotocolo RS232/RS422/RS485 limita la velocidad de comunicación como sigue:<br />RS-232: La Velocidad de Datos Máxima es 1.5Mbps<br />RS-485/RS-422; La Velocidad de Datos Máxima es 10Mbps<br />La Velocidad de Datos Máxima real depende del Jetson SO M utilizado</td>
+      <td>SLEW= Vcc<br />Este transceptor multiprotocolo RS232/RS422/RS485 limita la velocidad de comunicación de la siguiente manera:<br />RS-232: la velocidad de datos máxima es 1.5Mbps<br />RS-485/RS-422; la velocidad de datos máxima es 10Mbps<br />La velocidad de datos máxima real depende del Jetson SO Mused</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/63.png" alt="Image" width={200} height={127} /></td>
       <td>0</td>
-      <td>SLEW = GND<br />RS-232: La Velocidad de Datos Máxima es 250Kbps<br />RS-485/RS-422: La Velocidad de Datos Máxima es 250kbps</td>
+      <td>SLEW = GND<br />RS-232: la velocidad de datos máxima es 250Kbps<br />RS-485/RS-422: la velocidad de datos máxima es 250kbps</td>
     </tr>
   </tbody>
 </table>
 
-Aquí utilizaremos adaptadores USB a RS232, RS485 y RS422 para probar las interfaces. Así que antes de continuar, necesitas instalar una aplicación de terminal serie en tu PC. Aquí te recomendamos instalar **Putty** que es fácil de configurar y usar.
+Aquí usaremos adaptadores USB a RS232, RS485 y RS422 para probar las interfaces. Así que antes de continuar, necesitas instalar una aplicación de terminal serie en tu PC. Aquí te recomendamos instalar **Putty**, que es fácil de configurar y usar.
 
-- **Paso 1:** Visita [este sitio web](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) y descarga Putty según la arquitectura de tu PC
+- **Paso 1:** Visita [este sitio web](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) y descarga Putty de acuerdo con la arquitectura de tu PC
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
-Aquí hemos seleccionado Putty según el PC que utilizamos, que es una máquina X86 Windows de 64 bits
+Aquí hemos seleccionado Putty de acuerdo con el PC que usamos, que es una máquina Windows X86 de 64 bits
 
-- **Paso 2:** Abre la configuración descargada y sigue las indicaciones para instalar la aplicación
+- **Paso 2:** Abre el instalador descargado y sigue las indicaciones para instalar la aplicación
 
-### Descripción General de Conexión
+### Descripción general de la conexión
 
 Puedes consultar la numeración de pines del conector DB9 y la tabla para realizar las conexiones
 
@@ -1232,13 +1322,13 @@ Puedes consultar la numeración de pines del conector DB9 y la tabla para realiz
   </tbody>
 </table>
 
-### Descripción General de la Conexión RS232
+### Descripción general de la conexión RS232
 
-Aquí puedes usar un adaptador USB a RS232 para probar la interfaz. Hemos usado el [Adaptador USB a RS232 de UGREEN](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) para nuestras pruebas.
+Aquí puedes usar un adaptador USB a RS232 para probar la interfaz. Hemos utilizado el [Adaptador UGREEN USB a RS232](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) para nuestras pruebas.
 
 - **Paso 1:** Apaga la placa
 
-- **Paso 2:** Aquí tenemos 2 opciones para configurar los interruptores DIP. Ya sea en modo 001 o modo 101. Las posiciones de los interruptores para cada modo se muestran a continuación
+- **Paso 2:** Aquí tenemos 2 opciones para configurar los interruptores DIP. Ya sea en modo 001 o en modo 101. Las posiciones de los interruptores para cada modo se muestran a continuación
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
@@ -1250,24 +1340,24 @@ Aquí puedes usar un adaptador USB a RS232 para probar la interfaz. Hemos usado 
 
 ### Uso de RS232
 
-- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Administrador de dispositivos** en la búsqueda de Windows y verifica si puedes ver el adaptador conectado como un dispositivo COM.
+- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Device Manager** dentro de la búsqueda de Windows y comprueba si puedes ver el adaptador conectado como un dispositivo COM.
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador según el adaptador que estés usando. Generalmente puedes encontrar estos controladores en el sitio web del fabricante. Para el adaptador que estamos usando, puedes ir a [esta página](https://www.ugreen.com/pages/download), buscar **20201** como el número de modelo y descargar el controlador correspondiente
+- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador de acuerdo con el adaptador que estás usando. Generalmente puedes encontrar estos controladores en el sitio web del fabricante. Para el adaptador que estamos usando, puedes visitar [esta página](https://www.ugreen.com/pages/download), buscar **20201** como número de modelo y descargar el controlador en consecuencia
 
-- **Paso 3:** Abre Putty en la PC, selecciona la sección **Terminal** y configura lo siguiente
+- **Paso 3:** Abre Putty en el PC, selecciona la sección **Terminal** y configura lo siguiente
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Paso 4:** Selecciona **Session**, bajo **Connection type**, selecciona **Serial**, configura el número de puerto serie según lo que veas en el **Administrador de dispositivos**, mantén la velocidad como predeterminada (9600) y haz clic en **Open**
+- **Paso 4:** Selecciona **Session**, bajo **Coonection type**, selecciona **Serial**, establece el número de puerto serie según lo que veas en **Device Manager**, mantén la velocidad por defecto (9600) y haz clic en **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/71.jpg"/></div>
 
-- **Paso 4:** En la ventana del terminal del reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial a la PC
+- **Paso 4:** En la ventana de terminal del reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial al PC
 
 ```sh
 sudo chmod 777 /dev/ttyTHS0
@@ -1278,27 +1368,27 @@ Ahora verás este mensaje mostrado en Putty
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/72.jpg"/></div>
 
-- **Paso 5:** En la ventana del terminal de reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde la PC
+- **Paso 5:** En la ventana de terminal del reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde el PC
 
 ```sh
 sudo cat /dev/ttyTHS0
 ```
 
-- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana del terminal de reServer Industrial
+- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana de terminal del reServer Industrial
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-### Descripción General de la Conexión RS422
+### Descripción general de la conexión RS422
 
-Aquí puedes usar un adaptador USB a RS422 para probar la interfaz. Hemos usado el [Adaptador DTech USB a RS485](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nuestras pruebas.
+Aquí puedes usar un adaptador USB a RS422 para probar la interfaz. Hemos utilizado el [Adaptador DTech USB a RS485](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nuestras pruebas.
 
 - **Paso 1:** Apaga la placa
 
-- **Paso 2:** Aquí tenemos 2 opciones para configurar los interruptores DIP. Ya sea en modo 000 o modo 100. Las posiciones del interruptor para cada modo se muestran a continuación
+- **Paso 2:** Aquí tenemos 2 opciones para configurar los interruptores DIP. Ya sea en modo 000 o modo 100. Las posiciones de los interruptores para cada modo se muestran a continuación
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **Paso 3:** Conecta el adaptador USB a RS422 al conector DB9 usando cables puente como se muestra a continuación. Aquí hemos conectado el adaptador que mencionamos anteriormente
+- **Paso 3:** Conecta el adaptador de USB a RS422 al conector DB9 usando cables Jumper como se muestra a continuación. Aquí hemos conectado el adaptador que hemos mencionado arriba
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
@@ -1308,24 +1398,24 @@ Aquí puedes usar un adaptador USB a RS422 para probar la interfaz. Hemos usado 
 
 ### Uso de RS422
 
-- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Administrador de dispositivos** en la búsqueda de Windows y verifica si puedes ver el adaptador conectado como un dispositivo COM.
+- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Device Manager** dentro de la búsqueda de Windows y comprueba si puedes ver el adaptador conectado como un dispositivo COM.
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador según el adaptador que estés usando. Generalmente puedes encontrar estos controladores en el sitio web del fabricante. Para el adaptador que estamos usando, puedes [esta página](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
+- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador de acuerdo con el adaptador que estás usando. Generalmente puedes encontrar estos controladores en la página web del fabricante. Para el adaptador que estamos usando, puedes consultar [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
 
-- **Paso 3:** Abre Putty en la PC, selecciona la sección **Terminal** y configura lo siguiente
+- **Paso 3:** Abre Putty en el PC, selecciona la sección **Terminal** y configura lo siguiente
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Paso 4:** Selecciona **Session**, bajo **Connection type**, selecciona **Serial**, configura el número de puerto serie según lo que veas en el **Administrador de dispositivos**, mantén la velocidad como predeterminada (9600) y haz clic en **Open**
+- **Paso 4:** Selecciona **Session**, bajo **Coonection type**, selecciona **Serial**, establece el número de puerto serie de acuerdo con lo que ves en **Device Manager**, mantén la velocidad por defecto (9600) y haz clic en **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Paso 4:** En la ventana del terminal de reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial a la PC
+- **Paso 4:** En la ventana de terminal de reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial al PC
 
 ```sh
 sudo chmod 777 /dev/ttyTHS0
@@ -1334,25 +1424,25 @@ sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS0
 
 Ahora verás este mensaje mostrado en Putty
 
-- **Paso 5:** En la ventana del terminal de reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde la PC
+- **Paso 5:** En la ventana de terminal de reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde el PC
 
 ```sh
 sudo cat /dev/ttyTHS0
 ```
 
-- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana del terminal de reServer Industrial
+- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana de terminal de reServer Industrial
 
 ### Descripción general de la conexión RS485
 
-Aquí puedes usar un adaptador USB a RS422 para probar la interfaz. Hemos usado el [Adaptador USB a RS485 DTech](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nuestras pruebas.
+Aquí puedes usar un adaptador de USB a RS422 para probar la interfaz. Hemos utilizado [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) para nuestras pruebas.
 
 - **Paso 1:** Apaga la placa
 
-- **Paso 2:** Aquí tenemos 3 opciones para configurar los interruptores DIP. Ya sea en modo 010 o modo 011 o modo 110. Las posiciones del interruptor para cada modo se muestran a continuación
+- **Paso 2:** Aquí tenemos 3 opciones para configurar los interruptores DIP. Ya sea en modo 010 o modo 011 o modo 110. Las posiciones de los interruptores para cada modo se muestran a continuación
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **Paso 3:** Conecta el adaptador USB a RS422 al conector DB9 usando cables puente como se muestra a continuación. Aquí hemos conectado el adaptador que mencionamos anteriormente
+- **Paso 3:** Conecta el adaptador de USB a RS422 al conector DB9 usando cables Jumper como se muestra a continuación. Aquí hemos conectado el adaptador que hemos mencionado arriba
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
@@ -1362,24 +1452,24 @@ Aquí puedes usar un adaptador USB a RS422 para probar la interfaz. Hemos usado 
 
 ### Uso de RS485
 
-- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Administrador de dispositivos** en la búsqueda de Windows y verifica si puedes ver el adaptador conectado como un dispositivo COM.
+- **Paso 1:** Es posible que necesites instalar un controlador para el adaptador que estás usando o Windows instalará automáticamente el controlador por ti. Ve al Administrador de dispositivos escribiendo **Device Manager** dentro de la búsqueda de Windows y comprueba si puedes ver el adaptador conectado como un dispositivo COM.
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador según el adaptador que estés usando. Generalmente puedes encontrar estos controladores en el sitio web del fabricante. Para el adaptador que estamos usando, puedes [esta página](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
+- **Paso 2:** Si no puedes ver el adaptador, necesitas instalar el controlador de acuerdo con el adaptador que estás usando. Generalmente puedes encontrar estos controladores en la página web del fabricante. Para el adaptador que estamos usando, puedes consultar [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
 
-- **Paso 3:** Abre Putty en la PC, selecciona la sección **Terminal** y configura lo siguiente
+- **Paso 3:** Abre Putty en el PC, selecciona la sección **Terminal** y configura lo siguiente
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Paso 4:** Selecciona **Session**, bajo **Connection type**, selecciona **Serial**, configura el número de puerto serie según lo que veas en el **Administrador de dispositivos**, mantén la velocidad como predeterminada (9600) y haz clic en **Open**
+- **Paso 4:** Selecciona **Session**, bajo **Coonection type**, selecciona **Serial**, establece el número de puerto serie de acuerdo con lo que ves en **Device Manager**, mantén la velocidad por defecto (9600) y haz clic en **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Paso 4:** En la ventana del terminal de reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial a la PC
+- **Paso 4:** En la ventana de terminal de reServer Industrial, escribe lo siguiente para enviar una señal desde el reServer Industrial al PC
 
 ```sh
 sudo su 
@@ -1393,7 +1483,7 @@ echo "RS485 message from reServer Industrial" > /dev/ttyTHS0
 
 Ahora verás este mensaje mostrado en Putty
 
-- **Paso 5:** En la ventana del terminal de reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde la PC
+- **Paso 5:** En la ventana de terminal de reTerminal Industrial, escribe lo siguiente para esperar a recibir señales desde el PC
 
 ```sh
 sudo su
@@ -1405,46 +1495,46 @@ echo 1 > value
 cat /dev/ttyTHS0
 ```
 
-- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana del terminal de reServer Industrial
+- **Paso 6:** En Putty, escribe cualquier cosa, presiona **ENTER** y se mostrará en la ventana de terminal de reServer Industrial
 
 ## USB
 
-reServer Industrial viene con 3 conectores USB3.2 integrados y tiene las siguientes características:
+reServer Industrial viene con 3 conectores USB3.2 a bordo y tiene las siguientes características:
 
-- En los conectores USB apilados dobles, los puertos USB superior e inferior comparten un IC limitador de corriente, con una capacidad total de suministro de energía de 2.1A de corriente máxima de salida (uno solo también puede ser 2.1A). Si supera los 2.1A, entrará en estado de protección contra sobrecorriente.
-- En el conector USB individual junto a los conectores USB apilados dobles, tiene una capacidad total de suministro de energía de 2.1A de corriente máxima de salida. Si supera los 2.1A, entrará en estado de protección contra sobrecorriente.
-- El módulo Orin NX viene con 3 USB3.2, de los cuales solo uno se usa en reServer Industrial y se convierte a 3 vías. (USB3.1 TYPE-A x2 - J4 y USB3.1 TYPE-A
+- En los conectores USB apilados dobles, los puertos USB superior e inferior comparten un CI limitador de corriente, con una capacidad total de suministro de energía de 2.1A de corriente máxima de salida (uno solo también puede ser 2.1A). Si supera 2.1A, entrará en el estado de protección contra sobrecorriente.
+- En el conector USB único junto a los conectores USB apilados dobles, tiene una capacidad total de suministro de energía de 2.1A de corriente máxima de salida. Si supera 2.1A, entrará en el estado de protección contra sobrecorriente.
+- El módulo Orin NX viene con 3 USB3.2, de los cuales solo uno se usa en reServer Industrial y se convierte en 3 vías. (USB3.1 TYPE-A x2 - J4 y USB3.1 TYPE-A
 x1 -J3).
-- Solo admite USB Host, no modo Device
+- Solo admite USB Host, no el modo Device
 - Proporciona 5V 2.1A
 - Intercambiable en caliente
 
 ### Uso
 
-Explicaremos cómo hacer una prueba de rendimiento simple en una unidad flash USB conectada
+Explicaremos cómo hacer un benchmark sencillo en una unidad flash USB conectada
 
-- **Paso 1:** Verifica la velocidad de escritura ejecutando el siguiente comando
+- **Paso 1:** Comprueba la velocidad de escritura ejecutando el siguiente comando
 
 ```sh
 sudo dd if=/dev/zero of=/dev/$1 bs=100M count=10 conv=fdatasync
 ```
 
-- **Paso 2:** Verifica la velocidad de lectura ejecutando los siguientes comandos. Asegúrate de ejecutar esto después de ejecutar el comando anterior para la velocidad de escritura.
+- **Paso 2:** Comprueba la velocidad de lectura ejecutando los siguientes comandos. Asegúrate de ejecutarlos después de ejecutar el comando anterior para la velocidad de escritura.
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
 sudo dd if=/dev/$1 of=/dev/null bs=100M count=10
 ```
 
-### LED Configurable
+### LED configurable
 
-Hay un LED de color verde ubicado en la placa como se muestra a continuación. Por defecto actúa como el LED que muestra que el dispositivo está funcionando correctamente. Sin embargo, también puedes programar este LED para que se ENCIENDA y APAGUE mediante el sistema
+Hay un LED de color verde ubicado en la placa como se muestra a continuación. Por defecto actúa como el LED que muestra que el dispositivo está funcionando correctamente. Sin embargo, también puedes programar este LED para encenderlo y apagarlo mediante el sistema
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/22.jpg"/></div>
 
 ### Uso
 
-- **Paso 1:** Ingresa los siguientes comandos en una ventana de terminal para acceder al LED de color verde
+- **Paso 1:** Introduce los siguientes comandos en una ventana de terminal para acceder al LED de color verde
 
 ```sh
 sudo -i
@@ -1454,13 +1544,13 @@ cd PCC.01
 echo out > direction 
 ```
 
-**Paso 2:** Apagar el LED
+- **Paso 2:** Apaga el LED
 
 ```sh
 echo 0 > value 
 ```
 
-- **Paso 3:** Encender el LED
+- **Paso 3:** Enciende el LED
 
 ```sh
 echo 1 > value 
@@ -1473,16 +1563,16 @@ cd ..
 echo 329 > unexport
 ```
 
-## Monitorear el Rendimiento del Sistema
+## Supervisar el rendimiento del sistema
 
-Podemos usar la aplicación **jetson stats** para monitorear las temperaturas de los componentes del sistema y verificar otros detalles del sistema como
+Podemos usar la aplicación **jetson stats** para supervisar las temperaturas de los componentes del sistema y comprobar otros detalles del sistema tales como
 
-- Ver las utilizaciones de CPU, GPU, RAM
-- Cambiar modos de energía
-- Configurar a velocidades máximas de reloj
-- Verificar información de JetPack
+- Ver las utilizaciones de CPU, GPU y RAM
+- Cambiar los modos de energía
+- Establecer los relojes al máximo
+- Comprobar la información de JetPack
 
-- **Paso 1:** En las ventanas de terminal de reServer Industrial, escriba lo siguiente
+- **Paso 1:** En las ventanas de terminal de reServer Industrial, escribe lo siguiente
 
 ```sh
 sudo apt update
@@ -1496,25 +1586,25 @@ sudo pip3 install jetson-stats
 sudo reboot
 ```
 
-**Paso 3:** Escribe lo siguiente en la terminal
+- **Paso 3:** Escribe lo siguiente en el terminal
 
 ```sh
 jtop
 ```
 
-Ahora la aplicación **jtop** se abrirá de la siguiente manera
+Ahora la aplicación **jtop** se abrirá como se muestra a continuación
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/30.png"/></div>
 
-- **Paso 4:** ¡Aquí puedes navegar por las diferentes páginas de las aplicaciones y explorar todas las características!
+- **Paso 4:** Aquí puedes recorrer las diferentes páginas de las aplicaciones y explorar todas las funciones.
 
 ## TPM
 
-reServer Industrial viene con una interfaz TPM para conectar un módulo TPM externo. Aquí hemos probado con un Módulo TPM2.0 basado en Infineon SLB9670.
+reServer Industrial viene con una interfaz TPM para conectar un módulo TPM externo. Aquí hemos probado con un módulo TPM2.0 basado en Infineon SLB9670.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/24.jpg"/></div>
 
-### Descripción de la Conexión
+### Descripción general de la conexión
 
 Conecta el módulo TPM al conector TPM como se muestra a continuación
 
@@ -1522,22 +1612,22 @@ Conecta el módulo TPM al conector TPM como se muestra a continuación
 
 ### Uso
 
-Verifica si el módulo TPM está cargado correctamente ejecutando los siguientes comandos
+Comprueba si el módulo TPM está cargado correctamente ejecutando los siguientes comandos
 
 ```sh
 sudo dmesg | grep TPM
 ls /dev/tpm* -l
 ```
 
-Y verás la salida como sigue
+Y verás la salida como se muestra a continuación
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/116.png"/></div>
 
-## Máximo Rendimiento en reServer Industrial
+## Rendimiento máximo en reServer Industrial
 
-Si quieres habilitar el máximo rendimiento en el reServer Industrial, por favor sigue las siguientes instrucciones
+Si quieres habilitar el rendimiento máximo en el reServer Industrial, sigue las siguientes instrucciones
 
-- **Paso 1:** Ingresa el siguiente comando para habilitar el modo de máxima potencia
+- **Paso 1:** Introduce el siguiente comando para habilitar el modo de máxima potencia
 
 ```sh
 sudo nvpmodel -m 0
@@ -1545,9 +1635,9 @@ sudo nvpmodel -m 0
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/35.jpg"/></div>
 
-Aquí pedirá escribir **YES** para reiniciar la placa
+Aquí pedirá escribir **YES** para reiniciar la placa  
 
-- **Paso 2:** Una vez que la placa haya arrancado, ingrese el siguiente comando para establecer los relojes de la CPU a la frecuencia máxima
+- **Paso 2:** Una vez que la placa haya arrancado, introduce el siguiente comando para establecer las frecuencias de la CPU a la frecuencia máxima
 
 ```sh
 sudo jetson_clocks
@@ -1555,15 +1645,15 @@ sudo jetson_clocks
 
 ## Tabla GPIO
 
-Puedes acceder a la tabla GPIO del reServer Industrial para familiarizarte with todas las asignaciones de pines.
+Puedes acceder a la tabla GPIO del reServer Industrial para familiarizarte con todos los mapeos de pines.
 
-Ejecuta lo siguiente dentro de una terminal para acceder a ella
+Ejecuta lo siguiente dentro de un terminal para acceder a ella
 
 ```sh
 sudo cat /sys/kernel/debug/gpio
 ```
 
-Y verás la salida como sigue
+Y verás la salida como se muestra a continuación
 
 ```sh
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:
@@ -1786,16 +1876,16 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 
 ## Recursos
 
-(cambiar los enlaces)
+(cambia los enlaces)
 
 - [Hoja de datos de reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [Guía de referencia de reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
-- [Comparación de dispositivos NVIDIA Jetson y placas portadoras](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [Comparación de dispositivos NVIDIA Jetson y placas carrier](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [Archivo 3D de reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 
 ## Soporte técnico
 
-No dudes en enviar problemas a nuestro [foro](https://forum.seeedstudio.com/).
+No dudes en enviar incidencias en nuestro [foro](https://forum.seeedstudio.com/).
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
