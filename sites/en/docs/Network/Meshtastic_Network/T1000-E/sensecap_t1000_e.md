@@ -336,6 +336,8 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 - Charge the device for 1~2 hours
 
+- Unplug the USB cable, then hold the button down and plug the usb cable back in while continuing to hold the button for 5 seconds.
+
 - Change the charging cable
 
 - Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters: 
