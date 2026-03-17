@@ -9,8 +9,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiao_respeaker
 sku: 110061601
 last_update:
-  date: 7/1/2024
-  author: Jessie
+  date: 3/17/2026
+  author: Citric
 createdAt: '2024-07-03'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/xiao_respeaker/
@@ -134,7 +134,7 @@ Clone this project into the Arduino libraries folder e.g. with the following com
 
 ```
 cd  ~/Documents/Arduino/libraries
-git clone https://github.com/limengdu/reSpeaker_Lite-Arduino-Library.git
+git clone https://github.com/respeaker/respeaker_arduino_library.git
 ```
 
 Or download the library as `zip` file and add it to the library in Arduino IDE.
