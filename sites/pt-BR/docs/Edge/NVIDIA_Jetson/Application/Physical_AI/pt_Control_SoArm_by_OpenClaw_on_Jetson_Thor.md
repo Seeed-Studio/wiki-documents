@@ -1,6 +1,6 @@
 ---
 description: Este wiki mostra como controlar o SO-Arm no Jetson Thor com OpenClaw e LeRobot.
-title: Controlar o SO-Arm com OpenClaw no Jetson Thor
+title: Controlar SO-Arm com OpenClaw no Jetson Thor
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
 slug: /ai_robotics_control_soarm_by_openclaw_on_jetson_thor
 sku: 100060965 | 100046482
@@ -9,15 +9,15 @@ last_update:
   author: youjiang
 ---
 
-# Controlar o SO-Arm com OpenClaw no Jetson Thor
+# Controlar SO-Arm com OpenClaw no Jetson Thor
 
 ## Introdução
 
 Este wiki explica como combinar OpenClaw e LeRobot no Jetson Thor para controlar um SO-Arm com um agente de IA local.
 
-**NVIDIA Jetson AGX Thor** é uma plataforma de IA de borda de alto desempenho projetada para robótica e workloads de IA física, fornecendo forte capacidade de computação embarcada para percepção, planejamento e controle.
+**NVIDIA Jetson AGX Thor** é uma plataforma de IA de borda de alto desempenho projetada para robótica e cargas de trabalho de IA física, fornecendo forte capacidade de computação local para percepção, planejamento e controle.
 
-**SO-Arm** é uma plataforma de braço robótico open-source e de baixo custo (SO-ARM100/SO-ARM101) amplamente utilizada para experimentos de IA incorporada, teleoperação e desenvolvimento de tarefas de manipulação.
+**SO-Arm** é uma plataforma de braço robótico de baixo custo e código aberto (SO-ARM100/SO-ARM101) amplamente utilizada para experimentos de IA incorporada, teleoperação e desenvolvimento de tarefas de manipulação.
 
 **OpenClaw** é um framework de agente de IA que pode orquestrar ferramentas e modelos locais. Neste projeto, o OpenClaw é usado como a interface de controle de alto nível, enquanto o LeRobot fornece a comunicação de baixo nível com os motores e utilitários de calibração para o SO-Arm.
 
@@ -27,17 +27,17 @@ Este wiki explica como combinar OpenClaw e LeRobot no Jetson Thor para controlar
 </div>
 
 :::note
-Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de tarefas, enquanto a execução do movimento do SO-Arm é feita pelo LeRobot.
+Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de tarefas, enquanto a execução de movimento do SO-Arm é tratada pelo LeRobot.
 :::
 
-## Índice
+## Sumário
 
 1. [Preparação de Hardware](#preparação-de-hardware)
 2. [Configuração do Sistema no Jetson Thor](#configuração-do-sistema-no-jetson-thor)
 3. [Instalar Ollama e Executar um LLM Local](#instalar-ollama-e-executar-um-llm-local)
 4. [Instalar OpenClaw no Jetson Thor](#instalar-openclaw-no-jetson-thor)
-5. [Conectar e Calibrar o SO-Arm](#conectar-e-calibrar-o-so-arm)
-6. [Executar Demonstração de Controle](#executar-demonstração-de-controle)
+5. [Conectar e Calibrar SO-Arm](#conectar-e-calibrar-so-arm)
+6. [Executar Demo de Controle](#executar-demo-de-controle)
 7. [Referências](#referências)
 
 ## Preparação de Hardware
@@ -69,14 +69,14 @@ Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de t
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM-101-Assembled-Kit-Pro-p-6691.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -90,9 +90,9 @@ Neste guia, o OpenClaw lida com o planejamento do agente e a orquestração de t
 - Conecte o adaptador de energia DC correspondente à placa controladora do SO-Arm.
 - Ligue o Thor e depois ligue a placa controladora do braço.
 
-### Lista de Verificação ao Ligar
+### Checklist de Inicialização
 
-- O Thor inicializa normalmente e a rede está disponível.
+- Thor inicializa normalmente e a rede está disponível.
 - Os LEDs da placa controladora do SO-Arm estão acesos.
 - O dispositivo serial aparece após a conexão USB.
 
@@ -136,11 +136,9 @@ source ~/.bashrc
 Crie o ambiente LeRobot:
 
 ```bash
-conda create -y -n lerobot python=3.12
+conda create -y -n lerobot python=3.10
 conda activate lerobot
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
-cd ~/lerobot
-pip install -e . 
+pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
 pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 ```
@@ -148,7 +146,8 @@ pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 Instale o Pinocchio no ambiente LeRobot:
 
 ```bash
-conda install pinocchio -c conda-forge
+conda install mamba -y
+mamba install -c conda-forge pinocchio pinocchio-python libpinocchio -y
 ```
 
 ### Verificar CUDA e Dispositivos Periféricos
@@ -174,11 +173,11 @@ curl -fsSL https://ollama.com/install.sh | sh
 Baixe um modelo:
 
 ```bash
-ollama pull qwen3-vl:9b
+ollama pull qwen3.5:35b
 ```
 
 :::info
-Este guia usa `qwen3-vl:9b` como exemplo. Você pode substituí-lo por outro modelo do Ollama com base nas suas limitações de desempenho e memória.
+Este guia usa `qwen3.5:35b` como exemplo. Você pode substituí-lo por outro modelo Ollama com base nas suas restrições de desempenho e memória.
 :::
 
 ## Instalar OpenClaw no Jetson Thor
@@ -189,55 +188,138 @@ Este guia usa `qwen3-vl:9b` como exemplo. Você pode substituí-lo por outro mod
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-### Configurar Parâmetros de Runtime
+### Configurar Parâmetros de Execução
 
-Edite `~/.openclaw/openclaw.json` e defina o Ollama como o provedor de modelo padrão:
+Edite `~/.openclaw/openclaw.json` e defina o Ollama como provedor de modelo padrão:
+
+<details>
+
+<summary> openclaw.json </summary>
 
 ```json
 {
   "agents": {
     "defaults": {
-      "models": {
-        "ollama": {}
+      "compaction": {
+        "mode": "safeguard"
       },
+      "maxConcurrent": 4,
       "model": {
-        "primary": "ollama/qwen3-vl:9b"
+        "primary": "ollama/qwen3.5:35b"
+      },
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "workspace": "/home/seeed/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "tools": {
+          "profile": "full"
+        }
       }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "98aefed421e9a506a3174dab0575fd3cc36c9d15b856a894"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
     }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-10T06:45:16.014Z",
+    "lastTouchedVersion": "2026.3.8"
   },
   "models": {
     "providers": {
       "ollama": {
-        "baseUrl": "http://127.0.0.1:11434/v1",
+        "api": "ollama",
         "apiKey": "ollama-local",
-        "api": "openai-completions",
+        "baseUrl": "http://127.0.0.1:11434",
         "models": [
           {
-            "id": "qwen3-vl:9b",
-            "name": "Qwen3 VL 9B",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "contextWindow": 262144,
             "cost": {
-              "input": 0,
-              "output": 0,
               "cacheRead": 0,
-              "cacheWrite": 0
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
             },
-            "contextWindow": 128000,
-            "maxTokens": 8192
+            "id": "qwen3.5:35b",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5:35b",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "qwen3.5",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5",
+            "reasoning": true
           }
         ]
       }
     }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T02:17:28.382Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.8"
   }
 }
+
 ```
+</details>
 
 :::note
 Opcional: você também pode usar diretamente o script fornecido pelo Ollama para configurar rapidamente o arquivo de configuração do OpenClaw.
-
 `ollama launch openclaw --model qwen3.5`
 :::
 
@@ -245,13 +327,18 @@ Opcional: você também pode usar diretamente o script fornecido pelo Ollama par
 
 Instale a skill de controle do SO-Arm:
 
-- Baixe a [Skill soarm-control](https://clawhub.ai/yuyoujiang/soarm-control)
+- Baixe a [soarm-control Skill](https://clawhub.ai/yuyoujiang/soarm-control)
 - Extraia-a para `~/.openclaw/workspace/skills`
 
 Prepare o arquivo de descrição do robô:
 
-- Baixe o [URDF do SO-ARM101](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf)
+- Baixe o [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf)
 - Mova-o para `~/.openclaw/workspace/skills/soarm-control/references`
+
+[Opcional] Adicionar modelo de detecção: 
+- Treine um modelo de detecção (YoloV11n) conforme referência [aqui](https://wiki.seeedstudio.com/pt-br/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)
+- Mova o modelo de detecção (`best.pt`) para `~/.openclaw/workspace/skills/soarm-control/scripts`
+
 
 Reinicie o gateway do OpenClaw:
 
@@ -262,10 +349,15 @@ openclaw gateway restart
 Abra o WebUI:
 
 ```text
-http://127.0.0.1:18789/
+http://127.0.0.1:18789/wiki
 ```
 
-## Conectar e Calibrar o SO-Arm
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/webui.png" />
+</div>
+
+## Conectar e Calibrar SO-Arm
 
 ### Permissão e Detecção da Porta Serial
 
@@ -295,31 +387,26 @@ Para um passo a passo completo de calibração, consulte:
 [SO-Arm no LeRobot - Calibrate](https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/#calibrate)
 :::
 
-## Executar Demonstração de Controle
+## Executar Demo de Controle
 
-### Iniciar o Serviço OpenClaw
+### Iniciar Serviço de Backend
 
 Certifique-se de que os ambientes OpenClaw e LeRobot estão prontos:
 
 ```bash
 openclaw gateway restart
+
 conda activate lerobot
+cd ~/.openclaw/workspace/skills/soarm-control 
+bash scripts/start_server.sh &
 ```
 
 ### Executar Tarefa Básica de Movimento
 
-No WebUI do OpenClaw, insira instruções de controle do robô. O OpenClaw irá analisar o seu prompt e chamar a skill `soarm-control` instalada para mover o braço até a posição alvo.
-
-O vídeo demonstra três comandos:
-
-1. Mover o efetuador final do braço robótico para cima 20 cm.
-2. Em seguida mover 20 cm para frente, mantendo a altura inalterada.
-3. Retornar à posição inicial.
-
-As respostas do OpenClaw a esses três comandos correspondem totalmente ao comportamento esperado.
+No OpenClaw WebUI, insira instruções de controle do robô. O OpenClaw irá analisar seu prompt e chamar a skill `soarm-control` instalada para mover o braço até a posição alvo.
 
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/5fPBpAno2wc" title="Using OpenClaw to Control the SOARM 101 Robot Arm | Robotics Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Referências
@@ -331,9 +418,9 @@ As respostas do OpenClaw a esses três comandos correspondem totalmente ao compo
 - https://github.com/huggingface/lerobot
 - https://github.com/TheRobotStudio/SO-ARM100
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
