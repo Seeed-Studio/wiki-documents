@@ -77,7 +77,7 @@ A compacta câmera 3D Gemini 2 é baseada na tecnologia Active Stereo IR e é eq
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Dimensões mecânicas</td>
         <td style={{ height: "46px", width: "491px" }}>90mm x 25mm x 30mm</td>
-      </tr]
+      </tr>
 
       <tr style={{ height: "46px" }}>
         <td style={{ height: "46px", width: "132px" }}>Interface de comunicação</td>

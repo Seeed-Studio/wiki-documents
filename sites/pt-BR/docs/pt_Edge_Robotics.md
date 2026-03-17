@@ -189,7 +189,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
             <span className="text">Controle RobStride</span>
             <span className="tag recommended">Novo</span>
           </a>
-      </div]
+      </div>
 
       </div>
       </div>

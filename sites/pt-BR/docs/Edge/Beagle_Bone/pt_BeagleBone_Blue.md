@@ -106,7 +106,7 @@ BeagleBone® Blue combina a interface WiFi/Bluetooth WiLink™ flexível e de al
       </tr>
       <tr>
         <td className="tg-88pu">Wi-Fi Direct</td>
-      </tr]
+      </tr>
       <tr>
         <td className="tg-88pu">Malha sobre Wi-Fi baseada em 802.11s</td>
       </tr>

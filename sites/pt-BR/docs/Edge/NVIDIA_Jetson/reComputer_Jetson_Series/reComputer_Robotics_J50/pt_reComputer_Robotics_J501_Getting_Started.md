@@ -116,7 +116,7 @@ Pré-instalada com JetPack 6.2.1 e Linux BSP, garante uma implantação perfeita
     <tr>
       <th>USB</th>
       <td colSpan={2}>3x USB 3.0 Tipo-A<br/>1x USB 3.0 Tipo-C (Recovery)<br/>1x USB 2.0 Tipo-C (Debug UART)</td>
-    </tr]
+    </tr>
     <tr>
       <th>DI/DO/CAN</th>
       <td colSpan={2}>1x bloco de terminais 2x10P 3,81mm - 4x DI @12V + 4x DO @40V + 4x CAN (suporta CAN-FD, eletricamente isolado)</td>
