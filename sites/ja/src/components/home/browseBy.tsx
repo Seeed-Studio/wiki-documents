@@ -10,10 +10,11 @@ const getIndexImage = (src) => {
 };
 
 // 读取本地化标题（无则回退英文）
-function getLocalizedTitle(item: any, locale: 'en' | 'cn' | 'ja' | 'es') {
+function getLocalizedTitle(item: any, locale: 'en' | 'cn' | 'ja' | 'es' | 'pt-br') {
   if (locale === 'cn' && item.title_cn) return item.title_cn;
   if (locale === 'ja' && item.title_ja) return item.title_ja;
   if (locale === 'es' && item.title_es) return item.title_es;
+  if (locale === 'pt-br' && item.title_pt_br) return item.title_pt_br;
   return item.title;
 }
 
@@ -29,6 +30,7 @@ function IndexLatestedViki(props) {
     cn: { title: '浏览分类', more: '更多' },
     ja: { title: 'カテゴリーから探す', more: 'もっと見る' },
     es: { title: 'Explorar por', more: 'Más' },
+    'pt-br': { title: 'Explorar por', more: 'Mais' },
   } as const;
 
   const wikiList = [
@@ -44,6 +46,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 R2xxx 上使用 Frigate NVR 进行枪械检测',
           title_ja: 'R2xxx で Frigate NVR による銃検出',
           title_es: 'Detección de armas con Frigate NVR en R2xxx',
+          title_pt_br: 'Detecção de armas com Frigate NVR no R2xxx',
         },
         {
           path: '/openremote_r1x00',
@@ -52,6 +55,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 reComputer R 上部署 OpenRemote——边缘管理物联网设备',
           title_ja: 'reComputer R で OpenRemote をデプロイ—エッジで IoT デバイスを管理',
           title_es: 'Desplegar OpenRemote en reComputer R: gestionar dispositivos IoT en el Edge',
+          title_pt_br: 'Implantando o OpenRemote no reComputer R - Gerencie dispositivos IoT na borda',
         },
         {
           path: '/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson',
@@ -60,6 +64,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 NVIDIA Jetson 上实现语音字幕生成',
           title_ja: 'NVIDIA Jetson で音声字幕を生成',
           title_es: 'Generación de subtítulos por voz en NVIDIA Jetson',
+          title_pt_br: 'Geração de legendas por voz no NVIDIA Jetson',
         },
         {
           path: '/alwaysAI-Jetson-Getting-Started',
@@ -68,6 +73,7 @@ function IndexLatestedViki(props) {
           title_cn: '使用 AlwaysAI 实现目标检测',
           title_ja: 'AlwaysAI で物体検出',
           title_es: 'Detección de objetos con AlwaysAI',
+          title_pt_br: 'Detecção de objetos com AlwaysAI',
         },
         {
           path: '/YOLOv8-TRT-Jetson',
@@ -76,6 +82,7 @@ function IndexLatestedViki(props) {
           title_cn: '使用 TensorRT 在 NVIDIA Jetson 部署 YOLOv8',
           title_ja: 'TensorRT を用いて NVIDIA Jetson に YOLOv8 をデプロイ',
           title_es: 'Implementar YOLOv8 en NVIDIA Jetson con TensorRT',
+          title_pt_br: 'Implante o YOLOv8 no NVIDIA Jetson usando TensorRT',
         },
         {
           path: '/Lumeo-Jetson-Getting-Started',
@@ -84,6 +91,7 @@ function IndexLatestedViki(props) {
           title_cn: '使用 Lumeo 实现目标检测',
           title_ja: 'Lumeo で物体検出',
           title_es: 'Detección de objetos con Lumeo',
+          title_pt_br: 'Detecção de objetos com Lumeo',
         },
         {
           path: '/a_loam',
@@ -92,6 +100,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 reComputer 上运行 A-LOAM 三维 SLAM',
           title_ja: 'reComputer で A-LOAM 3D SLAM を実行する方法',
           title_es: 'Cómo ejecutar A-LOAM 3D SLAM en reComputer',
+          title_pt_br: 'Como executar o A-LOAM 3D SLAM no reComputer',
         },
         {
           path: '/CVEDIA-Jetson-Getting-Started',
@@ -100,6 +109,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 NVIDIA® Jetson 设备上使用 CVEDIA-RT 入门',
           title_ja: 'NVIDIA® Jetson デバイスでの CVEDIA-RT 入門',
           title_es: 'Introducción a CVEDIA-RT en dispositivos NVIDIA® Jetson',
+          title_pt_br: 'Introdução ao CVEDIA-RT em dispositivos NVIDIA® Jetson',
         }
       ]
     },
@@ -115,6 +125,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Seeed Studio XIAO ESP32S3（Sense）',
           title_ja: 'Seeed Studio XIAO ESP32S3（Sense）',
           title_es: 'Seeed Studio XIAO ESP32S3 (Sense)',
+          title_pt_br: 'Seeed Studio XIAO ESP32S3 (Sense)',
         },
         {
           path: '/XIAO_BLE',
@@ -123,6 +134,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Seeed Studio XIAO nRF52840（Sense）',
           title_ja: 'Seeed Studio XIAO nRF52840（Sense）',
           title_es: 'Seeed Studio XIAO nRF52840 (Sense)',
+          title_pt_br: 'Seeed Studio XIAO nRF52840 (Sense)',
         },
         {
           path: '/XIAO_ESP32C3_Getting_Started',
@@ -131,6 +143,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Seeed Studio XIAO ESP32C3',
           title_ja: 'Seeed Studio XIAO ESP32C3',
           title_es: 'Seeed Studio XIAO ESP32C3',
+          title_pt_br: 'Seeed Studio XIAO ESP32C3',
         },
         {
           path: '/xiao_esp32c6_getting_started',
@@ -139,6 +152,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Seeed Studio XIAO ESP32C6',
           title_ja: 'Seeed Studio XIAO ESP32C6',
           title_es: 'Seeed Studio XIAO ESP32C6',
+          title_pt_br: 'Seeed Studio XIAO ESP32C6',
         }, 
         {
           path: '/Seeeduino-XIAO',
@@ -147,6 +161,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Seeed Studio XIAO SAMD21',
           title_ja: 'Seeed Studio XIAO SAMD21',
           title_es: 'Seeed Studio XIAO SAMD21',
+          title_pt_br: 'Seeed Studio XIAO SAMD21',
         },
         {
           path: '/Grove-Beginner-Kit-For-Arduino',
@@ -155,6 +170,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Grove Arduino 入门套件',
           title_ja: 'Grove ビギナーキット（Arduino向け）',
           title_es: 'Kit para Principiantes Grove para Arduino',
+          title_pt_br: 'Kit Grove para Iniciantes com Arduino',
         },
         {
           path: '/Wio-Terminal-Getting-Started',
@@ -163,6 +179,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Wio Terminal',
           title_ja: 'Wio Terminal',
           title_es: 'Wio Terminal',
+          title_pt_br: 'Wio Terminal',
         }, 
         {
           path: '/Edgebox-ESP-100-Arduino',
@@ -171,6 +188,7 @@ function IndexLatestedViki(props) {
           title_cn: 'EdgeBox-ESP-100',
           title_ja: 'EdgeBox-ESP-100',
           title_es: 'EdgeBox-ESP-100',
+          title_pt_br: 'EdgeBox-ESP-100',
         }
       ]
     }, 
@@ -186,6 +204,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer AI R20 入门',
           title_ja: 'reComputer AI R20 入門',
           title_es: 'Introducción a reComputer AI R20',
+          title_pt_br: 'Introdução ao reComputer AI R20',
         }, 
         {
           path: '/recomputer_ai_industrial_r2135_getting_start',
@@ -194,6 +213,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer AI Industrial R21 入门',
           title_ja: 'reComputer AI Industrial R21 入門',
           title_es: 'Introducción a reComputer AI Industrial R21',
+          title_pt_br: 'Introdução ao reComputer AI Industrial R21',
         },
         {
           path: '/recomputer_industrial_r20xx_getting_start',
@@ -202,6 +222,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer Industrial R20 入门',
           title_ja: 'reComputer Industrial R20 入門',
           title_es: 'Introducción a reComputer Industrial R20',
+          title_pt_br: 'Introdução ao reComputer Industrial R20',
         },
         {
           path: '/recomputer_industrial_R21xx_getting_start',
@@ -210,6 +231,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer Industrial R21 入门',
           title_ja: 'reComputer Industrial R21 入門',
           title_es: 'Introducción a reComputer Industrial R21',
+          title_pt_br: 'Introdução ao reComputer Industrial R21',
         },
         {
           path: '/recomputer_r',
@@ -218,6 +240,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer R10 入门',
           title_ja: 'reComputer R10 入門',
           title_es: 'Introducción a reComputer R10',
+          title_pt_br: 'Introdução ao reComputer R10',
         }, 
         {
           path: '/recomputer_r1100_intro',
@@ -226,6 +249,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer R11 入门',
           title_ja: 'reComputer R11 入門',
           title_es: 'Introducción a reComputer R11',
+          title_pt_br: 'Introdução ao reComputer R11',
         },
         {
           path: '/reTerminal',
@@ -234,6 +258,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reTerminal 入门',
           title_ja: 'reTerminal 入門',
           title_es: 'Introducción a reTerminal',
+          title_pt_br: 'Introdução ao reTerminal',
         },
         {
           path: '/recomputer_r1000_flash_OS',
@@ -242,6 +267,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 reComputer R1000 上将 Raspbian OS 刷写到 eMMC',
           title_ja: 'reComputer R1000 に Raspbian OS を eMMC へ書き込み',
           title_es: 'Raspbian OS a eMMC en reComputer R1000',
+          title_pt_br: 'Gravar o sistema Raspbian OS no eMMC do reComputer R1000',
         }
       ]
     },
@@ -257,6 +283,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reServer Industrial 入门',
           title_ja: 'reServer Industrial 入門',
           title_es: 'Introducción a reServer Industrial',
+          title_pt_br: 'Introdução ao reServer Industrial',
         },
         {
           path: '/reComputer_Industrial_Getting_Started',
@@ -265,6 +292,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer Industrial 入门',
           title_ja: 'reComputer Industrial 入門',
           title_es: 'Introducción a reComputer Industrial',
+          title_pt_br: 'Introdução ao reComputer Industrial',
         },
         {
           path: '/reserver_j501_getting_started',
@@ -273,6 +301,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reServer J501 入门',
           title_ja: 'reServer J501 入門',
           title_es: 'Introducción a reServer J501',
+          title_pt_br: 'Introdução ao reServer J501',
         },
         {
           path: '/reComputer_J4012_Flash_Jetpack',
@@ -281,6 +310,7 @@ function IndexLatestedViki(props) {
           title_cn: '为 J401 载板刷写 JetPack OS',
           title_ja: 'J401 キャリアボードへ JetPack OS をフラッシュ',
           title_es: 'Flashear JetPack OS a la placa portadora J401',
+          title_pt_br: 'Gravar o sistema JetPack OS na placa carrier J401',
         },
         {
           path: '/reComputer_Jetson_Series_Initiation',
@@ -289,6 +319,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer for Jetson 入门',
           title_ja: 'reComputer for Jetson 入門',
           title_es: 'Iniciación a reComputer para Jetson',
+          title_pt_br: 'Introdução ao reComputer para Jetson',
         },
         {
           path: '/deploy_frigate_on_jetson',
@@ -297,6 +328,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 NVIDIA Jetson 设备上部署 Frigate',
           title_ja: 'NVIDIA Jetson デバイスに Frigate をデプロイ',
           title_es: 'Desplegar Frigate en dispositivo NVIDIA Jetson',
+          title_pt_br: 'Implantar o Frigate em dispositivos NVIDIA Jetson',
         },
         {
           path: '/reComputer_Jetson_Memory_Expansion',
@@ -305,6 +337,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer for Jetson 内存扩展',
           title_ja: 'reComputer for Jetson メモリ拡張',
           title_es: 'Expansión de memoria para reComputer en Jetson',
+          title_pt_br: 'Expansão de memória do reComputer para Jetson',
         },
         {
           path: '/YOLOv8-DeepStream-TRT-Jetson',
@@ -313,6 +346,7 @@ function IndexLatestedViki(props) {
           title_cn: '在 Jetson 上基于 TensorRT 与 DeepStream 运行 YOLOv8',
           title_ja: 'Jetson で TensorRT と DeepStream による YOLOv8',
           title_es: 'YOLOv8 en Jetson con TensorRT y DeepStream',
+          title_pt_br: 'YOLOv8 no Jetson com TensorRT e DeepStream',
         }
       ]
     }, 
@@ -328,6 +362,7 @@ function IndexLatestedViki(props) {
           title_cn: '基于 Home Assistant 的 ReSpeaker XVF3800 智能家居语音控制',
           title_ja: 'Home Assistant と ReSpeaker XVF3800 によるスマートホーム音声制御',
           title_es: 'Control por voz de hogar inteligente en ReSpeaker XVF3800 con Home Assistant',
+          title_pt_br: 'Controle de voz para casa inteligente no ReSpeaker XVF3800 com Home Assistant',
         },
         {
           path: '/r2000_series_frigate_and_home_assistant',
@@ -336,6 +371,7 @@ function IndexLatestedViki(props) {
           title_cn: 'reComputer R2xxx 上的 Frigate NVR 与 Hailo 连接 Home Assistant',
           title_ja: 'reComputer R2xxx の Frigate NVR と Hailo を Home Assistant と連携',
           title_es: 'Frigate NVR y Hailo en reComputer R2xxx conectados con Home Assistant',
+          title_pt_br: 'Frigate NVR e Hailo no reComputer R2xxx conectados ao Home Assistant',
         },
         {
           path: '/xiao-esp32c3-esphome',
@@ -344,6 +380,7 @@ function IndexLatestedViki(props) {
           title_cn: 'XIAO ESP32C3 通过 ESPHome 接入 Home Assistant',
           title_ja: 'XIAO ESP32C3 が ESPHome 経由で Home Assistant に接続',
           title_es: 'XIAO ESP32C3 accede a Home Assistant vía ESPHome',
+          title_pt_br: 'O XIAO ESP32C3 acessa o Home Assistant via ESPHome',
         },
         {
           path: '/home_assistant_with_sensecap_lorawan_sensors',
@@ -352,6 +389,7 @@ function IndexLatestedViki(props) {
           title_cn: '搭配 Home Assistant 与 SenseCAP 传感器的应用',
           title_ja: 'Home Assistant と SenseCAP センサーで連携',
           title_es: 'Integración con Home Assistant y sensores SenseCAP',
+          title_pt_br: 'Integração com Home Assistant e sensores SenseCAP',
         },
         {
           path: '/SenseCAP_Indicator_Application_Matter',
@@ -360,6 +398,7 @@ function IndexLatestedViki(props) {
           title_cn: 'SenseCAP Indicator —— Matter 应用开发',
           title_ja: 'SenseCAP Indicator ― Matter アプリ開発',
           title_es: 'SenseCAP Indicator: desarrollo de aplicaciones Matter',
+          title_pt_br: 'SenseCAP Indicator - Desenvolvimento de aplicações Matter',
         },
         {
           path: '/reterminal-DM-Frigate',
@@ -368,6 +407,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Frigate 集成 reTerminal DM',
           title_ja: 'Frigate を reTerminal DM と統合',
           title_es: 'Integración de Frigate con reTerminal DM',
+          title_pt_br: 'Integração do Frigate com o reTerminal DM',
         }, 
         {
           path: '/Connect-Grove-to-Home-Assistant-ESPHome',
@@ -376,6 +416,7 @@ function IndexLatestedViki(props) {
           title_cn: '使用 ESPHome 将 Grove 模块接入 Home Assistant',
           title_ja: 'ESPHome を使って Grove モジュールを Home Assistant に接続',
           title_es: 'Conectar módulos Grove a Home Assistant con ESPHome',
+          title_pt_br: 'Conecte módulos Grove ao Home Assistant usando ESPHome',
         },
         {
           path: '/home_assistant_sensecap',
@@ -384,6 +425,7 @@ function IndexLatestedViki(props) {
           title_cn: 'Home Assistant 的 SenseCAP 集成',
           title_ja: 'Home Assistant 向け SenseCAP 連携',
           title_es: 'Integración de SenseCAP para Home Assistant',
+          title_pt_br: 'Integração do SenseCAP para Home Assistant',
         }
       ]
     }

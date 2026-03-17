@@ -193,9 +193,9 @@ module.exports = (async () => {
 
   /** @type {import('@docusaurus/types').Config} */
   const config = {
-    title: 'Seeed Studio Wiki',
+    title: 'Wiki da Seeed Studio',
     tagline:
-      'The Seeed Studio Files Management Platform, Opening up and Cooperation.',
+      'A plataforma de documentação da Seeed Studio, aberta à colaboração e à inovação.',
 
     url: 'https://wiki.seeedstudio.com',
     baseUrl: '/pt-br/',
@@ -420,7 +420,7 @@ module.exports = (async () => {
         navbar: {
           // title: 'My Site',
           logo: {
-            alt: 'Seeed Studio',
+            alt: 'Wiki da Seeed Studio',
             src:
               'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
             srcDark:
@@ -430,31 +430,31 @@ module.exports = (async () => {
           },
           items: [
             {
-              label: 'Quick Links',
+              label: 'Links rápidos',
               to: '/Getting_Started',
               position: 'left',
               className: 'navbar_dorp_items js_getting_started',
               items: [
                 {
-                  label: 'Sensor and Sensing',
+                  label: 'Sensores e sensoriamento',
                   to: 'Sensor_Network',
                 },
                 {
-                  label: 'Networking',
+                  label: 'Rede',
                   to: 'Network',
                 },
                 {
-                  label: 'Edge Computing',
+                  label: 'Computação de borda',
                   to: 'Edge_Computing',
                 },
                 {
-                  label: 'Cloud',
+                  label: 'Nuvem',
                   to: 'Cloud',
                 },
               ],
             },
             {
-              label: 'Explore with Topics',
+              label: 'Explorar por tópicos',
               to: '/topicintroduction',
               position: 'left',
               className: 'navbar_dorp_items js_explore_learn',
@@ -472,7 +472,7 @@ module.exports = (async () => {
                   to: '/home_assistant_topic',
                 },
                 {
-                  label: 'Open Source',
+                  label: 'Código aberto',
                   to: '/open_source_topic',
                 },
                 {
@@ -501,15 +501,15 @@ module.exports = (async () => {
               className: 'navbar_dorp_items',
               items: [
                 {
-                  label: 'NVIDIA Jetson Series',
+                  label: 'Série NVIDIA Jetson',
                   to: '/Jetson_FAQ',
                 },
                 {
-                  label: 'Seeed Studio XIAO Series',
+                  label: 'Série Seeed Studio XIAO',
                   to: '/XIAO_FAQ',
                 },
                 {
-                  label: 'reComputer R1000 Series',
+                  label: 'Série reComputer R1000',
                   to: '/reComputer_R1000_FAQ',
                 },
                 {
@@ -537,15 +537,15 @@ module.exports = (async () => {
                   href: 'https://discord.com/invite/eWkprNDMU7',
                 },
                 {
-                  label: 'Email',
+                  label: 'E-mail',
                   href: 'https://www.seeedstudio.com/contacts',
                 },
                 {
-                  label: 'Forum',
+                  label: 'Fórum',
                   href: 'https://forum.seeedstudio.com/',
                 },
                 {
-                  label: 'Have Suggestions?',
+                  label: 'Tem sugestões?',
                   href:
                     'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
                 },
@@ -553,13 +553,13 @@ module.exports = (async () => {
             },
             {
               type: 'dropdown',
-              label: 'Get Involved',
+              label: 'Participe',
               to: 'https://www.seeedstudio.com/ranger-program',
               position: 'left',
               className: 'navbar_dorp_items',
               items: [
                 {
-                  label: 'Affiliate & Creator',
+                  label: 'Afiliados e criadores',
                   to: 'https://www.seeedstudio.com/blog/affiliate-program/',
                 },
                 {
@@ -567,25 +567,25 @@ module.exports = (async () => {
                   to: 'https://www.seeedstudio.com/ranger-program/',
                 },
                 {
-                  label: 'Contributors',
+                  label: 'Contribuidores',
                   to: '/contributors',
                 },
                 {
-                  label: 'Apply for Rangers',
+                  label: 'Inscreva-se para Rangers',
                   href:
                     'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
                 },
                 {
-                  label: 'Direct to Assignments',
+                  label: 'Ir para as tarefas',
                   href: 'https://github.com/orgs/Seeed-Studio/projects/6',
                 },
                 {
-                  label: 'More about Rangers',
+                  label: 'Saiba mais sobre os Rangers',
                   href:
                     'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
                 },
                 {
-                  label: 'More about Contributors',
+                  label: 'Saiba mais sobre os contribuidores',
                   href: 'https://wiki.seeedstudio.com/Contributor',
                 },
               ],
@@ -611,7 +611,7 @@ module.exports = (async () => {
               href: 'https://github.com/Seeed-Studio/wiki-documents',
               position: 'right',
               className: 'header-github-link',
-              'aria-label': 'GitHub repository',
+              'aria-label': 'Repositório no GitHub',
             },
           ],
         },
@@ -620,36 +620,36 @@ module.exports = (async () => {
           style: 'dark',
           links: [
             {
-              title: 'Navigation',
+              title: 'Navegação',
               items: [
                 {
-                  label: 'Getting Started',
+                  label: 'Primeiros passos',
                   to: '/Getting_Started',
                 },
                 {
-                  label: 'Sensor and Sensing',
+                  label: 'Sensores e sensoriamento',
                   to: '/Sensor_Network',
                 },
                 {
-                  label: 'Network',
+                  label: 'Rede',
                   to: '/Network',
                 },
                 {
-                  label: 'Edge Computing',
+                  label: 'Computação de borda',
                   to: '/Edge_Computing',
                 },
                 {
-                  label: 'Cloud',
+                  label: 'Nuvem',
                   to: '/Cloud',
                 },
                 {
-                  label: 'Solutions',
+                  label: 'Soluções',
                   to: 'https://solution.seeed.cc/',
                 },
               ],
             },
             {
-              title: 'Ecosystem',
+              title: 'Ecossistema',
               items: [
                 {
                   label: 'Discord',
@@ -660,24 +660,24 @@ module.exports = (async () => {
                   to: 'https://project.seeedstudio.com/',
                 },
                 {
-                  label: 'Partners',
+                  label: 'Parceiros',
                   to: 'https://www.seeedstudio.com/ecosystem/',
                 },
                 {
-                  label: 'Distributors',
+                  label: 'Distribuidores',
                   to: 'https://www.seeedstudio.com/distributors.html',
                 },
               ],
             },
             {
-              title: 'Quick Guide',
+              title: 'Guia rápido',
               items: [
                 {
                   label: 'Bazaar',
                   to: 'https://www.seeedstudio.com/',
                 },
                 {
-                  label: 'How to get help',
+                  label: 'Como obter ajuda',
                   to: 'https://www.seeedstudio.com/get_help/HowToGetHelp',
                 },
                 {
@@ -685,39 +685,39 @@ module.exports = (async () => {
                   to: 'https://support.seeedstudio.com/knowledgebase',
                 },
                 {
-                  label: 'Forum',
+                  label: 'Fórum',
                   to: 'https://forum.seeedstudio.com/',
                 },
                 {
-                  label: 'Technical Support',
+                  label: 'Suporte técnico',
                   to: 'https://www.seeedstudio.com/get_help/TechnicalSupport',
                 },
               ],
             },
             {
-              title: 'Company',
+              title: 'Empresa',
               items: [
                 {
-                  label: 'About Seeed',
+                  label: 'Sobre a Seeed',
                   to: 'https://www.seeedstudio.com/about-us/',
                 },
                 {
-                  label: 'Join us',
+                  label: 'Junte-se a nós',
                   to: 'https://www.seeedstudio.com/join-us/',
                 },
                 {
-                  label: 'Contact Us',
+                  label: 'Fale conosco',
                   to: 'https://www.seeedstudio.com/contacts',
                 },
                 {
-                  label: 'Press',
+                  label: 'Imprensa',
                   to:
                     'https://www.seeedstudio.com/blog/2020/04/22/seeed-in-the-news/',
                 },
               ],
             },
           ],
-          copyright: `Copyright © ${new Date().getFullYear()} Seeed Studio, Inc. Built with Docusaurus.`,
+          copyright: `Copyright © ${new Date().getFullYear()} Seeed Studio, Inc. Desenvolvido com Docusaurus.`,
         },
         prism: {
           theme: lightCodeTheme,
@@ -757,7 +757,7 @@ module.exports = (async () => {
         },
         announcementBar: {
           id: 'support_us',
-          content: '<span id="announcement-text">Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://www.seeedstudio.com/ranger-program/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!</span>',
+          content: '<span id="announcement-text">Colabore com a Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Criadores</a>, <a target="_blank" href="https://www.seeedstudio.com/ranger-program/">Rangers</a> ou <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contribuidores</a>, sempre existe um papel ideal para você!</span>',
           backgroundColor: '#013949',
           textColor: '#FFFFFF',
           isCloseable: false,

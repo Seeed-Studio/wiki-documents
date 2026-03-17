@@ -37,7 +37,7 @@ const JetsonIOStepper = ({ steps = [], lang = 'en' }) => {
   const next = () => setCurrent((c) => Math.min(c + 1, Math.max(steps.length - 1, 0)));
   const prev = () => setCurrent((c) => Math.max(c - 1, 0));
 
-  // 兜底：没有步骤时不渲染主体（保持最小修改）
+  // 兜底：没有步骤时不渲染主体
   if (!Array.isArray(steps) || steps.length === 0) {
     return null;
   }

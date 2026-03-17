@@ -3,7 +3,7 @@ import { Table, ConfigProvider, theme } from "antd";
 import { useColorMode } from '@docusaurus/theme-common';
 import { useThemeStore } from '@site/src/stores/useJetsonStore';
 
-// ✅ 多语言字典（最小修改：只翻译表头、类别/规格名、若干常见固定值）
+// 多语言字典：只翻译表头、类别/规格名、若干常见固定值
 const i18n = {
   en: {
     thCategory: 'Category',
@@ -366,7 +366,7 @@ const rowSpanRules = [
   end: (arr[idx + 1]?.start ?? Infinity) - 1
 }));
 
-// 原始英文数据（不动）
+// 原始英文数据
 const baseData = [
   { key: "1",  category: "Basic",        spec: "Use Environment",                         gemini335Lg: "Indoor & Outdoor" },
   { key: "2",  category: "Basic",        spec: "Technology",                              gemini335Lg: "Active & Passive Stereo" },
@@ -485,7 +485,6 @@ const translateValue = (t, value) => {
     'Support': t.valSupport,
     'IP65': t.valIp65,
   };
-  // 仅翻译常见固定值；包含单位/复杂句子的值保持原样，避免引入错误翻译
   return map[value] || value;
 };
 
