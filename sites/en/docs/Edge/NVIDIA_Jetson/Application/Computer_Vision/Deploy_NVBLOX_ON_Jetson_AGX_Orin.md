@@ -53,7 +53,7 @@ This makes it particularly valuable for edge AI applications where hardware cons
 
 ## Prerequisites
 
-- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson AGX Orin) with JetPack 6.2
+- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html)** (Jetson AGX Orin) with JetPack 6.2.1
 - Orbbec RGB-D Camera 📷
 - Mobile robot chassis (optional) 🤖
 - [ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/) environment installed
