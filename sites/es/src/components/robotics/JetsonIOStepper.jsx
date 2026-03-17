@@ -8,6 +8,7 @@ const content = {
   zh: { prev: '上一步', next: '下一步', done: '完成', doneMsg: '已完成！' },
   ja: { prev: '前へ', next: '次へ', done: '完了', doneMsg: '完了しました！' },
   es: { prev: 'Anterior', next: 'Siguiente', done: 'Hecho', doneMsg: '¡Listo!' },
+  pt: { prev: 'Anterior', next: 'Próximo', done: 'Concluído', doneMsg: 'Concluído!' },
 };
 
 const JetsonIOStepper = ({ steps = [], lang = 'en' }) => {
