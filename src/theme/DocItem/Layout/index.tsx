@@ -23,7 +23,7 @@ import JetsonLeadQuote from '../../../components/JetsonLeadQuote';
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const { frontMatter, toc } = useDoc();
+  const { frontMatter, toc ,metadata} = useDoc();
   const windowSize = useWindowSize();
   const hidden = frontMatter.hide_table_of_contents;
   const canRender = !hidden && toc.length > 0;
@@ -32,6 +32,7 @@ function useDocTOC() {
     canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
       <DocItemTOCDesktop />
     ) : undefined;
+
   return {
     hidden,
     mobile,
@@ -48,7 +49,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
     hide_comment: hideComment,
     sku,
     type: docType,
-    jetson_lead_quote: rightSidebarQuoto,
+    jetson_lead_quote: jetsonLeadQuote,
     jetson_lead_text: jetsonLeadText = 'Request Quote',
   } = frontMatter as any;
   const docSlug = (metadata as { slug?: string })?.slug ?? '';
@@ -86,10 +87,10 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {!hideComment && <Comment />}
       </div>
       <TopNav></TopNav>
-      {(docTOC.desktop || rightSidebarQuoto) && (
+      {(docTOC.desktop || jetsonLeadQuote) && (
         <div className="col col--3">
-          {rightSidebarQuoto && (
-            <JetsonLeadQuote buttonText={jetsonLeadText} triggerValue={docSlug} />
+          {jetsonLeadQuote && (
+            <JetsonLeadQuote buttonText={jetsonLeadText} triggerValue={window.location.origin + docSlug} />
           )}
           {docTOC.desktop}
         </div>

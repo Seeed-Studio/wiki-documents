@@ -1,9 +1,24 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Modal } from 'antd';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import SuccessModal from '../SuccessModal';
 import styles from './styles.module.scss';
 
-const IFRAME_BASE = 'https://cc.seeedstudio.com/woo_proxy/lead';
+/** 各语言站点对应的留资表单 iframe 完整 base URL（含 /woo_proxy/lead） */
+const IFRAME_BASE_BY_LOCALE: Record<string, string> = {
+  'zh-CN': 'https://www.seeedstudio.com.cn/woo_proxy/lead',
+  ja: 'https://www.seeed.co.jp/woo_proxy/lead',
+};
+const IFRAME_BASE_DEFAULT = 'https://www.seeed.cc/woo_proxy/lead';
+
+/** 根据 siteConfig.baseUrl 判断当前站点语言（各站点单 locale 构建，baseUrl 即语言） */
+function getLocaleFromBaseUrl(baseUrl: string): string {
+  const path = (baseUrl ?? '').replace(/\/+$/, '').toLowerCase();
+  if (path === '/ja' || path.startsWith('/ja/')) return 'ja';
+  if (path === '/cn' || path.startsWith('/cn/')) return 'zh-CN';
+  return 'en';
+}
+
 const SUCCESS_MESSAGE_TYPE = 'unified_lead_form_submit_success';
 const SUCCESS_MESSAGE_SOURCE = 'connect_lead';
 
@@ -24,7 +39,17 @@ function isLeadFormSuccessEvent(data: unknown): data is { type: string; source: 
   );
 }
 
+function getIframeBase(locale: string): string {
+  return IFRAME_BASE_BY_LOCALE[locale] ?? IFRAME_BASE_DEFAULT;
+}
+
 export default function JetsonLeadQuote({ buttonText, triggerValue = '' }: JetsonLeadQuoteProps) {
+  const { siteConfig } = useDocusaurusContext();
+  const iframeBase = useMemo(
+    () => getIframeBase(getLocaleFromBaseUrl(siteConfig.baseUrl ?? '')),
+    [siteConfig.baseUrl]
+  );
+
   const [modalOpen, setModalOpen] = useState(false);
   const [successOpen, setSuccessOpen] = useState(false);
 
@@ -54,8 +79,7 @@ export default function JetsonLeadQuote({ buttonText, triggerValue = '' }: Jetso
   }, [modalOpen, handleFormSuccess]);
 
   const triggerParam = triggerValue ? `WIKI::${encodeURIComponent(triggerValue)}` : 'WIKI';
-  const iframeSrc = `${IFRAME_BASE}?trigger=${triggerParam}`;
-
+  const iframeSrc = `${iframeBase}?trigger=${triggerParam}`;
   return (
     <>
       <button
