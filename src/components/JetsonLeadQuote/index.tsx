@@ -11,6 +11,13 @@ const IFRAME_BASE_BY_LOCALE: Record<string, string> = {
 };
 const IFRAME_BASE_DEFAULT = 'https://www.seeed.cc/woo_proxy/lead';
 
+// 测试站
+// const IFRAME_BASE_BY_LOCALE: Record<string, string> = {
+//   'zh-CN': 'https://cn.seeedstudio.com/',
+//   ja: 'https://jp.fusionpcb.jp/',
+// };
+// const IFRAME_BASE_DEFAULT = 'https://cc.seeedstudio.com';
+
 /** 根据 siteConfig.baseUrl 判断当前站点语言（各站点单 locale 构建，baseUrl 即语言） */
 function getLocaleFromBaseUrl(baseUrl: string): string {
   const path = (baseUrl ?? '').replace(/\/+$/, '').toLowerCase();
