@@ -17,6 +17,7 @@ import { useLocation } from '@docusaurus/router';
 import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
+import JetsonLeadQuote from '../../../components/JetsonLeadQuote';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -40,11 +41,18 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter } = useDoc();
-  
+  const { frontMatter, metadata } = useDoc();
+
   // 使用类型断言解决 TypeScript 错误
-  const { hide_comment: hideComment, sku, type: docType } = frontMatter as any;
-  
+  const {
+    hide_comment: hideComment,
+    sku,
+    type: docType,
+    jetson_lead_quote: rightSidebarQuoto,
+    jetson_lead_text: jetsonLeadText = 'Request Quote',
+  } = frontMatter as any;
+  const docSlug = (metadata as { slug?: string })?.slug ?? '';
+
   const location = useLocation()
   useEffect(() => {
     judgeHomePath();
@@ -78,7 +86,14 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {!hideComment && <Comment />}
       </div>
       <TopNav></TopNav>
-      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {(docTOC.desktop || rightSidebarQuoto) && (
+        <div className="col col--3">
+          {rightSidebarQuoto && (
+            <JetsonLeadQuote buttonText={jetsonLeadText} triggerValue={docSlug} />
+          )}
+          {docTOC.desktop}
+        </div>
+      )}
     </div>
   );
 }
