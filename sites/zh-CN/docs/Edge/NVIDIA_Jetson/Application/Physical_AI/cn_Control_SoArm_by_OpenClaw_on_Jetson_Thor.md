@@ -1,5 +1,5 @@
 ---
-description: 本维基展示如何在 Jetson Thor 上结合 OpenClaw 和 LeRobot 控制 SO-Arm。
+description: 本文档展示如何在 Jetson Thor 上结合 OpenClaw 和 LeRobot 控制 SO-Arm。
 title: 在 Jetson Thor 上通过 OpenClaw 控制 SO-Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
 slug: /ai_robotics_control_soarm_by_openclaw_on_jetson_thor
@@ -13,11 +13,11 @@ last_update:
 
 ## 介绍
 
-本维基说明如何在 Jetson Thor 上结合 OpenClaw 和 LeRobot，通过本地 AI 智能体控制 SO-Arm。
+本文档解释如何在 Jetson Thor 上结合 OpenClaw 和 LeRobot，通过本地 AI 智能体控制 SO-Arm。
 
 **NVIDIA Jetson AGX Thor** 是一款为机器人和物理 AI 工作负载设计的高性能边缘 AI 平台，为感知、规划和控制提供强大的本地算力。
 
-**SO-Arm** 是一个开源、低成本的机械臂平台（SO-ARM100/SO-ARM101），广泛用于具身智能实验、远程操作和操作任务开发。
+**SO-Arm** 是一个开源、低成本的机械臂平台（SO-ARM100/SO-ARM101），广泛用于具身智能实验、远程操作以及操作任务开发。
 
 **OpenClaw** 是一个可以编排本地工具和模型的 AI 智能体框架。在本项目中，OpenClaw 用作高层控制接口，而 LeRobot 为 SO-Arm 提供底层电机通信和标定工具。
 
@@ -94,7 +94,7 @@ last_update:
 
 - Thor 正常启动且网络可用。
 - SO-Arm 控制板指示灯点亮。
-- USB 连接后出现串口设备。
+- 通过 USB 连接后出现串口设备。
 
 ```bash
 ls /dev/ttyACM*
@@ -136,11 +136,9 @@ source ~/.bashrc
 创建 LeRobot 环境：
 
 ```bash
-conda create -y -n lerobot python=3.12
+conda create -y -n lerobot python=3.10
 conda activate lerobot
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
-cd ~/lerobot
-pip install -e . 
+pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
 pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 ```
@@ -148,7 +146,8 @@ pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 在 LeRobot 环境中安装 Pinocchio：
 
 ```bash
-conda install pinocchio -c conda-forge
+conda install mamba -y
+mamba install -c conda-forge pinocchio pinocchio-python libpinocchio -y
 ```
 
 ### 验证 CUDA 和外设设备
@@ -174,11 +173,11 @@ curl -fsSL https://ollama.com/install.sh | sh
 拉取模型：
 
 ```bash
-ollama pull qwen3-vl:9b
+ollama pull qwen3.5:35b
 ```
 
 :::info
-本指南以 `qwen3-vl:9b` 为示例。你可以根据性能和内存限制替换为其他 Ollama 模型。
+本指南以 `qwen3.5:35b` 为示例。你可以根据性能和内存限制替换为其他 Ollama 模型。
 :::
 
 ## 在 Jetson Thor 上安装 OpenClaw
@@ -191,53 +190,136 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 
 ### 配置运行参数
 
-编辑 `~/.openclaw/openclaw.json`，将 Ollama 设置为默认模型提供方：
+编辑 `~/.openclaw/openclaw.json`，并将 Ollama 设置为默认模型提供方：
+
+<details>
+
+<summary> openclaw.json </summary>
 
 ```json
 {
   "agents": {
     "defaults": {
-      "models": {
-        "ollama": {}
+      "compaction": {
+        "mode": "safeguard"
       },
+      "maxConcurrent": 4,
       "model": {
-        "primary": "ollama/qwen3-vl:9b"
+        "primary": "ollama/qwen3.5:35b"
+      },
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "workspace": "/home/seeed/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "tools": {
+          "profile": "full"
+        }
       }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "98aefed421e9a506a3174dab0575fd3cc36c9d15b856a894"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
     }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-10T06:45:16.014Z",
+    "lastTouchedVersion": "2026.3.8"
   },
   "models": {
     "providers": {
       "ollama": {
-        "baseUrl": "http://127.0.0.1:11434/v1",
+        "api": "ollama",
         "apiKey": "ollama-local",
-        "api": "openai-completions",
+        "baseUrl": "http://127.0.0.1:11434",
         "models": [
           {
-            "id": "qwen3-vl:9b",
-            "name": "Qwen3 VL 9B",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "contextWindow": 262144,
             "cost": {
-              "input": 0,
-              "output": 0,
               "cacheRead": 0,
-              "cacheWrite": 0
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
             },
-            "contextWindow": 128000,
-            "maxTokens": 8192
+            "id": "qwen3.5:35b",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5:35b",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "qwen3.5",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5",
+            "reasoning": true
           }
         ]
       }
     }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T02:17:28.382Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.8"
   }
 }
+
 ```
+</details>
 
 :::note
 可选：你也可以直接使用 Ollama 提供的脚本快速设置 OpenClaw 配置文件。
-
 `ollama launch openclaw --model qwen3.5`
 :::
 
@@ -253,6 +335,11 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 - 下载 [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf)
 - 将其移动到 `~/.openclaw/workspace/skills/soarm-control/references`
 
+[可选] 添加检测模型： 
+- 参考[这里](https://wiki.seeedstudio.com/cn/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)训练一个检测模型（YoloV11n）
+- 将检测模型（`best.pt`）移动到 `~/.openclaw/workspace/skills/soarm-control/scripts`
+
+
 重启 OpenClaw 网关：
 
 ```bash
@@ -262,8 +349,13 @@ openclaw gateway restart
 打开 WebUI：
 
 ```text
-http://127.0.0.1:18789/
+http://127.0.0.1:18789/wiki
 ```
+
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/webui.png" />
+</div>
 
 ## 连接并标定 SO-Arm
 
@@ -297,29 +389,24 @@ lerobot-calibrate \
 
 ## 运行控制演示
 
-### 启动 OpenClaw 服务
+### 启动后端服务
 
 确保 OpenClaw 和 LeRobot 环境已就绪：
 
 ```bash
 openclaw gateway restart
+
 conda activate lerobot
+cd ~/.openclaw/workspace/skills/soarm-control 
+bash scripts/start_server.sh &
 ```
 
 ### 执行基础运动任务
 
-在 OpenClaw WebUI 中输入机器人控制指令。OpenClaw 会解析你的提示词，并调用已安装的 `soarm-control` 技能驱动机械臂运动到目标位置。
-
-视频演示了三条指令：
-
-1. 将机械臂末端执行器向上移动 20 cm。
-2. 然后在保持高度不变的情况下向前移动 20 cm。
-3. 回到初始位置。
-
-OpenClaw 对这三条指令的响应都与预期行为一致。
+在 OpenClaw WebUI 中输入机器人控制指令。OpenClaw 会解析你的提示词，并调用已安装的 `soarm-control` 技能驱动机械臂移动到目标位置。
 
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/5fPBpAno2wc" title="Using OpenClaw to Control the SOARM 101 Robot Arm | Robotics Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 参考资料
@@ -333,7 +420,7 @@ OpenClaw 对这三条指令的响应都与预期行为一致。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

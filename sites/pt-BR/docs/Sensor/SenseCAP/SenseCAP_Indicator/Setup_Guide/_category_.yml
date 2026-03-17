@@ -1,0 +1,13 @@
+position: 1.5
+label: 'Guia de Configuração'
+collapsible: true
+collapsed: true
+className: indicator_application
+link:
+  type: generated-index
+  title: Orientação de Configuração Inicial
+  keywords: 
+    guides
+  slug: SenseCAP_Indicator_Setup_Guide
+  description: |+
+    Comece a usar seu SenseCAP Indicator e aprenda como utilizar tanto o firmware nativo quanto o firmware OpenAI.

@@ -1,0 +1,10 @@
+position: 4 # float position is supported
+label: 'Visão geral do produto'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: 'product_overview_with_watcher'
+link:
+  type: generated-index
+  slug: product_overview_with_watcher
+  title: Visão geral do produto Watcher
+  description: A visão geral do produto Watcher apresenta uma análise detalhada dos componentes de hardware e software, funções e interações do SenseCAP Watcher.
