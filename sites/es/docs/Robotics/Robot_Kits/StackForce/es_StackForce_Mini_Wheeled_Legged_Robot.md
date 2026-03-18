@@ -52,6 +52,8 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 
 - **Proyectos de robots de código abierto para la plataforma de desarrollo de robótica ligera StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
+- **Aprendizaje de teoría y código del robot con ruedas y patas StackForce Mini** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
+
 ## Características Principales
 
 1. **Código abierto y bajo costo**: Sigue una licencia de código abierto; todo el código fuente y archivos de diseño están completamente disponibles, permitiendo a los desarrolladores estudiar, modificar y realizar desarrollo secundario libremente.
