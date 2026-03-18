@@ -1,13 +1,14 @@
 // 共享产品数据 - 用于 Flash_Jetpack.mdx 和 index.tsx
 // 数据来源: docs/Edge/NVIDIA_Jetson/Flash_Jetpack.mdx
 
-export type SupportedLang = 'en' | 'zh' | 'ja' | 'es';
+export type SupportedLang = 'en' | 'zh' | 'ja' | 'es' | 'pt';
 
 export interface LocalizedUrl {
   en: string;
   zh: string;
   ja: string;
   es: string;
+  pt: string;
 }
 
 export interface ProductOption {
@@ -21,13 +22,14 @@ export interface ProductOption {
 
 const createLocalizedWikiUrl = (enUrl: string): LocalizedUrl => {
   const base = 'https://wiki.seeedstudio.com';
-  const normalized = enUrl.replace(/^https:\/\/wiki\.seeedstudio\.com/, '').replace(/^\/(cn|ja|es)(\/|$)/, '/');
+  const normalized = enUrl.replace(/^https:\/\/wiki\.seeedstudio\.com/, '').replace(/^\/(cn|ja|es|pt-br)(\/|$)/, '/');
 
   return {
     en: `${base}${normalized}`,
     zh: `${base}/cn${normalized}`,
     ja: `${base}/ja${normalized}`,
-    es: `${base}/es${normalized}`
+    es: `${base}/es${normalized}`,
+    pt: `${base}/pt-br${normalized}`
   };
 };
 
@@ -417,7 +419,7 @@ export const PRODUCT_DATA = Object.fromEntries(
   productOptions.map(p => [p.value, {
     name: p.label,
     image: p.img,
-    flashUrl: p.flashUrl || { en: '', zh: '', ja: '', es: '' },
+    flashUrl: p.flashUrl || { en: '', zh: '', ja: '', es: '', pt: '' },
     interfaceUrl: p.interfaceUsage
   }])
 );

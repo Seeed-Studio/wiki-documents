@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './index.module.scss';
 import { useColorMode } from '@docusaurus/theme-common';
+import { useLocation } from '@docusaurus/router';
 
-// 动态加载四种语言的配置
+// 动态加载多语言配置
 import * as config_en from './config.en';
 import * as config_ja from './config.ja';
 import * as config_zh from './config.zh';
 import * as config_es from './config.es';
+import * as config_pt from './config.pt.js';
+
 // 自动生成的项目配置
 import * as config_auto from './config.auto';
+
 // 共享产品数据
 import { productOptions, PRODUCT_DATA, PRODUCT_CATEGORIES } from './productData';
+
 // SVG Icons
 import {
   ProductsIcon, DemoIcon, FaqIcon, WarningIcon, StorageIcon, ClockIcon,
@@ -22,6 +27,21 @@ import {
   CloudIcon
 } from './icons';
 
+type Lang = 'en' | 'ja' | 'zh' | 'es' | 'pt';
+
+type CommunityCategoryKey =
+  | 'all'
+  | 'cv'
+  | 'gen'
+  | 'devtools'
+  | 'multimodal'
+  | 'physical'
+  | 'managed';
+
+type Props = {
+  lang?: Lang;
+};
+
 function getImgUrl(str: string, suffix?: string) {
   return `https://files.seeedstudio.com/wiki/Jetson/${str}.${suffix || 'png'}`;
 }
@@ -31,7 +51,18 @@ const toUrl = (url: string) => {
   window.location.href = url;
 };
 
-const COMMUNITY_CATEGORIES = [
+const getLangFromPath = (pathname?: string): Lang => {
+  const path = (pathname || '').toLowerCase();
+
+  if (path === '/cn' || path.startsWith('/cn/')) return 'zh';
+  if (path === '/ja' || path.startsWith('/ja/')) return 'ja';
+  if (path === '/es' || path.startsWith('/es/')) return 'es';
+  if (path === '/pt-br' || path.startsWith('/pt-br/')) return 'pt';
+
+  return 'en';
+};
+
+const COMMUNITY_CATEGORIES: Array<{ id: CommunityCategoryKey; key: CommunityCategoryKey }> = [
   { id: 'all', key: 'all' },
   { id: 'cv', key: 'cv' },
   { id: 'gen', key: 'gen' },
@@ -41,13 +72,13 @@ const COMMUNITY_CATEGORIES = [
   { id: 'managed', key: 'managed' }
 ];
 
-const LANG_PATH_PREFIX = {
+const LANG_PATH_PREFIX: Record<Lang, string> = {
   en: '',
   zh: '/cn',
   ja: '/ja',
-  es: '/es'
+  es: '/es',
+  pt: '/pt-br'
 };
-
 
 // jetson-examples 模型数据
 const EXAMPLE_MODELS = [
@@ -73,19 +104,22 @@ const FAQ_DATA = [
       en: 'System Crashed After apt upgrade',
       ja: 'apt upgrade 後にシステムがクラッシュ',
       zh: 'apt upgrade 后系统崩溃',
-      es: 'El sistema falló después de apt upgrade'
+      es: 'El sistema falló después de apt upgrade',
+      pt: 'O sistema falhou após apt upgrade'
     },
     desc: {
       en: 'Why you should NOT run apt upgrade on custom carrier boards and how to recover',
       ja: 'カスタムキャリアボードで apt upgrade を実行すべきでない理由と復旧方法',
       zh: '为什么不应在自定义载板上执行 apt upgrade，以及如何恢复',
-      es: 'Por qué NO debe ejecutar apt upgrade en carrier boards personalizados y cómo recuperarse'
+      es: 'Por qué NO debe ejecutar apt upgrade en carrier boards personalizados y cómo recuperarse',
+      pt: 'Por que você NÃO deve executar apt upgrade em carrier boards personalizados e como recuperar o sistema'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q8-my-system-crashedunable-to-bootblack-screenlost-peripheral-drivers-after-i-execute-sudo-apt-get-update--sudo-apt-get-upgrade-commands',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q8-sudo-apt-get-update--sudo-apt-get-upgrade-コマンドを実行した後システムがクラッシュし起動できないブラックスクリーンになったり周辺機器ドライバーが失われたりしました',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q8-执行-sudo-apt-get-update--sudo-apt-get-upgrade-命令后我的系统崩溃无法启动黑屏丢失外设驱动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q8-mi-sistema-falló-no-puede-arrancar-pantalla-negra-perdió-los-controladores-de-los-periféricos-después-de-ejecutar-los-comandos-sudo-apt-get-update--sudo-apt-get-upgrade'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q8-mi-sistema-falló-no-puede-arrancar-pantalla-negra-perdió-los-controladores-de-los-periféricos-después-de-ejecutar-los-comandos-sudo-apt-get-update--sudo-apt-get-upgrade',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q8-meu-sistema-falhou-não-consegue-inicializar-tela-preta-perdeu-os-drivers-de-periféricos-depois-que-executei-os-comandos-sudo-apt-get-update--sudo-apt-get-upgrade'
     }
   },
   {
@@ -94,19 +128,22 @@ const FAQ_DATA = [
       en: 'Insufficient eMMC Space',
       ja: 'eMMC 容量不足',
       zh: 'eMMC 空间不足',
-      es: 'Espacio insuficiente en eMMC'
+      es: 'Espacio insuficiente en eMMC',
+      pt: 'Espaço insuficiente no eMMC'
     },
     desc: {
       en: 'Only 2GB left on eMMC? Solutions for expanding storage on reComputer devices',
       ja: 'eMMC の空き容量が 2GB しかない？reComputer デバイスのストレージ拡張方法',
       zh: 'eMMC 只剩 2GB？reComputer 设备的存储扩展方案',
-      es: '¿Solo quedan 2 GB en eMMC? Soluciones para ampliar el almacenamiento en dispositivos reComputer'
+      es: '¿Solo quedan 2 GB en eMMC? Soluciones para ampliar el almacenamiento en dispositivos reComputer',
+      pt: 'Restam apenas 2 GB no eMMC? Soluções para expandir o armazenamento em dispositivos reComputer'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q2-the-remaining-space-in-the-emmc-in-the-received-recomputer-is-only-about-2gb-how-to-solve-the-problem-of-insufficient-space',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q2-受け取った-recomputer-の-emmc-の残り容量が約-2gb-しかありませんストレージ不足の問題をどう解決すればよいですか',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q2-收到的-recomputer-中-emmc-剩余空间只有约-2gb如何解决空间不足问题',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q2-el-espacio-restante-en-la-emmc-del-recomputer-recibido-es-de-solo-unos-2-gb-cómo-resolver-el-problema-de-espacio-insuficiente'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q2-el-espacio-restante-en-la-emmc-del-recomputer-recibido-es-de-solo-unos-2-gb-cómo-resolver-el-problema-de-espacio-insuficiente',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q2-o-espaço-restante-no-emmc-do-recomputer-recebido-é-de-apenas-cerca-de-2-gb-como-resolver-o-problema-de-espaço-insuficiente'
     }
   },
   {
@@ -115,19 +152,22 @@ const FAQ_DATA = [
       en: 'Flash Timeout Issues',
       ja: 'フラッシュ時のタイムアウト問題',
       zh: '刷机超时问题',
-      es: 'Problemas de tiempo de espera al flashear'
+      es: 'Problemas de tiempo de espera al flashear',
+      pt: 'Problemas de tempo limite ao gravar'
     },
     desc: {
       en: 'Troubleshooting timeout problems during JetPack flashing process',
       ja: 'JetPack 書き込み中のタイムアウト問題のトラブルシューティング',
       zh: '排查 JetPack 刷机过程中的超时问题',
-      es: 'Solución de problemas de tiempo de espera durante el proceso de flasheo de JetPack'
+      es: 'Solución de problemas de tiempo de espera durante el proceso de flasheo de JetPack',
+      pt: 'Solução de problemas de tempo limite durante o processo de gravação do JetPack'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q6-timeout-issue-during-flash-jetpack',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q6-jetpack-フラッシュ中のタイムアウト問題',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q6-刷写-jetpack-时出现超时问题',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q6-problema-de-tiempo-de-espera-durante-el-flasheo-de-jetpack'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q6-problema-de-tiempo-de-espera-durante-el-flasheo-de-jetpack',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q6-problema-de-tempo-limite-durante-a-gravação-do-jetpack'
     }
   },
   {
@@ -136,19 +176,22 @@ const FAQ_DATA = [
       en: 'SSD Boot Issues',
       ja: 'SSD 起動の問題',
       zh: 'SSD 启动问题',
-      es: 'Problemas de arranque desde SSD'
+      es: 'Problemas de arranque desde SSD',
+      pt: 'Problemas de inicialização pelo SSD'
     },
     desc: {
       en: 'System fails to boot from SSD after flashing? Solutions for JetPack 5',
       ja: '書き込み後に SSD から起動できない？JetPack 5 向けの解決策',
       zh: '刷机后系统无法从 SSD 启动？JetPack 5 的解决方案',
-      es: '¿El sistema no arranca desde SSD después del flasheo? Soluciones para JetPack 5'
+      es: '¿El sistema no arranca desde SSD después del flasheo? Soluciones para JetPack 5',
+      pt: 'O sistema não inicializa pelo SSD após a gravação? Soluções para o JetPack 5'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q13-why-is-it-that-sometimes-after-completing-the-flashing-process-on-jetson-the-system-fails-to-boot-from-the-ssd',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q13-jetson-でフラッシュ処理を完了した後にssdから起動できないことがあるのはなぜですか',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q13-为什么有时在-jetson-上完成刷机后系统无法从-ssd-启动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q13-por-qué-a-veces-después-de-completar-el-proceso-de-flasheo-en-jetson-el-sistema-no-arranca-desde-el-ssd'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q13-por-qué-a-veces-después-de-completar-el-proceso-de-flasheo-en-jetson-el-sistema-no-arranca-desde-el-ssd',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q13-por-que-às-vezes-depois-de-concluir-o-processo-de-gravação-no-jetson-o-sistema-não-inicializa-pelo-ssd'
     }
   },
   {
@@ -157,19 +200,22 @@ const FAQ_DATA = [
       en: 'Missing Driver Module',
       ja: '不足しているドライバーモジュール',
       zh: '缺失驱动模块',
-      es: 'Módulo de controlador faltante'
+      es: 'Módulo de controlador faltante',
+      pt: 'Módulo de driver ausente'
     },
     desc: {
       en: 'How to compile custom .ko driver modules for reComputer/reServer',
       ja: 'reComputer/reServer 向けにカスタム .ko ドライバーモジュールをコンパイルする方法',
       zh: '如何为 reComputer/reServer 编译自定义 .ko 驱动模块',
-      es: 'Cómo compilar módulos de controlador .ko personalizados para reComputer/reServer'
+      es: 'Cómo compilar módulos de controlador .ko personalizados para reComputer/reServer',
+      pt: 'Como compilar módulos de driver .ko personalizados para reComputer/reServer'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q16-if-the-recomputerreserver-does-not-have-the-required-ko-driver-module-how-can-i-compile-a-usable-driver',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q16-recomputer-reserver-に必要な-ko-ドライバーモジュールがない場合使用可能なドライバーをどのようにコンパイルできますか',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q16-如果-recomputerreserver-没有所需的-ko-驱动模块如何编译可用驱动',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q16-si-recomputerreserver-no-tiene-el-módulo-de-controlador-ko-requerido-cómo-puedo-compilar-un-controlador-utilizable'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q16-si-recomputerreserver-no-tiene-el-módulo-de-controlador-ko-requerido-cómo-puedo-compilar-un-controlador-utilizable',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q16-se-o-recomputerreserver-não-tiver-o-módulo-de-driver-ko-necessário-como-posso-compilar-um-driver-utilizável'
     }
   },
   {
@@ -178,19 +224,22 @@ const FAQ_DATA = [
       en: 'exFAT External Drive',
       ja: 'exFAT 外付けドライブ',
       zh: 'exFAT 外接硬盘',
-      es: 'Unidad externa exFAT'
+      es: 'Unidad externa exFAT',
+      pt: 'Unidade externa exFAT'
     },
     desc: {
       en: 'Mount exFAT formatted external drives on Jetson with JetPack 6',
       ja: 'JetPack 6 の Jetson で exFAT フォーマットの外付けドライブをマウントする方法',
       zh: '在 JetPack 6 的 Jetson 上挂载 exFAT 格式的外接硬盘',
-      es: 'Montar unidades externas formateadas en exFAT en Jetson con JetPack 6'
+      es: 'Montar unidades externas formateadas en exFAT en Jetson con JetPack 6',
+      pt: 'Monte unidades externas formatadas em exFAT no Jetson com JetPack 6'
     },
     url: {
       en: 'https://wiki.seeedstudio.com/Jetson_FAQ/#q17-how-can-i-mount-an-external-hard-drive-formatted-with-exfat-on-jetson-jetpack-6',
       ja: 'https://wiki.seeedstudio.com/ja/Jetson_FAQ/#q17-jetson-jetpack-6-で-exfat-形式の外付けハードドライブをマウントするにはどうすればよいですか',
       zh: 'https://wiki.seeedstudio.com/cn/Jetson_FAQ/#q17-如何在-jetson-jetpack-6-上挂载-exfat-格式的外部硬盘',
-      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q17-cómo-puedo-montar-un-disco-duro-externo-formateado-con-exfat-en-jetson-jetpack-6'
+      es: 'https://wiki.seeedstudio.com/es/Jetson_FAQ/#q17-cómo-puedo-montar-un-disco-duro-externo-formatado-con-exfat-en-jetson-jetpack-6',
+      pt: 'https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/#q17-como-posso-montar-um-disco-rígido-externo-formatado-com-exfat-no-jetson-jetpack-6'
     }
   }
 ];
@@ -676,6 +725,126 @@ export const translations = {
       learnMore: 'Más información →'
     }
   },
+  pt: {
+    tabs: {
+      products: 'Produtos',
+      demo: 'Demo',
+      faq: 'FAQ',
+      new: 'New'
+    },
+    banner: {
+      title: 'Guia de Dispositivos Edge AI com NVIDIA® Jetson™',
+      subtitle: 'Série NVIDIA Jetson',
+      desc: 'O NVIDIA® Jetson™ oferece IA de alto desempenho na borda com módulos energeticamente eficientes que utilizam o software NVIDIA CUDA-X™. Como revendedor autorizado e parceiro Elite, a Seeed fornece uma solução abrangente de desenvolvimento de IA na borda, aproveitando mais de 15 anos de experiência em hardware.',
+      cta: 'Explorar Dispositivos'
+    },
+    usage1: {
+      title: 'Gravação do JetPack e Uso do Hardware',
+      desc: 'A maioria dos produtos reComputer Jetson vem com JetPack pré-instalado. Guias de gravação estão disponíveis para todos os dispositivos.',
+      tabs: ['Carrier Board', 'Super', 'Mini', 'Robotics', 'Classic', 'Industrial', 'Others']
+    },
+    flashGuide: {
+      title: 'Guia de Gravação do JetPack',
+      desc: 'Guia completo passo a passo para gravar o JetPack no seu dispositivo Jetson',
+      ctaTitle: 'Guia Completo de Gravação',
+      ctaDesc: 'Selecione seu dispositivo e siga nossas instruções completas de gravação. Inclui preparação do dispositivo, modo de recuperação, instalação de dependências e comandos de gravação.',
+      features: ['Todas as Séries de Dispositivos', 'Instruções Passo a Passo', 'Solução de Problemas']
+    },
+    bsp: {
+      title: 'Customização do BSP',
+      desc: 'BSP pronto para produção para carrier boards Seeed Jetson',
+      mainTitle: 'Linux_for_Tegra',
+      mainDesc: 'Um repositório BSP abrangente para customizar e implantar sistemas Jetson em escala. Inclui customização de kernel, configuração de device tree, integração com Yocto/Buildroot e ferramentas otimizadas para ambientes de produção.',
+      supportedHardware: 'Hardware Compatível',
+      hardwareList: [
+        'reComputer J4011/J4012 (Orin NX)',
+        'reComputer Industrial J4011/J4012',
+        'reComputer J3011/J3010 (Orin Nano)',
+        'reComputer Industrial J3011/J3010',
+        'reServer Industrial J4011/J4012',
+        'reServer Industrial J3011/J3010'
+      ],
+      features: [
+        { icon: '🐧', text: 'Customização de kernel com suporte a compilação cruzada' },
+        { icon: '🌳', text: 'Overlays de device tree para hardware de carrier boards' },
+        { icon: '📦', text: 'Integração com Yocto & Buildroot para imagens de produção' },
+        { icon: '💻', text: 'Drivers de hardware para todos os carrier boards da Seeed' },
+        { icon: '⚡', text: 'Ferramentas otimizadas de gravação em SSD para produção em massa' }
+      ],
+      tags: ['Código Aberto', 'JetPack 6.2', 'Pronto para Produção']
+    },
+    examples: {
+      title: 'Implantação com Um Comando',
+      desc: 'Implante modelos de IA instantaneamente com jetson-examples',
+      installTitle: 'Instalar jetson-examples',
+      deployTitle: 'Implantar LLaVA',
+      modelsTitle: 'Modelos Suportados',
+      features: ['20+ Exemplos', 'Um Comando', 'Código Aberto'],
+      quickLinks: {
+        github: 'Repositório GitHub',
+        docs: 'Documentação Completa',
+        models: 'Lista de Modelos'
+      }
+    },
+    demoHero: {
+      title: 'Implantação de IA com Um Comando',
+      desc: 'Implante mais de 20 modelos de IA com um único comando. De LLMs à visão computacional, execute IA de ponta no seu dispositivo Jetson instantaneamente. Nenhuma configuração complexa é necessária.',
+      cta: 'Começar'
+    },
+    beginnerGuide: {
+      title: 'Guia para Iniciantes',
+      desc: 'Recursos completos de aprendizado, dos fundamentos do Jetson a aplicações avançadas de IA',
+      mainTitle: 'reComputer Jetson for Beginners',
+      mainDesc: 'Uma jornada completa de aprendizado cobrindo fundamentos do Jetson, visão computacional, IA generativa, robótica e implantação na borda. Perfeito para desenvolvedores iniciantes em IA de borda.',
+      stats: [
+        { value: '9', label: 'Módulos de Aprendizado' },
+        { value: '70+', label: 'Exemplos de Código' },
+        { value: '6', label: 'Categorias de Aplicação' }
+      ],
+      modules: [
+        { key: 'cv', icon: '👁️', title: 'Visão Computacional', desc: 'Detecção de objetos, classificação de imagens e aplicações de análise de vídeo', topics: ['YOLO', 'OpenCV', 'Detecção'] },
+        { key: 'gen', icon: '🤖', title: 'IA Generativa', desc: 'Implante LLMs, modelos multimodais e chatbots de IA no Jetson', topics: ['LLM', 'VLM', 'Chatbot'] },
+        { key: 'devtools', icon: '🛠️', title: 'Ferramentas para Desenvolvedores', desc: 'Ferramentas e utilitários de desenvolvimento para a plataforma Jetson', topics: ['Docker', 'Tools', 'Dev'] },
+        { key: 'multimodal', icon: '🔄', title: 'IA Multimodal', desc: 'Combine visão, linguagem e áudio para aplicações inteligentes', topics: ['VLM', 'Audio', 'Fusion'] },
+        { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construa robôs autônomos, sistemas AMR e aplicações com braços robóticos', topics: ['ROS2', 'Robot', 'Control'] },
+        { key: 'managed', icon: '☁️', title: 'Serviços Gerenciados', desc: 'Serviços baseados em nuvem para gerenciamento e implantação no Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
+      ],
+      cta: 'Começar no GitHub'
+    },
+    faq: {
+      title: 'Perguntas Frequentes',
+      subtitle: 'Central de Suporte',
+      desc: 'Encontre respostas para dúvidas comuns sobre produtos Jetson, solução de problemas, atualizações do sistema e muito mais. Obtenha ajuda com instalação, gravação e problemas de compatibilidade de hardware.',
+      cta: 'Ver FAQ Completo',
+      commonIssues: 'Problemas Comuns',
+      commonIssuesDesc: 'Respostas rápidas para problemas encontrados com frequência',
+      installation: 'Instalação e Configuração',
+      installationDesc: 'Guias para começar com seu dispositivo Jetson'
+    },
+    community: {
+      title: 'Projetos da Comunidade',
+      desc: 'Explore projetos e tutoriais do mundo real criados por nossa comunidade usando dispositivos Jetson. De visão computacional a IA generativa, encontre inspiração para sua próxima aplicação de IA na borda.',
+      all: 'Todos',
+      cv: 'Visão Computacional',
+      gen: 'IA Generativa',
+      devtools: 'Ferramentas para Desenvolvedores',
+      multimodal: 'IA Multimodal',
+      physical: 'IA Física',
+      managed: 'Serviços Gerenciados',
+      searchPlaceholder: 'Buscar projetos...',
+      searchResults: '{count} projetos encontrados',
+      prev: '← Anterior',
+      next: 'Próximo →'
+    },
+    common: {
+      clickMe: 'Clique aqui',
+      moreDetail: 'Mais detalhes',
+      viewOnGithub: 'Ver no GitHub',
+      tutorialsAndGuides: 'Tutoriais e Guias',
+      aiModels: '20+ Modelos de IA',
+      learnMore: 'Saiba mais →'
+    }
+  },
 };
 
 const configMap = {
@@ -683,27 +852,30 @@ const configMap = {
   ja: config_ja,
   zh: config_zh,
   es: config_es,
+  pt: config_pt,
 };
 
-type Props = {
-  lang?: 'en' | 'ja' | 'zh' | 'es';
+const getLocaleValue = <T,>(obj: Partial<Record<Lang, T>> | undefined, lang: Lang, fallback?: T): T | undefined => {
+  if (!obj) return fallback;
+  return obj[lang] ?? obj.en ?? fallback;
 };
 
-const RecomputerPage = ({ lang = 'en' }: Props) => {
+const RecomputerPage = ({ lang }: Props) => {
   const { colorMode } = useColorMode();
-  const t = translations[lang];
-  const config = configMap[lang];
+  const location = useLocation();
+
+  const resolvedLang: Lang = lang ?? getLangFromPath(location.pathname);
+  const t = translations[resolvedLang];
+  const config = configMap[resolvedLang];
+
   const [activePage, setActivePage] = useState<'products' | 'demo' | 'faq'>('products');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedProduct, setSelectedProduct] = useState('');
+  const [activeCategory, setActiveCategory] = useState<CommunityCategoryKey>('all');
   const [activeDeviceTab, setActiveDeviceTab] = useState(0);
-  
-  // Community Projects search and pagination
+
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const ITEMS_PER_PAGE = 9;
-  
-  // Section collapse states
+
   const [expandedSections, setExpandedSections] = useState({
     examples: true,
     devices: true,
@@ -713,28 +885,33 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
     community: true,
     faq: true
   });
-  
-  const toggleSection = (section: string) => {
+
+  const toggleSection = (section: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({
       ...prev,
-      [section]: !prev[section as keyof typeof prev]
+      [section]: !prev[section]
     }));
   };
-  
-  // Collapse button component
-  const CollapseButton = ({ section, isExpanded }: { section: string; isExpanded: boolean }) => (
-    <button 
+
+  const CollapseButton = ({
+    section,
+    isExpanded
+  }: {
+    section: keyof typeof expandedSections;
+    isExpanded: boolean;
+  }) => (
+    <button
       className={styles.collapse_btn}
       onClick={() => toggleSection(section)}
       title={isExpanded ? 'Collapse' : 'Expand'}
     >
-      <svg 
+      <svg
         className={clsx(styles.collapse_icon, isExpanded && styles.expanded)}
-        width="20" 
-        height="20" 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -746,68 +923,72 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
 
   const getAllProjects = () => {
     switch (activeCategory) {
-      case 'cv': return config_auto.communityList_cv;
-      case 'gen': return config_auto.communityList_gen;
-      case 'devtools': return config_auto.developerToolsList;
-      case 'multimodal': return config_auto.multimodalList;
-      case 'physical': return config_auto.physicalAIList;
-      case 'managed': return config_auto.managedServicesList;
-      default: return [
-        ...config_auto.communityList_cv,
-        ...config_auto.communityList_gen,
-        ...config_auto.developerToolsList,
-        ...config_auto.multimodalList,
-        ...config_auto.physicalAIList,
-        ...config_auto.managedServicesList
-      ];
+      case 'cv':
+        return config_auto.communityList_cv;
+      case 'gen':
+        return config_auto.communityList_gen;
+      case 'devtools':
+        return config_auto.developerToolsList;
+      case 'multimodal':
+        return config_auto.multimodalList;
+      case 'physical':
+        return config_auto.physicalAIList;
+      case 'managed':
+        return config_auto.managedServicesList;
+      default:
+        return [
+          ...config_auto.communityList_cv,
+          ...config_auto.communityList_gen,
+          ...config_auto.developerToolsList,
+          ...config_auto.multimodalList,
+          ...config_auto.physicalAIList,
+          ...config_auto.managedServicesList
+        ];
     }
   };
-  
+
   const getFilteredProjects = () => {
     const allProjects = getAllProjects();
     if (!searchQuery.trim()) return allProjects;
-    
+
     const query = searchQuery.toLowerCase();
-    return allProjects.filter(project => 
-      (project.name?.[lang] || project.name?.en || '').toLowerCase().includes(query) ||
-      (project.category?.[lang] || []).some((cat: string) => cat.toLowerCase().includes(query)) ||
+    return allProjects.filter((project: any) =>
+      (getLocaleValue(project.name, resolvedLang, project.name?.en || '') || '').toLowerCase().includes(query) ||
+      (getLocaleValue(project.category, resolvedLang, []) || []).some((cat: string) => cat.toLowerCase().includes(query)) ||
       (project.category?.en || []).some((cat: string) => cat.toLowerCase().includes(query))
     );
   };
-  
+
   const getPaginatedProjects = () => {
     const filtered = getFilteredProjects();
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     return filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   };
-  
+
   const totalPages = Math.ceil(getFilteredProjects().length / ITEMS_PER_PAGE);
-  
-  const handleCategoryChange = (catId: string) => {
+
+  const handleCategoryChange = (catId: CommunityCategoryKey) => {
     setActiveCategory(catId);
     setCurrentPage(1);
   };
-  
+
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
     setCurrentPage(1);
   };
 
-  const selectedProductData = selectedProduct ? PRODUCT_DATA[selectedProduct] : null;
-
   return (
     <div className={clsx(styles.jetson_page, styles[colorMode])}>
-      {/* Page Tabs */}
       <div className={styles.page_tabs_container}>
         <div className={styles.page_tabs}>
-          <button 
+          <button
             className={clsx(styles.page_tab, activePage === 'products' && styles.active)}
             onClick={() => setActivePage('products')}
           >
             <ProductsIcon className={styles.page_tab_icon} size={18} />
             <span className={styles.page_tab_text}>{t.tabs.products}</span>
           </button>
-          <button 
+          <button
             className={clsx(styles.page_tab, activePage === 'demo' && styles.active)}
             onClick={() => setActivePage('demo')}
           >
@@ -815,7 +996,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             <span className={styles.page_tab_text}>{t.tabs.demo}</span>
             <span className={styles.page_tab_badge}>{t.tabs.new}</span>
           </button>
-          <button 
+          <button
             className={clsx(styles.page_tab, activePage === 'faq' && styles.active)}
             onClick={() => setActivePage('faq')}
           >
@@ -825,10 +1006,8 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
         </div>
       </div>
 
-      {/* Products Page */}
       {activePage === 'products' && (
         <div className={styles.page_content}>
-          {/* Hero Section */}
           <div className={styles.hero_section}>
             <div className={styles.hero_content}>
               <div className={styles.hero_subtitle}>{t.banner.subtitle}</div>
@@ -837,7 +1016,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               <a href="#devices" className={styles.hero_cta}>
                 <span>{t.banner.cta}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
@@ -846,7 +1025,6 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             </div>
           </div>
 
-          {/* Devices Section - Flash Guide & Products */}
           <div className={styles.section} id="devices">
             <div className={styles.section_header}>
               <div style={{ flex: 1 }}>
@@ -855,177 +1033,218 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               </div>
               <CollapseButton section="devices" isExpanded={expandedSections.devices} />
             </div>
-            
+
             {expandedSections.devices && (
-            <>
-            {/* Flash Guide CTA - Prominent placement at top */}
-            <a href={`${LANG_PATH_PREFIX[lang]}/flash/jetpack_to_selected_product`} className={styles.flash_guide_promo}>
-              <div className={styles.flash_guide_promo_icon}><ZapIcon size={40} /></div>
-              <div className={styles.flash_guide_promo_content}>
-                <h3 className={styles.flash_guide_promo_title}>{t.flashGuide.ctaTitle}</h3>
-                <p className={styles.flash_guide_promo_desc}>{t.flashGuide.ctaDesc}</p>
-                <div className={styles.flash_guide_promo_features}>
-                  {t.flashGuide.features.map((feature, idx) => (
-                    <span key={idx} className={styles.flash_guide_promo_feature}>✓ {feature}</span>
+              <>
+                <a
+                  href={`${LANG_PATH_PREFIX[resolvedLang]}/flash/jetpack_to_selected_product`}
+                  className={styles.flash_guide_promo}
+                >
+                  <div className={styles.flash_guide_promo_icon}><ZapIcon size={40} /></div>
+                  <div className={styles.flash_guide_promo_content}>
+                    <h3 className={styles.flash_guide_promo_title}>{t.flashGuide.ctaTitle}</h3>
+                    <p className={styles.flash_guide_promo_desc}>{t.flashGuide.ctaDesc}</p>
+                    <div className={styles.flash_guide_promo_features}>
+                      {t.flashGuide.features.map((feature, idx) => (
+                        <span key={idx} className={styles.flash_guide_promo_feature}>✓ {feature}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.flash_guide_promo_arrow}>{t.common.clickMe}</div>
+                </a>
+
+                <div className={styles.tab_nav} style={{ margin: '32px 0 24px' }}>
+                  {t.usage1.tabs.map((tab, idx) => (
+                    <button
+                      key={idx}
+                      className={clsx(styles.tab_btn, activeDeviceTab === idx && styles.active)}
+                      onClick={() => setActiveDeviceTab(idx)}
+                    >
+                      {tab}
+                    </button>
                   ))}
                 </div>
-              </div>
-              <div className={styles.flash_guide_promo_arrow}>{t.common.clickMe}</div>
-            </a>
 
-            {/* Product Category Tabs */}
-            <div className={styles.tab_nav} style={{ margin: '32px 0 24px' }}>
-              {t.usage1.tabs.map((tab, idx) => (
-                <button 
-                  key={idx}
-                  className={clsx(styles.tab_btn, activeDeviceTab === idx && styles.active)}
-                  onClick={() => setActiveDeviceTab(idx)}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
-            
-            <div className={styles.device_grid}>
-              {/* Tab 0: Carrier Board */}
-              {activeDeviceTab === 0 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 1: Super */}
-              {activeDeviceTab === 1 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 2: Mini */}
-              {activeDeviceTab === 2 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 3: Robotics */}
-              {activeDeviceTab === 3 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 4: Classic */}
-              {activeDeviceTab === 4 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 5: Industrial & reServer */}
-              {activeDeviceTab === 5 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-              {/* Tab 6: Other */}
-              {activeDeviceTab === 6 && (
-                <>
-                  {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map(product => (
-                    <a key={product.value} href={product.interfaceUsage[lang] || product.interfaceUsage.en} target="_blank" className={styles.device_card}>
-                      <div className={styles.device_image}>
-                        <img src={product.img} alt={product.label} />
-                      </div>
-                      <div className={styles.device_content}>
-                        <div className={styles.device_name}>{product.label}</div>
-                        <div className={styles.device_action}>
-                          <span className={styles.device_action_text}>{t.common.moreDetail}</span>
-                          <span className={styles.device_action_arrow}>→</span>
-                        </div>
-                      </div>
-                    </a>
-                  ))}
-                </>
-              )}
-            </div>
-            </>
+                <div className={styles.device_grid}>
+                  {activeDeviceTab === 0 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.carrier.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 1 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.super.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 2 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.mini.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 3 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.robotics.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 4 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.classic.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 5 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.industrial.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+
+                  {activeDeviceTab === 6 && (
+                    <>
+                      {productOptions.filter(PRODUCT_CATEGORIES.other.filter).map((product: any) => (
+                        <a
+                          key={product.value}
+                          href={getLocaleValue(product.interfaceUsage, resolvedLang, product.interfaceUsage?.en)}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={styles.device_card}
+                        >
+                          <div className={styles.device_image}>
+                            <img src={product.img} alt={product.label} />
+                          </div>
+                          <div className={styles.device_content}>
+                            <div className={styles.device_name}>{product.label}</div>
+                            <div className={styles.device_action}>
+                              <span className={styles.device_action_text}>{t.common.moreDetail}</span>
+                              <span className={styles.device_action_arrow}>→</span>
+                            </div>
+                          </div>
+                        </a>
+                      ))}
+                    </>
+                  )}
+                </div>
+              </>
             )}
           </div>
 
-          {/* Beginner's Guide Section - Learning Modules */}
           <div className={styles.section}>
             <div className={styles.section_header}>
               <div>
@@ -1034,78 +1253,84 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               </div>
               <CollapseButton section="beginnerGuide" isExpanded={expandedSections.beginnerGuide} />
             </div>
-            
+
             {expandedSections.beginnerGuide && (
-            <div className={styles.beginner_container}>
-              {/* Main Promo Card */}
-              <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" className={styles.beginner_promo_card}>
-                <div className={styles.beginner_promo_header}>
-                  <span className={styles.beginner_promo_icon}><BookOpenIcon size={36} /></span>
-                  <div>
-                    <h3 className={styles.beginner_promo_title}>{t.beginnerGuide.mainTitle}</h3>
-                    <span className={styles.github_badge}>GitHub</span>
-                  </div>
-                </div>
-                <p className={styles.beginner_promo_desc}>{t.beginnerGuide.mainDesc}</p>
-                <div className={styles.beginner_promo_stats}>
-                  {t.beginnerGuide.stats.map((stat, idx) => (
-                    <div key={idx} className={styles.beginner_stat}>
-                      <span className={styles.beginner_stat_value}>{stat.value}</span>
-                      <span className={styles.beginner_stat_label}>{stat.label}</span>
+              <div className={styles.beginner_container}>
+                <a
+                  href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.beginner_promo_card}
+                >
+                  <div className={styles.beginner_promo_header}>
+                    <span className={styles.beginner_promo_icon}><BookOpenIcon size={36} /></span>
+                    <div>
+                      <h3 className={styles.beginner_promo_title}>{t.beginnerGuide.mainTitle}</h3>
+                      <span className={styles.github_badge}>GitHub</span>
                     </div>
-                  ))}
-                </div>
-              </a>
-              
-              {/* Learning Module Cards */}
-              <div className={styles.beginner_modules_grid}>
-                {t.beginnerGuide.modules.map((module, idx) => {
-                  const ModuleIcons = [EyeIcon, BotIcon, WrenchIcon, RefreshIcon, FactoryIcon, CloudIcon];
-                  const ModuleIcon = ModuleIcons[idx];
-                  const categoryKey = module.key;
-                  return (
-                    <a 
-                      key={idx} 
-                      className={styles.beginner_module_card}
-                      href={`${LANG_PATH_PREFIX[lang]}/nvidia_jetson?tab=demo&category=${categoryKey}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActivePage('demo');
-                        setActiveCategory(categoryKey);
-                        // Scroll to community section
-                        setTimeout(() => {
-                          const communitySection = document.getElementById('community-projects');
-                          if (communitySection) {
-                            communitySection.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }, 100);
-                      }}
-                    >
-                      <div className={styles.beginner_module_icon}><ModuleIcon size={28} /></div>
-                      <div className={styles.beginner_module_content}>
-                        <h4 className={styles.beginner_module_title}>{module.title}</h4>
-                        <p className={styles.beginner_module_desc}>{module.desc}</p>
-                        <div className={styles.beginner_module_topics}>
-                          {module.topics.map((topic, tidx) => (
-                            <span key={tidx} className={styles.beginner_module_topic}>{topic}</span>
-                          ))}
-                        </div>
+                  </div>
+                  <p className={styles.beginner_promo_desc}>{t.beginnerGuide.mainDesc}</p>
+                  <div className={styles.beginner_promo_stats}>
+                    {t.beginnerGuide.stats.map((stat, idx) => (
+                      <div key={idx} className={styles.beginner_stat}>
+                        <span className={styles.beginner_stat_value}>{stat.value}</span>
+                        <span className={styles.beginner_stat_label}>{stat.label}</span>
                       </div>
-                    </a>
-                  );
-                })}
+                    ))}
+                  </div>
+                </a>
+
+                <div className={styles.beginner_modules_grid}>
+                  {t.beginnerGuide.modules.map((module, idx) => {
+                    const ModuleIcons = [EyeIcon, BotIcon, WrenchIcon, RefreshIcon, FactoryIcon, CloudIcon];
+                    const ModuleIcon = ModuleIcons[idx];
+                    const categoryKey = module.key as CommunityCategoryKey;
+
+                    return (
+                      <a
+                        key={idx}
+                        className={styles.beginner_module_card}
+                        href={`${LANG_PATH_PREFIX[resolvedLang]}/nvidia_jetson?tab=demo&category=${categoryKey}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setActivePage('demo');
+                          setActiveCategory(categoryKey);
+                          setTimeout(() => {
+                            const communitySection = document.getElementById('community-projects');
+                            if (communitySection) {
+                              communitySection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }, 100);
+                        }}
+                      >
+                        <div className={styles.beginner_module_icon}><ModuleIcon size={28} /></div>
+                        <div className={styles.beginner_module_content}>
+                          <h4 className={styles.beginner_module_title}>{module.title}</h4>
+                          <p className={styles.beginner_module_desc}>{module.desc}</p>
+                          <div className={styles.beginner_module_topics}>
+                            {module.topics.map((topic, tidx) => (
+                              <span key={tidx} className={styles.beginner_module_topic}>{topic}</span>
+                            ))}
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+
+                <a
+                  href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.beginner_cta_button}
+                >
+                  <span>{t.beginnerGuide.cta}</span>
+                  <span>→</span>
+                </a>
               </div>
-              
-              {/* CTA Button */}
-              <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank" className={styles.beginner_cta_button}>
-                <span>{t.beginnerGuide.cta}</span>
-                <span>→</span>
-              </a>
-            </div>
             )}
           </div>
 
-          {/* BSP Customization Section - Feature Grid */}
           <div className={styles.section}>
             <div className={styles.section_header}>
               <div>
@@ -1114,95 +1339,90 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               </div>
               <CollapseButton section="bsp" isExpanded={expandedSections.bsp} />
             </div>
-            
+
             {expandedSections.bsp && (
-            <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank" className={styles.bsp_main_card}>
-              {/* Main Content */}
-              <div className={styles.bsp_main_content}>
-                <div className={styles.bsp_header}>
-                  <span className={styles.bsp_icon}><SettingsIcon size={32} /></span>
-                  <div className={styles.bsp_title_group}>
-                    <span className={styles.bsp_main_title}>{t.bsp.mainTitle}</span>
-                    <span className={styles.github_badge}>GitHub</span>
+              <a
+                href="https://github.com/Seeed-Studio/Linux_for_Tegra"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.bsp_main_card}
+              >
+                <div className={styles.bsp_main_content}>
+                  <div className={styles.bsp_header}>
+                    <span className={styles.bsp_icon}><SettingsIcon size={32} /></span>
+                    <div className={styles.bsp_title_group}>
+                      <span className={styles.bsp_main_title}>{t.bsp.mainTitle}</span>
+                      <span className={styles.github_badge}>GitHub</span>
+                    </div>
                   </div>
-                </div>
 
-                <p className={styles.bsp_description}>{t.bsp.mainDesc}</p>
+                  <p className={styles.bsp_description}>{t.bsp.mainDesc}</p>
 
-                {/* Features List */}
-                <div className={styles.bsp_features}>
-                  <div className={styles.bsp_feature_item}>
-                    <span className={styles.bsp_feature_icon}><LinuxIcon size={20} /></span>
-                    <span className={styles.bsp_feature_text}>{t.bsp.features[0].text}</span>
+                  <div className={styles.bsp_features}>
+                    <div className={styles.bsp_feature_item}>
+                      <span className={styles.bsp_feature_icon}><LinuxIcon size={20} /></span>
+                      <span className={styles.bsp_feature_text}>{t.bsp.features[0].text}</span>
+                    </div>
+                    <div className={styles.bsp_feature_item}>
+                      <span className={styles.bsp_feature_icon}><TreeIcon size={20} /></span>
+                      <span className={styles.bsp_feature_text}>{t.bsp.features[1].text}</span>
+                    </div>
+                    <div className={styles.bsp_feature_item}>
+                      <span className={styles.bsp_feature_icon}><PackageIcon size={20} /></span>
+                      <span className={styles.bsp_feature_text}>{t.bsp.features[2].text}</span>
+                    </div>
+                    <div className={styles.bsp_feature_item}>
+                      <span className={styles.bsp_feature_icon}><MonitorIcon size={20} /></span>
+                      <span className={styles.bsp_feature_text}>{t.bsp.features[3].text}</span>
+                    </div>
+                    <div className={styles.bsp_feature_item}>
+                      <span className={styles.bsp_feature_icon}><ZapIcon size={20} /></span>
+                      <span className={styles.bsp_feature_text}>{t.bsp.features[4].text}</span>
+                    </div>
                   </div>
-                  <div className={styles.bsp_feature_item}>
-                    <span className={styles.bsp_feature_icon}><TreeIcon size={20} /></span>
-                    <span className={styles.bsp_feature_text}>{t.bsp.features[1].text}</span>
+
+                  <div className={styles.bsp_hardware_section}>
+                    <span className={styles.bsp_hardware_label}>{t.bsp.supportedHardware}</span>
+                    <div className={styles.bsp_hardware_list}>
+                      {t.bsp.hardwareList.map((hw, idx) => (
+                        <span key={idx} className={styles.bsp_hardware_tag}>{hw}</span>
+                      ))}
+                    </div>
                   </div>
-                  <div className={styles.bsp_feature_item}>
-                    <span className={styles.bsp_feature_icon}><PackageIcon size={20} /></span>
-                    <span className={styles.bsp_feature_text}>{t.bsp.features[2].text}</span>
-                  </div>
-                  <div className={styles.bsp_feature_item}>
-                    <span className={styles.bsp_feature_icon}><MonitorIcon size={20} /></span>
-                    <span className={styles.bsp_feature_text}>{t.bsp.features[3].text}</span>
-                  </div>
-                  <div className={styles.bsp_feature_item}>
-                    <span className={styles.bsp_feature_icon}><ZapIcon size={20} /></span>
-                    <span className={styles.bsp_feature_text}>{t.bsp.features[4].text}</span>
-                  </div>
-                </div>
-                
-                {/* Hardware Support */}
-                <div className={styles.bsp_hardware_section}>
-                  <span className={styles.bsp_hardware_label}>{t.bsp.supportedHardware}</span>
-                  <div className={styles.bsp_hardware_list}>
-                    {t.bsp.hardwareList.map((hw, idx) => (
-                      <span key={idx} className={styles.bsp_hardware_tag}>{hw}</span>
+
+                  <div className={styles.bsp_tags_row}>
+                    {t.bsp.tags.map((tag, idx) => (
+                      <span key={idx} className={styles.bsp_tag}>{tag}</span>
                     ))}
                   </div>
                 </div>
-                
-                {/* Tags */}
-                <div className={styles.bsp_tags_row}>
-                  {t.bsp.tags.map((tag, idx) => (
-                    <span key={idx} className={styles.bsp_tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Arrow */}
-              <div className={styles.bsp_arrow}>→</div>
-            </a>
+
+                <div className={styles.bsp_arrow}>→</div>
+              </a>
             )}
           </div>
         </div>
       )}
 
-      {/* Demo Page */}
       {activePage === 'demo' && (
         <div className={styles.page_content}>
-          {/* Hero Section */}
           <div className={styles.hero_section}>
             <div className={styles.hero_content}>
               <div className={styles.hero_subtitle}><ZapIcon size={16} /> jetson-examples</div>
               <h1>{t.demoHero.title}</h1>
-              <p className={styles.hero_description}>
-                {t.demoHero.desc}
-              </p>
-              <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" className={styles.hero_cta}>
+              <p className={styles.hero_description}>{t.demoHero.desc}</p>
+              <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" rel="noreferrer" className={styles.hero_cta}>
                 <span>{t.demoHero.cta}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
             <div className={styles.hero_image}>
-              <div style={{textAlign: 'center', color: '#76b900'}}><RocketIcon size={120} /></div>
+              <div style={{ textAlign: 'center', color: '#76b900' }}><RocketIcon size={120} /></div>
             </div>
           </div>
 
-          {/* jetson-examples Section */}
           <div className={styles.section}>
             <div className={styles.section_header}>
               <div>
@@ -1211,7 +1431,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               </div>
               <CollapseButton section="examples" isExpanded={expandedSections.examples} />
             </div>
-            
+
             {expandedSections.examples && (
               <div className={styles.examples_container}>
                 <div className={styles.examples_hero_card}>
@@ -1220,20 +1440,20 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                       <ZapIcon size={20} />
                       <span className={styles.examples_logo_text}>jetson-examples</span>
                     </div>
-                    <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" className={styles.github_link}>
+                    <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank" rel="noreferrer" className={styles.github_link}>
                       <span>{t.common.viewOnGithub}</span>
                     </a>
                   </div>
-                  
+
                   <div className={styles.examples_code_block}>
                     <pre className={styles.code_content}>
                       <code>
                         <span className={styles.code_comment}># {t.examples.installTitle}</span>
-                        <br/>
+                        <br />
                         <span className={styles.code_prompt}>$</span> pip3 install jetson-examples
-                        <br/><br/>
+                        <br /><br />
                         <span className={styles.code_comment}># {t.examples.deployTitle}</span>
-                        <br/>
+                        <br />
                         <span className={styles.code_prompt}>$</span> reComputer run llava
                       </code>
                     </pre>
@@ -1265,7 +1485,12 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                 </div>
 
                 <div className={styles.examples_quick_links}>
-                  <a href="https://github.com/Seeed-Projects/jetson-examples#readme" target="_blank" className={styles.example_link_card}>
+                  <a
+                    href="https://github.com/Seeed-Projects/jetson-examples#readme"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.example_link_card}
+                  >
                     <div className={styles.link_card_icon}><BookOpenIcon size={24} /></div>
                     <div className={styles.link_card_content}>
                       <h4>{t.examples.quickLinks.docs}</h4>
@@ -1273,7 +1498,12 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                     </div>
                     <span className={styles.link_card_arrow}>→</span>
                   </a>
-                  <a href="https://github.com/Seeed-Projects/jetson-examples/blob/main/docs/examples.md" target="_blank" className={styles.example_link_card}>
+                  <a
+                    href="https://github.com/Seeed-Projects/jetson-examples/blob/main/docs/examples.md"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.example_link_card}
+                  >
                     <div className={styles.link_card_icon}><BotIcon size={24} /></div>
                     <div className={styles.link_card_content}>
                       <h4>{t.examples.quickLinks.models}</h4>
@@ -1286,7 +1516,6 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             )}
           </div>
 
-          {/* Community Projects Section */}
           <div className={styles.section} id="community-projects">
             <div className={styles.section_header}>
               <div style={{ flex: 1, minWidth: 0 }}>
@@ -1295,122 +1524,129 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               </div>
               <CollapseButton section="community" isExpanded={expandedSections.community} />
             </div>
-            
-            {expandedSections.community && (
-            <>
-            {/* Search Bar */}
-            <div className={styles.search_container}>
-              <div className={styles.search_wrapper}>
-                <span className={styles.search_icon}>🔍</span>
-                <input
-                  type="text"
-                  className={styles.search_input}
-                  placeholder={t.community.searchPlaceholder}
-                  value={searchQuery}
-                  onChange={handleSearchChange}
-                />
-                {searchQuery && (
-                  <button 
-                    className={styles.search_clear}
-                    onClick={() => { setSearchQuery(''); setCurrentPage(1); }}
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-              <span className={styles.search_results}>
-                {t.community.searchResults.replace('{count}', String(getFilteredProjects().length))}
-              </span>
-            </div>
-            
-            {/* Project Filters */}
-            <div className={styles.project_filters}>
-              {COMMUNITY_CATEGORIES.map((cat) => (
-                <button
-                  key={cat.id}
-                  className={clsx(styles.filter_btn, activeCategory === cat.id && styles.active)}
-                  onClick={() => handleCategoryChange(cat.id)}
-                >
-                  {t.community[cat.key]}
-                </button>
-              ))}
-            </div>
 
-            {/* Projects Grid */}
-            <div className={styles.project_grid}>
-              {getPaginatedProjects().map((project, idx) => (
-                <a key={idx} href={project.URL?.[lang] || project.URL?.en} target="_blank" className={styles.project_card}>
-                  <div className={styles.project_image}>
-                    <img src={project.img} alt={project.name?.[lang] || project.name?.en} />
+            {expandedSections.community && (
+              <>
+                <div className={styles.search_container}>
+                  <div className={styles.search_wrapper}>
+                    <span className={styles.search_icon}>🔍</span>
+                    <input
+                      type="text"
+                      className={styles.search_input}
+                      placeholder={t.community.searchPlaceholder}
+                      value={searchQuery}
+                      onChange={handleSearchChange}
+                    />
+                    {searchQuery && (
+                      <button
+                        className={styles.search_clear}
+                        onClick={() => {
+                          setSearchQuery('');
+                          setCurrentPage(1);
+                        }}
+                      >
+                        ✕
+                      </button>
+                    )}
                   </div>
-                  <div className={styles.project_content}>
-                    <span className={styles.project_category}>
-                      {project.category?.[lang]?.[0] || project.category?.en?.[0] || 'Jetson'}
-                    </span>
-                    <h3 className={styles.project_title}>{project.name?.[lang] || project.name?.en}</h3>
-                  </div>
-                </a>
-              ))}
-            </div>
-            
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className={styles.pagination}>
-                <button
-                  className={styles.page_btn}
-                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                >
-                  {t.community.prev}
-                </button>
-                <div className={styles.page_numbers}>
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <span className={styles.search_results}>
+                    {t.community.searchResults.replace('{count}', String(getFilteredProjects().length))}
+                  </span>
+                </div>
+
+                <div className={styles.project_filters}>
+                  {COMMUNITY_CATEGORIES.map((cat) => (
                     <button
-                      key={page}
-                      className={clsx(styles.page_number, currentPage === page && styles.active)}
-                      onClick={() => setCurrentPage(page)}
+                      key={cat.id}
+                      className={clsx(styles.filter_btn, activeCategory === cat.id && styles.active)}
+                      onClick={() => handleCategoryChange(cat.id)}
                     >
-                      {page}
+                      {t.community[cat.key]}
                     </button>
                   ))}
                 </div>
-                <button
-                  className={styles.page_btn}
-                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  disabled={currentPage === totalPages}
-                >
-                  {t.community.next}
-                </button>
-              </div>
-            )}
-            </>
+
+                <div className={styles.project_grid}>
+                  {getPaginatedProjects().map((project: any, idx: number) => (
+                    <a
+                      key={idx}
+                      href={getLocaleValue(project.URL, resolvedLang, project.URL?.en)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.project_card}
+                    >
+                      <div className={styles.project_image}>
+                        <img
+                          src={project.img}
+                          alt={getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
+                        />
+                      </div>
+                      <div className={styles.project_content}>
+                        <span className={styles.project_category}>
+                          {getLocaleValue(project.category, resolvedLang, project.category?.en || [])?.[0] || 'Jetson'}
+                        </span>
+                        <h3 className={styles.project_title}>
+                          {getLocaleValue(project.name, resolvedLang, project.name?.en || '')}
+                        </h3>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
+                {totalPages > 1 && (
+                  <div className={styles.pagination}>
+                    <button
+                      className={styles.page_btn}
+                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                      disabled={currentPage === 1}
+                    >
+                      {t.community.prev}
+                    </button>
+                    <div className={styles.page_numbers}>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                        <button
+                          key={page}
+                          className={clsx(styles.page_number, currentPage === page && styles.active)}
+                          onClick={() => setCurrentPage(page)}
+                        >
+                          {page}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      className={styles.page_btn}
+                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                      disabled={currentPage === totalPages}
+                    >
+                      {t.community.next}
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>
       )}
 
-      {/* FAQ Page */}
       {activePage === 'faq' && (
         <div className={styles.page_content}>
-          {/* Hero Section */}
           <div className={styles.hero_section}>
             <div className={styles.hero_content}>
               <div className={styles.hero_subtitle}>{t.faq.subtitle}</div>
               <h1>{t.faq.title}</h1>
               <p className={styles.hero_description}>{t.faq.desc}</p>
-              <a href="https://wiki.seeedstudio.com/Jetson_FAQ/" target="_blank" className={styles.hero_cta}>
+              <a href="https://wiki.seeedstudio.com/Jetson_FAQ/" target="_blank" rel="noreferrer" className={styles.hero_cta}>
                 <span>{t.faq.cta}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
             <div className={styles.hero_image}>
-              <div style={{textAlign: 'center', color: '#76b900'}}><HelpCircleIcon size={120} /></div>
+              <div style={{ textAlign: 'center', color: '#76b900' }}><HelpCircleIcon size={120} /></div>
             </div>
           </div>
 
-          {/* Common Issues Section */}
           <div className={styles.section}>
             <div className={styles.section_header}>
               <div>
@@ -1421,21 +1657,27 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
             </div>
 
             {expandedSections.faq && (
-            <div className={styles.faq_grid}>
-              {FAQ_DATA.map((faq, idx) => {
-                const FaqIconComponent = faq.Icon;
-                return (
-                  <a key={idx} href={faq.url[lang] || faq.url.en} target="_blank" className={styles.faq_card}>
-                    <div className={styles.faq_icon}><FaqIconComponent size={28} /></div>
-                    <div className={styles.faq_content}>
-                      <h3 className={styles.faq_title}>{faq.title[lang]}</h3>
-                      <p className={styles.faq_desc}>{faq.desc[lang]}</p>
-                      <span className={styles.faq_link}>{t.common.learnMore}</span>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
+              <div className={styles.faq_grid}>
+                {FAQ_DATA.map((faq, idx) => {
+                  const FaqIconComponent = faq.Icon;
+                  return (
+                    <a
+                      key={idx}
+                      href={getLocaleValue(faq.url, resolvedLang, faq.url.en)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={styles.faq_card}
+                    >
+                      <div className={styles.faq_icon}><FaqIconComponent size={28} /></div>
+                      <div className={styles.faq_content}>
+                        <h3 className={styles.faq_title}>{getLocaleValue(faq.title, resolvedLang, faq.title.en)}</h3>
+                        <p className={styles.faq_desc}>{getLocaleValue(faq.desc, resolvedLang, faq.desc.en)}</p>
+                        <span className={styles.faq_link}>{t.common.learnMore}</span>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
             )}
           </div>
         </div>
