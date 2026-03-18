@@ -6,10 +6,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger
 last_update:
-  date: 4/12/2023
-  author: Yvonne
+  date: 3/18/2026
+  author: Kian
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
@@ -43,6 +43,7 @@ First, we need to do the wiring. Please follow the below steps.
 3. Remove the threaded cap and pass it through the cable of the sensor, pass it through the bottom cover, and connect it to the wiring terminal.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png"/></div>
+
 ## Wiring terminal description
 
 | **No.** | **Pin** | **Description** |
@@ -59,6 +60,15 @@ First, we need to do the wiring. Please follow the below steps.
 | 10 | I2 | Collect the current input from 4 to 20mA |
 | 11 | GND | Ground pin |
 | 12 | GND | Ground pin |
+
+## resolution
+
+| **Interface**                    | **Value**                   |
+| -------------------------------- | --------------------------- |
+| Current Input	                   |  4 to 20 mA (2 channel)     |
+| Current Input Resolution (I1/I2) |  0.001 mA                   |
+| Voltage Input                    |	0 to 10V (2 channel)       |
+| Voltage Input Resolution (V1/V2) |  0.01 mV                    |
 
 ## Power supply options of sensor
 

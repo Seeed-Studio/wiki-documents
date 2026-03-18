@@ -2689,6 +2689,7 @@ const sidebars = {
           label: 'reComputer R1225 LoRaWAN Gateway',
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start',
           ],
         },
         {

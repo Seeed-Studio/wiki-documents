@@ -44,9 +44,10 @@ There are two ways for users to login Luci configuration page.
 
 #### Access via router
 
-- Step 1: Connect your device to a Ethernet cable, and connect your PC to the same router.
+- Step 1: Connect your device to a Ethernet cable, and connect your PC to the same router
 
-:::note Your PC and device should be connected to the same router/network.
+:::note
+ Your PC and device should be connected to the same router/network.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png" alt="pir" width={800} height="auto" /></p>
@@ -70,11 +71,11 @@ Then input your device username and password to login.
 
 #### Access via device AP hotspot
 
-- Step 1: Turn on the device AP hotspot.
+- Step 1: Turn on the device AP hotspot
 
 Press the button for 5s until the blue indicator flashes slowly to enter the configuration mode.
 
-- Step 2: Connect to the AP hotspot.
+- Step 2: Connect to the AP hotspot
 AP hotspot name is SenseCAP_XXXXXX (6-figure MAC address),default password is 12345678; connect your computer to this AP hotspot.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wifi.png" alt="pir" width={400} height="auto" /></p>
@@ -97,21 +98,21 @@ Input the IP Address (192.168.168.1) in your browser to enter the Local Console.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless.png" alt="pir" width={800} height="auto" /></p>
 
-- Step 2: Click on the `Scan` button to scan the WIFI.
+- Step 2: Click on the `Scan` button to scan the WIFI
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless2.png" alt="pir" width={800} height="auto" /></p>
 
-- Step 3: Select your WI-FI to join the network.
+- Step 3: Select your WI-FI to join the network
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless3.png" alt="pir" width={800} height="auto" /></p>
 
-- Step 4: Submit the Wi-Fi password, and then click `Submit` and Save.
+- Step 4: Submit the Wi-Fi password, and then click `Submit` and Save
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless4.png" alt="pir" width={800} height="auto" /></p>
 
-Then click Save and Apply to apply your settings.
+Then click Save and Apply to apply your settings
 
-The indicator on the top will show solid green if the gateway is successfully connected to the WIFI.
+The indicator on the top will show solid green if the gateway is successfully connected to the WIFI
 
 ### Cellular Connection (for 4G version)
 
@@ -123,7 +124,7 @@ The indicator on the top will show solid green if the gateway is successfully co
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g1.png" alt="pir" width={800} height="auto" /></p>
 
-- Step 3: Setup the APN info, and click `Save and Apply` to apply your settings.
+- Step 3: Setup the APN info, and click `Save and Apply` to apply your settings
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
