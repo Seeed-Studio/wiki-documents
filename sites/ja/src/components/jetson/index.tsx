@@ -18,7 +18,8 @@ import {
   RefreshIcon, PlugIcon, HardDriveIcon, ZapIcon, LinuxIcon, TreeIcon,
   PackageIcon, MonitorIcon, WrenchIcon, BookIcon, EyeIcon, BotIcon,
   FactoryIcon, BookOpenIcon, SparklesIcon, SettingsIcon, MessageSquareIcon,
-  MicIcon, PaletteIcon, GemIcon, MoreHorizontalIcon, RocketIcon, HelpCircleIcon
+  MicIcon, PaletteIcon, GemIcon, MoreHorizontalIcon, RocketIcon, HelpCircleIcon,
+  CloudIcon
 } from './icons';
 
 function getImgUrl(str: string, suffix?: string) {
@@ -267,17 +268,17 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'A complete learning journey covering Jetson fundamentals, computer vision, generative AI, robotics, and edge deployment. Perfect for developers new to edge AI.',
       stats: [
-        { value: '9+', label: 'Learning Modules' },
-        { value: '20+', label: 'Code Examples' },
-        { value: '5+', label: 'Real Projects' }
+        { value: '9', label: 'Learning Modules' },
+        { value: '70+', label: 'Code Examples' },
+        { value: '6', label: 'Application Categories' }
       ],
       modules: [
-        { icon: '🔧', title: 'Environment Setup', desc: 'Development environment configuration, Docker setup, and basic tools introduction', topics: ['Docker', 'System Config', 'Tools'] },
-        { icon: '📖', title: 'Basic Tutorials', desc: 'Learn Jetson platform fundamentals, GPIO control, and basic AI concepts', topics: ['GPIO', 'Camera', 'Basics'] },
-        { icon: '👁️', title: 'Computer Vision', desc: 'Object detection, image classification, and video analytics applications', topics: ['YOLO', 'OpenCV', 'Detection'] },
-        { icon: '🤖', title: 'Generative AI', desc: 'Deploy LLMs, multimodal models, and AI chatbots on Jetson', topics: ['LLM', 'VLM', 'Chatbot'] },
-        { icon: '🏭', title: 'Robotics', desc: 'Build autonomous robots, AMR systems, and robotic arm applications', topics: ['ROS2', 'Navigation', 'Control'] },
-        { icon: '⚡', title: 'Optimization', desc: 'TensorRT acceleration, quantization, and production deployment', topics: ['TensorRT', 'Optimize', 'Deploy'] }
+        { key: 'cv', icon: '👁️', title: 'Computer Vision', desc: 'Object detection, image classification, and video analytics applications', topics: ['YOLO', 'OpenCV', 'Detection'] },
+        { key: 'gen', icon: '🤖', title: 'Generative AI', desc: 'Deploy LLMs, multimodal models, and AI chatbots on Jetson', topics: ['LLM', 'VLM', 'Chatbot'] },
+        { key: 'devtools', icon: '🛠️', title: 'Developer Tools', desc: 'Development tools and utilities for Jetson platform', topics: ['Docker', 'Tools', 'Dev'] },
+        { key: 'multimodal', icon: '🔄', title: 'Multimodal AI', desc: 'Combine vision, language, and audio for intelligent applications', topics: ['VLM', 'Audio', 'Fusion'] },
+        { key: 'physical', icon: '🏭', title: 'Physical AI', desc: 'Build autonomous robots, AMR systems, and robotic arm applications', topics: ['ROS2', 'Robot', 'Control'] },
+        { key: 'managed', icon: '☁️', title: 'Managed Services', desc: 'Cloud-based management and deployment services for Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
       cta: 'Start Learning on GitHub'
     },
@@ -387,17 +388,17 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Jetsonの基礎、コンピュータビジョン、生成AI、ロボティクス、エッジデプロイメントをカバーする完全な学習ジャーニー。エッジAI初心者の開発者に最適です。',
       stats: [
-        { value: '9+', label: '学習モジュール' },
-        { value: '20+', label: 'コード例' },
-        { value: '5+', label: '実践プロジェクト' }
+        { value: '9', label: '学習モジュール' },
+        { value: '70+', label: 'コード例' },
+        { value: '6', label: 'アプリケーションカテゴリー' }
       ],
       modules: [
-        { icon: '🔧', title: '環境セットアップ', desc: 'JetPackのインストール、システム設定、開発環境の準備', topics: ['JetPack', 'System Config', 'Docker'] },
-        { icon: '📖', title: '基本チュートリアル', desc: 'Jetsonプラットフォームの基礎、GPIO制御、基本的なAI概念を学ぶ', topics: ['GPIO', 'Camera', 'Basics'] },
-        { icon: '�️', title: 'コンピュータビジョン', desc: '物体検出、画像分類、ビデオ分析アプリケーション', topics: ['YOLO', 'OpenCV', 'Detection'] },
-        { icon: '🤖', title: '生成AI', desc: 'JetsonでLLM、マルチモーダルモデル、AIチャットボットをデプロイ', topics: ['LLM', 'VLM', 'Chatbot'] },
-        { icon: '🏭', title: 'ロボティクス', desc: '自律型ロボット、AMRシステム、ロボットアームアプリケーションを構築', topics: ['ROS2', 'Navigation', 'Control'] },
-        { icon: '⚡', title: '最適化', desc: 'TensorRTアクセラレーション、量子化、本番デプロイメント', topics: ['TensorRT', 'Optimize', 'Deploy'] }
+        { key: 'cv', icon: '👁️', title: 'コンピュータビジョン', desc: '物体検出、画像分類、ビデオ分析アプリケーション', topics: ['YOLO', 'OpenCV', 'Detection'] },
+        { key: 'gen', icon: '🤖', title: '生成AI', desc: 'JetsonでLLM、マルチモーダルモデル、AIチャットボットをデプロイ', topics: ['LLM', 'VLM', 'Chatbot'] },
+        { key: 'devtools', icon: '🛠️', title: '開発者ツール', desc: 'Jetsonプラットフォーム向け開発ツールとユーティリティ', topics: ['Docker', 'Tools', 'Dev'] },
+        { key: 'multimodal', icon: '🔄', title: 'マルチモーダルAI', desc: '視覚、言語、音声を組み合わせたインテリジェントアプリケーション', topics: ['VLM', 'Audio', 'Fusion'] },
+        { key: 'physical', icon: '🏭', title: '物理AI', desc: '自律型ロボット、AMRシステム、ロボットアームアプリケーションを構築', topics: ['ROS2', 'Robot', 'Control'] },
+        { key: 'managed', icon: '☁️', title: 'マネージドサービス', desc: 'Jetson向けクラウドベース管理・デプロイメントサービス', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
       cta: 'GitHubで学習を開始'
     },
@@ -507,17 +508,17 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: '涵盖 Jetson 基础、计算机视觉、生成式 AI、机器人和边缘部署的完整学习之旅。非常适合边缘 AI 新手开发者。',
       stats: [
-        { value: '9+', label: '学习模块' },
-        { value: '20+', label: '代码示例' },
-        { value: '5+', label: '实战项目' }
+        { value: '9', label: '学习模块' },
+        { value: '70+', label: '代码示例' },
+        { value: '6', label: '应用分类' }
       ],
       modules: [
-        { icon: '🔧', title: '环境搭建', desc: '开发环境配置、Docker 设置和基础工具介绍', topics: ['Docker', '系统配置', 'Tools'] },
-        { icon: '📖', title: '基础教程', desc: '学习 Jetson 平台基础、GPIO 控制和基本 AI 概念', topics: ['GPIO', '摄像头', '基础'] },
-        { icon: '�️', title: '计算机视觉', desc: '目标检测、图像分类和视频分析应用', topics: ['YOLO', 'OpenCV', '检测'] },
-        { icon: '🤖', title: '生成式 AI', desc: '在 Jetson 上部署大语言模型、多模态模型和 AI 聊天机器人', topics: ['LLM', 'VLM', '聊天机器人'] },
-        { icon: '🏭', title: '机器人', desc: '构建自主机器人、AMR 系统和机械臂应用', topics: ['ROS2', '导航', '控制'] },
-        { icon: '⚡', title: '优化', desc: 'TensorRT 加速、量化和生产部署', topics: ['TensorRT', '优化', '部署'] }
+        { key: 'cv', icon: '👁️', title: '计算机视觉', desc: '目标检测、图像分类和视频分析应用', topics: ['YOLO', 'OpenCV', '检测'] },
+        { key: 'gen', icon: '🤖', title: '生成式 AI', desc: '在 Jetson 上部署大语言模型、多模态模型和 AI 聊天机器人', topics: ['LLM', 'VLM', '聊天机器人'] },
+        { key: 'devtools', icon: '🛠️', title: '开发者工具', desc: 'Jetson 平台的开发工具和实用程序', topics: ['Docker', 'Tools', 'Dev'] },
+        { key: 'multimodal', icon: '🔄', title: '多模态 AI', desc: '结合视觉、语言和音频的智能应用', topics: ['VLM', '音频', '融合'] },
+        { key: 'physical', icon: '🏭', title: '物理 AI', desc: '构建自主机器人、AMR 系统和机械臂应用', topics: ['ROS2', '机器人', '控制'] },
+        { key: 'managed', icon: '☁️', title: '托管服务', desc: 'Jetson 的云端管理和部署服务', topics: ['Cloud', 'OTA', '管理'] }
       ],
       cta: '在 GitHub 上开始学习'
     },
@@ -627,17 +628,17 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Un viaje de aprendizaje completo que cubre fundamentos de Jetson, visión por computadora, IA generativa, robótica y despliegue en el borde. Perfecto para desarrolladores nuevos en IA de borde.',
       stats: [
-        { value: '9+', label: 'Módulos' },
-        { value: '20+', label: 'Ejemplos' },
-        { value: '5+', label: 'Proyectos' }
+        { value: '9', label: 'Módulos' },
+        { value: '70+', label: 'Ejemplos' },
+        { value: '6', label: 'Categorías' }
       ],
       modules: [
-        { icon: '🔧', title: 'Configuración', desc: 'Configuración del entorno de desarrollo, instalación de Docker e introducción a herramientas básicas', topics: ['Docker', 'Config', 'Tools'] },
-        { icon: '📖', title: 'Tutoriales Básicos', desc: 'Aprenda fundamentos de la plataforma Jetson, control GPIO y conceptos básicos de IA', topics: ['GPIO', 'Cámara', 'Básico'] },
-        { icon: '👁️', title: 'Visión Computacional', desc: 'Detección de objetos, clasificación de imágenes y análisis de video', topics: ['YOLO', 'OpenCV', 'Detección'] },
-        { icon: '🤖', title: 'IA Generativa', desc: 'Despliegue LLMs, modelos multimodales y chatbots de IA en Jetson', topics: ['LLM', 'VLM', 'Chatbot'] },
-        { icon: '🏭', title: 'Robótica', desc: 'Construya robots autónomos, sistemas AMR y aplicaciones de brazos robóticos', topics: ['ROS2', 'Navegación', 'Control'] },
-        { icon: '⚡', title: 'Optimización', desc: 'Aceleración TensorRT, cuantización y despliegue en producción', topics: ['TensorRT', 'Optimizar', 'Desplegar'] }
+        { key: 'cv', icon: '👁️', title: 'Visión Computacional', desc: 'Detección de objetos, clasificación de imágenes y análisis de video', topics: ['YOLO', 'OpenCV', 'Detección'] },
+        { key: 'gen', icon: '🤖', title: 'IA Generativa', desc: 'Despliegue LLMs, modelos multimodales y chatbots de IA en Jetson', topics: ['LLM', 'VLM', 'Chatbot'] },
+        { key: 'devtools', icon: '🛠️', title: 'Herramientas de Desarrollo', desc: 'Herramientas y utilidades de desarrollo para la plataforma Jetson', topics: ['Docker', 'Tools', 'Dev'] },
+        { key: 'multimodal', icon: '🔄', title: 'IA Multimodal', desc: 'Combine visión, lenguaje y audio para aplicaciones inteligentes', topics: ['VLM', 'Audio', 'Fusión'] },
+        { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construya robots autónomos, sistemas AMR y aplicaciones de brazos robóticos', topics: ['ROS2', 'Robot', 'Control'] },
+        { key: 'managed', icon: '☁️', title: 'Servicios Gestionados', desc: 'Servicios de gestión y despliegue basados en la nube para Jetson', topics: ['Cloud', 'OTA', 'Gestionar'] }
       ],
       cta: 'Comenzar en GitHub'
     },
@@ -1059,10 +1060,27 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
               {/* Learning Module Cards */}
               <div className={styles.beginner_modules_grid}>
                 {t.beginnerGuide.modules.map((module, idx) => {
-                  const ModuleIcons = [WrenchIcon, BookIcon, EyeIcon, BotIcon, FactoryIcon, ZapIcon];
+                  const ModuleIcons = [EyeIcon, BotIcon, WrenchIcon, RefreshIcon, FactoryIcon, CloudIcon];
                   const ModuleIcon = ModuleIcons[idx];
+                  const categoryKey = module.key;
                   return (
-                    <div key={idx} className={styles.beginner_module_card}>
+                    <a 
+                      key={idx} 
+                      className={styles.beginner_module_card}
+                      href={`${LANG_PATH_PREFIX[lang]}/nvidia_jetson?tab=demo&category=${categoryKey}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActivePage('demo');
+                        setActiveCategory(categoryKey);
+                        // Scroll to community section
+                        setTimeout(() => {
+                          const communitySection = document.getElementById('community-projects');
+                          if (communitySection) {
+                            communitySection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }, 100);
+                      }}
+                    >
                       <div className={styles.beginner_module_icon}><ModuleIcon size={28} /></div>
                       <div className={styles.beginner_module_content}>
                         <h4 className={styles.beginner_module_title}>{module.title}</h4>
@@ -1073,7 +1091,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
                           ))}
                         </div>
                       </div>
-                    </div>
+                    </a>
                   );
                 })}
               </div>
@@ -1269,7 +1287,7 @@ const RecomputerPage = ({ lang = 'en' }: Props) => {
           </div>
 
           {/* Community Projects Section */}
-          <div className={styles.section}>
+          <div className={styles.section} id="community-projects">
             <div className={styles.section_header}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h2 className={styles.section_title}>{t.community.title}</h2>
