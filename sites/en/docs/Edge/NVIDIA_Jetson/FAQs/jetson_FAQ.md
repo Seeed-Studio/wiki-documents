@@ -34,9 +34,9 @@ For details, please click [here](/Use_IMX477_Camera_with_A603_Jetson_Carrier_Boa
 
 For details, please click [here](/get_the_system_log_of_recomputer_j30_and_j40)
 
-#### Q6: Timeout issue during flash Jetpack.
+#### Q6: Common flashing errors during Jetson flashing.
 
-For details, please click [here](/usb_timeout_during_flash)
+For details, please click [here](/common_jetson_flashing_errors)
 
 #### Q7: I cannot use USB-A port, Ethernet port or no HDMI dispaly after flashing the device.
 **A:** Please check file integrity (for instance, we provided the SHA256 cheksums), for some carrier boards (especially A60X series), make sure that the driver patch was successfully copied/applied to **Linux_for_tegra** directory. There are files that require **sudo** permission, and when you copy directories, make sure **-r** parameter is included in your command.
