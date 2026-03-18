@@ -1,5 +1,5 @@
 ---
-description: Este wiki fornece um guia abrangente, passo a passo, para implantar o NVBlox com câmera RGB-D Orbbec em dispositivos Jetson AGX Orin. Ele cobre configuração de ambiente, instalação de dependências, integração com Isaac ROS e demonstrações de mapeamento 3D em tempo real para aplicações em robótica.
+description: Este wiki fornece um guia abrangente, passo a passo, para implantar o NVBlox com câmera RGB-D Orbbec em dispositivos Jetson AGX Orin. Ele abrange configuração de ambiente, instalação de dependências, integração com Isaac ROS e demonstrações de mapeamento 3D em tempo real para aplicações de robótica.
 title: Implantar NVBlox com Câmera Orbbec no Jetson AGX Orin
 keywords:
   - NVBlox
@@ -33,11 +33,11 @@ url: https://wiki.seeedstudio.com/pt-br/deploy_nvblox_jetson_agx_orin/
 ## Introdução
 
 <div style={{ textAlign: "justify" }}>
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) é um framework de mapeamento 3D de alto desempenho acelerado por GPU, desenvolvido pela NVIDIA para percepção robótica em tempo real. Diferente de modelos monoculares de estimativa de profundidade, o NVBlox consome entrada de profundidade real de câmeras RGB-D ou câmeras estéreo para construir representações 3D precisas da cena.
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) é um framework de mapeamento 3D de alto desempenho acelerado por GPU, desenvolvido pela NVIDIA para percepção robótica em tempo real. Diferente de modelos de estimativa de profundidade monocular, o NVBlox consome entrada de profundidade real de câmeras RGB-D ou câmeras estéreo para construir representações precisas de cenas 3D.
 
-Ele constrói mapas densos TSDF (Truncated Signed Distance Field) e ESDF (Euclidean Signed Distance Field) em tempo real, permitindo reconstrução 3D de alta qualidade, navegação consciente de obstáculos e verificação de colisão. O NVBlox também pode gerar malhas (meshes), mapas de custo baseados em voxels e representações de ocupação 3D adequadas para robôs móveis autônomos (AMRs).
+Ele constrói mapas densos TSDF (Truncated Signed Distance Field) e ESDF (Euclidean Signed Distance Field) em tempo real, permitindo reconstrução 3D de alta qualidade, navegação ciente de obstáculos e verificação de colisão. O NVBlox também pode gerar malhas, mapas de custo baseados em voxels e representações de ocupação 3D adequadas para robôs móveis autônomos (AMRs).
 
-Isso o torna particularmente valioso para aplicações de Edge AI, onde restrições de hardware e eficiência computacional são considerações críticas. Este wiki demonstra como implantar o Isaac ROS NVBlox no **Jetson AGX Orin** com integração ao **ROS 2**, usando uma **câmera RGB-D Orbbec** e uma plataforma de robô móvel para obter um pipeline completo de percepção e navegação totalmente no dispositivo. 🚀
+Isso o torna particularmente valioso para aplicações de Edge AI, onde restrições de hardware e eficiência computacional são considerações críticas. Este wiki demonstra como implantar o Isaac ROS NVBlox no **Jetson AGX Orin** com integração ao **ROS 2**, usando uma **câmera RGB-D Orbbec** e uma plataforma de robô móvel para alcançar um pipeline completo de percepção e navegação no próprio dispositivo. 🚀
 
 </div>
 
@@ -47,13 +47,13 @@ Isso o torna particularmente valioso para aplicações de Edge AI, onde restriç
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira o Seu Agora 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
     </a>
 </div>
 
 ## Pré-requisitos
 
-- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)** (Jetson AGX Orin) com JetPack 6.2
+- **[reComputer J50](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html)** (Jetson AGX Orin) com JetPack 6.2.1
 - Câmera RGB-D Orbbec 📷
 - Chassi de robô móvel (opcional) 🤖
 - Ambiente [ROS2 Humble](https://wiki.seeedstudio.com/pt-br/install_ros2_humble/) instalado
@@ -66,15 +66,15 @@ Isso o torna particularmente valioso para aplicações de Edge AI, onde restriç
 
 ## Destaques Técnicos
 
-- **Mapeamento 3D em Tempo Real**: O NVBlox gera mapas TSDF e ESDF densos em tempo real usando aceleração por GPU, permitindo reconstrução de cena 3D de alta qualidade para aplicações em robótica.
+- **Mapeamento 3D em Tempo Real**: O NVBlox gera mapas densos TSDF e ESDF em tempo real usando aceleração por GPU, permitindo reconstrução de cenas 3D de alta qualidade para aplicações de robótica.
 
-- **Integração com Câmera RGB-D**: Aproveita informações de profundidade real de câmeras RGB-D Orbbec para criar representações 3D precisas sem depender de estimativa de profundidade monocular.
+- **Integração com Câmera RGB-D**: Aproveita informações de profundidade reais de câmeras RGB-D Orbbec para criar representações 3D precisas sem depender de estimativa de profundidade monocular.
 
 - **Otimizado para Implantação na Borda**: Projetado especificamente para inferência eficiente em dispositivos de borda como o Jetson AGX Orin, com otimização CUDA para desempenho máximo.
 
 - **Saídas Prontas para Navegação**: Gera malhas, mapas de custo baseados em voxels e grades de ocupação 3D adequadas para navegação autônoma e desvio de colisão.
 
-- **Suporte Nativo a ROS2**: Fornece integração perfeita com ROS2 Humble com tipos de mensagens padrão de robótica para fácil integração em sistemas robóticos existentes.
+- **Suporte Nativo a ROS2**: Fornece integração perfeita com ROS2 Humble com tipos de mensagens robóticas padrão para fácil integração em sistemas robóticos existentes.
 
 ## Configuração do Ambiente
 
@@ -171,14 +171,14 @@ cd ${ISAAC_ROS_WS}/src
 git clone -b release-3.2 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common.git
 ```
 
-Puxe a imagem Docker oficial Isaac Common e entre no Docker:
+Puxe a imagem oficial Isaac Common Docker e entre no Docker:
 
 ```bash
 cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
-Executar `./scripts/run_dev.sh` instalará automaticamente o Isaac ROS e iniciará o contêiner.
+Executar `./scripts/run_dev.sh` irá instalar automaticamente o Isaac ROS e iniciar o contêiner.
 
 :::tip
 Instalar o Isaac ROS requer fazer login no NVIDIA NGC no terminal e inserir a API Key 🔑 gerada pela sua conta NGC
@@ -186,7 +186,7 @@ Instalar o Isaac ROS requer fazer login no NVIDIA NGC no terminal e inserir a AP
 
 ### Instalar Orbbec SDK ROS2
 
-O uso de câmeras RGB-D Orbbec requer a instalação do driver SDK. Este guia usa o método Build from Source.
+O uso de câmeras RGB-D Orbbec requer a instalação do driver do SDK. Este guia usa o método Build from Source.
 
 Instale as dependências:
 
@@ -216,7 +216,7 @@ cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-Para permitir que as câmeras Orbbec sejam reconhecidas corretamente no Linux, instale as regras udev.
+Para permitir que câmeras Orbbec sejam reconhecidas corretamente no Linux, instale as regras udev.
 
 Entre no diretório de trabalho do código-fonte e execute o script:
 
@@ -227,7 +227,7 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
 :::note
-Se este script não for executado, abrir o dispositivo falhará devido a problemas de permissão. Você teria que executar o exemplo com sudo (privilégios de administrador). ⚠️
+Se este script não for executado, a abertura do dispositivo falhará devido a problemas de permissão. Você precisará executar o exemplo com sudo (privilégios de administrador). ⚠️
 :::
 
 ## Implantar NVBlox
@@ -390,12 +390,12 @@ Isso pode ser usado para detecção de obstáculos e construção de mapas de ma
 - [Repositório GitHub Isaac ROS Common](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
 - [Repositório GitHub Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git)
 - [Repositório GitHub Isaac NVBlox Orbbec](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
-- [Documentação do ROS2 Humble](https://docs.ros.org/en/humble/)
-- [Documentação do Orbbec SDK ROS2](https://github.com/orbbec/OrbbecSDK_ROS2)
+- [Documentação ROS2 Humble](https://docs.ros.org/en/humble/)
+- [Documentação Orbbec SDK ROS2](https://github.com/orbbec/OrbbecSDK_ROS2)
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
