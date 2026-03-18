@@ -1,6 +1,6 @@
 ---
 description: Common Jetson flashing errors and how to troubleshoot them.
-title: Common Flashing Errors Guide
+title: Common Flashing Errors and How to Fix Them
 keywords:
   - reComputer
   - Jetson
@@ -8,13 +8,13 @@ keywords:
   - USB
   - NFS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /common_jetson_flashing_errors
+slug: /usb_timeout_during_flash
 last_update:
   date: 3/18/2026
   author: Lorraine
 createdAt: '2025-01-22'
 updatedAt: '2026-03-18'
-url: https://wiki.seeedstudio.com/common_jetson_flashing_errors/
+url: https://wiki.seeedstudio.com/usb_timeout_during_flash/
 ---
 
 This page summarizes several common Jetson flashing failures, especially errors related to USB reconnection, NFS mount, host environment issues, missing flashing tools, and first boot OEM setup.
