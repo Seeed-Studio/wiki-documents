@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /common_jetson_flashing_errors
 last_update:
   date: 3/18/2026
-  author: OpenAI
+  author: Lorraine
 createdAt: '2025-01-22'
 updatedAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/common_jetson_flashing_errors/
