@@ -720,6 +720,8 @@ const sidebars = {
               label: 'User Guide',
               items: [
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Payload_Format',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/FAQ',
               ],
             },
             {

@@ -166,7 +166,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
     <tr>
       <th rowSpan="3">Mechanical</th>
       <td>Dimensions (W x D x H)</td>
-      <td>115mm x 115mm x 38mm</td>
+      <td>110mm x 110mm x 38mm</td>
     </tr>
     <tr>
       <td>Weight</td>

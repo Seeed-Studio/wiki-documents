@@ -1,0 +1,315 @@
+---
+description: Grove - Acelerômetro Analógico Triaxial 20g (ADXL356B)
+title: Grove - Acelerômetro Analógico Triaxial 20g (ADXL356B)
+keywords:
+  - Grove
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B
+sku: 101020637
+last_update:
+  date: 1/5/2023
+  author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/pt-br/Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B/
+---
+
+
+<!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/101020637-preview.png) -->
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/101020637-preview.png" alt="pir" width={600} height="auto" /></p>
+
+Você pode encontrar uma variedade de [acelerômetros triaxiais](https://www.seeedstudio.com/tag/accelerometer.html) em nosso site que podem atender a diferentes cenários e necessidades. Desta vez, trazemos para você os acelerômetros triaxiais da série ADI ADXL de nível industrial, alta estabilidade, alta precisão e baixo consumo de energia.  
+
+O Grove - 3-Axis Analog Accelerometer ±20g (ADXL356B) é um Acelerômetro [MEMS](https://www.seeedstudio.com/tag/MEMS.html) com saída analógica. Este sensor possui duas faixas de medição selecionáveis: ±10g, ±20g. Você só precisa fazer uma pequena calibração para obter um resultado relativamente preciso. A porta Grove on-board pode fornecer dois canais de dados analógicos: um para o eixo Z, outro para o eixo X/Y. Você pode escolher a saída do sinal do eixo X ou Y com a chave on-board. Também é possível usar o furo de solda de 4 pinos para obter a saída dos eixos X/Y/Z ao mesmo tempo. O consumo de energia deste sensor é extremamente baixo, 150 μA no modo de operação normal e apenas 21 μA no modo de espera. Você pode trocar o modo de operação alterando a conexão dos pads na parte traseira.
+
+A Série de Acelerômetros ADI ADXL inclui quatro produtos que atenderão às suas diferentes necessidades de faixa e tipo de saída:
+
+Product|Measurement Range|Output Port|Power Consumption
+-----|-----|----|----
+[Grove - 3-Axis Analog Accelerometer ±20g (ADXL356B)](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-20g-ADXL356B-p-4004.html)|±10 / ±20g|Analógico|modo de medição:150 μA / modo de espera:21 μA
+[Grove - 3-Axis Analog Accelerometer ±40g (ADXL356C)](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-40g-ADXL356C-p-4006.html)|±10g / ±40g|Analógico|modo de medição:150 μA / modo de espera:21 μA
+[Grove - 3-Axis Digital Accelerometer ±40g (ADXL357)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-40g-ADXL357-p-4005.html)|±10g@51200 LSB/g / ±20g@25600 LSB/g/  ±40g@12800 LSB/g|I2C Digital|modo de medição:200μA
+[Grove - 3-Axis Digital Accelerometer ±200g (ADXL372)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-200g-ADXL372-p-4003.html)|±200g|I2C Digital|modo de medição:22μA
+
+<!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-20g-ADXL356B-p-4004.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
+[<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-20g-ADXL356B-p-4004.html)
+
+## Recursos
+
+- Ruído líder na indústria, mínima deriva de offset em função da temperatura e estabilidade em longo prazo, permitindo aplicações de precisão com calibração mínima.
+- O encapsulamento hermético oferece excelente estabilidade em longo prazo com offset de 0 g em função da temperatura (todos os eixos): 0,75 mg/°C máximo
+- O baixo ruído do ADXL356 em frequências mais altas é ideal para monitoramento de condição sem fio.
+- Consumo de energia ultrabaixo: modo de operação normal - 150 μA, modo de espera 21 μA  
+- Baixa deriva, baixo ruído
+
+## Especificação
+
+|Parâmetro|Valor|
+|---|---|
+|Tensão de alimentação|3.3V / 5V|
+|Temperatura ambiente de operação| -40 – 125℃|
+|Faixa de saída em escala total (FSR)|±10g / ±20g|
+|Sensibilidade em X<sub>OUT</sub>, Y<sub>OUT</sub>, Z<sub>OUT</sub> / (Ratiométrica a V1P8ANA)|±10 g@80 mv/g (Típ.) / ±20 g@40 mv/g (Típ.)|
+|Variação de sensibilidade devido à temperatura|±0.01%/°C  (TA = −40°C a +125°C)|
+|OFFSET 0g / (Referido a V1P8ANA/2)|±125 mg (Típ.)|
+|Interface de saída|Analógico|
+
+## Aplicações
+
+- Unidades de medição inercial (IMUs) / sistemas de referência de altitude e rumo (AHRSs)
+- Sistemas de estabilização de plataforma
+- Monitoramento de integridade estrutural
+- Monitoramento de condição
+- Imageamento sísmico
+- Detecção de inclinação
+- Robótica
+
+## Pinagem
+
+<!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout1.jpg) -->
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout1.jpg" alt="pir" width={600} height="auto" /></p>
+
+<!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout2.jpg) -->
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/pinout2.jpg" alt="pir" width={600} height="auto" /></p>
+
+## Plataformas Suportadas
+
+<!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
+|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) | -->
+|Arduino|Raspberry Pi|
+|---|---|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
+## Primeiros Passos
+
+### Brincar com Arduino
+
+**Materiais necessários**
+
+| Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL356B|
+|--------------|-------------|-----------------|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Analog-Accelerometer-20g-ADXL356B-p-4004.html)|
+
+>Além disso, você pode considerar o nosso novo [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), que é equivalente à combinação do Seeeduino V4.2 com o Baseshield.
+
+:::note
+    **1** Conecte o cabo USB com cuidado, caso contrário você pode danificar a porta. Use o cabo USB com 4 fios internos; o cabo com 2 fios não consegue transferir dados. Se você não tem certeza sobre o cabo que possui, pode clicar [aqui](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar 
+
+    **2** Cada módulo Grove vem com um cabo Grove quando você o compra. Caso você perca o cabo Grove, pode clicar [aqui](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) para comprar.
+:::
+
+#### Conexão de Hardware
+
+- **Passo 1.** Conecte o Grove - 3-Axis Analog Accelerometer ±20g (ADXL356B) à porta **A0** do Base Shield.
+
+- **Passo 2.** Conecte o Grove - Base Shield ao Seeeduino.
+
+- **Passo 3.** Conecte o Seeeduino ao PC por meio de um cabo USB.
+
+<!-- 
+![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/_DAS3070.png) -->
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/img/_DAS3070.png" alt="pir" width={600} height="auto" /></p>
+
+#### Software
+
+:::note
+        Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortemente que veja [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/) antes de começar.
+:::
+
+- **Passo 1.** Baixe o [Seeed_ADXL_356.ino](https://github.com/linux-downey/Seeed_ADXL356/blob/master/Seeed_ADXL_356/Seeed_ADXL_356.ino) do Github.
+
+ou você pode simplesmente copiar o código abaixo:
+
+```cpp
+
+#include <Arduino.h>
+
+#ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+  #define SERIAL SerialUSB
+  #define SYS_VOL   3.3
+#else
+  #define SERIAL Serial
+  #define SYS_VOL   5
+#endif
+
+float cali_data_xy;
+float cali_data_z;
+int16_t scale;
+
+#define MODUEL_RANGE           20
+
+#define MODULE_VOL             1.8
+
+#define CALI_BUF_LEN           15
+#define CALI_INTERVAL_TIME     250
+
+float cali_buf_xy[CALI_BUF_LEN];
+float cali_buf_z[CALI_BUF_LEN];
+
+#define XY_PIN   A0
+#define Z_PIN    A1
+
+float deal_cali_buf(float *buf)
+{
+ float cali_val = 0;
+
+ for(int i = 0;i < CALI_BUF_LEN;i++)
+ {
+  cali_val += buf[i];
+ }
+ cali_val = cali_val/CALI_BUF_LEN;
+ return (float)cali_val;
+}
+
+
+void calibration(void)
+{
+ SERIAL.println("Please Place the module horizontally!");
+ delay(1000);
+ SERIAL.println("Start calibration........");
+
+ for(int i=0;i<CALI_BUF_LEN;i++)
+ {
+  cali_buf_xy[i] = analogRead(XY_PIN);;
+  cali_buf_z[i] = analogRead(Z_PIN);
+  delay(CALI_INTERVAL_TIME);
+ }
+ cali_data_xy =  deal_cali_buf(cali_buf_xy);
+ cali_data_z =  (float)deal_cali_buf(cali_buf_z);
+ SERIAL.println("Calibration OK!!");
+ scale = (float)1000 / (cali_data_z - cali_data_xy);
+ cali_data_z -= (float)980 / scale;
+ SERIAL.println(cali_data_xy);
+ SERIAL.println(cali_data_z);
+ SERIAL.println(scale);
+
+}
+
+
+
+void AccMeasurement(void)
+{
+ int16_t val_xy = 0;
+ int16_t val_z = 0;
+ val_xy = analogRead(XY_PIN);
+ val_z = analogRead(Z_PIN);
+
+ SERIAL.print("Raw data xy  = ");
+ SERIAL.println(val_xy);
+ SERIAL.print("Raw data z  = ");
+ SERIAL.println(val_z);
+ SERIAL.println(" ");
+
+ val_xy -= cali_data_xy;
+ val_z -= cali_data_z;
+ SERIAL.print("x or y position acc is ");
+ SERIAL.print(val_xy * scale / 1000.0);
+ SERIAL.println(" g ");
+ SERIAL.print("z position acc is ");
+ SERIAL.print(val_z * scale / 1000.0);
+ SERIAL.println(" g ");
+ SERIAL.println(" ");
+ SERIAL.println(" ");
+ SERIAL.println(" ");
+ delay(1000);
+}
+
+void setup()
+{
+ SERIAL.begin(115200);
+ #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
+    analogReadResolution(12);
+    #endif
+ calibration();
+ SERIAL.print("Scale = ");
+ SERIAL.println(scale);
+
+}
+
+
+
+void loop()
+{
+ AccMeasurement();
+}
+
+```
+
+- **Passo 2.** Faça o upload do demo. Se você não sabe como fazer o upload do código, confira [How to upload code](https://wiki.seeedstudio.com/pt-br/Upload_Code/).
+
+- **Passo 3.** Abra o **Serial Monitor** da Arduino IDE clicando em **Tool-> Serial Monitor**. Ou pressione as teclas ++ctrl+shift+m++ ao mesmo tempo. Defina o baud rate para **115200**.
+
+- **Passo 4. Calibração** Siga as dicas de calibração no Serial Monitor, em apenas alguns passos a calibração será concluída
+
+- **Passo 5.** Agora você pode usar este sensor, e a saída será assim:
+
+```cpp
+Please Place the module horizontally!
+Start calibration........
+Calibration OK!!
+184.93
+185.03
+121
+Scale = 121
+Raw data xy  = 185
+Raw data z  = 193
+
+x or y position acc is 0.00 g 
+z position acc is 0.85 g 
+
+
+
+Raw data xy  = 188
+Raw data z  = 196
+
+x or y position acc is 0.36 g 
+z position acc is 1.21 g
+```
+
+:::note
+        Se você usar a porta Grove para saída dos dados, os eixos X e Y não poderão ser enviados ao mesmo tempo; você pode usar a chave integrada para selecionar o canal de saída. Se quiser enviar X/Y/Z ao mesmo tempo, você pode usar o furo de solda de 4 pinos.
+:::
+
+## Perguntas Frequentes (FAQ)
+
+**P1: Como selecionar a faixa de medição de ±10g?**  
+
+R1: Para alterar a faixa de medição, você precisa modificar tanto o hardware quanto o software. Primeiro, corte o pad traseiro que está conectado a ±20g e ressoldá-lo em ±10g. Depois modifique o código na linha 12 do bloco de código
+
+```
+#define MODUEL_RANGE           20
+```
+
+```
+\downdownarrows
+```
+
+```
+#define MODUEL_RANGE           10
+```
+
+## Visualizador de Esquemático Online
+
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/res/Grove%20-%203-Axis%20Analog%20Accelerometer%20%C2%B120g%20(ADXL356B).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+</div>
+
+## Recursos
+
+- **[ZIP]** [Arquivo esquemático do Grove - 3-Axis Analog Accelerometer ±20g (ADXL356B)](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/res/Grove%20-%203-Axis%20Analog%20Accelerometer%20%C2%B120g%20(ADXL356B).zip)
+- **[PDF]** [Folha de dados ADXL 356B](https://files.seeedstudio.com/wiki/Grove-3-Axis_Analog_Accelerometer-20g-ADXL356B/res/ADXL356B.pdf)
+
+## Suporte Técnico & Discussão de Produto
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

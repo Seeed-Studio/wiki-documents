@@ -32,11 +32,11 @@ import TabItem from '@theme/TabItem';
 reTerminal D1001 は、Espressif の最新高性能チップ **ESP32-P4** を搭載したインテリジェント大画面インタラクション端末です。高性能なグラフィック表示、ビデオ処理、音声インタラクションを必要とする AIoT アプリケーションシナリオ向けに設計されており、ESP32-P4 の強力な 400MHz デュアルコア RISC-V プロセッサと豊富なマルチメディア周辺インターフェースを活用して、複雑なエッジコンピューティングやマルチメディアタスクを容易に処理します。
 
 ### 主な特長
-*   **リッチなインターフェースを支える強力な処理性能**: 32 ビット RISC-V デュアルコアプロセッサ（HP コア 400MHz）、32 MB PSRAM、内蔵 JPEG コーデックエンジンを備えた ESP32-P4 を搭載し、グラフィックリッチなインターフェース、スムーズなリアルタイムインタラクション、複雑なエッジ AI タスクに必要な性能を提供します。
-*   **豊富な HMI を備えた 8 インチタッチディスプレイ**: MIPI-DSI 接続の 8 インチ 800 × 1280 静電容量式タッチディスプレイは、IMU による縦向き・横向きの両モードに対応し、洗練されたダッシュボード、スマートコントロールパネル、その他 UI 重視の組み込み機器を構築するための十分な表示領域を提供します。
-*   **無線通信機能の統合**: オンボードの ESP32-C6 により、Wi-Fi 6（2.4 GHz）および Bluetooth 5（LE）による無線通信が可能です。メインプロセッサは SDIO インターフェースを介して通信サブシステムと接続し、接続デバイスや IoT アプリケーション向けに信頼性の高い無線ネットワーキングを実現します。
+*   **リッチなインターフェースを支える強力な処理能力**: 32 ビット RISC-V デュアルコアプロセッサ（HP コア 400MHz）、32 MB PSRAM、内蔵 JPEG コーデックエンジンを備えた ESP32-P4 を搭載し、グラフィックリッチなインターフェース、スムーズなリアルタイムインタラクション、複雑なエッジ AI タスクに必要な性能を提供します。
+*   **8 インチタッチディスプレイと充実した HMI サポート**: MIPI-DSI 接続の 8 インチ 800 × 1280 静電容量式タッチディスプレイは、IMU による縦向き・横向きの両モードに対応し、洗練されたダッシュボード、スマートコントロールパネル、その他 UI 重視の組み込み機器を構築するための十分な表示領域を提供します。
+*   **無線通信機能の統合**: オンボードの ESP32-C6 により、Wi-Fi 6（2.4 GHz）および Bluetooth 5（LE）による無線通信を実現します。メインプロセッサは SDIO インターフェースを介して通信サブシステムと接続されており、接続デバイスや IoT アプリケーション向けに信頼性の高い無線ネットワーキングを可能にします。
 *   **ビジョン開発向けカメラインターフェース**: 最大 1600 × 1200@30 fps をサポートする 2MP MIPI-CSI カメラ（SC2356）を搭載しており、箱から出してすぐに画像キャプチャ、ライブプレビュー、組み込みビジョン開発を行うことができます。
-*   **音声・オーディオ機能**: デュアルマイクと内蔵スピーカーにより、音声入力、サウンドキャプチャ、マルチメディア再生が可能です。ES7210 オーディオ ADC によるエコーキャンセレーションに対応し、AI アシスタントや音声対応アプリケーション向けにクリアな音声キャプチャを実現します。
+*   **音声・オーディオ機能**: デュアルマイクと内蔵スピーカーにより、音声入力、サウンドキャプチャ、マルチメディア再生が可能です。ES7210 オーディオ ADC によるエコーキャンセレーションに対応しており、AI アシスタントや音声対応アプリケーション向けにクリアな音声キャプチャを実現します。
 *   **豊富な拡張性**: GPIO、I2C、UART などの拡張インターフェースを備え、多様なセンサーやアクチュエータの接続ニーズに対応します。
 
 <!--
@@ -61,21 +61,21 @@ reTerminal D1001 は、Espressif の最新高性能チップ **ESP32-P4** を搭
 | **オーディオ** | **Codec**: ES8311 <br /> **ADC**: ES7210 <br /> **PA**: NS4150B (2W@8Ω) <br /> **入力**: デュアルマイクアレイ | 高忠実度オーディオ入出力 |
 | **ネットワーク拡張** | mPCIe スロット | USB 2.0 信号対応、オプションの 4G モジュール |
 | **センサー** | 6 軸 IMU (LSM6DS3TR) | 加速度センサー + ジャイロスコープ、画面自動回転対応 |
-| **インターフェース & ボタン** | USB Type-C（電源/デバッグ）<br /> 2 列 2.54mm 拡張ヘッダ <br /> BOOT/Reset（ピンホール）<br /> 電源ボタン | 短押しでスリープ、長押しで電源オン/オフに対応 |
-| **電源管理** | 2500mAh リチウムバッテリー <br /> RTC コインセルホルダー | USB Type-C 5V 入力 <br /> 充電インジケータ & ステータス RGB LED |
+| **インターフェース & ボタン** | USB Type-C（電源/デバッグ）<br /> 2 列 2.54mm 拡張ヘッダ <br /> BOOT/Reset（ピンホール）<br /> 電源ボタン | 短押しでスリープ / 長押しで電源オン/オフに対応 |
+| **電源管理** | 2500mAh リチウムバッテリ <br /> RTC コインセルホルダ | USB Type-C 5V 入力 <br /> 充電インジケータ & ステータス RGB LED |
 
 
 ## ESP-IDF で始める
 
 このセクションでは、開発環境のセットアップと、工場出荷時デモファームウェアの実行によって reTerminal D1001 の強力な機能を体験する手順を説明します。
 
-### ESP-IDF 開発環境を構成する
+### ESP-IDF 開発環境の構成
 
 **ステップ 1. ESP-IDF をインストールする**
 
 Espressif の最新クロスプラットフォームインストールツール **ESP-IDF Installation Manager** を使用します。
 
-1.  **ESP-IDF をダウンロード**: [ESP-IDF Installation Manager ダウンロードページ](https://dl.espressif.cn/dl/eim/) にアクセスし、**Offline Installer** タブを選択して、**Windows** 版（v5.4.2 以上を推奨）を選び、**Download** をクリックして `.zst` ファイルと `.exe` ファイルの両方を取得します。
+1.  **ESP-IDF をダウンロード**: [ESP-IDF Installation Manager Download Page](https://dl.espressif.cn/dl/eim/) にアクセスし、**Offline Installer** タブを選択して、**Windows** 版（v5.4.2 以上を推奨）を選び、**Download** をクリックして `.zst` ファイルと `.exe` ファイルの両方を取得します。
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/1.png" style={{width:600, height:'auto'}}/></div>
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/2.png" style={{width:600, height:'auto'}}/></div>
@@ -96,14 +96,18 @@ Espressif の最新クロスプラットフォームインストールツール 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/5.png" style={{width:600, height:'auto'}}/></div>
 
 ### ファームウェアリポジトリを取得する
-ターミナルまたは Git Bash を開き、公式の reTerminal D1001 リポジトリをクローンします:
-```bash
-git clone https://github.com/Seeed-Studio/reTerminal-D1001-alpha
-```
+GitHub から公式の reTerminal D1001 リポジトリをダウンロードします。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/6.png" style={{width:800, height:'auto'}}/></div>
 
-### デモファームウェアをビルドして書き込む
-1.  **プロジェクトを開く**: VS Code を使用して、クローンした `reTerminal-D1001-alpha` フォルダを開きます。
+<div align="center">
+<a href="https://github.com/Seeed-Studio/reTerminal-D1001" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックしてダウンロード</button></p>
+</a>
+</div>
+
+### デモファームウェアのビルドと書き込み
+1.  **プロジェクトを開く**: VS Code を使用して、クローンした `reTerminal-D1001` フォルダを開きます。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/7.png" style={{width:600, height:'auto'}}/></div>
 
     :::tip
@@ -113,19 +117,22 @@ git clone https://github.com/Seeed-Studio/reTerminal-D1001-alpha
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/8.png" style={{width:800, height:'auto'}}/></div>
 2.  **ターゲットチップを設定**:
     *   VS Code 下部のステータスバーで、ターゲットチップとして `esp32p4` を選択します。
-    *   またはターミナルで次を実行します: `idf.py set-target esp32p4`。
-3.  **ビルド、書き込み、モニタ**:
-    *   デバイスを USB Type-C でコンピュータに接続します。
-    *   VS Code のステータスバーにある **"Flash"（炎のアイコン）** ボタンをクリックして、ビルド、書き込み、モニタの起動を一度に実行します。
+    *   またはターミナルで `idf.py set-target esp32p4` を実行します。
+3.  **書き込みモードを選択**:
+    *   書き込み前に正しい書き込みモードを選択します。
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/uart.jpg" style={{width:800, height:'auto'}}/></div>
+4.  **ビルド、書き込み、モニタ**:
+    *   USB Type-C 経由でデバイスをコンピュータに接続します。
+    *   VS Code のステータスバーにある **"Flash"（炎のアイコン）** ボタンをクリックして、ビルド、書き込み、モニタの起動をワンステップで実行します。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/9.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### デモ機能を体験する
-ファームウェアの書き込みが正常に完了すると、デバイスは自動的に再起動します。次のようにデバイスとインタラクションできます:
+ファームウェアの書き込みが正常に完了すると、デバイスは自動的に再起動します。次のようにデバイスとインタラクションできます。
 
-*   **電源と画面の制御**: 緑のボタンを 3 秒以上長押しして電源をオンにします。ボタンを短押しすると画面がオフになり、再度短押しすると復帰します。
+*   **電源と画面の制御**: 緑色のボタンを 3 秒以上長押しして電源をオンにします。ボタンを短押しすると画面がオフになり、再度短押しすると復帰します。
 *   **スムーズな UI インタラクション**: スムーズなスライド遷移やアプリ起動アニメーションを体験できます。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/UI.gif" style={{width:300, height:'auto'}}/></div>
-*   **カメラプレビュー**: Camera アプリを開いてリアルタイム映像を確認します。
+*   **カメラプレビュー**: Camera App を開いてリアルタイム映像を確認します。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/10.jpg" style={{width:300, height:'auto'}}/></div>
 *   **センサーデモ**: デバイスを回転させて画面自動回転の効果を確認したり、その他のセンサーデータを確認したりできます。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/sensor.gif" style={{width:300, height:'auto'}}/></div>
@@ -133,19 +140,19 @@ git clone https://github.com/Seeed-Studio/reTerminal-D1001-alpha
 
 ## リソース
 
-*   **ハードウェアドキュメント**:
+*   **ハードウェアドキュメント**：
     *   [reTerminal D1001 メインボード V1.0 SCH & PCB](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal_D1001_main_board_V1.0_SCH_&_PCB_251128.zip)
-*   **データシート**:
-    *   [ESP32-P4 データシート](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ESP32P4-Datasheet-V0.4.pdf)
+    *   [reTerminal D1001 回路図 (PDF)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/reTerminal%20D1001_sch.pdf)
+*   **データシート**：
     *   [ESP32-P4NRW32 データシート](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-P4NRW32_Datasheet.pdf)
-    *   [ESP32-C6FH4 データシート](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/Espressif_ESP32-C6FH4_Datasheet.pdf)
-    *   [ディスプレイデータシート (GJX080C13-31BY)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/GangJingXin_GJX080C13-31BY_Datasheet.pdf.pdf)
+    *   [ESP32-C6 データシート](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/esp32-c6_datasheet_en.pdf)
+    *   [ディスプレイ データシート (GJX080C13-31BY)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/GangJingXin_GJX080C13-31BY_Datasheet.pdf.pdf)
     *   [IMU センサーデータシート (LSM6DS3TR)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ST_LSM6DS3TR_Datasheet.pdf)
-    *   [reTerminal D1001 V2.0 データシート](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ZD2481-D1001-V2.0_Datasheet.pdf)
+    *   [カメラモジュール データシート (SC2356)](https://files.seeedstudio.com/wiki/reTerminal_d10xx/res/ZD2481-D1001-V2.0_Datasheet.pdf)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

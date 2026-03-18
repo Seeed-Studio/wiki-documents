@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con SenseCAP Card Tracker T1000-E para Meshtastic
-title: Primeros pasos con el T1000-E Tracker
+description: Comienza con SenseCAP Card Tracker T1000-E para Meshtastic
+title: Comienza con el Tracker T1000-E
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -15,7 +15,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sensecap_t1000_e/
 ---
 :::danger note
-Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizado.
+Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizado.
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
@@ -51,7 +51,7 @@ Antes de flashear el firmware, asegúrate de que compraste el `T1000-E for Mesht
 
 ## Primeros pasos
 
-Descarga la app `Meshtastic`:
+Descarga la App `Meshtastic`:
 
 - [IOS App](https://meshtastic.org/docs/category/apple-apps/)
 - [Android App](https://meshtastic.org/docs/category/android-app/)
@@ -64,7 +64,7 @@ Pulsa una vez para encender el dispositivo, sonará una melodía ascendente y el
 Si el dispositivo no responde cuando pulsas el botón, cárgalo primero. No utilices un cargador de carga rápida.
 :::
 
-### Conectar mediante la app
+### Conectar mediante la App
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -96,11 +96,11 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-### Conectar mediante la página web
+### Conectar mediante el sitio web
 
-Si quieres enviar mensajes de texto y comunicarte con otros nodos en la página web, ahora puedes conectar el dispositivo al [sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0). 
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, ahora puedes conectar el dispositivo al [sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0). 
 
-  Paso 1: Abre la página web
+  Paso 1: Abre el sitio web
 
 [Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web. 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
@@ -120,10 +120,10 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en la página 
 
  Método 2: Vía Serial
 
-    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, podrás ver el estado del dispositivo directamente en la página web.
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, podrás ver el estado del dispositivo directamente en el sitio web.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -165,7 +165,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 |Sensor|Descripción|
 |-|-|
 |Temperature|✅|
-|Light|Actualmente no es compatible con la app|
+|Light|Actualmente no es compatible con la App|
 |Accelerometer|Próximamente|
 
 **Configuración del sensor de temperatura**
@@ -173,7 +173,7 @@ Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar co
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-Ve a `Settings` -> `Telemetry(Sensors)` -> Activa los sensores.
+Ve a `Settings` -> `Telemetry(Sensors)` -> Habilita los sensores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-ios.png" alt="pir" width={600} height="auto" /></p>
 
@@ -181,7 +181,7 @@ Ve a `Settings` -> `Telemetry(Sensors)` -> Activa los sensores.
 
 <TabItem value="android" label="Android App">
 
-Ve a `Settings` -> `Telemetry(Sensors)` -> Activa los sensores.
+Ve a `Settings` -> `Telemetry(Sensors)` -> Habilita los sensores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-an.png" alt="pir" width={500} height="auto" /></p>
 
@@ -198,7 +198,7 @@ Ve a `Settings` -> `Telemetry(Sensors)` -> Activa los sensores.
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output Pin GPIO`.
+Ve a `Settings` -> `External Notification` -> Habilita `GPIO` -> Configura `Output Pin GPIO`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
@@ -206,7 +206,7 @@ Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output
 
 <TabItem value="android" label="Android App">
 
-Ve a `Settings` -> `External Notification` -> Activa `GPIO` -> Configura `Output Pin GPIO`.
+Ve a `Settings` -> `External Notification` -> Habilita `GPIO` -> Configura `Output Pin GPIO`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
 
@@ -225,7 +225,7 @@ Activa el GPS. Puedes ajustar el intervalo de actualización y el intervalo de d
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-Para IOS, activa `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+Para IOS, activa la `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -265,7 +265,7 @@ Antes de flashear el firmware, asegúrate de que compraste el `T1000-E for Mesht
 #### Paso 1: Entrar en modo DFU
 
 <Tabs>
-<TabItem value="method1" label="Method 1">
+<TabItem value="method1" label="Método 1">
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
@@ -336,13 +336,15 @@ Copia el archivo UF2 a la unidad DFU. El firmware debería grabarse después de 
 
 - Carga el dispositivo durante 1~2 horas
 
+- Desconecta el cable USB, luego mantén presionado el botón y vuelve a conectar el cable USB mientras sigues manteniendo presionado el botón durante 5 segundos.
+
 - Cambia el cable de carga
 
 - A veces parece que está apagado, pero en realidad es porque el LED y el zumbador no se han activado. Comprueba los siguientes parámetros: 
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
- - Si aún no tienes suerte, mantén presionado el botón del dispositivo y luego conecta el cable de carga, comprueba si aparece o no un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#device-bricked) para reinstalar el bootloader
+ - Si aún no tienes suerte, mantén presionado el botón del dispositivo y luego conecta el cable de carga, para ver si aparece un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#device-bricked) para reinstalar el bootloader
 
 ### El dispositivo se queda atascado en un bucle de arranque
 
@@ -355,7 +357,7 @@ El dispositivo se reiniciará repetidamente y el puerto serie se conectará y de
 - Paso 1: Intenta entrar en el modo DFU manualmente: mantén presionado el botón del dispositivo y luego conecta **rápidamente** el cable de carga dos veces, el LED verde quedará encendido de forma fija.
 
 :::note
-Para entrar correctamente en el modo DFU, necesitas realizar esta operación rápidamente. Puede que tengas que intentarlo varias veces.
+Para entrar correctamente en el modo DFU, debes realizar esta operación rápidamente. Es posible que necesites intentarlo varias veces.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -404,7 +406,7 @@ pip3 install --user adafruit-nrfutil
 
 <TabItem value="sou" label="Instalación desde el código fuente">
 
-Usa este método si tienes problemas instalando con PyPi o quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
+Utiliza este método si tienes problemas instalando con PyPi o si quieres modificar la herramienta. Primero clona este repositorio y entra en su carpeta.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -457,7 +459,7 @@ Conecta tu dispositivo a tu PC y comprueba el número de puerto.
 Ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Paso 3: Grabar el bootloader**
+**Paso 3: Graba el bootloader**
 
 En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto para tu dispositivo:
 
@@ -467,7 +469,7 @@ En la terminal o símbolo del sistema, navega al directorio donde descargaste el
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-- **Para otros sistemas**:
+- **Para otros**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -496,7 +498,7 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 - Si aún no tienes suerte, desconecta el cable de carga y deja el dispositivo unos días hasta que la batería se agote por completo, luego conecta el cable de carga e intenta emparejarlo de nuevo.
 
-**4) Si ninguno de los pasos anteriores funciona, contacta con el soporte técnico: support@sensecapmx.com**
+**4) Si ninguno de los pasos anteriores funciona, ponte en contacto con el soporte técnico: support@sensecapmx.com**
 
 ### Fallo al grabar el firmware
 
@@ -504,7 +506,7 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Comprueba si el dispositivo está en modo DFU, la luz verde quedará fija cuando el dispositivo esté en modo DFU.
+ Comprueba si el dispositivo está en modo DFU, la luz verde permanecerá fija cuando el dispositivo esté en modo DFU.
 
 - **No se puede abrir el puerto serie**
 
@@ -516,44 +518,44 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
  #### Descripción
 
- - Después de encender el dispositivo, este se apagará o reiniciará automáticamente después de un tiempo. 
- - El registro del puerto serie se ejecutó durante un tiempo y luego se detuvo.
+ - Después de encender el dispositivo, se apagará o se reiniciará automáticamente al cabo de un rato. 
+ - El registro del puerto serie funcionó durante un tiempo y luego se detuvo.
 
- Esto posiblemente se deba a reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
+ Esto puede deberse a reiniciar o apagar el dispositivo de forma manual y forzada cuando el dispositivo se encuentra en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
  #### Solución de problemas
 
- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-flash) para realizar un borrado de la memoria flash. 
+ [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para realizar un borrado de la memoria flash. 
 
  ### Restablecimiento de fábrica
-Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para realizar el restablecimiento de fábrica.
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
 
-- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-flash) para borrar la memoria flash del dispositivo. Luego vuelve a grabar el firmware más reciente.
+- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para borrar la memoria flash del dispositivo. Luego vuelve a grabar el firmware más reciente.
 
 - Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Calidad de la señal
 
-  - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+  - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con una SNR inferior a -10 dB indica un rendimiento deficiente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente. 
+  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Se considera que un dispositivo con un RSSI inferior a -115 dBm tiene un rendimiento deficiente. 
 
       Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones, con una interferencia mínima.
 
-### Definición de los pines pogo
+### Definición de Pogo Pin
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
 ## Recursos
 
-- [Documentación de Meshtastic](https://meshtastic.org/docs/introduction/)
+- [Documento de Meshtastic](https://meshtastic.org/docs/introduction/)
 - [Hoja de datos del rastreador SenseCAP T1000](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
