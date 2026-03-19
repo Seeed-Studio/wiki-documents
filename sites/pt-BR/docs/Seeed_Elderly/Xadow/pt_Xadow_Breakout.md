@@ -14,7 +14,7 @@ url: https://wiki.seeedstudio.com/pt-br/Xadow_Breakout/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_Breakout/img/Xadow_Breakout_01.jpg)
 
-[LINE_16Talvez você queira conectar vários módulos ao Xadow. Por exemplo, um sensor IR que pode detectar se alguém está por perto. Você pode conectar o sensor a este módulo Breakout.
+Talvez você queira conectar vários módulos ao Xadow. Por exemplo, um sensor IR que pode detectar se alguém está por perto. Você pode conectar o sensor a este módulo Breakout.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-Breakout-p-1519.html)
 

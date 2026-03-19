@@ -19,10 +19,43 @@
  */
 import React from 'react';
 import CodeBlock from '@theme/CodeBlock';
+import { useLocation } from '@docusaurus/router';
 import { useJetsonStore } from '@site/src/stores/useJetsonStore';
 import { getL4TData } from '@site/src/components/jetson/DownloadLink';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-// 多语言内容配置（en / zh / ja / es）
+const normalizeLang = (lang = 'en') => {
+  const l = String(lang).toLowerCase();
+
+  if (l === 'cn' || l.startsWith('zh')) return 'zh';
+  if (l.startsWith('ja')) return 'ja';
+  if (l.startsWith('es')) return 'es';
+  if (l.startsWith('pt')) return 'pt';
+  if (l.startsWith('en')) return 'en';
+
+  return 'en';
+};
+
+const getLangFromPathname = (pathname = '/') => {
+  if (pathname.startsWith('/pt-br')) return 'pt';
+  if (pathname.startsWith('/cn')) return 'zh';
+  if (pathname.startsWith('/ja')) return 'ja';
+  if (pathname.startsWith('/es')) return 'es';
+  return 'en';
+};
+
+const useLocalizedTexts = (lang) => {
+  const { i18n } = useDocusaurusContext();
+  const location = useLocation();
+
+  const currentLang = lang
+    ? normalizeLang(lang)
+    : getLangFromPathname(location.pathname || '/') || normalizeLang(i18n.currentLocale);
+
+  return content[currentLang] || content.en;
+};
+
+// 多语言内容配置（en / zh / ja / es / pt）
 const content = {
   en: {
     // VerifySHA256
@@ -540,6 +573,157 @@ const content = {
     pinLayout: "Distribución de pines",
     lsusbResult: "resultado de lsusb",
     jetsonFirstBoot: "Configuración inicial de Jetson"
+  },
+
+  // Português (Brasil)
+  pt: {
+    // VerifySHA256
+    verifySha256Intro:
+      "Para verificar o hash SHA256 do arquivo baixado, execute no terminal:",
+    verifySha256Note:
+      "Se o hash resultante corresponder ao SHA256 fornecido na wiki, isso confirma que o firmware baixado está completo e íntegro.",
+    forExample: "Por exemplo:",
+
+    // Requirements
+    ubuntuHost: "Computador host Ubuntu",
+    usbMicroB: "Cabo de dados USB Micro-B",
+    usbTypeC: "Cabo de dados USB Type-C",
+
+    // Recovery mode
+    recoveryModeNote:
+      "Antes de prosseguir com as etapas de instalação, precisamos garantir que a placa esteja no modo de recuperação forçada (Force Recovery).",
+    recoveryModeNoteNext:
+      "Antes de prosseguir para a próxima etapa, precisamos garantir que a placa esteja no modo de recuperação forçada.",
+    recoveryModeClickStep:
+      'Clique em "Passo a passo" para ver como entrar no modo de recuperação.',
+    stepByStep: "Passo a passo",
+
+    // Recovery steps content
+    recoveryIntro:
+      "Antes de gravar a imagem, certifique-se de que o dispositivo Jetson esteja conectado corretamente via USB e ligado. A conexão USB é necessária para que o PC host detecte o dispositivo e se comunique no modo de recuperação.",
+    recoveryVideoTitle: "Entrar no modo de recuperação forçada (reComputer Mini)",
+
+    // Common steps
+    step1: "Etapa 1.",
+    step2: "Etapa 2.",
+    step3: "Etapa 3.",
+    step4: "Etapa 4.",
+    step5: "Etapa 5.",
+
+    // Recovery steps
+    connectUsbDevice:
+      "Conecte um cabo USB Micro-B entre a porta USB2.0 DEVICE e o PC host Ubuntu.",
+    insertRecovery:
+      "Use um pino e insira no orifício RECOVERY para pressionar e segurar o botão de recuperação.",
+    connectPower: "Conecte a alimentação.",
+    releaseRecovery: "Solte o botão RECOVERY.",
+
+    // Switch steps
+    switchReset: "Mude a chave para o modo RESET.",
+    powerUpCarrier: "Ligue a carrier board conectando o cabo de alimentação.",
+    connectUsbc:
+      "Conecte a placa ao PC host Ubuntu com um cabo de dados USB Type-C.",
+    runLsusb:
+      "No PC host Linux, abra um Terminal e execute o comando lsusb. Se o conteúdo retornado incluir uma das seguintes saídas de acordo com o Jetson SoM em uso, então a placa está no modo de recuperação forçada.",
+
+    // Jumper steps
+    useJumper: "Use um fio jumper para conectar o pino FC REC ao pino GND.",
+    powerRecomputer:
+      "Ligue o reComputer conectando o cabo incluído ao adaptador de energia.",
+
+    // Industrial/ReServer specific steps
+    connectUsbTypeC:
+      "Conecte um cabo USB Type-C entre a porta USB2.0 DEVICE e o seu PC.",
+    connectUsbTypeCDevice:
+      "Conecte um cabo USB Type-C entre a porta DEVICE e o seu PC.",
+    insertRecoveryHole:
+      "Use um pino e insira no orifício RECOVERY para pressionar o botão de recuperação e mantenha-o pressionado.",
+    insertRecHole:
+      "Use um pino e insira no orifício REC para pressionar o botão de recuperação e mantenha-o pressionado.",
+    connect2PinPower:
+      "Conecte o conector de alimentação de 2 pinos incluído ao conector de alimentação da placa e conecte o adaptador de energia com o cabo de alimentação para ligar a placa.",
+    releaseRecoveryHole: "Solte o botão RECOVERY.",
+    releaseRecHole: "Solte o botão REC.",
+
+    // J501 specific
+    connectUsbFirst:
+      "Conecte primeiro a placa ao PC host Ubuntu com um cabo de dados USB Type-C.",
+    powerUpFirst: "Ligue a carrier board conectando o cabo de alimentação.",
+    releaseForceCovery: "Solte o botão de recuperação forçada.",
+
+    // Device detection
+    deviceNotDetected: "Se o dispositivo não for detectado, tente o seguinte:",
+    reconnectUsb: "Reconecte o cabo USB.",
+    differentPort: "Use uma porta USB diferente (de preferência USB 2.0).",
+    ensureRecovery:
+      "Certifique-se de que o dispositivo esteja em modo de recuperação (pressione e segure Recovery + Reset).",
+    ensureRecoverySimple:
+      "Certifique-se de que o dispositivo esteja em modo de recuperação.",
+
+    afterRecoveryMode:
+      "Depois que o dispositivo entrar no modo de recuperação, abra um Terminal e execute no PC host Linux:",
+    recoveryModeIds:
+      "Se a saída incluir um dos seguintes IDs, a placa está no modo de recuperação forçada:",
+
+    // Orin variants
+    orinNx16gb: "Para Orin NX 16GB:",
+    orinNx8gb: "Para Orin NX 8GB:",
+    orinNano8gb: "Para Orin Nano 8GB:",
+    orinNano4gb: "Para Orin Nano 4GB:",
+    xavierNx: "Para Xavier NX:",
+    agxOrin32gb: "Para AGX Orin 32GB:",
+    agxOrin64gb: "Para AGX Orin 64GB:",
+
+    imageExample: "A imagem abaixo é para o Orin Nano 8GB:",
+    imageExampleAgx: "A imagem abaixo é para o AGX Orin 32GB:",
+
+    // ExtractAndFlash
+    step1Extract: "Etapa 1:",
+    extractImageFile:
+      "Extraia o arquivo de imagem baixado no PC host Ubuntu:",
+    step2Flash: "Etapa 2:",
+    executeFlashCommand:
+      "Execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:",
+    flashSuccess:
+      "Você verá a seguinte saída se o processo de gravação for bem-sucedido:",
+    flashDuration: "O comando de gravação pode levar de 2 a 10 minutos.",
+    step3Connect: "Etapa 3:",
+    connectDisplay:
+      "Conecte o Jetson a um monitor usando o conector da placa (HDMI ou Type-C, dependendo da sua carrier board) e conclua a configuração inicial:",
+    systemConfiguration:
+      "Conclua a configuração do sistema de acordo com as suas necessidades.",
+    step4Optional: "Etapa 4 (Opcional):",
+    installJetpack: "Instalar o NVIDIA JetPack SDK",
+    installJetpackInstructions:
+      "Abra o terminal no dispositivo Jetson e execute os seguintes comandos:",
+
+    // Host Environment
+    hostRecommendation: "Recomendação para o host",
+    hostRecommendationText:
+      "Recomendamos usar dispositivos host Ubuntu físicos em vez de máquinas virtuais.",
+    hostRecommendationTable:
+      "Consulte a tabela abaixo para preparar a máquina host.",
+    jetpackVersion: "Versão do JetPack",
+    ubuntuVersion: "Versão do Ubuntu (Computador host)",
+
+    // Button headers
+    buttonHeader: "Botão / Pino",
+    description: "Descrição",
+
+    // Path placeholder
+    pathToImage: "<caminho-para-a-imagem>",
+
+    // Product names
+    or: "ou",
+
+    // Switch/Reset images alt text
+    switchToReset: "Mudar para RESET",
+    recoveryModeStep: "Etapa do modo de recuperação",
+    gifAboutReset: "gif sobre RESET",
+    buttonAboutReset: "botão RESET",
+    pinLayout: "Layout de pinos",
+    lsusbResult: "resultado do lsusb",
+    jetsonFirstBoot: "Configuração inicial do Jetson"
   }
 };
 
@@ -547,12 +731,12 @@ const content = {
  * VerifySHA256
  * ------------
  */
-export const VerifySHA256 = ({ lang = 'en' }) => {
+export const VerifySHA256 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const l4t = useJetsonStore(state => state.l4t);
   const obj = getL4TData(product, l4t);
   const filename = obj?.filename || 'mfi_xxxx.tar.gz';
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <p>{texts.verifySha256Intro}</p>
@@ -566,9 +750,9 @@ export const VerifySHA256 = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsMini = ({ lang = 'en' }) => {
+export const PrepareRequirementsMini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012mini', 'j4011mini', 'j3010mini', 'j3011mini'];
   if (!allowed.includes(product)) {
@@ -588,9 +772,9 @@ export const PrepareRequirementsMini = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryMini = ({ lang = 'en' }) => {
+export const RecoveryMini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012mini', 'j4011mini', 'j3010mini', 'j3011mini'];
   if (!allowed.includes(product)) {
@@ -704,9 +888,9 @@ export const RecoveryMini = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsRobotics = ({ lang = 'en' }) => {
+export const PrepareRequirementsRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
   if (!allowed.includes(product)) {
@@ -726,9 +910,9 @@ export const PrepareRequirementsRobotics = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryRobotics = ({ lang = 'en' }) => {
+export const RecoveryRobotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012robotics', 'j4011robotics', 'j3011robotics', 'j3010robotics'];
   if (!allowed.includes(product)) {
@@ -823,9 +1007,9 @@ export const RecoveryRobotics = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsSuper = ({ lang = 'en' }) => {
+export const PrepareRequirementsSuper = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012s', 'j4011s', 'j3011s', 'j3010s'];
   if (!allowed.includes(product)) {
@@ -845,9 +1029,9 @@ export const PrepareRequirementsSuper = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoverySuper = ({ lang = 'en' }) => {
+export const RecoverySuper = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012s', 'j4011s', 'j3011s', 'j3010s'];
   if (!allowed.includes(product)) {
@@ -942,9 +1126,9 @@ export const RecoverySuper = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsClassic = ({ lang = 'en' }) => {
+export const PrepareRequirementsClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
   if (!allowed.includes(product)) {
@@ -964,9 +1148,9 @@ export const PrepareRequirementsClassic = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryClassic = ({ lang = 'en' }) => {
+export const RecoveryClassic = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012classic', 'j4011classic', 'j3011classic', 'j3010classic'];
   if (!allowed.includes(product)) {
@@ -1009,7 +1193,6 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
           </li>
         </ul>
 
-        {/* 📌 插入表格部分 */}
         <div style={{ display: 'flex', justifyContent: 'center', margin: '1em 0' }}>
           <table border={1} cellPadding={8}>
             <thead>
@@ -1128,18 +1311,18 @@ export const RecoveryClassic = ({ lang = 'en' }) => {
         role="alert"
         style={{ marginTop: '1em' }}
       >
-        If you are using an <strong>Orin NX 16GB/8GB</strong> module, 
+        If you are using an <strong>Orin NX 16GB/8GB</strong> module,
         <strong> do not enable MAXN SUPER mode</strong>. <br />
-        The cooling capacity of the reComputer J401 carrier board is insufficient 
+        The cooling capacity of the reComputer J401 carrier board is insufficient
         to support it, and forcing this mode may result in permanent damage to the module.
       </div>
     </div>
   );
 };
 
-export const PrepareRequirementsIndustrial = ({ lang = 'en' }) => {
+export const PrepareRequirementsIndustrial = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = [
     'j4012industrial',
@@ -1168,9 +1351,9 @@ export const PrepareRequirementsIndustrial = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryIndustrial = ({ lang = 'en' }) => {
+export const RecoveryIndustrial = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = [
     'j4012industrial',
@@ -1276,9 +1459,9 @@ export const RecoveryIndustrial = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsReserver = ({ lang = 'en' }) => {
+export const PrepareRequirementsReserver = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012reserver', 'j4011reserver', 'j3011reserver', 'j3010reserver'];
   if (!allowed.includes(product)) {
@@ -1298,9 +1481,9 @@ export const PrepareRequirementsReserver = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryReserver = ({ lang = 'en' }) => {
+export const RecoveryReserver = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j4012reserver', 'j4011reserver', 'j3011reserver', 'j3010reserver'];
   if (!allowed.includes(product)) {
@@ -1399,9 +1582,9 @@ export const RecoveryReserver = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501 = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-carrier AGX-Orin 64g', 'j501-carrier AGX-Orin 32g'];
   if (!allowed.includes(product)) {
@@ -1424,9 +1607,9 @@ export const PrepareRequirementsJ501 = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501Mini = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501Mini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1449,9 +1632,9 @@ export const PrepareRequirementsJ501Mini = ({ lang = 'en' }) => {
   );
 };
 
-export const PrepareRequirementsJ501Robotics = ({ lang = 'en' }) => {
+export const PrepareRequirementsJ501Robotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1472,9 +1655,9 @@ export const PrepareRequirementsJ501Robotics = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501 = ({ lang = 'en' }) => {
+export const RecoveryJ501 = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-carrier AGX-Orin 64g', 'j501-carrier AGX-Orin 32g'];
   if (!allowed.includes(product)) {
@@ -1574,9 +1757,9 @@ export const RecoveryJ501 = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501Mini = ({ lang = 'en' }) => {
+export const RecoveryJ501Mini = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1677,9 +1860,9 @@ export const RecoveryJ501Mini = ({ lang = 'en' }) => {
   );
 };
 
-export const RecoveryJ501Robotics = ({ lang = 'en' }) => {
+export const RecoveryJ501Robotics = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
   if (!allowed.includes(product)) {
@@ -1798,13 +1981,13 @@ export const FlashCMD = ({ lang = 'en' }) => {
   );
 };
 
-export const ExtractAndFlash = ({ lang = 'en' }) => {
+export const ExtractAndFlash = ({ lang }) => {
   const product = useJetsonStore(state => state.product);
   const l4t = useJetsonStore(state => state.l4t);
   const obj = getL4TData(product, l4t);
   const filename = obj?.filename || 'mfi_xxxx.tar.gz';
   const foldername = obj?.foldername || 'mfi_xxxx';
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
 
   return (
     <div>
@@ -1872,8 +2055,8 @@ sudo apt install nvidia-jetpack`}</CodeBlock>
   );
 };
 
-const HostEnvironmentNote = ({ lang = 'en' }) => {
-  const texts = content[lang] || content.en;
+const HostEnvironmentNote = ({ lang }) => {
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <div className="alert alert--info" role="alert">
@@ -1917,8 +2100,8 @@ const HostEnvironmentNote = ({ lang = 'en' }) => {
   );
 };
 
-const HostEnvironmentNote1 = ({ lang = 'en' }) => {
-  const texts = content[lang] || content.en;
+const HostEnvironmentNote1 = ({ lang }) => {
+  const texts = useLocalizedTexts(lang);
   return (
     <>
       <div className="alert alert--info" role="alert">

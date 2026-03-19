@@ -154,7 +154,7 @@ A série reComputer Industrial R21xx é ideal para uso em aplicações industria
       </tr>
       <tr>
         <td colspan="3"> Tensão de Entrada: 5~24V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> DO </td>
         <td colspan="3"> 8 x portas DO isoladas </td>

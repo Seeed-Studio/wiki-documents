@@ -184,7 +184,7 @@ A série reComputer Industrial R20xx é ideal para uso em aplicações de IA ind
       <tr>
         <td>LED</td>
         <td colspan="2">4 x indicadores LED</td>
-      </tr]
+      </tr>
       <tr>
         <td>Buzzer</td>
         <td colspan="2">1</td>
@@ -239,7 +239,7 @@ A série reComputer Industrial R20xx é ideal para uso em aplicações de IA ind
       </tr>
       <tr>
         <td colspan="2">TELEC</td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="2">RoHS</td>
       </tr>
@@ -256,56 +256,56 @@ A série reComputer Industrial R20xx é ideal para uso em aplicações de IA ind
       <tr>
         <td>Temperatura de Operação</td>
         <td colspan="2">-20~65 °C</td>
-      </tr]
+      </tr>
       <tr>
         <td>Umidade de Operação</td>
         <td colspan="2">10~95% RH</td>
-      </tr]
+      </tr>
       <tr>
         <td>Temperatura de Armazenamento</td>
         <td colspan="2">-40~85 °C</td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="3">Outros</td>
-      </tr]
+      </tr>
       <tr>
         <td>UPS de Supercapacitor</td>
         <td colspan="2">Módulo SuperCAP UPS LTC3350*</td>
-      </tr]
+      </tr>
       <tr>
         <td>Watchdog de Hardware</td>
         <td colspan="2">1~255s</td>
-      </tr]
+      </tr>
       <tr>
         <td>RTC</td>
         <td colspan="2">RTC de alta precisão</td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2">Segurança</td>
         <td colspan="2">Chip de Criptografia TPM 2.0*</td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="2">ATECC608A</td>
-      </tr]
+      </tr>
       <tr>
         <td>Dissipação de Calor</td>
         <td colspan="2">Sem ventoinha</td>
-      </tr]
+      </tr>
       <tr>
         <td>Garantia</td>
         <td colspan="2">2 anos</td>
-      </tr]
+      </tr>
       <tr>
         <td>Vida Útil de Produção</td>
         <td colspan="2">Até dezembro de 2036</td>
-      </tr]
+      </tr>
       <tr>
         <td>**Declaração**</td>
         <td colspan="2">As opções marcadas com * exigem compra adicional de acordo com a lista de acessórios.</td>
-      </tr]
+      </tr>
     </tbody>
-  </table]
-</div]
+  </table>
+</div>
 
 
 <div class="table-center">
@@ -313,35 +313,35 @@ A série reComputer Industrial R20xx é ideal para uso em aplicações de IA ind
     <thead>
       <tr>
         <th colspan="2">Declaração de Status de Componentes e Interfaces</th>
-      </tr]
-    </thead]
-    <tbody]
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Reservado</td>
         <td>Designado para uso ou expansão futura.</td>
-      </tr]
+      </tr>
       <tr>
         <td> Opcional </td>
         <td colspan="2">Designado para uso ou expansão futura.</td>
-      </tr]
+      </tr>
       <tr>
         <td> **Processador de IA** </td>
         <td>Componentes não essenciais; o usuário pode optar por incluí‑los ou não.</td>
-      </tr]
+      </tr>
       <tr>
         <td> Ocupado </td>
         <td>Atualmente em uso e essencial para a funcionalidade do produto.</td>
-      </tr]
+      </tr>
       <tr>
         <td>Incluído</td>
         <td colspan="2">Componentes essenciais fornecidos no pacote padrão.</td>
-      </tr]
-    </tbody]
-  </table]
-</div]
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/1.4_dimension_1.png" style={{width:800, height:'auto'}}/></div]
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/1.4_dimension_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Introdução ao Hailo
 

@@ -102,7 +102,7 @@ Quando você vir a luz na placa de expansão piscando regularmente em **verde**,
 
 - **Etapa 4.** Vá para `File > Examples > Seeed Arduino Mic > mic_Saved_OnSDcard` para abrir **mic_Saved_OnSDcard**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/PDM-sd-install.jpg" alt="pir" width={550} height="auto" /></p]
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/PDM-sd-install.jpg" alt="pir" width={550} height="auto" /></p>
 
 - **Etapa 5.** Envie os códigos e abra o **Serial Monitor**
 

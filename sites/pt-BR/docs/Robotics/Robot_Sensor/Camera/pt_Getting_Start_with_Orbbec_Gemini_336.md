@@ -113,7 +113,7 @@ A Gemini 336 é uma adição totalmente nova à série Gemini 330. Com base no d
 <div align="center">
     <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/overvew7.png" />
-</div]
+</div>
 
 <div align="center">
     <img width={300}

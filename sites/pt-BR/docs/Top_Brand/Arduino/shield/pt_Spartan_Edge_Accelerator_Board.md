@@ -126,7 +126,7 @@ Para mais recursos de casos, visite [esta página no Github.](https://github.com
   <tr>
     <td><h4>RAM distribuída máx. (Kb)</h4></td>
     <td><h4>150</h4></td>
-  </tr]
+  </tr>
   <tr>
     <td><h4>Blocos de gerenciamento de clock (1 MMCM + 1 PLL)</h4></td>
     <td><h4>2</h4></td>
@@ -709,7 +709,7 @@ O **status de execução** do Vivado é exibido no canto superior direito.
 
 4. Execute Implementation da mesma forma, como mostrado na figura 17.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/17.png" alt="pir" width={600} height="auto" /></p]
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/stand-alone/17.png" alt="pir" width={600} height="auto" /></p>
 
 5. Clique em **Open implemented Design** para ver relatórios após a implementação
 
