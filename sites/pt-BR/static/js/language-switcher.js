@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-18 16:35:20 (北京时间)
-// 多语言页面: 2209 个
+// 生成时间: 2026-03-19 14:40:01 (北京时间)
+// 多语言页面: 2211 个
 
 (function() {
   'use strict';
@@ -4602,6 +4602,13 @@
     "pt"
   ],
   "/r1225_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/r1225_quick_start": [
     "cn",
     "en",
     "es",
@@ -12423,6 +12430,13 @@
     "pt"
   ],
   "/benchmark_labs_forecast_integration_for_seeed_weather_stations": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/firmware_update": [
     "cn",
     "en",
     "es",
