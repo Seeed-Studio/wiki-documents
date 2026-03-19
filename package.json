@@ -18,7 +18,7 @@
     "build:cn": "yarn --cwd sites/zh-CN build -- --out-dir ../../build/cn",
     "build:ja": "yarn --cwd sites/ja build -- --out-dir ../../build/ja",
     "build:es": "yarn --cwd sites/es build -- --out-dir ../../build/es",
-    "build:pt": "yarn --cwd sites/pt-BR build -- --out-dir ../../build/pt",
+    "build:pt": "yarn --cwd sites/pt-BR build -- --out-dir ../../build/pt-br",
     "build:all": "yarn build:en && yarn build:cn && yarn build:ja && yarn build:es && yarn build:pt",
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
