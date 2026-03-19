@@ -4,13 +4,10 @@ title: SenseCAP ONE Weather Sensor  Firmware Update
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Firmware_Update
+slug: /firmware_update
 last_update:
   date: 03/19/2026
   author: Kian
-createdAt: 
-updatedAt: 
-url: 
 ---
 
 ## Resources

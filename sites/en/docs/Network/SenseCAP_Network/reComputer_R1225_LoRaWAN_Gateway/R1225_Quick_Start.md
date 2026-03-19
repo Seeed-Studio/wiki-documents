@@ -12,9 +12,6 @@ sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 03/13/2026
   author: Kian
-createdAt: '2026-02-05'
-updatedAt: '2026-03-13'
-url: https://wiki.seeedstudio.com/
 ---
 
 ## Power connection
