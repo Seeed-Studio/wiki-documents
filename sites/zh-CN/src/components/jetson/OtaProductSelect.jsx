@@ -1,7 +1,29 @@
 import React, { useMemo, useState } from 'react';
 import { Select, Image, ConfigProvider, theme } from 'antd';
 import { useColorMode } from '@docusaurus/theme-common';
+import { useLocation } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import L4TData from '@site/src/data/jetson/L4TData.json';
+
+const normalizeLang = (lang = 'en') => {
+  const l = String(lang).toLowerCase();
+
+  if (l === 'cn' || l.startsWith('zh')) return 'zh';
+  if (l.startsWith('ja')) return 'ja';
+  if (l.startsWith('es')) return 'es';
+  if (l.startsWith('pt')) return 'pt';
+  if (l.startsWith('en')) return 'en';
+
+  return 'en';
+};
+
+const getLangFromPathname = (pathname = '/') => {
+  if (pathname.startsWith('/pt-br')) return 'pt';
+  if (pathname.startsWith('/cn')) return 'zh';
+  if (pathname.startsWith('/ja')) return 'ja';
+  if (pathname.startsWith('/es')) return 'es';
+  return 'en';
+};
 
 const texts = {
   en: {
@@ -60,9 +82,35 @@ const texts = {
     missing:
       'No se encontró metadatos de payload OTA para este producto. Ponte en contacto con el soporte de Seeed.',
   },
+
+  pt: {
+    selectProduct: 'Selecione um produto',
+    warningPrefix:
+      'Se você estiver usando um módulo Orin NX 16GB/8GB, não habilite o modo MAXN SUPER.',
+    warningSuffix:
+      'A capacidade de refrigeração de {board} é insuficiente e forçar esse modo pode resultar em danos permanentes ao módulo.',
+    packageTitle: 'Pacote de payload OTA',
+    versionLabel: 'L4T de destino',
+    fileLabel: 'Nome do arquivo',
+    shaLabel: 'SHA256',
+    downloadLabel: 'Download',
+    missing:
+      'Nenhum metadado de payload OTA foi encontrado para este produto. Entre em contato com o suporte da Seeed.',
+  },
+};
+
+const useLocalizedTexts = (lang) => {
+  const { i18n } = useDocusaurusContext();
+  const location = useLocation();
+
+  const detectedLang = lang || getLangFromPathname(location.pathname || '/') || i18n.currentLocale;
+  const currentLang = normalizeLang(detectedLang);
+
+  return texts[currentLang] || texts.en;
 };
 
 const toNumericArray = (value = '') => (value.match(/\d+/g) || []).map(Number);
+
 const compareVersion = (a = '', b = '') => {
   const A = toNumericArray(a);
   const B = toNumericArray(b);
@@ -84,11 +132,11 @@ const findOtaRecord = (productValue, preferredL4T) => {
   return [...records].sort((a, b) => compareVersion(b.l4t, a.l4t))[0];
 };
 
-const OtaProductSelect = ({ options = [], lang = 'en' }) => {
+const OtaProductSelect = ({ options = [], lang }) => {
   const [selectedValue, setSelectedValue] = useState(options[0]?.value ?? null);
   const { colorMode } = useColorMode();
   const themeConfig = colorMode === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm;
-  const locale = texts[lang] || texts.en;
+  const locale = useLocalizedTexts(lang);
 
   const selectedOption = useMemo(
     () => options.find((opt) => opt.value === selectedValue),

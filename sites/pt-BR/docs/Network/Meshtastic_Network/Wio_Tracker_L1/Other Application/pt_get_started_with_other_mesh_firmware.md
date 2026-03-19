@@ -107,7 +107,7 @@ Baixe o arquivo UF2.
 
 Dê um clique duplo no botão RST para entrar manualmente no modo DFU. Você verá um disco chamado `TRACKER L1` aparecer após 10~15 s.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p]
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/ManualDFU.png" alt="pir" width={800} height="auto" /></p>
 
 Arraste o arquivo UF2 baixado para o disco que apareceu.
 

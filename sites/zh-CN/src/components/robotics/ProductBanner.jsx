@@ -18,6 +18,9 @@ const content = {
   es: {
     orderNow: "Ordenar ahora",
   },
+  pt: {
+    orderNow: "Compre agora",
+  },
 };
 
 const ProductBanner = ({ imageUrl, linkUrl, lang = 'en' }) => {

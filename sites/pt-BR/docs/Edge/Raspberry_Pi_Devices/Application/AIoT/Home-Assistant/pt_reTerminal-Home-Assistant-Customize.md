@@ -267,7 +267,7 @@ Aqui vamos adicionar uma integração de câmera para que possamos visualizar o 
 
 - **Passo 3.** Na página **Overview**, vá para a página **+ ADD CARD** como antes e clique no card **Picture Entity**
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/56.png"/></div]
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/56.png"/></div>
 
 - **Passo 4.** Digite **camera** em **Entity** e você verá a câmera que configuramos antes. Clique nela.
 

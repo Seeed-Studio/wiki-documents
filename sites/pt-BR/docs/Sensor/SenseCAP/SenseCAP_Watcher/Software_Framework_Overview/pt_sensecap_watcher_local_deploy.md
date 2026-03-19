@@ -89,7 +89,7 @@ Para garantir uma experiência suave e ideal ao implantar localmente os recursos
       <td align="center">8 GB</td>
       <td align="center">16 GB</td>
       <td align="center">8 GB</td>
-    </tr]
+    </tr>
     <tr>
       <th>Armazenamento (Configuração Mínima)</th>
       <td align="center">20 GB</td>

@@ -239,7 +239,7 @@ Após esse comando, o serviço Xiaozhi poderá acessar o serviço Dify API no en
 
 <summary>Por que não usar host.docker.internal?</summary>
 
-[LINE_24>Você pode considerar usar `host.docker.internal` (um nome DNS especial para acessar o host de dentro de um container Docker) como solução de conexão. Porém, observe que, se o serviço `docker-api-1` (o container Dify API) não mapear sua porta para o host, ou se o próprio serviço não escutar diretamente na interface de rede do host, o container `xiaozhi-server` não conseguirá acessar `docker-api-1` com sucesso via `host.docker.internal:5001`. Portanto, garantir que ambos os containers estejam na mesma rede Docker e se comuniquem por nomes de serviço é o método de configuração mais recomendado e confiável, especialmente quando o serviço `docker-api-1` opera principalmente dentro da rede de containers.
+Você pode considerar usar `host.docker.internal` (um nome DNS especial para acessar o host de dentro de um container Docker) como solução de conexão. Porém, observe que, se o serviço `docker-api-1` (o container Dify API) não mapear sua porta para o host, ou se o próprio serviço não escutar diretamente na interface de rede do host, o container `xiaozhi-server` não conseguirá acessar `docker-api-1` com sucesso via `host.docker.internal:5001`. Portanto, garantir que ambos os containers estejam na mesma rede Docker e se comuniquem por nomes de serviço é o método de configuração mais recomendado e confiável, especialmente quando o serviço `docker-api-1` opera principalmente dentro da rede de containers.
 
 </details>
 
