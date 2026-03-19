@@ -82,7 +82,7 @@ A **câmera OV2640** foi descontinuada e o XIAO ESP32S3 Sense subsequente utiliz
     <td>/</td>
     <td>1x sensor de câmera OV3660<br/>1x Microfone Digital</td>
     <td>/</td>
-  </tr]
+  </tr>
   <tr>
     <th>Memória</th>
     <td>8MB PSRAM &amp; 8MB Flash no chip</td>

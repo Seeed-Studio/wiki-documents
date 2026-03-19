@@ -100,7 +100,7 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
     <tr>
       <td>Acelerador DL</td>
       <td colSpan='2' align='center'>/</td>
-      [LINE[102]]      <td>1x NVDLA v2</td>
+      <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
     </tr>
     <tr>

@@ -171,7 +171,7 @@ url: https://wiki.seeedstudio.com/pt-br/sensecraft-data-platform/api/appendix/li
 <td>0~500</td>
 <td>cm</td>
 <td></td>
-</tr]
+</tr>
 <tr>
 <td>4118</td>
 <td>NH3</td>

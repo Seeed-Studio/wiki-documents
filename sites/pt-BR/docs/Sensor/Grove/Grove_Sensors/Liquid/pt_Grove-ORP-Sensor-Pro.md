@@ -314,7 +314,7 @@ Após atualizar o programa, selecione o modelo da placa de desenvolvimento e o n
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/6.png"/></div>
 
-[LINE_145>Ligue o monitor serial e ajuste a taxa de transmissão para 9600, você verá a variação do valor de ORP detectado pelo sensor atual.
+Ligue o monitor serial e ajuste a taxa de transmissão para 9600, você verá a variação do valor de ORP detectado pelo sensor atual.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/4.png"/></div>
 
