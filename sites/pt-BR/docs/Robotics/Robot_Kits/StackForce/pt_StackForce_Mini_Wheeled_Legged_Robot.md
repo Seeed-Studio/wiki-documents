@@ -52,6 +52,8 @@ O robô inclui um modelo cinemático de corpo inteiro e um algoritmo de autoesta
 
 - **Projetos de robótica de código aberto para a plataforma leve de desenvolvimento de robótica StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
+- **Aprendizado de teoria e código do robô com rodas e pernas StackForce Mini** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
+
 ## Principais recursos
 
 1. **Código aberto e baixo custo**: Segue uma licença de código aberto; todo o código-fonte e arquivos de projeto estão totalmente disponíveis, permitindo que desenvolvedores estudem, modifiquem e façam desenvolvimento secundário livremente.
