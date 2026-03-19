@@ -1,22 +1,12 @@
 ---
 description: reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life.
-title: Getting Started with reTerminal E1003
-sidebar_position: 4
-keywords:
-  - reTerminal E1003
-  - ePaper Display
-  - ESP32-S3
-  - SenseCraft HMI
-  - Monochrome ePaper
-  - Smart Home Dashboard
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
 sku: 100090602
+title: Getting Started with reTerminal E1003
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
+slug: /getting_started_with_reterminal_e1003
 last_update:
-  date: 1/28/2026
+  date: 3/19/2026
   author: Jackson.Li
-createdAt: '2026-03-29'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 ---
 
 # Getting Started with reTerminal E1003
