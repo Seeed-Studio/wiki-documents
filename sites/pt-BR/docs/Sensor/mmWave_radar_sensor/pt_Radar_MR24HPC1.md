@@ -241,7 +241,7 @@ Conecte o radar diretamente à porta USB do computador por meio de um dispositiv
       <td align="center">Radar Sensor</td>
       <td align="center" />
       <td align="center">UART to USB</td>
-    <tr>
+    </tr>
     <tr>
       <td align="center">5V</td>
       <td align="center">--&gt;</td>

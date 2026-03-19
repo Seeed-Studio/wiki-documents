@@ -151,7 +151,7 @@ A série reComputer Industrial R22xx é ideal para uso em aplicações industria
       </tr>
       <tr>
         <td colspan="3"> Tensão de Entrada: 5~24V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> DO </td>
         <td colspan="2"> 4 x Portas DO Isoladas </td>
@@ -939,7 +939,7 @@ Aqui está a lista de acessórios e módulos opcionais:
       <tr>
         <td>Módulo Gateway LoRaWAN opcional por região (SPI)-EU868</td>
         <td>114992549</td>
-      </tr]
+      </tr>
       <tr>
         <td>Módulo Gateway LoRaWAN opcional por região (USB)-EU868</td>
         <td>114992628</td>

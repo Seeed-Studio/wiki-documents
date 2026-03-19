@@ -247,7 +247,7 @@ e o LED azul piscam 1 vez a cada 2 s em intervalo. Enquanto desconectado, apenas
 <td width="200px">\r\n+STNA=abcdefg</td>
 <td width="400px">Define o nome do dispositivo como "abcdefg". Salva e reinicia.</td>
 </tr>
-</table]
+</table>
 
 **4. Conexão automática com o último dispositivo pareado ao ligar**
 

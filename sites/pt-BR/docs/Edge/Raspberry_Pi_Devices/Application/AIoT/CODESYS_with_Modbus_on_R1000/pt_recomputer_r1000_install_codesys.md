@@ -67,7 +67,7 @@ Antes de começar este projeto, talvez você precise preparar seu hardware e sof
 
 **Passo 4**: Clique para aceitar a licença e depois clique em `Next` para prosseguir para a próxima etapa.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/5.png" /></center]
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/5.png" /></center>
 
 **Passo 5**: Clique em `I have read the information` e depois clique em `Next`
 

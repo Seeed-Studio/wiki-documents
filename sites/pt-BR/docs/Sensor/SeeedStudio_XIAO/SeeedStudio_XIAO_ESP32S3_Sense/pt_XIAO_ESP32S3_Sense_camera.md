@@ -110,7 +110,7 @@ O slot de cartão do XIAO ESP32S3 Sense ocupa 14 GPIOs do ESP32-S3, e os detalhe
             <td align="center">DVP_Y7</td>
             <td align="center">GPIO13</td>
             <td align="center">DVP_PCLK</td>
-        </tr]
+        </tr>
         <tr>
             <td align="center">GPIO14</td>
             <td align="center">DVP_Y6</td>

@@ -167,7 +167,7 @@ Para as especificações do SIM900, consulte este arquivo PDF: [SIM900_SPEC.pdf]
     <tr>
       <td width="300px">64ms On/3000ms Off</td>
       <td width="400px">O SIM900 encontra a rede</td>
-    </tr]
+    </tr>
     <tr>
       <td width="300px">64ms On/300ms Off</td>
       <td width="400px">Comunicação GPRS</td>

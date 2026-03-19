@@ -98,7 +98,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_mg24_getting_started/
   <tr>
     <th>Normal (Típ.)</th>
     <td colspan="2">6,71 mA</td>
-  </tr]
+  </tr>
   <tr>
     <th>Sleep (Típ.)</th>
     <td colspan="2">1,91 mA</td>
