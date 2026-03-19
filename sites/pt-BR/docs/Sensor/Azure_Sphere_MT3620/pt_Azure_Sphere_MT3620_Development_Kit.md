@@ -107,7 +107,7 @@ Se você precisar de ajuda na seleção da versão, verifique a [lista de paíse
     <tr>
       <td className="tg-amwm">ADC</td>
       <td className="tg-0lax">4 *entradas/saídas ADC de 12 bits</td>
-    </tr>
+    </tr]
     <tr>
       <td className="tg-amwm">RTC</td>
       <td className="tg-0lax">1* RTC com suporte para bateria CR2032 3V</td>

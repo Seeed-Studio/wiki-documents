@@ -43,7 +43,7 @@ Parts list
 | [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)           | 1PC     |
 | [Grove - Digital Light Sensor](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products) | 1PC     |
 | Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter                                                                | 1PC     |
-| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/pt-br/Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
+| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/pt-br//Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
 | [Wio Link](/pt-br/Wio_Link/)                                                                                                | 1PC     |
 | [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)             | 1PC     |
 

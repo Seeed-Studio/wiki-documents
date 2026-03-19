@@ -1,5 +1,5 @@
 ---
-description: Driver de iluminação XIAO:alimentado por Li-Po, 3 chaves + 4 PWMs, aciona filamentos COB de 3 V — ilumine miniaturas, dioramas e wearables.
+description: Driver de iluminação XIAO: alimentado por Li-Po, 3 chaves + 4 PWMs, aciona filamentos COB de 3 V — ilumine miniaturas, dioramas e wearables.
 title: Placa Controladora de LED COB para XIAO
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
 slug: /getting_started_with_cob_led_dirver_board

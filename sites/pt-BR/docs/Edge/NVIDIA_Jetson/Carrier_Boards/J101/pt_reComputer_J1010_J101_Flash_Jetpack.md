@@ -63,7 +63,7 @@ Antes de prosseguirmos para as etapas de instalação, precisamos ter certeza de
       <td align="center">GND</td>
       <td align="center">8</td>
       <td align="center">DIS</td>
-    </tr>
+    [LINE[65]]    </tr>
     <tr>
       <td align="center">3</td>
       <td align="center">FC REC</td>

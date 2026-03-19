@@ -78,7 +78,7 @@ Clique no botão **Go to project** e depois no botão **Refresh** para verificar
 Depois que a integração for configurada, todos os dispositivos conectados ao mesmo projeto no The Things Stack serão sincronizados automaticamente.
 :::
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Q_status_device.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Q_status_device
 
 ## Configurar o decodificador no Qubitro
 

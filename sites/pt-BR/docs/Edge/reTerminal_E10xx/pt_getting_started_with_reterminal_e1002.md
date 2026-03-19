@@ -242,7 +242,7 @@ O dispositivo só pode ser configurado por meio de uma rede Wi‑Fi de 2,4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
-</TabItem>
+</TabItem]
 </Tabs>
 
 ## Criando um Dashboard

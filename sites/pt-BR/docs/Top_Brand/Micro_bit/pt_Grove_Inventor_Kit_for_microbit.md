@@ -156,7 +156,7 @@ no micro:bit.
   </tr>
   <tr>
     <td><h4>Grove Shield para micro:bit</h4></td>
-    <td><h4>1</h4></td>
+    <td><h4>1</4></h4></td>
   </tr>  
   <tr>
     <td><h4>micro:bit</h4></td>

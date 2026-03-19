@@ -306,7 +306,7 @@ Usuários Linux têm etapas extras a seguir:
 
 <div align="center">
 
-[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](/reachymini_sdk_gstreamer-installation)
+[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](gstreamer-installation.md)
 
 </div>
 

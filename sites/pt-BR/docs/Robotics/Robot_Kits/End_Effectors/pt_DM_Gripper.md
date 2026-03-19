@@ -241,7 +241,7 @@ Esta garra utiliza um mecanismo clássico de manivela e guia deslizante duplo (D
     <source src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/videos/S10.mp4"
             type="video/mp4" />
   </video>
-</div>
+</div]
 
 - Passo 11: Fixe a base com seis parafusos M3×16 (Puxe o trilho para fora nesta etapa e depois deslize-o de volta)
 

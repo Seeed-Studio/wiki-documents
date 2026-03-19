@@ -193,7 +193,7 @@ Cada um desses modelos de tarefa possui condições específicas de acionamento 
 :::danger
 Podem ser aplicadas taxas pelo uso de alguns serviços do SenseCraft AI, consulte a documentação abaixo para mais detalhes:
 
-**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/pt-br/watcher_price/)**
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/pt-br/watcher_price/)**</br>
 :::
 
 O SenseCraft APP permite enviar Tarefas para o seu dispositivo Watcher. Neste exemplo, vamos demonstrar o processo de envio de uma tarefa usando uma das tarefas de exemplo fornecidas pelo Watcher. Vamos usar o comando *If you see a candles, please notify me*.

@@ -95,7 +95,7 @@ Agora o ODYSSEY-X86 será inicializado a partir da unidade flash USB no OPNsense
 
 - **Passo 8.** Selecione **Install (UFS)** (opção padrão) e pressione **ENTER**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OPNsense/11.png" alt="pir" width={1000} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OPNsense/11.png" alt="pir" width={1000} height="auto" /></p]
 
 - **Passo 9.** Selecione a unidade externa conectada e pressione **ENTER**
 

@@ -35,7 +35,7 @@ Os sensores industriais da série SenseCAP S210x fornecem uma experiência pront
       <td>
         <div align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><img width="20%" src="https://files.seeedstudio.com/wiki/K1100_overview/S21012103.png" /></a></div>
       </td>
-    </tr>
+    </tr]
     <tr>
       <td align="center"><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><strong>S2101 Temperatura &amp; Umidade do Ar</strong></a></td>
     </tr>

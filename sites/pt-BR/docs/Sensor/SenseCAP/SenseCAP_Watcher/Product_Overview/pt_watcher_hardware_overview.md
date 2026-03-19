@@ -85,7 +85,7 @@ Nesta seção do Wiki, focaremos nos componentes de hardware do SenseCAP Watcher
         <tr>
             <td align="center">Slot para Cartão microSD</td>
             <td align="center">Suporta cartão microSD FAT32 de até 32GB</td>
-        </tr>
+        </tr]
         <tr>
             <td align="center">Flash</td>
             <td align="center">32MB de Flash para ESP32-S3<br />16MB de Flash para Himax HX6538</td>

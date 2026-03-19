@@ -194,7 +194,7 @@ Como [o design da interface CAN do reComputer Mini](https://wiki.seeedstudio.com
 <div align="center">
     <img width={500} 
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/EN/TX30.jpg" />
-</div>
+</div]
 
 Considerando a alta tensão e corrente exigidas pelo motor, recomenda-se comprar um adaptador de energia de 24V 300W para alimentar o reComputer Mini para acionar um único motor. Se for necessário conectar mais motores, pode-se adquirir um adaptador de energia de `maior potência` de acordo com a necessidade.
 

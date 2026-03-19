@@ -197,7 +197,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     <tr>
       <td>Umidade de Operação</td>
       <td colSpan={4}>95% @ 40 °C (Sem condensação)</td>
-    </tr>
+    </tr]
     <tr>
       <td>Temperatura de Armazenamento</td>
       <td colSpan={4}>-40 ~ 85°C</td>

@@ -251,7 +251,7 @@ Na etapa final **Create**, calcule de forma razoável o número de imagens de ac
 
 Clique em **Create** para criar uma versão do seu conjunto de dados. O Roboflow irá processar as imagens e anotações, criando um conjunto de dados versionado. Depois que o conjunto de dados for gerado, clique em **Export Dataset**. Escolha o formato **COCO** que corresponda aos requisitos do modelo que você irá treinar.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/23.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/23.png" style={{width:1000, height:'auto'}}/></div]
 
 Clique em **Continue** e então você obterá a Raw URL para este modelo. Guarde-a, usaremos o link na etapa de treinamento do modelo um pouco mais tarde.
 

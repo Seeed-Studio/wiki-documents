@@ -31,6 +31,7 @@ Sendo um parceiro confiável de hardware para Internet das Coisas (IoT) desde 20
   - <strong><a href="/pt-br/Cloud"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Serviços em Nuvem</span></a></strong>
   - <strong><a href="/pt-br/topicintroduction"><span style={{color: '8DC215', fontSize: '1.2em'}}>Tópicos de Tecnologia</span></a></strong>
   - <strong><a href="/pt-br/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}> Programa de Colaboradores</span></a></strong>
+  - <strong><a href="/pt-br/weekly_wiki"><span style={{color: '8DC215', fontSize: '1.2em'}}> Wiki Semanal </span></a></strong>
 
 - Você poderá encontrar documentação detalhada dos nossos produtos para **uso prático** e **resolução de problemas**, cenários de IoT industrial, bem como guias sobre ferramentas de desenvolvimento aberto para ajudá-lo a começar seus próprios projetos.
 
@@ -161,6 +162,12 @@ Continuaremos a lançar nossos projetos desejados, ou os apresentados por nossos
 ### Mais Introdução
 
 <strong><a href="/pt-br/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}>Descubra mais sobre o Programa de Colaboradores clicando aqui!</span></a></strong>
+
+## Wiki Semanal
+
+[Seeed Studio Weekly Wiki](/pt-br/weekly_wiki) será publicada toda segunda-feira e apresentará a você nosso conteúdo mais recente, como nossos novos produtos, projetos interessantes feitos por nossa equipe de Seeeders, tutoriais, guias, introduções e qualquer coisa interessante e relevante!
+
+![](https://files.seeedstudio.com/wiki/IndexWiki/logo.png)
 
 ## Suporte Técnico & Discussão de Produtos
 

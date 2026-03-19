@@ -1,12 +1,12 @@
 ---
-description: SenseCAP ONE 気象センサーの概要
-title: SenseCAP ONE 気象センサー 
+description: SenseCAP ONE 気象センサー紹介
+title: SenseCAP ONE 気象センサー
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_ONE_weather_sensor
 last_update:
-  date: 02/28/2024
+  date: 02/28/204
   author: Jessie
 createdAt: '2024-02-28'
 updatedAt: '2026-03-03'
@@ -14,15 +14,14 @@ url: https://wiki.seeedstudio.com/ja/SenseCAP_ONE_weather_sensor/
 ---
 
 
-今日、マイクロクライメートとして知られる局所的な気象データは、より正確で精度の高い気象予測に向けた新たなフロンティアとなっています。その結果、気象データの収集は、より細かくグリッド化された形で行われるようになっています。これを踏まえ、気象データを収集する最も便利な手段である気象ステーションの需要が高まっています。SenseCAP は、さまざまなシナリオで環境データを収集・監視するのに役立つ、オールインワン気象センサーを提供しています。
-
+今日、マイクロクライメートとして知られる局地的な気象データは、より精密で正確な天気予報のための新たなフロンティアです。その結果、気象データの収集はますます小規模でグリッド化されています。これを受けて、気象データ収集の最も便利な手段である気象観測所の需要が高まっています。SenseCAP は、様々なシナリオで環境データを収集・監視するためのオールインワン気象センサーを提供しています。
 
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
-SenseCAP ONE は、複数のセンサーをこのコンパクトなデバイスに統合したオールインワン型のコンパクト気象センサーシリーズであり、気温、湿度、気圧、照度、風速、風向、降水量、PM 2.5、PM 10、CO2 の最大 10 種類の気象パラメータを監視できます。
+SenseCAP ONE は、複数のセンサーをこのコンパクトなデバイスに統合したオールインワンコンパクト気象センサーシリーズで、最大10の気象パラメータを監視します：気温、湿度、大気圧、光強度、風速、風向、降水量、PM 2.5、PM 10、CO2。
 
-||気温|湿度|気圧|光|風速|風向|降水量|PM2.5|PM10|CO2|騒音|
+||気温|湿度|大気圧|光|風速|風向|降雨量|PM2.5|PM10|CO2|騒音|
 |--|--|--|--|--|--|--|--|--|--|--|--|
 |<p style={{textAlign: 'center'}}>[S200](https://www.seeedstudio.com/SenseCAP-S200-Wind-Speed-and-Direction-Sensor-p-5693.html)</p>|||||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||
 |<p style={{textAlign: 'center'}}>[S500](https://www.seeedstudio.com/SenseCAP-S500-5-in-1-Compact-Weather-Station-p-5652.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||||||

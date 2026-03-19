@@ -100,7 +100,7 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
       <td colSpan={2}>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
-    </tr>
+    </tr]
     <tr>
       <td>Codificador de Vídeo</td>
       <td colSpan={2}>1080p30 suportado por 1-2 núcleos de CPU</td>

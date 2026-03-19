@@ -126,7 +126,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <td>RS485</td>
       <td>1x Conector RS-485 JST 4 pinos (GH 1.25)</td>
-    </tr>
+    </tr]
     <tr>
       <td>UART</td>
       <td>1x Conector UART JST 6 pinos (Multiplexado com DO)</td>

@@ -114,7 +114,7 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32S3.
   <tr>
    <td align="center">D9 / A9 / Qt8 / GPIO8</td>
    <td align="center">MicroSD SPI MISO</td>
-  </tr>
+  </tr]
   <tr>
    <td align="center">D10 / A10 / Qt9 / GPIO9</td>
    <td align="center">MicroSD SPI MOSI</td>

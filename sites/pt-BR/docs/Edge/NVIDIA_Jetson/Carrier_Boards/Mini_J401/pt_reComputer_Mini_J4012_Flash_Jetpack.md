@@ -166,7 +166,7 @@ reComputer Mini é um minicomputador de IA alimentado pelo módulo NVIDIA Jetson
     <tr>
       <td>CAN</td>
       <td colSpan={3}>1x CAN JST 4pin (3.3V); 1x CAN (XT30 2+2) </td>
-    </tr>
+    </tr]
     <tr>
       <td>Ventoinha</td>
       <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM)</td>

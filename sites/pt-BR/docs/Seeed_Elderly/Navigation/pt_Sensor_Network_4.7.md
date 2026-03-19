@@ -680,7 +680,7 @@ Você pode explorar esta página em duas grandes partes.
     <a class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Produto Descontinuado</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Esta é a introdução dos microcontroladores envelhecidos da Seeed Studio.</font></div>
-            <a href="/pt-br/UartSB_Frame" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Clique aqui </font></span></a> para ver a imagem completa.
+            <a href="/pt-br/UartSB_Frame" target="_blank"><span><font color{'FFFFFF'} size={"3"}> Clique aqui </font></span></a> para ver a imagem completa.
     </a>
 </div>
 

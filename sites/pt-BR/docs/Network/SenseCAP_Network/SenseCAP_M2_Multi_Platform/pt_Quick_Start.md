@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/quick_start_with_M2_MP/
 SenseCAP M2 suporta PoE (Power on Ethernet) e é compatível com o padrão IEEE 802.3 af.
 
 :::tip
-Você precisará de um switch PoE extra que forneça alimentação DC de 40V-57V como um PSE (Power Sourcing Equipment) se o seu modem/roteador não suportar PoE.
+Você precisará de um switch PoE extra que forneça alimentação CC de 40V-57V como PSE (Power Sourcing Equipment) se o seu modem/roteador não suportar PoE.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png" alt="pir" width={800} height="auto" /></p>
@@ -32,61 +32,60 @@ O LED de energia ficará vermelho e, em cerca de 15s, o indicador na parte super
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png" alt="pir" width={800} height="auto" /></p>
 
-Há duas maneiras de se conectar à Internet. Escolha a que funcionar para você.
+Existem duas maneiras de se conectar à Internet. Escolha a que funcionar para você.
 
 ### Conexão Ethernet
 
-Conecte o cabo Ethernet à porta Ethernet, e o indicador na parte superior ficará verde fixo se o gateway estiver conectado com sucesso à internet.
+Conecte o cabo Ethernet à porta Ethernet, e o indicador na parte superior ficará verde contínuo se o gateway estiver conectado com sucesso à internet.
 
 ### Conexão WIFI
 
 Existem duas maneiras para os usuários fazerem login na página de configuração Luci.
 
-#### Acesso via roteador
+#### Acessar via roteador
 
-- Passo 1: Conecte seu dispositivo a um cabo Ethernet e conecte seu PC ao mesmo roteador
+- Passo 1: Conecte seu dispositivo a um cabo Ethernet e conecte seu PC ao mesmo roteador.
 
-:::note
- Seu PC e o dispositivo devem estar conectados ao mesmo roteador/rede.
+:::note Seu PC e o dispositivo devem estar conectados ao mesmo roteador/rede.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 2: Obtenha o Endereço IP do seu dispositivo
+- Passo 2: Obter o Endereço IP do seu dispositivo
 
 Verifique o Endereço IP do seu dispositivo na página de administração do seu roteador.
 
-- Passo 3: Obtenha o Nome de Usuário e a Senha do seu dispositivo
+- Passo 3: Obter o Nome de Usuário e a Senha do seu dispositivo
 
 Você pode encontrar o Nome de Usuário e a Senha na etiqueta do seu dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 4: Faça login no Luci
+- Passo 4: Login no Luci
 
 Insira o Endereço IP do seu dispositivo em um navegador para entrar na página Luci.
-Em seguida, insira o nome de usuário e a senha do seu dispositivo para fazer login.
+Depois insira o nome de usuário e a senha do seu dispositivo para fazer login.
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/login.png" alt="pir" width={800} height="auto" /></p>
 
-#### Acesso via hotspot AP do dispositivo
+#### Acessar via hotspot AP do dispositivo
 
-- Passo 1: Ligue o hotspot AP do dispositivo
+- Passo 1: Ligue o hotspot AP do dispositivo.
 
 Pressione o botão por 5s até que o indicador azul pisque lentamente para entrar no modo de configuração.
 
-- Passo 2: Conecte-se ao hotspot AP
-O nome do hotspot AP é SenseCAP_XXXXXX (endereço MAC de 6 dígitos), a senha padrão é 12345678; conecte seu computador a este hotspot AP.
+- Passo 2: Conecte-se ao hotspot AP.
+O nome do hotspot AP é SenseCAP_XXXXXX (endereço MAC de 6 dígitos), a senha padrão é 12345678; conecte o seu computador a este hotspot AP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wifi.png" alt="pir" width={400} height="auto" /></p>
 
-- Passo 3: Obtenha o Nome de Usuário e a Senha do seu dispositivo
+- Passo 3: Obter o Nome de Usuário e a Senha do seu dispositivo
 
 Você pode encontrar o Nome de Usuário e a Senha na etiqueta do seu dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 4: Faça login no Console Local
+- Passo 4: Fazer login no Console Local
 
 Insira o Endereço IP (192.168.168.1) no seu navegador para entrar no Console Local. Em seguida, insira o nome de usuário e a senha do seu dispositivo e clique no botão Login.
 
@@ -98,25 +97,25 @@ Insira o Endereço IP (192.168.168.1) no seu navegador para entrar no Console Lo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 2: Clique no botão `Scan` para escanear a WIFI
+- Passo 2: Clique no botão `Scan` para escanear a WIFI.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless2.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 3: Selecione sua WI-FI para entrar na rede
+- Passo 3: Selecione o seu WI-FI para ingressar na rede.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless3.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 4: Envie a senha do Wi-Fi e, em seguida, clique em `Submit` e Save
+- Passo 4: Envie a senha do Wi-Fi e, em seguida, clique em `Submit` e Save.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless4.png" alt="pir" width={800} height="auto" /></p>
 
-Em seguida, clique em Save and Apply para aplicar suas configurações
+Depois clique em Save and Apply para aplicar suas configurações.
 
-O indicador na parte superior ficará verde fixo se o gateway estiver conectado com sucesso ao WIFI
+O indicador na parte superior ficará verde contínuo se o gateway estiver conectado com sucesso ao WIFI.
 
 ### Conexão Celular (para versão 4G)
 
-- Passo 1: Insira seu cartão SIM no slot para cartão Nano-SIM
+- Passo 1: Insira o seu cartão SIM no slot para cartão Nano-SIM
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/%E6%8F%92%E5%9B%BE-01.jpg" alt="pir" width={666} height="auto" /></p>
 
@@ -124,12 +123,12 @@ O indicador na parte superior ficará verde fixo se o gateway estiver conectado 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g1.png" alt="pir" width={800} height="auto" /></p>
 
-- Passo 3: Configure as informações de APN e clique em `Save and Apply` para aplicar suas configurações
+- Passo 3: Configure as informações de APN e clique em `Save and Apply` para aplicar suas configurações.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-Para reduzir o consumo de dados, verifique [Low Data Consumption Mode Config](https://wiki.seeedstudio.com/pt-br/traffic_saving_config).
+Para reduzir o consumo de dados, verifique a [Low Data Consumption Mode Config](https://wiki.seeedstudio.com/pt-br/traffic_saving_config).
 :::
 
 ### Configurações do Plano de Canais
@@ -138,7 +137,7 @@ Navegue até `LoRa` > `Channel Plan`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP3.png" alt="pir" width={800} height="auto" /></p>
 
-Selecione a Região e o plano de Frequência.
+Selecione o plano de Região e Frequência.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP4.png" alt="pir" width={800} height="auto" /></p>
 
@@ -154,11 +153,11 @@ Após ligar o gateway, há duas maneiras de verificar o status de funcionamento 
 <tr><th colspan="2" valign="top"><b>Modo</b></th><th colspan="1" valign="top"><b>Descrição</b></th></tr>
 <tr><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>Verde</p></td><td colspan="1" valign="top">Fixo</td><td colspan="1" valign="top">O gateway está saudável e a internet está bem conectada.</td></tr>
 <tr><td colspan="1" valign="top">Piscando lentamente</td><td colspan="1" valign="top">O gateway está inicializando, aguarde.</td></tr>
-<tr><td colspan="1" rowspan="3" valign="top"><p></p><p></p><p></p><p></p><p>Azul</p></td><td colspan="1" valign="top"><p></p><p>Fixo</p></td><td colspan="1" valign="top"><p>O gateway está pronto para conexão com a internet.</p><p>É necessária configuração adicional.</p></td></tr>
-<tr><td colspan="1" valign="top">Piscando lentamente</td><td colspan="1" valign="top">Modo de configuração, e sairá automaticamente após 5 minutos se não houver atividade.</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>Piscando rapidamente</p></td><td colspan="1" valign="top">Pressione o botão por 30s até que o indicador mostre piscadas rápidas para acionar a restauração de fábrica.</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>Laranja</p></td><td colspan="1" valign="top"><p></p><p>Piscando lentamente</p></td><td colspan="1" valign="top">O firmware está sendo atualizado, e por favor não desligue o gateway nem desconecte a internet.</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>Branco</p></td><td colspan="1" valign="top"><p></p><p>Fixo</p></td><td colspan="1" valign="top">O gateway está apenas com um firmware de fábrica e será atualizado automaticamente para o firmware mais recente quando estiver conectado à internet.</td></tr>
+<tr><td colspan="1" rowspan="3" valign="top"><p></p><p></p><p></p><p></p><p>Azul</p></td><td colspan="1" valign="top"><p></p><p>Fixo</p></td><td colspan="1" valign="top"><p>O gateway está pronto para conexão com a internet.</p><p>Mais configurações são necessárias.</p></td></tr>
+<tr><td colspan="1" valign="top">Piscando lentamente</td><td colspan="1" valign="top">Modo de configuração, e irá sair automaticamente após 5 minutos se não houver atividade.</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>Piscando rapidamente</p></td><td colspan="1" valign="top">Pressione o botão por 30s até que o indicador mostre piscada rápida para acionar a restauração de fábrica.</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>Laranja</p></td><td colspan="1" valign="top"><p></p><p>Piscando lentamente</p></td><td colspan="1" valign="top">O firmware está sendo atualizado, por favor não desligue o gateway nem desconecte a internet.</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>Branco</p></td><td colspan="1" valign="top"><p></p><p>Fixo</p></td><td colspan="1" valign="top">O gateway está apenas com um firmware de fábrica e será atualizado para o firmware mais recente automaticamente quando estiver conectado à internet.</td></tr>
 <tr><td colspan="1" rowspan="2" valign="top"><p></p><p>Vermelho</p></td><td colspan="1" valign="top">Fixo</td><td colspan="1" valign="top">Problema de hardware ou falha na conexão com a internet.</td></tr>
 <tr><td colspan="1" valign="top">Piscando lentamente</td><td colspan="1" valign="top">Gateway não conectado ao LNS.</td></tr>
 </table>
@@ -177,7 +176,7 @@ SenseCAP Mate APP suporta configuração de dispositivo e gerenciamento remoto.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={600} height="auto" /></p>
 
 - Passo 2: Faça login no APP
-Se esta for a primeira vez que você usa a plataforma SenseCAP, registre uma conta primeiro.
+Se esta for a sua primeira vez usando a plataforma SenseCAP, registre uma conta primeiro.
 
 :::tip
 Selecione Global em Server Location.
@@ -192,8 +191,8 @@ Em seguida, escaneie o código QR na etiqueta do seu gateway.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app2.png" alt="pir" width={500} height="auto" /></p>
 
-Defina o nome e a localização do seu dispositivo. Em seguida, confirme suas configurações.
-Após a vinculação bem-sucedida, você verá seu gateway no diretório Device.
+Configure o nome e a localização do seu dispositivo. Depois confirme suas configurações.
+Após a vinculação bem-sucedida, você verá o seu gateway no diretório Device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app3.png" alt="pir" width={380} height="auto" /></p>
 
@@ -210,15 +209,15 @@ Em seguida, escaneie o código QR na etiqueta do seu gateway.
 
 Clique em `Settings`, defina a plataforma e a frequência; a frequência deve corresponder à frequência do seu gateway.
 
-ex: Se o seu gateway for versão US915, então você precisa configurar seu sensor para a frequência US915.
+ex: Se o seu gateway for versão US915, então você precisa configurar o seu sensor para frequência US915.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app7.png" alt="pir" width={500} height="auto" /></p>
 
 :::tip
-O SenseCAP M2 Multi-Platform Gateway não pode se conectar à rede Helium.
+SenseCAP M2 Multi-Platform Gateway não pode se conectar à rede Helium.
 :::
 
-Para mais configurações sobre sensores SenseCAP, consulte: SenseCAP Sensors
+Para mais configurações sobre os sensores SenseCAP, consulte: SenseCAP Sensors
 
 ## SenseCAP Portal e aplicativo Mate
 

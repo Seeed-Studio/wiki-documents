@@ -137,7 +137,7 @@ Como mencionamos acima, usamos esses três conjuntos de pads para selecionar o e
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/img/schamitc_c.jpg" /></div>
 
 Como você pode ver, o pad <span style={{textDecoration: 'overline'}}>ALE</span>
-está conectado aos 3,3V através de um resistor de pull-up.
+ [LINE_139> está conectado aos 3,3V através de um resistor de pull-up.
 
  **Circuito de conversor de nível bidirecional**
 

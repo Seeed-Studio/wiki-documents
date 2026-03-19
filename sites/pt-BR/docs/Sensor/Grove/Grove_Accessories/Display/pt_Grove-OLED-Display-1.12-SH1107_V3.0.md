@@ -177,7 +177,7 @@ void loop(void) {
 - **Passo 2.** Digite "**u8g2**" no campo de pesquisa, selecione a versão mais recente e clique no botão "Install".
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-OLED_Display_1.12inch/img/arduino_ide_search_u8g2.png" />
-</div>
+</div]
 
 
 - **Passo 3.** Faça upload do código de demonstração abaixo no seu Arduino IDE.
