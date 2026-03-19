@@ -161,7 +161,7 @@ Os resultados da detecção são ilustrados abaixo:
 </div>
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test5.jpg" />
-</div]
+</div>
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test6.jpg" />
 </div>

@@ -8,6 +8,7 @@ const content = {
   zh: { prev: '上一步', next: '下一步', done: '完成', doneMsg: '已完成！' },
   ja: { prev: '前へ', next: '次へ', done: '完了', doneMsg: '完了しました！' },
   es: { prev: 'Anterior', next: 'Siguiente', done: 'Hecho', doneMsg: '¡Listo!' },
+  pt: { prev: 'Anterior', next: 'Próximo', done: 'Concluído', doneMsg: 'Concluído!' },
 };
 
 const JetsonIOStepper = ({ steps = [], lang = 'en' }) => {
@@ -36,7 +37,7 @@ const JetsonIOStepper = ({ steps = [], lang = 'en' }) => {
   const next = () => setCurrent((c) => Math.min(c + 1, Math.max(steps.length - 1, 0)));
   const prev = () => setCurrent((c) => Math.max(c - 1, 0));
 
-  // 兜底：没有步骤时不渲染主体（保持最小修改）
+  // 兜底：没有步骤时不渲染主体
   if (!Array.isArray(steps) || steps.length === 0) {
     return null;
   }

@@ -3,7 +3,7 @@ import { Table, ConfigProvider, theme } from "antd";
 import { useColorMode } from '@docusaurus/theme-common';
 import { useThemeStore } from '@site/src/stores/useJetsonStore';
 
-// ✅ 多语言字典（最小修改：只翻译表头、类别/规格名、若干常见固定值）
+// 多语言字典：只翻译表头、类别/规格名、若干常见固定值
 const i18n = {
   en: {
     thCategory: 'Category',
@@ -280,6 +280,74 @@ const i18n = {
     valSupport: 'Compatible',
     valIp65: 'IP65',
   },
+
+  pt: {
+    thCategory: 'Categoria',
+    thSpec: 'Especificação',
+    thModel: 'Gemini 335Lg',
+
+    catBasic: 'Básico',
+    catDepth: 'Profundidade',
+    catIR: 'IR',
+    catRGB: 'RGB',
+    catBuiltIn: 'Sensor integrado',
+    catElectrical: 'Elétrico',
+    catPhysical: 'Físico',
+    catEnv: 'Ambiental',
+    catOthers: 'Outros',
+
+    specUseEnv: 'Ambiente de uso',
+    specTech: 'Tecnologia',
+    specBaseline: 'Linha de base',
+    specDataConn: 'Conexão de dados',
+    specProtocol: 'Protocolo da câmera',
+    specUvc: 'Compatível com UVC',
+    specSdk: 'SDK',
+
+    specDepthRange: 'Faixa de profundidade [1]',
+    specIdealRange: 'Faixa ideal',
+    specDepthResol: 'Resolução de profundidade / taxa de quadros',
+    specDepthFov: 'FOV de profundidade (H × V)',
+    specDepthFovD2C: 'FOV de profundidade (H × V) com D2C',
+    specSpatialPrecision: 'Precisão espacial [2]',
+    specDepthTech: 'Tecnologia do sensor de profundidade',
+    specDepthFilter: 'Filtro de profundidade',
+
+    specIrResol: 'Resolução IR / taxa de quadros',
+    specIrFov: 'FOV IR (H × V)',
+
+    specRgbResol: 'Resolução RGB / taxa de quadros',
+    specRgbFov: 'FOV do sensor RGB (H × V)',
+    specRgbTech: 'Tecnologia do sensor RGB',
+
+    specImu: 'IMU',
+
+    specPower: 'Consumo de energia',
+    specSupply: 'Alimentação',
+
+    specSync: 'Sincronização de hardware multicâmera',
+    specDim: 'Dimensões (L × A × P)',
+    specWeight: 'Peso',
+    specIngress: 'Proteção IP [4]',
+    specInstall: 'Instalação',
+
+    specTemp: 'Temperatura ambiente',
+    specEmc: 'Requisitos de EMC',
+    specVibration: 'Vibração',
+
+    specLifespan: 'Vida útil [5]',
+
+    valIndoorOutdoor: 'Ambiente interno e externo',
+    valActPasStereo: 'Estéreo ativo e passivo',
+    valGmslUsb3: 'GMSL2 FAKRA e USB 3',
+    valUsbGmsl2: 'USB e GMSL 2',
+    valYes: 'Sim',
+    valOrbbecSdk: 'Orbbec SDK',
+    valGlobalShutter: 'Obturador global',
+    valVisibleNirPass: 'Passa visível + NIR',
+    valSupport: 'Suporte',
+    valIp65: 'IP65',
+  },
 };
 
 // 行合并规则（保持不变）
@@ -298,7 +366,7 @@ const rowSpanRules = [
   end: (arr[idx + 1]?.start ?? Infinity) - 1
 }));
 
-// 原始英文数据（不动）
+// 原始英文数据
 const baseData = [
   { key: "1",  category: "Basic",        spec: "Use Environment",                         gemini335Lg: "Indoor & Outdoor" },
   { key: "2",  category: "Basic",        spec: "Technology",                              gemini335Lg: "Active & Passive Stereo" },
@@ -417,7 +485,6 @@ const translateValue = (t, value) => {
     'Support': t.valSupport,
     'IP65': t.valIp65,
   };
-  // 仅翻译常见固定值；包含单位/复杂句子的值保持原样，避免引入错误翻译
   return map[value] || value;
 };
 

@@ -984,7 +984,7 @@ Robotics J501-Mini proporciona un conector JST de 4 pines (GH 1.25) para RS485.
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-real.png"/>
 </div>
 
-[LINE_25>El diagrama esquemático de la hoja de datos de **RS485** se muestra a continuación:]
+El diagrama esquemático de la hoja de datos de **RS485** se muestra a continuación:]
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-jst.png"/>

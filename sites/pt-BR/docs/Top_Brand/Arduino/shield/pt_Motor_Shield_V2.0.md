@@ -188,7 +188,7 @@ O Motor Shield é um módulo driver para motores que permite usar o Arduino para
   <tr>
     <td><h4>D12</h4></td>
     <td><h4>OUT3</h4></td>
-  </tr]
+  </tr>
   <tr>
     <td><h4>D13</h4></td>
     <td><h4>OUT4</h4></td>

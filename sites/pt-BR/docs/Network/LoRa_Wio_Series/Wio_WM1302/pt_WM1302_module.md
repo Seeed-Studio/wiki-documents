@@ -122,7 +122,7 @@ O WM1302 é projetado para aplicações M2M e IoT e pode ser amplamente aplicado
   <td class="tg-4onr">8</td>
   <td class="tg-f42p">GPIO 14</td>
   <td class="tg-f42p">GPS_RXD</td>
-</tr]
+</tr>
 
 <tr>
   <td class="tg-4onr">9</td>

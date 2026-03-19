@@ -158,7 +158,7 @@ url: https://wiki.seeedstudio.com/pt-br/UartSB_Frame/
 <tr>
 <td width="100px">CTS</td>
 <td width="450px">Sinal UART Clear to Send</td>
-</tr]
+</tr>
 <tr>
 <td width="100px">RTS</td>
 <td width="450px">Sinal UART Request to Send</td>

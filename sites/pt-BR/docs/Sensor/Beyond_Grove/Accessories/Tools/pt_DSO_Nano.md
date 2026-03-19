@@ -53,7 +53,7 @@ Uma foto do interior do V2 foi publicada no [fórum](https://community.seeedstud
 <tr>
 <td> Display</td>
 <td> LCD TFT Colorido de 2,8″</td>
-</tr]
+</tr>
 <tr>
 <td> Resolução do display</td>
 <td> 320×240</td>

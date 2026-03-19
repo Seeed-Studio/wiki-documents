@@ -75,7 +75,7 @@ O Seeed Studio IoT Button é um botão inteligente versátil com chip ESP32-C6 i
 
 **Etapa 5**. Clique em **+NEW DEVICE**
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/5.png" style={{width:1000, height:'auto'}}/></div]
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/5.png" style={{width:1000, height:'auto'}}/></div>
 
 **Etapa 6**. Clique em **NEXT** e dê ao seu dispositivo um nome de sua escolha. Recomendamos usar "seeedstudio-iot-button" ou algo semelhante.
 
