@@ -823,8 +823,8 @@ const sidebars = {
                 id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/cn_ONE_intro",
               },
               items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/cn_SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/cn_ORCH-S4-Weather-Station',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/cn_SenseCAP-One-Series-Meteorological-Sensors',
                 {
                   type: 'category',
                   label: 'SenseCAP One 紧凑型气象站',
@@ -832,6 +832,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Introduction',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/cn_Firmware_Update',
                   ],
                 },
               ],
@@ -2683,6 +2684,7 @@ const sidebars = {
           label: 'reComputer R1225 LoRaWAN 网关',
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/cn_R1225_introduction',
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/cn_R1225_Quick_Start',
           ],
         },
         {
