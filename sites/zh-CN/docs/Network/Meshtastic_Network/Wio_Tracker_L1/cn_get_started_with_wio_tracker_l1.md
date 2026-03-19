@@ -22,7 +22,7 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 ### 第 1 部分 开箱
 
-首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，在连接 USB 电源后，将电源开关向上拨动以开机。
+首次使用 L1、L1 Lite 或 L1 E-Ink 机型时，在连接 USB 电源后，将电源开关向上拨动以开机。
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -49,16 +49,16 @@ L1 E-Ink 固件目前不支持四向摇杆。如果你想使用摇杆，请购�
 
 #### 菜单栏
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照 [固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录) 更新固件。
+只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照 [Flash Firmware Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### 蜂鸣器
 
 如果你想打开或关闭蜂鸣器，请先将 `update the firmware` 到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
 - 打开蜂鸣器
-Setting（齿轮形状图标）-> Notification -> Buzzer Action -> Disable
+Setting (齿轮形图标) -> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
-Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
+Setting (齿轮形图标) -> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -79,9 +79,9 @@ Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 ## 开始使用
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关机。否则设备可能会损坏。
 1. 尚未完成消息传输过程
-2. 正在配置中
+2. 正在被配置
 :::
 
 ### 烧录固件
@@ -153,7 +153,7 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果你想在网站上发送消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
@@ -202,19 +202,19 @@ import TabItem from '@theme/TabItem';
 
 **区域列表**
 
-|**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未设置|N/A|N/A|N/A|
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更完整的列表请参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
+更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
-现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)以满足你的需求。
+现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### 配置 GPS
 
@@ -292,17 +292,17 @@ import TabItem from '@theme/TabItem';
 
 ### 屏幕连接
  - 电子墨水屏
-  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)获取兼容的电子墨水屏。
+  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED 屏幕
-[点击这里](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)获取兼容的 OLED 屏幕。目前使用的 OLED 驱动为 SSD1306。
+[点击这里](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) 获取兼容的 OLED 屏幕。目前使用的 OLED 驱动为 SSD1306。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 
 ### 虚拟键盘
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！你可以在设备上直接输入消息，与其他设备进行通信。请按照[固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)更新固件。
+2.7 版本固件现在已经支持虚拟键盘！你可以在设备上直接输入消息，与其他设备进行通信。请按照 [固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题（FAQ）
@@ -314,7 +314,7 @@ import TabItem from '@theme/TabItem';
 设备没有响应，没有 LED 指示灯，无法与 App 配对。如果你在烧录自定义固件后发现设备完全无法启动，你也可以尝试重新安装 bootloader。
 
 :::danger note
-在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中 **不要** 断开连接。
 :::
 
 - 步骤 1：[点击这里下载 Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -331,7 +331,7 @@ import TabItem from '@theme/TabItem';
 
 - 步骤 4：烧录固件
 
-  完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### 无法进入 DFU 与手动进入 DFU 模式
@@ -340,7 +340,7 @@ import TabItem from '@theme/TabItem';
 
 ### 退出 DFU 模式
 
-按一次 `Reset` 按钮即可退出 DFU 模式。
+单击 `Reset` 按钮即可退出 DFU 模式。
 
  ### 设备自动关机
 
@@ -349,18 +349,18 @@ import TabItem from '@theme/TabItem';
  - 设备开机后，过一段时间会自动关机或重启。
  - 串口日志运行一段时间后停止。
 
- 这可能是由于在以下状态下手动强制重启或关闭设备导致的：尚未完成消息传输过程、正在配置中等……
+ 这可能是由于在以下状态下，手动强制重启或关闭设备导致的：尚未完成消息发送过程、正在配置中等……
 
  #### 故障排查
 
-[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
-如果你想恢复默认设置，可以执行出厂重置。你可以通过以下两种方式进行出厂重置。
+如果你想恢复到默认设置，可以执行出厂重置。你可以通过以下两种方式进行出厂重置。
 
-- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
+- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
-- 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
+- 在 App 中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB 重置
@@ -378,11 +378,11 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 在以下情况下重置 NodeDB：
 
 - 节点列表中包含过期、重复或无效的条目。
-- 你移动到了不同的 Mesh 环境，并希望重新发现附近的节点。
+- 你移动到不同的 Mesh 环境，希望重新发现附近的节点。
 - App 中显示的节点信息看起来不正确或不完整。
 
 :::danger
-重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行出厂重置**，也**不会移除设备的基础配置**。
+重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行出厂重置**，也**不会删除设备的基础配置**。
 :::
 
 **方法一：在设备上重置**
@@ -428,7 +428,7 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 请注意以下选项之间的区别：
 
 - **Reset NodeDB**：仅清除节点数据库。
-- **Factory Reset**：将设备恢复到出厂设置，并移除更多配置数据。
+- **Factory Reset**：将设备恢复到出厂设置，并删除更多配置数据。
 :::
 
 **重置后会发生什么**
@@ -437,7 +437,7 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 你可能会观察到以下现象：
 
-- 节点列表可能会暂时变为空或变少。
+- 节点列表可能会暂时为空或变少。
 - 随着设备持续运行，节点会逐渐重新出现。
 - 之前存储的历史节点记录将不再可用。
 
@@ -454,11 +454,11 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
 ### 兼容天线
 
-如果你需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)获取一个。
+如果你需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) 获取一个。
 
 ## 资源
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
