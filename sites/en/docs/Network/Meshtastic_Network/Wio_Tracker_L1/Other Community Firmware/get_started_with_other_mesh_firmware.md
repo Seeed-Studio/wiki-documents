@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
-sidebar_position: 1
+sidebar_position: 3
 last_update:
   date: 3/4/2026
   author: Michelle Huang
