@@ -34,7 +34,7 @@ For details, please click [here](/Use_IMX477_Camera_with_A603_Jetson_Carrier_Boa
 
 For details, please click [here](/get_the_system_log_of_recomputer_j30_and_j40)
 
-#### Q6: Timeout issue during flash Jetpack.
+#### Q6: Common flashing errors during Jetson flashing.
 
 For details, please click [here](/usb_timeout_during_flash)
 
