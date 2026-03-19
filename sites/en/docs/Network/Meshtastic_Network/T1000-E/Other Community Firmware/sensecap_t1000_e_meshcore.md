@@ -212,6 +212,15 @@ You can go to APP `Position Settings` to enable GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/GPSConfig.png" alt="pir" width={300} height="auto" /></p>
 
+### Button
+
+|Button Action|Description|
+|--|--|
+|Press for 3s|Power on/off|
+|Double-click|broadcast advert|
+|Triple-click|Buzzer switch|
+|Quadruple-click|GPS switch|
+
 ## Message Transmission
 
 If you have two supported devices, and there are not many MeshCore users near you, flash both to BLE Companion firmware so you can use your devices to communicate with your nearby friends and family.
