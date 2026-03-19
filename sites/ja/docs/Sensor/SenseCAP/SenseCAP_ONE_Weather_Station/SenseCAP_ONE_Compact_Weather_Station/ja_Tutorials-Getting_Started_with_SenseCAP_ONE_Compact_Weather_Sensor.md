@@ -263,7 +263,7 @@ Application Settings では、ツールがセンサーデータを読み取る�
 
 以下は **Modbus Poll ツール** の例です
 
-(<https://www.modbustools.com/download.html> からダウンロード)。
+([https://www.modbustools.com/download.html](https://www.modbustools.com/download.html) からダウンロード)。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 

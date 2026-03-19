@@ -147,7 +147,7 @@ reComputer R1225 の電源を初めて入れると、自動的にホットスポ
 - Step 3: APN 情報を設定し、`Save and Apply` をクリックして設定を反映します
 
 <!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p]
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
 
 ## R1225 LoRaWAN 設定
 
