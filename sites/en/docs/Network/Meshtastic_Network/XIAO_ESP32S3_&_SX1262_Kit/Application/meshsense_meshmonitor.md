@@ -1,11 +1,10 @@
 ---
-description: Meshtastic MQTT Gateway Setting Tutorial based on XIAO ESP32S3 & Wio-SX1262 Kit. Enables global messaging, provides a backup when mesh signals are weak, and ensures faster message delivery via the internet. 
+description: Meshtastic Network Monitor is a tool that allows you to visualize, manage, and monitor nodes in a Meshtastic mesh network.
 title: Meshtastic Network Monitor
 keywords:
   - Meshtastic
   - Source Code
-  - PlatformIO
-  - T1000-E
+  - Xiao ESP32s3
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_meshmonitor
 sku: 102010611,113110064
