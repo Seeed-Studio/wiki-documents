@@ -36,7 +36,7 @@ Antes de começar este projeto, talvez você precise preparar seu hardware e sof
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
@@ -67,7 +67,7 @@ Antes de começar este projeto, talvez você precise preparar seu hardware e sof
 
 **Passo 4**: Clique para aceitar a licença e depois clique em `Next` para prosseguir para a próxima etapa.
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/5.png" /></center]
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/5.png" /></center>
 
 **Passo 5**: Clique em `I have read the information` e depois clique em `Next`
 

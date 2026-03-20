@@ -64,7 +64,7 @@ Ele é equipado com GPS, Bluetooth e Wi-Fi para um posicionamento contínuo em a
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/pt-br/SenseCAP_T1000_Tracker_Akenza/" class="sensecap">Akenza</a>
           <a href= "https://wiki.seeedstudio.com/pt-br/SenseCAP_T1000_tracker_TagoIO_TTS/" class="sensecap2">TagoIO</a>
-</div]
+</div>
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/pt-br/SenseCAP_T1000_tracker_InfluxDB_TTS/" class="sensecap">Influx DB</a>

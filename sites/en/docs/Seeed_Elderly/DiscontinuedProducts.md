@@ -5,7 +5,7 @@ keywords:
   - Discontinued Products
   - Legacy Products
   - Retired Products
-  - Obselete Products
+  - Obsolete Products
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5

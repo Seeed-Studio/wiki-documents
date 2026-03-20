@@ -135,7 +135,7 @@ Existem cerca de 10 tipos de sensor de gás à venda. Eles têm nomes semelhante
       <td className="tg-q7v3">&gt;1000mmp</td>
       <td className="tg-q7v3">Grove-Multichannel Gas Sensor</td>
       <td className="tg-q7v3">101020088</td>
-    </tr]
+    </tr>
     <tr>
       <td className="tg-q7v3">0.05~10ppm</td>
       <td className="tg-q7v3">Grove-Gas Sensor(MQ3)</td>

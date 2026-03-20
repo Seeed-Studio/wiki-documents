@@ -34,7 +34,7 @@ Neste tutorial, vamos guiá-lo no uso do módulo de câmera no XIAO ESP32S3 Sens
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -65,7 +65,7 @@ Agora temos em estoque uma nova e poderosa câmera totalmente compatível com o 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -110,7 +110,7 @@ O slot de cartão do XIAO ESP32S3 Sense ocupa 14 GPIOs do ESP32-S3, e os detalhe
             <td align="center">DVP_Y7</td>
             <td align="center">GPIO13</td>
             <td align="center">DVP_PCLK</td>
-        </tr]
+        </tr>
         <tr>
             <td align="center">GPIO14</td>
             <td align="center">DVP_Y6</td>
@@ -680,12 +680,12 @@ Antes de iniciar este projeto, você precisará preparar antecipadamente o segui
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>

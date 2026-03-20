@@ -95,6 +95,9 @@ Cloud services are a vital component that enable processed data management from 
     </div>
 </div>
 
+<br />
+<br />
+
 ### SenseCraft APP
 
 <div class="title_container">
@@ -106,6 +109,9 @@ Cloud services are a vital component that enable processed data management from 
     </div>
 </div>
 
+<br />
+<br />
+
 ### SenseCraft AI
 
 <div class="title_container">
@@ -114,9 +120,12 @@ Cloud services are a vital component that enable processed data management from 
             <p>SenseCraft AI can be accessed on the SenseCraft Data Platform and SenseCraft App.</p>
             <br/>
             > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a>
-            > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Connecting XIAO ESP32C3</font></span></a>
+            > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Connecting XIAO ESP32-C3</font></span></a>
     </div>
 </div>
+
+<br />
+<br />
 
 ### SenseCAP Data Platform - API
 
@@ -128,3 +137,5 @@ Cloud services are a vital component that enable processed data management from 
             > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download PDF</font></span></a> / <a href="/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Introduction</font></span></a> / <a href="/sensecraft-fee/sensecraft-data-platform-api-pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>API Pricing</font></span></a>
     </div>
 </div>
+
+<br />

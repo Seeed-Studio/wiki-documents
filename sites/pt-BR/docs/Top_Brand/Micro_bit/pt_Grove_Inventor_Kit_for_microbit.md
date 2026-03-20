@@ -32,7 +32,7 @@ A tensão de saída do micro:bit é em torno de 3,0 V; usar o micro:bit ou pilha
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Inventor-Kit-for-micro%3Abit-p-2891.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -156,7 +156,7 @@ no micro:bit.
   </tr>
   <tr>
     <td><h4>Grove Shield para micro:bit</h4></td>
-    <td><h4>1</4></h4></td>
+    <td><h4>1</h4></td>
   </tr>  
   <tr>
     <td><h4>micro:bit</h4></td>

@@ -107,7 +107,7 @@ O Grove - NFC suporta I2C e UART, e a [Seeed Arduino NFC Library](https://github
 | Seeeduino Lite | Base Shield| Grove - NFC |  Tags NFC|
 |--------------|-------------|-----------------|---|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/lite.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-NFC/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-NFC/img/NFC-for-Marketing-Header.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Get One Now</a>|Por favor, prepare por conta própria|
+|<a href="https://www.seeedstudio.com/Seeeduino-Lite-p-1487.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Adquira agora</a>|Por favor, prepare por conta própria|
 
 - **Passo 1.** Conecte o Grove - NFC à porta **UART** do Grove-Base Shield.
 
@@ -195,7 +195,7 @@ NfcAdapter nfc = NfcAdapter(pn532_i2c);
 | Seeeduino V4.2 | Base Shield| Grove - NFC |  Tags NFC|
 |--------------|-------------|-----------------|---|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-NFC/img/thumbnail.jpg)|![](https://files.seeedstudio.com/wiki/Grove-NFC/img/NFC-for-Marketing-Header.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Get One Now</a>|Por favor, prepare por conta própria|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Grove-NFC-p-1804.html" target="_blank">Adquira agora</a>|Por favor, prepare por conta própria|
 
 :::note
 **1.** Por favor, escolha Tags NFC de 13,5MHZ, ISO14443, ou o módulo Grove - NFC pode não conseguir ler a tag.

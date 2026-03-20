@@ -526,7 +526,7 @@ On this page, there are two main categories of products
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Obselete / Retired Product</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Obsolete / Retired Product</font></div>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Seeed Studio legacy sensors and communication modules.</font></div>
             <a href="/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click HERE </font></span></a> to see the full picture.
     </div>

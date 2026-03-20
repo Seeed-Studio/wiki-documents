@@ -695,7 +695,7 @@ Materiais
 | ReSpeaker Core v2.0 |  Grove - Buzzer |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
+|[Adquira agora](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|
 
 Conecte o pino **SIG** do sensor Grove PIR ao pino de cabeçalho **0** do ReSpeaker Core v2.0 com um jumper. Não se esqueça de conectar o VCC e o GND ao mesmo tempo. Depois digite o código abaixo no seu console
 
@@ -724,7 +724,7 @@ Materiais
 | ReSpeaker Core v2.0 |  Grove -  PIR Motion Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Grove%20-%20PIR%20Motion%20Sensor.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
+|[Adquira agora](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Adquira agora](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
 Neste exemplo, vamos escutar o disparo do sensor Grove PIR, em código Python.
 Conecte o pino **D1** do sensor Grove PIR ao pino de cabeçalho **0** do ReSpeaker Core v2.0 com um jumper. Não se esqueça de conectar o VCC e o GND ao mesmo tempo.
@@ -779,7 +779,7 @@ Materiais
 | ReSpeaker Core v2 |  Grove - Digital Light Sensor |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_back_little.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/Digital_Light_Sensor.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
+|[Adquira agora](https://www.seeedstudio.com/ReSpeaker-Core-V2.0-p-3039.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|
 
 Este é um exemplo para o Grove Digital Light Sensor, que foi copiado do repositório do UPM no GitHub.
 

@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_R21xx_getting_star
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -154,7 +154,7 @@ A série reComputer Industrial R21xx é ideal para uso em aplicações industria
       </tr>
       <tr>
         <td colspan="3"> Tensão de Entrada: 5~24V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> DO </td>
         <td colspan="3"> 8 x portas DO isoladas </td>

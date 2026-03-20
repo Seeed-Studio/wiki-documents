@@ -138,7 +138,7 @@ Atualmente o MT3620 Ethernet Shield não oferece suporte à conexão com a inter
 | Kits de desenvolvimento MT3620 | MT3620 Ethernet Shield |
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_Azure_Sphere_MT3620_Development_Kit/img/azure_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Ethernet_Shield_v1.0/img/ethernet_s.png)|
-|[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Ethernet-Shield-v1-0-p-2917.html)|
+|[Adquira agora](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Adquira agora](https://www.seeedstudio.com/MT3620-Ethernet-Shield-v1-0-p-2917.html)|
 
 - Passo 1. Conecte o MT3620 Ethernet Shield à placa de desenvolvimento Azure Sphere MT3620.
 - Passo 2. Conecte o cabo USB à placa de desenvolvimento Azure Sphere MT3620 e ao PC.
