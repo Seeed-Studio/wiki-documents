@@ -17,13 +17,12 @@ import { useLocation } from '@docusaurus/router';
 import { judgeHomePath } from '../../../utils/jsUtils';
 import TopNav from '../../../components/topNav';
 import Head from '@docusaurus/Head';
-import JetsonLeadQuote from '../../../components/JetsonLeadQuote';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const { frontMatter, toc ,metadata} = useDoc();
+  const { frontMatter, toc } = useDoc();
   const windowSize = useWindowSize();
   const hidden = frontMatter.hide_table_of_contents;
   const canRender = !hidden && toc.length > 0;
@@ -42,17 +41,14 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
-  const { frontMatter, metadata } = useDoc();
+  const { frontMatter } = useDoc();
 
   // 使用类型断言解决 TypeScript 错误
   const {
     hide_comment: hideComment,
     sku,
     type: docType,
-    jetson_lead_quote: jetsonLeadQuote,
-    jetson_lead_text: jetsonLeadText = 'Request Quote',
   } = frontMatter as any;
-  const docSlug = (metadata as { slug?: string })?.slug ?? '';
 
   const location = useLocation()
   useEffect(() => {
@@ -87,11 +83,8 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {!hideComment && <Comment />}
       </div>
       <TopNav></TopNav>
-      {(docTOC.desktop || jetsonLeadQuote) && (
+      {docTOC.desktop && (
         <div className="col col--3">
-          {jetsonLeadQuote && (
-            <JetsonLeadQuote buttonText={jetsonLeadText} triggerValue={window.location.origin + docSlug} />
-          )}
           {docTOC.desktop}
         </div>
       )}
