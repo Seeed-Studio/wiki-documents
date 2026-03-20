@@ -167,7 +167,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
         <p>100M RJ45 *1</p>
       </td>
-    </tr]
+    </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 132px;" style={{height: 46, width: 132}}>
         <p>USB</p>

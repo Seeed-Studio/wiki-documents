@@ -1,12 +1,12 @@
 ---
-description: SenseCAP ONE 气象传感器简介
-title: SenseCAP ONE 气象传感器
+description: SenseCAP ONE 气象传感器介绍
+title: SenseCAP ONE 气象传感器 
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_ONE_weather_sensor
 last_update:
-  date: 02/28/204
+  date: 02/28/2024
   author: Jessie
 createdAt: '2024-02-28'
 updatedAt: '2026-03-03'
@@ -14,7 +14,7 @@ url: https://wiki.seeedstudio.com/cn/SenseCAP_ONE_weather_sensor/
 ---
 
 
-如今，被称为微气候的本地化天气数据，已成为实现更精确、更准确天气预报的新前沿。因此，天气数据的采集正变得越来越精细和网格化。鉴于此，作为采集天气数据最便捷的方式——气象站，其需求正在不断增长。SenseCAP 提供一体化气象传感器，帮助你在各种场景下采集和监测环境数据。
+如今，被称为微气候的本地化天气数据，已成为实现更精确、更准确天气预报的新前沿。因此，天气数据的采集正变得越来越精细和网格化。在此背景下，作为采集天气数据最便捷的方式——气象站，其需求正在不断增长。SenseCAP 提供一体化气象传感器，帮助你在各种场景下采集和监测环境数据。
 
 
 

@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/es/quick_start_with_M2_MP/
 
 ## Conexión POE
 
-SenseCAP M2 es compatible con PoE (alimentación a través de Ethernet) y cumple con el estándar IEEE 802.3 af.
+SenseCAP M2 es compatible con PoE (Power on Ethernet) y cumple con el estándar IEEE 802.3 af.
 
 :::tip
 Necesitarás un switch PoE adicional que proporcione alimentación de 40V-57V CC como PSE (Power Sourcing Equipment) si tu módem/router no es compatible con PoE.
@@ -44,9 +44,10 @@ Hay dos formas para que los usuarios inicien sesión en la página de configurac
 
 #### Acceso a través del router
 
-- Paso 1: Conecta tu dispositivo a un cable Ethernet y conecta tu PC al mismo router.
+- Paso 1: Conecta tu dispositivo a un cable Ethernet y conecta tu PC al mismo router
 
-:::note Tu PC y el dispositivo deben estar conectados al mismo router/red.
+:::note
+ Tu PC y el dispositivo deben estar conectados al mismo router/red.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png" alt="pir" width={800} height="auto" /></p>
@@ -68,14 +69,14 @@ Luego introduce el nombre de usuario y la contraseña de tu dispositivo para ini
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/login.png" alt="pir" width={800} height="auto" /></p>
 
-#### Acceso a través del hotspot AP del dispositivo
+#### Acceso mediante hotspot AP del dispositivo
 
-- Paso 1: Enciende el hotspot AP del dispositivo.
+- Paso 1: Enciende el hotspot AP del dispositivo
 
 Mantén pulsado el botón durante 5 s hasta que el indicador azul parpadee lentamente para entrar en el modo de configuración.
 
-- Paso 2: Conéctate al hotspot AP.
-El nombre del hotspot AP es SenseCAP_XXXXXX (dirección MAC de 6 cifras), la contraseña predeterminada es 12345678; conecta tu ordenador a este hotspot AP.
+- Paso 2: Conéctate al hotspot AP
+El nombre del hotspot AP es SenseCAP_XXXXXX (dirección MAC de 6 dígitos), la contraseña predeterminada es 12345678; conecta tu ordenador a este hotspot AP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wifi.png" alt="pir" width={400} height="auto" /></p>
 
@@ -85,9 +86,9 @@ Puedes encontrar el nombre de usuario y la contraseña en la etiqueta de tu disp
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 4: Inicia sesión en la consola local
+- Paso 4: Inicia sesión en la Consola Local
 
-Introduce la dirección IP (192.168.168.1) en tu navegador para entrar en la consola local. Luego introduce el nombre de usuario y la contraseña de tu dispositivo y haz clic en el botón Login.
+Introduce la dirección IP (192.168.168.1) en tu navegador para entrar en la Consola Local. Luego introduce el nombre de usuario y la contraseña de tu dispositivo y haz clic en el botón Login.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-login.png" alt="pir" width={800} height="auto" /></p>
 
@@ -97,23 +98,23 @@ Introduce la dirección IP (192.168.168.1) en tu navegador para entrar en la con
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 2: Haz clic en el botón `Scan` para escanear la WIFI.
+- Paso 2: Haz clic en el botón `Scan` para escanear la WIFI
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless2.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 3: Selecciona tu WI-FI para unirte a la red.
+- Paso 3: Selecciona tu WI-FI para unirte a la red
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless3.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 4: Envía la contraseña de la Wi-Fi y luego haz clic en `Submit` y Guardar.
+- Paso 4: Introduce la contraseña de la Wi-Fi y luego haz clic en `Submit` y Save
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless4.png" alt="pir" width={800} height="auto" /></p>
 
-Luego haz clic en Guardar y Aplicar para aplicar tu configuración.
+Luego haz clic en Save and Apply para aplicar tu configuración
 
-El indicador de la parte superior se mostrará en verde fijo si el gateway se conecta correctamente a la WIFI.
+El indicador de la parte superior se mostrará en verde fijo si el gateway se conecta correctamente a la WIFI
 
-### Conexión celular (para la versión 4G)
+### Conexión celular (para versión 4G)
 
 - Paso 1: Inserta tu tarjeta SIM en la ranura para tarjeta Nano-SIM
 
@@ -123,7 +124,7 @@ El indicador de la parte superior se mostrará en verde fijo si el gateway se co
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g1.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 3: Configura la información APN y haz clic en `Save and Apply` para aplicar tu configuración.
+- Paso 3: Configura la información de APN y haz clic en `Save and Apply` para aplicar tu configuración
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -143,7 +144,7 @@ Selecciona la región y el plan de frecuencias.
 
 Después de la configuración, haz clic en `Save&Apply`.
 
-### Comprobación del estado de conexión del gateway
+### Comprobar el estado de conexión del gateway
 
 Después de encender el gateway, hay dos formas de comprobar el estado de funcionamiento del gateway:
 
@@ -154,24 +155,24 @@ Después de encender el gateway, hay dos formas de comprobar el estado de funcio
 <tr><td colspan="1" rowspan="2" valign="top"><p></p><p></p><p>Verde</p></td><td colspan="1" valign="top">Fijo</td><td colspan="1" valign="top">El gateway está en buen estado y la conexión a Internet funciona correctamente.</td></tr>
 <tr><td colspan="1" valign="top">Parpadeo lento</td><td colspan="1" valign="top">El gateway se está iniciando, espera por favor.</td></tr>
 <tr><td colspan="1" rowspan="3" valign="top"><p></p><p></p><p></p><p></p><p>Azul</p></td><td colspan="1" valign="top"><p></p><p>Fijo</p></td><td colspan="1" valign="top"><p>El gateway está listo para la conexión a Internet.</p><p>Se necesita una configuración adicional.</p></td></tr>
-<tr><td colspan="1" valign="top">Parpadeo lento</td><td colspan="1" valign="top">Modo de configuración, saldrá automáticamente después de 5 minutos si no hay actividad.</td></tr>
+<tr><td colspan="1" valign="top">Parpadeo lento</td><td colspan="1" valign="top">Modo de configuración; saldrá automáticamente después de 5 minutos si no hay actividad.</td></tr>
 <tr><td colspan="1" valign="top"><p></p><p>Parpadeo rápido</p></td><td colspan="1" valign="top">Mantén pulsado el botón durante 30 s hasta que el indicador muestre un parpadeo rápido para activar el restablecimiento de fábrica.</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>Naranja</p></td><td colspan="1" valign="top"><p></p><p>Parpadeo lento</p></td><td colspan="1" valign="top">El firmware se está actualizando, no apagues el gateway ni desconectes Internet.</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>Naranja</p></td><td colspan="1" valign="top"><p></p><p>Parpadeo lento</p></td><td colspan="1" valign="top">El firmware se está actualizando; no apagues el gateway ni desconectes Internet.</td></tr>
 <tr><td colspan="1" valign="top"><p></p><p>Blanco</p></td><td colspan="1" valign="top"><p></p><p>Fijo</p></td><td colspan="1" valign="top">El gateway solo tiene un firmware de fábrica y se actualizará automáticamente al firmware más reciente cuando se conecte a Internet.</td></tr>
 <tr><td colspan="1" rowspan="2" valign="top"><p></p><p>Rojo</p></td><td colspan="1" valign="top">Fijo</td><td colspan="1" valign="top">Problema de hardware o fallo en la conexión a Internet.</td></tr>
 <tr><td colspan="1" valign="top">Parpadeo lento</td><td colspan="1" valign="top">El gateway no está conectado al LNS.</td></tr>
 </table>
 
-#### SenseCAP Mate APP
+#### APP SenseCAP Mate
 
-En la aplicación SenseCAP Mate, `Online status` indica `Online` cuando el gateway está conectado a la red.
-Consulta el siguiente capítulo para obtener la aplicación SenseCAP.
+En la SenseCAP Mate App, `Online status` indica `Online` cuando el gateway está conectado a la red.
+Consulta el siguiente capítulo para obtener la SenseCAP App.
 
 ## Vincular el gateway
 
-SenseCAP Mate APP admite la configuración del dispositivo y la gestión remota.
+La SenseCAP Mate APP admite la configuración del dispositivo y la gestión remota.
 
-- Paso 1: Descarga la aplicación SenseCAP Mate
+- Paso 1: Descarga la SenseCAP Mate APP
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={600} height="auto" /></p>
 
@@ -179,7 +180,7 @@ SenseCAP Mate APP admite la configuración del dispositivo y la gestión remota.
 Si es la primera vez que utilizas la plataforma SenseCAP, primero registra una cuenta.
 
 :::tip
-Selecciona Global en Ubicación del servidor.
+Selecciona Global en Server Location.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app-register.png" alt="pir" width={500} height="auto" /></p>
@@ -192,7 +193,7 @@ Luego escanea el código QR de la etiqueta de tu gateway.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app2.png" alt="pir" width={500} height="auto" /></p>
 
 Configura el nombre y la ubicación de tu dispositivo. Luego confirma tu configuración.
-Después de una vinculación exitosa, verás tu gateway en el directorio de dispositivos.
+Después de una vinculación correcta, verás tu gateway en el directorio Device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app3.png" alt="pir" width={380} height="auto" /></p>
 
@@ -205,16 +206,16 @@ Luego escanea el código QR de la etiqueta de tu gateway.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app2.png" alt="pir" width={500} height="auto" /></p>
 
-- Paso 2: Selecciona el plan de frecuencias
+- Paso 2: Seleccionar el plan de frecuencias
 
-Haz clic en `Settings`, establece la plataforma y la frecuencia; la frecuencia debe coincidir con la frecuencia de tu gateway.
+Haz clic en `Settings`, configura la plataforma y la frecuencia; la frecuencia debe coincidir con la frecuencia de tu gateway.
 
 por ejemplo: Si tu gateway es la versión US915, entonces debes configurar tu sensor a la frecuencia US915.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app7.png" alt="pir" width={500} height="auto" /></p>
 
 :::tip
-El gateway SenseCAP M2 Multi-Platform no puede conectarse a la red Helium.
+El SenseCAP M2 Multi-Platform Gateway no puede conectarse a la red Helium.
 :::
 
 Para más configuraciones sobre los sensores SenseCAP, consulta: SenseCAP Sensors

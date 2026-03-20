@@ -17,37 +17,37 @@ url: https://wiki.seeedstudio.com/pt-br/Wio_Link_Starter_Kit/
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link_Starter_Kit/img/Wio_Link_Starter_Kit_product_view_1200_s.jpg)
 
-Este kit é voltado para iniciantes que desejam se tornar makers. Os módulos funcionais incluídos neste kit são selecionados especialmente para principiantes, todos são módulos frequentemente necessários e é uma opção econômica. A parte mais incrível deste kit é a placa de desenvolvimento Wio Link, que pode ser utilizada para vários dispositivos, sem exigir nenhuma habilidade de programação. Todas as ações que você deseja que seus módulos executem e a operação de gravação de código no Wio Link podem ser concluídas com toques em um aplicativo móvel. E você pode enviar instruções para seus dispositivos pela Internet em qualquer lugar. Portanto, o Wio Link será uma ferramenta perfeita para tornar as coisas ao seu redor mais inteligentes para todos. Agora vamos aproveitar sendo makers.
+Este kit é voltado para iniciantes que desejam se tornar makers. Os módulos funcionais incluídos neste kit são selecionados especialmente para principiantes, todos eles são módulos frequentemente necessários, e é econômico. A parte mais incrível deste kit é a placa de desenvolvimento Wio Link, que pode ser utilizada para vários dispositivos, sem exigir nenhuma habilidade de programação. Todas as ações que você deseja que seus módulos executem e a operação de gravação de código no Wio Link podem ser concluídas com toques em um aplicativo móvel. E você pode enviar instruções para seus dispositivos pela Internet de qualquer lugar. Portanto, o Wio Link será uma ótima ferramenta para tornar as coisas ao seu redor mais inteligentes para todos. Agora vamos aproveitar sendo makers.
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Wio-Link-Starter-Kit-p-2614.html)
 
 :::caution
-     A função Wio IFTTT está em fim de vida (EOL). Mas o aplicativo Wio APP está disponível. Você pode usar a API do Wio APP para ler o status do sensor e controlar o atuador. 
+     A função Wio IFTTT está em fim de vida (EOL). Mas o Wio APP está disponível. Você pode usar a API do Wio APP para ler o status do sensor e controlar o atuador. 
 :::
-Recursos
+Features
 --------
 
--   Inclui módulos funcionais comuns e frequentemente usados para monitoramento de ambiente
--   Porta Grove como interface, função mais prática e menos trabalho
--   Completamente fácil de tornar as coisas ao seu redor mais inteligentes e adicionar diversão ao dia a dia.
+-   Inclui módulos funcionais comuns de monitoramento de ambiente, frequentemente usados
+-   Porta Grove interfacada, função mais prática e menos trabalho
+-   Totalmente fácil de tornar as coisas ao seu redor mais inteligentes e adicionar diversão ao dia a dia.
 -   Econômico
 -   Peso: 267 g
 
-Lista de peças
+Parts list
 ----------
 
-| Nome das peças                                                                                                       | Quantidade |
+| Parts name                                                                                                           | Quantity |
 |----------------------------------------------------------------------------------------------------------------------|----------|
 | [Grove - Button](/pt-br/Grove-Button/)                                                                                      | 1PC     |
 | [Grove - Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products)                                             | 1PC     |
 | [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)           | 1PC     |
 | [Grove - Digital Light Sensor](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products) | 1PC     |
 | Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter                                                                | 1PC     |
-| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/pt-br//Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
+| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/pt-br/Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
 | [Wio Link](/pt-br/Wio_Link/)                                                                                                | 1PC     |
 | [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)             | 1PC     |
 
-Uma demonstração simples
+A simple demo
 -------------
 
 Esta demonstração pode ser usada como um indicador de resultado de compilação.
@@ -81,9 +81,9 @@ Acesse a [Receita](https://www.seeedstudio.com/recipe/1068-traffic-light-indicat
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Wio_Link_Starter_Kit -->
 
-## Suporte Técnico e Discussão de Produto
- se você tiver qualquer problema técnico, envie o problema para o nosso [fórum](http://forum.seeedstudio.com/). 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+## Suporte Técnico & Discussão de Produto
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -177,7 +177,7 @@ ip
 | Seeeduino Cortex-M0+ |MW2401TR11|
 |--------------|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/clearseeedriono%20pic.png)| ![enter image description here](https://files.seeedstudio.com/wiki/MW2401TR11/img/clearnMWpic6.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Cortex-M0-p-4070.html)|[Get ONE Now](https://www.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11-p-4690.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Cortex-M0-p-4070.html)|[Adquira agora](https://www.seeedstudio.com/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11-p-4690.html)|
 
 :::tip
 isto é apenas um exemplo, você pode usar outros dispositivos com porta RX e TX ou configurar uma porta serial por software para simular portas TX e TX; também pode usar apenas a porta OUT para saída de sinal de nível alto ou baixo sem RX e TX.

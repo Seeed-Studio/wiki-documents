@@ -61,7 +61,7 @@ Se você estiver interessado, pode clicar na imagem abaixo para ver os diferente
 | Seeeduino Lotus | Shield E-Ink Tricolor de 2,7'' para Arduino|
 |--------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|![enter image description here](https://files.seeedstudio.com/wiki/2.7-Triple-Color-E-Ink-Shield-for-Arduino/img/2.7-Triple-Color-E-Ink-Shield-for-Arduino-integrate-thumbnail.png)
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/2-7-Triple-Color-E-Ink-Shield-for-Arduino-p-4069.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Adquira agora](https://www.seeedstudio.com/2-7-Triple-Color-E-Ink-Shield-for-Arduino-p-4069.html)|
 
 #### Visão Geral de Hardware
 

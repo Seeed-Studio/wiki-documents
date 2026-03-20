@@ -2,7 +2,7 @@
 description: 快速入门
 title: 快速入门
 keywords:
-  - 网关
+  - gateway
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /quick_start_with_M2_MP
@@ -32,7 +32,7 @@ SenseCAP M2 支持 PoE（以太网供电），兼容 IEEE 802.3 af 标准。
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png" alt="pir" width={800} height="auto" /></p>
 
-有两种方式可以连接到互联网。选择适合你的方式。
+有两种方式连接到互联网。请选择适合你的方式。
 
 ### 以太网连接
 
@@ -44,18 +44,19 @@ SenseCAP M2 支持 PoE（以太网供电），兼容 IEEE 802.3 af 标准。
 
 #### 通过路由器访问
 
-- 步骤 1：将你的设备连接到网线，并将你的电脑连接到同一台路由器。
+- 步骤 1：将你的设备连接到网线，并将你的电脑连接到同一台路由器
 
-:::note 你的电脑和设备应连接到同一台路由器/同一网络。
+:::note
+ 你的电脑和设备应连接到同一台路由器/同一网络。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png" alt="pir" width={800} height="auto" /></p>
 
 - 步骤 2：获取设备的 IP 地址
 
-在路由器管理页面上查看设备的 IP 地址。
+在路由器管理页面查看你设备的 IP 地址。
 
-- 步骤 3：获取设备的用户名和密码
+- 步骤 3：获取设备用户名和密码
 
 你可以在设备标签上找到用户名和密码。
 
@@ -70,16 +71,16 @@ SenseCAP M2 支持 PoE（以太网供电），兼容 IEEE 802.3 af 标准。
 
 #### 通过设备 AP 热点访问
 
-- 步骤 1：打开设备 AP 热点。
+- 步骤 1：打开设备 AP 热点
 
 长按按键 5 秒，直到蓝色指示灯慢速闪烁，进入配置模式。
 
-- 步骤 2：连接到 AP 热点。
+- 步骤 2：连接到 AP 热点
 AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345678；将你的电脑连接到此 AP 热点。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wifi.png" alt="pir" width={400} height="auto" /></p>
 
-- 步骤 3：获取设备的用户名和密码
+- 步骤 3：获取设备用户名和密码
 
 你可以在设备标签上找到用户名和密码。
 
@@ -97,21 +98,21 @@ AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 2：点击 `Scan` 按钮扫描 WIFI。
+- 步骤 2：点击 `Scan` 按钮扫描 WIFI
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless2.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：选择你的 WI-FI 加入网络。
+- 步骤 3：选择你的 WI-FI 加入网络
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless3.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 4：输入 Wi-Fi 密码，然后点击 `Submit` 并保存。
+- 步骤 4：输入 Wi-Fi 密码，然后点击 `Submit` 并保存
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wireless4.png" alt="pir" width={800} height="auto" /></p>
 
-然后点击 Save and Apply 以应用你的设置。
+然后点击 Save and Apply 以应用你的设置
 
-如果网关成功连接到 WIFI，顶部指示灯会常亮绿色。
+如果网关成功连接到 WIFI，顶部指示灯会常亮绿色
 
 ### 蜂窝网络连接（适用于 4G 版本）
 
@@ -123,7 +124,7 @@ AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g1.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：设置 APN 信息，然后点击 `Save and Apply` 以应用你的设置。
+- 步骤 3：设置 APN 信息，然后点击 `Save and Apply` 以应用你的设置
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/4g3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -145,7 +146,7 @@ AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345
 
 ### 检查网关连接状态
 
-网关上电后，你可以通过以下两种方式检查网关的工作状态：
+网关上电后，你可以通过以下两种方式检查网关工作状态：
 
 #### LED 指示灯
 
@@ -155,8 +156,8 @@ AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345
 <tr><td colspan="1" valign="top">慢闪</td><td colspan="1" valign="top">网关正在启动，请稍候。</td></tr>
 <tr><td colspan="1" rowspan="3" valign="top"><p></p><p></p><p></p><p></p><p>蓝色</p></td><td colspan="1" valign="top"><p></p><p>常亮</p></td><td colspan="1" valign="top"><p>网关已准备好进行互联网连接。</p><p>需要进一步配置。</p></td></tr>
 <tr><td colspan="1" valign="top">慢闪</td><td colspan="1" valign="top">配置模式，如果无操作，5 分钟后会自动退出。</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>快闪</p></td><td colspan="1" valign="top">长按按键 30 秒，直到指示灯快速闪烁，将触发恢复出厂设置。</td></tr>
-<tr><td colspan="1" valign="top"><p></p><p>橙色</p></td><td colspan="1" valign="top"><p></p><p>慢闪</p></td><td colspan="1" valign="top">固件正在更新，请不要关闭网关电源或断开网络连接。</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>快闪</p></td><td colspan="1" valign="top">长按按键 30 秒，直到指示灯快速闪烁，将触发出厂重置。</td></tr>
+<tr><td colspan="1" valign="top"><p></p><p>橙色</p></td><td colspan="1" valign="top"><p></p><p>慢闪</p></td><td colspan="1" valign="top">固件正在更新，请不要关闭网关电源或断开网络。</td></tr>
 <tr><td colspan="1" valign="top"><p></p><p>白色</p></td><td colspan="1" valign="top"><p></p><p>常亮</p></td><td colspan="1" valign="top">网关仅带有出厂固件，连接到互联网后会自动更新到最新固件。</td></tr>
 <tr><td colspan="1" rowspan="2" valign="top"><p></p><p>红色</p></td><td colspan="1" valign="top">常亮</td><td colspan="1" valign="top">硬件故障或互联网连接失败。</td></tr>
 <tr><td colspan="1" valign="top">慢闪</td><td colspan="1" valign="top">网关未连接到 LNS。</td></tr>
@@ -176,7 +177,7 @@ SenseCAP Mate APP 支持设备配置和远程管理。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={600} height="auto" /></p>
 
 - 步骤 2：登录 APP
-如果你是第一次使用 SenseCAP 平台，请先注册账号。
+如果这是你第一次使用 SenseCAP 平台，请先注册账号。
 
 :::tip
 请选择 Global 作为服务器位置。
@@ -191,7 +192,7 @@ SenseCAP Mate APP 支持设备配置和远程管理。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app2.png" alt="pir" width={500} height="auto" /></p>
 
-设置设备名称和位置。然后确认你的设置。
+设置你的设备名称和位置。然后确认你的设置。
 绑定成功后，你将在设备目录中看到你的网关。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/app3.png" alt="pir" width={380} height="auto" /></p>
@@ -221,7 +222,7 @@ SenseCAP M2 Multi-Platform Gateway 无法连接到 Helium 网络。
 
 ## SenseCAP Portal 和 Mate APP
 
-SenseCAP Mate APP 和 SenseCAP Portal 可用于查看设备状态和进行设备管理。
+SenseCAP Mate APP 和 SenseCAP Portal 可用于查看设备状态并进行设备管理。
 
 - [适用于 iOS 的 SenseCAP Mate APP（App Store）](https://apps.apple.com/cn/app/sensecap-mate/id1619944834)
 - [适用于 Android 的 SenseCAP Mate APP（Google Play Store）](https://install.appcenter.ms/orgs/seeed/apps/sensecap-mate/distribution_groups/public)

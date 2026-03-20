@@ -1,5 +1,5 @@
 ---
-title: Wio Link Starter Kit
+title: Wio Link 入门套件
 nointro: null
 keywords:
   - docs
@@ -10,42 +10,42 @@ sku: 110020051
 last_update:
   date: 01/11/2022
   author: gunengyu
-createdAt: '2023-01-12'
+createdAt: '2025-08-07'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/Wio_Link_Starter_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link_Starter_Kit/img/Wio_Link_Starter_Kit_product_view_1200_s.jpg)
 
-这个套件面向想要成为创客的新手。套件中包含的功能模块是专门为初学者挑选的常用模块，并且具有很高的性价比。这个套件中最令人惊叹的部分是 Wio Link 开发板，它可以被用于各种设备：而且完全不需要任何编程技能。你希望模块执行的所有动作，以及向 Wio Link 烧录代码的操作，都可以通过手机应用中的轻触来完成。你还可以通过互联网在任何地方向你的设备发送指令。因此，Wio Link 将会是让身边事物变得更智能的完美工具。现在，让我们一起享受成为创客的乐趣吧。
+这个套件面向想要成为创客的新手。套件中包含的功能模块是专门为初学者选择的，都是经常需要的模块，并且性价比很高。这个套件最令人惊叹的部分是 Wio Link 开发板，它可以用于各种设备：无需任何编程技能。您希望模块执行的所有操作以及向 Wio Link 刷写代码的操作都可以通过在移动应用程序中点击来完成。您可以在任何地方通过互联网向您的设备发送指令。因此，Wio Link 将是让每个人周围的事物变得更智能的完美工具。现在让我们享受成为创客的乐趣。
 
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/Wio-Link-Starter-Kit-p-2614.html)
 
 :::caution
-     Wio 的 IFTTT 功能已到寿终止（EOL）。但 Wio APP 仍然可用。你可以使用 Wio APP 提供的 API 来读取传感器状态并控制执行器。 
+     Wio IFTTT 功能已停止服务。但 Wio APP 仍然可用。您可以使用 Wio APP 的 API 来读取传感器状态和控制执行器。
 :::
-产品特性
+特性
 --------
 
--   包含常见且经常使用的环境监测功能模块
--   采用 Grove 接口，功能更实用、工作量更少
--   让你身边的事物变得更智能、为日常生活增添乐趣变得非常容易
--   高性价比
+-   包含常用的环境监测功能模块
+-   Grove 接口，更实用的功能和更少的工作量
+-   完全轻松地让您周围的事物变得更智能，为日常生活增添乐趣。
+-   性价比高
 -   重量：267 g
 
-部件清单
+零件清单
 ----------
 
-| 部件名称                                                                                                           | 数量 |
+| 零件名称                                                                                                           | 数量 |
 |----------------------------------------------------------------------------------------------------------------------|----------|
-| [Grove - Button](/cn/Grove-Button/)                                                                                      | 1PC     |
-| [Grove - Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products)                                             | 1PC     |
-| [Grove - Temp&Humi Sensor](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)           | 1PC     |
-| [Grove - Digital Light Sensor](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products) | 1PC     |
-| Grove - WS2812 防水 LED 灯带 - 30 颗 LED 1 米                                                                | 1PC     |
-| [Grove - 3-Axis Digital Accelerometer(±1.5g)](/cn//Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1PC     |
-| [Wio Link](/cn/Wio_Link/)                                                                                                | 1PC     |
-| [Micro USB Cable - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)             | 1PC     |
+| [Grove - 按钮](/cn/Grove-Button/)                                                                                      | 1个     |
+| [Grove - 继电器](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products)                                             | 1个     |
+| [Grove - 温湿度传感器](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html?queryID=ea8d1729f76e80d6b1b53c492c74fcdb&objectID=35&indexName=bazaar_retailer_products)           | 1个     |
+| [Grove - 数字光传感器](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html?queryID=c7822737fbcac80a47232a5fb1ac1e1d&objectID=1594&indexName=bazaar_retailer_products) | 1个     |
+| Grove - WS2812 防水 LED 灯带 - 30 个 LED 1 米                                                                | 1个     |
+| [Grove - 3轴数字加速度计(±1.5g)](//Grove-3-Axis_Digital_Accelerometer-1.5g/)                              | 1个     |
+| [Wio Link](/cn/Wio_Link/)                                                                                                | 1个     |
+| [Micro USB 数据线 - 48cm](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html?queryID=a8b80828fdcd52ad1ae49daa5ed97191&objectID=1405&indexName=bazaar_retailer_products)             | 1个     |
 
 一个简单的演示
 -------------
@@ -60,30 +60,30 @@ url: https://wiki.seeedstudio.com/cn/Wio_Link_Starter_Kit/
 
 -   [Wio Link APP](https://www.seeedstudio.com/Wio-Link-Event-Kit-p-2611.html?queryID=3ab174447ce3813d2105c3db0e9e783a&objectID=537&indexName=bazaar_retailer_products)
 -   [Wio Link](/cn/Wio_Link/)
--   [Grove Relay](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products) × 3
--   一个 Travis CI 账号
--   一个 GitHub 账号
--   交通信号灯
+-   [Grove 继电器](https://www.seeedstudio.com/Grove-Relay.html?queryID=f15824e61eef2f0aa449144b0da3587c&objectID=1804&indexName=bazaar_retailer_products) × 3
+-   一个 Travis CI 账户
+-   一个 GitHub 账户
+-   交通灯
 
-### 详细操作说明
+### 详细操作指南
 
-请前往 [Recipe](https://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html) 查看详细手册。
+请前往[教程](https://www.seeedstudio.com/recipe/1068-traffic-light-indicates-travis-ci-compiled-results.html)查看详细手册。
 
 ## 项目
 
-**ReSpeaker 智能家居** 我们使用 ReSpeaker Core v2.0 和 Wio Link 通过 IFTTT 控制灯和风扇。
+**ReSpeaker 智能家居** 我们使用 ReSpeaker Core v2.0 和 Wio Link 通过 IFTTT 控制灯光和风扇。
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/SeeedStudio/respeaker-smart-home-cfba70/embed' width='350'></iframe>
 
-**使用 Wio-Link 和 Node-Red 的 LED 声级计** SeeedStudio Grove 声音传感器和 LED 灯带连接到 Wio-Link，由 Node-Red 流驱动。
+**使用 Wio-Link 和 Node-Red 的 LED 声音计量器** SeeedStudio Grove 声音传感器和 LED 灯带连接到 Wio-Link，由 Node-Red 流程驱动。
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/potnik/led-sound-meter-using-wio-link-and-node-red-259e02/embed' width='350'></iframe>
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Wio_Link_Starter_Kit -->
 
 ## 技术支持与产品讨论
- 如果你遇到任何技术问题，请在我们的[论坛](http://forum.seeedstudio.com/)中提交问题。 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+如果您有任何技术问题，请将问题提交到我们的[论坛](http://forum.seeedstudio.com/)。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

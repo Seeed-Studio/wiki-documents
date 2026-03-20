@@ -68,8 +68,8 @@ Para concluir o workshop, precisamos seguir as instruções abaixo, e em cada p�
   </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Machine-Learning-Practical-Class-Kit-p-5951.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Adquira agora</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Machine-Learning-Practical-Class-Kit-p-5951.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Adquira agora</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>

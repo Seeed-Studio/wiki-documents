@@ -3,13 +3,16 @@ description: Visão geral do Gateway LoRaWAN reComputer R1225
 title: Visão geral do Gateway LoRaWAN reComputer R1225
 keywords:
   - SenseCAP Network
+  - Controlador de Borda
+  - reComputer R1225 
+  - Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
 last_update:
-  date: 01/04/2026
+  date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/r1225_introduction/
 ---
 
@@ -23,9 +26,9 @@ url: https://wiki.seeedstudio.com/pt-br/r1225_introduction/
 
 ## Descrição
 
-O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspberry Pi poderoso e flexível, baseado em CM4, com capacidades de IA. Com 3*RS485, duas portas Ethernet, suporte a BACnet e Modbus, equipado com todos os recursos necessários que um dispositivo de borda IoT industrial robusto e confiável precisa. Com compatibilidade com acelerador de IA NPU, é uma combinação perfeita para controle de acesso remoto, especialmente BMS, BAS e iBMS.
+reComputer R1225 é um gateway e controlador LoRaWAN IoT industrial Raspberry Pi poderoso e flexível, baseado em CM4, com capacidades de IA. Com 3*RS485, duas portas Ethernet, suporte a BACnet e Modbus, equipado com todos os recursos necessários que um dispositivo IoT de borda industrial robusto e confiável precisa. Com compatibilidade com acelerador de IA NPU, é uma combinação perfeita para controle de acesso remoto, especialmente BMS, BAS e iBMS.
 
-## Recursos
+## Recurso
 
 ### Projetado para Sistema de Automação Predial
 
@@ -33,18 +36,18 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
 
 - Suporta protocolos BACnet, Modbus RTU e Modbus TCP/IP
 - Até 4GB de RAM suportam o processamento de milhares de pontos de dados, garantindo desempenho eficiente
-- Indicadores LED de dois lados claros ajudam a verificar rapidamente o status operacional
+- Indicadores LED de dupla face claros ajudam a verificar rapidamente o status operacional
 - Gabinete metálico de alta qualidade, compatível com instalação em trilho DIN e em parede
 - Software de código aberto Seeed Gateway OS, ChirpStack, Basics™ Station, Packet Forward integrados. Suporta personalização e desenvolvimento derivado.
 
-### Desempenho poderoso
+### Desempenho Poderoso
 
 - Alimentado por Raspberry Pi CM4
 
 - Broadcom BCM2711 SoC quad-core Cortex-A72 (ARM v8) 64 bits @ 1,5GHz
 - Até 4GB de RAM e 32GB eMMC
 
-### Amplos recursos sem fio
+### Capacidades Sem Fio Ricas
 
 - Wi-Fi integrado
 
@@ -55,13 +58,13 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
     - EU868: EC25-EUX-mini-PCIe (LTE Cat 4)
     - US915: EC25-AFXGA-mini-PCIe (LTE Cat 4)
 
-- Mini-PCIe2: Módulo LoRa® SPI pré-instalado
+- Mini-PCIe2: Módulo SPI LoRa® pré-instalado
   - EU868: Wio-WM1302 LoRaWAN Gateway Module (SPI) - EU868
   - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915
 
-### Interfaces ricas
+### Interfaces Ricas
 
-- 3x RS485 (isolados)
+- 3x RS485 (isolado)
 - 1x Ethernet 10M/100M/1000M (Suporta PoE)
 - 1x Ethernet 10M/100M
 - 1x HDMI 2.0
@@ -69,21 +72,23 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
 - 1x USB2.0 Tipo-C (console USB para atualização do SO)
 - 1x slot para cartão SIM
 
-### Segurança e confiabilidade
+### Segurança e Confiabilidade
 
 - Watchdog de hardware
-- Supercapacitor de UPS (**incluído**)
+- Supercapacitor de UPS(**incluído**)
 - Gabinete metálico com painéis laterais em PC
 - ESD: EN61000-4-2, nível 3
 - EFT: EN61000-4-4, nível 2
 - Surto: EN61000-4-5, nível 2
 - Vida útil de produção: o reComputer R1225 permanecerá em produção até pelo menos dezembro de 2030
 
-## Convenções de nomenclatura
+## Convenções de Nomenclatura
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
 ## Especificações
+
+<!--Power Consumption功耗待重新测试后补充-->
 
 <div class="table-center">
 <table >
@@ -93,14 +98,14 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Descrição</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Especificações de hardware</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Especificação de Hardware</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>CPU</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4, Quad-core Cortex-A72@ 1.5GHz</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Sistema operacional</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Sistema Operacional</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS, Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -112,34 +117,34 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>32GB</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Especificações do sistema</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Especificação do Sistema</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Entrada</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Bloco de terminais de 2 pinos</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE (como dispositivo alimentado)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE(como dispositivo alimentado)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Padrão IEEE 802.3af 12,95W PoE</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Tensão de alimentação (CA/CC)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Tensão de Alimentação(AC/DC)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12&#126;24V AC/9&#126;36V DC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Proteção contra sobretensão</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Proteção contra Sobretensão</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>40V</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Consumo de energia</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Em espera: 2,88W; Carga total: 5,52W</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Consumo de Energia</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>                 </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Interruptor de energia</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Interruptor de Energia</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Não</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Interruptor de reinicialização</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Interruptor de Reinicialização</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Sim</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -147,7 +152,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>Ethernet</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps (suporta PoE*)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps(suporta PoE*)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100 Mbps IEEE802.3/802.3u</td>
@@ -157,18 +162,18 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 x USB-A 2.0 Host</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0 (para gravação do SO)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0 (Para gravação do SO)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x bloco de terminais de 3 pinos (isolados)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x bloco de terminais de 3 pinos (isolado)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>HDMI</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x HDMI 2.0</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Slot para cartão SIM</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Slot para Cartão SIM</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>suporta cartão SIM padrão</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -189,7 +194,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI(reservado)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>suporta LCD*(na placa dentro do gabinete)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>suporta LCD* (na placa dentro do gabinete)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Comunicação sem fio</strong></td>
@@ -209,7 +214,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SPI LoRa®</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>4G Celular(Opcional)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>4G Celular (opcional)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>4G LTE*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -226,7 +231,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Surto:  EN61000-4-5, Nível 2</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>Certificação</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>Certificação</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE, FCC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -294,7 +299,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Opcional</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Componentes não essenciais, o usuário pode optar por incluir ou excluir.</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Componentes não essenciais, o usuário pode escolher incluir ou não.</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Ocupado</td>
@@ -308,7 +313,7 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Mecânico</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Dimensão(L x A x P)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Dimensão (L x A x P)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>130 mm x 93 mm x 49.6 mm</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -320,13 +325,12 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Trilho DIN/Parede</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Peso(Líquido)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>           </td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Peso (líquido)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g; R1225 com módulo 4G: 800g</td>
     </tr>
   </tbody>
 </table>
 </div>
-<!--待重新称重后补充-->
 
 ### Declaração
 
@@ -344,13 +348,13 @@ O reComputer R1225 é um gateway e controlador LoRaWAN de IoT industrial Raspber
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
-O reComputer R1225 suporta três opções de alimentação: AC, terminal DC e porta PoE. Por padrão, o reComputer R1225 é alimentado através do terminal AC/DC (adaptador de energia regional oficial SKU:110061505/110061506), enquanto **a alimentação PoE (módulo PoE, SKU:110991925) está incluída**. Isso oferece flexibilidade na seleção da fonte de alimentação e permite fácil integração com várias fontes de energia.
+O reComputer R1225 suporta três opções de alimentação: terminal AC, terminal DC e porta PoE. Por padrão, o reComputer R1225 é alimentado pelo terminal AC/DC (adaptador de energia oficial regional SKU:110061505/110061506), enquanto **a alimentação PoE (módulo PoE, SKU:110991925) está incluída**. Isso oferece flexibilidade na seleção da fonte de alimentação e permite fácil integração com várias fontes de energia.
 
 ### Terminal de alimentação de 2 pinos
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-O reComputer R1225 é alimentado com uma tensão AC nominal de 12&#126;24 V ou tensão DC de 9&#126;36V. A fonte de alimentação é conectada através do conector de bloco de terminais de alimentação de 2 pinos. Para aterrar o reComputer R1225, o fio terra pode ser fixado ao parafuso localizado no canto superior esquerdo do terminal de alimentação.
+O reComputer R1225 é alimentado com uma tensão AC nominal de 12&#126;24 V ou tensão DC de 9&#126;36V. A fonte de alimentação é conectada por meio do conector de bloco de terminais de alimentação de 2 pinos. Para aterrar o reComputer R1225, o fio terra pode ser fixado ao parafuso localizado no canto superior esquerdo do terminal de alimentação.
 
 :::note
 A solução de alimentação utiliza um diodo retificador de ponte para proteção contra polaridade reversa e é compatível com entradas AC e DC. Isso garante que **independentemente de como os terminais positivo e negativo da fonte de alimentação sejam conectados**, o circuito não será danificado. Ao usar um retificador de ponte, a polaridade da tensão de saída permanece fixa, independentemente da polaridade DC de entrada, proporcionando proteção eficaz contra polaridade reversa.
@@ -358,26 +362,26 @@ A solução de alimentação utiliza um diodo retificador de ponte para proteç�
 
 ### POE (incluído)
 
-Com o módulo PoE instalado, a porta ETH0 do reComputer R1225 pode suportar alimentação PoE, fornecendo uma maneira conveniente e eficiente de alimentar o dispositivo pela Ethernet. Esta opção simplifica o processo de instalação e reduz a quantidade de cabeamento necessário, tornando-a uma solução ideal para aplicações com fontes de energia limitadas ou onde tomadas de energia não estão prontamente disponíveis.
+Com o módulo PoE instalado, a porta ETH0 do reComputer R1225 pode suportar alimentação PoE, fornecendo uma maneira conveniente e eficiente de alimentar o dispositivo pela Ethernet. Essa opção simplifica o processo de instalação e reduz a quantidade de cabeamento necessário, tornando-a uma solução ideal para aplicações com fontes de energia limitadas ou onde tomadas de energia não estão prontamente disponíveis.
 
 - Entrada PoE: Faixa 44~57V; Típico 48V
 - Saída PoE: 12V, 1.1A máx.
 
 :::note
-Vale ressaltar que o módulo PoE fornecido com o reComputer R1225 é compatível com o padrão IEEE 802.3af e pode fornecer uma potência máxima de 12,95W. **Portanto, se houver necessidade de conectar periféricos de alta potência, como SSD ou módulos 4G, a alimentação PoE pode não ser suficiente**. Nesse caso, recomenda-se usar o terminal AC/DC para alimentação, a fim de garantir o funcionamento estável e confiável do dispositivo.
+Vale ressaltar que o módulo PoE fornecido com o reComputer R1225 é compatível com o padrão IEEE 802.3af e pode fornecer uma potência máxima de 12,95W. **Portanto, se houver necessidade de conectar periféricos de alta potência, como SSD ou módulos 4G, a alimentação PoE pode não ser suficiente**. Nesse caso, é recomendável usar o terminal AC/DC para alimentação, a fim de garantir o funcionamento estável e confiável do dispositivo.
 :::
 
 ### Consumo de energia
 
-Consulte a tabela abaixo para o consumo de energia testado do reComputer R1225 no laboratório da Seeed Studio. Observe que este valor é apenas para referência, pois os métodos e o ambiente de teste podem resultar em variações nos resultados.
+Consulte a tabela abaixo para o consumo de energia testado do reComputer R1225 no laboratório da Seeed Studio. Observe que esse valor é apenas para referência, pois os métodos e o ambiente de teste podem resultar em variações nos resultados.
 
-A ser testado
+待测试
 
-| Status   | Tensão | Corrente | Consumo de energia | Descrição                                                                                                         |
-|   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
-|Shutdown  |24V      |  mA     |    W              | Teste de consumo de energia estático em estado de desligamento e corte de energia.                                 |
-|Idle      |24V      |  mA     |    W              | Testar a corrente de entrada ao fornecer 24V de energia ao dispositivo reComputer R1225 sem executar nenhum programa de teste.|
-|Full Load |24V      |  mA     |    W              | Configurar a CPU para operar em carga total usando o comando "stress -c 4". Nenhum dispositivo externo conectado.  |
+| Status   | Tensão | Corrente | Consumo de energia | Descrição                                                                                                          |
+|   ---    |    ---  |   ---   |         ---        |      ---                                                                                                           |
+|Shutdown  |24V      |  mA     |    W               | Teste de consumo de energia estático em estado de desligamento e corte de energia.                                |
+|Idle      |24V      |  mA     |    W               | Testar a corrente de entrada ao fornecer 24V de energia ao dispositivo reComputer R1225 sem executar nenhum programa de teste.|
+|Full Load |24V      |  mA     |    W               | Configurar a CPU para operar em carga total usando o comando "stress -c 4". Nenhum dispositivo externo conectado. |
 
 ### Ligar e desligar
 
@@ -470,17 +474,17 @@ cat /sys/kernel/debug/gpio
 O reComputer R1225 possui 6 indicadores LED que servem para sinalizar o status operacional da máquina. Consulte a tabela abaixo para as funções específicas e o status de cada LED:
 
 | Indicador LED | Cor            | Status | Descrição                                                                 |
-| ------------- | -------------- | ------ | -------------------------------------------------------------------------- |
-| PWR           | Verde          | On     | O dispositivo foi conectado à alimentação.                                 |
-|               |                | Off    | O dispositivo não está conectado à alimentação.                            |
-| ACT           | Verde          |        | No Linux, este pino piscará para indicar acesso à eMMC.<br /> Se ocorrer algum erro durante a inicialização, este LED piscará um <br />padrão de erro que pode ser decodificado usando a [tabela no site da Raspberry Pi](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). |
-| USER          | Verde/Vermelho/Azul |        | Precisa ser definido pelo usuário.                                         |
-| RS485-1       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 1.                           |
-|               |                | Blink  | O canal RS485 1 está recebendo ou enviando dados.                          |
-| RS485-2       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 2.                           |
-|               |                | Blink  | O canal RS485 2 está recebendo ou enviando dados.                          |
-| RS485-3       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 3.                           |
-|               |                | Blink  | O canal RS485 3 está recebendo ou enviando dados.                          |
+| ------------- | -------------- | ------ | ------------------------------------------------------------------------- |
+| PWR           | Verde          | On     | O dispositivo foi conectado à alimentação.                                |
+|               |                | Off    | O dispositivo não está conectado à alimentação.                           |
+| ACT           | Verde          |        | No Linux, este pino piscará para indicar acesso à eMMC.<br /> Se ocorrer algum erro durante a inicialização, este LED piscará um <br />padrão de erro que pode ser decodificado usando a [tabela no site do Raspberry Pi](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). |
+| USER          | Verde/Vermelho/Azul |        | Precisa ser definido pelo usuário.                                        |
+| RS485-1       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 1.                          |
+|               |                | Blink  | O canal RS485 1 está recebendo ou enviando dados.                         |
+| RS485-2       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 2.                          |
+|               |                | Blink  | O canal RS485 2 está recebendo ou enviando dados.                         |
+| RS485-3       | Verde          | Off    | Nenhuma transferência de dados no canal RS485 3.                          |
+|               |                | Blink  | O canal RS485 3 está recebendo ou enviando dados.                         |
 
 #### Tabela de status do ACT
 
@@ -503,15 +507,15 @@ O reComputer R1225 possui 6 indicadores LED que servem para sinalizar o status o
 
 Se o LED ACT piscar em um padrão regular de quatro piscadas, ele não consegue encontrar o bootcode (start.elf)
 Se o LED ACT piscar em um padrão irregular, então a inicialização foi iniciada.
-Se o LED ACT não piscar, o código da EEPROM pode estar corrompido; tente novamente sem nada conectado para ter certeza. Para mais detalhes, verifique o fórum Raspberry Pi:
+Se o LED ACT não piscar, o código da EEPROM pode estar corrompido; tente novamente sem nada conectado para ter certeza. Para mais detalhes, verifique o fórum do Raspberry Pi:
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
-Para mais detalhes, consulte o [fórum Raspberry Pi](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
+Para mais detalhes, verifique o [fórum do Raspberry Pi](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
 
 #### LEDs personalizáveis via interface Luci
 
-#### Controlar LEDs via comandos
+#### Controle de LEDs via comandos
 
-Para controlar os LEDs de usuário, recomendamos usar o sysfs, um pseudo-sistema de arquivos fornecido pelo kernel Linux que expõe informações sobre vários subsistemas do kernel, dispositivos de hardware e seus drivers associados. No reComputer R1225, abstraímos a interface de LED de usuário em três arquivos de dispositivo (led-red, led-blue e led-green), permitindo que os usuários controlem os LEDs simplesmente interagindo com esses arquivos. Os exemplos são os seguintes:
+Para controlar os LEDs de usuário, recomendamos usar o sysfs, um pseudo-sistema de arquivos fornecido pelo kernel Linux que expõe informações sobre vários subsistemas do kernel, dispositivos de hardware e seus drivers associados. No reComputer R1225, abstraímos a interface de LED de usuário em três arquivos de dispositivo (led-red, led-blue e led-green), permitindo que os usuários controlem as luzes de LED simplesmente interagindo com esses arquivos. Os exemplos são os seguintes:
 
 1. Para ligar o LED vermelho, insira o seguinte comando no Terminal:
 
@@ -525,7 +529,7 @@ echo 1 | sudo tee /sys/class/leds/led-red/brightness
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. Você pode ligar o LED vermelho e o verde ao mesmo tempo; insira o seguinte comando no Terminal:
+3. Você pode ligar os LEDs vermelho e verde ao mesmo tempo; insira o seguinte comando no Terminal:
 
 ```bash
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -566,16 +570,16 @@ A interface RS485 usa uma fonte de alimentação isolada, o que significa que o 
 Estes são os pinos relacionados à interface 485 do reComputer para a tabela de dados.
 
 | RS485         | RS485_POWER_EN         | Arquivo de dispositivo do SO | P14         | padrão(High) |
-| ------------- | ---------------------- | ----------------------------- | ----------- | ------------ |
-| TX5           |                        | /dev/ttyAMA5                  | GPIO12      |              |
-| RX5           |                        |                               | GPIO13      |              |
-| TX2           | ID_SD                  | /dev/ttyAMA2                  | GPIO0/ID_SD |              |
-| RX2           | ID_SC                  |                               | GPIO1/ID_SC |              |
-| TX3           |                        | /dev/ttyAMA3                  | GPIO4       |              |
-| RX3           |                        |                               | GPIO5       |              |
-| RS485_1_DE/RE | (Hight/DE \|\| Low/RE) | /dev/ttyAMA2                  | GPIO6       | padrão Low   |
-| RS485_2_DE/RE |                        | /dev/ttyAMA3                  | GPIO17      | padrão Low   |
-| RS485_3_DE/RE |                        | /dev/ttyAMA5                  | GPIO24      | padrão Low   |
+| ------------- | ---------------------- | ----------------------------- | ----------- | ------------- |
+| TX5           |                        | /dev/ttyAMA5                  | GPIO12      |               |
+| RX5           |                        |                               | GPIO13      |               |
+| TX2           | ID_SD                  | /dev/ttyAMA2                  | GPIO0/ID_SD |               |
+| RX2           | ID_SC                  |                               | GPIO1/ID_SC |               |
+| TX3           |                        | /dev/ttyAMA3                  | GPIO4       |               |
+| RX3           |                        |                               | GPIO5       |               |
+| RS485_1_DE/RE | (Hight/DE \|\| Low/RE) | /dev/ttyAMA2                  | GPIO6       | padrão Low    |
+| RS485_2_DE/RE |                        | /dev/ttyAMA3                  | GPIO17      | padrão Low    |
+| RS485_3_DE/RE |                        | /dev/ttyAMA5                  | GPIO24      | padrão Low    |
 
 Por padrão, a porta de habilitação de energia da porta RS485 está em nível alto. E cada interface RS485 está no estado de recepção. Você pode fazer um experimento simples.
 
@@ -601,10 +605,10 @@ A chave de Boot do reComputer R1225 está conectada ao pino nRPI_BOOT do CM4. Es
 
 <div class="table-center">
 
-| Posição da chave                                                                                                      | Modo        | Descrição          | nRPI-BOOT |
-| ---------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------ | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Modo normal | Boot pela eMMC     | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Modo flash  | Boot pelo USB      | High      |
+| Posição da chave                                                                                                      | Modo        | Descrição        | nRPI-BOOT |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------- | --------- |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Modo normal | Boot pela eMMC   | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Modo flash  | Boot pelo USB    | High      |
 
 </div>
 
@@ -618,10 +622,10 @@ A chave de Boot do reComputer R1225 está conectada ao pino nRPI_BOOT do CM4. Es
 
 O reComputer R1225 está equipado com uma porta USB Type-C e duas portas USB Type-A. Consulte a tabela abaixo para suas funções e descrições.
 
-| **Tipo**  | **Quantidade** | **Protocolo** | **Função** | **Descrição**                                                                     |
-| ---------- | -------------- | ------------- | ---------- | --------------------------------------------------------------------------------- |
-| **Type-C** | *1             | USB2.0        | USB-Device | Usada para depuração de porta serial, gravação de imagem, etc.                   |
-| **Type-A** | *2             | USB2.0        | USB-Host   | Conectar diferentes dispositivos USB, como pen drives,<br /> teclados ou mouses USB. |
+| **Tipo**  | **Quantidade** | **Protocolo** | **Função**  | **Descrição**                                                                     |
+| ---------- | -------------- | ------------- | ----------- | --------------------------------------------------------------------------------- |
+| **Type-C** | *1             | USB2.0        | USB-Device  | Usada para depuração de porta serial, gravação de imagem, etc.                   |
+| **Type-A** | *2             | USB2.0        | USB-Host    | Conectar diferentes dispositivos USB, como pen drives,<br /> teclados ou mouses USB. |
 
 Verifique se o hub USB foi detectado executando o comando **lsusb**. Este comando lista todos os dispositivos USB conectados, incluindo hubs.
 
@@ -631,7 +635,7 @@ lsusb
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/23.png" /></div>
 
-A execução deste comando deve exibir informações sobre os dispositivos USB conectados ao seu sistema, incluindo quaisquer hubs USB presentes.
+Executar este comando deve exibir informações sobre os dispositivos USB conectados ao seu sistema, incluindo quaisquer hubs USB presentes.
 
 Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes listados na saída do comando **lsusb**. Se ele não estiver listado, pode haver um problema com o hub ou com sua conexão ao sistema. Nesses casos, talvez seja necessário solucionar problemas do hub USB ou de suas conexões.
 
@@ -648,7 +652,7 @@ Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes l
 <br />
 O reComputer R1225 utiliza um slot para cartão SIM de tamanho padrão, comumente encontrado em aplicações industriais, que requer um cartão SIM padrão com dimensões de 25mm x 15mm.
 :::note
-O reComputer R1225 está disponível em uma versão 4G. Se você adquirir a edição padrão (sem o módulo 4G), poderá comprar um módulo 4G separadamente para instalação. O Bazaar Mall atualmente oferece dois módulos 4G: Europa (EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) e América (América do Norte **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**)
+O reComputer R1225 está disponível em uma versão 4G. Se você adquirir a edição padrão (sem o módulo 4G), poderá comprar um módulo 4G separadamente para instalação. O Bazaar Mall atualmente oferece dois módulos 4G: Europa (EMEA & Tailândia <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) e América (América do Norte **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**)
 :::
 
 ### Slot SSD
@@ -656,7 +660,7 @@ O reComputer R1225 está disponível em uma versão 4G. Se você adquirir a edi�
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig08.png" /></div>
 <br />
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig04.png" /></div>
-O slot SSD no reComputer R1225 foi projetado para acomodar SSDs NVMe M.2 2280 com capacidades de 128GB, 256GB, 512GB e 1TB. Este slot permite expansão de armazenamento em alta velocidade, possibilitando aos usuários melhorar o desempenho e a capacidade do sistema.
+O slot SSD no reComputer R1225 é projetado para acomodar SSDs NVMe M.2 2280 com capacidades de 128GB, 256GB, 512GB e 1TB. Este slot permite expansão de armazenamento em alta velocidade, possibilitando aos usuários melhorar o desempenho e a capacidade do sistema.
 
 Para listar os discos, incluindo o SSD, você pode usar o comando *fdisk -l*. Veja como:
 
@@ -708,13 +712,13 @@ Há um Mini Push Button Switch localizado no orifício de reset do reComputer R1
 <div class="table-left">
 
 | Nome | Tipo                         | Velocidades        | PoE                                |
-| ---- | ---------------------------- | ------------------ | ---------------------------------- |
-| ETH0 | Ethernet Gigabit nativo CM4  | 10/100/1000 Mbit/s | Pré-instalado                      |
-| ETH1 | Convertido de USB            | 10/100 Mbit/s      | Não suportado                      |
+| ---- | ----------------------------- | ------------------ | ---------------------------------- |
+| ETH0 | Ethernet Gigabit nativo CM4   | 10/100/1000 Mbit/s | Pré-instalado                      |
+| ETH1 | Convertido de USB             | 10/100 Mbit/s      | Não suportado                      |
 
 </div>
 
-O reComputer R1225 vem com duas portas Ethernet RJ45. ETH0 é uma interface Ethernet Gigabit nativa do CM4 que suporta três velocidades diferentes: 10/100/1000 Mbit/s. Um módulo PoE adicional pode ser adquirido para habilitar fornecimento de energia via Ethernet (PoE) através desta interface, fornecendo energia ao reComputer R1225. A outra porta, ETH1, suporta 10/100 Mbit/s e é convertida a partir de USB.
+O reComputer R1225 vem com duas portas Ethernet RJ45. ETH0 é uma interface Ethernet Gigabit nativa do CM4 que suporta três velocidades diferentes: 10/100/1000 Mbit/s. Um módulo PoE adicional pode ser adquirido para habilitar alimentação via Ethernet (PoE) através desta interface, fornecendo energia ao reComputer R1225. A outra porta, ETH1, suporta 10/100 Mbit/s e é convertida de USB.
 
 ### HDMI
 
@@ -726,7 +730,7 @@ O reComputer R1225 possui uma interface HDMI nativa do CM4, suportando saída de
 
 O reComputer R1225 possui um circuito RTC que vem pré-instalado com uma bateria CR2032, permitindo manter a funcionalidade de contagem de tempo mesmo em caso de perda de energia.
 
-Para testar a funcionalidade do Relógio de Tempo Real (RTC), siga estas etapas:
+Para testar a funcionalidade do Relógio em Tempo Real (RTC), siga estas etapas:
 
 1. Desative a sincronização automática de horário:
 
@@ -758,7 +762,7 @@ Este comando irá ler e exibir o horário armazenado no RTC.
 
 ### Watchdog
 
-O reComputer R1225 vem equipado com um circuito watchdog de hardware independente que garante a reinicialização automática do sistema em caso de travamentos anormais. O circuito watchdog é implementado através do RTC e permite tempos de alimentação flexíveis de 1 a 255 segundos.
+O reComputer R1225 vem equipado com um circuito watchdog de hardware independente que garante a reinicialização automática do sistema em caso de travamentos anormais. O circuito watchdog é implementado por meio do RTC e permite tempos de alimentação flexíveis de 1 a 255 segundos.
 
 Para realizar um teste do watchdog, siga estas etapas:
 
@@ -834,35 +838,35 @@ O reComputer R1225 é alimentado pelo CM4 com uma versão onboard de Wi-Fi/BLE, 
 É importante observar que, devido ao gabinete metálico do reComputer R1225, os sinais de Wi-Fi/BLE podem ter dificuldade em atravessar o exterior metálico. Portanto, se você precisar desse recurso, recomendamos instalar a antena externa que preparamos para você.
 :::
 
-#### Conectar ao Wi-Fi
+#### Conectar wifi
 
-##### Conectar ao Wi-Fi pela interface Luci
+##### Conectar ao Wi-Fi via interface Luci
 
 ##### Comando para conectar ao Wi-Fi
 
-etapa 1. Para escanear redes Wi-Fi:
+passo 1. Para escanear redes Wi-Fi:
 
   ```bash
   nmcli dev wifi list
   ```
 
-etapa 2. Conectar à rede Wi-Fi:
+passo 2. Conectar à rede wifi:
 
   ```bash
   sudo nmcli dev wifi connect network-ssid password "network-password"
   sudo nmcli --ask dev wifi connect network-ssid
   ```
 
-etapa 3. Após o dispositivo ser ligado, ele se conectará automaticamente ao Wi-Fi.  
-  Se você quiser excluir as informações de Wi-Fi salvas:
+passo 3. Após o dispositivo ser ligado, ele se conectará automaticamente ao wifi.  
+  Se você quiser apagar as informações de WiFi salvas:
 
   ```bash
   nmcli con del network-ssid
   ```
 
-  Após a conexão ser desconectada, conecte-se a outro Wi-Fi.
+  Após a conexão ser desconectada, conecte-se a outro wifi.
 
-#### Conectar dispositivos Bluetooth
+#### Conectar dispositivos bluetooth
 
 Antes de adicionar um dispositivo Bluetooth, o serviço Bluetooth no seu computador deve estar iniciado e em execução. Você pode verificar isso com o comando systemctl.
 
@@ -925,11 +929,11 @@ exit
 
 ### Módulo 4G (opcional)
 
-O reComputer R1225 LoRaWAN Gateway está disponível nas versões Standard e 4G. O Slot Mini-PCIe 1 na versão Standard está vago, enquanto a versão 4G vem com um módulo Mini-PCIe pré-instalado, voltado para Europa (EMEA e Tailândia <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) e América (América do Norte **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**) respectivamente.
+O reComputer R1225 LoRaWAN Gateway está disponível nas versões Standard e 4G. O Mini-PCIe Slot 1 na versão Standard está vago, enquanto a versão 4G vem com um módulo Mini-PCIe pré-instalado, voltado para Europa (EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) e América (América do Norte **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**) respectivamente.
 
 ### Módulo LoRa® (incluído)
 
-O Slot Mini-PCIe 2 no reComputer R1225 LoRaWAN Gateway é ocupado pelo módulo SPI LoRa®.
+O Mini-PCIe Slot 2 no reComputer R1225 LoRaWAN Gateway é ocupado pelo módulo SPI LoRa®.
 
 ### PoE (incluído)
 
@@ -939,7 +943,7 @@ O reComputer R1225 LoRaWAN Gateway vem equipado com um módulo PoE, eliminando a
 
 O reComputer R1225 suporta SSD NVMe 2280 e acelerador de IA (Hailo) por meio do uso de um slot PCIe (J62) abaixo de dois slots Mini-PCIe na placa. É importante observar que o PCIe do CM4 é gen2.0 com uma velocidade teórica máxima de 5Gbps. Se você estiver usando um SSD Gen3.0 ou superior, ele pode não conseguir atingir a velocidade máxima do SSD. Após os testes, o reTerminal DM com SSD instalado pode atingir uma velocidade máxima de gravação de 230MB/s e uma velocidade máxima de leitura de 370MB/s. Se você não tiver certeza de quais SSDs são compatíveis, pode comprar seguindo a lista de acessórios abaixo.
 
-[Clique aqui para instruções de montagem](/pt-br/recomputer_r1000_assembly_guide/#assemble-ssd).
+[Por favor, clique aqui para instruções de montagem](/pt-br/recomputer_r1000_assembly_guide/#assemble-ssd).
 
 <div class="table-center">
 
@@ -973,15 +977,15 @@ Por favor, observe que:<br />
 Existem dois usos principais para cartões SSD:<br />
 1. Armazenamento de alta capacidade: cartões SSD podem ser utilizados para necessidades de armazenamento de alta capacidade.<br />
 2. Unidade de boot com imagem: outro uso envolve utilizar o SSD tanto como armazenamento de alta capacidade quanto para armazenar imagens de sistema, permitindo inicializar diretamente a partir do cartão SSD.<br />
-É importante observar que nem todos os cartões SSD disponíveis no mercado suportam o segundo uso. Portanto, se você pretende usá-lo como unidade de boot e não tem certeza de qual modelo comprar, recomendamos optar pelo nosso **SSD de 1TB (<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>)** recomendado. Este modelo foi testado e verificado quanto à funcionalidade de boot, reduzindo o risco de problemas de compatibilidade e minimizando os custos de tentativa e erro.
+É importante observar que nem todos os cartões SSD disponíveis no mercado suportam o segundo uso. Portanto, se você pretende usá-lo como unidade de boot e não tem certeza sobre qual modelo comprar, recomendamos optar pelo nosso **SSD de 1TB (<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>)** recomendado. Este modelo foi testado e verificado quanto à funcionalidade de boot, reduzindo o risco de problemas de compatibilidade e minimizando os custos de tentativa e erro.
 :::
 
 ### Chip de Criptografia TPM 2.0 (opcional)
 
-O TPM apresenta o OPTIGA™ TPM SLB9670 da Infineon, que é compatível com a especificação TCG (Trusted Computing Group) TPM 2.0 e é recomendado como chip de criptografia para o reComputer R1225. O chip possui uma interface SPI aplicada à porta J13 na placa, para habilitar uma raiz de confiança para integridade da plataforma, atestação remota e serviços criptográficos.
+O TPM apresenta o OPTIGA™ TPM SLB9670 da Infineon, que é compatível com a especificação Trusted Computing Group (TCG) TPM 2.0 e é recomendado como chip de criptografia para o reComputer R1225. O chip possui uma interface SPI aplicada à porta J13 na placa, para habilitar uma raiz de confiança para integridade da plataforma, atestação remota e serviços criptográficos.
 
 :::note
-[Clique aqui para instruções de montagem](https://wiki.seeedstudio.com/pt-br/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
+[Por favor, clique aqui para instruções de montagem](https://wiki.seeedstudio.com/pt-br/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
 :::
 
 Se você conectar o módulo TPM 2.0 ao dispositivo, o código a seguir pode ajudar a verificar a conexão do TPM.
@@ -990,13 +994,13 @@ Se você conectar o módulo TPM 2.0 ao dispositivo, o código a seguir pode ajud
 ls /dev | grep tpm
 ```
 
-Se você vir **tpm0** e **tpmrm0** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis no seu sistema. Isso indica que o hardware TPM é reconhecido e acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicativos relacionados ao TPM sabendo que os dispositivos estão presentes e acessíveis.
+Se você vir **tpm0** e **tpmrm0** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) são detectados e estão disponíveis no seu sistema. Isso indica que o hardware TPM é reconhecido e acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicações relacionadas ao TPM sabendo que os dispositivos estão presentes e acessíveis.
 
 ### UPS (incluído)
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/30.png" /></div>
 
-O UPS é 7F, que opera em série. O módulo UPS é posicionado entre os componentes DC5V e CM4, com um sinal GPIO utilizado para alertar a CPU em caso de perda de energia da fonte de 5V. Ao receber esse sinal, a CPU executa um script de urgência antes que a energia do supercapacitor se esgote, iniciando um comando "$ shutdown".
+O UPS é 7F, que opera em série. O módulo UPS é posicionado entre os componentes DC5V e CM4, com um sinal GPIO utilizado para alertar a CPU no caso de perda de energia da fonte de 5V. Ao receber esse sinal, a CPU executa um script de urgência antes que a energia do supercapacitor se esgote, iniciando um comando "$ shutdown".
 <br />
 A duração de backup fornecida pelo UPS depende fortemente da carga do sistema. Abaixo estão alguns cenários típicos testados com um módulo CM4 com 4GB de RAM, 32GB de armazenamento eMMC e um módulo Wi-Fi.
 <br />
@@ -1007,10 +1011,10 @@ A duração de backup fornecida pelo UPS depende fortemente da carga do sistema.
 | Carga total da CPU| 18      | stress -c 4 -t 10m -v &                                           |
 
 :::note
-Para a função de UPS, entre em contato conosco para mais informações, e o sinal de alarme é ativo em nível BAIXO.
+Para a função UPS, entre em contato conosco para mais informações, e o sinal de alarme é ativo em nível BAIXO.
 :::
 
-Um GPIO25 entre a CPU e a entrada de energia CC/CA é usado para alertar a CPU quando a fonte de alimentação de 5V cai. Então a CPU deve executar algo urgente em um script antes do esgotamento de energia do supercapacitor e rodar um `$ shutdown`
+Um GPIO25 entre a CPU e a entrada de energia CC/CA é usado para alarmar a CPU quando a fonte de alimentação de 5V cai. Então a CPU deve executar algo urgente em um script antes do esgotamento de energia do supercapacitor e rodar um `$ shutdown`
 <br />
 Outra maneira de usar essa função é iniciar um desligamento quando o pino GPIO mudar. O pino GPIO fornecido é configurado como uma tecla de entrada que gera eventos KEY_POWER. Este evento é tratado pelo systemd-logind iniciando um desligamento.
 Use `/boot/overlays/README` como referência e, em seguida, modifique `/boot/config.txt`.
@@ -1019,7 +1023,7 @@ Use `/boot/overlays/README` como referência e, em seguida, modifique `/boot/con
 dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 ```
 
-O código em Python abaixo é uma demonstração para detectar o modo de funcionamento do UPS de supercapacitor através do GPIO25 e salvar dados automaticamente e desligar quando o sistema for desligado.
+O código em Python abaixo é uma demonstração para detectar o modo de funcionamento do UPS de supercapacitor através do GPIO25, e salvar dados automaticamente e desligar quando o sistema for desligado.
 
 ```python
 import RPi.GPIO as GPIO
@@ -1062,7 +1066,7 @@ Um DSI (J24) é reservado na placa, para uso especial. Os usuários devem adquir
 - [reComputer R1225 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
 - [Atribuição de Pinos do reComputer R1225 (R1000 v1.1)](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

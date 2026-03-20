@@ -6,21 +6,21 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger
 last_update:
-  date: 4/12/2023
-  author: Yvonne
+  date: 3/18/2026
+  author: Kian
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
 # 使用模拟输入传感器开始使用 S2100
 
-下面我们来学习如何将 S2100 与模拟输入传感器一起使用。掌握这一点之后，我们将继续了解 S2100 应用的基础知识。这将帮助你在未来更好地连接自己定制的传感器。
+下面我们来学习如何将 S2100 与模拟输入传感器一起使用。掌握这一点之后，我们将继续了解 S2100 应用的基础知识。这将帮助你在未来更好地连接你自定义的传感器。
 
 ## 准备以下物品
 
 - 数据记录仪
-- 光照传感器（以此为例）
+- 光照传感器（作为示例）
 - 十字螺丝刀（十字槽 2 号）
 - SenseCAP Mate APP
 
@@ -40,9 +40,10 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/4.png"/></div>
 
-3. 取下螺纹压帽，并将其套在传感器的电缆上，再穿过底盖，然后连接到接线端子。
+3. 取下螺纹帽，并让传感器的线缆依次穿过螺纹帽和底盖，然后连接到接线端子。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png"/></div>
+
 ## 接线端子说明
 
 | **编号** | **引脚** | **说明** |
@@ -60,25 +61,34 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 | 11 | GND | 接地引脚 |
 | 12 | GND | 接地引脚 |
 
-## 传感器供电方式
+## 分辨率
+
+| **接口**                    | **数值**                   |
+| -------------------------------- | --------------------------- |
+| 电流输入	                   |  4 到 20 mA（2 路）        |
+| 电流输入分辨率 (I1/I2)        |  0.001 mA                   |
+| 电压输入                      |	0 到 10V（2 路）          |
+| 电压输入分辨率 (V1/V2)        |  0.01 mV                    |
+
+## 传感器供电选项
 
 数据记录仪支持两种供电模式，由于光照传感器只需要 5V 供电，我们选择内置电池模式：
 
 | **模式** | **说明** |
 | --- | --- |
-| Built-in Battery | 数据记录仪和传感器由电池供电。在这种情况下，数据记录仪可以连接 5V 传感器。 |
+| 内置电池 | 数据记录仪和传感器由电池供电。在这种情况下，数据记录仪可以连接到 5V 传感器。 |
 
 ## 连接到数据记录仪
 
-数据记录仪的接线顺序：
+数据记录仪的线序：
 
 | **线色** | **说明** |
 | --- | --- |
 | 红线 | 5V |
-| 黑线 | GND（任意端口均可。） |
+| 黑线 | GND（任意端口均可） |
 | 黄线 | IO |
 
-1. 将 8 芯线穿过底盖，并根据接线顺序要求连接到数据记录仪的底座；
+1. 将 8 针线缆穿过底盖，并根据线序要求连接到数据记录仪底座；
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/6.png"/></div>
 
@@ -93,7 +103,7 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/9.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/10.png"/></div>
 
-**\*注意：** 组装设备时，必须安装好数据记录仪和转接盒的防水垫，并拧紧螺帽和螺丝，否则会影响设备的防水效果！
+**\*注意：** 组装设备时，必须安装好数据记录仪和转接盒的防水垫，并拧紧螺帽和螺丝，否则可能会影响设备的防水效果！
 
 如果线径过小，可以用防水胶带缠绕，如下图所示：
 
@@ -105,7 +115,7 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 ## 将传感器连接到 App
 
-1. 长按按键 **3 秒**，LED 将以 1 秒的频率闪烁。请在 1 分钟内使用 App 连接传感器；否则设备将关机或重启。
+1. 长按按键 **3 秒**，LED 将以 1 秒的频率闪烁。请在 1 分钟内使用 App 连接传感器；否则设备将会关机或重启。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/12.png"/></div>
 
@@ -127,34 +137,34 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 ### 选择平台和频段
 
-S210x 传感器在生产时即支持 863MHz ~928MHz 的通用频段规划，一个 SKU 即可覆盖。也就是说，每一台设备都可以支持 7 种频段规划。
+S210x 传感器在生产时即支持 863MHz ~928MHz 的通用频段计划，集成在一个 SKU 中。也就是说，每一台设备都可以支持 7 种频段计划。
 
-这里我们选择 "SenseCAP for Helium" 或 "SenseCAP for TTN"。频段规划根据你的实际情况进行选择。
+这里我们选择 "SenseCAP for Helium" 或 "SenseCAP for TTN"。频段计划根据你的实际情况进行选择。
 
-**\*注意：** 当用户周围有 Helium 网络时，数据记录仪可以上传数据。它运行在 SenseCAP 私有 Helium Console 上，用户无需在 Helium Console 上创建设备；
+**\*注意：** 当用户周围有 Helium 网络时，数据记录仪可以上传数据。它运行在 SenseCAP 私有 Helium Console 上。用户无需在 Helium Console 上创建设备；
 
-SenseCAP for TTN 平台需要配合 SenseCAP LoRaWAN 室外网关使用(https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
+SenseCAP for TTN 平台需要与 SenseCAP LoRaWAN 室外网关(https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)配合使用
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/17.png"/></div>
 
-### 设置上报间隔
+### 设置采集间隔
 
 设备的工作模式为：每隔一个设定的时间间隔唤醒设备，采集测量值并通过 LoRa 上传。
 
-例如，设备**默认每 60 分钟采集并上传一次数据**。
+例如，设备**默认每 60 分钟**采集并上传一次数据。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/18.png"/></div>
 
 ### 设置上行策略
 
-传感器的上行数据包策略有三种模式，我们这里选择 1N，你也可以根据自己的需求进行选择。
+传感器的上行数据包策略有三种模式，我们在这里选择 1N，你也可以根据自己的需求进行选择。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/19.png"/></div>
 
 | **参数** | **说明** |
 | --- | --- |
-| 2C+1N (default) | 2C+1N（2 个确认包和 1 个非确认包）是最佳策略，该模式可以最大限度地降低丢包率，但设备在 TTN 中会消耗最多的数据包，或在 Helium 网络中消耗最多的 data credits。 |
-| 1C | 1C（1 个确认包），设备在收到来自服务器的 1 个确认包后就会进入休眠。 |
+| 2C+1N（默认） | 2C+1N（2 个确认包和 1 个非确认包）是最佳策略，该模式可以最大限度地降低丢包率，但设备在 TTN 中会消耗最多的数据包，或在 Helium 网络中消耗最多的 data credits。 |
+| 1C | 1C（1 个确认包），设备在从服务器收到 1 个确认包后就会进入休眠。 |
 | 1N | 1N（1 个非确认包），设备只发送数据包然后开始休眠，而不管服务器是否收到数据。 |
 
 ### 恢复出厂设置
@@ -163,7 +173,7 @@ SenseCAP for TTN 平台需要配合 SenseCAP LoRaWAN 室外网关使用(https://
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/20.png"/></div>
 
-当我们操作出错或想要重置所有配置时，可以点击该按钮。设备将恢复为出厂默认配置。
+当我们操作出错或想要重置所有内容时，可以点击该按钮。设备将恢复为出厂默认配置。
 
 **\*注意：** "Restore Factory" 功能只能重置基础设置。
 
@@ -175,13 +185,13 @@ SenseCAP for TTN 平台需要配合 SenseCAP LoRaWAN 室外网关使用(https://
 
 将 Power Type 选择为 **Periodical power**。
 
-| Power Voltage | 我们在此选择 **5V**。 |
+| Power Voltage | 我们在这里选择 **5V**。 |
 | --- | --- |
-| Sensor Warm-up Time | 预热时间是指在加上电压供电后，传感器达到最高精度或性能水平所需的时间。我们在此输入 **200(ms)**。 |
-| Voltage Range | 0-10V（数据记录仪可以采集 0~10V 范围内的电压信号，并自动调整上限以提高精度）。我们在此选择 **Voltage**。 |
-| Interface V1 | 数据记录仪支持两个模拟电压信号。当传感器线连接到 V1/V2 时，可以启用相应配置。我们在此启用 **Interface V1**。 |
+| Sensor Warm-up Time | 预热时间表示在加上电压供电后，传感器达到最高精度或性能水平所需的时间。我们在这里输入 **200(ms)**。 |
+| Voltage Range | 0-10V（数据记录仪可以采集 0~10V 范围内的电压信号，并自动调整上限以提高精度）。我们在这里选择 **Voltage**。 |
+| Interface V1 | 数据记录仪支持两路模拟电压信号。当传感器线缆连接到 V1/V2 时，可以启用相应配置。我们在这里启用 **Interface V1**。 |
 | Interface V2 |
-| Y= Ax + B | "Y"：为数据记录仪将要上传的数值。"x"：为原始电流值。系数 A：可将 "x" 按倍数放大或缩小的自定义值。系数 B：可增加或减少 "x" 数值的自定义值。通过设置 A 和 B 的数值，可以计算出所需的数值。我们在此设置 A 为 **100**，B 为 **0**。 |
+| Y= Ax + B | "Y"：为数据记录仪将要上传的数值。"x"：为原始电流值。系数 A：可自定义的数值，用于将 "x" 按倍数放大或缩小。系数 B：可自定义的数值，用于在 "x" 的基础上增加或减少一个偏移量。通过设置 A 和 B 的数值，可以计算出所需的数值。我们在这里设置 A 为 **100**，B 为 **0**。 |
 
 完成配置信息后，点击 "Back to Home"（此时节点与 APP 的蓝牙会自动断开），数据记录仪将尝试连接网络（尝试连接网络时 LED 指示灯红灯慢闪，网络连接成功后绿灯快闪）；
 
@@ -205,18 +215,18 @@ SenseCAP for TTN 平台需要配合 SenseCAP LoRaWAN 室外网关使用(https://
 
 1. **手动填写 EUI**
 
-如果二维码贴纸损坏，您可以手动填写设备的 EUI，将设备绑定到您的账号。请确保按照系统提示的格式输入 EUI，然后点击 "confirm"。
+如果二维码贴纸损坏，你可以手动填写设备的 EUI，将设备绑定到你的账号。请确保按照系统建议的格式输入 EUI，然后点击 "confirm"。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/25.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/26.png"/></div>
 
 ## 在 SenseCAP Mate APP 上查看数据
 
-最后，在 SenseCAP App 或网站 [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/) 上，您可以查看设备的在线状态和最新数据。在每个传感器的列表中，您可以查看其在线状态以及最近一次数据上传的时间。
+最后，在 SenseCAP App 或网站 [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/) 上，你可以查看设备在线状态和最新数据。在每个传感器的列表中，你可以查看其在线状态以及最近一次数据上传的时间。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/27.png"/></div>
 
-此外，您也可以在 SenseCAP Mate APP 上查看数据。
+此外，你也可以在 SenseCAP Mate APP 上查看数据。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/28.png"/></div>
 

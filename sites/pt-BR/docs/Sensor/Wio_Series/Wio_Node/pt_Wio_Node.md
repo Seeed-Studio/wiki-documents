@@ -28,7 +28,7 @@ Assim como o significado do seu nome, o Wio Node é realmente um nó Wi‑Fi que
 
 O ecossistema do Wio Node também é composto pelo Hardware Aberto **Wio Node board**, pelo **Open Source Wio Link Mobile App** e pela **implementação de Servidor de IoT Open Source**. Portanto, a plataforma de software do Wio Link também está disponível para o Wio Node.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
+[![Adquira agora](https://files.seeedstudio.com/wiki/Wio_Node/pictures/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Wio-Node-p-2637.html)
 
 :::caution
 A função Wio IFTTT está em fim de vida (EOL). Mas o Wio APP continua disponível. Você pode usar a API do Wio APP para ler o status dos sensores e controlar o atuador.
@@ -141,7 +141,7 @@ Vamos criar uma aplicação de LED bem básica com o Wio Node; nesta aplicação
 |Wio Node|Grove - LED|Cabo Micro USB|
 |--------|-----------|---------------|
 |![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Wio%20Node2.png)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Node/pictures/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[Adquira agora](https://www.seeedstudio.com/Wio-Node-p-2637.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[Adquira agora](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 :::note
 

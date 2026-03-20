@@ -1,6 +1,6 @@
 ---
-description: Tutorial de configuración de la pasarela MQTT de Meshtastic basada en XIAO ESP32S3 y kit Wio-SX1262. Permite mensajería global, proporciona un respaldo cuando las señales de malla son débiles y garantiza una entrega de mensajes más rápida a través de Internet. 
-title: Configuración de una pasarela MQTT con XIAO ESP32S3 y kit Wio-SX1262
+description: Tutorial de configuración de la pasarela MQTT de Meshtastic basada en XIAO ESP32S3 y el kit Wio-SX1262. Permite mensajería global, proporciona un respaldo cuando las señales de la malla son débiles y garantiza una entrega de mensajes más rápida a través de internet. 
+title: Configuración de una pasarela MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 ## ¿Por qué necesitas Meshtastic + mqtt?
 
-Integrar MQTT con Meshtastic amplía la comunicación fuera de la red al conectar redes distantes. Esto permite mensajería global, proporciona un respaldo cuando las señales de malla son débiles y garantiza una entrega de mensajes más rápida a través de Internet. Es perfecto para zonas remotas y situaciones de emergencia.
+Integrar MQTT con Meshtastic amplía la comunicación fuera de la red al conectar redes distantes. Esto permite mensajería global, proporciona un respaldo cuando las señales de la malla son débiles y garantiza una entrega de mensajes más rápida a través de internet. Es perfecto para zonas remotas y situaciones de emergencia.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" style={{width:900, height:'auto'}}/></div>
 
@@ -63,7 +63,7 @@ Si quieres conectar la batería para XIAO, te recomendamos comprar una batería 
 
 ### Conectado al SX-1262
 
-El SX-1262 se puede conectar al Xiao ESP32-S3 a través de la interfaz B2B. El SX-1262 utiliza SPI para comunicarse con el Xiao ESP32-S3.
+El SX-1262 se puede conectar al Xiao ESP32-S3 a través de la interfaz B2B. El SX-1262 usa SPI para comunicarse con el Xiao ESP32-S3.
 :::warning
 El SX-1262 compatible solo se puede comprar dentro del kit.
 :::
@@ -92,7 +92,7 @@ Conecta el dispositivo mediante un cable USB. Luego [haz clic aquí](https://fla
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/OpenSerialPortMonitor.png" style={{width:600, height:'auto'}}/></div>
 
-Comprueba tu ID de dispositivo en el registro del puerto serie. Por ejemplo, el registro de abajo indica que el ID de dispositivo es 24c0.
+Comprueba tu ID de dispositivo en el registro del puerto serie. Por ejemplo, el registro de abajo indica que el ID del dispositivo es 24c0.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/DEviceIDD.png" style={{width:600, height:'auto'}}/></div>
 
@@ -117,7 +117,7 @@ Abre la app Meshtastic para Android y conéctate a tu dispositivo mediante Bluet
 
 **2. Configuración de MQTT**
 
-- Puedes usar el `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats) predeterminados. 
+- Puedes usar los valores predeterminados `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats). 
 - Elige `MQTT Enabled`
 - Elige `MQTT Client Proxy Enabled`
 - (Opcional) Si quieres que otros usuarios de mqtt te vean en el mapa, selecciona `Map Reporting` y `I agree`.
@@ -137,9 +137,9 @@ Abre la app Meshtastic para Android y conéctate a tu dispositivo mediante Bluet
 
 **4. Configuración de red**
 
-Después de esta configuración, tu dispositivo no podrá conectarse a tu app mediante Bluetooth. Pero puede conectarse a tu app a través de la red.
+Después de esta configuración, tu dispositivo no podrá conectarse a tu app mediante Bluetooth. Pero podrá conectarse a tu app a través de la red.
 
-- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que esperas usar debe ser de 2.4G.
+- Rellena el SSID (nombre de la red Wifi) y la contraseña de la red Wifi. La red wifi que pretendes usar debe ser de 2.4G.
 - Haz clic en Send
 - El dispositivo se reinicia automáticamente. 
 
@@ -165,7 +165,7 @@ Ahora tu dispositivo no se puede conectar mediante Bluetooth. Pero puedes conect
 
 **2. Configuración de MQTT**
 
-- Puedes usar el `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats) predeterminados. 
+- Puedes usar los valores predeterminados `MQTT Address`(mqtt.meshtastic.org), `User name`(meshdev) y `Password`(large4cats). 
 - Elige `MQTT Enabled`
 - Elige `MQTT Client Proxy Enabled`
 - (Opcional) Si quieres que otros usuarios de mqtt te vean en el mapa, selecciona `Map Reporting` y `I agree`.
@@ -185,9 +185,9 @@ Ahora tu dispositivo no se puede conectar mediante Bluetooth. Pero puedes conect
 
 **4. Configuración de red**
 
-Después de esta configuración, tu dispositivo no podrá conectarse a tu app mediante Bluetooth. Pero puede conectarse a tu app a través de la red.
+Después de esta configuración, tu dispositivo no podrá conectarse a tu app mediante Bluetooth. Pero podrá conectarse a tu app a través de la red.
 
-- Rellena el SSID (nombre de la Wifi) y la contraseña de la Wifi. La wifi que esperas usar debe ser de 2.4G.
+- Rellena el SSID (nombre de la red Wifi) y la contraseña de la red Wifi. La red wifi que pretendes usar debe ser de 2.4G.
 - Haz clic en Send
 - El dispositivo se reinicia automáticamente. 
 
@@ -204,9 +204,9 @@ Ahora tu dispositivo no se puede conectar mediante Bluetooth. Pero puedes conect
 
 ## Envío de mensajes
 
-Ahora puedes comunicarte con otras personas desde Internet. 
+Ahora puedes comunicarte con otras personas desde internet. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTTest.png" style={{width:600, height:'auto'}}/></div> 
 
-Si tienes otro dispositivo Meshtastic que esté en la misma banda de frecuencia que la pasarela MQTT ESP32S3, también puede transmitir mensajes a través del ESP32S3 con otras personas en Internet.
+Si tienes otro dispositivo Meshtastic que esté en la misma banda de frecuencia que la pasarela MQTT ESP32S3, también podrá transmitir mensajes a través del ESP32S3 con otras personas en internet.
 

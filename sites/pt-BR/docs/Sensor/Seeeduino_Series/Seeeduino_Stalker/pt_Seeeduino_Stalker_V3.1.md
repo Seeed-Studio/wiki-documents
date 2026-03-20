@@ -130,7 +130,7 @@ Se esta é a primeira vez que você programa com um Seeeduino Stalker, você pod
 |Seeeduino Stalker V3.1|UartSBee V4|Cabo Mini USB|Cabo de 6 pinos|
 |----------------------|-----------|--------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_stalker.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_uartsbee.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_miniusb.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/gs_6pincable.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|[GET ONE NOW](https://www.seeedstudio.com/UartSBee-V4-p-688.html)|[GET ONE NOW](https://www.seeedstudio.com/Mini-USB-cable-100cm-p-252.html)|[GET ONE NOW](https://www.seeedstudio.com/6-pin-dual-female-jumper-wire-300mm-(5-PCs-pack)-p-128.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Stalker-V3.1-p-2686.html)|[Adquira agora](https://www.seeedstudio.com/UartSBee-V4-p-688.html)|[Adquira agora](https://www.seeedstudio.com/Mini-USB-cable-100cm-p-252.html)|[Adquira agora](https://www.seeedstudio.com/6-pin-dual-female-jumper-wire-300mm-(5-PCs-pack)-p-128.html)|
 
 :::note
     UartSBee V4, Cabo Mini USB e cabo de 6 pinos não estão incluídos.
@@ -263,12 +263,12 @@ Bees são uma série de módulos que possuem funções ricas, como Wi-Fi, BLE, G
 |Bluetooth Bee |XBee Wi-Fi PCB Antenna| RFbee V1.1|
 |---|---|---|
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee3.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)    |<a href="https://www.seeedstudio.com/XBee-Wi-Fi-PCB-Antenna-S6-p-1114.html">GET ONE NOW</a> |[GET ONE NOW](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
+|[Adquira agora](https://www.seeedstudio.com/Bluetooth-Bee-Standalone-p-1157.html)    |<a href="https://www.seeedstudio.com/XBee-Wi-Fi-PCB-Antenna-S6-p-1114.html">Adquira agora</a> |[Adquira agora](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
 
 |Bluetooth Bee - Standalone|GPS Bee kit|Mesh Bee|
 |:---:|:---:|:---:|
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/bee6.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)    |<a href="https://www.seeedstudio.com/GPS-Bee-kit-(with-Mini-Embedded-Antenna)-p-560.html">GET ONE NOW</a> |<a href="https://www.seeedstudio.com/Mesh-Bee-Open-Source-Zigbee-Pro-Module-with-MCU-(JN5168)-p-1751.html">GET ONE NOW</a>|
+|[Adquira agora](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)    |<a href="https://www.seeedstudio.com/GPS-Bee-kit-(with-Mini-Embedded-Antenna)-p-560.html">Adquira agora</a> |<a href="https://www.seeedstudio.com/Mesh-Bee-Open-Source-Zigbee-Pro-Module-with-MCU-(JN5168)-p-1751.html">Adquira agora</a>|
 
 :::note
 
