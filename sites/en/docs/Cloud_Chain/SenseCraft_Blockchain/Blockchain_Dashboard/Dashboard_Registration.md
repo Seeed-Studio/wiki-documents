@@ -39,7 +39,7 @@ The SenseCAP M1 dashboard is designed to help you monitor your Hotspot and give 
 ===================
 
 1.  Visit [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  Enter the credentials you created during the registration process OR login with your Discount account details (whichever you've selected during the registration process)
+2.  Enter the credentials you created during the registration process OR login with your Discord account details (whichever you've selected during the registration process)
 3.  Congratulations, you've successfully logged in.
 
 ![SenseCAP Dashboard Login](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
