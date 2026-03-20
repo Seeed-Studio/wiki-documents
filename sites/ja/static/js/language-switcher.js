@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-19 14:40:01 (北京时间)
-// 多语言页面: 2211 个
+// 生成时间: 2026-03-20 09:46:42 (北京时间)
+// 多语言页面: 2220 个
 
 (function() {
   'use strict';
@@ -3404,6 +3404,13 @@
     "ja",
     "pt"
   ],
+  "/getting_started_with_reterminal_e1003": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_reterminal_e1004": [
     "cn",
     "en",
@@ -4027,6 +4034,20 @@
     "ja",
     "pt"
   ],
+  "/meshtastic_node_map_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/get_started_with_meshtastic_solar_node": [
     "cn",
     "en",
@@ -4042,6 +4063,20 @@
     "pt"
   ],
   "/meshtastic_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -4083,6 +4118,20 @@
     "ja",
     "pt"
   ],
+  "/meshtastic_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_source_code_practical_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
@@ -4098,6 +4147,20 @@
     "pt"
   ],
   "/wio_tracker_l1_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshtastic_node_map_esp32s3": [
     "cn",
     "en",
     "es",
