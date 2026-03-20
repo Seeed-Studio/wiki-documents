@@ -84,7 +84,7 @@ wsl --install -d Ubuntu-22.04
 - 使用下面提供的预编译内核
 - 按照[此指南](https://github.com/dorssel/usbipd-win/wiki/WSL-support)自行编译内核
 
-**预编译内核下载**: [OneDrive Link](https://seeedstudio88-my.sharepoint.com/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2FSeeed%5FTech%5FSupport%5FTemp%2Fwsl%5Fkernel%2FbzImage&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fseeedstudio88%5Fonmicrosoft%5Fcom%2FDocuments%2FSeeed%5FTech%5FSupport%5FTemp%2Fwsl%5Fkernel&ga=1)
+**预编译内核下载**: [OneDrive Link](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBAoWWTQQsBSYpacMvUN9LYAUi6X_jPQmzYrGWtZtb5ilc?e=ZjNaJr)
 - SHA256: `f249022feab9372d448d236a4401e087d0f150dd6b3367b571f0b9a703bd2d38`
 
 要验证内核兼容性，请在安装后检查是否支持 RNDIS。
