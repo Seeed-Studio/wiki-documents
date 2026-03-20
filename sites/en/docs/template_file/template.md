@@ -33,7 +33,7 @@ I am using (Seeed Products) as the hardware here. The contents here should inclu
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Seeed Studio XIAO ESP32S3(example)</th>
+        <th>Seeed Studio XIAO ESP32-S3(example)</th>
         <th>Seeed Studio Grove OLED Display 0.96(example)</th>
     </tr>
     <tr>

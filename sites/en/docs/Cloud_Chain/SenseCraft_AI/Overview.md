@@ -176,7 +176,7 @@ SenseCraft AI is a platform that supports content co-creation for developers and
 - Model Excerpt: A simple description of the model
 - Model Introduction：detailed description of the model
 - Model Deployment Perparation：Pre-requisite for model deployment, not required
-- Supported Device:Choose which device the model will be deployed on, currently the platform supports Jetson devices, XIAO ESPS3, etc.
+- Supported Device:Choose which device the model will be deployed on, currently the platform supports Jetson devices, XIAO ESP32-S3, etc.
 - Model Inference Example Image ：Upload an image of the model's inference results
 
 2. Click next when the information is completed.

@@ -72,7 +72,7 @@ Please select `Global` of Server Location. You can also create an account via th
 Add Events to get notification.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/add-event.PNG" alt="pir" width={300} height="auto" /></p>
 
-1. Click the Add icon or Add Event button to create an Event alert, Add Event page Conditioins to add condition options, and click the Add button to select a device.
+1. Click the Add icon or Add Event button to create an Event alert, Add Event page Conditions to add condition options, and click the Add button to select a device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_2.png" style={{width:1000, height:'auto'}}/></div>
 

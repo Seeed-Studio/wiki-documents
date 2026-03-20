@@ -187,7 +187,7 @@ Manage all AI models that have been downloaded on the device and support add mod
 
 ## **Tech Support**
 
-**Need help with your SenseCAP Indicator? We're here to assist you!**
+**Need help with your reComputer Jetson? We're here to assist you!**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -198,3 +198,4 @@ Manage all AI models that have been downloaded on the device and support add mod
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+/div>

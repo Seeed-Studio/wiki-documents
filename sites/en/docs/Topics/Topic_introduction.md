@@ -2,7 +2,7 @@
 description: Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.
 title: Technology Topics
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/topicintroduction/
 Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.
 
 - **[TinyML](/tinyml_topic)** empowers even low-power microcontrollers to run machine learning locally. 
-  - We lauch [**TinyML WorkShop**](/tinyml_workshop_course_new) (free course) to enable you a comprehensive understanding of embedded ML, just requiring one XIAO ESP32S3 Sense([wiki page](/xiao_esp32s3_getting_started)), the powerful MCU board.
+  - We launch [**TinyML WorkShop**](/tinyml_workshop_course_new) (free course) to enable you a comprehensive understanding of embedded ML, just requiring one XIAO ESP32-S3 Sense([wiki page](/xiao_esp32s3_getting_started)), the powerful MCU board.
   - We honorably provide an embedded AI tool - [**SenseCraft Model Assistant**](/ModelAssistant_Introduce_Overview) for achieving faster and more accurate inference on embedded devices.
 - [**Home Assistant**](/home_assistant_topic) is designed to attain advanced levels of privacy, versatility, and sustainability in home automation.
   - We have developed multiple ready-to-use integration slike [**SenseCAP**](/home_assistant_sensecap), [**LoRaWAN**](/ha_xiao_esp32), [**SenseCraft**](/sensecraft_homeassistant_userguide) for Home Assistant
