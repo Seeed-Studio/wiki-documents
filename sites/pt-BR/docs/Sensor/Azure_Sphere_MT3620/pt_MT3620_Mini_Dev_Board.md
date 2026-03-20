@@ -227,7 +227,7 @@ Criamos três demonstrações que combinam a Placa de Desenvolvimento MT3620 Min
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove - Button |USB To Uart 5V&3V3 |
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/button_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/usb_2_ttl_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Get One Now](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
+|[Adquira agora](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Adquira agora](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Button-p-766.html)|[Adquira agora](https://www.seeedstudio.com/USB-To-Uart-5V-3V3-p-1832.html)|
 
 **Conexão de Hardware**
 
@@ -274,7 +274,7 @@ UART received 2 bytes: '
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-Light Sensor |Grove - Rotary Angle Sensor|
 |--------------|-------------|-----------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/light_sensor_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/Rotary_Angle_Sensor_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)|[Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
+|[Adquira agora](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Adquira agora](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
 
 **Conexão de Hardware**
 
@@ -321,7 +321,7 @@ A0: 2057 A1: 2647
 | MT3620 Mini Dev Board | MT3620 Grove Breakout |  Grove-OLED Display 1.12'' V2 |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/product_s.png)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/breakout_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/MT3620_Mini_Dev_Board/img/oled_s.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Get One Now](https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html)|
+|[Adquira agora](https://www.seeedstudio.com/MT3620-Mini-Dev-Board-p-2919.html)|[Adquira agora](https://www.seeedstudio.com/MT3620-Grove-Breakout-p-4043.html)|[Adquira agora](https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html)|
 
 **Conexão de Hardware**
 

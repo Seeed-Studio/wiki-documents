@@ -39,7 +39,7 @@ O robô inclui um modelo cinemático de corpo inteiro e um algoritmo de autoesta
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/StackForce-Mini-Wheeled-Legged-Robot-p-6710.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
 ## Links técnicos
@@ -51,6 +51,8 @@ O robô inclui um modelo cinemático de corpo inteiro e um algoritmo de autoesta
 - **Documentação da plataforma leve de desenvolvimento de robótica StackForce:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
 - **Projetos de robótica de código aberto para a plataforma leve de desenvolvimento de robótica StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+
+- **Aprendizado de teoria e código do robô com rodas e pernas StackForce Mini** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
 
 ## Principais recursos
 

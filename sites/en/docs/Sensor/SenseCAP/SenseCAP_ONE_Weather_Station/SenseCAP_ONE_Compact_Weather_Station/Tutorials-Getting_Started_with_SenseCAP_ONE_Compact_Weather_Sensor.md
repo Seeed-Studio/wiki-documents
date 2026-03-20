@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 12/25/2025
-  author: Janet
+  date: 03/18/2026
+  author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/Getting_Started_with_SenseCAP_ONE_Compact_Weat
 
 ### Device Interface Introduction
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3_V2.png" /></div>
 
 There are two connectors at the bottom of the device.
 

@@ -61,7 +61,7 @@ O botão é simplesmente acionado pelos pinos digitais GPIO. Quando o botão é 
 |Seeeduino Nano|Grove Shield para Arduino Nano|Grove Passive Buzzer|Grove LED Pack|Grove Dual Button|
 |--------|-------|----|-------|----------------|
 |![](https://files.seeedstudio.com/products/102010268/img/seeeduino-Nano-thumbnail.png)|![](https://files.seeedstudio.com/products/103100124/img/Grove-Shoeld-for-Arduino-Nano-thumbnail.png)|![](https://files.seeedstudio.com/products/107020109/img/107020109wiki210x157.jpg)|![](https://files.seeedstudio.com/products/104020228/img/Grove-LED-Pack-thumbnail.jpg)|![](https://files.seeedstudio.com/products/111020103/img/111020103thumbnail.jpg)|
-|[Get one now](https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html)|[Get one now](https://www.seeedstudio.com/Grove-Shield-for-Arduino-Nano-p-4112.html)|[Get one now](https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html)|[Get one now](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Get one now](https://www.seeedstudio.com/Grove-Dual-Button-p-4529.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Shield-for-Arduino-Nano-p-4112.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html)|[Adquira agora](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Dual-Button-p-4529.html)|
 
 #### Conexão de hardware
 
@@ -217,7 +217,7 @@ interface.
 |Raspberry Pi 4B(4GB)|Grove Base Hat para Raspberry Pi|Grove Passive Buzzer|Grove LED Pack|Grove Dual Button|
 |--------|-----|------|------|-----|
 |![](https://files.seeedstudio.com/products/102110301/img/raspberry-pi-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103030275/img/thumbnail.jpg)|![](https://files.seeedstudio.com/products/107020109/img/107020109wiki210x157.jpg)|![](https://files.seeedstudio.com/products/104020228/img/Grove-LED-Pack-thumbnail.jpg))|![](https://files.seeedstudio.com/products/111020103/img/111020103thumbnail.jpg)|
-|[Get one now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Get one now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get one now](https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html)|[Get one now](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Get one now](https://www.seeedstudio.com/Grove-Dual-Button-p-4529.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Passive-Buzzer-p-4525.html)|[Adquira agora](https://www.seeedstudio.com/Grove-LED-Pack-p-4364.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Dual-Button-p-4529.html)|
 
 #### Conexão de hardware
 

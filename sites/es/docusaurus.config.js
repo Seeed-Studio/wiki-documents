@@ -237,16 +237,16 @@ module.exports = (async () => {
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
     i18n: {
-      defaultLocale: 'en',
-      locales: ['en'],
+      defaultLocale: 'es',
+      locales: ['es'],
       path: 'i18n',
       localeConfigs: {
-        en: {
-          label: 'English',
+        es: {
+          label: 'Español',
           direction: 'ltr',
-          htmlLang: 'en-US',
+          htmlLang: 'es-ES',
           calendar: 'gregory',
-          path: 'en',
+          path: 'es',
         },
       },
     },

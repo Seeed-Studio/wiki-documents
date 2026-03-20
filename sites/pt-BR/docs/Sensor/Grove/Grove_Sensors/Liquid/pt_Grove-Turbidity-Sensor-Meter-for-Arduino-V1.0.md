@@ -89,7 +89,7 @@ O modo de saída pode ser selecionado ajustando o interruptor na placa. Suporta 
 | Seeeduino V4.2 | Grove - Turbidity Sensor | Base Shield |
 |--------------|----------------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Turbidity-Sensor/img/Grove-Turbidity-Sensor.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 :::note
 

@@ -311,7 +311,7 @@ Existem 5 tipos de cabos Grove disponíveis para seus projetos e os comprimentos
 | 5cm | 20 cm | 30 cm | 40 cm | 50 cm |
 |-----|-------|-------|-------|-------|
 |![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_20.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_30.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_40.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/GroveSystem/images/cable_50.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack.html)|[Get One Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html)|[Get One Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-30cm-Cable-5-PCs-Pack.html)|[Get One Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-40cm-Cable-5-PCs-Pack.html)|[Get One Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-50cm-Cable-5-PCs-Pack.html)|
+|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-5cm-Cable-5-PCs-Pack.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-5-PCs-Pack-p-749.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-30cm-Cable-5-PCs-Pack.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-40cm-Cable-5-PCs-Pack.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-50cm-Cable-5-PCs-Pack.html)|
 
 #### Grove - Cabo Ramificado
 

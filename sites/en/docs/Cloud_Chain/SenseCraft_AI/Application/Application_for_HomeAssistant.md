@@ -198,7 +198,7 @@ Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseC
 Then select **XIAO ESP32S3** and click **Connect**.
 
 :::caution
-Note that although the XIAO ESP32S3 is selected here, we are still using the XIAO ESP32C3!
+Note that although the XIAO ESP32-S3 is selected here, we are still using the XIAO ESP32-C3!
 :::
 
 Click the button below to download the firmware file and click the **Add File** button on the web page to flash the `SSCMA_XIAO_ESP32C3_adapter_sensecraft_v1.1.8.bin` firmware for the `0x0` address.

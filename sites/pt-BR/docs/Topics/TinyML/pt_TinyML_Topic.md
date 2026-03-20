@@ -610,7 +610,7 @@ Wio Terminal oferece suporte a uma variedade de linguagens de programação, inc
 
 ## Aplicação TinyML
 
-Aqui mostraremos alguns ótimos exemplos dos nossos dispositivos TinyML. Esses estudos de caso serão categorizados por cenários de aplicação, então esperamos que você encontre algo de interesse aqui e se junte a nós na realização das suas ideias!</font></td>
+Aqui mostraremos alguns ótimos exemplos dos nossos dispositivos TinyML. Esses estudos de caso serão categorizados por cenários de aplicação, então esperamos que você encontre algo de interesse aqui e se junte a nós na realização das suas ideias!
 
 ### Interação Homem-Máquina
 

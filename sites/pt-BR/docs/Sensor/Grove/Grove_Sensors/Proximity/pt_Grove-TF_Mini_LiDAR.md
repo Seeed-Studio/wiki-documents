@@ -21,7 +21,7 @@ Este produto é baseado no princípio ToF (Time of Flight) e integrado com desig
 
 ToF é a abreviação da tecnologia Time of Flight, e seu princípio de operação é o seguinte: uma luz modulada de infravermelho próximo é enviada pelo sensor e refletida por um objeto; a distância até o objeto a ser medido pode ser convertida pelo sensor calculando a diferença de tempo ou a diferença de fase entre o envio da luz e a reflexão da luz, de modo a produzir a informação de profundidade.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
+[![Adquira agora](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/image/300px-Get_One_Now_Banner.png)](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)
 
 :::warning
     Evite que poeira ou qualquer outro corpo estranho entre na lente; caso contrário, isso pode afetar a transmissão de luz.
@@ -85,7 +85,7 @@ Plataformas Suportadas
 |Seeeduino V4.2| Base Shield|Grove-TF Mini LiDAR|
 |--------------|------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR.html)|
 
 - **Passo 2**. Conecte o Grove-TF-Mini-LiDAR à porta **D2** do Base Shield e conecte o Seeeduino ao PC através de um cabo USB.
 
@@ -185,7 +185,7 @@ SERIAL.print(SeeedTFLidar.get_strength()); //output signal strength value
 | Wio Terminal |  Grove-TF-Mini-LiDAR | Jumper |
 |--------------|-----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Grove-TF-Mini-LiDAR_S.JPG)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TF_Mini_LiDAR/img/Jumper.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Get ONE Now](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|
+|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](https://www.seeedstudio.com/Seeedstudio-Grove-TF-Mini-LiDAR-p-2996.html)|[Adquira agora](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)|
 
 #### Conexão de Hardware
 
