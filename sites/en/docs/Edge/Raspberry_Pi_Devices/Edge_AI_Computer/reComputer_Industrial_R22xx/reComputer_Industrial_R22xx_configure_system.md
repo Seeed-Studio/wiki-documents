@@ -1044,135 +1044,101 @@ If the reComputer you purchased does not include Hailo-8 and you are considering
 
 ## PoE IP Camera
 
-:::note
-- Four Ethernet ports must not be configured on the same network segment: Doing so will cause network conflicts and lead to communication failure.
-- Ethernet ports do not support hot-swapping: You must power down both the development board and the cameras before connecting or disconnecting Ethernet cables; hot-swapping may result in permanent hardware damage to the ports.
-- External power supply for IP cameras is strictly prohibited: Cameras should be powered solely via PoE through the Ethernet cable; providing additional external power may cause current backflow and damage the development board's Ethernet ports.
-:::
 
-1. Connect the network cable and start the network port:
+The reComputer Industrial R22xx series is designed for high-density IP video streams and industrial automation. It features **5 physical Gigabit Ethernet ports** with a hybrid bus architecture to ensure maximum bandwidth and stability.
+
+**Internal Bus Distribution:**
+
+* **eth0 (Native)**: Directly connected to the SoC. It offers the lowest latency and is recommended as the **Primary Uplink (WAN)** or **Management Port**.
+* **eth1 (USB Extension)**: The standalone port located next to the native port. It is extended via the **USB 3.0 bus** and supports **PoE output**.
+* **eth2, eth3, eth4 (PCIe Extension)**: The three consecutive ports. These are extended via the **PCIe bus** and support **PoE output**.
+
+
+1. Technical Specifications
+
+| Category | Specification | Notes |
+| :--- | :--- | :--- |
+| **Total Ports** | 1 (Native) + 4 (Extended) | 5x RJ45 Gigabit Ethernet |
+| **PoE Mode** | **Alternative A (Mode A)** | Power delivered over data pairs (1/2, 3/6) |
+| **PoE Output per Port** | **12W** (Max) | Optimized for standard IP cameras |
+| **Parallel PoE Output** | All 4 ports support 12W simultaneously | Requires sufficient system power input |
+| **Power Input Range** | **9V - 36V DC** | Internal boost circuit steps up to **48V** for PoE |
+| **Safety Features** | Over-current & Under-voltage Protection | **Hot-plugging is strictly prohibited** |
+
+2. Critical Safety Guidelines
+* **NO HOT-PLUGGING**: 
+    > **WARNING**: Plugging or unplugging Ethernet cables while PoE power is active (GPIO High) can cause transient surges that may damage the LAN7800 or PCIe bridge chips. Always follow the "**Connect First, Power Second**" principle.
+* **Power Supply Recommendations**:
+    > While the device supports 9V input, we recommend using a **24V** industrial power supply with at least **72W** (3A) capacity to ensure high conversion efficiency when all 4 PoE ports are under full load (4 × 12W).
+
+
+3. Configuration Steps
+
+- Step 1: Disable Conflicting Services
+To prevent desktop-grade network managers from overwriting industrial static IP settings, disable `NetworkManager`.
 
 ```bash
-echo 652 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio652/direction
-echo 1 > /sys/class/gpio/gpio652/value
-```
-
-2. Configure the network port:
-
-It is recommended to use systemd-networkd for network management; the configuration will not be lost after a reboot, and there will be no conflicts with other network tools. The steps are divided into two parts: "Temporary testing and verification" and "Permanent configuration solidification."
-
-```bash
+# Switch to systemd-networkd
+sudo systemctl disable --now NetworkManager
+sudo systemctl mask NetworkManager
 sudo systemctl enable --now systemd-networkd
-sudo systemctl status systemd-networkd | grep -E 'active|error'
-```
-:::Note: Physical network ports correspond to virtual network port addresses:
-ETH0-eth0
-ETH1-eth4
-ETH2-eth3
-ETH3-eth2
-ETH4-eth1
-:::
-
-3. Using eth1 as an example, where the IP camera's IP address is 10.0.3.200, the network port configuration method is as follows:
-
-- Temporarily configure IP:
-
-```bash
-# Clear existing IP on eth1 to avoid conflicts
-sudo ip addr flush dev eth1
- 
-# Shut down the port and reconfigure
-sudo ip link set eth1 down
-sudo ip addr add 10.0.3.10/24 dev eth1
-sudo ip link set eth1 up
-
-# Verify IP configuration (should display inet 10.0.3.10/24)
-ip addr show eth1 | grep inet
-
-# Test connectivity with the camera (0% packet loss indicates normal status)
-ping 10.0.3.200 -I eth1 -c 3
 ```
 
-- Permanently Configure IP:
+- Step 2: Enable Auto-Power for PoE (GPIO)
+Add the following commands to `/etc/rc.local` before the `exit 0` line to ensure PoE power is enabled on boot.
 
 ```bash
-# Create the eth1 configuration file
-sudo nano /etc/systemd/network/eth1.network
- 
+# Export and set PoE Enable Pin (Example: GPIO 532)
+if [ ! -d "/sys/class/gpio/gpio532" ]; then echo 532 > /sys/class/gpio/export; fi
+echo out > /sys/class/gpio/gpio532/direction
+echo 1 > /sys/class/gpio/gpio532/value
+```
+
+- Step 3: Multi-Interface IP Deployment
+Assign independent subnets to each port and use **RouteMetric** to ensure `eth0` remains the default gateway for internet access.
+
+```bash
+# Configure eth0 (WAN/DHCP) - Highest Priority
+sudo bash -c 'cat > /etc/systemd/network/10-eth0.network <<EOF
 [Match]
-Name=eth1 # Matches the interface name; replace if the actual name differs (e.g., enx00e04c68xxxx)
-
+Name=eth0
 [Network]
-Address=10.0.3.10/24 # Static IP and subnet mask
-DHCP=no # Disable DHCP auto-acquisition
-IPv6AcceptRA=no # Disable IPv6 to reduce interference
+DHCP=yes
+[DHCPv4]
+RouteMetric=10
+EOF'
 
-#[Link]
-NamePolicy=kernel database onboard slot path # Maintain stable interface naming
+# Configure eth1-eth4 (Static IP Segments)
+for i in {1..4}; do
+sudo bash -c "cat > /etc/systemd/network/20-eth$i.network <<EOF
+[Match]
+Name=eth$i
+[Network]
+Address=10.0.$((i+2)).10/24
+[IPv4]
+RouteMetric=$((100+i))
+EOF"
+done
 ```
 
-- Save and exit: Press Ctrl+O → Enter to confirm → Press Ctrl+X.
+4. Verification & Troubleshooting
 
-Other network ports are configured in the same way, supporting up to 4 IP cameras mounted simultaneously. 
-Example of four IP camera configurations, using the relationships in the following table:
+- Check Bus Connectivity
+Use `lspci` and `lsusb` to verify that all controllers are recognized by the system:
+* **PCIe Extended Ports (eth2-4)**: Run `lspci | grep Ethernet`
+* **USB Extended Port (eth1)**: Run `lsusb -t` and look for the `lan78xx` driver.
 
-| Ethernet Port	| Corresponding Camera IP	| Development Board Static IP	| Camera Username and Password| 
-| eth1	| 10.0.3.200	| 10.0.3.10	| admin & c32bdc3e| 
-| eth2	| 10.0.2.200	| 10.0.2.10	| admin & c32bdc3e| 
-| eth3	| 10.1.4.200	| 10.1.4.10	| admin & 9c7d1f96| 
-| eth4	| 10.1.1.200	| 10.1.1.1	| admin & c32bdc3e  | 
-Follow the steps above to configure each network segment :
 
-```bash
-# ========== Batch Temporary Configuration for eth1-eth4 and Connectivity Testing ==========
 
-# eth1 (Corresponding to camera 10.0.3.200)
-sudo ip addr flush dev eth1
-sudo ip link set eth1 down
-sudo ip addr add 10.0.3.10/24 dev eth1
-sudo ip link set eth1 up
+5. FAQ
+* **Q: Why does my camera keep rebooting?**
+    * A: Check if the camera's power consumption exceeds **12W**. High-power PTZ cameras or those with strong IR illuminators may exceed this limit.
+* **Q: Can I use 12V DC input for PoE?**
+    * A: Yes. The internal circuit will boost 12V to 48V. However, ensure your 12V power supply can handle high current, as the conversion loss is higher at lower input voltages.
+* **Q: The interface name is not eth1-4.**
+    * A: Use `ip link` to find the actual kernel name (e.g., `enp1s0`) and update the `Name=` field in your `.network` files.
 
-# eth2 (Corresponding to camera 10.0.2.200)
-sudo ip addr flush dev eth2
-sudo ip link set eth2 down
-sudo ip addr add 10.0.2.10/24 dev eth2
-sudo ip link set eth2 up
-
-# eth3 (Corresponding to camera 10.1.4.200)
-sudo ip addr flush dev eth3
-sudo ip link set eth3 down
-sudo ip addr add 10.1.4.10/24 dev eth3
-sudo ip link set eth3 up
-
-# eth4 (Corresponding to camera 10.1.1.200)
-sudo ip addr flush dev eth4
-sudo ip link set eth4 down
-sudo ip addr add 10.1.1.1/24 dev eth4
-sudo ip link set eth4 up
-
-# Verify IP configuration for all ports (should display the static IP for each port)
-echo -e "\n==== IP Configuration Status for Each Port ===="
-ip addr show | grep -E 'eth[1-4]|inet '
-
-# Test connectivity with all cameras (0% packet loss indicates normal status)
-echo -e "\n==== Connectivity Test for Each Camera ===="
-ping 10.0.3.200 -I eth1 -c 3
-ping 10.0.2.200 -I eth2 -c 3
-ping 10.1.4.200 -I eth3 -c 3
-ping 10.1.1.200 -I eth4 -c 3
-```
-
-Then use VLC for access: 
-
-```bash
-vlc rtsp://admin:c32bdc3e@10.0.3.200/h264/ch1/main/av_stream --no-one-instance &
-vlc rtsp://admin:c32bdc3e@10.0.2.200/h264/ch1/main/av_stream --no-one-instance &
-vlc rtsp://admin:9c7d1f96@10.1.4.200/h264/ch1/main/av_stream --no-one-instance &
-vlc rtsp://admin:c32bdc3e@10.1.1.200/h264/ch1/main/av_stream --no-one-instance
-```
-
-If you need to close all camera windows, execute the following command:
+6. 4-Channel PoE Camera Support Status：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.26-1.png" style={{width:800, height:'auto'}}/></div>
 
