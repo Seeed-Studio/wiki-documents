@@ -8,7 +8,8 @@ const APP_DIRS = {
   en: 'sites/en/docs/Edge/NVIDIA_Jetson/Application',
   zh: 'sites/zh-CN/docs/Edge/NVIDIA_Jetson/Application',
   ja: 'sites/ja/docs/Edge/NVIDIA_Jetson/Application',
-  es: 'sites/es/docs/Edge/NVIDIA_Jetson/Application'
+  es: 'sites/es/docs/Edge/NVIDIA_Jetson/Application',
+  pt: 'sites/pt-BR/docs/Edge/NVIDIA_Jetson/Application'
 };
 
 // 站点语言前缀
@@ -16,7 +17,8 @@ const LANG_URL_PREFIX = {
   en: '',
   zh: '/cn',
   ja: '/ja',
-  es: '/es'
+  es: '/es',
+  pt: '/pt-br'
 };
 
 // 定义分类映射（目录名 -> 配置变量名）

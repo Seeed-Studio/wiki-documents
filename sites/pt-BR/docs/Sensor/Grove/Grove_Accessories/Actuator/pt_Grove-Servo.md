@@ -95,7 +95,7 @@ Aqui vamos mostrar como este Grove - Servo funciona através de uma demonstraç�
 | Seeeduino V4 | Grove - Servo | Base Shield |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 O servo tem três fios: alimentação, terra e sinal. O fio de alimentação é normalmente vermelho e deve ser conectado ao pino de 5V na placa Arduino/Seeeduino. O fio de terra é normalmente preto ou marrom e deve ser conectado a um pino de terra na placa Arduino. O pino de sinal é normalmente amarelo, laranja ou branco e deve ser conectado ao **D5** na placa Arduino. Podemos mudar para a porta digital que quisermos. Mas não se esqueça de mudar o número da porta na definição do código de demonstração ao mesmo tempo.
 
@@ -186,7 +186,7 @@ O método de conexão do servo descrito neste artigo não é a abordagem mais ad
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Servo|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao Raspberry.
 - **Passo 3**. Conecte o Grove - Servo à porta 12 do Base Hat.

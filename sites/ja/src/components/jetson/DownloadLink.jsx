@@ -98,6 +98,21 @@ const cmpVersions = (a, b) => {
           </>
         ),
       },
+      pt: {
+        missingSelection: "Conclua a seleção primeiro ou as informações correspondentes estão ausentes.",
+        link: "Link",
+        file: "Arquivo",
+        sha256: "SHA256",
+        dangerTitle: "Aviso",
+        dangerBody: (
+          <>
+            Se você estiver usando um módulo <strong>Orin NX 16GB/8GB</strong>,{" "}
+            <strong>não ative o modo MAXN SUPER</strong>.<br />
+            A capacidade de resfriamento do <strong>J4011/J4012</strong> é insuficiente para suportá-lo,
+            e forçar esse modo pode resultar em <strong>danos permanentes</strong> ao módulo.
+          </>
+        ),
+      },
     };
   
     const texts = content[lang] || content.en;

@@ -52,6 +52,8 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 
 - **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト：** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
+- **StackForce_ミニ車輪脚ロボットの理論とコード学習** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
+
 ## 主な特徴
 
 1. **オープンソースで低コスト**：オープンソースライセンスに従い、すべてのソースコードと設計ファイルが完全に利用可能で、開発者が自由に学習、修正、二次開発を行えます。

@@ -31,7 +31,7 @@ As an open sourced platform, we welcome contributions from all individuals who w
 
 :::
 
-### [Assignmnents on GitHub](https://github.com/orgs/Seeed-Studio/projects/6)
+### [Assignments on GitHub](https://github.com/orgs/Seeed-Studio/projects/6)
 
 We express our gratitude to contributors by offering a range of rewards based on the difficulty of the assignment (Tier 0/1/2/3), the expected completion time (1/3/7/15 days), the actual submission time, and the quality of the content.
 
@@ -130,3 +130,4 @@ If you have any questions or comments, please do not hesitate to hop on to our f
     </tr>
   </tbody>
 </table>
+

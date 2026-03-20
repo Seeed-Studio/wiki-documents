@@ -13,7 +13,7 @@ keywords:
 sidebar_position: 2
 last_update:
   author: Spencer
-  date: 2024-11-27T03:21:36.491Z
+  date: 2026-03-19
 createdAt: '2024-11-27'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/2_channel_wifi_ac_relay/
@@ -143,7 +143,7 @@ Firefox does not support flashing firmware on ESP devices. Please use Google Chr
 <Tabs>
 <TabItem value='Web Tool'>
 
-You can use this [Web Tool](https://limengdu.github.io/2-Channel_Relay_based_on_XIAO_ESP32C3/) for an easy and direct method to flash your firmware. Simply follow the on-screen instructions.
+You can use this [Web Tool](https://gadgets.seeed.cc/) for an easy and direct method to flash your firmware. Simply follow the on-screen instructions.
 
 - Click the `CONNECT` button to initiate the connection. The tool will automatically update the firmware.
 

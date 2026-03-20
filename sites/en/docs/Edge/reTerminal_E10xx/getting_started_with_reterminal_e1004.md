@@ -1,7 +1,7 @@
 ---
 description: reTerminal E1004 is a 13.3-inch open-source full-color ePaper display powered by ESP32-S3, featuring E Ink® Spectra™ 6 technology and SenseCraft HMI support.
 title: Getting Started with reTerminal E1004
-sidebar_position: 4
+sidebar_position: 5
 keywords:
   - reTerminal E1004
   - ePaper Display

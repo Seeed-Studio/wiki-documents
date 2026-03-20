@@ -16,14 +16,36 @@
  * Props:
  *  - options: Array of products, each with an associated list of L4T versions
  *  - children: Optional custom JSX content for each Select
- *  - lang: Language selection ('en' | 'zh' | 'ja' | 'es')
+ *  - lang: Language selection ('en' | 'zh' | 'ja' | 'es' | 'pt')
  */
 import React, { useEffect } from "react";
 import { Select, Image, ConfigProvider, theme } from "antd";
 import { useColorMode } from '@docusaurus/theme-common';
+import { useLocation } from '@docusaurus/router';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useJetsonStore, useThemeStore } from '@site/src/stores/useJetsonStore';
 
-// 多语言内容配置（最小修改：新增 zh/ja/es，并加入 interfaceUsageLinkText）
+const normalizeLang = (lang = 'en') => {
+  const l = String(lang).toLowerCase();
+
+  if (l === 'cn' || l.startsWith('zh')) return 'zh';
+  if (l.startsWith('ja')) return 'ja';
+  if (l.startsWith('es')) return 'es';
+  if (l.startsWith('pt')) return 'pt';
+  if (l.startsWith('en')) return 'en';
+
+  return 'en';
+};
+
+const getLangFromPathname = (pathname = '/') => {
+  if (pathname.startsWith('/pt-br')) return 'pt';
+  if (pathname.startsWith('/cn')) return 'zh';
+  if (pathname.startsWith('/ja')) return 'ja';
+  if (pathname.startsWith('/es')) return 'es';
+  return 'en';
+};
+
+// 多语言内容配置（最小修改：新增 zh/ja/es/pt，并加入 interfaceUsageLinkText）
 const content = {
   en: {
     selectProduct: "Select a Product",
@@ -52,10 +74,27 @@ const content = {
     hardwareInterface: "Interfaz de hardware",
     hardwareInterfaceText: "Consulte aquí el uso de la interfaz de la carrier board:",
     interfaceUsageLinkText: "uso de la interfaz",
+  },
+  pt: {
+    selectProduct: "Selecione um produto",
+    selectJetsonLinux: "Selecione o Jetson Linux",
+    hardwareInterface: "Interface de hardware",
+    hardwareInterfaceText: "Confira aqui o uso da interface da carrier board:",
+    interfaceUsageLinkText: "uso da interface",
   }
 };
 
-export const ProductSelect = ({ children, options, lang = 'en' }) => {
+const useLocalizedTexts = (lang) => {
+  const { i18n } = useDocusaurusContext();
+  const location = useLocation();
+
+  const detectedLang = lang || getLangFromPathname(location.pathname || '/') || i18n.currentLocale;
+  const currentLang = normalizeLang(detectedLang);
+
+  return content[currentLang] || content.en;
+};
+
+export const ProductSelect = ({ children, options, lang }) => {
 
   // L4T version and corresponding JetPack SDK version
   const L4T2JPVers = {
@@ -97,7 +136,7 @@ export const ProductSelect = ({ children, options, lang = 'en' }) => {
   // Sync the Zustand theme state with Docusaurus color mode
   useEffect(() => {
     setTheme(colorMode === 'dark' ? 'dark' : 'light');
-  }, [colorMode]);
+  }, [colorMode, setTheme]);
 
   const currentTheme = useThemeStore((state) => state.theme);
 
@@ -105,7 +144,7 @@ export const ProductSelect = ({ children, options, lang = 'en' }) => {
   const interfaceUsage = selectedProduct?.interfaceUsage
   
   // Get texts for current language
-  const texts = content[lang] || content.en;
+  const texts = useLocalizedTexts(lang);
   
   return (
     <ConfigProvider
@@ -128,7 +167,7 @@ export const ProductSelect = ({ children, options, lang = 'en' }) => {
         />
         <Select
           options={options}
-          value={selectedProduct}
+          value={product}
           showSearch
           size='large'
           placeholder={texts.selectProduct}

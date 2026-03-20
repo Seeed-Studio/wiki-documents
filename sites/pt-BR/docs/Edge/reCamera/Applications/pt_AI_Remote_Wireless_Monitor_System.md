@@ -102,7 +102,7 @@ Para concluir este projeto, você precisará de qualquer uma das três reCamera 
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora🖱️</font></span></strong>
 
 </a>
 
@@ -112,7 +112,7 @@ Para concluir este projeto, você precisará de qualquer uma das três reCamera 
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 
 </a>
 
@@ -122,7 +122,7 @@ Para concluir este projeto, você precisará de qualquer uma das três reCamera 
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 
 </a>
 
@@ -166,7 +166,7 @@ O reTerminal aqui pode ser substituído por qualquer dispositivo de computação
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora🖱️</font></span></strong>
 
 </a>
 
@@ -176,7 +176,7 @@ O reTerminal aqui pode ser substituído por qualquer dispositivo de computação
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html" target="_blank" rel="noopener noreferrer">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
 
 </a>
 

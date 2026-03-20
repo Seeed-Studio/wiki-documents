@@ -121,7 +121,7 @@ O código Arduino fornecido aqui permite dialogar com o sensor e modificar todos
 | Seeeduino V4.3 |  Grove - Lightning Sensor AS3935 |
 |:--------------:|:--------------:|
 | <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/images/cover.JPG" style={{width:250, height:'auto'}}/></div> | <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/6.jpg" style={{width:250, height:'auto'}}/></div> |
-|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[**Get ONE Now**](https://www.seeedstudio.com/Grove-Lightning-Sensor-AS3935-p-5603.html)|
+|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[**Adquira agora**](https://www.seeedstudio.com/Grove-Lightning-Sensor-AS3935-p-5603.html)|
 
 :::caution
 Verifique se as ilhas frontais do sensor foram soldadas antes do uso. Se a posição indicada na imagem não estiver soldada, você poderá ter problemas com o dispositivo IIC não sendo detectado ao executar o programa posteriormente.
