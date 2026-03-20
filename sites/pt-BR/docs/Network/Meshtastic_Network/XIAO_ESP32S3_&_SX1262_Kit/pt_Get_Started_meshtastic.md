@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_SX1262_kit_for_meshta
 [Meshtastic®](https://meshtastic.org/) é uma rede mesh descentralizada, off-grid e de código aberto, criada para rodar em dispositivos acessíveis e de baixo consumo de energia. A Seeed Studio fornece uma ampla gama de dispositivos Meshtastic prontos para uso para entusiastas e usuários industriais. O Kit XIAO ESP32S3 & Wio-SX1262 é uma solução flexível para desenvolvedores e makers de Meshtastic.
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
     </a>
 </div>
 ## Gravar Firmware

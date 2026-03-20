@@ -154,7 +154,7 @@ Neste exemplo, usamos o XIAO SAMD21 como placa de controle principal para medir 
 | Seeed Studio XIAO SAMD21 |  Seeed Studio Expansion Base for XIAO | Grove ORP Sensor Pro |
 |:--------------:|:--------------:|:--------------:|
 |<div align="center"><img width ="210" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg"/></div>| <div align="center"><img width ="210" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div> | <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/sensor.jpg"/></div> |
-|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)| [**Get ONE Now**](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-Pro-p-5570.html) |
+|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)| [**Adquira agora**](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-Pro-p-5570.html) |
 
 #### Passos de Operação
 

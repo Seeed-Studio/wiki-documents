@@ -84,7 +84,7 @@ Após esta seção, você poderá fazer o Sensor de Temperatura One Wire funcion
 | Seeeduino Lotus V1.1 |Sensor de Temperatura One Wire|
 |--------------|--------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus/img/small.png" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Adquira agora](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
 
 #### Conexão de Hardware
 
@@ -189,7 +189,7 @@ void loop(void)
 | Raspberry Pi 4 Model B |Grove - Base Hat para Raspberry Pi|Sensor de Temperatura One Wire|
 |--------------|-------------|-----------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/One-Wire-Temperature/img/small.png" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Adquira agora](https://www.seeedstudio.com/One-Wire-Temperature-Sensor-p-1235.html)|
 
 #### Conectando o hardware
 

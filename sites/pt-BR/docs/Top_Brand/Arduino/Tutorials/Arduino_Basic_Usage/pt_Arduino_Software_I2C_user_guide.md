@@ -100,7 +100,7 @@ Aqui vamos mostrar como isso funciona por meio de uma demonstração simples. An
 | Seeeduino V4.2 | Grove - OLED Display 1.12" | Base Shield |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/product.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 Este é um módulo fácil de usar, o que você precisa fazer é conectar o módulo à **porta D2** de um Base Shield.
 
@@ -168,7 +168,7 @@ Aqui vamos mostrar como isso funciona por meio de uma demonstração simples. An
 | Seeeduino V4 | Grove - OLED Display 1.12`` | Base Shield |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/product.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 - Conecte um Grove - OLED Display 1.12 à **porta D2** e o outro à **porta D4**.
 
