@@ -82,7 +82,7 @@ Este exemplo simplesmente lê do GPS usando software serial e envia de volta pel
 | Seeeduino V4.2 | Base Shield|  Grove - GPS |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 
 - **Passo 2.** Conecte o Grove - GPS à porta **D2** do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove - Base Shield ao Seeeduino.
@@ -180,7 +180,7 @@ void clearBufferArray()                     // function to clear buffer array
 | Raspberry pi | GrovePi_Plus | Grove - GPS |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-GPS/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Adquira agora](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
 - **Passo 3.** Conecte o sensor ao soquete **RPISER** do grovepi+ usando um cabo Grove.

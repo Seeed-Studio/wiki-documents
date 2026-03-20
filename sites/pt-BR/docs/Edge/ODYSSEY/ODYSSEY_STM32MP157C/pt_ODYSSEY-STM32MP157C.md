@@ -18,7 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/ODYSSEY-STM32MP157C/
 
 O ODYSSEY – STM32MP157C é um computador de placa única baseado no STM32MP157C, um processador de núcleo duplo Arm-Cortex-A7 operando a 650Mhz. O processador também integra um coprocessador Arm Cortex-M4, o que o torna adequado para tarefas em tempo real. O ODYSSEY – STM32MP157C é criado na forma de um SoM (system on module) mais uma placa Carrier. O SoM é composto pelo MPU, PMIC, RAM e a placa Carrier tem o formato do Raspberry Pi. A placa Carrier inclui todos os periféricos necessários, incluindo Ethernet Gigabit, WiFi/BLE, alimentação DC, USB Hosts, USB-C, MIPI-DSI, DVP para câmera, áudio, etc. Com esta placa, os clientes podem avaliar rapidamente o SoM e implantá-lo facilmente e rapidamente em sua própria placa Carrier.
 
-[![Get one now](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)
+[![Adquira agora](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)
 
 ## Recursos
 
@@ -622,7 +622,7 @@ sudo apt install python3 python3-pip -y
 | ODYSSEY – STM32MP157C |  Grove - Buzzer | Grove Base Hat for Raspberry Pi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Buzzer.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao ODYSSEY - STM32MP157C.
 
@@ -666,7 +666,7 @@ ouviremos um som vindo do buzzer se tudo tiver corrido bem.
 | ODYSSEY – STM32MP157C |  Grove - Button | Grove Base Hat for Raspberry Pi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-P.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Button-P.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao ODYSSEY - STM32MP157C.
 
@@ -710,7 +710,7 @@ veremos algumas informações no terminal se o botão tiver sido pressionado.
 | ODYSSEY – STM32MP157C |  Grove - Temperature Sensor | Grove Base Hat for RasPi |
 |--------------|-------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Temperature_Sensor_V1.2/img/Grove_Temperature_Sensor_View_little.jpg)|![image](https://github.com/SeeedDocument/Grove_Base_Hat_for_Raspberry_Pi/raw/master/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
+|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao ODYSSEY - STM32MP157C.
 
@@ -754,7 +754,7 @@ veremos os dados de temperatura no terminal se tudo tiver ocorrido bem.
 | ODYSSEY – STM32MP157C | Grove Base Hat para RasPi |
 |--------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
+|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|
 
 - **Etapa 2**. Conecte o Grove Base Hat ao ODYSSEY - STM32MP157C.
 
@@ -797,7 +797,7 @@ Nesta seção, explicaremos o princípio de controle da programação I2S no Lin
 | ODYSSEY – STM32MP157C | ReSpeaker 2-Mics Pi HAT |
 |--------------|----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/perspective-19-210X157.png)|![image](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/res-thumbnail.png)|
-|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Get ONE Now](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
+|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)|[Adquira agora](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT.html)|
 
 - **Etapa 2.** De acordo com o [guia de instalação de hardware](https://wiki.seeedstudio.com/pt-br/ReSpeaker_2_Mics_Pi_HAT/#Getting-Started) insira o ReSpeaker 2-Mics Pi HAT no ODYSSEY – STM32MP157C.
 

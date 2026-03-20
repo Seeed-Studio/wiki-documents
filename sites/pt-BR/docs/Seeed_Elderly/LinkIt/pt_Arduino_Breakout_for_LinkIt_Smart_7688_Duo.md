@@ -68,7 +68,7 @@ Nesta aplicação simples, você fará um buzzer emitir sons diferentes. Antes d
 |LinkIt Smart 7688 Duo|Cabo USB|UARTBee |Jumpers x 3|Grove - Buzzer
 |---|---|---|---|---|
 |![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/102110017%206.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/48cmUSBc.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/UartSBee%20V5_01.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/jw100n.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/107020000%201.jpg)
-|[**Get One Now**](https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html)|[**Get One Now**](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|[**Get One Now**](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)|[**Get One Now**](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)|[**Get One Now**](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)
+|[**Adquira agora**](https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html)|[**Adquira agora**](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|[**Adquira agora**](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)|[**Adquira agora**](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)|[**Adquira agora**](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)
 
 - Etapa 1 Consulte isto para conectar seu LinkIt Smart 7688 Duo à internet.
 

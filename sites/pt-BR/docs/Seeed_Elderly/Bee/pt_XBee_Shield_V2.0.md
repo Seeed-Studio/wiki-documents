@@ -43,7 +43,7 @@ Aqui mostraremos como este XBee Shield V2.0 funciona com o RF Bee. Também podem
 | XBee Shield V2.0 | RF Bee |
 |----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/XBee%20Shield%20V2.0_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/XBee_Shield_V2.0/img/rfbee1_s.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html)|[Get ONE Now](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
+|[Adquira agora](https://www.seeedstudio.com/XBee-Shield-V2.0-p-1375.html)|[Adquira agora](https://www.seeedstudio.com/RFbee-V1.1-Wireless-arduino-compatible-node-p-614.html)|
 
 - Conecte o RF Bee ao XBee Sheild V2.0.
 

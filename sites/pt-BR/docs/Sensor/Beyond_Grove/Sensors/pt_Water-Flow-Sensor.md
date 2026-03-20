@@ -102,7 +102,7 @@ A cada volta da roda, o volume de água que flui através dela é uma certa quan
 |Placa Seeeduino |Grove Base Shield|Sensor de Fluxo de Água|
 |--------------|--------------|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/SeeeduinoV4/images/Seeeduino_s.png)| ![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/base_shield.png)| ![enter image description here](https://files.seeedstudio.com/wiki/Water_Flow_Sensor/IMG/Water-Flow-Sensor.png)
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2.html)|[Get ONE Now](https://www.seeedstudio.com/catalogsearch/result/?q=Water+flow+sensor)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2.html)|[Adquira agora](https://www.seeedstudio.com/catalogsearch/result/?q=Water+flow+sensor)|
 
 #### Conexão de Hardware
 

@@ -175,7 +175,7 @@ O módulo é usado principalmente para detectar luz infravermelha. Ele gera sina
 | Seeeduino V4.2 | Base Shield| Grove-Flame_Sensor |Grove - Red LED|
 |--------------|-------------|-----------------|-----|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Flame_Sensor/img/45d_small.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Red_LED/img/Red%20LED_s.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Flame-Sensor-p-1450.html)|[Get One Now](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Flame-Sensor-p-1450.html)|[Adquira agora](https://www.seeedstudio.com/s/Grove-Red-LED-p-1142.html)|
 
 - **Passo 2.** Conecte o Grove-Flame_Sensor à porta **D2** do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove - Red LED à porta **D3** do Grove-Base Shield.
@@ -287,7 +287,7 @@ Quando o código terminar de ser enviado, o LED acenderá quando o Sensor de Cha
 | Raspberry pi | GrovePi_Plus | Grove-Flame_Sensor |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Flame_Sensor/img/45d_small.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Flame-Sensor-p-1450.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Flame-Sensor-p-1450.html)|
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
 - **Passo 3.** Conecte o Grove-Flame_Sensor à porta **D2** do GrovePi_Plus.

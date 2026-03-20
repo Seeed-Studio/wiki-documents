@@ -1,12 +1,23 @@
 {
   "zh-CN": {
     "Trilateration": "三角定位",
-    "Get One Now": "立即获取"
+    "Get One Now": "立即获取",
+    "Check More": "查看更多",
+    "Learn More": "了解更多"
   },
   "ja": {
-    "Get One Now": "今すぐ入手"
+    "Get One Now": "今すぐ入手",
+    "Check More": "もっと見る",
+    "Learn More": "詳しく見る"
   },
   "es": {
-    "Get One Now": "Consigue uno ahora"
+    "Get One Now": "Consigue uno ahora",
+    "Check More": "Ver más",
+    "Learn More": "Más información"
+  },
+  "pt-BR": {
+    "Get One Now": "Adquira agora",
+    "Check More": "Ver mais",
+    "Learn More": "Saiba mais"
   }
 }

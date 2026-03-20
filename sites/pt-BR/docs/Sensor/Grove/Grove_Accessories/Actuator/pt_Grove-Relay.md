@@ -276,7 +276,7 @@ Você pode sair deste programa simplesmente pressionando ++ctrl+c++.
 | Raspberry pi | GrovePi_Plus| Grove-Button  |Grove-Relay|
 |--------------|-------------|-----------------|-----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Relay/img/button_s.jpg)|![](https://files.seeedstudio.com/wiki/Grove-Relay/img/Thumbnail.jpg)|
-|<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/GrovePi%2B-p-2241.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Button-p-766.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank">Get One Now</a>|
+|<a href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/GrovePi%2B-p-2241.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Grove-Button-p-766.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Grove-Relay-p-769.html" target="_blank">Adquira agora</a>|
 
 - **Passo 1.** Conecte o GrovePi_Plus ao Raspberry.
 

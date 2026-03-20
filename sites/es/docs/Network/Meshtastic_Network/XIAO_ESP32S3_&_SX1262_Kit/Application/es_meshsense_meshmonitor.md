@@ -1,11 +1,10 @@
 ---
-description: Tutorial de configuración de puerta de enlace MQTT de Meshtastic basado en XIAO ESP32S3 y kit Wio-SX1262. Permite mensajería global, proporciona un respaldo cuando las señales de malla son débiles y garantiza una entrega de mensajes más rápida a través de Internet. 
-title: Monitor de Red Meshtastic
+description: Meshtastic Network Monitor es una herramienta que te permite visualizar, gestionar y monitorizar nodos en una red mallada Meshtastic.
+title: Meshtastic Network Monitor
 keywords:
   - Meshtastic
   - Source Code
-  - PlatformIO
-  - T1000-E
+  - Xiao ESP32s3
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_meshmonitor
 sku: 102010611,113110064
@@ -22,43 +21,43 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-## Introducción al Monitor de Red Meshtastic
+## Introducción a Meshtastic Network Monitor
 
-El Monitor de Red [Meshtastic](https://meshtastic.org/docs/introduction/) es una herramienta que te permite visualizar, gestionar y monitorizar nodos en una red de malla Meshtastic. Proporciona información en tiempo real sobre el estado, el enrutamiento y la comunicación entre dispositivos. El monitor es el analizador Meshtastic que recopila datos a través de una puerta de enlace conectada o un servidor MQTT, visualiza la topología de la red y muestra información de los nodos como estado de la batería, intensidad de la señal y ubicación GPS. También puede funcionar como un mapa de nodos Meshtastic.
+[Meshtastic](https://meshtastic.org/docs/introduction/) Network Monitor es una herramienta que te permite visualizar, gestionar y monitorizar nodos en una red mallada Meshtastic. Proporciona información en tiempo real sobre el estado, el enrutamiento y la comunicación entre dispositivos. El monitor es el analizador Meshtastic que recopila datos a través de un gateway conectado o de un servidor MQTT, visualiza la topología de la red y muestra información de los nodos como el estado de la batería, la intensidad de la señal y la ubicación GPS. También puede funcionar como un mapa de nodos Meshtastic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MeshsenseScreenshot.png" style={{width:900, height:'auto'}}/></div>
 
 **Casos de uso**
 
-* Mapa de nodos Meshtastic. Seguimiento y visualización de nodos exteriores en áreas remotas.
-* Analizador Meshtastic. Monitorización del rendimiento de la comunicación y del enrutamiento en redes de malla.
-* Monitor Meshtastic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
+* Mapa de nodos Meshtastic. Seguimiento y visualización de nodos exteriores en zonas remotas.
+* Analizador Meshtastic. Monitorización del rendimiento de la comunicación y del enrutamiento en redes malladas.
+* Monitor Meshtatsic. Depuración y prueba de la conectividad de red para dispositivos Meshtastic.
 
 **Monitores Meshtastic comunes**
 
-* Meshsense: [haz clic aquí](https://affirmatech.com/meshsense) para saber más
-* Meshmonitor: [haz clic aquí](https://meshmonitor.org/) para saber más
+* Meshsense: [click here](https://affirmatech.com/meshsense) para saber más
+* Meshmonitor: [click here](https://meshmonitor.org/) para saber más
 
 **Cómo conectarse a un monitor Meshtastic**
 
 1. Configura tus nodos Meshtastic y asegúrate de que formen una malla funcional.
-2. Configura al menos un nodo como puerta de enlace (por ejemplo, puerta de enlace MQTT).
-3. Conecta la aplicación de monitorización a la puerta de enlace o al servidor MQTT.
+2. Configura al menos un nodo como gateway (por ejemplo, MQTT Gateway).
+3. Conecta la app del monitor al gateway o al servidor MQTT.
 4. Verifica que los nodos sean visibles y estén informando su estado en la interfaz del monitor.
 
 ## Comienza con Meshsense
 
 ### Configuración
 
-#### Preparación de la aplicación
+#### Preparación de la app
 
-Descarga e instala la aplicación **Meshsense** para tu plataforma: [Descarga de la App Meshsense](https://affirmatech.com/meshsense)
+Descarga e instala la app **Meshsense** para tu plataforma: [Meshsense App Download](https://affirmatech.com/meshsense)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPDownload.png" style={{width:900, height:'auto'}}/></div>
 
 #### Preparación del dispositivo
 
-Necesitarás un **Kit Seeed Xiao ESP32S3 & SX1262 Meshtastic** configurado como puerta de enlace MQTT. Esto permite la comunicación en tiempo real entre tu red Meshtastic y Meshsense. Si también quieres monitorizar y mostrar la posición, añade un módulo GPS.
+Necesitarás un **Seeed Xiao ESP32S3 & SX1262 Meshtastic Kit** configurado como gateway MQTT. Esto permite la comunicación en tiempo real entre tu red Meshtastic y Meshsense. Si también quieres monitorizar y mostrar la posición, añade un módulo GPS.
 
 <table align="center">
 <tbody><tr>
@@ -83,9 +82,9 @@ Necesitarás un **Kit Seeed Xiao ESP32S3 & SX1262 Meshtastic** configurado como 
 </tr>
 </tbody></table>
 
-#### Configuración de la puerta de enlace MQTT
+#### Configuración del gateway MQTT
 
-Sigue el tutorial de configuración oficial para configurar mqtt: [Configuración de la puerta de enlace MQTT de Xiao ESP32S3 & SX1262](https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)
+Sigue el tutorial de configuración oficial para configurar mqtt: [Xiao ESP32S3 & SX1262 MQTT Gateway Setup](https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)
 
 :::tip
 Para mostrar la ubicación GPS en tiempo real, asegúrate de que el GPS esté habilitado en tu nodo. Y mientras configuras MQTT, asegúrate de que se permita el reporte de ubicación.
@@ -98,7 +97,7 @@ Para mostrar la ubicación GPS en tiempo real, asegúrate de que el GPS esté ha
 
 Conecta tu ordenador a la misma red Wi-Fi que el kit Xiao ESP32S3. Asegúrate de que sea una red wifi de 2,4G.
 
-Abre un terminal serie (por ejemplo, Arduino Serial Monitor o PuTTY) para encontrar la dirección IP de tu dispositivo Xiao. Puedes usar el [monitor serie web de Meshtastic](https://flasher.meshtastic.org/).
+Abre un terminal serie (por ejemplo, Arduino Serial Monitor o PuTTY) para encontrar la dirección IP de tu dispositivo Xiao. Puedes usar el [Meshtastic web serial monitor](https://flasher.meshtastic.org/).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/IPAdress.png" style={{width:500, height:'auto'}}/></div>
 
@@ -114,16 +113,16 @@ Una vez conectado, tu nodo Meshtastic debería aparecer en Meshsense.
 
 #### Configuración de hardware
 
-Para mostrar las posiciones de los nodos, conecta un **módulo GPS L76K** al kit Xiao ESP32S3. [Haz clic aquí](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) para conseguir uno ahora.
+Para mostrar las posiciones de los nodos, conecta un **módulo L76K GPS** al kit Xiao ESP32S3. [Click here](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) to get one now.
 
 #### Configuración de software
 
-* En la aplicación Meshsense, asegúrate de que el reporte de GPS esté habilitado.
-* Una vez conectado, la aplicación mostrará la ubicación en tiempo real de cada nodo en el mapa. Puedes ver la posición de tu nodo directamente en la APP.
+* En la app Meshsense, asegúrate de que el reporte de GPS esté habilitado.
+* Una vez conectado, la app mostrará la ubicación en tiempo real de cada nodo en el mapa. Puedes ver la posición de tu nodo directamente en la APP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/APPPPosition.png" style={{width:500, height:'auto'}}/></div>
 
-También en el mapa del sitio web de Meshsense puedes ver tu posición en tiempo real.
+También en el mapa del sitio web de Meshsense, puedes ver tu posición en tiempo real.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Meshmonitor/MapDisplay.png" style={{width:500, height:'auto'}}/></div>
 
