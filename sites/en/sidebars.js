@@ -3863,8 +3863,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
               ]
             },
-            //flashing jetpack page
+            // flashing jetpack page
             'Edge/NVIDIA_Jetson/Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/Jetson_Debug_Guide',
           ]
         },
         // Applications
