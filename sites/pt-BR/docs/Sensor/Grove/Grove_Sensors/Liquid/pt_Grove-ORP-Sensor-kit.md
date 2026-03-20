@@ -58,7 +58,7 @@ Um Sensor de Potencial de Oxirredução (ORP) mede a atividade de oxidantes e re
 | Seeeduino Lotus | Kit de Sensor Grove-ORP | 
 |--------------|--------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-ORP-Sensor/IMG/thumb.png" alt="pir" width={600} height="auto" /></p>
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-501Z-p-4575.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|[Adquira agora](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-501Z-p-4575.html)|
 
 #### Conexão de Hardware
 

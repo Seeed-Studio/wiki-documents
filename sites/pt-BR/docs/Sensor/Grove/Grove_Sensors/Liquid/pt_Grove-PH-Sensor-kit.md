@@ -60,7 +60,7 @@ Você está tentando encontrar um sensor/medidor de PH fácil de usar e com bom 
 | Seeeduino Lotus | Grove-PH Sensor kit | 
 |--------------|--------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Seeeduino_Lotus_Cortex-M0-/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>| <p><img src="https://files.seeedstudio.com/wiki/Grove-PH_Sensor_kit/IMG/thumb.png" alt="pir" width={600} height="auto" /></p>
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PH-Sensor-Kit-E-201C-Blue-p-4577.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html)|[Adquira agora](https://www.seeedstudio.com/Grove-PH-Sensor-Kit-E-201C-Blue-p-4577.html)|
 
 #### Conexão de Hardware
 

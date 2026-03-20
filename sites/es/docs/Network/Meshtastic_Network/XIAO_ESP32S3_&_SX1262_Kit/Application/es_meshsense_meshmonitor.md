@@ -76,7 +76,7 @@ Necesitarás un **Seeed Xiao ESP32S3 & SX1262 Meshtastic Kit** configurado como 
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>

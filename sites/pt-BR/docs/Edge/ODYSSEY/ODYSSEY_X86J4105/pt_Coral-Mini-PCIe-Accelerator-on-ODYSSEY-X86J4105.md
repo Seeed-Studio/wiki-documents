@@ -72,7 +72,7 @@ O M.2 Accelerator é uma placa M.2 de chave dupla (chaves B+M), projetada para s
 | Coral Mini PCIe Accelerator | ODYSSEY  X86J41x5 |
 |--------------|-------------|
 |![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/M.2.jpg)|![ ](https://files.seeedstudio.com/wiki/Coral_M.2_Accelerator_B_M_key/img/PC.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)|[Get ONE Now](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html)|
+|[Adquira agora](https://www.seeedstudio.com/Coral-M-2-Accelerator-B-M-key-p-4411.html)|[Adquira agora](https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html)|
 
 #### Conexão de hardware
 

@@ -52,7 +52,7 @@ Esta placa é alimentada pela porta Micro-USB, se comunica com o Wio LTE via por
 | Placas Wio LTE |   Wio-Extension-RTC  |  Grove - Buzzer |Grove - LED Vermelho |
 |--------------|-------------|-----------------|---------|
 |![enter image description here](https://www.seeedstudio.site/media/catalog/product/cache/ef3164306500b1080e8560b2e8b5cc0f/h/t/httpsstatics3.seeedstudio.comseeedfile2018-06bazaar837387_img_0005a.jpg)|![enter image description here](https://www.seeedstudio.site/media/catalog/product/cache/ef3164306500b1080e8560b2e8b5cc0f/p/r/preview_4_2.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Buzzer/images/Grove%20Buzzer.jpg)|![enter image description here](https://www.seeedstudio.site/media/catalog/product/cache/ef3164306500b1080e8560b2e8b5cc0f/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Wio-Extension-RTC-p-4002.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Wio-Extension-RTC-p-4002.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Buzzer.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
 
 >Como a Wio Extension - RTC apenas controla o conjunto de alimentação USB a partir do I2C, você pode usar esta placa para gerenciar a alimentação praticamente de todas as placas MCU alimentadas por USB.
 

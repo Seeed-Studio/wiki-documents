@@ -45,7 +45,7 @@ Mais importante ainda, isto é mais do que apenas uma superposição da quantida
 |Seeeduino XIAO|Grove Breadboard|Grove - 8 Channel I2C Multiplexer/I2C Hub (TCA9548A)|
 |--------|-----------------------|------------|
 |![](https://files.seeedstudio.com/products/102010328/img/seeeduino-XIAO-thumbnail.jpg)|![](https://files.seeedstudio.com/products/103020232/img/103020232-thumbnail.png)|![](https://files.seeedstudio.com/products/103020293/img/Grove-8-Channel-I2C-Hub-TCA9548A-thumbnail.jpg)|
-|[Get one now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get one now](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Get one now](https://www.seeedstudio.com/Grove-8-Channel-I2C-Hub-TCA9548A-p-4398.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Breadboard-p-4034.html)|[Adquira agora](https://www.seeedstudio.com/Grove-8-Channel-I2C-Hub-TCA9548A-p-4398.html)|
 
 Também precisamos de até 8 dispositivos I2C, clique [aqui](https://www.seeedstudio.com/catalogsearch/result/?q=i2c) para encontrar os dispositivos Grove I2C de que você gostar.
 Neste exemplo, usamos três dispositivos I2C.
