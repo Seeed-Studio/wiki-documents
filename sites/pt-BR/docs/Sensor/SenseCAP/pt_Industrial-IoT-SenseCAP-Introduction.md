@@ -52,7 +52,7 @@ Wild IoT refere-se à tecnologia de implantação de redes de sensores em ambien
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecap_t1000_tracker/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 
@@ -67,16 +67,16 @@ SenseCAP S210X é uma série de sensores sem fio LoRaWAN®. Ele pode cobrir uma 
 |Temp & Umidade do Ar|Luz|TH do Ar & CO2|Umidade & Temp do Solo|
 |------------------|--------------------------|-----------------------|-----------------------|
 |<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2101.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2102.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2103.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2104.png" alt="pir" width={300} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2102-LoRaWAN-Light-Intensity-Sensor-p-5355.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2103-LoRaWAN-CO2-Temperature-and-Humidity-Sensor-p-5356.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2104-LoRaWAN-Soil-Temperature-and-Moisture-Sensor-p-5357.html)</p>|
 
 |Umidade & Temperatura do Solo & Porosidade & EC|Umidade & Temp do Solo & EC|PH|Temperatura PT1000|
 |------------------|--------------------------|-----------------------|--------------------------|
 |<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2108.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2105.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/2106.png" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993078-sensecap-s2107-temperature-sensor-45font.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={300} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2108-Soil-Moisture-Temperature-and-Pore-EC-Sensor-p-5825.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Adquira agora!](https://www.seeedstudio.com/SenseCAP-S2107-Temperature-Sensor-p-5807.html)</p>
+|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2108-Soil-Moisture-Temperature-and-Pore-EC-Sensor-p-5825.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2107-Temperature-Sensor-p-5807.html)</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 
@@ -91,7 +91,7 @@ SenseCAP S210X é uma série de sensores sem fio LoRaWAN®. Ele pode cobrir uma 
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 
@@ -252,7 +252,7 @@ Hoje, podemos usar um coletor LoRa sem fio, configurar sensores para se conectar
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/develop_an_industrial_lorawan_sensor/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 
@@ -264,7 +264,7 @@ Nesta série de artigos, compartilharei como construo uma casa inteligente de qu
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/home_assistant_with_sensecap_lorawan_sensors/" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
 

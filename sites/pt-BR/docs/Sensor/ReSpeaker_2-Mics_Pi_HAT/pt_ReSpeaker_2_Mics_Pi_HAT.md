@@ -21,7 +21,7 @@ ReSpeaker 2-Mics Pi HAT é uma placa de expansão de dois microfones para Raspbe
 A placa é desenvolvida com base no WM8960, um codec estéreo de baixo consumo. Existem 2 microfones em ambos os lados da placa para coletar sons e ela também fornece 3 LEDs RGB APA102, 1 botão de usuário e 2 interfaces Grove on-board para expandir suas aplicações. Além disso, o conector de áudio de 3,5 mm ou a saída para alto-falante JST 2.0 estão disponíveis para saída de áudio.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 ## Recursos

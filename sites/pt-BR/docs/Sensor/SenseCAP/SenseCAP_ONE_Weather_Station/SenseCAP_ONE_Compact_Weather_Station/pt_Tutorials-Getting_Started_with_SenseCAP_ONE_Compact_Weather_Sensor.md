@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 03/18/2026
-  author: Kian
+  date: 12/25/2025
+  author: Janet
 createdAt: '2023-04-13'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Introdução ao SenseCAP ONE Compact Weather Sensor
@@ -27,13 +27,13 @@ url: https://wiki.seeedstudio.com/pt-br/Getting_Started_with_SenseCAP_ONE_Compac
 
 ### Introdução à interface do dispositivo
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3_V2.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3.png" /></div>
 
 Existem dois conectores na parte inferior do dispositivo.
 
-- A interface USB Type-C permite que você conecte o seu computador ao dispositivo com um cabo USB Type-C comum para configuração.
+- A interface USB Type-C permite conectar o seu computador ao dispositivo com um cabo USB Type-C comum para configuração.
 
-- A interface principal de dados pode ser conectada ao cabo M12 de 8 pinos, suportando múltiplos protocolos de barramento
+- A interface principal de dados pode ser conectada ao cabo M12 de 8 pinos, suportando vários protocolos de barramento
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
@@ -45,9 +45,9 @@ Existem dois conectores na parte inferior do dispositivo.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image6.png" /></div>
 
-O dispositivo adota um conector M12 de 8 pinos, os pinos de cores diferentes fornecem alimentação e comunicação de dados (conforme mostrado no diagrama acima).
+O dispositivo adota um conector M12 de 8 pinos; os pinos de cores diferentes fornecem alimentação e comunicação de dados (conforme mostrado no diagrama acima).
 
-Ao trabalhar com RS-485, você pode conectar apenas 4 fios (sem usar a função de aquecimento), e o restante pode ser individualmente envolvido com fita para evitar curto-circuito
+Ao trabalhar com RS-485, você pode conectar apenas 4 fios (sem usar a função de aquecimento), e o restante pode ser individualmente enrolado com fita para evitar curto-circuito
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
@@ -57,17 +57,17 @@ Os furos do cabo e os pinos do conector do dispositivo devem estar alinhados qua
 
 Conecte o cabo e aperte-o no sentido horário
 
-Nota: o cabo deve estar alinhado com a parte inferior antes de inseri-lo na base. Caso contrário, os pinos desalinhados podem causar anomalias na comunicação.
+Observação: o cabo deve estar alinhado com a parte inferior antes de ser inserido. Caso contrário, os pinos desalinhados podem causar anomalias na comunicação.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
-Ao usar o dispositivo com função de aquecimento, é necessária uma fonte de alimentação separada de 24V (recomenda-se 24V@1A). O fio cinza 5 é conectado ao negativo da fonte de alimentação, e o fio rosa 6 é conectado ao polo positivo da fonte de alimentação.
+Ao usar o dispositivo com função de aquecimento, é necessária uma fonte de alimentação separada de 24V (recomenda-se 24V@1A). O fio cinza 5 é conectado ao negativo da fonte de alimentação e o fio rosa 6 é conectado ao polo positivo da fonte de alimentação.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png" /></div>
 
 ### Instalar o dispositivo
 
-Existem dois principais métodos de instalação, montado em um poste com uma luva ou em uma plataforma com uma placa de flange.
+Existem dois principais métodos de instalação: montado em um poste com uma luva ou em uma plataforma com uma placa de flange.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
 
@@ -83,7 +83,7 @@ A dimensão da placa de flange é mostrada abaixo.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
-> Nota: Para obter os dados de direção do vento mais precisos possível, certifique-se da orientação física para o norte durante a instalação, alinhando a **seta** na base diretamente para o norte verdadeiro. Caso contrário, ative a bússola eletrônica durante a configuração.
+> Observação: Para obter os dados de direção do vento mais precisos possível, certifique-se da orientação física para o norte durante a instalação, alinhando a **seta** na base diretamente para o norte verdadeiro. Caso contrário, ative a bússola eletrônica durante a configuração.
 
 # Modo de operação do dispositivo
 
@@ -95,7 +95,7 @@ O dispositivo possui dois modos de operação, **modo de configuração e modo d
 
 ### Configurar o dispositivo via porta USB
 
-Há uma tampa redonda à prova d'água na parte inferior do dispositivo. Gire-a no sentido anti-horário para remover esta tampa, e você verá um conector USB Type-C e um botão de configuração.
+Há uma tampa redonda à prova d'água na parte inferior do dispositivo. Gire-a no sentido anti-horário para remover essa tampa e você verá um conector USB Type-C e um botão de configuração.
 
 Conecte o dispositivo ao seu computador com um cabo USB Type-C. O computador instalará automaticamente o driver do dispositivo. Após a instalação bem-sucedida do driver, você poderá ver uma porta serial no gerenciador de dispositivos.
 
@@ -129,7 +129,7 @@ A próxima imagem mostra a interface principal do SenseCAP ONE Configuration Too
 
 2. Defina a taxa de transmissão (Baud rate) para 9600.
 
-3. Clique em Connect, se a conexão for bem-sucedida, a área de dados do sensor à direita mostrará as medições correspondentes.
+3. Clique em conectar; se a conexão for bem-sucedida, a área de dados do sensor à direita mostrará as medições correspondentes.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
@@ -145,7 +145,7 @@ Clique em Settings para entrar nas configurações do dispositivo e clique em "R
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
-Na página de configuração, você pode modificar o seguinte: nome do dispositivo, tipo de dados e intervalo de envio de dados. Após qualquer modificação, será necessário clicar em "Write to Device" para que as alterações entrem em vigor.
+Na página de configuração, você pode modificar o seguinte: nome do dispositivo, tipo de dados e intervalo de upload de dados. Após qualquer modificação, será necessário clicar em "Write to Device" para que as alterações entrem em vigor.
 
 Nas configurações de aplicação, você pode definir o ciclo para a ferramenta ler os dados do sensor, com o mínimo de 2S, e um intervalo de pontos para a curva.
 
@@ -219,15 +219,15 @@ As configurações de comunicação são as seguintes:
 
 - Marque a caixa de seleção "click Enter to start a new line".
 
-- Defina a taxa de baud para 9.600.
+- Defina a taxa de transmissão para 9.600.
 
 - Envie na área de envio.
 
-- Se você receber a mensagem 0XA correspondente na janela de recepção serial, a configuração foi bem-sucedida. Caso contrário, verifique a porta COM e a taxa de baud.
+- Se você receber a mensagem 0XA correspondente na janela de recepção serial, a configuração foi bem-sucedida. Caso contrário, verifique a porta COM e a taxa de transmissão.
 
 Verifique o comando ASIIC detalhado no próximo capítulo.
 
-# Protocolos de Comunicação
+# Protocolos de comunicação
 
 O dispositivo suporta os seguintes protocolos de comunicação:
 
@@ -243,7 +243,7 @@ O dispositivo suporta os seguintes protocolos de comunicação:
 
 Os dados do sensor são armazenados no Input Register e são somente leitura.
 
-O endereço do dispositivo e a taxa de baud de comunicação do RS-485 são armazenados no Holding Register e podem ser modificados.
+O endereço do dispositivo e a taxa de transmissão de comunicação do RS-485 são armazenados no Holding Register e podem ser modificados.
 
 Cada registrador tem 16 bits e ocupa 2 bytes.
 
@@ -263,11 +263,11 @@ Cada registrador tem 16 bits e ocupa 2 bytes.
 
 Aqui está um exemplo da **ferramenta Modbus Poll**
 
-(faça o download em &lt;https://www.modbustools.com/download.html&gt;).
+(download from &lt;https://www.modbustools.com/download.html&gt;).
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 
-Parâmetros de conexão de configuração: taxa de baud 9600bps, 8 bits de dados,
+Parâmetros de conexão de configuração: taxa de transmissão 9600bps, 8 bits de dados,
 sem paridade, 1 bit de parada.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image36.png" /></div>
@@ -276,8 +276,8 @@ Leia o registrador de temperatura do ar 0x0000 a 0x0001, clique em Setup e selec
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image37.png" /></div>
 
-Defina o slave ID padrão (5-in-1 é 10, 7-in-1 é 20, 9-in-1 é 38), código de função 04, endereço inicial 0, quantidade (5-in-1 é 6, 7-in-1 é
-28, 9-in-1 é 32);
+Defina o slave ID padrão (5-em-1 é 10, 7-em-1 é 20, 9-em-1 é 38), código de função 04, endereço inicial 0, quantidade (5-em-1 é 6, 7-em-1 é
+28, 9-em-1 é 32);
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image38.png" /></div>
 
@@ -341,7 +341,7 @@ Leia o registrador 0x0000-0x001F e 0x0030-0x0033.
 
 Enviar comando: 26 04 00 00 00 20 F7 05
 
-Retorno: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(O estado de tombamento) 99 09(Check code)
+Retorno: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Check code)
 
 PM2.5 e PM10 precisam ser lidos separadamente：
 
@@ -355,7 +355,7 @@ Leia o registrador 0x0000-0x001F e 0x0030-0x0033.
 
 Enviar comando: 2B 04 00 00 00 20 F6 18
 
-Retorno: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(O estado de tombamento) 99 09(Check code)
+Retorno: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Check code)
 
 PM2.5, PM10 e CO2 precisam ser lidos separadamente：
 
@@ -427,16 +427,16 @@ Os comandos têm dois formatos:
 
 ### Lista de comandos
 
-Por favor, consulte:
+Consulte:
 [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
 A comunicação SDI-12 adota três fios, dois dos quais são fios de alimentação do sensor e o outro é o fio de sinal SDI-12.
 
-Cada sensor no barramento SDI-12 possui um endereço exclusivo, que pode ser definido como '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. O endereço SDI-12 do SenseCAP ONE é, por padrão, '0'. As instruções suportadas por este sensor são mostradas no próximo capítulo, onde cada instrução está em conformidade com o SDI-12 v1.4.
+Cada sensor no barramento SDI-12 tem um endereço exclusivo, que pode ser definido como '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. O endereço SDI-12 do SenseCAP ONE é por padrão '0'. As instruções suportadas por este sensor são mostradas no próximo capítulo, onde cada instrução está em conformidade com o SDI-12 v1.4.
 
-O sensor é alimentado por uma fonte de alimentação DC de 3,6~16V. Após o sensor ser energizado, ele entrará imediatamente no modo de suspensão e aguardará o equipamento de aquisição de dados enviar instruções. O SDI-12 usa uma taxa de baud de 9600bps, 1 bit de início (nível alto), 7 bits de dados (alto 0 e baixo 1, lógica invertida), 1 bit de paridade par e 1 bit de parada.
+O sensor é alimentado por uma fonte de alimentação DC de 3,6~16V. Após o sensor ser ligado, ele entrará imediatamente no modo de suspensão e aguardará o equipamento de aquisição de dados dar instruções. O SDI-12 usa uma taxa de baud de 9600bps, 1 bit de início (nível alto), 7 bits de dados (alto 0 e baixo 1, lógica inversa), 1 bit de paridade par e 1 bit de parada.
 
 A sequência de cada byte enviado é mostrada na figura a seguir:
 
@@ -444,7 +444,7 @@ A sequência de cada byte enviado é mostrada na figura a seguir:
 
 ### Comando e resposta SDI-12
 
-Por favor, consulte [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
+Consulte [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ### Leitura SDI-12
 
@@ -460,7 +460,7 @@ Por favor, consulte [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User G
 
 Conecte o fio verde (GND Data) e o fio amarelo (SDI-12 Data) ao depurador **USB para SDI-12**.
 
-E conecte o fio vermelho (Vin+ positivo de alimentação) e o fio marrom (Vin- terra de alimentação) à fonte de alimentação de 12V.
+E conecte o fio vermelho (Vin+ alimentação positiva) e o fio marrom (Vin- terra da alimentação) à fonte de alimentação de 12V.
 
 Baixe o assistente de depuração de porta serial:
 &lt;https://github.com/Neutree/COMTool&gt;, e então abra a ferramenta de depuração de porta serial.
@@ -479,13 +479,13 @@ Baixe o assistente de depuração de porta serial:
 
 **Iniciar medição**
 
-Leia temperatura do ar, umidade do ar, pressão barométrica, intensidade luminosa
+Leia temperatura do ar, umidade do ar, pressão barométrica, intensidade de luz
 
 Envie o "comando de início de medição 0M!", o sensor primeiro responde com "00024", o que significa que o comando "0M!" leva 2 segundos para medir e retorna 4 valores medidos. Após 2 segundos, o sensor responde com seu próprio endereço "0", indicando que a medição foi concluída.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
-Em seguida, envie "comando de leitura do valor medido 0D0!" para obter os 4 valores medidos desta medição, que são temperatura do ar +27,01℃, umidade do ar 64,74%, pressão barométrica 100720Pa e intensidade luminosa 10Lux.
+Em seguida, envie "comando de leitura do valor medido 0D0!" para obter os 4 valores medidos desta medição, que são temperatura do ar +27,01℃, umidade do ar 64,74%, pressão barométrica 100720Pa e intensidade de luz 10Lux.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image52.png" /></div>
 

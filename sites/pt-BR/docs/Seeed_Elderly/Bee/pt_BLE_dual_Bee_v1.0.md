@@ -517,7 +517,7 @@ Este comando deve funcionar com "AT+NOTI1", se esta chave estiver aberta, quando
 <td width="300">S: AT+PINE[P1]</td>
 <td width="300">OK+ Set:[P1]</td>
 </tr>
-</table>
+</table]
 
 **23. Consultar/Configurar código PIN BLE**
 

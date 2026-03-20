@@ -67,22 +67,22 @@ Estou usando o Seeeduino Nano como placa de controle e usando Grove - Smart Air 
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Adquira agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>

@@ -39,7 +39,7 @@ Este wiki inclui:
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Gripper-01-p-6561.html" target="_blank">
-  <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+  <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
 ## Dimensões/Faixa de Operação
@@ -241,7 +241,7 @@ Esta garra utiliza um mecanismo clássico de manivela e guia deslizante duplo (D
     <source src="https://github.com/YlsonDdb/DM_Gripper/raw/main/docs/videos/S10.mp4"
             type="video/mp4" />
   </video>
-</div>
+</div]
 
 - Passo 11: Fixe a base com seis parafusos M3×16 (Puxe o trilho para fora nesta etapa e depois deslize-o de volta)
 

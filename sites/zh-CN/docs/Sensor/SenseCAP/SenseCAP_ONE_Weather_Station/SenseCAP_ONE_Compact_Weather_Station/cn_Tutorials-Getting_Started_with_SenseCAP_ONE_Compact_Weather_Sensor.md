@@ -1,19 +1,19 @@
 ---
-description: SenseCAP ONE 紧凑型气象传感器快速上手
-title: SenseCAP ONE 紧凑型气象传感器快速上手
+description: SenseCAP ONE 紧凑型气象传感器入门指南
+title: SenseCAP ONE 紧凑型气象传感器入门指南
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 03/18/2026
-  author: Kian
+  date: 12/25/2025
+  author: Janet
 createdAt: '2023-04-13'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
-# SenseCAP ONE 紧凑型气象传感器快速上手
+# SenseCAP ONE 紧凑型气象传感器入门指南
 
 # 安装前准备
 
@@ -27,47 +27,47 @@ url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_ONE_Compact_W
 
 ### 设备接口介绍
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3_V2.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image3.png" /></div>
 
 设备底部有两个连接器。
 
-- USB Type-C 接口允许你使用普通 USB Type-C 线将电脑连接到设备进行配置。
+- USB Type-C 接口允许你使用普通 USB Type-C 线缆将电脑连接到设备进行配置。
 
-- 主数据接口可连接 M12 8 针电缆，支持多种总线协议
+- 主数据接口可连接 M12 8 针线缆，支持多种总线协议
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
-### 使用 USB 线连接
+### 使用 USB 线缆连接
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image5.png" /></div>
 
-### M12 电缆
+### M12 线缆
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image6.png" /></div>
 
-设备采用 M12 8 针连接器，不同颜色的引脚提供电源和数据通信（如上图所示）。
+设备采用 M12 8 针连接器，不同颜色的针脚提供电源和数据通信（如上图所示）。
 
-在使用 RS-485 时，你可以只连接 4 根线（不使用加热功能），其余的可以单独用胶带包裹以防止短路
+在使用 RS-485 时，你可以只连接 4 根线（不使用加热功能），其余线缆可单独用胶带包裹以防止短路
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
-插入电缆时，必须对齐电缆上的孔与设备连接器上的引脚。
+插入线缆时，必须对齐线缆端孔与设备连接器的针脚。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image8.png" /></div>
 
-插入电缆并顺时针拧紧
+插入线缆并顺时针拧紧
 
-注意：插入前请先将电缆对准底部插座再插入。否则引脚歪斜可能导致通信异常。
+注意：插入前请确保线缆对准底部插孔，否则针脚偏斜可能导致通信异常。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
-当使用带加热功能的设备时，需要单独提供 24V 电源（推荐 24V@1A）。灰色 5 号线连接到电源负极，粉色 6 号线连接到电源正极。
+当使用带加热功能的设备时，需要单独的 24V 电源（推荐 24V@1A）。灰色线 5 接电源负极，粉色线 6 接电源正极。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png" /></div>
 
 ### 安装设备
 
-主要有两种安装方式：使用套筒安装在杆上，或使用法兰盘安装在平台上。
+有两种主要安装方式：使用套筒安装在杆上，或使用法兰盘安装在平台上。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
 
@@ -89,15 +89,15 @@ url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_ONE_Compact_W
 
 安装完成后，你可以给设备上电，对其进行配置并从设备采集数据。
 
-设备有两种工作模式，**配置模式和工作模式。**
+设备有两种工作模式：**配置模式和工作模式。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image15.png" /></div>
 
-### 通过 USB 接口配置设备
+### 通过 USB 端口配置设备
 
-设备底部有一个防水圆形盖子。逆时针旋转即可取下该盖子，你就可以看到 USB Type-C 接口和一个配置按钮。
+设备底部有一个防水圆形盖子。逆时针旋转即可取下此盖子，你就可以看到一个 USB Type-C 接口和一个配置按钮。
 
-使用 USB Type-C 线将设备连接到电脑。电脑会自动安装设备驱动。驱动成功安装后，你可以在设备管理器中看到一个串口。
+使用 USB Type-C 线缆将设备连接到电脑。电脑会自动安装设备驱动程序。驱动成功安装后，你可以在设备管理器中看到一个串口。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png" /></div>
 
@@ -105,7 +105,7 @@ url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_ONE_Compact_W
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image17.png" /></div>
 
-**配置设备有两种方法：**
+**有两种方法可以配置设备：**
 
 - SenseCAP ONE Configuration Tool
 
@@ -113,11 +113,11 @@ url: https://wiki.seeedstudio.com/cn/Getting_Started_with_SenseCAP_ONE_Compact_W
 
 ### SenseCAP ONE Configuration Tool
 
-SenseCAP ONE Configuration Tool 提供图形界面，方便你对设备进行配置。你可以通过下面的 GitHub 链接下载该工具：
+SenseCAP ONE Configuration Tool 提供图形界面，方便你配置设备。你可以通过下面的 GitHub 链接下载该工具：
 
 &lt;https://github.com/Seeed-Solution/SenseCAP-One-Configuration-Tool/releases&gt;
 
-根据需要选择对应操作系统的软件下载包：Windows、macOS 或 Linux。
+根据需要选择对应操作系统的版本：Windows、macOS 或 Linux。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image18.png" /></div>
 
@@ -165,7 +165,7 @@ SenseCAP ONE Configuration Tool 提供图形界面，方便你对设备进行配
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_One_Configuration_Tool.png" /></div>
 
-2. 通过 Type-C 线将设备连接到电脑
+2. 通过 Type-C 线缆将设备连接到电脑
 
 3. 打开软件，选择设备正确的 `COM` 端口，并点击 `"Connect"`
 
@@ -191,7 +191,7 @@ SenseCAP ONE Configuration Tool 提供图形界面，方便你对设备进行配
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset.png" /></div>
 
-按下按钮几秒钟后，将开始更新过程。
+按下按钮几秒钟后，更新过程将开始。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update2.png" /></div>
 
@@ -205,7 +205,7 @@ SenseCAP ONE Configuration Tool 提供图形界面，方便你对设备进行配
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Disconnect.png" /></div>
 
-至此，气象站的所有固件升级步骤已全部完成。
+至此，气象站的所有固件升级步骤已完成。
 
 ### 串口调试工具
 
@@ -241,13 +241,13 @@ SenseCAP ONE Configuration Tool 提供图形界面，方便你对设备进行配
 
 ### Modbus-RTU 协议报文格式
 
-传感器数据存储在 Input Register 中，为只读。
+传感器数据存储在输入寄存器（Input Register）中，只读。
 
-RS-485 的设备地址和通信波特率存储在 Holding Register 中，可进行修改。
+设备地址和 RS-485 的通信波特率存储在保持寄存器（Holding Register）中，可修改。
 
 每个寄存器为 16 位，占用 2 个字节。
 
-**从输入寄存器中读取报文。**
+**从输入寄存器读取报文。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image32.png" /></div>
 
@@ -261,7 +261,7 @@ RS-485 的设备地址和通信波特率存储在 Holding Register 中，可进�
 
 ### Modbus-RTU 读取
 
-下面是 **Modbus Poll 工具** 的一个示例
+下面是 **Modbus Poll 工具** 的示例
 
 (从 &lt;https://www.modbustools.com/download.html&gt; 下载)。
 
@@ -276,7 +276,7 @@ RS-485 的设备地址和通信波特率存储在 Holding Register 中，可进�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image37.png" /></div>
 
-设置默认从机 ID（5 合 1 为 10，7 合 1 为 20，9 合 1 为 38），功能码 04，起始地址 0，数量（5 合 1 为 6，7 合 1 为
+设置默认从站 ID（5 合 1 为 10，7 合 1 为 20，9 合 1 为 38），功能码 04，起始地址 0，数量（5 合 1 为 6，7 合 1 为
 28，9 合 1 为 32）；
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image38.png" /></div>
@@ -285,7 +285,7 @@ RS-485 的设备地址和通信波特率存储在 Holding Register 中，可进�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image39.png" /></div>
 
-在右侧可以查看原始发送和接收的数据包。
+在右侧，你可以查看原始发送和接收的数据包。
 
 当温度为正数时：
 
@@ -391,9 +391,9 @@ PM2.5、PM10 和 CO2 需要单独读取：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image01.png" /></div>
 
-实际分贝值 Real DB = 寄存器数值 /100
+实际分贝值 = 寄存器数值 /100
 
-噪声寄存器数值为 0x128E=4750，对应的数值为 4750/100=47.5dB
+噪声寄存器数值为 0x128E=4750，对应的数值为 =4750/100=47.5dB
 
 ## ASCII 协议
 
@@ -423,7 +423,7 @@ PM2.5、PM10 和 CO2 需要单独读取：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/33.png" /></div>
 
-*示例：0XA;BD=96`<CR><LF>` 表示设置设备的波特率*
+*示例：0XA;BD=96`<CR><LF>` 表示查询设备的波特率*
 
 ### 命令列表
 
@@ -436,7 +436,7 @@ SDI-12 通信采用三根线，其中两根为传感器电源线，另一根为 
 
 SDI-12 总线上的每个传感器都有唯一地址，可设置为 '0'、'1' ~ '9'、'A' ~ 'Z'、'A' ~ 'Z'。SenseCAP ONE 的 SDI-12 地址默认为 '0'。该传感器支持的指令见下一章节，每条指令均符合 SDI-12 v1.4 标准。
 
-传感器由 3.6~16V 的直流电源供电。传感器上电后会立即进入休眠模式，等待数据采集设备下发指令。SDI-12 使用 9600bps 波特率，1 个起始位（高电平）、7 个数据位（高为 0、低为 1，反逻辑）、1 个偶校验位和 1 个停止位。
+传感器由 3.6~16V 的直流电源供电。传感器上电后会立即进入休眠模式，等待数据采集设备下发指令。SDI-12 使用 9600bps 波特率，1 个起始位（高电平）、7 个数据位（高 0 低 1，反逻辑）、1 个偶校验位和 1 个停止位。
 
 每个字节发送的时序如下图所示：
 
@@ -473,7 +473,7 @@ SDI-12 总线上的每个传感器都有唯一地址，可设置为 '0'、'1' ~ 
 
 - 点击打开串口。
 
-- 发送查询设备地址命令 "?!", 如果能看到响应 "0"，则表示连接正常。
+- 发送查询设备地址命令 "?!", 如果可以看到响应 "0"，则表示连接正常。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png" /></div>
 
@@ -481,19 +481,19 @@ SDI-12 总线上的每个传感器都有唯一地址，可设置为 '0'、'1' ~ 
 
 读取空气温度、空气湿度、大气压、光照强度
 
-发送“开始测量命令 0M!”，传感器首先响应 "00024"，表示 "0M!" 命令测量耗时 2 秒并返回 4 个测量值。2 秒后，传感器响应自身地址 "0"，表示测量已完成。
+发送“开始测量命令 0M!”，传感器首先响应 "00024"，表示 "0M!" 命令需要 2 秒完成测量并返回 4 个测量值。2 秒后，传感器响应自身地址 "0"，表示测量已完成。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
-然后发送“读取测量值命令 0D0!”即可获得本次测量的 4 个测量值，分别为空气温度 +27.01℃、空气湿度 64.74%、大气压 100720Pa 和光照强度 10Lux。
+然后发送“读取测量值命令 0D0!”以获取本次测量的 4 个测量值，分别为空气温度 +27.01℃、空气湿度 64.74%、大气压 100720Pa，以及光照强度 10Lux。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image52.png" /></div>
 
-使用扩展测量命令 0M1! 读取最小风向、最大风向、平均风向、最小风速、最大风速和平均风速。设备响应 "00056"，表示 "0M1!" 命令测量耗时 5 秒并返回 6 个测量值。5 秒后，设备响应自身地址 "0"，表示测量已完成。
+使用扩展测量命令 0M1! 读取最小风向、最大风向、平均风向、最小风速、最大风速和平均风速。设备响应 "00056"，表示 "0M1!" 命令需要 5 秒完成测量并返回 6 个测量值。5 秒后，设备响应自身地址 "0"，表示测量已完成。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image53.png" /></div>
 
-然后发送“读取测量值命令 0D0!”即可获得本次测量的 6 个测量值，分别为最小风向 345.9 度、最大风向 347.5 度、平均风向 346.3 度、最小风速 2.8m/s、最大风速 2.8m/s、平均风速 2.8m/s。
+然后发送“读取测量值命令 0D0!”以获取本次测量的 6 个测量值，分别为最小风向 345.9 度、最大风向 347.5 度、平均风向 346.3 度、最小风速 2.8m/s、最大风速 2.8m/s、平均风速 2.8m/s。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image54.png" /></div>
 

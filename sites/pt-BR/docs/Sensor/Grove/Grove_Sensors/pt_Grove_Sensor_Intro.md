@@ -448,7 +448,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-CO2_Temperature_Humidity_Sensor-SCD30/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-CO2_Temperature_Humidity_Sensor-SCD30/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 #### Grove - Sensor de Luz, Gesto, Cor e Proximidade (TMG39931)
@@ -466,7 +466,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Light-Color-Proximity-Sensor-TMG39931-p-2879.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 ### Com tecnologia de IA
@@ -486,7 +486,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-Vision-AI-Module/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-Vision-AI-Module/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 #### Módulo Grove Vision AI V2
@@ -504,7 +504,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/grove_vision_ai_v2/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/grove_vision_ai_v2/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 #### Grove Sensor de Gesto IR Inteligente (PAJ7660)
@@ -522,7 +522,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/grove_gesture_paj7660/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/grove_gesture_paj7660/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 ### Umidade do Solo
@@ -542,7 +542,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Capacitive-Moisture-Sensor-Corrosion-Resistant-p-2580.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 #### Grove - Sensor de Umidade
@@ -560,7 +560,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Moisture-Sensor.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-Moisture_Sensor/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-Moisture_Sensor/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 ### Proximidade
@@ -580,7 +580,7 @@ Temos vários tipos de sensores Grove, incluindo, mas não se limitando a sensor
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
-    <a class="get_one_now_item" href="/pt-br/Grove-Ultrasonic_Ranger/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saiba mais</font></span></strong></a>
+    <a class="get_one_now_item" href="/pt-br/Grove-Ultrasonic_Ranger/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
 #### Grove - Interrupção de Distância IR v1.2

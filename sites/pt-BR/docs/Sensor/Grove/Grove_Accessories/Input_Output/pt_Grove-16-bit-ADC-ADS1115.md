@@ -78,7 +78,7 @@ As plataformas mencionadas acima como suportadas são uma indicação da compati
 | Seeeduino V4.2 | Base Shield | Grove - ADC de 16 bits (ADS1115)|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html)|
 
 >Além disso, você pode considerar o nosso novo [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), que é equivalente à combinação de Seeeduino V4.2 e Baseshield.
 
@@ -185,7 +185,7 @@ Neste exemplo, o ganho de 2/3x é definido, portanto é necessário multiplicar 
 | Raspberry Pi | Grove Base Hat para RasPi | Grove - ADC de 16 bits (ADS1115)|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Adquira agora](#)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get ONE Now](#)|
 
 ### Software
 
@@ -198,7 +198,7 @@ O Grove - ADC de 16 bits (ADS1115) tem o mesmo uso que o 4-Channel 16-Bit ADC fo
 | Wio Terminal | Grove - ADC de 16 bits (ADS1115) | Grove - Rotary Angle Sensor|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Rotary_Angle_Sensor/img/rorary_s.jpg)
-|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](#)|[Adquira agora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](#)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor--p-1242.html)|
 
 - **Passo 1.** Conecte o Grove - ADC de 16 bits (ADS1115) à porta **I2C** do Wio Terminal.
 
@@ -231,7 +231,7 @@ Siga o [Wio Terminal's get started](https://wiki.seeedstudio.com/pt-br/Wio-Termi
 | Wio Terminal | Grove - ADC de 16 bits (ADS1115) |
 |--------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-16bit-ADC-ADS1115/109020041-preview.png)|
-|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](#)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](#)|
 
 - **Passo 2.** Conecte o Grove - 16 Bit ADC(ADS1115) à porta **I2C** do Wio Terminal.
 

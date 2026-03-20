@@ -62,7 +62,7 @@ Plataformas compatíveis
 | Seeeduino Lotus | Grove Speaker Plus|
 |--------------|--------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/Seeeduino_Lotus.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Speaker_Plus/IMG/small.png)|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Speaker-Plus-p-4592.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Speaker-Plus-p-4592.html)|
 
 #### Conexão de Hardware
 

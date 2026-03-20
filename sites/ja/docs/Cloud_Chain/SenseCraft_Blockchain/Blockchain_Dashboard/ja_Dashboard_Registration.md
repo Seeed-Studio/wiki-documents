@@ -11,35 +11,35 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/sensecraft-blockchain/blockchain-dashboard/dashboard-registration/
 ---
 
 # ダッシュボード登録
 
 
-SenseCAP M1 ダッシュボードは、Hotspotを監視し、包括的な概要を提供するために設計されています。
+SenseCAP M1 ダッシュボードは、Hotspot を監視し、包括的な概要を把握できるように設計されています。
 
 **ダッシュボード登録**
 ==========================
 
-1.  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスしてください
-2.  下の「**Register**」ボタンをクリックしてください。  
-    1.  アカウントを作成するか、Discordアカウントで登録/ログインするかを選択できます。
-3.  アカウント作成に必要な詳細情報を入力してください。
-4.  「**Email Address**」を入力した後、「**Get Captcha**」をクリックする必要があります。
-    1.  システムは、そのメールアカウントの所有権を検証するために、提供された登録メールアドレスに「**ワンタイムコード**」を送信します。
-    2.  受信トレイからコードを取得するまでに**60秒**の時間があります。
-5.  「**ワンタイムコード**」を入力したら、「**Register**」をクリックしてください。これで、Hotspotをリモートで監視するための登録が正常に完了します。
+1.  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスします
+2.  下の "**Register**" ボタンをクリックします。  
+    1.  アカウントを新規作成するか、Discord アカウントで登録/ログインするかを選択できます。
+3.  アカウント作成を開始するために必要な情報を入力します。
+4.  "**Email Address**" を入力したら、"**Get Captcha**" をクリックする必要があります。
+    1.  システムは、登録したメールアドレスの所有者であることを確認するために、そのメールアドレス宛てに「**one-time code**」を送信します。
+    2.  受信トレイからコードを取得するための時間は **60 秒** です。
+5.  "**one-time code**" を入力したら "**Register**" をクリックすると、Hotspot をリモートで監視するための登録が完了します。
 
-![SenseCAP Dashboard Registration](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
+![SenseCAP ダッシュボード登録](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
 
 **ダッシュボードログイン**
 ===================
 
-1.  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスしてください
-2.  登録プロセス中に作成した認証情報を入力するか、Discordアカウントの詳細でログインしてください（登録プロセス中に選択したいずれかの方法）
-3.  おめでとうございます。正常にログインしました。
+1.  [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/) にアクセスします
+2.  登録時に作成した認証情報を入力するか、登録時に選択した方法に応じて Discord アカウント情報でログインします
+3.  ログインに成功しました。
 
-![SenseCAP Dashboard Login](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
+![SenseCAP ダッシュボードログイン](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)

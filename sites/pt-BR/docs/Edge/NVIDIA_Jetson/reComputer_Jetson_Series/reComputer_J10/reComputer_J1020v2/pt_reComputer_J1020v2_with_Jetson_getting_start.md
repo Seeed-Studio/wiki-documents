@@ -109,7 +109,7 @@ Para provedores de soluções, o reComputer J1020 v2 vem pré-instalado com Jetp
       <td>1\*M.2 Key E</td>
       <td>1\*M.2 Key E (Desativado)</td>
       <td>1\*M.2 Key E</td>
-    </tr>
+    </tr]
     <tr>
       <td>M.2 KEY M</td>
       <td>-</td>

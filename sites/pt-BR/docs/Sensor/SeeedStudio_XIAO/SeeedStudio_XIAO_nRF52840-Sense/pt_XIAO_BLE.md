@@ -188,7 +188,7 @@ Bluetooth Mesh/NFC</td>
       <th>Interfaces</th>
       <td colspan="2" align="center">1xI2C, 1xUART, 1xSPI</td>
       <td colspan="2" align="center">1xI2C, 2xUART, 2xSPI, 1xI2S</td>
-  </tr>
+  </tr]
   <tr>
       <th>Pinos PWM/Analógicos </th>
       <td colspan="2" align="center">11/6</td>

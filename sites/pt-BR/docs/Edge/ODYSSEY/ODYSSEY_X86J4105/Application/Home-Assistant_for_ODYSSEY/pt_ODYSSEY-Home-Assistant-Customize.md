@@ -460,7 +460,7 @@ Agora vamos instalar o cartão de clima a partir do HACS
 
 - **Passo 12.** Clique em **DOWNLOAD** novamente na janela de confirmação
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/93.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Home-Assistant/93.png" /></div]
 
 - **Passo 13.** Na página **Overview**, vá para a página **+ ADD CARD** como antes e clique em **Custom: Weather Card**
 

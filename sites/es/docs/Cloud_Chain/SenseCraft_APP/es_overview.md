@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description: SenseCraft App
-title: Descripción General
+description: Aplicación SenseCraft
+title: Descripción general
 keywords:
   - App
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,122 +11,122 @@ aliases:
 last_update:
   date: 1/7/2026
   author: Janet
-createdAt: '2025-09-03'
+createdAt: '2024-07-26'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sensecraft-app/overview/
 ---
 
 :::tip note
-¡La App SenseCAP Mate ha sido oficialmente renombrada como App `SenseCraft`!
+¡SenseCAP Mate App ha sido renombrada oficialmente como `SenseCraft` App!
 :::
 
-# Introducción y Uso
+# Introducción y uso
 
-SenseCraft APP es una aplicación poderosa para visualización de datos y gestión de dispositivos.
+SenseCraft APP es una potente aplicación para la visualización de datos y la gestión de dispositivos.
 
-## Características Destacadas de la App
+## Aspectos destacados de la aplicación
 
-- Ahorra tiempo - proporciona una experiencia de escanear y usar para permitir a los usuarios completar toda la configuración en 4 pasos
-- Funciona para personas con poca o ninguna experiencia técnica para comenzar fácilmente con datos de sensores
+- Ahorra tiempo: proporciona una experiencia de escanear y usar que permite a los usuarios completar toda la configuración en 4 pasos
+- Funciona para personas con poca o ninguna formación técnica para comenzar fácilmente con los datos de sensores
 - Adquiere y visualiza datos en interfaces de usuario limpias
 - Establece intervalos de tiempo: mejora la eficiencia de la batería
-- Establece valores umbral: enfócate en los datos para los que necesitas tomar acción - próximamente
+- Establece valores de umbral: céntrate en los datos sobre los que necesitas actuar - próximamente
 - Envía alarmas si los datos están fuera del rango seguro - próximamente
 
 ## Descarga
 
-La App SenseCraft está disponible tanto en versiones iOS como Android.
+SenseCraft App está disponible en versiones para iOS y Android.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_1.png" alt="pir" width={600} height="auto" /></p>
 
 ## Cuenta
 
-SenseCraft soporta configuración de dispositivos y gestión remota. Para usar la plataforma SenseCAP Portal y otras funciones, por favor registra una cuenta.
+SenseCraft admite la configuración de dispositivos y la gestión remota. Para utilizar la plataforma SenseCAP Portal y otras funciones, registra una cuenta.
 
 :::tip Note
-Por favor selecciona `Global` en Ubicación del Servidor. También puedes crear una cuenta a través del <a href="http://sensecap.seeed.cc">SenseCAP Portal</a>
+Selecciona `Global` en Server Location. También puedes crear una cuenta a través del <a href="http://sensecap.seeed.cc">SenseCAP Portal</a>
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/login-page.PNG" alt="pir" width={300} height="auto" /></p>
 
 ## Dispositivo
 
-- En la página de dispositivos, puedes agregar nuevos dispositivos haciendo clic en el `+` en la esquina superior derecha.
+- En la página de dispositivos, puedes añadir nuevos dispositivos pulsando el `+` en la esquina superior derecha.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/add-new.png" alt="pir" width={500} height="auto" /></p>
 
-- Haz clic en el dispositivo objetivo para ver los datos.
+- Pulsa el dispositivo de destino para ver los datos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/data.png" alt="pir" width={500} height="auto" /></p>
 
-- Haz clic en el ícono de campana en la esquina superior derecha para entrar al centro de mensajes.
+- Pulsa el icono de la campana en la esquina superior derecha para entrar en el centro de mensajes.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/message-center.png" alt="pir" width={500} height="auto" /></p>
 
-## TIENDA
+## MALL
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/MAll.PNG" alt="pir" width={300} height="auto" /></p>
 
 ## Evento
 
-Agrega Eventos para recibir notificaciones.
+Añade eventos para recibir notificaciones.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/add-event.PNG" alt="pir" width={300} height="auto" /></p>
 
-1. Haz clic en el ícono Agregar o el botón Agregar Evento para crear una alerta de Evento, página Agregar Evento Condiciones para agregar opciones de condición, y haz clic en el botón Agregar para seleccionar un dispositivo.
+1. Haz clic en el icono Añadir o en el botón Add Event para crear una alerta de evento; en la página Add Event, en Conditions añade opciones de condición y haz clic en el botón Add para seleccionar un dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_2.png" style={{width:1000, height:'auto'}}/></div>
 
-2. Selecciona el dispositivo, selecciona el tipo de medición, establece las condiciones de alarma, selecciona las condiciones como mayor que o menor que arrastra la barra de progreso para establecer el valor, haz clic en el siguiente paso.
+2. Selecciona el dispositivo, selecciona el tipo de medición, establece las condiciones de alarma, selecciona condiciones como mayor que o menor que, arrastra la barra de progreso para establecer el valor y haz clic en el siguiente paso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_3.png" style={{width:1000, height:'auto'}}/></div>
 
-3. Página Agregar Evento Volver a acciones normales dispositivo volver a normal, selecciona si enviar una notificación, haz clic en Guardar, ingresa el nombre del Evento, haz clic en Enviar para agregar una alarma de Evento exitosamente regresar a la lista de Eventos.
+3. En la página Add Event, en Back to normal actions cuando el dispositivo vuelve a la normalidad, selecciona si deseas enviar una notificación, haz clic en Save, introduce el nombre del evento y haz clic en Submit para añadir correctamente una alarma de evento y volver a la lista de eventos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_4.png" style={{width:1000, height:'auto'}}/></div>
 
-4. Página de dispositivo, haz clic en Centro de Mensajes para ver mensajes de alarma, mostrando Advertencia de dispositivo dispositivo activó mensajes push de alarma, Notificación del sistema mensajes del sistema.
+4. En la página del dispositivo, haz clic en Message Center para ver los mensajes de alarma, que muestran Device warning device triggered alarm push messages y System notification system messages.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_5.png" style={{width:1000, height:'auto'}}/></div>
 
-5. Haz clic en el mensaje de alarma, el dispositivo activa el elemento de condición, envía el mensaje de alarma, haz clic para ver los detalles de la alarma. Regresa a la lista de alarmas el estado cambia a leído, haz clic en el botón editar para seleccionar el mensaje, puedes leer, eliminar y otras operaciones.
+5. Haz clic en el mensaje de alarma; cuando el dispositivo activa el elemento de condición, se envía el mensaje de alarma; haz clic para ver los detalles de la alarma. Al volver a la lista de alarmas, el estado cambia a leído; haz clic en el botón de edición para seleccionar el mensaje y podrás marcar como leído, eliminar y realizar otras operaciones.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_6.png" style={{width:1000, height:'auto'}}/></div>
 
-6. Cambia mensajes del sistema, haz clic para ver detalles del mensaje push del sistema.
+6. Cambia a los mensajes del sistema y haz clic para ver los detalles de los mensajes enviados por el sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_7.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Usuario
 
-Detalles de cuenta y configuraciones, versión de la app, etc.
+Detalles y ajustes de la cuenta, versión de la aplicación, etc.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/user-page.PNG" alt="pir" width={300} height="auto" /></p>
 
-**Eliminar Cuenta**
+**Eliminar cuenta**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/delete.png" alt="pir" width={600} height="auto" /></p>
 
-## Configuración Bluetooth
+## Configuración por Bluetooth
 
-Selecciona el producto correspondiente para vinculación rápida.
+Selecciona el producto correspondiente para un emparejamiento rápido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/configuration.png" alt="pir" width={500} height="auto" /></p>
 
 ## Plantilla
 
-La app SenseCraft proporciona un conjunto de funciones de plantilla, incluyendo **Agregar Nueva Plantilla, Importar Plantilla, Descargar Plantilla y Aplicar Plantilla Preestablecida**, para simplificar y acelerar la configuración de dispositivos. Estas funciones ayudan eficientemente a los usuarios a reducir el tiempo de configuración y agilizar el despliegue para instalaciones a gran escala.
+La aplicación SenseCraft proporciona un conjunto de funciones de plantilla, que incluyen **Add New Template, Import Template, Download Template y Apply Preset Template**, para simplificar y acelerar la configuración de dispositivos. Estas funciones ayudan de forma eficiente a los usuarios a reducir el tiempo de configuración y a optimizar el despliegue para instalaciones a gran escala.
 
-### Agregar Nueva Plantilla
-Hay dos formas de agregar una nueva plantilla.
+### Añadir nueva plantilla
+Hay dos maneras de añadir una nueva plantilla.
 
-**Método 1** <br />
+**Method 1** <br />
 1. Ve a `User` → `Device Bluetooth Configuration`. <br />
 2. Toca el botón `Template` en la esquina superior derecha. <br />
-3. Toca el ícono `+` → `Add New Template`. <br />
-4. Selecciona el Tipo de Dispositivo. <br />
+3. Toca el icono `+` → `Add New Template`. <br />
+4. Selecciona el tipo de dispositivo. <br />
 5. Configura los parámetros de la plantilla según tus necesidades. <br />
 6. Toca `Confirm` para guardar la plantilla. <br />
-7. Regresa a la página de Plantilla, puedes ver `Save successful`. <br />
+7. Vuelve a la página Template, podrás ver `Save successful`. <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -134,41 +134,41 @@ Hay dos formas de agregar una nueva plantilla.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template3.png" alt="pir" width={300} height="auto" /></p>
 
-**Método 2** <br />
-1. Entra al Modo de Configuración Bluetooth y selecciona `Advanced Configuration`. <br />
+**Method 2** <br />
+1. Entra en el modo de configuración por Bluetooth y selecciona `Advanced Configuration`. <br />
 2. Ve a la página `Setting`. <br />
-3. Toca el ícono `Template` en la esquina superior derecha. <br />
+3. Toca el icono `Template` en la esquina superior derecha. <br />
 4. Ajusta los parámetros de la plantilla según sea necesario. <br />
 5. Selecciona `Save as Template`. <br />
-6. Ingresa un Nombre de Plantilla. <br />
+6. Introduce un nombre de plantilla. <br />
 7. Toca `Confirm` para guardar. <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template4.png" alt="pir" width={800} height="auto" /></p>
 
-### Descargar Plantilla
-1. Navega a la página `Template`, selecciona la plantilla que quieres descargar. <br />
+### Descargar plantilla
+1. Ve a la página `Template` y selecciona la plantilla que quieres descargar. <br />
 2. Toca el menú de tres puntos en la esquina superior derecha. <br />
 3. Selecciona `Download Template`. <br />
 4. Guarda el archivo en el almacenamiento de tu dispositivo móvil. <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/downlaod_template.png" alt="pir" width={800} height="auto" /></p>
 
-### Importar Plantilla
+### Importar plantilla
 1. Ve a `User` → `Device Bluetooth Configuration`. <br />
 2. Toca `Template` en la esquina superior derecha. <br />
-3. En la página de Plantilla, toca el ícono `+`. <br />
+3. En la página Template, toca el icono `+`. <br />
 4. Selecciona `Import Template`. <br />
-5. Toca el ícono `file`. <br />
-6. En el administrador de archivos del sistema, selecciona el archivo de configuración con la extensión `".seeed"`. <br />
+5. Toca el icono `file`. <br />
+6. En el gestor de archivos del sistema, selecciona el archivo de configuración con la extensión `“.seeed”`. <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/import_template.png" alt="pir" width={800} height="auto" /></p>
 
-### Aplicar Plantilla Preestablecida
-1. Entra al modo de Configuración Bluetooth del dispositivo y selecciona `Advanced Configuration`. <br />
-2. Abre la página `Settings` y toca el ícono `Template` en la esquina superior derecha. <br />
+### Aplicar plantilla preestablecida
+1. Entra en el modo de configuración por Bluetooth del dispositivo y selecciona `Advanced Configuration`. <br />
+2. Abre la página `Settings` y toca el icono `Template` en la esquina superior derecha. <br />
 3. Selecciona `Choose Template`. <br />
-4. En la página de Plantilla Preestablecida, selecciona la plantilla deseada. <br />
-5. Regresa a la página de Configuraciones y toca `Send` para aplicar la configuración. <br />
+4. En la página Preset Template, selecciona la plantilla deseada. <br />
+5. Vuelve a la página Settings y toca `Send` para aplicar la configuración. <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/apply_template.png" alt="pir" width={800} height="auto" /></p>
 

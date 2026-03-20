@@ -26,7 +26,7 @@ Seeed Studio XIAO SAMD21, Seeed Studio XIAO RP2040 e Seeed Studio XIAO nRF52840 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -109,7 +109,7 @@ Este produto não inclui Seeed Studio XIAO e bateria. Como os pinos SWD são dif
 | Seeed Studio XIAO SAMD21 (pré-soldado) | Seeed Studio Expansion Base for XIAO|
 |--------------|--------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Preview-07.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" alt="pir" width={600} height="auto" /></p>
-|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
+|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
 
 ### Visão Geral do Hardware
 

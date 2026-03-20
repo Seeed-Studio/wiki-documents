@@ -1,11 +1,11 @@
 ---
-description: 已停产产品
-title: 已停产产品
+description: 停产产品
+title: 停产产品
 keywords:
   - Discontinued Products
   - Legacy Products
   - Retired Products
-  - Obselete Products
+  - Obsolete Products
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5
@@ -21,22 +21,22 @@ url: https://wiki.seeedstudio.com/cn/discontinuedproducts/
 
 
 
-### 在本节中，我们维护一个关于已停止支持产品的指南和教程的维基页面。
+### 在本章节中，我们维护了关于已不再由我们提供支持的产品的指南和教程 Wiki。
 
 
 
 :::note
-这些文档不再被积极维护，可能已经过时。然而，您仍然可以为这些页面贡献内容！如果您在使用产品时遇到任何问题或困难，请务必查看我们的 <a href="https://discord.gg/eWkprNDMU7">Discord频道</a> 和 <a href="https://forum.seeedstudio.com/">论坛</a>，以获取社区提供的帮助。
+这些文档已不再被积极维护，可能已经过时。不过，你仍然可以为这些页面做出贡献！如果你在使用产品时遇到任何问题或故障，请务必查看我们的 <a href="https://discord.gg/eWkprNDMU7">discord 频道</a> 和 <a href="https://forum.seeedstudio.com/">论坛</a>，以获取来自社区的帮助。
 :::
 
 
 这些产品可能包括：
-* 不再销售的产品
-* 仍在销售但不再提供支持的产品
+* 已经停止销售的产品
+* 仍在销售但已不再提供支持的产品
 
-#### Seeed重视并支持我们销售的所有产品，因此我们将继续为已停产的产品提供文档支持。
+#### Seeed 重视并支持我们销售过的所有产品，因此会继续为我们的停产产品提供文档。
 
-以下是我们所有已退役产品的列表：
+以下是我们所有退役产品的列表
 
 * <a href="/cn/ReSpeaker" font color={'8DC215'}>reSpeaker</a>  
 <br />
@@ -56,7 +56,7 @@ url: https://wiki.seeedstudio.com/cn/discontinuedproducts/
 <br /> 
 * <a href="/cn/Artik" font color={'8DC215'}>Artik</a>
 <br /> 
-* <a href="/cn/Tiny_BLE" font color={'8DC215'}>其他</a> 
+* <a href="/cn/Tiny_BLE" font color={'8DC215'}>Others</a> 
 
 
 
@@ -64,7 +64,7 @@ url: https://wiki.seeedstudio.com/cn/discontinuedproducts/
 
 ## 技术支持与产品讨论
 
-如果您需要进一步的帮助，我们将为您提供多种支持，以确保您使用我们的产品时体验顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。现在就开始与我们以及可爱的Seeders社区互动吧！
+如果你需要更多帮助，我们会通过不同的支持方式，尽可能确保你在使用我们产品时拥有顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。现在就开始与我们以及可爱的 Seeed 社区成员互动吧！
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

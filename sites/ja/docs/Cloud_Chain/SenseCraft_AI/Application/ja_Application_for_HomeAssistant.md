@@ -12,8 +12,8 @@ sidebar_position: 1
 last_update:
   date: 01/10/2024
   author: Citric
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2024-01-11'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/application/application-for-homeassistant/
 ---
 
@@ -21,21 +21,21 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-ai/application/application-for-h
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
 
-Grove Vision AI V2 を Home Assistant に統合することで、高度な視覚センシング機能を追加してスマートホームセットアップを向上させることができます。この統合により、リアルタイムの環境分析とカスタマイズされた自動化が可能になり、ホーム環境をより知的で応答性の高いものにします。
+Grove Vision AI V2 を Home Assistant に統合することで、高度なビジュアルセンシング機能を追加し、スマートホーム環境をさらに向上させることができます。この統合により、環境をリアルタイムに解析し、カスタマイズされた自動化を実現できるため、家庭内の環境がよりインテリジェントかつ応答性の高いものになります。
 
-この統合を促進するため、HACS ストアからアクセス可能な SenseCraft-HomeAssistant プラグインが、SenseCraft データプラットフォームを通じて Grove Vision AI V2 を Home Assistant に接続します。このプロセスは合理化されユーザーフレンドリーで、SenseCraft アカウントログインだけでデバイスとセンサーデータを Home Assistant エコシステムに取り込み、カスタマイズと制御の準備が整います。
+この統合を容易にするために、HACS ストアからアクセスできる SenseCraft-HomeAssistant プラグインは、SenseCraft Data Platform を介して Grove Vision AI V2 を Home Assistant に接続します。このプロセスはシンプルでユーザーフレンドリーであり、SenseCraft アカウントにログインするだけで、デバイスとセンサーデータを Home Assistant エコシステムに取り込み、自由にカスタマイズおよび制御できるようになります。
 
-以下は本記事の主要コンテンツフレームワークです。
+以下は本記事の主な内容構成です。
 
-1. [HACS プラグインのインストール](#installing-the-hacs-plugin): Home Assistant Community Store (HACS) をインストールして、Home Assistant 内で Seeed Studio の SenseCraft プラグインのインストールを可能にします。
-2. [SenseCraft プラグインのインストール](#installing-the-sensecraft-plugin): Seeed Studio による SenseCraft プラグインをインストールし、Seeed Studio の製品を Home Assistant に迅速にデプロイできるようにします。
-3. [Grove Vision AI V2 用モデルの準備](#preparing-the-model-for-grove-vision-ai-v2): Grove Vision AI V2 に使用したいモデルを選択してデプロイし、その後 Home Assistant が Vision AI からの認識シーンと結果の情報を受信します。
-4. [Home Assistant での MQTT サービス構築](#building-mqtt-services-at-home-assistant): ローカル MQTT サービスを活用して、Grove Vision AI V2 と XIAO から Home Assistant にデータを送信します。
-5. [Grove Vision AI V2 を Home Assistant に統合](#integrate-grove-vision-ai-v2-into-home-assistant): Grove Vision AI V2 を Home Assistant に統合し、設定用の視覚的ダッシュボードをセットアップします。
+1. [HACS プラグインのインストール](#hacs-プラグインのインストール): Home Assistant Community Store (HACS) をインストールし、Home Assistant 内で Seeed Studio の SenseCraft プラグインをインストールできるようにします。
+2. [SenseCraft プラグインのインストール](#sensecraft-プラグインのインストール): Seeed Studio の SenseCraft プラグインをインストールし、Seeed Studio の製品を素早く Home Assistant に導入できるようにします。
+3. [Grove Vision AI V2 用モデルの準備](#grove-vision-ai-v2-用モデルの準備): Grove Vision AI V2 で使用したいモデルを選択してデプロイし、その後 Home Assistant は Vision AI から認識シーンおよび結果の情報を受信します。
+4. [Home Assistant での MQTT サービスの構築](#home-assistant-での-mqtt-サービスの構築): ローカル MQTT サービスを利用して、Grove Vision AI V2 と XIAO から Home Assistant へデータを送信します。
+5. [Grove Vision AI V2 を Home Assistant に統合](#grove-vision-ai-v2-を-home-assistant-に統合): Grove Vision AI V2 を Home Assistant に統合し、設定用のビジュアルダッシュボードを構築します。
 
 ## はじめに
 
-本記事のチュートリアル内容が始まる前に、以下のハードウェアを準備する必要があります。
+本記事のチュートリアル内容に入る前に、以下のハードウェアを用意しておく必要があります。
 
 ### 必要な材料
 
@@ -54,115 +54,114 @@ Grove Vision AI V2 を Home Assistant に統合することで、高度な視覚
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
-
 </div>
 
-Home Assistant Green は、あなたの家を自動化する最も簡単でプライバシーに重点を置いた方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄している Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されます。
+Home Assistant Green は、最も簡単かつプライバシー重視のホームオートメーションの方法です。セットアップは簡単で、すべてのスマートデバイスを 1 つのシステムで制御でき、データはデフォルトですべてローカルに保存されます。このボードは活発な Home Assistant エコシステムの恩恵を受けており、オープンソースによって毎月改善されていきます。
 
-このチュートリアルでは、Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を搭載した任意の Home Assistant ホストを使用することもできます。
+本チュートリアルでは Home Assistant のホストとして Home Assistant Green を使用することを推奨しますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
 
-次に、XIAO と Grove Vision AI V2 をピンの列を介して接続する必要があります（または拡張ボードと Grove インターフェースを使用します）。
+次に、ピンヘッダ（または拡張ボードと Grove インターフェース）を使用して、XIAO と Grove Vision AI V2 を接続する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/10.gif" style={{width:600, height:'auto'}}/></div>
 
 ## HACS プラグインのインストール
 
-### ステップ 1. Home Assistant でアドバンスドモードを開く
+### ステップ 1. Home Assistant で Advanced Mode を有効にする
 
-Home Assistant の全ポテンシャルを解放し、高度な機能にアクセスするために、ユーザーインターフェースで「アドバンスドモード」を有効にできます。
+Home Assistant の可能性を最大限に引き出し、高度な機能へアクセスするには、ユーザーインターフェースで "Advanced Mode" を有効にします。
 
-[Home Assistant ウェブインターフェース](http://homeassistant.local:8123)に移動します。Home Assistant サイドバーの左下角にあるプロフィールアイコンをクリックします。プロフィールページで、下にスクロールして**アドバンスドモード**のトグルを見つけます。トグルをオンの位置に切り替えます。
+[Home Assistant web interface](http://homeassistant.local:8123) にアクセスします。Home Assistant サイドバー左下のプロフィールアイコンをクリックします。プロフィールページで下にスクロールし、**Advanced Mode** トグルを見つけます。トグルをオンの位置に切り替えます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/2.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ 2. Terminal & SSH をインストール
+### ステップ 2. Terminal & SSH をインストールする
 
-サイドバーの**設定**をクリックして設定メニューにアクセスします。**アドオン**をクリックしてアドオンストアにアクセスします。
+サイドバーの **Settings** をクリックして設定メニューにアクセスします。**Add-ons** をクリックしてアドオンストアを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/3.png" style={{width:1000, height:'auto'}}/></div>
 
-検索バーを使用するか、利用可能なアドオンを閲覧して**Terminal & SSH**を見つけます。
+検索バーを使用するか、利用可能なアドオンをスクロールして **Terminal & SSH** を探します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/4.png" style={{width:1000, height:'auto'}}/></div>
 
-**Terminal & SSH**を見つけたら、それをクリックして詳細を表示します。アドオンのページで、概要、ドキュメント、設定オプションが表示されます。アドオンをインストールするには、**インストール**ボタンをクリックします。
+**Terminal & SSH** を見つけたら、それをクリックして詳細を表示します。アドオンのページには、概要、ドキュメント、設定オプションが表示されます。アドオンをインストールするには、**Install** ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ 3. HACS をインストール
+### ステップ 3. HACS をインストールする
 
-サイドバーで最近ダウンロードした**Terminal & SSH**を見つけます。ターミナルで、Home Assistant 設定のルートである config ディレクトリに移動します：
+サイドバーで、先ほどダウンロードした **Terminal & SSH** を探してクリックし、ターミナルを開きます。ターミナルで、Home Assistant 設定のルートである config ディレクトリに移動します。
 
 ```
 cd /config
 ```
 
-以下のコマンドを実行してHACSインストールスクリプトをダウンロードし、実行します：
+次のコマンドを実行して、HACS インストールスクリプトをダウンロードして実行します。
 
 ```
 wget -q -O - https://install.hacs.xyz | bash -
 ```
 
-インストールスクリプトが完了した後、変更を適用するためにHome Assistantを再起動する必要があります。UIから**設定 > システム > 再起動**に移動してHome Assistantを再起動できます。
+インストールスクリプトが完了したら、変更を反映させるために Home Assistant を再起動する必要があります。**Settings > System > Restart** に移動して、UI から Home Assistant を再起動できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/6.png" style={{width:1000, height:'auto'}}/></div>
 
-再起動後、サイドバーの**設定**をクリックして設定メニューを開きます。設定メニュー内で、**デバイスとサービス**に移動します。
+再起動後、サイドバーの **Settings** をクリックして設定メニューを開きます。設定メニュー内で **Devices & Services** に移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**統合を追加**をクリックして、Home Assistantセットアップに新しい統合を追加します。
+**ADD INTEGRATION** をクリックして、Home Assistant 環境に新しいインテグレーションを追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/8.png" style={{width:1000, height:'auto'}}/></div>
 
-検索バーで**HACS**と入力して、Home Assistantコミュニティストア統合を検索します。
+検索バーに **HACS** と入力して、Home Assistant Community Store インテグレーションを探します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/9.png" style={{width:1000, height:'auto'}}/></div>
 
-HACSが見つかった場合、利用可能な統合のリストに表示されるはずです。それをクリックしてインストールプロセスを開始します。
+HACS が見つかると、利用可能なインテグレーションの一覧に表示されます。それをクリックしてインストールプロセスを開始します。
 
-ライセンス契約または利用規約がポップアップする場合があります。契約を注意深く読み、条件に同意する場合は、すべてのボックスにチェックを入れて同意を示します。**送信**をクリックしてインストールを続行します。
+ライセンス契約または利用規約が表示される場合があります。内容をよく読み、同意する場合はすべてのチェックボックスをオンにして同意を示します。**SUBMIT** をクリックしてインストールを続行します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/10.png" style={{width:600, height:'auto'}}/></div>
 
-次に、GitHubアカウントでログインするよう求められます。HACSはGitHubと統合してコミュニティが作成した統合とプラグインのインストールを管理するため、これが必要です。
+次に、GitHub アカウントでログインするよう求められます。これは、HACS が GitHub と連携して、コミュニティが作成したインテグレーションやプラグインのインストールを管理するために必要です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/11.png" style={{width:600, height:'auto'}}/></div>
 
-指示に従ってHome AssistantがあなたのGitHubアカウントにアクセスすることを承認します。これは通常、GitHubから提供される認証コードを入力してあなたの身元を確認することを含みます。
+指示に従って、Home Assistant に GitHub アカウントへのアクセスを許可します。通常は、本人確認のために GitHub から提供される確認コードを入力する手順が含まれます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/12.png" style={{width:600, height:'auto'}}/></div>
 
-Home AssistantがあなたのGitHubアカウントを使用することを承認すると、HACSのインストールが完了します。
+Home Assistant に GitHub アカウントの使用を許可すると、HACS のインストールが完了します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/13.png" style={{width:1000, height:'auto'}}/></div>
 
-HACSがシステムに完全に統合されるために、Home Assistantを再起動する必要がある場合があります。
+HACS をシステムに完全に統合するには、Home Assistant を再起動する必要がある場合があります。
 
-## SenseCraftプラグインのインストール
+## SenseCraft プラグインのインストール
 
-### ステップ4. HACSを介したSenseCraftプラグインのインストール
+### ステップ 4. HACS 経由で SenseCraft プラグインをインストールする
 
-サイドバーでHACSを探してクリックし、HACSインターフェースを開きます。右下隅に、メニューボタン（HACSのバージョンによって3つの点またはプラス記号）があります。**カスタムリポジトリ**をクリックします。
+サイドバーで HACS を探してクリックし、HACS インターフェースを開きます。右下にメニューボタン（HACS のバージョンによっては三点リーダーまたはプラス記号）が表示されます。**Custom repositories** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/14.png" style={{width:1000, height:'auto'}}/></div>
 
-リポジトリURLの入力を求めるダイアログボックスが表示されます。ここで、SenseCraft統合のカスタムリポジトリURLを入力します。URLを入力した後、カテゴリを選択します（SenseCraft統合の場合、**統合**を選択します）。
+リポジトリ URL の入力を求めるダイアログボックスが表示されます。ここで、SenseCraft インテグレーション用のカスタムリポジトリ URL を入力します。URL を入力したら、カテゴリを選択します（SenseCraft インテグレーションの場合は **Integration** を選択します）。
 
 ```
 https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
@@ -170,246 +169,246 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-**Add**をクリックします。リポジトリがHACSに追加され、**Integrations**の下のリストでSenseCraftインテグレーションを見つけることができるはずです。
+**Add** をクリックします。これでリポジトリが HACS に追加され、**Integrations** の一覧の中から SenseCraft インテグレーションを見つけられるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/16.png" style={{width:1000, height:'auto'}}/></div>
 
-SenseCraftインテグレーションを見つけて「DOWNLOAD」をクリックします。
+SenseCraft インテグレーションを見つけて "DOWNLOAD" をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/17.png" style={{width:1000, height:'auto'}}/></div>
 
-この時点で、SenseCraftプラグインのインストールが正常に完了しました。
+ここまでで、SenseCraft プラグインのインストールは正常に完了しました。
 
-## Grove Vision AI V2用のモデルの準備
+## Grove Vision AI V2 用のモデルを準備する
 
-### ステップ5. XIAO ESP32C3のファームウェアをフラッシュする
+### ステップ 5. XIAO ESP32C3 にファームウェアを書き込む
 
-適切なUSB-Cケーブルを使用してXIAO ESP32C3をコンピュータに接続します。デバイスドライバが正しくインストールされていることを確認してください。
+適切な USB-C ケーブルを使用して XIAO ESP32C3 をコンピュータに接続します。デバイスドライバが正しくインストールされていることを確認してください。
 
-Webブラウザで[SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool)を開きます。
+Web ブラウザで [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool) を開きます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI Tool</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI ツール</font></span></strong>
     </a>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/22.png" style={{width:1000, height:'auto'}}/></div>
 
-次に**XIAO ESP32S3**を選択し、**Connect**をクリックします。
+次に **XIAO ESP32S3** を選択し、**Connect** をクリックします。
 
 :::caution
-ここではXIAO ESP32S3が選択されていますが、実際にはXIAO ESP32C3を使用していることに注意してください！
+ここでは XIAO ESP32-S3 が選択されていますが、実際に使用しているのは XIAO ESP32-C3 ですので注意してください！
 :::
 
-下のボタンをクリックしてファームウェアファイルをダウンロードし、Webページの**Add File**ボタンをクリックして`0x0`アドレス用の`SSCMA_XIAO_ESP32C3_adapter_sensecraft_v1.1.8.bin`ファームウェアをフラッシュします。
+下のボタンをクリックしてファームウェアファイルをダウンロードし、Web ページ上の **Add File** ボタンをクリックして、`0x0` アドレスに `SSCMA_XIAO_ESP32C3_adapter_sensecraft_v1.1.8.bin` ファームウェアを書き込みます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/visionai-v2-ha/res/SSCMA_XIAO_ESP32C3_adapter_sensecraft_v1.1.8.bin" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Download the file</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>ファイルをダウンロード</font></span></strong>
     </a>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/23.png" style={{width:1000, height:'auto'}}/></div>
 
-最後に**Flash**ボタンをクリックし、プログラムが正常にアップロードされるまで待ってから、XIAO ESP32C3をコンピュータから切断します。
+最後に **Flash** ボタンをクリックし、プログラムが正常に書き込まれるまで待ってから、XIAO ESP32C3 をコンピュータから取り外します。
 
-### ステップ6. Grove Vision AI V2をSenseCraft AIモデルアシスタントに接続する
+### ステップ 6. Grove Vision AI V2 を SenseCraft AI Model Assistant に接続する
 
-まず、SenseCraft AIのメインページを開く必要があります。
+まず、SenseCraft AI のメインページを開く必要があります。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI へ移動</font></span></strong></a>
 </div>
 <br />
 
-ナビゲーションメニューで**Vision Workspace -> Grove Vision AI V2**をクリックします。
+ナビゲーションメニューで **Vision Workspace -> Grove Vision AI V2** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/52.png" style={{width:1000, height:'auto'}}/></div>
 
-Type-Cタイプのケーブルを使用して**Grove Vision AI V2**をコンピュータに接続してください。
+Type-C ケーブルを使用して **Grove Vision AI V2** をコンピュータに接続してください。
 
-次に左上の**Connect**ボタンをクリックし、デバイスのポート番号を選択します。
+次に左上の **Connect** ボタンをクリックし、デバイスのポート番号を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/53.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ7. 適切なモデルをアップロードする
+### ステップ 7. 適切なモデルをアップロードする
 
-次に、**Select Model**をクリックした後、使用したい適切なモデルを選択してGrove Vision AI V2にアップロードしてください。
+その後、**Select Model** をクリックした後に使用したい適切なモデルを選択し、Grove Vision AI V2 にアップロードしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/54.png" style={{width:1000, height:'auto'}}/></div>
 
-モデルがアップロードされるまで1〜2分待ちます。
+モデルがアップロードされるまで 1〜2 分ほど待ちます。
 
-### ステップ8. 観察
+### ステップ 8. 動作確認
 
-モデルが正常にアップロードされると、右側のPreviewでGrove Vision AI V2カメラからのライブフィードを見ることができます。
+モデルが正常にアップロードされると、右側のプレビューで Grove Vision AI V2 カメラからのライブ映像が表示されるようになります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
-右側のPreview Settingsには、モデルの認識精度を最適化するために変更できる2つの設定オプションがあることがわかります。
+右側の Preview Settings では、モデルの認識精度を最適化するために変更できる設定オプションが 2 つあります。
 
 :::tip
-Previewに画面が表示されない場合やモデル情報に情報がない場合は、モデルに問題がある可能性があり、モデルを再選択するか再度アップロードする必要があります。
+Preview に画面が表示されない、またはモデル情報に何も表示されない場合は、モデルに問題がある可能性があり、モデルを再選択するか再度アップロードする必要があります。
 :::
 
-## Home AssistantでのMQTTサービス構築
+## Home Assistant で MQTT サービスを構築する
 
-### ステップ9. EMQXのインストール
+### ステップ 9. EMQX をインストールする
 
-サイドバーの**Settings**をクリックして設定メニューにアクセスします。**Add-ons**をクリックしてアドオンストアにアクセスします。
+サイドバーの **Settings** をクリックして設定メニューにアクセスします。**Add-ons** をクリックしてアドオンストアにアクセスします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/3.png" style={{width:1000, height:'auto'}}/></div>
 
-検索バーを使用するか、利用可能なアドオンを参照して**emqx**を見つけます。
+検索バーを使用するか、利用可能なアドオンを参照して **emqx** を探します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/51.png" style={{width:1000, height:'auto'}}/></div>
 
-**EMQX**を見つけたら、それをクリックして詳細を表示します。アドオンのページでは、概要、ドキュメント、設定オプションが表示されます。アドオンをインストールするには、**Install**ボタンをクリックします。
+**EMQX** を見つけたら、それをクリックして詳細を表示します。アドオンのページには、概要、ドキュメント、設定オプションが表示されます。アドオンをインストールするには、**Install** ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/50.png" style={{width:1000, height:'auto'}}/></div>
 
-EMQXアドオンがインストールされたら、**Start on boot**、**Watchdog**、**Show in sidebar**のトグルをオンにします。**Start**をクリックしてEMQXを開始します。
+EMQX アドオンがインストールされたら、**Start on boot**、**Watchdog**、**Show in sidebar** のトグルをオンにします。**Start** をクリックして EMQX を起動します。
 
-EMQXダッシュボードのログインページで、デフォルトのユーザー名とパスワードを入力します。
+EMQX Dashboard のログインページで、デフォルトのユーザー名とパスワードを入力します。
 
-- デフォルトユーザー名：**admin**
-- デフォルトパスワード：**public**
+- デフォルトのユーザー名: **admin**
+- デフォルトのパスワード: **public**
 
-「Login」ボタンをクリックしてEMQXダッシュボードにアクセスします。
+"Login" ボタンをクリックして EMQX Dashboard にアクセスします。
 
-EMQXダッシュボードで、左サイドバーメニューから**Authentication**セクションに移動します。**Databases**タブをクリックします。
+EMQX Dashboard で、左側のサイドバーメニューから **Authentication** セクションに移動します。**Databases** タブをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/11.png" style={{width:900, height:'auto'}}/></div>
 
-**Create**ボタンをクリックします。**Mechanism**ドロップダウンで**Password-Based**を選択し、**Backend**ドロップダウンで**Built-in Database**を選択します。「Create」ボタンをクリックしてBuilt-in Databaseを作成します。
+**Create** ボタンをクリックします。**Mechanism** ドロップダウンで **Password-Based** を選択し、**Backend** ドロップダウンで **Built-in Database** を選択します。"Create" ボタンをクリックして Built-in Database を作成します。
 
-Built-in Databaseを作成した後、「Authentication」セクションの**Users**タブをクリックします。「Add User」ボタンをクリックします。
+Built-in Database を作成したら、"Authentication" セクションの **Users** タブをクリックします。"Add User" ボタンをクリックします。
 
-- 「Username」フィールドに「seeed」と入力します。
-- 「Password」フィールドに「seeed」と入力します。
+- "Username" フィールドに "seeed" と入力します。
+- "Password" フィールドに "seeed" と入力します。
 
-「Authentication」セクションの「Databases」タブに戻ります。データベースのリストで以前に作成したデータベースを見つけます。
+"Authentication" セクションの "Databases" タブに戻ります。データベース一覧の中から、先ほど作成したデータベースを探します。
 
-データベースの横にあるトグルスイッチをクリックして有効にします。データベースのステータスが「Enabled」に変わります。
+データベースの横にあるトグルスイッチをクリックして有効にします。データベースのステータスが "Enabled" に変わるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/12.png" style={{width:900, height:'auto'}}/></div>
 
-## Grove Vision AI V2をHome Assistantに統合
+## Grove Vision AI V2 を Home Assistant に統合する
 
-### ステップ10. Grove Vision AI V2とXIAOのネットワーク設定
+### ステップ 10. Grove Vision AI V2 と XIAO のネットワーク設定
 
-Grove Vision AI V2をコンピューターに接続し、Grove Vision AI V2設定ページを開きます。
+Grove Vision AI V2 をコンピュータに接続し、Grove Vision AI V2 の設定ページを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/56.png" style={{width:1000, height:'auto'}}/></div>
 
-左上角をクリックしてGrove Vision AI V2に接続した後、MQTTボタンをオンにして、ページで入力する必要がある以下の情報を入力してください。
+左上をクリックして Grove Vision AI V2 に接続した後、MQTT ボタンをオンにし、ページに入力する必要がある以下の情報を入力してください。
 
-- **SSID & Password**：デバイスはHome Asistantがインストールされているホストと同じLAN上にある必要があります。そのため、同じLAN下でネットワークを設定してください。XIAOは2.4G WiFiのみをサポートし、5Gネットワークは利用できません。
-- **Encryption**：**AUTO**を選択します。
-- **Host**：Home AssistantがインストールされているホストのIPアドレス。
-- **Port**：`1883`。
-- **clientId**：デバイス識別番号として、`grove_vision_ai_v2_`をプレフィックスとして、その後にカスタムID番号を続けてください。
-- **username**：先ほど作成したEMQXデータベースの名前。
-- **password**：先ほど作成したEMQXデータベースのパスワード。
+- **SSID & Password**: デバイスは Home Assistant がインストールされているホストと同じ LAN 上にある必要があります。そのため、同じ LAN 配下のネットワークを設定してください。XIAO は 2.4G WiFi のみをサポートしており、5G ネットワークは使用できません。
+- **Encryption**: **AUTO** を選択します。
+- **Host**: Home Assistant がインストールされているホストの IP アドレス。
+- **Port**: `1883`。
+- **clientId**: デバイスの識別番号で、`grove_vision_ai_v2_` をプレフィックスとして付け、その後に任意の ID 番号を続けてください。
+- **username**: 先ほど作成した EMQX データベースのユーザー名。
+- **password**: 先ほど作成した EMQX データベースのパスワード。
 
-次に下の**Apply**ボタンをクリックします。保存後、**Grove Vision AIがネットワークに接続されたことを意味するものではありません**。左メニューバーの**Process**に戻って、デバイスのIPアドレスが表示されているか、MQTT接続のステータスが正しいかを確認してください。
+その後、下の **Apply** ボタンをクリックします。保存しても、**Grove Vision AI がネットワークに接続されたことを意味するわけではありません**。左側のメニューバーの **Process** に戻り、デバイスの IP アドレスが表示されているか、MQTT 接続のステータスが正しいかを確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/57.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-IPアドレスが表示されている場合、WiFiに問題がないことを意味し、Service statusは図のテキストが正常を表す必要があります。WiFiが正常でない場合、MQTTは確実に正常ではないことに注意してください。切り替えたばかりの時は未接続と表示される場合があり、約10秒程度待つ必要があります。リフレッシュする必要はなく、ステータスが変更された後に自動的に最新のステータスが表示されます。
+IP Address が表示されていれば WIFI に問題はなく、Service status は図のテキストと同じであれば正常であることを示します。WIFI に問題がある場合、MQTT も必ず正常ではありません。また、画面を切り替えた直後は未接続と表示されることがありますが、約 10 秒ほど待つ必要があります。ステータスを確認するためにリフレッシュする必要はなく、ステータスが変化すると自動的に最新の状態が表示されます。
 :::
 
-### ステップ11. Home Assistantへの統合
+### ステップ 11. Home Assistant への統合
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Scenario 1. If the device has been found" label="シナリオ1. デバイスが見つかった場合">
+<TabItem value="Scenario 1. If the device has been found" label="シナリオ 1. デバイスが検出された場合">
 
-この時点で、通常はHome Assistantの**Settings->Devices & services**内でGrove Vision AI V2を検索できるはずです。
+ここまでで通常は、Home Assistant の **Settings->Devices & services** 内で Grove Vision AI V2 を検索できるようになっています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/34.png" style={{width:1000, height:'auto'}}/></div>
 
-**Configure**ボタンをクリックして関連情報を設定してください。これでデバイスの追加が完了しました。
+**Configure** ボタンをクリックして関連情報を設定すると、デバイスの追加が完了します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/35.png" style={{width:1000, height:'auto'}}/></div>
 
-**Settings->Devices & services**で、デバイスの詳細を確認し、サポートされているタブを表示できます。概要に表示したいタブを必要な数だけ追加できます。
+**Settings->Devices & services** では、デバイスの詳細とサポートされているタブが表示され、概要に表示したいタブを好きなだけ追加できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/36.png" style={{width:1000, height:'auto'}}/></div>
 
 :::note
 
-1. 前のステップでユーザー名とパスワードを設定した場合、デバイスを追加する際にそれらの入力を求められる場合があります。
-2. Home Assistantに複数のVision AIデバイスを追加する場合は、デバイスのID番号に注意してください。これは異なるGroveフラグ間の識別マークとして機能します。
+1. 以前の手順でユーザー名とパスワードを設定している場合、デバイスを追加するときにそれらの入力を求められることがあります。
+2. Home Assistant に追加する Vision AI デバイスが複数ある場合は、各 Grove フラグを区別するための識別マークとして機能するデバイスの ID 番号に注意してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/42.png" style={{width:600, height:'auto'}}/></div>
 :::
 
 </TabItem>
 
-<TabItem value="Scenario 2. If the device is not found" label="シナリオ2. デバイスが見つからない場合">
+<TabItem value="Scenario 2. If the device is not found" label="シナリオ 2. デバイスが見つからない場合">
 
-自宅にデバイスが多すぎる場合、Home Assistantで直接検索できないことがあります。その場合、手動でデバイスを追加する必要があります。
+自宅にデバイスが多すぎる場合、Home Assistant から直接検索できないことがあります。その場合は、デバイスを手動で追加する必要があります。
 
-**Settings**ページで、**Devices & Services**を選択します。
+**Settings** ページで、**Devices & Services** を選択します。
 
-右下角の**ADD INTEGRATION**ボタンをクリックし、**SenseCraft**を検索します。
+右下の **ADD INTEGRATION** ボタンをクリックし、**SenseCraft** を検索します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/38.png" style={{width:1000, height:'auto'}}/></div>
 
-SenseCraftをクリックし、Actionとして**Add device using host/id**を選択します。
+SenseCraft をクリックし、Action として **Add device using host/id** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/39.png" style={{width:500, height:'auto'}}/></div>
 
-**SUBMIT**をクリックし、ドロップダウンメニューから`Grove Vision AI V2`などのデバイスタイプを選択し、再度**SUBMIT**をクリックします。
+**SUBMIT** をクリックし、ドロップダウンメニューから `Grove Vision AI V2` などのデバイスタイプを選択して、再度 **SUBMIT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/40.png" style={{width:500, height:'auto'}}/></div>
 
-次の入力フィールドに、デバイスの正確なIDを入力します。このIDは通常、デバイス本体またはSenseCraft AIウェブサイトで確認できます。
+次の入力フィールドに、デバイスの正確な ID を入力します。この ID は通常、デバイス本体または SenseCraft AI の Web サイト上に記載されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/70.png" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/58.png" style={{width:1000, height:'auto'}}/></div>
 
-次のステップはMQTTサービスの設定です。ウェブサイトで設定したMQTTサービスの詳細と一致する情報を入力します。以前にユーザー名とパスワードを設定していない場合は、ここで入力する必要はありません。その後、**SUBMIT**をクリックします。
+次のステップでは MQTT サービスを設定します。Web サイト上で設定した MQTT サービスの詳細と一致する情報を入力してください。以前にユーザー名とパスワードを設定していない場合は、ここでは入力する必要はありません。その後 **SUBMIT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/59.png" style={{width:500, height:'auto'}}/></div>
 
-- **Broker**: Home AssistantのIPアドレス。
+- **Broker**: Home Assistant の IP アドレス。
 - **Port**: `1883`。
-- **clientId**: デバイス識別番号には、`grove_vision_ai_v2_`をプレフィックスとして付け、その後にカスタムID番号を続けてください。
-- **username**: 作成したEMQXデータベースの名前。
-- **password**: 作成したEMQXデータベースのパスワード。
+- **clientId**: デバイスの識別番号として、`grove_vision_ai_v2_` にカスタム ID 番号を続けて付けてください。
+- **username**: 先ほど作成した EMQX データベースの名前。
+- **password**: 先ほど作成した EMQX データベースのパスワード。
 
 </TabItem>
 
 </Tabs>
 
-設定が成功すると、システムは通常、デバイスの場所を選択するよう促します。実際の状況に基づいて適切な部屋またはエリアを選択し、**Finish**をクリックします。
+セットアップが成功すると、通常はデバイスの設置場所を選択するように求められます。実際の状況に応じて適切な部屋またはエリアを選択し、**Finish** をクリックします。
 
-設定が完了すると、Home Assistantの「Overview」ページでデバイスとその状態を確認できます。
+設定が完了すると、Home Assistant の "Overview" ページでデバイスとそのステータスを確認できます。
 
-これらの手順に従うことで、「SenseCraft」デバイスをHome Assistantインスタンスに正常に追加し、MQTTサービスを使用するように設定できるはずです。
+これらの手順に従うことで、"SenseCraft" デバイスを Home Assistant インスタンスに正常に追加し、MQTT サービスを使用するように構成できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
 
 ## トラブルシューティング
 
-### Q1: Grove Vision AI V2が切断された後、HAでデータメッセージが再び表示されない場合はどうすればよいですか？
+### Q1: Grove Vision AI V2 が切断された後、HA でデータメッセージが再び表示されなくなった場合はどうすればよいですか？
 
-SenseCraftでデバイスを削除して再追加する必要があります。削除後、自動検索できなくなる可能性があり、手動でデバイスを追加する必要があります。デバイスを再追加するには、**[こちらの手順](#step-11-integration-into-home-assistant)**を参照してください。
+SenseCraft でデバイスを削除して再追加する必要があるかもしれません。削除後は自動検索ができなくなる場合があり、その際はデバイスを手動で追加する必要があります。デバイスを再追加するには、**[こちらの手順](#step-11-home-assistant-への統合)** を参照してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/44.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

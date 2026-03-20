@@ -59,7 +59,7 @@ atinge o padrão. O Sensor Grove EC é um medidor analógico de condutividade el
 | Arduino uno | Grove-EC Sensor kit | base shield|
 |:--------------:|:--------------:|:--------------:|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/arduinouno.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.09.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-EC_Sensor_kit/img/110020292.06.png" alt="pir" width={600} height="auto" /></p>
-|[Adquira agora](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-694.html)|[Adquira agora](https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-694.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-EC-Sensor-Kit-DJS-1C-Black-p-4576.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2.html)|
 
 #### Conexão de Hardware
 

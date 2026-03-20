@@ -1,7 +1,7 @@
 ---
 sidebar_position: 13
-description: Nvidia Jetson Workspace on SenseCraft AI Platform
-title: reComputer Jetson Workspace
+description: SenseCraft AI プラットフォーム上の Nvidia Jetson ワークスペース
+title: reComputer Jetson ワークスペース
 keywords:
   - Cloud and Chain
   - SenseCraft
@@ -13,21 +13,21 @@ aliases:
 last_update:
   date: 08/22/2024
   author: Frank
-createdAt: '2025-09-04'
-updatedAt: '2026-03-04'
+createdAt: '2024-08-21'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
 ## はじめに
 
-Jetsonデバイスをワークスペースに追加する前に、まずJetsonにSenseCraft AIアプリをインストールしてください。
+Jetson デバイスをワークスペースに追加する前に、まず SenseCraft AI アプリを Jetson にインストールしてください。
 
-SenseCraft AI-JetsonはNVIDIA Jetson Edge AIデバイス向けに設計された開発ツールキットおよびプラットフォームです。「クイックスタートスクリプト」を実行するだけで、事前に読み込まれた動画と事前に読み込まれたAIモデルを使用したサンプルアプリケーションを表示するインタラクティブなユーザーインターフェースが表示されます。独自のUSBカメラやIPカメラを追加したい場合は、数回のクリックで簡単に行うことができます！
+SenseCraft AI-Jetson は、NVIDIA Jetson エッジ AI デバイス向けに設計された開発ツールキットおよびプラットフォームです。"Quickstart Script" を実行するだけで、あらかじめ用意された動画と AI モデルを使ったサンプルアプリケーションを表示できるインタラクティブなユーザーインターフェースが起動します。USB カメラや IP カメラを追加したい場合も、数回クリックするだけで簡単に追加できます。
 
 **ハードウェア要件**
 
-- NVIDIA Jetsonデバイス
-- Ethernet/WiFi経由のインターネット接続
+- NVIDIA Jetson デバイス
+- Ethernet / WiFi によるインターネット接続
 - ディスプレイ
 
 **ソフトウェア要件**
@@ -38,57 +38,57 @@ SenseCraft AI-JetsonはNVIDIA Jetson Edge AIデバイス向けに設計された
 
 **クイックスタート**<br />
 
-1. Jetsonをディスプレイに接続し、電源を入れます<br />
-2. マウスとキーボードをデバイスに接続し、ターミナルで以下のコマンドを入力してアプリケーションを実行します
+1. Jetson をディスプレイに接続し、電源を入れます<br />
+2. マウスとキーボードをデバイスに接続し、ターミナルで次のコマンドを入力してアプリケーションを実行します
 
 ```
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
 ```
 
-3. アプリケーションのインストール中に、以下のオプション設定を行う必要がありますので、ニーズに応じて設定してください
+3. アプリケーションのインストール中に、以下のオプション設定を行う必要があります。必要に応じて設定してください
 
-- **[オプション] jetson_clocksスクリプトを有効にして、CPU、GPU、EMCクロックを最大周波数に設定することでJetsonのパフォーマンスを最大化しますか？ [y/n] (デフォルト: y): y**<br />
-CPU、GPU、EMCクロックを静的最大周波数に設定することで、Jetsonのパフォーマンスを最大化するjetson_clocksスクリプトを提供します。
+- **[Optional] Enable jetson_clocks script to maximize Jetson performance by setting max frequency to CPU, GPU, and EMC clocks? [y/n] (default: y): y**<br />
+CPU、GPU、EMC クロックの最大周波数を固定することで Jetson の性能を最大化する `jetson_clocks` スクリプトを提供します。
 
-- **[オプション] libreofficeなどの不要なパッケージをアンインストールしてスペースを節約し、スワップメモリのサイズを変更しますか？ (/swapfile) [y/n] (デフォルト: n): n**<br />
-メモリが不足している場合（特にjetson nano）、プログラムの正常な動作を確保するためにスワップを有効にすることをお勧めします。
+- **[Optional] Save space by uninstalling some unnecessary packages like libreoffice, change the size of the Swap Memory? (/swapfile) [y/n] (default: n): n**<br />
+メモリが不足している場合（特に Jetson Nano）、プログラムを正常に動作させるためにスワップを有効にすることをお勧めします。
 
-- **[オプション] スワップメモリのサイズを作成または変更しますか？ (/swapfile)?**<br />
-nanoからより良いパフォーマンスを得るために、スワップを有効にしてください。
+- **[Optional] Do you want to create or change the size of the Swap Memory? (/swapfile)?**<br />
+Nano の性能をより引き出すには、スワップを有効にしてください。
 
-- **[オプション] 外部ディスクを使用してDockerデータディレクトリを保存しますか？ (dockerイメージとボリューム用)?**<br />
+- **[Optional] Use external · to store the Docker data directory? (for docker images & volumes)?**<br />
 
-- **(ルートパーティションが32GB未満の場合は推奨). [y/n] (デフォルト: n): n**<br />
+- **(Recommended if your root partition is smaller than 32 GB). [y/n] (default: n): n**<br />
 
-エッジAIプログラムの実行には最低32Gのストレージ容量が必要です。容量が不足している場合は、dockerデータボリュームを外部ディスクにマウントすることを選択できます。
+エッジ AI プログラムを実行するには最低 32G のストレージ容量が必要です。満たない場合は、Docker のデータボリュームを外部ディスクにマウントすることを選択できます。
 
-4. これでSenseCraft AI-Jetsonを体験できます
+4. これで SenseCraft AI-Jetson を体験できます
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/35.png)
 
 ### デバイスの追加
 
-1. Device Workspace Pageで「Add Device」ボタンをクリックします
+1. Device Workspace ページで "Add Device" ボタンをクリックします
 2. デバイスのカスタム名を入力し、デバイスからバインドコードを取得します。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image28.png)
 
-3. デバイスのSenseCraft AIアプリケーションに戻ります。「Bind to SenseCraft AI platform」をクリックすると、アプリケーションにバインドコードと一時的な名前が表示されます。
+3. デバイスの SenseCraft AI アプリケーションに戻ります。"Bind to SenseCraft AI platform" をクリックすると、アプリケーションにバインドコードと一時名が表示されます。
 
-- Bind Code: デバイスのバインドを完了するために、SenseCraft AI-Model Zooで正しく有効なバインドコードを入力してください。
-- Temporary Name: バインドコードが重複している場合は、正しい一時的な名前を入力する必要があります。
+- Bind Code: SenseCraft AI-Model Zoo 上で正しく有効なバインドコードを入力して、デバイスのバインドを完了します。
+- Temporary Name: バインドコードが重複している場合は、正しい一時名を入力する必要があります。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image29.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image30.png)
 
-4. 正しく有効なバインドコードを入力し、「Confirm」ボタンをクリックします
+4. 正しく有効なバインドコードを入力し、"Comfirm" ボタンをクリックします
 
-5. バインドが成功しました。これでデバイスを管理できます
+5. バインドが成功すると、デバイスを管理できるようになります
 
 :::note
 
-各アカウントは5台の無料デバイスのみ追加できます
+各アカウントで追加できる無料デバイスは 5 台までです
 
 :::
 
@@ -98,48 +98,48 @@ nanoからより良いパフォーマンスを得るために、スワップを�
 
 ### デバイス情報
 
-デバイス情報は、一般情報、ビデオストリーム情報、AIモデルの3つの部分に分かれています。
+デバイス情報は、一般情報、ビデオストリーム情報、AI モデルの 3 つの部分に分かれています。
 
 ### 一般情報
 
-デバイス情報は、一般情報、ビデオストリーム情報、AIモデルの3つの部分に分かれています。詳細については以下の表をご確認ください
+デバイス情報は、一般情報、ビデオストリーム情報、AI モデルの 3 つの部分に分かれています。詳細は以下の表を確認してください
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image33.png)
 
-| **フィールド** | **内容** |
+| **項目** | **内容** |
 | --- | --- |
-| **Device Name** | デバイスのカスタム名、ユーザーが名前を変更可能 |
-| **Device SN** | デバイスの固有製造シリアル番号 |
-| **Device EUI** | Device EUI |
-| **Online Status** | Online: デバイスがオンライン<br />Offline: デバイスがオフライン、ユーザーはオフラインデバイスを操作できません |
-| **Equipped Module** | デバイスのモジュール |
-| **CPU Usage** | デバイスのCPU使用率 |
-| **Memory** | デバイスのRAM使用量 |
+| **Device Name** | デバイスのカスタム名。ユーザーが名前を変更可能 |
+| **Device SN** | デバイスの一意の製造シリアル番号 |
+| **Device EUI** | デバイスの EUI |
+| **Online Status** | Online: デバイスがオンライン状態<br />Offline: デバイスがオフライン状態。オフラインのデバイスは操作できません |
+| **Equipped Module** | デバイスに搭載されているモジュール |
+| **CPU Usage** | デバイスの CPU 使用率 |
+| **Memory** | デバイスの RAM 使用量 |
 | **Storage** | デバイスのディスク使用量 |
-| **IP Address** | デバイスのネットワークIPアドレス |
-| **MAC Address** | デバイスのMACアドレス |
-| **SenseCraft AI Version** | デバイスにインストールされているSenseCraft AIアプリケーションのバージョン |
-| **Collect Time** | デバイスから最後に情報が収集された時刻 |
+| **IP Address** | デバイスのネットワーク IP アドレス |
+| **MAC Address** | デバイスの MAC アドレス |
+| **SenseCraft AI Version** | デバイスにインストールされている SenseCraft AI アプリケーションのバージョン |
+| **Collect Time** | デバイスから最後に情報を収集した時刻 |
 
 ### デバイスの削除
 
-AIモデルのデプロイが完了し、デバイスをリモートで管理する必要がない場合は、プラットフォームからデバイスを削除することができます。デバイスはエッジで独立してローカル推論、ストリーム管理、AIモデル管理を行うことができます。
+AI モデルのデプロイが完了し、デバイスをリモートで管理する必要がない場合は、プラットフォームからデバイスを削除できます。削除後も、デバイスはエッジ側でローカル推論、ストリーム管理、AI モデル管理を自律的に行うことができます。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image34.png)
 
 ### ビデオストリーム管理
 
-ビデオストリームでは、リアルタイムの推論結果をリモートで表示し、デバイスのビデオストリームを管理できます。ストリームの追加、編集、表示、削除をサポートしています。
+Video Stream では、リモートでリアルタイム推論結果を確認し、デバイスのビデオストリームを管理できます。ストリームの追加、編集、閲覧、および削除をサポートします。
 
 #### リアルタイム推論
 
-デバイスにビデオストリームが追加されている場合、ユーザーはプラットフォーム上ですべてのストリームのリアルタイム推論結果を表示できます。推論結果と例外のリアルタイム監視が可能です。
+デバイスにビデオストリームが追加されている場合、ユーザーはプラットフォーム上で全ストリームのリアルタイム推論結果を確認できます。推論結果や異常をリアルタイムに監視できます。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image35.png)
 
 #### ストリームの追加
 
-「ストリームを追加」をクリックし、有効なストリーム情報を入力してから「確認」ボタンをクリックして、新しいストリームをデバイスに送信します。デバイスが新しいストリームを追加するには時間がかかり、プラットフォーム情報は後で更新されます。詳細情報については以下の表をご確認ください。
+"Add Stream" をクリックして有効なストリーム情報を入力し、"Confirm" ボタンをクリックして新しいストリームをデバイスに送信します。デバイスが新しいストリームを追加するには時間がかかるため、プラットフォーム上の情報は後から更新されます。詳細情報は以下の表を確認してください。
 
 :::note
 
@@ -147,47 +147,47 @@ AIモデルのデプロイが完了し、デバイスをリモートで管理す
 
 :::
 
-| **フィールド** | **内容** |
+| **項目** | **内容** |
 | --- | --- |
-| **ストリーム名** | 1 このストリームのカスタム名。<br />2 空にすることはできません |
-| **ビデオタイプ** | 1 IPカメラ：IPカメラにアクセスし、有効なrtsp urlを入力する必要があります<br />2 USBカメラ：USBカメラをデバイスに接続し、USBを自動認識してから、ビデオパスで正しいUSBカメラを選択します。 |
-| **ビデオパス** | ビデオパス、形式は「ビデオタイプ」によって決定されます。間違っている場合は、デフォルトビデオが使用されます。 |
-| **デバイスAIモデル** | 1 デバイスに既にダウンロードされているAIモデルを選択<br />2 デバイスにAIモデルがない場合は、AIモデルページに移動してモデルをデバイスにダウンロードしてください。 |
-| **信頼度閾値** | 1 検出のためのオブジェクト信頼度閾値。<br />2 形式：float [0, 1] |
-| **IoU閾値** | 1 IoUは、真実の境界ボックスと比較して予測された境界ボックスの精度を評価するために使用されます2 形式：float [0, 1] |
-| **FPS** | 1 ストリームの1秒あたりのフレーム数<br />2 形式：INT [1,60] |
-| **品質** | 1 出力ストリーム品質。デフォルト：50<br />2 形式：int [0,100] |
-| **最大検出数** | 1 画像あたりの最大検出数。デフォルト：3002 形式：int [0,1000] |
-| **フレームレート表示** | 1 ストリームのフレームレートを表示するかどうか<br />2 形式：Bool [True,False]<br />● True：FPSを表示<br />● False：FPSを表示しない |
-| **時計表示** | 1 時刻を表示するかどうか<br />2 形式：Bool [True,False]<br />● True：時刻を表示<br />● False：時刻を表示しない |
+| **Stream Name** | 1 このストリームのカスタム名<br />2 空欄にはできません |
+| **Video Type** | 1 Ip camera：IP カメラにアクセスします。有効な RTSP URL を入力する必要があります<br />2 Usb camera：USB カメラをデバイスに接続すると自動的に USB を認識し、Video Path で正しい USB カメラを選択します。 |
+| **Video Path** | Video Path。形式は "Video Type" によって決まります。誤っている場合はデフォルトの動画が使用されます。 |
+| **Device AI Model** | 1 すでにデバイスにダウンロードされている AI モデルを選択します<br />2 デバイスに AI モデルがない場合は、AI Models ページに移動してモデルをデバイスにダウンロードしてください。 |
+| **Confidence Threshold** | 1 検出のためのオブジェクト信頼度しきい値<br />2 形式: float [0, 1] |
+| **IoU Threshold** | 1 IoU は、予測バウンディングボックスと真のバウンディングボックスを比較して精度を評価するために使用されます2 形式: float [0, 1] |
+| **FPS** | 1 ストリームのフレームレート（Frames per second）<br />2 形式: INT [1,60] |
+| **Quality** | 1 出力ストリームの画質。デフォルト: 50<br />2 形式: int [0,100] |
+| **Maximum Detections** | 1 1 画像あたりの最大検出数。デフォルト:3002 形式: int [0,1000] |
+| **Display Frame Rate** | 1 ストリームのフレームレートを表示するかどうか<br />2 形式: Bool [True,False]<br />● True: FPS を表示<br />● False: FPS を表示しない |
+| **Display Clock** | 1 時刻を表示するかどうか<br />2 形式: Bool [True,False]<br />● True: 時刻を表示<br />● False: 時刻を表示しない |
 
 #### ストリーム詳細
 
-ストリームの「目」アイコンをクリックすると、ストリームの詳細情報を表示できます
+ストリームの "Eye" アイコンをクリックすると、ストリームの詳細情報を表示できます
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image36.png)
 
-#### ストリーム編集
+#### ストリームの編集
 
-ストリームの「編集」アイコンをクリックすると、ユーザーはストリームのすべての設定を編集でき、「確認」ボタンをクリックして変更されたストリーム情報をデバイスに送信できます。デバイスがストリーミング設定を更新するのに時間がかかるため、プラットフォーム情報は後で更新されます
+ストリームの "Edit" アイコンをクリックすると、ユーザーはストリームのすべての設定を編集でき、"Confirm" ボタンをクリックして変更したストリーム情報をデバイスに送信します。デバイスがストリーミング設定を更新するには時間がかかるため、プラットフォーム上の情報は後から更新されます。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image37.png)
 
-#### ストリーム削除
+#### ストリームの削除
 
-ストリームの「削除」アイコンをクリックしてストリームを削除します。デバイスがストリームを削除するのに時間がかかるため、プラットフォーム情報は後で更新されます
+ストリームの "Delete" アイコンをクリックしてストリームを削除します。デバイスがストリームを削除するには時間がかかるため、プラットフォーム上の情報は後から更新されます
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image38.png)
 
 ### デバイス AI モデル
 
-デバイスにダウンロードされたすべての AI モデルを管理し、モデルの追加、モデル詳細の表示、モデルの削除をサポートします。
+デバイスにダウンロード済みのすべての AI モデルを管理し、モデルの追加、モデル詳細の表示、モデルの削除をサポートします。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image39.png)
 
 ## **技術サポート**
 
-**SenseCAP Indicatorでお困りですか？サポートいたします！**
+**reComputer Jetson でお困りですか？私たちがサポートします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -198,3 +198,4 @@ AIモデルのデプロイが完了し、デバイスをリモートで管理す
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+/div>

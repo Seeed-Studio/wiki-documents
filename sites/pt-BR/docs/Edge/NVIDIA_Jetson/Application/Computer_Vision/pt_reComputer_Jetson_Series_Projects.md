@@ -23,7 +23,7 @@ Explore projetos empolgantes criados por usuários de Jetson para encontrar insp
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reprojects.jpg" alt="pir" width={500} height="auto" /></p></td>
-      <td align="left"><strong>Galeria de Projetos da Comunidade Jetson</strong><br /><br />A galeria de projetos da comunidade Jetson oferece uma tonelada de trabalhos incríveis e, mais importante, você também pode exibir aqui suas próprias obras-primas com Jetson.<br /><a href="https://developer.nvidia.com/embedded/community/jetson-projects">Acesse agora &gt;</a></td>
+      [LINE[25]]      <td align="left"><strong>Galeria de Projetos da Comunidade Jetson</strong><br /><br />A galeria de projetos da comunidade Jetson oferece uma tonelada de trabalhos incríveis e, mais importante, você também pode exibir aqui suas próprias obras-primas com Jetson.<br /><a href="https://developer.nvidia.com/embedded/community/jetson-projects">Acesse agora &gt;</a></td>
     </tr>
   </tbody>
 </table>

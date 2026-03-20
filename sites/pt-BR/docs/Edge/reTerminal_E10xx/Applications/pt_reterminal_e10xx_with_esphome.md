@@ -272,7 +272,7 @@ Selecione usbmodemxxx (no Windows é COMxxx) e clique em connect. [Encontrou um 
 
 Clique em **INSTALL** e selecione o firmware que você acabou de baixar.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div]
 
 Aguarde um momento e você verá 'Hello world!' no display ～
 

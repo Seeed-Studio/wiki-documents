@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/pt-br/Bees_Shield/
 
 Bees_Shield tornará a interface com vários módulos estilo Bee (XBee, GPRS Bee, Bluetooth Bee etc.) mais fácil do que nunca. Além de dois soquetes estilo Bee de 20 p com passo 2,0, ele também possui uma grande área de prototipagem e uma porta serial de software personalizável para facilitar o desenvolvimento de protótipos.
 
-[![Adquira agora](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Bees-Shield-p-672.html)
+[![Get one now](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/Bees-Shield-p-672.html)
 
 ## Versões
 ---------------

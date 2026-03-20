@@ -101,7 +101,7 @@ Após esta seção, você poderá fazer o Grove - Sunlight Sensor funcionar com 
 | Seeeduino V4.2 |Grove - Sunlight Sensor|
 |--------------|-------------|
 |<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 :::caution
 Se esta é a sua primeira vez usando Arduino, coloque a mão [aqui](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Seeeduino) para iniciar sua jornada com Arduino.
@@ -182,7 +182,7 @@ Agora, coloque o Grove - Sunlight Sensor sob o sol para ver se é um bom dia.
 | Seeeduino V4.2 |Grove - Sunlight Sensor|
 |--------------|-------------|
 |<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 :::caution
 Se esta é a sua primeira vez usando Arduino, coloque a mão [aqui](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Seeeduino) para iniciar sua jornada com Arduino.
@@ -266,7 +266,7 @@ Agora, coloque o Grove - Sunlight Sensor sob o sol para ver se é um bom dia.
 | Raspberry Pi 4 Model B |Grove - Base Hat para Raspberry Pi|Grove - Sunlight Sensor|
 |--------------|-------------|-----------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 **Conectando o hardware**
 
@@ -366,7 +366,7 @@ O resultado será exibido como a seguir se tudo correr bem:
 | Raspberry Pi 4 Model B |Grove - Base Hat para Raspberry Pi|Grove - Sunlight Sensor|
 |--------------|-------------|-----------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/raspberry_pi.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Raspberry-Pi-4/img/hat.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Sunlight_Sensor/img/sunlight_sensor.png" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)|[Get One Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html)|[Get One Now](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)|
 
 **Conectando o hardware**
 

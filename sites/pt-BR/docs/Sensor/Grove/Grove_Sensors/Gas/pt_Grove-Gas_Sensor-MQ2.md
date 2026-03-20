@@ -22,7 +22,7 @@ url: https://wiki.seeedstudio.com/pt-br/Grove-Gas_Sensor-MQ2/
 
 O módulo Grove - Gas Sensor(MQ2) é útil para detecção de vazamento de gás (doméstico e industrial). É adequado para detectar H2, GLP, CH4, CO, álcool, fumaça ou propano. Devido à sua alta sensibilidade e tempo de resposta rápido, a medição pode ser feita o mais rápido possível. A sensibilidade do sensor pode ser ajustada por potenciômetro.
 
-<!-- |Sensor|Gas Type|Adquira agora|
+<!-- |Sensor|Gas Type|Get One Now|
 |:---:|---|---|
 |[MQ2](https://wiki.seeedstudio.com/pt-br/Grove-Gas_Sensor-MQ2/)|Combustible Gas, Smoke|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
 |[MQ3](https://wiki.seeedstudio.com/pt-br/Grove-Gas_Sensor-MQ3/)|Alcohol Vapor|<a href="https://www.seeedstudio.com/Grove-Gas-Sensor%28MQ3%29-p-1418.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>|
@@ -121,7 +121,7 @@ A tensão de saída do sensor de gás aumenta quando a concentração de gás au
 | Seeeduino V4.2 | Base Shield| Grove-Gas Sensor-MQ2 |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 - **Passo 2.** Conecte o Grove-Gas_Sensor-MQ2 à porta A0 do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove - Base Shield ao Seeeduino.
 - **Passo 4.** Conecte o Seeeduino ao PC por meio de um cabo USB.
@@ -268,7 +268,7 @@ De acordo com o gráfico, podemos ver que a concentração mínima que podemos t
 | Raspberry pi | Grove Base Hat for RasPi| Grove-Gas_Sensor-MQ2 |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao Raspberry.
 - **Passo 3**. Conecte o Grove-Gas Sensor MQ2 à porta A0 do Base Hat.
@@ -395,7 +395,7 @@ Você pode sair deste programa simplesmente pressionando ++ctrl+c++.
 | Raspberry pi | GrovePi_Plus | Grove-Gas_Sensor-MQ2 |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
@@ -502,7 +502,7 @@ while True:
 | Raspberry pi | GrovePi_Plus | Grove-Gas_Sensor-MQ2 |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
+|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor(MQ2)-p-937.html)|
 
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
@@ -605,7 +605,7 @@ while True:
 | Wio Terminal | Grove - Gas Sensor(MQ2) |
 |--------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ2.html)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ2.html)|
 
 - **Passo 2.** Conecte o Grove - Gas Sensor(MQ2) à porta Grove **A0** do Wio Terminal.
 

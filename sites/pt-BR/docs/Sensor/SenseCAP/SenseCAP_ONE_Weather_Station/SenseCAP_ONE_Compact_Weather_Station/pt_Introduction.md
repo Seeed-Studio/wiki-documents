@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/SenseCAP-ONE-Compact-Weather-Station-Int
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>
 

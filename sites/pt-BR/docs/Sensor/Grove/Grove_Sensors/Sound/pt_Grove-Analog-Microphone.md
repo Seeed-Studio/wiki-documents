@@ -76,7 +76,7 @@ Grove - Microfone Analógico é uma escolha ideal de sensores de som quando é n
 |Seeeduino V4.2| Base Shield|Grove-Analog Microphone|
 |--------------|------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/small.png)|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
 
 - **Step 1.** Conecte o Grove-Sound Sensor à porta **A0** do Grove-Base Shield.
 - **Step 2.** Conecte o Grove - Base Shield ao Seeeduino e conecte o Seeeduino ao PC por meio de um cabo USB.
@@ -142,7 +142,7 @@ void loop() {
 |Wio Terminal|Grove-Analog Microphone|
 |--------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Analog-Microphone/img/small.png)|
-|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
+|[Get One Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get One Now](https://www.seeedstudio.com/Grove-Analog-Microphone-p-4593.html)|
 
 #### Conexão de Hardware
 

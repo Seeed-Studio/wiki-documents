@@ -109,7 +109,7 @@ Exceto pela Breakout for Linkit Smart 7688 V2.0, aqui estão outros materiais ne
 |LinkIt Smart 7688 × 1|Cabo USB (tipo A para micro tipo-B) × 2|UARTBee × 1|Fios jumper × 3
 |:---:|:---:|:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/linkit%20smart%207688.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/48cmUSBc.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/UartSBee%20V5_01.jpg)|![](https://files.seeedstudio.com/wiki/Breakout_for_LinkIt_Smart_7688_v2_0/image/jw100n.jpg)
-|[Adquira agora](https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-v2.0-p-2641.html)|[Adquira agora](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|[Adquira agora](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)|[Adquira agora](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)|
+|[Get One Now](https://www.seeedstudio.com/Breakout-for-LinkIt-Smart-7688-v2.0-p-2641.html)|[Get One Now](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|[Get One Now](https://www.seeedstudio.com/UartSBee-V5-p-1752.html)|[Get One Now](https://www.seeedstudio.com/1-pin-dual-female-jumper-wire-100mm-50pcs-pack-p-260.html)|
 
 Para os 2 itens abaixo, acredito que você certamente já os tenha.
 

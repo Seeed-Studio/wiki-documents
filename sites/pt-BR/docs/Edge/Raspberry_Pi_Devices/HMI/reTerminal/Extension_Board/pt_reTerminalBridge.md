@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/pt-br/reTerminalBridge/
 | reTerminal | reTerminal E10-1 |
 |--------------|--------------|
 |<div align="center"><img width={210} src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" /></div>|<div align="center"><img width={210} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reterminale10overviewnew.jpeg" /></div>
-|[**Adquira agora**](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)|[**Adquira agora**](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html)|
+|[**Get ONE Now**](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)|[**Get ONE Now**](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html)|
 
 ### **Preparação Preliminar**
 

@@ -3,16 +3,13 @@ description: reComputer R1225 LoRaWAN 网关概述
 title: reComputer R1225 LoRaWAN 网关概述
 keywords:
   - SenseCAP Network
-  - 边缘控制器
-  - reComputer R1225 
-  - 网关
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
 last_update:
-  date: 03/13/2026
+  date: 01/04/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/r1225_introduction/
 ---
 
@@ -26,7 +23,7 @@ url: https://wiki.seeedstudio.com/cn/r1225_introduction/
 
 ## 描述
 
-reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联网 LoRaWAN 网关与控制器，基于 CM4，具备 AI 能力。配备 3 路 RS485、双以太网、支持 BACnet 和 Modbus，具备坚固可靠的工业边缘物联网设备所需的一切特性。兼容 AI NPU 加速器，非常适合远程访问控制，尤其是 BMS、BAS 和 iBMS 等场景。
+reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联网 LoRaWAN 网关与控制器，基于 CM4，具备 AI 能力。配备 3 路 RS485、双以太网、支持 BACnet 和 Modbus，具备坚固可靠的工业边缘物联网设备所需的一切特性。兼容 AI NPU 加速器，非常适合远程访问控制，尤其是 BMS、BAS 和 iBMS 场景。
 
 ## 特性
 
@@ -36,7 +33,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
 
 - 支持 BACnet、Modbus RTU 和 Modbus TCP/IP 协议
 - 高达 4GB RAM，可处理数千个数据点，确保高效性能
-- 清晰的双面 LED 指示灯有助于快速检查运行状态
+- 清晰的双面 LED 指示灯，便于快速检查运行状态
 - 高质量金属外壳，兼容导轨和壁挂安装
 - 开源软件 Seeed Gateway OS，内置 ChirpStack、Basics™ Station、Packet Forward。支持定制化和衍生开发。
 
@@ -79,16 +76,14 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
 - 金属外壳配 PC 侧板
 - ESD：EN61000-4-2，3 级
 - EFT：EN61000-4-4，2 级
-- Surge：EN61000-4-5，2 级
-- 生产寿命：reComputer R1225 将至少生产至 2030 年 12 月
+- 浪涌：EN61000-4-5，2 级
+- 生产生命周期：reComputer R1225 至少将生产至 2030 年 12 月
 
 ## 命名规则
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
 ## 规格参数
-
-<!--Power Consumption 功耗待重新测试后补充-->
 
 <div class="table-center">
 <table >
@@ -137,7 +132,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>功耗</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>                 </td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>空闲：2.88W；满载：5.52W</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>电源开关</td>
@@ -162,7 +157,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 x USB-A 2.0 Host</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0（用于烧录操作系统）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0（用于刷写操作系统）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
@@ -182,19 +177,19 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LED</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>6 x LED 指示灯</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>6 x LED indicators</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>蜂鸣器</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Buzzer</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>复位按钮</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Reset Button</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI（预留）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持 LCD*（机壳内板载）</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI(reserved)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports LCD*(on board within the enclosure)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>无线通信</strong></td>
@@ -210,7 +205,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>是</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LoRa®（已占用）</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LoRa®(Occupied)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SPI LoRa®</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -231,7 +226,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>浪涌：EN61000-4-5，等级 2</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>认证</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>认证</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE，FCC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -287,15 +282,15 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 年</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>生产生命周期</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>产品生命周期</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>至 2030 年 12 月</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>元件和接口状态说明</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>元器件和接口状态说明</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>预留</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>指定用于未来使用或扩展。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>为将来使用或扩展而预留。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>可选</td>
@@ -313,7 +308,7 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>机械特性</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>尺寸（W x H x D）</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>尺寸（宽 x 高 x 深）</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>130 mm x 93 mm x 49.6 mm</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -326,11 +321,12 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>重量（净重）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g；R1225 带 4G 模块：800g</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>           </td>
     </tr>
   </tbody>
 </table>
 </div>
+<!--待重新称重后补充-->
 
 ### 说明
 
@@ -348,16 +344,16 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 物联�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
-reComputer R1225 支持三种供电方式：AC、DC 端子和 PoE 端口。默认情况下，reComputer R1225 通过 AC/DC 端子供电（官方区域电源适配器 SKU:110061505/110061506），同时**已包含 PoE 供电模块（PoE 模块，SKU:110991925）**。这为电源选择提供了灵活性，并便于与各种电源进行集成。
+reComputer R1225 支持三种供电方式：交流电、直流端子和 PoE 端口。默认情况下，reComputer R1225 通过 AC/DC 端子供电（官方区域电源适配器 SKU:110061505/110061506），同时**已包含 PoE 供电模块（PoE 模块，SKU:110991925）**。这为电源选择提供了灵活性，并便于与各种电源轻松集成。
 
 ### 2-Pin 电源端子
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1225 可接受标称 AC 电压 12&#126;24V 或 DC 电压 9&#126;36V。电源通过 2-Pin 电源端子接线端子连接。要对 reComputer R1225 进行接地，可将地线固定在电源端子左上角的螺丝上。
+reComputer R1225 可接受 12&#126;24V 的额定交流电压或 9&#126;36V 的直流电压。电源通过 2-pin 电源端子块连接。要对 reComputer R1225 接地，可以将地线固定在电源端子左上角的螺丝上。
 
 :::note
-该电源方案采用桥式整流二极管进行反接保护，兼容 AC 和 DC 输入。这确保了**无论电源正负极如何连接**，电路都不会损坏。通过使用桥式整流器，可以在不受输入 DC 极性影响的情况下保持输出电压极性固定，从而提供有效的反接保护。
+该电源方案采用桥式整流二极管进行反接保护，并兼容交流和直流输入。这确保了**无论电源正负极如何连接**，电路都不会损坏。通过使用桥式整流器，输出电压极性在输入直流极性变化时仍保持不变，从而提供有效的反接保护。
 :::
 
 ### POE（已包含）
@@ -368,24 +364,24 @@ reComputer R1225 可接受标称 AC 电压 12&#126;24V 或 DC 电压 9&#126;36V�
 - PoE 输出：12V，最大 1.1A
 
 :::note
-需要注意的是，随 reComputer R1225 提供的 PoE 模块符合 IEEE 802.3af 标准，最大可提供 12.95W 的功率。**因此，如果需要连接 SSD 或 4G 模块等高功耗外设，PoE 供电可能无法满足需求**。在这种情况下，建议改用 AC/DC 端子供电，以确保设备稳定可靠运行。
+值得注意的是，随 reComputer R1225 提供的 PoE 模块符合 IEEE 802.3af 标准，最大可提供 12.95W 的电源功率。**因此，如果需要连接 SSD 或 4G 模块等高功耗外设，PoE 供电可能无法满足需求**。在这种情况下，建议改用 AC/DC 端子供电，以确保设备稳定可靠运行。
 :::
 
 ### 功耗
 
-reComputer R1225 的功耗测试数据来自 Seeed Studio 实验室，请参考下表。请注意，该数值仅供参考，不同的测试方法和环境可能会导致结果有所差异。
+reComputer R1225 的功耗测试数据来自 Seeed Studio 实验室，如下表所示。请注意，该数值仅供参考，不同的测试方法和环境可能会导致结果有所差异。
 
 待测试
 
-| 状态     | 电压  | 电流  | 功耗              | 说明                                                                                                               |
-|   ---    |   --- |  ---  |        ---        |      ---                                                                                                           |
-| 关机     |24V    |  mA   |    W              | 在关机断电状态下的静态功耗测试。                                                                                  |
-| 空闲     |24V    |  mA   |    W              | 在未运行任何测试程序的情况下，为 reComputer R1225 设备提供 24V 电源时的输入电流测试。                            |
-| 满载     |24V    |  mA   |    W              | 使用 "stress -c 4" 命令让 CPU 以满载运行进行配置。不连接任何外部设备。                                           |
+| 状态     | 电压   | 电流   | 功耗               | 描述                                                                                                              |
+|   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
+| 关机     |24V      |  mA     |    W              | 在关机断电状态下的静态功耗测试。                                                                                  |
+| 空闲     |24V      |  mA     |    W              | 在未运行任何测试程序的情况下，为 reComputer R1225 设备提供 24V 电源时的输入电流测试。                            |
+| 满载     |24V      |  mA     |    W              | 使用 "stress -c 4" 命令让 CPU 以满载运行进行配置测试，不连接任何外部设备。                                       |
 
-### 开关机
+### 开机与关机
 
-reComputer R1225 默认不带电源按钮，接通电源后系统会自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关机后再切断电源。要重启系统，只需重新接通电源即可。
+reComputer R1225 默认不带电源按钮，连接电源后系统会自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关机后再切断电源。要重启系统，只需重新接通电源即可。
 
 :::note
 请注意，关机后请至少等待 **10 秒** 再重启系统，以便内部电容器完全放电。
@@ -405,7 +401,7 @@ reComputer R1225 默认不带电源按钮，接通电源后系统会自动启动
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Interface</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>接口</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>以太网</td>
@@ -423,7 +419,7 @@ reComputer R1225 默认不带电源按钮，接通电源后系统会自动启动
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x 3-Pin 端子排（隔离）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x 3-pin 端子块（隔离）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>HDMI</td>
@@ -471,20 +467,20 @@ cat /sys/kernel/debug/gpio
 
 ### LED 指示灯状态
 
-reComputer R1225 配备了 6 个 LED 指示灯，用于指示设备的运行状态。各个 LED 的具体功能和状态请参考下表：
+reComputer R1225 配备 6 个 LED 指示灯，用于指示设备的运行状态。各 LED 的具体功能和状态请参见下表：
 
-| LED 指示灯 | 颜色           | 状态 | 说明                                                                         |
-| ----------- | -------------- | ---- | ---------------------------------------------------------------------------- |
-| PWR         | 绿色           | On   | 设备已接通电源。                                                             |
-|             |                | Off  | 设备未接通电源。                                                             |
-| ACT         | 绿色           |      | 在 Linux 下，该引脚会闪烁以表示 eMMC 访问。<br /> 如果在启动过程中发生任何错误，该 LED 会闪烁<br />错误模式，可通过查阅 [Raspberry Pi 官网中的对照表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes) 进行解码。 |
-| USER        | 绿/红/蓝       |      | 需要由用户自定义。                                                           |
-| RS485-1     | 绿色           | Off  | RS485 通道 1 上无数据传输。                                                  |
-|             |                | Blink| RS485 通道 1 正在接收或发送数据。                                           |
-| RS485-2     | 绿色           | Off  | RS485 通道 2 上无数据传输。                                                  |
-|             |                | Blink| RS485 通道 2 正在接收或发送数据。                                           |
-| RS485-3     | 绿色           | Off  | RS485 通道 3 上无数据传输。                                                  |
-|             |                | Blink| RS485 通道 3 正在接收或发送数据。                                           |
+| LED 指示灯 | 颜色           | 状态 | 描述                                                                         |
+| ------------- | -------------- | ------ | -------------------------------------------------------------------------- |
+| PWR           | 绿色           | On     | 设备已连接电源。                                                             |
+|               |                | Off    | 设备未连接电源。                                                             |
+| ACT           | 绿色           |        | 在 Linux 下，该引脚会闪烁以表示 eMMC 访问。<br /> 如果在启动过程中发生任何错误，该 LED 将闪烁<br />错误模式，可通过查阅[树莓派官网上的对照表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)进行解码。 |
+| USER          | 绿色/红色/蓝色 |        | 需要由用户自定义。                                                           |
+| RS485-1       | 绿色           | Off    | RS485 通道 1 上无数据传输。                                                  |
+|               |                | Blink  | RS485 通道 1 正在接收或发送数据。                                           |
+| RS485-2       | 绿色           | Off    | RS485 通道 2 上无数据传输。                                                  |
+|               |                | Blink  | RS485 通道 2 正在接收或发送数据。                                           |
+| RS485-3       | 绿色           | Off    | RS485 通道 3 上无数据传输。                                                  |
+|               |                | Blink  | RS485 通道 3 正在接收或发送数据。                                           |
 
 #### ACT 状态表
 
@@ -507,8 +503,8 @@ reComputer R1225 配备了 6 个 LED 指示灯，用于指示设备的运行状�
 
 如果 ACT LED 以规则的四次闪烁模式闪烁，则表示找不到引导代码（start.elf）
 如果 ACT LED 以不规则模式闪烁，则表示启动已经开始。
-如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在未连接任何设备的情况下再试一次以确认。更多详情请查看 Raspberry Pi 论坛：
-STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
+如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在未连接任何设备的情况下重试以确保。更多详情请查看 Raspberry Pi 论坛：
+置顶帖：你的 Pi 无法启动吗？（启动问题置顶帖）- Raspberry Pi 论坛
 更多详情请查看 [Raspberry Pi 论坛](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)。
 
 #### 通过 Luci 界面自定义 LED 灯
@@ -555,8 +551,8 @@ echo 0 | sudo tee /sys/class/gpio/gpio591/value # turn off
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
-reComputer R1225 配备了 3 组使用 3 针连接器的 RS485 接口，信号和电源均采用隔离设计，以确保在工业和自动化应用中的安全可靠运行。RS485A 和 RS485B 信号采用电容隔离方式，实现出色的 EMI 抗扰度，并满足 RS485 接口的高速通信需求。
-**默认情况下，未安装 120Ω 终端电阻。但包装盒中包含 5 个贴片电阻。如有需要，用户需自行将电阻焊接到设备上。**
+reComputer R1225 配备了 3 组使用 3 针连接器的 RS485 接口，信号和电源均隔离，以确保在工业和自动化应用中的安全可靠运行。RS485A 和 RS485B 信号采用电容隔离，具有出色的 EMI 抗扰度，并满足 RS485 接口的高速通信要求。
+**默认情况下，未安装 120Ω 终端电阻。但包装盒中包含五个贴片电阻。如有需要，用户需自行将电阻焊接到设备上。**
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
 
@@ -567,9 +563,9 @@ RS485 接口使用隔离电源，这意味着连接到 RS485 接口的外部设�
 
 :::
 
-下面是与 reComputer 的 485 接口相关的数据表引脚。
+以下是与 reComputer 的 485 接口相关的数据表引脚。
 
-| RS485         | RS485_POWER_EN         | OS 设备文件  | P14         | 默认（高）    |
+| RS485         | RS485_POWER_EN         | OS 设备文件  | P14         | 默认（高）   |
 | ------------- | ---------------------- | -------------- | ----------- | ------------- |
 | TX5           |                        | /dev/ttyAMA5   | GPIO12      |               |
 | RX5           |                        |                | GPIO13      |               |
@@ -635,9 +631,9 @@ lsusb
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/23.png" /></div>
 
-运行此命令后，应会显示系统中已连接 USB 设备的信息，包括存在的任何 USB 集线器。
+运行此命令应会显示系统中已连接 USB 设备的信息，包括存在的任何 USB 集线器。
 
-如果 USB 集线器工作正常，你应能在 **lsusb** 命令的输出中看到其详细信息。如果未列出，则可能是集线器或其与系统连接存在问题。在这种情况下，你可能需要对 USB 集线器或其连接进行排查。
+如果 USB 集线器工作正常，你应当能在 **lsusb** 命令的输出中看到其详细信息。如果未列出，则可能是集线器或其与系统连接存在问题。在这种情况下，你可能需要对 USB 集线器或其连接进行故障排查。
 
 ### SIM 卡槽
 
@@ -652,7 +648,7 @@ lsusb
 <br />
 reComputer R1225 使用工业应用中常见的标准尺寸 SIM 卡槽，需要尺寸为 25mm x 15mm 的标准 SIM 卡。
 :::note
-reComputer R1225 提供 4G 版本。如果你购买的是标准版（不带 4G 模块），可以单独购买 4G 模块进行安装。Bazaar 商城目前提供两款 4G 模块：欧洲（EMEA & 泰国 <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）和美洲（北美 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）
+reComputer R1225 提供 4G 版本。如果你购买的是标准版（不带 4G 模块），可以单独购买 4G 模块进行安装。Bazaar Mall 目前提供两种 4G 模块：欧洲（EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）和美洲（北美 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）
 :::
 
 ### SSD 插槽
@@ -669,7 +665,7 @@ sudo fdisk -l
 ```
 
 该命令会显示系统中连接的所有磁盘列表，如果 SSD 被正确识别，也会包含在内。请查找代表 SSD 的条目，它们通常以 /dev/sd 加一个字母开头（例如 /dev/sda、/dev/sdb 等）。
-确认与 SSD 对应的条目后，你就可以根据需要对其进行分区或格式化操作。
+确认对应 SSD 的条目后，你就可以根据需要对其进行分区或格式化操作。
 
 :::note
 SSD 卡主要有两种用途：<br />
@@ -686,10 +682,10 @@ SSD 卡主要有两种用途：<br />
 <br />
 <div class="table-center">
 
-|         Slot         | Supported Protocol |
-| -------------------- | ------------------ |
-|       Mini-PCIe 1    |       4G LTE       |
-|       Mini-PCIe 2    |      SPI LoRa®     |
+|         插槽         | 支持的协议 |
+| -------------------- | ---------- |
+|       Mini-PCIe 1    |   4G LTE   |
+|       Mini-PCIe 2    |  SPI LoRa® |
 
 </div>
 
@@ -697,13 +693,13 @@ SSD 卡主要有两种用途：<br />
 reComputer R1225 提供标准版和 4G 版：对于标准版，Mini-PCIe 1 为空；对于 4G 版，Mini-PCIe 1 预装了 4G LTE。
 :::
 
-该设备配备两个 Mini-PCIe 接口，即 Mini-PCIe 插槽 1 和 Mini-PCIe 插槽 2。插槽 1 连接到 SIM 卡槽并支持 USB 协议，而插槽 2 支持 USB 和 SPI 协议，但不连接到 SIM 卡槽。因此，可以通过插槽 1 连接 4G LTE 等设备，通过插槽 2 连接 SPI LoRa® 设备。
+该设备配备两个 Mini-PCIe 接口，即 Mini-PCIe 插槽 1 和 Mini-PCIe 插槽 2。插槽 1 连接到 SIM 卡槽并支持 USB 协议，而插槽 2 支持 USB 和 SPI 协议，但不连接到 SIM 卡槽。因此，4G LTE 等设备可以通过插槽 1 连接，而 SPI LoRa® 设备可以通过插槽 2 连接。
 
 ### 复位孔
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig16.png" /></div>
 
-在 reComputer R1225 的复位孔内有一个微型按键开关。使用细小物体按下该按键即可复位 CM4。当该引脚为高电平时，表示 CM4 已经启动，将该引脚拉低则会复位模块。
+reComputer R1225 的复位孔内设有一个微型按键开关。使用细小物体按下该按键即可复位 CM4。当该引脚为高电平时，表示 CM4 已经启动；将该引脚拉低则会复位模块。
 
 ### 以太网 RJ45
 
@@ -711,10 +707,10 @@ reComputer R1225 提供标准版和 4G 版：对于标准版，Mini-PCIe 1 为�
 <br />
 <div class="table-left">
 
-| Name | Type                        | Speeds             | PoE                                |
-| ---- | --------------------------- | ------------------ | ---------------------------------- |
-| ETH0 | CM4 native Gigabit Ethernet | 10/100/1000 Mbit/s | Pre-installed                      |
-| ETH1 | Converted from USB          | 10/100 Mbit/s      | Not Supported                      |
+| 名称 | 类型                         | 速率               | PoE           |
+| ---- | --------------------------- | ------------------ | ------------- |
+| ETH0 | CM4 原生千兆以太网          | 10/100/1000 Mbit/s | 预装          |
+| ETH1 | 由 USB 转换而来             | 10/100 Mbit/s      | 不支持        |
 
 </div>
 
@@ -724,7 +720,7 @@ reComputer R1225 配备两个以太网 RJ45 接口。ETH0 是 CM4 原生千兆�
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig17.png" /></div>
 
-reComputer R1225 具有来自 CM4 的原生 HDMI 接口，支持最高 4K @ 60 fps 视频输出。非常适合需要多屏显示的应用，允许用户将内容输出到外部大屏幕。
+reComputer R1225 具有来自 CM4 的原生 HDMI 接口，支持最高 4K @ 60 fps 视频输出。非常适合需要多显示器的应用，允许用户将内容输出到外部大屏幕。
 
 ### RTC
 
@@ -739,7 +735,7 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. 将时间设置为 2024 年 3 月 20 日 12:00：
+2. 将时间设置为 2024 年 3 月 20 日 12:00 PM：
 
 ```bash
 sudo hwclock --set --date "2024-03-20 12:00:00"
@@ -764,7 +760,7 @@ sudo hwclock -r
 
 reComputer R1225 配备了独立的硬件看门狗电路，可在系统异常崩溃时自动重启系统。看门狗电路通过 RTC 实现，并支持 1 到 255 秒范围内灵活设置喂狗时间。
 
-要执行看门狗测试，请按以下步骤操作：
+要进行看门狗测试，请按以下步骤操作：
 
 1. 安装看门狗软件：
 
@@ -780,7 +776,7 @@ sudo apt-get install vim
 sudo vim /etc/watchdog.conf
 ```
 
-按如下方式修改配置：
+将配置修改如下：
 
 ```bash
 watchdog-device  = /dev/watchdog
@@ -826,13 +822,13 @@ echo "c" > /proc/sysrq-trigger
 :::
 
 5. 监控系统，确认其在指定超时时间后完成重启。
-通过这些步骤，你可以测试并确保系统上看门狗定时器的功能正常。
+通过这些步骤，你可以测试并确保系统上的看门狗定时器功能正常。
 
 ## 可选接口和模块
 
 ### Wi-Fi/BLE（已包含）
 
-reComputer R1225 由带板载 Wi-Fi/BLE 版本的 CM4 提供支持，其 Wi-Fi/BLE 参数与 CM4 相同。有关详细参数信息，请参考树莓派官方网站。
+reComputer R1225 由带板载 Wi-Fi/BLE 版本的 CM4 提供支持，其 Wi-Fi/BLE 参数与 CM4 相同。有关详细参数信息，请参考 Raspberry Pi 官方网站。
 
 :::note
 需要特别注意的是，由于 reComputer R1225 采用金属外壳，Wi-Fi/BLE 信号可能难以穿透金属外壳。因此，如果你需要此功能，建议安装我们为你准备的外置天线。
@@ -876,7 +872,7 @@ sudo systemctl status bluetooth
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/32.png" /></div>
 <br />
-如果蓝牙服务状态不是 active，则必须先启用它。然后启动该服务，以便在设备启动时自动启动。
+如果蓝牙服务状态不是 active，则必须先启用它。然后启动该服务，以便在设备启动时自动运行。
 
 ```bash
 sudo systemctl enable bluetooth
@@ -929,7 +925,7 @@ exit
 
 ### 4G 模块（可选）
 
-reComputer R1225 LoRaWAN 网关提供标准版和 4G 版。标准版的 Mini-PCIe 插槽 1 为空，而 4G 版则预装了针对欧洲（EMEA & 泰国 <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）和美洲（北美 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）分别定制的 Mini-PCIe 模块。
+reComputer R1225 LoRaWAN 网关提供标准版和 4G 版。标准版的 Mini-PCIe 插槽 1 为空，而 4G 版则预装了针对欧洲（EMEA 和泰国 <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）和美洲（北美 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）分别定制的 Mini-PCIe 模块。
 
 ### LoRa® 模块（已包含）
 
@@ -941,9 +937,9 @@ reComputer R1225 LoRaWAN 网关配备了 PoE 模块，用户无需自行购买�
 
 ### M.2 插槽（可选）
 
-reComputer R1225 通过使用位于板载两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62），支持 2280 NVMe SSD 和 AI 加速器（Hailo）。需要注意的是，CM4 的 PCIe 为 Gen2.0，最大理论速度为 5Gbps。如果你使用的是 Gen3.0 或更高版本的 SSD，可能无法达到该 SSD 的最高速度。经过测试，安装 SSD 的 reTerminal DM 可实现最高 230MB/s 的写入速度和 370MB/s 的读取速度。如果你不确定哪些 SSD 兼容，可以按照下方配件列表进行购买。
+reComputer R1225 通过主板上两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62）支持 2280 NVMe SSD 和 AI 加速器（Hailo）。需要注意的是，CM4 的 PCIe 为 Gen2.0，理论最高速度为 5Gbps。如果你使用的是 Gen3.0 或更高版本的 SSD，可能无法达到 SSD 的最高速度。经过测试，安装 SSD 的 reTerminal DM 可实现最高 230MB/s 的写入速度和 370MB/s 的读取速度。如果你不确定哪些 SSD 兼容，可以按照下方配件列表进行购买。
 
-[请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#assemble-ssd).
+[请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#组装-ssd)。
 
 <div class="table-center">
 
@@ -972,7 +968,7 @@ reComputer R1225 通过使用位于板载两个 Mini-PCIe 插槽下方的 PCIe �
 
 :::note
 请注意：<br />
-1- 速度测试结果可能会因 SSD 型号、测试方法和测试环境的不同而有所差异。此处提供的数值仅供参考，且是在 Seeed 的实验室中获得的。<br />
+1- 速度测试结果可能会因 SSD 型号、测试方法和测试环境而有所不同。此处提供的数值仅供参考，且是在 Seeed 的实验室中获得的。<br />
 
 SSD 卡主要有两种用途：<br />
 1.大容量存储：SSD 卡可用于大容量存储需求。<br />
@@ -982,13 +978,13 @@ SSD 卡主要有两种用途：<br />
 
 ### 加密芯片 TPM 2.0（可选）
 
-推荐将符合 Trusted Computing Group（TCG）TPM 2.0 规范的 Infineon OPTIGA™ TPM SLB9670 作为 reComputer R1225 的加密芯片。该芯片采用 SPI 接口，连接到板载的 J13 端口，用于实现平台完整性的信任根、远程认证以及加密服务。
+推荐将符合 Trusted Computing Group（TCG）TPM 2.0 规范的 Infineon OPTIGA™ TPM SLB9670 作为 reComputer R1225 的加密芯片。该芯片采用 SPI 接口，应用于板载的 J13 端口，用于实现平台完整性的信任根、远程认证以及加密服务。
 
 :::note
-[请点击此处查看组装说明](https://wiki.seeedstudio.com/cn/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
+[请点击此处查看组装说明](https://wiki.seeedstudio.com/cn/recomputer_r1000_assembly_guide/#组装-tpm-20-模块)。
 :::
 
-如果你将 TPM 2.0 模块连接到设备，下面的代码可以帮助检查 TPM 连接情况。
+如果你将 TPM 2.0 模块连接到设备，以下代码可以帮助检查 TPM 连接情况。
 
 ```bash
 ls /dev | grep tpm
@@ -1000,7 +996,7 @@ ls /dev | grep tpm
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/30.png" /></div>
 
-UPS 为 7F，串联工作。UPS 模块位于 DC5V 和 CM4 组件之间，使用 GPIO 信号在 5V 电源丢失时向 CPU 发出警报。CPU 在接收到该信号后，会在超级电容能量耗尽前执行紧急脚本，执行 "$ shutdown" 命令。
+UPS 为 7F，串联工作。UPS 模块位于 DC5V 和 CM4 组件之间，使用一个 GPIO 信号在 5V 电源掉电时提醒 CPU。在接收到该信号后，CPU 会在超级电容能量耗尽前执行紧急脚本，并执行 "$ shutdown" 命令。
 <br />
 UPS 提供的备份时长在很大程度上取决于系统负载。以下是在配备 4GB RAM、32GB eMMC 存储和 Wi-Fi 模块的 CM4 模块上测试的一些典型场景。
 <br />
@@ -1011,10 +1007,10 @@ UPS 提供的备份时长在很大程度上取决于系统负载。以下是在�
 | CPU 满载          | 18      | stress -c 4 -t 10m -v &                                           |
 
 :::note
-如需了解 UPS 功能的更多信息，请联系我们，且告警信号为低电平有效。
+如需了解 UPS 功能的更多信息，请联系我们，报警信号为低电平有效（LOW）。
 :::
 
-位于 CPU 与 DC/AC 电源输入之间的 GPIO25 用于在 5V 电源掉电时向 CPU 报警。然后 CPU 应在超级电容能量耗尽前通过脚本执行一些紧急操作，并运行 `$ shutdown`
+在 CPU 与 DC/AC 电源输入之间使用一个 GPIO25，当 5V 电源掉电时用于向 CPU 报警。然后 CPU 应在超级电容能量耗尽前在脚本中执行一些紧急操作，并运行 `$ shutdown`
 <br />
 使用此功能的另一种方式是：当 GPIO 引脚状态变化时触发关机。指定的 GPIO 引脚被配置为输入按键，用于产生 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
 参考 `/boot/overlays/README`，然后修改 `/boot/config.txt`。
@@ -1023,7 +1019,7 @@ UPS 提供的备份时长在很大程度上取决于系统负载。以下是在�
 dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 ```
 
-下面的 Python 代码是一个示例，用于通过 GPIO25 检测超级电容 UPS 的工作模式，并在系统断电时自动保存数据并关机。
+下面的 Python 代码是一个通过 GPIO25 检测超级电容 UPS 工作模式的示例，并在系统断电时自动保存数据并关机。
 
 ```python
 import RPi.GPIO as GPIO
@@ -1068,7 +1064,7 @@ while True:
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

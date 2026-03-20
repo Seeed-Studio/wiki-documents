@@ -187,7 +187,7 @@ Grove Base Cape para BeagleBone v2 é uma placa de expansão do sistema Grove pa
 |DISPLAY OLED|SENSOR DIGITAL DE LUZ|MÓDULO GPS|
 |----------------|-----------------|-----------|
 |![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/4.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/5.jpg)|![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/grove_bb/6.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[Adquira agora!](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-OLED-Display-1.12%22-p-824.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Digital-Light-Sensor-p-1281.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/grove-gps-p-959.html)|
 
 :::tip
     Clique em [Grove System](https://wiki.seeedstudio.com/pt-br/Grove_System/) para obter mais módulos disponíveis.

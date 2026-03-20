@@ -1,12 +1,12 @@
 ---
 description: Introdução ao Sensor Meteorológico SenseCAP ONE
-title: Sensor Meteorológico SenseCAP ONE 
+title: Sensor Meteorológico SenseCAP ONE
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_ONE_weather_sensor
 last_update:
-  date: 02/28/2024
+  date: 02/28/204
   author: Jessie
 createdAt: '2024-02-28'
 updatedAt: '2026-03-03'
@@ -20,7 +20,7 @@ Hoje, os dados sobre clima local, conhecidos como microclimas, são a nova front
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
-SenseCAP ONE é uma série de sensores meteorológicos compactos tudo‑em‑um, que integram vários sensores neste dispositivo compacto, monitorando até 10 parâmetros meteorológicos: temperatura do ar, umidade do ar, pressão atmosférica, intensidade luminosa, velocidade do vento, direção do vento, precipitação, PM 2.5, PM 10 e CO2.
+SenseCAP ONE é uma série de sensores meteorológicos compactos tudo‑em‑um, que integram vários sensores neste dispositivo compacto, monitorando até 10 parâmetros meteorológicos: temperatura do ar, umidade do ar, pressão atmosférica, intensidade de luz, velocidade do vento, direção do vento, precipitação, PM 2.5, PM 10 e CO2.
 
 ||Temperatura do ar|Umidade do ar|Pressão do ar|Luz|Velocidade do vento|Direção do vento|Chuva|PM2.5|PM10|CO2|Ruído|
 |--|--|--|--|--|--|--|--|--|--|--|--|

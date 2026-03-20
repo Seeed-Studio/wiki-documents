@@ -67,7 +67,7 @@ Quando você precisar adicionar um botão rotativo ao seu projeto, por exemplo u
 | Seeeduino V4.2 | Base Shield|  Grove - Circular LED | Grove - Encoder|
 |--------------|-------------|-----------------|----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Encoder/img/Grove%20Circular%20LED._Sjpg.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Encoder/img/Grove%20Encoder.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|[Get One Now](https://www.seeedstudio.com/Grove-Encoder-p-1352.html)|
 
 - **Passo 2.** Conecte o Grove-Encoder à porta D2 do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove-Circular LED à porta D5 do Grove-Base Shield.

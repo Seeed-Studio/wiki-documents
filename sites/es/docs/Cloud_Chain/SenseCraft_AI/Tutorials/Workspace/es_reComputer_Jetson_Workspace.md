@@ -1,7 +1,7 @@
 ---
 sidebar_position: 13
-description: Espacio de Trabajo Nvidia Jetson en la Plataforma SenseCraft AI
-title: Espacio de Trabajo reComputer Jetson
+description: Espacio de trabajo de Nvidia Jetson en la plataforma SenseCraft AI
+title: Espacio de trabajo reComputer Jetson
 keywords:
   - Cloud and Chain
   - SenseCraft
@@ -13,82 +13,82 @@ aliases:
 last_update:
   date: 08/22/2024
   author: Frank
-createdAt: '2025-09-03'
-updatedAt: '2026-03-04'
+createdAt: '2024-08-21'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
-## Primeros Pasos
+## Introducción
 
-Antes de agregar un dispositivo Jetson al espacio de trabajo, primero instale la aplicación SenseCraft AI en el jetson.
+Antes de añadir un dispositivo Jetson al espacio de trabajo, primero instala la aplicación SenseCraft AI en el Jetson.
 
-SenseCraft AI-Jetson es un kit de herramientas de desarrollo y plataforma diseñada para dispositivos NVIDIA Jetson Edge AI. Simplemente ejecute el "Script de Inicio Rápido" y se le presentará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un video precargado y un modelo de IA precargado. Si desea agregar su propia cámara USB, cámara IP, ¡puede hacerlo simplemente en unos pocos clics!
+SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dispositivos NVIDIA Jetson Edge AI. Simplemente ejecuta el "Quickstart Script" y se mostrará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un vídeo precargado y un modelo de IA precargado. Si quieres añadir tu propia cámara USB o cámara IP, ¡puedes hacerlo fácilmente con unos pocos clics!
 
-**Requisitos de Hardware**
+**Requisitos de hardware**
 
 - Dispositivo NVIDIA Jetson
-- Conectividad a Internet vía Ethernet/ WiFi
+- Conectividad a Internet mediante Ethernet/WiFi
 - Pantalla
 
-**Requisitos de Software**
+**Requisitos de software**
 
 - JetPack 5.1.2 (L4T 35.4.1)
 - JetPack 5.1.1 (L4T 35.3.1)
 - JetPack 5.1 (L4T 35.2.1)
 
-**Inicio Rápido**<br />
+**Inicio rápido**<br />
 
-1. Conecte Jetson a una pantalla y enciéndalo<br />
-2. Conecte un mouse y teclado al dispositivo y escriba el siguiente comando en una terminal para ejecutar la aplicación
+1. Conecta Jetson a una pantalla y enciéndelo<br />
+2. Conecta un ratón y un teclado al dispositivo y escribe el siguiente comando en una terminal para ejecutar la aplicación
 
 ```
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
 ```
 
-3. Durante la instalación de la aplicación, necesita configurar las siguientes configuraciones opcionales, así que configúrelas según sus necesidades
+3. Durante la instalación de la aplicación, debes configurar las siguientes opciones opcionales, así que configúralas según tus necesidades
 
-- **[Opcional] ¿Habilitar el script jetson_clocks para maximizar el rendimiento de Jetson estableciendo la frecuencia máxima a los relojes de CPU, GPU y EMC? [y/n] (predeterminado: y): y**<br />
-proporciona el script jetson_clocks para maximizar el rendimiento de Jetson estableciendo una frecuencia máxima estática a los relojes de CPU, GPU y EMC.
+- **[Optional] Enable jetson_clocks script to maximize Jetson performance by setting max frequency to CPU, GPU, and EMC clocks? [y/n] (default: y): y**<br />
+proporciona el script jetson_clocks para maximizar el rendimiento de Jetson estableciendo una frecuencia máxima estática para los relojes de CPU, GPU y EMC.
 
-- **[Opcional] ¿Ahorrar espacio desinstalando algunos paquetes innecesarios como libreoffice, cambiar el tamaño de la Memoria Swap? (/swapfile) [y/n] (predeterminado: n): n**<br />
-En el caso de memoria insuficiente (especialmente jetson nano), es mejor habilitar swap para asegurar el funcionamiento normal del programa.
+- **[Optional] Save space by uninstalling some unnecessary packages like libreoffice, change the size of the Swap Memory? (/swapfile) [y/n] (default: n): n**<br />
+En caso de memoria insuficiente (especialmente en Jetson Nano), es mejor habilitar la memoria de intercambio (swap) para garantizar el funcionamiento normal del programa.
 
-- **[Opcional] ¿Desea crear o cambiar el tamaño de la Memoria Swap? (/swapfile)?**<br />
-Para obtener mejor rendimiento del nano, active Swap.
+- **[Optional] Do you want to create or change the size of the Swap Memory? (/swapfile)?**<br />
+Para obtener un mejor rendimiento de Nano, activa la memoria de intercambio (Swap).
 
-- **[Opcional] ¿Usar · externo para almacenar el directorio de datos de Docker? (para imágenes y volúmenes de docker)?**<br />
+- **[Optional] Use external · to store the Docker data directory? (for docker images & volumes)?**<br />
 
-- **(Recomendado si su partición raíz es menor a 32 GB). [y/n] (predeterminado: n): n**<br />
+- **(Recommended if your root partition is smaller than 32 GB). [y/n] (default: n): n**<br />
 
-El programa edge ai requiere un mínimo de 32G de espacio de almacenamiento para ejecutarse, si no, puede elegir montar el volumen de datos de docker en un disco externo.
+El programa de Edge AI requiere un mínimo de 32G de espacio de almacenamiento para ejecutarse; si no lo tienes, puedes elegir montar el volumen de datos de Docker en un disco externo.
 
-4. Ahora puede experimentar SenseCraft AI-Jetson
+4. Ahora puedes experimentar SenseCraft AI-Jetson
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/35.png)
 
-### Agregar Dispositivo
+### Añadir dispositivo
 
-1. Haga clic en el botón "Add Device" en la Página del Espacio de Trabajo de Dispositivos
-2. Ingrese un nombre personalizado del dispositivo y obtenga el código de vinculación del dispositivo.
+1. Haz clic en el botón "Add Device" en la página Device Workspace
+2. Introduce un nombre personalizado para el dispositivo y obtén el código de vinculación desde el dispositivo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image28.png)
 
-3. Regrese a la aplicación SenseCraft AI del dispositivo. Haga clic en "Bind to SenseCraft AI platform", y luego la aplicación mostrará el código de vinculación y el nombre temporal.
+3. Vuelve a la aplicación SenseCraft AI del dispositivo. Haz clic en "Bind to SenseCraft AI platform", y entonces la aplicación mostrará el código de vinculación y el nombre temporal.
 
-- Código de Vinculación: ingrese el código de vinculación correcto y válido en SenseCraft AI-Model Zoo para finalizar la vinculación del dispositivo.
-- Nombre Temporal: si el código de vinculación está duplicado, entonces necesita ingresar el nombre temporal correcto.
+- Bind Code: introduce el código de vinculación correcto y válido en SenseCraft AI-Model Zoo para finalizar la vinculación del dispositivo.
+- Temporary Name: si el código de vinculación está duplicado, entonces debes introducir el nombre temporal correcto.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image29.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image30.png)
 
-4. ingrese el código de vinculación correcto y válido y haga clic en el botón "Comfirm"
+4. introduce el código de vinculación correcto y válido y haz clic en el botón "Comfirm"
 
-5. Vinculación exitosa, ahora puede administrar el dispositivo
+5. Vinculación correcta, ahora puedes gestionar el dispositivo
 
 :::note
 
-cada cuenta solo puede agregar 5 dispositivos gratuitos
+cada cuenta solo puede añadir 5 dispositivos gratuitos
 
 :::
 
@@ -96,98 +96,98 @@ cada cuenta solo puede agregar 5 dispositivos gratuitos
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image32.png)
 
-### Información del Dispositivo
+### Información del dispositivo
 
-La información del dispositivo se divide en tres partes, información general, información de flujo de video y modelo de IA.
+La información del dispositivo se divide en tres partes: información general, información del flujo de vídeo y modelo de IA.
 
-### Información General
+### Información general
 
-La información del dispositivo se divide en tres partes, información general, información de flujo de video y modelo de IA. Por favor consulte la tabla a continuación para más detalles
+La información del dispositivo se divide en tres partes: información general, información del flujo de vídeo y modelo de IA. Consulta la siguiente tabla para más detalles
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image33.png)
 
 | **Campos** | **Contenido** |
 | --- | --- |
-| **Nombre del Dispositivo** | Nombre personalizado del dispositivo, el usuario puede cambiar el nombre |
-| **SN del Dispositivo** | Número de serie de producción único del dispositivo |
-| **EUI del Dispositivo** | EUI del dispositivo |
-| **Estado en Línea** | En línea: el dispositivo está en línea<br />Fuera de línea: el dispositivo está fuera de línea, el usuario no puede operar el dispositivo fuera de línea |
-| **Módulo Equipado** | El módulo del dispositivo |
-| **Uso de CPU** | Uso de CPU del dispositivo |
-| **Memoria** | Uso de RAM del dispositivo |
-| **Almacenamiento** | Uso de disco del dispositivo |
-| **Dirección IP** | La dirección IP de red del dispositivo |
-| **Dirección MAC** | La dirección MAC del dispositivo |
-| **Versión de SenseCraft AI** | Versión de la Aplicación SenseCraft AI instalada en el dispositivo |
-| **Tiempo de Recolección** | El tiempo cuando se recopiló la última información del dispositivo |
+| **Device Name** | Nombre personalizado del dispositivo, el usuario puede cambiar el nombre |
+| **Device SN** | Número de serie de producción único del dispositivo |
+| **Device EUI** | EUI del dispositivo |
+| **Online Status** | Online: el dispositivo está en línea<br />Offline: el dispositivo está fuera de línea, el usuario no puede operar un dispositivo fuera de línea |
+| **Equipped Module** | El módulo del dispositivo |
+| **CPU Usage** | Uso de CPU del dispositivo |
+| **Memory** | Uso de RAM del dispositivo |
+| **Storage** | Uso de disco del dispositivo |
+| **IP Address** | Dirección IP de red del dispositivo |
+| **MAC Address** | Dirección MAC del dispositivo |
+| **SenseCraft AI Version** | Versión de la aplicación SenseCraft AI instalada en el dispositivo |
+| **Collect Time** | Hora en la que se recopiló por última vez la información del dispositivo |
 
-### Eliminar Dispositivo
+### Eliminar dispositivo
 
-Si ha completado el despliegue del Modelo de IA y no necesita administrar el dispositivo remotamente, puede remover el dispositivo de la plataforma y el dispositivo puede hacer inferencia local, administración de flujo y administración de modelo de IA independientemente en el borde.
+Si has completado el despliegue del modelo de IA y no necesitas gestionar el dispositivo de forma remota, puedes eliminar el dispositivo de la plataforma y el dispositivo podrá realizar inferencia local, gestión de flujos y gestión de modelos de IA de forma independiente en el borde.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image34.png)
 
-### Administración de Flujo de Video
+### Gestión del flujo de vídeo
 
-El Flujo de Video puede ver los resultados de inferencia en tiempo real remotamente y administrar el flujo de video del dispositivo. Soporta agregar flujo, editar flujo, ver flujo y eliminar flujo.
+Video Stream puede ver los resultados de inferencia en tiempo real de forma remota y gestionar el flujo de vídeo del dispositivo. Se admite añadir flujo, editar flujo, ver flujo y eliminar flujo.
 
 #### Inferencia en tiempo real
 
-Si se han agregado flujos de video al dispositivo, los usuarios pueden ver resultados de inferencia en tiempo real para todos los flujos en la plataforma. Permite monitoreo en tiempo real de resultados de inferencia y excepciones
+Si se han añadido flujos de vídeo al dispositivo, los usuarios pueden ver los resultados de inferencia en tiempo real de todos los flujos en la plataforma. Permite la supervisión en tiempo real de los resultados de inferencia y de las excepciones
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image35.png)
 
-#### Agregar Flujo
+#### Añadir flujo
 
-Haga clic en "Add Stream" e ingrese información de flujo válida, y luego haga clic en el botón "Confirm" para enviar el nuevo flujo al dispositivo. Toma tiempo para que el dispositivo agregue un nuevo flujo, la información de la plataforma se actualizará más tarde. por favor consulte la tabla a continuación para información detallada.
+Haz clic en "Add Stream" e introduce información de flujo válida, y luego haz clic en el botón "Confirm" para enviar el nuevo flujo al dispositivo.   El dispositivo tarda un tiempo en añadir un nuevo flujo, la información de la plataforma se actualizará más tarde. Consulta la tabla siguiente para obtener información detallada.
 
 :::note
 
-El dispositivo debe estar en línea para agregar un nuevo flujo
+El dispositivo debe estar en línea para añadir un nuevo flujo
 
 :::
 
 | **Campos** | **Contenido** |
 | --- | --- |
-| **Nombre del Flujo** | 1 nombre personalizado para este flujo.<br />2 No puede estar vacío |
-| **Tipo de Video** | 1 Cámara IP：Acceder a una cámara IP, necesita ingresar una url rtsp válida<br />2 Cámara USB：Conectar la cámara usb al dispositivo, reconocer automáticamente el usb, y luego seleccionar la cámara usb correcta en la ruta de video. |
-| **Ruta de Video** | Ruta de Video, formato decidido por "Tipo de Video", si es incorrecto, se usará el video predeterminado. |
-| **Modelo de IA del Dispositivo** | 1 Seleccionar un modelo de IA que ya esté descargado en el dispositivo<br />2 Si no hay modelo de IA en su dispositivo, por favor vaya a la página de Modelos de IA para descargar el modelo a su dispositivo. |
-| **Umbral de Confianza** | 1 Umbral de confianza del objeto para detección.<br />2 Formato:float [0, 1] |
-| **Umbral IoU** | 1 IoU se usa para evaluar la precisión de las cajas delimitadoras predichas comparadas con las cajas delimitadoras verdaderas2 Formato:float [0, 1] |
-| **FPS** | 1 Cuadros por segundo del flujo<br />2 Formato: INT [1,60] |
-| **Calidad** | 1 Calidad del flujo de salida. Predeterminado: 50<br />2 Formato: int [0,100] |
-| **Detecciones Máximas** | 1 número máximo de detecciones por imagen.Predeterminado:3002 Formato: int [0,1000] |
-| **Mostrar Tasa de Cuadros** | 1 Si mostrar la tasa de cuadros del flujo<br />2 Formato:Bool [True,False]<br />● True: mostrar FPS<br />● False: no mostrar FPS |
-| **Mostrar Reloj** | 1 Si mostrar la hora<br />2 Formato:Bool [True,False]<br />● True: mostrar hora<br />● False: no mostrar hora |
+| **Stream Name** | 1 Nombre personalizado para este flujo.<br />2 No puede estar vacío |
+| **Video Type** | 1 Ip camera: Accede a una cámara IP, necesitas introducir una URL rtsp válida<br />2 Usb camera: Conecta la cámara USB al dispositivo, reconoce automáticamente el USB y luego selecciona la cámara USB correcta en la ruta de vídeo. |
+| **Video Path** | Ruta de vídeo, el formato lo decide "Video Type"; si es incorrecto, se utilizará el vídeo predeterminado. |
+| **Device AI Model** | 1 Selecciona un modelo de IA que ya se haya descargado en el dispositivo<br />2 Si no hay ningún modelo de IA en tu dispositivo, ve a la página AI Models para descargar el modelo en tu dispositivo. |
+| **Confidence Threshold** | 1 Umbral de confianza del objeto para la detección.<br />2 Formato: float [0, 1] |
+| **IoU Threshold** | 1 IoU se utiliza para evaluar la precisión de los cuadros delimitadores predichos en comparación con los cuadros delimitadores reales2 Formato: float [0, 1] |
+| **FPS** | 1 Fotogramas por segundo del flujo<br />2 Formato: INT [1,60] |
+| **Quality** | 1 Calidad del flujo de salida.  Predeterminado: 50<br />2 Formato: int [0,100] |
+| **Maximum Detections** | 1 número máximo de detecciones por imagen. Predeterminado: 3002 Formato: int [0,1000] |
+| **Display Frame Rate** | 1 Si se muestra la tasa de fotogramas del flujo<br />2 Formato: Bool [True,False]<br />● True: mostrar FPS<br />● False: no mostrar FPS |
+| **Display Clock** | 1 Si se muestra la hora<br />2 Formato: Bool [True,False]<br />● True: mostrar hora<br />● False: no mostrar hora |
 
-#### Detalle del stream
+#### Detalle del flujo
 
-Haz clic en el ícono "Ojo" del stream, verás la información detallada del stream
+Haz clic en el icono "Eye" del flujo y verás la información detallada del flujo
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image36.png)
 
-#### Editar Stream
+#### Editar flujo
 
-Haz clic en el ícono "Editar" del stream, los usuarios pueden editar todas las configuraciones del stream y hacer clic en el botón "Confirmar" para enviar la información modificada del stream al dispositivo. Toma tiempo para que el dispositivo actualice la configuración de streaming, la información de la plataforma se actualizará más tarde
+Haz clic en el icono "Edit" del flujo, los usuarios pueden editar todas las configuraciones del flujo y hacer clic en el botón "Confirm" para enviar la información del flujo modificada al dispositivo.  El dispositivo tarda un tiempo en actualizar la configuración de transmisión, la información de la plataforma se actualizará más tarde
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image37.png)
 
-#### Eliminar Stream
+#### Eliminar flujo
 
-Haz clic en el ícono "Eliminar" del stream para eliminar el stream. Toma tiempo para que el dispositivo elimine el stream, la información de la plataforma se actualizará más tarde
+Haz clic en el icono "Delete" del flujo para eliminarlo. El dispositivo tarda un tiempo en eliminar el flujo, la información de la plataforma se actualizará más tarde
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image38.png)
 
-### Modelo AI del Dispositivo
+### Modelo de IA del dispositivo
 
-Gestiona todos los modelos AI que han sido descargados en el dispositivo y soporta agregar modelo, ver el detalle del modelo y eliminar modelo.
+Gestiona todos los modelos de IA que se han descargado en el dispositivo y admite añadir modelo, ver el detalle del modelo y eliminar modelo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image39.png)
 
-## **Soporte Técnico**
+## **Soporte técnico**
 
-**¿Necesitas ayuda con tu SenseCAP Indicator? ¡Estamos aquí para asistirte!**
+**¿Necesitas ayuda con tu reComputer Jetson? ¡Estamos aquí para ayudarte!**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -198,3 +198,4 @@ Gestiona todos los modelos AI que han sido descargados en el dispositivo y sopor
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+/div>

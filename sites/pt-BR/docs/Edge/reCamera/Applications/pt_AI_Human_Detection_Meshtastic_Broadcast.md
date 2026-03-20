@@ -37,17 +37,17 @@ Esta demo mostra uma solução de monitoramento remoto com Edge AI que integra a
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver mais🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
 </a>
 </div></td>
 </tr>

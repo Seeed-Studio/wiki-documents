@@ -73,21 +73,21 @@ Você pode escolher **qualquer versão da reCamera** com base nas suas necessida
   <td>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
       </a>
     </div>
   </td>
   <td>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
       </a>
     </div>
   </td>
   <td>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
       </a>
     </div>
   </td>
@@ -161,7 +161,7 @@ Os resultados da detecção são ilustrados abaixo:
 </div>
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test5.jpg" />
-</div>
+</div]
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test6.jpg" />
 </div>

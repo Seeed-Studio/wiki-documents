@@ -94,7 +94,7 @@ Ao conectar o chassi LoRaWan Wio Terminal com LoRa-E5 com antena integrada e GNS
 | Wio Terminal | Chassi LoRaWan | Chassi de bateria |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/LoRa_WioTerminal/img/Wio-Terminal-Wiki.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/LoRa_WioTerminal/img/114992728_Feature-14.png)|![enter image description here](https://files.seeedstudio.com/wiki/LoRa_WioTerminal/img/45.png)
-|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-Chassis-LoRa-E5-and-GNSS-p-5053.html)|[Adquira agora](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-Chassis-LoRa-E5-and-GNSS-p-5053.html)|[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html)|
 
 # Projeto 1: Testador de gateway LoRaWAN WioTerminal
 

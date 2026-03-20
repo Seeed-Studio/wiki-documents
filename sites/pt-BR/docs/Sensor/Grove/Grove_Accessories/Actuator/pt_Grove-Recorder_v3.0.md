@@ -97,7 +97,7 @@ Aqui mostraremos como este Grove - Recorder V3.0 funciona por meio de uma demons
 | Seeeduino V4 | Grove - Recorder | Base Shield |
 |--------------|----------------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/stuff.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
+|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
 ### Conexão de Hardware
 Graças ao benefício dos módulos da série Grove, você não precisa fazer solda ou usar breadboard; o que precisa fazer é conectar os módulos à porta correta do Base Shield. Para esta demonstração, conectamos o Grove - Recorder à porta D2.

@@ -19,27 +19,27 @@ url: https://wiki.seeedstudio.com/pt-br/sensecraft-blockchain/blockchain-dashboa
 # Registro no Dashboard
 
 
-O dashboard SenseCAP M1 foi projetado para ajudá-lo a monitorar seu Hotspot e oferecer uma visão geral abrangente.
+O dashboard do SenseCAP M1 foi projetado para ajudar você a monitorar seu Hotspot e fornecer uma visão geral abrangente.
 
 **Registro no Dashboard**
 ==========================
 
-1.  Visite [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+1.  Acesse [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
 2.  Clique no botão "**Register**" abaixo.  
     1.  Você terá a opção de criar uma conta OU registrar/logar com sua conta do Discord.
 3.  Insira os dados necessários para começar a criar sua conta.
-4.  Após preencher seu "**Email Address**", você precisará clicar em "**Get Captcha**".
+4.  Depois de preencher seu "**Email Address**", você precisará clicar em "**Get Captcha**".
     1.  O sistema enviará um “**one-time code**” para o e-mail cadastrado que você forneceu para validar a propriedade dessa conta de e-mail.
     2.  Você terá **60 segundos** para recuperar o código da sua caixa de entrada.
-5.  Depois de inserir o "**one-time code**", clique em "**Register**" e você terá se registrado com sucesso para monitorar seu hotspot remotamente.
+5.  Depois de inserir o "**one-time code**", clique em "**Register**" e você estará registrado com sucesso para monitorar seu hotspot remotamente.
 
-![SenseCAP Dashboard Registration](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
+![Registro no Dashboard do SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
 
 **Login no Dashboard**
 ===================
 
-1.  Visite [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  Insira as credenciais que você criou durante o processo de registro OU faça login com os dados da sua conta Discount (o que você tiver selecionado durante o processo de registro)
+1.  Acesse [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+2.  Insira as credenciais que você criou durante o processo de registro OU faça login com os dados da sua conta do Discord (qualquer uma das opções que você tiver selecionado durante o processo de registro)
 3.  Parabéns, você fez login com sucesso.
 
-![SenseCAP Dashboard Login](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
+![Login no Dashboard do SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)

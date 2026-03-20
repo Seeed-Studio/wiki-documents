@@ -234,7 +234,7 @@ O design da PCB é distribuído sob a licença Creative Commons Attribution-Shar
 <td>C7</td>
 <td>Capacitor</td>
 <td>0.1uF</td>
-<td>C0402</td>
+<td>C0402</td]
 <td></td>
 <td></td>
 <td></td>

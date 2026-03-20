@@ -1,14 +1,14 @@
 ---
-description: reTerminal E1004 は、ESP32-S3 を搭載した 13.3 インチのオープンソースフルカラー電子ペーパーディスプレイで、E Ink® Spectra™ 6 テクノロジーと SenseCraft HMI サポートを備えています。
+description: reTerminal E1004 は、ESP32-S3 を搭載し、E Ink® Spectra™ 6 テクノロジーと SenseCraft HMI をサポートする、13.3 インチのオープンソースフルカラー電子ペーパーディスプレイです。
 title: reTerminal E1004 入門ガイド
-sidebar_position: 5
+sidebar_position: 4
 keywords:
   - reTerminal E1004
-  - 電子ペーパーディスプレイ
+  - ePaper Display
   - ESP32-S3
   - SenseCraft HMI
   - E Ink Spectra 6
-  - スマートホームダッシュボード
+  - Smart Home Dashboard
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
 slug: /getting_started_with_reterminal_e1004
 sku: 100064156
@@ -31,38 +31,38 @@ reTerminal E1004 は、最大 6 か月のバッテリー駆動が可能な 13.3 
 ### 特長
 
 - **高精細カラーディスプレイ:** 13.3 インチ E Ink® Spectra™ 6 フルカラー電子ペーパーディスプレイ、1200x1600 ピクセルの高解像度。
-- **高性能プロセッシング:** ESP32-S3（8MB PSRAM、32MB Flash 搭載）により高い処理性能を実現。
-- **超低消費電力:** 内蔵 5000mAh バッテリーにより、1 回の充電で最大 6 か月使用可能（6 時間ごとにリフレッシュする場合）。
+- **高性能プロセッサ:** ESP32-S3 搭載、8MB PSRAM と 32MB Flash により高いパフォーマンスを実現。
+- **超低消費電力:** 内蔵 5000mAh バッテリーにより、1 回の充電で最大 6 か月使用可能（6 時間ごとにリフレッシュした場合）。
 - **ノーコード UI 開発:** 既定のファームウェアで SenseCraft HMI をサポートし、ドラッグ＆ドロップでのダッシュボード作成と AI 支援デザインが可能。
-- **高い互換性:** Home Assistant（ESPHome）、Arduino、PlatformIO、ESP-IDF をサポート。
-- **豊富な接続性:** 2.4GHz Wi-Fi（802.11 b/g/n）および Bluetooth 5.0 を内蔵。
-- **内蔵センサー＆オーディオ:** 温度・湿度センサーおよびアラート用ブザーを内蔵。
+- **高い互換性:** Home Assistant (ESPHome)、Arduino、PlatformIO、ESP-IDF をサポート。
+- **豊富な接続性:** 2.4GHz Wi-Fi (802.11 b/g/n) と Bluetooth 5.0 を内蔵。
+- **センサー & オーディオ内蔵:** 温度・湿度センサーおよびアラート用ブザーを内蔵。
 - **すぐに使えるストレージ:** 16GB Micro SD カードを同梱（最大 32GB まで対応）。
 
 ## 仕様
 
-| 項目 | 説明 |
+| Item | Description |
 | :--- | :--- |
-| **製品名** | reTerminal E1004 |
-| **プロセッサ** | ESP32-S3（8MB PSRAM 搭載） |
-| **ストレージ** | 32MB Flash、Micro SD カード対応（最大 32GB、16GB 同梱） |
-| **ディスプレイ** | 13.3" Spectra™ 6 フルカラー電子ペーパー |
-| **解像度** | 1200 x 1600 ピクセル |
-| **無線接続** | 2.4GHz 802.11 b/g/n Wi-Fi、Bluetooth 5.0 |
-| **センサー** | 温度・湿度センサー |
-| **オーディオ** | ブザー（サウンドアラート） |
-| **バッテリー** | 5000mAh |
-| **電源入力** | USB-C 5V/1A |
-| **ソフトウェアサポート** | SenseCraft HMI（デフォルト）、ESPHome、Arduino、PlatformIO、ESP-IDF |
-| **動作温度** | 0〜40°C |
-| **寸法** | 376mm x 311mm x 40mm |
+| **Product Name** | reTerminal E1004 |
+| **Processor** | ESP32-S3 with 8MB PSRAM |
+| **Storage** | 32MB Flash, support Micro SD card (Up to 32GB, 16GB included) |
+| **Display** | 13.3" Spectra™ 6 Full Color ePaper |
+| **Resolution** | 1200 x 1600 Pixels |
+| **Wireless Connectivity** | 2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0 |
+| **Sensors** | Temperature, Humidity sensors |
+| **Audio** | Buzzer (Sound alert) |
+| **Battery** | 5000mAh |
+| **Power Input** | USB-C 5V/1A |
+| **Software Support** | SenseCraft HMI (Default), ESPHome, Arduino, PlatformIO, ESP-IDF |
+| **Working Temperature** | 0-40°C |
+| **Dimensions** | 376mm x 311mm x 40mm |
 
 ## アプリケーション
 
-- **低消費電力電子フォトフレーム:** 高解像度の家族写真やアートを紙のような質感で表示し、毎日の充電を気にせず使用可能。
-- **ファミリーインフォメーションボード:** カレンダー、通知、天気、ニュースをスタイリッシュで常時表示の形式で確認。
-- **ホームオートメーションダッシュボード:** Home Assistant を介して、スマートホームのリアルタイムデータ（温度、湿度、空気質）を可視化。
-- **スマートオフィスディスプレイ:** 会議室のスケジュール、空き状況、案内表示などに利用。
+- **低消費電力電子フォトフレーム:** 高解像度の家族写真やアートを、紙のような表示品質で、毎日の充電を気にせず表示可能。
+- **ファミリーインフォメーションボード:** カレンダー、通知、天気、ニュースを、スタイリッシュで常時表示の形式で確認。
+- **ホームオートメーションダッシュボード:** Home Assistant を通じて、温度、湿度、空気質などのスマートホームデータをリアルタイムに可視化。
+- **スマートオフィスディスプレイ:** 会議室のスケジュール、空き状況、案内表示などに利用可能。
 - **小売・公共サイネージ:** 省エネなメニュー、時刻表、混雑状況インジケーターなどに最適。
 - **教育・プロトタイピング:** IoT、組み込みシステム、UI デザイン学習に理想的なプラットフォーム。
 
@@ -70,21 +70,21 @@ reTerminal E1004 は、最大 6 か月のバッテリー駆動が可能な 13.3 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/specification.jpg" style={{width:1000, height:'auto'}}/></div>
 
-1. **ページアップ／ダウンボタン:** ナビゲーションおよびページ送りに使用します。
+1. **ページアップ・ダウンボタン:** ナビゲーションやページ送りに使用します。
 2. **画面リフレッシュボタン:** E-ink ディスプレイを手動でリフレッシュするために使用します。
 3. **赤色電源 LED:** デバイスの電源状態を示します。
 4. **USB-C データ・充電ポート:** デバイスの充電およびデータ転送に使用します。
 5. **電源スイッチ:** デバイスの電源をオン／オフします。
 6. **緑色ステータス LED:** 現在の動作状態またはシステムステータスを示します。
-7. **Boot:** システムのブートまたはブートモードへの移行に使用します。
+7. **Boot:** システムのブートやブートモードへの移行に使用します。
 8. **Reset:** ハードウェアコンポーネントをリセットするために使用します。
 9. **拡張ポート:** 外部拡張モジュールや周辺機器を接続するために使用します。
 10. **スタンド固定用ネジ:** デバイスをスタンドに固定するために使用します。
 11. **金属スタンド:** デバイスに物理的な支持と安定性を提供します。
 
-## SenseCraft HMI を使ったセットアップ
+## SenseCraft HMI を使い始める
 
-reTerminal E1004 には、ノーコードプラットフォーム **SenseCraft HMI** をサポートするファームウェアがプリインストールされており、パーソナライズされたダッシュボードを簡単に設計・デプロイできます。
+reTerminal E1004 には、ノーコードプラットフォーム **SenseCraft HMI** をサポートするファームウェアがプリインストールされており、パーソナライズされたダッシュボードを簡単に設計・展開できます。
 
 ### ステップ 1. 電源オンとネットワーク設定
 
@@ -102,26 +102,26 @@ reTerminal E1004 には、ノーコードプラットフォーム **SenseCraft H
 1. パソコンのブラウザで [SenseCraft HMI Platform](https://sensecraft.seeed.cc/) にアクセスします。
 2. アカウントにログインします（未作成の場合は新規作成します）。
 3. **Device Management** セクションに移動し、**Add Device** をクリックします。
-4. reTerminal E1004 の画面に表示されている **Device Code** を入力して、バインド処理を完了します。
+4. reTerminal E1004 の画面に表示されている **Device Code** を入力して、バインドを完了します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/12.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ 3. プラットフォーム上でコンテンツを作成する
 
-1. **Home Page** に移動し、使用したいテンプレートを選択するか、**Wrokspace** で一から作品を作成します。
+1. **Home Page** に移動し、使用したいテンプレートを選択するか、**Wrokspace** で一から作成します。
 2. [使い方に疑問がある場合は、このリンクをクリックして HMI Platform の使用方法を学んでください。](https://sensecraft-hmi-docs.seeed.cc/en/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ 4. コンテンツをデバイスにデプロイする
 
-1. デザインが完成したら、**Preview** ボタンをクリックして見た目を確認します。
+1. デザインが完成したら、**Preview** ボタンをクリックして表示を確認します。
 2. **Save** または **deploy** ボタンをクリックします。
-3. 一覧からバインド済みの reTerminal E1004 を選択します。
+3. リストからバインド済みの reTerminal E1004 を選択します。
 4. プラットフォームが Wi-Fi 経由でデータをデバイスに送信します。電子ペーパースクリーンがリフレッシュされ、新しいダッシュボードが表示されます。
 
 :::note
-E Ink テクノロジーの特性上、画像を完全に更新して残像を消去するまでに、画面のリフレッシュに数秒かかる場合があります。
+E Ink テクノロジーの特性上、画像が完全に更新されゴーストが消えるまで、画面のリフレッシュに数秒かかる場合があります。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
@@ -130,9 +130,9 @@ E Ink テクノロジーの特性上、画像を完全に更新して残像を�
 
 - [reTerminal E1004 回路図 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004523_reTerminal%20E1004_V1.0_SCH_260105.pdf)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

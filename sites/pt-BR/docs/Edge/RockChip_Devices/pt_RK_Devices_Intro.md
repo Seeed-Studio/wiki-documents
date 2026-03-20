@@ -432,7 +432,7 @@ Biblioteca de código aberto para visão computacional com centenas de algoritmo
 
 Sistema operacional Linux de código aberto para dispositivos embarcados.
         </td>
-      </tr>
+      </tr]
       <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/mediapipe.png" style={{width:80, height:'auto'}}/></td>
         <td>

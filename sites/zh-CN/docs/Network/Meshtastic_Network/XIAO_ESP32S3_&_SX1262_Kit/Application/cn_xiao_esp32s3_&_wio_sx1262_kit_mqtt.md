@@ -1,6 +1,6 @@
 ---
 description: 基于 XIAO ESP32S3 和 Wio-SX1262 套件的 Meshtastic MQTT 网关设置教程。可实现全球消息通信，在网状网络信号较弱时提供备份，并通过互联网确保更快速的消息传递。
-title: 设置 MQTT 网关
+title: 使用 XIAO ESP32S3 和 Wio-SX1262 套件搭建 MQTT 网关
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
@@ -16,7 +16,7 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 为什么需要 Meshtastic + mqtt
+## 为什么你需要 Meshtastic + mqtt
 
 将 MQTT 与 Meshtastic 集成，可以通过桥接远距离网络来扩展离网通信能力。这可以实现全球消息通信，在网状网络信号较弱时提供备份，并通过互联网确保更快速的消息传递，非常适合偏远地区和紧急情况。
 
@@ -53,9 +53,9 @@ import TabItem from '@theme/TabItem';
 
 ### 连接电池
 
-XIAO ESP32S3 内置电源管理芯片，可通过电池为 XIAO ESP32S3 独立供电，或通过 XIAO ESP32S3 的 USB 接口为电池充电。
+XIAO ESP32S3 内置电源管理芯片，可通过电池单独为 XIAO ESP32S3 供电，也可以通过 XIAO ESP32S3 的 USB 端口为电池充电。
 
-如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 `3.7V lithium` 电池，并带有 `protection circuit`。焊接电池时，请注意区分正负极。电源负极应为靠近 USB 接口的一侧，电源正极为远离 USB 接口的一侧。
+如果你想为 XIAO 连接电池，我们建议你购买合格的可充电 `3.7V lithium` 电池，并带有 `protection circuit`。焊接电池时，请注意区分正负极。电源负极应连接在靠近 USB 端口的一侧，电源正极应连接在远离 USB 端口的一侧。
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -78,13 +78,13 @@ SX-1262 可以通过 B2B 接口连接到 Xiao ESP32-S3。SX-1262 使用 SPI 与 
 
 **1**：首先，打开浏览器并访问 https://flasher.meshtastic.org/#，需要使用 Chrome 或 Edge 浏览器。
 
-**2**：然后，使用合适的 USB 线将设备连接到电脑。你可能需要先关机，然后在插入 USB 线的同时**按住 BOOT 按钮**。
+**2**：然后，使用合适的 USB 线将设备连接到电脑。你可能需要先断电，然后在插入 USB 线的同时**按住 BOOT 按钮**。
 
-**3**：按照页面提供的说明执行后续刷写操作。将 Device 选择为 "**Seeed XIAO S3**"，Firmware 选择为**最新**版本，然后点击 "**Flash**"。如果你想覆盖之前的固件，别忘了勾选 "**Full Erase and Install**"。
+**3**：按照页面提供的说明执行后续刷写操作。将 Device 选择为“**Seeed XIAO S3**”，Firmware 选择为**最新**版本，然后点击“**Flash**”。如果你想覆盖之前的固件，别忘了勾选“**Full Erase and Install**”。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
-### 步骤 2 检查你的 Device ID
+### 步骤 2 查看你的 Device ID
 
 Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监视器进行查看。
 
@@ -92,7 +92,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/OpenSerialPortMonitor.png" style={{width:600, height:'auto'}}/></div>
 
-在串口日志中检查你的 Device ID。例如，下方日志表明 Device ID 为 24c0。
+在串口日志中查看你的 Device ID。例如，下方日志表明 Device ID 为 24c0。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/DEviceIDD.png" style={{width:600, height:'auto'}}/></div>
 
@@ -108,7 +108,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <TabItem value="pypi" label="Android">
 
 **1. LoRa 配置**
-- 将 region 从 UNSET 更改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将 region 从 UNSET 更改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
 - 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
@@ -127,9 +127,9 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTSetting.jpg" style={{width:350, height:'auto'}}/></div>
 
 
-**3. 通道配置**
+**3. 信道配置**
 
-- 为你的主通道打开 `Uplink enabled` 和 `Downlink enabled`
+- 为你的主信道打开 `Uplink enabled` 和 `Downlink enabled`
 - 点击 Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UPLINKDOWNLINK.jpg" style={{width:350, height:'auto'}}/></div>
@@ -147,7 +147,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 **5. APP 连接**
 
-现在你的设备无法再通过蓝牙连接，但可以通过网络连接。
+现在你的设备无法再通过蓝牙连接，但你可以通过网络进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
@@ -156,7 +156,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <TabItem value="sou" label="IOS">
 
 **1. LoRa 配置**
-- 将 region 从 UNSET 更改为你所在的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
+- 将 region 从 UNSET 更改为你的国家/地区（例如，欧洲为 EU868，美国为 US 等）。
 - 选择 `OK to MQTT`
 - 点击 Send
 - 设备会自动重启并重新连接。设备将自动重启并重新连接，这可能需要 30 秒到 2 分钟。
@@ -175,9 +175,9 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTSetting.png" style={{width:350, height:'auto'}}/></div>
 
 
-**3. 通道配置**
+**3. 信道配置**
 
-- 为你的主通道打开 `Uplink enabled` 和 `Downlink enabled`
+- 为你的主信道打开 `Uplink enabled` 和 `Downlink enabled`
 - 点击 Send
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTChanel.png" style={{width:350, height:'auto'}}/></div>
@@ -195,7 +195,7 @@ Device ID 通常是 MAC 地址的最后四位数字。你可以打开串口监�
 
 **5. APP 连接**
 
-现在你的设备无法再通过蓝牙连接，但可以通过网络连接。
+现在你的设备无法再通过蓝牙连接，但你可以通过网络进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTConnect.png" style={{width:350, height:'auto'}}/></div> 
 

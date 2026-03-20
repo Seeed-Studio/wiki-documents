@@ -20,7 +20,7 @@ url: https://wiki.seeedstudio.com/pt-br/Grove-I2C_ADC/
 O Grove - I2C ADC é um módulo ADC de precisão de 12 bits baseado no ADC121C021. Ele ajuda você a aumentar a precisão dos valores coletados de sensores analógicos, fornecendo uma tensão de referência constante. Como seu endereço é alterável, você pode usar até 9 I2C ADCs ao mesmo tempo, no máximo. Por outro lado, este módulo fornece função de suspensão automática, o que reduz consideravelmente o consumo de energia.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 ## Versão

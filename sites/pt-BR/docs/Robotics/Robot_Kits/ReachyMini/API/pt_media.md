@@ -849,7 +849,7 @@ Grava dados em um parâmetro especificado no dispositivo ReSpeaker.
 
 **[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/media/audio_control_utils.py#L322)**
 
-Encontra e retorna o dispositivo USB ReSpeaker com o Vendor ID e Product ID fornecidos.
+[LINE[73]]Encontra e retorna o dispositivo USB ReSpeaker com o Vendor ID e Product ID fornecidos.
 
 :::note
 

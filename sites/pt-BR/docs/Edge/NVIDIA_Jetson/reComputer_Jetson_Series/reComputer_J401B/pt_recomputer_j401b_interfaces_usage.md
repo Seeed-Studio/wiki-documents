@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_j401b_interfaces_usage/
 Este wiki apresenta os diversos hardwares e interfaces diferentes no reComputer J401B e como usá‑los para expandir suas ideias de projeto.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 ## Mini-PCIe

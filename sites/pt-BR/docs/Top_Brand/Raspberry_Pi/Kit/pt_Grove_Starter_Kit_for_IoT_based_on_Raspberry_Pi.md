@@ -46,20 +46,20 @@ GrovePi+ e parte do código foram projetados pela [Dexter Industry](http://www.d
 
 | SKU | Nome da Peça | Qtde | Link |
 |------|--------------|------|-------|
-|103010002 | GrovePi+ | 1 | [Adquira agora](https://www.seeedstudio.com/GrovePi.html) |
-|104990243| Display HDMI de 5 Polegadas com Tela de Toque USB | 1 | [Adquira agora](https://www.seeedstudio.com/5-Inch-HDMI-Display-with-USB-TouchScreen-p-2638.html) |
-|103020005| Grove - Relé | 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Relay-p-769.html) |
-|101020011| Grove - Sensor de Temperatura e Umidade| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Temp&Humi-Sensor-p-745.html) |
-|101020010| Grove - Sensor Ultrassônico | 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html) |
-|104020006| Barra de LED Grove v2.0 | 1 | [Adquira agora](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html) |
-|101020048| Grove - Sensor de Ângulo Rotativo(P)| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor%28P%29-p-1242.html) |
-|107020000| Grove - Buzzer| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) |
-|101020023| Grove - Sensor de Som| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html) |
-|101020014 | Grove - Sensor de Luz v1.2 | 1 | [Adquira agora](https://www.seeedstudio.com/Grove-%E2%80%93-Light-Sensor-%28P%29-v1.1-p-2693.html) |
-|101020003| Grove - Botão| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-Button-p-766.html) |
-|104030001| Grove - LCD RGB com Luz de Fundo| 1 | [Adquira agora](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) |
-|109990056| Cabo HDMI| 1 | [Adquira agora](https://www.seeedstudio.com/Flat-HDMI-Male-to-Male-Cable-1M,Support-3D-For-HDTV-computer-&-tablets-cable-p-2142.html) |
-|321010007| Cabo Micro USB - 48cm| 1 | [Adquira agora](https://www.seeedstudio.com/Micro-USB-Cable-1200px-p-1475.html) |
+|103010002 | GrovePi+ | 1 | [Get One Now](https://www.seeedstudio.com/GrovePi.html) |
+|104990243| Display HDMI de 5 Polegadas com Tela de Toque USB | 1 | [Get One Now](https://www.seeedstudio.com/5-Inch-HDMI-Display-with-USB-TouchScreen-p-2638.html) |
+|103020005| Grove - Relé | 1 | [Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html) |
+|101020011| Grove - Sensor de Temperatura e Umidade| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Temp&Humi-Sensor-p-745.html) |
+|101020010| Grove - Sensor Ultrassônico | 1 | [Get One Now](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html) |
+|104020006| Barra de LED Grove v2.0 | 1 | [Get One Now](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html) |
+|101020048| Grove - Sensor de Ângulo Rotativo(P)| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor%28P%29-p-1242.html) |
+|107020000| Grove - Buzzer| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) |
+|101020023| Grove - Sensor de Som| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html) |
+|101020014 | Grove - Sensor de Luz v1.2 | 1 | [Get One Now](https://www.seeedstudio.com/Grove-%E2%80%93-Light-Sensor-%28P%29-v1.1-p-2693.html) |
+|101020003| Grove - Botão| 1 | [Get One Now](https://www.seeedstudio.com/Grove-Button-p-766.html) |
+|104030001| Grove - LCD RGB com Luz de Fundo| 1 | [Get One Now](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html) |
+|109990056| Cabo HDMI| 1 | [Get One Now](https://www.seeedstudio.com/Flat-HDMI-Male-to-Male-Cable-1M,Support-3D-For-HDTV-computer-&-tablets-cable-p-2142.html) |
+|321010007| Cabo Micro USB - 48cm| 1 | [Get One Now](https://www.seeedstudio.com/Micro-USB-Cable-1200px-p-1475.html) |
 
 ## Conexão de hardware para GrovePi+
 

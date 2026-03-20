@@ -1,5 +1,5 @@
 ---
-description: Descubra os serviços SenseCraft Cloud da Seeed — uma plataforma poderosa de nível industrial projetada para gerenciamento eficiente de dados, operações em tempo real e aplicações IoT escaláveis. Saiba mais sobre como o SenseCraft oferece suporte à implantação da sua nuvem IoT industrial.
+description: Descubra os serviços em nuvem SenseCraft da Seeed — uma plataforma poderosa de nível industrial projetada para gerenciamento eficiente de dados, operações em tempo real e aplicações de IoT escaláveis. Saiba mais sobre como o SenseCraft oferece suporte à sua implantação de nuvem de IoT industrial.
 title: Cloud
 keywords:
   - SenseCraft Matrix
@@ -20,23 +20,23 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/Cloud/
 ---
 
-Os serviços de nuvem são um componente vital que possibilita o gerenciamento de dados processados a partir de placas de computação e fornece aos usuários operações em tempo real. Esta página apresenta os serviços de nuvem SenseCraft de nível industrial da Seeed, juntamente com outras aplicações de serviços de nuvem voltadas para diversas necessidades de IoT industrial. Através de uma infraestrutura de nuvem robusta, a Seeed capacita os usuários a armazenar, analisar e aproveitar de forma segura os dados processados, facilitando a tomada de decisões orientadas por dados e aprimorando a eficiência operacional em vários domínios.
+Os serviços em nuvem são um componente vital que possibilita o gerenciamento de dados processados a partir de placas de computação e fornece aos usuários operações em tempo real. Esta página apresenta os serviços em nuvem SenseCraft de nível industrial da Seeed, juntamente com outras aplicações de serviços em nuvem voltadas para diversas necessidades de IoT industrial. Por meio de uma infraestrutura de nuvem robusta, a Seeed capacita os usuários a armazenar, analisar e aproveitar com segurança os dados processados, facilitando a tomada de decisões orientadas por dados e aumentando a eficiência operacional em vários domínios.
 
-## Serviço de Nuvem SenseCraft
+## Serviço em Nuvem SenseCraft
 
-<strong><font color={'8DC215'} size={"4"}>Esta seção destaca diferentes serviços de nuvem oferecidos pela Seeed Studio, voltados para várias aplicações de IoT industrial. Você pode explorar mais nas seguintes áreas:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>Esta seção destaca diferentes serviços em nuvem oferecidos pela Seeed Studio, voltados para várias aplicações de IoT industrial. Você pode explorar mais nas seguintes áreas:</font></strong>
 
-- Catálogo do ecossistema SenseCraft e serviços de nuvem.
-- Instruções para gerenciamento de dados e dispositivos para cada produto de nuvem
-- APIs para vários propósitos de conexão
-- Introdução aos serviços de nuvem
+- Catálogo do ecossistema SenseCraft e serviços em nuvem.
+- Instruções para gerenciamento de dados e dispositivos para cada produto em nuvem
+- APIs para diversos propósitos de conexão
+- Introdução aos serviços em nuvem
 
-### SenseCraft Data Platform / Painel Blockchain
+### Plataforma de Dados SenseCraft / Dashboard Blockchain
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft Data Platform</font></div>
-            <p class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>A SenseCraft Data Platform oferece monitoramento de dados para nós sensores e gateways SenseCAP.</font></p>
+            <p class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>A SenseCraft Data Platform fornece monitoramento de dados para nós sensores e gateways SenseCAP.</font></p>
     </div>
 </div>
 
@@ -51,7 +51,7 @@ Os serviços de nuvem são um componente vital que possibilita o gerenciamento d
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCraft Data Management</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gerenciamento de Dados SenseCraft</font></div>
             <a href="/pt-br/sensecraft-data-platform/tutorials/data-management#table" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dados Detalhados na Visualização em Tabela</font></span></a>
             <br/>
             <a href="/pt-br/sensecraft-data-platform/tutorials/data-management#graph" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Dados Gráficos na Visualização em Gráfico</font></span></a>
@@ -63,14 +63,14 @@ Os serviços de nuvem são um componente vital que possibilita o gerenciamento d
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCraft Device Management</font></div>
-            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Gateways SenseCAP</strong> - Veja EUI, Nome, Status e muito mais.</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gerenciamento de Dispositivos SenseCraft</font></div>
+            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Gateways SenseCAP</strong> - Visualize EUI, Nome, Status e mais.</font></span></a>
             <br/>
             <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#node-group-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Grupos de Nós SenseCAP</strong> - Gerencie dispositivos de forma conveniente por grupos.</font></span></a>
             <br/>
-            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#sensor-node-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Nós Sensores SenseCAP</strong> - Veja EUI, Nome, Status, Tipo de Dado e muito mais.</font></span></a>
+            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#sensor-node-management" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Nós Sensores SenseCAP</strong> - Visualize EUI, Nome, Status, Tipo de Dado e mais.</font></span></a>
             <br/>
-            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Informações Gerais do Dispositivo</strong> - Status da bateria, registros recentes de conexão e muito mais.</font></span></a>
+            <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#general-information" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Informações Gerais do Dispositivo</strong> - Status da bateria, registros recentes online e mais.</font></span></a>
             <br/>
             <a href="/pt-br/sensecraft-data-platform/tutorials/device-management#settings" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Configurações</strong> - Ajuste a frequência de coleta de dados e outras configurações.</font></span></a>
             <br/>
@@ -95,16 +95,22 @@ Os serviços de nuvem são um componente vital que possibilita o gerenciamento d
     </div>
 </div>
 
+<br />
+<br />
+
 ### SenseCraft APP
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft App</font></div>
-            <p>O SenseCraft App é usado em telefones celulares para configurar, construir e gerenciar sensores, e exibir dados da SenseCraft Data Platform.</p>
+            <p>O SenseCraft App é usado em telefones celulares para configurar, criar e gerenciar sensores, e exibir dados da SenseCraft Data Platform.</p>
             <br/>
             > <a href="/pt-br/sensecraft-app/overview#download" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Download</font></span></a> / <a href="/pt-br/sensecraft-app/overview#config" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Vincular Dispositivos</font></span></a> / <a href="/pt-br/sensecraft-app/overview#account" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Conta</font></span></a> / <a href="/pt-br/sensecraft-app/overview#user" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Usuário</font></span></a>
     </div>
 </div>
+
+<br />
+<br />
 
 ### SenseCraft AI
 
@@ -114,9 +120,12 @@ Os serviços de nuvem são um componente vital que possibilita o gerenciamento d
             <p>O SenseCraft AI pode ser acessado na SenseCraft Data Platform e no SenseCraft App.</p>
             <br/>
             > <a href="/pt-br/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Primeiros Passos</font></span></a>
-            > <a href="/pt-br/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Conectando XIAO ESP32C3</font></span></a>
+            > <a href="/pt-br/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Conectando XIAO ESP32-C3</font></span></a>
     </div>
 </div>
+
+<br />
+<br />
 
 ### SenseCAP Data Platform - API
 
@@ -128,3 +137,5 @@ Os serviços de nuvem são um componente vital que possibilita o gerenciamento d
             > <a href="https://sensecap-docs.seeed.cc/pdf/sensecap_opanapi_document_en.pdf" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Baixar PDF</font></span></a> / <a href="/pt-br/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Introdução à API</font></span></a> / <a href="/pt-br/sensecraft-fee/sensecraft-data-platform-api-pricing" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Preços da API</font></span></a>
     </div>
 </div>
+
+<br />

@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/Wio-Lite-AI-Getting-Started/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Lite-AI-p-5119.html?queryID=8ef9dd1be1efc25a4672fa94cf6a80b6&objectID=5119&indexName=bazaar_retailer_products" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 

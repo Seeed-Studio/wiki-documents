@@ -6,16 +6,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger
 last_update:
-  date: 3/18/2026
-  author: Kian
+  date: 4/12/2023
+  author: Yvonne
 createdAt: '2023-02-24'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
 # Primeros pasos con el S2100 y el sensor de entrada analógica
 
-Comencemos aprendiendo cómo usar el S2100 con un sensor de entrada analógica. Una vez que lo tengamos claro, pasaremos a lo básico de la aplicación del S2100. Esto te dará una buena idea de cómo conectar tu propio sensor personalizado en el futuro.
+Comencemos aprendiendo cómo usar el S2100 con un sensor de entrada analógica. Una vez que dominemos eso, pasaremos a lo básico de la aplicación del S2100. Esto te dará una buena idea de cómo conectar tu propio sensor personalizado en el futuro.
 
 ## Prepara estos elementos
 
@@ -28,7 +28,7 @@ Comencemos aprendiendo cómo usar el S2100 con un sensor de entrada analógica. 
 
 # Conectar la sonda del sensor
 
-Primero, tenemos que hacer el cableado. Sigue los pasos a continuación.
+Primero, necesitamos hacer el cableado. Sigue los pasos a continuación.
 
 ## Desmontar el Data Logger
 
@@ -43,17 +43,16 @@ Primero, tenemos que hacer el cableado. Sigue los pasos a continuación.
 3. Retira la tapa roscada y pásala a través del cable del sensor, pásala a través de la tapa inferior y conéctala al terminal de cableado.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png"/></div>
-
 ## Descripción del terminal de cableado
 
 | **N.º** | **Pin** | **Descripción** |
 | --- | --- | --- |
-| 1 | 12V | Tensión de entrada externa de 12V. El Data Logger puede alimentarse con una fuente de alimentación externa de 12V CC. Cuando se utiliza una fuente de alimentación de 12V, la batería servirá como fuente de alimentación de respaldo. |
-| 2 | 5V | Tensión de salida de 5V, proporcionando 5V de tensión al sensor. |
-| 3 | 3V | Tensión de salida de 3V, proporcionando 3V de tensión al sensor. |
+| 1 | 12V | Voltaje de entrada externo de 12V. El Data Logger puede alimentarse con una fuente de alimentación externa de 12V CC. Cuando se utiliza una fuente de alimentación de 12V, la batería servirá como fuente de alimentación de respaldo. |
+| 2 | 5V | Voltaje de salida de 5V, proporcionando 5V de voltaje al sensor. |
+| 3 | 3V | Voltaje de salida de 3V, proporcionando 3V de voltaje al sensor. |
 | 4 | IO | Nivel de adquisición o entrada de pulsos |
-| 5 | V1 | Se recoge la entrada de tensión de 0 a 10V |
-| 6 | V2 | Se recoge la entrada de tensión de 0 a 10V |
+| 5 | V1 | Se recoge la entrada de voltaje de 0 a 10V |
+| 6 | V2 | Se recoge la entrada de voltaje de 0 a 10V |
 | 7 | A | RS485 A/+ |
 | 8 | B | RS485 B/- |
 | 9 | I1 | Recoge la entrada de corriente de 4 a 20mA |
@@ -61,22 +60,13 @@ Primero, tenemos que hacer el cableado. Sigue los pasos a continuación.
 | 11 | GND | Pin de tierra |
 | 12 | GND | Pin de tierra |
 
-## Resolución
-
-| **Interfaz**                    | **Valor**                   |
-| -------------------------------- | --------------------------- |
-| Entrada de corriente	           |  4 a 20 mA (2 canales)      |
-| Resolución de entrada de corriente (I1/I2) |  0.001 mA                   |
-| Entrada de tensión               |	0 a 10V (2 canales)        |
-| Resolución de entrada de tensión (V1/V2) |  0.01 mV                    |
-
 ## Opciones de alimentación del sensor
 
 El Data Logger admite dos modos de alimentación; elegimos el modo de batería integrada ya que el sensor de luz solo necesita una alimentación de 5V:
 
 | **Modo** | **Descripción** |
 | --- | --- |
-| Batería integrada | El Data Logger y los sensores se alimentan con baterías. En este caso, el Data Logger se puede conectar a un sensor de 5V. |
+| Built-in Battery | El Data Logger y los sensores se alimentan con baterías. En este caso, el Data Logger se puede conectar a un sensor de 5V. |
 
 ## Conectar al Datalogger
 
@@ -98,7 +88,7 @@ Secuencia de cables del Datalogger:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/8.png"/></div>
 
-3. **Aprieta los tornillos y las tapas roscadas****para comprobar la estanqueidad al agua**. Si el diámetro del cable es demasiado fino, añade cinta impermeable para el enrollado.
+3. **Aprieta los tornillos y las tapas roscadas****para comprobar la estanqueidad al agua**. Si el diámetro del cable es demasiado fino, añade cinta impermeable para enrollarlo.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/9.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/10.png"/></div>
@@ -149,7 +139,7 @@ La plataforma SenseCAP for TTN debe utilizarse con la pasarela exterior SenseCAP
 
 ### Establecer el intervalo
 
-El modo de funcionamiento del dispositivo: despierta el dispositivo en cada intervalo y recoge los valores de medición y los sube a través de LoRa.
+El modo de funcionamiento del dispositivo: despierta el dispositivo en cada intervalo, recoge los valores de medición y los sube a través de LoRa.
 
 Por ejemplo, el dispositivo recoge y sube datos **cada 60 minutos de forma predeterminada**.
 
@@ -157,23 +147,23 @@ Por ejemplo, el dispositivo recoge y sube datos **cada 60 minutos de forma prede
 
 ### Establecer la política de paquetes
 
-La estrategia de paquetes de subida del sensor tiene tres modos; aquí seleccionamos 1N o puedes elegir según tu propia necesidad.
+La estrategia de paquetes uplink del sensor tiene tres modos; aquí seleccionamos 1N o puedes elegir según tu propia necesidad.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/19.png"/></div>
 
 | **Parámetro** | **Descripción** |
 | --- | --- |
-| 2C+1N (predeterminado) | 2C+1N (2 paquetes confirmados y 1 no confirmado) es la mejor estrategia; este modo puede minimizar la tasa de pérdida de paquetes; sin embargo, el dispositivo consumirá la mayor cantidad de paquetes de datos en TTN, o créditos de datos en la red Helium. |
+| 2C+1N (default) | 2C+1N (2 paquetes confirmados y 1 no confirmado) es la mejor estrategia; este modo puede minimizar la tasa de pérdida de paquetes; sin embargo, el dispositivo consumirá la mayor cantidad de paquetes de datos en TTN, o créditos de datos en la red Helium. |
 | 1C | 1C (1 confirmado): el dispositivo entrará en reposo después de recibir 1 paquete de confirmación del servidor. |
 | 1N | 1N (1 no confirmado): el dispositivo solo envía el paquete y luego empieza a dormir, sin importar si el servidor recibió los datos o no. |
 
 ### Restaurar la configuración de fábrica
 
-Al seleccionar la plataforma SenseCAP, debes utilizar el EUI/App EUI/App Key fijos. Por lo tanto, debes restaurar la configuración de fábrica antes de volver a cambiar a la plataforma SenseCAP desde otras plataformas.
+Al seleccionar la plataforma SenseCAP, debes usar el EUI/App EUI/App Key fijos. Por lo tanto, debes restaurar la configuración de fábrica antes de volver a la plataforma SenseCAP desde otras plataformas.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/20.png"/></div>
 
-Cuando cometamos un error o queramos restablecer todo, podemos hacer clic en el botón. El dispositivo se restaurará a la configuración predeterminada de fábrica.
+Cuando cometemos un error o queremos restablecer todo, podemos hacer clic en el botón. El dispositivo se restaurará a la configuración predeterminada de fábrica.
 
 **\*Nota:** La función "Restore Factory" solo puede restablecer la configuración básica.
 
@@ -185,23 +175,23 @@ Selecciona el “Protocol” como “Analog Input”. Luego configura los siguie
 
 Selecciona el tipo de alimentación como **Periodical power**.
 
-| Tensión de alimentación | Seleccionamos **5V** aquí. |
+| Power Voltage | Seleccionamos **5V** aquí. |
 | --- | --- |
-| Tiempo de calentamiento del sensor | El tiempo de calentamiento indica el tiempo que tarda el sensor en alcanzar su máxima precisión o nivel de rendimiento una vez que se ha aplicado la alimentación. Introducimos **200(ms)** aquí. |
-| Rango de tensión | 0-10V (el Data Logger puede recoger señales de tensión dentro de 0~10V y ajustar automáticamente el límite superior para aumentar la precisión). Seleccionamos **Voltage** aquí. |
-| Interfaz V1 | El Data Logger admite dos señales de tensión analógica. Cuando el cable del sensor está conectado a V1/V2, se puede habilitar la configuración. Habilitamos **Interface V1** aquí. |
-| Interfaz V2 |
-| Y= Ax + B | "Y": es el valor que el Data Logger subirá. "x": es el valor de corriente original. Factor A: valores personalizados que pueden escalarse hacia arriba o hacia abajo por múltiplos de "x". Factor B: un valor personalizado que incrementa o disminuye el valor de "x". Al configurar los valores de A y B, puedes calcular el valor deseado. Establecemos A como **100** y B como **0** aquí. |
+| Sensor Warm-up Time | El tiempo de calentamiento indica el tiempo que tarda el sensor en alcanzar su máxima precisión o nivel de rendimiento una vez que se ha aplicado la alimentación. Introducimos **200(ms)** aquí. |
+| Voltage Range | 0-10V (el Data Logger puede recoger señales de voltaje dentro de 0~10V y ajustar automáticamente el límite superior para aumentar la precisión). Seleccionamos **Voltage** aquí. |
+| Interface V1 | El Data Logger admite dos señales de voltaje analógicas. Cuando el cable del sensor está conectado a V1/V2, se puede habilitar la configuración. Habilitamos **Interface V1** aquí. |
+| Interface V2 |
+| Y= Ax + B | "Y": es el valor que el Data Logger subirá. "x": es el valor de corriente original. Factor A: valores personalizados que se pueden escalar hacia arriba o hacia abajo por múltiplos de "x". Factor B: un valor personalizado que incrementa o disminuye el valor de "x". Al configurar los valores de A y B, puedes calcular el valor deseado. Establecemos A como **100** y B como **0** aquí. |
 
 Una vez completada la información de configuración, haz clic en "Back to Home" (en este momento, el nodo y el Bluetooth de la APP se desconectarán automáticamente), y el Data Logger intentará conectarse a la red (el indicador LED parpadea en rojo lentamente cuando intenta conectarse a la red y parpadea en verde rápidamente después de que la conexión a la red se haya realizado correctamente);
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/22.png"/></div>
 
-# Comprobar los datos en el Portal SenseCAP
+# Comprobar los datos en el portal SenseCAP
 
-## Vincular el sensor al Portal SenseCAP
+## Vincular el sensor al portal SenseCAP
 
-Por favor, abre la aplicación SenseCAP Mate.
+Abre la SenseCAP Mate App.
 
 1. **Escanear código QR**
 
@@ -209,24 +199,24 @@ Por favor, abre la aplicación SenseCAP Mate.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/23.png"/></div>
 
-1. Escanea el código QR del dispositivo para vincularlo a tu cuenta. Si no lo asignas a un grupo designado, el dispositivo se colocará en el grupo "default".
+1. Escanea el código QR del dispositivo para vincular el dispositivo a tu cuenta. Si no lo configuras en un grupo designado, el dispositivo se colocará en el grupo "default".
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/24.png"/></div>
 
 1. **Rellenar manualmente el EUI**
 
-Si la pegatina del código QR está dañada, puedes rellenar manualmente el EUI del dispositivo para vincularlo a tu cuenta. Asegúrate de introducir el EUI en el formato sugerido por el sistema y luego haz clic en "confirm".
+Si la etiqueta del código QR está dañada, puedes rellenar manualmente el EUI del dispositivo para vincular el dispositivo a tu cuenta. Asegúrate de introducir el EUI en el formato sugerido por el sistema y luego haz clic en "confirm".
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/25.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/26.png"/></div>
 
 ## Comprobar datos en la APP SenseCAP Mate
 
-Finalmente, en la aplicación SenseCAP o en el sitio web [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/), puedes comprobar el estado en línea del dispositivo y los datos más recientes. En la lista de cada sensor, puedes comprobar su estado en línea y la hora de su última carga de datos.
+Por último, en la aplicación SenseCAP o en la página web [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/), puedes comprobar el estado en línea del dispositivo y los datos más recientes. En la lista de cada sensor, puedes comprobar su estado en línea y la hora de su última carga de datos.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/27.png"/></div>
 
-También puedes comprobar la fecha en la APP SenseCAP Mate.
+Además, puedes comprobar los datos en la APP SenseCAP Mate.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/28.png"/></div>
 

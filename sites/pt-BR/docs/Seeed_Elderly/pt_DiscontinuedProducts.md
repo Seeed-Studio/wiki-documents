@@ -1,11 +1,11 @@
 ---
-description: Produtos Descontinuados
-title: Produtos Descontinuados
+description: Produtos descontinuados
+title: Produtos descontinuados
 keywords:
-  - Produtos Descontinuados
-  - Produtos Legado
-  - Produtos Aposentados
-  - Produtos Obsoletos
+  - Produtos descontinuados
+  - Produtos legados
+  - Produtos aposentados
+  - Produtos obsoletos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5
@@ -21,18 +21,18 @@ url: https://wiki.seeedstudio.com/pt-br/discontinuedproducts/
 
 
 
-### Nesta seção, mantemos um wiki de guias e tutoriais sobre produtos que não são mais suportados por nós.
+### Nesta seção, mantemos um wiki com guias e tutoriais sobre produtos que não são mais suportados por nós.
 
 
 
 :::note
-A documentação não está mais sendo mantida ativamente e pode estar desatualizada. No entanto, você ainda pode contribuir para essas páginas! Se você encontrar quaisquer problemas ou dificuldades com seus produtos, não deixe de verificar nosso <a href="https://discord.gg/eWkprNDMU7">canal do Discord</a> e o <a href="https://forum.seeedstudio.com/">fórum</a> para obter ajuda da comunidade.
+A documentação não está mais sendo mantida ativamente e pode estar desatualizada. No entanto, você ainda pode contribuir com essas páginas! Se você enfrentar quaisquer problemas ou dificuldades com seus produtos, não deixe de conferir nosso <a href="https://discord.gg/eWkprNDMU7">canal no Discord</a> e o <a href="https://forum.seeedstudio.com/">fórum</a> para obter ajuda da comunidade.
 :::
 
 
 Esses produtos podem incluir:
-* Produtos que não são mais vendidos
-* Produtos que ainda estão à venda, mas que não são mais suportados
+* Produtos que não estão mais sendo vendidos
+* Produtos que ainda estão à venda, mas que não recebem mais suporte
 
 #### A Seeed valoriza e apoia todos os produtos que vendemos e, portanto, continuará a fornecer documentação para nossos produtos descontinuados.
 
@@ -56,15 +56,15 @@ Aqui está uma lista de todos os nossos produtos aposentados
 <br /> 
 * <a href="/pt-br/Artik" font color={'8DC215'}>Artik</a>
 <br /> 
-* <a href="/pt-br/Tiny_BLE" font color={'8DC215'}>Others</a> 
+* <a href="/pt-br/Tiny_BLE" font color={'8DC215'}>Outros</a> 
 
 
 
 
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre produtos
 
-Se você precisar de mais ajuda, estamos aqui para lhe oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades. Comece a interagir conosco e com nossa adorável comunidade de Seeders agora mesmo!
+Se você precisar de mais ajuda, estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades. Comece a interagir conosco e com nossa adorável comunidade de Seeders agora mesmo!
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

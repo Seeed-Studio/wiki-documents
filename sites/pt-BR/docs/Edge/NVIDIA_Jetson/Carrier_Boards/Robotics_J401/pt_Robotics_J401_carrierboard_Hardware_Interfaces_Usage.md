@@ -130,7 +130,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
     <tr>
       <td>I2C</td>
       <td>2x I2C conector GH 4 pinos 1,25</td>
-    </tr>
+    </tr]
     <tr>
       <td>Ventoinha</td>
       <td>1x conector de ventoinha 4 pinos (PWM 5V);<br />1x conector de ventoinha 4 pinos (PWM 12V)</td>

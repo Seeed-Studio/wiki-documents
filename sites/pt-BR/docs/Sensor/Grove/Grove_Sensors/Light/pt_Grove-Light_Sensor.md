@@ -106,7 +106,7 @@ As plataformas mencionadas acima como suportadas são uma indicação da compati
 | Seeeduino V4 | Base Shield |Grove - Light Sensor | Grove - LED Bar |
 |--------------|----------------------|-----------------|---------------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/img/light_sensor_s.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_3.jpg" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Adquira agora](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
+|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Light-Sensor-v1.2-p-2727.html)|[Get One Now](https://www.seeedstudio.com/Grove-LED-Bar-v2.0-p-2474.html)|
 
 * Passo 2. Conecte o Grove-Light Sensor à porta A0 do Grove-Base Shield.
 * Passo 3. Conecte o Grove-Led Bar à porta D2 do Grove-Base Shield.

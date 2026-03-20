@@ -46,9 +46,9 @@ Grove – Heelight Sensor é um sensor de voz inteligente que pode reconhecer at
 
 |Name |Function| Qty |Link|
 |---|---|---|---|
-|Base Shield V2| Fornece conectores Grove |1 |[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
-|Seeeduino V4.2| Controlador |1 |[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|
-|Grove - Heelight Sensor |Sensor| 1| [Adquira agora](https://www.seeedstudio.com/Grove-Heelight-Sensor-p-2867.html)|
+|Base Shield V2| Fornece conectores Grove |1 |[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|Seeeduino V4.2| Controlador |1 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|
+|Grove - Heelight Sensor |Sensor| 1| [Get One Now](https://www.seeedstudio.com/Grove-Heelight-Sensor-p-2867.html)|
 
 ### Conexão de hardware
 

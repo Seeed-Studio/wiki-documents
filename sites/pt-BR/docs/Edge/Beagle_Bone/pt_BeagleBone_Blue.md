@@ -106,7 +106,7 @@ BeagleBone® Blue combina a interface WiFi/Bluetooth WiLink™ flexível e de al
       </tr>
       <tr>
         <td className="tg-88pu">Wi-Fi Direct</td>
-      </tr>
+      </tr]
       <tr>
         <td className="tg-88pu">Malha sobre Wi-Fi baseada em 802.11s</td>
       </tr>
@@ -381,7 +381,7 @@ Então você verá o LED USER2 piscar.
 | BeagleBone® Blue | Grove - LED Socket Kit|Cabo adaptador Grove (6 pinos)|
 |--------------|-------------|-------|
 |<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/cover_icon.jpg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove-White-LED-p-2016.jpeg" /></div>|<div align="center"><img width={1000} src="https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/img/Grove_4pin.jpg" /></div>|
-|[Adquira agora](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Universal-4-Pin-to-Beaglebone-Blue-6-Pin-Female-JST%2FSH-Conversion-Cable-%2810-pcs-pack%29-p-3027.html)|
+|[Get ONE Now](https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-to-Beaglebone-Blue-6-Pin-Female-JST%2FSH-Conversion-Cable-%2810-pcs-pack%29-p-3027.html)|
 
 **Passo 2.** Conecte o LED Socket Kit à interface **GPIO** de 6 pinos do BeagleBone® Blue.
 

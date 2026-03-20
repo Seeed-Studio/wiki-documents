@@ -6,29 +6,29 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger
 last_update:
-  date: 3/18/2026
-  author: Kian
+  date: 4/12/2023
+  author: Yvonne
 createdAt: '2023-02-24'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
 # アナログ入力センサーで S2100 を使い始める
 
-ここでは、アナログ入力センサーと一緒に S2100 を使う方法を学んでいきます。その使い方を理解したら、次に S2100 のアプリケーションの基本について進みます。これにより、将来自分でカスタマイズしたセンサーをどのように接続すればよいかを把握できます。
+まずは、アナログ入力センサーと一緒に S2100 を使う方法を学びましょう。それが理解できたら、S2100 のアプリケーションの基本に進みます。これにより、将来自分でカスタマイズしたセンサーをどのように接続すればよいかがよく分かるようになります。
 
 ## 準備するもの
 
 - データロガー
-- 照度センサー（例として）
-- プラスドライバー（プラス No.2）
+- 光センサー（例として）
+- プラスドライバー（十字穴 No.2）
 - SenseCAP Mate APP
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/2.png"/></div>
 
 # センサープローブを接続する
 
-まず配線を行う必要があります。以下の手順に従ってください。
+まず、配線を行う必要があります。以下の手順に従ってください。
 
 ## データロガーを分解する
 
@@ -43,7 +43,6 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 3. ネジ付きキャップを外し、それをセンサーのケーブルに通し、さらにボトムカバーに通してから、配線端子に接続します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png"/></div>
-
 ## 配線端子の説明
 
 | **No.** | **ピン** | **説明** |
@@ -61,18 +60,9 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 | 11 | GND | グランドピン |
 | 12 | GND | グランドピン |
 
-## 分解能
-
-| **インターフェース**                    | **値**                   |
-| -------------------------------- | --------------------------- |
-| 電流入力	                   |  4〜20 mA（2 チャンネル）     |
-| 電流入力分解能 (I1/I2) |  0.001 mA                   |
-| 電圧入力                    |	0〜10V（2 チャンネル）       |
-| 電圧入力分解能 (V1/V2) |  0.01 mV                    |
-
 ## センサーの電源オプション
 
-データロガーは 2 つの電源モードをサポートしており、ここでは照度センサーが 5V 供給のみを必要とするため、内蔵バッテリーモードを選択します。
+データロガーは 2 つの電源モードをサポートしており、光センサーは 5V 供給のみが必要なため、ここでは内蔵バッテリーモードを選択します。
 
 | **モード** | **説明** |
 | --- | --- |
@@ -82,13 +72,13 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 データロガー側の配線順序：
 
-| **ワイヤ種別** | **説明** |
+| **線種** | **説明** |
 | --- | --- |
 | 赤線 | 5V |
 | 黒線 | GND（どのポートでも可） |
 | 黄線 | IO |
 
-1. 8 ピンワイヤーをボトムカバーに通し、配線順序の要件に従ってデータロガーのベースに接続します。
+1. 8 ピンケーブルをボトムカバーに通し、配線順序の要件に従ってデータロガーのベースに接続します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/6.png"/></div>
 
@@ -98,14 +88,14 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/8.png"/></div>
 
-3. **ネジとネジキャップをしっかり締めて、防水性を確認します**。ワイヤー径が細すぎる場合は、防水テープを巻き付けてください。
+3. **ネジとネジキャップをしっかり締めて、防水性を確認します**。線径が細すぎる場合は、防水テープを巻き付けてください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/9.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/10.png"/></div>
 
-**\*注意:** 装置を組み立てる際は、データロガーおよびアダプタボックスの防水パッドを必ず取り付け、ネジキャップとネジをしっかり締めてください。そうしないと、装置の防水性能に影響を及ぼす可能性があります。
+**\*注意：** 装置を組み立てる際は、データロガーおよびアダプタボックスの防水パッドを必ず取り付け、ネジキャップとネジをしっかり締めてください。そうしないと、装置の防水性能に影響を及ぼす可能性があります。
 
-ワイヤー径が小さすぎる場合は、下図のように防水テープを巻き付けることができます。
+線径が細すぎる場合は、下図のように防水テープを巻き付けることができます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/11.png"/></div>
 
@@ -115,7 +105,7 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 ## センサーをアプリに接続する
 
-1. ボタンを**3 秒間**長押しすると、LED が 1 秒周期で点滅します。1 分以内にアプリを使用してセンサーに接続してください。そうしないと、デバイスは電源オフまたは再起動します。
+1. ボタンを**3 秒間**押し続けると、LED が 1 秒周期で点滅します。1 分以内にアプリを使用してセンサーに接続してください。そうしないと、デバイスは電源オフまたは再起動します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/12.png"/></div>
 
@@ -126,7 +116,7 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/13.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/14.png"/></div>
 
-3. S/N（S/N はセンサー前面のラベルに記載）でセンサーを選択します。その後、センサーの基本情報が表示されます。
+3. S/N（S/N はセンサー前面のラベルに記載）でセンサーを選択します。その後、入室するとセンサーの基本情報が表示されます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/15.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/16.png"/></div>
@@ -137,11 +127,11 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 
 ### プラットフォームと周波数を選択する
 
-S210x センサーは、1 つの SKU で 863MHz〜928MHz のユニバーサル周波数プランをサポートするよう製造されています。つまり、各デバイスは 7 つの周波数プランをサポートできます。
+S210x センサーは、1 つの SKU で 863MHz〜928MHz のユニバーサル周波数プランをサポートするように製造されています。つまり、各デバイスは 7 つの周波数プランをサポートできます。
 
 ここでは「SenseCAP for Helium」または「SenseCAP for TTN」を選択します。周波数プランは実際の状況に基づいて選択してください。
 
-**\*注意:** データロガーは、ユーザーの周囲に Helium ネットワークがある場合にデータをアップロードできます。これは SenseCAP のプライベート Helium Console 上で動作します。ユーザーが Helium Console 上でデバイスを作成する必要はありません。
+**\*注意：** データロガーは、ユーザーの周囲に Helium ネットワークがある場合にデータをアップロードできます。これは SenseCAP プライベート Helium Console 上で動作します。ユーザーは Helium Console 上でデバイスを作成する必要はありません。
 
 SenseCAP for TTN プラットフォームは、SenseCAP LoRaWAN 屋外ゲートウェイ(https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)と一緒に使用する必要があります。
 
@@ -163,7 +153,7 @@ SenseCAP for TTN プラットフォームは、SenseCAP LoRaWAN 屋外ゲート�
 
 | **パラメータ** | **説明** |
 | --- | --- |
-| 2C+1N (default) | 2C+1N（2 つの確認パケットと 1 つの非確認）は最適な戦略であり、このモードはパケットロス率を最小限に抑えますが、TTN では最も多くのデータパケットを消費し、Helium ネットワークでは最も多くのデータクレジットを消費します。 |
+| 2C+1N (default) | 2C+1N（2 つの確認パケットと 1 つの非確認）は最適な戦略であり、このモードはパケットロス率を最小限に抑えることができますが、TTN では最も多くのデータパケットを消費し、Helium ネットワークでは最も多くのデータクレジットを消費します。 |
 | 1C | 1C（1 つの確認）の場合、デバイスはサーバーから 1 つの確認パケットを受信するとスリープに入ります。 |
 | 1N | 1N（1 つの非確認）の場合、デバイスはパケットを送信した後、サーバーがデータを受信したかどうかに関係なくスリープを開始します。 |
 
@@ -173,9 +163,9 @@ SenseCAP プラットフォームを選択する場合は、固定の EUI/App EU
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/20.png"/></div>
 
-誤った設定をしてしまった場合やすべてをリセットしたい場合は、このボタンをクリックします。デバイスは工場出荷時のデフォルト設定に復元されます。
+誤った設定をしてしまった場合や、すべてをリセットしたい場合は、このボタンをクリックします。デバイスは工場出荷時のデフォルト設定に復元されます。
 
-**\*注意:** 「Restore Factory」機能でリセットできるのは Basic Setting のみです。
+**\*注意：** 「Restore Factory」機能でリセットできるのは Basic Setting のみです。
 
 ## アプリでアナログセンサーを設定する
 
@@ -187,13 +177,13 @@ Power Type として **Periodical power** を選択します。
 
 | Power Voltage | ここでは **5V** を選択します。 |
 | --- | --- |
-| Sensor Warm-up Time | ウォームアップ時間とは、電源電圧が印加されてから、センサーが最高の精度または性能レベルに達するまでに必要な時間を示します。ここでは **200(ms)** を入力します。 |
-| Voltage Range | 0〜10V（データロガーは 0〜10V の電圧信号を収集でき、精度を高めるために上限を自動調整します）。ここでは **Voltage** を選択します。 |
-| Interface V1 | データロガーは 2 つのアナログ電圧信号をサポートします。センサーのワイヤーが V1/V2 に接続されている場合、設定を有効にできます。ここでは **Interface V1** を有効にします。 |
+| Sensor Warm-up Time | ウォームアップ時間とは、電源電圧が印加されてから、センサーが最高の精度または性能レベルに達するまでに必要な時間を示します。ここでは **200(ms)** と入力します。 |
+| Voltage Range | 0〜10V（データロガーは 0〜10V の電圧信号を取得でき、精度を高めるために上限を自動調整します）。ここでは **Voltage** を選択します。 |
+| Interface V1 | データロガーは 2 つのアナログ電圧信号をサポートします。センサー線が V1/V2 に接続されている場合、設定を有効にできます。ここでは **Interface V1** を有効にします。 |
 | Interface V2 |
-| Y= Ax + B | 「Y」：データロガーがアップロードする値。「x」：元の電流値。Factory A： 「x」を任意の倍数で拡大または縮小できるカスタム値。Factory B：「x」の値を増減させるカスタム値。A と B の値を設定することで、目的の値を算出できます。ここでは A を **100** 、B を **0** に設定します。 |
+| Y= Ax + B | 「Y」：データロガーがアップロードする値です。「x」：元の電流値です。Factory A： 「x」を倍数で拡大または縮小できるカスタム値です。Factory B：「x」の値を増減させるカスタム値です。A と B の値を設定することで、目的の値を算出できます。ここでは A を **100** 、B を **0** に設定します。 |
 
-設定情報が完了したら、「Back to Home」をクリックします（この時点でノードと APP の Bluetooth は自動的に切断されます）。その後、データロガーはネットワークへの接続を試みます（ネットワーク接続を試行している間は LED インジケーターが赤くゆっくり点滅し、ネットワーク接続に成功すると緑色に素早く点滅します）。
+設定情報が完了したら、「Back to Home」をクリックします（この時点でノードと APP の Bluetooth は自動的に切断されます）。その後、データロガーはネットワークへの接続を試みます（ネットワーク接続を試行している間は LED インジケーターが赤色でゆっくり点滅し、ネットワーク接続に成功すると緑色で高速点滅します）。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/22.png"/></div>
 
@@ -203,26 +193,26 @@ Power Type として **Periodical power** を選択します。
 
 SenseCAP Mate App を開いてください。
 
-1. **QR コードをスキャンする**
+1. **QR コードをスキャン**
 
-1. デバイスページ右上の "Add device" をクリックして、デバイスバインドページに入ります。
+1. デバイスページ右上の「Add device」をクリックして、デバイスバインドページに入ります。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/23.png"/></div>
 
-1. デバイス上の QR コードをスキャンして、デバイスをあなたのアカウントにバインドします。指定グループを設定しない場合、デバイスは "default" グループに入れられます。
+1. デバイス上の QR コードをスキャンして、デバイスをアカウントにバインドします。指定グループを設定しない場合、デバイスは「default」グループに入れられます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/24.png"/></div>
 
 1. **EUI を手動で入力する**
 
-QR コードのステッカーが破損している場合は、デバイスの EUI を手動で入力して、デバイスをあなたのアカウントにバインドすることができます。システムが推奨する形式で EUI を入力し、"confirm" をクリックしてください。
+QR コードのラベルが破損している場合は、デバイスの EUI を手動で入力して、デバイスをアカウントにバインドすることができます。システムで指定された形式で EUI を入力し、「confirm」をクリックしてください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/25.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/26.png"/></div>
 
 ## SenseCAP Mate APP でデータを確認する
 
-最後に、SenseCAP App またはウェブサイト [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/) で、デバイスのオンライン状態と最新データを確認できます。各センサーの一覧で、そのオンライン状態と最後にデータをアップロードした時刻を確認できます。
+最後に、SenseCAP アプリまたはウェブサイト [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/) で、デバイスのオンライン状態と最新データを確認できます。各センサーの一覧で、そのオンライン状態と最後にデータをアップロードした時刻を確認できます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/27.png"/></div>
 

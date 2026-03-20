@@ -1,11 +1,11 @@
 ---
-description: Productos Descontinuados
-title: Productos Descontinuados
+description: Productos descontinuados
+title: Productos descontinuados
 keywords:
-  - Discontinued Products
-  - Legacy Products
-  - Retired Products
-  - Obselete Products
+  - Productos descontinuados
+  - Productos heredados
+  - Productos retirados
+  - Productos obsoletos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5
@@ -20,19 +20,21 @@ url: https://wiki.seeedstudio.com/es/discontinuedproducts/
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 
-### En esta sección, mantenemos una wiki de guías y tutoriales sobre productos que ya no están siendo soportados por nosotros.
+
+### En esta sección, mantenemos una wiki de guías y tutoriales sobre productos que ya no cuentan con nuestro soporte.
+
 
 
 :::note
-La documentación ya no se mantiene activamente y puede estar desactualizada. Sin embargo, ¡aún puedes contribuir a estas páginas! Si enfrentas algún problema o inconveniente con tus productos, asegúrate de revisar nuestro <a href="https://discord.gg/eWkprNDMU7">canal de discord</a> y <a href="https://forum.seeedstudio.com/">foro</a> para obtener ayuda de la comunidad.
+La documentación ya no se mantiene de forma activa y puede estar desactualizada. ¡Sin embargo, aún puedes contribuir a estas páginas! Si te enfrentas a cualquier problema o incidencia con tus productos, no dudes en consultar nuestro <a href="https://discord.gg/eWkprNDMU7">canal de Discord</a> y el <a href="https://forum.seeedstudio.com/">foro</a> para obtener ayuda de la comunidad.
 :::
 
 
 Estos productos pueden incluir:
 * Productos que ya no se venden
-* Productos que aún están a la venta pero ya no reciben soporte
+* Productos que aún están a la venta pero que ya no cuentan con soporte
 
-#### Seeed valora y respalda todos los productos que hemos vendido, y por lo tanto continuaremos proporcionando documentación para nuestros productos descontinuados.
+#### Seeed valora y respalda todos los productos que hemos vendido y, por lo tanto, seguirá proporcionando documentación para nuestros productos descontinuados.
 
 Aquí hay una lista de todos nuestros productos retirados
 
@@ -54,12 +56,15 @@ Aquí hay una lista de todos nuestros productos retirados
 <br /> 
 * <a href="/es/Artik" font color={'8DC215'}>Artik</a>
 <br /> 
-* <a href="/es/Tiny_BLE" font color={'8DC215'}>Otros</a> 
+* <a href="/es/Tiny_BLE" font color={'8DC215'}>Others</a> 
 
 
-## Soporte Técnico y Discusión de Productos
 
-Si requieres ayuda adicional, estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades. ¡Comienza a interactuar con nosotros y nuestra encantadora comunidad de Seeders ahora!
+
+
+## Soporte técnico y debate sobre productos
+
+Si necesitas más ayuda, estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades. ¡Empieza a interactuar con nosotros y con nuestra encantadora comunidad de Seeders ahora!
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

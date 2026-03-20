@@ -60,22 +60,22 @@ Para mais detalhes, faça o download da lista abaixo.
 |Temp&Humi Sensor | Temp&Humi Sensor Pro | Termistor |
 |----------------------------|-------------------------------------|------------------------|
 |![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/1.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/2.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/3.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
 
 |Termopar | TH02| Infravermelho Digital|
 |----------------------------|-------------------------------------|------------------------|
 |![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/4.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/5.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/6.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/depot/Grove-High-Temperature-Sensor-p-1810.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-(High-Accuracy-%26-Mini)-p-1921.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-High-Temperature-Sensor-p-1810.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-(High-Accuracy-%26-Mini)-p-1921.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Digital-Infrared-Temperature-Sensor-p-2385.html)|
 
 |SHT31| Infravermelho| HDC1000 |
 |----------------------------|-------------------------------------|------------------------|
 |![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/7.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/8.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/9.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html)|[Adquira agora!](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html)|[Adquira agora!](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HDC1000-p-2535.html?cPath=25_125)|
+|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-SHT31-p-2655.html)|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Infrared-Temperature-Sensor-p-1058.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-TemperatureHumidity-Sensor-HDC1000-p-2535.html?cPath=25_125)|
 
 | BMP180 | BMP280 | BME280 |
 |----------------------------|-------------------------------------|------------------------|
 |![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/10.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/11.jpg)|![](https://files.seeedstudio.com/wiki/Tutorial_Temperature_Sensor/img/12.jpg)|
-|[Adquira agora!](https://www.seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html)|[Adquira agora!](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|[Adquira agora!](https://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
+|[GET ONE NOW!](https://www.seeedstudio.com/Grove-Barometer-Sensor-(BMP180)-p-1840.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-Barometer-Sensor-BMP280-p-2652.html)|[GET ONE NOW!](https://www.seeedstudio.com/depot/Grove-TempHumiBarometer-Sensor-BME280-p-2653.html)|
 
 ## Suporte Técnico e Discussão de Produtos
 

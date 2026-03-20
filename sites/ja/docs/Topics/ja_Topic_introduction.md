@@ -1,43 +1,43 @@
 ---
-description: こんにちは、Seeed Studioの技術トピックに関するナレッジベースをご訪問いただきありがとうございます。このリソースは、スマートハードウェアやコンピューティングデバイスの習得をサポートするために作成されています。
-title: 技術トピック
+description: Seeed Studio の Technology Topics ナレッジベースにお越しいただきありがとうございます。このリソースは、当社のスマートハードウェアおよびコンピューティングデバイスのラインアップを使いこなすためのサポートとして作成されています。
+title: テクノロジートピック
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
-  date: 05/15/2025
+  date: 05/29/2024
   author: Yaohao
-createdAt: '2025-05-27'
+createdAt: '2024-05-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/topicintroduction/
 ---
 
 
-こんにちは、Seeed Studioの技術トピックに関するナレッジベースをご訪問いただきありがとうございます。このリソースは、スマートハードウェアやコンピューティングデバイスの習得をサポートするために作成されています。
+Seeed Studio の Technology Topics ナレッジベースにお越しいただきありがとうございます。このリソースは、当社のスマートハードウェアおよびコンピューティングデバイスのラインアップを使いこなすためのサポートとして作成されています。
 
-- **[TinyML](/ja/tinyml_topic)** は、低消費電力のマイクロコントローラーでもローカルで機械学習を実行できるようにします。
-  - [**TinyML WorkShop**](/ja/tinyml_workshop_course_new)（無料コース）を開始し、組み込みMLの包括的な理解を提供します。必要なのは、強力なMCUボードであるXIAO ESP32S3 Sense([wikiページ](/ja/xiao_esp32s3_getting_started))だけです。
-  - 組み込みデバイスでより高速かつ正確な推論を実現するための組み込みAIツール - [**SenseCraft Model Assistant**](/ja/ModelAssistant_Introduce_Overview) を提供しています。
-- [**Home Assistant**](/ja/home_assistant_topic) は、ホームオートメーションにおいて高度なプライバシー、汎用性、持続可能性を実現するために設計されています。
-  - [**SenseCAP**](/ja/home_assistant_sensecap)、[**LoRaWAN**](/ja/ha_xiao_esp32)、[**SenseCraft**](/ja/sensecraft_homeassistant_userguide) など、Home Assistant向けの複数のすぐに使える統合を開発しました。
-- [**オープンソース**](/ja/open_source_topic) の動きは、ハードウェアとソフトウェアにおける草の根イノベーションを促進します。
-- [**Edge AI**](/ja/edge_ai_topic) はさらに進化し、データが生成される場所に近いエッジに知能を押し進め、リアルタイムの自動化された意思決定を可能にします。
+- **[TinyML](/ja/tinyml_topic)** は、低消費電力のマイクロコントローラであってもローカルで機械学習を実行できるようにします。 
+  - 当社は、強力な MCU ボードである XIAO ESP32-S3 Sense（[wiki page](/ja/xiao_esp32s3_getting_started)）を 1 枚用意するだけで、組み込み ML を包括的に理解できるようにするため、[**TinyML WorkShop**](/ja/tinyml_workshop_course_new)（無料コース）を開講しています。
+  - また、組み込みデバイス上でより高速かつ高精度な推論を実現するために、組み込み AI ツール [**SenseCraft Model Assistant**](/ja/ModelAssistant_Introduce_Overview) を誇りを持って提供しています。
+- [**Home Assistant**](/ja/home_assistant_topic) は、ホームオートメーションにおいて高度なプライバシー、多用途性、持続可能性を実現するよう設計されています。
+  - 当社は Home Assistant 向けに、[**SenseCAP**](/ja/home_assistant_sensecap)、[**LoRaWAN**](/ja/ha_xiao_esp32)、[**SenseCraft**](/ja/sensecraft_homeassistant_userguide) など、すぐに使える複数の統合機能を開発しています。
+- [**Open Source**](/ja/open_source_topic) ムーブメントは、ハードウェアとソフトウェアの両面で草の根のイノベーションを加速させています。
+- そして [**Edge AI**](/ja/edge_ai_topic) は、インテリジェンスをデータが生成される場所に近いエッジへと押し出すことで、リアルタイムな自動意思決定を可能にし、さらに一歩先へと進めます。
 
-これらの技術を総合的に活用することで、個人にコントロールを取り戻し、プライバシーと自律性を保ちながら、ローカルニーズに合わせた自動化およびインテリジェントシステムを実現します。
+これらの技術を総合すると、制御権を個人の手に取り戻し、プライバシーと自律性を守りながら、地域のニーズに合わせた自動化・知能化システムを実現できるようになります。
 
 
 
-## 以下のカテゴリをクリックして詳細をご覧ください！
+## 以下のカテゴリをクリックして、詳しく見てみましょう！ 
 
-<div style={{display: 'flex'}}>
+  <div style={{display: 'flex'}}>
 
   <a href="/ja/tinyml_topic" rel="noopener noreferrer">
-    <img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="画像1" />
+    <img src="https://files.seeedstudio.com/wiki/tinyml-topic/main.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
   </a>
 
   <a href="/ja/home_assistant_topic" rel="noopener noreferrer">
-    <img src="https://files.seeedstudio.com/wiki/HomeAsssitant_collection/HAbanner1.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="画像1" />
+    <img src="https://files.seeedstudio.com/wiki/HomeAsssitant_collection/HAbanner1.jpg" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
   </a>
 </div>
 
@@ -45,25 +45,25 @@ url: https://wiki.seeedstudio.com/ja/topicintroduction/
 <div style={{display: 'flex'}}>
 
   <a href="/ja/open_source_topic" rel="noopener noreferrer">
-    <img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="画像1" />
+    <img src="https://files.seeedstudio.com/wiki/open_source_topic/open_source_topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
   </a>
 
   <a href="/ja/edge_ai_topic" rel="noopener noreferrer">
-    <img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="画像1" />
+    <img src="https://files.seeedstudio.com/wiki/Edge_AI_Topic/Edge_AI_Topic.png" style={{width: '98%', marginRight: '2%', marginBottom: '1rem', pointerEvents: 'none' }} alt="Image 1" />
   </a>
 </div>
 
-## i18nへの貢献者募集！ ✨
+## i18n に向けたコントリビューター募集！ ✨
 
-私たちは、wikiプラットフォームの国際化のためのプラグイン（docusaurus）があることを理解していますが、顧客向けに個別の国際言語アップデートを提供したいと考えています。そのため、[Wiki翻訳チーム](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980459)を募集しています。より良い閲覧体験のためにご協力ください。
+wiki プラットフォームの国際化にはプラグイン（docusaurus）があることは理解していますが、当社はお客様に対して、よりパーソナライズされた多言語アップデートを提供したいと考えています。そのため、より良い閲覧体験のために [Wiki Translation Team](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980459) を募集しています。
 :::info
-- より高度なプラグインがあれば歓迎します！
+- もし、より高度なプラグインがあれば、ぜひ教えてください！
 :::
 
 
-## 技術サポート＆製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまな形態のサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+当社の製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまな形態のサポートを提供しています。お客様それぞれの好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

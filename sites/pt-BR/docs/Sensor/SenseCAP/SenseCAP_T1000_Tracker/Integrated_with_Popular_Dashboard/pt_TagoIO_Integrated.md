@@ -71,7 +71,7 @@ Um dashboard é onde você coloca seus widgets para visualizar e interagir com o
 
 Vá até a aba **Dashboard**, dê um nome ao seu dashboard e clique em **Create my Dashboard**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_dashfortagoio.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/create_dashfortagoio.png" alt="pir" width={800} height="auto" /></p]
 
 **Dashboard de Localização**
 

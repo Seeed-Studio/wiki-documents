@@ -1,6 +1,6 @@
 ---
 description: Seeed Studio Round Display for XIAO-Perguntas Frequentes
-title: Ao carregar um programa para o XIAO RP2040, ocorre um erro:unaligned opcodes detected in executable segment?
+title: Ao carregar um programa para o XIAO RP2040, ocorre um erro: unaligned opcodes detected in executable segment?
 slug: /uploading_while_an_error-rp2040
 last_update:
   date: 6/30/2023

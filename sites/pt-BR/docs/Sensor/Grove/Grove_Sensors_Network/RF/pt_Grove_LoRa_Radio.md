@@ -105,9 +105,9 @@ Agora estamos fazendo uma demonstração para comunicação P2P (ponto a ponto) 
 
 |Item|Qtd|Link|
 |----|---|----|
-|Seeeduino Lotus|2|[Adquira agora!](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)|
-|Grove - LoRa Radio 433MHz|2|[Adquira agora!](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
-|Cabo Micro USB|2|[Adquira agora!](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|Seeeduino Lotus|2|[GET ONE NOW!](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)|
+|Grove - LoRa Radio 433MHz|2|[GET ONE NOW!](https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html)|
+|Cabo Micro USB|2|[GET ONE NOW!](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 Se esta é a sua primeira vez usando o [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html), por favor consulte o [wiki do Seeeduino Lotus](https://wiki.seeedstudio.com/pt-br/Seeeduino_Lotus/).
 

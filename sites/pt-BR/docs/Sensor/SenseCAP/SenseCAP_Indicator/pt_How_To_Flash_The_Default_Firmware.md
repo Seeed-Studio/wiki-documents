@@ -505,7 +505,7 @@ Nós fornecemos um código de exemplo, você pode modificá-lo de acordo com sua
     <tr>
         <td>
             <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_37.png" style={{width:680, height:'auto'}}/></div>
-        </td>
+        </td]
     </tr>
     <tr>
         <td>

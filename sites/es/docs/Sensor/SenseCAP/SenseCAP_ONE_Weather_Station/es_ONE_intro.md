@@ -1,12 +1,12 @@
 ---
 description: Introducción al sensor meteorológico SenseCAP ONE
-title: Sensor meteorológico SenseCAP ONE 
+title: Sensor meteorológico SenseCAP ONE
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_ONE_weather_sensor
 last_update:
-  date: 02/28/2024
+  date: 02/28/204
   author: Jessie
 createdAt: '2024-02-28'
 updatedAt: '2026-03-03'
@@ -14,7 +14,7 @@ url: https://wiki.seeedstudio.com/es/SenseCAP_ONE_weather_sensor/
 ---
 
 
-Hoy en día, los datos sobre el clima localizado, conocidos como microclimas, son la nueva frontera para una predicción meteorológica más precisa y exacta. Como resultado, la recopilación de datos meteorológicos se está volviendo cada vez más detallada y en cuadrículas pequeñas. A la luz de esto, las estaciones meteorológicas, que son el medio más conveniente para recopilar datos del tiempo, están experimentando un aumento en la demanda. SenseCAP ofrece sensores meteorológicos todo en uno para ayudarte a recopilar y monitorizar datos ambientales en diversos escenarios.
+Hoy en día, los datos sobre el clima localizado, conocidos como microclimas, son la nueva frontera para una predicción meteorológica más precisa y exacta. Como resultado, la recopilación de datos meteorológicos se está volviendo cada vez más detallada y en cuadrículas pequeñas. A la luz de esto, las estaciones meteorológicas, que son el medio más conveniente para recopilar datos meteorológicos, están experimentando un aumento en la demanda. SenseCAP ofrece sensores meteorológicos todo en uno para ayudarte a recopilar y monitorear datos ambientales en diversos escenarios.
 
 
 
