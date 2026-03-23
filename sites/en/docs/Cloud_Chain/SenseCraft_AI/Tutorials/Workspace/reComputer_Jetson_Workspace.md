@@ -18,6 +18,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
+
 ## Getting Started
 
 Before adding a Jetson device to workspace, please first install the SenseCraft AI app to the jetson.

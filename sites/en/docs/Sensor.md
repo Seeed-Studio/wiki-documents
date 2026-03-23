@@ -13,6 +13,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/Sensor_Network/
 ---
 
+
 Sensing is the initial and perhaps the most crucial step in obtaining digitized data from the physical world. By utilizing sensors and information infrastructures within a dynamic sensing framework, we lay the groundwork for monitoring societal activities and comprehending our physical and natural environments. This sensing process enables us to gather and understand data from the world around us.
 
 On this page, there are two main categories of products

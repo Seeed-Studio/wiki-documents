@@ -14,6 +14,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/sensecraft-ai/overview/
 ---
 
+
 # SenseCraft AI Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.png" style={{width:1000, height:'auto'}}/></div>
