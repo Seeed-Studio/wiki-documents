@@ -1011,7 +1011,7 @@ sudo python3 ups_shutdown.py
 
 ## AI Accelerator
 
-The M.2 M-KEY 2280 slot on the reComputer Industrial R21xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R21xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
+The M.2 M-KEY 2240 slot on the reComputer Industrial R21xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R21xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
 If you purchased the R21xx-10 series product, you will need to purchase Hailo's NPU module to enable AI functionality.
 The device comes pre-installed with the Hailo accelerator driver, so you can use it directly and run the test case:
 
@@ -1089,9 +1089,9 @@ Add the following commands to `/etc/rc.local` before the `exit 0` line to ensure
 
 ```bash
 # Export and set PoE Enable Pin (Example: GPIO 532)
-if [ ! -d "/sys/class/gpio/gpio532" ]; then echo 532 > /sys/class/gpio/export; fi
-echo out > /sys/class/gpio/gpio532/direction
-echo 1 > /sys/class/gpio/gpio532/value
+echo 652 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio652/direction
+echo 1 > /sys/class/gpio/gpio652/value
 ```
 
 - Step 3: Multi-Interface IP Deployment
@@ -1141,6 +1141,76 @@ Use `lspci` and `lsusb` to verify that all controllers are recognized by the sys
 6. 4-Channel PoE Camera Support Status：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.26-1.png" style={{width:800, height:'auto'}}/></div>
+
+### reComputer R22 & reCamera
+
+This guide provides a step-by-step walkthrough for connecting a reCamera — an open-source, modular AI camera powered by the RISC-V platform and designed for rapid Edge AI deployment — to the reComputer R22 via PoE. It covers deploying an RTSP stream using Node-RED and previewing the live feed on the R22.
+
+1. Hardware Connection & Initialization
+
+  * **Compatible Models:** reCamera series (PoE version, e.g., LH-AR01).
+  * **Physical Connection:** Connect the reCamera to any PoE port (**eth1-eth4**) on the R22 using a standard Ethernet cable.
+  * **Enable PoE Power:**
+    Run the following commands in the R22 terminal to enable the 48V output:
+    ```bash
+    # Enable GPIO 652
+    echo 652 > /sys/class/gpio/export
+    echo out > /sys/class/gpio/652/direction
+    echo 1 > /sys/class/gpio/652/value
+    ```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/ip.png" style={{width:800, height:'auto'}}/></div>
+
+2. reCamera Configuration (One-Click Node-RED Import)
+
+Use the pre-configured `flows.json` to quickly deploy an authenticated RTSP stream.
+
+- **Access Dashboard:** Open your browser and go to `http://10.0.3.200:1880` (reCamera default IP).
+- **Import Configuration:**
+      * Click the menu icon `≡` in the top-right corner -\> **Import**.
+      * Upload the [**flows.json**](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/flows.json) file and click **Import**.
+- **Custom Authentication (Required):**
+      * Double-click the **`RTSP Output`** node in the flow.
+      * In the **Authentication** section, set your credentials:
+          * **Username:** `seeed`
+          * **Password:** `seeed`
+- **Deploy:** Click the red **Deploy** button in the top-right corner.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/config.png" style={{width:800, height:'auto'}}/></div>
+
+3. Previewing Video Stream on R22
+
+Since the R22 (CM4/CM5 based) supports hardware decoding, we recommend using VLC or FFplay for verification.
+
+4. Option A: Using VLC GUI (Recommended)
+
+- Type `vlc` in the R22 terminal to open the player.
+- Go to **Media** -\> **Open Network Stream**.
+- Enter the authenticated RTSP URL:
+    ```text
+    rtsp://seeed:seeed@10.0.3.200:554/live
+    ```
+- Click **Play**.
+
+5. Option B: Using Command Line (Quick Test)
+
+Copy and run the following command directly:
+
+```bash
+ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
+```
+
+-----
+
+6. Troubleshooting
+
+| Issue | Potential Cause | Solution |
+| :--- | :--- | :--- |
+| **Cannot Ping 10.0.3.200** | R22 internal IP conflict | Check if `eth3/eth4` both use `10.0.3.10`. Manually change one. |
+| **reCamera not booting** | PoE power not enabled | Ensure `GPIO 652` is set to `1` and input power is \> 12V/3A. |
+| **Video lag/latency** | Network or MTU issues | Ensure no heavy broadcast traffic between R22 and reCamera. |
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/recamera.png" style={{width:800, height:'auto'}}/></div>
+
+
 
 ## Tech Support & Product Discussion
 
