@@ -65,56 +65,7 @@ This guide introduces how to get started with OpenClaw on the reComputer R serie
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### [Getting Started with reTerminal D1001](https://wiki.seeedstudio.com/getting_started_with_reterminal_d1001/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-reTerminal D1001 is an intelligent large-screen interaction terminal powered by Espressif's latest high-performance **ESP32-P4** chip. Designed for AIoT application scenarios requiring high-performance graphics display, video processing, and voice interaction, it leverages the ESP32-P4's powerful 400MHz dual-core RISC-V processor and rich multimedia peripheral interfaces to easily handle complex edge computing and multimedia tasks.
-
-</div>
-
-### [Control SO-Arm by OpenClaw on Jetson Thor](https://wiki.seeedstudio.com/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/)
-
-<div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div style={{ textAlign: "justify" }}>
-
-**OpenClaw** is an AI agent framework that can orchestrate local tools and models. In this project, OpenClaw is used as the high-level control interface, while LeRobot provides the low-level motor communication and calibration utilities for SO-Arm.
-
-</div>
-
-### [Object Detection with YOLOv11 on reComputer-RK](https://wiki.seeedstudio.com/object_detection_with_yolov11_on_recomputer_rk/)
-
-<div class="video-container">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/5WdCvyrCF5Q" title="Object Detection with YOLOv11 on reComputer-RK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<div style={{ textAlign: "justify" }}>
-
-This project provides industrial-grade, high-performance Computer Vision (CV) application solutions for Rockchip series development boards (RK3588 and RK3576). It features deep integration of the YOLOv11 object detection model, leveraging NPU acceleration for low-latency, high-frame-rate real-time inference.
-
-</div>
-
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
 
@@ -122,7 +73,7 @@ We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudi
 
 ### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
 
-We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate.
+We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
 
 ## The Efforts of Contributor
 
