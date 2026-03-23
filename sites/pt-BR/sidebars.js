@@ -3838,6 +3838,7 @@ const sidebars = {
             },
             //flashing jetpack page
             'Edge/NVIDIA_Jetson/pt_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/pt_Jetson_Debug_Guide',
           ]
         },
         // Applications
