@@ -30,9 +30,10 @@ const SUCCESS_MESSAGE_TYPE = 'unified_lead_form_submit_success';
 const SUCCESS_MESSAGE_SOURCE = 'connect_lead';
 
 interface JetsonLeadQuoteProps {
-  buttonText: string;
-  /** 用于 iframe trigger 参数：WIKI::{triggerValue}，如当前页 slug 或路径 */
+  buttonText?: string;
   triggerValue?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 function isLeadFormSuccessEvent(data: unknown): data is { type: string; source: string } {
@@ -50,8 +51,14 @@ function getIframeBase(locale: string): string {
   return IFRAME_BASE_BY_LOCALE[locale] ?? IFRAME_BASE_DEFAULT;
 }
 
-export default function JetsonLeadQuote({ buttonText, triggerValue = '' }: JetsonLeadQuoteProps) {
+export default function JetsonLeadQuote({
+  buttonText = 'Request Quote',
+  triggerValue = '',
+  imageSrc,
+  imageAlt = 'Request Quote',
+}: JetsonLeadQuoteProps) {
   const { siteConfig } = useDocusaurusContext();
+
   const iframeBase = useMemo(
     () => getIframeBase(getLocaleFromBaseUrl(siteConfig.baseUrl ?? '')),
     [siteConfig.baseUrl]
@@ -61,41 +68,71 @@ export default function JetsonLeadQuote({ buttonText, triggerValue = '' }: Jetso
   const [successOpen, setSuccessOpen] = useState(false);
 
   const closeModal = useCallback(() => setModalOpen(false), []);
+  const openModal = useCallback(() => setModalOpen(true), []);
 
   const handleFormSuccess = useCallback(() => {
     closeModal();
     setSuccessOpen(true);
-    const timer = setTimeout(() => {
+
+    const timer = window.setTimeout(() => {
       setSuccessOpen(false);
-      clearTimeout(timer);
+      window.clearTimeout(timer);
     }, 5000);
   }, [closeModal]);
 
   useEffect(() => {
     if (!modalOpen) return;
+
     const handler = (event: MessageEvent) => {
       try {
         const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
-        if (isLeadFormSuccessEvent(data)) handleFormSuccess();
+        if (isLeadFormSuccessEvent(data)) {
+          handleFormSuccess();
+        }
       } catch {
         // ignore non-JSON or invalid payloads
       }
     };
+
     window.addEventListener('message', handler);
     return () => window.removeEventListener('message', handler);
   }, [modalOpen, handleFormSuccess]);
 
   const triggerParam = triggerValue ? `WIKI::${encodeURIComponent(triggerValue)}` : 'WIKI';
   const iframeSrc = `${iframeBase}?trigger=${triggerParam}`;
+
   return (
     <>
-      <button
-        type="button"
-        className={styles.trigger}
-        onClick={() => setModalOpen(true)}
-      >
-        {buttonText}
-      </button>
+      {imageSrc ? (
+        <button
+          type="button"
+          className={styles.bannerTrigger}
+          onClick={openModal}
+          aria-label={buttonText}
+          title={imageAlt || buttonText}
+        >
+          <span className={styles.bannerImageWrapper}>
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className={styles.bannerImage}
+              draggable={false}
+            />
+            <span className={styles.ctaOverlay}>
+              {buttonText} →
+            </span>
+          </span>
+        </button>
+      ) : (
+        <button
+          type="button"
+          className={styles.trigger}
+          onClick={openModal}
+          aria-label={buttonText}
+        >
+          {buttonText}
+        </button>
+      )}
 
       <Modal
         title={buttonText}
@@ -103,8 +140,9 @@ export default function JetsonLeadQuote({ buttonText, triggerValue = '' }: Jetso
         onCancel={closeModal}
         footer={null}
         centered
-        width={480}
+        width={760}
         destroyOnClose
+        bodyStyle={{ padding: 0 }}
       >
         <div className={styles.iframeWrap}>
           <iframe
