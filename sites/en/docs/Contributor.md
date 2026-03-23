@@ -130,4 +130,3 @@ If you have any questions or comments, please do not hesitate to hop on to our f
     </tr>
   </tbody>
 </table>
-
