@@ -1,136 +1,132 @@
 ---
-description: Seeedでは、Seeedersコミュニティを非常に大切にしています。Seeed Studio Contributor Programは、世界中の親愛なる友人たちと協力して革新的なソリューションを共に構築するために開始された共同プログラムです。
+description: Seeed では、Seeeder コミュニティをとても大切にしています。Seeed Studio Contributor Program は、世界中の大切な仲間たちとつながり、ともに革新的なソリューションを共創するために立ち上げられた協働プログラムです。
 title: Contributor Program
 keywords:
   - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/contributor/xuanchuan.jpg
 slug: /Contributor
 last_update:
-  date: 05/15/2025
+  date: 09/01/2024
   author: Matthew
-createdAt: '2025-05-27'
+createdAt: '2023-02-15'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/Contributor/
 ---
 
+# ✨ Contributor Program ✨
 
-# ✨ Contributor Program ✨ 
-
-Seeedでは、Seeedersコミュニティを非常に大切にしています。[Seeed Studio Contributor Program](/contributors)は、世界中の親愛なる友人たちと協力して革新的なソリューションを共に構築するために開始された共同プログラムです。
+Seeed では、Seeeder コミュニティをとても大切にしています。[Seeed Studio Contributor Program](/ja/contributors) は、世界中の大切な仲間たちとつながり、ともに革新的なソリューションを共創するために立ち上げられた協働プログラムです。
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/contributors.png" alt="pir" width={800} height="auto" /></p>
 
+## どのように貢献してチームの一員になれますか？
 
-## どのように貢献し、私たちのチームの一員になることができますか？
-
-オープンソースプラットフォームとして、私たちはWikiプラットフォームの改善を手助けしたいと考えるすべての個人からの貢献を歓迎します。
+オープンソースプラットフォームとして、私たちは wiki プラットフォームの改善に協力してくださるすべての方からの貢献を歓迎します。
 
 :::info
-1. GitHub上に**以下に示すような多くのタスク**があり、私たちのチームがWikiプラットフォームを強化するために必要としている内容が詳細に記載されています。
-2. タスクを完了した後、貢献者は「Pull Request」を通じてコンテンツを提出できます。
-3. 承認されると、私たちのメンテナーチームが提出物をマージし、貢献を記録し、感謝の印として報酬を提供します。
+
+1. GitHub 上には、私たちのチームが wiki プラットフォームを強化するために助けを必要としている**たくさんの課題（以下に表示）**があり、それぞれに必要な内容の詳細な説明が記載されています。
+2. 完了したら、コントリビューターは "Pull Request" を通じてコンテンツを提出できます。
+3. 承認されると、メンテナーのチームが投稿をマージし、貢献を記録して感謝の印として報酬を提供します。
+
 :::
 
-### [GitHub上のタスク](https://github.com/orgs/Seeed-Studio/projects/6)
+### [Assignments on GitHub](https://github.com/orgs/Seeed-Studio/projects/6)
 
-私たちは、タスクの難易度（Tier 0/1/2/3）、予想される完了時間（1/3/7/15日）、実際の提出時間、コンテンツの品質に基づいて、貢献者にさまざまな報酬を提供しています。
+私たちは、課題の難易度（Tier 0/1/2/3）、想定される完了時間（1/3/7/15 日）、実際の提出時間、およびコンテンツの品質に基づいて、さまざまな報酬を提供することでコントリビューターの皆さまに感謝の気持ちを表します。
 
 ![](http://files.seeedstudio.com/wiki/wiki-platform/contributor/github_assignment_2.png)
 
-### [オープンコール - 小さな一歩が大きな成果に！](https://wiki.seeedstudio.com/contributors/)
+### [Open Calls - Every Little Step Counts!](https://wiki.seeedstudio.com/ja/contributors/)
 
-また、継続的なタスクやトピックに関連するタスクも用意しています。例えば：
+また、継続的に実施しているトピックベースのタスクも用意しています。例えば：
 
-- 私たちの製品を使用して特定の分野でプロジェクトを作成する。
-- 特定の製品のために異なるスタイルのシェルを設計する。
-- エンジニアと一緒にチュートリアルを書く。
+- 特定の分野におけるプロジェクトを、私たちの製品を使ってアウトプットすること。
+- 特定の製品向けに、さまざまなスタイルの筐体をデザインすること。
+- 私たちのエンジニアと一緒にチュートリアルを書くこと。
 
 ![](http://files.seeedstudio.com/wiki/wiki-platform/contributor/open_call.png)
 
-### [アイデアを共有 - 実現 - 報酬を獲得](https://wiki.seeedstudio.com/contributors/)
+### [Share Your Ideas - Achieve it - Get Rewarded](https://wiki.seeedstudio.com/ja/contributors/)
 
-さらに多くのアイデアを歓迎します！トピック関連、シナリオ関連、あなたの希望など...
+さらに多くのアイデアも大歓迎です！トピックに関するもの、シナリオに関するもの、あなたの願いごとなど……
 
 ![](http://files.seeedstudio.com/wiki/wiki-platform/contributor/submit.png)
 
-1. 簡単なフォームに記入してアイデアを共有してください：名前（メールアドレス）、希望するプロジェクト、その説明。
+1. シンプルな表に記入してアイデアを共有してください：あなたの名前（メールアドレス）、やりたいプロジェクト、その内容の説明。
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/wish.png" alt="pir" width={400} height="auto" /></p>
 
 :::info
-アイデアはすぐに表示されます - ページをリフレッシュするだけで確認できます。
+それらはすぐに表示されます ― ページを再読み込みするだけで確認できます。
 :::
 
 2. メンテナーがそれらをレビューします：
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/submit_2.png" alt="pir" width={1000} height="auto" /></p>
 
-3. **承認されたもの**は、[GitHubリポジトリ](https://github.com/orgs/Seeed-Studio/projects/6/views/1)上でタスクとして公開されます：
+3. そして、**採用されたもの**を [GitHub repo](https://github.com/orgs/Seeed-Studio/projects/6/views/1) 上の課題として公開します：
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/submit_3.png" alt="pir" width={400} height="auto" /></p>
 
 :::info
-自分で取り組むことも、他の人に任せることもできます。どちらの場合でも報酬を受け取ることができます！
+自分で取り組んでも、他の人に任せても構いません。いずれの場合も、あなたには報酬が与えられます！
 :::
 
 ## 私たちが提供するものは？
 
-私たちは、貢献者の皆様に感謝の意を表すため、さまざまな報酬を提供しています。  
-推定される難易度 ***(Tier 0/1/2/3)*** や作業時間の見積もり ***(1/3/7/15日)***、さらに実際の作業時間や提出された内容に応じて、異なるレベルの報酬を提供します。
+私たちは、さまざまな報酬を提供することで、コントリビューターの皆さまに感謝の気持ちをお伝えしたいと考えています。
+想定される難易度 ***(Tier 0/1/2/3)*** と作業時間 ***(1/3/7/15 日)***、さらに実際にかかった時間と提出されたコンテンツに応じて、異なるレベルの報酬を提供します。
 
-1. Seeed製品や現金ボーナスを、感謝の印として貢献者に提供します。
-2. **「Ranger Program」** *(近日発表予定)* に参加する貢献者には、プロトタイプ製品へのアクセスを含む、さらに魅力的な報酬を提供します。
-3. さらに、すべての貢献者とその貢献内容は、感謝の印として私たちのWikiプラットフォームで認識され、紹介されます。
+1. 感謝の印として、コントリビューターの皆さまには Seeed 製品やキャッシュボーナスを提供します。
+2. **"Ranger Program"**（近日発表予定）に参加してくださるコントリビューターには、プロトタイプ製品へのアクセスなど、さらにエキサイティングな報酬を提供します。
+3. さらに、すべてのコントリビューターとその貢献は、感謝の印として wiki プラットフォーム上で紹介・掲載されます。
 
-## どのようなタスクが利用可能ですか？
+## どのようなタスク例がありますか？
 
-私たちはすでにいくつかのタスクをGitHubにリストアップしています。現在、タスクの種類には以下が含まれます：
+すでにいくつかのタスクを GitHub に掲載しています。現在のタスクの種類には、次のようなものがあります：
 
-1. Seeed Studio 製品のさまざまなアプリケーションやソフトウェア展開、MCUボードアプリケーションから産業用デバイスのソフトウェア展開まで。
+1. Seeed Studio 製品向けのさまざまなアプリケーションやソフトウェアデプロイメント（MCU ボードアプリケーションから産業グレードデバイスのソフトウェアデプロイメントまで）。
 
-2. ウェブページ構造とコンテンツの更新、簡単な文法修正からページ全体のコンテンツ更新や再構築まで。
+2. Web ページ構造とコンテンツの改善（簡単な文法修正から、ページ全体のコンテンツ更新やページ構成の再設計まで）。
 
-3. 「ソリューションベース」のプロトタイプ、展開可能なソリューション、または興味深いプロジェクトアイデアに関する追加の考え！  
-   (デジタルオートメーション、分散型デジタルトランスフォーメーション、野外で展開可能なインフラ、カーボンニュートラリティ、持続可能な開発目標(SDGs)、日常生活での問題解決、TinyMLなど)  
-   私たちは創造性と革新を重視しているため、自由にアイデアを共有してください！
+3. 「ソリューションベース」のプロトタイプ、実運用可能なソリューション、あるいはおもしろいプロジェクトアイデアに関するあらゆる考え！ （デジタルオートメーション、分散型デジタルトランスフォーメーション、野外に展開可能なインフラ、カーボンニュートラル、持続可能な開発目標（SDGs）、日常生活での課題解決、TinyML など。）私たちは創造性とイノベーションを重視していますので、ぜひ自由にアイデアを共有してください！
 
-## 技術サポートと製品に関するディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！  
-私たちは、製品体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただきありがとうございます！私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。利用者の好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
-## ソーシャルメディア
+## ソーシャル
 
-ご質問やコメントがある場合は、ぜひフォーラムに参加して直接ディスカッションしてください！  
-私たちはすべてのフィードバックや意見を大切にしており、ユーザーやコミュニティと共に成長し繁栄することを信じています。
+ご質問やコメントがありましたら、遠慮なくフォーラムに参加して私たちと直接ディスカッションし、ぜひご連絡ください！私たちはすべてのフィードバックやご意見を大切にしており、ユーザーやコミュニティの皆さまと共に成長し、発展していくことが重要だと信じています。
 
 <table align="center">
   <tbody>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/Twitter1.png" alt="pir" width={60} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Twitter</strong><br />最新の製品情報やキャンペーンをいち早く入手できます。<p><a href="https://twitter.com/seeedstudio" target="_blank">こちらをクリック</a></p></td>
+      <td align="left"><strong>Seeed on Twitter</strong><br />最新の製品アップデートやキャンペーン情報をいち早く入手するにはフォローしてください。<p><a href="https://twitter.com/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/hackster1.png" alt="pir" width={200} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Hackster</strong><br />Seeed製品を活用したプロジェクトを見つけたり共有できるコミュニティです。今すぐ探索を！<p><a href="https://www.hackster.io/seeed" target="_blank">こちらをクリック</a></p></td>
+      <td align="left"><strong>Seeed on Hackster</strong><br />Seeed 製品を活用したプロジェクトを見つけたり共有したりできるコミュニティです。今すぐチェックしましょう！<p><a href="https://www.hackster.io/seeed" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/YouTube.png" alt="pir" width={300} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on Youtube</strong><br />Seeedの最新情報を動画でお届けします。チャンネル登録してさらに詳しく学びましょう。<p><a href="http://www.youtube.com/c/SeeedStudioSZ" target="_blank">こちらをクリック</a></p></td>
+      <td align="left"><strong>Seeed on Youtube</strong><br />Seeed での最新の動きを動画でお届けします。チャンネル登録してさらに学びましょう。<p><a href="http://www.youtube.com/c/SeeedStudioSZ" target="_blank">Click here</a></p></td>
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/LinkedIn_Logo.png" alt="pir" width={300} height="auto" /></p></td>
-      <td align="left"><strong>Seeed on LinkedIn</strong><br />デジタルトランスフォーメーションが進行中です。IoT業界のニュース、洞察、ケーススタディなどを学ぶためにフォローしてください。<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">こちらをクリック</a></p></td>
+      <td align="left"><strong>Seeed on LinkedIn</strong><br />デジタルトランスフォーメーションはすでに進行中です。LinkedIn でフォローして、IoT 業界ニュース、インサイト、事例紹介などをチェックしましょう。<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">Click here</a></p></td>
     </tr>
   </tbody>
 </table>
