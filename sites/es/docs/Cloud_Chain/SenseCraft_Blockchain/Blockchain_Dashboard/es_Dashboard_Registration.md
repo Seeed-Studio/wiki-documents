@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-description: Registro del Dashboard
-title: Registro del Dashboard
+description: Registro en el panel
+title: Registro en el panel
 keywords:
   - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,35 +11,34 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-09-03'
-updatedAt: '2026-03-04'
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sensecraft-blockchain/blockchain-dashboard/dashboard-registration/
 ---
 
-# Registro del Dashboard
+# Registro en el panel
 
+El panel de SenseCAP M1 está diseñado para ayudarte a supervisar tu Hotspot y ofrecerte una visión general completa.
 
-El dashboard de SenseCAP M1 está diseñado para ayudarte a monitorear tu Hotspot y darte una visión general completa.
-
-**Registro del Dashboard**
+**Registro en el panel**
 ==========================
 
-1.  Visita [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  Haz clic en el botón "**Register**" a continuación.  
-    1.  Tendrás la opción de crear una cuenta O registrarte/iniciar sesión con tu cuenta de Discord.
-3.  Ingresa los detalles requeridos para comenzar a crear tu cuenta.
-4.  Después de completar tu "**Email Address**", necesitarás hacer clic en "**Get Captcha**".
-    1.  El sistema enviará un "**código de un solo uso**" al email registrado que proporcionaste para validar la propiedad de esa cuenta de email.
-    2.  Tendrás **60 segundos** para recuperar el código de tu bandeja de entrada.
-5.  Una vez que ingreses el "**código de un solo uso**" por favor haz clic en "**Register**" y te habrás registrado exitosamente para monitorear tu hotspot remotamente.
+1. Visita [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+2. Haz clic en el botón "**Register**" de abajo.  
+    1. Tendrás la opción de crear una cuenta O registrarte/iniciar sesión con tu cuenta de Discord.
+3. Introduce los datos requeridos para comenzar a crear tu cuenta.
+4. Después de rellenar tu "**Email Address**", tendrás que hacer clic en "**Get Captcha**".
+    1. El sistema enviará un “**one-time code**” al correo electrónico registrado que proporcionaste para validar la propiedad de esa cuenta de correo.
+    2. Tendrás **60 segundos** para recuperar el código de tu bandeja de entrada.
+5. Una vez que introduzcas el "**one-time code**", haz clic en "**Register**" y habrás quedado registrado correctamente para supervisar tu hotspot de forma remota.
 
-![Registro del Dashboard de SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
+![Registro en el panel de SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
 
-**Inicio de Sesión del Dashboard**
+**Inicio de sesión en el panel**
 ===================
 
-1.  Visita [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  Ingresa las credenciales que creaste durante el proceso de registro O inicia sesión con los detalles de tu cuenta de Discord (cualquiera que hayas seleccionado durante el proceso de registro)
-3.  Felicitaciones, has iniciado sesión exitosamente.
+1. Visita [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+2. Introduce las credenciales que creaste durante el proceso de registro O inicia sesión con los datos de tu cuenta de Discord (según lo que hayas seleccionado durante el proceso de registro)
+3. Enhorabuena, has iniciado sesión correctamente.
 
-![Inicio de Sesión del Dashboard de SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
+![Inicio de sesión en el panel de SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
