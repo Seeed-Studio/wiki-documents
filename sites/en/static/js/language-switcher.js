@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-20 09:46:42 (北京时间)
-// 多语言页面: 2220 个
+// 生成时间: 2026-03-23 15:11:46 (北京时间)
+// 多语言页面: 2223 个
 
 (function() {
   'use strict';
@@ -1353,6 +1353,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_debug_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/update_orin_nano_developer_kit_to_super_kit": [
     "cn",
     "en",
@@ -1872,6 +1879,13 @@
     "pt"
   ],
   "/Quantum-Mini-Linux-Development-Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_openclaw_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -14088,6 +14102,13 @@
     "pt"
   ],
   "/solutions/indoor-positioning-bluetooth-lorawan-tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Name_your_website": [
     "cn",
     "en",
     "es",
