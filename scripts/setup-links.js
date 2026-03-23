@@ -1,4 +1,3 @@
-// scripts/setup-links.js
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -6,23 +5,21 @@ const { execSync } = require('child_process');
 const sites = ['en', 'zh-CN', 'ja', 'es', 'pt-BR'];
 const links = ['src', 'static'];
 
-function rmForce(p) {
-  try {
-    fs.rmSync(p, { recursive: true, force: true });
-  } catch {}
-}
-
-function ensureDir(p) {
-  fs.mkdirSync(p, { recursive: true });
-}
-
 function isWindows() {
   return process.platform === 'win32';
 }
 
 function run(cmd) {
-  // console.log(`> ${cmd}`);
   execSync(cmd, { stdio: 'ignore' });
+}
+
+function isSymlink(p) {
+  if (!fs.existsSync(p)) return false;
+  try {
+    return fs.lstatSync(p).isSymbolicLink();
+  } catch {
+    return false;
+  }
 }
 
 function main() {
@@ -30,29 +27,35 @@ function main() {
 
   for (const site of sites) {
     for (const name of links) {
-      const target = path.join(root, name);                 // root/src or root/static
-      const linkPath = path.join(root, 'sites', site, name); // sites/en/src
+      const target = path.join(root, name);
+      const linkPath = path.join(root, 'sites', site, name);
 
-      // 清理旧的（可能是坏掉的 symlink 或者误创建的目录）
-      rmForce(linkPath);
-      ensureDir(path.dirname(linkPath));
+      // ⚠️ 只在它是“链接”时删除
+      if (isSymlink(linkPath)) {
+        if (isWindows()) {
+          run(`cmd /c rmdir "${linkPath}"`);
+        } else {
+          fs.unlinkSync(linkPath);
+        }
+        // console.log(`[removed old link] ${linkPath}`);
+      } else if (fs.existsSync(linkPath)) {
+        // 如果是正常目录，绝对不删
+        // console.log(`[skip] real folder exists: ${linkPath}`);
+        continue;
+      }
+
+      fs.mkdirSync(path.dirname(linkPath), { recursive: true });
 
       if (isWindows()) {
-        // mklink /J <link> <target>
-        // 注意：cmd 里路径要用反斜杠
-        const lp = linkPath.replace(/\//g, '\\');
-        const tp = target.replace(/\//g, '\\');
-        run(`cmd /c mklink /J "${lp}" "${tp}"`);
+        run(`cmd /c mklink /J "${linkPath}" "${target}"`);
       } else {
-        // ln -s <target> <link>
-        // 用相对路径更稳
         const rel = path.relative(path.dirname(linkPath), target);
         run(`ln -s "${rel}" "${linkPath}"`);
       }
+
+      // console.log(`[created link] ${linkPath}`);
     }
   }
-
-  // console.log('✅ Links created/updated.');
 }
 
 main();
