@@ -3591,6 +3591,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/es_getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: 'Herramientas',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/es_recomputer_use_uv_to_build_package',

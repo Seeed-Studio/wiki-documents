@@ -140,7 +140,7 @@ reComputer Industrial R22xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td> RS485 </td>
         <td colspan="2"> 2x RS485（隔离） </td>
-      </tr]
+      </tr>
       <tr>
         <td> RS232 </td>
         <td colspan="2"> 1x RS232（隔离） </td>

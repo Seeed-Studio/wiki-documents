@@ -158,7 +158,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       </tr>
       <tr>
         <td colspan="2"> 出力電圧: 60V DC 未満 </td>
-      </tr]
+      </tr>
       <tr>
         <td>SIM カード</td>
         <td colspan="2">1x Nano SIM カードスロット</td>
