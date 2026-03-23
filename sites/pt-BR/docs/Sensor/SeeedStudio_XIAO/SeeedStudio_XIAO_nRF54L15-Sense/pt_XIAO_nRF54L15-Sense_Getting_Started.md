@@ -189,7 +189,7 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
-  </tr]
+  </tr>
     <tr>
     <th>Lista de pinos do XIAO nRF54L15</th>
   </tr>

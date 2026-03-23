@@ -97,7 +97,7 @@ export const Highlight = ({children, color}) => (
         Amazon Sidewalk<br/>
         私有 2.4 GHz 协议<br/>
       </td>
-  </tr]
+  </tr>
   <tr>
       <th>存储</th>
       <td align="center">NVM 1.5 MB + RAM256 KB</td>
