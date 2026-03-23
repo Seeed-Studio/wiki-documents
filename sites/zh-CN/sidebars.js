@@ -3592,6 +3592,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/cn_getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: '工具',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/cn_recomputer_use_uv_to_build_package',
@@ -3839,6 +3852,7 @@ const sidebars = {
             },
             //flashing jetpack page
             'Edge/NVIDIA_Jetson/cn_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/cn_Jetson_Debug_Guide',
           ]
         },
         // Applications
