@@ -49,18 +49,18 @@ Lastly, the home page showcases the "Sharing Vision AI Models" feature, which en
 
 [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
 
-[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
+[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by Seeed Studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
 
 ### Sign up
 
-1. Enter your name and valid email,and then click **get capcha**
+1. Enter your name and valid email,and then click **get captcha**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/1.png" style={{width:1000, height:'auto'}}/></div>
 
 2. Get the verification code from your email and enter it on sign up page
 
 :::note
-verification code is valid for 10min, please complete the registration within 10 minutes
+Verification code is valid for 10min, please complete the registration within 10 minutes
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/2.png" style={{width:700, height:'auto'}}/></div>
@@ -85,7 +85,7 @@ The validity period of the verification code is 10min, please complete the reset
 
 ### Change password
 
-1. Visist user account page and click "Change your password" button.
+1. Visit user account page and click "Change your password" button.
 
 2. Enter the old password and new password to change password.
 
@@ -223,7 +223,7 @@ Users have all the permissions to operate their own models.
 
 ## Vision Workspace
 
-The Vision Workspace section of SenseCraft AI is dedicated to device-specific operations and deployment of trained models. It provides a seamless interface for users to integrate their custom models with various hardware devices and preview the results in real-time. Currently, the supported devices include Grove Vision AI V2, XIAO ESP32S3 Sense, NVIDIA Jetson, and reCamera.
+The Vision Workspace section of SenseCraft AI is dedicated to device-specific operations and deployment of trained models. It provides a seamless interface for users to integrate their custom models with various hardware devices and preview the results in real-time. Currently, the supported devices include Grove Vision AI V2, XIAO ESP32-S3 Sense, NVIDIA Jetson, and reCamera.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/9.png" style={{width:400, height:'auto'}}/></div>
 
@@ -249,7 +249,7 @@ This fine-tuning capability empowers users to adapt the model to their specific 
 
 The Vision Workspace goes beyond model deployment and preview by providing users with the tools to quickly prototype and develop applications using the trained models. The "Output" section offers a range of options for users to interact with the model's results and integrate them into their desired applications.
 
-Taking the XIAO ESP32S3 Sense as an example, the Vision Workspace supports various communication protocols and interfaces, such as MQTT, GPIO, and Serial Port. These options enable users to seamlessly transmit the model's output to other systems, trigger actions based on object detection, or perform further processing on the detected results.
+Taking the XIAO ESP32-S3 Sense as an example, the Vision Workspace supports various communication protocols and interfaces, such as MQTT, GPIO, and Serial Port. These options enable users to seamlessly transmit the model's output to other systems, trigger actions based on object detection, or perform further processing on the detected results.
 
 By offering these output options, SenseCraft AI simplifies the process of integrating the trained models into practical applications. Users can quickly experiment with different communication methods and develop prototypes that leverage the object detection capabilities of their models.
 

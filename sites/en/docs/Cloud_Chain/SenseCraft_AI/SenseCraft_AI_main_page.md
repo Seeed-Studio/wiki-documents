@@ -41,11 +41,11 @@ The Overview section provides a high-level introduction to SenseCraft AI, explai
 
 The Pretrained Models section contains information about the readily available models that can be deployed on various devices supported by SenseCraft AI. These models are optimized for specific hardware and can be used for different applications without the need for custom training. The section is further divided into subsections based on the supported devices:
 
-- **for XIAO ESP32S3 Sense**: This subsection lists the pretrained models compatible with the XIAO ESP32S3 Sense board, along with their descriptions and use cases.
+- **for XIAO ESP32-S3 Sense**: This subsection lists the pretrained models compatible with the XIAO ESP32-S3 Sense board, along with their descriptions and use cases.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_pretrained_models_for_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>for XIAO ESP32S3 Sense</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>for XIAO ESP32-S3 Sense</font></span></strong>
     </a>
 </div><br />
 
@@ -119,7 +119,7 @@ The Models Output section focuses on how to configure and utilize the output of 
     </a>
 </div><br />
 
-- XIAO ESP32S3 Sense Model Output: Here, you can find information on how to work with model outputs on the XIAO ESP32S3 Sense board. The subsection is further divided into:
+- XIAO ESP32-S3 Sense Model Output: Here, you can find information on how to work with model outputs on the XIAO ESP32-S3 Sense board. The subsection is further divided into:
 
   - **via GPIO**: This part provides guides on how to map model outputs to the GPIO pins of the XIAO ESP32-S3 Sense, enabling control of external hardware based on the model's predictions.
 
@@ -128,7 +128,7 @@ The Models Output section focuses on how to configure and utilize the output of 
             <strong><span><font color={'FFFFFF'} size={"4"}>via GPIO</font></span></strong>
     </a></div><br />
 
-  - **via MQTT**: Here, you can learn how to send model outputs from the XIAO ESP32S3 Sense to other devices or systems using the MQTT protocol, facilitating seamless integration and communication.
+  - **via MQTT**: Here, you can learn how to send model outputs from the XIAO ESP32-S3 Sense to other devices or systems using the MQTT protocol, facilitating seamless integration and communication.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
