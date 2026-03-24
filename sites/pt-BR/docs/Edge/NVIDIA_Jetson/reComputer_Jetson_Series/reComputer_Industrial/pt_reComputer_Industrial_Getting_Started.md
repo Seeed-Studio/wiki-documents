@@ -40,7 +40,7 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
 - **Certificações:** FCC, CE, RoHS, UKCA
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
