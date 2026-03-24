@@ -1,6 +1,6 @@
 ---
-description: Sistema de Asistente de Voz para Home Assistant
-title: Sistema de Asistente de Voz para Home Assistant
+description: Sistema de asistente de voz para Home Assistant
+title: Sistema de asistente de voz para Home Assistant
 keywords:
   - ESP32S3
   - XIAO
@@ -17,7 +17,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/respeaker_lite_ha/
 ---
 
-En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo flashear el firmware requerido y cómo compilar y subir el archivo YAML. Después de eso, podrás controlar y automatizar tus electrodomésticos usando tu voz. Solo di "Okay Nabu" y comienza a hablar con tu hogar.
+En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo grabar el firmware necesario y cómo compilar y cargar el archivo YAML. Después de eso, podrás controlar y automatizar los electrodomésticos de tu hogar usando tu voz. Solo di “Okay Nabu” y empieza a hablar con tu casa.
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -30,17 +30,17 @@ En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcio
   </iframe>
 </div>
 
-## Hardware Requerido
+## Hardware necesario
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110991984-acrylic-speaker-diy-kit-for-respeaker-lite-feature.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>
 
-## Actualización del Firmware XMOS
+## Actualización del firmware XMOS
 
 Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware XMOS a `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`.
 
@@ -48,11 +48,11 @@ Descarga el firmware como repositorio completo desde [aquí](https://github.com/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-En tu computadora, conecta el ReSpeaker Lite en la interfaz USB (cerca del conector de 3.5mm) y ejecuta el siguiente comando:
+En tu ordenador, conecta el ReSpeaker Lite a la interfaz USB (cerca del conector de 3,5 mm) y ejecuta el siguiente comando:
 
 
 
-si estás usando una máquina host Linux
+si estás usando una máquina host Linux 
 
 ```bash
 sudo apt install dfu-util -y
@@ -66,10 +66,10 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
 
-para más información, consulta este [enlace](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#update-firmware)
+para más información, consulta este [enlace](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#actualizar-firmware)
 
 :::note
-Para usar el botón de usuario y el botón de silencio, necesitas soldar el botón de usuario a D2 y el botón de silencio a D3.
+Para poder usar el botón de usuario y el botón de silencio, debes soldar el botón de usuario a D2 y el botón de silencio a D3.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={800} height="auto" /></p>
@@ -77,35 +77,35 @@ Para usar el botón de usuario y el botón de silencio, necesitas soldar el bot�
 ## Introducción
 
 :::note
-Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3. en raspberry pi 5.
+Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3 en una Raspberry Pi 5.
 :::
 
-## Instalar ESPHome Builder
+## Instalar ESPHome Builder 
 
-**Settings → Add-ons → Haz clic en Add-on Store → Instala ESPHome Device Builder** add-on.
+**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** add-on.
 
 Ve a **Home Assistant > Settings > Add-ons**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en **Add-on Store** (generalmente en la parte inferior derecha)
+Haz clic en **Add-on Store** (normalmente en la parte inferior derecha)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-Bajo **Official add-ons**, busca e instala **ESPHome Device Builder**.
+En **Official add-ons**, busca e instala **ESPHome Device Builder**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
-Después de la instalación, haz clic en **Start** para ejecutar el add-on ESPHome.
+Después de la instalación, haz clic en **Start** para ejecutar el complemento ESPHome.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-Habilita **Start on Boot, Watchdog, and Show in Sidebar** para un acceso más fácil.
+Activa **Start on Boot, Watchdog y Show in Sidebar** para un acceso más sencillo.
 
 
 Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
-## Agregar Dispositivo reSpeaker
+## Añadir dispositivo reSpeaker
 
 Haz clic en **+ NEW DEVICE**.
 
@@ -122,17 +122,20 @@ Selecciona `ESP32-S3`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-Cuando se te solicite, haz clic en **SKIP** – crearemos la configuración manualmente.
+Cuando se te solicite, haz clic en **SKIP**; crearemos la configuración manualmente.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-**Cómo Agregar un dispositivo en ilustración GIF**
+**Cómo añadir un dispositivo en ilustración GIF**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
 
-Selecciona tu nueva entrada de dispositivo y haz clic en **EDIT**.
+Selecciona la nueva entrada de tu dispositivo y haz clic en **EDIT**.
 
+:::note
+El archivo YAML actualizado se puede encontrar allí. En algunos casos, la versión más reciente de ESPHome puede causar problemas de compatibilidad. Consulta el [repositorio](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml) original.
+:::
 
 <details>
 <summary>Archivo Yaml</summary>
@@ -1428,7 +1431,7 @@ voice_assistant:
     - script.execute:
         id: send_stt_text_event
         stt_text: !lambda 'return x;'
-    
+
   # When the voice assistant ends ...
   on_end:
     - wait_until:
@@ -1496,25 +1499,25 @@ debug:
 
 </details>
 
-Una vez que tu YAML esté guardado, haz clic en **INSTALL**.
+Una vez que tu archivo YAML esté guardado, haz clic en **INSTALL**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
-Elige **Download** Manual
+Elige **Download** manual
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Compilando archivo YAML: Ilustración GIF**
+**Compilación del archivo YAML: ilustración GIF**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/compile_yml.gif" alt="pir" width={800} height="auto" /></p>
 
 Espera a que el firmware se compile.
 
-Descarga el archivo de firmware .bin generado a tu computadora desde Factory Format.
+Descarga el archivo de firmware .bin generado a tu ordenador desde Factory Format.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-**Descargando archivo Bin compilado: Ilustración GIF**
+**Descarga del archivo Bin compilado: ilustración GIF**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
@@ -1532,63 +1535,63 @@ Selecciona el archivo .bin que acabas de descargar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/bin_file_choose.png" alt="pir" width={600} height="auto" /></p>
 
-Espera a que la instalación se complete (puede tomar unos minutos).
+Espera a que la instalación se complete (puede tardar unos minutos).
 
-Después del éxito, verás un mensaje de confirmación.
+Después de completarse correctamente, verás un mensaje de confirmación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/burn_flash_bin.gif" alt="pir" width={700} height="auto" /></p>
 
-Regresa a **Home Assistant > Settings > Devices & Services**.
+Vuelve a **Home Assistant > Settings > Devices & Services**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
 
-Deberías ver **ESPHome** listado como una integración descubierta.
+Deberías ver **ESPHome** listado como una integración detectada.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
 
-Haz clic en **CONFIGURE**, luego en **Submit** para finalizar la configuración.
+Haz clic en **CONFIGURE** y luego en **Submit** para finalizar la configuración.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp.png" alt="pir" width={700} height="auto" /></p>
 
-## Configuración del Asistente de Voz
+## Configuración del asistente de voz
 
-Ahora serás dirigido a la página de configuración del Asistente de Voz.
-Puedes decir "Okay Nabu", y responderá con un sonido de confirmación (sonido whoop).
+Ahora serás dirigido a la página de configuración del asistente de voz.
+Puedes decir “Okay Nabu”, y responderá con un sonido de confirmación (sonido whoop).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/okay_nabu.png" alt="pir" width={700} height="auto" /></p>
 
-A continuación, serás guiado para configurar tu pipeline de voz. En esta demostración, vamos a usar Nabu Cloud.
+A continuación, se te guiará para configurar tu canal de voz. En esta demostración, vamos a usar Nabu Cloud.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_1.png" alt="pir" width={700} height="auto" /></p>
 
-La configuración es simple, y puedes aprovechar la prueba gratuita de un mes para explorar todas sus capacidades.
+La configuración es sencilla y puedes aprovechar el mes de prueba gratuito para explorar todas sus capacidades.
 
-Puedes iniciar sesión con Nabu Cloud y configurar el Asistente de Voz porque es relativamente fácil de configurar y proporciona un rendimiento rápido.
+Puedes iniciar sesión con Nabu Cloud y configurar el asistente de voz porque es relativamente fácil de configurar y ofrece un rendimiento rápido.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
-## FAQ
+## Preguntas frecuentes (FAQ)
 
 ### ¿Cómo ver los registros de reSpeaker?
 
-Para ver archivos de registro y procedimientos de depuración—como verificar la detección de palabras de activación y la funcionalidad STT—puedes usar la aplicación web ESP mencionada anteriormente.
+Para ver archivos de registro y procedimientos de depuración —como verificar la detección de la palabra de activación y la funcionalidad STT— puedes usar la aplicación web de ESP mencionada anteriormente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
 
-## Agradecimientos Especiales
+## Agradecimientos especiales
 Nos gustaría agradecer a FormatBCE por crear este increíble archivo YAML para el Seeed Studio reSpeaker Lite. Apóyalo en su [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)
 
 
 
-## Compartir Proyecto
-- De **Smart Home Circle** : [Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
+## Compartir proyectos
+- De **Smart Home Circle** : [Crear asistente de voz local](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
