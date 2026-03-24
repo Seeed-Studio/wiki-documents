@@ -92,7 +92,7 @@ recorder.delete()
 
 Navigate to the Picovoice Console and open the custom wake word page. Select your preferred language and define a wake word, for example “hi flex.” You can test the wake word in the console to verify its detection performance.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic2.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic2.png" alt="pir" width={400} height="auto" /></p>
 
 Once satisfied, click Train to generate the model. Then select your target platform—here we choose Raspberry Pi. Finally, download the generated .ppn file, which will be used in your application for custom wake word detection.
 
@@ -157,24 +157,24 @@ A user can express the same intent in multiple ways, and each variation is calle
 
 Use slots to capture variable parts within user utterances. In this case, words like **“wave”** and **“shake”** represent a changing state within the command, so they can be modeled as a variable. Create a slot named **“commands”** in the Rhino context to capture these variations dynamically.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic7.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic7.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic8.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic8.png" alt="pir" width={800} height="auto" /></p>
 
 Modify the existing expressions to include the newly-created slot. When adding a slot, use the `$` symbol to indicate a slot, then select the desired slot type from the autocomplete dropdown and assign it a name.
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic9.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic9.png" alt="pir" width={800} height="auto" /></p>
 
 If you ready to go test first by click the test 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic10.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic10.png" alt="pir" width={800} height="auto" /></p>
 
 ### Lets download the model
 
 Once the context design is complete, click the download icon in the top right, select the target platform, and click **“Download.”** The Picovoice Console will automatically train the Rhino model for that platform, which typically takes about 5–10 seconds.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic11.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic11.png" alt="pir" width={800} height="auto" /></p>
 
 ### Sample Code
 
