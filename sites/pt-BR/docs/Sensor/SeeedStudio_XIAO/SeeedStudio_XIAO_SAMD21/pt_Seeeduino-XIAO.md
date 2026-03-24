@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/Seeeduino-XIAO/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros passos com o Seeed Studio XIAO SAMD21
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
@@ -50,6 +52,13 @@ Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que se conce
 - Operação fácil de projeto: Compatível com protoboard.
 - Tamanho pequeno: Tão pequeno quanto um polegar (21x17.8mm) para dispositivos vestíveis e projetos pequenos.
 - Múltiplas interfaces de desenvolvimento: 11 pinos digitais/analógicos, 10 pinos PWM, 1 saída DAC, 1 interface de pad SWD, 1 interface I2C, 1 interface UART, 1 interface SPI.
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## **Especificações**
 
