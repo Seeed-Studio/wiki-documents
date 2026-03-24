@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::tip
 Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。動画ガイドは L1 Pro 向けですが、L1 シリーズの他のすべての製品にも適用できます。
 :::
@@ -459,6 +461,17 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 ### 対応アンテナ
 
 L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## リソース
 - [ブートローダ](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)

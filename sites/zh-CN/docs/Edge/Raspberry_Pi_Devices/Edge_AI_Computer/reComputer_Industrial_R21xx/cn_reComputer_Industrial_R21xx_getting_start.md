@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_getting_start/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -1144,6 +1146,17 @@ UPS 提供的备用时间很大程度上取决于系统负载。以下是使用�
 ## 其他资源
 
 - [reComputer Industrial R21xx 宣传册](https://files.seeedstudio.com/wiki/raspberry-pi/Seeed_Raspberry_Pi_Flyer.pdf)
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

@@ -14,6 +14,8 @@ createdAt: '2024-07-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/
 ---
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::danger note
 Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
@@ -552,6 +554,13 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte técnico e discussão de produtos
 

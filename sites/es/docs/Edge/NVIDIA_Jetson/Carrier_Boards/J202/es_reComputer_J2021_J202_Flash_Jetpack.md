@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/reComputer_J2021_J202_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeros pasos con reComputer J202
 
 <div align="center">
@@ -620,6 +622,13 @@ Si se necesita más espacio de almacenamiento, podemos usar una tarjeta SD para 
 [Comparación de series Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 
 [Resumen de dispositivos Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte técnico y debate sobre el producto
 

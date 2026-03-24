@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -171,6 +172,13 @@ export const Highlight = ({children, color}) => (
 - **Segurança robusta**: recursos avançados de segurança, incluindo isolamento TrustZone®, detecção de violação (tamper) e proteção contra vazamento de canal no lado do mecanismo de criptografia.
 - **Ricos recursos on-chip**: configurações de memória escaláveis de até 1,5 MB de NVM e 256 KB de RAM fornecem amplo espaço de armazenamento.
 - **Interfaces ricas**: conjunto abrangente de periféricos, incluindo o novo Global RTC (disponível no modo System OFF), ADC de 14 bits e interfaces seriais de alta velocidade. Gerenciamento de bateria de lítio integrado.
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Visão geral de hardware
 

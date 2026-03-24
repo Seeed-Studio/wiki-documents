@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros Passos com o reComputer Mini
 
 <!-- change image -->
@@ -42,6 +44,13 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
 - **Acelere soluções para o mercado:** JetPack 6.0 **pré-instalado** em SSD NVMe de 128GB, BSP de sistema operacional Linux, suportando software Jetson e principais frameworks de IA.
 - **Escalonável para implantação:** suporta OTA, serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
 - **Personalização flexível:** inclui alteração de módulos de acessórios, logotipo e modificação de interfaces de hardware com base no design original do reComputer Mini J4012.
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 

@@ -19,6 +19,8 @@ updatedAt: '2026-03-05'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_robotics_j401_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Robotics J401 キャリアボード ハードウェアと入門
 
 reComputer Robotics J401 は、高度なロボット向けに設計されたコンパクトで高性能なエッジAIキャリアボードです。NVIDIA Jetson Orin Nano/Orin NX モジュールの Super/MAXN モードに対応し、最大 157 TOPS のAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、6つのUSB 3.2ポート、CAN、GMSL2（オプション拡張経由）、I2C、UART などの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボット用ブレインとして機能します。JetPack 6 と Linux BSP をプリインストールしており、シームレスなデプロイを実現します。​
@@ -1186,6 +1188,17 @@ reComputer Jetson Robotics J401 には、高解像度ディスプレイ出力用
 - [Nvidia Jetson 比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Nvidia Jetson 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson ワンページ資料](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポートと製品ディスカッション
 
