@@ -18,6 +18,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Seeed Studio XIAO ESP32C6 入门指南
 
 <div class="table-center">
@@ -559,6 +561,13 @@ void loop(){
 
 **结构设计**
 - **📄[3D Model]** [XIAO ESP32-C6 三维模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 课程资源
 
