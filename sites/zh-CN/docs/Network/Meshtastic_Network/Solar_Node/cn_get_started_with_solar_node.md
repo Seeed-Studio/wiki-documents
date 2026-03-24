@@ -1,5 +1,5 @@
 ---
-description: 开始使用 SenseCAP Solar Node（适用于 Meshtastic 与 LoRa）
+description: 开始使用 SenseCAP Solar Node 进行 Meshtastic 与 LoRa
 title: 开始使用 SenseCAP Solar Node
 keywords:
   - Meshtastic
@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 在烧录固件之前，请先烧录擦除固件！
 :::
 
-访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。选择目标设备为 `Seeed SenseCAP Solar Node`。
+访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。将目标设备选择为 `Seeed SenseCAP Solar Node`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
@@ -46,7 +46,7 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，此时会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，然后应会显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
+点击 `Enter DFU Mode`，会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，然后应该会显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -54,17 +54,17 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 #### 烧录应用固件
 
-选择你需要的固件版本，点击 `flash`。
+选择你想要的固件版本，点击 `flash`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器中。文件复制完成并设备重启后，固件就会被烧录。
+下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器。文件复制完成并设备重启后，固件就会被烧录。
 
 ### 安装电池和 GPS 模块（可选）
 
 :::tip
 当你需要安装或更换电池时，请使用 `Button-top` 18650（3.6V）电池。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用户需要手动安装电池和 GPS 模块。
+P1-Pro 版本内置电池和 GPS 模块，而 P1 版本如有需要，用户需要手动安装电池和 GPS 模块。
 :::
 
 
@@ -89,7 +89,7 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 ### 启动设备
 
-设备首次使用需要通过连接 USB 线来激活。如果蓝色 Mesh 指示灯闪烁，表示设备已成功开机。如下方视频所示：
+设备首次使用需要通过连接 USB 线来激活。如果蓝色 Mesh 指示灯闪烁，则表示设备已成功开机。如下方视频所示：
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -165,7 +165,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -210,16 +210,16 @@ import TabItem from '@theme/TabItem';
 
 |按键操作|说明|
 |--|--|
-|按住 PWR 3 秒|开机|
+|长按 PWR 3 秒|开机|
 |快速按 PWR 两次|更新节点/位置信息|
 |快速按 PWR 三次|打开/关闭 GPS|
-|按住 PWR 5 秒|关机|
+|长按 PWR 5 秒|关机|
 |快速按 RST 两次|手动进入 DFU 模式|
 
 ## 安装
 
 :::danger note
-由于设备将长时间在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且外壳安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
+由于设备将长时间在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝都已牢固拧紧且外壳安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -325,9 +325,9 @@ import TabItem from '@theme/TabItem';
 
 ### 升级天线（可选）
 
-- 你可以通过观看此视频，将天线更换为玻璃钢天线。
+- 你可以通过观看此视频，将天线更换为玻璃纤维天线。
 
-如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
+如果你需要增益更高的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -349,24 +349,41 @@ import TabItem from '@theme/TabItem';
 
 #### 描述
 
-设备无响应，没有 LED 指示灯，无法与 App 配对。
+设备无响应、无 LED 指示灯，无法与 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 Bootloader。**
+**1）设备仍然可以进入 DFU 模式，则尝试烧录引导程序（Bootloader）。**
 
-#### 烧录 Bootloader
+#### 烧录引导程序（Bootloader）
 
 - [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-当你烧录 Bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录引导程序时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
+
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
+
+对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，即可打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
 
 **前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
+
+
+在命令行中检查 python 和 pip 是否安装成功。
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
 
 <Tabs>
 <TabItem value="pypi" label="通过 PyPI 安装">
@@ -377,11 +394,27 @@ import TabItem from '@theme/TabItem';
 pip3 install --user adafruit-nrfutil
 ```
 
+
+检查安装路径：
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+这是安装位置：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
 </TabItem>
 
 <TabItem value="sou" label="通过源码安装">
 
-如果你在通过 PyPi 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
+如果你在使用 PyPi 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -390,14 +423,14 @@ cd Adafruit_nRF52_nrfutil
 
 注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
-要在你的主目录用户空间中安装：
+要在你的用户空间（主目录）中安装：
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下请使用 `--user` 参数：
+如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下，请使用 `--user` 参数：
 
 ```
 pip3 install -r --user requirements.txt
@@ -422,7 +455,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 你将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe（如果你在 Windows 上，则带有 `.exe`）。
-为了方便使用，请将其复制或移动到其他位置，例如你的 %PATH% 中的某个目录。
+为了方便使用，请将其复制或移动到其他位置，例如在你的 %PATH% 中的某个目录。
 
 </TabItem>
 </Tabs>
@@ -431,18 +464,27 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 将设备连接到电脑，并检查端口号。
 
-示例：
+以 Windows 用户为例：
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+以 Mac 用户为例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 3：烧录 Bootloader**
+**步骤 3：烧录引导程序**
 
-在终端或命令提示符中，进入你下载 Bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，进入你下载引导程序压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
 
 - **对于 Windows**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
+请将 COMXX 更改为你的端口号。例如，如果你的设备在 com6 上，请将命令更改为：
+
+`adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
+
+ 部分设备在你输入此命令后会更改其端口号。因此，如果安装失败，请再次检查端口号。
+
 
 - **对于其他系统**：
 
@@ -452,29 +494,29 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)烧录应用固件。
+当你完成上述步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)来烧录应用固件。
 
  ### 设备自动关机
 
  #### 描述
 
- - 设备开机后，过一段时间会自动关机或重启。
+ - 设备开机后，过一段时间会自动关机或重启。 
  - 串口日志运行一段时间后停止。
 
  这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
 
  #### 故障排查
 
-[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新烧录最新固件。
 
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你有两种方式可以进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方法进行恢复出厂设置。
 
-- [点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新烧录最新固件。
 
-- 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
+- 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### 功耗
@@ -482,17 +524,17 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
 下列数据仅供参考；实际功耗可能会因真实使用环境而有所不同。
 
-- **关机睡眠模式功耗**
+- **关机休眠模式功耗**
 
 |描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
 |上电但未激活|56.195 μA|
-|上电并已激活|611 μA|
+|上电且已激活|611 μA|
 
 **示例：**
 
-|电池容量|电池寿命|
+|电池容量 |电池寿命|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -513,7 +555,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用该设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
 ### 充电电流
 
