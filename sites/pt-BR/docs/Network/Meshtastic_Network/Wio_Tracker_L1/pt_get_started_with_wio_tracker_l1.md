@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::tip
 A Série Wio Tracker L1 compartilha a mesma estrutura de hardware. Embora o guia em vídeo seja para o L1 Pro, ele é aplicável a todos os outros produtos da série L1.
 :::
@@ -470,3 +472,11 @@ Se você precisar substituir a antena do L1 Pro, [clique aqui](https://www.seeed
 - [Certificação FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [Certificação CE](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [Teste de Consumo de Energia e Cálculo da Vida Útil da Bateria](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+

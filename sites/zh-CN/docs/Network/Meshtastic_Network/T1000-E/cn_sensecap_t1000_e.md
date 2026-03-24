@@ -14,6 +14,8 @@ createdAt: '2024-07-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e/
 ---
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::danger note
 当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
 1. 尚未完成消息传输过程
@@ -552,6 +554,13 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - [Meshtastic 文档](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker 数据手册](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

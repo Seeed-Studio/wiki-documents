@@ -13,6 +13,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J1010_J101_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Placa carrier J101
 
 Neste wiki, mostraremos como gravar o Jetpack OS na reComputer J1010. Como a placa carrier dela é projetada como a placa carrier oficial NVIDIA Nano Developer, podemos gravar o JetPack de duas maneiras.
@@ -390,6 +392,13 @@ Se for necessário mais espaço de armazenamento, podemos usar um cartão SD par
 [Comparação das Séries Jetson da Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 
 [Página Única dos Dispositivos Jetson da Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico e Discussão de Produtos
 
