@@ -10,10 +10,10 @@ image: https://files.seeedstudio.com/wiki/BC03/1-BC03-Bluetooth-Beacon.webp
 slug: /bluetooth_beacon03_for_tracker_user_guide
 sku: 100085893
 last_update:
-  date: 3/23/2026
+  date: 3/24/2026
   author: Janet
-createdAt: '2026-03-23'
-updatedAt: '2026-03-23'
+createdAt: '2026-03-24'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/bluetooth_beacon03_for_tracker_user_guide/
 ---
 
