@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/control_px4_with_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 将高性能的伴随计算机 **reComputer Mini J3010 (Jetson Orin Nano 4G)** 与 **PX4 飞控** 搭配，可为自动驾驶汽车、船只和无人机等各类智能无人系统构建核心架构。这一强大组合在物流、科学研究、搜救以及精准农业等领域解锁了创新应用。
 
 该方案支持在机载端执行视觉导航、目标跟踪与实时避障等复杂任务。而这两颗“大脑”之间的通信链路，则是影响系统整体性能与可靠性的关键。
@@ -402,6 +404,17 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 至此，你已经掌握了在 Jetson Orin 与 PX4 飞控之间建立通信的三种强大方法。最佳选择取决于项目架构、性能需求与开发效率。理解各自取舍后，你就能为任何自主无人机应用打下坚实基础。
 
 祝飞行顺利！🚁
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

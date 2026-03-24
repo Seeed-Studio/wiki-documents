@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # JetPack OS を J401 キャリアボードにフラッシュする
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/recomputer-j401.png"/></div>
@@ -897,6 +899,17 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 - [Seeed Jetson デバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 - [Jetson examples](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

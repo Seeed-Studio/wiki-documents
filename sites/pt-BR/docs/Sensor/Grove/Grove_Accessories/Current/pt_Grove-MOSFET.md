@@ -67,7 +67,7 @@ Aqui demonstramos como usar Grove - MOSFET para controlar um motor. Fornecemos e
 | Seeeduino V4.2 | Base Shield|  Grove - MOSFET |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Mosfet_small.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
 
 - **Passo 2.** Conecte o Grove - MOSFET à porta D6 do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove - Base Shield ao Seeeduino.
@@ -157,7 +157,7 @@ void motorAcceleration()
 | Raspberry pi | GrovePi_Plus | Grove - MOSFET |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-MOSFET/img/Mosfet_small.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-MOSFET-p-1594.html)|
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
 - **Passo 3.** Conecte o Grove-MOSFET ranger à porta **D6** do GrovePi_Plus.

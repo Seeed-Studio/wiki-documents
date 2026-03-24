@@ -64,7 +64,7 @@ Esta demonstração vai mostrar como ligar/desligar um LED.
 | Seeeduino V4.2 | Base Shield|  Grove-Touch_Sensor |Grove-LED|
 |--------------|-------------|-----------------|-----|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Touch_Sensor/img/45d_small.jpg)|![enter image description](https://files.seeedstudio.com/wiki/Grove-Red_LED/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|[Get One Now](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
 
 - **Passo 2.** Conecte o Grove-Touch_Sensor à porta **D2** do Grove-Base Shield.
 - **Passo 3.** Conecte o Grove-LED à porta **D3** do Grove-Base Shield.
@@ -138,7 +138,7 @@ Quando o código terminar de ser enviado, o LED acenderá quando você tocar no 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Touch Sensor|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Touch_Sensor/img/45d_small.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao Raspberry.
 - **Passo 3**. Conecte o sensor de toque à porta 12 do Base Hat.
@@ -294,7 +294,7 @@ Você pode sair deste programa simplesmente pressionando `ctrl`+`c`.
 | Raspberry pi | GrovePi_Plus | Grove-Touch_Sensor |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Touch_Sensor/img/45d_small.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|
 
 - **Passo 2.** Conecte o GrovePi_Plus ao Raspberry.
 - **Passo 3.** Conecte o Grove-Touch_Sensor à porta **D2** do GrovePi_Plus.

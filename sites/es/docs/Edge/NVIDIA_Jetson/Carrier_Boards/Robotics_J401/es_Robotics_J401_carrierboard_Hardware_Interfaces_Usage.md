@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_robotics_j401_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Hardware y primeros pasos con la carrier board Robotics J401
 
 La reComputer Robotics J401 es una carrier board compacta y de alto rendimiento para edge AI, diseñada para robótica avanzada. Compatible con los módulos NVIDIA Jetson Orin Nano/Orin NX en modo Super/MAXN, ofrece hasta 157 TOPS de rendimiento de IA. Equipada con amplias opciones de conectividad —incluyendo puertos Ethernet Gigabit dobles, ranuras M.2 para módulos 5G y Wi‑Fi/BT, 6 puertos USB 3.2, CAN, GMSL2 (mediante expansión opcional), I2C y UART— funciona como un potente cerebro robótico capaz de procesar datos complejos de varios sensores. Con JetPack 6 y Linux BSP preinstalados, garantiza un despliegue sin inconvenientes.​
@@ -1186,6 +1188,13 @@ El reComputer Jetson Robotics J401 está equipado con un DP1.4 (incluido en el T
 - [Comparación de Nvidia Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Casos de éxito de Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson One Pager](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte técnico y debate sobre el producto
 

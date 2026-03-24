@@ -738,12 +738,12 @@ Abra **Setting** >> **Devices & Services**, você pode encontrar o seu dispositi
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>

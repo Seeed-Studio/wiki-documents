@@ -9,14 +9,16 @@ const config = {
     en: 'sites/en/docs',
     cn: 'sites/zh-CN/docs',
     ja: 'sites/ja/docs',
-    es: 'sites/es/docs'
+    es: 'sites/es/docs',
+    pt: 'sites/pt-BR/docs'
   },
 
   languagePrefixes: {
     en: '',
     cn: '/cn',
     ja: '/ja',
-    es: '/es'
+    es: '/es',
+    pt: '/pt-br'
   },
 
   outputFile: 'static/js/language-switcher.js',
@@ -189,11 +191,11 @@ function generateJavaScriptFile() {
     const { languageMapping, allSlugs } = generateLanguageMapping();
 
     // ✅ 首页多语言映射（仅追加，不影响 docs 的自动映射）
-    const HOMEPAGE_LOCALES = ['en', 'cn', 'ja', 'es'];
+    const HOMEPAGE_LOCALES = ['en', 'cn', 'ja', 'es', 'pt'];
     languageMapping['/'] = HOMEPAGE_LOCALES;
     languageMapping[''] = HOMEPAGE_LOCALES; // 兼容 basePath = '' 的情况
 
-    const SPECIAL_ROUTE_LOCALES = ['en', 'cn', 'ja', 'es'];
+    const SPECIAL_ROUTE_LOCALES = ['en', 'cn', 'ja', 'es', 'pt'];
     ['/knowledgebase/', '/knowledgebase'].forEach((slug) => {
       languageMapping[slug] = SPECIAL_ROUTE_LOCALES;
     });
@@ -235,7 +237,8 @@ function generateJavaScriptFile() {
     en: { label: 'English', flag: '🇺🇸', prefix: '' },
     cn: { label: '简体中文', flag: '🇨🇳', prefix: '/cn' },
     ja: { label: '日本語', flag: '🇯🇵', prefix: '/ja' },
-    es: { label: 'Español', flag: '🇪🇸', prefix: '/es' }
+    es: { label: 'Español', flag: '🇪🇸', prefix: '/es' },
+    pt: { label: 'Português (Brasil)', flag: '🇧🇷', prefix: '/pt-br' }
   };
 
   // 内嵌的语言映射数据
@@ -264,6 +267,9 @@ function generateJavaScriptFile() {
     } else if (currentPath.startsWith('/es/')) {
       detectedLanguage = 'es';
       basePath = currentPath.replace('/es', '') || '/';
+    } else if (currentPath.startsWith('/pt-br/')) {
+      detectedLanguage = 'pt';
+      basePath = currentPath.replace('/pt-br', '') || '/';
     }
 
     if (!basePath.startsWith('/')) {
@@ -298,7 +304,7 @@ function generateJavaScriptFile() {
     }
 
     const currentLangConfig = languages[currentLanguage];
-    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const priority = { en: 0, cn: 1, ja: 2, es: 3, pt: 4 };
     const sortedLanguages = [...availableLanguages].sort((a, b) => {
       if (a === currentLanguage) return -1;
       if (b === currentLanguage) return 1;
@@ -432,7 +438,7 @@ function generateJavaScriptFile() {
     if (availableLanguages.length <= 1) return null;
 
     const currentLangConfig = languages[currentLanguage];
-    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const priority = { en: 0, cn: 1, ja: 2, es: 3, pt: 4 };
     const sortedLanguages = [...availableLanguages].sort((a, b) => {
       if (a === currentLanguage) return -1;
       if (b === currentLanguage) return 1;
@@ -549,7 +555,7 @@ function generateJavaScriptFile() {
     if (availableLanguages.length <= 1) return null;
 
     const currentLangConfig = languages[currentLanguage];
-    const priority = { en: 0, cn: 1, ja: 2, es: 3 };
+    const priority = { en: 0, cn: 1, ja: 2, es: 3, pt: 4 };
     const sorted = [...availableLanguages].sort((a, b) => {
       if (a === currentLanguage) return -1;
       if (b === currentLanguage) return 1;

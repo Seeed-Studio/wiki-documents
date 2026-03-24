@@ -25,7 +25,7 @@ Com seu tamanho compacto e interfaces ricas, a Wio Tracker 1110 Dev Board vem co
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
     </a>
 </div>
 

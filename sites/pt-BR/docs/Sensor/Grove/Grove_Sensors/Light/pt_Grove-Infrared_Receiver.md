@@ -63,7 +63,7 @@ Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortement
 | Seeeduino V4.2 | Base Shield| Grove - Infrared Emitter | Grove - Infrared Receiver
 |--------------|-------------|-----------------|-----|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduinoX2.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/baseshiledX2.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Emitter/img/thumbnail.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/little.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Get One Now](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Infrared-Emitter-p-993.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Infrared-Receiver-p-994.html)|
 
 - **Passo 2.** Conecte o Grove - Infrared Emitter à porta **D3** de um Grove-Base Shield.
 

@@ -77,21 +77,21 @@ Para concluir este projeto com sucesso, talvez você precise usar o seguinte har
         <td>
           <div style={{textAlign:'center'}}>
             <a href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
             </a>
           </div>
         </td>
         <td>
           <div style={{textAlign:'center'}}>
             <a href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
             </a>
           </div>
         </td>
         <td>
           <div style={{textAlign:'center'}}>
             <a href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
             </a>
           </div>
         </td>

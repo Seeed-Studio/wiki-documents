@@ -26,7 +26,7 @@ O valor do sensor apenas reflete a tendência aproximada da concentração de g�
 </div>
 
 
-<!-- |Sensor|Gas Type|Get One Now|
+<!-- |Sensor|Gas Type|Adquira agora|
 |---|---|---|
 |MQ2|Combustible Gas, Smoke|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-937.html)|
 |MQ3|Alcohol Vapor|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-1418.html)|
@@ -274,7 +274,7 @@ De acordo com a figura, podemos ver que a concentração mínima que podemos tes
 | Raspberry pi | Grove Base Hat para RasPi| Grove - Gas Sensor(MQ5)|
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ5/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-938.html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Gas-Sensor-MQ-p-938.html)|
 
 - **Passo 2**. Conecte o Grove Base Hat ao Raspberry.
 - **Passo 3**. Conecte o Grove - Gas Sensor(MQ5) à porta A0 do Base Hat.
