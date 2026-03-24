@@ -356,7 +356,7 @@ Después del flasheo, enciende el dispositivo Jetson nuevamente e inicia sesión
 - [Archivos CAD A608](https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608_V1.2.zip)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
