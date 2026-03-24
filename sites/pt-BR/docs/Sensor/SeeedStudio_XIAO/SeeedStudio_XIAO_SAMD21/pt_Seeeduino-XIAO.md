@@ -54,7 +54,7 @@ Existem dois documentos sobre o uso do **Seeed Studio XIAO SAMD21** que se conce
 - Múltiplas interfaces de desenvolvimento: 11 pinos digitais/analógicos, 10 pinos PWM, 1 saída DAC, 1 interface de pad SWD, 1 interface I2C, 1 interface UART, 1 interface SPI.
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

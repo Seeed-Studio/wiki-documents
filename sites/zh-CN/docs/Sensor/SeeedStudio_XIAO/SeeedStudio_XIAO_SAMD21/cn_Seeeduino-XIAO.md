@@ -466,7 +466,7 @@ void loop()
 - **📄[出厂固件]** [XIAO SAMD21 出厂固件](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

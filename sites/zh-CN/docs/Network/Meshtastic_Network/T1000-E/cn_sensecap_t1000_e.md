@@ -556,7 +556,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

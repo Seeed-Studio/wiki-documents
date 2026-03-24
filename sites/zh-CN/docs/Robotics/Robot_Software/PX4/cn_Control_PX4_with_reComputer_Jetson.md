@@ -410,7 +410,7 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 ## 资源
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

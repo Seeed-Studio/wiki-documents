@@ -466,7 +466,7 @@ el tamaño máximo de flash es 8KB, más información en la hoja de datos ATSAMD
 - **📄[Firmware de Fábrica]** [Firmware de Fábrica XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

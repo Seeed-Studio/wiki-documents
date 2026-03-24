@@ -496,7 +496,7 @@ Verás la siguiente salida cuando la grabación se haya realizado correctamente
 - **📄[Documento]** [Informe sobre el bajo consumo de energía del XIAO ESP32-C3](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

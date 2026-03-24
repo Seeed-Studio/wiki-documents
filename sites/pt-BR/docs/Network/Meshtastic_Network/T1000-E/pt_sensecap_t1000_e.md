@@ -556,7 +556,7 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

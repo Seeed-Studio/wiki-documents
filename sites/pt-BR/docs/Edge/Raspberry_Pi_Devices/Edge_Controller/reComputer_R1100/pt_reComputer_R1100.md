@@ -75,7 +75,7 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 - **Vida Útil de Produção**: O **reComputer R1100** permanecerá em produção **até pelo menos dezembro de 2030**
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

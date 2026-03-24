@@ -563,7 +563,7 @@ void loop(){
 - **📄[3D Model]** [XIAO ESP32-C6 三维模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

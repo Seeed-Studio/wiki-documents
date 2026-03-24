@@ -36,7 +36,7 @@ A placa carrier J401 é uma poderosa placa de expansão que suporta módulos NVI
 - **Ampla faixa de tensões de entrada:** De 9–19 V DC, proporcionando flexibilidade nas opções de fonte de alimentação
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

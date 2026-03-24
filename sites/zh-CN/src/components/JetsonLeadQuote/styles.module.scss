@@ -34,6 +34,7 @@
 .bannerImageWrapper {
   display: block;
   width: 100%;
+  position: relative;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -128,10 +129,6 @@
   display: block;
 }
 
-.bannerImageWrapper {
-  position: relative;
-}
-
 .ctaOverlay {
   position: absolute;
   bottom: 16px;
@@ -141,12 +138,15 @@
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
 
   color: #fff;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 999px;
 
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   transition: all 0.2s ease;
 }
@@ -154,4 +154,88 @@
 .bannerTrigger:hover .ctaOverlay {
   background: var(--ifm-color-primary);
   transform: translateX(-50%) scale(1.05);
+}
+
+/* ===== tablet ===== */
+@media (max-width: 996px) {
+  .bannerTrigger {
+    max-width: 100%;
+    margin: 18px auto;
+  }
+
+  .bannerImageWrapper {
+    border-radius: 14px;
+  }
+
+  .iframeWrap {
+    height: 560px;
+  }
+
+  .ctaOverlay {
+    bottom: 14px;
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ===== mobile ===== */
+@media (max-width: 768px) {
+  .bannerTrigger {
+    max-width: 100%;
+    margin: 16px auto 18px;
+  }
+
+  .bannerImageWrapper {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+
+  .bannerTrigger:hover .bannerImageWrapper {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+
+  .ctaOverlay {
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    padding: 8px 14px;
+    font-size: 12px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .bannerTrigger:hover .ctaOverlay {
+    background: rgba(0, 0, 0, 0.6);
+    transform: translateX(-50%);
+  }
+
+  .iframeWrap {
+    height: 72vh;
+    min-height: 420px;
+    max-height: 620px;
+  }
+}
+
+/* ===== small mobile ===== */
+@media (max-width: 480px) {
+  .bannerTrigger {
+    margin: 14px auto 16px;
+  }
+
+  .bannerImageWrapper {
+    border-radius: 10px;
+  }
+
+  .ctaOverlay {
+    bottom: 10px;
+    max-width: calc(100% - 20px);
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .iframeWrap {
+    height: 70vh;
+    min-height: 380px;
+    max-height: 560px;
+  }
 }

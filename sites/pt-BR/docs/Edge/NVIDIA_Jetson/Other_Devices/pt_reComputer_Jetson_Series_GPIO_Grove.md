@@ -46,7 +46,7 @@ Se você quiser aplicar [Grove Sensors](https://www.seeedstudio.com/category/Gro
 ## Recursos
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
