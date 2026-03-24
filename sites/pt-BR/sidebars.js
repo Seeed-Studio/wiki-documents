@@ -729,6 +729,24 @@ const sidebars = {
             }
           ],
         },
+        {
+          type: 'category',
+          label: 'Beacon Bluetooth SenseCAP',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/pt_BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/pt_BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 Beacon Bluetooth para ambientes internos',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/pt_BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/pt_BC03_Indoor_Bluetooth_Beacon_User_Guide',
+              ],
+            }
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'Rastreador de pets SenseCAP T1000-P',

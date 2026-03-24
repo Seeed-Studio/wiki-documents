@@ -729,6 +729,24 @@ const sidebars = {
             }
           ],
         },
+        {
+          type: 'category',
+          label: 'SenseCAP 蓝牙信标',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/cn_BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/cn_BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 室内蓝牙信标',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/cn_BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/cn_BC03_Indoor_Bluetooth_Beacon_User_Guide',
+              ],
+            }
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'SenseCAP T1000-P Pet Tracker',
