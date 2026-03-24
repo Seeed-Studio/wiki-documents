@@ -85,10 +85,10 @@ Baixe o arquivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Entre no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará aceso continuamente.
+Entre no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará aceso de forma contínua.
 
 :::warning
-Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
+Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Pode ser necessário tentar várias vezes.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -113,10 +113,10 @@ Baixe o arquivo UF2.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Tente entrar no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará aceso continuamente.
+Tente entrar no modo DFU manualmente: mantenha o botão do dispositivo pressionado e então conecte o cabo de carregamento **rapidamente** duas vezes; o LED verde ficará aceso de forma contínua.
 
 :::warning
-Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
+Para entrar no modo DFU com sucesso, você precisa realizar esta operação rapidamente. Pode ser necessário tentar várias vezes.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -129,7 +129,7 @@ Arraste o arquivo UF2 baixado para o disco que apareceu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento há firmware no dispositivo, portanto o dispositivo será reiniciado automaticamente.
+O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento não há firmware no dispositivo, portanto o dispositivo será reiniciado automaticamente.
 
 ## Configuração
 
@@ -142,12 +142,12 @@ Pressione o botão para ligá-lo. O LED acenderá e haverá uma melodia descende
 Pressione o botão por 3 s para desligá-lo. O LED apagará e haverá uma melodia de desligamento.
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador de carregamento rápido.
+Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador de carga rápida.
 :::
 
 ### Obter o APP
 
-Baixe pela Google Store ou Apple Store. Ou [clique aqui](https://meshcore.co.uk/apps.html) para obter o Meshcore APP.
+Baixe pela Google Store ou Apple Store. Ou [clique aqui](https://meshcore.co.uk/apps.html) para obter o APP Meshcore.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 
@@ -157,7 +157,7 @@ Clique em `Connect` e escolha o dispositivo de destino. O ID de dispositivo padr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/DeviceConnectAn.png" alt="pir" width={600} height="auto" /></p>
 
-Digite o código PIN padrão `123456` e então clique em `Pair` para conectar o dispositivo.
+Insira o código PIN padrão `123456` e então clique em `Pair` para conectar o dispositivo.
 
 :::tip
 Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `Unpair` o dispositivo. Em seguida, tente conectar novamente.
@@ -177,7 +177,7 @@ Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `U
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue3.png" alt="pir" width={600} height="auto" /></p>
 
-4. Quando solicitado, digite a chave de acesso Bluetooth padrão `123456` e clique em **OK**.
+4. Quando solicitado, insira a chave de acesso Bluetooth padrão `123456` e clique em **OK**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/meshcorewebblue4.png" alt="pir" width={600} height="auto" /></p>
 
@@ -187,7 +187,7 @@ Se a conexão falhar, abra a lista de Bluetooth do seu telefone e `forget` ou `U
 
 ### Configurar o LoRa
 
-Para começar a se comunicar pela malha, você deve definir sua região. Esta configuração controla qual faixa de frequência seu dispositivo usa e deve ser definida de acordo com sua localização regional.
+Para começar a se comunicar pela malha, você deve definir sua região. Esta configuração controla qual faixa de frequência seu dispositivo usa e deve ser ajustada de acordo com sua localização regional.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/SetRegion.png" alt="pir" width={600} height="auto" /></p>
@@ -196,7 +196,7 @@ Em seguida, reinicie o dispositivo, caso contrário a configuração não terá 
 
 **Lista de Regiões**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**Código da Região**|**Descrição**|**Faixa de Frequência (MHz)**|**Ciclo de Trabalho (%)**|**Limite de Potência (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Não definido|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -206,7 +206,7 @@ Agora que você definiu a região LoRa no seu dispositivo, pode continuar config
 
 ### Configurar GPS
 
-Se você quiser usar o GPS, ative-o.
+Se você quiser usar o GPS, ative-o. 
 
 Você pode ir em `Position Settings` no APP para ativar o GPS. 
 
@@ -217,11 +217,11 @@ Você pode ir em `Position Settings` no APP para ativar o GPS.
 |Ação do botão|Descrição|
 |--|--|
 |Pressione por 3s|Ligar/desligar|
-|Clique duplo|anunciar broadcast|
+|Clique duplo|transmitir anúncio|
 |Clique triplo|Interruptor do buzzer|
 |Clique quádruplo|Interruptor do GPS|
 
-## Transmissão de Mensagens
+## Transmissão de mensagens
 
 Se você tiver dois dispositivos compatíveis e não houver muitos usuários MeshCore perto de você, grave o firmware BLE Companion em ambos para que você possa usar seus dispositivos para se comunicar com amigos e familiares próximos.
 
@@ -234,18 +234,18 @@ MeshCore permite que você transmita manualmente seu nome, posição e chave pú
 - **Zero hop** significa que seu anúncio é transmitido para qualquer pessoa que possa ouvi-lo, e é só isso.
 - **Flooded** significa que ele é transmitido e depois repetido por todos os repetidores que o ouvirem.
 
-Você pode enviar anúncio pelo APP. Você também pode enviar anúncio diretamente na página de anúncio do dispositivo.
+Você pode enviar anúncios no APP. Você também pode enviar anúncios diretamente na página de anúncio do dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Advert.png" alt="pir" width={300} height="auto" /></p>
 
-### Mensagem Pública
+### Mensagem pública
 
-Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-la.
+Depois de configurar o LoRa, você pode enviar mensagens no canal primário. Todas as pessoas próximas na mesma faixa de frequência irão ouvi-las.
 
 
-### Mensagem Privada
+### Mensagem privada
 
-Os dois dispositivos só estabelecem uma conexão quando ambos receberam o anúncio um do outro.
+Os dois dispositivos só estabelecem uma conexão quando ambos tiverem recebido o anúncio um do outro.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -256,7 +256,7 @@ import TabItem from '@theme/TabItem';
 
  Pressione e segure o botão e, em seguida, conecte o cabo de carregamento.
 
-## Solução de Problemas
+## Solução de problemas
 
 ### Dispositivo nunca liga
 
@@ -274,7 +274,7 @@ O dispositivo irá reiniciar repetidamente, e a porta serial conecta e desconect
 
 **Solução:**
 
-- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e, em seguida, conecte **rapidamente** o cabo de carregamento duas vezes, o LED verde ficará aceso continuamente.
+- Etapa 1: Tente entrar no modo DFU manualmente: pressione e segure o botão do dispositivo e **rapidamente** conecte o cabo de carregamento duas vezes, o LED verde ficará aceso continuamente.
 
 :::note
 Para entrar com sucesso no modo DFU, você precisa realizar esta operação rapidamente. Talvez seja necessário tentar várias vezes.
@@ -284,19 +284,19 @@ Para entrar com sucesso no modo DFU, você precisa realizar esta operação rapi
 
 - Etapa 2: Apagar a Flash
 
-- Etapa 3: Gravar o Firmware
+- Etapa 3: Gravar o firmware
 
 ### Dispositivo brickado
 
 #### Descrição
 
-O dispositivo não responde, nenhum LED, não é possível parear com seu App.
+O dispositivo não responde, nenhum LED, não é possível parear com o seu App.
 
 **1) O dispositivo ainda consegue entrar no modo DFU, então tente gravar o bootloader**.
 
-#### Gravar o Bootloader
+#### Gravar o bootloader
 
-- [Download do Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -308,10 +308,26 @@ Quando você estiver gravando o bootloader, certifique-se de que a conexão do c
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
+Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
+
+Para usuários MAC, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+
 **Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
+
+Verifique na sua linha de comando se o python e o pip foram instalados com sucesso.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
@@ -322,27 +338,42 @@ Este é o método recomendado, para instalar a versão mais recente:
 pip3 install --user adafruit-nrfutil
 ```
 
+Verifique o caminho de instalação:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+Este é o local de instalação:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+Para usuários Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o como a seguir:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
 </TabItem>
 
 <TabItem value="sou" label="Instalando a partir do código-fonte">
 
-Use este método se você tiver problemas ao instalar com o PyPi ou quiser modificar a ferramenta. Primeiro clone este repositório e entre na pasta dele.
+Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro clone este repositório e entre na pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
+Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
 
-Para instalar no espaço do usuário em seu diretório pessoal:
+Para instalar no espaço do usuário no seu diretório pessoal:
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -356,7 +387,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -376,18 +407,26 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Exemplo:
+Para usuários Windows, por exemplo:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+Para usuários Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Etapa 3: Grave o bootloader**
+**Etapa 3: Gravar o bootloader**
 
-No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta para o seu dispositivo:
+No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
 - **Para Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
+Por favor, altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver na com6, altere o comando para:
+
+`adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
+
+ Alguns dispositivos irão mudar o número da porta após você inserir este comando. Portanto, se a instalação falhar, verifique o número da porta novamente.
 
 - **Para outros**:
 
@@ -406,7 +445,7 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 - Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Erase flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [flash the firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
+   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então grave o [bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Apagar flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) -> [gravar o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
@@ -434,28 +473,28 @@ Quando você tiver concluído as etapas acima, então [clique aqui](https://wiki
 
  #### Descrição
 
- - Após o dispositivo ligar, ele irá desligar ou reiniciar automaticamente depois de um tempo. 
- - O log da porta serial roda por um tempo e depois para.
+ - Após o dispositivo ser ligado, ele será desligado ou reiniciado automaticamente após um tempo. 
+ - O log da porta serial executa por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem terminar o processo de transmissão de mensagens, sendo configurado......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo está nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
 
  #### Solução de problemas
 
 Execute um [flash-erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase). 
 
- ### Restauração de Fábrica
+ ### Restauração de fábrica
 Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.
 
-- Faça o [Flash erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) no dispositivo. E então grave novamente o firmware mais recente.
+- Faça o [Flash erase](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e_meshcore/#flash-erase) do dispositivo. Em seguida, regrave o firmware mais recente.
 
-- Clique no botão `Factory Reset` no App. O dispositivo irá reiniciar automaticamente com a configuração de fábrica. 
+- Clique no botão `Factory Reset` no App. O dispositivo será reiniciado automaticamente com a configuração de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Reset.png" alt="pir" width={400} height="auto" /></p>
 
-### Qualidade do Sinal
+### Qualidade do sinal
 
   - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica desempenho ruim.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim. 
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -469,9 +508,9 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 - [T1000-E for Meshtastic Consumption Test and Battery Life Calculation](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000-E%20for%20Meshtastic%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão de produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
