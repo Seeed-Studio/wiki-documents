@@ -26,14 +26,15 @@ const getIndexImage = (src) => {
 import BazaarAffiliate from '../../components/home/BazaarAffiliate';
 
 // ---------------------- 语言工具（用于链接前缀 & 文案选择） ----------------------
-type Locale = 'en' | 'cn' | 'ja' | 'es';
-const LOCALE_PREFIX: Record<Locale, string> = { en: '', cn: '/cn', ja: '/ja', es: '/es' };
-const LOCALE_BADGE: Record<Locale, string> = { en: 'EN', cn: 'CN', ja: 'JA', es: 'ES' };
+type Locale = 'en' | 'cn' | 'ja' | 'es' | 'pt-br';
+const LOCALE_PREFIX: Record<Locale, string> = { en: '', cn: '/cn', ja: '/ja', es: '/es', 'pt-br': '/pt-br' };
+const LOCALE_BADGE: Record<Locale, string> = { en: 'EN', cn: 'CN', ja: 'JA', es: 'ES', 'pt-br': 'PT-BR' };
 
 function detectLocaleFromPath(pathname: string): Locale {
   if (pathname === '/cn' || pathname.startsWith('/cn/')) return 'cn';
   if (pathname === '/ja' || pathname.startsWith('/ja/')) return 'ja';
   if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+  if (pathname === '/pt-br' || pathname.startsWith('/pt-br/')) return 'pt-br';
   return 'en';
 }
 
@@ -52,13 +53,14 @@ function localizeHref(href: string, locale: Locale) {
     if (
       url.pathname.startsWith('/cn/') ||
       url.pathname.startsWith('/ja/') ||
-      url.pathname.startsWith('/es/')
+      url.pathname.startsWith('/es/') ||
+      url.pathname.startsWith('/pt-br/')
     ) {
       return href;
     }
 
     const prefix = LOCALE_PREFIX[locale] || '';
-    // en 没前缀，其他语言加 /cn /ja /es
+    // en 没前缀，其他语言加 /cn /ja /es /pt-br
     if (!prefix) return href;
 
     // 注意保留 query 和 hash
@@ -76,7 +78,8 @@ import en from './locales/en/home.json';
 import cn from './locales/cn/home.json';
 import ja from './locales/ja/home.json';
 import es from './locales/es/home.json';
-const COPY: Record<Locale, any> = { en, cn, ja, es };
+import ptBr from './locales/pt-br/home.json';
+const COPY: Record<Locale, any> = { en, cn, ja, es, 'pt-br': ptBr };
 
 // 浏览器语言识别逻辑
 // function _guessLocaleCode() {
@@ -164,6 +167,7 @@ function GettingStartedSplit({ mainLink, text, locale }: { mainLink: string; tex
     { flag: '🇨🇳', label: '简体中文', href: '/cn/Getting_Started' },
     { flag: '🇯🇵', label: '日本語', href: '/ja/Getting_Started' },
     { flag: '🇪🇸', label: 'Español', href: '/es/Getting_Started' },
+    { flag: '🇧🇷', label: 'Português (Brasil)', href: '/pt-br/Getting_Started' },
   ];
 
   const onToggleClick = () => {

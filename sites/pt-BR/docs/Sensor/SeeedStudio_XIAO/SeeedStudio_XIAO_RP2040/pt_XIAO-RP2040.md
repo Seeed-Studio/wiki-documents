@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros passos com o Seeed Studio XIAO RP2040
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
@@ -27,7 +29,7 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -39,6 +41,13 @@ O Seeed Studio XIAO RP2040 é compatível com a placa de expansão Seeed Studio 
 - Operação de projeto fácil: design amigável a protoboard e SMD, sem componentes na parte de trás
 - Tamanho pequeno: tão pequeno quanto um polegar (21x17,8 mm) para dispositivos vestíveis e pequenos projetos.
 - Múltiplas interfaces: 11 pinos digitais, 4 pinos analógicos, 11 pinos PWM, 1 interface I2C, 1 interface UART, 1 interface SPI, 1 interface de almofada de ligação SWD.
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## **Especificação**
 

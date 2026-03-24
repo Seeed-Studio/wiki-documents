@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 <!-- ---
 name: The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC.
 category: 
@@ -1094,7 +1096,7 @@ exit
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1689,6 +1691,17 @@ Uma interface DSI (J24) e uma interface de Alto-falante de 4 pinos (J7) são res
 - [Flyer do reComputer R1000](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
 - [Flyer do reComputer R1000 em Chinês](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
 - [Atribuição de Pinos do reComputer R1000 v1.1](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico & Discussão de Produto
 

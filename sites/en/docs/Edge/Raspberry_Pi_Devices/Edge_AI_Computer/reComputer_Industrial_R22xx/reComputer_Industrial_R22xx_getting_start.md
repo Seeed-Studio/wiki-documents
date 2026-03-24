@@ -132,7 +132,7 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td rowspan="2"> USB </td>
-        <td colspan="2"> 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host </td>
+        <td colspan="2"> 4 x USB-A 3.0 Host</td>
       </tr>
       <tr>
         <td colspan="2"> 1 x USB-C 2.0 (For flashing OS & Debug) </td>
@@ -166,7 +166,7 @@ The reComputer Industrial R22xx series is ideal for use in industrial AI applica
       <tr>
         <td>M.2 Slot</td>
         <td>2x M.2 M-key 2280 Slot for NVMe SSD；
-1x M.2 M-key 2280 Slot for AI Accelerator
+1x M.2 M-key 2240 Slot for AI Accelerator
 (Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS);
 1x M.2 B-key 3042/3052 Slot for 5G/4G LTE</td>
       </tr>
@@ -411,7 +411,7 @@ The reComputer Industrial R22xx does not come with a power button by default, an
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
 | **LED**         | 4 x LED indicators                                                                    |
 | **SIM Card Slot**   | supports Nano SIM Card                                                            |
-| **M.2 M-KEY Slot**  | 2x M.2 M-key 2280 Slot for NVMe SSD；1x M.2 M-key 2280 Slot for AI Accelerator(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS) |
+| **M.2 M-KEY Slot**  | 2x M.2 M-key 2280 Slot for NVMe SSD；1x M.2 M-key 2240 Slot for AI Accelerator(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS) |
 | **M.2 B-KEY Slot**  | 1x for 5G/4G LTE                                                                  |
 | **mini PCIe Slot**  | 1x for 4G LTE/LoRa/Zigbee                                                         |
 | **Buzzer**          | 1                                                                                 |
@@ -840,7 +840,7 @@ The size differences between standard SIM, Micro SIM and Nano SIM cards are as f
 | **Slot**       | **Supported Protocols**   |  
 |---------------|--------------------------|  
 | **M.2 M-KEY 2280** | 2 x M.2 NVMe SSD        |  
-| **M.2 M-KEY 2280** | 1 x M.2 AI  Accelerator |  
+| **M.2 M-KEY 2240** | 1 x M.2 AI  Accelerator |  
 
 The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accommodate NVMe M.2 2280 SSDs for 128GB, 256GB, 512GB, 1TB and 2TB in capacity. This slot allows for high-speed storage expansion, enabling users to enhance the performance and capacity of their system.
 
@@ -852,7 +852,7 @@ The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accomm
 >  
 > It's important to note that not all SSD cards available in the market support the second usage. Therefore, if you intend to use it as a boot drive and are unsure about which model to purchase, we recommend opting for our recommended 2TB SSD(SKU 114993467). This model has been tested and verified for boot functionality, reducing the risk of compatibility issues and minimizing trial and error costs.
 
-The M.2 M-KEY 2280 slot on the reComputer Industrial R22xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R22xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
+The M.2 M-KEY 2240 slot on the reComputer Industrial R22xx is designed to accommodate PCIE M.2 AI  Accelerator. And the R22xx-12 series has been pre-installed with a Hailo-8 M.2 AI Acceleration up to 26TOPS.
 
 ### Mini-PCIe Slot
 

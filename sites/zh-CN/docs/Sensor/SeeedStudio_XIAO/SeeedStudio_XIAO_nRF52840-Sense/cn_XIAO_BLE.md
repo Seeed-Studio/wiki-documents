@@ -16,6 +16,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO_BLE/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO nRF52840 系列入门指南
 
@@ -723,6 +724,13 @@ digitalWrite(P0_13, LOW);
 
 **机械设计**
 - **🗃️[2D 尺寸]** [XIAO nRF52840 Sense DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 课程资源
 

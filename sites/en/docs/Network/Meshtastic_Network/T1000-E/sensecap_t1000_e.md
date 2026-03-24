@@ -14,6 +14,8 @@ createdAt: '2024-07-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
 1. Not finishing the message transmission process
@@ -388,10 +390,26 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 **Step1: Adafruit-nrfutil Installation**
 
+For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line. 
+
+For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+
 **Prerequisites**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
+
+Check in your command line that whether or not the python and pip are installed successfully.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Then "Python xxx" and "pip xxx" should appear. If it does not, please try install python again.
 
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
@@ -401,6 +419,22 @@ This is recommended method, to install latest version:
 ```
 pip3 install --user adafruit-nrfutil
 ```
+
+Check the installation path:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+This is the installation location:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
 
 </TabItem>
 
@@ -456,8 +490,13 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 Connect your device to your PC, and check the port number.
 
-Example:
+For Window User, open your device manager, and go to "port", the port number newly pop out after the device connection is the device port number.
+
+For Mac user, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+For Window user, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
 **Step3: Flash the bootloader**
 
@@ -468,6 +507,12 @@ In the terminal or command prompt, navigate to the directory where you downloade
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
+
+Please change COMXX to your com number. For example, if your device is on com6, change the command to be:
+
+`adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
+
+ Some of the device will change their port number after you enter this command. So if the installation fail, check the port number again.
 
 - **For others**:
 
@@ -552,6 +597,17 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

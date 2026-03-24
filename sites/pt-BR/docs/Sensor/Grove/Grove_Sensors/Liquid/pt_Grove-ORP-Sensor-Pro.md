@@ -154,7 +154,7 @@ Neste exemplo, usamos o XIAO SAMD21 como placa de controle principal para medir 
 | Seeed Studio XIAO SAMD21 |  Seeed Studio Expansion Base for XIAO | Grove ORP Sensor Pro |
 |:--------------:|:--------------:|:--------------:|
 |<div align="center"><img width ="210" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg"/></div>| <div align="center"><img width ="210" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg"/></div> | <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/sensor.jpg"/></div> |
-|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)| [**Get ONE Now**](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-Pro-p-5570.html) |
+|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Adquira agora**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)| [**Adquira agora**](https://www.seeedstudio.com/Grove-ORP-Sensor-Kit-Pro-p-5570.html) |
 
 #### Passos de Operação
 
@@ -314,7 +314,7 @@ Após atualizar o programa, selecione o modelo da placa de desenvolvimento e o n
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/6.png"/></div>
 
-[LINE_145>Ligue o monitor serial e ajuste a taxa de transmissão para 9600, você verá a variação do valor de ORP detectado pelo sensor atual.
+Ligue o monitor serial e ajuste a taxa de transmissão para 9600, você verá a variação do valor de ORP detectado pelo sensor atual.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/grove-ORP-sensor/4.png"/></div>
 

@@ -3,13 +3,16 @@ description: reComputer R1225 LoRaWAN Gateway Overview
 title: reComputer R1225 LoRaWAN Gateway Overview
 keywords:
   - SenseCAP Network
+  - Edge Controller
+  - reComputer R1225 
+  - Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
 last_update:
-  date: 01/04/2026
+  date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/r1225_introduction/
 ---
 
@@ -85,6 +88,8 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 
 ## Specifications
 
+<!--Power Consumption功耗待重新测试后补充-->
+
 <div class="table-center">
 <table >
   <tbody>
@@ -132,7 +137,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Consumption</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Idle:2.88W; Full Load:5.52W</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>                 </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Switch</td>
@@ -226,7 +231,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Surge:  EN61000-4-5, Level 2</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>Certification</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>Certification</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE, FCC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -321,12 +326,11 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Weight(Net)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>           </td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g;R1225 with 4G module: 800g</td>
     </tr>
   </tbody>
 </table>
 </div>
-<!--待重新称重后补充-->
 
 ### Statement
 

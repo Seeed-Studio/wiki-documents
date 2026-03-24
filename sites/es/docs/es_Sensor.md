@@ -1,6 +1,6 @@
 ---
-description: La detección es el paso inicial y quizás el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de detección dinámico, sentamos las bases para monitorear las actividades sociales y comprender nuestros entornos físicos y naturales.
-title: Sensores y Detección
+description: La sensorización es el paso inicial y quizá el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de sensorización dinámico, sentamos las bases para supervisar las actividades sociales y comprender nuestros entornos físicos y naturales.
+title: Sensores y Sensorización
 keywords:
   - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,252 +13,253 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/Sensor_Network/
 ---
 
-La detección es el paso inicial y quizás el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de detección dinámico, sentamos las bases para monitorear las actividades sociales y comprender nuestros entornos físicos y naturales. Este proceso de detección nos permite recopilar y comprender datos del mundo que nos rodea.
+
+La sensorización es el paso inicial y quizá el más crucial para obtener datos digitalizados del mundo físico. Al utilizar sensores e infraestructuras de información dentro de un marco de sensorización dinámico, sentamos las bases para supervisar las actividades sociales y comprender nuestros entornos físicos y naturales. Este proceso de sensorización nos permite recopilar y entender datos del mundo que nos rodea.
 
 En esta página, hay dos categorías principales de productos
 
-- **Sensores Industriales y Dispositivos de Red**
+- **Sensores industriales y dispositivos de red**
 
-- **Sensores de Nivel Básico y Módulos de Red**
+- **Sensores de nivel de entrada y módulos de red**
 
-## Sensores Industriales y Dispositivos de Red
+## Sensores industriales y dispositivos de red
 
-<strong><font color={'8DC215'} size={"4"}>Seeed ha lanzado sensores de grado industrial altamente inteligentes con conectividad de largo alcance, equipados con la capacidad de generar datos digitalizados del mundo físico con <em>precisión de nivel instrumental.</em> En esta sección, puedes encontrar:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>Seeed ha lanzado sensores industriales de alta inteligencia y grado industrial con conectividad de largo alcance, equipados con la capacidad de generar datos digitalizados del mundo físico con <em>precisión a nivel instrumental.</em> En esta sección, puedes encontrar:</font></strong>
 
-- Sensores y Sondas para detección de datos ambientales de varios grados industriales
-- Sensores basados en IA para escenarios inteligentes listos para implementar
-- Registradores de Datos para monitoreo remoto de datos ambientales
-- Gateways para transmisiones de datos de largo alcance, alta seguridad, interiores y exteriores
-- Otras infraestructuras de red para transmisión de datos, como routers.
+- Sensores y sondas para la medición de diversos datos ambientales de grado industrial
+- Sensores basados en IA para escenarios inteligentes listos para desplegar
+- Registradores de datos para la monitorización remota de datos ambientales
+- Gateways para transmisiones de datos de largo alcance, alta seguridad, en interiores y exteriores
+- Otras infraestructuras de red para la transmisión de datos, como routers.
 
-### Sensores y Sondas Industriales
+### Sensores y sondas industriales
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Sensores y Sondas SenseCAP</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los sensores y sondas SenseCAP ofrecen detección de múltiples datos ambientales, con diseño de hardware industrial.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Sensors & Probes</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los sensores y sondas SenseCAP ofrecen medición de múltiples datos ambientales, con diseño de hardware industrial.</font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensores Serie SenseCAP S210X</font></div>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga PDF de la Guía del Usuario de la Serie SenseCAP S210X</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S210X Series Sensors</font></div>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga en PDF de la guía de usuario de la serie SenseCAP S210X</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperatura y Humedad</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2101 - Temperatura y humedad</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Intensidad de Luz Inalámbrica</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2102 - Intensidad de luz inalámbrica</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperatura, Humedad y CO2</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2103 - Temperatura, humedad y CO2</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Humedad del Suelo y Temperatura</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2104 - Humedad del suelo y temperatura</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Humedad del Suelo, Temperatura y EC</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/S210X/SenseCAP%20S210X%20LoRaWAN%20Sensor%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP S2105 - Humedad del suelo, temperatura y CE</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sondas SenseCAP</font></div>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detección de Nivel de Líquido</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Probes</font></div>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detección de nivel de líquido</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Alerta de Fuga de Agua</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Water-Leak-Detector" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Alerta de fuga de agua</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Medidor de pH para Condiciones del Suelo y Calidad del Agua</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Medidor de pH para condiciones del suelo y calidad del agua</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonda de Humedad del Suelo y Temperatura</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonda de humedad y temperatura del suelo</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonda de Humedad del Suelo, Temperatura y EC</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonda de humedad, temperatura y CE del suelo</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RS485 Sensor Ultrasónico de Nivel de 500cm</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor ultrasónico de nivel RS485 500cm</font></span></a>
     </div>
 </div>
 
 <div class="intro_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensores Todo-en-uno SenseCAP</font></div>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperatura, Humedad, Presión Atmosférica y Luz</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Multi-in-one Sensors</font></div>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ORCH S4 - Temperatura, humedad, presión atmosférica y luz</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga PDF de la Guía del Usuario de la Serie de Sensores Meteorológicos SenseCAP ONE</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga en PDF de la guía de usuario de la serie de sensores meteorológicos SenseCAP ONE</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperatura, Humedad, Presión Barométrica, Velocidad del Viento y Dirección del Viento</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S500 - Temperatura, humedad, presión barométrica, velocidad y dirección del viento</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperatura, Humedad, Velocidad/Dirección del Viento, Presión Barométrica, Intensidad de Luz, Intensidad de Precipitación</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S700 - Temperatura, humedad, velocidad/dirección del viento, presión barométrica, intensidad de luz, intensidad de precipitación</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - Sensor 9-en-1, capaz de detectar PM2.5 y PM10</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S900 - Sensor 9 en 1, capaz de medir PM2.5 y PM10</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - Sensor 10-en-1, capaz de detectar CO2, PM2.5 y PM10</font></span></a>
+            <a href="https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SenseCAP ONE S1000 - Sensor 10 en 1, capaz de medir CO2, PM2.5 y PM10</font></span></a>
     </div>
 </div>
 
-### Sensores Industriales Basados en IA
+### Sensores industriales basados en IA
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>Sensores SenseCAP Basados en IA</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Construido para escenarios inteligentes listos para implementar, <strong>SenseCAP A1101</strong> con visión inteligente es realmente. </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC21F'} size={"6"}>SenseCAP AI-based Sensors</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Diseñados para escenarios inteligentes listos para desplegar, <strong>SenseCAP A1101</strong> con visión inteligente es realmente potente. </font></div>
     </div>
 </div>
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP A1101 Vision AI</font></div>
-            <a href="/es/SenseCAP-Vision-AI-Get-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Primeros Pasos con SenseCAP A1101 Vision AI</font></span></a>
+            <a href="/es/SenseCAP-Vision-AI-Get-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Primeros pasos con SenseCAP A1101 Vision AI</font></span></a>
             <br/>
-            <a href="/es/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrenar e Implementar Tu Propio Modelo de IA en SenseCAP A1101</font></span></a>
+            <a href="/es/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrena y despliega tu propio modelo de IA en SenseCAP A1101</font></span></a>
             <br/>
-            <a href="/es/One-Stop-Model-Training-with-Edge-Impulse" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrenamiento de Modelo Todo en Uno con Edge Impulse</font></span></a>
+            <a href="/es/One-Stop-Model-Training-with-Edge-Impulse" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrenamiento de modelos integral con Edge Impulse</font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'left'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Más Próximamente</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Más próximamente</font></div>
     </div>
 </div>
 
-### Registrador de Datos con Guía de Configuración
+### Registrador de datos con guía de configuración
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Registrador de Datos SenseCAP</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>El Registrador de Datos SenseCAP puede conectarse a sensores MODBUS-RTU RS485/Analógicos/GPIO y transmitir datos de los sensores a la red LoRaWAN® / 4G </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Data Logger</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Data Logger puede conectarse a sensores MODBUS-RTU RS485/Analógico/GPIO y transmitir datos desde los sensores a la red LoRaWAN® / 4G </font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Registrador de Datos SenseCAP S2100</font></div>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introducción al Registrador de Datos LoRaWAN® SenseCAP S2100</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2100 Data Logger</font></div>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introducción al registrador de datos LoRaWAN® SenseCAP S2100</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el Sensor RS485 de 12V para el Registrador de Datos S2100</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el sensor RS485 de 12V para el registrador de datos S2100</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el Sensor Analógico para el Registrador de Datos S2100</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el sensor analógico para el registrador de datos S2100</font></span></a>
             <br/>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el Sensor Contador y GPIO para el Registrador de Datos S2100</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Counter&GPIO_Sensor_for_S2100_Data_Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Configurar el sensor de contador y GPIO para el registrador de datos S2100</font></span></a>
             <br/>
-            <a href="/es/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Construir Sensores LoRaWAN® con SenseCAP S2110 Sensor Builder y Registrador de Datos SenseCAP</font></span></a>
+            <a href="/es/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Crear sensores LoRaWAN® con SenseCAP S2110 Sensor Builder y SenseCAP Data Logger</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP Sensor Hub 4G</font></div>
-            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introducción al Registrador de Datos SenseCAP Sensor Hub 4G</font></span></a>
+            <a href="/es/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Introducción al registrador de datos SenseCAP Sensor Hub 4G</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/114992170/Sensor%20Hub%204G%20Data%20Logger%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descarga PDF de la Guía de Usuario SenseCAP Sensor Hub 4G</font></span></a>
+            <a href="https://files.seeedstudio.com/products/114992170/Sensor%20Hub%204G%20Data%20Logger%20User%20Guide.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descarga en PDF de la guía de usuario de SenseCAP Sensor Hub 4G</font></span></a>
             <br/>
-            <a href="https://files.seeedstudio.com/products/SenseCAP/114992170/Developer%20Guide%20for%20Private%20MQTT%20Messaging%20of%20SenseCAP%20SensorHub%20v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga PDF de la Guía del Desarrollador para Mensajería MQTT Privada de SenseCAP SensorHub</font></span></a>
+            <a href="https://files.seeedstudio.com/products/SenseCAP/114992170/Developer%20Guide%20for%20Private%20MQTT%20Messaging%20of%20SenseCAP%20SensorHub%20v2.0.pdf" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Descarga en PDF de la guía para desarrolladores de mensajería MQTT privada de SenseCAP SensorHub</font></span></a>
             <br/>
     </div>
 </div>
 
-## Dispositivos de Red para sensores industriales
+## Dispositivos de red para sensores industriales
 
-### Gateway para Múltiples Plataformas
+### Gateway para múltiples plataformas
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Gateway</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway proporciona millas de cobertura de red inalámbrica y capacidad de transmisión de datos para dispositivos Long Range / LoRaWAN® </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway proporciona millas de cobertura de red inalámbrica y capacidad de transmisión de datos para dispositivos de largo alcance / LoRaWAN® </font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Plataforma-Helium</font></div>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio Rápido SenseCAP M1</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway para la plataforma Helium</font></div>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guía de inicio rápido de SenseCAP M1</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Consola Local SenseCAP M1</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Consola local de SenseCAP M1</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio Rápido SenseCAP M2 Solo Datos</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guía de inicio rápido de SenseCAP M2 solo datos</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Consola Local SenseCAP M2 Solo Datos</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Consola local de SenseCAP M2 solo datos</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio Rápido SenseCAP M2 Light Gateway</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guía de inicio rápido de SenseCAP M2 Light Gateway</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>FAQ SenseCAP M2 Light Gateway</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Preguntas frecuentes de SenseCAP M2 Light Gateway</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Multi-Plataforma</font></div>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descripción General del Gateway SenseCAP M2 Multi-Plataforma</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway multiplataforma</font></div>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descripción general de SenseCAP M2 Multi-Platform Gateway</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conectando Plataforma AWS </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma AWS </font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conectando Plataforma TTN </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma TTN </font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conectando Plataforma ChirpStack </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma ChirpStack </font></span></a>
             <br/>
     </div>
 </div>
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'left'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Plataforma-Flux</font></div>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descripción General SenseCAP M4 Square</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway para la plataforma Flux</font></div>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descripción general de SenseCAP M4 Square</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio Rápido SenseCAP M4 Square</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guía de inicio rápido de SenseCAP M4 Square</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>FAQ SenseCAP M4 Square</font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Preguntas frecuentes de SenseCAP M4 Square</font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'left'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Exterior / Interior</font></div>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Gateway Exterior SenseCAP LoRaWAN®</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway para exterior / interior</font></div>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN® Outdoor Gateway</font></span></a>
             <br/>
             <a href="/es/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
             <br/>
     </div>
 </div>
 
-### Routers para Otra Infraestructura de Red
+### Routers para otra infraestructura de red
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Routers</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los routers pueden habilitar las comunicaciones de dispositivos conectando una red local a internet.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los routers pueden habilitar la comunicación de dispositivos conectando una red local a internet.</font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reRouter</font></div>
-            <a href="/es/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introducción a la Descripción General del Hardware</font></span></a>
+            <a href="/es/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introducción a la descripción general del hardware</font></span></a>
             <br/>
-            <a href="/es/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del SO Original </font></span></a>
+            <a href="/es/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del sistema operativo original </font></span></a>
             <br/>
-            <a href="/es/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Instalación de OpenWRT  </font></span></a>
+            <a href="/es/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: instalación de OpenWRT  </font></span></a>
             <br/>
-            <a href="/es/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Instalación de Plex Media Server </font></span></a>
+            <a href="/es/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: instalación de Plex Media Server </font></span></a>
             <br/>
-            <a href="/es/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Uso de Mender para reRouter </font></span></a>
+            <a href="/es/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: uso de Mender para reRouter </font></span></a>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
-            <a href="/es/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introducción a la Descripción General del Hardware</font></span></a>
+            <a href="/es/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Introducción a la descripción general del hardware</font></span></a>
             <br/>
-            <a href="/es/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del SO Original</font></span></a>
+            <a href="/es/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del sistema operativo original</font></span></a>
             <br/>
-            <a href="/es/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Construyendo un centro de control de hogar inteligente alrededor de Home Assistant</font></span></a>
+            <a href="/es/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: creación de un centro de control de hogar inteligente basado en Home Assistant</font></span></a>
     </div>
 </div>
 
-## Sensores de Nivel Básico
+## Sensores de nivel de entrada
 
-<strong><font color={'8DC215'} size={"4"}>Sin la necesidad de instrumentos complejos, es posible detectar y monitorear el mundo físico utilizando microcontroladores y electrónicos funcionales simples. Dentro de este dominio, puedes descubrir lo siguiente:</font></strong>
+<strong><font color={'8DC215'} size={"4"}>Sin necesidad de instrumentos complejos, es posible detectar y monitorizar el mundo físico utilizando microcontroladores y electrónica funcional sencilla. Dentro de este ámbito, puedes descubrir lo siguiente:</font></strong>
 
 - Sensores del ecosistema Grove
 - Módulos de comunicación Grove
 - Otros sensores y módulos de comunicación
 
-### Sensores del Ecosistema Grove
+### Sensores del ecosistema Grove
 
 <!-- Grove Sensor -->
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Sensores Grove</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introducción a los diferentes tipos de Sensores Grove.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introducción a los diferentes tipos de sensores Grove.</font></div>
     </div>
 </div>
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp y Hum</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temp. y hum.</font></div>
             <a href="/es/Grove-Temperature-Humidity-Sensor-DH20" target="_blank"><span><font color={'FFFFFF'} size={"2"}> DHT20 </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-Temperature_and_Humidity_Sensor_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  DHT22</font></span></a>
             <br/>
@@ -274,35 +275,35 @@ En esta página, hay dos categorías principales de productos
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Temperatura</font></div>
             <a href="/es/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808" target="_blank"><span><font color={'FFFFFF'} size={"2"}>I2C - MCP9808</font></span></a>
             <br/>
-            <a href="/es/Grove-Thermal-Imaging-Camera-IR-Array" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Imagen Térmica</font></span></a>
+            <a href="/es/Grove-Thermal-Imaging-Camera-IR-Array" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Imagen térmica</font></span></a>
             <br/>
-            <a href="/es/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Un Cable - MAX31850K</font></span></a>
+            <a href="/es/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Un hilo - MAX31850K</font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"} >Múltiples en uno</font></div>
-            <a href="/es/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Temp/Hum/Presión/Gas</font></span></a>
+            <a href="/es/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Temp./Hum./Presión/Gas</font></span></a>
             <br/>
-            <a href="/es/Grove_SEN5X_All_in_One" target="_blank"><span><font color={'FFFFFF'} size={"2"}>NOx/PM/VOC/RH/Temp</font></span></a>
+            <a href="/es/Grove_SEN5X_All_in_One" target="_blank"><span><font color={'FFFFFF'} size={"2"}>NOx/PM/VOC/HR/Temp.</font></span></a>
             <br/>
-            <a href="/es/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO2/Temp/Hum</font></span></a><span><font size="2">,</font></span>
+            <a href="/es/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41" target="_blank"><span><font color={'FFFFFF'} size={"2"}>CO₂/Temp./Hum.</font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Más... </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Vision AI</font></div>
-            <a href="/es/Train-Deploy-AI-Model-Grove-Vision-AI" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Grove - Vision AI </font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Visión IA</font></div>
+            <a href="/es/Train-Deploy-AI-Model-Grove-Vision-AI" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Grove - Vision IA </font></span></a>
             <br/>
-            <a href="/es/edge-impulse-vision-ai" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrenamiento Rápido de Modelos </font></span></a>
+            <a href="/es/edge-impulse-vision-ai" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Entrenamiento rápido de modelos </font></span></a>
             <br/>
     </div>
 </div>
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Humedad del Suelo</font></div>
-            <a href="/es/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Tipo de Una Sonda</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Humedad del suelo</font></div>
+            <a href="/es/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Tipo de una sonda</font></span></a>
             <br/>
-            <a href="/es/Grove-Moisture_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Tipo de Dos Sondas</font></span></a>
+            <a href="/es/Grove-Moisture_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Tipo de dos sondas</font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -317,12 +318,12 @@ En esta página, hay dos categorías principales de productos
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Calidad del Aire</font></div>
-            <a href="/es/Grove-Air_Quality_Sensor_v1.3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Calidad del Aire</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Calidad del aire</font></div>
+            <a href="/es/Grove-Air_Quality_Sensor_v1.3" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Calidad del aire</font></span></a>
             <br/>
-            <a href="/es/Grove-Laser_PM2.5_Sensor-HM3301" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor Láser PM2.5</font></span></a>
+            <a href="/es/Grove-Laser_PM2.5_Sensor-HM3301" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor láser PM2.5</font></span></a>
             <br/>
-            <a href="/es/Grove-Dust_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Polvo</font></span></a>
+            <a href="/es/Grove-Dust_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de polvo</font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -333,7 +334,7 @@ En esta página, hay dos categorías principales de productos
             <a href="/es/Grove-HCHO_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> HCHO </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-VOC_and_eCO2_Gas_Sensor-SGP30" target="_blank"><span><font color={'FFFFFF'} size={"2"}> SGP30 </font></span></a>
             <br/>
-            <a href="/es/Grove-Multichannel-Gas-Sensor-V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Gas Multicanal </font></span></a>
+            <a href="/es/Grove-Multichannel-Gas-Sensor-V2" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Gas multicanal </font></span></a>
             <br/>
     </div>
 </div>
@@ -365,18 +366,18 @@ En esta página, hay dos categorías principales de productos
             <a href="/es/Grove-UV_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> UV </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-Infrared_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Infrarrojo </font></span></a>
             <br/>
-            <a href="/es/Grove-Line_Finder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Detector de Línea </font></span></a><span><font size="2">,</font></span>
+            <a href="/es/Grove-Line_Finder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Buscador de línea </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-Luminance_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luminancia </font></span></a>
             <br/>
-            <a href="/es/Grove-Sunlight_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luz Solar(Luz Múltiple) </font></span></a>
+            <a href="/es/Grove-Sunlight_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Luz solar (múltiples tipos de luz) </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Biométrico</font></div>
-            <a href="/es/Grove-Finger-clip_Heart_Rate_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Frecuencia Cardíaca </font></span></a>
+            <a href="/es/Grove-Finger-clip_Heart_Rate_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Frecuencia cardíaca </font></span></a>
             <br/>
-            <a href="/es/Grove-Fingerprint_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Huella Dactilar </font></span></a>
+            <a href="/es/Grove-Fingerprint_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Huella dactilar </font></span></a>
             <br/>
-            <a href="/es/Grove-GSR_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GSR(Piel Galvánica) </font></span></a>
+            <a href="/es/Grove-GSR_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> GSR (respuesta galvánica de la piel) </font></span></a>
             <br/>
     </div>
 </div>
@@ -385,25 +386,25 @@ En esta página, hay dos categorías principales de productos
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sonido</font></div>
             <a href="/es/Grove-Sound_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonido </font></span></a><span><font size="2">,</font></span>
-            <a href="/es/Grove-Loudness_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Volumen </font></span></a>
+            <a href="/es/Grove-Loudness_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sonoridad </font></span></a>
             <br/>
             <a href="/es/Grove-Recorder_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Grabadora </font></span></a>
             <br/>
-            <a href="/es/Grove-Speech_Recognizer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Reconocedor de Voz </font></span></a>
+            <a href="/es/Grove-Speech_Recognizer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Reconocedor de voz </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Táctil</font></div>
-            <a href="/es/Grove-Touch_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Táctil </font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Tacto</font></div>
+            <a href="/es/Grove-Touch_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Tacto </font></span></a>
             <br/>
             <a href="/es/Grove-2_Channel_Inductive_Sensor-LDC1612" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Inductivo </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Capacitivo </font></span></a>
             <br/>
-            <a href="/es/Grove-Round_Force_Sensor_FSR402" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Fuerza Redondo </font></span></a>
+            <a href="/es/Grove-Round_Force_Sensor_FSR402" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Redondo sensible a la fuerza </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Líquido</font></div>
             <a href="/es/Grove-Water_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Agua </font></span></a><span><font size="2">,</font></span>
-            <a href="/es/Grove-Water-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nivel de Agua </font></span></a>
+            <a href="/es/Grove-Water-Level-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nivel de agua </font></span></a>
             <br/>
             <a href="/es/Grove-EC-Sensor-kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> EC </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-TDS-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> TDS </font></span></a>
@@ -420,20 +421,20 @@ En esta página, hay dos categorías principales de productos
             <a href="/es/Grove-Piezo_Vibration_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Vibración </font></span></a><span><font size="2">,</font></span>
             <a href="/es/Grove-Collision_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Colisión </font></span></a>
             <br/>
-            <a href="/es/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Potenciómetro Deslizante </font></span></a>
+            <a href="/es/Grove-Slide_Potentiometer" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Potenciómetro deslizante </font></span></a>
     </div>
 </div>
 
-## Módulos de Red para sensores de nivel básico
+## Módulos de red para sensores de nivel inicial
 
-### Módulos de Comunicación Grove
+### Módulos de comunicación Grove
 
-<!-- Red de Sensores Grove -->
+<!-- Grove Sensor Network -->
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Red de Sensores Grove</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introducción a la Red de Sensores Grove y los métodos de transmisión disponibles para los sensores.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Red de sensores Grove</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Introducción a la red de sensores Grove y a los métodos de transmisión disponibles para los sensores.</font></div>
     </div>
 </div>
 
@@ -447,7 +448,7 @@ En esta página, hay dos categorías principales de productos
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Bluetooth</font></div>
             <a href="/es/Grove-BLE-dual_model-v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BLE(modelo dual) v1 </font></span></a>
             <br/>
-            <a href="/es/Grove-Serial_Bluetooth_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth Serial v3.0 </font></span></a>
+            <a href="/es/Grove-Serial_Bluetooth_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Bluetooth serie v3.0 </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -474,50 +475,50 @@ En esta página, hay dos categorías principales de productos
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>RF</font></div>
-            <a href="/es/Grove-Serial_RF_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Serial RF Pro </font></span></a>
+            <a href="/es/Grove-Serial_RF_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RF serie Pro </font></span></a>
             <br/>
-            <a href="/es/Grove-125KHz_RFID_Reader" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Lector RFID 125KHz </font></span></a>
+            <a href="/es/Grove-125KHz_RFID_Reader" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Lector RFID de 125KHz </font></span></a>
             <br/>
-            <a href="/es/Grove_LoRa_Radio" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 868MHz Largo Alcance </font></span></a>
+            <a href="/es/Grove_LoRa_Radio" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 868MHz de largo alcance </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Protocolo Estándar</font></div>
-            <a href="/es/Grove-I2C_ADC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Convertidor Analógico-Digital </font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Protocolo estándar</font></div>
+            <a href="/es/Grove-I2C_ADC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Convertidor analógico a digital </font></span></a>
             <br/>
             <a href="/es/Grove-RJ45_Adapter" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Adaptador RJ45 </font></span></a>
             <br/>
-            <a href="/es/Grove-I2C_FM_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Receptor de Modulación de Frecuencia </font></span></a>
+            <a href="/es/Grove-I2C_FM_Receiver" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Receptor de modulación de frecuencia </font></span></a>
             <br/>
     </div>
 </div>
 
-### Otros Sensores y Módulos de Comunicación
+### Otros sensores y módulos de comunicación
 
 <!-- Sensing Nodes -->
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Nodos de Sensado</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> Introducción a los Nodos de Sensado y sensores fuera del ecosistema Grove.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Nodos de sensado</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}> Introducción a los nodos de sensado y a los sensores fuera del ecosistema Grove.</font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensor de Radar mmWave</font></div>
-            <a href="/es/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de Presencia Estática Humana mmWave 24GHz Lite - Parámetro Configurable</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensor de radar mmWave</font></div>
+            <a href="/es/Radar_MR24HPC1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de presencia humana estática mmWave de 24GHz Lite - Parámetro configurable</font></span></a>
             <br/>
-            <a href="/es/Radar_MR24FDB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Detección de Caídas mmWave 24GHz </font></span></a><span><font size="2">,</font></span>
-            <a href="/es/Radar_MR24HPB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Presencia Estática Humana mmWave 24GHz</font></span></a>
+            <a href="/es/Radar_MR24FDB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de detección de caídas mmWave de 24GHz </font></span></a><span><font size="2">,</font></span>
+            <a href="/es/Radar_MR24HPB1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de presencia humana estática mmWave de 24GHz</font></span></a>
             <br/>
-            <a href="/es/Radar_MR24BSD1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de Monitoreo de Respiración Durante el Sueño mmWave 60GHz</font></span></a>
+            <a href="/es/Radar_MR24BSD1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de monitorización de respiración durante el sueño mmWave de 60GHz</font></span></a>
             <br/>
-            <a href="/es/Radar_MR60BHA1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de Respiración y Latidos mmWave 60GHz</font></span></a>
+            <a href="/es/Radar_MR60BHA1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de respiración y latido cardíaco mmWave de 60GHz</font></span></a>
             <br/>
-            <a href="/es/Radar_MR60FDA1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de Detección de Caídas mmWave 60GHz Pro</font></span></a>
+            <a href="/es/Radar_MR60FDA1" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo Pro de detección de caídas mmWave de 60GHz</font></span></a>
             <br/>
-            <a href="/es/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Microondas - Sensor de Movimiento Radar Doppler 24GHz - MW2401TR11</font></span></a>
+            <a href="/es/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de microondas - Sensor de movimiento por radar Doppler de 24GHz - MW2401TR11</font></span></a>
             <br/>
     </div>
 </div>
@@ -526,9 +527,9 @@ En esta página, hay dos categorías principales de productos
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Producto Obsoleto / Retirado</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Sensores y módulos de comunicación heredados de Seeed Studio.</font></div>
-            <a href="/es/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Haz CLIC AQUÍ </font></span></a> para ver la imagen completa.
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Producto obsoleto / retirado</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Sensores heredados y módulos de comunicación de Seeed Studio.</font></div>
+            <a href="/es/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Haz clic AQUÍ </font></span></a> para ver la imagen completa.
     </div>
 </div>
 
@@ -537,26 +538,26 @@ En esta página, hay dos categorías principales de productos
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Sensores</font></div>
             <a href="/es/Ultra_Sonic_range_measurement_module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo de medición de rango ultrasónico</font></span></a>
             <br/>
-            <a href="/es/Water-Flow-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de Flujo de Agua </font></span></a><span><font size="2">,</font></span>
-            <a href="/es/Gear_Stepper_Motor_Driver_Pack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Paquete de Controlador de Motor Paso a Paso con Engranajes</font></span></a>
+            <a href="/es/Water-Flow-Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor de flujo de agua </font></span></a><span><font size="2">,</font></span>
+            <a href="/es/Gear_Stepper_Motor_Driver_Pack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Paquete de controlador de motor paso a paso con engranajes</font></span></a>
             <br/>
-            <a href="/es/Photo_Reflective_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor Foto Reflectivo </font></span></a><span><font size="2">,</font></span>
-            <a href="/es/G3-4_Water_Flow_sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Sensor de Peso </font></span></a>
+            <a href="/es/Photo_Reflective_Sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Sensor foto reflectivo </font></span></a><span><font size="2">,</font></span>
+            <a href="/es/G3-4_Water_Flow_sensor" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Sensor de peso </font></span></a>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Red de Sensores</font></div>
-            <a href="/es/Wireless_Sensor_Node-Solar_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nodo de Sensor Inalámbrico - Kit Solar</font></span></a>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Red de sensores</font></div>
+            <a href="/es/Wireless_Sensor_Node-Solar_Kit" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Nodo de sensor inalámbrico - Kit solar</font></span></a>
             <br/>
-            <a href="/es/WiFi_Serial_Transceiver_Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo Transceptor Serial WiFi</font></span></a>
+            <a href="/es/WiFi_Serial_Transceiver_Module" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Módulo transceptor serie WiFi</font></span></a>
             <br/>
             <a href="/es/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Kits de enlace RF de largo alcance de 2KM con codificador y decodificador</font></span></a>
             <br/>
     </div>
 </div>
 
-## Desde sensores de nivel básico hasta grado industrial
+## Desde sensores de nivel básico hasta de grado industrial
 
-Imagina el ritmo acelerado al que puedes construir sensores y aplicaciones de Internet de las Cosas (IoT) de grado industrial en minutos, así como desarrollar dispositivos LoRaWAN personalizados de código abierto a bajo costo.
+Imagina la rapidez con la que puedes construir sensores y aplicaciones de Internet de las Cosas (IoT) de grado industrial en cuestión de minutos, así como desarrollar dispositivos LoRaWAN de código abierto personalizados a bajo costo.
 
 ### SenseCAP S2110 Sensor Builder
 
@@ -565,49 +566,49 @@ Imagina el ritmo acelerado al que puedes construir sensores y aplicaciones de In
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP S2110 Sensor Builder</font></div>
             <span><font color={'FFFFFF'} size={"4"}> 🔧 Una herramienta de código abierto para construir sensores RS485 con el ecosistema Grove </font></span>
             <br/>
-            <a href="https://wiki.seeedstudio.com/es/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > Construir Sensores LoRaWAN con SenseCAP S2110 Sensor Builder y SenseCAP Data Logger</font></span></a>
+            <a href="https://wiki.seeedstudio.com/es/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger/" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > Construye sensores LoRaWAN con SenseCAP S2110 Sensor Builder y SenseCAP Data Logger</font></span></a>
     </div>
 </div>
 
-## Transición de Simple a Sofisticado
+## Transición de lo simple a lo sofisticado
 
-- Desarrollando soluciones industriales con hardware de sensores de nivel básico.
+- Desarrollo de soluciones industriales con hardware de sensores de nivel básico.
 
 ### SenseCAP K1100
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
-            <span><font color={'FFFFFF'} size={"4"}> ☁️ Aplicación de Red LoRaWAN® </font></span>
+            <span><font color={'FFFFFF'} size={"4"}> ☁️ Aplicación de red LoRaWAN® </font></span>
             <br/>
-            <a href="/es/K1100_sensecap_node-red" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > SenseCAP y Node-Red para Servicios en la Nube</font></span></a>
+            <a href="/es/K1100_sensecap_node-red" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > SenseCAP y Node-Red para servicios en la nube</font></span></a>
             <br/>
-            <span><font color={'FFFFFF'} size={"2"}> Integrado</font></span><a href="/es/K1100_SenseCAP_to_Azure_IoT_Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
+            <span><font color={'FFFFFF'} size={"2"}> Integrado con</font></span><a href="/es/K1100_SenseCAP_to_Azure_IoT_Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
             <a href="/es/K1100_SenseCAP_to_PowerBI" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Power BI</font></span></a><span><font size="2">,</font></span>
             <a href="/es/K1100_SenseCAP_to_influxdb" target="_blank"><span><font color={'FFFFFF'} size={"2"}> InfluxDB</font></span></a>
             <br/>
-            <a href="/es/Helium-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > Servicios en la Nube Helium</font></span></a>
+            <a href="/es/Helium-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}>  > Servicios en la nube de Helium</font></span></a>
             <br/>
-            <span><font color={'FFFFFF'} size={"2"}> Integrado</font></span><a href="/es/Integrate-into-Azure-IoT-Hub" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
+            <span><font color={'FFFFFF'} size={"2"}> Integrado con</font></span><a href="/es/Integrate-into-Azure-IoT-Hub" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Azure IoT</font></span></a><span><font size="2">,</font></span>
             <a href="/es/Integrate_into_Google_Sheets_via_Helium" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Google Sheets</font></span></a><span><font size="2">,</font></span>
             <a href="/es/Connect_AWS_via_helium" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AWS IOT</font></span></a>
             <br/>
-            <a href="/es/TTN-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}> > Servicios en la Nube TTN</font></span></a>
+            <a href="/es/TTN-Introduction" target="_blank"><span><font color={'FFFFFF'} size={"3"}> > Servicios en la nube de TTN</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>SenseCAP K1100</font></div>
-            <span><font color={'FFFFFF'} size={"4"}> ☁️ Aplicación de Red WiFi </font></span>
+            <span><font color={'FFFFFF'} size={"4"}> ☁️ Aplicación de red WiFi </font></span>
             <br/>
-            <a href="/es/Quick-Start-to-using-Blynk" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Inicio Rápido con Blynk</font></span></a>
+            <a href="/es/Quick-Start-to-using-Blynk" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Inicio rápido con Blynk</font></span></a>
             <br/>
-            <a href="/es/Connect-Wio-Terminal-to-Google-Cloud" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Inicio Rápido con Google Cloud IoT</font></span></a>
+            <a href="/es/Connect-Wio-Terminal-to-Google-Cloud" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Inicio rápido con Google Cloud IoT</font></span></a>
             <br/>
             <a href="/es/Develop-in-Microsoft-Azure-IoT-Central" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Desarrollar en Microsoft Azure IoT Central</font></span></a>
             <br/>
             <a href="/es/K1100_Azure_to_PowerBI" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Visualización de datos con Power BI</font></span></a>
             <br/>
-            <a href="/es/Wio-Terminal-Advanced-WiFi" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Uso Avanzado de WiFi</font></span></a>
+            <a href="/es/Wio-Terminal-Advanced-WiFi" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  > Uso avanzado de WiFi</font></span></a>
             <br/>
     </div>
 </div>

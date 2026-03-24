@@ -121,7 +121,7 @@ Pinos Digitais
   <tr>
     <td><h4>D3</h4></td>
     <td><h4>NOT USED</h4></td>
-  </tr]
+  </tr>
   <tr>
     <td><h4>D4</h4></td>
     <td><h4>TF_CS</h4></td>
@@ -229,7 +229,7 @@ Nós mostraremos como este display funciona, por favor prepare os materiais abai
   <td><a href="https://www.seeedstudio.com/2.8-TFT-Touch-Shield-V2.0-p-1286.html" target="_blank"><span>Mais Detalhes</span></a></td>
   <td><a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html" target="_blank"><span>Mais Detalhes</span></a></td>  
   </tr>  
-  </tbody></table]
+  </tbody></table>
 
 ### Baixar Biblioteca Arduino
 

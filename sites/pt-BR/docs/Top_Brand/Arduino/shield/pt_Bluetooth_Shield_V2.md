@@ -116,7 +116,7 @@ Via um aplicativo Bluetooth SPP
 
 2. Abra o Arduino IDE, File -&gt; Examples -&gt; Bluetooth_Shield_V2_Demo_Code -&gt; Slave_Temperature, então você pode abrir o código
 
-3. Clique em Upload para enviar o código. Se você tiver qualquer problema sobre como começar a usar o Arduino, clique [aqui](/pt-br//Getting_Started_with_Seeeduino) para obter ajuda.
+3. Clique em Upload para enviar o código. Se você tiver qualquer problema sobre como começar a usar o Arduino, clique [aqui](/pt-br/Getting_Started_with_Seeeduino) para obter ajuda.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shield_Demo2.jpg" alt="pir" width={600} height="auto" /></p>
 

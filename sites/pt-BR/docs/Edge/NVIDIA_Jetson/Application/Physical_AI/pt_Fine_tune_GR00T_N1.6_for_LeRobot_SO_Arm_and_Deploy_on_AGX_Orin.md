@@ -48,7 +48,7 @@ Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.6** para o **
       >
         <strong>
           <span>
-            <font color={'FFFFFF'} size={'4'}>Get One Now 🖱</font>
+            <font color={'FFFFFF'} size={'4'}>Adquira agora 🖱</font>
           </span>
         </strong>
       </a>
@@ -69,7 +69,7 @@ Este wiki explica como **ajustar finamente o NVIDIA Isaac GR00T N1.6** para o **
       >
         <strong>
           <span>
-            <font color={'FFFFFF'} size={'4'}>Get One Now 🖱️</font>
+            <font color={'FFFFFF'} size={'4'}>Adquira agora 🖱️</font>
           </span>
         </strong>
       </a>

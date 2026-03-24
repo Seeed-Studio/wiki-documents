@@ -20,6 +20,7 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/Cloud/
 ---
 
+
 Cloud services are a vital component that enable processed data management from computing boards and provide users with real-time operations. This page introduces Seeed’s industrial-grade SenseCraft cloud services, along with other cloud service applications tailored for diverse industrial IoT needs. Through a robust cloud infrastructure, Seeed empowers users to securely store, analyze, and leverage processed data, facilitating data-driven decision-making and enhancing operational efficiency across various domains.
 
 ## SenseCraft Cloud Service

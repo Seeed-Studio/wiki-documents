@@ -69,7 +69,7 @@ url: https://wiki.seeedstudio.com/pt-br/Edge_series_Intro/
    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/Edgebox-rpi-200-balena-OS-setup/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Saiba Mais</font></span></strong></a></div></td>
   </tr>
  </table>
-</div]
+</div>
 
 <div class="table-center">
  <table class="table-nobg">

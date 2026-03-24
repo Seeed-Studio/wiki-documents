@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_A608_Flash_System/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Gravar o JetPack OS na Placa-Carregadora A608 (compatível com NVIDIA Jetson Orin NX/Nano)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.jpg" /></div>
@@ -352,6 +354,13 @@ Após a gravação, ligue o dispositivo Jetson novamente e faça login no sistem
 ## Recursos
 
 - [Arquivos CAD do A608](https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608_V1.2.zip)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico & Discussão sobre o Produto
 

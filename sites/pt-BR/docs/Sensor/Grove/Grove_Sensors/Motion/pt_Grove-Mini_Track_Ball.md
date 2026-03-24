@@ -80,7 +80,7 @@ Interface para controlar movimentos.
 | Seeeduino V4.2 | Grove-Mini_Track_Ball |
 |---------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Mini_Track_Ball/img/45d_small.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/depot/Grove-Mini-Track-Ball-p-2586.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/depot/Grove-Mini-Track-Ball-p-2586.html)|
 
 - **Passo 2.** Conecte o Grove-Mini_Track_Ball à porta **I2C** do Seeeduino.
 - **Passo 3.** Conecte o Seeeduino ao PC por meio de um cabo USB.
