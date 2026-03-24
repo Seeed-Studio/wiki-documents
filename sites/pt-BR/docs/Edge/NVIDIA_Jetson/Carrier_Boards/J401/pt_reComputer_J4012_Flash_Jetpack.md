@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J4012_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Gravar o sistema JetPack na placa carrier J401
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/recomputer-j401.png"/></div>
@@ -32,6 +34,13 @@ A placa carrier J401 é uma poderosa placa de expansão que suporta módulos NVI
 - **Armazenamento flexível e expansão sem fio:** Instalada com 1 slot M.2 Key M 2280 e 1 slot M.2 Key E, oferecendo amplo espaço para armazenamento flexível e expansão de conectividade sem fio
 - **Periféricos avançados suportados:** Integra 2 conectores de câmera CSI de 15 pinos, 1 HDMI 2.1, 1 ventoinha e 1 RTC para múltiplos periféricos
 - **Ampla faixa de tensões de entrada:** De 9–19 V DC, proporcionando flexibilidade nas opções de fonte de alimentação
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 

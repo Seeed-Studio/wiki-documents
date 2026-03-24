@@ -14,6 +14,8 @@ createdAt: '2024-07-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
 1. Not finishing the message transmission process
@@ -595,6 +597,17 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

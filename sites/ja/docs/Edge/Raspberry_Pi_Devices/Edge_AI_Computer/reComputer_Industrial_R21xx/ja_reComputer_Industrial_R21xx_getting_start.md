@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_R21xx_getting_start/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -1144,6 +1146,17 @@ UPS機能については詳細情報をお問い合わせください。アラ�
 ## 追加リソース
 
 - [reComputer Industrial R21xxフライヤー](https://files.seeedstudio.com/wiki/raspberry-pi/Seeed_Raspberry_Pi_Flyer.pdf)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポートと製品ディスカッション
 

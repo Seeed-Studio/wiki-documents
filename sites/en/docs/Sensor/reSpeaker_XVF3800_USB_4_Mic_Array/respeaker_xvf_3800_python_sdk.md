@@ -7,11 +7,12 @@ keywords:
   - sdk
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_python_sdk
+sku: 114993700
 last_update:
   date: 11/14/2025
   author: Kasun Thushara
 createdAt: '2025-11-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/
 ---
 
@@ -37,109 +38,118 @@ import time
 
 # name, resid, cmdid, length, type
 PARAMETERS = {
-    "VERSION": (48, 0, 3, "ro", "uint8"),
+    "VERSION":          (48,  0,  3,  "ro", "uint8"),
     "AEC_AZIMUTH_VALUES": (33, 75, 16, "ro", "radians"),
-    "DOA_VALUE": (20, 18, 4, "ro", "uint16"),
-    "REBOOT": (48, 7, 1, "wo", "uint8"),
+    "DOA_VALUE":        (20, 18,  4,  "ro", "uint16"),   # 4 bytes → two uint16 words
+    "REBOOT":           (48,  7,  1,  "wo", "uint8"),
 }
 
 class ReSpeaker:
     TIMEOUT = 100000  # USB timeout
 
     def __init__(self, dev):
-        self.dev = dev  # store device
+        self.dev = dev
 
     def write(self, name, data_list):
         try:
-            data = PARAMETERS[name]  # get param data
+            data = PARAMETERS[name]
         except KeyError:
             return
 
-        if data[3] == "ro":  # check read-only
+        if data[3] == "ro":
             raise ValueError('{} is read-only'.format(name))
 
-        if len(data_list) != data[2]:  # count mismatch
+        if len(data_list) != data[2]:
             raise ValueError('{} value count is not {}'.format(name, data[2]))
 
-        windex = data[0]  # resid index
-        wvalue = data[1]  # command ID
-        data_type = data[4]  # type info
-        data_cnt = data[2]  # value count
-        payload = []  # USB payload
+        windex   = data[0]
+        wvalue   = data[1]
+        data_type = data[4]
+        data_cnt  = data[2]
+        payload   = []
 
-        if data_type == 'float' or data_type == 'radians':  # float pack
+        if data_type in ('float', 'radians'):
             for i in range(data_cnt):
                 payload += struct.pack(b'f', float(data_list[i]))
-        elif data_type == 'char' or data_type == 'uint8':  # byte pack
+        elif data_type in ('char', 'uint8'):
             for i in range(data_cnt):
                 payload += data_list[i].to_bytes(1, byteorder='little')
-        else:  # int pack
+        else:
             for i in range(data_cnt):
                 payload += struct.pack(b'i', data_list[i])
 
         print("WriteCMD: cmdid: {}, resid: {}, payload: {}".format(wvalue, windex, payload))
-
-        # send control transfer
         self.dev.ctrl_transfer(
             usb.util.CTRL_OUT | usb.util.CTRL_TYPE_VENDOR | usb.util.CTRL_RECIPIENT_DEVICE,
             0, wvalue, windex, payload, self.TIMEOUT)
 
     def read(self, name):
         try:
-            data = PARAMETERS[name]  # get param info
+            data = PARAMETERS[name]
         except KeyError:
             return
 
-        resid = data[0]  # resource ID
-        cmdid = 0x80 | data[1]  # read command
-        length = data[2] + 1  # add status byte
+        resid  = data[0]
+        cmdid  = 0x80 | data[1]
+        length = data[2] + 1        # +1 for the leading status byte
 
-        # read control transfer
         response = self.dev.ctrl_transfer(
             usb.util.CTRL_IN | usb.util.CTRL_TYPE_VENDOR | usb.util.CTRL_RECIPIENT_DEVICE,
             0, cmdid, resid, length, self.TIMEOUT)
 
-        if data[4] == 'uint8':  # return bytes
-            result = response.tolist()
-        elif data[4] == 'radians':  # unpack floats
-            byte_data = response.tobytes()
-            num_values = (length - 1) / 4
-            match_str = '<'
-            for i in range(int(num_values)):
-                match_str += 'f'
-            result = struct.unpack(match_str, byte_data[1:length])
-        elif data[4] == 'uint16':  # return uint16 list
+        byte_data = response.tobytes()
+
+        if data[4] == 'uint8':
             result = response.tolist()
 
-        return result  # return parsed data
+        elif data[4] == 'radians':
+            num_floats = (length - 1) // 4           # each float = 4 bytes
+            fmt = '<' + 'f' * num_floats
+            result = list(struct.unpack(fmt, byte_data[1:1 + num_floats * 4]))
+
+        elif data[4] == 'uint16':
+            # ── FIX ──────────────────────────────────────────────────────────
+            # byte_data[0]      = status byte (skip it)
+            # byte_data[1:...]  = payload: N little-endian uint16 words
+            # Each word is 2 bytes, so num_words = data[2] / 2
+            num_words = data[2] // 2                 # 4 bytes → 2 words
+            fmt = '<' + 'H' * num_words              # unsigned 16-bit, little-endian
+            result = list(struct.unpack(fmt, byte_data[1:1 + num_words * 2]))
+            # ─────────────────────────────────────────────────────────────────
+
+        return result
 
     def close(self):
-        usb.util.dispose_resources(self.dev)  # release device
+        usb.util.dispose_resources(self.dev)
 
 def find(vid=0x2886, pid=0x001A):
-    dev = usb.core.find(idVendor=vid, idProduct=pid)  # find device
+    dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return
-    return ReSpeaker(dev)  # return instance
+    return ReSpeaker(dev)
 
 def main():
-    dev = find()  # find device
+    dev = find()
     if not dev:
         print('No device found')
         sys.exit(1)
 
-    print('{}: {}'.format("VERSION", dev.read("VERSION")))  # print version
+    print('{}: {}'.format("VERSION", dev.read("VERSION")))
 
     while True:
-        result = dev.read("DOA_VALUE")  # read direction
-        print('{}: {}, {}: {}'.format("SPEECH_DETECTED", result[3], "DOA_VALUE", result[1]))
-        time.sleep(1)  # delay 1 sec
+        result = dev.read("DOA_VALUE")
+        # After uint16 unpacking: result = [doa_angle, vad_flag]
+        # ── FIX: use decoded word indices, not raw byte offsets ──
+        doa_angle     = result[0]   # 0–359 degrees (now supports > 255)
+        speech_active = result[1]   # VAD flag: 1 = speech, 0 = silence
+        # ────────────────────────────────────────────────────────
+        print('SPEECH_DETECTED: {}, DOA_VALUE: {}'.format(speech_active, doa_angle))
+        time.sleep(0.1)
 
-    dev.close()  # close device
+    dev.close()
 
 if __name__ == '__main__':
-    main()  # run program
-
+    main()
 ```
 
 ## Using XVF_Host 

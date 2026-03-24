@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/recomputer_r1100_intro/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## Overview
 
 The reComputer R1100, powered by the Raspberry Pi CM4, is a versatile edge IoT gateway with AI capabilities. It features a comprehensive range of industrial interfaces, including **2x Ethernet, 2x USB, 2x RS485, 2x RS232, 2x DI, and 2x DO**, along with flexible wireless connectivity options such as **4G, LoRa®, and Wi-Fi/BLE**. These features make it an ideal choice for various industrial applications.
@@ -730,6 +732,17 @@ The **UPS runtime** depends on the **system load**. Below are test results with:
 - [reComputer R1100 Schematic Design, PCB Design](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [reComputer R1100 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [User Manual](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 
