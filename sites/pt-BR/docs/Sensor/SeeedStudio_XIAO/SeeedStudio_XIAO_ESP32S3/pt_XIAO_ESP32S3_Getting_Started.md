@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeiros passos com a Série Seeed Studio XIAO ESP32S3
 
@@ -181,6 +182,13 @@ A **câmera OV2640** foi descontinuada e o XIAO ESP32S3 Sense subsequente utiliz
         <td align="center">Modo Ativo: <strong>~ 0,15A</strong></td>
     </tr>
 </table>
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Visão Geral de Hardware
 

@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/local_openclaw_on_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## Overview
 
 OpenClaw is an agent framework that can work with either cloud LLMs or local models, depending on your deployment needs. Cloud models are convenient to start with: they require no local setup, offer a wide range of model choices, and are easy to scale. The tradeoffs are ongoing token costs, dependence on external services, and stricter constraints around data residency and connectivity. Local models avoid recurring API fees, keep data on-device, and continue to operate in offline or restricted networks. The tradeoffs are additional setup effort and the need to match model size to the device’s compute and storage limits. For edge robotics and long-running assistants, these advantages make local deployment a practical default. This wiki shows how to run OpenClaw on reComputer Jetson with Ollama to build a self‑contained AI control hub.
@@ -369,6 +371,17 @@ If you are also interested in this project, try deploying it now!
 - https://ollama.com/
 - https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/
 
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

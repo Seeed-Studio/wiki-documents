@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros passos com o reComputer J30/40
 
 <div class="video-container">
@@ -39,6 +41,13 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
 - **Expansível com ricas E/S:** 4x USB3.2, HDMI 2.1, 2xCSI, 1xRJ45 para GbE, M.2 Key E, M.2 Key M, CAN e GPIO
 - **Acelere sua solução para o mercado:** Jetpack pré-instalado com NVIDIA JetPack™ 5.1 no SSD NVMe de 128GB incluído, BSP de SO Linux, SSD de 128GB, módulo combo WiFi BT, 2x antenas, suporta software Jetson e principais frameworks e plataformas de software de IA
 - **Certificações abrangentes:** FCC, CE, RoHS, UKCA
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 

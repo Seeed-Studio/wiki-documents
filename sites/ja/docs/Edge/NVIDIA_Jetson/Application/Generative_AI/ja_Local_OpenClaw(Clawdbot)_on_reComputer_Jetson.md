@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/local_openclaw_on_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## 概要
 
 OpenClawは、デプロイメントのニーズに応じてクラウドLLMまたはローカルモデルのいずれでも動作できるエージェントフレームワークです。クラウドモデルは開始するのに便利です：ローカルセットアップが不要で、幅広いモデル選択肢を提供し、スケールしやすいです。トレードオフは継続的なトークンコスト、外部サービスへの依存、データ居住性と接続性に関するより厳しい制約です。ローカルモデルは継続的なAPI料金を回避し、データをデバイス上に保持し、オフラインまたは制限されたネットワークでも動作し続けます。トレードオフは追加のセットアップ作業と、モデルサイズをデバイスの計算およびストレージ制限に合わせる必要があることです。エッジロボティクスと長時間実行アシスタントにとって、これらの利点はローカルデプロイメントを実用的なデフォルトにします。このwikiでは、reComputer JetsonでOllamaを使用してOpenClawを実行し、自己完結型AIコントロールハブを構築する方法を説明します。
@@ -369,6 +371,17 @@ WebUIを開く際に「アクセスできません」エラーが継続して表
 - https://ollama.com/
 - https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_j501_robotics_getting_started/
 
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 
