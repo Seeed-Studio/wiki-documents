@@ -9,7 +9,7 @@ aliases:
 sidebar_position: 1
 last_update:
   date: 11/27/2024
-  author: Citrc
+  author: Citric
 createdAt: '2024-11-27'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/sensecraft-ai/sensecraft-ai-main/
