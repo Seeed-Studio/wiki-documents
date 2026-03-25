@@ -91,7 +91,7 @@ Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar otros SO como **Ubuntu Desktop 24.04 lts** navegando a **Other general purpose OS**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -107,19 +107,19 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 ### Para ordenador host con Linux
 
-- **Paso 1.** Descarga snap
+- **Paso 1.** Descargar snap
 
 ```sh
 sudo apt install snap
 ```
 
-- **Paso 2.** Descarga **rpi-imager**
+- **Paso 2.** Descargar **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Paso 3.** Abre el software Raspberry Pi Imager
+- **Paso 3.** Abrir el software Raspberry Pi Imager
 
 ```sh
 rpi-imager
@@ -138,7 +138,7 @@ Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contr
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**NOTA:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar otros SO como **64-bit Ubuntu** navegando a **Other general purpose OS**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -160,9 +160,9 @@ El resultado se muestra a continuación:
 
 ### Actualizar EEPROM
 
-*Este método funciona si tienes un SSD y has arrancado el dispositivo correctamente con eMMC. Asegúrate de que tu sistema sea la última versión de Raspberry Pi (Bookworm o posterior) y de que el firmware de tu RPi 5 esté actualizado a 2023-12-06 (6 de diciembre) o más reciente; de lo contrario, es posible que no reconozca las configuraciones relacionadas con NVME.*
+*Este método funciona si tienes un SSD y has arrancado el dispositivo correctamente con eMMC. Asegúrate de que tu sistema es la última versión de Raspberry Pi (Bookworm o posterior) y de que el firmware de tu RPi 5 está actualizado a 2023-12-06 (6 de diciembre) o más reciente; de lo contrario, es posible que no reconozca las configuraciones relacionadas con NVME.*
 
-**Paso 1**: Asegúrate de que tu sistema Raspberry Pi esté actualizado (Bookworm o posterior); introduce el siguiente comando para actualizar el firmware de la RPi 5:
+**Paso 1**: Asegúrate de que tu sistema Raspberry Pi está actualizado (Bookworm o posterior); introduce el siguiente comando para actualizar el firmware de la RPi 5:
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -181,7 +181,7 @@ Y finalmente elige `Latest`, y pulsa Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
-Selecciona `No` aquí: quieres el bootloader `latest`.
+Selecciona `No` aquí: quieres el gestor de arranque `latest`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_4.png" alt="pir" width="800" height="auto" /></div>
 
@@ -193,7 +193,7 @@ Si se te pide reiniciar, selecciona `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="800" height="auto" /></div>
 
-**Paso 2**: Haz clic en **Applications** => **Accessories** => **SD Card Copier** en la pantalla principal, ejecuta el programa **SD Card Copier** y copia el SO al SSD NVME como se muestra en la figura siguiente.
+**Paso 2**：Haz clic en **Applications** =>**Accessories** =>**SD Card Copier** en la pantalla principal, ejecuta el programa **SD Card Copier** y copia el SO al SSD NVME como se muestra en la figura siguiente.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="800" height="auto" /></div>
 
@@ -218,7 +218,7 @@ Desplázate hacia abajo hasta `Advanced Options` y pulsa Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="800" height="auto" /></div>
 
-Se confirmará la configuración. Pulsa Enter:
+La configuración será confirmada. Pulsa Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
@@ -230,10 +230,43 @@ Se te preguntará si deseas reiniciar ahora. Haz clic en `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
+## Instalar controladores
+reComputer R1000 viene con los controladores necesarios preinstalados de fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si grabas un nuevo sistema operativo por tu cuenta, debes instalar los controladores necesarios por separado.
+
+**Nota:** El siguiente comando es estrictamente para **Ubuntu 24.04** (Noble Numbat) debido a la ruta específica /boot/firmware/ y al nombre de los paquetes de apt.
+
+1. Actualizar e instalar dependencias
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install git net-tools minicom -y
+```
+
+2. Clonar e instalar Seeed DTOverlays
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays
+sudo ./scripts/reTerminal.sh --device reComputer-R2x
+```
+3. Configurar superposiciones de hardware en config.txt
+```bash
+sudo sed -i 's/^dtparam=spi=on/# dtparam=spi=on/' /boot/firmware/config.txt
+sudo sed -i 's/^dtparam=i2c_arm=on/# dtparam=i2c_arm=on/' /boot/firmware/config.txt
+sudo sed -i '$a dtoverlay=reComputer-R21' /boot/firmware/config.txt
+```
+4. Aplicar cambios
+```bash
+sudo reboot
+```
+5. Comandos de verificación
+```bash
+ls -l /dev/serial/by-id/                # Check RS485/232 (ttyACM0/1)
+ip addr show | grep can                 # Check CAN FD (can0/1)
+sudo dmesg | grep -i mcp                # Verify MCP2518FD status
+```
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
