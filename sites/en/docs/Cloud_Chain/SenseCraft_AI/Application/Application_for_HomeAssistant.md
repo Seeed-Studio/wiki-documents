@@ -44,7 +44,7 @@ Before the tutorial content of this article begins, you may need to have the fol
  <table align="center">
   <tr>
    <th>Grove Vision AI V2</th>
-   <th>XIAO ESP32-C3</th>
+   <th>XIAO ESP32C3</th>
    <th>Home Assistant Green</th>
   </tr>
   <tr>
@@ -182,9 +182,9 @@ By this point, we have successfully completed the installation of the SenseCraft
 
 ## Preparing the model for Grove Vision AI V2
 
-### Step 5. Flash Firmware for XIAO ESP32-C3
+### Step 5. Flash Firmware for XIAO ESP32C3
 
-Connect the XIAO ESP32-C3 to your computer using a suitable USB-C cable. Ensure the device drivers are installed correctly.
+Connect the XIAO ESP32C3 to your computer using a suitable USB-C cable. Ensure the device drivers are installed correctly.
 
 Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool) in your web browser.
 
@@ -212,7 +212,7 @@ Click the button below to download the firmware file and click the **Add File** 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/23.png" style={{width:1000, height:'auto'}}/></div>
 
-Finally, click the **Flash** button and wait for the programme to be uploaded successfully before disconnecting the XIAO ESP32-C3 from the computer.
+Finally, click the **Flash** button and wait for the programme to be uploaded successfully before disconnecting the XIAO ESP32C3 from the computer.
 
 ### Step 6. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
@@ -307,7 +307,7 @@ Connect the Grove Vision AI V2 to your computer and open the Grove Vision AI V2 
 
 After clicking on the top left corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
 
-- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Assistant is installed. So please configure the network under the same LAN. XIAO only supports 2.4G WiFi, 5G network is not available.
+- **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN. XIAO only supports 2.4G WiFi, 5G network is not available.
 - **Encryption**: Select **AUTO**.
 - **Host**: IP address of the host where Home Assistant is installed.
 - **Port**: `1883`.
