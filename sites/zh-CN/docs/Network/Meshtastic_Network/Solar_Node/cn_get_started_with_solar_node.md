@@ -1,5 +1,5 @@
 ---
-description: 开始使用 SenseCAP Solar Node（适用于 Meshtastic 与 LoRa）
+description: 开始使用 SenseCAP Solar Node 进行 Meshtastic 与 LoRa
 title: 开始使用 SenseCAP Solar Node
 keywords:
   - Meshtastic
@@ -25,18 +25,18 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 在正式部署之前，请先对节点进行测试和配置。
 
-### 刷写固件
+### 烧录固件
 
 :::caution note
 请 `don't use NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
-在刷写固件之前，请先刷写擦除固件！
+在烧录固件之前，请先烧录擦除固件！
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。将目标设备选择为 `Seeed SenseCAP Solar Node`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-#### 刷写擦除固件
+#### 烧录擦除固件
 
 点击 `trash` 图标。
 
@@ -46,25 +46,25 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，此时应显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
+点击 `Enter DFU Mode`，会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，然后应该会显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
 此过程可能需要一些时间。请等待 "XIAO-XXX" 磁盘消失。
 
-#### 刷写应用固件
+#### 烧录应用固件
 
 选择你想要的固件版本，点击 `flash`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器。文件复制完成并设备重启后，固件就会被刷写。
+下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器。文件复制完成并设备重启后，固件就会被烧录。
 
 ### 安装电池和 GPS 模块（可选）
 
 :::tip
 当你需要安装或更换电池时，请使用 `Button-top` 18650（3.6V）电池。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用户需要手动安装电池和 GPS 模块。
+P1-Pro 版本内置电池和 GPS 模块，而 P1 版本如有需要，用户需要手动安装电池和 GPS 模块。
 :::
 
 
@@ -89,7 +89,7 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 ### 启动设备
 
-设备首次使用需要通过连接 USB 线来激活。如果蓝色 Mesh 指示灯闪烁，表示设备已成功开机。如下方视频所示：
+设备首次使用需要通过连接 USB 线来激活。如果蓝色 Mesh 指示灯闪烁，则表示设备已成功开机。如下方视频所示：
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -165,7 +165,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置 LoRa
 
-为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置会控制设备使用的频率范围，应根据你所在的地区进行设置。
+为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
@@ -219,7 +219,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将长时间在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且外壳安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
+由于设备将长时间在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝都已牢固拧紧且外壳安装到位。为了进一步提升防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -236,7 +236,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 2：使用螺丝将万向节（部件 2）和支架（部件 3）连接起来。
+- 步骤 2：使用螺丝连接万向节（部件 2）和支架（部件 3）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -288,7 +288,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下传感器已验证可与设备上的 Grove 接口兼容。
+- 以下传感器已验证与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -325,9 +325,9 @@ import TabItem from '@theme/TabItem';
 
 ### 升级天线（可选）
 
-- 你可以通过观看此视频，将天线更换为玻璃钢天线。
+- 你可以通过观看此视频，将天线更换为玻璃纤维天线。
 
-如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
+如果你需要增益更高的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -349,21 +349,21 @@ import TabItem from '@theme/TabItem';
 
 #### 描述
 
-设备无响应，没有 LED 指示灯，无法与 App 配对。
+设备无响应、无 LED 指示灯，无法与 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
+**1）设备仍然可以进入 DFU 模式，则尝试烧录引导程序（Bootloader）。**
 
-#### 烧录 Bootloader
+#### 烧录引导程序（Bootloader）
 
 - [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录引导程序时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "R" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
 
 对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，即可打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
 
@@ -423,7 +423,7 @@ cd Adafruit_nRF52_nrfutil
 
 注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
-如果要在用户空间（你的主目录）中安装：
+要在你的用户空间（主目录）中安装：
 
 ```
 pip3 install -r requirements.txt
@@ -470,9 +470,9 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 以 Mac 用户为例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 3：烧录 bootloader**
+**步骤 3：烧录引导程序**
 
-在终端或命令提示符中，进入你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，进入你下载引导程序压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
 
 - **对于 Windows**：
 
@@ -507,90 +507,22 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
  #### 故障排查
 
-[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新烧录最新固件。
 
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过以下两种方法进行恢复出厂设置。
 
-- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新烧录最新固件。
 
 - 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB 重置
-
-NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息，包括：
-
-- **Node ID**
-- **User Name**
-- **Location Information**
-- **Signal Information (SNR)**
-- **Last Seen Time**
-
-**何时重置**
-
-在以下情况下重置 NodeDB：
-
-- 节点列表包含过期、重复或无效的条目。
-- 你移动到不同的 Mesh 环境并希望重新发现附近节点。
-- App 中的节点信息看起来不正确或不完整。
-
-:::danger
-重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行恢复出厂设置**，也**不会移除设备的基础配置**。
-:::
-
-**从 App 中重置**
-
-1. 打开 App 并连接到目标设备。
-2. 进入 **Settings**。
-3. 点击 **Device**。
-4. 在 **Device Config** 页面滑动到最底部，找到 **Reset NodeDB**。
-5. 点击并确认操作。
-
-**App 路径**
-
-`Settings > Device > Reset NodeDB`
-
-**示例界面**
-
-步骤 1：在 **Settings** 页面中打开 **Device**。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
-
-步骤 2：在 **Device Config** 页面点击 `Reset NodeDB`。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
-
-:::tip
-请注意以下选项之间的区别：
-
-- **Reset NodeDB**：仅清除节点数据库。
-- **Factory Reset**：将设备恢复到出厂设置，并移除更多配置信息。
-:::
-
-**重置后会发生什么**
-
-执行 **Reset NodeDB** 后，设备会清除当前存储的节点列表。随着设备继续运行，它会再次重新发现并记录附近的节点。
-
-你可能会观察到以下现象：
-
-- 节点列表可能会暂时变为空或变少。
-- 随着设备持续运行，节点会逐渐重新出现。
-- 之前存储的历史节点记录将不再可用。
-
-**注意事项**
-
-- 在重置之前，请确认问题确实与异常的节点列表有关。
-- 如果问题只是节点显示延迟，先等待一段时间，看看是否会自动恢复。
-- 如果在重置 NodeDB 后问题仍然存在，请继续排查设备配置或其他可能原因。
-- 谨慎使用 **Factory Reset**，以避免误删设备配置。
-
 ### 功耗
 
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
-下列数据仅供参考；实际功耗会根据真实使用环境有所变化。
+下列数据仅供参考；实际功耗可能会因真实使用环境而有所不同。
 
 - **关机休眠模式功耗**
 
@@ -619,11 +551,11 @@ NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的�
 
 ### 信号质量
 
-- **SNR** 反映通信链路质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较小的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
 ### 充电电流
 

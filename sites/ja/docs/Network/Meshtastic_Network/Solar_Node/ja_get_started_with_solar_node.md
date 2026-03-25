@@ -1,5 +1,5 @@
 ---
-description: Meshtastic & LoRa 用 SenseCAP Solar Node の使用を開始する
+description: SenseCAP Solar Node for Meshtastic & LoRa を使い始める
 title: SenseCAP Solar Node を使い始める
 keywords:
   - Meshtastic
@@ -23,13 +23,13 @@ url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 :::
 ## はじめに
 
-本格的な設置の前に、まずノードをテストして設定してください。
+本格的な設置の前に、まずノードのテストと設定を行ってください。
 
 ### ファームウェアを書き込む
 
 :::caution note
 ファームウェアの更新には `don't use NRF-OTA` を使用しないでください。デバイスが完全に故障する可能性があります。
-ファームウェアを書き込む前に、必ず消去用ファームウェアを書き込んでください！
+ファームウェアを書き込む前に、必ず消去用ファームウェアを先に書き込んでください！
 :::
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。ターゲットデバイスとして `Seeed SenseCAP Solar Node` を選択します。
@@ -38,7 +38,7 @@ url: https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/
 
 #### 消去ファームウェアの書き込み
 
-`trash` シンボルをクリックします。
+`trash` アイコンをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
@@ -64,7 +64,7 @@ UF2 ファイルをダウンロードして DFU モードに入ります。UF2 �
 :::tip
 バッテリーを取り付ける、または交換する必要がある場合は、`Button-top` 18650(3.6V) バッテリーを使用してください。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵されています。P1 バージョンでは、必要に応じてユーザーがバッテリーと GPS モジュールを手動で取り付ける必要があります。
+P1-Pro バージョンにはバッテリーと GPS モジュールが内蔵されていますが、P1 バージョンでは必要に応じてユーザーがバッテリーと GPS モジュールを手動で取り付ける必要があります。
 :::
 
 
@@ -132,7 +132,7 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
-### Web サイト経由で接続する
+### Web サイトから接続する
 
 Web サイト上でメッセージを送信し、他のノードと通信したい場合は、デバイスを [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) に接続できます。
 
@@ -163,9 +163,9 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-### LoRa の設定
+### LoRa を設定する
 
-メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
+メッシュ通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
@@ -194,9 +194,9 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 **EU_868** は、1 時間あたり 10% のデューティサイクル制限を順守する必要があり、1 時間のローリングウィンドウに対して毎分計算されます。この制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa リージョンを設定したら、必要に応じて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
+デバイスで LoRa リージョンを設定したら、ニーズに合わせて任意の [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) を続けて設定できます。
 
-### GPS の設定
+### GPS を設定する
 
 GPS を有効に設定してください。更新間隔とブロードキャスト間隔を調整して、より最新の位置情報を取得できます。
 
@@ -230,7 +230,7 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 ### 手順付き取り付けガイド
 
-- ステップ 1: ワッシャーとネジを使用して、パーツ 1 をデバイス底面に取り付けます。
+- ステップ 1: ワッシャーとネジを使って、パーツ 1 をデバイス底面に取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -288,7 +288,7 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下のセンサーは、本デバイスの Grove インターフェースとの互換性が検証されています。
+- 以下のセンサーは、本デバイス上の Grove インターフェースとの互換性が検証されています。
 
 <table>
   <tr>
@@ -325,7 +325,7 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 ### アンテナのアップグレード（オプション）
 
-- この動画を参考に、アンテナをグラスファイバー製のものに交換できます。
+- この動画を見ながら、アンテナをガラス繊維製アンテナに交換できます。
 
 より高い利得のアンテナが必要な場合は、[860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) アンテナおよび [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) アンテナをお勧めします。
 
@@ -337,15 +337,15 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 ### ブートループ
 
-- 原因 
+- 原因
 
-これは通常、ファームウェアの書き込み失敗が原因です。ファームウェアを書き込む際は、接続を安定した状態に保ってください。 
+これは通常、ファームウェアの書き込み失敗が原因です。ファームウェアを書き込む際は、接続を安定した状態に保ってください。
 
 - トラブルシューティング
 
-[Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware) をクリックして、ファームウェアを書き込み直してください。
+[Click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware) からファームウェアを書き込み直してください。
 
-### デバイスがブリックした
+### デバイスが文鎮化した場合
 
 #### 説明
 
@@ -363,9 +363,9 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 **Step1: Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、"Win" キーと "r" キーを押し、ポップアップウィンドウに "cmd" と入力して "Enter" を押します。これでコマンドラインを開くことができます。 
+Windows ユーザーは、"Win" キーと "r" キーを押し、ポップアップウィンドウに "cmd" と入力して "Enter" を押します。これでコマンドラインを開くことができます。
 
-Mac ユーザーは、"Command" キーと "Space" キーを押して Spotlight を開きます。その後 "termial" と入力して "Return" を押します。これでコマンドラインを開くことができます。 
+Mac ユーザーは、"Command" キーと "Space" キーを押して Spotlight を開きます。その後 "termial" と入力して "Return" を押します。これでコマンドラインを開くことができます。
 
 **前提条件**
 
@@ -401,7 +401,7 @@ pip3 install --user adafruit-nrfutil
 python -m pip show adafruit-nrfutil
 ```
 
-これがインストール場所です：
+こちらがインストール場所です：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
@@ -414,7 +414,7 @@ Windows ユーザーは、パスを手動で追加する必要がある場合が
 
 <TabItem value="sou" label="ソースからインストール">
 
-PyPi でのインストールに問題がある場合、またはツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
+PyPi からのインストールで問題がある場合、またはツールを変更したい場合はこの方法を使用します。まずこのリポジトリをクローンし、そのフォルダに移動します。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -454,13 +454,13 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-`.exe` ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`（Windows の場合は `.exe` 付き）にあります。
+`.exe`（Windows の場合）付きの .exe ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` にあります。
 利便性のために、%PATH% に含まれるディレクトリなど、別の場所にコピーまたは移動してください。
 
 </TabItem>
 </Tabs>
 
-**Step2: ポート番号を確認する**
+**Step2: ポート番号の確認**
 
 デバイスを PC に接続し、ポート番号を確認します。
 
@@ -470,9 +470,9 @@ Windows ユーザーの場合の例：
 Mac ユーザーの場合の例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Step3: ブートローダーを書き込む**
+**Step3: ブートローダーの書き込み**
 
-ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに対応する正しいポートに置き換えてください：
+ターミナルまたはコマンドプロンプトで、ダウンロードしたブートローダー zip パッケージがあるディレクトリに移動し、以下のコマンドを実行します。その際、デバイスに合った正しいポートに置き換えてください：
 
 - **Windows の場合**:
 
@@ -503,7 +503,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
  - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
  - シリアルポートログはしばらく動作した後、停止します。
 
- これは、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因である可能性があります：メッセージ送信プロセスが完了していない、設定中である など……
+ これは、メッセージ送信プロセスが完了していない、設定中であるなど、デバイスが次の状態にあるときに、手動で強制的に再起動または電源オフしたことが原因である可能性があります。
 
  #### トラブルシューティング
 
@@ -518,74 +518,6 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
-
-### NodeDB リセット
-
-NodeDB は、現在の Mesh ネットワークで検出されたノードに関する情報を保存するローカルデータベースで、以下を含みます：
-
-- **ノード ID**
-- **ユーザー名**
-- **位置情報**
-- **信号情報（SNR）**
-- **最終検出時刻**
-
-**リセットするタイミング**
-
-次の場合に NodeDB をリセットします：
-
-- ノードリストに古い、重複した、または無効なエントリが含まれている。
-- 別の Mesh 環境に移動し、近くのノードを再検出したい。
-- アプリ内のノード情報が正しくない、または不完全に見える。
-
-:::danger
-NodeDB をリセットしても、デバイスに保存されているノードデータベースのみが消去されます。**工場出荷時リセットは実行されず**、**デバイスの基本設定は削除されません**。
-:::
-
-**アプリからリセットする**
-
-1. アプリを開き、対象デバイスに接続します。
-2. **Settings** に移動します。
-3. **Device** をタップします。
-4. **Device Config** ページの一番下までスクロールし、**Reset NodeDB** を見つけます。
-5. それをタップして操作を確認します。
-
-**アプリ内パス**
-
-`Settings > Device > Reset NodeDB`
-
-**画面例**
-
-ステップ 1：**Settings** ページから **Device** を開きます。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
-
-ステップ 2：**Device Config** ページで `Reset NodeDB` をタップします。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
-
-:::tip
-次のオプションの違いに注意してください：
-
-- **Reset NodeDB**：ノードデータベースのみを消去します。
-- **Factory Reset**：デバイスを工場出荷時設定に戻し、より多くの設定データを削除します。
-:::
-
-**リセット後に起こること**
-
-**Reset NodeDB** を実行すると、デバイスは現在保存されているノードリストを消去します。デバイスが動作を続けるにつれて、近くのノードを再検出し、再び記録していきます。
-
-次のようなことが見られる場合があります：
-
-- ノードリストが一時的に空、または少なくなることがあります。
-- デバイスの動作が続くにつれて、ノードが徐々に再び表示されます。
-- 以前に保存されていた履歴ノード記録は利用できなくなります。
-
-**注意事項**
-
-- リセットする前に、問題が実際に異常なノードリストに関連していることを確認してください。
-- 問題がノード表示の遅延だけである場合は、まずしばらく待って自動的に回復するかどうかを確認してください。
-- NodeDB をリセットしても問題が解決しない場合は、デバイス設定やその他の原因について引き続きトラブルシューティングを行ってください。
-- デバイス設定を誤って削除しないよう、**Factory Reset** の使用には注意してください。
 
 ### 消費電力
 
@@ -602,7 +534,7 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 **例：**
 
-|バッテリー容量|バッテリー寿命|
+|バッテリー容量 |バッテリー寿命|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -621,15 +553,15 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が低いことを示します。
 
-- **RSSI** はデバイスとその周囲の環境によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
+- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が低いと見なされます。
 
-      最良の信号状態を得るために、干渉が最小限で障害物のない開けた場所でデバイスを使用してください。
+      最良の信号状態を得るために、開けていて障害物が少なく、干渉の少ない場所でデバイスを使用してください。
 
 ### 充電電流
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99 A です。したがって最大充電電流は 1 A です。
+Xiao nRF-52840 Plus の最大充電電流は 200 mA です。充電管理チップ CN3165 は 0.99A です。したがって最大充電電流は 1A です。
 
 ## リソース
 - [Solar Node バッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
