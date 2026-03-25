@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-23 15:11:46 (北京时间)
-// 多语言页面: 2223 个
+// 生成时间: 2026-03-25 18:24:30 (北京时间)
+// 多语言页面: 2229 个
 
 (function() {
   'use strict';
@@ -1095,6 +1095,13 @@
     "pt"
   ],
   "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_reachy_fleet_dance": [
     "cn",
     "en",
     "es",
@@ -10315,6 +10322,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_xvf3800_picovoice": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_xvf3800_python_sdk": [
     "cn",
     "en",
@@ -12115,6 +12129,34 @@
     "pt"
   ],
   "/tracker_at_command": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon01_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon02_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_user_guide": [
     "cn",
     "en",
     "es",
