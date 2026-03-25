@@ -1,5 +1,5 @@
 ---
-description: 开始使用适用于 Meshcore 和 LoRa 的 SenseCAP Solar Node。指导设备安装、固件烧录和设备连接。
+description: 使用 SenseCAP Solar Node 搭配 Meshcore 和 LoRa 的入门指南。指导设备安装、固件烧录和设备连接。
 title: 在 SenseCAP Solar Node 上开始使用 MeshCore
 keywords:
 - Meshcore
@@ -21,15 +21,15 @@ last_update:
 
 ## 固件烧录
 
-### 方法 1：通过 Web Flasher
+### 方法一：通过 Web Flasher
 
-使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
+使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。 
 
 :::warning
 在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。
+前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。 
 
 在 `Community Firmware` 分组中选择 `Seeed Studio SenseCAP Solar`。
 
@@ -45,7 +45,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseSelect.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
+如果你已经点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已成功完成擦除。
 
@@ -61,21 +61,21 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-如果你点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
+如果你已经点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
 
 当进度条完全填满时，表示 Flash 已完成。随后设备会自动重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
-### 方法 2：拖拽烧录
+### 方法二：拖拽烧录
 
-使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
+使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。 
 
 :::warning
 在数据传输过程中请保持 USB 线连接，否则设备可能会损坏。
 :::
 
-前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。
+前往 [Meshcore Web Flasher](https://flasher.meshcore.co.uk/)。 
 
 在 `Community Firmware` 分组中选择 `Seeed Studio SenseCAP Solar`。
 
@@ -91,7 +91,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `Xiao-Boot` 或 `Solar Node` 的磁盘弹出。
+双击 RST 按钮手动进入 DFU 模式。10~15 秒后，你会看到一个名为 `Xiao-Boot` 或 `Solar Node` 的磁盘弹出。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -99,7 +99,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会自动消失。此时设备中还没有固件，因此设备 `NOT` 会自动重启。
+固件烧录成功后，该磁盘会自动消失。此时设备中没有固件，因此设备 `NOT` 会自动重启。
 
 #### 烧录固件
 
@@ -111,7 +111,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FlashFirmware.png" alt="pir" width={800} height="auto" /></p>
 
-双击 RST 按钮手动进入 DFU 模式。大约 10~15 秒后，你会看到一个名为 `Xiao-Boot` 或 `Solar Node` 的磁盘弹出。
+双击 RST 按钮手动进入 DFU 模式。10~15 秒后，你会看到一个名为 `Xiao-Boot` 或 `Solar Node` 的磁盘弹出。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DFUMode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -119,9 +119,9 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件烧录成功后，该磁盘会自动消失。此时设备中还没有固件，因此设备不会自动重启。
+固件烧录成功后，该磁盘会自动消失。此时设备中没有固件，因此设备不会自动重启。
 
-## 入门指南
+## 入门
 
 在正式部署前，请先对节点进行测试和配置。
 
@@ -130,7 +130,7 @@ last_update:
 #### 组装设备
 
 :::danger note
-由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且上盖安装到位。为增强防水性能，你也可以考虑额外进行密封处理。
+由于设备将长期在户外使用，请避免将面板水平安装。建议采用倾斜或斜向安装，以防止积水。此外，请确保所有螺丝已牢固拧紧且上盖安装到位。为了增强防水性能，你也可以考虑额外进行密封处理。
 :::
 
 - **部件清单**
@@ -150,7 +150,7 @@ last_update:
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 3：连接 RF 线缆（部件 4）和天线（部件 5）。
+- 步骤 3：连接射频线缆（部件 4）和天线（部件 5）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -210,17 +210,17 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 请确保外壳安装到位且螺丝拧紧，以保证设备的防水性能。
 :::
 
-####（可选）升级天线
+#### （可选）升级天线
 
-- 你可以通过观看此视频，将天线更换为玻璃钢天线。
+- 你可以观看此视频，将天线更换为玻璃钢天线。
 
 如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 ### 启动设备
 
-设备需要通过连接 USB 线来激活。蓝色 Mesh LED 将点亮约 3 秒，这意味着设备已成功开机。 
+设备需要通过连接 USB 线来激活。蓝色 Mesh LED 会亮起约 3 秒，这表示设备已成功开机。 
 
-蓝色 Mesh LED 指示灯在发送 advert 之前不会点亮。
+蓝色 Mesh LED 指示灯在发送广播前不会亮起。
 
 :::tip
 如果插入 USB 线后设备没有响应，请先为其充电。不要使用快充充电器。
@@ -231,9 +231,9 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 
 - **步骤 1 初始配置**
 
-当 MeshCore 第一次烧录到 LoRa 设备上时，需要设置服务器设备的频率，使其使用在你所在国家或地区合法的频率。
+当 MeshCore 第一次烧录到 LoRa 设备上时，需要设置服务器设备的频段，使其使用在你所在国家或地区合法的频段。
 
-[点击这里](https://config.meshcore.dev/) 来配置中继器。
+[Click here](https://config.meshcore.dev/) 来配置中继器。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -246,25 +246,25 @@ import TabItem from '@theme/TabItem';
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902.0 - 928.0|100|30|
-|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
+|UNSET|未设置|N/A|N/A|N/A|
+|US|美国|902.0 - 928.0|100|30|
+|EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更完整的列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多完整列表请参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到该限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。如果达到限制，你的设备将停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/)。
 
-- **步骤 2 发送 Advert**
+- **步骤 2 发送广播**
 
 点击 "send advert" 以使其他 Meshcore 设备能够看到此中继器。然后该中继器就可以在设备列表中被看到。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertSending.png" alt="pir" width={600} height="auto" /></p>
 
-在完成初始化设置后，点击 
+完成初始化设置后，点击 
 
 - **步骤 3（可选）管理员登录**
 
@@ -278,21 +278,21 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-此外，你可以调整 advert 广播间隔。`auto zero hop advert` 的间隔范围为 60-240 分钟。`auto flood advert` 的间隔范围为 3-168 小时。 
+此外，你可以调整广播间隔。`auto zero hop advert` 的间隔范围为 60-240 分钟。`auto flood advert` 的间隔范围为 3-168 小时。 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
 ### 设置路径
 
-在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会自动以固定间隔自动发送。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
+在将中继器添加到你的路由之前，你可能需要先使用中继器发送广播。中继器会以固定间隔自动发送广播。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送广播，否则就需要等待。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-你可以手动设置消息发送路径。将你的蓝牙伴侣设备连接到手机 App。打开一个私信窗口。然后你可以选择已发现的中继器来形成你的路径。
+你可以手动设置消息发送路径。将你的蓝牙伴侣设备连接到手机 App。打开一个私信窗口。然后你可以选择已发现的中继器来组成你的路径。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-设置路径后，传输方式将变为 "n hop"。例如，如果你在路由中添加了 1 个中继器，它将变为 1 hop。
+设置路径后，传输方式会变为 "n hop"。例如，如果你在路由中添加了 1 个中继器，它就会变为 1 hop。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -306,7 +306,7 @@ import TabItem from '@theme/TabItem';
 
 - 故障排查
 
-[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase) 重新烧录固件。
+[Click here](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase) 重新烧录固件。
 
 ### 设备变砖
 
@@ -326,13 +326,29 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1：安装 Adafruit-nrfutil**
 
+对于 Windows 用户，按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，点击 "Enter"。这可以打开命令行。 
+
+对于 Mac 用户，按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，点击 "Return"。这可以打开命令行。 
+
 **前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
+在命令行中检查 python 和 pip 是否已成功安装。
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 python。
+
 <Tabs>
-<TabItem value="pypi" label="从 PyPI 安装">
+<TabItem value="pypi" label="通过 PyPI 安装">
 
 这是推荐的方法，用于安装最新版本：
 
@@ -340,9 +356,23 @@ import TabItem from '@theme/TabItem';
 pip3 install --user adafruit-nrfutil
 ```
 
+检查安装路径：
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+这是安装位置：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
 </TabItem>
 
-<TabItem value="sou" label="从源码安装">
+<TabItem value="sou" label="通过源码安装">
 
 如果你在使用 PyPi 安装时遇到问题，或者想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
@@ -351,7 +381,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上安装的 python 3.x 仍然使用 python.exe 这个名称
+注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
 要在你的主目录用户空间中安装：
 
@@ -394,7 +424,10 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 将设备连接到电脑，并检查端口号。
 
-示例：
+对于 Windows 用户，例如：
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+对于 Mac 用户，例如：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **步骤 3：烧录 bootloader**
@@ -406,6 +439,12 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
+请将 COMXX 更改为你的 COM 号。例如，如果你的设备在 com6 上，请将命令更改为：
+
+`adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
+
+ 部分设备在你输入此命令后会更改其端口号。因此如果安装失败，请再次检查端口号。
+
 
 - **适用于其他系统**：
 
@@ -415,7 +454,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，你就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
+当你完成以上步骤后，就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
 
 ### 信号质量
 
@@ -423,7 +462,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域中使用设备。
 
 ### 充电电流
 

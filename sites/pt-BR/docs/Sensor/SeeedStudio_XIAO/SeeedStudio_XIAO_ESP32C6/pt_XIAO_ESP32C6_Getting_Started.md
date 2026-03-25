@@ -563,7 +563,7 @@ Se você quiser aprender a usar mais o modo de sono profundo e as funções de d
 - **📄[Modelo 3D]** [Modelo 3D do XIAO ESP32-C6](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
