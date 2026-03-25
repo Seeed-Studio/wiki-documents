@@ -1,6 +1,6 @@
 ---
 description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
-title: reSpeaker XVF3800 Control with Pico-voice
+title: reSpeaker XVF3800 Control Wakeword and NLU with Pico-voice
 keywords:
   - reSpeaker
   - python
@@ -23,6 +23,12 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/
 [Porcupine](https://picovoice.ai/docs/porcupine/) is Picovoice’s lightweight and highly accurate wake word detection engine, built using deep neural networks and optimized for embedded systems. It enables always-listening applications while maintaining low computational cost and can run across platforms like microcontrollers, Raspberry Pi, mobile, and desktop. 
 
 Picovoice [Rhino](https://picovoice.ai/docs/rhino/) is a speech-to-intent engine that directly converts spoken commands into structured intents without requiring a separate speech-to-text step. It uses a single-step deep learning approach, combining speech recognition and natural language understanding to improve accuracy and reduce latency.
+
+## What is NLP, NLU and STT ?
+
+Natural Language Processing (NLP) is the broad field that lets machines process human language, while Natural Language Understanding (NLU) is a subset that focuses specifically on extracting the meaning or intent from that language. Speech-to-Text (STT) converts spoken audio into text, which is then typically passed to NLU to understand the user’s intent. Picovoice Rhino takes a different approach by skipping STT and directly converting speech into intent (speech-to-intent), improving efficiency and accuracy.
+
+Keyword (wake word) detection (e.g., “Hey device”) is the first step that activates the system, and after activation, either STT → NLU pipeline or speech-to-intent (Rhino) is used to understand and execute the command.
 
 ## Hardware Required 
 
@@ -128,7 +134,7 @@ recorder.stop()
 recorder.delete()
 ```
 
-## Speech to Intend 
+## Speech to Intent 
 
 Picovoice Rhino is a speech-to-intent engine that directly converts spoken commands into structured intents without requiring a separate speech-to-text step. It uses a **single-step deep learning approach**, combining speech recognition and natural language understanding to improve accuracy and reduce latency. 
 Rhino is optimized for **real-time, on-device processing**, meaning it works offline with zero network delay and keeps all voice data private.  It is highly efficient and designed for embedded and IoT systems like Raspberry Pi and microcontrollers. 
