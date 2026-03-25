@@ -3959,6 +3959,7 @@ const sidebars = {
               type: 'category',
               label: 'エンボディド AI',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
