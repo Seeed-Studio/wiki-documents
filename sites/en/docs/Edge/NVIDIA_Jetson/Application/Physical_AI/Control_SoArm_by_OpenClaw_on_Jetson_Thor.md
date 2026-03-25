@@ -136,11 +136,9 @@ source ~/.bashrc
 Create LeRobot environment:
 
 ```bash
-conda create -y -n lerobot python=3.12
+conda create -y -n lerobot python=3.10
 conda activate lerobot
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
-cd ~/lerobot
-pip install -e . 
+pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
 pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 ```
@@ -148,7 +146,8 @@ pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 Install Pinocchio in the LeRobot environment:
 
 ```bash
-conda install pinocchio -c conda-forge
+conda install mamba -y
+mamba install -c conda-forge pinocchio pinocchio-python libpinocchio -y
 ```
 
 ### Verify CUDA and Peripheral Devices
@@ -174,11 +173,11 @@ curl -fsSL https://ollama.com/install.sh | sh
 Pull a model:
 
 ```bash
-ollama pull qwen3-vl:9b
+ollama pull qwen3.5:35b
 ```
 
 :::info
-This guide uses `qwen3-vl:9b` as an example. You can replace it with another Ollama model based on your performance and memory constraints.
+This guide uses `qwen3.5:35b` as an example. You can replace it with another Ollama model based on your performance and memory constraints.
 :::
 
 ## Install OpenClaw on Jetson Thor
@@ -193,51 +192,134 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 
 Edit `~/.openclaw/openclaw.json` and set Ollama as the default model provider:
 
+<details>
+
+<summary> openclaw.json </summary>
+
 ```json
 {
   "agents": {
     "defaults": {
-      "models": {
-        "ollama": {}
+      "compaction": {
+        "mode": "safeguard"
       },
+      "maxConcurrent": 4,
       "model": {
-        "primary": "ollama/qwen3-vl:9b"
+        "primary": "ollama/qwen3.5:35b"
+      },
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "workspace": "/home/seeed/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "tools": {
+          "profile": "full"
+        }
       }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "98aefed421e9a506a3174dab0575fd3cc36c9d15b856a894"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
     }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-10T06:45:16.014Z",
+    "lastTouchedVersion": "2026.3.8"
   },
   "models": {
     "providers": {
       "ollama": {
-        "baseUrl": "http://127.0.0.1:11434/v1",
+        "api": "ollama",
         "apiKey": "ollama-local",
-        "api": "openai-completions",
+        "baseUrl": "http://127.0.0.1:11434",
         "models": [
           {
-            "id": "qwen3-vl:9b",
-            "name": "Qwen3 VL 9B",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "contextWindow": 262144,
             "cost": {
-              "input": 0,
-              "output": 0,
               "cacheRead": 0,
-              "cacheWrite": 0
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
             },
-            "contextWindow": 128000,
-            "maxTokens": 8192
+            "id": "qwen3.5:35b",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5:35b",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "qwen3.5",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5",
+            "reasoning": true
           }
         ]
       }
     }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T02:17:28.382Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.8"
   }
 }
+
 ```
+</details>
 
 :::note
 Optional: you can also directly use the script provided by Ollama to quickly set up the OpenClaw configuration file.
-
 `ollama launch openclaw --model qwen3.5`
 :::
 
@@ -253,6 +335,11 @@ Prepare robot description file:
 - Download [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf)
 - Move it to `~/.openclaw/workspace/skills/soarm-control/references`
 
+[Optional] Add detection model: 
+- Train a detection model(YoloV11n) refer [here](https://wiki.seeedstudio.com/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)
+- Move the detection model (`best.pt`) into `~/.openclaw/workspace/skills/soarm-control/scripts`
+
+
 Restart OpenClaw gateway:
 
 ```bash
@@ -262,8 +349,13 @@ openclaw gateway restart
 Open WebUI:
 
 ```text
-http://127.0.0.1:18789/
+http://127.0.0.1:18789/wiki
 ```
+
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/webui.png" />
+</div>
 
 ## Connect and Calibrate SO-Arm
 
@@ -297,29 +389,24 @@ For a full calibration walkthrough, refer to:
 
 ## Run Control Demo
 
-### Launch OpenClaw Service
+### Launch Backend Service
 
 Ensure OpenClaw and LeRobot environments are ready:
 
 ```bash
 openclaw gateway restart
+
 conda activate lerobot
+cd ~/.openclaw/workspace/skills/soarm-control 
+bash scripts/start_server.sh &
 ```
 
 ### Execute Basic Motion Task
 
 In OpenClaw WebUI, enter robot control instructions. OpenClaw will parse your prompt and call the installed `soarm-control` skill to drive the arm to the target position.
 
-The video demonstrates three commands:
-
-1. Move the robotic arm’s end effector upward by 20 cm.
-2. Then move forward by 20 cm, keeping the height unchanged.
-3. Return to the initial position.
-
-OpenClaw’s responses to these three commands all match the expected behavior.
-
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/5fPBpAno2wc" title="Using OpenClaw to Control the SOARM 101 Robot Arm | Robotics Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## References

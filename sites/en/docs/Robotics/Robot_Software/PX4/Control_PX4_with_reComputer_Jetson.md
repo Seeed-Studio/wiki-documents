@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 Pairing a high-performance companion computer like the **reComputer Mini J3010 (Jetson Orin Nano 4G)** with a **PX4 flight controller** creates the core architecture for a wide range of intelligent unmanned systems, including autonomous cars, boats, and drones. This powerful combination unlocks innovative applications in fields such as logistics, scientific research, search and rescue, and precision agriculture.
 
 This setup enables complex onboard tasks like visual navigation, object tracking, and real-time obstacle avoidance. The communication link between these two "brains" is critical for the system's overall performance and reliability.
@@ -402,6 +404,17 @@ If you run into trouble, check these common issues first.
 You now have three powerful methods for enabling communication between a Jetson Orin and a PX4 flight controller. The best tool depends on your project's architecture, performance needs, and development speed. By understanding the trade-offs, you can build a robust foundation for any autonomous drone application.
 
 Happy flying! 🚁
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

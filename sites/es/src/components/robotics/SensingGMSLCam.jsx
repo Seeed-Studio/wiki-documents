@@ -231,6 +231,61 @@ const i18n = {
       'Reset': 'Reinicio',
     },
   },
+  pt: {
+    tabs: {
+      s1: 'SG3S-ISX031C-GMSL2-H (6G bps)',
+      s2: 'SG3S-ISX031C-GMSL2-F (3G bps)',
+      s3: 'SG8S-AR0820C-5300-G2A-H (6G bps)',
+      s4: 'SG2-IMX390C-5200-G2A-H (6G bps)',
+      s5: 'SG2-AR0233C-5200-G2A-H (6G bps)',
+    },
+    cols: {
+      name: 'Nome',
+      param: 'Parâmetro',
+      value: 'Valor',
+      category: 'Categoria',
+      spec: 'Especificação',
+    },
+    hw: 'Configurações de hardware',
+    desc: {
+      d_isx031_h:
+        'A câmera é equipada com o sensor de imagem CMOS SONY ISX031 e o serializador GMSL2 MAX96717F da Maxim. Ela conta com um sensor de nível automotivo e um Processador de Sinal de Imagem (ISP) bem ajustado, que proporciona excelente qualidade de imagem. Vem com invólucro com classificação IP67 e é fornecida com uma lente AA focada e colada em nossa fábrica.',
+      d_isx031_f:
+        'A câmera é equipada com o sensor de imagem CMOS SONY ISX031 e o serializador GMSL2 MAX9295A da Maxim. Ela conta com um sensor de nível automotivo e um Processador de Sinal de Imagem (ISP) bem ajustado, que proporciona excelente qualidade de imagem. Vem com invólucro com classificação IP67 e é fornecida com uma lente AA focada e colada em nossa fábrica.',
+      d_ar0820:
+        'A câmera é equipada com o sensor de imagem CMOS AR0820 da On-semi Semiconductor, o processador de imagem GW5300 e o serializador GMSL2 MAX9295A da Maxim. Ela conta com um sensor de nível automotivo e um Processador de Sinal de Imagem (ISP) bem ajustado, que proporciona excelente qualidade de imagem. Vem com invólucro com classificação IP67 e é fornecida com uma lente AA focada e colada em nossa fábrica.',
+      d_imx390:
+        'A câmera é equipada com o sensor de imagem Sony IMX390, o processador de imagem GW5200 e o serializador GMSL2 MAX9295A da Maxim. Ela conta com um sensor de nível automotivo e um Processador de Sinal de Imagem (ISP) bem ajustado, que proporciona excelente qualidade de imagem. Vem com invólucro com classificação IP67 e é fornecida com uma lente AA focada e colada em nossa fábrica.',
+      d_ar0233:
+        'A câmera é equipada com o sensor de imagem ONSEMI AR0233, o processador de imagem GW5200 e o serializador GMSL2 MAX9295A da Maxim. Ela conta com um sensor de nível automotivo e um Processador de Sinal de Imagem (ISP) bem ajustado, que proporciona excelente qualidade de imagem. Vem com invólucro com classificação IP67 e é fornecida com uma lente AA focada e colada em nossa fábrica.',
+    },
+    labels: {
+      'Sensor': 'Sensor',
+      'ISP': 'Processador de sinal de imagem (ISP)',
+      'Image Size': 'Tamanho da imagem',
+      'Output Pixels': 'Pixels de saída',
+      'Pixel Size': 'Tamanho do pixel',
+      'Frame Rate': 'Taxa de quadros',
+      'HDR Support': 'Suporte a HDR',
+      'LFM': 'Mitigação de cintilação (LFM)',
+      'Output data': 'Dados de saída',
+      'Serializer': 'Serializador',
+      'Camera Interface': 'Interface da câmera',
+      'Power Supply': 'Alimentação',
+      'Current': 'Corrente',
+      'Connector': 'Conector',
+      'Operating temp. range': 'Faixa de temperatura de operação',
+      'Dimensions': 'Dimensões',
+      'Weight': 'Peso',
+    },
+    specs: {
+      'Model': 'Modelo',
+      'I2C Address': 'Endereço I2C',
+      'Rate': 'Taxa',
+      'Frame Sync': 'Sincronização de quadros',
+      'Reset': 'Redefinição',
+    },
+  },
 };
 
 const getT = (lang) => i18n[lang] || i18n.en;

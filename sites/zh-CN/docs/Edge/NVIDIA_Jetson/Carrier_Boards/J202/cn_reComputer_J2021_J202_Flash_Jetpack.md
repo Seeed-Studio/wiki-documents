@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/reComputer_J2021_J202_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # reComputer J202 入门指南
 
 <div align="center">
@@ -620,6 +622,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 [Seeed Jetson 系列对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 
 [Seeed Jetson 设备一览](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

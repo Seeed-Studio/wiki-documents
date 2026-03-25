@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## 概要
 
 Raspberry Pi CM4を搭載したreComputer R1100は、AI機能を備えた多用途エッジIoTゲートウェイです。**2x イーサネット、2x USB、2x RS485、2x RS232、2x DI、2x DO**を含む包括的な産業用インターフェースと、**4G、LoRa®、Wi-Fi/BLE**などの柔軟なワイヤレス接続オプションを特徴としています。これらの機能により、様々な産業用アプリケーションに理想的な選択肢となっています。
@@ -730,6 +732,17 @@ reComputer R1100の **UPSモジュール** は、**直列で動作** する **7F
 - [reComputer R1100 回路図設計、PCB設計](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [reComputer R1100 フライヤー](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [ユーザーマニュアル](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

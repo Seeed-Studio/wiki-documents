@@ -52,6 +52,8 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 
 - **Open-source robot projects for the StackForce lightweight robotics development platform:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
+- **StackForce_Mini_Wheeled_Legged_Robot theory and code learning** [https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md](https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md)
+
 ## Main Features
 
 1. **Open-source and low cost**: Follows an open-source license; all source code and design files are fully available, allowing developers to freely study, modify, and perform secondary development.

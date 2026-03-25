@@ -720,6 +720,8 @@ const sidebars = {
               label: 'User Guide',
               items: [
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Payload_Format',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/FAQ',
               ],
             },
             {
@@ -729,6 +731,24 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_Helium',
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_AWS_IoT_Core'
+              ],
+            }
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP Bluetooth Beacon',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 Indoor Bluetooth Beacon',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon_User_Guide',
               ],
             }
           ],
@@ -827,8 +847,8 @@ const sidebars = {
                 id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ONE_intro",
               },
               items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors',
                 {
                   type: 'category',
                   label: 'SenseCAP One Compact Weather Station',
@@ -836,6 +856,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Introduction',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/Firmware_Update',
                   ],
                 },
               ],
@@ -1962,6 +1983,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
                   ],
                 },
               ],
@@ -2687,6 +2709,7 @@ const sidebars = {
           label: 'reComputer R1225 LoRaWAN Gateway',
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start',
           ],
         },
         {
@@ -3594,6 +3617,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: 'Tools',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_uv_to_build_package',
@@ -3846,8 +3882,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
               ]
             },
-            //flashing jetpack page
+            // flashing jetpack page
             'Edge/NVIDIA_Jetson/Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/Jetson_Debug_Guide',
           ]
         },
         // Applications
@@ -4195,9 +4232,19 @@ const sidebars = {
         id: 'Edge/reTerminal_E10xx/reterminal_e10xx_main_page',
       },
       items: [
+        'Edge/reTerminal_E10xx/getting_started_with_reterminal_e1001',
+        'Edge/reTerminal_E10xx/getting_started_with_reterminal_e1002',
+        'Edge/reTerminal_E10xx/getting_started_with_reterminal_e1003',
+        'Edge/reTerminal_E10xx/getting_started_with_reterminal_e1004',
         {
-          type: 'autogenerated',
-          dirName: 'Edge/reTerminal_E10xx',
+          type: 'category',
+          label: 'Applications',
+          items: [
+            {
+              type: 'autogenerated',
+              dirName: 'Edge/reTerminal_E10xx/Applications',
+            },
+          ]
         },
       ]
     },

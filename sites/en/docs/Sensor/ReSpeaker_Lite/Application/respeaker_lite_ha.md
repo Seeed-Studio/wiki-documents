@@ -133,6 +133,9 @@ When prompted, click **SKIP** – we’ll create the configuration manually.
 
 Select your new device entry and click **EDIT**.
 
+:::note
+The updated YAML file can be found there. In some cases, the latest ESPHome version may cause compatibility issues. Please refer to the original [repository](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml)
+:::
 
 <details>
 <summary>Yaml file</summary>

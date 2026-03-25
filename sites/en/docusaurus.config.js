@@ -299,6 +299,7 @@ module.exports = (async () => {
               'zh-CN/**',
               'ja/**',
               'es/**',
+              'pt-br/**',
             ],
           },
         }),

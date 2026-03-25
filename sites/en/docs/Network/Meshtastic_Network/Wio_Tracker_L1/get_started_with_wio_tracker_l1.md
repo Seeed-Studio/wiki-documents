@@ -8,12 +8,14 @@ slug: /get_started_with_meshtastic_wio_tracker_l1
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 12/24/2025
+  date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
 The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
@@ -229,6 +231,8 @@ For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may 
 
 ### Sensor connection
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
+
 You can add sensor to the device via the grove interface. The following sensors have been verified to be compatible with the Grove interface on the device.
 
 <table>
@@ -264,6 +268,30 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
+
+<Tabs>
+
+<TabItem value="ios" label="IOS">
+
+- Enable Telemetry to get sensor data. If you want to show sensor data on the OLED screen, enale `on screen`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryIOS.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="Android" label="Android">
+
+- Enable Telemetry to get sensor data. If you want to show sensor data on the OLED screen, enale `on screen`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/TelemetryAndroid.png" alt="pir" width={900} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+The OLED will show sensor data if you enable `on screen`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Telemetryscreen.jpg" alt="pir" width={800} height="auto" /></p>
+
 ### Screen Connection
  - E-Ink Screen
   [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
@@ -274,9 +302,9 @@ You can add sensor to the device via the grove interface. The following sensors 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 
-### Virtuak Keyboard
+### Virtual Keyboard
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
-The 2.7 version firmwarw now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
+The 2.7 version firmware now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## FAQ
@@ -337,6 +365,90 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
+### NodeDB Reset
+
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+
+- **Node ID**
+- **User Name**
+- **Location Information**
+- **Signal Information (SNR)**
+- **Last Seen Time**
+
+**When to reset**
+
+Reset NodeDB when:
+
+- The node list contains outdated, duplicate, or invalid entries.
+- You move to a different Mesh environment and want to rediscover nearby nodes.
+- Node information in the app appears incorrect or incomplete.
+
+:::danger
+Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
+:::
+
+**Method 1: Reset from the Device**
+
+1. Open the menu on the device.
+2. Go to **Node Actions / Settings**.
+3. Select **Reset NodeDB**.
+4. Confirm the reset.
+
+**Example Screens**
+
+Step 1: Press the device button to enter the menu.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB1.png" alt="Device button to enter the menu" width={300} height="auto" /></p>
+
+Step 2: Find `Reset NodeDB` in the menu.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB2.png" alt="Reset NodeDB option in the device menu" width={300} height="auto" /></p>
+
+**Method 2: Reset from the App**
+
+1. Open the app and connect to the target device.
+2. Go to **Settings**.
+3. Tap **Device**.
+4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
+5. Tap it and confirm the action.
+
+**App Path**
+
+`Settings > Device > Reset NodeDB`
+
+**Example Screens**
+
+Step 1: Open **Device** from the **Settings** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+Step 2: Tap `Reset NodeDB` on the **Device Config** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+Please note the difference between the following options:
+
+- **Reset NodeDB**: Only clears the node database.
+- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+:::
+
+**What happens after reset**
+
+After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
+
+You may observe the following:
+
+- The node list may temporarily become empty or smaller.
+- Nodes will gradually reappear as the device continues operating.
+- Previously stored historical node records will no longer be available.
+
+**Notes**
+
+- Before resetting, make sure the issue is actually related to an abnormal node list.
+- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
+- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
+- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Signal Quality
 
@@ -349,6 +461,17 @@ If you want to restore to the default settings, you can do the factory reset. Th
 ### Compatible Antenna
 
 If you need a antenna replacement for L1 Pro, [click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) to get one.
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Resource
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)

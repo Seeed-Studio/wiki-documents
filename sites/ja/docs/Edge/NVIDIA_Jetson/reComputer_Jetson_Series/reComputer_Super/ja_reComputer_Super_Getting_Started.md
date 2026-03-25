@@ -16,6 +16,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_super_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # reComputer Super の入門ガイド
 
 reComputer Super 系列は reComputer Classic を大幅に強化し、AI パフォーマンスを最大 1.7 倍の 157 TOPS まで向上させます。Jetson Orin Nano（11410311、11410312）および Jetson Orin NX（11410313、11410314）を搭載したモデルを提供しています。
@@ -429,6 +431,17 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 [機械図面-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 [Seeed Nvidia Jetson成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 [Seeed Jetsonワンページャー](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート＆製品ディスカッション
 

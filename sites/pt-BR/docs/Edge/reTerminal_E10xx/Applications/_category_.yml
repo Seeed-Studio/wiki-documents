@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Aplicações'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reterminal_e10xx_applications
+link:
+  type: generated-index
+  slug: reterminal_e10xx_applications
+  title: Aplicações de Display ePaper da Série reTerminal E
+  description: Este artigo é uma página de coleção para a aplicação de display ePaper da Série reTerminal E.

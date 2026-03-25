@@ -13,6 +13,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Seeed Studio XIAO ESP32C3 を使い始める
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:300, height:'auto', "border-radius": '12.8px'}}/></div>
@@ -498,6 +500,17 @@ XIAO ESP32-C3はGPIOウェイクアップとタイマーウェイクアップを
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - 📚 **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

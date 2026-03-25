@@ -12,6 +12,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Introduction/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # reComputer for Jetson シリーズ紹介
 
 <div align="center"><img width={900} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/reComputerheadline.png" /></div>
@@ -192,6 +194,17 @@ reComputer for Jetsonシリーズは、NVIDIA の先進的なAI組み込みシ�
 ## リソース
 
 - **[PDF]** [NVIDIA Jetsonデバイスとキャリアボード比較](https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

@@ -221,10 +221,11 @@ jobs:
             comment += `**操作类型:** ${operationSummary}\n\n`;
             comment += `### 🚀 开始翻译\n`;
             comment += `在此评论回复以下命令之一：\n\n`;
-            comment += `- \`/translate all\` - 翻译所有变更到所有语言 (中文、日文、西班牙语)\n`;
+            comment += `- \`/translate all\` - 翻译所有变更到所有语言 (中文、日文、西班牙语、葡萄牙语)\n`;
             comment += `- \`/translate zh\` - 仅翻译到中文\n`;
             comment += `- \`/translate ja\` - 仅翻译到日文\n`;
             comment += `- \`/translate es\` - 仅翻译到西班牙语\n`;
+            comment += `- \`/translate pt\` - 仅翻译到葡萄牙语 (巴西)\n`;
             comment += `- \`/translate zh ja\` - 翻译到中文和日文\n`;
             comment += `- \`/translate zh es\` - 翻译到中文和西班牙语\n\n`;
             comment += `> 译文将提交到 base 仓库分支 \`auto-translate/pr-<PR号>\` 并打开/复用一个翻译 PR，原 PR 不会被翻译提交污染，也不会阻塞合并。`;
@@ -320,6 +321,7 @@ jobs:
             sites/zh-CN/docs
             sites/ja/docs
             sites/es/docs
+            sites/pt-BR/docs
           sparse-checkout-cone-mode: true
           filter: blob:none
 
@@ -362,12 +364,13 @@ jobs:
           comment="${{ github.event.comment.body }}"
           echo "🔍 解析翻译命令: $comment"
           if [[ "$comment" == *"/translate all"* ]]; then
-            languages="zh-CN ja es"
+            languages="zh-CN ja es pt-BR"
           else
             languages=""
             [[ "$comment" == *" zh"* ]] && languages="$languages zh-CN"
             [[ "$comment" == *" ja"* ]] && languages="$languages ja"
             [[ "$comment" == *" es"* ]] && languages="$languages es"
+            [[ "$comment" == *" pt"* ]] && languages="$languages pt-BR"
           fi
           languages=$(echo $languages | xargs)
           echo "languages=$languages" >> $GITHUB_OUTPUT
@@ -436,19 +439,20 @@ jobs:
           git fetch --depth=1 origin "$BASE_REF"
           git checkout "$BASE_REF"
 
-          # ✅ 镜像三种语言站点的 docs（含删除）
+          # ✅ 镜像四种语言站点的 docs（含删除）
           rsync -a --delete --safe-links --copy-dirlinks \
             --include='sites/' \
             --include='sites/zh-CN/' --include='sites/zh-CN/docs/***' \
             --include='sites/ja/'    --include='sites/ja/docs/***' \
             --include='sites/es/'    --include='sites/es/docs/***' \
+            --include='sites/pt-BR/' --include='sites/pt-BR/docs/***' \
             --exclude='*' \
             "$GITHUB_WORKSPACE/" .
 
           git config user.email "action@github.com"
           git config user.name "GitHub Action Bot"
 
-          git add sites/zh-CN/docs sites/ja/docs sites/es/docs 2>/dev/null || true
+          git add sites/zh-CN/docs sites/ja/docs sites/es/docs sites/pt-BR/docs 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "ℹ️ 镜像后无变化"
