@@ -61,14 +61,14 @@ First, we need to do the wiring. Please follow the below steps.
 | 11 | GND | Ground pin |
 | 12 | GND | Ground pin |
 
-## resolution
+## Resolution
 
-| **Interface**                    | **Value**                   |
-| -------------------------------- | --------------------------- |
-| Current Input	                   |  4 to 20 mA (2 channel)     |
-| Current Input Resolution (I1/I2) |  0.001 mA                   |
-| Voltage Input                    |	0 to 10V (2 channel)       |
-| Voltage Input Resolution (V1/V2) |  0.01 mV                    |
+| **Interface**                   | **Value**                  |
+| --------------------------------|--------------------------- |
+| Current Input                   | 4 to 20 mA (2 channel)     |
+| Current Input Resolution (I1/I2)| 0.001 mA                   |
+| Voltage Input                   | 0 to 10V (2 channel)       |
+| Voltage Input Resolution (V1/V2)| 0.01 mV                    |
 
 ## Power supply options of sensor
 

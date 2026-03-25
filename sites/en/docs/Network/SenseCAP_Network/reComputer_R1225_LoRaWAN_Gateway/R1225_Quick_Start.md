@@ -1,6 +1,6 @@
 ---
 description: reComputer R1225 LoRaWAN Gateway Qucik Start
-title:  Quick Start
+title:  reComputer R1225 LoRaWAN Gateway Qucik Start
 keywords:
 - Gateway
 - SenseCAP
@@ -16,6 +16,8 @@ createdAt: '2026-02-05'
 updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/
 ---
+
+# Qucik Start
 
 ## Power connection
 
@@ -40,7 +42,7 @@ With the PoE module installed, the ETH0 port of reComputer R1225 can support PoE
 It's worth noting that the PoE module provided with the reComputer R1225 is compliant with the IEEE 802.3af standard and can provide a maximum power supply of 12.95W. **Therefore, if there is a need to connect high-power peripherals such as SSD or 4G modules, the PoE power supply may not be sufficient**. In this case, it's recommended to use the AC/DC terminal for power supply instead to ensure stable and reliable operation of the device.
 :::
 
-## Access the Seeed Gateway OS management interface
+## Access the Seeed Gateway OS
 
 ### Access via router
 
@@ -69,15 +71,15 @@ Check the IP Address of your device on your router admin page.
 - Step 3: Get your device Username and Password
 
   - Username：admin
-  - password：null  (**No password required for first-time login**)
+  - Password：null  (**No password required for first-time login**)
 
 - Step 4: Login Luci
 
 Input the IP Address of your device in a browser to enter the Luci page.
 Then input your device username and password to login, and click the Login button.
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 ### Access via device AP hotspot
 
@@ -86,12 +88,12 @@ Then input your device username and password to login, and click the Login butto
 - Step 2: Connect to the AP hotspot
 
   - SSID : R1225-XXXX (**last 4 digits of the SN**)
-  - password : 1234567890
+  - Password : 1234567890
 
 When the reComputer R1225 is powered on for the first time, it automatically enables hotspot mode. The default SSID for the hotspot is “R1225-XXXX (**last 4 digits of the SN**)”, and the default password is “1234567890”,connect your computer to this AP hotspot.
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={400} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 - Step 3: Get your device Username and Password
 
@@ -100,64 +102,105 @@ When the reComputer R1225 is powered on for the first time, it automatically ena
 
 - Step 4: Login Luci
 
-Input the IP Address (192.168.168.1) in your browser to enter the Local Console. Then input your device username and password, and click the Login button.
+Input the IP Address (192.168.168.1) in your browser to enter the Local Console.  
+Then input your device username and password, and click the Login button.
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 ## R1225 Network Configuration
 
 ### Ethernet Connection
 
+<!--补充图片和内容-->
+
 ### WIFI Connection
 
 - Step 1: Click on `Network` - `Wireless`
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 - Step 2: Click on the `Scan` button to scan the WIFI
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 - Step 3: Select your WI-FI to join the network
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 - Step 4: Submit the Wi-Fi password, and then click `Submit` and Save
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
-Then click Save and Apply to apply your settings
-
-The indicator on the top will show solid green if the gateway is successfully connected to the WIFI
+- Step 5: Click `Save & Apply` to apply your settings
 
 ### Cellular Connection (for 4G version)
 
 - Step 1: Plug your SIM card into the Nano-SIM card slot
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 - Step 2: Login the Luci page, and click on `Network` - `Cellular`
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
-- Step 3: Setup the APN info, and click `Save and Apply` to apply your settings
+- Step 3: Setup the APN info, and click `Save & Apply` to apply your settings
 
-<!--补充图片-->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/" alt="pir" width={800} height="auto" /></p>
+<!--补充图片
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
 
 ## R1225 LoRaWAN Configuration
 
-### Select the built-in Chirpstack platform
+- Step 1: Click on `LoRa` - `LoRa Network`
+
+- Step 2: Check the  `Enable LoRa functionality`
+
+- Step 3: Click `Save & Apply` to apply your settings
 
 ### Channel Plan Settings
 
+- Step : Navigate to `LoRa` > `Channel Plan`
+
+- Step : Select `Region` and `Channel-plan`
+
+- Step : Click `Save & Apply` to apply your settings
+
+### Select the built-in Chirpstack platform
+
+:::tip
+R1225 comes with ChirpStack (open-source LoRaWAN network server) pre-installed.
+:::
+
+- Step : Select `Platform Type` - `ChirpStack`
+
+- Step : Check the **EUI**
+
+- Step : Click `Open ChirpStack Application Server` in the lower-left corner
+
+- Step : Log in to the Chirpstack Cloud Platform
+  - Username/email: admin
+  - Password: admin
+
+The default username and password are both “admin”
+
+Then click `Submit` to go to the Chirpstack platform interface
+
 ### Bind R1225 LoRaWAN Gateway
+
+- Step : Navigate to `Gateway` > `Add gateway`
+
+  - Gateway name: A name of your gateway
+
+  - Gateway ID(EUI64): Gateway EUI can be found on the device label or Local Console
+
+  - Stats interval(secs): The expected interval in seconds in which the gateway sends its statistics
+
+Then click `Submit`
 
 ### Checking the Gateway Connection Status
