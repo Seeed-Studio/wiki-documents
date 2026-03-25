@@ -714,6 +714,8 @@ const sidebars = {
               label: 'Guía del usuario',
               items: [
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Quick_Start',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Payload_Format',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_FAQ',
               ],
             },
             {
@@ -723,6 +725,24 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network',
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_Helium',
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_AWS_IoT_Core'
+              ],
+            }
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Baliza Bluetooth SenseCAP',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/es_BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/es_BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 Baliza Bluetooth para interiores',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/es_BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/es_BC03_Indoor_Bluetooth_Beacon_User_Guide',
               ],
             }
           ],
@@ -821,8 +841,8 @@ const sidebars = {
                 id: "Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_ONE_intro",
               },
               items: [
-                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_SenseCAP-One-Series-Meteorological-Sensors',
                 'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_ORCH-S4-Weather-Station',
+                'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/es_SenseCAP-One-Series-Meteorological-Sensors',
                 {
                   type: 'category',
                   label: 'SenseCAP One Compact Weather Station',
@@ -830,6 +850,7 @@ const sidebars = {
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Introduction',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor',
                     'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Benchmark_Labs_Forecast_Integration_for_Seeed_Weather_Stations',
+                    'Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP_ONE_Compact_Weather_Station/es_Firmware_Update',
                   ],
                 },
               ],
@@ -1265,7 +1286,6 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_PlatformIO',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_MicroPython',
-
               ],
             },
             {
@@ -1956,6 +1976,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_arm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_openclaw',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_picovoice',
                   ],
                 },
               ],
@@ -2681,6 +2702,7 @@ const sidebars = {
           label: 'Gateway LoRaWAN reComputer R1225',
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_introduction',
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_Quick_Start',
           ],
         },
         {
@@ -3588,6 +3610,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/es_getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: 'Herramientas',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/es_recomputer_use_uv_to_build_package',
@@ -3835,6 +3870,7 @@ const sidebars = {
             },
             //flashing jetpack page
             'Edge/NVIDIA_Jetson/es_Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/es_Jetson_Debug_Guide',
           ]
         },
         // Applications
@@ -4182,9 +4218,35 @@ const sidebars = {
         id: 'Edge/reTerminal_E10xx/es_reterminal_e10xx_main_page',
       },
       items: [
+        'Edge/reTerminal_E10xx/es_getting_started_with_reterminal_e1001',
+        'Edge/reTerminal_E10xx/es_getting_started_with_reterminal_e1002',
+        'Edge/reTerminal_E10xx/es_getting_started_with_reterminal_e1003',
+        'Edge/reTerminal_E10xx/es_getting_started_with_reterminal_e1004',
+        {
+          type: 'category',
+          label: 'Applications',
+          items: [
+            {
+              type: 'autogenerated',
+              dirName: 'Edge/reTerminal_E10xx/Applications',
+            },
+          ]
+        },
+      ]
+    },
+    {
+      type: 'category',
+      label: 'reTerminal D Series',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Edge/reTerminal_D10xx/es_reterminal_D10xx_main_page',
+      },
+      items: [
         {
           type: 'autogenerated',
-          dirName: 'Edge/reTerminal_E10xx',
+          dirName: 'Edge/reTerminal_D10xx',
         },
       ]
     },

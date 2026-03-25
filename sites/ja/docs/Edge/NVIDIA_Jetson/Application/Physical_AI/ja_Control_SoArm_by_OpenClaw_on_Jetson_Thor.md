@@ -1,6 +1,6 @@
 ---
-description: このWikiでは、Jetson Thor 上で OpenClaw と LeRobot を用いて SO-Arm を制御する方法を説明します。
-title: Jetson Thor 上で OpenClaw による SO-Arm 制御
+description: このWikiでは、Jetson Thor上でOpenClawとLeRobotを使用してSO-Armを制御する方法を紹介します。
+title: Jetson Thor上でOpenClawによりSO-Armを制御する
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
 slug: /ai_robotics_control_soarm_by_openclaw_on_jetson_thor
 sku: 100060965 | 100046482
@@ -9,17 +9,17 @@ last_update:
   author: youjiang
 ---
 
-# Jetson Thor 上で OpenClaw による SO-Arm 制御
+# Jetson Thor上でOpenClawによりSO-Armを制御する
 
 ## はじめに
 
-このWikiでは、Jetson Thor 上で OpenClaw と LeRobot を組み合わせ、ローカル AI エージェントによって SO-Arm を制御する方法を説明します。
+このWikiでは、Jetson Thor上でOpenClawとLeRobotを組み合わせて、ローカルAIエージェントによりSO-Armを制御する方法を説明します。
 
-**NVIDIA Jetson AGX Thor** は、ロボティクスおよびフィジカル AI ワークロード向けに設計された高性能エッジ AI プラットフォームであり、認識・計画・制御のための強力なオンデバイス計算能力を提供します。
+**NVIDIA Jetson AGX Thor** は、ロボティクスおよびPhysical AIワークロード向けに設計された高性能エッジAIプラットフォームであり、認識・計画・制御のための強力なオンデバイス計算能力を提供します。
 
-**SO-Arm** は、オープンソースで低コストなロボットアームプラットフォーム（SO-ARM100/SO-ARM101）であり、エンボディド AI 実験、遠隔操作、マニピュレーションタスク開発に広く利用されています。
+**SO-Arm** は、オープンソースで低コストなロボットアームプラットフォーム（SO-ARM100/SO-ARM101）であり、Embodied AI実験、遠隔操作、マニピュレーションタスク開発に広く利用されています。
 
-**OpenClaw** は、ローカルのツールやモデルをオーケストレーションできる AI エージェントフレームワークです。本プロジェクトでは、OpenClaw を高レベル制御インターフェースとして使用し、LeRobot が SO-Arm 向けの低レベルモーター通信およびキャリブレーションユーティリティを提供します。
+**OpenClaw** は、ローカルのツールやモデルをオーケストレーションできるAIエージェントフレームワークです。本プロジェクトでは、OpenClawを高レベル制御インターフェースとして使用し、LeRobotがSO-Arm向けの低レベルモーター通信およびキャリブレーションユーティリティを提供します。
 
 <div align="center">
     <img width={900} 
@@ -27,17 +27,17 @@ last_update:
 </div>
 
 :::note
-このガイドでは、OpenClaw がエージェントのプランニングとタスクオーケストレーションを担当し、SO-Arm のモーション実行は LeRobot によって処理されます。
+このガイドでは、OpenClawがエージェントのプランニングとタスクオーケストレーションを担当し、SO-Armの動作実行はLeRobotが担当します。
 :::
 
 ## 目次
 
 1. [ハードウェアの準備](#ハードウェアの準備)
-2. [Jetson Thor 上でのシステムセットアップ](#jetson-thor-上でのシステムセットアップ)
-3. [Ollama をインストールしてローカル LLM を実行](#ollama-をインストールしてローカル-llm-を実行)
-4. [Jetson Thor に OpenClaw をインストール](#jetson-thor-に-openclaw-をインストール)
-5. [SO-Arm の接続とキャリブレーション](#so-arm-の接続とキャリブレーション)
-6. [制御デモの実行](#制御デモの実行)
+2. [Jetson Thor上でのシステムセットアップ](#jetson-thor上でのシステムセットアップ)
+3. [OllamaをインストールしてローカルLLMを実行](#ollamaをインストールしてローカルllmを実行)
+4. [Jetson ThorにOpenClawをインストール](#jetson-thorにopenclawをインストール)
+5. [SO-Armの接続とキャリブレーション](#so-armの接続とキャリブレーション)
+6. [制御デモを実行](#制御デモを実行)
 7. [参考資料](#参考資料)
 
 ## ハードウェアの準備
@@ -45,7 +45,7 @@ last_update:
 ### デバイス一覧
 
 - NVIDIA® Jetson AGX Thor™ Developer Kit ×1
-- SO-ARM101 低コスト AI アーム ×1
+- SO-ARM101 低コストAIアーム ×1
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
@@ -86,15 +86,15 @@ last_update:
 
 ### 配線と接続
 
-- SO-Arm コントローラボードを USB で Thor に接続します。
-- 対応する DC 電源アダプタを SO-Arm コントローラボードに接続します。
-- Thor の電源を入れ、その後アームコントローラボードの電源を入れます。
+- SO-ArmコントローラボードをUSB経由でThorに接続します。
+- 対応するDC電源アダプタをSO-Armコントローラボードに接続します。
+- Thorの電源を入れ、その後アームコントローラボードの電源を入れます。
 
 ### 電源投入時のチェックリスト
 
-- Thor が正常に起動し、ネットワークに接続できる。
-- SO-Arm コントローラボードの LED が点灯している。
-- USB 接続後にシリアルデバイスが現れる。
+- Thorが正常に起動し、ネットワークに接続できる。
+- SO-Armコントローラボード上のLEDが点灯している。
+- USB接続後にシリアルデバイスが現れる。
 
 ```bash
 ls /dev/ttyACM*
@@ -107,7 +107,7 @@ ls /dev/ttyACM*
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/check_serial.png" />
 </div>
 
-## Jetson Thor 上でのシステムセットアップ
+## Jetson Thor上でのシステムセットアップ
 
 ### システムパッケージの更新
 
@@ -117,9 +117,9 @@ sudo apt install -y nvidia-jetpack git curl ffmpeg python3-pip
 python3 -m pip install -U pip
 ```
 
-### 主要な依存関係のインストール
+### コア依存パッケージのインストール
 
-Miniconda をインストールします（推奨）:
+Minicondaをインストールします（推奨）:
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
@@ -133,25 +133,24 @@ source ~/.bashrc
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/conda.png" />
 </div>
 
-LeRobot 用の環境を作成します:
+LeRobot用の環境を作成します:
 
 ```bash
-conda create -y -n lerobot python=3.12
+conda create -y -n lerobot python=3.10
 conda activate lerobot
-git clone https://github.com/huggingface/lerobot.git ~/lerobot
-cd ~/lerobot
-pip install -e . 
+pip install 'lerobot[feetech]'
 pip uninstall torch torchvision
 pip install torch torchvision --index-url https://pypi.jetson-ai-lab.io
 ```
 
-LeRobot 環境に Pinocchio をインストールします:
+LeRobot環境にPinocchioをインストールします:
 
 ```bash
-conda install pinocchio -c conda-forge
+conda install mamba -y
+mamba install -c conda-forge pinocchio pinocchio-python libpinocchio -y
 ```
 
-### CUDA と周辺デバイスの確認
+### CUDAと周辺デバイスの確認
 
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
@@ -161,11 +160,11 @@ lerobot-find-port
 期待される結果:
 
 - `torch.cuda.is_available()` が `True` を出力する
-- アームのシリアルポートが検出される（例 `/dev/ttyACM0`）
+- アームのシリアルポートが検出される（例：`/dev/ttyACM0`）
 
-## Ollama をインストールしてローカル LLM を実行
+## OllamaをインストールしてローカルLLMを実行
 
-Ollama をインストールします:
+Ollamaをインストールします:
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
@@ -174,16 +173,16 @@ curl -fsSL https://ollama.com/install.sh | sh
 モデルを取得します:
 
 ```bash
-ollama pull qwen3-vl:9b
+ollama pull qwen3.5:35b
 ```
 
 :::info
-このガイドでは例として `qwen3-vl:9b` を使用します。性能やメモリ要件に応じて、別の Ollama モデルに置き換えることもできます。
+このガイドでは `qwen3.5:35b` を例として使用します。性能やメモリ制約に応じて、別のOllamaモデルに置き換えることもできます。
 :::
 
-## Jetson Thor に OpenClaw をインストール
+## Jetson ThorにOpenClawをインストール
 
-### OpenClaw のインストール
+### OpenClawをインストール
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
@@ -191,59 +190,142 @@ curl -fsSL https://openclaw.ai/install.sh | bash
 
 ### 実行時パラメータの設定
 
-`~/.openclaw/openclaw.json` を編集し、Ollama をデフォルトのモデルプロバイダとして設定します:
+`~/.openclaw/openclaw.json` を編集し、Ollamaをデフォルトのモデルプロバイダとして設定します:
+
+<details>
+
+<summary> openclaw.json </summary>
 
 ```json
 {
   "agents": {
     "defaults": {
-      "models": {
-        "ollama": {}
+      "compaction": {
+        "mode": "safeguard"
       },
+      "maxConcurrent": 4,
       "model": {
-        "primary": "ollama/qwen3-vl:9b"
+        "primary": "ollama/qwen3.5:35b"
+      },
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "workspace": "/home/seeed/.openclaw/workspace"
+    },
+    "list": [
+      {
+        "id": "main",
+        "tools": {
+          "profile": "full"
+        }
       }
+    ]
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "98aefed421e9a506a3174dab0575fd3cc36c9d15b856a894"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
     }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-10T06:45:16.014Z",
+    "lastTouchedVersion": "2026.3.8"
   },
   "models": {
     "providers": {
       "ollama": {
-        "baseUrl": "http://127.0.0.1:11434/v1",
+        "api": "ollama",
         "apiKey": "ollama-local",
-        "api": "openai-completions",
+        "baseUrl": "http://127.0.0.1:11434",
         "models": [
           {
-            "id": "qwen3-vl:9b",
-            "name": "Qwen3 VL 9B",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
+            "contextWindow": 262144,
             "cost": {
-              "input": 0,
-              "output": 0,
               "cacheRead": 0,
-              "cacheWrite": 0
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
             },
-            "contextWindow": 128000,
-            "maxTokens": 8192
+            "id": "qwen3.5:35b",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5:35b",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 262144,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "qwen3.5",
+            "input": [
+              "text",
+              "image"
+            ],
+            "name": "qwen3.5",
+            "reasoning": true
           }
         ]
       }
     }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-10T02:17:28.382Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.8"
   }
 }
+
 ```
+</details>
 
 :::note
-オプション: Ollama が提供するスクリプトを直接使用して、OpenClaw の設定ファイルを素早くセットアップすることもできます。
-
+オプション: Ollamaが提供するスクリプトを直接使用して、OpenClawの設定ファイルを素早くセットアップすることもできます。
 `ollama launch openclaw --model qwen3.5`
 :::
 
 ### 追加設定
 
-SO-Arm 制御スキルをインストールします:
+SO-Arm制御スキルをインストールします:
 
 - [soarm-control Skill](https://clawhub.ai/yuyoujiang/soarm-control) をダウンロードします
 - それを `~/.openclaw/workspace/skills` に展開します
@@ -253,19 +335,29 @@ SO-Arm 制御スキルをインストールします:
 - [SO-ARM101 URDF](https://github.com/TheRobotStudio/SO-ARM100/blob/main/Simulation/SO101/so101_new_calib.urdf) をダウンロードします
 - それを `~/.openclaw/workspace/skills/soarm-control/references` に移動します
 
-OpenClaw ゲートウェイを再起動します:
+[任意] 検出モデルを追加します: 
+- 検出モデル（YoloV11n）を[こちら](https://wiki.seeedstudio.com/ja/How_to_Train_and_Deploy_YOLOv8_on_reComputer/)を参考に学習させます
+- 検出モデル（`best.pt`）を `~/.openclaw/workspace/skills/soarm-control/scripts` に移動します
+
+
+OpenClawゲートウェイを再起動します:
 
 ```bash
 openclaw gateway restart
 ```
 
-WebUI を開きます:
+WebUIを開きます:
 
 ```text
-http://127.0.0.1:18789/
+http://127.0.0.1:18789/wiki
 ```
 
-## SO-Arm の接続とキャリブレーション
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/webui.png" />
+</div>
+
+## SO-Armの接続とキャリブレーション
 
 ### シリアルポートの権限と検出
 
@@ -292,34 +384,29 @@ lerobot-calibrate \
 
 :::note
 完全なキャリブレーション手順については、以下を参照してください:
-[SO-Arm in LeRobot - Calibrate](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
+[LeRobotにおけるSO-Arm - Calibrate](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
 :::
 
-## 制御デモの実行
+## 制御デモを実行
 
-### OpenClaw サービスの起動
+### バックエンドサービスの起動
 
-OpenClaw と LeRobot の環境が準備できていることを確認します:
+OpenClawとLeRobotの環境が準備できていることを確認します:
 
 ```bash
 openclaw gateway restart
+
 conda activate lerobot
+cd ~/.openclaw/workspace/skills/soarm-control 
+bash scripts/start_server.sh &
 ```
 
 ### 基本モーションタスクの実行
 
 OpenClaw WebUI でロボット制御の指示を入力します。OpenClaw はプロンプトを解析し、インストール済みの `soarm-control` スキルを呼び出して、アームを目標位置まで動かします。
 
-このビデオでは、次の 3 つのコマンドを実演しています:
-
-1. ロボットアームのエンドエフェクタを上方向に 20 cm 移動する。
-2. 高さを変えずに、前方へ 20 cm 移動する。
-3. 初期位置に戻る。
-
-これら 3 つのコマンドに対する OpenClaw の応答は、いずれも期待どおりの動作になっています。
-
 <div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/5fPBpAno2wc" title="Using OpenClaw to Control the SOARM 101 Robot Arm | Robotics Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## 参考資料
@@ -333,7 +420,7 @@ OpenClaw WebUI でロボット制御の指示を入力します。OpenClaw は�
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

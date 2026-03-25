@@ -1,33 +1,32 @@
 ---
-description: Hola y gracias por visitar la Base de Conocimientos de Temas Tecnológicos de Seeed Studio. Este recurso está diseñado para apoyarte en el dominio de nuestra gama de hardware inteligente y dispositivos de computación.
-title: Temas Tecnológicos
+description: Hola y gracias por visitar la Base de Conocimiento de Temas de Tecnología de Seeed Studio. Este recurso está diseñado para ayudarte a dominar nuestra gama de hardware inteligente y dispositivos de computación.
+title: Temas de Tecnología
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao
-createdAt: '2025-09-03'
+createdAt: '2024-05-24'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/topicintroduction/
 ---
 
 
-Hola y gracias por visitar la Base de Conocimientos de Temas Tecnológicos de Seeed Studio. Este recurso está diseñado para apoyarte en el dominio de nuestra gama de hardware inteligente y dispositivos de computación.
+Hola y gracias por visitar la Base de Conocimiento de Temas de Tecnología de Seeed Studio. Este recurso está diseñado para ayudarte a dominar nuestra gama de hardware inteligente y dispositivos de computación.
 
-- **[TinyML](/es/tinyml_topic)** permite que incluso los microcontroladores de bajo consumo ejecuten aprendizaje automático localmente. 
-  - Lanzamos [**TinyML WorkShop**](/es/tinyml_workshop_course_new) (curso gratuito) para brindarte una comprensión integral del ML embebido, solo requiriendo un XIAO ESP32S3 Sense([página wiki](/es/xiao_esp32s3_getting_started)), la potente placa MCU.
-  - Proporcionamos con honor una herramienta de IA embebida - [**SenseCraft Model Assistant**](/es/ModelAssistant_Introduce_Overview) para lograr inferencias más rápidas y precisas en dispositivos embebidos.
+- **[TinyML](/es/tinyml_topic)** permite que incluso los microcontroladores de bajo consumo ejecuten aprendizaje automático localmente.
+  - Lanzamos [**TinyML WorkShop**](/es/tinyml_workshop_course_new) (curso gratuito) para ofrecerte una comprensión completa del ML embebido, solo requiriendo una XIAO ESP32-S3 Sense([wiki page](/es/xiao_esp32s3_getting_started)), la potente placa MCU.
+  - Ofrecemos con orgullo una herramienta de IA embebida - [**SenseCraft Model Assistant**](/es/ModelAssistant_Introduce_Overview) para lograr inferencias más rápidas y precisas en dispositivos embebidos.
 - [**Home Assistant**](/es/home_assistant_topic) está diseñado para alcanzar niveles avanzados de privacidad, versatilidad y sostenibilidad en la automatización del hogar.
   - Hemos desarrollado múltiples integraciones listas para usar como [**SenseCAP**](/es/home_assistant_sensecap), [**LoRaWAN**](/es/ha_xiao_esp32), [**SenseCraft**](/es/sensecraft_homeassistant_userguide) para Home Assistant
-- El movimiento [**Open Source**](/es/open_source_topic) impulsa la innovación de base a través del hardware y software.
-- Y la [**Edge AI**](/es/edge_ai_topic) lleva las cosas más lejos al empujar la inteligencia al borde, más cerca de donde se originan los datos, habilitando decisiones automatizadas en tiempo real.
+- El movimiento de [**Open Source**](/es/open_source_topic) impulsa la innovación de base en hardware y software.
+- Y [**Edge AI**](/es/edge_ai_topic) lleva las cosas más allá al llevar la inteligencia al borde, más cerca de donde se origina los datos, lo que permite decisiones automatizadas en tiempo real.
 
-Colectivamente, estas tecnologías devuelven el control a los individuos, habilitando sistemas automatizados e inteligentes adaptados a las necesidades locales mientras protegen la privacidad y autonomía.
+En conjunto, estas tecnologías devuelven el control a las personas, permitiendo sistemas automatizados e inteligentes adaptados a las necesidades locales mientras se protege la privacidad y la autonomía.
 
-
-## ¡Haz clic en cualquiera de las categorías a continuación para descubrir más! 
+## ¡Haz clic en cualquiera de las categorías siguientes para saber más!
 
   <div style={{display: 'flex'}}>
 
@@ -40,7 +39,6 @@ Colectivamente, estas tecnologías devuelven el control a los individuos, habili
   </a>
 </div>
 
-
 <div style={{display: 'flex'}}>
 
   <a href="/es/open_source_topic" rel="noopener noreferrer">
@@ -52,24 +50,25 @@ Colectivamente, estas tecnologías devuelven el control a los individuos, habili
   </a>
 </div>
 
-## ¡Llamada a Colaboradores para i18n! ✨
+## ¡Llamado a colaboradores para i18n! ✨
 
-Entendemos que existe un plugin(docusaurus) para la internacionalización de la plataforma wiki, pero queremos ofrecer actualizaciones de idiomas internacionales personalizadas para nuestros clientes. Por lo tanto, estamos convocando al [Equipo de Traducción Wiki](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980459) para una mejor experiencia del espectador.
+Entendemos que existe un plugin (docusaurus) para la internacionalización de la plataforma wiki, pero queremos ofrecer actualizaciones de idiomas internacionales personalizadas para nuestros clientes. Por lo tanto, estamos convocando al [Wiki Translation Team](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35980459) para mejorar la experiencia de visualización.
 :::info
-- ¡Si hay un plugin más avanzado también lo recibimos con beneplácito!
+
+- ¡Si hay un plugin más avanzado, también es bienvenido!
+
 :::
 
+## Soporte técnico y debate sobre productos
 
-## Soporte Técnico y Discusión de Productos
-
-¡Gracias por elegir nuestros productos! Proporcionamos muchas formas de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Ofrecemos muchas formas de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Disponemos de varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

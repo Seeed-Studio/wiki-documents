@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeros pasos con la Serie Seeed Studio XIAO ESP32S3
 
@@ -787,7 +788,7 @@ El proyecto se compone de personalizar el bootloader de segunda etapa desde IDF 
 
 **Nota:** dado que IDF está en desarrollo activo y cambia con mucha frecuencia, se incluye como submódulo en lib/esp-idf; ejecuta el script de exportación allí para configurar correctamente tu entorno.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div>
 
 </TabItem>
 </Tabs>
@@ -919,6 +920,14 @@ Para grabar el firmware, simplemente ejecuta el archivo `.bat` correspondiente. 
   - **📄[Hoja de datos]** [Hoja de datos del sensor CMOS OV5640](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
 - **[OV2640]** 
   - **📄[Hoja de datos]** [Hoja de datos del sensor CMOS OV2640](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
 ## Recursos del curso
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>

@@ -1,14 +1,15 @@
 ---
-description: reServer Industrial ハードウェアインターフェース使用方法
-title: reServer Industrial ハードウェアインターフェース使用方法
+description: reServer Industrial ハードウェアインターフェースの使用方法
+title: reServer Industrial ハードウェアインターフェースの使用方法
 keywords:
-  - reServer
+- reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_industrial_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
-createdAt: '2025-05-27'
+sku: 114110247
+createdAt: '2023-06-08'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/reserver_industrial_hardware_interface_usage/
 ---
@@ -16,23 +17,23 @@ url: https://wiki.seeedstudio.com/ja/reserver_industrial_hardware_interface_usag
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ハードウェアとインターフェースの使用方法
+# ハードウェアおよびインターフェースの使用方法
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
 
-reServer Industrial は 2x 2.5" SATA HDD/SSD ドライブベイを搭載し、ビデオ分析アプリケーションにおいて数百のローカルビデオ映像を簡単に保存できます。また、5つのRJ-45イーサネットポート、1つのRS232/422/485、4つの絶縁DI/DO、1つのCAN、4つのUSB3.1など、複数の接続オプションを提供します。ファンレス設計と多様な取り付けオプションにより、-20℃から60℃での展開が可能で、より過酷な環境とより重い負荷に最適です。
+reServer Industrial には 2 基の 2.5 インチ SATA HDD / SSD ドライブベイが搭載されており、ビデオ解析アプリケーションにおいて数百本のローカルビデオ映像を容易に保存できます。さらに、5 つの RJ-45 Ethernet ポート、1 つの RS232/422/485、4 つのアイソレート DI/DO、1 つの CAN、4 つの USB3.1 など、複数の接続オプションを備えています。ファンレス設計と多様な取り付けオプションにより、-20 ～ 60 ℃ の範囲で展開でき、より過酷な環境や高負荷用途に最適です。
 
-reServer Industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクにより、ファンを必要とせずに効率的な冷却が可能で、ほこりやその他の汚染物質による部品故障のリスクを軽減します。ファンレス設計はまた、騒音レベルと消費電力を削減し、騒音に敏感な環境での使用に適しており、エネルギーコストを最小限に抑えます。
+reServer Industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを使用せずに効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、静音性が求められる環境での使用に適しており、エネルギーコストの削減にもつながります。
 
-reServer industrial は 5つの RJ45 GbE ポートを持ち、そのうち4つは IP カメラなどのデバイスに Power over Ethernet を提供する PoE PSE ポートです。これにより、別の電源の必要性がなくなり、電源コンセントが容易に利用できない場所でのネットワークデバイスの展開が簡単になります。残りの GbE ポートは、ネットワークスイッチまたはルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信とインターネットへのアクセスを可能にします。
+reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を展開しやすくなります。残りの GbE ポートはネットワークスイッチやルーターに接続するために使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
-- **ファンレスコンパクトエッジAIサーバー:** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載、20 TOPS から 100 TOPS の AI パフォーマンス、0.7m/s の気流で -20 ~ 60°C のより広い温度範囲
-- **マルチストリーム処理:** 5× GbE RJ45（4つは 802.3af PSE 対応）、リアルタイム処理で複数のストリームを処理
-- **拡張可能ストレージ:** 2.5" SATA HDD/SSD 用の2つのドライブベイ、さらに NVMe SSD 用の M.2 2280 ソケット
-- **産業用インターフェース:** COM ポート、DI/DO ポート、CAN ポート、USB 3.1、およびオプションの TPM2.0 モジュールを含む
-- **ハイブリッド接続:** Nano SIM カードスロット付きで 5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
+- **ファンレスコンパクト Edge AI サーバー:** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載し、20 TOPS から 100 TOPS までの AI 性能を提供、動作温度範囲は -20 ～ 60°C（0.7m/s の気流時）と広範囲
+- **マルチストリーム処理:** 5× GbE RJ45（うち 4 ポートは 802.3af PSE 対応）で、複数ストリームをリアルタイム処理
+- **拡張可能なストレージ:** 2 基の 2.5 インチ SATA HDD/SSD 用ドライブベイに加え、NVMe SSD 用 M.2 2280 ソケットを搭載
+- **産業用インターフェース:** COM ポート、DI/DO ポート、CAN ポート、USB 3.1、およびオプションの TPM2.0 モジュールを搭載
+- **ハイブリッド接続性:** Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）に対応
 - **認証:** FCC、CE、UKCA、ROHS、KC
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -40,24 +41,24 @@ reServer industrial は 5つの RJ45 GbE ポートを持ち、そのうち4つ�
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
-## reServer Industrial の分解
+## reServer Industrial を分解する
 
-まず最初に、すべてのインターフェースにアクセスするために外側のエンクロージャを分解することをお勧めします。詳細については[このドキュメント](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf)を参照してください。
+まず最初に、すべてのインターフェースへアクセスできるように外側の筐体を分解することをお勧めします。詳しくは [このドキュメント](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) を参照してください。
 
-## ギガビットイーサネットコネクタ
+## ギガビット Ethernet コネクタ
 
-reServer Industrialには10/100/1000Mbps仕様のイーサネットポートが5つあり、そのうち4つはPSE 802.3 af 15W定格で、これらのポート（LAN1-LAN4）にPoEカメラを直接接続できます。これらはPCIeからイーサネット（LAN7430-I/Y9X）モジュール経由で接続されています。ただし、残りのイーサネットポート（LAN0）は左端にあり、インターネット接続用のルーターへの接続にのみ使用されます。
+reServer Industrial には 10/100/1000Mbps 仕様の Ethernet ポートが 5 つあり、そのうち 4 つは PSE 802.3 af 15 W に対応しており、PoE カメラをこれらのポート（LAN1～LAN4）に直接接続できます。これらは PCIe to Ethernet（LAN7430-I/Y9X）モジュール経由で接続されています。一方、左端の残りの Ethernet ポート（LAN0）は、インターネット接続用にルーターへ接続するためだけに使用されます。
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reServer-Industrial/5.jpg"/></div>
 
-各イーサネットポートには2つのLED（緑と黄）があり、以下を示します
+各 Ethernet ポートには 2 つの LED（緑と黄）があり、それぞれ次のことを示します
 
-- 緑LED：1000Mネットワークに接続されている場合のみ点灯
-- 黄LED：ネットワークアクティビティステータスを表示
+- 緑色 LED: 1000M ネットワークに接続されている場合のみ点灯
+- 黄色 LED: ネットワークアクティビティの状態を表示
 
 ### 使用方法
 
-- PoEカメラを接続する前に、4つのイーサネットポートのPoE機能を有効にする必要があります。以下のように有効にしてください：
+- PoE カメラを接続する前に、4 つの Ethernet ポートで PoE 機能を有効にする必要があります。次のように有効化します:
 
   <Tabs>
   <TabItem value="Jetpack 5.1.x" label="Jetpack 5.1.x">
@@ -83,45 +84,60 @@ reServer Industrialには10/100/1000Mbps仕様のイーサネットポートが5
   </TabItem>
   </Tabs>
 
-### 物理ネットワークIPをeth番号にバインド
 
-  **インターフェースeth0からeth3はPoE用に指定されており、eth3は特にPoE4と呼ばれます。**
+### 物理ネットワーク IP を eth 番号にバインドする
 
-  各POEインターフェースに異なるIPアドレスを設定する必要がある場合は、以下の手順に従ってください：
+  **LAN1 から LAN4 のインターフェースは PoE 用に割り当てられています。**
 
-  **ステップ1**：POEをreServer Industrialデバイスに接続します。例えば、eth3を設定するには、eth3の名前をPOE3に設定します。
+  各 PoE インターフェースに異なる IP アドレスを設定する必要がある場合は、次の手順に従ってください:
+
+  :::warning
+  インターフェース名（例: `enP1p1s0`）はシステムによって異なる場合があります。先に進む前に、次のコマンドを実行して、お使いのデバイス上での実際のインターフェース名を確認してください。以下のコマンドはあくまで参考例です — システムに表示されるインターフェース名に置き換えて使用してください。
 
   ```bash
-  sudo nmcli connection add type ethernet ifname eth4 con-name POE3
+  ifconfig
+  ```
+  :::
+
+  **ステップ 1**: PoE デバイスを reServer Industrial に接続します。対象インターフェース用に新しい接続を作成します。例えば、インターフェース `enP1p1s0` を設定し、`POE1` という名前を付ける場合は次のようにします:
+
+  ```bash
+  sudo nmcli connection add type ethernet ifname enP1p1s0 con-name POE1
   ```
 
-  **ステップ2**: POE3のIPアドレスを**192.168.6.6**に設定します。IPアドレスは実際の使用状況に応じてカスタマイズできます。
+  **ステップ 2**: IP アドレスを設定します。IP アドレスは実際の用途に応じてカスタマイズできます。
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
+  sudo nmcli connection modify POE1 ipv4.addresses 192.168.6.6/24
   ```
 
-  **ステップ3**: POE3のIPv4アドレスを手動設定に設定します。
+  **ステップ 3**: IPv4 の方式を手動（静的 IP）に設定します。
 
   ```bash
-  sudo nmcli connection modify POE3 ipv4.method manual
+  sudo nmcli connection modify POE1 ipv4.method manual
   ```
 
-  **ステップ4**: 接続を開始する
+  **ステップ 4**: 接続を有効化します。
 
   ```bash
-  sudo nmcli connection up POE3
+  sudo nmcli connection up POE1
+  ```
+
+  **ステップ 5**: 設定を確認します。
+
+  ```bash
+  ifconfig
   ```
 
 ## SATA コネクタ
 
-reServer Industrial は 2 台の SATA 2.5" HDD/SSD をサポートし、SATA データコネクタと電源コネクタの両方を備えています。以下のように HDD/SSD を接続できます
+reServer Industrial は 2 台の SATA 2.5 インチ HDD/SSD をサポートしており、SATA データおよび電源コネクタの両方を備えています。HDD / SSD には次のように接続できます
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/23.jpg"/></div>
 
 ### 使用方法
 
-システムが起動した後、接続された SATA ドライブを以下の方法で確認できます
+システムの起動後、接続されている SATA ドライブを次のように確認できます
 
 ```sh
 lsblk
@@ -131,69 +147,69 @@ lsblk
 
 ## RTC
 
-reServer Industrialには、RTCバッテリーを接続する2つの異なる方法が搭載されています
+reServer Industrial には、RTC バッテリーに接続する 2 つの異なる方法が用意されています
 
 ### 接続概要
 
-- 方法1：
+- 方法 1:
 
-**3V CR1220コイン電池**を以下に示すようにボード上のRTCソケットに接続します。電池の**プラス（+）**端子が上向きになるようにしてください
+下図のように、**3V CR1220 コイン電池**をボード上の RTC ソケットに接続します。バッテリーの **プラス (+)** 側が上向きになっていることを確認してください
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/6.jpg"/></div>
 
-- 方法2：
+- 方法 2:
 
-**JSTコネクタ付き3V CR2302コイン電池**を以下に示すようにボード上の2ピン1.25mm JSTソケットに接続します
+下図のように、**JST コネクタ付き 3V CR2302 コイン電池**をボード上の 2 ピン 1.25mm JST ソケットに接続します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/7.jpg"/></div>
 
 ### 使用方法
 
-- **ステップ1：** 上記のようにRTCバッテリーを接続します
+- **ステップ 1:** 上記のいずれかの方法で RTC バッテリーを接続します
 
-- **ステップ2：** reServer Industrialの電源を入れます
+- **ステップ 2:** reServer Industrial の電源を入れます
 
-- **ステップ3：** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`設定 > 日付と時刻`に移動し、イーサネットケーブル経由でネットワークに接続して**自動日付と時刻**を選択し、日付/時刻を自動的に取得します
+- **ステップ 3:** Ubuntu デスクトップで右上のドロップダウンメニューをクリックし、`Settings > Date & Time` に移動して、Ethernet ケーブルでネットワークに接続し、**Automatic Date & Time** を選択して日付と時刻を自動取得します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
 :::note
-イーサネット経由でインターネットに接続していない場合は、ここで手動で日付/時刻を設定できます
+Ethernet 経由でインターネットに接続していない場合は、ここで日付と時刻を手動で設定できます
 :::
 
-- **ステップ4：** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します
+- **ステップ 4:** ターミナルウィンドウを開き、次のコマンドを実行してハードウェアクロックの時刻を確認します
 
 ```sh
 sudo hwclock
 ```
 
-以下のような出力が表示されますが、これは正しい日付/時刻ではありません
+次のような出力が表示されますが、これは正しい日付 / 時刻ではありません
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/14.png"/></div>
 
-- **ステップ 5:** 以下のコマンドを入力して、ハードウェアクロック時刻を現在のシステムクロック時刻に変更します
+- **ステップ 5:** 次のコマンドを入力して、ハードウェアクロックの時刻を現在のシステムクロックの時刻に変更します
 
 ```sh
 sudo hwclock --systohc
 ```
 
-- **ステップ 6:** インターネットから時刻を取得しないようにするため、接続されているイーサネットケーブルをすべて取り外し、ボードを再起動します
+- **ステップ 6:** インターネットから時刻を取得しないように、接続されている Ethernet ケーブルをすべて取り外し、ボードを再起動します
 
 ```sh
 sudo reboot
 ```
 
-- **ステップ 7:** ハードウェアクロック時刻を確認して、デバイスの電源がオフになっても日付/時刻が同じままであることを確認する
+- **ステップ 7:** ハードウェアクロックの時刻を確認し、デバイスの電源を切っても日付 / 時刻が変わらないことを確認します
 
-次に、各起動時にハードウェアクロックからシステムクロックを常に同期するスクリプトを作成します。
+次に、起動のたびにハードウェアクロックからシステムクロックを常に同期するスクリプトを作成します。
 
-- **ステップ 8:** お好みのテキストエディタを使用して新しいシェルスクリプトを作成する。ここでは **vi** テキストエディタを使用する
+- **ステップ 8:** お好みのテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは **vi** テキストエディタを使用します
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **ステップ 9:** **i** を押して**挿入モード**に入り、ファイル内に以下の内容をコピー＆ペーストします
+- **ステップ 9:** **i** を押して **挿入モード** に入り、次の内容をファイル内にコピー＆ペーストします
 
 ```sh
 #!/bin/bash
@@ -201,7 +217,7 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **ステップ 10:** スクリプトを実行可能にする
+- **ステップ 10:** スクリプトに実行権限を付与します
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -213,7 +229,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **ステップ 12:** ファイル内に以下を追加してください
+- **ステップ 12:** ファイル内に次の内容を追加します
 
 ```sh
 [Unit]
@@ -226,48 +242,48 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **ステップ 13:** systemctl デーモンをリロードする
+- **ステップ 13:** systemctl デーモンをリロードします
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-- **ステップ 14:** 新しく作成したサービスを起動時に開始するように有効化し、サービスを開始します
+- **ステップ 14:** 作成したサービスをブート時に起動するよう有効化し、サービスを開始します
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **ステップ 15:** スクリプトがsystemdサービスとして起動し実行されていることを確認する
+- **ステップ 15:** スクリプトが systemd サービスとして稼働していることを確認します
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
+- **ステップ 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期していることがわかります
 
 ## M.2 Key M
 
-reServer Industrialには、M.2 Key Mスロットに接続された128GB SSDが標準で含まれており、JetPackシステムがプリインストールされています。
+出荷時の reServer Industrial には、M.2 Key M スロットに接続された 128GB SSD が含まれており、JetPack システムがプリインストールされています。
 
 ### 接続概要
 
-付属のSSDを取り外して新しいものをインストールしたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、[1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)ストレージのSeeed SSDのみを推奨します。これらのSSDのみをテストしているためです。さらに、このインターフェースはPCIe Gen4.0 SSDをサポートしています。
+同梱の SSD を取り外して新しい SSD を取り付けたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、[1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) の Seeed 製 SSD のみを使用することを推奨します。これらの SSD のみ動作検証を行っています。さらに、このインターフェースは PCIe Gen4.0 SSD をサポートします。
 
-- **ステップ 1:** プリインストールされたSSDのネジを取り外します
+- **ステップ 1:** プリインストールされている SSD のネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/8.jpg"/></div>
 
-- **ステップ 2:** SSDコネクタから離すようにスライドしてSSDを取り外します
+- **ステップ 2:** SSD コネクタからスライドさせて SSD を取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/9.jpg"/></div>
 
-- **ステップ 3:** 新しいSSDを挿入し、ネジを締め直します
+- **ステップ 3:** 新しい SSD を挿入し、ネジを締め直します
 
 ### 使用方法
 
-接続されたSSDで簡単なベンチマークを実行する方法を説明します
+接続された SSD に対して簡単なベンチマークを行う方法を説明します
 
 - **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します
 
@@ -275,7 +291,7 @@ reServer Industrialには、M.2 Key Mスロットに接続された128GB SSDが�
 sudo dd if=/dev/zero of=/home/$USER/test bs=1M count=512 conv=fdatasync
 ```
 
-- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度の上記コマンドを実行した後に、必ずこれを実行してください。
+- **ステップ 2:** 以下のコマンドを実行して読み出し速度を確認します。必ず書き込み速度用の上記コマンドを実行した後に実行してください。
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -284,45 +300,45 @@ sudo dd if=/home/$USER/test of=/dev/null bs=1M count=512
 
 ### mini PCIe
 
-reServer Industrialには、4GおよびLoRaモジュールをサポートするmini PCIeコネクタが搭載されています。ただし、4GモジュールまたはLoRaモジュールのいずれか一方のみを同時に接続できます。一部の4GモジュールにはGPS機能が組み込まれています。これについても説明します。
+reServer Industrial には 4G および LoRa モジュールをサポートする mini PCIe コネクタが搭載されています。ただし、一度に接続できるのは 4G モジュールか LoRa モジュールのどちらか一方のみです。一部の 4G モジュールには GPS 機能が内蔵されています。これについても説明します。
 
-#### 4Gモジュール接続概要
+#### 4G モジュール接続概要
 
-現在、このボードはEC25EUXGAおよびEC20CEHCLGモジュールをサポートしています。
+現在このボードは EC25EUXGA と EC20CEHCLG モジュールをサポートしています。
 
-- **ステップ1:** ボードが既に電源オンの場合は、電源をオフにします
+- **ステップ 1:** すでに電源が入っている場合はボードの電源を切ります
 
-- **ステップ2:** 付属のスタンドオフを取り外します。このスタンドオフは、M.2 Key Bインターフェースを使用する場合にのみ必要です
+- **ステップ 2:** 付属のスタンドオフを取り外します。このスタンドオフは M.2 Key B インターフェースを使用する場合にのみ必要です
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/10.jpg"/></div>
 
-- **ステップ3:** 4GモジュールをminiPCIeスロットにスライドして挿入し、事前に取り付けられているネジを使用して2つの穴にネジ止めし、4Gモジュールを固定します
+- **ステップ 3:** 4G モジュールを mini PCIe スロットに差し込み、あらかじめ取り付けられているネジを 2 つの穴に締めて 4G モジュールを固定します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/11.jpg"/></div>
 
-- **ステップ4:** **MAIN**とラベル付けされたアンテナコネクタにアンテナを接続します。ここではIPEXコネクタを使用する必要があります
+- **ステップ 4:** **MAIN** とラベルされたアンテナコネクタにアンテナを接続します。ここでは IPEX コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/12.jpg"/></div>
 
-- **ステップ5:** 4G対応のnano SIMカードをボード上のSIMカードスロットに挿入します。SIMカードの金色の面が上向きになるようにしてください。カードを奥まで挿入し、内部のスプリングに当たって跳ね返り、所定の位置にロックされるようにします。
+- **ステップ 5:** 4G 対応 nano SIM カードを、SIM カードの金属面が上向きになるようにボード上の SIM カードスロットに挿入します。ここではカードを内部のバネに当たるまで奥まで押し込み、跳ね返ってロックされるまで挿入します。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/13.jpg"/></div>
 
 :::note
-SIMカードを取り外したい場合は、カードを押し込んで内部のスプリングに当て、SIMがスロットから出てくるようにします
+SIM カードを取り外したい場合は、内部のバネに当たるまでカードを押し込むと、SIM がスロットから出てきます
 :::
 
-- **ステップ6:** **J8 (Control and UART) Header**の**SIM_MUX_SEL**と**GND**ピンの間にジャンパーを追加します
+- **ステップ 6:** **J8 (Control and UART) Header** 上の **SIM_MUX_SEL** ピンと **GND** ピンの間にジャンパを追加します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/14.jpg"/></div>
 
-- **ステップ6:** ボードの電源をオンにします
+- **ステップ 6:** ボードの電源を入れます
 
-#### 4Gモジュール使用方法 - テストダイヤル
+#### 4G モジュールの使用方法 - 発信テスト
 
-EC25モジュールを使用する場合、モジュールは自動的に起動し、使用準備が整います。ただし、EC20モジュールを使用する場合は、動作させるためにモジュールをリセットする必要があります
+EC25 モジュールを使用する場合、モジュールは自動的に起動し、すぐに使用可能になります。しかし EC20 モジュールを使用する場合は、動作させるためにモジュールをリセットする必要があります
 
-- **ステップ1:** EC25モジュールを使用している場合は、このステップをスキップできます。ただし、EC20モジュールを使用している場合は、以下のコマンドを入力してGPIO309ピンにアクセスします。このピンは4Gモジュールのリセットを担当します
+- **ステップ 1:** EC25 モジュールを使用している場合、このステップはスキップできます。しかし EC20 モジュールを使用している場合は、4G モジュールのリセットを担当する GPIO309 ピンにアクセスするため、次のコマンドを入力します
 
 ```sh
 sudo su 
@@ -333,52 +349,52 @@ echo out > direction
 echo 1 > value
 ```
 
-EC25モジュールの場合、ボードが起動するとすぐにLED2が緑色に点灯します。EC20モジュールの場合、上記で説明したようにモジュールをリセットした後にLED2が緑色に点灯します
+EC25 モジュールの場合、ボードの起動直後に LED2 が緑色に点灯します。EC20 モジュールの場合は、上記のようにモジュールをリセットした後に LED2 が緑色に点灯します
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/15.jpg"/></div>
 
-- **ステップ 2:** minicomをインストールする
+- **ステップ 2:** minicom をインストールします
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **ステップ 3:** 接続された4Gモジュールのシリアルコンソールに入り、ATコマンドを入力して4Gモジュールと対話できるようにします
+- **ステップ 3:** 接続された 4G モジュールのシリアルコンソールに入って AT コマンドを入力し、4G モジュールと対話できるようにします
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **ステップ 4:** **Ctrl+A** を押してから **E** を押してローカルエコーをオンにします
+- **ステップ 4:** **Ctrl+A** を押してから **E** を押し、ローカルエコーを有効にします
 
-- **ステップ 5:** コマンド **"AT"** を入力してエンターを押します。レスポンスが "OK" と表示されれば、4Gモジュールが正常に動作しています
+- **ステップ 5:** **"AT"** コマンドを入力して Enter を押します。応答として "OK" が表示されれば、4G モジュールは正常に動作しています
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/></div>
 
-- **ステップ 6:** コマンド **"ATI"** を入力してモジュール情報を確認します
+- **ステップ 6:** **"ATI"** コマンドを入力してモジュール情報を確認します
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-- **ステップ 7:** モジュールをテストするには、以下のコマンドを入力して別の電話番号に発信します
+- **ステップ 7:** モジュールをテストするため、以下のコマンドを入力して別の電話番号に発信します
 
 ```sh
 ATD<phone_number>;
 ```
 
-そして、以下の出力が表示されます
+すると次のような出力が表示されます
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/24.jpg"/></div>
 
-入力した電話番号に通話を受信できる場合、モジュールは期待通りに動作しています
+入力した電話番号で着信を受け取ることができれば、モジュールは期待どおりに動作しています
 
-#### 4Gモジュールの使用方法 - インターネットへの接続
+#### 4G モジュールの使用方法 - インターネットに接続
 
-##### EC25モジュール
+##### EC25 モジュール
 
-EC25モジュールを使用している場合は、以下の手順に従ってください
+EC25 モジュールを使用している場合は、以下の手順に従ってください
 
-- **ステップ1:** 上記で説明した4Gモジュールのシリアルコンソールを開いた後（4Gモジュールの使用方法 - テストダイヤル セクション）、以下のコマンドを実行してインターネットに接続します。ここで**YOUR_APN**をお使いのネットワークプロバイダーのAPNに置き換えてください
+- **ステップ 1:** 上記（4G モジュールの使用方法 - 発信テスト セクション）で説明したように 4G モジュールのシリアルコンソールを開いた後、次のコマンドを実行してインターネットに接続します。ここで **YOUR_APN** を使用している通信事業者の APN に置き換えてください
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
@@ -386,23 +402,23 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/89.jpg"/></div>
 
-接続が成功すると、上の画像で確認できるように **OK** が出力されるはずです
+接続に成功すると、上の画像のように **OK** と出力されます
 
-- **ステップ 2:** 以下を実行して4Gモジュールを再起動します
+- **ステップ 2:** 次のコマンドを実行して 4G モジュールを再起動します
 
 ```sh
 AT+CFUN=1,1
 ```
 
-これで、シリアルターミナル上で4Gモジュールとの接続が失われます
+これでシリアルターミナル上で 4G モジュールとの接続が切れます
 
-- **ステップ 3:** **CTRL + A** を押してから **Q** を押して **minicom** を閉じます
+- **ステップ 3:** **CTRL + A** を押してから **Q** を押し、**minicom** を終了します
 
-- **ステップ 4:** **ifconfig** と入力すると、**usb0** インターフェースにIPアドレスが表示されます
+- **ステップ 4:** **ifconfig** と入力すると、**usb0** インターフェースに IP アドレスが表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/93.png"/></div>
 
-- **ステップ 5:** インターネット接続があるかどうかを確認するために、以下のようにWebサイトにpingを試すことができます
+- **ステップ 5:** 次のように Web サイトに ping を送信して、インターネット接続があるかどうかを確認できます
 
 ```sh
 ping -I usb0 www.bing.com -c 5
@@ -414,17 +430,17 @@ ping -I usb0 www.bing.com -c 5
 
 EC20 モジュールを使用している場合は、以下の手順に従ってください
 
-- **ステップ 1:** 前のセクション（4G モジュール使用方法 - テストダイヤルセクション）で EC20 モジュール用に説明されているように、すでに 4G モジュールをリセットしている場合は、このステップをスキップできます。ただし、まだ実行していない場合は、今すぐ実行してください
+- **ステップ 1:** すでに前のセクション（4G モジュールの使用方法 - 発信テスト セクション）で説明したとおりに EC20 モジュールの 4G モジュールをリセットしている場合は、このステップをスキップできます。まだ行っていない場合は、ここで実行してください
 
-- **ステップ 2:** 4G モジュールのシリアルコンソールに入り、以下のコマンドを入力して ECM モードに設定します
+- **ステップ 2:** 4G モジュールのシリアルコンソールに入り、次のコマンドを入力して ECM モードに設定します
 
 ```sh
 AT+QCFG="usbnet",1
 ```
 
-- **ステップ 3:** 4Gモジュールをリセットする
+- **ステップ 3:** 4G モジュールをリセットします
 
-- **ステップ 4:** 4Gモジュールコンソール内で、以下のコマンドを実行してインターネットに接続します。ここで **YOUR_APN** をあなたのネットワークプロバイダーのAPNに置き換えてください
+- **ステップ 4:** 4G モジュールのコンソール内で、次のコマンドを実行してインターネットに接続します。ここで **YOUR_APN** を使用している通信事業者の APN に置き換えてください
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
@@ -434,13 +450,13 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/90.jpg"/></div>
 
-- **ステップ 7:** 以下のように URL に ping を試して、インターネット接続があるかどうかを確認できます
+- **ステップ 7:** 次のように URL に ping を送信して、インターネット接続があるかどうかを確認できます
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/92.png"/></div>
 
-#### 4G モジュールの使用方法 - GPS への接続
+#### 4G モジュールの使用方法 - GPS に接続
 
-一部の 4G モジュールには GPS モジュールが組み込まれています。EC25EUXGA と EC20CEHCLG の両方のモジュールには 4G モジュールが搭載されています。
+一部の 4G モジュールには GPS モジュールが内蔵されています。EC25EUXGA と EC20CEHCLG の両モジュールには 4G モジュールが内蔵されています。
 
 - **ステップ 1:** 以下のコマンドを実行して GPS モジュールを再起動します
 
@@ -449,13 +465,13 @@ echo -e "AT+QGPS=1\r\n" > /dev/ttyUSB2
 echo -e "AT+QGPS=0\r\n" > /dev/ttyUSB2
 ```
 
-- **ステップ 2:** 以下のコマンドを実行してGPSデータを取得する
+- **ステップ 2:** 以下のコマンドを実行して GPS データを取得します
 
 ```sh
 sudo cat /dev/ttyUSB1
 ```
 
-すると、以下のような出力が表示されます
+すると次のような出力が表示されます
 
 ```sh
 seeed@seeed-x:~$ sudo cat /dev/ttyUSB1
@@ -471,41 +487,41 @@ $GPRMC,,V,,,,,,,,,,N*53
 $GPVTG,,T,,M,,N,,K,N*2C
 ```
 
-#### LoRaモジュール接続概要
+#### LoRa モジュール接続概要
 
-現在このボードはWM1302 SPIモジュールをサポートしています。当社のBazaarで入手可能な[US版](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html)または[EU版](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html)のいずれかを使用できます。
+現在このボードは WM1302 SPI モジュールをサポートしています。[US バージョン](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html) または [EU バージョン](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html) のいずれかを、Bazaar から入手して使用できます。
 
-- **ステップ1:** ボードがすでに電源オンの場合は電源を切る
+- **ステップ 1:** すでに電源が入っている場合はボードの電源を切ります
 
-- **ステップ2:** LoRaモジュールをmini PCIeスロットにスライドして挿入し、事前に取り付けられているネジを使用して2つの穴にネジ止めしてLoRaモジュールを固定する
+- **ステップ 2:** LoRa モジュールを mini PCIe スロットに差し込み、あらかじめ取り付けられているネジを 2 つの穴に締めて LoRa モジュールを固定します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/16.jpg"/></div>
 
-- **ステップ3:** アンテナコネクタにアンテナを接続する。ここではIPEXコネクタを使用する必要があります
+- **ステップ 3:** アンテナコネクタにアンテナを接続します。ここでは IPEX コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/17.jpg"/></div>
 
 :::note
-**J8 (Control and UART) Header**の**SIM_MUX_SEL**と**GND**ピン間にジャンパーがないことを確認してください。このジャンパーは4Gモジュールを使用する場合にのみ必要です
+**J8 (Control and UART) Header** 上の **SIM_MUX_SEL** ピンと **GND** ピンの間にジャンパがないことを確認してください。このジャンパは 4G モジュールを使用する場合にのみ必要です
 :::
 
-- **ステップ4:** ボードの電源を入れる
+- **ステップ 4:** ボードの電源を入れます
 
-#### LoRaモジュール使用方法 - LoRa RF テスト
+#### LoRa モジュールの使用方法 - LoRa RF のテスト
 
-LoRaモジュールが接続されると、モジュール上の緑と青のLEDが点灯します
+LoRa モジュールが接続されると、モジュール上の緑色と青色の LED が点灯します
 
-- **ステップ1:** 以下のコマンドを入力してLoRaモジュールがシステムによって検出されているかどうかを確認する
+- **ステップ 1:** 以下のコマンドを入力して、LoRa モジュールがシステムに認識されているか確認します
 
 ```sh
 i2cdetect -r -y 7
 ```
 
-以下の出力が表示された場合、モジュールがシステムによって検出されています
+次のような出力が表示されれば、モジュールはシステムに認識されています
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/29.png"/></div>
 
-- **ステップ 2:** 以下のコマンドを入力して、LoRa信号送信ツールをコンパイルおよびビルドします
+- **ステップ 2:** 以下のコマンドを入力して、LoRa 信号送信ツールをコンパイルおよびビルドします
 
 ```sh
 git clone https://github.com/lakshanthad/sx1302_hal
@@ -516,17 +532,17 @@ cp ../tools/reset_lgw.sh .
 sudo ./test_loragw_hal_tx -r 1250 -m LORA -f 867.1 -s 12 -b 125 -n 1000 -z 100 --dig 3 --pa 0 --pwid 13 -d /dev/spidev2.0
 ```
 
-以下の結果が表示され、LoRaモジュールのLEDが赤色に点灯した場合、モジュールがRF信号を正常に送信していることを意味します
+次のような結果が表示され、LoRa モジュール上の LED が赤色に変われば、モジュールは RF 信号を正常に送信していることを意味します
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/78.jpg"/></div>
 
-送信を停止するには、キーボードで **CTRL + C** を押してください。
+送信を停止するには、キーボードで **CTRL + C** を押します。
 
-#### LoRaモジュールの使用方法 - TTNへの接続
+#### LoRa モジュールの使用方法 - TTN に接続
 
-次に、TTN（The Things Network）に接続し、reServer IndustrialをTTN LoRaWANゲートウェイとして使用します
+ここでは TTN (The Things Network) に接続し、reServer Industrial を TTN LoRaWAN ゲートウェイとして使用します
 
-- **ステップ 1:** パケットフォワーダーを準備するために以下を入力してください
+- **ステップ 1：** パケットフォワーダーを準備するために以下を入力します
 
 ```sh
 cd ..
@@ -534,13 +550,13 @@ cd packet_forwarder
 cp ../tools/reset_lgw.sh .
 ```
 
-- **ステップ 2:** 使用している LoRa モジュールに応じて以下を実行します。ここでは SPI US915 バージョンをテストしています
+- **ステップ 2：** 使用している LoRa モジュールに応じて、以下を実行します。ここでは SPI US915 バージョンでテストしています
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-ただし、他の異なるモジュールのコマンドは以下の通りです
+しかし、他のさまざまなモジュール向けのコマンドは次のとおりです
 
 ```sh
 # USB 915
@@ -553,96 +569,96 @@ sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
-上記のコマンドを実行すると、最後の行に**concentrator EUI**情報が表示された以下の出力が表示されます。この情報は後でTTNでゲートウェイを設定する際に使用するため、保存しておいてください。
+上記のコマンドを実行すると、以下のような出力が表示され、最後の行に **concentrator EUI** 情報が表示されます。この情報は後で TTN でゲートウェイを設定する際に使用するので、必ず控えておいてください
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/79.jpg"/></div>
 
-- **ステップ 3:** [このURL](https://console.cloud.thethings.network)にアクセスしてTTNコンソールに入り、お好みの地域を選択してください
+- **ステップ 3：** [この URL](https://console.cloud.thethings.network) にアクセスして TTN コンソールに入り、任意のリージョンを選択します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/80.png"/></div>
 
-- **ステップ 4:** すでにアカウントをお持ちの場合はログインし、アカウントをお持ちでない場合は新しいアカウントにサインアップしてください
+- **ステップ 4：** すでにアカウントをお持ちの場合はログインし、アカウントをお持ちでない場合は新規登録します
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/81.png"/></div>
 
-- **ステップ 5:** **Go to gateways**をクリックしてください
+- **ステップ 5：** **Go to gateways** をクリックします
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/82.png"/></div>
 
-- **ステップ 6:** **+ Register gateway**をクリックしてください
+- **ステップ 6：** **+ Register gateway** をクリックします
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/83.png"/></div>
 
-- **ステップ 7:** 先ほど取得した**Concentrator EUI**を**Gateway EUI**セクションに入力し、**Confirm**をクリックしてください
+- **ステップ 7：** 先ほど取得した **Concentrator EUI** を **Gateway EUI** セクションに入力し、**Confirm** をクリックします
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-- **ステップ 8:** 使用しているLoRaモジュールに応じて**Frequency plan**を入力してください。ここではモジュールのUS915バージョンを使用しているため、**United Stated 902-928 MHz, FSB 2 (used by TTN)**を選択しました。その後、**Register gateway**をクリックしてください
+- **ステップ 8：** 使用している LoRa モジュールに応じて **Frequency plan** を入力します。ここではモジュールの US915 バージョンを使用しているため、**United Stated 902-928 MHz, FSB 2 (used by TTN)** を選択しています。その後 **Register gateway** をクリックします
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
 
 :::note
-**Gateway ID**は自動的に入力されています。ただし、お好みに応じて変更することができます。**Gateway name**は必須ではありませんが、お好みに応じて入力することもできます
+**Gateway ID** は自動的に入力されていますが、任意の値に変更することもできます。**Gateway name** は必須ではありませんが、必要に応じて入力することもできます
 :::
 
-- **ステップ 9:** ゲートウェイのメインホームページで**Gateway Server Address**をメモしてください
+- **ステップ 9：** ゲートウェイのメインホームページに表示されている **Gateway Server Address** を控えておきます
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **ステップ 9:** reTerminal Industrialで、**lora_pkt_fwd**コマンドと一緒に使用した**global_conf_json**ファイルを編集してください。ここで、以下のように**gateway_ID**、**server_address**、**serv_port_up**、**serv_port_down**オプションを変更する必要があります
+- **ステップ 9：** reTerminal Industrial 上で、**lora_pkt_fwd** コマンドと一緒に使用した **global_conf_json** ファイルを編集します。ここで **gateway_ID**、**server_address**、**serv_port_up**、**serv_port_down** の各オプションを次のように変更する必要があります
 
-  - gateway_ID: デバイスからのConcentrator EUI
-  - server_address: TTNからのGateway Server Address
+  - gateway_ID: デバイスの Concentrator EUI
+  - server_address: TTN の Gateway Server Address
   - serv_port_up: 1700
   - serv_port_down: 1700
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/87.png"/></div>
 
-- **ステップ 10:** パケットフォワーダーを再実行してください
+- **ステップ 10：** パケットフォワーダーを再実行します
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-以下の出力が表示された場合、デバイスがTTNに正常に接続されたことを意味します
+以下のような出力が表示されれば、デバイスは TTN への接続に成功しています
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/88.jpg"/></div>
 
 ## M.2 Key B
 
-reServer Industrialには、4Gおよび5GモジュールをサポートするM.2 Key Bコネクタが搭載されています。現在、**SIM8202G-M2 5Gモジュール**をテストしています
+reServer Industrial には 4G および 5G モジュールをサポートする M.2 Key B コネクタが搭載されています。現在、**SIM8202G-M2 5G module** でテスト済みです
 
-### 5Gモジュール接続概要
+### 5G モジュール接続概要
 
-- **ステップ1:** ボードが既に電源オンの場合は電源を切ります
+- **ステップ 1：** すでに電源が入っている場合はボードの電源を切ります
 
-- **ステップ2:** スタンドオフが所定の位置にあることを確認し、スタンドオフの上部ネジを取り外します
+- **ステップ 2：** スタンドオフが所定の位置にあることを確認し、スタンドオフ上部のネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/18.jpg"/></div>
 
-- **ステップ2:** 5GモジュールをM.2 Key Bスロットにスライドして挿入し、スタンドオフネジを締めて5Gモジュールを固定します（スタンドオフについて説明）
+- **ステップ 2：** 5G モジュールを M.2 Key B スロットに差し込み、スタンドオフのネジを締めて 5G モジュールを固定します（スタンドオフについて説明）
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/19.jpg"/></div>
 
-- **ステップ3:** モジュールのアンテナコネクタに4本のアンテナを接続します。ここではIPEX 4コネクタを使用する必要があります
+- **ステップ 3：** モジュール上のアンテナコネクタに 4 本のアンテナを接続します。ここでは IPEX 4 コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/20.jpg"/></div>
 
-- **ステップ4:** 5G対応のnano SIMカードをボード上のSIMカードスロットに挿入します。SIMカードの金色の面が下向きになるようにしてください。ここでは、カードを奥まで挿入し、内部スプリングに当たって跳ね返り、所定の位置にロックされるようにします。
+- **ステップ 4：** ボード上の SIM カードスロットに 5G 対応 nano SIM カードを挿入します。このとき、SIM カードの金属面が下向きになるようにしてください。内部のスプリングに当たるまでカードを奥まで押し込み、跳ね返ってロックされる状態にします。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/13.jpg"/></div>
 
 :::note
-SIMカードを取り外したい場合は、カードを押し込んで内部スプリングに当て、SIMがスロットから出てくるようにします
+SIM カードを取り外したい場合は、内部のスプリングに当たるまでカードを押し込むと、SIM がスロットから出てきます
 :::
 
-- **ステップ5:** ボードの電源を入れます
+- **ステップ 5：** ボードの電源を入れます
 
-### 5Gモジュール使用方法 - テストダイヤル
+### 5G モジュールの使用 - 発信テスト
 
-SIM8202G-M2 5Gモジュールを使用する場合、モジュールは自動的に起動しません。そのため、まずいくつかのGPIOを切り替えて起動させる必要があります
+SIM8202G-M2 5G モジュールを使用する場合、モジュールは自動的には起動しません。そのため、まずいくつかの GPIO をトグルして起動させる必要があります
 
-- **ステップ1:** 以下を入力して5Gモジュールを起動します
+- **ステップ 1：** 5G モジュールを起動するために以下を入力します
 
 ```sh
 sudo su 
@@ -665,76 +681,76 @@ echo out > direction
 echo 0 > value
 ```
 
-上記を実行すると、LED2が緑色に点灯します
+上記が実行されると、LED2 が緑色に点灯します
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/15.jpg"/></div>
 
-- **ステップ 2:** minicomをインストールする
+- **ステップ 2：** minicom をインストールします
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **ステップ 3:** 接続された5Gモジュールのシリアルコンソールに入り、ATコマンドを入力して5Gモジュールと対話できるようにします
+- **ステップ 3：** 接続されている 5G モジュールのシリアルコンソールに入ります。これにより AT コマンドを入力して 5G モジュールとやり取りできます
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **ステップ4:** コマンド **"AT"** を入力してエンターキーを押します。レスポンスが "OK" と表示されれば、5Gモジュールが正常に動作しています
+- **ステップ 4：** コマンド **"AT"** を入力して Enter キーを押します。応答として "OK" が表示されれば、5G モジュールは正常に動作しています
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/107.png"/></div>
 
-- **ステップ6:** コマンド **"ATI"** を入力してモジュール情報を確認します
+- **ステップ 6：** コマンド **"ATI"** を入力してモジュール情報を確認します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-- **ステップ7:** モジュールをテストするために、以下のコマンドを入力して他の電話番号に発信します
+- **ステップ 7：** モジュールをテストするために、以下のコマンドを入力して別の電話番号に発信します
 
 ```sh
 ATD<phone_number>;
 ```
 
-そして、以下の出力が表示されます
+すると、以下のような出力が表示されます
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
-### 5Gモジュール使用方法 - インターネット接続
+### 5G モジュールの使用 - インターネット接続
 
-近日公開予定
+近日公開
 
 ## DI/ DO
 
-reServer Industrialは4つのデジタル入力と4つのデジタル出力チャンネルをサポートしており、すべて光学的に絶縁されており、電圧スパイクやその他の電気的外乱からメインボードを効果的に保護します。この同じコネクタにはCANインターフェースもあり、これについてはこのwikiで後ほど説明します。
+reServer Industrial は 4 チャンネルのデジタル入力と 4 チャンネルのデジタル出力をサポートしており、すべて光アイソレーションされているため、電圧スパイクやその他の電気的ノイズからメインボードを効果的に保護します。同じコネクタには CAN インターフェースもあり、これについては本 wiki の後半で説明します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/37.png"/></div>
 
-### DI/ DOピン配置表
+### DI/ DO ピン割り当て表
 
 <table>
   <thead>
     <tr>
-      <th>タイプ</th>
-      <th>ラベル名</th>
-      <th>回路図信号</th>
-      <th>モジュールピン番号</th>
-      <th>BGA番号</th>
-      <th>GPIO番号</th>
-      <th>V/A制限</th>
-      <th>備考</th>
+      <th>Type</th>
+      <th>Label Name</th>
+      <th>Schematic Signal</th>
+      <th>Module Pin Number</th>
+      <th>BGA Number</th>
+      <th>GPIO Number</th>
+      <th>V/A Limits</th>
+      <th>Note</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={4}>入力</td>
+      <td rowSpan={4}>Input</td>
       <td>DI1</td>
       <td>DI_1_GPIO01</td>
       <td>118</td>
       <td>PQ.05</td>
       <td>453</td>
-      <td rowSpan={4}>12V/ 合計20mA電流</td>
-      <td rowSpan={4}>12Vデジタル入力、グランド信号は<br />GND_DI（ピン2/4/6）に接続する必要があります</td>
+      <td rowSpan={4}>合計 12V/ 20mA 電流</td>
+      <td rowSpan={4}>12V デジタル入力、グランド信号は<br />GND_DI (Pin2/4/6) に接続する必要があります</td>
     </tr>
     <tr>
       <td>DI2</td>
@@ -758,14 +774,14 @@ reServer Industrialは4つのデジタル入力と4つのデジタル出力チ�
       <td>391</td>
     </tr>
     <tr>
-      <td rowSpan={4}>出力</td>
+      <td rowSpan={4}>Output</td>
       <td>DO1</td>
       <td>DO_1_GPIO</td>
       <td>193</td>
       <td>PI.00</td>
       <td>399</td>
-      <td rowSpan={4}>ピンあたり40V/40mA負荷</td>
-      <td rowSpan={4}>デジタル出力、最大耐電圧<br />40V、グランド信号は<br />GND_DO（ピン8/10）に接続する必要があります</td>
+      <td rowSpan={4}>各ピンあたり 40V/40mA 負荷</td>
+      <td rowSpan={4}>デジタル出力、最大耐圧 40V、グランド信号は<br />GND_DO(Pin8/10) に接続する必要があります</td>
     </tr>
     <tr>
       <td>DO2</td>
@@ -792,47 +808,49 @@ reServer Industrialは4つのデジタル入力と4つのデジタル出力チ�
       <td>CAN</td>
       <td>CH</td>
       <td colSpan={5} rowSpan={2}>/</td>
-      <td rowSpan={2}>標準差動信号を持つCANバス、<br />グランド信号はGND_ISO（ピン12）に接続する必要があります</td>
+      <td rowSpan={2}>標準的な差動信号を持つ CAN バス、<br />グランド信号は GND_ISO (Pin 12) に接続する必要があります</td>
     </tr>
     <tr>
       <td />
       <td>CL</td>
     </tr>
     <tr>
-      <td>グランド</td>
+      <td>Ground</td>
       <td>GND_DI</td>
       <td colSpan={5} rowSpan={3}>/</td>
-      <td>12Vデジタル入力の基準グランド信号で、<br />DIのリターンパスでもあります</td>
+      <td>12V デジタル入力用の基準グランド信号であり、<br />DI のリターンパスも兼ねています</td>
     </tr>
     <tr>
       <td />
       <td>GND_DO</td>
-      <td>デジタル出力の基準グランド信号で、DOのリターンパスでもあります</td>
+      <td>デジタル出力用の基準グランド信号であり、DO のリターンパスも兼ねています</td>
     </tr>
     <tr>
       <td />
       <td>CG</td>
-      <td>CANの基準グランド信号</td>
+      <td>CAN 用の基準グランド信号</td>
     </tr>
   </tbody>
 </table>
 
-### DI接続概要
+### DI の接続概要
 
-以下の図に従ってDIの接続を行うことができます。DI線に直列抵抗を追加することをお勧めします。ここでは、DI1ピンに接続された4.7kΩ抵抗でテストを行いました。
+以下の図に従って DI の接続を行うことができます。DI ラインには直列に抵抗を追加することをお勧めします。ここでは DI1 ピンに 4.7kΩ の抵抗を接続してテストしました。
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/38.png"/></div>
 
-### DIの使用方法
+### DI の使用方法
 
-DI線で入力として検出されるためには、12Vの電圧を入力する必要があります。DI / DOを有効にするコマンドは、Jetpack 5とJetpack 6で異なります。
+入力として検出されるためには、DI ラインに 12V の電圧を入力する必要があります。DI / DO を有効にするコマンドは Jetpack 5 と Jetpack 6 で異なります。 
+
+
 
 <Tabs>
 <TabItem value="Jetpack 5" label="Jetpack 5">
 
-- **ステップ1:** 上記のように**DI1ピン**に接続を行い、**12V**を入力します
+- **ステップ 1:** 上図のように **DI1 ピン** に接続し、**12V** を入力します
 
-- **ステップ2:** 以下のようにDI1のGPIOを開きます
+- **ステップ 2:** 次のようにして DI1 用の GPIO をオープンします
 
 ```sh
 sudo su 
@@ -842,65 +860,65 @@ cd PQ.05
 ```
 
 :::note
-**DI/ DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DI1ピンの場合、GPIO番号は453、BGA番号はPQ.05です
+GPIO 番号と BGA 番号を確認するには、**DI/ DO ピン割り当て表** を参照してください。上記の例では、DI1 ピンの GPIO 番号は 453、BGA 番号は PQ.05 です
 :::
 
-- **ステップ 3:** 以下を実行してステータスを確認します
+- **ステップ 3:** 状態を確認するために次を実行します
 
 ```sh
 cat value
 ```
 
-0を出力する場合は12V入力があることを意味します。1を出力する場合は入力電圧がないことを意味します。
+出力が 0 の場合は 12V が入力されていることを意味します。出力が 1 の場合は入力電圧がないことを意味します。
 
 </TabItem>
 <TabItem value="Jetpack 6" label="Jetpack 6">
 
-- **ステップ1:** 上記のように**DI1ピン**に接続し、**12V**を入力します
+- **ステップ 1:** 上図のように **DI1 ピン** に接続し、**12V** を入力します
 
-- **ステップ2:** chip0上のDI1の**line offset**を確認します：
+- **ステップ 2:** chip0 上の DI1 の **line offset** を確認します:
 
 ```sh
 gpioinfo gpiochip0
 ```
-
-BGA番号に基づいて対応する**ラインオフセット**を見つけます。DI1の**ラインオフセット**は`105`です。
+BGA 番号に基づいて対応する **line offset** を見つけます。DI1 の **line offset** は `105` です。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-di.jpg"/></div>
 
+
 :::note
-**DI/ DO Pin Assignment Table**を参照してGPIO番号とBGA番号を確認できます。上記の例では、DI1ピンの場合、GPIO番号は453、BGA番号はPQ.05です。
+GPIO 番号と BGA 番号を確認するには、**DI/ DO ピン割り当て表** を参照してください。上記の例では、DI1 ピンの GPIO 番号は 453、BGA 番号は PQ.05 です	
 :::
 
-- **ステップ3:**
-DI1に対応するgpiochip0の**ラインオフセット105**を読み取るには：
-
+- **ステップ 3:**
+DI1 に対応する gpiochip0 の **line offset 105** を読み取るには次を実行します:
 ```sh
 sudo gpioget gpiochip0 105
 ```
-
-出力0は低レベルを示します。出力1は高レベルを示します。  
-コマンド形式は以下の通りです `sudo gpioset <gpiochip> <line>`。
+出力が 0 の場合は Low レベルを示します。出力が 1 の場合は High レベルを示します。  
+コマンド形式は `sudo gpioset <gpiochip> <line>` のとおりです。
 
 </TabItem>
 </Tabs>
 
-### DOの接続概要
 
-以下の図に従ってDOの接続を行うことができます。DO線には直列に抵抗を追加することをお勧めします。ここでは4.7kΩ抵抗でテストしました。
+### DO の接続概要
+
+以下の図に従って DO の接続を行うことができます。DO ラインには直列に抵抗を追加することをお勧めします。ここでは 4.7kΩ の抵抗でテストしています
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/39.png"/></div>
 
-### DOの使用方法
+### DO の使用方法
 
-ここでは上記の図に示すように負荷を接続する必要があります。これをテストする最も簡単な方法は、マルチメーターがあればそれを接続するか、または最大40V未満の電圧を必要とする負荷を接続することです。DI / DOを有効にするコマンドはJetpack 5とJetpack 6で異なります。
+ここでは上記の図で示したように負荷を接続する必要があります。テストする最も簡単な方法は、マルチメータをお持ちであればそれを接続するか、最大電圧 40V 未満を必要とする負荷を接続することです。DI / DO を有効にするコマンドは Jetpack 5 と Jetpack 6 で異なります。 
+
 
 <Tabs>
 <TabItem value="Jetpack 5" label="Jetpack 5">
 
-- **ステップ1:** 上記のように**DO1ピン**に接続を行い、**最大40V**を入力します
+- **ステップ 1:** 上図のように **DO1 ピン** に接続し、**最大 40V** を入力します
 
-- **ステップ2:** 以下のようにD01のGPIOを開きます
+- **ステップ 2:** 次のようにして DO1 用の GPIO をオープンします
 
 ```sh
 sudo su 
@@ -911,10 +929,10 @@ echo out > direction
 ```
 
 :::note
-**DI/ DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DO1ピンの場合、GPIO番号は399、BGA番号はPI.00です。
+GPIO 番号と BGA 番号を確認するには、**DI/ DO ピン割り当て表** を参照してください。上記の例では、DO1 ピンの GPIO 番号は 399、BGA 番号は PI.00 です
 :::
 
-- **ステップ 3:** 以下を実行してピンをオンにします
+- **ステップ 3:** ピンをオンにするために次を実行します
 
 ```sh
 echo 1 > value
@@ -923,25 +941,25 @@ echo 1 > value
 </TabItem>
 <TabItem value="Jetpack 6" label="Jetpack 6">
 
-- **ステップ 1:** 上記のように **DO1 ピン** に接続し、**最大 40V** を入力します
+- **ステップ 1:** 上図のように **DO1 ピン** に接続し、**最大 40V** を入力します
 
-- **ステップ 2:** chip0 の DO1 の **line offset** を確認します：
+- **ステップ 2:** chip0 上の DO1 の **line offset** を確認します:
 
 ```sh
 gpioinfo gpiochip0
 ```
-
-対応するBGA番号に基づいて**ライン オフセット**を見つけます。DO1の**ライン オフセット**は`51`です。
+BGA 番号に基づいて対応する **line offset** を見つけます。DO1 の **line offset** は `51` です。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-do.jpg"/></div>
 
+
+
 :::note
-**DI/ DO Pin Assignment Table**を参照してGPIO番号とBGA番号を見つけることができます。上記の例では、DO1ピンの場合、GPIO番号は399、BGA番号はPI.00です
+GPIO 番号と BGA 番号を確認するには、**DI/ DO ピン割り当て表** を参照してください。上記の例では、DO1 ピンの GPIO 番号は 399、BGA 番号は PI.00 です
 :::
 
 - **ステップ 3:**
-以下のコマンドを使用してDO1の状態を制御します：
-
+DO1 の状態を制御するには、次のコマンドを使用します:
 ```sh
 # set to 12v
 sudo gpioset --mode=wait gpiochip0 51=0
@@ -949,35 +967,34 @@ sudo gpioset --mode=wait gpiochip0 51=0
 # set to 0v
 sudo gpioset --mode=wait gpiochip0 51=1
 ```
-
-コマンドの形式は次の通りです `sudo gpioset <gpiochip> <line>=<value>`。
+コマンド形式は `sudo gpioset <gpiochip> <line>=<value>` のとおりです。
 
 </TabItem>
 </Tabs>
 
-負荷がオンになるか、マルチメーターが入力した電圧を出力する場合、テストは正常に機能しています。
+負荷がオンになる、またはマルチメータが入力した電圧を表示する場合、テストは正常に機能しています。
 
 ## CAN
 
-reServer Industrialは、5MbpsでCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量性絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業用および自動化アプリケーションでの信頼性の高い通信を保証します。120Ωの終端抵抗がデフォルトでインストールされており、GPIOを使用してこの抵抗をONとOFFに切り替えることができます。
+reServer Industrial には、5Mbps の CAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートする CAN インターフェースが搭載されています。CAN インターフェースは容量性アイソレーションによって絶縁されており、優れた EMI 保護を提供し、産業用およびオートメーション用途で信頼性の高い通信を実現します。120Ω の終端抵抗がデフォルトで実装されており、この抵抗は GPIO を使用して ON / OFF を切り替えることができます。
 
-注意：CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はCGピンに接続する必要があります
+注意: CAN インターフェースはアイソレートされた電源を使用しているため、CAN インターフェースに接続される外部デバイスの GND 信号は CG ピンに接続する必要があります
 
-### USB to CANアダプターとの接続概要
+### USB-CAN アダプタとの接続概要
 
-CANバスをテストし、インターフェースするには、以下に示すようにUSB to CANアダプターをボード上のCANコネクターに接続します
+CAN バスをテストおよびインターフェースするには、以下に示すように、ボード上の CAN コネクタに USB-CAN アダプタを接続します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/40.png"/></div>
 
-ここでは、当社のBazaarで入手可能な[USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)を使用しました。
+ここでは、Bazaar で入手可能な [USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) を使用しています。
 
-### USB to CANアダプターでの使用方法
+### USB-CAN アダプタの使用方法
 
-- **ステップ1：** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。私たちの場合、使用したアダプターに応じて、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます
+- **ステップ 1:** 使用している USB-CAN アダプタ用のドライバをメーカーのウェブサイトからダウンロードしてインストールします。今回使用したアダプタの場合、ドライバは [こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver) から入手できます
 
-- **ステップ2：** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。私たちの場合、使用したアダプターに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました
+- **ステップ 2:** 一部のアダプタには、CAN デバイスと通信するために PC 用のソフトウェアも付属しています。今回使用したアダプタの場合、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program) からダウンロードしてインストールしたソフトウェアを使用します
 
-- **ステップ3：** reServer Industrial上でターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします
+- **ステップ 3:** reServer Industrial 上でターミナルウィンドウを開き、CAN インターフェースを設定して有効にするために次のコマンドを実行します
 
 ```sh
 sudo modprobe mttcan
@@ -985,71 +1002,63 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **ステップ 4:** ターミナルで **ifconfig** と入力すると、CAN インターフェースが有効になっていることが確認できます
+- **ステップ 4:** ターミナルで **ifconfig** と入力すると、CAN インターフェースが有効になっていることがわかります
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **ステップ 5:** 以前にインストールした CAN ソフトウェアを開きます。この場合、使用している CAN アダプターに応じてインストールしたソフトウェアを開きます
+- **ステップ 5:** 事前にインストールした CAN ソフトウェアを開きます。この場合、使用している CAN アダプタに対応してインストールしたソフトウェアを開きます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/></div>
 
-- **ステップ 6:** USB to CAN アダプターを PC に接続し、Windows の検索バーで検索して **デバイス マネージャー** を開きます。接続されたアダプターが **ポート (COM と LPT)** の下に表示されます。ここに表示されているシリアル ポートをメモしてください。下の画像によると、シリアル ポートは **COM9** です
+- **ステップ 6:** USB-CAN アダプタを PC に接続し、Windows の検索バーで **Device Manager** を検索して開きます。すると、**Ports (COM & LPT)** の下に接続されたアダプタが表示されます。ここに表示されているシリアルポートをメモします。下図によると、シリアルポートは **COM9** です
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/></div>
 
-- **ステップ 7:** CAN ソフトウェアを開き、**COM** セクションの横にある **Refresh** をクリックし、ドロップダウン メニューをクリックして、接続されたアダプターに応じてシリアル ポートを選択します。**COM bps** はデフォルトのままにして、**Open** をクリックします
+- **ステップ 7:** CAN ソフトウェアを開き、**COM** セクションの横にある **Refresh** をクリックし、ドロップダウンメニューをクリックして接続されたアダプタに対応するシリアルポートを選択します。**COM bps** はデフォルトのままにして **Open** をクリックします
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/></div>
 
-- **ステップ 8:** **Mode** と **CAN bps** はデフォルトのままにし、**Type** を **Standard frame** に変更して、**Set and Start** をクリックします
+- **ステップ 8:** **Mode** と **CAN bps** はデフォルトのままにし、**Type** を **Standard frame** に変更して **Set and Start** をクリックします
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/></div>
 
-- **ステップ 9:** reServer Industrial で、以下のコマンドを実行して PC に CAN 信号を送信します
+- **ステップ 9:** reServer Industrial 上で、PC に CAN 信号を送信するために次のコマンドを実行します
 
 ```sh
 cansend can0 123#abcdabcd
 ```
 
-以下のように、ソフトウェアが受信した上記の信号が表示されます
+すると、下図のようにソフトウェア側で上記の信号が受信されていることがわかります
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/></div>
 
-- **ステップ 10:** reServer Industrial で、以下のコマンドを実行して PC からの CAN 信号の受信を待機します
+- **ステップ 10:** reServer Industrial 上で、PC からの CAN 信号を受信するのを待つために次のコマンドを実行します
 
 ```sh
 candump can0 &
 ```
 
-- **ステップ 11:** CANソフトウェアで、**Send a single frame**をクリックします
+- **ステップ 11:** CAN ソフトウェア上で **Send a single frame** をクリックします
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/></div>
 
-これで、以下のようにreServer Industrialで受信されることが確認できます
+すると、reServer Industrial 側で次のように受信されていることがわかります
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
-#### reTerminal DMとの接続概要
+#### reTerminal DM との接続概要
 
-[reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)にアクセスできる場合、reTerminal DMにもCANインターフェースがあるため、直接通信することができます。
+[reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-p-5616.html) をお持ちの場合、reTerminal DM にも CAN インターフェースがあるため、直接通信することができます。
 
-reServer IndustrialとreTerminal DMをCAN経由で接続するには、以下の画像を参照してください
+以下の画像を参照して、reServer Industrial と reTerminal DM を CAN 経由で接続します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/49.png"/></div>
 
-### reTerminal DMでの使用方法
+### reTerminal DM の使用方法
 
-- **ステップ 1:** reTerminal DMを使用する前に、[このwiki](https://wiki.seeedstudio.com/ja/reterminal-dm)にアクセスして、reTerminal DMの使用を開始してください
+- **ステップ 1:** reTerminal DM を使用する前に、[この wiki](https://wiki.seeedstudio.com/ja/reterminal-dm) を参照して reTerminal DM の使い方を確認します
 
-- **ステップ 2:** reServer Industrialでターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします
-
-```sh
-sudo modprobe mttcan
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can0 up
-```
-
-- **ステップ 3:** reTerminal DM でターミナルウィンドウを開き、以下のコマンドを実行して CAN インターフェースを設定し有効化します
+- **ステップ 2:** reServer Industrial 上でターミナルウィンドウを開き、CAN インターフェースを設定して有効にするために次のコマンドを実行します
 
 ```sh
 sudo modprobe mttcan
@@ -1057,7 +1066,7 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **ステップ4:** reTerminal DMでターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします
+- **ステップ 3:** reTerminal DM 上でターミナルウィンドウを開き、CAN インターフェースを設定して有効にするために次のコマンドを実行します
 
 ```sh
 sudo modprobe mttcan
@@ -1065,37 +1074,45 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **ステップ 5:** 両方のデバイスで **ifconfig** と入力すると、CANインターフェースが有効になっていることが確認できます
+- **ステップ 4:** reTerminal DM 上でターミナルウィンドウを開き、CAN インターフェースを設定して有効にするために次のコマンドを実行します
+
+```sh
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+```
+
+- **ステップ 5:** 両方のデバイスで **ifconfig** と入力すると、CAN インターフェースが有効になっていることがわかります
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **ステップ 6:** reTerminal DMで以下を実行し、reServer IndustrialからのCAN信号の受信を待機します
+- **ステップ 6:** reTerminal DM 上で、reServer Industrial からの CAN 信号を受信するのを待つために次を実行します
 
 ```sh
 candump can0 &
 ```
 
-- **ステップ 7:** reServer Industrial で、以下のコマンドを実行して reTerminal Industrial に CAN 信号を送信します
+- **Step 7:** reServer Industrial 上で、次のコマンドを実行して reTerminal Industrial へ CAN 信号を送信します
 
 ```sh
 cansend can0 123#abcdabcd
 ```
 
-今度は以下のようにreTerminal DMで受信されることが確認できます
+すると、次のように reTerminal DM によって受信されているのが確認できます
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
-- **ステップ 8:** **ステップ 6とステップ 7**を繰り返しますが、デバイスを入れ替えます。reTerminal DMを使用してCANシグナルを送信し、reServer Industrialで受信します
+- **Step 8:** **Step 6 と Step 7** を、デバイスを入れ替えて繰り返します。reTerminal DM を使用して CAN 信号を送信し、reServer Industrial を使用して受信します
 
 ## RS232/ RS422/ RS485 インターフェース
 
-reServer IndustrialにはRS232、RS422、RS485通信プロトコルをサポートするDB9コネクタがあり、基板上にDIPスイッチパネルがあり、異なるインターフェースオプション間で切り替えることができます
+reServer Industrial には RS232、RS422、RS485 通信プロトコルをサポートする DB9 コネクタが搭載されており、オンボードの DIP スイッチパネルで異なるインターフェースオプションを切り替えることができます
 
-DIPスイッチパネルは以下のように確認できます：
+DIP スイッチパネルは次のようになっています：
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/21.jpg"/></div>
 
-以下の表は、DIPスイッチの位置に基づく異なるモードを説明しています
+そして、以下の表は DIP スイッチの位置に基づく各モードを説明しています
 
 <table>
   <thead>
@@ -1114,7 +1131,7 @@ DIPスイッチパネルは以下のように確認できます：
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>RS-422 全二重</td>
+      <td>RS-422 フルデュプレックス</td>
       <td>1T/1R RS-422</td>
     </tr>
     <tr>
@@ -1122,7 +1139,7 @@ DIPスイッチパネルは以下のように確認できます：
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>純粋なRS-232</td>
+      <td>純粋な RS-232</td>
       <td>3T/5R RS-232</td>
     </tr>
     <tr>
@@ -1130,7 +1147,7 @@ DIPスイッチパネルは以下のように確認できます：
       <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>RS-485 半二重</td>
+      <td>RS-485 ハーフデュプレックス</td>
       <td>1T/1R RS-485 ,TX ENABLE Low Active</td>
     </tr>
     <tr>
@@ -1138,7 +1155,7 @@ DIPスイッチパネルは以下のように確認できます：
       <td>0</td>
       <td>1</td>
       <td>1</td>
-      <td>RS-485 半二重</td>
+      <td>RS-485 ハーフデュプレックス</td>
       <td>1T/1R RS-485 ,TX ENABLE High Active</td>
     </tr>
     <tr>
@@ -1146,30 +1163,30 @@ DIPスイッチパネルは以下のように確認できます：
       <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>RS-422 全二重</td>
-      <td>1T/1R RS-422 終端抵抗付き</td>
+      <td>RS-422 フルデュプレックス</td>
+      <td>終端抵抗付き 1T/1R RS-422</td>
     </tr>
     <tr>
       <td rowSpan={3}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/57.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={3}>1</td>
       <td rowSpan={3}>0</td>
       <td rowSpan={3}>1</td>
-      <td rowSpan={3}>純粋なRS-232</td>
-      <td>1T/1R RS-232 と RS485 の共存</td>
+      <td rowSpan={3}>純粋な RS-232</td>
+      <td>RS485 と共存する 1T/1R RS-232</td>
     </tr>
     <tr>
-      <td>バス切り替えICを必要としない</td>
+      <td>バスを必要としないアプリケーション</td>
     </tr>
     <tr>
-      <td>アプリケーション（特殊用途）。</td>
+      <td>スイッチ IC（特殊用途向け）。</td>
     </tr>
     <tr>
       <td rowSpan={2}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/58.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>0</td>
-      <td rowSpan={2}>RS-485 半二重</td>
-      <td>1T/1R RS-485 終端抵抗付き</td>
+      <td rowSpan={2}>RS-485 ハーフデュプレックス</td>
+      <td>終端抵抗付き 1T/1R RS-485</td>
     </tr>
     <tr>
       <td>TX ENABLE Low Active</td>
@@ -1179,8 +1196,8 @@ DIPスイッチパネルは以下のように確認できます：
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
-      <td>低電力</td>
-      <td rowSpan={2}>すべてのI/Oピンがハイインピーダンス</td>
+      <td>低消費電力</td>
+      <td rowSpan={2}>すべての I/O ピンは高インピーダンスです</td>
     </tr>
     <tr>
       <td>シャットダウン</td>
@@ -1189,10 +1206,10 @@ DIPスイッチパネルは以下のように確認できます：
 </table>
 
 :::note
-工場出荷時、スイッチのデフォルトモードは010でRS485に設定されています
+出荷時点では、スイッチのデフォルトモードは工場設定で 010 の RS485 に設定されています
 :::
 
-上記の表は、DIPスイッチパネルの最初の3つのスイッチを考慮しています。ただし、4番目のスイッチはスルーレートの切り替えを担当しており、これはデータレートに直接関係しています
+上記の表は DIP スイッチパネルの最初の 3 つのスイッチを考慮しています。ただし、4 番目のスイッチはスルーレートの切り替えを担当しており、これはデータレートに直接関係します
 
 <table>
   <thead>
@@ -1206,36 +1223,36 @@ DIPスイッチパネルは以下のように確認できます：
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/62.png" alt="Image" width={200} height={127} /></td>
       <td>1</td>
-      <td>SLEW= Vcc<br />このRS232/RS422/RS485マルチプロトコルトランシーバーは、通信レートを以下のように制限します：<br />RS-232: 最大データレートは1.5Mbps<br />RS-485/RS-422: 最大データレートは10Mbps<br />実際の最大データレートは使用するJetson SOによって異なります</td>
+      <td>SLEW= Vcc<br />この RS232/RS422/RS485 マルチプロトコルトランシーバは通信速度を次のように制限します：<br />RS-232: 最大データレートは 1.5Mbps<br />RS-485/RS-422; 最大データレートは 10Mbps<br />実際の最大データレートは使用する Jetson SOM に依存します</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/63.png" alt="Image" width={200} height={127} /></td>
       <td>0</td>
-      <td>SLEW = GND<br />RS-232: 最大データレートは250Kbps<br />RS-485/RS-422: 最大データレートは250kbps</td>
+      <td>SLEW = GND<br />RS-232: 最大データレートは 250Kbps<br />RS-485/RS-422: 最大データレートは 250kbps</td>
     </tr>
   </tbody>
 </table>
 
-ここでは、インターフェースをテストするためにUSBからRS232、RS485、RS422アダプターを使用します。そのため、先に進む前に、PCにシリアルターミナルアプリケーションをインストールする必要があります。ここでは、セットアップと使用が簡単な**Putty**をインストールすることをお勧めします。
+ここではインターフェースをテストするために、USB から RS232、RS485、RS422 へのアダプタを使用します。そのため先に進む前に、PC にシリアルターミナルアプリケーションをインストールする必要があります。ここではセットアップと使用が簡単な **Putty** のインストールを推奨します。
 
-- **ステップ1：** [このウェブサイト](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)にアクセスし、PCアーキテクチャに応じてPuttyをダウンロードしてください
+- **Step 1:** [このウェブサイト](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) にアクセスし、PC のアーキテクチャに応じた Putty をダウンロードします
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
-ここでは、使用したPCに応じてPuttyを選択しました。これはX86 Windows 64ビットマシンです
+ここでは、使用している PC（X86 Windows 64-bit マシン）に合わせて Putty を選択しました
 
-- **ステップ2：** ダウンロードしたセットアップを開き、プロンプトに従ってアプリケーションをインストールしてください
+- **Step 2:** ダウンロードしたセットアップファイルを開き、プロンプトに従ってアプリケーションをインストールします
 
 ### 一般的な接続概要
 
-DB9コネクタのピン番号と表を参照して接続を行うことができます
+接続を行う際は、DB9 コネクタのピン番号と以下の表を参照してください
 
 <div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/61.png"/></div>
 
 <table>
   <thead>
     <tr>
-      <th>MODE</th>
+      <th>モード</th>
       <th>001/101</th>
       <th>000/100</th>
       <th>010/011/110</th>
@@ -1305,154 +1322,154 @@ DB9コネクタのピン番号と表を参照して接続を行うことがで�
   </tbody>
 </table>
 
-### RS232接続概要
+### RS232 接続概要
 
-ここでは、USB to RS232アダプターを使用してインターフェースをテストできます。テストには[UGREEN USB to RS232アダプター](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1)を使用しました。
+ここでは USB から RS232 へのアダプタを使用してインターフェースをテストできます。テストには [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) を使用しました。
 
-- **ステップ1:** ボードの電源を切る
+- **Step 1:** ボードの電源を切ります
 
-- **ステップ2:** ここではDIPスイッチを設定する2つのオプションがあります。001モードまたは101モードのいずれかです。各モードのスイッチ位置を以下に示します
+- **Step 2:** ここでは DIP スイッチの設定に 2 つのオプションがあります。001 モードまたは 101 モードのいずれかです。各モードのスイッチ位置は以下のとおりです
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-- **ステップ3:** USB to RS232アダプターをDB9コネクターに接続する
+- **Step 3:** USB から RS232 へのアダプタを DB9 コネクタに接続します
 
-- **ステップ4:** もう一方の端をPCのUSBポートの1つに接続する
+- **Step 4:** もう一方の端を PC の USB ポートのいずれかに接続します
 
-- **ステップ5:** ボードの電源を入れる
+- **Step 5:** ボードの電源を入れます
 
-### RS232の使用方法
+### RS232 の使用方法
 
-- **ステップ1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**デバイスマネージャー**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認してください。
+- **Step 1:** 使用しているアダプタ用のドライバをインストールする必要がある場合があります。または Windows が自動的にドライバをインストールする場合もあります。Windows の検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプタが COM デバイスとして表示されているか確認します。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-- **ステップ2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは一般的にメーカーのウェブサイトで見つけることができます。私たちが使用しているアダプターについては、[このページ](https://www.ugreen.com/pages/download)にアクセスし、モデル番号として**20201**を検索し、それに応じてドライバーをダウンロードできます
+- **Step 2:** アダプタが表示されない場合は、使用しているアダプタに応じてドライバをインストールする必要があります。これらのドライバは一般的にメーカーのウェブサイトで入手できます。ここで使用しているアダプタの場合は、[このページ](https://www.ugreen.com/pages/download) にアクセスし、型番として **20201** を検索して、該当するドライバをダウンロードします
 
-- **ステップ3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
+- **Step 3:** PC 上で Putty を開き、**Terminal** セクションを選択して、次のように設定します
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **ステップ4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**デバイスマネージャー**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
+- **Step 4:** **Session** を選択し、**Coonection type** で **Serial** を選択し、**Device Manager** に表示されているシリアルポート番号を設定し、Speed はデフォルト（9600）のままにして **Open** をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/71.jpg"/></div>
 
-- **ステップ4:** reServer Industrialターミナルウィンドウで、以下を入力してreServer IndustrialからPCに信号を送信します
+- **Step 4:** reServer Industrial のターミナルウィンドウで、次のコマンドを入力して reServer Industrial から PC へ信号を送信します
 
 ```sh
 sudo chmod 777 /dev/ttyTHS0
 sudo echo "RS232 message from reServer Industrial" > /dev/ttyTHS0
 ```
 
-これで、Putty にこのメッセージが表示されます
+すると、このメッセージが Putty 上に表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/72.jpg"/></div>
 
-- **ステップ 5:** reTerminal Industrial のターミナルウィンドウで、以下を入力して PC からの信号の受信を待機します
+- **Step 5:** reTerminal Industrial のターミナルウィンドウで、次のコマンドを入力して PC からの信号を待ち受けます
 
 ```sh
 sudo cat /dev/ttyTHS0
 ```
 
-- **ステップ 6:** Putty で何かを入力し、**ENTER** を押すと、reServer Industrial のターミナルウィンドウに表示されます
+- **Step 6:** Putty 上で任意の文字を入力し、**ENTER** を押すと、その内容が reServer Industrial のターミナルウィンドウに表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
 ### RS422 接続概要
 
-ここでは、USB to RS422 アダプターを使用してインターフェースをテストできます。テストには [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) を使用しました。
+ここでは USB から RS422 へのアダプタを使用してインターフェースをテストできます。テストには [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) を使用しました。
 
 - **ステップ 1:** ボードの電源を切ります
 
-- **ステップ 2:** ここでは DIP スイッチを設定する 2 つのオプションがあります。000 モードまたは 100 モードのいずれかです。各モードのスイッチ位置を以下に示します
+- **ステップ 2:** ここでは DIP スイッチを設定するための 2 つのオプションがあります。000 モードまたは 100 モードのいずれかです。各モードのスイッチ位置は以下のように示されています
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **ステップ 3:** 以下に示すように、ジャンパーワイヤーを使用して USB to RS422 アダプターを DB9 コネクターに接続します。ここでは上記で言及したアダプターを接続しました
+- **ステップ 3:** 下図のようにジャンパーワイヤーを使用して USB-RS422 アダプタを DB9 コネクタに接続します。ここでは上記で紹介したアダプタを接続しています
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
-- **ステップ 4:** もう一方の端を PC の USB ポートの 1 つに接続します
+- **ステップ 4:** もう一方の端を PC の USB ポートのいずれかに接続します
 
 - **ステップ 5:** ボードの電源を入れます
 
 ### RS422 の使用方法
 
-- **ステップ 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windows が自動的にドライバーをインストールします。Windows 検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプターが COM デバイスとして表示されるかどうかを確認します。
+- **ステップ 1:** 使用しているアダプタ用のドライバをインストールする必要がある場合がありますが、Windows が自動的にドライバをインストールすることもあります。Windows の検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプタが COM デバイスとして表示されているか確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485) を参照してください
+- **ステップ 2:** アダプタが表示されない場合は、使用しているアダプタに応じてドライバをインストールする必要があります。これらのドライバは一般的にメーカーのウェブサイトで見つけることができます。ここで使用しているアダプタ用のドライバは [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485) から入手できます
 
-- **ステップ 3:** PC で Putty を開き、**Terminal** セクションを選択して以下を設定します
+- **ステップ 3:** PC で Putty を開き、**Terminal** セクションを選択して、次のように設定します
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **ステップ 4:** **Session** を選択し、**Connection type** で **Serial** を選択し、**Device Manager** で確認したシリアルポート番号を設定し、Speed はデフォルト（9600）のままにして **Open** をクリックします
+- **ステップ 4:** **Session** を選択し、**Coonection type** の下で **Serial** を選択し、**Device Manager** に表示されているシリアルポート番号を設定し、Speed はデフォルト（9600）のままにして **Open** をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **ステップ 4:** reServer Industrial のターミナルウィンドウで、以下を入力して reServer Industrial から PC に信号を送信します
+- **ステップ 4:** reServer Industrial のターミナルウィンドウで、reServer Industrial から PC へ信号を送信するために次のコマンドを入力します
 
 ```sh
 sudo chmod 777 /dev/ttyTHS0
 sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS0
 ```
 
-これで、このメッセージが Putty に表示されます。
+すると、Putty 上に次のメッセージが表示されます
 
-- **ステップ 5:** reTerminal Industrial のターミナルウィンドウで、PC からの信号を受信するのを待つために次のコマンドを入力します
+- **ステップ 5:** reTerminal Industrial のターミナルウィンドウで、PC からの信号を待ち受けるために次のコマンドを入力します
 
 ```sh
 sudo cat /dev/ttyTHS0
 ```
 
-- **ステップ 6:** Putty で何かを入力し、**ENTER** を押すと、reServer Industrial のターミナルウィンドウに表示されます
+- **ステップ 6:** Putty 上で任意の文字を入力し、**ENTER** を押すと、その内容が reServer Industrial のターミナルウィンドウに表示されます
 
 ### RS485 接続概要
 
-ここでは、USB to RS422 アダプターを使用してインターフェースをテストできます。テストには [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) を使用しました。
+ここでは USB-RS422 アダプタを使用してインターフェースをテストできます。テストには [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) を使用しました。
 
 - **ステップ 1:** ボードの電源を切ります
 
-- **ステップ 2:** ここでは DIP スイッチを設定する 3 つのオプションがあります。010 モード、011 モード、または 110 モードのいずれかです。各モードのスイッチ位置を以下に示します
+- **ステップ 2:** ここでは DIP スイッチを設定するための 3 つのオプションがあります。010 モード、011 モード、または 110 モードのいずれかです。各モードのスイッチ位置は以下のように示されています
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **ステップ 3:** 以下に示すように、ジャンパーワイヤーを使用して USB to RS422 アダプターを DB9 コネクターに接続します。ここでは上記で言及したアダプターを接続しました
+- **ステップ 3:** 下図のようにジャンパーワイヤーを使用して USB-RS422 アダプタを DB9 コネクタに接続します。ここでは上記で紹介したアダプタを接続しています
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
-- **ステップ 4:** もう一方の端を PC の USB ポートの 1 つに接続します
+- **ステップ 4:** もう一方の端を PC の USB ポートのいずれかに接続します
 
 - **ステップ 5:** ボードの電源を入れます
 
-### RS485 使用方法
+### RS485 の使用方法
 
-- **ステップ 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または Windows が自動的にドライバーをインストールします。Windows 検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプターが COM デバイスとして表示されているかどうかを確認します。
+- **ステップ 1:** 使用しているアダプタ用のドライバをインストールする必要がある場合がありますが、Windows が自動的にドライバをインストールすることもあります。Windows の検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプタが COM デバイスとして表示されているか確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは一般的にメーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485) を参照してください
+- **ステップ 2:** アダプタが表示されない場合は、使用しているアダプタに応じてドライバをインストールする必要があります。これらのドライバは一般的にメーカーのウェブサイトで見つけることができます。ここで使用しているアダプタ用のドライバは [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485) から入手できます
 
-- **ステップ 3:** PC で Putty を開き、**Terminal** セクションを選択して以下を設定します
+- **ステップ 3:** PC で Putty を開き、**Terminal** セクションを選択して、次のように設定します
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **ステップ 4:** **Session** を選択し、**Connection type** で **Serial** を選択し、**Device Manager** で確認したシリアルポート番号を設定し、Speed はデフォルト（9600）のままにして **Open** をクリックします
+- **ステップ 4:** **Session** を選択し、**Coonection type** の下で **Serial** を選択し、**Device Manager** に表示されているシリアルポート番号を設定し、Speed はデフォルト（9600）のままにして **Open** をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **ステップ 4:** reServer Industrial のターミナルウィンドウで、以下を入力して reServer Industrial から PC に信号を送信します
+- **ステップ 4:** reServer Industrial のターミナルウィンドウで、reServer Industrial から PC へ信号を送信するために次のコマンドを入力します
 
 ```sh
 sudo su 
@@ -1464,9 +1481,9 @@ echo 0 > value
 echo "RS485 message from reServer Industrial" > /dev/ttyTHS0
 ```
 
-これで、このメッセージが Putty に表示されます。
+すると、Putty 上に次のメッセージが表示されます
 
-- **ステップ 5:** reTerminal Industrial のターミナルウィンドウで、PC からの信号を受信するのを待機するために次のコマンドを入力します
+- **ステップ 5:** reTerminal Industrial のターミナルウィンドウで、PC からの信号を待ち受けるために次のコマンドを入力します
 
 ```sh
 sudo su
@@ -1478,22 +1495,23 @@ echo 1 > value
 cat /dev/ttyTHS0
 ```
 
-- **ステップ 6:** Putty で何かを入力し、**ENTER** を押すと、reServer Industrial のターミナルウィンドウに表示されます
+- **ステップ 6:** Putty 上で任意の文字を入力し、**ENTER** を押すと、その内容が reServer Industrial のターミナルウィンドウに表示されます
 
 ## USB
 
-reServer Industrial には 3x USB3.2 コネクタがオンボードで搭載されており、以下の機能があります：
+reServer Industrial にはオンボードに 3 つの USB3.2 コネクタが搭載されており、次の機能があります：
 
-- デュアルスタック USB コネクタでは、上下の USB ポートが電流制限 IC を共有し、最大出力電流 2.1A の総電源供給能力があります（単体でも 2.1A 可能）。2.1A を超えると、過電流保護状態に入ります。
-- デュアルスタック USB コネクタの隣にある単体 USB コネクタは、最大出力電流 2.1A の総電源供給能力があります。2.1A を超えると、過電流保護状態に入ります。
-- Orin NX モジュールには 3 つの USB3.2 が搭載されており、そのうち 1 つのみが reServer Industrial で使用され、3 系統に変換されています。（USB3.1 TYPE-A x2 - J4 および USB3.1 TYPE-A x1 -J3）。
-- USB Host のみサポート、Device モードは非対応
-- 5V 2.1A を提供
+- 二段重ねの USB コネクタでは、上下の USB ポートが電流制限 IC を共有しており、合計電源供給能力は最大出力電流 2.1A（単独でも 2.1A）です。2.1A を超えると過電流保護状態に入ります。
+- 二段重ねの USB コネクタの隣にある単一の USB コネクタは、合計電源供給能力が最大出力電流 2.1A です。2.1A を超えると過電流保護状態に入ります。
+- Orin NX モジュールには 3 つの USB3.2 が搭載されていますが、そのうち 1 つだけが reServer Industrial で使用され、3 系統に分岐されています。（USB3.1 TYPE-A x2 - J4 および USB3.1 TYPE-A
+x1 -J3)。
+- USB ホストのみをサポートし、デバイスモードはサポートしません
+- 5V 2.1A を供給
 - ホットスワップ対応
 
 ### 使用方法
 
-接続された USB フラッシュドライブで簡単なベンチマークを実行する方法を説明します
+接続された USB フラッシュドライブで簡単なベンチマークを行う方法を説明します
 
 - **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します
 
@@ -1501,22 +1519,22 @@ reServer Industrial には 3x USB3.2 コネクタがオンボードで搭載さ�
 sudo dd if=/dev/zero of=/dev/$1 bs=100M count=10 conv=fdatasync
 ```
 
-- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度の上記コマンドを実行した後に、必ずこれを実行してください。
+- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度用の上記コマンドを実行した後に実行するようにしてください。
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
 sudo dd if=/dev/$1 of=/dev/null bs=100M count=10
 ```
 
-### 設定可能なLED
+### 設定可能な LED
 
-以下に示すように、ボード上に緑色のLEDが配置されています。デフォルトでは、デバイスが正常に動作していることを示すLEDとして機能しています。ただし、このLEDをシステムによってON/OFFするようにプログラムすることも可能です
+下図のように、ボード上には緑色の LED が 1 つあります。デフォルトでは、デバイスが正常に動作していることを示す LED として機能します。ただし、この LED はシステムから ON および OFF するようにプログラムすることもできます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/22.jpg"/></div>
 
 ### 使用方法
 
-- **ステップ 1:** ターミナルウィンドウで以下のコマンドを入力して、緑色のLEDにアクセスします
+- **ステップ 1:** 緑色の LED にアクセスするために、ターミナルウィンドウで次のコマンドを入力します
 
 ```sh
 sudo -i
@@ -1526,19 +1544,19 @@ cd PCC.01
 echo out > direction 
 ```
 
-- **ステップ 2:** LEDをオフにする
+- **ステップ 2:** LED を OFF にします
 
 ```sh
 echo 0 > value 
 ```
 
-- **ステップ 3:** ON LEDを点灯する
+- **ステップ 3:** LED を ON にします
 
 ```sh
 echo 1 > value 
 ```
 
-LEDの使用が完了したら、以下を実行できます
+LED の使用が終わったら、次のコマンドを実行できます
 
 ```sh
 cd ..
@@ -1547,14 +1565,14 @@ echo 329 > unexport
 
 ## システムパフォーマンスの監視
 
-**jetson stats** アプリケーションを使用して、システムコンポーネントの温度を監視し、以下のような他のシステム詳細を確認できます
+システムコンポーネントの温度を監視し、次のようなその他のシステム情報を確認するために **jetson stats** アプリケーションを使用できます
 
-- CPU、GPU、RAM使用率の表示
+- CPU、GPU、RAM の使用率を表示
 - 電源モードの変更
-- 最大クロックの設定
+- 最大クロックに設定
 - JetPack 情報の確認
 
-- **ステップ 1:** reServer Industrial ターミナルウィンドウで、以下を入力します
+- **ステップ 1:** reServer Industrial のターミナルウィンドウで、次のコマンドを入力します
 
 ```sh
 sudo apt update
@@ -1562,54 +1580,54 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **ステップ 2:** ボードを再起動する
+- **ステップ 2:** ボードを再起動します
 
 ```sh
 sudo reboot
 ```
 
-- **ステップ 3:** ターミナルで以下を入力してください
+- **ステップ 3:** ターミナルで次のコマンドを入力します
 
 ```sh
 jtop
 ```
 
-**jtop** アプリケーションが以下のように開きます
+すると **jtop** アプリケーションが次のように起動します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/30.png"/></div>
 
-- **ステップ 4:** ここでアプリケーションの異なるページを循環して、すべての機能を探索できます！
+- **ステップ 4:** ここではアプリケーションのさまざまなページを切り替えて、すべての機能を確認できます！
 
 ## TPM
 
-reServer Industrial には外部 TPM モジュールを接続するための TPM インターフェースが付属しています。ここでは Infineon SLB9670 ベースの TPM2.0 モジュールでテストしました。
+reServer Industrial には、外部 TPM モジュールを接続するための TPM インターフェースが搭載されています。ここでは Infineon SLB9670 ベースの TPM2.0 モジュールでテストしました。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/24.jpg"/></div>
 
 ### 接続概要
 
-以下に示すように TPM モジュールを TPM コネクタに接続します
+下図のように TPM モジュールを TPM コネクタに接続します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/27.jpg"/></div>
 
 ### 使用方法
 
-以下のコマンドを実行して TPM モジュールが正しく読み込まれているかを確認します
+TPM モジュールが正しくロードされているかどうかを確認するために、以下のコマンドを実行します
 
 ```sh
 sudo dmesg | grep TPM
 ls /dev/tpm* -l
 ```
 
-以下のような出力が表示されます
+すると、次のような出力が表示されます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/116.png"/></div>
 
-## reServer Industrial での最大パフォーマンス
+## reServer Industrial の最大パフォーマンス
 
 reServer Industrial で最大パフォーマンスを有効にしたい場合は、以下の手順に従ってください
 
-- **ステップ 1:** 以下のコマンドを入力して最大電力モードを有効にします
+- **ステップ 1:** 最大電力モードを有効にするために、以下のコマンドを入力します
 
 ```sh
 sudo nvpmodel -m 0
@@ -1617,9 +1635,9 @@ sudo nvpmodel -m 0
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/35.jpg"/></div>
 
-ここで、ボードを再起動するために **YES** と入力するよう求められます
+ここでボードを再起動するために **YES** と入力するよう求められます  
 
-- **ステップ 2:** ボードが起動したら、以下のコマンドを入力してCPUクロックを最大周波数に設定します
+- **ステップ 2:** ボードの起動が完了したら、CPU クロックを最大周波数に設定するために次のコマンドを入力します
 
 ```sh
 sudo jetson_clocks
@@ -1627,15 +1645,15 @@ sudo jetson_clocks
 
 ## GPIO テーブル
 
-reServer IndustrialのGPIOテーブルにアクセスして、すべてのピンマッピングを把握することができます。
+reServer Industrial の GPIO テーブルにアクセスして、すべてのピンマッピングに慣れることができます。
 
-ターミナル内で以下を実行してアクセスしてください
+ターミナル内で次のコマンドを実行してアクセスします
 
 ```sh
 sudo cat /sys/kernel/debug/gpio
 ```
 
-そして、以下のような出力が表示されます
+そして、次のような出力が表示されます
 
 ```sh
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:
@@ -1862,12 +1880,12 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 
 - [reServer Industrial データシート](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [reServer Industrial リファレンスガイド](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
-- [NVIDIA Jetson デバイスとキャリアボードの比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
-- [reServer Industrial 3Dファイル](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
+- [NVIDIA Jetson デバイスおよびキャリアボードの比較](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [reServer Industrial 3D ファイル](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 
 ## 技術サポート
 
-お気軽に私たちの[フォーラム](https://forum.seeedstudio.com/)に問題を投稿してください。
+遠慮なく、私たちの[フォーラム](https://forum.seeedstudio.com/)に問題を投稿してください。
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

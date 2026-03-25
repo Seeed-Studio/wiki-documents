@@ -72,7 +72,7 @@ Please select `Global` of Server Location. You can also create an account via th
 Add Events to get notification.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/add-event.PNG" alt="pir" width={300} height="auto" /></p>
 
-1. Click the Add icon or Add Event button to create an Event alert, Add Event page Conditioins to add condition options, and click the Add button to select a device.
+1. Click the Add icon or Add Event button to create an Event alert, Add Event page Conditions to add condition options, and click the Add button to select a device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/mate_app_2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -117,9 +117,11 @@ Select the corresponding product for quick binding.
 The SenseCraft app provides a set of template functions, including **Add New Template, Import Template, Download Template and Apply Preset Template**, to simplify and accelerate device configuration. These functions efficiently help users reduce setup time, and streamline deployment for large-scale installations.
 
 ### Add New Template
+
 There are two ways to add a new template.
 
 **Method 1** <br />
+
 1. Go to `User` → `Device Bluetooth Configuration`. <br />
 2. Tap the `Template` button in the upper-right corner. <br />
 3. Tap the `+` icon → `Add New Template`. <br />
@@ -135,6 +137,7 @@ There are two ways to add a new template.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template3.png" alt="pir" width={300} height="auto" /></p>
 
 **Method 2** <br />
+
 1. Enter Bluetooth Configuration Mode and select `Advanced Configuration`. <br />
 2. Go to the `Setting` page. <br />
 3. Tap the `Template` icon in the upper-right corner. <br />
@@ -146,6 +149,7 @@ There are two ways to add a new template.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template4.png" alt="pir" width={800} height="auto" /></p>
 
 ### Download Template
+
 1. Navigate to the `Template` page, select the template you want to download. <br />
 2. Tap the three-dot menu in the upper-right corner. <br />
 3. Select `Download Template`. <br />
@@ -154,6 +158,7 @@ There are two ways to add a new template.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/downlaod_template.png" alt="pir" width={800} height="auto" /></p>
 
 ### Import Template
+
 1. Go to `User` → `Device Bluetooth Configuration`. <br />
 2. Tap `Template` in the upper-right corner. <br />
 3. On the Template page, tap the `+` icon. <br />
@@ -164,6 +169,7 @@ There are two ways to add a new template.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/import_template.png" alt="pir" width={800} height="auto" /></p>
 
 ### Apply Preset Template
+
 1. Enter the device’s Bluetooth Configuration mode and select `Advanced Configuration`. <br />
 2. Open the `Settings` page and tap the `Template` icon in the top-right corner. <br />
 3. Select `Choose Template`. <br />

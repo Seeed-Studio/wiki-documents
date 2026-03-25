@@ -28,7 +28,7 @@ const SuccessModal: React.FC<SuccessModalProps> = ({
     >
       <div className={styles.successContent}>
         <div className={styles.successIcon}>
-          <CheckCircleOutlined  style={{fontSize: 64}}/>
+          <CheckCircleOutlined  style={{fontSize: 60,width: 60,height: 60}} />
         </div>
         <div className={styles.successText}>
           <div className={styles.successTitle} dangerouslySetInnerHTML={{ __html: title }} />

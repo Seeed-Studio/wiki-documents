@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Robotics J401 载板硬件与快速上手
 
 reComputer Robotics J401 是一款紧凑型、高性能的边缘 AI 载板，专为高级机器人应用设计。它兼容 NVIDIA Jetson Orin Nano/Orin NX 模块，并支持 Super/MAXN 模式，可提供高达 157 TOPS 的 AI 性能。该载板配备丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展板）、I2C 和 UART——可作为强大的机器人“大脑”，处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保系统可无缝部署。​
@@ -1186,6 +1188,13 @@ reComputer Jetson Robotics J401 配备了一个 DP1.4（包含在 Type-C Host �
 - [Nvidia Jetson 对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Nvidia Jetson 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson 一页纸简介](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

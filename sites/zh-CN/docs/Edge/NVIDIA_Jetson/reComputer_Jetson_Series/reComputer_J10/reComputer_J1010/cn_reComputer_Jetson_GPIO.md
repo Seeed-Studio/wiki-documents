@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/reComputer_Jetson_GPIO/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # 如何在 reComputer Jetson 开发板上使用 40 引脚 GPIO
 
 本教程演示如何访问和控制 reComputer Jetson 开发板的 40 引脚 GPIO。在本教程中，我们以 reComputer J4012 为例。不过，其他 reComputer Jetson 开发板的操作步骤也是类似的。
@@ -214,6 +216,17 @@ sudo gpioset --mode=wait gpiochip0 85=0
 如果您想了解更多关于 **gpioset** 命令的信息，请参考：
 https://www.acmesystems.it/gpiod
 :::
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

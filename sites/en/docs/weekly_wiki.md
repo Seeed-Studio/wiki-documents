@@ -2,10 +2,10 @@
 description: Weekly Wiki
 title: Weekly Wiki
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/09/2026
+  date: 03/16/2026
   author: Frank
 createdAt: '2022-12-20'
 updatedAt: '2026-03-03'
@@ -19,85 +19,61 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 9th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 23rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Sound Event Detection Module](https://wiki.seeedstudio.com/sound_event_detection_module/)
+### [Getting Started with reTerminal E1003](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-A compact edge audio board delivers real-time sound detection with strong local data privacy protection. It detects five abnormal sound events — Baby Cry, Glass Break, Gunshot, T3/T4 Alarms, and Snore, enabling immediate response and reliable early warning. Designed for native ESPHome integration with seamless compatibility for Home Assistant with XIAO series, ideal for home security monitoring or responsive automation triggers.
+reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant (via ESPHome & Open Display), Arduino, PlatformIO for further development. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
 
 </div>
 
-### [Get Started with Meshhcore on SenseCAP T1000-E](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/)
+### [Meshtastic Firmware Source Code Practical Tutorial for Solar Nod](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to set up and use the **SenseCAP T1000-E with MeshCore firmware**, including how to flash the firmware via Web Flasher or drag-and-drop, connect the device to the mobile app, and configure LoRa region, GPS, and messaging features. It also covers basic device operation and troubleshooting to help users start communicating over a LoRa mesh network.
+This tutorial is intended for users who are just getting started with the Meshtastic firmware source code. It includes common workflows for both Windows and macOS. The goal is straightforward: clone the official repository, complete a successful build, make one simple UI change, and flash the modified firmware to the device for verification.
+
+For other Seeed devices, you can refer to the corresponding tutorials: [T1000-E](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_t1000_e), [Wio Tracker L1](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial), and [XIAO ESP32S3 & Wio SX1262 Kit](https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor).
 
 </div>
 
-### [Get Started with Meshhcore on Wio Tracker L1 Pro](https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/)
+### [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_solar_node/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/L1ProMeshcoreSelection.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to get started with **MeshCore or other mesh firmware on the Wio Tracker L1 Pro**, including how to flash the firmware using WebUSB or drag-and-drop. It also covers basic setup steps such as configuring the LoRa region, enabling GPS, and sending messages through the mesh network.
+This guide explains how to display the locations of [Meshtastic](https://meshtastic.org/docs/introduction/) devices on Meshtastic Node Maps using [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) and [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) devices, assuming the devices have already been flashed with the Meshtastic firmware.
 
 </div>
 
-### [Get Started with MeshCore on SenseCAP Solar Node](https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/)
+### [Getting Started with OpenClaw on reComputer Industrial](https://wiki.seeedstudio.com/getting_started_with_openclaw_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki explains how to **set up and deploy a MeshCore-based SenseCAP Solar Node**, including flashing the firmware, activating the device, and connecting it to apps or web tools for configuration. It also covers hardware setup such as installing batteries, mounting the solar node, and configuring LoRa and GPS for outdoor mesh communication.
-
-</div>
-
-### [Setting up an MQTT Gateway with XIAO ESP32S3 & Wio-SX1262 Kit](https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_mqtt/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTFramework.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to send LoRa data to an MQTT broker using the **XIAO ESP32S3 & Wio-SX1262 Kit**. It demonstrates how to set up the hardware, configure the firmware, and transmit sensor data through LoRa and publish it to an MQTT server for IoT applications.
-
-</div>
-
-### [Home Assistant and Sound Event Detection Module](https://wiki.seeedstudio.com/sound_event_detection_module_home_assistant/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-A compact edge audio board provides real-time sound detection with strong local data privacy protection. It can detect five abnormal sound events—Baby Cry, Glass Break, Gunshot, T3/T4 alarms, and Snore—enabling immediate response and reliable early warning. In this tutorial, we will learn how to compile and upload the firmware to a XIAO ESP32 board.
-
-</div>
-
-### [Lerobot Dataset Tool](https://wiki.seeedstudio.com/lerobot_dataset_tool/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki introduces tools for editing, managing, and visualizing LeRobot datasets. It explains how to remove episodes or features, split or merge datasets, convert image datasets to video format, and preview datasets locally or on Hugging Face.
+This guide introduces how to get started with OpenClaw on the reComputer R series devices, covering environment setup, installation, and basic configuration. It enables users to deploy and run a self-hosted AI agent system on edge hardware.
 
 </div>
 
 <!-- ## Existing Wiki Updated
 
-### [Getting Started with XIAO ePaper Display Board - EE02](https://wiki.seeedstudio.com/getting_started_with_ee02/)
+### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
 
-We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino. -->
+We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#nodedb-reset).
+
+### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+
+We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
 
 ## The Efforts of Contributor
 
@@ -221,5 +197,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.2.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260202)
 - [weekly wiki on 2026.2.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260209)
 - [weekly wiki on 2026.3.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260302)
+- [weekly wiki on 2026.3.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260309)
+- [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
 
 </details>

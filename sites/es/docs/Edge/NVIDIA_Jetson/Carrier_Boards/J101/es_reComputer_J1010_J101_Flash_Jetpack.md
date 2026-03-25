@@ -13,6 +13,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/reComputer_J1010_J101_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Placa portadora J101
 
 En esta wiki, te mostraremos cómo flashear el SO Jetpack en el reComputer J1010. Dado que su placa portadora está diseñada como la Placa Portadora Oficial NVIDIA Nano Developer, podemos flashear el JetPack de dos maneras.
@@ -390,6 +392,13 @@ Si se necesita más espacio de almacenamiento, podemos usar una tarjeta SD para 
 [Comparación de Series Jetson de Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 
 [Dispositivos Jetson de Seeed en Una Página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

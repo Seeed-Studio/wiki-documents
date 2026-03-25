@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## 概述
 
 reComputer R1100 由 Raspberry Pi CM4 驱动，是一款多功能边缘物联网网关，具备 AI 功能。它具有全面的工业接口，包括 **2x 以太网、2x USB、2x RS485、2x RS232、2x DI 和 2x DO**，以及灵活的无线连接选项，如 **4G、LoRa® 和 Wi-Fi/BLE**。这些特性使其成为各种工业应用的理想选择。
@@ -730,6 +732,17 @@ reComputer R1100 中的 **UPS 模块**是一个**基于 7F 超级电容器**的�
 - [reComputer R1100原理图设计，PCB设计](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [reComputer R1100宣传册](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [用户手册](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

@@ -11,35 +11,34 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
-createdAt: '2025-08-07'
-updatedAt: '2026-03-04'
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/sensecraft-blockchain/blockchain-dashboard/dashboard-registration/
 ---
 
 # 仪表板注册
 
-
-SenseCAP M1 仪表板旨在帮助您监控您的热点并为您提供全面的概览。
+SenseCAP M1 仪表板旨在帮助你监控你的热点，并为你提供全面概览。
 
 **仪表板注册**
 ==========================
 
-1.  访问 [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  点击下方的"**Register**"按钮。  
-    1.  您可以选择创建账户或使用您的 Discord 账户注册/登录。
-3.  输入创建账户所需的详细信息。
-4.  填写您的"**Email Address**"后，您需要点击"**Get Captcha**"。
-    1.  系统将向您提供的注册邮箱发送"**一次性验证码**"以验证该邮箱账户的所有权。
-    2.  您有 **60 秒** 的时间从收件箱中获取验证码。
-5.  输入"**一次性验证码**"后，请点击"**Register**"，您将成功注册并可以远程监控您的热点。
+1. 访问 [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+2. 点击下方的 "**Register**" 按钮。  
+    1. 你可以选择创建一个账户，或者使用你的 Discord 账户注册/登录。
+3. 输入所需信息以开始创建你的账户。
+4. 在填写完你的 "**Email Address**" 后，你需要点击 "**Get Captcha**"。
+    1. 系统会向你提供的注册邮箱发送一个“**one-time code**”，用于验证该邮箱账户的所有权。
+    2. 你将有 **60 秒** 的时间从收件箱中获取该验证码。
+5. 输入 "**one-time code**" 后，请点击 "**Register**"，你就可以成功注册并远程监控你的热点。
 
-![SenseCAP Dashboard Registration](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
+![SenseCAP 仪表板注册](https://www.sensecapmx.com/wp-content/uploads/2022/07/register-dash-new.png)
 
 **仪表板登录**
 ===================
 
-1.  访问 [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-2.  输入您在注册过程中创建的凭据或使用您的 Discord 账户详细信息登录（取决于您在注册过程中选择的方式）
-3.  恭喜，您已成功登录。
+1. 访问 [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+2. 输入你在注册过程中创建的登录凭据，或者使用你的 Discord 账户信息登录（以你在注册过程中选择的方式为准）
+3. 恭喜，你已成功登录。
 
-![SenseCAP Dashboard Login](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
+![SenseCAP 仪表板登录](https://www.sensecapmx.com/wp-content/uploads/2022/07/dash-sign-in-new.png)
