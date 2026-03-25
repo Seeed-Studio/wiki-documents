@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não o reinicie nem desligue manualmente. Caso contrário, o dispositivo pode deixar de funcionar.
+Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
 :::
@@ -28,7 +28,7 @@ Antes da implantação formal, teste e configure o nó primeiro.
 ### Gravar o firmware
 
 :::caution note
-Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo deixe de funcionar completamente.
+Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo fique completamente inutilizável.
 Antes de gravar o firmware, grave primeiro o firmware de apagamento!
 :::
 
@@ -38,7 +38,7 @@ Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecione o 
 
 #### Gravar apagamento
 
-Clique no símbolo `trash`.
+Clique no símbolo de `trash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
@@ -57,12 +57,12 @@ Esse processo pode levar algum tempo. Aguarde até o disco "XIAO-XXX" desaparece
 Escolha a versão de firmware desejada e clique em `flash`. 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-Baixe o arquivo UF2 e entre no modo DFU. Arraste o arquivo UF2 para a unidade DFU. O firmware será gravado após o arquivo ser copiado e o dispositivo reiniciar.
+Baixe o arquivo UF2 e entre no modo DFU. Arraste o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o arquivo ser copiado e o dispositivo reiniciar.
 
 ### Instalar bateria e módulo GPS (Opcional)
 
 :::tip
-Quando precisar instalar ou substituir a bateria, use bateria `Button-top` 18650(3,6V).
+Quando precisar instalar ou substituir a bateria, use bateria `Button-top` 18650 (3,6 V).
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
 A versão P1-Pro possui bateria e módulo GPS integrados; para a versão P1, o usuário precisa instalar manualmente a bateria e o módulo GPS, se necessário.
 :::
@@ -84,7 +84,7 @@ A versão P1-Pro possui bateria e módulo GPS integrados; para a versão P1, o u
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade de vedação à prova d’água do dispositivo.
+Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d'água do dispositivo.
 :::
 
 ### Ligar o dispositivo
@@ -134,7 +134,7 @@ import TabItem from '@theme/TabItem';
 
 ### Conectar via site
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, pode conectar o dispositivo ao [site Meshtastic](https://client.meshtastic.org/messages/broadcast/0) agora. 
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, agora pode conectar o dispositivo ao [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0). 
 
   Passo 1: Abra o site
 
@@ -184,14 +184,14 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Não definido|N/A|N/A|N/A|
-|US|Estados Unidos|902.0 - 928.0|100|30|
-|EU_868|União Europeia 868MHz|869.4 - 869.65|10|27|
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de duty cycle horário de 10%, calculada a cada minuto em uma janela móvel de 1 hora. Seu dispositivo deixará de transmitir ao atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de duty cycle horário de 10%, calculada a cada minuto em uma janela contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
@@ -219,7 +219,7 @@ Para iOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode ap
 ## Instalação
 
 :::danger note
-Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para proteção extra contra água, você também pode considerar aplicar medidas adicionais de vedação.
+Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar o acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
 :::
 
 - **Lista de peças**
@@ -339,13 +339,13 @@ Se você precisar de uma antena com ganho mais alto, recomendamos a antena [860-
 
 - Motivo 
 
-Isso geralmente é causado por falha no processo de gravação do firmware. Ao gravar o firmware, mantenha uma conexão estável.
+Isso geralmente é causado por falha no processo de gravação do firmware. Ao gravar o firmware, mantenha uma conexão estável. 
 
 - Solução de problemas
 
-[Click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-firmware) para regravar o firmware.
+[Clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-firmware) para regravar o firmware.
 
-### Dispositivo inutilizado (bricked)
+### Dispositivo brickado
 
 #### Descrição
 
@@ -358,14 +358,14 @@ O dispositivo não responde, nenhum LED, não é possível parear com seu App.
 - [Download do bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** a desconecte durante o processo de gravação.
+Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável e **NÃO** o desconecte durante o processo de gravação.
 :::
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
-Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e pressione "Enter". Isso abrirá a linha de comando.
+Para usuários de Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
 
-Para usuários Mac, pressione a tecla "Command" e a tecla "Espaço" para abrir o Spotlight. Em seguida, digite "termial" e pressione "Return". Isso abrirá a linha de comando.
+Para usuários de Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
 
 **Pré-requisitos**
 
@@ -405,7 +405,7 @@ Este é o local de instalação:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-Para usuários Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o como a seguir:
+Para usuários de Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Em seguida, adicione-o da seguinte forma:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -414,14 +414,14 @@ Para usuários Windows, talvez seja necessário adicionar o caminho manualmente.
 
 <TabItem value="sou" label="Instalando a partir do código-fonte">
 
-Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro, clone este repositório e entre na pasta dele.
+Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro, clone este repositório e acesse a pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez seja necessário alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
+Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -430,7 +430,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -444,7 +444,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -464,10 +464,10 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Para usuários Windows, por exemplo:
+Para usuários de Windows, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-Para usuários Mac, por exemplo:
+Para usuários de Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **Etapa 3: Grave o bootloader**
@@ -507,17 +507,85 @@ Quando você tiver concluído as etapas acima, poderá seguir este [passo](https
 
  #### Solução de problemas
 
-[click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um apagamento da flash. Em seguida, grave novamente o firmware mais recente.
+[clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um apagamento da flash. Em seguida, grave novamente o firmware mais recente.
 
 
 ### Restauração de fábrica
 
 Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.
 
-- [click here](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um apagamento da flash. Em seguida, grave novamente o firmware mais recente.
+- [clique aqui](https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/#flash-erase) para executar um apagamento da flash. Em seguida, grave novamente o firmware mais recente.
 
 - Clique no botão `Factory Reset` no App. O dispositivo irá reiniciar automaticamente com a configuração de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+### Redefinição do NodeDB
+
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual, incluindo:
+
+- **ID do Nó**
+- **Nome de Usuário**
+- **Informações de Localização**
+- **Informações de Sinal (SNR)**
+- **Horário da Última Visualização**
+
+**Quando redefinir**
+
+Redefina o NodeDB quando:
+
+- A lista de nós contiver entradas desatualizadas, duplicadas ou inválidas.
+- Você se mover para um ambiente Mesh diferente e quiser redescobrir os nós próximos.
+- As informações do nó no aplicativo parecerem incorretas ou incompletas.
+
+:::danger
+Redefinir o NodeDB apenas limpa o banco de dados de nós armazenado no dispositivo. Isso **não executa uma restauração de fábrica** e **não remove a configuração básica do dispositivo**.
+:::
+
+**Redefinir pelo App**
+
+1. Abra o aplicativo e conecte-se ao dispositivo de destino.
+2. Vá para **Settings**.
+3. Toque em **Device**.
+4. Role até o final da página **Device Config** e encontre **Reset NodeDB**.
+5. Toque nela e confirme a ação.
+
+**Caminho no App**
+
+`Settings > Device > Reset NodeDB`
+
+**Telas de exemplo**
+
+Passo 1: Abra **Device** na página **Settings**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+Passo 2: Toque em `Reset NodeDB` na página **Device Config**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+Observe a diferença entre as seguintes opções:
+
+- **Reset NodeDB**: Apenas limpa o banco de dados de nós.
+- **Factory Reset**: Restaura o dispositivo para as configurações de fábrica e remove mais dados de configuração.
+:::
+
+**O que acontece após a redefinição**
+
+Depois que **Reset NodeDB** for executado, o dispositivo limpa a lista de nós armazenada no momento. À medida que o dispositivo continua em funcionamento, ele redescobrirá e registrará novamente os nós próximos.
+
+Você poderá observar o seguinte:
+
+- A lista de nós pode ficar temporariamente vazia ou menor.
+- Os nós irão reaparecer gradualmente à medida que o dispositivo continuar operando.
+- Os registros históricos de nós armazenados anteriormente não estarão mais disponíveis.
+
+**Notas**
+
+- Antes de redefinir, certifique-se de que o problema esteja realmente relacionado a uma lista de nós anormal.
+- Se o problema for apenas um atraso na exibição dos nós, aguarde um pouco primeiro para ver se ele se recupera automaticamente.
+- Se o problema permanecer após redefinir o NodeDB, continue solucionando a configuração do dispositivo ou outras possíveis causas.
+- Use **Factory Reset** com cuidado para evitar remover acidentalmente a configuração do dispositivo.
 
 ### Consumo de energia
 
@@ -528,26 +596,26 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 |Descrição|Consumo|
 |---|---|
-|Corrente de operação do GPS_LED|1.02 mA|
-|Alimentado, mas não ativado|56.195 μA|
+|Corrente de operação do GPS_LED|1,02 mA|
+|Alimentado, mas não ativado|56,195 μA|
 |Alimentado e ativado|611 μA|
 
 **Exemplo:**
 
 |Capacidade da bateria |Vida útil da bateria|
 |---|---|
-|3350|136.8|
-|12000|490.2|
+|3350|136,8|
+|12000|490,2|
 
 - **Consumo de energia em modo ativo**
 
 |Modo|Corrente|
 |---|---|
-|Corrente estática|10.65 mA|
-|Corrente de transmissão EU868|157.74 mA|
-|Corrente de transmissão US915|205.22 mA|
+|Corrente estática|10,65 mA|
+|Corrente de transmissão EU868|157,74 mA|
+|Corrente de transmissão US915|205,22 mA|
 |Corrente de operação do GPS|50 mA|
-|Corrente de operação do GPS_LED|1.02 mA|
+|Corrente de operação do GPS_LED|1,02 mA|
 
 ### Qualidade do sinal
 
@@ -561,7 +629,7 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O chip de gerenciamento de carregamento CN3165 é 0.99A. Portanto, a corrente máxima de carregamento é 1A.
+A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O CI de gerenciamento de carregamento CN3165 é de 0,99 A. Portanto, a corrente máxima de carregamento é 1 A.
 
 ## Recurso
-- [Tabela de cálculo da vida útil da bateria do Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Tabela de Cálculo da Vida Útil da Bateria do Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
