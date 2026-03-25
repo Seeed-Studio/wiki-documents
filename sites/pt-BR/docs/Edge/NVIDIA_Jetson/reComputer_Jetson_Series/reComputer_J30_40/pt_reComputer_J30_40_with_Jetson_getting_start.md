@@ -43,7 +43,7 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
 - **Certificações abrangentes:** FCC, CE, RoHS, UKCA
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

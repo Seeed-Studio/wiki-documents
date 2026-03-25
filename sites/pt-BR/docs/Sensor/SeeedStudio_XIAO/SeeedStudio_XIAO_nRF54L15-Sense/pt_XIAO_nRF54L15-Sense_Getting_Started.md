@@ -174,7 +174,7 @@ export const Highlight = ({children, color}) => (
 - **Interfaces ricas**: conjunto abrangente de periféricos, incluindo o novo Global RTC (disponível no modo System OFF), ADC de 14 bits e interfaces seriais de alta velocidade. Gerenciamento de bateria de lítio integrado.
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

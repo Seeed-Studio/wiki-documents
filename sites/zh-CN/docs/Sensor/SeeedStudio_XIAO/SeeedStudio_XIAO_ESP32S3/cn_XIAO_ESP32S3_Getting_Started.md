@@ -922,7 +922,7 @@ XIAO ESP32S3 系列内置了电源管理芯片，使 XIAO ESP32S3 可以通过�
   - **📄[数据手册]** [OV2640 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

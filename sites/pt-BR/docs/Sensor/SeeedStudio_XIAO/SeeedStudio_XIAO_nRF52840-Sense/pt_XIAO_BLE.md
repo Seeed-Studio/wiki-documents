@@ -155,7 +155,7 @@ O Seeed Studio XIAO nRF52840 Sense é compatível com a placa de expansão Seeed
 - Componentes em um único lado, design para montagem em superfície
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
