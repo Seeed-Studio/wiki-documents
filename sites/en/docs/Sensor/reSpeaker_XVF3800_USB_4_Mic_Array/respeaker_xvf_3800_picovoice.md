@@ -30,6 +30,10 @@ Natural Language Processing (NLP) is the broad field that lets machines process 
 
 Keyword (wake word) detection (e.g., “Hey device”) is the first step that activates the system, and after activation, either STT → NLU pipeline or speech-to-intent (Rhino) is used to understand and execute the command.
 
+## Objective
+
+This demo showcases how wake word detection using Picovoice Porcupine works together with Picovoice Rhino for efficient speech-to-intent processing on a Raspberry Pi. The system first listens for a keyword to activate, and once triggered, it directly converts spoken commands into actionable intents without relying on heavy cloud processing. This approach is highly optimized for low-resource embedded devices, making it ideal for robotics and edge AI applications. It enables low-latency, real-time voice interaction, ensuring fast and reliable performance even on constrained hardware.
+
 ## Hardware Required 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
