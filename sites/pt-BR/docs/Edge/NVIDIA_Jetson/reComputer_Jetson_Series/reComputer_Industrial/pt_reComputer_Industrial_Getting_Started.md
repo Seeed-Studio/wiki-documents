@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_Getting_Started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros passos com o reComputer Industrial
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
@@ -36,6 +38,13 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
 - **Conectividade híbrida:** Suporte a 5G/4G/LTE/LoRaWAN® (módulo opcional) com 1x slot para cartão Nano SIM
 - **Montagem flexível:** Mesa, trilho DIN, montagem em parede, VESA
 - **Certificações:** FCC, CE, RoHS, UKCA
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 

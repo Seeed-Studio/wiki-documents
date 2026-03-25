@@ -735,6 +735,24 @@ const sidebars = {
             }
           ],
         },
+        {
+          type: 'category',
+          label: 'SenseCAP Bluetooth Beacon',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 Indoor Bluetooth Beacon',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon_User_Guide',
+              ],
+            }
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'SenseCAP T1000-P Pet Tracker',
@@ -1965,6 +1983,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
                   ],
                 },
               ],
@@ -3598,6 +3617,19 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Agent',
+              items: [
+                {
+                  type: 'category',
+                  label: 'openClaw',
+                  items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Agent/openClaw/getting_started_with_openclaw_on_recomputer'
+                      ]
+                },
+              ]
+            },
+            {
+              type: 'category',
               label: 'Tools',
               items: [
                 'Edge/Raspberry_Pi_Devices/Application/Development_Tools/recomputer_use_uv_to_build_package',
@@ -3850,8 +3882,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/reComputer_Jetson_Series_GPIO_Grove'
               ]
             },
-            //flashing jetpack page
+            // flashing jetpack page
             'Edge/NVIDIA_Jetson/Flash_Jetpack',
+            'Edge/NVIDIA_Jetson/Jetson_Debug_Guide',
           ]
         },
         // Applications
@@ -3939,6 +3972,7 @@ const sidebars = {
               type: 'category',
               label: 'Physical AI',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',

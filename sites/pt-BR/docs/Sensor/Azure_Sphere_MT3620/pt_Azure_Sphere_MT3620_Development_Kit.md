@@ -107,7 +107,7 @@ Se você precisar de ajuda na seleção da versão, verifique a [lista de paíse
     <tr>
       <td className="tg-amwm">ADC</td>
       <td className="tg-0lax">4 *entradas/saídas ADC de 12 bits</td>
-    </tr]
+    </tr>
     <tr>
       <td className="tg-amwm">RTC</td>
       <td className="tg-0lax">1* RTC com suporte para bateria CR2032 3V</td>
@@ -282,17 +282,17 @@ Construímos duas demos que combinam o kit de desenvolvimento Sphere e o [sistem
 | Kits de desenvolvimento MT3620 | Grove-Temperature&Humidity|  Grove - Relay |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/azure_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/SHT3_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/relay.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|[Get One Now](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
+|[Adquira agora](https://www.seeedstudio.com/Azure-Sphere-MT3620-Development-Kit-p-3052.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT3-p-2655.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 
 | Grove - Slide Potentiometer | Grove - 4-Digit Display |   Grove - Blue LED Button  |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/Slide_Potentiometer_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/4_digital_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/Grov-Blue_led_button.jpg)|
-|[Get One Now](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|[Get One Now](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)|[Get One Now](https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html)|
+|[Adquira agora](https://www.seeedstudio.com/Grove-Slide-Potentiometer-p-1196.html)|[Adquira agora](https://www.seeedstudio.com/Grove-4-Digit-Display-p-1198.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Blue-LED-Button-p-3104.html)|
 
 | MT3620 Grove Shield |Seeeduino V4.2  | Base Shield  |
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/mt3620groveshieldb_s.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|
-|[Get One Now](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
+|[Adquira agora](https://www.seeedstudio.com/MT3620-Grove-Shield-p-3145.html)|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
 **Diagrama do Sistema**
 

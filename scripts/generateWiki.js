@@ -12,6 +12,7 @@ const SITE_DOCS_ROOT = {
   cn: path.join(rootDir, 'sites', 'zh-CN', 'docs'),
   ja: path.join(rootDir, 'sites', 'ja', 'docs'),
   es: path.join(rootDir, 'sites', 'es', 'docs'),
+  pt: path.join(rootDir, 'sites', 'pt-BR', 'docs'),
 };
 
 const excludedPaths = [
@@ -26,11 +27,18 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'User_Guide', 'Payload_Format.md'), //3.12
   path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'Application', 'object_detection_with_yolov11_on_recomputer_rk.md'), //3.9
   path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'RK_Devices_Intro.md'), //3.9
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Application', 'meshtastic_node_map_t1000_e.md'), //3.19
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Application', 'meshtastic_node_map_l1.md'), //3.19
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'Application', 'meshtastic_node_map_esp32s3.md'), //3.19
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Firmware_Update.md'), //3.19
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_Quick_Start.md'), //3.13
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Firmware Development Tutorial', 'firmware_development_t1000e.md'), //3.18
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Firmware Development Tutorial', 'firmware_development.md'), //3.18
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
-const LANG_DIR = { cn: 'zh-CN', ja: 'ja', es: 'es' };
-const LANG_PREFIX = { cn: 'cn_', ja: 'ja_', es: 'es_' };
+const LANG_DIR = { cn: 'zh-CN', ja: 'ja', es: 'es', pt: 'pt-BR' };
+const LANG_PREFIX = { cn: 'cn_', ja: 'ja_', es: 'es_', pt: 'pt_' };
 
 // 提取标题：首个 H1 或 frontmatter.title
 function extractTitle(fileContent) {
@@ -109,7 +117,7 @@ function processDirectory(directory) {
 processDirectory(docsDirectory);
 
 // 在语言目录查找标题：同路径 或 同目录前缀文件
-function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
+function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es'|'pt' */) {
   const langDir = LANG_DIR[lang];
   const prefix = LANG_PREFIX[lang];
 
@@ -127,7 +135,7 @@ function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
   let t = tryReadTitle(abs1md) || tryReadTitle(abs1mdx);
   if (t) return t;
 
-  // 2) 同一相对目录 + 语言前缀文件名（cn_/ja_/es_）
+  // 2) 同一相对目录 + 语言前缀文件名（cn_/ja_/es_/pt_）
   const dir = path.dirname(relPath);
   const base = path.basename(relPath);
   const abs2md  = path.join(localizedDocsRoot, dir, `${prefix}${base}.md`);
@@ -180,9 +188,11 @@ const latestDocsWithI18n = latestDocs.map((it) => {
   const tCN = getLocalizedTitle(it, 'cn');
   const tJA = getLocalizedTitle(it, 'ja');
   const tES = getLocalizedTitle(it, 'es');
+  const tPT = getLocalizedTitle(it, 'pt');
   if (tCN) out.title_cn = tCN;
   if (tJA) out.title_ja = tJA;
   if (tES) out.title_es = tES;
+  if (tPT) out.title_pt = tPT;
   delete out.relPath;
   return out;
 });
@@ -197,4 +207,4 @@ for (let i = 0; i < latestDocsWithI18n.length; i += 2) {
 const wikiContent = `const docList = ${JSON.stringify(docList2D, null, 2)};\n\nexport default docList;`;
 fs.writeFileSync(wikiFilePath, wikiContent);
 
-console.log('wiki.js 生成成功：已从 sites/zh-CN/docs、sites/ja/docs、sites/es/docs 补全 title_cn/title_ja/title_es。');
+console.log('wiki.js 生成成功：已从 sites/zh-CN/docs、sites/ja/docs、sites/es/docs、sites/pt-BR/docs 补全 title_cn/title_ja/title_es/title_pt。');

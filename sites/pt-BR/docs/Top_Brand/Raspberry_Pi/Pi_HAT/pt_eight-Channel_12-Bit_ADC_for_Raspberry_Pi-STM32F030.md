@@ -117,7 +117,7 @@ Igual ao acima, mas com método de conexão diferente. Este grupo de conectores 
 |Raspberry pi|8-Channel 12-Bit ADC for Raspberry Pi (STM32F030)(STM32F030)|
 |------------|-------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030/img/thumbnail.jpg" /></div>|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi(STM32F030).html)|
+|[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/8-Channel-12-Bit-ADC-for-Raspberry-Pi(STM32F030).html)|
 
 - **Passo 1**. Insira o ADC de 8 Canais e 12 Bits para Raspberry Pi (STM32F030) no Raspberry Pi.
 - **Passo 2**. Conecte o Raspberry Pi ao PC através de um cabo USB.

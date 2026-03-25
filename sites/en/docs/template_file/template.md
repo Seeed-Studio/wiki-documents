@@ -33,7 +33,7 @@ I am using (Seeed Products) as the hardware here. The contents here should inclu
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Seeed Studio XIAO ESP32S3(example)</th>
+        <th>Seeed Studio XIAO ESP32-S3(example)</th>
         <th>Seeed Studio Grove OLED Display 0.96(example)</th>
     </tr>
     <tr>
@@ -108,12 +108,12 @@ Some problems might encounter in the process of hardware connection, software de
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
@@ -155,7 +155,6 @@ last_update:
 <a  href="link" target="_blank"><span> PDF Download of SenseCAP S210X Sereis User Guide</span></a>
 ```
 
-
 ### Highlight code
 
 ```cpp
@@ -191,8 +190,8 @@ Print "code here"
     </a>
 </div>
 
-
 ### Table code
+
 There includes hyperlinks, image links, table title
 
 <table align="center">
@@ -217,42 +216,32 @@ There includes hyperlinks, image links, table title
     </tr>
   </tbody></table>
 
-
-
-### note 
+### note
 
 :::note
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with *Markdown* `syntax`. Check [this `api`](#).
 :::
 
-
-### tip 
+### tip
 
 :::tip
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with *Markdown* `syntax`. Check [this `api`](#).
 :::
 
-### info 
+### info
 
 :::info
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with *Markdown* `syntax`. Check [this `api`](#).
 :::
 
-### danger 
+### danger
 
 :::danger
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with *Markdown* `syntax`. Check [this `api`](#).
 :::
 
-
-### Caution 
+### Caution
 
 :::caution
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+Some **content** with *Markdown* `syntax`. Check [this `api`](#).
 :::
-
-
-
-
-
-

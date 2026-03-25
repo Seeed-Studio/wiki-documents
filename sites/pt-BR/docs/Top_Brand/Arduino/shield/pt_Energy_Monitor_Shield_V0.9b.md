@@ -335,7 +335,7 @@ void loop()
 
 ## Perguntas e Respostas
 
-* Blog [Energy Monitor Shield - Wireless energy monitoring](/pt-br//devicter.blogspot.ru/2014/03/energy-monitor-shield.html#more) RU
+* Blog [Energy Monitor Shield - Wireless energy monitoring](//devicter.blogspot.ru/2014/03/energy-monitor-shield.html#more) RU
 
 * Faça uma pergunta por e-mail para support@devicter.ru
 

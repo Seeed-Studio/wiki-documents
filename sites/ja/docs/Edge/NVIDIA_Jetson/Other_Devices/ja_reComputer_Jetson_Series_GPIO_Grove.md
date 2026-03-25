@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_GPIO_Grove/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # reComputer Jetson用GPIOとGrove
 
 ## Jetson拡張機能
@@ -38,6 +40,17 @@ Groveは、オープンソースでモジュール化された、すぐに使用
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputerzhongwen/regpio.jpg" alt="pir" width={500} height="auto" /></p>
 
 [Groveセンサー](https://www.seeedstudio.com/category/Grove-c-1003.html)をJetson Nanoに適用したい場合、最良の方法は[grove.py](https://github.com/Seeed-Studio/grove.py/blob/master/doc/README.md)と[Pythonライブラリ](https://github.com/Seeed-Studio/grove.py/blob/master/doc/README.md)を取得することです。これらは数分でプロジェクトを開始するのに役立ちます！詳細については[こちら](https://www.seeedstudio.com/blog/2019/06/13/create-more-ai-possibilities-with-grove-pihat-for-nvidia-jetson-nano/)をクリックしてください。
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポートと製品ディスカッション
 

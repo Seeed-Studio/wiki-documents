@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeiros passos com a Série Seeed Studio XIAO ESP32S3
 
@@ -82,7 +83,7 @@ A **câmera OV2640** foi descontinuada e o XIAO ESP32S3 Sense subsequente utiliz
     <td>/</td>
     <td>1x sensor de câmera OV3660<br/>1x Microfone Digital</td>
     <td>/</td>
-  </tr]
+  </tr>
   <tr>
     <th>Memória</th>
     <td>8MB PSRAM &amp; 8MB Flash no chip</td>
@@ -181,6 +182,13 @@ A **câmera OV2640** foi descontinuada e o XIAO ESP32S3 Sense subsequente utiliz
         <td align="center">Modo Ativo: <strong>~ 0,15A</strong></td>
     </tr>
 </table>
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Visão Geral de Hardware
 
@@ -431,7 +439,7 @@ Agora temos uma nova e poderosa câmera totalmente compatível com o XIAO ESP32S
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 

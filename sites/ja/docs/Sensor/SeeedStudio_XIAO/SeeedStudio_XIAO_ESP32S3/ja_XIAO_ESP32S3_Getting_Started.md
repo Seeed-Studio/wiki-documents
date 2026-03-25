@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO ESP32S3 シリーズ入門
 
@@ -931,6 +932,17 @@ XIAO ESP32S3 は高い集積度のため、すべての XIAO の中で最も複�
 - **[STP]** [XIAO ESP32S3 Sense ハウジング設計（下部）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp)
 
 *残りのオープンソース資料は現在編集中です。続報をお待ちください！*
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

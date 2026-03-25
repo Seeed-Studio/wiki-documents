@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/local_openclaw_on_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## Visão Geral
 
 OpenClaw é um framework de agentes que pode funcionar tanto com LLMs em nuvem quanto com modelos locais, dependendo das suas necessidades de implantação. Modelos em nuvem são convenientes para começar: eles não exigem configuração local, oferecem uma ampla variedade de modelos e são fáceis de escalar. As compensações são custos contínuos de tokens, dependência de serviços externos e restrições mais rígidas em relação à residência de dados e conectividade. Modelos locais evitam taxas recorrentes de API, mantêm os dados no próprio dispositivo e continuam operando em redes offline ou restritas. As compensações são esforço adicional de configuração e a necessidade de combinar o tamanho do modelo com os limites de computação e armazenamento do dispositivo. Para robótica de borda e assistentes de longa duração, essas vantagens tornam a implantação local o padrão prático. Este wiki mostra como executar o OpenClaw em um reComputer Jetson com Ollama para construir um hub de controle de IA autônomo.
@@ -51,7 +53,7 @@ Certifique-se de que o dispositivo Jetson tenha pelo menos 16GB de memória.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlQ29tcHV0ZXIgSjQwMTIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjo0LCJjX3RvdGFsX3Jlc3VsdHMiOjUyLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -369,6 +371,17 @@ Se você também estiver interessado neste projeto, tente implantá-lo agora!
 - https://ollama.com/
 - https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_j501_robotics_getting_started/
 
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico e Discussão de Produtos
 

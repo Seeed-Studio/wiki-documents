@@ -465,6 +465,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
 - Check your SenseCraft account to ensure the dashboard is properly deployed
 - If the problem persists, try restarting the device
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
 
 ### Q4: Network Connection Lost
 

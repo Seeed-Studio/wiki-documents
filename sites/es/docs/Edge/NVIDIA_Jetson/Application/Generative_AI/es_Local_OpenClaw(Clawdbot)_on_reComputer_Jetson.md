@@ -19,6 +19,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/local_openclaw_on_recomputer_jetson/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 ## Descripción General
 
 OpenClaw es un framework de agentes que puede trabajar con LLMs en la nube o modelos locales, dependiendo de tus necesidades de implementación. Los modelos en la nube son convenientes para comenzar: no requieren configuración local, ofrecen una amplia gama de opciones de modelos y son fáciles de escalar. Las desventajas son los costos continuos de tokens, la dependencia de servicios externos y restricciones más estrictas en cuanto a residencia de datos y conectividad. Los modelos locales evitan las tarifas recurrentes de API, mantienen los datos en el dispositivo y continúan operando en redes sin conexión o restringidas. Las desventajas son el esfuerzo adicional de configuración y la necesidad de ajustar el tamaño del modelo a los límites de cómputo y almacenamiento del dispositivo. Para robótica de borde y asistentes de larga duración, estas ventajas hacen que la implementación local sea una opción práctica por defecto. Este wiki muestra cómo ejecutar OpenClaw en reComputer Jetson con Ollama para construir un centro de control de IA autónomo.
@@ -369,6 +371,17 @@ Si también estás interesado en este proyecto, ¡intenta implementarlo ahora!
 - https://ollama.com/
 - https://wiki.seeedstudio.com/es/ai_robotics_recomputer_j501_robotics_getting_started/
 
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

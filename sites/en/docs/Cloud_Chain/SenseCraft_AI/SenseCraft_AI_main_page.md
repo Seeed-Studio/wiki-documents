@@ -121,7 +121,7 @@ The Models Output section focuses on how to configure and utilize the output of 
 
 - XIAO ESP32S3 Sense Model Output: Here, you can find information on how to work with model outputs on the XIAO ESP32S3 Sense board. The subsection is further divided into:
 
-  - **via GPIO**: This part provides guides on how to map model outputs to the GPIO pins of the XIAO ESP32S3 Sense, enabling control of external hardware based on the model's predictions.
+  - **via GPIO**: This part provides guides on how to map model outputs to the GPIO pins of the XIAO ESP32-S3 Sense, enabling control of external hardware based on the model's predictions.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">

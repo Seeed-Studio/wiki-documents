@@ -137,7 +137,7 @@ Vamos construir uma aplicação de LED bem básica com o Wio Link; nesta aplica�
 |Wio Link|Grove - LED|Cabo Micro USB|
 |:--------:|:-----------:|:---------------:|
 |![](https://files.seeedstudio.com/wiki/Wio_Link/image/Wio%20link%20small%20image.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/Red%20LED.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/48cmUSBc.jpg)|
-|[GET ONE NOW](https://www.seeedstudio.com/Wio-Link-p-2604.html)|[GET ONE NOW](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[GET ONE NOW](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
+|[Adquira agora](https://www.seeedstudio.com/Wio-Link-p-2604.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|[Adquira agora](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)|
 
 :::note
     * Um smartphone também é necessário (Android OS versão 4.1 ou superior, iOS versão 7 ou superior)
@@ -258,7 +258,7 @@ Antes de começar, verifique se você tem os dispositivos abaixo em mãos.
 |Fita de LED RGB|Grove-Temperature and Humidity Sensor|
 |:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Wio_Link/image/RGB%20LED%20Strip.jpg)|![](https://files.seeedstudio.com/wiki/Wio_Link/image/grove-T%26H%20sensor.jpg)|
-|[Get One Now](https://www.seeedstudio.com/s/led%20strip.html)|[Get One Now](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
+|[Adquira agora](https://www.seeedstudio.com/s/led%20strip.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
 
 - Etapa1: Remova o Grove LED do conector Grove, conecte a fita de LED ao Wio Link e arraste o mesmo módulo para o Wio Link no App.
 - Atualize o firmware.

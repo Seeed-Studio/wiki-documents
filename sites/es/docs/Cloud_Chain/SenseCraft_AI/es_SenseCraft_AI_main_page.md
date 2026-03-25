@@ -1,6 +1,6 @@
 ---
-description: Catálogo de Documentación de SenseCraft AI
-title: Descripción General
+description: Catálogo de la documentación de SenseCraft AI
+title: Descripción general
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/sensecraft-ai-main
@@ -10,38 +10,38 @@ sidebar_position: 1
 last_update:
   date: 11/27/2024
   author: Citrc
-createdAt: '2025-09-03'
-updatedAt: '2026-03-04'
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/sensecraft-ai-main/
 ---
 
 # Centro Wiki de SenseCraft AI
 
-## Descripción General
+## Descripción general
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_overview/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Descripción General 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Descripción general 🖱️</font></span></strong>
     </a>
 </div><br />
 
-La sección de Descripción General proporciona una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La descripción general también incluye enlaces a guías de Primeros Pasos y Preguntas Frecuentes para ayudar a los usuarios a comenzar rápidamente con SenseCraft AI.
+La sección de Descripción general ofrece una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La descripción general también incluye enlaces a las guías de inicio rápido y a las preguntas frecuentes para ayudar a los usuarios a comenzar a utilizar SenseCraft AI rápidamente.
 
-## Modelos Preentrenados
+## Modelos preentrenados
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_main_page/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Modelos Preentrenados 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Modelos preentrenados 🖱️</font></span></strong>
     </a>
 </div><br />
 
-La sección de Modelos Preentrenados contiene información sobre los modelos disponibles que pueden ser desplegados en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden ser utilizados para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide además en subsecciones basadas en los dispositivos compatibles:
+La sección de Modelos preentrenados contiene información sobre los modelos disponibles que se pueden desplegar en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden utilizarse para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide a su vez en subsecciones según los dispositivos compatibles:
 
-- **para XIAO ESP32S3 Sense**: Esta subsección lista los modelos preentrenados compatibles con la placa XIAO ESP32S3 Sense, junto con sus descripciones y casos de uso.
+- **para XIAO ESP32S3 Sense**: Esta subsección enumera los modelos preentrenados compatibles con la placa XIAO ESP32S3 Sense, junto con sus descripciones y casos de uso.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_xiao/" target="_blank" rel="noopener noreferrer">
@@ -49,7 +49,7 @@ La sección de Modelos Preentrenados contiene información sobre los modelos dis
     </a>
 </div><br />
 
-- **para Grove Vision AI V2**: Aquí, puedes encontrar los modelos preentrenados específicamente diseñados para el dispositivo Grove Vision AI V2.
+- **para Grove Vision AI V2**: Aquí puedes encontrar los modelos preentrenados diseñados específicamente para el dispositivo Grove Vision AI V2.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_grove_visionai_v2/" target="_blank" rel="noopener noreferrer">
@@ -57,7 +57,7 @@ La sección de Modelos Preentrenados contiene información sobre los modelos dis
     </a>
 </div><br />
 
-- **para SenseCAP Watcher**: Esta subsección proporciona información sobre los modelos preentrenados que pueden ser utilizados con el dispositivo SenseCAP Watcher, habilitando varias funcionalidades de monitoreo y detección.
+- **para SenseCAP Watcher**: Esta subsección proporciona información sobre los modelos preentrenados que pueden utilizarse con el dispositivo SenseCAP Watcher, habilitando diversas funciones de monitorización y detección.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_for_watcher/" target="_blank" rel="noopener noreferrer">
@@ -65,7 +65,7 @@ La sección de Modelos Preentrenados contiene información sobre los modelos dis
     </a>
 </div><br />
 
-- **para reComputer Jetson**: La subsección de reComputer Jetson contiene modelos preentrenados optimizados para la potente plataforma reComputer Jetson, adecuados para aplicaciones de IA más exigentes.
+- **para reComputer Jetson**: La subsección reComputer Jetson contiene modelos preentrenados optimizados para la potente plataforma reComputer Jetson, adecuada para aplicaciones de IA más exigentes.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_deploy_model_to_jetson/" target="_blank" rel="noopener noreferrer">
@@ -83,9 +83,9 @@ La sección de Modelos Preentrenados contiene información sobre los modelos dis
     </a>
 </div><br />
 
-La sección de Entrenamiento está dedicada a guiar a los usuarios a través del proceso de crear modelos personalizados usando SenseCraft AI. Se divide en dos subsecciones principales:
+La sección de Entrenamiento está dedicada a guiar a los usuarios en el proceso de creación de modelos personalizados utilizando SenseCraft AI. Se divide en dos subsecciones principales:
 
-- Clasificación: Esta subsección proporciona tutoriales paso a paso y mejores prácticas para entrenar modelos de clasificación de imágenes usando SenseCraft AI.
+- Clasificación: Esta subsección proporciona tutoriales paso a paso y buenas prácticas para entrenar modelos de clasificación de imágenes utilizando SenseCraft AI.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_training_classification/" target="_blank" rel="noopener noreferrer">
@@ -93,25 +93,25 @@ La sección de Entrenamiento está dedicada a guiar a los usuarios a través del
     </a>
 </div><br />
 
-- Detección de Objetos: Aquí, puedes encontrar guías detalladas sobre el entrenamiento de modelos de detección de objetos usando SenseCraft AI.
+- Detección de objetos: Aquí puedes encontrar guías detalladas sobre cómo entrenar modelos de detección de objetos utilizando SenseCraft AI.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_training_object_detection/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Detección de Objetos 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Detección de objetos 🖱️</font></span></strong>
     </a>
 </div><br />
 
-## Salida de Modelos
+## Salida de modelos
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_main_page/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Salida de Modelos 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Salida de modelos 🖱️</font></span></strong>
     </a>
 </div><br />
 
-La sección de Salida de Modelos se enfoca en cómo configurar y utilizar la salida de modelos entrenados en diferentes dispositivos compatibles con SenseCraft AI. Está organizada en las siguientes subsecciones:
+La sección de Salida de modelos se centra en cómo configurar y utilizar la salida de los modelos entrenados en diferentes dispositivos compatibles con SenseCraft AI. Está organizada en las siguientes subsecciones:
 
-- **Salida de Modelo Grove Vision AI V2**: Esta subsección explica cómo configurar y acceder a la salida de modelos desplegados en el dispositivo Grove Vision AI V2. Cubre temas como configurar disparadores, integrar con sistemas externos y visualizar las predicciones del modelo.
+- **Salida de modelos Grove Vision AI V2**: Esta subsección explica cómo configurar y acceder a la salida de los modelos desplegados en el dispositivo Grove Vision AI V2. Cubre temas como la configuración de disparadores, la integración con sistemas externos y la visualización de las predicciones del modelo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_grove_visionai/" target="_blank" rel="noopener noreferrer">
@@ -119,37 +119,37 @@ La sección de Salida de Modelos se enfoca en cómo configurar y utilizar la sal
     </a>
 </div><br />
 
-- Salida del Modelo XIAO ESP32S3 Sense: Aquí, puedes encontrar información sobre cómo trabajar con las salidas del modelo en la placa XIAO ESP32S3 Sense. La subsección se divide además en:
+- Salida de modelos XIAO ESP32S3 Sense: Aquí puedes encontrar información sobre cómo trabajar con las salidas de los modelos en la placa XIAO ESP32S3 Sense. La subsección se divide a su vez en:
 
-  - **vía GPIO**: Esta parte proporciona guías sobre cómo mapear las salidas del modelo a los pines GPIO del XIAO ESP32S3 Sense, permitiendo el control de hardware externo basado en las predicciones del modelo.
+  - **a través de GPIO**: Esta parte proporciona guías sobre cómo asignar las salidas del modelo a los pines GPIO del XIAO ESP32-S3 Sense, lo que permite controlar hardware externo en función de las predicciones del modelo.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>vía GPIO</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>a través de GPIO</font></span></strong>
     </a></div><br />
 
-  - **vía MQTT**: Aquí, puedes aprender cómo enviar las salidas del modelo desde el XIAO ESP32S3 Sense a otros dispositivos o sistemas usando el protocolo MQTT, facilitando la integración y comunicación sin problemas.
+  - **a través de MQTT**: Aquí puedes aprender cómo enviar las salidas del modelo desde el XIAO ESP32S3 Sense a otros dispositivos o sistemas utilizando el protocolo MQTT, lo que facilita una integración y comunicación fluidas.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>vía MQTT</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>a través de MQTT</font></span></strong>
     </a></div><br />
 
-  - **Como un Sensor**: Esta parte explicará cómo usar XIAO, que ya ha cargado un modelo, como un sensor. Puede requerir que uses un XIAO adicional o dispositivo Arduino.
+  - **Como sensor**: Esta parte explicará cómo utilizar XIAO, que ya ha cargado un modelo, como un sensor. Es posible que necesites utilizar un dispositivo XIAO o Arduino adicional.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Como un Sensor</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Como sensor</font></span></strong>
     </a></div><br />
 
-  - **Usar la biblioteca SSCMACore para información de salida del modelo**: Si no quieres usar un XIAO adicional para recibir la salida de datos de tu modelo, entonces el tutorial aquí puede ser para ti.
+  - **Usar la biblioteca SSCMACore para obtener información del modelo de salida**: Si no quieres utilizar un XIAO adicional para recibir los datos de salida de tu modelo, entonces el tutorial aquí puede ser para ti.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_sscmacore_library/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Usar SSCMACore</font></span></strong>
     </a></div><br />
 
-- Espacio de Trabajo reComputer Jetson: Esta subsección proporciona información sobre cómo configurar y utilizar el Espacio de Trabajo reComputer Jetson para trabajar con salidas del modelo. Cubre temas como configurar el espacio de trabajo, visualizar predicciones del modelo e integrar con otro software.
+- Espacio de trabajo reComputer Jetson: Esta subsección proporciona información sobre cómo configurar y utilizar el espacio de trabajo reComputer Jetson para trabajar con las salidas de los modelos. Cubre temas como la configuración del espacio de trabajo, la visualización de las predicciones del modelo y la integración con otro software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif" style={{width:1000, height:'auto'}}/></div>
 
@@ -161,11 +161,11 @@ La sección de Salida de Modelos se enfoca en cómo configurar y utilizar la sal
     </a>
 </div><br />
 
-La sección de Aplicación muestra ejemplos del mundo real y estudios de caso que demuestran cómo SenseCraft AI puede ser usado para resolver varios problemas a través de diferentes dominios. Incluye redacciones detalladas de proyectos, muestras de código y mejores prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA usando SenseCraft AI.
+La sección de Aplicación muestra ejemplos y casos de estudio del mundo real que demuestran cómo SenseCraft AI puede utilizarse para resolver diversos problemas en diferentes dominios. Incluye descripciones detalladas de proyectos, ejemplos de código y buenas prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA utilizando SenseCraft AI.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

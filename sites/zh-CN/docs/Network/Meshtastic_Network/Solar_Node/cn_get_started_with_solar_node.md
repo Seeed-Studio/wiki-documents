@@ -25,18 +25,18 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 在正式部署之前，请先对节点进行测试和配置。
 
-### 烧录固件
+### 刷写固件
 
 :::caution note
 请 `don't use NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
-在烧录固件之前，请先烧录擦除固件！
+在刷写固件之前，请先刷写擦除固件！
 :::
 
-访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。选择目标设备为 `Seeed SenseCAP Solar Node`。
+访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。将目标设备选择为 `Seeed SenseCAP Solar Node`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-#### 烧录擦除固件
+#### 刷写擦除固件
 
 点击 `trash` 图标。
 
@@ -46,18 +46,18 @@ url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，此时会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，然后应会显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
+点击 `Enter DFU Mode`，会出现一个名为 `XIAO-xxx` 的串口，点击并连接它，此时应显示一个名为 `XIAO-xxx` 的驱动器。将擦除固件粘贴到该磁盘中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
 此过程可能需要一些时间。请等待 "XIAO-XXX" 磁盘消失。
 
-#### 烧录应用固件
+#### 刷写应用固件
 
-选择你需要的固件版本，点击 `flash`。
+选择你想要的固件版本，点击 `flash`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器中。文件复制完成并设备重启后，固件就会被烧录。
+下载 UF2 文件并进入 DFU 模式。将 UF2 文件拖入 DFU 驱动器。文件复制完成并设备重启后，固件就会被刷写。
 
 ### 安装电池和 GPS 模块（可选）
 
@@ -210,10 +210,10 @@ import TabItem from '@theme/TabItem';
 
 |按键操作|说明|
 |--|--|
-|按住 PWR 3 秒|开机|
+|长按 PWR 3 秒|开机|
 |快速按 PWR 两次|更新节点/位置信息|
 |快速按 PWR 三次|打开/关闭 GPS|
-|按住 PWR 5 秒|关机|
+|长按 PWR 5 秒|关机|
 |快速按 RST 两次|手动进入 DFU 模式|
 
 ## 安装
@@ -236,7 +236,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 2：使用螺丝连接万向节（部件 2）和支架（部件 3）。
+- 步骤 2：使用螺丝将万向节（部件 2）和支架（部件 3）连接起来。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -288,7 +288,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下传感器已验证与设备上的 Grove 接口兼容。
+- 以下传感器已验证可与设备上的 Grove 接口兼容。
 
 <table>
   <tr>
@@ -351,22 +351,39 @@ import TabItem from '@theme/TabItem';
 
 设备无响应，没有 LED 指示灯，无法与 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试烧录 Bootloader。**
+**1）设备仍然可以进入 DFU 模式，则尝试烧录 bootloader。**
 
 #### 烧录 Bootloader
 
 - [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-当你烧录 Bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
+在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
+
+对于 Windows 用户，同时按下 "Win" 键和 "R" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
+
+对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，即可打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
 
 **前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
+
+
+在命令行中检查 python 和 pip 是否安装成功。
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
 
 <Tabs>
 <TabItem value="pypi" label="通过 PyPI 安装">
@@ -377,11 +394,27 @@ import TabItem from '@theme/TabItem';
 pip3 install --user adafruit-nrfutil
 ```
 
+
+检查安装路径：
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+这是安装位置：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
 </TabItem>
 
 <TabItem value="sou" label="通过源码安装">
 
-如果你在通过 PyPi 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
+如果你在使用 PyPi 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -390,14 +423,14 @@ cd Adafruit_nRF52_nrfutil
 
 注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
-要在你的主目录用户空间中安装：
+如果要在用户空间（你的主目录）中安装：
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下请使用 `--user` 参数：
+如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下，请使用 `--user` 参数：
 
 ```
 pip3 install -r --user requirements.txt
@@ -422,7 +455,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 你将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe（如果你在 Windows 上，则带有 `.exe`）。
-为了方便使用，请将其复制或移动到其他位置，例如你的 %PATH% 中的某个目录。
+为了方便使用，请将其复制或移动到其他位置，例如在你的 %PATH% 中的某个目录。
 
 </TabItem>
 </Tabs>
@@ -431,18 +464,27 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 将设备连接到电脑，并检查端口号。
 
-示例：
+以 Windows 用户为例：
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+以 Mac 用户为例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 3：烧录 Bootloader**
+**步骤 3：烧录 bootloader**
 
-在终端或命令提示符中，进入你下载 Bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，进入你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
 
 - **对于 Windows**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
+请将 COMXX 更改为你的端口号。例如，如果你的设备在 com6 上，请将命令更改为：
+
+`adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
+
+ 部分设备在你输入此命令后会更改其端口号。因此，如果安装失败，请再次检查端口号。
+
 
 - **对于其他系统**：
 
@@ -452,47 +494,115 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)烧录应用固件。
+当你完成上述步骤后，你可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)来烧录应用固件。
 
  ### 设备自动关机
 
  #### 描述
 
- - 设备开机后，过一段时间会自动关机或重启。
+ - 设备开机后，过一段时间会自动关机或重启。 
  - 串口日志运行一段时间后停止。
 
  这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
 
  #### 故障排查
 
-[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+[click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
 
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你有两种方式可以进行恢复出厂设置。
+如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
 
-- [点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
+- [click here](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase) 执行 flash 擦除。然后重新烧录最新固件。
 
-- 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
+- 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+### NodeDB 重置
+
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息，包括：
+
+- **Node ID**
+- **User Name**
+- **Location Information**
+- **Signal Information (SNR)**
+- **Last Seen Time**
+
+**何时重置**
+
+在以下情况下重置 NodeDB：
+
+- 节点列表包含过期、重复或无效的条目。
+- 你移动到不同的 Mesh 环境并希望重新发现附近节点。
+- App 中的节点信息看起来不正确或不完整。
+
+:::danger
+重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行恢复出厂设置**，也**不会移除设备的基础配置**。
+:::
+
+**从 App 中重置**
+
+1. 打开 App 并连接到目标设备。
+2. 进入 **Settings**。
+3. 点击 **Device**。
+4. 在 **Device Config** 页面滑动到最底部，找到 **Reset NodeDB**。
+5. 点击并确认操作。
+
+**App 路径**
+
+`Settings > Device > Reset NodeDB`
+
+**示例界面**
+
+步骤 1：在 **Settings** 页面中打开 **Device**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+步骤 2：在 **Device Config** 页面点击 `Reset NodeDB`。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+请注意以下选项之间的区别：
+
+- **Reset NodeDB**：仅清除节点数据库。
+- **Factory Reset**：将设备恢复到出厂设置，并移除更多配置信息。
+:::
+
+**重置后会发生什么**
+
+执行 **Reset NodeDB** 后，设备会清除当前存储的节点列表。随着设备继续运行，它会再次重新发现并记录附近的节点。
+
+你可能会观察到以下现象：
+
+- 节点列表可能会暂时变为空或变少。
+- 随着设备持续运行，节点会逐渐重新出现。
+- 之前存储的历史节点记录将不再可用。
+
+**注意事项**
+
+- 在重置之前，请确认问题确实与异常的节点列表有关。
+- 如果问题只是节点显示延迟，先等待一段时间，看看是否会自动恢复。
+- 如果在重置 NodeDB 后问题仍然存在，请继续排查设备配置或其他可能原因。
+- 谨慎使用 **Factory Reset**，以避免误删设备配置。
 
 ### 功耗
 
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
-下列数据仅供参考；实际功耗可能会因真实使用环境而有所不同。
+下列数据仅供参考；实际功耗会根据真实使用环境有所变化。
 
-- **关机睡眠模式功耗**
+- **关机休眠模式功耗**
 
 |描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
 |上电但未激活|56.195 μA|
-|上电并已激活|611 μA|
+|上电且已激活|611 μA|
 
 **示例：**
 
-|电池容量|电池寿命|
+|电池容量 |电池寿命|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -509,11 +619,11 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 ### 信号质量
 
-- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
+- **SNR** 反映通信链路质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用该设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较小的区域使用设备。
 
 ### 充电电流
 

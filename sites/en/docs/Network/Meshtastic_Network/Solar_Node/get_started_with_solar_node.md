@@ -363,10 +363,27 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 **Step1: Adafruit-nrfutil Installation**
 
+For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line. 
+
+For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+
 **Prerequisites**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
+
+
+Check in your command line that whether or not the python and pip are installed successfully.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Then "Python xxx" and "pip xxx" should appear. If it does not, please try install python again.
 
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
@@ -376,6 +393,22 @@ This is recommended method, to install latest version:
 ```
 pip3 install --user adafruit-nrfutil
 ```
+
+
+Check the installation path:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+This is the installation location:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
 
 </TabItem>
 
@@ -431,7 +464,10 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 Connect your device to your PC, and check the port number.
 
-Example:
+For Window user, for example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
+
+For Mac user, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **Step3: Flash the bootloader**
@@ -443,6 +479,12 @@ In the terminal or command prompt, navigate to the directory where you downloade
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
+Please change COMXX to your com number. For example, if your device is on com6, change the command to be:
+
+`adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
+
+ Some of the device will change their port number after you enter this command. So if the installation fail, check the port number again.
+
 
 - **For others**:
 
@@ -476,6 +518,74 @@ If you want to restore to the default settings, you can do the factory reset. Th
 
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+### NodeDB Reset
+
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+
+- **Node ID**
+- **User Name**
+- **Location Information**
+- **Signal Information (SNR)**
+- **Last Seen Time**
+
+**When to reset**
+
+Reset NodeDB when:
+
+- The node list contains outdated, duplicate, or invalid entries.
+- You move to a different Mesh environment and want to rediscover nearby nodes.
+- Node information in the app appears incorrect or incomplete.
+
+:::danger
+Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
+:::
+
+**Reset from the App**
+
+1. Open the app and connect to the target device.
+2. Go to **Settings**.
+3. Tap **Device**.
+4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
+5. Tap it and confirm the action.
+
+**App Path**
+
+`Settings > Device > Reset NodeDB`
+
+**Example Screens**
+
+Step 1: Open **Device** from the **Settings** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+Step 2: Tap `Reset NodeDB` on the **Device Config** page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+Please note the difference between the following options:
+
+- **Reset NodeDB**: Only clears the node database.
+- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+:::
+
+**What happens after reset**
+
+After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
+
+You may observe the following:
+
+- The node list may temporarily become empty or smaller.
+- Nodes will gradually reappear as the device continues operating.
+- Previously stored historical node records will no longer be available.
+
+**Notes**
+
+- Before resetting, make sure the issue is actually related to an abnormal node list.
+- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
+- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
+- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Power Consumption
 

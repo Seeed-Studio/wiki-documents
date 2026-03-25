@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::tip
 Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L1 Pro 的，但同样适用于 L1 系列中的所有其他产品。
 :::
@@ -470,3 +472,11 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [功耗测试与电池寿命计算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+

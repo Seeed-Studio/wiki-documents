@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
+description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的环形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音采集功能。搭配 XIAO ESP32S3，可为智能设备、机器人和物联网应用实现高级语音控制。探索无缝集成与双模式灵活性。
 title: 使用 Python 控制 reSpeaker XVF3800
 keywords:
   - reSpeaker
@@ -7,26 +7,27 @@ keywords:
   - sdk
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_python_sdk
+sku: 114993700
 last_update:
   date: 11/14/2025
   author: Kasun Thushara
 createdAt: '2025-11-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_python_sdk/
 ---
 
-## 简介
+## 介绍 
 
-在本节中，我们将讨论如何使用 Python SDK 控制您的 ReSpeaker XVF-3800。这使得想要构建自己应用程序的用户开发更加便利。
-例如，您可以检测语音来源方向、执行语音活动检测（VAD）、控制 LED 等等。
+在本节中，我们将介绍如何使用 Python SDK 控制你的 ReSpeaker XVF-3800。它让希望构建自己应用的用户开发过程更加便捷。
+例如，你可以检测声音来源方向、执行语音活动检测（VAD）、控制 LED 等等。
 
 ## Python SDK
 
-我们有一个全面的 Python 指南，介绍如何使用 USB 固件与 XVF3800 通信。这个 Python 脚本可以在您喜欢的 IDE 中运行，无需 XVF3800 **XVF_Host**。您可以从这个[链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)找到更多命令。
+我们提供了一份完整的 Python 指南，介绍如何使用 USB 固件与 XVF3800 通信。这个 Python 脚本可以在你喜欢的 IDE 中运行，而无需 XVF3800 的 **XVF_Host**。你可以从这个[链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)获取更多命令。
 
-您需要安装 `pyusb` 库。
+你需要安装 `pyusb` 库。
 
-### 如何获取 DOA 和 VAD
+### 如何获取 DOA 和 VAD 
 
 ```python
 import sys
@@ -37,120 +38,129 @@ import time
 
 # name, resid, cmdid, length, type
 PARAMETERS = {
-    "VERSION": (48, 0, 3, "ro", "uint8"),
+    "VERSION":          (48,  0,  3,  "ro", "uint8"),
     "AEC_AZIMUTH_VALUES": (33, 75, 16, "ro", "radians"),
-    "DOA_VALUE": (20, 18, 4, "ro", "uint16"),
-    "REBOOT": (48, 7, 1, "wo", "uint8"),
+    "DOA_VALUE":        (20, 18,  4,  "ro", "uint16"),   # 4 bytes → two uint16 words
+    "REBOOT":           (48,  7,  1,  "wo", "uint8"),
 }
 
 class ReSpeaker:
     TIMEOUT = 100000  # USB timeout
 
     def __init__(self, dev):
-        self.dev = dev  # store device
+        self.dev = dev
 
     def write(self, name, data_list):
         try:
-            data = PARAMETERS[name]  # get param data
+            data = PARAMETERS[name]
         except KeyError:
             return
 
-        if data[3] == "ro":  # check read-only
+        if data[3] == "ro":
             raise ValueError('{} is read-only'.format(name))
 
-        if len(data_list) != data[2]:  # count mismatch
+        if len(data_list) != data[2]:
             raise ValueError('{} value count is not {}'.format(name, data[2]))
 
-        windex = data[0]  # resid index
-        wvalue = data[1]  # command ID
-        data_type = data[4]  # type info
-        data_cnt = data[2]  # value count
-        payload = []  # USB payload
+        windex   = data[0]
+        wvalue   = data[1]
+        data_type = data[4]
+        data_cnt  = data[2]
+        payload   = []
 
-        if data_type == 'float' or data_type == 'radians':  # float pack
+        if data_type in ('float', 'radians'):
             for i in range(data_cnt):
                 payload += struct.pack(b'f', float(data_list[i]))
-        elif data_type == 'char' or data_type == 'uint8':  # byte pack
+        elif data_type in ('char', 'uint8'):
             for i in range(data_cnt):
                 payload += data_list[i].to_bytes(1, byteorder='little')
-        else:  # int pack
+        else:
             for i in range(data_cnt):
                 payload += struct.pack(b'i', data_list[i])
 
         print("WriteCMD: cmdid: {}, resid: {}, payload: {}".format(wvalue, windex, payload))
-
-        # send control transfer
         self.dev.ctrl_transfer(
             usb.util.CTRL_OUT | usb.util.CTRL_TYPE_VENDOR | usb.util.CTRL_RECIPIENT_DEVICE,
             0, wvalue, windex, payload, self.TIMEOUT)
 
     def read(self, name):
         try:
-            data = PARAMETERS[name]  # get param info
+            data = PARAMETERS[name]
         except KeyError:
             return
 
-        resid = data[0]  # resource ID
-        cmdid = 0x80 | data[1]  # read command
-        length = data[2] + 1  # add status byte
+        resid  = data[0]
+        cmdid  = 0x80 | data[1]
+        length = data[2] + 1        # +1 for the leading status byte
 
-        # read control transfer
         response = self.dev.ctrl_transfer(
             usb.util.CTRL_IN | usb.util.CTRL_TYPE_VENDOR | usb.util.CTRL_RECIPIENT_DEVICE,
             0, cmdid, resid, length, self.TIMEOUT)
 
-        if data[4] == 'uint8':  # return bytes
-            result = response.tolist()
-        elif data[4] == 'radians':  # unpack floats
-            byte_data = response.tobytes()
-            num_values = (length - 1) / 4
-            match_str = '<'
-            for i in range(int(num_values)):
-                match_str += 'f'
-            result = struct.unpack(match_str, byte_data[1:length])
-        elif data[4] == 'uint16':  # return uint16 list
+        byte_data = response.tobytes()
+
+        if data[4] == 'uint8':
             result = response.tolist()
 
-        return result  # return parsed data
+        elif data[4] == 'radians':
+            num_floats = (length - 1) // 4           # each float = 4 bytes
+            fmt = '<' + 'f' * num_floats
+            result = list(struct.unpack(fmt, byte_data[1:1 + num_floats * 4]))
+
+        elif data[4] == 'uint16':
+            # ── FIX ──────────────────────────────────────────────────────────
+            # byte_data[0]      = status byte (skip it)
+            # byte_data[1:...]  = payload: N little-endian uint16 words
+            # Each word is 2 bytes, so num_words = data[2] / 2
+            num_words = data[2] // 2                 # 4 bytes → 2 words
+            fmt = '<' + 'H' * num_words              # unsigned 16-bit, little-endian
+            result = list(struct.unpack(fmt, byte_data[1:1 + num_words * 2]))
+            # ─────────────────────────────────────────────────────────────────
+
+        return result
 
     def close(self):
-        usb.util.dispose_resources(self.dev)  # release device
+        usb.util.dispose_resources(self.dev)
 
 def find(vid=0x2886, pid=0x001A):
-    dev = usb.core.find(idVendor=vid, idProduct=pid)  # find device
+    dev = usb.core.find(idVendor=vid, idProduct=pid)
     if not dev:
         return
-    return ReSpeaker(dev)  # return instance
+    return ReSpeaker(dev)
 
 def main():
-    dev = find()  # find device
+    dev = find()
     if not dev:
         print('No device found')
         sys.exit(1)
 
-    print('{}: {}'.format("VERSION", dev.read("VERSION")))  # print version
+    print('{}: {}'.format("VERSION", dev.read("VERSION")))
 
     while True:
-        result = dev.read("DOA_VALUE")  # read direction
-        print('{}: {}, {}: {}'.format("SPEECH_DETECTED", result[3], "DOA_VALUE", result[1]))
-        time.sleep(1)  # delay 1 sec
+        result = dev.read("DOA_VALUE")
+        # After uint16 unpacking: result = [doa_angle, vad_flag]
+        # ── FIX: use decoded word indices, not raw byte offsets ──
+        doa_angle     = result[0]   # 0–359 degrees (now supports > 255)
+        speech_active = result[1]   # VAD flag: 1 = speech, 0 = silence
+        # ────────────────────────────────────────────────────────
+        print('SPEECH_DETECTED: {}, DOA_VALUE: {}'.format(speech_active, doa_angle))
+        time.sleep(0.1)
 
-    dev.close()  # close device
+    dev.close()
 
 if __name__ == '__main__':
-    main()  # run program
-
+    main()
 ```
 
-## 使用 XVF_Host
+## 使用 XVF_Host 
 
-请参考文档了解什么是 XVF_Host。
-在本节中，我们将使用 Python 脚本与 [XVF_Host](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) 一起工作。
+请参考相关文档以了解 XVF_Host 是什么。
+在本节中，我们将使用 Python 脚本配合 [XVF_Host](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#如何控制-respeaker-xvf3800) 进行操作。
 
 ### ReSpeaker XVF3800 的 Python 示例
 
 :::note
-如果您想了解更多关于通过 xvf_host 使用 python 脚本进行控制的内容，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
+如果你想进一步了解如何通过 python 脚本使用 xvf_host 进行控制，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
 :::
 
 import Tabs from '@theme/Tabs';
@@ -168,7 +178,7 @@ cd reSpeakerXVF
 python test.py
 ```
 
-确保已安装 Python 并且 ReSpeaker XVF3800 通过 USB 连接。
+请确保已安装 Python，并且 ReSpeaker XVF3800 已通过 USB 连接。
 
 </TabItem>
 
@@ -183,12 +193,12 @@ chmod +x xvf_host
 python3 test.py
 ```
 
-确保 `xvf_host` 可执行，并且您的开发板通过 USB 或 I2C 连接。
+请确保 `xvf_host` 具有可执行权限，并且你的开发板已通过 USB 或 I2C 连接。
 
 </TabItem>
 </Tabs>
 
-`test.py` 文件可以按如下方式探索。这是您在 Linux 上的参考。
+可以按如下方式查看 `test.py` 文件。这是供你在 Linux 上参考的示例。
 
 ```python
 import subprocess
@@ -241,7 +251,7 @@ if __name__ == "__main__":
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将通过多种方式为你提供支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

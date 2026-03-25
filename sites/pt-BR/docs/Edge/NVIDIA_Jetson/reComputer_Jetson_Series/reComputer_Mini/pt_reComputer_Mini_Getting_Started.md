@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_getting_started/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros Passos com o reComputer Mini
 
 <!-- change image -->
@@ -29,7 +31,7 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
 <!-- Buy links -->
@@ -42,6 +44,13 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
 - **Acelere soluções para o mercado:** JetPack 6.0 **pré-instalado** em SSD NVMe de 128GB, BSP de sistema operacional Linux, suportando software Jetson e principais frameworks de IA.
 - **Escalonável para implantação:** suporta OTA, serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
 - **Personalização flexível:** inclui alteração de módulos de acessórios, logotipo e modificação de interfaces de hardware com base no design original do reComputer Mini J4012.
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 
@@ -100,7 +109,7 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
       <td colSpan={2}>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
-    </tr]
+    </tr>
     <tr>
       <td>Codificador de Vídeo</td>
       <td colSpan={2}>1080p30 suportado por 1-2 núcleos de CPU</td>

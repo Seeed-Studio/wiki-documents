@@ -32,10 +32,14 @@ To complete this tutorial, please prepare one of the following reTerminal E Seri
     <tr>
       <th>reTerminal E1001</th>
       <th>reTerminal E1002</th>
+      <th>reTerminal E1003</th>
+      <th>reTerminal E1004</th>
     </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/145.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/146.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -45,6 +49,16 @@ To complete this tutorial, please prepare one of the following reTerminal E Seri
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -167,6 +181,60 @@ The full color ePaper display supports red, black, and white colors, allowing fo
 **Step 5.** Upload the sketch to your reTerminal E1002. The display will show colorful graphics demonstrating the full color capabilities of the ePaper display.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="Programming reTerminal E1003" label="Programming reTerminal E1003">
+
+#### Programming reTerminal E1003 (10.3-inch ePaper)
+
+Follow the same workflow using the Seeed_GFX library to configure and drive the ePaper on reTerminal E1003.
+
+**Step 1.** Open an example sketch from the Seeed_GFX library: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+
+**Step 2.** Create a new file named `driver.h` in the same folder as your sketch.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3.** Go to the [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) and select **reTerminal E1003** from the device list.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_2.jpg" style={{width:900, height:'auto'}}/></div>
+
+**Step 4.** Copy the generated configuration code and paste it into the `driver.h` file for E1003.
+
+```cpp
+#define BOARD_SCREEN_COMBO 522 // reTerminal E1003 (ED103TC2)
+```
+
+**Step 5.** Upload the sketch to your reTerminal E1003 to verify drawing primitives, text rendering, and full-screen refresh behaviors.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="Programming reTerminal E1004" label="Programming reTerminal E1004">
+
+#### Programming reTerminal E1004 (13.3-inch Full Color ePaper)
+
+Use the Seeed_GFX library to configure and drive the E Ink® Spectra™ 6 full-color ePaper display on reTerminal E1004.
+
+**Step 1.** Open the color example sketch from the Seeed_GFX library: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+
+**Step 2.** Create a new file named `driver.h` in the same folder as your sketch.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3.** Go to the [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) and select **reTerminal E1004** from the device list.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_2.jpg" style={{width:900, height:'auto'}}/></div>
+
+**Step 4.** Copy the generated configuration code and paste it into the `driver.h` file for E1004.
+
+```cpp
+#define BOARD_SCREEN_COMBO 523 // reTerminal E1004 (T133A01)
+```
+
+**Step 5.** Upload the sketch to your reTerminal E1004 to verify color rendering, drawing primitives, text rendering, and full-screen refresh behaviors.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>

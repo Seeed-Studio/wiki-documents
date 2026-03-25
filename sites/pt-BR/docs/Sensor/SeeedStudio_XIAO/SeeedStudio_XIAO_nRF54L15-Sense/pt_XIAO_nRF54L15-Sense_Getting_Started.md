@@ -18,10 +18,11 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:600, height:'auto'}}/></div>
 
-# Primeiros Passos com o Seeed Studio XIAO nRF54L15(Sense)
+# Introdução ao Seeed Studio XIAO nRF54L15(Sense)
 
 <div class="table-center">
  <table align="center">
@@ -36,12 +37,12 @@ import Steppers from '@site/src/components/utils/Stepper';
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -50,7 +51,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-O **Seeed Studio XIAO nRF54L15** é uma placa de desenvolvimento compacta e de alto desempenho com o chip Nordic nRF54L15 de última geração. Este SoC de próxima geração integra um rádio 2,4 GHz multiprotocolo de ultrabaixo consumo com um MCU contendo um **processador Arm® Cortex®-M33 a 128 MHz** e um **coprocessador RISC-V a 128 MHz**. Oferece memória escalável de até **1,5 MB de NVM e 256 KB de RAM**, e um design interno de ultrabaixo consumo que estende significativamente a vida útil da bateria. Seu rádio poderoso suporta **Bluetooth® 6.0 (incluindo Channel Sounding), Matter, Thread, Zigbee** e modos proprietários de 2,4 GHz de alto throughput de até **4 Mbps**. A placa inclui um conjunto abrangente de periféricos, um **coprocessador RISC-V integrado a 128 MHz** e recursos avançados de segurança, como isolamento **TrustZone®** e proteção por mecanismo criptográfico. Com **gerenciamento integrado de bateria Li-ion**, o XIAO nRF54L15 é ideal para soluções IoT compactas, seguras e energeticamente eficientes, como wearables inteligentes, sensores industriais e HMIs avançados.
+O **Seeed Studio XIAO nRF54L15** é uma placa de desenvolvimento compacta e de alto desempenho que apresenta o avançado chip Nordic nRF54L15. Este SoC de próxima geração integra um rádio multiprotocolo de 2,4 GHz de ultrabaixo consumo com um MCU contendo um **processador Arm® Cortex®-M33 de 128 MHz** e um **coprocessador RISC-V de 128 MHz**. Ele oferece memória escalável de até **1,5 MB de NVM e 256 KB de RAM**, e um design interno de ultrabaixo consumo que estende significativamente a vida útil da bateria. Seu poderoso rádio oferece suporte a **Bluetooth® 6.0 (incluindo Channel Sounding), Matter, Thread, Zigbee** e modos proprietários de alta taxa de transferência em 2,4 GHz de até **4 Mbps**. A placa inclui um conjunto abrangente de periféricos, um **coprocessador RISC-V de 128 MHz** integrado e recursos avançados de segurança, como isolamento **TrustZone®** e proteção do mecanismo criptográfico. Com **gerenciamento de bateria de íon de lítio integrado**, o XIAO nRF54L15 é ideal para soluções IoT compactas, seguras e energeticamente eficientes, como wearables inteligentes, sensores industriais e HMIs avançadas.
 
 export const Highlight = ({children, color}) => (
   <span
@@ -74,28 +75,28 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
       <th>MCU</th>
-      <td align="center">Arm Cortex-M33 128 MHz<br/>Coprocessador RISC-V 128 MHz FLPR</td>
-      <td align="center">Arm Cortex-M33 128 MHz<br/>Coprocessador RISC-V 128 MHz FLPR</td>
+      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V coprocessor 128 MHz FLPR</td>
+      <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V coprocessor 128 MHz FLPR</td>
   </tr>
   <tr>
-      <th>Conectividade Sem Fio</th>
+      <th>Conectividade sem fio</th>
       <td align="center">
-        Bluetooth LE 6.0（inclui Channel Sounding）<br/>
+        Bluetooth LE 6.0（include Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Protocolos proprietários 2,4 GHz<br/>
+        Protocolos proprietários de 2,4 GHz<br/>
       </td>
       <td align="center">
-        Bluetooth LE 6.0（inclui Channel Sounding）<br/>
+        Bluetooth LE 6.0（include Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Protocolos proprietários 2,4 GHz<br/>
+        Protocolos proprietários de 2,4 GHz<br/>
       </td>
   </tr>
   <tr>
@@ -104,9 +105,9 @@ export const Highlight = ({children, color}) => (
       <td align="center">NVM 1,5 MB + RAM 256 KB</td>
   </tr>
   <tr>
-      <th>Sensor Integrado</th>
+      <th>Sensor integrado</th>
       <td align="center">N/A</td>
-      <td align="center">IMU 6 DOF (LSM6DS3TR-C)<br/>Microfone (MSM261DGT006)</td>
+      <td align="center">IMU de 6 DOF (LSM6DS3TR-C)<br/>Microfone (MSM261DGT006)</td>
   </tr>
   <tr>
       <th>Potência de TX</th>
@@ -120,20 +121,20 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
       <th>Periféricos em destaque</th>
-      <td align="center">ADC de 14 bits, RTC Global</td>
-      <td align="center">ADC de 14 bits, RTC Global</td>
+      <td align="center">ADC de 14 bits, Global RTC</td>
+      <td align="center">ADC de 14 bits, Global RTC</td>
   </tr>
   <tr>
       <th>Alimentação</th>
       <td align="center">
-        Alimentação via interface USB Type-C<br/>
-        PMIC interno suporta alimentação por bateria de lítio<br/>
-        Suporte à coleta de energia de bateria de lítio
+        Fonte de alimentação pela interface USB Type-C<br/>
+        PMIC interno com suporte a alimentação por bateria de lítio<br/>
+        Suporta coleta de energia da bateria de lítio
       </td>
       <td align="center">
-        Alimentação via interface USB Type-C<br/>
-        PMIC interno suporta alimentação por bateria de lítio<br/>
-        Suporte à coleta de energia de bateria de lítio
+        Fonte de alimentação pela interface USB Type-C<br/>
+        PMIC interno com suporte a alimentação por bateria de lítio<br/>
+        Suporta coleta de energia da bateria de lítio
       </td>
   </tr>
   <tr>
@@ -147,17 +148,17 @@ export const Highlight = ({children, color}) => (
       <td align="center">3,7 a 5 V</td>
   </tr>
   <tr>
-      <th>Protocolos ESB e Proprietários 2,4 GHz</th>
+      <th>ESB e protocolos proprietários de 2,4 GHz</th>
       <td align="center">até 4 Mbps</td>
       <td align="center">até 4 Mbps</td>
   </tr>
   <tr>
-      <th>Detectores de adulteração</th>
+      <th>Detectores de violação (tamper)</th>
       <td align="center">SIM</td>
       <td align="center">SIM</td>
   </tr>
   <tr>
-      <th>Channel Sounding Bluetooth</th>
+      <th>Bluetooth channel sounding</th>
       <td align="center">SIM</td>
       <td align="center">SIM</td>
   </tr>
@@ -165,14 +166,21 @@ export const Highlight = ({children, color}) => (
 
 ### Recursos
 
-- **CPU Poderosa**: Processador Arm® Cortex®-M33 a 128 MHz com suporte a instruções DSP e operações de ponto flutuante FPU, arquitetura RISC de 32 bits e coprocessador RISC-V integrado a 128 MHz.
-- **Ultrabaixo Consumo**: Projetado para consumo de energia ultrabaixo superior, estende significativamente a vida útil da bateria e inclui gerenciamento avançado de energia.
-- **Transmissão Sem Fio Multimodo**: Transceptor sem fio multiprotocolo 2,4 GHz integrado suporta Bluetooth Low Energy (incluindo Channel Sounding), 802.15.4-2020, Matter, Thread, Zigbee e modos proprietários 2,4 GHz (até 4 Mbps).
-- **Segurança Robusta**: Recursos avançados de segurança incluindo isolamento TrustZone®, detecção de adulteração e proteção contra vazamento de canal no lado do mecanismo de criptografia.
-- **Recursos Ricos no Chip**: Configurações de memória escaláveis de até 1,5 MB de NVM e 256 KB de RAM fornecem amplo espaço de armazenamento.
-- **Interfaces Ricas**: Conjunto abrangente de periféricos incluindo o novo RTC Global (disponível no modo System OFF), ADC de 14 bits e interfaces seriais de alta velocidade. Gerenciamento integrado de bateria de lítio.
+- **CPU poderosa**: processador Arm® Cortex®-M33 de 128 MHz com suporte a instruções DSP e operações de ponto flutuante FPU, arquitetura RISC de 32 bits e coprocessador RISC-V integrado de 128 MHz.
+- **Ultrabaixo consumo de energia**: projetado para consumo de energia ultrabaixo superior, estende significativamente a vida útil da bateria e inclui gerenciamento avançado de energia.
+- **Transmissão sem fio multimodo**: transceptor sem fio multiprotocolo de 2,4 GHz integrado com suporte a Bluetooth Low Energy (incluindo Channel Sounding), 802.15.4-2020, Matter, Thread, Zigbee e modos proprietários de 2,4 GHz (até 4 Mbps).
+- **Segurança robusta**: recursos avançados de segurança, incluindo isolamento TrustZone®, detecção de violação (tamper) e proteção contra vazamento de canal no lado do mecanismo de criptografia.
+- **Ricos recursos on-chip**: configurações de memória escaláveis de até 1,5 MB de NVM e 256 KB de RAM fornecem amplo espaço de armazenamento.
+- **Interfaces ricas**: conjunto abrangente de periféricos, incluindo o novo Global RTC (disponível no modo System OFF), ADC de 14 bits e interfaces seriais de alta velocidade. Gerenciamento de bateria de lítio integrado.
 
-## Visão Geral do Hardware
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
+## Visão geral de hardware
 
 <Tabs>
 <TabItem  value="54l15" label="XIAO nRF54L15" default>
@@ -191,7 +199,7 @@ export const Highlight = ({children, color}) => (
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
   </tr>
     <tr>
-    <th>Lista de Pinos do XIAO nRF54L15</th>
+    <th>Lista de pinos do XIAO nRF54L15</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nr_definition.png" style={{width:800, height:'auto'}}/></div></td>
@@ -218,7 +226,7 @@ export const Highlight = ({children, color}) => (
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
   </tr>
     <tr>
-    <th>Lista de Pinos do XIAO nRF54L15 Sense</th>
+    <th>Lista de pinos do XIAO nRF54L15 Sense</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_sensedefinition.png" style={{width:800, height:'auto'}}/></div></td>
@@ -229,25 +237,25 @@ export const Highlight = ({children, color}) => (
 
 </Tabs>
 
-## **Mapa de Pinos**
-| Pino XIAO               | Função     | Pino do Chip | Descrição                    |
+## **Mapa de pinos**
+| Pino XIAO              | Função    | Pino do chip | Descrição                    |
 | :--------------------: | :-------: | :-------:| :-------------------------- |
-| 5V                     | VBUS       |                               | Entrada/Saída de Energia     |
+| 5V                     | VBUS       |                               | Entrada/Saída de alimentação |
 | GND                    |            |                               |                              |
-| 3V3                    | 3V3_OUT    |                              | Saída de Energia             |
+| 3V3                    | 3V3_OUT    |                              | Saída de alimentação         |
 | D0                     | Analógico  | P1.04                        | GPIO, ADC                    |
 | D1                     | Analógico  | P1.05                        | GPIO, ADC                    |
 | D2                     | Analógico  | P1.06                         | GPIO, ADC                    |
 | D3                     | Analógico  | P1.07                         | GPIO, ADC                    |
-| D4                     | SDA-0      | P1.10                         | GPIO, Dados I2C              |
-| D5                     | SCL-0      | P1.11                         | GPIO, Clock I2C              |
-| D6                     | TX         | P2.08                         | GPIO, Transmissão UART       |
-| D7                     | RX         | P2.07                         | GPIO, Recepção UART          |
-| D8                     | SPI_SCK    | P2.01                         | GPIO, Clock SPI              |
-| D9                     | SPI_MISO   | P2.04                         | GPIO, Dados SPI              |
-| D10                    | SPI_MOSI   | P2.02                         | GPIO, Dados SPI              |
+| D4                     | SDA-0      | P1.10                         | GPIO, I2C Dados              |
+| D5                     | SCL-0      | P1.11                         | GPIO, I2C Clock              |
+| D6                     | TX         | P2.08                         | GPIO, UART Transmit          |
+| D7                     | RX         | P2.07                         | GPIO, UART Receive           |
+| D8                     | SPI_SCK    | P2.01                         | GPIO, SPI Clock              |
+| D9                     | SPI_MISO   | P2.04                         | GPIO, SPI Dados              |
+| D10                    | SPI_MOSI   | P2.02                         | GPIO, SPI Dados              |
 | D11                    | SCL-1      | P0.03                         | GPIO, I2C                    |
-| D12                    | SDA-1      | P0.04                         | GPIO, I2C                    |
+| D12                    | SDA-1      | P0.04                         | GPIO,I2C                     |
 | D13                    | GPIO       | P2.10                         | GPIO                         |
 | D14                    | GPIO       | P2.09                         | GPIO                         |
 | D15                    | GPIO       | P2.06                         | GPIO                         |
@@ -260,27 +268,27 @@ export const Highlight = ({children, color}) => (
 | NFC1                   |            | P1.02                         | NRF                          |
 | NFC2                   |            | P1.03                         | NRF                          |
 | Reset                  |            | nRF54_RESET                    | EN                           |
-| USER KEY               |            | P0.00                         | Tecla do Usuário             |
-| RF Switch Port Select  |            | P2.05                         | Selecionar antena integrada  |
-| RF Switch Power        |            | P2.03                         | Energia                      |
-| AIN7_VBAT              |            | P1.14                         | Leitura do valor de tensão da bateria |
-| CHARGE_LED             |            | charge_LED                    | CHG-LED_Vermelho             |
-| USER_LED               |            | P2.00                         | LED do Usuário               |
+| USER KEY               |            | P0.00                         | Tecla do usuário             |
+| RF Switch Port Select  |            | P2.05                         | Alternar antena onboard      |
+| RF Switch Power        |            | P2.03                         | Alimentação                  |
+| AIN7_VBAT              |            | P1.14                         | Ler o valor de tensão da BAT |
+| CHARGE_LED             |            | charge_LED                    | CHG-LED_Red                  |
+| USER_LED               |            | P2.00                         | Luz do usuário               |
 
 
 ## Uso do nRFConnect SDK
 
-O nRF Connect SDK (NCS) é um kit de desenvolvimento de software extensível e unificado da Nordic Semiconductor, projetado especificamente para criar aplicações sem fio de baixo consumo para dispositivos sem fio baseados nas séries nRF52, nRF53, nRF54, nRF70 e nRF91 da Nordic.
+O nRF Connect SDK (NCS) é um kit de desenvolvimento de software extensível e unificado da Nordic Semiconductor, projetado especificamente para a criação de aplicações sem fio de baixo consumo para dispositivos sem fio baseados nas séries Nordic nRF52, nRF53, nRF54, nRF70 e nRF91.
 
-O NCS fornece um rico ecossistema de aplicações de exemplo prontas para uso, pilhas de protocolos, bibliotecas e drivers de hardware projetados para simplificar o processo de desenvolvimento e acelerar o tempo de lançamento no mercado. Sua natureza modular e configurável oferece aos desenvolvedores a flexibilidade para criar software otimizado em tamanho para dispositivos com memória limitada, bem como funcionalidades poderosas para aplicações mais avançadas e complexas. O NCS é um projeto de código aberto hospedado no GitHub e oferece excelente suporte para ambientes de desenvolvimento integrado, como o Visual Studio Code.
+O NCS fornece um rico ecossistema de aplicações de exemplo prontas para uso, pilhas de protocolo, bibliotecas e drivers de hardware projetados para simplificar o processo de desenvolvimento e acelerar o tempo de lançamento no mercado. Sua natureza modular e configurável oferece aos desenvolvedores a flexibilidade de criar software otimizado em tamanho para dispositivos com restrição de memória, bem como funcionalidades poderosas para aplicações mais avançadas e complexas. O NCS é um projeto de código aberto hospedado no GitHub e oferece excelente suporte para ambientes de desenvolvimento integrados, como o Visual Studio Code.
 
 ### Usando o nRF Connect SDK no VSCode
 
 <details>
 
-<summary>Instalar o nRF Connect SDK - Conhecimento prévio</summary>
+<summary>Instalar previamente o conhecimento sobre nRF Connect SDK</summary>
 
-Este documento detalha como instalar o ambiente de desenvolvimento do nRF Connect SDK em um computador com Windows 11. A seguir, há uma visão geral das ferramentas que precisam ser instaladas.
+Este documento detalha como instalar o ambiente de desenvolvimento do nRF Connect SDK em um computador com Windows 11. A seguir está uma visão geral das ferramentas que precisam ser instaladas
 
 - Instalar o VS Studio Code
 
@@ -311,113 +319,113 @@ west --version
 - nRF Connect SDK
 - Plugin nRF Connect para VSCode
 
-***Se você já o instalou em seu computador, pode verificar o número de versão da sua ferramenta seguindo o comando abaixo***
+***Se você já o tiver pré-instalado em seu computador, poderá verificar o número da versão da sua ferramenta seguindo o comando abaixo***
 
 </details>
 
 <Steppers>
 
-<!-- #### Instalação do SEGGER J-Link v8.18
-Baixe o instalador para sua plataforma em https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack. Execute o instalador; quando a janela "Select Optional Components" aparecer durante o processo de instalação, certifique-se de marcar "Install legacy USB driver for J-Link", que é um componente necessário para alguns kits de desenvolvimento suportados.
+<!-- #### Installation of SEGGER J-Link v8.18
+Download the installer for your platform from https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack. Run the installer; when the “Select Optional Components” window appears during the installation process, be sure to check “Install legacy USB driver for J-Link”, which is a required component for some supported development kits.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/jlink2.png" style={{width:600, height:'auto'}}/></div>
-#### Instalar os comandos nrfutil e nrfutil device.
+#### Install the nrfutil and nrfutil device commands.
 
-- 2.1. Baixe um arquivo binário compatível com seu sistema operacional em https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download?lang=en#infotabs e salve-o em seu disco rígido (por exemplo, Windows). Para Windows, salve como C:\nordic_tools\nrfutil.exe. 
-Se você estiver usando macOS ou Linux, salve-o em um diretório que foi adicionado ao PATH do seu sistema (por exemplo, /usr/bin/), e você pode pular o passo 2.2.
+- 2.1. Download a binary file compatible with your operating system from https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download?lang=en#infotabs and save it to your disk drive (e.g. Windows). For Windows, save it as C:\nordic_tools\nrfutil.exe. 
+If you are using macOS or Linux, save it in a directory that has been added to your system's PATH (e.g., /usr/bin/), and you can skip step 2.2.
 
-- 2.2. (Windows) Atualize o PATH do seu sistema para incluir onde o nrfutil está armazenado. Abra "Edit account environment variables" e adicione o caminho onde os binários do nrfutil estão armazenados (C:\nordic_tools\). 
+- 2.2. (Windows) Update your system's PATH to include where nrfutil is stored. Open “Edit account environment variables” and add the path where the nrfutil binaries are stored (C:\nordic_tools\). 
 
-- 2.3. Os binários do nrfutil que você acabou de baixar não contêm nenhum comando pré-instalado. Nesta etapa, vamos atualizar o núcleo do nrfutil e baixar os comandos do dispositivo.
+- 2.3. The nrfutil binaries you just downloaded do not contain any pre-installed commands. In this step, we will upgrade the core nrfutil and download the device commands.
 
-- 2.3.1 Para garantir que temos a versão mais recente do nrfutil, execute o seguinte comando em um terminal (prompt de comando ou PowerShell). Não importa qual terminal você use, pois o nrfutil foi configurado globalmente no passo 2.2.
+- 2.3.1 To make sure we have the latest version of nrfutil, run the following command in a terminal (command prompt or PowerShell). It does not matter which terminal you use, as nrfutil was set globally in step 2.2.
 ```cpp
 nrfutil self-upgrade
 ```
 
-- 2.3.2 Instalando o Comando nrfutil device 
-Precisamos gravar o binário no kit de desenvolvimento usando o comando device.
-No seu terminal atualmente ativo, digite: nrfutil install device 
-Você deverá ver a seguinte saída:
+- 2.3.2 Installing the nrfutil device Command 
+We need to burn the binary to the development kit using the device command.
+In your currently active terminal, type: nrfutil install device 
+You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
 ```
 -->
 
-#### O VScode configura a placa e cria o arquivo de gravação
+#### O VScode configura a placa e compila o arquivo de gravação
 
 Abra o VS Code e pesquise por nRF Connect for VS Code Extension Pack no Centro de Plugins. Este pacote de plugins instalará automaticamente outros plugins do VS Code necessários para o nRF Connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-A extensão nRF Connect para VS Code permite que os desenvolvedores utilizem o popular Ambiente de Desenvolvimento Integrado Visual Studio Code (VS Code IDE) para desenvolver, compilar, depurar e implantar aplicações embarcadas baseadas no nRF Connect SDK (Kit de Desenvolvimento de Software) da Nordic. A extensão inclui ferramentas de desenvolvimento úteis, como uma interface de compilador, linker, sistema de compilação completo, depurador habilitado para RTOS, interface perfeita com o nRF Connect SDK, editor de visualização de árvore de dispositivos e um terminal serial integrado.
+A extensão nRF Connect for VS Code permite que os desenvolvedores utilizem o popular Ambiente de Desenvolvimento Integrado Visual Studio Code (VS Code IDE) para desenvolver, compilar, depurar e implantar aplicações embarcadas baseadas no nRF Connect SDK (Software Development Kit) da Nordic. A extensão inclui ferramentas de desenvolvimento úteis, como uma interface de compilador, vinculador, sistema de compilação completo, depurador habilitado para RTOS, interface perfeita com o nRF Connect SDK, editor de visualização de device tree e um terminal serial integrado.
 
-O pacote de extensão nRF Connect para VS Code inclui os seguintes componentes:
+O pacote de extensões nRF Connect para VS Code inclui os seguintes componentes:
 
 - nRF Connect for VS Code: A extensão principal contém a interface entre o sistema de compilação e o nRF Connect SDK, bem como uma interface para gerenciar a versão do nRF Connect SDK e a toolchain.
-- nRF DeviceTree: Fornece suporte à linguagem de árvore de dispositivos e um editor de visualização de árvore de dispositivos.
+- nRF DeviceTree: Fornece suporte à linguagem device tree e um editor de visualização de device tree.
 - nRF Kconfig: Fornece suporte à linguagem Kconfig.
-- nRF Terminal: Terminais Serial e RTT.
-- Microsoft C/C++: Adiciona suporte à linguagem C/C++, incluindo recursos do IntelliSense.
+- nRF Terminal: Terminais seriais e RTT.
+- Microsoft C/C++: Adiciona suporte de linguagem para C/C++, incluindo recursos do IntelliSense.
 - CMake: Suporte à linguagem CMake.
 - GNU Linker Mapping Files: Suporte para arquivos de mapeamento do linker.
 Podemos baixar qualquer versão preferida do nRF Connect SDK e sua toolchain por meio da extensão. A documentação completa do nRF Connect para VS Code está disponível em https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
 
 #### Instalando a toolchain
 
-A toolchain é uma coleção de ferramentas que trabalham juntas para compilar aplicações do nRF Connect SDK, incluindo componentes de assembler, compilador, linker e CMake.
+A toolchain é uma coleção de ferramentas que trabalham juntas para compilar aplicações do nRF Connect SDK, incluindo montador, compilador, vinculador e componentes CMake.
 Na primeira vez que você abrir o nRF Connect para VS Code, será solicitado que instale a toolchain. Isso geralmente acontece se a extensão não detectar nenhuma toolchain instalada em seu computador.
-Clique em Install Toolchain e uma lista de versões de toolchain será exibida para download e instalação em seu computador. Selecione a versão da toolchain que corresponde à versão do nRF Connect SDK que você planeja usar. Sempre recomendamos usar a versão mais recente com tag do nRF Connect SDK.
+Clique em Install Toolchain e será exibida uma lista de versões da toolchain que podem ser baixadas e instaladas em seu computador. Selecione a versão da toolchain que corresponde à versão do nRF Connect SDK que você planeja usar. Recomendamos sempre usar a versão marcada mais recente do nRF Connect SDK.
 
-Por padrão, o nRF Connect para VS Code exibe apenas a aba Released (ou seja, a versão estável) da toolchain. Se você estiver avaliando um novo recurso e quiser usar a aba Preview ou outro tipo de aba (por exemplo, Customer Sampling -cs), clique em "Show all toolchain versions" conforme mostrado abaixo:
+Por padrão, o nRF Connect para VS Code exibe apenas a guia Released (ou seja, a versão estável) da toolchain. Se você estiver avaliando um novo recurso e quiser usar a guia Preview ou outro tipo de guia (por exemplo, Customer Sampling -cs), clique em "Show all toolchain versions" como mostrado abaixo:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-**A ToolChain aqui é a versão 3.0.1 ou superior**
+**A ToolChain aqui é 3.0.1 ou superior**
 :::
 
 #### Instalando o nRF Connect SDK
 
 Na extensão nRF Connect para VS Code, clique em Manage SDK. No menu Manage SDK, podemos instalar ou desinstalar a versão do nRF Connect SDK. Como esta é a primeira vez que usamos a extensão, a interface mostrará apenas duas opções.
 
-Clicar em Install SDK listará todas as versões disponíveis do nRF Connect SDK que podem ser baixadas e instaladas localmente. Selecione a versão do nRF Connect SDK necessária para o desenvolvimento do seu projeto.
+Ao clicar em Install SDK, serão listadas todas as versões disponíveis do nRF Connect SDK que podem ser baixadas e instaladas localmente. Selecione a versão do nRF Connect SDK necessária para o desenvolvimento do seu projeto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
-Se você abriu a pasta do SDK no VS Code, em vez da opção de menu Manage SDK, verá o Manage west workspace. Para resolver esse problema, abra outra janela ou pasta no VS Code.
+Se você tiver aberto a pasta do SDK no VS Code, em vez da opção de menu Manage SDK, verá Manage west workspace. Para resolver esse problema, abra outra janela ou pasta no VS Code.
 
 :::note
-**O nRF Connect SDK aqui é a versão 3.0.1 ou superior**
+**O nRF Connect SDK aqui é 3.0.1 ou superior**
 :::
 
 :::tip
-Se você não vir nenhuma dessas opções, certifique-se de ter a versão mais recente do pacote de extensão nRF Connect para VS Code instalada.
-É importante observar que o nRF Connect SDK é independente de IDE, o que significa que você pode escolher usar qualquer IDE ou nenhum. O nRF Connect SDK está disponível via https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) linha de comando. A interface de linha de comando (CLI) do (nrfutil) baixará e instalará o nRF Connect. No entanto, recomendamos fortemente o uso da nossa extensão nRF Connect para VS Code com o VS Code, pois ela integra não apenas uma interface gráfica de usuário (GUI) conveniente e uma interface de linha de comando (CLI) eficiente, mas também inclui uma série de recursos que simplificarão muito o desenvolvimento de firmware. Configurar outros IDEs para trabalhar com o nRF Connect SDK requer etapas manuais adicionais que estão além do escopo deste curso.
+Se você não vir nenhuma dessas opções, certifique-se de ter instalada a versão mais recente do pacote de extensões nRF Connect para VS Code.
+É importante notar que o nRF Connect SDK é independente de IDE, o que significa que você pode optar por usar qualquer IDE ou nenhum. O nRF Connect SDK está disponível por meio da interface de linha de comando (CLI) https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil), que fará o download e instalará o nRF Connect. No entanto, recomendamos fortemente o uso da nossa extensão nRF Connect para VS Code com o VS Code, pois ela integra não apenas uma interface gráfica de usuário (GUI) conveniente e uma interface de linha de comando (CLI) eficiente, mas também inclui vários recursos que simplificarão muito o desenvolvimento de firmware. Configurar outras IDEs para funcionar com o nRF Connect SDK requer etapas manuais adicionais que estão além do escopo deste curso.
 :::
 
-#### Criando Programas de Usuário
+#### Criando programas de usuário
 
-Neste exercício, escreveremos uma aplicação simples baseada no exemplo blinky para controlar LEDs piscantes em uma placa de desenvolvimento. O mesmo se aplica a todas as placas de desenvolvimento NordicSemiconductor suportadas (séries nRF54, nRF53, nRF52, nRF70 ou nRF91). O objetivo é garantir que todas as ferramentas necessárias para compilar e gravar o exemplo estejam configuradas corretamente. O foco está em aprender como criar uma aplicação, compilá-la e gravá-la em uma placa de desenvolvimento com chip Nordic usando o template "Copy Example"!
+Neste exercício, escreveremos uma aplicação simples baseada no exemplo blinky para controlar o piscar de LEDs em uma placa de desenvolvimento. O mesmo se aplica a todas as placas de desenvolvimento da Nordic Semiconductor suportadas (séries nRF54, nRF53, nRF52, nRF70 ou nRF91). O objetivo é garantir que todas as ferramentas necessárias para compilar e gravar o exemplo estejam configuradas corretamente. O foco é aprender como criar uma aplicação, compilá-la e gravá-la em uma placa de desenvolvimento com chip Nordic usando o modelo “Copy Example”!
 
-- No VS Code, clique no ícone da extensão nRF Connect. Na visualização de Boas-vindas, clique em Create New Application.
+- No VS Code, clique no ícone da extensão nRF Connect. Na visualização Welcome, clique em Create New Application.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
-- Digite blinky na barra de pesquisa e selecione o segundo exemplo Blinky (caminho zephyr/samples/basic/blinky), conforme mostrado abaixo.
+- Digite blinky na barra de pesquisa e selecione o segundo exemplo Blinky (caminho zephyr/samples/basic/blinky), como mostrado abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
 O exemplo Blinky fará com que o LED1 na placa de desenvolvimento pisque continuamente.
-Nossa primeira aplicação será baseada no exemplo Blinky. O exemplo Blinky é derivado do bloco de molde Zephyr no nRF Connect SDK, portanto você verá o nome zephyr no caminho do exemplo: zephyr\samples\basic\blinky.
+Nossa primeira aplicação será baseada no exemplo Blinky. O exemplo Blinky é derivado do bloco de modelo Zephyr no nRF Connect SDK, portanto você verá o nome zephyr no caminho do exemplo: zephyr\samples\basic\blinky.
 
-#### Adicionar a Placa XIAO nRF54L15
+#### Adicionar a placa XIAO nRF54L15
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-Para começar, **clone o repositório a partir do link do GitHub**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` na sua pasta local preferida. Após clonar, navegue até o diretório `platform-seeedboards/zephyr/`. **Lembre-se deste caminho da pasta `zephyr`**;
+Para começar, **clone o repositório a partir do link do GitHub**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` na sua pasta local preferida. Depois de clonado, navegue até o diretório `platform-seeedboards/zephyr/`. **Lembre-se deste caminho da pasta `zephyr`**;
 
 Para configurar sua placa para o nRF Connect no VS Code, você pode seguir estas etapas:
 
@@ -433,27 +441,27 @@ Para configurar sua placa para o nRF Connect no VS Code, você pode seguir estas
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board1.png" style={{width:800, height:'auto'}}/></div>
 
-- Na visualização do aplicativo, clique em Add Build Configuration abaixo do nome do aplicativo.
+- Na visualização da aplicação, clique em Add Build Configuration abaixo do nome da aplicação.
 
-- Podemos selecionar o modelo do XIAO nRF54L15 no Board target, selecionar o arquivo prj.config padrão em Base configuration files e, por fim, clicar em `Generate and Build` para compilar o arquivo.
+- Podemos selecionar o modelo do XIAO nRF54L15 em Board target e selecionar o arquivo prj.config padrão em Base configuration files e, por fim, clicar em `Generate and Build` para compilar o arquivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board2.png" style={{width:800, height:'auto'}}/></div>
 
-#### Baixar Plugin de Gravação
+#### Download do plug-in de gravação
 
 <Tabs>
-<TabItem  value="window" label="Windows" default>
+<TabItem  value="window" label="Window" default>
 
-**Plugins Adicionais:**
+**Plug-ins adicionais:**
 
 No Windows, usaremos o gerenciador de pacotes Chocolatey para instalar o OpenOCD.
 
-**1. Abra o PowerShell (Executar como Administrador):**
+**1. Abra o PowerShell (Executar como administrador):**
 
 - Na barra de pesquisa do Windows, digite "PowerShell".
 - Clique com o botão direito em "Windows PowerShell" e selecione "Run as administrator".
 
-**2. Verifique a Política de Execução do PowerShell:**
+**2. Verifique a Execution Policy do PowerShell:**
 
 - Digite `Get-ExecutionPolicy` e pressione Enter.
 - Digite `Get-ExecutionPolicy -List` e pressione Enter.
@@ -466,7 +474,7 @@ No Windows, usaremos o gerenciador de pacotes Chocolatey para instalar o OpenOCD
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-Este comando ignora a política de execução para a sessão atual do PowerShell e instala o Chocolatey. Após a instalação, feche e reabra a janela do PowerShell (ainda executando como administrador).
+Este comando ignora a execution policy para a sessão atual do PowerShell e instala o Chocolatey. Após a instalação, feche e reabra a janela do PowerShell (ainda executando como administrador).
 
 **4. Instale o OpenOCD:**
 
@@ -476,7 +484,7 @@ Este comando ignora a política de execução para a sessão atual do PowerShell
 choco install openocd
 ```
 
-**5. Verifique a Instalação do OpenOCD:**
+**5. Verifique a instalação do OpenOCD:**
 
 - Digite `Get-Command openocd` e pressione Enter.
 
@@ -486,7 +494,7 @@ choco install openocd
 
 <TabItem value="mac" label="Mac OS" default>
 
-**Plugins Adicionais:**
+**Plug-ins adicionais:**
 
 No macOS, usaremos o gerenciador de pacotes Homebrew para instalar as ferramentas necessárias.
 
@@ -500,7 +508,7 @@ No macOS, usaremos o gerenciador de pacotes Homebrew para instalar as ferramenta
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- Siga as instruções na tela; pode ser necessário inserir sua senha de usuário do macOS. Após a instalação, execute os comandos indicados pelo terminal para adicionar o Homebrew à sua variável de ambiente PATH `(e.g., eval "$(/opt/homebrew/bin/brew shellenv)")`. Em seguida, feche e reabra o terminal.
+- Siga as instruções na tela; talvez seja necessário inserir a senha do usuário do macOS. Após a instalação, execute os comandos indicados pelo terminal para adicionar o Homebrew à sua variável de ambiente PATH `(por exemplo, eval "$(/opt/homebrew/bin/brew shellenv)")`. Em seguida, feche e reabra o terminal.
 
 **2. Instale o Ccache:**
 
@@ -518,7 +526,7 @@ No terminal, digite:
 brew install openocd
 ```
 
-**4. Verifique a Instalação do OpenOCD::**
+**4. Verifique a instalação do OpenOCD::**
 
 - Digite `which openocd` e pressione Enter.
 
@@ -530,18 +538,18 @@ brew install openocd
 
 #### Programa de gravação West Flash
 
-- Abra o terminal nRF
+- Abra o terminal do nRF
 
 - Basta inserir o comando `west flash`. Para gravar seu dispositivo, simplesmente insira o comando west flash. O caminho destacado em vermelho indica a localização do seu arquivo .elf compilado. Você pode usar esse mesmo caminho para encontrar o arquivo .hex correspondente, que é adequado para programação com um depurador J-Link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/west_flash_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Se ocorrer o erro do west flash, significa que há um conflito com o plugin CMake no VS Code, e você precisa remover o plugin CMake.
+Se ocorrer um erro de west flash, isso significa que há um conflito com o plug-in CMake no VS Code, e você precisa remover o plug-in CMake.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:800, height:'auto'}}/></div>
 :::
 
-Quando gravamos com sucesso o programa no Seeed Studio XIAO nRF54L15 Sense, você pode ver a placa com o indicador de usuário piscando continuamente em luz verde. Se o seu também apresentar o mesmo efeito, significa que você foi bem-sucedido!🎊
+Quando gravamos o programa com sucesso no Seeed Studio XIAO nRF54L15 Sense, você pode ver na placa, acima do indicador do usuário, a luz verde piscando sem parar; se o efeito visual nas suas mãos for o mesmo, significa que você teve sucesso!🎊
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -598,38 +606,38 @@ return 0;
 }
 ```
 
-**Definição do Dispositivo LED**:
+**Definição do dispositivo LED**:
 
-- `#define LED0_NODE DT_ALIAS(led0)`: Recupera o identificador do nó da árvore de dispositivos para o alias "led0", permitindo referência ao LED independente do hardware.
-- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`: Cria uma estrutura de especificação GPIO (`led`) usando o nó da árvore de dispositivos, contendo detalhes de hardware (pino, porta) para o LED. Um erro de compilação aqui indica hardware não suportado.
+- `#define LED0_NODE DT_ALIAS(led0)`: Recupera o identificador do nó da device tree para o alias "led0", permitindo uma referência ao LED independente do hardware.
+- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`: Cria uma estrutura de especificação GPIO (`led`) usando o nó da device tree, contendo detalhes de hardware (pino, porta) para o LED. Um erro de compilação aqui indica hardware não suportado.
 
-**Inicialização da Função main()**：
+**Inicialização da função main()**：
 
-- **Configuração de Variáveis**:
+- **Configuração de variáveis**:
   - `int ret`: Armazena valores de retorno de funções para verificar o sucesso das operações.
-  - `bool led_state = true`: Rastreia o status do LED (inicializado como "ON").
+  - `bool led_state = true`: Acompanha o status do LED (inicializado como "ON").
 
-- **Verificação de Prontidão do GPIO**:
-  - `if (!gpio_is_ready_dt(&led)) { return 0; }`: Verifica se o hardware GPIO do LED está pronto (ex.: driver carregado). Encerra se não estiver pronto.
+- **Verificação de prontidão do GPIO**:
+  - `if (!gpio_is_ready_dt(&led)) { return 0; }`: Verifica se o hardware GPIO do LED está pronto (por exemplo, driver carregado). Encerra se não estiver pronto.
 
 - **Configuração do GPIO**:
   - `ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE)`: Configura o pino GPIO do LED como saída ativa em nível alto.
   - Encerra em caso de falha (`ret < 0`) para evitar operações inválidas.
 
-**Loop Principal**:
-Executa em um loop infinito `while (1)` para alternar o LED periodicamente:
+**Loop principal**:
+É executado em um loop infinito `while (1)` para alternar o LED periodicamente:
 
-- **Alternar Estado do LED**:
-  - `ret = gpio_pin_toggle_dt(&led)`: Inverte a saída GPIO do LED (LIGADO ↔ DESLIGADO). Encerra em caso de falha.
+- **Alternar o estado do LED**:
+  - `ret = gpio_pin_toggle_dt(&led)`: Inverte a saída GPIO do LED (ON ↔ OFF). Encerra em caso de falha.
 
-- **Atualizar Rastreamento de Status**:
-  - `led_state = !led_state`: Sincroniza o sinalizador de status do software com o estado do hardware.
+- **Atualizar o acompanhamento de status**:
+  - `led_state = !led_state`: Sincroniza o indicador de status de software com o estado do hardware.
 
-- **Registrar e Aguardar**:
+- **Registrar e atrasar**:
   - `printf("LED state: %s\n", led_state ? "ON" : "OFF")`: Imprime o status atual do LED via saída serial.
-  - `k_msleep(SLEEP_TIME_MS)`: Pausa por 1000ms (1 segundo) usando a função de atraso RTOS do Zephyr, controlando a frequência de piscar.
+  - `k_msleep(SLEEP_TIME_MS)`: Pausa por 1000 ms (1 segundo) usando a função de atraso do RTOS do Zephyr, controlando a frequência do piscar.
 
-#### Aprofundamento nos Internos do nRF Connect SDK
+#### Aprofundando nos internos do nRF Connect SDK
 
 Se você quiser ter uma compreensão mais profunda dos princípios internos do nRF Connect SDK, pode consultar os seguintes cursos:
 
@@ -643,28 +651,28 @@ Se você quiser ter uma compreensão mais profunda dos princípios internos do n
 
 ## Restaurar configurações de fábrica
 
-Para placas XIAO nRF54L15, um script de redefinição de fábrica é fornecido para recuperar a placa de um estado inválido (ex.: quando não é possível fazer upload devido à proteção de gravação interna da NVM). Este script realizará um apagamento completo da flash e programará um firmware de fábrica.
+Para as placas XIAO nRF54L15, é fornecido um script de reset de fábrica para recuperar a placa de um estado ruim (por exemplo, quando não é possível fazer upload devido à proteção de gravação da NVM interna). Este script realizará um apagamento em massa da flash e programará um firmware de fábrica.
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Redefinição de Fábrica</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Factory Reset</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Localização**
 Os scripts estão localizados no diretório scripts/factory_reset/.
 **Uso**
-O script criará e gerenciará automaticamente um ambiente virtual Python local para instalar as ferramentas necessárias, portanto pode ser executado sem configuração prévia.
+O script criará e gerenciará automaticamente um ambiente virtual Python local para instalar as ferramentas necessárias, de modo que possa ser executado imediatamente.
 
-### Windows
+### Window
 
-- Para Windows: Navegue até o diretório scripts/factory_reset e execute:
+- Para Windows: navegue até o diretório scripts/factory_reset e execute:
 
 ```cpp
 .\factory_reset.bat
 ```
 
 ### Linux-MacOS
-- Para Linux e macOS: Navegue até o diretório scripts/factory_reset e execute:
+- Para Linux e macOS: navegue até o diretório scripts/factory_reset e execute:
 
 ```cpp
 bash factory_reset.sh
@@ -672,10 +680,10 @@ bash factory_reset.sh
 
 ## Modo de Comutação Sem Fio
 
-Este exemplo demonstra como controlar o switch RF no Seeed Studio XIAO nRF54L15 para alternar entre a antena integrada
+Este exemplo demonstra como controlar o switch RF no Seeed Studio XIAO nRF54L15 para alternar entre a placa 
 
 :::
-O exemplo a seguir funciona tanto para PlatformIO quanto para nRF Connect SDK. Pode ser usado diretamente no PlatformIO, enquanto o SDK requer a adição manual de arquivos. Consulte este [link](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/#Placa-alimentada-por-bateria)
+O exemplo a seguir funciona tanto para PlatformIO quanto para nRF Connect SDK. Ele pode ser usado diretamente no PlatformIO, enquanto o SDK exige a adição manual de arquivos. Consulte este [link](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
 :::
 
 <div style={{textAlign:'center'}}>
@@ -685,15 +693,15 @@ O exemplo a seguir funciona tanto para PlatformIO quanto para nRF Connect SDK. P
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-rfsw" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
 - Antena cerâmica e uma antena externa.
 
-- Pressione o botão do usuário (SW0) para alternar entre as antenas cerâmica e externa.
+- Pressione o botão de usuário (SW0) para alternar entre as antenas cerâmica e externa.
 
-- O LED do usuário indica a seleção atual da antena (LED ACESO para externa, LED APAGADO para cerâmica).
+- O LED de usuário indica a seleção atual da antena (LED LIGADO para externa, LED DESLIGADO para cerâmica).
 
 - A antena padrão na inicialização pode ser configurada via prj.conf.
 
@@ -870,7 +878,7 @@ int main(void)
 ```
 
 :::tip
-Se você deseja alternar entre a antena externa ou interna, é necessário modificar o arquivo zephyr/prj.conf.
+Se você deseja alternar entre a antena externa ou interna, precisa modificar o arquivo zephyr/prj.conf.,
 Descomente # CONFIG_DEFAULT_ANTENNA_EXTERNAL=y para habilitar a antena externa. Se estiver usando a antena interna, comente a linha.
 :::
 
@@ -896,11 +904,11 @@ CONFIG_BT_DEVICE_NAME="zephyr-ble"
 
 
 
-## Acessar os Pinos J-Link para Gravar um Programa
+## Acessar os pinos J-Link para gravar um programa
 
-Se você deseja usar o JLink para programação, pode seguir os passos abaixo. No entanto, sugerimos que você use a porta serial integrada na placa Seeed Studio XIAO nRF54L15 para programação, o que será muito mais conveniente.
+Se você quiser usar o JLink para programação, pode seguir os passos abaixo. No entanto, sugerimos que você use a porta serial integrada na placa Seeed Stduio XIAO nRF54L15 para programação, o que será muito mais conveniente.
 
-**Hardware Necessário**
+**Hardware necessário**
 
 - [Seeed Studio XIAO nRF54L15](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
 - [Jlink](https://www.segger.com/downloads/jlink/)
@@ -909,66 +917,66 @@ Se você deseja usar o JLink para programação, pode seguir os passos abaixo. N
 Você precisa baixar a versão mais recente do J-Link para ter suporte ao modelo de placa nRF54L15.
 :::
 
-**Software Necessário**
+**Software necessário**
 
-É necessário baixar o software [Segger](https://www.segger.com/downloads/jlink/) do site.
+É necessário baixar o software [Segger](https://www.segger.com/downloads/jlink/) no site.
 
 - **Passo 1.** Use o Jlink para conectar os pinos abaixo:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
 
-- **Passo 2.** Inicie o J-Flash e pesquise nRF54L15_M33, criando um novo projeto:
+- **Passo 2.** Inicie o J-Flash e procure por nRF54L15_M33, criando um novo projeto:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **Passo 3.** Clique em "Target" e selecione "Connect".
+- **Passo 3.** Clique em "Target" e depois selecione "Connect".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **Passo 4.** Arraste o arquivo bin ou [hex](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) para o software. Em seguida, pressione F4 e F5 nessa ordem. A regravação está concluída.
+- **Passo 4.** Arraste o arquivo bin ou o [arquivo hex](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex) para o software. Em seguida, pressione F4 e F5 nessa ordem. A regravação estará concluída.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
 
-## Placa Alimentada por Bateria
+## Placa alimentada por bateria
 
-O XIAO nRF54L15 possui um chip de gerenciamento de energia integrado que permite que o XIAO nRF54L15 seja alimentado de forma independente por uma bateria ou que a bateria seja carregada através da porta USB do XIAO nRF54L15.
+O XIAO nRF54L15 possui um chip de gerenciamento de energia integrado que permite que o XIAO nRF54L15 seja alimentado de forma independente usando uma bateria ou que a bateria seja carregada através da porta USB do XIAO nRF54L15.
 
-Se você deseja conectar a bateria ao XIAO, recomendamos que adquira uma bateria de lítio recarregável de 3,7V qualificada. Ao soldar a bateria, tome cuidado para distinguir os terminais positivo e negativo.
+Se você quiser conectar a bateria ao XIAO, recomendamos que você adquira uma bateria de lítio recarregável qualificada de 3,7 V. Ao soldar a bateria, tenha cuidado para distinguir entre os terminais positivo e negativo.
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_connect.jpg" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:500, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Esquemático de Conexão da Bateria</em></p>
 </div>
 
-**Instruções sobre o uso de baterias:**
+**Instruções para o uso de baterias:**
 
-1. Por favor, use baterias qualificadas que atendam às especificações.
-2. O XIAO pode ser conectado ao seu computador via cabo de dados enquanto usa a bateria; fique tranquilo, pois o XIAO possui um chip de proteção de circuito integrado, o que é seguro.
-3. O XIAO nRF54L15 não terá nenhum LED aceso quando alimentado por bateria (a menos que você tenha escrito um programa específico); por favor, não julgue se o XIAO nRF54L15 está funcionando ou não pelo estado do LED — avalie isso de forma adequada pelo seu programa.
+1. Utilize baterias qualificadas que atendam às especificações.
+2. O XIAO pode ser conectado ao seu computador por meio de um cabo de dados enquanto utiliza a bateria; fique tranquilo, pois o XIAO possui um chip de proteção de circuito integrado, sendo seguro.
+3. O XIAO nRF54L15 não terá nenhum LED aceso quando estiver alimentado por bateria (a menos que você tenha escrito um programa específico). Portanto, não julgue se o XIAO nRF54L15 está funcionando ou não pela condição do LED; avalie isso de forma adequada por meio do seu programa.
 
-Ao mesmo tempo, projetamos um indicador luminoso vermelho para o carregamento da bateria, que informa ao usuário o estado atual da bateria durante o carregamento.
+Ao mesmo tempo, projetamos uma luz indicadora vermelha para o carregamento da bateria, que, por meio da indicação luminosa, informa ao usuário o estado atual da bateria durante a carga.
 
 <!-- 1. When XIAO nRF54L15 is not connected to the battery, the red light comes on when the Type-C cable is connected and goes off after 30 seconds.
 2. The red light flashes when the battery is connected and the Type-C cable is connected for charging.
 3. When connecting Type-C to charge the battery fully, the red light turns off. -->
 
 :::caution
-Por favor, tome cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento ao soldar.
+Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem.
 :::
 
 ### Detecção de Tensão da Bateria
 :::tip
 
-Se você encontrar uma situação em que o XIAO nRF54L15 falha ao inicializar quando alimentado exclusivamente por uma bateria de lítio de 3,7V após gravar o programa, consulte as soluções abaixo.
+Se você encontrar uma situação em que o XIAO nRF54L15 falha ao inicializar quando alimentado apenas por uma bateria de lítio de 3,7 V após gravar o programa, consulte as soluções abaixo.
 
-Para a versão atual do hardware (v1.0), recomendamos gerenciar duas configurações de build para alternar facilmente entre **Depuração em Bancada** (USB conectado, UART habilitado) e **Implantação com Bateria** (Autônomo, UART desabilitado).
+Para a versão atual de hardware (v1.0), recomendamos gerenciar duas configurações de build para alternar facilmente entre **Depuração em Bancada** (USB conectado, UART habilitado) e **Implantação com Bateria** (Autônomo, UART desabilitado).
 
 **Cenário A: Depuração em Bancada via USB**
 
-**Quando usar:** Você está escrevendo código, gravando firmware e precisa visualizar logs pela **Porta Serial USB**.
+**Quando usar:** Você está escrevendo código, gravando firmware e precisa visualizar logs por meio da **Porta Serial USB**.
 
 **Configuração (`prj_uart.conf`):**
-Crie um novo arquivo chamado `prj_uart.conf` no diretório do seu projeto. Este arquivo overlay reabilitará temporariamente o UART para fins de depuração.
+Crie um novo arquivo chamado `prj_uart.conf` no diretório do seu projeto. Este arquivo de overlay irá reativar temporariamente a UART para fins de depuração.
 
 ```properties
 # Enable UART for USB debugging
@@ -985,7 +993,7 @@ CONFIG_LOG_BACKEND_UART=y
 ```
 
 **Como Compilar:**
-Adicione o argumento de configuração overlay ao compilar seu projeto.
+Adicione o argumento de configuração de overlay ao compilar o seu projeto.
 
 ```bash
 # Build with UART enabled for USB debugging
@@ -994,10 +1002,10 @@ west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_
 
 **Cenário B: Implantação com Bateria (Padrão)**
 
-**Quando usar:** Você terminou a depuração e pretende alimentar a placa exclusivamente pelos **Pads de Bateria**.
+**Quando usar:** Você terminou a depuração e pretende alimentar a placa apenas pelos **Pads da Bateria**.
 
 **Configuração (`prj.conf`):**
-Modifique seu arquivo principal `prj.conf` para desabilitar o UART por padrão. Isso garante que a placa possa inicializar corretamente quando alimentada por bateria.
+Modifique o arquivo principal `prj.conf` para desabilitar a UART por padrão. Isso garante que a placa possa inicializar corretamente quando alimentada por uma bateria.
 
 ```cpp
 # Disable UART to ensure successful boot on battery
@@ -1014,7 +1022,7 @@ CONFIG_LOG_BACKEND_RTT=y
 ```
 
 **Como Compilar:**
-Compile normalmente sem o argumento overlay.
+Compile normalmente sem o argumento de overlay.
 
 ```bash
 # Build default firmware (Battery Safe)
@@ -1024,29 +1032,29 @@ west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 **Resumo**
 
 - **Conectado via USB**  Use o overlay **`prj_uart.conf`** para habilitar o Monitor Serial.
-- **Funcionando com Bateria**  Use o **`prj.conf`** padrão para garantir que o dispositivo inicialize sem problemas.
+- **Rodando com Bateria**  Use o **`prj.conf`** padrão para garantir que o dispositivo inicialize sem problemas.
 
 :::
 
-O XIAO nRF54L15 integra um recurso de detecção de tensão da bateria que se concentra no gerenciamento eficiente das medições de energia da bateria usando o switch de carga TPS22916CYFPR. Este guia focará na análise da implementação de software da detecção de bateria **(especialmente o código main.c)** e orientará você sobre como implantar e usar facilmente esse recurso em um ambiente PlatformIO, evitando a complexidade do Zephyr NCS SDK.
+O XIAO nRF54L15 integra um recurso de detecção de tensão da bateria que se concentra em gerenciar de forma eficiente as medições de energia da bateria usando o switch de carga TPS22916CYFPR. Este guia focará em analisar a implementação de software da detecção de bateria **(especialmente o código main.c)** e orientará você sobre como implantar e usar facilmente esse recurso em um ambiente PlatformIO, evitando a complexidade do Zephyr NCS SDK.
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_A.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Esquemático de Detecção de Bateria</em></p>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Esquemático de Detecção da Bateria</em></p>
 </div>
 
 O que o chip TPS22916CYFPR faz:
 
-- É um switch de energia inteligente que controla o liga/desliga da tensão da bateria sob demanda. Quando a tensão da bateria precisa ser medida, ele liga, conectando a bateria ao circuito divisor de tensão; quando não precisa ser medida, ele desliga, interrompendo a conexão.
+- Ele é um switch de energia inteligente que controla o liga-desliga da tensão da bateria sob demanda. Quando é necessário medir a tensão da bateria, ele liga, conectando a bateria ao circuito divisor de tensão; quando não é necessário medir, ele desliga, interrompendo a conexão.
 
-- O que esse recurso nos ajuda a fazer?
-Por meio desse mecanismo de chaveamento sob demanda, o chip reduz significativamente o consumo de corrente desnecessário e estende efetivamente a vida útil da bateria. Combinado com o circuito divisor de tensão subsequente e o ADC (conversor analógico-digital) do nRF54L15, o XIAO nRF54L15 é capaz de monitorar com precisão a carga restante da bateria, fornecendo otimização importante de autonomia para aplicações de baixo consumo alimentadas por bateria, como dispositivos IoT.
+- Em que esse recurso nos ajuda?
+Por meio desse mecanismo de comutação sob demanda, o chip reduz significativamente o consumo de corrente desnecessário e estende de forma eficaz a vida útil da bateria. Combinado com o circuito divisor de tensão subsequente e o ADC (conversor analógico-digital) do nRF54L15, o XIAO nRF54L15 é capaz de monitorar com precisão a carga restante da bateria, fornecendo uma otimização importante de autonomia para aplicações de baixa potência alimentadas por bateria, como dispositivos de IoT.
 
 :::note
 O código de exemplo a seguir foi projetado para PlatformIO, mas também é compatível com o nRF Connect SDK.
 
-Usando XIAO nRF54L15 no PlatformIO
-Se você quiser usar o XIAO nRF54L15 no PlatformIO, consulte este tutorial para configurá-lo: [Configuração do XIAO nRF54L15 no PlatformIO](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_with_platform_io/).
+Usando o XIAO nRF54L15 no PlatformIO
+Se você quiser usar o XIAO nRF54L15 no PlatformIO, consulte este tutorial para configurá-lo: [XIAO nRF54L15 PlatformIO Configuration](https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_with_platform_io/).
 
 :::
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -1057,15 +1065,15 @@ Se você quiser usar o XIAO nRF54L15 no PlatformIO, consulte este tutorial para 
 
 ### Adicionar overlay e modificar o arquivo conf
 
-Se você quiser usar esta rotina de bateria no nRF Connect SDK, precisará adicionar o app.overlay e modificar o arquivo prj.conf.
+Se você quiser usar esta rotina de bateria no nRF Connect SDK, será necessário adicionar o app.overlay e modificar o arquivo prj.conf.
 
-- Crie um novo arquivo chamado `app.overlay` no diretório do projeto. Em seguida, cole o código a seguir nele e, por fim, pressione Ctrl + S para salvar.
+- Crie um novo arquivo chamado `app.overlay` no diretório do projeto. Em seguida, cole o código abaixo nele e, por fim, pressione Ctrl + S para salvar.
 
-  - O arquivo overlay estende a camada de descrição de hardware e personaliza as conexões físicas de hardware por meio da árvore de dispositivos. Ele não modifica a lógica do código, mas declara os detalhes reais do hardware para garantir que o driver possa inicializar corretamente o dispositivo físico.
+  - O arquivo de overlay estende a camada de descrição de hardware e personaliza as conexões físicas de hardware por meio da device tree. Ele não modifica a lógica do código, mas declara os detalhes reais do hardware para garantir que o driver possa inicializar corretamente o dispositivo físico.
 <br />
   <details>
 
-  <summary>Código do app.overlay</summary>
+  <summary>código do app.overlay</summary>
 
   ```cpp
   / {
@@ -1249,11 +1257,11 @@ Se você quiser usar esta rotina de bateria no nRF Connect SDK, precisará adici
 
 - Adicione o seguinte conteúdo no arquivo prj.conf
 
-  - prj.conf é o arquivo de configuração principal do projeto Zephyr. Ele é gerenciado pelo sistema Kconfig para a seleção de funções de software durante a compilação. Ele determina quais drivers (como ADC, display, Bluetooth), middleware (como LVGL) e serviços do sistema (como logging, gerenciamento de memória) são incluídos no firmware, e define seus parâmetros de comportamento (como nível de log, tamanho do heap); por fim, pressione Ctrl + S para salvar.
+  - prj.conf é o arquivo de configuração principal do projeto Zephyr. Ele é gerenciado pelo sistema Kconfig para a seleção de funções de software durante a compilação. Ele determina quais drivers (como ADC, display, Bluetooth), middlewares (como LVGL) e serviços de sistema (como registro de logs, gerenciamento de memória) são incluídos no firmware e define seus parâmetros de comportamento (como nível de log, tamanho do heap). Por fim, pressione Ctrl + S para salvar.
 <br />
   <details>
 
-  <summary>Código prj.conf</summary>
+  <summary>código prj.conf</summary>
 
     ```python
     # =========================================================
@@ -1352,7 +1360,7 @@ Se você quiser usar esta rotina de bateria no nRF Connect SDK, precisará adici
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_prj1.png" style={{width:800, height:'auto'}}/></div>
 
-### Código Principal
+### Código principal
 
 ```cpp
 #include <inttypes.h>
@@ -1451,38 +1459,38 @@ int main(void)
 
 ### Seeed Studio XIAO nRF54L15
 
-**Design de Hardware**
+**Projeto de hardware**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Esquemático]** [Esquemático do XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf )
-- **🗃️[Arquivos de Design PCB]** [Projeto KiCad do XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip )
-- **🗃️[Bibliotecas de Design PCB]** 
-  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de Pinagem]** [Planilha de Pinagem do XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
+- **📄[Esquemático]** [XIAO nRF54L15 Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf )
+- **🗃️[Arquivos de projeto de PCB]** [XIAO nRF54L15 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip )
+- **🗃️[Bibliotecas de projeto de PCB]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de pinagem]** [XIAO nRF54L15 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
 **Mecânico**
-- **🗃️[Dimensões 2D]** [Dimensões do XIAO nRF54L15 em DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **🗃️[Dimensões 2D]** [XIAO nRF54L15 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
 
 ### Seeed Studio XIAO nRF54L15 Sense
 
-**Design de Hardware**
+**Projeto de hardware**
 - **📄[Datasheet]** [Nordic nRF54L15 Datasheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
-- **📄[Esquemático]** [Esquemático do XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf )
-- **🗃️[Arquivos de Design PCB]** 
-  - [Projeto KiCad do XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip )
-  - [Projeto Flux.ai do XIAO nRF54L15 Sense](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )
-- **🗃️[Bibliotecas de Design PCB]** 
-  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **🗃️[Diagrama de Pinagem]** [Planilha de Pinagem do XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
+- **📄[Esquemático]** [XIAO nRF54L15 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf )
+- **🗃️[Arquivos de projeto de PCB]** 
+  - [XIAO nRF54L15 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip )
+  - [XIAO nRF54L15 Sense Flux.ai Project](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )
+- **🗃️[Bibliotecas de projeto de PCB]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **🗃️[Diagrama de pinagem]** [XIAO nRF54L15 Sense Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
 **Mecânico**
-- **📄[Dimensões 2D]** [Dimensões do XIAO nRF54L15 Sense em DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
-- **🗃️[Dimensões 3D]** [Dimensões 3D do XIAO nRF54L15 Sense](https://grabcad.com/library/seeed-studio-xiao-nrf54l15-sense-1 )
+- **📄[Dimensões 2D]** [XIAO nRF54L15 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **🗃️[Dimensões 3D]** [XIAO nRF54L15 Sense 3D imensions](https://grabcad.com/library/seeed-studio-xiao-nrf54l15-sense-1 )
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

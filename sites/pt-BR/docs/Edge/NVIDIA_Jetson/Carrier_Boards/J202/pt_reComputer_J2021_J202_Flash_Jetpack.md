@@ -17,6 +17,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J2021_J202_Flash_Jetpack/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Primeiros Passos com o reComputer J202
 
 <div align="center">
@@ -44,6 +46,13 @@ O reComputer J202 possui praticamente o mesmo design e função que a placa carr
 Como o Jetson Nano possui apenas uma faixa PCIe, se o módulo usar o Jetson Nano para se conectar à placa carrier J202, ele só poderá selecionar o M.2 Key M para SSD.
 
 :::
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 

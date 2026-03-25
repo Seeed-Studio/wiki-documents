@@ -14,6 +14,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/es/reComputer_Jetson_GPIO/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Cómo usar el GPIO de 40 pines en las placas reComputer Jetson
 
 Este wiki demuestra cómo acceder y controlar el GPIO de 40 pines de las placas reComputer Jetson. Para este wiki, hemos usado reComputer J4012 como ejemplo. Sin embargo, los pasos serán similares para otras placas reComputer Jetson también.
@@ -214,6 +216,17 @@ sudo gpioset --mode=wait gpiochip0 85=0
 Si deseas aprender más sobre el comando **gpioset**, por favor consulta esto:
 https://www.acmesystems.it/gpiod
 :::
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

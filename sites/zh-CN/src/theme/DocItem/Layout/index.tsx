@@ -31,6 +31,7 @@ function useDocTOC() {
     canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
       <DocItemTOCDesktop />
     ) : undefined;
+
   return {
     hidden,
     mobile,
@@ -41,10 +42,14 @@ function useDocTOC() {
 export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
   const { frontMatter } = useDoc();
-  
+
   // 使用类型断言解决 TypeScript 错误
-  const { hide_comment: hideComment, sku, type: docType } = frontMatter as any;
-  
+  const {
+    hide_comment: hideComment,
+    sku,
+    type: docType,
+  } = frontMatter as any;
+
   const location = useLocation()
   useEffect(() => {
     judgeHomePath();
@@ -78,7 +83,11 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         {!hideComment && <Comment />}
       </div>
       <TopNav></TopNav>
-      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {docTOC.desktop && (
+        <div className="col col--3">
+          {docTOC.desktop}
+        </div>
+      )}
     </div>
   );
 }

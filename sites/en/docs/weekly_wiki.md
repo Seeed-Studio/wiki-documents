@@ -2,7 +2,7 @@
 description: Weekly Wiki
 title: Weekly Wiki
 keywords:
-  - weeely wiki
+  - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
   date: 03/16/2026
@@ -19,45 +19,53 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 16th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 23rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with reTerminal D1001](https://wiki.seeedstudio.com/getting_started_with_reterminal_d1001/)
+### [Getting Started with reTerminal E1003](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-reTerminal D1001 is an intelligent large-screen interaction terminal powered by Espressif's latest high-performance **ESP32-P4** chip. Designed for AIoT application scenarios requiring high-performance graphics display, video processing, and voice interaction, it leverages the ESP32-P4's powerful 400MHz dual-core RISC-V processor and rich multimedia peripheral interfaces to easily handle complex edge computing and multimedia tasks.
-
-</div>
-
-### [Control SO-Arm by OpenClaw on Jetson Thor](https://wiki.seeedstudio.com/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/)
-
-<div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/T_uh1N8Fxe4" title="Control SoArm Pick Up by OpenClaw on Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-**OpenClaw** is an AI agent framework that can orchestrate local tools and models. In this project, OpenClaw is used as the high-level control interface, while LeRobot provides the low-level motor communication and calibration utilities for SO-Arm.
+reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant (via ESPHome & Open Display), Arduino, PlatformIO for further development. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
 
 </div>
 
-### [Object Detection with YOLOv11 on reComputer-RK](https://wiki.seeedstudio.com/object_detection_with_yolov11_on_recomputer_rk/)
+### [Meshtastic Firmware Source Code Practical Tutorial for Solar Nod](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
 
-<div class="video-container">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/5WdCvyrCF5Q" title="Object Detection with YOLOv11 on reComputer-RK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project provides industrial-grade, high-performance Computer Vision (CV) application solutions for Rockchip series development boards (RK3588 and RK3576). It features deep integration of the YOLOv11 object detection model, leveraging NPU acceleration for low-latency, high-frame-rate real-time inference.
+This tutorial is intended for users who are just getting started with the Meshtastic firmware source code. It includes common workflows for both Windows and macOS. The goal is straightforward: clone the official repository, complete a successful build, make one simple UI change, and flash the modified firmware to the device for verification.
+
+For other Seeed devices, you can refer to the corresponding tutorials: [T1000-E](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_t1000_e), [Wio Tracker L1](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial), and [XIAO ESP32S3 & Wio SX1262 Kit](https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor).
 
 </div>
 
-## Existing Wiki Updated
+### [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_solar_node/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to display the locations of [Meshtastic](https://meshtastic.org/docs/introduction/) devices on Meshtastic Node Maps using [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) and [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) devices, assuming the devices have already been flashed with the Meshtastic firmware.
+
+</div>
+
+### [Getting Started with OpenClaw on reComputer Industrial](https://wiki.seeedstudio.com/getting_started_with_openclaw_on_recomputer/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide introduces how to get started with OpenClaw on the reComputer R series devices, covering environment setup, installation, and basic configuration. It enables users to deploy and run a self-hosted AI agent system on edge hardware.
+
+</div>
+
+<!-- ## Existing Wiki Updated
 
 ### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
 
@@ -65,7 +73,7 @@ We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudi
 
 ### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
 
-We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate.
+We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
 
 ## The Efforts of Contributor
 
@@ -190,5 +198,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.2.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260209)
 - [weekly wiki on 2026.3.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260302)
 - [weekly wiki on 2026.3.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260309)
+- [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
 
 </details>

@@ -15,6 +15,8 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/reComputer_A608_Flash_System/
 ---
 
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 # Flash JetPack OS to A608 Carrier Board (NVIDIA Jetson Orin NX/Nano supported)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.jpg" /></div>
@@ -352,6 +354,13 @@ After flashing, power on Jetson Device again and log into the system.
 ## Resources
 
 - [A608 CAD Files](https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608_V1.2.zip)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

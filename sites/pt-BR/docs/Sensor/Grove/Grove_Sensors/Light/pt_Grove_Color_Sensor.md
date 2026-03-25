@@ -57,7 +57,7 @@ url: https://wiki.seeedstudio.com/pt-br/grove_color_sensor_v3_0_iic/
 | Seeeduino V4.2 | Base Shield| Grove - Color Sensor V3.0 |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg"/></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Line_Finder/img/line_finder_s.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Line-Finder-v1.1-p-2712.html)|
+|[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Line-Finder-v1.1-p-2712.html)|
 
 - _Conectar Grove com Arduino_
 
@@ -70,7 +70,7 @@ url: https://wiki.seeedstudio.com/pt-br/grove_color_sensor_v3_0_iic/
 | Seeed Studio Grove Base for XIAO| XIAO ESP32-S3| Grove - Color Sensor V3.0 |
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Thumbnail-27.png"/></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Line_Finder/img/line_finder_s.jpg" /></div>|
-|[Get One Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|[Get One Now](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)|[Get One Now](https://www.seeedstudio.com/Grove-Line-Finder-v1.1-p-2712.html)|
+|[Adquira agora](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)|[Adquira agora](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Line-Finder-v1.1-p-2712.html)|
 
 - _Conectar Grove com XIAO ESP32S3_
 
