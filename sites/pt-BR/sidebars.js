@@ -2703,6 +2703,20 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/pt_R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/pt_R1225_Quick_Start',
+            /* {
+              type: 'category',
+              label: 'Cloud Platform Integration',
+              items: [
+                ,
+              ],
+            },
+             {
+              type: 'category',
+              label: 'Application',
+              items: [
+                ,
+              ],
+            },*/
           ],
         },
         {
