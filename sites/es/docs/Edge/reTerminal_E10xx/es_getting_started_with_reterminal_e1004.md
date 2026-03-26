@@ -24,14 +24,20 @@ url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1004/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:1000, height:'auto'}}/></div>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+    </a>
+</div>
+
 ## Introducción
 
-reTerminal E1004 es una pantalla ePaper a color completo de 13,3 pulgadas y código abierto, con una duración de batería de hasta 6 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz de usuario sin código SenseCraft HMI para una creación de paneles de control sin esfuerzo, y además admite Home Assistant, Arduino y ESP-IDF para un desarrollo adicional. Con la pantalla ePaper a todo color E Ink® Spectra™ 6, es perfecta como marco digital y para la visualización de paneles de control a color.
+reTerminal E1004 es una pantalla ePaper a color completo de 13,3 pulgadas y código abierto, con una duración de batería de hasta 6 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz sin código SenseCraft HMI para una creación de paneles de control sin esfuerzo, y además admite Home Assistant, Arduino y ESP-IDF para un desarrollo adicional. Con la pantalla ePaper a todo color E Ink® Spectra™ 6, es perfecta para marcos digitales y visualización de paneles de control a color.
 
 ### Características
 
-- **Pantalla a color de alta definición:** Pantalla ePaper a todo color E Ink® Spectra™ 6 de 13,3 pulgadas con una alta resolución de 1200x1600 píxeles.
-- **Procesamiento potente:** Impulsada por ESP32-S3 con 8MB de PSRAM y 32MB de Flash para un rendimiento sólido.
+- **Pantalla a color de alta definición:** Pantalla ePaper a color completo E Ink® Spectra™ 6 de 13,3 pulgadas con una alta resolución de 1200x1600 píxeles.
+- **Procesamiento potente:** Impulsada por ESP32-S3 con 8MB de PSRAM y 32MB de Flash para un rendimiento robusto.
 - **Consumo de energía ultrabajo:** Batería integrada de 5000mAh que admite hasta 6 meses de uso con una sola carga (actualización cada 6 horas).
 - **Desarrollo de interfaz sin código:** El firmware predeterminado es compatible con SenseCraft HMI para la creación de paneles de control mediante arrastrar y soltar y diseño asistido por IA.
 - **Amplia compatibilidad:** Compatible con Home Assistant (ESPHome), Arduino, PlatformIO y ESP-IDF.
@@ -45,8 +51,8 @@ reTerminal E1004 es una pantalla ePaper a color completo de 13,3 pulgadas y cód
 | :--- | :--- |
 | **Nombre del producto** | reTerminal E1004 |
 | **Procesador** | ESP32-S3 con 8MB PSRAM |
-| **Almacenamiento** | 32MB Flash, admite tarjeta Micro SD (hasta 32GB, se incluyen 16GB) |
-| **Pantalla** | ePaper a todo color Spectra™ 6 de 13,3" |
+| **Almacenamiento** | 32MB Flash, admite tarjeta Micro SD (hasta 32GB, 16GB incluida) |
+| **Pantalla** | ePaper a color completo Spectra™ 6 de 13,3" |
 | **Resolución** | 1200 x 1600 píxeles |
 | **Conectividad inalámbrica** | Wi-Fi 2,4GHz 802.11 b/g/n, Bluetooth 5.0 |
 | **Sensores** | Sensores de temperatura y humedad |
@@ -54,17 +60,17 @@ reTerminal E1004 es una pantalla ePaper a color completo de 13,3 pulgadas y cód
 | **Batería** | 5000mAh |
 | **Entrada de alimentación** | USB-C 5V/1A |
 | **Compatibilidad de software** | SenseCraft HMI (predeterminado), ESPHome, Arduino, PlatformIO, ESP-IDF |
-| **Temperatura de funcionamiento** | 0-40°C |
+| **Temperatura de trabajo** | 0-40°C |
 | **Dimensiones** | 376mm x 311mm x 40mm |
 
 ## Aplicaciones
 
 - **Marco de fotos electrónico de bajo consumo:** Muestra fotos familiares o arte en alta resolución con una calidad similar al papel sin preocuparte por la carga diaria.
-- **Tablón de información familiar:** Mantén al día calendarios, notificaciones, clima y noticias en un formato elegante y siempre visible.
+- **Tablón de información familiar:** Lleva el control de calendarios, notificaciones, clima y noticias en un formato elegante y siempre visible.
 - **Panel de control para automatización del hogar:** Visualiza datos en tiempo real del hogar inteligente (temperatura, humedad, calidad del aire) mediante Home Assistant.
 - **Pantalla para oficina inteligente:** Muestra horarios de salas de reuniones, disponibilidad o indicaciones de dirección.
 - **Cartelería para comercios y espacios públicos:** Menús, horarios o indicadores de ocupación de bajo consumo energético.
-- **Educación y creación de prototipos:** Una plataforma ideal para aprender IoT, sistemas embebidos y diseño de interfaces de usuario.
+- **Educación y prototipado:** Una plataforma ideal para aprender IoT, sistemas embebidos y diseño de interfaces.
 
 ## Descripción general del hardware
 
@@ -126,13 +132,43 @@ Debido a la naturaleza de la tecnología E Ink, la actualización de la pantalla
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
 
+## Solución de problemas
+
+### P1: El dispositivo no enciende
+
+- Asegúrate de que el interruptor de encendido esté en la posición ON
+- Conecta el cable USB-C para cargar el dispositivo
+- Comprueba si el LED rojo está siempre encendido (indicando que está cargando)
+- Si utilizas alimentación por batería, asegúrate de que la batería esté correctamente conectada y cargada
+
+### P2: No se puede conectar al Wi-Fi
+
+- Verifica que estés introduciendo la contraseña de Wi-Fi correcta
+- Asegúrate de que tu red Wi-Fi esté operativa
+- Comprueba si tu router Wi-Fi admite redes de 2,4GHz (5GHz no es compatible)
+- Intenta colocar el dispositivo más cerca de tu router Wi-Fi
+
+### P3: La pantalla no se actualiza
+
+- Pulsa el botón de actualización para activar manualmente una actualización
+- Verifica que el dispositivo esté conectado a Wi-Fi (sin icono de desconexión en la esquina)
+- Comprueba tu cuenta de SenseCraft para asegurarte de que el panel de control se haya desplegado correctamente
+- Si el problema persiste, intenta reiniciar el dispositivo
+- Si el dispositivo sigue sin responder después de reiniciarlo, vuelve a grabar el firmware correspondiente en la plataforma SenseCraft HMI y comprueba si el dispositivo puede actualizarse con normalidad
+
+### P4: Se perdió la conexión de red
+
+- El dispositivo intentará reconectarse automáticamente a las redes conocidas
+- Cuando se vuelva a conectar, el icono de desconexión de Wi-Fi desaparecerá
+- Si no puede reconectarse, sigue el procedimiento de restablecimiento de red indicado anteriormente
+
 ## Recursos
 
 - [Esquemático de reTerminal E1004 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004523_reTerminal%20E1004_V1.0_SCH_260105.pdf)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
