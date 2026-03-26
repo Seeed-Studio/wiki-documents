@@ -192,7 +192,7 @@ La serie reComputer Industrial R21xx es ideal para su uso en aplicaciones indust
       <tr>
         <td>LED</td>
         <td colspan="2">4 x indicadores LED</td>
-      </tr]
+      </tr>
       <tr>
         <td>Zumbador</td>
         <td colspan="2">1</td>

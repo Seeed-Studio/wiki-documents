@@ -157,7 +157,7 @@ A série reComputer Industrial R21xx é ideal para uso em aplicações de IA ind
       <tr>
         <td rowspan="2"> DI </td>
         <td colspan="3"> 4 x portas DI isoladas </td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="3"> Tensão de entrada: 5~24V DC </td>
       </tr>

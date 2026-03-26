@@ -112,7 +112,7 @@ reComputer Industrial R21xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td> 电源输入 </td>
         <td colspan="2">DC 9V~36V，2 针端子块</td>
-      </tr]
+      </tr>
       <tr>
         <td>PoE（作为受电设备）</td>
         <td colspan="2">IEEE 802.3at 标准 25.5W PoE</td>
