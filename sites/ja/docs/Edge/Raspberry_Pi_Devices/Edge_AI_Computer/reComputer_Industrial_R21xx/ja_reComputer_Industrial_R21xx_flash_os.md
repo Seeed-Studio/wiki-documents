@@ -1,11 +1,11 @@
 ---
-description: reComputer Industrial R21xx OS フラッシュ
-title: reComputer Industrial R21xx OS フラッシュ
+description: reComputer Industrial R21xx OS のフラッシュ
+title: reComputer Industrial R21xx OS のフラッシュ
 keywords:
   - Raspberry pi
   - エッジコントローラ
   - reComputer Industrial R21xx
-  - OS フラッシュ
+  - OS のフラッシュ
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_r21xx_flash_os
 last_update:
@@ -15,7 +15,7 @@ createdAt: '2025-01-09'
 updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r21xx_flash_os/
 ---
-# reComputer Industrial R21xx OS フラッシュ
+# reComputer Industrial R21xx OS のフラッシュ
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -25,11 +25,11 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r21xx_flash_os/
     </a>
 </div>
 
-reComputer Industrial R21xx シリーズは Raspberry Pi CM5 と Hailo-8 AI アクセラレータを搭載したコンパクトなエッジ AI システムで、リアルタイムのマルチチャネル画像処理向けに 26 TOPS の性能を発揮します。クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC、および多彩なインターフェースにより、産業用 AI アプリケーションへのシームレスな統合を実現します。
+reComputer Industrial R21xx シリーズは Raspberry Pi CM5 と Hailo-8 AI アクセラレータを搭載したコンパクトなエッジ AI システムで、リアルタイムのマルチチャネル映像処理向けに 26 TOPS の性能を発揮します。クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC、および多彩なインターフェースにより、産業用 AI アプリケーションへのシームレスな統合を実現します。
 
 ## ハードウェア要件
 
-以下のハードウェアを準備する必要があります
+以下のハードウェアを用意してください
 
 - reComputer Industrial R21xx x 1
 - ホストコンピュータ（Windows/Mac/Linux）x 1
@@ -66,13 +66,13 @@ reComputer Industrial R21xx シリーズは Raspberry Pi CM5 と Hailo-8 AI ア�
 
 イメージの書き込みが成功するまで続けてください。
 
-USB-C ポートを抜き、再度ブートボタンを押してから電源をオン/オフします。システムに正常にログインできれば、イメージの書き込みは成功しており、通常どおり使用できます。
+USB-C ポートを抜き、再度ブートボタンを押して電源をオン/オフします。正常にシステムへログインできれば、イメージの書き込みは成功しており、通常どおり使用できます。
 
 ### MAC ホストコンピュータの場合
 
 :::caution
 **以下の手順を進める前に [homebrew](https://brew.sh/) をインストールする必要があります。**
-ターミナルを開き、```brew -V``` と入力して正しく homebrew 環境がセットアップされているか確認してください。インストール済みの homebrew 環境のバージョンが表示されるはずです。
+ターミナルを開き、```brew -V``` と入力して正しく homebrew 環境がセットアップされているか確認してください。インストールされている homebrew 環境のバージョンが表示されるはずです。
 :::
 
 - **Step 1.** [このリンク](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)にアクセスして **Raspberry Pi Imager** アプリケーションをダウンロードしてインストールします
@@ -85,19 +85,19 @@ USB-C ポートを抜き、再度ブートボタンを押してから電源を�
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-ここで **ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定** などを行うことができます
+ここで、**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定** などを行うことができます
 
 - **Step 4.** **CHOOSE OS** をクリックし、希望する OS を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** など他の OS を選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**Ubuntu Desktop 24.04 lts** など他の OS を選択できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 または、次のリンクを使用してイメージファイルをダウンロードすることもできます：
 
-[raspberry-pi 用 Ubuntun](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 5.** **CHOOSE STORAGE** をクリックします
 
@@ -132,7 +132,7 @@ rpi-imager
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-ここで **ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定** などを行うことができます
+ここで、**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定** などを行うことができます
 
 - **Step 5.** **CHOOSE OS** をクリックし、希望する OS を選択します
 
@@ -144,7 +144,7 @@ rpi-imager
 
 または、次のリンクを使用してイメージファイルをダウンロードすることもできます：
 
-[raspberry-pi 用 Ubuntun](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 6.** **CHOOSE STORAGE** をクリックし、接続されている eMMC ドライブを選択します
 
@@ -156,13 +156,13 @@ rpi-imager
 結果は次のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="800" height="auto"/></p>
 
-## NVME から起動する
+## NVME からのブート
 
-### EEPROM を更新する
+### EEPROM の更新
 
-*この方法は SSD を搭載し、eMMC からデバイスを正常に起動できている場合に有効です。システムが最新の Raspberry Pi システム（Bookworm 以降）であり、RPi 5 のファームウェアが 2023-12-06（12 月 6 日）以降に更新されていることを確認してください。そうでない場合、NVME 関連の設定を認識しない可能性があります。*
+*この方法は SSD を搭載し、eMMC からの起動に成功している場合に有効です。システムが最新の Raspberry Pi システム（Bookworm 以降）であり、RPi 5 のファームウェアが 2023-12-06（12 月 6 日）以降に更新されていることを確認してください。そうでない場合、NVME 関連の設定が認識されない可能性があります。*
 
-**Step 1**：Raspberry Pi システムが最新（Bookworm 以降）であることを確認し、次のコマンドを入力して RPi 5 ファームウェアを更新します：
+**Step 1**：Raspberry Pi システムが最新（Bookworm 以降）であることを確認し、次のコマンドを入力して RPi 5 のファームウェアを更新します：
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -181,7 +181,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
-ここでは `No` を選択します。`latest` ブートローダーを使用したいからです。
+ここでは `No` を選択します - `latest` ブートローダーを使用したいからです。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_4.png" alt="pir" width="800" height="auto" /></div>
 
@@ -199,7 +199,7 @@ rpi-imager
 
 ### Raspberry Pi を NVMe SSD から起動するように設定する
 
-SD カードスロットに簡単にアクセスできる場合は、Pi の電源を切り、SD カードを取り出すことで（すべてが期待どおりに動作していれば）次回起動時に自動的に NVMe ドライブから起動するはずです。SD カードをそのまま挿した状態で NVMe から起動したい場合は、ブート順を変更する必要があります。
+SD カードスロットへ簡単にアクセスできる場合は、Pi の電源を切り、SD カードを取り出せば（すべてが期待どおりに動作していれば）次回起動時に自動的に NVMe ドライブから起動するはずです。SD カードをそのまま挿した状態で NVMe から起動したい場合は、ブート順序を変更する必要があります。
 
 **Step 1**：次のコマンドを入力します：
 
@@ -222,7 +222,7 @@ SD カードスロットに簡単にアクセスできる場合は、Pi の電�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ 4**：`Back` を選択するか Esc キーを押して最初の画面に戻ります。次に、右カーソルキーを使用して Finish に移動します。
+**ステップ 4**：`Back` を選択するか Esc キーを押して最初の画面に戻ります。その後、カーソルの右キーを使って Finish に移動します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>
 
@@ -230,10 +230,43 @@ SD カードスロットに簡単にアクセスできる場合は、Pi の電�
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
+## ドライバのインストール
+reComputer R1000 には必要なドライバがあらかじめプリインストールされているため、追加のドライバをインストールする必要はありません。ただし、自分で新しい OS をフラッシュした場合は、必要なドライバを別途インストールする必要があります。
 
-## 技術サポートと製品ディスカッション
+**注意：** 次のコマンドは、/boot/firmware/ パスと apt パッケージ名が特定であるため、**Ubuntu 24.04**（Noble Numbat）専用です。
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+1. 依存関係の更新とインストール
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install git net-tools minicom -y
+```
+
+2. Seeed DTOverlays のクローンとインストール
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays
+sudo ./scripts/reTerminal.sh --device reComputer-R2x
+```
+3. config.txt でハードウェアオーバーレイを設定
+```bash
+sudo sed -i 's/^dtparam=spi=on/# dtparam=spi=on/' /boot/firmware/config.txt
+sudo sed -i 's/^dtparam=i2c_arm=on/# dtparam=i2c_arm=on/' /boot/firmware/config.txt
+sudo sed -i '$a dtoverlay=reComputer-R21' /boot/firmware/config.txt
+```
+4. 変更を適用
+```bash
+sudo reboot
+```
+5. 検証コマンド
+```bash
+ls -l /dev/serial/by-id/                # Check RS485/232 (ttyACM0/1)
+ip addr show | grep can                 # Check CAN FD (can0/1)
+sudo dmesg | grep -i mcp                # Verify MCP2518FD status
+```
+
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
