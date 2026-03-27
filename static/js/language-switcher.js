@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-25 18:24:30 (北京时间)
-// 多语言页面: 2229 个
+// 生成时间: 2026-03-27 09:22:39 (北京时间)
+// 多语言页面: 2230 个
 
 (function() {
   'use strict';
@@ -15539,6 +15539,12 @@
   "/Raspberry_Pi": [
     "cn",
     "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
+    "cn",
     "es",
     "ja",
     "pt"
