@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-27 13:57:03 (北京时间)
-// 多语言页面: 2230 个
+// 生成时间: 2026-03-27 17:54:49 (北京时间)
+// 多语言页面: 2234 个
 
 (function() {
   'use strict';
@@ -3194,6 +3194,13 @@
     "ja",
     "pt"
   ],
+  "/use_cpenclaw_to_control_the_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
@@ -4069,6 +4076,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_source_code_practical_tutorial_solar_node": [
     "cn",
     "en",
@@ -4105,6 +4119,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -4154,6 +4175,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
     "cn",
     "en",
     "es",
