@@ -125,6 +125,7 @@ openclaw.json is located in the folder of your installation openclaw. This file 
     }
   }
 ```
+
 :::note
 If you want to write your own Skills, please refer to the official writing [specification](https://agentskills.io/specification#allowed-tools-field)
 :::
@@ -194,3 +195,17 @@ Please tell the OpenClaw directly in the chat window "turn on the LED of the cam
 :::note
 The OpenClaw execution of tasks will be very slow, and complex instructions will take about two or three minutes to see the effect, so please wait patiently, this is normal.
 :::
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
