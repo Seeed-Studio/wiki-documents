@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-27 09:22:39 (北京时间)
+// 生成时间: 2026-03-27 13:57:03 (北京时间)
 // 多语言页面: 2230 个
 
 (function() {
@@ -1074,6 +1074,13 @@
     "pt"
   ],
   "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
     "cn",
     "en",
     "es",
@@ -15539,12 +15546,6 @@
   "/Raspberry_Pi": [
     "cn",
     "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
-    "cn",
     "es",
     "ja",
     "pt"
