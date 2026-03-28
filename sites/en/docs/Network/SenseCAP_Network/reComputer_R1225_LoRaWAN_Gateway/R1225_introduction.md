@@ -28,19 +28,19 @@ url: https://wiki.seeedstudio.com/r1225_introduction/
 
 ## Description
 
-reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT LoRaWAN gateway and controller, powered by the CM4 and equipped with AI capabilities. It features 3 RS485 interfaces, dual Ethernet ports, and supports BACnet and Modbus protocols, providing all the necessary functions  for a robust and reliable industrial edge IoT device. With support for AI NPU accelerators, it is an ideal solution for remote access control applications, especially in BMS, BAS, and iBMS systems.
+The reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT LoRaWAN gateway and controller, powered by the CM4 and equipped with AI capabilities. It features 3 RS485 interfaces, dual Ethernet ports, and supports BACnet and Modbus protocols, providing all the functionality needed for a robust and reliable industrial edge IoT device. With support for AI NPU accelerators, it is an ideal solution for remote access control applications, especially in BMS, BAS, and iBMS systems.
 
-## Feature
+## Features
 
-### Designed for Building Automation System
+### Designed for Building Automation Systems
 
 - Multiple isolated RS485 channels support both high-speed and low-speed communication
 
-- Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
+- Supports BACnet, Modbus RTU, and Modbus TCP/IP protocols
 - Up to 4GB of RAM supports the processing of thousands of data points
 - Clear dual-sided LED indicators allow users to quickly check the operational status
-- High-quality metal case, compatible with DIN-rail and Wall installation
-- Open-source Software Seeed Gateway OS，ChirpStack, Basics™ Station, Packet Forwarder build-in. Supports customization and secondary development.
+- High-quality metal case, compatible with DIN-rail and wall mounting
+- Open-source software including Seeed Gateway OS，ChirpStack, Basics™ Station, and a built-in packet forwarder. Supports customization and secondary development.
 
 ### Powerful Performance
 
@@ -55,19 +55,19 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
 
 - On-chip BLE
 
-- Mini-PCIe1: LTE
+- Mini-PCle1: LTE
   - 4G version pre-installed with LTE module:
     - EU868: EC25-EUX-mini-PCIe (LTE Cat 4)
     - US915: EC25-AFXGA-mini-PCIe (LTE Cat 4)
 
-- Mini-PCIe2: Pre-installed SPI LoRa® module
+- Mini-PCle2: Pre-installed SPI LoRa® module
   - EU868: Wio-WM1302 LoRaWAN Gateway Module (SPI) - EU868
   - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915
   
 ### Rich Interfaces
 
 - 3x RS485 (isolated)
-- 1x 10M/100M/1000M Ethernet (Support PoE)
+- 1x 10M/100M/1000M Ethernet (Supports PoE)
 - 1x 10M/100M Ethernet
 - 1x HDMI 2.0
 - 2x Type-A USB2.0
@@ -77,9 +77,9 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
 ### Safety and Reliability
 
 - Hardware Watchdog
-- UPS Supercapacitor(**included**)
+- UPS supercapacitor (**included**)
 - Metal casing with PC side panels
-- ESD: EN61000-4-2,level 3
+- ESD: EN61000-4-2, level 3
 - EFT: EN61000-4-4, level 2
 - Surge: EN61000-4-5, level 2
 - Production Lifetime: reComputer R1225 will remain in production until at least December 2030
@@ -126,12 +126,12 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2-pin Terminal Block</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE(as powered device)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af Standard 12.95W PoE</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE(as a powered device)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af standard, 12.95W </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Supply Voltage(AC/DC)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12&#126;24V AC/9&#126;36V DC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12&#126;24 V AC/9&#126;36 V DC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Overvoltage Protection</td>
@@ -139,7 +139,7 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Consumption</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>                 </td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}> comming soon </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Switch</td>
@@ -195,19 +195,19 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI(reserved)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports LCD*(on board within the enclosure)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI (reserved)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports LCD* (on board within the enclosure)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Wireless Communication</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi 2.4/5.0 GHz</td>
+      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi: 2.4/5.0 GHz</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>On-chip Wi-Fi</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>Yes</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE 5.0</td>
+      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE: 5.0</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>On-chip BLE</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>Yes</td>
     </tr>
@@ -328,7 +328,7 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Weight(Net)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g;R1225 with 4G module: 800g</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750 g; R1225 with 4G module: 800 g</td>
     </tr>
   </tbody>
 </table>
@@ -350,13 +350,13 @@ reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT Lo
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
-The reComputer R1225 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1225 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506).  **A PoE module (SKU:110991925) is included**, providing additional power supply flexibility.
+The reComputer R1225 supports three power supply options: AC, DC terminal and PoE . By default, the reComputer R1225 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506).  **A PoE module (SKU:110991925) is included**, providing additional power supply flexibility.
 
-### 2-Pin Power terminal
+### 2-Pin Power Terminal
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-The reComputer R1225 is supplied with a nominal AC voltage of 12&#126;24  V or DC voltage of 9&#126;36V. The power supply is connected via the 2-pin power terminal block connector. To properly ground the device, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+The reComputer R1225 supports a nominal input voltage of 12&#126;24  V or DC voltage of 9&#126;36V. The power supply is connected via the 2-pin power terminal block connector. To properly ground the device, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that **regardless of how the power supply's positive and negative terminals are connected**, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
