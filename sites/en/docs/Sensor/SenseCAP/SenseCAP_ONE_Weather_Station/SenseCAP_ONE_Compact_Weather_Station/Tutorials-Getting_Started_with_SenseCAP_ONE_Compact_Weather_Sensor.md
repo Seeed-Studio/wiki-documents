@@ -42,7 +42,7 @@ V1 and V2 weather stations can be identified by **the SKU on the white label** o
 Additionally, the USB Type-C port is located differently: on V1, it is on the same side as the white label, while on V2, it is on the opposite side.
 
 :::tip
-The following weather station series are available in both V1 and V2 versions.
+The following weather stations have been updated to V2: S500, S700, S900, and S1000.
 :::
 
 | Product Name | V1 SKU    | V2 SKU    |
@@ -51,7 +51,9 @@ The following weather station series are available in both V1 and V2 versions.
 | S500         | 101990693 | 101991021 |
 | S600-A       |    None   | 101991232 |
 | S700         | 101990787 | 101991022 |
+| S700-A       |    None   | 101991050 |
 | S700-B       |    None   | 101991102 |
+| S700-C       |    None   | 101991141 |
 | S800         |    None   | 101991023 |
 | S900         | 101990784 |    None   |
 | S1000        | 101990902 | 101991024 |
