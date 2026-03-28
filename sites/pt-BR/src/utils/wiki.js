@@ -1,6 +1,50 @@
 const docList = [
   [
     {
+      "path": "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg",
+      "title": "Getting Started with Jetson-Claw on Orin Nano / NX 8GB",
+      "date": "03/26/2026",
+      "title_cn": "在 Orin Nano / NX 8GB 上快速上手 Jetson-Claw",
+      "title_ja": "Orin Nano / NX 8GB での Jetson-Claw 入門",
+      "title_es": "Introducción a Jetson-Claw en Orin Nano / NX 8GB",
+      "title_pt": "Introdução ao Jetson-Claw no Orin Nano / NX 8GB"
+    },
+    {
+      "path": "/ai_robotics_reachy_fleet_dance",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.png",
+      "title": "Control Multiple Reachy Mini Robots with a Fleet Dance Console on Jetson",
+      "date": "03/25/2026",
+      "title_cn": "在 Jetson 上通过集群舞蹈控制台控制多台 Reachy Mini 机器人",
+      "title_ja": "Jetson 上のフリートダンスコンソールで複数の Reachy Mini ロボットを制御する",
+      "title_es": "Controla múltiples robots Reachy Mini con una consola de baile de flota en Jetson",
+      "title_pt": "Controle vários robôs Reachy Mini com um console de dança de frota no Jetson"
+    }
+  ],
+  [
+    {
+      "path": "/bluetooth_beacon02_for_sensecap_tracker",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Tracker/bc02-outdoor-bluetooth-beacon.webp",
+      "title": "BC02 Outdoor Bluetooth Beacon",
+      "date": "2026-03-24",
+      "title_cn": "BC02 室外蓝牙 Beacon",
+      "title_ja": "BC02 屋外用 Bluetooth Beacon",
+      "title_es": "Baliza Bluetooth para exteriores BC02",
+      "title_pt": "Beacon Bluetooth Externo BC02"
+    },
+    {
+      "path": "/bluetooth_beacon03_for_tracker_introduction",
+      "image": "https://files.seeedstudio.com/wiki/BC03/1-BC03-Bluetooth-Beacon.webp",
+      "title": "BC03 Indoor Bluetooth Beacon Introduction",
+      "date": "2026-03-24",
+      "title_cn": "BC03 室内 Bluetooth Beacon 介绍",
+      "title_ja": "BC03 屋内 Bluetooth ビーコン概要",
+      "title_es": "Introducción a la baliza Bluetooth de interior BC03",
+      "title_pt": "Introdução ao Beacon Bluetooth Indoor BC03"
+    }
+  ],
+  [
+    {
       "path": "/getting_started_with_openclaw_on_recomputer",
       "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg",
       "title": "Getting Started with OpenClaw on reComputer Industrial",
@@ -85,50 +129,6 @@ const docList = [
       "title_ja": "reTerminal D シリーズ概要",
       "title_es": "Descripción general de reTerminal D Serie",
       "title_pt": "Visão Geral da reTerminal D Série"
-    }
-  ],
-  [
-    {
-      "path": "/get_started_with_meshcore_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp",
-      "title": "Get Started with MeshCore on SenseCAP Solar Node",
-      "date": "3/6/2026",
-      "title_cn": "在 SenseCAP Solar Node 上开始使用 MeshCore",
-      "title_ja": "SenseCAP Solar Node で MeshCore を使い始める",
-      "title_es": "Comienza con MeshCore en SenseCAP Solar Node",
-      "title_pt": "Primeiros Passos com MeshCore no SenseCAP Solar Node"
-    },
-    {
-      "path": "/sound_event_detection_module_home_assistant",
-      "image": "https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp",
-      "title": "Home Assistant and Sound Event Detection Module",
-      "date": "2026-03-04",
-      "title_cn": "Home Assistant 与声音事件检测模块",
-      "title_ja": "Home Assistant と Sound Event Detection Module",
-      "title_es": "Home Assistant y Módulo de Detección de Eventos de Sonido",
-      "title_pt": "Home Assistant e Módulo de Detecção de Eventos Sonoros"
-    }
-  ],
-  [
-    {
-      "path": "/lerobot_dataset_tool",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "Lerobot Dataset Tool",
-      "date": "2026-03-02",
-      "title_cn": "Lerobot数据集工具",
-      "title_ja": "Lerobot データセットツール",
-      "title_es": "Herramienta de Conjunto de Datos de LeRobot",
-      "title_pt": "Ferramenta de Dataset do LeRobot"
-    },
-    {
-      "path": "/getting_started_with_ee03",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg",
-      "title": "Getting Started with XIAO ePaper Display Board - EE03",
-      "date": "2026-03-02",
-      "title_cn": "XIAO 电子纸显示板 EE03 快速上手",
-      "title_ja": "XIAO ePaper Display Board - EE03 入門ガイド",
-      "title_es": "Primeros pasos con la XIAO ePaper Display Board - EE03",
-      "title_pt": "Primeiros passos com a placa de display XIAO ePaper - EE03"
     }
   ]
 ];

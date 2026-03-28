@@ -34,6 +34,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_Quick_Start.md'), //3.13
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Firmware Development Tutorial', 'firmware_development_t1000e.md'), //3.18
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Firmware Development Tutorial', 'firmware_development.md'), //3.18
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_picovoice.md'), //3.24
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Bluetooth_Beacon', 'BC03_Indoor_Bluetooth_Beacon', 'BC03_Indoor_Bluetooth_Beacon_User_Guide.md'), //3.24
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
