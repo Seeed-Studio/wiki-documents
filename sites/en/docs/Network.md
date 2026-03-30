@@ -35,9 +35,9 @@ Seeed offers a large variety of networking products that integrates perfectly wi
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Industrial Edge IoT Gateway</font></div>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway Quick Start</font></span></a>
+            <a href="/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway Quick Start</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>

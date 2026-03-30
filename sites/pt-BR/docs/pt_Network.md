@@ -1,5 +1,5 @@
 ---
-description: Capacidades robustas de rede integram perfeitamente a ampla gama de sensores e dispositivos da Seeed, permitindo um fluxo coeso de dados e comunicação em todo o ecossistema de produtos, desbloqueando novas possibilidades para monitoramento, automação e tomada de decisões inteligentes.
+description: Recursos robustos de rede integram perfeitamente a ampla gama de sensores e dispositivos da Seeed, permitindo um fluxo coeso de dados e comunicação em todo o ecossistema de produtos, desbloqueando novas possibilidades para monitoramento, automação e tomada de decisões inteligentes.
 title: Conectividade de Rede
 keywords:
   - Rede de Sensores
@@ -9,13 +9,13 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-26'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/pt-br/Network/
 ---
 
-Capacidades robustas de rede integram perfeitamente a ampla gama de sensores e dispositivos da Seeed, permitindo um fluxo coeso de dados e comunicação em todo o ecossistema de produtos, desbloqueando novas possibilidades para monitoramento, automação e tomada de decisões inteligentes.
+Recursos robustos de rede integram perfeitamente a ampla gama de sensores e dispositivos da Seeed, permitindo um fluxo coeso de dados e comunicação em todo o ecossistema de produtos, desbloqueando novas possibilidades para monitoramento, automação e tomada de decisões inteligentes.
 
-A Seeed oferece uma grande variedade de produtos de rede que se integram perfeitamente com nossa linha de produtos; você também pode encontrá-los em Sensor:
+A Seeed oferece uma grande variedade de produtos de rede que se integram perfeitamente à nossa linha de produtos; você também pode encontrá-los em Sensor:
 
 - **Dispositivos de rede para sensores industriais**
 
@@ -28,16 +28,16 @@ A Seeed oferece uma grande variedade de produtos de rede que se integram perfeit
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCAP Gateway</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway fornece quilômetros de cobertura de rede sem fio e capacidade de transmissão de dados para dispositivos Long Range / LoRaWAN® </font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>SenseCAP Gateway oferece quilômetros de cobertura de rede sem fio e capacidade de transmissão de dados para dispositivos Long Range / LoRaWAN® </font></div>
     </div>
 </div>
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Industrial Edge IoT</font></div>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/pt-br/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guia de início rápido do reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/pt-br/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Início rápido do reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
@@ -58,7 +58,7 @@ A Seeed oferece uma grande variedade de produtos de rede que se integram perfeit
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Flux-Platform</font></div>
             <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Visão geral do SenseCAP M4 Square</font></span></a>
             <br/>
-            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guia de início rápido do SenseCAP M4 Square</font></span></a>
+            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Início rápido do SenseCAP M4 Square</font></span></a>
             <br/>
             <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>FAQ do SenseCAP M4 Square</font></span></a>
             <br/>
@@ -73,22 +73,22 @@ A Seeed oferece uma grande variedade de produtos de rede que se integram perfeit
 <div class="independent_container">
 <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway Helium-Platform</font></div>
-            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guia de início rápido do SenseCAP M1</font></span></a>
+            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Início rápido do SenseCAP M1</font></span></a>
             <br/>
             <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Console local do SenseCAP M1</font></span></a>
             <br/>
-            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guia de início rápido do SenseCAP M2 Data Only</font></span></a>
+            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Início rápido do SenseCAP M2 Data Only</font></span></a>
             <br/>
             <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Console local do SenseCAP M2 Data Only</font></span></a>
             <br/>
-            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Guia de início rápido do SenseCAP M2 Light Gateway</font></span></a>
+            <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Início rápido do SenseCAP M2 Light Gateway</font></span></a>
             <br/>
             <a href="/pt-br/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>FAQ do SenseCAP M2 Light Gateway</font></span></a>
             <br/>
     </div>
 </div>
 
-### Roteadores para outras infraestruturas de rede
+### Roteadores para outra infraestrutura de rede
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -170,7 +170,7 @@ A Seeed oferece uma grande variedade de produtos de rede que se integram perfeit
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>RF</font></div>
-            <a href="/pt-br/Grove-Serial_RF_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Serial RF Pro </font></span></a>
+            <a href="/pt-br/Grove-Serial_RF_Pro" target="_blank"><span><font color={'FFFFFF'} size={"2"}> RF Serial Pro </font></span></a>
             <br/>
             <a href="/pt-br/Grove-125KHz_RFID_Reader" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Leitor RFID 125KHz </font></span></a>
             <br/>
