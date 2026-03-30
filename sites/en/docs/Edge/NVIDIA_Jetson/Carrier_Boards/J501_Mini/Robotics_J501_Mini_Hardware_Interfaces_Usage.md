@@ -15,10 +15,9 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/recomputer_j501_mini_getting_started/
 ---
-
 # Robotics J501 carrier board Hardware and Getting Started
 
 The Robotics J501 Mini carrier is a compact, high-performance edge AI carrier board designed for advanced robotics. Compatible with NVIDIA Jetson AGX Orin modules (32GB/64GB) in MAXN mode, it delivers up to 275 TOPS of AI performance. Equipped with extensive connectivity options—including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/BT modules, 2 USB 3.2 ports, CAN, GMSL2 (via optional expansion), I2C, and UART—it serves as a powerful robotic brain capable of processing complex data from various sensors. Pre-installed with JetPack 6.2.1 and Linux BSP, it ensures seamless deployment.​
