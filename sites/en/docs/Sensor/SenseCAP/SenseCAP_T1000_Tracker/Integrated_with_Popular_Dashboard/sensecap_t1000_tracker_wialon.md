@@ -9,7 +9,7 @@ last_update:
   date: 6/4/2024
   author: Jessie
 createdAt: '2024-06-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Wialon/
 ---
 

@@ -1,17 +1,20 @@
 ---
 description: reComputer R1225 LoRaWAN 网关快速入门
-title:  reComputer R1225 LoRaWAN 网关快速入门
+title: reComputer R1225 LoRaWAN 网关快速入门
 keywords:
-- 网关
-- SenseCAP
-- 边缘控制器
-- reComputer R1225 
+  - 网关
+  - SenseCAP
+  - 边缘控制器
+  - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_quick_start
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 03/13/2026
   author: Kian
+createdAt: '2026-03-19'
+url: https://wiki.seeedstudio.com/cn/r1225_quick_start/
+updatedAt: '2026-03-26'
 ---
 
 # 快速入门

@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/1.5W_Solar_Panel_81x137/
 ---
 ![](https://files.seeedstudio.com/wiki/1.5W_Solar_Panel_81x137/img/1.5W.jpg)

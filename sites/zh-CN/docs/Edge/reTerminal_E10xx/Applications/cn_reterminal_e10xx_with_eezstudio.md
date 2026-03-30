@@ -8,7 +8,7 @@ last_update:
   date: 09/11/2025
   author: Jason
 createdAt: '2025-09-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-22'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_eezstudio/
 ---
 

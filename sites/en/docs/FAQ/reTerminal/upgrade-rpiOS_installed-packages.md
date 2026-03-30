@@ -7,7 +7,7 @@ last_update:
   date: 6/21/2023
   author: cheng.tang
 createdAt: '2023-06-21'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-06'
 url: https://wiki.seeedstudio.com/upgrade-rpiOS_installed-packages/
 ---
 

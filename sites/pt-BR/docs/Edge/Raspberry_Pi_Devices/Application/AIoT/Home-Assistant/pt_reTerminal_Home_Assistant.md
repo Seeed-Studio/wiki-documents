@@ -8,7 +8,7 @@ last_update:
   date: 1/31/2023
   author: jianjing Huang
 createdAt: '2022-11-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal_Home_Assistant/
 ---
 

@@ -8,7 +8,7 @@ last_update:
   date: 9/11/2025
   author: Twelve
 createdAt: '2024-08-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/watcher_local_deploy/
 ---
 

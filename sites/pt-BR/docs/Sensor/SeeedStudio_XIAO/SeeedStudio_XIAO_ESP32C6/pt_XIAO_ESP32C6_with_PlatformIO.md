@@ -9,7 +9,7 @@ last_update:
   date: 08/13/2024
   author: Jason
 createdAt: '2024-08-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c6_with_platform_io/
 ---
 

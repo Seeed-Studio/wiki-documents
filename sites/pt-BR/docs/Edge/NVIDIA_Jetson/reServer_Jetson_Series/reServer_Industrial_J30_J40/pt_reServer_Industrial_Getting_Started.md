@@ -10,7 +10,7 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-04'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reServer_Industrial_Getting_Started/
 ---
 

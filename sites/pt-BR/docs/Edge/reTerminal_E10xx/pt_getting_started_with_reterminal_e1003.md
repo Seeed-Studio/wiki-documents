@@ -7,6 +7,9 @@ slug: /getting_started_with_reterminal_e1003
 last_update:
   date: 3/19/2026
   author: Jackson.Li
+createdAt: '2026-03-19'
+url: https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003/
+updatedAt: '2026-03-25'
 ---
 
 # Introdução ao reTerminal E1003

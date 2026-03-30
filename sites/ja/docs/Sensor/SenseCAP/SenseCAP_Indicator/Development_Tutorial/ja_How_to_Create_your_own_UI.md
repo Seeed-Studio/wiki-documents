@@ -10,7 +10,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_How_to_Create_your_own_UI/
 ---
 # **独自のUIを作成する方法**

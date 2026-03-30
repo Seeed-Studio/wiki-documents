@@ -13,7 +13,7 @@ last_update:
   date: 3/14/2024
   author: Kasun Thushara
 createdAt: '2024-12-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/raspberry_pi_4g_hat_ecm_mobile_internet/
 ---
 

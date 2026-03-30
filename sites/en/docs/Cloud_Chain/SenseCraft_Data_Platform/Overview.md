@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-10'
 url: https://wiki.seeedstudio.com/cloud/sensecraft-data/sensecraft-data-platform/overview/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 1/31/2023
   author: shuxu hu
 createdAt: '2023-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Seeeduino_Mega_Protoshield_Kit/
 ---
 ![](https://www.seeedstudio.com/images/large/product/protomega_LRG.jpg)

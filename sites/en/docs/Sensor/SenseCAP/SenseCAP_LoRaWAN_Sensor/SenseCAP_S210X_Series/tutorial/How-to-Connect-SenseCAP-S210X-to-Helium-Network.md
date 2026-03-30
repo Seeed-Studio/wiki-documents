@@ -9,7 +9,7 @@ last_update:
   date: 11/26/2023
   author: Leo
 createdAt: '2023-02-26'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-Helium-Network/
 ---
 

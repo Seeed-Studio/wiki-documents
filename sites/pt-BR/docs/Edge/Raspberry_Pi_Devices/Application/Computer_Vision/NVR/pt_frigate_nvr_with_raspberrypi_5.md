@@ -12,7 +12,7 @@ last_update:
   author: Joshua Lee
 no_comments: false
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/frigate_nvr_with_raspberrypi_5/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/DSO_Nano/
 ---
 DSO Nano 是一款单通道手持示波器，适用于快速现场测量及其他用途。您会发现它非常易于使用，但它仍然是一款令人惊叹的小工具。

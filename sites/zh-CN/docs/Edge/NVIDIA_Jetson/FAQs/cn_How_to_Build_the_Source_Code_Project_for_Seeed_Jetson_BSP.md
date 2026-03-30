@@ -11,7 +11,7 @@ last_update:
   date: 08/04/2025
   author: Dayu
 createdAt: '2025-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/how_to_build_the_source_code_project_for_seeed_jetson_bsp/
 ---
 

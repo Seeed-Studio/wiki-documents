@@ -11,7 +11,7 @@ last_update:
   date: 12/30/2025
   author: Zeller
 createdAt: '2025-12-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_pin_multiplexing/
 ---
 

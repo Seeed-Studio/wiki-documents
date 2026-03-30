@@ -11,7 +11,7 @@ last_update:
   date: 8/11/2025
   author: Kasun Thushara
 createdAt: '2025-07-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_i2s/
 ---
 

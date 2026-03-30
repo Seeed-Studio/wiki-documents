@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Xadow_Tutorial_Acceleration_Detector/
 ---
 We have made an acceleration detector, it detects the acceleration and reminds users by vibrating. When the acceleration changes, the Xadow Vibration will vibrate and the Oled will display the accelerometer value. You can also see the current battery voltage on the OLED display.

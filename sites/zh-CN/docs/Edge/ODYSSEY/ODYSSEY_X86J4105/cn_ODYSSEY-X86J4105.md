@@ -8,7 +8,7 @@ last_update:
   date: 2023/03/16
   author: Lakshantha
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/ODYSSEY-X86J4105/
 ---
 

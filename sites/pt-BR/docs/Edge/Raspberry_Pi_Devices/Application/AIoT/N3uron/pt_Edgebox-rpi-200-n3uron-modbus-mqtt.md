@@ -15,7 +15,7 @@ last_update:
   date: 5/10/2024
   author: Kasun Thushara and Xabier Fernández
 createdAt: '2024-05-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Edgebox_rpi_200_N3uron_modbus_mqtt_aws/
 ---
 ## Introdução

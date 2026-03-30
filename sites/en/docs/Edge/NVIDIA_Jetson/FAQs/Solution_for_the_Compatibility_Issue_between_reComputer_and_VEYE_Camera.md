@@ -10,7 +10,7 @@ last_update:
   date: 08/01/2024
   author: Youjiang
 createdAt: '2024-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2024-01-10'
 url: https://wiki.seeedstudio.com/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera/
 ---
 

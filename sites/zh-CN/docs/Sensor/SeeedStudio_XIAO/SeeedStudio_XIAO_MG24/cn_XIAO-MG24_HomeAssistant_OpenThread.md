@@ -15,7 +15,7 @@ last_update:
   date: 05/5/2025
   author: Jason
 createdAt: '2025-05-08'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/xiao_mg24_ha_openthread/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 10/23/2025
   author: Zovey
 createdAt: '2025-10-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-13'
 url: https://wiki.seeedstudio.com/cn/epaper_breakout_board_with_oepl/
 ---
 

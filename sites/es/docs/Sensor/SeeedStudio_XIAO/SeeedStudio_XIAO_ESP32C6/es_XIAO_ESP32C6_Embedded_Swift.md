@@ -8,7 +8,7 @@ last_update:
   date: 2024-07-12T02:50:00.462Z
   author: Spencer
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/xiao-esp32-swift/
 ---
 # Guía de Embedded Swift con Seeed Studio XIAO-C6

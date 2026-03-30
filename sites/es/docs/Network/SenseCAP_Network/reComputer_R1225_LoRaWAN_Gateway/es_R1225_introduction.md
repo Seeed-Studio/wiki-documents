@@ -4,7 +4,7 @@ title: Descripción general de la pasarela LoRaWAN reComputer R1225
 keywords:
   - SenseCAP Network
   - Controlador de borde
-  - reComputer R1225 
+  - reComputer R1225
   - Pasarela
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
@@ -12,7 +12,7 @@ last_update:
   date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/es/r1225_introduction/
 ---
 

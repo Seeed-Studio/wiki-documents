@@ -9,7 +9,7 @@ last_update:
   date: 5/23/2023
   author: Thomas
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_ESP32_Button/
 ---
 # **Button**

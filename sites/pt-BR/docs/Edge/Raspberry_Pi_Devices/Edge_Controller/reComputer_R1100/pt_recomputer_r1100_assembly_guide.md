@@ -11,7 +11,7 @@ last_update:
   date: 2/27/2024
   author: Kasun Thushara
 createdAt: '2023-05-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/
 ---
 

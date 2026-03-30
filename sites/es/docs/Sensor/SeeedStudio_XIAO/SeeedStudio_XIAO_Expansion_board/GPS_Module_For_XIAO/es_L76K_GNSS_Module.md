@@ -13,7 +13,7 @@ last_update:
   date: 2024-10-14T00:00:00.000Z
   author: Spencer
 createdAt: '2025-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/get_start_l76k_gnss/
 ---
 

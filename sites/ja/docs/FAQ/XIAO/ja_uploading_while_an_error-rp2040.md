@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/ja/uploading_while_an_error-rp2040/
 ---
 下記の画像の設定に従って、XIAO RP2040のアップロードオプションを変更してください。デフォルトの**Small (-Os) (standard)**以外のすべてのオプションは正常に動作します。

@@ -7,7 +7,7 @@ last_update:
   date: 11/20/2022
   author: Matthew
 createdAt: '2024-07-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/ArduPy-LCD/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 05/24/2024
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Edge_Computing/
 ---
 

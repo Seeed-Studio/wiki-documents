@@ -10,7 +10,7 @@ last_update:
   date: 4/14/2025
   author: Priyanshu Roy
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680/
 ---
 

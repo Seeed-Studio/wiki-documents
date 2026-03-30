@@ -7,7 +7,7 @@ last_update:
   date: 2023/6/21
   author: Seraphina
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/log_rpios_use_ssh_over_wifi_ethernet/
 ---
 

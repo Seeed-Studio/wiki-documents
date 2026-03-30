@@ -16,7 +16,7 @@ last_update:
   date: 2025-08-21T00:00:00.000Z
   author: Zibo
 createdAt: '2025-08-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/orb_slam3_orbbec_gemini2/
 ---
 

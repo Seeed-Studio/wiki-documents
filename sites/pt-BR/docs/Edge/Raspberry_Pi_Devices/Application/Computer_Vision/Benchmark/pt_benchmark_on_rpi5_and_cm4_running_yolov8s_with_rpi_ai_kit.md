@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-07-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/
 ---
 

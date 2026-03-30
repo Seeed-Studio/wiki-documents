@@ -10,7 +10,7 @@ last_update:
   date: 12/6/2023
   author: Youjiang
 createdAt: '2023-11-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/How_to_Train_and_Deploy_YOLOv8_on_reComputer/
 ---
 

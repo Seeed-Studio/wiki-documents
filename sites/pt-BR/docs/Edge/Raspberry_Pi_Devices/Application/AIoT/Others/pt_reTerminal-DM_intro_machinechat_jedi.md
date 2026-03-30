@@ -13,7 +13,7 @@ last_update:
   date: 3/28/2024
   author: Kasun Thushara
 createdAt: '2024-03-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminalDM_Introduction_Jedi_MachineChat/
 ---
 

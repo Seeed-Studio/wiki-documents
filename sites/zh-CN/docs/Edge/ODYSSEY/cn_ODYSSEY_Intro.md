@@ -9,7 +9,7 @@ last_update:
   date: 08/09/2024
   author: Frank
 createdAt: '2023-07-21'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/cn/ODYSSEY_Intro/
 ---
 
