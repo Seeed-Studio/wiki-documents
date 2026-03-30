@@ -563,7 +563,7 @@ FPS: 128.350449 fram/s
 如果您是初学者并想快速构建自己的模型，请参考这里的 SenseCraft AI 模型训练示例。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft 训练</font></span></strong>
     </a>
 </div>

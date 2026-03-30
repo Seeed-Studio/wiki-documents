@@ -563,7 +563,7 @@ XIAOなどのArduinoデバイスを使用してプロトタイプを実現し続
 初心者で独自のモデルを素早く構築したい場合は、こちらのSenseCraft AIモデル訓練サンプルを参照してください。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft 訓練</font></span></strong>
     </a>
 </div>

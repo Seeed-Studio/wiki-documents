@@ -2,9 +2,9 @@
   "name": "wiki-pt-br",
   "private": true,
   "scripts": {
-    "start": "set SITE_LANG=pt-br&& node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs start --host 0.0.0.0",
-    "build": "set SITE_LANG=pt-br&& node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs build",
-    "serve": "set SITE_LANG=pt-br&& node ../../node_modules/@docusaurus/core/bin/docusaurus.mjs serve",
+    "start": "../../node_modules/.bin/cross-env SITE_LANG=pt-br node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs start --host 0.0.0.0",
+    "build": "../../node_modules/.bin/cross-env SITE_LANG=pt-br node --max-old-space-size=8192 ../../node_modules/@docusaurus/core/bin/docusaurus.mjs build",
+    "serve": "../../node_modules/.bin/cross-env SITE_LANG=pt-br node ../../node_modules/@docusaurus/core/bin/docusaurus.mjs serve",
     "clear": "node ../../node_modules/@docusaurus/core/bin/docusaurus.mjs clear"
   }
 }

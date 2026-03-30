@@ -563,7 +563,7 @@ If you want to continue to use Arduino devices such as the XIAO to realise your 
 If you’re a beginner and want to quickly build your own model, please refer to the SenseCraft AI model training example here.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Training</font></span></strong>
     </a>
 </div>
