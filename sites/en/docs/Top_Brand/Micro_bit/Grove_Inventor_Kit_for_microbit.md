@@ -313,7 +313,7 @@ please make sure the LED Array is faced up when you plug the micro:bit, or you m
 
   [**micro:bit Apps**](http://microbit.org/code/)
 
-  [**Grove Shield for microbit_eagle file.zip**](https://files.seeedstudio.com/wiki/Bazzar_Attachment/103030195/202001587_Grove%20Shield%20for%20BBC%20microbit%20V1.2_eagle%20file.zip)
+  [**Grove Shield for micro:bit eagle Project**](https://files.seeedstudio.com/products/103100063/Res/Grove_Shield_for_microbit_v2.2_SCH-PCB_220406.zip)
 
 ## Tech Support & Product Discussion
 
