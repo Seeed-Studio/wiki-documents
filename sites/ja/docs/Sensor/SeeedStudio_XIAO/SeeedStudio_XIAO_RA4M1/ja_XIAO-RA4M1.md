@@ -12,11 +12,10 @@ last_update:
   date: 08/15/2024
   author: Carla
 sidebar_position: 0
-createdAt: '2025-05-27'
-updatedAt: '2026-02-27'
+createdAt: '2024-08-06'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/ja/getting_started_xiao_ra4m1/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -34,37 +33,37 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-XIAO RA4M1 は、Renesas の RA4M1 チップ（最大 48 MHz 動作の 32-bit ARM® Cortex®-M4 MCU）をクラシックな XIAO フォームファクタに統合したものです。この開発ボードは、256KB Flash、32KB SRAM、8KB EEPROM、USB 2.0 コネクタ、リセットおよびブートボタン、3 つの LED、14-bit A/D コンバータ、12-bit D/A コンバータ、CAN BUS インターフェースを備えています。オンボード充電回路と低消費電力モード（最小 45μA）により、バッテリー駆動アプリケーションに最適です。Arduino Uno R4 と同じ 32-bit R7FA4M1AB3CNE マイクロコントローラを共有しており、Arduino IDE と豊富な XIAO アクセサリにネイティブ対応しているため、電子工作プロジェクトの出発点として理想的です。
+XIAO RA4M1 は、Renesas の RA4M1 チップ（32-bit ARM® Cortex®-M4 MCU、最大 48 MHz）をクラシックな XIAO フォームファクタに統合したものです。この開発ボードは、256KB フラッシュ、32KB SRAM、8KB EEPROM、USB 2.0 コネクタ、リセットおよびブートボタン、3 つの LED、14 ビット A/D コンバータ、12 ビット D/A コンバータ、CAN BUS インターフェースを備えています。オンボード充電回路と低消費電力モード（最小 45μA）により、バッテリー駆動アプリケーションに最適です。Arduino Uno R4 と同じ 32-bit R7FA4M1AB3CNE マイコンを共有しており、Arduino IDE と豊富な XIAO アクセサリにネイティブ対応しているため、電子工作プロジェクトの理想的なスタートポイントとなります。
 
 ### 特長
 
 <!-- Key Features with bullet -->
 
-- **人気のマイクロコントローラを搭載：** Renesas RA4M1 を採用し、最大 48 MHz で動作する 32-bit ARM® Cortex®-M4 R7FA4M1AB3CNE MCU、256 KB の Flash メモリ、32 KB の SRAM を備えています。
-- **充実したオンボードリソース：** 14-bit ADC、12-bit DAC、CAN BUS、USB 2.0、オンボード RGB LED を搭載しています。
-- **新たに 8 本の IO を拡張：** 既存の XIAO ボードと比較して背面に 8 本の新しい IO ピンを追加（合計 19 GPIO）し、より複雑なアプリケーションを実現できます。
-- **強力なセキュリティ機能：** ハードウェア暗号化、セキュアブート、鍵ストレージなどを内蔵し、アプリケーションのセキュリティを確保します。
+- **人気のマイコンを搭載：** Renesas RA4M1 を採用した 32-bit ARM® Cortex®-M4 R7FA4M1AB3CNE MCU を搭載し、最大 48 MHz で動作、256 KB のフラッシュメモリと 32 KB の SRAM を備えています。
+- **充実したオンボードリソース：** 14 ビット ADC、12 ビット DAC、CAN BUS、USB 2.0、オンボード RGB LED を搭載しています。
+- **新たに 8 本の IO を拡張：** 既存の XIAO ボードと比較して背面に 8 本の新しい IO ピンを追加し（合計 19 本の GPIO）、より複雑なアプリケーションを実現できます。
+- **強力なセキュリティ機能：** ハードウェア暗号化、セキュアブート、鍵ストレージなどの機能を内蔵し、アプリケーションのセキュリティを確保します。
 - **ソフトウェア互換性：** Arduino IDE と完全互換で、シームレスなプロジェクト開発とプロトタイピングが可能です。
 - **高効率な電源設計：** 4 つの動作モードを備え、ディープスリープ時の消費電流は最小 45μA、リチウムバッテリーの充電管理もサポートします。
 - **親指サイズのコンパクト設計：** 21 x 17.8mm のサイズで、Seeed Studio のクラシックな XIAO フォームファクタを採用しており、省スペースな用途に最適です。
-- **量産に適した設計：** すべての部品を表面側に配置した表面実装デバイス（SMD）設計で、両側にスタンプロールホールを備え、大量生産を容易にします。
+- **量産に適した設計：** すべての部品を表面側に配置した表面実装デバイス（SMD）設計で、両側にスタンピングホールを備え、大量生産を容易にします。
 
 ### 仕様
 
 <!-- Technical Specifications | Table | or bullet -->
-| 製品 | XIAO RA4M1 |
+| Product | XIAO RA4M1 |
 |---------|-----------|
-| **プロセッサ** | [RA4M1 - 32-bit Microcontrollers with 48MHz Arm Cortex-M4 and LCD Controller and Cap Touch for HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>48-MHz Arm® Cortex®-M4 コア（FPU 搭載） <br/>|
+| **Processor** | [RA4M1 - 32-bit Microcontrollers with 48MHz Arm Cortex-M4 and LCD Controller and Cap Touch for HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>48-MHz Arm® Cortex®-M4 コア（FPU 搭載） <br/>|
 | **RAM** | 32 KB SRAM |
 | **Flash** | 256 KB |
-| **LED** | 1x ユーザー LED<br/>1x 電源 LED<br/>1x RGB LED |
-| **インターフェース** | 19 IOs:<br/>6x アナログ<br/>19x デジタル<br/>2x IIC<br/>2x UART<br/>2x SPI |
-| **ボタン** | 1x RESET ボタン<br/>1x BOOT ボタン |
-| **セキュリティ** | AES128/256 |
-| **低消費電力（Typ.）** | `42.6μA@3.7V` |
-| **ソフトウェア互換性** | Arduino IDE |
-| **動作温度** | -20°C~70°C |
-| **寸法** | 21×17.8 mm |
+| **LEDs** | 1x ユーザー LED<br/>1x 電源 LED<br/>1x RGB LED |
+| **Interfaces** | 19 IOs:<br/>6x アナログ<br/>19x デジタル<br/>2x IIC<br/>2x UART<br/>2x SPI |
+| **Buttons** | 1x RESET ボタン<br/>1x BOOT ボタン |
+| **Security** | AES128/256 |
+| **Low Power (Typ.)** | `42.6μA@3.7V` |
+| **Software Compatibility** | Arduino IDE |
+| **Working Temperature** | -20°C~70°C |
+| **Dimensions** | 21×17.8 mm |
 
 ### ハードウェア概要
 
@@ -75,7 +74,7 @@ XIAO RA4M1 は、Renesas の RA4M1 チップ（最大 48 MHz 動作の 32-bit AR
 <!-- 引脚等的定义 -->
 <table>
  <tr>
-     <th>XIAO RA4M1 前面表示図</th>
+     <th>XIAO RA4M1 正面表示図</th>
  </tr>
     <tr>
         <br />
@@ -93,37 +92,37 @@ XIAO RA4M1 は、Renesas の RA4M1 チップ（最大 48 MHz 動作の 32-bit AR
 </table>
 
 ## **ピンマップ**
-| XIAO ピン        | 機能         | チップピン  | 代替機能                  | 説明                          | Arduino 名 |
+| XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          | Arduino Name |
 | :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: | :----------: |
-| 5V              | VBUS             |           |                                     | 電源入力/出力                   |             |
+| 5V              | VBUS             |           |                                     | 電源入力/出力                        |             |
 | GND             |                  |           |                                     |                                      |              |
-| 3V3             | 3V3_OUT          |           |                                     | 電源出力                         |              |
-| D0              | Analog          | P014      | AN009                               | GPIO, ADC                            |       0   |
-| D1              | Analog          | P000      | AN000                               | GPIO, ADC                            |          1     |
-| D2              | Analog          | P001      | AN001                               | GPIO, ADC                            |        2       |
-| D3              | Analog          | P002      | AN002                              | GPIO, ADC                            |        3   |
-| D4              | SDA1      | P206      |                                            | GPIO, I2C データ             |               4   |
-| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C クロック, ADC                 |     5    |
-| D6              | TXD2             | P302      | SDA2                                | GPIO, UART 送信,I2C              |    6     |
-| D7              | RXD2             | P301      | SCL2                                | GPIO, UART 受信,I2C               |       7  |
-| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI クロック                      |   8      |
-| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI データ,UART                  |   9      |
-| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI データ,UART                  |    10    |
-| D11             | RX9              | P408      |                                     | GPIO, UART                           |        |
-| D12             | TX9              | P409      |                                     | GPIO,UART                            |        |
+| 3V3             | 3V3_OUT          |           |                                     | 電源出力                             |              |
+| D0              | Analog          | P014      | AN009                               | GPIO、ADC                            |       0   |
+| D1              | Analog          | P000      | AN000                               | GPIO、ADC                            |          1     |
+| D2              | Analog          | P001      | AN001                               | GPIO、ADC                            |        2       |
+| D3              | Analog          | P002      | AN002                              | GPIO、ADC                            |        3   |
+| D4              | SDA1      | P206      |                                            | GPIO、I2C データ             |               4   |
+| D5              | Analog,SCL1      | P100      |                                     | GPIO、I2C クロック、ADC              |     5    |
+| D6              | TXD2             | P302      | SDA2                                | GPIO、UART 送信、I2C                 |    6     |
+| D7              | RXD2             | P301      | SCL2                                | GPIO、UART 受信、I2C                 |       7  |
+| D8              | SPI1_SCK         | P111      |                                     | GPIO、SPI クロック                   |   8      |
+| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO、SPI データ、UART               |   9      |
+| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO、SPI データ、UART               |    10    |
+| D11             | RX9              | P408      |                                     | GPIO、UART                           |        |
+| D12             | TX9              | P409      |                                     | GPIO、UART                           |        |
 | D13             | GPIO             | P013      |                                     | GPIO                                 |        |
 | D14             | GPIO             | P012      |                                     | GPIO                                 |        |
-| D15             | TXD0             | P101      | SDA0,AN021,SPI0_MOSI                | GPIO, UART 送信, ADC,SPI,I2C     |       |
-| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
-| D17             | CRX0             | P102      | AN020,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
-| D18             | CTX0             | P103      | AN019                               | GPIO, SPI ,ADC,UART                  |       |
-| ADC_BAT         |                  | P400      |                                     | BAT 電圧値を読み取る           |       |
-| Reset           |                  | RES       |                                     | リセット                                |       |
-| Boot            |                  | P201      |                                     | ブートモードに入る                      |       |
+| D15             | TXD0             | P101      | SDA0,AN021,SPI0_MOSI                | GPIO、UART 送信、ADC、SPI、I2C       |       |
+| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO、UART、SPI、I2C                 |       |
+| D17             | CRX0             | P102      | AN020,SPI0_SCK                      | GPIO、UART、ADC、SPI                 |       |
+| D18             | CTX0             | P103      | AN019                               | GPIO、SPI、ADC、UART                 |       |
+| ADC_BAT         |                  | P400      |                                     | BAT 電圧値を読み取る                 |       |
+| Reset           |                  | RES       |                                     | リセット                             |       |
+| Boot            |                  | P201      |                                     | ブートモードに入る                   |       |
 | RGB LED         |                  | P112      |                                     | RGB LED                              |    20   |
-| RGB LED         |                  | P500      |                                     | RGB LED   EN                            |    21   |
+| RGB LED         |                  | P500      |                                     | RGB LED 有効化                       |    21   |
 | CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |       |
-| USER_LED        |                  | P011      |                                     | ユーザーライト（Y）                      |    19    |
+| USER_LED        |                  | P011      |                                     | ユーザーライト（Y）                  |    19    |
 ## はじめに
 
 ### ハードウェアの準備
@@ -142,69 +141,69 @@ XIAO RA4M1 は、Renesas の RA4M1 チップ（最大 48 MHz 動作の 32-bit AR
 
 ### ソフトウェアの準備
 
-XIAO RA4M1 に推奨されるプログラミングツールは Arduino IDE です。そのため、ソフトウェアの準備として Arduino のインストールを完了する必要があります。
+XIAO RA4M1 に推奨される開発ツールは Arduino IDE です。そのためソフトウェアの準備として、Arduino のインストールを完了する必要があります。
 
 :::tip
 初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
+- **Step 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
 </div>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
+- **Step 2.** Arduino アプリケーションを起動します。
 
-- **ステップ 3.** Arduino IDE に RA4M1 ボードパッケージを追加します。
+- **Step 3.** RA4M1 ボードパッケージを Arduino IDE に追加します。
 
     **File > Preferences** に移動し、**"Additional Boards Manager URLs"** に以下の URL を入力します：
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/arduino_preference.png" style={{width:800, height:'auto'}}/></div>
 
-    **Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード **RA4M1** を入力して、**Seeed Renesas Board** の最新バージョンを選択し、インストールします。
+    **Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード **RA4M1** を入力し、**Seeed Renesas Board** の最新バージョンを選択してインストールします。
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
-- **ステップ 4.** ボードとポートを選択します。
+- **Step 4.** ボードとポートを選択します。
 
-    Arduino IDE の上部で、左側の開発ボード欄に **xiao** と入力して検索し、XIAO_RA4M1 を選択して、ポートを選択します。
+    Arduino IDE の上部で、左側の開発ボード欄に **xiao** と入力して検索し、XIAO_RA4M1 を選択し、ポートを選択します。
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/select_port.png" style={{width:800, height:'auto'}}/></div>
 
 ## ブートローダーモード
 
-誤ったプログラムを使用すると、XIAO のポートが認識されなくなったり、正しく動作しなくなることがあります。よくある問題としては次のようなものがあります：
+誤ったプログラムを使用すると、XIAO のポートが認識されなくなったり、正常に動作しなくなることがあります。よくある問題としては次のようなものがあります：
 
 - XIAO をコンピュータに接続しても、ポート番号が見つからない。
 - XIAO は接続されてポート番号も表示されるが、プログラムの書き込みに失敗する。
 
-上記 2 つの状況に遭遇した場合、XIAO をブートローダーモードにすることで、認識されないデバイスや書き込み失敗の問題のほとんどを解決できます。具体的な方法は次のとおりです：
+上記の 2 つの状況に遭遇した場合、XIAO をブートローダーモードにすることで、認識されないデバイスや書き込み失敗の問題のほとんどを解決できます。具体的な方法は次のとおりです：
 
-- **方法 1.** XIAO RA4M1 上の `BOOT` ボタンを押したまま離さないでください。
-- **方法 2.** `BOOT` ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後で BOOT ボタンを離します。
+- **Method 1.** XIAO RA4M1 上の `BOOT` ボタンを押したまま離さないでください。
+- **Method 2.** `BOOT` ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後で BOOT ボタンを離します。
 
 ## リセット
 
 プログラムが異常に動作した場合、電源投入中に `Reset` を 1 回押すことで、XIAO にアップロード済みのプログラムを再実行させることができます。
 電源投入時に `BOOT` キーを押し続け、その後 `Reset` キーを 1 回押すことで、ブートローダーモードに入ることもできます。
 
-## 最初の Blink プログラムを実行する
+## 最初の Blink プログラムを動かす
 
 ここまでで、XIAO RA4M1 の機能とハードウェアについて十分理解できたと思います。次に、最も簡単な Blink プログラムを例にして、XIAO RA4M1 で最初の点滅を行ってみましょう！
 
-- **ステップ 1.** Arduino アプリケーションを起動します。
-- **ステップ 2.** **File > Examples > 01.Basics > Blink** に移動し、プログラムを開きます。
+- **Step 1.** Arduino アプリケーションを起動します。
+- **Step 2.** **File > Examples > 01.Basics > Blink** に移動し、プログラムを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
 
-- **ステップ 3.** ボードモデルを **XIAO RA4M1** に設定し、正しいポート番号を選択してプログラムを書き込みます。
+- **Step 3.** ボードモデルを **XIAO RA4M1** に設定し、正しいポート番号を選択してプログラムを書き込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
 
 プログラムが正常に書き込まれると、次のような出力メッセージが表示され、XIAO RA4M1 の右側にあるオレンジ色の LED が点滅しているのが確認できます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink.gif" style={{width:700, height:'auto'}}/></div>
 
-おめでとうございます。これで XIAO RA4M1 向けのプログラムの作成と書き込み方法を習得しました！
+おめでとうございます。XIAO RA4M1 用のプログラムを作成して書き込む方法を習得しました！
 :::note
 XIAO RA4M1 上のユーザー LED ピンが High レベルに設定されているときのみ LED は消灯し、ピンが Low レベルに設定されているときのみ点灯します。
 :::
@@ -213,11 +212,11 @@ XIAO RA4M1 上のユーザー LED ピンが High レベルに設定されてい�
 
 XIAO RA4M1 には制御可能な内蔵 RGB LED が搭載されています。以下は、LED の色を赤・緑・青の間で滑らかに変化させる例です。
 
-- **ステップ 1.** `Adafruit_NeoPixel` ライブラリをダウンロードします
+- **Step 1.** `Adafruit_NeoPixel` ライブラリをダウンロードします
 
 **Sketch > Include Liarbry > Manage Libraries...** に移動し、**Adafruit_NeoPixel** を検索して、最新バージョンをインストールします。
 
-- **ステップ 2.** 以下のコードを新しいスケッチにコピーします：
+- **Step 2.** 次のコードを新しいスケッチにコピーします：
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -258,17 +257,17 @@ void loop() {
 
 ```
 
-- **ステップ 3.** ボードモデルを **XIAO RA4M1** に設定し、正しいポート番号を選択してプログラムを書き込みます。
+- **Step 3.** ボードモデルを **XIAO RA4M1** に設定し、正しいポート番号を選択してプログラムを書き込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
 ## バッテリーと電源管理
 
-追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RA4M1 ならこれまでになく簡単です。以前の XIAO ファミリー、例えば [XIAO ESP32C3](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) では、バッテリー電圧を読み取るには抵抗を使って手動で A0 に接続する必要がありました。
+追加のコンポーネントなしでバッテリー電圧を読み取ることは可能でしょうか？はい、XIAO RA4M1 ならこれまでになく簡単です。以前の XIAO ファミリー（[XIAO ESP32C3](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) など）では、バッテリー電圧を読み取るには抵抗を使って手動で A0 に接続する必要がありました。
 
 しかし XIAO RA4M1 では、このプロセスが簡略化されています。`BAT_DET_PIN/P105` ピンを直接使用してバッテリー電圧レベルを読み取ることができ、設計と開発を効率化できます。バッテリーレベルの読み取りを有効にするには、`BAT_READ_EN/P400` ピンを High に設定する必要があることを忘れないでください。
 
-- **ステップ 1.** ハードウェアの準備
+- **Step 1.** ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -293,9 +292,9 @@ void loop() {
  </tr>
 </table>
 
-XIAO エクスパンションボード上の OLED ディスプレイは I2C プロトコルを使用しており、ボード上の I2C 回路を介して XIAO の I2C インターフェースに接続されています。そのため、XIAO をエクスパンションボードに直接挿し込み、画面に表示させるプログラムを書くことができます。
+XIAO 拡張ボード上の OLED ディスプレイは I2C プロトコルを使用しており、ボード上の I2C 回路を介して XIAO の I2C インターフェースに接続されています。そのため、XIAO を拡張ボードに直接挿し込み、画面に表示するようにプログラムすることができます。
 
-- **ステップ 2.** u8g2 ライブラリをインストールします。
+- **Step 2.** u8g2 ライブラリをインストールします。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
@@ -303,7 +302,7 @@ XIAO エクスパンションボード上の OLED ディスプレイは I2C プ�
     </a>
 </div>
 
-- **ステップ 3.** コードをコピーして Ardiono IDE に貼り付けます。
+- **Step 3.** コードをコピーして Arduino IDE に貼り付けます。
 
 ```cpp
 #include <Arduino.h>
@@ -343,7 +342,7 @@ void loop() {
 
 ```
 
-- **ステップ 4.** ボードモデルを **XIAO RA4M1** に選択し、正しいポート番号を選択してプログラムをアップロードします
+- **ステップ 4.** ボードモデルを **XIAO RA4M1** に選択し、正しいポート番号を選択してプログラムを書き込みます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/voltage.png" style={{width:600, height:'auto'}}/></div>
 
@@ -354,17 +353,17 @@ void loop() {
 - **📄[回路図]** [XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
 - **🗃️[PCB 設計ファイル]** [XIAO RA4M1 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
 - **🗃️[PCB ライブラリ]** 
-  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## トラブルシューティング
 
 ### Q1: ピンをはんだ付けする際に注意すべき点は何ですか
 
-XIAO RA4M1 は非常に小型であるため、ヘッダをはんだ付けする際は注意してください。異なるピン同士をくっつけないようにし、シールドや他の部品にはんだが付着しないようにしてください。そうしないと、XIAO が短絡したり正常に動作しなくなる可能性があり、その結果生じた損害はユーザーの責任となります。
+XIAO RA4M1 は非常に小型であるため、ヘッダーピンをはんだ付けする際は十分に注意してください。異なるピン同士をはんだでつなげないようにし、シールドや他の部品にはんだが付着しないようにしてください。そうしないと、XIAO が短絡したり正常に動作しなくなる可能性があり、その結果生じた問題についてはユーザーの自己責任となります。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

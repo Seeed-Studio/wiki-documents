@@ -1,6 +1,6 @@
 ---
 description: Usando Arduino na sua placa XIAO RP2350
-title: Primeiros Passos com Seeed Studio XIAO RP2350 (Arduino)
+title: Introdução ao Seeed Studio XIAO RP2350 (Arduino)
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP2350-45font_1.webp
 slug: /xiao_rp2350_arduino
 sidebar_position: 1
@@ -8,10 +8,9 @@ last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
 createdAt: '2024-10-30'
-updatedAt: '2026-03-12'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/pt-br/xiao_rp2350_arduino/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -21,16 +20,16 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
 
 ## Recursos
 
-- **Placa MCU poderosa:** Equipada com o chip Raspberry Pi RP2350, com dois núcleos Arm Cortex-M33 simétricos @ 150MHz com FPU.
+- **Placa MCU poderosa:** Equipada com um chip Raspberry Pi RP2350 com dois núcleos Arm Cortex-M33 simétricos @ 150MHz com FPU.
 - **Recursos de segurança aprimorados:** Boot seguro integrado e bootloader criptografado garantem a segurança da aplicação.
 - **Suporte de software:** Compatível com C/C++ e MicroPython, garantindo desenvolvimento e prototipagem de projetos com facilidade.
 - **Ricos recursos onboard:** Integra um LED RGB, 2MB de Flash, 520kB de SRAM e 19 GPIOs multifunção (Analógico, Digital, I²C, UART, SPI, PWM).
-- **8 novos IOs expandidos:** Em comparação com MCUs XIAO anteriores, a adição de 8 pinos IO na parte de trás suporta aplicações mais complexas.
-- **Design de energia eficiente:** Consumo ultrabaixo de apenas 50μA em modo de sono, permitindo alimentação por bateria. A medição direta da tensão da bateria via IO interno aprimora o sistema de gerenciamento de bateria (BMS).
-- **Design compacto do tamanho de um polegar:** Medindo 21 x 17,8mm, adotando o clássico formato XIAO da Seeed Studio, ideal para aplicações com restrição de espaço.
-- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos tipo stamp em ambos os lados, facilitando a produção em massa eficiente.
+- **8 novos IOs expandidos:** Em comparação com os MCUs XIAO anteriores, a adição de 8 pinos IO na parte traseira suporta aplicações mais complexas.
+- **Projeto de energia eficiente:** Consumo ultrabaixo de apenas 50μA em modo de suspensão, permitindo alimentação por bateria. A medição direta da tensão da bateria via IO interno aprimora o sistema de gerenciamento de bateria (BMS).
+- **Design compacto do tamanho de um polegar:** Medindo 21 x 17,8 mm, adotando o formato clássico XIAO da Seeed Studio, ideal para aplicações com restrição de espaço.
+- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos em forma de selo em ambos os lados, facilitando a produção em massa eficiente.
 
-## Especificação
+## Especificações
 
 <table>
   <tr>
@@ -90,24 +89,24 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
   </tr>
 </table>
 
-## Visão Geral do Hardware
+## Visão geral do hardware
 
 <div class="table-center">
 <table align="center">
  <tr>
-     <th>Pinout Frontal da XIAO RP2350</th>
+     <th>Pinagem frontal do XIAO RP2350</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-front.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Front Pinout" /></div></td>
  </tr>
     <tr>
-     <th>Pinout Traseiro da XIAO RP2350</th>
+     <th>Pinagem traseira do XIAO RP2350</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
  </tr>
     <tr>
-     <th>Componentes da XIAO RP2350</th>
+     <th>Componentes do XIAO RP2350</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-components.png" style={{width:480, height:'auto'}} alt="XIAO RP2350 Components" /></div></td>
@@ -115,33 +114,33 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
 </table>
 </div>
 
-Precisa de mais detalhes sobre os pinouts? Navegue até [Assets and Resources](#assets--resources) abaixo.
+Precisa de mais detalhes sobre a pinagem? Navegue até [Assets and Resources](#assets--resources) abaixo.
 
 
-## **Mapa de Pinos**
-| Pino XIAO               | Função    | Pino do Chip | Funções Alternativas | Descrição                             |
-| :---------------------: | :-------: | :----------: | :------------------: | :----------------------------------- |
-| 5V                      | VBUS       |              |                    | Entrada/Saída de Alimentação         |
+## **Mapa de pinos**
+| Pino XIAO               | Função    | Pino do chip | Funções alternativas | Descrição                            |
+| :---------------------: | :-------: | :----------: | :------------------: | :---------------------------------- |
+| 5V                      | VBUS       |              |                    | Entrada/Saída de energia             |
 | GND                     |            |              |                    |                                      |
-| 3V3                     | 3V3_OUT    |              |                    | Saída de Alimentação                 |
+| 3V3                     | 3V3_OUT    |              |                    | Saída de energia                     |
 | D0                      | Analógico  | GPIO26       |                    | GPIO, ADC                            |
 | D1                      | Analógico  | GPIO27       |                    | GPIO, ADC                            |
 | D2                      | Analógico  | GPIO28       |                    | GPIO, ADC                            |
 | D3                      | SPIO_CSn   | GPIO5        |                    | GPIO, SPI                            |
-| D4                      | SDA1       | GPIO6        |                    | GPIO, Dados I2C                      |
-| D5                      | SCL1       | GPIO7        |                    | GPIO, Clock I2C                      |
-| D6                      | TX0        | GPIO0        |                    | GPIO, Transmissão UART               |
-| D7                      | RX0        | GPIO1        |                    | GPIO, Recepção UART                  |
-| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, Clock SPI                      |
-| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, Dados SPI                      |
-| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, Dados SPI                      |
-| D11                     | RX1        | GPIO21       |                    | GPIO, Recepção UART                  |
-| D12                     | TX1        | GPIO20       |                    | GPIO, Transmissão UART               |
-| D13                     | SCL0       | GPIO17       |                    | GPIO, Clock I2C                      |
-| D14                     | SDA0       | GPIO16       |                    | GPIO, Dados I2C                      |
-| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO, Dados SPI                      |
-| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, Dados SPI                      |
-| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, Clock SPI                      |
+| D4                      | SDA1       | GPIO6        |                    | GPIO, dados I2C                      |
+| D5                      | SCL1       | GPIO7        |                    | GPIO, clock I2C                      |
+| D6                      | TX0        | GPIO0        |                    | GPIO, transmissão UART               |
+| D7                      | RX0        | GPIO1        |                    | GPIO, recepção UART                  |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, clock SPI                      |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, dados SPI                      |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, dados SPI                      |
+| D11                     | RX1        | GPIO21       |                    | GPIO, recepção UART                  |
+| D12                     | TX1        | GPIO20       |                    | GPIO, transmissão UART               |
+| D13                     | SCL0       | GPIO17       |                    | GPIO, clock I2C                      |
+| D14                     | SDA0       | GPIO16       |                    | GPIO, dados I2C                      |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO, dados SPI                      |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, dados SPI                      |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, clock SPI                      |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
 | ADC_BAT                 |            | GPIO29       |                    | Ler o valor de tensão da bateria     |
 | Reset                   |            | RUN          |                    | RUN                                  |
@@ -151,19 +150,19 @@ Precisa de mais detalhes sobre os pinouts? Navegue até [Assets and Resources](#
 | USER_LED                |            | GPIO25       |                    | Luz do usuário_Amarela               |
 ## Pré-requisitos
 
-Para começar, certifique-se de que você tenha:
+Para começar, certifique-se de ter:
 
 - Uma placa RP2350
 - A IDE Arduino
 - Um cabo USB
 
-## Configurando o Software
+## Configurando o software
 
-### 1. Instalar a IDE Arduino
+### 1. Instale a IDE Arduino
 
 Baixe e instale a versão mais recente da IDE Arduino no site oficial: [Arduino Software](https://www.arduino.cc/en/software).
 
-### 2. Adicionar suporte à placa RP2350
+### 2. Adicione o suporte à placa RP2350
 
 1. Abra a IDE Arduino e navegue até **File** > **Preferences**.
 2. No campo **Additional Boards Manager URLs**, adicione esta URL:
@@ -182,58 +181,58 @@ Baixe e instale a versão mais recente da IDE Arduino no site oficial: [Arduino 
 6. Após a instalação, vá em **Tools** > **Board** e selecione a placa mostrada abaixo como sua placa.
 
 :::note
-Certifique-se de instalar a versão 4.2.0 ou superior para suporte completo à placa XIAO RP2350.
+Certifique-se de instalar a versão 4.2.0 ou posterior para suporte completo à placa XIAO RP2350.
 :::
 
 <div style={{ textAlign: 'center' }}>
 <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-board-option.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
 </div>
 
-### 3. Enviando um Sketch
+### 3. Enviando um sketch
 
-Antes de enviar um sketch, coloque sua XIAO RP2350 no modo BOOT. Use um dos métodos abaixo:
+Antes de enviar um sketch, coloque seu XIAO RP2350 em modo BOOT. Use um dos métodos abaixo:
 
 <Tabs>
 <TabItem value="method1" label="Método 1: Antes de conectar ao computador" default>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Conecte o cabo-> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Conecte o cabo -> Solte Boot</em></div></div>
 
 </TabItem>
 
 <TabItem value="method2" label="Método 2: Enquanto conectado ao computador">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Clique em Reset-> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Clique em Reset -> Solte Boot</em></div></div>
 
 </TabItem>
 </Tabs>
 
 1. Abra a IDE Arduino e crie um novo sketch.
 2. Escreva seu código. Por exemplo, use o código de exemplo `Blink`.
-3. Vá em **Tools** > **Port** e selecione a porta em que sua RP2350 está conectada.
+3. Vá em **Tools** > **Port** e selecione a porta onde seu RP2350 está conectado.
 
 <div style={{ textAlign: 'center' }}>
 <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-firmware-upload.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
 </div>
 
 
-## Ativos & Recursos
+## Ativos e recursos
 
 
-**Design de Hardware**
+**Design de hardware**
 - **📄[Datasheet]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
 - **📄[Esquemático]** [XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
-- **🗃️[Arquivos de Design de PCB]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
-- **🗃️[Bibliotecas de Design de PCB]** 
-  - [XIAO Série Pegadas KiCad](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [XIAO Série Símbolos SCH KiCad](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de Pinout]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
+- **🗃️[Arquivos de design de PCB]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[Bibliotecas de design de PCB]** 
+  - [Pegadas KiCad da série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad da série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de pinagem]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
-**Design Mecânico**
-- **📄[Dimensões 2D]** [Dimensão do XIAO RP2350 em DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+**Design mecânico**
+- **📄[Dimensões 2D]** [Dimensões do XIAO RP2350 em DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
 - **🔗[Modelo 3D]** [Modelo 3D do XIAO RP2350](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
-**Software & Ferramentas**
-- **📄[Firmware de Teste]** [Firmware de Teste de Baixo Consumo do XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
+**Software e ferramentas**
+- **📄[Firmware de teste]** [Firmware de teste de baixo consumo do XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
 **Outros**
 - **📄[Documento]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
@@ -243,9 +242,9 @@ Antes de enviar um sketch, coloque sua XIAO RP2350 no modo BOOT. Use um dos mét
 - **📄[Documento]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
   - O livro que documenta as APIs do Pico C/C++ SDK
  - **📄[arduino-pico GitHub]**(https://github.com/earlephilhower/arduino-pico)
-- **📄[Documentação do Core Arduino-Pico]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
+- **📄[Documentação do núcleo Arduino-Pico]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
 
-## Suporte & Discussão
+## Suporte e discussão
 
 Obrigado por usar produtos Seeed! Oferecemos vários canais para suporte e discussão com a comunidade:
 
