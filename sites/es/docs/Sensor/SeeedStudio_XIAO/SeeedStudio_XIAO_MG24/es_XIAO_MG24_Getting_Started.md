@@ -12,7 +12,7 @@ last_update:
   author: Jason
 sidebar_position: 0
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 ---
 

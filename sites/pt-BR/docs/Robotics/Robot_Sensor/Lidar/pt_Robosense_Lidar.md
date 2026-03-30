@@ -13,7 +13,7 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 createdAt: '2024-07-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/robosense_lidar/
 ---
 # Como usar o RoboSense LiDAR no reComputer

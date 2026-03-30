@@ -11,7 +11,7 @@ last_update:
   date: 04/02/2024
   author: Jack Mu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/ma_deploy_yolov8/
 ---
 

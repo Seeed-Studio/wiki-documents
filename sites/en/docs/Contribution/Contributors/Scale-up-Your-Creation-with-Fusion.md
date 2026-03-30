@@ -9,7 +9,7 @@ last_update:
   date: 03/01/2023
   author: Matthew
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2023-03-06'
 url: https://wiki.seeedstudio.com/Scale-up-Your-Creation-with-Fusion/
 ---
 

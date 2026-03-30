@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/AT_Command_Tester/
 ---
 [AT Command Tester](https://m2msupport.net/m2msupport/module-tester/)   é uma ferramenta online para testar comandos AT e outras funcionalidades do módulo, como [data call](https://m2msupport.net/m2msupport/data-call-at-commands-to-set-up-gprsedgeumtslte-data-call/), [voice call](https://m2msupport.net/m2msupport/voice-call-at-commands-to-set-up-voice-call/),[HTTP](https://m2msupport.net/m2msupport/at-command-for-http-functions-for-remote-server-data-access/), [network registration](https://m2msupport.net/m2msupport/network-registration/), [SMS](https://m2msupport.net/m2msupport/sms-at-commands/), [Phonebook](https://m2msupport.net/m2msupport/sim-phonebook-at-commands/), [signal quality](https://m2msupport.net/m2msupport/signal-quality/), [SIM interface](https://m2msupport.net/m2msupport/sim-at-commands-for-sim-presense-and-status/), [device info](https://m2msupport.net/m2msupport/at-commands-to-get-device-information/) etc.

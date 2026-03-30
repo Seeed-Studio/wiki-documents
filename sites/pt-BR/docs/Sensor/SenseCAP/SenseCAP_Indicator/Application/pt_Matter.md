@@ -12,7 +12,7 @@ last_update:
   date: 8/28/2023
   author: Tim
 createdAt: '2023-08-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Indicator_Application_Matter/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_A205E_Flash_System/
 ---
 <!-- ---

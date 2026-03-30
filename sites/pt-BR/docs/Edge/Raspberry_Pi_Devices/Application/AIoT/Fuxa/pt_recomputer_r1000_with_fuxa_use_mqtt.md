@@ -12,7 +12,7 @@ last_update:
   date: 10/8/2024
   author: ShuishengPeng
 createdAt: '2024-06-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_r1000_fuxa_mqtt_client/
 ---
 

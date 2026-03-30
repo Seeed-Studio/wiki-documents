@@ -10,7 +10,7 @@ last_update:
   date: 10/18/2023
   author: Yvonne
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9/
 ---
 

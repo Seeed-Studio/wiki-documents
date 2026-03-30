@@ -3,7 +3,7 @@ sidebar_position: 6
 title: ライセンス
 slug: /License
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-05-28'
 url: https://wiki.seeedstudio.com/ja/License/
 ---
 ## **重要なお知らせおよび免責事項**

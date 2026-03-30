@@ -10,7 +10,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Grove-Mini_Camera/
 ---
 

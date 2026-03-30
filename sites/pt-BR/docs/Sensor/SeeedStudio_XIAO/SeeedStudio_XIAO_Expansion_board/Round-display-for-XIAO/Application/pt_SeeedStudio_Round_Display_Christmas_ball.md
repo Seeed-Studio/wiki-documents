@@ -11,7 +11,7 @@ last_update:
   date: 12/08/2024
   author: Bruno Santos
 createdAt: '2024-12-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/round_display_christmas_ball/
 ---
 

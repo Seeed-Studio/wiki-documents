@@ -10,7 +10,7 @@ last_update:
   date: 11/17/2023
   author: Spencer
 createdAt: '2023-05-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/SenseCAP_Indicator_Dive_into_the_Hardware/
 ---
 # **Overview**

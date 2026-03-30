@@ -8,7 +8,7 @@ last_update:
   date: 04/18/2024
   author: Parker
 createdAt: '2024-04-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/H68KV2_install_system/
 ---
 

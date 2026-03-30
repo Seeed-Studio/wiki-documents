@@ -11,7 +11,7 @@ last_update:
   date: 7/21/2025
   author: TienjuiWong
 createdAt: '2025-07-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/
 ---
 

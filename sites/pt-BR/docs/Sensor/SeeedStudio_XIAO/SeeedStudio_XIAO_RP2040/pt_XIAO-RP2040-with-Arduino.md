@@ -9,7 +9,7 @@ last_update:
   date: 1/24/2023
   author: Spencer
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-with-Arduino/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 07/02/2024
   author: Kasun Thushara
 createdAt: '2024-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/
 ---
 

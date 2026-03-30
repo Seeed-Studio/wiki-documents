@@ -13,7 +13,7 @@ last_update:
   date: 04/10/2024
   author: ZhuYaoHui
 createdAt: '2024-10-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/mid360/
 ---
 # Como usar o MID360 LiDAR no reComputer

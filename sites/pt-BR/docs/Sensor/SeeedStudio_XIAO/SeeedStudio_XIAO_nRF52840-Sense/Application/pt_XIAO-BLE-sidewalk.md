@@ -10,7 +10,7 @@ last_update:
   date: 05/17/2023
   author: Citric
 createdAt: '2023-05-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/xiao-ble-sidewalk/
 ---
 

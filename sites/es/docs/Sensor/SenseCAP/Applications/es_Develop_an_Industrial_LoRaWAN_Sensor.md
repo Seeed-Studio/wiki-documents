@@ -11,7 +11,7 @@ last_update:
   date: 9/15/2023
   author: Jessie
 createdAt: '2023-09-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/develop_an_industrial_lorawan_sensor/
 ---
 

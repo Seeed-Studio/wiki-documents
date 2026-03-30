@@ -9,7 +9,7 @@ last_update:
   date: 5/23/2023
   author: Thomas
 createdAt: '2023-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_LoRa/
 ---
 # **LoRa®**

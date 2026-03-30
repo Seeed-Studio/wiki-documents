@@ -7,7 +7,7 @@ last_update:
   date: 6/28/2023
   author: cheng.tang
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/ja/battery_charging_considerations/
 ---
 

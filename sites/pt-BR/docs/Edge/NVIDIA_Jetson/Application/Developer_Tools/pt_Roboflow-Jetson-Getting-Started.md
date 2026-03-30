@@ -12,7 +12,7 @@ last_update:
   date: 10/26/2023
   author: Lakshantha
 createdAt: '2023-10-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Roboflow-Jetson-Getting-Started/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 01/08/2026
   author: Dayu
 createdAt: '2026-01-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-08'
 url: https://wiki.seeedstudio.com/deal_the_issue_of_UUID/
 ---
 

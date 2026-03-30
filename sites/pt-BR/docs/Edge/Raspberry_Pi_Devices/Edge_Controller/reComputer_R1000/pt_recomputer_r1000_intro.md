@@ -11,7 +11,7 @@ last_update:
   date: 10/08/2024
   author: Kasun Thushara
 createdAt: '2024-07-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1000_intro/
 ---
 

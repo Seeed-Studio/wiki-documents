@@ -11,7 +11,7 @@ last_update:
   date: 04/27/2023
   author: Peter Pan
 createdAt: '2023-04-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/reTerminal-DM-Node-Red-mqtt/
 ---
 # reTerminal DM MQTT with Node-RED

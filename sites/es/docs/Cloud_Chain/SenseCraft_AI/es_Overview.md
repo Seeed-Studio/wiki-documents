@@ -10,7 +10,7 @@ last_update:
   date: 11/28/2024
   author: Citric
 createdAt: '2024-11-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/overview/
 ---
 

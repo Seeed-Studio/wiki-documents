@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: Matthew
 createdAt: '2023-12-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-22'
 url: https://wiki.seeedstudio.com/ja/edge_ai_topic/
 ---
 

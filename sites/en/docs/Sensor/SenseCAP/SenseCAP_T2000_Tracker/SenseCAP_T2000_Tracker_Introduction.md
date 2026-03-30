@@ -10,7 +10,7 @@ last_update:
   date: 1/5/2026
   author: Janet
 createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/
 ---
 

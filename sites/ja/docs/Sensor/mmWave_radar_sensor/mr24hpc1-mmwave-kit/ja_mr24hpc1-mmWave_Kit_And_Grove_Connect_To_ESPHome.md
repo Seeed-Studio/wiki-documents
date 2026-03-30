@@ -10,7 +10,7 @@ last_update:
   date: 12/09/2023
   author: Allen
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/ja/mmWave_Kit_And_Grove_Connect_To_ESPHome/
 ---
 

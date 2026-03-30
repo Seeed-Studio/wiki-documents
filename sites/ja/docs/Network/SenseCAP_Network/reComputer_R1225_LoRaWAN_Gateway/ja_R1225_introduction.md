@@ -4,7 +4,7 @@ title: reComputer R1225 LoRaWAN ゲートウェイ概要
 keywords:
   - SenseCAP Network
   - エッジコントローラ
-  - reComputer R1225 
+  - reComputer R1225
   - ゲートウェイ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
@@ -12,7 +12,7 @@ last_update:
   date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/ja/r1225_introduction/
 ---
 
@@ -24,25 +24,27 @@ url: https://wiki.seeedstudio.com/ja/r1225_introduction/
     </a>
 </div>
 
+# 概要
+
 ## 説明
 
-reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産業用 IoT LoRaWAN ゲートウェイ兼コントローラであり、CM4 によって駆動され、AI 機能を備えています。3 つの RS485、デュアルイーサネット、BACnet および Modbus をサポートし、堅牢で信頼性の高い産業用エッジ IoT デバイスに必要なすべての機能を備えています。AI NPU アクセラレータとの互換性により、特に BMS、BAS、iBMS などのリモートアクセス制御に最適です。
+reComputer R1225 は、CM4 を搭載し AI 機能を備えた、強力かつ柔軟な産業用 Raspberry Pi ベースの IoT LoRaWAN ゲートウェイ兼コントローラです。3 つの RS485 インターフェース、デュアル Ethernet ポートを備え、BACnet および Modbus プロトコルをサポートし、堅牢で信頼性の高い産業用エッジ IoT デバイスに必要なすべての機能を提供します。AI NPU アクセラレータをサポートしており、特に BMS、BAS、iBMS システムにおけるリモートアクセス制御アプリケーションに最適なソリューションです。
 
 ## 特長
 
 ### ビルオートメーションシステム向けに設計
 
-- 複数の絶縁 RS485 チャネルにより、高速および低速通信をサポート
+- 複数の絶縁 RS485 チャネルにより、高速および低速通信の両方をサポート
 
 - BACnet、Modbus RTU、および Modbus TCP/IP プロトコルをサポート
-- 最大 4GB RAM により数千のデータポイント処理をサポートし、高効率なパフォーマンスを実現
+- 最大 4GB の RAM により、数千のデータポイントの処理をサポート
 - 両面のわかりやすい LED インジケータにより、動作状態を素早く確認可能
 - 高品質な金属ケースで、DIN レールおよび壁面取り付けに対応
-- オープンソースソフトウェア Seeed Gateway OS、ChirpStack、Basics™ Station、Packet Forward を内蔵。カスタマイズおよび派生開発をサポート。
+- オープンソースソフトウェア Seeed Gateway OS、ChirpStack、Basics™ Station、Packet Forwarder を内蔵。カスタマイズおよび二次開発に対応。
 
 ### 強力なパフォーマンス
 
-- Raspberry Pi CM4 搭載
+- Raspberry Pi CM4 を搭載
 
 - Broadcom BCM2711 クアッドコア Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
 - 最大 4GB RAM および 32GB eMMC
@@ -82,7 +84,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
 - サージ: EN61000-4-5, レベル 2
 - 製品ライフタイム: reComputer R1225 は少なくとも 2030 年 12 月まで生産継続予定
 
-## 命名規則
+## 型番ルール
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
@@ -102,11 +104,11 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>CPU</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4, Quad-core Cortex-A72@ 1.5GHz</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4, クアッドコア Cortex-A72@ 1.5GHz</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>オペレーティングシステム</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS, Ubuntu</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS、Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RAM</td>
@@ -125,7 +127,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE（受電デバイスとして）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af 標準 12.95W PoE</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af 準拠 12.95W PoE</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>電源電圧（AC/DC）</td>
@@ -174,11 +176,11 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM カードスロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準 SIM カード対応</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準 SIM カードに対応</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2 スロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSD 対応</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSD に対応</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LED</td>
@@ -241,7 +243,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>周囲条件</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>保護等級</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>IP 等級</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IP40</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -295,7 +297,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>予約済み</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>将来の使用または拡張のために指定されています。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>将来の使用または拡張のために確保されています。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>オプション</td>
@@ -303,7 +305,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>使用中</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>現在使用中であり、製品機能に不可欠です。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>現在使用されており、製品機能に不可欠です。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>同梱</td>
@@ -326,7 +328,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>重量(正味)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g；R1225（4G モジュール付き）：800g</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g；4G モジュール搭載 R1225：800g</td>
     </tr>
   </tbody>
 </table>
@@ -334,7 +336,7 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
 
 ### 免責事項
 
-**「*」が付いているオプションは、付属品リストに従って追加購入が必要です。**
+**＊印の付いたオプションは、付属品リストに従って別途購入が必要です。**
 
 ## ハードウェア概要
 
@@ -348,54 +350,56 @@ reComputer R1225 は、Raspberry Pi をベースにした強力で柔軟な産�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
-reComputer R1225 は、AC、DC 端子、および PoE ポートの 3 種類の電源供給オプションをサポートします。デフォルトでは、reComputer R1225 は AC/DC 端子（公式地域別電源アダプタ SKU:110061505/110061506）から給電され、**PoE 電源供給（PoE モジュール、SKU:110991925）が同梱されています**。これにより、電源の選択に柔軟性が生まれ、さまざまな電源ソースとの容易な統合が可能になります。
+reComputer R1225 は、AC、DC 端子、PoE ポートの 3 種類の電源供給方式に対応しています。デフォルトでは、reComputer R1225 は AC/DC 端子（公式地域別電源アダプタ SKU:110061505/110061506）から給電されます。**PoE モジュール（SKU:110991925 が同梱）により**、電源供給の柔軟性がさらに高まります。
 
 ### 2 ピン電源端子
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1225 は、公称 AC 電圧 12&#126;24V または DC 電圧 9&#126;36V で給電されます。電源は 2 ピン電源端子ブロックコネクタを介して接続されます。reComputer R1225 を接地するには、電源端子左上のネジにアース線を固定します。
+reComputer R1225 は、定格 AC 電圧 12&#126;24V または DC 電圧 9&#126;36V で給電されます。電源は 2 ピン電源端子ブロックコネクタを介して接続されます。装置を適切に接地するために、電源端子左上のネジにアース線を固定することができます。
 
 :::note
-この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを使用しており、AC と DC の両方の入力に対応しています。これにより、**電源のプラス端子とマイナス端子がどのように接続されていても**回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
+この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを採用しており、AC と DC の両方の入力に対応しています。これにより、**電源のプラス端子とマイナス端子の接続方向にかかわらず**、回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
 :::
 
 ### POE（同梱）
 
-PoE モジュールを取り付けることで、reComputer R1225 の ETH0 ポートは PoE 給電をサポートし、Ethernet 経由でデバイスに電源を供給する便利で効率的な方法を提供します。このオプションにより、設置作業が簡素化され、必要な配線の本数が削減されるため、電源が限られているアプリケーションや電源コンセントが容易に利用できない環境に最適なソリューションとなります。
+PoE モジュールを取り付けることで、reComputer R1225 の ETH0 ポートは PoE 給電に対応し、Ethernet 経由で装置に電源を供給する便利で効率的な方法を提供します。このオプションにより、設置作業が簡素化され、必要な配線本数が削減されるため、電源が限られている環境やコンセントが容易に利用できない用途に最適なソリューションとなります。
 
 - PoE 入力：範囲 44~57V、標準 48V
 - PoE 出力：12V、最大 1.1A
 
 :::note
-reComputer R1225 に付属する PoE モジュールは IEEE 802.3af 規格に準拠しており、最大 12.95W の電力供給が可能である点に注意してください。**そのため、SSD や 4G モジュールなどの高消費電力の周辺機器を接続する必要がある場合、PoE 給電だけでは十分でない可能性があります。**この場合、デバイスの安定かつ信頼性の高い動作を確保するために、代わりに AC/DC 端子から給電することを推奨します。
+reComputer R1225 に付属する PoE モジュールは IEEE 802.3af 規格に準拠しており、最大 12.95W の電力供給が可能である点にご注意ください。**そのため、SSD や 4G モジュールなどの高消費電力の周辺機器を接続する必要がある場合、PoE 給電だけでは十分でない可能性があります。**この場合は、装置の安定かつ信頼性の高い動作を確保するために、AC/DC 端子からの給電を推奨します。
 :::
 
 ### 消費電力
 
-reComputer R1225 の消費電力については、Seeed Studio のラボで測定した下記の表を参照してください。この値はあくまで参考値であり、テスト方法や環境によって結果が変動する可能性がある点にご注意ください。
+reComputer R1225 の消費電力については、Seeed Studio のラボで測定した値を以下の表に示します。なお、この値はあくまで参考値であり、テスト方法や環境の違いにより結果が変動する場合があります。
 
-待機中のテスト
+消費電力の表は近日中に更新されます。
 
-| 状態      | 電圧  | 電流  | 消費電力 | 説明                                                                                                              |
-|   ---    |   --- |  ---  |    ---   | ---                                                                                                               |
-| シャットダウン |24V   |  mA  |    W    | シャットダウンおよび電源オフ状態での静的消費電力テスト。                                                         |
-| アイドル |24V    |  mA   |    W     | テストプログラムを実行せずに、reComputer R1225 デバイスへ 24V 電源を供給した際の入力電流をテストします。          |
-| フルロード |24V   |  mA   |    W     | "stress -c 4" コマンドを使用して CPU をフルロードで動作させます。外部デバイスは未接続の状態です。                |
+<!--
+| Status   | Voltage | Current | Power Consumption | Description                                                                                                         |
+|   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
+|Shutdown  |24V      |  mA     |    W              | Static power consumption test in shutdown and power-off state.                                                      |
+|Idle      |24V      |  mA     |    W              | To test the input current when supplying 24V power to the reComputer R1225 device without running any test programs.|
+|Full Load |24V      |  mA     |    W              | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected.                   |
+-->
 
-### 電源オンと電源オフ
+### 電源オン／オフ
 
-reComputer R1225 にはデフォルトで電源ボタンが搭載されておらず、電源が接続されるとシステムは自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。システムを再起動するには、再度電源を接続するだけです。
+reComputer R1225 には標準で電源ボタンは搭載されておらず、電源が接続されるとシステムは自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。システムを再起動するには、電源を再接続するだけでかまいません。
 
 :::note
-シャットダウン後は、内部コンデンサが完全に放電されるよう、システムを再起動する前に**少なくとも 10 秒**待ってください。
+シャットダウン後は、内部コンデンサが完全に放電するよう、システムを再起動する前に**少なくとも 10 秒**お待ちください。
 :::
 
 ## ブロック図
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Block_Diagram05.jpg" /></div>
 
-### IIC 図
+### IIC 回路図
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig10.png" /></div>
 
@@ -455,7 +459,7 @@ reComputer R1225 にはデフォルトで電源ボタンが搭載されておら
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD* 対応（筐体内に搭載）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD＊対応（筐体内に実装）</td>
     </tr>
   </tbody>
 </table>
@@ -471,51 +475,51 @@ cat /sys/kernel/debug/gpio
 
 ### LED インジケータの状態
 
-reComputer R1225 には 6 つの LED インジケータが搭載されており、機器の動作状態を示します。各 LED の具体的な機能と状態については、以下の表を参照してください。
+reComputer R1225 には 6 つの LED インジケータが搭載されており、装置の動作状態を示します。各 LED の具体的な機能と状態については、以下の表を参照してください。
 
 | LED インジケータ | 色             | 状態 | 説明                                                                         |
-| ------------- | -------------- | ---- | ---------------------------------------------------------------------------- |
-| PWR           | 緑             | On   | デバイスが電源に接続されています。                                          |
-|               |                | Off  | デバイスが電源に接続されていません。                                        |
-| ACT           | 緑             |      | Linux では、このピンは eMMC アクセスを示すために点滅します。<br /> 起動中にエラーが発生した場合、この LED はエラーコードに対応した点滅パターンを示し、[Raspberry Pi のウェブサイト上の表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を使用して解読できます。 |
-| USER          | 緑/赤/青       |      | ユーザーによって定義する必要があります。                                    |
-| RS485-1       | 緑             | Off  | RS485 チャネル 1 でデータ転送が行われていません。                           |
-|               |                | Blink| RS485 チャネル 1 がデータを送受信しています。                               |
-| RS485-2       | 緑             | Off  | RS485 チャネル 2 でデータ転送が行われていません。                           |
-|               |                | Blink| RS485 チャネル 2 がデータを送受信しています。                               |
-| RS485-3       | 緑             | Off  | RS485 チャネル 3 でデータ転送が行われていません。                           |
-|               |                | Blink| RS485 チャネル 3 がデータを送受信しています。                               |
+| ------------- | -------------- | ------ | -------------------------------------------------------------------------- |
+| PWR           | 緑             | On     | 装置が電源に接続されています。                                              |
+|               |                | Off    | 装置が電源に接続されていません。                                            |
+| ACT           | 緑             |        | Linux では、このピンは eMMC アクセスを示すために点滅します。<br /> 起動中にエラーが発生した場合、この LED はエラーコードに対応したパターンで点滅し、<br />そのパターンは[Raspberry Pi のウェブサイト上の表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を用いて読み取ることができます。|
+| USER          | 緑／赤／青     |        | ユーザーによって定義する必要があります。                                    |
+| RS485-1       | 緑             | Off    | RS485 チャンネル 1 でデータ転送が行われていません。                         |
+|               |                | Blink  | RS485 チャンネル 1 がデータを送受信しています。                             |
+| RS485-2       | 緑             | Off    | RS485 チャンネル 2 でデータ転送が行われていません。                         |
+|               |                | Blink  | RS485 チャンネル 2 がデータを送受信しています。                             |
+| RS485-3       | 緑             | Off    | RS485 チャンネル 3 でデータ転送が行われていません。                         |
+|               |                | Blink  | RS485 チャンネル 3 がデータを送受信しています。                             |
 
 #### ACT ステータス表
 
-| **長い点滅** | **短い点滅** | **ステータス**                      |
+| **長い点滅** | **短い点滅** | **ステータス**                         |
 | ---------------- | ----------------- | ----------------------------------- |
-| 0                | 3                 | 一般的な起動失敗                   |
-| 0                | 4                 | start*.elf が見つかりません        |
-| 0                | 7                 | カーネルイメージが見つかりません   |
-| 0                | 8                 | SDRAM 障害                         |
-| 0                | 9                 | SDRAM 不足                         |
-| 0                | 10                | HALT 状態                          |
-| 2                | 1                 | パーティションが FAT ではない      |
-| 2                | 2                 | パーティションからの読み取り失敗   |
-| 2                | 3                 | 拡張パーティションが FAT ではない  |
-| 2                | 4                 | ファイル署名/ハッシュ不一致 - Pi 4 |
-| 4                | 4                 | 非対応のボードタイプ               |
-| 4                | 5                 | 致命的なファームウェアエラー       |
-| 4                | 6                 | 電源障害タイプ A                   |
-| 4                | 7                 | 電源障害タイプ B                   |
+| 0                | 3                 | 一般的なブート失敗                  |
+| 0                | 4                 | start*.elf が見つかりません         |
+| 0                | 7                 | カーネルイメージが見つかりません    |
+| 0                | 8                 | SDRAM 障害                          |
+| 0                | 9                 | SDRAM 不足                          |
+| 0                | 10                | HALT 状態                           |
+| 2                | 1                 | パーティションが FAT ではありません |
+| 2                | 2                 | パーティションからの読み取り失敗    |
+| 2                | 3                 | 拡張パーティションが FAT ではない   |
+| 2                | 4                 | ファイル署名/ハッシュ不一致 - Pi 4  |
+| 4                | 4                 | 非対応のボードタイプ                |
+| 4                | 5                 | 致命的なファームウェアエラー        |
+| 4                | 6                 | 電源障害タイプ A                    |
+| 4                | 7                 | 電源障害タイプ B                    |
 
 ACT LED が規則的な 4 回点滅パターンで点滅する場合、ブートコード（start.elf）を見つけられていません。
 ACT LED が不規則なパターンで点滅する場合は、ブート処理が開始されています。
-ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続しない状態でもう一度試して確認してください。詳細については Raspberry Pi フォーラムを参照してください。
+ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続しない状態でもう一度試してください。詳細については Raspberry Pi フォーラムを確認してください：
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
-詳細については [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151) を参照してください。
+詳細については [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151) を確認してください。
 
 #### Luci インターフェースによるカスタマイズ可能な LED ライト
 
 #### コマンドによる LED ライトの制御
 
-ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用を推奨します。sysfs は、さまざまなカーネルサブシステム、ハードウェアデバイス、およびそれらに関連するドライバに関する情報を公開します。reComputer R1225 では、ユーザー LED インターフェースを 3 つのデバイスファイル（led-red、led-blue、led-green）に抽象化しており、これらのファイルを操作するだけで LED ライトを簡単に制御できます。以下に例を示します。
+ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用を推奨します。sysfs は、さまざまなカーネルサブシステム、ハードウェアデバイス、およびそれらに関連するドライバに関する情報を公開します。reComputer R1225 では、ユーザー LED インターフェースを 3 つのデバイスファイル（led-red、led-blue、led-green）に抽象化しており、これらのファイルを操作するだけで LED ライトを簡単に制御できます。例は次のとおりです。
 
 1. 赤色 LED を点灯するには、ターミナルに次のコマンドを入力してください。
 
@@ -542,7 +546,7 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 reComputer R1225 にはアクティブブザーが搭載されており、アラームやイベント通知など、さまざまな用途に使用できます。
 
-reComputer R1225 ユーザー向け（**R1225 は R1000 v1.1 ハードウェアプラットフォームに基づいています**）。ブザーは PCA9535 の P15 に接続されています。ブザーをオフ（オン）にするには、ターミナルに次のコマンドを入力してください。
+reComputer R1225 ユーザー向け（**R1225 は R1000 v1.1 ハードウェアプラットフォームに基づいています**）に、ブザーは PCA9535 P15 に接続されています。ブザーをオフ（オン）にするには、ターミナルに次のコマンドを入力してください。
 
 ```bash
 echo 591 | sudo tee /sys/class/gpio/export
@@ -555,8 +559,8 @@ echo 0 | sudo tee /sys/class/gpio/gpio591/value # turn off
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
-reComputer R1225 には 3 ピンコネクタを使用した 3 組の RS485 インターフェースが搭載されており、信号と電源の両方が絶縁されているため、産業用および自動化アプリケーションにおいて安全かつ信頼性の高い動作を実現します。RS485A および RS485B 信号は容量結合によるアイソレーションが施されており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
-**デフォルトでは、120Ω の終端抵抗は実装されていません。ただし、パッケージボックスには表面実装抵抗が 5 個同梱されています。必要に応じて、ユーザー自身でデバイスに抵抗をはんだ付けしてください。**
+reComputer R1225 には、3 ピンコネクタを使用した 3 組の RS485 インターフェースが搭載されており、信号と電源の両方が絶縁されているため、産業用および自動化アプリケーションにおいて安全かつ信頼性の高い動作を実現します。RS485A および RS485B 信号は容量結合によるアイソレーションが施されており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
+**デフォルトでは、120Ω の終端抵抗は実装されていません。ただし、パッケージには 5 個の表面実装抵抗が同梱されています。必要に応じて、ユーザー自身でデバイスに抵抗をはんだ付けしてください。**
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
 
@@ -569,7 +573,7 @@ RS485 インターフェースは絶縁電源を使用しているため、RS485
 
 以下は、reComputer の 485 インターフェースに関連するピンのデータテーブルです。
 
-| RS485         | RS485_POWER_EN         | OS デバイスファイル | P14         | 既定値(High) |
+| RS485         | RS485_POWER_EN         | OS デバイスファイル | P14         | 既定値（High） |
 | ------------- | ---------------------- | -------------- | ----------- | ------------- |
 | TX5           |                        | /dev/ttyAMA5   | GPIO12      |               |
 | RX5           |                        |                | GPIO13      |               |
@@ -591,7 +595,7 @@ reComputer のターミナルで次を入力します。
 cat /dev/ttyAMA2
 ```
 
-その後、コンピュータのシリアルデバッグツールでいくつかのデータを送信すると、reComputer のターミナルウィンドウでそのデータを確認できます。
+その後、PC 側のシリアルデバッグツールでいくつかのデータを送信すると、reComputer のターミナルウィンドウでそのデータを確認できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/21.png" /></div>
 <br />
@@ -601,14 +605,14 @@ cat /dev/ttyAMA2
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-reComputer R1225 のブートスイッチは CM4 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらから起動するかを選択できます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に倒し、システムを Type-C USB インターフェースから起動させます。
+reComputer R1225 のブートスイッチは CM4 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらからブートするかを選択できます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC からブートさせます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に切り替え、システムを Type-C USB インターフェースからブートさせます。
 
 <div class="table-center">
 
-| スイッチ位置                                                                                                        | モード       | 説明            | nRPI-BOOT |
+| スイッチ位置                                                                                                         | モード       | 説明             | nRPI-BOOT |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | 通常モード   | eMMC から起動   | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | フラッシュモード | USB から起動 | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | 通常モード   | eMMC からブート | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | フラッシュモード | USB からブート  | High      |
 
 </div>
 
@@ -622,12 +626,12 @@ reComputer R1225 のブートスイッチは CM4 の nRPI_BOOT ピンに接続�
 
 reComputer R1225 には USB Type-C ポートが 1 つと USB Type-A ポートが 2 つ搭載されています。それぞれの機能と説明については、以下の表を参照してください。
 
-| **タイプ**   | **数量** | **プロトコル** | **機能** | **説明**                                                                            |
+| **タイプ** | **数量** | **プロトコル** | **機能**     | **説明**                                                                             |
 | ---------- | ------------ | ------------ | ------------ | ---------------------------------------------------------------------------------- |
-| **Type-C** | *1           | USB2.0       | USB-Device   | シリアルポートデバッグ、イメージ書き込みなどに使用します。                         |
-| **Type-A** | *2           | USB2.0       | USB-Host     | フラッシュドライブ、<br /> USB キーボードやマウスなど、さまざまな USB デバイスを接続します。 |
+| **Type-C** | *1           | USB2.0       | USB-Device   | シリアルデバッグやファームウェアの書き込みなどに使用します。                       |
+| **Type-A** | *2           | USB2.0       | USB-Host     | フラッシュドライブ、USB キーボード、マウスなど、さまざまな USB デバイスを接続します。 |
 
-**lsusb** コマンドを実行して、USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
+USB ハブが検出されているかどうかを確認するには、**lsusb** コマンドを実行します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
 
 ```shell
 lsusb
@@ -668,17 +672,17 @@ SSD を含むディスクを一覧表示するには、*fdisk -l* コマンド�
 sudo fdisk -l
 ```
 
-このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、正しく認識されていれば SSD も含まれます。SSD を表すエントリを探してください。通常、/dev/sd に続いて文字が付きます（例：/dev/sda、/dev/sdb など）。
+このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、正しく認識されていれば SSD も含まれます。SSD を表すエントリを探してください。通常、/dev/sd に続く文字（例：/dev/sda、/dev/sdb など）で始まります。
 SSD に対応するエントリを特定したら、必要に応じてパーティション作成やフォーマットを行うことができます。
 
 :::note
 SSD カードには主に 2 つの用途があります：<br />
 1.大容量ストレージ：SSD カードは大容量ストレージ用途に利用できます。<br />
-2.イメージ入りブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。<br />
+2.イメージ入りブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接ブートできるようにすることです。<br />
 市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、当社推奨の 1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
 :::
 
-### Mini-PCle スロット
+### Mini-PCIe スロット
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig06.png" /></div>
 <br />
@@ -694,7 +698,7 @@ SSD カードには主に 2 つの用途があります：<br />
 </div>
 
 :::note
-reComputer R1225 には標準版と 4G 版があります：標準版では Mini-PCIe 1 は空きスロットのままです。4G 版では Mini-PCIe 1 に 4G LTE があらかじめ搭載されています。
+reComputer R1225 には標準版と 4G 版があります。標準版では Mini-PCIe 1 は空きスロットのままですが、4G 版では Mini-PCIe 1 に 4G LTE があらかじめ搭載されています。
 :::
 
 このデバイスには 2 つの Mini-PCIe インターフェース、すなわち Mini-PCIe スロット 1 と Mini-PCIe スロット 2 が搭載されています。スロット 1 は SIM カードスロットに接続され、USB プロトコルをサポートします。一方、スロット 2 は USB と SPI の両方のプロトコルをサポートしますが、SIM カードスロットには接続されていません。そのため、4G LTE などのデバイスはスロット 1 に接続でき、SPI LoRa® デバイスはスロット 2 に接続できます。
@@ -713,12 +717,12 @@ reComputer R1225 のリセットホール内にはミニプッシュボタンス
 
 | 名称 | 種類                        | 速度               | PoE                                |
 | ---- | --------------------------- | ------------------ | ---------------------------------- |
-| ETH0 | CM4 ネイティブ Gigabit Ethernet | 10/100/1000 Mbit/s | 事前に搭載済み                     |
+| ETH0 | CM4 ネイティブ ギガビット Ethernet | 10/100/1000 Mbit/s | 事前に搭載済み                     |
 | ETH1 | USB から変換                | 10/100 Mbit/s      | 非対応                             |
 
 </div>
 
-reComputer R1225 には 2 つの Ethernet RJ45 ポートが搭載されています。ETH0 は CM4 ネイティブの Gigabit Ethernet インターフェースで、10/100/1000 Mbit/s の 3 種類の速度をサポートします。このインターフェースに PoE モジュールを追加購入して取り付けることで、電源供給を兼ねた power-over-Ethernet（PoE）給電により reComputer R1225 に電力を供給できます。もう一方の ETH1 は USB から変換された 10/100 Mbit/s に対応します。
+reComputer R1225 には 2 つの Ethernet RJ45 ポートが搭載されています。ETH0 は CM4 ネイティブのギガビット Ethernet インターフェースで、10/100/1000 Mbit/s の 3 種類の速度をサポートします。このインターフェースに PoE モジュールを追加購入して取り付けることで、電源供給を兼ねた Power-over-Ethernet（PoE）給電に対応させ、reComputer R1225 に電力を供給できます。もう一方の ETH1 は USB から変換された 10/100 Mbit/s に対応します。
 
 ### HDMI
 
@@ -728,9 +732,9 @@ reComputer R1225 は CM4 からのネイティブ HDMI インターフェース�
 
 ### RTC
 
-reComputer R1225 には RTC 回路が搭載されており、CR2032 バッテリがあらかじめ装着されています。これにより、電源が失われた場合でも時刻保持機能を維持できます。
+reComputer R1225 には RTC 回路が搭載されており、CR2032 バッテリーがあらかじめ装着されています。これにより、電源が失われた場合でも時刻保持機能を維持できます。
 
-リアルタイムクロック（RTC）機能をテストするには、次の手順に従います：
+リアルタイムクロック（RTC）機能をテストするには、次の手順に従ってください：
 
 1. 自動時刻同期を無効にします：
 
@@ -757,14 +761,14 @@ sudo hwclock --hctosys
 sudo hwclock -r
 ```
 
-このコマンドは、RTC に保存されている時刻を読み取り、表示します。
+このコマンドは、RTC に保存されている時刻を読み出して表示します。
 5. RTC から電源を取り外し、数分待ってから再接続し、RTC の時刻が正しく保持されているか再度確認します。
 
 ### ウォッチドッグ
 
-reComputer R1225 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的にシステムを再起動します。ウォッチドッグ回路は RTC を通じて実装されており、1～255 秒の柔軟な給電時間（ウォッチドッグの餌やり間隔）を設定できます。
+reComputer R1225 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的にシステムを再起動します。ウォッチドッグ回路は RTC を介して実装されており、1 ～ 255 秒の柔軟な給餌時間を設定できます。
 
-ウォッチドッグテストを実行するには、次の手順に従います：
+ウォッチドッグテストを実行するには、次の手順に従ってください：
 
 1. ウォッチドッグソフトウェアをインストールします：
 
@@ -838,9 +842,9 @@ reComputer R1225 は、オンボード Wi-Fi/BLE バージョンの CM4 を搭�
 reComputer R1225 の金属筐体のため、Wi-Fi/BLE 信号が金属外装を透過しにくい場合があることに注意が必要です。そのため、この機能が必要な場合は、当社が用意した外付けアンテナを取り付けることをお勧めします。
 :::
 
-#### Wi-Fi に接続する
+#### Wi-Fi に接続
 
-##### Luci UI から Wi-Fi に接続
+##### Luci UI 経由で Wi-Fi に接続
 
 ##### コマンドで Wi-Fi に接続
 
@@ -858,7 +862,7 @@ step2. Wi-Fi ネットワークに接続します：
   ```
 
 step3. デバイスの電源投入後、自動的に Wi-Fi に接続されます。  
-  保存された WiFi 情報を削除したい場合：
+  保存された Wi-Fi 情報を削除したい場合：
 
   ```bash
   nmcli con del network-ssid
@@ -866,9 +870,9 @@ step3. デバイスの電源投入後、自動的に Wi-Fi に接続されます
 
   接続が切断された後、別の Wi-Fi に接続します。
 
-#### Bluetooth デバイスに接続する
+#### Bluetooth デバイスに接続
 
-Bluetooth デバイスを追加する前に、コンピュータ上で Bluetooth サービスが起動して実行中である必要があります。systemctl コマンドで確認できます。
+Bluetooth デバイスを追加する前に、コンピュータ上で Bluetooth サービスが起動して実行中である必要があります。`systemctl` コマンドで確認できます。
 
 ```bash
 sudo systemctl status bluetooth
@@ -876,7 +880,7 @@ sudo systemctl status bluetooth
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/32.png" /></div>
 <br />
-Bluetooth サービスのステータスが active でない場合は、まず有効化する必要があります。その後、デバイス起動時に自動的に開始されるようサービスを起動します。
+Bluetooth サービスのステータスが active でない場合は、まず有効化する必要があります。その後、デバイス起動時に自動的に開始されるようサービスを開始します。
 
 ```bash
 sudo systemctl enable bluetooth
@@ -927,13 +931,13 @@ bluetoothctl
 exit 
 ```
 
-### 4Gモジュール（オプション）
+### 4G モジュール（オプション）
 
-reComputer R1225 LoRaWAN Gateway には Standard バージョンと 4G バージョンがあります。Standard バージョンでは Mini-PCIe スロット1は空きですが、4G バージョンにはヨーロッパ（EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）およびアメリカ（北米 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）向けに最適化された Mini-PCIe モジュールがあらかじめ搭載されています。
+reComputer R1225 LoRaWAN Gateway には Standard バージョンと 4G バージョンがあります。Standard バージョンでは Mini-PCIe スロット 1 は空きですが、4G バージョンにはヨーロッパ（EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）およびアメリカ（北米 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）向けに最適化された Mini-PCIe モジュールがあらかじめ搭載されています。
 
-### LoRa®モジュール（同梱）
+### LoRa® モジュール（同梱）
 
-reComputer R1225 LoRaWAN Gateway の Mini-PCIe スロット2には、SPI LoRa® モジュールが装着されています。
+reComputer R1225 LoRaWAN Gateway の Mini-PCIe スロット 2 には、SPI LoRa® モジュールが装着されています。
 
 ### PoE（同梱）
 
@@ -941,7 +945,7 @@ reComputer R1225 LoRaWAN Gateway には PoE モジュールが搭載されてお
 
 ### M.2 スロット（オプション）
 
-reComputer R1225 は、基板上の2つの Mini-PCIe スロットの下にある PCIe スロット（J62）を使用することで、2280 NVMe SSD と AI アクセラレータ（Hailo）をサポートします。CM4 の PCIe は Gen2.0 であり、理論上の最大速度は 5Gbps であることに注意してください。Gen3.0 以上の SSD を使用する場合、SSD の最大速度を発揮できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み出し速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することをお勧めします。
+reComputer R1225 は、基板上の 2 つの Mini-PCIe スロットの下にある PCIe スロット（J62）を使用することで、2280 NVMe SSD と AI アクセラレータ（Hailo）をサポートします。CM4 の PCIe は Gen2.0 であり、理論上の最大速度は 5Gbps であることに注意してください。Gen3.0 以上の SSD を使用する場合、SSD の最大速度を発揮できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み取り速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することをお勧めします。
 
 [組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-ssd).
 
@@ -972,17 +976,17 @@ reComputer R1225 は、基板上の2つの Mini-PCIe スロットの下にある
 
 :::note
 次の点にご注意ください：<br />
-1- 速度テストの結果は、SSD のモデル、テスト方法、およびテスト環境によって異なる場合があります。ここで示す値は参考値であり、Seeed のラボで取得されたものです。<br />
+1- 速度テストの結果は、SSD モデル、テスト方法、およびテスト環境によって異なる場合があります。ここで示す値は参考値であり、Seeed のラボで取得されたものです。<br />
 
 SSD カードには主に 2 つの用途があります：<br />
 1.大容量ストレージ：SSD カードは大容量ストレージ用途に利用できます。<br />
-2.イメージ付きブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとしてだけでなくシステムイメージの保存にも使用し、SSD カードから直接起動できるようにすることです。<br />
-市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか分からない場合は、当社推奨の **1TB SSD（<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>）** をお選びいただくことをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性の問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
+2.イメージ付きブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。<br />
+市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか分からない場合は、当社推奨の **1TB SSD（<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>）** をお選びいただくことをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
 :::
 
 ### 暗号化チップ TPM 2.0（オプション）
 
-TPM には Infineon の OPTIGA™ TPM SLB9670 が採用されており、Trusted Computing Group（TCG）TPM 2.0 仕様に準拠しているため、reComputer R1225 用の暗号化チップとして推奨されます。このチップはボード上のポート J13 に適用される SPI インターフェースを備えており、プラットフォームの完全性のための信頼の基点、リモート認証、および暗号サービスを有効にします。
+TPM には Infineon の OPTIGA™ TPM SLB9670 が採用されており、Trusted Computing Group（TCG）の TPM 2.0 仕様に準拠しています。これは reComputer R1225 用の暗号化チップとして推奨されています。このチップはボード上のポート J13 に接続される SPI インターフェースを備えており、プラットフォームの完全性のための信頼の基点（root of trust）、リモート認証、および暗号サービスを実現します。
 
 :::note
 [組み立て手順についてはこちらをクリックしてください](https://wiki.seeedstudio.com/ja/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
@@ -994,7 +998,7 @@ TPM 2.0 モジュールをデバイスに接続した場合、以下のコード
 ls /dev | grep tpm
 ```
 
-出力に **tpm0** と **tpmrm0** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識されアクセス可能であることを示しており、良好な状態です。デバイスが存在しアクセス可能であることを確認したうえで、TPM 関連の機能やアプリケーションの使用を進めることができます。
+出力に **tpm0** と **tpmrm0** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識されアクセス可能であることを示しており、良好な状態です。TPM 関連の機能やアプリケーションを、デバイスが存在しアクセス可能であることを前提に進めることができます。
 
 ### UPS（同梱）
 
@@ -1014,9 +1018,9 @@ UPS によって提供されるバックアップ時間は、システム負荷�
 UPS 機能の詳細についてはお問い合わせください。アラーム信号はアクティブ Low です。
 :::
 
-CPU と DC/AC 電源入力の間の GPIO25 は、5V 電源が落ちたときに CPU に警告するために使用されます。その後、CPU はスーパーキャパシタのエネルギーが枯渇する前にスクリプト内で緊急処理を行い、`$ shutdown` を実行する必要があります。
+CPU と DC/AC 電源入力の間の GPIO25 は、5V 電源が落ちたときに CPU に警告を出すために使用されます。その後、CPU はスーパーキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、`$ shutdown` を実行する必要があります。
 <br />
-この機能を使用するもう 1 つの方法は、GPIO ピンの変化時にシャットダウンを開始することです。指定された GPIO ピンは KEY_POWER イベントを生成する入力キーとして構成されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
+この機能を使用するもう 1 つの方法は、GPIO ピンの変化をトリガとしてシャットダウンを開始することです。指定された GPIO ピンは KEY_POWER イベントを生成する入力キーとして設定されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
 `/boot/overlays/README` を参照し、その後 `/boot/config.txt` を変更します。
 
 ```bash
@@ -1058,7 +1062,7 @@ while True:
 
 ### DSI（オプション）
 
-特別な用途のために、基板上には 1 つの DSI（J24）が予約されています。ユーザーは自身のニーズに応じてプラグインを購入する必要があります。
+基板上には特別な用途のために 1 つの DSI（J24）が予約されています。ユーザーは自身のニーズに応じてプラグインを購入する必要があります。
 
 ## 追加リソース
 
@@ -1066,9 +1070,9 @@ while True:
 - [reComputer R1225 回路図設計、PCB 設計](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
 - [reComputer R1225（R1000 v1.1）ピンアサイン](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

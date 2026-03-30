@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Licença
 slug: /License
 createdAt: '2022-11-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/License/
 ---
 

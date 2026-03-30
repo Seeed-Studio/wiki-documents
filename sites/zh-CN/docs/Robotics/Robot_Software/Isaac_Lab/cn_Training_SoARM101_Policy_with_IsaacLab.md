@@ -12,7 +12,7 @@ last_update:
   date: 2025/9/4
   author: Youjiang
 createdAt: '2025-09-04'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-18'
 url: https://wiki.seeedstudio.com/cn/training_soarm101_policy_with_isaacLab/
 ---
 

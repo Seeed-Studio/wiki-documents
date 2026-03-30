@@ -25,7 +25,7 @@ last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-06-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-data-platform/applications/ai-advisor/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 01/12/2025
   author: ZhuYaoHui
 createdAt: '2025-12-02'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-01'
 url: https://wiki.seeedstudio.com/ja/wheeltec_imu/
 ---
 

@@ -2710,6 +2710,20 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start',
+           /* {
+              type: 'category',
+              label: 'Cloud Platform Integration',
+              items: [
+                ,
+              ],
+            },
+             {
+              type: 'category',
+              label: 'Application',
+              items: [
+                ,
+              ],
+            },*/
           ],
         },
         {
@@ -3972,8 +3986,10 @@ const sidebars = {
               type: 'category',
               label: 'Physical AI',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Getting_Started_with_Jetson_Claw_on_Orin_Nano_NX_8GB',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/J501_Mini_StarAI_Viola_Fruit_Sorting',

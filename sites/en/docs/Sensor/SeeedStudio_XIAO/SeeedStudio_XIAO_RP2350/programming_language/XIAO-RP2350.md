@@ -13,7 +13,7 @@ last_update:
   author: Spencer
   date: 2024-11-22T05:59:15.764Z
 createdAt: '2024-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-10'
 url: https://wiki.seeedstudio.com/getting-started-xiao-rp2350/
 ---
 

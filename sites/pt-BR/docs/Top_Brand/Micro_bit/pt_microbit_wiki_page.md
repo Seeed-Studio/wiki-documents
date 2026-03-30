@@ -13,7 +13,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/microbit_wiki_page/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/All_bazaar_image/Microbit.jpg" alt="pir" width={600} height="auto" /></p>

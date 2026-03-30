@@ -11,7 +11,7 @@ last_update:
   date: 01/30/2023
   author: hushuxu
 createdAt: '2023-01-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/WM1302_Pi_HAT/
 ---
 

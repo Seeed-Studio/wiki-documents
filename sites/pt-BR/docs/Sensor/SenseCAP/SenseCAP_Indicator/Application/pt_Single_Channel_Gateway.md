@@ -15,7 +15,7 @@ last_update:
   date: 02/11/2025
   author: Leo Liu
 createdAt: '2024-10-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Indicator_Single_Channel_Gateway/
 ---
 

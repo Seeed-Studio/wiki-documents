@@ -10,7 +10,7 @@ last_update:
   date: 01/10/2024
   author: Youjiang
 createdAt: '2024-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Use_Infineon_Wifi_Module_on_reComputer/
 ---
 

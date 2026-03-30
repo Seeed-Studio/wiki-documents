@@ -10,7 +10,7 @@ last_update:
   date: 11/24/2023
   author: Parker
 createdAt: '2023-12-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/H28K-install-system/
 ---
 

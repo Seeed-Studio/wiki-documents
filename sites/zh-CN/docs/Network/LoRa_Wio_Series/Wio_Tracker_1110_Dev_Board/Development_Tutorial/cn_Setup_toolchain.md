@@ -10,7 +10,7 @@ last_update:
   date: 9/19/2023
   author: Jessie
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-22'
 url: https://wiki.seeedstudio.com/cn/setup_toolchain_for_wio_tracker/
 ---
 

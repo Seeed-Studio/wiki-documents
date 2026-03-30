@@ -15,7 +15,7 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_usage/
 ---
 

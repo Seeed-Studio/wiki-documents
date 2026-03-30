@@ -12,8 +12,8 @@ last_update:
   date: 3/24/2026
   author: Kasun Thushara
 createdAt: '2026-03-24'
-updatedAt: '2026-03-24'
-url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_python_sdk/
+updatedAt: '2026-03-25'
+url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_picovoice/
 ---
 
 ## Introducción 

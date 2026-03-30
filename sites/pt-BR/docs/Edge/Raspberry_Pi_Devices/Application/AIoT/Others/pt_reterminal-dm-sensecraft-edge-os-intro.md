@@ -11,7 +11,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 createdAt: '2023-06-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reterminal-dm-sensecraft-edge-os-intro/
 ---
 #  Introdução ao reTerminal DM SenseCraft Edge OS
