@@ -71,7 +71,6 @@ Após a instalação, você pode acessar diretamente a página web para tentar c
 Você também pode clicar na página "Overview" à esquerda para verificar se o "Status" está normal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_3.png" /></div>
-![openclaw_3](C:\Users\seeed\Desktop\reCamera图片(上传FTP用)\龙虾\openclaw_3.png)
 
 ## 2. Importe as Skills da reCamera Gimbal
 
@@ -103,7 +102,7 @@ openclaw.json está localizado na pasta da sua instalação do openclaw. Este ar
 
 2. Substitua "192.168.31.198" pelo endereço IP em que sua reCamera Gimbal realmente está
 
-3. Substitua "recamera.1" pela senha real da sua reCamera Gimbal)
+3. Substitua "recamera.1" pela senha real da sua reCamera Gimbal
 
 :::
 
