@@ -1,5 +1,5 @@
 ---
-description: Tutorial de configuración de la pasarela MQTT de Meshtastic basada en XIAO ESP32S3 y el kit Wio-SX1262. Permite mensajería global, proporciona un respaldo cuando las señales de la malla son débiles y garantiza una entrega de mensajes más rápida a través de internet. 
+description: Tutorial de configuración de la pasarela MQTT de Meshtastic basada en XIAO ESP32S3 y el kit Wio-SX1262. Permite mensajería global, proporciona un respaldo cuando las señales de la malla son débiles y garantiza una entrega de mensajes más rápida a través de internet.
 title: Configuración de una pasarela MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 ---
 

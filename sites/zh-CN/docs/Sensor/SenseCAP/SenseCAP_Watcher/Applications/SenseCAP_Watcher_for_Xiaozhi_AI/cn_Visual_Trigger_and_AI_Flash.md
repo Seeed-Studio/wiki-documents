@@ -16,7 +16,7 @@ last_update:
   date: 12/04/2025
   author: Twelve
 createdAt: '2025-10-20'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/cn/visual_trigger_and_ai_flash/
 ---
 

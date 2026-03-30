@@ -9,7 +9,7 @@ last_update:
   date: 01/29/2026
   author: Mingxi
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/cn/respeaker_2_mics_pi_hat_raspberry_v2/
 ---
 

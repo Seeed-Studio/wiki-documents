@@ -1,7 +1,6 @@
 ---
-description: This wiki demonstrates how to uses YOLOv11 on reComputer-RK 
+description: This wiki demonstrates how to uses YOLOv11 on reComputer-RK
 title: Object Detection with YOLOv11 on reComputer-RK
-
 keywords:
   - RockChip
   - reComputer RK
@@ -11,8 +10,8 @@ last_update:
   date: 9/3/2026
   author: Nolan Chen
 no_comments: false
-createdAt: '2026-3-9'
-updatedAt: '2026-03-09'
+createdAt: 2026-3-9
+updatedAt: '2026-03-10'
 url: https://wiki.seeedstudio.com/object_detection_with_yolov11_on_recomputer_rk/
 ---
 

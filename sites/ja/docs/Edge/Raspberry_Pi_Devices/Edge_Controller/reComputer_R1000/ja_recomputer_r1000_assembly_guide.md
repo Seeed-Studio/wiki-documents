@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2024
   author: Evelyn Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/recomputer_r1000_assembly_guide/
 ---
 # reComputer R1000 組み立てガイド

@@ -10,7 +10,7 @@ last_update:
   date: 1/31/2023
   author: shuxu hu
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Seeeduino_GPRS/
 ---
 

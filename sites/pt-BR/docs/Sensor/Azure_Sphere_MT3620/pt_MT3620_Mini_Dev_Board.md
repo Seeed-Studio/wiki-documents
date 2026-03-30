@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: jianjing Huang
 createdAt: '2023-01-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/MT3620_Mini_Dev_Board/
 ---
 

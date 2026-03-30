@@ -13,7 +13,7 @@ last_update:
   date: 06/06/2025
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/sensecraft-blockchain/sensecraft-hotspot-app/app-settings/
 ---
 

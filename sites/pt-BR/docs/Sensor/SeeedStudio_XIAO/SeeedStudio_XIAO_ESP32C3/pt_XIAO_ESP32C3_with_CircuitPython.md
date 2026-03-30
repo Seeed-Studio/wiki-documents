@@ -11,7 +11,7 @@ last_update:
   date: 08/14/2024
   author: Evelyn Chen
 createdAt: '2024-08-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c3_with_circuitpython/
 ---
 

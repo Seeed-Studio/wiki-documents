@@ -6,7 +6,7 @@ last_update:
   date: 6/28/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/check_battery_voltage/
 ---
 

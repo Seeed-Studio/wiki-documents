@@ -10,7 +10,7 @@ last_update:
   date: 2/22/2023
   author: jianjing Huang
 createdAt: '2024-04-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Magnetic_Switch/
 ---
 

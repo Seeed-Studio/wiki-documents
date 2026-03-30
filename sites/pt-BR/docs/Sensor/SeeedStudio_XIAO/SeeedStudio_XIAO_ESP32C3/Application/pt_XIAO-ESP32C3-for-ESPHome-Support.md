@@ -10,7 +10,7 @@ last_update:
   date: 10/20/2023
   author: Zachary
 createdAt: '2023-10-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-ESP32C3-for-ESPHome-Support/
 ---
 

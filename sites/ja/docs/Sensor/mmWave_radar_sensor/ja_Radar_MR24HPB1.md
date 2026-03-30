@@ -9,7 +9,7 @@ last_update:
   date: 1/12/2023
   author: jianjing Huang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-09'
 url: https://wiki.seeedstudio.com/ja/Radar_MR24HPB1/
 ---
 

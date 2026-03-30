@@ -10,7 +10,7 @@ last_update:
   author: Jason
   sidebar_position: 5
 createdAt: '2025-07-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_with_platform_io/
 ---
 

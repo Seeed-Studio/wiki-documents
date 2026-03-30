@@ -1,7 +1,7 @@
 ---
 description: Deploy a Dockerized Reachy Mini dance service on multiple Jetson devices and control the whole fleet from one laptop-based web UI.
 title: Control Multiple Reachy Mini Robots with a Fleet Dance Console on Jetson
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.png
 slug: /ai_robotics_reachy_fleet_dance
 last_update:
   date: 03/25/2026
@@ -13,6 +13,9 @@ keywords:
   - Robotics
   - Web UI
   - Fleet Control
+createdAt: '2026-03-25'
+url: https://wiki.seeedstudio.com/ai_robotics_reachy_fleet_dance/
+updatedAt: '2026-03-27'
 ---
 
 # Control Multiple Reachy Mini Robots with a Fleet Dance Console on Jetson

@@ -11,7 +11,7 @@ last_update:
   date: 02/23/2026
   author: Sunil Pedapudi
 createdAt: '2026-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/cn/round_display_animation_workshop/
 ---
 

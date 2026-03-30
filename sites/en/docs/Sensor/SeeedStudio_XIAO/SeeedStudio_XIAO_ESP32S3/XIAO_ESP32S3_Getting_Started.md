@@ -12,7 +12,7 @@ last_update:
   date: 03/13/2026
   author: Spencer
 createdAt: '2023-03-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
 ---
 

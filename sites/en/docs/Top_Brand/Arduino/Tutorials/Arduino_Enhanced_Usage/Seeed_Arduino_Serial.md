@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: hushuxu
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-29'
 url: https://wiki.seeedstudio.com/Seeed_Arduino_Serial/
 ---
 Serial communications provide an easy and flexible way for your Arduino board to interact with your computer and other devices. Implementing serial communications involves hardware and software. The hardware provides the electrical signaling between Arduino and the device it is talking to. The software uses the hardware to send bytes or bits that the connected hardware understands.

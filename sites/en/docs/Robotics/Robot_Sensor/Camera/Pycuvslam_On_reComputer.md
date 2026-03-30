@@ -17,7 +17,7 @@ last_update:
   date: 2025-10-10T00:00:00.000Z
   author: Zibo
 createdAt: '2025-10-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/
 ---
 

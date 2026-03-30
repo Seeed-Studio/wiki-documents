@@ -1,12 +1,15 @@
 ---
 description: This wiki shows how to build a Jetson-Claw starter setup on Jetson Orin Nano 8GB or Orin NX 8GB with nanobot, llama.cpp, a local Qwen3.5 4B GGUF model, and Feishu control.
 title: Getting Started with Jetson-Claw on Orin Nano / NX 8GB
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
 sku: 114110312 | 114110313
 last_update:
   date: 03/26/2026
   author: Dayu
+createdAt: '2026-03-26'
+url: https://wiki.seeedstudio.com/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
+updatedAt: '2026-03-27'
 ---
 
 # Getting Started with Jetson-Claw on Orin Nano / NX 8GB

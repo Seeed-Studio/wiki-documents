@@ -11,7 +11,7 @@ last_update:
   date: 09/25/2025
   author: Jason
 createdAt: '2025-09-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-20'
 url: https://wiki.seeedstudio.com/ja/epaper_ee04/
 ---
 

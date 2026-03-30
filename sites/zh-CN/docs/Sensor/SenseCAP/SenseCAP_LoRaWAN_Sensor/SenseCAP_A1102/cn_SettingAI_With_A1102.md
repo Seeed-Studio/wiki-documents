@@ -12,7 +12,7 @@ last_update:
   date: 12/31/2025
   author: Twelve
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-31'
 url: https://wiki.seeedstudio.com/cn/setting_ai_with_a1102/
 ---
 

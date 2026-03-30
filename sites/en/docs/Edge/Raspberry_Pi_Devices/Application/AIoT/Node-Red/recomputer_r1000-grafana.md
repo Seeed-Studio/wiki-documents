@@ -13,7 +13,7 @@ last_update:
   date: 6/24/2024
   author: Kasun Thushara
 createdAt: '2024-06-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/recomputer_r1000_grafana/
 ---
 ## Introduction

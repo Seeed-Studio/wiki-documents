@@ -12,7 +12,7 @@ last_update:
   date: 8/22/2023
   author: Kasun Thushara
 createdAt: '2023-08-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_frigate/
 ---
 

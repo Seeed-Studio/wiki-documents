@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-12'
 url: https://wiki.seeedstudio.com/lerobot_soarm101_Rynnbot_Developer_Kit/
 ---
 

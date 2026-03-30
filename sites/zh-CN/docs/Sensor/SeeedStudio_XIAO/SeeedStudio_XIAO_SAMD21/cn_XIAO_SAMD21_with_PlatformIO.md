@@ -10,7 +10,7 @@ last_update:
   date: 04/07/2025
   author: Hugo
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/xiao_samd21_with_platform_io/
 ---
 

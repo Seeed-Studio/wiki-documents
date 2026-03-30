@@ -9,8 +9,8 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/JavaScript_for_RePhone/
+updatedAt: '2026-03-13'
+url: https://wiki.seeedstudio.com/pt-br/JavaScript_for_RePhone/
 ---
 
 ![](https://files.seeedstudio.com/wiki/JavaScript_for_RePhone/img/Xadow_GSMPlusBLE_pingguo.JPG)

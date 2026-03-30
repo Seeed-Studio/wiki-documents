@@ -9,7 +9,7 @@ last_update:
   date: 4/17/2023
   author: timo614
 createdAt: '2023-07-26'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/XIAO-ESP32C3-Zephyr/
 ---
 

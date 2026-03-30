@@ -9,6 +9,6 @@ last_update:
   date: 7/24/2024
   author: Jessie
 createdAt: '2024-07-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/es/get_started_with_t1000_p/
 ---

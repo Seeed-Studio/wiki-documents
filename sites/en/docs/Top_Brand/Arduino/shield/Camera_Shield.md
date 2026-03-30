@@ -9,7 +9,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Camera_Shield/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield.jpg" alt="pir" width={600} height="auto" /></p>

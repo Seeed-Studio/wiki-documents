@@ -15,7 +15,7 @@ last_update:
   author: Spencer
   date: 2024-11-27T03:21:36.491Z
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/2_channel_wifi_ac_relay/
 ---
 

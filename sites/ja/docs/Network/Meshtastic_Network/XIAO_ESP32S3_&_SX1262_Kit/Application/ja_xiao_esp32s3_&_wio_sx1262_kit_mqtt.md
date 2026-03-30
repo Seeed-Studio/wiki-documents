@@ -1,5 +1,5 @@
 ---
-description: XIAO ESP32S3 & Wio-SX1262 Kit をベースにした Meshtastic MQTT ゲートウェイ設定チュートリアルです。遠距離ネットワークをブリッジしてグローバルメッセージングを可能にし、メッシュ信号が弱いときのバックアップとなり、インターネット経由でより高速なメッセージ配信を実現します。 
+description: XIAO ESP32S3 & Wio-SX1262 Kit をベースにした Meshtastic MQTT ゲートウェイ設定チュートリアルです。遠距離ネットワークをブリッジしてグローバルメッセージングを可能にし、メッシュ信号が弱いときのバックアップとなり、インターネット経由でより高速なメッセージ配信を実現します。
 title: MQTT ゲートウェイのセットアップ
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 ---
 

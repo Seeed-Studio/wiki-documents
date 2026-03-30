@@ -10,7 +10,7 @@ last_update:
   date: 12/29/2025
   author: Brandy
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/
 ---
 

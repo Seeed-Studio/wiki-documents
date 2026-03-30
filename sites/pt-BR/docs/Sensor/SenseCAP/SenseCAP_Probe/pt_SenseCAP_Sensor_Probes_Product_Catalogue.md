@@ -9,7 +9,7 @@ last_update:
   date: 10/13/2023
   author: Yvonne
 createdAt: '2023-10-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Sensor_Probes_Product_Catalogue/
 ---
 

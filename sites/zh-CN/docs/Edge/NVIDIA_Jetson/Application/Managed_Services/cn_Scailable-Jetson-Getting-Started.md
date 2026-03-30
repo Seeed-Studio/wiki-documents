@@ -9,7 +9,7 @@ last_update:
   date: 03/10/2023
   author: Lakshantha
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/Scailable-Jetson-Getting-Started/
 ---
 

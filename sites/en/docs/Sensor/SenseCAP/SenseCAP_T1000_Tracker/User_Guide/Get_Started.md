@@ -9,7 +9,7 @@ last_update:
   date: 2/14/2026
   author: Janet
 createdAt: '2023-08-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-14'
 url: https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/
 ---
 

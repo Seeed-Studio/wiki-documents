@@ -12,7 +12,7 @@ last_update:
   date: 09/14/2024
   author: Priyanshu Roy
 createdAt: '2024-08-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-21'
 url: https://wiki.seeedstudio.com/xiao-esp32s3-freertos/
 ---
 

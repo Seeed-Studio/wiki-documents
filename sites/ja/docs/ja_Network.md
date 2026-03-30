@@ -1,5 +1,5 @@
 ---
-description: Seeed の多様なセンサーやデバイスを堅牢なネットワーク機能でシームレスに統合し、製品エコシステム全体で一貫したデータと通信のフローを実現することで、モニタリング、自動化、インテリジェントな意思決定の新たな可能性を切り開きます。
+description: 堅牢なネットワーク機能により、Seeed の多様なセンサーやデバイスがシームレスに統合され、製品エコシステム全体で一貫したデータと通信のフローを実現し、モニタリング、自動化、インテリジェントな意思決定の新たな可能性を切り開きます。
 title: ネットワーク接続
 keywords:
   - センサーネットワーク
@@ -9,13 +9,13 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/ja/Network/
 ---
 
-Seeed の堅牢なネットワーク機能は、多様なセンサーやデバイスをシームレスに統合し、製品エコシステム全体にわたって一貫したデータと通信のフローを実現することで、モニタリング、自動化、インテリジェントな意思決定の新たな可能性を切り開きます。
+堅牢なネットワーク機能により、Seeed の多様なセンサーやデバイスがシームレスに統合され、製品エコシステム全体で一貫したデータと通信のフローを実現し、モニタリング、自動化、インテリジェントな意思決定の新たな可能性を切り開きます。
 
-Seeed は、当社の製品ラインナップと完全に統合できる多種多様なネットワーク製品を提供しており、これらは Sensor でも見つけることができます。
+Seeed は、当社の製品群と完全に統合できる多種多様なネットワーク製品を提供しており、Sensor 上でもそれらを見つけることができます。
 
 - **産業用センサー向けネットワークデバイス**
 
@@ -35,14 +35,14 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>産業用エッジ IoT ゲートウェイ</font></div>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/ja/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway クイックスタート</font></span></a>
+            <a href="/ja/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway クイックスタート</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>屋内用マルチプラットフォームゲートウェイ</font></div>
-            <a href="/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 マルチプラットフォームゲートウェイの概要</font></span></a>
+            <a href="/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 マルチプラットフォームゲートウェイ概要</font></span></a>
             <br/>
             <a href="/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> AWS プラットフォームへの接続 </font></span></a>
             <br/>
@@ -88,7 +88,7 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
     </div>
 </div>
 
-### その他ネットワークインフラ向けルーター
+### その他のネットワークインフラ向けルーター
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -104,11 +104,11 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
             <br/>
             <a href="/ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> オリジナル OS のインストール </font></span></a>
             <br/>
-            <a href="/ja/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 応用例：OpenWRT のインストール  </font></span></a>
+            <a href="/ja/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> アプリケーション：OpenWRT のインストール  </font></span></a>
             <br/>
-            <a href="/ja/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 応用例：Plex メディアサーバーのインストール </font></span></a>
+            <a href="/ja/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> アプリケーション：Plex メディアサーバーのインストール </font></span></a>
             <br/>
-            <a href="/ja/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 応用例：reRouter 向け Mender の利用 </font></span></a>
+            <a href="/ja/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> アプリケーション：reRouter 向け Mender の使用 </font></span></a>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
@@ -116,7 +116,7 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
             <br/>
             <a href="/ja/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> オリジナル OS のインストール</font></span></a>
             <br/>
-            <a href="/ja/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 応用例：Home Assistant を中心としたスマートホーム制御センターの構築</font></span></a>
+            <a href="/ja/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> アプリケーション：Home Assistant を中心としたスマートホーム制御センターの構築</font></span></a>
     </div>
 </div>
 
@@ -128,8 +128,8 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove センサーネットワーク</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Grove センサーネットワークと、センサーで利用可能な伝送方式の概要を紹介します。</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove Sensor Network</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Grove Sensor Network と、センサーで利用可能な伝送方式の概要を紹介します。</font></div>
     </div>
 </div>
 
@@ -143,7 +143,7 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Bluetooth</font></div>
             <a href="/ja/Grove-BLE-dual_model-v1.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> BLE(dual model) v1 </font></span></a>
             <br/>
-            <a href="/ja/Grove-Serial_Bluetooth_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Serial Bluetooth v3.0 </font></span></a>
+            <a href="/ja/Grove-Serial_Bluetooth_v3.0" target="_blank"><span><font color={'FFFFFF'} size={"2"}> シリアル Bluetooth v3.0 </font></span></a>
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -188,7 +188,7 @@ Seeed は、当社の製品ラインナップと完全に統合できる多種�
     </div>
 </div>
 
-## Seeed Studio レガシー・ネットワーキングモジュール
+## Seeed Studio 旧ネットワークモジュール
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>

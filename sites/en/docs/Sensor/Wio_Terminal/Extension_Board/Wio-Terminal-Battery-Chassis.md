@@ -9,7 +9,7 @@ last_update:
   date: 1/30/2023
   author: jianjing Huang
 createdAt: '2023-01-31'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/Wio-Terminal-Battery-Chassis/
 ---
 

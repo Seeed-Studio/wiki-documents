@@ -9,7 +9,7 @@ last_update:
   date: 03/03/2024
   author: 黎孟度
 createdAt: '2024-03-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/cn/name_your_website/
 ---
 

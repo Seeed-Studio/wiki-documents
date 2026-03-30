@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r21xx_flash_os/
 ---
 # reComputer Industrial R21xx OS のフラッシュ

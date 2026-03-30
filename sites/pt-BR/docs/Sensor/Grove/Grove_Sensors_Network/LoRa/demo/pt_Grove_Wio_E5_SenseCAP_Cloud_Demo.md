@@ -11,7 +11,7 @@ last_update:
   date: 2/02/2024
   author: JoJang
 createdAt: '2024-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove_Wio_E5_SenseCAP_Cloud_Demo/
 ---
 

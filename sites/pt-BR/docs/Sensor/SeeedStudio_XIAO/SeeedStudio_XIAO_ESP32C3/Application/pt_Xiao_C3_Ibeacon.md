@@ -10,7 +10,7 @@ last_update:
   date: 04/14/2025
   author: Priyanshu Roy
 createdAt: '2025-04-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao-c3-ibeacon/
 ---
 

@@ -7,7 +7,7 @@ last_update:
   date: 10/12/2023
   author: Bruno Santos (Feiticeir0)
 createdAt: '2023-10-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-BLE-PDM-EI/
 ---
 

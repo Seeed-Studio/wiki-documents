@@ -15,7 +15,7 @@ last_update:
   date: 4/4/2024
   author: Xabier Fernández and Kasun Thushara
 createdAt: '2024-04-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reTerminalDM_N3uron_Historian/
 ---
 ## Introdução

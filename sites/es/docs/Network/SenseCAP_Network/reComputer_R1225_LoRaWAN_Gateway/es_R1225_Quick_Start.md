@@ -1,17 +1,20 @@
 ---
-description: Inicio rápido de la pasarela LoRaWAN reComputer R1225
-title:  Inicio rápido de la pasarela LoRaWAN reComputer R1225
+description: Guía rápida de inicio de la pasarela LoRaWAN reComputer R1225
+title: Guía rápida de inicio de la pasarela LoRaWAN reComputer R1225
 keywords:
-- Gateway
-- SenseCAP
-- Controlador de borde
-- reComputer R1225 
+  - Pasarela
+  - SenseCAP
+  - Controlador de borde
+  - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_quick_start
 sku: 100021896,100030154,100006298,100079154
 last_update:
-  date: 03/13/2026
+  date: 03/25/2026
   author: Kian
+createdAt: '2026-03-18'
+url: https://wiki.seeedstudio.com/es/r1225_quick_start/
+updatedAt: '2026-03-25'
 ---
 
 # Inicio rápido
@@ -22,10 +25,10 @@ last_update:
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-El reComputer R1225 se alimenta con un voltaje de CA nominal de 12&#126;24 V o un voltaje de CC de 9&#126;36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer R1225, el cable de tierra se puede fijar al tornillo ubicado en la esquina superior izquierda del terminal de alimentación.
+El reComputer R1225 se alimenta con un voltaje de CA nominal de 12&#126;24 V o un voltaje de CC de 9&#126;36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para poner a tierra el reComputer R1225, el cable de tierra se puede fijar al tornillo situado en la esquina superior izquierda del terminal de alimentación.
 
 :::note
-La solución de alimentación utiliza un diodo rectificador de puente para la protección contra polaridad inversa y es compatible tanto con entradas de CA como de CC. Esto garantiza que **independientemente de cómo se conecten los terminales positivo y negativo de la fuente de alimentación**, el circuito no se dañará. Al usar un rectificador de puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada de CC, proporcionando una protección eficaz contra la polaridad inversa.
+La solución de alimentación utiliza un diodo rectificador en puente para la protección contra polaridad inversa y es compatible tanto con entradas de CA como de CC. Esto garantiza que **independientemente de cómo se conecten los terminales positivo y negativo de la fuente de alimentación**, el circuito no se dañará. Al usar un rectificador en puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada de CC, proporcionando una protección eficaz contra la polaridad inversa.
 :::
 
 ### Alimentación PoE
@@ -36,10 +39,10 @@ Con el módulo PoE instalado, el puerto ETH0 del reComputer R1225 puede admitir 
 - Salida PoE: 12V, 1.1A máx.
 
 :::tip
-Cabe señalar que el módulo PoE proporcionado con el reComputer R1225 cumple con el estándar IEEE 802.3af y puede proporcionar una potencia máxima de 12.95W. **Por lo tanto, si es necesario conectar periféricos de alta potencia como módulos SSD o 4G, la alimentación PoE puede no ser suficiente**. En este caso, se recomienda utilizar en su lugar el terminal de alimentación de CA/CC para garantizar un funcionamiento estable y fiable del dispositivo.
+Cabe señalar que el módulo PoE suministrado con el reComputer R1225 cumple con el estándar IEEE 802.3af y puede proporcionar una potencia máxima de 12.95W. **Por lo tanto, si es necesario conectar periféricos de alta potencia como módulos SSD o 4G, la alimentación PoE puede no ser suficiente**. En este caso, se recomienda utilizar en su lugar el terminal de alimentación de CA/CC para garantizar un funcionamiento estable y fiable del dispositivo.
 :::
 
-## Acceder al Seeed Gateway OS
+## Acceder al sistema operativo Seeed Gateway
 
 ### Acceso a través del router
 
@@ -53,12 +56,12 @@ Cabe señalar que el módulo PoE proporcionado con el reComputer R1225 cumple co
 
 Cuando uses el R1225 por primera vez, si hay routers y cables Ethernet cerca, puedes optar por conectar el R1225 a la red mediante una conexión por cable.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Network_Connection_Diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Network_Connection_Diagram1.png" alt="pir" width={800} height="auto" /></p>
 
 <!--加一个，如果不是首次连接，已经连接了Wifi，即使不插网线，也可以通过访问路由器分配的IP进入管理界面-->
 
 :::tip
-Durante la configuración inicial, si has configurado Wi-Fi, puedes acceder a la interfaz Luci introduciendo la dirección IP del R1225, incluso si no has conectado un cable Ethernet, siempre que tu ordenador y el R1225 estén conectados a la misma red Wi-Fi.
+Si se ha configurado Wi-Fi, puedes acceder a la interfaz LuCI a través de la dirección IP del R1225 sin un cable Ethernet, siempre que tu ordenador y el R1225 estén en la misma red.
 :::
 
 - Paso 2: Obtén la dirección IP de tu dispositivo
@@ -75,98 +78,119 @@ Consulta la dirección IP de tu dispositivo en la página de administración de 
 Introduce la dirección IP de tu dispositivo en un navegador para entrar en la página de Luci.
 Luego introduce el nombre de usuario y la contraseña de tu dispositivo para iniciar sesión y haz clic en el botón Login.
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Luci_login.png" alt="pir" width={800} height="auto" /></p>
 
 ### Acceso a través del punto de acceso AP del dispositivo
 
+:::caution
+Cuando el R1225 se enciende por primera vez, su punto de acceso Wi-Fi permanece activo durante 5 minutos de forma predeterminada. Después de este tiempo, el punto de acceso del R1225 se apagará automáticamente.
+:::
+
 - Paso 1: Enciende el R1225
+
+Conecta la pasarela LoRaWAN reComputer R1225 y el dispositivo se encenderá automáticamente.
 
 - Paso 2: Conéctate al punto de acceso AP
 
   - SSID : R1225-XXXX (**últimos 4 dígitos del SN**)
   - Contraseña : 1234567890
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_AP.png" alt="pir" width={450} height="auto" /></p>
+
 Cuando el reComputer R1225 se enciende por primera vez, habilita automáticamente el modo de punto de acceso. El SSID predeterminado para el punto de acceso es “R1225-XXXX (**últimos 4 dígitos del SN**)”, y la contraseña predeterminada es “1234567890”; conecta tu ordenador a este punto de acceso AP.
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+- Paso 3: Obtén la dirección IP de tu dispositivo
 
-- Paso 3: Obtén el nombre de usuario y la contraseña de tu dispositivo
+Después de conectarte al AP con el SSID R1225-XXXX, haz clic en el icono de detalles en la esquina superior derecha.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_Wifi.png" alt="pir" width={450} height="auto" /></p>
+
+Haz clic para abrir la página “Network and Internet” en la configuración del sistema y luego desplázate hasta la parte inferior para encontrar la dirección IP.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_Wifi2.png" alt="pir" width={450} height="auto" /></p>
+
+- Paso 4: Obtén el nombre de usuario y la contraseña de tu dispositivo
 
   - Nombre de usuario: admin
   - contraseña: null  (**No se requiere contraseña para el primer inicio de sesión**)
 
-- Paso 4: Iniciar sesión en Luci
+- Paso 5: Iniciar sesión en Luci
 
-Introduce la dirección IP (192.168.168.1) en tu navegador para entrar en la consola local.  
+Introduce la dirección IP (192.168.2.1) en tu navegador para entrar en la consola local.  
 Luego introduce el nombre de usuario y la contraseña de tu dispositivo y haz clic en el botón Login.
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Luci_login.png" alt="pir" width={800} height="auto" /></p>
 
 ## Configuración de red del R1225
 
 ### Conexión Ethernet
 
+Ethernet es plug-and-play y no requiere configuración.
 <!--补充图片和内容-->
 
 ### Conexión WIFI
 
-- Paso 1: Haz clic en `Network` - `Wireless`
+- Paso 1: Haz clic en `Network` - `Wi-Fi`
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi1.png" alt="pir" width={200} height="auto" /></p>
 
 - Paso 2: Haz clic en el botón `Scan` para escanear la WIFI
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi2.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 3: Selecciona tu WI-FI para unirte a la red
+- Paso 3: Selecciona tu red Wi-Fi para unirte a la red
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi3.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 4: Envía la contraseña de la Wi-Fi y luego haz clic en `Submit` y Save
+- Paso 4: Introduce la contraseña de la red Wi-Fi y luego haz clic en `Submit` y Save
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi4.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi5.png" alt="pir" width={800} height="auto" /></p>
 
 - Paso 5: Haz clic en `Save & Apply` para aplicar tu configuración
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi6.png" alt="pir" width={800} height="auto" /></p>
 
 ### Conexión celular (para la versión 4G)
 
 - Paso 1: Inserta tu tarjeta SIM en la ranura para tarjeta Nano-SIM
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+Utiliza el clip para carril DIN que proporcionamos para insertarlo en el pequeño orificio junto a la ranura de la tarjeta SIM y luego inserta tu tarjeta SIM.
 
-- Paso 2: Inicia sesión en la página de Luci y haz clic en `Network` - `Cellular`
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE.png" alt="pir" width={400} height="auto" /></p>
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+- Paso 2: Inicia sesión en la página de Luci y haz clic en `Network` - `LTE`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE1.png" alt="pir" width={200} height="auto" /></p>
 
 - Paso 3: Configura la información de APN y haz clic en `Save & Apply` para aplicar tu configuración
 
-<!--补充图片
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/" alt="pir" width={800} height="auto" /></p>-->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE2.png" alt="pir" width={800} height="auto" /></p>
 
 ## Configuración LoRaWAN del R1225
 
 - Paso 1: Haz clic en `LoRa` - `LoRa Network`
 
-- Paso 2: Marca `Enable LoRa functionality`
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LoRa1.png" alt="pir" width={200} height="auto" /></p>
+
+- Paso 2: Marca la opción `Enable LoRa functionality`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LoRa2.png" alt="pir" width={800} height="auto" /></p>
 
 - Paso 3: Haz clic en `Save & Apply` para aplicar tu configuración
 
-### Ajustes del plan de canales
+### Configuración del plan de canales
 
-- Paso : Navega a `LoRa` > `Channel Plan`
+- Paso 1: Ve a `LoRa` > `Channel Plan`
 
-- Paso : Selecciona `Region` y `Channel-plan`
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/channel_plan1.png" alt="pir" width={200} height="auto" /></p>
 
-- Paso : Haz clic en `Save & Apply` para aplicar tu configuración
+- Paso 2: Selecciona `Region` y `Channel-plan`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/channel_plan2.png" alt="pir" width={800} height="auto" /></p>
+
+- Paso 3: Haz clic en `Save & Apply` para aplicar tu configuración
 
 ### Seleccionar la plataforma Chirpstack integrada
 
@@ -174,29 +198,43 @@ Luego introduce el nombre de usuario y la contraseña de tu dispositivo y haz cl
 El R1225 viene con ChirpStack (servidor de red LoRaWAN de código abierto) preinstalado.
 :::
 
-- Paso : Selecciona `Platform Type` - `ChirpStack`
+- Paso 1: Selecciona `Platform Type` - `ChirpStack`
 
-- Paso : Comprueba el **EUI**
+- Paso 2: Comprueba el **EUI**
 
-- Paso : Haz clic en `Open ChirpStack Application Server` en la esquina inferior izquierda
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack1.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso : Inicia sesión en la plataforma en la nube de Chirpstack
+- Paso 3: Haz clic en `Open ChirpStack Application Server` en la esquina inferior izquierda
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack2.png" alt="pir" width={800} height="auto" /></p>
+
+- Paso 4: Inicia sesión en la plataforma en la nube de Chirpstack
+
   - Nombre de usuario/correo electrónico: admin
+
   - Contraseña: admin
 
 El nombre de usuario y la contraseña predeterminados son ambos “admin”
 
 Luego haz clic en `Submit` para ir a la interfaz de la plataforma Chirpstack
 
-### Vincular la pasarela LoRaWAN R1225
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack3.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso : Navega a `Gateway` > `Add gateway`
+### Vincular la pasarela R1225 LoRaWAN
+
+- Paso 5: Navega a `Gateway` > `Add gateway`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack4.png" alt="pir" width={800} height="auto" /></p>
+
+- Paso 6: Introduce el `Gateway Name` y el `Gateway ID (EUI: 64)`
 
   - Nombre de la pasarela: Un nombre para tu pasarela
 
-  - ID de la pasarela (EUI64): El EUI de la pasarela se puede encontrar en la etiqueta del dispositivo o en la consola local
+  - Gateway ID(EUI64): El EUI de la pasarela se puede encontrar en la etiqueta del dispositivo o en la consola local
 
   - Intervalo de estadísticas (seg): El intervalo esperado en segundos en el que la pasarela envía sus estadísticas
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack5.png" alt="pir" width={800} height="auto" /></p>
 
 Luego haz clic en `Submit`
 

@@ -9,7 +9,7 @@ last_update:
   date: 08/09/2023
   author: Salman
 createdAt: '2023-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/
 ---
 
