@@ -8,7 +8,7 @@ last_update:
   author: Lakshantha
 no_comments: false
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Jetson-AI-developer-tools/
 ---
 

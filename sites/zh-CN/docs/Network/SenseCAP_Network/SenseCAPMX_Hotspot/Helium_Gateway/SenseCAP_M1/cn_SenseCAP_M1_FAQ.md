@@ -9,7 +9,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-05'
 url: https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/SenseCAP_M1_FAQ/
 ---
 

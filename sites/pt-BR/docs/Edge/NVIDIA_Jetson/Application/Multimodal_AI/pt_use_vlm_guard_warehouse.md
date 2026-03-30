@@ -12,7 +12,7 @@ last_update:
   date: 10/10/2025
   author: Jiahao Li
 createdAt: '2025-10-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/vlm/
 ---
 

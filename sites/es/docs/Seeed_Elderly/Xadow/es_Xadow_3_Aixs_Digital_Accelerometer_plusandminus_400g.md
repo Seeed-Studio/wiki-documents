@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/img/Xadow_3Axis_Accelerometer400g.jpg)

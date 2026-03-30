@@ -12,7 +12,7 @@ last_update:
   date: 04/10/2024
   author: Spencer
 createdAt: '2024-11-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-22'
 url: https://wiki.seeedstudio.com/cn/xiao_pin_multiplexing_esp32c6/
 ---
 

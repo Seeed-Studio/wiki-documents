@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 

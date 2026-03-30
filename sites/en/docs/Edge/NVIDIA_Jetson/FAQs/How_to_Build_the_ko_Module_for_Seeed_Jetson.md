@@ -11,7 +11,7 @@ last_update:
   date: 09/24/2025
   author: Dayu
 createdAt: '2025-09-26'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-14'
 url: https://wiki.seeedstudio.com/how_to_build_the_ko_module_for_seeed_jetson/
 ---
 

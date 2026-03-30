@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/
 ---
 ![](https://files.seeedstudio.com/wiki/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/img/2kmrf.jpg)

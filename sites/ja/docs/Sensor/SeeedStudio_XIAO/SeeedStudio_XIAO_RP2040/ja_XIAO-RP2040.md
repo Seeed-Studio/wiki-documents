@@ -10,9 +10,11 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/XIAO-RP2040/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO RP2040 入門ガイド
 
@@ -149,6 +151,17 @@ Seeed Studio XIAO RP2040 をリセットしたい場合は、次の手順を実�
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
+
+
+## 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技術サポート & 製品ディスカッション
 

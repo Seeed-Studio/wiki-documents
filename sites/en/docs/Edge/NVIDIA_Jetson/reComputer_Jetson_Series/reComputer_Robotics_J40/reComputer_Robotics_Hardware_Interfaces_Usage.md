@@ -15,7 +15,7 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/recomputer_robotics_j401_hardware_interfaces_usage/
 ---
 
@@ -36,7 +36,11 @@ This wiki introduces the various different hardware and interfaces on the reComp
 ## Hardware Overview
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-_J4011-3.jpeg"/>  
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
+</div>
+
+<div align="center">
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
 ## Hardware Interfaces Usage

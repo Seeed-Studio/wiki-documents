@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-06'
 url: https://wiki.seeedstudio.com/DO_NOT_display/
 ---
 Please check that the Round Display switch is turned on. <br />

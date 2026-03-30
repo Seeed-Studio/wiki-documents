@@ -14,7 +14,7 @@ last_update:
   date: 12/25/2024
   author: Kasun Thushara
 createdAt: '2024-12-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/4g_lte_hat_and_raspberry_pi_router_with_openwrt/
 ---
 

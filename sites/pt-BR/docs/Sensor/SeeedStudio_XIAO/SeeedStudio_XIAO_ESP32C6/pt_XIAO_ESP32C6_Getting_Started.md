@@ -14,9 +14,11 @@ last_update:
   date: 08/05/2024
   author: Spencer
 createdAt: '2024-03-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c6_getting_started/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeiros passos com o Seeed Studio XIAO ESP32C6
 
@@ -559,6 +561,13 @@ Se você quiser aprender a usar mais o modo de sono profundo e as funções de d
 
 **Projeto Mecânico**
 - **📄[Modelo 3D]** [Modelo 3D do XIAO ESP32-C6](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Recursos do Curso
 

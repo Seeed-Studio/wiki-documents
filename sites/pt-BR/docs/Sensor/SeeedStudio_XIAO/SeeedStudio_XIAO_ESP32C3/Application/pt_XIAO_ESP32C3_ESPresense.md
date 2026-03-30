@@ -13,7 +13,7 @@ last_update:
   date: 01/16/2026
   author: Carla Guo
 createdAt: '2026-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao-esp32c3-espresense/
 ---
 

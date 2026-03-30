@@ -16,13 +16,19 @@ last_update:
   date: 1/28/2026
   author: Allen
 createdAt: '2026-01-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 
 # Getting Started with reTerminal E1004
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:1000, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Introduction
 
@@ -125,6 +131,36 @@ Due to the nature of E Ink technology, the screen refresh may take a few seconds
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
+
+## Troubleshooting
+
+### Q1: Device Won't Power On
+
+- Ensure the power switch is in the ON position
+- Connect the USB-C cable to charge the device
+- Check if the red LED is always on (indicating charging)
+- If using battery power, ensure the battery is properly connected and charged
+
+### Q2: Can't Connect to Wi-Fi
+
+- Verify you're entering the correct Wi-Fi password
+- Ensure your Wi-Fi network is operational
+- Check if your Wi-Fi router supports 2.4GHz networks (5GHz is not supported)
+- Try positioning the device closer to your Wi-Fi router
+
+### Q3: Display Not Updating
+
+- Press the refresh button to manually trigger an update
+- Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
+- Check your SenseCraft account to ensure the dashboard is properly deployed
+- If the problem persists, try restarting the device
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
+
+### Q4: Network Connection Lost
+
+- The device will automatically attempt to reconnect to known networks
+- When reconnected, the Wi-Fi disconnection icon will disappear
+- If unable to reconnect, follow the Network Reset procedure above
 
 ## Resources
 

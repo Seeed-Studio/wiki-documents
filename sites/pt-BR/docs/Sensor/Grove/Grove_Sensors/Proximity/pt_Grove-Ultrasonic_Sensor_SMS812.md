@@ -11,7 +11,7 @@ last_update:
   date: 08/16/2023
   author: ZouXiong.Xiao
 createdAt: '2023-08-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/grove_ultrasonic_sensor_sms812/
 ---
 

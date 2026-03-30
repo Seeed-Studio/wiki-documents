@@ -12,7 +12,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-03-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-06-12'
 url: https://wiki.seeedstudio.com/sensecraft-data-platform-api/appendix/list_of_device_status_ids/
 ---
 

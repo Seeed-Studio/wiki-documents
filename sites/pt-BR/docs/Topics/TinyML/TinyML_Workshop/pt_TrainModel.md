@@ -9,7 +9,7 @@ last_update:
   date: 09/24/2024
   author: Frank
 createdAt: '2024-09-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/train_and_deploy_model/
 ---
 

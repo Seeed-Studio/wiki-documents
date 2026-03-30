@@ -10,7 +10,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-I2C_Motor_Driver_V1.2/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-I2C_Motor_Driver_V1.2/img/I2CMotorDriver-2.jpg)

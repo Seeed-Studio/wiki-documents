@@ -12,7 +12,7 @@ last_update:
   date: 12/26/2025
   author: Youjiang
 createdAt: '2025-12-31'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-30'
 url: https://wiki.seeedstudio.com/ja/deploy_live_vlm_webui_on_jetson/
 ---
 

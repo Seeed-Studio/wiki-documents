@@ -10,9 +10,11 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/reComputer_J4012_Flash_Jetpack/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Flashear el sistema operativo JetPack en la placa portadora J401
 
@@ -897,6 +899,13 @@ Completa la **System Configuration** según tus necesidades.
 - [Resumen de dispositivos Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 - [Ejemplos de Jetson](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-para-principiantes](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte técnico y debate sobre el producto
 

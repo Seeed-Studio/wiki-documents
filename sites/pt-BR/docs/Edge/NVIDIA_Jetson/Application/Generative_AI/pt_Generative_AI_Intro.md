@@ -11,7 +11,7 @@ last_update:
   date: 08/06/2024
   author: Youjiang
 createdAt: '2024-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Generative_AI_Intro/
 ---
 

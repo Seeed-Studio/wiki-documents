@@ -9,9 +9,11 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 Este wiki presenta los diversos hardware e interfaces diferentes en el reComputer Industrial J4012, J4011, J3011, J3010 y cómo usarlos para expandir las ideas de tu proyecto.
 
@@ -2221,6 +2223,17 @@ gpiochip2 - 16 lines:
 
 </TabItem>
 </Tabs>
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

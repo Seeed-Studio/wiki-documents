@@ -8,9 +8,11 @@ last_update:
   date: 01/03/2023
   author: w0x7ce
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_Jetson_Series_Introduction/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Introdução ao reComputer para a Série Jetson
 
@@ -192,6 +194,13 @@ Aqui apresentamos tabelas mais completas sobre a comparação de dispositivos al
 ## Recursos
 
 - **[PDF]** [Comparação de dispositivos e placas-carrier NVIDIA Jetson](https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico e Discussão de Produto
 

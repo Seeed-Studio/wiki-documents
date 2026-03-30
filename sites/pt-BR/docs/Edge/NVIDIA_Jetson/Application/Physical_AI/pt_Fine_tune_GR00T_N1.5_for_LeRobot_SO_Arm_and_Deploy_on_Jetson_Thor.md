@@ -12,7 +12,7 @@ last_update:
   date: 2025-9-11
   author: AI&Robotics Group
 createdAt: '2025-09-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk/
 ---
 

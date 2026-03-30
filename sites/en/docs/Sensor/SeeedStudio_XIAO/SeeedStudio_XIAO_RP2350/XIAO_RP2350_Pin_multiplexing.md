@@ -10,7 +10,7 @@ last_update:
   date: 11/02/2024
   author: Allen
 createdAt: '2024-11-13'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/XIAO_RP2350_Pin_Multiplexing/
 ---
 

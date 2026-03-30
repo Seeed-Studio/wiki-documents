@@ -11,7 +11,7 @@ last_update:
   date: 06/18/2025
   author: ZhuYaoHui
 createdAt: '2025-06-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/hexfellow_y200/
 ---
 # HEXFELLOW Y200 IMU传感器快速入门指南

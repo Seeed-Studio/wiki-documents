@@ -11,7 +11,7 @@ last_update:
   date: 05/15/2025
   author: gunengyu
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/Wio_Lite_RISC_V_GD32VF103_with_ESP8266/
 ---
 

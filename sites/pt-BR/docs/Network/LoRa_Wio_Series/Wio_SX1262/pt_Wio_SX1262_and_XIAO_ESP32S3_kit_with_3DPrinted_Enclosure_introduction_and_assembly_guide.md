@@ -8,7 +8,7 @@ last_update:
   date: 11/21/2024
   author: Evelyn Chen
 createdAt: '2024-11-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/wio_sx1262_and_xiao_esp32s3_kit_with_3dprinted_enclosure_introduction_and_assembly_guide/
 ---
 

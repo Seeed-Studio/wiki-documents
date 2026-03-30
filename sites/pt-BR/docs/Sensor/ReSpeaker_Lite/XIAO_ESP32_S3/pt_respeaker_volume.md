@@ -9,7 +9,7 @@ last_update:
   date: 9/27/2024
   author: Jessie
 createdAt: '2024-09-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_volume/
 ---
 

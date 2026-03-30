@@ -11,7 +11,7 @@ last_update:
   date: 10/28/2025
   author: Peter
 createdAt: '2025-10-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-28'
 url: https://wiki.seeedstudio.com/es/model_conversion_guide/
 ---
 

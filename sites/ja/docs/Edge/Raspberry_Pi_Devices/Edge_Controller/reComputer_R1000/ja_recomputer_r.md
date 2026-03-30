@@ -11,9 +11,11 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/recomputer_r/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <!-- ---
 name: The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC.
@@ -1433,6 +1435,17 @@ lsusb
 ```bash
 # Use the ID number to find the port number
 sudo dmesg | grep 5740
+
+
+# 参考資料
+
+<JetsonLeadQuote
+  buttonText="見積もり依頼"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
 # Load ACM module 
 sudo modprobe cdc_acm
 ```

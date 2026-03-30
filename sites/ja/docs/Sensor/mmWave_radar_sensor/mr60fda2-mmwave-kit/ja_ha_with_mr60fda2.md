@@ -12,7 +12,7 @@ last_update:
   date: 10/15/2024
   author: Spencer
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-22'
 url: https://wiki.seeedstudio.com/ja/ha_with_mr60fda2/
 ---
 

@@ -12,9 +12,11 @@ last_update:
   date: 04/19/2023
   author: Lakshantha
 createdAt: '2023-04-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_A603_Flash_System/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Gravar o sistema JetPack OS na A603 Carrier Board
 
@@ -671,6 +673,17 @@ Execute `candump can0` no terminal do Jetson:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/candump.png"/>
 </div>
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico & Discussão de Produtos
 

@@ -13,7 +13,7 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-01-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-11'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
 

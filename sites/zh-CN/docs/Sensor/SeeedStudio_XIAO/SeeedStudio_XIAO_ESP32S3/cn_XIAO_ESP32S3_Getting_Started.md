@@ -12,12 +12,13 @@ last_update:
   date: 08/14/2024
   author: Spencer
 createdAt: '2023-11-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO ESP32S3 系列快速入门
 
@@ -919,6 +920,14 @@ XIAO ESP32S3 系列内置了电源管理芯片，使 XIAO ESP32S3 可以通过�
   - **📄[数据手册]** [OV5640 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
 - **[OV2640]** 
   - **📄[数据手册]** [OV2640 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
 ## 课程资源
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>

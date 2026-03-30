@@ -12,9 +12,11 @@ last_update:
   date: 04/19/2023
   author: Lakshantha
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_A603_Flash_System/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # 将 JetPack 操作系统刷写到 A603 载板
 
@@ -670,6 +672,17 @@ sudo ip link set can0 up
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/candump.png"/>
 </div>
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

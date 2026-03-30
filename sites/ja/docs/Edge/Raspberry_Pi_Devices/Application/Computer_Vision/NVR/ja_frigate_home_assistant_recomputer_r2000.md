@@ -13,7 +13,7 @@ last_update:
   date: 6/18/2025
   author: Kasun Thushara
 createdAt: '2025-06-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-17'
 url: https://wiki.seeedstudio.com/ja/r2000_series_frigate_and_home_assistant/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 02/18/2025
   author: Parker Hu
 createdAt: '2024-12-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/recamera_hardware_and_specs/
 ---
 

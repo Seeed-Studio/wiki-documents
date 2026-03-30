@@ -9,7 +9,7 @@ last_update:
   date: 12/1/2023
   author: Chris (Echo7394)
 createdAt: '2024-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/esp32c3_smart_thermostat/
 ---
 

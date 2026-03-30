@@ -11,7 +11,7 @@ last_update:
   date: 05/22/2024
   author: Youjiang
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-24'
 url: https://wiki.seeedstudio.com/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board/
 ---
 

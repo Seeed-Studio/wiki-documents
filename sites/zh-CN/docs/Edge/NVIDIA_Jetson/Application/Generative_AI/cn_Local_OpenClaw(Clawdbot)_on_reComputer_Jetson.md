@@ -15,9 +15,11 @@ last_update:
   date: 02/3/2026
   author: Youjiang
 createdAt: '2026-02-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/local_openclaw_on_recomputer_jetson/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
@@ -369,6 +371,17 @@ http://127.0.0.1:18789/
 - https://ollama.com/
 - https://wiki.seeedstudio.com/cn/ai_robotics_recomputer_j501_robotics_getting_started/
 
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

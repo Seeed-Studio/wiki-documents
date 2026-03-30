@@ -9,7 +9,7 @@ last_update:
   date: 01/20/2023
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-25'
 url: https://wiki.seeedstudio.com/Seeed_Elderly/Navigation/Edge_Computing_4.7/
 ---
 

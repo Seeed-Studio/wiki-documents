@@ -10,7 +10,7 @@ last_update:
   date: 09/14/2024
   author: Allen, Djair
 createdAt: '2024-07-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/cn/mmwave_for_xiao_to_ha_bt/
 ---
 

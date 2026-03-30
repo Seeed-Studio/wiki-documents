@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-05'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Grove_Maker_Kit_for_Intel_Joule/
 ---
 

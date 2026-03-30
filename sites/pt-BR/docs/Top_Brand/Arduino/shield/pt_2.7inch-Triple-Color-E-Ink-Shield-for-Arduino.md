@@ -9,7 +9,7 @@ last_update:
   date: 2/16/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/2.7inch-Triple-Color-E-Ink-Shield-for-Arduino/
 ---
 <!-- ---

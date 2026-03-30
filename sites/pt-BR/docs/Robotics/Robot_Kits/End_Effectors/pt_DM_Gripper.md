@@ -14,7 +14,7 @@ last_update:
   date: 9/17/2025
   author: Ylson W
 createdAt: '2025-09-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/dm_gripper/
 ---
 

@@ -10,12 +10,13 @@ last_update:
   date: 2024-11-28T03:15:24.000Z
   author: Clara
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/XIAO_BLE/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeros pasos con Seeed Studio XIAO nRF52840 Serie
 
@@ -723,6 +724,13 @@ Para más detalles, consulta la hoja de datos del PMIC: [BQ25100](https://www.ti
 
 **Diseño mecánico**
 - **🗃️[Dimensiones 2D]** [Dimensiones XIAO nRF52840 Sense en DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Recursos del curso
 

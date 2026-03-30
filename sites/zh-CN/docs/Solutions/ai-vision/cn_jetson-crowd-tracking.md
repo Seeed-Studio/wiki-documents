@@ -7,7 +7,7 @@ last_update:
   date: 08/15/2025
   author: lian
 createdAt: '2025-08-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/cn/solutions/jetson-crowd-tracking/
 ---
 

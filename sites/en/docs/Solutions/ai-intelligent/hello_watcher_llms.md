@@ -20,7 +20,7 @@ last_update:
   date: 09/16/2025
   author: Spencer
 createdAt: '2025-09-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-26'
 url: https://wiki.seeedstudio.com/solutions/hello_watcher_llms/
 ---
 

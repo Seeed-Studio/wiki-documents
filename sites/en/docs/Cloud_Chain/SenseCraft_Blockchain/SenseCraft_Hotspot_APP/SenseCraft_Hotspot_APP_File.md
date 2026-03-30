@@ -13,7 +13,7 @@ last_update:
   date: 09/18/2023
   author: Jessie
 createdAt: '2023-09-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app/
 ---
 

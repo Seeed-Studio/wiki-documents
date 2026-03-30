@@ -10,7 +10,7 @@ last_update:
   date: 10/09/2023
   author: Stephen Lo
 createdAt: '2023-10-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/gnss_for_xiao/
 ---
 

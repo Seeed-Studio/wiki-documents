@@ -11,9 +11,11 @@ last_update:
   date: 12/4/2024
   author: Youjiang
 createdAt: '2024-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_A608_Flash_System/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # 将 JetPack 操作系统刷写到 A608 载板（支持 NVIDIA Jetson Orin NX/Nano）
 
@@ -347,6 +349,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 ## 资源
 
 - [A608 CAD 文件](https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608_V1.2.zip)
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

@@ -11,9 +11,11 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/recomputer_r/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <!-- ---
 name: The reComputer R1000 edge IoT controller is built on the high-performance Raspberry Pi CM4 platform, featuring a quad-core A72 processor with a maximum support of 8GB RAM and 32GB eMMC.
@@ -1689,6 +1691,17 @@ One DSI (J24)and one 4-pin Spearker (J7)interfaces are reserved on board, for sp
 - [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
 - [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
 - [reComputer R1000 v1.1 Pin Assignment](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
+
+
+
+## Resources
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

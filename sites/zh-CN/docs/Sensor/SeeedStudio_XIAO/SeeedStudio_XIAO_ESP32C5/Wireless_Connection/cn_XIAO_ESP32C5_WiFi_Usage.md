@@ -12,7 +12,7 @@ last_update:
   date: 01/06/2026
   author: Zeller
 createdAt: '2025-12-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-20'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_wifi_usage/
 ---
 

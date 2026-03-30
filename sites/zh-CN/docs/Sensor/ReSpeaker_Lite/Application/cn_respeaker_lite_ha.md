@@ -1,6 +1,6 @@
 ---
-description: Home Assistant 语音助手系统
-title: Home Assistant 语音助手系统
+description: Home Assitant 语音助手系统
+title: Home Assitant 语音助手系统
 keywords:
   - ESP32S3
   - XIAO
@@ -13,11 +13,11 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/respeaker_lite_ha/
 ---
 
-在本教程中，您将学习如何配置您的 ReSpeaker Lite 与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家对话。
+在本教程中，你将学习如何配置你的 ReSpeaker Lite 以配合 Home Assistant 使用。你将学习如何烧录所需固件，以及如何编译并上传 YAML 文件。之后，你就可以通过语音来控制和自动化你的家用电器。只需说出 “Okay Nabu”，然后开始与家对话。
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -36,29 +36,29 @@ url: https://wiki.seeedstudio.com/cn/respeaker_lite_ha/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
 ## XMOS 固件更新
 
-为了获得最佳的播放体验，我们需要将 XMOS 固件更新到 `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`。
+为了获得最佳播放体验，我们需要将 XMOS 固件更新为 `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`。
 
-从[这里](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)下载完整的固件仓库。
+从[这里](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)以完整仓库的形式下载固件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-在您的计算机上，将 ReSpeaker Lite 插入 USB 接口（靠近 3.5mm 插孔），然后运行以下命令：
+在你的电脑上，通过 USB 接口（靠近 3.5mm 插孔）插入 ReSpeaker Lite，并运行以下命令：
 
 
 
-如果您使用的是 Linux 主机
+如果你使用的是 Linux 主机
 
 ```bash
 sudo apt install dfu-util -y
 sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
-如果您使用的是 Windows 主机
+如果你使用的是 Windows 主机
 
 ```bash
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
@@ -69,7 +69,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 更多信息请参考此[链接](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#update-firmware)
 
 :::note
-为了使用用户按钮和静音按钮，您需要将用户按钮焊接到 D2，将静音按钮焊接到 D3。
+为了使用用户按键和静音按键，你需要将用户按键焊接到 D2，将静音按键焊接到 D3。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={800} height="auto" /></p>
@@ -77,14 +77,14 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ## 入门指南
 
 :::note
-我们使用的是在树莓派 5 上运行的 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
+我们在 Raspberry Pi 5 上使用的是 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
 :::
 
-## 安装 ESPHome Builder
+## 安装 ESPHome Builder 
 
 **Settings → Add-ons → 点击 Add-on Store → 安装 ESPHome Device Builder** 插件。
 
-转到 **Home Assistant > Settings > Add-ons**。
+进入 **Home Assistant > Settings > Add-ons**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -92,18 +92,18 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-在 **Official add-ons** 下，搜索并安装 **ESPHome Device Builder**。
+在 **Official add-ons** 下搜索并安装 **ESPHome Device Builder**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
-安装后，点击 **Start** 运行 ESPHome 插件。
+安装完成后，点击 **Start** 运行 ESPHome 插件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-启用 **Start on Boot、Watchdog 和 Show in Sidebar** 以便更容易访问。
+启用 **Start on Boot、Watchdog 和 Show in Sidebar** 以便更轻松地访问。
 
 
-从 Home Assistant 侧边栏，转到 **ESPHome Builder**。
+在 Home Assistant 侧边栏中，进入 **ESPHome Builder**。
 
 ## 添加 reSpeaker 设备
 
@@ -122,17 +122,20 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-当提示时，点击 **SKIP** – 我们将手动创建配置。
+在提示时，点击 **SKIP** —— 我们将手动创建配置。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-**如何添加设备的 GIF 演示**
+**如何通过 GIF 动图添加设备**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
 
-选择您的新设备条目并点击 **EDIT**。
+选择你新建的设备条目并点击 **EDIT**。
 
+:::note
+更新后的 YAML 文件可以在此处找到。在某些情况下，最新的 ESPHome 版本可能会导致兼容性问题。请参考原始[仓库](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml)
+:::
 
 <details>
 <summary>Yaml 文件</summary>
@@ -1428,7 +1431,7 @@ voice_assistant:
     - script.execute:
         id: send_stt_text_event
         stt_text: !lambda 'return x;'
-    
+
   # When the voice assistant ends ...
   on_end:
     - wait_until:
@@ -1496,11 +1499,11 @@ debug:
 
 </details>
 
-保存 YAML 文件后，点击 **INSTALL**。
+保存 YAML 后，点击 **INSTALL**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
-选择手动 **Download**
+选择 Manual **Download**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -1510,41 +1513,41 @@ debug:
 
 等待固件编译完成。
 
-从 Factory Format 下载生成的 .bin 固件文件到您的计算机。
+从 Factory Format 将生成的 .bin 固件文件下载到你的电脑。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-**下载编译的 Bin 文件：GIF 演示**
+**下载已编译 Bin 文件：GIF 演示**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
-使用 USB Type-C 线缆将 ESP32-S3 开发板的 USB Type-C 端口连接到您的 PC。
+使用 USB Type-C 线将 ESP32-S3 开发板的 USB Type-C 接口连接到你的电脑。
 
 在 Google Chrome 中打开 [Web ESPHome](https://web.esphome.io/?dashboard_wizard)。
 
-点击 Connect 并从列表中选择正确的串行端口。
+点击 Connect，并从列表中选择正确的串口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/web_esphome.png" alt="pir" width={600} height="auto" /></p>
 
 连接成功后，点击 **INSTALL**
 
-选择您刚刚下载的 .bin 文件。
+选择你刚刚下载的 .bin 文件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/bin_file_choose.png" alt="pir" width={600} height="auto" /></p>
 
 等待安装完成（可能需要几分钟）。
 
-成功后，您将看到确认消息。
+成功后，你会看到一条确认消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/burn_flash_bin.gif" alt="pir" width={700} height="auto" /></p>
 
-返回 **Home Assistant > Settings > Devices & Services**。
+返回到 **Home Assistant > Settings > Devices & Services**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
 
-您应该看到 **ESPHome** 被列为已发现的集成。
+你应该会看到 **ESPHome** 被列为已发现的集成。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
@@ -1555,18 +1558,18 @@ debug:
 
 ## 语音助手配置
 
-现在您将被引导到语音助手配置页面。
-您可以说 "Okay Nabu"，它会用确认声音（呼声）回应。
+现在你会被引导到语音助手配置页面。
+你可以说 “Okay Nabu”，它会用一个确认音（whoop 声）进行回应。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/okay_nabu.png" alt="pir" width={700} height="auto" /></p>
 
-接下来，您将被引导配置语音管道。在此演示中，我们将使用 Nabu Cloud。
+接下来，你将被引导配置你的语音管线。在本演示中，我们将使用 Nabu Cloud。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_1.png" alt="pir" width={700} height="auto" /></p>
 
-设置很简单，您可以利用一个月的免费试用来探索其全部功能。
+设置过程很简单，你可以利用一个月的免费试用来探索其全部功能。
 
-您可以使用 Nabu Cloud 登录并配置语音助手，因为它相对容易设置并提供快速性能。
+你可以登录 Nabu Cloud 并配置语音助手，因为它相对容易设置且提供快速的性能。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
@@ -1574,21 +1577,21 @@ debug:
 
 ### 如何查看 reSpeaker 日志？
 
-要查看日志文件和调试程序——例如验证唤醒词检测和 STT 功能——您可以使用前面提到的 ESP Web 应用程序。
+要查看日志文件和调试过程——例如验证唤醒词检测和 STT 功能——你可以使用前面提到的 ESP Web 应用。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
 
-## 特别感谢
-我们要感谢 FormatBCE 为 Seeed Studio reSpeaker Lite 创建了这个出色的 YAML 文件。在他的 [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration) 上支持他
+## 特别鸣谢
+我们要感谢 FormatBCE 为 Seeed Studio reSpeaker Lite 创建了这个非常棒的 YAML 文件。你可以在他的 [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration) 上支持他。
 
 
 
 ## 项目分享
-- 来自 **Smart Home Circle**：[Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
+- 来自 **Smart Home Circle** ：[创建本地语音助手](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

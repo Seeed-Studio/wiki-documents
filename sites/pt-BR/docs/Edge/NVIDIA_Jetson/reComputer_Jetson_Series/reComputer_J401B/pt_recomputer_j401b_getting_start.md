@@ -10,9 +10,11 @@ last_update:
   date: 4/27/2025
   author: Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_j401b_getting_start/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeiros passos com o reComputer J401B
 
@@ -39,6 +41,13 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
 - **Certificações incluem** ROHS, CE, FCC, KC, UKCA, REACH
 
 - **Fornecimento de Longa Duração:** Vida útil de produção: até pelo menos 2032
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificações
 
