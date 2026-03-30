@@ -9,7 +9,7 @@ last_update:
   date: 1/12/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/K1100_SenseCAP_to_Azure_IoT_Central/
 ---
 

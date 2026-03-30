@@ -9,7 +9,7 @@ last_update:
   date: 3/20/2024
   author: timo614
 createdAt: '2024-11-13'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-Zephyr-RTOS/
 ---
 

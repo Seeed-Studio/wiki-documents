@@ -10,7 +10,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 createdAt: '2023-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2023-12-21'
 url: https://wiki.seeedstudio.com/SenseCAP_Indicator_ChatGPT/
 ---
   # **SenseCAP Indicator X ChatGPT**

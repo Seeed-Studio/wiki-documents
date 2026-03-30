@@ -11,7 +11,7 @@ last_update:
   date: 05/15/2024
   author: Citric
 createdAt: '2024-05-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/matter_development_framework/
 ---
 

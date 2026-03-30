@@ -18,7 +18,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-05-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/device_network_setup/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 7/23/2024
   author: Frank
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/ja/SenseCAP_introduction/
 ---
 

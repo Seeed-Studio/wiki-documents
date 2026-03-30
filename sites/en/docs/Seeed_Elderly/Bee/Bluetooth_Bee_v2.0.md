@@ -11,7 +11,7 @@ last_update:
 sku: 113050014
 type: gettingstarted
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Bluetooth_Bee_v2.0/
 ---
 

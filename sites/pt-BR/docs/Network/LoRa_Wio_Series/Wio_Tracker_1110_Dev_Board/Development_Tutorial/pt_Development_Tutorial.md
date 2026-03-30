@@ -12,7 +12,7 @@ last_update:
   date: 9/4/2023
   author: Jessie
 createdAt: '2023-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/development_tutorial_for_Wio-trakcer/
 ---
 

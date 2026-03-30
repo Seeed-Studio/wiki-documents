@@ -12,7 +12,7 @@ last_update:
   date: 12/20/2024
   author: Jiahao Li
 createdAt: '2024-06-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1000_use_rs485_modbus_rtu/
 ---
 

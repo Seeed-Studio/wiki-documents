@@ -16,7 +16,7 @@ last_update:
   date: 03/27/2025
   author: Evelyn Chen
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/recamera_gimbal_hardware_and_specs/
 ---
 

@@ -14,7 +14,7 @@ last_update:
   author: Allen
   date: 12/02/2024
 createdAt: '2024-12-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/relay_add_on_module_for_xiao/
 ---
 

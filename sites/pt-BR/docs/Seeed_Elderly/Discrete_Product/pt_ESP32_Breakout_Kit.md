@@ -10,8 +10,8 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-02'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/ESP32_Breakout_Kit/
+updatedAt: '2026-03-13'
+url: https://wiki.seeedstudio.com/pt-br/ESP32_Breakout_Kit/
 ---
 
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/ESP32_Breakout_Kit/img/cover.jpg) -->

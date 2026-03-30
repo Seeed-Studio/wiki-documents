@@ -13,8 +13,8 @@ last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
+updatedAt: '2026-03-20'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor/
 ---
 
 import Tabs from '@theme/Tabs';

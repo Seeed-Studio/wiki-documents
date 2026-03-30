@@ -11,7 +11,7 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2024-03-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_sscma/
 ---
 

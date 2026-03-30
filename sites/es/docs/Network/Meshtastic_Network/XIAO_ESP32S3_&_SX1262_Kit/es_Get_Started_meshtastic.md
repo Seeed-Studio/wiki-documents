@@ -7,7 +7,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-11'
 url: https://wiki.seeedstudio.com/es/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/
 ---
 

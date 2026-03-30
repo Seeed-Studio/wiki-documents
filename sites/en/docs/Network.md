@@ -9,7 +9,7 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/Network/
 ---
 
@@ -17,9 +17,9 @@ Robust networking capabilities seamlessly integrate Seeed's diverse range of sen
 
 Seeed offers a large variety of networking products that integrates perfectly with our range of products, you can find them on Sensor as well:
 
-- ### Network Devices for industrial sensors
+- **Network Devices for industrial sensors**
 
-- ### Network Modules for entry level sensors
+- **Network Modules for entry level sensors**
 
 ## Network Devices for industrial sensors
 
@@ -34,22 +34,14 @@ Seeed offers a large variety of networking products that integrates perfectly wi
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Helium-Platform Gateway</font></div>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Industrial Edge IoT Gateway</font></div>
+            <a href="/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Local Console</font></span></a>
-            <br/>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Quick Start</font></span></a>
-            <br/>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Local Console</font></span></a>
-            <br/>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Light Gateway Quick Start</font></span></a>
-            <br/>
-            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Light Gateway FAQ</font></span></a>
+            <a href="/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway Quick Start</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
-            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Multi-Platform Gateway</font></div>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Indoor Multi-Platform  Gateway</font></div>
             <a href="/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Overview of SenseCAP M2 Multi-Platform Gateway</font></span></a>
             <br/>
             <a href="/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Connectting AWS Platform </font></span></a>
@@ -72,10 +64,26 @@ Seeed offers a large variety of networking products that integrates perfectly wi
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'left'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Outdoor / Indoor Gateway</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Outdoor  Gateway</font></div>
             <a href="/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP LoRaWAN® Outdoor Gateway</font></span></a>
             <br/>
-            <a href="/The-Things-Indoor-Gateway" target="_blank"><span><font color={'FFFFFF'} size={"2"}>The Things Indoor Gateway</font></span></a>
+    </div>
+</div>
+
+<div class="independent_container">
+<div class="independent_item" style={{textAlign: 'left'}}>
+            <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Helium-Platform Gateway</font></div>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Quick Start</font></span></a>
+            <br/>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M1 Local Console</font></span></a>
+            <br/>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Quick Start</font></span></a>
+            <br/>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Data Only Local Console</font></span></a>
+            <br/>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Light Gateway Quick Start</font></span></a>
+            <br/>
+            <a href="/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_FAQ" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 Light Gateway FAQ</font></span></a>
             <br/>
     </div>
 </div>

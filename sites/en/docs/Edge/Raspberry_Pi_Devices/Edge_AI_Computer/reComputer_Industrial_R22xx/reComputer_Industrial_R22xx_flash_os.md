@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r22xx_flash_os/
 ---
 

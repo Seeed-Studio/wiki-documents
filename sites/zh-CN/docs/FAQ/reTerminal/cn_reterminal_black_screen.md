@@ -7,7 +7,7 @@ last_update:
   date: 11/15/2023
   author: Kasun Thushara
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/reterminal_black_screen/
 ---
 

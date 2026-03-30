@@ -10,7 +10,7 @@ last_update:
   date: 06/07/2023
   author: Citric
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/grove-lightning-sensor-as3935/
 ---
 

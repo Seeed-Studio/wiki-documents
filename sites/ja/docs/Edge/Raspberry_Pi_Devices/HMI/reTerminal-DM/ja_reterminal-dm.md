@@ -11,7 +11,7 @@ last_update:
   date: 12/15/2025
   author: David Du
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-28'
 url: https://wiki.seeedstudio.com/ja/reterminal-dm/
 ---
 # reTerminal DM 入門ガイド

@@ -15,7 +15,7 @@ last_update:
   date: 6/24/2025
   author: Youjiang
 createdAt: '2025-06-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/sound_follow_robot/
 ---
 

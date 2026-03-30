@@ -12,7 +12,7 @@ last_update:
   date: 1/10/2024
   author: Kasun Thushara
 createdAt: '2025-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/reTerminal_ML_MediaPipe/
 ---
 

@@ -17,7 +17,7 @@ tags:
 categories:
   - SenseCAP
 createdAt: '2023-12-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Indicator_Application_LoRaWAN/
 ---
 

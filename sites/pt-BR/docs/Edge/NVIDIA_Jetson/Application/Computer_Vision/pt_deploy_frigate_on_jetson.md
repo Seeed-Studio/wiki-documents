@@ -7,7 +7,7 @@ last_update:
   date: 08/29/2024
   author: kourosh
 createdAt: '2024-08-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/deploy_frigate_on_jetson/
 ---
 

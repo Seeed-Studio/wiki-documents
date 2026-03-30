@@ -10,7 +10,7 @@ last_update:
   date: 07/18/2025
   author: Youjiang
 createdAt: '2025-07-18'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-21'
 url: https://wiki.seeedstudio.com/replace_the_thermal_conductive_paste_for_recomputer/
 ---
 

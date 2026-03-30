@@ -9,7 +9,7 @@ last_update:
   date: 2/14/2023
   author: hushuxu
 createdAt: '2023-02-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/
 ---
 ## Crie sua placa Arduino personalizada por menos de US$ 50

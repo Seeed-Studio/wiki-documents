@@ -12,7 +12,7 @@ last_update:
   date: 03/12/2025
   author: Allen
 createdAt: '2025-03-25'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_esphome/
 ---
 

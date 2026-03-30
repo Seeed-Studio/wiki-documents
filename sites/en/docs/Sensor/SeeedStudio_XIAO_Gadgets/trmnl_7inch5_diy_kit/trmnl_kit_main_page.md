@@ -8,7 +8,7 @@ last_update:
   date: 06/29/2025
   author: Allen
 createdAt: '2025-07-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/
 ---
 

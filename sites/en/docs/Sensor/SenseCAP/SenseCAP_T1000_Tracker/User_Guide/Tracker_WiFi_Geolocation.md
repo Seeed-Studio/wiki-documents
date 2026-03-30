@@ -8,7 +8,7 @@ last_update:
   date: 10/19/2023
   author: JoJang
 createdAt: '2023-09-26'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/Tracker_WiFi_Geolocation/
 ---
 

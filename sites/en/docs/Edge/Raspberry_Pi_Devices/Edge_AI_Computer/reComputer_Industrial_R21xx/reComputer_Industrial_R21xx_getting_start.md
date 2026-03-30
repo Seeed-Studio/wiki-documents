@@ -13,7 +13,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_getting_start/
 ---
 
@@ -82,8 +82,8 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td>**Product Series**</td>
-        <td>R20xx-12</td>
-        <td>R20xx-10</td>
+        <td>R21xx-12</td>
+        <td>R21xx-10</td>
       </tr>
       <tr>
         <td> **CPU** </td>
@@ -144,22 +144,26 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
       </tr>
       <tr>
         <td> RS485 </td>
-        <td colspan="3"> 3x RS485(Isolated) </td>
+        <td colspan="3"> 2x RS485(Isolated) </td>
       </tr>
       <tr>
         <td> RS232 </td>
-        <td colspan="3"> 1x RS232(Isolated) </td>
+        <td colspan="3"> 2x RS232(Isolated) </td>
+      </tr>
+      <tr>
+        <td> CAN </td>
+        <td colspan="3"> 2x CAN(Isolated) </td>
       </tr>
       <tr>
         <td rowspan="2"> DI </td>
-        <td colspan="3"> 8 x Isolated DI Ports </td>
+        <td colspan="3"> 4 x Isolated DI Ports </td>
       </tr>
       <tr>
         <td colspan="3"> Input Voltage: 5~24V DC </td>
       </tr>
       <tr>
         <td rowspan="2"> DO </td>
-        <td colspan="3"> 8 x Isolated DO Ports </td>
+        <td colspan="3"> 4 x Isolated DO Ports </td>
       </tr>
       <tr>
         <td colspan="3"> Output Voltage: Below 60V DC </td>

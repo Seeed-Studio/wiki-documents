@@ -22,7 +22,7 @@ last_update:
   date: 1/7/2026
   author: TienjuiWong
 createdAt: '2026-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-03'
 url: https://wiki.seeedstudio.com/cn/reachymini_getting_started/
 ---
 

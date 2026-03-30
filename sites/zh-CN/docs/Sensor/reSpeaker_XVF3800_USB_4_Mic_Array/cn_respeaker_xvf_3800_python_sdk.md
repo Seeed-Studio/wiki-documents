@@ -12,7 +12,7 @@ last_update:
   date: 11/14/2025
   author: Kasun Thushara
 createdAt: '2025-11-14'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_python_sdk/
 ---
 

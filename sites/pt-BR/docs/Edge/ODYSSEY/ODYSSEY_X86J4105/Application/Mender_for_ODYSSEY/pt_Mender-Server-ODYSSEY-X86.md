@@ -9,7 +9,7 @@ last_update:
   date: 03/16/2023
   author: Lakshantha
 createdAt: '2023-01-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Mender-Server-ODYSSEY-X86/
 ---
 

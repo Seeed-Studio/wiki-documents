@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2022-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Bus_Pirate_v3_assembled/
 ---
 ![](https://files.seeedstudio.com/wiki/Bus_Pirate_v3_assembled/img/Bus%20Pirate%20v3.6interface.jpg)

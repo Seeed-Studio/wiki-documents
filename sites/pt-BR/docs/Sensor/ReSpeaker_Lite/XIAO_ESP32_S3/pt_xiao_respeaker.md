@@ -12,7 +12,7 @@ last_update:
   date: 3/17/2026
   author: Citric
 createdAt: '2024-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-17'
 url: https://wiki.seeedstudio.com/pt-br/xiao_respeaker/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 8/16/2024
   author: Jessie
 createdAt: '2024-08-16'
-updatedAt: '2026-03-03'
+updatedAt: '2024-09-29'
 url: https://wiki.seeedstudio.com/respeaker_button/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 2/16/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/Energy_Monitor_Shield_V0.9b/
 ---
 

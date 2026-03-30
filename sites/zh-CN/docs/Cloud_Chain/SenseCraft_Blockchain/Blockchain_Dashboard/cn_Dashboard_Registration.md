@@ -12,7 +12,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/cn/sensecraft-blockchain/blockchain-dashboard/dashboard-registration/
 ---
 

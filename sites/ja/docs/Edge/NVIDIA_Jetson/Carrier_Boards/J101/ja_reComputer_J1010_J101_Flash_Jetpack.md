@@ -9,7 +9,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack/
 ---
 

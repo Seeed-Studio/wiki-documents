@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/DC_framework_solenoid_HCNE1-0520/
 ---
 Este solenoide de estrutura DC de 12 Volts é ótimo para projetos! Esses tipos de solenoide são frequentemente usados em fechaduras automáticas de portas, máquinas de venda automática, robôs etc. No entanto, funcionam muito bem para praticamente qualquer projeto que exija um solenoide DC.

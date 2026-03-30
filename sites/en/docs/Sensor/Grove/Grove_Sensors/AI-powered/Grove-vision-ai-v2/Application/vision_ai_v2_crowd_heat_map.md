@@ -11,7 +11,7 @@ last_update:
   date: 05/22/2024
   author: Citric
 createdAt: '2024-05-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/vision_ai_v2_crowd_heat_map/
 ---
 

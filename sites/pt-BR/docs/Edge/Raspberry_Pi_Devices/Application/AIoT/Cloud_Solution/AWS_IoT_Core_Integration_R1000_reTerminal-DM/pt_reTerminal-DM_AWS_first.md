@@ -11,7 +11,7 @@ last_update:
   date: 11/22/2023
   author: Kasun Thushara
 createdAt: '2023-11-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal-DM_AWS_first/
 ---
 ## Introdução

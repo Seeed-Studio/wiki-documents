@@ -11,7 +11,7 @@ last_update:
   date: 4/1/2024
   author: Youjiang
 createdAt: '2024-01-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/
 ---
 
