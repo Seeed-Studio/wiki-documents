@@ -12,7 +12,7 @@ last_update:
   date: 06/05/2024
   author: Kasun Thushara
 createdAt: '2024-06-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/edge_box_rpi_200_node_red_bacnet_tcp/
 ---
 

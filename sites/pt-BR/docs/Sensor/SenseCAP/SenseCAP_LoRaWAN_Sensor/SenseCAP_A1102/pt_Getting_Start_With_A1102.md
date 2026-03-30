@@ -10,7 +10,7 @@ last_update:
   date: 3/12/2025
   author: Zeke
 createdAt: '2025-01-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_a1102/
 ---
 

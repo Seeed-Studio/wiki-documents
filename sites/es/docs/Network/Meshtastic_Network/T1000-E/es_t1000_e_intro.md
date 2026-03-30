@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-29'
 url: https://wiki.seeedstudio.com/es/t1000_e_intro/
 ---
 

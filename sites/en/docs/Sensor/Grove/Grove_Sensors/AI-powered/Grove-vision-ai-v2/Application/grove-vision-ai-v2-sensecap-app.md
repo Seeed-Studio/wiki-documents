@@ -11,7 +11,7 @@ last_update:
   date: 01/19/2024
   author: Citric
 createdAt: '2024-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/connect_vision_ai_v2_to_sensecap_mate/
 ---
 

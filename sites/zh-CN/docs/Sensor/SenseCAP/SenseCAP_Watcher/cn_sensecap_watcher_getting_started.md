@@ -8,7 +8,7 @@ last_update:
   date: 10/17/2024
   author: Citric
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-05'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_watcher/
 ---
 

@@ -15,7 +15,7 @@ last_update:
   date: 2026-01-28T00:00:00.000Z
   author: John Xiang
 createdAt: '2026-01-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/ja/ai_human_detection_meshtastic_broadcast/
 ---
 

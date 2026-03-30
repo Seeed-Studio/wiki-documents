@@ -10,7 +10,7 @@ last_update:
   date: 1/7/2023
   author: shuxu hu
 createdAt: '2024-04-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-16x2_LCD_Series/
 ---
 

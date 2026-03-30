@@ -13,7 +13,7 @@ last_update:
   date: 10/09/2024
   author: Spencer
 createdAt: '2023-05-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/SenseCAP_Indicator_Application_Home_Assistant/
 ---
 

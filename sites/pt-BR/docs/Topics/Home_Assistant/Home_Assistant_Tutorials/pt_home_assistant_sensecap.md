@@ -10,7 +10,7 @@ last_update:
   date: 10/19/2023
   author: JoJang
 createdAt: '2023-10-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/home_assistant_sensecap/
 ---
 

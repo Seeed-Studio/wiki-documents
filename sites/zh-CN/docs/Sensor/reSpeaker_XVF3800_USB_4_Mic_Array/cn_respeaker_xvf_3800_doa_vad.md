@@ -12,7 +12,7 @@ last_update:
   date: 1/23/2025
   author: Kasun Thushara
 createdAt: '2026-01-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-23'
 url: https://wiki.seeedstudio.com/cn/respeaker_xvf3800_xiao_doa_vad/
 ---
 

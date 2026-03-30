@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-22'
 url: https://wiki.seeedstudio.com/cn/Grove-Toy_Kit/
 ---
 Grove 玩具套件为您提供了一种简单的方式来改装和升级玩具，使其符合您的个性。它为普通玩具增加了许多酷炫功能，如人体运动感应、听觉能力、运动检测、OLED显示等等。感谢玩具改装比赛的参与者们，下面列出了六个精彩的项目，展示了您可以用Grove玩具套件做什么。

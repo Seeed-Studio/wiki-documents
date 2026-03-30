@@ -12,7 +12,7 @@ last_update:
   date: 06/20/2024
   author: ShuishengPeng
 createdAt: '2024-06-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_r1000_node_red_bacnet_ip/
 ---
 

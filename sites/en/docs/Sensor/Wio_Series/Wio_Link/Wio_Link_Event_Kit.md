@@ -11,7 +11,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-02-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Wio_Link_Event_Kit/
 ---
 

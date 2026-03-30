@@ -13,7 +13,7 @@ last_update:
   author: Carla
 sidebar_position: 0
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/es/getting_started_xiao_ra4m1/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 9/26/2023
   author: Jessie
 createdAt: '2023-09-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/es/quick_start_with_M2_MP/
 ---
 

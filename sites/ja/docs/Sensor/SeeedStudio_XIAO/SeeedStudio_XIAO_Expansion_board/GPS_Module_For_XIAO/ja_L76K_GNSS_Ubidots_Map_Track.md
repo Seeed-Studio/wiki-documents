@@ -13,7 +13,7 @@ last_update:
   date: 03/07/2024
   author: Harrison Xu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/L76K_Path_Tracking_on_Ubidots/
 ---
 

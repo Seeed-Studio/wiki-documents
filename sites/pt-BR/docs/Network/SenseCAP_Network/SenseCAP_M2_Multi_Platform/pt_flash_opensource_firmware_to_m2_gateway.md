@@ -7,7 +7,7 @@ last_update:
   date: 4/22/2025
   author: Leo
 createdAt: '2024-12-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/flash_opensource_firmware_to_m2_gateway/
 ---
 

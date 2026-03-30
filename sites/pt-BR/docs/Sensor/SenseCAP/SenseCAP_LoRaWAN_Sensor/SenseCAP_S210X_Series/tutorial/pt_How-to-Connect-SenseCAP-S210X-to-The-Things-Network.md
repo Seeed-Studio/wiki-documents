@@ -9,7 +9,7 @@ last_update:
   date: 11/25/2024
   author: Leo
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/How-to-Connect-SenseCAP-S210X-to-The-Things-Network/
 ---
 

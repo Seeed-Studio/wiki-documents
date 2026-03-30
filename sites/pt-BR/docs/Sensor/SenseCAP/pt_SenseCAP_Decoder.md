@@ -9,7 +9,7 @@ last_update:
   date: 3/12/2026
   author: Janet
 createdAt: '2023-08-24'
-updatedAt: '2026-03-12'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Decoder/
 ---
 

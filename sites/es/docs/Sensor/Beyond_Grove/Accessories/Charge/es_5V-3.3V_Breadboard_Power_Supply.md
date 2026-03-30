@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/5V-3.3V_Breadboard_Power_Supply/
 ---
 

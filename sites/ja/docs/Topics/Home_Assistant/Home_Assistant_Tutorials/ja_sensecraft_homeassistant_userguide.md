@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: WenHao
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/sensecraft_homeassistant_userguide/
 ---
 

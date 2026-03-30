@@ -9,7 +9,7 @@ last_update:
   date: 11/20/2023
   author: Matthew
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/SenseCAP_Builder_build_LoRaWAN_Sensors/
 ---
 

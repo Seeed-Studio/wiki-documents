@@ -8,7 +8,7 @@ last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
 createdAt: '2024-10-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_rp2350_arduino/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 2/2/2023
   author: shuxu hu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/es/Vision_AI_with_Customizable_Models/
 ---
 

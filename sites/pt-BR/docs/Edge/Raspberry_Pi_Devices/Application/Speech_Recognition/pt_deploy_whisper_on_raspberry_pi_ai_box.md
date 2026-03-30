@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/deploy_whisper_on_raspberry_pi_ai_box/
 ---
 

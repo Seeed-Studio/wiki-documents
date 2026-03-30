@@ -11,7 +11,7 @@ last_update:
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_homeassistant/
 ---
 

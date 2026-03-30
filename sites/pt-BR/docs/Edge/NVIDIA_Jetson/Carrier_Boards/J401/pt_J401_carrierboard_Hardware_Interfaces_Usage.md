@@ -9,7 +9,7 @@ last_update:
   date: 04/29/2024
   author: Jiahao
 createdAt: '2024-05-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/
 ---
 ## Introdução

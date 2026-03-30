@@ -13,7 +13,7 @@ last_update:
   date: 2024-01-26T06:59:58.390Z
   author: Spencer
 createdAt: '2024-01-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/platformio_wio_e5/
 ---
 

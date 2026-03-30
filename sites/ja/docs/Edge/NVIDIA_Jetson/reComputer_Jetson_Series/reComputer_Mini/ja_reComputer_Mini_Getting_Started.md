@@ -13,7 +13,7 @@ last_update:
   date: 12/11/2024
   author: Youjiang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_mini_getting_started/
 ---
 

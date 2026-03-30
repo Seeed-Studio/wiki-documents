@@ -14,7 +14,7 @@ last_update:
   date: 2025-12-17T00:00:00.000Z
   author: John Xiang
 createdAt: '2025-12-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/cn/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 

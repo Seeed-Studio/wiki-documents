@@ -9,7 +9,7 @@ last_update:
   date: 08/29/2023
   author: Jessie
 createdAt: '2023-08-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/SenseCAP_m2_LNS_config/
 ---
 

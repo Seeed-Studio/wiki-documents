@@ -8,6 +8,9 @@ slug: /firmware_update
 last_update:
   date: 03/19/2026
   author: Kian
+createdAt: '2026-03-19'
+url: https://wiki.seeedstudio.com/ja/firmware_update/
+updatedAt: '2026-03-19'
 ---
 
 ## リソース

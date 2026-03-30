@@ -11,7 +11,7 @@ last_update:
   date: 2/1/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/reTerminal-Buildroot-SDK/
 ---
 

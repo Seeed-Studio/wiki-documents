@@ -10,7 +10,7 @@ last_update:
   date: 5/31/2023
   author: Thomas
 createdAt: '2023-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key/
 ---
 

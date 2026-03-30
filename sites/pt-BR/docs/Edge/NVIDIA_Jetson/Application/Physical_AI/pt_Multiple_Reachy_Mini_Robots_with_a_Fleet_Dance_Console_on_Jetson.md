@@ -13,6 +13,9 @@ keywords:
   - Robotics
   - Web UI
   - Fleet Control
+createdAt: '2026-03-25'
+url: https://wiki.seeedstudio.com/pt-br/ai_robotics_reachy_fleet_dance/
+updatedAt: '2026-03-25'
 ---
 
 # Controle vários robôs Reachy Mini com um console de dança de frota no Jetson

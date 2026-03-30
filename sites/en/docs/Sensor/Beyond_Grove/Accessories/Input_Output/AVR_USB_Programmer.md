@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2022-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/AVR_USB_Programmer/
 ---
 ![](https://files.seeedstudio.com/wiki/AVR_USB_Programmer/img/jyeprogrammer.jpg)
