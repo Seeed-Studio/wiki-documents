@@ -15,8 +15,7 @@ updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/bluetooth_beacon02_for_sensecap_tracker/
 ---
 
-BLE（Bluetooth Low Energy，低功耗蓝牙）定位 Beacon 是一种小型无线设备，会以固定时间间隔发射蓝牙信号。这些信号可以被支持蓝牙的设备检测到，例如 [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)、[**SenseCAP T2000 
-Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html)，从而让这些设备判断与 Beacon 的距离，构建用于室内定位、资产追踪等应用的基于位置的解决方案。
+BLE（Bluetooth Low Energy，低功耗蓝牙）定位 Beacon 是一种小型无线设备，会以固定时间间隔发射蓝牙信号。这些信号可以被支持蓝牙的设备检测到，例如 [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)、[**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html)，从而让这些设备判断与 Beacon 的距离，构建用于室内定位、资产追踪等应用的基于位置的解决方案。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-113991456-outdoor-bluetooth-beacon.jpg" alt="pir" width={800} height="auto" /></p>
 
