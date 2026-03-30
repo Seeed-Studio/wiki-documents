@@ -8,7 +8,7 @@ last_update:
   date: 10/9/2024
   author: Jason
 createdAt: '2024-10-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/training_model_for_watcher/
 ---
 

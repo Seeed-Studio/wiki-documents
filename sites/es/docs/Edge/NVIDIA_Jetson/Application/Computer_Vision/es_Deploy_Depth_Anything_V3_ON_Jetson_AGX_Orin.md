@@ -18,7 +18,7 @@ last_update:
   date: 2026-01-09T00:00:00.000Z
   author: Zibo
 createdAt: '2026-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-16'
 url: https://wiki.seeedstudio.com/es/deploy_depth_anything_v3_jetson_agx_orin/
 ---
 

@@ -12,8 +12,8 @@ last_update:
   date: 12/08/2025
   author: Zeller
 createdAt: '2025-12-08'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/esphome_xiao_w5500_ethernet_adapter/
+updatedAt: '2026-03-16'
+url: https://wiki.seeedstudio.com/pt-br/esphome_xiao_w5500_ethernet_adapter/
 ---
 
 import Tabs from '@theme/Tabs';

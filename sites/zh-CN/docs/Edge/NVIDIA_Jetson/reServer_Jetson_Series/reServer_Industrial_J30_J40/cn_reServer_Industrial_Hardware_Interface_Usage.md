@@ -2,7 +2,7 @@
 description: reServer Industrial 硬件接口使用
 title: reServer Industrial 硬件接口使用
 keywords:
-- reServer
+  - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_industrial_hardware_interface_usage
 last_update:
@@ -10,7 +10,7 @@ last_update:
   author: Lakshantha
 sku: 114110247
 createdAt: '2023-06-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/cn/reserver_industrial_hardware_interface_usage/
 ---
 

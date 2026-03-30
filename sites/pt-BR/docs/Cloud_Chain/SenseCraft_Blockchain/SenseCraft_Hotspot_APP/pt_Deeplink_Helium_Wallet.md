@@ -11,7 +11,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-blockchain/sensecraft-hotspot-app/deeplink_helium_wallet/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 12/19/2023
   author: Youjiang
 createdAt: '2023-12-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/cn/reComputer_Intro/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 04/08/2025
   author: Parker Hu
 createdAt: '2024-09-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-25'
 url: https://wiki.seeedstudio.com/recamera_network_connection/
 ---
 

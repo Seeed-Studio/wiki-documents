@@ -1,17 +1,20 @@
 ---
 description: Inicio rápido de la pasarela LoRaWAN reComputer R1225
-title:  Inicio rápido de la pasarela LoRaWAN reComputer R1225
+title: Inicio rápido de la pasarela LoRaWAN reComputer R1225
 keywords:
-- Gateway
-- SenseCAP
-- Controlador de borde
-- reComputer R1225 
+  - Gateway
+  - SenseCAP
+  - Controlador de borde
+  - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_quick_start
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 03/13/2026
   author: Kian
+createdAt: '2026-03-19'
+url: https://wiki.seeedstudio.com/es/r1225_quick_start/
+updatedAt: '2026-03-26'
 ---
 
 # Inicio rápido

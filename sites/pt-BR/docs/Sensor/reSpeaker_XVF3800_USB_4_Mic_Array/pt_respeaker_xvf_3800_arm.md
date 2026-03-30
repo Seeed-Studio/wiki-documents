@@ -11,7 +11,7 @@ last_update:
   date: 2/6/2026
   author: Mingxi
 createdAt: '2026-02-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_xvf_3800_arm/
 ---
 

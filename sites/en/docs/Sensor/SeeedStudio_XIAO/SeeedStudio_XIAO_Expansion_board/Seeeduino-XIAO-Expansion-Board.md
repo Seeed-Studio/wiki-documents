@@ -10,7 +10,7 @@ last_update:
   date: 07/18/2024
   author: Spencer
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-28'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/
 ---
 

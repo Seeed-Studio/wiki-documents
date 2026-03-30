@@ -19,7 +19,7 @@ last_update:
   date: 10/22/2025
   author: Twelve
 createdAt: '2025-10-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/extending_grove_with_mcp/
 ---
 # Estendendo MCP com Grove

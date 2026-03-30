@@ -9,7 +9,7 @@ last_update:
   date: 09/19/2025
   author: Citric
 createdAt: '2025-05-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl/
 ---
 

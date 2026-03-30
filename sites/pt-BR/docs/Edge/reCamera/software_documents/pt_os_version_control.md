@@ -14,7 +14,7 @@ last_update:
   date: 2/14/2025
   author: Parker Hu & Dawn Yao
 createdAt: '2025-02-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recamera_os_version_control/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 1/3/2023
   author: jianjing Huang
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-14'
 url: https://wiki.seeedstudio.com/es/Grove-Temperature_Sensor/
 ---
 

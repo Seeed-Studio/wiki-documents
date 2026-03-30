@@ -10,7 +10,7 @@ last_update:
   date: 07/20/2023
   author: Marc Pous & Peter Pan
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Edgebox-rpi-200-balena-OS-setup/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: hushuxu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Seeed_Arduino_Serial/
 ---
 Las comunicaciones serie proporcionan una forma fácil y flexible para que tu placa Arduino interactúe con tu computadora y otros dispositivos. La implementación de comunicaciones serie involucra hardware y software. El hardware proporciona la señalización eléctrica entre Arduino y el dispositivo con el que se está comunicando. El software utiliza el hardware para enviar bytes o bits que el hardware conectado entiende.

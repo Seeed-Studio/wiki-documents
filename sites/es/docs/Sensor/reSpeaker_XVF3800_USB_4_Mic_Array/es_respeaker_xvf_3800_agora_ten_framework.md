@@ -19,7 +19,7 @@ last_update:
   date: 2/09/2026
   author: Jiayu Zhan(Jack)
 createdAt: '2026-02-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_agora_ten_framework_client/
 ---
 

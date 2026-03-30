@@ -9,7 +9,7 @@ last_update:
   date: 03/03/2023
   author: Citric
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/xiaoesp32c3-flash-storage/
 ---
 

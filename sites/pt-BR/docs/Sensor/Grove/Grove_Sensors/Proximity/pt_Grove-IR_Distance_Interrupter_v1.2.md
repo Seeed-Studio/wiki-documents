@@ -11,7 +11,7 @@ last_update:
   date: 01/03/2022
   author: gunengyu
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-IR_Distance_Interrupter_v1.2/
 ---
 

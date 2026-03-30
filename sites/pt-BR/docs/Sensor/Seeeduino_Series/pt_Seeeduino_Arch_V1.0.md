@@ -9,7 +9,7 @@ last_update:
   date: 1/31/2023
   author: shuxu hu
 createdAt: '2023-02-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Seeeduino_Arch_V1.0/
 ---
 ![insira a descrição da imagem aqui](https://files.seeedstudio.com/wiki/Seeeduino_Arch_V1.0/img/Arch_01.jpg)

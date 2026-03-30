@@ -15,7 +15,7 @@ last_update:
   author: Citric
   date: 05/27/2025
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/bus_servo_driver_board/
 ---
 

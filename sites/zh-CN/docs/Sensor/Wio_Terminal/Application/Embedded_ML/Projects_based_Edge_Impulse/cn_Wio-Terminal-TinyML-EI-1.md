@@ -12,7 +12,7 @@ last_update:
   date: 1/30/2023
   author: jianjing Huang
 createdAt: '2024-07-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Wio-Terminal-TinyML-EI-1/
 ---
 

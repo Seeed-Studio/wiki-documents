@@ -19,7 +19,7 @@ last_update:
   date: 2025-08-22T00:00:00.000Z
   author: Zibo
 createdAt: '2025-08-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/orbbec_gemini2/
 ---
 

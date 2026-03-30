@@ -9,7 +9,7 @@ last_update:
   date: 06/25/2024
   author: Spencer
 createdAt: '2023-11-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-PDM-Usage/
 ---
 

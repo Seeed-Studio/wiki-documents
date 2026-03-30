@@ -13,7 +13,7 @@ last_update:
   date: 02/15/2025
   author: Dawn Yao
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/ja/recamera_os_structure/
 ---
 

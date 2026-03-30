@@ -10,7 +10,7 @@ last_update:
   date: 03/20/2023
   author: Matthew
 createdAt: '2024-03-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-app/tutorials/event-management/
 ---
 

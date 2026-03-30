@@ -12,7 +12,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-02-26'
-updatedAt: '2026-03-05'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Real_Time_Subtitle_Recoder_on_Nvidia_Jetson/
 ---
 

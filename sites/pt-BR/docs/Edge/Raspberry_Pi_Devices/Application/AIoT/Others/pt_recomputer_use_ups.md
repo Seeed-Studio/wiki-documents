@@ -12,7 +12,7 @@ last_update:
   date: 05/21/2025
   author: Jiahao Li
 createdAt: '2025-05-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_use_ups/
 ---
 ## Introdução

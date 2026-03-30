@@ -10,7 +10,7 @@ last_update:
   date: 03/03/2023
   author: Citric
 createdAt: '2023-03-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao-esp32c3-esphome/
 ---
 

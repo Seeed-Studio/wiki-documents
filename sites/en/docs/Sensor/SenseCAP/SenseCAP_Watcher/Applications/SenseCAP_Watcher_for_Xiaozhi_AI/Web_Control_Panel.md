@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-05-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-17'
 url: https://wiki.seeedstudio.com/watcher_web_control_panel/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: hushuxu
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/I2C_And_I2C_Address_of_Seeed_Product/
 ---
 ## O que é I2C

@@ -9,7 +9,7 @@ last_update:
   date: 1/12/2022
   author: hushuxu
 createdAt: '2023-01-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Seeeduino_Buying_Guide/
 ---
 

@@ -16,7 +16,7 @@ last_update:
   date: 07/25/2025
   author: Zibo
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/install_torch_on_recomputer/
 ---
 

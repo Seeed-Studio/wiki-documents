@@ -9,7 +9,7 @@ last_update:
   date: 04/14/2023
   author: Citric
 createdAt: '2023-04-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_sense_mic/
 ---
 

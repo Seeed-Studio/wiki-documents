@@ -11,7 +11,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Solid_State_Relay/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Solid_State_Relay/img/Grove_Solid_State_Relay_1.jpg)

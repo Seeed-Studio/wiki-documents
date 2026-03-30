@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Toy_Kit/
 ---
 O Grove Toy Kit oferece uma maneira fácil para você hackear e atualizar brinquedos para combinarem com a sua própria personalidade. Ele turbina brinquedos comuns com muitas funções legais, como detecção de movimento humano, capacidade de escutar, detecção de movimento, Display OLED e muito mais. Graças aos participantes do concurso de Toy hacking, há seis projetos incríveis listados abaixo que mostram o que você pode fazer com o Grove Toy Kit.

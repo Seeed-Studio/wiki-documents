@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/DSO_Nano/
 ---
 O DSO Nano é um osciloscópio portátil de um canal, adequado para medições rápidas em campo e muito mais. Você vai achá-lo muito simples de usar, mas ainda assim é uma ferramenta pequena e bastante impressionante.

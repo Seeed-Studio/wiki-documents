@@ -12,7 +12,7 @@ last_update:
   date: 04/21/2023
   author: Lakshantha
 createdAt: '2023-03-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/YOLOv8-DeepStream-TRT-Jetson/
 ---
 

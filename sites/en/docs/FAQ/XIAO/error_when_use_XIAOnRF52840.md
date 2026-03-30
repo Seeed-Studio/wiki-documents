@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-03'
 url: https://wiki.seeedstudio.com/error_when_use_XIAOnRF52840/
 ---
 When using the content of this tutorial, two different types of problems may occur for the XIAO nRF52840.

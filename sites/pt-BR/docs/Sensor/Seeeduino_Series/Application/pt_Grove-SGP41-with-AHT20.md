@@ -7,7 +7,7 @@ last_update:
   date: 10/16/2023
   author: Hans Bausewein
 createdAt: '2023-10-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/grove-sgp41-with-aht20/
 ---
 

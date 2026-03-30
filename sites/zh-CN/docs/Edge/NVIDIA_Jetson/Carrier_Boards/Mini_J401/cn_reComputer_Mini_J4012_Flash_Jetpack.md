@@ -9,7 +9,7 @@ last_update:
   date: 03/28/2025
   author: Dayu
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/cn/recomputer_mini_j401_getting_started/
 ---
 

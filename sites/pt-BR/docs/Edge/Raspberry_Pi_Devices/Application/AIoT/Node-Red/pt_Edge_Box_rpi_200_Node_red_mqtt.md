@@ -12,7 +12,7 @@ last_update:
   date: 05/16/2024
   author: Kasun Thushara
 createdAt: '2024-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Edge-Box-Node-Red-MQTT/
 ---
 
