@@ -6,7 +6,7 @@ last_update:
   date: 6/28/2023
   author: cheng.Tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-05'
 url: https://wiki.seeedstudio.com/bat_5vNo_OUTPUT/
 ---
 

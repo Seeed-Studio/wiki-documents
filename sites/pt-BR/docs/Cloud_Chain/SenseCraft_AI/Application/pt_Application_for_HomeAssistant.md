@@ -13,7 +13,7 @@ last_update:
   date: 01/10/2024
   author: Citric
 createdAt: '2024-01-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/application/application-for-homeassistant/
 ---
 

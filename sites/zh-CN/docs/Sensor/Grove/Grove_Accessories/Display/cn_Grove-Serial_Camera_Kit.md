@@ -9,7 +9,7 @@ last_update:
   date: 2/22/2023
   author: jianjing Huang
 createdAt: '2024-04-04'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Grove-Serial_Camera_Kit/
 ---
 

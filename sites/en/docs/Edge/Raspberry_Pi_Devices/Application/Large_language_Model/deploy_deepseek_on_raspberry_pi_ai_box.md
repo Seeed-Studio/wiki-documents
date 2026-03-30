@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-03-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-16'
 url: https://wiki.seeedstudio.com/deploy_deepseek_on_raspberry_pi_ai_box/
 ---
 

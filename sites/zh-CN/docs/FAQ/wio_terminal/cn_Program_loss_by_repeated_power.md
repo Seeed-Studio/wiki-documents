@@ -6,7 +6,7 @@ slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Program_loss_by_repeated_power/
 ---
 

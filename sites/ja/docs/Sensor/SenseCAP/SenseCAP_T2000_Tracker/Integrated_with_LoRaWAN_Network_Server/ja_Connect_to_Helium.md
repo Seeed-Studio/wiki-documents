@@ -11,7 +11,7 @@ last_update:
   date: 1/23/2026
   author: Janet
 createdAt: '2026-01-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-26'
 url: https://wiki.seeedstudio.com/ja/sensecap_t2000_tracker_helium/
 ---
 

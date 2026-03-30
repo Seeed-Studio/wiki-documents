@@ -7,7 +7,7 @@ last_update:
   date: 2023/6/30
   author: Seraphina
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-03'
 url: https://wiki.seeedstudio.com/Troubleshooting_Installation/
 ---
 

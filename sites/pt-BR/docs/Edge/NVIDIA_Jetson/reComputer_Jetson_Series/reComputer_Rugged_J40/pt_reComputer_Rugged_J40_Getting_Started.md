@@ -13,7 +13,7 @@ last_update:
   date: 03/04/2026
   author: Dayu
 createdAt: '2026-03-04'
-updatedAt: '2026-03-04'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/ai_robotics_recomputer_rugged_j40_getting_started/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 06/17/2024
   author: ShuishengPeng and Kasun Thushara
 createdAt: '2024-06-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_r1000_balena/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 1/31/2023
   author: jianjing Huang
 createdAt: '2023-01-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600/
 ---
 

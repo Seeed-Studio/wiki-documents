@@ -9,7 +9,7 @@ last_update:
   date: 1/22/2025
   author: Youjiang
 createdAt: '2025-01-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/get_the_system_log_of_recomputer_j30_and_j40/
 ---
 

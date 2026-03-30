@@ -10,7 +10,7 @@ last_update:
   date: 12/29/2025
   author: Brandy
 createdAt: '2023-01-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Grove_Base_Hat_for_Raspberry_Pi/
 ---
 

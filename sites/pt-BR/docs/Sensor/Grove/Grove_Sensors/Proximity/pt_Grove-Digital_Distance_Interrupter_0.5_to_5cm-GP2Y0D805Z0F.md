@@ -11,7 +11,7 @@ last_update:
   date: 01/04/2022
   author: gunengyu
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F/
 ---
 

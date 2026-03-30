@@ -10,7 +10,7 @@ last_update:
   date: 05/13/2025
   author: robben
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/grove_barometer_sensor_spa06_003/
 ---
 

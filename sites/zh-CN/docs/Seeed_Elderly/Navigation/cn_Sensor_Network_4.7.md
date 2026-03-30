@@ -9,7 +9,7 @@ last_update:
   date: 01/20/2023
   author: Matthew
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Seeed_Elderly/Navigation/Sensor_Network_4.7/
 ---
 

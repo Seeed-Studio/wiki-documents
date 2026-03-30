@@ -10,7 +10,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2023-07-28'
 url: https://wiki.seeedstudio.com/Wio-Terminal-Advanced-Wi-Fi/
 ---
 # Advanced Wi-Fi Usage

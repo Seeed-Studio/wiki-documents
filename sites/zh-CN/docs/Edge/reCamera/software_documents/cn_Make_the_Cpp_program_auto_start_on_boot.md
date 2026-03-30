@@ -12,7 +12,7 @@ last_update:
   author: Liangyuxin
 no_comments: false
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/make_the_cpp_program_auto_start_on_boot/
 ---
 

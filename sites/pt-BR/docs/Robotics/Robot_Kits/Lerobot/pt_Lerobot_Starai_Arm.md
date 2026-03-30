@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-07-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/lerobot_starai_arm/
 ---
 

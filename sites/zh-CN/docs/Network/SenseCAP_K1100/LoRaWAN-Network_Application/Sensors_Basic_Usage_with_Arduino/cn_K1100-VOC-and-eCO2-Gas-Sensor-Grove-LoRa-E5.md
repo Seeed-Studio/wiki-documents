@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/K1100-VOC-and-eCO2-Gas-Sensor-Grove-LoRa-E5/
 ---
 # Grove VOC 和 eCO2 气体传感器 (SGP30)

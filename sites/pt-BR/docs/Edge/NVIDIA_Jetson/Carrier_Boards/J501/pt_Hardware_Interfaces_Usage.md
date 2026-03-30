@@ -11,7 +11,7 @@ last_update:
   date: 08/20/2024
   author: Youjiang
 createdAt: '2024-09-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/j501_carrier_board_interfaces_usage/
 ---
 

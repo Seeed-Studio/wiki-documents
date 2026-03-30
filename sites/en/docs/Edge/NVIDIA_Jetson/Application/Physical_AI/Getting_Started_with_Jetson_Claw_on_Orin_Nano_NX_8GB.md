@@ -7,6 +7,9 @@ sku: 114110312 | 114110313
 last_update:
   date: 03/26/2026
   author: Dayu
+createdAt: '2026-03-26'
+url: https://wiki.seeedstudio.com/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
+updatedAt: '2026-03-27'
 ---
 
 # Getting Started with Jetson-Claw on Orin Nano / NX 8GB

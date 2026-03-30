@@ -9,7 +9,7 @@ authors:
   image_url: https://github.com/wgao19.png
   slug: /About
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-28'
 ---
 
 [Seeed](https://www.seeedstudio.com) 是一个硬件创新平台，帮助创客将灵感转化为差异化产品。通过与各种规模的技术提供商密切合作，Seeed 提供具有质量、速度和供应链知识的可获得技术。当原型准备好迭代时，Seeed 利用内部工程、供应链管理和敏捷制造力量帮助将 1 到 1,000 件产品化。Seeed 还与孵化器、中国科技生态系统、投资者和分销渠道合作，帮助创客初创公司走向更远。

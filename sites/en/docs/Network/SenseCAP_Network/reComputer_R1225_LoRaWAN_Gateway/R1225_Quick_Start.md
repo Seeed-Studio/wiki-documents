@@ -2,16 +2,19 @@
 description: reComputer R1225 LoRaWAN Gateway Quick Start
 title: reComputer R1225 LoRaWAN Gateway Quick Start
 keywords:
-- Gateway
-- SenseCAP
-- Edge Controller
-- reComputer R1225 
+  - Gateway
+  - SenseCAP
+  - Edge Controller
+  - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_quick_start
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 03/25/2026
   author: Kian
+createdAt: '2026-03-18'
+url: https://wiki.seeedstudio.com/r1225_quick_start/
+updatedAt: '2026-03-25'
 ---
 
 # Quick Start

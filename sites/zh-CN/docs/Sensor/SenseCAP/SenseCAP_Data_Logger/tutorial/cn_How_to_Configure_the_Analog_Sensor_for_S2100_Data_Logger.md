@@ -9,7 +9,7 @@ last_update:
   date: 3/18/2026
   author: Kian
 createdAt: '2023-02-24'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 

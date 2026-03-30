@@ -10,7 +10,7 @@ last_update:
   date: 9/25/2023
   author: KeweiLee
 createdAt: '2023-09-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/SenseCAP_S2107/
 ---
 

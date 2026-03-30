@@ -11,7 +11,7 @@ last_update:
   date: 05/13/2024
   author: Parker Hu
 createdAt: '2023-04-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1000_warranty/
 ---
 # Garantia do reComputer R1000

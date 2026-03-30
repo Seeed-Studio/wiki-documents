@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi/
 ---
 

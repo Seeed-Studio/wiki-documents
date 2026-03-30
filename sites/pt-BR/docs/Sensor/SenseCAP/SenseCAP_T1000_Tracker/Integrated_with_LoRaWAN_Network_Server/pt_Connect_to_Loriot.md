@@ -10,7 +10,7 @@ last_update:
   date: 12/12/2023
   author: KeweiLee
 createdAt: '2023-12-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_T1000_Tracker_Loriot/
 ---
 

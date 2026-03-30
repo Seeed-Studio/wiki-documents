@@ -9,7 +9,7 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/es/Network/
 ---
 
@@ -19,7 +19,7 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
 
 - **Dispositivos de red para sensores industriales**
 
-- **Módulos de red para sensores de nivel de entrada**
+- **Módulos de red para sensores de nivel inicial**
 
 ## Dispositivos de red para sensores industriales
 
@@ -35,20 +35,20 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway IoT perimetral industrial</font></div>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/es/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio rápido de reComupter R1225 LoRaWAN Gateway</font></span></a>
+            <a href="/es/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Inicio rápido de reComupter R1225 LoRaWAN Gateway</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Gateway interior multiplataforma</font></div>
             <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>Descripción general de SenseCAP M2 Multi-Platform Gateway</font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión con la plataforma AWS </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma AWS </font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión con la plataforma TTN </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma TTN </font></span></a>
             <br/>
-            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión con la plataforma ChirpStack </font></span></a>
+            <a href="/es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Conexión a la plataforma ChirpStack </font></span></a>
             <br/>
     </div>
 </div>
@@ -93,7 +93,7 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Routers</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los routers pueden habilitar la comunicación de los dispositivos conectando una red local a internet.</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Los routers pueden habilitar la comunicación de los dispositivos conectando una red local a Internet.</font></div>
     </div>
 </div>
 
@@ -104,11 +104,11 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
             <br/>
             <a href="/es/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del sistema operativo original </font></span></a>
             <br/>
-            <a href="/es/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Instalación de OpenWRT  </font></span></a>
+            <a href="/es/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: instalación de OpenWRT  </font></span></a>
             <br/>
-            <a href="/es/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Instalación de Plex Media Server </font></span></a>
+            <a href="/es/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: instalación de Plex Media Server </font></span></a>
             <br/>
-            <a href="/es/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Uso de Mender para reRouter </font></span></a>
+            <a href="/es/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: uso de Mender para reRouter </font></span></a>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
@@ -116,11 +116,11 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
             <br/>
             <a href="/es/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Instalación del sistema operativo original</font></span></a>
             <br/>
-            <a href="/es/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: Creación de un centro de control de hogar inteligente basado en Home Assistant</font></span></a>
+            <a href="/es/h68k-ha-esphome" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Aplicación: creación de un centro de control de hogar inteligente basado en Home Assistant</font></span></a>
     </div>
 </div>
 
-## Módulos de red para sensores de nivel de entrada
+## Módulos de red para sensores de nivel inicial
 
 ### Módulos de comunicación Grove
 
@@ -178,7 +178,7 @@ Seeed ofrece una gran variedad de productos de red que se integran perfectamente
             <br/>
     </div>
     <div class="intro_item" style={{textAlign: 'center'}}>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Standard Protocol</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Protocolo estándar</font></div>
             <a href="/es/Grove-I2C_ADC" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Convertidor analógico a digital </font></span></a>
             <br/>
             <a href="/es/Grove-RJ45_Adapter" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Adaptador RJ45 </font></span></a>

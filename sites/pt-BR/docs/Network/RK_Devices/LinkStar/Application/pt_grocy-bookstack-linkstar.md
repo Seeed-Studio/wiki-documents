@@ -12,7 +12,7 @@ last_update:
   date: 6/26/2023
   author: Kasun Thushara
 createdAt: '2022-11-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/grocy-bookstack-linkstar/
 ---
 # Assumindo o Controle: Soluções Self-Hosted para Gestão de Escritório com LinkStar, Grocy e BookStack

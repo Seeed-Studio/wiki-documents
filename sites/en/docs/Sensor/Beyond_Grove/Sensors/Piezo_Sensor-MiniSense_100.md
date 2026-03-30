@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Piezo_Sensor-MiniSense_100/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/vbs1.jpg)

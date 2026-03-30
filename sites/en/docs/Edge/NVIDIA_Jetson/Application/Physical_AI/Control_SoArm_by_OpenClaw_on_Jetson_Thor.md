@@ -7,6 +7,9 @@ sku: 100060965 | 100046482
 last_update:
   date: 03/09/2026
   author: youjiang
+createdAt: '2026-03-09'
+url: https://wiki.seeedstudio.com/ai_robotics_control_soarm_by_openclaw_on_jetson_thor/
+updatedAt: '2026-03-13'
 ---
 
 # Control SO-Arm by OpenClaw on Jetson Thor

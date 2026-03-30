@@ -11,7 +11,7 @@ last_update:
   author: Jason
 sidebar_position: 1
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-18'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_built_in_sensor/
 ---
 

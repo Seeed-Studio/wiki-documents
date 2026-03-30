@@ -12,7 +12,7 @@ last_update:
   date: 8/1/2025
   author: LiShanghang
 createdAt: '2025-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-05'
 url: https://wiki.seeedstudio.com/ja/starai_arm_ros_moveit/
 ---
 
