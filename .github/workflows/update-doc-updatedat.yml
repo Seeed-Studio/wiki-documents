@@ -138,7 +138,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          node _trusted/.github/scripts/normalize-frontmatter-ci.js ${{ steps.changed.outputs.files }}
+          node _trusted/.github/scripts/normalize-frontmatter.js ${{ steps.changed.outputs.files }}
 
       - name: Commit and push changes
         if: steps.check-skip.outputs.skip != 'true' && steps.changed.outputs.files != ''
