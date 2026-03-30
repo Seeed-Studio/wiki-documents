@@ -11,10 +11,9 @@ last_update:
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-02-10'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/
 ---
-
 ## Introduction
 
 <div class="table-center">

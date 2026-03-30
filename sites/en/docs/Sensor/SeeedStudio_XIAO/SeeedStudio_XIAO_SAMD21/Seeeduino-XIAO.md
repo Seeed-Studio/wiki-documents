@@ -10,10 +10,9 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-24'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
-
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO SAMD21
