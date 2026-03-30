@@ -11,11 +11,9 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-01-07'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/
 ---
-
-
 # Desplegando Modelos desde Conjuntos de Datos hasta Grove Vision AI V2
 
 Bienvenido a este tutorial integral donde nos embarcaremos en un viaje para convertir tu conjunto de datos en un modelo completamente funcional para despliegue en el Grove Vision AI V2. En esta guía, navegaremos a través de los pasos iniciales de etiquetar nuestro conjunto de datos con las herramientas intuitivas de Roboflow, progresando al entrenamiento del modelo dentro del entorno colaborativo de Google Colab.

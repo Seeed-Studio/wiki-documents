@@ -14,7 +14,6 @@ createdAt: '2026-03-30'
 updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/application/create-new-application/
 ---
-
 # Criar um novo aplicativo no SenseCraft AI
 
 ## Criar o aplicativo

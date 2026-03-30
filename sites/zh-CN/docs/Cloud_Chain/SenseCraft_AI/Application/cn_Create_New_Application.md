@@ -16,7 +16,6 @@ createdAt: '2026-03-30'
 updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/application/create-new-application/
 ---
-
 # 创建新的应用
 
 ## 新建应用

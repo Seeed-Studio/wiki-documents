@@ -11,11 +11,9 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-05-27'
-updatedAt: '2026-01-07'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_sscma/
 ---
-
-
 # データセットから Grove Vision AI V2 へのモデル展開
 
 データセットを Grove Vision AI V2 で展開可能な完全に機能するモデルに変換する包括的なチュートリアルへようこそ。このガイドでは、Roboflow の直感的なツールを使用してデータセットにラベルを付ける初期ステップから始まり、Google Colab の協調環境内でのモデルトレーニングまで進んでいきます。

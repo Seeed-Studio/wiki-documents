@@ -11,11 +11,9 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2024-03-13'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_sscma/
 ---
-
-
 # Implantando Modelos de Conjuntos de Dados para o Grove Vision AI V2
 
 Bem-vindo a este tutorial abrangente em que embarcaremos em uma jornada para transformar seu conjunto de dados em um modelo totalmente funcional para implantação no Grove Vision AI V2. Neste guia, navegaremos pelos passos iniciais de rotulagem do nosso conjunto de dados com as ferramentas intuitivas do Roboflow, avançando para o treinamento do modelo dentro do ambiente colaborativo do Google Colab.

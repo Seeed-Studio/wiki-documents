@@ -11,11 +11,9 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2024-03-13'
-updatedAt: '2026-01-07'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/grove_vision_ai_v2_sscma/
 ---
-
-
 # Deploying Models from Datasets to Grove Vision AI V2
 
 Welcome to this comprehensive tutorial where we'll embark on a journey to turn your dataset into a fully functional model for deployment on the Grove Vision AI V2. In this guide, we'll navigate through the initial steps of labeling our dataset with Roboflow's intuitive tools, progressing to model training within the collaborative environment of Google Colab.
