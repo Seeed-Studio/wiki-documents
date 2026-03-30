@@ -2710,13 +2710,15 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start',
-           /* {
+            {
               type: 'category',
               label: 'Cloud Platform Integration',
               items: [
-                ,
+              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Cloud Platform Connection Guide/Connecting_R1225_to_ChirpStack',
+              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Cloud Platform Connection Guide/Connecting_R1225_to_TTN',
               ],
             },
+            /* 
              {
               type: 'category',
               label: 'Application',
