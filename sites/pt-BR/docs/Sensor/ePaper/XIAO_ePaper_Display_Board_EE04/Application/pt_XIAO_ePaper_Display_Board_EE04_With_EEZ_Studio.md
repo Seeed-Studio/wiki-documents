@@ -10,7 +10,7 @@ last_update:
   date: 09/28/2025
   author: Zeller
 createdAt: '2025-10-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/epaper_ee04_eezstudio/
 ---
 

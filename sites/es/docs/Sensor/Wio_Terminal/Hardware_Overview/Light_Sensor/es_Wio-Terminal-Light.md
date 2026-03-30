@@ -9,7 +9,7 @@ last_update:
   date: 1/17/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Wio-Terminal-Light/
 ---
 

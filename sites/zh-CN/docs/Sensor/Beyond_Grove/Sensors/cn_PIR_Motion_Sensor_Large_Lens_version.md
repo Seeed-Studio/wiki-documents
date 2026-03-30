@@ -11,7 +11,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/PIR_Motion_Sensor_Large_Lens_version/
 ---
 ![](https://files.seeedstudio.com/wiki/PIR_Motion_sensor_module/img/Pir_motion_sensor_v1.0.jpg)

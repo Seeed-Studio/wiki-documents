@@ -19,7 +19,7 @@ last_update:
   date: 02/10/2026
   author: Lorraine
 createdAt: '2026-01-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/cn/ai_roboticsyolov26_dual_camera_system/
 ---
 ## 介绍

@@ -9,7 +9,7 @@ last_update:
   date: 1/31/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/es/Introduction_to_Artificial_Intelligence_for_Makers/
 ---
 

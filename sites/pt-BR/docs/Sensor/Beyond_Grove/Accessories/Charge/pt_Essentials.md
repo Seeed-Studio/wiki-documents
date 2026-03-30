@@ -10,8 +10,8 @@ last_update:
   date: 02/03/2022
   author: jianjing Huang
 createdAt: '2023-02-20'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/Essentials/
+updatedAt: '2026-03-13'
+url: https://wiki.seeedstudio.com/pt-br/Essentials/
 ---
 <!-- ---
 name: Introdução aos Essenciais

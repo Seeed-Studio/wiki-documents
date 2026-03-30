@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness/
 ---
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_Kit_Acrylic_Harness/img/Rainbow_Cube_Assembled.jpg)

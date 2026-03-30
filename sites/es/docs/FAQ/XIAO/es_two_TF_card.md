@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/two_TF_card/
 ---
 R: Esto no crea un conflicto. Las diferentes ranuras de tarjeta SD se controlan mediante selección de chip, si quieres usar la ranura de tarjeta microSD en Sense, el pin de selección de chip debe ser **21**, si quieres usar la ranura de tarjeta microSD en Round Display, el pin de selección de chip debe ser **D2**.

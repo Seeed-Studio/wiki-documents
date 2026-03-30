@@ -11,7 +11,7 @@ last_update:
   date: 09/29/2023
   author: Corey Thompson
 createdAt: '2023-09-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal-DM-Getting-Started-with-Ignition-Edge/
 ---
 # Primeiros passos com o reTerminal DM e Ignition Edge

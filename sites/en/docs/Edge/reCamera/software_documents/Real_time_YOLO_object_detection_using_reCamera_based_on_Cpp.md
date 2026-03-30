@@ -14,7 +14,7 @@ last_update:
   author: Liangyuxin
 no_comments: false
 createdAt: '2025-06-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/real_time_yolo_object_detection_using_recamera_based_on_cpp/
 ---
 

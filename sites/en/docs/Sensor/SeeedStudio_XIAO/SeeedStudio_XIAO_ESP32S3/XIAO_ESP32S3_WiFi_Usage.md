@@ -11,7 +11,7 @@ last_update:
   date: 03/27/2023
   author: Citric
 createdAt: '2022-11-15'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_wifi_usage/
 ---
 

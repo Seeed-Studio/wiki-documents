@@ -6,7 +6,7 @@ last_update:
   date: 6/28/2023
   author: cheng.tang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/exp32c3_d9_d6_d8/
 ---
 

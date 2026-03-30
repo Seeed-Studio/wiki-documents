@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Unibody_box_for_Galileo_Gen2/
 ---
 ![](https://files.seeedstudio.com/wiki/Unibody_box_for_Galileo_Gen2/img/Unibody_box_for_Galileo_Gen2.jpg)

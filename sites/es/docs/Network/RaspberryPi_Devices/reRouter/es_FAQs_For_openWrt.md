@@ -7,7 +7,7 @@ last_update:
   date: 7/26/2023
   author: yulu Ji
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/FAQs_For_openWrt/
 ---
 

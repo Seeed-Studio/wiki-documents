@@ -11,7 +11,7 @@ last_update:
   date: 05/28/2024
   author: Carla
 createdAt: '2024-05-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/grove_adc_for_load_cell_hx711/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 01/06/2026
   author: Utkarsh Bhor Patil, Garla Guo
 createdAt: '2026-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/XIAO_ESP32S3_GPIO_Viewer/
 ---
 

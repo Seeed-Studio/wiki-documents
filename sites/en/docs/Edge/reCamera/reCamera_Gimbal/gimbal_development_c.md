@@ -14,7 +14,7 @@ last_update:
   date: 4/15/2025
   author: Parker Hu & Dawn Yao
 createdAt: '2025-04-14'
-updatedAt: '2026-03-03'
+updatedAt: '2025-04-15'
 url: https://wiki.seeedstudio.com/gimbal_development_c/
 ---
 

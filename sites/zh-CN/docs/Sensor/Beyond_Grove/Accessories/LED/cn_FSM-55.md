@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/FSM-55/
 ---
 ![](https://files.seeedstudio.com/wiki/FSM-55/img/FSM-55_board.jpg)

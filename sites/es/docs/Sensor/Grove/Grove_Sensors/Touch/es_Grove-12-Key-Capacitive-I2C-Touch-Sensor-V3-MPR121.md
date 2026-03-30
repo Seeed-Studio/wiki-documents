@@ -10,7 +10,7 @@ last_update:
   date: 1/19/2023
   author: jianjing Huang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121/
 ---
 

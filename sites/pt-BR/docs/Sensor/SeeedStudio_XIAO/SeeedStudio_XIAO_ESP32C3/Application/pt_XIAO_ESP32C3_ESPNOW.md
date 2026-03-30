@@ -9,7 +9,7 @@ last_update:
   date: 07/24/2024
   author: Jason
 createdAt: '2024-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c3_espnow/
 ---
 

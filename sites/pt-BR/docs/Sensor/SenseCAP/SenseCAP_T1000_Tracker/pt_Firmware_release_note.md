@@ -10,7 +10,7 @@ last_update:
   date: 1/1/2023
   author: Jessie
 createdAt: '2024-01-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/fm_release_for_SenseCAP_T1000/
 ---
 

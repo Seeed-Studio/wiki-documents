@@ -13,7 +13,7 @@ last_update:
   date: 09/12/2024
   author: Citric
 createdAt: '2023-03-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/using_lvgl_and_tft_on_round_display/
 ---
 

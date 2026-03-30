@@ -11,7 +11,7 @@ last_update:
   date: 4/15/2025
   author: Jessie
 createdAt: '2025-04-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-09'
 url: https://wiki.seeedstudio.com/tracker_at_command/
 ---
 

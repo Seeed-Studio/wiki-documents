@@ -9,7 +9,7 @@ last_update:
   date: 10/23/2024
   author: Evelyn Chen
 createdAt: '2024-10-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/wio_sx1262_xiao_esp32s3_for_lora_sensor_node/
 ---
 

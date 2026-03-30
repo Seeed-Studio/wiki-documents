@@ -8,7 +8,7 @@ last_update:
   date: 01/10/2023
   author: Eico
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/2.8inch_TFT_Touch_Shield_v2.0/
 ---
 

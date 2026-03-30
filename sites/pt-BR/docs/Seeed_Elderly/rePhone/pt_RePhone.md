@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/RePhone/
 ---
 O Kit RePhone é um kit de telefone modular de código aberto que muda a maneira como colocamos nosso telefone em uso. Ele oferece uma nova forma de personalização de telefone e a solução mais fácil para desenvolvimento de dispositivos vestíveis/IoT.

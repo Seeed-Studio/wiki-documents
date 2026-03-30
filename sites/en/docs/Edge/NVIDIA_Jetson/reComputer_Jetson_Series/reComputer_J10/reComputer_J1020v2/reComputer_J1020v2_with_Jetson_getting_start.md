@@ -9,7 +9,7 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2024-04-08'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/reComputer_J1020v2_with_Jetson_getting_start/
 ---
 

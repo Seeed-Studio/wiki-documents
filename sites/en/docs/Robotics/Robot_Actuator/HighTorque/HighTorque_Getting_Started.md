@@ -12,7 +12,7 @@ last_update:
   date: 12/04/2025
   author: Tienjuiwong
 createdAt: '2025-12-04'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/hightorque_getting_started/
 ---
 

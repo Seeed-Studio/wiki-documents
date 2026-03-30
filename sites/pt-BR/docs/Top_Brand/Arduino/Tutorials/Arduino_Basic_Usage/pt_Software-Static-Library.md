@@ -9,7 +9,7 @@ last_update:
   date: 1/16/2023
   author: jianjing Huang
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Software-Static-Library/
 ---
 

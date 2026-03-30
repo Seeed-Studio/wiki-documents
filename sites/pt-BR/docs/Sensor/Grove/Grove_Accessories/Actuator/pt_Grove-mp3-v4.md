@@ -11,7 +11,7 @@ last_update:
   date: 12/13/2024
   author: Carla
 createdAt: '2023-10-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/grove_mp3_v4/
 ---
 

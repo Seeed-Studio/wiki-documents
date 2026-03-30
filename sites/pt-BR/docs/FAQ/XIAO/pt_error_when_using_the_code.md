@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/error_when_using_the_code/
 ---
 A: Isso pode ser causado por você não ter selecionado a opção de compilação apropriada para o XIAO RP2040. Consulte o diagrama abaixo para configurar e enviar o programa novamente.

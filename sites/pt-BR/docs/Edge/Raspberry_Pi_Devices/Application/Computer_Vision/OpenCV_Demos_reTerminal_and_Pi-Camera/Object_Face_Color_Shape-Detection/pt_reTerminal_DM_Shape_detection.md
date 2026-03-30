@@ -13,7 +13,7 @@ last_update:
   date: 2/5/2023
   author: Kasun Thushara
 createdAt: '2024-02-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal_DM_Shape_detection/
 ---
 

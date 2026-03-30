@@ -17,7 +17,7 @@ last_update:
   date: 8/08/2025
   author: Zibo
 createdAt: '2025-08-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/object_tracking_with_reComputer_jetson_and_pX4/
 ---
 

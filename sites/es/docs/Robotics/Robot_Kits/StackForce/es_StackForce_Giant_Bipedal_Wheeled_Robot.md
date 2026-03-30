@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-12-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-12'
 url: https://wiki.seeedstudio.com/es/stackforce_giant_bipedal_wheeled_robot/
 ---
 

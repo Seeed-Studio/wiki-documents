@@ -10,7 +10,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Train-Deploy-AI-Model-Grove-Vision-AI/
 ---
 # Treine e implemente seu próprio modelo de IA no Grove - Vision AI

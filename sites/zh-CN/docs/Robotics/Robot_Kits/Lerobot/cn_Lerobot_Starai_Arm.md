@@ -13,7 +13,7 @@ last_update:
   date: 10/13/2025
   author: LiShanghang
 createdAt: '2025-07-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/lerobot_starai_arm/
 ---
 

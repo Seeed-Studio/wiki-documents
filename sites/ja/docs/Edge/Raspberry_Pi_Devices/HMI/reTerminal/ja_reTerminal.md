@@ -11,7 +11,7 @@ last_update:
   date: 1/31/2023
   author: jianjing Huang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/ja/reTerminal/
 ---
 # reTerminal を使い始める

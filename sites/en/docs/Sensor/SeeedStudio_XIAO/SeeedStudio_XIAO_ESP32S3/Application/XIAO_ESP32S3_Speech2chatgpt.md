@@ -11,7 +11,7 @@ last_update:
   date: 5/31/2023
   author: Citric
 createdAt: '2023-05-31'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_speech2chatgpt/
 ---
 

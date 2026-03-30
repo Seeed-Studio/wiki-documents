@@ -8,7 +8,7 @@ last_update:
   date: 11/30/2022
   author: Citric
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/K1100-Getting-Started/
 ---
 

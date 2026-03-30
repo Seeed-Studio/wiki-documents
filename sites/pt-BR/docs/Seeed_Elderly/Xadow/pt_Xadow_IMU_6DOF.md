@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Xadow_IMU_6DOF/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_IMU_6DOF/img/Imu_6dof_01.jpg)

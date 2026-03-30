@@ -12,7 +12,7 @@ last_update:
   date: 10/8/2024
   author: ShuishengPeng
 createdAt: '2024-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_r1000_fuxa_achieve_scada/
 ---
 

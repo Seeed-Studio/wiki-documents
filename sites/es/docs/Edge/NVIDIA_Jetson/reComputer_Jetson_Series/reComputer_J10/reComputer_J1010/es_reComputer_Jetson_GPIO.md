@@ -10,7 +10,7 @@ last_update:
   date: 04/12/2023
   author: Lakshantha
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/reComputer_Jetson_GPIO/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 1/27/2024
   author: Kasun Thushara
 createdAt: '2024-01-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal-DM_intro_FUXA/
 ---
 

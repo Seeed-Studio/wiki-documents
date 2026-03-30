@@ -11,7 +11,7 @@ last_update:
   author: Jason
 sidebar_position: 3
 createdAt: '2024-12-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/cn/xiao_mg24_sense_built_in_sensor/
 ---
 
