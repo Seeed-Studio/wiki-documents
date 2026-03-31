@@ -11,9 +11,11 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-05-27'
-updatedAt: '2026-03-31'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_sscma/
 ---
+
+
 # データセットから Grove Vision AI V2 へのモデル展開
 
 データセットを Grove Vision AI V2 で展開可能な完全に機能するモデルに変換する包括的なチュートリアルへようこそ。このガイドでは、Roboflow の直感的なツールを使用してデータセットにラベルを付ける初期ステップから始まり、Google Colab の協調環境内でのモデルトレーニングまで進んでいきます。
@@ -561,7 +563,7 @@ XIAOなどのArduinoデバイスを使用してプロトタイプを実現し続
 初心者で独自のモデルを素早く構築したい場合は、こちらのSenseCraft AIモデル訓練サンプルを参照してください。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft 訓練</font></span></strong>
     </a>
 </div>

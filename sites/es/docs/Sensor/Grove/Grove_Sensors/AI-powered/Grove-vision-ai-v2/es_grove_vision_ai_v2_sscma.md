@@ -11,9 +11,11 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-03-31'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/
 ---
+
+
 # Desplegando Modelos desde Conjuntos de Datos hasta Grove Vision AI V2
 
 Bienvenido a este tutorial integral donde nos embarcaremos en un viaje para convertir tu conjunto de datos en un modelo completamente funcional para despliegue en el Grove Vision AI V2. En esta guía, navegaremos a través de los pasos iniciales de etiquetar nuestro conjunto de datos con las herramientas intuitivas de Roboflow, progresando al entrenamiento del modelo dentro del entorno colaborativo de Google Colab.
@@ -561,7 +563,7 @@ Si quieres continuar usando dispositivos Arduino como el XIAO para realizar tus 
 Si eres principiante y quieres construir rápidamente tu propio modelo, por favor consulta el ejemplo de entrenamiento de modelo SenseCraft AI aquí.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Entrenamiento SenseCraft</font></span></strong>
     </a>
 </div>

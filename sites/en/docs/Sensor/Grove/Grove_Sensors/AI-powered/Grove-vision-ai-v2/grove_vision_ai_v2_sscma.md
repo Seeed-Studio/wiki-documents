@@ -11,9 +11,11 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2024-03-13'
-updatedAt: '2026-03-31'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/grove_vision_ai_v2_sscma/
 ---
+
+
 # Deploying Models from Datasets to Grove Vision AI V2
 
 Welcome to this comprehensive tutorial where we'll embark on a journey to turn your dataset into a fully functional model for deployment on the Grove Vision AI V2. In this guide, we'll navigate through the initial steps of labeling our dataset with Roboflow's intuitive tools, progressing to model training within the collaborative environment of Google Colab.
@@ -561,7 +563,7 @@ If you want to continue to use Arduino devices such as the XIAO to realise your 
 If you’re a beginner and want to quickly build your own model, please refer to the SenseCraft AI model training example here.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Training</font></span></strong>
     </a>
 </div>

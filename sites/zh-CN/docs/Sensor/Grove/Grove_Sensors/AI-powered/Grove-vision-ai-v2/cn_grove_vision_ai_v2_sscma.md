@@ -11,9 +11,11 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-08-07'
-updatedAt: '2026-03-31'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/
 ---
+
+
 # 从数据集到 Grove Vision AI V2 的模型部署
 
 欢迎来到这个综合教程，我们将踏上将您的数据集转化为在 Grove Vision AI V2 上部署的完全功能模型的旅程。在本指南中，我们将使用 Roboflow 的直观工具完成数据集标注的初始步骤，然后在 Google Colab 的协作环境中进行模型训练。
@@ -561,7 +563,7 @@ FPS: 128.350449 fram/s
 如果您是初学者并想快速构建自己的模型，请参考这里的 SenseCraft AI 模型训练示例。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft-ai/models/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft 训练</font></span></strong>
     </a>
 </div>
