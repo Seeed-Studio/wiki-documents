@@ -14,7 +14,7 @@ last_update:
   date: 08/05/2024
   author: Spencer
 createdAt: '2024-03-29'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

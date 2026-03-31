@@ -9,7 +9,7 @@ last_update:
   date: 08/14/2024
   author: Spencer
 createdAt: '2022-11-22'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';

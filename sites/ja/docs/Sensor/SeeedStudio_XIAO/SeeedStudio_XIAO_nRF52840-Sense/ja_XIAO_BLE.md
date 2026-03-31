@@ -10,7 +10,7 @@ last_update:
   date: 2024-11-28T03:15:24.000Z
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/ja/XIAO_BLE/
 ---
 import Tabs from '@theme/Tabs';

@@ -13,7 +13,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-01-10'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/Grove_Inventor_Kit_for_microbit/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/zoro_im_kitbox.jpg" alt="pir" width={600} height="auto" /></p>
