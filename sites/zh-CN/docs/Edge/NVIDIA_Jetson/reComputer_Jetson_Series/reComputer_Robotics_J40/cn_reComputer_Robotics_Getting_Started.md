@@ -14,10 +14,9 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-09-15'
-updatedAt: '2026-02-28'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_getting_started/
 ---
-
 <div style={{ textAlign: "justify" }}>
 reComputer Robotics J401 是一款紧凑型高性能边缘 AI 载板，专为高级机器人应用设计。它兼容在 Super/MAXN 模式下运行的 NVIDIA Jetson Orin Nano/Orin NX 模块，可提供高达 157 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、6 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——可作为强大的机器人“大脑”，用于处理来自各类传感器的复杂数据。预装 JetPack 6 和 Linux BSP，确保无缝部署。​
 </div>
