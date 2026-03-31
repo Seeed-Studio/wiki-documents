@@ -15,10 +15,9 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/ja/recomputer_j501_mini_getting_started/
 ---
-
 # Robotics J501 キャリアボード ハードウェアと入門ガイド
 
 Robotics J501 Mini キャリアは、高度なロボット向けに設計されたコンパクトで高性能なエッジAIキャリアボードです。MAXNモードでNVIDIA Jetson AGX Orinモジュール（32GB/64GB）に対応し、最大275 TOPSのAI性能を発揮します。デュアルGigabit Ethernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、2つのUSB 3.2ポート、CAN、GMSL2（オプションの拡張経由）、I2C、UARTなどの豊富な接続オプションを備え、各種センサーからの複雑なデータを処理できる強力なロボット用ブレインとして機能します。JetPack 6.2.1とLinux BSPをプリインストールしており、シームレスなデプロイを実現します。​

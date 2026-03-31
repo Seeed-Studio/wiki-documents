@@ -15,10 +15,9 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/recomputer_j501_mini_getting_started/
 ---
-
 # Robotics J501 载板硬件与快速上手
 
 Robotics J501 Mini 载板是一款紧凑型、高性能的边缘 AI 载板，专为高级机器人应用设计。它兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB），在 MAXN 模式下可提供高达 275 TOPS 的 AI 性能。板载丰富的连接选项——包括双千兆以太网接口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、2 个 USB 3.2 接口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——使其成为能够处理多种传感器复杂数据的强大机器人“大脑”。预装 JetPack 6.2.1 和 Linux BSP，确保系统可无缝部署。​
