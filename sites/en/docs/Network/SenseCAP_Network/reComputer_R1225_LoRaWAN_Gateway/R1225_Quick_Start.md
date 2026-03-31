@@ -14,9 +14,8 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/r1225_quick_start/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
 # Quick Start
 
 ## Power Connection
@@ -239,3 +238,13 @@ Then click `Submit` to go to the Chirpstack platform interface
 Then click `Submit`
 
 ### Checking the Gateway Connection Status
+
+Upon completion of all configuration steps, the gateway should be displayed as **`Online`** on the ChirpStack platform.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack6.png" alt="pir" width={800} height="auto" /></p>
+
+#### Gateway data
+
+Navigate to Gateways, choose the gateway you want to check.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack7.png" alt="pir" width={800} height="auto" /></p>
