@@ -7,11 +7,10 @@ sidebar_position: 1
 last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
-createdAt: '2024-11-27'
-updatedAt: '2026-02-27'
+createdAt: '2024-10-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/xiao_rp2350_arduino/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -28,7 +27,7 @@ import TabItem from '@theme/TabItem';
 - **扩展 8 个全新 IO：** 相比之前的 XIAO MCU，在背面新增 8 个 IO 引脚，可支持更复杂的应用。
 - **高效电源设计：** 睡眠模式下超低功耗，仅 50μA，可实现电池供电。通过内部 IO 直接测量电池电压，增强电池管理系统（BMS）。
 - **拇指大小的紧凑设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典 XIAO 外形规格，非常适合对空间敏感的应用。
-- **便于量产：** 采用贴片器件（SMD）设计，所有元件位于正面，两侧带有邮票孔，便于高效批量生产。
+- **便于量产：** 采用贴片（SMD）设计，所有元件位于正面，两侧带有邮票孔，便于高效量产。
 
 ## 规格参数
 
@@ -69,9 +68,9 @@ import TabItem from '@theme/TabItem';
     <td>1x RESET 按键<br/>1x BOOT 按键</td>
   </tr>
   <tr>
-    <th>安全</th>
+    <th>安全性</th>
     <td>-</td>
-    <td>OTP，Secure Boot，Arm TrustZone</td>
+    <td>OTP，安全启动，Arm TrustZone</td>
   </tr>
   <tr>
     <th>软件兼容性</th>
@@ -107,7 +106,7 @@ import TabItem from '@theme/TabItem';
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
  </tr>
     <tr>
-     <th>XIAO RP2350 元件分布</th>
+     <th>XIAO RP2350 元器件分布</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-components.png" style={{width:480, height:'auto'}} alt="XIAO RP2350 Components" /></div></td>
@@ -115,43 +114,43 @@ import TabItem from '@theme/TabItem';
 </table>
 </div>
 
-需要更多引脚分布的详细信息？请向下查看 [资源与资料](#资源--资料)。
+需要更多引脚分布的详细信息？请前往下方的 [资源与资料](#资源与资料)。
 
 
 ## **引脚映射**
-| XIAO 引脚              | 功能       | 芯片引脚     | 复用功能              | 描述                                   |
+| XIAO 引脚               | 功能       | 芯片引脚     | 复用功能              | 描述                                  |
 | :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS       |              |                    | 电源输入/输出                          |
+| 5V                      | VBUS       |              |                    | 电源输入/输出                         |
 | GND                     |            |              |                    |                                      |
-| 3V3                     | 3V3_OUT    |              |                    | 电源输出                               |
-| D0                      | Analog     | GPIO26       |                    | GPIO，ADC                            |
-| D1                      | Analog     | GPIO27       |                    | GPIO，ADC                            |
-| D2                      | Analog     | GPIO28       |                    | GPIO，ADC                            |
+| 3V3                     | 3V3_OUT    |              |                    | 电源输出                             |
+| D0                      | 模拟       | GPIO26       |                    | GPIO，ADC                            |
+| D1                      | 模拟       | GPIO27       |                    | GPIO，ADC                            |
+| D2                      | 模拟       | GPIO28       |                    | GPIO，ADC                            |
 | D3                      | SPIO_CSn   | GPIO5        |                    | GPIO，SPI                            |
-| D4                      | SDA1       | GPIO6        |                    | GPIO，I2C 数据                        |
-| D5                      | SCL1       | GPIO7        |                    | GPIO，I2C 时钟                        |
-| D6                      | TX0        | GPIO0        |                    | GPIO，UART 发送                       |
-| D7                      | RX0        | GPIO1        |                    | GPIO，UART 接收                       |
-| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO，SPI 时钟                        |
-| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO，SPI 数据                        |
-| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO，SPI 数据                        |
-| D11                     | RX1        | GPIO21       |                    | GPIO，UART 接收                       |
-| D12                     | TX1        | GPIO20       |                    | GPIO，UART 发送                       |
-| D13                     | SCL0       | GPIO17       |                    | GPIO，I2C 时钟                        |
-| D14                     | SDA0       | GPIO16       |                    | GPIO，I2C 数据                        |
-| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO，SPI 数据                        |
-| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO，SPI 数据                        |
-| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO，SPI 时钟                        |
+| D4                      | SDA1       | GPIO6        |                    | GPIO，I2C 数据                       |
+| D5                      | SCL1       | GPIO7        |                    | GPIO，I2C 时钟                       |
+| D6                      | TX0        | GPIO0        |                    | GPIO，UART 发送                      |
+| D7                      | RX0        | GPIO1        |                    | GPIO，UART 接收                      |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO，SPI 时钟                       |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO，SPI 数据                       |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO，SPI 数据                       |
+| D11                     | RX1        | GPIO21       |                    | GPIO，UART 接收                      |
+| D12                     | TX1        | GPIO20       |                    | GPIO，UART 发送                      |
+| D13                     | SCL0       | GPIO17       |                    | GPIO，I2C 时钟                       |
+| D14                     | SDA0       | GPIO16       |                    | GPIO，I2C 数据                       |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO，SPI 数据                       |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO，SPI 数据                       |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO，SPI 时钟                       |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
-| ADC_BAT                 |            | GPIO29       |                    | 读取电池电压值                         |
+| ADC_BAT                 |            | GPIO29       |                    | 读取电池电压值                       |
 | Reset                   |            | RUN          |                    | RUN                                  |
-| Boot                    |            | RP2040_BOOT  |                    | 进入 Boot 模式                        |
+| Boot                    |            | RP2040_BOOT  |                    | 进入 Boot 模式                       |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
 | RGB LED                 |            | GPIO22       |                    | RGB LED                              |
-| USER_LED                |            | GPIO25       |                    | 用户指示灯_黄色                        |
-## 前置条件
+| USER_LED                |            | GPIO25       |                    | 用户指示灯_黄色                      |
+## 前置准备
 
-在开始之前，请确保你已经准备好：
+在开始之前，请确保你已经具备：
 
 - 一块 RP2350 开发板
 - Arduino IDE
@@ -191,23 +190,23 @@ import TabItem from '@theme/TabItem';
 
 ### 3. 上传示例程序
 
-在上传示例程序之前，需要先让 XIAO RP2350 进入 BOOT 模式。可以使用以下任一方法：
+在上传示例程序之前，需要先让你的 XIAO RP2350 进入 BOOT 模式。可以使用以下任一方法：
 
 <Tabs>
-<TabItem value="method1" label="Method 1: Before Connecting to Computer" default>
+<TabItem value="method1" label="方法一：连接电脑前">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Hold Boot-> Plug in Cable-> Release Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>按住 Boot -> 插入数据线 -> 松开 Boot</em></div></div>
 
 </TabItem>
 
-<TabItem value="method2" label="Method 2: While Connected to Computer">
+<TabItem value="method2" label="方法二：已连接电脑时">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Hold Boot-> Click Reset-> Release Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>按住 Boot -> 点击 Reset -> 松开 Boot</em></div></div>
 
 </TabItem>
 </Tabs>
 
-1. 打开 Arduino IDE 并创建一个新示例程序。
+1. 打开 Arduino IDE 并创建一个新草稿（Sketch）。
 2. 编写你的代码，例如使用 `Blink` 示例代码。
 3. 进入 **Tools** > **Port**，选择 RP2350 所连接的端口。
 
@@ -224,28 +223,28 @@ import TabItem from '@theme/TabItem';
 - **📄[Schematic]** [XIAO RP2350 原理图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
 - **🗃️[PCB Design Files]** [XIAO RP2350 KiCad 工程](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO RP2350 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
-**机械设计**
-- **📄[2D Dimensions]** [DXF 格式的 XIAO RP2350 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
-- **🔗[3D Model]** [XIAO RP2350 3D 模型](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
+**结构设计**
+- **📄[2D 尺寸]** [DXF 格式的 XIAO RP2350 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[3D 模型]** [XIAO RP2350 3D 模型](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
 **软件与工具**
-- **📄[Test Firmware]** [XIAO RP2350 低功耗测试固件](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
+- **📄[测试固件]** [XIAO RP2350 低功耗测试固件](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
 **其他**
-- **📄[Document]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
-  - 一份关于 Raspberry Pi Pico 开发板的完整入门指南，非常适合想要学习 MicroPython 或 C/C++ 的初学者。
-- **📄[Document]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
-  - 这本书记录了 MicroPython 的安装教程和 API
-- **📄[Document]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
-  - 这本书记录了 Pico C/C++ SDK 的 API
+- **📄[文档]** [Raspberry Pi Pico 系列入门指南](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
+  - 一份关于如何设置和编程 Raspberry Pi Pico 开发板的综合指南，非常适合想要学习 MicroPython 或 C/C++ 的初学者。
+- **📄[文档]** [Raspberry Pi Pico 系列 Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
+  - 记录 MicroPython 安装教程和 API 的书籍
+- **📄[文档]** [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
+  - 记录 Pico C/C++ SDK API 的书籍
  - **📄[arduino-pico GitHub]**(https://github.com/earlephilhower/arduino-pico)
-- **📄[Arduino-Pico Core Documentation]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
+- **📄[Arduino-Pico Core 文档]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
 
-## 技术支持与交流
+## 支持与交流
 
 感谢您使用 Seeed 产品！我们提供多种渠道用于技术支持和社区交流：
 
