@@ -16,10 +16,9 @@ last_update:
   date: 1/28/2026
   author: Allen
 createdAt: '2026-01-29'
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
-
 # Getting Started with reTerminal E1004
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:1000, height:'auto'}}/></div>
