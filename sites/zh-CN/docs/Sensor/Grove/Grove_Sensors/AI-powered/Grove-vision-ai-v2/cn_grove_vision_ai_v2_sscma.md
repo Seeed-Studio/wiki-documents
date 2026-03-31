@@ -11,7 +11,7 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-08-07'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/
 ---
 # 从数据集到 Grove Vision AI V2 的模型部署

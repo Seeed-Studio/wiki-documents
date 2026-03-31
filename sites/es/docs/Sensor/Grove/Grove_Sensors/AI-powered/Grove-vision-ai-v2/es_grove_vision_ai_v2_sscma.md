@@ -11,7 +11,7 @@ last_update:
   date: 03/12/2024
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_sscma/
 ---
 # Desplegando Modelos desde Conjuntos de Datos hasta Grove Vision AI V2
