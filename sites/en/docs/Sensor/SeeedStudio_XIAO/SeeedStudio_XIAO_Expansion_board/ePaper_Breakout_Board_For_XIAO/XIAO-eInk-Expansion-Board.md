@@ -11,10 +11,9 @@ last_update:
   date: 05/23/2023
   author: Carla
 createdAt: '2023-10-30'
-updatedAt: '2026-01-07'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/XIAO-eInk-Expansion-Board/
 ---
-
 # Getting Started with ePaper Breakout Board
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:700, height:'auto'}}/></div>
