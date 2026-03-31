@@ -9,19 +9,19 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-26'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/cn/Network/
 ---
 
 强大的网络功能可无缝集成 Seeed 多种传感器和设备，实现整个产品生态系统中数据与通信的统一流动，从而为监控、自动化和智能决策解锁新的可能性。
 
-Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美集成，您也可以在 Sensor 上找到它们：
+Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美集成，你也可以在 Sensor 上找到它们：
 
-- **面向工业传感器的网络设备**
+- **适用于工业传感器的网络设备**
 
-- **面向入门级传感器的网络模块**
+- **适用于入门级传感器的网络模块**
 
-## 面向工业传感器的网络设备
+## 适用于工业传感器的网络设备
 
 ### 多平台网关
 
@@ -35,20 +35,20 @@ Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美�
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>工业边缘物联网网关</font></div>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN 网关</font></span></a>
+            <a href="/cn/r1225_introduction" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN 网关</font></span></a>
             <br/>
-            <a href="Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN 网关快速上手</font></span></a>
+            <a href="/cn/r1225_quick_start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>reComupter R1225 LoRaWAN 网关快速上手</font></span></a>
             <br/>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>室内多平台网关</font></div>
-            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 多平台网关概览</font></span></a>
+            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M2 多平台网关概述</font></span></a>
             <br/>
-            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 AWS 平台</font></span></a>
+            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 AWS 平台 </font></span></a>
             <br/>
-            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 TTN 平台</font></span></a>
+            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 TTN 平台 </font></span></a>
             <br/>
-            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 ChirpStack 平台</font></span></a>
+            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 连接 ChirpStack 平台 </font></span></a>
             <br/>
     </div>
 </div>
@@ -56,7 +56,7 @@ Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美�
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'left'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Flux 平台网关</font></div>
-            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square 概览</font></span></a>
+            <a href="/cn/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square 概述</font></span></a>
             <br/>
             <a href="/cn/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start" target="_blank"><span><font color={'FFFFFF'} size={"2"}>SenseCAP M4 Square 快速上手</font></span></a>
             <br/>
@@ -100,19 +100,19 @@ Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美�
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>reRouter</font></div>
-            <a href="/cn/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 硬件概览介绍</font></span></a>
+            <a href="/cn/Raspberry-OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 硬件概述介绍</font></span></a>
             <br/>
-            <a href="/cn/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 原始操作系统安装</font></span></a>
+            <a href="/cn/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 原始操作系统安装 </font></span></a>
             <br/>
-            <a href="/cn/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：安装 OpenWRT</font></span></a>
+            <a href="/cn/OpenWrt-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：安装 OpenWRT  </font></span></a>
             <br/>
-            <a href="/cn/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：安装 Plex 媒体服务器</font></span></a>
+            <a href="/cn/OpenWrt-Plex-Media-Server-on-Docker" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：安装 Plex 媒体服务器 </font></span></a>
             <br/>
-            <a href="/cn/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：在 reRouter 上使用 Mender</font></span></a>
+            <a href="/cn/Mender-Client-dual-GbE-CM4" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 应用：在 reRouter 上使用 Mender </font></span></a>
     </div>
     <div class="independent_item" style={{textAlign: 'left'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>LinkStar</font></div>
-            <a href="/cn/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 硬件概览介绍</font></span></a>
+            <a href="/cn/Linkstar_Datasheet" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 硬件概述介绍</font></span></a>
             <br/>
             <a href="/cn/linkstar-install-system" target="_blank"><span><font color={'FFFFFF'} size={"2"}> 原始操作系统安装</font></span></a>
             <br/>
@@ -120,7 +120,7 @@ Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美�
     </div>
 </div>
 
-## 面向入门级传感器的网络模块
+## 适用于入门级传感器的网络模块
 
 ### Grove 通信模块
 
@@ -129,7 +129,7 @@ Seeed 提供了种类丰富的网络产品，可与我们的产品系列完美�
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>Grove 传感器网络</font></div>
-            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>介绍 Grove 传感器网络以及传感器可用的传输方式。</font></div>
+            <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>Grove 传感器网络简介以及传感器可用的传输方式。</font></div>
     </div>
 </div>
 

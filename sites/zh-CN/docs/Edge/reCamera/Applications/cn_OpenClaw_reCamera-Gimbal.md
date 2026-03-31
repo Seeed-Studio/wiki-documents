@@ -71,7 +71,6 @@ url: https://wiki.seeedstudio.com/cn/use_cpenclaw_to_control_the_recamera_gimbal
 你也可以点击左侧的 "Overview" 页面，查看 "Status" 是否正常。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_3.png" /></div>
-![openclaw_3](C:\Users\seeed\Desktop\reCamera 图片(上传 FTP 用)\龙虾\openclaw_3.png)
 
 ## 2. 导入 reCamera Gimbal 的 Skills
 
@@ -103,7 +102,7 @@ openclaw.json 位于你安装 OpenClaw 的文件夹中。该文件包含了访�
 
 2. 将 "192.168.31.198" 替换为你实际的 reCamera Gimbal 所在 IP 地址
 
-3. 将 "recamera.1" 替换为你 reCamera Gimbal 的实际密码）
+3. 将 "recamera.1" 替换为你 reCamera Gimbal 的实际密码
 
 :::
 
