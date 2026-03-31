@@ -10,7 +10,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2023-04-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP-ONE-Compact-Weather-Station-Introduction/
 ---
 # Estações Meteorológicas Compactas da Série SenseCAP ONE

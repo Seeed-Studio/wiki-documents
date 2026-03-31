@@ -11,7 +11,7 @@ last_update:
   date: 7/29/2025
   author: Kasun Thushara
 createdAt: '2025-07-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_mqtt_audio_stream/
 ---
 

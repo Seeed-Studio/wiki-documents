@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2022-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Scream_out_loud-110dBA_fixed_tone_Siren/
 ---
 ![https://www.seeedstudio.com/depot/images/product/screamout.jpg](http://bz.seeedstudio.com/depot/images/product/screamout.jpg)

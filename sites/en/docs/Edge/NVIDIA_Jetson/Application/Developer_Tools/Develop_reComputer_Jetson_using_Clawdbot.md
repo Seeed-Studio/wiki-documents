@@ -14,7 +14,7 @@ last_update:
   date: 01/28/2026
   author: Youjiang
 createdAt: '2026-01-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-02'
 url: https://wiki.seeedstudio.com/develop_recomputer_jetson_using_clawdbot/
 ---
 

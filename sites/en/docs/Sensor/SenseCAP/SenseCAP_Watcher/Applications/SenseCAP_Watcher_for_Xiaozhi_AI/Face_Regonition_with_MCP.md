@@ -23,7 +23,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-26'
 url: https://wiki.seeedstudio.com/face_regonition_with_mcp/
 ---
 # Extending Face Regonition with MCP

@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Integrate_into_Google_Sheets_via_Helium/
 ---
 # 通过 Helium 集成到 Google Sheets

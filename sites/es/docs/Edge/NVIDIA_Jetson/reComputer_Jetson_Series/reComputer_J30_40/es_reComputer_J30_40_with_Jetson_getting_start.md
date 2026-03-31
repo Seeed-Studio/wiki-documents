@@ -10,9 +10,11 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/reComputer_J30_40_with_Jetson_getting_start/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Comenzando con reComputer J30/40
 
@@ -213,6 +215,12 @@ Por favor, consulta esta [página wiki](/es/J401_carrierboard_Hardware_Interface
 - [Ejemplos Jetson](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-para-Principiantes](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

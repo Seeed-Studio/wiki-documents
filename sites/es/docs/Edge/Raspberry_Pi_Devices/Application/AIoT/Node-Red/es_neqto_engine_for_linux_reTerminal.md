@@ -8,7 +8,7 @@ last_update:
   date: 04/17/2024
   author: Kazuhiro Ozuchi
 createdAt: '2024-03-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/neqto_engine_for_linux_reTerminal/
 ---
 

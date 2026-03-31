@@ -13,7 +13,7 @@ last_update:
   date: 01/13/2026
   author: Tomasz/Allen
 createdAt: '2026-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-15'
 url: https://wiki.seeedstudio.com/es/EN04_opendisplay/
 ---
 

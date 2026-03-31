@@ -10,9 +10,11 @@ last_update:
   date: 04/12/2023
   author: Lakshantha
 createdAt: '2023-04-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_Jetson_GPIO/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Como usar o GPIO de 40 pinos nas placas reComputer Jetson
 
@@ -214,6 +216,17 @@ sudo gpioset --mode=wait gpiochip0 85=0
 Se você quiser saber mais sobre o comando **gpioset**, consulte isto:
 https://www.acmesystems.it/gpiod
 :::
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico e Discussão de Produtos
 

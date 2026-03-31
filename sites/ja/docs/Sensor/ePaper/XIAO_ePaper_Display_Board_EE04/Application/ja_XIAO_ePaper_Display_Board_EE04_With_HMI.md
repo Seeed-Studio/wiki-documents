@@ -8,7 +8,7 @@ last_update:
   date: 10/30/2025
   author: Jason
 createdAt: '2025-10-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-12'
 url: https://wiki.seeedstudio.com/ja/EE04_with_hmi/
 ---
 

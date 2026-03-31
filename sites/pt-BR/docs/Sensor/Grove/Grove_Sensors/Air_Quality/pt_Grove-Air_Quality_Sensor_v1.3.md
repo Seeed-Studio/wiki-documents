@@ -10,7 +10,7 @@ last_update:
   date: 4/14/2025
   author: Priyanshu Roy
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Air_Quality_Sensor_v1.3/
 ---
 

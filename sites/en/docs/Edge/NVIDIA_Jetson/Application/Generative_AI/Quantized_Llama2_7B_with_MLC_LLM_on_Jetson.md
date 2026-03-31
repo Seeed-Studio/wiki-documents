@@ -14,7 +14,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-04-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/
 ---
 

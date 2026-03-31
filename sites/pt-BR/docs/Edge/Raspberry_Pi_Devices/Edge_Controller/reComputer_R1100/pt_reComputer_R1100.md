@@ -11,9 +11,11 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Visão Geral
 
@@ -70,7 +72,14 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
   - **ESD**: EN61000-4-2, Nível 3  
   - **EFT**: EN61000-4-4, Nível 2  
   - **Proteção contra Surto**: EN61000-4-5, Nível 2  
-- **Vida Útil de Produção**: O **reComputer R1100** permanecerá em produção **até pelo menos dezembro de 2030**  
+- **Vida Útil de Produção**: O **reComputer R1100** permanecerá em produção **até pelo menos dezembro de 2030**
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Especificação
 

@@ -10,12 +10,13 @@ last_update:
   date: 2024-11-28T03:15:24.000Z
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/XIAO_BLE/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Primeiros passos com a Série Seeed Studio XIAO nRF52840
 
@@ -152,6 +153,13 @@ O Seeed Studio XIAO nRF52840 Sense é compatível com a placa de expansão Seeed
 - Tamanho ultracompacto: 21 x 17,8 mm, fator de forma clássico da série Seeed Studio XIAO para dispositivos vestíveis
 - Interfaces ricas: 1xUART, 1xI2C, 1xSPI, 1xNFC, 1xSWD, 11xGPIO(PWM), 6xADC no XIAO nRF52840 (Sense); e 2xUART, 1xI2C, 2xSPI, 1xI2S, 1xNFC, 1xSWD, 18xGPIO(PWM), 6xADC no XIAO nRF52840 (Sense) Plus
 - Componentes em um único lado, design para montagem em superfície
+
+<JetsonLeadQuote
+  buttonText="Solicitar orçamento personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Comparação de especificações
 

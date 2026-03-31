@@ -11,9 +11,11 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/recomputer_r1100_intro/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Descripción General
 
@@ -730,6 +732,17 @@ El **tiempo de funcionamiento del UPS** depende de la **carga del sistema**. A c
 - [Diseño Esquemático del reComputer R1100, Diseño PCB](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [Folleto del reComputer R1100](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [Manual de Usuario](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
+
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Soporte Técnico y Discusión de Productos
 

@@ -11,7 +11,7 @@ last_update:
   date: 1/10/2023
   author: Jessie
 createdAt: '2024-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/ha_xiao_esp32/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Comece a usar o SenseCAP Card Tracker T1000-E para Meshtastic
+description: Introdução ao SenseCAP Card Tracker T1000-E para Meshtastic
 title: Introdução ao T1000-E Tracker
 keywords:
   - Tracker
@@ -11,29 +11,31 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/
 ---
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
+
 :::danger note
-Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
+Quando o dispositivo estiver nos estados abaixo, não o reinicie nem o desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não tiver concluído o processo de transmissão de mensagem
 2. Estiver sendo configurado
 :::
-## Tutorial em Vídeo
+## Tutorial em vídeo
 
-### Parte 1: Configuração após o Desembalamento
+### Parte 1: Configuração após o unboxing
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Parte 2: Indicadores de Status
+### Parte 2: Indicadores de status
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/8p34S_9DDEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Parte 3: Gravar Novo Firmware
+### Parte 3: Gravar novo firmware
 
 :::caution note
 Antes de gravar o firmware, certifique-se de que você comprou o `T1000-E for Meshtastic`. Não grave o firmware em outro modelo de tracker que não ofereça suporte ao Meshtastic. Por favor, `não use NRF-OTA` para atualizar o firmware, isso pode fazer com que o dispositivo fique completamente inutilizável.
@@ -43,7 +45,7 @@ Antes de gravar o firmware, certifique-se de que você comprou o `T1000-E for Me
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Parte 4: Instruções de Solução de Problemas
+### Parte 4: Instruções de solução de problemas
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/iWahTuXwYnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -96,13 +98,13 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-### Conectar via Website
+### Conectar via site
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo website, agora você pode conectar o dispositivo ao [Website Meshtastic](https://client.meshtastic.org/messages/broadcast/0). 
+Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo site, agora você pode conectar o dispositivo ao [Site Meshtastic](https://client.meshtastic.org/messages/broadcast/0). 
 
-  Passo 1: Abra o Website
+  Passo 1: Abra o site
 
-[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir para o website. 
+[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao site. 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   Passo 2: Adicionar o novo dispositivo 
@@ -115,7 +117,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo we
 
  Método 1: Via Bluetooth
 
-    Escolha o método bluetooth. Escolha o ID do dispositivo na janela pop-up.
+    Escolha o método Bluetooth. Escolha o ID do dispositivo na janela pop-up.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  Método 2: Via Serial
@@ -123,7 +125,7 @@ Se você quiser enviar mensagens de texto e se comunicar com outros nós pelo we
     Escolha o método serial. Abra o gerenciador de dispositivos para ver em qual porta o dispositivo está conectado. Escolha essa porta na janela pop-up.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Seu dispositivo será exibido na lista. Clique para conectar. Se a conexão for bem-sucedida, você poderá ver o status do dispositivo diretamente no website.
+    Seu dispositivo será exibido na lista. Clique para conectar. Se a conexão for bem-sucedida, você poderá ver o status do dispositivo diretamente no site.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -144,9 +146,9 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 </TabItem>
 </Tabs>
 
-**Lista de Regiões**
+**Lista de regiões**
 
-|**Código da Região**|**Descrição**|**Faixa de Frequência (MHz)**|**Ciclo de Trabalho (%)**|**Limite de Potência (dBm)**|
+|**Código da região**|**Descrição**|**Faixa de frequência (MHz)**|**Ciclo de trabalho (%)**|**Limite de potência (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Não definido|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
@@ -160,20 +162,20 @@ Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
 
-### Configurar Sensor
+### Configurar sensor
 
 |Sensor|Descrição|
 |-|-|
 |Temperature|✅|
-|Light|Atualmente não suportado pelo App|
+|Light|Atualmente não é suportado pelo App|
 |Accelerometer|Em breve|
 
-**Configuração do Sensor de Temperatura**
+**Configuração do sensor de temperatura**
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-Vá para `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
+Navegue até `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-ios.png" alt="pir" width={600} height="auto" /></p>
 
@@ -181,16 +183,16 @@ Vá para `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
 
 <TabItem value="android" label="Android App">
 
-Vá para `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
+Navegue até `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-an.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
-**Configuração do Buzzer e LED**
+**Configuração do buzzer e do LED**
 
-||Tipo|Pino de Saída|
+||Tipo|Pino de saída|
 |-|-|-|
 |Buzzer|Buzzer PWM|25|
 |LED|-|24|
@@ -198,7 +200,7 @@ Vá para `Settings` -> `Telemetry(Sensors)` -> Ative os sensores.
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-Vá para `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
+Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
@@ -206,7 +208,7 @@ Vá para `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output
 
 <TabItem value="android" label="Android App">
 
-Vá para `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
+Navegue até `Settings` -> `External Notification` -> Ative `GPIO` -> Defina `Output Pin GPIO`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
 
@@ -229,11 +231,11 @@ Para IOS, ative o `Accurate Location`. Caso contrário, o posicionamento pode fi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
-## Gravar Firmware
+## Gravar firmware
 
-### Verificar a Versão do Firmware
+### Verificar a versão do firmware
 
-Vá para `Settings` -> `Firmware Updates` e verifique a versão atual do firmware.
+Navegue até `Settings` -> `Firmware Updates` e verifique a versão atual do firmware.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
@@ -254,7 +256,7 @@ O seguinte firmware deixará seu dispositivo inutilizável：
 - wio-tracker-wm1110<br/>
 - xiao_ble
 
-### Gravar o Firmware do Aplicativo
+### Gravar o firmware do aplicativo
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -265,7 +267,7 @@ Antes de gravar o firmware, certifique-se de que você comprou o `T1000-E for Me
 #### Passo 1: Entrar no modo DFU
 
 <Tabs>
-<TabItem value="method1" label="Method 1">
+<TabItem value="method1" label="Método 1">
 
 Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
@@ -312,7 +314,7 @@ Selecione o firmware mais recente e baixe o arquivo `UF2`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o arquivo ser copiado e o dispositivo reiniciar.
+Copie o arquivo UF2 para a unidade DFU. O firmware deve ser gravado após o arquivo ser copiado e o dispositivo reiniciar.
 
 ## FAQ
 
@@ -320,7 +322,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o a
 
  Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
- Clique em `Open Serial Monitor`, conecte o dispositivo ao seu PC, verifique o log serial, palavra‑chave `using nodenum`.
+ Clique em `Open Serial Monitor`, conecte o dispositivo ao seu PC, verifique o log serial, palavra-chave `using nodenum`.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -334,7 +336,7 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o a
 
 ### Dispositivo nunca liga
 
-- Carregue o dispositivo por 1~2 horas
+- Carregue o dispositivo por 1 a 2 horas
 
 - Desconecte o cabo USB, então mantenha o botão pressionado e conecte o cabo USB novamente enquanto continua segurando o botão por 5 segundos.
 
@@ -344,13 +346,13 @@ Copie o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após o a
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
- - Se ainda não funcionar, pressione e segure o botão do dispositivo e então conecte o cabo de carregamento, veja se um disco aparece no seu PC. Se aparecer, [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#device-bricked) para reinstalar o bootloader
+ - Se ainda assim não funcionar, pressione e segure o botão do dispositivo e então conecte o cabo de carregamento, veja se um disco aparece ou não no seu PC. Se aparecer, [clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#device-bricked) para reinstalar o bootloader
 
 ### Dispositivo preso em loop de inicialização
 
 **Descrição:**
 
-O dispositivo irá reiniciar repetidamente, e a porta serial irá conectar e desconectar repetidamente.
+O dispositivo irá reiniciar repetidamente, e a porta serial conecta e desconecta repetidamente.
 
 **Solução:**
 
@@ -362,15 +364,15 @@ Para entrar no modo DFU com sucesso, você precisa realizar essa operação rapi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- Etapa 2: [Apagar Flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase).
+- Etapa 2: [Apagar Flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#etapa-2-apagar-flash).
 
-- Etapa 3: [Gravar Firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware).
+- Etapa 3: [Gravar Firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#etapa-3-gravar-firmware).
 
 ### Dispositivo brickado
 
 #### Descrição
 
-O dispositivo não responde, nenhum LED, não é possível parear com o seu App.
+O dispositivo não responde, sem LED, não é possível parear com seu App.
 
 **1) O dispositivo ainda consegue entrar no modo DFU, então tente gravar o bootloader**.
 
@@ -388,32 +390,64 @@ Quando estiver gravando o bootloader, certifique-se de que a conexão do cabo es
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
+Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
+
+Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Depois digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+
 **Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
+Verifique na sua linha de comando se o Python e o pip foram instalados com sucesso.
+
+```
+python --version
+```
+
+```
+python -m pip --version
+```
+
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
 
-Este é o método recomendado, para instalar a versão mais recente:
+Este é o método recomendado para instalar a versão mais recente:
 
 ```
 pip3 install --user adafruit-nrfutil
 ```
 
+Verifique o caminho de instalação:
+
+```
+python -m pip show adafruit-nrfutil
+```
+
+Este é o local de instalação:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
+
+Para usuários Windows, talvez seja necessário adicionar o caminho manualmente. Copie o local de instalação mostrado na última etapa. Depois adicione-o como a seguir:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
+
+
+
 </TabItem>
 
 <TabItem value="sou" label="Instalando a partir do código-fonte">
 
-Use este método se você tiver problemas ao instalar com o PyPi ou quiser modificar a ferramenta. Primeiro faça o clone deste repositório e entre na pasta dele.
+Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro clone este repositório e entre na pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: os comandos a seguir usam `python3`, porém se você estiver no Windows, talvez precise mudar para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
+Nota: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário no seu diretório pessoal:
 
@@ -436,7 +470,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-Para gerar um binário executável independente da ferramenta (Windows e MacOS), execute estes comandos:
+Para gerar um binário executável autônomo da ferramenta (Windows e MacOS), execute estes comandos:
 
 ```
 pip3 install pyinstaller
@@ -456,18 +490,29 @@ Copie ou mova-o para outro lugar para sua conveniência, como um diretório no s
 
 Conecte seu dispositivo ao PC e verifique o número da porta.
 
-Exemplo:
+Para usuários Windows, abra o Gerenciador de Dispositivos e vá para "port", o número da porta que aparecer após a conexão do dispositivo é o número da porta do dispositivo.
+
+Para usuários Mac, por exemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Etapa 3: Grave o bootloader**
+Para usuários Windows, por exemplo:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo pela porta correta do seu dispositivo:
+**Etapa 3: Gravar o bootloader**
+
+No terminal ou prompt de comando, navegue até o diretório onde você baixou o pacote zip do bootloader e execute o seguinte comando, substituindo a porta correta do seu dispositivo:
 
 - **Para Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
+
+Por favor, altere COMXX para o número da sua porta COM. Por exemplo, se o seu dispositivo estiver na COM6, altere o comando para:
+
+`adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
+
+ Alguns dispositivos irão mudar o número da porta depois que você inserir este comando. Portanto, se a instalação falhar, verifique o número da porta novamente.
 
 - **Para outros**:
 
@@ -477,7 +522,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#flash-the-application-firmware) para gravar o firmware da aplicação.
+Quando você tiver concluído as etapas acima, poderá seguir este [passo](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#flash-the-application-firmware) para gravar o firmware do aplicativo.
 
 **2) O dispositivo não consegue entrar no modo DFU, mas a porta serial pode ser detectada**.
 
@@ -486,7 +531,7 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 - Defina a taxa de transmissão para `1200`.
 
 - Conecte o dispositivo.
-   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo voltou ao modo DFU, então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#flash-the-bootloader) -> [apague o flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware).
+   A luz piscará brevemente quando você conectá-lo. Continue tentando até que a luz permaneça acesa, o que significa que o dispositivo pode voltar ao modo DFU, então [grave o bootloader](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#flash-the-bootloader) -> [Apague a flash](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) -> [grave o firmware](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-3-flash-firmware).
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -494,9 +539,9 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 
 **3) O dispositivo não consegue entrar no modo DFU e nenhuma porta serial é exibida**
 
-- pressione e segure o botão do dispositivo e então conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
+- Pressione e segure o botão do dispositivo e, em seguida, conecte o cabo de carregamento. Depois que um disco aparecer no seu PC, você poderá ver a porta serial.
 
-- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, então conecte o cabo de carregamento e tente parear novamente.
+- Se ainda não funcionar, desconecte o cabo de carregamento e deixe o dispositivo por alguns dias até que a bateria esteja completamente descarregada, depois conecte o cabo de carregamento e tente pareá-lo novamente.
 
 **4) Se nenhuma das etapas acima funcionar, entre em contato com o suporte técnico: support@sensecapmx.com**
 
@@ -506,7 +551,7 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Verifique se o dispositivo está no modo DFU, a luz verde ficará continuamente acesa quando o dispositivo estiver no modo DFU.
+ Verifique se o dispositivo está no modo DFU; a luz verde ficará acesa continuamente quando o dispositivo estiver no modo DFU.
 
 - **Não é possível abrir a porta serial**
 
@@ -518,28 +563,96 @@ Quando você tiver concluído as etapas acima, poderá seguir esta [etapa](https
 
  #### Descrição
 
- - Após ligar o dispositivo, ele irá desligar ou reiniciar automaticamente depois de um tempo. 
- - O log da porta serial executa por um tempo e depois para.
+ - Após ligar o dispositivo, ele desligará ou reiniciará automaticamente depois de um tempo. 
+ - O log da porta serial é executado por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando ele está nos seguintes estados: sem concluir o processo de transmissão de mensagens, em configuração......
+ Isso pode ser causado por reiniciar ou desligar o dispositivo manualmente e à força quando o dispositivo estiver nos seguintes estados: sem concluir o processo de transmissão de mensagens, sendo configurado......
 
  #### Solução de problemas
 
- [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) para executar um flash-erase. 
+ [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) para executar um apagamento da flash. 
 
  ### Restauração de fábrica
-Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Existem dois métodos para você realizar a restauração de fábrica.
+Se você quiser restaurar as configurações padrão, pode fazer a restauração de fábrica. Há dois métodos para você fazer a restauração de fábrica.
 
-- [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) para apagar o dispositivo com flash erase. Em seguida, regrave o firmware mais recente.
+- [Clique aqui](https://wiki.seeedstudio.com/pt-br/sensecap_t1000_e/#step-2-flash-erase) para apagar a flash do dispositivo. Em seguida, regrave o firmware mais recente.
 
-- Clique no botão `Factory Reset` no App. O dispositivo irá reiniciar automaticamente com a configuração de fábrica. 
+- Clique no botão `Factory Reset` no App. O dispositivo será reiniciado automaticamente com a configuração de fábrica. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+### Redefinição do NodeDB
+
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual, incluindo:
+
+- **ID do Nó**
+- **Nome de Usuário**
+- **Informações de Localização**
+- **Informações de Sinal (SNR)**
+- **Horário da Última Visualização**
+
+**Quando redefinir**
+
+Redefina o NodeDB quando:
+
+- A lista de nós contiver entradas desatualizadas, duplicadas ou inválidas.
+- Você se mover para um ambiente Mesh diferente e quiser redescobrir os nós próximos.
+- As informações do nó no aplicativo parecerem incorretas ou incompletas.
+
+:::danger
+Redefinir o NodeDB apenas limpa o banco de dados de nós armazenado no dispositivo. Isso **não executa uma restauração de fábrica** e **não remove a configuração básica do dispositivo**.
+:::
+
+**Redefinir pelo App**
+
+1. Abra o aplicativo e conecte-se ao dispositivo de destino.
+2. Vá para **Settings**.
+3. Toque em **Device**.
+4. Role até a parte inferior da página **Device Config** e encontre **Reset NodeDB**.
+5. Toque nela e confirme a ação.
+
+**Caminho no App**
+
+`Settings > Device > Reset NodeDB`
+
+**Exemplos de telas**
+
+Passo 1: Abra **Device** na página **Settings**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+Passo 2: Toque em `Reset NodeDB` na página **Device Config**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
+
+:::tip
+Observe a diferença entre as seguintes opções:
+
+- **Reset NodeDB**: Apenas limpa o banco de dados de nós.
+- **Factory Reset**: Restaura o dispositivo para as configurações de fábrica e remove mais dados de configuração.
+:::
+
+**O que acontece após a redefinição**
+
+Depois que **Reset NodeDB** for executado, o dispositivo limpará a lista de nós armazenada no momento. À medida que o dispositivo continuar em funcionamento, ele redescobrirá e registrará novamente os nós próximos.
+
+Você poderá observar o seguinte:
+
+- A lista de nós pode ficar temporariamente vazia ou menor.
+- Os nós reaparecerão gradualmente à medida que o dispositivo continuar operando.
+- Os registros históricos de nós armazenados anteriormente não estarão mais disponíveis.
+
+**Notas**
+
+- Antes de redefinir, certifique-se de que o problema esteja realmente relacionado a uma lista de nós anormal.
+- Se o problema for apenas um atraso na exibição dos nós, aguarde um pouco primeiro para ver se ele se recupera automaticamente.
+- Se o problema permanecer após redefinir o NodeDB, continue solucionando a configuração do dispositivo ou outras possíveis causas.
+- Use **Factory Reset** com cuidado para evitar remover acidentalmente a configuração do dispositivo.
 
 ### Qualidade do sinal
 
-  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR abaixo de -10 dB indica desempenho ruim.
+  - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica baixo desempenho.
 
-  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI abaixo de -115 dBm é considerado como tendo desempenho ruim. 
+  - **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo baixo desempenho. 
 
       Para obter o melhor efeito de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -547,13 +660,24 @@ Se você quiser restaurar as configurações padrão, pode fazer a restauração
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
-## Recursos
+## Recurso
 
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
-## Suporte técnico e discussão de produtos
+
+
+## Recursos
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

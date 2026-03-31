@@ -9,7 +9,7 @@ last_update:
   date: 6/3/2025
   author: Zeno
 createdAt: '2025-09-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/ja/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Seeed気象ステーション向けBenchmark Labs予報統合

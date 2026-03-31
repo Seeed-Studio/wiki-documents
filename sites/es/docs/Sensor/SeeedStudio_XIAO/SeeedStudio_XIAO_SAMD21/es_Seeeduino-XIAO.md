@@ -10,9 +10,11 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/Seeeduino-XIAO/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Introducción a Seeed Studio XIAO SAMD21
 
@@ -462,6 +464,13 @@ el tamaño máximo de flash es 8KB, más información en la hoja de datos ATSAMD
 
 **Software y Herramientas**
 - **📄[Firmware de Fábrica]** [Firmware de Fábrica XIAO SAMD21](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
+
+<JetsonLeadQuote
+  buttonText="Solicitar presupuesto personalizado"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Recursos del Curso
 

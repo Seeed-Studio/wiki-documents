@@ -13,7 +13,7 @@ last_update:
   date: 06/07/2024
   author: Kasun Thushara
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/ja/edge_box_rpi_200_node_red_modbus_rs485/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 06/07/2024
   author: Tim
 createdAt: '2023-07-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-nRF52840-Zephyr-RTOS/
 ---
 

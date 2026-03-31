@@ -11,9 +11,11 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概述
 
@@ -730,6 +732,17 @@ reComputer R1100 中的 **UPS 模块**是一个**基于 7F 超级电容器**的�
 - [reComputer R1100原理图设计，PCB设计](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [reComputer R1100宣传册](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [用户手册](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
+
+
+
+## 资源
+
+<JetsonLeadQuote
+  buttonText="获取定制报价"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## 技术支持与产品讨论
 

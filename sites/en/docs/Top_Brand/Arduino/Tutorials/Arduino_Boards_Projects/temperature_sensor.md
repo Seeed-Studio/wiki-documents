@@ -10,7 +10,7 @@ last_update:
   date: 2/15/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/temperature_sensor/
 ---
 

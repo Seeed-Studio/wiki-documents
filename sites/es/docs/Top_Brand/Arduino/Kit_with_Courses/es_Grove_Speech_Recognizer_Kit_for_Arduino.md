@@ -10,7 +10,7 @@ last_update:
   date: 1/12/2023
   author: Matthew
 createdAt: '2023-02-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove_Speech_Recognizer_Kit_for_Arduino/
 ---
 

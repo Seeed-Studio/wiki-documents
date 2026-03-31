@@ -11,7 +11,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/
 ---
 ![](https://files.seeedstudio.com/wiki/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/board_1.jpg)

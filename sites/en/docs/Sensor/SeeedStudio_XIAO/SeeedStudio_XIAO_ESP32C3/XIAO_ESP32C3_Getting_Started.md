@@ -9,9 +9,11 @@ last_update:
   date: 08/14/2024
   author: Spencer
 createdAt: '2022-11-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO ESP32C3
 
@@ -492,6 +494,13 @@ You will see the following output when flashing is successful
 - **🔗[Wiki]** [First Look at the Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
   - A great intro to the XIAO ESP32C3, covering key features and basic usage.
 - **📄[Document]** [Report of XIAO ESP32-C3 Low Power Consumption](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Course Resources
 

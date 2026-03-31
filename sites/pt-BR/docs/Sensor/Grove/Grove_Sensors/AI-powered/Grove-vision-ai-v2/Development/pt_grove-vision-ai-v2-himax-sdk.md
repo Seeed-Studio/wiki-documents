@@ -10,7 +10,7 @@ last_update:
   date: 01/17/2023
   author: Citric
 createdAt: '2024-01-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_himax_sdk/
 ---
 

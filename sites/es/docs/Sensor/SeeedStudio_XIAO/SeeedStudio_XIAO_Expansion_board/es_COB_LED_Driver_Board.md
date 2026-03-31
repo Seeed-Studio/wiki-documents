@@ -8,7 +8,7 @@ last_update:
   date: 11/27/2025
   author: Brandy
 createdAt: '2025-12-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-20'
 url: https://wiki.seeedstudio.com/es/getting_started_with_cob_led_dirver_board/
 ---
 # Introducción a la Placa Controladora de LED COB para Seeed Studio XIAO

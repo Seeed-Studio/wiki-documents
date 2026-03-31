@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-23 15:11:46 (北京时间)
-// 多语言页面: 2223 个
+// 生成时间: 2026-03-30 14:27:15 (北京时间)
+// 多语言页面: 2234 个
 
 (function() {
   'use strict';
@@ -1080,6 +1080,13 @@
     "ja",
     "pt"
   ],
+  "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/j501_mini_starai_viola_fruit_sorting": [
     "cn",
     "en",
@@ -1095,6 +1102,13 @@
     "pt"
   ],
   "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_reachy_fleet_dance": [
     "cn",
     "en",
     "es",
@@ -3180,6 +3194,13 @@
     "ja",
     "pt"
   ],
+  "/use_cpenclaw_to_control_the_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
@@ -4055,6 +4076,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_source_code_practical_tutorial_solar_node": [
     "cn",
     "en",
@@ -4091,6 +4119,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -4140,6 +4175,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
     "cn",
     "en",
     "es",
@@ -10315,6 +10357,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_xvf3800_picovoice": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_xvf3800_python_sdk": [
     "cn",
     "en",
@@ -12115,6 +12164,34 @@
     "pt"
   ],
   "/tracker_at_command": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon01_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon02_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_user_guide": [
     "cn",
     "en",
     "es",

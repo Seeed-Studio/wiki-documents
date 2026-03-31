@@ -4,7 +4,7 @@ title: reComputer R1225 LoRaWAN Gateway Overview
 keywords:
   - SenseCAP Network
   - Edge Controller
-  - reComputer R1225 
+  - reComputer R1225
   - Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
@@ -12,7 +12,7 @@ last_update:
   date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-13'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/r1225_introduction/
 ---
 
@@ -24,21 +24,23 @@ url: https://wiki.seeedstudio.com/r1225_introduction/
     </a>
 </div>
 
+# Overview
+
 ## Description
 
-reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
+The reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based IoT LoRaWAN gateway and controller, powered by the CM4 and equipped with AI capabilities. It features 3 RS485 interfaces, dual Ethernet ports, and supports BACnet and Modbus protocols, providing all the functionality needed for a robust and reliable industrial edge IoT device. With support for AI NPU accelerators, it is an ideal solution for remote access control applications, especially in BMS, BAS, and iBMS systems.
 
-## Feature
+## Features
 
-### Designed for Building Automation System
+### Designed for Building Automation Systems
 
-- Multiple isolated RS485 channels supports high and low speeds communication.
+- Multiple isolated RS485 channels support both high-speed and low-speed communication
 
-- Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
-- Up to 4GB RAM supports the processing of thousands of data points, ensuring efficient performance
-- Clear dual-sided LED indicators help check operational status quickly
-- High-quality metal case, compatible with DIN-rail and Wall installation
-- Open-source Software Seeed Gateway OS，ChirpStack, Basics™ Station, Packet Forward build in. Supports customization and derivative development.
+- Supports BACnet, Modbus RTU, and Modbus TCP/IP protocols
+- Up to 4GB of RAM supports the processing of thousands of data points
+- Clear dual-sided LED indicators allow users to quickly check the operational status
+- High-quality metal case, compatible with DIN-rail and wall mounting
+- Open-source software including Seeed Gateway OS，ChirpStack, Basics™ Station, and a built-in packet forwarder. Supports customization and secondary development.
 
 ### Powerful Performance
 
@@ -53,19 +55,19 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 
 - On-chip BLE
 
-- Mini-PCIe1: LTE
+- Mini-PCle1: LTE
   - 4G version pre-installed with LTE module:
     - EU868: EC25-EUX-mini-PCIe (LTE Cat 4)
     - US915: EC25-AFXGA-mini-PCIe (LTE Cat 4)
 
-- Mini-PCIe2: Pre-installed SPI LoRa® module
+- Mini-PCle2: Pre-installed SPI LoRa® module
   - EU868: Wio-WM1302 LoRaWAN Gateway Module (SPI) - EU868
   - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915
   
 ### Rich Interfaces
 
 - 3x RS485 (isolated)
-- 1x 10M/100M/1000M Ethernet (Support PoE)
+- 1x 10M/100M/1000M Ethernet (Supports PoE)
 - 1x 10M/100M Ethernet
 - 1x HDMI 2.0
 - 2x Type-A USB2.0
@@ -75,9 +77,9 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 ### Safety and Reliability
 
 - Hardware Watchdog
-- UPS Supercapacitor(**included**)
+- UPS supercapacitor (**included**)
 - Metal casing with PC side panels
-- ESD: EN61000-4-2,level 3
+- ESD: EN61000-4-2, level 3
 - EFT: EN61000-4-4, level 2
 - Surge: EN61000-4-5, level 2
 - Production Lifetime: reComputer R1225 will remain in production until at least December 2030
@@ -124,12 +126,12 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2-pin Terminal Block</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE(as powered device)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af Standard 12.95W PoE</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE(as a powered device)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af standard, 12.95W </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Supply Voltage(AC/DC)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12&#126;24V AC/9&#126;36V DC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12&#126;24 V AC/9&#126;36 V DC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Overvoltage Protection</td>
@@ -137,7 +139,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Consumption</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>                 </td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}> comming soon </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Switch</td>
@@ -174,7 +176,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM Card Slot</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports Standard SIM Card</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports a standard SIM card</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2 Slot</td>
@@ -193,19 +195,19 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI(reserved)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports LCD*(on board within the enclosure)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI (reserved)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports LCD* (on board within the enclosure)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Wireless Communication</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi 2.4/5.0 GHz</td>
+      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi: 2.4/5.0 GHz</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>On-chip Wi-Fi</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>Yes</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE 5.0</td>
+      <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE: 5.0</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>On-chip BLE</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>Yes</td>
     </tr>
@@ -241,7 +243,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Ambient Conditions</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Ingress Protection</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>IP Rating</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IP40</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -326,7 +328,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Weight(Net)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750g;R1225 with 4G module: 800g</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>750 g; R1225 with 4G module: 800 g</td>
     </tr>
   </tbody>
 </table>
@@ -348,13 +350,13 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Details_Image/Power_Diagram04.jpg" /></div>
 
-The reComputer R1225 supports three power supply options: AC, DC terminal and PoE port. By default, the reComputer R1225 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506), while **the PoE power supply(PoE module, SKU:110991925) is included**. This provides flexibility in power supply selection and allows for easy integration with various power sources.
+The reComputer R1225 supports three power supply options: AC, DC terminal and PoE . By default, the reComputer R1225 is powered through the AC/DC terminal (Official regional power adapter SKU:110061505/110061506).  **A PoE module (SKU:110991925) is included**, providing additional power supply flexibility.
 
-### 2-Pin Power terminal
+### 2-Pin Power Terminal
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-The reComputer R1225 is supplied with a nominal AC voltage of 12&#126;24  V or DC voltage of 9&#126;36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1225, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+The reComputer R1225 supports a nominal input voltage of 12&#126;24  V or DC voltage of 9&#126;36V. The power supply is connected via the 2-pin power terminal block connector. To properly ground the device, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that **regardless of how the power supply's positive and negative terminals are connected**, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
@@ -375,13 +377,15 @@ It's worth noting that the PoE module provided with the reComputer R1225 is comp
 
 Please refer to the table below for the tested power consumption of reComputer R1225 in Seeed Studio's laboratory. Please note that this value is for reference only, as the test methods and environment can result in variations in the results.
 
-待测试
+The power consumption table will be updated shortly.
 
+<!--
 | Status   | Voltage | Current | Power Consumption | Description                                                                                                         |
 |   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
 |Shutdown  |24V      |  mA     |    W              | Static power consumption test in shutdown and power-off state.                                                      |
 |Idle      |24V      |  mA     |    W              | To test the input current when supplying 24V power to the reComputer R1225 device without running any test programs.|
 |Full Load |24V      |  mA     |    W              | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected.                   |
+-->
 
 ### Power On and Power Off
 
@@ -431,7 +435,7 @@ Please note that after shutting down, please wait for **at least 10 seconds** be
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM Card Slot</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports Standard SIM Card</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>supports a standard SIM card</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2 Slot</td>
@@ -477,7 +481,7 @@ The reComputer R1225 features 6 LED indicators that serve to signal the machine'
 | ------------- | -------------- | ------ | -------------------------------------------------------------------------- |
 | PWR           | Green          | On     | The device has been connected to power.                                    |
 |               |                | Off    | The device is not connnected to power.                                     |
-| ACT           | Green          |        | Under Linux this pin will flash to signify eMMC access.<br /> If any error occurs during booting, then this LED will flash an <br />error pattern which can be decoded using the look up [table on the Raspberry Pi website](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). |
+| ACT           | Green          |        | Under Linux this pin will flash to signify eMMC access.<br /> If any error occurs during booting, then this LED will flash an <br />error pattern which can be decoded using the look up [table on the Raspberry Pi website](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes).|
 | USER          | Green/Red/Blue |        | Need to be defined by user.                                                |
 | RS485-1       | Green          | Off    | No data transfer on RS485 channel 1.                                       |
 |               |                | Blink  | RS485 channel 1 is receiveing or sending data.                             |
@@ -624,8 +628,8 @@ The reComputer R1225 is equipped with one USB Type-C port and two USB Type-A por
 
 | **Type**   | **Quantity** | **Protocol** | **Function** | **Description**                                                                    |
 | ---------- | ------------ | ------------ | ------------ | ---------------------------------------------------------------------------------- |
-| **Type-C** | *1           | USB2.0       | USB-Device   | Used for serial port debugging, burning image, etc.                                |
-| **Type-A** | *2           | USB2.0       | USB-Host     | Connect different USB devices such as flash drives,<br /> USB keyboards or mouses. |
+| **Type-C** | *1           | USB2.0       | USB-Device   | Used for serial debugging and firmware flashing, etc.                              |
+| **Type-A** | *2           | USB2.0       | USB-Host     | Connects various USB devices such as flash drives, USB keyboards, and mice.        |
 
 Check if the USB hub is detected by running the **lsusb** command. This command lists all connected USB devices, including hubs.
 
@@ -838,7 +842,7 @@ The reComputer R1225 is powered by the CM4 with an onboard Wi-Fi/BLE version, pr
 It is important to note that due to the reComputer R1225's metal casing, Wi-Fi/BLE signals may have difficulty penetrating the metal exterior. Therefore, if you require this feature, we recommend installing the external antenna we have prepared for you.
 :::
 
-#### Connect wifi
+#### Connect Wi-Fi
 
 ##### Connect to Wi-Fi via the Luci UI
 
@@ -850,21 +854,21 @@ step1. To scan for Wi-Fi networks:
   nmcli dev wifi list
   ```
 
-step2. Connect to the wifi network:
+step2. Connect to the Wi-Fi network:
 
   ```bash
   sudo nmcli dev wifi connect network-ssid password "network-password"
   sudo nmcli --ask dev wifi connect network-ssid
   ```
 
-step3. After the device is powered on, it will automatically connect to wifi.  
-  If you want to delete the saved WiFi information:
+step3. After the device is powered on, it will automatically connect to Wi-Fi.  
+  If you want to delete the saved Wi-Fi information:
 
   ```bash
   nmcli con del network-ssid
   ```
 
-  After the connection is disconnected, connect to another wifi.
+  After the connection is disconnected, connect to another Wi-Fi.
 
 #### Connect bluetooth devices
 

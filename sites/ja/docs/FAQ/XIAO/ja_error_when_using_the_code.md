@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/ja/error_when_using_the_code/
 ---
 A: これは、XIAO RP2040に適切なコンパイルオプションを選択していないことが原因である可能性があります。以下の図を参考に設定し、プログラムを再アップロードしてください。

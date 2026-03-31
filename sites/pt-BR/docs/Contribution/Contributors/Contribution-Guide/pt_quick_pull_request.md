@@ -10,7 +10,7 @@ last_update:
   date: 09/01/2024
   author: Matthew
 createdAt: '2024-08-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/quick_pull_request/
 ---
 

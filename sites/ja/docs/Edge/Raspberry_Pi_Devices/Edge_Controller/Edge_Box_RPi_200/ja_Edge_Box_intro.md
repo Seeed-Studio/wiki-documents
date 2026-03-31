@@ -10,7 +10,7 @@ last_update:
   date: 6/25/2023
   author: Kasun Thushara
 createdAt: '2023-12-18'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/ja/Edge_Box_intro/
 ---
 

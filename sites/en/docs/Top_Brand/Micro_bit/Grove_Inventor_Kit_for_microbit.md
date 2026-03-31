@@ -13,7 +13,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 
@@ -64,6 +64,52 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
 - 800×480 resolution
 - Rich color representation while maintaining low power consumption
 - Perfect for gallery displays, colorful dashboards, and visually oriented applications
+
+## reTerminal E1003
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1003 Wiki</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+  </a>
+</div><br />
+
+reTerminal E1003 is a 10.3-inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports SenseCraft HMI no-code UI design, while Arduino and PlatformIO are available for further development.
+
+The touch-related library is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon. ESPHome driver support for E1003 is also planned for a future release.
+
+### Key Features
+
+- 10.3-inch monochrome ePaper display with touch interaction support on HMI firmware v1.1.2
+- 16-level grayscale with 1404×1872 high resolution
+- Up to 6-month battery life with ultra-low power operation
+- Native SenseCraft HMI support plus Arduino and PlatformIO compatibility, with ESPHome driver support planned
+
+## reTerminal E1004
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1004 Wiki</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+  </a>
+</div><br />
+
+The reTerminal E1004 features a 13.3-inch full-color ePaper display and up to 6-month battery life. Powered by ESP32-S3, it supports SenseCraft HMI for no-code dashboard creation and image uploading, while also supporting Home Assistant, Arduino, and ESP-IDF for advanced development workflows.
+
+### Key Features
+
+- 13.3-inch full-color ePaper display
+- Up to 6-month battery life for always-on scenarios
+- ESP32-S3 platform with SenseCraft HMI no-code support
+- Compatible with Home Assistant, Arduino, and ESP-IDF
 
 ## SenseCraft HMI Platform
 

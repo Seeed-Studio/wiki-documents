@@ -11,7 +11,7 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 

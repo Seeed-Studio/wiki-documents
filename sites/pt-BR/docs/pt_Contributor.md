@@ -9,7 +9,7 @@ last_update:
   date: 09/01/2024
   author: Matthew
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/pt-br/Contributor/
 ---
 

@@ -11,7 +11,7 @@ last_update:
   date: 09/23/2024
   author: Spencer
 createdAt: '2024-10-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/ha_with_mr60bha2/
 ---
 

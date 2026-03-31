@@ -8,9 +8,11 @@ last_update:
   date: 01/03/2023
   author: w0x7ce
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/
 ---
+
+import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # reComputer for Jetson Series Introduction
 
@@ -192,6 +194,13 @@ We here present you more complete tables about NVIDIA® Jetson Module Powered De
 ## Resources
 
 - **[PDF]** [NVIDIA Jetson Devices and carrier boards comparision](https://files.seeedstudio.com/wiki/reComputer/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Tech Support & Product Discussion
 

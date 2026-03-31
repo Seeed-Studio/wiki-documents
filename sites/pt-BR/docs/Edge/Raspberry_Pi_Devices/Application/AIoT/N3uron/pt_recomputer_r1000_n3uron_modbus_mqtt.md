@@ -15,7 +15,7 @@ last_update:
   date: 7/12/2024
   author: Kasun Thushara
 createdAt: '2024-05-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1000_n3uron_modbus_mqtt_aws/
 ---
 ## Introdução

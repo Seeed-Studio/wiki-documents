@@ -13,11 +13,11 @@ last_update:
   date: 2/11/2026
   author: Kasun Thushara
 createdAt: '2024-04-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/respeaker_lite_ha/
 ---
 
-Neste tutorial, você aprenderá como configurar o seu ReSpeaker Lite para funcionar com o Home Assistant. Você aprenderá como gravar o firmware necessário e como compilar e enviar o arquivo YAML. Depois disso, você será capaz de controlar e automatizar seus eletrodomésticos usando a sua voz. Basta dizer “Okay Nabu” e começar a falar com a sua casa.
+Neste tutorial, você aprenderá como configurar o seu ReSpeaker Lite para funcionar com o Home Assistant. Você aprenderá como gravar o firmware necessário e como compilar e enviar o arquivo YAML. Depois disso, você poderá controlar e automatizar os aparelhos da sua casa usando a sua voz. Basta dizer “Okay Nabu” e começar a falar com a sua casa.
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -36,11 +36,11 @@ Neste tutorial, você aprenderá como configurar o seu ReSpeaker Lite para funci
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
-## Atualização do Firmware XMOS
+## Atualização do firmware XMOS
 
 Para obter a melhor experiência de reprodução, precisamos atualizar o firmware XMOS para `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`.
 
@@ -48,7 +48,7 @@ Baixe o firmware como repositório completo a partir [daqui](https://github.com/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-No seu computador, conecte o ReSpeaker Lite na interface USB (próxima ao conector P2 de 3,5 mm) e execute o seguinte comando:
+No seu computador, conecte o ReSpeaker Lite na interface USB (próxima ao conector de 3,5 mm) e execute o seguinte comando:
 
 
 
@@ -66,7 +66,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
 
-para mais informações, consulte este [link](https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/#update-firmware)
+para mais informações, consulte este [link](https://wiki.seeedstudio.com/pt-br/reSpeaker_usb_v3/#atualizar-firmware)
 
 :::note
 Para usar o botão de usuário e o botão de mute, você precisa soldar o botão de usuário ao D2 e o botão de mute ao D3.
@@ -74,7 +74,7 @@ Para usar o botão de usuário e o botão de mute, você precisa soldar o botão
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={800} height="auto" /></p>
 
-## Primeiros Passos
+## Introdução
 
 :::note
 Estamos usando o Home Assistant versão 2026.1.3 e o ESPHome versão 2026.1.3 em um Raspberry Pi 5.
@@ -82,7 +82,7 @@ Estamos usando o Home Assistant versão 2026.1.3 e o ESPHome versão 2026.1.3 em
 
 ## Instalar ESPHome Builder 
 
-**Settings → Add-ons → Clique em Add-on Store → Instalar o add-on ESPHome Device Builder**.
+**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** add-on.
 
 Vá para **Home Assistant > Settings > Add-ons**.
 
@@ -92,7 +92,7 @@ Clique em **Add-on Store** (geralmente no canto inferior direito)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-Em **Official add-ons**, pesquise e instale **ESPHome Device Builder**.
+Em **Official add-ons**, procure e instale **ESPHome Device Builder**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -105,7 +105,7 @@ Ative **Start on Boot, Watchdog e Show in Sidebar** para facilitar o acesso.
 
 Na barra lateral do Home Assistant, vá para **ESPHome Builder**.
 
-## Adicionar Dispositivo reSpeaker
+## Adicionar dispositivo reSpeaker
 
 Clique em **+ NEW DEVICE**.
 
@@ -122,7 +122,7 @@ Selecione `ESP32-S3`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-Quando solicitado, clique em **SKIP** – vamos criar a configuração manualmente.
+Quando solicitado, clique em **SKIP** – criaremos a configuração manualmente.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
@@ -131,8 +131,11 @@ Quando solicitado, clique em **SKIP** – vamos criar a configuração manualmen
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
 
-Selecione a entrada do seu novo dispositivo e clique em **EDIT**.
+Selecione a nova entrada do dispositivo e clique em **EDIT**.
 
+:::note
+O arquivo YAML atualizado pode ser encontrado lá. Em alguns casos, a versão mais recente do ESPHome pode causar problemas de compatibilidade. Consulte o [repositório](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/blob/main/config/common/respeaker-satellite-base.yaml) original.
+:::
 
 <details>
 <summary>Arquivo Yaml</summary>
@@ -1496,7 +1499,7 @@ debug:
 
 </details>
 
-Depois que o seu YAML for salvo, clique em **INSTALL**.
+Depois que seu arquivo YAML for salvo, clique em **INSTALL**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -1514,7 +1517,7 @@ Baixe o arquivo de firmware .bin gerado para o seu computador a partir de Factor
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-**Fazendo download do arquivo Bin compilado : Ilustração em GIF**
+**Baixando arquivo Bin compilado : Ilustração em GIF**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
@@ -1556,15 +1559,15 @@ Clique em **CONFIGURE** e depois em **Submit** para finalizar a configuração.
 ## Configuração do Assistente de Voz
 
 Agora você será direcionado para a página de configuração do Assistente de Voz.
-Você pode dizer “Okay Nabu”, e ele responderá com um som de confirmação (som whoop).
+Você pode dizer “Okay Nabu”, e ele responderá com um som de confirmação (som de whoop).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/okay_nabu.png" alt="pir" width={700} height="auto" /></p>
 
-Em seguida, você será guiado para configurar o seu pipeline de voz. Neste demo, vamos usar o Nabu Cloud.
+Em seguida, você será guiado para configurar seu pipeline de voz. Neste demo, vamos usar o Nabu Cloud.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_1.png" alt="pir" width={700} height="auto" /></p>
 
-A configuração é simples, e você pode aproveitar o teste grátis de um mês para explorar todas as suas capacidades.
+A configuração é simples, e você pode aproveitar o teste gratuito de um mês para explorar todas as suas capacidades.
 
 Você pode fazer login com o Nabu Cloud e configurar o Assistente de Voz porque é relativamente fácil de configurar e oferece desempenho rápido.
 
@@ -1572,7 +1575,7 @@ Você pode fazer login com o Nabu Cloud e configurar o Assistente de Voz porque 
 
 ## FAQ
 
-### Como visualizar os Logs do reSpeaker?
+### Como visualizar os logs do reSpeaker?
 
 Para visualizar arquivos de log e procedimentos de depuração — como verificar a detecção da palavra de ativação e a funcionalidade de STT — você pode usar o aplicativo web ESP mencionado anteriormente.
 
@@ -1586,9 +1589,9 @@ Gostaríamos de agradecer ao FormatBCE por criar este incrível arquivo YAML par
 ## Compartilhamento de Projetos
 - De **Smart Home Circle** : [Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
-## Suporte Técnico & Discussão sobre o Produto
+## Suporte Técnico & Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que a sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

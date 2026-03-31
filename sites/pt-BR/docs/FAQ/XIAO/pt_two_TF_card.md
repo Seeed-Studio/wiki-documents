@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/two_TF_card/
 ---
 R: Isso não gera conflito. Os diferentes slots de cartão SD são controlados via chip select; se você quiser usar o slot de cartão microSD no Sense, o pino de chip select deve ser **21**; se você quiser usar o slot de cartão microSD no Round Display, o pino de chip select deve ser **D2**.

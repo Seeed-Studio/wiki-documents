@@ -1,5 +1,5 @@
 ---
-description: Tutorial de configuração de Gateway MQTT Meshtastic baseado no Kit XIAO ESP32S3 & Wio-SX1262. Permite mensagens globais, fornece backup quando o sinal da malha está fraco e garante entrega mais rápida de mensagens via internet. 
+description: Tutorial de configuração de Gateway MQTT Meshtastic baseado no Kit XIAO ESP32S3 & Wio-SX1262. Permite mensagens globais, fornece backup quando o sinal da malha está fraco e garante entrega mais rápida de mensagens via internet.
 title: Configurando um Gateway MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
@@ -9,7 +9,7 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_&_wio_sx1262_kit_mqtt/
 ---
 

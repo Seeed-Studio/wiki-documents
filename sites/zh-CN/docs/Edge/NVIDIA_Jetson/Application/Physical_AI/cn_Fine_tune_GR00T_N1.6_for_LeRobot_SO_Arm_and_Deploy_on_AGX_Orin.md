@@ -13,7 +13,7 @@ last_update:
   date: 2026-1-6
   author: Dayu
 createdAt: '2026-01-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-09'
 url: https://wiki.seeedstudio.com/cn/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin/
 ---
 

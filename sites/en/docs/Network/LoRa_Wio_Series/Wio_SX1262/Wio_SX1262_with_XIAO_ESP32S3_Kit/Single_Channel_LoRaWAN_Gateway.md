@@ -14,7 +14,7 @@ last_update:
   date: 10/09/2024
   author: Evelyn Chen
 createdAt: '2024-10-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/
 ---
 

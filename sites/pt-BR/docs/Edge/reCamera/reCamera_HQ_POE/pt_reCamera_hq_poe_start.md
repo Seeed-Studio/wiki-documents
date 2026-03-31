@@ -16,7 +16,7 @@ last_update:
   date: 09/25/2025
   author: Parker Hu
 createdAt: '2023-02-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recamera_hq_poe_getting_started/
 ---
 # Guia de Introdução ao reCamera HQ POE

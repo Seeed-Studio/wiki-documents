@@ -13,6 +13,8 @@ last_update:
   date: 3/18/2026
   author: ycl
 url: https://wiki.seeedstudio.com/cn/meshtastic_source_code_practical_tutorial_t1000_e/
+createdAt: '2026-03-19'
+updatedAt: '2026-03-19'
 ---
 
 import Tabs from '@theme/Tabs';

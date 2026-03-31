@@ -9,7 +9,7 @@ last_update:
   date: 2023/1/13
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/K1111-Quick-Start-Guide/
 ---
 # 土壤湿度监测报警系统

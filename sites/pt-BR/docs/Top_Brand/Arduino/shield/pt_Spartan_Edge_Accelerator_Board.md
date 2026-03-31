@@ -9,7 +9,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/Spartan-Edge-Accelerator-Board/
 ---
 
