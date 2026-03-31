@@ -22,9 +22,12 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 
 # reBot Arm B601-DM 的 Pinocchio 与 MeshCat 入门指南
 
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
+
+
 ## 环境依赖
 
-在开始本教程之前，请确保您的系统满足以下环境要求：
+本教程测试环境如下：
 
 | 项目 | 要求 |
 |------|------|
@@ -36,8 +39,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 ## reBotArm_control 仓库克隆
 
 ```bash
+cd ~/
 git clone https://github.com/vectorBH6/reBotArm_control/tree/main
-#main默认为本地编译版本，切换到TODO分支以使用以下robotpkg&uv安装教程
+cd reBotArm_control
+git switch robotpkg-ver
+# main默认为本地编译版本，切换到robotpkg_dev分支以使用以下robotpkg&uv安装教程
 ```
 
 
@@ -138,18 +144,23 @@ make
 ```
 
 ## 运行程序
-TODO示意图
+![traj_sim_circle](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/traj_sim_circle.png)
+
 仿真机械臂末端画圆进行
 
 ```bash
 ./traj_sim_circle
 ```
 
+![traj_sim_cone](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/traj_sim_cone.png)
+
 仿真机械臂末端沿圆锥形轨迹运动
 
 ```bash
 ./traj_sim_cone
 ```
+
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/traj_sim_geodesic.png)
 
 在终端交互式输入目标位置
 

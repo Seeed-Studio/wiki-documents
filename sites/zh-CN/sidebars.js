@@ -4288,6 +4288,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reBot 机械臂',
+          items: [
+                {
+                  type: 'category',
+                  label: 'B601-DM',
+                  items: [           
+                     'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
+                  ]
+                }
+          ]
+        },
+        {
+          type: 'category',
           label: '灵巧手',
           items: [
             'Robotics/Robot_Kits/Hand/cn_AmazingHand',
