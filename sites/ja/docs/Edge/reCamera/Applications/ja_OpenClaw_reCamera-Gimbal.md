@@ -71,7 +71,6 @@ reCamera Gimbal 1 台
 左側の "Overview" ページをクリックして、"Status" が正常かどうかを確認することもできます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_3.png" /></div>
-![openclaw_3](C:\Users\seeed\Desktop\reCamera图片(上传FTP用)\龙虾\openclaw_3.png)
 
 ## 2. reCamera Gimbal の Skills をインポートする
 
@@ -103,7 +102,7 @@ openclaw.json は、OpenClaw をインストールしたフォルダ内にあり
 
 2. "192.168.31.198" を、実際に reCamera Gimbal が接続されている IP アドレスに置き換えてください
 
-3. "recamera.1" を、あなたの reCamera Gimbal の実際のパスワードに置き換えてください）
+3. "recamera.1" を、あなたの reCamera Gimbal の実際のパスワードに置き換えてください
 
 :::
 

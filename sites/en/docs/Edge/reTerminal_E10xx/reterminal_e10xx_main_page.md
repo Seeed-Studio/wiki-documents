@@ -9,10 +9,9 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
-
 # reTerminal E Series ePaper Display Overview
 
 ## Introduction
@@ -67,7 +66,7 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
 
 ## reTerminal E1003
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:700, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">
@@ -91,7 +90,7 @@ The touch-related library is planned for future open-source release, providing g
 
 ## reTerminal E1004
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:700, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">
