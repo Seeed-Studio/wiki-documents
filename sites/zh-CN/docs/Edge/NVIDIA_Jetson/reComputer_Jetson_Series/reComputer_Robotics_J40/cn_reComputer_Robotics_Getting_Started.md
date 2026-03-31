@@ -164,7 +164,7 @@ reComputer Robotics J401 是一款紧凑型高性能边缘 AI 载板，专为高
 ## 硬件总览
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-_J4011-3.jpeg"/>  
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
 </div>
 
 <div align="center">
