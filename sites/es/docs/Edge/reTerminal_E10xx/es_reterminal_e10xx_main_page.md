@@ -9,15 +9,14 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/
 ---
-
 # Descripción general de la pantalla de tinta electrónica reTerminal E Serie
 
 ## Introducción
 
-La pantalla de tinta electrónica reTerminal E Serie representa la familia de terminales de pantalla de tinta electrónica de Seeed Studio, diseñados para aplicaciones de visualización de información de bajo consumo. Estos dispositivos combinan la eficiencia energética de la tecnología de tinta electrónica con conectividad inalámbrica para crear pantallas versátiles para hogares inteligentes, entornos minoristas, espacios de oficina y más.
+La pantalla de tinta electrónica reTerminal E Serie representa la familia de terminales de pantalla de tinta electrónica de Seeed Studio, diseñada para aplicaciones de visualización de información de bajo consumo. Estos dispositivos combinan la eficiencia energética de la tecnología de tinta electrónica con la conectividad inalámbrica para crear pantallas versátiles para hogares inteligentes, entornos minoristas, espacios de oficina y más.
 
 A diferencia de las pantallas tradicionales que consumen energía de forma continua, la pantalla de tinta electrónica reTerminal E Serie solo utiliza energía al cambiar el contenido, lo que las hace ideales para aplicaciones que requieren una vida útil de batería prolongada y visualización de información siempre activa.
 
@@ -63,11 +62,11 @@ La reTerminal E1002 incorpora una vibrante pantalla de tinta electrónica a todo
 - Pantalla de tinta electrónica a todo color de 7,3 pulgadas con tecnología ACeP
 - Resolución de 800×480
 - Representación de color rica manteniendo un bajo consumo de energía
-- Perfecta para galerías, paneles de control coloridos y aplicaciones orientadas a lo visual
+- Perfecta para exposiciones de galerías, paneles de control coloridos y aplicaciones orientadas a lo visual
 
 ## reTerminal E1003
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:700, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2-reTerminal-E1003-Epaper-Display.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">
@@ -80,18 +79,18 @@ La reTerminal E1002 incorpora una vibrante pantalla de tinta electrónica a todo
 
 reTerminal E1003 es una pantalla de tinta electrónica monocroma de 10,3 pulgadas y código abierto que incorpora 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con hasta 6 meses de duración de batería. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsada por ESP32-S3, admite de forma nativa el diseño de interfaz de usuario sin código de SenseCraft HMI, mientras que Arduino y PlatformIO están disponibles para un desarrollo adicional.
 
-Se planea la publicación futura como código abierto de la biblioteca relacionada con el tacto, lo que proporcionará una mayor flexibilidad para personalizar los paneles. Se compartirán más actualizaciones pronto. También se planea para una versión futura la compatibilidad del controlador ESPHome para la E1003.
+Se planea la futura publicación como código abierto de la biblioteca relacionada con el tacto, lo que proporcionará una mayor flexibilidad para personalizar los paneles. Se compartirán más actualizaciones pronto. También se planea para una versión futura la compatibilidad del controlador ESPHome para la E1003.
 
 ### Características clave
 
 - Pantalla de tinta electrónica monocroma de 10,3 pulgadas con compatibilidad de interacción táctil en el firmware HMI v1.1.2
 - Escala de grises de 16 niveles con alta resolución de 1404×1872
-- Hasta 6 meses de duración de batería con funcionamiento de potencia ultrabaja
+- Hasta 6 meses de duración de batería con funcionamiento de consumo ultrabajo
 - Compatibilidad nativa con SenseCraft HMI más compatibilidad con Arduino y PlatformIO, con compatibilidad del controlador ESPHome planificada
 
 ## reTerminal E1004
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:700, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">
@@ -102,7 +101,7 @@ Se planea la publicación futura como código abierto de la biblioteca relaciona
   </a>
 </div><br />
 
-La reTerminal E1004 incorpora una pantalla de tinta electrónica a todo color de 13,3 pulgadas y hasta 6 meses de duración de batería. Impulsada por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles sin código y la carga de imágenes, y también es compatible con Home Assistant, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados.
+La reTerminal E1004 incorpora una pantalla de tinta electrónica a todo color de 13,3 pulgadas y hasta 6 meses de duración de batería. Impulsada por ESP32-S3, es compatible con SenseCraft HMI para la creación de paneles de control sin código y la carga de imágenes, y también es compatible con Home Assistant, Arduino y ESP-IDF para flujos de trabajo de desarrollo avanzados.
 
 ### Características clave
 
@@ -126,15 +125,15 @@ La reTerminal E1004 incorpora una pantalla de tinta electrónica a todo color de
 
 Todos los dispositivos de pantalla de tinta electrónica reTerminal E Serie están diseñados para funcionar con la plataforma SenseCraft HMI, que proporciona una interfaz web intuitiva para crear y desplegar contenido en tus dispositivos. Las características clave incluyen:
 
-- **AI Generator**: Crea paneles usando indicaciones de texto
-- **Gallery**: Muestra imágenes y presentaciones de diapositivas
-- **Canvas**: Diseña disposiciones personalizadas con herramientas de arrastrar y soltar
-- **Integración RSS**: Muestra noticias y actualizaciones de fuentes web
+- **Generador de IA**: Crea paneles de control usando indicaciones de texto
+- **Galería**: Muestra imágenes y presentaciones de diapositivas
+- **Lienzo**: Diseña disposiciones personalizadas con herramientas de arrastrar y soltar
+- **Integración RSS**: Muestra noticias y actualizaciones desde fuentes web
 - **Visualización de contenido web**: Muestra contenido de páginas web
 
 ## Aplicaciones
 
-La pantalla de tinta electrónica reTerminal E Serie es compatible con múltiples plataformas y frameworks de desarrollo:
+La pantalla de tinta electrónica reTerminal E Serie es compatible con múltiples plataformas y marcos de desarrollo:
 
 - [La pantalla de tinta electrónica reTerminal E Serie funciona con ESPHome para Home Assistant](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome)
 
@@ -165,7 +164,7 @@ Cualquier cambio o modificación que no esté expresamente aprobado por la parte
 
 (2) este dispositivo debe aceptar cualquier interferencia recibida, incluidas las interferencias que puedan causar un funcionamiento no deseado. Este transmisor no debe estar co-ubicado ni operar en conjunto con ninguna otra antena o transmisor.
 
-Nota: Este equipo ha sido probado y se ha determinado que cumple con los límites para un dispositivo digital de Clase B, de conformidad con la Parte 15 de las normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este equipo genera, utiliza y puede radiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales a las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación en particular. Si este equipo causa interferencias perjudiciales a la recepción de radio o televisión, lo que puede determinarse apagando y encendiendo el equipo, se recomienda al usuario intentar corregir la interferencia mediante una o más de las siguientes medidas:
+Nota: Este equipo ha sido probado y se ha determinado que cumple con los límites para un dispositivo digital de Clase B, de conformidad con la Parte 15 de las normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este equipo genera, utiliza y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales a las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación en particular. Si este equipo causa interferencias perjudiciales a la recepción de radio o televisión, lo que puede determinarse apagando y encendiendo el equipo, se recomienda al usuario intentar corregir la interferencia mediante una o más de las siguientes medidas:
 
 – Reorientar o reubicar la antena receptora.
 
