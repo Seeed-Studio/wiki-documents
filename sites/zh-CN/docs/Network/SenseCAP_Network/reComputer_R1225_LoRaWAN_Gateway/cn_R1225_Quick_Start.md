@@ -14,9 +14,8 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/cn/r1225_quick_start/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
 # 快速上手
 
 ## 供电连接
@@ -28,7 +27,7 @@ updatedAt: '2026-03-25'
 reComputer R1225 支持 12&#126;24V 的交流额定电压或 9&#126;36V 的直流电压供电。电源通过 2 针电源端子排连接器接入。要对 reComputer R1225 接地，可以将地线固定在电源端子左上角的螺丝上。
 
 :::note
-该供电方案采用桥式整流二极管进行反接保护，兼容交流和直流输入。这样可以确保**无论电源正负极如何接入**，电路都不会损坏。通过使用桥式整流器，输出电压的极性在输入直流极性变化时仍保持不变，从而提供有效的反接保护。
+该供电方案采用桥式整流二极管进行反接保护，可兼容交流和直流输入。这样可以确保**无论电源正负极如何接入**，电路都不会损坏。通过使用桥式整流器，输出电压极性在输入直流极性变化时仍保持不变，从而提供有效的反接保护。
 :::
 
 ### PoE 供电
@@ -54,14 +53,14 @@ reComputer R1225 支持 12&#126;24V 的交流额定电压或 9&#126;36V 的直�
 
 #### 网络连接示意图
 
-首次使用 R1225 时，如果附近有路由器和以太网网线，可以选择通过有线连接的方式将 R1225 接入网络。
+首次使用 R1225 时，如果附近有路由器和以太网网线，你可以选择通过有线连接的方式将 R1225 接入网络。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Network_Connection_Diagram1.png" alt="pir" width={800} height="auto" /></p>
 
 <!--加一个，如果不是首次连接，已经连接了 Wifi，即使不插网线，也可以通过访问路由器分配的 IP 进入管理界面-->
 
 :::tip
-如果已经配置了 Wi-Fi，只要你的电脑和 R1225 处于同一网络，即使没有插入以太网网线，也可以通过 R1225 的 IP 地址访问 LuCI 界面。
+如果已经配置了 Wi-Fi，只要你的电脑和 R1225 处于同一网络，即使不插以太网网线，也可以通过 R1225 的 IP 地址访问 LuCI 界面。
 :::
 
 - 步骤 2：获取设备的 IP 地址
@@ -83,7 +82,7 @@ reComputer R1225 支持 12&#126;24V 的交流额定电压或 9&#126;36V 的直�
 ### 通过设备 AP 热点访问
 
 :::caution
-R1225 首次开机时，其 Wi-Fi 热点默认保持开启 5 分钟。此时间过后，R1225 的热点会自动关闭。
+R1225 首次开机时，其 Wi-Fi 热点默认保持开启 5 分钟。超出该时间后，R1225 的热点会自动关闭。
 :::
 
 - 步骤 1：开启 R1225
@@ -105,7 +104,7 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_Wifi.png" alt="pir" width={450} height="auto" /></p>
 
-点击打开系统设置中的 “网络和 Internet” 页面，然后向下滚动到底部找到 IP 地址。
+点击打开系统设置中的“网络和 Internet”页面，然后滑动到页面底部找到 IP 地址。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_Wifi2.png" alt="pir" width={450} height="auto" /></p>
 
@@ -128,13 +127,13 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 以太网为即插即用，无需额外配置。
 <!--补充图片和内容-->
 
-### Wi-Fi 连接
+### WIFI 连接
 
 - 步骤 1：点击 `Network` - `Wi-Fi`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi1.png" alt="pir" width={200} height="auto" /></p>
 
-- 步骤 2：点击 `Scan` 按钮扫描 Wi-Fi
+- 步骤 2：点击 `Scan` 按钮扫描 WIFI
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -148,7 +147,7 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi5.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 5：点击 `Save & Apply` 以应用设置
+- 步骤 5：点击 `Save & Apply` 以应用你的设置
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi6.png" alt="pir" width={800} height="auto" /></p>
 
@@ -164,7 +163,7 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE1.png" alt="pir" width={200} height="auto" /></p>
 
-- 步骤 3：设置 APN 信息，并点击 `Save & Apply` 以应用设置
+- 步骤 3：设置 APN 信息，并点击 `Save & Apply` 以应用你的设置
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -178,7 +177,7 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LoRa2.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：点击 `Save & Apply` 以应用设置
+- 步骤 3：点击 `Save & Apply` 以应用你的设置
 
 ### 信道计划设置
 
@@ -190,7 +189,7 @@ reComputer R1225 首次上电时会自动启用热点模式。热点的默认 SS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/channel_plan2.png" alt="pir" width={800} height="auto" /></p>
 
-- 步骤 3：点击 `Save & Apply` 以应用设置
+- 步骤 3：点击 `Save & Apply` 以应用你的设置
 
 ### 选择内置 Chirpstack 平台
 
@@ -228,14 +227,24 @@ R1225 预装了 ChirpStack（开源 LoRaWAN 网络服务器）。
 
 - 步骤 6：输入 `Gateway Name` 和 `Gateway ID (EUI: 64)`
 
-  - 网关名称：你的网关名称
+  - Gateway name：你的网关名称
 
-  - 网关 ID(EUI64)：网关 EUI 可以在设备标签或本地控制台中找到
+  - Gateway ID(EUI64)：网关 EUI 可在设备标签或本地控制台中找到
 
-  - 统计间隔（秒）：网关发送统计信息的预期时间间隔（秒）
+  - Stats interval(secs)：网关发送统计信息的预期时间间隔（秒）
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack5.png" alt="pir" width={800} height="auto" /></p>
 
 然后点击 `Submit`
 
 ### 检查网关连接状态
+
+完成所有配置步骤后，网关应在 ChirpStack 平台上显示为 **`Online`**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack6.png" alt="pir" width={800} height="auto" /></p>
+
+#### 网关数据
+
+导航到 Gateways，选择你想要检查的网关。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack7.png" alt="pir" width={800} height="auto" /></p>
