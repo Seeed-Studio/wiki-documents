@@ -16,10 +16,9 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-06-05'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/lerobot_so100m_new/
 ---
-
 # Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot
 
 :::tip

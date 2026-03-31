@@ -13,10 +13,9 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-01-08'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
-
 # 基于 LeRobot 的 SO-ARM100 and SO-ARM101 机械臂入门教程
 
 :::tip
