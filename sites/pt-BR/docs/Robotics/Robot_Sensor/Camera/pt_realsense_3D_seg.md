@@ -14,7 +14,7 @@ last_update:
   date: 2025-10-10T00:00:00.000Z
   author: ZhangJiaQuan
 createdAt: '2026-03-28'
-updatedAt: '2026-03-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/realsense_3d_seg/
 translation:
   skip:
