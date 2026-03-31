@@ -4611,7 +4611,6 @@ const sidebars = {
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/Orbbec_Depth_Camera',
-            'Robotics/Robot_Sensor/Camera/realsense_3D_seg',
             'Robotics/Robot_Sensor/Camera/ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/Pycuvslam_On_reComputer',
             'Robotics/Robot_Sensor/Camera/Orbbec_Gemini_335Lg',
