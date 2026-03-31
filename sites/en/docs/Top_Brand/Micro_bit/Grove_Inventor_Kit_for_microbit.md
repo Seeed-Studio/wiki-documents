@@ -13,10 +13,9 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-01-10'
-updatedAt: '2026-01-07'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/Grove_Inventor_Kit_for_microbit/
 ---
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/zoro_im_kitbox.jpg" alt="pir" width={600} height="auto" /></p>
 
 The BBC micro:bit is a pocket-sized computer that can easily realize your creativity without much electrical and coding knowledge. There are numerous possibility of creation you can dig out by micro:bit, from robots to musical instruments. However if you want to create more things, just 1 micro:bit is barely not enough, That’s why we introduce the Grove Inventor Kit for micro:bit to you.
@@ -313,7 +312,7 @@ please make sure the LED Array is faced up when you plug the micro:bit, or you m
 
   [**micro:bit Apps**](http://microbit.org/code/)
 
-  [**Grove Shield for microbit_eagle file.zip**](https://files.seeedstudio.com/wiki/Bazzar_Attachment/103030195/202001587_Grove%20Shield%20for%20BBC%20microbit%20V1.2_eagle%20file.zip)
+  [**Grove Shield for micro:bit eagle Project**](https://files.seeedstudio.com/products/103100063/Res/Grove_Shield_for_microbit_v2.2_SCH-PCB_220406.zip)
 
 ## Tech Support & Product Discussion
 
