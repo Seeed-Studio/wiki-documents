@@ -76,7 +76,7 @@ A **câmera OV2640** foi descontinuada, e as versões subsequentes do XIAO ESP32
   <tr>
     <th>Wireless</th>
     <td colspan="3">Subsistema Wi-Fi completo de 2,4GHz<br/>Bluetooth Low Energy 5.0 / Bluetooth Mesh</td>
-  </tr]
+  </tr>
   <tr>
     <th>Sensores integrados</th>
     <td>/</td>

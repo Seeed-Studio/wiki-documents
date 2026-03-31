@@ -81,7 +81,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
   <tr>
     <th>インターフェース</th>
     <td colspan="2">22 ピン（すべて PWM）：<br/>19x アナログ<br/>19x デジタル<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
-  </tr]
+  </tr>
   <tr>
     <th>ボタン</th>
     <td colspan="2">1x RESET ボタン</td>

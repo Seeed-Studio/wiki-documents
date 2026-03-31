@@ -73,7 +73,7 @@ micro:bit 的输出电压大约为 3.0V，使用 micro:bit 或 AA 电池为电�
   <tr>
     <td><h4>Grove - Light Sensor v1.2</h4></td>
     <td><h4>1</h4></td>
-  </tr]
+  </tr>
   <tr>
     <td><h4>Grove - WS2812 Waterproof LED Strip - 30 LEDs 1 meter</h4></td>
     <td><h4>1</h4></td>
