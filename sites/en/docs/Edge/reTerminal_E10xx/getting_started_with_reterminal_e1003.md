@@ -9,9 +9,8 @@ last_update:
   author: Jackson.Li
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
 # Getting Started with reTerminal E1003
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:1000, height:'auto'}}/></div>

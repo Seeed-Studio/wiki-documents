@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO MG24(Sense) 入門ガイド
+title: Seeed Studio XIAO MG24 入門ガイド
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_mg24_getting_started
@@ -11,11 +11,10 @@ last_update:
   date: 10/17/2024
   author: Jason
 sidebar_position: 0
-createdAt: '2025-05-27'
-updatedAt: '2026-02-27'
+createdAt: '2024-11-01'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
 ---
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg" style={{width:600, height:'auto'}}/></div>
 <br />
 
@@ -48,7 +47,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
 
 ## はじめに
 
-**Seeed Studio XIAO MG24** は、Silicon Labs の MG24 をベースにした小型開発ボードです。XIAO MG24 は **ARM Cortex-M33 コア**、**32-bit RISC** アーキテクチャを採用し、最大 78MHz のクロック周波数で動作し、DSP 命令および FPU 浮動小数点演算をサポートし、強力な演算能力を備えています。さらに、内蔵の **AL/ML ハードウェアアクセラレータ MVP** により、AI/機械学習アルゴリズムを効率的に処理できます。加えて、優れた RF 性能を持ち、送信 **電力は最大 +19.5 dBm**、受信感度は **最小 -105.4 dBm** を実現しています。**Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** など、複数の IoT および無線伝送プロトコルをサポートします。
+**Seeed Studio XIAO MG24** は、Silicon Labs の MG24 をベースにした小型開発ボードです。XIAO MG24 は **ARM Cortex-M33 コア**、**32 ビット RISC** アーキテクチャを採用し、最大 78MHz のクロック周波数で動作し、DSP 命令および FPU 浮動小数点演算をサポートし、強力な演算能力を備えています。また、内蔵の **AI/ML ハードウェアアクセラレータ MVP** により、AI/機械学習アルゴリズムを効率的に処理できます。さらに、優れた RF 性能を持ち、送信 **電力は最大 +19.5 dBm**、受信感度は **-105.4 dBm まで低く** なっています。**Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** など、複数の IoT および無線伝送プロトコルをサポートします。
 
 ### 仕様
 
@@ -75,13 +74,13 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
     <td colspan="2">1x ユーザー LED<br/>1x 電源 LED</td>
   </tr>
   <tr>
-    <th>センサー</th>
+    <th>センサ</th>
     <td>-</td>
     <td>1x オンボード アナログマイク<br/>1x オンボード 6 軸 IMU</td>
   </tr>
   <tr>
     <th>インターフェース</th>
-    <td colspan="2">22 ピン（全て PWM）：<br/>19x アナログ<br/>19x デジタル<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+    <td colspan="2">22 ピン（すべて PWM）：<br/>19x アナログ<br/>19x デジタル<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
   </tr>
   <tr>
     <th>ボタン</th>
@@ -89,7 +88,7 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
   </tr>
   <tr>
     <th>セキュリティ</th>
-    <td colspan="2">ハードウェア暗号アクセラレーション、真性乱数生成器、ARM® TrustZone®、セキュアブート、セキュアデバッグアンロック など</td>
+    <td colspan="2">ハードウェア暗号アクセラレーション、真性乱数生成器、ARM® TrustZone®、セキュアブート、セキュアデバッグ解除 など</td>
   </tr>
   <tr>
     <th>低消費電力（代表値）</th>
@@ -123,15 +122,15 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
 
 ### 特長
 
-- **高性能 CPU**：ARM Cortex-M33 コア、最大クロック 78MHz、DSP 命令および FPU 浮動小数点演算をサポートする 32-bit RISC アーキテクチャ。
-- **超低消費電力**：RX 電流 4.6mA / TX 電流 5mA（0dBm）、複数の低消費電力スリープモード。
-- **強力な AI 性能**：AI/ML ハードウェアアクセラレータ MVP を内蔵し、AI/機械学習アルゴリズムを効率的に処理可能。
-- **多様な無線伝送**：2.4GHz マルチプロトコル無線トランシーバを統合し、Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh など複数の IoT プロトコルをサポート。
-- **優れた RF 性能**：送信電力は最大 +19.5 dBm、受信感度は最小 -105.4 dBm（250kbps DSSS）と、優れた RF 性能を実現。
-- **強力なセキュリティ**：Secure Vault の強力なセキュリティ機能を備え、セキュアブート、暗号化、乱数生成、タンパープルーフ、セキュアデバッグなどをサポート。
+- **高性能 CPU**：ARM Cortex-M33 コア、最大 78MHz のクロック周波数で動作し、DSP 命令および FPU 浮動小数点演算をサポートする 32 ビット RISC アーキテクチャ。
+- **超低消費電力**：RX 電流 4.6mA / TX 電流 5mA（0dBm）、複数の低消費電力スリープモード
+- **強力な AI 機能**：AI/ML ハードウェアアクセラレータ MVP を内蔵し、AI/機械学習アルゴリズムを効率的に処理可能。
+- **多様な無線伝送**：2.4GHz マルチプロトコル無線トランシーバを統合し、Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh などの複数の IoT プロトコルをサポート。
+- **優れた RF 性能**：送信電力は最大 +19.5 dBm、受信感度は -105.4 dBm（250kbps DSSS）まで低い優れた RF 性能。
+- **強力なセキュリティ**：セキュアブート、暗号化、乱数生成、タンパープルーフ、セキュアデバッグなどを含む Secure Vault の強力なセキュリティ機能。
 - **超小型サイズ**：21 x 17.8mm。
-- **豊富なオンチップリソース**：最大 1536KB のフラッシュと 256KB の RAM を搭載し、十分なストレージ容量を提供。
-- **豊富なインターフェース**：12 ビット 1Msps ADC、温度センサー、アナログコンパレータ、DCDC などの豊富なペリフェラルを統合し、最大 22 ピン、2 USART、2 つの低消費電力 UART、1 IIC などのインターフェースを備えています。
+- **豊富なオンチップリソース**：最大 1536KB フラッシュと 256KB RAM を搭載し、十分なストレージ容量を提供。
+- **豊富なインターフェース**：12 ビット 1Msps ADC、温度センサ、アナログコンパレータ、DCDC などの豊富なペリフェラルを統合し、最大 22 ピン、2 USART、2 つの低消費電力 UART、1 つの IIC などのインターフェースを備えています。
 
 ## ハードウェア概要
 
@@ -157,10 +156,10 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
 </table>
 
 :::tip
-  2 つの開発ボードの違いは、MG24 Sense にはマイクロフォンセンサーと 6 軸加速度センサーが搭載されていますが、MG24 には搭載されていない点です。
+  2 つの開発ボードの違いは、MG24 Sense にはマイクロホンセンサと 6 軸加速度センサが搭載されているのに対し、MG24 には搭載されていない点です。
 :::
 
-- 5V - これは USB ポートからの 5V 出力です。また、このピンを電圧入力として使用することもできますが、外部電源とこのピンの間には、アノードをバッテリー側、カソードを 5V ピン側に接続したダイオード（ショットキー、信号用、電力用のいずれか）が必要です。
+- 5V - これは USB ポートからの 5V 出力です。このピンを電圧入力として使用することもできますが、外部電源とこのピンの間には、アノードをバッテリー側、カソードを 5V ピン側に接続した何らかのダイオード（ショットキー、信号、電力用）を必ず入れてください。
 - 3V3 - これはオンボードレギュレータからの安定化出力です。
 - GND - 電源/データ/信号のグラウンド
 
@@ -170,31 +169,31 @@ url: https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/
 | 5V                      | VBUS             |           |                    | 電源入力/出力                         |
 | GND                     |                  |           |                    |                                      |
 | 3V3                     | 3V3_OUT          |           |                    | 電源出力                              |
-| D0                      | Analog          | PC00      |                    | GPIO, ADC                            |
-| D1                      | Analog          | PC01      |                    | GPIO, ADC                            |
-| D2                      | Analog          | PC02      |                    | GPIO, ADC                            |
-| D3                      | Analog          | PC03      |                    | GPIO, SPI, ADC                       |
-| D4                      | Analog,SDA       | PC04      |                    | GPIO, I2C Data, ADC                  |
-| D5                      | Analog,SCL       | PC05      |                    | GPIO, I2C Clock, ADC                 |
-| D6                      | Analog,TX0       | PC06      |                    | GPIO, UART Transmit, ADC             |
-| D7                      | Analog,RX0       | PC07      |                    | GPIO, UART Receive, ADC              |
-| D8                      | Analog,SCK0      | PA03      |                    | GPIO, SPI Clock, ADC                 |
-| D9                      | Analog,MISO0     | PA04      |                    | GPIO, SPI Data, ADC                  |
-| D10                     | Analog,MOSI0     | PA05      |                    | GPIO, SPI Data, ADC                  |
-| D11                     | Analog          | PA09      | SAMD11_TX          | GPIO, UART Receive, ADC              |
-| D12                     | Analog          | PA08      | SAMD11_RX          | GPIO, UART Transmit, ADC             |
-| D13                     | Analog          | PB02      |                    | GPIO, I2C Clock, ADC                 |
-| D14                     | Analog          | PB03      |                    | GPIO, I2C Data, ADC                  |
-| D15                     | Analog,MOSI1     | PB00      |                    | GPIO, SPI Data, ADC                  |
-| D16                     | Analog,MISO1     | PB01      |                    | GPIO, SPI Data, ADC                  |
-| D17                     | Analog,SCK1      | PA00      |                    | GPIO, SPI Clock, ADC                 |
-| D18                     | Analog,CS        | PD02      | Csn                | GPIO, Csn, ADC               |
-| ADC_BAT                 |                  | PD04      |                    | BAT 電圧値の読み取り                  |
-| RF Switch Port Select   |                  | PB04      |                    | オンボードアンテナと UFL アンテナの切り替え |
+| D0                      | アナログ         | PC00      |                    | GPIO、ADC                            |
+| D1                      | アナログ         | PC01      |                    | GPIO、ADC                            |
+| D2                      | アナログ         | PC02      |                    | GPIO、ADC                            |
+| D3                      | アナログ         | PC03      |                    | GPIO、SPI、ADC                       |
+| D4                      | アナログ,SDA     | PC04      |                    | GPIO、I2C データ、ADC                |
+| D5                      | アナログ,SCL     | PC05      |                    | GPIO、I2C クロック、ADC              |
+| D6                      | アナログ,TX0     | PC06      |                    | GPIO、UART 送信、ADC                 |
+| D7                      | アナログ,RX0     | PC07      |                    | GPIO、UART 受信、ADC                 |
+| D8                      | アナログ,SCK0    | PA03      |                    | GPIO、SPI クロック、ADC              |
+| D9                      | アナログ,MISO0   | PA04      |                    | GPIO、SPI データ、ADC                |
+| D10                     | アナログ,MOSI0   | PA05      |                    | GPIO、SPI データ、ADC                |
+| D11                     | アナログ         | PA09      | SAMD11_TX          | GPIO、UART 受信、ADC                 |
+| D12                     | アナログ         | PA08      | SAMD11_RX          | GPIO、UART 送信、ADC                 |
+| D13                     | アナログ         | PB02      |                    | GPIO、I2C クロック、ADC              |
+| D14                     | アナログ         | PB03      |                    | GPIO、I2C データ、ADC                |
+| D15                     | アナログ,MOSI1   | PB00      |                    | GPIO、SPI データ、ADC                |
+| D16                     | アナログ,MISO1   | PB01      |                    | GPIO、SPI データ、ADC                |
+| D17                     | アナログ,SCK1    | PA00      |                    | GPIO、SPI クロック、ADC              |
+| D18                     | アナログ,CS      | PD02      | Csn                | GPIO、Csn、ADC               |
+| ADC_BAT                 |                  | PD04      |                    | BAT 電圧値を読み取る                  |
+| RF Switch Port Select   |                  | PB04      |                    | オンボードアンテナと UFL アンテナを切り替え |
 | RF Switch Power         |                  | PB05      |                    | RF 電源                              |
 | Reset                   |                  | RESET     |                    | リセット                              |
-| CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Red                          |
-| USER_LED                |                  | PA07      |                    | ユーザーライト_イエロー               |
+| CHARGE_LED              |                  | VBUS      |                    | CHG-LED_赤                           |
+| USER_LED                |                  | PA07      |                    | ユーザー用ライト_黄                   |
 
 
 ## はじめに
@@ -203,7 +202,7 @@ XIAO MG24 をすばやく使い始められるように、以下のハードウ�
 
 ### 工場出荷時の手順
 
-新しい XIAO MG24 および XIAO MG24 Sense には、それぞれ簡単な工場出荷時プログラムがあらかじめ書き込まれています。
+新しい XIAO MG24 および XIAO MG24 Sense には、それぞれ簡単な工場出荷時プログラムが書き込まれています。
 
 1. **XIAO MG24**
 
@@ -219,25 +218,25 @@ XIAO MG24 をすばやく使い始められるように、以下のハードウ�
 
 ### ハードウェアの準備
 
-以下を準備する必要があります：
+以下を準備してください：
 
 - 1 x [Seeed Studio XIAO MG24](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
 - 1 x コンピュータ
 - 1 x USB Type-C ケーブル
 
 :::tip
-一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルを持っていない場合や、お使いの USB ケーブルがデータ転送に対応しているか分からない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) を確認してください。
+一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送に対応しているか分からない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) を確認してください。
 :::
 
 ### ソフトウェアの準備
 
-XIAO MG24 に推奨されるプログラミングツールは Arduino IDE です。そのため、ソフトウェアの準備として Arduino のインストールを完了する必要があります。
+XIAO MG24 に推奨される開発ツールは Arduino IDE です。そのため、ソフトウェアの準備として Arduino のインストールを完了する必要があります。
 
 :::tip
 初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
+- **Step 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
@@ -247,11 +246,11 @@ XIAO MG24 に推奨されるプログラミングツールは Arduino IDE です
 
 <br></br>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
-- **[ステップ 3](#XIAO-MG24-ボードを追加する).**  Arduino IDE に XIAO MG24 のオンボードパッケージを追加し、`OK` をクリックします。
-- **ステップ 4.** Arduino IDE を一度閉じてから、再度開きます。
+- **Step 2.** Arduino アプリケーションを起動します。
+- **[Step 3](#add-board).**  Arduino IDE に XIAO MG24 のボードパッケージを追加し、`OK` をクリックします。
+- **Step 4.** Arduino IDE を一度閉じてから、再度開きます。
 
-#### XIAO MG24 ボードを追加する {#XIAO-MG24-ボードを追加する}
+#### XIAO MG24 ボードを追加する {#add-board}
 
 XIAO MG24 ボードをインストールするには、次の手順に従います：
 
@@ -259,11 +258,11 @@ XIAO MG24 ボードをインストールするには、次の手順に従いま�
 https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json 
 ```
 
-1. 上記のボードマネージャ URL を Arduino IDE の環境設定に追加します。
+1. 上記のボードマネージャ URL を Arduino IDE の設定に追加します。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/13(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
-2. XIAO MG24 ボードパッケージをダウンロードします。
+2. XIAO MG24 のボードパッケージをダウンロードします。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/14(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
@@ -279,13 +278,13 @@ https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json
 
 #### 最初の Blink プログラムを実行する
 
-- **ステップ 1.** Arduino アプリケーションを起動します。
+- **Step 1.** Arduino アプリケーションを起動します。
 
-- **ステップ 2.** **File > Examples > 01.Basics > Blink** に移動し、プログラムを開きます。
+- **Step 2.** **File > Examples > 01.Basics > Blink** に移動し、プログラムを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/12(1).png" style={{width:1000, height:'auto'}}/></div>
 
-- **ステップ 3.** ボードモデルを **XIAO MG24** に選択し、正しいポート番号を選択してプログラムを書き込みます。
+- **Step 3.** ボードモデルを **XIAO MG24** に設定し、正しいポート番号を選択してプログラムを書き込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/16.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -294,8 +293,8 @@ https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>MG24 BLink コード</th>
-   <th>LED BLink 表示</th>
+   <th>MG24 BLink Code</th>
+   <th>LED BLink DisPlay</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
@@ -308,7 +307,7 @@ https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json
 
 XIAO MG24 には電源管理チップが内蔵されており、バッテリーを使用して XIAO MG24 に単独で給電したり、XIAO MG24 の USB ポートを介してバッテリーを充電したりすることができます。
 
-XIAO 用にバッテリーを接続したい場合は、規格に適合した充電式 3.7V リチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極は USB ポートに最も近い側であり、電源の正極は USB ポートから離れた側です。
+XIAO にバッテリーを接続したい場合は、規格に適合した充電式 3.7V リチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、必ず正極と負極を区別してください。電源の負極は USB ポートに最も近い側であり、電源の正極は USB ポートから離れた側になります。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/4444.png" alt="pir" width="800" height="auto"/></div>
 
@@ -318,16 +317,16 @@ XIAO 用にバッテリーを接続したい場合は、規格に適合した充
 
 **バッテリー使用上の注意：**
 
-1. 規格を満たした適切なバッテリーを使用してください。
+1. 規格に適合した品質の良いバッテリーを使用してください。
 2. バッテリー使用中でも、XIAO はデータケーブルを介してコンピュータ機器に接続できます。XIAO には保護回路チップが内蔵されているため、安全です。
-3. XIAO MG24 はバッテリー駆動時には（特定のプログラムを書き込んでいない限り）いかなる LED も点灯しません。LED の状態で XIAO MG24 が動作しているかどうかを判断しないでください。必ず自分のプログラムに基づいて適切に判断してください。
-4. 申し訳ありませんが、現在のところソフトウェアを通じて残りのバッテリー残量を確認する方法はありません（利用可能なチップのピンが残っていないため）ので、定期的にバッテリーを充電するか、マルチメータを使用してバッテリー残量を確認する必要があります。
+3. バッテリー駆動時、（特定のプログラムを書き込んでいない限り）XIAO MG24 の LED は点灯しません。LED の状態だけで XIAO MG24 が動作しているかどうかを判断せず、必ずご自身のプログラムの内容から適切に判断してください。
+4. 申し訳ありませんが、現在のところソフトウェアを通じて残りのバッテリー残量を確認する方法はありません（利用可能なチップのピンが残っていないため）ので、定期的にバッテリーを充電するか、テスターを使用してバッテリー残量を確認する必要があります。
 
-同時に、バッテリー充電用に赤色のインジケータライトを設計しており、インジケータの表示によって充電中のバッテリーの現在の状態をユーザーに知らせます。
+同時に、充電中のバッテリーの現在の状態をユーザーに知らせるために、バッテリー充電用の赤色インジケータライトを設計しました。
 
-1. XIAO MG24 にバッテリーが接続されていない場合、Type-C ケーブルを接続すると赤色のライトが点灯し、30 秒後に消灯します。
-2. バッテリーを接続し、充電のために Type-C ケーブルを接続すると、赤色のライトが点滅します。
-3. Type-C を接続してバッテリーが満充電になると、赤色のライトは消灯します。
+1. XIAO MG24 にバッテリーが接続されていない場合、Type-C ケーブルを接続すると赤色のランプが点灯し、30 秒後に消灯します。
+2. バッテリーを接続し、充電のために Type-C ケーブルを接続すると、赤色のランプが点滅します。
+3. Type-C を接続してバッテリーが満充電になると、赤色のランプは消灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/battery_mg24.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -544,25 +543,25 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/100.png" style={{width:1000, height:'auto'}}/></div>
 
-### Deep Sleep 中の XIAO MG24 のブリック化防止
+### ディープスリープ中に XIAO MG24 がブリックすることを防ぐ
 
-**XIAO MG24** は Seeed Studio の高性能なマイコンボードですが、Deep Sleep モードに入った後にデバイスが反応しなくなる（「ブリック」する）という報告があります。本チュートリアルでは、この問題の原因を説明し、詳細な復旧方法と、XIAO MG24 がブリックするのを防ぐための予防策を紹介します。
+**XIAO MG24** は Seeed Studio 製の高性能なマイコンボードですが、ディープスリープモードに入った後にデバイスが反応しなくなる（「ブリック」する）という報告があります。本チュートリアルでは、この問題の原因を説明し、詳細な復旧方法と、XIAO MG24 がブリックするのを防ぐための予防策を紹介します。
 
-XIAO MG24 は省電力のために **Deep Sleep モード**（EM4）に入りますが、場合によっては正しくウェイクアップできず、新しいスケッチを書き込めなくなることがあります。他の XIAO ボードと異なり、MG24 には専用の **BOOT ボタン**や、ブートモードに入るための公式な方法がないため、復旧が難しくなっています。
+XIAO MG24 は省電力のために **ディープスリープモード**（EM4）に入りますが、場合によっては正しくウェイクアップできず、新しいスケッチをアップロードできなくなることがあります。他の XIAO ボードとは異なり、MG24 には専用の **BOOT ボタン**や、ブートモードに入るための公式な方法がないため、復旧が困難になります。
 
 #### 予防策
 
-Deep Sleep モードを使用する際に XIAO MG24 がブリックしないようにするには、次の手順に従ってください：
+ディープスリープモードを使用する際に XIAO MG24 がブリックするのを防ぐには、次の手順に従ってください。
 
 1. エスケープピン（PC1）を使用する
 
-XIAO MG24 には、ブリックを防ぐための **エスケープ機構** が内蔵されています。リセット中に **PC1** を **LOW** にプルダウンすると、デバイスは無限ループに入り、新しいスケッチを書き込めるようになります。  
+XIAO MG24 には、ブリックを防ぐための **エスケープ機構** が内蔵されています。リセット中に **PC1** を **LOW** にプルダウンすると、デバイスは無限ループに入り、その間に新しいスケッチをアップロードできます。  
 
 - リセットする前に **PC1** を **GND** に接続します。  
-- リセット後、デバイスがループ中にある間にスケッチを書き込みます。  
+- リセット後、デバイスがループしている間にスケッチをアップロードします。  
 
 2. スケッチを修正する
-ユーザースイッチを検出し、押された場合に無限ループに入るように、次のコードをスケッチに追加します。これにより、デバイスがループしている間に新しいスケッチを書き込むことができます：
+ユーザースイッチを検出し、押された場合に無限ループに入るよう、次のコードをスケッチに追加します。これにより、デバイスがループしている間に新しいスケッチをアップロードできるようになります。
 
 ```cpp
 #define USER_SW  PC3   // Example pin for user switch
@@ -585,18 +584,18 @@ void setup() {
 
 3. 不要なフラッシュスリープを避ける
 
-特別な理由がない限り、スケッチでフラッシュメモリをスリープモード（`Deep Power Down`）にしないようにしてください。これにより、新しいスケッチの書き込みに関する問題を防ぐことができます。
+スケッチで、絶対に必要な場合を除き、フラッシュメモリをスリープモード（`Deep Power Down`）にしないようにしてください。これにより、新しいスケッチのアップロードに関する問題を防ぐことができます。
 
 #### 謝辞
 
-この問題に対する貴重な提案や解決策を提供してくださった **Seeed Studio コミュニティ** の皆様に心より感謝いたします。本チュートリアルで紹介した復旧方法と予防策は、**[msfujino](https://forum.seeedstudio.com/u/msfujino)** や **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)** など、コミュニティメンバーの洞察に基づいて作成されています。  
+この問題に対する貴重な貢献と解決策を提供してくださった **Seeed Studio コミュニティ** の皆様に特別な感謝を申し上げます。本チュートリアルで紹介した復旧方法と予防策は、**[msfujino](https://forum.seeedstudio.com/u/msfujino)** や **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)** といったコミュニティメンバーの洞察に基づいて作成されています。  
 
-詳細や議論については、元のフォーラムスレッドをご覧ください：  
+詳細や議論については、元のフォーラムスレッドをご覧ください。  
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
 
 ## ブリック状態からの復旧
 
-XIAO MG24 は、現在シリアルポートチップを搭載している唯一の XIAO モデルです。他の XIAO モデルとは異なり、BOOT ボタンや BOOT 復旧方法がありません。この設計上の見落としにより、デバイスがスリープモードに入ったりソフトウェア異常が発生したりした際に、シリアルポート経由でプログラムを書き込めなくなる問題が起こり得ます。これに対処するため、シリアルポートをウェイクアップして機能を復元する方法を用意しました。
+XIAO MG24 は、現在シリアルポートチップを搭載している唯一の XIAO モデルです。他の XIAO モデルとは異なり、BOOT ボタンや BOOT 復旧方法がありません。この設計上の見落としにより、デバイスがスリープモードに入ったりソフトウェア異常が発生したりした際に、シリアルポート経由でプログラムをアップロードできなくなる問題が起こり得ます。これに対処するため、シリアルポートをウェイクアップして機能を回復させる方法を用意しました。
 
 ### Windows 向けソリューション
 
@@ -649,7 +648,7 @@ XIAO MG24 は、現在シリアルポートチップを搭載している唯一�
      cd /path/to/extracted/folder
      ```  
 
-   - 次のコマンドを使用して、`xiao_mg24_erase.sh` スクリプトを実行します：  
+   - 次のコマンドを使用して `xiao_mg24_erase.sh` スクリプトを実行します。  
 
      ```bash
      ./xiao_mg24_erase.sh
@@ -672,28 +671,28 @@ XIAO MG24 は、現在シリアルポートチップを搭載している唯一�
 ### Seeed Studio XIAO MG24 向け
 
 **ハードウェア設計**
-- **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
-- **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
-- **📄[Schematic]** [XIAO MG24 Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
-- **🗃️[PCB Design Files]** [XIAO MG24 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **📄[Datasheet]** [Silicon Labs EFR32MG24 データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Reference Manual]** [Silicon Labs EFR32MG24 リファレンスマニュアル](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Schematic]** [XIAO MG24 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB Design Files]** [XIAO MG24 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ### Seeed Studio XIAO MG24 Sense 向け
 
 **ハードウェア設計**
-- **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
-- **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
-- **📄[Schematic]** [XIAO MG24 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
-- **🗃️[PCB Design Files]** [XIAO MG24 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **📄[Datasheet]** [Silicon Labs EFR32MG24 データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Reference Manual]** [Silicon Labs EFR32MG24 リファレンスマニュアル](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Schematic]** [XIAO MG24 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB Design Files]** [XIAO MG24 Sense KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
