@@ -10,7 +10,7 @@ last_update:
   date: 11/24/2023
   author: Yvonne
 createdAt: '2023-11-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Get_Started_with_EcoEye_Embedded_Vision_Camera/
 ---
 

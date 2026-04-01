@@ -9,7 +9,7 @@ last_update:
   date: 1/12/2022
   author: hushuxu
 createdAt: '2023-01-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Seeeduino/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Getting_Started_with_Seeeduino/img/Hello_world.jpg" alt="pir" width={600} height="auto" /></p>

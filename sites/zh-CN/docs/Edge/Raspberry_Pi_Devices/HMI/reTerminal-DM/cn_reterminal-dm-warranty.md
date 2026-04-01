@@ -10,7 +10,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/reterminal-dm-warranty/
 ---
 # reTerminal DM 保修条款

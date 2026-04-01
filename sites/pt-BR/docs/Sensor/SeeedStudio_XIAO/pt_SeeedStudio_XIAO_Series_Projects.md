@@ -9,7 +9,7 @@ last_update:
   date: 02/04/2026
   author: Carla Guo
 createdAt: '2023-07-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_topic_page/
 ---
 

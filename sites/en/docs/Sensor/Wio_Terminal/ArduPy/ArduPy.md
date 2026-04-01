@@ -9,7 +9,7 @@ last_update:
   date: 8/7/2023
   author: cessarr
 createdAt: '2023-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2023-08-07'
 url: https://wiki.seeedstudio.com/ArduPy/
 ---
 

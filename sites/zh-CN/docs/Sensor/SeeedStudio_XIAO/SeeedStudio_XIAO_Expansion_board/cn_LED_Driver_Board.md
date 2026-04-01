@@ -12,7 +12,7 @@ last_update:
   date: 05/21/2025
   author: Carla
 createdAt: '2025-05-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/led_driver_board/
 ---
 

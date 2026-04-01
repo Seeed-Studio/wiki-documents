@@ -13,7 +13,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-12-10'
-updatedAt: '2026-03-04'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/stackforce_mini_wheeled_legged_robot/
 ---
 

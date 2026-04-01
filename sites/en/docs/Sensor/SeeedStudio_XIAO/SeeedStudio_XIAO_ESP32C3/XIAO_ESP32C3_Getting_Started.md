@@ -9,10 +9,9 @@ last_update:
   date: 08/14/2024
   author: Spencer
 createdAt: '2022-11-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
 ---
-
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO ESP32C3
@@ -476,7 +475,7 @@ You will see the following output when flashing is successful
 - **🗃️[PCB Design Files]** 
   - [XIAO ESP32-C3 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO ESP32-C3 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
 

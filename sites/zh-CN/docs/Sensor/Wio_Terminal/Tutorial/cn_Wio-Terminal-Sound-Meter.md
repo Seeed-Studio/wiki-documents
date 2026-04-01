@@ -9,7 +9,7 @@ last_update:
   date: 3/07/2024
   author: jessie
 createdAt: '2023-01-31'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Sound-Meter/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 1/6/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/Grove-6-Axis_Accelerometer&Gyroscope_BMI088/
 ---
 

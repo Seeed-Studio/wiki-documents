@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/pin_definition_error/
 ---
 Cuando encuentres este error, por favor actualiza tu paquete de placa de desarrollo **Seeed SAMD** a la versión más reciente.

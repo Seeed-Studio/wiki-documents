@@ -11,7 +11,7 @@ last_update:
   date: 12/22/2025
   author: Zeller
 createdAt: '2025-12-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/es/xiao_esp32c5_with_micropyhton/
 ---
 

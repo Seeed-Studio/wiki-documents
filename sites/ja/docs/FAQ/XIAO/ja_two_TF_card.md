@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/ja/two_TF_card/
 ---
 A: これは競合を引き起こしません。異なるSDカードスロットはチップセレクトによって制御されます。Sense上のmicroSDカードスロットを使用したい場合、チップセレクトピンは**21**にする必要があります。Round Display上のmicroSDカードスロットを使用したい場合、チップセレクトピンは**D2**にする必要があります。

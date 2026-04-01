@@ -10,7 +10,7 @@ last_update:
   date: 1/19/2023
   author: jianjing Huang
 createdAt: '2023-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Grove-2_Channel_Inductive_Sensor-LDC1612/
 ---
 

@@ -23,7 +23,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-25'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-26'
 url: https://wiki.seeedstudio.com/ja/face_regonition_with_mcp/
 ---
 # MCPを使用した顔認識の拡張

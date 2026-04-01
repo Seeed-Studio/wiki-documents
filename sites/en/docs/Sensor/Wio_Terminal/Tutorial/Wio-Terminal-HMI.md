@@ -9,7 +9,7 @@ last_update:
   date: 1/17/2023
   author: jianjing Huang
 createdAt: '2023-08-02'
-updatedAt: '2026-03-03'
+updatedAt: '2023-08-04'
 url: https://wiki.seeedstudio.com/Wio-Terminal-HMI/
 ---
 

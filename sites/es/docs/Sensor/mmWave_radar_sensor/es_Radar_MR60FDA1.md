@@ -10,7 +10,7 @@ last_update:
   date: 03/03/2023
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/Radar_MR60FDA1/
 ---
 # Sensor mmWave de 60GHz - Módulo de Detección de Caídas Pro (MR60FDA1)

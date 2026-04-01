@@ -9,7 +9,7 @@ last_update:
   date: 10/14/2023
   author: Yvonne
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-04'
 url: https://wiki.seeedstudio.com/cn/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor/
 ---
 

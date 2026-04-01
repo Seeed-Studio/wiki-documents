@@ -10,7 +10,7 @@ last_update:
   date: 09/19/2023
   author: Salman
 createdAt: '2023-09-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove_Wio_E5_Helium_tinyML_Demo/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 5/23/2023
   author: Thomas
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen/
 ---
 # **Pantalla Táctil de 4 pulgadas**

@@ -13,7 +13,7 @@ last_update:
   date: 07/17/2024
   author: ShuishengPeng
 createdAt: '2024-07-17'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/reComputer_r1000_fin_top_level_gaphic/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 12/22/2023
   author: Kasun Thushara
 createdAt: '2023-07-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal_Intro/
 ---
 

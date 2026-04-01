@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-10-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/XIAO-Kit-Courses/
 ---
 # XIAO：强大功能，小巧板型

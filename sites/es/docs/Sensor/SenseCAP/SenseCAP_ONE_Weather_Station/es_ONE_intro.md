@@ -1,6 +1,6 @@
 ---
 description: Introducción al sensor meteorológico SenseCAP ONE
-title: Sensor meteorológico SenseCAP ONE 
+title: Sensor meteorológico SenseCAP ONE
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 02/28/2024
   author: Jessie
 createdAt: '2024-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/es/SenseCAP_ONE_weather_sensor/
 ---
 

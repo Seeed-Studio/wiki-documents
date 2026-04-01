@@ -10,7 +10,7 @@ last_update:
   date: 3/22/2023
   author: Citric
 createdAt: '2023-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Vision-AI-Module/
 ---
 

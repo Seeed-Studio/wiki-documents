@@ -9,7 +9,7 @@ last_update:
   date: 12/27/2023
   author: Allen
 createdAt: '2024-04-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/gesture_control_music_application/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 12/30/2022
   author: gunengyu
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Sensor_distance/
 ---
 

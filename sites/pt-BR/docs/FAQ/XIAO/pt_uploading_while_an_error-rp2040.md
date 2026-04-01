@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/uploading_while_an_error-rp2040/
 ---
 Modifique as opções de upload do XIAO RP2040 de acordo com as configurações da imagem abaixo. Todas as opções funcionam bem, exceto o padrão **Small (-Os) (standard)**.

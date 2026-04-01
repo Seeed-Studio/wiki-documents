@@ -9,7 +9,7 @@ last_update:
   date: 05/28/2024
   author: Yaohao
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/cn/tinyml_topic/
 ---
 

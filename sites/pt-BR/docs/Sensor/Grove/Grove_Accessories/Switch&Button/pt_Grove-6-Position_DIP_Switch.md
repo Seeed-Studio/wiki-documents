@@ -10,7 +10,7 @@ last_update:
   date: 1/10/2023
   author: jianjing Huang
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-6-Position_DIP_Switch/
 ---
 

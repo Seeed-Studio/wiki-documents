@@ -15,8 +15,7 @@ updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/bluetooth_beacon02_for_sensecap_tracker/
 ---
 
-BLE（Bluetooth Low Energy）ロケーションビーコンは、一定間隔で Bluetooth 信号を送信する小型ワイヤレスデバイスです。これらの信号は、[**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)、[**SenseCAP T2000 
-Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) のような Bluetooth 対応デバイスによって検出され、ビーコンとの距離を把握することで、屋内測位、資産トラッキングなどのアプリケーション向けに位置情報ベースのソリューションを構築できます。
+BLE（Bluetooth Low Energy）ロケーションビーコンは、一定間隔で Bluetooth 信号を送信する小型ワイヤレスデバイスです。これらの信号は、[**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)、[**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) のような Bluetooth 対応デバイスによって検出され、ビーコンとの距離を把握することで、屋内測位、資産トラッキングなどのアプリケーション向けに位置情報ベースのソリューションを構築できます。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-113991456-outdoor-bluetooth-beacon.jpg" alt="pir" width={800} height="auto" /></p>
 

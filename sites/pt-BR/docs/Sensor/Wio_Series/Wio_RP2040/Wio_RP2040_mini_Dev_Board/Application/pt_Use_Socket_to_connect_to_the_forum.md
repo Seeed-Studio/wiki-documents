@@ -11,7 +11,7 @@ last_update:
   date: 01/11/2022
   author: gunengyu
 createdAt: '2023-01-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Use_Socket_to_connect_to_the_forum/
 ---
 Socket é quase a base de toda a comunicação de rede. Neste projeto, usaremos Socket para conectar a um servidor designado para obter suas informações da Internet. Você pode pesquisar muitos servidores com protocolo telnet na Internet. Ao se conectar a esses servidores, você pode navegar na web e em fóruns, e até mesmo ler animações de caracteres no terminal!

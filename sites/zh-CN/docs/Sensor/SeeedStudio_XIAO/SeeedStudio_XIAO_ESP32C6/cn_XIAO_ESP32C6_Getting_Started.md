@@ -13,11 +13,10 @@ sidebar_position: 1
 last_update:
   date: 08/05/2024
   author: Spencer
-createdAt: '2024-11-16'
-updatedAt: '2026-03-03'
+createdAt: '2024-03-29'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_getting_started/
 ---
-
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO ESP32C6 入门指南
@@ -34,7 +33,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
         " target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -43,9 +42,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 介绍
 
-Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) 提供动力，基于**两个 32 位 RISC-V 处理器**构建，其中高性能（HP）处理器**最高运行频率可达 160 MHz**，低功耗（LP）32 位 RISC-V 处理器最高可达 20 MHz。芯片上集成有 **512KB SRAM 和 4 MB Flash**，为编程提供了更大的空间，为物联网控制场景带来更多可能性。
+Seeed Studio XIAO ESP32C6 由高度集成的 [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) 提供动力，基于**两个 32 位 RISC-V 处理器**构建，配备一颗高性能（HP）处理器，**最高运行频率可达 160 MHz**，以及一颗低功耗（LP）32 位 RISC-V 处理器，时钟频率最高可达 20 MHz。芯片上集成有 **512KB SRAM 和 4 MB Flash**，为编程提供了更大的空间，为物联网控制场景带来更多可能性。
 
-XIAO ESP32C6 **凭借其增强的无线连接能力，原生支持 Matter**。其无线协议栈支持 **2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee 和 Thread (802.15.4)**。作为首款兼容 Thread 的 XIAO 成员，它非常适合构建符合 Matter 标准的项目，从而在智能家居中实现互操作性。
+XIAO ESP32C6 **凭借其增强的无线连接能力，原生支持 Matter**。其无线协议栈支持 **2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee 和 Thread（802.15.4）**。作为首款兼容 Thread 的 XIAO 成员，它非常适合构建符合 Matter 标准的项目，从而在智能家居中实现互操作性。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -69,7 +68,7 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
     <th>处理器</th>
-    <td>Espressif ESP32-C6 SoC<br/>两个 32 位 RISC-V 处理器，高性能内核最高运行频率 160 MHz，低功耗内核最高时钟频率 20 MHz</td>
+    <td>Espressif ESP32-C6 SoC<br/>两颗 32 位 RISC-V 处理器，高性能内核最高运行频率 160 MHz，低功耗内核最高时钟频率 20 MHz</td>
     <td>Espressif ESP32-C3 SoC<br/>RISC-V 单核 32 位芯片处理器，四级流水线，最高运行频率 160 MHz</td>
     <td>Espressif ESP32-S3R8 SoC<br/>Xtensa LX7 双核 32 位处理器，最高运行频率 240 MHz</td>
   </tr>
@@ -83,7 +82,7 @@ export const Highlight = ({children, color}) => (
     <td colspan="3">Bluetooth Low Energy 5.0</td>
   </tr>
   <tr>
-    <td>Zigbee, Thread, IEEE 802.15.4</td>
+    <td>Zigbee、Thread、IEEE 802.15.4</td>
     <td>/</td>
     <td>/</td>
   </tr>
@@ -108,7 +107,7 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
     <th>电源</th>
-    <td colspan="3">输入电压 (Type-C)：5V<br/>输入电压 (BAT)：3.7V</td>
+    <td colspan="3">输入电压（Type-C）：5V<br/>输入电压（BAT）：3.7V</td>
   </tr>
   <tr>
     <th>功耗模式（典型值）<br/>(供电电压：3.8V)</th>
@@ -128,12 +127,12 @@ export const Highlight = ({children, color}) => (
 
 ### 特性
 
-- **增强的连接性**：集成 ***2.4*** GHz Wi-Fi 6 (802.11ax)、Bluetooth 5(LE) 和 IEEE 802.15.4 射频连接，支持 **Thread** 和 **Zigbee** 协议的应用。
+- **增强的连接性**：集成 ***2.4*** GHz Wi-Fi 6（802.11ax）、Bluetooth 5(LE) 和 IEEE 802.15.4 射频连接，支持 **Thread** 和 **Zigbee** 协议的应用。
 - **原生 Matter 支持**：支持构建符合 Matter 标准的智能家居项目，确保不同智能设备之间的互操作性。
 - **芯片级安全加密**：利用 ESP32-C6 提供安全启动、加密以及可信执行环境（TEE）等特性，增强智能家居项目的安全性。
 - **出色的射频性能**：配备板载天线，BLE/Wi-Fi 覆盖范围可达 *80m*，并提供连接外部 UFL 天线的接口，确保可靠的连接。
-- **优化功耗表现**：提供四种工作模式，其中深度睡眠模式功耗低至 *15* μA，并支持锂电池充电管理。
-- **双 RISC-V 处理器**：集成两个 32 位 RISC-V 处理器，高性能处理器最高运行频率 160 MHz，低功耗处理器最高 *20 MHz*。
+- **优化的功耗表现**：提供四种工作模式，其中深度睡眠模式功耗低至 *15* μA，并支持锂电池充电管理。
+- **双 RISC-V 处理器**：集成两颗 32 位 RISC-V 处理器，高性能处理器最高运行频率 160 MHz，低功耗处理器最高运行频率 *20 MHz*。
 - **经典 XIAO 设计**：延续 21 x 17.8mm 拇指大小的外形和单面贴装设计，非常适合可穿戴设备等空间受限的项目。
 
 ## 硬件概览
@@ -153,14 +152,14 @@ export const Highlight = ({children, color}) => (
  </tr>
 </table>
 
-:::tip RF Switch
+:::tip 射频开关（RF Switch）
 
 **RF Switch** 功能允许你通过配置 `GPIO14` 在板载陶瓷天线和外部天线之间切换。要启用此功能，*必须先将 `GPIO3` 设置为低电平*，以激活射频开关控制。  
 
 - **GPIO14 低电平（默认设置）**：设备使用板载陶瓷天线。
 - **GPIO14 高电平**：设备切换为外部天线。  
 
-默认情况下，`GPIO14` 被设置为低电平，启用板载天线。若要使用外部天线，请将 `GPIO14` 设置为高电平。请参考下面的示例代码，了解如何配置 `GPIO3` 和 `GPIO14` 以激活外部天线：
+默认情况下，`GPIO14` 被设置为低电平，启用板载天线。若要使用外部天线，请将 `GPIO14` 设置为高电平。请参考下方示例代码，了解如何配置 `GPIO3` 和 `GPIO14` 以激活外部天线：
 
 ```cpp
 void setup() {
@@ -179,34 +178,34 @@ void setup() {
 
 ## **引脚映射**
 
-| XIAO 引脚               | 功能       | 芯片引脚  | 复用功能              | 描述                                  |
+| XIAO 引脚               | 功能       | 芯片引脚  | 复用功能             | 描述                                   |
 | :---------------------: | :-------: | :-------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS      |           |                    | 电源输入/输出                         |
+| 5V                      | VBUS      |           |                    | 电源输入/输出                          |
 | GND                     |           |           |                    |                                      |
-| 3V3                     | 3V3_OUT   |           |                    | 电源输出                             |
-| D0                      | Analog    | GPIO0     | LP_GPIO0           | GPIO, ADC                            |
-| D1                      | Analog    | GPIO1     | LP_GPIO1           | GPIO, ADC                            |
-| D2                      | Analog    | GPIO2     | LP_GPIO2           | GPIO, ADC                            |
-| D3                      | Digital   | GPIO21    | SDIO_DATA1         | GPIO                                 |
-| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO, I2C Data                       |
-| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, I2C Clock                      |
-| D6                      | TX        | GPIO16    |                    | GPIO, UART Transmit                  |
-| D7                      | RX        | GPIO17    |                    | GPIO, UART Receive                   |
-| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, SPI Clock                      |
-| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, SPI Data                       |
-| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, SPI Data                       |
+| 3V3                     | 3V3_OUT   |           |                    | 电源输出                               |
+| D0                      | 模拟      | GPIO0     | LP_GPIO0           | GPIO，ADC                            |
+| D1                      | 模拟      | GPIO1     | LP_GPIO1           | GPIO，ADC                            |
+| D2                      | 模拟      | GPIO2     | LP_GPIO2           | GPIO，ADC                            |
+| D3                      | 数字      | GPIO21    | SDIO_DATA1         | GPIO                                 |
+| D4                      | SDA       | GPIO22    | SDIO_DATA2         | GPIO，I2C 数据                        |
+| D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO，I2C 时钟                        |
+| D6                      | TX        | GPIO16    |                    | GPIO，UART 发送                       |
+| D7                      | RX        | GPIO17    |                    | GPIO，UART 接收                       |
+| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO，SPI 时钟                        |
+| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO，SPI 数据                        |
+| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO，SPI 数据                        |
 | MTDO                    |           | GPIO7     |                    | JTAG                                 |
-| MTDI                    |           | GPIO5     |                    | JTAG, ADC                            |
-| MTCK                    |           | GPIO6     |                    | JTAG, ADC                            |
-| MTMS                    |           | GPIO4     |                    | JTAG, ADC                            |
+| MTDI                    |           | GPIO5     |                    | JTAG，ADC                            |
+| MTCK                    |           | GPIO6     |                    | JTAG，ADC                            |
+| MTMS                    |           | GPIO4     |                    | JTAG，ADC                            |
 | EN                      |           | CHIP_PU   |                    | 复位                                  |
-| Boot                    |           | GPIO9     |                    | 进入 Boot 模式                       |
-| RF Switch Port Select   |           | GPIO14    |                    | 在板载天线和 UFL 天线之间切换        |
+| Boot                    |           | GPIO9     |                    | 进入 Boot 模式                        |
+| RF Switch Port Select   |           | GPIO14    |                    | 在板载天线和 UFL 天线之间切换         |
 | RF Switch Power         |           | GPIO3     |                    | 供电                                  |
-| Light                   |           | GPIO15    |                    | 用户指示灯                           |
-## 入门
+| Light                   |           | GPIO15    |                    | 用户指示灯                            |
+## 入门指南
 
-为了帮助你更快地上手 XIAO ESP32C6，请先阅读下面的硬件和软件准备内容，对 XIAO 进行相应准备。
+为了让你更快地开始使用 XIAO ESP32C6，请先阅读下面的硬件和软件准备内容，对 XIAO 进行准备。
 
 ### 硬件准备
 
@@ -224,19 +223,19 @@ void setup() {
 
 XIAO ESP32C6 默认出厂不焊接排针，你需要自备排针并将其焊接到 XIAO 对应的引脚上，这样才能连接扩展板或传感器。
 
-由于 XIAO ESP32C6 体积非常小，在焊接排针时请务必小心，不要将不同的引脚焊接到一起，也不要让焊锡粘到屏蔽罩或其他元器件上。否则可能导致 XIAO 短路或无法正常工作，由此造成的后果将由用户自行承担。
+由于 XIAO ESP32C6 体积非常小，焊接排针时请务必小心，不要将不同引脚焊接在一起，也不要让焊锡粘到屏蔽罩或其他元件上。否则可能导致 XIAO 短路或无法正常工作，由此造成的后果需由用户自行承担。
 
 #### BootLoader 模式
 
-有时由于我们烧录了错误的程序，会导致 XIAO 看起来丢失端口或无法正常工作。具体表现为：
+有时我们烧录了错误的程序，会导致 XIAO 出现找不到端口或无法正常工作的情况。具体表现为：
 
 - 已连接电脑，但找不到 XIAO 的端口号。
-- 电脑已连接且端口号出现，但上传程序失败。
+- 已连接电脑并出现端口号，但上传程序失败。
 
 当你遇到以上两种情况时，可以尝试让 XIAO 进入 BootLoader 模式，这可以解决大部分设备无法识别和上传失败的问题。具体方法如下：
 
 - **步骤 1**. 按住 XIAO ESP32C6 上的 BOOT 按钮不要松开。
-- **步骤 2**. 保持按住 BOOT 按钮，然后通过数据线连接电脑，连接电脑后再松开 BOOT 按钮。
+- **步骤 2**. 保持按住 BOOT 按钮，然后通过数据线连接电脑。连接电脑后再松开 BOOT 按钮。
 - **步骤 3**. 上传 **Blink** 程序以检查 XIAO ESP32C6 的运行情况。
 
 #### 复位
@@ -247,7 +246,7 @@ XIAO ESP32C6 默认出厂不焊接排针，你需要自备排针并将其焊接�
 
 ### 软件准备
 
-XIAO ESP32C6 推荐使用 Arduino IDE 作为编程工具，因此你需要在软件准备阶段完成 Arduino 的安装。
+XIAO ESP32C6 推荐使用 Arduino IDE 作为编程工具，因此你需要完成 Arduino 的安装作为软件准备的一部分。
 
 :::tip
 如果这是你第一次使用 Arduino，我们强烈建议你参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
@@ -275,7 +274,7 @@ XIAO ESP32C6 推荐使用 Arduino IDE 作为编程工具，因此你需要在软
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-1. 将上述开发板管理器 URL 添加到 Arduino IDE 的首选项中，该链接取自 [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide)。
+1. 将上述开发板管理器 URL 添加到 Arduino IDE 的首选项中，该地址取自 [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide)。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
@@ -305,7 +304,7 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/upload_program.png" style={{width:1000, height:'auto'}}/></div>
 
-当程序成功上传后，你会看到如下输出信息，并且可以观察到 XIAO ESP32C6 右侧的橙色 LED 正在闪烁。
+当程序成功上传后，你会看到如下输出信息，并且可以观察到 XIAO ESP32C6 右侧的橙色 LED 在闪烁。
 
 <table>
  <tr>
@@ -316,9 +315,9 @@ https://espressif.github.io/arduino-esp32/package_esp32_index.json
 
 ## 电池使用
 
-XIAO ESP32C6 系列内置电源管理芯片，可通过电池独立供电，也可以通过 USB 接口为电池充电。
+XIAO ESP32C6 系列内置电源管理芯片，可以通过电池独立供电，也可以通过 USB 接口为电池充电。
 
-在为你的 XIAO 连接电池时，我们建议使用合格的可充电 3.7V 锂电池。焊接电池时，请仔细区分正负极。负极焊盘位于丝印 “D8” 附近的左侧，而正极焊盘位于丝印 “D5” 附近的右侧。
+在为你的 XIAO 连接电池时，我们建议使用合格的可充电 3.7V 锂电池。焊接电池时，请仔细区分正负极。负极焊盘位于丝印 “D8” 附近的左侧，正极焊盘位于丝印 “D5” 附近的右侧。
 
 :::caution
 当使用电池供电时，5V 引脚上不会有电压输出。
@@ -326,13 +325,13 @@ XIAO ESP32C6 系列内置电源管理芯片，可通过电池独立供电，也�
 
 :::tip 红色指示灯
 
-XIAO ESP32C6 具有一个用于电池充电的红色指示灯，与 [XIAO ESP32S3](/cn/xiao_esp32s3_getting_started/#电池使用) 类似：
+XIAO ESP32C6 具有用于电池充电的红色指示灯，与 [XIAO ESP32S3](/cn/xiao_esp32s3_getting_started/#电池使用) 类似：
 
 XIAO ESP32C6 的红灯状态如下：
 
 - 未连接电池时：
   - 插入 Type-C 线缆时红灯点亮，30 秒后熄灭。
-- 连接电池并插入 Type-C 线缆进行充电时：
+- 已连接电池并插入 Type-C 线缆进行充电时：
   - 红灯闪烁。
 - 通过 Type-C 连接将电池充满时：
   - 红灯熄灭。
@@ -345,7 +344,7 @@ XIAO ESP32C6 的红灯状态如下：
 
 ### 示例代码
 
-下面的代码在 A0 端口初始化 ADC，并对 16 次读数取平均来计算电池电压，同时根据 1:2 的分压比进行修正。
+下面的代码会初始化 A0 端口上的 ADC，并对 16 次读数取平均来计算电池电压，同时根据 1:2 的分压比进行修正。
 
 ```cpp
 #include <Arduino.h>
@@ -374,7 +373,7 @@ XIAO ESP32C6 具有完整的深度睡眠模式和唤醒功能。这里我们将�
 
 ### 示例 1：外部唤醒的深度睡眠
 
-此示例代码展示了如何使用外部触发作为唤醒源进入深度睡眠，以及如何在 RTC 内存中存储数据以便在重启后继续使用。
+这段代码展示了如何使用外部触发作为唤醒源来进行深度睡眠，以及如何在 RTC 内存中存储数据以便在重启后继续使用。
 
 ```cpp
 /*
@@ -453,9 +452,9 @@ void loop(){
 
 ### 示例 2：使用定时器唤醒的深度睡眠
 
-ESP32 提供了深度睡眠模式，以实现高效节能，因为功耗是物联网应用中的一个重要因素。在这种模式下，CPU、大部分 RAM，以及所有由 APB_CLK 提供时钟的数字外设都会断电。芯片中唯一仍可保持上电的部分是：RTC 控制器、RTC 外设和 RTC 存储器。
+ESP32 提供了深度睡眠模式以实现高效节能，因为功耗是物联网应用中的一个重要因素。在这种模式下，CPU、大部分 RAM，以及所有由 APB_CLK 提供时钟的数字外设都会断电。芯片中唯一仍然可以保持上电的部分是：RTC 控制器、RTC 外设和 RTC 存储器。
 
-此代码展示了最基础的使用定时器唤醒的深度睡眠，以及如何在 RTC 存储器中存储数据以在重启后继续使用。
+这段代码展示了最基础的深度睡眠功能，使用定时器将其唤醒，以及如何在 RTC 存储器中存储数据以便在重启后继续使用。
 
 ```cpp
 /*
@@ -555,15 +554,15 @@ void loop(){
 - **📄[Schematic]** [XIAO ESP32-C6 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf )
 - **🗃️[PCB Design Files]** [XIAO ESP32-C6 KiCad 工程](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH&PCB_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO ESP32-C6 引脚分布表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx )
 
-**结构设计**
-- **📄[3D Model]** [XIAO ESP32-C6 三维模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
+**机械设计**
+- **📄[3D Model]** [XIAO ESP32-C6 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
 
 <JetsonLeadQuote
-  buttonText="获取定制报价"
+  buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

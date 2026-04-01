@@ -10,7 +10,7 @@ last_update:
   date: 8/1/2025
   author: Youjiang
 createdAt: '2025-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-12'
 url: https://wiki.seeedstudio.com/ja/simulate_soarm101_by_leisaac/
 ---
 

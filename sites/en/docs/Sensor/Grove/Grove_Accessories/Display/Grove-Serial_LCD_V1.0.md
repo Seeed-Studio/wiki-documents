@@ -9,7 +9,7 @@ last_update:
   date: 1/29/2023
   author: jianjing Huang
 createdAt: '2023-01-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/Grove-Serial_LCD_V1.0/
 ---
 

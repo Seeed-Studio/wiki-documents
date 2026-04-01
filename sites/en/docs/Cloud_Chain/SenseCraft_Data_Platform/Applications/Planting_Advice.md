@@ -14,7 +14,7 @@ last_update:
   date: 06/06/2025
   author: Jancee
 createdAt: '2023-08-08'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/sensecraft-data-platform/applications/planting-advice/
 ---
 

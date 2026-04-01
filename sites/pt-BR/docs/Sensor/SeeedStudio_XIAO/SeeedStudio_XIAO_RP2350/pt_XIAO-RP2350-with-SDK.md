@@ -8,7 +8,7 @@ last_update:
   date: 2024-08-14T06:27:29.006Z
   author: Spencer
 createdAt: '2024-08-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao-rp2350-c-cpp-sdk/
 ---
 

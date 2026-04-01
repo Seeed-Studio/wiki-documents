@@ -12,7 +12,7 @@ last_update:
   date: 1/7/2026
   author: Janet
 createdAt: '2024-07-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-app/overview/
 ---
 

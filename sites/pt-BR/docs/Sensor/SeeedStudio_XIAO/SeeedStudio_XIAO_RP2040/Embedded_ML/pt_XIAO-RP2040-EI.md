@@ -9,7 +9,7 @@ last_update:
   date: 04/17/2023
   author: Citric
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/XIAO-RP2040-EI/
 ---
 

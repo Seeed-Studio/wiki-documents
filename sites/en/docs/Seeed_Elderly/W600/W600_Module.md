@@ -10,7 +10,7 @@ last_update:
   date: 01/20/2023
   author: Matthew
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/W600_Module/
 ---
 

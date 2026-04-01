@@ -9,10 +9,9 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -66,7 +65,7 @@ The reTerminal E1001 hardware includes:
 **Step 1.** Unbox your reTerminal E1001 and ensure all components are included:
 
 - reTerminal E1001 device
-- USB-C cable
+- charging data cable
 - Quick start guide
 
 **Step 2.** (Optional) Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
@@ -461,6 +460,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
 - Check your SenseCraft account to ensure the dashboard is properly deployed
 - If the problem persists, try restarting the device
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
 
 ### Q4: Network Connection Lost
 
@@ -468,7 +468,43 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - When reconnected, the Wi-Fi disconnection icon will disappear
 - If unable to reconnect, follow the Network Reset procedure above
 
+### Q5: Cannot Find Serial Port (COM) on macOS
+
+If your Mac doesn't recognize the reTerminal via USB, follow this compact guide to install the CH340/CH340K driver:
+
+**Step 1. Download and Install the Driver**
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+:::tip
+If macOS blocks the installation, go to **System Settings → Privacy & Security**, scroll to find the blocked WCH software, and click **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 2. Enable Driver Extension (Critical)**
+Open the **CH34xVCPDriver** app from Launchpad, click **Install**, then go to **System Settings → General → Login Items & Extensions → Driver Extensions**. Toggle **CH34xVCPDriver Extensions** to **ON** (blue).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 3. Connect and Verify**
+Ensure the device **power switch is ON** and use a **data USB-C cable** (not charge-only). Open Terminal and run:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+If you see the device path in the output, the driver is correctly installed and your reTerminal is ready for use!
+
+### Q6: Device Not Charging
+
+If you find that the device is not charging, please try replacing the charging head with a non-Apple brand power adapter.
+
 ## Resources
+
 - [reTerminal E1001 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1_2_SCH_251120.pdf)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
