@@ -299,7 +299,7 @@ Settings をクリックしてデバイス設定画面に入り、"Read From Dev
 
 以下は **Modbus Poll tool** の例です
 
-(<https://www.modbustools.com/download.html> からダウンロード)。
+(&lt;https://www.modbustools.com/download.html&gt; からダウンロード)。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 
