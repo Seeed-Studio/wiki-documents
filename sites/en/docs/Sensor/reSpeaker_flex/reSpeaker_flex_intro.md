@@ -11,10 +11,9 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-03-26'
-url: https://wiki.seeedstudio.com/respeaker_flex_introduction
+updatedAt: '2026-04-01'
+url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
-
 # Getting Started with reSpeaker Flex
 
 The reSpeaker Flex is a modular, split-architecture voice processing system built around the XMOS XVF3800 processor, designed specifically for robots and intelligent interaction terminals. Unlike conventional all-in-one mic arrays, the Flex separates the core processing board from the microphone array board the two connected via a flexible FPC ribbon cable allowing the array to be embedded at any physical position within a product enclosure while keeping the processing electronics elsewhere.
