@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-30 14:27:15 (北京时间)
-// 多语言页面: 2234 个
+// 生成时间: 2026-03-31 15:02:12 (北京时间)
+// 多语言页面: 2236 个
 
 (function() {
   'use strict';
@@ -32,6 +32,13 @@
     "pt"
   ],
   "/sensecraft-ai/application/application-for-homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft-ai/application/create-new-application": [
     "cn",
     "en",
     "es",
@@ -5571,6 +5578,13 @@
     "pt"
   ],
   "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/realsense_3d_seg": [
     "cn",
     "en",
     "es",

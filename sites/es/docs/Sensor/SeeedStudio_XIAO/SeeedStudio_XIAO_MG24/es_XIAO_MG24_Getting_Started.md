@@ -11,11 +11,10 @@ last_update:
   date: 10/17/2024
   author: Jason
 sidebar_position: 0
-createdAt: '2025-09-03'
-updatedAt: '2026-02-27'
+createdAt: '2024-11-01'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 ---
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg" style={{width:600, height:'auto'}}/></div>
 <br />
 
@@ -34,12 +33,12 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -48,9 +47,9 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 
 ## Introducción
 
-**Seeed Studio XIAO MG24** es una placa de desarrollo mini basada en MG24 de Silicon Labs. XIAO MG24 se basa en el núcleo **ARM Cortex-M33**, arquitectura **RISC de 32 bits** con una velocidad de reloj máxima de 78MHz, compatible con instrucciones DSP y operaciones de coma flotante FPU, que posee una potente capacidad de cómputo, e incorpora un **acelerador de hardware AL/ML MVP** integrado, que puede procesar de forma eficiente algoritmos de IA/aprendizaje automático. En segundo lugar, tiene un excelente rendimiento RF, con una **potencia de transmisión de hasta +19.5 dBm** y una sensibilidad de recepción **tan baja como -105.4 dBm**. Es compatible con múltiples protocolos de IoT y transmisión inalámbrica como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh**, etc.
+**Seeed Studio XIAO MG24** es una placa de desarrollo mini basada en el MG24 de Silicon Labs. XIAO MG24 se basa en el **núcleo ARM Cortex-M33**, arquitectura **RISC de 32 bits** con una velocidad de reloj máxima de 78MHz, compatible con instrucciones DSP y operaciones de coma flotante FPU, que posee una potente capacidad de cómputo, e incorpora un **acelerador de hardware AL/ML MVP**, que puede procesar de forma eficiente algoritmos de IA/aprendizaje automático. Además, tiene un excelente rendimiento de RF, con una **potencia de transmisión de hasta +19.5 dBm** y una sensibilidad de recepción **tan baja como -105.4 dBm**. Es compatible con múltiples protocolos de IoT y transmisión inalámbrica como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh**, etc.
 
-### Especificación
+### Especificaciones
 
 <table>
   <tr>
@@ -81,15 +80,15 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
   </tr>
   <tr>
     <th>Interfaz</th>
-    <td colspan="2">22 pines (todos PWM):<br/>19x analógico<br/>19x digital<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+    <td colspan="2">22 pines (todos PWM):<br/>19x analógicos<br/>19x digitales<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
   </tr>
   <tr>
     <th>Botón</th>
-    <td colspan="2">1x botón RESET</td>
+    <td colspan="2">1x botón de RESET</td>
   </tr>
   <tr>
     <th>Seguridad</th>
-    <td colspan="2">Aceleración criptográfica por hardware, generador de números aleatorios verdaderos, ARM® TrustZone®, arranque seguro, desbloqueo de depuración segura, etc.</td>
+    <td colspan="2">Aceleración criptográfica por hardware, generador de números aleatorios verdaderos, ARM® TrustZone®, arranque seguro, desbloqueo seguro de depuración, etc.</td>
   </tr>
   <tr>
     <th>Bajo consumo (típ.)</th>
@@ -125,13 +124,13 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 
 - **CPU potente**: núcleo ARM Cortex-M33, con una velocidad de reloj máxima de 78MHz, compatible con instrucciones DSP y operaciones de coma flotante FPU, arquitectura RISC de 32 bits.
 - **Ultrabajo consumo**: corriente RX 4.6mA/corriente TX 5mA (0dBm), múltiples modos de suspensión de bajo consumo
-- **IA potente**: acelerador de hardware AI/ML MVP integrado, capaz de procesar de forma eficiente algoritmos de IA/aprendizaje automático.
-- **Transmisión inalámbrica multiformato**: transceptor inalámbrico multiprotocolo integrado de 2.4GHz, compatible con múltiples protocolos de IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
-- **Mejor rendimiento RF**: excelente rendimiento RF, con una potencia de transmisión de hasta +19.5 dBm y una sensibilidad de recepción tan baja como -105.4 dBm (250kbps DSSS)
-- **Seguridad potente**: potentes funciones de seguridad de Secure Vault, incluido arranque seguro, cifrado, generación de números aleatorios, a prueba de manipulaciones, depuración segura, etc.
+- **Potente IA**: acelerador de hardware de IA/ML MVP integrado, capaz de procesar de forma eficiente algoritmos de IA/aprendizaje automático.
+- **Transmisión inalámbrica multiformato**: transceptor inalámbrico multiprotocolo de 2.4GHz integrado, compatible con múltiples protocolos de IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
+- **Mejor rendimiento RF**: excelente rendimiento de RF, con una potencia de transmisión de hasta +19.5 dBm y una sensibilidad de recepción tan baja como -105.4 dBm (250kbps DSSS)
+- **Seguridad potente**: potentes funciones de seguridad de Secure Vault, incluyendo arranque seguro, cifrado, generación de números aleatorios, a prueba de manipulaciones, depuración segura, etc.
 - **Tamaño ultrapequeño**: 21 x 17.8mm.
 - **Ricos recursos en chip**: hasta 1536KB de Flash y 256KB de RAM, con amplio espacio de almacenamiento.
-- **Interfaces ricas**: integrado con ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos abundantes, y hasta 22 pines, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
+- **Interfaces abundantes**: integrado con ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos ricos, y hasta 22 pines, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
 
 ## Descripción general del hardware
 
@@ -157,7 +156,7 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 </table>
 
 :::tip
-  La diferencia entre las dos placas de desarrollo es que MG24 Sense tiene un sensor de micrófono y un sensor de aceleración de seis ejes, mientras que MG24 no lo tiene.
+  La diferencia entre las dos placas de desarrollo es que MG24 Sense tiene un sensor de micrófono y un sensor de aceleración de seis ejes, mientras que MG24 no los tiene.
 :::
 
 - 5V - Esta es la salida de 5V desde el puerto USB. También puedes usarla como entrada de tensión, pero debes tener algún tipo de diodo (schottky, de señal, de potencia) entre tu fuente de alimentación externa y este pin, con el ánodo a la batería y el cátodo al pin de 5V.
@@ -194,12 +193,12 @@ url: https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/
 | RF Switch Power         |                  | PB05      |                    | Alimentación RF                             |
 | Reset                   |                  | RESET     |                    | RESET                                |
 | CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Red                          |
-| USER_LED                |                  | PA07      |                    | Luz de usuario_Amarilla                    |
+| USER_LED                |                  | PA07      |                    | Luz de usuario_Amarillo                    |
 
 
 ## Primeros pasos
 
-Para permitirte comenzar más rápido con la XIAO MG24, lee la preparación de hardware y software a continuación para preparar la XIAO.
+Para permitirte empezar más rápido con la XIAO MG24, lee la preparación de hardware y software que aparece a continuación para preparar la XIAO.
 
 ### Procedimiento de fábrica
 
@@ -207,7 +206,7 @@ Preprogramamos cada nuevo XIAO MG24 y XIAO MG24 Sense con un sencillo programa d
 
 1. **XIAO MG24**
 
-El programa de fábrica preestablecido en la versión normal es Blink Light. Cuando enciendas el XIAO, el indicador de usuario naranja se encenderá.
+El programa de fábrica preestablecido en la versión normal es Blink Light. Cuando enciendas el XIAO, el indicador naranja de usuario se encenderá.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/00.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -226,12 +225,12 @@ Necesitas preparar lo siguiente:
 - 1 x Cable USB tipo C
 
 :::tip
-Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes comprobar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes consultar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
 ### Preparación de software
 
-La herramienta de programación recomendada para el XIAO MG24 es Arduino IDE, por lo que necesitas completar la instalación de Arduino como parte de la preparación del software.
+La herramienta de programación recomendada para el XIAO MG24 es el Arduino IDE, por lo que necesitas completar la instalación de Arduino como parte de la preparación del software.
 
 :::tip
 Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
@@ -249,7 +248,7 @@ Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consu
 
 - **Paso 2.** Inicia la aplicación Arduino.
 - **[Paso 3](#añadir-placa).**  Añade el paquete de placa XIAO MG24 al Arduino IDE y haz clic en `OK`.
-- **Paso 4.** Cierra Arduino IDE y vuelve a abrirlo.
+- **Paso 4.** Cierra el Arduino IDE y vuelve a abrirlo.
 
 #### Añadir la placa XIAO MG24 {#añadir-placa}
 
@@ -268,7 +267,7 @@ https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/14(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
 :::tip
-Si no puedes encontrarlo después de introducirlo, vuelve a abrir Arduino IDE.
+Si no puedes encontrarlo después de introducirlo, vuelve a abrir el Arduino IDE.
 :::
 
 3. Elige la variante `XIAO_MG24`.
@@ -319,11 +318,11 @@ Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la 
 **Instrucciones sobre el uso de baterías:**
 
 1. Utiliza baterías cualificadas que cumplan las especificaciones.
-2. XIAO se puede conectar a tu dispositivo informático mediante un cable de datos mientras se utiliza la batería; ten la seguridad de que XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
+2. XIAO se puede conectar a tu dispositivo informático mediante un cable de datos mientras usas la batería; ten la seguridad de que XIAO tiene un chip de protección de circuito integrado, lo cual es seguro.
 3. El XIAO MG24 no tendrá ningún LED encendido cuando funcione con batería (a menos que hayas escrito un programa específico), por favor no juzgues si el XIAO MG24 está funcionando o no por el estado del LED, júzgalo razonablemente según tu programa.
-4. Lo sentimos, actualmente no tenemos forma de ayudarte a comprobar el nivel restante de la batería mediante software (porque no hay más pines de chip disponibles), necesitas cargar la batería regularmente o utilizar un multímetro para comprobar el nivel de la batería.
+4. Lo sentimos, actualmente no tenemos forma de ayudarte a comprobar el nivel restante de la batería mediante software (porque no hay más pines de chip disponibles), necesitas cargar la batería regularmente o usar un multímetro para comprobar el nivel de la batería.
 
-Al mismo tiempo, diseñamos una luz indicadora roja para la carga de la batería, que mediante la visualización de la luz indicadora informa al usuario del estado actual de la batería durante la carga.
+Al mismo tiempo, diseñamos una luz indicadora roja para la carga de la batería, que mediante la visualización del indicador informa al usuario del estado actual de la batería durante la carga.
 
 1. Cuando el XIAO MG24 no está conectado a la batería, la luz roja se enciende cuando se conecta el cable Type-C y se apaga después de 30 segundos.
 2. La luz roja parpadea cuando la batería está conectada y el cable Type-C está conectado para cargar.
@@ -552,7 +551,7 @@ La XIAO MG24 entra en un **modo Deep Sleep** (EM4) para ahorrar energía, pero e
 
 #### Medidas preventivas
 
-Para evitar que tu XIAO MG24 se bloquee mientras utilizas el modo Deep Sleep, sigue estos pasos:
+Para evitar que tu XIAO MG24 se bloquee mientras usas el modo Deep Sleep, sigue estos pasos:
 
 1. Usa el pin de escape (PC1)
 
@@ -589,7 +588,7 @@ Asegúrate de que tu sketch no ponga la memoria flash en modo de suspensión (`D
 
 #### Agradecimientos
 
-Un agradecimiento especial a la **comunidad de Seeed Studio** por sus valiosas contribuciones y soluciones a este problema. Los métodos de recuperación y las medidas preventivas tratadas en este tutorial se desarrollaron basándose en las aportaciones de miembros de la comunidad como **[msfujino](https://forum.seeedstudio.com/u/msfujino)** y **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
+Un agradecimiento especial a la **comunidad de Seeed Studio** por sus valiosas contribuciones y soluciones a este problema. Los métodos de recuperación y las medidas preventivas tratadas en este tutorial se desarrollaron basándose en las ideas de miembros de la comunidad como **[msfujino](https://forum.seeedstudio.com/u/msfujino)** y **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
 
 Para más detalles y debates, visita el hilo original del foro:  
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
@@ -600,7 +599,7 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 
 ### Solución para Windows
 
-1. **Descargar y extraer el paquete**  
+1. **Descarga y extrae el paquete**  
    - Descarga el archivo ZIP proporcionado.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -610,20 +609,20 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 </div><br />
    - Extrae el contenido en una carpeta de tu ordenador.
 
-2. **Conectar la XIAO MG24**  
+2. **Conecta la XIAO MG24**  
    - Usa un cable USB para conectar la XIAO MG24 que no responde a tu ordenador.
 
-3. **Ejecutar el script**  
+3. **Ejecuta el script**  
    - Abre la carpeta extraída y localiza el script `flash_erase.bat`.  
    - Haz doble clic en el script para ejecutarlo.  
    - El script borrará la memoria flash y reiniciará el dispositivo.
 
-4. **Verificar la recuperación**  
-   - Después de que el script termine, la XIAO MG24 debería estar restaurada y lista para usarse.
+4. **Verifica la recuperación**  
+   - Después de que el script termine, la XIAO MG24 debería estar restaurada y lista para usar.
 
 ### Solución para macOS
 
-1. **Descargar y extraer el paquete**  
+1. **Descarga y extrae el paquete**  
    - Descarga el archivo ZIP proporcionado (el enlace se añadirá aquí).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -633,15 +632,15 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 </div><br />
    - Extrae el contenido en una carpeta de tu ordenador.
 
-2. **Conectar la XIAO MG24**  
+2. **Conecta la XIAO MG24**  
    - Usa un cable USB para conectar la XIAO MG24 que no responde a tu ordenador.
 
-3. **Permitir el acceso de Terminal**  
+3. **Permite el acceso de Terminal**  
    - Abre **System Preferences** > **Security & Privacy** > **Privacy**.  
    - En **Accessibility**, asegúrate de que **Terminal** tiene permiso para controlar tu ordenador.  
    - Si Terminal no aparece en la lista, haz clic en el botón **+** para añadirlo manualmente.
 
-4. **Ejecutar el script**  
+4. **Ejecuta el script**  
    - Abre **Terminal**.  
    - Navega hasta la carpeta extraída usando el comando `cd`. Por ejemplo:  
 
@@ -657,13 +656,13 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 
    - El script usará OpenOCD para borrar la memoria flash y reiniciar el dispositivo.  
 
-5. **Verificar la recuperación**  
-   - Después de que el script termine, la XIAO MG24 debería estar restaurada y lista para usarse.
+5. **Verifica la recuperación**  
+   - Después de que el script termine, la XIAO MG24 debería estar restaurada y lista para usar.
 
 :::note
 
 - Si macOS no reconoce OpenOCD, asegúrate de que OpenOCD esté instalado y de que se use la ruta correcta en el script.  
-- Los scripts proporcionados están diseñados específicamente para la XIAO MG24 y no deben utilizarse con otros modelos XIAO.  
+- Los scripts proporcionados están diseñados específicamente para la XIAO MG24 y no deben usarse con otros modelos XIAO.  
 
 :::
 
@@ -677,7 +676,7 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 - **📄[Schematic]** [XIAO MG24 Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
 - **🗃️[PCB Design Files]** [XIAO MG24 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ### Para Seeed Studio XIAO MG24 Sense
@@ -688,7 +687,7 @@ La XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 - **📄[Schematic]** [XIAO MG24 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
 - **🗃️[PCB Design Files]** [XIAO MG24 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ## Soporte técnico y debate sobre el producto
