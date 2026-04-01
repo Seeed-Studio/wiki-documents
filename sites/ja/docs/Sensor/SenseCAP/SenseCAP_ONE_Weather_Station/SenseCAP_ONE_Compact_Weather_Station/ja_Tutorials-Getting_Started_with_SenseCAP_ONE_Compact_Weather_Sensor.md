@@ -10,7 +10,7 @@ last_update:
   date: 03/18/2026
   author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-01'
 url: https://wiki.seeedstudio.com/ja/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # SenseCAP ONE Compact Weather Sensor の使用を開始する
