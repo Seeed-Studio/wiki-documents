@@ -2094,6 +2094,29 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
+              ],
+            },
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
