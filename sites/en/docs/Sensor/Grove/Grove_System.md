@@ -9,10 +9,9 @@ last_update:
   date: 04/02/2026
   author: Matthew
 createdAt: '2023-03-13'
-updatedAt: '2025-09-02'
+updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/Grove_System/
 ---
-
 <!-- ![](https://media-cdn.seeedstudio.com/media/wysiwyg/grove9b5a_.jpeg) -->
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/grove9b5a_.jpeg" style={{width:1000, height:'auto'}}/></div>
