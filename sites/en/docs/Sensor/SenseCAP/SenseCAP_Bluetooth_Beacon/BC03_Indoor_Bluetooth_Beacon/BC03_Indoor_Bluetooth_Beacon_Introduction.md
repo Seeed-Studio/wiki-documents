@@ -10,10 +10,10 @@ image: https://files.seeedstudio.com/wiki/BC03/1-BC03-Bluetooth-Beacon.webp
 slug: /bluetooth_beacon03_for_tracker_introduction
 sku: 100085893
 last_update:
-  date: 3/24/2026
+  date: 4/2/2026
   author: Janet
 createdAt: '2026-03-24'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/bluetooth_beacon03_for_tracker_introduction/
 ---
 
@@ -65,7 +65,7 @@ Check [Indoor Positioning System](https://wiki.seeedstudio.com/solutions/indoor-
 ---
 
 * **Bluetooth® LE 5.0**
-* **Ultra-low power consumption**: Replaceable lithium battery, more than **5 years battery life** (0 dBm / 500 ms, default configuration)
+* **Ultra-low power consumption**: Replaceable Li/SOCl2 battery, more than **5 years battery life** (0 dBm / 500 ms, default configuration)
 * **Long-distance transmission**: Up to **130 m** in open areas
 * **Simple Installation**：Pull out the insulating film and it can be pasted and installed, reducing construction costs.
 * **UV Protection**: Suitable for UV-sterilization lamps and similar scenarios, without altering appearance.
@@ -98,7 +98,7 @@ A blue LED provides intuitive device status feedback during power-on and operati
 | IP Rating           | None                       |
 | Dimension(L\*W\*H)    | Φ50*20.5mm                 |
 | Weight              | ~45 g (including battery)  |
-| Battery             | Lithium-ion battery, 2400 mAh|
+| Battery             | Li/SOCl2 battery, 2400 mAh|
 | Chip                | nRF52 series               |
 | Bluetooth Version   | BLE 5.0 (backward compatible with BLE 4.1) |
 | Bluetooth Protocol  | iBeacon                    |
