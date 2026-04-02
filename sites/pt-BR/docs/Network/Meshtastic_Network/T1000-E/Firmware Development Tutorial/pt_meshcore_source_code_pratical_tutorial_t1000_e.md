@@ -1,6 +1,6 @@
 ---
-description: Um tutorial prático para configurar o ambiente do código-fonte do firmware MeshCore, compilar o T1000-E e gravar o firmware.
-title: Tutorial de Desenvolvimento do Código-Fonte do MeshCore
+description: Um tutorial prático para configurar o ambiente de código-fonte do firmware MeshCore, compilar o T1000-E e gravar o firmware.
+title: Tutorial de Desenvolvimento com Código-Fonte do MeshCore
 keywords:
   - MeshCore
   - Source Code
@@ -30,80 +30,119 @@ Antes de começar, prepare as seguintes ferramentas:
 2. [Python 3](https://www.python.org/downloads/)
 3. [VS Code](https://code.visualstudio.com/)
 
-### Instalar o PlatformIO
+### Instalar PlatformIO
 
 Pesquise por `PlatformIO` no marketplace de Extensões do VS Code e instale-o.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-Após a instalação, normalmente um ícone em forma de formiga aparece na barra de ferramentas à esquerda.
+Após a instalação, geralmente um ícone em forma de formiga aparecerá na barra de ferramentas à esquerda.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
 ### Preparação do projeto
 
-Abra uma pasta na qual você deseja colocar seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para clonar o projeto com git.
+Abra uma pasta onde você quer ter o seu projeto. Abra a pasta no terminal. [Clique aqui](https://github.com/meshcore-dev/MeshCore) para fazer o git clone do projeto.
 
-Abra o VSCode, clique no ícone do PlatformIO e escolha `select a folder`. Escolha a pasta em que você clonou o projeto.
+Abra o VSCode, em seguida clique no ícone do PlatformIO, escolha `select a folder`. Selecione a pasta onde você fez o clone do projeto.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
 
-O PlatformIO instalará automaticamente as dependências necessárias. Após a instalação ser concluída com sucesso, você verá `Project has been successfully updated`
+O PlatformIO instalará automaticamente as dependências necessárias. Após a instalação bem-sucedida, você verá `Project has been successfully updated`
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png" style={{width:800, height:'auto'}}/></div>
+
 
 ## Desenvolvimento de firmware
 
 ### Tutorial de desenvolvimento
 
-Encontre o ambiente para a sua placa de destino. Tome o repetidor de nó solar como exemplo:
+Encontre o ambiente para a sua placa-alvo. Pegue o T1000-E Bluetooth Companion como exemplo:
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/BoardSelection.png)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000EBoard.jpg" style={{width:800, height:'auto'}}/></div>
+
 
 Então o PlatformIO irá preparar as dependências necessárias para a placa.
 
-Altere seu código. Recomenda-se alterar o arquivo `variant.h` da sua placa.
+Altere o seu código. Recomenda-se alterar o arquivo `variant.h` da sua placa.
 
-Após concluir a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
+Após completar a codificação, execute o seguinte comando para compilar o código e convertê-lo em um arquivo uf2.
 
 ``` bash
-pio run -e SenseCap_Solar_repeater
-pio run -e SenseCap_Solar_repeater -t create_uf2
+pio run -e t1000e_companion_radio_ble
+pio run -e t1000e_companion_radio_ble -t create_uf2
 ```
 
-Em seguida, clique duas vezes no botão RST para entrar no modo DFU. Arraste o arquivo uf2 para o disco que aparecer.
-
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/Dragin.png)
+Pressione e segure o botão do dispositivo, depois conecte rapidamente o cabo de carregamento duas vezes, o LED verde ficará aceso de forma contínua. Arraste o arquivo uf2 para o disco que aparecer. O arquivo uf2 deve ser encontrado em `.pio\build\t1000e_companion_radio_ble`
 
 ### Exemplo
 
 #### Controle da luz do usuário
 
-Este exemplo mostra como escrever um loop de piscar para a luz do usuário. Copie o código a seguir para `/examples/simple_repeater/main.cpp`
+Este exemplo mostra como controlar a luz do usuário para ficar constantemente ligada. Copie o código a seguir para `/examples/companion_radio/ui-new/ui-orig/UITask.cpp`
 
 ``` python
+void UITask::userLedHandler() {
+#ifdef PIN_STATUS_LED
+#ifdef T1000_E
+  // T1000-E: keep status LED continuously on.
+  digitalWrite(PIN_STATUS_LED, LED_STATE_ON);
+  return;
 #endif
-#ifdef LED_WHITE
-static void updateUserLightBlink() {
-  static unsigned long lastLedPhaseChangeAt = 0;
-  static bool lightIsOn = true;
-
-  const unsigned long now = millis();
-  if ((unsigned long)(now - lastLedPhaseChangeAt) >= 5000) {
-    lightIsOn = !lightIsOn;
-    lastLedPhaseChangeAt = now;
-  }
-
-  digitalWrite(LED_WHITE, lightIsOn ? LED_STATE_ON : !LED_STATE_ON);
-}
+  static int state = 0;
+  static int next_change = 0;
+  static int last_increment = 0;
 ```
 
-e escreva o loop:
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000ELight.jpg" style={{width:900, height:'auto'}}/></div>
 
-``` python
-#ifdef LED_WHITE
-  updateUserLightBlink();
-#endif
-```
 
-Compile-o e grave o arquivo uf2 no seu nó solar.
+Compile-o e grave o arquivo uf2 no seu T1000-E.
+
+## (Avançado) Envio de PR
+
+Obrigado por considerar contribuir para o projeto MeshCore! Como você pode contribuir?
+**1. Reportando bugs**
+
+- Use o rastreador de Issues
+- Use um título claro (por exemplo, "Crash when calling begin() with invalid pin")
+- Descreva exatamente os passos para reproduzir
+- Inclua sua placa, versão da IDE, versão da biblioteca e trecho de código relevante
+- Anexe um sketch de exemplo mínimo e completo, se possível
+
+**2. Sugerindo melhorias / novas funcionalidades**
+- Abra uma issue com o prefixo [Feature request]
+- Explique o caso de uso → que problema isso resolveria?
+- Descreva sua API / comportamento ideal (exemplos de código são muito úteis)
+**3. Enviando alterações de código (Pull Requests)**
+### Pequenas correções 
+(erros de digitação, comentários, exemplos, pequenas correções de bugs)
+→ Basta abrir um pull request — não é necessário abrir issue antes
+
+### Mudanças maiores / novas funcionalidades
+1. Abra primeiro uma issue para discutir a ideia
+2. Obtenha uma aprovação inicial dos mantenedores
+3. Faça um fork do repositório a partir do branch 'dev' e crie seu branch (fix/xxx, feature/yyy, docs/whatever)
+4. Faça suas alterações
+5. Atualize ou adicione exemplos quando apropriado
+6. Adicione/atualize comentários no código
+7. Envie o pull request
+
+### Diretrizes para Pull Request
+- Uma funcionalidade / correção = um pull request (PRs menores são mais fáceis e rápidos de revisar)
+- Use mensagens de commit descritivas
+  Bom: Fix I2C timeout handling on ESP32
+  Ruim: update
+- Faça referência a qualquer issue relacionada (Fixes #123, Closes #89, etc.)
+- Se você alterar a API pública, atualize README.md e library.properties
+- Novas funcionalidades devem incluir um sketch de exemplo em examples/
+### Estilo de codificação
+Por favor, siga o estilo C++ existente (conforme o .clang-format)
+
+- Indentação de 2 espaços (sem tabs)
+- camelCase para funções e variáveis
+- UpperCamelCase / PascalCase para nomes de classes
+- Constantes `#define` em ALL_CAPS
+- Mantenha as linhas com < ~100 caracteres quando possível
+(Mas a consistência com o código existente é mais importante do que regras rígidas)
