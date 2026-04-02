@@ -9,9 +9,8 @@ last_update:
   author: Dayu
 createdAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
-updatedAt: '2026-03-26'
+updatedAt: '2026-04-02'
 ---
-
 # Orin Nano / NX 8GB での Jetson-Claw 入門
 
 <div align="center">
