@@ -9,10 +9,9 @@ last_update:
   date: 09/01/2024
   author: Matthew
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/Contributor/
 ---
-
 # ✨ Contributor Program ✨
 
 In Seeed, we greatly value our community of Seeeders. The [Seeed Studio Contributor Program](/contributors) is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
