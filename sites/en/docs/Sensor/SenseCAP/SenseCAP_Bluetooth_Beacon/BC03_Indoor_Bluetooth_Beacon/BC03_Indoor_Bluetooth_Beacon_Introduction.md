@@ -16,7 +16,6 @@ createdAt: '2026-03-24'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/bluetooth_beacon03_for_tracker_introduction/
 ---
-
 # BC03 Indoor Bluetooth Beacon Introduction
 
 SenseCAP BC03 Indoor Bluetooth Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 

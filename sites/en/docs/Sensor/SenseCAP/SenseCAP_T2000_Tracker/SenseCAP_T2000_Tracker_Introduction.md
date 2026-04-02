@@ -13,8 +13,6 @@ createdAt: '2025-11-27'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/
 ---
-
-
 # SenseCAP T2000 Tracker Introduction
 
 ## Overview

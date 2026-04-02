@@ -14,7 +14,6 @@ createdAt: '2026-03-24'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/bluetooth_beacon02_for_sensecap_tracker/
 ---
-
 A BLE (Bluetooth Low Energy) Location Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), allowing them to determine their proximity to the beacon, building a location-based solution for indoor positioning, asset tracking and other applications.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-113991456-outdoor-bluetooth-beacon.jpg" alt="pir" width={800} height="auto" /></p>
