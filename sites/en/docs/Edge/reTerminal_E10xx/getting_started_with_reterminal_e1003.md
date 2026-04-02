@@ -9,9 +9,8 @@ last_update:
   author: Jackson.Li
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
 # Getting Started with reTerminal E1003
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:1000, height:'auto'}}/></div>
@@ -155,6 +154,37 @@ The reTerminal E1003 comes pre-loaded with firmware that supports **SenseCraft H
 - The device will automatically attempt to reconnect to known networks
 - When reconnected, the Wi-Fi disconnection icon will disappear
 - If unable to reconnect, follow the Network Reset procedure above
+
+### Q5: Cannot Find Serial Port (COM) on macOS
+
+If your Mac doesn't recognize the reTerminal via USB, follow this compact guide to install the CH340/CH340K driver:
+
+**Step 1. Download and Install the Driver**
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+:::tip
+If macOS blocks the installation, go to **System Settings → Privacy & Security**, scroll to find the blocked WCH software, and click **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 2. Enable Driver Extension (Critical)**
+Open the **CH34xVCPDriver** app from Launchpad, click **Install**, then go to **System Settings → General → Login Items & Extensions → Driver Extensions**. Toggle **CH34xVCPDriver Extensions** to **ON** (blue).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 3. Connect and Verify**
+Ensure the device **power switch is ON** and use a **data USB-C cable** (not charge-only). Open Terminal and run:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+If you see the device path in the output, the driver is correctly installed and your reTerminal is ready for use!
 
 ## Resources
 
