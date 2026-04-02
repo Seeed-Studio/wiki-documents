@@ -2094,8 +2094,7 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
-
-                {
+        {
           type: 'category',
           label: 'reSpeaker Flex',
           collapsed: true,
@@ -2118,8 +2117,6 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
-
-
       ],
     },
     {
