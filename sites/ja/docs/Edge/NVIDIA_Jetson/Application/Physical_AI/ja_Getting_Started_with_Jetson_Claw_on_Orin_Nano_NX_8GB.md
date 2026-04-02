@@ -1,7 +1,7 @@
 ---
 description: この Wiki では、Jetson Orin Nano 8GB または Orin NX 8GB 上で、nanobot、llama.cpp、ローカルの Qwen3.5 4B GGUF モデル、および Feishu 制御を用いた Jetson-Claw スターター環境を構築する方法を説明します。
 title: Orin Nano / NX 8GB での Jetson-Claw 入門
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
+image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
 sku: 114110312 | 114110313
 last_update:
@@ -13,6 +13,11 @@ updatedAt: '2026-03-26'
 ---
 
 # Orin Nano / NX 8GB での Jetson-Claw 入門
+
+<div align="center">
+    <img width={800}
+     src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
+</div>
 
 この Wiki では、**Jetson Orin Nano 8GB** と **Jetson Orin NX 8GB** 向けの実用的な Jetson-Claw スタータービルドを順を追って解説します。スタック全体は Jetson 上でローカルに動作します。`nanobot` をインストールし、モデル読み込みを安全に行うためにスワップ領域を拡張し、CUDA 対応で `llama.cpp` をコンパイルし、`Qwen3.5 4B` GGUF モデルをダウンロードし、`nanobot` のバックエンドをローカルの `llama.cpp` に切り替え、最後にボットを **Feishu** に接続してチャットから制御できるようにします。
 

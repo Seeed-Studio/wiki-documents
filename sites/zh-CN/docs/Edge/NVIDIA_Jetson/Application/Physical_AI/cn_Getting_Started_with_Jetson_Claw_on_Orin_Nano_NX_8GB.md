@@ -1,7 +1,7 @@
 ---
 description: 本文档展示如何在 Jetson Orin Nano 8GB 或 Orin NX 8GB 上，使用 nanobot、llama.cpp、本地 Qwen3.5 4B GGUF 模型和飞书控制，搭建一个 Jetson-Claw 入门环境。
 title: 在 Orin Nano / NX 8GB 上快速上手 Jetson-Claw
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
+image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
 sku: 114110312 | 114110313
 last_update:
@@ -13,6 +13,11 @@ updatedAt: '2026-03-26'
 ---
 
 # 在 Orin Nano / NX 8GB 上快速上手 Jetson-Claw
+
+<div align="center">
+    <img width={800}
+     src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
+</div>
 
 本文档将带你完成一个适用于 **Jetson Orin Nano 8GB** 和 **Jetson Orin NX 8GB** 的实用 Jetson-Claw 入门搭建。整个软件栈都在 Jetson 本地运行：我们会安装 `nanobot`，扩展交换分区以更安全地加载模型，用 CUDA 编译 `llama.cpp`，下载一个 `Qwen3.5 4B` GGUF 模型，将 `nanobot` 切换到本地 `llama.cpp` 后端，最后把机器人接入 **飞书（Feishu）**，这样你就可以通过聊天来控制它。
 

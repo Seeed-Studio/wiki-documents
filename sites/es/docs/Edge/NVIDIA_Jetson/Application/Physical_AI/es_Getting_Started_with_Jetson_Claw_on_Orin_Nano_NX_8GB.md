@@ -1,7 +1,7 @@
 ---
 description: Este wiki muestra cómo crear una configuración inicial de Jetson-Claw en Jetson Orin Nano 8GB u Orin NX 8GB con nanobot, llama.cpp, un modelo local Qwen3.5 4B GGUF y control por Feishu.
 title: Introducción a Jetson-Claw en Orin Nano / NX 8GB
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/openclaw/soarm_claw.webp
+image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
 sku: 114110312 | 114110313
 last_update:
@@ -13,6 +13,11 @@ updatedAt: '2026-03-26'
 ---
 
 # Introducción a Jetson-Claw en Orin Nano / NX 8GB
+
+<div align="center">
+    <img width={800}
+     src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
+</div>
 
 Este wiki explica paso a paso una configuración práctica inicial de Jetson-Claw para **Jetson Orin Nano 8GB** y **Jetson Orin NX 8GB**. Toda la pila se ejecuta localmente en Jetson: instalamos `nanobot`, ampliamos el espacio de swap para una carga de modelos más segura, compilamos `llama.cpp` con CUDA, descargamos un modelo GGUF `Qwen3.5 4B`, cambiamos `nanobot` a un backend local `llama.cpp` y, por último, conectamos el bot a **Feishu** para que puedas controlarlo desde el chat.
 

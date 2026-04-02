@@ -15,7 +15,7 @@ updatedAt: '2026-03-27'
 # Getting Started with Jetson-Claw on Orin Nano / NX 8GB
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
 </div>
 
