@@ -14,10 +14,9 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/es/r1225_quick_start/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
-# Inicio rápido
+# Guía rápida de inicio
 
 ## Conexión de alimentación
 
@@ -25,7 +24,7 @@ updatedAt: '2026-03-25'
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-El reComputer R1225 se alimenta con un voltaje de CA nominal de 12&#126;24 V o un voltaje de CC de 9&#126;36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para poner a tierra el reComputer R1225, el cable de tierra se puede fijar al tornillo situado en la esquina superior izquierda del terminal de alimentación.
+El reComputer R1225 se alimenta con un voltaje de CA nominal de 12&#126;24 V o un voltaje de CC de 9&#126;36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer R1225, el cable de tierra se puede fijar al tornillo situado en la esquina superior izquierda del terminal de alimentación.
 
 :::note
 La solución de alimentación utiliza un diodo rectificador en puente para la protección contra polaridad inversa y es compatible tanto con entradas de CA como de CC. Esto garantiza que **independientemente de cómo se conecten los terminales positivo y negativo de la fuente de alimentación**, el circuito no se dañará. Al usar un rectificador en puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada de CC, proporcionando una protección eficaz contra la polaridad inversa.
@@ -39,10 +38,10 @@ Con el módulo PoE instalado, el puerto ETH0 del reComputer R1225 puede admitir 
 - Salida PoE: 12V, 1.1A máx.
 
 :::tip
-Cabe señalar que el módulo PoE suministrado con el reComputer R1225 cumple con el estándar IEEE 802.3af y puede proporcionar una potencia máxima de 12.95W. **Por lo tanto, si es necesario conectar periféricos de alta potencia como módulos SSD o 4G, la alimentación PoE puede no ser suficiente**. En este caso, se recomienda utilizar en su lugar el terminal de alimentación de CA/CC para garantizar un funcionamiento estable y fiable del dispositivo.
+Cabe señalar que el módulo PoE proporcionado con el reComputer R1225 cumple con el estándar IEEE 802.3af y puede proporcionar una potencia máxima de 12.95W. **Por lo tanto, si es necesario conectar periféricos de alta potencia como SSD o módulos 4G, la alimentación PoE puede no ser suficiente**. En este caso, se recomienda utilizar en su lugar el terminal de CA/CC para la alimentación, a fin de garantizar un funcionamiento estable y fiable del dispositivo.
 :::
 
-## Acceder al sistema operativo Seeed Gateway
+## Acceder al Seeed Gateway OS
 
 ### Acceso a través del router
 
@@ -58,15 +57,15 @@ Cuando uses el R1225 por primera vez, si hay routers y cables Ethernet cerca, pu
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Network_Connection_Diagram1.png" alt="pir" width={800} height="auto" /></p>
 
-<!--加一个，如果不是首次连接，已经连接了Wifi，即使不插网线，也可以通过访问路由器分配的IP进入管理界面-->
+<!--Add one: if it is not the first connection and WiFi is already connected, even without plugging in the network cable, you can still access the management interface through the IP assigned by the router-->
 
 :::tip
-Si se ha configurado Wi-Fi, puedes acceder a la interfaz LuCI a través de la dirección IP del R1225 sin un cable Ethernet, siempre que tu ordenador y el R1225 estén en la misma red.
+Si se configura Wi-Fi, puedes acceder a la interfaz LuCI a través de la dirección IP del R1225 sin un cable Ethernet, siempre que tu ordenador y el R1225 estén en la misma red.
 :::
 
 - Paso 2: Obtén la dirección IP de tu dispositivo
 
-Consulta la dirección IP de tu dispositivo en la página de administración de tu router.
+Comprueba la dirección IP de tu dispositivo en la página de administración de tu router.
 
 - Paso 3: Obtén el nombre de usuario y la contraseña de tu dispositivo
 
@@ -126,7 +125,7 @@ Luego introduce el nombre de usuario y la contraseña de tu dispositivo y haz cl
 ### Conexión Ethernet
 
 Ethernet es plug-and-play y no requiere configuración.
-<!--补充图片和内容-->
+<!--Add pictures and content-->
 
 ### Conexión WIFI
 
@@ -134,15 +133,15 @@ Ethernet es plug-and-play y no requiere configuración.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi1.png" alt="pir" width={200} height="auto" /></p>
 
-- Paso 2: Haz clic en el botón `Scan` para escanear la WIFI
+- Paso 2: Haz clic en el botón `Scan` para escanear el WIFI
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi2.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 3: Selecciona tu red Wi-Fi para unirte a la red
+- Paso 3: Selecciona tu Wi-Fi para unirte a la red
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi3.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 4: Introduce la contraseña de la red Wi-Fi y luego haz clic en `Submit` y Save
+- Paso 4: Envía la contraseña de Wi-Fi y luego haz clic en `Submit` y Save
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi4.png" alt="pir" width={800} height="auto" /></p>
 
@@ -174,7 +173,7 @@ Utiliza el clip para carril DIN que proporcionamos para insertarlo en el pequeñ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LoRa1.png" alt="pir" width={200} height="auto" /></p>
 
-- Paso 2: Marca la opción `Enable LoRa functionality`
+- Paso 2: Marca `Enable LoRa functionality`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LoRa2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -226,7 +225,7 @@ Luego haz clic en `Submit` para ir a la interfaz de la plataforma Chirpstack
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack4.png" alt="pir" width={800} height="auto" /></p>
 
-- Paso 6: Introduce el `Gateway Name` y el `Gateway ID (EUI: 64)`
+- Paso 6: Ingresa el `Gateway Name` y `Gateway ID (EUI: 64)`
 
   - Nombre de la pasarela: Un nombre para tu pasarela
 
@@ -239,3 +238,13 @@ Luego haz clic en `Submit` para ir a la interfaz de la plataforma Chirpstack
 Luego haz clic en `Submit`
 
 ### Comprobar el estado de conexión de la pasarela
+
+Al completar todos los pasos de configuración, la pasarela debería mostrarse como **`Online`** en la plataforma ChirpStack.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack6.png" alt="pir" width={800} height="auto" /></p>
+
+#### Datos de la pasarela
+
+Navega a Gateways y elige la pasarela que quieres comprobar.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack7.png" alt="pir" width={800} height="auto" /></p>
