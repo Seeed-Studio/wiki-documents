@@ -14,7 +14,7 @@ last_update:
   date: 4/3/2026
   author: Kasun Thushara
 createdAt: '2026-04-01'
-updatedAt: '2026-04-01'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/respeaker_flex_picovoice_nlu_keyword_spotting/
 ---
 ## Introduction 
