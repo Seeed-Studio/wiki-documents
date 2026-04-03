@@ -22,6 +22,16 @@ This wiki walks through a practical Jetson-Claw starter build for **Jetson Orin 
 
 Compared with a larger OpenClaw deployment, **nanobot** is a better fit for this entry-level Jetson-Claw setup because it is much lighter, starts faster, is easier to read and modify, and already supports **Feishu** plus **OpenAI-compatible local backends**. On an 8 GB Jetson, that lower runtime overhead leaves more room for the local model itself. If you later need a larger plugin ecosystem or a heavier multi-component workflow, you can still move up to OpenClaw.
 
+
+## Benchmark
+
+Here, the performance of local LLMs for different Jetson modules is listed. After our verification, the 4B model is the ideal choice for setting up a system capable of performing specific tasks! The larger the model's parameter size, the better the performance will be! You can use this Benchmark as a reference to select a reComputer that suits your needs.
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/jetson/benchmark_jetson.jpg" />
+</div>
+
 ## What You Will Build
 
 - A lightweight local AI assistant based on `nanobot`
