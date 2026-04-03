@@ -6,13 +6,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_System
 last_update:
-  date: 03/13/2023
+  date: 04/02/2026
   author: Matthew
 createdAt: '2023-03-13'
-updatedAt: '2025-09-02'
+updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/Grove_System/
 ---
-
 <!-- ![](https://media-cdn.seeedstudio.com/media/wysiwyg/grove9b5a_.jpeg) -->
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/grove9b5a_.jpeg" style={{width:1000, height:'auto'}}/></div>
@@ -56,7 +55,7 @@ The Grove ecosystem offers a wide range of sensors that can be easily integrated
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove_Sensor_Intro/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📖 Wiki Platform</font></span></strong></a>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/grove.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/grove" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
 </div>
 
 ### <span id="jump4"> Grove Network Modules</span>
@@ -67,7 +66,7 @@ With Grove network modules, you can easily add wireless capabilities to your pro
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove_network_module_intro" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📖 Wiki Platform</font></span></strong></a>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/grove.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bnetwork%5D%5B0%5D=Wi-Fi&bazaar4_retailer-products%5BrefinementList%5D%5Bnetwork%5D%5B1%5D=Bluetooth&bazaar4_retailer-products%5BrefinementList%5D%5Bnetwork%5D%5B2%5D=LoRa%2FLoRaWan&bazaar4_retailer-products%5BrefinementList%5D%5Bnetwork%5D%5B3%5D=Ethernet&q=Grove" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
 </div>
 
 ### <span id="jump5"> Grove Accessories </span>
@@ -76,7 +75,7 @@ In addition to sensors and network modules, the Grove ecosystem offers a variety
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove_Accessories_Intro" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📖 Wiki Platform</font></span></strong></a>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/grove.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bproduct_category%5D%5B0%5D=Accessories&q=Grove" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Purchase</font></span></strong></a>
 </div>
 
 <!-- - [Grove Sensor](/Grove_Sensor_Intro)
@@ -124,7 +123,7 @@ The Grove interface is designed to be compatible with a wide range of developmen
 </div>
 
 :::tip
-For more acknowledged boards supporting Grove interfaces, like Raspberry Pi, Pi Zero, or other boards, launched by Seeed Studio, you can check [here(extensions and kits)](https://www.seeedstudio.com/shopby/grove.html).
+For more acknowledged boards supporting Grove interfaces, like Raspberry Pi, Pi Zero, or other boards, launched by Seeed Studio, you can check [here(extensions and kits)](https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bproduct_category%5D%5B0%5D=Extension%2Fhats%2Fexpansion&q=Grove).
 :::
 
 #### Published by Arduino
@@ -214,7 +213,7 @@ Grove Beginner Kit for Arduino is one of the best Arduino Beginner Kit for begin
 </div>
 
 :::tip
-For more kits about Arduino, please click [here](https://www.seeedstudio.com/shopby/grove.html).
+For more kits about Arduino, please click [here](https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Arduino&q=Arduino%20kits).
 :::
 
 #### Raspberry Pi Board-based
@@ -238,7 +237,7 @@ In Seeed, we designed 8 tutorials for you to start tinkering with some basic Gro
 </div>
 
 :::tip
-For more kits about Raspberry Pi, please check [here](https://www.seeedstudio.com/shopby/grove.html).
+For more kits about Raspberry Pi, please check [here](https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry%20Pi&q=Raspberry%20Pi%20kits).
 :::
 
 #### SeeedStudio XIAO Board-based
@@ -262,7 +261,7 @@ The primary audience for “XIAO: Big Power, Small Board” encompasses hobbyist
 </div>
 
 :::tip
-For more kits about Seeed Studio XIAO Series, please check [here](https://www.seeedstudio.com/shopby/grove.html).
+For more kits about Seeed Studio XIAO Series, please check [here](https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=XIAO&q=XIAO%20kits).
 :::
 
 #### Wio Terminal Board-based
@@ -286,7 +285,7 @@ This kit comes with Wio Terminal and a course in the box. This book is designed 
 </div>
 
 :::tip
-For more kits about Wio Terminal, please check [here](https://www.seeedstudio.com/shopby/grove.html).
+For more kits about Wio Terminal, please check [here](https://www.seeedstudio.com/catalogsearch/result/?q=Wio+Terminal+kits).
 :::
 
 ### <span id="jump8"> Co-Create Program - Grove Modules  </span>
