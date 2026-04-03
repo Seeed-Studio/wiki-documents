@@ -20,7 +20,7 @@ Semtech UDP Packet Forwarder is the original LoRaWAN® packet forwarder, connec
 
 LoRa Basics™ Station is the preferred way of connecting Gateways to The Things Stack.
 
-## **Connecting via Packet Forwarders**
+## **Connecting via Packet Forwarder**
 
 The Semtech UDP Packet Forwarder is the original LoRaWAN® packet forwarder, connecting to servers through the Semtech UDP protocol.
 

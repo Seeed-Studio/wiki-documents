@@ -42,7 +42,7 @@ Navigate to **Gateways > Add gateway**
 
 Before you can add your device to ChirpStack, you have to create a [Device-profile](https://www.chirpstack.io/application-server/use/device-profiles/) if you haven't done this already.
 
-Navigate to **Device profile> Add device profile**
+Navigate to **Device profile > Add device profile**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_3.png" alt="pir" width={800} height="auto" /></p>
 
