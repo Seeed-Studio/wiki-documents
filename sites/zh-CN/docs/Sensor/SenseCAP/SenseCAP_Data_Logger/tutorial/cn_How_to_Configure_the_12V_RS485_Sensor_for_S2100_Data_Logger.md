@@ -11,7 +11,7 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2025-08-07'
-updatedAt: '2025-09-04'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
 # S2100 和 12V RS485 传感器入门指南
