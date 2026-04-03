@@ -10,10 +10,9 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-24'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
-
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting Started with Seeed Studio XIAO SAMD21
@@ -451,10 +450,10 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 - **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
 - **📄[Schematic]** [XIAO SAMD21 Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
 - **🗃️[PCB Design Files]** 
-  - [XIAO SAMD21 KiCad Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-KICAD.zip)  
+  - [XIAO SAMD21 KiCad Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO_SAMD21_v2.1_SCH&PCB_20260304.zip)  
   - [XIAO SAMD21 Eagle Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Sheet]** [XIAO SAMD21 Pinout Sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
 

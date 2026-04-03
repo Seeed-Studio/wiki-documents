@@ -71,7 +71,6 @@ After installation, you can directly enter the web page to try to chat with it. 
 You can also click the "Overview" page on the left to see if the "Status" is normal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_3.png" /></div>
-![openclaw_3](C:\Users\seeed\Desktop\reCamera图片(上传FTP用)\龙虾\openclaw_3.png)
 
 ## 2. Import reCamera Gimbal's Skills
 
@@ -103,7 +102,7 @@ openclaw.json is located in the folder of your installation openclaw. This file 
 
 2. Replace "192.168.31.198" with the IP address where you actually reCamera Gimbal
 
-3. Replace "recamera.1" for you to reCamera Gimbal's actual password)
+3. Replace "recamera.1" for you to reCamera Gimbal's actual password
 
 :::
 
