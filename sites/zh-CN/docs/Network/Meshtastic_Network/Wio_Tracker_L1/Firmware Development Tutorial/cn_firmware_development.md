@@ -396,8 +396,8 @@ pio run -e seeed_wio_tracker_L1 -v
 pio run -e seeed_wio_tracker_L1 -v
 ```
 
-</TabItem]
-</Tabs]
+</TabItem>
+</Tabs>
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
