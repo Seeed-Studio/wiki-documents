@@ -2714,8 +2714,8 @@ const sidebars = {
               type: 'category',
               label: 'Cloud Platform Integration',
               items: [
-              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Cloud Platform Connection Guide/Connecting_R1225_to_ChirpStack',
-              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Cloud Platform Connection Guide/Connecting_R1225_to_TTN',
+              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_ChirpStack',
+              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_TTN',
               ],
             },
             /* 
