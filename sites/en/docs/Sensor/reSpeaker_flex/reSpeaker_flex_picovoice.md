@@ -11,10 +11,10 @@ image: https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Cir
 slug: /respeaker_flex_picovoice_nlu_keyword_spotting
 sku: 114993700
 last_update:
-  date: 4/1/2026
+  date: 4/3/2026
   author: Kasun Thushara
 createdAt: '2026-04-01'
-updatedAt: '2026-04-01'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/respeaker_flex_picovoice_nlu_keyword_spotting/
 ---
 ## Introduction 
@@ -40,7 +40,7 @@ This demo showcases how wake word detection using Picovoice Porcupine works toge
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
