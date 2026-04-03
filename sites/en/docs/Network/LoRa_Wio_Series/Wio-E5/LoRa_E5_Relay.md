@@ -11,7 +11,7 @@ last_update:
   author: David Du
 createdAt: '2026-03-28'
 updatedAt: '2026-04-02'
-url: https://wiki.seeedstudio.com/LoRa-E5_Relay/
+url: https://wiki.seeedstudio.com/lora-e5_relay/
 ---
 <!-- ![Wio E5](https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg" alt="pir" width={600} height="auto" /></p>
