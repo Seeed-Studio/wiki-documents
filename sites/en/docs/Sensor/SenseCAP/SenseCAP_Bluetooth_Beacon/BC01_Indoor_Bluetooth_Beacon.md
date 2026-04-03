@@ -8,13 +8,12 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth
 slug: /bluetooth_beacon01_for_sensecap_tracker
 sku: 113991194
 last_update:
-  date: 03/24/2026
+  date: 04/02/2026
   author: Janet
 createdAt: '2023-10-19'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/bluetooth_beacon01_for_sensecap_tracker/
 ---
-
 A BLE (Bluetooth Low Energy) Location Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 
 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), allowing them to determine their proximity to the beacon, building a location-based solution for indoor positioning, asset tracking and other applications.
 
@@ -46,7 +45,7 @@ Check [Indoor Positioning System](https://wiki.seeedstudio.com/IPS_For_SenseCAP_
 ### Features
 
 - **Bluetooth® LE 5.0**
-- **Long battery life**: Replaceable lithium battery, more than 5 years (0dBm/500ms in default configuration).
+- **Long battery life**: Replaceable Li/SOCl2 battery, more than 5 years (0dBm/500ms in default configuration).
 - **Long-distance transmission**: Up to 120 meters in open areas.
 - **High compatibility**: Compatible with iOS 7.0+ and Android 4.3+ systems
 
@@ -119,7 +118,7 @@ If you need to install the product in a low temperature environment or in a hars
 |IP rate|None|
 |Dimension(L\*W\*H)|Φ50\*20.5mm|
 |Weight|39g(include battery)|
-|Battery|Lithium battery, 2400mAh|
+|Battery|Li/SOCl2 battery, 2400mAh|
 |Chip|nRF52 series|
 |Bluetooth Version|BLE 5.0|
 |Bluetooth Protocol|iBeacon|

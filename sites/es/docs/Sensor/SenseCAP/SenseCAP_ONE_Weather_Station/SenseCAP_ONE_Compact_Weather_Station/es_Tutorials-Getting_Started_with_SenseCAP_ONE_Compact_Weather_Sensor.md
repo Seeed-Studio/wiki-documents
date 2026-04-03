@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con el sensor meteorológico compacto SenseCAP ONE
-title: Primeros pasos con el sensor meteorológico compacto SenseCAP ONE
+description: Introducción a SenseCAP ONE Compact Weather Sensor
+title: Introducción a SenseCAP ONE Compact Weather Sensor
 keywords:
   - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,10 +10,10 @@ last_update:
   date: 03/18/2026
   author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/es/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
-# Primeros pasos con el sensor meteorológico compacto SenseCAP ONE
+# Introducción a SenseCAP ONE Compact Weather Sensor
 
 # Preinstalación
 
@@ -31,7 +31,7 @@ Hay dos conectores en la parte inferior del dispositivo.
 
 - La interfaz USB Type-C te permite conectar tu ordenador al dispositivo con un cable USB Type-C normal para su configuración.
 
-- La interfaz principal de datos se puede conectar al cable M12 de 8 pines, admitiendo múltiples protocolos de bus
+- La interfaz principal de datos se puede conectar al cable M12 de 8 pines, admitiendo múltiples protocolos de bus.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
@@ -39,28 +39,28 @@ Hay dos conectores en la parte inferior del dispositivo.
 
 Las estaciones meteorológicas V1 y V2 se pueden identificar por **el SKU en la etiqueta blanca** o por el diseño de la base.
 
-Además, el puerto USB Type-C está ubicado de forma diferente: en la V1, está en el mismo lado que la etiqueta blanca, mientras que en la V2 está en el lado opuesto.
+Además, el puerto USB Type-C está ubicado de forma diferente: en la V1 está en el mismo lado que la etiqueta blanca, mientras que en la V2 está en el lado opuesto.
 
 :::tip
-Las siguientes estaciones meteorológicas se han actualizado a V2: S500, S700, S900 y S1000.
+Las siguientes estaciones meteorológicas se han actualizado a V2: S500, S700 y S1000.
 :::
 
 | Nombre del producto | SKU V1   | SKU V2    |
 | -----------  | --------  | --------- |
-| S200         |    None   | 101991044 |
+| S200         |    Ninguno   | 101991044 |
 | S500         | 101990693 | 101991021 |
-| S600-A       |    None   | 101991232 |
+| S600-A       |    Ninguno   | 101991232 |
 | S700         | 101990787 | 101991022 |
-| S700-A       |    None   | 101991050 |
-| S700-B       |    None   | 101991102 |
-| S700-C       |    None   | 101991141 |
-| S800         |    None   | 101991023 |
-| S900         | 101990784 |    None   |
+| S700-A       |    Ninguno   | 101991050 |
+| S700-B       |    Ninguno   | 101991102 |
+| S700-C       |    Ninguno   | 101991141 |
+| S800         |    Ninguno   | 101991023 |
+| S900         | 101990784 |    Ninguno   |
 | S1000        | 101990902 | 101991024 |
 
 :::info
 - ¿Cuál es la diferencia entre SenseCAP ONE V2 y V1?
-  - La función de software no cambia, V2 es totalmente compatible para reemplazar a V1.
+  - La función de software no cambia, V2 es totalmente compatible para sustituir a V1.
   - Optimización parcial del rendimiento, como la medición del viento.
   - Se elimina la interfaz RS422/RS232.
 :::
@@ -83,7 +83,7 @@ Las siguientes estaciones meteorológicas se han actualizado a V2: S500, S700, S
 
 El dispositivo adopta un conector M12 de 8 pines; los pines de diferentes colores proporcionan alimentación y comunicación de datos (como se muestra en el diagrama anterior).
 
-Al trabajar con RS-485, puedes conectar solo 4 cables (sin usar la función de calefacción), y el resto se puede envolver individualmente con cinta para evitar cortocircuitos
+Cuando se trabaja con RS-485, puedes conectar solo 4 cables (sin usar la función de calefacción), y el resto se puede envolver individualmente con cinta para evitar cortocircuitos.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
@@ -91,9 +91,9 @@ Los orificios del cable y los pines del conector del dispositivo deben estar ali
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image8.png" /></div>
 
-Conecta el cable y apriétalo en el sentido de las agujas del reloj
+Conecta el cable y apriétalo en el sentido de las agujas del reloj.
 
-Nota: el cable debe estar orientado hacia la parte inferior antes de insertarlo en la base. De lo contrario, si los pines quedan torcidos puede causar una comunicación anómala.
+Nota: el cable debe estar orientado hacia la parte inferior antes de insertarlo en la base. De lo contrario, si los pines quedan torcidos, puede causar una comunicación anómala.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
@@ -111,7 +111,7 @@ El tamaño de la manga se muestra a continuación.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image12.png" /></div>
 
-Se recomienda que el diámetro del poste sea menor o igual a 75cm.
+Se recomienda que el diámetro del poste sea menor o igual a 75 cm.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image13.png" /></div>
 
@@ -129,9 +129,9 @@ El dispositivo tiene dos modos de funcionamiento, **modo de configuración y mod
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image15.png" /></div>
 
-### Configurar el dispositivo a través del puerto USB
+### Configurar el dispositivo mediante el puerto USB
 
-Hay una tapa redonda impermeable en la parte inferior del dispositivo. Gírala en sentido antihorario para quitar esta tapa y podrás ver un conector USB Type-C y un botón de configuración.
+Hay una tapa redonda impermeable en la parte inferior del dispositivo. Gírala en sentido antihorario para quitarla y podrás ver un conector USB Type-C y un botón de configuración.
 
 Conecta el dispositivo a tu ordenador con un cable USB Type-C. El ordenador instalará automáticamente el controlador del dispositivo. Después de que el controlador se instale correctamente, podrás ver un puerto serie en el administrador de dispositivos.
 
@@ -149,11 +149,11 @@ Si el controlador no se instala automáticamente, haz clic en este enlace para [
 
 ### SenseCAP ONE Configuration Tool
 
-SenseCAP ONE Configuration Tool ofrece una interfaz gráfica para que configures el dispositivo. Y puedes descargar la herramienta desde el siguiente enlace de GitHub:
+SenseCAP ONE Configuration Tool ofrece una interfaz gráfica para que configures el dispositivo. Puedes descargar la herramienta desde el siguiente enlace de GitHub:
 
 &lt;https://github.com/Seeed-Solution/SenseCAP-One-Configuration-Tool/releases&gt;
 
-Selecciona el software para el sistema operativo correspondiente, Windows, macOS o Linux según tus necesidades.
+Selecciona el software para el sistema operativo correspondiente, Windows, macOS o Linux, según tus necesidades.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image18.png" /></div>
 
@@ -165,7 +165,7 @@ La siguiente imagen muestra la interfaz principal de SenseCAP ONE Configuration 
 
 2. Ajusta la velocidad en baudios a 9600.
 
-3. Haz clic en conectar; si la conexión es correcta, el área de datos del sensor a la derecha mostrará las mediciones correspondientes.
+3. Haz clic en Connect; si la conexión es correcta, el área de datos del sensor a la derecha mostrará las mediciones correspondientes.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
@@ -177,13 +177,13 @@ Haz clic en Settings para entrar en los ajustes del dispositivo y haz clic en "R
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
 
-2. Modifica la dirección Modbus: escribe la dirección en el campo Modbus address y luego haz clic en "Write to Device".
+2. Modifica la dirección Modbus: escribe la dirección en Modbus address y luego haz clic en "Write to Device".
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
 En la página de configuración, puedes modificar lo siguiente: nombre del dispositivo, tipo de datos e intervalo de carga de datos. Después de cualquier modificación, deberás hacer clic en "Write to Device" para que los cambios surtan efecto.
 
-En los ajustes de la aplicación, puedes establecer el ciclo para que la herramienta lea los datos del sensor, con un mínimo de 2S, y un rango de puntos para la curva.
+En los ajustes de aplicación, puedes establecer el ciclo para que la herramienta lea los datos del sensor, con un mínimo de 2S, y un rango de puntos para la curva.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image24.png" /></div>
 
@@ -191,7 +191,7 @@ Haz clic en "Firmware Update" para actualizar el firmware del dispositivo. Ponte
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image25.png" /></div>
 
-En la página de actualización, deberás elegir actualizar el firmware de la placa principal o el firmware de la placa controladora. Selecciona el archivo de firmware en tu repositorio local y haz clic en "Update Now". Si hay un corte de energía inesperado durante el proceso de actualización, la actualización no se ejecutará. Deberás repetir el mismo proceso para actualizar el firmware.
+En la página de actualización, tendrás que elegir si deseas actualizar el firmware de la placa principal o el firmware de la placa controladora. Selecciona el archivo de firmware en tu repositorio local y haz clic en "Update Now". Si hay un corte de energía inesperado durante el proceso de actualización, la actualización no se ejecutará. Tendrás que seguir el mismo proceso para actualizar el firmware.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
@@ -217,7 +217,7 @@ En la página de actualización, deberás elegir actualizar el firmware de la pl
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Master_board.png" /></div>
 
-- Haz clic en `"Local File"` y busca la carpeta del firmware
+- Haz clic en `"Local File"` y navega hasta la carpeta del firmware
 
 - Haz clic en `"Update"`
 
@@ -265,7 +265,7 @@ Consulta el comando ASIIC detallado en el siguiente capítulo.
 
 # Protocolos de comunicación
 
-El dispositivo es compatible con los siguientes protocolos de comunicación:
+El dispositivo admite los siguientes protocolos de comunicación:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image29.png" /></div>
 
@@ -279,7 +279,7 @@ El dispositivo es compatible con los siguientes protocolos de comunicación:
 
 Los datos del sensor se almacenan en el registro de entrada y son de solo lectura.
 
-La dirección del dispositivo y la velocidad en baudios de comunicación de RS-485 se almacenan en el registro de retención y se pueden modificar.
+La dirección del dispositivo y la velocidad en baudios de RS-485 se almacenan en el registro de retención y se pueden modificar.
 
 Cada registro es de 16 bits y ocupa 2 bytes.
 
@@ -291,7 +291,7 @@ Cada registro es de 16 bits y ocupa 2 bytes.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image33.png" /></div>
 
-### Definición de la dirección de registro
+### Definición de dirección de registro
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image34.png" /></div>
 
@@ -317,7 +317,7 @@ Configura el ID de esclavo predeterminado (5-en-1 es 10, 7-en-1 es 20, 9-en-1 es
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image38.png" /></div>
 
-Ahora el ordenador lee los datos del sensor cada 1 segundo, y la medición (línea 0 y línea 1) se muestra en la imagen siguiente; después de dividir la medición entre 1000, se obtiene el valor real de temperatura, 28300/1000 = 28,3 °C
+Ahora el ordenador lee los datos del sensor cada 1 segundo, y la medición (línea 0 y línea 1) se muestra en la imagen siguiente; después de dividir la medición por 1000, se obtiene el valor real de temperatura, 28300/1000 = 28,3 °C
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image39.png" /></div>
 
@@ -333,7 +333,7 @@ Cuando la temperatura es positiva:
 
 **Cuando la temperatura es negativa**
 
-La temperatura debe obtenerse mediante un cálculo de complemento.
+Es necesario obtener la temperatura mediante un cálculo de complemento.
 
 1. El host envía 01 04 00 00 00 02 71 CB
 
@@ -351,7 +351,7 @@ Lee el registro 0x0000~0x0005.
 
 Enviar comando: 0A 04 00 00 00 06 71 73（código de comprobación）；
 
-Respuesta: 26 04 40 00 00 70 80（Temperatura）00 00 95 10（Humedad） 06 07 94 40（Presión de aire）99 09（código de comprobación）；Lee el registro 0x0008~0x0013. Enviar comando: 0A 04 00 08 00 0C 70 B6（código de comprobación）；
+Respuesta: 26 04 40 00 00 70 80（Temperatura）00 00 95 10（Humedad） 06 07 94 40（Presión atmosférica）99 09（código de comprobación）；Lee el registro 0x0008~0x0013. Enviar comando: 0A 04 00 08 00 0C 70 B6（código de comprobación）；
 
 Respuesta: 0A 04 0C 00 00 00 00（Dirección mínima del viento）00 03 6E 84（Dirección máxima del viento）00 03 C8 C0（Dirección media del viento）00 00 00 00（Velocidad mínima del viento）00 00 04 BC（Velocidad máxima del viento）00 00 02 10（Velocidad media del viento）BC 78（código de comprobación）
 
@@ -361,7 +361,7 @@ Lee el registro 0x0000~0x0013
 
 Enviar comando: 45 03 00 00 00 13 0B 43
 
-Respuesta: 45 04 40 00 00 70 80（Temperatura） 00 00 95 10（Humedad） 06 07 94 40（Presión de aire） 00 00 00 00（Luz） 00 00 00 00（Dirección mínima del viento） 00 00 00 00（Velocidad máxima del viento） 00 00 00 00（Dirección media del viento） 00 00 00 00 （Velocidad mínima del viento） 00 00 00 00（Velocidad máxima del viento） 00 00 00 00（Velocidad media del viento）77FD（código de comprobación）
+Respuesta: 45 04 40 00 00 70 80（Temperatura） 00 00 95 10（Humedad） 06 07 94 40（Presión atmosférica） 00 00 00 00（Luz） 00 00 00 00（Dirección mínima del viento） 00 00 00 00（Velocidad máxima del viento） 00 00 00 00（Dirección media del viento） 00 00 00 00 （Velocidad mínima del viento） 00 00 00 00（Velocidad máxima del viento） 00 00 00 00（Velocidad media del viento）77FD（código de comprobación）
 
 **Decodificación S700**
 
@@ -369,7 +369,7 @@ Lee el registro 0x0000-0x001F y 0x0030-0x0033.
 
 Enviar comando: 14 04 00 00 00 20 F3 06
 
-Respuesta: 14 04 40 00 00 70 80（Temperatura） 00 00 95 10（Humedad） 06 07 94 40（Presión de aire） 00 00 00 00（Luz） 00 00 00 00（Dirección mínima del viento） 00 00 00 00（Dirección máxima del viento） 00 00 00 00（Dirección media del viento） 00 00 00 00 （Velocidad mínima del viento）00 00 00 00（Velocidad máxima del viento) 00 00 00 00（Velocidad media del viento） 00 00 00 00（Lluvia acumulada） 00 00 00 00（Duración de la lluvia acumulada） 00 00 00 00（Intensidad de lluvia） 00 00 00 00（Intensidad máxima de lluvia） 00 00 6A 7C（Temperatura de calefacción） 00 00 00 00（El estado de vuelco） 99 09（código de comprobación）
+Respuesta: 14 04 40 00 00 70 80（Temperatura） 00 00 95 10（Humedad） 06 07 94 40（Presión atmosférica） 00 00 00 00（Luz） 00 00 00 00（Dirección mínima del viento） 00 00 00 00（Dirección máxima del viento） 00 00 00 00（Dirección media del viento） 00 00 00 00 （Velocidad mínima del viento）00 00 00 00（Velocidad máxima del viento) 00 00 00 00（Velocidad media del viento） 00 00 00 00（Lluvia acumulada） 00 00 00 00（Duración de la lluvia acumulada） 00 00 00 00（Intensidad de lluvia） 00 00 00 00（Intensidad máxima de lluvia） 00 00 6A 7C（Temperatura de calefacción） 00 00 00 00（El estado de vuelco） 99 09（código de comprobación）
 
 **Decodificación S900**
 
@@ -377,13 +377,13 @@ Lee el registro 0x0000-0x001F y 0x0030-0x0033.
 
 Enviar comando: 26 04 00 00 00 20 F7 05
 
-Respuesta: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Humedad) 06 07 94 40(Presión de aire) 00 00 00 00(Luz) 00 00 00 00(Dirección mínima del viento) 00 00 00 00(Dirección máxima del viento) 00 00 00 00(Dirección media del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00(Velocidad máxima del viento) 00 00 00 00(Velocidad media del viento) 00 00 00 00(Lluvia acumulada) 00 00 00 00(Duración de la lluvia acumulada) 00 00 00 00(Intensidad de lluvia) 00 00 00 00(Intensidad máxima de lluvia)00 00 6A 7C(Temperatura de calefacción) 00 00 00 00(El estado de vuelco) 99 09(código de comprobación)
+Respuesta: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Humedad) 06 07 94 40(Presión atmosférica) 00 00 00 00(Luz) 00 00 00 00(Dirección mínima del viento) 00 00 00 00(Dirección máxima del viento) 00 00 00 00(Dirección media del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00(Velocidad máxima del viento) 00 00 00 00(Velocidad media del viento) 00 00 00 00(Lluvia acumulada) 00 00 00 00(Duración de la lluvia acumulada) 00 00 00 00(Intensidad de lluvia) 00 00 00 00(Intensidad máxima de lluvia)00 00 6A 7C(Temperatura de calefacción) 00 00 00 00(El estado de vuelco) 99 09(Código de comprobación)
 
 PM2.5 y PM10 deben leerse por separado：
 
 Enviar comando: 26 04 00 30 00 04 F7 11
 
-Respuesta: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(código de comprobación)
+Respuesta: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Código de comprobación)
 
 **Decodificación S1000**
 
@@ -391,19 +391,19 @@ Lee el registro 0x0000-0x001F y 0x0030-0x0033.
 
 Enviar comando: 2B 04 00 00 00 20 F6 18
 
-Respuesta: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Humedad) 06 07 94 40(Presión de aire) 00 00 00 00(Luz) 00 00 00 00(Dirección mínima del viento) 00 00 00 00(Dirección máxima del viento) 00 00 00 00(Dirección media del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00(Velocidad máxima del viento) 00 00 00 00(Velocidad media del viento) 00 00 00 00(Lluvia acumulada) 00 00 00 00(Duración de la lluvia acumulada) 00 00 00 00(Intensidad de lluvia) 00 00 00 00(Intensidad máxima de lluvia)00 00 6A 7C(Temperatura de calefacción) 00 00 00 00(El estado de vuelco) 99 09(código de comprobación)
+Respuesta: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Humedad) 06 07 94 40(Presión atmosférica) 00 00 00 00(Luz) 00 00 00 00(Dirección mínima del viento) 00 00 00 00(Dirección máxima del viento) 00 00 00 00(Dirección media del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00(Velocidad máxima del viento) 00 00 00 00(Velocidad media del viento) 00 00 00 00(Lluvia acumulada) 00 00 00 00(Duración de la lluvia acumulada) 00 00 00 00(Intensidad de lluvia) 00 00 00 00(Intensidad máxima de lluvia)00 00 6A 7C(Temperatura de calefacción) 00 00 00 00(El estado de vuelco) 99 09(Código de comprobación)
 
 PM2.5, PM10 y CO2 deben leerse por separado：
 
 Enviar comando: 2B 04 00 30 00 04 F6 0C
 
-Respuesta: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(código de comprobación)
+Respuesta: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Código de comprobación)
 
 Lee el registro 0x0040~0x0041.
 
 Enviar comando:2B 04 00 40 00 02 77 D5
 
-Devolución:2B 04 04 00 0C EC 98 （CO2） FD 2F （Código de comprobación）；
+Devolución: 2B 04 04 00 0C EC 98 (CO2) FD 2F (Código de comprobación);
 
 ### Sensor de ruido
 
@@ -419,7 +419,7 @@ El protocolo de comunicación adopta el protocolo estándar RS485 Modbus-RTU y l
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image41.png" /></div>
 
-Consulta de los datos del sensor de ruido (dirección: 40, 0x28) :
+Consulta de los datos del sensor de ruido (dirección: 40, 0x28):
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image42.png" /></div>
 
@@ -491,12 +491,12 @@ Por favor, consulta [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User G
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image48.png" /></div>
 
-**La configuración de comunicación:**
+**Los ajustes de comunicación:**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image49.png" /></div>
 
 Conecta el cable verde (GND Data) y el cable amarillo (SDI-12 Data) al depurador **USB to SDI-12**.
 
-Y conecta el cable rojo (Vin+ alimentación positiva) y el cable marrón (Vin- tierra de alimentación) a la fuente de alimentación de 12V.
+Y conecta el cable rojo (Vin+ positivo de alimentación) y el cable marrón (Vin- tierra de alimentación) a la fuente de alimentación de 12V.
 
 Descarga el asistente de depuración de puerto serie:
 &lt;https://github.com/Neutree/COMTool&gt;, y luego abre la herramienta de depuración de puerto serie.
@@ -521,7 +521,7 @@ Envía el "comando de inicio de medición 0M!", el sensor primero responde con "
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
-Luego envía " comando de lectura de valor de medición 0D0!" para obtener los 4 valores medidos de esta medición, que son temperatura del aire +27.01℃, humedad del aire 64.74%, presión barométrica 100720Pa e intensidad de la luz 10Lux.
+Luego envía "comando de lectura de valor de medición 0D0!" para obtener los 4 valores medidos de esta medición, que son temperatura del aire +27.01℃, humedad del aire 64.74%, presión barométrica 100720Pa e intensidad de la luz 10Lux.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image52.png" /></div>
 
@@ -529,7 +529,7 @@ Usa el comando de medición extendida 0M1! para leer dirección mínima del vien
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image53.png" /></div>
 
-Luego envía "Comando de lectura de valor de medición 0D0!" para obtener los 6 valores medidos de esta medición, que son dirección mínima del viento 345.9 grados, dirección máxima del viento 347.5 grados, dirección media del viento 346.3 grados, velocidad mínima del viento 2.8m/s, y velocidad máxima del viento 2.8m/s, velocidad media del viento 2.8m/s.
+Luego envía "comando de lectura de valor de medición 0D0!" para obtener los 6 valores medidos de esta medición, que son dirección mínima del viento 345.9 grados, dirección máxima del viento 347.5 grados, dirección media del viento 346.3 grados, velocidad mínima del viento 2.8m/s, velocidad máxima del viento 2.8m/s, velocidad media del viento 2.8m/s.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image54.png" /></div>
 
@@ -559,4 +559,4 @@ Luego envía "comando de medición continua 0R2! el dispositivo devuelve 4 valor
 
 **¿Cómo se calculan la velocidad y la dirección media del viento?**
 
-La ventana de tiempo promedio predeterminada es de 5s. Dentro de esta ventana, el dispositivo recopilará datos de velocidad y dirección del viento cinco veces y devolverá un valor promedio.
+La ventana de tiempo promedio predeterminada es de 5 s. Dentro de esta ventana, el dispositivo recopilará datos de velocidad y dirección del viento cinco veces y devolverá un valor promedio.
