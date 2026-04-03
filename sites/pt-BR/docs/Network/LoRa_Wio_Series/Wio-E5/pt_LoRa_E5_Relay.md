@@ -13,6 +13,8 @@ createdAt: '2026-03-28'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/pt-br/lora-e5_relay/
 ---
+# Guia da Função de Repetidor LoRaWAN do Wio-E5
+
 <!-- ![Wio E5](https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -28,8 +30,6 @@ url: https://wiki.seeedstudio.com/pt-br/lora-e5_relay/
 
 > LoRaWAN® é uma marca usada sob licença da LoRa Alliance®.
 A marca LoRa® é uma marca registrada da Semtech Corporation ou de suas subsidiárias.
-
-# Guia da Função de Repetidor LoRaWAN do Wio-E5
 
 **Hardware aplicável**: Módulo LoRa® Wio-E5
 

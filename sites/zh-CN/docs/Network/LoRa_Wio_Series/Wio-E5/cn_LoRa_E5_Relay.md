@@ -13,6 +13,8 @@ createdAt: '2026-03-28'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/cn/lora-e5_relay/
 ---
+# Wio-E5 LoRaWAN 中继功能指南
+
 <!-- ![Wio E5](https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -28,8 +30,6 @@ url: https://wiki.seeedstudio.com/cn/lora-e5_relay/
 
 > LoRaWAN® 是在 LoRa Alliance® 许可下使用的标志。
 LoRa® 标志是 Semtech Corporation 或其子公司的商标。
-
-# Wio-E5 LoRaWAN 中继功能指南
 
 **适用硬件**：Wio-E5 LoRa® 模组
 

@@ -13,6 +13,8 @@ createdAt: '2026-03-28'
 updatedAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/ja/lora-e5_relay/
 ---
+# Wio-E5 LoRaWAN リレー機能ガイド
+
 <!-- ![Wio E5](https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -28,8 +30,6 @@ url: https://wiki.seeedstudio.com/ja/lora-e5_relay/
 
 > LoRaWAN® は LoRa Alliance® からライセンスを受けて使用されている商標です。
 LoRa® マークは Semtech Corporation またはその子会社の商標です。
-
-# Wio-E5 LoRaWAN リレー機能ガイド
 
 **対象ハードウェア**: Wio-E5 LoRa® モジュール
 
