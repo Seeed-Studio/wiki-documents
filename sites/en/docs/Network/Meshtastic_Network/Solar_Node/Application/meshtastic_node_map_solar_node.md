@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png
 slug: /meshtastic_node_map_solar_node
 sku: 114993643,114993633
-sidebar_position: 2
+sidebar_position: 1
 last_update:
   date: 3/19/2026
   author: Michelle Huang

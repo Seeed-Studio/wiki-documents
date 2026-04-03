@@ -32,13 +32,13 @@ Connect your device with a USB cable to the computer. Please make sure the cable
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio SenseCAP Solar` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Choose `Repeater`. If you want to flash other firmware, please [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) to see the tutorial.
+Choose `Repeater`. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
@@ -78,13 +78,13 @@ Connect your device with a USB cable to the computer. Please make sure the cable
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio SenseCAP Solar` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Choose `Repeater`. If you want to flash other firmware, please [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) to see the tutorial.
+Choose `Repeater`. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/Repeater.png" alt="pir" width={800} height="auto" /></p>
 
@@ -226,7 +226,10 @@ The device needs to be activated by connecting the USB cable. The blue Mesh LED 
 The blue mesh LED light will not turn on until it send advert.
 
 :::tip
-If the device doesn't respond when you insert the USB cable, please charge it first. Do not use the fast-charging charger.
+It was not until the release of version 1.14.1 that the power button was enabled. Press the device for `3s` to turn on/off the devcice. You will see a white light shortly blink. This indicates the device is successfully turning on.
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/blinkingonetime.mp4" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 :::
 
 
@@ -236,7 +239,7 @@ If the device doesn't respond when you insert the USB cable, please charge it fi
 
 When MeshCore is flashed onto a LoRa device is for the first time, it is necessary to set the server device's frequency to make it utilize the frequency that is legal in your country or region.
 
-[Click here](https://config.meshcore.dev/) to configure the repeater.
+[Click here](https://config.meshcore.io/) to configure the repeater.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -253,13 +256,10 @@ Change the LoRa region and save setting. Then `Reboot` the device, or else the s
 |US|United States|902.0 - 928.0|100|30|
 |EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
-Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
-
 :::info
 **EU_868** has to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
 
-Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
 - **Step2 Send Advert**
 
@@ -474,4 +474,4 @@ When you have completed the above steps, then you can [flash the application fir
 The Xiao nRF-52840 Plus maximum charging current is 200 mA. The charging management chip CN3165 is 0.99A. So the maximum charging current is 1A.
 
 ## Resource
-- [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/mesh_repeater_power_table_en1.xlsx)

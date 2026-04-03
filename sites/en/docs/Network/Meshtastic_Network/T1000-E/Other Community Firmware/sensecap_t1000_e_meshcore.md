@@ -27,13 +27,13 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio SenseCAP T1000-E` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) to see the tutorial.
+Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
@@ -69,13 +69,13 @@ Connect your device with a USB cable to the computer.
 Please keep the USB cable connected while the data transmission, or else the device can be damaged.
 :::
 
-Go to the [Meshcore Web Flasher](https://flasher.meshcore.co.uk/). 
+Go to the [Meshcore Web Flasher](https://meshcore.io/flasher). 
 
 Choose `Seeed Studio Wio Tracker T1000-E` in the `Community Firmware` group.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/DeviceSelection.png" alt="pir" width={800} height="auto" /></p>
 
-Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://github.com/meshcore-dev/MeshCore/blob/main/docs/faq.md) to see the tutorial.
+Choose `Companion Bluetooth`. Devices flashed with Bluetooth companion firmware can be connected to the APP. If you want to flash other firmware, please [click here](https://docs.meshcore.io/) to see the tutorial.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/BluetoothCompanion.png" alt="pir" width={800} height="auto" /></p>
 
