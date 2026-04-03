@@ -11,10 +11,9 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2023-02-24'
-updatedAt: '2025-09-04'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
-
 # Getting Started with the S2100 and a 12V RS485 Sensor
 
 This guide will help you get started with the S2100 and a 12V RS485 sensor. After completing this, you’ll understand how to connect your own customized sensor in the future.
