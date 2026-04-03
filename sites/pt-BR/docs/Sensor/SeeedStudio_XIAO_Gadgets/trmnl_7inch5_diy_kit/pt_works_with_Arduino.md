@@ -11,7 +11,7 @@ last_update:
   date: 06/29/2025
   author: Allen
 createdAt: '2025-07-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino/
 ---
 

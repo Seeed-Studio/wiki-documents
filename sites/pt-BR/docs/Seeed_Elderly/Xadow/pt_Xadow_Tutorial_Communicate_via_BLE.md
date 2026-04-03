@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-02-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Xadow_Tutorial_Communicate_via_BLE/
 ---
 Você já pensou na seguinte cena: abrir o telefone e ver a pressão barométrica atual ou a aceleração de movimento? O módulo Xadow pode ajudá-lo a alcançar isso.

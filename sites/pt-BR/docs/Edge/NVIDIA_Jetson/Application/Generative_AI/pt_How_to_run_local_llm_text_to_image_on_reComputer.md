@@ -9,7 +9,7 @@ last_update:
   date: 04/01/2024
   author: Bruno
 createdAt: '2024-04-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/How_to_run_local_llm_text_to_image_on_reComputer/
 ---
 

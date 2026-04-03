@@ -9,7 +9,7 @@ last_update:
   date: 09/26/2023
   author: Jessie
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 08/19/2024
   author: Spencer
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_mr60fda2_mmwave_kit/
 ---
 

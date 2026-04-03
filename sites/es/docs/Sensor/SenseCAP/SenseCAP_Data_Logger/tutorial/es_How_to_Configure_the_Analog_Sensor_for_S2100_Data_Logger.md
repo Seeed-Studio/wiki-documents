@@ -9,11 +9,11 @@ last_update:
   date: 3/18/2026
   author: Kian
 createdAt: '2023-02-24'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_Analog_Sensor_for_S2100_Data_Logger/
 ---
 
-# Primeros pasos con el S2100 y el sensor de entrada analógica
+# Primeros pasos con S2100 y el sensor de entrada analógica
 
 Comencemos aprendiendo cómo usar el S2100 con un sensor de entrada analógica. Una vez que lo tengamos claro, pasaremos a lo básico de la aplicación del S2100. Esto te dará una buena idea de cómo conectar tu propio sensor personalizado en el futuro.
 
@@ -63,12 +63,12 @@ Primero, tenemos que hacer el cableado. Sigue los pasos a continuación.
 
 ## Resolución
 
-| **Interfaz**                    | **Valor**                   |
-| -------------------------------- | --------------------------- |
-| Entrada de corriente	           |  4 a 20 mA (2 canales)      |
-| Resolución de entrada de corriente (I1/I2) |  0.001 mA                   |
-| Entrada de tensión               |	0 a 10V (2 canales)        |
-| Resolución de entrada de tensión (V1/V2) |  0.01 mV                    |
+| **Interfaz**                   | **Valor**                  |
+| --------------------------------|--------------------------- |
+| Entrada de corriente            | 4 a 20 mA (2 canales)      |
+| Resolución de entrada de corriente (I1/I2)| 0.001 mA         |
+| Entrada de tensión              | 0 a 10V (2 canales)        |
+| Resolución de entrada de tensión (V1/V2)| 0.01 mV           |
 
 ## Opciones de alimentación del sensor
 
@@ -76,7 +76,7 @@ El Data Logger admite dos modos de alimentación; elegimos el modo de batería i
 
 | **Modo** | **Descripción** |
 | --- | --- |
-| Batería integrada | El Data Logger y los sensores se alimentan con baterías. En este caso, el Data Logger se puede conectar a un sensor de 5V. |
+| Built-in Battery | El Data Logger y los sensores se alimentan con baterías. En este caso, el Data Logger se puede conectar a un sensor de 5V. |
 
 ## Conectar al Datalogger
 
@@ -98,7 +98,7 @@ Secuencia de cables del Datalogger:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/8.png"/></div>
 
-3. **Aprieta los tornillos y las tapas roscadas****para comprobar la estanqueidad al agua**. Si el diámetro del cable es demasiado fino, añade cinta impermeable para el enrollado.
+3. **Aprieta los tornillos y las tapas roscadas****para comprobar la estanqueidad al agua**. Si el diámetro del cable es demasiado fino, añade cinta impermeable para enrollarlo.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/9.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/10.png"/></div>
@@ -149,7 +149,7 @@ La plataforma SenseCAP for TTN debe utilizarse con la pasarela exterior SenseCAP
 
 ### Establecer el intervalo
 
-El modo de funcionamiento del dispositivo: despierta el dispositivo en cada intervalo y recoge los valores de medición y los sube a través de LoRa.
+El modo de funcionamiento del dispositivo: despertar el dispositivo en cada intervalo, recoger los valores de medición y subirlos a través de LoRa.
 
 Por ejemplo, el dispositivo recoge y sube datos **cada 60 minutos de forma predeterminada**.
 
@@ -177,7 +177,7 @@ Cuando cometamos un error o queramos restablecer todo, podemos hacer clic en el 
 
 **\*Nota:** La función "Restore Factory" solo puede restablecer la configuración básica.
 
-## Configurar el sensor analógico mediante la App
+## Configurar el sensor analógico a través de la App
 
 Selecciona el “Protocol” como “Analog Input”. Luego configura los siguientes parámetros por turno.
 
@@ -185,23 +185,23 @@ Selecciona el “Protocol” como “Analog Input”. Luego configura los siguie
 
 Selecciona el tipo de alimentación como **Periodical power**.
 
-| Tensión de alimentación | Seleccionamos **5V** aquí. |
+| Power Voltage | Seleccionamos **5V** aquí. |
 | --- | --- |
-| Tiempo de calentamiento del sensor | El tiempo de calentamiento indica el tiempo que tarda el sensor en alcanzar su máxima precisión o nivel de rendimiento una vez que se ha aplicado la alimentación. Introducimos **200(ms)** aquí. |
-| Rango de tensión | 0-10V (el Data Logger puede recoger señales de tensión dentro de 0~10V y ajustar automáticamente el límite superior para aumentar la precisión). Seleccionamos **Voltage** aquí. |
-| Interfaz V1 | El Data Logger admite dos señales de tensión analógica. Cuando el cable del sensor está conectado a V1/V2, se puede habilitar la configuración. Habilitamos **Interface V1** aquí. |
-| Interfaz V2 |
-| Y= Ax + B | "Y": es el valor que el Data Logger subirá. "x": es el valor de corriente original. Factor A: valores personalizados que pueden escalarse hacia arriba o hacia abajo por múltiplos de "x". Factor B: un valor personalizado que incrementa o disminuye el valor de "x". Al configurar los valores de A y B, puedes calcular el valor deseado. Establecemos A como **100** y B como **0** aquí. |
+| Sensor Warm-up Time | El tiempo de calentamiento indica el tiempo que tarda el sensor en alcanzar su máxima precisión o nivel de rendimiento una vez que se ha aplicado la alimentación. Introducimos **200(ms)** aquí. |
+| Voltage Range | 0-10V (el Data Logger puede recoger señales de tensión dentro de 0~10V y ajustar automáticamente el límite superior para aumentar la precisión). Seleccionamos **Voltage** aquí. |
+| Interface V1 | El Data Logger admite dos señales de tensión analógica. Cuando el cable del sensor está conectado a V1/V2, se puede habilitar la configuración. Habilitamos **Interface V1** aquí. |
+| Interface V2 |
+| Y= Ax + B | "Y": es el valor que el Data Logger subirá. "x": es el valor de corriente original. Factor A: valores personalizados que pueden escalarse hacia arriba o hacia abajo por múltiplos de "x". Factor B: un valor personalizado que incrementa o disminuye el valor de "x". Al establecer los valores de A y B, puedes calcular el valor deseado. Establecemos A como **100** y B como **0** aquí. |
 
 Una vez completada la información de configuración, haz clic en "Back to Home" (en este momento, el nodo y el Bluetooth de la APP se desconectarán automáticamente), y el Data Logger intentará conectarse a la red (el indicador LED parpadea en rojo lentamente cuando intenta conectarse a la red y parpadea en verde rápidamente después de que la conexión a la red se haya realizado correctamente);
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/22.png"/></div>
 
-# Comprobar los datos en el Portal SenseCAP
+# Comprobar datos en el Portal SenseCAP
 
 ## Vincular el sensor al Portal SenseCAP
 
-Por favor, abre la aplicación SenseCAP Mate.
+Por favor, abre la app SenseCAP Mate.
 
 1. **Escanear código QR**
 
@@ -220,13 +220,13 @@ Si la pegatina del código QR está dañada, puedes rellenar manualmente el EUI 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/25.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/26.png"/></div>
 
-## Comprobar datos en la APP SenseCAP Mate
+## Comprobar datos en la app SenseCAP Mate
 
-Finalmente, en la aplicación SenseCAP o en el sitio web [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/), puedes comprobar el estado en línea del dispositivo y los datos más recientes. En la lista de cada sensor, puedes comprobar su estado en línea y la hora de su última carga de datos.
+Por último, en la app SenseCAP o en la página web [http://sensecap.seeed.cc/](http://sensecap.seeed.cc/), puedes comprobar el estado en línea del dispositivo y los datos más recientes. En la lista de cada sensor, puedes comprobar su estado en línea y la hora de su última carga de datos.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/27.png"/></div>
 
-También puedes comprobar la fecha en la APP SenseCAP Mate.
+Además, puedes comprobar los datos en la app SenseCAP Mate.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/28.png"/></div>
 

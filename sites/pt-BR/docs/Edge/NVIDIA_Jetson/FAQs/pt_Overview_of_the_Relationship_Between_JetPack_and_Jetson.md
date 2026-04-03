@@ -11,7 +11,7 @@ last_update:
   date: 06/05/2025
   author: Dayu
 createdAt: '2025-06-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/overview_of_the_relationship_between_jetpack_and_jetson/
 ---
 

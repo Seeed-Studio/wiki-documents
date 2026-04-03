@@ -9,7 +9,7 @@ last_update:
   date: 9/30/2024
   author: YaoHui Zhu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-24'
 url: https://wiki.seeedstudio.com/ja/vnc_for_recomputer/
 ---
 

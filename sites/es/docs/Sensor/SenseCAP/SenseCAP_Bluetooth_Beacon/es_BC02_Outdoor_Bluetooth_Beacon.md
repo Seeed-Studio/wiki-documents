@@ -15,8 +15,7 @@ updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/bluetooth_beacon02_for_sensecap_tracker/
 ---
 
-Una baliza de localización BLE (Bluetooth Low Energy) es un pequeño dispositivo inalámbrico que transmite señales Bluetooth a intervalos regulares. Estos signos pueden ser detectados por dispositivos con Bluetooth, como [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 
-Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), lo que les permite determinar su proximidad a la baliza, construyendo una solución basada en la ubicación para posicionamiento en interiores, seguimiento de activos y otras aplicaciones.
+Una baliza de localización BLE (Bluetooth Low Energy) es un pequeño dispositivo inalámbrico que transmite señales Bluetooth a intervalos regulares. Estos signos pueden ser detectados por dispositivos con Bluetooth, como [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), lo que les permite determinar su proximidad a la baliza, construyendo una solución basada en la ubicación para posicionamiento en interiores, seguimiento de activos y otras aplicaciones.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-113991456-outdoor-bluetooth-beacon.jpg" alt="pir" width={800} height="auto" /></p>
 

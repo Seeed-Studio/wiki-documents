@@ -9,7 +9,7 @@ last_update:
   date: 01/20/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/How-to-build-a-home-soft-router-and-NAS-With-ReComputer/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 09/01/2024
   author: Matthew
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/full_steps_pull_request/
 ---
 

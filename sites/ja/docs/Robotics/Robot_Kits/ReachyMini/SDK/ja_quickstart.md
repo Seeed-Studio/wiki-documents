@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-02-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-28'
 url: https://wiki.seeedstudio.com/ja/reachymini_sdk_quickstart/
 ---
 

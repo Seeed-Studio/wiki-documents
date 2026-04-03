@@ -2,8 +2,8 @@
 description: Comienza con SenseCAP Solar Node para Meshcore y LoRa. Guía para la instalación del dispositivo, flasheo del firmware y conexión del dispositivo.
 title: Comienza con MeshCore en SenseCAP Solar Node
 keywords:
-- Meshcore
-- Solar
+  - Meshcore
+  - Solar
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshcore_solar_node
 sku: 114993633,114993643
@@ -11,6 +11,9 @@ sidebar_position: 1
 last_update:
   date: 3/6/2026
   author: Michelle Huang
+createdAt: '2026-03-06'
+url: https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/
+updatedAt: '2026-03-24'
 ---
 
 :::danger note

@@ -8,7 +8,7 @@ last_update:
   date: 10/29/2025
   author: Zovey
 createdAt: '2025-11-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 11/4/2025
   author: JiahaoLi
 createdAt: '2025-11-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/recomputer_ai_r2140_balena/
 ---
 

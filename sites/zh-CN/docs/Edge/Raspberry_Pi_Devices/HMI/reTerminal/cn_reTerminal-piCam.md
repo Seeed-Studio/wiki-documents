@@ -11,7 +11,7 @@ last_update:
   date: 5/17/2023
   author: Kasun Thushara
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/reTerminal-piCam/
 ---
 # reTerminal 和 Pi 摄像头模块

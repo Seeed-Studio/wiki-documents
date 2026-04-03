@@ -11,7 +11,7 @@ last_update:
   date: 7/24/2024
   author: ZhuYaoHui
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_nvstreamer/
 ---
 # Jetson Platform ServicesでreComputer上のRTSPストリーミング用NVStreamerの使用方法

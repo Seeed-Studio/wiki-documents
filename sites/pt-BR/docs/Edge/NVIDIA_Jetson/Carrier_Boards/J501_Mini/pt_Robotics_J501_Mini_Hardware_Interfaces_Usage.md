@@ -15,10 +15,9 @@ last_update:
   date: 11/04/2025
   author: Dayu
 createdAt: '2025-11-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_j501_mini_getting_started/
 ---
-
 # Hardware da placa carrier Robotics J501 e Primeiros Passos
 
 A Robotics J501 Mini carrier é uma placa carrier de borda de IA compacta e de alto desempenho, projetada para robótica avançada. Compatível com módulos NVIDIA Jetson AGX Orin (32GB/64GB) em modo MAXN, oferece até 275 TOPS de desempenho de IA. Equipada com amplas opções de conectividade — incluindo duas portas Ethernet Gigabit, slots M.2 para módulos 5G e Wi‑Fi/BT, 2 portas USB 3.2, CAN, GMSL2 (via expansão opcional), I2C e UART — ela serve como um poderoso cérebro robótico capaz de processar dados complexos de vários sensores. Com JetPack 6.2.1 e Linux BSP pré-instalados, garante uma implantação sem interrupções.​
@@ -30,7 +29,7 @@ Com suporte a frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch e ROS 2/1,
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J401-Carrier-Board-optional-accessories.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-with-GMSL-Bundle-for-Jetson-AGX-Orintm.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱</font></span></strong>
     </a>
 </div>

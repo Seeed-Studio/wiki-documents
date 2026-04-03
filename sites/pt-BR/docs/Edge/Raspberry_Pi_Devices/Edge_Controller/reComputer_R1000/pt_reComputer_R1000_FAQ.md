@@ -7,7 +7,7 @@ last_update:
   date: 6/21/2024
   author: Harrison Xu
 createdAt: '2024-01-31'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_R1000_FAQ/
 ---
 

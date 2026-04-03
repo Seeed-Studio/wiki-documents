@@ -16,7 +16,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/ja/lerobot_dataset_tool/
 ---
 

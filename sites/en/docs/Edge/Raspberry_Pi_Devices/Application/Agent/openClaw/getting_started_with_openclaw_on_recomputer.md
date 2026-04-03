@@ -14,10 +14,10 @@ image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee
 slug: /getting_started_with_openclaw_on_recomputer
 sku: 100077451,100079040
 last_update:
-  date: 2026-03-19
+  date: 2026-03-19T00:00:00.000Z
   author: Nolan Chen
 createdAt: '2026-03-19'
-updatedAt: '2026-03-19'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/getting_started_with_openclaw_on_recomputer/
 ---
 

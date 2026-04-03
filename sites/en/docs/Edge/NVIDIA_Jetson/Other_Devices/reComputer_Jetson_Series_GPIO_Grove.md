@@ -11,7 +11,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/reComputer_Jetson_Series_GPIO_Grove/
 ---
 

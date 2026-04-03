@@ -14,7 +14,7 @@ last_update:
   author: Spencer
 toc_max_heading_level: 3
 createdAt: '2024-04-22'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_at/
 ---
 

@@ -8,7 +8,7 @@ last_update:
   date: 10/18/2024
   author: Citric
 createdAt: '2024-06-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/watcher_operation_guideline/
 ---
 

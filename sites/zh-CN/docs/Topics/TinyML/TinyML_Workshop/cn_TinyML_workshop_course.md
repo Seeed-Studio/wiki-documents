@@ -10,7 +10,7 @@ last_update:
   date: 09/24/2024
   author: Citric, Matthew,Frank
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/tinyml_workshop_course_new/
 ---
 

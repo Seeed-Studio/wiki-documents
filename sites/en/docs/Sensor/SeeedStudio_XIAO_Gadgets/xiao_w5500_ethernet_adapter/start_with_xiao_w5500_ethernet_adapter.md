@@ -12,7 +12,7 @@ last_update:
   date: 06/04/2025
   author: Citric
 createdAt: '2025-06-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/xiao_w5500_ethernet_adapter/
 ---
 

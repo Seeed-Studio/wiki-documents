@@ -10,7 +10,7 @@ last_update:
   date: 1/20/2023
   author: jianjing huang
 createdAt: '2023-01-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Dust_Sensor/
 ---
 

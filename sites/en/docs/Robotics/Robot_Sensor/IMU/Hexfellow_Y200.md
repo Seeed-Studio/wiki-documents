@@ -11,7 +11,7 @@ last_update:
   date: 06/18/2025
   author: ZhuYaoHui
 createdAt: '2025-06-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/hexfellow_y200/
 ---
 

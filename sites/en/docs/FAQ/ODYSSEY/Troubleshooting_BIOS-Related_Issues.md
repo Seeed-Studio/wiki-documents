@@ -7,7 +7,7 @@ last_update:
   date: 6/26/2023
   author: Seraphina
 createdAt: '2023-06-26'
-updatedAt: '2026-03-03'
+updatedAt: '2023-06-26'
 url: https://wiki.seeedstudio.com/Troubleshooting_BIOS-Related_Issues/
 ---
 

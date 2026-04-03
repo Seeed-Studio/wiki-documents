@@ -9,7 +9,7 @@ last_update:
   date: 12/12/2023
   author: Citric
 createdAt: '2024-01-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-vision-ai-v2-camera-supported/
 ---
 

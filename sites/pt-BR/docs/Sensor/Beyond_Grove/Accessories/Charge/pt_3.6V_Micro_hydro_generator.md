@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2023-02-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/3.6V_Micro_hydro_generator/
 ---
 ![https://www.seeedstudio.com/depot/images/large/product/mhg_01_LRG.jpg](http://bz.seeedstudio.com/depot/images/large/product/mhg_01_LRG.jpg)

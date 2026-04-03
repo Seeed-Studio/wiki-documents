@@ -12,7 +12,7 @@ last_update:
   date: 01/06/2026
   author: Zeller
 createdAt: '2026-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_buletooth_usage/
 ---
 

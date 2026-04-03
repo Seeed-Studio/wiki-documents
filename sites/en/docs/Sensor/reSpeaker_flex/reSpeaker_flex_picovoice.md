@@ -1,6 +1,5 @@
 ---
 description: Learn how to implement keyword spotting and NLU using ReSpeaker Flex with the XMOS XVF3800, featuring circular and linear 4-mic arrays for robotics and smart devices.
-
 title: reSpeaker Flex Control Wakeword and NLU with Pico-voice
 keywords:
   - reSpeaker
@@ -8,9 +7,7 @@ keywords:
   - picovoice
   - NLU
   - Keyword Spotting
-
 image: https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg
-
 slug: /respeaker_flex_picovoice_nlu_keyword_spotting
 sku: 114993700
 last_update:
@@ -18,9 +15,8 @@ last_update:
   author: Kasun Thushara
 createdAt: '2026-04-01'
 updatedAt: '2026-04-01'
-url: https://wiki.seeedstudio.com/respeaker_flex_picovoice_nlu_keyword_spotting
+url: https://wiki.seeedstudio.com/respeaker_flex_picovoice_nlu_keyword_spotting/
 ---
-
 ## Introduction 
 
 [Picovoice](https://picovoice.ai/) is a company specializing in on-device voice AI, providing a full stack of technologies such as wake word detection, speech-to-text, and intent recognition that run locally on embedded and edge devices without relying on the cloud. Their solutions are designed for low latency, privacy, and cross-platform deployment, making them suitable for IoT and robotic systems. 

@@ -10,7 +10,7 @@ last_update:
   date: 7/24/2024
   author: ZhuYaoHui
 createdAt: '2024-07-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/run_zero_shot_detection_on_recomputer/
 ---
 

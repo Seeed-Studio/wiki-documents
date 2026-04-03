@@ -11,7 +11,7 @@ last_update:
   date: 04/05/2025
   author: Dayu
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/differences_of_l4t_between_seeed_and_nvidia/
 ---
 

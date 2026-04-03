@@ -11,7 +11,7 @@ last_update:
   date: 04/08/2025
   author: Citric
 createdAt: '2025-04-08'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/getting_started_with_seeed_iot_button/
 ---
 

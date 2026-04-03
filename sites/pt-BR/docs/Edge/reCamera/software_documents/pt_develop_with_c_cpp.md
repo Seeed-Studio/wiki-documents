@@ -13,7 +13,7 @@ last_update:
   date: 06/09/2025
   author: Parker Hu & Yuxin Liang
 createdAt: '2025-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recamera_develop_with_c_cpp/
 ---
 

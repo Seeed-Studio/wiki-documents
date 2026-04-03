@@ -9,7 +9,7 @@ last_update:
   date: 6/3/2025
   author: Zeno
 createdAt: '2025-06-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/benchmark_labs_forecast_integration_for_seeed_weather_stations/
 ---
 # Integração de Previsão Benchmark Labs para Estações Meteorológicas Seeed

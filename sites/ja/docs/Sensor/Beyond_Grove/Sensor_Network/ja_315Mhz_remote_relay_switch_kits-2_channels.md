@@ -10,7 +10,7 @@ last_update:
   date: 05/15/2025
   author: gunengyu
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/ja/315Mhz_remote_relay_switch_kits-2_channels/
 ---
 

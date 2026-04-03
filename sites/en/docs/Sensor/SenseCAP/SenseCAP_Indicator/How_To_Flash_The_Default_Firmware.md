@@ -11,7 +11,7 @@ last_update:
   date: 11/17/2023
   author: Spencer
 createdAt: '2023-05-01'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-17'
 url: https://wiki.seeedstudio.com/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware/
 ---
 import Tabs from '@theme/Tabs';

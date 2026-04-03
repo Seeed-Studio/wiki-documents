@@ -9,7 +9,7 @@ last_update:
   author: Eico
 no_comments: false
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Relay_Shield_v3/
 ---
 

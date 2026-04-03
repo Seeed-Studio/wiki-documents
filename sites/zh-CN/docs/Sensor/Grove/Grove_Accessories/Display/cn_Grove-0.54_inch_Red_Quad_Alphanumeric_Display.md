@@ -10,7 +10,7 @@ last_update:
   date: 1/7/2023
   author: shuxu hu
 createdAt: '2024-04-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-0.54_inch_Red_Quad_Alphanumeric_Display/
 ---
 

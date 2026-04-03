@@ -9,8 +9,8 @@ last_update:
   date: 12/1/2023
   author: Chris (Echo7394)
 createdAt: '2024-01-10'
-updatedAt: '2026-03-03'
-url: https://wiki.seeedstudio.com/esp32c3_smart_thermostat/
+updatedAt: '2026-03-12'
+url: https://wiki.seeedstudio.com/pt-br/esp32c3_smart_thermostat/
 ---
 
 # Xiao ESP32C3 ESPHome Smart ThermoStat

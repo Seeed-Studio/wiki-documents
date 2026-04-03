@@ -14,7 +14,7 @@ last_update:
   date: 3/4/2024
   author: Jessie
 createdAt: '2024-03-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/wio_tracker_dual_stack/
 ---
 

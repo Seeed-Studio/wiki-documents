@@ -7,17 +7,16 @@ sidebar_position: 1
 last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
-createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+createdAt: '2024-10-30'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/ja/xiao_rp2350_arduino/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Seeed Studio XIAO RP2350 と Arduino
 
-Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/earlephilhower/arduino-pico) により Arduino でのプログラミングに対応しました。このガイドでは、RP2350 ボードで Arduino を使い始めるためのセットアップ手順を説明します。
+Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/earlephilhower/arduino-pico) により Arduino でのプログラミングに対応しました。本ガイドでは、RP2350 ボードで Arduino をセットアップして使い始める方法を説明します。
 
 ## 特長
 
@@ -26,9 +25,9 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 - **ソフトウェアサポート:** C/C++ および MicroPython に対応しており、プロジェクト開発やプロトタイピングを容易にします。
 - **豊富なオンボードリソース:** RGB LED、2MB フラッシュ、520kB SRAM、19 本の多機能 GPIO（アナログ、デジタル、I²C、UART、SPI、PWM）を統合しています。
 - **新たに 8 本の IO を拡張:** 既存の XIAO MCU と比較して、背面に 8 本の IO ピンが追加され、より複雑なアプリケーションをサポートします。
-- **高効率な電源設計:** スリープモードでわずか 50μA の超低消費電力で、バッテリー駆動が可能です。内部 IO による直接的なバッテリー電圧測定により、バッテリーマネジメントシステム（BMS）を強化します。
+- **高効率な電源設計:** スリープモードでわずか 50μA の超低消費電力で、バッテリー駆動が可能です。内部 IO によるバッテリー電圧の直接測定により、バッテリーマネジメントシステム（BMS）を強化します。
 - **親指サイズのコンパクト設計:** 21 x 17.8mm のサイズで、Seeed Studio のクラシックな XIAO フォームファクタを採用しており、省スペース用途に最適です。
-- **量産に適した設計:** すべての部品を表面側に配置した表面実装デバイス（SMD）設計で、両側にスタンピングホールを備え、大量生産を容易にします。
+- **量産に適した設計:** すべての部品を表面側に配置した表面実装デバイス（SMD）設計と、両側のスタンピングホールにより、効率的な量産を実現します。
 
 ## 仕様
 
@@ -60,8 +59,8 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
   </tr>
   <tr>
     <th>インターフェース</th>
-    <td>11 ピン（すべて PWM）：<br/>アナログ x4<br/>デジタル x11<br/>I²C x1<br/>UART x1<br/>SPI x1</td>
-    <td>19 ピン（すべて PWM）：<br/>アナログ x3<br/>デジタル x19<br/>I²C x2<br/>UART x2<br/>SPI x2</td>
+    <td>11 ピン（すべて PWM 対応）：<br/>アナログ x4<br/>デジタル x11<br/>I²C x1<br/>UART x1<br/>SPI x1</td>
+    <td>19 ピン（すべて PWM 対応）：<br/>アナログ x3<br/>デジタル x19<br/>I²C x2<br/>UART x2<br/>SPI x2</td>
   </tr>
   <tr>
     <th>ボタン</th>
@@ -80,8 +79,8 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
   </tr>
   <tr>
     <th>動作温度</th>
-    <td>-20°C〜70°C</td>
-    <td>-20°C〜70°C</td>
+    <td>-20°C-70°C</td>
+    <td>-20°C-70°C</td>
   </tr>
   <tr>
     <th>寸法</th>
@@ -115,7 +114,7 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 </table>
 </div>
 
-ピン配置の詳細が必要ですか？下記の [Assets and Resources](#assets-と-resources) に移動してください。
+ピン配置の詳細が必要ですか？下記の [Assets and Resources](#assets--resources) に移動してください。
 
 
 ## **ピンマップ**
@@ -124,9 +123,9 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 | 5V                      | VBUS       |              |                    | 電源入力/出力                          |
 | GND                     |            |              |                    |                                      |
 | 3V3                     | 3V3_OUT    |              |                    | 電源出力                               |
-| D0                      | Analog     | GPIO26       |                    | GPIO、ADC                            |
-| D1                      | Analog     | GPIO27       |                    | GPIO、ADC                            |
-| D2                      | Analog     | GPIO28       |                    | GPIO、ADC                            |
+| D0                      | アナログ   | GPIO26       |                    | GPIO、ADC                            |
+| D1                      | アナログ   | GPIO27       |                    | GPIO、ADC                            |
+| D2                      | アナログ   | GPIO28       |                    | GPIO、ADC                            |
 | D3                      | SPIO_CSn   | GPIO5        |                    | GPIO、SPI                            |
 | D4                      | SDA1       | GPIO6        |                    | GPIO、I2C データ                      |
 | D5                      | SCL1       | GPIO7        |                    | GPIO、I2C クロック                    |
@@ -146,9 +145,9 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 | ADC_BAT                 |            | GPIO29       |                    | BAT 電圧値を読み取る                  |
 | Reset                   |            | RUN          |                    | RUN                                  |
 | Boot                    |            | RP2040_BOOT  |                    | ブートモードに入る                    |
-| CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_赤                            |
 | RGB LED                 |            | GPIO22       |                    | RGB LED                              |
-| USER_LED                |            | GPIO25       |                    | ユーザーライト_イエロー               |
+| USER_LED                |            | GPIO25       |                    | ユーザーライト_黄                     |
 ## 前提条件
 
 始める前に、次のものを用意してください：
@@ -166,7 +165,7 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 ### 2. RP2350 ボードサポートを追加する
 
 1. Arduino IDE を開き、**File** > **Preferences** に移動します。
-2. **Additional Boards Manager URLs** フィールドに、次の URL を追加します:
+2. **Additional Boards Manager URLs** フィールドに、次の URL を追加します：
 
     ```shell
     https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
@@ -179,7 +178,7 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 3. **OK** をクリックして設定を保存します。
 4. **Tools** > **Board** > **Boards Manager** に移動します。
 5. Boards Manager で **pico** を検索し、**Install** をクリックします。
-6. インストール後、**Tools** > **Board** に移動し、下図に示すボードを選択します。
+6. インストール後、**Tools** > **Board** に移動し、下図のボードを選択します。
 
 :::note
 XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.0 以降をインストールしてください。
@@ -194,15 +193,15 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 スケッチを書き込む前に、XIAO RP2350 を BOOT モードにします。次のいずれかの方法を使用します：
 
 <Tabs>
-<TabItem value="method1" label="方法 1: コンピュータに接続する前">
+<TabItem value="method1" label="方法 1: パソコンに接続する前">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Boot を押し続ける -> ケーブルを接続する -> Boot を離す</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Boot を押し続ける -> ケーブルを接続 -> Boot を離す</em></div></div>
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2: コンピュータに接続中">
+<TabItem value="method2" label="方法 2: パソコンに接続している状態で">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Boot を押し続ける -> Reset をクリックする -> Boot を離す</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Boot を押し続ける -> Reset をクリック -> Boot を離す</em></div></div>
 
 </TabItem>
 </Tabs>
@@ -220,20 +219,20 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 
 
 **ハードウェア設計**
-- **📄[データシート]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
-- **📄[回路図]** [XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
-- **🗃️[PCB 設計ファイル]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
-- **🗃️[PCB ライブラリ]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[ピン配置図]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
+- **📄[データシート]** [Raspberry Pi RP2350 データシート](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
+- **📄[回路図]** [XIAO RP2350 回路図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
+- **🗃️[PCB 設計ファイル]** [XIAO RP2350 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[PCB 設計ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO RP2350 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
 **メカニカル設計**
-- **📄[2D 寸法]** [XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
-- **🔗[3D モデル]** [XIAO RP2350 3D Model](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
+- **📄[2D 寸法]** [DXF 形式の XIAO RP2350 寸法図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[3D モデル]** [XIAO RP2350 3D モデル](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
 **ソフトウェア & ツール**
-- **📄[テスト用ファームウェア]** [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
+- **📄[テスト用ファームウェア]** [XIAO RP2350 低消費電力テスト用ファームウェア](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
 **その他**
 - **📄[ドキュメント]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
@@ -243,11 +242,11 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 - **📄[ドキュメント]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
   - Pico C/C++ SDK の API をまとめた書籍です
  - **📄[arduino-pico GitHub]**(https://github.com/earlephilhower/arduino-pico)
-- **📄[Arduino-Pico Core Documentation]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
+- **📄[Arduino-Pico Core ドキュメント]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
 
 ## サポート & ディスカッション
 
-Seeed の製品をご利用いただきありがとうございます。サポートやコミュニティでのディスカッションには、以下の複数のチャネルをご利用いただけます。
+Seeed の製品をご利用いただきありがとうございます。サポートやコミュニティでのディスカッションのために、複数のチャネルをご用意しています：
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
