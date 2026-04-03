@@ -39,6 +39,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'Firmware Development Tutorial', 'meshcore_source_code_pratical_tutorial_solar_node.md'), //3.27
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Firmware Development Tutorial', 'meshcore_source_code_pratical_tutorial_t1000_e.md'), //3.27
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Firmware Development Tutorial', 'meshcore_source_code_pratical_tutorial_l1.md'), //3.27
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_AI', 'Application', 'Create_New_Application.md'), //3.30
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_intro.md'), //3.26
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

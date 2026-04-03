@@ -11,10 +11,9 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2025-05-27'
-updatedAt: '2025-09-10'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
-
 # S2100と12V RS485 センサーの使用開始
 
 このガイドでは、S2100と12V RS485 センサーの使用開始方法を説明します。これを完了すると、将来的に独自のカスタマイズされたセンサーを接続する方法を理解できるようになります。
@@ -48,6 +47,10 @@ url: https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 3. ねじ込みキャップを取り外し、センサーケーブルをキャップと底面カバーに通し、配線端子に接続します。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
+
+:::note
+S2100データロガーは、`RS485 Modbus RTU`（A/B）、`Analog Input`（V1、V2、I1、I2）、および `Pulse-Level Input`（IO）の3つの測定プロトコルのみをサポートしていますのでご注意ください。
+:::
 
 ### ステップ2.2：配線端子の説明
 

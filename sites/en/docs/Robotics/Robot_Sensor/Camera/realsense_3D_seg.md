@@ -7,7 +7,7 @@ keywords:
   - realsense camera
   - GPU acceleration
   - RGB-D camera
-image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/3D_Seg/tableseg.webp
+image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/3D_Seg/tableseg.jpg
 slug: /realsense_3d_seg
 sku: 113990795,100000540
 last_update:

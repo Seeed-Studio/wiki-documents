@@ -1,9 +1,9 @@
 ---
-description: 一个关于搭建 Meshtastic 固件源代码环境、编译 Wio Tracker L1 目标、做一个简单 UI 修改并烧录固件的实用教程。
-title: Meshtastic 源代码开发教程
+description: 一个实用教程，介绍如何搭建 Meshtastic 固件源代码环境、编译 Wio Tracker L1 目标、做一个简单的 UI 修改并烧录固件。
+title: Meshtastic 源代码开发实用教程
 keywords:
   - Meshtastic
-  - Source Code
+  - 源代码
   - PlatformIO
   - Wio Tracker L1
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png
@@ -22,17 +22,17 @@ import TabItem from '@theme/TabItem';
 
 # Meshtastic 固件源代码实用教程
 
-本教程面向刚开始接触 Meshtastic 固件源代码的用户，涵盖 Windows 和 macOS 的常见工作流程。目标很明确：克隆官方仓库，完成一次成功的构建，做一个简单的 UI 修改，并将修改后的固件烧录到设备上进行验证。
+本教程在 Windows 和 macOS 上演示一个基础的 Meshtastic 固件工作流程：克隆仓库、构建 `seeed_wio_tracker_L1`、做一个小的 UI 修改，并将结果烧录到设备中。
 
-如果你已经熟悉 Git、Python 或 PlatformIO，可以跳过对应章节，直接进入上手实战部分。
+如果你已经安装好了 Git、Python 和 PlatformIO，可以直接跳到动手实践部分。
 
 :::tip
-本指南包含 Windows 和 macOS 通用的命令。大部分截图仍然来自 Windows 环境，但在 macOS 上的整体流程非常相似。
+文中提供了 Windows 和 macOS 双平台的命令。大部分截图基于 Windows，但在 macOS 上的工作流程是相同的。
 :::
 
 ## 前置准备
 
-在开始之前，请先准备好以下工具：
+准备以下工具：
 
 1. Git
 2. Python 3
@@ -44,23 +44,23 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-打开 Git for Windows 官方下载页面：
+打开官方的 Git for Windows 下载页面：
 
 [Git for Windows](https://git-scm.com/install/windows)
 
 通常在你打开页面时，安装程序会自动开始下载。下载完成后，双击安装程序并按照安装向导进行操作。
 
-在安装过程中，最重要的一步是**调整 PATH 环境变量**。请选择：
+安装过程中，最重要的一步是**调整 PATH 环境变量**。请选择：
 
 **Git from the command line and also from 3rd-party software**
 
-对于其他选项，一般保持默认即可。只需不断点击 `Next`。
+对于其他选项，默认值一般就可以，直接连续点击 `Next` 即可。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image1.png)
 
 等待安装完成。
 
-安装完成后，**关闭当前所有 PowerShell 和 VS Code 终端窗口**，然后重新打开一个新的 PowerShell 窗口并运行：
+安装结束后，**关闭当前所有 PowerShell 与 VS Code 终端窗口**，然后重新打开一个新的 PowerShell 窗口并运行：
 
 ```plain
 & "C:\Program Files\Git\cmd\git.exe" --version
@@ -68,11 +68,11 @@ import TabItem from '@theme/TabItem';
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image2.png)
 
-如果显示了 Git 版本号，说明 Git 已成功安装。
+如果能显示出 Git 版本号，说明 Git 已成功安装。
 
-**如果 `git` 命令仍然不可用**
+**如果 `git` 命令依然不可用**
 
-你可以先在 PowerShell 中运行以下命令，确认 Git 的默认安装路径：
+你可以先在 PowerShell 中运行下面的命令，确认 Git 的默认安装路径：
 
 ```plain
 $gitCmd = "C:\Program Files\Git\cmd"
@@ -88,25 +88,25 @@ Write-Host $gitBin
 **图形界面修复步骤**
 
 1. 按下 `Win`
-2. 搜索 "Edit the system environment variables"
+2. 搜索“Edit the system environment variables”
 3. 打开后点击 **Environment Variables**
 4. 在 **System variables** 下找到 `Path`
 5. 点击 **Edit**
-6. 点击 **New** 并添加以下两个路径：
+6. 点击 **New**，添加以下两个路径：
 
 ```plain
 C:\Program Files\Git\cmd
 C:\Program Files\Git\bin
 ```
 
-7. 连续点击 **OK** 保存
+7. 一路点击 **OK** 保存
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image4.png)
 
-保存后，你仍然需要：
+保存后，你还需要：
 
 - 关闭**所有** PowerShell 窗口
-- 重新打开 PowerShell
+- 再次打开 PowerShell
 
 然后运行：
 
@@ -116,21 +116,21 @@ git --version
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image5.png)
 
-如果出现了版本号，说明安装已经完成。
+如果能看到版本号，说明安装已经完成。
 
 </TabItem>
 
 <TabItem value="macos" label="macOS">
 
-在 macOS 上，安装 Git 的方式不止一种，但使用 Homebrew 通常是最简单的选择：
+在 macOS 上，安装 Git 的方式有多种，但使用 Homebrew 通常是最简单的选项：
 
-1. 先安装命令行工具（Command Line Tools）：
+1. 先安装 Command Line Tools：
 
 ```bash
 xcode-select --install
 ```
 
-2. 如果尚未安装 Homebrew，请先安装它：
+2. 如果尚未安装 Homebrew，先安装 Homebrew：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -142,20 +142,20 @@ xcode-select --install
 brew install git
 ```
 
-4. 检查已安装的版本：
+4. 查看已安装的版本：
 
 ```bash
 git --version
 ```
 
-如果终端已经返回了有效的 Git 版本，则无需再次安装。
+如果终端里已经返回了一个有效的 Git 版本，就不需要重复安装。
 
 </TabItem>
 </Tabs>
 
 **配置你的 Git 身份信息**
 
-接下来配置 Git 用户信息。请将示例值替换为你自己的姓名和邮箱地址：
+接下来，配置 Git 用户信息。请将示例值替换为你自己的姓名和邮箱地址：
 
 ```plain
 git config --global user.name "your name"
@@ -184,9 +184,9 @@ winget search --id Python.Python.3.13 --source winget
 winget install -e --id Python.Python.3.13 --source winget
 ```
 
-如果第一个命令可以找到 Python，第二个命令通常会直接安装它。
+如果第一个命令可以找到 Python，第二个命令通常就能直接完成安装。
 
-安装完成后，关闭终端并重新打开，然后运行：
+安装结束后，关闭终端并重新打开，然后运行：
 
 ```plain
 python --version
@@ -195,7 +195,7 @@ pip --version
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image6.png)
 
-如果显示了版本号，说明 Python 和 pip 已经可以使用。
+如果显示出了版本号，说明 Python 和 pip 已经可以正常使用。
 
 </TabItem>
 
@@ -208,7 +208,7 @@ python3 --version
 pip3 --version
 ```
 
-如果它们不可用，或者你希望使用更新的版本，可以通过 Homebrew 安装 Python：
+如果不可用，或者你希望使用更高版本，可以通过 Homebrew 安装 Python：
 
 ```bash
 brew install python
@@ -221,14 +221,14 @@ python3 --version
 pip3 --version
 ```
 
-如果你更习惯使用 `python` 和 `pip`，可以自行设置 shell 别名。不过在 macOS 上，使用 `python3` 和 `pip3` 通常更可靠。
+如果你更习惯使用 `python` 和 `pip`，也可以自己在 shell 中设置别名。不过在 macOS 上，使用 `python3` 和 `pip3` 通常更加可靠。
 
 </TabItem>
 </Tabs>
 
 ### 3. 安装 PlatformIO
 
-这一步对新手来说可能不太友好，因为 PlatformIO 会自动下载很多依赖，安装过程可能需要一些时间。如果安装过程中出现错误，通常最好耐心等待，并逐个排查问题。借助 AI 工具来分析错误信息也能节省时间。
+PlatformIO 在安装过程中会自动下载依赖，因此可能需要一些时间。如果出现错误，请逐条查看并处理。
 
 在 VS Code 扩展市场中搜索 `PlatformIO` 并安装。
 
@@ -253,13 +253,13 @@ cd firmware
 git submodule update --init
 ```
 
-如果你的项目目录在其他盘符或不同路径下，请先切换到对应位置。
+如果你的项目目录在其他盘符或路径下，请先切换到对应位置。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image9.png)
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image10.png)
 
-如果输出内容与上方截图类似，说明仓库已经成功克隆。
+如果输出内容与你看到的截图类似，就说明仓库已经成功克隆。
 
 </TabItem>
 
@@ -280,22 +280,22 @@ git submodule update --init
 mkdir -p ~/workplace
 ```
 
-如果命令正常执行完成，说明仓库已经成功克隆。
+如果上述命令都能正常执行完毕，就表示仓库已经成功克隆。
 
 </TabItem>
 </Tabs>
 
-### 5. 上手实战
+### 5. 动手实践
 
-在这个阶段，先不要急着修改代码。请先确保项目能够完整地跑通一次构建流程。
+在这个阶段，先不要急着修改代码。请先确认工程可以顺利完成一次完整的构建流程。
 
-建议从以下三个任务开始：
+建议先从以下三项任务开始：
 
 1. 打开 `firmware`
 2. 查看 `platformio.ini`
-3. 找到你的目标板卡对应的构建环境
+3. 找到你的目标开发板对应的构建环境
 
-一个重要细节：不要只关注根目录下的 `platformio.ini`。它实际上还包含了额外的配置文件，例如：
+有一个关键细节：不要只关注根目录下的 `platformio.ini`。它实际上还包含了一些额外的配置文件，例如：
 
 ```plain
 extra_configs =
@@ -304,36 +304,26 @@ extra_configs =
     variants/*/diy/*/platformio.ini
 ```
 
-这意味着真正的板级环境定义通常位于 `variants/.../platformio.ini` 下。
+这意味着，真正的板级环境定义通常位于 `variants/.../platformio.ini` 下面。
 
-在确认目标板卡时，特别留意以下两个目录：
+在确认目标开发板时，特别要留意下面两个目录：
 
 - `variants/`
 - `boards/`
 
-这里我们以 **Wio Tracker L1 Pro** 作为示例目标。
+这里我们以 **Wio Tracker L1 Pro** 作为示例目标板。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
-这表明在 Meshtastic 中，**Wio Tracker L1 / L1 Pro 的构建目标是** `seeed_wio_tracker_L1`。
+由此可见，在 Meshtastic 中，**Wio Tracker L1 / L1 Pro 对应的构建目标为** `seeed_wio_tracker_L1`。
 
-**最小修改流程总结**
-
-如果你只想完成一次最小化的端到端实践，请关注以下关键步骤：
-
-1. 安装 Git、Python 3、VS Code 和 PlatformIO。
-2. 克隆 `meshtastic/firmware` 仓库并初始化子模块。
-3. 使用 `pio run -e seeed_wio_tracker_L1` 确认原始项目可以成功构建。
-4. 修改 `src/graphics/SharedUIDisplay.cpp` 中的显示逻辑。
-5. 重新构建固件，并将生成的 UF2 文件烧录到设备上进行验证。
-
-**步骤 1：确认项目可以成功构建**
+**步骤 1：确认工程可以成功构建**
 
 这里我们使用 PlatformIO Core CLI 进行构建。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
-对于第一次构建，建议运行以下命令：
+第一次构建时，建议运行下面的命令：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -357,11 +347,11 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-如果界面与上方截图类似，说明构建流程已经正确启动。第一次构建通常会花费较长时间，请耐心等待。
+如果界面与上图类似，就说明构建流程已经正确启动。第一次构建通常需要较长时间，请耐心等待。
 
 **如果构建失败**
 
-当构建失败时，你可以先让 PlatformIO 安装当前环境所需的依赖：
+当构建失败时，你可以先让 PlatformIO 仅安装当前环境所需的依赖：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -383,11 +373,11 @@ pio pkg install -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-这种方法有几个好处：
+这种方式有几个好处：
 
-- 它只安装依赖项，而不会立即开始完整构建。
-- 它让你更容易看出是哪个软件包导致了问题。
-- 错误信息通常更聚焦，也更容易排查。
+- 只安装依赖，不会立即启动完整构建。
+- 更容易看清是哪个依赖包引发了问题。
+- 错误信息通常更集中，更便于排查。
 
 依赖安装完成后，运行：
 
@@ -411,7 +401,7 @@ pio run -e seeed_wio_tracker_L1 -v
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
-依赖安装完成后，再次运行正常构建：
+依赖安装完成后，再次运行正常的构建命令：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -433,13 +423,13 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image15.png)
 
-如果此时构建通过，说明你的固件输出已经成功生成。
+如果此时构建通过，则表示你的固件输出已成功生成。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image16.png)
 
 **步骤 2：修改代码**
 
-**练习 1：修改 UI 显示**
+**实践 1：修改 UI 显示**
 
 首先从板级配置开始追踪显示实现。你可以先查看：
 
@@ -448,51 +438,24 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image17.png)
 
-从这些配置文件中可以看到，L1 定义了 `HAS_SCREEN` 和 `USE_SSD1306`。这意味着它使用的是标准 OLED 显示管线，而不是无屏配置，也不是电子墨水方案。
+从这些配置文件中，你可以看到 L1 定义了 `HAS_SCREEN` 和 `USE_SSD1306`。这意味着它使用的是标准 OLED 显示管线，而不是无屏幕配置，也不是 E-Ink 方案。
 
 如果继续追踪显示逻辑，大部分相关代码位于：
 
 - `src/graphics/`
 - `src/graphics/draw/`
 
-具体如何修改取决于你阅读源码的能力。这里我们从一个非常简单的例子开始：修改主屏幕 UI。
+这里我们用一个简单的例子：在主界面顶栏添加一个自定义标签。
 
-**修改 1：记录电池文本的右边界**
+使用以下更改更新 `src/graphics/SharedUIDisplay.cpp`：
 
 ```cpp
-Before / After
-
-// Before
-int batteryX = 1;
-int batteryY = HEADER_OFFSET_Y + 1;
-
-// After
+// Track the end of the battery text
 int batteryX = 1;
 int batteryY = HEADER_OFFSET_Y + 1;
 int batteryTextEndX = batteryX - 1;
-```
 
-`src/graphics/SharedUIDisplay.cpp:157`
-
-这里增加了 `batteryTextEndX`，用于记录电池百分比文本的结束位置。这样后续在电池信息后追加自定义文本会更方便。
-
-**修改 2：在绘制电池百分比时计算右边界**
-
-```cpp
-// Before
-if (chargePercent != 101) {
-    char chargeStr[4];
-    snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
-    int chargeNumWidth = display->getStringWidth(chargeStr);
-    display->drawString(batteryX, textY, chargeStr);
-    display->drawString(batteryX + chargeNumWidth - 1, textY, "%");
-    if (isBold) {
-        display->drawString(batteryX + 1, textY, chargeStr);
-        display->drawString(batteryX + chargeNumWidth, textY, "%");
-    }
-}
-
-// After
+// Update the boundary while drawing the battery percentage
 if (chargePercent != 101) {
     char chargeStr[4];
     snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
@@ -508,31 +471,29 @@ if (chargePercent != 101) {
 } else {
     batteryTextEndX = batteryX - 1;
 }
-```
 
-`src/graphics/SharedUIDisplay.cpp:204`
-
-这段代码位于电池百分比绘制逻辑内部。它在正常显示电池电量的同时，也计算文本区域的右边界，以便在电池信息后放置自定义标签。
-
-**修改 3：为右侧图标区域预留边界**
-
-```cpp
-// Before
-int iconRightEdge = timeX - 2;
-
-// After
+// In the branch that displays time
 int iconRightEdge = timeX - 2;
 int headerLabelRight = timeX - 4;
-```
 
-`src/graphics/SharedUIDisplay.cpp:263`
+#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
+if (titleStr && titleStr[0] == '\0') {
+    static const char *yclLabel = "made by AE";
+    int labelWidth = display->getStringWidth(yclLabel);
+    int labelLeft = batteryTextEndX + 4;
+    if (labelLeft + labelWidth <= headerLabelRight) {
+        int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
+        display->drawString(labelX, textY, yclLabel);
+        if (isBold)
+            display->drawString(labelX + 1, textY, yclLabel);
+    }
+}
+#endif
 
-这部分处理右侧时间、邮件、静音等图标所占用的区域。我添加了 `headerLabelRight`，用于限制中间文本的最右边界，避免与右侧内容重叠。
+// In the branch that does not display time
+int iconRightEdge = screenW - xOffset;
+int headerLabelRight = screenW - xOffset - 2;
 
-**修改 4：在标题为空时绘制自定义标签**
-
-```cpp
-// Newly added core logic
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
 if (titleStr && titleStr[0] == '\0') {
     static const char *yclLabel = "made by AE";
@@ -548,49 +509,19 @@ if (titleStr && titleStr[0] == '\0') {
 #endif
 ```
 
-`src/graphics/SharedUIDisplay.cpp:350`
+这次更新做了三件事：
 
-这是本次修改的核心逻辑。它只适用于 `SEEED_WIO_TRACKER_L1`，并显式排除了电子墨水版本。它会在电池信息和时间显示之间的空白区域，将 `made by AE` 文本居中显示。
-
-**修改 5：处理不显示时间的分支**
-
-```cpp
-// Add the same boundary control for the no-time branch
-int iconRightEdge = screenW - xOffset;
-int headerLabelRight = screenW - xOffset - 2;
-```
-
-`src/graphics/SharedUIDisplay.cpp:377`
-
-这是在没有时间值显示时使用的分支。这里同样需要加入边界控制。
-
-```cpp
-#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
-        if (titleStr && titleStr[0] == '\0') {
-            static const char *yclLabel = "made by AE";
-            int labelWidth = display->getStringWidth(yclLabel);
-            int labelLeft = batteryTextEndX + 4;
-            if (labelLeft + labelWidth <= headerLabelRight) {
-                int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
-                display->drawString(labelX, textY, yclLabel);
-                if (isBold)
-                    display->drawString(labelX + 1, textY, yclLabel);
-            }
-        }
-#endif
-```
-
-`src/graphics/SharedUIDisplay.cpp:426`
-
-这是在无时间分支中绘制 `made by AE` 的实现。
+- 记录电池文字的右边缘位置。
+- 在电池区域和右侧图标之间预留空间。
+- 仅在 `SEEED_WIO_TRACKER_L1` 且标题为空时绘制 `made by AE`。
 
 你可以在这里找到完整代码：
 
 [📎SharedUIDisplay.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/SharedUIDisplay.cpp)
 
-**步骤 3：构建你自己的固件**
+**步骤 3：构建你的自定义固件**
 
-完成修改后，返回项目根目录，再次构建相同的目标：
+完成修改后，返回项目根目录，再次构建同一个目标：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -612,13 +543,13 @@ pio run -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-显示逻辑已经改变，但构建目标仍然相同：
+显示逻辑已经改变，但构建目标仍然是同一个：
 
 ```plain
 seeed_wio_tracker_L1
 ```
 
-构建成功后，输出通常位于：
+成功构建后，输出通常位于：
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -638,7 +569,7 @@ D:\workplace\firmware\.pio\build\seeed_wio_tracker_L1\
 </TabItem>
 </Tabs>
 
-你需要确认已更新的文件是：
+你应当确认已经被更新的文件是：
 
 ```plain
 firmware-seeed_wio_tracker_L1-*.uf2
@@ -650,56 +581,56 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 [Meshtastic Flasher](https://flasher.meshtastic.org/)
 
-在大多数情况下，你应该先执行擦除操作。
+在大多数情况下，你需要先执行擦除操作。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image18.png)
 
-然后选择你刚刚构建的固件文件，并将其烧录到设备中。
+然后选择你刚刚构建的固件文件，并将其烧录到设备上。
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image19.png)
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-至此，Meshtastic 源码实战练习就完成了。你已经完整走了一遍工作流：环境搭建、仓库克隆、板卡配置查找、固件编译、显示逻辑修改以及最终烧录验证。
+至此，Meshtastic 源码实战练习已经完成。你已经走完了完整流程：环境搭建、仓库克隆、板级配置探索、固件编译、显示逻辑修改以及最终烧录验证。
 
-如果你想更进一步，可以继续探索以下方向：
+如果你想更进一步，可以继续探索下面这些方向：
 
-1. 修改主屏幕上的更多元素
-2. 调整按键、GPS、蓝牙等模块的行为
-3. 为你自己的板卡添加一个独立的 `variant`
+1. 修改主界面上的更多元素
+2. 调整按键、GPS、蓝牙以及其他模块的行为
+3. 为你自己的板子添加一个独立的 `variant`
 4. 继续追踪 `src/`、`variants/` 和 `boards/` 之间的关系
 
 ## 常见问题
 
 **`git` 命令不可用**
 
-- 在 Windows 上，先检查 Git 是否已添加到 `PATH`。
-- 在 macOS 上，先运行 `git --version`。如果系统提示你安装 Command Line Tools，请按提示操作。
+- 在 Windows 上，先检查是否已经将 Git 添加到 `PATH`。
+- 在 macOS 上，先运行 `git --version`。如果系统提示你安装 Command Line Tools，请按照提示操作。
 
 **`python3` 或 `pip3` 不可用**
 
-- 在 Windows 上，确认安装时已将 Python 添加到 `PATH`，或者重新打开终端再试一次。
-- 在 macOS 上，先检查是否已经存在 `python3` / `pip3`，只有在确实缺失时才使用 Homebrew 安装 Python。
+- 在 Windows 上，确认安装 Python 时已添加到 `PATH`，或者重新打开终端再试一次。
+- 在 macOS 上，先检查是否已经存在 `python3` / `pip3`，仅在确有需要时再使用 Homebrew 安装 Python。
 
 **`pio` 命令不可用**
 
 - 先运行 `pio --version`。
-- 如果命令仍不可用，重启 VS Code 和终端后再试。
+- 如果命令仍然不可用，重启 VS Code 和终端后再试一次。
 - 如有必要，重新安装 PlatformIO 扩展，并确认 PlatformIO Core 已正确初始化。
 
-**执行 `git submodule update --init` 后代码仍然不完整**
+**运行 `git submodule update --init` 后代码仍然不完整**
 
-- 首先确保你位于 `firmware` 仓库的根目录。
+- 首先确认你当前位于 `firmware` 仓库的根目录。
 - 如果网络连接不稳定，可以尝试使用以下命令重试：
 
 ```bash
 git submodule update --init --recursive
 ```
 
-**第一次构建耗时太长**
+**第一次构建耗时过长**
 
-- 第一次构建需要下载许多依赖项，这是正常现象。
-- 如果长时间看起来都没有进展，先尝试分别安装这些软件包：
+- 第一次构建下载大量依赖是正常现象。
+- 如果长时间看起来都没有进展，可以先单独安装这些包：
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
