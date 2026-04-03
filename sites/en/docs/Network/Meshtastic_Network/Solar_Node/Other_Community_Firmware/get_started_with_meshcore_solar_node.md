@@ -13,9 +13,8 @@ last_update:
   author: Michelle Huang
 createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-03'
 ---
-
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
 1. Not finishing the message transmission process

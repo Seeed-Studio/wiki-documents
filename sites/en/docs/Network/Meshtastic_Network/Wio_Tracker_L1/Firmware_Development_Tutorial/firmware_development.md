@@ -14,9 +14,8 @@ last_update:
   author: ycl
 url: https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial/
 createdAt: '2026-03-19'
-updatedAt: '2026-03-19'
+updatedAt: '2026-04-03'
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

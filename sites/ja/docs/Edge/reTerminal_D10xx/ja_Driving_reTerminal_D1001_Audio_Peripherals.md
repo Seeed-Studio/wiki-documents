@@ -9,9 +9,8 @@ last_update:
   author: Jackson.Li
 createdAt: '2026-04-02'
 url: https://wiki.seeedstudio.com/ja/driving_reterminal_d1001_audio_peripherals/
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

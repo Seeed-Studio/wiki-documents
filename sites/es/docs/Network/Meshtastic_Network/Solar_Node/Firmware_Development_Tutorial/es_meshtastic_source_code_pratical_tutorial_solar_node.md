@@ -16,7 +16,6 @@ url: https://wiki.seeedstudio.com/es/meshtastic_source_code_practical_tutorial_s
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

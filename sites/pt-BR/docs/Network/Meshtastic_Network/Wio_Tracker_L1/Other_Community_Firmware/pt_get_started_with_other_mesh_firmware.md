@@ -14,9 +14,6 @@ createdAt: '2026-02-28'
 updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_other_mesh_firmware/
 ---
-
-
-
 ## Gravação de Firmware
 
 ### Método 1 via Web Flasher

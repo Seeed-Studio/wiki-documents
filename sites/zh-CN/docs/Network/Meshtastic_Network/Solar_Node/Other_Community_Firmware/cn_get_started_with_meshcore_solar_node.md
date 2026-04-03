@@ -15,7 +15,6 @@ createdAt: '2026-03-06'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/
 updatedAt: '2026-03-24'
 ---
-
 :::danger note
 当设备处于以下状态时，请不要手动重启或关闭设备，否则设备可能会损坏。
 1. 尚未完成消息传输过程

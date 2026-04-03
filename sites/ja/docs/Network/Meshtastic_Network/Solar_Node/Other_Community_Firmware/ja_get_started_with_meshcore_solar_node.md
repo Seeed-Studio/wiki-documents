@@ -15,7 +15,6 @@ createdAt: '2026-03-06'
 url: https://wiki.seeedstudio.com/ja/get_started_with_meshcore_solar_node/
 updatedAt: '2026-03-24'
 ---
-
 :::danger note
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
 1. メッセージ送信処理が完了していない

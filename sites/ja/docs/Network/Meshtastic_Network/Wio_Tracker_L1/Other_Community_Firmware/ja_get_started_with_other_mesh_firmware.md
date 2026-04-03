@@ -14,9 +14,6 @@ createdAt: '2026-02-28'
 updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/ja/get_started_with_other_mesh_firmware/
 ---
-
-
-
 ## ファームウェアの書き込み
 
 ### 方法1 Web Flasher 経由

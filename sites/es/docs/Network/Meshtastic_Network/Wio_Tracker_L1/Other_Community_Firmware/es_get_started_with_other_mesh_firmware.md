@@ -14,9 +14,6 @@ createdAt: '2026-02-28'
 updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/es/get_started_with_other_mesh_firmware/
 ---
-
-
-
 ## Flasheo de firmware
 
 ### Método 1 mediante Web Flasher

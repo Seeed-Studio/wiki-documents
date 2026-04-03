@@ -15,7 +15,6 @@ createdAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshcore_solar_node/
 updatedAt: '2026-03-24'
 ---
-
 :::danger note
 Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ser danificado permanentemente.
 1. Não tiver concluído o processo de transmissão de mensagens

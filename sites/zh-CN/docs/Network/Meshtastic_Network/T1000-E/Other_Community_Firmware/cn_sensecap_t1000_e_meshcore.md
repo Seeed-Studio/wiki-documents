@@ -14,9 +14,6 @@ createdAt: '2026-02-28'
 updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
 ---
-
-
-
 ## 固件烧录
 
 ### 方法一：通过 Web Flasher

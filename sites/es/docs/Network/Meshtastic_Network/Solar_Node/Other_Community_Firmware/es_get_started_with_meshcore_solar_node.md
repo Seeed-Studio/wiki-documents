@@ -15,7 +15,6 @@ createdAt: '2026-03-06'
 url: https://wiki.seeedstudio.com/es/get_started_with_meshcore_solar_node/
 updatedAt: '2026-03-24'
 ---
-
 :::danger note
 Cuando el dispositivo se encuentre en los siguientes estados, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo podría quedar inservible.
 1. No ha finalizado el proceso de transmisión de mensajes

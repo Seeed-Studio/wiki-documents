@@ -14,9 +14,6 @@ createdAt: '2026-02-28'
 updatedAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/cn/get_started_with_other_mesh_firmware/
 ---
-
-
-
 ## 固件烧录
 
 ### 方法 1：通过 Web Flasher
