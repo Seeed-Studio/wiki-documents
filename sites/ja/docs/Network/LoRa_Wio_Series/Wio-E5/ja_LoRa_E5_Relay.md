@@ -10,7 +10,7 @@ last_update:
   date: 03/28/2026
   author: David Du
 createdAt: '2026-03-28'
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/ja/lora-e5_relay/
 ---
 # Wio-E5 LoRaWAN リレー機能ガイド

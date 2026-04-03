@@ -10,7 +10,7 @@ last_update:
   date: 03/28/2026
   author: David Du
 createdAt: '2026-03-28'
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/pt-br/lora-e5_relay/
 ---
 # Guia da Função de Repetidor LoRaWAN do Wio-E5
