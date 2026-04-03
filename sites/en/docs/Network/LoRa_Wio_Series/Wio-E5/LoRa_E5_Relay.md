@@ -4,7 +4,7 @@ title: Wio-E5 Relay Function
 keywords:
   - wio
   - docusaurus
-slug: /LoRa-E5_Relay
+slug: /lora-e5_relay
 sku: 317990687,317990829
 last_update:
   date: 03/28/2026
