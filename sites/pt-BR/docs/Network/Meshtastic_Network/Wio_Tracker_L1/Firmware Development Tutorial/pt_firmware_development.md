@@ -1,9 +1,9 @@
 ---
-description: Um tutorial prático para configurar o ambiente do código-fonte do firmware Meshtastic, compilar o alvo Wio Tracker L1, fazer uma alteração simples na interface do usuário e gravar o firmware.
-title: Tutorial de Desenvolvimento com Código-Fonte do Meshtastic
+description: Um tutorial prático para configurar o ambiente do código‑fonte do firmware Meshtastic, compilar o alvo Wio Tracker L1, fazer uma alteração simples na interface do usuário e gravar o firmware.
+title: Tutorial de Desenvolvimento do Código‑Fonte do Meshtastic
 keywords:
   - Meshtastic
-  - Source Code
+  - Código‑fonte
   - PlatformIO
   - Wio Tracker L1
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png
@@ -20,19 +20,19 @@ updatedAt: '2026-03-19'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Tutorial Prático do Código-Fonte do Firmware Meshtastic
+# Tutorial Prático do Código‑Fonte do Firmware Meshtastic
 
-Este tutorial é destinado a usuários que estão começando a trabalhar com o código-fonte do firmware Meshtastic. Ele inclui fluxos de trabalho comuns tanto para Windows quanto para macOS. O objetivo é direto: clonar o repositório oficial, concluir uma compilação bem-sucedida, fazer uma alteração simples na interface do usuário e gravar o firmware modificado no dispositivo para verificação.
+Este tutorial aborda um fluxo de trabalho básico do firmware Meshtastic no Windows e macOS: clonar o repositório, compilar `seeed_wio_tracker_L1`, fazer uma pequena alteração na interface do usuário e gravar o resultado.
 
-Se você já está familiarizado com Git, Python ou PlatformIO, pode pular as seções correspondentes e ir diretamente para a parte prática.
+Se Git, Python e PlatformIO já estiverem instalados, você pode pular direto para a parte prática.
 
 :::tip
-Este guia inclui comandos comuns para Windows e macOS. A maioria das capturas de tela ainda é feita em um ambiente Windows, mas o fluxo de trabalho geral no macOS é muito semelhante.
+Os comandos são fornecidos tanto para Windows quanto para macOS. A maioria das capturas de tela usa Windows, mas o fluxo de trabalho é o mesmo no macOS.
 :::
 
-## Pré-requisitos
+## Pré‑requisitos
 
-Antes de começar, prepare as seguintes ferramentas:
+Prepare as seguintes ferramentas:
 
 1. Git
 2. Python 3
@@ -48,13 +48,13 @@ Abra a página oficial de download do Git para Windows:
 
 [Git for Windows](https://git-scm.com/install/windows)
 
-O instalador geralmente começa a ser baixado automaticamente quando você abre a página. Após a conclusão do download, clique duas vezes no instalador e siga o assistente de instalação.
+O instalador geralmente começa a ser baixado automaticamente quando você abre a página. Após a conclusão do download, clique duas vezes no instalador e siga o assistente de configuração.
 
-Durante a instalação, a etapa mais importante é **Adjusting your PATH environment**. Escolha:
+Durante a instalação, o passo mais importante é **ajustar a variável de ambiente PATH**. Escolha:
 
 **Git from the command line and also from 3rd-party software**
 
-Para as outras opções, os valores padrão geralmente são suficientes. Basta continuar clicando em `Next`.
+Para as outras opções, os valores padrão geralmente são suficientes. Apenas continue clicando em `Next`.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image1.png)
 
@@ -83,12 +83,12 @@ Write-Host $gitBin
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image3.png)
 
-Em seguida, adicione manualmente o Git às variáveis de ambiente do sistema.
+Em seguida, adicione o Git manualmente às variáveis de ambiente do sistema.
 
-**Etapas de correção via GUI**
+**Etapas de correção pela interface gráfica (GUI)**
 
 1. Pressione `Win`
-2. Pesquise por "Edit the system environment variables"
+2. Procure por "Edit the system environment variables"
 3. Abra e clique em **Environment Variables**
 4. Encontre `Path` em **System variables**
 5. Clique em **Edit**
@@ -130,7 +130,7 @@ No macOS, o Git pode ser instalado de mais de uma forma, mas usar o Homebrew ger
 xcode-select --install
 ```
 
-2. Se o Homebrew ainda não estiver instalado, instale-o primeiro:
+2. Se o Homebrew ainda não estiver instalado, instale‑o primeiro:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -148,14 +148,14 @@ brew install git
 git --version
 ```
 
-Se o seu terminal já retornar uma versão válida do Git, você não precisa instalá-lo novamente.
+Se o seu terminal já retornar uma versão válida do Git, você não precisa instalá‑lo novamente.
 
 </TabItem>
 </Tabs>
 
 **Configure sua identidade do Git**
 
-Em seguida, configure suas informações de usuário do Git. Substitua os valores de exemplo pelo seu próprio nome e endereço de e-mail:
+Em seguida, configure suas informações de usuário do Git. Substitua os valores de exemplo pelo seu próprio nome e endereço de e‑mail:
 
 ```plain
 git config --global user.name "your name"
@@ -184,9 +184,9 @@ winget search --id Python.Python.3.13 --source winget
 winget install -e --id Python.Python.3.13 --source winget
 ```
 
-Se o primeiro comando conseguir encontrar o Python, o segundo normalmente deve instalá-lo diretamente.
+Se o primeiro comando conseguir encontrar o Python, o segundo normalmente deverá instalá‑lo diretamente.
 
-Após a instalação, feche o terminal e abra-o novamente, depois execute:
+Após a instalação, feche o terminal e abra‑o novamente, depois execute:
 
 ```plain
 python --version
@@ -201,7 +201,7 @@ Se forem exibidos números de versão, o Python e o pip estão prontos para uso.
 
 <TabItem value="macos" label="macOS">
 
-O macOS frequentemente já inclui um ambiente Python. Antes de instalar uma nova versão, verifique se `python3` e `pip3` já estão disponíveis:
+O macOS muitas vezes já inclui um ambiente Python. Antes de instalar uma nova versão, verifique se `python3` e `pip3` já estão disponíveis:
 
 ```bash
 python3 --version
@@ -228,19 +228,19 @@ Se você preferir usar `python` e `pip`, pode definir aliases no shell por conta
 
 ### 3. Instalar o PlatformIO
 
-Esta etapa pode parecer menos amigável para iniciantes porque o PlatformIO baixa muitas dependências automaticamente, e a instalação pode levar algum tempo. Se aparecerem erros durante a instalação, geralmente é melhor esperar com paciência e resolver um problema de cada vez. Usar ferramentas de IA para ajudar a inspecionar as mensagens de erro também pode economizar tempo.
+O PlatformIO baixa dependências automaticamente durante a instalação, portanto esta etapa pode levar algum tempo. Se ocorrerem erros, analise‑os um por um.
 
-Pesquise por `PlatformIO` no marketplace de Extensões do VS Code e instale-o.
+Pesquise por `PlatformIO` no marketplace de Extensões do VS Code e instale‑o.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-Após a instalação, normalmente aparece um ícone em forma de formiga na barra de ferramentas à esquerda.
+Após a instalação, normalmente um ícone em forma de formiga aparece na barra de ferramentas à esquerda.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
-### 4. Clonar o repositório de firmware do Meshtastic
+### 4. Clonar o repositório do firmware Meshtastic
 
-O repositório oficial de firmware do Meshtastic é `meshtastic/firmware`.
+O repositório oficial do firmware Meshtastic é `meshtastic/firmware`.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -253,7 +253,7 @@ cd firmware
 git submodule update --init
 ```
 
-Se o diretório do seu projeto estiver em outra unidade ou em um caminho diferente, mude para esse local primeiro.
+Se o diretório do seu projeto estiver em uma unidade diferente ou em um caminho diferente, mude para esse local primeiro.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image9.png)
 
@@ -274,7 +274,7 @@ cd firmware
 git submodule update --init
 ```
 
-Se `~/workplace` ainda não existir, crie-o primeiro:
+Se `~/workplace` ainda não existir, crie‑o primeiro:
 
 ```bash
 mkdir -p ~/workplace
@@ -285,15 +285,15 @@ Se os comandos forem concluídos normalmente, o repositório foi clonado com suc
 </TabItem>
 </Tabs>
 
-### 5. Prática hands-on
+### 5. Prática prática
 
-Neste estágio, não tenha pressa em editar o código. Primeiro, certifique-se de que o projeto consegue passar com sucesso por todo o processo de compilação.
+Neste estágio, não tenha pressa em editar o código. Primeiro, verifique se o projeto consegue concluir todo o processo de compilação com sucesso.
 
-Recomenda-se começar com três tarefas:
+Recomenda‑se começar com três tarefas:
 
 1. Abrir `firmware`
 2. Verificar `platformio.ini`
-3. Encontrar o ambiente de compilação para sua placa-alvo
+3. Encontrar o ambiente de compilação para sua placa‑alvo
 
 Um detalhe importante: não foque apenas no `platformio.ini` da raiz. Ele na verdade inclui arquivos de configuração adicionais, por exemplo:
 
@@ -306,34 +306,24 @@ extra_configs =
 
 Isso significa que as definições reais de ambiente em nível de placa geralmente estão localizadas em `variants/.../platformio.ini`.
 
-Ao identificar a placa-alvo, preste atenção especial a estes dois diretórios:
+Ao identificar a placa‑alvo, preste atenção especial a estes dois diretórios:
 
 - `variants/`
 - `boards/`
 
-Aqui usamos **Wio Tracker L1 Pro** como placa-alvo de exemplo.
+Aqui usamos **Wio Tracker L1 Pro** como exemplo de alvo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
 Isso mostra que, no Meshtastic, **o alvo de compilação para Wio Tracker L1 / L1 Pro é** `seeed_wio_tracker_L1`.
 
-**Resumo da modificação mínima**
-
-Se você só quiser concluir uma prática mínima de ponta a ponta, concentre-se nestas etapas principais:
-
-1. Instalar Git, Python 3, VS Code e PlatformIO.
-2. Clonar o repositório `meshtastic/firmware` e inicializar os submódulos.
-3. Usar `pio run -e seeed_wio_tracker_L1` para confirmar que o projeto original compila com sucesso.
-4. Modificar a lógica de exibição em `src/graphics/SharedUIDisplay.cpp`.
-5. Recompilar o firmware e gravar o arquivo UF2 gerado no dispositivo para verificação.
-
 **Etapa 1: Confirmar que o projeto compila com sucesso**
 
-Aqui usamos o PlatformIO Core CLI para compilar.
+Aqui usamos a CLI do PlatformIO Core para compilar.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
-Para a primeira compilação, recomenda-se executar o seguinte comando:
+Para a primeira compilação, recomenda‑se executar o seguinte comando:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -357,7 +347,7 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-Se a interface estiver semelhante à captura de tela acima, o processo de compilação foi iniciado corretamente. A primeira compilação geralmente leva um tempo, portanto seja paciente.
+Se a interface estiver semelhante à captura de tela acima, o processo de compilação foi iniciado corretamente. A primeira compilação costuma demorar um pouco, portanto tenha paciência.
 
 **Se a compilação falhar**
 
@@ -383,11 +373,11 @@ pio pkg install -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-Essa abordagem tem vários benefícios:
+Esta abordagem traz várias vantagens:
 
-- Ela instala apenas as dependências, sem iniciar imediatamente uma compilação completa.
-- Ela facilita ver qual pacote está causando o problema.
-- As mensagens de erro geralmente são mais focadas e fáceis de depurar.
+- Instala apenas as dependências, sem iniciar imediatamente uma compilação completa.
+- Facilita ver qual pacote está causando o problema.
+- As mensagens de erro geralmente são mais focadas e mais fáceis de diagnosticar.
 
 Depois que as dependências forem instaladas, execute:
 
@@ -411,7 +401,7 @@ pio run -e seeed_wio_tracker_L1 -v
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
-Quando a instalação das dependências terminar, execute novamente a compilação normal:
+Quando a instalação das dependências estiver concluída, execute novamente a compilação normal:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -433,66 +423,39 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image15.png)
 
-Se a compilação passar neste ponto, o firmware de saída foi gerado com sucesso.
+Se a compilação for aprovada neste ponto, a saída do firmware foi gerada com sucesso.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image16.png)
 
 **Etapa 2: Modificar o código**
 
-**Prática 1: Modificar a interface de exibição (UI)**
+**Prática 1: Modificar a exibição da interface (UI)**
 
-Comece rastreando a implementação da exibição a partir da configuração em nível de placa. Você pode primeiro verificar:
+Comece rastreando a implementação da tela a partir da configuração em nível de placa. Você pode primeiro verificar:
 
 - `variants/nrf52840/seeed_wio_tracker_L1/platformio.ini`
 - `variants/nrf52840/seeed_wio_tracker_L1/variant.h`
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image17.png)
 
-A partir desses arquivos de configuração, você pode ver que o L1 define `HAS_SCREEN` e `USE_SSD1306`. Isso significa que ele usa o pipeline padrão de exibição OLED, não uma configuração sem tela e não uma solução de E-Ink.
+A partir desses arquivos de configuração, é possível ver que o L1 define `HAS_SCREEN` e `USE_SSD1306`. Isso significa que ele usa o pipeline padrão de exibição OLED, não uma configuração sem tela e nem uma solução de E‑Ink.
 
 Se você continuar rastreando a lógica de exibição, a maior parte do código relacionado está localizada em:
 
 - `src/graphics/`
 - `src/graphics/draw/`
 
-Exatamente como você o modifica depende da sua capacidade de ler o código-fonte. Aqui começamos com um exemplo bem simples: modificar a interface da tela inicial.
+Aqui usamos um exemplo simples: adicionar um rótulo personalizado ao cabeçalho da tela inicial.
 
-**Alteração 1: Registrar a borda direita do texto da bateria**
+Atualize `src/graphics/SharedUIDisplay.cpp` com as seguintes alterações:
 
 ```cpp
-Before / After
-
-// Before
-int batteryX = 1;
-int batteryY = HEADER_OFFSET_Y + 1;
-
-// After
+// Track the end of the battery text
 int batteryX = 1;
 int batteryY = HEADER_OFFSET_Y + 1;
 int batteryTextEndX = batteryX - 1;
-```
 
-`src/graphics/SharedUIDisplay.cpp:157`
-
-Isso adiciona `batteryTextEndX`, que registra a posição final do texto de porcentagem da bateria. Isso facilita anexar texto personalizado após as informações da bateria mais tarde.
-
-**Alteração 2: Calcular o limite direito ao desenhar a porcentagem da bateria**
-
-```cpp
-// Before
-if (chargePercent != 101) {
-    char chargeStr[4];
-    snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
-    int chargeNumWidth = display->getStringWidth(chargeStr);
-    display->drawString(batteryX, textY, chargeStr);
-    display->drawString(batteryX + chargeNumWidth - 1, textY, "%");
-    if (isBold) {
-        display->drawString(batteryX + 1, textY, chargeStr);
-        display->drawString(batteryX + chargeNumWidth, textY, "%");
-    }
-}
-
-// After
+// Update the boundary while drawing the battery percentage
 if (chargePercent != 101) {
     char chargeStr[4];
     snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
@@ -508,31 +471,29 @@ if (chargePercent != 101) {
 } else {
     batteryTextEndX = batteryX - 1;
 }
-```
 
-`src/graphics/SharedUIDisplay.cpp:204`
-
-Esse código fica dentro da lógica de desenho da porcentagem da bateria. Além de exibir o nível da bateria normalmente, ele também calcula o limite direito da área de texto para que rótulos personalizados possam ser colocados após as informações da bateria.
-
-**Alteração 3: Reservar um limite para a área de ícones à direita**
-
-```cpp
-// Before
-int iconRightEdge = timeX - 2;
-
-// After
+// In the branch that displays time
 int iconRightEdge = timeX - 2;
 int headerLabelRight = timeX - 4;
-```
 
-`src/graphics/SharedUIDisplay.cpp:263`
+#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
+if (titleStr && titleStr[0] == '\0') {
+    static const char *yclLabel = "made by AE";
+    int labelWidth = display->getStringWidth(yclLabel);
+    int labelLeft = batteryTextEndX + 4;
+    if (labelLeft + labelWidth <= headerLabelRight) {
+        int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
+        display->drawString(labelX, textY, yclLabel);
+        if (isBold)
+            display->drawString(labelX + 1, textY, yclLabel);
+    }
+}
+#endif
 
-Esta parte lida com a área usada pelos ícones de hora, e-mail, mudo e outros ícones no lado direito. Eu adicionei `headerLabelRight` para limitar o limite máximo à direita do texto central e evitar sobreposição com o conteúdo do lado direito.
+// In the branch that does not display time
+int iconRightEdge = screenW - xOffset;
+int headerLabelRight = screenW - xOffset - 2;
 
-**Alteração 4: Desenhar um rótulo personalizado quando o título estiver vazio**
-
-```cpp
-// Newly added core logic
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
 if (titleStr && titleStr[0] == '\0') {
     static const char *yclLabel = "made by AE";
@@ -548,41 +509,11 @@ if (titleStr && titleStr[0] == '\0') {
 #endif
 ```
 
-`src/graphics/SharedUIDisplay.cpp:350`
+Essa atualização faz três coisas:
 
-Esta é a lógica central da modificação. Ela se aplica apenas a `SEEED_WIO_TRACKER_L1` e exclui explicitamente a variante de E-Ink. Ela centraliza o texto `made by AE` no espaço em branco entre as informações da bateria e a exibição da hora.
-
-**Alteração 5: Tratar o ramo em que nenhuma hora é exibida**
-
-```cpp
-// Add the same boundary control for the no-time branch
-int iconRightEdge = screenW - xOffset;
-int headerLabelRight = screenW - xOffset - 2;
-```
-
-`src/graphics/SharedUIDisplay.cpp:377`
-
-Este é o ramo usado quando nenhum valor de hora é exibido. O mesmo controle de limite precisa ser adicionado aqui também.
-
-```cpp
-#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
-        if (titleStr && titleStr[0] == '\0') {
-            static const char *yclLabel = "made by AE";
-            int labelWidth = display->getStringWidth(yclLabel);
-            int labelLeft = batteryTextEndX + 4;
-            if (labelLeft + labelWidth <= headerLabelRight) {
-                int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
-                display->drawString(labelX, textY, yclLabel);
-                if (isBold)
-                    display->drawString(labelX + 1, textY, yclLabel);
-            }
-        }
-#endif
-```
-
-`src/graphics/SharedUIDisplay.cpp:426`
-
-Esta é a implementação para desenhar `made by AE` no ramo sem hora.
+- Registra a borda direita do texto da bateria.
+- Reserva espaço entre a área da bateria e os ícones do lado direito.
+- Desenha `made by AE` somente em `SEEED_WIO_TRACKER_L1` quando o título está vazio.
 
 Você pode encontrar o código completo aqui:
 
@@ -590,7 +521,7 @@ Você pode encontrar o código completo aqui:
 
 **Etapa 3: Compilar o seu próprio firmware**
 
-Depois de terminar a modificação, volte para a raiz do projeto e compile o mesmo alvo novamente:
+Depois de concluir a modificação, volte para o diretório raiz do projeto e compile o mesmo alvo novamente:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -646,11 +577,11 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 ### 6. Gravar o firmware
 
-Depois que a compilação estiver concluída, abra a página oficial de gravação:
+Após a conclusão da compilação, abra a página oficial de gravação:
 
 [Meshtastic Flasher](https://flasher.meshtastic.org/)
 
-Na maioria dos casos, você deve executar primeiro uma operação de apagamento.
+Na maioria dos casos, você deve realizar primeiro uma operação de apagamento.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image18.png)
 
@@ -674,7 +605,7 @@ Se quiser ir além, você pode continuar explorando estas direções:
 **O comando `git` não está disponível**
 
 - No Windows, primeiro verifique se o Git foi adicionado ao `PATH`.
-- No macOS, execute primeiro `git --version`. Se o sistema pedir para instalar as Command Line Tools, siga a instrução.
+- No macOS, execute primeiro `git --version`. Se o sistema solicitar que você instale as Command Line Tools, siga a instrução.
 
 **`python3` ou `pip3` não está disponível**
 
@@ -683,9 +614,9 @@ Se quiser ir além, você pode continuar explorando estas direções:
 
 **O comando `pio` não está disponível**
 
-- Execute primeiro `pio --version`.
+- Primeiro, execute `pio --version`.
 - Se o comando ainda não estiver disponível, reinicie o VS Code e o terminal e tente novamente.
-- Se necessário, reinstale a extensão PlatformIO e confirme que o PlatformIO Core foi inicializado corretamente.
+- Se necessário, reinstale a extensão PlatformIO e confirme se o PlatformIO Core foi inicializado corretamente.
 
 **O código ainda parece incompleto após `git submodule update --init`**
 
@@ -698,7 +629,7 @@ git submodule update --init --recursive
 
 **A primeira compilação leva muito tempo**
 
-- É normal que a primeira compilação baixe muitas dependências.
+- É normal que a primeira compilação faça o download de muitas dependências.
 - Se parecer travado por muito tempo, tente instalar os pacotes separadamente primeiro:
 
 ```bash
