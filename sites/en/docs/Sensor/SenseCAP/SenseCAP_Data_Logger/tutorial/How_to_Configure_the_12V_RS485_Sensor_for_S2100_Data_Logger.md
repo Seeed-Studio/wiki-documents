@@ -49,6 +49,10 @@ Follow the steps below to complete the wiring process.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
+:::note
+Please note that the S2100 data logger supports only three measurement protocols: `RS485 Modbus RTU`(A/B), `Analog Input`(V1, V2, I1, I2), and `Pulse-Level Input`(IO).
+:::
+
 ### Step 2.2: Wiring Terminal Description
 
 |**No.**|**Pin**|**Description**|
