@@ -2,18 +2,20 @@
 description: Connecting R1225 to ChirpStack
 title: Connecting to ChirpStack
 keywords:
-- Gateway
-- SenseCAP
-- Edge Controller
-- reComputer R1225 
+  - Gateway
+  - SenseCAP
+  - Edge Controller
+  - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /connecting_r1225_to_chirpstack
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 03/30/2026
   author: Kian
+createdAt: '2026-03-30'
+url: https://wiki.seeedstudio.com/connecting_r1225_to_chirpstack/
+updatedAt: '2026-03-30'
 ---
-
 ## ChirpStack Configuration
 
 ChirpStack provides open-source components for LoRaWAN networks. Together they form a ready-to-use solution including an user-friendly web-interface for device management and APIs for integration.

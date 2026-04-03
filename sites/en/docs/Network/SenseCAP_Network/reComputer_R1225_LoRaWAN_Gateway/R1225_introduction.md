@@ -12,10 +12,9 @@ last_update:
   date: 03/13/2026
   author: Kian
 createdAt: '2026-01-05'
-updatedAt: '2026-03-25'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/r1225_introduction/
 ---
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={500} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
