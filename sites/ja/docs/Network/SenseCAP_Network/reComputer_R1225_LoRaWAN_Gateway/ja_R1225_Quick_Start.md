@@ -1,6 +1,6 @@
 ---
-description: reComputer R1225 LoRaWAN ゲートウェイ クイックスタート
-title: reComputer R1225 LoRaWAN ゲートウェイ クイックスタート
+description: reComputer R1225 LoRaWAN Gateway クイックスタート
+title: reComputer R1225 LoRaWAN Gateway クイックスタート
 keywords:
   - ゲートウェイ
   - SenseCAP
@@ -14,9 +14,8 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/ja/r1225_quick_start/
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 ---
-
 # クイックスタート
 
 ## 電源接続
@@ -25,15 +24,15 @@ updatedAt: '2026-03-25'
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1225 は、公称 AC 電圧 12&#126;24V または DC 電圧 9&#126;36V で給電されます。電源は 2 ピンの電源端子ブロックコネクタを介して接続します。reComputer R1225 をアースするには、電源端子左上のネジにアース線を固定します。
+reComputer R1225 は、定格 AC 電圧 12&#126;24V または DC 電圧 9&#126;36V で給電されます。電源は 2 ピンの電源端子ブロックコネクタを介して接続します。reComputer R1225 をアースするには、アース線を電源端子左上のネジに固定します。
 
 :::note
-この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを採用しており、AC と DC の両方の入力に対応しています。これにより、**電源のプラス端子とマイナス端子をどのように接続しても**回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
+この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを採用しており、AC と DC の両方の入力に対応しています。これにより、**電源のプラス端子とマイナス端子の接続方法に関係なく**、回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
 :::
 
 ### PoE 給電
 
-PoE モジュールを搭載すると、reComputer R1225 の ETH0 ポートは PoE 給電をサポートし、Ethernet 経由でデバイスに電源を供給する便利で効率的な方法を提供します。このオプションにより、設置プロセスが簡素化され、必要な配線量が削減されるため、電源が限られている、または電源コンセントが容易に利用できないアプリケーションに最適なソリューションとなります。
+PoE モジュールを搭載すると、reComputer R1225 の ETH0 ポートは PoE 給電をサポートし、Ethernet 経由でデバイスに電源を供給する便利で効率的な方法を提供します。このオプションにより、設置作業が簡素化され、必要な配線の量が削減されるため、電源が限られている、または電源コンセントが容易に利用できない用途に最適なソリューションとなります。
 
 - PoE 入力：範囲 44~57V、標準 48V
 - PoE 出力：12V、最大 1.1A
@@ -76,7 +75,7 @@ Wi-Fi が設定されている場合、PC と R1225 が同じネットワーク�
 - ステップ 4：Luci にログイン
 
 ブラウザにデバイスの IP アドレスを入力して Luci ページにアクセスします。
-その後、デバイスのユーザー名とパスワードを入力し、Login ボタンをクリックします。
+その後、デバイスのユーザー名とパスワードを入力してログインし、Login ボタンをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Luci_login.png" alt="pir" width={800} height="auto" /></p>
 
@@ -86,20 +85,20 @@ Wi-Fi が設定されている場合、PC と R1225 が同じネットワーク�
 R1225 を初めて起動したとき、Wi-Fi ホットスポットはデフォルトで 5 分間有効になります。この時間が経過すると、R1225 のホットスポットは自動的にオフになります。
 :::
 
-- ステップ 1：R1225 の電源を入れます
+- ステップ 1：R1225 の電源を入れる
 
 reComputer R1225 LoRaWAN Gateway を接続すると、デバイスは自動的に起動します。
 
-- ステップ 2：AP ホットスポットに接続します
+- ステップ 2：AP ホットスポットに接続
 
   - SSID：R1225-XXXX（**SN の下 4 桁**）
   - パスワード：1234567890
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_AP.png" alt="pir" width={450} height="auto" /></p>
 
-reComputer R1225 を初めて起動すると、自動的にホットスポットモードが有効になります。ホットスポットのデフォルト SSID は「R1225-XXXX（**SN の下 4 桁**）」で、デフォルトパスワードは「1234567890」です。PC をこの AP ホットスポットに接続してください。
+reComputer R1225 の電源を初めて入れると、自動的にホットスポットモードが有効になります。ホットスポットのデフォルト SSID は「R1225-XXXX（**SN の下 4 桁**）」で、デフォルトパスワードは「1234567890」です。PC をこの AP ホットスポットに接続してください。
 
-- ステップ 3：デバイスの IP アドレスを取得します
+- ステップ 3：デバイスの IP アドレスを取得
 
 SSID R1225-XXXX の AP に接続した後、右上の詳細アイコンをクリックします。
 
@@ -109,7 +108,7 @@ SSID R1225-XXXX の AP に接続した後、右上の詳細アイコンをクリ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/R1225_Wifi2.png" alt="pir" width={450} height="auto" /></p>
 
-- ステップ 4：デバイスのユーザー名とパスワードを取得します
+- ステップ 4：デバイスのユーザー名とパスワードを取得
 
   - ユーザー名：admin
   - パスワード：null（**初回ログイン時はパスワード不要**）
@@ -121,20 +120,20 @@ SSID R1225-XXXX の AP に接続した後、右上の詳細アイコンをクリ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Luci_login.png" alt="pir" width={800} height="auto" /></p>
 
-## R1225 のネットワーク設定
+## R1225 ネットワーク設定
 
 ### Ethernet 接続
 
 Ethernet はプラグアンドプレイで、設定は不要です。
 <!--补充图片和内容-->
 
-### WIFI 接続
+### Wi-Fi 接続
 
 - ステップ 1：`Network` - `Wi-Fi` をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi1.png" alt="pir" width={200} height="auto" /></p>
 
-- ステップ 2：`Scan` ボタンをクリックして WIFI をスキャンします
+- ステップ 2：`Scan` ボタンをクリックして Wi-Fi をスキャンします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/wifi2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -168,7 +167,7 @@ Ethernet はプラグアンドプレイで、設定は不要です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE2.png" alt="pir" width={800} height="auto" /></p>
 
-## R1225 の LoRaWAN 設定
+## R1225 LoRaWAN 設定
 
 - ステップ 1：`LoRa` - `LoRa Network` をクリックします
 
@@ -239,3 +238,13 @@ R1225 には、ChirpStack（オープンソースの LoRaWAN ネットワーク�
 その後、`Submit` をクリックします
 
 ### ゲートウェイ接続ステータスの確認
+
+すべての設定手順が完了すると、ゲートウェイは ChirpStack プラットフォーム上で **`Online`** と表示されます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack6.png" alt="pir" width={800} height="auto" /></p>
+
+#### ゲートウェイデータ
+
+Gateways に移動し、確認したいゲートウェイを選択します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack7.png" alt="pir" width={800} height="auto" /></p>

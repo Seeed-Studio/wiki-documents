@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-30 14:27:15 (北京时间)
-// 多语言页面: 2234 个
+// 生成时间: 2026-04-03 14:51:30 (北京时间)
+// 多语言页面: 2240 个
 
 (function() {
   'use strict';
@@ -32,6 +32,13 @@
     "pt"
   ],
   "/sensecraft-ai/application/application-for-homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft-ai/application/create-new-application": [
     "cn",
     "en",
     "es",
@@ -3362,6 +3369,13 @@
     "ja",
     "pt"
   ],
+  "/driving_reterminal_d1001_audio_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_reterminal_d1001": [
     "cn",
     "en",
@@ -3881,6 +3895,13 @@
     "pt"
   ],
   "/LoRa_E5_mini": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lora-e5_relay": [
     "cn",
     "en",
     "es",
@@ -5571,6 +5592,13 @@
     "pt"
   ],
   "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/realsense_3d_seg": [
     "cn",
     "en",
     "es",
@@ -10134,6 +10162,20 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_picovoice_nlu_keyword_spotting": [
     "cn",
     "en",
     "es",

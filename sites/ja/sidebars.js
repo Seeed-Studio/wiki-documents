@@ -2088,6 +2088,29 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
+              ],
+            },
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
@@ -4598,6 +4621,7 @@ const sidebars = {
             'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
+            'Robotics/Robot_Sensor/Camera/ja_realsense_3D_seg',
             'Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
             'Robotics/Robot_Sensor/Camera/ja_Orbbec_Gemini_335Lg',

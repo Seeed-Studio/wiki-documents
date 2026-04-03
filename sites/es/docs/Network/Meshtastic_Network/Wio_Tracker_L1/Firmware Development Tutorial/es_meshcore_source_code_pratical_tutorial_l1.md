@@ -1,5 +1,5 @@
 ---
-description: Un tutorial práctico para configurar el entorno del código fuente del firmware MeshCore, compilar el Tracker L1 y grabar el firmware.
+description: Un tutorial práctico para configurar el entorno del código fuente del firmware MeshCore, compilar el Tracker L1 y flashear el firmware.
 title: Tutorial de desarrollo del código fuente de MeshCore
 keywords:
   - MeshCore
@@ -42,68 +42,103 @@ Después de la instalación, normalmente aparece un icono con forma de hormiga e
 
 ### Preparación del proyecto
 
-Abre una carpeta en la que quieras tu proyecto. Abre la carpeta en la terminal. [Haz clic aquí](https://github.com/meshcore-dev/MeshCore) para clonar el proyecto con git.
+Abre una carpeta en la que quieras tu proyecto. Abre la carpeta en la terminal. [Haz clic aquí](https://github.com/meshcore-dev/MeshCore) para hacer git clone del proyecto.
 
-Abre VSCode, luego haz clic en el icono de PlatformIO y elige `select a folder`. Elige la carpeta en la que clonaste el proyecto.
+Abre VSCode, luego haz clic en el icono de PlatformIO, elige `select a folder`. Elige la carpeta en la que clonaste el proyecto.
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/pickfolder.png" style={{width:700, height:'auto'}}/></div>
 
-PlatformIO instalará automáticamente las dependencias necesarias. Después de que la instalación se complete correctamente, podrás ver `Project has been successfully updated`
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png)
+PlatformIO instalará automáticamente las dependencias necesarias. Después de que la instalación tenga éxito, podrás ver `Project has been successfully updated`
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/SucessfullyUpdate.png" style={{width:700, height:'auto'}}/></div>
+
 
 ## Desarrollo de firmware
 
 ### Tutorial de desarrollo
 
-Encuentra el entorno para tu placa de destino. Toma el repetidor de nodo solar como ejemplo:
+Encuentra el entorno para tu placa de destino. Toma L1 Pro companion como ejemplo:
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/BoardSelection.png)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/L1Board.jpg" style={{width:800, height:'auto'}}/></div>
+
 
 Entonces PlatformIO preparará las dependencias necesarias para la placa.
 
-Modifica tu código. Se recomienda modificar el archivo `variant.h` correspondiente a tu placa.
+Cambia tu código. Se recomienda modificar el archivo `variant.h` para tu placa.
 
 Después de completar la codificación, ejecuta el siguiente comando para compilar el código y convertirlo en un archivo uf2.
 
 ``` bash
-pio run -e SenseCap_Solar_repeater
-pio run -e SenseCap_Solar_repeater -t create_uf2
+pio run -e WioTrackerL1_companion_radio_ble
+pio run -e WioTrackerL1_companion_radio_ble -t create_uf2
 ```
 
-Luego haz doble clic en el botón RST para entrar en modo DFU. Arrastra el archivo uf2 al disco que aparece.
-
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware_devel/Dragin.png)
+Luego haz doble clic en el botón RST para entrar en modo DFU. Arrastra el archivo uf2 al disco que aparece. El archivo uf2 debería encontrarse en `.pio\build\WioTrackerL1_companion_radio_ble`
 
 ### Ejemplo
 
-#### Control de luz de usuario
+#### Control de pantalla de usuario
 
-Este ejemplo muestra cómo escribir un bucle intermitente para la luz de usuario. Copia el siguiente código en `/examples/simple_repeater/main.cpp`
+Este ejemplo muestra cómo modificar la visualización de la interfaz de usuario de L1 Pro. Elimina la visualización de mensajes en la pantalla y muestra "Test" constantemente. 
 
-``` python
-#endif
-#ifdef LED_WHITE
-static void updateUserLightBlink() {
-  static unsigned long lastLedPhaseChangeAt = 0;
-  static bool lightIsOn = true;
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Displayy.jpg" style={{width:500, height:'auto'}}/></div>
 
-  const unsigned long now = millis();
-  if ((unsigned long)(now - lastLedPhaseChangeAt) >= 5000) {
-    lightIsOn = !lightIsOn;
-    lastLedPhaseChangeAt = now;
-  }
-
-  digitalWrite(LED_WHITE, lightIsOn ? LED_STATE_ON : !LED_STATE_ON);
-}
-```
-
-y escribe el bucle:
+Copia el siguiente código en `/examples/companion_radio/ui-new/UITask.cpp`
 
 ``` python
-#ifdef LED_WHITE
-  updateUserLightBlink();
-#endif
+ if (_page == HomePage::FIRST) {
+      display.setColor(DisplayDriver::YELLOW);
+      display.setTextSize(2);
+      display.drawTextCentered(display.width() / 2, 20, "Test");
 ```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/L1Display.jpg" style={{width:800, height:'auto'}}/></div>
 
-Compílalo y graba el archivo uf2 en tu nodo solar.
+Compílalo y flashea el archivo uf2 en tu L1 Pro.
+
+## (Avanzado) Envío de PR
+
+¡Gracias por considerar contribuir al proyecto MeshCore! ¿Cómo puedes contribuir?
+**1. Informar errores (bugs)**
+
+- Usa el rastreador de Issues
+- Usa un título claro (por ejemplo, "Crash when calling begin() with invalid pin")
+- Describe los pasos exactos para reproducirlo
+- Incluye tu placa, versión del IDE, versión de la librería y fragmento de código relevante
+- Adjunta un sketch de ejemplo mínimo y completo si es posible
+
+**2. Sugerir mejoras / nuevas funciones**
+- Abre un issue con el prefijo [Feature request]
+- Explica el caso de uso → ¿qué problema resolvería esto?
+- Describe tu API / comportamiento ideal (los ejemplos de código son muy útiles)
+**3. Enviar cambios de código (Pull Requests)**
+### Pequeñas correcciones 
+(erratas, comentarios, ejemplos, pequeñas correcciones de errores)
+→ Simplemente abre un pull request — no es necesario un issue previo
+
+### Cambios mayores / nuevas funciones
+1. Abre primero un issue para discutir la idea
+2. Obtén una aprobación general del/los mantenedor(es)
+3. Haz fork del repositorio desde la rama 'dev' y crea tu rama (fix/xxx, feature/yyy, docs/whatever)
+4. Realiza tus cambios
+5. Actualiza o añade ejemplos cuando sea apropiado
+6. Añade/actualiza comentarios en el código
+7. Envía el pull request
+
+### Directrices para Pull Requests
+- Una función / corrección = un pull request (los PR pequeños son más fáciles y rápidos de revisar)
+- Usa mensajes de commit descriptivos
+  Bueno: Fix I2C timeout handling on ESP32
+  Malo: update
+- Haz referencia a cualquier issue relacionado (Fixes #123, Closes #89, etc.)
+- Si cambias la API pública, actualiza README.md y library.properties
+- Las nuevas funciones deben incluir un sketch de ejemplo en examples/
+### Estilo de código
+Por favor sigue el estilo C++ existente (según el .clang-format)
+
+- Sangría de 2 espacios (sin tabs)
+- camelCase para funciones y variables
+- UpperCamelCase / PascalCase para nombres de clases
+- Constantes #define en MAYÚSCULAS
+- Mantén las líneas < ~100 caracteres cuando sea razonable
+(Pero la consistencia con el código existente es más importante que las reglas estrictas)
