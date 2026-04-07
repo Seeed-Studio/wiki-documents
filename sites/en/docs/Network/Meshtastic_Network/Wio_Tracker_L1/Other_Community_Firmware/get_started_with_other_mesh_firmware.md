@@ -15,8 +15,6 @@ updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
 ---
        
-
-
 ## Firmware Flashing
 
 ### Method1 via Web Flasher

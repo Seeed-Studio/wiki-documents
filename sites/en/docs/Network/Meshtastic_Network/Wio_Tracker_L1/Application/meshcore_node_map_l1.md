@@ -20,7 +20,6 @@ url: https://wiki.seeedstudio.com/meshcore_node_map_l1/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 ## Why Use MeshCore Node Map
 
 Node Map can provide real-time visibility into the [MeshCore](https://meshcore.io/#hardware) network by plotting node locations, allowing users to understand network topology and node distribution. 
