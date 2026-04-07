@@ -15,8 +15,6 @@ updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/
 ---
   
-
-
 ## Firmware Flashing
 
 ### Method1 via Web Flasher
