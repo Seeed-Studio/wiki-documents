@@ -13,10 +13,9 @@ last_update:
   date: 01/13/2026
   author: Tomasz/Allen/Jackson.li
 createdAt: '2026-01-09'
-updatedAt: '2026-01-15'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/EN04_opendisplay/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
