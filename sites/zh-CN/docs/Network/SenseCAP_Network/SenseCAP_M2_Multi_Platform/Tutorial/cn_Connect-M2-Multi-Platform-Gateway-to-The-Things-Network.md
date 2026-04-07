@@ -140,7 +140,7 @@ CUPS 允许网络服务器远程配置网关并更新网关固件。发送和接
 更多关于这些 Server 的细节，请查看前面的步骤。
 
 3. **URL：**
-CUPS 使用 URI：https://server-address:443，LNS 使用 URI：wss://server-address:8887
+CUPS 使用 URI：https://server-address:443 ，LNS 使用 URI：wss://server-address:8887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/url.png" alt="pir" width={600} height="auto" /></p>
 

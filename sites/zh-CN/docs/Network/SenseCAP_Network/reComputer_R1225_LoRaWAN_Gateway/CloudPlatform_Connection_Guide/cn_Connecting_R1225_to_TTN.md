@@ -150,7 +150,7 @@ CUPS 允许网络服务器远程配置网关，并更新网关固件。CUPS 对�
 有关服务器的更多详细信息，请参阅前面的步骤。
 
 3. **URL：**
-CUPS 使用 URI：https://server-address:443，LNS 使用 URI：wss://server-address:8887
+CUPS 使用 URI：https://server-address:443 ，LNS 使用 URI：wss://server-address:8887
 
 4. **Authentication Mode：** TLS 服务器认证和客户端令牌
 The Things Stack 支持 TLS 服务器认证和客户端令牌。这需要一个 *.trust* 文件和一个 *.key* 文件。
