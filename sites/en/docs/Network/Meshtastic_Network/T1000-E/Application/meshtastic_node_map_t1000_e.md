@@ -9,15 +9,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png
 slug: /meshtastic_node_map_t1000_e
 sku: 114993369,114993649
-sidebar_position: 2
+sidebar_position: 1
 last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-19'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/meshtastic_node_map_t1000_e/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
