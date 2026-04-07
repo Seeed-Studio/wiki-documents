@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 ---
 # Introdução ao Jetson-Claw no Orin Nano / NX 8GB
 
@@ -18,23 +18,33 @@ updatedAt: '2026-04-02'
      src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
 </div>
 
-Este wiki apresenta passo a passo uma configuração prática inicial do Jetson-Claw para **Jetson Orin Nano 8GB** e **Jetson Orin NX 8GB**. Toda a pilha roda localmente no Jetson: instalamos o `nanobot`, expandimos o espaço de swap para um carregamento de modelo mais seguro, compilamos o `llama.cpp` com CUDA, baixamos um modelo GGUF `Qwen3.5 4B`, trocamos o `nanobot` para um backend local `llama.cpp` e, por fim, conectamos o bot ao **Feishu** para que você possa controlá‑lo via chat.
+Este wiki apresenta passo a passo uma construção prática de inicialização do Jetson-Claw para **Jetson Orin Nano 8GB** e **Jetson Orin NX 8GB**. Toda a pilha é executada localmente no Jetson: instalamos o `nanobot`, expandimos o espaço de swap para um carregamento de modelo mais seguro, compilamos o `llama.cpp` com CUDA, baixamos um modelo GGUF `Qwen3.5 4B`, fazemos o `nanobot` usar um backend local `llama.cpp` e, por fim, conectamos o bot ao **Feishu** para que você possa controlá‑lo via chat.
 
-Comparado a uma implantação OpenClaw maior, o **nanobot** é mais adequado para esta configuração Jetson-Claw de entrada porque é muito mais leve, inicia mais rápido, é mais fácil de ler e modificar e já oferece suporte a **Feishu** além de **backends locais compatíveis com OpenAI**. Em um Jetson de 8 GB, essa sobrecarga de runtime menor deixa mais espaço para o próprio modelo local. Se mais tarde você precisar de um ecossistema de plugins maior ou de um fluxo de trabalho multi‑componentes mais pesado, ainda poderá migrar para o OpenClaw.
+Em comparação com uma implantação OpenClaw maior, o **nanobot** é mais adequado para esta configuração de entrada do Jetson-Claw porque é muito mais leve, inicia mais rápido, é mais fácil de ler e modificar e já oferece suporte a **Feishu** além de **backends locais compatíveis com OpenAI**. Em um Jetson de 8 GB, essa sobrecarga de execução menor deixa mais espaço para o próprio modelo local. Se mais tarde você precisar de um ecossistema de plugins maior ou de um fluxo de trabalho com vários componentes mais pesado, ainda poderá migrar para o OpenClaw.
 
-## O que você vai construir
+
+## Benchmark
+
+Aqui está listada a performance de LLMs locais para diferentes módulos Jetson. Após nossa verificação, o modelo 4B é a escolha ideal para configurar um sistema capaz de executar tarefas específicas! Quanto maior o tamanho de parâmetros do modelo, melhor será o desempenho! Você pode usar este Benchmark como referência para selecionar um reComputer que atenda às suas necessidades.
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/jetson/benchmark_jetson.jpg" />
+</div>
+
+## O que você irá construir
 
 - Um assistente de IA local leve baseado em `nanobot`
-- Um servidor HTTP `llama.cpp` compatível com OpenAI rodando no Jetson
+- Um servidor HTTP `llama.cpp` compatível com OpenAI executando no Jetson
 - Um modelo local `Qwen3.5 4B` GGUF
-- Um bot Jetson conectado ao Feishu que pode ser controlado a partir de chats privados ou menções em grupo
+- Um bot Jetson conectado ao Feishu que pode ser controlado por chats privados ou menções em grupo
 
 ## Pré-requisitos
 
 - 1 x Jetson Orin Nano 8GB ou Jetson Orin NX 8GB
 - JetPack 6.x já instalado
 - Conexão com a Internet para baixar pacotes e modelos
-- Recomendado pelo menos 20 GB de armazenamento livre
+- Recomenda-se pelo menos 20 GB de armazenamento livre
 
 Este guia usa o **reComputer Super J3011** como a plataforma Jetson de referência:
 
@@ -49,7 +59,7 @@ Este guia usa o **reComputer Super J3011** como a plataforma Jetson de referênc
 </div>
 
 :::info
-`nanobot` atualmente requer Python 3.11 ou mais recente, portanto este guia usa um ambiente Miniconda em vez do Python padrão do sistema no Jetson.
+`nanobot` atualmente requer Python 3.11 ou mais recente, então este guia usa um ambiente Miniconda em vez do Python padrão do sistema no Jetson.
 :::
 
 ## Etapa 1. Instalar o nanobot
@@ -81,19 +91,19 @@ Inicialize o diretório de runtime:
 nanobot onboard
 ```
 
-Após a inicialização, o arquivo principal de configuração estará localizado em:
+Após a inicialização, o principal arquivo de configuração estará localizado em:
 
 ```bash
 ~/.nanobot/config.json
 ```
 
 :::note
-O `nanobot` é inspirado no OpenClaw, mas para Orin Nano / NX 8GB ele costuma ser o melhor ponto de partida: menos uso de memória, inicialização mais rápida e menos partes móveis para depurar.
+O `nanobot` é inspirado no OpenClaw, mas para Orin Nano / NX 8GB ele geralmente é o melhor ponto de partida: menos uso de memória, inicialização mais rápida e menos componentes para depurar.
 :::
 
 ## Etapa 2. Aumentar o espaço de Swap
 
-Executar um modelo local de 4B em um Jetson de 8 GB é muito mais estável com swap extra. Isso ajuda durante o carregamento do modelo, compilação e inferência com contexto longo.
+Executar um modelo local 4B em um Jetson de 8 GB é muito mais estável com swap extra. Isso ajuda durante o carregamento do modelo, a compilação e a inferência com contexto longo.
 
 ```bash
 sudo fallocate -l 8G /var/swapfile
@@ -148,7 +158,7 @@ pip install -U "huggingface_hub[cli]"
 mkdir -p ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-Em seguida, abra a página do modelo abaixo e baixe o arquivo GGUF `Q4_K_M` para `~/llama.cpp/models/Qwen3.5-4B-GGUF/`:
+Em seguida, abra a página do modelo abaixo e baixe o arquivo GGUF `Q4_K_M` em `~/llama.cpp/models/Qwen3.5-4B-GGUF/`:
 
 - https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/main
 
@@ -159,7 +169,7 @@ Escolha o arquivo **`Qwen3.5-4B.Q4_K_M.gguf`** na página do Hugging Face:
      src="https://files.seeedstudio.com/wiki/Jetson/claw/gguf.jpg" />
 </div>
 
-Se o repositório usar o mesmo nome de arquivo do exemplo deste guia, você também pode baixá‑lo com:
+Se o repositório usar o mesmo nome de arquivo do exemplo deste guia, você também pode baixá-lo com:
 
 ```bash
 huggingface-cli download \
@@ -168,7 +178,7 @@ huggingface-cli download \
   --local-dir ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-Se o seu arquivo tiver um nome diferente, basta atualizar o caminho no comando de inicialização abaixo. No exemplo aqui, assumimos que o arquivo do modelo é:
+Se o seu arquivo tiver um nome diferente, apenas atualize o caminho no comando de inicialização abaixo. No exemplo aqui, assumimos que o arquivo de modelo é:
 
 ```bash
 ~/llama.cpp/models/Qwen3.5-4B-GGUF/Qwen3.5-4B.Q4_K_M.gguf
@@ -197,9 +207,9 @@ Notas sobre parâmetros recomendados:
 
 - `--alias qwen3.5-4b-local`: dá ao modelo local um nome de modelo de API limpo para o `nanobot`
 - `-t 6`: usa um número moderado de threads de CPU em dispositivos Jetson de entrada
-- `-c 40960`: fornece uma janela de contexto grande, mas você pode reduzi‑la se a memória estiver apertada
+- `-c 40960`: fornece uma grande janela de contexto, mas você pode reduzi-la se a memória estiver limitada
 - `--n-gpu-layers 40`: descarrega o máximo de camadas possível para a GPU do Jetson
-- `--reasoning off`: mantém a saída mais simples e reduz a sobrecarga desnecessária para uma configuração inicial
+- `--reasoning off`: mantém a saída mais simples e reduz sobrecarga desnecessária para uma configuração inicial
 
 Se o servidor não iniciar devido à pressão de memória, tente primeiro reduzir `-c` para `16384` e depois diminuir `--n-gpu-layers`.
 
@@ -264,7 +274,7 @@ Em seguida, mescle as seções a seguir na sua configuração:
 
 Por que isso funciona:
 
-- `provider: "custom"` informa ao `nanobot` para usar qualquer backend compatível com OpenAI
+- `provider: "custom"` diz ao `nanobot` para usar qualquer backend compatível com OpenAI
 - `apiBase: "http://127.0.0.1:8080/v1"` aponta para o `llama-server` local
 - `model: "qwen3.5-4b-local"` corresponde ao valor `--alias` usado ao iniciar o `llama.cpp`
 
@@ -279,9 +289,9 @@ Crie um aplicativo Feishu na Feishu Open Platform:
 - Abra https://open.feishu.cn/app
 - Crie ou abra o aplicativo do seu bot
 - Copie o **App ID** e o **App Secret**
-- Cole‑os em `channels.feishu.appId` e `channels.feishu.appSecret`
+- Cole-os em `channels.feishu.appId` e `channels.feishu.appSecret`
 
-Para o modo de Conexão Longa, `encryptKey` e `verificationToken` podem permanecer vazios.
+Para o modo de Long Connection, `encryptKey` e `verificationToken` podem permanecer vazios.
 
 Se você não conseguir encontrar suas credenciais depois, vá para:
 
@@ -291,7 +301,7 @@ Se você não conseguir encontrar suas credenciais depois, vá para:
 
 ### Importar permissões do Feishu
 
-Para que o tratamento de arquivos, imagens e mensagens ricas funcione corretamente, importe o conjunto de permissões abaixo em:
+Para que o manuseio de arquivos, imagens e mensagens ricas funcione corretamente, importe o conjunto de permissões abaixo em:
 
 - Feishu Open Platform
 - Seu aplicativo
@@ -334,12 +344,12 @@ Para que o tratamento de arquivos, imagens e mensagens ricas funcione corretamen
 }
 ```
 
-Após importar as permissões:
+Depois de importar as permissões:
 
 - Crie uma nova versão do aplicativo
 - Publique a versão do aplicativo
 
-Caso contrário, as permissões recém‑adicionadas podem não entrar em vigor.
+Caso contrário, as permissões recém-adicionadas podem não entrar em vigor.
 
 ## Etapa 8. Iniciar o nanobot e testar o controle via Feishu
 
@@ -362,11 +372,11 @@ Agora envie uma mensagem para o bot a partir do Feishu:
 - Em um chat privado, envie uma mensagem direta
 - Em um chat em grupo, mencione o bot se você mantiver `groupPolicy: "mention"`
 
-Se você usou `allowFrom: ["*"]`, o bot deve responder imediatamente. Se depois você quiser restringir o acesso, envie primeiro uma mensagem, verifique os logs do `nanobot` para encontrar seu `open_id` e substitua `["*"]` por esse valor.
+Se você usou `allowFrom: ["*"]`, o bot deve responder imediatamente. Se depois você quiser restringir o acesso, envie primeiro uma mensagem, verifique nos logs do `nanobot` o seu `open_id` e substitua `["*"]` por esse valor.
 
-## Opcional: Adicionar uma Skill de Exemplo Jetson-Claw
+## Opcional: adicionar uma habilidade de exemplo Jetson-Claw
 
-Se você quiser transformar esta configuração inicial em uma demonstração Jetson-Claw mais útil, pode adicionar um conjunto de skills de exemplo:
+Se você quiser transformar esta configuração inicial em uma demo Jetson-Claw mais útil, pode adicionar um conjunto de habilidades de exemplo:
 
 ```bash
 git clone https://github.com/jjjadand/JetsonClaw-SKILLS.git ~/JetsonClaw-SKILLS
@@ -374,45 +384,45 @@ mkdir -p ~/.nanobot/workspace/skills
 cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 ```
 
-Em seguida, reinicie `nanobot gateway`, conecte uma câmera USB ao Jetson e peça ao bot no Feishu para verificar se uma pessoa está visível na frente da câmera.
+Em seguida, reinicie o `nanobot gateway`, conecte uma câmera USB ao Jetson e peça ao bot no Feishu para verificar se uma pessoa está visível em frente à câmera.
 
-### Exemplo de Fluxo de Monitoramento no Feishu
+### Exemplo de fluxo de monitoramento no Feishu
 
-Depois que a skill estiver instalada, você pode enviar uma solicitação pelo aplicativo Feishu para pedir ao Jetson-Claw que verifique o feed da câmera:
+Depois que a habilidade estiver instalada, você pode enviar uma solicitação pelo aplicativo Feishu para pedir ao Jetson-Claw que verifique o feed da câmera:
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/Jetson/claw/ask.png" />
 </div>
 
-Se nenhuma pessoa for detectada, o resultado do monitoramento pode ser assim:
+Se nenhuma pessoa for detectada, o resultado do monitoramento pode parecer com isto:
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/Jetson/claw/no-person.png" />
 </div>
 
-Se uma pessoa for detectada, o Jetson-Claw pode retornar um alerta pelo Feishu:
+Se uma pessoa for detectada, o Jetson-Claw pode retornar um alerta por meio do Feishu:
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/Jetson/claw/have-person.png" />
 </div>
 
-A skill de monitoramento também pode enviar de volta a imagem do resultado capturado:
+A habilidade de monitoramento também pode enviar de volta a imagem capturada do resultado:
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/Jetson/claw/monitor-res.jpg" />
 </div>
 
-## Solução de Problemas
+## Solução de problemas
 
-- `nanobot` falha ao instalar: certifique-se de que você está em um ambiente Python 3.11
-- `llama-server` encerra durante o carregamento do modelo: aumente a swap ou reduza `-c`
-- O bot do Feishu não responde: verifique App ID, App Secret, permissões importadas e a versão publicada do app
-- Mensagens de grupo não acionam o bot: verifique `groupPolicy` e certifique-se de mencionar o bot
-- As respostas estão lentas: reduza o tamanho do contexto, diminua o uso concorrente ou use uma quantização menor
+- Falha na instalação do `nanobot`: certifique-se de estar em um ambiente Python 3.11
+- `llama-server` é encerrado durante o carregamento do modelo: aumente a swap ou reduza `-c`
+- O bot do Feishu não responde: verifique App ID, App Secret, permissões importadas e versão publicada do aplicativo
+- Mensagens em grupo não acionam o bot: verifique `groupPolicy` e certifique-se de mencionar o bot
+- As respostas estão lentas: reduza o tamanho de contexto, diminua o uso simultâneo ou use uma quantização menor
 
 ## Referências
 
@@ -423,9 +433,9 @@ A skill de monitoramento também pode enviar de volta a imagem do resultado capt
 - https://github.com/jjjadand/JetsonClaw-SKILLS
 - https://wiki.seeedstudio.com/pt-br/local_openclaw_on_recomputer_jetson/
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte técnico e discussão de produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
