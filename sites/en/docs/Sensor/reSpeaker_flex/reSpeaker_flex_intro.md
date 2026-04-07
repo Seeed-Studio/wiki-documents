@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-04-01'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
@@ -23,7 +23,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 <table align="center">
   <tr>
-    <th>reSpeaker Flex XVF3800 </th>
+    <th>reSpeaker Flex XVF3800 Circular </th>
     <th>reSpeaker Flex XVF3800 Circular with XIAO ESP32S3</th>
     
   </tr>
@@ -34,12 +34,12 @@ The system supports two interchangeable microphone array configurations: a **cir
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Sound-Event-Detection-Module-D1-p-6652.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-Power-over-Ethernet-p-5673.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-with-XIAO-ESP32S3-p-6739.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -55,7 +55,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 <table align="center">
   <tr>
-    <th>reSpeaker Flex XVF3800 </th>
+    <th>reSpeaker Flex XVF3800 Linear</th>
     <th>reSpeaker Flex XVF3800 Linear with XIAO ESP32S3</th>
     
   </tr>
@@ -66,12 +66,12 @@ The system supports two interchangeable microphone array configurations: a **cir
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Sound-Event-Detection-Module-D1-p-6652.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-p-6738.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-Power-over-Ethernet-p-5673.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-with-XIAO-ESP32S3-p-6736.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -266,7 +266,7 @@ Now the device is running the **Safe Mode firmware stored in the Factory partiti
 
 ### Update firmware 
 
-Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the Github Link: 
+Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the Github [Link](https://github.com/respeaker/reSpeaker_Flex) 
 
 :::note 
 Please make sure that you will need to download whole repository.
@@ -284,9 +284,14 @@ Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x
 
 You can explore these firmware files in this link
 
-| Firmware | Channels | Notes |
-|----------|----------|-------|
-| XXXXXXXXXX | XXXXXX | XXXXXXX |
+| Firmware                         | Channels | Notes                                                   |
+|----------------------------------|----------|---------------------------------------------------------|
+| respeaker_flex_ua-io16-6ch-cir.bin | 6 Channels | 16 kHz, 6 channels using circular mic array             |
+| respeaker_flex_ua-io16-6ch-lin.bin | 6 Channels | 16 kHz, 6 channels using linear mic array               |
+| respeaker_flex_ua-io16-cir.bin     | 2 Channels | 16 kHz, stereo output using circular mic array          |
+| respeaker_flex_ua-io16-lin.bin     | 2 Channels | 16 kHz, stereo output using linear mic array            |
+| respeaker_flex_ua-io48-cir.bin     | 2 Channels | 48 kHz, stereo output using circular mic array          |
+| respeaker_flex_ua-io48-lin.bin     | 2 Channels | 48 kHz, stereo output using linear mic array            |
 
 Connect the reSpeaker Flex to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to RST Button) to flash XMOS’s firmware.
 
@@ -296,9 +301,12 @@ Connect the reSpeaker Flex to your PC via the USB cable. Note that you need to u
 
 The I2S firmware is intended for use when the device is connected to a microcontroller host such as the XIAO ESP32S3. In this configuration, voice data is transmitted using the I2S protocol. The firmware file **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** is available in here. This firmware supports 2-channel audio with a 32-bit depth at a 16 kHz sampling rate.
 
-| Firmware | Channels | Notes |
-|----------|----------|-------|
-| XXXXXXXXXX | XXXXXX | XXXXXXX |
+| Firmware                                      | Channels | Notes                                                     |
+|-----------------------------------------------|----------|-----------------------------------------------------------|
+| respeaker_flex_inthost-lr16-cir-i2c.bin      | 2 Channels | 16 kHz, stereo output, circular mic array   |
+| respeaker_flex_inthost-lr16-lin-i2c.bin      | 2 Channels | 16 kHz, stereo output, linear mic array|
+| respeaker_flex_inthost-lr48-cir-i2c.bin      | 2 Channels | 48 kHz, stereo output, circular mic array|
+| respeaker_flex_inthost-lr48-lin-i2c.bin      | 2 Channels | 48 kHz, stereo output, linear mic array|
 
 Connect the reSpeaker Flex to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to RST Button) to flash XMOS’s firmware.
 

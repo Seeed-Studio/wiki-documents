@@ -22,17 +22,17 @@ import TabItem from '@theme/TabItem';
 
 # Meshtastic Firmware Source Code Practical Tutorial
 
-This tutorial is intended for users who are just getting started with the Meshtastic firmware source code. It includes common workflows for both Windows and macOS. The goal is straightforward: clone the official repository, complete a successful build, make one simple UI change, and flash the modified firmware to the device for verification.
+This tutorial covers a basic Meshtastic firmware workflow on Windows and macOS: clone the repository, build `seeed_wio_tracker_L1`, make a small UI change, and flash the result.
 
-If you are already familiar with Git, Python, or PlatformIO, you can skip the corresponding sections and jump directly to the hands-on part.
+If Git, Python, and PlatformIO are already installed, you can skip ahead to the hands-on section.
 
 :::tip
-This guide includes common commands for both Windows and macOS. Most screenshots are still taken from a Windows environment, but the overall workflow on macOS is very similar.
+Commands are provided for both Windows and macOS. Most screenshots use Windows, but the workflow is the same on macOS.
 :::
 
 ## Prerequisites
 
-Before you begin, prepare the following tools:
+Prepare the following tools:
 
 1. Git
 2. Python 3
@@ -228,7 +228,7 @@ If you prefer using `python` and `pip`, you can set shell aliases yourself. On m
 
 ### 3. Install PlatformIO
 
-This step may feel less beginner-friendly because PlatformIO downloads many dependencies automatically, and the installation can take some time. If errors appear during installation, it is usually best to wait patiently and troubleshoot one issue at a time. Using AI tools to help inspect the error messages can also save time.
+PlatformIO downloads dependencies automatically during installation, so this step may take some time. If errors occur, review them one at a time.
 
 Search for `PlatformIO` in the VS Code Extensions marketplace and install it.
 
@@ -316,16 +316,6 @@ Here we use **Wio Tracker L1 Pro** as the example target.
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
 This shows that, in Meshtastic, **the build target for Wio Tracker L1 / L1 Pro is** `seeed_wio_tracker_L1`.
-
-**Minimal modification summary**
-
-If you only want to complete one minimal end-to-end practice run, focus on these key steps:
-
-1. Install Git, Python 3, VS Code, and PlatformIO.
-2. Clone the `meshtastic/firmware` repository and initialize the submodules.
-3. Use `pio run -e seeed_wio_tracker_L1` to confirm the original project builds successfully.
-4. Modify the display logic in `src/graphics/SharedUIDisplay.cpp`.
-5. Rebuild the firmware and flash the generated UF2 file to the device for verification.
 
 **Step 1: Confirm that the project builds successfully**
 
@@ -455,44 +445,17 @@ If you continue tracing the display logic, most of the related code is located u
 - `src/graphics/`
 - `src/graphics/draw/`
 
-Exactly how you modify it depends on your ability to read the source code. Here we start with a very simple example: modifying the home screen UI.
+Here we use a simple example: add a custom label to the home screen header.
 
-**Change 1: Record the right edge of the battery text**
+Update `src/graphics/SharedUIDisplay.cpp` with the following changes:
 
 ```cpp
-Before / After
-
-// Before
-int batteryX = 1;
-int batteryY = HEADER_OFFSET_Y + 1;
-
-// After
+// Track the end of the battery text
 int batteryX = 1;
 int batteryY = HEADER_OFFSET_Y + 1;
 int batteryTextEndX = batteryX - 1;
-```
 
-`src/graphics/SharedUIDisplay.cpp:157`
-
-This adds `batteryTextEndX`, which records the end position of the battery percentage text. That makes it easier to append custom text after the battery information later.
-
-**Change 2: Calculate the right boundary while drawing the battery percentage**
-
-```cpp
-// Before
-if (chargePercent != 101) {
-    char chargeStr[4];
-    snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
-    int chargeNumWidth = display->getStringWidth(chargeStr);
-    display->drawString(batteryX, textY, chargeStr);
-    display->drawString(batteryX + chargeNumWidth - 1, textY, "%");
-    if (isBold) {
-        display->drawString(batteryX + 1, textY, chargeStr);
-        display->drawString(batteryX + chargeNumWidth, textY, "%");
-    }
-}
-
-// After
+// Update the boundary while drawing the battery percentage
 if (chargePercent != 101) {
     char chargeStr[4];
     snprintf(chargeStr, sizeof(chargeStr), "%d", chargePercent);
@@ -508,31 +471,29 @@ if (chargePercent != 101) {
 } else {
     batteryTextEndX = batteryX - 1;
 }
-```
 
-`src/graphics/SharedUIDisplay.cpp:204`
-
-This code sits inside the battery percentage drawing logic. In addition to displaying the battery level normally, it also calculates the right boundary of the text area so that custom labels can be placed after the battery information.
-
-**Change 3: Reserve a boundary for the icon area on the right**
-
-```cpp
-// Before
-int iconRightEdge = timeX - 2;
-
-// After
+// In the branch that displays time
 int iconRightEdge = timeX - 2;
 int headerLabelRight = timeX - 4;
-```
 
-`src/graphics/SharedUIDisplay.cpp:263`
+#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
+if (titleStr && titleStr[0] == '\0') {
+    static const char *yclLabel = "made by AE";
+    int labelWidth = display->getStringWidth(yclLabel);
+    int labelLeft = batteryTextEndX + 4;
+    if (labelLeft + labelWidth <= headerLabelRight) {
+        int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
+        display->drawString(labelX, textY, yclLabel);
+        if (isBold)
+            display->drawString(labelX + 1, textY, yclLabel);
+    }
+}
+#endif
 
-This part handles the area used by the time, mail, mute, and other icons on the right side. I added `headerLabelRight` to limit the maximum right boundary of the center text and prevent overlap with the right-side content.
+// In the branch that does not display time
+int iconRightEdge = screenW - xOffset;
+int headerLabelRight = screenW - xOffset - 2;
 
-**Change 4: Draw a custom label when the title is empty**
-
-```cpp
-// Newly added core logic
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
 if (titleStr && titleStr[0] == '\0') {
     static const char *yclLabel = "made by AE";
@@ -548,41 +509,11 @@ if (titleStr && titleStr[0] == '\0') {
 #endif
 ```
 
-`src/graphics/SharedUIDisplay.cpp:350`
+This update does three things:
 
-This is the core logic of the modification. It only applies to `SEEED_WIO_TRACKER_L1` and explicitly excludes the E-Ink variant. It centers the text `made by AE` in the blank space between the battery information and the time display.
-
-**Change 5: Handle the branch where no time is displayed**
-
-```cpp
-// Add the same boundary control for the no-time branch
-int iconRightEdge = screenW - xOffset;
-int headerLabelRight = screenW - xOffset - 2;
-```
-
-`src/graphics/SharedUIDisplay.cpp:377`
-
-This is the branch used when no time value is displayed. The same boundary control needs to be added here as well.
-
-```cpp
-#if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
-        if (titleStr && titleStr[0] == '\0') {
-            static const char *yclLabel = "made by AE";
-            int labelWidth = display->getStringWidth(yclLabel);
-            int labelLeft = batteryTextEndX + 4;
-            if (labelLeft + labelWidth <= headerLabelRight) {
-                int labelX = labelLeft + ((headerLabelRight - labelLeft) - labelWidth) / 2;
-                display->drawString(labelX, textY, yclLabel);
-                if (isBold)
-                    display->drawString(labelX + 1, textY, yclLabel);
-            }
-        }
-#endif
-```
-
-`src/graphics/SharedUIDisplay.cpp:426`
-
-This is the implementation for drawing `made by AE` in the no-time branch.
+- Records the right edge of the battery text.
+- Reserves space between the battery area and the right-side icons.
+- Draws `made by AE` only on `SEEED_WIO_TRACKER_L1` when the title is empty.
 
 You can find the complete code here:
 

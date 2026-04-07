@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-02 09:21:55 (北京时间)
-// 多语言页面: 2238 个
+// 生成时间: 2026-04-03 14:51:30 (北京时间)
+// 多语言页面: 2240 个
 
 (function() {
   'use strict';
@@ -3369,6 +3369,13 @@
     "ja",
     "pt"
   ],
+  "/driving_reterminal_d1001_audio_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_reterminal_d1001": [
     "cn",
     "en",
@@ -3888,6 +3895,13 @@
     "pt"
   ],
   "/LoRa_E5_mini": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/lora-e5_relay": [
     "cn",
     "en",
     "es",
