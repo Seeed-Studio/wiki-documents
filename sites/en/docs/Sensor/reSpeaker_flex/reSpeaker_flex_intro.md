@@ -103,6 +103,8 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 ## Main Components 
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main_noxiao.jpg" alt="pir" width={800} height="auto" /></p>
+
 ### Core Board
 
 | Component / Feature | Description |
@@ -130,7 +132,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 ### Circular Array Board 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/circle.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_doa.jpg" alt="pir" width={800} height="auto" /></p>
 
 | Component / Feature | Description |
 |--------------------|------------|
@@ -144,7 +146,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 ### Linear Array Board
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/linear.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_linear.jpg" alt="pir" width={800} height="auto" /></p>
 
 | Component / Feature | Description |
 |--------------------|------------|
@@ -158,6 +160,8 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
+
 The reSpeaker Flex core board includes a dedicated footprint for soldering a Seeed Studio XIAO ESP32S3 module, enabling Wi-Fi and Bluetooth connectivity on top of the XVF3800's audio processing pipeline. The SKUs including XIAO (-C4-1 and -L4-1) ship with this module pre-populated; the base SKUs (-C4-0 and -L4-0) leave the footprint unpopulated.
 When the XIAO is fitted, the following connections are wired between it and the XVF3800:
 
@@ -170,7 +174,10 @@ An FPC Wi-Fi antenna (for the on-board antenna-free XIAO ESP32S3) is included as
 
 ### Pin Header 
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_2.jpg" alt="pir" width={800} height="auto" /></p>
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_1.png" alt="pir" width={600} height="auto" /></p>
+
 
 ### 24 FPC cable 
 
