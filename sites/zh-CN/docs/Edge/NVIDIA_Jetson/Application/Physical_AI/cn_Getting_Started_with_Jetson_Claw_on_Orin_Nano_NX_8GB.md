@@ -1,5 +1,5 @@
 ---
-description: 本文档展示如何在 Jetson Orin Nano 8GB 或 Orin NX 8GB 上，使用 nanobot、llama.cpp、本地 Qwen3.5 4B GGUF 模型和飞书控制，搭建一个 Jetson-Claw 入门环境。
+description: 本文档展示如何在 Jetson Orin Nano 8GB 或 Orin NX 8GB 上，通过安装 nanobot、llama.cpp、本地 Qwen3.5 4B GGUF 模型以及接入飞书控制，搭建一个 Jetson-Claw 入门环境。
 title: 在 Orin Nano / NX 8GB 上快速上手 Jetson-Claw
 image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 ---
 # 在 Orin Nano / NX 8GB 上快速上手 Jetson-Claw
 
@@ -18,25 +18,35 @@ updatedAt: '2026-04-02'
      src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
 </div>
 
-本文档将带你完成一个适用于 **Jetson Orin Nano 8GB** 和 **Jetson Orin NX 8GB** 的实用 Jetson-Claw 入门搭建。整个软件栈都在 Jetson 本地运行：我们会安装 `nanobot`，扩展交换分区以更安全地加载模型，用 CUDA 编译 `llama.cpp`，下载一个 `Qwen3.5 4B` GGUF 模型，将 `nanobot` 切换到本地 `llama.cpp` 后端，最后把机器人接入 **飞书（Feishu）**，这样你就可以通过聊天来控制它。
+本教程将带你完成一个面向 **Jetson Orin Nano 8GB** 与 **Jetson Orin NX 8GB** 的实用 Jetson-Claw 入门搭建。整套方案完全在 Jetson 本地运行：我们将安装 `nanobot`，扩展交换分区以便更安全地加载模型，用 CUDA 编译 `llama.cpp`，下载一个本地 `Qwen3.5 4B` GGUF 模型，将 `nanobot` 切换到本地 `llama.cpp` 后端，并最终把机器人接入 **飞书（Feishu）**，这样你就可以通过聊天来控制它。
 
-与更大规模的 OpenClaw 部署相比，**nanobot** 更适合作为这个入门级 Jetson-Claw 方案的核心，因为它更轻量、启动更快、代码更易阅读和修改，并且已经支持 **飞书** 以及 **兼容 OpenAI 的本地后端**。在 8 GB 的 Jetson 上，更低的运行时开销可以为本地模型本身留出更多空间。如果你之后需要更大的插件生态或更复杂的多组件工作流，仍然可以升级到 OpenClaw。
+与更大规模的 OpenClaw 部署相比，**nanobot** 更适合这种入门级 Jetson-Claw 搭建，因为它更轻量、启动更快、代码更易阅读与修改，并且已经支持 **飞书** 和 **兼容 OpenAI 的本地后端**。在 8 GB 的 Jetson 上，更低的运行时开销可以为本地模型本身留出更多空间。如果后续你需要更大的插件生态或更复杂的多组件工作流，也可以再升级到 OpenClaw。
 
-## 你将搭建什么
+
+## 基准测试
+
+这里列出了不同 Jetson 模组在运行本地大模型时的性能表现。根据我们的验证，4B 模型是搭建能够执行特定任务系统的理想选择！模型参数规模越大，效果通常越好！你可以参考这份基准测试，为自己选择合适的 reComputer 产品。
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/jetson/benchmark_jetson.jpg" />
+</div>
+
+## 你将构建什么
 
 - 一个基于 `nanobot` 的轻量本地 AI 助手
-- 一个运行在 Jetson 上、兼容 OpenAI 的 `llama.cpp` HTTP 服务器
+- 一个在 Jetson 上运行的 `llama.cpp` OpenAI 兼容 HTTP 服务器
 - 一个本地 `Qwen3.5 4B` GGUF 模型
-- 一个接入飞书的 Jetson 机器人，可通过私聊或群聊 @ 控制
+- 一个连接飞书的 Jetson 机器人，可以在私聊或群聊中 @ 它进行控制
 
 ## 前置条件
 
 - 1 台 Jetson Orin Nano 8GB 或 Jetson Orin NX 8GB
 - 已安装 JetPack 6.x
-- 可用于安装软件包和下载模型的互联网连接
+- 可用的互联网连接，用于下载软件包和模型
 - 建议至少预留 20 GB 可用存储空间
 
-本指南以 **reComputer Super J3011** 作为参考 Jetson 平台：
+本指南使用 **reComputer Super J3011** 作为参考 Jetson 平台：
 
 <div align="center">
     <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg" style={{width:400, height:'auto'}}/>
@@ -49,7 +59,7 @@ updatedAt: '2026-04-02'
 </div>
 
 :::info
-`nanobot` 目前需要 Python 3.11 或更高版本，因此本指南使用 Miniconda 环境，而不是 Jetson 上默认的系统 Python。
+`nanobot` 目前需要 Python 3.11 或更高版本，因此本教程使用 Miniconda 环境，而不是直接使用 Jetson 上的系统默认 Python。
 :::
 
 ## 步骤 1. 安装 nanobot
@@ -75,7 +85,7 @@ pip install -U pip
 pip install nanobot-ai
 ```
 
-初始化运行时目录：
+初始化运行目录：
 
 ```bash
 nanobot onboard
@@ -88,12 +98,12 @@ nanobot onboard
 ```
 
 :::note
-`nanobot` 受 OpenClaw 启发，但对于 Orin Nano / NX 8GB 来说，它通常是更好的起点：更低的内存开销、更快的启动速度，以及更少需要排查的组件。
+`nanobot` 受到 OpenClaw 的启发，但对于 Orin Nano / NX 8GB 来说，它通常是更好的起点：更低的内存开销、更快的启动速度以及更少的组件需要调试。
 :::
 
-## 步骤 2. 增加交换分区（Swap）
+## 步骤 2. 增加交换分区（Swap Space）
 
-在 8 GB Jetson 上运行 4B 本地模型时，增加额外的交换分区会稳定得多。这在模型加载、编译以及长上下文推理时都会有所帮助。
+在 8 GB 的 Jetson 上运行 4B 本地模型时，增加额外交换分区会稳定得多。这在模型加载、编译以及长上下文推理时都会有所帮助。
 
 ```bash
 sudo fallocate -l 8G /var/swapfile
@@ -104,7 +114,7 @@ echo '/var/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 swapon --show
 ```
 
-如果你计划尝试更大的上下文长度或其他模型，可以进一步增加交换分区大小。
+如果你计划尝试更大的上下文长度或其他模型，可以进一步增加交换空间。
 
 ## 步骤 3. 使用 CUDA 编译 llama.cpp
 
@@ -124,13 +134,13 @@ cmake -B build -DGGML_CUDA=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
 ```
 
-编译完成后，主要可执行文件会放在以下目录下：
+编译完成后，主要可执行文件将位于：
 
 ```bash
 ~/llama.cpp/build/bin
 ```
 
-你可以通过下面的命令快速确认服务端二进制文件是否就绪：
+你可以通过如下方式快速确认服务器二进制已就绪：
 
 ```bash
 ~/llama.cpp/build/bin/llama-server --help
@@ -138,7 +148,7 @@ cmake --build build --parallel
 
 ## 步骤 4. 下载 Qwen3.5 4B GGUF 权重
 
-本指南使用 `Q4_K_M` GGUF 量化格式，因为在 8 GB Jetson 设备上，它在内存占用和响应质量之间达成了较好的平衡。
+本指南使用 `Q4_K_M` GGUF 量化版本，因为在 8 GB Jetson 设备上，它在内存占用和回复质量之间达成了一个较好的平衡。
 
 安装 Hugging Face CLI：
 
@@ -148,7 +158,7 @@ pip install -U "huggingface_hub[cli]"
 mkdir -p ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-然后打开下面的模型页面，将 `Q4_K_M` GGUF 文件下载到 `~/llama.cpp/models/Qwen3.5-4B-GGUF/` 目录中：
+然后打开下面的模型页面，将 `Q4_K_M` GGUF 文件下载到 `~/llama.cpp/models/Qwen3.5-4B-GGUF/` 中：
 
 - https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/main
 
@@ -159,7 +169,7 @@ mkdir -p ~/llama.cpp/models/Qwen3.5-4B-GGUF
      src="https://files.seeedstudio.com/wiki/Jetson/claw/gguf.jpg" />
 </div>
 
-如果该仓库使用的文件名与本指南示例相同，你也可以通过以下方式下载：
+如果仓库中使用的文件名与本指南示例相同，你也可以通过以下方式下载：
 
 ```bash
 huggingface-cli download \
@@ -168,7 +178,7 @@ huggingface-cli download \
   --local-dir ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-如果你的文件名不同，只需在后面的启动命令中更新路径即可。在本示例中，我们假设模型文件为：
+如果你的文件名不同，只需在下面的启动命令中相应更新路径即可。在本示例中，我们假定模型文件为：
 
 ```bash
 ~/llama.cpp/models/Qwen3.5-4B-GGUF/Qwen3.5-4B.Q4_K_M.gguf
@@ -176,7 +186,7 @@ huggingface-cli download \
 
 ## 步骤 5. 将 llama.cpp 作为本地后端启动
 
-启动本地兼容 OpenAI 的 API 服务器：
+启动本地 OpenAI 兼容 API 服务器：
 
 ```bash
 conda activate jetson-claw
@@ -195,13 +205,13 @@ cd ~/llama.cpp
 
 推荐参数说明：
 
-- `--alias qwen3.5-4b-local`：为本地模型设置一个干净的 API 模型名，供 `nanobot` 使用
+- `--alias qwen3.5-4b-local`：为本地模型设置一个干净的 API 模型名称，供 `nanobot` 使用
 - `-t 6`：在入门级 Jetson 设备上使用适中的 CPU 线程数
-- `-c 40960`：提供较大的上下文窗口，如果内存吃紧可以适当调小
-- `--n-gpu-layers 40`：尽可能多地将层数卸载到 Jetson GPU 上
-- `--reasoning off`：让输出更简洁，同时降低对入门环境来说不必要的开销
+- `-c 40960`：提供一个较大的上下文窗口，如果内存吃紧可以适当调低
+- `--n-gpu-layers 40`：尽可能多地将层卸载到 Jetson GPU 上运行
+- `--reasoning off`：保持输出更简洁，并为入门配置降低不必要的额外开销
 
-如果服务器因为内存压力启动失败，先尝试将 `-c` 降到 `16384`，然后再逐步降低 `--n-gpu-layers`。
+如果服务器因内存压力无法启动，先尝试将 `-c` 降到 `16384`，然后再逐步降低 `--n-gpu-layers`。
 
 在另一个终端中验证 API：
 
@@ -262,28 +272,28 @@ nano ~/.nanobot/config.json
 }
 ```
 
-这样配置的原因：
+原理说明：
 
-- `provider: "custom"` 告诉 `nanobot` 使用任意兼容 OpenAI 的后端
-- `apiBase: "http://127.0.0.1:8080/v1"` 指向本地的 `llama-server`
+- `provider: "custom"` 告诉 `nanobot` 使用任意 OpenAI 兼容后端
+- `apiBase: "http://127.0.0.1:8080/v1"` 指向本地 `llama-server`
 - `model: "qwen3.5-4b-local"` 与启动 `llama.cpp` 时使用的 `--alias` 值保持一致
 
 :::warning
-在快速测试阶段，使用 `allowFrom: ["*"]` 很方便。但在生产环境中，请在验证后将其替换为你自己的飞书 `open_id`。
+在快速测试阶段，`allowFrom: ["*"]` 非常方便。但在生产环境中，请在验证后将其替换为你自己的飞书 `open_id`。
 :::
 
-## 步骤 7. 将飞书接入 nanobot
+## 步骤 7. 将飞书连接到 nanobot
 
 在飞书开放平台中创建一个飞书应用：
 
 - 打开 https://open.feishu.cn/app
 - 创建或打开你的机器人应用
-- 复制 **App ID** 和 **App Secret**
+- 复制 **App ID** 与 **App Secret**
 - 将它们填入 `channels.feishu.appId` 和 `channels.feishu.appSecret`
 
 对于长连接模式，`encryptKey` 和 `verificationToken` 可以保持为空。
 
-如果之后找不到这些凭据，可以前往：
+如果之后找不到这些凭证，可以前往：
 
 - 飞书开放平台
 - 你的应用
@@ -291,7 +301,7 @@ nano ~/.nanobot/config.json
 
 ### 导入飞书权限
 
-为了让文件、图片和富文本消息处理正常工作，请在以下位置导入下面的权限集合：
+为了让文件、图片以及富文本消息处理正常工作，请在以下位置导入下面的权限集合：
 
 - 飞书开放平台
 - 你的应用
@@ -350,7 +360,7 @@ conda activate jetson-claw
 nanobot gateway
 ```
 
-一些有用的检查方式：
+一些有用的检查：
 
 ```bash
 nanobot status
@@ -360,13 +370,13 @@ nanobot channels status
 现在从飞书向机器人发送一条消息：
 
 - 在私聊中发送一条直接消息
-- 在群聊中，如果你保持 `groupPolicy: "mention"`，请在消息中提及该机器人
+- 在群聊中，如果保持 `groupPolicy: "mention"`，则在消息中提及机器人
 
-如果你使用了 `allowFrom: ["*"]`，机器人应该会立即回复。如果你之后想要收紧访问权限，先发送一条消息，在 `nanobot` 日志中查看你的 `open_id`，然后将 `["*"]` 替换为该值。
+如果你使用了 `allowFrom: ["*"]`，机器人应立即回复。如果你之后想要收紧访问权限，先发送一条消息，在 `nanobot` 日志中查看你的 `open_id`，并将 `["*"]` 替换为该值。
 
 ## 可选：添加示例 Jetson-Claw 技能
 
-如果你想把这个入门配置变成一个更实用的 Jetson-Claw 演示，你可以添加一个示例技能集：
+如果你想将此入门设置扩展为更实用的 Jetson-Claw 演示，可以添加一个示例技能集：
 
 ```bash
 git clone https://github.com/jjjadand/JetsonClaw-SKILLS.git ~/JetsonClaw-SKILLS
@@ -374,11 +384,11 @@ mkdir -p ~/.nanobot/workspace/skills
 cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 ```
 
-然后重启 `nanobot gateway`，将 USB 摄像头连接到 Jetson，并在 Feishu 中让机器人检查摄像头前是否有人可见。
+然后重启 `nanobot gateway`，将 USB 摄像头连接到 Jetson，并在飞书中让机器人检查摄像头前是否有人。
 
-### Feishu 监控流程示例
+### 示例飞书监控流程
 
-安装技能后，你可以从 Feishu 应用发送请求，让 Jetson-Claw 检查摄像头画面：
+安装技能后，你可以通过飞书应用发送请求，让 Jetson-Claw 检查摄像头画面：
 
 <div align="center">
     <img width={800} 
@@ -392,7 +402,7 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
      src="https://files.seeedstudio.com/wiki/Jetson/claw/no-person.png" />
 </div>
 
-如果检测到有人，Jetson-Claw 可以通过 Feishu 返回告警：
+如果检测到人，Jetson-Claw 可以通过飞书返回告警：
 
 <div align="center">
     <img width={800} 
@@ -408,11 +418,11 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 
 ## 故障排查
 
-- `nanobot` 安装失败：请确保你处于 Python 3.11 环境中
-- `llama-server` 在加载模型时退出：请增加交换分区或减小 `-c`
-- Feishu 机器人没有回复：请核对 App ID、App Secret、已导入的权限以及已发布的应用版本
-- 群消息没有触发机器人：请检查 `groupPolicy` 并确保你在消息中提及了机器人
-- 回复很慢：请降低上下文大小、减少并发使用，或使用更小的量化模型
+- `nanobot` 安装失败：请确保你在 Python 3.11 环境中
+- `llama-server` 在加载模型时退出：增加交换空间或减小 `-c`
+- 飞书机器人不回复：请核对 App ID、App Secret、导入的权限以及已发布的应用版本
+- 群聊消息无法触发机器人：检查 `groupPolicy` 并确保你提及了机器人
+- 回复很慢：降低上下文大小、减少并发使用，或使用更小的量化模型
 
 ## 参考资料
 
@@ -425,7 +435,7 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
