@@ -4360,6 +4360,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reBot Arm',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
+          ]
+        },
+        {
+          type: 'category',
           label: 'Hand',
           items: [
             'Robotics/Robot_Kits/Hand/AmazingHand',
