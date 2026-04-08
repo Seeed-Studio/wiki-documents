@@ -170,7 +170,7 @@ When the XIAO is fitted, the following connections are wired between it and the 
 - **RST line** — XIAO can assert a hardware reset on the XVF3800 via a dedicated IO pin
 - **Remaining XIAO IO** — brought out to labelled pin headers/pads for user expansion
 
-An FPC Wi-Fi antenna (for the on-board antenna-free XIAO ESP32S3) is included as an accessory with all XIAO-equipped variants.
+
 
 ### Pin Header 
 

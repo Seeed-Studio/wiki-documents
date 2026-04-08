@@ -2109,7 +2109,6 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
               ],
             },
             'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
