@@ -15,7 +15,6 @@ last_update:
 translation:
   skip:
     - [zh-CN]
-    - [en]
 createdAt: '2026-03-24'
 updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
@@ -24,10 +23,6 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 # Getting Started with Pinocchio and MeshCat for reBot Arm B601-DM
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
-
-
-
-
 
 <p align="center">
     <a href="./LICENSE">
@@ -96,10 +91,12 @@ uv sync
 reBot Arm B601-DM uses the Damiao USB2CAN serial bridge module by default.
 
 **Hardware Connection**:
+
 1. Connect the USB2CAN module to your computer via USB cable
 2. The system will automatically recognize it as `/dev/ttyACM0` device
 
 **Configuration Verification**:
+
 ```bash
 # Check device
 ls /dev/ttyACM0
@@ -130,8 +127,10 @@ ip -details link show can0
 | **RobStride** | CAN Interface | `socketcan` | 500000 |
 
 :::tip
+
 - For Damiao motors using serial bridge, must set `--transport dm-serial`
 - Feedback ID rule: `feedback_id = motor_id + 0x10`
+
 :::
 
 ---
@@ -174,11 +173,13 @@ reBotArm_control_py/
 Direct motorbridge SDK single motor testing with three control modes.
 
 **Usage**:
+
 ```bash
 uv run python example/1_damiao_text.py
 ```
 
 **Interactive Commands**:
+
 | Command | Description |
 |---------|-------------|
 | `mit <pos_deg> [vel kp kd tau]` | MIT mode |
@@ -195,6 +196,7 @@ uv run python example/1_damiao_text.py
 Automatically set all joint zeros and display joint angles in real-time.
 
 **Usage**:
+
 ```bash
 uv run python example/2_zero_and_read.py
 ```
@@ -210,11 +212,13 @@ Calculate end-effector pose from joint angles.
 **Input**: 6 joint angles (degrees)
 
 **Output**:
+
 - End-effector position (X, Y, Z) — Unit: meters
 - Rotation matrix (3×3)
 - Euler angles (Roll/Pitch/Yaw) — Unit: degrees
 
 **Example**:
+
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
@@ -228,10 +232,12 @@ uv run python example/5_fk_test.py
 Solve joint angles from desired end-effector pose.
 
 **Input Format**:
+
 - Position only: `<x> <y> <z>` (meters)
 - Position + Orientation: `<x> <y> <z> <roll> <pitch> <yaw>` (degrees)
 
 **Example**:
+
 ```bash
 uv run python example/6_ik_test.py
 > 0.25 0.0 0.15              # Position only
@@ -252,6 +258,7 @@ sudo chmod 666 /dev/ttyACM0
 # Or for CAN interface (e.g., can0)
 sudo chmod 666 /dev/can0
 ```
+
 :::
 
 #### 7️⃣ IK Real-time Control (`7_arm_ik_control.py`)
@@ -259,6 +266,7 @@ sudo chmod 666 /dev/can0
 Real-time end-effector control based on IK solver.
 
 **Interactive Commands**:
+
 | Command | Description |
 |---------|-------------|
 | `x y z [roll pitch yaw]` | Target end-effector pose |
@@ -267,6 +275,7 @@ Real-time end-effector control based on IK solver.
 | `q/quit/exit` | Quit |
 
 **Usage**:
+
 ```bash
 uv run python example/7_arm_ik_control.py
 > 0.3 0.0 0.2
@@ -280,16 +289,19 @@ uv run python example/7_arm_ik_control.py
 SE(3) geodesic trajectory planning + CLIK tracking.
 
 **Input Format**:
+
 ```
 x y z [roll pitch yaw] [duration]
 ```
 
 **Parameters**:
+
 - `x, y, z`: Target position (meters)
 - `roll, pitch, yaw`: Target orientation (radians)
 - `duration`: Movement duration (seconds), default 2.0s
 
 **Usage**:
+
 ```bash
 uv run python example/8_arm_traj_control.py
 > 0.3 0.0 0.3 0 0.4 0 2.0
@@ -302,6 +314,7 @@ uv run python example/8_arm_traj_control.py
 Compensates for joint gravity using Pinocchio dynamics model.
 
 **Control Law**:
+
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position  — Joint position follows current position
@@ -309,16 +322,19 @@ kp = 2,  kd = 1     — Unified stiffness/damping for all motors
 ```
 
 **Expected Behavior**:
+
 - The robotic arm can "float" in any posture
 - Won't fall due to its own weight when released
 - Can be manually moved to any position
 
 **Usage**:
+
 ```bash
 uv run python example/9_gravity_compensation.py
 ```
 
 **Output**:
+
 - Real-time display of expected torque for each joint (N·m)
 - Press `Ctrl+C` to stop and disconnect
 
