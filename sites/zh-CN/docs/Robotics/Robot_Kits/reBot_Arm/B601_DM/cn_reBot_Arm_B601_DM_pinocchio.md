@@ -20,7 +20,7 @@ updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
-# 🦾 reBotArm Control: Python 机械臂控制库
+# reBot Arm B601-DM 的 Pinocchio 与 MeshCat 入门指南
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
