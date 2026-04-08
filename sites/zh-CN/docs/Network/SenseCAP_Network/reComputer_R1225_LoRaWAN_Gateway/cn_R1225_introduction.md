@@ -36,10 +36,10 @@ reComputer R1225 是一款功能强大且灵活的工业级 Raspberry Pi 平台 
 - 多路隔离 RS485 通道，支持高速和低速通信
 
 - 支持 BACnet、Modbus RTU 和 Modbus TCP/IP 协议
-- 高达 4GB RAM，可处理上千个数据点
-- 清晰的双侧 LED 指示灯，便于用户快速查看运行状态
-- 高品质金属外壳，兼容导轨安装和壁挂安装
-- 开源软件，包括 Seeed Gateway OS、ChirpStack、Basics™ Station 以及内置数据包转发器。支持定制化和二次开发。
+- 高达 4GB RAM，可支持处理数千个数据点
+- 清晰的双面 LED 指示灯，便于用户快速查看运行状态
+- 高质量金属外壳，兼容导轨安装和壁挂安装
+- 开源软件，包括 SenseCAP Gateway OS、ChirpStack、Basics™ Station 和内置数据转发器。支持定制化和二次开发。
 
 ### 强劲性能
 

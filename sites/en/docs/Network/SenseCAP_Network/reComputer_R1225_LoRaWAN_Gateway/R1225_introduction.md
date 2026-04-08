@@ -39,7 +39,7 @@ The reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based Io
 - Up to 4GB of RAM supports the processing of thousands of data points
 - Clear dual-sided LED indicators allow users to quickly check the operational status
 - High-quality metal case, compatible with DIN-rail and wall mounting
-- Open-source software including Seeed Gateway OS，ChirpStack, Basics™ Station, and a built-in packet forwarder. Supports customization and secondary development.
+- Open-source software including SenseCAP Gateway OS，ChirpStack, Basics™ Station, and a built-in packet forwarder. Supports customization and secondary development.
 
 ### Powerful Performance
 
