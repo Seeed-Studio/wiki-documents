@@ -80,8 +80,10 @@ source .venv/bin/activate
 
 ## 安装 MeshCat numpy
 
+```bash
 uv pip install meshcat
 uv pip install "numpy<2"
+```
 
 ## 构建目录 + 配置 + 编译
 
