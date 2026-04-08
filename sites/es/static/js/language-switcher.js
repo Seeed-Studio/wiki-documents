@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-08 10:50:58 (北京时间)
-// 多语言页面: 2245 个
+// 生成时间: 2026-04-08 15:09:38 (北京时间)
+// 多语言页面: 2246 个
 
 (function() {
   'use strict';
@@ -5559,6 +5559,13 @@
     "pt"
   ],
   "/reachymini_troubleshooting": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_pinocchio_meshcat": [
+    "cn",
     "en",
     "es",
     "ja",
