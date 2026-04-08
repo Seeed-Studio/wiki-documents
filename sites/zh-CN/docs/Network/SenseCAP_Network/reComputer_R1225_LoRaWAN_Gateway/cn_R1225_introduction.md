@@ -40,7 +40,7 @@ reComputer R1225 是一款功能强大且灵活的工业级、基于 Raspberry P
 - 高达 4GB RAM，可支持处理数千个数据点
 - 清晰的双面 LED 指示灯，便于用户快速查看运行状态
 - 高质量金属外壳，兼容导轨安装和壁挂安装
-- 开源软件，包括 Seeed Gateway OS、ChirpStack、Basics™ Station 和内置数据转发器。支持定制化和二次开发。
+- 开源软件，包括 SenseCAP Gateway OS、ChirpStack、Basics™ Station 和内置数据转发器。支持定制化和二次开发。
 
 ### 强劲性能
 
