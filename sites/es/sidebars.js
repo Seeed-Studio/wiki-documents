@@ -2087,6 +2087,29 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/es_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Aplicación',
+              items: [
+                'Sensor/reSpeaker_flex/es_reSpeaker_flex_picovoice',
+              ],
+            },
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
@@ -2703,14 +2726,15 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_Quick_Start',
-            /* {
+            {
               type: 'category',
               label: 'Cloud Platform Integration',
               items: [
-                ,
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_ChirpStack',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_TTN',
               ],
             },
-             {
+            /*{
               type: 'category',
               label: 'Application',
               items: [
@@ -3923,7 +3947,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
               ]
             },
             // Generative AI
@@ -4597,6 +4621,7 @@ const sidebars = {
             'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
+            'Robotics/Robot_Sensor/Camera/es_realsense_3D_seg',
             'Robotics/Robot_Sensor/Camera/es_ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/es_Pycuvslam_On_reComputer',
             'Robotics/Robot_Sensor/Camera/es_Orbbec_Gemini_335Lg',

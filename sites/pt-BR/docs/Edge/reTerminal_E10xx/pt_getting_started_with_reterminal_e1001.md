@@ -9,10 +9,9 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-25'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1001/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -55,7 +54,7 @@ O hardware do reTerminal E1001 inclui:
 5. **Interruptor de energia**: Localizado na parte traseira para ligar/desligar o dispositivo
 6. **LED de status**: Indicador do usuário (verde)
 7. **LED de energia**: Indicador de carregamento (vermelho)
-8. **Porta USB-C**: Para carregamento e atualizações de firmware
+8. **Porta USB-C**: Para carregamento e atualização de firmware
 9. **Porta de expansão**: Conector de expansão de 8 pinos fornecendo conexões VDD, GND, I2C e GPIO
 
 
@@ -66,7 +65,7 @@ O hardware do reTerminal E1001 inclui:
 **Passo 1.** Desembale o seu reTerminal E1001 e certifique-se de que todos os componentes estão incluídos:
 
 - Dispositivo reTerminal E1001
-- Cabo USB-C
+- Cabo de dados para carregamento
 - Guia de início rápido
 
 **Passo 2.** (Opcional) Insira um cartão microSD se você planeja usar o dispositivo como uma moldura de fotos digital ou se precisar de armazenamento adicional.
@@ -74,7 +73,7 @@ O hardware do reTerminal E1001 inclui:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-O display ePaper reTerminal E Series suporta apenas cartões MicroSD de até 64GB no formato Fat32.  
+O display ePaper da série reTerminal E suporta apenas cartões MicroSD de até 64GB no formato Fat32.  
 O cartão SD de 64GB é formatado como exFAT por padrão. Após formatá-lo para FAT32, ele pode ser montado com sucesso e usado para armazenar imagens.
 :::
 
@@ -82,11 +81,11 @@ O cartão SD de 64GB é formatado como exFAT por padrão. Após formatá-lo para
 
 Dependendo do seu sistema operacional, talvez seja necessário instalar drivers USB para garantir a comunicação adequada com o seu reTerminal E1001:
 
-- **Para computadores Mac**: Baixe e instale o driver CH34X no [site oficial da WCH](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
+- **Para computadores Mac**: Baixe e instale o driver CH34X a partir do [site oficial da WCH](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
 
 - **Para computadores Windows**:
   - Sistemas Windows 11 normalmente incluem o driver por padrão
-  - Para Windows 10 e versões anteriores, talvez seja necessário baixar e instalar o driver CH341 no [site oficial da WCH](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+  - Para Windows 10 e versões anteriores, talvez seja necessário baixar e instalar o driver CH341 a partir do [site oficial da WCH](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
 - **Para sistemas Linux**: A maioria das distribuições Linux modernas inclui os drivers necessários por padrão
 
@@ -98,7 +97,7 @@ Dependendo do seu sistema operacional, talvez seja necessário instalar drivers 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/134.jpg" style={{width:700, height:'auto'}}/></div>
 
-3. Visite **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** e faça login na sua conta
+3. Acesse **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** e faça login na sua conta
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
@@ -151,18 +150,18 @@ Portanto, precisamos concluir as próximas etapas de configuração da rede dura
 <Tabs>
 <TabItem value="Network Setup vis PC" label="Configuração de rede via PC" default>
 
-**Passo 1.** Conecte-se ao ponto de acesso Wi-Fi do dispositivo a partir do seu smartphone ou computador. O nome do AP aparecerá na tela (sem necessidade de senha). As credenciais da rede são `reTerminal E1001-{MAC Adress}`.
+**Passo 1.** Conecte-se ao ponto de acesso Wi-Fi do dispositivo a partir do seu smartphone ou computador. O nome do AP aparecerá na tela (nenhuma senha é necessária). As credenciais da rede são `reTerminal E1001-{MAC Adress}`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
-**Passo 2.** Depois de conectado, o seu telefone deve redirecionar automaticamente para a página de configuração de Wi-Fi. Caso contrário, abra um navegador e acesse `192.168.4.1`.
+**Passo 2.** Uma vez conectado, o seu telefone deve redirecionar automaticamente para a página de configuração de Wi-Fi. Caso contrário, abra um navegador e acesse `192.168.4.1`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
 
 **Passo 3.** Selecione a sua rede Wi-Fi local e insira a senha, depois clique em "Connect".
 
 :::note
-O display ePaper reTerminal E Series suporta apenas redes WiFi de 2,4GHz, não 5GHz ou outras bandas.
+O display ePaper da série reTerminal E suporta apenas redes WiFi de 2,4GHz, não 5GHz ou outras bandas.
 :::
 
 **Passo 4.** Após a conexão bem-sucedida, o dispositivo emitirá um bipe de confirmação e exibirá uma tela com o código de pareamento.
@@ -171,7 +170,7 @@ O display ePaper reTerminal E Series suporta apenas redes WiFi de 2,4GHz, não 5
 
 ### Conectando à plataforma SenseCraft
 
-**Passo 1.** Visite [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) no seu navegador e crie uma conta ou faça login.
+**Passo 1.** Acesse [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) no seu navegador e crie uma conta ou faça login.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
@@ -183,7 +182,7 @@ O display ePaper reTerminal E Series suporta apenas redes WiFi de 2,4GHz, não 5
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**Passo 3.** Dê um nome ao seu dispositivo e insira o código de pareamento exibido na tela do dispositivo e clique em **Create**.
+**Passo 3.** Dê um nome ao seu dispositivo, insira o código de pareamento exibido na tela do dispositivo e clique em **Create**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -196,7 +195,7 @@ O display ePaper reTerminal E Series suporta apenas redes WiFi de 2,4GHz, não 5
 
 Este método usa o aplicativo móvel SenseCraft para configurar a rede do dispositivo e adicioná-lo à sua conta SenseCraft via Bluetooth.
 
-Primeiro, baixe o aplicativo SenseCraft. Você pode encontrá-lo pesquisando por "SenseCraft" na Google Play Store ou na Apple App Store. Como alternativa, você pode baixá-lo neste site.
+Primeiro, baixe o aplicativo SenseCraft. Você pode encontrá-lo pesquisando por "SenseCraft" na Google Play Store ou Apple App Store. Como alternativa, você pode baixá-lo a partir deste site.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -212,7 +211,7 @@ Primeiro, baixe o aplicativo SenseCraft. Você pode encontrá-lo pesquisando por
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Passo 3.** Siga as instruções na tela para colocar seu dispositivo no modo de transmissão Bluetooth. Normalmente isso é feito pressionando simultaneamente os botões de página **Up** e **Down**. Certifique-se de que o Bluetooth do seu telefone esteja ativado. Toque em **Scan** e o aplicativo irá detectar os dispositivos próximos. Selecione seu dispositivo na lista para conectar.
+**Passo 3.** Siga as instruções na tela para colocar seu dispositivo no modo de transmissão Bluetooth. Isso normalmente é feito pressionando simultaneamente os botões de página **Up** e **Down**. Certifique-se de que o Bluetooth do seu telefone esteja ativado. Toque em **Scan** e o aplicativo irá detectar os dispositivos próximos. Selecione seu dispositivo na lista para conectar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -242,13 +241,13 @@ O dispositivo só pode ser configurado por meio de uma rede Wi-Fi de 2,4G.
 
 ## Criando um Dashboard
 
-O reTerminal E1001 se integra perfeitamente com a plataforma SenseCraft HMI, que fornece ferramentas poderosas para criar e personalizar conteúdo para o seu dispositivo. Em vez de detalhar operações passo a passo aqui, vamos explorar os principais recursos da plataforma para ajudar você a entender o que é possível fazer.
+O reTerminal E1001 se integra perfeitamente com a plataforma SenseCraft HMI, que fornece ferramentas poderosas para criar e personalizar conteúdo para o seu dispositivo. Em vez de detalhar operações passo a passo aqui, vamos explorar os principais recursos da plataforma para ajudar você a entender o que é possível.
 
 ### Recursos do SenseCraft HMI
 
 **AI Generator**
 
-Deixe a inteligência artificial projetar seu dashboard! Basta descrever quais informações você quer exibir e o AI Generator criará automaticamente um layout atraente e funcional. Isso é perfeito para gerar rapidamente exibições de clima, calendários, listas de tarefas ou painéis informativos sem trabalho manual de design.
+Deixe a inteligência artificial projetar seu dashboard! Basta descrever quais informações você deseja exibir e o AI Generator criará automaticamente um layout atraente e funcional. Isso é perfeito para gerar rapidamente exibições de clima, calendários, listas de tarefas ou painéis informativos sem trabalho manual de design.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
 
@@ -272,7 +271,7 @@ Projete seu dashboard do zero com o Canvas, uma interface de arrastar e soltar q
 
 **Integração de RSS Feed**
 
-Mantenha-se atualizado com suas fontes de notícias, blogs ou sites favoritos adicionando feeds RSS ao seu dashboard. O recurso RSS permite exibir manchetes, resumos ou artigos completos de várias fontes.
+Mantenha-se atualizado com suas fontes de notícias, blogs ou sites favoritos adicionando RSS feeds ao seu dashboard. O recurso RSS permite exibir manchetes, resumos ou artigos completos de várias fontes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/21.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -288,7 +287,7 @@ Depois de parear seu dispositivo com a plataforma SenseCraft, conforme descrito 
 
 - [SenseCraft HMI Overview](https://sensecraft-hmi-docs.seeed.cc/en/)
 
-Depois de criar e salvar seu dashboard na plataforma SenseCraft, basta clicar em "Deploy to Device", selecionar o seu reTerminal E1001 pareado e seu conteúdo personalizado será transmitido sem fio para o dispositivo. O display ePaper será atualizado para mostrar seu dashboard, e você poderá usar os botões de navegação para alternar entre várias páginas, se você as tiver criado.
+Depois de criar e salvar seu dashboard na plataforma SenseCraft, basta clicar em "Deploy to Device", selecionar seu reTerminal E1001 pareado e seu conteúdo personalizado será transmitido sem fio para o dispositivo. O display ePaper será atualizado para mostrar seu dashboard, e você pode usar os botões de navegação para alternar entre várias páginas, se você as tiver criado.
 
 ## Operando o Dispositivo
 
@@ -318,7 +317,7 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
 
 **Passo 1.** Pressione e segure ambos os botões de navegação (esquerdo e direito) simultaneamente por 2 segundos.
 
-**Passo 2.** O dispositivo entrará no modo de configuração Wi-Fi e você poderá seguir novamente as etapas de [Network Setup](#network-setup) para se conectar a uma nova rede.
+**Passo 2.** O dispositivo entrará no modo de configuração de Wi-Fi e você poderá seguir novamente as etapas de [Network Setup](#network-setup) para se conectar a uma nova rede.
 
 ### Indicadores LED
 
@@ -329,13 +328,13 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
 - **LED Verde**:
   - Ligado por 30 segundos na inicialização: O dispositivo está ligando
 
-### Funcionamento com Bateria
+### Operação com Bateria
 
 Ao operar com alimentação por bateria:
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
 
-- A vida útil da bateria depende da frequência de atualização (normalmente 3 meses com uma carga completa usando as configurações padrão)
+- A duração da bateria depende da frequência de atualização (normalmente 3 meses com uma carga completa usando as configurações padrão)
 
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
@@ -421,7 +420,7 @@ O conector de expansão de 8 pinos (J2) possui a seguinte pinagem:
 
 ## Posicionamento do Dispositivo
 
-O reTerminal E1001 vem com um suporte impresso em 3D que permite posicionar o dispositivo na vertical para uma visualização ideal:
+O reTerminal E1001 vem com um suporte impresso em 3D que permite posicionar o dispositivo na vertical para visualização ideal:
 
 **Passo 1.** Localize o suporte impresso em 3D incluído na embalagem.
 
@@ -445,14 +444,14 @@ O suporte permite que o dispositivo seja colocado em mesas, balcões ou pratelei
 
 - Certifique-se de que o interruptor de energia esteja na posição ON
 - Conecte o cabo USB-C para carregar o dispositivo
-- Verifique se o LED vermelho permanece aceso (indicando carregamento)
+- Verifique se o LED vermelho permanece sempre aceso (indicando carregamento)
 - Se estiver usando energia da bateria, certifique-se de que a bateria esteja corretamente conectada e carregada
 
 ### P2: Não é possível conectar ao Wi-Fi
 
 - Verifique se você está digitando a senha correta do Wi-Fi
 - Certifique-se de que sua rede Wi-Fi esteja em funcionamento
-- Verifique se o seu roteador Wi-Fi oferece suporte a redes de 2,4GHz (5GHz não é suportado)
+- Verifique se o seu roteador Wi-Fi oferece suporte a redes de 2,4 GHz (5 GHz não é suportado)
 - Tente posicionar o dispositivo mais próximo do seu roteador Wi-Fi
 
 ### P3: Tela não atualiza
@@ -465,18 +464,54 @@ O suporte permite que o dispositivo seja colocado em mesas, balcões ou pratelei
 
 ### P4: Conexão de rede perdida
 
-- O dispositivo tentará se reconectar automaticamente às redes conhecidas
+- O dispositivo tentará automaticamente se reconectar às redes conhecidas
 - Quando reconectado, o ícone de desconexão do Wi-Fi desaparecerá
-- Se não for possível reconectar, siga o procedimento de Redefinição de Rede acima
+- Se não conseguir se reconectar, siga o procedimento de Redefinição de Rede acima
+
+### P5: Não é possível encontrar a porta serial (COM) no macOS
+
+Se o seu Mac não reconhecer o reTerminal via USB, siga este guia compacto para instalar o driver CH340/CH340K:
+
+**Passo 1. Baixar e instalar o driver**
+Baixe o driver na [página oficial da WCH](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) e execute `CH34xVCPDriver.pkg`. 
+:::tip
+Se o macOS bloquear a instalação, vá para **System Settings → Privacy & Security**, role para encontrar o software WCH bloqueado e clique em **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Passo 2. Ativar a extensão do driver (Crítico)**
+Abra o app **CH34xVCPDriver** a partir do Launchpad, clique em **Install**, depois vá para **System Settings → General → Login Items & Extensions → Driver Extensions**. Ative **CH34xVCPDriver Extensions** para **ON** (azul).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Passo 3. Conectar e verificar**
+Certifique-se de que o **interruptor de energia do dispositivo esteja em ON** e use um **cabo USB-C de dados** (não apenas de carregamento). Abra o Terminal e execute:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+Se você vir o caminho do dispositivo na saída, o driver foi instalado corretamente e seu reTerminal está pronto para uso!
+
+### P6: Dispositivo não carrega
+
+Se você perceber que o dispositivo não está carregando, tente substituir o cabeçote de carregamento por um adaptador de energia de marca não Apple.
 
 ## Recursos
+
 - [Esquemático do reTerminal E1001 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1_2_SCH_251120.pdf)
 - [Datasheet do ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [Documentação da Plataforma SenseCraft HMI](https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview)
-- [Modelo 3D geral do exterior, arquivo STP](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [Documentação da plataforma SenseCraft HMI](https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview)
+- [Arquivo STP do modelo 3D geral do exterior](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
 <!-- - [GitHub Repository](/pt-br/getting_started_with_reterminal_e1001) -->
 
-## Suporte Técnico & Discussão sobre o Produto
+## Suporte Técnico e Discussão sobre o Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

@@ -9,11 +9,9 @@ last_update:
   date: 08/29/2023
   author: Jessie
 createdAt: '2023-02-24'
-updatedAt: '2025-09-10'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-ChirpStack/
 ---
-
-
 ### ChirpStack Configuration
 
 ChirpStack provides open-source components for LoRaWAN networks. Together they form a ready-to-use solution including an user-friendly web-interface for device management and APIs for integration.
@@ -42,7 +40,7 @@ Navigate to **Gateways > Add gateway**
 
 Before you can add your device to ChirpStack, you have to create a [Device-profile](https://www.chirpstack.io/application-server/use/device-profiles/) if you haven't done this already.
 
-Navigate to **Device profile> Add device profile**
+Navigate to **Device profile > Add device profile**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_3.png" alt="pir" width={800} height="auto" /></p>
 

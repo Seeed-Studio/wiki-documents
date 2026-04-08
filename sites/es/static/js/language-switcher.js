@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-30 14:27:15 (北京时间)
-// 多语言页面: 2234 个
+// 生成时间: 2026-04-08 10:50:58 (北京时间)
+// 多语言页面: 2245 个
 
 (function() {
   'use strict';
@@ -32,6 +32,13 @@
     "pt"
   ],
   "/sensecraft-ai/application/application-for-homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft-ai/application/create-new-application": [
     "cn",
     "en",
     "es",
@@ -3362,6 +3369,13 @@
     "ja",
     "pt"
   ],
+  "/driving_reterminal_d1001_audio_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/getting_started_with_reterminal_d1001": [
     "cn",
     "en",
@@ -3887,6 +3901,13 @@
     "ja",
     "pt"
   ],
+  "/lora-e5_relay": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Wio-WM1110_Dev_Kit_Hardware_Overview": [
     "cn",
     "en",
@@ -4069,6 +4090,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_solar_node": [
     "cn",
     "en",
@@ -4105,6 +4133,13 @@
     "pt"
   ],
   "/meshtastic_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_node_map_t1000e": [
     "cn",
     "en",
     "es",
@@ -4161,6 +4196,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_node_map_l1": [
     "cn",
     "en",
     "es",
@@ -4714,6 +4756,20 @@
     "pt"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_chirpstack": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_ttn": [
     "cn",
     "en",
     "es",
@@ -5571,6 +5627,13 @@
     "pt"
   ],
   "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/realsense_3d_seg": [
     "cn",
     "en",
     "es",
@@ -10134,6 +10197,20 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_picovoice_nlu_keyword_spotting": [
     "cn",
     "en",
     "es",

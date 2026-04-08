@@ -13,10 +13,9 @@ last_update:
   date: 3/11/2026
   author: ZhangJiaQuan
 createdAt: '2025-01-08'
-updatedAt: '2026-03-11'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 ---
-
 # 基于 LeRobot 的 SO-ARM100 and SO-ARM101 机械臂入门教程
 
 :::tip
@@ -657,7 +656,143 @@ lerobot-teleoperate \
 
 <details>
 
-<summary> 如果是Orbbec Gemini2深度相机 </summary>
+<summary> 如果使用 RealSense D435i/D405 </summary>
+
+RealSense 深度相机可为 LeRobot 提供 RGB-D 感知能力，适用于目标识别、点云重建与桌面抓取等场景。这里推荐使用 **RealSense D405** 与 **RealSense D435i**。
+
+### RealSense D405
+
+<div align="center">
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
+</div>
+
+RealSense D405 是一款近距离双目深度相机，适合机械臂桌面操作等高精度近场视觉任务，典型工作范围为 **7 cm 到 50 cm**。
+
+### RealSense D435i
+
+<div align="center">
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
+</div>
+
+RealSense D435i 集成深度感知、RGB 成像和 IMU，适合三维重建、SLAM 与机器人环境感知等中近距离应用。
+
+### 1. 切换到相机分支
+
+当前相机支持位于 `DepthCameraSupport` 分支上：
+
+```bash
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
+```
+
+确认当前分支：
+
+```bash
+git branch --show-current
+```
+
+预期输出：
+
+```bash
+DepthCameraSupport
+```
+
+### 2. 检测相机
+
+### 2. 以可编辑模式安装 LeRobot
+
+如果你只使用 RealSense：
+
+```bash
+pip install -e ".[realsense]"
+```
+
+### 3. 检测相机
+
+```bash
+lerobot-find-cameras realsense
+```
+
+该命令会输出以下信息：
+
+- 相机型号
+- 序列号
+- USB 信息
+- 默认流配置
+
+### 4. RealSense 示例
+
+双 RealSense 测试：
+
+```bash
+lerobot-teleoperate \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_awesome_follower_arm \
+  --robot.cameras='{
+    d435i_color: {
+      type: realsense_d435i_color,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d435i_depth: {
+      type: realsense_d435i_depth,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      max_depth_m: 2.0,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+    d405_color: {
+      type: realsense_d405_color,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d405_depth: {
+      type: realsense_d405_depth,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      depth_alpha: 0.03,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }' \
+  --teleop.type=so101_leader \
+  --teleop.port=/dev/ttyACM1 \
+  --teleop.id=my_awesome_leader_arm \
+  --display_data=true
+```
+
+### 5. 参数建议
+
+- `depth_alpha` 用于控制深度图的缩放比例；可以根据画面显示效果和目标距离范围进行调整。
+- 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以减轻 USB 带宽与系统负载压力。
+- 建议优先保持 `640x480` 分辨率，以兼顾稳定性与实时性。
+
+</details>
+
+<details>
+
+<summary> 如果使用 Orbbec Gemini2/Gemini336 相机 </summary>
 
 <div align="center">
     <img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
@@ -667,110 +802,119 @@ lerobot-teleoperate \
             <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
 </a></div>
 
-- 🚀 步骤 1：安装 Orbbec SDK 依赖环境
-
-1. 拉取 `pyorbbec` 仓库
-
-   ```bash
-   cd ~/
-   git clone https://github.com/orbbec/pyorbbecsdk.git
-   ```
-
-2. 下载并安装 SDK 对应的 **.whl 文件**  
-   前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)，  
-   根据 Python 版本选择并安装，例如：
-
-   ```bash
-   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
-   ```
-
-3. 在 `pyorbbec` 目录下安装依赖
-
-   ```bash
-   cd ~/pyorbbecsdk
-   pip install -r requirements.txt
-   ```
-
-  强制降低`numpy`版本到`1.26.0`
-    ```bash
-    pip install numpy==1.26.0
-    ```
-  可以忽略红色报错。
-
-4.将orbbec sdk克隆到`~/lerobot/src/lerobot/cameras`目录下
-
-  ```bash
-  cd ~/lerobot/src/lerobot/cameras
-  git clone https://github.com/ZhuYaoHui1998/orbbec.git
-  ```
-
-5.修改utils.py和__init__.py
-
-- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在大概`45`行处添加如下代码：
-
-```python
-elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
-
-            cameras[key] = OrbbecCamera(cfg)
-```
+Orbbec Gemini 2 是一款适用于机器人场景的高性能 RGB-D 相机，提供同步的 RGB 与深度数据流，并支持精确的深度到彩色对齐。结合双目深度感知与 6 轴 IMU，它非常适合物体检测、三维感知、建图、导航等机器人任务。相机体积紧凑，易于部署，并完整支持 Orbbec SDK，适合研究和实际应用。
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/utils.png" />
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
-- 在`~/lerobot/src/lerobot/cameras`目录下找到`__init__.py`，在`18`行处添加如下代码：
+Gemini 336 是 Gemini 330 系列中的新成员，继承了 Gemini 335 出色的深度性能，并进一步优化了在室内反光区域、高动态暗部区域以及户外强光环境下的深度成像表现。对于机器人应用来说，它能够提供更稳定的高质量深度数据，适合感知、定位与操作等任务。
 
-```python
-from .orbbec.configuration_orbbec import OrbbecCameraConfig
-```
+### 1. 切换到相机分支
 
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
-</div>
-
-- 🚀 步骤 2：函数调用与示例
-
-以下示例均需将 `so101_follower` 替换为你所使用实际机械臂型号（如 `so100` / `so101`）。
-
-我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
-目前支持的分辨率只限于 width: 640, height: 880
+当前相机支持位于 `DepthCameraSupport` 分支上：
 
 ```bash
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
+```
 
+确认当前分支：
+
+```bash
+git branch --show-current
+```
+
+预期输出：
+
+```bash
+DepthCameraSupport
+```
+
+### 2. 以可编辑模式安装 LeRobot
+
+如果你只使用 Orbbec：
+
+```bash
+pip install -e ".[orbbec]"
+```
+
+### 3. 检测相机
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+该命令会输出以下信息：
+
+- 相机型号
+- 序列号
+- USB 信息
+- 默认流配置
+
+### 4. Orbbec 示例
+
+单 Orbbec 测试：
+
+```bash
 lerobot-teleoperate \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --robot.cameras='{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]} }' \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
-    --display_data=true
-
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_awesome_follower_arm \
+  --robot.cameras='{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }' \
+  --teleop.type=so101_leader \
+  --teleop.port=/dev/ttyACM1 \
+  --teleop.id=my_awesome_leader_arm \
+  --display_data=true
 ```
 
-<div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
-</div>
+### 5. 参数建议
 
-后续采集数据、训练及评估任务与常规RGB命令一样，只需要把:
+- `depth_alpha` 用于控制深度图的缩放比例；通常可以从 `0.2` 开始测试，再根据显示效果进行微调。
+- 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以提升整体稳定性。
+- 建议优先保持 `640x480` 分辨率，以获得更稳定的显示与传输效果。
+
+### 6. 常见问题
+
+出现以下报错时：
 
 ```bash
-  --robot.cameras='{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]} }' \
+No Orbbec camera found for 'XXXX'
 ```
 
-替换到常规rgb命令中即可，你也可以再后面添加额外的单目RGB相机。
+通常说明配置中的序列号与当前在线设备不一致。请先运行：
 
-**💡 作者与贡献**
+```bash
+lerobot-find-cameras orbbec
+```
 
-- 作者: 张家铨，王文钊 - 华南师范大学
+确认实际 `serial` 后，再更新命令中的 `serial_number_or_name`。
 
 </details>
 
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819258545&bvid=BV1r6UUBFE8r&cid=34229454301&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+## 如果使用普通相机
 
 为了实例化摄像头，您需要一个摄像头标识符。这个标识符可能会在您重启电脑或重新插拔摄像头时发生变化，这主要取决于您的操作系统。
 

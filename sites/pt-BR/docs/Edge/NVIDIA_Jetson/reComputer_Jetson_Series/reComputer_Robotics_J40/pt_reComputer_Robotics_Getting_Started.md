@@ -16,10 +16,9 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-08-06'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_robotics_j401_getting_started/
 ---
-
 <div style={{ textAlign: "justify" }}>
 O reComputer Robotics J401 é uma placa-carrier de IA de borda compacta e de alto desempenho, projetada para robótica avançada. Compatível com módulos NVIDIA Jetson Orin Nano/Orin NX nos modos Super/MAXN, oferece até 157 TOPS de desempenho de IA. Equipada com amplas opções de conectividade — incluindo portas Ethernet Gigabit duplas, slots M.2 para módulos 5G e Wi-Fi/BT, 6 portas USB 3.2, CAN, GMSL2 (via expansão opcional), I2C e UART — ela atua como um poderoso cérebro robótico capaz de processar dados complexos de vários sensores. Pré-instalada com JetPack 6 e Linux BSP, garante uma implantação perfeita.​
 </div>
@@ -166,7 +165,7 @@ O reComputer Robotics J401 é uma placa-carrier de IA de borda compacta e de alt
 ## Visão Geral de Hardware
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-_J4011-3.jpeg"/>  
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
 </div>
 
 <div align="center">
