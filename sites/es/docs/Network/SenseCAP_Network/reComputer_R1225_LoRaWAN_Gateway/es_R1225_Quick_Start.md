@@ -41,7 +41,7 @@ Con el módulo PoE instalado, el puerto ETH0 del reComputer R1225 puede admitir 
 Cabe señalar que el módulo PoE proporcionado con el reComputer R1225 cumple con el estándar IEEE 802.3af y puede proporcionar una potencia máxima de 12.95W. **Por lo tanto, si es necesario conectar periféricos de alta potencia como SSD o módulos 4G, la alimentación PoE puede no ser suficiente**. En este caso, se recomienda utilizar en su lugar el terminal de CA/CC para la alimentación, a fin de garantizar un funcionamiento estable y fiable del dispositivo.
 :::
 
-## Acceder al Seeed Gateway OS
+## Acceder al SenseCAP Gateway OS
 
 ### Acceso a través del router
 
