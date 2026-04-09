@@ -393,7 +393,7 @@ Jetpack6 镜像文件大小约为 **14.1GB**，下载时间约为 60 分钟。�
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2025-05-22.tar.gz
+# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
 ```
 
 **步骤 2：** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：

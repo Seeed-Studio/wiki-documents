@@ -393,7 +393,7 @@ La imagen de abajo es para Orin Nano 8GB
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2025-05-22.tar.gz
+# For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
 ```
 
 **Paso 2:** Ejecute el siguiente comando para flashear el sistema jetpack al SSD NVMe:
