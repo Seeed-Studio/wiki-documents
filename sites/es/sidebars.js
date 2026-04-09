@@ -4346,6 +4346,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Brazo reBot',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
+          ]
+        },
+        {
+          type: 'category',
           label: 'Mano',
           items: [
             'Robotics/Robot_Kits/Hand/es_AmazingHand',
