@@ -4347,6 +4347,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'reBotアーム',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
+          ]
+        },
+        {
+          type: 'category',
           label: 'ハンド',
           items: [
             'Robotics/Robot_Kits/Hand/ja_AmazingHand',

@@ -37,9 +37,9 @@ O reComputer R1225 é um gateway e controlador IoT LoRaWAN industrial poderoso e
 
 - Suporta os protocolos BACnet, Modbus RTU e Modbus TCP/IP
 - Até 4GB de RAM suportam o processamento de milhares de pontos de dados
-- Indicadores LED claros em ambos os lados permitem que os usuários verifiquem rapidamente o status operacional
-- Gabinete de metal de alta qualidade, compatível com montagem em trilho DIN e em parede
-- Software de código aberto incluindo Seeed Gateway OS, ChirpStack, Basics™ Station e um encaminhador de pacotes integrado. Suporta personalização e desenvolvimento secundário.
+- Indicadores LED duplos claros permitem que os usuários verifiquem rapidamente o status operacional
+- Gabinete metálico de alta qualidade, compatível com montagem em trilho DIN e em parede
+- Software de código aberto incluindo SenseCAP Gateway OS, ChirpStack, Basics™ Station e um encaminhador de pacotes integrado. Suporta personalização e desenvolvimento secundário.
 
 ### Desempenho poderoso
 
