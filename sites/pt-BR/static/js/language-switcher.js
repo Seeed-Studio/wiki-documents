@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-08 15:09:38 (北京时间)
-// 多语言页面: 2246 个
+// 生成时间: 2026-04-09 15:32:34 (北京时间)
+// 多语言页面: 2247 个
 
 (function() {
   'use strict';
@@ -10218,6 +10218,13 @@
     "pt"
   ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_introduction": [
     "cn",
     "en",
     "es",
