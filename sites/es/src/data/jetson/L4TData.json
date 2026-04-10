@@ -2,34 +2,34 @@
     {
         "product": "j4012s",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeIg8k2osZFAuPzOlcO-FtIBdhbgULGQrsQOg4uUrXoK4w?e=uo29A8",
-        "filename": "mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2025-05-22.tar",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm",
+        "filename": "mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "CF37D028D6466DCC13201367E6358A69B7B5305CAE2A2B785E3ECFD3D8C66304"
+        "sha256": "51f816d57dedd6e2305acd0ae8e0ffdc\n19aec7319e351b7a70489f7eab8d69c6"
     },
     {
         "product": "j4011s",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EevZ9hO7BfhDuJvDPYIdHGkBGhrKcWgCyAuTQu1gpHsz4g?e=xbXfbL",
-        "filename": "mfi_recomputer-super-orin-nx-8g-j401-6.2-36.4.3-2025-05-22.tar",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw",
+        "filename": "mfi_recomputer-super-orin-nx-8g-j401-6.2-36.4.3-2026-02-05.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "06B175484220DA7A63CC7CDAAE339F7EFF8997180AF1C4B836D1098CBD8A169D"
+        "sha256": "55a559dc6736650d45c2d787265c7e2c\n36cd2d7f233ae58b00364aec7d82455c"
     },
     {
         "product": "j3011s",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbEYa6n_P6pCh1TQbVBSpcQBZlFVm_-il3sqXEBDGpdPJA?e=S1dgfv",
-        "filename": "mfi_recomputer-super-orin-nano-8g-j401-6.2-36.4.3-2025-05-22.tar",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca",
+        "filename": "mfi_recomputer-super-orin-nano-8g-j401-6.2-36.4.3-2026-02-06.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "7EC06C0D17E33AE43D3C69EED791F64CB9CFDC497E01D525E18EBAC1547A0236"
+        "sha256": "d26cbf4e16b9d5879e4b737754f65bb0\nea485b98760a1aa0657e07054efd8877"
     },
     {
         "product": "j3010s",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQiC_is_O2tEkvFzu-3SrWYBFdcQr0zZRUf81lkjnXpnkQ?e=f3ISaO",
-        "filename": "mfi_recomputer-super-orin-nano-4g-j401-6.2-36.4.3-2025-05-22.tar",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH",
+        "filename": "mfi_recomputer-super-orin-nano-4g-j401-6.2-36.4.3-2026-02-05.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "8FF204A65C006717ED45241186C14B4FAA8ACE5BEBCDCE755F94C3CBF1311C38"
+        "sha256": "7a1f2085f50d77e5d86d3f01ccdc1255\nc90a7c7d22a6ab7e4c4e3263e3148670"
     },
     {
         "product": "j4012mini",
@@ -124,38 +124,38 @@
     {
         "product": "j4012robotics",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdXbblXVvqZDv3DqdJOR8u8BXV6rW6BVwoss0EMC-sLcfQ?e=WiW2F9",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBnWlTaU6nIQLDOcM2KRQM6AQ6A-ODC8DnWFKRSfW8vRmc?e=1AAVH8",
         "mirrorlink": "",
         "filename": "mfi_recomputer-robo-orin-nx-16g-j40-6.2-36.4.3.tar.gz",
         "foldername": "mfi_recomputer-robo-orin",
-        "sha256": "b08cbdad8ab6e50222146d3175a9d2627d499bf1d67cfaf69cc737b5bfa9e33a"
+        "sha256": "2ed5792564202430c1550183158d2f4a\n6c47d65af248a634cf1d4d13ee465bf4"
     },
     {
         "product": "j4011robotics",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EewEJTne6ltJlP0IDzahaCYB9rJWUIvKXe5b0p76rlYr_A?e=tsuNbP",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAakIBc6l2wS7qKAy-1ZeHPAbTtT8XLYaIgITvBGy8vezo?e=mPygXS",
         "mirrorlink": "",
         "filename": "mfi_recomputer-robo-orin-nx-8g-j40-6.2-36.4.3.tar.gz",
         "foldername": "mfi_recomputer-robo-orin",
-        "sha256": "e7f0c8e6b578d411f81122879f92c7666adfada5ed493a4cc458dc169ca8c1b7"
+        "sha256": "dade14539ef525506dba4f59a2e99254\n48621d89db52b8a94417f438c0cf8024"
     },
     {
         "product": "j3011robotics",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERy0O0zUQGlKh8cDHZIoSPEBcHFJOGY6rE0gVBGCE6tBvA?e=eDw71c",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB8NF028_DESZJ9WwSg2Q34AVCNXeZFkwJi8pbvCOcX4cI?e=Zahpfm",
         "mirrorlink": "",
         "filename": "mfi_recomputer-robo-orin-nano-8g-j30-6.2-36.4.3.tar.gz",
         "foldername": "mfi_recomputer-robo-orin",
-        "sha256": "5d1f3cd28eb44ca60132c87ccce5acaf806ee945b486df9061a34de73fbb582b"
+        "sha256": "9b8a11bfb335fd159bbc2f29ef47f3d0\n0d94a88c190a58ea94762954c476c176"
     },
     {
         "product": "j3010robotics",
         "l4t": "36.4.3",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWqAOoqYYxNAky0Dbo847q0BDWsiSBUmyrxAMzNV9SQyNw?e=ZuOFnx",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBwi3AQXJiaTZiPQaKocDSkAciLsok9znKGnAPczuZ_IfY?e=S2v5QV",
         "mirrorlink": "",
         "filename": "mfi_recomputer-robo-orin-nano-4g-j30-6.2-36.4.3.tar.gz",
         "foldername": "mfi_recomputer-robo-orin",
-        "sha256": "c63d1219531245abecc7bbdcafc73d34f75547454c7af85de40f08396a87e5ee"
+        "sha256": "3dc9d5b27e01f223e6d75b50a8cd5fa3\n3b0fb259018011418f0692ff0eb91a54"
     },
     {
         "product": "j4012classic",
