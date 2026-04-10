@@ -10,7 +10,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-19'
 url: https://wiki.seeedstudio.com/firmware_update/
-updatedAt: '2026-03-31'
+updatedAt: '2026-03-30'
 ---
 ## SenseCAP ONE Weather Sensor Firmware Update
 
