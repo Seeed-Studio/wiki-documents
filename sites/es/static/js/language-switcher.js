@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-03 14:51:30 (北京时间)
-// 多语言页面: 2240 个
+// 生成时间: 2026-04-09 15:32:34 (北京时间)
+// 多语言页面: 2247 个
 
 (function() {
   'use strict';
@@ -4090,6 +4090,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_solar_node": [
     "cn",
     "en",
@@ -4126,6 +4133,13 @@
     "pt"
   ],
   "/meshtastic_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_node_map_t1000e": [
     "cn",
     "en",
     "es",
@@ -4182,6 +4196,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_node_map_l1": [
     "cn",
     "en",
     "es",
@@ -4735,6 +4756,20 @@
     "pt"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_chirpstack": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_ttn": [
     "cn",
     "en",
     "es",
@@ -5524,6 +5559,13 @@
     "pt"
   ],
   "/reachymini_troubleshooting": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_pinocchio_meshcat": [
+    "cn",
     "en",
     "es",
     "ja",
@@ -10176,6 +10218,13 @@
     "pt"
   ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_introduction": [
     "cn",
     "en",
     "es",

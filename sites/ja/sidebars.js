@@ -2105,6 +2105,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
               ],
             },
+            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
@@ -4343,6 +4344,19 @@ const sidebars = {
           label: 'エンドエフェクタ',
           items: [
             'Robotics/Robot_Kits/End_Effectors/ja_DM_Gripper',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'reBotアーム',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
           ]
         },
         {

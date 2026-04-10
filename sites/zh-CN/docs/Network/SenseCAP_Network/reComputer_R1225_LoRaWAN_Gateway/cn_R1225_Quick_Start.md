@@ -41,7 +41,7 @@ reComputer R1225 支持 12&#126;24V 的额定 AC 电压或 9&#126;36V 的 DC 电
 需要注意的是，随 reComputer R1225 提供的 PoE 模块符合 IEEE 802.3af 标准，最大供电能力为 12.95W。**因此，如果需要连接 SSD 或 4G 模块等高功耗外设，PoE 供电可能无法满足需求**。在这种情况下，建议改用 AC/DC 端子供电，以确保设备稳定可靠运行。
 :::
 
-## 访问 Seeed Gateway OS
+## 访问 SenseCAP Gateway OS
 
 ### 通过路由器访问
 
