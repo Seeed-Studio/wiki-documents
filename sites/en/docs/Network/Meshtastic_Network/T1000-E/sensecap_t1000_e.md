@@ -221,6 +221,58 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 After you update the device configuration, the device will restart, which may take some time.
 :::
 
+### Configure Ringtone
+
+Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+
+You can paste one of the following RTTTL examples directly:
+
+**The Legend of Zelda: Item Get**
+
+```plain
+24:d=16,o=5,b=120:g,c6,d6,2g6
+```
+
+**Super Mario Theme (Short)**
+
+```plain
+24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
+```
+
+**Mario Coin**
+
+```plain
+24:d=8,o=6,b=200:b,e7
+```
+
+**Mario Power-Up**
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+
+**Nokia Ringtone**
+
+```plain
+24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
+```
+
+**Morse Code CQ**
+
+```plain
+24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
+```
+
+**Demo Video**
+
+<div class="video-container">
+<video width="100%" height="500" controls>
+  <source src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/08242BD2-2694-4E8E-8190-8EB6806319B6.MOV" type="video/mp4" />
+</video>
+</div>
+
 ### Configure GPS
 
 Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
