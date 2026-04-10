@@ -3,6 +3,7 @@ description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
 sku: TBD
 title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
 sidebar_position: 1
+image: https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg
 slug: /epaper_ee05
 last_update:
   date: 04/07/2026
