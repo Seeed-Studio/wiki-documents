@@ -10,13 +10,13 @@ keywords:
   - Kinematics
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 last_update:
-  date: 2026-03-24
+  date: 2026-03-24T00:00:00.000Z
   author: LiuJunjie
 translation:
   skip:
-    - [zh-CN]
+    - - zh-CN
 createdAt: '2026-03-24'
-updatedAt: '2026-03-25'
+updatedAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
