@@ -24,7 +24,7 @@ A compact edge audio board provides real-time sound detection with strong local 
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sound Event Sensor </th>
     <th>Home Assistant Yellow Kit</th>
     <th>Xiao ESP32S3</th>
   </tr>
