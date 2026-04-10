@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-08 15:09:38 (北京时间)
-// 多语言页面: 2246 个
+// 生成时间: 2026-04-10 15:11:44 (北京时间)
+// 多语言页面: 2249 个
 
 (function() {
   'use strict';
@@ -7754,6 +7754,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_ee05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EN04_opendisplay": [
     "cn",
     "en",
@@ -7762,6 +7769,13 @@
     "pt"
   ],
   "/epaper_EN04": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_en05": [
     "cn",
     "en",
     "es",
@@ -10218,6 +10232,13 @@
     "pt"
   ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_introduction": [
     "cn",
     "en",
     "es",

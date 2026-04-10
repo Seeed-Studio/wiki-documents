@@ -159,6 +159,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 - Restart Arduino IDE.
 
+### Supportive Library 
+
+:::note
+Please install the [Arduino Audio Tools library](https://github.com/pschatzmann/arduino-audio-tools) in order to run the provided examples.
+:::
+
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

@@ -12,7 +12,7 @@ last_update:
   date: 3/4/2026
   author: Kasun Thushara
 createdAt: '2026-03-04'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/sound_event_detection_module_home_assistant/
 ---
 
@@ -24,7 +24,7 @@ A compact edge audio board provides real-time sound detection with strong local 
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sound Event Sensor </th>
     <th>Home Assistant Yellow Kit</th>
     <th>Xiao ESP32S3</th>
   </tr>
