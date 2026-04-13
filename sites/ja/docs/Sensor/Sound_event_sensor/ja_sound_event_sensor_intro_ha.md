@@ -1,30 +1,30 @@
 ---
-description: このエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、赤ちゃんの泣き声、ガラスの破損、銃声、アラーム、いびきをリアルタイムで検出します。このチュートリアルでは、スマートな監視と自動化のために、XIAO シリーズを使用して ESPHome と Home Assistant に統合する方法を学びます。
+description: このエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、赤ちゃんの泣き声、ガラスの破損、銃声、アラーム音、いびきをリアルタイムに検出します。このチュートリアルでは、スマートな監視と自動化のために、XIAO シリーズを使用して ESPHome と Home Assistant に統合する方法を学びます。
 title: Home Assistant と Sound Event Detection Module
 keywords:
   - Sound Event Detection Module
   - Sound IoT
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
+image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
 createdAt: '2026-03-04'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/ja/sound_event_detection_module_home_assistant/
 ---
 
 ## はじめに
 
-コンパクトなエッジオーディオボードは、強力なローカルデータプライバシー保護とともにリアルタイムの音検出を提供します。赤ちゃんの泣き声、ガラスの破損、銃声、T3/T4 アラーム、いびきという 5 種類の異常な音イベントを検出でき、即時の対応と信頼性の高い早期警告を可能にします。このチュートリアルでは、XIAO ESP32 ボードにファームウェアをコンパイルして書き込む方法を学びます。
+コンパクトなエッジオーディオボードは、強力なローカルデータプライバシー保護を維持しながら、リアルタイムで音を検出します。赤ちゃんの泣き声、ガラスの破損、銃声、T3/T4 アラーム、およびいびきという 5 種類の異常なサウンドイベントを検出でき、迅速な対応と信頼性の高い早期警告を可能にします。このチュートリアルでは、XIAO ESP32 ボードにファームウェアをコンパイルして書き込む方法を学びます。
 
 ## 必要なハードウェア
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sound Event Sensor </th>
     <th>Home Assistant Yellow Kit</th>
     <th>Xiao ESP32S3</th>
   </tr>
@@ -54,46 +54,46 @@ url: https://wiki.seeedstudio.com/ja/sound_event_detection_module_home_assistant
 
 ## ESPHome Builder のインストール
 
-**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** アドオンを追加します。
+**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** アドオンをインストールします。
 
 **Home Assistant > Settings > Add-ons** に移動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
 
-**Add-on Store** をクリックします（通常は右下にあります）
+**Add-on Store**（通常は右下）をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Official add-ons** の下で **ESPHome Device Builder** を検索してインストールします。
+**Official add-ons** の中から **ESPHome Device Builder** を検索してインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
-インストール後、**Start** をクリックして ESPHome アドオンを実行します。
+インストール後、**Start** をクリックして ESPHome アドオンを起動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-アクセスしやすくするために、**Start on Boot, Watchdog, and Show in Sidebar** を有効にします。
+簡単にアクセスできるように **Start on Boot, Watchdog, Show in Sidebar** を有効にします。
 
 Home Assistant のサイドバーから **ESPHome Builder** に移動します。
 
-## Sound event デバイスの追加
+## サウンドイベントデバイスの追加
 
-+ をクリックして **NEW DEVICE.**
++ **NEW DEVICE** をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
 
-**Continue → New Device Setup** をクリックし、デバイスに適切な名前を付けます。
+**Continue → New Device Setup** をクリックし、デバイスに適切な名前を入力します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
 
-このデモでは XIAO ESP32-S3 を使用しているため、ターゲットボードとして **ESP32-S3** を選択します。これは、使用しているボードによって異なる場合があります。
+このデモでは XIAO ESP32-S3 を使用しているため、ターゲットボードとして **ESP32-S3** を選択します。使用しているボードによって異なる場合があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-新しいデバイスエントリを選択し、**Edit** をクリックします。YAML テンプレート全体を削除し、提供された YAML ファイルをエディタにコピー＆ペーストします。
+新しく作成したデバイスのエントリを選択し、**Edit** をクリックします。YAML テンプレート全体を削除し、用意された YAML ファイルをコピーしてエディタに貼り付けます。
 
 <details>
 <summary>Sound Event YAML</summary>
@@ -595,7 +595,7 @@ Factory Format から生成された .bin ファームウェアファイルを�
 
 Google Chrome で [Web ESPHome](https://web.esphome.io/?dashboard_wizard) を開きます。
 
-Connect をクリックし、リストから正しいシリアルポートを選択します。
+Connect をクリックし、一覧から正しいシリアルポートを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/web_esphome.png" alt="pir" width={800} height="auto" /></p>
 
@@ -615,15 +615,15 @@ Connect をクリックし、リストから正しいシリアルポートを選
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={500} height="auto" /></p>
 
-**ESPHome** が検出された integration として表示されているはずです。
+**ESPHome** が検出されたインテグレーションとして表示されているはずです。
 
-Add をクリックし、その後 Submit をクリックしてセットアップを完了します。
+Add をクリックし、続けて Submit をクリックしてセットアップを完了します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/discover.png" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
 
-その後、Home Assistant のインターフェースを通じてデバイスと連携し、他の周辺機器と組み合わせて独自のオートメーションを作成できるようになります。例えば、ガラスの破損が検知されたときにブザーを鳴らしたり、赤ちゃんの泣き声が検知されたときにスマートスピーカーで落ち着いた子守唄を自動再生したりできます。
+その後、Home Assistant のインターフェースを通じてデバイスと連携し、他の周辺機器と組み合わせた独自のオートメーションを作成できるようになります。例えば、ガラスの破損が検出されたときにブザーを鳴らしたり、赤ちゃんの泣き声が検出されたときにスマートスピーカーで自動的に穏やかな子守唄を再生したりできます。
 
 ## デモ
 
@@ -638,9 +638,9 @@ Add をクリックし、その後 Submit をクリックしてセットアッ�
   </iframe>
 </div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせてお選びいただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
