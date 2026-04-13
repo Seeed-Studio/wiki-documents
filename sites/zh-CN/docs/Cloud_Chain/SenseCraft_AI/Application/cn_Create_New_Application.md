@@ -6,8 +6,6 @@ keywords:
   - sensecraft ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/create-new-application
-aliases:
-  - /connect_vision_ai_v2_to_ha
 sidebar_position: 1
 last_update:
   date: 03/30/2026
