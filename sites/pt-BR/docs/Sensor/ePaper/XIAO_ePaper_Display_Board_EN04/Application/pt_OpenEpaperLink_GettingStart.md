@@ -11,12 +11,11 @@ slug: /EN04_opendisplay
 sku: E25120101
 last_update:
   date: 01/13/2026
-  author: Tomasz/Allen
+  author: Tomasz/Allen/Jackson.li
 createdAt: '2026-01-09'
-updatedAt: '2026-03-16'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/pt-br/EN04_opendisplay/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
@@ -26,13 +25,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EN04</th>
+        <th>Placa de Display XIAO ePaper EN04</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-DIY-Kit-EN04.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -41,74 +40,71 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Com alimentação do **XIAO nRF52840** Plus, a XIAO EN04 ePaper Display Board é a maneira mais fácil de começar a usar displays e-paper com Bluetooth utilizando o firmware OpenDisplay. Diferente de sistemas tradicionais que exigem Access Points dedicados com rádios 802.15.4, esta placa usa Bluetooth Low Energy para controle sem fio direto a partir do seu celular, computador ou Home Assistant.
+Alimentada pelo **XIAO nRF52840** Plus, a Placa de Display XIAO EN04 ePaper é a maneira mais fácil de começar a usar displays e-paper com Bluetooth, utilizando o firmware OpenDisplay. Diferente dos sistemas tradicionais que exigem pontos de acesso dedicados com rádios 802.15.4, esta placa usa Bluetooth Low Energy para controle sem fio direto a partir do seu telefone, computador ou Home Assistant.
 
 ### Aplicações
 
-- **Dashboard de Casa Inteligente**: Exiba informações em tempo real, como previsão do tempo, eventos de calendário e notificações de vários dispositivos de casa inteligente.
+- **Painel de Casa Inteligente**: Exiba informações em tempo real, como atualizações do clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
 - **Monitoramento de Energia**: Mostre dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
 - **Alertas de Segurança**: Exiba alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Display de Termostato Inteligente**: Mostre níveis de temperatura e umidade, bem como configurações de controle do seu termostato inteligente.
+- **Display de Termostato Inteligente**: Exiba temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
 
 ## O que é o [OpenDisplay](https://opendisplay.org)?
 
-OpenDisplay é um projeto open-source que fornece firmware e protocolos para displays e-paper. Ele é projetado especificamente para montagens de hardware personalizadas usando microcontroladores como o nRF52840 e o ESP32.
+OpenDisplay é um projeto de código aberto que fornece firmware e protocolos para displays e-paper. Ele é projetado especificamente para construções de hardware personalizadas usando microcontroladores como o nRF52840 e o ESP32.
 
 O [firmware OpenDisplay](https://github.com/OpenDisplay-org/Firmware) permite:
-- **Comunicação Bluetooth Low Energy (BLE)**: Controle sem fio direto sem necessidade de access points dedicados
-- **Suporte Dedicado a Hardware**: Funciona com placas desenvolvidas para esse fim, como a XIAO ePaper Board EN04, EE04 e outras
-- **Gravação e Configuração via Web**: Configuração simples e upload de imagens por meio da interface web em [https://opendisplay.org/firmware/install](https://opendisplay.org/firmware/install/index.html)
+- **Comunicação Bluetooth Low Energy (BLE)**: Controle sem fio direto sem necessidade de pontos de acesso dedicados
+- **Suporte Dedicado a Hardware**: Funciona com placas desenvolvidas para este fim, como a Placa XIAO ePaper EN04, EE04 e outras
+- **Gravação e Configuração via Web**: Configuração fácil e envio de imagens por meio da interface web em [https://opendisplay.org/firmware/install](https://opendisplay.org/firmware/install/index.html)
 - **Suporte a Múltiplos Displays**: Compatível com vários tamanhos e controladores de e-paper
 
 
-### Por que usar o firmware OpenDisplay?
+## Por que usar o firmware OpenDisplay?
 
-O firmware OpenDisplay oferece várias vantagens para projetos personalizados com displays e-paper:
+O firmware OpenDisplay oferece várias vantagens para projetos personalizados de displays e-paper:
 
-- **Nenhum Access Point Necessário**: Usa Bluetooth Low Energy para comunicação direta - nenhum hardware adicional é necessário
-- **Ferramentas Baseadas na Web**: Instalação de firmware, configuração e upload de imagens de forma simples usando ferramentas no navegador
-- **Hardware Desenvolvido para o Fim Proposto**: Projetado para placas como a EN04, não limitado a etiquetas ESL comerciais
-- **Open Source e Gratuito**: Projeto completamente open-source com desenvolvimento ativo no GitHub
-- **Suporte a Vários Microcontroladores**: Funciona com nRF52840, ESP32-S3, ESP32-C6 e ESP32-C3
-- **Configuração Simples**: Envie o firmware arrastando e soltando um único arquivo para a sua placa, configure via interface web, sem necessidade de programação complexa
+- **Sem Ponto de Acesso Necessário**: Usa Bluetooth Low Energy para comunicação direta - nenhum hardware adicional é necessário
+- **Ferramentas Baseadas na Web**: Instalação de firmware, configuração e envio de imagens facilmente através de ferramentas no navegador
+- **Hardware Desenvolvido para o Propósito**: Projetado para placas como a EN04, não limitado a etiquetas ESL comerciais
+- **Código Aberto e Gratuito**: Projeto completamente open source, com desenvolvimento ativo no GitHub
+- **Suporte a Múltiplos Microcontroladores**: Funciona com nRF52840, ESP32-S3, ESP32-C6 e ESP32-C3
+- **Configuração Simples**: Envie o firmware arrastando e soltando um único arquivo na sua placa, configure via interface web, sem necessidade de programação complexa
 - **Eficiente em Bateria**: Otimizado para operação de baixo consumo com displays e-paper
-- **Comunidade Ativa**: Suporte e desenvolvimento por meio do [OpenDisplay Discord](https://discord.gg/WG7tbTzF9Z)
+- **Comunidade Ativa**: Suporte e desenvolvimento através do [OpenDisplay Discord](https://discord.gg/WG7tbTzF9Z)
 
 
-## Primeiros Passos com o firmware OpenDisplay
+## Primeiros passos com o firmware OpenDisplay
 
 ### Montagem de Hardware
 
 **Passo 1. Conectar o Display à Placa Controladora**  
-Alinhe o cabo FPC com o conector na placa XIAO EN04 e, em seguida, prenda a trava para garantir uma conexão firme.  
+Alinhe o cabo FPC com o conector na Placa XIAO EN04 e, em seguida, prenda a trava para garantir uma conexão firme.  
 
 :::tip
-O lado metálico do cabo FPC deve ficar virado para cima, caso contrário, nenhum conteúdo será exibido. A maioria dos displays tem 1 e 50 no cabo FPC; esses números devem estar alinhados com os da placa!
+O lado metálico do cabo FPC deve ficar voltado para cima, caso contrário nenhum conteúdo será exibido. A maioria dos displays tem 1 e 50 no cabo FPC, esses números devem se alinhar com os da placa!
 
-Siga o tutorial de instalação abaixo, muitas pessoas cometem erros nessa etapa.
+Por favor, siga o tutorial de instalação abaixo, muitas pessoas instalam de forma incorreta.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/hardware.jpg" style={{width:600, height:'auto'}}/></div>
 
 **Passo 2. Conectar a Bateria**  
-Conecte o cabo da bateria ao conector JST na placa controladora, garantindo a polaridade correta (fio vermelho no +, preto no -).  
+Conecte o cabo da bateria ao conector JST na placa controladora, garantindo a polaridade correta (fio vermelho em +, preto em -).  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/battery.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-Verifique a polaridade duas vezes; baterias diferentes podem ter fiação invertida. Se o vermelho e o preto estiverem trocados, eles podem ser facilmente removidos do conector JST usando uma agulha e então reposicionados corretamente.
+Verifique a polaridade duas vezes, baterias diferentes podem ter fiação misturada. Se o vermelho e o preto estiverem invertidos, eles podem ser facilmente removidos do conector JST usando uma agulha e então reposicionados corretamente.
 :::
 
 
+### Método do Instalador Web (Recomendado)
 
-## Instalando o Firmware OpenDisplay
-
-### Método com Instalador Web (Recomendado)
-
-A maneira mais simples de instalar o firmware OpenDisplay é usando o instalador baseado na web.
+A maneira mais fácil de instalar o firmware OpenDisplay é usando o instalador baseado na web.
 
 **Passo 1. Abrir o Instalador Web**  
-Acesse o [OpenDisplay Web Installer](https://opendisplay.org/firmware/install/index.html) em um navegador.
+Acesse o [Instalador Web OpenDisplay](https://opendisplay.org/firmware/install/index.html) em um navegador.
 
 **Passo 2. Selecionar Sua Placa**  
 Escolha **"Seeed EN04 4.26"** ou **"Seeed EN04 7.3"** (ou qualquer predefinição adequada ao seu hardware) na lista de dispositivos (com base no tamanho do display do seu kit).
@@ -117,14 +113,14 @@ Escolha **"Seeed EN04 4.26"** ou **"Seeed EN04 7.3"** (ou qualquer predefiniçã
 Clique no botão **"Download Firmware"** e salve o arquivo **"NRF52840.uf2"** no seu disco rígido.
 
 **Passo 4. Conectar Sua Placa**  
-Conecte a XIAO ePaper Board EN04 ao seu computador usando um cabo USB-C.
+Conecte a Placa XIAO ePaper EN04 ao seu computador usando um cabo USB-C.
 
 **Passo 5. Instalar o Firmware**  
-Pressione o botão de reset duas vezes consecutivas. Você verá um gerenciador de arquivos abrir no seu PC. Copie o arquivo **"NRF52840.uf2"** baixado para a unidade USB que aparecer (a unidade USB é a placa EN04 em modo DFU)
+Pressione o botão de reset duas vezes consecutivas. Você verá um gerenciador de arquivos aparecer no seu PC. Copie o arquivo **"NRF52840.uf2"** baixado para a unidade USB que aparecer (a unidade USB é a placa EN04 em modo DFU)
 
 :::tip
 Se a instalação falhar, tente:
-- Usar um cabo USB diferente (alguns cabos são apenas para alimentação)
+- Usar um cabo USB diferente (alguns cabos são apenas para energia)
 - Pressionar o botão de reset duas vezes na placa EN04
 - Usar uma porta USB diferente
 :::
@@ -136,34 +132,34 @@ Abra a [Página de Configuração do OpenDisplay](https://opendisplay.org/firmwa
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
 
 
-Se você selecionou **"Seeed EN04 4.26"** ou **"Seeed EN04 7.3"**, verá **"Auto Install to Device"**.
-Este é o modo mais fácil de configurar seu Kit.
+Se você selecionou **"Seeed EN04 4.26"** ou **"Seeed EN04 7.3"**, você verá **"Auto Install to Device"**.
+Esta é a maneira mais fácil de configurar seu Kit.
 
 **Passo 7. Conectar à Placa**
-Pressione o botão **""Connect** na página. Você deverá ver uma janela mostrando os dispositivos OpenDisplay disponíveis; selecione o novo dispositivo e clique em **"Pair"**
+Pressione o botão **""Connect** na página. Você deverá ver uma janela mostrando os dispositivos OpenDisplay disponíveis, selecione o novo dispositivo e pressione **"Pair"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png"  style={{width:500, height:'auto'}}/></div>
 
 
 **Passo 8. Salvar a configuração na Placa**  
-A última coisa a fazer é pressionar o botão **"Auto Install to Device"**; isso salvará a configuração no dispositivo.
+A última coisa a fazer é pressionar o botão **"Auto Install to Device"**, isso salvará a configuração no dispositivo.
 
 
-### Verificar a Configuração
+### Verificar Configuração
 
-Após a instalação e configuração, o display deverá mostrar uma tela de inicialização. O dispositivo agora está pronto para exibir conteúdo via Bluetooth.
+Após a instalação e configuração, o display deve mostrar uma tela de inicialização. O dispositivo agora está pronto para exibir conteúdo via Bluetooth.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
 
 
 
-## Enviando Imagens para o Display
+### Enviando Imagens para o Display
 
-### Usando a Ferramenta Web de Display
+**Usando a Ferramenta Web de Display**  
 
 **Passo 1. Ferramenta OpenDisplay**  
-Acesse o [OpenDisplay BLE Tester](https://opendisplay.org/firmware/display/index.html) no seu navegador.
+Visite o [OpenDisplay BLE Tester](https://opendisplay.org/firmware/display/index.html) no seu navegador.
 
 **Passo 2. Conectar ao Dispositivo**  
 Clique em **"Connect"** e selecione seu dispositivo OpenDisplay na janela de pareamento Bluetooth.
@@ -178,14 +174,14 @@ Clique em **"Select Image"** e escolha um arquivo de imagem no seu computador.
 
 
 :::tip
-Para melhores resultados:
+Para obter melhores resultados:
 - Use imagens que correspondam à resolução do seu display (o display de 7,3" é de 800x480 pixels)
 - Imagens em preto e branco funcionam melhor em displays monocromáticos
 - A ferramenta converterá e aplicará dithering automaticamente em imagens coloridas
 :::
 
 **Passo 4. Enviar Imagem**  
-Clique em **"Upload Image"** para enviar a imagem para o seu display. O e-paper será atualizado e mostrará sua imagem.
+Clique em **"Upload Image"** para enviar a imagem para o seu display. O e-paper será atualizado e exibirá sua imagem.
 
 
 
@@ -194,39 +190,39 @@ Clique em **"Upload Image"** para enviar a imagem para o seu display. O e-paper 
 Você pode criar conteúdo personalizado para o display usando:
 - Softwares de edição de imagem (GIMP, Photoshop, etc.)
 - Scripts em Python com a biblioteca PIL/Pillow
-- Geradores de imagem baseados na web
+- Geradores de imagem baseados na Web
 - Integração com Home Assistant
 
 
-### Integração com Home Assistant
+## Integração com Home Assistant
 :::tip
 Para integrar com o Home Assistant, você precisa de uma configuração com suporte a Bluetooth:
 - **Home Assistant Green** (Bluetooth integrado)
 - **Home Assistant OS/Supervised** em hardware com suporte a Bluetooth
 - **ESPHome Bluetooth Proxy** (recomendado para melhor alcance)
 
-**Observação**: Dispositivos Shelly atuando como proxies Bluetooth **não suportam conexões ativas** exigidas pelo OpenDisplay, portanto não podem ser usados para essa integração.
+**Observação**: Dispositivos Shelly atuando como proxies Bluetooth **não suportam conexões ativas** exigidas pelo OpenDisplay, portanto não podem ser usados para esta integração.
 :::
 
 **Passo 1. Instalar a Integração**
 
-Para instruções detalhadas de instalação, consulte o [Repositório da Integração OpenDisplay para Home Assistant](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
+Para instruções detalhadas de instalação, consulte o [Repositório de Integração OpenDisplay para Home Assistant](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
 
-A forma mais fácil de instalar a integração é via **HACS** (Home Assistant Community Store). Clique no botão abaixo para abrir o repositório diretamente no HACS:
+A maneira mais fácil de instalar a integração é via **HACS** (Home Assistant Community Store). Clique no botão abaixo para abrir o repositório diretamente no HACS:
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
 
 :::info
-Após instalar a integração personalizada via HACS, você deve **reiniciar o Home Assistant** para que as alterações entrem em vigor.
+Depois de instalar a integração personalizada via HACS, você deve **reiniciar o Home Assistant** para que as alterações entrem em vigor.
 :::
 
-**Passo 2. Adicionar o Dispositivo Detectado**
+**Passo 2. Adicionar Dispositivo Detectado**
 
 Depois que o Home Assistant for reiniciado:
-1. Vá em **Settings > Devices & services**.
-2. Você deverá ver o seu dispositivo OpenDisplay listado em **Discovered**.
+1. Vá para **Settings > Devices & services**.
+2. Você deverá ver seu dispositivo OpenDisplay listado em **Discovered**.
 3. Clique em **Add**.
-4. Uma caixa de diálogo será exibida permitindo que você defina o **Name** e a **Area** do dispositivo.
+4. Uma janela aparecerá permitindo que você defina o **Name** e a **Area** do dispositivo.
 5. Clique em **Finish**. Você será redirecionado para a página de detalhes do dispositivo, onde poderá gerenciar seu display de papel eletrônico.
 
 Você verá uma nova imagem exibida no display, mostrando que o dispositivo está conectado ao Home Assistant.
@@ -238,13 +234,13 @@ Você verá uma nova imagem exibida no display, mostrando que o dispositivo est�
 
 Depois de integrar seu dispositivo OpenDisplay com o Home Assistant, você pode criar automações para atualizar dinamicamente o conteúdo do display com base em dados de sensores, horário ou outros eventos.
 
-### Automatizando Atualizações do Display
+### Automatizando atualizações do display
 
-O serviço principal para atualizar o display é `open_epaper_link.drawcustom`. Este serviço permite desenhar texto, ícones, imagens e formas no display. Para obter a lista completa de tipos e parâmetros suportados, consulte a [documentação do drawcustom](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
+O serviço principal para atualizar o display é `open_epaper_link.drawcustom`. Este serviço permite desenhar textos, ícones, imagens e formas no display. Para uma lista completa dos tipos e parâmetros compatíveis, consulte a [documentação do drawcustom](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
 
-Você pode criar automações no Home Assistant usando o **Editor Visual** ou escrevendo o código **YAML** diretamente. Abaixo estão exemplos de ambos os métodos.
+Você pode criar automações no Home Assistant usando o **Editor Visual** ou escrevendo código **YAML** diretamente. Abaixo estão exemplos de ambos os métodos.
 
-#### Exemplo 1: Exibir Dados de Sensor (Editor Visual)
+#### Exemplo 1: Exibir dados de sensores (Editor Visual)
 
 1.  Vá em **Settings > Automations & Scenes** e clique em **Create Automation**.
 2.  Adicione um gatilho **Time Pattern** (por exemplo, a cada 10 minutos).
@@ -264,7 +260,7 @@ Você pode criar automações no Home Assistant usando o **Editor Visual** ou es
 
 <!-- <div style={{textAlign:'center'}}><img src={require('./ha_automation_visual.jpg').default} style={{width:800, height:'auto'}}/></div> -->
 
-**Configuração do Payload:**
+**Configuração de Payload:**
 
 ```yaml
 - type: "text"
@@ -304,11 +300,11 @@ Você pode criar automações no Home Assistant usando o **Editor Visual** ou es
   color: "black"
 ```
 
-:::caution Importante: IDs de Entidade
+:::caution Importante: IDs de entidade
 Os IDs de entidade usados no payload acima (por exemplo, `sensor.living_room_temperature`, `sensor.living_room_humidity`) são exemplos. Você **deve** substituí-los pelos IDs de Entidade reais dos seus sensores no Home Assistant.
 :::
 
-#### Exemplo 2: Contagem Regressiva (YAML)
+#### Exemplo 2: Contagem regressiva (YAML)
 
 Para usuários avançados, você pode editar a automação no modo YAML. Esta automação calcula os dias restantes até uma data específica (por exemplo, Natal) e os exibe.
 
@@ -359,68 +355,68 @@ actions:
       device_id: 2ad706d4aa7c657b6fe99a733cef2253
 ```
 
-:::caution Importante: ID do Dispositivo
+:::caution Importante: ID do dispositivo
 O `device_id` mostrado no exemplo acima (`2ad706d4aa7c657b6fe99a733cef2253`) é apenas um exemplo. Você **deve** substituí-lo pelo ID de Dispositivo real do seu próprio display OpenDisplay.
 
 Para encontrar seu ID de Dispositivo:
 1. Crie uma nova automação no Home Assistant usando o Editor Visual.
 2. Selecione seu dispositivo OpenDisplay nas configurações da ação.
-3. Altere para o **modo YAML** (clique nos três pontos no canto superior direito do card de ação).
+3. Alterne para o **modo YAML** (clique nos três pontos no canto superior direito do cartão de ação).
 4. Copie o `device_id` do código YAML e cole-o na sua automação.
 :::
 
 ## Bônus
 
-Se você está procurando uma forma estilosa de montar seu display, confira este insert impresso em 3D para a moldura IKEA RODALM. Ele permite uma montagem fácil do display.
+Se você está procurando uma forma elegante de montar seu display, confira este inserto impresso em 3D para a moldura IKEA RODALM. Ele permite a montagem fácil do display.
 
-- **[MakerWorld]** [Insert Seeed 7.3" Spectra para Moldura IKEA RODALM](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
+- **[MakerWorld]** [Inserto Seeed 7.3" Spectra para moldura IKEA RODALM](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
-## Solução de Problemas
+## Solução de problemas
 
-### Problemas de Instalação de Firmware
+### Problemas na instalação do firmware
 
 **Problema**: O PC não detecta uma nova unidade USB após conectar a placa EN04
 - **Solução**: 
-  - Tente usar um cabo USB diferente (cabo de dados, não apenas de alimentação)
+  - Tente outro cabo USB (cabo de dados, não apenas de alimentação)
   - Pressione o botão de reset duas vezes após conectar a placa
 
 
-### Problemas de Configuração
+### Problemas de configuração
 
 **Problema**: A placa EN04 não é descoberta
 - **Solução**:
-  - Verifique se o LED na placa pisca – isso confirma que o dispositivo está alimentado
+  - Verifique se o LED na placa pisca - isso confirma que o dispositivo está energizado
   - Tente reiniciar a placa
   - Verifique a instalação do firmware ou copie o arquivo novamente
 
 **Problema**: O display não mostra nada após a instalação do firmware
 - **Solução**:
   - Verifique se o cabo FPC está inserido corretamente (contatos metálicos voltados para cima)
-  - Confira se o cabo está totalmente inserido e travado
+  - Verifique se o cabo está totalmente inserido e travado
   - Verifique se a configuração está correta (você pode conectar-se à placa via configurador e ler a configuração)
 
 
-### Problemas de Conexão Bluetooth
+### Problemas de conexão Bluetooth
 
 **Problema**: Não é possível encontrar o dispositivo OpenDisplay no emparelhamento Bluetooth
 - **Solução**:
   - Certifique-se de que o dispositivo está ligado e que o firmware está instalado
-  - Aproxime-se mais do dispositivo (dentro de 2–3 metros)
+  - Aproxime-se mais do dispositivo (dentro de 2 a 3 metros)
   - Verifique se o Bluetooth está ativado no seu computador/celular
 
-**Problema**: A conexão cai durante o upload de imagem
+**Problema**: A conexão cai durante o upload da imagem
 - **Solução**:
-  - Permaneça próximo ao dispositivo durante o upload
-  - Certifique-se de que a bateria está suficientemente carregada ou alimente o dispositivo via USB
+  - Fique próximo ao dispositivo durante o upload
+  - Certifique-se de que a bateria esteja suficientemente carregada ou alimente o dispositivo via USB
   - Evite enviar imagens muito grandes
   - Tente novamente em um ambiente Bluetooth mais estável
 
-### Problemas de Bateria e Alimentação
+### Problemas de bateria e alimentação
 
-**Problema**: Vida útil da bateria curta
+**Problema**: Vida útil curta da bateria
 - **Solução**:
   - Configure intervalos de sono mais longos no configurador
-  - Sempre use a versão mais recente do firmware; cada versão otimiza o uso da bateria
+  - Use sempre a versão mais recente do firmware; cada versão otimiza o uso da bateria
   - Reduza a frequência de atualização do display
   - Verifique se a bateria está totalmente carregada (4,2 V para Li-Po)
 
@@ -428,8 +424,96 @@ Se você está procurando uma forma estilosa de montar seu display, confira este
 - **Solução**:
   - Verifique a polaridade da bateria (vermelho: +, preto: -)
   - Verifique se o cabo de carregamento fornece corrente suficiente (mín. 500 mA)
-  - Certifique-se de que a chave de energia está na posição ON
+  - Certifique-se de que a chave de alimentação esteja na posição ON
   - Teste com uma fonte de alimentação USB diferente
+
+### Problemas com Home Assistant e integração
+
+**Problema**: Erro "Insufficient connection slots" ao adicionar dispositivos via Raspberry Pi + HA + OpenDisplay
+- **Solução**:
+  - Esse erro geralmente ocorre quando o adaptador Bluetooth integrado do Raspberry Pi atinge seu limite de conexões simultâneas.
+
+  ![Error: Insufficient connection slots](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/1.png)  
+  Exemplo da mensagem de erro "Insufficient connection slots".
+
+  - **Correção recomendada**: Use um dispositivo ESP32 (por exemplo, XIAO ESP32S3) como um **ESPHome Bluetooth Proxy**. Isso transfere a conexão Bluetooth do Raspberry Pi para o ESP32, fornecendo "slots" mais estáveis para seus displays de papel eletrônico.
+  - Consulte a seção [Using ESPHome Bluetooth Proxy](#using-esphome-bluetooth-proxy) abaixo para instruções detalhadas de configuração.
+
+## Usando ESPHome Bluetooth Proxy
+
+Se você encontrar "Insufficient connection slots" ao usar o Raspberry Pi com o Home Assistant, configurar um Bluetooth Proxy é a solução mais eficaz. Isso permite que o HA use um dispositivo ESP32 externo como ponte para se comunicar com seus displays de papel eletrônico.
+
+### Pré-requisitos
+- Um dispositivo ESP32 (por exemplo, XIAO ESP32S3)
+- ESPHome instalado no seu Home Assistant
+- Um cabo de dados USB para conectar o ESP32 ao seu Raspberry Pi (para o primeiro flash)
+
+### Configuração passo a passo
+
+1. **Conecte o dispositivo**: Conecte seu XIAO ESP32S3 a uma das portas USB do seu Raspberry Pi.
+2. **Crie uma nova configuração**: No painel do ESPHome, crie um novo dispositivo e use a seguinte configuração YAML como modelo:
+
+   ![ESPHome YAML Configuration](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/2.png)
+   Configuração YAML do ESPHome para o Bluetooth Proxy.
+
+```yaml
+esphome:
+  name: esps3-proxy
+  friendly_name: ESP32S3 Bluetooth Proxy
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# 1. Enable detailed logging (useful for debugging)
+logger:
+  level: VERY_VERBOSE
+
+# 2. Core: Enable Bluetooth Tracker
+esp32_ble_tracker:
+  scan_parameters:
+    active: true
+
+# 3. Core: Enable Bluetooth Proxy
+# This allows HA to control the e-Paper display through this device
+bluetooth_proxy:
+  active: true
+
+api:
+  encryption:
+    key: "YOUR_ENCRYPTION_KEY" # Generate your own key
+
+ota:
+  - platform: esphome
+    password: "YOUR_OTA_PASSWORD" # Set your own password
+
+wifi:
+  ssid: "YOUR_WIFI_SSID"
+  password: "YOUR_WIFI_PASSWORD"
+
+# Recommended: Enable captive portal for fallback access
+captive_portal:
+```
+
+3. **Instale/Flashe**:
+     - Selecione **Install** -> **Plug into this computer** (ou o dispositivo executando ESPHome).
+
+     ![ESPHome Flashing Process](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/4.png)
+      Gravando o firmware no XIAO ESP32S3 via Raspberry Pi.
+
+    - Se for a sua primeira vez, o ESPHome pode baixar o conjunto de ferramentas `esp-idf`. Certifique-se de que o seu ambiente tenha uma conexão estável com a Internet para o GitHub.
+    - Depois de compilado, os logs mostrarão "WiFi connected" e atividades de varredura Bluetooth.
+
+4. **Integração**:
+     - O Home Assistant descobrirá automaticamente o novo Bluetooth Proxy.
+     - Depois de adicionado, seus displays de e-Paper agora devem ser detectáveis por meio deste proxy sem o erro de "insufficient slots".
+
+     ![Success: Bluetooth Proxy Connected](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png)
+      O Home Assistant detectou o Bluetooth Proxy com sucesso.
+
+      ![Success: e-Paper Display Added](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/6.png)
+      Teste se a tela pode exibir normalmente; se sim, a configuração foi bem-sucedida.
 
 ## Recursos
 
@@ -442,9 +526,9 @@ Se você está procurando uma forma estilosa de montar seu display, confira este
 
 
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -455,3 +539,4 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

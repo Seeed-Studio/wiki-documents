@@ -11,7 +11,7 @@ last_update:
   date: 3/2/2026
   author: Kasun Thushara
 createdAt: '2026-03-02'
-updatedAt: '2026-03-05'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/sound_event_detection_module/
 ---
 

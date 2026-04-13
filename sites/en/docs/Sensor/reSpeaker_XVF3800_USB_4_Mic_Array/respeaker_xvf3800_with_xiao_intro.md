@@ -12,7 +12,7 @@ last_update:
   date: 8/20/2025
   author: Kasun Thushara
 createdAt: '2025-07-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 ---
 
@@ -158,6 +158,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/install-board.png" alt="pir" width={800} height="auto" /></p>
 
 - Restart Arduino IDE.
+
+### Supportive Library 
+
+:::note
+Please install the [Arduino Audio Tools library](https://github.com/pschatzmann/arduino-audio-tools) in order to run the provided examples.
+:::
+
 
 ## Tech Support & Product Discussion
 

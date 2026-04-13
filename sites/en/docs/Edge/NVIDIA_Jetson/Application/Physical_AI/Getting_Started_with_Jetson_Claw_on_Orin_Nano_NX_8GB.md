@@ -1,7 +1,7 @@
 ---
 description: This wiki shows how to build a Jetson-Claw starter setup on Jetson Orin Nano 8GB or Orin NX 8GB with nanobot, llama.cpp, a local Qwen3.5 4B GGUF model, and Feishu control.
 title: Getting Started with Jetson-Claw on Orin Nano / NX 8GB
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg
+image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
 sku: 114110312 | 114110313
 last_update:
@@ -9,14 +9,28 @@ last_update:
   author: Dayu
 createdAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-03'
 ---
-
 # Getting Started with Jetson-Claw on Orin Nano / NX 8GB
+
+<div align="center">
+    <img width={800}
+     src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
+</div>
 
 This wiki walks through a practical Jetson-Claw starter build for **Jetson Orin Nano 8GB** and **Jetson Orin NX 8GB**. The whole stack runs locally on Jetson: we install `nanobot`, expand swap space for safer model loading, compile `llama.cpp` with CUDA, download a `Qwen3.5 4B` GGUF model, switch `nanobot` to a local `llama.cpp` backend, and finally connect the bot to **Feishu** so you can control it from chat.
 
 Compared with a larger OpenClaw deployment, **nanobot** is a better fit for this entry-level Jetson-Claw setup because it is much lighter, starts faster, is easier to read and modify, and already supports **Feishu** plus **OpenAI-compatible local backends**. On an 8 GB Jetson, that lower runtime overhead leaves more room for the local model itself. If you later need a larger plugin ecosystem or a heavier multi-component workflow, you can still move up to OpenClaw.
+
+
+## Benchmark
+
+Here, the performance of local LLMs for different Jetson modules is listed. After our verification, the 4B model is the ideal choice for setting up a system capable of performing specific tasks! The larger the model's parameter size, the better the performance will be! You can use this Benchmark as a reference to select a reComputer that suits your needs.
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/jetson/benchmark_jetson.jpg" />
+</div>
 
 ## What You Will Build
 

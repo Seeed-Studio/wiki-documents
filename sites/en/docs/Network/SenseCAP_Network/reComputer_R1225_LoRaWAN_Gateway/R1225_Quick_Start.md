@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/r1225_quick_start/
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-08'
 ---
 # Quick Start
 
@@ -41,7 +41,7 @@ With the PoE module installed, the ETH0 port of reComputer R1225 can support PoE
 It's worth noting that the PoE module provided with the reComputer R1225 is compliant with the IEEE 802.3af standard and can provide a maximum power supply of 12.95W. **Therefore, if there is a need to connect high-power peripherals such as SSD or 4G modules, the PoE power supply may not be sufficient**. In this case, it's recommended to use the AC/DC terminal for power supply instead to ensure stable and reliable operation of the device.
 :::
 
-## Access the Seeed Gateway OS
+## Access the SenseCAP Gateway OS
 
 ### Access via router
 
@@ -56,8 +56,6 @@ It's worth noting that the PoE module provided with the reComputer R1225 is comp
 When using the R1225 for the first time, if there are routers and Ethernet cables nearby, you can choose to connect the R1225 to the network via a wired connection.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Network_Connection_Diagram1.png" alt="pir" width={800} height="auto" /></p>
-
-<!--加一个，如果不是首次连接，已经连接了Wifi，即使不插网线，也可以通过访问路由器分配的IP进入管理界面-->
 
 :::tip
 If Wi-Fi is configured, you can access the LuCI interface via the R1225’s IP address without an Ethernet cable, as long as your computer and the R1225 are on the same network.
@@ -155,7 +153,7 @@ Ethernet is plug-and-play and requires no configuration.
 
 - Step 1: Plug your SIM card into the Nano-SIM card slot
 
-Please use the DIN-rail clip we provided to insert it into the small hole next to the SIM card slot, then insert your SIM card.
+Please use a paperclip and insert it into the small hole next to the SIM card slot.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/LTE.png" alt="pir" width={400} height="auto" /></p>
 

@@ -10,7 +10,7 @@ last_update:
   date: 03/18/2026
   author: Kian
 createdAt: '2023-04-13'
-updatedAt: '2026-03-18'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor/
 ---
 # Introdução ao uso do SenseCAP ONE Compact Weather Sensor
@@ -29,7 +29,7 @@ url: https://wiki.seeedstudio.com/pt-br/Getting_Started_with_SenseCAP_ONE_Compac
 
 Existem dois conectores na parte inferior do dispositivo.
 
-- A interface USB Type-C permite conectar seu computador ao dispositivo com um cabo USB Type-C comum para configuração.
+- A interface USB Type-C permite conectar o seu computador ao dispositivo com um cabo USB Type-C comum para configuração.
 
 - A interface principal de dados pode ser conectada ao cabo M12 de 8 pinos, suportando múltiplos protocolos de barramento
 
@@ -37,12 +37,12 @@ Existem dois conectores na parte inferior do dispositivo.
 
 #### Estações meteorológicas V1 vs V2
 
-As estações meteorológicas V1 e V2 podem ser identificadas pelo **SKU no rótulo branco** ou pelo design da base.
+As estações meteorológicas V1 e V2 podem ser identificadas **pelo SKU na etiqueta branca** ou pelo design da base.
 
-Além disso, a porta USB Type-C está localizada em posições diferentes: na V1, ela fica no mesmo lado do rótulo branco, enquanto na V2, fica no lado oposto.
+Além disso, a porta USB Type-C está localizada em posições diferentes: na V1, ela fica no mesmo lado da etiqueta branca, enquanto na V2, fica no lado oposto.
 
 :::tip
-As seguintes estações meteorológicas foram atualizadas para V2: S500, S700, S900 e S1000.
+As seguintes estações meteorológicas foram atualizadas para V2: S500, S700 e S1000.
 :::
 
 | Nome do produto | SKU V1   | SKU V2    |
@@ -61,7 +61,7 @@ As seguintes estações meteorológicas foram atualizadas para V2: S500, S700, S
 :::info
 - Qual é a diferença entre o SenseCAP ONE V2 e o V1?
   - Função de software inalterada, o V2 é totalmente compatível para substituir o V1.
-  - Otimização parcial de desempenho, como medição de vento.
+  - Otimização parcial de desempenho, como a medição de vento.
   - A interface RS422/RS232 foi removida.
 :::
 
@@ -83,7 +83,7 @@ As seguintes estações meteorológicas foram atualizadas para V2: S500, S700, S
 
 O dispositivo adota um conector M12 de 8 pinos; os pinos de cores diferentes fornecem alimentação e comunicação de dados (conforme mostrado no diagrama acima).
 
-Ao trabalhar com RS-485, você pode conectar apenas 4 fios (sem usar a função de aquecimento), e o restante pode ser individualmente enrolado com fita para evitar curto-circuito
+Ao trabalhar com RS-485, você pode conectar apenas 4 fios (sem usar a função de aquecimento), e o restante pode ser individualmente envolvido com fita para evitar curto-circuito
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
@@ -97,7 +97,7 @@ Nota: o cabo deve estar alinhado com a parte inferior antes de inseri-lo na base
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
-Ao usar o dispositivo com função de aquecimento, é necessária uma fonte de alimentação separada de 24V (recomenda-se 24V@1A). O fio cinza 5 é conectado ao negativo da fonte de alimentação e o fio rosa 6 é conectado ao polo positivo da fonte de alimentação.
+Ao usar o dispositivo com função de aquecimento, é necessária uma fonte de alimentação separada de 24V (recomenda-se 24V@1A). O fio cinza 5 é conectado ao negativo da fonte de alimentação, e o fio rosa 6 é conectado ao polo positivo da fonte de alimentação.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png" /></div>
 
@@ -123,7 +123,7 @@ A dimensão da placa de flange é mostrada abaixo.
 
 # Modo de operação do dispositivo
 
-Após a instalação, você pode ligar o dispositivo, configurá-lo e coletar dados do dispositivo.
+Após a instalação, você pode ligar o dispositivo, configurá-lo e coletar dados a partir dele.
 
 O dispositivo possui dois modos de operação, **modo de configuração e modo de trabalho.**
 
@@ -131,13 +131,13 @@ O dispositivo possui dois modos de operação, **modo de configuração e modo d
 
 ### Configurar o dispositivo via porta USB
 
-Há uma tampa redonda à prova d'água na parte inferior do dispositivo. Gire-a no sentido anti-horário para remover essa tampa e você verá um conector USB Type-C e um botão de configuração.
+Há uma tampa redonda à prova d'água na parte inferior do dispositivo. Gire-a no sentido anti-horário para remover essa tampa, e você verá um conector USB Type-C e um botão de configuração.
 
-Conecte o dispositivo ao computador com um cabo USB Type-C. O computador instalará automaticamente o driver do dispositivo. Após a instalação bem-sucedida do driver, você poderá ver uma porta serial no gerenciador de dispositivos.
+Conecte o dispositivo ao seu computador com um cabo USB Type-C. O computador instalará automaticamente o driver do dispositivo. Após a instalação bem-sucedida do driver, você poderá ver uma porta serial no gerenciador de dispositivos.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png" /></div>
 
-Se o driver não for instalado automaticamente, clique neste link para [baixar manualmente](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) e [instalar](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) o [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers). (A versão é CP210x Windows Drivers)
+Se o driver não for instalado automaticamente, clique neste link para [baixar manualmente](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) e [instalar](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) o [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).（A versão é CP210x Windows Drivers）
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image17.png" /></div>
 
@@ -187,7 +187,7 @@ Em Application Settings, você pode definir o ciclo para a ferramenta ler os dad
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image24.png" /></div>
 
-Clique em "Firmware Update" para atualizar o firmware do dispositivo. Entre em contato com o setor de vendas ou suporte técnico em (sensecap@seeed.cc) para obter o firmware.
+Clique em "Firmware Update" para atualizar o firmware do dispositivo. Entre em contato com o time de vendas ou suporte técnico em (sensecap@seeed.cc) para obter o firmware.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image25.png" /></div>
 
@@ -317,7 +317,7 @@ Defina o ID de escravo padrão (5-em-1 é 10, 7-em-1 é 20, 9-em-1 é 38), códi
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image38.png" /></div>
 
-Agora o computador lê os dados do sensor a cada 1 segundo, e a medição (linha 0 e linha 1) é mostrada na imagem abaixo; após dividir a medição por 1000, obtém-se o valor real da temperatura, 28300/1000 = 28,3 °C
+Agora o computador lê os dados do sensor a cada 1 segundo, e a medição (linha 0 e linha 1) é mostrada na figura abaixo; após dividir a medição por 1000, obtém-se o valor real da temperatura, 28300/1000 = 28,3 °C
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image39.png" /></div>
 
@@ -325,19 +325,19 @@ Agora o computador lê os dados do sensor a cada 1 segundo, e a medição (linha
 
 Quando a temperatura é positiva:
 
-1. O host envia 01 04 00 00 00 02 71 CB
+1. Host envia 01 04 00 00 00 02 71 CB
 
-2. O escravo responde 01 04 04 00 00 6E 8C D6 41
+2. Escravo responde 01 04 04 00 00 6E 8C D6 41
 
-3. Retorna os dados de temperatura 0x00006E8C (Hex), convertidos para decimal = 28300, obtenha a temperatura do ar correspondente dividindo por 1000, temperatura do ar = 28300/1000 = 28,3 °C
+3. Retorna dados de temperatura 0x00006E8C (Hex), convertido para decimal = 28300, obtenha a temperatura do ar correspondente dividindo por 1000, temperatura do ar = 28300/1000 = 28,3 °C
 
 **Quando a temperatura é negativa**
 
 A temperatura precisa ser obtida por meio de um cálculo de complemento.
 
-1. O host envia 01 04 00 00 00 02 71 CB
+1. Host envia 01 04 00 00 00 02 71 CB
 
-2. O escravo responde 01 04 04 FF FF FC 18 D6 41
+2. Escravo responde 01 04 04 FF FF FC 18 D6 41
 
 3. Dados de temperatura retornados FFFFFC18H (complemento Hex).
 
@@ -349,11 +349,11 @@ A temperatura precisa ser obtida por meio de um cálculo de complemento.
 
 Leia o registrador 0x0000~0x0005.
 
-Enviar comando: 0A 04 00 00 00 06 71 73（código de verificação）；
+Enviar comando: 0A 04 00 00 00 06 71 73（Check code）；
 
-Retorno: 26 04 40 00 00 70 80（Temperatura）00 00 95 10（Umidade） 06 07 94 40（Pressão do ar）99 09（código de verificação）；Leia o registrador 0x0008~0x0013. Enviar comando: 0A 04 00 08 00 0C 70 B6（código de verificação）；
+Retorno: 26 04 40 00 00 70 80（Temperatura）00 00 95 10（Umidade） 06 07 94 40（Pressão do ar）99 09（Check code）；Leia o registrador 0x0008~0x0013. Enviar comando: 0A 04 00 08 00 0C 70 B6（Check code）；
 
-Retorno: 0A 04 0C 00 00 00 00（Direção mínima do vento）00 03 6E 84（Direção máxima do vento）00 03 C8 C0（Direção média do vento）00 00 00 00（Velocidade mínima do vento）00 00 04 BC（Velocidade máxima do vento）00 00 02 10（Velocidade média do vento）BC 78（código de verificação）
+Retorno: 0A 04 0C 00 00 00 00（Direção mínima do vento）00 03 6E 84（Direção máxima do vento）00 03 C8 C0（Direção média do vento）00 00 00 00（Velocidade mínima do vento）00 00 04 BC（Velocidade máxima do vento）00 00 02 10（Velocidade média do vento）BC 78（Check code）
 
 **Decodificação S600**
 
@@ -361,7 +361,7 @@ Leia o registrador 0x0000~0x0013
 
 Enviar comando: 45 03 00 00 00 13 0B 43
 
-Retorno: 45 04 40 00 00 70 80（Temperatura） 00 00 95 10（Umidade） 06 07 94 40（Pressão do ar） 00 00 00 00（Luz） 00 00 00 00（Direção mínima do vento） 00 00 00 00（Velocidade máxima do vento） 00 00 00 00（Direção média do vento） 00 00 00 00 （Velocidade mínima do vento） 00 00 00 00（Velocidade máxima do vento） 00 00 00 00（Velocidade média do vento）77FD（código de verificação）
+Retorno: 45 04 40 00 00 70 80（Temperatura） 00 00 95 10（Umidade） 06 07 94 40（Pressão do ar） 00 00 00 00（Luz） 00 00 00 00（Direção mínima do vento） 00 00 00 00（Velocidade máxima do vento） 00 00 00 00（Direção média do vento） 00 00 00 00 （Velocidade mínima do vento） 00 00 00 00（Velocidade máxima do vento） 00 00 00 00（Velocidade média do vento）77FD（Check code）
 
 **Decodificação S700**
 
@@ -369,7 +369,7 @@ Leia o registrador 0x0000-0x001F & 0x0030-0x0033.
 
 Enviar comando: 14 04 00 00 00 20 F3 06
 
-Retorno: 14 04 40 00 00 70 80（Temperatura） 00 00 95 10（Umidade） 06 07 94 40（Pressão do ar） 00 00 00 00（Luz） 00 00 00 00（Direção mínima do vento） 00 00 00 00（Direção máxima do vento） 00 00 00 00（Direção média do vento） 00 00 00 00 （Velocidade mínima do vento）00 00 00 00（Velocidade máxima do vento) 00 00 00 00（Velocidade média do vento） 00 00 00 00（Chuva acumulada） 00 00 00 00（Duração da chuva acumulada） 00 00 00 00（Intensidade da chuva） 00 00 00 00（Intensidade máxima da chuva） 00 00 6A 7C（Temperatura de aquecimento） 00 00 00 00（O estado de tombamento） 99 09（código de verificação）
+Retorno: 14 04 40 00 00 70 80（Temperatura） 00 00 95 10（Umidade） 06 07 94 40（Pressão do ar） 00 00 00 00（Luz） 00 00 00 00（Direção mínima do vento） 00 00 00 00（Direção máxima do vento） 00 00 00 00（Direção média do vento） 00 00 00 00 （Velocidade mínima do vento）00 00 00 00（Velocidade máxima do vento) 00 00 00 00（Velocidade média do vento） 00 00 00 00（Chuva acumulada） 00 00 00 00（Duração da chuva acumulada） 00 00 00 00（Intensidade da chuva） 00 00 00 00（Intensidade máxima da chuva） 00 00 6A 7C（Temperatura de aquecimento） 00 00 00 00（O estado de tombamento） 99 09（Check code）
 
 **Decodificação S900**
 
@@ -377,13 +377,13 @@ Leia o registrador 0x0000-0x001F & 0x0030-0x0033.
 
 Enviar comando: 26 04 00 00 00 20 F7 05
 
-Retorno: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Código de verificação)
+Retorno: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Check code)
 
 PM2.5 e PM10 precisam ser lidos separadamente：
 
 Enviar comando: 26 04 00 30 00 04 F7 11
 
-Retorno: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Código de verificação)
+Retorno: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Check code)
 
 **Decodificação S1000**
 
@@ -391,13 +391,13 @@ Leia o registrador 0x0000-0x001F e 0x0030-0x0033.
 
 Enviar comando: 2B 04 00 00 00 20 F6 18
 
-Retorno: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Código de verificação)
+Retorno: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10(Umidade) 06 07 94 40(Pressão do ar) 00 00 00 00(Luz) 00 00 00 00(Direção mínima do vento) 00 00 00 00(Direção máxima do vento) 00 00 00 00(Direção média do vento) 00 00 00 00 (Velocidade mínima do vento) 00 00 00 00(Velocidade máxima do vento) 00 00 00 00(Velocidade média do vento) 00 00 00 00(Chuva acumulada) 00 00 00 00(Duração da chuva acumulada) 00 00 00 00(Intensidade da chuva) 00 00 00 00(Intensidade máxima da chuva)00 00 6A 7C(Temperatura de aquecimento) 00 00 00 00(Estado de tombamento) 99 09(Check code)
 
 PM2.5, PM10 e CO2 precisam ser lidos separadamente：
 
 Enviar comando: 2B 04 00 30 00 04 F6 0C
 
-Retorno: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Código de verificação)
+Retorno: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Check code)
 
 Leia o registrador 0x0040~0x0041.
 
@@ -451,15 +451,15 @@ Os comandos têm dois formatos:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/22.png" /></div>
 
-*Exemplo: 0XA;BD=`?<CR><LF>` indica consultar a taxa de transmissão do dispositivo*
+*Exemplo: 0XA;BD=`?<CR><LF>` indica consultar a taxa de baud do dispositivo*
 
 ### Formato do comando de configuração
 
-**Definir um parâmetro especificado, como definir uma taxa de transmissão.**
+**Definir um parâmetro especificado, como definir uma taxa de baud.**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/33.png" /></div>
 
-*Exemplo: 0XA;BD=96`<CR><LF>` indica consultar a taxa de transmissão do dispositivo*
+*Exemplo: 0XA;BD=96`<CR><LF>` indica consultar a taxa de baud do dispositivo*
 
 ### Lista de comandos
 
@@ -472,7 +472,7 @@ A comunicação SDI-12 adota três fios, dois dos quais são fios de alimentaç�
 
 Cada sensor no barramento SDI-12 tem um endereço exclusivo, que pode ser definido como '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. O endereço SDI-12 do SenseCAP ONE é por padrão '0'. As instruções suportadas por este sensor são mostradas no próximo capítulo, onde cada instrução está em conformidade com o SDI-12 v1.4.
 
-O sensor é alimentado por uma fonte de alimentação CC de 3.6~16V. Após o sensor ser energizado, ele entrará imediatamente no modo de suspensão e aguardará o equipamento de aquisição de dados dar instruções. SDI-12 usa uma taxa de transmissão de 9600bps, 1 bit de início (nível alto), 7 bits de dados (0 alto e 1 baixo, anti-lógica), 1 bit de paridade par e 1 bit de parada.
+O sensor é alimentado por uma fonte de alimentação CC de 3.6~16V. Após o sensor ser ligado, ele entrará imediatamente no modo de suspensão e aguardará que o equipamento de aquisição de dados dê instruções. SDI-12 usa uma taxa de baud de 9600bps, 1 bit de início (nível alto), 7 bits de dados (alto 0 e baixo 1, lógica inversa), 1 bit de paridade par e 1 bit de parada.
 
 A sequência de cada byte enviado é mostrada na figura a seguir:
 
@@ -487,7 +487,7 @@ Por favor, consulte [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User G
 **Fiação do SDI-12**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image47.png" /></div>
 
-**Usar o depurador USB para SDI-12 para se comunicar com o dispositivo**
+**Use o depurador USB para SDI-12 para se comunicar com o dispositivo**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image48.png" /></div>
 
@@ -503,7 +503,7 @@ Baixe o assistente de depuração de porta serial:
 
 - Escolha o número de porta correto
 
-- Defina a taxa de transmissão para a taxa de transmissão do depurador USB para SDI-12 (observe que não é a taxa de transmissão do protocolo SDI-12)
+- Defina a taxa de baud para a taxa de baud do depurador USB para SDI-12 (observe que não é a taxa de baud do protocolo SDI-12)
 
 - Marque "CRLF"
 
