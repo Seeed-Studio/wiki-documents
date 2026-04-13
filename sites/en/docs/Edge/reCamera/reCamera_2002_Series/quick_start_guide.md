@@ -10,7 +10,7 @@ sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,10299
 sidebar_position: 1
 last_update:
   date: 04/10/2026
-  author: Samuel Yang
+  author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
 updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/recamera_getting_started/
