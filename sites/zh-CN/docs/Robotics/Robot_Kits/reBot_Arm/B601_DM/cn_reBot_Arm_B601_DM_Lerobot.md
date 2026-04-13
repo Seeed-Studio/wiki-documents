@@ -15,7 +15,7 @@ last_update:
   author: LiuJunjie
 createdAt: '2026-04-09'
 updatedAt: '2026-04-09'
-url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot_102/
+url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
 # 基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程
