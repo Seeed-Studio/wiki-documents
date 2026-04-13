@@ -1,6 +1,6 @@
 ---
-description: Primeiros passos com a reCamera
-title: Guia de Início Rápido
+description: Introdução à reCamera
+title: Guia de início rápido
 keywords:
   - Edge
   - reCamera
@@ -9,26 +9,26 @@ slug: /recamera_getting_started
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899
 sidebar_position: 1
 last_update:
-  date: 02/15/2025
-  author: Evelyn Chen
+  date: 04/10/2026
+  author: Samuel Yang
 createdAt: '2024-11-11'
-updatedAt: '2026-03-16'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/pt-br/recamera_getting_started/
 ---
 
-# Guia de Início Rápido da reCamera
+# Guia de início rápido da reCamera
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" /></div>
 
-Bem-vindo à reCamera! Este guia vai ajudar você a configurar rapidamente o seu dispositivo e começar a usá-lo para desbloquear poderosos recursos de visão com IA. Seja você iniciante ou usuário experiente, este passo a passo irá guiá-lo pela instalação, configuração e primeiro uso.
+Bem-vindo à reCamera! Este guia vai ajudar você a configurar rapidamente o seu dispositivo e começar a usá-lo para desbloquear poderosos recursos de IA de Visão. Seja você iniciante ou usuário experiente, este passo a passo o conduzirá pela instalação, configuração e primeiro uso.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱</font></span></strong>
     </a>
 </div>
 
-# Série de Produtos
+# Série de produtos
 
 Existem 4 versões da reCamera:
 
@@ -41,21 +41,21 @@ Existem 4 versões da reCamera:
         <th>reCamera 2002w 64GB</th>
     </tr>
     <tr>
-        <td>Placa principal (Core Board)</td>
+        <td>Placa principal</td>
         <td>Core 2002 8GB</td>
         <td>Core 2002 64GB</td>
         <td>Core 2002w 8GB</td>
         <td>Core 2002w 64GB</td>
     </tr>
     <tr>
-        <td>Placa de sensor (Sensor Board)</td>
+        <td>Placa de sensor</td>
         <td>S101(OV5647)</td>
         <td>S101(OV5647)</td>
         <td>S101(OV5647)</td>
         <td>S101(OV5647)</td>
     </tr>
     <tr>
-        <td>Placa base (Base Board)</td>
+        <td>Placa de base</td>
         <td>B101</td>
         <td>B101</td>
         <td>B101</td>
@@ -70,10 +70,10 @@ Existem 4 versões da reCamera:
     </tr>
     <tr>
         <td>Método de montagem</td>
-        <td>Suporte magnético/suporte de câmera</td>
-        <td>Suporte magnético/suporte de câmera</td>
-        <td>Suporte magnético/suporte de câmera</td>
-        <td>Suporte magnético/suporte de câmera</td>
+        <td>Magnético/Suporte de câmera</td>
+        <td>Magnético/Suporte de câmera</td>
+        <td>Magnético/Suporte de câmera</td>
+        <td>Magnético/Suporte de câmera</td>
     </tr>
     <tr>
         <td>Fonte de alimentação</td>
@@ -84,74 +84,89 @@ Existem 4 versões da reCamera:
     </tr>
 </table>
 
-## Desembalagem e Ligar o Dispositivo
+## Desembalagem e ligação
 
-Comece desembalando sua reCamera. Dentro da caixa, você deverá encontrar:
+Comece desembalando sua reCamera. Dentro da caixa, você deve encontrar:
 
 - reCamera
 - Cabo Type-C
 - Cabo Ethernet
 
-Verifique se todas as partes estão incluídas.
+Certifique-se de que todas as partes estão incluídas.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/part_list.jpg" /></div>
 
-Basta ligar o dispositivo com o cabo Type-C fornecido. Quando você vir a luz verde acesa, isso significa que a reCamera está pronta para se conectar ao mundo.
+Simplesmente ligue o dispositivo com o cabo Type-C fornecido. Quando você vir a luz verde acesa, isso significa que a reCamera está pronta para se conectar ao mundo.
 
-## Conexão de Rede
+## Conexão de rede
 
 Há três métodos para conectar a reCamera à sua rede:
 
 ### Método 1: Cabo USB
 
-**Configuração de rede com fio via cabo USB**
+**Configuração de rede cabeada via cabo USB**
 
-Conecte o cabo USB da reCamera ao seu PC e então você poderá acessar ```192.168.42.1``` para visualizar a página de carregamento da reCamera.
+Conecte o cabo USB da reCamera ao seu PC e então você pode acessar ```192.168.42.1``` para visualizar a página de carregamento da reCamera.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/usbmode.png" /></div>
 
-Se você tiver uma reCamera com função sem fio, recomendamos configurar a conexão Wi-Fi. Apenas a versão 2002w terá a interface de seleção de Wi-Fi.
+Se você tiver uma reCamera com função sem fio, recomendamos configurar a conexão Wi-Fi. Somente a versão 2002w terá a interface de seleção de Wi-Fi.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Wi-Fi_list.png" /></div>
 
-Se você encontrar algum problema, consulte a [solução de problemas de rede](https://wiki.seeedstudio.com/pt-br/recamera_network_connection/).
+**Notas para configuração de rede Wi-Fi:**
+
+1. **Certifique-se de estar na mesma rede**: Verifique se a reCamera e o seu computador estão conectados à **mesma rede Wi-Fi**. Isso garante que o desenvolvimento e a depuração subsequentes possam prosseguir normalmente.
+
+2. **Desative o VPN no computador**: Se você tiver um VPN ativado no seu computador, por favor, **desligue o VPN** antes de configurar o Wi-Fi. VPNs podem causar problemas de conexão de rede e impedir que você acesse a reCamera normalmente.
+
+3. **Como mudar a conexão Wi-Fi**:
+   - Na página de configuração da reCamera (192.168.42.1), encontre a opção de configurações de **Network**
+   - Clique no **Enable WI-FI botton**
+   - Selecione na lista a rede Wi-Fi (SSID) à qual você deseja se conectar
+   - Digite a senha do Wi-Fi
+   - Clique no botão **Confirm**
+
+4. Após conectar-se com sucesso ao Wi-Fi, clique no botão “Settings” para entrar na página de configurações. Você pode visualizar o endereço IP do Wi-Fi ao lado de “Wi-Fi IP”.
+
+Se você encontrar qualquer problema, consulte a [solução de problemas de rede](https://wiki.seeedstudio.com/pt-br/recamera_network_connection/).
 
 ### Método 2: Ethernet
 
 **Configuração de rede pela porta Ethernet**
 
-Se você quiser usar a porta Ethernet, pode usar o cabo da caixa para conectar ao seu roteador. Observe que isto **não é POE (Power over Ethernet)**. Você ainda precisa do cabo Type-C para ligar o dispositivo. Você pode **desparafusar a parte traseira** da câmera e conectar através da porta.
+Se você quiser usar a porta Ethernet, pode usar o cabo da caixa para conectar ao seu roteador. Observe que isto **não é POE (Power over Ethernet)**. Você ainda precisa do cabo Type-C para ligar o dispositivo. Você pode **desparafusar a parte de trás** da câmera e conectar pela porta.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/IPmode.png" /></div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/ethernet_cable.png" /></div>
 
-Depois de conectado, você pode encontrar o IP da reCamera no painel do seu roteador e então acessar o site e a plataforma Node-RED.
+Depois de conectado, você pode encontrar o IP da reCamera no backend do seu roteador e então acessar o site e a plataforma Node-RED.
 
 ### Método 3: Modo AP (disponível apenas nas versões 2002w)
 
-**Configuração de rede sem fio em modo AP**
+**Configuração de rede sem fio no modo AP**
 
-Ao ligar, a reCamera ativará o Access Point (AP) para que você possa alterar a preferência de rede. Abra a lista de Wi-Fi do seu telefone ou laptop e você deverá ver uma rede Wi-Fi chamada `reCamera_******`.
-O sistema de nomenclatura é ``"recamera_" + os últimos seis dígitos do endereço MAC`` deste dispositivo.
+Ao ligar, a reCamera ativará o Access Point (AP) para você alterar a preferência de rede. Abra a lista de Wi-Fi do seu celular ou laptop; você deverá ver um nome de Wi-Fi chamado `reCamera_******`.
+O sistema de nomenclatura é ``"recamera_" + os últimos seis dígitos do endereço mac`` deste dispositivo.
 A senha padrão é `12345678`.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/laptop_wifi_list.png" /></div>
 
-Conecte-se a este AP e um site deverá aparecer automaticamente para você. Se não acontecer, você sempre pode digitar **192.168.16.1** no navegador para acessar a página. Em seguida, você pode selecionar a qual Wi-Fi deseja que a reCamera se conecte.
-Se você tiver mais de uma reCamera, pode consultar o [Gerenciamento de Dispositivos](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#Gerenciamento-de-vários-dispositivos) para descobrir qual é qual.
+Conecte-se a este AP e um site deve aparecer automaticamente para você. Se não, você pode sempre digitar **192.168.16.1** no navegador para acessar a página. Em seguida, você pode selecionar a qual Wi-Fi deseja que a reCamera se conecte.
+Se você tiver mais de uma reCamera, consulte o [Gerenciamento de dispositivos](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#gerenciamento-de-multi-dispositivos) para descobrir qual é qual.
 
-## Acesso básico via Web
+## Acesso básico à Web
 
-Depois que você conectar a reCamera à sua rede, poderá acessar a interface web da reCamera digitando o endereço IP no navegador.
+Depois de conectar a reCamera à sua rede, você pode acessar a interface web da reCamera usando o endereço IP no navegador.
 
-- IP da conexão USB: 192.168.42.1
-- IP da conexão Wi-Fi ou Ethernet: use `ifconfig` para descobrir ou verifique no gerenciador de rede do seu roteador.
+- IP de conexão USB: 192.168.42.1
+- IP de conexão Wi-Fi ou Ethernet: use `ifconfig` para descobrir ou verifique no gerenciamento de rede do seu roteador.
 
 URLs da Web:
 
 - **Página inicial**: `ip_address/#/init`
-- **Área de trabalho**: `ip_address/#/workspace` (para versão do SO 0.1.4 e superior)
+- **Área de trabalho**: `ip_address/#/workspace` (para versão do sistema operacional 0.1.4 e superior)
 - **Configuração de rede**: `ip_address/#/network`
 - **Segurança**: `ip_address/#/security`
 - **Terminal**: `ip_address/#/terminal`
@@ -159,17 +174,17 @@ URLs da Web:
 - **Energia**: `ip_address/#/power`
 - **Node-RED original**: ```ip_address:1880```
 
-**Verifique a versão do SO do seu dispositivo**. Há uma grande atualização entre as versões 0.1.3 e 0.1.4. Para uma experiência de uso mais suave, recomendamos atualizar para 0.1.5 ou superior. Vá para ```Sidebar -> System -> Software Update``` para verificar a versão do software e aplicar e instalar a versão mais recente do SO. Para as instruções de atualização, consulte o [guia de atualização OTA](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#Atualização-OTA-da-013-para-a-versão-mais-recente).
+**Verifique a versão do sistema operacional do seu dispositivo**. Há uma grande atualização entre as versões 0.1.3 e 0.1.4. Para uma experiência de uso mais suave, recomendamos atualizar para 0.1.5 ou superior. Acesse ```Sidebar -> System -> Software Update``` para verificar a versão do software e aplicar e instalar a versão mais recente do sistema operacional. Para instruções de atualização, consulte o [guia de atualização OTA](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#atualizacao-ota-de-013-para-a-versao-mais-recente).
 
 ### Atualização OTA da 0.1.3 para a versão mais recente
 
-Se você tiver o primeiro lote da reCamera, pode atualizar o SO para a versão mais recente seguindo estas instruções.
+Se você recebeu o primeiro lote da reCamera, pode atualizar o sistema operacional para a versão mais recente seguindo estas instruções.
 
 **Passo 1**: Abra o site e navegue até ```Sidebar -> System -> Software Update```
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade1.png" /></div>
 
-**Passo 2**: Verifique a versão do seu SO e clique em **Check** e **Apply**.
+**Passo 2**: Verifique a versão do seu sistema operacional e clique em **Check** e **Apply**.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade2.png" /></div>
 
@@ -177,23 +192,23 @@ Se você tiver o primeiro lote da reCamera, pode atualizar o SO para a versão m
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade3.png" /></div>
 
-**Passo 4**: Reinicie o dispositivo e atualize a página do site.
+**Passo 4**: Reinicie o dispositivo e atualize o site.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade4.png" /></div>
 
-**Passo 5**: Você entrará na página de carregamento para alterar a senha. Agora você pode experimentar a versão mais recente da reCamera com o painel do Node-RED seguindo [estas instruções de download](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#Acessar-o-dashboard-de-preview-da-reCamera).
+**Passo 5**: Você entrará na página de carregamento para alterar a senha. Agora você pode experimentar a versão mais recente da reCamera com o dashboard do Node-RED seguindo [estas instruções de download](https://wiki.seeedstudio.com/pt-br/recamera_getting_started/#acessar-o-dashboard-de-pre-visualizacao-da-recamera).
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/OSupgrade5.png" /></div>
 
-### Acessar o dashboard de preview da reCamera
+### Acessar o dashboard de pré-visualização da reCamera
 
-Ao integrar o dispositivo com o Node-RED, fornecemos um exemplo de interface de dashboard integrada onde você pode visualizar o fluxo de vídeo e alterar os modelos desejados. Você pode livremente ajustar e integrar com sua própria aplicação.
+Ao integrar o dispositivo com o Node-RED, fornecemos um exemplo de interface de dashboard integrada onde você pode pré-visualizar o fluxo de vídeo e alterar os modelos desejados. Você pode livremente ajustar e integrar com sua própria aplicação.
 
-Se sua versão do SO for 0.1.5 ou superior, o dashboard de preview será exibido assim que você fizer login.
+Se a versão do seu sistema operacional for 0.1.5 ou superior, o dashboard de pré-visualização será exibido assim que você fizer login.
 
-Se você atualizar o SO por conta própria, poderá baixar o fluxo JSON do dashboard a partir do Sensecraft AI
+Se você atualizar o sistema operacional por conta própria, pode baixar o fluxo JSON do dashboard a partir do Sensecraft AI
 
-**Passo 1**. Após a conclusão da atualização, acesse a web por `192.168.42.1` ou pelo IP de rede e clique em ```Download dashborad flow```
+**Passo 1**. Após a conclusão da atualização, acesse a web via `192.168.42.1` ou pelo IP de rede e clique em ```Download dashborad flow```
 
  <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload1.png" /></div>
 
@@ -205,21 +220,21 @@ Se você atualizar o SO por conta própria, poderá baixar o fluxo JSON do dashb
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload3.png" /></div>
 
-**Passo 4**. Em seguida, será exibida a área de trabalho do Node-RED com o fluxo pré-construído.
+**Passo 4**. Em seguida, a área de trabalho do Node-RED com o fluxo pré-construído será exibida.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload4.png" /></div>
 
-**Passo 5**. Clique em ```Deploy``` e verifique se o fluxo já foi iniciado; depois clique em ```dashboard```, e o dashboard será exibido.
+**Passo 5**. Clique em ```Deploy``` e verifique se o fluxo já foi iniciado; em seguida, clique em ```dashboard```, e o dashboard será exibido.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload5.png" /></div>
 
-Certifique-se de verificar se o fluxo foi iniciado ou não. Às vezes, ao importar um fluxo ele não é iniciado automaticamente e, portanto, o dashboard ficará vazio. Clique em `Start` no menu suspenso.
+Certifique-se de verificar se o fluxo foi iniciado ou não. Às vezes, importar um fluxo não iniciará automaticamente o fluxo, portanto o dashboard ficará vazio. Clique em `Start` no menu suspenso.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload6.png" /></div>
 
 Sucesso!
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload7.png" /></div>
 
-**Passo 6**. Você pode ajustar o limite de ```IoU``` e ```Confidence``` para obter um resultado mais preciso.
+**Etapa 6**. Você pode ajustar o limite de ```IoU``` e ```Confidence``` para obter um resultado mais preciso.
 
 - IoU=0,Confidence=0:
 
@@ -229,57 +244,57 @@ Sucesso!
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboard3.png" /></div>
 
-### Entendendo rapidamente o fluxo
+### Compreensão rápida do fluxo
 
-Neste fluxo de exemplo, criamos uma demonstração para contar o número de objetos desejados, como Pessoa, Gato, Cachorro e Garrafa, com uma lista suspensa de **Seleção de contagem (Counting Selection)**.
+Neste fluxo de exemplo, construímos uma demonstração de contagem do número de objetos desejados, como Pessoa, Gato, Cachorro e Garrafa com uma lista suspensa de **Counting Selection**.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboard1.png" /></div>
 
-Ao alterar os `function nodes` no fluxo, você pode adicionar mais objetos a serem contados ou mudar completamente essa função para outras aplicações de visão computacional.
+Ao alterar os `function nodes` no fluxo, você poderá adicionar mais objetos a serem contados ou alterar completamente essa função para outras aplicações de visão computacional.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/counting_demo.png" /></div>
 
 Você pode ver que tipo de objetos podem ser detectados visualizando o `model node`.
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/model_list.png" /></div>
 
-Sinta-se à vontade para ajustar e brincar com o fluxo da maneira que quiser. Apenas tenha cuidado para **não** colocar muitos `debug nodes` ou `preview nodes` após os nós de modelo, pois imprimir múltiplos resultados do modelo de IA irá consumir CPU e causar travamentos no dispositivo.
+Sinta-se à vontade para ajustar e brincar com o fluxo da maneira que quiser. Apenas tome cuidado para **não** colocar muitos `debug nodes` ou `preview nodes` após os model nodes, pois imprimir vários resultados do modelo de IA consumirá CPU e poderá causar travamento do dispositivo.
 
 ### Modelo de Visão Computacional
 
-Para estes workflows fornecidos, o `YOLO11n detection model` é selecionado por padrão, que é o mais recente modelo de visão computacional para detecção de objetos em tempo real. Você também pode substituí-lo por outros modelos no nó. Se quiser ver quais outros modelos estão disponíveis, você pode consultar este [wiki](https://wiki.seeedstudio.com/pt-br/recamera_on_device_models/).
+Para esses fluxos de trabalho fornecidos, o `YOLO11n detection model` é selecionado por padrão, que é o modelo de visão computacional mais recente para detecção de objetos em tempo real. Você também pode substituí-lo por outros modelos no node. Se quiser ver quais outros modelos estão disponíveis, consulte este [wiki](https://wiki.seeedstudio.com/pt-br/recamera_on_device_models/).
 
-**Intersection over Union (IoU)**: IoU é uma métrica usada para avaliar a sobreposição entre o retângulo delimitador previsto e o retângulo delimitador real. Ela é calculada como a razão entre a área de interseção das duas caixas e a área de união das duas caixas. O valor de IoU está tipicamente no intervalo de 0 a 1. Nós o padronizamos para uma escala de 0 - 100; um valor de IoU de 0 representa nenhuma sobreposição entre a caixa prevista e a caixa real. Um valor de 100 indica uma correspondência perfeita, significando que as duas caixas se sobrepõem completamente.
+**Intersection over Union (IoU)**: IoU é uma métrica usada para avaliar a sobreposição entre a caixa delimitadora prevista e a caixa delimitadora real. É calculado como a razão entre a área de interseção das duas caixas e a área de união das duas caixas. O valor do IoU geralmente está na faixa de 0 a 1. Nós o padronizamos para uma escala de 0 - 100; um valor de IoU de 0 representa nenhuma sobreposição entre a caixa prevista e a caixa real. Um valor de 100 indica uma correspondência perfeita, o que significa que as duas caixas se sobrepõem completamente.
 
-**Confiança**: Confiança no modelo YOLO representa a probabilidade de que uma caixa delimitadora prevista contenha um objeto e quão precisa é a previsão. É um valor entre 0 e 100,0.
+**Confidence**: Confidence no modelo YOLO representa a probabilidade de que uma caixa delimitadora prevista contenha um objeto e quão precisa é a previsão. É um valor entre 0 e 100,0
 
 ## Personalize seu dashboard e compartilhe com a Comunidade
 
-Incentivamos os usuários a compartilharem os dashboards que desenvolvem e criam na comunidade. Criamos uma pasta no [GitHub](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main/Node-RED_Flow/public_flow). Esperamos que todos compartilhem seus dashboards ali por meio de **pull request**, e nós iremos organizá-los e exibi-los.
-Aqui, tomaremos como exemplo adicionar uma função de luz de preenchimento ao dashboard para simplesmente adicionar um nó e controlar a reCamera.
+Nós incentivamos os usuários a compartilhar na comunidade os dashboards que desenvolvem e criam. Criamos uma pasta no [GitHub](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main/Node-RED_Flow/public_flow). Esperamos que todos compartilhem seus dashboards lá por meio de **pull request**, e nós os organizaremos e exibiremos.
+Aqui usaremos como exemplo adicionar uma função de luz de preenchimento ao dashboard para simplesmente adicionar um node e controlar a reCamera.
 
-**Passo 1**. Arraste o nó ```button group``` para a área de trabalho e edite-o com a seguinte configuração.
+**Etapa 1**. Arraste o node ```button group``` para o workspace e edite-o com a seguinte configuração.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard1.png" /></div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard2.png" /></div>
 
-**Passo 2**. Adicione um novo nó de configuração ui-group chamado "Control Button" e, em seguida, salve-o.
+**Etapa 2**. Adicione um novo ui-group config node chamado "Control Button" e salve-o.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard3.png" /></div>
 
-**Passo 3**. Vá para o dashboard 2.0 e coloque o quadro do botão de controle abaixo da seleção de modelo.
+**Etapa 3**. Vá para o dashboard 2.0 e coloque o quadro do botão de controle abaixo da seleção de modelo.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard4.png" /></div>
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard5.png" /></div>
 
-**Passo 4**. Faça o deploy do fluxo e vá para o dashboard.
+**Etapa 4**. Faça o deploy do fluxo e vá para o dashboard.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard6.png" /></div>
 
-**Demo**:
+**Demonstração**:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard5.gif" /></div>
 
-**Passo 5**: Não se esqueça de exportar o arquivo json do fluxo e compartilhá-lo em nosso GitHub.
+**Etapa 5**: Não se esqueça de exportar o arquivo json do fluxo e compartilhá-lo em nosso github.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard7.png" /></div>
 
@@ -287,11 +302,11 @@ Aqui, tomaremos como exemplo adicionar uma função de luz de preenchimento ao d
 
 A seguir estão listadas as portas usadas pela reCamera:
 
-- **Porta 22**: Utilizada para login remoto via SSH e está aberta.
-- **Porta 53**: Associada à resolução de nomes de domínio DNS e é essencial para o redirecionamento web. Ela é aberta por padrão.
-- **Porta 80**: Serve como interface de dashboard web para exibição HTTP da aplicação Node-RED.
+- **Porta 22**: Utilizada para login remoto por SSH e está aberta.
+- **Porta 53**: Associada à resolução de nomes de domínio DNS e é essencial para redirecionamento web. Ela é aberta por padrão.
+- **Porta 80**: Serve como interface web do dashboard para exibição HTTP da aplicação Node-RED.
 - **Porta 554**: Empregada para streaming de vídeo RTSP.
-- **Porta 9090**: Destinada ao acesso ao terminal web, que exige senha para login.
+- **Porta 9090**: Destinada ao acesso ao terminal web, que requer uma senha para login.
 - **Porta 1880**: Dedicada às operações do Node-RED.
 
 ## Restauração de Fábrica
@@ -303,18 +318,18 @@ Se você quiser redefinir o dispositivo, por exemplo ao esquecer o código de ac
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-1.gif" /></div>
 
 :::note
-Isso excluirá as informações do usuário, incluindo aplicações que você desenvolveu ou qualquer imagem e vídeo armazenados localmente. Por favor, proceda com cautela.
+Isso irá excluir as informações do usuário, incluindo aplicativos que você desenvolveu ou qualquer imagem e vídeo armazenados localmente. Por favor, proceda com cautela.
 :::
 
 Se você quiser restaurar o firmware do seu dispositivo para uma versão específica, visite [os version control](https://wiki.seeedstudio.com/pt-br/recamera_os_version_control)
 
 ## Gerenciamento de Múltiplos Dispositivos
 
-Se você tiver mais de uma reCamera, poderá diferenciá-las pelo **endereço MAC** ou pelo **número de série (S/N)** na parte de trás do dispositivo.
+Se você tiver mais de uma reCamera, poderá diferenciá-las pelo **endereço mac** ou **número S/N** na parte de trás do dispositivo.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/mac_address_tag.png" /></div>
 
-Ou, depois de conectar o dispositivo ao seu laptop via USB ou AP, você pode visualizar o endereço MAC usando o seguinte comando
+Ou, depois de conectar o dispositivo ao seu laptop via USB ou AP, você pode visualizar o endereço mac usando o seguinte comando
 
 ```
 ifconfig wlan0
@@ -324,7 +339,7 @@ ifconfig wlan0
 
 ## Orientação da Câmera
 
-A orientação padrão da visualização da câmera é como na imagem abaixo, onde o Type-C está **apontando para baixo**. Esteja ciente de que outras orientações podem afetar a precisão do modelo, dependendo de como você treinou o modelo de detecção.
+A orientação padrão da visualização da câmera é como na imagem abaixo, em que o type-c está **apontando para baixo**. Esteja ciente de que outras orientações podem afetar a precisão do modelo, dependendo de como você treinou o modelo de detecção.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/default_orientation.jpeg" /></div>
 
@@ -334,13 +349,13 @@ A orientação padrão da visualização da câmera é como na imagem abaixo, on
 
 - [reCamera OS](https://github.com/Seeed-Studio/reCamera-OS)
 
-- [reCamera Série](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
+- [reCamera Series](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
 
 - [reCamera SSCMA](https://github.com/Seeed-Studio/sscma-example-sg200x)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico & Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
