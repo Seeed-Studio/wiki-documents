@@ -19,7 +19,7 @@ concurrency:
 jobs:
   update-doc-updatedat:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.state == 'open'
+    if: false
 
     steps:
       - name: Get PR context

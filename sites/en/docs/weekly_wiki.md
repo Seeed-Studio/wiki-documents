@@ -5,12 +5,11 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/30/2026
+  date: 04/13/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-03-23'
+updatedAt: '2026-04-13'
 ---
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
@@ -19,71 +18,54 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 30th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [BC03 Indoor Bluetooth Beacon Introduction](https://wiki.seeedstudio.com/bluetooth_beacon03_for_tracker_introduction/)
+### [Getting Started with XIAO ePaper Display EE05](https://wiki.seeedstudio.com/epaper_ee05/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/BC03/1-BC03-Bluetooth-Beacon.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-SenseCAP BC03 Indoor Bluetooth Beacon is a small wireless device that transmits Bluetooth signals at regular intervals. These signals can be detected by Bluetooth-enabled devices, such as [**SenseCAP T1000 Tracker**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), [**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), allowing them to determine their proximity to the beacon, building a location-based solution for indoor positioning, asset tracking and other applications, which enabling proximity detection and meter-level indoor positioning.
-
-</div>
-
-### [Control Multiple Reachy Mini Robots with a Fleet Dance Console on Jetson](https://wiki.seeedstudio.com/ai_robotics_reachy_fleet_dance/)
-
-<div class="video-container">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/NWoJMN_IWH0" title="Reachy Fleet Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki shows how to build a multi-robot dance demo with Reachy Mini and Jetson devices. In this project, each Jetson runs a local Reachy Mini dance service in Docker, exposing both a Web UI and a REST API. A separate laptop-based Fleet Control dashboard can then discover multiple Jetson IPs on the same LAN and broadcast the same dance commands to all connected Reachy Mini robots at the same time.
+Powered by **XIAO ESP32-S3 Plus**, the display board EE05 is a compact ePaper driver board supporting 24-Pin ePaper displays. It features a JST 2.0 mm battery connector with a power switch, built-in battery level detection circuitry, and comes with one reset button and three user-programmable buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
 </div>
 
-### [Getting Started with Jetson-Claw on Orin Nano / NX 8GB](https://wiki.seeedstudio.com/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/)
+### [Getting Started with XIAO ePaper Display EN05](https://wiki.seeedstudio.com/epaper_en05/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki walks through a practical Jetson-Claw starter build for **Jetson Orin Nano 8GB** and **Jetson Orin NX 8GB**. The whole stack runs locally on Jetson: we install `nanobot`, expand swap space for safer model loading, compile `llama.cpp` with CUDA, download a `Qwen3.5 4B` GGUF model, switch `nanobot` to a local `llama.cpp` backend, and finally connect the bot to **Feishu** so you can control it from chat.
+Powered by **XIAO nRF52840 Plus**, the display board EN05 is an ultra-low-power ePaper driver board specifically designed for 24-Pin ePaper displays. With a hardware power switch, it is ideal for battery-powered projects like electronic shelf labels, smart badges, and portable IoT information boards.
 
 </div>
 
-### [Use OpenClaw to control the reCamera Gimbal](https://wiki.seeedstudio.com/use_cpenclaw_to_control_the_recamera_gimbal/)
+### [reSpeaker Flex with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project successfully shattered the barrier between virtual large models and the physical world by deeply integrating the OpenClaw Agent framework with the reCamera Gimbal edge AI camera from Seeed Studio.
+The reSpeaker Flex ESP32 version integrates a pre-soldered XIAO ESP32S3 module on the core board, providing built-in Wi-Fi and Bluetooth connectivity for wireless control and edge processing. Powered by the XMOS XVF3800 voice processor, the system maintains the same modular architecture where the microphone array board connects to the core board through a flexible 24-pin FPC cable, allowing flexible placement inside device enclosures.
 
 </div>
 
-### [reSpeaker XVF3800 Control Wakeword and NLU with Pico-voice](https://wiki.seeedstudio.com/respeaker_xvf3800_picovoice/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+### [reSpeaker Flex control with Python](https://wiki.seeedstudio.com/respeaker_flex_python_control/)
 
 <div style={{ textAlign: "justify" }}>
 
-This demo showcases how wake word detection using Picovoice Porcupine works together with Picovoice Rhino for efficient speech-to-intent processing on a Raspberry Pi. The system first listens for a keyword to activate, and once triggered, it directly converts spoken commands into actionable intents without relying on heavy cloud processing. This approach is highly optimized for low-resource embedded devices, making it ideal for robotics and edge AI applications. It enables low-latency, real-time voice interaction, ensuring fast and reliable performance even on constrained hardware.
+In this section, we are going to talk about how to control your reSpeaker Flex using the Python SDK. It makes development more convenient for users who want to build their own applications.
+For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+## Existing Wiki Updated
 
-### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
+### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
 
-We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#nodedb-reset).
-
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-
-We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
+We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node).
 
 ## The Efforts of Contributor
 
@@ -210,5 +192,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.3.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260309)
 - [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
 - [weekly wiki on 2026.3.23rd](/Seeed_Elderly/weekly_wiki/2026/wiki260323)
+- [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
+- [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
 
 </details>

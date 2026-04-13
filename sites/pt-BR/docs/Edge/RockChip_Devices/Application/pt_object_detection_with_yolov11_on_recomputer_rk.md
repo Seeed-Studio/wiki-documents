@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /object_detection_with_yolov11_on_recomputer_rk
 last_update:
-  date: 9/3/2026
+  date: 3/9/2026
   author: Nolan Chen
 no_comments: false
 createdAt: 2026-3-9

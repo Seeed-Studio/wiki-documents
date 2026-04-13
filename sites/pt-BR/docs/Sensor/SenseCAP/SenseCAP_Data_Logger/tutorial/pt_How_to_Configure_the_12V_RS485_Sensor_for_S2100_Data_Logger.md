@@ -11,10 +11,9 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2023-02-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/pt-br/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
-
 # Primeiros Passos com o S2100 e um Sensor RS485 de 12V
 
 Este guia ajudará você a começar a usar o S2100 e um sensor RS485 de 12V. Após concluí-lo, você entenderá como conectar seu próprio sensor personalizado no futuro.
@@ -48,6 +47,10 @@ Siga as etapas abaixo para concluir o processo de fiação.
 3. Remova a tampa rosqueada, passe o cabo do sensor pela tampa e pela tampa inferior e conecte-o ao terminal de fiação.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
+
+:::note
+Observe que o registrador de dados S2100 suporta apenas três protocolos de medição: `RS485 Modbus RTU` (A/B), `Analog Input` (V1, V2, I1, I2) e `Pulse-Level Input` (IO).
+:::
 
 ### Etapa 2.2: Descrição do Terminal de Fiação
 

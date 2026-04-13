@@ -2088,6 +2088,31 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
+              ],
+            },
+            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
+            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
@@ -2704,14 +2729,15 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_Quick_Start',
-            /* {
+            {
               type: 'category',
               label: 'Cloud Platform Integration',
               items: [
-                ,
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/ja_Connecting_R1225_to_ChirpStack',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/ja_Connecting_R1225_to_TTN',
               ],
             },
-             {
+            /*{
               type: 'category',
               label: 'Application',
               items: [
@@ -3924,7 +3950,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
               ]
             },
             // Generative AI
@@ -4319,6 +4345,19 @@ const sidebars = {
           label: 'エンドエフェクタ',
           items: [
             'Robotics/Robot_Kits/End_Effectors/ja_DM_Gripper',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'reBotアーム',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
           ]
         },
         {
