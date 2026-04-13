@@ -9,18 +9,16 @@ last_update:
   date: 07/14/2023
   author: Jessie
 createdAt: '2023-02-24'
-updatedAt: '2025-09-02'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/
 ---
-
-
 There are two ways to connect to the Things Network: Packet forward and Basics™ Station. Choose a way to connect your gateway.
 
 Semtech UDP Packet Forwarder is the original LoRaWAN® packet forwarder, connecting to servers through the Semtech UDP protocol.
 
 LoRa Basics™ Station is the preferred way of connecting Gateways to The Things Stack.
 
-## **Connecting via Packet Forwarders**
+## **Connecting via Packet Forwarder**
 
 The Semtech UDP Packet Forwarder is the original LoRaWAN® packet forwarder, connecting to servers through the Semtech UDP protocol.
 

@@ -11,10 +11,9 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2025-09-03'
-updatedAt: '2025-09-03'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
-
 # Primeros Pasos con el S2100 y un Sensor de 12V RS485
 
 Esta guía te ayudará a comenzar con el S2100 y un sensor de 12V RS485. Después de completar esto, entenderás cómo conectar tu propio sensor personalizado en el futuro.
@@ -48,6 +47,10 @@ Sigue los pasos a continuación para completar el proceso de cableado.
 3. Retira la tapa roscada, pasa el cable del sensor a través de la tapa y la cubierta inferior, y conéctalo al terminal de cableado.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
+
+:::note
+Tenga en cuenta que el registrador de datos S2100 solo admite tres protocolos de medición: `RS485 Modbus RTU` (A/B), `Analog Input` (V1, V2, I1, I2) y `Pulse-Level Input` (IO).
+:::
 
 ### Paso 2.2: Descripción del Terminal de Cableado
 

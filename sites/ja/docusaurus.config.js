@@ -289,7 +289,7 @@ module.exports = (async () => {
               ],
 
               editUrl:
-                'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/ja/docs/',
+                'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/ja/',
             };
 
             return base;
