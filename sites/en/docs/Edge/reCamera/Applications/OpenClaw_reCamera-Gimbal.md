@@ -12,7 +12,7 @@ last_update:
   date: 03/27/2026
   author: Xinrui Wu
 createdAt: '2026-03-27'
-updatedAt: '2026-03-27'
+updatedAt: '2026-03-28'
 url: https://wiki.seeedstudio.com/use_cpenclaw_to_control_the_recamera_gimbal/
 ---
 
