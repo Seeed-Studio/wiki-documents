@@ -94,7 +94,7 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 
 # 步骤目录
 TODO
-  - [A. 安装 Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
+  <!-- - [A. 安装 Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
   - [B. 校准机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准机械臂)
   - [C. 遥操作](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#遥操作)
   - [D. 添加摄像头](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
@@ -102,7 +102,7 @@ TODO
   - [F. 可视化数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
   - [G. 重播一个回合](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#重播一个回合)
   - [H. 训练](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练)
-  - [I. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估)
+  - [I. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估) -->
 
 ## 安装 LeRobot
 
@@ -125,65 +125,61 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### 2. 克隆 Lerobot 仓库
 
 ```bash
-cd ~
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+mkdir ~/rebot_lerobot
+cd ~/rebot_lerobot
+git clone https://github.com/Seeed-Projects/lerobot.git
 ```
 
-### 3. 创建 uv 虚拟环境
+### 3. 克隆功能包
 
-<!-- TODO: 确认 uv 环境创建方式 -- 待验证 -->
-
-lerobot 仓库已有 pyproject.toml，只需创建虚拟环境：
-
-```bash
-cd ~/lerobot
-uv venv --python 3.10
-source .venv/bin/activate
-```
+克隆两个依赖功能包到 rebot_lerobot 目录下：
 
 :::tip
-**待定事项**：需要确认以下两种方式的正确性：
-1. 直接使用仓库自带的 pyproject.toml：`uv venv && source .venv/bin/activate`
-2. 或者需要先初始化 uv 项目：`uv init && uv venv`
-
-请根据实际测试结果调整此步骤。
-:::
-
-### 4. 安装 ffmpeg
-
-```bash
-uv add ffmpeg==7.1.1
-```
-
-### 5. 克隆并安装 rebot arm 102 的 leader 功能包
-
-:::tip
-关于功能包的详细功能，请参考 [github](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)。
+关于功能包的详细功能，请参考：
+- [lerobot-teleoperator-rebot-arm-102](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)
+- [lerobot-robot-seeed-b601](https://github.com/Seeed-Projects/lerobot-robot-seeed-b601)
 :::
 
 ```bash
-cd ~
+cd ~/rebot_lerobot
+
+# 克隆 leader 功能包
 git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.git
-cd lerobot-teleoperator-rebot-arm-102
-uv add --editable .
+
+# 克隆 follower 功能包
+git clone https://github.com/Seeed-Projects/lerobot-robot-seeed-b601.git
 ```
 
-### 6. 安装 LeRobot
+### 4. 创建 uv 虚拟环境并安装 LeRobot
 
-回到 lerobot 目录并安装 LeRobot 核心包。
-
-reBot B601-DM 使用达妙 (Damiao) / 灵足 (RobStride) 电机，通过 CAN/USB2CAN 通信，**不需要安装 feetech 依赖**。
+lerobot 仓库已有 pyproject.toml，创建虚拟环境并安装所有依赖包。
 
 ```bash
-cd ~/lerobot
-uv add --editable .
+cd ~/rebot_lerobot/lerobot
+
+# 创建 uv 虚拟环境 安装 lerobot 主项目（Python 3.10）
+uv sync --python 3.10
+
+# 添加本地依赖包（可编辑安装）
+uv add --editable ../lerobot-teleoperator-rebot-arm-102
+uv add --editable ../lerobot-robot-seeed-b601
+uv add motorbridge
 ```
 
 :::tip
 **注意**：`.[feetech]` 是 SO101 机械臂的特殊依赖（Feetech 舵机通过 UART 通信），reBot B601-DM 不需要此依赖。
 :::
 
-### 7. Jetson Jetpack 6.0+ 设备特殊配置
+### 5. 安装 ffmpeg
+
+ffmpeg 是系统级依赖，需通过系统包管理器安装：
+
+```bash
+# Ubuntu/Debian
+sudo apt update && sudo apt install -y ffmpeg
+```
+
+### 6. Jetson Jetpack 6.0+ 设备特殊配置
 
 (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
@@ -199,14 +195,18 @@ uv add ffmpeg==7.1.1
 ```
 :::
 
-### 8. 检查 Pytorch 和 Torchvision
+### 7. 检查 Pytorch 和 Torchvision
 
 由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
 ```python
+python3
+
 import torch
-print(torch.cuda.is_available())
+print(torch.cuda.is_available())#输出结果应该为True
 ```
+
+如果输出为 True ，您可以输入 exit()来退出python，继续进行下列步骤
 
 如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。
 
@@ -215,20 +215,12 @@ print(torch.cuda.is_available())
 
 ## 校准机械臂
 
-
-<div class="video-container">
+TODO:提供一个视频链接
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
-
-TODO：reBot B601-DM 的接线方式说明（待补充）
-
-:::tip
-以 PC(linux) 和 jetson 板卡为例：`reBot 102 leader`（USB 转 UART）映射为 `/dev/ttyUSB*`，`B601-DM follower`（达妙串口桥/USB2CAN）映射为 `/dev/ttyACM*`。
-
-在运行代码前请注意leader和follower的映射接口。
-:::
 
 首先，您需要授予接口权限，运行以下命令：
 
@@ -237,53 +229,66 @@ sudo chmod 666 /dev/ttyUSB*  # leader 臂
 sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
 
+
+
+### 校准follower臂
+B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次校准，你需要做的确保是在启动前，将B601-DM放置到如图所示的位置（夹爪要确保闭合）。
+
+### 校准leader臂
+校准的步骤至关重要，会直接影响机械臂是否正常运行，请严格按照流程执行。
+
+<details>
+
+<summary> rebot 102 leader </summary>
+
 :::tip
-**reBot 102 leader 校准行为说明**：
+**reBot 102 leader 校准说明**：
 - 启动校准时，reBot Arm 102 的每个舵机当前位置会被**重设为零点**
 - `joint_ranges`（关节限位）取自配置文件 `config_rebot_arm_102_leader.py`，而非校准数据
 - 如果某个关节看起来总是卡在某个限位附近，优先检查 `joint_ranges` 配置
 - 关节方向定义在配置文件中，若方向不一致需修改配置而非重新校准
+- reBot 102 leader 使用 USB 转 UART 模块，通常映射为 `/dev/ttyUSB*`
+- 使用 `ls /dev/ttyUSB*` 查看实际端口号
 :::
 
-### 校准从动臂
+TODO：给一张零位的照片
 
-<!-- TODO: 待确认 reBot B601-DM follower 的校准命令参数
-需要确认：
-1. --robot.type 的具体值（例如：seeed_b601_dm_follower 或类似）
-2. --robot.port 的默认端口映射（/dev/ttyACM0 还是 /dev/ttyACM1）
-3. 达妙/灵足电机的校准流程是否与 SO101 相同
--->
+
+
+如果是初次连接，可能会报找不到串口/dev/ttyACM0,此时因为brltty在占用该串口，请执行如下步骤
+
 ```bash
-lerobot-calibrate \
-    --robot.type=TODO \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=follower1
+sudo dmesg | grep ttyUSB #看到最后一行显示disconnected
+sudo apt remove brltty #移除brltty
 ```
 
-下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
-
-
-### 校准领导臂
-
-reBot 102 leader 通过 UART 通信，使用 `rebot_arm_102_leader` 作为 teleop 类型。
+执行校准步骤
 
 ```bash
-lerobot-calibrate \
+sudo chmod 666 /dev/ttyUSB0
+
+uv run lerobot-calibrate \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
 ```
+按照提示，你将leader机械臂移动到如图所示的零点，保持静止，然后按下enter，直到提示校准完成。
 
-:::tip
-**端口说明**：
-- reBot 102 leader 使用 USB 转 UART 模块，通常映射为 `/dev/ttyUSB*`
-- 使用 `ls /dev/ttyUSB*` 查看实际端口号
-- 如果 `/dev/ttyUSB0` 被占用，尝试 `/dev/ttyUSB1` 等
-:::
+校准完成后，输入以下命令来测试leader机械臂。
+```bash
+uv run ../lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
+      --port /dev/ttyUSB0
 
-<div class="video-container">
+#如果你观测到终端输出类似于如下的字样一直打印，并且在位于上图零点时，各个关节输出值都为0。则代表leader你已经校准完成
+#shoulder_pan=    0.00  shoulder_lift=    0.00  elbow_flex=    0.00  wrist_flex=    0.00  wrist_yaw=    0.00  wrist_roll=    0.00  gripper=    0.00
+```
+
+</details>
+
+
+<!-- <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 
 ## 遥控操作
@@ -298,10 +303,11 @@ sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 
 运行遥操作：
 ```bash
-lerobot-teleoperate \
-    --robot.type=TODO \
+uv run lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
@@ -313,16 +319,6 @@ lerobot-teleoperate \
 <details>
 
 <summary> 如果是Orbbec Gemini2深度相机 </summary>
-
-<div align="center">
-    <img width={800}
-    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
-</div>
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://detail.tmall.com/item.htm?abbucket=16&id=877820346195&mi_id=0000Ou_lIzqedYPuPAA8fpFm7RLR5dXIVA-SAX_AOiJab6M&ns=1&skuId=6069820106496&spm=a21n57.1.hoverItem.5&utparam=%7B%22aplus_abtest%22%3A%2275f755ae980dafcddefac00fe2ec6540%22%7D&xxc=taobaoSearch" target="_blank" rel="noopener noreferrer" >
-            <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
-</a></div>
-
 
 - 🚀 步骤 1：安装 Orbbec SDK 依赖环境
 
@@ -354,7 +350,7 @@ lerobot-teleoperate \
 4.将orbbec sdk克隆到`~/lerobot/src/cameras`目录下
 
   ```bash
-  cd ~/lerobot/src/cameras
+  cd ~/rebot_lerobot/src/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
@@ -397,8 +393,8 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 
 ```bash
 
-lerobot-teleoperate \
-    --robot.type=TODO \
+uv run lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
@@ -443,8 +439,8 @@ lerobot-teleoperate \
 
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
 
-```python
-lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
+```bash
+uv run lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 终端会打印相关摄像头信息。
@@ -475,8 +471,8 @@ Camera #0:
 
 <!-- TODO: reBot 的摄像头配置命令 -->
 ```bash
-lerobot-teleoperate \
-    --robot.type=TODO \
+uv run lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
@@ -497,8 +493,8 @@ lerobot-teleoperate \
 
 <!-- TODO: reBot 多摄像头配置命令 -->
 ```bash
-lerobot-teleoperate \
-    --robot.type=TODO \
+uv run lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
@@ -518,13 +514,14 @@ lerobot-teleoperate \
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819257003&bvid=BV1r6UUBFEzq&cid=34229456824&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+<details>
 
-- 如果你想数据集保存在本地，可以直接运行：
+<summary> 如果你想数据集保存在本地 </summary>
 
 <!-- TODO: reBot 本地数据采集命令 -->
 ```bash
-lerobot-record \
-    --robot.type=TODO \
+uv run lerobot-record \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
@@ -533,7 +530,7 @@ lerobot-record \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true \
-    --dataset.repo_id=your_name/test \
+    --dataset.repo_id=seeed_rebot_b601_dm/test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=false \
@@ -541,7 +538,12 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-其中`repo_id`可以自定义修改，`push_to_hub=false`，最后数据集会保存在主目录的`~/.cache/huggingface/lerobot`下会创建上述`seeedstudio123/test`文件夹
+其中`repo_id`可以自定义修改，`push_to_hub=false`，最后数据集会保存在主目录的`~/.cache/huggingface/lerobot`下会创建上述`seeed_rebot_b601_dm/test`文件夹
+
+</details>
+
+<details>
+<summary> 如果您想使用 Hugging Face Hub 的功能来上传您的数据集 </summary>
 
 - 如果您想使用 Hugging Face Hub 的功能来上传您的数据集，并且您之前尚未这样做，请确保您已使用具有写入权限的令牌登录，该令牌可以从 [Hugging Face 设置](https://huggingface.co/settings/tokens) 中生成：
 
@@ -560,8 +562,8 @@ echo $HF_USER
 
 <!-- TODO: reBot 数据采集并上传到 Hugging Face 命令 -->
 ```bash
-lerobot-record \
-    --robot.type=TODO \
+uv run lerobot-record \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
@@ -582,6 +584,8 @@ lerobot-record \
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
+
+</details>
 
 **记录功能**
 
@@ -660,21 +664,25 @@ Linux 问题：
 echo ${HF_USER}/rebot_test  
 ```
 
-如果您没有使用 `--dataset.push_to_hub=false` ，并上传了数据，您也可以在本地通过以下命令进行可视化：
+如果您上传了数据，您也可以在本地通过以下命令进行可视化：
 
 ```bash
-lerobot-dataset-viz \
+uv run lerobot-dataset-viz \
   --repo-id ${HF_USER}/rebot_test \
+  --episode-index 0 \
+  --display-compressed-images=false
 ```
 
 如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您也可以通过以下命令在本地进行可视化：
 
 ```bash
-lerobot-dataset-viz \
-  --repo-id seeedstudio123/test \
+uv run lerobot-dataset-viz \
+  --repo-id seeed_rebot_b601_dm/test \
+  --episode-index 0 \
+  --display-compressed-images=false
 ```
 
-这里，`seeedstudio123` 是数据收集时自定义的 `repo_id` 名称。
+这里，`seeed_rebot_b601_dm/test` 是数据收集时自定义的 `repo_id` 名称。
 
   <div align="center">
       <img width={800} 
@@ -692,12 +700,12 @@ lerobot-dataset-viz \
 
 <!-- TODO: reBot 数据集回放命令 -->
 ```bash
-lerobot-replay \
-    --robot.type=TODO \
+uv run lerobot-replay \
+    --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.can_adapter=damiao \
     --robot.id=follower1 \
-    --dataset.repo_id=${HF_USER}/record-test \
+    --dataset.repo_id=seeed_rebot_b601_dm/test \
     --dataset.episode=0
 ```
 
@@ -720,8 +728,24 @@ lerobot-replay \
 
 要训练一个控制您机器人策略，使用 `python -m lerobot.scripts.train` 脚本。需要一些参数。以下是一个示例命令：
 
+**如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
+
 ```bash
-lerobot-train \
+uv run lerobot-train \
+  --dataset.repo_id=seeed_rebot_b601_dm/test \
+  --policy.type=act \
+  --output_dir=outputs/train/act_rebot_test \
+  --job_name=act_rebot_test \
+  --policy.device=cuda \
+  --wandb.enable=false \
+  --policy.push_to_hub=false\
+  --steps=300000 
+```
+
+**or使用保存在远程的数据**
+
+```bash
+uv run lerobot-train \
   --dataset.repo_id=${HF_USER}/rebot_test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
@@ -731,19 +755,7 @@ lerobot-train \
   --steps=300000 
 ```
 
-**如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
 
-```bash
-lerobot-train \
-  --dataset.repo_id=seeedstudio123/test \
-  --policy.type=act \
-  --output_dir=outputs/train/act_rebot_test \
-  --job_name=act_rebot_test \
-  --policy.device=cuda \
-  --wandb.enable=false \
-  --policy.push_to_hub=false\
-  --steps=300000 
-```
 
 命令解释
 
@@ -762,8 +774,8 @@ lerobot-train \
 
 <!-- TODO: reBot ACT 评估命令 -->
 ```bash
-lerobot-record \
-  --robot.type=TODO \
+uv run lerobot-record \
+  --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
@@ -795,7 +807,7 @@ uv add -e ".[smolvla]"
 
 **训练**
 ```bash
-lerobot-train \
+uv run lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
   --dataset.repo_id=${HF_USER}/mydataset \
   --batch_size=64 \
@@ -810,14 +822,14 @@ lerobot-train \
 
 <!-- TODO: reBot SmolVLA 评估命令 -->
 ```bash
-lerobot-record \
-  --robot.type=TODO \
+uv run lerobot-record \
+  --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.id=follower1 \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
   --dataset.single_task="Put lego brick into the transparent box" \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --dataset.episode_time_s=50 \
   --dataset.num_episodes=10 \
   # <- Teleop optional if you want to teleoperate in between episodes \
@@ -842,7 +854,7 @@ uv add -e ".[pi]"
 
 **训练**
 ```bash
-lerobot-train \
+uv run lerobot-train \
   --policy.type=pi0 \
   --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
@@ -861,8 +873,8 @@ lerobot-train \
 
 <!-- TODO: reBot Pi0 评估命令 -->
 ```bash
-lerobot-record \
-  --robot.type=TODO \
+uv run lerobot-record \
+  --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
@@ -888,7 +900,7 @@ uv add -e ".[pi]"
 
 **训练**
 ```bash
-lerobot-train \
+uv run lerobot-train \
     --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
@@ -907,8 +919,8 @@ lerobot-train \
 
 <!-- TODO: reBot Pi0.5 评估命令 -->
 ```bash
-lerobot-record \
-  --robot.type=TODO \
+uv run lerobot-record \
+  --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
@@ -953,7 +965,7 @@ uv add datasets==2.19
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash
-lerobot-train \
+uv run lerobot-train \
   --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
