@@ -121,15 +121,13 @@ If you have reCamera with wireless function, we recommend to set up Wi-Fi connec
 2. **Disable VPN on Computer**: If you have a VPN enabled on your computer, please **turn off the VPN** before configuring WiFi. VPNs may cause network connection issues and prevent you from accessing reCamera normally.
 
 3. **How to Switch WiFi Connection**:
-   - In the reCamera configuration page (192.168.42.1), find the **WiFi Settings** option
-   - Click **Scan Available Networks**
+   - In the reCamera configuration page (192.168.42.1), find the **Network** Settings option
+   - Click **Enable WI-FI botton**
    - Select the WiFi network (SSID) you want to connect to from the list
    - Enter the WiFi password
-   - Click **Connect** button
+   - Click **Confirm** button
 
-   <!-- TODO: Add screenshot here - WiFi connection steps -->
-
-4. After successfully connecting, the page will display the **IP address** assigned to reCamera. Please remember this address, as you can use it to access reCamera in the future.
+4. After successfully connecting to Wi-Fi, click the “Settings” button to enter the settings page. You can view the Wi-Fi IP address next to “Wi-Fi IP”.
 
 If you encounter any problems, please view the [network troubleshoot](https://wiki.seeedstudio.com/recamera_network_connection/).
 
