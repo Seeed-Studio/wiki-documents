@@ -8,7 +8,7 @@ keywords:
   - rebot arm
   - 机器人
 image: TODO
-slug: /lerobot_so100m
+slug: /rebot_arm_b601_dm_lerobot
 sku: TODO
 last_update:
   date: 2026-04-09
@@ -55,18 +55,18 @@ reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://s.click.taobao.com/j6b5cCs" target="_blank">
+<a class="get_one_now_item" href="TODO" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
 </a></div> -->
 
 :::caution
-Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
+Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
 :::
 
-## 🔧 SO-ARM10x 系列特点：
+## 🔧 reBot B601-DM 系列特点：
 
 1. **开源 & 低成本**  
-   本系列由 [TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100) 提供，是一套开源、低成本的机器人臂解决方案。
+   reBot Arm 是由 Seeed Studio 提供的开源机器人臂解决方案，致力于降低具身智能学习门槛。
 
 2. **支持 LeRobot 平台集成**  
    专为与 [LeRobot 平台](https://github.com/huggingface/lerobot) 集成而设计。该平台提供 PyTorch 模型、数据集与工具，面向现实机器人任务的模仿学习（包括数据采集、仿真、训练与部署）。
@@ -78,21 +78,15 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
    支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
 
 
-<!-- :::danger 
-若购买 **SO101 Arm Kit 标准版**，所有电源均为5V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5V电源，Follower机械臂的校准及每一步骤均使用12V电源。  
-::: -->
-
-
 # 初始系统环境
-TODO
-For Ubuntu X86:
+**For Ubuntu X86:**
   - Ubuntu 22.04
   - CUDA 12+
   - Python 3.10
-  - Troch 2.6
+  - Torch 2.6
 
 
-For Jetson Orin:
+**For Jetson Orin:**
   - Jetson Jetpack 6.0 和 6.1，暂不支持6.2
   - Python 3.10
   - Torch 2.3+
@@ -100,7 +94,7 @@ For Jetson Orin:
 
 # 步骤目录
 TODO
-  <!-- - [A. 安装 Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
+  - [A. 安装 Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
   - [B. 校准机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准机械臂)
   - [C. 遥操作](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#遥操作)
   - [D. 添加摄像头](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
@@ -108,7 +102,7 @@ TODO
   - [F. 可视化数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
   - [G. 重播一个回合](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#重播一个回合)
   - [H. 训练](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练)
-  - [I. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估) -->
+  - [I. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估)
 
 ## 安装 LeRobot
 
@@ -119,111 +113,93 @@ TODO
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
-<!-- 1. 安装 Miniconda：
-对于 Jetson：
 
-```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
-source ~/.bashrc
-```
+### 1. 安装 uv
 
-或者，对于 X86 Ubuntu 22.04：
-```bash
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
-conda init --all
-```
-
-2. 创建并激活一个新的 conda 环境用于 lerobot
-
-```bash
-conda create -y -n lerobot python=3.10 && conda activate lerobot
-```
-
-3. 克隆 Lerobot 仓库：
-
-```bash
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
-```
-
-4. 使用 miniconda 时，在环境中安装 ffmpeg：
- 
-```bash
-conda install ffmpeg -c conda-forge
-``` -->
-对于 X86 Ubuntu 22.04
-安装UV
+对于所有平台（包括 Jetson 和 X86 Ubuntu 22.04）：
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-使用 Python 3.10 创建虚拟环境：
+### 2. 克隆 Lerobot 仓库
 
 ```bash
+cd ~
+git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+```
+
+### 3. 创建 uv 虚拟环境
+
+<!-- TODO: 确认 uv 环境创建方式 -- 待验证 -->
+
+lerobot 仓库已有 pyproject.toml，只需创建虚拟环境：
+
+```bash
+cd ~/lerobot
 uv venv --python 3.10
 source .venv/bin/activate
 ```
 
-
-
-以可编辑模式安装rebot arm 102的leader功能包
 :::tip
+**待定事项**：需要确认以下两种方式的正确性：
+1. 直接使用仓库自带的 pyproject.toml：`uv venv && source .venv/bin/activate`
+2. 或者需要先初始化 uv 项目：`uv init && uv venv`
 
-关于功能包的详细功能，请参考[github](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)。
-
+请根据实际测试结果调整此步骤。
 :::
 
+### 4. 安装 ffmpeg
 
 ```bash
+uv add ffmpeg==7.1.1
+```
+
+### 5. 克隆并安装 rebot arm 102 的 leader 功能包
+
+:::tip
+关于功能包的详细功能，请参考 [github](https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102)。
+:::
+
+```bash
+cd ~
 git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.git
-
 cd lerobot-teleoperator-rebot-arm-102
-pip install -e .
+uv add --editable .
 ```
 
+### 6. 安装 LeRobot
+
+回到 lerobot 目录并安装 LeRobot 核心包。
+
+reBot B601-DM 使用达妙 (Damiao) / 灵足 (RobStride) 电机，通过 CAN/USB2CAN 通信，**不需要安装 feetech 依赖**。
+
+```bash
+cd ~/lerobot
+uv add --editable .
+```
 
 :::tip
-这通常会为你的平台安装使用 libsvtav1 编码器编译的 ffmpeg 7.X。如果不支持 libsvtav1（可以通过 ffmpeg -encoders 查看支持的编码器），你可以：
-- 【适用于所有平台】显式安装 ffmpeg 7.X：
-```bash
-conda install ffmpeg=7.1.1 -c conda-forge
-```
-- 【仅限 Linux】安装 ffmpeg 的构建依赖并从源码编译支持 libsvtav1 的 ffmpeg，并确保使用的 ffmpeg 可执行文件是正确的，可以通过 `which ffmpeg` 确认。
-
-如果你遇到以下报错，也可以使用上述命令解决。
-
-<div align="center">
-    <img width={800} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
-</div>
-
+**注意**：`.[feetech]` 是 SO101 机械臂的特殊依赖（Feetech 舵机通过 UART 通信），reBot B601-DM 不需要此依赖。
 :::
 
-5. 安装带有 feetech 电机依赖的 LeRobot：
+### 7. Jetson Jetpack 6.0+ 设备特殊配置
+
+(电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+uv add opencv-python==4.10.0.84  # 安装指定版本 OpenCV
+uv add numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
-6. (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
-
+:::tip
+这通常会为你的平台安装支持 libsvtav1 编码器的 ffmpeg 7.X。如果不支持 libsvtav1（可以通过 `ffmpeg --encoders` 查看支持的编码器），你可以重新安装 ffmpeg 7.1.1：
 ```bash
-conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
-conda remove opencv   # 卸载 OpenCV
-pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
-conda install -y -c conda-forge ffmpeg
-conda uninstall numpy
-pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
+uv add ffmpeg==7.1.1
 ```
+:::
 
-7. 检查 Pytorch 和 Torchvision
+### 8. 检查 Pytorch 和 Torchvision
 
 由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
@@ -232,9 +208,9 @@ import torch
 print(torch.cuda.is_available())
 ```
 
-如果输出结果为 False，需要根据[官网教程](https://pytorch.org/index.html)重新安装 Pytorch 和 Torchvision。
+如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。
 
-如果你使用的是 Jetson 设备，请根据[此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)安装 Pytorch 和 Torchvision。
+如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
 
 
 ## 校准机械臂
@@ -244,12 +220,12 @@ print(torch.cuda.is_available())
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
-请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
+TODO：reBot B601-DM 的接线方式说明（待补充）
 
 :::tip
-以PC(linux)和jetson板卡为例，`第一个`插入usb接口会映射为`ttyACM0`，`第二个`插入usb接口会映射为`ttyACM1`。
+以 PC(linux) 和 jetson 板卡为例：`reBot 102 leader`（USB 转 UART）映射为 `/dev/ttyUSB*`，`B601-DM follower`（达妙串口桥/USB2CAN）映射为 `/dev/ttyACM*`。
 
 在运行代码前请注意leader和follower的映射接口。
 :::
@@ -257,33 +233,53 @@ print(torch.cuda.is_available())
 首先，您需要授予接口权限，运行以下命令：
 
 ```bash
-sudo chmod 666 /dev/ttyACM*
+sudo chmod 666 /dev/ttyUSB*  # leader 臂
+sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
+
+:::tip
+**reBot 102 leader 校准行为说明**：
+- 启动校准时，reBot Arm 102 的每个舵机当前位置会被**重设为零点**
+- `joint_ranges`（关节限位）取自配置文件 `config_rebot_arm_102_leader.py`，而非校准数据
+- 如果某个关节看起来总是卡在某个限位附近，优先检查 `joint_ranges` 配置
+- 关节方向定义在配置文件中，若方向不一致需修改配置而非重新校准
+:::
 
 ### 校准从动臂
 
-接下来，通过运行以下 Python 命令来校准从动臂：
-
-```python
+<!-- TODO: 待确认 reBot B601-DM follower 的校准命令参数
+需要确认：
+1. --robot.type 的具体值（例如：seeed_b601_dm_follower 或类似）
+2. --robot.port 的默认端口映射（/dev/ttyACM0 还是 /dev/ttyACM1）
+3. 达妙/灵足电机的校准流程是否与 SO101 相同
+-->
+```bash
 lerobot-calibrate \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm
+    --robot.id=follower1
 ```
 
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
 
 
-###  校准领导臂
+### 校准领导臂
 
-对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
+reBot 102 leader 通过 UART 通信，使用 `rebot_arm_102_leader` 作为 teleop 类型。
 
-```python
+```bash
 lerobot-calibrate \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader
 ```
+
+:::tip
+**端口说明**：
+- reBot 102 leader 使用 USB 转 UART 模块，通常映射为 `/dev/ttyUSB*`
+- 使用 `ls /dev/ttyUSB*` 查看实际端口号
+- 如果 `/dev/ttyUSB0` 被占用，尝试 `/dev/ttyUSB1` 等
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -292,32 +288,24 @@ lerobot-calibrate \
 
 ## 遥控操作
 
-现在，您就可以遥控操作您的机器人了！运行这个简单的脚本（它不会连接和显示摄像头）：
-
-请注意，与机器人关联的 **ID** 用于存储校准文件。在使用相同设置进行遥控操作、录制和评估时，使用相同的 **ID** 至关重要。
+<!-- TODO: reBot 102 leader 和 B601-DM follower 的遥操作命令 -->
 
 先对串口给予权限：
 ```bash
-sudo chmod 666 /dev/ttyACM*
+sudo chmod 666 /dev/ttyUSB*  # leader 臂
+sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
-
 
 运行遥操作：
-
 ```bash
 lerobot-teleoperate \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm
+    --robot.id=follower1 \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader
 ```
-
-遥控操作命令将自动执行以下步骤：
-
-1.  识别任何缺失的校准文件并启动校准程序。
-2.  连接机器人和遥控设备，并开始遥控操作。
 
 
 ## 添加摄像头
@@ -348,18 +336,18 @@ lerobot-teleoperate \
    前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)，  
    根据 Python 版本选择并安装，例如：
    ```bash
-   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   uv add pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. 在 `pyorbbec` 目录下安装依赖
    ```bash
    cd ~/pyorbbecsdk
-   pip install -r requirements.txt
+   uv add -r requirements.txt
    ```
 
   强制降低`numpy`版本到`1.26.0`
     ```bash
-    pip install numpy==1.26.0
+    uv add numpy==1.26.0
     ```
   可以忽略红色报错。
 
@@ -401,7 +389,7 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 
 -  🚀 步骤 2：函数调用与示例
 
-以下示例均需将 `so101_follower` 替换为你所使用实际机械臂型号（如 `so100` / `so101`）。
+以下示例均需将 `机器人型号` 替换为你所使用实际机械臂型号（TODO）。
 
 
 我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
@@ -410,13 +398,14 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 ```bash
 
 lerobot-teleoperate \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
     --display_data=true
 
 ```
@@ -484,15 +473,17 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
+<!-- TODO: reBot 的摄像头配置命令 -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
     --display_data=true
 ```
 
@@ -502,22 +493,21 @@ lerobot-teleoperate \
 
 如果您有更多摄像头，可以通过更改 `--robot.cameras` 参数来添加。您应该注意`index_or_path` 的格式，它由 `python -m lerobot.find_cameras opencv` 命令输出的摄像头 ID 的最后一位数字决定。
 
-例如，如果你想添加摄像头:  
+例如，如果你想添加摄像头：
+
+<!-- TODO: reBot 多摄像头配置命令 -->
 ```bash
 lerobot-teleoperate \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
     --display_data=true
 ```
-
-:::tip
-`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑
-:::
 
 
 
@@ -531,17 +521,19 @@ lerobot-teleoperate \
 
 - 如果你想数据集保存在本地，可以直接运行：
 
+<!-- TODO: reBot 本地数据采集命令 -->
 ```bash
 lerobot-record \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
     --display_data=true \
-    --dataset.repo_id=seeedstudio123/test \
+    --dataset.repo_id=your_name/test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
     --dataset.push_to_hub=false \
@@ -566,15 +558,17 @@ echo $HF_USER
 
 记录 5 个回合并将您的数据集上传到 Hub：
 
+<!-- TODO: reBot 数据采集并上传到 Hugging Face 命令 -->
 ```bash
 lerobot-record \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
     --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
-    --teleop.type=so101_leader \
-    --teleop.port=/dev/ttyACM1 \
-    --teleop.id=my_awesome_leader_arm \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.num_episodes=5 \
@@ -630,7 +624,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 :::tip
 如果你的键盘按下后没有反应，可能你需要降低你pynput的版本，例如安装个1.6.8版本的。
 ```bash
-pip install pynput==1.6.8
+uv add pynput==1.6.8
 ```
 :::
 
@@ -663,14 +657,14 @@ Linux 问题：
 :::
 
 ```bash
-echo ${HF_USER}/so101_test  
+echo ${HF_USER}/rebot_test  
 ```
 
 如果您没有使用 `--dataset.push_to_hub=false` ，并上传了数据，您也可以在本地通过以下命令进行可视化：
 
 ```bash
 lerobot-dataset-viz \
-  --repo-id ${HF_USER}/so101_test \
+  --repo-id ${HF_USER}/rebot_test \
 ```
 
 如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您也可以通过以下命令在本地进行可视化：
@@ -696,11 +690,13 @@ lerobot-dataset-viz \
 
 现在，尝试在您的机器人上重播第一个数据集：
 
+<!-- TODO: reBot 数据集回放命令 -->
 ```bash
 lerobot-replay \
-    --robot.type=so101_follower \
+    --robot.type=TODO \
     --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
+    --robot.can_adapter=damiao \
+    --robot.id=follower1 \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.episode=0
 ```
@@ -726,10 +722,10 @@ lerobot-replay \
 
 ```bash
 lerobot-train \
-  --dataset.repo_id=${HF_USER}/so101_test \
+  --dataset.repo_id=${HF_USER}/rebot_test \
   --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
+  --output_dir=outputs/train/act_rebot_test \
+  --job_name=act_rebot_test \
   --policy.device=cuda \
   --wandb.enable=false \
   --steps=300000 
@@ -741,8 +737,8 @@ lerobot-train \
 lerobot-train \
   --dataset.repo_id=seeedstudio123/test \
   --policy.type=act \
-  --output_dir=outputs/train/act_so101_test \
-  --job_name=act_so101_test \
+  --output_dir=outputs/train/act_rebot_test \
+  --job_name=act_rebot_test \
   --policy.device=cuda \
   --wandb.enable=false \
   --policy.push_to_hub=false\
@@ -751,7 +747,7 @@ lerobot-train \
 
 命令解释
 
-* **数据集指定**：我们通过 `--dataset.repo_id=${HF_USER}/so101_test` 参数提供了数据集。
+* **数据集指定**：我们通过 `--dataset.repo_id=${HF_USER}/rebot_test` 参数提供了数据集。
 * **训练步数**：我们通过 `--steps=300000` 修改训练步数，算法默认为800000，根据自己的任务难易程度，观察训练时候的loss来进行调整。
 * **策略类型**：我们使用 `policy.type=act` 提供了策略，同样你可以更换[act,diffusion,pi0,pi0fast,pi0fast,sac,smolvla]等策略，这将从 `configuration_act.py` 加载配置。重要的是，这个策略会自动适应您机器人（例如 `laptop` 和 `phone`）的电机状态、电机动作和摄像头数量，这些信息已保存在您的数据集中。
 * **设备选择**：我们提供了 `policy.device=cuda`，因为我们正在 Nvidia GPU 上进行训练，但您可以使用 `policy.device=mps` 在 Apple Silicon 上进行训练。
@@ -764,20 +760,22 @@ lerobot-train \
 您可以使用 [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) 中的 `record` 功能，但需要将策略训练结果训练结果权重文件作为输入。例如，运行以下命令记录 10 个评估回合：
 
 
+<!-- TODO: reBot ACT 评估命令 -->
 ```bash
 lerobot-record \
-  --robot.type=so101_follower \
+  --robot.type=TODO \
   --robot.port=/dev/ttyACM0 \
+  --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
+  --robot.id=follower1 \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
   --dataset.single_task="Put lego brick into the transparent box" \
-  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
+  --policy.path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model
 ``` 
  
   
-1.  `--policy.path` 参数，指示您的策略训练结果权重文件的路径（例如 `outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。如果您将模型训练结果权重文件上传到 Hub，也可以使用模型仓库（例如 `${HF_USER}/act_so100_test`）。
+1.  `--policy.path` 参数，指示您的策略训练结果权重文件的路径（例如 `outputs/train/act_rebot_test/checkpoints/last/pretrained_model`）。如果您将模型训练结果权重文件上传到 Hub，也可以使用模型仓库（例如 `${HF_USER}/act_rebot_test`）。
 2. 数据集的名称`dataset.repo_id`以 `eval_` 开头，这个操作会在你评估的时候为你单独录制评估时候的视频和数据，将保存在eval_开头的文件夹下，例如`seeed/eval_test123`。
 3. 如果评估阶段遇到`File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'`请先删除`eval_`开头的这个文件夹再次运行程序。
 4. 当遇到`mean is infinity. You should either initialize with stats as an argument or use a pretrained model`请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
@@ -792,7 +790,7 @@ lerobot-record \
 参考官方教程[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)
 
 ```bash
-pip install -e ".[smolvla]"
+uv add -e ".[smolvla]"
 ```
 
 **训练**
@@ -810,21 +808,23 @@ lerobot-train \
 
 **验证**
 
+<!-- TODO: reBot SmolVLA 评估命令 -->
 ```bash
 lerobot-record \
-  --robot.type=so101_follower \
+  --robot.type=TODO \
   --robot.port=/dev/ttyACM0 \
-  --robot.id=my_blue_follower_arm \ # <- Use your robot id
+  --robot.can_adapter=damiao \
+  --robot.id=follower1 \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
   --dataset.single_task="Put lego brick into the transparent box" \
   --dataset.repo_id=seeed/eval_test123 \ 
   --dataset.episode_time_s=50 \
   --dataset.num_episodes=10 \
   # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=so100_leader \
-  # --teleop.port=/dev/ttyACM0 \
-  # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+  # --teleop.type=rebot_arm_102_leader \
+  # --teleop.port=/dev/ttyUSB0 \
+  # --teleop.id=rebot_arm_102_leader \
+  --policy.path=HF_USER/FINETUNE_MODEL_NAME
 ```
 
 
@@ -837,7 +837,7 @@ lerobot-record \
 参考官方教程[Pi0](https://huggingface.co/docs/lerobot/pi0) 
 
 ```bash
-pip install -e ".[pi]"
+uv add -e ".[pi]"
 ```
 
 **训练**
@@ -859,12 +859,14 @@ lerobot-train \
 
 **验证**
 
+<!-- TODO: reBot Pi0 评估命令 -->
 ```bash
 lerobot-record \
-  --robot.type=so101_follower \
+  --robot.type=TODO \
   --robot.port=/dev/ttyACM0 \
+  --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
+  --robot.id=follower1 \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
   --dataset.single_task="Put lego brick into the transparent box" \
@@ -881,7 +883,7 @@ lerobot-record \
 参考官方教程[Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
 
 ```bash
-pip install -e ".[pi]"
+uv add -e ".[pi]"
 ```
 
 **训练**
@@ -903,12 +905,14 @@ lerobot-train \
 
 **验证**
 
+<!-- TODO: reBot Pi0.5 评估命令 -->
 ```bash
 lerobot-record \
-  --robot.type=so101_follower \
+  --robot.type=TODO \
   --robot.port=/dev/ttyACM0 \
+  --robot.can_adapter=damiao \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --robot.id=my_awesome_follower_arm \
+  --robot.id=follower1 \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
   --dataset.single_task="Put lego brick into the transparent box" \
@@ -935,22 +939,22 @@ lerobot-record \
 
 <div align="center">
     <img width={1000} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/rebot/stack_bug.png" />
 </div>
 
 尝试运行以下命令来解决:
 
 ```bash
-pip install datasets==2.19
+uv add datasets==2.19
 ```
 
 
-训练可能需要几个小时。您将在 `outputs/train/act_so101_test/checkpoints` 目录中找到训练结果权重文件。
+训练可能需要几个小时。您将在 `outputs/train/act_rebot_test/checkpoints` 目录中找到训练结果权重文件。
 
-要从某个训练结果权重文件恢复训练，下面是一个从 `act_so101_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
+要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash
 lerobot-train \
-  --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
+  --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
 
@@ -974,20 +978,15 @@ lerobot-train \
 
 - 如果遇到
   ```bash
-  Could not connect on port "/dev/ttyACM0"
+  Could not connect on port "/dev/ttyUSB0" 或 "/dev/ttyACM0"
   ```
-  并且通过`ls /dev/ttyACM*`看到是有ACM0存在的，则是忘记给串口权限了，终端输入`sudo chmod 666 /dev/ttyACM*` 即可`
+  并且通过 `ls /dev/ttyUSB*` 或 `ls /dev/ttyACM*` 看到设备存在，则是忘记给串口权限了，终端输入 `sudo chmod 666 /dev/ttyUSB* /dev/ttyACM*` 即可
 
 - 如果遇到
   ```bash
   No valid stream found in input file. Is -1 of the desired media type?
   ```
-  请安装ffmpeg7.1.1,`conda install ffmpeg=7.1.1 -c conda-forge`。
-
-<div align="center">
-    <img width={800} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
-</div>
+  请安装ffmpeg7.1.1,`uv add ffmpeg=7.1.1`。
 
 - 如果遇到
   ```bash
@@ -1001,19 +1000,8 @@ lerobot-train \
   ```
   对机械臂进行重新断电和上电，再次尝试校准机械臂加准，如果在校准过程中遇到MAX角度达到上万的值也可以使用这个方法，如果不行则需要对相应舵机进行重新舵机校准，即中位校准和ID写入。
 
-- 如果评估阶段遇到
-  ```bash
-  File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
-  ```
-  请先删除`eval_`开头的这个文件夹再次运行程序。
 
-- 如果评估阶段遇到
-  ```bash
-  `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
-  ```
-  请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
-
-- 如果你维修或者更换过机械臂零件，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+- 如果你维修或更换过机械臂零件，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 
