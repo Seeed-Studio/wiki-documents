@@ -13,7 +13,7 @@ keywords:
 slug: /rebot_b601_dm_getting_started
 translation:
   skip:
-    - en
+    - zh-CN
 last_update:
   date: 2026-04-13
   author: LiuJunjie
