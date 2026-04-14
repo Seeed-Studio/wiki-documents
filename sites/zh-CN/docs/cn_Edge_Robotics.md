@@ -1,6 +1,6 @@
 ---
-description: 本主题介绍 Seeed Studio 的机器人产品文档与学习课程。
-title: 机器人
+description: 本主题介绍 Seeed Studio 机器人产品的文档和学习课程。
+title: 机器人技术
 keywords:
   - robotics
   - nvidia
@@ -18,12 +18,12 @@ updatedAt: '2026-02-03'
 url: https://wiki.seeedstudio.com/cn/robotics_page/
 ---
 
-# 🤖 机器人
+# 🤖 机器人技术
 
-> *"今天的科学就是明天的技术。" - Edward Teller*
+> *"今天的科学是明天的技术。" - Edward Teller*
 
 <div className="robotic-tab-container">
-  
+
   <input type="radio" id="tab-hardware" name="robo-tabs" defaultChecked className="tab-input-hidden" />
   <input type="radio" id="tab-learning" name="robo-tabs" className="tab-input-hidden" />
 
@@ -32,7 +32,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     <nav className="tab-nav">
       <label htmlFor="tab-hardware" className="tab-item">
         <span className="icon">📦</span>
-        <span className="text">硬件文档库</span>
+        <span className="text">硬件 Wiki</span>
       </label>
       <label htmlFor="tab-learning" className="tab-item">
         <span className="icon">🎓</span>
@@ -43,7 +43,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
     </nav>
   </div>
 
-  <!-- ==================== Tab 1: 硬件文档 (保持原样但修复MDX语法) ==================== -->
+  <!-- ==================== Tab 1: 硬件文档==================== -->
   <div className="tab-content content-hardware">
 
     <div className="quick-nav-container">
@@ -55,7 +55,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
         </a>
         <a href="#actuators" className="nav-item">
           <span className="icon">⚙️</span>
-          <span className="text">关节执行器</span>
+          [LINE57]          <span className="text">关节执行器</span>
           <div className="hover-effect"></div>
         </a>
         <a href="#sensors" className="nav-item">
@@ -78,15 +78,32 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <div className="category-group">
         <div className="category-card robot-kits">
 
-          <h3>🤗 Reachy</h3>
+
+          <h3>🦾 reBot 机械臂</h3>
+          <div className="card-container">
+              <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM 入门指南</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">reBot 与 Pinocchio</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">reBot 与 LeRobot</span>
+              </a>
+          </div>
+
+
+          <h3> 🤗 Reachy</h3>
           <div className="card-container">
               <a href="/cn/reachymini_getting_started" className="content-card">
-                <span className="text">Reachy Mini上手使用</span>
+                <span className="text">Reachy Mini 入门指南</span>
                 <span className="tag recommended">New</span>
               </a>
           </div>
 
-          <h3>🤗 SO-Arm机械臂</h3>
+
+          <h3>🤗 SO-Arm</h3>
           <div className="card-container">
               <a href="/cn/lerobot_so100m_new/" className="content-card">
                 <span className="text">SO100/101 机械臂</span>
@@ -98,7 +115,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
                 <span className="text">Phospho Lerobot</span>
               </a>
               <a href="/cn/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">So Arm 强化学习</span>
+                  <span className="text">SO Arm RL 训练</Missing translation: The phrase "SO Arm RL Training" was not translated to Chinese.</span>
                   <span className="tag recommended">New</span>
               </a>
               <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
@@ -107,7 +124,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
           </div>
 
-          <h3>🚗 Lekiwi移动底盘</h3>
+          <h3>🚗 Lekiwi</h3>
           <div className="card-container">
               <a href="/cn/lerobot_lekiwi/" className="content-card">
                 <span className="text">Lekiwi 移动底盘</span>
@@ -117,14 +134,14 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
           </div>
 
-          <h3>🦾 StarAI机械臂</h3>
+          <h3>🦾 StarAI Arm</h3>
           <div className="card-container">
               <a href="/cn/lerobot_starai_arm/" className="content-card">
                 <span className="text">StarAI 机械臂</span>
                 <span className="tag recommended">New</span>
               </a>
               <a href="/cn/starai_arm_ros_moveit/" className="content-card">
-                <span className="text">StarAI 机械臂 MoveIt 2</span>
+                <span className="text">StarAI Arm MoveIt 2</span>
                 <span className="tag recommended">New</span>
               </a>
               <a href="/cn/control_robotic_arm_via_gr00t" className="content-card">
@@ -132,15 +149,15 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
           </div>
 
-          <h3>🦿 轮足</h3>
+          <h3>🦿Legged Wheel</h3>
           <div className="card-container">
               <a href="/cn/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
-                <span className="text">小轮足机器人</span>
+                <span className="text">Mini Wheeled-Legged Robot</span>
                 <span className="tag recommended">New</span>
               </a>
           </div>
 
-          <h3>🖐️ 灵巧手</h3>
+          <h3>🖐️ Hand</h3>
           <div className="card-container">
               <a href="/cn/hand_amazinghand/" className="content-card">
                 <span className="text">AmazingHand</span>
@@ -148,10 +165,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
           </div>
 
-          <h3>🦀 末端执行器</h3>
+          <h3>🦀 End Effectors</h3>
           <div className="card-container">
               <a href="/cn/dm_gripper/" className="content-card">
-                <span className="text">DM 夹爪</span>
+                <span className="text">DM Gripper</span>
                 <span className="tag recommended">New</span>
               </a>
           </div>
@@ -166,25 +183,25 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
       <div className="card-container">
           <a href="/cn/myactuator_series/" className="content-card">
-            <span className="text">MyActuator X 系列</span>
+            <span className="text">MyActuator X Series</span>
           </a>
           <a href="/cn/damiao_series/" className="content-card">
-            <span className="text">Damiao DM43 系列</span>
+            <span className="text">Damiao DM43 Series</span>
           </a>
           <a href="/cn/feetech_servo/" className="content-card">
-            <span className="text">Feetech STS3215 舵机</span>
+            <span className="text">Feetech STS3215 Servo</span>
           </a>
           <a href="/cn/hightorque_control" className="content-card">
-            <span className="text">HighTorque 系列</span>
+            <span className="text">HighTorque Series</span>
           </a>
           <a href="/cn/fashionstar_servo/" className="content-card">
-            <span className="text">Fashionstar 系列</span>
+            <span className="text">Fashionstar Series</span>
           </a>
           <a href="/cn/stackforce_series/" className="content-card">
-            <span className="text">Stackforce 系列</span>
+            <span className="text">Stackforce Series</span>
           </a>
           <a href="/cn/robstride_control/" className="content-card">
-            <span className="text">RobStride 控制</span>
+            <span className="text">RobStride Control</span>
             <span className="tag recommended">New</span>
           </a>
       </div>
@@ -197,52 +214,52 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <div className="category-group">
       <div className="category-card sensors">
 
-      <strong>📡 LiDAR</strong>  
+      <strong>📡 激光雷达</strong>
 
       <div className="card-container">
           <a href="/cn/robosense_lidar/" className="content-card">
             <span className="text">RoboSense</span>
           </a>
           <a href="/cn/mid360/" className="content-card">
-            <span className="text">Livox MID360</span>
+            <span className="text">MID360</span>
           </a>
           <a href="/cn/a_loam/" className="content-card">
             <span className="text">A-LOAM 算法</span>
           </a>
           <a href="/cn/slamtec/" className="content-card">
-            <span className="text">Slamtec 系列</span>
+            <span className="text">Slamtec Series</span>
           </a>
       </div>
 
-      <strong>📷 相机</strong>  
+      <strong>📷 相机</strong>
 
       <div className="card-container">
           <a href="/cn/orbbec_gemini2/" className="content-card">
             <span className="text">Orbbec Gemini 2</span>
           </a>
           <a href="/cn/orbbec_gemini_335lg" className="content-card">
-            <span className="text">Gemini 335Lg 深度相机</span>
+            <span className="text">Gemini 335Lg Depth</span>
             <span className="tag recommended">New</span>
           </a>
           <a href="/cn/orbbec_gemini336" className="content-card">
-            <span className="text">Gemini 336 深度相机</span>
+            <span className="text">Gemini 336 Depth</span>
             <span className="tag recommended">New</span>
           </a>
           <a href="/cn/sensing_gmsl_cameras" className="content-card">
-            <span className="text">SENSING GMSL2 相机</span>
+            <span className="text">SENSING GMSL2</span>
           </a>
           <a href="/cn/ac1" className="content-card">
             <span className="text">RoboSense AC1</span>
             <span className="tag recommended">New</span>
           </a>
           <a href="/cn/orbbec_depth_camera_on_ros/" className="content-card">
-            <span className="text">Orbbec 与 ROS</span>
+            <span className="text">Orbbec with ROS</span>
           </a>
           <a href="/cn/orb_slam3_orbbec_gemini2/" className="content-card">
-            <span className="text">ORB-SLAM3 与 Gemini2</span>
+            <span className="text">ORB-SLAM3 Gemini2</span>
           </a>
           <a href="/cn/csi_camera_on_ros/" className="content-card">
-            <span className="text">Jetson 上的 CSI 相机</span>
+            <span className="text">CSI Camera on Jetson</span>
           </a>
           <a href="/cn/pycuvslam_recomputer_robotics/" className="content-card">
             <span className="text">PyCuVSLAM</span>
@@ -250,14 +267,14 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
       </div>
 
-      <strong>🎤 语音</strong>  
+      <strong>🎤 语音</strong>
 
       <div className="card-container">
           <a href="/cn/ReSpeaker_Core_v2.0/" className="content-card">
             <span className="text">ReSpeaker Core v2.0</span>
           </a>
           <a href="/cn/ReSpeaker_Mic_Array_v2.0/" className="content-card">
-            <span className="text">ReSpeaker Mic Array v2.0</span>
+            <span className="text">ReSpeaker 麦克风阵列 v2.0</span>
           </a>
       </div>
 
@@ -307,7 +324,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       </a>
 
       <a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
-        <span className="text">PX4 目标跟踪</span>
+        <span className="text">目标追踪 (PX4)</span>
       </a>
 
       </div>
@@ -318,11 +335,11 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
         <span className="text">Isaac Lab 安装</span>
       </a>
       <a href="/cn/training_soarm101_policy_with_isaacLab/" className="content-card">
-        <span className="text">SO Arm 强化学习</span>
+        <span className="text">SO 机械臂 RL 训练</span>
         <span className="tag recommended">New</span>
       </a>
       <a href="/cn/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">SO100 机械臂与 IsaacSim</span>
+        <span className="text">SO100 机械臂 Isaac Sim</span>
         <span className="tag recommended">New</span>
       </a>
       </div>
@@ -345,43 +362,43 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
     <div className="learning-intro">
         <h2>🎓 机器人学院</h2>
-        <p>从 ROS 基础概念到进阶的 Sim2Real 强化学习，这里提供循序渐进的系统化课程。</p>
+        <p>涵盖 ROS、仿真、强化学习和高级机器人控制的综合课程。</p>
     </div>
 
     <!-- Section 1: Core Software -->
     <h3 className="course-section-title">💻 核心软件与仿真</h3>
     <div className="course-grid">
 
-      <!-- ROS 1 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/1.ROS%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
+      <!-- ROS Basics: 8 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
-          <h3>ROS 1 基础入门八讲</h3>
-          <p>学习节点、话题、服务和基础入门</p>
-          <span className="btn-start">开始学习</span>
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 1 基础：8 讲</h3>
+          <p>学习节点、主题、服务和基础知识</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
-      <!-- ROS 1 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/2.ROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%BF%E7%9C%9F%E4%B8%83%E8%AE%B2/README.MD" className="course-card">
+      <!-- ROS Robot Simulation: 7 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
-          <h3>ROS1 机器人仿真七讲</h3>
-          <p>从建模仿真到自主导航。</p>
-          <span className="btn-start">开始学习</span>
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 1 机器人仿真：7 讲</h3>
+          <p>	从建模到自主导航。</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
       <!-- ROS 2 -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/1.%E4%B8%AD%E6%96%87/1.ROS2%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 4小时</span></div>
-          <h3>ROS 2 基础入门八讲</h3>
-          <p>学习节点、话题、服务和基础入门。</p>
-          <span className="btn-start">开始学习</span>
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 2 Humble 基础：8 讲</h3>
+          <p>学习节点、主题、服务和基础知识</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
@@ -391,10 +408,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-moveit">MoveIt 1/2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">机械臂入门</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level beg">Arm Beginner</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
-          <p>学习Moveit 1/2 导入自己的机械臂并完成运动学正逆解 </p>
-          <span className="btn-plan">计划中</span>
+          <p>将自定义机械臂导入 MoveIt 1/2 并实现正向和逆向运动学</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -402,21 +419,22 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-pinocchio">Pinocchio</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">机械臂进阶</span> <span>⏱️ 6小时</span></div>
-          <h3>匹诺曹Pinocchio</h3>
-          <p>学习匹诺曹机器人学框架，开发自己机械臂的运动学及动力学任务</p>
-          <span className="btn-plan">计划中</span>
+          <div className="course-meta"><span className="level int">Arm Intermediate</span> <span>⏱️ 6h</span></div>
+          <h3>Pinocchio</h3>
+          <p>学习 Pinocchio 机器人框架，并为自己的机械臂开发运动学和动力学任务</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
+
 
       <!-- Isaac Sim -->
       <a href="" className="course-card">
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 12小时</span></div>
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 12h</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
-          <p>Sim2Real 仿真到现实工作流，USD 管道与环境搭建。</p>
-          <span className="btn-plan">计划中</span>
+          <p>Sim2Real 工作流、USD 管道和环境创建。</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -424,10 +442,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-mujoco">MuJoCo</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 10小时</span></div>
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 10h</span></div>
           <h3>MuJoCo 物理引擎</h3>
-          <p>面向敏捷机器人控制的高精度动力学建模与仿真。</p>
-          <span className="btn-plan">计划中</span>
+          <p>用于敏捷机器人控制的模型动力学与仿真。</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -435,72 +453,72 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <a href="" className="course-card">
         <div className="course-cover c-rl">RL</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">困难</span> <span>⏱️ 20小时</span></div>
-          <h3>机器人强化学习</h3>
-          <p>PPO 算法、深度强化学习训练流程，以及 Jetson 端部署。</p>
-          <span className="btn-plan">计划中</span>
+          <div className="course-meta"><span className="level adv">Hard</span> <span>⏱️ 20h</span></div>
+          <h3>强化学习</h3>
+          <p>PPO、DRL 训练流程，以及部署到 Jetson。</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
     </div>
 
     <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 机器人应用实战</h3>
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 机器人应用</h3>
     <div className="course-grid">
 
       <!-- Humanoid -->
       <a href="" className="course-card">
-        <div className="course-cover c-human">人形</div>
+        <div className="course-cover c-human">Humanoid</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 5小时</span></div>
-          <h3>小形舵机机器人入门课程</h3>
-          <p>小型人形机器人硬件驱动、动作舞蹈编排及二次开发</p>
-          <span className="btn-plan">计划中</span>
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 5h</span></div>
+          <h3>小型舵机人形机器人课程</h3>
+          <p>小型人形机器人的硬件驱动、动作与舞蹈编排以及二次开发。</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
+
       <!-- Lekiwi -->
       <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">移动底盘</div>
+        <div className="course-cover c-lekiwi">Mobile Robot</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 6小时</span></div>
-          <h3>移动机器人开发 Lekiwi</h3>
-          <p>基于 Lekiwi 底盘的 SLAM 建图、Nav2 导航与自动巡逻。</p>
-          <span className="btn-plan">计划中</span>
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 6h</span></div>
+          <h3>移动机器人 (Lekiwi)</h3>
+          <p>SLAM、Navigation 2 和自主巡逻。</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
       <!-- Robotic Arm -->
       <a href="" className="course-card">
-        <div className="course-cover c-arm">机械臂</div>
+        <div className="course-cover c-arm">Robot Arm</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 15小时</span></div>
-          <h3>StarAi 机械臂系统课程</h3>
-          <p>StarAI 6+1自由度机械臂运动学、动力学到模仿学习和强化学习VLA进阶 </p>
-          <span className="btn-plan">计划中</span>
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 15h</span></div>
+          <h3>StarAI 机械臂系统课程</h3>
+          <p>StarAI 6+1 自由度机械臂：运动学、动力学、模仿学习及基于 VLA 的高级强化学习</p>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
       <!-- Wheeled-Legged -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/%E4%B8%AD%E6%96%87/README.md" className="course-card">
-        <div className="course-cover c-legged">轮足机器人</div>
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md" className="course-card">
+        <div className="course-cover c-legged">Wheel-Legged Robot</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 8小时</span></div>
-          <h3>StackForce 轮足机器人系统课程</h3>
-          <p>轮足机器人的LQR平衡控制算法与运动规划。</p>
-          <span className="btn-start">开始学习</span>
+          <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
+          <h3>Stackforce 轮腿式机器人课程</h3>
+          <p>混合机器人的平衡控制和 LQR 运动规划。</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
-
       <!-- ReachyMini -->
-      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/1.%E4%B8%AD%E6%96%87/README.md" className="course-card">
-        <div className="course-cover c-reachy">桌面机器人</div>
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
+        <div className="course-cover c-reachy">Desktop Robot</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 8小时</span></div>
-          <h3>ReachyMini 系统课程</h3>
-          <p>ReachyMini 基本使用、接口教程及二次开发系统课程。</p>
-          <span className="btn-start">开始学习</span>
+          <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 8h</span></div>
+          <h3>ReachyMini 教程 13 讲</h3>
+          <p>ReachyMini 基本操作、接口教程和二次开发的系统课程</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
@@ -513,7 +531,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
 <style>{`
 /* =========================================
-   1. Tab Logic (CSS Only)
+   1. 标签页逻辑 (仅 CSS)
    ========================================= */
 .robotic-tab-container { width: 100%; position: relative; }
 .tab-input-hidden { display: none; }
@@ -549,7 +567,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* =========================================
-   2. Hardware Styles (Original)
+   2. 硬件样式 (原始)
    ========================================= */
 .quick-nav-container {
   margin: 2rem 0; padding: 1rem;
@@ -605,7 +623,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
 
 /* =========================================
-   3. Learning Styles
+   3. 学习样式
    ========================================= */
 .learning-intro { text-align: center; margin-bottom: 2rem; }
 .learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -622,10 +640,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 }
 .course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-/* Covers for different topics */
+/* 不同主题的封面 */
 .course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
 
-/* AI & Software Colors */
+/* AI 与软件颜色 */
 .c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
 .c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
 .c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
@@ -634,7 +652,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 .c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
 .c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
 
-/* Robot Platform Colors */
+/* 机器人平台颜色 */
 .c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
 .c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
 .c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
@@ -678,7 +696,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
 
 /* =========================================
-   4. Dark Mode 适配
+   4. 深色模式适配
    ========================================= */
 html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
 html[data-theme='dark'] .tab-slider { background: #444; }
@@ -686,7 +704,7 @@ html[data-theme='dark'] .tab-item { color: #aaa; }
 html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
 html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
-/* Hardware Dark Mode */
+/* 硬件深色模式 */
 html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
 html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
 html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
@@ -696,7 +714,7 @@ html[data-theme='dark'] .content-card::after { background: #60a5fa; }
 html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
 html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* Learning Dark Mode */
+/* 深色模式样式 */
 html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
 html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }
