@@ -234,7 +234,7 @@ reCamera 有 4 个版本：
 成功！
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload7.png" /></div>
 
-**步骤 6**。您可以调整 ```IoU``` 和 ```Confidence``` 的阈值以获得更准确的结果。
+**步骤 6**：您可以调整 ```IoU``` 和 ```Confidence``` 的阈值以获得更准确的结果。
 
 - IoU=0,Confidence=0:
 
@@ -270,23 +270,23 @@ reCamera 有 4 个版本：
 我们鼓励用户在社区中分享他们开发和创建的仪表板。我们在 [GitHub](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main/Node-RED_Flow/public_flow) 上创建了一个文件夹。我们希望每个人都能通过 **pull request** 在那里分享他们的仪表板，我们将进行整理和展示。
 这里我们将以为仪表板添加补光功能为例，演示如何简单地添加一个节点并控制 reCamera。
 
-**步骤 1**。将 ```button group``` 节点拖到工作区。并按以下设置进行编辑。
+**步骤 1**：将 ```button group``` 节点拖到工作区。并按以下设置进行编辑。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard1.png" /></div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard2.png" /></div>
 
-**步骤 2**。添加一个名为 "Control Button" 的新 ui-group 配置节点，然后保存。
+**步骤 2**：添加一个名为 "Control Button" 的新 ui-group 配置节点，然后保存。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard3.png" /></div>
 
-**步骤 3**。进入 dashboard 2.0，并将控制按钮框架放置在模型选择下方。
+**步骤 3**：进入 dashboard 2.0，并将控制按钮框架放置在模型选择下方。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard4.png" /></div>
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard5.png" /></div>
 
-**步骤 4**。部署流程并进入仪表板。
+**步骤 4**：部署流程并进入仪表板。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/customizeddashboard6.png" /></div>
 

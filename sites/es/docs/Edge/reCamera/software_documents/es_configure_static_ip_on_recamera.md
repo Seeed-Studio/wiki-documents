@@ -67,20 +67,20 @@ Luego verifique la dirección de `eth0`:
 ip addr show eth0
 ```
 
-[LINE69]Si la salida incluye su `address` configurado, la IP estática se ha configurado con éxito.
+Si la salida incluye su `address` configurado, la IP estática se ha configurado con éxito.
 
-[LINE71]<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/static_ip_output.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/static_ip_output.png" /></div>
 
-[LINE73]## Soporte técnico y discusión de productos
+## Soporte técnico y discusión de productos
 
-[LINE75]¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarle diferentes tipos de soporte para garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarse a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarle diferentes tipos de soporte para garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarse a diferentes preferencias y necesidades.
 
-[LINE77]<div class="button_tech_support_container">
-[LINE78]<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-[LINE79]<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-[LINE80]</div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-[LINE82]<div class="button_tech_support_container">
-[LINE83]<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-[LINE84]<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-[LINE85]</div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

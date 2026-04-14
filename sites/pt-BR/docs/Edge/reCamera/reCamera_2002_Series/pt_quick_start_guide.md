@@ -64,7 +64,7 @@ Existem 4 versões do reCamera:
     <tr>
         <td>Wireless(Wi-Fi/BT)</td>
         <td> </td>
-        [0]        <td> </td>
+        <td> </td>
         <td>✅</td>
         <td>✅</td>
     </tr>

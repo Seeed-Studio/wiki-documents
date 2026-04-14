@@ -34,7 +34,7 @@ sudo vi /etc/network/interfaces
 
 ### 步骤 2：为 `eth0` 设置静态 IP 参数
 
-[	LINE_36]将 `eth0` 配置为静态接口。根据您的实际网络更新以下值，并确保 `address` 不与同一局域网中的任何其他 IP 地址重复：
+将 `eth0` 配置为静态接口。根据您的实际网络更新以下值，并确保 `address` 不与同一局域网中的任何其他 IP 地址重复：
 
 ```bash
 auto lo
