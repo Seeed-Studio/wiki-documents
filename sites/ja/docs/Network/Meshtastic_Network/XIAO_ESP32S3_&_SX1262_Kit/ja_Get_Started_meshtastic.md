@@ -1,86 +1,86 @@
 ---
-description: XIAO ESP32S3 と Wio-SX1262 Kit を基盤とした Meshtastic
-title: XIAO ESP32-S3 と Wio SX1262 Kit
+description: XIAO ESP32S3 & Wio-SX1262 キットベースの Meshtastic
+title: XIAO ESP32-S3&Wio SX1262 キット
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
   date: 12/11/2025
   author: Michelle Huang
-createdAt: '2024-10-09'
+createdAt: '2025-05-27'
 updatedAt: '2025-12-11'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/
 ---
 
 
-[Meshtastic®](https://meshtastic.org/) は、低コストかつ低電力のデバイス上で動作するオープンソースのオフグリッド分散型メッシュネットワークです。Seeed Studio は、趣味として楽しむ人や産業ユーザー向けに、幅広いすぐに使える Meshtastic デバイスを提供しています。XIAO ESP32S3 と Wio-SX1262 Kit は、Meshtastic 開発者やメーカーにとって柔軟なソリューションです。
+[Meshtastic®](https://meshtastic.org/) は、手頃な価格で低消費電力のデバイス上で動作するように構築された、オープンソースでオフグリッド、分散型のメッシュネットワークです。Seeed Studio は、ホビイストや産業ユーザー向けに、すぐに使える Meshtastic デバイスの包括的な範囲を提供しています。XIAO ESP32S3 & Wio-SX1262 キットは、meshtastic 開発者やメーカーにとって柔軟なソリューションです。
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
-## ファームウェアの書き込み
+## ファームウェアのフラッシュ
 
 :::note
-**2024年10月24日以前**に XIAO ESP32S3 と Wio-SX1262 Kit を購入した場合は、このステップバイステップチュートリアルに従ってファームウェアをデバイスに書き込んでください。`NRF-OTA`を使用してファームウェアを更新することは避けてください、デバイスが完全に故障する可能性があります。
+**2024年10月24日**より前に XIAO ESP32S3 & Wio-SX1262 キットを購入された場合は、このステップバイステップのチュートリアルに従ってデバイスにファームウェアをフラッシュしてください。ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
 :::
 
-**Step 1**: まず、ブラウザを開いて https://flasher.meshtastic.org/# を訪問します。Chrome または Edge ブラウザが必要です。
+**ステップ 1**: まず、ブラウザを開いて https://flasher.meshtastic.org/# にアクセスします。Chrome または Edge ブラウザが必要です。
 
-**Step 2**: 次に、適切な USB ケーブルを使用してデバイスを PC に接続します。電源をオフにしてから、USB ケーブルを挿入する際に**BOOT ボタンを押し続ける**必要があるかもしれません。
+**ステップ 2**: 次に、適切な USB ケーブルを使用してデバイスを PC に接続します。電源を切ってから、USB ケーブルを接続する際に **BOOT ボタンを押し続ける**必要がある場合があります。
 
-**Step 3**: 提供された指示に従って、以降の書き込み操作を行います。デバイスを "**Seeed XIAO S3**" として選択し、ファームウェアを**最新**のものとして選択し、その後 "**Flash**" をクリックします。以前のファームウェアを上書きしたい場合は、"**Full Erase and Install**" をチェックすることを忘れないでください。
+**ステップ 3**: 以下の指示に従って、その後のフラッシュ操作を実行します。デバイスとして "**Seeed XIAO S3**"、ファームウェアとして**最新**のものを選択し、"**Flash**" をクリックします。以前のファームウェアを上書きしたい場合は、"**Full Erase and Install**" にチェックを入れることを忘れないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
 ## ソフトウェア概要
 
-Meshtastic は、Android アプリ、Apple アプリ、Web クライアントを含む、ユーザーが選択できる複数のプラットフォームソフトウェアを提供しています。また、開発者が利用できる Python CLI、Linux Native および統合方法も提供しています。
+Meshtastic は、Android アプリ、Apple アプリ、ウェブクライアントなど、ユーザーが選択できる複数のプラットフォームソフトウェアを提供しています。また、開発者が使用するための Python CLI、Linux Native、統合方法も提供しています。
 
-詳細については、[Meshtastic の公式ウェブサイト](https://meshtastic.org/docs/software/)をご参照ください。
+具体的な情報については、[Meshtastic の公式ウェブサイト](https://meshtastic.org/docs/software/)を参照してください。
 
-- [Android App](https://meshtastic.org/docs/category/android-app/): Android アプリケーションは F-Droid リポジトリと Google Play Store で入手できます。これにより、Android スマートフォンから Bluetooth、Wi-Fi（同じネットワーク上の場合）、または USB On-The-Go（OTG）を通じて Meshtastic デバイスに接続できます。
-- [Apple App](https://meshtastic.org/docs/category/apple-apps/): アプリストアで入手できます。iOS 用 Meshtastic アプリは、ネイティブのオフライン Apple Maps の使用をデフォルトでサポートしています。
-- [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web はブラウザ内で直接実行される Meshtastic クライアントです。
-- [Python CLI](https://meshtastic.org/docs/software/python/cli/): python pip パッケージは "meshtastic" コマンドライン実行ファイルをインストールします。これはネットワーク経由で送信されたパケットを JSON として表示し、Meshtastic デバイスからのシリアルデバッグ情報を見ることができます。
-- [Linux Native](https://meshtastic.org/docs/software/linux-native/): デバイスソフトウェアは Portduino フレームワークにより、ネイティブ Linux マシン上でも実行できます。
-- [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): Meshtastic エコシステムは高度に拡張可能であり、多くの既存のソフトウェア製品やプロジェクトと簡単に統合できます。
+- [Android App](https://meshtastic.org/docs/category/android-app/): Android アプリケーションは F-Droid リポジトリと Google Play Store で利用できます。これにより、Bluetooth、Wi-Fi（同じネットワーク上の場合）、または USB On-The-Go（OTG）を介して Android フォンから Meshtastic デバイスに接続できます。
+- [Apple App](https://meshtastic.org/docs/category/apple-apps/): App Store で利用できます。デフォルトでは、iOS 用 Meshtastic アプリはネイティブオフライン Apple Maps の使用をサポートしています。
+- [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web は、ブラウザで直接実行される Meshtastic クライアントです。
+- [Python CLI](https://meshtastic.org/docs/software/python/cli/): python pip パッケージは "meshtastic" コマンドライン実行可能ファイルをインストールし、ネットワーク上で送信されたパケットを JSON として表示し、meshtastic デバイスからのシリアルデバッグ情報を確認できます。
+- [Linux Native](https://meshtastic.org/docs/software/linux-native/): デバイスソフトウェアは、Portduino フレームワークのおかげでネイティブ Linux マシン上でも実行できます。
+- [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): Meshtastic エコシステムは高度に拡張可能で、多数の既存のソフトウェア製品やプロジェクトとの簡単な統合を可能にします。
 
-## デバイスの接続
+## デバイス接続
 
-Meshtastic を使用する前に、まずデバイスを接続する必要があります。接続方法は2つあります。一つは拡張ボードを使用する方法で、対応する情報がディスプレイ上に表示されます。その後、反映された情報に基づいて対応するプラットフォームで設定を行います。もう一つは XIAO と Wio-SX1262 モジュールを接続し、シリアルポートツールを使用してノード ID とパスワードを取得する方法です。
+Meshtastic を使用する前に、まずデバイスを接続する必要があります。接続方法は2つあります。1つ目は拡張ボードを使用する方法で、対応する情報がディスプレイに表示されます。その後、反映された情報に従って対応するプラットフォームで設定を行うことができます。2つ目は XIAO と Wio-SX1262 モジュールを接続し、シリアルポートツールを使用してノード ID とパスワードを取得する方法です。
 
 ### バッテリーへの接続
 
-XIAO ESP32S3 には内蔵の電力管理チップがあり、バッテリーを使用して XIAO ESP32S3 を独立して電源供給したり、XIAO ESP32S3 の USB ポートを通じてバッテリーを充電することができます。
+XIAO ESP32S3 には内蔵の電源管理チップがあり、バッテリーを使用して XIAO ESP32S3 を独立して電源供給したり、XIAO ESP32S3 の USB ポートを通じてバッテリーを充電したりできます。
 
-XIAO にバッテリーを接続したい場合、保護回路付きの適格な `3.7V リチウム` 充電式バッテリーを購入することをお勧めします。バッテリーを接続する際は、正極と負極を区別するように注意してください。電源の負極は USB ポートに最も近い側で、電源の正極は USB ポートから離れた側です。
+XIAO にバッテリーを接続したい場合は、`保護回路`付きの適格な充電式`3.7V リチウム`バッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、正極と負極を区別するよう注意してください。電源の負極は USB ポートに最も近い側で、電源の正極は USB ポートから離れた側です。
 
 
 
 <div class="table-center">
 <iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Xiao%20Esp32S3%20Battery%20Connection.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
-[EMPTY_LIRN]
+
 
 ### 拡張ボードへの接続
 
-ファームウェアを書き込み、Meshtastic アプリをダウンロードした後、拡張ボードは接続や grove センサーやモジュールを簡単に追加するといった追加アプリケーションに便利なツールとなります。
+ファームウェアをフラッシュして Meshtastic アプリをダウンロードした後、拡張ボードは接続や Grove センサーやモジュールを簡単に追加するなどの追加アプリケーションに適したツールになります。
 
-**Step 1**: 接続対象のデバイス（例えば "device"）が電源オンかつ検出可能な状態であることを確認してください。そして、スマートフォン上で Meshtastic アプリを開きます。
+**ステップ 1**: 接続するデバイス（「device」など）の電源が入っており、検出可能な状態であることを確認します。そして、携帯電話で Meshtastic アプリを開きます。
 
-**Step 2**: Meshtastic アプリでは、右下に "+" アイコンがあります。クリックすると、アプリが近くの接続可能なデバイスをスキャン開始します。その後、OLED ディスプレイに表示されている対応するデバイス ID を選択します。
+**ステップ 2**: Meshtastic アプリで、右下に "+" アイコンがあります。それをクリックして、アプリが近くの接続可能なデバイスのスキャンを開始させます。その後、OLED ディスプレイに表示されている対応するデバイス ID を選択します。
 
-**Step 3**: 正しく選択したら、OLED ディスプレイに表示されているコードを入力します。ボタンを押してディスプレイを切り替えます。
+**ステップ 3**: 正しく選択されたら、OLED ディスプレイに表示されているコードを入力します。ボタンを押してディスプレイを切り替えます。
 
 **ボタン機能:**
 
-- 一度押すと画面を切り替えます。
-- 二度押すとブロードキャストします。
-- 三度押すと GPS モードを切り替えます。
+- 1回押すと画面を切り替えます。
+- 2回押すとブロードキャストします。
+- 3回押すと GPS モードを切り替えます。
 
-**Step 4**: LoRa 地域を設定すると、デバイスが再起動します。
+**ステップ 4**: LoRa 地域を設定すると、デバイスが再起動します。
 
-**Step 5**: 再起動が完了すると、デバイスの状態は Meshtastic アプリと OLED ディスプレイで確認できます。
+**ステップ 5**: 再起動が完了すると、デバイスの状態を Meshtastic アプリと OLED ディスプレイで確認できます。
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -88,19 +88,19 @@ XIAO にバッテリーを接続したい場合、保護回路付きの適格な
 
 ### シリアルポートツール
 
-好きなシリアルポートデバッグツールを選択します。以下では mac 上の Comtool を例として説明します。**serial** 接続を選択し、**対応するポート**を選択し、ボーレートを **115200** に設定し、**RTS と DTR** をオンにしてください。接続を開くと、接続データを見ることができます。
-"**nodenum**" を検索して対応するノード ID を探します。そのデフォルトの**パスワードは 123456**です。
+お好みのシリアルポートデバッグツールを選択してください。以下では Mac の Comtool を例に説明します。**serial** 接続を選択し、**対応するポート**を選択し、ボーレートを **115200** に設定し、**RTS と DTR** をオンにします。接続を開くと、接続データを確認できます。
+"**nodenum**" を検索して、対応するノード ID を見つけます。デフォルトの**パスワードは 123456** です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/11.png" style={{width:700, height:'auto'}}/></div>
 
 :::tip
-nodenum の最後4桁は、meshtastic アプリによって発見されたデバイス番号 ID です。例えば、"nodenum 0x9e20d02c" は meshtastic では "Meshtastic_d02c" となります。
+nodenum の下4桁は、meshtastic アプリによって発見されるデバイス番号 ID です。例えば、"nodenum 0x9e20d02c" は meshtastic では "Meshtastic_d02c" になります。
 :::
 
 
-### SX-1262への接続
+### SX-1262 への接続
 
-SX-1262 は B2B インターフェースを通じて Xiao ESP32-S3 に接続できます。SX-1262 は SPI を使用して Xiao ESP32-S3 と通信します。
+SX-1262 は B2B インターフェースを介して Xiao ESP32-S3 に接続できます。SX-1262 は SPI を使用して Xiao ESP32-S3 と通信します。
 
 以下の図は XIAO ESP32S3 と Wio-SX1262 間の B2B ピンマッピングを示しています。
 
@@ -108,22 +108,23 @@ SX-1262 は B2B インターフェースを通じて Xiao ESP32-S3 に接続で�
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
 </div>
 :::warning
-互換性のある SX-1262 はキット内でしか購入できません。
+互換性のある SX-1262 はキット内でのみ購入できます。
 :::
-## Wio Tracker T1000-Eとの通信
 
-**Step 1**. [wiki](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#get-started-1)に従って Wio Tracker T1000-E を接続します。
+## Wio Tracker T1000-E との通信
 
-**Step 2**. Meshatastic 用の XIAO ESP32S3 設定と同じになるように、以下の設定を確認してください。
+**ステップ 1**. [wiki](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#get-started-1) に従って Wio Tracker T1000-E を接続します。
 
-1. デバイスの起動と設定
+**ステップ 2**. 以下の設定が Meshatastic 用 XIAO ESP32S3 の設定と同じであることを確認してください。
 
-- 両デバイスが電源オンかつ通常稼働状態であることを確認してください。
-- デバイスの無線通信機能（Bluetooth、LoRa など）は有効になっているべきです。関連設定をチェックして、誤ってオフになっているまたは制限されていることを確認してください。
+1. デバイスのアクティベーションとセットアップ
+
+- 両方のデバイスの電源が入っており、正常な動作状態であることを確認してください。
+- デバイスの無線通信機能（Bluetooth、LoRa など）が有効になっている必要があります。関連する設定を確認して、誤ってオフにされたり制限されたりしていないことを確認してください。
 
 2. 距離と信号強度
 
-- 両デバイス間の距離はあまり遠くではいけません。初期テストによると、2 dbm IPEX アンテナを持つ Meshtastic 用 XIAO ESP32S3 の通信距離は 2.5 km 以上です。一般的には、より開けた環境では 20 km 以上になります。
+- 2つのデバイス間の距離が遠すぎてはいけません。初期テストの結果、2 dbm IPEX アンテナを使用した Meshtastic 用 XIAO ESP32S3 の通信距離は 2.5 km を超えています。一般的に、より開放的な環境では、20 km を超えることができます。
 
 3. ネットワーク設定
 
@@ -131,9 +132,9 @@ SX-1262 は B2B インターフェースを通じて Xiao ESP32-S3 に接続で�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/12.png" style={{width:350, height:'auto'}}/></div>
 
-**Step 3**. Wio Tracker T1000-E との通信
+**ステップ 3**. Wio Tracker T1000-E との通信
 
-接続後、Meshtastic ネットワークを通じてメッセージの送受信を開始できます。メッセージはテキストベースまたは、デバイスとアプリの機能に依存して追加機能をサポートするかもしれません。また、ネットワーク活動を監視し、現在接続されているかつ稼働しているデバイスを確認できます。
+接続されると、Meshtastic ネットワークを通じてメッセージの送受信を開始できます。メッセージはテキストベースであったり、デバイスとアプリの機能に応じて追加機能をサポートしたりする場合があります。また、ネットワークアクティビティを監視し、現在接続されてアクティブなデバイスを確認することもできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/3.gif" style={{width:350, height:'auto'}}/></div>
 
@@ -143,35 +144,35 @@ SX-1262 は B2B インターフェースを通じて Xiao ESP32-S3 に接続で�
 
 ## センサー接続
 
-Meshtastic アプリケーションにおいて、XIAO esp32s3 キット搭載の Wio-SX1262 は幅広いセンサーをサポートすることができます。XIAO 拡張ボードと組み合わせて使用すると、多数の grove センサーをサポートできます。[こちら](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10)をご確認ください。また、GNSS 追加モジュールと組み合わせると、GPS 機能を持つ meshtastic 内最小モジュールになります。
-[
-]]></translation_rules>
+meshtastic アプリケーションでは、XIAO esp32s3 キット付き Wio-SX1262 は幅広いセンサーをサポートできます。XIAO 拡張ボードと組み合わせて使用すると、多数の Grove センサーをサポートできます。[こちら](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10)をご確認ください。さらに、GNSS アドオンモジュールと組み合わせると、GPS 機能を持つ meshtastic 内で最小のモジュールを形成します。
 
-<task>
-  请翻译以下内容，严格遵守所有规则。
-    </task>
-      
-    <content>
-    ---
-      title: "reTerminal E Series"
-    description: "reTerminal E Series is a powerful and versatile embedded computer designed for industrial applications. It features a 5-inch IPS touchscreen, a quad-core ARM Cortex-A55 processor, and a wide range of connectivity options, including Wi-Fi, Bluetooth, Ethernet, and USB. The device is built to withstand harsh environments and is ideal for use in automation, IoT, and edge computing projects."
-    slug: /reTerminal-E-Series
-      ---
-        ---
-        title: "reTerminal E Series"
-        description: "reTerminal E Series is a powerful and versatile embedded computer designed for industrial applications. It features a 5-inch IPS touchscreen, a quad-core ARM Cortex-A55 processor, and a wide range of connectivity options, including Wi-Fi, Bluetooth, Ethernet, and USB. The device is built to withstand harsh environments and is ideal for use in automation, IoT, and edge computing projects."
-      slug: /reTerminal-E-Series
-    ---
+### 温度・湿度センサー
 
-import DocCardList from '@theme/DocCardList';
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>DHT20 温度・湿度センサー</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
 
-<DocCardList />
+**ステップ 1**: Grove DHT20 センサーを XIAO 拡張ボードに接続します
 
-</content>
+**ステップ 2**: Meshtastic アプリで `Detection Sensor` を有効にします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/13.PNG" style={{width:350, height:'auto'}}/></div>
 
-### GNSS Sensor
+### GNSS センサー
 
 <div class="table-center">
   <table align="center">
@@ -184,56 +185,56 @@ import DocCardList from '@theme/DocCardList';
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Initial Configuration
+## 初期設定
 
 :::note
-For more details, please refer to [Meshtastic](https://meshtastic.org/docs).
+詳細については、[Meshtastic](https://meshtastic.org/docs) を参照してください。
 :::
 
-### Radio Configuration
+### 無線設定
 
-There are several config sections in the Meshtastic firmware, these are broken out so they can be sent as small admin messages over the mesh.
+Meshtastic ファームウェアには複数の設定セクションがあり、これらは小さな管理メッセージとしてメッシュ経由で送信できるように分割されています。
 
-| Name | Description |
+| 名前 | 説明 |
 | ---- | ---- |
-| [Bluetooth](https://meshtastic.org/docs/configuration/radio/bluetooth/) | Bluetooth config options are: Enabled, Pairing Mode and Fixed PIN. |
-| [Channels](https://meshtastic.org/docs/configuration/radio/channels/) | Channels config options are: Index, Role and Settings. |
-| [Device](https://meshtastic.org/docs/configuration/radio/device/) | Device config options are: Device Role, Serial Output, Debug Log and Factory Reset. |
-| [Display](https://meshtastic.org/docs/configuration/radio/display/) | Display config options are: Screen On Duration, Auto Carousel Interval, Always Point North, and GPS Format. |
-| [LoRa](https://meshtastic.org/docs/configuration/radio/lora/) | The LoRa config options are: Region, Modem Preset, Max Hops, Transmit Power, Bandwidth, Spread Factor, Coding Rate, Frequency Offset, Transmit Disabled and Ignore Incoming Array. |
-| [Network](https://meshtastic.org/docs/configuration/radio/network/) | Network config options are: WiFi Enabled, WiFi SSID, WiFi PSK, WiFi Mode and NTP Server. |
-| [Position](https://meshtastic.org/docs/configuration/radio/position/) | Position config options are: GPS Enabled, GPS Update Interval, GPS Attempt Time, Fixed Position, Smart Broadcast, Broadcast Interval and Position Packet Flags. |
-| [Power](https://meshtastic.org/docs/configuration/radio/power/) | Power config options are: Charge Current, Power Saving, Shutdown after losing power, ADC Multiplier Override Wait Bluetooth Interval, Light Sleep Interval and Minimum Wake Interval. |
-| [User](https://meshtastic.org/docs/configuration/radio/user/) | User config options are: Long Name, Short Name, and Is Licensed. |
+| [Bluetooth](https://meshtastic.org/docs/configuration/radio/bluetooth/) | Bluetooth 設定オプション：有効、ペアリングモード、固定 PIN。 |
+| [Channels](https://meshtastic.org/docs/configuration/radio/channels/) | チャンネル設定オプション：インデックス、役割、設定。 |
+| [Device](https://meshtastic.org/docs/configuration/radio/device/) | デバイス設定オプション：デバイス役割、シリアル出力、デバッグログ、工場出荷時リセット。 |
+| [Display](https://meshtastic.org/docs/configuration/radio/display/) | ディスプレイ設定オプション：画面オン時間、自動カルーセル間隔、常に北を指す、GPS フォーマット。 |
+| [LoRa](https://meshtastic.org/docs/configuration/radio/lora/) | LoRa 設定オプション：地域、モデムプリセット、最大ホップ数、送信電力、帯域幅、拡散係数、符号化率、周波数オフセット、送信無効、受信配列無視。 |
+| [Network](https://meshtastic.org/docs/configuration/radio/network/) | ネットワーク設定オプション：WiFi 有効、WiFi SSID、WiFi PSK、WiFi モード、NTP サーバー。 |
+| [Position](https://meshtastic.org/docs/configuration/radio/position/) | 位置設定オプション：GPS 有効、GPS 更新間隔、GPS 試行時間、固定位置、スマートブロードキャスト、ブロードキャスト間隔、位置パケットフラグ。 |
+| [Power](https://meshtastic.org/docs/configuration/radio/power/) | 電源設定オプション：充電電流、省電力、電源喪失後のシャットダウン、ADC 乗数オーバーライド、Bluetooth 待機間隔、軽量スリープ間隔、最小ウェイク間隔。 |
+| [User](https://meshtastic.org/docs/configuration/radio/user/) | ユーザー設定オプション：長い名前、短い名前、ライセンス有無。 |
 
-### Module Configuration
+### モジュール設定
 
-Modules are included in the firmware and allow users to extend the functionality of their mesh or device.
+モジュールはファームウェアに含まれており、ユーザーがメッシュやデバイスの機能を拡張できます。
 
-| Name | Description |
+| 名前 | 説明 |
 | ---- | ---- |
-| [Ambient Lighting](https://meshtastic.org/docs/configuration/module/ambient-lighting/) | Adjust the brightness of NCP5623 I2C RGB LEDs. |
-| [Audio](https://meshtastic.org/docs/configuration/module/audio/) | Enable Support for Codec2 Voice Comms on certain devices. |
-| [Canned Message](https://meshtastic.org/docs/configuration/module/canned-message/) | Set a number of predefined messages to send out directly from the device with the use of an input device like a rotary encoder. |
-| [Detection Sensor](https://meshtastic.org/docs/configuration/module/detection-sensor/) | Configure a GPIO pin to be monitored for specified high/low status and send text alerts. |
-| [External Notification](https://meshtastic.org/docs/configuration/module/external-notification/) | Incoming messages are able to alert you using circuits you attach to the device (LEDs, Buzzers, etc). |
-| [MQTT](https://meshtastic.org/docs/configuration/module/mqtt/) | Forward packets along to an MQTT server. This allows users on the local mesh to communicate with users on another mesh over the internet. |
-| [Neighbor Info](https://meshtastic.org/docs/configuration/module/neighbor-info/)| Send info on 0-hop neighbors to the mesh. |
-| [Paxcounter](https://meshtastic.org/docs/configuration/module/paxcounter/) | Count the number of BLE and Wifi devices passing by a node. |
-| [Range Test](https://meshtastic.org/docs/configuration/module/range-test/) | Send messages with GPS location at an interval to test the distance your devices can communicate. Requires (at least) one device set up as a sender and one as a receiver. The receiver(s) will log all incoming messages to a CSV. |
-| [Remote Hardware](https://meshtastic.org/docs/configuration/module/remote-hardware/) | Set and read a GPIO status remotely over the mesh. |
-| [Serial Module](https://meshtastic.org/docs/configuration/module/serial/) | Send messages across the mesh by sending strings over a serial port. |
-| [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | Stores messages on a device for delivery after disconnected clients rejoin the mesh. |
-| [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | Attach sensors to the device and transmit readings on a regular interval to the mesh. |
-| [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | Track which nodes are used to hop a message to a certain destination. |
-## Resource
+| [Ambient Lighting](https://meshtastic.org/docs/configuration/module/ambient-lighting/) | NCP5623 I2C RGB LED の明度を調整します。 |
+| [Audio](https://meshtastic.org/docs/configuration/module/audio/) | 特定のデバイスで Codec2 音声通信のサポートを有効にします。 |
+| [Canned Message](https://meshtastic.org/docs/configuration/module/canned-message/) | ロータリーエンコーダーなどの入力デバイスを使用して、デバイスから直接送信する定型メッセージを設定します。 |
+| [Detection Sensor](https://meshtastic.org/docs/configuration/module/detection-sensor/) | 指定された高/低状態を監視する GPIO ピンを設定し、テキストアラートを送信します。 |
+| [External Notification](https://meshtastic.org/docs/configuration/module/external-notification/) | 受信メッセージは、デバイスに接続した回路（LED、ブザーなど）を使用してアラートできます。 |
+| [MQTT](https://meshtastic.org/docs/configuration/module/mqtt/) | パケットを MQTT サーバーに転送します。これにより、ローカルメッシュのユーザーがインターネット経由で別のメッシュのユーザーと通信できます。 |
+| [Neighbor Info](https://meshtastic.org/docs/configuration/module/neighbor-info/)| 0 ホップ隣接ノードの情報をメッシュに送信します。 |
+| [Paxcounter](https://meshtastic.org/docs/configuration/module/paxcounter/) | ノードを通過する BLE および WiFi デバイスの数をカウントします。 |
+| [Range Test](https://meshtastic.org/docs/configuration/module/range-test/) | GPS 位置情報付きメッセージを一定間隔で送信し、デバイス間の通信距離をテストします。送信者として設定されたデバイスと受信者として設定されたデバイスが（少なくとも）1 台ずつ必要です。受信者は受信したすべてのメッセージを CSV にログ記録します。 |
+| [Remote Hardware](https://meshtastic.org/docs/configuration/module/remote-hardware/) | メッシュ経由で GPIO 状態をリモートで設定・読み取りします。 |
+| [Serial Module](https://meshtastic.org/docs/configuration/module/serial/) | シリアルポート経由で文字列を送信することで、メッシュ間でメッセージを送信します。 |
+| [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | 切断されたクライアントがメッシュに再参加した後の配信のため、デバイスにメッセージを保存します。 |
+| [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | デバイスにセンサーを接続し、定期的にメッシュに測定値を送信します。 |
+| [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | 特定の宛先へのメッセージのホップに使用されるノードを追跡します。 |
+## リソース
 - **[PDF]**[The Schematic Diagram of the SX1262 compatible with Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
 - **[PDF]**[Wio-SX1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
 - **[RAR]**[Wio-SX1262 for XlAO 3D file](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
@@ -247,14 +248,14 @@ Modules are included in the firmware and allow users to extend the functionality
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - [Casing 3D file](https://www.thingiverse.com/thing:6888371)
-## Course Resources
+## コースリソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
-## Tech Support & Product Discussion
+## 技術サポート & 製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
