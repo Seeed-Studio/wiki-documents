@@ -78,23 +78,21 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
       <div className="category-group">
         <div className="category-card robot-kits">
 
-
-          <h3>🦾 reBot 机械臂</h3>
+          <h3>🦾 reBot机械臂</h3>
           <div className="card-container">
               <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
-                <span className="text">reBot B601-DM 入门指南</span>
+                <span className="text">reBot B601-DM 快速开始</span>
                 <span className="tag recommended">New</span>
               </a>
               <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
-                <span className="text">reBot 与 Pinocchio</span>
+                <span className="text">reBot B601-DM 与 Pinocchio</span>
               </a>
-              <a href="/cn/rebot_arm_b601_dm_lerobot/" className="content-card">
-                <span className="text">reBot 与 LeRobot</span>
+              <a href="/cn/rebot_arm_b601_dm_lerobot_102/" className="content-card">
+                <span className="text">reBot B601-DM 与 LeRobot</span>
               </a>
           </div>
 
-
-          <h3> 🤗 Reachy</h3>
+          <h3>🤗 Reachy</h3>
           <div className="card-container">
               <a href="/cn/reachymini_getting_started" className="content-card">
                 <span className="text">Reachy Mini 入门指南</span>

@@ -2734,6 +2734,7 @@ const sidebars = {
               items: [
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_ChirpStack',
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_TTN',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_AWS_IoT',
               ],
             },
             /*{
@@ -4073,6 +4074,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/es_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/es_Flash_JetPack_with_WSL2',
           ]
         }
