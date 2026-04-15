@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/other/thor-post.png
 slug: /how_to_build_and_flash_bsp_source_for_jetson_thor
 sku: 100060965
 last_update:
-  date: 14/04/2026
+  date: 04/14/2026
   author: Dayu
 createdAt: '2026-04-14'
 updatedAt: '2026-04-14'
