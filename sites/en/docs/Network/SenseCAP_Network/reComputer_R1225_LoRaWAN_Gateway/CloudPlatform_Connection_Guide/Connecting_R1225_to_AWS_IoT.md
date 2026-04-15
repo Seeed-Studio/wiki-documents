@@ -7,7 +7,7 @@ keywords:
   - Edge Controller
   - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /connecting_r1225_to_chirpstack
+slug: /connecting_r1225_to_aws_iot
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 04/07/2026
