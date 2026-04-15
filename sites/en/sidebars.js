@@ -2111,6 +2111,8 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
               ],
             },
+            'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
+            'Sensor/reSpeaker_flex/reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
@@ -4086,6 +4088,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
           ]
         }
@@ -4357,6 +4360,19 @@ const sidebars = {
           label: 'End Effectors',
           items: [
             'Robotics/Robot_Kits/End_Effectors/DM_Gripper',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'reBot Arm',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
+              ]
+            }
           ]
         },
         {

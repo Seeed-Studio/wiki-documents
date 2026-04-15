@@ -11,7 +11,7 @@ last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-04-03'
+updatedAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
@@ -170,7 +170,7 @@ When the XIAO is fitted, the following connections are wired between it and the 
 - **RST line** — XIAO can assert a hardware reset on the XVF3800 via a dedicated IO pin
 - **Remaining XIAO IO** — brought out to labelled pin headers/pads for user expansion
 
-An FPC Wi-Fi antenna (for the on-board antenna-free XIAO ESP32S3) is included as an accessory with all XIAO-equipped variants.
+
 
 ### Pin Header 
 
