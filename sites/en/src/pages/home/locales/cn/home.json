@@ -1,0 +1,12 @@
+{
+  "banner": {
+    "title": "Seeed Studio Wiki 平台",
+    "description": "自 2008 年起，Seeed Studio 一直作为物联网硬件合作伙伴，致力于实现我们物理世界的交互式数字化复本。这里是一个开放平台，汇集了 Seeed Studio 发布的全部 Wiki，向你展示我们在自然环境数字化与成果产出方面的完整版图。",
+    "btnGettingStarted": "快速开始",
+    "btnTechnology": "技术专题"
+  },
+  "techSupport": {
+    "title": "技术支持与产品讨论",
+    "desc": "感谢你选择我们的产品！我们提供多种支持方式，以确保你的使用体验尽可能顺畅。我们提供多个沟通渠道，以满足不同偏好与需求。"
+  }
+}
