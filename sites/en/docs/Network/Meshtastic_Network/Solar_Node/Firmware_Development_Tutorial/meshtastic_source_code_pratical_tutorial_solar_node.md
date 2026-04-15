@@ -765,6 +765,10 @@ build_flags =
   -DARDUINO_USB_MODE=0
 ```
 
+The `build_flags` change should look similar to this:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image4.png)
+
 These three flags do the following:
 
 - Enable environmental telemetry by default
@@ -788,8 +792,6 @@ The expected mesh dispatch log looks like this:
 Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
 ```
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image4.png)
-
 ### Configure the nearby gateway node
 
 Use a nearby Meshtastic device as a `CLIENT` on the same mesh. After the remote node starts sending telemetry, confirm that the gateway can receive:
@@ -803,8 +805,6 @@ If the gateway keeps trying to connect to Wi-Fi during testing, disable Wi-Fi wi
 ```bash
 meshtastic --port <gateway_port> --set network.wifi_enabled false
 ```
-
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
 
 ### Build, flash, and verify
 
@@ -823,7 +823,9 @@ Direct download links:
 - [📎EnvironmentTelemetry.h](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.h)
 - [📎EnvironmentTelemetry.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.cpp)
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
+If you copy the files with a graphical file manager, the replacement prompt should look similar to this:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
 
 **Step 2: Build the remote firmware**
 
@@ -864,6 +866,14 @@ pio run -e seeed-xiao-s3 -t upload --upload-port /dev/cu.usbmodemXXXX
 </TabItem>
 </Tabs>
 
+Use `pio device list` first so you can identify the correct serial port:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image7.png)
+
+After the upload finishes, PlatformIO should report a successful flash:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
+
 **Step 4: Monitor the serial logs**
 
 Use PlatformIO's serial monitor to check both the remote node and the nearby gateway.
@@ -895,8 +905,6 @@ Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
 Send: relative_humidity=...
 Send: ... temperature=...
 ```
-
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image7.png)
 
 **Step 5: Validate with the Meshtastic CLI**
 
@@ -940,11 +948,15 @@ Focus on:
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
-
 **Step 6: Confirm in the mobile app**
 
 After flashing, connect to the remote node with the Meshtastic mobile app and confirm that the environmental data is visible. Then connect the app to another device on the same mesh and check the `Nodes` view to confirm that the sensor values are being received over the mesh.
+
+On the remote sensor node, you should be able to see the environmental telemetry values directly in the app:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
+
+On the nearby node, the same readings should appear in the `Nodes` view after they are forwarded through the mesh:
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image10.png)
 
