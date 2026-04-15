@@ -4073,6 +4073,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/pt_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/pt_Flash_JetPack_with_WSL2',
           ]
         }
