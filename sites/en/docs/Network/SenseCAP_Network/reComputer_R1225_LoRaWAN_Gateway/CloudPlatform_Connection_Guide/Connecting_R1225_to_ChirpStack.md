@@ -114,7 +114,6 @@ Other settings can be left as default, or can be changed to suit your requiremen
 
 Navigate to **`LoRa` > `Channel Plan`**
 
-
 Select the Region and Frequency plan according to the actual choice.
 
 After setting, click **Save&Apply**
