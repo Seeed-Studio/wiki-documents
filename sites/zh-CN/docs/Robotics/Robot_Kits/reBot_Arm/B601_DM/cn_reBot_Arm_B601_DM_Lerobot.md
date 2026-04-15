@@ -114,12 +114,17 @@ TODO
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
 
-### 1. 安装 uv
+### 1. 安装 Miniforge
 
-对于所有平台（包括 Jetson 和 X86 Ubuntu 22.04）：
+<!-- 对于所有平台（包括 Jetson 和 X86 Ubuntu 22.04）： -->
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+cd ~
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+
+~/miniforge3/bin/conda init bash
+source ~/.bashrc
 ```
 
 ### 2. 克隆 Lerobot 仓库
@@ -143,57 +148,62 @@ git clone https://github.com/Seeed-Projects/lerobot.git
 ```bash
 cd ~/rebot_lerobot
 
-# 克隆 leader 功能包
+# 克隆 rebot 102 leader 功能包
 git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.git
 
-# 克隆 follower 功能包
+# 克隆 rebot b601 follower 功能包
 git clone https://github.com/Seeed-Projects/lerobot-robot-seeed-b601.git
 ```
 
-### 4. 创建 uv 虚拟环境并安装 LeRobot
+### 4. 创建 Conda 环境并安装 LeRobot
 
-lerobot 仓库已有 pyproject.toml，创建虚拟环境并安装所有依赖包。
+lerobot 仓库已有 pyproject.toml，创建 conda 环境并安装所有依赖包。
 
 ```bash
-cd ~/rebot_lerobot/lerobot
+cd ~/rebot_lerobot
 
-# 创建 uv 虚拟环境 安装 lerobot 主项目（Python 3.10）
-uv sync --python 3.10
+# 创建 conda 环境（Python 3.12）
+conda create -y -n lerobot python=3.12
+
+# 激活环境
+conda activate lerobot
+
+# 安装 lerobot 主项目（可编辑模式）
+pip install -e ./lerobot
 
 # 添加本地依赖包（可编辑安装）
-uv add --editable ../lerobot-teleoperator-rebot-arm-102
-uv add --editable ../lerobot-robot-seeed-b601
-uv add motorbridge
+pip install -e ./lerobot-teleoperator-rebot-arm-102
+pip install -e ./lerobot-robot-seeed-b601
+pip install motorbridge
 ```
 
-:::tip
-**注意**：`.[feetech]` 是 SO101 机械臂的特殊依赖（Feetech 舵机通过 UART 通信），reBot B601-DM 不需要此依赖。
-:::
 
 ### 5. 安装 ffmpeg
 
-ffmpeg 是系统级依赖，需通过系统包管理器安装：
+ffmpeg 是视频解码依赖，通过 conda 安装：
 
 ```bash
-# Ubuntu/Debian
-sudo apt update && sudo apt install -y ffmpeg
+conda install ffmpeg -c conda-forge
 ```
+
+:::tip
+**版本说明**：
+- 默认会安装 ffmpeg 7.X（支持 libsvtav1 编码器）
+- 如果遇到版本兼容问题，可以指定安装 ffmpeg 7.1.1：
+  ```bash
+  conda install ffmpeg=7.1.1 -c conda-forge
+  ```
+- 可通过 `ffmpeg -encoders | grep svtav1` 检查是否支持 libsvtav1 编码器
+:::
 
 ### 6. Jetson Jetpack 6.0+ 设备特殊配置
 
 (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
-uv add opencv-python==4.10.0.84  # 安装指定版本 OpenCV
-uv add numpy==1.26.0  # 该版本需与 torchvision 兼容
+pip install opencv-python==4.10.0.84  # 安装指定版本 OpenCV
+pip install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
-
-:::tip
-这通常会为你的平台安装支持 libsvtav1 编码器的 ffmpeg 7.X。如果不支持 libsvtav1（可以通过 `ffmpeg --encoders` 查看支持的编码器），你可以重新安装 ffmpeg 7.1.1：
-```bash
-uv add ffmpeg==7.1.1
-```
-:::
 
 ### 7. 检查 Pytorch 和 Torchvision
 
@@ -267,7 +277,7 @@ sudo apt remove brltty #移除brltty
 ```bash
 sudo chmod 666 /dev/ttyUSB0
 
-uv run lerobot-calibrate \
+lerobot-calibrate \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
@@ -276,7 +286,7 @@ uv run lerobot-calibrate \
 
 校准完成后，输入以下命令来测试leader机械臂。
 ```bash
-uv run ../lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
+python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
       --port /dev/ttyUSB0
 
 #如果你观测到终端输出类似于如下的字样一直打印，并且在位于上图零点时，各个关节输出值都为0。则代表leader你已经校准完成
@@ -303,14 +313,15 @@ sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 
 运行遥操作：
 ```bash
-uv run lerobot-teleoperate \
+lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader
+    --teleop.id=rebot_arm_102_leader \
+    --teleop.joint_directions='{"shoulder_pan":-1,"shoulder_lift":-1,"elbow_flex":1,"wrist_flex":1,"wrist_yaw":1,"wrist_roll":-1,"gripper":-4}'
 ```
 
 
@@ -332,18 +343,18 @@ uv run lerobot-teleoperate \
    前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)，  
    根据 Python 版本选择并安装，例如：
    ```bash
-   uv add pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
+   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
    ```
 
 3. 在 `pyorbbec` 目录下安装依赖
    ```bash
    cd ~/pyorbbecsdk
-   uv add -r requirements.txt
+   pip install -r requirements.txt
    ```
 
   强制降低`numpy`版本到`1.26.0`
     ```bash
-    uv add numpy==1.26.0
+    pip install numpy==1.26.0
     ```
   可以忽略红色报错。
 
@@ -393,7 +404,7 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 
 ```bash
 
-uv run lerobot-teleoperate \
+lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
@@ -440,7 +451,7 @@ uv run lerobot-teleoperate \
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
 
 ```bash
-uv run lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
+lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
 终端会打印相关摄像头信息。
@@ -471,7 +482,7 @@ Camera #0:
 
 <!-- TODO: reBot 的摄像头配置命令 -->
 ```bash
-uv run lerobot-teleoperate \
+lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
@@ -493,7 +504,7 @@ uv run lerobot-teleoperate \
 
 <!-- TODO: reBot 多摄像头配置命令 -->
 ```bash
-uv run lerobot-teleoperate \
+lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
@@ -520,7 +531,7 @@ uv run lerobot-teleoperate \
 
 <!-- TODO: reBot 本地数据采集命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
@@ -562,7 +573,7 @@ echo $HF_USER
 
 <!-- TODO: reBot 数据采集并上传到 Hugging Face 命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
@@ -628,7 +639,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 :::tip
 如果你的键盘按下后没有反应，可能你需要降低你pynput的版本，例如安装个1.6.8版本的。
 ```bash
-uv add pynput==1.6.8
+pip install pynput==1.6.8
 ```
 :::
 
@@ -667,7 +678,7 @@ echo ${HF_USER}/rebot_test
 如果您上传了数据，您也可以在本地通过以下命令进行可视化：
 
 ```bash
-uv run lerobot-dataset-viz \
+lerobot-dataset-viz \
   --repo-id ${HF_USER}/rebot_test \
   --episode-index 0 \
   --display-compressed-images=false
@@ -676,7 +687,7 @@ uv run lerobot-dataset-viz \
 如果您使用了 `--dataset.push_to_hub=false` ，没有上传数据，您也可以通过以下命令在本地进行可视化：
 
 ```bash
-uv run lerobot-dataset-viz \
+lerobot-dataset-viz \
   --repo-id seeed_rebot_b601_dm/test \
   --episode-index 0 \
   --display-compressed-images=false
@@ -700,7 +711,7 @@ uv run lerobot-dataset-viz \
 
 <!-- TODO: reBot 数据集回放命令 -->
 ```bash
-uv run lerobot-replay \
+lerobot-replay \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.can_adapter=damiao \
@@ -731,7 +742,7 @@ uv run lerobot-replay \
 **如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
 
 ```bash
-uv run lerobot-train \
+lerobot-train \
   --dataset.repo_id=seeed_rebot_b601_dm/test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
@@ -745,7 +756,7 @@ uv run lerobot-train \
 **or使用保存在远程的数据**
 
 ```bash
-uv run lerobot-train \
+lerobot-train \
   --dataset.repo_id=${HF_USER}/rebot_test \
   --policy.type=act \
   --output_dir=outputs/train/act_rebot_test \
@@ -774,7 +785,7 @@ uv run lerobot-train \
 
 <!-- TODO: reBot ACT 评估命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
@@ -802,12 +813,12 @@ uv run lerobot-record \
 参考官方教程[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)
 
 ```bash
-uv add -e ".[smolvla]"
+pip install -e ".[smolvla]"
 ```
 
 **训练**
 ```bash
-uv run lerobot-train \
+lerobot-train \
   --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
   --dataset.repo_id=${HF_USER}/mydataset \
   --batch_size=64 \
@@ -822,7 +833,7 @@ uv run lerobot-train \
 
 <!-- TODO: reBot SmolVLA 评估命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
@@ -849,12 +860,12 @@ uv run lerobot-record \
 参考官方教程[Pi0](https://huggingface.co/docs/lerobot/pi0) 
 
 ```bash
-uv add -e ".[pi]"
+pip install -e ".[pi]"
 ```
 
 **训练**
 ```bash
-uv run lerobot-train \
+lerobot-train \
   --policy.type=pi0 \
   --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
@@ -873,7 +884,7 @@ uv run lerobot-train \
 
 <!-- TODO: reBot Pi0 评估命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
@@ -895,12 +906,12 @@ uv run lerobot-record \
 参考官方教程[Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
 
 ```bash
-uv add -e ".[pi]"
+pip install -e ".[pi]"
 ```
 
 **训练**
 ```bash
-uv run lerobot-train \
+lerobot-train \
     --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
@@ -919,7 +930,7 @@ uv run lerobot-train \
 
 <!-- TODO: reBot Pi0.5 评估命令 -->
 ```bash
-uv run lerobot-record \
+lerobot-record \
   --robot.type=seeed_b601_dm_follower \
   --robot.port=/dev/ttyACM0 \
   --robot.can_adapter=damiao \
@@ -957,7 +968,7 @@ uv run lerobot-record \
 尝试运行以下命令来解决:
 
 ```bash
-uv add datasets==2.19
+pip install datasets==2.19
 ```
 
 
@@ -965,7 +976,7 @@ uv add datasets==2.19
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
 ```bash
-uv run lerobot-train \
+lerobot-train \
   --config_path=outputs/train/act_rebot_test/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
@@ -998,7 +1009,7 @@ uv run lerobot-train \
   ```bash
   No valid stream found in input file. Is -1 of the desired media type?
   ```
-  请安装ffmpeg7.1.1,`uv add ffmpeg=7.1.1`。
+  请安装 ffmpeg 7.1.1：`conda install ffmpeg=7.1.1 -c conda-forge`。
 
 - 如果遇到
   ```bash
