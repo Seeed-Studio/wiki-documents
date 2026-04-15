@@ -557,7 +557,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
       <td className="tg-rzif">IO11</td>
       <td className="tg-rzif">FSPI_MISO</td>
     </tr>
-    [LINE48]    <tr>
+    <tr>
       <td className="tg-rzif">IO12</td>
       <td className="tg-rzif">FSPI_MOSI</td>
     </tr>
@@ -568,7 +568,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
     <tr>
       <td className="tg-rzif">IO14</td>
       <td className="tg-rzif">INT #</td>
-    [LINE59]    </tr>
+    </tr>
     <tr>
       <td className="tg-rzif">IO15</td>
       <td className="tg-rzif">RST #</td>
