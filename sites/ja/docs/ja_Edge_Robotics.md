@@ -78,6 +78,31 @@ url: https://wiki.seeedstudio.com/ja/robotics_page/
       <div className="category-group">
         <div className="category-card robot-kits">
 
+
+          <h3>🦾 reBot アーム</h3>
+          <div className="card-container">
+              <a href="/ja/rebot_b601_dm_getting_started/" className="content-card">
+                <span className="text">reBot B601-DM 入門ガイド</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
+                <span className="text">Pinocchio を使用した reBot</span>
+              </a>
+              <a href="/ja/rebot_arm_b601_dm_lerobot/" className="content-card">
+                <span className="text">LeRobot を使用した reBot</span>
+              </a>
+          </div>
+
+
+          <h3> 🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/ja/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini 入門ガイド</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+
           <h3>🤗 SO-Arm</h3>
           <div className="card-container">
               <a href="/ja/lerobot_so100m_new/" className="content-card">
