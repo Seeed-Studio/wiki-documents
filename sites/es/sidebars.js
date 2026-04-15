@@ -2104,6 +2104,8 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_picovoice',
               ],
             },
+            'Sensor/reSpeaker_flex/es_reSpeaker_flex_xiao',
+            'Sensor/reSpeaker_flex/es_reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',

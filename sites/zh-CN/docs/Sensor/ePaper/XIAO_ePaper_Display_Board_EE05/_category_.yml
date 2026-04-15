@@ -1,0 +1,5 @@
+position: 3
+label: 'XIAO 电子纸显示板 EE05'
+collapsible: true
+collapsed: true
+className: xiao_epaper_display_board_ee05
