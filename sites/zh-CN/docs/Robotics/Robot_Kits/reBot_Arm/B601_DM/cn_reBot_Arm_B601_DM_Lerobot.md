@@ -1,18 +1,19 @@
 ---
 description: 本wiki提供 reBot Arm B601-DM 在 Lerobot 框架内实现数据收集和训练的完整流程。
-title: 在Lerobot 中使用 reBot Arm B601-DM和reBot 102 leader
+title: reBot Arm B601-DM入门Lerobot
 keywords:
   - Lerobot
   - Huggingface
   - 机械臂
   - rebot arm
   - 机器人
-image: TODO
 slug: /rebot_arm_b601_dm_lerobot
-sku: TODO
 last_update:
-  date: 2026-04-09
+  date: 2026-04-15
   author: LiuJunjie
+translation:
+  skip:
+    - [zh-CN]
 createdAt: '2026-04-09'
 updatedAt: '2026-04-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
@@ -20,9 +21,8 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 
 # 基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程
 
-[reBot Arm B601-DM](TODO)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。
+[reBot Arm B601-DM](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)是由Seeed开源的是一个致力于降低具身智能学习门槛的机械臂项目。我们毫无保留地开源了所有结构设计和代码，一起让机器人技术触手可及。
 
-reBot 102 leader是由fashionrobo设计的一款低成本直观的机器人遥控臂，它采用无电机的关节设计，没有阻尼。在软件上与Seeed rebot Arm B601 兼容。支持lerobot。
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。
 
@@ -49,16 +49,6 @@ reBot-DevArm 和 reComputer Jetson AI 智能机器人套件无缝结合了高精
 
 本维基提供了 reBot-DevArm 调试教程，并在 Lerobot 框架内实现数据收集和训练。
 
-<!-- <div align="center">
-    <img width={800} 
-    src="TODO" />
-</div>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="TODO" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
-</a></div> -->
-
 :::caution
 Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或环境问题，请先查阅文末FAQ，或者联系客服加入SeeedStudio Lerobot交流群询问，也可以在这里询问：[LeRobot GitHub](https://github.com/huggingface/lerobot) 或 [Discord频道](https://discord.gg/8TnwDdjFGU)。  
 :::
@@ -78,7 +68,7 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
    支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
 
 
-# 初始系统环境
+## 初始系统环境
 **For Ubuntu X86:**
   - Ubuntu 22.04
   - CUDA 12+
@@ -91,32 +81,12 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
   - Python 3.10
   - Torch 2.3+
 
-
-# 步骤目录
-TODO
-  <!-- - [A. 安装 Lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
-  - [B. 校准机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准机械臂)
-  - [C. 遥操作](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#遥操作)
-  - [D. 添加摄像头](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
-  - [E. 数据集制作采集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#数据集制作采集)
-  - [F. 可视化数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
-  - [G. 重播一个回合](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#重播一个回合)
-  - [H. 训练](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练)
-  - [I. 评估](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#评估) -->
-
-## 安装 LeRobot
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819257025&bvid=BV1r6UUBFEBM&cid=34226636693&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
+## 安装LeRobot
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
 
 ### 1. 安装 Miniforge
-
-<!-- 对于所有平台（包括 Jetson 和 X86 Ubuntu 22.04）： -->
 
 ```bash
 cd ~
@@ -207,6 +177,12 @@ pip install numpy==1.26.0  # 该版本需与 torchvision 兼容
 
 ### 7. 检查 Pytorch 和 Torchvision
 
+:::tip
+如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
+:::
+
+
+
 由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
 ```python
@@ -216,21 +192,15 @@ import torch
 print(torch.cuda.is_available())#输出结果应该为True
 ```
 
-如果输出为 True ，您可以输入 exit()来退出python，继续进行下列步骤
+如果输出为 True ，您可以输入 exit()来退出python，继续进行下列步骤  
+如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。  
 
-如果输出结果为 False，需要根据 [官网教程](https://pytorch.org/index.html) 重新安装 Pytorch 和 Torchvision。
-
-如果你使用的是 Jetson 设备，请根据 [此教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) 安装 Pytorch 和 Torchvision。
 
 
 ## 校准机械臂
 
-TODO:提供一个视频链接
-<!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div> -->
-
-接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
+这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
 首先，您需要授予接口权限，运行以下命令：
 
@@ -242,7 +212,13 @@ sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 
 
 ### 校准follower臂
-B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次校准，你需要做的确保是在启动前，将B601-DM放置到如图所示的位置（夹爪要确保闭合）。
+B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次校准。  
+你需要做的确保是在启动前，将B601-DM放置到如图所示的位置（夹爪要完全闭合）。
+  <div align="center">
+      <img width={800} 
+      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
+  </div>
+
 
 ### 校准leader臂
 校准的步骤至关重要，会直接影响机械臂是否正常运行，请严格按照流程执行。
@@ -259,11 +235,6 @@ B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次�
 - 关节方向定义在配置文件中，若方向不一致需修改配置而非重新校准
 - reBot 102 leader 使用 USB 转 UART 模块，通常映射为 `/dev/ttyUSB*`
 - 使用 `ls /dev/ttyUSB*` 查看实际端口号
-:::
-
-TODO：给一张零位的照片
-
-
 
 如果是初次连接，可能会报找不到串口/dev/ttyACM0,此时因为brltty在占用该串口，请执行如下步骤
 
@@ -271,8 +242,16 @@ TODO：给一张零位的照片
 sudo dmesg | grep ttyUSB #看到最后一行显示disconnected
 sudo apt remove brltty #移除brltty
 ```
+:::
 
-执行校准步骤
+
+
+<div align="center">
+    <img width={800} 
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/102_zeroposition.jpg" />
+</div>
+
+按照提示，将leader机械臂移动到上图所示的零点，
 
 ```bash
 sudo chmod 666 /dev/ttyUSB0
@@ -282,8 +261,7 @@ lerobot-calibrate \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader
 ```
-按照提示，你将leader机械臂移动到如图所示的零点，保持静止，然后按下enter，直到提示校准完成。
-
+保持静止，然后按下enter，直到提示校准完成。  
 校准完成后，输入以下命令来测试leader机械臂。
 ```bash
 python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
@@ -296,14 +274,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 </details>
 
 
-<!-- <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div> -->
-
-
-## 遥控操作
-
-<!-- TODO: reBot 102 leader 和 B601-DM follower 的遥操作命令 -->
+## 遥操作
 
 先对串口给予权限：
 ```bash
@@ -396,9 +367,6 @@ from .orbbec.configuration_orbbec import OrbbecCameraConfig
 
 -  🚀 步骤 2：函数调用与示例
 
-以下示例均需将 `机器人型号` 替换为你所使用实际机械臂型号（TODO）。
-
-
 我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
 目前支持的分辨率只限于 width: 640, height: 880
 
@@ -441,11 +409,6 @@ lerobot-teleoperate \
 
 </details>
 
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819258545&bvid=BV1r6UUBFE8r&cid=34229454301&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-
 为了实例化摄像头，您需要一个摄像头标识符。这个标识符可能会在您重启电脑或重新插拔摄像头时发生变化，这主要取决于您的操作系统。
 
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
@@ -480,7 +443,7 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
-<!-- TODO: reBot 的摄像头配置命令 -->
+
 ```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
@@ -519,11 +482,6 @@ lerobot-teleoperate \
 
 
 ## 数据集制作采集
-
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819257003&bvid=BV1r6UUBFEzq&cid=34229456824&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 <details>
 
@@ -667,10 +625,6 @@ Linux 问题：
 
 ## 可视化数据集
 
-:::tip
-不稳定，可跳过，可尝试。
-:::
-
 ```bash
 echo ${HF_USER}/rebot_test  
 ```
@@ -695,12 +649,6 @@ lerobot-dataset-viz \
 
 这里，`seeed_rebot_b601_dm/test` 是数据收集时自定义的 `repo_id` 名称。
 
-  <div align="center">
-      <img width={800} 
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" />
-  </div>
-
-
 ## 回放一个数据集
 
 :::tip
@@ -723,12 +671,6 @@ lerobot-replay \
 此时，机器人应该做出与你遥操记录时一样的动作。
 
 ## 训练及评估
-
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819256994&bvid=BV1r6UUBFEz2&cid=34229522064&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
 
 <details>
 <summary>[ACT](https://huggingface.co/docs/lerobot/act) </summary>
@@ -981,23 +923,10 @@ lerobot-train \
   --resume=true
 ```
 
-
-
-<div class="video-container ">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-
 ## FAQ
 
 - 如果实用本文档教程，请git clone本文档推荐的github仓库`https://github.com/Seeed-Projects/lerobot.git`，本文档推荐的仓库是验证过后的稳定版本，Lerobot官方仓库是实时更新的最新版本，会出现一些无法预知的问题，例如数据集版本不同，指令不同等。
 
-
-- 如果校准舵机ID时候遇到
-  ```bash
-  `Motor ‘gripper’ was not found, Make sure it is connected`
-  ```
-  请仔细检查通讯线是否与舵机连接正常，电源是否正确电压供电。”
 
 - 如果遇到
   ```bash
@@ -1010,21 +939,6 @@ lerobot-train \
   No valid stream found in input file. Is -1 of the desired media type?
   ```
   请安装 ffmpeg 7.1.1：`conda install ffmpeg=7.1.1 -c conda-forge`。
-
-- 如果遇到
-  ```bash
-  ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!
-  ```
-  需要检查对应端口号的机械臂是否接通电源，总线舵机是否出现数据线松动或者脱落,哪个舵机灯不亮就是前面那个舵机的线松了。
-
-- 如果校准机械臂的时候遇到
-  ```bash
-  Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
-  ```
-  对机械臂进行重新断电和上电，再次尝试校准机械臂加准，如果在校准过程中遇到MAX角度达到上万的值也可以使用这个方法，如果不行则需要对相应舵机进行重新舵机校准，即中位校准和ID写入。
-
-
-- 如果你维修或更换过机械臂零件，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 
