@@ -2735,6 +2735,7 @@ const sidebars = {
               items: [
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_ChirpStack',
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_TTN',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_AWS_IoT',
               ],
             },
             /*{
