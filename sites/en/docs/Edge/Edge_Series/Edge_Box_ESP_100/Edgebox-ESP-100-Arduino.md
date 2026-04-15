@@ -935,6 +935,20 @@ Do not Power Up the Edgebox-ESP-100 until next step
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
 
+## Resources
+
+[EdgeBox ESP 4G Module doc](https://files.seeedstudio.com/wiki/edge_box_esp/4G_module_A7670G_Spec.pdf)
+
+[Edge Series Warranty Regulations](https://files.seeedstudio.com/wiki/Edge_Box/Seeed_Studio_Edge_Series_Warranty_Regulations.pdf)
+
+[Edgebox-ESP-100-User Manual V1.1](https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_manual-V1.1.pdf)
+
+[EdgeBox-ESP-100 Product Datasheet](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_Edgebox-ESP-100.pdf)
+
+[EdgeBox ESP 3D File](https://files.seeedstudio.com/wiki/edge_box_esp/edgebox_esp_100.stp)
+
+[EdgeBox-ESP-100 Schematic](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_EdgeBox-ESP-100_Schematic.pdf)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

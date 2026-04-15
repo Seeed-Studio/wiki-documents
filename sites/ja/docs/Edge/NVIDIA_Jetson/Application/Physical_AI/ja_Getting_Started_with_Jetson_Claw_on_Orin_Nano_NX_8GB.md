@@ -1,5 +1,5 @@
 ---
-description: この Wiki では、Jetson Orin Nano 8GB または Orin NX 8GB 上で、nanobot、llama.cpp、ローカルの Qwen3.5 4B GGUF モデル、および Feishu 制御を用いた Jetson-Claw スターター環境を構築する方法を説明します。
+description: このWikiでは、Jetson Orin Nano 8GB または Orin NX 8GB 上で、nanobot、llama.cpp、ローカルの Qwen3.5 4B GGUF モデル、そして Feishu 制御を用いた Jetson-Claw スターター環境の構築方法を紹介します。
 title: Orin Nano / NX 8GB での Jetson-Claw 入門
 image: https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png
 slug: /getting_started_with_jetson_claw_on_orin_nano_nx_8gb
@@ -9,7 +9,7 @@ last_update:
   author: Dayu
 createdAt: '2026-03-26'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_jetson_claw_on_orin_nano_nx_8gb/
-updatedAt: '2026-04-02'
+updatedAt: '2026-04-03'
 ---
 # Orin Nano / NX 8GB での Jetson-Claw 入門
 
@@ -18,16 +18,26 @@ updatedAt: '2026-04-02'
      src="https://files.seeedstudio.com/wiki/jetson/jetson-claw-fornt.png" />
 </div>
 
-この Wiki では、**Jetson Orin Nano 8GB** と **Jetson Orin NX 8GB** 向けの実用的な Jetson-Claw スタータービルドを順を追って解説します。スタック全体は Jetson 上でローカルに動作します。`nanobot` をインストールし、モデル読み込みを安全に行うためにスワップ領域を拡張し、CUDA 対応で `llama.cpp` をコンパイルし、`Qwen3.5 4B` GGUF モデルをダウンロードし、`nanobot` のバックエンドをローカルの `llama.cpp` に切り替え、最後にボットを **Feishu** に接続してチャットから制御できるようにします。
+このWikiでは、**Jetson Orin Nano 8GB** と **Jetson Orin NX 8GB** 向けの、実践的な Jetson-Claw スターター構成について説明します。スタック全体は Jetson 上でローカル動作します。`nanobot` をインストールし、モデル読み込みを安全にするためにスワップ領域を拡張し、CUDA 対応で `llama.cpp` をコンパイルし、`Qwen3.5 4B` GGUF モデルをダウンロードし、`nanobot` のバックエンドをローカルの `llama.cpp` に切り替え、最後にボットを **Feishu** に接続して、チャットから制御できるようにします。
 
-より大規模な OpenClaw デプロイと比べると、このエントリーレベルの Jetson-Claw セットアップには **nanobot** の方が適しています。はるかに軽量で起動が速く、コードが読みやすく変更しやすい上に、すでに **Feishu** と **OpenAI 互換のローカルバックエンド** をサポートしているためです。8 GB の Jetson では、ランタイムのオーバーヘッドが小さいほどローカルモデルに割けるメモリが増えます。後から、より大きなプラグインエコシステムや重いマルチコンポーネントワークフローが必要になった場合は、OpenClaw へ移行することもできます。
+より大規模な OpenClaw デプロイと比べると、**nanobot** はこのエントリーレベルの Jetson-Claw 構成により適しています。はるかに軽量で、起動が速く、コードが読みやすく変更しやすく、すでに **Feishu** と **OpenAI 互換のローカルバックエンド** をサポートしているためです。8 GB の Jetson では、ランタイムのオーバーヘッドが小さいほどローカルモデル自体に使えるメモリが増えます。後で、より大きなプラグインエコシステムや重いマルチコンポーネントワークフローが必要になった場合でも、OpenClaw に移行できます。
 
-## 作成するもの
+
+## ベンチマーク
+
+ここでは、Jetson 各モジュールにおけるローカル LLM の性能を一覧にしています。検証の結果、4B モデルは、特定のタスクを実行できるシステムを構築するのに最適な選択であることがわかりました。モデルのパラメータ数が大きいほど、性能は向上します。このベンチマークを参考にして、自分のニーズに合った reComputer を選択してください。
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/jetson/benchmark_jetson.jpg" />
+</div>
+
+## 構築するもの
 
 - `nanobot` をベースにした軽量ローカル AI アシスタント
-- Jetson 上で動作する `llama.cpp` の OpenAI 互換 HTTP サーバ
+- Jetson 上で動作する `llama.cpp` OpenAI 互換 HTTP サーバ
 - ローカルの `Qwen3.5 4B` GGUF モデル
-- プライベートチャットやグループでのメンションから制御できる、Feishu 接続済み Jetson ボット
+- プライベートチャットやグループメンションから制御できる、Feishu 連携 Jetson ボット
 
 ## 前提条件
 
@@ -36,7 +46,7 @@ updatedAt: '2026-04-02'
 - パッケージおよびモデルをダウンロードするためのインターネット接続
 - 少なくとも 20 GB の空きストレージを推奨
 
-このガイドでは、リファレンスとなる Jetson プラットフォームとして **reComputer Super J3011** を使用します：
+本ガイドでは、リファレンス Jetson プラットフォームとして **reComputer Super J3011** を使用します。
 
 <div align="center">
     <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010-nano-8g.jpg" style={{width:400, height:'auto'}}/>
@@ -49,12 +59,12 @@ updatedAt: '2026-04-02'
 </div>
 
 :::info
-`nanobot` は現在 Python 3.11 以降を必要とするため、このガイドでは Jetson のデフォルトのシステム Python ではなく Miniconda 環境を使用します。
+現在 `nanobot` には Python 3.11 以降が必要なため、このガイドでは Jetson のデフォルトのシステム Python ではなく Miniconda 環境を使用します。
 :::
 
-## ステップ 1. nanobot をインストールする
+## 手順 1. nanobot をインストールする
 
-まずシステム依存パッケージと Miniconda をインストールします：
+まず、システム依存パッケージと Miniconda をインストールします。
 
 ```bash
 sudo apt update
@@ -66,7 +76,7 @@ chmod +x Miniconda3-latest-Linux-aarch64.sh
 source ~/.bashrc
 ```
 
-クリーンな Python 3.11 環境を作成し、`nanobot` をインストールします：
+クリーンな Python 3.11 環境を作成し、`nanobot` をインストールします。
 
 ```bash
 conda create -y -n jetson-claw python=3.11
@@ -75,25 +85,25 @@ pip install -U pip
 pip install nanobot-ai
 ```
 
-ランタイムディレクトリを初期化します：
+ランタイムディレクトリを初期化します。
 
 ```bash
 nanobot onboard
 ```
 
-初期化後、メインの設定ファイルは次の場所にあります：
+初期化後、メイン設定ファイルは次の場所にあります。
 
 ```bash
 ~/.nanobot/config.json
 ```
 
 :::note
-`nanobot` は OpenClaw に着想を得ていますが、Orin Nano / NX 8GB では通常、より良い出発点となります。メモリオーバーヘッドが小さく、起動が速く、デバッグすべきコンポーネントも少ないためです。
+`nanobot` は OpenClaw に着想を得ていますが、Orin Nano / NX 8GB では通常、こちらのほうが良い出発点です。メモリオーバーヘッドが小さく、起動が速く、デバッグすべきコンポーネントも少ないためです。
 :::
 
-## ステップ 2. スワップ領域を増やす
+## 手順 2. スワップ領域を増やす
 
-8 GB の Jetson で 4B のローカルモデルを動かす場合、スワップを追加するとはるかに安定します。これはモデルの読み込み、コンパイル、および長いコンテキストでの推論時に役立ちます。
+8 GB の Jetson で 4B のローカルモデルを動かす場合、スワップを追加すると格段に安定します。これはモデル読み込みやコンパイル、長いコンテキストでの推論時に役立ちます。
 
 ```bash
 sudo fallocate -l 8G /var/swapfile
@@ -104,18 +114,18 @@ echo '/var/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 swapon --show
 ```
 
-より大きなコンテキストサイズや他のモデルを試す予定がある場合は、スワップをさらに増やしてもかまいません。
+より大きなコンテキストサイズや他のモデルで実験したい場合は、さらにスワップを増やしても構いません。
 
-## ステップ 3. CUDA 対応で llama.cpp をコンパイルする
+## 手順 3. CUDA 対応で llama.cpp をコンパイルする
 
-CUDA のパスを設定します：
+CUDA のパスを設定します。
 
 ```bash
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
-`llama.cpp` をクローンしてビルドします：
+`llama.cpp` をクローンしてビルドします。
 
 ```bash
 git clone https://github.com/ggml-org/llama.cpp.git ~/llama.cpp
@@ -124,23 +134,23 @@ cmake -B build -DGGML_CUDA=ON -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
 ```
 
-コンパイル後、メインの実行ファイルは次のディレクトリに配置されます：
+コンパイル後、メインの実行ファイルは次のディレクトリに配置されます。
 
 ```bash
 ~/llama.cpp/build/bin
 ```
 
-サーバ用バイナリが準備できているかどうかは、次のコマンドですぐに確認できます：
+次のコマンドで、サーバ用バイナリが準備できているかを素早く確認できます。
 
 ```bash
 ~/llama.cpp/build/bin/llama-server --help
 ```
 
-## ステップ 4. Qwen3.5 4B GGUF の重みをダウンロードする
+## 手順 4. Qwen3.5 4B GGUF の重みをダウンロードする
 
-このガイドでは、8 GB の Jetson デバイスにおけるメモリ使用量と応答品質の実用的なバランスを考慮し、`Q4_K_M` GGUF 量子化を使用します。
+本ガイドでは、8 GB Jetson デバイスでのメモリ使用量と応答品質のバランスが良い `Q4_K_M` GGUF 量子化を使用します。
 
-Hugging Face CLI をインストールします：
+Hugging Face CLI をインストールします。
 
 ```bash
 conda activate jetson-claw
@@ -148,18 +158,18 @@ pip install -U "huggingface_hub[cli]"
 mkdir -p ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-次に、以下のモデルページを開き、`Q4_K_M` GGUF ファイルを `~/llama.cpp/models/Qwen3.5-4B-GGUF/` にダウンロードします：
+次に、以下のモデルページを開き、`Q4_K_M` GGUF ファイルを `~/llama.cpp/models/Qwen3.5-4B-GGUF/` にダウンロードします。
 
 - https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/main
 
-Hugging Face のページで **`Qwen3.5-4B.Q4_K_M.gguf`** ファイルを選択します：
+Hugging Face のページで **`Qwen3.5-4B.Q4_K_M.gguf`** ファイルを選択します。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/Jetson/claw/gguf.jpg" />
 </div>
 
-リポジトリがこのガイドの例と同じファイル名を使用している場合は、次のコマンドでダウンロードすることもできます：
+リポジトリ側のファイル名が本ガイドの例と同じであれば、次のようにしてダウンロードすることもできます。
 
 ```bash
 huggingface-cli download \
@@ -168,15 +178,15 @@ huggingface-cli download \
   --local-dir ~/llama.cpp/models/Qwen3.5-4B-GGUF
 ```
 
-ファイル名が異なる場合は、後述の起動コマンド内のパスだけを更新してください。この例では、モデルファイルを次のように仮定します：
+ファイル名が異なる場合は、後述する起動コマンド内のパスをそのファイル名に合わせて更新してください。ここでの例では、モデルファイルを次のように想定しています。
 
 ```bash
 ~/llama.cpp/models/Qwen3.5-4B-GGUF/Qwen3.5-4B.Q4_K_M.gguf
 ```
 
-## ステップ 5. ローカルバックエンドとして llama.cpp を起動する
+## 手順 5. ローカルバックエンドとして llama.cpp を起動する
 
-ローカルの OpenAI 互換 API サーバを起動します：
+ローカルの OpenAI 互換 API サーバを起動します。
 
 ```bash
 conda activate jetson-claw
@@ -193,31 +203,31 @@ cd ~/llama.cpp
   --port 8080
 ```
 
-推奨パラメータの補足：
+推奨パラメータの補足:
 
-- `--alias qwen3.5-4b-local`: ローカルモデルに `nanobot` 用の分かりやすい API モデル名を付けます
-- `-t 6`: エントリーレベルの Jetson デバイス向けに、適度な数の CPU スレッドを使用します
-- `-c 40960`: 大きなコンテキストウィンドウを提供しますが、メモリが厳しい場合は減らして構いません
+- `--alias qwen3.5-4b-local`: ローカルモデルに、`nanobot` から参照しやすいクリーンな API モデル名を与えます
+- `-t 6`: エントリーレベルの Jetson デバイスに適した、中程度の CPU スレッド数を使用します
+- `-c 40960`: 大きなコンテキストウィンドウを提供しますが、メモリが厳しい場合は減らしてください
 - `--n-gpu-layers 40`: 可能な限り多くのレイヤーを Jetson GPU にオフロードします
-- `--reasoning off`: 出力をシンプルに保ち、スターター環境では不要なオーバーヘッドを抑えます
+- `--reasoning off`: 出力をシンプルに保ち、スターター構成で不要なオーバーヘッドを抑えます
 
-メモリ不足が原因でサーバの起動に失敗する場合は、まず `-c` を `16384` に下げ、それでもだめなら `--n-gpu-layers` をさらに減らしてみてください。
+メモリ不足が原因でサーバが起動できない場合は、まず `-c` を `16384` に下げ、その後 `--n-gpu-layers` を減らしてみてください。
 
-別のターミナルで、API を検証します：
+別のターミナルで API を検証します。
 
 ```bash
 curl http://127.0.0.1:8080/v1/models
 ```
 
-## ステップ 6. nanobot を llama.cpp を使うように設定する
+## 手順 6. nanobot を llama.cpp を使うように設定する
 
-設定ファイルを開きます：
+設定ファイルを開きます。
 
 ```bash
 nano ~/.nanobot/config.json
 ```
 
-次に、以下のセクションを設定にマージします：
+次に、以下のセクションを自分の設定にマージします。
 
 ```json
 {
@@ -262,38 +272,38 @@ nano ~/.nanobot/config.json
 }
 ```
 
-この設定が機能する理由：
+この設定が機能する理由:
 
-- `provider: "custom"` は、`nanobot` に任意の OpenAI 互換バックエンドを使用するよう指示します
+- `provider: "custom"` は、`nanobot` に任意の OpenAI 互換バックエンドを使用させる指定です
 - `apiBase: "http://127.0.0.1:8080/v1"` はローカルの `llama-server` を指します
 - `model: "qwen3.5-4b-local"` は、`llama.cpp` 起動時に指定した `--alias` の値と一致させます
 
 :::warning
-簡単なテスト用途では、`allowFrom: ["*"]` は便利です。本番利用では、検証後に自分の Feishu の `open_id` に置き換えてください。
+素早くテストするには `allowFrom: ["*"]` が便利ですが、本番運用では検証後に自分の Feishu の `open_id` に置き換えてください。
 :::
 
-## ステップ 7. Feishu を nanobot に接続する
+## 手順 7. Feishu を nanobot に接続する
 
-Feishu Open Platform で Feishu アプリケーションを作成します：
+Feishu オープンプラットフォームで Feishu アプリケーションを作成します。
 
 - https://open.feishu.cn/app を開く
-- ボットアプリケーションを作成するか開く
+- 自分のボットアプリケーションを新規作成または開く
 - **App ID** と **App Secret** をコピーする
-- それらを `channels.feishu.appId` と `channels.feishu.appSecret` に貼り付ける
+- それらを `channels.feishu.appId` および `channels.feishu.appSecret` に貼り付ける
 
 Long Connection モードでは、`encryptKey` と `verificationToken` は空のままで構いません。
 
-後から認証情報が見つからない場合は、次の場所に移動します：
+後で認証情報が見つからなくなった場合は、次の場所に移動します。
 
-- Feishu Open Platform
+- Feishu オープンプラットフォーム
 - 自分のアプリケーション
 - `Credentials & Basic Info`
 
 ### Feishu の権限をインポートする
 
-ファイル、画像、リッチメッセージの処理を正しく動作させるには、次の場所で以下の権限セットをインポートします：
+ファイル・画像・リッチメッセージの処理を正しく動作させるには、以下の権限セットを次の場所からインポートします。
 
-- Feishu Open Platform
+- Feishu オープンプラットフォーム
 - 自分のアプリケーション
 - `Permission Management`
 - `Bulk Import`
@@ -334,23 +344,23 @@ Long Connection モードでは、`encryptKey` と `verificationToken` は空の
 }
 ```
 
-権限をインポートしたら：
+権限をインポートした後：
 
 - 新しいアプリバージョンを作成する
 - アプリバージョンを公開する
 
 そうしないと、新しく追加した権限が有効にならない場合があります。
 
-## ステップ 8. nanobot を起動し、Feishu からの制御をテストする
+## ステップ 8. nanobot を起動して Feishu 制御をテストする
 
-1 つのターミナルで `llama-server` を動かしたまま、別のターミナルで `nanobot` を起動します：
+一つのターミナルで `llama-server` を実行したままにし、別のターミナルで `nanobot` を起動します：
 
 ```bash
 conda activate jetson-claw
 nanobot gateway
 ```
 
-便利な確認方法：
+役に立つ確認項目：
 
 ```bash
 nanobot status
@@ -359,14 +369,14 @@ nanobot channels status
 
 次に、Feishu からボットにメッセージを送信します：
 
-- プライベートチャットでダイレクトメッセージを送る
-- グループチャットでは、`groupPolicy: "mention"` を維持している場合はボットにメンションしてください
+- プライベートチャットでは、ダイレクトメッセージを送信します
+- グループチャットでは、`groupPolicy: "mention"` を維持している場合、ボットをメンションします
 
-もし `allowFrom: ["*"]` を使用している場合、ボットはすぐに返信するはずです。後からアクセスを制限したくなったら、まず 1 件メッセージを送り、`nanobot` のログで自分の `open_id` を確認し、その値で `["*"]` を置き換えてください。
+もし `allowFrom: ["*"]` を使用した場合、ボットはすぐに返信するはずです。後でアクセスを制限したくなったら、まず 1 回メッセージを送り、`nanobot` のログで自分の `open_id` を確認し、その値で `["*"]` を置き換えます。
 
-## オプション：サンプル Jetson-Claw スキルを追加する
+## オプション：Jetson-Claw のサンプルスキルを追加する
 
-このスターターセットアップを、より実用的な Jetson-Claw デモにしたい場合は、サンプルスキルセットを追加できます：
+このスターターセットアップを、より実用的な Jetson-Claw デモにしたい場合は、サンプルのスキルセットを追加できます：
 
 ```bash
 git clone https://github.com/jjjadand/JetsonClaw-SKILLS.git ~/JetsonClaw-SKILLS
@@ -374,7 +384,7 @@ mkdir -p ~/.nanobot/workspace/skills
 cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 ```
 
-その後 `nanobot gateway` を再起動し、Jetson に USB カメラを接続して、カメラの前に人が見えているかどうかを Feishu でボットに尋ねてください。
+その後 `nanobot gateway` を再起動し、Jetson に USB カメラを接続して、Feishu 上のボットにカメラの前に人が映っているかどうかを確認するよう依頼します。
 
 ### Feishu 監視フローの例
 
@@ -399,7 +409,7 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
      src="https://files.seeedstudio.com/wiki/Jetson/claw/have-person.png" />
 </div>
 
-監視スキルは、取得した結果画像を送り返すこともできます：
+監視スキルは、取得した結果画像も返すことができます：
 
 <div align="center">
     <img width={800} 
@@ -409,10 +419,10 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 ## トラブルシューティング
 
 - `nanobot` のインストールに失敗する：Python 3.11 環境内にいることを確認してください
-- モデル読み込み中に `llama-server` が終了する：スワップを増やすか、`-c` を減らしてください
-- Feishu ボットが返信しない：App ID、App Secret、インポートした権限、および公開済みアプリバージョンを確認してください
-- グループメッセージでボットが反応しない：`groupPolicy` を確認し、ボットにメンションしていることを確認してください
-- 応答が遅い：コンテキストサイズを小さくする、同時利用を減らす、またはより小さい量子化モデルを使用してください
+- モデルの読み込み中に `llama-server` が終了する：スワップを増やすか、`-c` を小さくします
+- Feishu ボットが返信しない：App ID、App Secret、インポートした権限、公開済みアプリバージョンを確認します
+- グループメッセージでボットが反応しない：`groupPolicy` を確認し、ボットをメンションしていることを確認します
+- 応答が遅い：コンテキストサイズを小さくする、同時利用を減らす、またはより小さい量子化モデルを使用します
 
 ## 参考情報
 
@@ -425,7 +435,7 @@ cp -r ~/JetsonClaw-SKILLS/person-detection ~/.nanobot/workspace/skills/
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

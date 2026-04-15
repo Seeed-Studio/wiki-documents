@@ -6,6 +6,7 @@ const matter = require("gray-matter");
 const fg = require("fast-glob");
 const yaml = require("js-yaml");
 const { execSync } = require("child_process");
+const cliProgress = require("cli-progress");
 
 const ROOT = process.cwd();
 const BASE_URL = "https://wiki.seeedstudio.com";
@@ -15,10 +16,10 @@ const MANAGED_FIELDS = new Set(["createdAt", "updatedAt", "url", "slug"]);
 
 const LANG_RULES = [
   { dir: path.join("sites", "en", "docs"), prefix: "" },
-  { dir: path.join("sites", "zh-CN", "docs"), prefix: "/cn" },
-  { dir: path.join("sites", "ja", "docs"), prefix: "/ja" },
-  { dir: path.join("sites", "es", "docs"), prefix: "/es" },
-  { dir: path.join("sites", "pt-BR", "docs"), prefix: "/pt-br" },
+  // { dir: path.join("sites", "zh-CN", "docs"), prefix: "/cn" },
+  // { dir: path.join("sites", "ja", "docs"), prefix: "/ja" },
+  // { dir: path.join("sites", "es", "docs"), prefix: "/es" },
+  // { dir: path.join("sites", "pt-BR", "docs"), prefix: "/pt-br" },
 ];
 
 function detectLangPrefix(fileAbsPath) {
@@ -328,10 +329,24 @@ async function main() {
   const files = await fg(patterns, { absolute: true, dot: false });
   let changedCount = 0;
 
+  // 创建进度条
+  const bar = new cliProgress.SingleBar(
+    {
+      format: "Processing [{bar}] {percentage}% | {value}/{total} files",
+    },
+    cliProgress.Presets.shades_classic
+  );
+
+  bar.start(files.length, 0);
+
   for (const f of files) {
     const r = normalizeFile(f, { checkOnly });
     if (r.changed) changedCount++;
+
+    bar.increment();
   }
+
+  bar.stop();
 
   if (checkOnly) {
     if (changedCount > 0) {

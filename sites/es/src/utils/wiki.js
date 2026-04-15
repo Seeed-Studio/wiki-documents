@@ -1,14 +1,58 @@
 const docList = [
   [
     {
+      "path": "/epaper_en05",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg",
+      "title": "Getting Started with XIAO ePaper Display EN05",
+      "date": "2026-04-08",
+      "title_cn": "XIAO ePaper Display EN05 入门指南",
+      "title_ja": "XIAO ePaper Display EN05 入門ガイド",
+      "title_es": "Introducción a XIAO ePaper Display EN05",
+      "title_pt": "Introdução à XIAO ePaper Display EN05"
+    },
+    {
+      "path": "/respeaker_flex_xiao_introduction",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg",
+      "title": "reSpeaker Flex with XIAO ESP32S3",
+      "date": "2026-04-08",
+      "title_cn": "搭配 XIAO ESP32S3 的 reSpeaker Flex",
+      "title_ja": "reSpeaker Flex with XIAO ESP32S3",
+      "title_es": "reSpeaker Flex con XIAO ESP32S3",
+      "title_pt": "reSpeaker Flex com XIAO ESP32S3"
+    }
+  ],
+  [
+    {
+      "path": "/epaper_ee05",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg",
+      "title": "Getting Started with XIAO ePaper Display EE05",
+      "date": "2026-04-07",
+      "title_cn": "XIAO ePaper Display EE05 入门指南",
+      "title_ja": "XIAO ePaper Display EE05 入門ガイド",
+      "title_es": "Introducción a XIAO ePaper Display EE05",
+      "title_pt": "Introdução ao XIAO ePaper Display EE05"
+    },
+    {
+      "path": "/meshcore_node_map_solar_node",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg",
+      "title": "MeshCore Node Map",
+      "date": "2026-04-3",
+      "title_cn": "MeshCore 节点地图",
+      "title_ja": "MeshCore Node Map",
+      "title_es": "Mapa de Nodos MeshCore",
+      "title_pt": "Mapa de Nós MeshCore"
+    }
+  ],
+  [
+    {
       "path": "/driving_reterminal_d1001_audio_peripherals",
       "image": "https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp",
       "title": "Driving reTerminal D1001 Audio Peripherals",
       "date": "2026-04-02",
       "title_cn": "驱动 reTerminal D1001 音频外设",
-      "title_ja": "reTerminal D1001 オーディオペリフェラルの制御",
-      "title_es": "Control de los periféricos de audio de reTerminal D1001",
-      "title_pt": "Acionando os periféricos de áudio do reTerminal D1001"
+      "title_ja": "reTerminal D1001 オーディオペリフェラルの駆動",
+      "title_es": "Manejo de los periféricos de audio de la reTerminal D1001",
+      "title_pt": "Acionando os Periféricos de Áudio do reTerminal D1001"
     },
     {
       "path": "/respeaker_flex_picovoice_nlu_keyword_spotting",
@@ -16,9 +60,9 @@ const docList = [
       "title": "reSpeaker Flex Control Wakeword and NLU with Pico-voice",
       "date": "2026-04-01",
       "title_cn": "使用 Pico-voice 在 reSpeaker Flex 上控制唤醒词和 NLU",
-      "title_ja": "reSpeaker Flex で Pico-voice を用いたウェイクワードと NLU 制御",
-      "title_es": "reSpeaker Flex Controla la palabra de activación y NLU con Pico-voice",
-      "title_pt": "reSpeaker Flex Controle de palavra de ativação e NLU com Pico-voice"
+      "title_ja": "reSpeaker Flex Pico-voice によるウェイクワード制御と NLU",
+      "title_es": "reSpeaker Flex Control Despertador de Voz y NLU con Pico-voice",
+      "title_pt": "reSpeaker Flex Controle de Palavra de Ativação e NLU com Pico-voice"
     }
   ],
   [
@@ -85,50 +129,6 @@ const docList = [
       "title_ja": "BC02 屋外用 Bluetooth ビーコン",
       "title_es": "Baliza Bluetooth exterior BC02",
       "title_pt": "Beacon Bluetooth Externo BC02"
-    }
-  ],
-  [
-    {
-      "path": "/bluetooth_beacon03_for_tracker_introduction",
-      "image": "https://files.seeedstudio.com/wiki/BC03/1-BC03-Bluetooth-Beacon.webp",
-      "title": "BC03 Indoor Bluetooth Beacon Introduction",
-      "date": "2026-03-24",
-      "title_cn": "BC03 室内蓝牙 Beacon 介绍",
-      "title_ja": "BC03 屋内 Bluetooth Beacon の紹介",
-      "title_es": "Introducción a la baliza Bluetooth de interior BC03",
-      "title_pt": "Introdução ao Beacon Bluetooth Interno BC03"
-    },
-    {
-      "path": "/getting_started_with_openclaw_on_recomputer",
-      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg",
-      "title": "Getting Started with OpenClaw on reComputer Industrial",
-      "date": "2026-03-19",
-      "title_cn": "在 reComputer Industrial 上使用 OpenClaw 的入门指南",
-      "title_ja": "reComputer Industrial での OpenClaw 入門",
-      "title_es": "Introducción a OpenClaw en reComputer Industrial",
-      "title_pt": "Introdução ao OpenClaw no reComputer Industrial"
-    }
-  ],
-  [
-    {
-      "path": "/meshtastic_node_map_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png",
-      "title": "Meshtastic Node Map",
-      "date": "2026-03-19",
-      "title_cn": "Meshtastic 节点地图",
-      "title_ja": "Meshtastic Node Map",
-      "title_es": "Mapa de Nodos Meshtastic",
-      "title_pt": "Mapa de Nós Meshtastic"
-    },
-    {
-      "path": "/meshtastic_source_code_practical_tutorial_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png",
-      "title": "Meshtastic Firmware Source Code Practical Tutorial",
-      "date": "2026-03-19",
-      "title_cn": "Meshtastic 固件源代码实用教程",
-      "title_ja": "Meshtastic ファームウェア ソースコード実践チュートリアル",
-      "title_es": "Tutorial Práctico del Código Fuente del Firmware de Meshtastic",
-      "title_pt": "Tutorial Prático do Código-Fonte do Firmware Meshtastic"
     }
   ]
 ];
