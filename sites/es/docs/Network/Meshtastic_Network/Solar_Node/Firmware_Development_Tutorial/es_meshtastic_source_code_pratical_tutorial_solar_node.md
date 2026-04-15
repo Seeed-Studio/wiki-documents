@@ -1,6 +1,6 @@
 ---
-description: Un tutorial práctico para configurar el entorno del código fuente del firmware de Meshtastic, compilar el nodo solar y grabar el firmware.
-title: Tutorial de Desarrollo con el Código Fuente de Meshtastic
+description: Un tutorial práctico para configurar el entorno del código fuente del firmware Meshtastic, compilar el nodo solar y flashear el firmware.
+title: Tutorial de Desarrollo del Código Fuente de Meshtastic
 keywords:
   - Meshtastic
   - Código Fuente
@@ -19,17 +19,17 @@ updatedAt: '2026-03-19'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Tutorial Práctico del Código Fuente del Firmware de Meshtastic
+# Tutorial Práctico del Código Fuente del Firmware Meshtastic
 
-Este tutorial está dirigido a usuarios que recién comienzan con el código fuente del firmware de Meshtastic. Incluye flujos de trabajo comunes tanto para Windows como para macOS. El objetivo es sencillo: clonar el repositorio oficial, completar una compilación correcta, hacer un cambio sencillo en la interfaz de usuario y grabar el firmware modificado en el dispositivo para su verificación.
+Este tutorial está dirigido a usuarios que están comenzando con el código fuente del firmware Meshtastic. Incluye flujos de trabajo comunes tanto para Windows como para macOS. El objetivo es sencillo: clonar el repositorio oficial, completar una compilación exitosa, realizar un cambio simple en la interfaz de usuario y flashear el firmware modificado en el dispositivo para su verificación.
 
-Si ya estás familiarizado con Git, Python o PlatformIO, puedes omitir las secciones correspondientes e ir directamente a la parte práctica.
+Si ya estás familiarizado con Git, Python o PlatformIO, puedes saltarte las secciones correspondientes y pasar directamente a la parte práctica.
 
 :::tip
-Esta guía incluye comandos comunes tanto para Windows como para macOS. La mayoría de las capturas de pantalla aún se toman en un entorno Windows, pero el flujo de trabajo general en macOS es muy similar.
+Esta guía incluye comandos comunes para Windows y macOS. La mayoría de las capturas de pantalla aún se toman desde un entorno Windows, pero el flujo de trabajo general en macOS es muy similar.
 :::
 
-## Requisitos previos
+## Requisitos Previos
 
 Antes de comenzar, prepara las siguientes herramientas:
 
@@ -45,21 +45,21 @@ Antes de comenzar, prepara las siguientes herramientas:
 
 Abre la página oficial de descarga de Git para Windows:
 
-[Git for Windows](https://git-scm.com/install/windows)
+[Git para Windows](https://git-scm.com/install/windows)
 
-El instalador normalmente empieza a descargarse automáticamente cuando abres la página. Después de que la descarga termine, haz doble clic en el instalador y sigue el asistente de instalación.
+El instalador generalmente comienza a descargarse automáticamente cuando abres la página. Una vez completada la descarga, haz doble clic en el instalador y sigue el asistente de configuración.
 
-Durante la instalación, el paso más importante es **ajustar tu variable de entorno PATH**. Elige:
+Durante la instalación, el paso más importante es **Ajustar tu variable de entorno PATH**. Elige:
 
-**Git from the command line and also from 3rd-party software**
+**Git desde la línea de comandos y también desde software de terceros**
 
-Para las demás opciones, los valores predeterminados suelen ser suficientes. Simplemente sigue haciendo clic en `Next`.
+Para las otras opciones, los valores predeterminados suelen estar bien. Solo sigue haciendo clic en `Siguiente`.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image1.png)
 
 Espera hasta que finalice la instalación.
 
-Después de la instalación, **cierra todas las ventanas actuales de PowerShell y terminales de VS Code**, luego abre una nueva ventana de PowerShell y ejecuta:
+Después de la instalación, **cierra todas las ventanas actuales de PowerShell y terminal de VS Code**, luego abre una nueva ventana de PowerShell y ejecuta:
 
 ```plain
 & "C:\Program Files\Git\cmd\git.exe" --version
@@ -69,9 +69,9 @@ Después de la instalación, **cierra todas las ventanas actuales de PowerShell 
 
 Si se muestra un número de versión de Git, Git se ha instalado correctamente.
 
-**Si el comando `git` sigue sin estar disponible**
+**Si el comando `git` aún no está disponible**
 
-Primero puedes ejecutar los siguientes comandos en PowerShell para confirmar las rutas de instalación predeterminadas de Git:
+Puedes ejecutar primero los siguientes comandos en PowerShell para confirmar las rutas de instalación predeterminadas de Git:
 
 ```plain
 $gitCmd = "C:\Program Files\Git\cmd"
@@ -82,30 +82,30 @@ Write-Host $gitBin
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image3.png)
 
-Luego añade Git manualmente a las variables de entorno del sistema.
+Luego, agrega manualmente Git a las variables de entorno del sistema.
 
-**Pasos de corrección con la GUI**
+**Pasos de corrección mediante GUI**
 
-1. Pulsa `Win`
-2. Busca "Edit the system environment variables"
-3. Ábrelo y haz clic en **Environment Variables**
-4. Busca `Path` en **System variables**
-5. Haz clic en **Edit**
-6. Haz clic en **New** y añade las dos rutas siguientes:
+1. Presiona `Win`
+2. Busca "Editar las variables de entorno del sistema"
+3. Ábrelo y haz clic en **Variables de entorno**
+4. Encuentra `Path` en **Variables del sistema**
+5. Haz clic en **Editar**
+6. Haz clic en **Nuevo** y agrega las siguientes dos rutas:
 
 ```plain
 C:\Program Files\Git\cmd
 C:\Program Files\Git\bin
 ```
 
-7. Haz clic en **OK** en todas las ventanas para guardar
+7. Haz clic en **Aceptar** hasta guardar
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image4.png)
 
 Después de guardar, aún necesitas:
 
 - Cerrar **todas** las ventanas de PowerShell
-- Abrir PowerShell de nuevo
+- Abrir PowerShell nuevamente
 
 Luego ejecuta:
 
@@ -121,7 +121,7 @@ Si aparece un número de versión, la instalación está completa.
 
 <TabItem value="macos" label="macOS">
 
-En macOS, Git se puede instalar de más de una forma, pero usar Homebrew suele ser la opción más sencilla:
+En macOS, Git se puede instalar de más de una manera, pero usar Homebrew suele ser la opción más fácil:
 
 1. Instala primero las Command Line Tools:
 
@@ -141,20 +141,20 @@ xcode-select --install
 brew install git
 ```
 
-4. Comprueba la versión instalada:
+4. Verifica la versión instalada:
 
 ```bash
 git --version
 ```
 
-Si tu terminal ya devuelve una versión válida de Git, no es necesario instalarlo de nuevo.
+Si tu terminal ya devuelve una versión válida de Git, no necesitas instalarla nuevamente.
 
 </TabItem>
 </Tabs>
 
 **Configura tu identidad de Git**
 
-A continuación, configura tu información de usuario de Git. Sustituye los valores de ejemplo por tu propio nombre y dirección de correo electrónico:
+A continuación, configura tu información de usuario de Git. Reemplaza los valores de ejemplo con tu propio nombre y dirección de correo electrónico:
 
 ```plain
 git config --global user.name "your name"
@@ -167,7 +167,7 @@ Luego ejecuta:
 git config --global --list
 ```
 
-para confirmar que la configuración ha tenido efecto.
+para confirmar que la configuración ha surtido efecto.
 
 ### 2. Instalar Python 3
 
@@ -194,20 +194,20 @@ pip --version
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image6.png)
 
-Si se muestran números de versión, Python y pip están listos para usarse.
+Si se muestran números de versión, Python y pip están listos para usar.
 
 </TabItem>
 
 <TabItem value="macos" label="macOS">
 
-macOS a menudo ya incluye un entorno de Python. Antes de instalar una nueva versión, comprueba si `python3` y `pip3` ya están disponibles:
+macOS a menudo ya incluye un entorno Python. Antes de instalar una nueva versión, verifica si `python3` y `pip3` ya están disponibles:
 
 ```bash
 python3 --version
 pip3 --version
 ```
 
-Si no están disponibles, o si quieres una versión más reciente, instala Python con Homebrew:
+Si no están disponibles, o si deseas una versión más nueva, instala Python con Homebrew:
 
 ```bash
 brew install python
@@ -220,26 +220,26 @@ python3 --version
 pip3 --version
 ```
 
-Si prefieres usar `python` y `pip`, puedes configurar alias de shell por tu cuenta. Sin embargo, en macOS, usar `python3` y `pip3` suele ser la opción más fiable.
+Si prefieres usar `python` y `pip`, puedes configurar alias de shell tú mismo. Sin embargo, en macOS, usar `python3` y `pip3` suele ser la opción más confiable.
 
 </TabItem>
 </Tabs>
 
 ### 3. Instalar PlatformIO
 
-Este paso puede resultar menos amigable para principiantes porque PlatformIO descarga muchas dependencias automáticamente y la instalación puede llevar algo de tiempo. Si aparecen errores durante la instalación, normalmente es mejor esperar con paciencia y solucionar un problema a la vez. Usar herramientas de IA para ayudar a inspeccionar los mensajes de error también puede ahorrar tiempo.
+Este paso puede parecer menos amigable para principiantes porque PlatformIO descarga muchas dependencias automáticamente y la instalación puede llevar algún tiempo. Si aparecen errores durante la instalación, generalmente es mejor esperar con paciencia y solucionar un problema a la vez. Usar herramientas de IA para ayudar a inspeccionar los mensajes de error también puede ahorrar tiempo.
 
-Busca `PlatformIO` en el marketplace de Extensiones de VS Code e instálalo.
+Busca `PlatformIO` en el mercado de extensiones de VS Code e instálalo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image7.png)
 
-Después de la instalación, normalmente aparecerá un icono con forma de hormiga en la barra de herramientas izquierda.
+Después de la instalación, generalmente aparece un icono con forma de hormiga en la barra de herramientas izquierda.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image8.png)
 
-### 4. Clonar el repositorio del firmware de Meshtastic
+### 4. Clonar el repositorio del firmware Meshtastic
 
-El repositorio oficial del firmware de Meshtastic es `meshtastic/firmware`.
+El repositorio oficial del firmware Meshtastic es `meshtastic/firmware`.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -252,13 +252,13 @@ cd firmware
 git submodule update --init
 ```
 
-Si tu directorio de proyecto está en otra unidad o bajo una ruta diferente, cambia primero a esa ubicación.
+Si tu directorio del proyecto está en una unidad diferente o bajo una ruta diferente, cambia primero a esa ubicación.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image9.png)
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image10.png)
 
-Si la salida se ve similar a las capturas de pantalla anteriores, el repositorio se ha clonado correctamente.
+Si la salida se parece a las capturas de pantalla anteriores, el repositorio se ha clonado con éxito.
 
 </TabItem>
 
@@ -279,26 +279,26 @@ Si `~/workplace` aún no existe, créalo primero:
 mkdir -p ~/workplace
 ```
 
-Si los comandos se completan con normalidad, el repositorio se ha clonado correctamente.
+Si los comandos se completan normalmente, el repositorio se ha clonado con éxito.
 
 </TabItem>
 </Tabs>
 
-Cuando el repositorio esté listo, puedes continuar con cualquiera de los dos proyectos prácticos siguientes. El Proyecto A se centra en la personalización de la interfaz de usuario de `Wio Tracker L1`. El Proyecto B se centra en la telemetría ambiental con `XIAO ESP32S3` sobre Meshtastic.
+Una vez que el repositorio esté listo, puedes continuar con cualquiera de los siguientes dos proyectos prácticos. El Proyecto A se centra en la personalización de la interfaz de usuario de `Wio Tracker L1`. El Proyecto B se centra en la telemetría ambiental de `XIAO ESP32S3` a través de Meshtastic.
 
-## Proyecto A: Personalización de la interfaz de Wio Tracker L1
+## Proyecto A: Personalización de la interfaz de usuario de Wio Tracker L1
 
-### Práctica paso a paso
+### Práctica práctica
 
-En esta etapa, no te apresures a editar el código. Primero, asegúrate de que el proyecto puede ejecutar correctamente todo el proceso de compilación.
+En esta etapa, no te apresures a editar el código. Primero, asegúrate de que el proyecto pueda ejecutar el proceso de compilación completo con éxito.
 
 Se recomienda comenzar con tres tareas:
 
 1. Abrir `firmware`
-2. Revisar `platformio.ini`
-3. Encontrar el entorno de compilación para tu placa de destino
+2. Verificar `platformio.ini`
+3. Encontrar el entorno de compilación para tu placa objetivo
 
-Un detalle importante: no te centres solo en el `platformio.ini` de la raíz. En realidad, incluye archivos de configuración adicionales, por ejemplo:
+Un detalle importante: no te enfoques solo en el `platformio.ini` raíz. En realidad, incluye archivos de configuración adicionales, por ejemplo:
 
 ```plain
 extra_configs =
@@ -307,32 +307,32 @@ extra_configs =
     variants/*/diy/*/platformio.ini
 ```
 
-Esto significa que las definiciones reales de los entornos a nivel de placa suelen estar ubicadas bajo `variants/.../platformio.ini`.
+Eso significa que las definiciones reales del entorno a nivel de placa generalmente se encuentran bajo `variants/.../platformio.ini`.
 
-Al identificar la placa de destino, presta especial atención a estos dos directorios:
+Al identificar la placa objetivo, presta especial atención a estos dos directorios:
 
 - `variants/`
 - `boards/`
 
-Aquí usamos **Wio Tracker L1 Pro** como placa de destino de ejemplo.
+Aquí usamos **Wio Tracker L1 Pro** como el objetivo de ejemplo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image11.png)
 
 Esto muestra que, en Meshtastic, **el objetivo de compilación para Wio Tracker L1 / L1 Pro es** `seeed_wio_tracker_L1`.
 
-**Resumen de la modificación mínima**
+**Resumen de modificación mínima**
 
-Si solo quieres completar una práctica mínima de extremo a extremo, céntrate en estos pasos clave:
+Si solo deseas completar una ejecución práctica mínima de extremo a extremo, enfócate en estos pasos clave:
 
 1. Instalar Git, Python 3, VS Code y PlatformIO.
 2. Clonar el repositorio `meshtastic/firmware` e inicializar los submódulos.
-3. Usar `pio run -e seeed_wio_tracker_L1` para confirmar que el proyecto original compila correctamente.
+3. Usar `pio run -e seeed_wio_tracker_L1` para confirmar que el proyecto original se compila con éxito.
 4. Modificar la lógica de visualización en `src/graphics/SharedUIDisplay.cpp`.
-5. Volver a compilar el firmware y grabar el archivo UF2 generado en el dispositivo para su verificación.
+5. Recompilar el firmware y flashear el archivo UF2 generado en el dispositivo para su verificación.
 
-**Paso 1: Confirmar que el proyecto compila correctamente**
+**Paso 1: Confirmar que el proyecto se compila con éxito**
 
-Aquí usamos la CLI de PlatformIO Core para compilar.
+Aquí usamos la CLI de PlatformIO Core para la compilación.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image12.png)
 
@@ -360,11 +360,11 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image13.png)
 
-Si la interfaz se ve similar a la captura de pantalla anterior, el proceso de compilación se ha iniciado correctamente. La primera compilación suele tardar un tiempo, así que ten paciencia.
+Si la interfaz se parece a la captura de pantalla anterior, el proceso de compilación ha comenzado correctamente. La primera compilación suele tardar un rato, así que ten paciencia.
 
 **Si la compilación falla**
 
-Cuando una compilación falla, primero puedes pedirle a PlatformIO que instale las dependencias requeridas por el entorno actual:
+Cuando una compilación falla, primero puedes pedir a PlatformIO que instale las dependencias requeridas por el entorno actual:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -386,13 +386,13 @@ pio pkg install -e seeed_wio_tracker_L1
 </TabItem>
 </Tabs>
 
-Este enfoque tiene varias ventajas:
+Este enfoque tiene varios beneficios:
 
-- Solo instala las dependencias, sin iniciar inmediatamente una compilación completa.
+- Instala solo las dependencias, sin iniciar inmediatamente una compilación completa.
 - Facilita ver qué paquete está causando el problema.
-- Los mensajes de error suelen ser más concretos y fáciles de depurar.
+- Los mensajes de error suelen estar más enfocados y son más fáciles de solucionar.
 
-Después de que se instalen las dependencias, ejecuta:
+Después de instalar las dependencias, ejecuta:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -414,7 +414,7 @@ pio run -e seeed_wio_tracker_L1 -v
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image14.png)
 
-Una vez que finalice la instalación de dependencias, ejecuta de nuevo la compilación normal:
+Una vez completada la instalación de dependencias, ejecuta la compilación normal nuevamente:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -436,29 +436,29 @@ pio run -e seeed_wio_tracker_L1
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image15.png)
 
-Si la compilación se completa en este punto, la salida del firmware se ha generado correctamente.
+Si la compilación pasa en este punto, tu salida de firmware se ha generado con éxito.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image16.png)
 
 **Paso 2: Modificar el código**
 
-**Práctica 1: Modificar la visualización de la interfaz**
+**Práctica 1: Modificar la visualización de la interfaz de usuario**
 
-Empieza siguiendo la implementación de la pantalla desde la configuración a nivel de placa. Primero puedes revisar:
+Comienza rastreando la implementación de la pantalla desde la configuración a nivel de placa. Primero puedes verificar:
 
 - `variants/nrf52840/seeed_wio_tracker_L1/platformio.ini`
 - `variants/nrf52840/seeed_wio_tracker_L1/variant.h`
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image17.png)
 
-A partir de estos archivos de configuración, puedes ver que L1 define `HAS_SCREEN` y `USE_SSD1306`. Eso significa que usa la canalización estándar de pantalla OLED, no una configuración sin pantalla y no una solución E-Ink.
+Desde estos archivos de configuración, puedes ver que L1 define `HAS_SCREEN` y `USE_SSD1306`. Eso significa que utiliza la canalización de pantalla OLED estándar, no una configuración sin pantalla y no una solución de tinta electrónica.
 
-Si sigues rastreando la lógica de la pantalla, la mayor parte del código relacionado se encuentra en:
+Si continúas rastreando la lógica de la pantalla, la mayor parte del código relacionado se encuentra bajo:
 
 - `src/graphics/`
 - `src/graphics/draw/`
 
-La manera exacta en que lo modifiques depende de tu capacidad para leer el código fuente. Aquí empezamos con un ejemplo muy sencillo: modificar la interfaz de la pantalla de inicio.
+Exactamente cómo lo modificas depende de tu capacidad para leer el código fuente. Aquí comenzamos con un ejemplo muy simple: modificar la interfaz de usuario de la pantalla de inicio.
 
 **Cambio 1: Registrar el borde derecho del texto de la batería**
 
@@ -477,9 +477,9 @@ int batteryTextEndX = batteryX - 1;
 
 `src/graphics/SharedUIDisplay.cpp:157`
 
-Esto añade `batteryTextEndX`, que registra la posición final del texto del porcentaje de batería. Eso facilita añadir texto personalizado después de la información de batería más adelante.
+Esto añade `batteryTextEndX`, que registra la posición final del texto del porcentaje de la batería. Eso facilita añadir texto personalizado después de la información de la batería más adelante.
 
-**Cambio 2: Calcular el límite derecho mientras se dibuja el porcentaje de batería**
+**Cambio 2: Calcular el límite derecho mientras se dibuja el porcentaje de la batería**
 
 ```cpp
 // Before
@@ -515,9 +515,9 @@ if (chargePercent != 101) {
 
 `src/graphics/SharedUIDisplay.cpp:204`
 
-Este código se encuentra dentro de la lógica de dibujo del porcentaje de batería. Además de mostrar el nivel de batería de forma normal, también calcula el límite derecho del área de texto para que se puedan colocar etiquetas personalizadas después de la información de la batería.
+Este código se encuentra dentro de la lógica de dibujo del porcentaje de la batería. Además de mostrar el nivel de la batería normalmente, también calcula el límite derecho del área de texto para que las etiquetas personalizadas puedan colocarse después de la información de la batería.
 
-**Cambio 3: Reservar un límite para el área de iconos de la derecha**
+**Cambio 3: Reservar un límite para el área de iconos a la derecha**
 
 ```cpp
 // Before
@@ -530,7 +530,7 @@ int headerLabelRight = timeX - 4;
 
 `src/graphics/SharedUIDisplay.cpp:263`
 
-Esta parte gestiona el área utilizada por los iconos de hora, correo, silencio y otros en el lado derecho. Añadí `headerLabelRight` para limitar el máximo límite derecho del texto central y evitar que se superponga con el contenido del lado derecho.
+Esta parte maneja el área utilizada por el tiempo, correo, silencio y otros iconos en el lado derecho. Añadí `headerLabelRight` para limitar el límite derecho máximo del texto central y evitar superposiciones con el contenido del lado derecho.
 
 **Cambio 4: Dibujar una etiqueta personalizada cuando el título está vacío**
 
@@ -553,9 +553,9 @@ if (titleStr && titleStr[0] == '\0') {
 
 `src/graphics/SharedUIDisplay.cpp:350`
 
-Esta es la lógica central de la modificación. Solo se aplica a `SEEED_WIO_TRACKER_L1` y excluye explícitamente la variante E-Ink. Centra el texto `made by AE` en el espacio en blanco entre la información de la batería y la visualización de la hora.
+Esta es la lógica central de la modificación. Solo se aplica a `SEEED_WIO_TRACKER_L1` y excluye explícitamente la variante de tinta electrónica. Centra el texto `made by AE` en el espacio en blanco entre la información de la batería y la visualización del tiempo.
 
-**Cambio 5: Manejar la rama en la que no se muestra la hora**
+**Cambio 5: Manejar la rama donde no se muestra el tiempo**
 
 ```cpp
 // Add the same boundary control for the no-time branch
@@ -565,7 +565,7 @@ int headerLabelRight = screenW - xOffset - 2;
 
 `src/graphics/SharedUIDisplay.cpp:377`
 
-Esta es la rama que se usa cuando no se muestra ningún valor de hora. Aquí también es necesario añadir el mismo control de límites.
+Esta es la rama utilizada cuando no se muestra ningún valor de tiempo. Aquí también se necesita añadir el mismo control de límite.
 
 ```cpp
 #if defined(SEEED_WIO_TRACKER_L1) && !defined(SEEED_WIO_TRACKER_L1_EINK)
@@ -585,15 +585,15 @@ Esta es la rama que se usa cuando no se muestra ningún valor de hora. Aquí tam
 
 `src/graphics/SharedUIDisplay.cpp:426`
 
-Esta es la implementación para dibujar `made by AE` en la rama sin hora.
+Esta es la implementación para dibujar `made by AE` en la rama sin tiempo.
 
 Puedes encontrar el código completo aquí:
 
 [📎SharedUIDisplay.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/SharedUIDisplay.cpp)
 
-**Paso 3: Compila tu propio firmware**
+**Paso 3: Compilar tu propio firmware**
 
-Después de terminar la modificación, vuelve a la raíz del proyecto y compila de nuevo el mismo objetivo:
+Después de terminar la modificación, regresa a la raíz del proyecto y compila el mismo objetivo nuevamente:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -621,7 +621,7 @@ La lógica de visualización ha cambiado, pero el objetivo de compilación sigue
 seeed_wio_tracker_L1
 ```
 
-Tras una compilación exitosa, la salida suele ubicarse en:
+Después de una compilación exitosa, la salida generalmente se encuentra en:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -641,7 +641,7 @@ D:\workplace\firmware\.pio\build\seeed_wio_tracker_L1\
 </TabItem>
 </Tabs>
 
-El archivo que debes comprobar que se haya actualizado es:
+El archivo que debes confirmar que se ha actualizado es:
 
 ```plain
 firmware-seeed_wio_tracker_L1-*.uf2
@@ -649,7 +649,7 @@ firmware-seeed_wio_tracker_L1-*.uf2
 
 ### Flashear el firmware
 
-Cuando la compilación se haya completado, abre la página oficial de flasheo:
+Después de completar la compilación, abre la página oficial de flasheo:
 
 [Meshtastic Flasher](https://flasher.meshtastic.org/)
 
@@ -657,24 +657,24 @@ En la mayoría de los casos, primero deberías realizar una operación de borrad
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image18.png)
 
-Luego selecciona el archivo de firmware que acabas de compilar y flaséalo en el dispositivo.
+Luego selecciona el archivo de firmware que acabas de compilar y flashealo en el dispositivo.
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image19.png)
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/image20.png)
 
-En este punto, se ha completado el ejercicio práctico del código fuente de Meshtastic. Has pasado por todo el flujo de trabajo: configuración del entorno, clonación del repositorio, descubrimiento de la configuración de la placa, compilación del firmware, modificación de la lógica de visualización y verificación final del flasheo.
+En este punto, el ejercicio práctico del código fuente de Meshtastic está completo. Has pasado por el flujo de trabajo completo: configuración del entorno, clonación del repositorio, descubrimiento de la configuración de la placa, compilación del firmware, modificación de la lógica de visualización y verificación final del flasheo.
 
-Si quieres ir más lejos, puedes seguir explorando estas direcciones:
+Si quieres ir más allá, puedes continuar explorando estas direcciones:
 
 1. Modificar más elementos en la pantalla de inicio
 2. Ajustar el comportamiento de botones, GPS, Bluetooth y otros módulos
-3. Añadir un `variant` independiente para tu propia placa
-4. Seguir rastreando las relaciones entre `src/`, `variants/` y `boards/`
+3. Añadir una `variant` independiente para tu propia placa
+4. Continuar rastreando las relaciones entre `src/`, `variants/` y `boards/`
 
-Si quieres un ejemplo más orientado a funcionalidades a nivel de código fuente, continúa con el Proyecto B a continuación. Construye un nodo de telemetría ambiental dedicado con `XIAO ESP32S3 + Wio-SX1262 + SHT40`. En comparación con la modificación de la interfaz del Wio Tracker L1 anterior, esta parte se centra en la configuración predeterminada, la temporización de la telemetría y la verificación real de la malla entre dos nodos.
+Si quieres un ejemplo más orientado a características a nivel de código fuente, continúa con el Proyecto B a continuación. Construye un nodo de telemetría ambiental dedicado con `XIAO ESP32S3 + Wio-SX1262 + SHT40`. En comparación con la modificación de la interfaz de usuario del Wio Tracker L1 anterior, esta parte se centra en la configuración predeterminada, el tiempo de telemetría y la verificación real de malla entre dos nodos.
 
-## Proyecto B: nodo de telemetría ambiental con XIAO ESP32S3
+## Proyecto B: Nodo de telemetría ambiental XIAO ESP32S3
 
 ### Objetivo del proyecto
 
@@ -685,14 +685,14 @@ Este ejemplo avanzado utiliza dos dispositivos Meshtastic en la misma malla.
 - Leer temperatura y humedad desde `SHT40`
 - Usar telemetría ambiental de Meshtastic
 - Enviar telemetría a la malla
-- Cambiar el intervalo de envío en la malla a `60s`
-- Omitir la configuración interactiva de región en el primer arranque
+- Cambiar el intervalo de envío de malla a `60s`
+- Omitir la configuración de región interactiva del primer arranque
 - Establecer la región predeterminada en `US`
 
-**Nodo pasarela cercano**
+**Nodo de puerta de enlace cercano**
 
 - Unirse a la red Meshtastic como `CLIENT`
-- Recibir paquetes remotos `TELEMETRY_APP` vía LoRa
+- Recibir paquetes remotos `TELEMETRY_APP` a través de LoRa
 - Analizar `environmentMetrics.temperature`
 - Analizar `environmentMetrics.relativeHumidity`
 
@@ -702,7 +702,7 @@ Este ejemplo avanzado utiliza dos dispositivos Meshtastic en la misma malla.
 XIAO ESP32S3 + Wio-SX1262 + SHT40 -> Meshtastic LoRa -> XIAO ESP32S3 + Wio-SX1262 (or any other device on the same mesh)
 ```
 
-### Preparación de hardware
+### Preparación del hardware
 
 **Hardware del nodo remoto**
 
@@ -710,9 +710,9 @@ XIAO ESP32S3 + Wio-SX1262 + SHT40 -> Meshtastic LoRa -> XIAO ESP32S3 + Wio-SX126
 - `Wio-SX1262`
 - `SHT40`
 
-**Hardware del nodo pasarela**
+**Hardware del nodo de puerta de enlace**
 
-El nodo cercano puede ser cualquier dispositivo Meshtastic que se una a la misma red. En los siguientes ejemplos, sigo usando otro dispositivo `XIAO ESP32S3 + Wio-SX1262`.
+El nodo cercano puede ser cualquier dispositivo Meshtastic que se una a la misma red. En los ejemplos a continuación, sigo usando otro dispositivo `XIAO ESP32S3 + Wio-SX1262`.
 
 **Cableado del SHT40**
 
@@ -721,23 +721,23 @@ El nodo cercano puede ser cualquier dispositivo Meshtastic que se una a la misma
 - `SDA -> GPIO5`
 - `SCL -> GPIO6`
 
-Ajustes comprobados que funcionan:
+Configuraciones de funcionamiento confirmadas:
 
-- `I2C address = 0x44`
-- `GPIO5 / GPIO6` es el par de cableado I2C que funciona actualmente
+- `Dirección I2C = 0x44`
+- `GPIO5 / GPIO6` es el par de cableado I2C de funcionamiento actual
 
-La siguiente foto muestra el cableado real usado en el nodo remoto:
+La siguiente foto muestra el cableado real utilizado en el nodo remoto:
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image1.png)
 
-**Módulos y SKU usados en este proyecto**
+**Módulos y SKU utilizados en este proyecto**
 
 - [`Seeeduino XIAO Expansion Board`](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) (`SKU: 103030356`)
 - [`XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa`](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) (`SKU: 102010611`)
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image11.png)
 
-### Modificar el firmware de Meshtastic para el nodo remoto
+### Modificar el firmware Meshtastic para el nodo remoto
 
 El entorno objetivo para este proyecto es:
 
@@ -751,7 +751,7 @@ Los archivos principales son:
 - `src/modules/Telemetry/EnvironmentTelemetry.h`
 - `src/modules/Telemetry/EnvironmentTelemetry.cpp`
 
-En esta parte, solo actualiza la sección `build_flags` en `variants/esp32s3/seeed_xiao_s3/platformio.ini`. Mantén sin cambios el resto del archivo original.
+En esta parte, solo actualice la sección `build_flags` en `variants/esp32s3/seeed_xiao_s3/platformio.ini`. Mantenga el resto del archivo upstream sin cambios.
 
 ```ini
 build_flags =
@@ -765,22 +765,26 @@ build_flags =
   -DARDUINO_USB_MODE=0
 ```
 
+El cambio de `build_flags` debería verse similar a esto:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image4.png)
+
 Estas tres banderas hacen lo siguiente:
 
-- Habilitar la telemetría ambiental de forma predeterminada
-- Establecer la región predeterminada en `US`, de modo que el primer arranque ya no se detenga en la selección de región
-- Establecer el rol de dispositivo predeterminado en `SENSOR`
+- Habilitar la telemetría ambiental por defecto
+- Establecer la región predeterminada en `US`, para que el primer arranque ya no se detenga en la selección de región
+- Establecer el rol predeterminado del dispositivo como `SENSOR`
 
-El cambio de temporización de telemetría se implementa en `EnvironmentTelemetry.h` y `EnvironmentTelemetry.cpp`, no en `platformio.ini`.
+El cambio de temporización de la telemetría se implementa en `EnvironmentTelemetry.h` y `EnvironmentTelemetry.cpp`, no en `platformio.ini`.
 
-Tras la modificación completa, el comportamiento pasa a ser:
+Después de la modificación completa, el comportamiento se convierte en:
 
-- La telemetría ambiental está habilitada de forma predeterminada
-- El dispositivo se inicia con la región `US`
-- El dispositivo se inicia con el rol `SENSOR`
+- La telemetría ambiental está habilitada por defecto
+- El dispositivo inicia con la región `US`
+- El dispositivo inicia con el rol `SENSOR`
 - La telemetría ambiental de la malla se envía cada `60s`
 - `path=phone` y `path=mesh` se registran por separado
-- La marca de tiempo de envío por malla solo se actualiza después de que un envío real por malla se complete correctamente
+- La marca de tiempo de envío de la malla se actualiza solo después de que un envío real de la malla tenga éxito
 
 El registro de envío de malla esperado se ve así:
 
@@ -788,46 +792,44 @@ El registro de envío de malla esperado se ve así:
 Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
 ```
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image4.png)
+### Configurar el nodo de puerta de enlace cercano
 
-### Configurar el nodo pasarela cercano
-
-Usa un dispositivo Meshtastic cercano como `CLIENT` en la misma malla. Después de que el nodo remoto empiece a enviar telemetría, confirma que la pasarela puede recibir:
+Utilice un dispositivo Meshtastic cercano como `CLIENT` en la misma malla. Después de que el nodo remoto comience a enviar telemetría, confirme que la puerta de enlace puede recibir:
 
 - `TELEMETRY_APP`
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-Si la pasarela sigue intentando conectarse a Wi‑Fi durante las pruebas, deshabilita el Wi‑Fi con la CLI de Meshtastic. Sustituye `<gateway_port>` por tu puerto serie real, como `COMx` en Windows o `/dev/cu.usbmodem...` en macOS.
+Si la puerta de enlace sigue intentando conectarse a Wi-Fi durante las pruebas, deshabilite Wi-Fi con la CLI de Meshtastic. Reemplace `<gateway_port>` con su puerto serie real, como `COMx` en Windows o `/dev/cu.usbmodem...` en macOS.
 
 ```bash
 meshtastic --port <gateway_port> --set network.wifi_enabled false
 ```
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
-
-### Compilar, grabar y verificar
+### Compilar, flashear y verificar
 
 **Paso 1: Copiar los archivos modificados**
 
-Antes de compilar, copia los tres archivos modificados en tu árbol de código fuente de Meshtastic `2.7.20` o `2.7.21`:
+Antes de compilar, copie los tres archivos modificados en su árbol de fuentes de Meshtastic `2.7.20` o `2.7.21`:
 
-| Archivo en el paquete | Sustituye este archivo en tu árbol de código fuente de Meshtastic |
+| Archivo en el paquete | Reemplace este archivo en su árbol de fuentes de Meshtastic |
 | --- | --- |
-| `meshtastic-2.7.20-s3-files/variants/esp32s3/seeed_xiao_s3/platformio.ini` | `<your Meshtastic directory>/variants/esp32s3/seeed_xiao_s3/platformio.ini` |
-| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.h` | `<your Meshtastic directory>/src/modules/Telemetry/EnvironmentTelemetry.h` |
-| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.cpp` | `<your Meshtastic directory>/src/modules/Telemetry/EnvironmentTelemetry.cpp` |
+| `meshtastic-2.7.20-s3-files/variants/esp32s3/seeed_xiao_s3/platformio.ini` | `<su directorio de Meshtastic>/variants/esp32s3/seeed_xiao_s3/platformio.ini` |
+| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.h` | `<su directorio de Meshtastic>/src/modules/Telemetry/EnvironmentTelemetry.h` |
+| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.cpp` | `<su directorio de Meshtastic>/src/modules/Telemetry/EnvironmentTelemetry.cpp` |
 
 Enlaces de descarga directa:
 
 - [📎EnvironmentTelemetry.h](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.h)
 - [📎EnvironmentTelemetry.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.cpp)
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
+Si copia los archivos con un administrador de archivos gráfico, el mensaje de reemplazo debería verse similar a esto:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
 
 **Paso 2: Compilar el firmware remoto**
 
-Desde la raíz del firmware de Meshtastic, ejecuta:
+Desde la raíz del firmware de Meshtastic, ejecute:
 
 ```bash
 pio run -e seeed-xiao-s3
@@ -845,12 +847,12 @@ pio device list
 pio run -e seeed-xiao-s3 -t upload --upload-port COMx
 ```
 
-Si necesitas entrar en modo de descarga manualmente:
+Si necesita ingresar al modo de descarga manualmente:
 
-1. Mantén pulsado `BOOT`
-2. Pulsa `RESET`
-3. Suelta `RESET`
-4. Suelta `BOOT`
+1. Mantenga presionado `BOOT`
+2. Toque `RESET`
+3. Suelte `RESET`
+4. Suelte `BOOT`
 
 </TabItem>
 
@@ -864,9 +866,17 @@ pio run -e seeed-xiao-s3 -t upload --upload-port /dev/cu.usbmodemXXXX
 </TabItem>
 </Tabs>
 
-**Paso 4: Supervisar los registros serie**
+Use `pio device list` primero para poder identificar el puerto serie correcto:
 
-Usa el monitor serie de PlatformIO para comprobar tanto el nodo remoto como la pasarela cercana.
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image7.png)
+
+Después de que finalice la carga, PlatformIO debería informar un flasheo exitoso:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
+
+**Paso 4: Monitorear los registros serie**
+
+Utilice el monitor serie de PlatformIO para verificar tanto el nodo remoto como la puerta de enlace cercana.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -888,7 +898,7 @@ pio device monitor -p /dev/cu.usbmodem3030F917FF281 -b 115200
 </TabItem>
 </Tabs>
 
-Busca registros como:
+Busque registros como:
 
 ```plain
 Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
@@ -896,11 +906,9 @@ Send: relative_humidity=...
 Send: ... temperature=...
 ```
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image7.png)
-
 **Paso 5: Validar con la CLI de Meshtastic**
 
-Primero instala la CLI:
+Instale la CLI primero:
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -920,12 +928,12 @@ pip3 install meshtastic
 </TabItem>
 </Tabs>
 
-Después de la instalación, vuelve a abrir la terminal y confirma que `meshtastic --help` funciona.
+Después de la instalación, vuelva a abrir la terminal y confirme que `meshtastic --help` funciona.
 
-Para los comandos siguientes, sustituye `<gateway_port>` por el puerto serie real de tu pasarela:
+Para los comandos a continuación, reemplace `<gateway_port>` con su puerto serie de puerta de enlace real:
 
-- Ejemplo en Windows: `COMx`
-- Ejemplo en macOS: `/dev/cu.usbmodem3030F917FF281`
+- Ejemplo de Windows: `COMx`
+- Ejemplo de macOS: `/dev/cu.usbmodem3030F917FF281`
 
 ```bash
 meshtastic --port <gateway_port> --listen --debug
@@ -934,17 +942,21 @@ meshtastic --port <gateway_port> --get bluetooth.enabled --get bluetooth.mode --
 meshtastic --port <gateway_port> --set network.wifi_enabled false
 ```
 
-Concéntrate en:
+Concéntrese en:
 
 - `TELEMETRY_APP`
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
+**Paso 6: Confirmar en la aplicación móvil**
 
-**Paso 6: Confirmar en la app móvil**
+Después de flashear, conéctese al nodo remoto con la aplicación móvil Meshtastic y confirme que los datos ambientales son visibles. Luego conecte la aplicación a otro dispositivo en la misma malla y verifique la vista `Nodes` para confirmar que los valores del sensor se están recibiendo a través de la malla.
 
-Después de grabar, conéctate al nodo remoto con la app móvil de Meshtastic y confirma que los datos ambientales son visibles. Luego conecta la app a otro dispositivo en la misma malla y revisa la vista `Nodes` para confirmar que los valores del sensor se están recibiendo a través de la malla.
+En el nodo sensor remoto, debería poder ver los valores de telemetría ambiental directamente en la aplicación:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
+
+En el nodo cercano, las mismas lecturas deberían aparecer en la vista `Nodes` después de que se reenvíen a través de la malla:
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image10.png)
 
@@ -952,24 +964,24 @@ Después de grabar, conéctate al nodo remoto con la app móvil de Meshtastic y 
 
 **El comando `git` no está disponible**
 
-- En Windows, primero comprueba si Git se ha añadido a `PATH`.
-- En macOS, ejecuta primero `git --version`. Si el sistema te pide que instales Command Line Tools, sigue las indicaciones.
+- En Windows, primero verifique si Git se ha agregado a `PATH`.
+- En macOS, ejecute primero `git --version`. Si el sistema le pide que instale las Herramientas de línea de comandos, siga la indicación.
 
-**`python3` o `pip3` no están disponibles**
+**`python3` o `pip3` no está disponible**
 
-- En Windows, confirma que Python se añadió a `PATH`, o vuelve a abrir la terminal e inténtalo de nuevo.
-- En macOS, primero comprueba si `python3` / `pip3` ya existen, e instala Python con Homebrew solo si es necesario.
+- En Windows, confirme que Python se agregó a `PATH`, o vuelva a abrir la terminal e intente nuevamente.
+- En macOS, primero verifique si `python3` / `pip3` ya existe, e instale Python con Homebrew solo si es necesario.
 
 **El comando `pio` no está disponible**
 
-- Ejecuta primero `pio --version`.
-- Si el comando sigue sin estar disponible, reinicia VS Code y la terminal, luego inténtalo de nuevo.
-- Si es necesario, reinstala la extensión PlatformIO y confirma que PlatformIO Core se haya inicializado correctamente.
+- Ejecute primero `pio --version`.
+- Si el comando aún no está disponible, reinicie VS Code y la terminal, luego intente nuevamente.
+- Si es necesario, reinstale la extensión PlatformIO y confirme que PlatformIO Core se ha inicializado correctamente.
 
-**El código sigue pareciendo incompleto después de `git submodule update --init`**
+**El código aún parece incompleto después de `git submodule update --init`**
 
-- Primero asegúrate de estar en el directorio raíz del repositorio `firmware`.
-- Si la conexión de red es inestable, vuelve a intentarlo con:
+- Primero asegúrese de estar en el directorio raíz del repositorio `firmware`.
+- Si la conexión de red es inestable, intente nuevamente con:
 
 ```bash
 git submodule update --init --recursive
@@ -978,41 +990,41 @@ git submodule update --init --recursive
 **La primera compilación tarda demasiado**
 
 - Es normal que la primera compilación descargue muchas dependencias.
-- Si parece quedarse atascada demasiado tiempo, intenta instalar primero los paquetes por separado:
+- Si parece atascada durante demasiado tiempo, intente instalar los paquetes por separado primero:
 
 ```bash
 pio pkg install -e seeed_wio_tracker_L1
 ```
 
-Luego ejecuta la compilación de nuevo.
+Luego ejecute la compilación nuevamente.
 
-**El cliente web no muestra toda la telemetría ambiental**
+**El cliente web no muestra la telemetría ambiental completa**
 
-- El cliente web de Meshtastic actualmente no proporciona una interfaz completa para telemetría ambiental remota.
-- La página `Messages` / `Broadcast` es para tráfico de chat, no una página de telemetría dedicada.
-- Si los valores no aparecen allí, eso no significa automáticamente que el enlace de malla haya fallado.
+- El cliente web Meshtastic actualmente no proporciona una UI completa para telemetría ambiental remota.
+- La página `Messages` / `Broadcast` es para tráfico de chat, no para telemetría dedicada.
+- Si los valores no aparecen allí, no significa automáticamente que el enlace de mesh haya fallado.
 
-**Ver datos en un teléfono no demuestra el reenvío por malla**
+**Ver datos en un teléfono no prueba el forwarding de mesh**
 
-- Ver valores actualizados en un teléfono conectado directamente solo demuestra que el enlace local teléfono‑a‑dispositivo funciona.
-- No demuestra automáticamente que la telemetría ambiental ya se haya reenviado a la malla.
-- Para confirmar un reenvío real de malla, comprueba estos elementos en los registros:
+- Ver valores refrescados en un teléfono conectado directamente solo prueba que el enlace local teléfono-a-dispositivo está funcionando.
+- No prueba automáticamente que la telemetría ambiental ya ha sido forwardeda en el mesh.
+- Para confirmar un forward real de mesh, verifica estos elementos en los logs:
 - `Environment telemetry dispatch path=mesh ...`
 - `TELEMETRY_APP`
 - `environmentMetrics.temperature`
 - `environmentMetrics.relativeHumidity`
 
-**La compilación de `seeed-xiao-s3` falla durante la primera configuración**
+**La construcción `seeed-xiao-s3` falla durante la primera configuración**
 
 - La primera instalación de dependencias puede tardar mucho tiempo. Esto es normal.
-- Si el entorno de destino falla, instala primero los paquetes y luego ejecuta una compilación detallada:
+- Si el entorno objetivo falla, instala los packages primero y luego ejecuta una construcción verbose:
 
 ```bash
 pio pkg install -e seeed-xiao-s3
 pio run -e seeed-xiao-s3 -v
 ```
 
-- Después de que las dependencias estén listas, vuelve a la compilación normal:
+- Una vez que las dependencias están listas, vuelve a la construcción normal:
 
 ```bash
 pio run -e seeed-xiao-s3
