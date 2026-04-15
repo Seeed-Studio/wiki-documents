@@ -9,6 +9,7 @@ keywords:
   - JetPack 7.1
 image: https://files.seeedstudio.com/wiki/other/thor-post.png
 slug: /how_to_build_and_flash_bsp_source_for_jetson_thor
+sku: 100060965
 last_update:
   date: 04/14/2026
   author: Youjiang
