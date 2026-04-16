@@ -7,7 +7,7 @@ keywords:
   - Edge Controller
   - reComputer R1225
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /connecting_r1225_to_chirpstack
+slug: /connecting_r1225_to_aws_iot
 sku: 100021896,100030154,100006298,100079154
 last_update:
   date: 04/07/2026
@@ -31,7 +31,7 @@ Select **LPWAN devices** > **Gateway** to add a gateway
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Connecting_to_aws/aws2.png" alt="pir" width={800} height="auto" /></p>
 
-**Gateway's EUI:** The gateway EUIcan be found on the device label or [Local Console](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)
+**Gateway's EUI:** The gateway EUI can be found on the device label or Local Console.
 
 **Frequency band:** Select the Frequency plan according to the actual choice.
 
@@ -65,7 +65,7 @@ Navigate to **LoRa** > **LoRa Network**
 
 **Mode**: Basics Station
 
-**Gateway EUI**: It will automatically get the EUIof the connected gateway
+**Gateway EUI**: It will automatically get the EUI of the connected gateway
 
 **Server**: Choose CUPS Server or LNS Server (For CUPS, port is 443; for LNS, port is 8887)
 
