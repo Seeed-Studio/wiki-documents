@@ -707,6 +707,24 @@ Example Output:
 Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 ```
 
+**Fixed Beam Mode**
+
+here's how to set up fixed beam mode to detect the 0–45 degree range
+
+Set azimuth angles 
+```bash
+xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
+```
+Set elevation to 0
+
+```bash
+xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
+```
+Enable fixed beam mode
+```bash
+xvf_host.exe AEC_FIXEDBEAMSONOFF  1
+```
+
 **Tuning Parameters (Make It Sound Better!)**
 
 - These settings help improve **echo cancellation**, **noise suppression**, **gain**, etc.
@@ -897,6 +915,24 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 - These settings help improve **echo cancellation**, **noise suppression**, **gain**, etc.
 - **Use them when default settings aren’t good enough.**
+
+**Fixed Beam Mode**
+
+here's how to set up fixed beam mode to detect the 0–45 degree range
+
+Set azimuth angles 
+```bash
+./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
+```
+Set elevation to 0
+
+```bash
+./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
+```
+Enable fixed beam mode
+```bash
+./xvf_host AEC_FIXEDBEAMSONOFF  1
+```
 
 Common Parameters:
 
