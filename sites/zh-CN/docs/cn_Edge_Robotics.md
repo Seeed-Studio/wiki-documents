@@ -87,7 +87,7 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               <a href="/cn/rebot_arm_b601_dm_pinocchio_meshcat/" className="content-card">
                 <span className="text">reBot B601-DM 与 Pinocchio</span>
               </a>
-              <a href="/cn/rebot_arm_b601_dm_lerobot_102/" className="content-card">
+              <a href="/cn/rebot_arm_b601_dm_lerobot/" className="content-card">
                 <span className="text">reBot B601-DM 与 LeRobot</span>
               </a>
           </div>
