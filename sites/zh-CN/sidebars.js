@@ -4354,14 +4354,14 @@ const sidebars = {
           type: 'category',
           label: 'reBot 机械臂',
           items: [
-                {
-                  type: 'category',
-                  label: 'B601-DM',
-                  items: [           
-                     'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
-                     'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Lerobot',
-                  ]
-                }
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [           
+                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_pinocchio',
+                  'Robotics/Robot_Kits/reBot_Arm/B601_DM/cn_reBot_Arm_B601_DM_Lerobot',
+              ]
+            }
           ]
         },
         {
