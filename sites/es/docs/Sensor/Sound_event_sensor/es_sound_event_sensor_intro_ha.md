@@ -1,30 +1,30 @@
 ---
-description: Esta placa de audio de borde detecta en tiempo real llanto de bebé, rotura de vidrio, disparos, alarmas y ronquidos, manteniendo todos los datos localmente para proteger la privacidad. En este tutorial, aprenderás cómo integrarla con ESPHome y Home Assistant usando la serie XIAO para monitorización y automatización inteligente.
-title: Home Assistant y Módulo de Detección de Eventos de Sonido
+description: Esta compacta placa de audio perimetral detecta en tiempo real llanto de bebé, rotura de vidrio, disparos, alarmas y ronquidos, manteniendo todos los datos localmente para proteger la privacidad. En este tutorial, aprenderás cómo integrarla con ESPHome y Home Assistant usando la serie XIAO para monitorización y automatización inteligente.
+title: Home Assistant y módulo de detección de eventos de sonido
 keywords:
-  - Módulo de Detección de Eventos de Sonido
+  - Módulo de detección de eventos de sonido
   - Sonido IoT
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
+image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
 createdAt: '2026-03-04'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/es/sound_event_detection_module_home_assistant/
 ---
 
 ## Introducción
 
-Una compacta placa de audio de borde ofrece detección de sonido en tiempo real con una sólida protección de privacidad de datos locales. Puede detectar cinco eventos de sonido anómalos —llanto de bebé, rotura de vidrio, disparo, alarmas T3/T4 y ronquidos— lo que permite una respuesta inmediata y una alerta temprana fiable. En este tutorial, aprenderemos cómo compilar y cargar el firmware en una placa XIAO ESP32.
+Una compacta placa de audio perimetral proporciona detección de sonido en tiempo real con una sólida protección de la privacidad de los datos locales. Puede detectar cinco eventos sonoros anómalos—llanto de bebé, rotura de vidrio, disparo, alarmas T3/T4 y ronquidos—permitiendo una respuesta inmediata y una alerta temprana fiable. En este tutorial, aprenderemos cómo compilar y cargar el firmware en una placa XIAO ESP32.
 
 ## Hardware necesario
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sensor de eventos de sonido </th>
     <th>Kit Home Assistant Yellow</th>
     <th>Xiao ESP32S3</th>
   </tr>
@@ -73,7 +73,7 @@ Después de la instalación, haz clic en **Start** para ejecutar el complemento 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-Activa **Start on Boot, Watchdog, and Show in Sidebar** para un acceso más sencillo.
+Activa **Start on Boot, Watchdog y Show in Sidebar** para un acceso más sencillo.
 
 Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
@@ -83,17 +83,17 @@ Haz clic en + **NEW DEVICE.**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en **Continue → New Device Setup**, luego proporciona un nombre apropiado para el dispositivo.
+Haz clic en **Continue → New Device Setup**, luego proporciona un nombre adecuado para el dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
 
-En esta demostración, estamos usando la XIAO ESP32-S3, así que seleccionaremos **ESP32-S3** como la placa de destino. Esto puede variar según la placa que estés utilizando.
+En esta demostración, estamos usando la XIAO ESP32-S3, por lo que seleccionaremos **ESP32-S3** como la placa de destino. Esto puede variar según la placa que estés utilizando.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-Selecciona la nueva entrada de dispositivo y haz clic en **Edit**. Elimina toda la plantilla YAML y luego copia y pega el archivo YAML proporcionado en el editor.
+Selecciona la entrada de tu nuevo dispositivo y haz clic en **Edit**. Elimina toda la plantilla YAML y luego copia y pega el archivo YAML proporcionado en el editor.
 
 <details>
 <summary>YAML de eventos de sonido</summary>
@@ -568,7 +568,7 @@ sensor:
 </details>
 
 :::note
-En este ejemplo, estamos utilizando la XIAO ESP32S3, por lo que es posible que debas actualizar los siguientes parámetros en el archivo YAML según tu placa y la configuración del cableado
+En este ejemplo, estamos usando la XIAO ESP32S3, por lo que es posible que debas actualizar los siguientes parámetros en el archivo YAML según tu placa y configuración de cableado
 :::
 
 ```bash
@@ -577,7 +577,7 @@ tx_pin: GPIO43             # your TX pin connection
 rx_pin: GPIO44             # your RX pin connection
 ```
 
-Una vez que hayas guardado tu archivo YAML, haz clic en **INSTALL**.
+Una vez que tu YAML esté guardado, haz clic en **INSTALL**.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -585,13 +585,13 @@ Elige Manual Download
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/manual_download.png" alt="pir" width={500} height="auto" /></p>
 
-Espera a que el firmware se compile.
+Espera a que el firmware termine de compilarse.
 
-Descarga el archivo de firmware .bin generado a tu ordenador desde Factory Format.
+Descarga a tu ordenador el archivo de firmware .bin generado desde Factory Format.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-Conecta la placa ESP32-S3 del sensor de sonido integrado a tu PC usando un cable USB Type-C.
+Conecta la placa ESP32-S3 del sensor de sonido integrado a tu PC utilizando un cable USB Tipo‑C.
 
 Abre [Web ESPHome](https://web.esphome.io/?dashboard_wizard) en Google Chrome.
 
@@ -607,7 +607,7 @@ Selecciona el archivo .bin que acabas de descargar.
 
 Espera a que la instalación se complete (puede tardar unos minutos).
 
-Cuando finalice correctamente, verás un mensaje de confirmación.
+Cuando se complete correctamente, verás un mensaje de confirmación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
@@ -623,7 +623,7 @@ Haz clic en Add y luego en Submit para finalizar la configuración.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
 
-Después, podrás interactuar con el dispositivo a través de la interfaz de Home Assistant y crear tus propias automatizaciones con otros periféricos. Por ejemplo, puedes activar un zumbador cuando se detecte rotura de cristal, o reproducir automáticamente música de cuna relajante en un altavoz inteligente cuando se detecte el llanto de un bebé.
+Luego podrás interactuar con el dispositivo a través de la interfaz de Home Assistant y crear tus propias automatizaciones con otros periféricos. Por ejemplo, puedes activar un zumbador cuando se detecte rotura de cristal o reproducir automáticamente música de nana relajante en un altavoz inteligente cuando se detecte el llanto de un bebé.
 
 ## Demostración
 
@@ -640,7 +640,7 @@ Después, podrás interactuar con el dispositivo a través de la interfaz de Hom
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -45,6 +45,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Application', 'meshcore_node_map_l1.md'), //4.3
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_ChirpStack.md'), //3.30
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_TTN.md'), //3.30
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_pinocchio.md'), //3.24
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_python_control.md'), //4.10
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

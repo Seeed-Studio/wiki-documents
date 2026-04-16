@@ -9,10 +9,10 @@ slug: /recamera_getting_started
 sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899
 sidebar_position: 1
 last_update:
-  date: 02/15/2025
-  author: Evelyn Chen
+  date: 04/10/2026
+  author: Evelyn Chen & Samuel
 createdAt: '2024-11-11'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/recamera_getting_started/
 ---
 
@@ -113,6 +113,21 @@ Connect the USB cable from reCamera to your PC, you can then visit ```192.168.42
 If you have reCamera with wireless function, we recommend to set up Wi-Fi connection. Only 2002w version will have the Wi-Fi Selection UI.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Wi-Fi_list.png" /></div>
+
+**Notes for WiFi Network Configuration:**
+
+1. **Ensure Same Network**: Please make sure reCamera and your computer are connected to the **same WiFi network**. This ensures that subsequent development and debugging can proceed normally.
+
+2. **Disable VPN on Computer**: If you have a VPN enabled on your computer, please **turn off the VPN** before configuring WiFi. VPNs may cause network connection issues and prevent you from accessing reCamera normally.
+
+3. **How to Switch WiFi Connection**:
+   - In the reCamera configuration page (192.168.42.1), find the **Network** Settings option
+   - Click **Enable WI-FI botton**
+   - Select the WiFi network (SSID) you want to connect to from the list
+   - Enter the WiFi password
+   - Click **Confirm** button
+
+4. After successfully connecting to Wi-Fi, click the “Settings” button to enter the settings page. You can view the Wi-Fi IP address next to “Wi-Fi IP”.
 
 If you encounter any problems, please view the [network troubleshoot](https://wiki.seeedstudio.com/recamera_network_connection/).
 

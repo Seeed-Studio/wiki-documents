@@ -284,7 +284,11 @@ If the commands complete normally, the repository has been cloned successfully.
 </TabItem>
 </Tabs>
 
-### 5. Hands-on practice
+After the repository is ready, you can continue with either of the following two practical projects. Project A focuses on `Wio Tracker L1` UI customization. Project B focuses on `XIAO ESP32S3` environmental telemetry over Meshtastic.
+
+## Project A: Wio Tracker L1 UI customization
+
+### Hands-on practice
 
 At this stage, do not rush into editing the code. First, make sure the project can run through the complete build process successfully.
 
@@ -643,7 +647,7 @@ The file you should confirm has been updated is:
 firmware-seeed_wio_tracker_L1-*.uf2
 ```
 
-### 6. Flash the firmware
+### Flash the firmware
 
 After the build is complete, open the official flashing page:
 
@@ -667,6 +671,294 @@ If you want to go further, you can continue exploring these directions:
 2. Adjust the behavior of buttons, GPS, Bluetooth, and other modules
 3. Add an independent `variant` for your own board
 4. Continue tracing the relationships between `src/`, `variants/`, and `boards/`
+
+If you want a more feature-oriented source-level example, continue to Project B below. It builds a dedicated environmental telemetry node with `XIAO ESP32S3 + Wio-SX1262 + SHT40`. Compared with the Wio Tracker L1 UI modification above, this part focuses on default configuration, telemetry timing, and real mesh verification between two nodes.
+
+## Project B: XIAO ESP32S3 environmental telemetry node
+
+### Project goal
+
+This advanced example uses two Meshtastic devices in the same mesh.
+
+**Remote sensor node**
+
+- Read temperature and humidity from `SHT40`
+- Use Meshtastic environmental telemetry
+- Send telemetry into the mesh
+- Change the mesh send interval to `60s`
+- Skip the first-boot interactive region setup
+- Set the default region to `US`
+
+**Nearby gateway node**
+
+- Join the Meshtastic network as a `CLIENT`
+- Receive remote `TELEMETRY_APP` packets over LoRa
+- Parse `environmentMetrics.temperature`
+- Parse `environmentMetrics.relativeHumidity`
+
+**Communication path**
+
+```plain
+XIAO ESP32S3 + Wio-SX1262 + SHT40 -> Meshtastic LoRa -> XIAO ESP32S3 + Wio-SX1262 (or any other device on the same mesh)
+```
+
+### Hardware preparation
+
+**Remote node hardware**
+
+- Seeed `XIAO ESP32S3`
+- `Wio-SX1262`
+- `SHT40`
+
+**Gateway node hardware**
+
+The nearby node can be any Meshtastic device that joins the same network. In the examples below, I still use another `XIAO ESP32S3 + Wio-SX1262` device.
+
+**SHT40 wiring**
+
+- `VCC -> 3V3`
+- `GND -> GND`
+- `SDA -> GPIO5`
+- `SCL -> GPIO6`
+
+Confirmed working settings:
+
+- `I2C address = 0x44`
+- `GPIO5 / GPIO6` is the current working I2C wiring pair
+
+The following photo shows the actual wiring used on the remote node:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image1.png)
+
+**Modules and SKU used in this project**
+
+- [`Seeeduino XIAO Expansion Board`](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) (`SKU: 103030356`)
+- [`XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa`](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) (`SKU: 102010611`)
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image11.png)
+
+### Modify the Meshtastic firmware for the remote node
+
+The target environment for this project is:
+
+```plain
+seeed-xiao-s3
+```
+
+The main files are:
+
+- `variants/esp32s3/seeed_xiao_s3/platformio.ini`
+- `src/modules/Telemetry/EnvironmentTelemetry.h`
+- `src/modules/Telemetry/EnvironmentTelemetry.cpp`
+
+In this part, only update the `build_flags` section in `variants/esp32s3/seeed_xiao_s3/platformio.ini`. Keep the rest of the upstream file unchanged.
+
+```ini
+build_flags =
+  ${esp32s3_base.build_flags}
+  -D SEEED_XIAO_S3
+  -D ENVIRONMENTAL_TELEMETRY_MODULE_ENABLE=1 ; enable environmental telemetry by default
+  -D USERPREFS_CONFIG_LORA_REGION=meshtastic_Config_LoRaConfig_RegionCode_US ; set the default region to US
+  -D USERPREFS_CONFIG_DEVICE_ROLE=meshtastic_Config_DeviceConfig_Role_SENSOR ; set the default role to SENSOR
+  -I variants/esp32s3/seeed_xiao_s3
+  -DBOARD_HAS_PSRAM
+  -DARDUINO_USB_MODE=0
+```
+
+The `build_flags` change should look similar to this:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image4.png)
+
+These three flags do the following:
+
+- Enable environmental telemetry by default
+- Set the default region to `US`, so the first boot no longer stops at region selection
+- Set the default device role to `SENSOR`
+
+The telemetry timing change is implemented in `EnvironmentTelemetry.h` and `EnvironmentTelemetry.cpp`, not in `platformio.ini`.
+
+After the full modification, the behavior becomes:
+
+- Environmental telemetry is enabled by default
+- The device starts with region `US`
+- The device starts with role `SENSOR`
+- Mesh environmental telemetry is sent every `60s`
+- `path=phone` and `path=mesh` are logged separately
+- The mesh send timestamp is updated only after a real mesh send succeeds
+
+The expected mesh dispatch log looks like this:
+
+```plain
+Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
+```
+
+### Configure the nearby gateway node
+
+Use a nearby Meshtastic device as a `CLIENT` on the same mesh. After the remote node starts sending telemetry, confirm that the gateway can receive:
+
+- `TELEMETRY_APP`
+- `environmentMetrics.temperature`
+- `environmentMetrics.relativeHumidity`
+
+If the gateway keeps trying to connect to Wi-Fi during testing, disable Wi-Fi with the Meshtastic CLI. Replace `<gateway_port>` with your actual serial port, such as `COMx` on Windows or `/dev/cu.usbmodem...` on macOS.
+
+```bash
+meshtastic --port <gateway_port> --set network.wifi_enabled false
+```
+
+### Build, flash, and verify
+
+**Step 1: Copy the modified files**
+
+Before building, copy the three modified files into your Meshtastic `2.7.20` or `2.7.21` source tree:
+
+| File in the package | Replace this file in your Meshtastic source tree |
+| --- | --- |
+| `meshtastic-2.7.20-s3-files/variants/esp32s3/seeed_xiao_s3/platformio.ini` | `<your Meshtastic directory>/variants/esp32s3/seeed_xiao_s3/platformio.ini` |
+| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.h` | `<your Meshtastic directory>/src/modules/Telemetry/EnvironmentTelemetry.h` |
+| `meshtastic-2.7.20-s3-files/src/modules/Telemetry/EnvironmentTelemetry.cpp` | `<your Meshtastic directory>/src/modules/Telemetry/EnvironmentTelemetry.cpp` |
+
+Direct download links:
+
+- [📎EnvironmentTelemetry.h](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.h)
+- [📎EnvironmentTelemetry.cpp](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/code/EnvironmentTelemetry.cpp)
+
+If you copy the files with a graphical file manager, the replacement prompt should look similar to this:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image5.png)
+
+**Step 2: Build the remote firmware**
+
+From the Meshtastic firmware root, run:
+
+```bash
+pio run -e seeed-xiao-s3
+```
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image6.png)
+
+**Step 3: Upload to the remote node**
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```plain
+pio device list
+pio run -e seeed-xiao-s3 -t upload --upload-port COMx
+```
+
+If you need to enter download mode manually:
+
+1. Hold `BOOT`
+2. Tap `RESET`
+3. Release `RESET`
+4. Release `BOOT`
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```bash
+pio device list
+pio run -e seeed-xiao-s3 -t upload --upload-port /dev/cu.usbmodemXXXX
+```
+
+</TabItem>
+</Tabs>
+
+Use `pio device list` first so you can identify the correct serial port:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image7.png)
+
+After the upload finishes, PlatformIO should report a successful flash:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image8.png)
+
+**Step 4: Monitor the serial logs**
+
+Use PlatformIO's serial monitor to check both the remote node and the nearby gateway.
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```plain
+pio device monitor -p COMx -b 115200
+pio device monitor -p COMy -b 115200
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```bash
+pio device monitor -p /dev/cu.usbmodemE072A1D89EB81 -b 115200
+pio device monitor -p /dev/cu.usbmodem3030F917FF281 -b 115200
+```
+
+</TabItem>
+</Tabs>
+
+Look for logs such as:
+
+```plain
+Environment telemetry dispatch path=mesh dest=0xffffffff interval_mesh_s=60
+Send: relative_humidity=...
+Send: ... temperature=...
+```
+
+**Step 5: Validate with the Meshtastic CLI**
+
+Install the CLI first:
+
+<Tabs>
+<TabItem value="windows" label="Windows">
+
+```plain
+pip install meshtastic
+```
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+```bash
+pip3 install meshtastic
+```
+
+</TabItem>
+</Tabs>
+
+After installation, reopen the terminal and confirm that `meshtastic --help` works.
+
+For the commands below, replace `<gateway_port>` with your actual gateway serial port:
+
+- Windows example: `COMx`
+- macOS example: `/dev/cu.usbmodem3030F917FF281`
+
+```bash
+meshtastic --port <gateway_port> --listen --debug
+meshtastic --port <gateway_port> --nodes --show-fields user.id,user.longName,user.shortName
+meshtastic --port <gateway_port> --get bluetooth.enabled --get bluetooth.mode --get bluetooth.fixed_pin --get power.wait_bluetooth_secs --get power.is_power_saving
+meshtastic --port <gateway_port> --set network.wifi_enabled false
+```
+
+Focus on:
+
+- `TELEMETRY_APP`
+- `environmentMetrics.temperature`
+- `environmentMetrics.relativeHumidity`
+
+**Step 6: Confirm in the mobile app**
+
+After flashing, connect to the remote node with the Meshtastic mobile app and confirm that the environmental data is visible. Then connect the app to another device on the same mesh and check the `Nodes` view to confirm that the sensor values are being received over the mesh.
+
+On the remote sensor node, you should be able to see the environmental telemetry values directly in the app:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image9.png)
+
+On the nearby node, the same readings should appear in the `Nodes` view after they are forwarded through the mesh:
+
+![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image10.png)
 
 ## Common issues
 
@@ -705,3 +997,35 @@ pio pkg install -e seeed_wio_tracker_L1
 ```
 
 Then run the build again.
+
+**The web client does not show the full environmental telemetry**
+
+- The Meshtastic Web Client currently does not provide a complete UI for remote environmental telemetry.
+- The `Messages` / `Broadcast` page is for chat traffic, not a dedicated telemetry page.
+- If the values do not appear there, it does not automatically mean that the mesh link has failed.
+
+**Seeing data on a phone does not prove mesh forwarding**
+
+- Seeing refreshed values on a directly connected phone only proves that the local phone-to-device link is working.
+- It does not automatically prove that the environmental telemetry has already been forwarded into the mesh.
+- To confirm a real mesh forward, check for these items in the logs:
+- `Environment telemetry dispatch path=mesh ...`
+- `TELEMETRY_APP`
+- `environmentMetrics.temperature`
+- `environmentMetrics.relativeHumidity`
+
+**The `seeed-xiao-s3` build fails during the first setup**
+
+- The first dependency installation can take a long time. This is normal.
+- If the target environment fails, install the packages first and then run a verbose build:
+
+```bash
+pio pkg install -e seeed-xiao-s3
+pio run -e seeed-xiao-s3 -v
+```
+
+- After the dependencies are ready, go back to the normal build:
+
+```bash
+pio run -e seeed-xiao-s3
+```

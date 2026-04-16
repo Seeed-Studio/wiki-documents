@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/r1225_quick_start/
-updatedAt: '2026-03-30'
+updatedAt: '2026-04-08'
 ---
 # Quick Start
 

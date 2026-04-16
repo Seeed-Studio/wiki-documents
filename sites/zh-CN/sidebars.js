@@ -2106,6 +2106,7 @@ const sidebars = {
               ],
             },
             'Sensor/reSpeaker_flex/cn_reSpeaker_flex_xiao',
+            'Sensor/reSpeaker_flex/cn_reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
@@ -2734,6 +2735,7 @@ const sidebars = {
               items: [
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_ChirpStack',
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_TTN',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/cn_Connecting_R1225_to_AWS_IoT',
               ],
             },
             /*{
@@ -4073,6 +4075,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/cn_Flash_JetPack_with_WSL2',
           ]
         }

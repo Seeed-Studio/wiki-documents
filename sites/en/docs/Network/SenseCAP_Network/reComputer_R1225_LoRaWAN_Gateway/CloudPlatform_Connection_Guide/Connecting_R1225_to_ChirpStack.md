@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/connecting_r1225_to_chirpstack/
-updatedAt: '2026-03-30'
+updatedAt: '2026-04-08'
 ---
 ## ChirpStack Configuration
 
@@ -113,7 +113,6 @@ Other settings can be left as default, or can be changed to suit your requiremen
 ### Channel Plan Settings
 
 Navigate to **`LoRa` > `Channel Plan`**
-
 
 Select the Region and Frequency plan according to the actual choice.
 
