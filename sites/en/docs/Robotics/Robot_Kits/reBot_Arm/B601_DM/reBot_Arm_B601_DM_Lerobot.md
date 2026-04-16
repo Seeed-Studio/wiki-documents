@@ -856,19 +856,6 @@ Refer to the official documentation: [GR00T N1.5](https://huggingface.co/docs/le
 
 </details>
 
-If you encounter the following error:
-
-<div align="center">
-    <img width={1000} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/rebot/stack_bug.png" />
-</div>
-
-Try running the following command to resolve it:
-
-```bash
-pip install datasets==2.19
-```
-
 Training should take several hours. You will find checkpoints in the `outputs/train/act_rebot_test/checkpoints` directory.
 
 To resume training from a checkpoint, here is an example command to resume from the `last` checkpoint of the `act_rebot_test` policy:

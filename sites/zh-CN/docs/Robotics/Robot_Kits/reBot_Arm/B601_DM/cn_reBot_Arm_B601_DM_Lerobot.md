@@ -899,21 +899,6 @@ lerobot-record \
 
 
 
-
-如果你遇到了以下报错：
-
-<div align="center">
-    <img width={1000} 
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/rebot/stack_bug.png" />
-</div>
-
-尝试运行以下命令来解决:
-
-```bash
-pip install datasets==2.19
-```
-
-
 训练可能需要几个小时。您将在 `outputs/train/act_rebot_test/checkpoints` 目录中找到训练结果权重文件。
 
 要从某个训练结果权重文件恢复训练，下面是一个从 `act_rebot_test` 策略的最后一个训练结果权重文件恢复训练的示例命令：
