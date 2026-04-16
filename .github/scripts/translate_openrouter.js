@@ -12,7 +12,8 @@ try {
 }
 
 const openai = new OpenAI({
-  apiKey: process.env.TRANSLATION_API_KEY
+  apiKey: process.env.TRANSLATION_API_KEY,
+  baseURL: 'https://openrouter.ai/api/v1'
 });
 
 // 语言配置
@@ -798,7 +799,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await openai.chat.completions.create({
-          model: 'gpt-5.1',
+          model: 'deepseek/deepseek-v3.2',
           max_completion_tokens: 20000,
           temperature: 0,
           messages: [
@@ -823,10 +824,10 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用ChatGPT API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
 
       const response = await openai.chat.completions.create({
-        model: 'gpt-5.1',
+        model: 'deepseek/deepseek-v3.2',
         max_completion_tokens: 20000,
         temperature: 0,
         messages: [
