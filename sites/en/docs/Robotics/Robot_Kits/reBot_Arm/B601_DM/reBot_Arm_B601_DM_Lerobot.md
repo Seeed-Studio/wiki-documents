@@ -8,6 +8,7 @@ keywords:
   - rebot arm
   - Robot
 slug: /rebot_arm_b601_dm_lerobot
+sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
   date: 2026-04-15
   author: LiuJunjie
