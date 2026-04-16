@@ -3900,6 +3900,7 @@ const sidebars = {
               items: [
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RM520N_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_Xavier_AGX_H01_Driver_Installation',
