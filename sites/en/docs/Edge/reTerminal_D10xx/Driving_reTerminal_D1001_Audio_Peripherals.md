@@ -1,21 +1,21 @@
 ---
-description: This article will guide you to drive the I2S audio peripheral on reTerminal D1001.
+description: This article will guide you to drive the I2S Speaker on reTerminal D1001.
 sku: 100058144
-title: Driving reTerminal D1001 Audio Peripherals
+title: Driving reTerminal D1001 Speaker
 image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp
-slug: /driving_reterminal_d1001_audio_peripherals
+slug: /driving_reterminal_d1001_speaker
 last_update:
-  date: 04/02/2026
+  date: 04/17/2026
   author: Jackson.Li
 createdAt: '2026-04-02'
-url: https://wiki.seeedstudio.com/driving_reterminal_d1001_audio_peripherals/
-updatedAt: '2026-04-02'
+url: https://wiki.seeedstudio.com/driving_reterminal_d1001_speaker/
+updatedAt: '2026-04-17'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Driving reTerminal D1001 Audio Peripherals
+# Driving reTerminal D1001 Speaker
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/hardware.webp" style={{width:900, height:'auto'}}/></div>
 
@@ -27,13 +27,13 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-This guide introduces how to drive the I2S audio peripheral on the **reTerminal D1001** development board. The system architecture involves three core components:
+This guide introduces how to drive the I2S speaker on the **reTerminal D1001** development board. The system architecture involves three core components:
 - **ESP32-P4**: The main processor that manages the audio data stream and controls peripheral configurations.
-- **ES8311**: A low-power mono audio codec responsible for converting digital I2S data into analog audio signals.
+- **ES8311**: A low-power mono audio codec responsible for converting digital I2S data into analog audio signals for the speaker.
 - **PCA9535**: An I2C IO expander used to control the power amplifier's enable state, providing flexible GPIO expansion for peripheral control.
 
 
-### Audio Architecture Block Diagram
+### Speaker Architecture Block Diagram
 
 The audio system utilizes a dual-bus architecture: the **I2S bus** is dedicated to high-speed digital audio data transmission, while the **I2C bus** handles low-speed control commands for both the codec and the IO expander.
 
@@ -50,7 +50,7 @@ The audio system utilizes a dual-bus architecture: the **I2S bus** is dedicated 
 | **I2S_MCK** | GPIO33 | **Master Clock**: High-frequency reference clock for the codec's internal delta-sigma modulators. |
 | **I2S_BCK** | GPIO32 | **Bit Clock**: Synchronizes each individual bit of the audio data stream. |
 | **I2S_WS**  | GPIO31 | **Word Select**: Also known as LRCK, it defines the start of a new audio frame and selects Left/Right channels. |
-| **I2S_DO**  | GPIO30 | **Data Output**: Transmits the digital PCM audio data from the ESP32-P4 to the codec. |
+| **I2S_DO**  | GPIO30 | **Data Output**: Transmits the digital PCM audio data from the ESP32-P4 to the codec for playback. |
 | **I2S_DI**  | GPIO11 | **Data Input**: Reserved for potential audio recording or loopback from the codec. |
 
 #### ESP32-P4 & PCA9535RGER (GPIO Expansion)
@@ -74,7 +74,7 @@ Download the official reTerminal D1001 repository from GitHub to get the source 
 </div><br />
 
 :::tip
-Please navigate to the `driver_examples/01_I2SCodec` directory within the repository to find the specific source code and project files for this audio example.
+Please navigate to the `driver_examples/01_I2SCodec/` directory within the repository to find the specific source code and project files for this speaker example.
 :::
 
 ### Development Execution Sequence
@@ -154,14 +154,13 @@ static esp_err_t i2s_driver_init(void)
 
 #### Step 3. Initialize ES8311 Codec
 
-The ES8311 must be configured to match the I2S settings (sample rate, data width) defined in the ESP32-P4. This is done via the I2C bus. Before building the project, you can customize the audio behavior by modifying the macros in `main/example_config.h`:
+The ES8311 must be configured to match the I2S settings (sample rate, data width) defined in the ESP32-P4. This is done via the I2C bus. Before building the project, you can customize the speaker behavior by modifying the macros in `main/example_config.h`:
 
 | Macro | Description | Setting Principles |
 | :--- | :--- | :--- |
 | **EXAMPLE_SAMPLE_RATE** | **Audio Sample Rate** (Hz) | Defines the frequency of audio samples. Common values are `16000` (voice) or `44100`/`48000` (music). |
 | **EXAMPLE_MCLK_MULTIPLE** | **MCLK to LRCLK Ratio** | The Master Clock (MCLK) must be a multiple of the sample rate. `256` is standard for 16-bit, but `384` is often used for higher precision. |
 | **EXAMPLE_VOICE_VOLUME** | **Playback Volume** | Ranges from `0` to `100`. Sets the initial output level of the ES8311 codec. |
-| **EXAMPLE_MIC_GAIN** | **Microphone Gain** (dB) | Adjusts the sensitivity of the dual microphones. Higher values increase volume but may introduce noise. |
 | **EXAMPLE_RECV_BUF_SIZE** | **DMA Buffer Size** | Controls the size of the data chunks processed by DMA. Larger buffers prevent stutters but increase audio latency. |
 
 ```c
