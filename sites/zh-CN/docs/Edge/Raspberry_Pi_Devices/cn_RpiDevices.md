@@ -103,7 +103,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
         <td>8GB/16GB</td>
         <td>8GB/16GB</td>
         <td>8GB/16GB,32GB eMMC</td>
-      </tr]
+      </tr>
       <tr>
         <td>NPU</td>
         <td>26TOPS</td>
@@ -313,7 +313,7 @@ Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建�
         <td>
           <strong>Azure</strong>  
 
-微软的公共云平台，提供集成的云服务。</td>
+微软的公共云平台，提供集成的云服务。
         </td>
       </tr>
     </tbody>
@@ -381,7 +381,7 @@ Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建�
 
 用于本地控制和自动化的开源智能家居平台。
         </td>
-      </tr]
+      </tr>
       <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/frigate.png" style={{width:80, height:'auto'}}/></td>
         <td>

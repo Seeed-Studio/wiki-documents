@@ -381,7 +381,7 @@ IoT デバイスのデプロイと管理のための OS プラットフォーム
 
 ローカル制御と自動化のためのオープンソーススマートホームプラットフォーム。
         </td>
-      </tr]
+      </tr>
       <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/frigate.png" style={{width:80, height:'auto'}}/></td>
         <td>
