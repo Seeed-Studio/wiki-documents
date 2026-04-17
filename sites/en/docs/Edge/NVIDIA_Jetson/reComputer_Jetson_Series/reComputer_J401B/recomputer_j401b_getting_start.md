@@ -10,7 +10,7 @@ last_update:
   date: 4/27/2025
   author: Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/recomputer_j401b_getting_start/
 ---
 

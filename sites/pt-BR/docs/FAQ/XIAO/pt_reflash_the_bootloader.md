@@ -6,7 +6,7 @@ last_update:
   date: 6/30/2023
   author: cheng.tang
 createdAt: '2023-07-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/reflash_the_bootloader/
 ---
 Você pode simplesmente conectar a placa a um PC via **USB Type-C** e regravar o bootloader com o firmware de fábrica usando a **ESP RF Test Tool**.

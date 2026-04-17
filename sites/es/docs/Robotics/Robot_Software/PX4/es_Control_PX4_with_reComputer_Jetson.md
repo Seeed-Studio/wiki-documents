@@ -11,7 +11,7 @@ last_update:
   date: 7/21/2025
   author: TienjuiWong
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/control_px4_with_recomputer_jetson/
 ---
 
@@ -410,7 +410,7 @@ Ahora tienes tres métodos poderosos para habilitar la comunicación entre un Je
 ## Recursos
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

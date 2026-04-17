@@ -14,7 +14,7 @@ last_update:
   author: Nolan Chen
 no_comments: false
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-26'
 url: https://wiki.seeedstudio.com/es/gun_detection_with_frigate_nvr_on_r2000/
 ---
 

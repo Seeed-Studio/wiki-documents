@@ -13,7 +13,7 @@ last_update:
   date: 07/01/2024
   author: Kasun Thushara
 createdAt: '2024-05-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1000_getting_started_node_red/
 ---
 ## Introdução

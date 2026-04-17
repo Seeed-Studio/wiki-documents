@@ -7,7 +7,7 @@ last_update:
   date: 05/27/2024
   author: Allen
 createdAt: '2024-05-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_telegram/
 ---
 

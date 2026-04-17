@@ -9,7 +9,7 @@ last_update:
   date: 8/8/2023
   author: Jessie
 createdAt: '2023-06-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Wio-WM1110_Dev_Kit_Hardware_Overview/
 ---
 

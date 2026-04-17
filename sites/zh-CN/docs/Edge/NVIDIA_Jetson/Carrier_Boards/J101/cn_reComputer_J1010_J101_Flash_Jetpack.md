@@ -9,7 +9,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_J1010_J101_Flash_Jetpack/
 ---
 
@@ -394,7 +394,7 @@ sudo ./nvmflash.sh --showlogs
 [Seeed Jetson 设备单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

@@ -21,7 +21,7 @@ last_update:
 tags:
   - smart-retail
 createdAt: '2025-12-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/solutions/smart-retail-voice-ai-solution-1/
 ---
 

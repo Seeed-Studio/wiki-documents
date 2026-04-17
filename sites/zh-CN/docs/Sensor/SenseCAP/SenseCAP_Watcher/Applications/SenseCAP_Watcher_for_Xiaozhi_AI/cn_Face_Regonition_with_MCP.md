@@ -14,102 +14,86 @@ keywords:
   - recognition
   - MCP
   - reComputer
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: https://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /face_regonition_with_mcp
 last_update:
-  date: 11/25/2025
-  author: Twelve
-createdAt: '2025-11-25'
-updatedAt: '2026-03-03'
+  date: 04/07/2026
+  author: Spencer
+createdAt: '2025-11-24'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/cn/face_regonition_with_mcp/
 ---
-# 使用 MCP 扩展人脸识别功能
+
+# 使用 MCP 扩展人脸识别
 
 ## 概述
 
-本指南介绍如何使用 **SenseCAP Watcher（小智）** 与 **reComputer Raspberry Pi 系统** 部署人脸识别工作流程。Watcher 捕获图像并将其发送到 reComputer，使用内部 MCP 工具对本地数据库进行人脸匹配。
+本指南介绍如何使用 **SenseCAP Watcher（小智）** 搭配 **reComputer Raspberry Pi 系统** 部署人脸识别工作流。
+
+通过为 **SenseCAP Watcher** 刷入定制固件，小智 AI 将获得由带有 Hailo-8 加速的 **reComputer** 提供的人脸识别能力。完成配置后，只需对 Watcher 说类似“检查这个人是谁”的话，AI 会自动拍照，将人脸与 reComputer 上的本地数据库进行比对，并返回此人的名字和置信度。
 
 ## 硬件准备
 
 <table align="center">
   <tr>
-    <th>SenseCAP Watcher for XiaoZhi</th>
+    <th>SenseCAP Watcher for Xiaozhi</th>
     <th>reComputer AI R2130-12</th>
   </tr>
-      <tr>
-          <td><div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" style={{width:230, height:'auto'}}/></div></td>
-          <td><div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr1.png" style={{width:350, height:'auto'}}/></div></td>
-      </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" style={{width:230, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr1.png" style={{width:350, height:'auto'}}/></div></td>
+  </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html" target="_blank" rel="noopener noreferrer">
+      <strong><span style={{color: '#FFFFFF', fontSize: '16px'}}> 立即获取 🖱️</span></strong>
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer">
+      <strong><span style={{color: '#FFFFFF', fontSize: '16px'}}> 立即获取 🖱️</span></strong>
       </a>
     </div></td>
   </tr>
 </table>
 
-## 前提条件
-按照本指南安装 reComputer Raspberry Pi 系统：[reComputer R2000 系列入门指南](https://wiki.seeedstudio.com/cn/r2000_series_getting_start/#flash-os)
+## 前置条件
 
-## 执行结果
+- 按照以下文档安装 reComputer Raspberry Pi 系统：[reComputer R2000 Series 入门指南](https://wiki.seeedstudio.com/cn/r2000_series_getting_start/#入门指南-os)
+- 源代码仓库：
+  - [小智人脸识别固件](https://github.com/suharvest/xiaozhi-esp32/tree/face_rec_api)
+  - [人脸识别 API](https://github.com/suharvest/face_rec_api)
 
-<div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr11.png" style={{width:400, height:'auto'}}/></div>
-
-<div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr12.png" style={{width:400, height:'auto'}}/></div>
-
-## 源代码仓库：
-
-- [小智人脸识别固件代码仓库](https://github.com/suharvest/xiaozhi-esp32/tree/face_rec_api)
-
-- [人脸识别 API](https://github.com/suharvest/face_rec_api#)
-
-## 部署过程
+## 部署流程
 
 ### 步骤 1. 记录 reComputer 的 IP 地址
 
-- 将 reComputer 连接到您的网络，如路由器
+将 reComputer 连接到你的网络（例如路由器），并获取它的 IP 地址。本指南中的示例 IP 为 `192.168.24.10`。
 
-- 获取其 IP 地址，此处使用的示例 IP：192.168.24.10
+<div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr2.png" style={{width:400, height:'auto'}}/></div>
 
-    <div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr2.png" style={{width:400, height:'auto'}}/></div>
+### 步骤 2. 为 Watcher 刷写固件
 
+1. 使用底部接口的 Type-C 线将 PC 连接到 Watcher。
 
-### 步骤 2. 将固件刷入 Watcher
-
-- 使用 Type-C 线缆通过底部端口将 PC 连接到 Watcher
-
-- 打开 ESP-IDF 5.5 CMD（版本 5.5.1）并导航到合适的文件夹
-
-- 克隆 Watcher 固件仓库
+2. 打开 ESP-IDF 5.5 CMD（版本 5.5.1），并克隆固件仓库：
 
 ```bash
 git clone -b face_rec_api --single-branch https://github.com/suharvest/xiaozhi-esp32.git
 cd xiaozhi-esp32
 ```
 
-- 找到与 reComputer 通信的代码部分
-    - 文件位置：main/boards/sensecap-watcher/sscma_camera.cc（第 769 行）
+3. 打开 `main/boards/sensecap-watcher/sscma_camera.cc`，搜索 `face_rec_url`，并将 IP 修改为你的 reComputer 的 IP：
 
 ```cpp
-std::string face_rec_url = "http://192.168.10.131.80001/recognize"
+// Before (default):
+std::string face_rec_url = "http://192.168.10.131:8001/recognize";
+
+// After (your reComputer IP):
+std::string face_rec_url = "http://<reComputer_IP>:8001/recognize";
 ```
 
-- 将 IP 地址更改为您的 reComputer 的实际 IP
-
-    ```cpp
-    std::string face_rec_url = <Your_reComputer_actual_IP>
-    ```
-    - 示例
-
-    <div style={{textAlign:'left'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr4.png" style={{width:800, height:'auto'}}/></div>
-
-- 编译并刷入固件
+4. 编译并刷写：
 
 ```bash
 idf.py set-target esp32s3
@@ -117,140 +101,147 @@ idf.py menuconfig    # Select SenseCAP Watcher board
 idf.py build flash
 ```
 
-### 步骤 3. SSH 连接到 reComputer 并准备环境
+### 步骤 3. 配置 reComputer 环境
 
-- 通过 SSH 连接（根据需要替换用户名和 IP）
+1. 通过 SSH 连接：
 
 ```bash
-ssh <Your_reComputer's username>@<Your_reComputer's host IP>
-# For example : ssh recomputer@192.168.24.10
+ssh <username>@<reComputer_IP>
+# Example: ssh recomputer@192.168.24.10
 ```
 
 :::note
-我们建议在 VS Code 中使用 **Remote - SSH** 扩展来连接您的 reComputer。
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr10.png" style={{width:400, height:'auto'}}/></div>
-
+我们推荐在 VS Code 中使用 **Remote - SSH** 扩展来连接你的 reComputer。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr10.png" style={{width:400, height:'auto'}}/></div>
 :::
 
-- 对于中国大陆用户，你可以先用此脚本来配置你的镜像源，以提升你的下载速度
-
-```bash
-curl -sSL https://linuxmirrors.cn/main.sh -o gnu_linux_mirror.sh
-sudo bash gnu_linux_mirror.sh
-```
-
-- 安装 Docker 并设置 docker 用户
-
-```bash
-curl -sSL https://linuxmirrors.cn/docker.sh -o install_docker.sh
-sudo bash install_docker.sh
-bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
-
-sudo groupadd docker
-sudo usermod -aG docker $USER
-```
-
-- 更新系统软件
+2. 更新系统软件：
 
 ```bash
 sudo apt update && sudo apt full-upgrade
 sudo rpi-eeprom-update
 ```
 
-- 安装 uv
+3. 安装 Hailo 运行时和驱动：
+
+```bash
+sudo apt install hailo-all
+sudo reboot
+```
+
+4. 重启后，重新通过 SSH 连接并验证 HailoRT：
+
+```bash
+hailortcli scan
+hailortcli fw-control identify
+```
+
+如果你看到类似如下的输出，则说明驱动已成功安装：
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr3.png" style={{width:700, height:'auto'}}/></div>
+
+5. 安装 uv：
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
 ```
 
-### 步骤 4. 克隆 API 并更新依赖项
+### 步骤 4. 克隆 API 并安装依赖
 
 ```bash
 git clone https://github.com/suharvest/face_rec_api.git
 cd face_rec_api/
 uv sync
 ```
-- 安装 DKMS、HailoRT，添加配置并重启
 
-```bash
-sudo apt-get install dkms
-sudo dpkg --install hailort-4.21.0/hailort_4.21.0_arm64.deb hailort-4.21.0/hailort-pcie-driver_4.21.0_all.deb
-echo "options hailo_pci force_desc_page_size=4096" | sudo tee /etc/modprobe.d/hailo_pci.conf
+### 步骤 5. 添加照片并启动服务
+
+1. 将照片放入 `photos/` 文件夹。每个文件应以人物名称命名（不带扩展名的文件名会被用作此人的名字）：
+
+```
+photos/
+├── john_doe.jpg
+├── jane_smith.png
+└── alice_wang.jpg
 ```
 
-- 检查 HailoRT 状态
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr5.png" style={{width:400, height:'auto'}}/></div>
 
-```bash
-sudo reboot
-hailortcli scan
-hailortcli fw-control identify
-```
-    - 如果您看到类似以下的信息，说明您的驱动程序已成功安装
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr3.png" style={{width:700, height:'auto'}}/></div>
-
-### 步骤 5. 添加照片并启动人脸识别服务
-
-- 将照片放置在 photos/ 文件夹中
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr5.png" style={{width:400, height:'auto'}}/></div>
-
-- 生成嵌入向量
+2. 生成特征向量（embeddings）：
 
 ```bash
 uv run scripts/batch_process.py
 ```
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr6.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr6.png" style={{width:600, height:'auto'}}/></div>
 
-- 赋予执行权限并启动服务
+3. 启动服务：
 
 ```bash
 chmod +x start_standalone.sh
 ./start_standalone.sh
 ```
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr7.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr7.png" style={{width:600, height:'auto'}}/></div>
 
-- 服务现在正在运行。Watcher 可以与 reComputer 通信以检查数据库中是否存在人脸。您可以使用 `Ctrl + C` 停止服务。
+服务现在在 **8001** 端口上运行。Watcher 可以与 reComputer 通信，以检查人脸是否存在于数据库中。你可以使用 `Ctrl + C` 停止服务。
 
-- 您可以添加提示，如："当检测到人员时，使用人脸识别工具检查姓名和置信度：如果置信度大于 40%，则按姓名问候他们；否则，给出通用问候。"
+你可以添加类似这样的提示词：“当检测到有人时，使用人脸识别工具检查姓名和置信度：如果置信度大于 0.40，就用名字向其打招呼；否则给出通用的问候语。”
 
 ### 步骤 6. 更新人脸数据库
 
-- 停止服务后，将新照片添加到 `photos/` 文件夹中，重新生成嵌入向量并重启服务。
+向 `photos/` 文件夹中添加新照片，然后重新生成特征向量并重启服务：
 
 ```bash
 uv run scripts/batch_process.py
 ./start_standalone.sh
 ```
 
+:::tip
+你也可以在服务运行过程中通过调用 reload 接口来更新数据库：
+```bash
+curl -X POST http://localhost:8001/reload
+```
+:::
+
 ### 步骤 7. 清空人脸数据库
 
-- 删除 `photos/` 文件夹中的所有文件。
+1. 删除 `photos/` 文件夹中的所有文件。
+2. 删除 `data/` 文件夹中的 `embeddings.json` 文件。
 
-- 删除 `data/` 文件夹中的 `embedding.json` 文件。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr8.png" style={{width:400, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr8.png" style={{width:400, height:'auto'}}/></div>
+清空后，重启服务，你会看到干净的日志输出：
 
-- 清空后，运行服务，您将看到相同的日志
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr9.png" style={{width:600, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr9.png" style={{width:600, height:'auto'}}/></div>
+## 执行结果
+
+<div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr11.png" style={{width:400, height:'auto'}}/></div>
+
+<div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr12.png" style={{width:400, height:'auto'}}/></div>
 
 ## 常见问题
 
 **问：如何让小智 AI 调用人脸识别 API？**
 
-**答：** 只需向 Watcher 询问类似"检查我是否在人脸识别系统中"的问题。
-AI 将自动调用 MCP 工具来检查人脸数据库。
+**答：** 只需向 Watcher 提问，例如“检查我是否在你的人脸识别系统中”。AI 会自动调用人脸识别工具。
 
-**问：如果人脸识别系统无法上传照片该怎么办？**
+**问：服务无法连接或无法识别人脸。我应该检查什么？**
 
-**答：** 请检查 IP 地址是否正确以及人脸识别服务是否正常运行。
+**答：** 请确认：
+- 固件中配置的 reComputer IP 地址与实际 IP 一致。
+- 人脸识别服务正在运行（`curl http://<reComputer_IP>:8001/health`）。
+- 没有防火墙规则阻止 8001 端口。
 
-**问：我可以使用其他设备来部署吗？**
+**问：安装 `hailo-all` 后未检测到 Hailo，该怎么办？**
 
-**答：** 可以。只要是搭载 Linux 系统且可以联网的设备都能部署，只是 reComputer 的运算性能会更好。
+**答：** 完整重启后重新运行 `hailortcli scan`。如果仍未检测到，请使用 `lspci | grep Hailo` 和 `dmesg | grep -i hailo` 检查 PCIe 连接。
+
+**问：我可以在其他设备上部署人脸识别系统吗？**
+
+**答：** 可以，只要设备运行基于 Linux 的系统并搭载 Hailo-8 硬件即可。推荐使用 reComputer 系列，本指南已在该平台上完成验证。
 
 ## 技术支持
 

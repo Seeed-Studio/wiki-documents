@@ -7,7 +7,7 @@ last_update:
   date: 6/21/2023
   author: Seraphina
 createdAt: '2023-06-21'
-updatedAt: '2026-03-03'
+updatedAt: '2023-06-21'
 url: https://wiki.seeedstudio.com/Logging_in_OS_using_USB_to_serial_converter/
 ---
 

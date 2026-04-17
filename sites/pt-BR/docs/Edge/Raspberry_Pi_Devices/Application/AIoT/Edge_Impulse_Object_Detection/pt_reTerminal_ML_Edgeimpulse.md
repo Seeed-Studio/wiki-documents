@@ -11,7 +11,7 @@ last_update:
   date: 9/12/2023
   author: Kasun Thushara
 createdAt: '2023-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/reTerminal_ML_Edgeimpulse/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/ML/edgeimpulse.gif" alt="pir" width="800" height="auto"/></p>

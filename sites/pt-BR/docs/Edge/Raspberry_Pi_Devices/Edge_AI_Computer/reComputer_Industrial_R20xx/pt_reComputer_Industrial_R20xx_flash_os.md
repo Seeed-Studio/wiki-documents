@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r2000_flash_os/
 ---
 # reComputer Industrial R20xx Gravar SO

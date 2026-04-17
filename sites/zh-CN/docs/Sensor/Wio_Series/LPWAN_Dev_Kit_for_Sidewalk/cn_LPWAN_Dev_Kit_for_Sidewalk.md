@@ -11,7 +11,7 @@ last_update:
   date: 12/4/2023
   author: Jessie
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/cn/wio_tracker_for_sidewalk/
 ---
 

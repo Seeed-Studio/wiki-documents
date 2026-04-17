@@ -10,7 +10,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2023-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-11'
 url: https://wiki.seeedstudio.com/Grove-DC_Jack_Power/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-DC_Jack_Power/img/Power_photo1.jpg)

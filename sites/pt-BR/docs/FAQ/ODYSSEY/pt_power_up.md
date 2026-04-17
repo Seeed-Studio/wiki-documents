@@ -7,7 +7,7 @@ last_update:
   date: 2023.6.25
   author: cheng.tang
 createdAt: '2023-06-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/power_up/
 ---
 Certifique-se de usar o adaptador de energia 12V/2A fornecido na caixa e verifique a conexão.

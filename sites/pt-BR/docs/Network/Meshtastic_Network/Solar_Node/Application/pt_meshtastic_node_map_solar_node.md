@@ -9,31 +9,29 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png
 slug: /meshtastic_node_map_solar_node
 sku: 114993643,114993633
-sidebar_position: 2
+sidebar_position: 1
 last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_node_map_solar_node/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
 
 Este guia explica como exibir as localizações de dispositivos [Meshtastic](https://meshtastic.org/docs/introduction/) em Mapas de Nós Meshtastic usando os dispositivos [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) e [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html), assumindo que os dispositivos já foram gravados com o firmware Meshtastic.
 
 ## Introdução aos Monitores de Rede Meshtastic
 
-O Mapa de Nós Meshtastic é uma interface online que visualiza as localizações de dispositivos Meshtastic em um mapa. Ele ajuda os usuários a monitorar as posições em tempo real dos dispositivos em uma rede mesh, fornecendo uma visão da cobertura e conectividade da rede.
+O Mapa de Nós Meshtastic é uma interface online que visualiza as localizações dos dispositivos Meshtastic em um mapa. Ele ajuda os usuários a monitorar as posições em tempo real dos dispositivos em uma rede mesh, fornecendo uma visão sobre a cobertura e a conectividade da rede.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" style={{width:900, height:'auto'}}/></div>
 
-Os dispositivos Meshtastic relatam periodicamente sua localização para um servidor Meshtastic via MQTT. O Mapa de Nós recupera esses relatórios e exibe a posição, rota e alcance de sinal de cada nó. Os dispositivos podem relatar sua localização:
+Os dispositivos Meshtastic periodicamente reportam sua localização para um servidor Meshtastic via MQTT. O Mapa de Nós recupera esses relatórios e exibe a posição, a rota e o alcance do sinal de cada nó. Os dispositivos podem reportar sua localização:
 
-- **Diretamente via MapReport:** O dispositivo envia os dados de localização diretamente para o servidor.
-- **Indiretamente via outros nós:** A localização é retransmitida por nós vizinhos.
+- **Diretamente via MapReport:** o dispositivo envia os dados de localização diretamente para o servidor.
+- **Indiretamente via outros nós:** a localização é retransmitida por nós vizinhos.
 
 **Casos de Uso Adequados**
 
@@ -41,7 +39,7 @@ Os Mapas de Nós Meshtastic são ideais para:
 
 - Aventuras ao ar livre, como trilhas, ciclismo ou expedições.
 - Monitoramento remoto de dispositivos IoT distribuídos.
-- Rastreamento de ativos ou membros de equipe sem depender de redes celulares.
+- Rastreamento de ativos ou membros da equipe sem depender de redes celulares.
 
 ### Mapas de Nós Meshtastic Comuns
 
@@ -55,8 +53,8 @@ Os Mapas de Nós Meshtastic são ideais para:
 ### Configuração
 
 **Configurações LoRa**
-   - Configure seu dispositivo para a banda de frequência LoRa correta para sua região.
-   - Ative **OK to MQTT** para permitir o relatório.
+   - Configure seu dispositivo para a banda de frequência LoRa correta para a sua região.
+   - Ative **OK to MQTT** para permitir o reporte.
 
 **Configurações MQTT**
    - Ative MQTT no seu dispositivo.
@@ -65,11 +63,11 @@ Os Mapas de Nós Meshtastic são ideais para:
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **MeshMap** no seu navegador: [Link do MeshMap](https://meshmap.net/). 
+Abra o **MeshMap** no seu navegador: [MeshMap Link](https://meshmap.net/). 
 
-Você verá todos os nós no mapa. Nós relatados **via MapReport** são atualizações diretas do dispositivo. Nós relatados **via outros nós** são atualizações retransmitidas.
+Você verá todos os nós no mapa. Nós reportados **via MapReport** são atualizações diretas do dispositivo. Nós reportados **via outros nós** são atualizações retransmitidas.
 
-Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, nível de bateria, etc.), rota mesh e cobertura de sinal
+Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, nível da bateria, etc.), rota mesh e cobertura de sinal
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMapPositionDisplay.png" style={{width:900, height:'auto'}}/></div>
 
@@ -90,14 +88,14 @@ Clique em qualquer nó para ver informações detalhadas (ID do dispositivo, ní
      - Encryption Enabled: Yes
      - JSON Output: No
      - TLS Enabled: No
-   - Ative `MapReport` e marque `I agree`. Selecione seu intervalo de relatório preferido.
+   - Ative `MapReport` e marque `I agree`. Selecione o intervalo de relatório de sua preferência.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamMQTT.png" style={{width:600, height:'auto'}}/></div>
 
 ### Visualizando as Localizações dos Dispositivos
 
-Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Link do Mapa de Liam Cottle](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
+Abra o **Mapa Meshtastic de Liam Cottle** no seu navegador: [Liam Cottle's Map Link](https://meshtastic.liamcottle.net/). Você verá todos os nós exibidos no mapa.
 
-Clique em qualquer nó para ver: informações detalhadas sobre o dispositivo, alcance de sinal, rotas históricas e atualizações de localização anteriores
+Clique em qualquer nó para ver: informações detalhadas sobre o dispositivo, alcance do sinal, rotas históricas e atualizações de localização anteriores
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/LiamPosition.png" style={{width:600, height:'auto'}}/></div>

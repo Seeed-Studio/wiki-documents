@@ -1,6 +1,6 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haces, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
-title: Primeros Pasos con reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3
+description: El ReSpeaker XVF3800 USB 4-Mic Array es una matriz circular de 4 micrófonos de nivel profesional con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinado con el XIAO ESP32S3, permite un control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre una integración fluida y flexibilidad de doble modo.
+title: Introducción a reSpeaker XVF3800 USB Mic Array con XIAO ESP32S3
 keywords:
   - reSpeaker
   - XIAO
@@ -11,120 +11,117 @@ sku: 114993700
 last_update:
   date: 8/20/2025
   author: Kasun Thushara
-createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+createdAt: '2025-07-16'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_getting_started/
 ---
 
-# reSpeaker XVF3800 USB Arreglo de 4 Micrófonos con XIAO ESP32S3
+# ReSpeaker XVF3800 USB 4 Microphone Array con XIAO ESP32S3
 
-## Descripción General
+## Descripción general
 
-**El ReSpeaker XVF3800 USB 4-Mic Array** es un arreglo circular profesional de 4 micrófonos basado en el XMOS XVF3800. Cuenta con AEC, AGC, DoA, formación de haces, VAD, supresión de ruido, des-reverberación y captura de voz de 360° (hasta 5 metros). También soporta modos de operación dual, haciéndolo ideal para aplicaciones de voz avanzadas. Cuando se combina con el Xiao ESP32S3, controlar el ReSpeaker XVF3800 USB se vuelve aún más poderoso, desbloqueando posibilidades infinitas.
+**El ReSpeaker XVF3800 USB 4-Mic Array** es una matriz circular profesional de 4 micrófonos basada en el XMOS XVF3800. Incorpora AEC, AGC, DoA, conformación de haz, VAD, supresión de ruido, desreverberación y captura de voz de 360° (hasta 5 metros). También admite modos de funcionamiento duales, lo que lo hace ideal para aplicaciones avanzadas de voz. Cuando se combina con el Xiao ESP32S3, controlar el ReSpeaker XVF3800 USB se vuelve aún más potente, desbloqueando posibilidades infinitas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Características
 
 - **Actualización de chip** :De XVF3000 a XVF3800
-  
-- **Arreglo de Cuatro Micrófonos** :4 micrófonos de alto rendimiento en patrón circular para captura de voz de campo lejano de 360° hasta 5 metros
-  
-- **Procesamiento de Audio Avanzado** :Alimentado por XVF3800 con AEC, multi-formación de haces, des-reverberación, detección DoA, supresión de ruido dinámico, rango AGC de 60dB
 
-- **Número de Serie Único del Dispositivo** :SN integrado permite despliegues multi-dispositivo y gestión avanzada de dispositivos
+- **Matriz de cuatro micrófonos** :4 micrófonos de alto rendimiento en un patrón circular para captura de voz de campo lejano de 360° hasta 5 metros
 
-- **Modos de Operación Dual** :Modo USB plug-and-play para conectividad instantánea a PC y modo INT-Device (I2S) para integración con sistemas embebidos—configurable vía comandos USB o I2C cambiando el firmware correspondiente
+- **Procesamiento de audio avanzado** :Impulsado por XVF3800 con AEC, conformación de haz múltiple, desreverberación, detección de DoA, supresión dinámica de ruido, rango de AGC de 60 dB
 
-- **Compatible con Código Abierto** :Funciona con hosts USB (Windows, macOS, Raspberry Pi OS) y hosts I2S (Serie XIAO, ESP32, Arduino).
+- **Número de serie único del dispositivo** :El SN integrado permite despliegues con múltiples dispositivos y gestión avanzada de dispositivos
 
-- **Retroalimentación Visual** :LEDs RGB programables e indicadores de estado muestran estados del dispositivo y actividad de voz
+- **Modos de funcionamiento duales** :Modo USB plug-and-play para conectividad instantánea a PC y modo INT-Device (I2S) para integración con sistemas embebidos—configurable mediante comandos USB o I2C cambiando el firmware en consecuencia
 
-- **Calidad de audio igual o mejor** :comparado con el modelo anterior
+- **Compatibilidad con código abierto** :Funciona con hosts USB (Windows, macOS, Raspberry Pi OS) y hosts I2S (XIAO Serie, ESP32, Arduino).
 
+- **Retroalimentación visual** :LED RGB programables e indicadores de estado muestran los estados del dispositivo y la actividad de voz
 
-## Descripción General del Hardware
+- **Calidad de audio igual o mejor** :en comparación con el modelo anterior
 
+## Descripción de hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xiao-xvf.jpg" alt="pir" width={900} height="auto" /></p>
 
-### Componentes Principales
+### Componentes principales
 
-| **Componente / Característica**       | **Descripción**                                                                                      |
+| **Componente / Característica** | **Descripción**                                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **Procesador de Audio Principal**      | **XMOS XVF3800**, maneja el procesamiento de audio incluyendo AEC, beamforming, supresión de ruido, etc.       |
-| **Array de Micrófonos**          | **Cuatro micrófonos MEMS PDM** en patrón circular, soportando **captura de voz de campo lejano 360° (5m)**. |
-| **Códec de Audio**               | **TLV320AIC3104**, maneja la conversión y salida de audio.                                              |
-| **LEDs RGB**                  | **12x WS2812** LEDs RGB direccionables individualmente para retroalimentación visual (ej., estado, actividad de voz). |
-| **Botón de Silencio**               | Presionar para **silenciar/activar** la entrada del micrófono.                                                       |
-| **LED Indicador de Silencio**        | Se enciende (típicamente rojo) para mostrar que el audio está silenciado.                                               |
-| **Botón de Reinicio**              | Reinicio por hardware para la placa/sistema.                                                                 |
-| **Puerto USB Tipo-C**           | Usado tanto para **alimentación como datos** (compatible con USB Audio Class 2.0).                                    |
-| **Jack de Auriculares AUX de 3.5mm**  | Salida de audio para auriculares o altavoces activos.                                                      |
-| **Conector de Altavoz**         | **Interfaz de altavoz JST**, soporta **altavoces amplificados de 5W**.                                       |
-| **Pads de Depuración**                | Acceso de depuración para **XTAG4** u otros programadores.                                                     |
-| **Headers I2C e I2S**         | Headers expuestos para **comunicación I2C e I2S** con dispositivos externos.                             |
-| **Pads IO No Utilizados (XIAO)**     | Pads de soldadura I/O adicionales conectados al módulo XIAO.                                                 |
-| **Comunicación I2S e I2C**   | Soporta conexión a hosts externos como Raspberry Pi, PC, etc. usando estos protocolos.             |
-| **Modos USB e INT-Device**    | Operación de modo dual: USB plug-and-play o modo de dispositivo INT interno vía I2S.                          |
-| **Número de Serie Único**      | **SN de dispositivo** integrado para identificación y gestión de múltiples dispositivos.                               |
-| **Compatibilidad de Código Abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac**, y compatible con **Serie XIAO**.                   |
-| **Características de Audio Avanzadas**   | AEC, beamforming, desreverberación, **detección DoA**, supresión de ruido basada en DNN, AGC de 60dB.         |
-| **Retroalimentación Visual**           | Estado del dispositivo y actividad de audio mostrados vía **patrones de LED RGB** e **indicadores de estado**.            |
-| **Calidad de Audio**             | Igual o mejor que los **diseños previos basados en XVF3000**.                                         |
+| **Procesador de audio principal**      | **XMOS XVF3800**, gestiona el procesamiento de audio incluyendo AEC, conformación de haz, supresión de ruido, etc.       |
+| **Matriz de micrófonos**          | **Cuatro micrófonos PDM MEMS** en patrón circular, que admiten **captura de voz de campo lejano de 360° (5 m)**. |
+| **Codec de audio**               | **TLV320AIC3104**, gestiona la conversión y salida de audio.                                              |
+| **LED RGB**                  | **12x WS2812** LED RGB direccionables individualmente para retroalimentación visual (p. ej., estado, actividad de voz). |
+| **Botón de silencio**               | Presione para **silenciar/activar** la entrada del micrófono.                                                       |
+| **LED indicador de silencio**        | Se enciende (normalmente rojo) para indicar que el audio está silenciado.                                               |
+| **Botón de reinicio**              | Reinicio por hardware de la placa/sistema.                                                                 |
+| **Puerto USB Tipo-C**           | Se utiliza tanto para **alimentación y datos** (compatible con USB Audio Class 2.0).                                    |
+| **Conector de auriculares de 3,5 mm**  | Salida de audio para auriculares o altavoces activos.                                                      |
+| **Conector de altavoz**         | **Interfaz de altavoz JST**, admite **altavoces amplificados de 5 W**.                                       |
+| **Pads de depuración**                | Acceso de depuración para **XTAG4** u otros programadores.                                                     |
+| **Cabeceras I2C e I2S**         | Cabeceras expuestas para **comunicación I2C e I2S** con dispositivos externos.                             |
+| **Pads IO sin usar (XIAO)**     | Pads de E/S adicionales soldados y conectados al módulo XIAO.                                                 |
+| **Comunicación I2S e I2C**   | Admite conexión a hosts externos como Raspberry Pi, PC, etc., usando estos protocolos.             |
+| **Modos USB e INT-Device**    | Funcionamiento de doble modo: USB plug-and-play o modo de dispositivo interno INT a través de I2S.                          |
+| **Número de serie único**      | **SN del dispositivo** incorporado para identificación y gestión de múltiples dispositivos.                               |
+| **Compatibilidad con código abierto** | Funciona con **Arduino, Raspberry Pi, PC/Mac**, y es compatible con **XIAO Serie**.                   |
+| **Funciones avanzadas de audio**   | AEC, conformación de haz, desreverberación, **detección de DoA**, supresión de ruido basada en DNN, AGC de 60 dB.         |
+| **Retroalimentación visual**           | Estado del dispositivo y actividad de audio mostrados mediante **patrones de LED RGB** e **indicadores de estado**.            |
+| **Calidad de audio**             | Igual o mejor que los **diseños anteriores basados en XVF3000**.                                         |
 
-### Soporte para XIAO ESP32S3
+### Compatibilidad con XIAO ESP32S3
 
-- Entrada/salida I2S estéreo con múltiples opciones de salida; interfaz I2C para configurar y gestionar parámetros XVF3800.
+- Entrada/salida I2S estéreo con múltiples opciones de salida; interfaz I2C para configurar y gestionar los parámetros del XVF3800.
 - Reinicio de XIAO mediante pin IO
 - Interfaz y pads de soldadura
 
-### Distribución de Pines
+### Pin Out
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pinout.jpg" alt="pir" width={900} height="auto" /></p>
 
-### Antena WIFI Integrada
+### Antena WIFI integrada en la placa
 
-Al usar el XIAO ESP32S3, no se necesita antena externa—simplemente conecta las ranuras de antena para usar la antena PCB integrada.
+Cuando utilices el XIAO ESP32S3, no se necesita una antena externa—simplemente conecta las ranuras de la antena para usar la antena PCB integrada.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/antenna.PNG" alt="pir" width={600} height="auto" /></p>
 
-### Descripción General de GPIO
+### Descripción general de los GPIO
 
-El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) para control externo. Puedes usarlos para leer estados de botones o controlar hardware como el LED de silencio, amplificador o LEDs.
+El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) para control externo. Puedes utilizarlos para leer estados de botones o controlar hardware como el LED de silencio, el amplificador o los LEDs.
 
-| **Nombre del Pin** | **Dirección** | **Función**                                         |
-|-------------------|---------------|-----------------------------------------------------|
-| X1D09             | Entrada (RO)  | Estado del botón de silencio (alto cuando se libera) |
-| X1D13             | Entrada (RO)  | Flotante                                            |
-| X1D34             | Entrada (RO)  | Flotante                                            |
-| X0D11             | Salida (RW)   | Flotante                                            |
-| X0D30             | Salida (RW)   | LED de silencio + control de silencio del micrófono (alto = silencio) |
-| X0D31             | Salida (RW)   | Habilitación del amplificador (bajo = habilitado)   |
-| X0D33             | Salida (RW)   | Control de alimentación del LED WS2812 (alto = encendido) |
-| X0D39             | Salida (RW)   | Flotante                                            |
+| **Nombre de pin** | **Dirección** | **Función**                                         |
+|--------------|---------------|------------------------------------------------------|
+| X1D09        | Input (RO)    | Estado del botón de silencio (alto cuando está liberado)              |
+| X1D13        | Input (RO)    | Flotante                                             |
+| X1D34        | Input (RO)    | Flotante                                             |
+| X0D11        | Output (RW)   | Flotante                                             |
+| X0D30        | Output (RW)   | Control del LED de silencio + silencio del micrófono (alto = silencio)            |
+| X0D31        | Output (RW)   | Habilitación del amplificador (bajo = habilitado)                     |
+| X0D33        | Output (RW)   | Control de alimentación de LED WS2812 (alto = encendido)                 |
+| X0D39        | Output (RW)   | Flotante                                             |
 
-## Flashear el firmware I2S
+## Grabar el firmware I2S
 
 Para usar el reSpeaker XVF3800 con XIAO ESP32S3, asegúrate de que el firmware del reSpeaker XVF3800 sea la versión I2S.
-Consulta Firmware Flash para flashear el firmware I2S más reciente. Por favor visita [esta sección](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#update-firmware).
-
+Consulta Firmware Flash para grabar el firmware I2S más reciente. Visita [esta sección](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#update-firmware).
 
 :::note
-Para trabajar con el XIAO ESP32S3, necesitas flashear el firmware I2S. Sin embargo, no soporta USB DFU. Si ya estás usando firmware USB, puedes entrar en modo seguro para flashear el firmware. Este método es más flexible porque soporta tanto USB DFU como I2C DFU. Para aprender más, por favor visita esta [sección](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#safe-mode).
+Para trabajar con el XIAO ESP32S3, necesitas grabar el firmware I2S. Sin embargo, no es compatible con USB DFU. Si ya estás usando el firmware USB, puedes entrar en modo seguro para grabar el firmware. Este método es más flexible porque admite tanto USB DFU como I2C DFU. Para saber más, visita [esta sección](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#safe-mode).
 :::
 
-## Preparación del Software
+## Preparación de software
 
 ### Instalar Arduino IDE
 
-Descarga e instala la versión estable de Arduino IDE según tu sistema operativo
+Descarga e instala la versión estable de Arduino IDE de acuerdo con tu sistema operativo
 
  <div className="download_arduino_container" style={{ textAlign: 'center' }}>
   <a
@@ -134,23 +131,21 @@ Descarga e instala la versión estable de Arduino IDE según tu sistema operativ
     rel="noopener noreferrer"
     style={{ textDecoration: 'none', color: '#FFFFFF', fontSize: '1.25rem' }}
   >
-    <strong>Descargar Arduino IDE</strong>
+    <strong>Download Arduino IDE</strong>
   </a>
 </div>
 
 <br />
 
+#### Instalar Arduino-ESP32
 
- #### Instalar Arduino-ESP32
+Para iniciar el proceso de instalación usando el Boards Manager, sigue estos pasos:
 
-Para iniciar el proceso de instalación usando el Gestor de Placas, sigue estos pasos:
+- Instala la versión actual del Arduino IDE de nivel 1.8 o posterior. La versión actual está en el sitio web [arduino.cc](https://www.arduino.cc/en/Main/Software).
 
-* Instala el Arduino IDE upstream actual en el nivel 1.8 o posterior. La versión actual está en el sitio web [arduino.cc](https://www.arduino.cc/en/Main/Software).
+- Inicia Arduino y abre la ventana `Settings`.
 
-* Inicia Arduino y abre la ventana de `Configuración`.
-
-
-* Ingresa uno de los enlaces de lanzamiento anteriores en el campo URLs Adicionales del Gestor de Placas. Puedes añadir múltiples URLs, separándolas con comas.
+- Introduce uno de los enlaces de lanzamiento anteriores en el campo Additional Board Manager URLs. Puedes añadir varias URLs, separándolas con comas.
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -158,26 +153,29 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/preference.png" alt="pir" width={800} height="auto" /></p>
 
-
-* Abre `Boards Manager` desde la barra lateral, busca `ESP32` y haz clic en `INSTALL`.
-
+- Abre `Boards Manager` desde la barra lateral, busca `ESP32` y haz clic en `INSTALL`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/install-board.png" alt="pir" width={800} height="auto" /></p>
 
+- Reinicia Arduino IDE.
 
-* Reinicia Arduino IDE.
+### Biblioteca de soporte 
+
+:::note
+Instala la [biblioteca Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools) para poder ejecutar los ejemplos proporcionados.
+:::
 
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte distintos tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -10,7 +10,7 @@ last_update:
   date: 2/15/2023
   author: Peter Pan
 createdAt: '2023-02-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Raspberry_pi_CM4_update_eeprom/
 ---
 <!-- ---

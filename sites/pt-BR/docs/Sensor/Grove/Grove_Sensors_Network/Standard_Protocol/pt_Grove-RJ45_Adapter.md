@@ -11,7 +11,7 @@ last_update:
   date: 01/06/2022
   author: gunengyu
 createdAt: '2023-01-06'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-RJ45_Adapter/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-RJ45_Adapter/img/RJ45_Adapter_01.jpg)

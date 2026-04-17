@@ -9,7 +9,7 @@ last_update:
   date: 4/23/2025
   author: Leo
 createdAt: '2025-04-24'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/total_solar_radiation_sensor/
 ---
 

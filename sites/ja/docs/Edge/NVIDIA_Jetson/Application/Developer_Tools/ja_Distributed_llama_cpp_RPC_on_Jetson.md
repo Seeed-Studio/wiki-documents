@@ -16,7 +16,7 @@ last_update:
   date: 2026-01-09T00:00:00.000Z
   author: Lorraine
 createdAt: '2026-01-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-10'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_distributed_llama_cpp_rpc_jetson/
 ---
 

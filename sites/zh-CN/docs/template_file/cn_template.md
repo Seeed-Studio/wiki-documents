@@ -7,7 +7,7 @@ last_update:
   date: 08/09/2023
   author: 示例名称
 createdAt: '2023-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/cn/Name_your_website/
 ---
 

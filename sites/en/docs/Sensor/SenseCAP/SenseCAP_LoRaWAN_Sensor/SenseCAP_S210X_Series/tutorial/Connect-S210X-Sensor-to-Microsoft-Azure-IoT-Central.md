@@ -9,7 +9,7 @@ last_update:
   date: 7/26/2023
   author: Jessie
 createdAt: '2023-02-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/tutorial/Connect-S210X-Sensor-to-Microsoft-Azure-IoT-Central/
 ---
 

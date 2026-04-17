@@ -11,16 +11,64 @@ last_update:
   date: 2/26/2026
   author: Kasun Thushara
 createdAt: '2025-08-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-26'
 url: https://wiki.seeedstudio.com/respeaker/
 ---
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/family.jpg" alt="pir" width={900} height="auto" /></p>
 
 ## What is reSpeaker?
 
 reSpeaker is an open-source modular voice interface platform developed by Seeed Studio, designed for makers, developers, and enterprises to create intelligent voice interaction products. It integrates microphone arrays, audio processors, and various connectivity options, making it easy to add voice recognition and interaction capabilities to your projects.
 
 ## Product Series
+
+
+
+### reSpeaker Flex
+
+The reSpeaker Flex is a modular voice processing system built around the XMOS XVF3800, designed for robots and intelligent interaction devices. It features a split architecture where the processing board and microphone array are separated and connected via a flexible FPC cable, allowing flexible placement within a product enclosure. The system supports two interchangeable 4-microphone array options: a circular array for 360° voice capture and a linear array for directional pickup with noise suppression. Both arrays connect through a standardized 24-pin interface, and the device can operate in USB (UAC 2.0) or I2S mode for different integration needs. An optional XIAO ESP32S3 can be added to enable wireless connectivity and extended control capabilities.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div className="table-center">
+    <table className="table-nobg">
+        <tbody>
+            <tr className="table-trnobg">
+                <td className="table-trnobg">
+                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+                        <a
+                            className="get_one_now_item"
+                            href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-with-XIAO-ESP32S3-p-6736.html"
+                            style={{ marginRight: '150px' }}
+                        >
+                            <strong>
+                                <span>
+                                    <font color="#FFFFFF" size="4">🖱️ Buy Now</font>
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </td>
+                <td className="table-trnobg">
+                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+                        <a
+                            className="get_one_now_item"
+                            href="https://wiki.seeedstudio.com/respeaker_flex_introduction/"
+                        >
+                            <strong>
+                                <span>
+                                    <font color="#FFFFFF" size="3">📚 Getting Started Page</font>
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 ### reSpeaker XVF3800
 

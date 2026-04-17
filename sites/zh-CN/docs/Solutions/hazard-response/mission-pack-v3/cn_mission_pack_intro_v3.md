@@ -9,7 +9,7 @@ last_update:
   date: 07/08/2025
   author: Spencer
 createdAt: '2025-08-11'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-11'
 url: https://wiki.seeedstudio.com/cn/mission_pack_intro_v3/
 ---
 

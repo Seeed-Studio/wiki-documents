@@ -12,7 +12,7 @@ last_update:
   date: 02/24/2026
   author: Lorraine
 createdAt: '2026-02-26'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/es/ai_robotics_flash_jetpack_with_wsl2/
 ---
 
@@ -340,6 +340,8 @@ tar xpf Jetson_Linux_r36.4.3_aarch64.tbz2
 
 # Extract Root Filesystem
 sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_r36.4.3_aarch64.tbz2 -C ./Linux_for_Tegra/rootfs
+
+cd Linux_for_Tegra/
 
 # Install prerequisites
 sudo ./tools/l4t_flash_prerequisites.sh

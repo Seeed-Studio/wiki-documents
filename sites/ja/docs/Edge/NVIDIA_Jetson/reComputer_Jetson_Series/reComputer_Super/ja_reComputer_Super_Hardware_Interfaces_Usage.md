@@ -11,7 +11,7 @@ last_update:
   date: 05/26/2025
   author: Zibo
 createdAt: '2025-09-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-02'
 url: https://wiki.seeedstudio.com/ja/recomputer_jetson_super_hardware_interfaces_usage/
 ---
 

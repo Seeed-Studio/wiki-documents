@@ -9,7 +9,7 @@ last_update:
   date: 2/2/2024
   author: Yvonne
 createdAt: '2024-02-02'
-updatedAt: '2026-03-03'
+updatedAt: '2024-04-02'
 url: https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3/
 ---
 

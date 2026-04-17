@@ -11,7 +11,7 @@ last_update:
   date: 08/12/2024
   author: Youjiang
 createdAt: '2024-08-13'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/ai_nvr_with_jetson/
 ---
 

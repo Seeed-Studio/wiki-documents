@@ -13,7 +13,7 @@ last_update:
   date: 12/21/2025
   author: Xinrui Wu
 createdAt: '2025-12-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/ja/integration_of_real-time_heat_map_with_grafana_data_dashboard/
 ---
 

@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: gunengyu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/2.5W_Solar_Panel_116x160/
 ---
 ![](https://files.seeedstudio.com/wiki/2.5W_Solar_Panel_116x160/img/2.5W.jpg)

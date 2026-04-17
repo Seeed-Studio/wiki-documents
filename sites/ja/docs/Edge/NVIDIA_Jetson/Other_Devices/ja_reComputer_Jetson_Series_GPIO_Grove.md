@@ -11,7 +11,7 @@ last_update:
   author: w0x7ce
 no_comments: false
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_GPIO_Grove/
 ---
 
@@ -46,7 +46,7 @@ Groveは、オープンソースでモジュール化された、すぐに使用
 ## 参考資料
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="見積もり依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

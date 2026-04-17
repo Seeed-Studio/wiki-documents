@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -1190,7 +1190,7 @@ reComputer Jetson Robotics J401 配备了一个 DP1.4（包含在 Type-C Host �
 - [Seeed Jetson 一页纸简介](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

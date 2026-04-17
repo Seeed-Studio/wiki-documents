@@ -9,7 +9,7 @@ last_update:
   date: 03/06/2026
   author: Jackson.Li
 createdAt: '2026-03-06'
-updatedAt: '2026-03-06'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_d1001/
 ---
 
@@ -32,37 +32,54 @@ import TabItem from '@theme/TabItem';
 reTerminal D1001 is an intelligent large-screen interaction terminal powered by Espressif's latest high-performance **ESP32-P4** chip. Designed for AIoT application scenarios requiring high-performance graphics display, video processing, and voice interaction, it leverages the ESP32-P4's powerful 400MHz dual-core RISC-V processor and rich multimedia peripheral interfaces to easily handle complex edge computing and multimedia tasks.
 
 ### Core Features
-*   **Powerful Processing for Rich Interfaces**: Powered by ESP32-P4, a 32-bit RISC-V dual-core processor (HP Core 400MHz) with 32 MB PSRAM and built-in JPEG codec engine, it delivers the performance needed for graphics-rich interfaces, smooth real-time interaction, and complex edge AI tasks.
-*   **8-Inch Touch Display with Rich HMI Support**: The 8-inch 800 × 1280 capacitive touch display, driven over MIPI-DSI, supports both portrait and landscape modes (via IMU), providing ample space to build polished dashboards, smart control panels, and other UI-focused embedded devices.
-*   **Integrated Wireless Connectivity**: Wireless communication is enabled by an onboard ESP32-C6 supporting Wi-Fi 6 (2.4 GHz) and Bluetooth 5 (LE). The main processor communicates with the connectivity subsystem via an SDIO interface, enabling reliable wireless networking for connected devices and IoT applications.
-*   **Camera Interface for Vision Development**: Equipped with a 2MP MIPI-CSI camera (SC2356) supporting up to 1600 × 1200 at 30 fps, the platform is ready for image capture, live preview, and embedded vision development right out of the box.
-*   **Voice and Audio Capabilities**: Dual microphones and a built-in speaker enable voice input, sound capture, and multimedia playback. With echo cancellation supported by the ES7210 audio ADC, the system delivers clear voice capture for AI assistants and voice-enabled applications.
-*   **Rich Expansion**: Provides GPIO, I2C, UART, and other expansion interfaces to meet diverse sensor and actuator connection needs.
-
-<!--
-### Target Users & Applications
-*   **Target Users**:
-    *   **Embedded Developers**: Professionals seeking high-performance, low-cost HMI solutions to replace Linux/Android.
-    *   **Smart Home Integrators**: Teams needing customized central control panels and smart switches.
-    *   **Geeks & Makers**: Enthusiasts exploring the limits of ESP32 performance and developing desktop gadgets or smart terminals.
-*   **Applications**: Smart Home Control Panels, Industrial HMI Panels, AI Voice Assistants, Video Surveillance Terminals, Educational Development Kits.
--->
-
+*   **Powerful Processing for Rich Interfaces**: Powered by ESP32-P4, a 32-bit RISC-V dual-core processor with 32 MB PSRAM, this device delivers the performance needed for graphics-rich interfaces, smooth real-time interaction, and more edge applications.
+*   **Integrated Wireless Connectivity**: Wireless communication is enabled by an onboard ESP32-C6 supporting Wi-Fi 6, Bluetooth 5 (LE), and 802.15.4 (Zigbee/Thread/Matter). The main processor communicates with the connectivity subsystem via an SDIO interface, enabling reliable wireless networking for connected devices and IoT applications.
+*   **Field-Ready Cellular Expansion**: Equipped with a built-in mPCIe slot supporting USB 2.0 signals, the device enables seamless 4G LTE connectivity for reliable networking in remote environments. It's ideal for field deployments, remote monitoring, and always-connected edge applications where stable wireless communication is essential.
+*   **8-Inch Touch Display with Rich HMI Support**: The 8-inch 800 × 1280 capacitive LCD display, driven over MIPI-DSI and supporting both portrait and landscape modes, gives you the space to build polished dashboards, smart control panels, and other UI-focused embedded devices.
+*   **Camera Interface for Vision Development**: With a MIPI-CSI camera based on the SC2356 sensor and support for up to 1600 × 1200 at 30 fps, the platform is ready for image capture, live preview, and embedded vision development right out of the box.
+*   **Voice and Audio Capabilities**: Dual microphones and a built-in speaker enable voice input, sound capture, and playback. With echo cancellation supported by the ES7210 audio ADC, the system helps deliver clearer voice capture for AI assistants and voice-enabled applications.
 
 ### Hardware Specifications
 
-| Function Module | Detailed Parameters | Remarks |
+| Category | Parameter | Description |
 | :--- | :--- | :--- |
-| **Main Processor** | **ESP32-P4NRW32** | 400MHz Dual-Core RISC-V, 32MB PSRAM |
-| **Storage** | 32MB Nor Flash | Supports MicroSD card expansion |
-| **Wireless Connectivity** | Wi-Fi 6 & Bluetooth 5 (LE) | Provided by ESP32-C6 (SDIO interface) |
-| **Display** | 8-inch MIPI-DSI Touch Screen | Resolution: 800x1280 <br /> Luminance: 250 cd/㎡ <br /> Driver IC: 9365DA-H3 <br /> Touch IC: GSL3670 (Capacitive) |
-| **Camera** | 2MP (SC2356) | Resolution: 1608x1208 <br /> Interface: MIPI-CSI |
-| **Audio** | **Codec**: ES8311 <br /> **ADC**: ES7210 <br /> **PA**: NS4150B (2W@8Ω) <br /> **Input**: Dual Microphone Array | High-fidelity audio input/output |
-| **Network Expansion** | mPCIe Slot | Supports USB 2.0 signal, optional 4G module |
-| **Sensors** | 6-axis IMU (LSM6DS3TR) | Accelerometer + Gyroscope, supports screen auto-rotation |
-| **Interfaces & Buttons** | USB Type-C (Power/Debug) <br /> Dual-row 2.54mm Expansion Header <br /> BOOT/Reset (Pinhole) <br /> Power Button | Supports short press for sleep / long press for power on/off |
-| **Power Management** | 2500mAh Lithium Battery <br /> RTC Coin Cell Holder | USB Type-C 5V Input <br /> Charging indicator & Status RGB LED |
+| **Basic** | Processor | ESP32-P4NRW32 with 32MB PSRAM |
+| | Wireless SoC | ESP32-C6 |
+| | Storage | 32MB QSPI Flash, support Micro SD card |
+| **Display** | Size | 8” |
+| | Resolution | 800×1280 |
+| | Luminance (cd/㎡) | 250 |
+| | Optimum Viewing Angle (O’Clock) | ALL |
+| | Interface | MIPI-DSI |
+| | Driver IC | 9365DA-H3 |
+| | Touch Type | Capacitive touch |
+| | Touch IC | GSL3670 |
+| | Orientation | Portrait/Landscape rotation supported |
+| **Camera** | Sensor | SC2356 |
+| | Active Array Size | 1608×1208 |
+| | Max Frame Rate | (1600*1200)30fps 10bit |
+| | Interface | MIPI-CSI |
+| **Audio** | Microphone | Dual microphone |
+| | Speaker | 2W@8Ω NS4150B |
+| | Audio IC | Codec: ES8311 <br /> Audio ADC: ES7210 |
+| **Wireless Communication** | Wi-Fi | Wi-Fi 6 (2.4GHz) |
+| | BLE | Bluetooth 5 (LE) |
+| | Cellular | Mini-PCIe for 4G (optional) |
+| | Antenna | On-board antenna and external Antenna |
+| **Power** | Battery | 2500mAh |
+| | Power Input | USB Type-C 5V |
+| **Other** | RTC | PCF8563T (supports timed interrupt wake-up) |
+| | Motion Sensor | LSM6DS3TR Six-Axis |
+
+### Hardware Overview
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/hardware.webp" style={{width:800, height:'auto'}}/></div>
+
+### Application
+*   **Smart Home Central Hub**: An all-in-one HMI device for managing lighting, security, and home automation systems.
+*   **Video Intercom Systems**: Real-time visual communication for smart entry, doorbells, and security access.
+*   **Interactive AI Assistants**: Voice-enabled smart displays providing intuitive visual feedback and responsive control.
+*   **Industrial Data Dashboards**: Professional monitoring terminals for real-time equipment tracking and commercial data visualization.
+*   **Edge Vision Terminals**: Compact solutions for image capture, scanning, and interactive retail kiosks.
 
 
 ## Getting Started with ESP-IDF

@@ -1,6 +1,6 @@
 ---
-description: EdgeBox-ESP-100 Arduino入門ガイド
-title: EdgeBox-ESP-100 Arduino入門ガイド
+description: EdgeBox-ESP-100 Arduino 入門
+title: EdgeBox-ESP-100 Arduino 入門
 keywords:
   - Edge
   - PLC Control
@@ -12,7 +12,7 @@ last_update:
   date: 03/10/2023
   author: Peter Pan
 createdAt: '2023-03-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/Edgebox-ESP-100-Arduino/
 ---
 
@@ -20,60 +20,60 @@ url: https://wiki.seeedstudio.com/ja/Edgebox-ESP-100-Arduino/
 
 <div align="center"><img width ={500} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/e/d/edgebox-esp100_1.jpg" style={{width: 600}}/></div>
 
-EdgeBox-ESP-100は、軽量な自動化ソリューション向けに設計されたESP32ベースのコントローラーです。アナログ入力をサポートし、リモート環境での監視と制御を効果的に行い、PID制御ループ、ロジックシーケンス制御、または柔軟なワイヤレスおよびフィールドセンサー拡張を備えたゲートウェイに最適です。
+EdgeBox-ESP-100は、軽量な自動化ソリューション向けに設計されたESP32ベースのコントローラーです。アナログ入力をサポートし、遠隔環境での効果的な監視と制御を実現し、PID制御ループ、論理シーケンス制御、または柔軟な無線およびフィールドセンサー拡張を備えたゲートウェイに最適です。
 
-EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーには、異なるソリューション向けの他の2つのEdge製品もあります。違いを深く理解し、プロジェクトに最適な部品を選択するために、Seeed Studio [Edgeシリーズページ](https://www.seeedstudio.com/raspberrypi/device/industry.html)を参照してください。
+EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーには、さまざまなソリューション向けの他の2つのEdge製品もあります。違いを深く理解し、プロジェクトに最適なパーツを選択できるよう、Seeed Studioの[Edge シリーズページ](https://www.seeedstudio.com/raspberrypi/device/industry.html)を参照してください。
 
-絶縁されたCAN、RS485フィールドバス接続、およびデジタル信号とアナログ信号の両方に対応する豊富なIOリソースを提供し、広範囲な設備とセンサー入力に対応します。PLCおよびフィールド自動化アプリケーションに完全に対応します。
+分離されたCAN、RS485フィールドバス接続、および豊富なIOリソースを提供し、デジタル信号とアナログ信号の両方に対応した広範な設備とセンサー入力に対応します。PLCおよびフィールド自動化アプリケーションに完全に満足できる仕様です。
 
-オンチップWi-FiおよびBLE機能を含み、4G LTEモジュールCellularも含まれているため、EdgeBox-ESP-100は産業用ゲートウェイの構築に利用でき、既存のPLCをネットワークやクラウドに接続することができます。
+オンチップWi-FiおよびBLE機能に加え、4G LTEモジュールセルラーも含まれているため、EdgeBox-ESP-100は産業用ゲートウェイの構築に利用でき、既存のPLCをネットワークまたはクラウドに接続することが可能です。
 
-この携帯型ボックスは、堅牢なハードウェア、電気設計、およびアルミニウム合金筐体を備えており、広い温度範囲でその機能を維持し、高いサージおよび短絡保護を提供し、ビジネスに基づく多様な展開方法に対応します。
+このポータブルボックスは、頑丈なハードウェア、電気設計、アルミ合金エンクロージャーを備えており、広い温度範囲で機能を維持し、高いサージおよび短絡保護を提供します。ビジネスに基づいた多様な設置方法に対応します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 ## 特徴
 
-> ⚠️ **重要な注意事項：USBプログラミング/デバッグ機能の利用可能性**
+> ⚠️ **重要なお知らせ: USBプログラミング/デバッグ機能の可用性**
 >
 > - **USBプログラミング/デバッグ機能は**、**EdgeBox-ESP-100**の**最新バージョンでのみ利用可能**です。
-> - **以前のバージョン**は**USB-Aポート経由の電源供給のみ**をサポートし、**プログラミングやデバッグには対応していません**。
+> - **以前のバージョン**は、**USB-Aポート経由の電源供給のみをサポート**し、**プログラミングやデバッグは*サポートしていません***。
 
 ---
 
-> ❗**警告：旧バージョンのUSB-AポートをPCに接続しないでください**
+> ❗**警告: 旧バージョンのUSB-AポートをPCに接続しないでください**
 >
-> - **旧バージョン**のUSB-AポートをPC USBポートに接続すると、**不適切な動作**が発生する可能性があります。
-> - USB経由でデバイスをプログラミングまたはデバッグする予定の場合は、**新バージョンのみ**を使用してください。
+> - **旧バージョン**のUSB-AポートをPCのUSBポートに接続すると、**不適切な動作**が発生する可能性があります。
+> - USB経由でデバイスのプログラミングやデバッグを計画している場合は、**新バージョンのみ**を使用してください。
 
 ---
 
 > **🔍 新バージョンの識別方法**
 >
-> デバイス筐体の**シリアル番号（SN）**ラベルを確認してください：
+> デバイスエンクロージャーの**シリアル番号(SN)**ラベルを確認してください：
 >
-> **旧バージョンのSN**：
+> **旧バージョンのSN**:
 >
 > - `2437`または**それ以前**のすべてのシリアル番号
-> - 例：`102991735243700001`、`102991735243700093`
+> - 例: `102991735243700001`, `102991735243700093`
 > - `2437` = **2024年第37週**に製造
 >
-> **新バージョンのSN**：
+> **新バージョンのSN**:
 >
 > - `2438`または**それ以降**のすべてのシリアル番号
-> - 例：`102991735243800001`、`102991735243800093`
+> - 例: `102991735243800001`, `102991735243800093`
 > - `2438` = **2024年第38週以降**に製造
 
-- マルチフィールドバスサポート：CAN、RS485、Ethernet
-- マルチワイヤレス機能：オンチップWifi、BLE接続、内蔵Cellular 4G LTEモジュール
-- 信頼性の高いハードウェア設計：堅牢で保守性の高い構造
-- 信頼性の高い電気設計：高絶縁、高サージ、短絡保護
-- IEC 61131-3準拠プログラムサポート（開発中）
-- ESP-IDF、Arduinoでプログラミング可能
+- マルチフィールドバスサポート: CAN, RS485, イーサネット
+- マルチワイヤレス機能: オンチップWiFi, BLE接続; 内蔵セルラー4G LTEモジュール
+- 信頼性の高いハードウェア設計: 頑丈でメンテナンスが少ない構造
+- 信頼性の高い電気設計: 高絶縁、高サージ、短絡保護
+- IEC 61131-3準拠プログラムサポート (開発中)
+- ESP-IDF, Arduinoでのプログラミング可能
 
 ## 仕様比較
 
@@ -91,7 +91,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 629px;" colSpan={2} style={{height: 46, width: 629}}>
-        <p><strong>基本仕様</strong></p>
+        <p><strong>基本</strong></p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -120,7 +120,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 629px;" colSpan={2} style={{height: 46, width: 629}}>
-        <p><strong>ワイヤレス</strong></p>
+        <p><strong>無線</strong></p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -136,7 +136,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>Bluetooth</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>オンチップ Bluetooth 5.0、BLE</p>
+        <p>オンチップ Bluetooth 5.0, BLE</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -162,7 +162,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 132px;" style={{height: 46, width: 132}}>
-        <p>Ethernet</p>
+        <p>イーサネット</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
         <p>100M RJ45 *1</p>
@@ -181,7 +181,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>CAN BUS</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>CAN BUS *1（絶縁）</p>
+        <p>CAN BUS *1 (絶縁)</p>
       </td>
     </tr>
     <tr data-style="height: 39px;" style={{height: 39}}>
@@ -189,7 +189,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>RSシリアル</p>
       </td>
       <td data-style="height: 39px; width: 491px;" style={{height: 39, width: 491}}>
-        <p>RS485 *1（絶縁）</p>
+        <p>RS485 *1 (絶縁)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -197,7 +197,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>デジタル入力</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>4（絶縁）オンボード</p>
+        <p>4 (絶縁) オンボード</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -214,7 +214,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>デジタル出力</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>6（絶縁）</p>
+        <p>6 (絶縁)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -227,14 +227,14 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>アナログ入力</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>4（絶縁）</p>
+        <p>4 (絶縁)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
         <div>
           <div className="document">
-            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">入力：0 ~ 20 mA デフォルト、0-10V オプション</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">入力: 0 ~ 20 mA デフォルト, 0-10V オプション</p>
           </div>
         </div>
       </td>
@@ -244,12 +244,12 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>アナログ出力</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>2（絶縁）</p>
+        <p>2 (絶縁)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>出力：0 ~ 5 V</p>
+        <p>出力: 0 ~ 5 V</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -278,7 +278,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>暗号化チップ</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>Atecc608a（オプション）</p>
+        <p>Atecc608a(オプション)</p>
       </td>
     </tr>
     <tr data-style="height: 64px;" style={{height: 64}}>
@@ -286,7 +286,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>動作温度</p>
       </td>
       <td data-style="height: 64px; width: 491px;" style={{height: 64, width: 491}}>
-        <p>-20 to +60 °C</p>
+        <p>-20 ～ +60 °C</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -294,7 +294,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>認証</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>RoHS、CE、FCC、UKCA</p>
+        <p>RoHS, CE, FCC, UKCA</p>
       </td>
     </tr>
     <tr>
@@ -302,7 +302,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
         <p>保証</p>
       </td>
       <td data-style="width: 491px;" style={{width: 491}}>
-        <p>2年</p>
+        <p>2 年間</p>
       </td>
     </tr>
   </tbody>
@@ -311,41 +311,41 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
 
 ## ハードウェア概要
 
-### フロント概要
+### 前面概要
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/edge_box_esp/font-port.png" /></div>
 
-### サイドポート
+### 側面ポート
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_side.png" /></div>
 
 1. 4 X LED
 2. イーサネットポート
-3. CANバスおよびRS485ポート
-4. 多機能フェニックスコネクタ
+3. CAN バスおよび RS485 ポート
+4. マルチファンクション フェニックスコネクタ
 
-#### LEDインジケータ：
+#### LED インジケータ
 
 <div align="center"><img style={{background: 'rgb(255, 255, 255)', border: '10px solid transparent'}} width={300}src="https://files.seeedstudio.com/wiki/edge_box_esp/LED.png" /></div>
 
 <div class="table-center">
 
-| LED名 | 信号        | 説明            |
+| LED 名 | 信号        | 説明            |
 |  :---:   |  :---:        |    :---:               |
 |   PWR    | 電源ステータス  |                        |
 | Cellular | 4G/LTE        |                        |
-|   ACT    | シリアルTXステータス | U0TXDと多重化 |
-|   ERR    | シリアルRXステータス | U0RXDと多重化 |
+|   ACT    | シリアル TX ステータス | U0TXD と多重化 |
+|   ERR    | シリアル RX ステータス | U0RXD と多重化 |
 
 </div>
 
-#### イーサネットポート：
+#### イーサネットポート
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/eth.png" alt="pir" width={300} height="auto" /></div>
 
 <div class="table-center">
 
-| PIN#          |  信号      | 説明                               |
+| ピン番号          |  信号      | 説明                               |
 |  :---:        |  :---:       |    :---:                                  |
 |      1        |      TXP     |                                           |
 |      2        |      TXN     |                                           |
@@ -355,18 +355,18 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
 |      6        |      RXN     |                                           |
 |      7        |      N.C.    |                                           |
 |      8        |      N.C.    |                                           |
-|   黄色LED  |    ACTIVE    |  TXおよびRXデータが通過する際にアクティブ  |
-|   緑色LED   |     LINK     |          リンクアップ時にアクティブ              |
+|   黄色 LED  |    ACTIVE    |  TX および RX データ通過時にアクティブ  |
+|   緑色 LED   |     LINK     |          リンクアップ時にアクティブ              |
 
 </div>
 
-#### CANバスおよびRS485ポート：
+#### CAN バスおよび RS485 ポート
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/eth.png" alt="pir" width={300} height="auto" /></div>
 
 <div class="table-center">
 
-| PIN#          |  信号      | 説明                               |
+| ピン番号          |  信号      | 説明                               |
 |  :---:        |  :---:       |    :---:                                  |
 |      1        |      N.C.     |                                           |
 |      2        |      N.C.     |                                           |
@@ -376,25 +376,25 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
 |      6        |      N.C.     |                                           |
 |      7        |      RS485_A  |                                           |
 |      8        |      RS485_B  |                                           |
-|   黄色LED  |    ACTIVE     |  CANバスデータのTXおよびRXが通過する際にアクティブ  |
-|   緑色LED   |     LINK      |  RS485データのTXおよびRXが通過する際にアクティブ    |
+|   黄色 LED  |    ACTIVE     |  CAN バスの TX および RX データ通過時にアクティブ  |
+|   緑色 LED   |     LINK      |  RS485 の TX および RX データ通過時にアクティブ    |
 
 </div>
 
 :::note
 
-    1. RS485用の120Ω終端抵抗は内部に実装済みです。
-    2. CANバス用の120Ω終端抵抗は内部に実装済みです。
+    1. RS485 用の 120 オーム終端抵抗は内部に実装済みです。
+    2. CAN バス用の 120 オーム終端抵抗は内部に実装済みです。
 
 :::
 
-#### 多機能フェニックスコネクタ
+#### マルチファンクション フェニックスコネクタ
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/multi-func-connector.png" alt="pir" width={500} height="auto" /></div>
 
 <div class="table-center">
 
-| 機能  | PIN番号  |  PIN番号 | 機能  |
+| 機能  | ピン番号  |  ピン番号 | 機能  |
 |:---:      | :---: | :---: | :---: |
 |  S/S      | 2  | 1  | DO_24V  |
 |  DI0      | 4  | 3  | DO_0V  |
@@ -412,24 +412,24 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
 </div>
 
 :::note
-    1. 24AWGから16AWGのケーブルを推奨します
-    2. GNDとAGNDは絶縁されています
-    3. すべてのAGND信号は内部で接続されています
-    4. 入力用のDC電圧は24V(±10%)です
-    5. 出力用のDC電圧は24V(±10%)である必要があります。電流容量は1Aです。
+    1. 24AWG から 16AWG のケーブルが推奨されます
+    2. GND と AGND は絶縁されています
+    3. すべての AGND 信号は内部で接続されています
+    4. 入力用 DC 電圧は 24V(+- 10%) です
+    5. 出力用 DC 電圧は 24V(+- 10%) である必要があります。電流容量は 1A です。
 :::
 
-### トップポート
+### 上面ポート
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_top.png" alt="pir" width={500} height="auto" /></div>
 
-1. Wi-Fiアンテナポート（SMAメス）
-2. SIMカード
+1. Wi-Fi アンテナポート (SMA メス)
+2. SIM カード
 3. リセット
-4. USBポート（5V電源出力のみ）
-5. 4G/LTEアンテナポート（SMAメス）
+4. USB ポート (5V 電源出力のみ)
+5. 4G/LTE アンテナポート (SMA メス)
 
-### GPIO多重化
+### GPIO 多重化
 
 <div class="table-center">
 <table className="tg">
@@ -548,10 +548,10 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
       <td className="tg-rzif">PWR_EN</td>
     </tr>
     <tr>
-      <td className="tg-rzif" rowSpan={6}>Ethernet </td>
+      <td className="tg-rzif" rowSpan={6}>イーサネット </td>
       <td className="tg-rzif">IO10</td>
       <td className="tg-rzif">FSPI_CS0</td>
-      <td className="tg-rzif" rowSpan={6}>W5500に接続</td>
+      <td className="tg-rzif" rowSpan={6}>W5500 に接続</td>
     </tr>
     <tr>
       <td className="tg-rzif">IO11</td>
@@ -589,7 +589,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
       <td className="tg-rzif">TXD0/LED_ACT#</td>
       <td className="tg-rzif">U0TXD</td>
       <td className="tg-rzif" />
-      <td className="tg-rzif">プログラミング/デバッグおよびLEDドライバー</td>
+      <td className="tg-rzif">プログラミング/デバッグおよび LED ドライバー</td>
     </tr>
     <tr>
       <td className="tg-rzif">RXD0/LED_ERR#</td>
@@ -598,13 +598,13 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
       <td className="tg-rzif" />
     </tr>
     <tr>
-      <td className="tg-rzif">Beep</td>
+      <td className="tg-rzif">ビープ音</td>
       <td className="tg-rzif">IO45</td>
-      <td className="tg-rzif">ビープ</td>
-      <td className="tg-rzif">ハイアクティブ ブザーを有効化</td>
+      <td className="tg-rzif">ビープ音</td>
+      <td className="tg-rzif">High アクティブでブザーを起動</td>
     </tr>
     <tr>
-      <td className="tg-rzif">Reset</td>
+      <td className="tg-rzif">リセット</td>
       <td className="tg-rzif">IO0</td>
       <td className="tg-rzif">リセットボタン</td>
       <td className="tg-rzif" />
@@ -623,7 +623,7 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
     <tr>
       <td className="tg-rzif">IO9</td>
       <td className="tg-rzif" />
-      <td className="tg-rzif">PCF8563からのアラームまたはウェイクアップ</td>
+      <td className="tg-rzif">PCF8563からのアラームまたはWake up</td>
     </tr>
   </tbody>
 </table>
@@ -636,47 +636,47 @@ EdgeBox-ESP-100に加えて、Raspberry Piを搭載したEdgeファミリーに�
 <div class="table-center">
 
 | デバッグポート | ESP32 IO | その他の機能 |
-| :---:          | :---:    | :---:       |
-| RXD            | RXD0     | LED_ACT#    |
-| TXD            | TXD0     | LED_ERR#    |
-| GND            | GND      |             |
-| GPIO0          | IO0      | リセットボタン |
+| :---:      | :---:    | :---:          |
+| RXD        | RXD0     | LED_ACT#       |
+| TXD        | TXD0     | LED_ERR#       |
+| GND        | GND      |                |
+| GPIO0      | IO0      | リセットボタン |
 
 </div>
 
 :::note
 
-GIPIO0 はリセットボタンにも接続されています。また、UART0 の RXD、TXD はダウンロードモードで使用されます。
-これにより、ユーザーは EdgeBox-ESP-100 をベアメタルで開発できます。
+GPIO0はリセットボタンにも接続されています。また、UART0のRXD、TXDはダウンロードモードで使用されます。
+これにより、ユーザーは裸のメタでEdgeBox-ESP-100を開発することができます。
 
 :::
 
 ### 内蔵デバイス
 
-#### I2C ピンマップ & 内蔵 I2C デバイス
+#### I2Cピンマップと内蔵I2Cデバイス
 
-- I2C ピンマップ:
+- I2Cピンマップ:
 
 <div class="table-center">
 
-| I2C ピン | ESP32 IO |
-|  :---:   | :---:    |  
-| I2C_SDA  |   IO20   |
-| I2C_SCL  |   IO19   |
-| I2C_INT  |   IO9    |
+| I2Cピン | ESP32 IO |
+|  :---:  |  :---:   |
+| I2C_SDA |   IO20   |
+| I2C_SCL |   IO19   |
+| I2C_INT |   IO9    |
 
 </div>
 
-- 内蔵 I2C デバイスとアドレス:
+- 内蔵I2Cデバイスとアドレス:
 
 <div class="table-center">
 
-| デバイス              | アドレス | 機能           |
-|  :---:                | :---:   | :---:          |
-|  FM24CL64B            |  0x50   | 不揮発メモリ   |
-|  PCF8563              |  0x51   | RTC            |
-|  Atecc608a            |  0x68   | 暗号デバイス   |
-|  SGM58031             |  0x48   | ADC            |
+|  デバイス              | アドレス | 機能      |
+|  :---:               | :---:   | :---:         |
+|  FM24CL64B           |  0x50   | 保持メモリ |
+|  PCF8563             |  0x51   | RTC         |
+|  Atecc608a           |  0x68   | 暗号デバイス |
+|  SGM58031            |  0x48   | ADC         |
 
 </div>
 
@@ -686,12 +686,12 @@ GIPIO0 はリセットボタンにも接続されています。また、UART0 �
 
 <div class="table-center">
 
-| A7670G 4G モジュール | ESP32 IO | 機能                                  |
-|  :---:               |  :---:   | :---:                                |
-|  PWR_EN              |  IO16    | SY8089A 経由で A7670G の電源を有効化 |
-|  PWRKEY              |  IO21    | PWR_KEY                              |
-|  RXD                 |  IO48    | U2TXD                                |
-|  TXD                 |  IO47    | U2RXD                                |
+| A7670G 4Gモジュール  | ESP32 IO| 機能                                |
+|  :---:            |  :---:  |  :---:                                  |
+|  PWR_EN           |  IO16   | SY8089Aを通じてA7670Gの電源を起動 |
+|  PWRKEY           |  IO21   | PWR_KEY                                 |
+|  RXD              |  IO48   | U2TXD                                   |
+|  TXD              |  IO47   | U2RXD                                   |
 
 </div>
 
@@ -699,34 +699,34 @@ GIPIO0 はリセットボタンにも接続されています。また、UART0 �
 
 <div class="table-center">
 
-| SGM58031 (I2C アドレス 0x48) |  IO            |
-|   :---:                     |   :---:        |
-| CH1+                        |  AI0           |
-| CH2+                        |  AI1           |
-| CH3+                        |  AI2           |
-| CH4+                        |  AI3           |
-| SDA                         |  IO20/I2C_SDA  |
-| SCL                         |  IO19/I2C_SCL  |
+| SGM58031 (I2Cアドレス 0x48)  |  IO            |
+|   :---:                      |   :---:        |
+| CH1+                         |  AI0           |
+| CH2+                         |  AI1           |
+| CH3+                         |  AI2           |
+| CH4+                         |  AI3           |
+| SDA                          |  IO20/I2C_SDA  |
+| SCL                          |  IO19/I2C_SCL  |
 
 </div>
 
 :::note
-  
-  デフォルトの入力タイプは 4-20mA です。
-  0-10V 入力タイプはオプションです。
+
+  デフォルトの入力タイプは4-20mAです。
+  0-10V入力タイプはオプションです。
 
 :::
 
 #### アナログ出力
 
- デュアルアナログ出力チャネルは PWM と LPF 技術で構成されています。
+ 双アナログ出力チャンネルはPWMおよびLPF技術によって構成されています。
 
 <div class="table-center">
 
 | アナログ出力 | ESP32 IO |
-|  :---:       | :---:    |
-|  AO0         |   IO42   |
-|  AO1         |   IO41   |
+|  :---:        |  :---:   |
+|  AO0          |   IO42   |
+|  AO1          |   IO41   |
 
 </div>
 
@@ -736,38 +736,38 @@ GIPIO0 はリセットボタンにも接続されています。また、UART0 �
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/Edgebox-esp-how-to-power.png" alt="pir" width={500} height="auto" /></div>
 
-### 消費電力
+### 電力消費量
 
-EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード、接続された周辺機器に大きく依存します。記載された値は概算値として見なしてください。
+ EdgeBox-ESP-100の電力消費は、アプリケーション、動作モード、および接続された周辺デバイスに大きく依存します。提示された値は近似値として見なしてください。
 
 :::note
 
-電源供給24Vの条件下
+  電源供給24Vの条件において
 
 :::
 
 <div class="table-center">
 
-| 動作モード | 電流(ma) |
-| :---:     | :---:    |
-| アイドル   | 81       |
+| 動作モード | 電流(mA) |
+| :---:             | :---:       |
+| アイドル          | 81          |
 
 </div>
 
-## Arduino プログラミングの開始
+## Arduinoプログラミングで始める
 
 ### 要件
 
 #### ハードウェア要件
 
-以下を準備する必要があります：
+以下のものを準備してください:
 
 - 1 x [EdgeBox-ESP-100](https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html)
 - 1 x PC
-- 1 x USB to Serial アダプター
-- 1 x PH2 プラスヘッドドライバー（オプション）
-- 1 x 六角レンチ H2.5
-- 1 x 12V3A（最小入力電力要件）電源
+- 1 x USB to Serial Adopter
+- 1 x PH2 Phillips頭スクリュードライバー (オプション)
+- 1 x Allen Key H2.5
+- 1 x 12V3A(最小入力電源要件)電源
 
 #### ソフトウェア要件
 
@@ -777,29 +777,29 @@ EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード�
 
 #### ハードウェア
 
-- ステップ 1: ケースを取り外してプログラミングポートを見つける
+- ステップ1: ケースを取り外し、プログラミングポートを探します
 
-- ステップ 1-1: 2つの黒い六角穴付きボルトを見つけて取り外してください
+- ステップ1-1: 2つの黒いAllenソケットヘッドスクリューを探して取り外します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_case.png" alt="pir" width={500} height="auto" /></div>
 
-- ステップ 1-2: 次に3つのM.3 PH2プラスヘッドネジを取り外します。
+- ステップ1-2: 次に3つのM.3 PH2 Phillipsヘッドスクリューを取り外します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_PH.png" alt="pir" width={500} height="auto" /></div>
 
-- ステップ 1-3: これでプログラミングポートを見つけることができるはずです。
+- ステップ1-3: プログラミングポートを見つけることができるはずです。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
-- ステップ 2: USB-to-SerialをEdgebox-ESP-100に接続する
+- ステップ2: USB-to-SerialをEdgebox-ESP-100に接続します
 
-接続は以下のように行ってください
+接続は以下のようにしてください
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming.png" alt="pir" width={800} height="auto" /></div>
 
 :::caution
 
-接続が正しいことを確認し、接続中はEdgebox-ESP-100の電源を切っておいてください。
+接続が正しいことを確認してください。Edgebox-ESP-100は接続中に電源をオフにする必要があります。
 
 :::
 
@@ -826,10 +826,10 @@ EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード�
     </tr>
     <tr>
       <td className="tg-c3ow" rowSpan={2}>GPIO0</td>
-      <td className="tg-c3ow">GND（プログラムダウンロードモード）<br /></td>
+      <td className="tg-c3ow">GND (プログラムダウンロードモード) <br /></td>
     </tr>
     <tr>
-      <td className="tg-c3ow">シリアルデバッガーとして使用する場合は未接続<br /></td>
+      <td className="tg-c3ow">シリアルデバッガとして使用する際は未接続<br /></td>
     </tr>
   </tbody>
 </table>
@@ -837,35 +837,35 @@ EdgeBox-ESP-100の消費電力は、アプリケーション、動作モード�
 
 #### ソフトウェア
 
-- ステップ 1: [Arduino公式ウェブサイト](https://www.arduino.cc/en/software)からArdunio IDE 2.0.Xをダウンロードし、インストールします。
+- ステップ1: [Arduino公式ウェブサイト](https://www.arduino.cc/en/software)からArduino IDE 2.0.Xをダウンロードし、インストールしてください。
 
-- ステップ 2: ボードマネージャーからESP32を見つけてインストールします。
+- ステップ2: ボードマネージャからESP32を探してインストールします。
 
-- ステップ 2-1: Arduino IDEを開き、`Board Tab`（2番目のタブ）をクリックして`Board Manager`を開きます
-  
-- ステップ 2-2: 検索バーに**`ESP32`**と入力してEnterキーを押すと、esp32ボードライブラリがリストに表示されます。
+- ステップ2-1: Arduino IDEを開き、`ボードタブ`(第二タブ)をクリックして`ボードマネージャ`を開きます。
 
-- ステップ 2-3: バージョンドロップダウンメニューから最新バージョンを選択します。例えば、このwikiが書かれた時点での最新バージョンは**`version 2.0.7`**です
+- ステップ2-2: 検索バーに**`ESP32`**を入力してEnterを押すと、ESP32ボードライブラリがリストに表示されます。
+
+- ステップ2-3: バージョン選択メニューから最新バージョンを選択します。例: このWikiが書かれた時点では最新バージョンは**`version 2.0.7`**です。
 
 :::note
 
-esp32ボードライブラリのバージョン >= **`2.0.7`** をインストールしてください。
+ESP32ボードライブラリのバージョン >= **`2.0.7`**をインストールしてください。
 
 :::
 
-- ステップ 2-4: `Install`をクリックします
+- ステップ2-4: `インストール`をクリックします
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/download_board.png" alt="pir" width="auto" height="auto" /></div>
 
-### Edgebox-ESP-100でArduinoを使用してソレノイドを制御する
+### Edgebox-ESP-100によるArduinoでのソレノイド制御
 
-#### 配線図
+#### ワイヤリング図
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/connection.png" alt="pir" width={400} height="auto" /></div>
 
 #### コード
 
-以下は全てのソレノイドを循環させるコードです。Arduino IDEのコードエディタにコードをコピーしてください
+以下は、すべてのソレノイドを順番に動作させるためのコードです。このコードを Arduino IDE のコードエディタにコピーしてください。
 
 ```c
 void setup() {
@@ -896,7 +896,7 @@ void loop() {
   digitalWrite(DO1, LOW);
   digitalWrite(DO2, HIGH);
   delay(2000);
-  
+
   //Switch on DO3 and Swith off DO2
   digitalWrite(DO2, LOW);
   digitalWrite(DO3, HIGH);
@@ -907,37 +907,51 @@ void loop() {
 
 #### コードのアップロード
 
-- ステップ 1: USB-To-Serialアダプターをお使いのPCに接続し、Edgebox-ESP-100とUSB-To-Serialコンバーターの接続をプログラムダウンロードモードに設定してください。
+- ステップ 1: USB-To-Serial アダプタを PC に接続し、Edgebox-ESP-100 と USB-To-Serial コンバータの接続をプログラムダウンロードモードに設定してください。
 
 :::note
 
-次のステップまでEdgebox-ESP-100の電源を入れないでください
+次のステップまで Edgebox-ESP-100 の電源を入れないでください。
 
 :::
 
-- ステップ 2: Edgebox-ESP-100の電源を入れます
+- ステップ 2: Edgebox-ESP-100 の電源を入れます。
 
-- ステップ 3: ボードとPORTSを選択します
+- ステップ 3: ボードとポートを選択します。
 
-- ステップ 3-1: ボードとポート選択ウィンドウを開きます
+- ステップ 3-1: ボードとポート選択ウィンドウを開きます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/select_boardandport.png" alt="pir" width="auto" height="auto" /></div>
 
-- ステップ 3: `ボードとポート選択ウィンドウ`からボードとPORTSを選択します。この場合、検索バーにedgeboxと入力し、ボードとしてEdgebox-ESP-100を選択し、お使いのUSB-to-Serialアダプターに応じてポートを選択します。その後、**`OK`**を押して確認します。
+- ステップ 3: `ボードとポート選択ウィンドウ` からボードとポートを選択します。この場合、検索バーに「edgebox」と入力してボードとして Edgebox-ESP-100 を選択し、使用している USB-to-Serial アダプタに応じてポートを選択します。次に **`OK`** を押して確定します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/selectboard.png" alt="pir" width="auto" height="auto" /></div>
 
 - ステップ 4: コードアップロードボタンを押してコードをアップロードします。
-  
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/uploadcode.png" alt="pir" width="auto" height="auto" /></div>
 
-- ステップ 5: 電源をリセットして、Edgebox-ESP-100がソレノイドを制御している様子を監視します。
+- ステップ 5: 電源をリセットして、Edgebox-ESP-100 がソレノイドを制御している様子を確認します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
 
-## 技術サポート & 製品ディスカッション
+## リソース
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+[EdgeBox ESP 4G モジュール ドキュメント](https://files.seeedstudio.com/wiki/edge_box_esp/4G_module_A7670G_Spec.pdf)
+
+[Edge シリーズ 保証規定](https://files.seeedstudio.com/wiki/Edge_Box/Seeed_Studio_Edge_Series_Warranty_Regulations.pdf)
+
+[Edgebox-ESP-100-ユーザーマニュアル V1.1](https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_manual-V1.1.pdf)
+
+[EdgeBox-ESP-100 製品データシート](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_Edgebox-ESP-100.pdf)
+
+[EdgeBox ESP 3D ファイル](https://files.seeedstudio.com/wiki/edge_box_esp/edgebox_esp_100.stp)
+
+[EdgeBox-ESP-100 回路図](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_EdgeBox-ESP-100_Schematic.pdf)
+
+## テクニカルサポート & 製品ディスカッション
+
+当社の製品をお選びいただき、ありがとうございます。お客様に快適な製品体験を提供するため、さまざまなサポートを提供しています。異なるご要望やニーズにお応えするため、いくつかのコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

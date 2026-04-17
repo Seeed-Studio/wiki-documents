@@ -7,7 +7,7 @@ last_update:
   date: 04/25/2024
   author: Kazuhiro Ozuchi
 createdAt: '2024-03-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/NEQTO_Engine_for_Linux_EdgeBox-RPI-200/
 ---
 

@@ -7,7 +7,7 @@ last_update:
   date: 09/18/2023
   author: Bruno Santos (Feiticeir0)
 createdAt: '2023-09-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/XIAO_BLE_HA/
 ---
 

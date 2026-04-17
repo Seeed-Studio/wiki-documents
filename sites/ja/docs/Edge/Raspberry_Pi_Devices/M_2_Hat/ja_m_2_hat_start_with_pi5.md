@@ -12,7 +12,7 @@ last_update:
   date: 12/24/2024
   author: Jiahaoli
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/raspberry_pi_5_uses_pcie_hat_dual_hat/
 ---
 

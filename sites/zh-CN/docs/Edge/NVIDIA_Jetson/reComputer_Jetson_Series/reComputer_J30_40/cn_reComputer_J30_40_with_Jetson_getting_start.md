@@ -10,7 +10,7 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/reComputer_J30_40_with_Jetson_getting_start/
 ---
 
@@ -216,7 +216,7 @@ reComputer J30/40 由 J401 载板供电。
 - [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

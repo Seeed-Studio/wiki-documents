@@ -1,30 +1,30 @@
 ---
-description: 这款紧凑的边缘音频板可在本地实时检测婴儿哭声、玻璃破碎声、枪声、警报以及打鼾声，并将所有数据保存在本地以保护隐私。在本教程中，你将学习如何使用 XIAO 系列将其与 ESPHome 和 Home Assistant 集成，实现智能监控与自动化。
+description: 这是一款紧凑的边缘音频板，可在保护本地数据隐私的前提下实时检测婴儿啼哭、玻璃破碎、枪声、报警声和打鼾声。在本教程中，你将学习如何使用 XIAO 系列将其与 ESPHome 和 Home Assistant 集成，实现智能监控和自动化。
 title: Home Assistant 与声音事件检测模块
 keywords:
-  - 声音事件检测模块
-  - 声音物联网
+  - Sound Event Detection Module
+  - Sound IoT
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
+image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
 createdAt: '2026-03-04'
-updatedAt: '2026-03-04'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/cn/sound_event_detection_module_home_assistant/
 ---
 
 ## 介绍
 
-一款紧凑的边缘音频板可提供实时声音检测，并具备强大的本地数据隐私保护能力。它可以检测五种异常声音事件——婴儿哭声、玻璃破碎声、枪声、T3/T4 警报以及打鼾声——从而实现即时响应和可靠的早期预警。在本教程中，我们将学习如何为 XIAO ESP32 开发板编译并上传固件。
+一块紧凑的边缘音频板提供实时声音检测，并具有强大的本地数据隐私保护功能。它可以检测五种异常声音事件——婴儿啼哭、玻璃破碎、枪声、T3/T4 报警声和打鼾声——从而实现即时响应和可靠的预警。在本教程中，我们将学习如何为 XIAO ESP32 开发板编译并上传固件。
 
 ## 所需硬件
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sound Event Sensor </th>
     <th>Home Assistant Yellow Kit</th>
     <th>Xiao ESP32S3</th>
   </tr>
@@ -54,7 +54,7 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module_home_assistant
 
 ## 安装 ESPHome Builder
 
-在 **Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** 中安装 ESPHome Device Builder 插件。
+**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** 插件。
 
 进入 **Home Assistant > Settings > Add-ons**。
 
@@ -73,7 +73,7 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module_home_assistant
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-启用 **Start on Boot, Watchdog, and Show in Sidebar** 以便更轻松地访问。
+启用 **Start on Boot、Watchdog 和 Show in Sidebar** 以便更轻松地访问。
 
 在 Home Assistant 侧边栏中进入 **ESPHome Builder**。
 
@@ -83,17 +83,17 @@ url: https://wiki.seeedstudio.com/cn/sound_event_detection_module_home_assistant
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
 
-点击 **Continue → New Device Setup**，然后为设备输入一个合适的名称。
+点击 **Continue → New Device Setup**，然后为设备提供一个合适的名称。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
 
-在本演示中，我们使用的是 XIAO ESP32-S3，因此将 **ESP32-S3** 选择为目标开发板。根据你所使用的开发板，这一选项可能会有所不同。
+在本演示中，我们使用的是 XIAO ESP32-S3，因此将选择 **ESP32-S3** 作为目标开发板。根据你使用的开发板不同，这里可能会有所不同。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-选择你新建的设备条目并点击 **Edit**。删除整个 YAML 模板，然后将提供的 YAML 文件复制并粘贴到编辑器中。
+选择你的新设备条目并点击 **Edit**。删除整个 YAML 模板，然后将提供的 YAML 文件复制并粘贴到编辑器中。
 
 <details>
 <summary>声音事件 YAML</summary>
@@ -568,7 +568,7 @@ sensor:
 </details>
 
 :::note
-在本示例中，我们使用的是 XIAO ESP32S3，因此你可能需要根据自己的开发板和接线配置，在 YAML 文件中更新以下参数
+在本示例中，我们使用的是 XIAO ESP32S3，因此你可能需要根据自己的开发板和接线配置在 YAML 文件中更新以下参数
 :::
 
 ```bash
@@ -577,7 +577,7 @@ tx_pin: GPIO43             # your TX pin connection
 rx_pin: GPIO44             # your RX pin connection
 ```
 
-YAML 保存后，点击 **INSTALL**。
+保存 YAML 后，点击 **INSTALL**。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -607,7 +607,7 @@ YAML 保存后，点击 **INSTALL**。
 
 等待安装完成（可能需要几分钟）。
 
-成功后，你会看到一条确认消息。
+成功后，你会看到确认信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
@@ -623,7 +623,7 @@ YAML 保存后，点击 **INSTALL**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
 
-然后，你就可以通过 Home Assistant 界面与设备交互，并与其他外设一起创建自己的自动化。例如，当检测到玻璃破碎时触发蜂鸣器，或者在检测到婴儿哭声时，自动在智能音箱上播放舒缓的摇篮曲。
+然后，你就可以通过 Home Assistant 界面与设备交互，并与其他外设一起创建自己的自动化流程。例如，当检测到玻璃破碎时触发蜂鸣器，或者当检测到婴儿哭声时，在智能音箱上自动播放舒缓的摇篮曲。
 
 ## 演示
 
@@ -640,7 +640,7 @@ YAML 保存后，点击 **INSTALL**。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们在此为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

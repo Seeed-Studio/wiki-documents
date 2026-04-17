@@ -9,18 +9,16 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png
 slug: /meshtastic_node_map_t1000_e
 sku: 114993369,114993649
-sidebar_position: 2
+sidebar_position: 1
 last_update:
   date: 3/19/2026
   author: Michelle Huang
 createdAt: '2026-03-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/meshtastic_node_map_t1000_e/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
 
 This guide explains how to display the locations of [Meshtastic](https://meshtastic.org/docs/introduction/) devices on Meshtastic Node Maps using [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) and [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) devices, assuming the devices have already been flashed with the Meshtastic firmware.
 

@@ -10,7 +10,7 @@ last_update:
   date: 12/19/2024
   author: Jason
 createdAt: '2024-12-23'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-08'
 url: https://wiki.seeedstudio.com/grove_vision_ai_v2_rs485/
 ---
 

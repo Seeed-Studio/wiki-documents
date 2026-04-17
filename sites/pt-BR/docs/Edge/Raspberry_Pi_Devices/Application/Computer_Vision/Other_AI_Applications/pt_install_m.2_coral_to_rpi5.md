@@ -12,7 +12,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2024-07-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/install_m2_coral_to_rpi5/
 ---
 

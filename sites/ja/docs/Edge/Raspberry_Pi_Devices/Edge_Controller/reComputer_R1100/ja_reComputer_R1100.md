@@ -11,7 +11,7 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/
 ---
 
@@ -738,7 +738,7 @@ reComputer R1100の **UPSモジュール** は、**直列で動作** する **7F
 ## 参考資料
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="見積もり依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

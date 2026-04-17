@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-03-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-02-11'
 url: https://wiki.seeedstudio.com/flash_watcher_agent_firmware/
 ---
 

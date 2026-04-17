@@ -11,7 +11,7 @@ last_update:
   date: 06/13/2023
   author: Stephen Lo
 createdAt: '2023-06-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/grove_1.2inch_ips_display/
 ---
 

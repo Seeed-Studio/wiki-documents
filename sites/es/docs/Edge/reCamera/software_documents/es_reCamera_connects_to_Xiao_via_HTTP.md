@@ -14,7 +14,7 @@ last_update:
   author: Liangyuxin
 no_comments: false
 createdAt: '2025-07-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/recamera_connects_to_xiao_via_http/
 ---
 

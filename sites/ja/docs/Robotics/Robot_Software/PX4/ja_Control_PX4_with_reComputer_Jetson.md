@@ -11,7 +11,7 @@ last_update:
   date: 7/21/2025
   author: TienjuiWong
 createdAt: '2025-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/
 ---
 
@@ -410,7 +410,7 @@ sudo bash /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
 ## 参考資料
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="見積もり依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

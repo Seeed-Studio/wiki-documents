@@ -7,7 +7,7 @@ last_update:
   date: 2024/6/21
   author: Harrison Xu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/R1000_default_username_password/
 ---
 

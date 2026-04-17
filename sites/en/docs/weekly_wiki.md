@@ -5,12 +5,11 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 03/16/2026
+  date: 04/13/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-13'
 ---
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
@@ -19,61 +18,54 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is March 23rd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with reTerminal E1003](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/)
+### [Getting Started with XIAO ePaper Display EE05](https://wiki.seeedstudio.com/epaper_ee05/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant (via ESPHome & Open Display), Arduino, PlatformIO for further development. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
-
-</div>
-
-### [Meshtastic Firmware Source Code Practical Tutorial for Solar Nod](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial is intended for users who are just getting started with the Meshtastic firmware source code. It includes common workflows for both Windows and macOS. The goal is straightforward: clone the official repository, complete a successful build, make one simple UI change, and flash the modified firmware to the device for verification.
-
-For other Seeed devices, you can refer to the corresponding tutorials: [T1000-E](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_t1000_e), [Wio Tracker L1](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial), and [XIAO ESP32S3 & Wio SX1262 Kit](https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor).
+Powered by **XIAO ESP32-S3 Plus**, the display board EE05 is a compact ePaper driver board supporting 24-Pin ePaper displays. It features a JST 2.0 mm battery connector with a power switch, built-in battery level detection circuitry, and comes with one reset button and three user-programmable buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
 </div>
 
-### [Meshtastic Node Map](https://wiki.seeedstudio.com/meshtastic_node_map_solar_node/)
+### [Getting Started with XIAO ePaper Display EN05](https://wiki.seeedstudio.com/epaper_en05/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshMap/MeshMap.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to display the locations of [Meshtastic](https://meshtastic.org/docs/introduction/) devices on Meshtastic Node Maps using [Wio Tracker L1 Pro](https://www.seeedstudio.com/Wio-Tracker-L1-Pro-p-6454.html) and [T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html) devices, assuming the devices have already been flashed with the Meshtastic firmware.
+Powered by **XIAO nRF52840 Plus**, the display board EN05 is an ultra-low-power ePaper driver board specifically designed for 24-Pin ePaper displays. With a hardware power switch, it is ideal for battery-powered projects like electronic shelf labels, smart badges, and portable IoT information boards.
 
 </div>
 
-### [Getting Started with OpenClaw on reComputer Industrial](https://wiki.seeedstudio.com/getting_started_with_openclaw_on_recomputer/)
+### [reSpeaker Flex with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide introduces how to get started with OpenClaw on the reComputer R series devices, covering environment setup, installation, and basic configuration. It enables users to deploy and run a self-hosted AI agent system on edge hardware.
+The reSpeaker Flex ESP32 version integrates a pre-soldered XIAO ESP32S3 module on the core board, providing built-in Wi-Fi and Bluetooth connectivity for wireless control and edge processing. Powered by the XMOS XVF3800 voice processor, the system maintains the same modular architecture where the microphone array board connects to the core board through a flexible 24-pin FPC cable, allowing flexible placement inside device enclosures.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+### [reSpeaker Flex control with Python](https://wiki.seeedstudio.com/respeaker_flex_python_control/)
 
-### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
+<div style={{ textAlign: "justify" }}>
 
-We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#nodedb-reset).
+In this section, we are going to talk about how to control your reSpeaker Flex using the Python SDK. It makes development more convenient for users who want to build their own applications.
+For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
 
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+</div>
 
-We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
+## Existing Wiki Updated
+
+### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
+
+We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node).
 
 ## The Efforts of Contributor
 
@@ -199,5 +191,8 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.3.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260302)
 - [weekly wiki on 2026.3.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260309)
 - [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
+- [weekly wiki on 2026.3.23rd](/Seeed_Elderly/weekly_wiki/2026/wiki260323)
+- [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
+- [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
 
 </details>

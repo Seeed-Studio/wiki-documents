@@ -9,7 +9,7 @@ authors:
   image_url: https://github.com/wgao19.png
   slug: /About
 createdAt: '2022-11-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 ---
 
 [Seeed](https://www.seeedstudio.com) é uma plataforma de inovação em hardware para makers transformarem inspirações em produtos diferenciados. Trabalhando em estreita colaboração com provedores de tecnologia de todos os portes, a Seeed oferece tecnologias acessíveis com qualidade, rapidez e conhecimento em cadeia de suprimentos. Quando os protótipos estão prontos para iterar, a Seeed ajuda a transformar de 1 a 1.000 unidades em produto final usando engenharia interna, gestão da cadeia de suprimentos e capacidade de manufatura ágil. A Seeed também faz parceria com incubadoras, o ecossistema de tecnologia chinês, investidores e canais de distribuição para levar startups de makers ainda mais longe.

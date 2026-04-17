@@ -12,7 +12,7 @@ last_update:
   date: 01/14/2026
   author: Jiahao
 createdAt: '2026-01-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-22'
 url: https://wiki.seeedstudio.com/recomputer_rs485_loopback_test/
 ---
 

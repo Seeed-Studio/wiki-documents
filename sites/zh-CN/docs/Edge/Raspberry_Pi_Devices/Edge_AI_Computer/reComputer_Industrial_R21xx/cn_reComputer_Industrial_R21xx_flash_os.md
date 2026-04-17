@@ -3,16 +3,16 @@ description: reComputer Industrial R21xx 刷写操作系统
 title: reComputer Industrial R21xx 刷写操作系统
 keywords:
   - Raspberry pi
-  - 边缘控制器
+  - Edge Controller
   - reComputer Industrial R21xx
-  - 刷写操作系统
+  - Flash OS
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_r21xx_flash_os
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r21xx_flash_os/
 ---
 # reComputer Industrial R21xx 刷写操作系统
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r21xx_flash_os/
     </a>
 </div>
 
-reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器驱动，这款紧凑型边缘 AI 系统可提供 26 TOPS 的算力，用于实时多通道视觉处理。凭借四核 Cortex-A76 CPU、最高 16GB 内存、64GB eMMC 和多功能接口，它可确保无缝集成到工业 AI 应用中。
+reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器驱动，这款紧凑型边缘 AI 系统可提供 26 TOPS 的算力，用于实时多通道视觉处理。凭借四核 Cortex-A76 CPU、最高 16GB 内存、64GB eMMC 和多功能接口，它能够无缝集成到工业 AI 应用中。
 
 ## 硬件需求
 
@@ -38,8 +38,8 @@ reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 
 ## 软件需求
 
-- [usbboot 工具](https://github.com/raspberrypi/usbboot)
-- [Raspberry Pi Imager 应用](https://www.raspberrypi.com/software/)
+- [usbboot tool](https://github.com/raspberrypi/usbboot)
+- [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
 ## 刷写操作系统
 
@@ -66,7 +66,7 @@ reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 
 继续烧录镜像直到成功完成。
 
-拔下 USB-C 接口，再次按下启动按钮，然后开关电源。如果你可以正常登录系统，则说明镜像已经烧录成功，可以正常使用。
+拔掉 USB-C 接口，再次按下启动按钮，然后开关电源。如果你可以正常登录系统，则说明镜像已经烧录成功，可以正常使用。
 
 ### 适用于 MAC 主机电脑
 
@@ -75,9 +75,9 @@ reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 请打开终端并输入 ```brew -V``` 来检查是否已经正确配置 homebrew 环境，你应该能看到已安装的 homebrew 环境版本。
 :::
 
-- **步骤 1.** 访问[此链接](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)下载并安装 **Raspberry Pi Imager** 应用
+- **步骤 1.** 访问[此链接](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)下载并安装 **Raspberry Pi Imager** 应用程序
 
-- **步骤 2.** 打开 **Raspberry Pi Imager** 应用
+- **步骤 2.** 打开 **Raspberry Pi Imager** 应用程序
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
 
@@ -91,11 +91,11 @@ reComputer Industrial R21xx 系列由 Raspberry Pi CM5 和 Hailo-8 AI 加速器�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**注意：**你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **64-bit Ubuntu**
+**注意：**你可以通过进入 **Other general purpose OS** 来选择其他操作系统，例如 **Ubuntu Desktop 24.04 lts**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
-或者你可以使用此链接下载镜像文件：
+或者你也可以使用此链接下载镜像文件：
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
@@ -142,7 +142,7 @@ rpi-imager
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
-或者你可以使用此链接下载镜像文件：
+或者你也可以使用此链接下载镜像文件：
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
@@ -160,7 +160,7 @@ rpi-imager
 
 ### 更新 EEPROM
 
-*如果你有一块 SSD，并且已经通过 eMMC 成功启动了设备，则此方法适用。请确保你的系统是最新的 Raspberry Pi 系统（Bookworm 或更高版本），并且你的 RPi 5 固件已更新到 2023-12-06（12 月 6 日）或更新版本，否则可能无法识别与 NVME 相关的配置。*
+*如果你有一块 SSD，并且已经通过 eMMC 成功启动了设备，则此方法适用。请确保你的系统是最新的 Raspberry Pi 系统（Bookworm 或更高版本），并且你的 RPi 5 固件已更新到 2023-12-06（12 月 6 日）或更新的版本，否则可能无法识别与 NVME 相关的配置。*
 
 **步骤 1**：确保你的 Raspberry Pi 系统是最新的（Bookworm 或更高版本），输入以下命令来更新 RPi 5 固件：
 
@@ -199,7 +199,7 @@ rpi-imager
 
 ### 将 Raspberry Pi 设置为从 NVMe SSD 启动
 
-如果你可以轻松访问 SD 卡槽，可以先关闭你的 Pi，弹出 SD 卡，然后（如果一切正常工作）下次启动时它应该会自动从 NVMe 硬盘启动。如果你想让 SD 卡保持原位但仍然从 NVMe 启动，则需要更改启动顺序。
+如果你可以方便地访问 SD 卡槽，可以先关闭你的 Pi，弹出 SD 卡，然后（如果一切正常工作）下次启动时它应该会自动从 NVMe 硬盘启动。如果你想让 SD 卡保持原位但仍然从 NVMe 启动，则需要更改启动顺序。
 
 **步骤 1**：输入以下命令：
 
@@ -222,7 +222,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
-**步骤 4**：通过选择 `Back` 或按下 Esc 键返回第一个界面。然后使用右方向键移动到 Finish。
+**步骤 4**：通过选择 `Back` 或按下 Esc 键返回第一个界面。然后使用右方向键导航到 Finish。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>
 
@@ -230,10 +230,43 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
+## 安装驱动
+reComputer R1000 出厂时已预装必要的驱动程序，因此你无需额外安装驱动。不过，如果你自行刷写新的操作系统，则需要单独安装相应的驱动程序。
+
+**注意：** 以下命令仅适用于 **Ubuntu 24.04**（Noble Numbat），因为其特定的 /boot/firmware/ 路径和 apt 软件包命名。
+
+1. 更新并安装依赖
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install git net-tools minicom -y
+```
+
+2. 克隆并安装 Seeed DTOverlays
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays
+sudo ./scripts/reTerminal.sh --device reComputer-R2x
+```
+3. 在 config.txt 中配置硬件 overlays
+```bash
+sudo sed -i 's/^dtparam=spi=on/# dtparam=spi=on/' /boot/firmware/config.txt
+sudo sed -i 's/^dtparam=i2c_arm=on/# dtparam=i2c_arm=on/' /boot/firmware/config.txt
+sudo sed -i '$a dtoverlay=reComputer-R21' /boot/firmware/config.txt
+```
+4. 应用更改
+```bash
+sudo reboot
+```
+5. 验证命令
+```bash
+ls -l /dev/serial/by-id/                # Check RS485/232 (ttyACM0/1)
+ip addr show | grep can                 # Check CAN FD (can0/1)
+sudo dmesg | grep -i mcp                # Verify MCP2518FD status
+```
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

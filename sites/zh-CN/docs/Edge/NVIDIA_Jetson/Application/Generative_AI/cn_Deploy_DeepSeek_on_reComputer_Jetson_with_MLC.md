@@ -13,7 +13,7 @@ last_update:
   date: 02/13/2025
   author: Youjiang
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/cn/deploy_deepseek_on_jetson_with_mlc/
 ---
 

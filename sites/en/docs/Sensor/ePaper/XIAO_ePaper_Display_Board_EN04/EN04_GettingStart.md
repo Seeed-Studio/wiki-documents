@@ -11,10 +11,9 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/epaper_EN04/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';

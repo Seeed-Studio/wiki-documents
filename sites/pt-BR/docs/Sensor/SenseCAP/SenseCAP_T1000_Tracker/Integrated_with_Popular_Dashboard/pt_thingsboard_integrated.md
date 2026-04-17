@@ -10,7 +10,7 @@ last_update:
   date: 8/20/2024
   author: Jessie
 createdAt: '2024-08-20'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/thingsboard_integrated/
 ---
 

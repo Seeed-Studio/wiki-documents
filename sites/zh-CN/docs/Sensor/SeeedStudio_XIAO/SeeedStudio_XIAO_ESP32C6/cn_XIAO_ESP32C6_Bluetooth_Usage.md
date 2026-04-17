@@ -12,7 +12,7 @@ last_update:
   date: 04/11/2024
   author: Citric
 createdAt: '2024-11-16'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-23'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_bluetooth/
 ---
 

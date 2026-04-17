@@ -10,7 +10,7 @@ last_update:
   date: 05/11/2024
   author: Citric
 createdAt: '2024-05-11'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/getting_started_with_matter/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 07/17/2023
   author: Lakshantha
 createdAt: '2023-07-21'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/YOLOv8-TRT-Jetson/
 ---
 

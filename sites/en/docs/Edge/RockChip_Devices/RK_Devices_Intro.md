@@ -8,11 +8,11 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rockchip-devices
 sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
 last_update:
-  date: 9/3/2026
+  date: 3/9/2026
   author: Nolan Chen
-createdAt: '2026-3-9'
-updatedAt: '2026-03-09'
-url: https://wiki.seeedstudio.com/raspberry-pi-devices/
+createdAt: 2026-3-9
+updatedAt: '2026-04-03'
+url: https://wiki.seeedstudio.com/rockchip-devices/
 ---
 
 ## Introduction

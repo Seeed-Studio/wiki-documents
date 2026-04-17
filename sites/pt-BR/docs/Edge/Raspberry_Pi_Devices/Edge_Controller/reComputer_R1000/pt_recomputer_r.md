@@ -11,7 +11,7 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r/
 ---
 
@@ -1697,7 +1697,7 @@ Uma interface DSI (J24) e uma interface de Alto-falante de 4 pinos (J7) são res
 ## Recursos
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

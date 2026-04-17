@@ -9,7 +9,7 @@ last_update:
   date: 05/31/2023
   author: Matthew
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-05'
 url: https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-NFC-Usage/
 ---
 

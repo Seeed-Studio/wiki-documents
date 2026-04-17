@@ -7,7 +7,7 @@ last_update:
   date: 08/30/2023
   author: Hendra
 createdAt: '2023-08-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c6_micropython/
 ---
 

@@ -9,7 +9,7 @@ last_update:
   date: 12/18/2023
   author: Matthew
 createdAt: '2023-12-19'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-22'
 url: https://wiki.seeedstudio.com/open_source_topic/
 ---
 

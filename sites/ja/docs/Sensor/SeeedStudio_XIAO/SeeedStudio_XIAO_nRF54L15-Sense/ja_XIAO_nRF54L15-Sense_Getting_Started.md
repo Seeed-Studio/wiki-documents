@@ -12,7 +12,7 @@ last_update:
   author: Jason
 sidebar_position: 0
 createdAt: '2025-07-28'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -1486,7 +1486,7 @@ int main(void)
 ## 参考資料
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="見積もり依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

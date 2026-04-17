@@ -1,9 +1,9 @@
 ---
-description: Esta placa de áudio de borda detecta choro de bebê, quebra de vidro, disparo de arma de fogo, alarmes e ronco em tempo real, mantendo todos os dados localmente para privacidade. Neste tutorial, você aprenderá como integrá-la com ESPHome e Home Assistant usando a série XIAO para monitoramento inteligente e automação.
+description: Esta placa de áudio de borda compacta detecta em tempo real choro de bebê, quebra de vidro, disparo de arma de fogo, alarmes e ronco, mantendo todos os dados localmente para proteger a privacidade. Neste tutorial, você aprenderá como integrá-la ao ESPHome e ao Home Assistant usando a série XIAO para monitoramento inteligente e automação.
 title: Home Assistant e Módulo de Detecção de Eventos Sonoros
 keywords:
   - Módulo de Detecção de Eventos Sonoros
-  - IoT de Som
+  - IoT de Áudio
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.webp
 slug: /sound_event_detection_module_home_assistant
@@ -12,19 +12,19 @@ last_update:
   date: 3/4/2026
   author: Kasun Thushara
 createdAt: '2026-03-04'
-updatedAt: '2026-03-04'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/pt-br/sound_event_detection_module_home_assistant/
 ---
 
 ## Introdução
 
-Uma placa de áudio de borda compacta oferece detecção de som em tempo real com forte proteção de privacidade de dados locais. Ela pode detectar cinco eventos sonoros anormais — choro de bebê, quebra de vidro, disparo de arma de fogo, alarmes T3/T4 e ronco — permitindo resposta imediata e alerta prévio confiável. Neste tutorial, vamos aprender como compilar e enviar o firmware para uma placa XIAO ESP32.
+Uma placa de áudio de borda compacta oferece detecção de som em tempo real com forte proteção de privacidade de dados locais. Ela pode detectar cinco eventos sonoros anormais — choro de bebê, quebra de vidro, disparo de arma de fogo, alarmes T3/T4 e ronco — permitindo resposta imediata e aviso prévio confiável. Neste tutorial, vamos aprender como compilar e enviar o firmware para uma placa XIAO ESP32.
 
 ## Hardware Necessário
 
 <table align="center">
   <tr>
-    <th>ReSpeaker XVF3800 </th>
+    <th>Sensor de Eventos Sonoros </th>
     <th>Home Assistant Yellow Kit</th>
     <th>Xiao ESP32S3</th>
   </tr>
@@ -36,17 +36,17 @@ Uma placa de áudio de borda compacta oferece detecção de som em tempo real co
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Sound-Event-Detection-Module-D1-p-6652.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-Power-over-Ethernet-p-5673.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
     </div></td>
   </tr>
@@ -61,7 +61,7 @@ Vá para **Home Assistant > Settings > Add-ons**.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
 
-Clique em **Add-on Store** (normalmente no canto inferior direito)
+Clique em **Add-on Store** (geralmente no canto inferior direito)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -73,7 +73,7 @@ Após a instalação, clique em **Start** para executar o add-on ESPHome.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-Ative **Start on Boot, Watchdog e Show in Sidebar** para facilitar o acesso.
+Ative **Start on Boot, Watchdog, and Show in Sidebar** para facilitar o acesso.
 
 Na barra lateral do Home Assistant, vá para **ESPHome Builder**.
 
@@ -83,20 +83,20 @@ Clique em + **NEW DEVICE.**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
 
-Clique em **Continue → New Device Setup**, depois forneça um nome apropriado para o dispositivo.
+Clique em **Continue → New Device Setup** e forneça um nome apropriado para o dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
 
-Nesta demonstração, estamos usando o XIAO ESP32-S3, então selecionaremos **ESP32-S3** como a placa alvo. Isso pode ser diferente dependendo da placa que você estiver usando.
+Nesta demonstração, estamos usando o XIAO ESP32-S3, então vamos selecionar **ESP32-S3** como a placa de destino. Isso pode ser diferente dependendo da placa que você estiver usando.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
 Selecione a nova entrada do dispositivo e clique em **Edit**. Exclua todo o modelo YAML e, em seguida, copie e cole o arquivo YAML fornecido no editor.
 
 <details>
-<summary>Sound Event YAML</summary>
+<summary>YAML de Evento Sonoro</summary>
 
 ```yml
 ##############################################################
@@ -568,7 +568,7 @@ sensor:
 </details>
 
 :::note
-Neste exemplo, estamos usando o XIAO ESP32S3, então você pode precisar atualizar os seguintes parâmetros no arquivo YAML de acordo com sua placa e configuração de fiação
+Neste exemplo, estamos usando o XIAO ESP32S3, portanto você pode precisar atualizar os seguintes parâmetros no arquivo YAML de acordo com a sua placa e a configuração de fiação
 :::
 
 ```bash
@@ -591,7 +591,7 @@ Baixe o arquivo de firmware .bin gerado para o seu computador a partir de Factor
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-Conecte a placa ESP32-S3 do sensor de som embutido ao seu PC usando um cabo USB Tipo-C.
+Conecte a placa ESP32-S3 do sensor de som embarcado ao seu PC usando um cabo USB Tipo-C.
 
 Abra o [Web ESPHome](https://web.esphome.io/?dashboard_wizard) no Google Chrome.
 
@@ -615,15 +615,15 @@ Volte para **Home Assistant > Settings > Devices & Services**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={500} height="auto" /></p>
 
-Você deve ver **ESPHome** listado como uma integração descoberta.
+Você deverá ver **ESPHome** listado como uma integração descoberta.
 
-Clique em Add e, em seguida, em Submit para concluir a configuração.
+Clique em Add e, em seguida, em Submit para finalizar a configuração.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/discover.png" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/sound_device_final.png" alt="pir" width={800} height="auto" /></p>
 
-Então, você poderá interagir com o dispositivo por meio da interface do Home Assistant e criar suas próprias automações com outros periféricos. Por exemplo, você pode acionar um buzzer quando uma quebra de vidro for detectada ou reproduzir automaticamente música de ninar calma em um alto-falante inteligente quando o choro de um bebê for detectado.
+Depois disso, você poderá interagir com o dispositivo por meio da interface do Home Assistant e criar suas próprias automações com outros periféricos. Por exemplo, você pode acionar um buzzer quando uma quebra de vidro for detectada, ou reproduzir automaticamente uma música de ninar calma em um alto-falante inteligente quando o choro de um bebê for detectado.
 
 ## Demo
 
@@ -638,9 +638,9 @@ Então, você poderá interagir com o dispositivo por meio da interface do Home 
   </iframe>
 </div>
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para lhe oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

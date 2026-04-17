@@ -9,7 +9,7 @@ last_update:
   date: 1/10/2022
   author: jianjing Huang
 createdAt: '2023-01-10'
-updatedAt: '2026-03-03'
+updatedAt: '2025-07-12'
 url: https://wiki.seeedstudio.com/BeagleBone_Solutions/
 ---
 

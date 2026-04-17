@@ -11,7 +11,7 @@ last_update:
   date: 3/3/2025
   author: Kasun Thushara
 createdAt: '2025-03-04'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_flash_os/
 ---
 

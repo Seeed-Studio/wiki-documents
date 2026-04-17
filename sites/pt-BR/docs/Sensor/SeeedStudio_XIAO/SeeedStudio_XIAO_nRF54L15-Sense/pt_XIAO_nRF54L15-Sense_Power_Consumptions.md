@@ -11,7 +11,7 @@ last_update:
   date: 9/11/2025
   author: Jason
 createdAt: '2025-09-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_power_consumptions/
 ---
 

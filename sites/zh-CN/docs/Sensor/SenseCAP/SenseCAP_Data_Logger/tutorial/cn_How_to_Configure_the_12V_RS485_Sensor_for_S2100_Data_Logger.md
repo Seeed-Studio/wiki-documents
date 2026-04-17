@@ -11,10 +11,9 @@ last_update:
   date: 08/17/2024
   author: Yvonne
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutorial/How_to_Configure_the_12V_RS485_Sensor_for_S2100_Data_Logger/
 ---
-
 # S2100 和 12V RS485 传感器入门指南
 
 本指南将帮助您开始使用 S2100 和 12V RS485 传感器。完成本指南后，您将了解如何在未来连接自己的定制传感器。
@@ -48,6 +47,10 @@ url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/tutori
 3. 取下螺纹帽，将传感器电缆穿过帽子和底盖，然后连接到接线端子。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
+
+:::note
+请注意，S2100 数据记录仪仅支持三种测量协议：`RS485 Modbus RTU`（A/B）、`Analog Input`（V1、V2、I1、I2）以及 `Pulse-Level Input`（IO）。
+:::
 
 ### 步骤 2.2：接线端子说明
 

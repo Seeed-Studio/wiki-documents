@@ -7,7 +7,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2024-10-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-11'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -101,6 +101,12 @@ The last four digits of nodenum are the device number ID discovered by the mesht
 ### Connected to SX-1262
 
 The SX-1262 can be connected to the Xiao ESP32-S3 via the B2B interface. The SX-1262 uses SPI to  communicate with Xiao ESP32-S3.
+
+The following diagram shows the B2B pin mapping between XIAO ESP32S3 and Wio-SX1262.
+
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
+</div>
 :::warning
 The compatible SX-1262 can only be bought within the kit.
 :::

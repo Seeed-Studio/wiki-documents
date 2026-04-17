@@ -9,7 +9,7 @@ last_update:
   date: 2/14/2023
   author: hushuxu
 createdAt: '2023-02-14'
-updatedAt: '2026-03-03'
+updatedAt: '2023-05-26'
 url: https://wiki.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-Upverter-Guide/
 ---
 ## Make Your Customized Arduino Board for Under $50

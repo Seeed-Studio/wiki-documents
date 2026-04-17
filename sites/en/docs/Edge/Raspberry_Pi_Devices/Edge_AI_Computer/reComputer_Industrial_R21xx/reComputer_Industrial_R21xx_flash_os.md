@@ -12,7 +12,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-25'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r21xx_flash_os/
 ---
 # reComputer Industrial R21xx Flash OS
@@ -91,7 +91,7 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+**NOTE:** You can select other OS such as **Ubuntu Desktop 24.04 lts** by navigating into **Other general purpose OS**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -230,6 +230,39 @@ You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
+## Install Drivers
+reComputer R1000 comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately.
+
+**Note:** The following command is strictly for **Ubuntu 24.04** (Noble Numbat) due to the specific /boot/firmware/ path and apt package naming.
+
+1. Update and install dependencies
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install git net-tools minicom -y
+```
+
+2. Clone and install Seeed DTOverlays
+```bash
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
+cd seeed-linux-dtoverlays
+sudo ./scripts/reTerminal.sh --device reComputer-R2x
+```
+3. Configure hardware overlays in config.txt
+```bash
+sudo sed -i 's/^dtparam=spi=on/# dtparam=spi=on/' /boot/firmware/config.txt
+sudo sed -i 's/^dtparam=i2c_arm=on/# dtparam=i2c_arm=on/' /boot/firmware/config.txt
+sudo sed -i '$a dtoverlay=reComputer-R21' /boot/firmware/config.txt
+```
+4. Apply changes
+```bash
+sudo reboot
+```
+5. Verification commands
+```bash
+ls -l /dev/serial/by-id/                # Check RS485/232 (ttyACM0/1)
+ip addr show | grep can                 # Check CAN FD (can0/1)
+sudo dmesg | grep -i mcp                # Verify MCP2518FD status
+```
 
 ## Tech Support & Product Discussion
 

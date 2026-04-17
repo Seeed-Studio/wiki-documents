@@ -1,0 +1,162 @@
+name: Auto update docs updatedAt
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "sites/**/*.md"
+      - "sites/**/*.mdx"
+      - ".github/scripts/normalize-frontmatter.js"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pr-updatedat-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  update-doc-updatedat:
+    runs-on: ubuntu-latest
+    if: false
+
+    steps:
+      - name: Get PR context
+        id: pr-info
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const pull_number = context.payload.pull_request.number;
+            const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number });
+
+            core.setOutput('head-repo', pr.head.repo.full_name);
+            core.setOutput('head-ref', pr.head.ref);
+            core.setOutput('head-sha', pr.head.sha);
+            core.setOutput('base-sha', pr.base.sha);
+            core.setOutput('base-ref', pr.base.ref);
+            core.setOutput('is-fork', pr.head.repo.fork ? 'true' : 'false');
+            core.setOutput('maintainer-can-modify', pr.maintainer_can_modify ? 'true' : 'false');
+
+      - name: Check if should skip
+        id: check-skip
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fullName = '${{ steps.pr-info.outputs.head-repo }}';
+            const [headOwner, headRepo] = fullName.split('/');
+            const headSha = '${{ steps.pr-info.outputs.head-sha }}';
+
+            try {
+              const { data: commit } = await github.rest.repos.getCommit({
+                owner: headOwner,
+                repo: headRepo,
+                ref: headSha
+              });
+
+              const message = commit?.commit?.message || '';
+              if (
+                message.includes('🤖 Auto update docs updatedAt') ||
+                message.includes('[UPDATEDAT_COMMIT]: true')
+              ) {
+                core.info('Detected auto updatedAt commit, skip this run.');
+                core.setOutput('skip', 'true');
+                return;
+              }
+            } catch (e) {
+              core.warning('Failed to read head commit message: ' + e.message);
+            }
+
+            core.setOutput('skip', 'false');
+
+      - name: Stop if maintainer edits are not allowed
+        if: steps.pr-info.outputs.maintainer-can-modify != 'true'
+        run: |
+          echo "PR does not allow maintainer edits. Skip."
+          exit 0
+
+      - name: Checkout PR head branch
+        if: steps.check-skip.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.pr-info.outputs.head-repo }}
+          ref: ${{ steps.pr-info.outputs.head-ref }}
+          fetch-depth: 0
+          token: ${{ secrets.TRANSLATION_PAT != '' && secrets.TRANSLATION_PAT || github.token }}
+
+      - name: Checkout trusted workflow script from base repo
+        if: steps.check-skip.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          sparse-checkout: |
+            .github/scripts
+          sparse-checkout-cone-mode: true
+          path: _trusted
+
+      - name: Setup Node.js
+        if: steps.check-skip.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install trusted runtime dependencies
+        if: steps.check-skip.outputs.skip != 'true'
+        shell: bash
+        run: |
+          set -e
+          mkdir -p "$RUNNER_TEMP/frontmatter-deps"
+          npm install \
+            --prefix "$RUNNER_TEMP/frontmatter-deps" \
+            gray-matter js-yaml \
+            --no-save \
+            --ignore-scripts
+
+      - name: Get changed markdown files
+        if: steps.check-skip.outputs.skip != 'true'
+        id: changed
+        shell: bash
+        run: |
+          set -e
+
+          git fetch origin "${{ steps.pr-info.outputs.base-sha }}" --depth=1
+
+          files=$(git diff --name-only --diff-filter=ACMR "${{ steps.pr-info.outputs.base-sha }}...HEAD" \
+            | grep -E '^sites/(en|zh-CN|ja|es|pt-BR)/docs/.*\.(md|mdx)$' \
+            | tr '\n' ' ' || true)
+
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Changed files: $files"
+
+      - name: Normalize frontmatter for changed files only
+        if: steps.check-skip.outputs.skip != 'true' && steps.changed.outputs.files != ''
+        env:
+          NODE_PATH: ${{ runner.temp }}/frontmatter-deps/node_modules
+        shell: bash
+        run: |
+          set -e
+          node _trusted/.github/scripts/normalize-frontmatter.js ${{ steps.changed.outputs.files }}
+
+      - name: Commit and push changes
+        if: steps.check-skip.outputs.skip != 'true' && steps.changed.outputs.files != ''
+        shell: bash
+        run: |
+          set -e
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add ${{ steps.changed.outputs.files }}
+          git commit \
+            -m "🤖 Auto update docs updatedAt" \
+            -m "[UPDATEDAT_COMMIT]: true"
+
+          git push origin HEAD:${{ steps.pr-info.outputs.head-ref }}

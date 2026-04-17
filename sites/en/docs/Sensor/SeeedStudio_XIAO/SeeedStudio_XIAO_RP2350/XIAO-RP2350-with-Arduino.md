@@ -8,10 +8,9 @@ last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
 createdAt: '2024-10-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/xiao_rp2350_arduino/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -224,7 +223,7 @@ Before uploading a sketch, place your XIAO RP2350 into BOOT mode. Use one of the
 - **📄[Schematic]** [XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
 - **🗃️[PCB Design Files]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
 - **🗃️[PCB Design Libraries]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[Pinout Diagram]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 

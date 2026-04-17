@@ -1,5 +1,5 @@
 ---
-description: SenseCAP M2 マルチプラットフォームゲートウェイを TTN に接続する
+description: SenseCAP M2 Multi-Platform Gateway を TTN に接続する
 title: TTN への接続
 keywords:
   - SenseCAP Network
@@ -8,33 +8,31 @@ slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-M
 last_update:
   date: 07/14/2023
   author: Jessie
-createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+createdAt: '2023-02-24'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-The-Things-Network/
 ---
+The Things Network に接続する方法は Packet forward と Basics™ Station の 2 つがあります。ゲートウェイに接続する方法を選択してください。
 
+Semtech UDP Packet Forwarder は元々の LoRaWAN® パケットフォワーダであり、Semtech UDP プロトコルを介してサーバーに接続します。
 
-The Things Networkに接続する方法は2つあります：パケットフォワードとBasics™ Stationです。ゲートウェイを接続する方法を選択してください。
+LoRa Basics™ Station はゲートウェイを The Things Stack に接続するために推奨される方法です。
 
-Semtech UDP Packet ForwarderはオリジナルのLoRaWAN®パケットフォワーダーで、Semtech UDPプロトコルを通じてサーバーに接続します。
+## **Packet Forwarder 経由で接続**
 
-LoRa Basics™ StationはゲートウェイをThe Things Stackに接続する推奨方法です。
-
-## **パケットフォワーダー経由での接続**
-
-Semtech UDP Packet ForwarderはオリジナルのLoRaWAN®パケットフォワーダーで、Semtech UDPプロトコルを通じてサーバーに接続します。
+Semtech UDP Packet Forwarder は元々の LoRaWAN® パケットフォワーダであり、Semtech UDP プロトコルを介してサーバーに接続します。
 
 ### TTN 設定
 
-- **ステップ1**: [The Things Stack](https://eu1.cloud.thethings.network/console)にログインします。TTNアカウントをお持ちでない場合は、まず登録してください。
+- **Step 1**: [The Things Stack](https://eu1.cloud.thethings.network/console) にログインします。TTN アカウントをお持ちでない場合は、まず登録してください。
 
-- **ステップ2**: ゲートウェイを登録します
+- **Step 2**: ゲートウェイを登録します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/register2.png" alt="pir" width={600} height="auto" /></p>
 
-**Gateway EUI**: Gateway EUIはデバイスラベルまたはローカルコンソールで確認できます
+**Gateway EUI**: Gateway EUI はデバイスラベルまたはローカルコンソールで確認できます
 
-**Gateway ID**: ゲートウェイの一意の識別子（IDは小文字、数字、ダッシュのみを含む必要があります）
+**Gateway ID**: ゲートウェイの一意の識別子（ID には小文字、数字、ハイフンのみを含める必要があります）
 
 **Gateway name**: ゲートウェイの名前
 
@@ -42,116 +40,118 @@ Semtech UDP Packet ForwarderはオリジナルのLoRaWAN®パケットフォワ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/set1.png" alt="pir" width={600} height="auto" /></p>
 
-登録が成功すると、概要でゲートウェイを確認できます。
+登録に成功すると、概要でゲートウェイを確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/set2.png" alt="pir" width={600} height="auto" /></p>
 
 ### ゲートウェイ設定
 
-Web UIを介してゲートウェイを設定します。まず[クイックスタート](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)を確認してローカルコンソールにログインしてください。
+Web UI を通してゲートウェイを設定します。まずローカルコンソールにログインするために、[Quick Start](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf) を確認してください。
 
-- **ステップ1**: LoRaネットワーク設定
+- **Step 1**: LoRa ネットワーク設定
 
-**LoRa** > **LoRa** **Network**に移動します
+**LoRa** > **LoRa** **Network** に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/lora_network.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ2:** モードをPacket Forwardに設定します
+- **Step 2:** モードを Packet Forward に設定します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/packet.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ3:**パケットフォワーダー設定：
+- **Step 3:** Packet Forwarder 設定:
 
-1. **Gateway EUI**: 接続されたゲートウェイのEUIを自動的に取得します
+1. **Gateway EUI**: 接続されているゲートウェイの EUI を自動的に取得します
 
 2. **Server Address**:
-Semtech UDP Packet Forwarderには'server-address'を使用します
-'server-address'はThe Things Stackデプロイメントのアドレスです。
-詳細については[Server Addresses](https://www.thethingsindustries.com/docs/the-things-stack/concepts/server-addresses/)を参照してください。
+Semtech UDP Packet Forwarder には 'server-address' を使用します
+'server-address' は The Things Stack デプロイメントのアドレスです。
+詳細は [Server Addresses](https://www.thethingsindustries.com/docs/the-things-stack/concepts/server-addresses/) を参照してください。
 
-3. **Server Port(Up/Down)**: Up PortとDown Portは通常1700です。
+3. **Server Port(Up/Down)**: Up ポートと Down ポートは通常 1700 です。
 
 その他の設定はデフォルトのままにするか、要件に合わせて変更できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/server_address.png" alt="pir" width={600} height="auto" /></p>
 
-**Save&Apply**をクリックして設定を適用します。
+設定を適用するには **Save&Apply** をクリックします。
 
-- **ステップ4**: チャンネルプラン設定
+- **Step 4**: チャネルプラン設定
 
-**LoRa** > **LoRa Network**に移動します
+**LoRa** > **LoRa Network** に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/lora_network.png" alt="pir" width={600} height="auto" /></p>
 
-実際の選択に応じてRegionとFrequency planを選択します。
+実際の選択に応じて、リージョンおよび周波数プランを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/setting3.png" alt="pir" width={600} height="auto" /></p>
 
-設定後、**Save&Apply**をクリックします
+設定後、**Save&Apply** をクリックします
 
-## **Basic Station経由での接続**
+## **Basic Station 経由で接続**
 
-LoRa Basics™ Stationは、ゲートウェイをThe Things Stackに接続する推奨方法です。
+LoRa Basics™ Station はゲートウェイを The Things Stack に接続するために推奨される方法です。
 
 ### TTN 設定
 
-- **ステップ1**: ゲートウェイの登録
+- **Step 1**: ゲートウェイを登録します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/register2.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ2**: 認証済み接続を要求を有効化
+- **Step 2**: Require authenticated connection を有効化します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/enable_setting.png" alt="pir" width={600} height="auto" /></p>
 
-これにより、TLS対応のBasic StationまたはMQTT接続を使用する場合のみ、ゲートウェイの接続が許可されます。
+これにより、TLS 対応の Basic Station または MQTT 接続を使用する場合にのみゲートウェイの接続が許可されます。
 
-- **ステップ3:** APIキーの作成
+- **Step 3:** API キーを作成します
 
-CUPSまたはLNSサービス用のAPIキーを自動生成するオプションを選択し、すぐにゲートウェイを認証できます。
+オプションを選択して CUPS または LNS サービス用の API キーを自動生成すると、すぐにゲートウェイを認可できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/APIkey.png" alt="pir" width={600} height="auto" /></p>
 
-必要に応じてサーバーを選択し、「Register gateway」をクリックします。
+必要に応じてサーバーを選択し、"Register gateway" をクリックします
 
 **LoRaWAN Network Server (LNS)**
 
-LNSは、LoRa Basics™ Stationゲートウェイとネットワークサーバー（この場合はThe Things Stack）間のデータ接続を確立します。LoRa®のアップリンクおよびダウンリンクフレームは、このデータ接続を通じて交換されます。LNSプロトコルは、LoRaWANデータの送受信に必要です。
+LNS は LoRa Basics™ Station ゲートウェイとネットワークサーバー（この場合は The Things Stack）との間にデータ接続を確立します。LoRa® のアップリンクおよびダウンリンクフレームは、このデータ接続を介して交換されます。LoRaWAN データの送受信には LNS プロトコルが必要です。
 
 **Configuration and Update Server (CUPS)**
 
-CUPSにより、ネットワークサーバーはゲートウェイをリモートで設定し、ゲートウェイファームウェアを更新できます。CUPSはLoRaWANデータの送受信には必須ではありませんが、ゲートウェイの管理を大幅に簡素化できます。CUPSを設定すると、LNS認証情報も自動的に取得され、ゲートウェイでLNSが設定されます。
+CUPS により、ネットワークサーバーはゲートウェイをリモートで構成し、ゲートウェイのファームウェアを更新できます。CUPS は LoRaWAN データの送受信には必須ではありませんが、ゲートウェイの管理を大幅に簡素化できます。CUPS を構成すると、LNS 資格情報も自動的に取得され、ゲートウェイ上の LNS が構成されます。
 
-LoRa Basics™ Stationの詳細情報は、[Semtechの開発者ポータル](https://lora-developers.semtech.com/resources/tools/lora-basics/lora-basics-for-gateways/)で入手できます。
+LoRa Basics™ Station の詳細情報は [Semtech's Developer Portal](https://lora-developers.semtech.com/resources/tools/lora-basics/lora-basics-for-gateways/) で確認できます。
 
 ### ゲートウェイ設定
 
-- **ステップ1**: LoRaネットワーク設定
-**LoRa** > **LoRa Network**に移動します
+- **Step 1**: LoRa ネットワーク設定
+**LoRa** > **LoRa Network** に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/lora_network.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ2**: モードをBasics Stationに設定
+- **Step 2**: モードを Basics Station に設定します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/basic.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ3**: Basic Station設定:
+- **Step 3**: Basic Station 設定:
 
-1. **Gateway EUI**: 接続されたゲートウェイのEUIを自動的に取得します
+1. **Gateway EUI**: 接続されているゲートウェイの EUI を自動的に取得します
 
-2. **Server**: LNSまたはCUPSを選択
-サーバーの詳細については、前のステップを確認してください。
+2. **Server**: LNS または CUPS を選択します
+サーバーの詳細については前のステップを確認してください。
 
 3. **URL:**
-CUPSはURI: https://server-address:443 を使用し、LNSはURI: wss://server-address:8887を使用します
+CUPS は URI: https://server-address:443 を使用し、LNS は URI: wss://server-address:8887 を使用します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/url.png" alt="pir" width={600} height="auto" /></p>
 
-4. **Authentication Mode:** TLSサーバー認証とクライアントトークン
-The Things StackはTLSサーバー認証とクライアントトークンをサポートしています。これには*.trust*ファイルと*.key*ファイルが必要です。
+4. **Authentication Mode:** TLS サーバー認証およびクライアントトークン
+The Things Stack は TLS サーバー認証およびクライアントトークンをサポートしています。これには *.trust* ファイルと *.key* ファイルが必要です。
 
-5. **trust:** これは、ドメインを保護する[CA証明書](https://en.wikipedia.org/wiki/Certificate_authority)です。
-一般的な証明書を含む.pemファイルは、[Root Certificates Reference](https://www.thethingsindustries.com/docs/reference/root-certificates/)で入手できます。
-**minimal certificate list**をダウンロードし、証明書ファイルのデータ内容をコピーします（証明書はテキスト形式で開くことができます）。
+5. **trust:** これはドメインを保護する[認証局 (CA) 証明書](https://en.wikipedia.org/wiki/Certificate_authority)です。
+
+.pem ファイルに、一般的な証明書が含まれており、[Root Certificates Reference](https://www.thethingsindustries.com/docs/reference/root-certificates/) で入手できます。
+
+最小証明書リストをダウンロードし、その後、証明書ファイルのデータ内容（証明書はテキスト形式で開くことができます）をコピーします。
 
 6. **token:** Authorization:Bearer `<Your_API_Key>`
 
@@ -159,10 +159,8 @@ The Things StackはTLSサーバー認証とクライアントトークンをサ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/token.png" alt="pir" width={600} height="auto" /></p>
 
-## ゲートウェイステータスの確認
+## ゲートウェイステータスを確認する
 
-設定が完了したら、ゲートウェイのライブデータを表示できます。
+設定完了後、ゲートウェイのライブデータを表示できます。
 
-ゲートウェイがTTNに接続されていることが確認できます。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/status.png" alt="pir" width={600} height="auto" /></p>
+ゲートウェイが現在 TTN に接続されていることが確認できます。

@@ -16,13 +16,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /mcp_external_system_integration
 last_update:
-  date: 12/23/2025
+  date: 04/07/2026
   author: Spencer
 tags:
   - mcp
   - agents
 createdAt: '2025-12-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/mcp_external_system_integration/
 ---
 
@@ -42,7 +42,7 @@ This guide demonstrates how to use the Model Context Protocol ([MCP](https://git
   </tr>
   <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com.cn/solutions/smart-spatial-interaction-zh-hans" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeed.cc/solutions/smart-spatial-interaction-zh-hans" target="_blank">
           <strong><span><font color={'FFFFFF'} size={"4"}> Solution Bundle 🖱️</font></span></strong>
       </a>
     </div></td>
@@ -51,7 +51,7 @@ This guide demonstrates how to use the Model Context Protocol ([MCP](https://git
 
 <div class="info-section">
   <div class="section-header">
-      <h2><a href="https://www.seeedstudio.com.cn/solutions/voicecollectionanalysis-zh-hans" target="_blank">Smart Spatial Interaction</a></h2>
+      <h2><a href="https://www.seeed.cc/solutions/voicecollectionanalysis-zh-hans" target="_blank">Smart Spatial Interaction</a></h2>
       <p>Voice to API: Transform Intent into Action. Don't build a new app from scratch. Simply expose your existing WMS endpoints to the Watcher to enable immediate voice control for your workforce.</p>
   </div>
     <ul class="info-list">
@@ -167,26 +167,25 @@ docker-compose -f docker-compose.prod.yml up -d
 
 This single command will:
 
-- Build and start the backend API server (port 2124)
-- Build and start the frontend web interface (port 2125)
+- Build and start the warehouse application server (port 2125)
 - Create a persistent volume for your database
 
 **3. Verify the deployment**:
 
-Wait about 30 seconds for containers to start, then check:
+Wait about 30 seconds for the container to start, then check:
 
 ```bash
 docker-compose -f docker-compose.prod.yml ps
 ```
 
-You should see both `warehouse-backend-prod` and `warehouse-frontend-prod` containers running.
+You should see the `warehouse-prod` container running.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="API Documentation"/>
 </div>
 
-- **Frontend UI:** Open `http://localhost:2125` in your browser
-- **API Documentation:** Open `http://localhost:2124/docs` to see the Swagger UI
+- **Web UI:** Open `http://localhost:2125` in your browser
+- **API Documentation:** Open `http://localhost:2125/docs` to view the Swagger UI
 
 ### Step 2: Initial System Setup
 
@@ -269,12 +268,18 @@ cp config.yml.example config.yml
 
 Edit `config.yml` with your API key from Step 2:
 
-```yaml
-# Backend API address
-api_base_url: "http://localhost:2124/api"
+:::caution
+The default `api_base_url` in `config.yml.example` is `http://localhost:2124/api` (the local development port). Since we deployed with `docker-compose.prod.yml` which uses port **2125**, you must update it accordingly.
+:::
 
-# API key (from User Management -> API Key Management)
-api_key: "wh_your-api-key-here"
+```yaml
+# Backend API address (change from default 2124 to 2125 for Docker deployment)
+api_base_url: "http://localhost:2125/api"
+
+# API key authentication (from User Management -> API Key Management)
+auth:
+  type: api_key
+  key: "wh_your-api-key-here"
 ```
 
 **3. Start the MCP Bridge**:
@@ -307,7 +312,7 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 </Tabs>
 
-If successful, you will see: `MCP Service Started Successfully!`
+If successful, you will see: `MCP 服务启动成功！` (MCP Service Started Successfully)
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/mcp-bridge-start-successfully.png" alt="mcp-bridge-start-successfully"/>
@@ -327,12 +332,12 @@ Now we can test the integration using your Watcher device!
 
 | Voice Command                                          | Expected Action                                       |
 | ------------------------------------------------------ | ----------------------------------------------------- |
-| "Query the stock of Xiaozhi Standard Version"          | Calls `query_xiaozhi_stock` tool                      |
-| "How many Xiaozhi Professional Version do we have?"    | Calls `query_xiaozhi_stock` with professional version |
+| "Query the stock of Xiaozhi Standard Version"          | Calls `query_stock` tool                              |
+| "How many Xiaozhi Professional Version do we have?"    | Calls `query_stock` with professional version         |
 | "Stock in 5 units of Watcher Xiaozhi Standard Version" | Calls `stock_in` tool with quantity=5                 |
 | "Stock out 3 Xiaozhi units for sales"                  | Calls `stock_out` tool with quantity=3                |
 | "What's today's inventory summary?"                    | Calls `get_today_statistics` tool                     |
-| "List all Xiaozhi products"                            | Calls `list_xiaozhi_products` tool                    |
+| "List all Xiaozhi products"                            | Calls `search` tool with entity_type="material"       |
 
 **What happens behind the scenes?**
 
@@ -359,133 +364,134 @@ Now we can test the integration using your Watcher device!
 
 ## Customizing for Your System
 
-The warehouse demo is just a template. To integrate your own **Order Management System**, **CRM**, or **IT Dashboard**, follow these steps to modify the bridge code.
+The warehouse demo is just a starting point. The MCP bridge uses a **Provider plugin architecture** — you don't need to modify any existing code. Instead, you create a new Provider to adapt the bridge to your own backend system.
 
-### 1. Point to Your Real Server
+### How It Works
 
-Open `mcp/warehouse_mcp.py`. The first step is to tell the bridge where your actual API lives.
+The bridge has a clean separation of concerns:
+
+- **`warehouse_mcp.py`** — Defines 6 fixed MCP tools (`query_stock`, `stock_in`, `stock_out`, `search`, `resolve_name`, `get_today_statistics`). **You don't need to modify this file.**
+- **`providers/base.py`** — Abstract base class defining the interface (6 methods).
+- **`providers/default.py`** — Default implementation for the demo warehouse backend.
+- **Your custom provider** — A new `.py` file in `providers/` that adapts the 6 methods to your system's API.
+
+### 1. Create a Custom Provider
+
+Create a new file `mcp/providers/my_erp.py`:
 
 ```python
-# Change this line to point to your actual production server IP/Domain
-# API_BASE_URL = "http://localhost:2124/api"
-API_BASE_URL = "http://192.168.50.10:8080/api/v1"
+from .base import BaseProvider
+
+class MyERPProvider(BaseProvider):
+    """Adapter for My ERP System."""
+
+    PROVIDER_NAME = "my_erp"
+
+    def query_stock(self, product_name, show_batches=False):
+        # Call your ERP's inventory API
+        return self.http_get(f"/inventory/query", params={"sku": product_name})
+
+    def stock_in(self, product_name, quantity, reason, operator, fuzzy,
+                 location=None, contact_id=None, variant=None):
+        return self.http_post("/inventory/receive", {
+            "sku": product_name, "qty": quantity, "note": reason
+        })
+
+    def stock_out(self, product_name, quantity, reason, operator, fuzzy,
+                  variant=None):
+        return self.http_post("/inventory/ship", {
+            "sku": product_name, "qty": quantity, "note": reason
+        })
+
+    def search(self, query, entity_type, category, status, contact_type,
+               fuzzy, include_batches=False, max_results=0):
+        return self.http_get("/search", params={"q": query, "type": entity_type})
+
+    def resolve_name(self, text, entity_type="all"):
+        return self.http_get("/fuzzy-match", params={"q": text})
+
+    def get_today_statistics(self):
+        return self.http_get("/dashboard/today")
 ```
 
-Or better, use the `config.yml` file:
+The base class (`BaseProvider`) provides built-in `http_get()` and `http_post()` helpers with automatic auth header injection and error handling — so your provider code stays minimal.
 
-```yaml
-api_base_url: "http://192.168.50.10:8080/api/v1"
-api_key: "your-production-api-key"
-```
-
-### 2. Define Custom Tools
-
-To add a new voice command, you don't need to train a model. You just need to write a Python function.
-
-Use the `@mcp.tool()` decorator to wrap your API calls.
-
-**Workflow:**
-
-1. **Identify Operations:** What actions do you want to control via voice? (e.g., "Check Order", "Restart Server").
-2. **Document API:** Ensure you know the endpoint URL and parameters (e.g., `GET /orders/{id}`).
-3. **Write the Wrapper:** Create the Python function using the pattern below.
-
-**Example: Adapting for an Order Management System**:
-
-:::tip The "Docstring" is the Magic
-The AI reads the Python **docstring** (the text inside `""" ... """`) to decide **when** to call your function. Be descriptive\!
+:::tip Auto-Discovery
+Just drop the `.py` file into `mcp/providers/`. The bridge automatically discovers and registers all `BaseProvider` subclasses — no manual registration needed.
 :::
 
-```Python
-@mcp.tool()
-def check_order_status(order_id: str) -> dict:
-    """
-    Check the status of a customer order.
-    Use this when the user asks about order tracking or delivery status.
+### 2. Configure via `config.yml`
 
-    Args:
-        order_id: The unique order identifier (e.g., "ORD-2024-001")
+If you haven't already, create `config.yml` from the template first:
 
-    Returns:
-        Order status, estimated delivery date, and tracking information
-    """
-    # Call your real API
-    return api_get(f"/orders/{order_id}/status")
+```bash
+cd mcp
+cp config.yml.example config.yml
 ```
+
+Then switch to your provider and point to your real server — **no code changes required**:
+
+```yaml
+# Switch to your custom provider
+provider: "my_erp"
+
+# Your production API address
+api_base_url: "http://192.168.50.10:8080/api/v1"
+
+# Authentication (supports api_key, bearer, basic)
+auth:
+  type: api_key
+  key: "your-production-api-key"
+```
+
+You can also override settings using environment variables: `WAREHOUSE_API_URL`, `WAREHOUSE_API_KEY`, and `WAREHOUSE_PROVIDER`.
 
 <details>
 
-<summary>Best Practices for Defining Custom Tools</summary>
+<summary>Supported Authentication Methods</summary>
 
-Writing good MCP tools is different from writing standard Python functions. The AI relies heavily on your code structure to understand what to do.
+The base class supports multiple auth types out of the box via `config.yml`:
 
-### 1. Naming Matters
+```yaml
+# API Key (default)
+auth:
+  type: api_key
+  header: X-API-Key    # optional, defaults to X-API-Key
+  key: "your-key"
 
-Tool names and parameters must be descriptive. The AI reads these to "guess" which tool to pick.
+# Bearer Token
+auth:
+  type: bearer
+  token: "your-bearer-token"
 
-```Python
-# ✅ Good - Clear and descriptive
-@mcp.tool()
-def query_xiaozhi_stock(product_name: str) -> dict:
-    ...
-
-# ❌ Bad - Unclear abbreviations
-@mcp.tool()
-def qry_stk(pn: str) -> dict:
-    ...
+# Basic Auth
+auth:
+  type: basic
+  username: "admin"
+  password: "secret"
 ```
 
-### 2. The Docstring is the UI
+For custom authentication (e.g., HMAC signing), override the `get_auth_headers()` method in your provider.
 
-The docstring is **not** just a comment; it is the **User Interface** for the AI model. It guides the AI on *when* and *how* to use the tool.
+</details>
 
-```Python
-@mcp.tool()
-def stock_in(product_name: str, quantity: int) -> dict:
-    """
-    Record stock intake for watcher-xiaozhi products.
-    Use this tool when the user wants to add inventory.  <-- Tells AI "When"
+<details>
 
-    Args:
-        product_name: The exact product name             <-- Tells AI "How"
-        quantity: Number of units (must be integer)
-    """
-```
+<summary>Best Practices for Provider Development</summary>
 
-### 3. Logger vs. Print (Crucial!)
+### Return Value Format
 
-:::danger Never use print()
-
-MCP uses standard I/O (stdio) for communication between the bridge and the AI agent. Using print() will corrupt the protocol data stream and cause the connection to break.
-
-:::
-
-Always use a logger for debugging:
+The return value is read by the AI to generate a spoken response. Keep it concise (typically under 1024 bytes).
 
 ```Python
-import logging
-logger = logging.getLogger(__name__)
-
-# ✅ Good - Logs to file/stderr, safe for MCP
-logger.info(f"Processing stock in: {product_name}")
-
-# ❌ Bad - Breaks MCP communication
-print(f"Processing stock in: {product_name}")
-```
-
-### 4. Optimize Return Values
-
-The return value is read by the AI to generate a spoken response. Keep it concise to reduce latency and token usage (typically under 1024 bytes).
-
-```Python
-# ✅ Good - Concise
+# Good — concise
 return {
     "success": True,
     "quantity": 150,
     "message": "Stock query successful"
 }
 
-# ❌ Bad - Too verbose (AI doesn't need the full database history)
+# Bad — too verbose
 return {
     "success": True,
     "full_product_details": {...},
@@ -493,21 +499,28 @@ return {
 }
 ```
 
-### 5. Error Handling
+### Error Handling
 
-Your API might be offline or return 404. Handle these gracefully so the AI can explain the issue to the user instead of crashing.
+The base class `http_get()` / `http_post()` already handle connection errors and HTTP status codes. For additional business logic errors, return a structured error dict:
 
 ```Python
-try:
-    result = api_post("/materials/stock-in", data)
-    return result
-except Exception as e:
-    logger.error(f"Stock in failed: {str(e)}")
-    return {
-        "success": False,
-        "error": str(e),
-        "message": "Failed to record stock. Please try again."
-    }
+return {
+    "success": False,
+    "error": "Product not found",
+    "message": "No matching product in the ERP system."
+}
+```
+
+### Logging
+
+:::danger Never use print()
+MCP uses standard I/O (stdio) for communication. Using `print()` will corrupt the protocol data stream. Always use a logger:
+:::
+
+```Python
+import logging
+logger = logging.getLogger("WarehouseMCP")
+logger.info(f"Querying stock for: {product_name}")
 ```
 
 </details>
@@ -529,7 +542,7 @@ The demo runs in your local terminal. For long-term 24/7 operation:
 - **Solution:**
   1. Check Docker Desktop is running
   2. View logs: `docker-compose -f docker-compose.prod.yml logs`
-  3. Ensure ports 2124 and 2125 are not in use
+  3. Ensure port 2125 is not in use
   4. Try rebuilding: `docker-compose -f docker-compose.prod.yml up -d --build`
 
 </details>
@@ -551,9 +564,9 @@ The demo runs in your local terminal. For long-term 24/7 operation:
 
 - **Symptom:** AI responds with "Cannot connect to backend service".
 - **Solution:**
-  1. Check Docker containers are running: `docker-compose -f docker-compose.prod.yml ps`
-  2. Verify backend health: `curl http://localhost:2124/api/dashboard/stats`
-  3. Check backend logs: `docker-compose -f docker-compose.prod.yml logs backend`
+  1. Check the container is running: `docker-compose -f docker-compose.prod.yml ps`
+  2. Verify backend health: `curl http://localhost:2125/api/dashboard/stats`
+  3. Check logs: `docker-compose -f docker-compose.prod.yml logs`
 
 </details>
 
@@ -617,7 +630,8 @@ You see `[WinError 1225] Connection refused` or the script hangs at `Connecting 
 ## Resources
 
 - [MCP Endpoint Setup Guide](/mcp_endpoint) - Learn how to create and manage MCP endpoints.
-- [FastMCP Documentation](https://github.com/jlowin/fastmcp) - Dive deeper into advanced tool definitions.
+- [Warehouse System Repository](https://github.com/suharvest/warehouse_system) - Full source code, including Provider examples.
+- [FastMCP Documentation](https://github.com/PrefectHQ/fastmcp) - Dive deeper into advanced tool definitions.
 
 ## Technical Support
 
@@ -627,6 +641,6 @@ You see `[WinError 1225] Connection refused` or the script hangs at `Connecting 
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
+<a href="mailto:solution@seeed.cc" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -13,7 +13,7 @@ last_update:
   date: 12/11/2024
   author: Youjiang
 createdAt: '2024-12-13'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_getting_started/
 ---
 
@@ -46,7 +46,7 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
 - **Personalização flexível:** inclui alteração de módulos de acessórios, logotipo e modificação de interfaces de hardware com base no design original do reComputer Mini J4012.
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

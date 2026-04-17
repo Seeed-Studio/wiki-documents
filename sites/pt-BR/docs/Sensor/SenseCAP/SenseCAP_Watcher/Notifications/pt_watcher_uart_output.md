@@ -8,7 +8,7 @@ last_update:
   date: 07/10/2024
   author: Citric
 createdAt: '2024-07-22'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/uart_output/
 ---
 

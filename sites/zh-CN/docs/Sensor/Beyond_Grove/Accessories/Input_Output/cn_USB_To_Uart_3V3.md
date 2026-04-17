@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: jianjing Huang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/USB_To_Uart_3V3/
 ---
 

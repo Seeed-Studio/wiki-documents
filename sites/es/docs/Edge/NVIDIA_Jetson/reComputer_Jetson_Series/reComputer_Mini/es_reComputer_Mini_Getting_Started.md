@@ -13,7 +13,7 @@ last_update:
   date: 12/11/2024
   author: Youjiang
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/recomputer_jetson_mini_getting_started/
 ---
 
@@ -495,7 +495,7 @@ Si desea aprender más sobre las especificaciones detalladas y el uso de la inte
 - [Dispositivos Seeed Jetson Una Página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
