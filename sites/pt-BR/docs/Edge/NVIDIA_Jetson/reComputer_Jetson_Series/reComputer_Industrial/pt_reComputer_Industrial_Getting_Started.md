@@ -151,7 +151,7 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
     <tr>
       <td>SIM</td>
       <td colSpan={6}>1* slot para cartão Nano SIM</td>
-    </tr]
+    </tr>
     <tr>
       <td rowSpan={7}>Expansão</td>
       <td>Mini PCIe</td>

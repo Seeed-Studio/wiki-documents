@@ -147,7 +147,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     <tr>
       <td>ディスプレイ</td>
       <td colSpan={6}>1*HDMI 2.0 Type A</td>
-    </tr]
+    </tr>
     <tr>
       <td>SIM</td>
       <td colSpan={6}>1* Nano SIM カードスロット</td>
