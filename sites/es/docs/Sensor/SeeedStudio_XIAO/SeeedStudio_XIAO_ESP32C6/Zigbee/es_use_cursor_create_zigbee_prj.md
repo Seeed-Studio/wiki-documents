@@ -7,7 +7,7 @@ last_update:
   date: 03/04/2025
   author: Citric
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-05'
 url: https://wiki.seeedstudio.com/es/use_cursor_create_zigbee_prj/
 ---
 

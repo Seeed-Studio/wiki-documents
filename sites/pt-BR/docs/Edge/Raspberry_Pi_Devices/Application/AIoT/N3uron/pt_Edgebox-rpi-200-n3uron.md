@@ -10,7 +10,7 @@ last_update:
   date: 07/29/2023
   author: José Granero Nueda & Kasun Thushara
 createdAt: '2023-07-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/Edgebox-rpi-200-n3uron/
 ---
 

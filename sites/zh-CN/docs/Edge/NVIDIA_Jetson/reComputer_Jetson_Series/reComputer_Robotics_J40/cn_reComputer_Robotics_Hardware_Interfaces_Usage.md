@@ -15,7 +15,7 @@ last_update:
   date: 08/06/2025
   author: Zibo
 createdAt: '2025-09-15'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_hardware_interfaces_usage/
 ---
 
@@ -36,7 +36,11 @@ url: https://wiki.seeedstudio.com/cn/recomputer_robotics_j401_hardware_interface
 ## 硬件概述
 
 <div align="center">
-  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-_J4011-3.jpeg"/>  
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114110308_1.jpeg"/>  
+</div>
+
+<div align="center">
+  <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
 ## 硬件接口使用

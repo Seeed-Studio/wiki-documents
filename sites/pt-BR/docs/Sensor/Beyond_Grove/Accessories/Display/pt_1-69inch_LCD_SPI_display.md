@@ -10,7 +10,7 @@ last_update:
   date: 08/17/2023
   author: Citric
 createdAt: '2023-08-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/1-69inch_lcd_spi_display/
 ---
 

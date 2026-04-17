@@ -10,7 +10,7 @@ last_update:
   date: 10/10/2025
   author: Zeller
 createdAt: '2025-10-09'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-30'
 url: https://wiki.seeedstudio.com/cn/ee04_with_platformio/
 ---
 # XIAO ePaper Display Board(ESP32-S3) EE04 与 PlatfromIO

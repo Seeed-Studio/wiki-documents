@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life.
+description: reTerminal E1003 is a 10.3 inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with touch interaction support on HMI firmware v1.1.2.
 sku: 100090602
 title: Getting Started with reTerminal E1003
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
@@ -7,8 +7,10 @@ slug: /getting_started_with_reterminal_e1003
 last_update:
   date: 3/19/2026
   author: Jackson.Li
+createdAt: '2026-03-18'
+url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
+updatedAt: '2026-03-31'
 ---
-
 # Getting Started with reTerminal E1003
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:1000, height:'auto'}}/></div>
@@ -21,22 +23,27 @@ last_update:
 
 ## Introduction
 
-reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant (via ESPHome & Open Display), Arduino, PlatformIO for further development. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
+reTerminal E1003 is a 10.3 inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Arduino and PlatformIO for further development. Support for Home Assistant (via ESPHome & Open Display) is planned for a future release. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use device delivers stunning visuals and flexible customization to meet all your needs.
 
-## Features
+:::tip
+Touch interaction for reTerminal E1003 is supported starting from SenseCraft HMI firmware v1.1.2.
+Touch-related library support is planned for future open-source release, providing greater flexibility to customize panels. More updates will be shared soon.
+
+
+ESPHome support for reTerminal E1003 is under development and will be available in a future release.
+:::
+### Features
 
 - **Up to 16-level grayscale clarity:** Boasting 16 levels of exquisite grayscale, every detail of text and graphics is rendered with exceptional sharpness and clarity.
 - **Ultra-Low Power Consumption:** The ePaper consumes power only during updates, resulting in longer battery life and greater energy efficiency.
 - **SenseCraft HMI Support:** The reTerminal E Series Display supports SenseCraft HMI by default firmware.
 - **Wide Range of Applications:** Supports high-speed refresh for low-latency updates with a TTL parallel interface (multi-line, high-throughput) — making it an ideal choice for smart home control panels.
-- **High-Resolution Touch ePaper Display:** The 10.3-inch 1404×1872 monochrome ePaper display is paired with a built-in responsive touchscreen for intuitive full-screen interaction.
+- **High-Resolution Touch ePaper Display:** The 10.3-inch 1404×1872 monochrome ePaper display is paired with a built-in responsive touchscreen, with touch interaction currently supported on SenseCraft HMI firmware v1.1.2.
 - **Adapting to Decoration Needs:** Wire-free for greater freedom; supports wall-mount and desktop placement, with flexible portrait and landscape orientation switching.
 
-:::note
-The SenseCraft HMI platform is now in the beta trial stage, and the functions will be continuously improved. At present, there is a limit to the number of AI generation and UI generation. The SenseCraft HMI canvas will gradually support touch interaction settings in the future. Stay tuned.
-:::
 
-## Specification
+
+### Specification
 
 | Item | Description |
 | :--- | :--- |
@@ -56,7 +63,7 @@ The SenseCraft HMI platform is now in the beta trial stage, and the functions wi
 | **Working Temperature** | 0-40°C |
 | **Dimensions** | 224mm*187mm*18.6mm |
 
-## Hardware Overview
+### Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -73,9 +80,9 @@ The SenseCraft HMI platform is now in the beta trial stage, and the functions wi
 11. **Stand**
 12. **Stand Mounting Screw**
 
-## Applications
+### Applications
 
-- **Home Automation Dashboards:** Display real-time smart home data like temperature, humidity, and air quality via Home Assistant.
+- **Home Automation Dashboards:** Display real-time smart home data like temperature, humidity, and air quality via Home Assistant (ESPHome driver support for E1003 is planned for a future release).
 - **Low-power Monochrome electronic photo frame:** With SenseCraft HMI or the App, you can easily upload a series of photos from your album remotely online. Combined with a large, high-resolution monochrome e-ink screen, it achieves ultra-low power image display, no longer have to worry about battery life.
 - **Smart Office Displays:** Show meeting room availability, office schedules, or directional guidance in low-power, always-on ePaper displays.
 - **Retail & Public Information Displays:** Low-power ePaper signs for menus, schedules, or occupancy indicators with long battery life.
@@ -117,6 +124,67 @@ The reTerminal E1003 comes pre-loaded with firmware that supports **SenseCraft H
 4. The platform will send the data to your device via Wi-Fi. The ePaper screen will refresh to display your new dashboard.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/6.jpg" style={{width:1000, height:'auto'}}/></div>
+
+## Troubleshooting
+
+### Q1: Device Won't Power On
+
+- Ensure the power switch is in the ON position
+- Connect the USB-C cable to charge the device
+- Check if the red LED is always on (indicating charging)
+- If using battery power, ensure the battery is properly connected and charged
+
+### Q2: Can't Connect to Wi-Fi
+
+- Verify you're entering the correct Wi-Fi password
+- Ensure your Wi-Fi network is operational
+- Check if your Wi-Fi router supports 2.4GHz networks (5GHz is not supported)
+- Try positioning the device closer to your Wi-Fi router
+
+### Q3: Display Not Updating
+
+- Press the refresh button to manually trigger an update
+- Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
+- Check your SenseCraft account to ensure the dashboard is properly deployed
+- If the problem persists, try restarting the device
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
+
+### Q4: Network Connection Lost
+
+- The device will automatically attempt to reconnect to known networks
+- When reconnected, the Wi-Fi disconnection icon will disappear
+- If unable to reconnect, follow the Network Reset procedure above
+
+### Q5: Cannot Find Serial Port (COM) on macOS
+
+If your Mac doesn't recognize the reTerminal via USB, follow this compact guide to install the CH340/CH340K driver:
+
+**Step 1. Download and Install the Driver**
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+:::tip
+If macOS blocks the installation, go to **System Settings → Privacy & Security**, scroll to find the blocked WCH software, and click **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 2. Enable Driver Extension (Critical)**
+Open the **CH34xVCPDriver** app from Launchpad, click **Install**, then go to **System Settings → General → Login Items & Extensions → Driver Extensions**. Toggle **CH34xVCPDriver Extensions** to **ON** (blue).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 3. Connect and Verify**
+Ensure the device **power switch is ON** and use a **data USB-C cable** (not charge-only). Open Terminal and run:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+If you see the device path in the output, the driver is correctly installed and your reTerminal is ready for use!
 
 ## Resources
 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-23 15:11:46 (北京时间)
-// 多语言页面: 2223 个
+// 生成时间: 2026-04-17 10:34:09 (北京时间)
+// 多语言页面: 2257 个
 
 (function() {
   'use strict';
@@ -32,6 +32,13 @@
     "pt"
   ],
   "/sensecraft-ai/application/application-for-homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft-ai/application/create-new-application": [
     "cn",
     "en",
     "es",
@@ -1080,6 +1087,13 @@
     "ja",
     "pt"
   ],
+  "/getting_started_with_jetson_claw_on_orin_nano_nx_8gb": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/j501_mini_starai_viola_fruit_sorting": [
     "cn",
     "en",
@@ -1095,6 +1109,13 @@
     "pt"
   ],
   "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_reachy_fleet_dance": [
     "cn",
     "en",
     "es",
@@ -1242,6 +1263,13 @@
     "pt"
   ],
   "/get_the_system_log_of_recomputer_j30_and_j40": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/how_to_build_and_flash_bsp_source_for_jetson_thor": [
     "cn",
     "en",
     "es",
@@ -1424,6 +1452,13 @@
     "pt"
   ],
   "/rtl8822ce_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtl8852be_wireless_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -3180,6 +3215,13 @@
     "ja",
     "pt"
   ],
+  "/use_cpenclaw_to_control_the_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
@@ -3271,6 +3313,13 @@
     "ja",
     "pt"
   ],
+  "/configure_static_ip_on_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_develop_with_c_cpp": [
     "cn",
     "en",
@@ -3335,6 +3384,13 @@
     "pt"
   ],
   "/reServer-Update-BIOS-Install-Drivers": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/driving_reterminal_d1001_audio_peripherals": [
     "cn",
     "en",
     "es",
@@ -3866,6 +3922,13 @@
     "ja",
     "pt"
   ],
+  "/lora-e5_relay": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Wio-WM1110_Dev_Kit_Hardware_Overview": [
     "cn",
     "en",
@@ -4048,7 +4111,21 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_solar_node": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_solar_node": [
     "cn",
     "en",
     "es",
@@ -4083,6 +4160,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_t1000e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_t1000_e": [
     "cn",
     "en",
@@ -4091,6 +4175,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial_t1000_e": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_t1000_e": [
     "cn",
     "en",
     "es",
@@ -4132,6 +4223,13 @@
     "ja",
     "pt"
   ],
+  "/meshcore_node_map_l1": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/meshtastic_node_map_l1": [
     "cn",
     "en",
@@ -4140,6 +4238,13 @@
     "pt"
   ],
   "/meshtastic_source_code_practical_tutorial": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/meshcore_source_code_pratical_tutorial_l1": [
     "cn",
     "en",
     "es",
@@ -4672,6 +4777,27 @@
     "pt"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_aws_iot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_chirpstack": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/connecting_r1225_to_ttn": [
     "cn",
     "en",
     "es",
@@ -5466,6 +5592,27 @@
     "ja",
     "pt"
   ],
+  "/rebot_b601_dm_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_lerobot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/stackforce_giant_bipedal_wheeled_robot": [
     "en",
     "es",
@@ -5529,6 +5676,13 @@
     "pt"
   ],
   "/pycuvslam_recomputer_robotics": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/realsense_3d_seg": [
     "cn",
     "en",
     "es",
@@ -7642,6 +7796,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_ee05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EN04_opendisplay": [
     "cn",
     "en",
@@ -7650,6 +7811,13 @@
     "pt"
   ],
   "/epaper_EN04": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_en05": [
     "cn",
     "en",
     "es",
@@ -10098,6 +10266,41 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_xiao_i2s": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_picovoice_nlu_keyword_spotting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_python_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_lite_ha": [
     "cn",
     "en",
@@ -10309,6 +10512,13 @@
     "pt"
   ],
   "/respeaker_xvf_3800_openclaw": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_picovoice": [
     "cn",
     "en",
     "es",
@@ -12115,6 +12325,34 @@
     "pt"
   ],
   "/tracker_at_command": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon01_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon02_for_sensecap_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/bluetooth_beacon03_for_tracker_user_guide": [
     "cn",
     "en",
     "es",

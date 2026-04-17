@@ -8,7 +8,7 @@ last_update:
   date: 01/06/2026
   author: jancee
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-06'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection/
 ---
 

@@ -13,7 +13,7 @@ last_update:
   date: 09/15/2024
   author: Priyanshu Roy
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-24'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/
 ---
 

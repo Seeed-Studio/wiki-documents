@@ -11,7 +11,7 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-05-30'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/cn/recomputer_r1100_intro/
 ---
 
@@ -738,7 +738,7 @@ reComputer R1100 中的 **UPS 模块**是一个**基于 7F 超级电容器**的�
 ## 资源
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="获取定制报价"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

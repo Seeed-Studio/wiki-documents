@@ -10,7 +10,7 @@ last_update:
   date: 02/03/2022
   author: matthew
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/LCD_16-2_Characters-Green_Yellow_back_light/
 ---
 

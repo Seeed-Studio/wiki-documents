@@ -1,0 +1,137 @@
+---
+description: Connecting R1225 to ChirpStack
+title: Connecting to ChirpStack
+keywords:
+  - Gateway
+  - SenseCAP
+  - Edge Controller
+  - reComputer R1225
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /connecting_r1225_to_chirpstack
+sku: 100021896,100030154,100006298,100079154
+last_update:
+  date: 03/30/2026
+  author: Kian
+createdAt: '2026-03-30'
+url: https://wiki.seeedstudio.com/connecting_r1225_to_chirpstack/
+updatedAt: '2026-04-08'
+---
+## ChirpStack Configuration
+
+ChirpStack provides open-source components for LoRaWAN networks. Together they form a ready-to-use solution including a user-friendly web interface for device management and APIs for integration.
+
+### Add Gateway
+
+Before starting, please [login](https://www.chirpstack.io/application-server/use/login/) into the [ChirpStack Application Server](https://www.chirpstack.io/application-server/).
+
+The default credentials are:Username: admin;Password: admin
+
+:::tip Note
+If you have not yet connected your [ChirpStack Application Server](https://www.chirpstack.io/project/application-server/) instance with a [ChirpStack Network Server](https://www.chirpstack.io/project/network-server/) instance, you need do this first. See [Network servers](https://www.chirpstack.io/application-server/use/network-servers/). Also you need to connect the organization with the network-server by creating a [Service profile](https://www.chirpstack.io/application-server/use/service-profiles/).
+:::
+
+Navigate to `Gateway` > `Add gateway`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack4.png" alt="pir" width={800} height="auto" /></p>
+
+Enter the `Gateway Name` and `Gateway ID (EUI: 64)`
+
+**Gateway name**: A name of your gateway
+
+**Gateway EUI**: Gateway EUI can be found on the device label or Local Console
+
+**Stats interval(secs)**: The expected interval in seconds in which the gateway sends its statistics
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack5.png" alt="pir" width={800} height="auto" /></p>
+
+Then click `Submit`
+
+### Add device profile
+
+Before you can add your device to ChirpStack, you have to create a [device-profile](https://www.chirpstack.io/application-server/use/device-profiles/) if you haven't done this already.
+
+Navigate to **`Device profile` > `Add device profile`**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_3.png" alt="pir" width={800} height="auto" /></p>
+
+**Name**: A name of your device profile
+
+**Region**:Select the Region plan according to your gateway.
+
+**MAC version**: LoRaWAN 1.0.3
+
+**Regional parameters revision**: A
+
+**ADR algorithm**: Default ADR algorithm( LoRa only)
+
+:::note
+Select MAC version/Regional parameters revision/ADR algorithm according to your device. For details, please refer to:https://lora-alliance.org/resource_hub/
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_4.png" alt="pir" width={800} height="auto" /></p>
+
+### Add device
+
+Navigate to **`Application` > `Add Application`**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_5.png" alt="pir" width={800} height="auto" /></p>
+
+Click the application to which you want to add your device. Under the **Devices** tab, click **Add device**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_6.png" alt="pir" width={800} height="auto" /></p>
+
+**Name**: A name of your device
+
+**Device EUI**: Device EUI can be found on the device label or SenseCAP Mate APP
+
+**Device profile**: Choose the device profile we create .
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_7.png" alt="pir" width={800} height="auto" /></p>
+
+## Gateway Configuration
+
+Configure the gateway via the Web UI,please check the [Quick Start](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf) to log into Local Console first.
+
+### LoRa Network Settings
+
+Navigate to **LoRa > LoRa Network**
+
+**Mode:** Packet Forward
+
+Packet Forwarder Settings:
+
+**Gateway EUI**: It will automatically get the EUI of the connected gateway
+
+**Server Address**: Your ChirpStack Server address
+
+**Server Port(Up/Down)**: 1700
+
+Other settings can be left as default, or can be changed to suit your requirements.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/chirpstack_packet_forwarder.png" alt="pir" width={800} height="auto" /></p>
+
+### Channel Plan Settings
+
+Navigate to **`LoRa` > `Channel Plan`**
+
+Select the Region and Frequency plan according to the actual choice.
+
+After setting, click **Save&Apply**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/chirpstack_channel_plan.png" alt="pir" width={800} height="auto" /></p>
+
+## Data View
+
+### Gateway data
+
+Navigate to **`Gateways`**, choose the gateway you want to check.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_12.png" alt="pir" width={800} height="auto" /></p>
+
+### Device data
+
+After adding your LoRaWAN device to ChirpStack, validate that your device is able to activate (in case of OTAA) and send data.
+
+Navigate to **Applications** > **Devices**, choose the device you want to check.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_13.png" alt="pir" width={800} height="auto" /></p>

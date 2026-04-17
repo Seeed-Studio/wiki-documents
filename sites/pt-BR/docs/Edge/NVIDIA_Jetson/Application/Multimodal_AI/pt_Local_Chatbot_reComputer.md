@@ -7,7 +7,7 @@ last_update:
   date: 01/29/2025
   author: kourosh
 createdAt: '2025-10-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/local_chatbot_recomputer/
 ---
 

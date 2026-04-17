@@ -10,7 +10,7 @@ last_update:
   date: 11/16/2023
   author: Spencer
 createdAt: '2023-05-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Indicator_Native_Firmware/
 ---
 

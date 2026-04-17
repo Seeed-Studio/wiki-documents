@@ -16,13 +16,18 @@ last_update:
   date: 1/28/2026
   author: Allen
 createdAt: '2026-01-29'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
-
 # Getting Started with reTerminal E1004
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" style={{width:1000, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Introduction
 
@@ -125,6 +130,67 @@ Due to the nature of E Ink technology, the screen refresh may take a few seconds
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
+
+## Troubleshooting
+
+### Q1: Device Won't Power On
+
+- Ensure the power switch is in the ON position
+- Connect the USB-C cable to charge the device
+- Check if the red LED is always on (indicating charging)
+- If using battery power, ensure the battery is properly connected and charged
+
+### Q2: Can't Connect to Wi-Fi
+
+- Verify you're entering the correct Wi-Fi password
+- Ensure your Wi-Fi network is operational
+- Check if your Wi-Fi router supports 2.4GHz networks (5GHz is not supported)
+- Try positioning the device closer to your Wi-Fi router
+
+### Q3: Display Not Updating
+
+- Press the refresh button to manually trigger an update
+- Verify the device is connected to Wi-Fi (no disconnection icon in the corner)
+- Check your SenseCraft account to ensure the dashboard is properly deployed
+- If the problem persists, try restarting the device
+- If the device still does not respond after restarting, re-flash the corresponding firmware on the SenseCraft HMI platform and check whether the device can refresh normally
+
+### Q4: Network Connection Lost
+
+- The device will automatically attempt to reconnect to known networks
+- When reconnected, the Wi-Fi disconnection icon will disappear
+- If unable to reconnect, follow the Network Reset procedure above
+
+### Q5: Cannot Find Serial Port (COM) on macOS
+
+If your Mac doesn't recognize the reTerminal via USB, follow this compact guide to install the CH340/CH340K driver:
+
+**Step 1. Download and Install the Driver**
+Download the driver from the [official WCH page](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) and run `CH34xVCPDriver.pkg`. 
+:::tip
+If macOS blocks the installation, go to **System Settings → Privacy & Security**, scroll to find the blocked WCH software, and click **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 2. Enable Driver Extension (Critical)**
+Open the **CH34xVCPDriver** app from Launchpad, click **Install**, then go to **System Settings → General → Login Items & Extensions → Driver Extensions**. Toggle **CH34xVCPDriver Extensions** to **ON** (blue).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Step 3. Connect and Verify**
+Ensure the device **power switch is ON** and use a **data USB-C cable** (not charge-only). Open Terminal and run:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+If you see the device path in the output, the driver is correctly installed and your reTerminal is ready for use!
 
 ## Resources
 

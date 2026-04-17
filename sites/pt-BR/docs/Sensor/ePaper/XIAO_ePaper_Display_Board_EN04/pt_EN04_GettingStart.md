@@ -1,6 +1,6 @@
 ---
-description: Primeiros passos com a XIAO ePaper Display Board(nRF52840) - EN04
-title: Primeiros passos com a XIAO ePaper Display Board(nRF52840) - EN04
+description: Introdução ao XIAO ePaper Display Board(nRF52840) - EN04
+title: Introdução ao XIAO ePaper Display Board(nRF52840) - EN04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -11,26 +11,25 @@ last_update:
   date: 11/25/2025
   author: Allen
 createdAt: '2025-09-25'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/epaper_EN04/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Primeiros passos com XIAO ePaper Display EN04
+# Introdução ao XIAO ePaper Display EN04
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>Placa XIAO ePaper Display EN04</th>
+        <th>XIAO ePaper Display Board EN04</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -39,16 +38,16 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO nRF52840** Plus, a placa de exibição EN04 suporta displays ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado, função NFC e vem com um botão de reset e três botões de usuário. É bem adequada para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e painéis de informação portáteis.
+Com o **XIAO nRF52840** Plus, a placa de display EN04 suporta telas ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado, função NFC e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
 
-### Características
+### Recursos
 
-- **Alimentada pelo XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível.
-- **Suporte versátil a displays:** Compatível com uma ampla gama de telas ePaper, suportando interfaces de 24 pinos e 50 pinos com comutação fácil por meio de jumpers.
-- **Conector BAT com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento de energia eficiente e economia de energia.
+- **Alimentado por XIAO nRF52840 Plus:** Funciona imediatamente quando conectado a um display ePaper compatível.
+- **Suporte versátil a displays:** Compatível com uma grande variedade de telas ePaper, suportando interfaces de 24 pinos e 50 pinos com comutação fácil por meio de jumpers.
+- **Conector de bateria com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
 - **Botões fáceis de usar:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
 
-### Especificações
+### Especificação
 
 <table>
   <thead>
@@ -64,36 +63,36 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de exibição EN04 suporta displ
     </tr>
     <tr>
       <th>Conector ePaper</th>
-      <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
+      <td>FPC 24 pinos 0,5 mm<br />FPC 50 pinos 0,5 mm</td>
     </tr>
     <tr>
       <th>Conector de bateria</th>
-      <td>JST 2.0mm</td>
+      <td>JST 2,0 mm</td>
     </tr>
     <tr>
       <th>Chave</th>
-      <td>Alimentação da bateria ON/OFF</td>
+      <td>Liga/Desliga da alimentação da bateria</td>
     </tr>
     <tr>
       <th>Fonte de alimentação</th>
-      <td>- Bateria Li 3,7 V<br />- USB Tipo-C</td>
+      <td>- Bateria Li 3,7 V<br />- USB Type-C</td>
     </tr>
     <tr>
       <th>Botão</th>
-      <td>- 1x botão de reset<br />- 3x botão de usuário</td>
+      <td>- 1x botão de reset<br />- 3x botões de usuário</td>
     </tr>
   </tbody>
 </table>
 
-### Guia de seleção de placa ePaper
+### Guia de seleção da placa ePaper
 
 <table>
     <thead>
         <tr>
             <th>Produto</th>
-            <th>Placa ePaper Display EN04</th>
+            <th>ePaper Display Board EN04</th>
 <th><a href="https://wiki.seeedstudio.com/pt-br/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
-<th><a href="https://wiki.seeedstudio.com/pt-br/xiao_eink_expansion_board_v2/">Placa controladora ePaper</a></th>
+<th><a href="https://wiki.seeedstudio.com/pt-br/xiao_eink_expansion_board_v2/">ePaper Driver Board</a></th>
         </tr>
     </thead>
     <tbody>
@@ -111,21 +110,27 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de exibição EN04 suporta displ
         </tr>
         <tr>
             <th>Conector ePaper</th>
-            <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
+            <td>FPC 24 pinos, 0,5 mm<br />FPC 50 pinos, 0,5 mm</td>
+            <td>FPC 24 pinos 0,5 mm</td>
+            <td>FPC 24 pinos 0,5 mm</td>
         </tr>
         <tr>
             <th>Conector de bateria</th>
-            <td>JST 2.0mm</td>
+            <td>JST 2,0 mm</td>
             <td>/</td>
-            <td>JST 2.0mm</td>
+            <td>JST 2,0 mm</td>
         </tr>
         <tr>
             <th>Chave</th>
-            <td>Alimentação da bateria ON/OFF</td>
+            <td>Liga/Desliga da alimentação da bateria</td>
             <td>/</td>
-            <td>Alimentação da bateria ON/OFF</td>
+            <td>Liga/Desliga da alimentação da bateria</td>
+        </tr>
+        <tr>
+            <th>Botão</th>
+            <td>1x botão de reset<br />3x botões de usuário</td>
+            <td>/</td>
+            <td>/</td>
         </tr>
         <tr>
             <th>Porta de extensão de IO</th>
@@ -133,22 +138,16 @@ Alimentada pelo **XIAO nRF52840** Plus, a placa de exibição EN04 suporta displ
             <td>conexão de outros controladores</td>
             <td>conexão de sensores adicionais</td>
         </tr>
-        <tr>
-            <th>Porta de extensão de IO</th>
-            <td>/</td>
-            <td>connection of others controller</td>
-            <td>connection of additional sensors</td>
-        </tr>
     </tbody>
 </table>
 
-### Aplicações
+### Aplicação
 
-- **Dashboard de casa inteligente**: Exibir informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
-- **Monitoramento de energia**: Mostrar dados de consumo de energia de medidores inteligentes, ajudando os moradores a acompanhar e gerenciar o uso de energia de forma mais eficiente.
-- **Alertas de segurança**: Exibir alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Display de termostato inteligente**: Mostrar níveis de temperatura e umidade, bem como configurações de controle do seu termostato inteligente.
-- **Porta-retratos digital**: Criar um porta-retratos digital com Wi-Fi que possa exibir imagens da sua rede de casa inteligente.
+- **Dashboard de casa inteligente**: Exiba informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
+- **Monitoramento de energia**: Mostre dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
+- **Alertas de segurança**: Exiba alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
+- **Display de termostato inteligente**: Mostre níveis de temperatura e umidade, bem como configurações de controle do seu termostato inteligente.
+- **Porta-retratos digital**: Crie um porta-retratos digital com WiFi que possa exibir imagens da sua rede de casa inteligente.
 
 ## Visão geral do hardware
 
@@ -164,38 +163,38 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 #### Conector de 24 pinos
 
-- [Display ePaper de 1,54" - Monocromático 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Display ePaper de 2,13" - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Display ePaper de 2,13" - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Display ePaper de 2,9" - Monocromático 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Display ePaper de 2,9" - Quádruplo colorido 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [Display ePaper de 4,2" - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Display ePaper de 4,26" - Monocromático 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Display ePaper de 5,83" - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Display ePaper de 7,5" - Monocromático 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-- [Display ePaper de 7,5" - Três cores 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochorm 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2-inch ePaper - Monochorm 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monochorm 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Ao usar a XIAO ePaper Display Board, certifique-se de ajustar o jumper de acordo com o tipo de display ePaper:
+Ao usar o XIAO ePaper Display Board, certifique-se de configurar o jumper de acordo com o tipo de display ePaper:
 
 - Para displays ePaper de 24 pinos → ajuste o jumper para 24 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
+⚠️ Usar a configuração de jumper errada pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
 #### Conector de 50 pinos
 
-- [ePaper Spectra6 de 7,3"](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
+- [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
-Ao usar a XIAO ePaper Display Board, certifique-se de ajustar o jumper de acordo com o tipo de display ePaper:
+Ao usar o XIAO ePaper Display Board, certifique-se de configurar o jumper de acordo com o tipo de display ePaper:
 - Para displays ePaper de 50 pinos → ajuste o jumper para 50 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
+⚠️ Usar a configuração de jumper errada pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
@@ -221,57 +220,57 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e o usaremos mais tarde.
+Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e iremos usá-lo depois.
 
 :::tip
-Se você fizer a escolha errada, a tela não exibirá nada.
+Se você fizer a escolha errada, a tela não mostrará nada.
 
-Portanto, certifique-se do tipo de seus dispositivos ou componentes.
+Portanto, certifique-se do tipo dos seus dispositivos ou componentes.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
-Depois de baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-Existem 4 exemplos básicos; abra um exemplo básico de que você goste:
+Existem 4 exemplos básicos, abra um exemplo básico de que você gostar:
 
-1. Bitmap: exibir uma imagem bitmap.
-2. Clock: exibir um relógio.
-3. Clock_digital: exibir um relógio digital.
-4. Shape: exibir palavras e formas de tamanhos diferentes.
+1. Bitmap: Exibir uma imagem bitmap.
+2. Clock: Exibir um relógio.
+3. Clock_digital: Exibir um relógio digital.
+4. Shape: Exibir diferentes tamanhos de palavras e formas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Início rápido
+## Primeiros passos
 
-Aqui, usamos um display de 7,5" como exemplo. As etapas são as mesmas para todas as telas de 24 pinos; a única diferença é selecionar o tamanho de tela adequado no driver.
+Aqui, usamos um display de 7,5 polegadas como exemplo. As etapas são as mesmas para todas as telas de 24 pinos; a única diferença é selecionar o tamanho de tela apropriado no driver.
 
-Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ser algo como:
+Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ficar assim:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** -> **Port** -> **Select the port your board is connected to**. Em seguida, clique em **Upload** para enviar o código.
+Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** -> **Port** -> **Select the port your board is connected to**. Em seguida, clique em **Upload** para enviar o código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Agora você verá o feedback na sua tela de epaper! A seguir estão os resultados dos exemplos Helloworld. (Se nada aparecer, clique no botão de reset)
+Agora você verá o retorno na sua tela de epaper! A seguir estão os resultados dos exemplos de Helloworld. (Se nada aparecer, clique no botão de reset)
 
 :::tip
-⚠️ Nota: Orientação do Cabo do ePaper
+⚠️ Observação: Orientação do cabo do ePaper
 Ao conectar o display ePaper à XIAO ePaper Display Board, certifique-se de que o cabo FPC seja inserido na direção correta.
 
-⚠️ Não inverta o conector! Inserir o cabo de cabeça para baixo pode fazer com que o ePaper não exiba nada ou até danificar a tela/placa.
+⚠️ Não inverta o conector! Inserir o cabo de cabeça para baixo pode fazer com que o ePaper deixe de exibir a imagem ou até danifique a tela/placa.
 A imagem abaixo mostra a conexão correta:
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
-### Botões de Usuário na XIAO ePaper Display Board(nRF52840) - EN04
+### Botões de usuário na XIAO ePaper Display Board(nRF52840) - EN04
 
 A EN04 possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder aos pressionamentos usando Arduino.
 
@@ -297,7 +296,7 @@ Na EN04, os três botões estão conectados ao XIAO nRF52840 Plus:
 
 Todos os botões são ativos em nível baixo, o que significa que eles leem LOW quando pressionados e HIGH quando soltos.
 
-Exemplo Básico de Leitura de Botão
+Exemplo básico de leitura de botão
 
 Este exemplo demonstra como detectar pressionamentos de botões e imprimir mensagens no monitor serial.
 
@@ -348,13 +347,13 @@ void loop() {
 }
 ```
 
-### Bateria do Usuário na XIAO ePaper Display Board(nRF52840) - EN04
+### Bateria de usuário na XIAO ePaper Display Board(nRF52840) - EN04
 
 Ao operar com alimentação por bateria:
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
 
-- A vida útil da bateria depende da frequência de atualização (normalmente 3 meses com carga completa nas configurações padrão)
+- A vida útil da bateria depende da frequência de atualização (normalmente 3 meses com carga completa usando as configurações padrão)
 
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
@@ -398,9 +397,9 @@ void loop() {
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
-## Suporte Técnico & Discussão sobre o Produto
+## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

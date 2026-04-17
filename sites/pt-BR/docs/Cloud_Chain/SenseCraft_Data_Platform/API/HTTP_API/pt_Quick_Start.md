@@ -12,7 +12,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2023-03-01'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-data-platform/api/http-api/quick-start/
 ---
 

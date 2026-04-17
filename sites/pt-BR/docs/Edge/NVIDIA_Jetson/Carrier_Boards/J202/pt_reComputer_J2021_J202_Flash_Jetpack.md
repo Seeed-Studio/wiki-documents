@@ -13,7 +13,7 @@ last_update:
   author: Youjiang
 no_comments: false
 createdAt: '2023-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J2021_J202_Flash_Jetpack/
 ---
 
@@ -48,7 +48,7 @@ Como o Jetson Nano possui apenas uma faixa PCIe, se o módulo usar o Jetson Nano
 :::
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

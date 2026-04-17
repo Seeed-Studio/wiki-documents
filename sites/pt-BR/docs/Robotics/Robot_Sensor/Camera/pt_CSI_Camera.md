@@ -13,7 +13,7 @@ last_update:
   date: 05/7/2024
   author: ZhuYaoHui
 createdAt: '2024-07-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/csi_camera_on_ros/
 ---
 # Como Usar Várias Câmeras CSI no reComputer com ROS

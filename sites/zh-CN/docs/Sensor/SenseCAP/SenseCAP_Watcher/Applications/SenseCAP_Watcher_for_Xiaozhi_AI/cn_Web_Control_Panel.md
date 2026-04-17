@@ -14,7 +14,7 @@ last_update:
   date: 10/13/2025
   author: Twelve
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-13'
 url: https://wiki.seeedstudio.com/cn/watcher_web_control_panel/
 ---
 

@@ -798,7 +798,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await openai.chat.completions.create({
-          model: 'gpt-5.1-2025-11-13',
+          model: 'gpt-5.1',
           max_completion_tokens: 20000,
           temperature: 0,
           messages: [
@@ -823,10 +823,10 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用ChatGPT API (尝试 ${attempt}/${maxRetries})...`);
 
       const response = await openai.chat.completions.create({
-        model: 'gpt-5.1-2025-11-13',
+        model: 'gpt-5.1',
         max_completion_tokens: 20000,
         temperature: 0,
         messages: [

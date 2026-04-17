@@ -1,6 +1,6 @@
 ---
-description: Primeiros passos com a Série Seeed Studio XIAO nRF52840
-title: Primeiros passos com a Série Seeed Studio XIAO nRF52840
+description: Introdução ao Seeed Studio XIAO nRF52840 Série
+title: Introdução ao Seeed Studio XIAO nRF52840 Série
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
@@ -10,15 +10,14 @@ last_update:
   date: 2024-11-28T03:15:24.000Z
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/pt-br/XIAO_BLE/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Primeiros passos com a Série Seeed Studio XIAO nRF52840
+# Introdução ao Seeed Studio XIAO nRF52840 Série
 
 <meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" />
 
@@ -125,13 +124,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </table>
 </div>
 
-Como o primeiro produto sem fio da família Seeed Studio XIAO, o **Seeed Studio XIAO nRF52840** vem equipado com um poderoso **MCU Nordic nRF52840**, que integra conectividade **Bluetooth 5.0**. Ao mesmo tempo, ele possui um **fator de forma pequeno e requintado**, que pode ser usado em dispositivos vestíveis e projetos de Internet das Coisas. O **design montável em superfície de um único lado** e a **antena Bluetooth** onboard podem facilitar muito a implantação rápida de projetos de IoT.
+Como o primeiro produto sem fio da família Seeed Studio XIAO, o **Seeed Studio XIAO nRF52840** está equipado com um poderoso **Nordic nRF52840 MCU** que integra conectividade **Bluetooth 5.0**. Ao mesmo tempo, ele possui um **fator de forma pequeno e requintado** que pode ser usado para dispositivos vestíveis e projetos de Internet das Coisas. O **design montável em superfície de face única** e a **antena Bluetooth** integrada podem facilitar muito a implantação rápida de projetos de IoT.
 
-Além disso, existe uma versão avançada desta placa, o **Seeed Studio XIAO nRF52840 Sense**. Ela é integrada com dois sensores extras onboard. Um deles é um **microfone digital de Modulação por Densidade de Pulsos (PDM)**. Ele pode receber dados de áudio em tempo real, permitindo seu uso para reconhecimento de áudio. O outro é uma **Unidade de Medição Inercial (IMU) de 6 eixos**; essa IMU pode ser muito útil em projetos de TinyML, como reconhecimento de gestos. Esses sensores onboard oferecem grande conveniência aos usuários, enquanto a placa continua sendo ultracompacta.
+Além disso, há uma versão avançada desta placa, o **Seeed  Studio XIAO nRF52840 Sense**. Ela é integrada com dois sensores extras onboard. Um deles é um **microfone digital de Modulação por Densidade de Pulsos (PDM)**. Ele pode receber dados de áudio em tempo real, o que permite seu uso para reconhecimento de áudio. O outro é uma **Unidade de Medição Inercial (IMU) de 6 eixos**, e essa IMU pode ser muito útil em projetos de TinyML, como reconhecimento de gestos. Esses sensores onboard proporcionam grande conveniência para os usuários enquanto a placa é ultrapequena.
 
-As recém-atualizadas **XIAO nRF52840 Plus e XIAO nRF52840 Sense Plus** proporcionam aumentos consideráveis em funcionalidade e usabilidade. O número de pinos multifuncionais foi aumentado para **20**, recursos de **I2S** e **SPI** foram adicionados para suportar projetos mais complexos, os **pinos NFC** foram expostos para facilitar a integração em aplicações de IoT e de cartões inteligentes, e o pino **BAT** foi reposicionado para melhor conveniência de soldagem, resultando em uma experiência de hardware mais amigável para o usuário.
+As recém-atualizadas **XIAO nRF52840 Plus e XIAO nRF52840 Sense Plus** oferecem aumentos consideráveis em funcionalidade e usabilidade. O número de pinos multifuncionais foi aumentado para **20**, recursos **I2S** e **SPI** foram adicionados para suportar projetos mais complexos, os **pinos NFC** foram expostos para facilitar a integração em aplicações de IoT e cartões inteligentes, e o **pino BAT** foi reposicionado para melhor conveniência de soldagem, resultando em uma experiência de hardware mais amigável ao usuário.
 
-Comparado ao Seeed Studio XIAO RP2040, o Seeed Studio XIAO nRF52840 contém **interfaces mais ricas**. A primeira coisa a notar é que a **interface Near Field Communication (NFC)** está funcional na placa. Em segundo lugar, há um pequeno **botão de reset** ao lado da interface Type‑C. No outro lado, há um **LED 3 em 1 (LED de usuário)** juntamente com um **LED de carga** para indicar o status de carregamento quando uma bateria está conectada. Há **11 I/O digitais** que podem ser usados como **pinos PWM** e **6 I/O analógicos** que podem ser usados como **pinos ADC**. Ele suporta todas as três interfaces seriais comuns, como **UART, I2C e SPI**. Assim como o Seeed Studio XIAO RP2040, possui um **flash onboard de 2 MB**, o que significa que também pode ser programado usando **Arduino, MicroPython, CircuitPython ou outras linguagens de programação**.
+Comparado ao Seeed Studio XIAO RP2040, o Seeed Studio XIAO nRF52840 contém **interfaces mais ricas**. A primeira coisa a notar é que a **interface de Comunicação por Campo Próximo (NFC)** é funcional na placa. Em segundo lugar, há um pequeno **botão de reset** ao lado da interface Type-C. Do outro lado, há um **LED 3 em 1 (LED do usuário)** juntamente com um **LED de carga** para indicar o status de carregamento quando uma bateria está conectada. Existem **11 E/S digitais** que podem ser usadas como **pinos PWM** e **6 E/S analógicas** que podem ser usadas como **pinos ADC**. Ele suporta as três interfaces seriais comuns, como **UART, I2C e SPI**. Assim como o Seeed Studio XIAO RP2040, ele possui uma **flash onboard de 2 MB**, o que significa que também pode ser programado usando **Arduino, MicroPython, CircuitPython ou outras linguagens de programação**.
 
 O Seeed Studio XIAO nRF52840 Sense é compatível com a placa de expansão Seeed Studio XIAO.
 
@@ -143,23 +142,16 @@ O Seeed Studio XIAO nRF52840 Sense é compatível com a placa de expansão Seeed
 
 ## Recursos
 
-- Poderosas capacidades sem fio: Bluetooth 5.0 com antena onboard
+- Poderosas capacidades sem fio: Bluetooth 5.0 com antena integrada
 - CPU poderosa: Nordic nRF52840, processador ARM® Cortex®-M4 de 32 bits com FPU, 64 MHz
-- Ultrabaixo consumo de energia: consumo em standby inferior a 5μA
+- Ultra baixo consumo de energia: o consumo em standby é inferior a 5μA
 - Chip de carregamento de bateria: suporta gerenciamento de carga e descarga de bateria de lítio
 - Flash onboard de 2 MB
 - Microfone PDM onboard (apenas no Seeed Studio XIAO nRF52840 Sense)
 - IMU LSM6DS3TR-C de 6 eixos onboard (apenas no Seeed Studio XIAO nRF52840 Sense)
-- Tamanho ultracompacto: 21 x 17,8 mm, fator de forma clássico da série Seeed Studio XIAO para dispositivos vestíveis
+- Tamanho ultrapequeno: 21 x 17,8 mm, fator de forma clássico da série Seeed Studio XIAO para dispositivos vestíveis
 - Interfaces ricas: 1xUART, 1xI2C, 1xSPI, 1xNFC, 1xSWD, 11xGPIO(PWM), 6xADC no XIAO nRF52840 (Sense); e 2xUART, 1xI2C, 2xSPI, 1xI2S, 1xNFC, 1xSWD, 18xGPIO(PWM), 6xADC no XIAO nRF52840 (Sense) Plus
 - Componentes em um único lado, design para montagem em superfície
-
-<JetsonLeadQuote
-  buttonText="Request Quote of Customization"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
-  imageAlt="Request Quote for XIAO"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
 
 ## Comparação de especificações
 
@@ -211,7 +203,7 @@ Bluetooth Mesh/NFC</td>
       <td colspan="4" align="center">LED 3 em 1/ LED de carga</td>
   </tr>
   <tr>
-      <th>Chip de carga de bateria</th>
+      <th>Chip de carregamento de bateria</th>
       <td colspan="4" align="center">BQ25101</td>
   </tr>
   <tr>
@@ -221,7 +213,7 @@ Bluetooth Mesh/NFC</td>
   </table>
 </div>
 
-## Visão geral do hardware
+## Visão geral de hardware
 
 <Tabs>
 <TabItem  value="52540(Sense)" label="XIAO nRF52840/XIAO nRF52840 Sense" default>
@@ -248,36 +240,36 @@ Bluetooth Mesh/NFC</td>
 </table>
 
  **Mapa de pinos**
-| Pino XIAO               | Função           | Pino do chip                      | Descrição                               |Nome no Arduino |     
+| Pino XIAO               | Função           | Pino do chip                      | Descrição                          |Nome Arduino |     
 | :---------------------: | :-------------: | :-------:                      | :-------------------------------------- | :-------:   |
-| 5V                      | VBUS             |                               | Entrada/Saída de energia                 |           |
+| 5V                      | VBUS             |                               | Entrada/Saída de energia                       |           |
 | GND                     |                  |                               |                                          |           |
-| 3V3                     | 3V3_OUT          |                              | Saída de energia                         |            |
-| D0                      | Analógico        | P0.02                        | GPIO, AIN0                               |       0      |
-| D1                      | Analógico        | P0.03                        | GPIO, AIN1                               |       1       |
-| D2                      | Analógico        | P0.28                        | GPIO, AIN4                               |        2     |
-| D3                      | Analógico        | P0.29                        | GPIO, AIN5                               |       3     |
-| D4                      | Analógico,SDA    | P0.04                         | GPIO, I2C Data, AIN2                     |     4      |
-| D5                      | Analógico,SCL    | P0.05                         | GPIO, I2C Clock, AIN3                    |     5       |
-| D6                      | TX               | P1.11                         | GPIO, UART Transmit                      |     7/6        |
-| D7                      | RX               | P1.12                         | GPIO, UART Receive                       |     8/7       |
-| D8                      | SPI_SCK          | P1.13                         | GPIO, SPI Clock                          |      9/8    |
-| D9                      | SPI_MISO         | P1.14                         | GPIO, SPI Data                           |     10/9     |
-| D10                     | SPI_MOSI         | P1.15                         | GPIO, SPI Data                           |       11/10   |
+| 3V3                     | 3V3_OUT          |                              | Saída de energia                             |            |
+| D0                      | Analógico          | P0.02                        | GPIO, AIN0                                |       0      |
+| D1                      | Analógico          | P0.03                        | GPIO, AIN1                               |       1       |
+| D2                      | Analógico          | P0.28                        | GPIO, AIN4                                |        2     |
+| D3                      | Analógico          | P0.29                        | GPIO, AIN5                               |       3     |
+| D4                      | Analógico,SDA       | P0.04                         | GPIO, Dados I2C, AIN2                      |     4      |
+| D5                      | Analógico,SCL       | P0.05                         | GPIO, Clock I2C, AIN3                     |     5       |
+| D6                      | TX               | P1.11                         | GPIO, Transmissão UART                      |     7/6        |
+| D7                      | RX               | P1.12                         | GPIO, Recepção UART                       |     8/7       |
+| D8                      | SPI_SCK          | P1.13                         | GPIO, Clock SPI                          |      9/8    |
+| D9                      | SPI_MISO         | P1.14                         | GPIO, Dados SPI                           |     10/9     |
+| D10                     | SPI_MOSI         | P1.15                         | GPIO, Dados SPI                           |       11/10   |
 | NFC1                    |                  | P0.09                         | NFC                                      |          |
 | NFC2                    |                  | P0.10                         | NFC                                      |          |
 | Reset                   |                  | P0.18                         | RESET                                    |          |
-| ADC_BAT                 |                  | P0.14                         | Ler o valor de tensão do BAT            |          |
-| 6 DOF IMU_PWR           |                  | P1.08                         | chave de alimentação do módulo 6D       |          |
-| 6 DOF IMU__INT1         |                  | P0.11                         | pino de sinal de interrupção do módulo 6D |          |
-| PDM Microphone_DATA     |                  | P0.16                         | pino de entrada de dados de áudio PDM   |          |
-| PDM Microphone_CLK      |                  | P1.00                         | pino de saída de clock de áudio PDM     |          |
-| RF Switch Port Select   |                  | P2.05                         | alternar antena onboard                  |          |
-| RF Switch Power         |                  | P2.03                         | Alimentação                              |          |
-| CHARGE_LED              |                  | P0.17                         | CHG-LED_Red                              |          |
-| USER_LED_R              |                  | P0.26                         | pino do LED RGB vermelho controlado pelo usuário |     11     |
-| USER_LED_B              |                  | P0.06                         | pino do LED RGB azul controlado pelo usuário |     13/12     |
-| USER_LED_G              |                  | P0.30                         | pino do LED RGB verde controlado pelo usuário |      12/13    |
+| ADC_BAT                 |                  | P0.14                         | Ler o valor de tensão da BAT               |          |
+| 6 DOF IMU_PWR           |                  | P1.08                         | chave de alimentação do módulo 6D            |          |
+| 6 DOF IMU__INT1         |                  | P0.11                         | pino de sinal de interrupção do módulo 6D    |          |
+| PDM Microphone_DATA     |                  | P0.16                         | pino de entrada de dados de áudio PDM                 |          |
+| PDM Microphone_CLK      |                  | P1.00                         | pino de saída de clock de áudio PDM               |          |
+| RF Switch Port Select   |                  | P2.05                         | Alternar antena onboard                   |          |
+| RF Switch Power         |                  | P2.03                         | Alimentação                                    |          |
+| CHARGE_LED              |                  | P0.17                         | CHG-LED_Vermelho                              |          |
+| USER_LED_R              |                  | P0.26                         | Pino de LED RGB vermelho controlado pelo usuário          |     11     |
+| USER_LED_B              |                  | P0.06                         | Pino de LED RGB azul controlado pelo usuário         |     13/12     |
+| USER_LED_G              |                  | P0.30                         | Pino de LED RGB verde controlado pelo usuário        |      12/13    |
 
  </TabItem>
  <TabItem value="52840Plus" label="XIAO nRF52840 Plus/XIAO nRF52840 Sense Plus" default>
@@ -304,7 +296,7 @@ Bluetooth Mesh/NFC</td>
 
  </table>
 
-| Pino XIAO              | Função              | Pino do chip | Funções alternativas | Descrição                                |Nome Arduino |   
+| Pino XIAO               | Função              | Pino do chip | Funções alternativas | Descrição                                |Nome Arduino |   
 | :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |:-------:   |
 | 5V                      | VBUS                 |           |                    | Entrada/Saída de energia                |       |
 | GND                     |                      |           |                    |                                          |       |
@@ -313,34 +305,34 @@ Bluetooth Mesh/NFC</td>
 | D1                      | Analógico            | P0.03     |                    | GPIO, ADC                                |    1      |
 | D2                      | Analógico            | P0.28     |                    | GPIO, ADC                                |    2      |
 | D3                      | Analógico            | P0.29     |                    | GPIO, ADC                                |    3      |
-| D4                      | Analógico,SDA        | P0.04     |                    | GPIO, dados I2C, ADC                     |    4      |
-| D5                      | Analógico,SCL        | P0.05     |                    | GPIO, clock I2C, ADC                     |    5      |
+| D4                      | Analógico, SDA       | P0.04     |                    | GPIO, dados I2C, ADC                     |    4      |
+| D5                      | Analógico, SCL       | P0.05     |                    | GPIO, clock I2C, ADC                     |    5      |
 | D6                      | TX                   | P1.11     |                    | GPIO, transmissão UART                   | 7/6        |
 | D7                      | RX                   | P1.12     |                    | GPIO, recepção UART                      | 8/7       |
 | D8                      | SPI_SCK              | P1.13     |                    | GPIO, clock SPI                          |  9/8    |
 | D9                      | SPI_MISO             | P1.14     |                    | GPIO, dados SPI                          | 10/9     |
 | D10                     | SPI_MOSI             | P1.15     |                    | GPIO, dados SPI                          | 11/10   |
 | D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |      |
-| D12                     | I2S_SCK              | P0.19     |                    | GPIO,I2S, ADC                            |      |
-| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |      |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO, I2S, ADC                           |      |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S, ADC                           |      |
 | D14                     | RX1                  | P0.09     | NFC1               | GPIO, recepção UART, ADC                 |      |
 | D15                     | TX1                  | P0.10     | NFC2               | GPIO, transmissão UART, ADC              |      |
 | D16                     | BAT                  | P0.31     |                    | GPIO                                     |      |
 | D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |      |
 | D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |      |
 | D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |      |
-| ADC_BAT                 |                      | P0.14     |                    | Ler o valor de tensão da BAT             |      |
-| 6 DOF IMU_PWR           |                      | P1.08     |                    | interruptor de energia do módulo 6D      |      |
-| 6 DOF IMU__INT1         |                      | P0.11     |                    | pino de sinal de interrupção do módulo 6D|      |
-| PDM Microphone_DATA     |                      | P0.16     |                    | pino de entrada de dados de áudio PDM    |      |
-| PDM Microphone_CLK      |                      | P1.00     |                    | pino de saída de clock de áudio PDM      |      |
+| ADC_BAT                 |                      | P0.14     |                    | Ler o valor de tensão da bateria         |      |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | Interruptor de energia do módulo 6D      |      |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | Pino de sinal de interrupção do módulo 6D|      |
+| PDM Microphone_DATA     |                      | P0.16     |                    | Pino de entrada de dados de áudio PDM    |      |
+| PDM Microphone_CLK      |                      | P1.00     |                    | Pino de saída de clock de áudio PDM      |      |
 | Reset                   |                      | P0.18     |                    | RESET                                    |      |
-| RF Switch Port Select   |                      | P2.05     |                    | alternar antena integrada                |      |
-| RF Switch Power         |                      | P2.03     |                    | Energia                                  |      |
+| RF Switch Port Select   |                      | P2.05     |                    | Alternar antena onboard                  |      |
+| RF Switch Power         |                      | P2.03     |                    | Alimentação                              |      |
 | CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |      |
-| USER_LED_R              |                      | P0.26     |                    | pino do LED RGB vermelho controlado pelo usuário | 11     |
-| USER_LED_B              |                      | P0.06     |                    | pino do LED RGB azul controlado pelo usuário | 13/12     |
-| USER_LED_G              |                      | P0.30     |                    | pino do LED RGB verde controlado pelo usuário |  12/13    |
+| USER_LED_R              |                      | P0.26     |                    | Pino de LED RGB vermelho controlado pelo usuário | 11     |
+| USER_LED_B              |                      | P0.06     |                    | Pino de LED RGB azul controlado pelo usuário | 13/12     |
+| USER_LED_G              |                      | P0.30     |                    | Pino de LED RGB verde controlado pelo usuário |  12/13    |
 
 </TabItem>
 
@@ -352,25 +344,25 @@ Bluetooth Mesh/NFC</td>
 
 ## Duas bibliotecas Arduino
 
-Seeed Studio XIAO nRF52840 reúne muitas funções em uma placa minúscula e às vezes pode não apresentar o melhor desempenho de todas elas. Portanto, a Seeed publicou duas bibliotecas Arduino para **maximizar a potência de cada função**. Portanto:
+Seeed Studio XIAO nRF52840 reúne muitas funções em uma única placa minúscula e às vezes pode não oferecer o melhor desempenho de todas elas. Por isso, a Seeed publicou duas bibliotecas Arduino para **maximizar a potência de cada função**. Portanto:
 
 - É recomendado usar a biblioteca `Seeed nRF52 Boards` se você quiser aplicar a **função Bluetooth** e a "**função de baixo consumo de energia**".
 - É recomendado usar a biblioteca `Seeed nRF52 mbed-enabled Boards` se você quiser usá-la em **aplicações de Machine Learning embarcadas** ou aplicar a "**função avançada de IMU & PDM**".
-- Ambas as bibliotecas oferecem um ótimo suporte quando se trata do uso básico, como **LED, Digital, Analógico, Serial, I2C, SPI**.
+- Ambas as bibliotecas oferecem um bom suporte quando se trata do uso básico, como **LED, Digital, Analógico, Serial, I2C, SPI**.
 
 A definição de pinos suportada por essas duas bibliotecas pode ser um pouco diferente e a Seeed continuará atualizando o wiki até que isso fique claro.
 
 :::tip
 
-1. Se você usar o pacote onboard de Seeed nRF52 Boards, a função Serial pode não compilar. A solução é adicionar a linha `#include <Adafruit_TinyUSB.h>` no seu código. Você pode baixar esse pacote em: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
+1. Se você usar o pacote onboard de Seeed nRF52 Boards, a função Serial pode não compilar. A solução é adicionar a linha `#include <Adafruit_TinyUSB.h>` no seu código. Você pode baixar este pacote em: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
 
-2. Se você preferir uma abordagem mais simples, pode escolher Seeed nRF52 mbed-enabled Boards desde o início. Ela oferece suporte à compilação da função Serial sem a necessidade de modificações adicionais.
+2. Se você preferir uma abordagem mais simples, pode escolher Seeed nRF52 mbed-enabled Boards desde o início. Ela suporta a compilação da função Serial sem a necessidade de modificações adicionais.
 
 :::
 
-## Começando
+## Introdução
 
-Primeiro, vamos conectar o Seeed Studio XIAO nRF52840 (Sense) ao computador e enviar um código simples a partir da IDE Arduino para verificar se a placa está funcionando bem.
+Primeiro, vamos conectar o Seeed Studio XIAO nRF52840 (Sense) ao computador e enviar um código simples a partir da Arduino IDE para verificar se a placa está funcionando bem.
 
 ### Configuração de hardware
 
@@ -389,20 +381,20 @@ Conecte o Seeed Studio XIAO nRF52840 (Sense) ao seu computador por meio de um ca
 
 ### Configuração de software
 
-- **Passo 1.** Baixe e instale a versão mais recente da IDE Arduino de acordo com o seu sistema operacional
+- **Passo 1.** Baixe e instale a versão mais recente da Arduino IDE de acordo com o seu sistema operacional
 
 <p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/software"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" alt="pir" width={700} height="auto" /></a></p>
 
 - **Passo 2.** Inicie o aplicativo Arduino
 
-- **Passo 3.** Adicione o pacote de placa Seeed Studio XIAO nRF52840 (Sense) à sua IDE Arduino
+- **Passo 3.** Adicione o pacote de placa Seeed Studio XIAO nRF52840 (Sense) à sua Arduino IDE
 
-Vá até **File > Preferences** e preencha **"Additional Boards Manager URLs"** com a URL abaixo:
+Navegue até **File > Preferences** e preencha **"Additional Boards Manager URLs"** com a URL abaixo:
     *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width="700" height="auto" /></p>
 
-Vá até **Tools > Board > Boards Manager...**, digite a palavra-chave "**seeed nrf52**" na caixa de pesquisa, selecione a versão mais recente da placa que você deseja e instale-a. Você pode instalar ambas.
+Navegue até **Tools > Board > Boards Manager...**, digite a palavra-chave "**seeed nrf52**" na caixa de pesquisa, selecione a versão mais recente da placa desejada e instale-a. Você pode instalar ambas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528401.png" alt="pir" width={700} height="auto" /></p>
 
@@ -410,13 +402,13 @@ Vá até **Tools > Board > Boards Manager...**, digite a palavra-chave "**seeed 
 
 **Placa**
 
-Depois de instalar o pacote da placa, vá até **Tools > Board** e escolha a placa que você deseja, continue selecionando "**Seeed XIAO nRF52840 Sense**". Agora terminamos a configuração do Seeed Studio XIAO nRF52840 (Sense) para a IDE Arduino.
+Após instalar o pacote de placa, navegue até **Tools > Board** e escolha a placa desejada, continuando a selecionar "**Seeed XIAO nRF52840 Sense**". Agora terminamos a configuração do Seeed Studio XIAO nRF52840 (Sense) para a Arduino IDE.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528402.png" alt="pir" width={700} height="auto" /></p>
 
 **Porta**
 
-Navegue até **Tools > Port** e selecione o nome da porta serial do Seeed Studio XIAO nRF52840 (Sense) conectado. Provavelmente será COM3 ou superior (**COM1** e **COM2** são geralmente reservadas para portas seriais de hardware). A porta serial do Seeed Studio XIAO nRF52840 (Sense) conectado normalmente contém parênteses que dizem **Seeed Studio XIAO nRF52840** para **Seeed Studio XIAO nRF52840** ou **Seeed Studio XIAO nRF52840 Sense** para **Seeed Studio XIAO nRF52840 Sense**.
+Navegue até **Tools > Port** e selecione o nome da porta serial do Seeed Studio XIAO nRF52840 (Sense) conectado. Provavelmente será COM3 ou superior (**COM1** e **COM2** são geralmente reservadas para portas seriais de hardware). A porta serial do Seeed Studio XIAO nRF52840 (Sense) conectado geralmente contém parênteses que indicam **Seeed Studio XIAO nRF52840** para **Seeed Studio XIAO nRF52840** ou **Seeed Studio XIAO nRF52840 Sense** para **Seeed Studio XIAO nRF52840 Sense**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/port.png" alt="pir" width={550} height="auto" /></p>
 
@@ -430,11 +422,11 @@ Navegue até **Tools > Port** e selecione o nome da porta serial do Seeed Studio
 
 Depois de enviado, você verá o LED vermelho embutido piscando com um atraso de 1 segundo entre cada piscada. Isso significa que a conexão foi bem-sucedida e agora você pode explorar mais projetos com o Seeed Studio XIAO nRF52840 (Sense)!
 
-## Brincando com o LED embutido 3-em-um
+## Brincando com o LED 3 em 1 embutido
 
-O Seeed Studio XIAO nRF52840 (Sense) possui um **LED 3-em-um onboard** que é programável pelo usuário. Agora você aprenderá como controlar as cores RGB uma a uma usando o Arduino!
+O Seeed Studio XIAO nRF52840 (Sense) possui um **LED 3 em 1 onboard** que é programável pelo usuário. Agora você aprenderá como controlar as cores RGB uma a uma usando Arduino!
 
-Primeiro você precisa entender que o comportamento deste LED não é o usual quando controlado por código. O **LED acende (ON)** quando damos um **sinal LOW** e ele **apaga (OFF)** quando damos um **sinal HIGH**. Isso acontece porque esse LED é controlado por um anodo comum e só acenderá com um sinal de nível baixo.
+Primeiro você precisa entender que o comportamento deste LED não é o usual quando controlado por código. O **LED acende (ON)** quando fornecemos um **sinal LOW** e ele **apaga (OFF)** quando fornecemos um **sinal HIGH**. Isso acontece porque este LED é controlado por um ânodo comum e só acenderá com um sinal de nível baixo.
 
 Um código de exemplo seria:
 
@@ -448,17 +440,17 @@ void loop() {
 }
 ```
 
-Aqui, mesmo que **HIGH** seja usado, o LED ficará **OFF**. Você precisa substituir **HIGH** por **LOW** para ligar (**ON**) o LED.
+Aqui, mesmo que **HIGH** seja usado, o LED ficará **OFF**. Você precisa substituir **HIGH** por **LOW** para **ligar (ON)** o LED.
 
-Consulte o seguinte mapeamento de pinos dos LEDs e use-os em seus códigos:
+Consulte o mapeamento de pinos dos LEDs a seguir e use-os em seus códigos:
 
 - LED vermelho = LED_BUILTIN ou LED_RED
 - LED azul = LED_BLUE
 - LED verde = LED_GREEN
 
-## Verificação do Consumo de Energia
+## Verificação do consumo de energia
 
-O Seeed Studio XIAO nRF52840 tem baixo consumo de energia e aqui fornecemos um método para verificar. É altamente recomendado usar a biblioteca `Seeed nRF52 Boards` aqui.
+O Seeed Studio XIAO nRF52840 possui baixo consumo de energia e aqui fornecemos um método para verificá-lo. É altamente recomendado usar a biblioteca `Seeed nRF52 Boards` aqui.
 
 - **Passo 1.** Use o gravador **JLink** para gravar o [firmware do bootloader](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) para o Seeed Studio XIAO nRF52840 (Sense).
 
@@ -588,13 +580,13 @@ void loop() {
 Aqui, gostaríamos de expressar nossos agradecimentos especiais ao autor por fornecer o código → ***daCoder*** ←
 :::
 
-**Se você quiser saber mais informações detalhadas sobre este exemplo, clique [Aqui](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
+**Se você quiser saber mais detalhes sobre este exemplo, clique [aqui](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
 
-## Corrente de Carga da Bateria
+## Corrente de carregamento da bateria
 
-A corrente de carga da bateria é selecionável entre 50mA ou 100mA, onde você pode definir o **Pin13** como alto ou baixo para mudá-la para 50mA ou 100mA. A corrente de carga baixa é no modo de entrada configurado como HIGH LEVEL e a corrente de carga alta é no modo de saída configurado como LOW LEVEL.
+A corrente de carregamento da bateria pode ser selecionada como 50 mA ou 100 mA, onde você pode definir o **pino 13** como alto ou baixo para alterá-la para 50 mA ou 100 mA. A corrente de carregamento baixa é no modo de entrada configurado como HIGH LEVEL e a corrente de carregamento alta é no modo de saída configurado como LOW LEVEL.
 
-**Baixa Corrente de Carga**
+**Baixa corrente de carregamento**
 
 ```cpp
 void setup(){
@@ -605,7 +597,7 @@ digitalWrite(P0_13, HIGH);
 }
 ```
 
-**Alta Corrente de Carga**
+**Alta corrente de carregamento**
 
 ```cpp
 void setup(){
@@ -616,14 +608,14 @@ digitalWrite(P0_13, LOW);
 }
 ```
 
-## Acesse os Pinos SWD para Depuração e Regravação do Bootloader
+## Acessar os pinos SWD para depuração e regravação do bootloader
 
-**Hardware Necessário**
+**Hardware necessário**
 
 - [Seeed Studio XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
 - Jlink
 
-**Software Necessário**
+**Software necessário**
 
 É necessário baixar o software [Segger](https://www.segger.com/downloads/jlink/) no site.
 
@@ -635,40 +627,40 @@ digitalWrite(P0_13, LOW);
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD2.png" alt="pir" width={500} height="auto" /></p>
 
-- **Passo 3.** Clique em "Target" e então selecione "Connect".
+- **Passo 3.** Clique em "Target" e depois selecione "Connect".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD3.png" alt="pir" width={500} height="auto" /></p>
 
-- **Passo 4.** Arraste o arquivo bin ou [arquivo hex](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) para o software. Em seguida, pressione F4 e F5 nessa ordem. A regravação estará concluída.
+- **Passo 4.** Arraste o arquivo bin ou o [arquivo hex](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) para o software. Em seguida, pressione F4 e F5 nessa ordem. A regravação estará concluída.
 
 ## FAQ
 
-### P1: Minha Arduino IDE trava ao enviar código para a placa
+### P1: Meu Arduino IDE trava ao enviar código para a placa
 
 Você pode primeiro tentar **resetar** a placa clicando uma vez no "Reset Button". Se isso não funcionar, clique rapidamente duas vezes para entrar no **modo bootloader**. Se isso também não funcionar, desconecte a placa do PC e conecte-a novamente.
 
-### P2: Minha placa não está aparecendo como dispositivo serial na Arduino IDE
+### P2: Minha placa não está aparecendo como um dispositivo serial no Arduino IDE
 
 Você pode primeiro tentar **resetar** a placa clicando uma vez no "Reset Button". Se isso não funcionar, clique rapidamente duas vezes para entrar no **modo bootloader**.
 
 ### P3: Quais são as considerações ao usar o XIAO nRF52840 (Sense) para carregamento de bateria?
 
-Quando P0.14 (D14) desliga a função ADC em um nível alto de 3,3 V, P0.31 ficará no limite de tensão de entrada de 3,6 V. Há risco de queimar o pino P0.31.
+Quando P0.14 (D14) desativa a função ADC em um nível alto de 3,3 V, P0.31 ficará no limite de tensão de entrada de 3,6 V. Há risco de queimar o pino P0.31.
 
-Atualmente, para esse problema, recomendamos que os usuários não desliguem a função ADC do P0.14 (D14) nem configurem o P0.14 (D14) para nível alto durante o carregamento da bateria.
+Atualmente, para esse problema, recomendamos que os usuários não desativem a função ADC de P0.14 (D14) nem configurem P0.14 (D14) para nível alto durante o carregamento da bateria.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
-### P4: Como o LED verde se comporta quando é ligado?
+### P4: Como o LED verde se comporta quando o dispositivo é ligado?
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/nRF_RGB.png" alt="nRF52840 RGB Schematic" width="120" height="auto" /></p>
 
-O pino `P0.17` é usado para controlar o comportamento do LED verde indicador, indicando o status de carregamento:
+O pino `P0.17` é usado para controlar o comportamento do LED indicador verde, indicando o status de carregamento:
 
 - Nível baixo: quando o **carregamento** está em andamento.
 - Nível alto: quando a bateria **não está carregando** ou está **totalmente carregada**.
 
-Quando estiver em nível baixo, o LED `RED_CHG` acenderá.
+Quando está em nível baixo, o LED `RED_CHG` acenderá.
 
 Para mais detalhes, consulte o datasheet do PMIC: [BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) e o [datasheet do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf).
 
@@ -677,60 +669,67 @@ Para mais detalhes, consulte o datasheet do PMIC: [BQ25100](https://www.ti.com/l
 ### Seeed Studio XIAO nRF52840
 
 **Projeto de Hardware**
-- **📄[Datasheet]** [Datasheet Nordic nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[Datasheet]** [Datasheet Flash P25Q16H-UXH-IR](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **📄[Schematic]** [Esquemático do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **📄[Datasheet]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[Datasheet]** [Flash P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[Schematic]** [XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
 - **🗃️[Arquivos de Projeto de PCB]** 
-  - [Projeto KiCad do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
+  - [XIAO nRF52840 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
 - **🗃️[Bibliotecas de Projeto de PCB]** 
-  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de Pinagem]** [Folha de Pinagem do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de Pinagem]** [XIAO nRF52840 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx )
 
 **Projeto Mecânico**
-- **📄[Dimensões 2D]** [Dimensões do XIAO nRF52840 em DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip )
-- **📄[Dimensões 2D]** [Dados do Pad Inferior do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
+- **📄[Dimensões 2D]** [XIAO nRF52840 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip )
+- **📄[Dimensões 2D]** [XIAO nRF52840 Bottom Pad Data](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
 
 ### Seeed Studio XIAO nRF52840 Sense
 
 **Projeto de Hardware**
-- **📄[Datasheet]** [Datasheet Nordic nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[Datasheet]** [Datasheet Flash-P25Q16H-UXH-IR](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **📄[Datasheet]** [Datasheet do CI Carregador BQ25101](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
-- **📄[Datasheet]** [Datasheet do IMU LSM6DS3TR](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
-- **📄[Datasheet]** [Datasheet do Mic MSM261D3526H1CPM](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
-- **📄[Schematic]** [Esquemático do XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **📄[Datasheet]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[Datasheet]** [Flash-P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[Datasheet]** [Charger IC-BQ25101 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
+- **📄[Datasheet]** [IMU-LSM6DS3TR Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
+- **📄[Datasheet]** [Mic-MSM261D3526H1CPM Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
+- **📄[Schematic]** [XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
 - **🗃️[Arquivos de Projeto de PCB]** 
-  - [Projeto KiCad do XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
+  - [XIAO nRF52840 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
 - **🗃️[Bibliotecas de Projeto de PCB]** 
-  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de Pinagem]** [Folha de Pinagem do XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de Pinagem]** [XIAO nRF52840 Sense Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx )
 
 **Projeto Mecânico**
-- **📄[Dimensões 2D]** [Dimensões do XIAO nRF52840 Sense em DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
-- **📄[Dimensões 2D]** [Dados do Pad Inferior do XIAO nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
-- **📄[Modelo 3D]** [Modelo 3D do XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip )
+- **📄[Dimensões 2D]** [XIAO nRF52840 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+- **📄[Dimensões 2D]** [XIAO nRF52840 Bottom Pad Data](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
+- **📄[Modelo 3D]** [XIAO nRF52840 Sense 3D Model](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip )
 
 **Outros**
-- **📄[Documento]** [Relatório de Teste de Distância de Comunicação BLE do XIAO nRF52840 Sense](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf )
+- **📄[Documento]** [XIAO nRF52840 Sense BLE Communication Distance Test Report](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf )
 
 ### Seeed Studio XIAO nRF52840 (Sense) Plus
 
 **Projeto de Hardware**
-- **📄[Datasheet]** [Datasheet Nordic nRF52840](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[Datasheet]** [Datasheet Flash-P25Q16H-UXH-IR](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **🗃️[Schematic]** [Esquemático do XIAO nRF52840 (Sense) Plus](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip )
+- **📄[Datasheet]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[Datasheet]** [Flash-P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **🗃️[Schematic]** [XIAO nRF52840 (Sense) Plus Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip )
 - **🗃️[Arquivos de Projeto de PCB]** 
-  - [Projeto KiCad do XIAO nRF52840 (Sense) Plus](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus.zip )
-  - [Projeto KiCad da Base XIAO Plus (com pad inferior exposto)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
-  - [Projeto KiCad da Base XIAO Plus (sem pad inferior exposto)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
+  - [XIAO nRF52840 (Sense) Plus KiCad Project](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus.zip )
+  - [XIAO Plus Base （with bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
+  - [XIAO Plus Base （without bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
 - **🗃️[Bibliotecas de Projeto de PCB]** 
-  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 **Projeto Mecânico**
-- **🗃️[Dimensões 2D]** [Dimensões do XIAO nRF52840 Sense em DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+- **🗃️[Dimensões 2D]** [XIAO nRF52840 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
+  imageAlt="Request Quote for XIAO"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Recursos do Curso
 

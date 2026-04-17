@@ -9,7 +9,7 @@ last_update:
   date: 8/18/2024
   author: halyssonJr
 createdAt: '2024-07-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/xiao-rp2040-with-nuttx/
 ---
 

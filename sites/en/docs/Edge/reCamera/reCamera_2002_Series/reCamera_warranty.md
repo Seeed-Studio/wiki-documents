@@ -13,7 +13,7 @@ last_update:
   date: 11/8/2024
   author: Parker Hu
 createdAt: '2023-04-23'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/recamera_warranty/
 ---
 

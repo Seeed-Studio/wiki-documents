@@ -11,12 +11,11 @@ slug: /EN04_opendisplay
 sku: E25120101
 last_update:
   date: 01/13/2026
-  author: Tomasz/Allen
+  author: Tomasz/Allen/Jackson.li
 createdAt: '2026-01-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-03'
 url: https://wiki.seeedstudio.com/EN04_opendisplay/
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
@@ -61,7 +60,7 @@ The [OpenDisplay firmware](https://github.com/OpenDisplay-org/Firmware) enables:
 - **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
 
-### Why use OpenDisplay firmware?
+## Why use OpenDisplay firmware?
 
 The OpenDisplay firmware offers several advantages for custom e-paper display projects:
 
@@ -99,9 +98,6 @@ Connect the battery cable to the JST connector on the driver board, ensuring cor
 Double check the polarity, different batteries can have mixed wiring. If the red and black are misaligned, they can be easily removed from JST connector using a needle and then positioned correctly.
 :::
 
-
-
-## Installing OpenDisplay Firmware
 
 ### Web Installer Method (Recommended)
 
@@ -158,9 +154,9 @@ After installation and configuration, the display should show a startup screen. 
 
 
 
-## Uploading Images to Display
+### Uploading Images to Display
 
-### Using the Web Display Tool
+**Using the Web Display Tool**  
 
 **Step 1. OpenDisplay Tool**  
 Visit [OpenDisplay BLE Tester](https://opendisplay.org/firmware/display/index.html) in your browser.
@@ -198,7 +194,7 @@ You can create custom display content using:
 - Home Assistant integration
 
 
-### Home Assistant Integration
+## Home Assistant Integration
 :::tip
 To integrate with Home Assistant, you need a Bluetooth-capable setup:
 - **Home Assistant Green** (built-in Bluetooth)
@@ -431,6 +427,94 @@ If you are looking for a stylish way to mount your display, check out this 3D pr
   - Ensure power switch is in ON position
   - Test with different USB power source
 
+### Home Assistant & Integration Issues
+
+**Problem**: "Insufficient connection slots" error when adding devices via Raspberry Pi + HA + OpenDisplay
+- **Solution**:
+  - This error often occurs when the Raspberry Pi's built-in Bluetooth adapter reaches its concurrent connection limit.
+
+  ![Error: Insufficient connection slots](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/1.png)  
+  Example of the "Insufficient connection slots" error message.
+
+  - **Recommended Fix**: Use an ESP32 device (e.g., XIAO ESP32S3) as an **ESPHome Bluetooth Proxy**. This offloads the Bluetooth connection from the Raspberry Pi to the ESP32, providing more stable "slots" for your e-Paper displays.
+  - Refer to the [Using ESPHome Bluetooth Proxy](#using-esphome-bluetooth-proxy) section below for detailed setup instructions.
+
+## Using ESPHome Bluetooth Proxy
+
+If you encounter "Insufficient connection slots" when using Raspberry Pi with Home Assistant, setting up a Bluetooth Proxy is the most effective solution. This allows HA to use an external ESP32 device as a bridge to communicate with your e-Paper displays.
+
+### Prerequisites
+- An ESP32 device (e.g., XIAO ESP32S3)
+- ESPHome installed in your Home Assistant
+- A USB data cable to connect the ESP32 to your Raspberry Pi (for the first flash)
+
+### Step-by-Step Configuration
+
+1. **Connect the Device**: Plug your XIAO ESP32S3 into one of the USB ports on your Raspberry Pi.
+2. **Create New Configuration**: In the ESPHome dashboard, create a new device and use the following YAML configuration as a template:
+
+   ![ESPHome YAML Configuration](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/2.png)
+   ESPHome YAML Configuration for the Bluetooth Proxy.
+
+```yaml
+esphome:
+  name: esps3-proxy
+  friendly_name: ESP32S3 Bluetooth Proxy
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: esp-idf
+
+# 1. Enable detailed logging (useful for debugging)
+logger:
+  level: VERY_VERBOSE
+
+# 2. Core: Enable Bluetooth Tracker
+esp32_ble_tracker:
+  scan_parameters:
+    active: true
+
+# 3. Core: Enable Bluetooth Proxy
+# This allows HA to control the e-Paper display through this device
+bluetooth_proxy:
+  active: true
+
+api:
+  encryption:
+    key: "YOUR_ENCRYPTION_KEY" # Generate your own key
+
+ota:
+  - platform: esphome
+    password: "YOUR_OTA_PASSWORD" # Set your own password
+
+wifi:
+  ssid: "YOUR_WIFI_SSID"
+  password: "YOUR_WIFI_PASSWORD"
+
+# Recommended: Enable captive portal for fallback access
+captive_portal:
+```
+
+3. **Install/Flash**:
+     - Select **Install** -> **Plug into this computer** (or the device running ESPHome).
+ 
+     ![ESPHome Flashing Process](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/4.png)
+      Flashing the firmware to the XIAO ESP32S3 via the Raspberry Pi.
+
+    - If it's your first time, ESPHome may download the `esp-idf` toolchain. Ensure your environment has a stable internet connection to GitHub.
+    - Once compiled, the logs will show "WiFi connected" and Bluetooth scanning activities.
+
+4. **Integration**:
+     - Home Assistant will automatically discover the new Bluetooth Proxy.
+     - Once added, your e-Paper displays should now be discoverable through this proxy without the "insufficient slots" error.
+ 
+     ![Success: Bluetooth Proxy Connected](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png)
+      Home Assistant successfully discovers the Bluetooth Proxy.
+  
+      ![Success: e-Paper Display Added](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/6.png)
+      Test if the screen can display normally; if it does, the configuration is successful.
+
 ## Resources
 
 - **[GitHub]** [OpenDisplay Firmware Repository](https://github.com/OpenDisplay-org/Firmware)
@@ -455,3 +539,4 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

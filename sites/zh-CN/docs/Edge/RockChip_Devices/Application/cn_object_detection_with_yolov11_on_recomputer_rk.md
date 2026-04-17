@@ -1,18 +1,17 @@
 ---
 description: 本维基演示如何在 reComputer-RK 上使用 YOLOv11
 title: 在 reComputer-RK 上使用 YOLOv11 进行目标检测
-
 keywords:
   - RockChip
   - reComputer RK
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /object_detection_with_yolov11_on_recomputer_rk
 last_update:
-  date: 9/3/2026
+  date: 3/9/2026
   author: Nolan Chen
 no_comments: false
-createdAt: '2026-3-9'
-updatedAt: '2026-03-09'
+createdAt: 2026-3-9
+updatedAt: '2026-03-10'
 url: https://wiki.seeedstudio.com/cn/object_detection_with_yolov11_on_recomputer_rk/
 ---
 

@@ -12,7 +12,7 @@ last_update:
   date: 11/27/2025
   author: Xinrui Wu
 createdAt: '2025-11-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/use_the_motion-sensing_function_of_recamera_to_play_games/
 ---
 

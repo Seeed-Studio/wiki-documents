@@ -10,7 +10,7 @@ last_update:
   date: 2/15/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2024-07-16'
 url: https://wiki.seeedstudio.com/Project_Three-Analog_Input_v1b/
 ---
 <!-- ---

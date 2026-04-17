@@ -729,6 +729,24 @@ const sidebars = {
             }
           ],
         },
+        {
+          type: 'category',
+          label: 'Beacon Bluetooth SenseCAP',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/pt_BC01_Indoor_Bluetooth_Beacon',
+            'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/pt_BC02_Outdoor_Bluetooth_Beacon',
+            {
+              type: 'category',
+              label: 'BC03 Beacon Bluetooth para ambientes internos',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/pt_BC03_Indoor_Bluetooth_Beacon_Introduction',
+                'Sensor/SenseCAP/SenseCAP_Bluetooth_Beacon/BC03_Indoor_Bluetooth_Beacon/pt_BC03_Indoor_Bluetooth_Beacon_User_Guide',
+              ],
+            }
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'Rastreador de pets SenseCAP T1000-P',
@@ -1958,6 +1976,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_arm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_openclaw',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_picovoice',
                   ],
                 },
               ],
@@ -2066,6 +2085,41 @@ const sidebars = {
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_configuration',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'reSpeaker Flex',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_intro',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Aplicação',
+              items: [
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'reSpeaker Flex with Xiao',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao',
+              },
+              items: [
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_i2s_test',
+              ],
+            },
+            'Sensor/reSpeaker_flex/pt_reSpeaker_flex_python_control',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
@@ -2684,6 +2738,22 @@ const sidebars = {
           items: [
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/pt_R1225_introduction',
             'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/pt_R1225_Quick_Start',
+            {
+              type: 'category',
+              label: 'Cloud Platform Integration',
+              items: [
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/pt_Connecting_R1225_to_ChirpStack',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/pt_Connecting_R1225_to_TTN',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/pt_Connecting_R1225_to_AWS_IoT',
+              ],
+            },
+            /*{
+              type: 'category',
+              label: 'Application',
+              items: [
+                ,
+              ],
+            },*/
           ],
         },
         {
@@ -3839,6 +3909,7 @@ const sidebars = {
               items: [
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8822CE_Wireless_Module_for_Jetson',
+                'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8852BE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RM520N_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson_Xavier_AGX_H01_Driver_Installation',
@@ -3890,7 +3961,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
-                'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/pt_YOLOv26_Dual_USB_Camera_Image_Processing_System_on_Jetson',
               ]
             },
             // Generative AI
@@ -3939,8 +4010,10 @@ const sidebars = {
               type: 'category',
               label: 'IA física',
               items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Multiple_Reachy_Mini_Robots_with_a_Fleet_Dance_Console_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Local_Chatbot_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Local_Voice_LLM_for_Reachy_Mini',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Getting_Started_with_Jetson_Claw_on_Orin_Nano_NX_8GB',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_J501_Mini_StarAI_Viola_Fruit_Sorting',
@@ -4012,6 +4085,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/pt_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/pt_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/pt_How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/pt_Flash_JetPack_with_WSL2',
           ]
         }
@@ -4283,6 +4357,20 @@ const sidebars = {
           label: 'Efetuadores finais',
           items: [
             'Robotics/Robot_Kits/End_Effectors/pt_DM_Gripper',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Braço reBot',
+          items: [
+            {
+              type: 'category',
+              label: 'B601-DM',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_pinocchio',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Lerobot',
+              ]
+            }
           ]
         },
         {
@@ -4562,6 +4650,7 @@ const sidebars = {
             'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'Robotics/Robot_Sensor/Camera/pt_Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/pt_Orbbec_Depth_Camera',
+            'Robotics/Robot_Sensor/Camera/pt_realsense_3D_seg',
             'Robotics/Robot_Sensor/Camera/pt_ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/pt_Pycuvslam_On_reComputer',
             'Robotics/Robot_Sensor/Camera/pt_Orbbec_Gemini_335Lg',

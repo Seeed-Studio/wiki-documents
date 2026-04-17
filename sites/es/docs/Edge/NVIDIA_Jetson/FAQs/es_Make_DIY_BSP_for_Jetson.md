@@ -14,7 +14,7 @@ last_update:
   date: 01/04/2026
   author: Dayu
 createdAt: '2026-01-05'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-06'
 url: https://wiki.seeedstudio.com/es/make_diy_bsp_for_jetson/
 ---
 

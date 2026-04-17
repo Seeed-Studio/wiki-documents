@@ -12,7 +12,7 @@ last_update:
   date: 12/26/2024
   author: Jason
 createdAt: '2025-01-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_rs485_vision_ai_cam/
 ---
 

@@ -7,7 +7,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-12-11'
 url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -101,9 +101,16 @@ nodenum の下4桁は、meshtastic アプリによって発見されるデバイ
 ### SX-1262 への接続
 
 SX-1262 は B2B インターフェースを介して Xiao ESP32-S3 に接続できます。SX-1262 は SPI を使用して Xiao ESP32-S3 と通信します。
+
+以下の図は XIAO ESP32S3 と Wio-SX1262 間の B2B ピンマッピングを示しています。
+
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
+</div>
 :::warning
 互換性のある SX-1262 はキット内でのみ購入できます。
 :::
+
 ## Wio Tracker T1000-E との通信
 
 **ステップ 1**. [wiki](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#get-started-1) に従って Wio Tracker T1000-E を接続します。

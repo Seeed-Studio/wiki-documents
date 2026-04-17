@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1003 es una pantalla de papel electrónico monocromático de 10,3 pulgadas con soporte táctil y de código abierto, que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con una duración de batería de hasta 6 meses.
+description: reTerminal E1003 es una pantalla de papel electrónico monocromática de código abierto de 10,3 pulgadas que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con compatibilidad de interacción táctil en el firmware HMI v1.1.2.
 sku: 100090602
 title: Introducción a reTerminal E1003
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
@@ -7,8 +7,10 @@ slug: /getting_started_with_reterminal_e1003
 last_update:
   date: 3/19/2026
   author: Jackson.Li
+createdAt: '2026-03-18'
+url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003/
+updatedAt: '2026-03-31'
 ---
-
 # Introducción a reTerminal E1003
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:1000, height:'auto'}}/></div>
@@ -21,42 +23,47 @@ last_update:
 
 ## Introducción
 
-reTerminal E1003 es una pantalla de papel electrónico monocromático de 10,3 pulgadas con soporte táctil y de código abierto, que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con una duración de batería de hasta 6 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz HMI SenseCraft sin código para una creación de paneles de control sin esfuerzo, y al mismo tiempo es compatible con Home Assistant (a través de ESPHome y Open Display), Arduino y PlatformIO para un desarrollo adicional. Ya sea para visualización y control de paneles de hogar inteligente, pantallas de información para oficina o proyectos educativos, este dispositivo listo para usar con pantalla táctil ofrece imágenes impresionantes y una personalización flexible para satisfacer todas tus necesidades.
+reTerminal E1003 es una pantalla de papel electrónico monocromática de código abierto de 10,3 pulgadas que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con una duración de batería de hasta 6 meses. La interacción táctil es actualmente compatible con el firmware SenseCraft HMI v1.1.2. Impulsado por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz de usuario sin código SenseCraft HMI para una creación de paneles de control sin esfuerzo, y también admite Arduino y PlatformIO para un desarrollo adicional. El soporte para Home Assistant (a través de ESPHome y Open Display) está previsto para una versión futura. Ya sea para visualización y control de paneles de hogar inteligente, pantallas de información de oficina o proyectos educativos, este dispositivo listo para usar ofrece imágenes impresionantes y una personalización flexible para satisfacer todas tus necesidades.
 
-## Características
+:::tip
+La interacción táctil para reTerminal E1003 es compatible a partir del firmware SenseCraft HMI v1.1.2.
+El soporte de bibliotecas relacionadas con el tacto está previsto para una futura versión de código abierto, proporcionando mayor flexibilidad para personalizar los paneles. Se compartirán más actualizaciones pronto.
 
-- **Claridad de hasta 16 niveles de escala de grises:** Con 16 niveles de escala de grises de gran calidad, cada detalle de texto y gráficos se representa con una nitidez y claridad excepcionales.
+
+El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará disponible en una versión futura.
+:::
+### Características
+
+- **Claridad de hasta 16 niveles de escala de grises:** Con 16 niveles de exquisita escala de grises, cada detalle de texto y gráficos se representa con una nitidez y claridad excepcionales.
 - **Consumo de energía ultrabajo:** La pantalla de papel electrónico consume energía solo durante las actualizaciones, lo que se traduce en una mayor duración de la batería y una mayor eficiencia energética.
 - **Compatibilidad con SenseCraft HMI:** La pantalla reTerminal E Serie es compatible con SenseCraft HMI mediante el firmware predeterminado.
 - **Amplia gama de aplicaciones:** Admite refresco de alta velocidad para actualizaciones de baja latencia con una interfaz paralela TTL (multilínea, alto rendimiento), lo que la convierte en una opción ideal para paneles de control de hogar inteligente.
-- **Pantalla de papel electrónico táctil de alta resolución:** La pantalla de papel electrónico monocromático de 10,3 pulgadas y 1404×1872 se combina con una pantalla táctil integrada y receptiva para una interacción intuitiva a pantalla completa.
-- **Adaptación a necesidades de decoración:** Sin cables para una mayor libertad; admite montaje en pared y colocación sobre escritorio, con cambio flexible entre orientación vertical y horizontal.
+- **Pantalla de papel electrónico táctil de alta resolución:** La pantalla de papel electrónico monocromática de 10,3 pulgadas y 1404×1872 se combina con una pantalla táctil integrada y receptiva, con interacción táctil actualmente compatible con el firmware SenseCraft HMI v1.1.2.
+- **Adaptación a las necesidades de decoración:** Sin cables para una mayor libertad; admite montaje en pared y colocación sobre escritorio, con cambio flexible entre orientación vertical y horizontal.
 
-:::note
-La plataforma SenseCraft HMI se encuentra ahora en fase de prueba beta y las funciones se mejorarán continuamente. En la actualidad, existe un límite en el número de generaciones de IA y de generación de interfaces. En el futuro, el lienzo de SenseCraft HMI admitirá gradualmente la configuración de interacción táctil. Mantente atento.
-:::
 
-## Especificación
+
+### Especificación
 
 | Elemento | Descripción |
 | :--- | :--- |
 | **Nombre del producto** | reTerminal E1003 |
 | **Procesador** | ESP32-S3 con 8MB PSRAM |
-| **Almacenamiento** | 32MB Flash, compatible con tarjeta Micro SD |
+| **Almacenamiento** | 32MB Flash, admite tarjeta Micro SD |
 | **Pantalla** | 10,3" Monocromática/ 16 niveles de escala de grises |
 | **Resolución** | 1404x1872 píxeles |
-| **Tarjeta Micro SD** | Soporta como máximo tarjeta SD de 32GB, formato FAT32 |
+| **Tarjeta Micro SD** | Admite como máximo tarjeta SD de 32GB, formato FAT32 |
 | **Conectividad inalámbrica** | Wi-Fi 2,4GHz 802.11 b/g/n, Bluetooth 5.0 |
 | **Sensores** | Sensores de temperatura y humedad |
 | **Micrófono** | Reservado para aplicaciones de interacción por voz |
 | **Audio** | Zumbador para alerta sonora |
 | **Batería** | 3000mAh |
 | **Entrada de alimentación** | USB-C 5V/1A |
-| **Compatibilidad de software** | El firmware predeterminado es compatible con SenseCraft HMI(https://sensecraft.seeed.cc/hmi/)<br />Compatible con la plataforma de desarrollo Arduino/PlatformIO |
+| **Compatibilidad de software** | El firmware predeterminado admite SenseCraft HMI(https://sensecraft.seeed.cc/hmi/)<br />Admite la plataforma de desarrollo Arduino/PlatformIO |
 | **Temperatura de trabajo** | 0-40°C |
 | **Dimensiones** | 224mm*187mm*18.6mm |
 
-## Descripción del hardware
+### Descripción del hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -73,22 +80,22 @@ La plataforma SenseCraft HMI se encuentra ahora en fase de prueba beta y las fun
 11. **Soporte**
 12. **Tornillo de montaje del soporte**
 
-## Aplicaciones
+### Aplicaciones
 
-- **Paneles de automatización del hogar:** Muestra datos en tiempo real del hogar inteligente como temperatura, humedad y calidad del aire mediante Home Assistant.
-- **Marco de fotos electrónico monocromático de bajo consumo:** Con SenseCraft HMI o la App, puedes subir fácilmente una serie de fotos desde tu álbum de forma remota en línea. Combinado con una gran pantalla de tinta electrónica monocromática de alta resolución, logra una visualización de imágenes de ultra bajo consumo, sin tener que preocuparte más por la duración de la batería.
-- **Pantallas inteligentes para oficina:** Muestra la disponibilidad de salas de reuniones, horarios de oficina o indicaciones de dirección en pantallas de papel electrónico de bajo consumo y siempre encendidas.
+- **Paneles de automatización del hogar:** Muestra datos en tiempo real del hogar inteligente como temperatura, humedad y calidad del aire mediante Home Assistant (el soporte del controlador ESPHome para E1003 está previsto para una versión futura).
+- **Marco de fotos electrónico monocromático de bajo consumo:** Con SenseCraft HMI o la App, puedes subir fácilmente una serie de fotos de tu álbum de forma remota en línea. Combinado con una gran pantalla de tinta electrónica monocromática de alta resolución, logra una visualización de imágenes de ultra bajo consumo, sin tener que preocuparte más por la duración de la batería.
+- **Pantallas inteligentes para oficina:** Muestra la disponibilidad de salas de reuniones, horarios de oficina o indicaciones direccionales en pantallas de papel electrónico de bajo consumo y siempre encendidas.
 - **Pantallas de información para comercios y espacios públicos:** Señalización de papel electrónico de bajo consumo para menús, horarios o indicadores de ocupación con larga duración de batería.
 
 ## Introducción a SenseCraft HMI
 
-El reTerminal E1003 viene preinstalado con firmware que es compatible con **SenseCraft HMI**, una plataforma sin código que te permite diseñar y desplegar paneles personalizados sin esfuerzo.
+El reTerminal E1003 viene preinstalado con firmware que admite **SenseCraft HMI**, una plataforma sin código que te permite diseñar y desplegar paneles personalizados sin esfuerzo.
 
-### Paso 1. Encendido y configuración de red
+### Paso 1. Encender y configurar la red
 
 1. Enciende el **Botón de encendido** para encender el reTerminal E1003.
 2. Usa tu smartphone para conectarte al punto de acceso del dispositivo (modo AP) para configurar las credenciales de Wi-Fi.
-3. La pantalla mostrará un código QR de "Network Configuration" o utiliza el navegador para abrir la página 192.168.4.1.
+3. La pantalla mostrará un código QR de "Network Configuration" o usa el navegador para abrir la página 192.168.4.1.
 4. Una vez conectado a Internet, el dispositivo mostrará un **Device Code** o **Binding QR Code**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/3.jpg" style={{width:800, height:'auto'}}/></div>
@@ -98,7 +105,7 @@ El reTerminal E1003 viene preinstalado con firmware que es compatible con **Sens
 1. Visita la [Plataforma SenseCraft HMI](https://sensecraft.seeed.cc/) en el navegador de tu ordenador.
 2. Inicia sesión en tu cuenta (o crea una si aún no la tienes).
 3. Ve a la sección **Device Management** y haz clic en **Add Device**.
-4. Introduce el **Device Code** que se muestra en la pantalla de tu reTerminal E1003 para completar el proceso de vinculación.
+4. Introduce el **Device Code** que aparece en la pantalla de tu reTerminal E1003 para completar el proceso de vinculación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -118,13 +125,74 @@ El reTerminal E1003 viene preinstalado con firmware que es compatible con **Sens
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
+## Solución de problemas
+
+### P1: El dispositivo no enciende
+
+- Asegúrate de que el interruptor de encendido esté en la posición ON
+- Conecta el cable USB-C para cargar el dispositivo
+- Comprueba si el LED rojo está siempre encendido (indicando que está cargando)
+- Si usas alimentación por batería, asegúrate de que la batería esté correctamente conectada y cargada
+
+### P2: No se puede conectar a la red Wi-Fi
+
+- Verifica que estés introduciendo la contraseña de Wi-Fi correcta
+- Asegúrate de que tu red Wi-Fi esté operativa
+- Comprueba si tu router Wi-Fi admite redes de 2,4GHz (5GHz no es compatible)
+- Intenta colocar el dispositivo más cerca de tu router Wi-Fi
+
+### P3: La pantalla no se actualiza
+
+- Pulsa el botón de refresco para activar una actualización manualmente
+- Verifica que el dispositivo esté conectado a la red Wi-Fi (sin icono de desconexión en la esquina)
+- Comprueba tu cuenta de SenseCraft para asegurarte de que el panel esté correctamente desplegado
+- Si el problema persiste, intenta reiniciar el dispositivo
+- Si el dispositivo sigue sin responder después de reiniciarlo, vuelve a grabar el firmware correspondiente en la plataforma SenseCraft HMI y comprueba si el dispositivo puede refrescarse con normalidad
+
+### P4: Se perdió la conexión de red
+
+- El dispositivo intentará reconectarse automáticamente a las redes conocidas
+- Cuando se vuelva a conectar, el icono de desconexión de Wi-Fi desaparecerá
+- Si no puede reconectarse, sigue el procedimiento de restablecimiento de red anterior
+
+### P5: No se puede encontrar el puerto serie (COM) en macOS
+
+Si tu Mac no reconoce el reTerminal a través de USB, sigue esta guía compacta para instalar el controlador CH340/CH340K:
+
+**Paso 1. Descargar e instalar el controlador**
+Descarga el controlador desde la [página oficial de WCH](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) y ejecuta `CH34xVCPDriver.pkg`. 
+:::tip
+Si macOS bloquea la instalación, ve a **System Settings → Privacy & Security**, desplázate para encontrar el software WCH bloqueado y haz clic en **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Paso 2. Habilitar la extensión del controlador (crítico)**
+Abre la app **CH34xVCPDriver** desde Launchpad, haz clic en **Install**, luego ve a **System Settings → General → Login Items & Extensions → Driver Extensions**. Activa **CH34xVCPDriver Extensions** a **ON** (azul).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Paso 3. Conectar y verificar**
+Asegúrate de que el **interruptor de encendido del dispositivo esté en ON** y utiliza un **cable USB‑C de datos** (no solo de carga). Abre la Terminal y ejecuta:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+Si ves la ruta del dispositivo en la salida, el controlador está instalado correctamente y tu reTerminal está listo para usarse.
+
 ## Recursos
 
 - [Esquemático de reTerminal E1003 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/202004522_reTerminal_E1003_V1.0_SCH_251231.pdf)
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

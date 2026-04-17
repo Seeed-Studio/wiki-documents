@@ -19,7 +19,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/visual_trigger_and_ai_flash/
 ---
 

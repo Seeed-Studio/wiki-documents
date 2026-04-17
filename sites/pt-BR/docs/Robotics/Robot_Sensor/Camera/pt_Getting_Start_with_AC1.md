@@ -18,7 +18,7 @@ last_update:
   date: 2025-09-18T00:00:00.000Z
   author: Youjiang
 createdAt: '2025-09-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/ac1/
 ---
 

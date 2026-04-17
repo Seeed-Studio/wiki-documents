@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2025
   author: jianjing Huang
 createdAt: '2025-05-27'
-updatedAt: '2026-03-03'
+updatedAt: '2025-10-11'
 url: https://wiki.seeedstudio.com/ja/Grove-5-Way_Switch/
 ---
 

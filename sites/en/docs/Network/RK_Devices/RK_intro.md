@@ -11,7 +11,7 @@ last_update:
   date: 12/14/2023
   author: Kasun Thushara
 createdAt: '2023-12-18'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-18'
 url: https://wiki.seeedstudio.com/Rockchip_network_solutions/
 ---
 

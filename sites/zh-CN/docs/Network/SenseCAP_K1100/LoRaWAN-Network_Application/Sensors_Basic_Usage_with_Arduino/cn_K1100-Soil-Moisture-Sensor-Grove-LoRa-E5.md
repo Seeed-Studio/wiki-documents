@@ -9,7 +9,7 @@ last_update:
   date: 1/13/2023
   author: shuxu hu
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5/
 ---
 # Grove 土壤湿度传感器

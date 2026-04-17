@@ -11,7 +11,7 @@ last_update:
   date: 12/4/2024
   author: Youjiang
 createdAt: '2024-01-19'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_A608_Flash_System/
 ---
 
@@ -356,7 +356,7 @@ Após a gravação, ligue o dispositivo Jetson novamente e faça login no sistem
 - [Arquivos CAD do A608](https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608_V1.2.zip)
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar orçamento personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

@@ -10,7 +10,7 @@ last_update:
   date: 4/22/2025
   author: carla guo
 createdAt: '2023-01-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-12'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Barometer-High-Accuracy/
 ---
 

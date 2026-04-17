@@ -7,7 +7,7 @@ last_update:
   date: 12/16/2024
   author: Joshua Lee
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2025-09-03'
 url: https://wiki.seeedstudio.com/es/Wakeup_reTerminal_LCD_after_sleep/
 ---
 

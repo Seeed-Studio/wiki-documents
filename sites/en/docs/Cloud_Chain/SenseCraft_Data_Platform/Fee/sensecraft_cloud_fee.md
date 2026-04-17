@@ -9,10 +9,10 @@ slug: /sensecraft-fee/sensecraft-cloud-fee
 aliases:
   - /sensecraft_cloud_fee
 last_update:
-  date: 8/16/2024
-  author: Jessie
+  date: 4/10/2026
+  author: Janet
 createdAt: '2024-08-16'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/sensecraft-fee/sensecraft-cloud-fee/
 ---
 
@@ -33,6 +33,7 @@ SenseCaft cloud service is based on hardware devices using the LoRaWAN IoT low-p
 |Eight In One Compact Weather Station|182 days|$0.99|$2.97|$11.88|
 |PH Sensor|182 days|$0.99|$2.97|$11.88|
 |T1000-A/B Tracker|90 days|$0.99|$2.97|$11.88|
+|T2000-A/B/C Tracker|90 days|$0.99|$2.97|$11.88|
 
 :::note
 Billing starts after the device is bound to the platform. If the device is unbound or the device organization is modified during the billing cycle, billing will not be interrupted and will be charged based on the device dimension.

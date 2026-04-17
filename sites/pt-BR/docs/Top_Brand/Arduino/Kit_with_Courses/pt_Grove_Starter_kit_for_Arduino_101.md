@@ -10,7 +10,7 @@ last_update:
   date: 2/17/2023
   author: jianjing Huang
 createdAt: '2023-02-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-13'
 url: https://wiki.seeedstudio.com/pt-br/Grove_Starter_kit_for_Arduino_101/
 ---
 

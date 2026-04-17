@@ -10,7 +10,7 @@ last_update:
   date: 06/28/2023
   author: Citric
 createdAt: '2024-03-17'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/grove_gesture_paj7660/
 ---
 

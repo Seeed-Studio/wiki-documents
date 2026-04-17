@@ -6,7 +6,7 @@ last_update:
   date: 2023/6/30
   author: cheng.tang
 createdAt: '2025-08-07'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-07'
 url: https://wiki.seeedstudio.com/cn/pin_definition_error/
 ---
 当您遇到此错误时，请将您的 **Seeed SAMD** 开发板板载包更新到最新版本。

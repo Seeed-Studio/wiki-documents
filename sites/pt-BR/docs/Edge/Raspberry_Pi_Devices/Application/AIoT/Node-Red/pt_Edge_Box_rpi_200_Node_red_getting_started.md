@@ -11,7 +11,7 @@ last_update:
   date: 05/14/2024
   author: Kasun Thushara
 createdAt: '2024-05-14'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/Edge-Box-Getting-Started-with-Node-Red/
 ---
 ## Introdução

@@ -11,7 +11,7 @@ last_update:
   date: 11/19/2025
   author: Xinrui Wu
 createdAt: '2025-11-21'
-updatedAt: '2026-03-03'
+updatedAt: '2025-11-21'
 url: https://wiki.seeedstudio.com/es/getting_started_for_n8n_with_recamera/
 ---
 # Introducción a n8n con reCamera

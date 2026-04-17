@@ -11,7 +11,7 @@ last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-09-03'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/es/recomputer_r1100_intro/
 ---
 
@@ -738,7 +738,7 @@ El **tiempo de funcionamiento del UPS** depende de la **carga del sistema**. A c
 ## Recursos
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="Solicitar presupuesto personalizado"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}

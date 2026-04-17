@@ -271,7 +271,7 @@ module.exports = (async () => {
             rehypePlugins: [rehypeKatex],
 
             // Edit link 先保持正确
-            editUrl: 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/en/docs/',
+            editUrl: 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/sites/en/',
           },
 
 

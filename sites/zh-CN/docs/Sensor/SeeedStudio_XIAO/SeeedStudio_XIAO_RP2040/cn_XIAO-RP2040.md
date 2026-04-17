@@ -9,18 +9,17 @@ sku: 102010428, 100045204
 last_update:
   date: 1/11/2023
   author: shuxu hu
-createdAt: '2023-11-27'
-updatedAt: '2026-03-03'
+createdAt: '2023-01-16'
+updatedAt: '2026-03-31'
 url: https://wiki.seeedstudio.com/cn/XIAO-RP2040/
 ---
-
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Seeed Studio XIAO RP2040 入门指南
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
 
-Seeed Studio XIAO RP2040 与 Seeed Studio XIAO SAMD21 一样小巧，但性能更强大。一方面，它搭载了强劲的双核 RP2040 处理器，可灵活调节时钟频率，最高运行至 133 MHz，是一款低功耗微控制器。Seeed Studio XIAO RP2040 还集成了 264KB SRAM 和 2MB 片上 Flash 存储，可提供更多空间用于程序存储和运行。另一方面，这块小板在处理性能方面表现出色，同时功耗更低。  
+Seeed Studio XIAO RP2040 与 Seeed Studio XIAO SAMD21 一样小巧，但性能更强。一方面，它搭载了强大的双核 RP2040 处理器，时钟频率最高可灵活运行至 133 MHz，是一款低功耗微控制器。在 Seeed Studio XIAO RP2040 上还集成了 264KB SRAM 和 2MB 片上 Flash 存储，可提供更多空间用于程序存储和运行。另一方面，这块小板在处理性能方面表现良好，同时功耗更低。  
 总的来说，它被设计成拇指大小（21x17.8mm）的微型尺寸，可用于可穿戴设备和各类小型项目。
 
 Seeed Studio XIAO RP2040 上共有 14 个 GPIO 引脚，其中包括 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。
@@ -29,7 +28,7 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -38,7 +37,7 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 - 强大的 MCU：双核 ARM Cortex M0+ 处理器，时钟频率最高可达 133 MHz
 - 丰富的片上资源：264KB SRAM，2MB 片上 Flash 存储
 - 灵活的兼容性：支持 Micropython/Arduino/CircuitPython
-- 简化项目操作：面包板友好 & SMD 设计，背面无元器件
+- 简化项目操作：面包板友好 & 贴片设计，背面无元器件
 - 小巧尺寸：拇指大小（21x17.8mm），适用于可穿戴设备和小型项目
 - 多种接口：11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口
 
@@ -51,11 +50,11 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 | **RAM** | 264KB SRAM |
 | **Flash** | 2MB 片上 Flash |
 | **接口** | GPIO 引脚 x14<br/>数字引脚 x11<br/>模拟引脚 x4<br/>I2C x1<br/>UART x1<br/>SPI x1<br/>PWM x11 |
-| **板载器件** | 用户 LED（三色）x1<br/>电源 LED x1<br/>RGB LED x1<br/>复位按钮 x1<br/>Boot 按钮 x1 |
+| **板载资源** | 用户 LED（三色）x1<br/>电源 LED x1<br/>RGB LED x1<br/>复位按钮 x1<br/>Boot 按钮 x1 |
 | **无线连接** | / |
 | **电源** | 输入电压（Type-C）：5V<br/>输入电压（BAT）：5V |
 | **低功耗模式（典型）** | / |
-| **软件兼容性** | Arduino, PlatformIO, MicroPython, CircuitPython, tinyGo, Rust, Zephyr, [Exhibition for XIAO Series \| Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/xiao_topic_page/) |
+| **软件兼容性** | Arduino、PlatformIO、MicroPython、CircuitPython、tinyGo、Rust、Zephyr、[XIAO 系列展示 \| Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/xiao_topic_page/) |
 | **工作温度** | -20°C-70°C |
 | **尺寸** | 21x17.8mm |
 | **产品变体** | [Seeed Studio XIAO RP2040 3PCS Pack \| Save 10% for tiny Mic...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-3PCS-p-5942.html)<br/>[Seeed Studio XIAO RP2040 Pre-Soldered \| Plug-and-Play mini ...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Pre-Soldered-p-6333.html) |
@@ -70,7 +69,7 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 MCU 的工作电压为 3.3V。如果接入通用 I/O 引脚的电压高于 3.3V，可能会导致芯片损坏。
 
 对于电源引脚：
-内置的 DC-DC 转换电路可以将 5V 电压转换为 3.3V，从而允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
+内置的 DC-DC 转换电路可以将 5V 电压转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
 
 XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type-C，否则可能存在安全风险。
 
@@ -83,17 +82,17 @@ XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type
 | 5V              | VBUS        |                                       | 电源输入/输出                   |
 | GND             |             |                                       |                                      |
 | 3V3             | 3V3_OUT     |                                       | 电源输出                         |
-| D0              | Analog      | GPIO26                                   | GPIO, ADC                            |
-| D1              | Analog      | GPIO27                                   | GPIO, ADC                            |
-| D2              | Analog      | GPIO28                                   | GPIO, ADC                            |
-| D3              | Analog      | GPIO29                                   | GPIO, ADC                            |
-| D4              | SDA         | GPIO6                                    | GPIO, I2C 数据                       |
-| D5              | SCL         | GPIO7                                    | GPIO, I2C 时钟                      |
-| D6              | TX          | GPIO0                                    | GPIO, UART 发送                  |
-| D7              | RX,CSn      | GPIO1                                    | GPIO, UART 接收,CSn               |
-| D8              | SCK         | GPIO2                                    | GPIO, SPI 时钟                      |
-| D9              | MISO        |GPIO4                                    | GPIO, SPI 数据                       |
-| D10             | MOSI        | GPIO3                                    | GPIO, SPI 数据                       |
+| D0              | 模拟      | GPIO26                                   | GPIO，ADC                            |
+| D1              | 模拟      | GPIO27                                   | GPIO，ADC                            |
+| D2              | 模拟      | GPIO28                                   | GPIO，ADC                            |
+| D3              | 模拟      | GPIO29                                   | GPIO，ADC                            |
+| D4              | SDA         | GPIO6                                    | GPIO，I2C 数据                       |
+| D5              | SCL         | GPIO7                                    | GPIO，I2C 时钟                      |
+| D6              | TX          | GPIO0                                    | GPIO，UART 发送                  |
+| D7              | RX,CSn      | GPIO1                                    | GPIO，UART 接收，CSn               |
+| D8              | SCK         | GPIO2                                    | GPIO，SPI 时钟                      |
+| D9              | MISO        |GPIO4                                    | GPIO，SPI 数据                       |
+| D10             | MOSI        | GPIO3                                    | GPIO，SPI 数据                       |
 | Reset           |             | RUN                                   | RUN                                  |
 | Boot            |             | RP2040_BOOT                           | 进入 Boot 模式                      |
 | CHARGE_LED      |             | VCC_3V3                               | CHG-LED_Red                          |
@@ -106,7 +105,7 @@ XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type
 
 有时在用户烧录程序失败时，Seeed Studio XIAO RP2040 的端口可能会消失。我们可以通过以下操作来解决这个问题：
 
-- 长按 "B" 按钮。
+- 长按 “B” 按钮。
 - 将 Seeed Studio XIAO PR2040 连接到电脑。
 - 电脑上会出现一个磁盘驱动器。
 
@@ -117,9 +116,9 @@ XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type
 如果你想复位 Seeed Studio XIAO RP2040，请执行以下步骤：
 
 - 将 Seeed Studio XIAO RP2040 连接到电脑。
-- **按下** "R" 引脚 **一次**。
+- **按下 “R” 引脚一次**。
 
-请注意：板载可编程单色 LED（红、蓝、绿）的行为与 Arduino 上的是相反的。在 Seeed Studio XIAO RP2040 上，需要将引脚拉低才能点亮。
+请注意：板载可编程单色 LED（红、蓝、绿）的行为与 Arduino 上的相反。在 Seeed Studio XIAO RP2040 上，需要将引脚拉低才能点亮。
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" alt="pir" width={600} height="auto" /></p>
@@ -135,16 +134,16 @@ XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type
 - **📄[数据手册]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
 - **📄[原理图]** [XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
 - **🗃️[PCB 设计文件]** 
-  - [ XIAO RP2040 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip )
-  - [XIAO RP2040 Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
+  - [ XIAO RP2040 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.3_SCH&PCB_20260304.zip )
+  - [XIAO RP2040 Eagle 项目](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
 - **🗃️[PCB 设计库]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[引脚图]** [XIAO RP2040 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
+  - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[引脚图]** [XIAO RP2040 引脚说明表](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
 **机械设计**
-- **📄[2D 尺寸]** [XIAO RP2040 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
-- **📄[3D 模型]** [ XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
+- **📄[2D 尺寸图]** [XIAO RP2040 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[3D 模型]** [ XIAO RP2040 3D 模型](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -157,11 +156,11 @@ XIAO RP2040 目前仅支持电池供电，当连接电池时不能再连接 Type
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[电子书]** [XIAO：强大性能，小巧主板——精通 Arduino 与 TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种交流渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

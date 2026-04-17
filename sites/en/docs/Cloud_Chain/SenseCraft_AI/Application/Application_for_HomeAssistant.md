@@ -8,16 +8,14 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
   - /connect_vision_ai_v2_to_ha
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 01/10/2024
   author: Citric
 createdAt: '2024-01-11'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/sensecraft-ai/application/application-for-homeassistant/
 ---
-
-
 # Connect Grove Vision AI V2 to Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>

@@ -1,6 +1,6 @@
 ---
-description: Dispositivos de Borde Impulsados por Raspberry Pi
-title: Dispositivos de Borde Impulsados por Raspberry Pi
+description: Dispositivos de borde impulsados por Raspberry Pi
+title: Dispositivos de borde impulsados por Raspberry Pi
 keywords:
   - Raspberry pi
   - reComputer R
@@ -18,7 +18,7 @@ last_update:
   date: 11/7/2025
   author: Nolan Chen
 createdAt: '2023-12-18'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-08'
 url: https://wiki.seeedstudio.com/es/raspberry-pi-devices/
 ---
 
@@ -30,16 +30,16 @@ Bienvenido al mundo de vanguardia de los dispositivos impulsados por Raspberry P
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/raspberry-pi" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🔍 Explorar más</font></span></strong></a></div>
 
-## Familia de Productos
+## Familia de productos
 
 ### Computadoras Edge AI
 Seeed Studio **reComputer Industrial R & AI R Serie** – Controladores Edge AI robustos y del tamaño de la palma de la mano, diseñados para IIoT y automatización inteligente
 
 Impulsadas por el **Raspberry Pi 5 / Compute Module 5** de alto rendimiento y combinadas con un **acelerador de IA Hailo-8**, las líneas reComputer Industrial R y AI R ofrecen hasta **26 TOPS** de potencia de cómputo para análisis de visión multicanal en tiempo real e inferencia de aprendizaje profundo directamente en el borde.  
 
-La conectividad de grado industrial viene de serie: doble Ethernet Gigabit, **RS-485/RS-232 aislados, DI/DO multicanal, además de ranuras M.2 y mini-PCIe que te permiten añadir 4G/5G, LoRa® o SSD NVMe** en segundos. Un chasis sin ventilador y totalmente metálico garantiza un funcionamiento silencioso y a prueba de polvo desde **–20 °C hasta 60 °C**, mientras que el watchdog de hardware y el supercondensador UPS opcional mantienen vivas las tareas de misión crítica 24/7.  
+La conectividad de grado industrial viene de serie: doble Ethernet Gigabit, **RS-485/RS-232 aislados, DI/DO multicanal, además de ranuras M.2 y mini-PCIe que te permiten añadir 4G/5G, LoRa® o SSD NVMe** en segundos. Un chasis sin ventilador y totalmente metálico garantiza un funcionamiento silencioso y a prueba de polvo de **–20 °C a 60 °C**, mientras que el watchdog de hardware y el supercondensador UPS opcional mantienen vivas las tareas de misión crítica 24/7.  
 
-Listas para montaje en carril DIN o en pared, la serie reComputer R se integra sin esfuerzo en **edificios inteligentes, celdas de visión artificial de Industria 4.0, armarios de control de activos remotos** y redes distribuidas de análisis de vídeo, convirtiendo protocolos, recopilando datos y ejecutando modelos de IA donde ocurre la acción.
+Listas para montaje en carril DIN o en pared, las series reComputer R se integran sin esfuerzo en **edificios inteligentes, celdas de visión artificial de Industria 4.0, armarios de control de activos remotos** y redes distribuidas de análisis de vídeo, convirtiendo protocolos, recopilando datos y ejecutando modelos de IA donde ocurre la acción.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_AI_Computers.JPG" style={{width:1000, height:'auto'}}/></div>
 
@@ -48,7 +48,7 @@ Listas para montaje en carril DIN o en pared, la serie reComputer R se integra s
     <thead>
       <tr>
         <th>Nombre</th>
-        <th>reComputer AI Industrial R22xx-12</th>
+        <th>reComputer Industrial R22xx-12</th>
         <th>reComputer Industrial R20xx-12</th>
         <th>reComputer Industrial R21xx-12</th>
         <th>reComputer AI R21xx-12</th>
@@ -82,11 +82,11 @@ Listas para montaje en carril DIN o en pared, la serie reComputer R se integra s
       </tr>
       <tr>
         <td>Wiki</td>
-        <td><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_r22xx_getting_start/"><strong>📚 Saber más</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_r20xx_getting_start/"><strong>📚 Saber más</strong></a></td>
-        <td ><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_R21xx_getting_start/"><strong>📚 Saber más</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/r2000_series_getting_start/"><strong>📚 Saber más</strong></a></td>
-        <td><a href="https://wiki.seeedstudio.com/es/recomputer_ai_industrial_r2135_getting_start/"><strong>📚 Saber más</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_r22xx_getting_start/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_r20xx_getting_start/"><strong>📚 Más información</strong></a></td>
+        <td ><a href="https://wiki.seeedstudio.com/es/recomputer_industrial_R21xx_getting_start/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/r2000_series_getting_start/"><strong>📚 Más información</strong></a></td>
+        <td><a href="https://wiki.seeedstudio.com/es/recomputer_ai_industrial_r2135_getting_start/"><strong>📚 Más información</strong></a></td>
       </tr>
       <tr>
         <td>Chip</td>
@@ -122,11 +122,11 @@ Listas para montaje en carril DIN o en pared, la serie reComputer R se integra s
       </tr>
       <tr>
         <td>Otras interfaces</td>
-        <td> 4 x 10/100/1000 Mbps(soporta PoE PSE), <br/>1 x 10/100/1000 Mbps IEEE 802.3/802.3u. <br/>2x HDMI 2.0. <br/>4x Type-A USB3.0, <br/> 1x Type-C USB2.0 (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
-        <td> 1x 10M/100M/1000M Ethernet (PoE), <br/>1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0,<br/> 1x Type-C USB2.0 (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
-        <td>1x 10M/100M/1000M Ethernet (PoE),<br/> 1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0, <br/>1x Type-C USB2.0 (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
-        <td>1x 10/100/1000 Mbps Ethernet,<br/>2x USB 3.0(USB-A), <br/>2x USB 2.0(USB-A),<br/>2 x puertos micro HDMl(4Kp60),<br/> 2 × transceptores MIPI de 4 carriles para cámara/pantalla,<br/>1 x ranura para tarjeta microSD(con soporte para modo de alta velocidad SDR104); <br/>2 x ranuras M.2(soporta PCIe 3.0 M.2 NVMe SSD).</td>
-        <td>2 x HDMI, <br/>1 x Ethernet Gigabit, <br/>2 x USB 3.2 Type-A, <br/>1 x USB 2.0 Type-C. <br/>2 ranuras para almacenamiento SSD y aceleración de IA, <br/>decodificador H.265 4k 60fps.</td>
+        <td> 4 x 10/100/1000 Mbps (compatible con PoE PSE), <br/>1 x 10/100/1000 Mbps IEEE 802.3/802.3u. <br/>2x HDMI 2.0. <br/>4x USB3.0 Tipo-A, <br/> 1x USB2.0 Tipo-C (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
+        <td> 1x Ethernet 10M/100M/1000M (PoE), <br/>1x Ethernet 10M/100M. <br/>2x HDMI 2.0. <br/>3x USB3.0 Tipo-A, <br/>1x USB2.0 Tipo-A,<br/> 1x USB2.0 Tipo-C (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
+        <td>1x Ethernet 10M/100M/1000M (PoE),<br/> 1x Ethernet 10M/100M. <br/>2x HDMI 2.0. <br/>3x USB3.0 Tipo-A, <br/>1x USB2.0 Tipo-A, <br/>1x USB2.0 Tipo-C (para actualización de SO). <br/>1x ranura para tarjeta Nano SIM.</td>
+        <td>1x Ethernet 10/100/1000 Mbps,<br/>2x USB 3.0 (USB-A), <br/>2x USB 2.0 (USB-A),<br/>2 x puertos micro HDMI (4Kp60),<br/> 2 × transceptores MIPI de 4 carriles para cámara/pantalla,<br/>1 x ranura para tarjeta microSD (con soporte para modo SDR104 de alta velocidad); <br/>2 x ranuras M.2 (compatibles con SSD NVMe M.2 PCIe 3.0).</td>
+        <td>2 x HDMI, <br/>1 x Ethernet Gigabit, <br/>2 x USB 3.2 Tipo-A, <br/>1 x USB 2.0 Tipo-C. <br/>2 ranuras para almacenamiento SSD y aceleración de IA, <br/>decodificador H.265 4k 60fps.</td>
       </tr>
     </tbody>
   </table>
@@ -134,7 +134,7 @@ Listas para montaje en carril DIN o en pared, la serie reComputer R se integra s
 
 ### Controladores Edge
 
-Las familias reComputer R y Edge Box de Seeed Studio son controladores de borde robustos diseñados para IoT industrial y automatización inteligente. Construidos alrededor del módulo de cómputo Raspberry Pi de alto rendimiento (CM4/CM5), ofrecen potencia Arm de cuatro núcleos y hasta 16 GB de RAM. Doble Ethernet Gigabit (preparado para PoE), RS-485/RS-232 aislados, además de bahías M.2/mini-PCIe para 4G/5G, LoRa® o SSD NVMe cubren todos los requisitos de IIoT, pasarela de protocolos y Edge-AI. Una carcasa sin ventilador y totalmente metálica, clasificada para –30 °C a +70 °C, watchdog de hardware y supercondensadores UPS opcionales garantizan un funcionamiento fiable 24/7 en entornos hostiles. Listos para montaje en carril DIN o en pared, se integran sin esfuerzo en edificios inteligentes, sistemas de gestión de energía y aplicaciones de control remoto.
+Las familias reComputer R y Edge Box de Seeed Studio son controladores de borde robustos diseñados para IoT industrial y automatización inteligente. Construidos alrededor del módulo de cómputo Raspberry Pi de alto rendimiento (CM4/CM5), ofrecen potencia de cuatro núcleos Arm y hasta 16 GB de RAM. El doble Ethernet Gigabit (preparado para PoE), RS-485/RS-232 aislados, además de bahías M.2/mini-PCIe para 4G/5G, LoRa® o SSD NVMe cubren todos los requisitos de IIoT, pasarela de protocolos y Edge-AI. Una carcasa sin ventilador y totalmente metálica, clasificada para –30 °C a +70 °C, watchdog de hardware y supercondensadores UPS opcionales garantizan un funcionamiento fiable 24/7 en entornos hostiles. Listos para montaje en carril DIN o en pared, se integran sin esfuerzo en edificios inteligentes, sistemas de gestión de energía y aplicaciones de control remoto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_Controllers.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -209,8 +209,8 @@ Las familias reComputer R y Edge Box de Seeed Studio son controladores de borde 
       </tr>
       <tr>
         <td>Otras interfaces</td>
-        <td> 1x Ethernet 10M/100M/1000M (PoE), 1x Ethernet 10M/100M. 2x HDMI 2.0. 3x USB3.0 Tipo A, 1x USB2.0 Tipo A, 1x USB2.0 Tipo C (para actualización del sistema operativo). 1x ranura para tarjeta Nano SIM.</td>
-        <td>1x Ethernet 10M/100M/1000M (PoE), 1x Ethernet 10M/100M. 2x HDMI 2.0. 3x USB3.0 Tipo A, 1x USB2.0 Tipo A, 1x USB2.0 Tipo C (para actualización del sistema operativo). 1x ranura para tarjeta Nano SIM.</td>
+        <td> 1x Ethernet 10M/100M/1000M (PoE), 1x Ethernet 10M/100M. 2x HDMI 2.0. 3x USB3.0 Tipo A, 1x USB2.0 Tipo A, 1x USB2.0 Tipo C (para actualización del SO). 1x ranura para tarjeta Nano SIM.</td>
+        <td>1x Ethernet 10M/100M/1000M (PoE), 1x Ethernet 10M/100M. 2x HDMI 2.0. 3x USB3.0 Tipo A, 1x USB2.0 Tipo A, 1x USB2.0 Tipo C (para actualización del SO). 1x ranura para tarjeta Nano SIM.</td>
         <td>2x Mini-PCIe1, 1x Mini-PCIe2, 2x Ethernet, 1x HDMI 2.0, 3x USB (2× Tipo A + 1× Tipo C), 1x ranura para tarjeta SIM, 1x ranura M.2.</td>
         <td>1x HDMI 2.0, 2x Ethernet, 2x USB (1× Tipo A 2.0 + 1× Tipo C 2.0), 1x ranura para tarjeta SIM, 1x ranura M.2 Key E, 1x ranura para tarjeta Micro SD, 1x entrada de alimentación de CC.</td>
         <td>1× Ethernet Gigabit RJ45, 1× HDMI 2.0 (compatible con 4K@60fps), 2× USB 2.0 Tipo A, 1× ranura M.2 2242 (para SSD NVMe), 1× ranura Mini-PCIe (compatible con 4G LTE/LoRaWAN®).</td>
@@ -242,7 +242,7 @@ reTerminal y reTerminal DM son dispositivos avanzados que integran computación 
         <td><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td>Obtener uno</td>
+        <td>Consigue uno</td>
         <td><a href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"> <strong>Consigue uno ahora 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" ><strong>Consigue uno ahora 🖱️</strong></a></td>
       </tr>
@@ -258,15 +258,15 @@ reTerminal y reTerminal DM son dispositivos avanzados que integran computación 
       </tr>
       <tr>
         <td>Introducción</td>
-        <td>Conoce reTerminal, la incorporación más reciente a nuestra familia reThings: un dispositivo avanzado de Interfaz Hombre-Máquina (HMI) que cuenta con una pantalla IPS capacitiva multitáctil de 5 pulgadas con una resolución de 1280 x 720. Este dispositivo preparado para el futuro se integra perfectamente con sistemas IoT y en la nube, lo que permite una colaboración eficiente para desbloquear infinitos escenarios en el borde. Con sus funciones de vanguardia, reTerminal está listo para redefinir las experiencias interactivas y cerrar la brecha entre los mundos físico y digital.</td>
-        <td>Te presentamos reTerminal DM, una Interfaz Hombre-Máquina (HMI) industrial de código abierto de 10,1" que actúa como un Dispositivo Maestro Integrado. Este dispositivo todo en uno, basado en Raspberry Pi CM4, funciona como Panel PC, HMI, PLC y puerta de enlace IIoT. Con una gran pantalla de grado industrial IP65, reTerminal DM es un concentrador de detección interactivo de nueva generación que optimiza el flujo de datos y la gestión de dispositivos in situ.</td>
+        <td>Conoce reTerminal, la última incorporación a nuestra familia reThings: un dispositivo avanzado de Interfaz Hombre-Máquina (HMI) que cuenta con una pantalla IPS capacitiva multitáctil de 5 pulgadas con una resolución de 1280 x 720. Este dispositivo preparado para el futuro se integra perfectamente con sistemas IoT y en la nube, lo que permite una colaboración eficiente para desbloquear infinitos escenarios en el borde. Con sus funciones de vanguardia, reTerminal está preparado para redefinir las experiencias interactivas y cerrar la brecha entre los mundos físico y digital.</td>
+        <td>Te presentamos reTerminal DM, una Interfaz Hombre-Máquina (HMI) industrial de código abierto de 10,1" que funciona como un Dispositivo Maestro Integrado. Este dispositivo todo en uno, basado en Raspberry Pi CM4, funciona como PC de panel, HMI, PLC y pasarela IIoT. Con una pantalla grande de grado industrial IP65, reTerminal DM es un concentrador de detección interactivo de nueva generación que optimiza el flujo de datos y la gestión de dispositivos in situ.</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 #### reRouter
-reRouter está equipado con dos puertos Ethernet Gigabit y dos puertos USB 3.0, lo que lo hace adecuado para aplicaciones de router por software, manteniendo el hardware al mínimo. Hemos preinstalado un Raspberry Pi Compute Module 4 con 4GB de RAM y 32GB eMMC para permitir tiempos de arranque rápidos y una experiencia general fluida.
+reRouter está equipado con puertos Ethernet Gigabit dobles y puertos USB 3.0 dobles, lo que lo hace adecuado para aplicaciones de router por software, manteniendo el hardware al mínimo. Hemos preinstalado un Raspberry Pi Compute Module 4 con 4GB de RAM y 32GB eMMC para permitir tiempos de arranque rápidos y una experiencia general fluida.
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110110110-4_1.png" style={{width:1000, height:'auto'}}/></div>
 
 
@@ -277,7 +277,7 @@ reRouter está equipado con dos puertos Ethernet Gigabit y dos puertos USB 3.0, 
 
 ### Raspberry Pi Original
 
-Raspberry Pi (también conocido como "RPi") fue diseñado y creado originalmente por una organización sin ánimo de lucro con la intención de promover la enseñanza de la informática a un coste asequible. Ahora se han lanzado varias generaciones y modelos de Raspberry Pi que han ampliado su presencia, potencia y aplicaciones.
+Raspberry Pi (también conocido como "RPi") fue diseñado y creado originalmente por una organización sin ánimo de lucro con la intención de promover la enseñanza de la informática a un coste asequible. Ahora se han lanzado varias generaciones y modelos de Raspberry Pi que han ampliado su alcance, potencia y aplicaciones.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Battribute_product_type%5D%5B0%5D=Dev+board&bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry+Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>Consigue uno ahora 🖱️</strong></font></span></strong></a>
@@ -305,7 +305,7 @@ La conexión perfecta con los principales proveedores de servicios en la nube pe
         <td>
           <strong>AWS</strong>  
 
-Plataforma de nube global líder con una amplia gama de servicios.
+Leading global cloud platform with a wide range of services.
         </td>
       </tr>
       <tr>
@@ -313,7 +313,7 @@ Plataforma de nube global líder con una amplia gama de servicios.
         <td>
           <strong>Azure</strong>  
 
-Plataforma de nube pública de Microsoft que ofrece servicios en la nube integrados.
+Microsoft's public cloud platform, offering integrated cloud services.
         </td>
       </tr>
     </tbody>
@@ -379,7 +379,7 @@ Sistema de programación independiente del hardware para automatización industr
         <td>
           <strong>Home Assistant</strong>  
 
-Plataforma de hogar inteligente de código abierto para control y automatización local.
+Plataforma de hogar inteligente de código abierto para control y automatización locales.
         </td>
       </tr>
       <tr>
@@ -404,7 +404,7 @@ Plataforma líder de IA en el borde para crear y desplegar modelos de ML.
 
 
 ### Herramienta de aplicación
-Una amplia gama de frameworks de desarrollo, SDKs y herramientas de código abierto permite la creación rápida de prototipos y el despliegue. Los usuarios pueden convertir ideas en aplicaciones de forma eficiente, acortando el tiempo de salida al mercado y garantizando una integración fluida en proyectos del mundo real.
+Una amplia gama de frameworks de desarrollo, SDK y herramientas de código abierto permite la creación rápida de prototipos y el despliegue. Los usuarios pueden convertir ideas en aplicaciones de forma eficiente, acortando el tiempo de salida al mercado y garantizando una integración fluida en proyectos del mundo real.
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <tbody>
@@ -413,7 +413,7 @@ Una amplia gama de frameworks de desarrollo, SDKs y herramientas de código abie
         <td>
           <strong>YOLO</strong>  
 
-Algoritmo rápido y preciso de detección de objetos en tiempo real.
+Un algoritmo rápido y preciso de detección de objetos en tiempo real.
         </td>
       </tr>
       <tr>
@@ -539,7 +539,7 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>Benchmark en RPi5 y CM4 ejecutando yolov8s con rpi ai kit</th>
+        <th>Benchmark en RPi5 y CM4 ejecutando yolov8s con el kit de IA para RPi</th>
         <th>YOLOv8 AI Box: Caída, Escalada y Seguimiento</th>
         <th>Detección de armas con Frigate NVR en R2000</th>
         <th>Frigate NVR y Hailo en reComputer R2000 conectados con Home Assistant</th>
@@ -595,7 +595,7 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>Implementar DeepSeek en Raspberry Pi AI Box</th>
+        <th>Desplegar DeepSeek en Raspberry Pi AI Box</th>
         <th>Inferencia distribuida del modelo DeepSeek en Raspberry Pi</th>
       </tr>
     </thead>
@@ -613,7 +613,7 @@ Herramienta de programación basada en flujos para conectar hardware y servicios
 </div>
 
 <br />
-Seeed Studio ha estado sirviendo a la comunidad Pi® desde 2013 y tomó la delantera para unirse como revendedor aprobado y socio de diseño. Nuestra gama de dispositivos edge impulsados por Raspberry Pi®, incluidos HMI, controladores edge y routers, se ha implementado con éxito en diversas industrias como gestión de energía, automatización, Industria 4.0, edificios inteligentes y fabricación. Estamos orgullosos de la amplia adopción y los comentarios positivos que hemos recibido, lo que nos ha infundido una gran confianza en nuestros productos. Consulta nuestras historias de éxito de Seeed Studio con Raspberry Pi®.
+Seeed Studio ha estado sirviendo a la comunidad Pi® desde 2013 y tomó la delantera para unirse como revendedor aprobado y socio de diseño. Nuestra gama de dispositivos de borde impulsados por Raspberry Pi®, incluidos HMI, controladores de borde y routers, se ha implementado con éxito en diversas industrias como gestión de energía, automatización, Industria 4.0, edificios inteligentes y fabricación. Estamos orgullosos de la amplia adopción y los comentarios positivos que hemos recibido, lo que nos ha infundido una gran confianza en nuestros productos. Consulta nuestras historias de éxito de Raspberry Pi® de Seeed Studio.
 
 <br />
 
@@ -622,7 +622,7 @@ Seeed Studio ha estado sirviendo a la comunidad Pi® desde 2013 y tomó la delan
 </div>
 
 <br />
-Para mantenerte informado sobre las últimas actualizaciones, ofertas especiales, historias de éxito reales, entrevistas con expertos y seminarios web sobre dispositivos edge IoT, y estar conectado con los integradores de sistemas y proveedores de soluciones de industrias verticales como edificios inteligentes, gestión de energía y automatización, te invitamos a suscribirte a nuestro boletín dedicado.
+Para mantenerse informado sobre las últimas actualizaciones, ofertas especiales, historias de éxito reales, entrevistas con expertos y seminarios web sobre dispositivos edge IoT, y estar conectado con los integradores de sistemas y proveedores de soluciones de industrias verticales como edificios inteligentes, gestión de energía y automatización, le invitamos a suscribirse a nuestro boletín dedicado.
 
 <br /><br />
 
@@ -632,7 +632,7 @@ Para mantenerte informado sobre las últimas actualizaciones, ofertas especiales
 
 ## Soporte técnico y debate sobre productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

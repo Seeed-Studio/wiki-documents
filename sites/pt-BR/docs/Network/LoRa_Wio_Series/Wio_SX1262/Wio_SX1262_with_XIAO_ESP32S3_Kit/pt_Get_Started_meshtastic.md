@@ -9,7 +9,7 @@ last_update:
   date: 09/30/2024
   author: Evelyn Chen
 createdAt: '2024-10-09'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/wio_sx1262_xiao_esp32s3_for_meshtastic/
 ---
 

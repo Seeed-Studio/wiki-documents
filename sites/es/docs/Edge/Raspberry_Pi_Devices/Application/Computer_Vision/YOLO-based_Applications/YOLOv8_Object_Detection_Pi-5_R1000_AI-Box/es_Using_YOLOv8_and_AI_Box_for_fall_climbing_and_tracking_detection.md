@@ -1,6 +1,6 @@
 ---
-description: Este wiki muestra cómo usar un modelo YOLO en el AI Box para caídas, escalada de barreras y seguimiento de personas.
-title: YOLOv8 en AI Box para Caídas, Escalada y Seguimiento
+description: Este wiki muestra cómo usar un modelo YOLO en la AI Box para caídas, escalado de barreras y seguimiento de personas.
+title: YOLOv8 en AI Box para Caídas, Escalar y Seguimiento
 keywords:
   - Edge AI
   - rpi5
@@ -13,19 +13,19 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/es/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
-# YOLOv8 AI Box: Caídas, Escalada y Seguimiento
+# YOLOv8 AI Box: Caídas, Escalar y Seguimiento
 
 
 ## Introducción
 
-Este proyecto te guiará sobre cómo usar el [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) o [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detección de caídas, detección de escalada y detección de seguimiento usando el modelo YOLOv8.
+Este proyecto te guiará sobre cómo usar la [reComputer AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) o la [reComputer Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detección de caídas, detección de escalado y detección de seguimiento utilizando el modelo YOLOv8.
 
 
-## Preparación del hardware
+## Preparación de hardware
 
 <div class="table-center">
  <table align="center">
@@ -44,22 +44,22 @@ Este proyecto te guiará sobre cómo usar el [reComputed AI Box](https://www.see
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -67,7 +67,7 @@ Este proyecto te guiará sobre cómo usar el [reComputed AI Box](https://www.see
 </div>
 
 
-> 💡 **Nota**: Este proyecto requiere un reComputer AI Box o un reComputer Industry AI Box.
+> 💡 **Nota**: Este proyecto requiere una reComputer AI Box o una reComputer Industry AI Box.
 
 
 ##  Detección de caídas
@@ -85,7 +85,7 @@ git clone https://github.com/Seeed-Projects/fall_detection_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Preparar el entorno de python
+### Preparar el entorno de Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -103,7 +103,7 @@ python app.py -i ./falldown_test.mp4 -n ./yolov8n.hef --show-fps -l ./common/coc
 <iframe width="800" height="400" src="https://www.youtube.com/embed/H0NaAevLo2k" title="How the Seeed Raspberry Pi AI Box Helps in Abnormal Event Detection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Escalada de vallas
+## Escalado de vallas
 
 ### Instalar el entorno de ejecución
 
@@ -118,7 +118,7 @@ git clone https://github.com/Seeed-Projects/cross_fence_with_AIBox.git
 cd cross_fence_with_AIBox
 ```
 
-### Preparar el entorno de python
+### Preparar el entorno de Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -152,7 +152,7 @@ git clone https://github.com/Seeed-Projects/track_people_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Preparar el entorno de python
+### Preparar el entorno de Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -165,16 +165,16 @@ pip install -r requirements.txt
 python app.py -i ./people-walking.mp4 -n ./yolov8n.hef --show-fps -l ./common/coco.txt --track
 ```
 
-### resultado 
+### Resultado 
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/xoeMcaG_FxE?list=PLpH_4mf13-A3Wm6hJp7JeT4DD9NXXUAca" title="reComputer Object Detection and Tracking: The Role of YOLOv8 in Shaping Results" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

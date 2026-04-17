@@ -10,7 +10,7 @@ last_update:
   date: 01/09/2022
   author: gunengyu
 createdAt: '2024-03-24'
-updatedAt: '2026-03-03'
+updatedAt: '2025-08-12'
 url: https://wiki.seeedstudio.com/cn/Grove-AND/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-AND/img/AND_photo1.jpg)

@@ -10,7 +10,7 @@ last_update:
   date: 2/26/2024
   author: Matthew, Jenna and Kasun Thushara
 createdAt: '2023-09-12'
-updatedAt: '2026-03-03'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/home_assistant_topic/
 ---
 

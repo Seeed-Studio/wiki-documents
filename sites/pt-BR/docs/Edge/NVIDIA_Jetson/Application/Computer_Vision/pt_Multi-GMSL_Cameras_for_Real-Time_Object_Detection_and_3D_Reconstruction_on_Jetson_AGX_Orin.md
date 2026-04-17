@@ -16,7 +16,7 @@ last_update:
   date: 06/30/2025
   author: Zibo
 createdAt: '2025-06-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/multiple_cameras_with_jetson/
 ---
 
