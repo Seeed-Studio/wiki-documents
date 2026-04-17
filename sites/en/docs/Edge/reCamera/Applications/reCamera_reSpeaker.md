@@ -7,6 +7,7 @@ keywords:
   - sound source localization
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_reSpeaker/reCamera_reSpeaker.gif
 slug: /sound_source_localization_of_recamera_gimbal
+sku: 108990119,114993700
 sidebar_position: 11
 last_update:
   date: 04/17/2026
