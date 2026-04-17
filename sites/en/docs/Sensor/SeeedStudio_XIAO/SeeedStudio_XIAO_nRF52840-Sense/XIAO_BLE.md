@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
-  date: 2024-11-28T03:15:24.000Z
+  date: 2025-04-17T00:00:00.000Z
   author: Clara
 createdAt: '2023-01-16'
 updatedAt: '2026-03-03'
@@ -260,7 +260,7 @@ Bluetooth Mesh/NFC</td>
 | NFC1                    |                  | P0.09                         | NFC                                      |          |
 | NFC2                    |                  | P0.10                         | NFC                                      |          |
 | Reset                   |                  | P0.18                         | RESET                                    |          |
-| ADC_BAT                 |                  | P0.14                         | Read the BAT voltage value               |          |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14                         | Enable control for battery voltage reading (output LOW to enable) |          |
 | 6 DOF IMU_PWR           |                  | P1.08                         | power switch of the 6D module            |          |
 | 6 DOF IMU__INT1         |                  | P0.11                         | Interrupt signal pin of the 6D module    |          |
 | PDM Microphone_DATA     |                  | P0.16                         | PDM audio data input pin                 |          |
@@ -318,11 +318,11 @@ Bluetooth Mesh/NFC</td>
 | D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |      |
 | D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |      |
 | D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |      |
-| D16                     | BAT                  | P0.31     |                    | GPIO                                     |      |
+| D16                     | AIN7_BAT             | P0.31     |                    | Battery voltage ADC read pin             |      |
 | D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |      |
 | D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |      |
 | D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |      |
-| ADC_BAT                 |                      | P0.14     |                    | Read the BAT voltage value               |      |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | Enable control for battery voltage reading (output LOW to enable) |      |
 | 6 DOF IMU_PWR           |                      | P1.08     |                    | power switch of the 6D module            |      |
 | 6 DOF IMU__INT1         |                      | P0.11     |                    | Interrupt signal pin of the 6D module    |      |
 | PDM Microphone_DATA     |                      | P0.16     |                    | PDM audio data input pin                 |      |
@@ -646,9 +646,11 @@ You can first try to **reset** the board by clicking the "Reset Button" once. If
 
 ### Q3: What are the considerations when using XIAO nRF52840 (Sense) for battery charging?
 
-When P0.14 (D14) turns off the ADC function at a high level of 3.3V, P0.31 will be at the input voltage limit of 3.6V. There is a risk of burning out the P0.31 pin.
+In the XIAO nRF52840 Sense battery circuit, **P0.14** is the **READ_BAT_ENABLE** control pin and **P0.31** is the **AIN7_BAT** ADC read pin for measuring battery voltage.
 
-Currently for this issue, we recommend that users do not turn off the ADC function of P0.14 (D14) or set P0.14 (D14) to high during battery charging.
+When P0.14 is set HIGH, the battery voltage reading path is disabled and P0.31 may reach the input voltage limit of 3.6V, posing a risk of damaging the P0.31 pin. To safely read battery voltage, set P0.14 LOW (to enable the reading path) and then read the ADC value on P0.31.
+
+We recommend that users always keep P0.14 set LOW when reading battery voltage, and avoid setting P0.14 HIGH during battery charging.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
