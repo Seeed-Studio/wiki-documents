@@ -18,13 +18,13 @@ last_update:
   date: 11/7/2025
   author: Nolan Chen
 createdAt: '2023-12-18'
-updatedAt: '2026-03-09'
+updatedAt: '2026-03-08'
 url: https://wiki.seeedstudio.com/cn/raspberry-pi-devices/
 ---
 
 ## 介绍
 
-欢迎来到 Edge Solution 的 Raspberry Pi 驱动设备前沿世界。在这里，我们将探索由 Seeed Studio 打造、专为边缘计算设计的创新解决方案，这些方案特别适配 Raspberry Pi CM4/CM5 和 Raspberry Pi 4/5。这些可定制设备包括人机界面（HMI）单元、多功能边缘控制器以及 AI 套件盒。加入我们，一同深入了解这些强大设备的精妙生态，为你的项目带来无缝高效的边缘计算能力。
+欢迎来到 Edge Solution 中由 Raspberry Pi 驱动的前沿设备世界。在这里，我们将探索 Seeed Studio 为边缘计算打造的创新解决方案，这些方案专为 Raspberry Pi CM4/CM5 和 Raspberry Pi 4/5 量身定制。这些可定制设备包括人机界面（HMI）单元、多功能边缘控制器以及 AI 套件盒。加入我们，一同踏上探索这些强大设备的精妙旅程，它们旨在通过无缝高效的边缘计算能力，全面提升你的项目表现。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberry_pi_all.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -35,11 +35,11 @@ url: https://wiki.seeedstudio.com/cn/raspberry-pi-devices/
 ### 边缘 AI 计算机
 Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自动化打造的坚固、掌上尺寸边缘 AI 控制器
 
-由高性能的 **Raspberry Pi 5 / Compute Module 5** 提供算力，并搭载 **Hailo-8 AI 加速器**，reComputer Industrial R 和 AI R 产品线可提供高达 **26 TOPS** 的计算能力，在边缘侧实现实时、多路视频分析和深度学习推理。  
+由高性能的 **Raspberry Pi 5 / Compute Module 5** 提供算力，并搭配 **Hailo-8 AI 加速器**，reComputer Industrial R 和 AI R 产品线可提供高达 **26 TOPS** 的计算能力，在边缘侧实现实时多路视频分析和深度学习推理。  
 
 工业级连接能力为标配：双千兆以太网、隔离 **RS-485/RS-232、多路 DI/DO，以及 M.2 和 mini-PCIe 插槽，可在数秒内插入 4G/5G、LoRa® 或 NVMe SSD**。无风扇全金属机箱确保在 **–20 °C 至 60 °C** 范围内静音、防尘运行，而硬件看门狗和可选 UPS 超级电容则让关键任务 7×24 小时持续在线。  
 
-支持导轨或壁挂安装，reComputer R 系列可轻松部署到**智慧楼宇、工业 4.0 机器视觉单元、远程资产控制柜**以及分布式视频分析网络中——在现场完成协议转换、数据采集与 AI 模型推理。
+支持导轨或壁挂安装，reComputer R 系列可轻松部署到 **智慧楼宇、工业 4.0 机器视觉单元、远程资产控制柜** 以及分布式视频分析网络中——在现场完成协议转换、数据采集和 AI 模型推理。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_AI_Computers.JPG" style={{width:1000, height:'auto'}}/></div>
 
@@ -48,7 +48,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
     <thead>
       <tr>
         <th>名称</th>
-        <th>reComputer AI Industrial R22xx-12</th>
+        <th>reComputer Industrial R22xx-12</th>
         <th>reComputer Industrial R20xx-12</th>
         <th>reComputer Industrial R21xx-12</th>
         <th>reComputer AI R21xx-12</th>
@@ -73,7 +73,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
         <td>114993595</td>
       </tr>
       <tr>
-        <td>购买</td>
+        <td>购买链接</td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html"><strong>立即获取 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html"><strong>立即获取 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html"><strong>立即获取 🖱️</strong></a></td>
@@ -103,7 +103,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
         <td>8GB/16GB</td>
         <td>8GB/16GB</td>
         <td>8GB/16GB,32GB eMMC</td>
-      </tr>
+      </tr]
       <tr>
         <td>NPU</td>
         <td>26TOPS</td>
@@ -122,11 +122,11 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
       </tr>
       <tr>
         <td>其他接口</td>
-        <td> 4 x 10/100/1000 Mbps（支持 PoE PSE），<br/>1 x 10/100/1000 Mbps IEEE 802.3/802.3u。<br/>2x HDMI 2.0。<br/>4x Type-A USB3.0，<br/> 1x Type-C USB2.0（用于 OS 更新）。<br/>1x Nano SIM 卡槽。</td>
-        <td> 1x 10M/100M/1000M 以太网（PoE），<br/>1x 10M/100M 以太网。<br/>2x HDMI 2.0。<br/>3x Type-A USB3.0，<br/>1x Type-A USB2.0，<br/> 1x Type-C USB2.0（用于 OS 更新）。<br/>1x Nano SIM 卡槽。</td>
-        <td>1x 10M/100M/1000M 以太网（PoE），<br/> 1x 10M/100M 以太网。<br/>2x HDMI 2.0。<br/>3x Type-A USB3.0，<br/>1x Type-A USB2.0，<br/>1x Type-C USB2.0（用于 OS 更新）。<br/>1x Nano SIM 卡槽。</td>
-        <td>1x 10/100/1000 Mbps 以太网，<br/>2x USB 3.0（USB-A），<br/>2x USB 2.0（USB-A），<br/>2 x micro HDMI 接口（4Kp60），<br/> 2 × 4-lane MIPI 摄像头/显示收发器，<br/>1 x microSD 卡槽（支持高速 SDR104 模式）；<br/>2 x M.2 插槽（支持 PCIe 3.0 M.2 NVMe SSD）。</td>
-        <td>2 x HDMI，<br/>1 x 千兆以太网，<br/>2 x USB 3.2 Type-A，<br/>1 x USB 2.0 Type-C。<br/>2 个用于 SSD 存储和 AI 加速的插槽，<br/>4K 60fps H.265 解码器。</td>
+        <td> 4 x 10/100/1000 Mbps(支持 PoE PSE), <br/>1 x 10/100/1000 Mbps IEEE 802.3/802.3u. <br/>2x HDMI 2.0. <br/>4x Type-A USB3.0, <br/> 1x Type-C USB2.0 (用于 OS 更新). <br/>1x Nano SIM 卡槽.</td>
+        <td> 1x 10M/100M/1000M Ethernet (PoE), <br/>1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0,<br/> 1x Type-C USB2.0 (用于 OS 更新). <br/>1x Nano SIM 卡槽.</td>
+        <td>1x 10M/100M/1000M Ethernet (PoE),<br/> 1x 10M/100M Ethernet. <br/>2x HDMI 2.0. <br/>3x Type-A USB3.0, <br/>1x Type-A USB2.0, <br/>1x Type-C USB2.0 (用于 OS 更新). <br/>1x Nano SIM 卡槽.</td>
+        <td>1x 10/100/1000 Mbps Ethernet,<br/>2x USB 3.0(USB-A), <br/>2x USB 2.0(USB-A),<br/>2 x micro HDMl 接口(4Kp60),<br/> 2 × 4-lane MIPI 摄像头/显示收发器,<br/>1 x microSD 卡槽(支持高速 SDR104 模式); <br/>2 x M.2 插槽(支持 PCIe 3.0 M.2 NVMe SSD).</td>
+        <td>2 x HDMI, <br/>1 x 千兆以太网, <br/>2 x USB 3.2 Type-A, <br/>1 x USB 2.0 Type-C. <br/>2 个用于 SSD 存储和 AI 加速的插槽, <br/>4k 60fps H.265 解码器.</td>
       </tr>
     </tbody>
   </table>
@@ -134,7 +134,7 @@ Seeed Studio **reComputer Industrial R & AI R 系列** – 为 IIoT 和智能自
 
 ### 边缘控制器
 
-Seeed Studio 的 reComputer R 和 Edge Box 产品家族是为工业物联网和智能自动化打造的坚固边缘控制器。基于高性能 Raspberry Pi Compute Module（CM4/CM5）构建，它们提供四核 Arm 处理能力和最高 16 GB RAM。双千兆以太网（支持 PoE）、隔离 RS-485/RS-232，以及用于 4G/5G、LoRa® 或 NVMe SSD 的 M.2/mini-PCIe 扩展位，可满足各类 IIoT、协议网关和边缘 AI 需求。无风扇全金属外壳支持 –30 °C 至 +70 °C 的工作温度范围，配合硬件看门狗和可选 UPS 超级电容，确保在恶劣环境中实现可靠的 7×24 小时运行。支持导轨或壁挂安装，它们可轻松集成到智慧楼宇、能源管理系统和远程控制应用中。
+Seeed Studio 的 reComputer R 和 Edge Box 产品家族是为工业物联网和智能自动化打造的坚固边缘控制器。它们基于高性能的 Raspberry Pi Compute Module（CM4/CM5）构建，提供四核 Arm 处理能力和最高 16 GB RAM。双千兆以太网（支持 PoE）、隔离 RS-485/RS-232，以及用于 4G/5G、LoRa® 或 NVMe SSD 的 M.2/mini-PCIe 扩展仓，可满足各种 IIoT、协议网关和边缘 AI 需求。无风扇全金属外壳支持 –30 °C 至 +70 °C 的工作温度范围，配合硬件看门狗和可选 UPS 超级电容，确保在恶劣环境中也能实现可靠的 7×24 小时运行。支持导轨或壁挂安装，它们可以轻松集成到智慧楼宇、能源管理系统和远程控制应用中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Edge_Controllers.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -168,7 +168,7 @@ Seeed Studio 的 reComputer R 和 Edge Box 产品家族是为工业物联网和�
         <td>114993117</td>
       </tr>
       <tr>
-        <td>购买</td>
+        <td>购买链接</td>
         <td ><a href="https://www.seeedstudio.com/reComputer-Industrial-R2035-10-p-6543.html"><strong>立即获取 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-Industrial-R2135-10-p-6546.html" ><strong>立即获取 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reComputer-R1035-10-p-5925.html"><strong>立即获取 🖱️</strong></a></td>
@@ -222,7 +222,7 @@ Seeed Studio 的 reComputer R 和 Edge Box 产品家族是为工业物联网和�
 ### 其他设备
 
 #### reTerminal
-reTerminal 和 reTerminal DM 是集成了高性能边缘计算与人机界面（HMI）功能的高级设备。它们以 Raspberry Pi CM4 为核心，配备高分辨率电容式多点触控屏幕，被设计为现场交互枢纽。这些设备旨在实现与物联网（IoT）和云系统的无缝集成，从而高效释放边缘场景中的数据采集、设备管理和协同应用能力，充当连接物理世界与数字世界的关键桥梁。
+reTerminal 和 reTerminal DM 是集成了高性能边缘计算和人机界面（HMI）功能的高级设备。它们以 Raspberry Pi CM4 为核心，配备高分辨率电容式多点触控屏幕，被设计为现场交互枢纽。这些设备旨在与物联网（IoT）和云系统实现无缝集成，从而高效释放边缘场景中的数据采集、设备管理和协同应用能力，充当连接物理世界与数字世界的关键桥梁。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -242,7 +242,7 @@ reTerminal 和 reTerminal DM 是集成了高性能边缘计算与人机界面（
         <td><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:500, height:'auto'}}/></td>
       </tr>
       <tr>
-        <td>获取产品</td>
+        <td>购买</td>
         <td><a href="https://www.seeedstudio.com/reTerminal-CM4108032-p-5712.html" target="_blank"> <strong>立即获取 🖱️</strong></a></td>
         <td><a href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" ><strong>立即获取 🖱️</strong></a></td>
       </tr>
@@ -259,14 +259,14 @@ reTerminal 和 reTerminal DM 是集成了高性能边缘计算与人机界面（
       <tr>
         <td>简介</td>
         <td>认识 reTerminal，这是我们 reThings 家族的最新成员——一款先进的人机界面（HMI）设备，配备 5 英寸 IPS 电容式多点触控屏，分辨率为 1280 x 720。这款面向未来的设备可与 IoT 和云系统无缝集成，实现高效协作，在边缘解锁无限应用场景。凭借其前沿特性，reTerminal 有望重新定义交互体验，弥合物理世界与数字世界之间的鸿沟。</td>
-        <td>隆重介绍 reTerminal DM，这是一款 10.1 英寸开源工业人机界面（HMI），可作为集成设备主控使用。这款基于 Raspberry Pi CM4 的多合一设备，可同时充当面板电脑、HMI、PLC 和 IIoT 网关。凭借 IP65 工业级大屏幕，reTerminal DM 是新一代交互感知枢纽，可简化数据流转和现场设备管理。</td>
+        <td>隆重介绍 reTerminal DM，这是一款 10.1 英寸开源工业人机界面（HMI）设备，可作为集成设备主控使用。这款多合一设备基于 Raspberry Pi CM4，可充当面板电脑、HMI、PLC 和 IIoT 网关。凭借 IP65 工业级大屏幕，reTerminal DM 是新一代交互式感知枢纽，可简化数据流和现场设备管理。</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 #### reRouter
-reRouter 配备双千兆以太网端口和双 USB 3.0 端口，非常适合软路由应用，同时将硬件配置保持在最低水平。我们预装了一块带有 4GB 内存和 32GB eMMC 的 Raspberry Pi 计算模块 4，以实现快速启动时间和流畅的整体体验。
+reRouter 配备双千兆以太网端口和双 USB 3.0 端口，非常适合软路由应用，同时将硬件配置保持在最低水平。我们预装了一块带有 4GB RAM 和 32GB eMMC 的 Raspberry Pi 计算模块 4，以实现快速启动时间和流畅的整体体验。
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110110110-4_1.png" style={{width:1000, height:'auto'}}/></div>
 
 
@@ -275,9 +275,9 @@ reRouter 配备双千兆以太网端口和双 USB 3.0 端口，非常适合软�
 <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/reRouter_Intro/" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}><strong>📚 了解更多</strong></font></span></strong></a>
 </div>
 
-### 原版 Raspberry Pi
+### 原生 Raspberry Pi
 
-Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建，旨在以可负担的成本推动计算机科学教育。如今已经发布了多个世代和型号的 Raspberry Pi，扩展了其应用范围、性能和使用场景。
+Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建，旨在以可负担的成本推动计算机科学教育。如今已经发布了多个世代和型号的 Raspberry Pi，扩展了其应用范围、性能和应用场景。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/respberrypi_original.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?bazaar4_retailer-products%5BrefinementList%5D%5Battribute_product_type%5D%5B0%5D=Dev+board&bazaar4_retailer-products%5BrefinementList%5D%5Bseries%5D%5B0%5D=Raspberry+Pi"target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> <strong>立即获取 🖱️</strong></font></span></strong></a>
@@ -286,7 +286,7 @@ Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建�
 
 ### 兼容 Raspberry Pi
 
-在 Seeed Studio，我们提供完整的 Raspberry Pi 兼容开发板、配套配件和入门套件生态系统，帮助你围绕这一平台打造多种多样的项目。此外，我们还在 Seeed 的 Raspberry Pi 社区中开发了大量教程，你可以轻松找到搭建自己电路或编写自定义应用程序的参考和指导。
+在 Seeed Studio，我们提供完整的 Raspberry Pi 兼容开发板、配套配件和入门套件生态系统，帮助你围绕这一平台创建多种多样的项目。此外，我们在 Seeed 的 Raspberry Pi 社区中开发了大量教程，你可以轻松找到搭建自己电路或编写自定义应用程序的参考和指导。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/Raspberry_Pi_Compatible.jpg" style={{width:1000, height:'auto'}}/></div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -313,7 +313,7 @@ Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建�
         <td>
           <strong>Azure</strong>  
 
-微软的公共云平台，提供集成的云服务。
+微软的公共云平台，提供集成的云服务。</td>
         </td>
       </tr>
     </tbody>
@@ -331,7 +331,7 @@ Raspberry Pi（又称 “RPi”）最初由一家非营利组织设计和创建�
         <td>
           <strong>balena</strong>  
 
-IoT 设备部署和管理的操作系统平台。
+物联网设备部署与管理的操作系统平台。
         </td>
       </tr>
       <tr>
@@ -339,7 +339,7 @@ IoT 设备部署和管理的操作系统平台。
         <td>
           <strong>thingsboard</strong>
 
-开源 IoT 平台，支持设备连接、数据管理和可视化部署。
+开源物联网平台，支持设备连接、数据管理和可视化部署。
         </td>
       </tr>
       <tr>
@@ -355,7 +355,7 @@ IoT 设备部署和管理的操作系统平台。
         <td>
           <strong>N3uron</strong>  
 
-用于数据采集和集成的工业 IoT 平台。
+用于数据采集与集成的工业物联网平台。
         </td>
       </tr>
       <tr>
@@ -381,7 +381,7 @@ IoT 设备部署和管理的操作系统平台。
 
 用于本地控制和自动化的开源智能家居平台。
         </td>
-      </tr>
+      </tr]
       <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/frigate.png" style={{width:80, height:'auto'}}/></td>
         <td>
@@ -404,7 +404,7 @@ IoT 设备部署和管理的操作系统平台。
 
 
 ### 应用工具
-多种开发框架、SDK 和开源工具为快速原型开发和部署提供了强大支持。用户可以高效地将创意转化为应用——缩短产品上市时间，并确保顺利集成到真实项目中。
+多种开发框架、SDK 和开源工具支持快速原型开发与部署。用户可以高效地将创意转化为应用——缩短产品上市时间，并确保顺利集成到真实项目中。
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <tbody>
@@ -421,7 +421,7 @@ IoT 设备部署和管理的操作系统平台。
         <td>
           <strong>PyTorch</strong>  
 
-开源深度学习框架，在研究和部署方面具有高度灵活性。
+开源深度学习框架，在研究与部署中具有高度灵活性。
         </td>
       </tr>
       <tr>
@@ -445,7 +445,7 @@ IoT 设备部署和管理的操作系统平台。
         <td>
           <strong>MediaPipe</strong>  
 
-Google 开源的多媒体流水线构建框架。
+Google 的开源框架，用于构建多媒体处理流水线。
         </td>
       </tr>
       <tr>
@@ -469,7 +469,7 @@ Google 的轻量级框架，用于在移动和边缘设备上运行 ML 模型。
         <td>
           <strong>Node-RED</strong>  
 
-基于流程的编程工具，用于连接硬件和在线服务。
+基于流程的编程工具，用于连接硬件与在线服务。
         </td>
       </tr>
     </tbody>
@@ -485,7 +485,7 @@ Google 的轻量级框架，用于在移动和边缘设备上运行 ML 模型。
       <tr>
         <th>reComputer Industrial R20xx 入门指南</th>
         <th>reComputer R1000 搭配 Home Assistant</th>
-        <th>使用 reComputer R1000 和 FIN 创建设备图形</th>
+        <th>使用 FIN 在 reComputer R1000 上创建设备图形</th>
         <th>AWS IoT Core 与 reComputer R1000 集成</th>
       </tr>
     </thead>
@@ -539,8 +539,8 @@ Google 的轻量级框架，用于在移动和边缘设备上运行 ML 模型。
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>在 RPi5 和 CM4 上使用 rpi ai kit 运行 yolov8s 的基准测试</th>
-        <th>YOLOv8 AI 盒子：跌倒、攀爬与跟踪</th>
+        <th>在 RPi5 和 CM4 上运行 yolov8s 搭配 rpi ai kit 的基准测试</th>
+        <th>YOLOv8 AI Box：跌倒、攀爬与跟踪</th>
         <th>在 R2000 上使用 Frigate NVR 进行枪支检测</th>
         <th>Frigate NVR 与 Hailo 在 reComputer R2000 上连接 Home Assistant</th>
       </tr>
@@ -569,7 +569,7 @@ Google 的轻量级框架，用于在移动和边缘设备上运行 ML 模型。
         <th>在 reComputer 上使用 Zoneminder</th>
         <th>在搭载 AI Kit 的 Raspberry Pi 上的 Clip 应用</th>
         <th>使用 reComputer AI box 的实时 OCR</th>
-        <th>关于 Raspberry Pi 5 搭配 AI Kit 进行 YOLOv8n 目标检测的教程</th>
+        <th>关于 YOLOv8n 目标检测的 Raspberry Pi 5 AI Kit 教程</th>
       </tr>
     </thead>
     <tbody>
@@ -613,7 +613,7 @@ Google 的轻量级框架，用于在移动和边缘设备上运行 ML 模型。
 </div>
 
 <br />
-Seeed Studio 自 2013 年以来一直服务于 Pi® 社区，并率先成为官方授权经销商和设计合作伙伴。我们基于 Raspberry Pi® 的边缘设备产品线，包括 HMI、边缘控制器和路由器，已成功部署在能源管理、自动化、工业 4.0、智慧楼宇和制造等多个行业。我们为产品获得的广泛应用和积极反馈感到自豪，这也让我们对自己的产品充满信心。欢迎查看 Seeed Studio Raspberry Pi® 成功案例。
+Seeed Studio 自 2013 年以来一直服务于 Pi® 社区，并率先成为官方授权经销商和设计合作伙伴。我们基于 Raspberry Pi® 的边缘设备产品线，包括 HMI、边缘控制器和路由器，已成功部署在能源管理、自动化、工业 4.0、智慧楼宇和制造等各个行业。我们为产品被广泛采用并获得的积极反馈而感到自豪，这也让我们对自己的产品充满信心。欢迎查看我们的 Seeed Studio Raspberry Pi® 成功案例。
 
 <br />
 
@@ -622,7 +622,7 @@ Seeed Studio 自 2013 年以来一直服务于 Pi® 社区，并率先成为官�
 </div>
 
 <br />
-若想及时获取关于边缘物联网设备的最新动态、特别优惠、真实成功案例、专家访谈和网络研讨会信息，并与来自智慧楼宇、能源管理、自动化等垂直行业的系统集成商和解决方案提供商保持联系，欢迎订阅我们专门的 Newsletter。
+若想及时了解关于边缘物联网设备的最新动态、特别优惠、真实成功案例、专家访谈和网络研讨会，并与来自智慧楼宇、能源管理、自动化等垂直行业的系统集成商和解决方案提供商保持联系，欢迎订阅我们专门的 Newsletter。
 
 <br /><br />
 
@@ -632,7 +632,7 @@ Seeed Studio 自 2013 年以来一直服务于 Pi® 社区，并率先成为官�
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将通过多种支持方式，确保您在使用产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
