@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-16 15:31:15 (北京时间)
-// 多语言页面: 2256 个
+// 生成时间: 2026-04-17 10:34:09 (北京时间)
+// 多语言页面: 2257 个
 
 (function() {
   'use strict';
@@ -10260,6 +10260,13 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
     "es",
