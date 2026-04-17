@@ -1,8 +1,8 @@
 ---
-description: 本 wiki 展示如何在 AI Box 上使用 YOLO 模型进行跌倒、翻越障碍和人员跟踪检测。
-title: AI Box 上的 YOLOv8 用于跌倒、攀爬和跟踪检测
+description: 本维基展示如何在 AI Box 上使用 YOLO 模型进行跌倒、翻越围栏和人员跟踪检测。
+title: 在 AI Box 上运行 YOLOv8 实现跌倒、翻越与跟踪
 keywords:
-  - Edge AI
+  - 边缘 AI
   - rpi5
   - Hailo
   - YOLO
@@ -13,16 +13,16 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2025-08-07'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/cn/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
-# YOLOv8 AI Box：跌倒、攀爬和跟踪检测
+# YOLOv8 AI Box：跌倒、翻越与跟踪
 
 
-## 简介
+## 介绍
 
-本项目将指导您如何使用 [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) 或 [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) 来实现使用 YOLOv8 模型的跌倒检测、攀爬检测和跟踪检测。
+本项目将指导你如何使用 [reComputer AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) 或 [reComputer Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html)，基于 YOLOv8 模型实现跌倒检测、翻越检测和跟踪检测。
 
 
 ## 硬件准备
@@ -44,22 +44,22 @@ url: https://wiki.seeedstudio.com/cn/yolov8_on_ai_box_for_fall_climbing_tracking
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -67,7 +67,7 @@ url: https://wiki.seeedstudio.com/cn/yolov8_on_ai_box_for_fall_climbing_tracking
 </div>
 
 
-> 💡 **注意**：本项目需要 reComputer AI Box 或 reComputer Industry AI Box。
+> 💡 **Note**: 本项目需要一台 reComputer AI Box 或 reComputer Industry AI Box。
 
 
 ##  跌倒检测
@@ -85,7 +85,7 @@ git clone https://github.com/Seeed-Projects/fall_detection_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### 准备 python 环境
+### 准备 Python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -118,7 +118,7 @@ git clone https://github.com/Seeed-Projects/cross_fence_with_AIBox.git
 cd cross_fence_with_AIBox
 ```
 
-### 准备 python 环境
+### 准备 Python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -137,7 +137,7 @@ python app.py -i ./scale_the_fence.mp4 -n ./yolov8n.hef --show-fps -l ./common/c
 <iframe width="800" height="400" src="https://www.youtube.com/embed/_-89czNbZ_M?list=PLpH_4mf13-A3Wm6hJp7JeT4DD9NXXUAca" title="Seeed Raspberry Pi AI Box Helps in Abnormal Event Detection: Fence Climbing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## 跟踪
+## 跟踪 
 
 ### 安装运行环境
 
@@ -152,7 +152,7 @@ git clone https://github.com/Seeed-Projects/track_people_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### 准备 python 环境
+### 准备 Python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -165,7 +165,7 @@ pip install -r requirements.txt
 python app.py -i ./people-walking.mp4 -n ./yolov8n.hef --show-fps -l ./common/coco.txt --track
 ```
 
-### 结果
+### 结果 
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/xoeMcaG_FxE?list=PLpH_4mf13-A3Wm6hJp7JeT4DD9NXXUAca" title="reComputer Object Detection and Tracking: The Role of YOLOv8 in Shaping Results" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -174,7 +174,7 @@ python app.py -i ./people-walking.mp4 -n ./yolov8n.hef --show-fps -l ./common/co
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
