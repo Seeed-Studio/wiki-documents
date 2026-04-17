@@ -1,6 +1,6 @@
 ---
-description: Primeiros passos com o reComputer Industrial
-title: Primeiros passos com o reComputer Industrial
+description: Introdução ao reComputer Industrial
+title: Introdução ao reComputer Industrial
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -16,19 +16,19 @@ url: https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_Getting_Started/
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Primeiros passos com o reComputer Industrial
+# Introdução ao reComputer Industrial
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-A série reComputer industrial oferece sistemas completos incluindo módulos NVIDIA Jetson™ Xavier NX/ Orin Nano/ Orin NX/, com desempenho de IA variando de 20 TOPS a 100 TOPS. Pré-instalado com Jetpack 5.1.1, o reComputer industrial simplifica o desenvolvimento, sendo ideal para criar aplicações de análise de vídeo, detecção de objetos, processamento de linguagem natural, imagem médica e robôs, o que traz transformação digital a diversos setores, como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
+A série reComputer industrial oferece sistemas completos incluindo módulos NVIDIA Jetson™ Xavier NX/ Orin Nano/ Orin NX/, com desempenho de IA variando de 20 TOPS a 100 TOPS. Pré-instalado com Jetpack 5.1.3, o reComputer industrial simplifica o desenvolvimento, sendo ideal para criar aplicações de análise de vídeo, detecção de objetos, processamento de linguagem natural, imagens médicas e robôs, trazendo transformação digital para setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
 
-O reComputer industrial vem com um dissipador de calor passivo e um design sem ventoinha, tornando-o ideal para uso em ambientes exigentes. O dissipador passivo permite um resfriamento eficiente sem a necessidade de ventoinha, reduzindo o risco de falha de componentes devido a poeira ou outros contaminantes. O design sem ventoinha também reduz os níveis de ruído e o consumo de energia, tornando-o adequado para uso em ambientes sensíveis a ruído e minimizando os custos de energia.
+O reComputer industrial vem com um dissipador de calor passivo e um design sem ventoinha, tornando-o ideal para uso em ambientes exigentes. O dissipador de calor passivo permite um resfriamento eficiente sem a necessidade de ventoinha, reduzindo o risco de falha de componentes devido a poeira ou outros contaminantes. O design sem ventoinha também reduz os níveis de ruído e o consumo de energia, tornando-o adequado para uso em ambientes sensíveis a ruído e minimizando os custos de energia.
 
-O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE PSE para fornecer energia via Ethernet para dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A outra porta GbE é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e acesso à Internet.
+O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE PSE para fornecer energia via Ethernet a dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A outra porta GbE é usada para conectar a um switch ou roteador de rede, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
 </a></div>
 
 ## Recursos
@@ -39,19 +39,12 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
 - **Montagem flexível:** Mesa, trilho DIN, montagem em parede, VESA
 - **Certificações:** FCC, CE, RoHS, UKCA
 
-<JetsonLeadQuote
-  buttonText="Solicitar orçamento personalizado"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
-  imageAlt="Request Quote for Jetson"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
-
 ## Especificações
 
 <table>
   <thead>
     <tr>
-      <th colSpan={2}>Nome do Produto</th>
+      <th colSpan={2}>Nome do produto</th>
       <th>reComputer Industrial J4012</th>
       <th>reComputer Industrial J4011</th>
       <th> reComputer Industrial J3011 </th>
@@ -80,7 +73,7 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
       <td><a href="https://www.seeedstudio.com/reComputer-Industrial-J2011-p-5683.html">110110188</a></td>
     </tr>
     <tr>
-      <td rowSpan={6}>Sistema de Processamento</td>
+      <td rowSpan={6}>Sistema de processamento</td>
       <td>Desempenho de IA</td>
       <td>100 TOPS</td>
       <td>70 TOPS</td>
@@ -96,9 +89,9 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
     </tr>
     <tr>
       <td>CPU</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 64 bits com 8 núcleos<br />2MB L2 + 4MB L3</td>
-      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 64 bits com 6 núcleos<br />1.5MB L2 + 4MB L3</td>
-      <td colSpan={2}>CPU NVIDIA Carmel ARM®v8.2 de 64 bits com 6 núcleos, 6MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 64-bit de 8 núcleos<br />2MB L2 + 4MB L3</td>
+      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 64-bit de 6 núcleos<br />1.5MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU NVIDIA Carmel ARM®v8.2 64-bit de 6 núcleos, 6MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memória</td>
@@ -110,13 +103,13 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
       <td>8GB 128-bit LPDDR4x<br />59.7GB/s</td>
     </tr>
     <tr>
-      <td>Codificação de Vídeo</td>
+      <td>Codificação de vídeo</td>
       <td colSpan={2}>1*4K60 (H.265) | 3*4K30 (H.265) | 6*1080p60 (H.265) | 12*1080p30 (H.265)</td>
       <td colSpan={2}>1080p30 suportado por 1-2 núcleos de CPU</td>
       <td colSpan={2}>2*4K60 | 4*4K30 | 10*1080p60 | 22*1080p30 (H.265)<br /> 2*4K60 | 4*4K30 | 10*1080p60 | 20*108p30 (H.264)</td>
     </tr>
     <tr>
-      <td>Decodificação de Vídeo</td>
+      <td>Decodificação de vídeo</td>
       <td colSpan={2}>1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
       <td colSpan={2}>1*4K60 (H.265) | 2*4K30 (H.265) | 5*1080p60 (H.265) | 11*1080p30 (H.265)</td>
       <td colSpan={2}>2*8K30 | 6*4K60 | 12*4K30 | 22*1080p60 | 44*1080p30 (H.265)<br /> 2*4K60 | 6*4K30 | 10*1080p60 | 22*1080p30 (H.264)</td>
@@ -135,7 +128,7 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
       <td colSpan={6}>M.2 Key M PCIe Gen4.0 SSD (M.2 NVMe 2280 SSD 128G incluído)</td>
     </tr>
     <tr>
-      <td rowSpan={6}>E/S</td>
+      <td rowSpan={6}>I/O</td>
       <td>Rede</td>
       <td colSpan={6}>1* LAN1 RJ45 GbE PoE (PSE 802.3 af 15 W)<br />1* LAN2 RJ45 GbE (10/100/1000Mbps) </td>
     </tr>
@@ -152,13 +145,13 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
       <td colSpan={6}>1* DB9 (RS232/RS422/RS485)</td>
     </tr>
     <tr>
-      <td>Vídeo</td>
+      <td>Display</td>
       <td colSpan={6}>1*HDMI 2.0 Type A</td>
     </tr>
     <tr>
       <td>SIM</td>
       <td colSpan={6}>1* slot para cartão Nano SIM</td>
-    </tr>
+    </tr]
     <tr>
       <td rowSpan={7}>Expansão</td>
       <td>Mini PCIe</td>
@@ -170,31 +163,31 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
     </tr>
     <tr>
       <td>M.2 Key B </td>
-      <td colSpan={6}>M.2 Key B com suporte a 4G/5G (módulo opcional) </td>
+      <td colSpan={6}>M.2 Key B suporta 4G/5G (módulo opcional) </td>
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td colSpan={6}>Sem ventoinha, dissipador de calor passivo<br />1* Conector de ventoinha (5V PWM)</td>
+      <td colSpan={6}>Sem ventoinha, dissipador de calor passivo<br />1*Conector de ventoinha (5V PWM)</td>
     </tr>
     <tr>
       <td>TPM</td>
-      <td colSpan={6}>1* Conector TPM 2.0 (módulo opcional) </td>
+      <td colSpan={6}>1* conector TPM 2.0 (módulo opcional) </td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={6}>1* Soquete RTC (CR1220 incluída), 1* RTC 2 pinos</td>
+      <td colSpan={6}>1* soquete RTC (CR1220 incluída), 1* RTC 2 pinos</td>
     </tr>
     <tr>
       <td>Câmera</td>
-      <td colSpan={6}>2* CSI (2 trilhas, 15 pinos)</td>
+      <td colSpan={6}>2* CSI (2-lane 15pin)</td>
     </tr>
     <tr>
       <td rowSpan={2}>Alimentação</td>
-      <td>Fonte de Alimentação</td>
+      <td>Fonte de alimentação</td>
       <td colSpan={6}>Bloco terminal DC 12V-24V de 2 pinos</td>
     </tr>
     <tr>
-      <td>Adaptador de Energia</td>
+      <td>Adaptador de energia</td>
       <td colSpan={6}>Adaptador de energia de 19V (sem cabo de alimentação) </td>
     </tr>
     <tr>
@@ -212,11 +205,11 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
     </tr>
     <tr>
       <td rowSpan={4}>Ambiente</td>
-      <td>Temperatura de Operação</td>
-      <td colSpan={6}> -20 ~ 60°C com 0,7 m/s</td>
+      <td>Temperatura de operação</td>
+      <td colSpan={6}> -20 ~ 60°C com 0.7m/s</td>
     </tr>
     <tr>
-      <td>Umidade de Operação</td>
+      <td>Umidade de operação</td>
       <td colSpan={6}>95% @ 40 °C (sem condensação)</td>
     </tr>
     <tr>
@@ -242,19 +235,19 @@ O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE
   </tbody>
 </table>
 
-## Visão Geral do Hardware
+## Visão geral do hardware
 
-### Sistema Completo
+### Sistema completo
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/3.jpg"/></div>
 
-### Placa Carrier
+### Placa carrier
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/4.jpg"/></div>
 
 ## Gravar o JetPack
 
-O reComputer Industrial vem pré-instalado com JetPack 5.1.1 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes do SDK como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o Jetpack no SSD incluído ou em um novo SSD, você pode seguir as etapas.
+O reComputer Industrial vem pré-instalado com JetPack 5.1.3 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes de SDK como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o Jetpack no SSD incluído ou em um novo SSD, você pode seguir as etapas.
 
 :::note
 Se você quiser usar SSDs com o reComputer Industrial, recomendamos apenas que escolha as versões de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) e [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) da Seeed.
@@ -265,8 +258,8 @@ Se você quiser usar SSDs com o reComputer Industrial, recomendamos apenas que e
 Você precisa preparar o seguinte hardware antes de começar a usar o reComputer Industrial
 
 - reComputer Industrial
-- Adaptador de energia fornecido com cabo de alimentação ([versão dos EUA](https://www.seeedstudio.com/AC-US-p-5122.html) ou [versão da UE](https://www.seeedstudio.com/AC-EU-p-5121.html))
-- PC Host com Ubuntu 20.04
+- Adaptador de energia fornecido com cabo de alimentação ([versão US](https://www.seeedstudio.com/AC-US-p-5122.html) ou [versão EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
+- PC host com Ubuntu 20.04
 - Cabo de transmissão de dados USB Type-C
 - Monitor externo
 - Cabo HDMI
@@ -307,7 +300,7 @@ Consulte a tabela abaixo para preparar a máquina host.
 
 Agora você precisa entrar no modo de recuperação na placa reComputer Industrial para poder gravar o dispositivo.
 
-1. Conecte um cabo USB Tipo-C entre a porta **USB2.0 DEVICE** e o seu PC.
+1. Conecte um cabo USB Type-C entre a porta **USB2.0 DEVICE** e o seu PC.
 2. Use um pino e insira no orifício **RECOVERY** para pressionar o botão de recuperação e, enquanto o mantém pressionado.
 3. Conecte o **conector de alimentação de bloco terminal de 2 pinos** incluído ao conector de alimentação na placa e conecte o adaptador de energia incluído com um cabo de alimentação para ligar a placa.
 4. Solte o botão de recuperação.
@@ -318,7 +311,7 @@ Agora você precisa entrar no modo de recuperação na placa reComputer Industri
 Certifique-se de ligar o dispositivo enquanto mantém o botão RECOVERY pressionado, caso contrário ele não entrará no modo de recuperação
 :::
 
-No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está no modo force recovery.
+No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -337,11 +330,11 @@ import TabItem from '@theme/TabItem';
 
 Aqui oferecemos 2 métodos diferentes de gravação.
 
-1. Baixe a imagem de sistema completa que preparamos, que inclui NVIDIA JetPack, drivers de periféricos de hardware e grave no dispositivo
-2. Baixe o NVIDIA L4T oficial, use os drivers de periféricos de hardware incluídos e grave no dispositivo
+1. Baixar a imagem completa do sistema que preparamos, que inclui NVIDIA JetPack, drivers de periféricos de hardware e gravar no dispositivo
+2. Baixar o NVIDIA L4T oficial, usar os drivers de periféricos de hardware incluídos e gravar no dispositivo
 
 :::note
-O download do primeiro método tem cerca de 14GB e o do segundo método tem cerca de 3GB.
+O download do primeiro método tem cerca de 14GB e o download do segundo método tem cerca de 3GB.
 :::
 
 <Tabs>
@@ -354,8 +347,8 @@ O download do primeiro método tem cerca de 14GB e o do segundo método tem cerc
   <thead>
     <tr>
       <th>Dispositivo</th>
-      <th>Link da Imagem1</th>
-      <th>Link da Imagem2</th>
+      <th>Link da imagem 1</th>
+      <th>Link da imagem 2</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -418,7 +411,7 @@ O código-fonte para as imagens acima pode ser encontrado [aqui](https://github.
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação como segue
+- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação como a seguir
 
 ```sh
 cd mfi_xxxx
@@ -461,7 +454,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
   <thead>
     <tr>
       <th>Módulo Jetson</th>
-      <th>Link para Download</th>
+      <th>Link para download</th>
       <th>Versão do JetPack</th>
       <th>Versão do L4T</th>
     </tr>
@@ -481,12 +474,12 @@ sudo ./tools/l4t_flash_prerequisites.sh
     </tr>
     <tr>
       <td>Jetson Xavier NX 8GB/ 16GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/xavier-nx-8-16-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reComputer-Industrial/xavier-nx-8-16-recomputer-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
 
-- **Passo 2:** Mova os drivers periféricos baixados para a mesma pasta com o diretório **Linux_For_Tegra**
+- **Passo 2:** Mova os drivers de periféricos baixados para a mesma pasta do diretório **Linux_For_Tegra**
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/125.png"/></div>
 
@@ -501,7 +494,7 @@ Aqui será perguntado se deseja substituir os arquivos. Digite A e pressione ENT
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-- **Passo 4:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de flash conforme a seguir
+- **Passo 4:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de gravação (`flash`) como segue
 
 ```sh
 cd Linux_for_Tegra
@@ -527,7 +520,7 @@ Depois disso, a placa será reiniciada e você verá o seguinte
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Passo 6:** Abra uma janela de terminal dentro do dispositivo, execute o seguinte, o dispositivo será reiniciado e ficará pronto para uso!
+- **Passo 6:** Abra uma janela de terminal no dispositivo, execute o seguinte, o dispositivo será reiniciado e ficará pronto para uso!
 
 ```sh
 systemctl disable nvgetty.service
@@ -551,13 +544,13 @@ sudo apt install nvidia-jetpack -y
 
 <TabItem value="Jetpack 5.1.3" label="Jetpack5.1.3">
 
-- **Passo 1:**Baixe a imagem do sistema para o seu PC com Ubuntu correspondente à placa que você está usando
+- **Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente à placa que você está usando
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Dispositivo</th>
+      <th>Device</th>
       <th>Link</th>
       <th>SHA256</th>
     </tr>
@@ -565,32 +558,32 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQByoedqLYEuT4Y1TWtbQeYfAaYErd1Nzu46JpYpF6Ok4EE?e=uEK4OQ" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQByoedqLYEuT4Y1TWtbQeYfAaYErd1Nzu46JpYpF6Ok4EE?e=uEK4OQ" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>f34512b24a07469f6014add6b88df060002f02c53705c91181ee380d73146b5e</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCggS3uTiIzQqidauGapvXtAS8tiOaWRZtusAN1S6SXsTs?e=LLjnrY" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCggS3uTiIzQqidauGapvXtAS8tiOaWRZtusAN1S6SXsTs?e=LLjnrY" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>9c590665723aa8847898f976070ecc120b936474262b360459627342c4c0c6f1</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAx3qELD5fvTKvYA8Bi-TwAAV5SJdxC6ok_lnwjqiw3Prg?e=MIcJng" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAx3qELD5fvTKvYA8Bi-TwAAV5SJdxC6ok_lnwjqiw3Prg?e=MIcJng" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>fe3fe9b275156ddd9cde2b4fcf628122bf4a66e1ff1184cf6769be81ba6e4942</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBiL7sGB2_7RZs5FNIf2bikAXzJxCr6z1XA8fIkgqpzluA?e=dZYPSh" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBiL7sGB2_7RZs5FNIf2bikAXzJxCr6z1XA8fIkgqpzluA?e=dZYPSh" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>75de6440ca1c04f08b4356fee0d8e4a4ba1cb858f9fabb5bbc0eebd3c387c81d</th>
     </tr>
         <tr>
       <td>reComputer Industrial J2012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfB-onLVAIxFreZTCSpejYIBPX42dZoKnKrDm8ZC27DI_w?e=fAOXZr" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfB-onLVAIxFreZTCSpejYIBPX42dZoKnKrDm8ZC27DI_w?e=fAOXZr" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>B54CF2545A8ED8BFE115C439B0B427112BD882F03292B9F5C03AB55746C707C1</th>
     </tr>
         <tr>
       <td>reComputer Industrial J2011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXmfIDIx80hCk61-dZogyUwBe6uOlz0U6tZEW3i7WC2JBw?e=BLjUW3" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXmfIDIx80hCk61-dZogyUwBe6uOlz0U6tZEW3i7WC2JBw?e=BLjUW3" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>11BDB47D06CA8409CFCEA109B8BACD9BB79A54A275D2664D6CF492BFEAD31131</th>
     </tr>
   </tbody>
@@ -600,7 +593,7 @@ sudo apt install nvidia-jetpack -y
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 :::info
@@ -613,7 +606,7 @@ O código-fonte para as imagens acima pode ser encontrado [aqui](https://github.
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de flash conforme a seguir
+- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como segue
 
 ```sh
 cd mfi_xxxx
@@ -629,7 +622,7 @@ Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-Conclua a **System Configuration** de acordo com suas necessidades.
+Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 :::
 
 </TabItem>
@@ -642,7 +635,7 @@ Conclua a **System Configuration** de acordo com suas necessidades.
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Dispositivo</th>
+      <th>Device</th>
       <th>Link</th>
       <th>SHA256</th>
     </tr>
@@ -650,22 +643,22 @@ Conclua a **System Configuration** de acordo com suas necessidades.
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKZo6jvhR5MtP5hSB2mWIUBLkMB_pl4zCJoGhAbao5yQw?e=WmoPbO" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKZo6jvhR5MtP5hSB2mWIUBLkMB_pl4zCJoGhAbao5yQw?e=WmoPbO" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>6c1e5abbdd60f771cd5c1a6e82f4ce7dfd0448018af94926d0240b853badbaf0</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdScxnClMMZElyNJXLzqY5EBSXN9cyUnkkl4fWfsDhn0xg?e=XYZB6n" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdScxnClMMZElyNJXLzqY5EBSXN9cyUnkkl4fWfsDhn0xg?e=XYZB6n" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>79c16c25602ebefa239402c23d0dcdae5ddc3eb23fdadb90654fbc34a1aa44dd</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Edt8dUapj7VCh5-X5ZgdeUIBjBSnx2wSweO-gjkMs1BxSw?e=Hi5rvU" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Edt8dUapj7VCh5-X5ZgdeUIBjBSnx2wSweO-gjkMs1BxSw?e=Hi5rvU" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>7221185ba7f499d837b046e6f8b73c1c9f4e28cc76eb2068719370e00dcd3f42</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKvTU_hdp9DjvFMMqi_RwkBC6LlpTtF_xfchhTtiV7fFg?e=pEhzOx" target="_blank" rel="noopener noreferrer">Baixar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbKvTU_hdp9DjvFMMqi_RwkBC6LlpTtF_xfchhTtiV7fFg?e=pEhzOx" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>7b997786317b518f9762e0828a0ac411ef984bd9927a9eeb5f8a900b185627ba</th>
     </tr>
   </tbody>
@@ -675,7 +668,7 @@ Conclua a **System Configuration** de acordo com suas necessidades.
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 :::info
@@ -688,7 +681,7 @@ O código-fonte para as imagens acima pode ser encontrado [aqui](https://github.
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de flash conforme a seguir
+- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como segue
 
 ```sh
 cd mfi_xxxx
@@ -751,7 +744,7 @@ Depois disso, a placa será reiniciada e estará pronta para uso!
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 :::info
@@ -764,18 +757,18 @@ O código-fonte das imagens acima pode ser encontrado [aqui](https://github.com/
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como a seguir
+- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como segue
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a seguinte saída
+Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a saída abaixo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e finalize a configuração inicial:
+- **Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e conclua a configuração inicial:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -789,7 +782,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 :::danger
 Se você estiver usando um módulo **Orin NX 16GB/8GB**, **não habilite o modo MAXN SUPER**.
-A capacidade de dissipação de calor do J4011/J4012 é insuficiente para suportá-lo, e forçar esse modo pode causar danos permanentes ao módulo.
+A capacidade de resfriamento do J4011/J4012 é insuficiente para suportá-lo, e forçar esse modo pode resultar em danos permanentes ao módulo.
 :::
 
 - **Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente à placa que você está usando
@@ -826,7 +819,7 @@ A capacidade de dissipação de calor do J4011/J4012 é insuficiente para suport
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 :::info
@@ -835,7 +828,7 @@ O código-fonte das imagens acima pode ser encontrado [aqui](https://github.com/
 
 :::note
 Observe que, devido ao aumento do consumo de energia e da geração de calor após habilitar o `super mode`, o [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) e o [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) não podem operar de forma estável no modo mais alto com o JetPack 6.2. Portanto, apenas o J4012 (Orin NX 16GB) está disponível para o JetPack 6.2, enquanto o J4011 (Orin NX 8GB) não é recomendado.
-Atualmente estamos desenvolvendo uma nova versão do reComputer. Fique atento!
+Atualmente estamos projetando uma nova versão do reComputer. Fique ligado!
 :::
 
 - **Passo 2:** Extraia o arquivo gerado
@@ -844,18 +837,18 @@ Atualmente estamos desenvolvendo uma nova versão do reComputer. Fique atento!
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como a seguir
+- **Passo 3:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação (`flash`) como segue
 
 ```sh
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a seguinte saída
+Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a saída abaixo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Passo 4:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
+- **Passo 4:** Conecte a placa a um monitor usando o conector HDMI na placa e conclua a configuração inicial
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -863,7 +856,7 @@ Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for 
 Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 :::
 
-- **Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e finalize a configuração inicial:
+- **Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e conclua a configuração inicial:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -879,7 +872,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 ## Uso de Hardware e Interfaces
 
-Para saber mais sobre como usar todo o hardware e interfaces na placa reComputer Industrial, recomendamos que você siga as documentações relevantes da wiki que preparamos.
+Para saber mais sobre como usar todo o hardware e as interfaces na placa reComputer Industrial, recomendamos que você siga as documentações relevantes do wiki que preparamos.
 
 - [Uso de Hardware e Interfaces do reComputer Industrial J20](https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
 - [Uso de Hardware e Interfaces do reComputer Industrial J40, J30](https://wiki.seeedstudio.com/pt-br/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
@@ -888,14 +881,21 @@ Para saber mais sobre como usar todo o hardware e interfaces na placa reComputer
 
 - [Folha de Dados do reComputer Industrial](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-datasheet.pdf)
 - [Guia de Referência do reComputer Industrial](https://files.seeedstudio.com/products/NVIDIA/reComputer-Industrial-Reference-Guide.pdf)
-- [Comparação de Dispositivos NVIDIA Jetson e Carrier Boards](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [Comparação de Dispositivos e Placas Carrier NVIDIA Jetson](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [Arquivo 3D do reComputer Industrial](https://files.seeedstudio.com/products/NVIDIA/Industrial/reComputer-Industrial.stp)
 - [Catálogo das Séries Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Casos de Sucesso de Edge AI da Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Comparação das Séries Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Página Única dos Dispositivos Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-## Suporte Técnico e Discussão sobre o Produto
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

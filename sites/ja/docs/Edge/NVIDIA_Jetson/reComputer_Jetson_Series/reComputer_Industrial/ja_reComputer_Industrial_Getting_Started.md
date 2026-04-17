@@ -1,6 +1,6 @@
 ---
 description: reComputer Industrial 入門ガイド
-title: reComputer Industrial を使い始める
+title: reComputer Industrial の始め方
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,22 +9,22 @@ sku: 110110190, 110110193, 110110188, 110110191, 110110189, 110110192, B80200010
 last_update:
   date: 05/16/2023
   author: Lakshantha
-createdAt: '2025-05-27'
+createdAt: '2025-06-05'
 updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/reComputer_Industrial_Getting_Started/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# reComputer Industrial を使い始める
+# reComputer Industrial の始め方
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-reComputer industrial シリーズは、NVIDIA Jetson™ Xavier NX / Orin Nano / Orin NX モジュールを搭載したフルシステムを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。Jetpack 5.1.1 をプリインストールしており、開発を簡素化して、ビデオ解析、物体検出、自然言語処理、医用画像処理、ロボットなどのアプリケーション構築に最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなど、さまざまな産業分野でデジタルトランスフォーメーションをもたらします。
+reComputer industrial シリーズは、NVIDIA Jetson™ Xavier NX / Orin Nano / Orin NX モジュールを搭載したフルシステムを提供し、AI 性能は 20 TOPS から 100 TOPS まで対応します。Jetpack 5.1.3 をプリインストールしており、開発を簡素化して、映像解析、物体検出、自然言語処理、医用画像処理、ロボットなどのアプリケーション構築に最適です。これにより、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなど、さまざまな産業分野でデジタルトランスフォーメーションを実現します。
 
-reComputer industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを使用せずに効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、静音性が求められる環境での使用に適しており、エネルギーコストの削減にもつながります。
+reComputer industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを使用せずに効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、騒音に敏感な環境での使用に適しており、エネルギーコストの削減にもつながります。
 
-reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち 1 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより、別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を展開しやすくなります。もう一方の GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
+reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち 1 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより、別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。もう一方の GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
@@ -33,7 +33,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
 
 ## 特長
 
-- **ファンレス小型 PC:** 熱設計リファレンス、0.7m/s の気流で -20 ～ 60°C の広い温度範囲をサポート
+- **ファンレスコンパクト PC:** サーマルリファレンスデザイン、0.7m/s の気流で -20 ～ 60°C の広い温度範囲をサポート
 - **産業用インターフェース向けに設計:** 2x RJ-45 GbE（1 つは POE-PSE 802.3 af 用）; 1x RS-232/RS-422/RS-485; 4x DI/DO; 1x CAN; 3x USB3.2; 1x TPM2.0（モジュールはオプション）
 - **ハイブリッド接続:** 1x Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
 - **柔軟な取り付け:** デスク、DIN レール、壁掛け、VESA
@@ -89,9 +89,9 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />2MB L2 + 4MB L3</td>
-      <td colSpan={3}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
-      <td colSpan={2}>6-core NVIDIA Carmel ARM®v8.2 64-bit CPU, 6MB L2 + 4MB L3</td>
+      <td>8 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU<br />2MB L2 + 4MB L3</td>
+      <td colSpan={3}>6 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU<br />1.5MB L2 + 4MB L3</td>
+      <td colSpan={2}>6 コア NVIDIA Carmel ARM®v8.2 64 ビット CPU、6MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>メモリ</td>
@@ -134,20 +134,20 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={6}>3* USB3.2 Gen1, 1* USB2.0 Type C(Device mode), 1* USB2.0 Type C For Debug UART &amp; RP2040</td>
+      <td colSpan={6}>3* USB3.2 Gen1、1* USB2.0 Type C（デバイスモード）、1* USB2.0 Type C（デバッグ UART および RP2040 用）</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td colSpan={6}>4*DI,4*DO,3*GND_DI,2*GND_DO,1*GND_ISO,1*CAN<br /></td>
+      <td colSpan={6}>4*DI、4*DO、3*GND_DI、2*GND_DO、1*GND_ISO、1*CAN<br /></td>
     </tr>
     <tr>
       <td>COM</td>
-      <td colSpan={6}>1* DB9 (RS232/RS422/RS485)</td>
+      <td colSpan={6}>1* DB9（RS232/RS422/RS485）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
       <td colSpan={6}>1*HDMI 2.0 Type A</td>
-    </tr>
+    </tr]
     <tr>
       <td>SIM</td>
       <td colSpan={6}>1* Nano SIM カードスロット</td>
@@ -155,15 +155,15 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     <tr>
       <td rowSpan={7}>拡張</td>
       <td>Mini PCIe</td>
-      <td colSpan={6}>4G/LoRaWAN® 用 Mini PCIe（モジュールはオプション）<br /></td>
+      <td colSpan={6}>4G/LoRaWAN® 用 Mini PCIe（モジュールはオプション） <br /></td>
     </tr>
     <tr>
       <td>Wi-Fi</td>
-      <td colSpan={6}>SMD Wi-Fi/Bluetooth をサポート（モジュールはオプション）</td>
+      <td colSpan={6}>SMD Wi-Fi/Bluetooth をサポート（モジュールはオプション） </td>
     </tr>
     <tr>
       <td>M.2 Key B </td>
-      <td colSpan={6}>M.2 Key B は 4G/5G をサポート（モジュールはオプション）</td>
+      <td colSpan={6}>M.2 Key B は 4G/5G をサポート（モジュールはオプション） </td>
     </tr>
     <tr>
       <td>ファン</td>
@@ -171,7 +171,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td>TPM</td>
-      <td colSpan={6}>1* TPM 2.0 コネクタ（モジュールはオプション）</td>
+      <td colSpan={6}>1* TPM 2.0 コネクタ（モジュールはオプション） </td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -179,7 +179,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td>カメラ</td>
-      <td colSpan={6}>2* CSI (2-lane 15pin)</td>
+      <td colSpan={6}>2* CSI（2 レーン 15 ピン）</td>
     </tr>
     <tr>
       <td rowSpan={2}>電源</td>
@@ -188,7 +188,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td>電源アダプタ</td>
-      <td colSpan={6}>19V 電源アダプタ（電源コードなし）</td>
+      <td colSpan={6}>19V 電源アダプタ（電源コードなし） </td>
     </tr>
     <tr>
       <td rowSpan={3}>機構<br /></td>
@@ -200,7 +200,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
       <td colSpan={6}>1.57kg</td>
     </tr>
     <tr>
-      <td>取り付け</td>
+      <td>取り付け方法</td>
       <td colSpan={6}>デスク、DIN レール、壁掛け、VESA</td>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
     </tr>
     <tr>
       <td colSpan={2}>認証</td>
-      <td colSpan={6}>FCC, CE, RoHS, UKCA</td>
+      <td colSpan={6}>FCC、CE、RoHS、UKCA</td>
     </tr>
     <tr>
       <td colSpan={2}>保証</td>
@@ -247,18 +247,18 @@ reComputer industrial には 2 つの RJ45 GbE ポートがあり、そのうち
 
 ## JetPack をフラッシュする
 
-reComputer Industrial には、必要なドライバとともに JetPack 5.1.1 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD や新しい SSD に Jetpack を再フラッシュしたい場合は、次の手順に従うことができます。
+reComputer Industrial には、必要なドライバとともに JetPack 5.1.3 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD や新しい SSD に Jetpack を再フラッシュしたい場合は、次の手順に従ってください。
 
 :::note
 reComputer Industrial で SSD を使用する場合は、Seeed の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) バージョンのみを選択することを推奨します。
 :::
 
-### 事前準備
+### 前提条件
 
 reComputer Industrial を使い始める前に、以下のハードウェアを準備する必要があります
 
 - reComputer Industrial
-- 付属の電源アダプタと電源コード（[US version](https://www.seeedstudio.com/AC-US-p-5122.html) または [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html)）
+- 付属の電源アダプタと電源コード（[US バージョン](https://www.seeedstudio.com/AC-US-p-5122.html) または [EU バージョン](https://www.seeedstudio.com/AC-EU-p-5121.html)）
 - Ubuntu 20.04 ホスト PC
 - USB Type-C データ転送ケーブル
 - 外部モニタ
@@ -298,20 +298,20 @@ reComputer Industrial を使い始める前に、以下のハードウェアを�
 
 ### 強制リカバリーモードに入る
 
-これから、デバイスを書き込むために reComputer Industrial ボードをリカバリーモードにする必要があります。
+次に、デバイスを書き込むために reComputer Industrial ボードをリカバリーモードにする必要があります。
 
 1. **USB2.0 DEVICE** ポートと PC の間を USB Type-C ケーブルで接続します。
 2. ピンを使用して **RECOVERY** ホールに差し込み、リカバリーボタンを押したままにします。
-3. 付属の **2-Pin Terminal block power connector** をボード上の電源コネクタに接続し、付属の電源アダプタと電源コードを接続してボードの電源を入れます。
+3. 付属の **2-Pin Terminal block power connector** をボード上の電源コネクタに接続し、付属の電源アダプタを電源コードとともに接続してボードの電源を入れます。
 4. リカバリーボタンを離します。
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/97.png"/></div>
 
 :::note
-RECOVERY ボタンを押したままの状態で電源を入れていることを確認してください。そうしないとリカバリーモードに入ることができません。
+RECOVERY ボタンを押したままの状態でデバイスの電源を入れていることを確認してください。そうしないとリカバリーモードに入ることができません。
 :::
 
-Ubuntu ホスト PC で Terminal ウィンドウを開き、**lsusb** コマンドを入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
+Ubuntu ホスト PC でターミナルウィンドウを開き、コマンド **lsusb** を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
@@ -403,7 +403,7 @@ import TabItem from '@theme/TabItem';
 Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
 :::
 
-上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)にあります。
+上記イメージのソースコードは[こちら](https://github.com/Seeed-Studio/Linux_for_Tegra)で確認できます。
 
 - **Step 2:** 生成されたファイルを解凍します
 
@@ -428,13 +428,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-その後、ボードは再起動し、使用可能な状態になります。
+その後、ボードは再起動し、使用できる状態になります。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
   </TabItem>
 <TabItem value="Method 2" label="Method 2">
 
-**NVIDIA L4T と rootfs のダウンロードと準備**
+**NVIDIA L4T と rootfs をダウンロードして準備する**
 
 ```sh
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/jetson_linux_r35.3.1_aarch64.tbz2
@@ -446,7 +446,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ドライバのダウンロードと準備**
+**ドライバをダウンロードして準備する**
 
 - **Step 1:** 使用しているボードに対応したドライバファイルを Ubuntu PC にダウンロードします
 
@@ -490,7 +490,7 @@ sudo apt install unzip
 sudo unzip xxxx.zip # Replace xxxx with the driver file name
 ```
 
-ここでファイルを置き換えるかどうかを尋ねられます。A と入力し、ENTER キーを押して必要なファイルを置き換えます
+ここでファイルを置き換えるかどうかを尋ねられます。A を入力して ENTER を押し、必要なファイルを置き換えます
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
@@ -506,7 +506,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_l4t_t194_qspi_p3668.xml --no-systemimg" --network usb0  recomputer-xavier-nx-industrial external
 ```
 
-これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
+これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下の出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -520,7 +520,7 @@ sudo ADDITIONAL_DTB_OVERLAY_OPT="BootOrderNvme.dtbo" ./tools/kernel_flash/l4t_in
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Step 6:** デバイス上でターミナルウィンドウを開き、次を実行します。デバイスが再起動し、使用可能な状態になります！
+- **Step 6:** デバイス上でターミナルウィンドウを開き、以下を実行します。デバイスが再起動し、使用可能な状態になります！
 
 ```sh
 systemctl disable nvgetty.service
@@ -528,7 +528,7 @@ sudo depmod -a
 sudo reboot
 ```
 
-さらに、CUDA、cuDNN、TensorRT などの SDK コンポーネントをインストールしたい場合は、次を実行します
+さらに、CUDA、cuDNN、TensorRT などの SDK コンポーネントをインストールしたい場合は、次を実行してください
 
 ```sh
 sudo apt update
@@ -613,7 +613,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
+これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下の出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -688,7 +688,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、次のような出力が表示されます
+これでボードにシステムイメージのフラッシュが開始されます。フラッシュが成功すると、以下の出力が表示されます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -729,7 +729,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeOq0sfMDhBEqZPX-ti_gJ0BzUdSGeFf5RrSdxFnQ70aNQ?e=GVr10a" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://seeedstudio.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeOq0sfMDhBEqZPX-ti_gJ0BzUdSGeFf5RrSdxFnQ70aNQ?e=GVr10a" target="_blank" rel="noopener noreferrer">Download</a></td>
       <th>547E541E40A133A2CDEB3FAC399850ABC108325BBF109771420DDBCAF19E5E29</th>
     </tr>
     <tr>
@@ -827,7 +827,7 @@ Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマ
 :::
 
 :::note
-`super mode` を有効にすると消費電力と発熱が増加するため、[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) および [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) は JetPack 6.2 で最高モードでは安定して動作できません。そのため、JetPack 6.2 では J4012（Orin NX 16GB）のみが利用可能であり、J4011（Orin NX 8GB）は推奨されません。
+`super mode` を有効にすると消費電力と発熱が増加するため、[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) および [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) は JetPack 6.2 の最高モードでは安定して動作できません。そのため、JetPack 6.2 では J4012（Orin NX 16GB）のみが利用可能であり、J4011（Orin NX 8GB）は推奨されません。
 現在、新バージョンの reComputer を設計中です。続報をお待ちください。
 :::
 
@@ -872,7 +872,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## ハードウェアおよびインターフェースの使用方法
 
-reComputer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく学ぶには、当社が用意した関連 wiki ドキュメントを参照することをお勧めします。
+reComputer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、当社が用意した関連 wiki ドキュメントに従うことをお勧めします。
 
 - [reComputer Industrial J20 ハードウェアおよびインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J20_Hardware_Interfaces_Usage)
 - [reComputer Industrial J40, J30 ハードウェアおよびインターフェースの使用方法](https://wiki.seeedstudio.com/ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage)
@@ -886,14 +886,10 @@ reComputer Industrial ボード上のすべてのハードウェアおよびイ�
 - [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed Studio Edge AI 導入事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
-
-
-
-## 参考資料
+- [Seeed Jetson デバイス一覧（1 ページ）](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 <JetsonLeadQuote
-  buttonText="見積もり依頼"
+  buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
@@ -901,7 +897,7 @@ reComputer Industrial ボード上のすべてのハードウェアおよびイ�
 
 ## 技術サポートと製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+当社の製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
