@@ -48,7 +48,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
     <thead>
       <tr>
         <th>Name</th>
-        <th>reComputer AI Industrial R22xx-12</th>
+        <th>reComputer Industrial R22xx-12</th>
         <th>reComputer Industrial R20xx-12</th>
         <th>reComputer Industrial R21xx-12</th>
         <th>reComputer AI R21xx-12</th>
