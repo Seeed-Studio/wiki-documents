@@ -7,6 +7,7 @@ keywords:
   - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_flex_xiao_i2s
+sku: 100005504,100099135,100070894,100026178
 last_update:
   date: 4/16/2025
   author: Kasun Thushara
