@@ -23,7 +23,6 @@ If you don’t have an AWS account, please create a new account first.
 
 ### Add Gateway
 
-
 Navigate to **Internet of Things** > **IoT Core**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS1.PNG" alt="pir" width={800} height="auto" /></p>
@@ -32,12 +31,11 @@ Select **LPWAN devices** > **Gateway** to add a gateway
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS4.PNG" alt="pir" width={800} height="auto" /></p>
 
-**Gateway's EUI:** The gateway EUIcan be found on the device label or [Local Console ](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)
+**Gateway's EUI:** The gateway EUI can be found on the device label or [Local Console](https://files.seeedstudio.com/products/SenseCAP/M2_Multi-Platform_Gateway/Quick_Start_for_SenseCAP_Gateway_&_Sensors.pdf)
 
 **Frequency band:** Select the Frequency plan according to the actual choice.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS2.PNG" alt="pir" width={800} height="auto" /></p>
-
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS3.PNG" alt="pir" width={800} height="auto" /></p>
 
 #### Create certificate
 
@@ -99,7 +97,6 @@ Publish to AWS IoT Core message broker
 Adestination name can only have alphanumeric, - (hyphen)and _ (underscore) characters and it can't have any spaces.
 :::
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.PNG" alt="pir" width={800} height="auto" /></p>
 
 ### Add LoRaWAN Devices
@@ -112,15 +109,13 @@ Navigate to **LPWAN devices** > **Devices**, click Add wireless device
 
 #### Configure device
 
-**Wireless device specification**: OTAAv1.0x 
+**Wireless device specification**: OTAAv1.0x
 
 **DevEUI:** The `device EUI/APP EUI/APP` key can be found the the device label.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
-
 
 #### Check device connection status
 
@@ -142,7 +137,7 @@ Navigate to **LoRa** > **LoRa Network**
 
 **Mode**: Basics Station
 
-**Gateway EUI**: It will automatically get the EUIof the connected gateway
+**Gateway EUI**: It will automatically get the EUI of the connected gateway
 
 **Server**: Choose CUPS Server or LNS Server (For CUPS, port is 443; for LNS, port is 8887)
 
@@ -154,6 +149,4 @@ Learn more about [CUPS and LNS Server](https://lora-developers.semtech.com/build
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
-
 Click on Save&Apply when you finish the settings.
-
