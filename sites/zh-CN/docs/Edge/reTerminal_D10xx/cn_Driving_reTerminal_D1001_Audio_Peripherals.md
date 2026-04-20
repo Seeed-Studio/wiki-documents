@@ -1,21 +1,21 @@
 ---
-description: 本文将指导你在 reTerminal D1001 上驱动 I2S 音频外设。
+description: 本文将指导你在 reTerminal D1001 上驱动 I2S 扬声器。
 sku: 100058144
-title: 驱动 reTerminal D1001 音频外设
+title: 驱动 reTerminal D1001 扬声器
 image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp
-slug: /driving_reterminal_d1001_audio_peripherals
+slug: /driving_reterminal_d1001_speaker
 last_update:
-  date: 04/02/2026
+  date: 04/17/2026
   author: Jackson.Li
 createdAt: '2026-04-02'
-url: https://wiki.seeedstudio.com/cn/driving_reterminal_d1001_audio_peripherals/
-updatedAt: '2026-04-02'
+url: https://wiki.seeedstudio.com/cn/driving_reterminal_d1001_speaker/
+updatedAt: '2026-04-17'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 驱动 reTerminal D1001 音频外设
+# 驱动 reTerminal D1001 扬声器
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/hardware.webp" style={{width:900, height:'auto'}}/></div>
 
@@ -27,15 +27,15 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-本指南介绍如何在 **reTerminal D1001** 开发板上驱动 I2S 音频外设。系统架构包含三个核心组件：
+本指南介绍如何在 **reTerminal D1001** 开发板上驱动 I2S 扬声器。系统架构涉及三个核心组件：
 - **ESP32-P4**：主处理器，用于管理音频数据流并控制外设配置。
-- **ES8311**：低功耗单声道音频编解码器，负责将数字 I2S 数据转换为模拟音频信号。
-- **PCA9535**：I2C IO 扩展芯片，用于控制功率放大器的使能状态，为外设控制提供灵活的 GPIO 扩展。
+- **ES8311**：低功耗单声道音频编解码器，负责将数字 I2S 数据转换为扬声器所需的模拟音频信号。
+- **PCA9535**：I2C IO 扩展器，用于控制功率放大器的使能状态，为外设控制提供灵活的 GPIO 扩展。
 
 
-### 音频架构框图
+### 扬声器架构框图
 
-音频系统采用双总线架构：**I2S 总线**专门用于高速数字音频数据传输，而 **I2C 总线**则负责对编解码器和 IO 扩展芯片进行低速控制命令传输。
+音频系统采用双总线架构：**I2S 总线**专用于高速数字音频数据传输，而 **I2C 总线**负责对编解码器和 IO 扩展器进行低速控制命令通信。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/Driving_Audio_Peripherals/D1001_Block_diagram.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -45,21 +45,21 @@ import TabItem from '@theme/TabItem';
 
 | 信号名称 | ESP32-P4 引脚 | 功能描述 |
 | :--- | :--- | :--- |
-| **I2C_SDA** | GPIO20 | **串行数据**：将配置命令（音量、采样率）发送到 ES8311。 |
+| **I2C_SDA** | GPIO20 | **串行数据**：向 ES8311 传输配置命令（音量、采样率）。 |
 | **I2C_SCL** | GPIO21 | **串行时钟**：用于同步 I2C 数据传输。 |
-| **I2S_MCK** | GPIO33 | **主时钟（Master Clock）**：为编解码器内部的 Δ-Σ 调制器提供高频参考时钟。 |
-| **I2S_BCK** | GPIO32 | **位时钟（Bit Clock）**：用于同步音频数据流中的每一位数据。 |
-| **I2S_WS**  | GPIO31 | **字选择（Word Select）**：也称为 LRCK，用于定义新音频帧的开始并选择左右声道。 |
-| **I2S_DO**  | GPIO30 | **数据输出**：将来自 ESP32-P4 的数字 PCM 音频数据发送到编解码器。 |
-| **I2S_DI**  | GPIO11 | **数据输入**：为后续音频录制或编解码器回环功能预留。 |
+| **I2S_MCK** | GPIO33 | **主时钟**：为编解码器内部的 Δ-Σ 调制器提供高频参考时钟。 |
+| **I2S_BCK** | GPIO32 | **位时钟**：用于同步音频数据流中的每一位。 |
+| **I2S_WS**  | GPIO31 | **字选择**：也称为 LRCK，用于指示新音频帧的开始并选择左右声道。 |
+| **I2S_DO**  | GPIO30 | **数据输出**：将来自 ESP32-P4 的数字 PCM 音频数据传输到编解码器进行播放。 |
+| **I2S_DI**  | GPIO11 | **数据输入**：预留用于后续的音频录制或来自编解码器的回环。 |
 
 #### ESP32-P4 与 PCA9535RGER（GPIO 扩展）
 
 | 信号名称 | ESP32-P4 引脚 | 功能描述 |
 | :--- | :--- | :--- |
-| **I2C_SDA** | GPIO20 | 与 PCA9535 IO 扩展芯片共享的 I2C 数据总线。 |
-| **I2C_SCL** | GPIO21 | 共享的 I2C 时钟总线。 |
-| **EN_PA**   | **EXP_GPO11** | **PA 使能**：映射到 PCA9535 的引脚 **P13**。将其置为高电平可使能外部功率放大器。 |
+| **I2C_SDA** | GPIO20 | 用于控制 PCA9535 IO 扩展器的共享 I2C 数据总线。 |
+| **I2C_SCL** | GPIO21 | 共享 I2C 时钟总线。 |
+| **EN_PA**   | **EXP_GPO11** | **PA 使能**：映射到 PCA9535 的 **P13** 引脚。将其设置为高电平可使能外部功率放大器。 |
 
 ## 软件流程
 
@@ -74,14 +74,14 @@ import TabItem from '@theme/TabItem';
 </div><br />
 
 :::tip
-请在仓库中导航至 `driver_examples/01_I2SCodec` 目录，以找到该音频示例的具体源代码和工程文件。
+请在仓库中导航到 `driver_examples/01_I2SCodec/` 目录，以找到本扬声器示例的具体源代码和工程文件。
 :::
 
 ### 开发执行顺序
 
-#### 步骤 1. 初始化 I2C IO 扩展芯片（PCA9535RGER）
+#### 步骤 1. 初始化 I2C IO 扩展器（PCA9535RGER）
 
-外部功率放大器（PA）通过 PCA9535 扩展芯片进行控制。启用 PA 至关重要，因为即便编解码器工作正常，如果未使能 PA，扬声器也不会输出可听声音。
+外部功率放大器（PA）通过 PCA9535 扩展器进行控制。使能 PA 至关重要，因为即使编解码器工作正常，如果未使能 PA，扬声器也不会有可听声音输出。
 
 ```c
 static esp_err_t pca9535_write_reg(uint8_t reg, uint8_t data)
@@ -118,7 +118,7 @@ static void pca9535_init(void)
 
 #### 步骤 2. 配置 I2S 驱动
 
-I2S 是一种专门用于传输数字音频的同步串行通信协议。我们将 ESP32-P4 配置为 **I2S 主机（Master）**，这意味着它向编解码器提供 BCLK 和 WS 时钟。
+I2S 是一种专门用于传输数字音频的同步串行通信协议。我们将 ESP32-P4 配置为 **I2S 主机**，这意味着它向编解码器提供 BCLK 和 WS 时钟。
 
 ```c
 static esp_err_t i2s_driver_init(void)
@@ -154,15 +154,14 @@ static esp_err_t i2s_driver_init(void)
 
 #### 步骤 3. 初始化 ES8311 编解码器
 
-ES8311 必须根据 ESP32-P4 中定义的 I2S 设置（采样率、数据宽度）进行相应配置。这通过 I2C 总线完成。在构建工程之前，你可以通过修改 `main/example_config.h` 中的宏来自定义音频行为：
+必须将 ES8311 配置为与 ESP32-P4 中定义的 I2S 设置（采样率、数据位宽）保持一致。这是通过 I2C 总线完成的。在构建工程之前，你可以通过修改 `main/example_config.h` 中的宏来自定义扬声器行为：
 
 | 宏 | 描述 | 设置原则 |
 | :--- | :--- | :--- |
 | **EXAMPLE_SAMPLE_RATE** | **音频采样率**（Hz） | 定义音频采样的频率。常见取值为 `16000`（语音）或 `44100`/`48000`（音乐）。 |
-| **EXAMPLE_MCLK_MULTIPLE** | **MCLK 与 LRCLK 的倍数关系** | 主时钟（MCLK）必须是采样率的整数倍。`256` 是 16 位音频的常用值，而 `384` 经常用于更高精度。 |
-| **EXAMPLE_VOICE_VOLUME** | **播放音量** | 范围为 `0` 到 `100`。设置 ES8311 编解码器的初始输出电平。 |
-| **EXAMPLE_MIC_GAIN** | **麦克风增益**（dB） | 调节双麦克风的灵敏度。值越大，音量越高，但可能引入噪声。 |
-| **EXAMPLE_RECV_BUF_SIZE** | **DMA 缓冲区大小** | 控制 DMA 处理的数据块大小。更大的缓冲区可避免卡顿，但会增加音频延迟。 |
+| **EXAMPLE_MCLK_MULTIPLE** | **MCLK 与 LRCLK 比值** | 主时钟（MCLK）必须是采样率的整数倍。`256` 是 16 位音频的标准值，但 `384` 常用于更高精度。 |
+| **EXAMPLE_VOICE_VOLUME** | **播放音量** | 取值范围为 `0` 到 `100`。用于设置 ES8311 编解码器的初始输出电平。 |
+| **EXAMPLE_RECV_BUF_SIZE** | **DMA 缓冲区大小** | 控制 DMA 处理的数据块大小。更大的缓冲区可以防止卡顿，但会增加音频延迟。 |
 
 ```c
 static esp_err_t es8311_codec_init(void)
@@ -197,7 +196,7 @@ static esp_err_t es8311_codec_init(void)
 
 #### 步骤 4. 主入口与任务创建
 
-主应用程序首先初始化各外设，然后将播放逻辑交由一个专用的 FreeRTOS 任务来处理。
+主应用程序会初始化各个外设，然后将播放逻辑交由专用的 FreeRTOS 任务处理。
 
 ```c
 void app_main(void)
@@ -220,7 +219,7 @@ void app_main(void)
 
 #### 步骤 5. DMA 预加载与数据播放
 
-**DMA（Direct Memory Access，直接存储器访问）** 允许 I2S 外设在无需 CPU 干预的情况下直接从内存中获取数据。对 DMA 缓冲区进行**预加载**是一项关键技术，可防止在 I2S 硬件以空缓冲区启动时产生“爆音”——这是由于直流偏移突然变化而导致的噪声。
+**DMA（直接存储器访问）** 允许 I2S 外设在无需 CPU 干预的情况下直接从内存中获取数据。对 DMA 缓冲区进行**预加载**是一项关键技术，可防止当 I2S 硬件在缓冲区为空的情况下启动时，由于直流偏移突然变化而产生的“噼啪”噪声。
 
 ```c
 static void i2s_music(void *args)
@@ -250,15 +249,15 @@ static void i2s_music(void *args)
 ## 故障排查
 
 ### Q1：扬声器无声音输出
-- **检查**：确认功率放大器（PA）已启用。`EN_PA` 信号由 PCA9535 IO 扩展器的 **P13** 引脚控制。确保已调用 `pca9535_init()` 并正确设置输出寄存器（端口 1，第 3 位）。
-- **检查**：确认 I2S 连接无误，并确保已为 TX 通道调用 `i2s_channel_enable()` 函数。
+- **检查**：确认功率放大器（PA）是否已启用。`EN_PA` 信号通过 PCA9535 IO 扩展器的 **P13** 引脚控制。确保已调用 `pca9535_init()` 并正确设置输出寄存器（端口 1，第 3 位）。
+- **检查**：确认 I2S 连接正确，并确保已为 TX 通道调用 `i2s_channel_enable()` 函数。
 
-### Q2：音频失真或包含噼啪噪声
-- **检查**：确保 I2S 时钟配置（MCLK、BCLK、WS）与音频文件的采样率匹配。`EXAMPLE_SAMPLE_RATE` 不匹配会导致音高和速度问题。
-- **检查**：确认已按 **步骤 5** 所示实现 DMA 预加载。预加载可防止在缓冲区为空时启动通道所产生的“爆音”。
+### Q2：音频失真或包含噼啪杂音
+- **检查**：确保 I2S 时钟配置（MCLK、BCLK、WS）与音频文件的采样率匹配。`EXAMPLE_SAMPLE_RATE` 不匹配会导致音调和速度异常。
+- **检查**：确认已按 **步骤 5** 所示实现 DMA 预加载。预加载可以防止在缓冲区为空的情况下启动通道而产生的“爆音”。
 
 ### Q3：与 ES8311 或 PCA9535 的 I2C 通信失败
-- **检查**：确认 I2C SDA（GPIO20）和 SCL（GPIO21）连接正确。确保没有其他外设与这些引脚发生冲突。
+- **检查**：确认 I2C SDA（GPIO20）和 SCL（GPIO21）连接正确。确保没有其他外设与这些引脚冲突。
 - **检查**：确认 I2C 地址正确：PCA9535 为 **0x20**，ES8311 为 **0x18**。
 
 ## 技术支持与产品讨论
