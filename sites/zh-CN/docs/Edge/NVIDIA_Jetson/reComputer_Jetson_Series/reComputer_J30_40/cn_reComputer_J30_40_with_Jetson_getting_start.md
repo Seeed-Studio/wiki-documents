@@ -30,7 +30,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ## 介绍
 基于 Jetson Orin 构建的 reComputer J30/40 是一款功能强大且紧凑的智能边缘盒子，可为边缘带来高达 100TOPS 的现代 AI 性能。同时结合了 NVIDIA Ampere™ GPU 架构和 64 位操作能力。
 
-完整系统包括一个 NVIDIA Jetson Orin 生产模块、一个散热器和一个电源适配器。reComputer J30/40 预装了 Jetpack 5.1.1，简化了开发过程，适合从事视频分析、目标检测、自然语言处理、医学成像和机器人技术的边缘 AI 解决方案提供商在智慧城市、安防、工业自动化、智能工厂等行业中部署。
+完整系统包括一个 NVIDIA Jetson Orin 生产模块、一个散热器和一个电源适配器。reComputer J30/40 预装了 Jetpack 5.1.3，简化了开发过程，适合从事视频分析、目标检测、自然语言处理、医学成像和机器人技术的边缘 AI 解决方案提供商在智慧城市、安防、工业自动化、智能工厂等行业中部署。
 
 如果您正在寻找不含电源适配器的版本，请查看 [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html)。
 
