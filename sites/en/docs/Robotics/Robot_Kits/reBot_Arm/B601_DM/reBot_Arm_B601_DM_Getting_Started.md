@@ -61,7 +61,7 @@ The reBot Arm B601-DM is available in multiple configurations to meet different 
 | **Body Only (Structure)** | ✅ | ❌ | ❌ | ✅ | [Coming Soon](https://www.seeedstudio.com/) |
 | **Body Only (Motors)** | ✅ | ❌ | ✅ | ❌ | [Coming Soon](https://www.seeedstudio.com/) |
 
-## Step 1: [Assembly Guide]((https://youtu.be/rfTQoFCfnMc))
+## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
 Before Assembly:
 - Please read the following instructions carefully to ensure a smooth assembly process.
