@@ -63,7 +63,7 @@ un ordenador
     </td>
     <td>
       <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-USB-4-Microphone-Array-with-XIAO-ESP32S3-AI-Powered-XMOS-XVF3800-p-5895.html" target="_blank" rel="noopener noreferrer">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-With-Case-XIAO-ESP32S3-p-6628.html" target="_blank" rel="noopener noreferrer">
           <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
       </div>

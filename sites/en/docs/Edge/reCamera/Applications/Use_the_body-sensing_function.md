@@ -7,6 +7,7 @@ keywords:
   - Game
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /use_the_motion-sensing_function_of_recamera_to_play_games
+sku: 102991896, 108990119, 100029708
 sidebar_position: 9
 last_update:
   date: 11/27/2025
