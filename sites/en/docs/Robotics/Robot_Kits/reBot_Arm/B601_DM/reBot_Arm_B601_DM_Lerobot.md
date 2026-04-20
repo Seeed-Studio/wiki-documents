@@ -7,6 +7,7 @@ keywords:
   - Robotic Arm
   - rebot arm
   - Robot
+image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg
 slug: /rebot_arm_b601_dm_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
