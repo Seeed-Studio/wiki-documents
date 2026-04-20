@@ -30,7 +30,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ## Introducción
 reComputer J30/40 construido con Jetson Orin es una caja inteligente de borde potente y compacta para brindar hasta 100TOPS de rendimiento de IA moderna al borde. Mientras combina la arquitectura GPU NVIDIA Ampere™ con capacidad operativa de 64 bits.
 
-El sistema completo incluye un módulo de producción NVIDIA Jetson Orin, un disipador de calor y un adaptador de corriente. reComputer J30/40 viene preinstalado con Jetpack 5.1.1, simplifica el desarrollo y es adecuado para el despliegue para proveedores de soluciones de IA de borde que trabajan en análisis de video, detección de objetos, procesamiento de lenguaje natural, imágenes médicas y robótica en industrias de ciudades inteligentes, seguridad, automatización industrial, fábricas inteligentes.
+El sistema completo incluye un módulo de producción NVIDIA Jetson Orin, un disipador de calor y un adaptador de corriente. reComputer J30/40 viene preinstalado con Jetpack 5.1.3, simplifica el desarrollo y es adecuado para el despliegue para proveedores de soluciones de IA de borde que trabajan en análisis de video, detección de objetos, procesamiento de lenguaje natural, imágenes médicas y robótica en industrias de ciudades inteligentes, seguridad, automatización industrial, fábricas inteligentes.
 
 Si está buscando la versión sin adaptador de corriente, por favor consulte [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
