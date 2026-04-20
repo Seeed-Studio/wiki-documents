@@ -4,19 +4,20 @@ title: Introdução ao Pinocchio e MeshCat para reBot Arm B601-DM
 keywords:
   - Pinocchio
   - MeshCat
-  - Robotic Arm
-  - Robot
+  - Braço Robótico
+  - Robô
   - LeRobot
-  - Kinematics
+  - Cinemática
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
+sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-03-24
+  date: 2026-04-17
   author: LiuJunjie
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-03-24'
-updatedAt: '2026-03-25'
+updatedAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -24,37 +25,89 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
-<p align="center">
-    <a href="./LICENSE">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
-    </a>
-    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
-</p>
+[Pinocchio](https://github.com/stack-of-tasks/pinocchio) é uma biblioteca open source para análise e otimização de dinâmica em robótica. Ela fornece cinemática direta/inversa eficiente, cálculos dinâmicos e recursos de planejamento de trajetória. [MeshCat](https://github.com/rdeits/meshcat) é uma ferramenta de visualização 3D baseada na web que pode exibir o estado do robô e trajetórias de movimento em tempo real.
 
-<p align="center">
-  <strong>Braço Robótico 6-DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
-</p>
+Este projeto combina o poderoso poder de computação do Pinocchio com a visualização intuitiva do MeshCat, fornecendo um conjunto completo de ferramentas de análise cinemática e depuração para o reBot Arm B601-DM.
 
 ---
 
-## 📖 Introdução
+## Recursos do Projeto
 
-**reBotArm Control** é uma biblioteca de controle em Python para o braço robótico reBot Arm B601, oferecendo uma solução completa desde o controle de motor de baixo nível até o cálculo de cinemática de alto nível.
+1. **Análise Cinemática Completa**  
+   Suporta cálculos de Cinemática Direta (FK) e Cinemática Inversa (IK), sendo capaz de resolver a pose do efetuador final do braço robótico em tempo real.
 
-### ✨ Recursos Principais
+2. **Visualização 3D em Tempo Real**  
+   Exibe o estado do braço robótico e as trajetórias de movimento em tempo real por meio do MeshCat no navegador, sem necessidade de software adicional.
 
-- 🦾 **Suporte a Dois Modelos** — B601-DM (motores Damiao) e B601-RS (motores RobStride)
-- 🧮 **Solucionador de Cinemática** — Cinemática direta/inversa baseada em Pinocchio
-- 🛤️ **Planejamento de Trajetória** — Trajetória geodésica em SE(3) + rastreamento CLIK
-- 🔧 **Configuração Flexível** — Arquivo de configuração YAML para rápida adaptação de hardware
+3. **Planejamento e Rastreamento de Trajetória**  
+   Implementa planejamento de trajetória geodésica em SE(3), com suporte a controle de rastreamento CLIK (Cinemática Inversa em Malha Fechada).
+
+4. **Controle de Compensação de Gravidade**  
+   Calcula o torque de gravidade das juntas com base no modelo dinâmico do Pinocchio, alcançando o efeito de “flutuação” do braço robótico.
+
+5. **Código Aberto e Extensível**  
+   Todo o código é open source, permitindo que os usuários personalizem algoritmos de controle e efeitos de visualização conforme suas necessidades.
+
+## Especificações
+
+O hardware para este tutorial é fornecido pela [Seeed Studio](https://www.seeedstudio.com/)
+
+<table>
+  <thead>
+    <tr>
+      <th>Parâmetro</th>
+      <th>Especificação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Modelo do Braço Robótico</td>
+      <td>reBot Arm B601-DM</td>
+    </tr>
+    <tr>
+      <td>Graus de Liberdade</td>
+      <td>6-DOF + Garra</td>
+    </tr>
+    <tr>
+      <td>Modelo do Motor</td>
+      <td>Damiao DM4340 / DM4310</td>
+    </tr>
+    <tr>
+      <td>Método de Comunicação</td>
+      <td>Barramento CAN via Adaptador USB-CAN</td>
+    </tr>
+    <tr>
+      <td>Tensão de Operação</td>
+      <td>24V DC</td>
+    </tr>
+    <tr>
+      <td>Método de Controle</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <td>Faixa de Temperatura de Operação Recomendada</td>
+      <td>0°C ～ 40°C</td>
+    </tr>
+  </tbody>
+</table>
+
+## Lista de Materiais (BOM)
+
+| Componente | Quantidade | Incluído |
+|--|--|--|
+| Braço Robótico reBot Arm B601-DM | 1 | ✅ |
+| Ponte Serial USB2CAN | 1 | ✅ |
+| Adaptador de Energia (24V) | 1 | ✅ |
+| Cabo USB-C | 1 | ✅ |
+| Garra | 1 | ✅ |
+
+:::caution
+A Seeed Studio **é responsável apenas pela qualidade do hardware**. O tutorial é atualizado em estrita conformidade com a documentação oficial. Se você encontrar problemas de software ou de ambiente que não consiga resolver, consulte primeiro o FAQ no final do documento ou entre em contato com o atendimento ao cliente para entrar no grupo de comunicação SeeedStudio Lerobot para tirar dúvidas.
+:::
 
 ---
 
-## ⚙️ Início Rápido
-
-### Requisitos
+## Requisitos de Ambiente
 
 | Item | Requisito |
 |------|-------------|
@@ -62,15 +115,17 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/
 | **Sistema Operacional** | Ubuntu 22.04+ |
 | **Interface de Comunicação** | Ponte Serial USB2CAN ou Interface CAN |
 
-### Etapas de Instalação
+---
 
-#### Etapa 1. Instalar uv (se ainda não estiver instalado)
+## Etapas de Instalação
+
+### Etapa 1. Instalar uv (se não estiver instalado)
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-#### Etapa 2. Sincronizar Ambiente (Instalar Todas as Dependências)
+### Etapa 2. Sincronizar Ambiente (Instalar Todas as Dependências)
 
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git
@@ -84,141 +139,51 @@ uv sync
 
 ---
 
-## 🔌 Configuração de Hardware
+## Ferramentas de Depuração
 
-### Padrão: Ponte Serial USB2CAN Damiao
+#### Console de Motor Único (`1_damiao_text.py`)
 
-O reBot Arm B601-DM utiliza por padrão o módulo de ponte serial USB2CAN da Damiao.
-
-**Conexão de Hardware**:
-
-1. Conecte o módulo USB2CAN ao seu computador via cabo USB
-2. O sistema irá reconhecê-lo automaticamente como dispositivo `/dev/ttyACM0`
-
-**Verificação de Configuração**:
-
-```bash
-# Check device
-ls /dev/ttyACM0
-
-# Scan motors
-motorbridge-cli scan --vendor damiao --transport dm-serial \
-    --serial-port /dev/ttyACM0 --serial-baud 921600
-```
-
-### Opcional: Interface CAN Padrão
-
-Usando outros adaptadores USB-CAN (CANable, PCAN, etc.):
-
-```bash
-# Start CAN interface
-sudo ip link set can0 up type can bitrate 500000
-
-# Verify interface
-ip -details link show can0
-```
-
-### Configuração da Marca dos Motores
-
-| Marca do Motor | Transmissão | Configuração | Taxa de Baud |
-|-------------|--------------|---------------|-----------|
-| **Damiao** | Ponte Serial | `dm-serial` | 921600 |
-| **Damiao** | Interface CAN | `socketcan` | 500000 |
-| **RobStride** | Interface CAN | `socketcan` | 500000 |
-
-:::tip
-
-- Para motores Damiao usando ponte serial, é obrigatório definir `--transport dm-serial`
-- Regra de ID de feedback: `feedback_id = motor_id + 0x10`
-
-:::
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-reBotArm_control_py/
-├── config/                     # Configuration files
-│   └── robot.yaml              # Joint parameter configuration
-├── example/                    # Example programs
-│   ├── Debug Tools/
-│   │   ├── 1_damiao_text.py        # Single motor console
-│   │   └── 2_zero_and_read.py      # Zero calibration
-│   ├── Kinematics Tests/
-│   │   ├── 5_fk_test.py            # Forward kinematics
-│   │   └── 6_ik_test.py            # Inverse kinematics
-│   ├── Real Machine Control/
-│   │   ├── 7_arm_ik_control.py     # IK real-time control
-│   │   ├── 8_arm_traj_control.py   # Trajectory planning
-│   │   └── 9_gravity_compensation.py  # Gravity compensation
-│   └── sim/                    # Simulation tools
-├── reBotArm_control_py/        # Core library
-│   ├── actuator/               # Actuator module
-│   ├── kinematics/             # Kinematics module
-│   ├── controllers/            # Controller module
-│   └── trajectory/             # Trajectory planning module
-├── urdf/                       # URDF model
-└── README.md
-```
-
----
-
-## 🎮 Programas de Exemplo
-
-### Ferramentas de Depuração
-
-#### 1️⃣ Console de Motor Único (`1_damiao_text.py`)
-
-Teste direto de um único motor via SDK motorbridge com três modos de controle.
+Teste de motor único direto via SDK motorbridge.
 
 **Uso**:
-
 ```bash
 uv run python example/1_damiao_text.py
 ```
 
 **Comandos Interativos**:
-
 | Comando | Descrição |
 |---------|-------------|
-| `mit <pos_deg> [vel kp kd tau]` | Modo MIT |
-| `posvel <pos_deg> [vlim]` | Modo POS_VEL |
-| `vel <vel_rad_s>` | Modo de Velocidade |
-| `enable` / `disable` | Habilitar/Desabilitar |
+| `enable` / `disable` | Ativar/Desativar |
 | `set_zero` | Definir posição zero |
 | `state` | Ver estado |
 
 ---
 
-#### 2️⃣ Calibração de Zero & Monitor de Ângulo (`2_zero_and_read.py`)
+#### Calibração de Zero e Monitor de Ângulo (`2_zero_and_read.py`)
 
 Define automaticamente o zero de todas as juntas e exibe os ângulos das juntas em tempo real.
 
 **Uso**:
-
 ```bash
 uv run python example/2_zero_and_read.py
 ```
 
 ---
 
-### Testes de Cinemática
+## Testes de Cinemática
 
-#### 5️⃣ Teste de Cinemática Direta (`5_fk_test.py`)
+#### Teste de Cinemática Direta (`5_fk_test.py`)
 
-Calcula a pose do efetuador final a partir dos ângulos das juntas.
+Calcular a pose do efetuador final a partir dos ângulos das juntas.
 
 **Entrada**: 6 ângulos de junta (graus)
 
 **Saída**:
-
 - Posição do efetuador final (X, Y, Z) — Unidade: metros
 - Matriz de rotação (3×3)
-- Ângulos de Euler (Rolagem/Tangagem/Guinada) — Unidade: graus
+- Ângulos de Euler (Roll/Pitch/Yaw) — Unidade: graus
 
 **Exemplo**:
-
 ```bash
 uv run python example/5_fk_test.py
 > 0 0 0 0 0 0
@@ -227,17 +192,15 @@ uv run python example/5_fk_test.py
 
 ---
 
-#### 6️⃣ Teste de Cinemática Inversa (`6_ik_test.py`)
+#### Teste de Cinemática Inversa (`6_ik_test.py`)
 
-Resolve os ângulos das juntas a partir da pose desejada do efetuador final.
+Resolver os ângulos das juntas a partir da pose desejada do efetuador final.
 
 **Formato de Entrada**:
-
 - Apenas posição: `<x> <y> <z>` (metros)
 - Posição + Orientação: `<x> <y> <z> <roll> <pitch> <yaw>` (graus)
 
 **Exemplo**:
-
 ```bash
 uv run python example/6_ik_test.py
 > 0.25 0.0 0.15              # Position only
@@ -246,10 +209,108 @@ uv run python example/6_ik_test.py
 
 ---
 
-### Controle em Máquina Real
+## Ambiente de Simulação
 
-:::tip Configuração de Permissões
-Antes de executar os exemplos de controle em máquina real, é necessário definir as permissões do dispositivo:
+<div align="center">
+    <img width={800} 
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/traj_sim_geodesic.png" />
+</div>
+
+#### Simulação de Cinemática Direta (`sim/fk_sim.py`)
+
+Simulação interativa de cinemática direta, visualizando a pose do braço robótico ao inserir ângulos de junta no MeshCat.
+
+**Uso**:
+```bash
+uv run python example/sim/fk_sim.py
+```
+
+**Comandos Interativos**:
+- Inserir 6 ângulos de junta (graus), separados por espaço
+- Exemplo: `0 0 0 0 0 0`
+- Exemplo: `45 -30 15 -60 90 -180`
+- `q`/`quit`/`exit`: Sair
+
+**Recursos**:
+- Exibição em tempo real da posição e orientação do efetuador final
+- Suporta entrada contínua para testar diferentes poses
+- Saída formatada das informações de pose
+
+---
+
+#### Simulação de Cinemática Inversa (`sim/ik_sim.py`)
+
+Simulação interativa de cinemática inversa, resolvendo automaticamente os ângulos das juntas a partir da pose alvo e visualizando.
+
+**Uso**:
+```bash
+uv run python example/sim/ik_sim.py
+```
+
+**Formato de Entrada**:
+- Apenas posição: `x y z` (metros)
+- Posição+Orientação: `x y z roll pitch yaw` (radianos)
+
+**Exemplo**:
+```bash
+> 0.25 0.0 0.25              # Position only
+> 0.25 0.0 0.25 0 0 0        # Position+Orientation
+```
+
+**Recursos**:
+- Julgamento automático da convergência da IK
+- Exibição da contagem de iterações e erro
+- Atualizações em tempo real da pose do robô
+
+---
+
+#### Simulação de Planejamento de Trajetória (`sim/traj_sim.py`)
+
+Simulação de planejamento de trajetória baseada em geodésica em SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
+
+**Uso**:
+```bash
+uv run python example/sim/traj_sim.py
+```
+
+**Comandos Interativos**:
+- Entrada: `x y z [roll pitch yaw]` (metros/radianos)
+- Pressione Enter para usar a configuração padrão
+- `q`: Sair
+
+**Recursos**:
+- Planejar da posição atual até a posição alvo
+- Usar perfil de trajetória de jerk mínimo
+- Exibição em tempo real das estatísticas da trajetória
+- Reprodução completa da animação da trajetória no MeshCat
+- Exibir caminho de referência (cinza) e caminho real (verde)
+
+---
+
+#### Ferramenta de Visualização (`sim/visualizer.py`)
+
+Wrapper do visualizador MeshCat, fornecendo interface unificada de exibição do robô.
+
+**Principais Recursos**:
+- Carregar modelo URDF e exibir o robô
+- Desenhar caminhos polilinha 3D (referência/real)
+- Exibir pose alvo da IK (eixos tricolores + esfera)
+- Suportar reprodução de animação de trajetória de juntas
+
+**Exemplo de Uso**:
+```python
+from example.sim.visualizer import Visualizer
+viz = Visualizer()
+viz.update(q)  # Update robot pose
+viz.draw_path(points, "path_name", color)  # Draw path
+```
+
+---
+
+## Controle em Máquina Real
+
+:::tip Configuração de Permissão
+Antes de executar os exemplos de controle em máquina real, você precisa configurar as permissões do dispositivo:
 
 ```bash
 # Set serial device permission (Damiao USB2CAN)
@@ -258,24 +319,21 @@ sudo chmod 666 /dev/ttyACM0
 # Or for CAN interface (e.g., can0)
 sudo chmod 666 /dev/can0
 ```
-
 :::
 
-#### 7️⃣ Controle em Tempo Real por IK (`7_arm_ik_control.py`)
+#### Controle em Tempo Real por IK (`7_arm_ik_control.py`)
 
-Controle em tempo real do efetuador final baseado no solucionador de IK.
+Controle em tempo real do efetuador final com base no resolvedor de IK.
 
 **Comandos Interativos**:
-
 | Comando | Descrição |
 |---------|-------------|
 | `x y z [roll pitch yaw]` | Pose alvo do efetuador final |
-| `state` | Ver estado atual/alvo |
+| `state` | Ver estado |
 | `pos` | Posição atual do efetuador final |
 | `q/quit/exit` | Sair |
 
 **Uso**:
-
 ```bash
 uv run python example/7_arm_ik_control.py
 > 0.3 0.0 0.2
@@ -284,24 +342,21 @@ uv run python example/7_arm_ik_control.py
 
 ---
 
-#### 8️⃣ Controle por Planejamento de Trajetória (`8_arm_traj_control.py`)
+#### Controle de Planejamento de Trajetória (`8_arm_traj_control.py`)
 
 Planejamento de trajetória geodésica em SE(3) + rastreamento CLIK.
 
 **Formato de Entrada**:
-
 ```
 x y z [roll pitch yaw] [duration]
 ```
 
 **Parâmetros**:
-
 - `x, y, z`: Posição alvo (metros)
 - `roll, pitch, yaw`: Orientação alvo (radianos)
 - `duration`: Duração do movimento (segundos), padrão 2,0 s
 
 **Uso**:
-
 ```bash
 uv run python example/8_arm_traj_control.py
 > 0.3 0.0 0.3 0 0.4 0 2.0
@@ -309,50 +364,68 @@ uv run python example/8_arm_traj_control.py
 
 ---
 
-#### 9️⃣ Controle de Compensação de Gravidade (`9_gravity_compensation.py`)
+#### Controle de Compensação de Gravidade (`9_gravity_compensation.py`)
 
 Compensa a gravidade das juntas usando o modelo dinâmico do Pinocchio.
 
 **Lei de Controle**:
-
 ```
 tau = g(q)          — Gravity feedforward
 pos = current motor position  — Joint position follows current position
-kp = 2,  kd = 1     — Unified stiffness/damping for all motors
+kp = 2,  kd = 1     — Unified stiffness/damping for all joints
 ```
 
 **Comportamento Esperado**:
-
-- O braço robótico pode "flutuar" em qualquer postura
+- O braço robótico pode “flutuar” em qualquer postura
 - Não cairá devido ao próprio peso quando solto
 - Pode ser movido manualmente para qualquer posição
 
 **Uso**:
-
 ```bash
 uv run python example/9_gravity_compensation.py
 ```
 
 **Saída**:
-
 - Exibição em tempo real do torque esperado para cada junta (N·m)
 - Pressione `Ctrl+C` para parar e desconectar
 
 ---
 
-## 📄 Licença
+## FAQ
+
+- **Erro `Permission denied`**  
+  Certifique-se de ter executado `sudo chmod 666 /dev/ttyACM0` ou `sudo chmod 666 /dev/can0` para definir as permissões do dispositivo.
+
+- **Falha na resolução de IK ou resultados anormais**  
+  Verifique se a pose alvo está dentro da área de trabalho do braço robótico e certifique-se de que a configuração de limite das juntas está correta.
+
+- **O efeito da compensação de gravidade não é bom**  
+  Isso pode ser causado por erros estruturais e precisão de usinagem. A compensação de gravidade deste projeto depende de urdf e pinocchio. Você pode tentar corrigir o urdf para os seus parâmetros medidos reais (você pode pedir ajuda à IA para esta etapa).
+
+---
+
+## Licença
 
 Este projeto é open source sob a **Licença MIT**.
 
 ---
 
-## ☎ Contato
+## Contato
 
-- **Suporte Técnico**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
+- **Suporte técnico**: [Submit Issue](https://github.com/vectorBH6/reBotArm_control_py/issues)
 - **Repositório**: [GitHub](https://github.com/vectorBH6/reBotArm_control_py)
+- **Fórum**: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
 ---
 
-<p align="center">
-  <strong>🌟 Se este projeto for útil para você, por favor, nos dê uma Star!</strong>
-</p>
+## Documentos de referência
+
+- [Documentação oficial do Pinocchio](https://stack-of-tasks.github.io/pinocchio/)
+- [Documentação oficial do MeshCat](https://github.com/rdeits/meshcat)
+- [motorbridge SDK](https://github.com/Damiao/motorbridge)
+
+---
+
+<div align="center">
+  <strong>Se este projeto for útil para você, por favor nos dê uma estrela!</strong>
+</div>
