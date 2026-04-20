@@ -1,6 +1,6 @@
 ---
 description: Nó Solar SenseCAP para Meshtastic & LoRa
-title: Nó Solar SenseCAP
+title: Introdução ao Nó Solar SenseCAP
 keywords:
   - Meshtastic
   - Solar
@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-16'
+updatedAt: '2026-03-10'
 url: https://wiki.seeedstudio.com/pt-br/meshtastic_solar_node/
 ---
 
@@ -19,11 +19,11 @@ url: https://wiki.seeedstudio.com/pt-br/meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-É um nó de comunicação ou repetidor com alimentação solar econômico baseado em [Meshtastic®](https://meshtastic.org/), que integra o controlador principal XIAO nRF52840 Plus e o módulo LoRa Wio-SX1262. É especificamente projetado para áreas sem cobertura de rede. Suporta comunicação de longa distância, posicionamento preciso e operação de baixo consumo. É adequado para expandir a cobertura de rede em áreas externas.
+É um nó de comunicação ou repetidor econômico alimentado por energia solar, baseado em [Meshtastic®](https://meshtastic.org/), que integra o controlador principal XIAO nRF52840 Plus e o módulo LoRa Wio-SX1262. Ele é especificamente projetado para áreas sem cobertura de rede. Suporta comunicação de longa distância, posicionamento preciso e operação de baixo consumo de energia. É adequado para expandir a cobertura de rede em áreas externas.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora </font></span></strong>
     </a>
 </div>
 
@@ -39,9 +39,9 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
 
 - Integrado com um painel solar de 5W e suporta baterias externas (que precisam ser fornecidas pelos próprios usuários).
 - O dispositivo vem com o firmware Meshtastic pré-instalado de fábrica. Ele pode ser integrado perfeitamente ao ecossistema Meshtastic.
-- Compatível com o ecossistema Grove e suporta conexão plug-and-play de sensores, como sensores de temperatura e umidade, sensores de luz etc.
-- É adequado para uso externo de longa duração.
-- Suporta transmissão de 8 a 9 KM em áreas abertas. Pode ser usado como um nó ou repetidor externo, expandindo facilmente a rede Mesh e aprimorando a cobertura da rede.
+- Compatível com o ecossistema Grove e suporta conexão plug-and-play de sensores como sensores de temperatura e umidade, sensores de luz etc.
+- É adequado para uso externo de longo prazo.
+- Suporta transmissão de 8 a 9 KM em áreas abertas. Pode ser usado como um nó externo ou repetidor, expandindo facilmente a rede Mesh e aprimorando a cobertura da rede.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -102,14 +102,14 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
     <td>Grove *1: IIC/GPIO/UART</td>
   </tr>
   <tr>
-    <td>Depuração USB-C</td>
+    <td>Depuração via USB-C</td>
   </tr>
   <tr>
     <td rowSpan="3"><b>Botão</b></td>
     <td>Ligar/desligar</td>
   </tr>
   <tr>
-    <td>Resetar</td>
+    <td>Reset</td>
   </tr>
   <tr>
     <td>Definido pelo usuário</td>
@@ -122,7 +122,7 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
     <td>Luz indicadora de status do painel solar *1</td>
   </tr>
   <tr>
-    <td>Luz de batimento da malha *1</td>
+    <td>Luz de batimento da Mesh *1</td>
   </tr>
   <tr>
     <td>Definido pelo usuário *1</td>
@@ -133,17 +133,17 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td></td>
-    <td>Fonte de alimentação solar: 5V 1A</td>
+    <td>Alimentação solar: 5V 1A</td>
   </tr>
   <tr>
-    <td><b>Classificação à prova d'água</b></td>
+    <td><b>Grau de impermeabilidade</b></td>
     <td>IPX5</td>
   </tr>
   <tr>
     <td><b>Bateria (para versão P1-Pro)</b></td>
     <td>
-      <p>- 4 x baterias de lítio 18650 (3350mAh cada)</p>
-      <p>- Suporta carregamento por Type-C e solar.</p>
+      <p>- 4 baterias de lítio 18650 (3350mAh cada)</p>
+      <p>- Suporta carregamento via Type-C e solar.</p>
       <p>- Ambiente de descarga: -40～60°C</p>
       <p>- Ambiente de carregamento: 0-50°C</p>
     </td>
@@ -160,7 +160,7 @@ O Nó Solar está disponível em duas variantes: [SenseCAP Solar Node P1](https:
 
 
 
-### Visão Geral de Hardware
+### Visão Geral do Hardware
 
 **Itens interativos**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>
