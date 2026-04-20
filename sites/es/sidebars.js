@@ -2104,7 +2104,17 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_picovoice',
               ],
             },
-            'Sensor/reSpeaker_flex/es_reSpeaker_flex_xiao',
+            {
+              type: 'category',
+              label: 'reSpeaker Flex with Xiao',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/es_reSpeaker_flex_xiao',
+              },
+              items: [
+                'Sensor/reSpeaker_flex/es_reSpeaker_flex_i2s_test',
+              ],
+            },
             'Sensor/reSpeaker_flex/es_reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
