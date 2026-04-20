@@ -7,6 +7,7 @@ keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/reCamera/HA.png
 slug: /getting_started_for_home_assistant_with_recamera
+sku: 102991896, 108990119, 100029708, 114993560
 sidebar_position: 6
 last_update:
   date: 11/11/2025
