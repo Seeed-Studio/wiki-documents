@@ -145,7 +145,7 @@ If the device doesn't respond when you press the button, please charge it first.
 
 ### Get APP
 
-Download from the Google Store or Apple Store. Or [click here](https://meshcore.co.uk/apps.html) to get the Meshcore APP.
+Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the Meshcore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 

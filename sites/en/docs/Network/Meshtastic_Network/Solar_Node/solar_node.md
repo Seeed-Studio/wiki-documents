@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa
-title: SenseCAP Solar Node
+title: SenseCAP Solar Node Introduction
 keywords:
   - Meshtastic
   - Solar
