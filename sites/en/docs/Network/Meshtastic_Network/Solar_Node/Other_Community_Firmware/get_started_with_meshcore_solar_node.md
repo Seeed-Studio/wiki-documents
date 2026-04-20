@@ -15,6 +15,15 @@ createdAt: '2025-05-13'
 url: https://wiki.seeedstudio.com/get_started_with_meshcore_solar_node/
 updatedAt: '2026-04-03'
 ---
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/image1_2.jpeg" alt="pir" width={800} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshcore-p-6741.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+<br></br>
 
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
