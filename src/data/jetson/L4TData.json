@@ -592,20 +592,20 @@
     {
         "product": "j501-carrier AGX-Orin 32g",
         "l4t": "36.3.0 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERTmpYBKF2tAodLyqpajhLkBxPdGUIWXfGytdCGwNu28qw?e=cJIbtM",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDx1wM2o-NNRJKtppr672mRAUZwUBxQFzYw-X2E5V-Lpak",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EeHcCFk-chtDnEzoXiwvxZwBQuK3I3mTOAJ8mnZJE-P2uA?e=X9g0HK",
-        "filename": "mfi_reserver-agx-orin-32g-j501x-jp6.0-36.3.0-2024-09-19.tar.gz",
+        "filename": "mfi_reserver-agx-orin-32g-j501-gmsl-6.0-36.3.0-2026-04-15.tar.gz",
         "foldername": "mfi_reserver-agx-orin-32g-j501-6.0-36.3.0",
-        "sha256": "B1C1BBB14058B0F5C00C5657A8EF8FA7A4C3711DB8AD82F7E614311F95063989"
+        "sha256": "8FA6E750C2C21678168DAE377E95CE6C"
     },
     {
         "product": "j501-carrier AGX-Orin 32g",
         "l4t": "36.3.0 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Ef5wlNXtxVRIulSKwJTT3ocBmCBlHbQNVnz3LRDJtRwlGQ?e=KAIiVS",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDx1wM2o-NNRJKtppr672mRAUZwUBxQFzYw-X2E5V-Lpak",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EX5HoeV09eFKtWj9YhAfgZ8Bt2k9bxxxSO5-TQBZoGLB-Q?e=hvcfG1",
-        "filename": "mfi_reserver-agx-orin-32g-j501-gms1-6.0-36.3.0-2024-09-19.tar.gz",
+        "filename": "mfi_reserver-agx-orin-32g-j501-gmsl-6.0-36.3.0-2026-04-15.tar.gz",
         "foldername": "mfi_reserver-agx-orin-32g-j501-gmsl-6.0-36.3.0",
-        "sha256": "0C58022F626321EE42464AACBB470296B1AFE0A7256787158539BE7EC73E19C6"
+        "sha256": "8FA6E750C2C21678168DAE377E95CE6C"
     },
     {
         "product": "j501-carrier AGX-Orin 32g",
