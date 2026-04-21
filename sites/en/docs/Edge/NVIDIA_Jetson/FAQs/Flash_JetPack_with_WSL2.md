@@ -341,6 +341,8 @@ tar xpf Jetson_Linux_r36.4.3_aarch64.tbz2
 # Extract Root Filesystem
 sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_r36.4.3_aarch64.tbz2 -C ./Linux_for_Tegra/rootfs
 
+cd Linux_for_Tegra/
+
 # Install prerequisites
 sudo ./tools/l4t_flash_prerequisites.sh
 

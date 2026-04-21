@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-10 18:10:15 (北京时间)
-// 多语言页面: 2250 个
+// 生成时间: 2026-04-16 15:31:15 (北京时间)
+// 多语言页面: 2256 个
 
 (function() {
   'use strict';
@@ -1269,6 +1269,13 @@
     "ja",
     "pt"
   ],
+  "/how_to_build_and_flash_bsp_source_for_jetson_thor": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/how_to_build_the_ko_module_for_seeed_jetson": [
     "cn",
     "en",
@@ -1445,6 +1452,13 @@
     "pt"
   ],
   "/rtl8822ce_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rtl8852be_wireless_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -3299,6 +3313,13 @@
     "ja",
     "pt"
   ],
+  "/configure_static_ip_on_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_develop_with_c_cpp": [
     "cn",
     "en",
@@ -4762,6 +4783,13 @@
     "ja",
     "pt"
   ],
+  "/connecting_r1225_to_aws_iot": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/connecting_r1225_to_chirpstack": [
     "cn",
     "en",
@@ -5559,6 +5587,20 @@
     "pt"
   ],
   "/reachymini_troubleshooting": [
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_b601_dm_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_lerobot": [
+    "cn",
     "en",
     "es",
     "ja",

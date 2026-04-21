@@ -2111,7 +2111,17 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
               ],
             },
-            'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
+            {
+              type: 'category',
+              label: 'reSpeaker Flex with Xiao',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
+              },
+              items: [
+                'Sensor/reSpeaker_flex/reSpeaker_flex_i2s_test',
+              ],
+            },
             'Sensor/reSpeaker_flex/reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
@@ -2741,6 +2751,7 @@ const sidebars = {
               items: [
               'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_ChirpStack',
               'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_TTN',
+              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_AWS_IoT',
               ],
             },
             /*{
@@ -3912,6 +3923,7 @@ const sidebars = {
               items: [
                 'Edge/NVIDIA_Jetson/Other_Devices/How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/RTL8822CE_Wireless_Module_for_Jetson',
+                'Edge/NVIDIA_Jetson/Other_Devices/RTL8852BE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/RM520N_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Other_Devices/Jetson_Xavier_AGX_H01_Driver_Installation',
@@ -4087,6 +4099,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/How_to_Build_and_Flash_BSP_Source_for_Jetson_Thor',
             'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
           ]
         }
@@ -4369,6 +4382,7 @@ const sidebars = {
               label: 'B601-DM',
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Lerobot',
               ]
             }
           ]
