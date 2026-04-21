@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/13/2026
+  date: 04/20/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-04-13'
+updatedAt: '2026-04-20'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,54 +18,43 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 13th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with XIAO ePaper Display EE05](https://wiki.seeedstudio.com/epaper_ee05/)
+### [How to Build and Flash BSP Source for Jetson Thor](https://wiki.seeedstudio.com/how_to_build_and_flash_bsp_source_for_jetson_thor/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Powered by **XIAO ESP32-S3 Plus**, the display board EE05 is a compact ePaper driver board supporting 24-Pin ePaper displays. It features a JST 2.0 mm battery connector with a power switch, built-in battery level detection circuitry, and comes with one reset button and three user-programmable buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
-
-</div>
-
-### [Getting Started with XIAO ePaper Display EN05](https://wiki.seeedstudio.com/epaper_en05/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Powered by **XIAO nRF52840 Plus**, the display board EN05 is an ultra-low-power ePaper driver board specifically designed for 24-Pin ePaper displays. With a hardware power switch, it is ideal for battery-powered projects like electronic shelf labels, smart badges, and portable IoT information boards.
+This wiki explains how to use the BSP source package to build and flash the **NVIDIA Jetson AGX Thor Developer Kit** from an Ubuntu host.
 
 </div>
 
-### [reSpeaker Flex with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
+### [Connecting R1225 to AWS IoT](https://wiki.seeedstudio.com/connecting_r1225_to_aws_iot/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The reSpeaker Flex ESP32 version integrates a pre-soldered XIAO ESP32S3 module on the core board, providing built-in Wi-Fi and Bluetooth connectivity for wireless control and edge processing. Powered by the XMOS XVF3800 voice processor, the system maintains the same modular architecture where the microphone array board connects to the core board through a flexible 24-pin FPC cable, allowing flexible placement inside device enclosures.
+This guide explains how to connect the Seeed Studio reComputer R1225 LoRaWAN gateway to AWS IoT Core, covering gateway setup, certificate provisioning, LoRa network configuration, and the creation of device profiles, destinations, and end devices in AWS for cloud-based data management.
 
 </div>
 
-### [reSpeaker Flex control with Python](https://wiki.seeedstudio.com/respeaker_flex_python_control/)
+### [Configure Static IP on reCamera](https://wiki.seeedstudio.com/configure_static_ip_on_recamera/)
 
 <div style={{ textAlign: "justify" }}>
 
-In this section, we are going to talk about how to control your reSpeaker Flex using the Python SDK. It makes development more convenient for users who want to build their own applications.
-For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
+This document explains how to configure a static IP address on reCamera (Buildroot system). The configuration includes three steps: edit the config file, set static network parameters, and restart the network service for verification.
 
 </div>
 
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
 
-We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node).
+We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node). -->
 
 ## The Efforts of Contributor
 
@@ -194,5 +183,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.3.23rd](/Seeed_Elderly/weekly_wiki/2026/wiki260323)
 - [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
 - [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
+- [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
 
 </details>

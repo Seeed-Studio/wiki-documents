@@ -1,21 +1,21 @@
 ---
-description: Este artículo te guiará para manejar el periférico de audio I2S en la reTerminal D1001.
+description: Este artículo te guiará para controlar el altavoz I2S en el reTerminal D1001.
 sku: 100058144
-title: Manejo de los periféricos de audio de la reTerminal D1001
+title: Control del altavoz reTerminal D1001
 image: https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp
-slug: /driving_reterminal_d1001_audio_peripherals
+slug: /driving_reterminal_d1001_speaker
 last_update:
-  date: 04/02/2026
+  date: 04/17/2026
   author: Jackson.Li
 createdAt: '2026-04-02'
-url: https://wiki.seeedstudio.com/es/driving_reterminal_d1001_audio_peripherals/
-updatedAt: '2026-04-02'
+url: https://wiki.seeedstudio.com/es/driving_reterminal_d1001_speaker/
+updatedAt: '2026-04-17'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Manejo de los periféricos de audio de la reTerminal D1001
+# Control del altavoz reTerminal D1001
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/hardware.webp" style={{width:900, height:'auto'}}/></div>
 
@@ -27,39 +27,39 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-Esta guía presenta cómo manejar el periférico de audio I2S en la placa de desarrollo **reTerminal D1001**. La arquitectura del sistema incluye tres componentes principales:
-- **ESP32-P4**: El procesador principal que gestiona el flujo de datos de audio y controla la configuración de los periféricos.
-- **ES8311**: Un códec de audio mono de bajo consumo responsable de convertir los datos digitales I2S en señales de audio analógicas.
-- **PCA9535**: Un expansor de E/S I2C usado para controlar el estado de habilitación del amplificador de potencia, proporcionando una expansión flexible de GPIO para el control de periféricos.
+Esta guía presenta cómo controlar el altavoz I2S en la placa de desarrollo **reTerminal D1001**. La arquitectura del sistema implica tres componentes principales:
+- **ESP32-P4**: El procesador principal que gestiona el flujo de datos de audio y controla las configuraciones de los periféricos.
+- **ES8311**: Un códec de audio mono de bajo consumo responsable de convertir los datos digitales I2S en señales de audio analógicas para el altavoz.
+- **PCA9535**: Un expansor de E/S I2C utilizado para controlar el estado de habilitación del amplificador de potencia, proporcionando una expansión flexible de GPIO para el control de periféricos.
 
 
-### Diagrama de bloques de la arquitectura de audio
+### Diagrama de bloques de la arquitectura del altavoz
 
-El sistema de audio utiliza una arquitectura de doble bus: el **bus I2S** está dedicado a la transmisión de datos de audio digital de alta velocidad, mientras que el **bus I2C** maneja los comandos de control de baja velocidad tanto para el códec como para el expansor de E/S.
+El sistema de audio utiliza una arquitectura de bus dual: el **bus I2S** se dedica a la transmisión de datos de audio digital de alta velocidad, mientras que el **bus I2C** maneja los comandos de control de baja velocidad tanto para el códec como para el expansor de E/S.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/Driving_Audio_Peripherals/D1001_Block_diagram.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Asignación de pines y principios
 
-#### ESP32-P4 y ES8311 (datos y control de audio)
+#### ESP32-P4 y ES8311 (Datos y control de audio)
 
-| Nombre de señal | Pin ESP32-P4 | Descripción de la función |
+| Nombre de la señal | Pin ESP32-P4 | Descripción de la función |
 | :--- | :--- | :--- |
-| **I2C_SDA** | GPIO20 | **Datos en serie**: Transporta comandos de configuración (volumen, frecuencia de muestreo) al ES8311. |
+| **I2C_SDA** | GPIO20 | **Datos en serie**: Transporta los comandos de configuración (volumen, frecuencia de muestreo) al ES8311. |
 | **I2C_SCL** | GPIO21 | **Reloj en serie**: Sincroniza las transferencias de datos I2C. |
 | **I2S_MCK** | GPIO33 | **Reloj maestro**: Reloj de referencia de alta frecuencia para los moduladores delta-sigma internos del códec. |
 | **I2S_BCK** | GPIO32 | **Reloj de bit**: Sincroniza cada bit individual del flujo de datos de audio. |
 | **I2S_WS**  | GPIO31 | **Selección de palabra**: También conocido como LRCK, define el inicio de una nueva trama de audio y selecciona los canales Izquierdo/Derecho. |
-| **I2S_DO**  | GPIO30 | **Salida de datos**: Transmite los datos de audio PCM digitales desde el ESP32-P4 hacia el códec. |
+| **I2S_DO**  | GPIO30 | **Salida de datos**: Transmite los datos de audio PCM digitales desde el ESP32-P4 al códec para la reproducción. |
 | **I2S_DI**  | GPIO11 | **Entrada de datos**: Reservado para una posible grabación de audio o loopback desde el códec. |
 
-#### ESP32-P4 y PCA9535RGER (expansión de GPIO)
+#### ESP32-P4 y PCA9535RGER (Expansión de GPIO)
 
-| Nombre de señal | Pin ESP32-P4 | Descripción de la función |
+| Nombre de la señal | Pin ESP32-P4 | Descripción de la función |
 | :--- | :--- | :--- |
 | **I2C_SDA** | GPIO20 | Bus de datos I2C compartido para controlar el expansor de E/S PCA9535. |
 | **I2C_SCL** | GPIO21 | Bus de reloj I2C compartido. |
-| **EN_PA**   | **EXP_GPO11** | **Habilitación del PA**: Se asigna al pin **P13** en el PCA9535. Ajustar este pin a nivel ALTO habilita el amplificador de potencia externo. |
+| **EN_PA**   | **EXP_GPO11** | **Habilitación del PA**: Se asigna al pin **P13** en el PCA9535. Establecerlo en HIGH habilita el amplificador de potencia externo. |
 
 ## Flujo de software
 
@@ -74,14 +74,14 @@ Descarga el repositorio oficial de reTerminal D1001 desde GitHub para obtener el
 </div><br />
 
 :::tip
-Por favor navega al directorio `driver_examples/01_I2SCodec` dentro del repositorio para encontrar el código fuente específico y los archivos de proyecto para este ejemplo de audio.
+Por favor navega al directorio `driver_examples/01_I2SCodec/` dentro del repositorio para encontrar el código fuente específico y los archivos de proyecto para este ejemplo de altavoz.
 :::
 
 ### Secuencia de ejecución de desarrollo
 
 #### Paso 1. Inicializar el expansor de E/S I2C (PCA9535RGER)
 
-El amplificador de potencia externo (PA) se controla a través del expansor PCA9535. Habilitar el PA es crucial porque, sin él, ningún sonido audible llegará a los altavoces incluso si el códec está funcionando correctamente.
+El amplificador de potencia externo (PA) se controla a través del expansor PCA9535. Habilitar el PA es crucial porque, sin él, no llegará sonido audible a los altavoces incluso si el códec funciona correctamente.
 
 ```c
 static esp_err_t pca9535_write_reg(uint8_t reg, uint8_t data)
@@ -118,7 +118,7 @@ static void pca9535_init(void)
 
 #### Paso 2. Configurar el controlador I2S
 
-I2S es un protocolo de comunicación serie síncrono utilizado específicamente para transmitir audio digital. Configuramos el ESP32-P4 como **Maestro I2S**, lo que significa que proporciona los relojes BCLK y WS al códec.
+I2S es un protocolo de comunicación serie síncrono utilizado específicamente para transmitir audio digital. Configuramos el ESP32-P4 como **maestro I2S**, lo que significa que proporciona los relojes BCLK y WS al códec.
 
 ```c
 static esp_err_t i2s_driver_init(void)
@@ -154,15 +154,14 @@ static esp_err_t i2s_driver_init(void)
 
 #### Paso 3. Inicializar el códec ES8311
 
-El ES8311 debe configurarse para coincidir con los ajustes de I2S (frecuencia de muestreo, anchura de datos) definidos en el ESP32-P4. Esto se realiza a través del bus I2C. Antes de compilar el proyecto, puedes personalizar el comportamiento de audio modificando las macros en `main/example_config.h`:
+El ES8311 debe configurarse para que coincida con los ajustes de I2S (frecuencia de muestreo, ancho de datos) definidos en el ESP32-P4. Esto se hace a través del bus I2C. Antes de compilar el proyecto, puedes personalizar el comportamiento del altavoz modificando las macros en `main/example_config.h`:
 
 | Macro | Descripción | Principios de configuración |
 | :--- | :--- | :--- |
-| **EXAMPLE_SAMPLE_RATE** | **Frecuencia de muestreo de audio** (Hz) | Define la frecuencia de las muestras de audio. Valores comunes son `16000` (voz) o `44100`/`48000` (música). |
+| **EXAMPLE_SAMPLE_RATE** | **Frecuencia de muestreo de audio** (Hz) | Define la frecuencia de las muestras de audio. Los valores comunes son `16000` (voz) o `44100`/`48000` (música). |
 | **EXAMPLE_MCLK_MULTIPLE** | **Relación MCLK a LRCLK** | El reloj maestro (MCLK) debe ser un múltiplo de la frecuencia de muestreo. `256` es estándar para 16 bits, pero `384` se usa a menudo para mayor precisión. |
 | **EXAMPLE_VOICE_VOLUME** | **Volumen de reproducción** | Va de `0` a `100`. Establece el nivel de salida inicial del códec ES8311. |
-| **EXAMPLE_MIC_GAIN** | **Ganancia del micrófono** (dB) | Ajusta la sensibilidad de los micrófonos duales. Valores más altos aumentan el volumen pero pueden introducir ruido. |
-| **EXAMPLE_RECV_BUF_SIZE** | **Tamaño del búfer DMA** | Controla el tamaño de los bloques de datos procesados por el DMA. Los búferes más grandes evitan cortes, pero aumentan la latencia de audio. |
+| **EXAMPLE_RECV_BUF_SIZE** | **Tamaño del búfer DMA** | Controla el tamaño de los bloques de datos procesados por el DMA. Los búferes más grandes evitan cortes pero aumentan la latencia de audio. |
 
 ```c
 static esp_err_t es8311_codec_init(void)
@@ -195,7 +194,7 @@ static esp_err_t es8311_codec_init(void)
 }
 ```
 
-#### Paso 4. Punto de entrada principal y creación de tareas
+#### Paso 4. Entrada principal y creación de tareas
 
 La aplicación principal inicializa los periféricos y luego delega la lógica de reproducción a una tarea dedicada de FreeRTOS.
 
@@ -220,7 +219,7 @@ void app_main(void)
 
 #### Paso 5. Precarga de DMA y reproducción de datos
 
-El **DMA (Acceso Directo a Memoria)** permite que el periférico I2S obtenga datos directamente desde la memoria sin intervención de la CPU. La **precarga** del búfer DMA es una técnica crítica para evitar el ruido de “chasquidos” que se produce cuando el hardware I2S comienza con un búfer vacío, causando un cambio repentino del offset de CC.
+**DMA (Direct Memory Access)** permite que el periférico I2S obtenga datos directamente de la memoria sin intervención de la CPU. La **precarga** del búfer DMA es una técnica fundamental para evitar el ruido de "chasquido" que se produce cuando el hardware I2S se inicia con un búfer vacío, causando un cambio repentino de offset de CC.
 
 ```c
 static void i2s_music(void *args)
@@ -250,11 +249,11 @@ static void i2s_music(void *args)
 ## Solución de problemas
 
 ### P1: No hay salida de sonido del altavoz
-- **Comprobar**: Verifica si el amplificador de potencia (PA) está habilitado. La señal `EN_PA` se controla mediante el expansor de E/S PCA9535 en el pin **P13**. Asegúrate de que se llame a `pca9535_init()` y configure correctamente el registro de salida (Puerto 1, Bit 3).
+- **Comprobar**: Verifica si el amplificador de potencia (PA) está habilitado. La señal `EN_PA` se controla mediante el expansor de E/S PCA9535 en el pin **P13**. Asegúrate de que se llame a `pca9535_init()` y que configure correctamente el registro de salida (Puerto 1, Bit 3).
 - **Comprobar**: Confirma las conexiones I2S y asegúrate de que se llame a la función `i2s_channel_enable()` para el canal TX.
 
-### P2: El audio está distorsionado o contiene ruido crepitante
-- **Comprobar**: Asegúrate de que la configuración del reloj I2S (MCLK, BCLK, WS) coincida con la frecuencia de muestreo de tu archivo de audio. Una discordancia en `EXAMPLE_SAMPLE_RATE` puede causar problemas de tono y velocidad.
+### P2: El audio está distorsionado o contiene chasquidos
+- **Comprobar**: Asegúrate de que la configuración del reloj I2S (MCLK, BCLK, WS) coincida con la frecuencia de muestreo de tu archivo de audio. Una discrepancia en `EXAMPLE_SAMPLE_RATE` puede causar problemas de tono y velocidad.
 - **Comprobar**: Verifica que la precarga de DMA esté implementada como se muestra en el **Paso 5**. La precarga evita el sonido de "pop" causado por iniciar un canal con un búfer vacío.
 
 ### P3: Fallo de comunicación I2C con ES8311 o PCA9535
