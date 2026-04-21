@@ -421,9 +421,9 @@
     {
         "product": "j3011industrial",
         "l4t": "35.5.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdhYh3cLibBPloeruCn9_TwBwyxtn8XycXp0jTqS5UlMaA?e=efwpWa",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDG2tQxCjRnS5QIrzk_K_NsAfvLk3XV-trSrk3qPEGGxcg",
         "mirrorlink": "",
-        "filename": "mfi_recomputer-orin-nano-8g-industrial-5.1-35.3.1-2025-05-30.tar.gz",
+        "filename": "mfi_recomputer-orin-nano-8g-industrial-5.1-35.5.0-2026-02-10.tar.gz",
         "foldername": "mfi_recomputer-industrial-orin-nano-8g-5.1.3-35.5.0",
         "sha256": "484CB81F399301B8A6FF61429E974AE790365B9498FB8B20DF02C603656CF6D0"
     },
