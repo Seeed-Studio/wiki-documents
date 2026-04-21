@@ -4,10 +4,10 @@ title: Introducción a Pinocchio y MeshCat para reBot Arm B601-DM
 keywords:
   - Pinocchio
   - MeshCat
-  - Brazo robótico
+  - Robotic Arm
   - Robot
   - LeRobot
-  - Cinemática
+  - Kinematics
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
@@ -25,9 +25,16 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_pinocchio_meshcat/
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
-[Pinocchio](https://github.com/stack-of-tasks/pinocchio) es una biblioteca de código abierto para análisis y optimización de dinámica robótica. Proporciona cinemática directa/inversa eficiente, cálculos dinámicos y capacidades de planificación de trayectorias. [MeshCat](https://github.com/rdeits/meshcat) es una herramienta de visualización 3D basada en la web que puede mostrar en tiempo real el estado del robot y las trayectorias de movimiento.
+[Pinocchio](https://github.com/stack-of-tasks/pinocchio) es una biblioteca de código abierto para análisis y optimización de dinámica robótica. Proporciona cinemática directa/inversa eficiente, cálculos dinámicos y capacidades de planificación de trayectorias. [MeshCat](https://github.com/rdeits/meshcat) es una herramienta de visualización 3D basada en la web que puede mostrar el estado del robot y las trayectorias de movimiento en tiempo real.
 
 Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la visualización intuitiva de MeshCat, proporcionando un conjunto completo de herramientas de análisis cinemático y depuración para reBot Arm B601-DM.
+
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+</a></div>
+
 
 ---
 
@@ -40,7 +47,7 @@ Este proyecto combina las potentes capacidades de cálculo de Pinocchio con la v
    Muestra en tiempo real el estado del brazo robótico y las trayectorias de movimiento mediante MeshCat en el navegador, sin necesidad de software adicional.
 
 3. **Planificación y seguimiento de trayectorias**  
-   Implementa planificación de trayectorias geodésicas en SE(3), soportando control de seguimiento CLIK (Cinemática Inversa en Bucle Cerrado).
+   Implementa planificación de trayectorias geodésicas en SE(3), soportando control de seguimiento CLIK (Cinemática Inversa en Lazo Cerrado).
 
 4. **Control de compensación de gravedad**  
    Calcula el par de gravedad de las articulaciones basado en el modelo dinámico de Pinocchio, logrando el efecto de "flotación" del brazo robótico.
@@ -102,7 +109,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
 | Pinza | 1 | ✅ |
 
 :::caution
-Seeed Studio **solo es responsable de la calidad del hardware**. El tutorial se actualiza en estricta conformidad con la documentación oficial. Si encuentras problemas de software o de entorno que no puedas resolver, consulta primero las FAQ al final del documento, o contacta con atención al cliente para unirte al grupo de comunicación SeeedStudio Lerobot y realizar consultas.
+Seeed Studio **solo es responsable de la calidad del hardware**. El tutorial se actualiza en estricta conformidad con la documentación oficial. Si encuentras problemas de software o de entorno que no puedas resolver, consulta primero las Preguntas Frecuentes al final del documento, o contacta con atención al cliente para unirte al grupo de comunicación SeeedStudio Lerobot para realizar consultas.
 :::
 
 ---
@@ -143,7 +150,7 @@ uv sync
 
 #### Consola de un solo motor (`1_damiao_text.py`)
 
-Prueba de un solo motor mediante el SDK de motorbridge.
+Prueba de un solo motor mediante el SDK de motorbridge directamente.
 
 **Uso**:
 ```bash
@@ -153,7 +160,7 @@ uv run python example/1_damiao_text.py
 **Comandos interactivos**:
 | Comando | Descripción |
 |---------|-------------|
-| `enable` / `disable` | Activar/Desactivar |
+| `enable` / `disable` | Habilitar/Deshabilitar |
 | `set_zero` | Establecer posición cero |
 | `state` | Ver estado |
 
@@ -161,7 +168,7 @@ uv run python example/1_damiao_text.py
 
 #### Calibración de cero y monitor de ángulo (`2_zero_and_read.py`)
 
-Establece automáticamente los ceros de todas las articulaciones y muestra los ángulos articulares en tiempo real.
+Establece automáticamente los ceros de todas las articulaciones y muestra los ángulos de las articulaciones en tiempo real.
 
 **Uso**:
 ```bash
@@ -240,7 +247,7 @@ uv run python example/sim/fk_sim.py
 
 #### Simulación de cinemática inversa (`sim/ik_sim.py`)
 
-Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos articulares a partir de la pose objetivo y la visualiza.
+Simulación interactiva de cinemática inversa, resuelve automáticamente los ángulos articulares a partir de la pose objetivo y los visualiza.
 
 **Uso**:
 ```bash
@@ -258,7 +265,7 @@ uv run python example/sim/ik_sim.py
 ```
 
 **Características**:
-- Juicio automático de la convergencia de IK
+- Juicio automático de la convergencia de la IK
 - Muestra el número de iteraciones y el error
 - Actualizaciones en tiempo real de la pose del robot
 
@@ -289,9 +296,9 @@ uv run python example/sim/traj_sim.py
 
 #### Herramienta de visualización (`sim/visualizer.py`)
 
-Wrapper del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
+[LINE_298>Envoltorio del visualizador MeshCat, que proporciona una interfaz unificada de visualización del robot.
 
-**Funciones principales**:
+**Características principales**:
 - Cargar el modelo URDF y mostrar el robot
 - Dibujar trayectorias polilínea 3D (referencia/real)
 - Mostrar la pose objetivo de IK (ejes tricolores + esfera)
@@ -321,7 +328,7 @@ sudo chmod 666 /dev/can0
 ```
 :::
 
-#### Control en tiempo real por IK (`7_arm_ik_control.py`)
+#### Control IK en tiempo real (`7_arm_ik_control.py`)
 
 Control en tiempo real del efector final basado en el solucionador de IK.
 
@@ -391,16 +398,16 @@ uv run python example/9_gravity_compensation.py
 
 ---
 
-## FAQ
+## Preguntas frecuentes (FAQ)
 
-- **Aparece el error `Permission denied`**  
-  Asegúrate de haber ejecutado `sudo chmod 666 /dev/ttyACM0` o `sudo chmod 666 /dev/can0` para configurar los permisos del dispositivo.
+- **Aparece un error `Permission denied`**  
+  Asegúrate de haber ejecutado `sudo chmod 666 /dev/ttyACM0` o `sudo chmod 666 /dev/can0` para establecer los permisos del dispositivo.
 
-- **El cálculo de IK falla o los resultados son anormales**  
+- **La resolución de IK falla o los resultados son anormales**  
   Comprueba si la pose objetivo está dentro del espacio de trabajo del brazo robótico y asegúrate de que la configuración de los límites articulares sea correcta.
 
 - **El efecto de compensación de gravedad no es bueno**  
-  Esto puede deberse a errores estructurales y precisión de mecanizado. La compensación de gravedad de este proyecto depende de urdf y pinocchio. Puedes intentar corregir el urdf según tus parámetros medidos reales (puedes pedir ayuda a una IA para este paso).
+  Esto puede deberse a errores estructurales y precisión de procesamiento. La compensación de gravedad de este proyecto depende de urdf y pinocchio. Puedes intentar corregir el urdf según tus parámetros medidos reales (puedes pedir ayuda a una IA para este paso).
 
 ---
 

@@ -1,10 +1,10 @@
 ---
-description: Esta guía te ayudará a empezar con el reBot Arm B601-DM, incluyendo opciones de compra, montaje, calibración y configuración del software.
-title: Inicio rápido del reBot Arm B601-DM
+description: Esta guía te ayudará a comenzar con el reBot Arm B601-DM, incluyendo opciones de compra, montaje, calibración y configuración de software.
+title: Inicio rápido de reBot Arm B601-DM
 keywords:
   - reBot
   - B601-DM
-  - Brazo Robótico
+  - Robotic Arm
   - Robot
   - Lerobot
   - Pinocchio
@@ -22,15 +22,35 @@ updatedAt: '2026-04-13'
 url: https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/
 ---
 
-# Primeros pasos con el reBot Arm B601-DM
+# Primeros pasos con reBot Arm B601-DM
 
-El contenido de esta guía se aproxima hacia ti a la velocidad de la luz — ¡estad atentos!
+![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
 
-El proyecto reBot Arm ha sido publicado abierto en [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Esta guía te llevará por el inicio rápido del B601-DM, desde el montaje hasta la operación.
+<p align="center">
+    <a href="./LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
+    </a>
+    <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version" />
+    <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu-orange.svg" alt="Platform" />
+    <img src="https://img.shields.io/badge/Framework-Pinocchio-yellow.svg" alt="Pinocchio" />
+</p>
+
+<p align="center">
+  <strong>Brazo robótico de 6 GDL · Soporte para múltiples motores · Solucionador de cinemática · Planificación de trayectorias · Totalmente de código abierto</strong>
+</p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+</a></div>
+
+El contenido de esta guía se dirige hacia ti a la velocidad de la luz — ¡mantente atento!
+
+El proyecto reBot Arm ha sido publicado como código abierto en [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Esta guía te llevará a través del inicio rápido del B601-DM, desde el montaje hasta la operación.
 
 ## Opciones de compra
 
-El reBot Arm B601-DM está disponible en múltiples configuraciones para satisfacer diferentes necesidades de usuarios.
+El reBot Arm B601-DM está disponible en múltiples configuraciones para satisfacer diferentes necesidades de los usuarios.
 
 ### Comparación de opciones
 
@@ -41,20 +61,25 @@ El reBot Arm B601-DM está disponible en múltiples configuraciones para satisfa
 | **Solo cuerpo (estructura)** | ✅ | ❌ | ❌ | ✅ | [Próximamente](https://www.seeedstudio.com/) |
 | **Solo cuerpo (motores)** | ✅ | ❌ | ✅ | ❌ | [Próximamente](https://www.seeedstudio.com/) |
 
-## Guía de montaje
+## Paso 1: [Guía de montaje](https://youtu.be/rfTQoFCfnMc)
 
-### Lista de verificación para desembalar
+Antes del montaje:
+- Lee atentamente las siguientes instrucciones para garantizar un proceso de montaje fluido.
+  1. Este kit incluye varios tornillos y piezas con apariencias similares. Verifica las especificaciones y la orientación antes de apretar.
+  2. El video fue grabado a principios de abril. Pueden existir pequeñas actualizaciones, pero el montaje sigue siendo el mismo. Toma como referencia las piezas enviadas como versión final.
+  3. Los tornillos enviados tienen fijador de roscas aplicado. Usa herramientas adecuadas o un destornillador eléctrico (recomendado). Ajusta el par a (3–6 kgf·cm) para evitar barrer la rosca. Si se barre, detente de inmediato y reemplaza o realinea el tornillo. Los tornillos con fijador de roscas barridos son difíciles de retirar y pueden dañar las piezas.
+  4. Garantiza la seguridad durante el montaje. Evita pellizcos o lesiones. Los niños deben estar supervisados.
 
-Antes de comenzar el montaje, revisa todos los componentes del paquete:
 
-*TODO: Agregar lista de verificación para desembalar*
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-## Guía de calibración
 
-*TODO: Agregar guía de calibración*
+##  Paso 2: Restablecer ID de los motores
 
-## Enlaces de demostración
+*POR HACER: Próximamente*
 
-- **[reBot con Pinocchio](/es/rebot_arm_b601_dm_pinocchio_meshcat/)** — Análisis cinemático usando el framework Pinocchio
+## Paso 3: Calibrar reBot Arm y primeros pasos
 
-<!-- [lerobot]() -->
+*POR HACER: Próximamente*
