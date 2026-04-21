@@ -1,0 +1,7 @@
+position: 2
+label: '扩展板系列'
+collapsible: true
+collapsed: true
+link:
+  type: "doc"
+  id: 'zh-CN/Sensor/ePaper_Displays/Expansion_Board_Series/cn_epaper_driver_board_main_page'

@@ -1,0 +1,7 @@
+position: 2
+label: 'Indicador SenseCAP'
+collapsible: true
+collapsed: true
+link:
+  type: "doc"
+  id: 'pt-BR/Sensor/LCD_Displays/SenseCAP_Indicator/pt_Introduction'

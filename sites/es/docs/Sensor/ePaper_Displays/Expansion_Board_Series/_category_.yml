@@ -1,0 +1,7 @@
+position: 2
+label: 'Serie de placas de expansión'
+collapsible: true
+collapsed: true
+link:
+  type: "doc"
+  id: 'es/Sensor/ePaper_Displays/Expansion_Board_Series/es_epaper_driver_board_main_page'

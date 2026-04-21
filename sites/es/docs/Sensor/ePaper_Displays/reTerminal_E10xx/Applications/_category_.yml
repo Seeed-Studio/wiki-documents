@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'Aplicaciones'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reterminal_e10xx_applications
+link:
+  type: generated-index
+  slug: reterminal_e10xx_applications
+  title: Aplicaciones de pantalla de tinta electrónica reTerminal E Series
+  description: Este artículo es una página de recopilación para la aplicación de pantalla de tinta electrónica reTerminal E Series.
