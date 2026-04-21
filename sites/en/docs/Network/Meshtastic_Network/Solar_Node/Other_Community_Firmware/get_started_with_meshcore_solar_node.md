@@ -296,7 +296,7 @@ Also, you can adjust the advert broadcast interval. The interval range of `auto 
 
 ### Set Path
 
-Before adding the repeater to your route, you may need to use the repeater to send advert first. Repeater will automatically send automatically at regular intervals. This interval can be multiple hours (default 3 hours). So you need to manually send advert or else you need to wait.
+Before adding the repeater to your route, you may need to use the repeater to send advert first. Repeater will automatically send advert at regular intervals. This interval can be multiple hours (default 3 hours). So you need to manually send advert or else you need to wait.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
