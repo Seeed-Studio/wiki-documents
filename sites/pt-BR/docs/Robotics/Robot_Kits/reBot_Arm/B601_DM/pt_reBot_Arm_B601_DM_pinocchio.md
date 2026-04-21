@@ -29,12 +29,19 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_pinocchio_meshcat/
 
 Este projeto combina o poderoso poder de computação do Pinocchio com a visualização intuitiva do MeshCat, fornecendo um conjunto completo de ferramentas de análise cinemática e depuração para o reBot Arm B601-DM.
 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+</a></div>
+
+
 ---
 
 ## Recursos do Projeto
 
 1. **Análise Cinemática Completa**  
-   Suporta cálculos de Cinemática Direta (FK) e Cinemática Inversa (IK), sendo capaz de resolver a pose do efetuador final do braço robótico em tempo real.
+   Suporta cálculos de Cinemática Direta (FK) e Cinemática Inversa (IK), capaz de resolver em tempo real a pose do efetuador final do braço robótico.
 
 2. **Visualização 3D em Tempo Real**  
    Exibe o estado do braço robótico e as trajetórias de movimento em tempo real por meio do MeshCat no navegador, sem necessidade de software adicional.
@@ -119,7 +126,7 @@ A Seeed Studio **é responsável apenas pela qualidade do hardware**. O tutorial
 
 ## Etapas de Instalação
 
-### Etapa 1. Instalar uv (se não estiver instalado)
+### Etapa 1. Instalar uv (se ainda não estiver instalado)
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -143,7 +150,7 @@ uv sync
 
 #### Console de Motor Único (`1_damiao_text.py`)
 
-Teste de motor único direto via SDK motorbridge.
+Teste de motor único direto com o SDK motorbridge.
 
 **Uso**:
 ```bash
@@ -259,14 +266,14 @@ uv run python example/sim/ik_sim.py
 
 **Recursos**:
 - Julgamento automático da convergência da IK
-- Exibição da contagem de iterações e erro
+- Exibição da contagem de iterações e do erro
 - Atualizações em tempo real da pose do robô
 
 ---
 
 #### Simulação de Planejamento de Trajetória (`sim/traj_sim.py`)
 
-Simulação de planejamento de trajetória baseada em geodésica em SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
+Simulação de planejamento de trajetória baseada em geodésicas em SE(3), incluindo rastreamento CLIK e reprodução de animação no MeshCat.
 
 **Uso**:
 ```bash
@@ -280,16 +287,16 @@ uv run python example/sim/traj_sim.py
 
 **Recursos**:
 - Planejar da posição atual até a posição alvo
-- Usar perfil de trajetória de jerk mínimo
+- Usar perfil de trajetória de mínimo tranco (minimum jerk)
 - Exibição em tempo real das estatísticas da trajetória
 - Reprodução completa da animação da trajetória no MeshCat
-- Exibir caminho de referência (cinza) e caminho real (verde)
+- Exibição do caminho de referência (cinza) e do caminho real (verde)
 
 ---
 
 #### Ferramenta de Visualização (`sim/visualizer.py`)
 
-Wrapper do visualizador MeshCat, fornecendo interface unificada de exibição do robô.
+[LINE_298>Wrapper de visualização MeshCat, fornecendo uma interface unificada de exibição do robô.
 
 **Principais Recursos**:
 - Carregar modelo URDF e exibir o robô
@@ -321,9 +328,9 @@ sudo chmod 666 /dev/can0
 ```
 :::
 
-#### Controle em Tempo Real por IK (`7_arm_ik_control.py`)
+#### Controle IK em Tempo Real (`7_arm_ik_control.py`)
 
-Controle em tempo real do efetuador final com base no resolvedor de IK.
+Controle em tempo real do efetuador final com base no solucionador de IK.
 
 **Comandos Interativos**:
 | Comando | Descrição |
@@ -396,11 +403,11 @@ uv run python example/9_gravity_compensation.py
 - **Erro `Permission denied`**  
   Certifique-se de ter executado `sudo chmod 666 /dev/ttyACM0` ou `sudo chmod 666 /dev/can0` para definir as permissões do dispositivo.
 
-- **Falha na resolução de IK ou resultados anormais**  
-  Verifique se a pose alvo está dentro da área de trabalho do braço robótico e certifique-se de que a configuração de limite das juntas está correta.
+- **Falha na solução de IK ou resultados anormais**  
+  Verifique se a pose alvo está dentro da área de trabalho do braço robótico e certifique-se de que a configuração dos limites das juntas está correta.
 
 - **O efeito da compensação de gravidade não é bom**  
-  Isso pode ser causado por erros estruturais e precisão de usinagem. A compensação de gravidade deste projeto depende de urdf e pinocchio. Você pode tentar corrigir o urdf para os seus parâmetros medidos reais (você pode pedir ajuda à IA para esta etapa).
+  Isso pode ser causado por erros estruturais e precisão de processamento. A compensação de gravidade deste projeto depende de urdf e pinocchio. Você pode tentar corrigir o urdf para os seus parâmetros medidos reais (você pode pedir ajuda à IA para esta etapa).
 
 ---
 
@@ -427,5 +434,5 @@ Este projeto é open source sob a **Licença MIT**.
 ---
 
 <div align="center">
-  <strong>Se este projeto for útil para você, por favor nos dê uma estrela!</strong>
+  <strong>Se este projeto ajudar você, por favor nos dê uma Star!</strong>
 </div>
