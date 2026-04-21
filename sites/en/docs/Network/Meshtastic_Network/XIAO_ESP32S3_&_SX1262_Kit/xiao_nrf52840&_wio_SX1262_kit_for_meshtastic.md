@@ -1,8 +1,9 @@
 ---
 description: Meshtastic based on XIAO nRF52840 & Wio-SX1262 Kit
-title: XIAO nRF52840 & Wio-SX1262 Kit
+title: Get Started with XIAO nRF52840 & Wio-SX1262 Kit
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
 slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
+sidebar_position: 2
 sku: 102010710
 last_update:
   date: 12/11/2025
