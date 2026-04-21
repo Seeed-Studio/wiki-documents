@@ -195,7 +195,7 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
 :::note 
-Please make sure that you will need to download whole repository. 
+Do **NOT** use "save as" to download the firmware files from GitHub as they will get corrupt. Clone the repository or use "Download as ZIP" to download the whole repository (and all included files) as ZIP file.
 :::
 
 import Tabs from '@theme/Tabs';
@@ -209,7 +209,6 @@ The USB firmware is designed for use with host operating systems such as **Windo
 Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**, which provides **2-channel** audio, and **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**, which provides **6-channel** audio. Both firmware versions operate at a **16 kHz** sampling rate with **32-bit** depth.
 
 You can explore these firmware files in [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
-
 
 
 | Firmware | Channels | Notes |
