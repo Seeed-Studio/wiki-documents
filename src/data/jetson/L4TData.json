@@ -5,7 +5,7 @@
         "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm",
         "filename": "mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz",
         "foldername": "mfi_recomputer-orin-super-j401",
-        "sha256": "51f816d57dedd6e2305acd0ae8e0ffdc\n19aec7319e351b7a70489f7eab8d69c6"
+        "sha256": "EEC7CA6A46487F307B77A9AA24FE4B91"
     },
     {
         "product": "j4011s",
@@ -57,7 +57,7 @@
         "filename": "mfi_recomputer-mini-orin-nx-16g-j40-5.1.3-35.5.0.tar.gz",
         "foldername": "mfi_recomputer-mini-orin",
         "sha256": "099bf8e706468dc36600ffdb34441683cde7454646621017fc39db49c16a2c53"
-    }, 
+    },
     {
         "product": "j4011mini",
         "l4t": "35.5.0",
