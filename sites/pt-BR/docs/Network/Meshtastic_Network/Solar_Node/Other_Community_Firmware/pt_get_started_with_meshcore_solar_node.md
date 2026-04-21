@@ -27,7 +27,7 @@ updatedAt: '2026-04-03'
 
 :::danger note
 Quando o dispositivo estiver nos estados abaixo, não o reinicie ou desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
-1. Não tiver concluído o processo de transmissão de mensagem
+1. Não tiver concluído o processo de transmissão de mensagens
 2. Estiver sendo configurado
 :::
 
@@ -57,7 +57,7 @@ Clique em `Enter DFU Mode`, escolha a porta serial chamada "Solar Node" ou "Tiny
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseSelect.png" alt="pir" width={800} height="auto" /></p>
 
-Se você clicou em `Erase Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Erase Flash` para garantir que entrou no modo DFU com sucesso.
+Se você clicou em `Erase Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Erase Flash` para garantir que entrou com sucesso no modo DFU.
 
 Se você vir "Flashing erase firmware:100%", o dispositivo foi apagado com sucesso.
 
@@ -73,9 +73,9 @@ Clique em `Enter DFU Mode`, escolha a porta serial chamada "P1 Pro" ou "TinyUSB"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-Se você clicou em `Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Flash` para garantir que entrou no modo DFU com sucesso.
+Se você clicou em `Flash` mas não houve resposta, clique em `Enter DFU` novamente e depois clique em `Flash` para garantir que entrou com sucesso no modo DFU.
 
-Quando a barra de progresso estiver completamente preenchida, isso indica que a gravação foi concluída. Em seguida, o dispositivo será reiniciado automaticamente.
+Quando a barra de progresso estiver completamente preenchida, isso indica que a gravação do Flash foi concluída. Em seguida, o dispositivo será reiniciado automaticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
@@ -111,7 +111,7 @@ Arraste o arquivo UF2 baixado para o disco que apareceu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento não há firmware no dispositivo, portanto ele `NÃO` será reiniciado automaticamente.
+O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento não há firmware no dispositivo, portanto o dispositivo `NÃO` será reiniciado automaticamente.
 
 #### Gravar Firmware
 
@@ -131,7 +131,7 @@ Arraste o arquivo UF2 baixado para o disco que apareceu.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento não há firmware no dispositivo, portanto ele NÃO será reiniciado automaticamente.
+O disco desaparecerá após o firmware ser gravado com sucesso. Neste momento não há firmware no dispositivo, portanto o dispositivo NÃO será reiniciado automaticamente.
 
 ## Introdução
 
@@ -142,7 +142,7 @@ Antes da implantação formal, teste e configure o nó primeiro.
 #### Montar o Dispositivo
 
 :::danger note
-Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa esteja instalada corretamente. Para proteção extra contra água, você também pode considerar aplicar medidas adicionais de vedação.
+Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel em posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar o acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa esteja corretamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
 :::
 
 - **Lista de Peças**
@@ -150,43 +150,43 @@ Como o dispositivo será usado ao ar livre por longos períodos, evite instalar 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
 
-- Etapa 1: Conecte a peça 1 à parte inferior do dispositivo usando arruelas e parafusos.
+- Passo 1: Conecte a peça 1 à parte inferior do dispositivo usando arruelas e parafusos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 2: Conecte a junta universal (peça 2) e o suporte (peça 3) com parafusos.
+- Passo 2: Conecte a junta universal (peça 2) e o suporte (peça 3) com parafusos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 3: Conecte o cabo RF (peça 4) e a antena (peça 5).
+- Passo 3: Conecte o cabo RF (peça 4) e a antena (peça 5).
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 4: Instale o anel de fixação na posição apropriada.
+- Passo 4: Instale o anel de fixação na posição apropriada.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 5: Conecte o suporte da junta universal.
+- Passo 5: Conecte o suporte da junta universal.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 6: Afrouxe os parafusos, ajuste a junta universal para a posição adequada e depois aperte os parafusos.
+- Passo 6: Afrouxe os parafusos, ajuste a junta universal para a posição apropriada e depois aperte os parafusos.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Etapa 7: Conecte a antena ao dispositivo.
+- Passo 7: Conecte a antena ao dispositivo.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -197,18 +197,18 @@ Como o dispositivo será usado ao ar livre por longos períodos, evite instalar 
 #### Instalar Bateria e Módulo GPS (Opcional)
 
 :::tip
-Quando você precisar instalar ou substituir a bateria, use bateria `Button-top` 18650(3,6V).
+Quando você precisar instalar ou substituir a bateria, use bateria `Button-top` 18650 (3,6 V).
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
 A versão P1-Pro possui bateria e módulo GPS integrados; para a versão P1, o usuário precisa instalar a bateria e o módulo GPS manualmente, se necessário.
 :::
 
 
 
-- Etapa 1: Remova todos os parafusos e a tampa.
+- Passo 1: Remova todos os parafusos e a tampa.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
-- Etapa 2: Instale a bateria e o módulo GPS.
+- Passo 2: Instale a bateria e o módulo GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/install-bat-gps.png" alt="pir" width={800} height="auto" /></p>
 
@@ -232,7 +232,7 @@ Se você precisar de uma antena com ganho mais alto, recomendamos a antena [860-
 
 O dispositivo precisa ser ativado conectando o cabo USB. O LED azul Mesh acenderá por cerca de 3s, isso significa que o dispositivo foi ligado com sucesso. 
 
-O LED azul Mesh não acenderá até que ele envie o anúncio.
+A luz LED azul mesh não acenderá até que ele envie o anúncio.
 
 :::tip
 Somente a partir da versão 1.14.1 o botão de energia foi habilitado. Pressione o dispositivo por `3s` para ligar/desligar o dispositivo. Você verá uma luz branca piscar rapidamente. Isso indica que o dispositivo está sendo ligado com sucesso.
@@ -266,7 +266,7 @@ Altere a região LoRa e salve a configuração. Em seguida, `Reboot` o dispositi
 |EU_868|União Europeia 868MHz|869.4 - 869.65|10|27|
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo irá parar de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base móvel de 1 hora. Seu dispositivo irá parar de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 
@@ -290,21 +290,21 @@ Se você quiser mostrar a posição do repetidor, pode habilitar o GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-Além disso, você pode ajustar o intervalo de transmissão do anúncio. O intervalo de `auto zero hop advert` é de 60-240 minutos. O intervalo de `auto flood advert` é de 3-168 horas. 
+Além disso, você pode ajustar o intervalo de transmissão do anúncio. A faixa de intervalo de `auto zero hop advert` é de 60-240 minutos. A faixa de intervalo de `auto flood advert` é de 3-168 horas. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
-### Definir rota
+### Definir caminho
 
-Antes de adicionar o repetidor à sua rota, talvez você precise usar o repetidor para enviar o anúncio primeiro. O repetidor enviará automaticamente em intervalos regulares. Esse intervalo pode ser de várias horas (padrão 3 horas). Portanto, você precisa enviar o anúncio manualmente ou então terá que esperar.
+Antes de adicionar o repetidor à sua rota, talvez você precise usar o repetidor para enviar o anúncio primeiro. O repetidor enviará anúncios automaticamente em intervalos regulares. Esse intervalo pode ser de várias horas (padrão 3 horas). Portanto, você precisa enviar o anúncio manualmente ou então terá que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-Você pode definir manualmente o caminho de envio das mensagens. Conecte seu dispositivo companheiro Bluetooth ao aplicativo do seu telefone. Abra uma janela de mensagem privada. Então você pode escolher o repetidor descoberto para formar sua rota.
+Você pode definir manualmente o caminho de envio das mensagens. Conecte seu dispositivo companheiro Bluetooth ao aplicativo do seu telefone. Abra uma janela de mensagem privada. Então você pode escolher o repetidor descoberto para formar o seu caminho.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-Após definir a rota, o método de transmissão será alterado para "n hop". Por exemplo, se você adicionar 1 repetidor na sua rota, ele será alterado para 1 hop.
+Após definir o caminho, o método de transmissão será alterado para "n hop". Por exemplo, se você adicionar 1 repetidor na sua rota, ele mudará para 1 hop.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -314,7 +314,7 @@ Após definir a rota, o método de transmissão será alterado para "n hop". Por
 
 - Motivo 
 
-Isso geralmente é causado por falha ao gravar o firmware. Ao gravar o firmware, mantenha uma conexão estável. 
+Isso geralmente é causado por falha na gravação do firmware. Ao gravar o firmware, mantenha uma conexão estável. 
 
 - Solução de problemas
 
@@ -328,7 +328,7 @@ O dispositivo não responde, nenhum LED, não é possível parear com seu App.
 
 **1) O dispositivo ainda consegue entrar no modo DFU, então tente gravar o bootloader**.
 
-#### Gravar o bootloader
+#### Gravar o Bootloader
 
 - [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
@@ -338,16 +338,16 @@ Ao gravar o bootloader, certifique-se de que a conexão do cabo esteja estável 
 
 **Etapa 1: Instalação do Adafruit-nrfutil**
 
-Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso abrirá a linha de comando. 
+Para usuários Windows, pressione a tecla "Win" e a tecla "r", depois digite "cmd" na janela pop-up e clique em "Enter". Isso pode abrir a linha de comando. 
 
-Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso abrirá a linha de comando. 
+Para usuários Mac, pressione a tecla "Command" e a tecla "Space", assim você pode abrir o Spotlight. Em seguida, digite "termial" e clique em "Return". Isso pode abrir a linha de comando. 
 
 **Pré-requisitos**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-Verifique na sua linha de comando se o Python e o pip foram instalados com sucesso.
+Verifique na sua linha de comando se o python e o pip foram instalados com sucesso.
 
 ```
 python --version
@@ -357,7 +357,7 @@ python --version
 python -m pip --version
 ```
 
-Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
@@ -386,14 +386,14 @@ Para usuários Windows, talvez seja necessário adicionar o caminho manualmente.
 
 <TabItem value="sou" label="Instalando a partir do código-fonte">
 
-Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro, clone este repositório e entre na pasta dele.
+Use este método se você tiver problemas para instalar com o PyPi ou quiser modificar a ferramenta. Primeiro clone este repositório e entre na pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do Python 3.x no Windows ainda usa o nome python.exe
+Observação: os comandos a seguir usam `python3`, porém, se você estiver no Windows, talvez precise alterá-lo para `python`, já que a instalação do python 3.x no Windows ainda usa o nome python.exe
 
 Para instalar no espaço do usuário em seu diretório pessoal:
 
@@ -470,9 +470,9 @@ Quando você tiver concluído as etapas acima, poderá então [gravar o firmware
 
 ### Qualidade do sinal
 
-- **SNR** reflete a qualidade do link de comunicação. Dispositivos normais geralmente operam acima de -7 dB. Dispositivos com SNR inferior a -10 dB indicam desempenho ruim.
+- **SNR** reflete a qualidade do link de comunicação. Dispositivos normais geralmente operam acima de -7 dB. Dispositivos com SNR inferior a -10 dB indicam baixo desempenho.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Dispositivos normais geralmente operam acima de -110 dBm. Dispositivos com RSSI inferior a -115 dBm são considerados como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Dispositivos normais geralmente operam acima de -110 dBm. Dispositivos com RSSI inferior a -115 dBm são considerados como tendo baixo desempenho.
 
       Para obter o melhor efeito de sinal, utilize o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
