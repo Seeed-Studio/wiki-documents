@@ -33,7 +33,7 @@ updatedAt: '2026-04-03'
 
 ## 固件烧录
 
-### 方法一：通过 Web Flasher
+### 方法 1：通过 Web Flasher
 
 使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
 
@@ -57,7 +57,7 @@ updatedAt: '2026-04-03'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseSelect.png" alt="pir" width={800} height="auto" /></p>
 
-如果你已经点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
+如果你点击了 `Erase Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Erase Flash`，以确保已成功进入 DFU 模式。
 
 如果你看到 "Flashing erase firmware:100%"，说明设备已成功完成擦除。
 
@@ -73,13 +73,13 @@ updatedAt: '2026-04-03'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashEraseSe.png" alt="pir" width={800} height="auto" /></p>
 
-如果你已经点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
+如果你点击了 `Flash` 但没有任何响应，请再次点击 `Enter DFU`，然后再点击 `Flash`，以确保已成功进入 DFU 模式。
 
 当进度条完全填满时，表示 Flash 已完成。随后设备会自动重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/FlashProgress.png" alt="pir" width={800} height="auto" /></p>
 
-### 方法二：拖拽烧录
+### 方法 2：拖拽烧录
 
 使用 USB 线将设备连接到电脑。请确保数据线支持数据传输。
 
@@ -111,7 +111,7 @@ updatedAt: '2026-04-03'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/EraseDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件成功烧录后，该磁盘会自动消失。此时设备中没有固件，因此设备 `NOT` 会自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备 `NOT` 会自动重启。
 
 #### 烧录固件
 
@@ -131,11 +131,11 @@ updatedAt: '2026-04-03'
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/FirmwareDr.png" alt="pir" width={800} height="auto" /></p>
 
-固件成功烧录后，该磁盘会自动消失。此时设备中没有固件，因此设备不会自动重启。
+固件成功烧录后，该磁盘会自动消失。此时设备中还没有固件，因此设备不会自动重启。
 
-## 入门指南
+## 入门
 
-在正式部署前，请先对节点进行测试和配置。
+正式部署前，请先对节点进行测试和配置。
 
 ### 安装
 
@@ -162,7 +162,7 @@ updatedAt: '2026-04-03'
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 3：连接射频线缆（部件 4）和天线（部件 5）。
+- 步骤 3：连接 RF 线缆（部件 4）和天线（部件 5）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -219,23 +219,23 @@ P1-Pro 版本内置电池和 GPS 模块；对于 P1 版本，如有需要，用�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-确保外壳正确安装，并且螺丝拧紧，以保持设备的防水性能。
+请确保外壳正确安装，且螺丝已牢固拧紧，以保持设备的防水性能。
 :::
 
 #### （可选）升级天线
 
 - 你可以通过观看此视频，将天线更换为玻璃纤维天线。
 
-如果你需要更高增益的天线，我们推荐 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
+如果你需要更高增益的天线，我们推荐使用 [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) 天线和 [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) 天线。
 
 ### 启动设备
 
 设备需要通过连接 USB 线来激活。蓝色 Mesh 指示灯会亮起约 3 秒，这表示设备已成功开启。
 
-在发送 advert 之前，蓝色 mesh 指示灯不会亮起。
+在设备发送 advert 之前，蓝色 mesh 指示灯不会亮起。
 
 :::tip
-直到 1.14.1 版本发布后，电源按钮才被启用。长按设备 `3s` 以开关设备。你会看到白灯短暂闪烁，这表示设备已成功开启。
+直到 1.14.1 版本发布后，电源按钮才被启用。长按设备 `3s` 以开关设备。你会看到白灯短暂闪烁，这表示设备正在成功开机。
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/blinkingonetime.mp4" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
@@ -259,7 +259,7 @@ import TabItem from '@theme/TabItem';
 
 **区域列表**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未设置|N/A|N/A|N/A|
 |US|美国|902.0 - 928.0|100|30|
@@ -296,15 +296,15 @@ import TabItem from '@theme/TabItem';
 
 ### 设置路径
 
-在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会以固定间隔自动发送 advert。该间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
+在将中继器添加到你的路由之前，你可能需要先使用中继器发送 advert。中继器会以固定间隔自动发送 advert。这个间隔可能是数小时（默认 3 小时）。因此你需要手动发送 advert，否则就需要等待。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SendAdvert.png" alt="pir" width={600} height="auto" /></p>
 
-你可以手动设置消息发送路径。将你的蓝牙伴侣设备连接到手机 App。打开一个私信窗口，然后你可以选择已发现的中继器来形成你的路径。
+你可以手动设置消息发送路径。将你的蓝牙伴侣设备连接到手机 App。打开一个私信窗口，然后你可以选择已发现的中继器来组成你的路径。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-设置路径后，传输方式将变为 “n hop”。例如，如果你在路由中添加了 1 个中继器，它将变为 1 hop。
+设置路径后，传输方式将变为 "n hop"。例如，如果你在路由中添加了 1 个中继器，它将变为 1 hop。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -386,7 +386,7 @@ python -m pip show adafruit-nrfutil
 
 <TabItem value="sou" label="通过源码安装">
 
-如果你在使用 PyPi 安装时遇到问题，或想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
+如果你在使用 PyPi 安装时遇到问题，或者想修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -395,7 +395,7 @@ cd Adafruit_nRF52_nrfutil
 
 注意：以下命令使用 `python3`，但是如果你在 Windows 上，可能需要将其改为 `python`，因为 Windows 上的 Python 3.x 安装仍然使用 python.exe 这个名称。
 
-要在你的主目录用户空间中安装：
+要在你主目录的用户空间中安装：
 
 ```
 pip3 install -r requirements.txt
@@ -416,7 +416,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成该工具的自包含可执行二进制文件（Windows 和 MacOS），运行以下命令：
+要生成该工具的自包含可执行二进制文件（Windows 和 MacOS），请运行以下命令：
 
 ```
 pip3 install pyinstaller
@@ -466,7 +466,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-完成上述步骤后，你就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
+当你完成上述步骤后，就可以[烧录应用固件](https://wiki.seeedstudio.com/cn/get_started_with_meshcore_solar_node/#flash-erase)。
 
 ### 信号质量
 

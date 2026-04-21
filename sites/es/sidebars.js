@@ -3500,7 +3500,6 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_reTerminal-build-UI-using-Electron',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_reTerminal-build-UI-using-Flutter',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_reTerminal-build-UI-using-LVGL',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_reTerminal-build-UI-using-Qt-for-Python',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/es_weather-dashboard-with-Grafana-reTerminal',
                   ]
                 },
