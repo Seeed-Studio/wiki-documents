@@ -30,7 +30,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ## はじめに
 Jetson Orinを搭載したreComputer J30/40は、最大100TOPSの最新AI性能をエッジに提供する強力でコンパクトなインテリジェントエッジボックスです。NVIDIA Ampere™ GPUアーキテクチャと64ビット動作機能を組み合わせています。
 
-完全なシステムには、1つのNVIDIA Jetson Orin製品モジュール、ヒートシンク、および電源アダプターが含まれています。reComputer J30/40にはJetpack 5.1.1がプリインストールされており、開発を簡素化し、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの業界で動画解析、物体検出、自然言語処理、医療画像、ロボティクスに取り組むエッジAIソリューションプロバイダーの展開に適しています。
+完全なシステムには、1つのNVIDIA Jetson Orin製品モジュール、ヒートシンク、および電源アダプターが含まれています。reComputer J30/40にはJetpack 5.1.3がプリインストールされており、開発を簡素化し、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの業界で動画解析、物体検出、自然言語処理、医療画像、ロボティクスに取り組むエッジAIソリューションプロバイダーの展開に適しています。
 
 電源アダプターなしのバージョンをお探しの場合は、[reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html)をご確認ください。
 

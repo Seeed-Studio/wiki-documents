@@ -2105,7 +2105,17 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
               ],
             },
-            'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
+            {
+              type: 'category',
+              label: 'reSpeaker Flex with Xiao',
+              link: {
+                type: 'doc',
+                id: 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao',
+              },
+              items: [
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_i2s_test',
+              ],
+            },
             'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
             //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
@@ -3491,7 +3501,6 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Electron',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Flutter',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-LVGL',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_reTerminal-build-UI-using-Qt-for-Python',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/ja_weather-dashboard-with-Grafana-reTerminal',
                   ]
                 },

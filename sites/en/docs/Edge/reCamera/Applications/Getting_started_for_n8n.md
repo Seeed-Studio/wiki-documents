@@ -6,6 +6,7 @@ keywords:
   - n8n
 image: https://files.seeedstudio.com/wiki/reCamera/n8n_11.png
 slug: /getting_started_for_n8n_with_recamera
+sku: 102991896, 108990119, 100029708
 sidebar_position: 9
 last_update:
   date: 11/19/2025

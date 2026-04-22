@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-16 15:31:15 (北京时间)
-// 多语言页面: 2256 个
+// 生成时间: 2026-04-20 13:51:59 (北京时间)
+// 多语言页面: 2259 个
 
 (function() {
   'use strict';
@@ -3222,6 +3222,13 @@
     "ja",
     "pt"
   ],
+  "/sound_source_localization_of_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
@@ -3390,7 +3397,14 @@
     "ja",
     "pt"
   ],
-  "/driving_reterminal_d1001_audio_peripherals": [
+  "/driving_reterminal_d1001_speaker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/driving_reterminal_d1001_microphone": [
     "cn",
     "en",
     "es",
@@ -10260,6 +10274,13 @@
     "pt"
   ],
   "/respeaker_2_mics_pi_hat_v2_speech_recognition": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
     "es",
