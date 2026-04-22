@@ -77,7 +77,7 @@ XVF3800マイクアレイは動作するために12.288 MHz MCLKが必要です�
 私たちのファームウェアはこの制限を修正し、マイクがHome Assistantで正常に動作するようにします。
 :::
 
-ファームウェアは[こちら](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)からダウンロードできます
+ファームウェアは[こちら](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)からダウンロードできます
 
 インストールガイドは[こちら](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#update-firmware)です
 
