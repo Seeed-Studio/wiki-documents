@@ -1,6 +1,6 @@
 ---
-description: Este wiki mostra como usar um modelo YOLO na AI Box para queda, escalada de barreiras e rastreamento de pessoas.
-title: YOLOv8 na AI Box para Queda, Escalada e Rastreamento
+description: Este wiki mostra como usar um modelo YOLO no AI Box para detecção de queda, escalada de barreiras e rastreamento de pessoas.
+title: YOLOv8 no AI Box para Queda, Escalada e Rastreamento
 keywords:
   - Edge AI
   - rpi5
@@ -13,7 +13,7 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2025-09-03'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/pt-br/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
@@ -22,10 +22,10 @@ url: https://wiki.seeedstudio.com/pt-br/yolov8_on_ai_box_for_fall_climbing_track
 
 ## Introdução
 
-Este projeto irá guiá-lo sobre como usar a [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) ou a [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detecção de queda, detecção de escalada e detecção de rastreamento usando o modelo YOLOv8.
+Este projeto irá guiá-lo sobre como usar o [reComputer AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) ou o [reComputer Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detecção de queda, detecção de escalada e detecção de rastreamento usando o modelo YOLOv8.
 
 
-## Preparar hardware
+## Preparar o hardware
 
 <div class="table-center">
  <table align="center">
@@ -44,22 +44,22 @@ Este projeto irá guiá-lo sobre como usar a [reComputed AI Box](https://www.see
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -67,12 +67,12 @@ Este projeto irá guiá-lo sobre como usar a [reComputed AI Box](https://www.see
 </div>
 
 
-> 💡 **Note**: Este projeto requer uma reComputer AI Box ou uma reComputer Industry AI Box.
+> 💡 **Note**: Este projeto requer um reComputer AI Box ou um reComputer Industry AI Box.
 
 
 ##  Detecção de queda
 
-### Instalar o ambiente de runtime
+### Instalar o ambiente de execução
 
 ```bash
 sudo apt update && sudo apt full-upgrade -y && sudo apt install hailo-all
@@ -85,7 +85,7 @@ git clone https://github.com/Seeed-Projects/fall_detection_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Preparar o ambiente python
+### Preparar o ambiente Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -105,7 +105,7 @@ python app.py -i ./falldown_test.mp4 -n ./yolov8n.hef --show-fps -l ./common/coc
 
 ## Escalada de cerca
 
-### Instalar o ambiente de runtime
+### Instalar o ambiente de execução
 
 ```bash
 sudo apt update && sudo apt full-upgrade -y && sudo apt install hailo-all
@@ -118,7 +118,7 @@ git clone https://github.com/Seeed-Projects/cross_fence_with_AIBox.git
 cd cross_fence_with_AIBox
 ```
 
-### Preparar o ambiente python
+### Preparar o ambiente Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -139,7 +139,7 @@ python app.py -i ./scale_the_fence.mp4 -n ./yolov8n.hef --show-fps -l ./common/c
 
 ## Rastreamento 
 
-### Instalar o ambiente de runtime
+### Instalar o ambiente de execução
 
 ```bash
 sudo apt update && sudo apt full-upgrade -y && sudo apt install hailo-all
@@ -152,7 +152,7 @@ git clone https://github.com/Seeed-Projects/track_people_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Preparar o ambiente python
+### Preparar o ambiente Python
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -165,7 +165,7 @@ pip install -r requirements.txt
 python app.py -i ./people-walking.mp4 -n ./yolov8n.hef --show-fps -l ./common/coco.txt --track
 ```
 
-### resultado 
+### Resultado 
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/xoeMcaG_FxE?list=PLpH_4mf13-A3Wm6hJp7JeT4DD9NXXUAca" title="reComputer Object Detection and Tracking: The Role of YOLOv8 in Shaping Results" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,6 +1,6 @@
 ---
-description: Wio Tracker L1 Meshtastic Node Introduction
-title: Wio Tracker L1 Meshtastic Node
+description: Wio Tracker L1 Introduction
+title: Wio Tracker L1 Introduction
 keywords:
   - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.webp
