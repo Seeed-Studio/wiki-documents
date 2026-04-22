@@ -302,18 +302,18 @@ The reComputer AI Industrial R2135 does not come with a power button by default,
 The reComputer AI Industrial R2135 features 3 LED indicators that serve to signal the machine's operational status. Please refer to the table below for the specific functions and status of each LED:
 
 | Name  | Color            | Status | Description                                                                                                                                              |
-|-------|-----------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **PWR**  | Green           | On     | The device has been connected to power.                                                                                                                  |
+|-------|-----------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **PWR**  | Green           | On     | The device has been connected to power.                                                                                                                |
 |        |                 | Off    | The device is not connected to power.                                                                                                                    |
 | **ACT**  | Orange          |        | Under Linux this pin will flash to signify eMMC access. If any error occurs during booting, this LED will flash an error pattern (see Raspberry Pi Documentation). |
-| **USER** | Green/Red/Blue  |        | Need to be defined by user.                                                                                                                              |
-| **LTE**  | Green           | On     | The dial-up is successful and the connection is normal.                                                                                                  |
-|        |                 | Off    | LTE signal is not connected or the device is not powered on.                                                                                              |
+| **USER** | Green/Red/Blue  |        | Need to be defined by user.                                                                                                                            |
+| **LTE**  | Green           | On     | The dial-up is successful and the connection is normal.                                                                                                |
+|        |                 | Off    | LTE signal is not connected or the device is not powered on.                                                                                             |
 
 ### ACT Status table
 
 | Long flashes | Short flashes | Status                               |
-|--------------|---------------|-------------------------------------|
+|--------------|---------------|--------------------------------------|
 | 0            | 3             | Generic failure to boot              |
 | 0            | 4             | start*.elf not found                 |
 | 0            | 7             | Kernel image not found               |
@@ -365,7 +365,7 @@ The Boot Switch of The reComputer AI Industrial R2135 is connected to the nRPI_B
 | Switch Position | Mode         | Description      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
 |      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
 
 ### USB
 
@@ -449,8 +449,7 @@ The reComputer AI Industrial R2135 includes a Mini PCIe slot designed primarily 
 | Slot        | Supported Protocol     |
 |-------------|------------------------|
 | Mini-PCIe   | 4G LTE                 |
-|             | USB LoRa®             |
-|             | USB Zigbee            |
+|             | USB LoRa®              |
 
 ### Reset Hole
 
@@ -464,7 +463,7 @@ There is a Mini Push Button Switch located in the reset hole of the reComputer A
 
 | Name | Type                         | Speeds             | PoE           |
 |------|------------------------------|--------------------|---------------|
-| ETH0 | CM5 native Gigabit Ethernet | 10/100/1000 Mbit/s | Not Supported |
+| ETH0 | CM5 native Gigabit Ethernet | 10/100/1000 Mbit/s | Not Supported  |
 
 reComputer AI Industrial R2135 comes with a standard RJ45 Gigabit Ethernet port (GbE), using a MagJack integrated transformer for better signal quality and EMI protection.
 

@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 5G，4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
+description: Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 5G，4G, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
 title: Configure reComputer Industrial R21xx
 keywords:
   - Raspberry pi
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_configure_system/
 
 ## Overview
 
-Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G，Zigbee over Mini-PCIe, RS485, RS232, CAN,DI/DO testing, UPS for safe shutdown and more.
+Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G, RS485, RS232, CAN,DI/DO testing, UPS for safe shutdown and more.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -492,54 +492,6 @@ ifconfig
 # Test communication
 ping www.baidu.com -I usb0
 ```
-
-## Zigbee over Mini-PCIe
-
-To test **Zigbee communication** between two Zigbee modules, follow these steps:  
-
-1. Check Available Serial Ports
-
-Use the following command to check available serial ports:
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**Install a Serial Communication Tool**
-
-2. Install Serial Communication Tool:
-
-```bash
-sudo apt-get install cutecom
-```
-
-3. Open Serial Port for Coordinator (First Zigbee Module):
-
-- Open the cutecom tool and configure it for the first serial port:
-- Baud rate: ***115200***
-- Check the ***"Hex output"*** option at the bottom of the interface.
-- Follow these steps to configure the first Zigbee module:
-- Set as coordinator: Send command ***‘55 04 00 05 00 05’***, expect response ***‘55 04 00 05 00 05’***.
-- Reset device: Press reset button or send command ***‘55 07 00 04 00 FF FF 00 04’***.
-- Network formation: Send command ***‘55 03 00 02 02’***.
-
-4. Open Serial Port for Router (Second Zigbee Module):
-Open another instance of ***cutecom*** and configure it for the second serial port with the same settings as before.
-Follow these steps to configure the second Zigbee module:
-
-- Set as router: Send command ***‘55 04 00 05 01 04’***, expect response ***‘55 04 00 05 00 05’***.
-- Reset device: Press reset button or send command ***‘55 07 00 04 00 FF FF 00 04’***.
-- Network formation: Send command ***‘55 03 00 02 02’***.
-
-5. Check Device Status:
-Send command ***‘55 03 00 00 00’*** to check the device status. Expect a response similar to ***‘55 2a 00 00 00 01 XX XX XX XX’***, where ‘XX’ represents device information.
-6. Enter Transparent Mode:
-If network formation is successful, enter transparent mode by sending command ***55 07 00 11 00 03 00 01 13***. Both modules should be in transparent mode for direct communication. To exit transparent mode, send "+++".
-7. Additional Notes:
-
-- If router configuration fails, the device may already be a coordinator. Leave the network using command '55 07 00 04 02 xx xx xx'.
-- Test transmission power using commands '55 04 0D 00 00 0D' (query) and '55 04 0D 01 XX XX' (set).
-Ensure you replace ***/dev/ttyUSB*** with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
 
 ## RS485 Testing
 
