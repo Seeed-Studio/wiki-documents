@@ -194,7 +194,7 @@ Cada tipo de firmware no ReSpeaker XVF3800 oferece suporte a diferentes métodos
 
 Três versões de firmware estão disponíveis no repositório oficial do GitHub. Você pode escolher e gravar o firmware apropriado dependendo dos requisitos da sua aplicação. Para mais detalhes e downloads, consulte o [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-:::note 
+:::note
 **NÃO** use "save as" para baixar os arquivos de firmware do GitHub, pois eles ficarão corrompidos. Clone o repositório ou use "Download as ZIP" para baixar todo o repositório (e todos os arquivos incluídos) como um arquivo ZIP.
 :::
 
@@ -210,12 +210,10 @@ Duas variantes de firmware estão disponíveis: **respeaker_xvf3800_usb_dfu_firm
 
 Você pode explorar esses arquivos de firmware [neste link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
-
 | Firmware | Canais | Observações |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Saída processada de 2 canais <br /> Canal 0: Conferência <br /> Canal 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Canal 0: Áudio processado (Conferência) <br /> Canal 1: Áudio processado (ASR) <br /> Canal 2: Dados brutos do Mic 0 <br /> Canal 3: Dados brutos do Mic 1 <br /> Canal 4: Dados brutos do Mic 2 <br /> Canal 5: Dados brutos do Mic 3 |
-
 
 </TabItem>
 
@@ -236,26 +234,18 @@ O arquivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está di
 O firmware para Home Assistant é outro firmware baseado em I2S, projetado especificamente para integração com o Home Assistant. Este firmware otimizado usa áudio de 2 canais com taxa de amostragem de 48 kHz, proporcionando melhor compatibilidade e desempenho dentro do ambiente Home Assistant.
 Você pode visualizar o firmware a partir de [aqui](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
 
-
-
 | Firmware | Canais | Observações |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Saída processada de 2 canais <br /> Canal 0: ASR <br /> Canal 1: Palavra de ativação |
 
-  </TabItem]
+</TabItem>
 </Tabs>
 
-
-
 Conecte o reSpeaker XVF3800 ao seu PC via cabo USB. Observe que você precisa usar a porta XMOS USB-C (próxima à porta jack de 3,5 mm) para gravar o firmware da XMOS.
-
-
 
 #### Instalar DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) é uma ferramenta de linha de comando para atualização de firmware de dispositivos via USB.
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -710,16 +700,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 Aqui está como configurar o modo de feixe fixo para detectar a faixa de 0–45 graus
 
-Definir ângulos de azimute 
+Definir ângulos de azimute
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Definir elevação para 0
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Ativar modo de feixe fixo
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -919,16 +913,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 Veja como configurar o modo de feixe fixo para detectar a faixa de 0–45 graus
 
-Definir ângulos de azimute 
+Definir ângulos de azimute
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Definir elevação para 0
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Ativar modo de feixe fixo
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
@@ -965,6 +963,7 @@ Se o volume de saída do alto-falante do **ReSpeaker XVF3800** estiver muito bai
    ```bash
    alsamixer
    ```
+
 **Passo 2: Selecionar a placa de som XVF3800**
 
 1. Pressione **F6** para abrir o menu de seleção de placa de som.

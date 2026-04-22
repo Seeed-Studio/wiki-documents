@@ -194,7 +194,7 @@ ReSpeaker XVF3800 上的每种固件类型都支持不同的更新方式：
 
 官方 GitHub 仓库中提供了三个固件版本。你可以根据应用需求选择并烧录合适的固件。更多详情和下载请参考 [Github 链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-:::note 
+:::note
 **不要**使用“另存为（save as）”从 GitHub 下载固件文件，否则文件会损坏。请克隆仓库或使用“Download as ZIP”将整个仓库（及其中所有文件）作为 ZIP 文件下载。
 :::
 
@@ -210,12 +210,10 @@ USB 固件适用于通过 USB 硬件接口与主机操作系统（如 **Windows�
 
 你可以在[此链接](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)中查看这些固件文件
 
-
 | 固件 | 通道数 | 说明 |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 处理后的 2 通道输出 <br /> 通道 0：会议（Conference）<br /> 通道 1：ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | 通道 0：处理后音频（Conference）<br /> 通道 1：处理后音频（ASR）<br /> 通道 2：Mic 0 原始数据 <br /> 通道 3：Mic 1 原始数据 <br /> 通道 4：Mic 2 原始数据 <br /> 通道 5：Mic 3 原始数据 |
-
 
 </TabItem>
 
@@ -236,26 +234,18 @@ I2S 固件适用于设备连接到 **XIAO ESP32S3** 等微控制器主机时使�
 Home Assistant 固件是另一种基于 I2S 的固件，专门为与 Home Assistant 集成而设计。该优化固件使用 2 通道音频和 48 kHz 采样率，在 Home Assistant 环境中提供更好的兼容性和性能。
 你可以从[这里](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)查看该固件
 
-
-
 | 固件 | 通道数 | 说明 |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 处理后的 2 通道输出 <br /> 通道 0：ASR <br /> 通道 1：唤醒词 |
 
-  </TabItem]
+</TabItem>
 </Tabs>
 
-
-
 通过 USB 线将 reSpeaker XVF3800 连接到你的电脑。注意，你需要使用 XMOS USB-C 接口（靠近 3.5mm 耳机接口的那个）来烧录 XMOS 的固件。
-
-
 
 #### 安装 DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) 是一个通过 USB 进行设备固件升级（Device Firmware Upgrade）的命令行工具。
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -711,15 +701,19 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 下面是如何设置固定波束模式以检测 0–45 度范围
 
 设置方位角
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 将仰角设置为 0
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 启用固定波束模式
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -920,15 +914,19 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 以下是如何设置固定波束模式以检测 0–45 度范围
 
 设置方位角
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 将仰角设置为 0
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 启用固定波束模式
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
@@ -965,6 +963,7 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
    ```bash
    alsamixer
    ```
+
 **步骤 2：选择 XVF3800 声卡**
 
 1. 按下 **F6** 打开声卡选择菜单。

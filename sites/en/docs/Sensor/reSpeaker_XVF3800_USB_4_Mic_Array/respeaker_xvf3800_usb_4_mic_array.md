@@ -194,7 +194,7 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 
 Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-:::note 
+:::note
 Do **NOT** use "save as" to download the firmware files from GitHub as they will get corrupt. Clone the repository or use "Download as ZIP" to download the whole repository (and all included files) as ZIP file.
 :::
 
@@ -210,12 +210,10 @@ Two firmware variants are available: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x
 
 You can explore these firmware files in [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
-
 | Firmware | Channels | Notes |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: Processed audio (Conference) <br /> Channel 1: Processed audio (ASR) <br /> Channel 2: Mic 0 raw data <br /> Channel 3: Mic 1 raw data <br /> Channel 4: Mic 2 raw data <br /> Channel 5: Mic 3 raw data |
-
 
 </TabItem>
 
@@ -236,26 +234,18 @@ The firmware file **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** is available
 The Home Assistant firmware is another I2S-based firmware specifically designed for integration with Home Assistant. This optimized firmware uses 2-channel audio with a 48 kHz sampling rate, providing better compatibility and performance within the Home Assistant environment.
 You can view the firmware from [here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
 
-
-
 | Firmware | Channels | Notes |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Processed 2-channel output <br /> Channel 0: ASR <br /> Channel 1: Wake word |
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-
-
 Connect the reSpeaker XVF3800 to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to 3.5mm jack port) to flash XMOS’s firmware.
-
-
 
 #### Install DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) is a command line tool for Device Firmware Upgrade via USB.
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -710,16 +700,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 here's how to set up fixed beam mode to detect the 0–45 degree range
 
-Set azimuth angles 
+Set azimuth angles
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Set elevation to 0
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Enable fixed beam mode
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -919,16 +913,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 here's how to set up fixed beam mode to detect the 0–45 degree range
 
-Set azimuth angles 
+Set azimuth angles
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Set elevation to 0
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Enable fixed beam mode
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
@@ -965,6 +963,7 @@ If the speaker output volume of the **ReSpeaker XVF3800** is too low on Linux, y
    ```bash
    alsamixer
    ```
+
 **Step 2: Select the XVF3800 Sound Card**
 
 1. Press **F6** to open the sound card selection menu.
@@ -1001,7 +1000,7 @@ You can then open **pavucontrol** and increase the output volume beyond 100% if 
 
 Uninstall all drivers associated with the ReSpeaker in Device Manager. This resolved the issue.
 
-### Cannot use as sound devices in Windows after flashing firmware ? 
+### Cannot use as sound devices in Windows after flashing firmware ?
 
 Open the start menu and type Device manager. Find  related reSpeaker XVF 3800 devices, right click them and select Uninstall devices. After that, restart the device (usb plug and unplugged) and Windows will re-install the right sound card driver for it.
 

@@ -194,7 +194,7 @@ ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる�
 
 公式 GitHub リポジトリには 3 つのファームウェアバージョンが用意されています。用途に応じて適切なファームウェアを選択して書き込むことができます。詳細およびダウンロードについては、[Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY) を参照してください。
 
-:::note 
+:::note
 GitHub からファームウェアファイルをダウンロードする際に "save as" を使用しないでください。ファイルが破損します。リポジトリをクローンするか、"Download as ZIP" を使用して、リポジトリ全体（および含まれるすべてのファイル）を ZIP ファイルとしてダウンロードしてください。
 :::
 
@@ -210,12 +210,10 @@ USB ファームウェアは、USB ハードウェアインターフェースを
 
 これらのファームウェアファイルは [this link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb) から確認できます。
 
-
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み 2 チャンネル出力 <br /> Channel 0: Conference <br /> Channel 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: 処理済みオーディオ (Conference) <br /> Channel 1: 処理済みオーディオ (ASR) <br /> Channel 2: Mic 0 生データ <br /> Channel 3: Mic 1 生データ <br /> Channel 4: Mic 2 生データ <br /> Channel 5: Mic 3 生データ |
-
 
 </TabItem>
 
@@ -236,26 +234,18 @@ I2S ファームウェアは、**XIAO ESP32S3** のようなマイコンホス�
 Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう 1 つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz のサンプリングレートによる 2 チャンネルオーディオを使用し、Home Assistant 環境内でより良い互換性とパフォーマンスを提供します。
 ファームウェアは [here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main) から確認できます。
 
-
-
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 処理済み 2 チャンネル出力 <br /> Channel 0: ASR <br /> Channel 1: ウェイクワード |
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-
-
 USB ケーブルで reSpeaker XVF3800 を PC に接続します。XMOS のファームウェアを書き込むには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
-
-
 
 #### DFU Util のインストール
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) は、USB 経由で Device Firmware Upgrade を行うためのコマンドラインツールです。
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -710,16 +700,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 ここでは、0〜45 度の範囲を検出する固定ビームモードの設定方法を説明します
 
-方位角を設定する 
+方位角を設定する
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 仰角を 0 に設定
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 固定ビームモードを有効化
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -920,15 +914,19 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 0〜45 度の範囲を検出する固定ビームモードを設定する方法は次のとおりです
 
 方位角を設定
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 仰角を 0 に設定
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 固定ビームモードを有効化
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
@@ -965,6 +963,7 @@ Linux で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎる
    ```bash
    alsamixer
    ```
+
 **ステップ 2: XVF3800 サウンドカードを選択**
 
 1. **F6** キーを押してサウンドカード選択メニューを開きます。

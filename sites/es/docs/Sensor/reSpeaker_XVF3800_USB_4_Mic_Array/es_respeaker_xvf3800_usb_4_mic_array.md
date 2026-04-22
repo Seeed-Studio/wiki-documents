@@ -194,7 +194,7 @@ Cada tipo de firmware en la ReSpeaker XVF3800 admite diferentes métodos de actu
 
 Hay tres versiones de firmware disponibles en el repositorio oficial de GitHub. Puedes elegir y grabar el firmware apropiado según los requisitos de tu aplicación. Para más detalles y descargas, consulta el [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-:::note 
+:::note
 NO uses **"save as"** para descargar los archivos de firmware desde GitHub, ya que se corromperán. Clona el repositorio o usa "Download as ZIP" para descargar todo el repositorio (y todos los archivos incluidos) como un archivo ZIP.
 :::
 
@@ -210,12 +210,10 @@ Hay dos variantes de firmware disponibles: **respeaker_xvf3800_usb_dfu_firmware_
 
 Puedes explorar estos archivos de firmware en [este enlace](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
 
-
 | Firmware | Canales | Notas |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: Conferencia <br /> Canal 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Canal 0: Audio procesado (Conferencia) <br /> Canal 1: Audio procesado (ASR) <br /> Canal 2: Datos en bruto del Mic 0 <br /> Canal 3: Datos en bruto del Mic 1 <br /> Canal 4: Datos en bruto del Mic 2 <br /> Canal 5: Datos en bruto del Mic 3 |
-
 
 </TabItem>
 
@@ -236,26 +234,18 @@ El archivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está d
 El firmware para Home Assistant es otro firmware basado en I2S diseñado específicamente para la integración con Home Assistant. Este firmware optimizado utiliza audio de 2 canales con una frecuencia de muestreo de 48 kHz, lo que proporciona mejor compatibilidad y rendimiento dentro del entorno de Home Assistant.
 Puedes ver el firmware desde [aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
 
-
-
 | Firmware | Canales | Notas |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: ASR <br /> Canal 1: Palabra de activación |
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-
-
 Conecta el reSpeaker XVF3800 a tu PC mediante el cable USB. Ten en cuenta que debes usar el puerto XMOS USB-C (cerca del puerto jack de 3,5 mm) para grabar el firmware de XMOS.
-
-
 
 #### Instalar DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para la actualización de firmware de dispositivos (Device Firmware Upgrade) vía USB.
-
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -710,16 +700,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 Aquí se muestra cómo configurar el modo de haz fijo para detectar el rango de 0–45 grados
 
-Configurar ángulos de acimut 
+Configurar ángulos de acimut
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Configurar elevación a 0
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Habilitar modo de haz fijo
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -919,16 +913,20 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 Aquí se muestra cómo configurar el modo de haz fijo para detectar el rango de 0–45 grados
 
-Configurar ángulos de acimut 
+Configurar ángulos de acimut
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Configurar elevación a 0
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Habilitar el modo de haz fijo
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
@@ -965,6 +963,7 @@ Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo 
    ```bash
    alsamixer
    ```
+
 **Paso 2: Seleccionar la tarjeta de sonido XVF3800**
 
 1. Presiona **F6** para abrir el menú de selección de tarjeta de sonido.
@@ -1001,7 +1000,7 @@ Luego puedes abrir **pavucontrol** y aumentar el volumen de salida más allá de
 
 Desinstala todos los controladores asociados con el ReSpeaker en el Administrador de dispositivos. Esto resolvió el problema.
 
-### ¿No se puede usar como dispositivo de sonido en Windows después de flashear el firmware? 
+### ¿No se puede usar como dispositivo de sonido en Windows después de flashear el firmware?
 
 Abre el menú de inicio y escribe Device manager. Busca los dispositivos reSpeaker XVF 3800 relacionados, haz clic derecho sobre ellos y selecciona Uninstall devices. Después de eso, reinicia el dispositivo (conecta y desconecta el USB) y Windows volverá a instalar el controlador de tarjeta de sonido correcto para él.
 
