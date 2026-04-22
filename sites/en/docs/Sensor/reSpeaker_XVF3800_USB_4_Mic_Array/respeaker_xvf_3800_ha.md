@@ -77,7 +77,7 @@ The XVF3800 mic array needs a 12.288 MHz MCLK to work, but ESPHome (used in Home
 Our firmware fixes this limitation, so the mic works properly with Home Assistant.
 :::
 
-You can download Firmware From [Here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
+You can download Firmware From [Here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
 The installtion guide is [Here](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
