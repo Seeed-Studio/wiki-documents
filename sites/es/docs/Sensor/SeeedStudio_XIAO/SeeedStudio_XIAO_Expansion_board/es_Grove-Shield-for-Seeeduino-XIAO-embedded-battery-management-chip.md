@@ -62,7 +62,7 @@ Este producto no incluye una placa Seeed Studio XIAO, por favor haz clic [aquí]
 |---|---|
 |Voltaje de operación|3.3V / Batería de Litio 3.7V|
 |Capacidad de Carga|800mA|
-|Corriente de carga| 400mA (Máx)|
+|Corriente de carga| 500mA (Máx)|
 |Temperatura de Operación|- 40°C a 85°C|
 |Temperatura de Almacenamiento|-55°C a 150°C|
 |Interfaz Grove|I2C *2 / UART* 1|
