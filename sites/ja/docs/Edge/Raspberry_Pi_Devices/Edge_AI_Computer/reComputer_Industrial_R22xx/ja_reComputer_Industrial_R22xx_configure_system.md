@@ -1,6 +1,6 @@
 ---
-description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS を実現する産業グレードの AI 搭載 NVR です。PoE PSE 対応の 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向けのシンプルな PoE 展開を可能にします。豊富な産業用 I/O、柔軟な無線接続、ファンレス熱設計、-20 °C から 50 °C までの広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を実現します。
-title: reComputer Industrial R22xx を構成する
+description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS を実現する産業グレードの AI 搭載 NVR です。PoE PSE 対応の 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向けのシンプルな PoE 展開を可能にします。豊富な産業用 I/O、柔軟なワイヤレス接続、ファンレス熱設計、-20 °C から 50 °C の広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を実現します。
+title: reComputer Industrial R22xx を設定する
 keywords:
   - エッジコントローラ
   - Raspberry pi
@@ -13,13 +13,13 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r22xx_configure_system/
 ---
 
 ## 概要
 
-本 Wiki では、デバイスを取り付けた後に reComputer Industrial R22xx シリーズ上のハードウェアコンポーネントを構成およびテストする方法を説明します。GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、4G、5G、Mini-PCIe 経由の Zigbee、RS485、RS232、CAN、DI/DO テスト、安全なシャットダウンのための UPS などを扱います。
+本 Wiki では、デバイスの取り付け後に reComputer Industrial R22xx シリーズ上のハードウェアコンポーネントを設定およびテストする方法を説明します。この Wiki では、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、4G、5G、RS485、RS232、CAN、DI/DO テスト、安全なシャットダウンのための UPS などを扱います。
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -43,7 +43,7 @@ cat /sys/kernel/debug/gpio
 
 ## USER LED テスト
 
-ユーザーが使用できるように、赤・青・緑の 3 色の LED を用意しています。/sys/class/leds/ ディレクトリに入って確認できます：
+ユーザーが使用できるように、赤、青、緑の 3 色の LED を用意しています。/sys/class/leds/ ディレクトリに入って確認できます：
 
 **1. LED ディレクトリへ移動する**  
 
@@ -55,7 +55,7 @@ ls
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.3-1.png" style={{width:800, height:'auto'}}/></div>
 
 
-対応する色の LED を点灯させるには、次のコマンドを使用します。
+次のコマンドを使用して、対応する色の LED を点灯させます。
 
 ```bash
 sudo su
@@ -157,7 +157,7 @@ git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
 ```
 
-3. 設定ファイルを編集します。
+3. 設定ファイルを変更します。
 
 I2C デバイスの設定ファイルを開きます。  
 
@@ -204,13 +204,13 @@ cat /sys/kernel/debug/gpio
 
 **ctrl+x** を押して終了し、**y** を押して変更を保存し、その後 **Enter** を押してコマンドライン画面に戻ります。
 
-5. 設定コードを修正します。
+5. 設定コードを変更します。
 
 ```bash
 cp ./tools/reset_lgw.sh ./packet_forwarder
 ```
 
-6. 18、29、35、42、53、54 行目をそれぞれコメントアウトします。
+6. それぞれ 18、29、35、42、53、54 行目をコメントアウトします。
 
 ```bash
 nano ./packet_forwarder/global_conf.json.sx1250.US915
@@ -230,7 +230,7 @@ sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 
 ### LoRa® USB 設定
 
-LoRa® USB の場合、前述のコマンドは LoRa® SPI と同じですが、最後のコマンドのみ次のように変更する必要があります。
+LoRa® USB の場合、前述のコマンドは LoRa® SPI と同じです。ただし、最後のコマンドのみ次のように変更する必要があります。
 
 ```bash
 cho  632  >  /sys/class/gpio/export
@@ -246,7 +246,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 ## M.2 B-KEY 経由の 5G セルラー
 
-minicom を介して AT コマンドで 5G/4G モジュールとやり取りするには、次の手順に従います。
+minicom を介して AT コマンドを使用し 5G/4G モジュールとやり取りするには、次の手順に従います。
 
 1. 新しい power_5g.sh ファイルを作成します：
 
@@ -297,7 +297,7 @@ sudo ./power_5g.sh
 ls /dev/ttyUSB*
 ```
 
-/dev/ttyUSB0 などが出力されます。
+出力例 /dev/ttyUSB0 など：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
 適切なシリアルポートとボーレートで minicom を開きます。
 
@@ -309,7 +309,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 このコマンドは、指定したシリアルポート（***/dev/ttyUSB2***）をボーレート 115200 で開いて minicom を起動します。
 
-1. minicom を開いたら、4G モジュールに AT コマンドを送信し始めることができます。例えば：
+1. minicom が開いたら、4G モジュールに AT コマンドを送信し始めることができます。例えば：
 
 ```bash
 AT
@@ -359,11 +359,11 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-Ctrl+A、Z、E の順に押します。まず AT を送信して接続されているかテストします。OK が表示されれば接続は成功です。
+Ctrl+A、Z、E の順に押します。まず AT を送信して接続されているかテストします。OK が表示されれば、接続は成功です。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.9-1.png" style={{width:800, height:'auto'}}/></div>
 
 
-次のコマンドを実行すると、モジュールは自動的に再起動します。minicom を終了していなければ、対応する設定情報を確認できます。
+次のコマンドを実行すると、モジュールは自動的に再起動します。minicom を終了しなければ、対応する設定情報を確認できます。
 ECM ダイヤルアップによるインターネット接続：
 
 ```bash
@@ -384,67 +384,19 @@ ifconfig
 ping www.baidu.com -I usb0
 ```
 
-## Mini-PCIe 経由の Zigbee
-
-2 つの Zigbee モジュール間で **Zigbee 通信** をテストするには、次の手順に従います。  
-
-1. 利用可能なシリアルポートを確認する
-
-次のコマンドを使用して、利用可能なシリアルポートを確認します。
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**シリアル通信ツールをインストールする**
-
-2. シリアル通信ツールをインストールします。
-
-```bash
-sudo apt-get install cutecom
-```
-
-3. コーディネータ用にシリアルポートを開く（1 つ目の Zigbee モジュール）:
-
-- cutecom ツールを開き、最初のシリアルポート用に設定します。
-- ボーレート: ***115200***
-- インターフェース下部の ***"Hex output"*** オプションにチェックを入れます。
-- 次の手順に従って、1 つ目の Zigbee モジュールを設定します。
-- コーディネータとして設定: コマンド ***‘55 04 00 05 00 05’*** を送信し、応答 ***‘55 04 00 05 00 05’*** を期待します。
-- デバイスをリセット: リセットボタンを押すか、コマンド ***‘55 07 00 04 00 FF FF 00 04’*** を送信します。
-- ネットワーク形成: コマンド ***‘55 03 00 02 02’*** を送信します。
-
-4. ルータ用にシリアルポートを開く（2 つ目の Zigbee モジュール）:
-別の ***cutecom*** インスタンスを開き、同じ設定で 2 つ目のシリアルポート用に構成します。
-次の手順に従って、2 つ目の Zigbee モジュールを設定します。
-
-- ルータとして設定: コマンド ***‘55 04 00 05 01 04’*** を送信し、応答 ***‘55 04 00 05 00 05’*** を期待します。
-- デバイスをリセット: リセットボタンを押すか、コマンド ***‘55 07 00 04 00 FF FF 00 04’*** を送信します。
-- ネットワーク形成: コマンド ***‘55 03 00 02 02’*** を送信します。
-
-5. デバイスステータスを確認する:
-デバイスステータスを確認するには、コマンド ***‘55 03 00 00 00’*** を送信します。***‘55 2a 00 00 00 01 XX XX XX XX’*** のような応答が返ってくるはずで、‘XX’ はデバイス情報を表します。
-6. 透過モードに入る:
-ネットワーク形成が成功したら、コマンド ***55 07 00 11 00 03 00 01 13*** を送信して透過モードに入ります。両方のモジュールが直接通信するには、透過モードになっている必要があります。透過モードを終了するには "+++" を送信します。
-7. 追加の注意事項:
-
-- ルータの設定に失敗する場合、そのデバイスはすでにコーディネータになっている可能性があります。コマンド '55 07 00 04 02 xx xx xx' を使用してネットワークから離脱してください。
-- 送信電力をテストするには、'55 04 0D 00 00 0D'（クエリ）および '55 04 0D 01 XX XX'（設定）のコマンドを使用します。
-各 Zigbee モジュールに対して、***/dev/ttyUSB*** を正しいシリアルポートに置き換えてください。これらの手順に注意深く従うことで、2 つのモジュール間の Zigbee 通信を正常にテストできます。
-
 ## RS485 テスト
 
-reComputer Industrial R21xx には **2 つの RS485 ポート** が含まれています。以下は、それぞれに対応する **COM ポート** と **デバイスファイル** です。  
+reComputer Industrial R21xx には **2x RS485 ポート** が搭載されています。以下はそれぞれに対応する **COM ポート** と **デバイスファイル** です。  
 
 | **RS485 ポート数** | **COM ポート** | **シルク印刷ラベル** | **デバイスファイル** |
 |---------------------------|--------------|----------------------|-----------------|
 | **RS485-2**               | COM2         | A2/B2/GND3           | `/dev/ttyACM1`  |
 | **RS485-3**               | COM3         | A3/B3/GND4           | `/dev/ttyACM2`  |
 
-RS485 機能をテストするには、以下の手順に従うことができます（RS485_1 と RS485_2 を例とします）。
+RS485 の機能をテストするには、以下の手順に従ってください（RS485_1 と RS485_2 を例とします）。
 
-1. RS485_1 と RS485_2 の A と B を接続してください。
-2. 2 つのターミナルウィンドウで、それぞれ minicom を開きます。
+1. RS485_1 と RS485_2 の A と B をそれぞれ接続します。
+2. 2 つのターミナルウィンドウを開き、それぞれで minicom を起動します。
 
 ```bash
 sudo minicom -D /dev/ttyACM1
@@ -452,41 +404,41 @@ sudo minicom -D /dev/ttyACM2
 ```
 
 :::note
- 拡張ボードがある場合、番号を 1 つ後ろにずらす必要があります。例えば ***/dev/ttyAcM2***、***/dev/ttyAcM3*** のようになります。
+ 拡張ボードがある場合は、番号を 1 つ後ろにずらす必要があります。例えば ***/dev/ttyAcM2***、***/dev/ttyAcM3*** のようになります。
 :::
 
-3. 開いた両方の ACM で、次の操作を行う必要があります。
+3. 開いた両方の ACM で、次の操作を行います。
 
-- ***Ctrl+A*** を押し、次に ***Z*** を押すと、Minicom Command Summary インターフェースが表示されます。
+- ***Ctrl+A*** を押し、その後 ***Z*** を押すと、Minicom Command Summary インターフェースが表示されます。
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- もう一度 ***O*** を押して設定を開き、Serial port setup を選択して ***Enter*** を押します。すべての RS485 関連インターフェースを開き、***H/I/J/K/L*** を順番に押して有効にします。
+- さらに ***O*** を押して設定画面を開き、Serial port setup を選択して ***Enter*** を押します。すべての RS485 関連インターフェースを開き、***H/I/J/K/L*** を順番に押して有効にします。
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- すべてが "YES" と表示されたら、Enter を押して戻り、その後 Exit を選択して終了します。
+- すべてが "YES" と表示されたら、Enter を押して戻り、Exit を選択して終了します。
 
 :::note
 
 ACM2 と ACM3 を例にします。
-ACM2 から ACM3 に送信したい場合、ACM2 を再度設定する必要があります。***ctrl+A*** を押し、次に ***Z***、続いて ***E*** を押してから、シリアルポート書き込みコマンドを開始します。このとき、ACM2 で任意の文字列を出力でき、同時に ACM3 で ACM2 の内容を確認できます。
-逆に、ACM3 から ACM2 に送信したい場合は、ACM3 を再度設定する必要があります。***ctrl+A*** を押し、次に ***Z***、続いて ***E*** を押してから、シリアルポート書き込みコマンドを開始します。このとき、ACM3 で任意の文字列を出力でき、同時に ACM2 で ACM3 の内容を確認できます。図のようになります。
+ACM2 から ACM3 へ送信したい場合、ACM2 を再度設定する必要があります。***ctrl+A*** を押し、その後 ***Z***、さらに ***E*** を押してからシリアルポートの書き込みコマンドを開始します。このとき、ACM2 で任意の文字列を出力すると、ACM3 で同時に ACM2 の内容を確認できます。
+逆に、ACM3 から ACM2 へ送信したい場合は、ACM3 を再度設定します。***ctrl+A*** を押し、その後 ***Z***、さらに ***E*** を押してからシリアルポートの書き込みコマンドを開始します。このとき、ACM3 で任意の文字列を出力すると、ACM2 で同時に ACM3 の内容を確認できます。図のようになります。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
 ## RS232 テスト
 
-reComputer Industrial R21xx には **2 つの RS232** ポートが含まれており、それぞれに対応する **COM ポート** と **デバイスファイル** は次のとおりです。
+reComputer Industrial R21xx には **2x RS232** ポートが搭載されており、それぞれに対応する **COM ポート** と **デバイスファイル** は次のとおりです。
 
 | **RS232 ポート数** | **COM ポート** | **シルク印刷ラベル** | **デバイスファイル** |
 |---------------------------|--------------|----------------------|-----------------|
 | **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
 | **RS232-2**               | COM2         | RX2/TX2/GND2         | `/dev/ttyACM1`  |
 
-RS232 は全二重通信であるため、RS232 の TX と RX を直接短絡させてループバックテストを実行します。
+RS232 はフルデュプレックス通信であるため、RS232 の TX と RX を直接短絡させてループバックテストを行います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.12-1.png" style={{width:800, height:'auto'}}/></div>
 
-2 つのターミナルを開く必要があります。拡張ボードが接続されている場合は ACM1、接続されていない場合は ACM2 を使用します。
+2 つのターミナルを開く必要があります。拡張ボードが接続されている場合は ACM1、拡張ボードが接続されていない場合は ACM2 を使用します。
 **ターミナル 1:***
 
 ```bash
@@ -505,9 +457,9 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 ターミナル 1 には、ターミナル 2 から出力要求された内容が表示されます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.12-2.png" style={{width:800, height:'auto'}}/></div>
 
-## DI（デジタル入力）テスト
+## DI（Digital Input）テスト
 
-reComputer Industrial R21xx には 4 つの DI ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R21xx には 4 つの DI ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -540,11 +492,11 @@ reComputer Industrial R21xx には 4 つの DI ポートが含まれており、
   </table>
 </div>
 
-DI ポートの入力タイプは PNP です。5VDC〜24VDC の入力電圧をサポートし、電流は 1000mA です。
-DI の機能をテストするには、次の手順に従ってテストできます。
+DI ポートの入力タイプは PNP です。5VDC～24VDC の入力電圧をサポートし、電流は 1000mA です。
+DI の機能をテストするには、次の手順に従ってテストを行います。
 
-1. reComputer Industrial R21xx の DI ポートと外部負荷との接続が完了していることを確認します。
-2. 次のコマンドを入力して GPIO のステータスを取得します。
+1. reComputer Industrial R21xx の DI ポートと外部負荷との接続を完了させます。
+2. 次のコマンドを入力して GPIO の状態を取得します。
 
 ```bash
 echo 588 > /sys/class/gpio/export
@@ -554,9 +506,9 @@ cat /sys/class/gpio/gpio588/value
 
 3. 外部レベルが High のとき、***/sys/class/gpio/gpio588/value*** の値は 0 です。外部レベルが Low のとき、***/sys/class/gpio/gpio588/value*** の値は 1 です。
 
-## DO（デジタル出力）
+## DO（Digital Output）
 
-reComputer Industrial R21xx には 4 つの DO ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R21xx には 4 つの DO ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -593,11 +545,11 @@ reComputer Industrial R21xx には 4 つの DO ポートが含まれており、
   </table>
 </div>
 
-DO ポートの出力タイプはトランジスタです。60 VDC 未満の出力電圧をサポートし、電流容量は 500 mA です。
-DO の機能をテストするには、次の手順に従ってテストできます。
+DO ポートの出力タイプはトランジスタです。60 VDC 以下の出力電圧をサポートし、電流容量は 500 mA です。
+DO の機能をテストするには、次の手順に従ってテストを行います。
 
-1. reComputer Industrial R21xx の DO ポートと外部負荷との接続が完了していることを確認します。
-2. 出力を High レベルまたは Low レベルに設定するには、次のコマンドを入力します。
+1. reComputer Industrial R21xx の DO ポートと外部負荷との接続を完了させます。
+2. 次のコマンドを入力して、出力を High レベルまたは Low レベルに設定します。
 
 ```bash
 echo 638 > /sys/class/gpio/export
@@ -631,9 +583,9 @@ echo 0 > /sys/class/gpio/gpio638/value
   </table>
 </div>
 
-reComputer Industiral R22xx は単一の CAN インターフェースのみを備えているため、単体でのループバックテストは実行できません。その通信機能を検証するには、外部の対向デバイスまたは USB-to-CAN アダプタが必要です。このテストでは、デュアル CAN インターフェースを備えた reComputer Industiral R21xx を対向ノードとして使用し、reComputer Industiral R22xx と接続を確立します。具体的な接続方式および設定手順については、次のチュートリアルを参照してください。
+reComputer Industiral R22xx は単一の CAN インターフェースのみを搭載しているため、単体でのループバックテストは実行できません。通信機能を検証するには、外部の対向デバイスまたは USB-to-CAN アダプタが必要です。本テストでは、デュアル CAN インターフェースを備えた reComputer Industiral R21xx を対向ノードとして使用し、reComputer Industiral R22xx と接続します。具体的な接続方法および設定手順については、以下のチュートリアルを参照してください。
 
-1. 2 本のデュポン線を使用して can0 と can1 の H-H および L-L を短絡させ、最小ループテストを構成します。
+1. 2 本のデュポン線を使用して、can0 と can1 の H-H および L-L を短絡させ、最小構成のループテストを構成します。
 
 ```bash
 CAN_H─────●───── CAN-H
@@ -641,7 +593,7 @@ CAN_L─────●───── CAN-L
 G_CAN_H─────●───── G_CAN
 ```
 
-2. ドライバがロードされていないことを防ぐために、2 つのネットワークインターフェース can0 と can1 がシステム上に実際に存在することを確認します：
+2. ドライバがロードされていないことを防ぐために、ネットワークインターフェース can0 と can1 の 2 つがシステム上に表示されていることを確認します。
 
 ```bash
 # should print can0 can1
@@ -651,7 +603,7 @@ dmesg | grep -i can
 ```
 
 
-3. 2 つの CAN インターフェースを 500 kbit/s に設定してオンラインにし、データの送受信を行えるようにします（安全のため Low レベルに設定します）:
+3. 2 つの CAN インターフェースを 500 kbit/s に設定し、オンラインにしてデータ送受信の準備をします（安全のため Low レベルに設定します）。
 R22xx:
 ```bash
 sudo ip link set can0 down
@@ -664,7 +616,7 @@ sudo ip link set can1 up type can bitrate 500000
 ```
 
 4. 通信テスト（片方向）
-can-utils を使用してデータを送受信します。
+can-utils を使用してデータの送受信を行います。
 
 ステップ A: R21xx（CAN1）送信 → R22xx（CAN0）受信
 
@@ -680,59 +632,59 @@ can-utils を使用してデータを送受信します。
 
 
 
-## USB ハブのテスト
+## USB ハブテスト
 
-USB ハブをテストするには、次の手順を実行します：
+USB ハブをテストするには、次の手順を実行します。
 
-1. ***lsusb*** コマンドを実行して USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
+1. ***lsusb*** コマンドを実行して、USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
 
 ```bash
 lsusb
 ```
 
-このコマンドを実行すると、システムに接続されている USB デバイスに関する情報が表示され、その中に存在する USB ハブも含まれます。
+このコマンドを実行すると、システムに接続されている USB デバイス（存在する USB ハブを含む）の情報が表示されます。
 USB ハブが正常に動作している場合、lsusb コマンドの出力にその詳細が表示されます。表示されない場合は、ハブまたはシステムへの接続に問題がある可能性があります。そのような場合は、USB ハブまたはその接続をトラブルシューティングする必要があります。
 
-## RTC（リアルタイムクロック）のテスト
+## RTC（Real-Time Clock）テスト
 
-リアルタイムクロック（RTC）の機能をテストするには、次の手順に従います：
+Real-Time Clock（RTC）の機能をテストするには、次の手順に従います。
 
-1. 自動時刻同期を無効にします：
+1. 自動時刻同期を無効にします。
 
 ```bash
 sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. 時刻を設定します：
-RTC に特定の日付と時刻を設定します：
+2. 時刻を設定します。
+RTC に特定の日付と時刻を設定します。
 
 ```bash
 sudo hwclock --set --date "2025-10-23 16:00:00"
 ```
 
-3. RTC 時刻をシステムに同期
-システム時刻を RTC 時刻と一致するように更新します：  
+3. RTC 時刻をシステムに同期します
+システム時刻を RTC の時刻に合わせて更新します。  
 
 ```bash
 sudo hwclock --hctosys
 ```
 
-4. RTC 時刻を確認します：
+4. RTC 時刻を確認します。
 
 ```bash
 sudo hwclock -r
 ```
 
-このコマンドは、RTC に保存されている時刻を読み取り表示します。
+このコマンドは、RTC に保存されている時刻を読み取り、表示します。
 
-5. RTC から電源を切り離し、数分待ってから再接続し、RTC 時刻を再度確認して正しい時刻が保持されているか確認します。
+5. RTC から電源を取り外し、数分待ってから再接続し、RTC が正しい時刻を保持しているかもう一度確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.17-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## ウォッチドッグタイマーのテスト
 
-ウォッチドッグテストを実行するには、次の手順に従います：
+ウォッチドッグテストを実行するには、次の手順に従います。
 
 1. ウォッチドッグソフトウェアをインストールします：
 
@@ -774,7 +726,7 @@ realtime = yes
 priority = 1
 ```
 
-必要に応じて他の設定を調整できます。
+必要に応じて、他の設定を調整できます。
 
 3. ウォッチドッグサービスが実行中であることを確認します：
 
@@ -798,7 +750,7 @@ echo "c" > /proc/sysrq-trigger
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
-## GPIO によるブザー制御  
+## GPIO によるブザーの制御  
 
 ブザーに対応する GPIO は gpio627 です。ブザーをオン／オフするには、次のスクリプトを入力します：
 
@@ -820,7 +772,7 @@ echo 0 > /sys/class/gpio/gpio627/value
 
 ## TPM 2.0
 
-TPM 2.0 モジュールをデバイスに接続している場合、次のコードで TPM 接続を確認できます。
+TPM 2.0 モジュールをデバイスに接続した場合、次のコードで TPM 接続を確認できます。
 
 ```bash
 ls /dev | grep tpm
@@ -828,11 +780,11 @@ ls /dev | grep tpm
 
 **出力の解釈：**  
 
-出力に ***tpm0*** と ***tpmrm0*** が表示されていれば、TPM（Trusted Platform Module）デバイスが検出され、システム上で利用可能であることを意味します。これは TPM ハードウェアが認識されアクセス可能であることを示しており、良好な状態です。TPM 関連の機能やアプリケーションを、デバイスが存在しアクセス可能であることを前提に進めることができます。
+出力に ***tpm0*** と ***tpmrm0*** が表示されていれば、TPM（Trusted Platform Module）デバイスが検出され、システム上で利用可能であることを意味します。これは TPM ハードウェアが認識され、アクセス可能であることを示しており、良好な状態です。TPM 関連の機能やアプリケーションを、デバイスが存在しアクセス可能であることを前提に進めることができます。
 
 ## ATECC608A
 
-ATECC608A デバイスとやり取りしてランダムなシリアル番号を生成するには、次の手順に従います：
+ATECC608A デバイスとやり取りし、ランダムなシリアル番号を生成するには、次の手順に従います。
 
 1. atecc-util リポジトリをクローンします：
 
@@ -863,7 +815,7 @@ cd usr/bin
 
 ## EEPROM とのやり取り
 
-EEPROM（Electrically Erasable Programmable Read-Only Memory）とやり取りするためのコマンドは次のとおりです：
+EEPROM（Electrically Erasable Programmable Read-Only Memory）とやり取りするためのコマンドは次のとおりです。
 
 1. EEPROM デバイスファイルに対して、読み取り・書き込み・実行のフルパーミッションを付与します：
 
@@ -885,23 +837,23 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 
 ## SSD 検出の確認
 
-SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。方法は次のとおりです：
+SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。方法は次のとおりです。
 
 ```bash
 sudo fdisk -l
 ```
 
-このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、適切に検出されていれば SSD も含まれます。SSD を表すエントリを探してください。通常、***/dev/sd*** に続いて文字（例：***/dev/sda, /dev/sdb,*** など）が付いた形式になります。
-SSD に対応するエントリを特定したら、必要に応じてパーティション作成やフォーマットを進めることができます。
+このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、SSD が正しく検出されていればそれも含まれます。SSD を表すエントリを探してください。通常、***/dev/sd*** に続いて文字（例：***/dev/sda, /dev/sdb,*** など）が付いた形式になります。
+SSD に対応するエントリを特定したら、必要に応じてパーティション作成やフォーマットを行うことができます。
 
 ## 安全なシャットダウンのための UPS
 
-CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告するために使用されます。その後、CPU はスーパーキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、"$ shutdown" を実行する必要があります。
-この機能を使用する別の方法は、GPIO ピンの変化をトリガとしてシャットダウンを開始することです。指定された GPIO ピンは KEY_POWER イベントを生成する入力キーとして設定されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
+CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告を出すために使用されます。その後、CPU はスーパキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、「$ shutdown」を実行する必要があります。
+この機能を使用する別の方法として、GPIO ピンの変化をトリガとしてシャットダウンを開始する方法があります。指定された GPIO ピンは、KEY_POWER イベントを生成する入力キーとして構成されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
 
 1. ハードウェア接続。
 
-UPS デバイスの ***'CM5_UPS_DET'*** ピンが R21xx デバイスの GPIO16 ピンに接続されていることを確認してください。
+UPS デバイスの ***'CM5_UPS_DET'*** ピンが、R21xx デバイスの GPIO16 ピンに接続されていることを確認してください。
 
 2. 設定ファイルを変更します。
 
@@ -920,7 +872,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了します）。
 
 4. Python スクリプトを準備します
 
@@ -975,36 +927,36 @@ while True:
         os.system('sudo shutdown -h now')
 ```
 
-エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定し、***`Ctrl+X`*** で終了します）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了します）。
 
 5. スクリプトを実行します。
 
 - ターミナルを開きます。
-- 次のコマンドを実行してスクリプトを起動します：
+- 次のコマンドを実行してスクリプトを実行します：
 
 ```bash
 sudo python3 ups_shutdown.py
 ```
 
 :::note
- `sudo` を使用して、スクリプトがシャットダウンコマンドを実行するのに十分な権限を持つようにします。
+ シャットダウンコマンドを実行するために十分な権限をスクリプトに与えるには、`sudo` を使用してください。
 :::
 
-6. 電源断テストのシミュレーション
+6. 停電テストをシミュレートします
 
-- 外部電源を遮断します。
+- 外部電源を切断します。
 - システムが自動的にデータを保存してシャットダウンするかどうかを確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-7. 結果の確認
+7. 結果を確認します
 
 - 電源を再接続します。
 - システムデータが完全で、正常に起動するかどうかを確認します。
 
 :::note
 
-1. UPS 機能については、詳細情報を入手するためにお問い合わせください。
+1. UPS 機能については、詳細情報についてお問い合わせください。
 2. アラーム信号はアクティブ Low です。
 
 :::
@@ -1013,21 +965,21 @@ sudo python3 ups_shutdown.py
 
 reComputer Industrial R21xx の M.2 M-KEY 2240 スロットは、PCIE M.2 AI アクセラレータを搭載できるように設計されています。また、R21xx-12 シリーズには最大 26TOPS の Hailo-8 M.2 AI アクセラレーションがプリインストールされています。
 R21xx-10 シリーズ製品を購入した場合は、AI 機能を有効にするために Hailo の NPU モジュールを別途購入する必要があります。
-本製品には Hailo アクセラレータドライバがプリインストールされているため、そのまま使用してテストケースを実行できます：
+本デバイスには Hailo アクセラレータドライバがプリインストールされているため、そのまま使用してテストケースを実行できます。
 
-1. テストケースディレクトリへ移動
+1. テストケースディレクトリに移動します
 
 ```bash
 cd /mnt/hailo-rpi5-examples/
 ```
 
-2. 仮想環境を起動
+2. 仮想環境を起動します
 
 ```bash
 source ./setup_env.sh
 ```
 
-3. シンプルな検出サンプルを実行
+3. シンプルな検出サンプルを実行します
 
 ```bash
 python basic_pipelines/detection_simple.py
@@ -1039,43 +991,43 @@ python basic_pipelines/detection_simple.py
 これは検出サンプルの軽量版であり、CPU 負荷を最小限に抑えつつ Hailo の性能を示すことに主眼を置いています。内部の GStreamer ビデオ処理パイプラインは、ビデオ処理タスクを最小限にすることで簡略化されており、YOLOv6 Nano モデルが使用されています。
 
 :::note
-購入した reComputer に Hailo-8 が含まれておらず、統合用に Hailo デバイスの購入を検討している場合は、公式の Hailo ドキュメント（https://github.com/hailo-ai）を参照してファームウェアと環境を構成し、サンプルを実行してデバイスが正常に使用できることを確認してください。
+購入された reComputer に Hailo-8 が含まれておらず、統合用に Hailo デバイスの購入を検討している場合は、公式の Hailo ドキュメント (https://github.com/hailo-ai) を参照して、ファームウェアと環境を構成し、サンプルを実行してデバイスが正常に使用できることを確認してください。
 :::
 
 ## PoE IP カメラ
 
 
-reComputer Industrial R22xx シリーズは、高密度 IP ビデオストリームおよび産業オートメーション向けに設計されています。最大帯域幅と安定性を確保するために、ハイブリッドバスアーキテクチャを採用した **5 つの物理ギガビットイーサネットポート** を備えています。
+reComputer Industrial R22xx シリーズは、高密度 IP ビデオストリームおよび産業オートメーション向けに設計されています。**5 つの物理ギガビット Ethernet ポート**を備え、ハイブリッドバスアーキテクチャにより最大限の帯域幅と安定性を確保します。
 
-**内部バス配分：**
+**内部バス構成：**
 
-* **eth0（ネイティブ）**：SoC に直接接続されています。レイテンシが最も低く、**プライマリアップリンク（WAN）** または **管理ポート** として使用することを推奨します。
-* **eth1（USB 拡張）**：ネイティブポートの隣にある単独のポートです。**USB 3.0 バス** を介して拡張され、**PoE 出力** をサポートします。
-* **eth2, eth3, eth4（PCIe 拡張）**：連続する 3 つのポートです。これらは **PCIe バス** を介して拡張され、**PoE 出力** をサポートします。
+* **eth0 (ネイティブ)**: SoC に直接接続されています。レイテンシが最も低く、**プライマリアップリンク (WAN)** または **管理ポート**として使用することを推奨します。
+* **eth1 (USB 拡張)**: ネイティブポートの隣にある単独のポートです。**USB 3.0 バス**経由で拡張され、**PoE 出力**をサポートします。
+* **eth2, eth3, eth4 (PCIe 拡張)**: 連続する 3 つのポートです。これらは **PCIe バス**経由で拡張され、**PoE 出力**をサポートします。
 
 
 1. 技術仕様
 
 | カテゴリ | 仕様 | 備考 |
 | :--- | :--- | :--- |
-| **総ポート数** | 1（ネイティブ）+ 4（拡張） | 5x RJ45 ギガビットイーサネット |
-| **PoE モード** | **Alternative A（モード A）** | データペア（1/2, 3/6）経由で給電 |
-| **ポートあたりの PoE 出力** | **12W**（最大） | 標準的な IP カメラ向けに最適化 |
-| **並列 PoE 出力** | 4 ポートすべてが同時に 12W をサポート | システム電源入力が十分であることが必要 |
+| **ポート総数** | 1 (ネイティブ) + 4 (拡張) | 5x RJ45 ギガビット Ethernet |
+| **PoE モード** | **Alternative A (モード A)** | データペア (1/2, 3/6) 経由で給電 |
+| **ポートあたりの PoE 出力** | **12W** (最大) | 標準的な IP カメラ向けに最適化 |
+| **並列 PoE 出力** | 4 ポートすべてが同時に 12W をサポート | システムへの十分な電源入力が必要 |
 | **電源入力範囲** | **9V - 36V DC** | 内部昇圧回路により PoE 用に **48V** へ昇圧 |
 | **安全機能** | 過電流・低電圧保護 | **ホットプラグは禁止されています** |
 
 2. 重要な安全ガイドライン
 * **ホットプラグ禁止**: 
-    > **警告**: PoE 電源が有効（GPIO High）な状態でイーサネットケーブルを抜き差しすると、過渡サージが発生し、LAN7800 や PCIe ブリッジチップを損傷する可能性があります。必ず「**先に接続、後で給電（Connect First, Power Second）**」の原則に従ってください。
+    > **警告**: PoE 電源が有効 (GPIO High) の状態で Ethernet ケーブルを抜き差しすると、過渡的なサージが発生し、LAN7800 や PCIe ブリッジチップを損傷する可能性があります。必ず「**先に接続、後で通電**」の原則に従ってください。
 * **電源の推奨事項**:
-    > 本製品は 9V 入力をサポートしていますが、4 つの PoE ポートすべてがフルロード（4 × 12W）で動作する際の高い変換効率を確保するため、少なくとも **72W**（3A）容量の **24V** 産業用電源の使用を推奨します。
+    > 本機は 9V 入力をサポートしていますが、4 つの PoE ポートすべてがフルロード (4 × 12W) の場合でも高い変換効率を確保するため、少なくとも **72W** (3A) の容量を持つ **24V** 産業用電源の使用を推奨します。
 
 
 3. 設定手順
 
 - ステップ 1: 競合するサービスを無効化
-デスクトップ向けネットワークマネージャが産業用の静的 IP 設定を上書きしないように、`NetworkManager` を無効にします。
+デスクトップ向けネットワークマネージャが産業用の静的 IP 設定を上書きしないように、`NetworkManager` を無効化します。
 
 ```bash
 # Switch to systemd-networkd
@@ -1084,7 +1036,7 @@ sudo systemctl mask NetworkManager
 sudo systemctl enable --now systemd-networkd
 ```
 
-- ステップ 2: PoE の自動給電（GPIO）を有効化
+- ステップ 2: PoE の自動給電 (GPIO) を有効化
 起動時に PoE 電源が有効になるように、`exit 0` 行の前に次のコマンドを `/etc/rc.local` に追加します。
 
 ```bash
@@ -1094,8 +1046,8 @@ echo out > /sys/class/gpio/gpio652/direction
 echo 1 > /sys/class/gpio/gpio652/value
 ```
 
-- ステップ 3: マルチインターフェース IP 展開
-各ポートに独立したサブネットを割り当て、**RouteMetric** を使用して `eth0` がインターネットアクセス用のデフォルトゲートウェイとして維持されるようにします。
+- ステップ 3: 複数インターフェースの IP 展開
+各ポートに独立したサブネットを割り当て、`eth0` がインターネットアクセス用のデフォルトゲートウェイとして維持されるように **RouteMetric** を使用します。
 
 ```bash
 # Configure eth0 (WAN/DHCP) - Highest Priority
@@ -1125,18 +1077,18 @@ done
 
 - バス接続の確認
 `lspci` と `lsusb` を使用して、すべてのコントローラがシステムに認識されていることを確認します：
-* **PCIe 拡張ポート（eth2-4）**: `lspci | grep Ethernet` を実行
-* **USB 拡張ポート（eth1）**: `lsusb -t` を実行し、`lan78xx` ドライバを探します。
+* **PCIe 拡張ポート (eth2-4)**: `lspci | grep Ethernet` を実行
+* **USB 拡張ポート (eth1)**: `lsusb -t` を実行し、`lan78xx` ドライバを探します。
 
 
 
 5. FAQ
 * **Q: カメラが再起動を繰り返すのはなぜですか？**
     * A: カメラの消費電力が **12W** を超えていないか確認してください。高出力の PTZ カメラや強力な IR イルミネータを備えたカメラは、この上限を超える場合があります。
-* **Q: PoE に 12V DC 入力を使用できますか？**
+* **Q: PoE 用に 12V DC 入力を使用できますか？**
     * A: はい。内部回路が 12V を 48V に昇圧します。ただし、入力電圧が低いほど変換損失が大きくなるため、12V 電源が高電流に対応できることを確認してください。
 * **Q: インターフェース名が eth1-4 ではありません。**
-    * A: `ip link` を使用して実際のカーネル名（例：`enp1s0`）を確認し、`.network` ファイル内の `Name=` フィールドを更新してください。
+    * A: `ip link` を使用して実際のカーネル名 (例: `enp1s0`) を確認し、`.network` ファイル内の `Name=` フィールドを更新してください。
 
 6. 4 チャンネル PoE カメラ対応状況：
 
@@ -1144,12 +1096,12 @@ done
 
 ### reComputer R22 & reCamera
 
-このガイドでは、RISC-V プラットフォームを搭載し、迅速なエッジ AI 展開のために設計されたオープンソース・モジュラー AI カメラである reCamera を、PoE を介して reComputer R22 に接続するための手順をステップバイステップで説明します。Node-RED を使用した RTSP ストリームのデプロイと、R22 上でのライブ映像プレビューについて取り扱います。
+このガイドでは、RISC-V プラットフォームを搭載し、高速なエッジ AI 展開向けに設計されたオープンソースのモジュラー AI カメラである reCamera を、PoE 経由で reComputer R22 に接続するための手順をステップバイステップで説明します。Node-RED を使用して RTSP ストリームを展開し、R22 上でライブ映像をプレビューする方法を扱います。
 
 1. ハードウェア接続と初期化
 
-  * **対応モデル:** reCamera シリーズ（PoE バージョン、例：LH-AR01）。
-  * **物理接続:** reCamera を標準的なイーサネットケーブルで R22 上の任意の PoE ポート（**eth1-eth4**）に接続します。
+  * **対応モデル:** reCamera シリーズ (PoE バージョン、例: LH-AR01)。
+  * **物理接続:** 標準的な Ethernet ケーブルを使用して、reCamera を R22 上の任意の PoE ポート (**eth1-eth4**) に接続します。
   * **PoE 電源を有効化:**
     R22 のターミナルで次のコマンドを実行し、48V 出力を有効にします：
     ```bash
@@ -1160,15 +1112,15 @@ done
     ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/ip.png" style={{width:800, height:'auto'}}/></div>
 
-2. reCamera の設定（ワンクリック Node-RED インポート）
+2. reCamera 設定 (ワンクリック Node-RED インポート)
 
-事前設定済みの `flows.json` を使用して、認証付き RTSP ストリームを素早くデプロイします。
+事前設定済みの `flows.json` を使用して、認証付き RTSP ストリームを素早く展開します。
 
-- **ダッシュボードへアクセス:** ブラウザを開き、`http://10.0.3.200:1880`（reCamera のデフォルト IP）にアクセスします。
+- **ダッシュボードへアクセス:** ブラウザを開き、`http://10.0.3.200:1880` (reCamera のデフォルト IP) にアクセスします。
 - **設定をインポート:**
       * 右上のメニューアイコン `≡` をクリックし、**Import** を選択します。
       * [**flows.json**](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/flows.json) ファイルをアップロードし、**Import** をクリックします。
-- **カスタム認証（必須）:**
+- **カスタム認証 (必須):**
       * フロー内の **`RTSP Output`** ノードをダブルクリックします。
       * **Authentication** セクションで、次のように認証情報を設定します：
           * **Username:** `seeed`
@@ -1176,11 +1128,11 @@ done
 - **デプロイ:** 右上の赤い **Deploy** ボタンをクリックします。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/config.png" style={{width:800, height:'auto'}}/></div>
 
-3. R22 上でのビデオストリームプレビュー
+3. R22 上でのビデオストリームのプレビュー
 
-R22（CM4/CM5 ベース）はハードウェアデコードをサポートしているため、検証には VLC または FFplay の使用を推奨します。
+R22 (CM4/CM5 ベース) はハードウェアデコードをサポートしているため、検証には VLC または FFplay の使用を推奨します。
 
-4. オプション A: VLC GUI を使用（推奨）
+4. オプション A: VLC GUI を使用 (推奨)
 
 - R22 のターミナルで `vlc` と入力してプレーヤーを起動します。
 - **Media** -\> **Open Network Stream** に進みます。
@@ -1190,9 +1142,9 @@ R22（CM4/CM5 ベース）はハードウェアデコードをサポートして
     ```
 - **Play** をクリックします。
 
-5. オプション B: コマンドラインを使用（クイックテスト）
+5. オプション B: コマンドラインを使用 (クイックテスト)
 
-次のコマンドをそのままコピーして実行します：
+次のコマンドをコピーしてそのまま実行します：
 
 ```bash
 ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
@@ -1204,9 +1156,9 @@ ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
 
 | 問題 | 想定される原因 | 解決策 |
 | :--- | :--- | :--- |
-| **10.0.3.200 に Ping が届かない** | R22 内部 IP の競合 | `eth3/eth4` の両方が `10.0.3.10` を使用していないか確認し、一方を手動で変更します。 |
-| **reCamera が起動しない** | PoE 電源が有効になっていない | `GPIO 652` が `1` に設定されており、入力電源が 12V/3A 以上であることを確認します。 |
-| **ビデオの遅延/レイテンシ** | ネットワークまたは MTU の問題 | R22 と reCamera 間に大量のブロードキャストトラフィックが発生していないことを確認します。 |
+| **10.0.3.200 に Ping できない** | R22 内部 IP の競合 | `eth3/eth4` の両方が `10.0.3.10` を使用していないか確認し、一方を手動で変更します。 |
+| **reCamera が起動しない** | PoE 電源が有効になっていない | `GPIO 652` が `1` に設定されており、入力電源が 12V/3A 以上であることを確認してください。 |
+| **映像の遅延/ラグ** | ネットワークまたは MTU の問題 | R22 と reCamera 間で大量のブロードキャストトラフィックが発生していないことを確認してください。 |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/recamera.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1214,7 +1166,7 @@ ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
 
 ## 技術サポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを提供しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
