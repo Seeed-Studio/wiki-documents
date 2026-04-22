@@ -171,7 +171,7 @@ La serie reComputer Industrial R21xx es ideal para su uso en aplicaciones de IA 
       <tr>
         <td>Tarjeta SIM</td>
         <td colspan="3">1x ranura para tarjeta Nano SIM</td>
-      </tr]
+      </tr>
       <tr>
         <td>Ranura M.2</td>
         <td>1x ranura M.2 M-KEY 2280 para ;NVMe SSD；

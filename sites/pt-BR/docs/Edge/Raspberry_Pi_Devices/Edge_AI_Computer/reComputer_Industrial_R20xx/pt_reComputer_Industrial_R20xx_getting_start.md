@@ -93,7 +93,7 @@ A série reComputer Industrial R20xx é ideal para uso em aplicações de IA ind
       <tr>
         <td> **Sistema Operacional** </td>
         <td colspan="2">Raspbian, Debian </td>
-      </tr]
+      </tr>
       <tr>
         <td> **RAM** </td>
         <td colspan="2">2GB/4GB/8GB/16GB</td>

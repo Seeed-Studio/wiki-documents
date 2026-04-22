@@ -108,7 +108,7 @@ reComputer Industrial R20xx シリーズは、産業向け AI アプリケーシ
       <tr>
         <td> 電源入力 </td>
         <td colspan="2">DC 9V〜36V、2 ピン端子台</td>
-      </tr]
+      </tr>
       <tr>
         <td>PoE（受電デバイスとして）</td>
         <td colspan="2">IEEE 802.3at 規格 25.5W PoE</td>

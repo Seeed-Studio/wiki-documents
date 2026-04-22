@@ -664,7 +664,7 @@ reComputer Industrial R20xx 包含 8 个 DO 接口，用户可以根据实际需
       <tr>
         <td>DO5</td>
         <td>GPIO635</td>
-      </tr]
+      </tr>
       <tr>
         <td>DO6</td>
         <td>GPIO577</td>

@@ -666,7 +666,7 @@ Los pines del terminal se definen de la siguiente manera:
       <tr>
         <td>25</td>
         <td>DI7</td>
-      </tr]
+      </tr>
       <tr>
         <td>27</td>
         <td>DI8</td>

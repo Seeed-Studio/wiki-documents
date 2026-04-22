@@ -140,7 +140,7 @@ A série reComputer Industrial R22xx é ideal para uso em aplicações industria
       <tr>
         <td> RS485 </td>
         <td colspan="2"> 2x RS485 (isolado) </td>
-      </tr]
+      </tr>
       <tr>
         <td> RS232 </td>
         <td colspan="2"> 1x RS232 (isolado) </td>
@@ -934,7 +934,7 @@ Aqui está a lista de acessórios e módulos opcionais:
       <tr>
         <td>Módulo Gateway LoRaWAN opcional por região (SPI) - EU868</td>
         <td>114992549</td>
-      </tr]
+      </tr>
       <tr>
         <td>Módulo Gateway LoRaWAN opcional por região (USB) - EU868</td>
         <td>114992628</td>

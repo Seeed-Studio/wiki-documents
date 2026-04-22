@@ -150,7 +150,7 @@ Con sólidas capacidades de comunicación de red IoT, la serie R1000 admite múl
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Consumo de energía</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Reposo: 2.88W; Carga completa: 5.52W</td>
-    </tr]
+    </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Interruptor de encendido</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>No</td>

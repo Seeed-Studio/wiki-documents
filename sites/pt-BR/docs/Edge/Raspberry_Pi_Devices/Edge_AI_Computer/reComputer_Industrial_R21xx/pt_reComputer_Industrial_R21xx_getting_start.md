@@ -171,7 +171,7 @@ A série reComputer Industrial R21xx é ideal para uso em aplicações industria
       <tr>
         <td>Cartão SIM</td>
         <td colspan="3">1x slot para cartão Nano SIM</td>
-      </tr]
+      </tr>
       <tr>
         <td>Slot M.2</td>
         <td>1x slot M.2 M-KEY 2280 para ;NVMe SSD；

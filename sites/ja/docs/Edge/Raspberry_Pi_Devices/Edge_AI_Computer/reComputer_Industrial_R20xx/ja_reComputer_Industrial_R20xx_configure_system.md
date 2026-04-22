@@ -599,7 +599,7 @@ reComputer Industrial R20xx には 8 つの DI ポートが含まれており、
       <tr>
         <td>DI5</td>
         <td>GPIO573</td>
-      </tr]
+      </tr>
       <tr>
         <td>DI6</td>
         <td>GPIO574</td>

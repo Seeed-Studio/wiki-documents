@@ -133,7 +133,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       <tr>
         <td rowspan="2"> USB </td>
         <td colspan="2"> 4 x USB-A 3.0 ホスト</td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="2"> 1 x USB-C 2.0（OS フラッシュおよびデバッグ用） </td>
       </tr>
@@ -705,7 +705,7 @@ reComputer Industrial R22xx シリーズ機器には、3 ピン 3.5mm ピッチ�
       <tr>
         <td>18</td>
         <td>DO3</td>
-      </tr]
+      </tr>
       <tr>
         <td>20</td>
         <td>DO4</td>
@@ -974,7 +974,7 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
         <td>4G アンテナ</td>
         <td>4G モジュール用 4G Antenna Kit</td>
         <td>110061502</td>
-      </tr]
+      </tr>
       <tr>
         <td>GPS アンテナ</td>
         <td>EC25 4G モジュール用 GPS Antenna Kit</td>

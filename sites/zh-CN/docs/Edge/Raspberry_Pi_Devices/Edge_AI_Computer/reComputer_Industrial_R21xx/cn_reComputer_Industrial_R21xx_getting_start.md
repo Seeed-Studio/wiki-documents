@@ -101,7 +101,7 @@ reComputer Industrial R21xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td> **RAM** </td>
         <td colspan="2">2GB/4GB/8GB/16GB</td>
-      </tr]
+      </tr>
       <tr>
         <td> **eMMC** </td>
         <td colspan="2">16GB/32GB/64GB</td>

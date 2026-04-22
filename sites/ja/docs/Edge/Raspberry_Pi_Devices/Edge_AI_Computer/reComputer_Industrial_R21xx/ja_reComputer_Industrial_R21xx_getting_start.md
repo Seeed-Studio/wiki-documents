@@ -260,7 +260,7 @@ reComputer Industrial R21xx シリーズは、産業向け AI アプリケーシ
       <tr>
         <td>動作温度</td>
         <td colspan="2">-20～65 °C</td>
-      </tr]
+      </tr>
       <tr>
         <td>動作湿度</td>
         <td colspan="2">10～95% RH</td>
@@ -1002,7 +1002,7 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td>LTE Cat 4 EC25-EMGA-Mini-PCIe Module - マレーシア向け</td>
         <td>113991234</td>
-      </tr]
+      </tr>
       <tr>
         <td>LTE Cat 4 EC25-JFA-mini-PCIe</td>
         <td>113991296</td>
