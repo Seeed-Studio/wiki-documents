@@ -77,7 +77,7 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 我们的固件修复了这个限制，因此麦克风可以与 Home Assistant 正常工作。
 :::
 
-您可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)下载固件
+您可以从[这里](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)下载固件
 
 安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
 

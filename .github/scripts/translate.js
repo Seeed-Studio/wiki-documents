@@ -900,7 +900,6 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
-  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
 
   const langFilePrefix =
     targetLang === 'zh-CN' ? 'cn_' :
@@ -931,9 +930,8 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
      - 目标语言的 id 按下面的公式改写：
        1. 保留中间目录 A/B/C 不变
        2. 把最后一段 F 改成 "${langFilePrefix}F"
-       3. 最前面再加上语言前缀 "${localeFolder}/"
-       4. 也就是：英文 id = "A/B/C/F"
-          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
+       3. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 

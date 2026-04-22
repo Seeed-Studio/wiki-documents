@@ -49,8 +49,8 @@ The reComputer R1100 series is widely used in IoT applications, including **data
 **Rich Wireless Capabilities**  
 
 - **On-chip Wi-Fi and BLE**  
-- **Mini-PCIe 1**: Supports **LTE, USB LoRa®, USB Zigbee**  
-- **Mini-PCIe 2**: Supports **SPI LoRa®, USB LoRa®, USB Zigbee**  
+- **Mini-PCIe 1**: Supports **LTE, USB LoRa® 
+- **Mini-PCIe 2**: Supports **SPI LoRa®, USB LoRa®
 
 **Comprehensive Interfaces**  
 
@@ -110,7 +110,6 @@ The reComputer R1100 series is widely used in IoT applications, including **data
 | **BLE 5.0** | On-chip BLE* |
 | **LoRa®** | USB LoRa®*/ SPI LoRa®* |
 | **4G Cellular** | 4G LTE* |
-| **Zigbee** | USB Zigbee* |
 | **Standards** | |
 | **EMC Compliance** | ESD: EN61000-4-2, Level 3; EFT: EN61000-4-4, Level 2; Surge: EN61000-4-5, Level 2 |
 | **Certification** | CE, FCC, TELEC, RoHS, REACH |
@@ -508,15 +507,15 @@ The reComputer R1100 is equipped with **two Mini-PCIe slots**, supporting variou
 
 | **Slot**       | **Supported Protocols**   |  
 |---------------|--------------------------|  
-| **Mini-PCIe 1** | 4G LTE, USB LoRa®, USB Zigbee |  
-| **Mini-PCIe 2** | SPI LoRa®, USB LoRa®, USB Zigbee |  
+| **Mini-PCIe 1** | 4G LTE, USB LoRa® |  
+| **Mini-PCIe 2** | SPI LoRa®, USB LoRa® |  
 
-These slots allow users to expand connectivity options, enabling integration with **4G LTE, LoRa®, and Zigbee** modules as needed.
+These slots allow users to expand connectivity options, enabling integration with **4G LTE and LoRa® modules as needed.
 
 This device includes two **Mini-PCIe interfaces**: **Slot 1** and **Slot 2**.  
 
-- **Mini-PCIe Slot 1** is linked to the **SIM card slot** and supports **USB protocols**, making it suitable for connecting **4G LTE, USB LoRa®, and USB Zigbee** modules.  
-- **Mini-PCIe Slot 2** supports **both USB and SPI protocols** but is **not connected** to the SIM card slot. It can accommodate **SPI LoRa®, USB LoRa®, and USB Zigbee** devices.  
+- **Mini-PCIe Slot 1** is linked to the **SIM card slot** and supports **USB protocols**, making it suitable for connecting **4G LTE and USB LoRa® modules.  
+- **Mini-PCIe Slot 2** supports **both USB and SPI protocols** but is **not connected** to the SIM card slot. It can accommodate **SPI LoRa® and USB LoRa® devices.  
 
 These slots provide flexible expansion options for various wireless communication modules.
 
@@ -585,8 +584,6 @@ Here is the formatted table for better readability:
 |                                                |                        | Region optional LoRaWAN Gateway Module (USB) - US915 | 114992991      |
 |                                                |                        | Region optional LoRaWAN Gateway Module (USB) - EU868 | 114992628      |
 | **LoRa® Antenna**                              | LoRa® Antenna          | LoRa Antenna Kit - 868-915MHz                        | 110061501      |
-| **Zigbee Module**                              | Zigbee Module         | Mini-PCIe USB Zigbee Module                          | 110992005      |
-| **Zigbee Antenna**                             | Zigbee Antenna        | Zigbee Antenna Kit for reComputer R1100             | 110061641      |
 | **This accessory is required for Wi-Fi function** | Wi-Fi/BLE Antenna     | Raspberry Pi Compute Module 4 Antenna Kit           | 114992364      |
 | **4G Antenna with 4G module for 4G function, GPS Antenna with 4G module for GPS function** | 4G Module | LTE Cat 4 EC25-AFXGA Mini-PCIe Module - North America | 113991134      |
 |                                                |                        | LTE Cat 4 EC25-EUXGR Mini-PCIe Module - EMEA & Thai  | 113991135      |
@@ -609,11 +606,9 @@ The **reComputer R1100** mainboard has **two Mini-PCIe slots** with the followin
 - **Mini-PCIe Slot 1** supports:  
   - **4G module** (USB protocol)  
   - **LoRa® module** (USB protocol)  
-  - **Zigbee module** (USB protocol)  
 
 - **Mini-PCIe Slot 2** supports:  
   - **LoRa® module** (USB & SPI protocol)  
-  - **Zigbee module** (USB protocol)  
 
 :::note
  **4G and LoRa® modules cannot be used at the same time.**  
@@ -632,7 +627,7 @@ The **reComputer R1100-10** is powered by the **CM4** with an onboard **Wi-Fi/BL
 The **reComputer R1100** mainboard features **two Mini-PCIe slots**, with **Mini-PCIe Slot 1** supporting a **4G module via the USB protocol**. The **Quectel EC25 4G module** has been fully tested for compatibility with the reComputer R1100.  
 
 :::note
-If you require **4G functionality**, you must **purchase the corresponding 4G module and an external antenna**, and follow the instructions in [Assemble 4G/LoRa®/Zigbee Module and Antenna](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna).
+If you require **4G functionality**, you must **purchase the corresponding 4G module and an external antenna**, and follow the instructions in [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/recomputer_r1100_assembly_guide/).
 :::
 
 ### LoRa® Module  
@@ -640,15 +635,7 @@ If you require **4G functionality**, you must **purchase the corresponding 4G mo
 Both **Mini-PCIe slots** support **LoRa® modules via the USB protocol**. Additionally, **Mini-PCIe Slot 2** supports a **LoRa® module using the SPI protocol**. The **WM1302 module from Seeed Studio** has been fully tested for compatibility with the reComputer R1100.
 
 :::note
-If you require **LoRa® functionality**, you must **purchase the corresponding LoRa® module and an external antenna**, and follow the instructions in [Assemble 4G/LoRa®/Zigbee Module and Antenna](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna).
-:::
-
-### Zigbee Module
-
-The Mini-PCIe slots support **Zigbee modules using the USB protocol**, allowing seamless integration of Zigbee functionality into compatible devices. This enables efficient communication and control within Zigbee networks, enhancing the system's versatility and connectivity. With two Mini-PCIe slots available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
-
-:::note  
- If you require **Zigbee functionality**, you must **purchase the corresponding Zigbee module and an external antenna**, and follow the instructions in [Assemble 4G/LoRa®/Zigbee Module and Antenna](https://wiki.seeedstudio.com/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna).  
+If you require **LoRa® functionality**, you must **purchase the corresponding LoRa® module and an external antenna**, and follow the instructions in [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/recomputer_r1100_assembly_guide/).
 :::
 
 ### PoE (Power over Ethernet)

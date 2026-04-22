@@ -558,8 +558,8 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQByoedqLYEuT4Y1TWtbQeYfAaYErd1Nzu46JpYpF6Ok4EE?e=uEK4OQ" target="_blank" rel="noopener noreferrer">Descargar</a></td>
-      <th>f34512b24a07469f6014add6b88df060002f02c53705c91181ee380d73146b5e</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAJh3XDNNnbT7NU_WmR6d8-AV2KS89nk2raBrtbDX5lbRY" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <th>436017DA6FBA2EF910F5F6C5D80749FB53029EC5108A461101CA3A69C1F8CEC3</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>

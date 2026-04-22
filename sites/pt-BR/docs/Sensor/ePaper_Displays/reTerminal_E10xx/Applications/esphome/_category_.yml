@@ -1,0 +1,9 @@
+position: 2
+label: 'ESPHome'
+collapsible: true
+collapsed: true
+link:
+  type: generated-index
+  slug: reterminal_e10xx_esphome
+  title: Série reTerminal E com ESPHome
+  description: Trabalhe com ESPHome para Home Assistant na tela ePaper da Série reTerminal E, incluindo uso básico e avançado.

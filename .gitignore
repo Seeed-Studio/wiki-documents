@@ -7,6 +7,16 @@
 # Generated files
 .docusaurus
 .cache-loader
+/sites/en/src
+/sites/en/static
+/sites/zh-CN/src
+/sites/zh-CN/static
+/sites/ja/src
+/sites/ja/static
+/sites/es/src
+/sites/es/static
+/sites/pt-BR/src
+/sites/pt-BR/static
 
 # Misc
 .DS_Store
