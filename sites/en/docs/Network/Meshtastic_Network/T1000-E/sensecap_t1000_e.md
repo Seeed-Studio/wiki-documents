@@ -163,7 +163,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### (Optional）Configure Sensor
+### (Optional) Configure Sensor
 
 |Sensor|Description|
 |-|-|
@@ -222,7 +222,7 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 After you update the device configuration, the device will restart, which may take some time.
 :::
 
-### (Optional Configure Ringtone
+### (Optional) Configure Ringtone
 
 Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
 
