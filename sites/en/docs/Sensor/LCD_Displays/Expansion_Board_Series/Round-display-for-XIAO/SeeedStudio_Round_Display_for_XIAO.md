@@ -12,7 +12,7 @@ last_update:
   date: 07/11/2024
   author: Spencer
 createdAt: '2023-03-17'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/get_start_round_display/
 ---
 
