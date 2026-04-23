@@ -90,6 +90,9 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               <a href="/cn/rebot_arm_b601_dm_lerobot/" className="content-card">
                 <span className="text">reBot B601-DM 与 LeRobot</span>
               </a>
+              <a href="/cn/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot B601-DM 视觉夹取 Demo</span>
+              </a>
           </div>
 
           <h3>🤗 Reachy</h3>
