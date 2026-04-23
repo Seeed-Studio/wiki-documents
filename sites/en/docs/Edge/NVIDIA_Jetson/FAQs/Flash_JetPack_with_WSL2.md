@@ -12,7 +12,7 @@ last_update:
   date: 02/24/2026
   author: Lorraine
 createdAt: '2026-02-24'
-updatedAt: '2026-03-20'
+updatedAt: '2026-04-14'
 url: https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/
 ---
 
