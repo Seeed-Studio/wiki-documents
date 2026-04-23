@@ -11,13 +11,13 @@ keywords:
 slug: /rebot_arm_b601_dm_pinocchio_meshcat
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-17
+  date: 2026-04-17T00:00:00.000Z
   author: LiuJunjie
 translation:
   skip:
-    - [zh-CN]
+    - - zh-CN
 createdAt: '2026-03-24'
-updatedAt: '2026-04-08'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 

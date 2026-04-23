@@ -9,7 +9,7 @@ last_update:
   date: 05/23/2024
   author: Matthew
 createdAt: '2024-05-23'
-updatedAt: '2026-03-25'
+updatedAt: '2026-04-10'
 url: https://wiki.seeedstudio.com/Network/
 ---
 

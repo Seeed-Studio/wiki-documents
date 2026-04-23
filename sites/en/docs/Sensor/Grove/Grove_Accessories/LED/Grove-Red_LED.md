@@ -10,7 +10,7 @@ last_update:
   date: 4/17/2025
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/Grove-Red_LED/
 ---
 
