@@ -1,5 +1,5 @@
 ---
-description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに、最大 26 TOPS を実現する Hailo-8 AI アクセラレータを搭載した、産業グレードの AI 対応 NVR です。PoE PSE 対応の 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向け PoE 展開の簡素化を実現します。豊富な産業用 I/O、柔軟なワイヤレス接続、ファンレス熱設計、-20 °C から 50 °C の広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を保証します。
+description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS を実現する産業グレードの AI 搭載 NVR です。PoE PSE 対応の 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向けのシンプルな PoE 展開を可能にします。豊富な産業用 I/O、柔軟なワイヤレス接続、ファンレス熱設計、-20 °C から 50 °C の広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を実現します。
 title: reComputer Industrial R22xx 入門ガイド
 keywords:
   - エッジ AI NVR
@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r22xx_getting_start/
 ---
 
@@ -25,9 +25,9 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r22xx_getting_start/
     </a>
 </div>
 
-Raspberry Pi CM5 を搭載した reComputer Industrial R22xx は、AI 機能を備えた柔軟なエッジ AI NVR です。包括的な産業用インターフェース **(5x Ethernet, 4xUSB, 2x RS485, 1x RS232, 1x CAN FD, 4x DI and 4x DO)** と柔軟なワイヤレス接続オプション (4G/5G, LoRa®, Wi-Fi/BLE) を備えており、多様な産業用途に最適です。
+Raspberry Pi CM5 を搭載した reComputer Industrial R22xx は、AI 機能を備えた柔軟なエッジ AI NVR です。包括的な産業用インターフェース **(5x Ethernet, 4xUSB, 2x RS485, 1x RS232, 1x CAN FD, 4x DI and 4x DO)** と柔軟なワイヤレス接続オプション (4G/5G、LoRa®、Wi-Fi/BLE) を備えており、さまざまな産業用途に最適です。
 
-reComputer Industrial R22xx シリーズは、産業用 AI アプリケーションでの利用に最適です。データ収集およびプロセス監視、自動化およびロボット制御、インテリジェント製造、産業用通信およびネットワーキングなどの分野で使用できます。小型、柔軟性、低コスト、プログラマビリティを兼ね備え、オートメーションおよび IoT システムなどを強力にサポートします。
+reComputer Industrial R22xx シリーズは、産業用 AI アプリケーションでの利用に最適です。データ収集およびプロセス監視、自動化およびロボット制御、インテリジェント製造、産業用通信およびネットワーキングなどの分野で使用できます。その小型サイズ、柔軟性、低コスト、およびプログラマビリティにより、自動化および IoT システムなどを強力にサポートします。
 
 ## 特長
 
@@ -50,7 +50,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
 
 - オンチップ Wi-Fi
 - オンチップ BLE
-- Mini-PCIe: LTE, USB LoRa®
+- Mini-PCIe: LTE、USB LoRa®、USB Zigbee
 - M.2 KEY-B: 4G/5G
 
 **豊富なインターフェース**
@@ -83,7 +83,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       </tr>
       <tr>
         <td> **CPU** </td>
-        <td>Raspberry Pi Compute Module 5, 2.4GHz クアッドコア 64 ビット Arm Cortex-A76</td>
+        <td>Raspberry Pi Compute Module 5、2.4GHz クアッドコア 64 ビット Arm Cortex-A76</td>
       </tr>
       <tr>
         <td> **AI プロセッサ** </td>
@@ -106,7 +106,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       </tr>
       <tr>
         <td> 電源入力 </td>
-        <td>DC 9V~36V, 2 ピン端子台</td>
+        <td>DC 9V~36V、2 ピン端子台</td>
       </tr>
       <tr>
         <td>PoE（受電デバイスとして）</td>
@@ -157,7 +157,7 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
         <td colspan="2"> 4 x 絶縁 DO ポート </td>
       </tr>
       <tr>
-        <td colspan="2"> 出力電圧: 60V DC 以下 </td>
+        <td colspan="2"> 出力電圧: 60V DC 未満 </td>
       </tr>
       <tr>
         <td>SIM カード</td>
@@ -208,6 +208,10 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
       <tr>
         <td>4G/5G セルラー</td>
         <td>4G LTE/5G*</td>
+      </tr>
+      <tr>
+        <td>Zigbee</td>
+        <td>USB Zigbee*</td>
       </tr>
       <tr>
         <td colspan="2">**規格**</td>
@@ -335,15 +339,15 @@ reComputer Industrial R22xx シリーズは、産業用 AI アプリケーショ
 
 ### ハードウェアの紹介
 
-[Hailo](https://hailo.ai/) は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに特化した最先端の AI プロセッサを提供しています。同社のソリューションは、高度な AI アクセラレータとビジョンプロセッサにより、エッジにおける次世代の生成 AI に加え、認識およびビデオ強調を実現することに重点を置いています。そして Hailo-8 NPU アクセラレータを搭載し 26 TOPs の AI 性能を提供する reComputer_R22xx は、YOLOv8s で 200 FPS 以上を達成することが可能です。
+[Hailo](https://hailo.ai/) は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに特化した最先端の AI プロセッサを提供しています。同社のソリューションは、高度な AI アクセラレータとビジョンプロセッサにより、エッジにおける次世代の生成 AI を、認識およびビデオ強調とともに実現することに重点を置いています。そして Hailo-8 NPU アクセラレータを搭載し 26 TOPs の AI 性能を提供する reComputer_R22xx は、YOLOv8s で 200 FPS 以上を達成することが可能です。
 
 ### ソフトウェアの紹介
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-Hailo AI Software Suite は、ハードウェアアクセラレータ上で AI モデルを効率的に実行するための強力なツールを提供します。既存のディープラーニングフレームワークとシームレスに統合できるよう設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、まず Model Build Environment で ONNX ファイルから HEF（Hailo Executable Binary File）を生成します。作成された HEF ファイルは推論マシン（Runtime Environment）に転送され、HailoRT API を用いて推論を実行するために使用されます。提供されているスクリプトは、Model Build Environment 内で ONNX ファイルを HEF ファイルに変換する作業を支援します。
+Hailo AI Software Suite は、ハードウェアアクセラレータ上で AI モデルを効率的に実行するための強力なツールを提供します。既存のディープラーニングフレームワークとシームレスに統合されるよう設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、まず Model Build Environment で ONNX ファイルから HEF（Hailo 実行バイナリファイル）を生成します。作成された HEF ファイルは推論マシン（Runtime Environment）に転送され、そこで HailoRT API を用いて推論を実行するために使用されます。提供されているスクリプトは、Model Build Environment 内で ONNX ファイルを HEF ファイルに変換する作業を支援します。
 
-> **注意:**
+> **注意：**
 > **Hailo NPU の使用例についてさらに学びたい場合は、この [リンク](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero) をクリックしてください。**
 
 ## ハードウェア概要
@@ -362,7 +366,7 @@ Hailo AI Software Suite は、ハードウェアアクセラレータ上で AI �
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.1.3-1.png" style={{width:800, height:'auto'}}/></div>
 
-reComputer Industrial R22xx は、DC 端子と PoE ポートの 2 つの電源オプションに対応しています。これにより、電源の選択に柔軟性が生まれ、さまざまな電源ソースとの容易な統合が可能になります。
+reComputer Industrial R22xx は、DC 端子と PoE ポートの 2 つの電源オプションをサポートしています。これにより、電源の選択に柔軟性が生まれ、さまざまな電源と容易に統合することができます。
 
 **2 ピン電源端子**
 
@@ -371,21 +375,21 @@ reComputer Industrial R22xx は、DC 端子と PoE ポートの 2 つの電源�
 reComputer Industrial R22xx は、9～36V の端子 DC 電圧で給電されます。電源は 2 ピン電源端子ブロックコネクタを介して接続されます。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R22xx をアース接続するには、電源端子の右側にあるネジにアース線を固定します。
+reComputer Industrial R22xx を接地するには、電源端子の右側にあるネジにアース線を固定します。
 
 **PoE**
 
-reComputer Industrial R22xx の ETH1～4（PoE PSE）ポートは、最大 40W の高出力入力に対応しています。これにより、Ethernet 経由で装置に電力を供給する便利で効率的な方法が提供され、設置作業が大幅に簡素化され、配線量も削減されます。電源が限られている、または従来の電源コンセントへのアクセスが困難な産業用途での導入に最適なソリューションです。
+reComputer Industrial R22xx の ETH1～4（PoE PSE）ポートは、最大 40W の高出力入力をサポートします。これにより、Ethernet 経由で便利かつ効率的に本機へ給電でき、設置作業を大幅に簡素化し、配線量を削減します。電源が限られている、または従来の電源コンセントへのアクセスが困難な産業用途での展開に最適なソリューションです。
 
 
 - PoE PSE（Power Sourcing Equipment）
 
 > 注意:
-> ETH0 ポートは堅牢な 40W PoE 入力をサポートしていますが、reComputer Industrial R2235-12 には高性能な Raspberry Pi CM5 と 26 TOPS の Hailo-8 AI アクセラレータが統合されています。アプリケーションで、フルロードの AI 推論を行うと同時に、4G/5G モジュールや NVMe SSD などの大電力周辺機器を使用したり、PSE ポート経由で複数の高出力カメラを駆動したりする必要がある場合は、電源として DC 端子（9～36V）を使用することを推奨します。これにより、高負荷動作時の最大限の安定性とピーク性能が確保されます。
+> ETH0 ポートは堅牢な 40W PoE 入力をサポートしますが、reComputer Industrial R2235-12 には高性能な Raspberry Pi CM5 と 26 TOPS の Hailo-8 AI アクセラレータが統合されています。アプリケーションで、フルロードの AI 推論を行いながら、4G/5G モジュールや NVMe SSD などの大電力周辺機器を同時に使用したり、PSE ポート経由で複数の高出力カメラを駆動したりする必要がある場合は、電源として DC 端子（9～36V）を使用することを推奨します。これにより、高負荷動作時でも最大限の安定性とピーク性能を確保できます。
 
 **消費電力**
 
-reComputer Industrial R22xx にはデフォルトで電源ボタンが搭載されておらず、電源が接続されると自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、電源を切る前にシステムが完全にシャットダウンするまでお待ちください。システムを再起動するには、電源を再接続するだけです。
+reComputer Industrial R22xx には標準で電源ボタンは搭載されておらず、電源が接続されると自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。システムを再起動するには、電源を再接続するだけです。
 
 #### ブロック図
 
@@ -399,8 +403,8 @@ reComputer Industrial R22xx にはデフォルトで電源ボタンが搭載さ�
 |-----------------|---------------------------------------------------------------------------------------|
 | **Ethernet**    | 4 x 10/100/1000 Mbps（PoE PSE 対応）; 1 x 10/100/1000 Mbps IEEE 802.3/802.3u       |
 | **USB**         | 4 x USB-A 3.0 ホスト; 1 x USB-C 2.0（OS のフラッシュおよびデバッグ用）                        |
-| **RS485**       | 2x RS485（アイソレート）                                                                   |
-| **RS232**       | 1x RS232（アイソレート）                                                                   |
+| **RS485**       | 2x RS485（絶縁）                                                                   |
+| **RS232**       | 1x RS232（絶縁）                                                                   |
 | **CAN**         | 1x 絶縁 CAN FD ポート                                                              |
 | **DI**          | 4 x 絶縁 DI ポート（入力電圧: 5–24V DC）                                      |
 | **DO**          | 4 x 絶縁 DO ポート（出力電圧: < 60V DC）                                     |
@@ -409,12 +413,13 @@ reComputer Industrial R22xx にはデフォルトで電源ボタンが搭載さ�
 | **SIM カードスロット**   | Nano SIM カード対応                                                            |
 | **M.2 M-KEY スロット**  | 2x M.2 M-key 2280 スロット（NVMe SSD 用）；1x M.2 M-key 2240 スロット（AI アクセラレータ用、1x Hailo-8 M.2 AI アクセラレーション 26TOPS をあらかじめ搭載） |
 | **M.2 B-KEY スロット**  | 1x（5G/4G LTE 用）                                                                  |
+| **mini PCIe スロット**  | 1x（4G LTE/LoRa/Zigbee 用）                                                         |
 | **ブザー**          | 1                                                                                 |
 | **リセットボタン**    | 1                                                                                 |
 
 ### LED インジケータの状態
 
-reComputer Industrial R22xx には 4 つの LED インジケータが搭載されており、装置の動作状態を示します。各 LED の具体的な機能と状態については、以下の表を参照してください。
+reComputer Industrial R22xx には 4 つの LED インジケータが搭載されており、本機の動作状態を示します。各 LED の具体的な機能と状態については、以下の表を参照してください。
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
@@ -430,11 +435,11 @@ reComputer Industrial R22xx には 4 つの LED インジケータが搭載さ�
         <td rowspan="2"> **PWR** </td>
         <td rowspan="2">緑 </td>
         <td>On</td>
-        <td>装置が電源に接続されています。</td>
+        <td>デバイスが電源に接続されています。</td>
       </tr>
       <tr>
         <td>Off</td>
-        <td>装置が電源に接続されていません。</td>
+        <td>デバイスが電源に接続されていません。</td>
       </tr>
       <tr>
         <td> **ACT** </td>
@@ -452,17 +457,17 @@ reComputer Industrial R22xx には 4 つの LED インジケータが搭載さ�
         <td rowspan="2"> **4G/5G** </td>
         <td rowspan="2">緑 </td>
         <td>On</td>
-        <td>ダイヤルアップが成功し、接続が正常です。</td>
+        <td>ダイヤルアップに成功し、接続が正常です。</td>
       </tr>
       <tr>
         <td>Off</td>
-        <td>4G/5G 信号が接続されていないか、装置の電源が入っていません。</td>
+        <td>4G/5G 信号が接続されていないか、デバイスの電源が入っていません。</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-4G/5G ステータスインジケータランプは、モジュールの具体的な仕様に依存し、表中の情報は参考値です。
+4G/5G ステータスインジケータランプは、モジュールの仕様によって異なり、表中の情報は参考値です。
 
 #### ACT ステータステーブル
 
@@ -478,7 +483,7 @@ reComputer Industrial R22xx には 4 つの LED インジケータが搭載さ�
 | 2            | 2             | パーティションからの読み取りに失敗        |
 | 2            | 3             | 拡張パーティションが FAT ではありません           |
 | 2            | 4             | ファイル署名/ハッシュの不一致 - Pi 4  |
-| 4            | 4             | 非対応のボードタイプ               |
+| 4            | 4             | 未サポートのボードタイプ               |
 | 4            | 5             | 致命的なファームウェアエラー                 |
 | 4            | 6             | 電源障害タイプ A                 |
 | 4            | 7             | 電源障害タイプ B                 |
@@ -497,7 +502,7 @@ reComputer Industrial R22xx には USER インジケータが搭載されてお�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.2-1.png" style={{width:800, height:'auto'}}/></div>
 
-reComputer Industrial R22xx にはアクティブブザーが搭載されており、アラームやイベント通知など、さまざまな用途に使用できます。reComputer Industrial R22xx のターミナルで次を入力します:
+reComputer Industrial R22xx にはアクティブブザーが搭載されており、アラームやイベント通知など、さまざまな用途に使用できます。reComputer Industrial R22xx のターミナルで次を入力します：
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -507,7 +512,7 @@ cat /sys/kernel/debug/gpio
 
 ### RS485
 
-reComputer Industrial R2200 シリーズ機器には、2x RS485 ポート、6 ピン 3.5mm ピッチの Phoenix 端子が含まれています。
+reComputer Industrial R2200 シリーズ機器には 2x RS485 ポートが搭載されており、6 ピン 3.5mm ピッチの Phoenix 端子です。
 単一 RS485 のシルク印刷は「A/B/GND」です。
 
 **ピン定義**  
@@ -557,7 +562,7 @@ RS485 配線の回路図は次のとおりです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.3-1.png" style={{width:800, height:'auto'}}/></div>
 
-注意：製品パッケージには 120 オームの終端抵抗がいくつか含まれています。RS485 で通信する際、必要に応じて使用できます。
+注意：製品パッケージには 120 オームの終端抵抗がいくつか含まれています。RS485 で通信する際に、必要に応じて使用できます。
 
 ### RS232
 
@@ -600,7 +605,7 @@ RS232 配線の回路図は次のとおりです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.4-1.png" style={{width:800, height:'auto'}}/></div>
 
-### DI (Digital Input)
+### DI（デジタル入力）
 
 reComputer Industrial R2000 シリーズ機器には、3 ピン 3.5mm ピッチのフェニックス端子を備えた DI ポートが 4 つ含まれています。
  単一 DI のシルク印刷は「DI/G_DI」です。
@@ -667,7 +672,7 @@ reComputer Industrial R2000 シリーズ機器には、3 ピン 3.5mm ピッチ�
         <td>5kV</td>
       </tr>
       <tr>
-        <td>DI から G_DI まで</td>
+        <td>DI から G_DI</td>
         <td>ON 状態：5～30 VDC</td>
       </tr>
     </tbody>
@@ -675,9 +680,9 @@ reComputer Industrial R2000 シリーズ機器には、3 ピン 3.5mm ピッチ�
 </div>
 
 > Note
-> DI テストの詳細については、セクション [link](https://wiki.seeedstudio.com/ja/recomputer_industrial_R22xx_configure_system/di-(digital-input)-testing) を参照してください。
+> DI テストの詳細については、[link](https://wiki.seeedstudio.com/ja/recomputer_industrial_R22xx_configure_system/di-(digital-input)-testing) セクションを参照してください。
 
-### DO (Digital Output)
+### DO（デジタル出力）
 
 reComputer Industrial R22xx シリーズ機器には、3 ピン 3.5mm ピッチのフェニックス端子を備えた DO ポートが 4 つ含まれています。
 単一 DO のシルク印刷は「DO/G_DO」です。
@@ -791,7 +796,7 @@ CAN FD 配線の回路図は次のとおりです：
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R2000 のブートスイッチは、CM5 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB の間でブートソースを選択できます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に倒し、システムを Type-C USB インターフェースから起動させます。
+reComputer Industrial R2000 のブートスイッチは、CM5 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB の間でブートソースを選択できます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に倒し、Type-C USB インターフェースから起動できるようにします。
 
 | スイッチ位置 | モード         | 説明      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
@@ -810,7 +815,7 @@ reComputer Industrial R22xx には、USB Type-C ポートが 1 つと USB Type-A
 | **タイプ区分**   | **数量** | **プロトコル** | **機能**   | **説明** |
 |-----------|------------|------------|--------------|---------------|
 | Type-C   | *1       | USB 2.0    | USB-Device   | シリアルポートデバッグ、イメージ書き込みなどに使用します。 |
-| Type-A   | *4       | USB 3.0    | USB-Host     | フラッシュドライブ、USB キーボードやマウスなど、さまざまな USB デバイスを接続します。 |
+| Type-A   | *4       | USB 3.0    | USB-Host     | フラッシュドライブ、USB キーボード、マウスなど、さまざまな USB デバイスを接続します。 |
 
 ### SIM スロット（内部）
 
@@ -821,8 +826,8 @@ reComputer Industrial R2000 シリーズ機器には内部 Nano SIM カードス
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_2.png" style={{width:900, height:'auto'}}/></div>
 
-> **注意**  
-> reComputer Industrial R2000 の標準バージョンには 5G/4G モジュールは付属していません。
+> **Note**  
+> reComputer Industrial R2000 の標準バージョンには 5G/4G モジュールは付属していないことに注意してください。
 > 5G/4G 機能が必要な場合は、別途 5G/4G モジュールを追加購入する必要があります。
 
 ### M.2 M-KEY スロット
@@ -842,17 +847,17 @@ reComputer Industrial R22xx の M.2 M-KEY 2280 スロットは、128GB、256GB�
 > **Note**  
 > SSD カードには主に 2 つの用途があります：
 >
-> 1. **大容量ストレージ：** SSD カードは大容量ストレージ用途に利用できます。
-> 2. **イメージを格納したブートドライブ：** もう 1 つの用途として、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接ブートできるようにする方法があります。
+> 1. **大容量ストレージ：** SSD カードは大容量ストレージ用途に使用できます。
+> 2. **イメージを格納したブートドライブ：** もう 1 つの用途として、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにする方法があります。
 >  
-> 市場に出回っているすべての SSD カードが、上記 2 番目の用途に対応しているわけではない点に注意が必要です。そのため、ブートドライブとして使用する予定があり、どのモデルを購入すべきか不明な場合は、当社推奨の 2TB SSD（SKU 114993467）をお選びいただくことをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えることができます。
+> 市場に出回っているすべての SSD カードが、上記 2 番目の用途に対応しているわけではない点に注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、当社推奨の 2TB SSD（SKU 114993467）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えることができます。
 
 reComputer Industrial R22xx の M.2 M-KEY 2240 スロットは、PCIE M.2 AI アクセラレータを搭載できるように設計されています。また、R22xx-12 シリーズには最大 26TOPS の Hailo-8 M.2 AI アクセラレータがあらかじめ搭載されています。
 
 ### Mini-PCIe スロット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.2.11-1.png" style={{width:800, height:'auto'}}/></div>
-reComputer Industrial R22xx の MiniPCIe スロットは、4G LTE や USB LoRaWAN® などのデバイスを搭載できるように設計されています。
+reComputer Industrial R22xx の MiniPCIe スロットは、4G LTE、USB LoRaWAN®、USB Zigbee などのデバイスを搭載できるように設計されています。
 
 ### リセットホール
 
@@ -878,7 +883,7 @@ reComputer Industrial R22xx の M.2 B-KEY スロットは、5G/4G LTE を搭載�
 | ETH1  | USB 変換                      | 10/100/1000 Mbit/s  | 非対応       |
 | ETH2-4|	PCIe 変換                     | 10/100/1000 Mbit/s	 | 対応           |
 
-reComputer Industrial R2200 には複数の Ethernet RJ45 ポートが搭載されており、柔軟な接続が可能です。ETH0 は CM5 ネイティブの Gigabit Ethernet インターフェースで、10/100/1000 Mbit/s と PoE PD 機能をサポートしており、このポートから本体へ給電することができます。ETH1 は USB から変換されており、10/100/1000 Mbit/s をサポートします。一方、ETH2、ETH3、ETH4 は PCIe から変換されており、高速なパフォーマンスを実現します。特筆すべき点として、拡張ポート（ETH1〜ETH4）はすべて PoE PSE に対応しており、R2200 から外部接続機器へ電力を供給することができます。
+reComputer Industrial R2200 には、用途に応じて柔軟に接続できる複数の Ethernet RJ45 ポートが搭載されています。ETH0 は CM5 ネイティブの Gigabit Ethernet インターフェースで、10/100/1000 Mbit/s と PoE PD 機能をサポートしており、このポートから給電することができます。ETH1 は USB から変換されており、10/100/1000 Mbit/s をサポートします。一方、ETH2、ETH3、ETH4 は PCIe から変換されており、高速なパフォーマンスを実現します。特筆すべき点として、拡張ポート（ETH1〜ETH4）はすべて PoE PSE をサポートしており、R2200 から外部接続機器へ電力を供給することができます。
 
 ### HDMI
 
@@ -895,12 +900,12 @@ reComputer Industrial R2200 にはコンデンサで給電される RTC 回路�
 
 ### ウォッチドッグ
 
-reComputer Industrial R2000 には独立したハードウェアウォッチドッグ回路が搭載されており、システムが異常クラッシュした場合に自動的に再起動を行います。ウォッチドッグ回路は RTC によって実装されており、1〜255 秒の範囲で柔軟に給電（フィード）時間を設定できます。
+reComputer Industrial R2000 には、システムが異常終了した場合に自動的に再起動を行う、独立したハードウェアウォッチドッグ回路が搭載されています。ウォッチドッグ回路は RTC によって実装されており、1〜255 秒の範囲で柔軟に給餌時間を設定できます。
 
 ## オプションインターフェースおよびモジュール  
 
 reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリをサポートしており、幅広いシナリオや要件に対応できます。reComputer Industrial R2000 のカスタマイズにご興味がある場合は、詳細について odm@seeed.cc までお問い合わせください。
-以下にアクセサリおよびオプションモジュールの一覧を示します：
+以下はアクセサリおよびオプションモジュールの一覧です：
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -941,8 +946,20 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       </tr>
       <tr>
         <td>LoRa® アンテナ</td>
-        <td>LoRa Antenna Kit - 868-915 MHz</td>
+        <td>LoRa アンテナキット - 868-915 MHz</td>
         <td>110061501</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Zigbee モジュール</td>
+        <td>Mini-PCIe USB Zigbee Module</td>
+        <td>110992005</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Zigbee アンテナ</td>
+        <td>reComputer R 用 Zigbee アンテナキット</td>
+        <td>110061641</td>
       </tr>
       <tr>
         <td rowspan="8">4G 機能には 4G モジュールと 4G アンテナを、GPS 機能には 4G モジュールと GPS アンテナを組み合わせて使用します</td>
@@ -972,18 +989,18 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       </tr>
       <tr>
         <td>4G アンテナ</td>
-        <td>4G モジュール用 4G Antenna Kit</td>
+        <td>4G モジュール用 4G アンテナキット</td>
         <td>110061502</td>
       </tr>
       <tr>
         <td>GPS アンテナ</td>
-        <td>EC25 4G モジュール用 GPS Antenna Kit</td>
+        <td>EC25 4G モジュール用 GPS アンテナキット</td>
         <td>110061521</td>
       </tr>
       <tr>
         <td></td>
         <td>暗号チップ TPM 2.0</td>
-        <td>infineon SLB9670 搭載 TPM 2.0 Module</td>
+        <td>infineon SLB9670 搭載 TPM 2.0 モジュール</td>
         <td>114993114</td>
       </tr>
       <tr>
@@ -1011,49 +1028,56 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td>このモジュールは reComputer Industrial R22xx のキャリアボードに半田付けする必要があります</td>
         <td>PoE</td>
-        <td>reTerminal DM 用 MQ7813T120 PoE Module Kit</td>
+        <td>reTerminal DM 用 MQ7813T120 PoE モジュールキット</td>
         <td>110991925</td>
       </tr>
       <tr>
         <td></td>
         <td>UPS</td>
-        <td>SuperCAP UPS LTC3350 Module</td>
+        <td>SuperCAP UPS LTC3350 モジュール</td>
         <td>110992004</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-reComputer Industrial R22xx メインボードには 2 つの Mini-PCIe スロットがあります。Mini-PCIe スロット 1 は USB プロトコルを使用する 4G モジュールおよび LoRa® モジュールをサポートし、Mini-PCIe スロット 2 は USB および SPI プロトコルを使用する LoRa® モジュールをサポートします。さらに、4G モジュールと LoRa® モジュールは同時に使用できず、基板上に 2 つの LoRa® モジュールを挿すこともできません。
+reComputer Industrial R22xx メインボードには 2 つの Mini-PCIe スロットがあります。Mini-PCIe スロット 1 は 4G モジュール、USB プロトコルを使用する LoRa® モジュール、および USB プロトコルを使用する Zigbee モジュールをサポートします。一方、Mini-PCIe スロット 2 は USB および SPI プロトコルを使用する LoRa® モジュールと、USB プロトコルを使用する Zigbee モジュールをサポートします。さらに、4G モジュールと LoRa® モジュールは同時に使用できず、基板上に 2 つの LoRa® モジュールを挿すことはできません。
 
 > Note
 > 基板上に 2 つの LoRa® モジュールを挿すことはできません。
 
 ### Wi-Fi/BLE  
 
-reComputer Industrial R22xx は、オンボード Wi-Fi/BLE バージョンの CM5 を搭載しており、Wi-Fi/BLE のパラメータは CM5 と同一です。詳細なパラメータ情報については、Raspberry Pi 公式サイトを参照してください。  
+reComputer Industrial R22xx は、オンボード Wi-Fi/BLE バージョンを備えた CM5 を搭載しており、Wi-Fi/BLE のパラメータは CM5 と同一です。詳細なパラメータ情報については、Raspberry Pi 公式サイトを参照してください。  
 
 ### 4G モジュール
 
-reComputer Industrial R22xx メインボードには M.2 B-KEY スロットが 1 つと Mini-PCIe スロットが 1 つ搭載されており、どちらの M.2 B-KEY スロットおよび Mini-PCIe スロットも 4G モジュールをサポートします。Quectel 社の EC25 4G モジュールは、reComputer Industrial R22xx との互換性について十分なテストが行われています。
+reComputer Industrial R22xx メインボードには 1 つの M.2 B-KEY スロットと 1 つの Mini-PCIe スロットがあり、M.2 B-KEY スロットと Mini-PCIe スロットの両方が 4G モジュールをサポートします。Quectel 社の EC25 4G モジュールは、reComputer Industrial R22xx との互換性について十分なテストが行われています。
 
 ### 5G モジュール
 
-reComputer Industrial R22xx メインボードには M.2 B-KEY スロットが 1 つ搭載されており、USB プロトコルを使用する 4G/5G モジュールをサポートします。Quectel 社の EC25 4G モジュールは、reComputer Industrial R22xx との互換性について十分なテストが行われています。
+reComputer Industrial R22xx メインボードには 1 つの M.2 B-KEY スロットがあり、USB プロトコルを使用する 4G/5G モジュールをサポートします。Quectel 社の EC25 4G モジュールは、reComputer Industrial R22xx との互換性について十分なテストが行われています。
 
 > Note
-> 4G/5G 機能が必要な場合は、対応する 4G モジュールおよび外付けアンテナを購入し、4.5 章「4G/LoRa® モジュールとアンテナの組み立て」の手順に従ってください。
+> 4G/5G 機能が必要な場合は、対応する 4G モジュールと外部アンテナを購入し、4.5 章「4G/LoRa®/Zigbee モジュールとアンテナの組み立て」の手順に従ってください。
 
 ### LoRa® モジュール  
 
-Mini-PCIe スロットは、USB および SPI プロトコルを使用する LoRa® モジュールをサポートします。Seeed Studio 製の WM1302 モジュールは、reComputer Industrial R2000 との互換性について十分なテストが行われています。
+Mini-PCIe スロットは USB および SPI プロトコルを使用する LoRa® モジュールをサポートします。Seeed Studio の WM1302 モジュールは、reComputer Industrial R2000 との互換性について完全にテストされています。
 
 > Note
-> LoRa® 機能が必要な場合は、対応する LoRa® モジュールおよび外付けアンテナを購入し、4.5 章「4G/LoRa® モジュールとアンテナの組み立て」の手順に従ってください。
+> LoRa® 機能が必要な場合は、対応する LoRa® モジュールと外部アンテナを購入し、4.5 章「4G/LoRa®/Zigbee モジュールとアンテナの組み立て」の手順に従う必要があることに注意してください。
+
+### Zigbee モジュール
+
+Mini-PCIe スロットは USB プロトコルを利用する Zigbee モジュールをサポートしており、互換性のあるデバイスに Zigbee 機能をシームレスに統合できます。この機能により、Zigbee ネットワーク内で効率的な通信と制御が可能となり、システムの多様性と接続性が向上します。Zigbee モジュール用の Mini-PCIe スロットを利用することで、ユーザーは信頼性向上のために多様なアプリケーションを柔軟に実装できます。
+
+> Note  
+> Zigbee 機能が必要な場合は、対応する Zigbee モジュールと外部アンテナを購入し、4.5 章「4G/LoRa®/Zigbee モジュールとアンテナの組み立て」の手順に従う必要があることに注意してください。
 
 ### SSD
 
-reComputer Industrial R2000 は、PCIe スロット（J7）を使用して 2280 NVMe SSD をサポートします。CM5 の PCIe は Gen2.0 であり、理論上の最大速度は 5Gbps であることに注意してください。Gen3.0 以上の SSD を使用する場合、SSD の最大速度を発揮できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み出し速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することをお勧めします。
+reComputer Industrial R2000 は、PCIe スロット (J7) を使用して 2280 NVMe SSD をサポートします。CM5 の PCIe は最大理論速度 5Gbps の Gen2.0 であることに注意することが重要です。Gen3.0 以上の SSD を使用する場合、SSD の最大速度を発揮できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み出し速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することができます。
 
 > Note
 > 次の点に注意してください：
@@ -1062,20 +1086,20 @@ reComputer Industrial R2000 は、PCIe スロット（J7）を使用して 2280 
 > Note
 > SSD カードには主に 2 つの用途があります：
 >
-> 1. **大容量ストレージ：** SSD カードは大容量ストレージ用途に使用できます。
-> 2. **イメージを格納するブートドライブ：** もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。
-> 市場に出回っているすべての SSD カードが 2 つ目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか分からない場合は、当社推奨の 1TB SSD（SKU 112990267）をお選びいただくことをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
+> 1. **大容量ストレージ：** SSD カードは大容量ストレージのニーズに利用できます。
+> 2. **イメージを格納したブートドライブ：** もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。
+> 市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意することが重要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、当社推奨の 1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性の問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
 
 ### 暗号化チップ TPM 2.0
 
-TPM には、Trusted Computing Group（TCG）TPM 2.0 仕様に準拠した Infineon の OPTIGA™ TPM SLB9670 が搭載されており、reComputer Industrial R2000 用の暗号化チップとして推奨されています。このチップはボード上のポート J26 に適用される SPI インターフェースを備えており、プラットフォームの完全性のためのルートオブトラスト、リモート認証、および暗号サービスを実現します。
+TPM には、Trusted Computing Group (TCG) TPM 2.0 仕様に準拠した Infineon の OPTIGA™ TPM SLB9670 が搭載されており、reComputer Industrial R2000 用の暗号化チップとして推奨されています。このチップはボード上のポート J26 に適用される SPI インターフェースを備えており、プラットフォームの完全性のための信頼の基点、リモート認証、および暗号サービスを実現します。
 
 ### UPS（無停電電源装置）モジュール
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/2.3.8-1.png" style={{width:900, height:'auto'}}/></div>
 
-UPS は 7F で、直列で動作します。UPS モジュールは DC5V と CM5 コンポーネントの間に配置されており、5V 電源が失われた場合に CPU に警告するための GPIO 信号が使用されます。CPU はこの信号を受信すると、スーパーキャパシタのエネルギーが枯渇する前に緊急スクリプトを実行し、"$ shutdown" コマンドを実行します。
-UPS によって提供されるバックアップ時間は、システム負荷に大きく依存します。以下は、4GB RAM、32GB eMMC ストレージ、および Wi-Fi モジュールを備えた CM5 モジュールでテストした代表的なシナリオです。
+UPS は 7F で、直列動作します。UPS モジュールは DC5V と CM5 コンポーネントの間に配置されており、5V 電源からの電力喪失時に CPU に警告するための GPIO 信号が使用されます。この信号を受信すると、CPU はスーパーキャパシタのエネルギーが枯渇する前に緊急スクリプトを実行し、"$ shutdown" コマンドを実行します。
+UPS によって提供されるバックアップ時間は、システム負荷に大きく依存します。以下は、4GB RAM、32GB eMMC ストレージ、および Wi-Fi モジュールを備えた CM5 モジュールでテストされた代表的なシナリオです。
 
 | **動作モード** | **時間(s)**  | **備考**          |
 |-----------------------|------------------------------|---------------------|
@@ -1083,13 +1107,13 @@ UPS によって提供されるバックアップ時間は、システム負荷�
 | CPU フルロード      | 6            | stress -c 4 -t 10m -v &       |
 
 :::note
-UPS 機能については、詳細情報を得るためにお問い合わせください。また、アラーム信号はアクティブ Low です。
+UPS 機能については、詳細情報を入手するためにお問い合わせください。アラーム信号はアクティブ Low です。
 :::
 
 
 ## 技術サポートと製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

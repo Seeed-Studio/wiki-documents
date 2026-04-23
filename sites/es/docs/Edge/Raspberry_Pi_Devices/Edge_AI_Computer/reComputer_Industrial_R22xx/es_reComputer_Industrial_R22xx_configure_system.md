@@ -1,5 +1,5 @@
 ---
-description: El reComputer Industrial R22xx es un NVR de grado industrial impulsado por IA, basado en Raspberry Pi CM5 y equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando analítica de video con IA fiable y un funcionamiento continuo y estable en escenarios exigentes.
+description: El reComputer Industrial R22xx es un NVR de grado industrial impulsado por IA, basado en Raspberry Pi CM5 y equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece ricas E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando analítica de video con IA confiable y operación continua y estable en escenarios exigentes.
 title: Configurar reComputer Industrial R22xx
 keywords:
   - Controlador de Borde
@@ -13,13 +13,13 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-23'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_r22xx_configure_system/
 ---
 
 ## Descripción general
 
-Aprende cómo configurar y probar los componentes de hardware en la serie reComputer Industrial R22xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, prueba del LED de USUARIO, comunicación SPI, escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, pruebas de RS485, RS232, CAN, DI/DO, UPS para apagado seguro y más.
+Aprende cómo configurar y probar los componentes de hardware en la serie reComputer Industrial R22xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, prueba del LED de USUARIO, comunicación SPI, escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, Zigbee sobre Mini-PCIe, RS485, RS232, CAN, pruebas de DI/DO, UPS para apagado seguro y más.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -105,7 +105,7 @@ gcc spidev_test.c -o spidev_test
 ./spidev_test -D /dev/spidev10.0 -v -p hello
 ```
 
-Este comando prueba la comunicación SPI en el dispositivo SPI especificado (**/dev/spidev10.0**) con salida detallada ( -v ) y envía el mensaje "hello" (**-p hello**).
+Este comando prueba la comunicación SPI en el dispositivo SPI especificado (**/dev/spidev10.0**) con salida detallada (-v) y envía el mensaje "hello" (**-p hello**).
 Al cortocircuitar los pines MISO y MOSI del módulo TPM, estás creando efectivamente un escenario de bucle de retorno, donde los datos enviados por MOSI se reciben en MISO. Esta configuración te permite probar la comunicación SPI sin un dispositivo real conectado.
 
 ## Escaneo de Wi‑Fi
@@ -180,13 +180,13 @@ A:
 Cambia **#define I2C_DEVICE "/dev/i2c-1"** a **#define I2C_DEVICE "/dev/i2c-2".**
 Pulsa **ctrl+x** para salir, pulsa **y** para guardar los cambios y luego pulsa **Enter** para volver a la página de la línea de comandos.
 
-4. 4.Añade el archivo packet_forwarder/reset_lgw.sh:
+4. 4.Agrega el archivo packet_forwarder/reset_lgw.sh:
 
 ```bash
 sudo nano packet_forwarder/reset_lgw.sh
 ```
 
-Añade el código de ejecución:
+Agrega el código de ejecución:
 
 ```bash
 SX1302_RESET_PIN=632     # SX1302 reset
@@ -299,7 +299,7 @@ ls /dev/ttyUSB*
 
 Salida /dev/ttyUSB0, etc.:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
-Abre minicom con el puerto serie y la velocidad en baudios apropiados:
+Abre minicom con el puerto serie y la velocidad en baudios adecuados:
 
 ```bash
 sudo apt update
@@ -323,7 +323,7 @@ Este comando comprueba si el módulo responde. Deberías recibir una respuesta *
 ATD<phone_number>;
 ```
 
-Sustituye **phone_number** por el número de teléfono que deseas marcar.
+Sustituye **phone_number** por el número de teléfono al que deseas llamar.
 Asegúrate de incluir un punto y coma ; al final del comando para indicar el final del número de teléfono.
 
 ## Red celular 4G sobre Mini-PCIe
@@ -384,14 +384,62 @@ ifconfig
 ping www.baidu.com -I usb0
 ```
 
+## Zigbee sobre Mini-PCIe
+
+Para probar la **comunicación Zigbee** entre dos módulos Zigbee, sigue estos pasos:  
+
+1. Comprobar los puertos serie disponibles
+
+Utiliza el siguiente comando para comprobar los puertos serie disponibles:
+
+```bash
+cat /dev/ttyUSB*
+```
+
+**Instalar una herramienta de comunicación serie**
+
+2. Instalar la herramienta de comunicación serie:
+
+```bash
+sudo apt-get install cutecom
+```
+
+3. Abrir el puerto serie para el coordinador (primer módulo Zigbee):
+
+- Abre la herramienta cutecom y configúrala para el primer puerto serie:
+- Velocidad en baudios: ***115200***
+- Marca la opción ***"Hex output"*** en la parte inferior de la interfaz.
+- Sigue estos pasos para configurar el primer módulo Zigbee:
+- Establecer como coordinador: Envía el comando ***‘55 04 00 05 00 05’***, espera la respuesta ***‘55 04 00 05 00 05’***.
+- Reiniciar dispositivo: Pulsa el botón de reinicio o envía el comando ***‘55 07 00 04 00 FF FF 00 04’***.
+- Formación de red: Envía el comando ***‘55 03 00 02 02’***.
+
+4. Abrir el puerto serie para el router (segundo módulo Zigbee):
+Abre otra instancia de ***cutecom*** y configúrala para el segundo puerto serie con los mismos ajustes que antes.
+Sigue estos pasos para configurar el segundo módulo Zigbee:
+
+- Establecer como router: Envía el comando ***‘55 04 00 05 01 04’***, espera la respuesta ***‘55 04 00 05 00 05’***.
+- Reiniciar dispositivo: Pulsa el botón de reinicio o envía el comando ***‘55 07 00 04 00 FF FF 00 04’***.
+- Formación de red: Envía el comando ***‘55 03 00 02 02’***.
+
+5. Comprobar el estado del dispositivo:
+Envía el comando ***‘55 03 00 00 00’*** para comprobar el estado del dispositivo. Espera una respuesta similar a ***‘55 2a 00 00 00 01 XX XX XX XX’***, donde ‘XX’ representa la información del dispositivo.
+6. Entrar en modo transparente:
+Si la formación de red es correcta, entra en modo transparente enviando el comando ***55 07 00 11 00 03 00 01 13***. Ambos módulos deben estar en modo transparente para la comunicación directa. Para salir del modo transparente, envía "+++".
+7. Notas adicionales:
+
+- Si la configuración del router falla, es posible que el dispositivo ya sea un coordinador. Abandona la red usando el comando '55 07 00 04 02 xx xx xx'.
+- Prueba la potencia de transmisión usando los comandos '55 04 0D 00 00 0D' (consulta) y '55 04 0D 01 XX XX' (ajuste).
+Asegúrate de reemplazar ***/dev/ttyUSB*** con el puerto serie correcto para cada módulo Zigbee. Sigue estos pasos cuidadosamente para probar con éxito la comunicación Zigbee entre los dos módulos.
+
 ## Prueba de RS485
 
 El reComputer Industrial R21xx incluye **2x puertos RS485**. A continuación se muestran sus correspondientes **puertos COM** y **archivos de dispositivo**:  
 
 | **Número de puertos RS485** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|----------------------------|
-| **RS485-2**               | COM2           | A2/B2/GND3                | `/dev/ttyACM1`             |
-| **RS485-3**               | COM3           | A3/B3/GND4                | `/dev/ttyACM2`             |
+|---------------------------|----------------|---------------------------|-----------------------------|
+| **RS485-2**               | COM2           | A2/B2/GND3                | `/dev/ttyACM1`              |
+| **RS485-3**               | COM3           | A3/B3/GND4                | `/dev/ttyACM2`              |
 
 Para probar la función RS485, puedes seguir los pasos a continuación (tomando RS485_1 y RS485_2 como ejemplos):
 
@@ -419,8 +467,8 @@ sudo minicom -D /dev/ttyACM2
 :::note
 
 Tomando ACM2 y ACM3 como ejemplo:
-Si quieres enviar desde ACM2 a ACM3, ACM2 debe configurarse de nuevo: ***ctrl+A***, luego pulsa ***Z*** y después ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
-A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 debe configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y después  ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
+Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse de nuevo: ***ctrl+A*** , luego pulsa ***Z*** y luego ***E*** , y después inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente, y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
+A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y luego  ***E*** , y después inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente, y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -430,15 +478,15 @@ A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 debe configurarse de nue
 reComputer Industrial R21xx incluye **2x puertos RS232**, y los correspondientes **puertos COM** y **archivos de dispositivo** son los siguientes:
 
 | **Número de puertos RS232** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|----------------------------|
-| **RS232-1**               | COM1           | RX1/TX1/GND1              | `/dev/ttyACM0`             |
-| **RS232-2**               | COM2           | RX2/TX2/GND2              | `/dev/ttyACM1`             |
+|---------------------------|----------------|---------------------------|-----------------------------|
+| **RS232-1**               | COM1           | RX1/TX1/GND1              | `/dev/ttyACM0`              |
+| **RS232-2**               | COM2           | RX2/TX2/GND2              | `/dev/ttyACM1`              |
 
-Debido a que RS232 es comunicación full-dúplex, cortocircuita directamente el TX y RX de RS232 para realizar una prueba de bucle de retorno.
+Dado que RS232 es comunicación full-dúplex, cortocircuita directamente el TX y el RX de RS232 para realizar una prueba de bucle de retorno.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.12-1.png" style={{width:800, height:'auto'}}/></div>
 
-Necesitas abrir dos terminales, ACM1 si la placa de expansión está conectada y ACM2 si la placa de expansión no está conectada:
+Necesitas abrir dos terminales, ACM1 si la placa de expansión está conectada, y ACM2 si la placa de expansión no está conectada:
 **Terminal 1:***
 
 ```bash
@@ -585,7 +633,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 Dado que el reComputer Industiral R22xx está equipado solo con una única interfaz CAN, no puede realizar pruebas de bucle de retorno de forma independiente. Para verificar su funcionalidad de comunicación, se requiere un dispositivo par externo o un adaptador USB-a-CAN. Para esta prueba, el reComputer Industiral R21xx (que cuenta con interfaces CAN dobles) servirá como nodo par para establecer una conexión con el reComputer Industiral R22xx. Consulta el siguiente tutorial para conocer los esquemas de conexión específicos y los pasos de configuración:
 
-1. Utiliza dos cables DuPont para cortocircuitar los H-H y L-L de can0 y can1 para formar una prueba de bucle mínimo.
+1. Utiliza dos cables DuPont para cortocircuitar H-H y L-L de can0 y can1 para formar una prueba de bucle mínimo.
 
 ```bash
 CAN_H─────●───── CAN-H
@@ -593,7 +641,7 @@ CAN_L─────●───── CAN-L
 G_CAN_H─────●───── G_CAN
 ```
 
-2. Confirma que las dos interfaces de red can0 y can1 realmente aparecen en el sistema para evitar que el controlador no se cargue:
+2. Confirma que las dos interfaces de red can0 y can1 sí aparecen en el sistema para evitar que el controlador no se cargue:
 
 ```bash
 # should print can0 can1
@@ -634,7 +682,7 @@ Paso B: R22xx (CAN0) envía → R21xx (CAN1) recibe
 
 ## Prueba del concentrador USB
 
-Para probar el concentrador USB, puedes usar los siguientes pasos:
+Para probar el concentrador USB, puedes seguir los siguientes pasos:
 
 1. Comprueba si el concentrador USB es detectado ejecutando el comando ***lsusb***. Este comando lista todos los dispositivos USB conectados, incluidos los concentradores.
 
@@ -643,11 +691,11 @@ lsusb
 ```
 
 Al ejecutar este comando se debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
-Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece listado, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
+Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
 
-## Prueba de RTC (Reloj en Tiempo Real)
+## Prueba del RTC (reloj en tiempo real)
 
-Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
+Para probar la funcionalidad del reloj en tiempo real (RTC), sigue estos pasos:
 
 1. Desactiva la sincronización automática de hora:
 
@@ -656,14 +704,14 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. Establece la hora:
+2. Ajusta la hora:
 Configura el RTC a una fecha y hora específicas:
 
 ```bash
 sudo hwclock --set --date "2025-10-23 16:00:00"
 ```
 
-3. Sincroniza la hora del RTC con el sistema
+3. Sincronizar la hora del RTC con el sistema
 Actualiza la hora del sistema para que coincida con la hora del RTC:  
 
 ```bash
@@ -678,7 +726,7 @@ sudo hwclock -r
 
 Este comando leerá y mostrará la hora almacenada en el RTC.
 
-5. Desconecta la fuente de alimentación del RTC, espera unos minutos, luego vuelve a conectarla y comprueba de nuevo la hora del RTC para ver si ha conservado la hora correcta.
+5. Desconecta la fuente de alimentación del RTC, espera unos minutos, vuelve a conectarla y comprueba de nuevo la hora del RTC para ver si ha conservado la hora correcta.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.17-1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -728,7 +776,7 @@ priority = 1
 
 Puedes ajustar otros parámetros según sea necesario.
 
-3. Asegúrate de que el servicio del watchdog se esté ejecutando:
+3. Asegúrate de que el servicio de watchdog se esté ejecutando:
 
 ```bash
 sudo systemctl start watchdog
@@ -743,9 +791,9 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-Este comando provoca un fallo del kernel y debería hacer que el watchdog reinicie el sistema.
+Este comando desencadena un fallo del kernel y debería hacer que el watchdog reinicie el sistema.
 
-5. Supervisa el sistema para confirmar que se reinicia después del periodo de tiempo de espera especificado.
+5. Supervisa el sistema para confirmar que se reinicia después del período de tiempo de espera especificado.
 Estos pasos te ayudarán a probar y garantizar la funcionalidad del temporizador watchdog en tu sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
@@ -762,7 +810,7 @@ echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
 ```  
 
-2. Apagar el zumbador: Apagar el zumbador:
+2. Apagar el zumbador :Turn off the buzzer :
 
 ```bash
 echo 627 > /sys/class/gpio/export
@@ -780,7 +828,7 @@ ls /dev | grep tpm
 
 **Interpretación de la salida:**  
 
-Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) se han detectado y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar utilizando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
+Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) se detectan y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar utilizando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
 
 ## ATECC608A
 
@@ -815,7 +863,7 @@ Este proceso te permite interactuar con el dispositivo ATECC608A y realizar vari
 
 ## Interactuar con la EEPROM
 
-Aquí están los comandos para interactuar con una EEPROM (Electrically Erasable Programmable Read-Only Memory):
+Aquí están los comandos para interactuar con una EEPROM (memoria de solo lectura programable y borrable eléctricamente):
 
 1. Concede permisos completos (lectura, escritura y ejecución) al archivo de dispositivo de la EEPROM:
 
@@ -874,9 +922,9 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
 
-4. Prepara el script en Python
+4. Prepara el script de Python
 
-- Crea un nuevo archivo de script en Python:
+- Crea un nuevo archivo de script de Python:
 
 ```bash
 cd ~
@@ -932,7 +980,7 @@ Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para c
 5. Ejecuta el script.
 
 - Abre la terminal.
-- Ejecuta el siguiente comando para ejecutar el script:
+- Ejecuta el siguiente comando para correr el script:
 
 ```bash
 sudo python3 ups_shutdown.py
@@ -942,30 +990,30 @@ sudo python3 ups_shutdown.py
  Usa `sudo` para asegurarte de que el script tenga permisos suficientes para ejecutar el comando de apagado.
 :::
 
-6. Simular una prueba de fallo de alimentación
+6. Simular prueba de fallo de alimentación
 
-- Corta la fuente de alimentación externa.
+- Corta la alimentación externa.
 - Observa si el sistema guarda automáticamente los datos y se apaga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
 7. Verificar el resultado
 
-- Vuelve a conectar la fuente de alimentación.
-- Comprueba si los datos del sistema están completos y si se inicia con normalidad.
+- Vuelve a conectar la alimentación.
+- Comprueba si los datos del sistema están completos y si arranca con normalidad.
 
 :::note
 
-1. Para la función de SAI, ponte en contacto con nosotros para obtener más información.
-2. La señal de alarma es activa en nivel BAJO.
+1. Para la función de UPS, ponte en contacto con nosotros para obtener más información.
+2. La señal de alarma es activa en LOW.
 
 :::
 
 ## Acelerador de IA
 
-La ranura M.2 M-KEY 2240 del reComputer Industrial R21xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R21xx-12 viene preinstalada con un módulo Hailo-8 M.2 de aceleración de IA de hasta 26TOPS.
+La ranura M.2 M-KEY 2240 del reComputer Industrial R21xx está diseñada para alojar un acelerador de IA M.2 PCIE. Y la serie R21xx-12 viene preinstalada con un módulo Hailo-8 M.2 de aceleración de IA de hasta 26TOPS.
 Si compraste el producto de la serie R21xx-10, tendrás que adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
-El dispositivo viene preinstalado con el controlador del acelerador Hailo, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
+El dispositivo viene con el controlador del acelerador Hailo preinstalado, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
 
 1. Navega al directorio del caso de prueba
 
@@ -988,22 +1036,22 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 Para cerrar la aplicación, pulsa ***`Ctrl+C`*** .
-Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de vídeo de GStreamer se simplifica minimizando las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
+Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. El flujo interno de procesamiento de vídeo de GStreamer se simplifica minimizando las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
 
 :::note
-Si el reComputer que compraste no incluye Hailo-8 y estás considerando adquirir un dispositivo Hailo para integrarlo, consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecuta los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
+Si el reComputer que compraste no incluye Hailo-8 y estás considerando adquirir un dispositivo Hailo para integrarlo, consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecutar los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
 :::
 
 ## Cámara IP PoE
 
 
-La serie reComputer Industrial R22xx está diseñada para flujos de video IP de alta densidad y automatización industrial. Cuenta con **5 puertos físicos Gigabit Ethernet** con una arquitectura de bus híbrida para garantizar el máximo ancho de banda y estabilidad.
+La serie reComputer Industrial R22xx está diseñada para flujos de vídeo IP de alta densidad y automatización industrial. Cuenta con **5 puertos físicos Gigabit Ethernet** con una arquitectura de bus híbrida para garantizar el máximo ancho de banda y estabilidad.
 
 **Distribución del bus interno:**
 
-* **eth0 (Nativo)**: Conectado directamente al SoC. Ofrece la latencia más baja y se recomienda como **enlace ascendente principal (WAN)** o **puerto de gestión**.
-* **eth1 (Extensión USB)**: El puerto independiente situado junto al puerto nativo. Se amplía a través del **bus USB 3.0** y admite **salida PoE**.
-* **eth2, eth3, eth4 (Extensión PCIe)**: Los tres puertos consecutivos. Se amplían a través del **bus PCIe** y admiten **salida PoE**.
+* **eth0 (Nativo)**: Conectado directamente al SoC. Ofrece la latencia más baja y se recomienda como **Enlace ascendente principal (WAN)** o **Puerto de gestión**.
+* **eth1 (Extensión USB)**: El puerto independiente situado junto al puerto nativo. Se extiende a través del **bus USB 3.0** y admite **salida PoE**.
+* **eth2, eth3, eth4 (Extensión PCIe)**: Los tres puertos consecutivos. Se extienden a través del **bus PCIe** y admiten **salida PoE**.
 
 
 1. Especificaciones técnicas
@@ -1012,16 +1060,16 @@ La serie reComputer Industrial R22xx está diseñada para flujos de video IP de 
 | :--- | :--- | :--- |
 | **Puertos totales** | 1 (Nativo) + 4 (Extendidos) | 5x RJ45 Gigabit Ethernet |
 | **Modo PoE** | **Alternativa A (Modo A)** | Alimentación suministrada sobre los pares de datos (1/2, 3/6) |
-| **Salida PoE por puerto** | **12W** (Máx.) | Optimizado para cámaras IP estándar |
+| **Salida PoE por puerto** | **12W** (Máx) | Optimizado para cámaras IP estándar |
 | **Salida PoE en paralelo** | Los 4 puertos admiten 12W simultáneamente | Requiere suficiente potencia de entrada del sistema |
 | **Rango de entrada de alimentación** | **9V - 36V DC** | El circuito elevador interno aumenta hasta **48V** para PoE |
-| **Funciones de seguridad** | Protección contra sobrecorriente y subtensión | **El hot-plugging está estrictamente prohibido** |
+| **Características de seguridad** | Protección contra sobrecorriente y subtensión | **El hot-plug está estrictamente prohibido** |
 
 2. Directrices críticas de seguridad
 * **NO HOT-PLUGGING**: 
-    > **ADVERTENCIA**: Conectar o desconectar cables Ethernet mientras la alimentación PoE está activa (GPIO en alto) puede causar picos transitorios que pueden dañar los chips LAN7800 o los puentes PCIe. Sigue siempre el principio de "**Conectar primero, alimentar después**".
+    > **ADVERTENCIA**: Conectar o desconectar cables Ethernet mientras la alimentación PoE está activa (GPIO en High) puede causar picos transitorios que pueden dañar los chips LAN7800 o los puentes PCIe. Sigue siempre el principio de "**Conectar primero, alimentar después**".
 * **Recomendaciones de alimentación**:
-    > Aunque el dispositivo admite entrada de 9V, recomendamos usar una fuente de alimentación industrial de **24V** con al menos **72W** (3A) de capacidad para garantizar una alta eficiencia de conversión cuando los 4 puertos PoE estén a plena carga (4 × 12W).
+    > Aunque el dispositivo admite entrada de 9V, recomendamos usar una fuente de alimentación industrial de **24V** con al menos **72W** (3A) de capacidad para garantizar una alta eficiencia de conversión cuando los 4 puertos PoE están a plena carga (4 × 12W).
 
 
 3. Pasos de configuración
@@ -1047,7 +1095,7 @@ echo 1 > /sys/class/gpio/gpio652/value
 ```
 
 - Paso 3: Despliegue de IP multi-interfaz
-Asigna subredes independientes a cada puerto y utiliza **RouteMetric** para garantizar que `eth0` siga siendo la puerta de enlace predeterminada para el acceso a Internet.
+Asigna subredes independientes a cada puerto y utiliza **RouteMetric** para asegurarte de que `eth0` siga siendo la puerta de enlace predeterminada para el acceso a Internet.
 
 ```bash
 # Configure eth0 (WAN/DHCP) - Highest Priority
@@ -1076,7 +1124,7 @@ done
 4. Verificación y resolución de problemas
 
 - Comprobar conectividad del bus
-Utiliza `lspci` y `lsusb` para verificar que todos los controladores sean reconocidos por el sistema:
+Usa `lspci` y `lsusb` para verificar que todos los controladores sean reconocidos por el sistema:
 * **Puertos extendidos PCIe (eth2-4)**: Ejecuta `lspci | grep Ethernet`
 * **Puerto extendido USB (eth1)**: Ejecuta `lsusb -t` y busca el controlador `lan78xx`.
 
@@ -1084,17 +1132,17 @@ Utiliza `lspci` y `lsusb` para verificar que todos los controladores sean recono
 
 5. Preguntas frecuentes
 * **P: ¿Por qué mi cámara se reinicia constantemente?**
-    * R: Comprueba si el consumo de energía de la cámara supera los **12W**. Las cámaras PTZ de alta potencia o aquellas con iluminadores IR potentes pueden superar este límite.
+    * R: Comprueba si el consumo de energía de la cámara supera los **12W**. Las cámaras PTZ de alta potencia o aquellas con potentes iluminadores IR pueden superar este límite.
 * **P: ¿Puedo usar entrada de 12V DC para PoE?**
     * R: Sí. El circuito interno elevará 12V a 48V. Sin embargo, asegúrate de que tu fuente de alimentación de 12V pueda manejar una corriente alta, ya que la pérdida de conversión es mayor a voltajes de entrada más bajos.
 * **P: El nombre de la interfaz no es eth1-4.**
-    * R: Utiliza `ip link` para encontrar el nombre real del kernel (por ejemplo, `enp1s0`) y actualiza el campo `Name=` en tus archivos `.network`.
+    * R: Usa `ip link` para encontrar el nombre real del kernel (por ejemplo, `enp1s0`) y actualiza el campo `Name=` en tus archivos `.network`.
 
 6. Estado de compatibilidad con cámaras PoE de 4 canales：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.26-1.png" style={{width:800, height:'auto'}}/></div>
 
-### reComputer R22 y reCamera
+### reComputer R22 & reCamera
 
 Esta guía proporciona un recorrido paso a paso para conectar una reCamera — una cámara de IA modular y de código abierto basada en la plataforma RISC-V y diseñada para un rápido despliegue de Edge AI — al reComputer R22 a través de PoE. Cubre el despliegue de un flujo RTSP usando Node-RED y la previsualización de la transmisión en vivo en el R22.
 
@@ -1112,27 +1160,27 @@ Esta guía proporciona un recorrido paso a paso para conectar una reCamera — u
     ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/ip.png" style={{width:800, height:'auto'}}/></div>
 
-2. Configuración de reCamera (importación de Node-RED con un clic)
+2. Configuración de reCamera (Importación Node-RED con un clic)
 
-Utiliza el `flows.json` preconfigurado para desplegar rápidamente un flujo RTSP autenticado.
+Usa el `flows.json` preconfigurado para desplegar rápidamente un flujo RTSP autenticado.
 
 - **Acceder al panel:** Abre tu navegador y ve a `http://10.0.3.200:1880` (IP predeterminada de reCamera).
 - **Importar configuración:**
       * Haz clic en el icono de menú `≡` en la esquina superior derecha -\> **Import**.
       * Sube el archivo [**flows.json**](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/flows.json) y haz clic en **Import**.
-- **Autenticación personalizada (obligatoria):**
+- **Autenticación personalizada (Obligatoria):**
       * Haz doble clic en el nodo **`RTSP Output`** en el flujo.
       * En la sección **Authentication**, establece tus credenciales:
           * **Username:** `seeed`
           * **Password:** `seeed`
-- **Desplegar:** Haz clic en el botón rojo **Deploy** en la esquina superior derecha.
+- **Deploy:** Haz clic en el botón rojo **Deploy** en la esquina superior derecha.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/config.png" style={{width:800, height:'auto'}}/></div>
 
-3. Previsualización del flujo de video en el R22
+3. Previsualización del flujo de vídeo en el R22
 
 Dado que el R22 (basado en CM4/CM5) admite decodificación por hardware, recomendamos usar VLC o FFplay para la verificación.
 
-4. Opción A: Uso de la interfaz gráfica de VLC (recomendado)
+4. Opción A: Usar la interfaz gráfica de VLC (Recomendado)
 
 - Escribe `vlc` en la terminal del R22 para abrir el reproductor.
 - Ve a **Media** -\> **Open Network Stream**.
@@ -1142,7 +1190,7 @@ Dado que el R22 (basado en CM4/CM5) admite decodificación por hardware, recomen
     ```
 - Haz clic en **Play**.
 
-5. Opción B: Uso de la línea de comandos (prueba rápida)
+5. Opción B: Usar la línea de comandos (Prueba rápida)
 
 Copia y ejecuta directamente el siguiente comando:
 
@@ -1157,8 +1205,8 @@ ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
 | Problema | Causa potencial | Solución |
 | :--- | :--- | :--- |
 | **No se puede hacer ping a 10.0.3.200** | Conflicto de IP interna del R22 | Comprueba si `eth3/eth4` usan ambos `10.0.3.10`. Cambia uno manualmente. |
-| **reCamera no arranca** | Alimentación PoE no habilitada | Asegúrate de que `GPIO 652` esté establecido en `1` y que la potencia de entrada sea \> 12V/3A. |
-| **Retraso/latencia de video** | Problemas de red o MTU | Asegúrate de que no haya tráfico de difusión intenso entre el R22 y la reCamera. |
+| **reCamera no arranca** | Alimentación PoE no habilitada | Asegúrate de que `GPIO 652` esté establecido en `1` y que la alimentación de entrada sea \> 12V/3A. |
+| **Retraso/latencia de vídeo** | Problemas de red o MTU | Asegúrate de que no haya tráfico de difusión intenso entre el R22 y la reCamera. |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/recamera.png" style={{width:800, height:'auto'}}/></div>
 

@@ -11,7 +11,7 @@ last_update:
   date: 2/27/2024
   author: Kasun Thushara
 createdAt: '2023-05-22'
-updatedAt: '2025-09-15'
+updatedAt: '2026-03-16'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/
 ---
 
@@ -19,24 +19,24 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Compre Agora 🖱️</font></span></strong>
     </a>
 </div>
 
-O reComputer R1100 suporta múltiplas comunicações sem fio para IoT, incluindo 4G, LoRa®, Wi-Fi/BLE. Ele permite a expansão de cartões SSD via soquete M.2 para aumento de armazenamento ou acelerador NPU para recursos de IA. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware, serviço de imagem e muito mais, fornecendo suporte abrangente para suas necessidades específicas.
+O reComputer R1100 suporta múltiplas comunicações sem fio para IoT, incluindo 4G, LoRa®, Wi-Fi/BLE e Zigbee. Ele permite a expansão de cartões SSD via soquete M.2 para aumento de armazenamento ou acelerador NPU para capacidades de IA. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware, serviço de imagem e mais, oferecendo suporte abrangente para suas necessidades específicas.
 
-Este Wiki mostrará como montar e desmontar a unidade para instalar componentes periféricos, bem como a opção de montagem
+Este Wiki mostrará como Montar e Desmontar a unidade para instalar componentes periféricos, bem como a opção de montagem
 
 ## Pré-requisitos de Hardware
 
 Você precisa preparar o seguinte hardware
 
-- reComputer R1100 x 1
+- reComputer R1000 x 1
 - Acessórios
-- Jogo de chaves de fenda
-  - Ponta Phillips + 3.5
-  - Ponta Phillips + 3.0
-  - Ponta chata - 2.5
+- Conjunto de Chaves de Fenda
+  - Phillips + ponta 3.5
+  - Phillips + ponta 3.0
+  - Reta - ponta 2.5
 
 ## Guia de Desmontagem do Dispositivo
 
@@ -44,30 +44,30 @@ Siga estas etapas para **desmontar o dispositivo** com segurança e sem problema
 
 **Etapa 1: Remova os Quatro Parafusos na Parte Inferior**  
 
-- Localize e desparafuse os **quatro parafusos** na parte inferior do dispositivo usando uma chave de fenda apropriada.  
+- Localize e remova os **quatro parafusos** na parte inferior do dispositivo usando uma chave de fenda adequada.  
 
 **Etapa 2: Retire o Painel Inferior**  
 
-- Depois que os parafusos forem removidos, **levante cuidadosamente o painel inferior** do dispositivo.  
+- Após remover os parafusos, **levante cuidadosamente o painel inferior** do dispositivo.  
 
 **Etapa 3: Remova os Painéis Laterais de Plástico**  
 
 - Identifique os **painéis laterais de plástico** em três lados do dispositivo.  
-- **Desencaixe ou solte cuidadosamente** cada painel. Se estiverem muito justos, você pode precisar de uma ferramenta, mas tome cuidado para não danificá-los.  
+- **Alavanque ou desencaixe** suavemente cada painel. Se estiverem muito justos, você pode precisar de uma ferramenta, mas tome cuidado para não danificá-los.  
 
-**Etapa 4: Tenha Atenção à Placa Plástica do Interruptor de Boot**  
+**Etapa 4: Atenção à Plaquinha Plástica da Chave de Boot**  
 
-- Observe o **interruptor de boot** em um dos painéis — ele pode ter uma **pequena placa plástica acoplada**.  
-- Certifique-se de que essa placa não caia nem se perca durante a desmontagem.  
+- Observe a **chave de boot** em um dos painéis — ela pode ter **uma pequena placa plástica presa**.  
+- Garanta que essa plaquinha não caia nem se perca durante a desmontagem.  
 
 **Etapa 5: Remova a Carcaça Externa de Alumínio**  
 
-- Com os **painéis laterais removidos**, você agora pode acessar a **carcaça externa de alumínio**.  
-- **Levante e remova cuidadosamente** a carcaça de alumínio.  
+- Com os **painéis laterais removidos**, agora você pode acessar a **carcaça externa de alumínio**.  
+- **Levante e remova** cuidadosamente a carcaça de alumínio.  
 
-**Etapa 6: Remova os Parafusos que Fixam a PCB**  
+**Etapa 6: Remova os Parafusos que Fixam a Placa de Circuito (PCB)**  
 
-- Por fim, **desparafuse os quatro parafusos** que mantêm a **PCB (Placa de Circuito Impresso) no lugar**.  
+- Por fim, **remova os quatro parafusos** que mantêm a **PCB (Placa de Circuito Impresso) no lugar**.  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/dissambly_guide.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -81,7 +81,7 @@ Siga estas etapas para **desmontar o dispositivo** com segurança e sem problema
 
 - Coloque o **cartão Nano SIM** no **slot SIM** designado.  
 
-Certifique-se de que o cartão SIM esteja devidamente alinhado antes de recolocar a tampa no lugar.
+Certifique-se de que o cartão SIM esteja devidamente alinhado antes de recolocar e fixar a tampa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/sim_dis.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -93,7 +93,7 @@ Certifique-se de que o cartão SIM esteja devidamente alinhado antes de recoloca
 
 **Etapa 2: Insira o SSD**  
 
-- Insira com firmeza o **SSD** no **soquete M.2**.  
+- Insira firmemente o **SSD** no **soquete M.2**.  
 - Aperte os **parafusos** para travá-lo no lugar.  
 
 Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dispositivo.
@@ -108,7 +108,7 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 **Etapa 2: Conecte a Antena**  
 
-- Conecte a **linha de alimentação** do **módulo CM4** ao **orifício da antena**, consultando as ilustrações fornecidas para o alinhamento correto.  
+- Conecte a **linha de alimentação** do **módulo CM4** ao **furo da antena**, consultando as ilustrações fornecidas para o alinhamento correto.  
 
 **Etapa 3: Remonte o Dispositivo**  
 
@@ -116,16 +116,16 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/wifi_dis.PNG" style={{width:600, height:'auto'}}/></div>
 
-## Montando o Módulo e a Antena 4G/LoRa®
+## Montagem do Módulo e Antena 4G/LoRa®/Zigbee
 
-**Etapa 1: Verifique o Posicionamento do Módulo**  
+**Etapa 1: Verifique a Posição do Módulo**  
 
 - Certifique-se de que o **módulo do slot Mini-PCIe** esteja posicionado **acima do cartão SSD**.  
 
 **Etapa 2: Instale o Módulo**  
 
-- Insira o **4G, LoRa®** no **slot Mini-PCIe** apropriado, seguindo as diretrizes de correspondência da **Seção 2.2.8**.  
-- Fixe o módulo no lugar **apertando os parafusos**.  
+- Insira o **módulo 4G, LoRa® ou Zigbee** no **slot Mini-PCIe** apropriado, seguindo as diretrizes de correspondência da **Seção 2.2.8**.  
+- Prenda o módulo no lugar **apertando os parafusos**.  
 
 **Etapa 3: Conecte a Antena**  
 
@@ -133,7 +133,7 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/lora_dis.PNG" style={{width:600, height:'auto'}}/></div>
 
-## Montando o Módulo TPM 2.0
+## Montagem do Módulo TPM 2.0
 
 **Etapa 1: Remova a Tampa Traseira**  
 
@@ -141,11 +141,11 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 **Etapa 2: Instale o Módulo TPM 2.0**  
 
-- Insira o **módulo TPM 2.0** com segurança no **soquete J13**.
+- Insira com firmeza o **módulo TPM 2.0** no **soquete J13**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/tpm_dis.PNG" style={{width:600, height:'auto'}}/></div>
 
-## Montando o Módulo de UPS e PoE
+## Montagem do Módulo de UPS e PoE
 
 **Etapa 1: Desmonte o Dispositivo**  
 
@@ -153,13 +153,13 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 **Etapa 2: Instale o Módulo de UPS**  
 
-- Use **dois parafusos PM2.0xL5.0** e **espaçadores M2.0x5.0** para fixar o **módulo de UPS** nos **orifícios designados** sem almofadas de contato metálicas.  
-- Certifique-se de que o **módulo de UPS** esteja **corretamente alinhado** e firmemente fixado com os parafusos e espaçadores fornecidos.  
+- Use **dois parafusos PM2.0xL5.0** e **espaçadores M2.0x5.0** para fixar o **módulo de UPS** nos **furos designados** sem almofadas de contato metálico.  
+- Certifique-se de que o **módulo de UPS** esteja **corretamente alinhado** e firmemente preso com os parafusos e espaçadores fornecidos.  
 
 **Etapa 3: Instale o Módulo PoE**  
 
 - Alinhe o **módulo PoE** com o **slot designado** na placa.  
-- **Solde cuidadosamente o módulo PoE** na placa, garantindo precisão para evitar danos aos componentes próximos.
+- **Solde cuidadosamente o módulo PoE** na placa, garantindo precisão para evitar danos a componentes próximos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/ups_dis.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -167,19 +167,19 @@ Certifique-se de que o SSD esteja corretamente encaixado antes de remontar o dis
 
 ### Guia de Montagem em Trilho DIN
 
-O reComputer R1100 suporta vários métodos de instalação, incluindo **montagem em trilho DIN**. O **clipe de trilho DIN** e os **parafusos de instalação** estão incluídos na embalagem. Siga o diagrama para fixar o clipe de trilho DIN nos orifícios de montagem na lateral do dispositivo. Depois de fixado, você pode instalar o dispositivo no trilho de montagem.  
+O reComputer R1100 suporta vários métodos de instalação, incluindo **montagem em trilho DIN**. O **clipe de trilho DIN** e os **parafusos de instalação** estão incluídos na embalagem. Siga o diagrama para fixar o clipe de trilho DIN nos furos de montagem na lateral do dispositivo. Depois de fixado, você pode instalar o dispositivo no trilho de montagem.  
 
 #### Etapas de Instalação
 
 - **Posicione o Dispositivo:**  
-  - Coloque o dispositivo e o **clipe de trilho** na **borda superior** do **trilho DIN** padrão, conforme mostrado no diagrama.  
+  - Coloque o dispositivo e o **clipe de trilho** na **borda superior** do **trilho DIN** padrão, como mostrado no diagrama.  
   - Empurre o dispositivo **para baixo** para alinhá-lo corretamente.  
 
 - **Fixe o Clipe de Trilho:**  
   - Gire o **clipe de trilho** por baixo através do perfil do **trilho DIN**.  
 
 - **Trave no Lugar:**  
-  - Empurre o dispositivo **em direção ao trilho** até ouvir um **clique**, indicando que ele está firmemente montado.  
+  - Empurre o dispositivo **em direção ao trilho** até ouvir um **clique**, indicando que está firmemente montado.  
 
 #### Etapas de Remoção
 
@@ -196,7 +196,7 @@ O reComputer R1100 suporta vários métodos de instalação, incluindo **montage
 
 ### Guia de Montagem na Parede
 
-O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de montagem** **não estão incluídos** na embalagem e devem ser adquiridos separadamente.  
+O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de montagem** **não estão incluídos** no pacote e devem ser adquiridos separadamente.  
 
 #### Etapas de Instalação
 
@@ -227,19 +227,19 @@ O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={4} style={{height: 18, width: '20%'}}>Módulo LoRa®</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={4} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/47.png" /></td>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com região opcional (SPI)-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com região opcional (SPI) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992969</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com região opcional (SPI)-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com região opcional (SPI) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993268</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo de Gateway LoRaWAN com região opcional (USB) - US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo de Gateway LoRaWAN com Região Opcional (USB) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992991</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo de Gateway LoRaWAN com região opcional (USB) - EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo de Gateway LoRaWAN com Região Opcional (USB) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992628</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -251,8 +251,20 @@ O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena Wi-Fi/BLE</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/49.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Kit de Antena Raspberry Pi Compute Module 4</a></td>
+      <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Kit de Antena para Raspberry Pi Compute Module 4</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Módulo Zigbee</td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}></td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Módulo Zigbee Mini-PCIe USB</td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992005</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena Zigbee</td>
+      <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/50.png" /></td>
+      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Kit de Antena Zigbee para reComputer R</td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061641</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>Módulo 4G</td>
@@ -311,15 +323,15 @@ O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990267</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html" target="_blank" rel="noopener noreferrer">SSD Interno 512GB NVMe M.2 PCle Gen3x4 2280</a></td>
+      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html" target="_blank" rel="noopener noreferrer">SSD Interno 512GB NVMe M.2 PCIe Gen3x4 2280</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990247</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html" target="_blank" rel="noopener noreferrer">SSD Interno 256GB NVMe M.2 PCle Gen3x4 2280</a></td>
+      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html" target="_blank" rel="noopener noreferrer">SSD Interno 256GB NVMe M.2 PCIe Gen3x4 2280</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990246</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html" target="_blank" rel="noopener noreferrer">SSD Interno 128GB NVMe M.2 PCle Gen3x4 2280</a></td>
+      <td><a href="https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html" target="_blank" rel="noopener noreferrer">SSD Interno 128GB NVMe M.2 PCIe Gen3x4 2280</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990226</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -344,7 +356,7 @@ O reComputer R1100 suporta **montagem vertical na parede**, mas os **suportes de
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

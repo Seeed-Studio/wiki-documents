@@ -3,7 +3,7 @@ description: reComputer Industrial R21xx 装配指南
 title: reComputer Industrial R21xx 装配指南
 keywords:
   - Raspberry pi
-  - 边缘控制器
+  - Edge Controller
   - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_assembly_guide
@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-02-10'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_assembly_guide/
 ---
 
@@ -19,13 +19,13 @@ url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_assembly_guide/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
-reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G、LoRa®、Wi-Fi/BLE。它支持通过 M.2 插槽扩展 SSD 存储，或通过 NPU 加速器扩展 AI 能力。如果你在购买时直接选择包含 AI 加速器，将额外获得 26TOPS 的计算能力。此外，我们的硬件工程服务还包括 Logo 定制、包装品牌化、标签、固件烧录和镜像服务，为你的特定需求提供全面支持。
+reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G、LoRa®、Wi-Fi/BLE 和 Zigbee。它支持通过 M.2 插槽扩展 SSD 存储，或通过 NPU 加速器扩展 AI 能力。如果你在购买时直接选择包含 AI 加速器，将额外获得 26TOPS 的计算能力。此外，我们的硬件工程服务还包括 Logo 定制、包装品牌化、标签、固件烧录和镜像服务，为你的特定需求提供全面支持。
 
-本 Wiki 将向你展示如何装配和拆卸设备以安装外设组件，以及可选的安装方式。
+本 Wiki 将向你展示如何装配和拆卸设备以安装外设组件，以及安装固定的选项。
 
 ## 硬件准备
 
@@ -34,9 +34,9 @@ reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G�
 - reComputer Industrial R21xx x 1
 - 配件
 - 螺丝刀套装
-  - 十字 + 3.5 批头
-  - 十字 + 3.0 批头
-  - 一字 - 2.5 批头
+  - 十字 Phillips + 3.5 批头
+  - 十字 Phillips + 3.0 批头
+  - 一字 Slotted - 2.5 批头
 
 ## 设备拆卸指南
 
@@ -67,9 +67,9 @@ reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.3_assemble_ssd_1.png" style={{width:800, height:'auto'}}/></div>
 
-## 装配 5G/4G/LoRa® 模块和天线
+## 装配 5G/4G/LoRa®/Zigbee 模块和天线
 
-**步骤 1：** 取下扩展板，将 4G 模块/LoRa® 模块插入 Mini-PCIe/M.2 B-KEY 插槽并锁紧螺丝。
+**步骤 1：** 取下扩展板，将 4G 模块/LoRa® 模块/Zigbee 模块插入 Mini-PCIe/M.2 B-KEY 插槽并锁紧螺丝。
 
 **步骤 2：** 按下图所示，将馈线连接到机壳上的天线孔。
 
@@ -87,21 +87,21 @@ reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G�
 
 ## 装配 UPS 和 PoE 模块
 
-**步骤 1：** 在将 UPS 和 PoE 模块安装到板子的 CM5 模块侧之前，请先按照提供的拆卸指南拆卸整个设备。
+**步骤 1：** 在将 UPS 和 PoE 模块安装到板子的 CM5 模块一侧之前，请先按照提供的拆卸指南拆解整个设备。
 
 **步骤 2：** 安装 UPS 模块**  
 
-- 使用两颗 PM2.0xL5.0 螺丝和 M2.0x5.0 支柱，将 UPS 模块固定在两个没有金属接触焊盘的孔位上。
+- 使用两颗 PM2.0xL5.0 螺丝和 M2.0x5.0 支柱，将 UPS 模块固定在两个没有金属接触焊盘的安装孔上。
 - 确保 UPS 模块对齐正确，并使用提供的螺丝和支柱牢固固定。
 
 **步骤 3：安装 PoE 模块**  
 
-- 将 **PoE 模块** 与板上的**指定插槽**对齐。  
-- 小心地将 **PoE 模块焊接**到板上，确保操作精确，以防损坏附近元件。
+- 将 **PoE 模块** 与板上的 **指定插槽** 对齐。  
+- 小心地将 **PoE 模块焊接** 到板上，确保操作精确，以防损坏附近元件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.7_assemble_ups_module_1.png" style={{width:800, height:'auto'}}/></div>
 
-## 安装指南
+## 安装固定指南
 
 ### 导轨（DIN-Rail）安装指南
 
@@ -117,7 +117,7 @@ reComputer Industrial R21xx 提供多种安装方式。包装内已包含导轨�
 
 - **步骤 1：** 向下压设备，直到导轨卡扣释放设备。
 - **步骤 2：** 将设备从标准型材导轨中摆出。
-- **步骤 3：** 将设备抬起并取下。
+- **步骤 3：** 将设备向上抬起并取下
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.1_din-rail_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -139,7 +139,7 @@ reComputer Industrial R21xx 提供多种安装方式。包装内已包含导轨�
 <table >
   <tbody>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}><strong>项目</strong></td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}><strong>序号</strong></td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><strong>产品</strong></td>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}><strong>产品名称</strong></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}><strong>SKU</strong></td>
@@ -147,19 +147,19 @@ reComputer Industrial R21xx 提供多种安装方式。包装内已包含导轨�
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={4} style={{height: 18, width: '20%'}}>LoRa® 模块</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={4} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/47.png" /></td>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN 网关模块（SPI）-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN Gateway Module(SPI)-US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992969</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN 网关模块（SPI）-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN Gateway Module(SPI)-EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993268</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN 网关模块（USB）-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN Gateway Module(USB)-US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992991</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN 网关模块（USB）-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">区域可选 LoRaWAN Gateway Module(USB)-EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992628</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -249,11 +249,11 @@ reComputer Industrial R21xx 提供多种安装方式。包装内已包含导轨�
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={2} style={{height: 18, width: '20%'}}>电源适配器</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={2} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/58.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html" target="_blank" rel="noopener noreferrer">电源适配器 - 美规</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html" target="_blank" rel="noopener noreferrer">电源适配器 - American</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061505</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">电源适配器 - 欧规</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">电源适配器 - European</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061506</td>
     </tr>
   </tbody>
@@ -262,7 +262,7 @@ reComputer Industrial R21xx 提供多种安装方式。包装内已包含导轨�
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

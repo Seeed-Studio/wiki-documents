@@ -1,5 +1,5 @@
 ---
-description: Aprenda a configurar e testar componentes de hardware na série reComputer R1100 após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
+description: Aprenda a configurar e testar componentes de hardware na série reComputer R1100 após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, Zigbee via Mini-PCIe, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
 title: Configurar reComputer R1100
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 2/26/2024
   author: Kasun Thushara
 createdAt: '2025-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/
 ---
 
 ## Visão geral
 
-Aprenda a configurar e testar componentes de hardware na série reComputer R1100 após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
+Aprenda a configurar e testar componentes de hardware na série reComputer R1100 após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, Zigbee via Mini-PCIe, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -37,11 +37,11 @@ Para verificar mapeamentos e offsets de GPIO, siga estas etapas:
 cat /sys/kernel/debug/gpio
 ```
 
-**Este comando exibirá os mapeamentos e offsets de GPIO**, fornecendo informações essenciais para depurar ou configurar os pinos de GPIO.
+**Este comando exibirá mapeamentos e offsets de GPIO**, fornecendo informações essenciais para depurar ou configurar pinos de GPIO.
 
 ## Controlar indicadores de LED
 
-O reComputer R1100 fornece três **indicadores de LED** nas cores **vermelho, azul e verde**. Você pode controlá‑los usando os seguintes comandos:  
+O reComputer R1100 oferece três **indicadores de LED** em **vermelho, azul e verde**. Você pode controlá-los usando os seguintes comandos:  
 
 **1. Navegue até o diretório dos LEDs**  
 
@@ -53,7 +53,7 @@ ls
 Isso listará os LEDs disponíveis.
 
 **2. Ative os LEDs escrevendo no arquivo de brilho**  
-Primeiro, mude para o **modo superusuário**:  
+Alterne para o **modo superusuário** primeiro:  
 
 ```bash
 sudo su
@@ -80,12 +80,12 @@ echo 0 > /sys/class/leds/led-green/brightness
 
 ## Testando a comunicação SPI
 
-Para verificar a **comunicação SPI**, você pode realizar um teste de loopback **curto‑circuitando os pinos MISO e MOSI do módulo TPM**. Esse método garante que os dados enviados em MOSI (Master Out, Slave In) sejam recebidos em MISO (Master In, Slave Out).  
+Para verificar a **comunicação SPI**, você pode executar um teste de loopback **curto-circuitando os pinos MISO e MOSI do módulo TPM**. Esse método garante que os dados enviados em MOSI (Master Out, Slave In) sejam recebidos em MISO (Master In, Slave Out).  
 
 **Guia passo a passo**  
 
-**1. Conecte‑se à Internet**  
-Certifique‑se de que seu dispositivo esteja conectado a uma rede antes de continuar.
+**1. Conecte-se à Internet**  
+Certifique-se de que seu dispositivo esteja conectado a uma rede antes de continuar.
 
 **2. Clone o repositório `spidev-test`**  
 
@@ -93,7 +93,7 @@ Certifique‑se de que seu dispositivo esteja conectado a uma rede antes de cont
 git clone https://github.com/rm-hull/spidev-test.git
 ```
 
-**3. Navegue até o diretório**  
+**3. Acesse o diretório**  
 
 ```bash
 cd spidev-test
@@ -112,12 +112,12 @@ gcc spidev_test.c -o spidev_test
 ```
 
 - `-D /dev/spidev0.1` → Especifica o dispositivo SPI  
-- `-v` → Habilita a saída detalhada (verbose)  
+- `-v` → Habilita saída detalhada  
 - `-p "hello"` → Envia a string `"hello"`  
 
 **6. Teste de loopback (opcional)**  
 
-- **Curto‑circuite os pinos MISO e MOSI do módulo TPM** antes de executar o teste.
+- **Curto-circuite os pinos MISO e MOSI do módulo TPM** antes de executar o teste.
 - Se o barramento SPI estiver funcionando corretamente, a saída deverá mostrar que os dados transmitidos foram **recebidos corretamente**.
 
 ## Varredura de Wi‑Fi
@@ -128,7 +128,7 @@ Para listar as redes Wi‑Fi disponíveis e seus detalhes, execute:
 sudo iwlist wlan0 scan
 ```
 
-- Este comando faz a varredura de todas as redes Wi‑Fi próximas e exibe seus SSIDs, intensidade de sinal e tipo de criptografia.  
+- Este comando varre todas as redes Wi‑Fi próximas e exibe seus SSIDs, intensidade de sinal e tipo de criptografia.  
 
 ## Varredura de Bluetooth  
 
@@ -140,15 +140,15 @@ Para procurar dispositivos Bluetooth, siga estas etapas:
 sudo bluetoothctl
 ```
 
-**Habilite a varredura:**  
+**Ative a varredura:**  
 
 ```bash
 scan on
 ```
 
-- Isso inicia a varredura de dispositivos Bluetooth próximos.  
+- Isso inicia a varredura por dispositivos Bluetooth próximos.  
 
-## LoRa® via Mini‑PCIe
+## LoRa® via Mini-PCIe
 
 ### Configuração LoRa® SPI  
 
@@ -199,7 +199,7 @@ Abra o script `reset_lgw.sh`:
 sudo vim ./tools/reset_lgw.sh
 ```
 
-Atualize as configurações dos pinos:
+Atualize as configurações de pinos:
 
 ```bash
 SX1302_RESET_PIN=580    # SX1302 reset  
@@ -207,13 +207,13 @@ SX1302_POWER_EN_PIN=578 # SX1302 power enable
 SX1261_RESET_PIN=579    # SX1261 reset (LBT/Spectral Scan)  
 ```
 
-**Copie o script de reset para o diretório do packet forwarder:**  
+**Copie o script de reset para o diretório do encaminhador de pacotes:**  
 
 ```bash
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Atualize a porta SPI padrão no arquivo de configuração LoRaWAN®:**  
+**Atualize a porta SPI padrão no arquivo de configuração do LoRaWAN®:**  
 
 Modifique o arquivo `global_conf.json.sx1250.US915`:  
 
@@ -245,9 +245,9 @@ cd ~/sx1302_hal/packet_forwarder
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
-LoRa® USB agora está configurado e em execução no reComputer R1100
+ LoRa® USB agora está configurado e em execução no reComputer R1100
 
-## 4G Celular via Mini‑PCIe
+## 4G Celular via Mini-PCIe
 
 Para interagir com um módulo 4G usando comandos AT via `minicom`, siga estas etapas:  
 
@@ -278,14 +278,159 @@ ATD<phone_number>;
 ```
 
 - Substitua `<phone_number>` pelo número de telefone desejado que você quer discar.  
-- Certifique‑se de incluir um **ponto e vírgula (;)** no final do comando para indicar o fim do número de telefone.  
+- Certifique-se de incluir um **ponto e vírgula (;)** no final do comando para indicar o fim do número de telefone.  
 
+## Zigbee via Mini-PCIe
+
+Para testar a **comunicação Zigbee** entre dois módulos Zigbee, siga estas etapas:  
+
+**Verificar portas seriais disponíveis**  
+
+Execute o seguinte comando para verificar as portas seriais disponíveis:  
+
+```bash
+cat /dev/ttyUSB*
+```
+
+**Instalar uma ferramenta de comunicação serial**
+
+Instale o **CuteCom**, um terminal serial gráfico, usando:  
+
+```bash
+sudo apt-get install cutecom
+```
+
+**Configurar o primeiro módulo Zigbee (Coordenador)**  
+
+- Abra o **CuteCom** e configure-o para a **primeira porta serial**.  
+- **Configurações:**
+  - **Baud Rate:** 115200  
+  - **Habilite "Hex output"** na parte inferior da interface.  
+
+**Etapas para configurar como Coordenador:**  
+
+1. **Definir como Coordenador:** Envie o comando:  
+
+   ```  
+   55 04 00 05 00 05  
+   ```  
+
+   - Resposta esperada:  
+
+   ```  
+   55 04 00 05 00 05  
+   ```  
+
+2. **Reiniciar dispositivo:**  
+   - Pressione o **botão de reset**, ou  
+   - Envie o comando:  
+
+     ```  
+     55 07 00 04 00 FF FF 00 04  
+     ```  
+
+3. **Formação de rede:**
+   - Envie o comando:  
+
+   ```  
+   55 03 00 02 02  
+   ```  
+
+**Configurar o segundo módulo Zigbee (Roteador)**  
+
+- Abra outra instância do **CuteCom** e configure-a para a **segunda porta serial** usando as mesmas configurações.  
+
+**Etapas para configurar como Roteador:**  
+
+1. **Definir como Roteador:** Envie o comando:  
+
+   ```  
+   55 04 00 05 01 04  
+   ```  
+
+   - Resposta esperada:  
+
+   ```  
+   55 04 00 05 00 05  
+   ```  
+
+2. **Reiniciar dispositivo:**  
+   - Pressione o **botão de reset**, ou  
+   - Envie o comando:  
+
+     ```  
+     55 07 00 04 00 FF FF 00 04  
+     ```  
+
+3. **Formação de rede:** Envie o comando:  
+
+   ```  
+   55 03 00 02 02  
+   ```  
+
+**Verificar status do dispositivo**  
+Para verificar o status do dispositivo, envie:  
+
+```  
+55 03 00 00 00  
+```  
+
+ Resposta esperada:  
+
+```  
+55 2A 00 00 00 01 XX XX XX XX  
+```  
+
+- `XX` representa informações específicas do dispositivo.  
+
+**Entrar no modo transparente**
+
+Se a **formação de rede** for bem-sucedida, ative o **modo transparente** enviando:  
+
+```  
+55 07 00 11 00 03 00 01 13  
+```  
+
+**Ambos os módulos devem estar em modo transparente para comunicação direta.**  
+Para **sair do modo transparente**, envie:  
+
+```  
++++  
+```
+
+**Notas adicionais**  
+
+- Se a **configuração como roteador falhar**, o dispositivo pode já ser um **coordenador**. Para sair da rede, envie:  
+
+  ```  
+  55 07 00 04 02 XXXX XX  
+  ```  
+
+- Para **testar a potência de transmissão**, use:  
+  - **Consultar potência:**  
+
+    ```  
+    55 04 0D 00 00 0D  
+    ```  
+
+  - **Definir potência:**  
+
+    ```  
+    55 04 0D 01 XXXX  
+    ```  
+
+Certifique-se de substituir `/dev/ttyUSB*` pela **porta serial correta** para cada módulo Zigbee.  
+Siga essas etapas cuidadosamente para estabelecer uma **comunicação Zigbee bem-sucedida** entre os dois módulos.
+
+Aqui está a versão corrigida e bem estruturada com gramática, legibilidade e formatação aprimoradas:  
+
+---
 
 ## Teste de RS485
 
-O reComputer R1100 inclui **duas portas RS485**. Abaixo estão suas respectivas **portas COM** e **arquivos de dispositivo**:  
+O reComputer R1100 inclui **duas portas RS485**. Abaixo estão suas correspondentes **portas COM** e **arquivos de dispositivo**:  
 
-| **Porta RS485** | **Porta COM** | **Identificação na serigrafia** | **Arquivo de dispositivo** |
+| **Porta RS485** | **Porta COM** | **Rótulo no silk** | **Arquivo de dispositivo** |
 |---------------|-------------|----------------------|----------------|
 | **RS485_1**  | COM1        | A1 / B1 / GND       | `/dev/ttyACM0` |
 | **RS485_2**  | COM2        | A2 / B2 / GND       | `/dev/ttyACM1` |
@@ -309,30 +454,30 @@ gcc -o serial_test serial_test.c
 ./serial_test /dev/ttyACM0 /dev/ttyACM1 115200
 ```
 
-**Descrição do teste**  
+**Descrição do Teste**  
 
 - Este programa **envia 1MB de dados** de **RS485_1** para **RS485_2**.  
 - Ele **registra o tempo de conclusão** e calcula a taxa de baud real.  
 - **Observação:** A taxa de baud real pode ser ligeiramente inferior à taxa de baud teórica, o que é esperado.  
 
-**Siga estas etapas cuidadosamente para verificar a comunicação RS485 no reComputer R1100.**
+**Siga estes passos com atenção para verificar a comunicação RS485 no reComputer R1100.**
 
 ## Teste de RS232
 
-O reComputer R1100 possui **duas portas RS232**. Abaixo estão as respectivas portas COM e arquivos de dispositivo:  
+O reComputer R1100 possui **duas portas RS232**. Abaixo estão as portas COM correspondentes e os arquivos de dispositivo:  
 
-| Porta RS232 | Porta COM | Mapeamento de pinos | Arquivo de dispositivo |
+| Porta RS232 | Porta COM | Mapeamento de Pinos | Arquivo de Dispositivo |
 |------------|---------|-------------|--------------|
 | **RS232_1** | COM3 | RX3/TX3/GND | `/dev/ttyACM2` |
 | **RS232_2** | COM4 | RX4/TX4/GND | `/dev/ttyACM3` |  
 
-**Testando a comunicação RS232**  
+**Testando a Comunicação RS232**  
 
-Siga estas etapas para testar a funcionalidade RS232:  
+Siga estes passos para testar a funcionalidade RS232:  
 
 1. **Conecte as portas:**  
-   - Conecte o **TX de RS232_1** ao **RX de RS232_2**.  
-   - Conecte o **RX de RS232_1** ao **TX de RS232_2**.  
+   - Conecte o **TX do RS232_1** ao **RX do RS232_2**.  
+   - Conecte o **RX do RS232_1** ao **TX do RS232_2**.  
 
 2. **Execute o programa de teste:**  
    - Clone o repositório do programa de teste:  
@@ -365,26 +510,26 @@ Este teste envia **1MB de dados** de RS232_1 para RS232_2 e mede o tempo de conc
 
 O reComputer R1100 inclui **duas portas de Entrada Digital (DI)**, que podem ser configuradas com base nos requisitos do usuário.  
 
-| **Número de portas DI** | **Porta DI** | **GPIO estendido correspondente** |
+| **Número de Portas DI** | **Porta DI** | **GPIO Estendido Correspondente** |
 |-----------------------|------------|--------------------------------|
 | **2**                 | **DI1**     | **GPIO530**                    |
 |                       | **DI2**     | **GPIO531**                    |
 
-**Especificações da porta DI**  
+**Especificações da Porta DI**  
 
-- **Tipo de entrada:** PNP  
-- **Tensão de entrada suportada:** **5VDC – 24VDC**  
-- **Corrente:** **até 1000mA**  
+- **Tipo de Entrada:** PNP  
+- **Tensão de Entrada Suportada:** **5VDC – 24VDC**  
+- **Corrente:** **Até 1000mA**  
 
-**Etapas para testar a funcionalidade DI**  
+**Passos para Testar a Funcionalidade DI**  
 
-**Garanta a conexão adequada**  
+**Garanta a Conexão Correta**  
 
-Certifique‑se de que a **porta DI** do reComputer R1100 esteja devidamente conectada à **carga externa** e também de que a porta **G_D** esteja conectada ao **GND da fonte de alimentação**.
+Certifique-se de que a **porta DI** do reComputer R1100 esteja corretamente conectada à **carga externa**, e também certifique-se de que a porta **G_D** esteja conectada ao **GND da fonte de alimentação**.
 
-**Verifique o status do GPIO**  
+**Verifique o Status do GPIO**  
 
-Execute os seguintes comandos para verificar o status do **GPIO530** (correspondente a DI1):  
+Execute os seguintes comandos para verificar o status do **GPIO530** (correspondente ao DI1):  
 
 ```bash
 echo 530 > /sys/class/gpio/export
@@ -392,35 +537,35 @@ echo in > /sys/class/gpio/gpio530/direction
 cat /sys/class/gpio/gpio530/value
 ```
 
-**Interprete o valor do GPIO**  
+**Interprete o Valor do GPIO**  
 
-- **Se o nível externo estiver ALTO**, a saída de `/sys/class/gpio/gpio530/value` será **0**.  
-- **Se o nível externo for LOW**, a saída de `/sys/class/gpio/gpio530/value` será **1**.  
+- **Se o nível externo for ALTO (HIGH)**, a saída de `/sys/class/gpio/gpio530/value` será **0**.  
+- **Se o nível externo for BAIXO (LOW)**, a saída de `/sys/class/gpio/gpio530/value` será **1**.  
 
 ## DO (Saída Digital)
 
-O **reComputer R1100** inclui **duas portas de Saída Digital (DO)**, que podem ser configuradas de acordo com os requisitos do usuário.  
+O **reComputer R1100** inclui **duas portas de Saída Digital (DO)**, que podem ser configuradas com base nos requisitos do usuário.  
 
-| **Número de portas DO** | **Porta DO** | **GPIO estendido correspondente** |
+| **Número de Portas DO** | **Porta DO** | **GPIO Estendido Correspondente** |
 |-----------------------|------------|--------------------------------|
 | **2**                 | **DO1**     | **GPIO532**                    |
 |                       | **DO2**     | **GPIO533**                    |
 
-**Especificações da porta DO**  
+**Especificações da Porta DO**  
 
-- **Tipo de saída:** Transistor  
-- **Tensão de saída suportada:** **Até 60VDC**  
-- **Capacidade de corrente:** **500mA**  
+- **Tipo de Saída:** Transistor  
+- **Tensão de Saída Suportada:** **Até 60VDC**  
+- **Capacidade de Corrente:** **500mA**  
 
-**Etapas para testar a funcionalidade da DO**  
+**Passos para Testar a Funcionalidade DO**  
 
-**Garantir conexão adequada**  
-Confirme que a **porta DO** do reComputer R1100 está devidamente conectada à **carga externa**.
+**Garanta a Conexão Correta**  
+Confirme que a **porta DO** do reComputer R1100 esteja corretamente conectada à **carga externa**.
 
-**Como a porta DO é uma saída de coletor aberto e não possui capacidade de acionamento, use um resistor externo para puxá-la para o nível de alimentação.**
+**Como a porta DO é uma saída de coletor aberto e não possui capacidade de acionamento, utilize um resistor externo para puxá-la para a fonte de alimentação.**
 
-**Definir o nível de saída**  
-Execute os seguintes comandos para definir a saída como **HIGH** ou **LOW**:  
+**Defina o Nível de Saída**  
+Execute os seguintes comandos para definir a saída como **ALTA (HIGH)** ou **BAIXA (LOW)**:  
 
 ```bash
 echo 532 > /sys/class/gpio/export
@@ -431,9 +576,9 @@ echo 0 > /sys/class/gpio/gpio532/value  # Set output to LOW
 
 ## Teste do Hub USB
 
-Para verificar a funcionalidade do **hub USB**, siga estas etapas:  
+Para verificar a funcionalidade do **hub USB**, siga estes passos:  
 
-**Verificar se o Hub USB foi detectado**  
+**Verifique se o Hub USB foi Detectado**  
 
 Execute o seguinte comando para listar todos os dispositivos USB conectados, incluindo hubs:  
 
@@ -441,41 +586,41 @@ Execute o seguinte comando para listar todos os dispositivos USB conectados, inc
 lsusb
 ```
 
-**Verificar a detecção do Hub USB**
+**Verificar a Detecção do Hub USB**
 
 - Este comando exibirá informações sobre todos os **dispositivos USB** conectados ao seu sistema, incluindo **hubs USB**.  
 - Se o hub USB estiver **funcionando corretamente**, seus detalhes deverão aparecer na saída do comando.  
 - Se o hub **não estiver listado**, pode haver um problema com o **próprio hub ou com a conexão** dele ao sistema.  
 
-**Solução de problemas (se o Hub USB não for detectado)**  
+**Solução de Problemas (Se o Hub USB Não for Detectado)**  
 
 - Verifique a **conexão física** do hub USB.  
 - Tente conectar o hub a uma **porta USB diferente**.  
-- Reinicie o dispositivo e execute `lsusb` novamente.  
+- Reinicie o dispositivo e execute novamente `lsusb`.  
 - Se o problema persistir, o hub pode estar com defeito.  
 
 ## Teste do RTC (Relógio de Tempo Real)
 
-Para verificar a **funcionalidade do RTC** no **reComputer R1100**, siga estas etapas:  
+Para verificar a **funcionalidade do RTC** no **reComputer R1100**, siga estes passos:  
 
-**Desativar a sincronização automática de horário**  
+**Desative a Sincronização Automática de Hora**  
 
-Antes de testar o RTC, pare e desative a sincronização automática de horário para evitar conflitos:  
+Antes de testar o RTC, pare e desative a sincronização automática de hora para evitar conflitos:  
 
 ```bash
 sudo systemctl stop systemd-timesyncd  
 sudo systemctl disable systemd-timesyncd  
 ```
 
-**Definir manualmente a hora do RTC**
+**Defina Manualmente a Hora do RTC**
 
-Defina o RTC para uma data e hora específicas (por exemplo, 12 de novembro de 2024, às 12:00):  
+Defina o RTC para uma data e hora específicas (por exemplo, 12 de novembro de 2024 às 12:00):  
 
 ```bash
 sudo hwclock --set --date "2024-11-12 12:00:00"
 ```
 
-**Sincronizar a hora do RTC com o sistema**
+**Sincronize a Hora do RTC com o Sistema**
 
 Atualize a hora do sistema para corresponder à hora do RTC:  
 
@@ -483,7 +628,7 @@ Atualize a hora do sistema para corresponder à hora do RTC:
 sudo hwclock --hctosys
 ```
 
-**Verificar a hora do RTC**  
+**Verifique a Hora do RTC**  
 Verifique a hora atual armazenada no RTC:  
 
 ```bash
@@ -492,10 +637,10 @@ sudo hwclock -r
 
 Este comando exibirá a hora do RTC.
 
-**Testar a retenção do RTC**  
+**Teste de Retenção do RTC**  
 
 - **Desconecte a fonte de alimentação** do RTC.  
-- **Aguarde alguns minutos**.  
+- **Espere alguns minutos**.  
 - **Reconecte a alimentação** e verifique novamente a hora do RTC usando:  
 
   ```bash
@@ -506,9 +651,9 @@ Este comando exibirá a hora do RTC.
 
 ## Teste do Timer Watchdog
 
-Para testar o **timer watchdog** no **reComputer R1100**, siga estas etapas:  
+Para testar o **timer watchdog** no **reComputer R1100**, siga estes passos:  
 
-**Instalar o software do Watchdog**  
+**Instale o Software do Watchdog**  
 
 Certifique-se de que o pacote do watchdog esteja instalado:  
 
@@ -516,7 +661,7 @@ Certifique-se de que o pacote do watchdog esteja instalado:
 sudo apt install watchdog
 ```
 
-**Configurar o Watchdog**  
+**Configure o Watchdog**  
 
 Edite o **arquivo de configuração do watchdog**:  
 
@@ -546,16 +691,16 @@ realtime = yes
 priority = 1  
 ```
 
-**Iniciar o serviço do Watchdog**  
+**Inicie o Serviço do Watchdog**  
 Habilite e inicie o serviço do watchdog:  
 
 ```bash
 sudo systemctl start watchdog
 ```
 
-**Testar o Watchdog simulando um travamento do sistema**
+**Teste o Watchdog Simulando um Travamento do Sistema**
 
-Dispare um **crash de kernel** para verificar se o watchdog **reinicia automaticamente** o sistema:  
+Dispare um **kernel crash** para verificar se o watchdog **reinicia automaticamente** o sistema:  
 
 ```bash
 sudo su
@@ -563,12 +708,12 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-**Monitorar o sistema**  
-Verifique se o sistema **reinicia automaticamente** após o **período de tempo limite** especificado.  
+**Monitore o Sistema**  
+Verifique se o sistema **reinicia automaticamente** após o **período de timeout** especificado.  
 
-**Se o reinício ocorrer conforme esperado, o watchdog está funcionando corretamente.**  
+**Se o reinício ocorrer conforme o esperado, o watchdog está funcionando corretamente.**  
 
-## Controle do buzzer via GPIO  
+## Controlando o Buzzer via GPIO  
 
 O buzzer está mapeado para o GPIO 587. Use os seguintes comandos para ligá-lo e desligá-lo:  
 
@@ -588,11 +733,11 @@ echo out > /sys/class/gpio/gpio587/direction
 echo 0 > /sys/class/gpio/gpio587/value  
 ```  
 
-## Teste da câmera CSI
+## Teste da Câmera CSI
 
-Para testar a **câmera CSI** no **reComputer R1100**, siga estas etapas:  
+Para testar a **câmera CSI** no **reComputer R1100**, siga estes passos:  
 
-**Modificar o arquivo de configuração**  
+**Modifique o Arquivo de Configuração**  
 
 Edite o arquivo **config.txt** para habilitar o módulo de câmera:  
 
@@ -606,7 +751,7 @@ Adicione a seguinte linha ao **final** do arquivo:
 dtoverlay=imx219,cam0
 ```
 
-**Reiniciar o sistema**
+**Reinicie o Sistema**
 
 Reinicie para aplicar as alterações:  
 
@@ -614,7 +759,7 @@ Reinicie para aplicar as alterações:
 sudo reboot
 ```
 
-**Verificar a detecção da câmera**  
+**Verifique a Detecção da Câmera**  
 
 Após reiniciar, verifique se a câmera foi detectada:  
 
@@ -624,7 +769,7 @@ libcamera-jpeg --list-cameras
 
 ---
 
-**Testar a câmera**  
+**Teste a Câmera**  
 
 Execute o seguinte comando para ativar a câmera:  
 
@@ -632,52 +777,52 @@ Execute o seguinte comando para ativar a câmera:
 rpicam-hello --timeout 0
 ```
 
-**Se a visualização da câmera iniciar com sucesso, a configuração está concluída!**  
+**Se a pré-visualização da câmera iniciar com sucesso, a configuração está concluída!**  
 
-## Verificação da conexão TPM 2.0
+## Verificação da Conexão TPM 2.0
 
-Se você conectou um **módulo TPM 2.0** ao seu dispositivo, pode verificar sua detecção usando o seguinte comando:  
+Se você conectou um **módulo TPM 2.0** ao seu dispositivo, pode verificar a detecção dele usando o seguinte comando:  
 
 ```bash
 ls /dev | grep tpm
 ```  
 
-**Interpretando a saída:**  
+**Interpretando a Saída:**  
 
 - Se você vir **`tpm0`** e **`tpmrm0`** na saída, isso confirma que o **TPM (Trusted Platform Module)** foi detectado com sucesso e está disponível.  
-- Isso indica que o hardware TPM foi reconhecido e está acessível, permitindo que você prossiga com funcionalidades ou aplicações relacionadas ao TPM.  
+- Isso indica que o hardware TPM foi reconhecido e está acessível, permitindo que você prossiga com funcionalidades ou aplicativos relacionados a TPM.  
 
 **Se os dispositivos estiverem listados, seu módulo TPM está devidamente conectado e pronto para uso.**  
 
-## Interagindo com o ATECC608A e gerando um número de série aleatório
+## Interagindo com o ATECC608A e Gerando um Número de Série Aleatório
 
-Para se comunicar com o dispositivo **ATECC608A** e gerar um número de série aleatório, siga estas etapas:  
+Para se comunicar com o dispositivo **ATECC608A** e gerar um número de série aleatório, siga estes passos:  
 
-**Clonar o repositório `atecc-util`:**  
+**Clone o Repositório `atecc-util`:**  
 
 ```bash
 git clone https://github.com/wirenboard/atecc-util.git
 ```  
 
-**Navegar até o diretório `atecc-util`:**  
+**Navegue até o Diretório `atecc-util`:**  
 
 ```bash
 cd atecc-util
 ```  
 
-**Clonar o repositório `cryptoauthlib`:**  
+**Clone o Repositório `cryptoauthlib`:**  
 
 ```bash
 git clone https://github.com/wirenboard/cryptoauthlib.git
 ```  
 
-**Compilar o utilitário ATECC:**
+**Compile o Utilitário ATECC:**
 
 ```bash
 make
 ```  
 
-**Gerar um número de série aleatório:**  
+**Gere um Número de Série Aleatório:**  
 
 ```bash
 ./atecc -b 1 -s 192 -c 'serial'
@@ -687,7 +832,7 @@ make
 - **`-s 192`** → Define o tamanho do número de série como **192 bits**.  
 - **`-c 'serial'`** → Gera um número de série aleatório.  
 
-**Saída esperada:**  
+**Saída Esperada:**  
 
 O número de série gerado será exibido, por exemplo:  
 
@@ -695,13 +840,13 @@ O número de série gerado será exibido, por exemplo:
 01235595d3d621f0ee
 ```  
 
-Este método permite a interação com o dispositivo **ATECC608A**, possibilitando realizar operações como gerar números de série aleatórios de forma eficiente.  
+Este método permite a interação com o dispositivo **ATECC608A**, permitindo que você execute operações como gerar números de série aleatórios de forma eficiente.  
 
 ## Interagindo com a EEPROM
 
-Para ler e gravar dados em uma **EEPROM** (Memória Somente Leitura Programável Eletricamente Apagável), siga estas etapas:  
+Para ler e gravar dados em uma **EEPROM** (Memória Somente Leitura Programável e Apagável Eletricamente), siga estas etapas:  
 
-**Conceder permissões completas ao arquivo de dispositivo da EEPROM:**  
+**Conceda permissões completas ao arquivo de dispositivo da EEPROM:**  
 
 ```bash
 sudo chmod 777 /sys/bus/i2c/devices/6-0050/eeprom
@@ -727,22 +872,22 @@ Para listar todos os discos conectados, incluindo o SSD, use o seguinte comando:
 sudo fdisk -l
 ```  
 
-Este comando exibirá uma lista de todos os dispositivos de armazenamento detectados. Procure por entradas que representem seu SSD, normalmente rotuladas como:  
+Este comando exibirá uma lista de todos os dispositivos de armazenamento detectados. Procure por entradas que representem o seu SSD, normalmente rotuladas como:  
 
 - `/dev/sda`  
 - `/dev/sdb`  
 - `/dev/sdc`, etc.  
 
-Depois de identificar a entrada correta do SSD, você pode prosseguir com **particionamento, formatação ou outras tarefas de gerenciamento de disco**, conforme necessário.
+Depois de identificar a entrada correta do SSD, você pode prosseguir com **particionamento, formatação ou outras tarefas de gerenciamento de disco** conforme necessário.
 
-## UPS para desligamento seguro
+## UPS para Desligamento Seguro
 
-Uma conexão **GPIO6** entre a **CPU e a entrada de alimentação DC** é usada para notificar a CPU quando a fonte de alimentação é desligada. A CPU deve executar **tarefas urgentes via script** antes que a energia do supercapacitor se esgote e então iniciar um **desligamento seguro (`$shutdown`)**.  
+Uma conexão **GPIO6** entre a **CPU e a entrada de alimentação DC** é usada para notificar a CPU quando a fonte de alimentação é desligada. A CPU deve executar **tarefas urgentes por meio de um script** antes que a energia do supercapacitor se esgote e então iniciar um **desligamento seguro (`$shutdown`)**.  
 
 **Método alternativo de desligamento**  
-Outra forma de usar essa função é **disparar um desligamento quando o pino GPIO mudar de estado**. O pino GPIO especificado é configurado como uma **tecla de entrada**, gerando **eventos KEY_POWER**. Esses eventos são tratados pelo **systemd-logind**, que inicia automaticamente o desligamento do sistema.  
+Outra forma de usar essa função é **acionar um desligamento quando o pino GPIO mudar de estado**. O pino GPIO especificado é configurado como uma **tecla de entrada**, gerando **eventos KEY_POWER**. Esses eventos são tratados pelo **systemd-logind**, que inicia automaticamente o desligamento do sistema.  
 
-Para habilitar essa função, consulte `/boot/overlays/README`, depois modifique `/boot/firmware/config.txt` adicionando:  
+Para habilitar essa função, consulte `/boot/overlays/README` e, em seguida, modifique `/boot/firmware/config.txt` adicionando:  
 
 ```ini
 dtoverlay=gpio-shutdown,gpio_pin=6,active_low=1
@@ -751,7 +896,7 @@ dtoverlay=gpio-shutdown,gpio_pin=6,active_low=1
 :::note
 
 1. Para **detalhes da funcionalidade de UPS**, entre em contato conosco.  
-2. O **sinal de alarme é ativo em LOW**.  
+2. O **sinal de alarme é ativo em nível BAIXO**.  
 
 :::
 ---
@@ -787,7 +932,7 @@ while True:
         os.system("sudo shutdown -h now")  # Execute system shutdown
 ```
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte Técnico e Discussão sobre o Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

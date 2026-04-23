@@ -1,10 +1,10 @@
 ---
-description: El reComputer Industrial R22xx es un NVR de grado industrial impulsado por IA, basado en Raspberry Pi CM5 y equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando análisis de video con IA fiables y un funcionamiento continuo y estable en escenarios exigentes.
+description: El reComputer Industrial R22xx es un NVR industrial con IA basado en Raspberry Pi CM5, equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando análisis de video con IA fiables y un funcionamiento continuo y estable en escenarios exigentes.
 title: Guía de ensamblaje de reComputer Industrial R22xx
 keywords:
-  - Controlador de Borde
+  - Edge Controller
   - Raspberry pi
-  - Controlador de Borde
+  - Edge Controller
   - reComputer Industrial R22xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_r22xx_assembly_guide
@@ -21,11 +21,11 @@ url: https://wiki.seeedstudio.com/es/recomputer_industrial_r22xx_assembly_guide/
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
-El reComputer Industrial R22xx admite una variedad de comunicaciones inalámbricas IoT, incluidas 4G, 5G, LoRa® y Wi-Fi/BLE. Admite expansión mediante una ranura M.2 para almacenamiento SSD o capacidades de IA mediante un acelerador NPU. Si decides incluir el acelerador de IA directamente en tu compra, obtendrás 26 TOPS adicionales de potencia de cómputo. Además, nuestros servicios de ingeniería de hardware incluyen personalización de logotipo, marca del embalaje, etiquetado, grabación de firmware y servicios de imagen, proporcionando un soporte integral adaptado a tus necesidades específicas.
+El reComputer Industrial R22xx es compatible con una variedad de comunicaciones inalámbricas IoT, incluyendo 4G, 5G, LoRa®, Wi-Fi/BLE y Zigbee. Admite expansión mediante una ranura M.2 para almacenamiento SSD o capacidades de IA mediante un acelerador NPU. Si decides incluir el acelerador de IA directamente en tu compra, obtendrás 26 TOPS adicionales de potencia de cómputo. Además, nuestros servicios de ingeniería de hardware incluyen personalización de logotipo, marca del embalaje, etiquetado, grabación de firmware y servicios de imagen, proporcionando un soporte integral adaptado a tus necesidades específicas.
 
 Este Wiki te mostrará cómo ensamblar y desensamblar la unidad para instalar componentes periféricos, así como las opciones de montaje.
 
@@ -73,15 +73,15 @@ Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin ningún p
 
 ## Ensamblar el acelerador de IA M.2
 
-**Paso 1:** Desensambla todo el dispositivo siguiendo la sección 4.1 "Guía de desensamblaje".
+**Paso 1:** Desensambla todo el dispositivo siguiendo la sección 4.1 "Disassembly Guide".
 **Paso 2:** Inserta el acelerador de IA en el zócalo M.2 y aprieta los tornillos.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.4-1.png" style={{width:800, height:'auto'}}/></div>
 
-## Ensamblar el módulo y la antena 5G/4G/LoRa®
+## Ensamblar el módulo y la antena 5G/4G/LoRa®/Zigbee
 
-**Paso 1:** Retira la placa de expansión y coloca el módulo 4G/módulo LoRa® en la ranura Mini-PCIe/M.2 B-KEY y aprieta los tornillos.
+**Paso 1:** Retira la placa de expansión y coloca el módulo 4G/módulo LoRa®/módulo Zigbee en la ranura Mini-PCIe/M.2 B-KEY y aprieta los tornillos.
 
 **Paso 2:** Conecta el alimentador al orificio de la antena en la carcasa como se muestra en el siguiente diagrama.
 
@@ -107,7 +107,7 @@ Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin ningún p
 - Utilizando dos tornillos PM2.0xL5.0 y separadores M2.0x5.0, fija el módulo UPS en dos orificios sin almohadillas de contacto metálicas.
 - Asegúrate de que el módulo UPS esté correctamente alineado y firmemente sujeto utilizando los tornillos y separadores proporcionados.
 
-**Paso 3: Instalar el módulo PoE**  
+**Paso 3:Instala el módulo PoE**  
 
 - Alinea el **módulo PoE** con la **ranura designada** en la placa.  
 - **Suelda con cuidado el módulo PoE** en la placa, asegurando precisión para evitar daños a los componentes cercanos.
@@ -118,7 +118,7 @@ Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin ningún p
 
 ### Guía de montaje en carril DIN
 
-reComputer Industrial R21xx ofrece varios métodos de instalación. El clip para carril DIN y los tornillos de instalación están incluidos en el embalaje. Sigue el diagrama para fijar correctamente el clip para carril DIN a los orificios de montaje en el lateral del dispositivo. Una vez que los tornillos estén bien apretados, podrás instalar el dispositivo en el carril de montaje.
+reComputer Industrial R21xx ofrece varios métodos de instalación. El clip para carril DIN y los tornillos de instalación están incluidos en el embalaje. Sigue el diagrama para fijar correctamente el clip de carril DIN a los orificios de montaje en el lateral del dispositivo. Una vez que los tornillos estén bien apretados, podrás instalar el dispositivo en el carril de montaje.
 
 #### Pasos de instalación
 
@@ -126,7 +126,7 @@ reComputer Industrial R21xx ofrece varios métodos de instalación. El clip para
 - **Paso 2:** Gira el clip de carril del dispositivo desde abajo a través del carril de perfil estándar.
 - **Paso 3:** Empuja el dispositivo en la dirección del carril de perfil estándar. Oirás que el dispositivo encaja en su lugar.
 
-#### Pasos de desmontaje
+#### Pasos de retirada
 
 - **Paso 1:** Empuja hacia abajo el dispositivo hasta que sea liberado por el clip de carril.
 - **Paso 2:** Gira el dispositivo fuera del carril de perfil estándar.
@@ -262,35 +262,35 @@ El método de montaje vertical también es adecuado para reComputer Industrial R
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>Adaptador de corriente</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-23.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Adaptador de corriente 3P-Negro-19V-4.74A/7.4*5mm</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Adaptador de corriente 3P-Black-19V-4.74A/7.4*5mm</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313080684</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={5} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-24.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC tipo trébol - US</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC Cloverleaf - US</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313990332</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/AC-UK-p-5124.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC tipo trébol - UK</a></td>
+      <td><a href="https://www.seeedstudio.com/AC-UK-p-5124.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC Cloverleaf - UK</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313990328</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/Power-Cord-JP-0-5m-p-6386.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC tipo trébol - JP</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-JP-0-5m-p-6386.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC Cloverleaf - JP</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990469</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/Power-Cord-EU-0-5m-p-6385.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC tipo trébol - EU</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-EU-0-5m-p-6385.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC Cloverleaf - EU</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990468</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/Power-Cord-CN-0-5m-p-6387.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC tipo trébol - CN</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-CN-0-5m-p-6387.html" target="_blank" rel="noopener noreferrer">Cable de alimentación AC Cloverleaf - CN</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990470</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 

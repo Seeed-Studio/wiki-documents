@@ -1,16 +1,16 @@
 ---
-description: reComputer R1100 は Raspberry Pi CM4 を搭載した、AI 機能対応の IoT ゲートウェイ兼コントローラです。2GB RAM、8GB eMMC、デュアル Ethernet、USB、RS485、RS232、DI/DO、さらに 4G、LoRa®、Wi-Fi/BLE などの無線接続に対応し、産業オートメーションやエッジコンピューティングに最適です。
-title: reComputer R1100 入門ガイド
+description: reComputer R1100は、Raspberry Pi CM4を搭載したAI機能付きIoTゲートウェイ＆コントローラーです。2GB RAM、8GB eMMC、デュアルイーサネット、USB、RS485、RS232、DI/DO、ワイヤレス接続（4G、LoRa®、Wi-Fi/BLE）を特徴とし、産業オートメーション＆エッジコンピューティングに最適です。
+title: reComputer R1100 スタートガイド
 keywords:
   - Raspberry pi
-  - エッジコントローラ
+  - Edge Controller
   - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer2.jpg
 slug: /recomputer_r1100_intro
 last_update:
   date: 2/25/2024
   author: Kasun Thushara
-createdAt: '2025-02-27'
+createdAt: '2025-05-27'
 updatedAt: '2026-03-24'
 url: https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/
 ---
@@ -19,60 +19,60 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## 概要
 
-Raspberry Pi CM4 を搭載した reComputer R1100 は、AI 機能を備えた多用途なエッジ IoT ゲートウェイです。**2x Ethernet、2x USB、2x RS485、2x RS232、2x DI、2x DO** といった幅広い産業用インターフェースに加え、**4G、LoRa®、Wi-Fi/BLE** など柔軟な無線接続オプションを備えています。これらの特長により、さまざまな産業用途に最適な選択肢となります。
-reComputer R1100 シリーズは、**データ収集とプロセス監視、オートメーションおよびロボット制御、インテリジェント製造、産業用通信およびネットワーキング** などの IoT アプリケーションで広く利用されています。そのコンパクトなサイズ、柔軟性、低コスト、プログラマビリティにより、**オートメーション、IoT システムなど** を強力にサポートします。
+Raspberry Pi CM4を搭載したreComputer R1100は、AI機能を備えた多用途エッジIoTゲートウェイです。**2x イーサネット、2x USB、2x RS485、2x RS232、2x DI、2x DO**を含む包括的な産業用インターフェースと、**4G、LoRa®、Wi-Fi/BLE**などの柔軟なワイヤレス接続オプションを特徴としています。これらの機能により、様々な産業用アプリケーションに理想的な選択肢となっています。
+reComputer R1100シリーズは、**データ取得とプロセス監視、オートメーションとロボティクス制御、インテリジェント製造、産業通信とネットワーキング**を含むIoTアプリケーションで広く使用されています。そのコンパクトなサイズ、柔軟性、低コスト、プログラマビリティは、**オートメーション、IoTシステム、そしてそれ以上**に強力なサポートを提供します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>
 
-## 特長
+## 特徴
 
-**オートメーション & IoT システム向けに設計**  
+**オートメーション＆IoTシステム向け設計**  
 
-- **BACnet、Modbus RTU、Modbus TCP/IP、KNX** プロトコルをサポート  
-- **Node-RED、CODESYS、Balena など** と互換性あり  
-- 状態を素早く確認できる **両面 LED インジケータ**  
-- **堅牢な金属筐体**、**DIN レールおよび壁掛け** に対応  
-- カスタマイズ OS 用に **Yocto と Buildroot** をサポート  
+- **BACnet、Modbus RTU、Modbus TCP/IP、KNX**プロトコルをサポート  
+- **Node-RED、CODESYS、Balena、その他**と互換性  
+- 迅速なステータス確認のための**両面LEDインジケーター**  
+- **耐久性のある金属筐体**、**DINレールと壁面取り付け**に対応  
+- カスタマイズされたOSのための**YoctoとBuildroot**をサポート  
 
-**高いパフォーマンス**  
+**強力なパフォーマンス**  
 
-- **Raspberry Pi CM4** を搭載  
-- **Broadcom BCM2711** クアッドコア **Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz**  
-- 最大 **8GB RAM** および **32GB eMMC ストレージ**  
+- **Raspberry Pi CM4**を搭載  
+- **Broadcom BCM2711** クアッドコア **Cortex-A72 (ARM v8) 64ビット SoC @ 1.5GHz**  
+- 最大**8GB RAM**と**32GB eMMCストレージ**  
 
-**充実した無線機能**  
+**豊富なワイヤレス機能**  
 
-- **オンチップ Wi-Fi および BLE**  
-- **Mini-PCIe 1**: **LTE、USB LoRa® 
-- **Mini-PCIe 2**: **SPI LoRa®、USB LoRa®
+- **オンチップWi-FiとBLE**  
+- **Mini-PCIe 1**: **LTE、USB LoRa®、USB Zigbee**をサポート  
+- **Mini-PCIe 2**: **SPI LoRa®、USB LoRa®、USB Zigbee**をサポート  
 
-**豊富なインターフェース**  
+**包括的なインターフェース**  
 
-- **2x RS485（絶縁）、2x RS232（絶縁）、2x 絶縁 DI ポート、2x 絶縁 DO ポート**  
-- **1x 10M/100M/1000M Ethernet**（**PoE** 対応）  
-- **1x 10M/100M Ethernet**  
+- **2x RS485（絶縁）、2x RS232（絶縁）、2x 絶縁DIポート、2x 絶縁DOポート**  
+- **1x 10M/100M/1000M イーサネット**（**PoE**をサポート）  
+- **1x 10M/100M イーサネット**  
 - **1x HDMI 2.0**  
 - **2x Type-A USB 2.0**  
-- **1x Type-C USB 2.0**（OS 更新用 USB コンソール）  
-- **1x MicroSD カードスロット**  
-- **1x Nano SIM カードスロット（内部）**  
+- **1x Type-C USB 2.0**（OSアップデート用USBコンソール）  
+- **1x MicroSDカードスロット**  
+- **1x Nano SIMカードスロット（内蔵）**  
 
 **安全性と信頼性**  
 
 - **ハードウェアウォッチドッグ**  
-- **オプションの UPS スーパーキャパシタ**  
-- **金属筐体（PC サイドパネル付き）**  
+- **オプションのUPSスーパーキャパシタ**  
+- **PCサイドパネル付き金属筐体**  
 - **電磁両立性（EMC）規格**:  
-  - **ESD**: EN61000-4-2, レベル 3  
-  - **EFT**: EN61000-4-4, レベル 2  
-  - **サージ保護**: EN61000-4-5, レベル 2  
-- **製品ライフタイム**: **reComputer R1100** は **少なくとも 2030 年 12 月まで** 生産が継続されます  
+  - **ESD**: EN61000-4-2、レベル3  
+  - **EFT**: EN61000-4-4、レベル2  
+  - **サージ保護**: EN61000-4-5、レベル2  
+- **製品寿命**: **reComputer R1100**は**少なくとも2030年12月まで**製造を継続します
 
 ## 仕様
 
@@ -80,70 +80,71 @@ reComputer R1100 シリーズは、**データ収集とプロセス監視、オ�
 |------------------------|----------------|
 | **ハードウェア仕様** | |
 | **製品シリーズ** | R11xx-10, R11xx-00 |
-| **CPU** | Raspberry Pi CM4、クアッドコア Cortex-A72 @ 1.5GHz |
-| **オペレーティングシステム** | Raspbian、Debian、Yocto、Buildroot |
+| **CPU** | Raspberry Pi CM4, Quad-core Cortex-A72 @ 1.5GHz |
+| **オペレーティングシステム** | Raspbian, Debian, Yocto, Buildroot |
 | **RAM** | 1GB / 2GB / 4GB / 8GB |
-| **eMMC ストレージ** | 8GB / 16GB / 32GB |
+| **eMMCストレージ** | 8GB / 16GB / 32GB |
 | **システム仕様** | |
-| **電源入力** | DC 9V~36V、2 ピン端子台 |
-| **PoE（受電機器として）** | IEEE 802.3af 規格 12.95W PoE* |
+| **電源入力** | DC 9V~36V, 2ピン端子台 |
+| **PoE（受電デバイスとして）** | IEEE 802.3af標準 12.95W PoE* |
 | **過電圧保護** | 40V |
-| **消費電力** | アイドル時: 2.88W; フルロード時: 5.52W |
+| **消費電力** | アイドル時: 2.88W; フル負荷時: 5.52W |
 | **電源スイッチ** | なし |
-| **再起動スイッチ** | あり |
+| **リブートスイッチ** | あり |
 | **インターフェース** | |
-| **Ethernet** | 1x 10/100/1000Mbps（PoE* 対応）、1x 10/100Mbps IEEE 802.3/802.3u |
-| **USB** | 2x USB-A 2.0 ホスト、1x USB-C 2.0（OS 書き込み用） |
+| **Ethernet** | 1x 10/100/1000Mbps（PoE対応*）, 1x 10/100Mbps IEEE 802.3/802.3u |
+| **USB** | 2x USB-A 2.0ホスト, 1x USB-C 2.0（OS書き込み用） |
 | **RS485** | 2x RS485（絶縁） |
 | **RS232** | 2x RS232（絶縁） |
-| **DI（デジタル入力）** | 2x 絶縁 DI ポート、入力電圧: 5~24V DC |
-| **DO（デジタル出力）** | 2x 絶縁 DO ポート、出力電圧: &lt;60V DC |
-| **SIM カード** | 1x Nano SIM カードスロット（内部） |
-| **SD カード** | 1x MicroSD カードスロット |
-| **SSD** | 1x M.2 NVMe SSD スロット（2280-M Key） |
-| **LED インジケータ** | 12x LED インジケータ |
+| **DI（デジタル入力）** | 2x 絶縁DIポート, 入力電圧: 5~24V DC |
+| **DO（デジタル出力）** | 2x 絶縁DOポート, 出力電圧: &lt;60V DC |
+| **SIMカード** | 1x Nano SIMカードスロット（内蔵） |
+| **SDカード** | 1x MicroSDカードスロット |
+| **SSD** | 1x M.2 NVMe SSDスロット（2280-Mキー） |
+| **LEDインジケータ** | 12x LEDインジケータ |
 | **ブザー** | 1 |
 | **リセットボタン** | 1 |
 | **HDMI** | 1x HDMI 2.0 |
 | **無線通信** | |
-| **Wi-Fi 2.4/5.0GHz** | オンチップ Wi-Fi* |
-| **BLE 5.0** | オンチップ BLE* |
+| **Wi-Fi 2.4/5.0GHz** | オンチップWi-Fi* |
+| **BLE 5.0** | オンチップBLE* |
 | **LoRa®** | USB LoRa®*/ SPI LoRa®* |
-| **4G セルラー** | 4G LTE* |
+| **4Gセルラー** | 4G LTE* |
+| **Zigbee** | USB Zigbee* |
 | **規格** | |
-| **EMC 適合性** | ESD: EN61000-4-2, レベル 3; EFT: EN61000-4-4, レベル 2; サージ: EN61000-4-5, レベル 2 |
-| **認証** | CE、FCC、TELEC、RoHS、REACH |
+| **EMC適合性** | ESD: EN61000-4-2, レベル3; EFT: EN61000-4-4, レベル2; サージ: EN61000-4-5, レベル2 |
+| **認証** | CE, FCC, TELEC, RoHS, REACH |
 | **環境条件** | |
-| **保護等級** | IP40 |
+| **防塵防水等級** | IP40 |
 | **動作温度** | -30 ~ 70°C |
 | **動作湿度** | 10 ~ 95% RH |
-| **保管温度** | -40 ~ 80°C |
+| **保存温度** | -40 ~ 80°C |
 | **その他の機能** | |
-| **スーパーキャパシタ UPS** | SuperCAP UPS LTC3350 モジュール* |
-| **ハードウェアウォッチドッグ** | 1 ~ 255s |
-| **RTC** | 高精度 RTC |
+| **スーパーキャパシタUPS** | SuperCAP UPS LTC3350モジュール* |
+| **ハードウェアウォッチドッグ** | 1 ~ 255秒 |
+| **RTC** | 高精度RTC |
 | **セキュリティ** | |
-| **暗号化チップ** | TPM 2.0*、ATECC608A |
+| **暗号化チップ** | TPM 2.0*, ATECC608A |
 | **冷却システム** | ファンレス |
-| **保証** | 2 年 |
-| **製品ライフタイム** | 2030 年 12 月まで |
-| **注記** | * が付いたオプションは、アクセサリ一覧に従って別途購入が必要です。 |
-| **コンポーネント & インターフェース状態** | |
-| **予約済み** | 将来の使用または拡張用に確保されています。 |
-| **オプション** | 必須ではないコンポーネントであり、ユーザーが有無を選択できます。 |
-| **占有** | 現在使用中であり、製品機能に不可欠です。 |
-| **同梱** | 標準パッケージに含まれる必須コンポーネントです。 |
+| **保証** | 2年 |
+| **製品寿命** | 2030年12月まで |
+| **注記** | *印のオプションは、アクセサリリストに従って別途購入が必要です。 |
+| **コンポーネント・インターフェース状態** | |
+| **予約済み** | 将来の使用または拡張のために指定されています。 |
+| **オプション** | 必須ではないコンポーネント；ユーザーは含めるか除外するかを選択できます。 |
+| **使用中** | 現在使用中で、製品機能に不可欠です。 |
+| **含まれる** | 標準パッケージに含まれる必須コンポーネントです。 |
 
-**注記**: `*` が付いたオプションは、アクセサリ一覧に従って別途購入が必要です。
+**声明**: `*` でマークされたオプションは、アクセサリリストに従って追加購入が必要です。
 
-## 機構寸法  
+## 機械的寸法  
 
 | **パラメータ** | **説明** |
 |--------------|----------------|
 | **寸法 (W x H x D)** | 130 mm x 93 mm x 49.6 mm |
-| **筐体** | 6061 アルミニウム合金ケース（透明 PC サイドパネル付き） |
-| **取り付け方法** | DIN レール / 壁掛け |
-| **重量（正味）** | 560g |
+| **筐体** | 6061アルミニウム合金ケーシング、透明PCサイドパネル |
+| **取り付け** | DINレール / 壁面 |
+| **重量 (正味)** | 560g |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/dimensions.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -159,52 +160,52 @@ reComputer R1100 シリーズは、**データ収集とプロセス監視、オ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/mainboard.PNG" style={{width:800, height:'auto'}}/></div>
 
-#### 電源ブロック図
+#### 電源図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/power.PNG" style={{width:800, height:'auto'}}/></div>
 
-reComputer R1100 は、DC 端子と PoE ポートの 2 つの電源供給オプションを提供します。デフォルトでは、公式の地域別電源アダプタ（SKU: 110061505/110061506）を使用して DC 端子から給電します。代替として、オプションの PoE 電源（PoE モジュール、SKU: 110991925）も利用できます。この柔軟性により、さまざまな電源ソースとのシームレスな統合が可能となり、多様なアプリケーションニーズに対応できます。
+reComputer R1100は2つの電源供給オプションを提供します：DCターミナルとPoEポートです。デフォルトでは、公式地域別電源アダプター（SKU: 110061505/110061506）を使用してDCターミナル経由で電源供給されます。または、オプションのPoE電源（PoEモジュール、SKU: 110991925）も利用可能です。この柔軟性により、さまざまな電源との seamless な統合が可能となり、多様なアプリケーションニーズに対応できます。
 
-**2 ピン電源端子**
+**2ピン電源ターミナル**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:400, height:'auto'}}/></div>
 
-reComputer R1100 は、9～36V の DC 電圧で動作し、2 ピン電源端子台を介して接続します。アース接続については、電源端子左上のネジにアース線をしっかりと固定することができます。
+reComputer R1100は9〜36VのDC電圧供給で動作し、2ピン電源ターミナルブロックを通じて接続されます。接地については、接地線を電源ターミナルの左上角にあるネジに確実に取り付けることができます。
 
 **PoE**
 
-PoE モジュールを搭載すると、reComputer R1100 の ETH0 ポートは PoE 給電に対応し、Ethernet 経由で便利かつ効率的に本体へ電力を供給できます。このオプションにより、設置が簡素化され配線も最小限となるため、電源が限られているアプリケーションや、コンセントが容易に確保できない場所に最適です。
+PoEモジュールが取り付けられている場合、reComputer R1100のETH0ポートはPoE電源供給をサポートし、イーサネット経由でデバイスに電源を供給する便利で効率的な方法を提供します。このオプションは設置を簡素化し、配線を最小限に抑えるため、電源が限られているアプリケーションや、電源コンセントが容易に利用できない場所に最適です。
 
-- **PoE 入力**: 44~57V（標準: 48V）
-- **PoE 出力**: 12V、最大 1.1A
+- **PoE入力**: 44~57V（標準: 48V）
+- **PoE出力**: 12V、1.1A最大
 
 :::note
-同梱の PoE モジュールは IEEE 802.3af 規格に準拠し、最大 12.95W の電力を供給します。ただし、SSD や 4G モジュールなどの高消費電力ペリフェラルに対しては、PoE 電源だけでは不十分な場合があります。そのような場合は、安定かつ信頼性の高い動作を確保するために、DC 端子から給電することを推奨します。
+付属のPoEモジュールはIEEE 802.3af規格に準拠し、最大12.95Wの電力出力を提供します。ただし、SSDや4Gモジュールなどの高電力周辺機器の場合、PoE電源では不十分な場合があります。そのような場合は、安定した信頼性のあるデバイス動作を確保するため、DCターミナルを使用した電源供給を推奨します。
 :::
 
 **消費電力**
 
-以下の表は、Seeed Studio のラボで測定された reComputer R1100 の消費電力値を示しています。これらの値はあくまで参考値であり、測定方法や環境条件の違いにより結果が変動する可能性がある点にご注意ください。  
+以下の表は、Seeed Studioの研究室で実施された測定に基づく、reComputer R1100のテスト済み消費電力値を示しています。これらの値は参考用であり、テスト方法や環境条件の違いが結果に影響を与える可能性があることにご注意ください。
 
 | **状態**   | **電圧** | **電流** | **消費電力** | **説明** |
 |-------------|------------|------------|----------------------|----------------|
 | **シャットダウン** | 24V | 51mA | 1.224W | シャットダウンおよび電源オフ状態での静的消費電力テスト。 |
-| **アイドル** | 24V | 120mA | 2.88W | 24V を供給し、テストプログラムを実行していない状態での入力電流を測定。 |
-| **フルロード** | 24V | 230mA | 5.52W | 外部デバイスを接続せず、`"stress -c 4"` コマンドで CPU をフルロード動作させた状態。 |
+| **アイドル** | 24V | 120mA | 2.88W | テストプログラムを実行せずに24V電源を供給した際の入力電流を測定。 |
+| **フル負荷** | 24V | 230mA | 5.52W | `"stress -c 4"` コマンドを使用してCPUをフル負荷で実行、外部デバイスは接続なし。 |
 
- **電源オンおよび電源オフ**  
-reComputer R1100 には、標準では電源ボタンは搭載されていません。電源が接続されるとシステムは自動的に起動します。  
+**電源オンと電源オフ**  
+reComputer R1100にはデフォルトで電源ボタンが含まれていません。システムは電源に接続すると自動的に電源がオンになります。
 
-- シャットダウンする場合は、オペレーティングシステムのシャットダウンオプションを使用し、処理が完了してから電源を切断してください。  
-- システムを再起動するには、電源を再接続するだけで構いません。  
+- シャットダウンするには、オペレーティングシステムのシャットダウンオプションを使用し、プロセスが完了するまで待ってから電源を切断してください。
+- システムを再起動するには、単純に電源を再接続してください。
 
-これにより、安全な動作が確保され、データ損失やシステム障害のリスクを防ぐことができます。
+これにより、安全な動作が保証され、潜在的なデータ損失やシステムの問題を防ぐことができます。
 
 #### ブロック図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:400, height:'auto'}}/></div>
 
-#### IIC 図
+#### IIC図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/IIC.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -212,146 +213,146 @@ reComputer R1100 には、標準では電源ボタンは搭載されていませ
 
 | **インターフェース** | **説明** |
 |--------------|----------------|
-| **Ethernet** | 1 × 10/100/1000 Mbps（PoE* 対応）、1 × 10/100 Mbps（IEEE 802.3/802.3u） |
-| **USB** | 2 × USB-A 2.0（ホスト）、1 × USB-C 2.0（OS 書き込み用） |
-| **RS485** | 2 × RS485（絶縁） |
-| **RS232** | 2 × RS232（絶縁） |
-| **DI（デジタル入力）** | 2 × 絶縁 DI ポート、入力電圧: 5~24V DC |
-| **DO（デジタル出力）** | 2 × 絶縁 DO ポート、出力電圧: < 60V DC |
+| **Ethernet** | 1 × 10/100/1000 Mbps (PoE*対応) , 1 × 10/100 Mbps (IEEE 802.3/802.3u) |
+| **USB** | 2 × USB-A 2.0 (ホスト) , 1 × USB-C 2.0 (OS書き込み用) |
+| **RS485** | 2 × RS485 (絶縁) |
+| **RS232** | 2 × RS232 (絶縁) |
+| **DI (デジタル入力)** | 2 × 絶縁DIポート , 入力電圧: 5~24V DC |
+| **DO (デジタル出力)** | 2 × 絶縁DOポート ,  出力電圧: < 60V DC |
 | **HDMI** | 1 × HDMI 2.0 |
-| **SD カードスロット** | MicroSD カード対応 |
-| **SIM カードスロット** | Nano SIM カード対応 |
-| **M.2 スロット** | M.2 NVMe SSD 対応 |
-| **LED インジケータ** | 12 × LED インジケータ |
+| **SDカードスロット** | MicroSDカード対応 |
+| **SIMカードスロット** | Nano SIMカード対応 |
+| **M.2スロット** | M.2 NVMe SSD対応 |
+| **LEDインジケーター** | 12 × LEDインジケーター |
 | **ブザー** | 1 |
-| **リセットボタン** | 1 |  
+| **リセットボタン** | 1 |
 
-### LED インジケータの状態
+### LED インジケータステータス
 
-R1100 コンピュータには、システム状態を示すための 12 個の LED が搭載されています。それぞれの具体的な機能は、以下の表に示します。
+R1100 コンピュータは、システムステータス表示用に12個のLEDを搭載しています。それぞれの具体的な機能を以下の表に示します。
 
-以下は、構造化された形式で示した **LED インジケータ状態** の表です。  
+以下は構造化された形式での **LED インジケータステータス** 表です：
 
-| **LED インジケータ** | **色** | **状態** | **説明** |
+| **LED インジケータ** | **色** | **ステータス** | **説明** |
 |------------------|---------|-----------|----------------|
 | **PWR** | 緑 | 点灯 | デバイスが電源に接続されています。 |
 | | | 消灯 | デバイスが電源に接続されていません。 |
-| **ACT** | 緑 | 点滅 | Linux 上での eMMC アクセスを示します。起動中にエラーが発生した場合は、エラーパターンで点滅します（Raspberry Pi のドキュメントを参照）。 |
-| **USER** | 緑/赤/青 | ユーザー定義 | ユーザーによってプログラム可能です。 |
+| **ACT** | 緑 | 点滅 | Linux下でのeMMCアクセスを示します。起動中にエラーが発生した場合、エラーパターンで点滅します（Raspberry Piドキュメントを参照）。 |
+| **USER** | 緑/赤/青 | ユーザー定義 | ユーザーがプログラム可能です。 |
 | **4G** | 緑 | 点灯 | ダイヤルアップが成功し、接続が正常です。 |
-| | | 消灯 | 4G 信号が接続されていないか、デバイスの電源が入っていません。 |
-| **DI1** | 緑 | 点灯/点滅 | 入力信号を検出しました。 |
-| | | 消灯 | 電源がない、またはデータ伝送がありません。 |
-| **DI2** | 緑 | 点灯/点滅 | 入力信号を検出しました。 |
-| | | 消灯 | 電源がない、またはデータ伝送がありません。 |
-| **DO1** | 緑 | 点灯/点滅 | 出力信号を検出しました。 |
-| | | 消灯 | 電源がない、またはデータ伝送がありません。 |
-| **DO2** | 緑 | 点灯/点滅 | 出力信号を検出しました。 |
-| | | 消灯 | 電源がない、またはデータ伝送がありません。 |
-| **COM1 (RS485 チャネル 1)** | 緑 | 点灯/点滅 | データの送受信中です。 |
-| | | 消灯 | RS485 チャネル 1 でデータ転送がありません。 |
-| **COM2 (RS485 チャネル 2)** | 緑 | 点灯/点滅 | データの送受信中です。 |
-| | | 消灯 | RS485 チャネル 2 でデータ転送がありません。 |
-| **COM3 (RS232 チャネル 1)** | 緑 | 点灯/点滅 | データの送受信中です。 |
-| | | 消灯 | RS232 チャネル 1 でデータ転送がありません。 |
-| **COM4 (RS232 チャネル 2)** | 緑 | 点灯/点滅 | データの送受信中です。 |
-| | | 消灯 | RS232 チャネル 2 でデータ転送がありません。 |
+| | | 消灯 | 4G信号が接続されていない、またはデバイスの電源が入っていません。 |
+| **DI1** | 緑 | 点灯/点滅 | 入力信号が検出されました。 |
+| | | 消灯 | 電源なし、またはデータ伝送なし。 |
+| **DI2** | 緑 | 点灯/点滅 | 入力信号が検出されました。 |
+| | | 消灯 | 電源なし、またはデータ伝送なし。 |
+| **DO1** | 緑 | 点灯/点滅 | 出力信号が検出されました。 |
+| | | 消灯 | 電源なし、またはデータ伝送なし。 |
+| **DO2** | 緑 | 点灯/点滅 | 出力信号が検出されました。 |
+| | | 消灯 | 電源なし、またはデータ伝送なし。 |
+| **COM1 (RS485 チャンネル1)** | 緑 | 点灯/点滅 | データの受信または送信中。 |
+| | | 消灯 | RS485 チャンネル1でのデータ転送なし。 |
+| **COM2 (RS485 チャンネル2)** | 緑 | 点灯/点滅 | データの受信または送信中。 |
+| | | 消灯 | RS485 チャンネル2でのデータ転送なし。 |
+| **COM3 (RS232 チャンネル1)** | 緑 | 点灯/点滅 | データの受信または送信中。 |
+| | | 消灯 | RS232 チャンネル1でのデータ転送なし。 |
+| **COM4 (RS232 チャンネル2)** | 緑 | 点灯/点滅 | データの受信または送信中。 |
+| | | 消灯 | RS232 チャンネル2でのデータ転送なし。 |
 
-### ACT ステータスコード
+### ACTステータスコード
 
-以下は、構造化された形式で示した **ACT ステータスコード** の表です。  
+**ACTステータスコード**の構造化されたテーブルは以下の通りです：
 
-| 長い点滅回数 | 短い点滅回数 | 状態の説明 |
+| 長い点滅 | 短い点滅 | ステータス説明 |
 |-------------|--------------|--------------------|
 | 0 | 3 | 一般的な起動失敗 |
-| 0 | 4 | `start*.elf` が見つかりません |
-| 0 | 7 | カーネルイメージが見つかりません |
-| 0 | 8 | SDRAM 障害 |
-| 0 | 9 | SDRAM 不足 |
-| 0 | 10 | HALT 状態 |
-| 2 | 1 | パーティションが FAT ではありません |
-| 2 | 2 | パーティションからの読み取りに失敗しました |
-| 2 | 3 | 拡張パーティションが FAT ではありません |
+| 0 | 4 | `start*.elf` が見つからない |
+| 0 | 7 | カーネルイメージが見つからない |
+| 0 | 8 | SDRAM障害 |
+| 0 | 9 | SDRAM不足 |
+| 0 | 10 | HALT状態 |
+| 2 | 1 | パーティションがFATではない |
+| 2 | 2 | パーティションからの読み取りに失敗 |
+| 2 | 3 | 拡張パーティションがFATではない |
 | 2 | 4 | ファイル署名/ハッシュの不一致（Pi 4） |
-| 4 | 4 | 非対応のボードタイプ |
+| 4 | 4 | サポートされていないボードタイプ |
 | 4 | 5 | 致命的なファームウェアエラー |
-| 4 | 6 | 電源障害タイプ A |
-| 4 | 7 | 電源障害タイプ B |
+| 4 | 6 | 電源障害タイプA |
+| 4 | 7 | 電源障害タイプB |
 
-**補足メモ：**  
+**追加注意事項：**
 
-- **ACT LED が規則的な 4 回点滅パターンで点滅する場合**、bootcode（`start.elf`）が欠落していることを示します。  
-- **ACT LED が不規則なパターンで点滅する場合**、ブートプロセスが開始されています。  
-- **ACT LED がまったく点滅しない場合**、EEPROM コードが破損している可能性があります。周辺機器を一切接続せずに起動してみてください。  
-- 詳細については、**Raspberry Pi フォーラム** を参照してください：[Is your Pi not booting? (Boot Problems Sticky)](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
+- **ACT LEDが規則的な4回点滅パターンで点滅する場合**、ブートコード（`start.elf`）が不足していることを示しています。
+- **ACT LEDが不規則なパターンで点滅する場合**、ブートプロセスが開始されています。
+- **ACT LEDが全く点滅しない場合**、EEPROMコードが破損している可能性があります。接続された周辺機器なしでブートを試してください。
+- 詳細については、**Raspberry Pi Forum**を参照してください：[Is your Pi not booting? (Boot Problems Sticky)](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)。
 
-**USER インジケータ**
+**USERインジケーター**
 
-reComputer R1100 には **USER** インジケータが搭載されており、ユーザーの要件に応じてカスタマイズできます。  
+reComputer R1100には**USER**インジケーターが含まれており、ユーザーの要件に基づいてカスタマイズできます。
 
-**注意：**  
-**USER LED** のテストの詳細については、[This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#control-led-indicators) を参照してください。
+**注意：**
+**USER LED**テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#control-led-indicators)を参照してください。
 
 ### ブザー
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/buzzer.PNG" style={{width:600, height:'auto'}}/></div>
 
-reComputer R1100 にはアクティブブザーが搭載されており、アラームやイベント通知に使用できます。  
+reComputer R1100にはアクティブブザーが搭載されており、アラームやイベント通知に使用できます。
 
-**Buzzer_EN** に対応する GPIO を確認するには、ターミナルで次のコマンドを入力します。  
+**Buzzer_EN**に対応するGPIOを確認するには、ターミナルで以下のコマンドを入力してください：  
 
 ```
 cat /sys/kernel/debug/gpio
 ```
 
-これにより、ブザーに割り当てられた GPIO として **gpio587** が出力されます。  
+これにより、ブザー用に割り当てられたGPIOとして**gpio587**が出力されます。
 
 **注意：**  
-**ブザーのテスト** の詳細については、[This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio) を参照してください。
+**ブザーテスト**の詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#controlling-the-buzzer-via-gpio)を参照してください。
 
 ### RS485
 
-reComputer R1100 シリーズには、**2 つの RS485 ポート** と **6 ピン 3.5mm ピッチの Phoenix 端子台** が搭載されています。各 RS485 ポートには、識別しやすいようにシルク印刷で **"A/B/GND"** と表示されています。  
+reComputer R1100シリーズは、**6ピン3.5mmピッチのPhoenix端子**を持つ**2つのRS485ポート**を搭載しています。各RS485ポートには、識別しやすいように**「A/B/GND」**のシルクスクリーン表記が付いています。
 
 **ピン定義**  
-端子台のピン割り当ては次のとおりです。  
+端子のピン割り当ては以下の通りです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs485.PNG" style={{width:600, height:'auto'}}/></div>
 
-| **ピン ID** | **ピン名**  |  
+| **ピンID** | **ピン名**  |  
 |-----------|-------------|  
 | 1         | RS485-1_A   |  
 | 2         | RS485-2_A   |  
 | 3         | RS485-1_B   |  
 | 4         | RS485-2_B   |  
 | 5         | GND         |  
-| 6         | GND         |  
+| 6         | GND         |
 
-ケーブル接続
-RS485 配線の回路図は次のとおりです。
+ケーブルの接続
+RS485配線の回路図は以下の通りです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs485_connection.PNG" style={{width:600, height:'auto'}}/></div>
 
 :::note
-製品パッケージには 120 オームの終端抵抗が含まれており、RS485 通信で必要に応じて使用できます。
+製品パッケージには120オーム終端抵抗が含まれており、RS485通信に必要に応じて使用できます。
 :::
 
-RS485 テストの詳細については、[This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs485-testing) を参照してください。
+RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs485-testing)を参照してください。
 
 ### RS232
 
-reComputer R1100 シリーズには、6 ピン 3.5mm ピッチの Phoenix 端子台を備えた 2 つの RS232 ポートがあります。
-単一の RS232 ポートのシルク印刷表示は **TX/RX/GND** です。
+reComputer R1100シリーズは、6ピン3.5mmピッチのPhoenix端子を持つ2x RS232ポートを搭載しています。
+単一のRS232ポートのシルクスクリーン表示は**TX/RX/GND**です。
 
 **ピン定義**
 
-端子台のピン定義は次のとおりです。
+端子ピンは以下のように定義されています：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs285.PNG" style={{width:600, height:'auto'}}/></div>
 
-以下は RS232 ピン定義の表です。
+RS232ピン定義の表は以下の通りです：
 
-| **ピン ID** | **ピン名**  |
+| **Pin ID** | **Pin Name**  |
 |-----------|--------------|
 | 13        | R232-3_RX    |
 | 14        | R232-4_RX    |
@@ -360,372 +361,384 @@ reComputer R1100 シリーズには、6 ピン 3.5mm ピッチの Phoenix 端子
 | 17        | GND          |
 | 18        | GND          |
 
-**ケーブル接続**
+**ケーブルの接続**
 
-RS232 配線の回路図は次のとおりです。
+RS232配線の回路図を以下に示します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs285_connection.PNG" style={{width:600, height:'auto'}}/></div>
 
 :::note
-RS232 テストの詳細な手順については、RS485 テストの詳細については [This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs232-testing) を参照してください。
+詳細なRS232テスト手順については、RS485テストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#rs232-testing)を参照してください。
 
 :::
 
-### DI（デジタル入力）
+### DI (デジタル入力)
 
-reComputer R1100 シリーズには、3 ピン 3.5mm ピッチの Phoenix 端子台を備えた 2 つの DI ポートがあります。  
-単一の DI ポートのシルク印刷表示は **"DI/G_DI"** です。  
+reComputer R1100シリーズには、3ピン3.5mmピッチPhoenix端子を持つ2つのDIポートが含まれています。  
+単一のDIポートのシルクスクリーンラベルは**"DI/G_DI"**です。  
 
 **ピン定義**
 
-端子台のピン定義は次のとおりです。
+端子ピンは以下のように定義されています：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DI.PNG" style={{width:600, height:'auto'}}/></div>
 
-以下は **DI（デジタル入力）ピン定義** の表です。  
+以下は**DI (デジタル入力) ピン定義**の表です：  
 
-| **ピン ID** | **ピン名** |
+| **ピンID** | **ピン名** |
 |-----------|------------|
 | 7         | DI1        |
 | 9         | DI2        |
 | 11        | G_DI       |
 
-**ケーブル接続**
+**ケーブルの接続**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DI_connect.PNG" style={{width:600, height:'auto'}}/></div>
 
-以下は **DI（デジタル入力）パラメータ** の表です。  
+以下は **DI（デジタル入力）パラメータ** の表です：
 
 | **パラメータ**           | **説明**    |
 |------------------------|-------------------|
 | 入力タイプ            | PNP               |
-| 絶縁保護              | 5 kV              |
-| DI と G_DI（ON 状態） | 5～30 VDC         |
+| 絶縁保護  | 5 kV              |
+| DI to G_DI（ON状態） | 5~30 VDC          |
 
 :::note
-DI テストの詳細については、[This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#di-digital-input-testing) を参照してください。
+DIテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#di-digital-input-testing)を参照してください。
 :::
 
 ### DO（デジタル出力）
 
-reComputer R1100 シリーズ機器には、3 ピン 3.5mm ピッチの Phoenix 端子台を備えた 2 つの DO ポートが含まれています。単一の DO のシルク印刷表示は **"DO/G_DO"** です。
+reComputer R1100シリーズ機器には2x DOポート、3ピン3.5mmピッチフェニックス端子が含まれています。単一DOのシルクスクリーンは **"DO/G_DO"** です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DO.PNG" style={{width:600, height:'auto'}}/></div>
 
 **ピン定義表**
 
-| Pin ID | Pin Name |  
+| ピンID | ピン名 |  
 |--------|------------|  
 | 8      | DO1       |  
 | 10     | DO2       |  
 | 12     | G_DO      |
 
- **ケーブル接続**
+**ケーブルの接続**
 
- 単一の DO 配線の回路図は次のとおりです。
+単一DOワイヤの回路図は以下の通りです：
 
- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DO_connect.PNG" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DO_connect.PNG" style={{width:600, height:'auto'}}/></div>
 
-**DO ポートパラメータ**
+**DOポートパラメータ**
 
 | パラメータ            | 説明     |  
 |----------------------|----------------|  
-| 出力タイプ           | トランジスタ      |  
-| 絶縁保護             | 5 kV           |  
-| 出力注記             | &lt; 60VDC         |
+| 出力タイプ         | トランジスタ      |  
+| 絶縁保護 | 5 kV           |  
+| 出力注意事項        | &lt; 60VDC         |
 
 :::note
-DO テストの詳細については、[This Section](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#do-digital-output) を参照してください。
+DOテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/#do-digital-output)を参照してください。
 :::
 
 ### ブートスイッチ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/Boot.PNG" style={{width:200, height:'auto'}}/></div>
 
-reComputer R1100 上のブートスイッチは、CM4 モジュールの nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB の間でブートソースを選択できます。  
+reComputer R1100のブートスイッチは、CM4モジュールのnRPI_BOOTピンに接続されています。このスイッチにより、ユーザーはeMMCとUSBの間でブートソースを選択できます。
 
-- **通常モード：** スイッチを "BOOT" ラベルから**離す**ことで、eMMC から起動します。  
-- **書き込みモード：** スイッチを "BOOT" ラベルの**方向へ**倒すことで、システムイメージ書き込み用に Type-C USB インターフェースから起動します。
+- **通常モード：** スイッチを「BOOT」ラベルから**離して**設定し、eMMCからブートします。
+- **フラッシュモード：** スイッチを「BOOT」ラベルに**向けて**設定し、システムイメージのフラッシュ用にType-C USBインターフェースからブートします。
 
-以下は、ブートスイッチ位置とそれに対応するモードの表です。  
+以下は、ブートスイッチの位置と対応するモードの表です：
 
 | **スイッチ位置** | **モード**       | **説明**      | **nRPI-BOOT** |
 |---------------------|---------------|----------------------|---------------|
-| "BOOT" から離す   | 通常モード    | eMMC から起動       | Low           |
-| "BOOT" 方向へ倒す | 書き込みモード | USB から起動        | High          |
+| 「BOOT」から離す   | 通常モード    | eMMCからブート       | Low           |
+| 「BOOT」に向ける     | フラッシュモード     | USBからブート        | High          |
 
 ### USB
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/usb.PNG" style={{width:200, height:'auto'}}/></div>
 
-reComputer R1100 には 1 つの USB Type-C ポートと 2 つの USB Type-A ポートが搭載されています。以下の表に、それぞれの機能と説明を示します。
+reComputer R1100は1つのUSB Type-Cポートと2つのUSB Type-Aポートを搭載しています。以下の表は、それらの機能と説明を示しています。
 
-以下は、USB ポートとその機能の表です。  
+以下はUSBポートとその機能の表です：
 
 | **タイプ**   | **数量** | **プロトコル** | **機能**   | **説明** |
 |-----------|------------|------------|--------------|---------------|
-| Type-C   | 1          | USB 2.0    | USB-Device   | シリアルポートデバッグ、イメージ書き込みなどに使用します。 |
-| Type-A   | 2          | USB 2.0    | USB-Host     | フラッシュドライブ、USB キーボード、マウスなど、さまざまな USB デバイスを接続します。 |
+| Type-C   | 1          | USB 2.0    | USB-Device   | シリアルポートデバッグ、イメージ書き込みなどに使用されます。 |
+| Type-A   | 2          | USB 2.0    | USB-Host     | フラッシュドライブ、USBキーボード、マウスなどの異なるUSBデバイスを接続します。 |
 
-### SD スロット
+### SDスロット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SD.PNG" style={{width:200, height:'auto'}}/></div>
 
-reComputer R1100 シリーズ機器には micro SD カードスロットが搭載されており、ユーザーデータを保存するための micro SD カードを装着できます。
+reComputer R1100シリーズ機器には、ユーザーデータを保存するためのmicro SDカードを取り付けるためのmicro SDカードスロットが含まれています。
 
-### SIM スロット（内部）
+### SIMスロット（内蔵）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/simslot.PNG" style={{width:600, height:'auto'}}/></div>
 
-reComputer R1100 シリーズには内部に Nano SIM カードスロットが搭載されており、Nano SIM カードを装着して 4G 通信を有効にすることができます。下表は、Standard SIM、Micro SIM、Nano SIM カードのサイズの違いを示しています。
+reComputer R1100シリーズには、4G接続を可能にするためのNano SIMカードを取り付けるように設計された内蔵Nano SIMカードスロットが含まれています。下の表は、標準SIM、Micro SIM、Nano SIMカードのサイズの違いを示しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SIMsizes.PNG" style={{width:400, height:'auto'}}/></div>
 
 :::note
-reComputer R1100 の標準バージョンには 4G モジュールは内蔵されていません。4G 機能が必要な場合は、別途 4G モジュールを購入する必要があります。詳細については[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#optional-interfaces-and-modules)を参照してください。
+reComputer R1100の標準バージョンには、内蔵4Gモジュールは含まれていません。4G機能が必要な場合は、追加の4Gモジュールを別途購入する必要があります。詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#optional-interfaces-and-modules)を参照してください。
 :::
 
-### SSD スロット
+### SSDスロット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SSD.PNG" style={{width:600, height:'auto'}}/></div>
 
-reComputer R1100 には **NVMe M.2 2280 SSD スロット**が搭載されており、**128GB、256GB、512GB、1TB** の容量に対応しています。このスロットにより、高速なストレージ拡張が可能となり、システムの**性能**と**容量**の両方を強化できます。  
+reComputer R1100には**NVMe M.2 2280 SSDスロット**が搭載されており、**128GB、256GB、512GB、1TB**のストレージ容量をサポートしています。このスロットにより高速ストレージ拡張が可能になり、ユーザーはシステムの**パフォーマンス**と**容量**の両方を向上させることができます。
 
 **注意：**  
-SSD カードには主に 2 つの用途があります：  
+SSDカードには主に2つの用途があります：
 
-1. **大容量ストレージ** – SSD を大容量ストレージ用途として使用する。  
-2. **システムイメージを格納したブートドライブ** – 一部の SSD は、大容量ストレージとしてだけでなく、システムのブートドライブとしても使用できます。  
+1. **大容量ストレージ** – SSDは大容量ストレージのニーズに使用できます。
+2. **システムイメージ付きブートドライブ** – 一部のSSDは大容量ストレージとシステムのブートドライブの両方として使用できます。
 
-ただし、すべての SSD がブート機能をサポートしているわけではありません。SSD をブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、ブート機能についてテストおよび検証済みの **1TB SSD（SKU112990267）** を推奨します。これにより、互換性の問題を軽減し、試行錯誤にかかるコストを最小限に抑えることができます。
+ただし、すべてのSSDがブート機能をサポートしているわけではありません。SSDをブートドライブとして使用する予定で、どのモデルを購入すべきかわからない場合は、ブート機能がテストされ検証済みの**1TB SSD（SKU112990267）**をお勧めします。これにより互換性の問題が軽減され、試行錯誤のコストが最小限に抑えられます。
 
-### reComputer R1100 上の Mini-PCIe スロット
+### reComputer R1100のMini-PCIeスロット
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/pci.PNG" style={{width:600, height:'auto'}}/></div>
 
-reComputer R1100 には **2 つの Mini-PCIe スロット**が搭載されており、さまざまな通信プロトコルをサポートします。下表に各スロットでサポートされるプロトコルを示します。  
+reComputer R1100には**2つのMini-PCIeスロット**が搭載されており、さまざまな通信プロトコルをサポートしています。下の表は、各スロットでサポートされているプロトコルの概要を示しています：
 
-| **スロット**       | **対応プロトコル**   |  
+| **スロット**       | **サポートされているプロトコル**   |  
 |---------------|--------------------------|  
-| **Mini-PCIe 1** | 4G LTE, USB LoRa® |  
-| **Mini-PCIe 2** | SPI LoRa®, USB LoRa® |  
+| **Mini-PCIe 1** | 4G LTE、USB LoRa®、USB Zigbee |  
+| **Mini-PCIe 2** | SPI LoRa®、USB LoRa®、USB Zigbee |
 
-これらのスロットにより、ユーザーは必要に応じて **4G LTE および LoRa® モジュール**を統合し、接続オプションを拡張できます。
+これらのスロットにより、ユーザーは接続オプションを拡張でき、必要に応じて**4G LTE、LoRa®、およびZigbee**モジュールとの統合が可能になります。
 
-本機には **Mini-PCIe インターフェース**が 2 つ、**スロット 1** と **スロット 2** が搭載されています。  
+このデバイスには2つの**Mini-PCIeインターフェース**が含まれています：**スロット1**と**スロット2**です。
 
-- **Mini-PCIe スロット 1** は **SIM カードスロット**に接続されており、**USB プロトコル**をサポートするため、**4G LTE および USB LoRa® モジュール**の接続に適しています。  
-- **Mini-PCIe スロット 2** は **USB と SPI の両プロトコル**をサポートしますが、SIM カードスロットには**接続されていません**。**SPI LoRa® および USB LoRa® デバイス**を搭載できます。  
+- **Mini-PCIeスロット1**は**SIMカードスロット**に接続されており、**USBプロトコル**をサポートしているため、**4G LTE、USB LoRa®、およびUSB Zigbee**モジュールの接続に適しています。
+- **Mini-PCIeスロット2**は**USBとSPIプロトコルの両方**をサポートしていますが、SIMカードスロットには**接続されていません**。**SPI LoRa®、USB LoRa®、およびUSB Zigbee**デバイスを収容できます。
 
-これらのスロットにより、さまざまな無線通信モジュールに対して柔軟な拡張オプションが提供されます。
+これらのスロットは、さまざまなワイヤレス通信モジュールに対して柔軟な拡張オプションを提供します。
 
-### リセットホール  
+### リセットホール
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reset.PNG" style={{width:200, height:'auto'}}/></div>
 
-reComputer R1100 には、リセットホール内に **ミニプッシュボタンスイッチ**が搭載されています。このボタンを細い物で押すことで、ユーザーは **CM4 をリセット**できます。  
+reComputer R1100には、リセットホール内に配置された**ミニプッシュボタンスイッチ**が搭載されています。細い物体でこのボタンを押すことで、ユーザーは**CM4をリセット**できます。
 
-- このピンが**High**のときは、**CM4 が起動している**ことを示します。  
-- このピンを**Low**にすると、**モジュールがリセット**されます。
+- このピンが**ハイ**の場合、**CM4が開始された**ことを示します。
+- このピンが**ローに駆動**されると、**モジュールがリセット**されます。
 
-### Ethernet RJ45  
+### イーサネットRJ45
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/eth.PNG" style={{width:200, height:'auto'}}/></div>
 
-**reComputer R1100** には 2 つの Ethernet ポートが搭載されています。  
+**reComputer R1100**には2つのイーサネットポートが装備されています：
 
-| 名称  | 種類                         | 速度              | PoE 対応                |
+| 名前  | タイプ                        | 速度                | PoEサポート                |
 |-------|------------------------------|---------------------|----------------------------|
-| ETH0  | CM4 ネイティブ Gigabit Ethernet  | 10/100/1000 Mbit/s  | 対応（追加モジュールが必要） |
-| ETH1  | USB 変換 Ethernet           | 10/100 Mbit/s       | 非対応             |
+| ETH0  | CM4ネイティブギガビットイーサネット | 10/100/1000 Mbit/s  | サポート（追加モジュール付き） |
+| ETH1  | USBから変換                   | 10/100 Mbit/s       | サポートなし               |
 
-**reComputer R1100** には 2 つの Ethernet RJ45 ポートが搭載されています。  
+**reComputer R1100**は2つのイーサネットRJ45ポートを搭載しています：
 
-- **ETH0**：**CM4 ネイティブ Gigabit Ethernet** インターフェースで、**10/100/1000 Mbit/s** の速度をサポートします。追加の **PoE モジュール**を搭載することで、デバイスに電力を供給する **Power over Ethernet（PoE）** を有効にできます。  
-- **ETH1**：**USB 変換 Ethernet** インターフェースで、**10/100 Mbit/s** の速度をサポートしますが、**PoE には対応していません**。
+- **ETH0**: **CM4ネイティブギガビットイーサネット**インターフェースで、**10/100/1000 Mbit/s**の速度をサポートします。追加の**PoEモジュール**でアップグレードして、デバイスの電源供給のための**Power over Ethernet (PoE)**を有効にできます。
+- **ETH1**: **USB変換イーサネット**インターフェースで、**10/100 Mbit/s**の速度をサポートしますが、**PoEはサポートされていません**。
 
 **注意**  
-PoE の詳細については[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#poe-power-over-ethernet)を参照してください。
+PoEの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#poe-power-over-ethernet)を参照してください。
 
 ### HDMI
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/display.PNG" style={{width:200, height:'auto'}}/></div>
 
-reComputer R1100 は CM4 からのネイティブ HDMI インターフェースを備えており、最大 **4K@60fps** のビデオ出力をサポートします。マルチディスプレイを必要とするアプリケーションに最適で、外部の大型スクリーンへのコンテンツ出力が可能です。
+reComputer R1100は、CM4からのネイティブHDMIインターフェースを搭載し、最大**4K@60fps**のビデオ出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーが外部の大画面にコンテンツを出力できます。
 
 ### RTC  
 
-reComputer R1100 には **RTC（Real-Time Clock）回路**が搭載されており、**CR2032 バッテリー**があらかじめ装着されています。これにより、電源が失われた場合でも正確な時刻保持が可能です。  
+reComputer R1100には、**CR2032バッテリー**が事前にインストールされた**RTC（リアルタイムクロック）回路**が含まれており、電源喪失時でも正確な時刻管理を保証します。
 
 :::note
-RTC テストの詳細については[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#rtc-real-time-clock-testing)を参照してください。
+RTCテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/#rtc-real-time-clock-testing)を参照してください。
 :::  
 
 ### ウォッチドッグ  
 
-reComputer R1100 には、システムがクラッシュした場合に自動的に再起動を行う **独立したハードウェアウォッチドッグ回路**が搭載されています。このウォッチドッグは **RTC** によって実装されており、**1〜255 秒の柔軟な給電（フィード）時間**を設定できます。  
+reComputer R1100は、システムクラッシュ時に自動的にシステムを再起動する**独立したハードウェアウォッチドッグ回路**を搭載しています。このウォッチドッグは**RTC**を通じて実装され、**1秒から255秒までの柔軟な給餌時間**を可能にします。
 
 :::note
-ウォッチドッグテストの詳細については[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r/#ウォッチドッグ)を参照してください。
+ウォッチドッグテストの詳細については、[このセクション](https://wiki.seeedstudio.com/ja/recomputer_r/#watchdog)を参照してください。
 :::
 
-## オプションインターフェースおよびモジュール  
+## オプションインターフェースとモジュール  
 
-reComputer R1100 は、**幅広い拡張モジュールおよびアクセサリ**をサポートしており、さまざまなユースケースに適応できます。reComputer R1100 のカスタマイズに興味がある場合は、**odm@seeed.cc** までお問い合わせください。  
+reComputer R1100は**幅広い拡張モジュールとアクセサリ**をサポートし、様々な用途に適応できます。reComputer R1100のカスタマイズに興味がある場合は、詳細について**odm@seeed.cc**にお問い合わせください。
 
-#### アクセサリおよびオプションモジュール一覧
+#### アクセサリとオプションモジュールのリスト
 
-読みやすさを高めるために整形した表を以下に示します。  
+読みやすさを向上させるためにフォーマットされた表は以下の通りです：
 
 | **備考**                                     | **項目**               | **製品名**                                      | **SKU**         |
 |------------------------------------------------|------------------------|------------------------------------------------------|----------------|
-| **LoRa® WAN 機能には一緒に使用する必要があります** | LoRa® モジュール           | Region optional LoRaWAN Gateway Module (SPI) - US915 | 114992969      |
-|                                                |                        | Region optional LoRaWAN Gateway Module (SPI) - EU868 | 114993268      |
-|                                                |                        | Region optional LoRaWAN Gateway Module (USB) - US915 | 114992991      |
-|                                                |                        | Region optional LoRaWAN Gateway Module (USB) - EU868 | 114992628      |
-| **LoRa® アンテナ**                              | LoRa® アンテナ          | LoRa Antenna Kit - 868-915MHz                        | 110061501      |
-| **このアクセサリは Wi-Fi 機能に必須です** | Wi-Fi/BLE アンテナ     | Raspberry Pi Compute Module 4 Antenna Kit           | 114992364      |
-| **4G 機能には 4G モジュールと 4G アンテナが、GPS 機能には 4G モジュールと GPS アンテナが必要です** | 4G モジュール | LTE Cat 4 EC25-AFXGA Mini-PCIe Module - North America | 113991134      |
-|                                                |                        | LTE Cat 4 EC25-EUXGR Mini-PCIe Module - EMEA & Thai  | 113991135      |
-|                                                |                        | LTE Cat 4 EC25-AUXGR Mini-PCIe Module - Australia    | 113991174      |
-|                                                |                        | LTE Cat 4 EC25-EFA Mini-PCIe Module - Thailand       | 113991214      |
-|                                                |                        | LTE Cat 4 EC25-EMGA Mini-PCIe Module - Malaysia      | 113991234      |
-|                                                |                        | LTE Cat 4 EC25-JFA Mini-PCIe Module - Japan          | 113991296      |
-| **4G アンテナ**                                 | 4G アンテナ            | 4G Antenna Kit for 4G module                        | 110061502      |
-| **GPS アンテナ**                                | GPS アンテナ           | GPS Antenna Kit for EC25 4G Module                  | 110061521      |
-| **暗号化チップ**                            | TPM 2.0               | TPM 2.0 Module with Infineon SLB9670                | 114993114      |
-| **SSD ストレージ**                                | SSD カード              | NVMe M.2 2280 SSD 1TB                               | 112990267      |
-|                                                |                        | 512GB NVMe M.2 PCIe Gen3x4 2280 Internal SSD        | 112990247      |
-|                                                |                        | 256GB NVMe M.2 PCIe Gen3x4 2280 Internal SSD        | 112990246      |
-|                                                |                        | 128GB NVMe M.2 PCIe Gen3x4 2280 Internal SSD        | 112990226      |
-| **このモジュールは reComputer R1100 のキャリアボードに半田付けする必要があります** | PoE | MQ7813T120 PoE Module Kit for reTerminal DM | 110991925 |
-| **UPS**                                        | UPS                   | SuperCAP UPS LTC3350 Module                         | 110992004      |
+| **LoRa® WAN機能には一緒に使用する必要があります** | LoRa®モジュール           | 地域選択可能LoRaWANゲートウェイモジュール（SPI）- US915 | 114992969      |
+|                                                |                        | 地域選択可能LoRaWANゲートウェイモジュール（SPI）- EU868 | 114993268      |
+|                                                |                        | 地域選択可能LoRaWANゲートウェイモジュール（USB）- US915 | 114992991      |
+|                                                |                        | 地域選択可能LoRaWANゲートウェイモジュール（USB）- EU868 | 114992628      |
+| **LoRa®アンテナ**                              | LoRa®アンテナ          | LoRaアンテナキット - 868-915MHz                        | 110061501      |
+| **Zigbeeモジュール**                              | Zigbeeモジュール         | Mini-PCIe USB Zigbeeモジュール                          | 110992005      |
+| **Zigbeeアンテナ**                             | Zigbeeアンテナ        | reComputer R1100用Zigbeeアンテナキット             | 110061641      |
+| **このアクセサリはWi-Fi機能に必要です** | Wi-Fi/BLEアンテナ     | Raspberry Pi Compute Module 4 アンテナキット           | 114992364      |
+| **4G機能には4Gモジュールと4Gアンテナ、GPS機能には4GモジュールとGPSアンテナが必要です** | 4Gモジュール | LTE Cat 4 EC25-AFXGA Mini-PCIeモジュール - 北米 | 113991134      |
+|                                                |                        | LTE Cat 4 EC25-EUXGR Mini-PCIeモジュール - EMEA & タイ  | 113991135      |
+|                                                |                        | LTE Cat 4 EC25-AUXGR Mini-PCIeモジュール - オーストラリア    | 113991174      |
+|                                                |                        | LTE Cat 4 EC25-EFA Mini-PCIeモジュール - タイ       | 113991214      |
+|                                                |                        | LTE Cat 4 EC25-EMGA Mini-PCIeモジュール - マレーシア      | 113991234      |
+|                                                |                        | LTE Cat 4 EC25-JFA Mini-PCIeモジュール - 日本          | 113991296      |
+| **4Gアンテナ**                                 | 4Gアンテナ            | 4Gモジュール用4Gアンテナキット                        | 110061502      |
+| **GPSアンテナ**                                | GPSアンテナ           | EC25 4Gモジュール用GPSアンテナキット                  | 110061521      |
+| **暗号化チップ**                            | TPM 2.0               | Infineon SLB9670搭載TPM 2.0モジュール                | 114993114      |
+| **SSDストレージ**                                | SSDカード              | NVMe M.2 2280 SSD 1TB                               | 112990267      |
+|                                                |                        | 512GB NVMe M.2 PCIe Gen3x4 2280 内蔵SSD        | 112990247      |
+|                                                |                        | 256GB NVMe M.2 PCIe Gen3x4 2280 内蔵SSD        | 112990246      |
+|                                                |                        | 128GB NVMe M.2 PCIe Gen3x4 2280 内蔵SSD        | 112990226      |
+| **このモジュールはreComputer R1100のキャリアボードにはんだ付けする必要があります** | PoE | reTerminal DM用MQ7813T120 PoEモジュールキット | 110991925 |
+| **UPS**                                        | UPS                   | SuperCAP UPS LTC3350モジュール                         | 110992004      |
 
-**reComputer R1100** メインボードには **2 つの Mini-PCIe スロット**があり、次の互換性があります。  
+**reComputer R1100** メインボードには **2つのMini-PCIeスロット** があり、以下の互換性があります：
 
-- **Mini-PCIe スロット 1** は以下をサポートします:  
-  - **4G モジュール**（USB プロトコル）  
-  - **LoRa® モジュール**（USB プロトコル）  
+- **Mini-PCIeスロット1** は以下をサポートします：
+  - **4Gモジュール** (USBプロトコル)
+  - **LoRa®モジュール** (USBプロトコル)
+  - **Zigbeeモジュール** (USBプロトコル)
 
-- **Mini-PCIe スロット 2** は以下をサポートします:  
-  - **LoRa® モジュール**（USB & SPI プロトコル）  
+- **Mini-PCIeスロット2** は以下をサポートします：
+  - **LoRa®モジュール** (USB & SPIプロトコル)
+  - **Zigbeeモジュール** (USBプロトコル)
 
 :::note
- **4G と LoRa® モジュールは同時には使用できません。**  
- **ボード上に 2 つの LoRa® モジュールを挿すことはできません。**  
+ **4GとLoRa®モジュールは同時に使用できません。**
+ **ボード上に2つのLoRa®モジュールを接続することはできません。**
 
 :::
 
-つまり、**4G か LoRa® のどちらか一方**を選択する必要があり、LoRa® モジュールは常に **1 つだけ** 搭載できます。
+これは、**4GまたはLoRa®** のいずれかを選択する必要があり、**1つ** のLoRa®モジュールのみを同時にインストールできることを意味します。
 
-### Wi-Fi/BLE  
+### Wi-Fi/BLE
 
-**reComputer R1100-10** は、オンボードに **Wi-Fi/BLE 搭載版の CM4** を採用しており、Wi-Fi/BLE のパラメータは CM4 と同一です。詳細な仕様については、**Raspberry Pi 公式サイト** を参照してください。  
+**reComputer R1100-10** は、オンボード **Wi-Fi/BLEバージョン** を搭載した **CM4** によって駆動され、CM4と同じWi-Fi/BLEパラメータを提供します。詳細な仕様については、**Raspberry Pi公式ウェブサイト** を参照してください。
 
-### 4G モジュール
+### 4Gモジュール
 
-**reComputer R1100** メインボードには **2 つの Mini-PCIe スロット** があり、そのうち **Mini-PCIe スロット 1** は **USB プロトコル経由の 4G モジュール** をサポートします。**Quectel EC25 4G モジュール** は reComputer R1100 との互換性が十分にテストされています。  
+**reComputer R1100** メインボードには **2つのMini-PCIeスロット** があり、**Mini-PCIeスロット1** は **USBプロトコル経由の4Gモジュール** をサポートします。**Quectel EC25 4Gモジュール** は、reComputer R1100との互換性について完全にテストされています。
 
 :::note
-**4G 機能** が必要な場合は、**対応する 4G モジュールと外付けアンテナを購入** し、[Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/ja/recomputer_r1100_assembly_guide/) の手順に従ってください。
+**4G機能** が必要な場合は、**対応する4Gモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
-### LoRa® モジュール  
+### LoRa®モジュール
 
-両方の **Mini-PCIe スロット** は **USB プロトコル経由の LoRa® モジュール** をサポートします。さらに、**Mini-PCIe スロット 2** は **SPI プロトコルを使用する LoRa® モジュール** をサポートします。**Seeed Studio 製 WM1302 モジュール** は reComputer R1100 との互換性が十分にテストされています。
+**両方のMini-PCIeスロット** は **USBプロトコル経由のLoRa®モジュール** をサポートします。さらに、**Mini-PCIeスロット2** は **SPIプロトコルを使用するLoRa®モジュール** をサポートします。Seeed Studioの **WM1302モジュール** は、reComputer R1100との互換性について完全にテストされています。
 
 :::note
-**LoRa® 機能** が必要な場合は、**対応する LoRa® モジュールと外付けアンテナを購入** し、[Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/ja/recomputer_r1100_assembly_guide/) の手順に従ってください。
+**LoRa®機能** が必要な場合は、**対応するLoRa®モジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
+:::
+
+### Zigbeeモジュール
+
+Mini-PCIeスロットは **USBプロトコルを使用するZigbeeモジュール** をサポートし、互換性のあるデバイスにZigbee機能をシームレスに統合できます。これにより、Zigbeeネットワーク内での効率的な通信と制御が可能になり、システムの汎用性と接続性が向上します。Zigbeeモジュール用に2つのMini-PCIeスロットが利用可能で、ユーザーは信頼性を向上させるために多様なアプリケーションを実装する柔軟性があります。
+
+:::note
+**Zigbee機能** が必要な場合は、**対応するZigbeeモジュールと外部アンテナを購入** し、[4G/LoRa®/Zigbeeモジュールとアンテナの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-4glorazigbee-module-and-antenna)の手順に従ってください。
 :::
 
 ### PoE（Power over Ethernet）
 
-**reComputer R1100 は PoE 電源モジュールを追加することで IEEE 802.3af PD（Powered Devices）規格に対応** します。**PoE ソケットはあらかじめ基板上に実装されています** が、Ethernet PoE 機能を使用するには、ユーザーが **筐体を分解して PoE モジュールを取り付ける必要があります**。  
+**reComputer R1100は、PoE電源モジュールを追加することでIEEE 802.3af PD (Powered Devices) 標準をサポート** します。**PoEソケットはボード上に事前にはんだ付けされています** が、ユーザーはEthernet PoE機能のために **デバイスを分解してPoEモジュールをインストールする必要があります**。
 
-分解手順については、[Disassembly Guide](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module) を参照してください。  
-
-:::note  
-
-- **reComputer R1100 は PoE 給電に対応していますが、標準製品には PoE モジュールは同梱されていません。**  
-- **Seeed はバッチカスタマイズ注文向けに、PoE のはんだ付けおよび組立サービスを提供しています。**  
-- サンプル評価の場合、お客様は **PoE モジュールを自分で実装および組み立てる必要があります**。手順は **「Assemble PoE Module」** に記載されています。  
-
-:::
-
-### SSD（ストレージ拡張）
-
-**reComputer R1100 は 2280 NVMe SSD** をサポートしており、これは **基板上の 2 つの Mini-PCIe スロットの下にある PCIe スロット（J62）** を介して接続されます。  
+分解ガイダンスについては、[分解ガイド](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)を参照してください
 
 :::note
 
-- **CM4 の PCIe インターフェースは Gen 2.0** であり、**理論上の最大速度は 5Gbps** です。  
-- **Gen 3.0 以上の SSD** を使用した場合、その最大速度に達しない可能性があります。  
-- **reTerminal DM によるテスト結果:**  
-  - **最大書き込み速度:** 230MB/s  
-  - **最大読み出し速度:** 370MB/s  
-- SSD の互換性は製品によって異なる可能性があるため、**承認済みアクセサリリストに掲載されている SSD の購入を推奨します**。  
+- **reComputer R1100はPoE電源をサポートしますが、標準製品にはデフォルトでPoEモジュールが含まれていません。**
+- **Seedはバッチカスタマイズ注文に対してPoEはんだ付けと組み立てサービスを提供しています。**
+- サンプルテストの場合、お客様は **PoEモジュールを自分ではんだ付けして組み立てる必要があります**。手順は **「PoEモジュールの組み立て」** で利用可能です。
 
 :::
 
-**SSD の利用シナリオ:**  
+### SSD (ストレージ拡張)
 
-- **大容量ストレージ** – SSD を使用してストレージ容量を拡張できます。  
-- **システムイメージを格納するブートドライブ** – 一部の SSD はシステムイメージを保存し、**SSD から直接ブート** できます。  
+**reComputer R1100は、ボード上の2つのMini-PCIeスロットの下にあるPCIeスロット（J62）経由で2280 NVMe SSDをサポート** します。
 
 :::note
-**すべての SSD がブート機能をサポートしているわけではありません！**  
-ブート用 SSD が必要で、どれを購入すべきか分からない場合は、Seeed が **1TB SSD（SKU: 112990267）** を推奨します。この SSD は **ブート機能についてテストおよび検証済み** であり、互換性リスクとトラブルシューティングコストを最小限に抑えます。  
-:::
 
-### 暗号チップ - TPM 2.0  
-
-reComputer R1100 は、**Infineon の OPTIGA™ TPM SLB9670** をサポートしており、**Trusted Computing Group（TCG）TPM 2.0** 仕様に準拠しています。  
-
-**主な特長:**  
-
-- **セキュリティ向け暗号チップ**  
-- **SPI インターフェース**（基板上の **ポート J13** に接続）  
-- **ルート・オブ・トラストを提供** – 対象:
-  - **プラットフォームの完全性**
-  - **リモート認証**
-  - **暗号サービス**  
-
-:::note  
-取り付け手順については、[Assemble TPM 2.0 Module](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module) を参照してください。  
+- **CM4のPCIeインターフェースはGen 2.0** で、**最大理論速度は5Gbps** です。
+- **Gen 3.0以上のSSD** を使用する場合、最大速度に達しない可能性があります。
+- **reTerminal DMからのテスト結果は以下の通りです：**
+  - **最大書き込み速度：** 230MB/s
+  - **最大読み取り速度：** 370MB/s
+- SSDの互換性は異なる場合があるため、**承認されたアクセサリリストからSSDを購入することをお勧めします**。
 
 :::
 
-### UPS（無停電電源装置）モジュール
+**SSD使用シナリオ：**
+
+- **大容量ストレージ** – SSDはストレージ容量を拡張するために使用できます。
+- **システムイメージ付きブートドライブ** – 一部のSSDはシステムイメージを保存し、**SSDから直接ブート** できます。
+
+:::note
+**すべてのSSDがブート機能をサポートしているわけではありません！**
+ブート用のSSDが必要で、どれを購入すべきかわからない場合、Seedは **1TB SSD (SKU: 112990267)を推奨** します。これは **ブート機能についてテストおよび検証済み** で、互換性リスクとトラブルシューティングコストを最小限に抑えます。
+:::
+
+### 暗号化チップ - TPM 2.0
+
+reComputer R1100は **Infineonの OPTIGA™ TPM SLB9670** をサポートし、**Trusted Computing Group (TCG) TPM 2.0** 仕様に準拠しています。
+
+**主な機能：**
+
+- **セキュリティ用暗号化チップ**
+- **SPIインターフェース** (ボード上の **ポートJ13** に接続)
+- 以下のための **信頼の基点を提供**：
+  - **プラットフォーム整合性**
+  - **リモート証明**
+  - **暗号化サービス**
+
+:::note
+インストール手順については、[TPM 2.0モジュールの組み立て](https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)を参照してください
+
+:::
+
+### UPS (無停電電源装置) モジュール
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/UPS.PNG" style={{width:600, height:'auto'}}/></div>
 
-reComputer R1100 の **UPS モジュール** は、**7F スーパーキャパシタベース** の電源バックアップシステムで、**直列構成** で動作します。  
+reComputer R1100の **UPSモジュール** は、**直列で動作** する **7Fスーパーキャパシタベース** の電源バックアップシステムです。
 
-**動作概要:**  
+**動作原理：**
 
-1. **DC 5V 電源** と **CM4** の間に配置されます。  
-2. **GPIO 信号** を使用して、**5V 電源が失われたとき** に **CPU** に通知します。  
-3. CPU は電源が尽きる前に **緊急スクリプト** を実行します。  
-4. スクリプトは安全なシステムシャットダウンのために **"$ shutdown"** コマンドを実行します。  
+1. **DC 5V電源** と **CM4** の間に配置されます。
+2. **GPIO信号** を使用して **5V電源が故障** したときに **CPU** に通知します。
+3. CPUは電力枯渇前に **緊急スクリプト** を実行します。
+4. スクリプトは安全なシステムシャットダウンのために **「$ shutdown」コマンド** を実行します。
 
-**バックアップ時間:**  
-**UPS の動作時間** は **システム負荷** に依存します。以下は次の構成でのテスト結果です:  
+**バックアップ持続時間:**  
+**UPS稼働時間**は**システム負荷**に依存します。以下は次の条件でのテスト結果です：  
 
-- **CM4（4GB RAM、32GB eMMC、Wi-Fi モジュール）**。  
+- **CM4 (4GB RAM、32GB eMMC、Wi-Fiモジュール)。**  
 
 ## 追加リソース
 
-- [reComputer R1100 3D ファイル](https://files.seeedstudio.com/R11/reComputer%20R1100_3D.stp)
-- [reComputer R1100 回路図・PCB デザイン](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
+- [reComputer R1100 3Dファイル](https://files.seeedstudio.com/R11/reComputer%20R1100_3D.stp)
+- [reComputer R1100 回路図設計、PCB設計](https://files.seeedstudio.com/R11/reComputer%20R1100_schematic_design_files.zip)
 - [reComputer R1100 フライヤー](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer-R1100/reComputer-R1100-flyer.pdf)
 - [ユーザーマニュアル](https://files.seeedstudio.com/R11/reComputer%20R1100%20User%20Manual-V1.0.pdf)
 
 
 
-## リソース
+## 参考資料
 
 <JetsonLeadQuote
-  buttonText="Request Quote of Customization"
+  buttonText="見積もり依頼"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
@@ -733,7 +746,7 @@ reComputer R1100 の **UPS モジュール** は、**7F スーパーキャパシ
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。お客様が弊社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択できるよう、複数のコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
