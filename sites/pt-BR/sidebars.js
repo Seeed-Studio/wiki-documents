@@ -3695,6 +3695,13 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/pt_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
+                {
+                  type: 'category',
+                  label: 'Placa carrier J601-Robotics',
+                  items: [
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
+                  ],
+                },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/pt_reComputer_A203_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A205/pt_reComputer_A205_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A603/pt_A603_Flash_JetPack',

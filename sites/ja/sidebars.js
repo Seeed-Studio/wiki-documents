@@ -3696,6 +3696,13 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/ja_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
+                {
+                  type: 'category',
+                  label: 'J601-Robotics キャリアボード',
+                  items: [
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/ja_reComputer_Robotics_J601_Getting_Started',
+                  ],
+                },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/ja_reComputer_A203_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A205/ja_reComputer_A205_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A603/ja_A603_Flash_JetPack',

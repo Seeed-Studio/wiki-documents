@@ -3704,7 +3704,7 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'Getting Started with reComputer Robotics J601',
+                  label: 'J601-Robotics Carrier Board',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
                   ],
