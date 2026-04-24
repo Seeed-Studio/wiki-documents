@@ -9,9 +9,10 @@ keywords:
   - Robotics
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_recomputer_robotics_j601_carrier_board_getting_started
+sku: 100060965
 last_update:
   date: 04/24/2026
-  author: Codex
+  author: Dayu
 createdAt: '2026-04-24'
 updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started/
