@@ -1,5 +1,5 @@
 ---
-description: デバイスをインストールした後に、reComputer Industrial R20xx シリーズ上のハードウェアコンポーネントを設定およびテストする方法を学びます。この Wiki では、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、5G，4G、RS485、RS232、DI/DO テスト、安全なシャットダウンのための UPS について説明します。
+description: デバイスを取り付けた後に、reComputer Industrial R20xx シリーズ上のハードウェアコンポーネントを設定およびテストする方法を学びます。この Wiki では、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、5G，4G、RS485、RS232、DI/DO テスト、安全なシャットダウンのための UPS について説明します。
 title: reComputer Industrial R20xx を設定する
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-11-26'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## 概要
 
-デバイスをインストールした後に、reComputer Industrial R20xx シリーズ上のハードウェアコンポーネントを設定およびテストする方法を学びます。この Wiki では、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、4G、5G、RS485、RS232、DI/DO テスト、安全なシャットダウンのための UPS などについて説明します。
+デバイスを取り付けた後に、reComputer Industrial R20xx シリーズ上のハードウェアコンポーネントを設定およびテストする方法を学びます。この Wiki では、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、4G、5G、RS485、RS232、DI/DO テスト、安全なシャットダウンのための UPS などを扱います。
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_configure_syste
 
 GPIO マッピングとオフセットを確認するには、次の手順に従います。
 
-1. GPIO マッピングを確認するには、次のコマンドをコピー＆ペーストします。
+1. 次のコマンドをコピー＆ペーストして GPIO マッピングを確認します。
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -100,7 +100,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 このコマンドは、指定した SPI デバイス（**/dev/spidev10.0**）上で SPI 通信をテストし、詳細出力（ -v ）を有効にして、メッセージ "hello"（**-p hello**）を送信します。
-TPM モジュールの MISO と MOSI ピンをショートさせることで、MOSI から送信されたデータが MISO で受信されるループバックの状態を作り出します。この構成により、実際のデバイスを接続しなくても SPI 通信をテストできます。
+TPM モジュールの MISO と MOSI ピンをショートさせることで、MOSI から送信されたデータが MISO で受信されるループバックの状態を作ります。この構成により、実際のデバイスを接続しなくても SPI 通信をテストできます。
 
 ## Wi-Fi スキャン
 
@@ -311,7 +311,7 @@ SX1261_RESET_PIN=634     # SX1261 reset (LBT / Spectral Scan)
 
 ctrl+x を押して終了し、y を押して変更を保存し、その後 Enter を押してコマンドライン画面に戻ります。
 
-6. 使用しているモジュールに応じて選択される global_conf.json.sx1250.US915 設定ファイル内で、LoraWAN® モジュールのデフォルト SPI ポートを置き換えます。
+6. global_conf.json.sx1250.US915 設定ファイル内で、LoraWAN® モジュールのデフォルト SPI ポートを置き換えます（使用しているモジュールに応じて設定ファイルを選択します）。
 
 ```bash
 sudo nano packet_forwarder/global_conf.json.sx1250.US915
@@ -392,7 +392,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-10〜15 秒後（モジュールの電源オンと USB の列挙に時間がかかります）、デバイスノードが出現するか確認します：
+10〜15 秒後（モジュールの電源投入と USB の列挙に時間がかかります）、デバイスノードが表示されるか確認します：
 
 ```bash
 ls /dev/ttyUSB*
@@ -424,7 +424,7 @@ AT
 ATD<phone_number>;
 ```
 
-発信したい電話番号で **phone_number** を置き換えてください。
+**phone_number** を、発信したい目的の電話番号に置き換えてください。
 コマンドの末尾にセミコロン ; を付けて、電話番号の終わりを示すようにしてください。
 
 ## Mini-PCIe 経由の 4G セルラー
@@ -450,7 +450,7 @@ echo  0  >  gpio643/value
 sudo ./power_4g.sh
 ```
 
-10〜15 秒後（モジュールの電源オンと USB の列挙に時間がかかります）、デバイスノードが出現するか確認します：
+10〜15 秒後（モジュールの電源投入と USB の列挙に時間がかかります）、デバイスノードが表示されるか確認します：
 
 ```bash
 ls /dev/ttyUSB*
@@ -482,7 +482,7 @@ AT+QCFG="usbnet",1
 最後の行に OK と表示されれば成功です。
 
 > Note
-> デバイスはしばらく待つ必要があり、その後 ifconfig で usb0 の IP アドレスを確認できます。
+> しばらく待つ必要があり、その後 ifconfig で usb0 の IP アドレスを確認できます。
 
 ネットワーク状態と通信をテストします：
 
@@ -495,7 +495,7 @@ ping www.baidu.com -I usb0
 
 ## RS485 テスト
 
-reComputer Industrial R20xx には **3 つの RS485 ポート** が含まれています。以下はそれぞれに対応する **COM ポート** と **デバイスファイル** です：  
+reComputer Industrial R20xx には **3 つの RS485 ポート** が含まれています。以下はそれぞれの **COM ポート** と **デバイスファイル** です：  
 
 | **RS485 ポート数** | **COM ポート** | **シルク印刷ラベル** | **デバイスファイル** |
 |---------------------------|--------------|----------------------|-----------------|
@@ -521,10 +521,10 @@ sudo minicom -D /dev/ttyACM2
 
 - ***Ctrl+A*** を押し、その後 ***Z*** を押すと、Minicom Command Summary インターフェースが表示されます：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- さらに ***O*** を押して設定を開き、Serial port setup を選択して ***Enter*** を押します；すべての RS485 関連インターフェースを開き、***H/I/J/K/L*** を順番に押して有効にします；
+- さらに ***O*** を押して設定を開き、Serial port setup を選択して ***Enter*** を押します。すべての RS485 関連インターフェースを開き、***H/I/J/K/L*** を順番に押して有効にします。
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- すべてが "YES" と表示されたら、Enter を押して戻り、その後 Exit を選択して終了します。
+- すべてが "YES" と表示されたら Enter を押して戻り、その後 Exit を選択して終了します。
 
 :::note
 
@@ -567,7 +567,7 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 
 ## DI（デジタル入力）テスト
 
-reComputer Industrial R20xx には 8 つの DI ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R20xx には 8 つの DI ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -616,7 +616,7 @@ reComputer Industrial R20xx には 8 つの DI ポートが含まれており、
   </table>
 </div>
 
-DI ポートの入力タイプは PNP です。5VDC〜24VDC の入力電圧をサポートし、電流は 1000mA です。
+DI ポートの入力タイプは PNP です。対応する入力電圧は 5VDC〜24VDC、電流は 1000mA です。
 DI の機能をテストするには、次の手順に従ってテストできます：
 
 1. reComputer Industrial R20xx の DI ポートと外部負荷との接続が完了していることを確認します。
@@ -632,7 +632,7 @@ cat /sys/class/gpio/gpio588/value
 
 ## DO（デジタル出力）
 
-reComputer Industrial R20xx には 8 つの DO ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R20xx には 8 つの DO ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -655,19 +655,19 @@ reComputer Industrial R20xx には 8 つの DO ポートが含まれており、
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
       <tr>
-        <td>DO6</td>
+        <td>DO5</td>
         <td>GPIO577</td>
+      </tr>
+      <tr>
+        <td>DO6</td>
+        <td>GPIO578</td>
       </tr>
       <tr>
         <td>DO7</td>
@@ -681,8 +681,8 @@ reComputer Industrial R20xx には 8 つの DO ポートが含まれており、
   </table>
 </div>
 
-DO ポートの出力タイプはトランジスタです。出力電圧は 60 VDC 未満、電流容量は 500 mA をサポートします。
-DO の機能をテストするには、次の手順に従ってテストできます：
+DO ポートの出力タイプはトランジスタです。60 VDC 未満の出力電圧と、500 mA の電流容量をサポートします。
+DO の機能をテストするには、次の手順に従ってテストできます。
 
 1. reComputer Industrial R20xx の DO ポートと外部負荷との接続を完了します。
 2. 出力を High レベルまたは Low レベルに設定するために、次のコマンドを入力します：
@@ -698,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 ## USB ハブのテスト
 
-USB ハブをテストするには、次の手順を使用できます：
+USB ハブをテストするには、次の手順を使用します。
 
 1. ***lsusb*** コマンドを実行して、USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
 
@@ -711,7 +711,7 @@ USB ハブが正常に動作している場合、lsusb コマンドの出力に�
 
 ## RTC（リアルタイムクロック）のテスト
 
-リアルタイムクロック（RTC）の機能をテストするには、次の手順に従います：
+リアルタイムクロック（RTC）の機能をテストするには、次の手順に従います。
 
 1. 自動時刻同期を無効にします：
 
@@ -728,7 +728,7 @@ sudo hwclock --set --date "2025-7-17 12:00:00"
 ```
 
 3. RTC 時刻をシステムに同期します
-システム時刻を RTC 時刻に合わせて更新します：  
+システム時刻を RTC 時刻に合わせて更新します。  
 
 ```bash
 sudo hwclock --hctosys
@@ -742,13 +742,13 @@ sudo hwclock -r
 
 このコマンドは、RTC に保存されている時刻を読み取り、表示します。
 
-5. RTC から電源を切り離し、数分待ってから再接続し、RTC 時刻が正しい時刻を保持しているかどうかを再度確認します。
+5. RTC から電源を切り離し、数分待ってから再接続し、RTC 時刻が正しい時刻を保持しているか再度確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## ウォッチドッグタイマーのテスト
 
-ウォッチドッグテストを実行するには、次の手順に従います：
+ウォッチドッグテストを実行するには、次の手順に従います。
 
 1. ウォッチドッグソフトウェアをインストールします：
 
@@ -810,7 +810,7 @@ echo "c" > /proc/sysrq-trigger
 このコマンドはカーネルクラッシュをトリガーし、ウォッチドッグによってシステムが再起動されるはずです。
 
 5. 指定したタイムアウト時間後にシステムが再起動することを確認するため、システムを監視します。
-これらの手順により、システム上のウォッチドッグタイマーの機能をテストし、確認することができます。
+これらの手順により、システム上のウォッチドッグタイマーの機能をテストし、確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -836,7 +836,7 @@ echo 0 > /sys/class/gpio/gpio627/value
 
 ## TPM 2.0
 
-TPM 2.0 モジュールをデバイスに接続した場合、次のコードで TPM 接続を確認できます。
+TPM 2.0 モジュールをデバイスに接続している場合、次のコードで TPM 接続を確認できます。
 
 ```bash
 ls /dev | grep tpm
@@ -844,11 +844,11 @@ ls /dev | grep tpm
 
 **出力の解釈：**  
 
-出力に ***tpm0*** と ***tpmrm0*** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識され、アクセス可能であることを示しており、良好な状態です。デバイスが存在しアクセス可能であることを確認したうえで、TPM 関連の機能やアプリケーションを使用することができます。
+出力に ***tpm0*** と ***tpmrm0*** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識され、アクセス可能であることを示しており、良好な状態です。TPM 関連の機能やアプリケーションを、デバイスが存在しアクセス可能であることを前提に進めることができます。
 
 ## ATECC608A
 
-ATECC608A デバイスとやり取りしてランダムなシリアル番号を生成するには、次の手順に従います：
+ATECC608A デバイスとやり取りしてランダムなシリアル番号を生成するには、次の手順に従います。
 
 1. atecc-util リポジトリをクローンします：
 
@@ -879,7 +879,7 @@ cd usr/bin
 
 ## EEPROM とのやり取り
 
-EEPROM（Electrically Erasable Programmable Read-Only Memory）とやり取りするためのコマンドは次のとおりです：
+EEPROM（Electrically Erasable Programmable Read-Only Memory）とやり取りするためのコマンドは次のとおりです。
 
 1. EEPROM デバイスファイルに対して、読み取り・書き込み・実行のフルパーミッションを付与します：
 
@@ -901,19 +901,19 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 
 ## SSD 検出の確認
 
-SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。方法は次のとおりです：
+SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。手順は次のとおりです。
 
 ```bash
 sudo fdisk -l
 ```
 
-このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、正しく検出されていれば SSD も含まれます。SSD を表すエントリを探してください。通常、***/dev/sd*** に続いて文字（例：***/dev/sda, /dev/sdb,*** など）が付いた形式になります。
+このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、SSD が正しく検出されていればそれも含まれます。SSD を表すエントリを探してください。通常、***/dev/sd*** に続いて文字（例：***/dev/sda, /dev/sdb,*** など）が付いた形式になります。
 SSD に対応するエントリを特定したら、必要に応じてパーティション作成やフォーマットを進めることができます。
 
 ## 安全なシャットダウンのための UPS
 
-CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告するために使用されます。その後、CPU はスーパーキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、「$ shutdown」を実行する必要があります。
-この機能を使用する別の方法は、GPIO ピンの変化時にシャットダウンを開始することです。指定された GPIO ピンは、KEY_POWER イベントを生成する入力キーとして構成されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
+CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告するために使用されます。その後、CPU はスーパーキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、"$ shutdown" を実行する必要があります。
+この機能を使用する別の方法は、GPIO ピンの変化をトリガとしてシャットダウンを開始することです。指定された GPIO ピンは、KEY_POWER イベントを生成する入力キーとして設定されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
 
 1. ハードウェア接続。
 
@@ -922,7 +922,7 @@ UPS デバイスの ***'CM5_UPS_DET'*** ピンが R20xx デバイスの GPIO16 �
 2. 設定ファイルを変更します。
 
 - ターミナルを開きます。
-- 設定ファイルを編集するために、次のコマンドを実行します：
+- 次のコマンドを実行して設定ファイルを編集します：
 
 ```bash
 sudo nano /boot/firmware/config.txt
@@ -936,7 +936,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了します）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了）。
 
 4. Python スクリプトを準備します
 
@@ -991,12 +991,12 @@ while True:
         os.system('sudo shutdown -h now')
 ```
 
-エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了します）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了）。
 
 5. スクリプトを実行します。
 
 - ターミナルを開きます。
-- スクリプトを実行するために、次のコマンドを実行します：
+- 次のコマンドを実行してスクリプトを実行します：
 
 ```bash
 sudo python3 ups_shutdown.py
@@ -1006,7 +1006,7 @@ sudo python3 ups_shutdown.py
  `sudo` を使用して、スクリプトがシャットダウンコマンドを実行するのに十分な権限を持つようにします。
 :::
 
-6. 停電テストをシミュレートします
+6. 電源障害テストをシミュレートします
 
 - 外部電源を遮断します。
 - システムが自動的にデータを保存してシャットダウンするかどうかを確認します。
@@ -1020,7 +1020,7 @@ sudo python3 ups_shutdown.py
 
 :::note
 
-1. UPS 機能については、詳細情報についてお問い合わせください。
+1. UPS 機能については、詳細情報をお問い合わせください。
 2. アラーム信号はアクティブ Low です。
 
 :::
@@ -1029,7 +1029,7 @@ sudo python3 ups_shutdown.py
 
 reComputer Industrial R20xx の M.2 M-KEY 2280 スロットは、PCIE M.2 AI アクセラレータを搭載できるように設計されています。また、R20xx-12 シリーズには最大 26TOPS の Hailo-8 M.2 AI アクセラレーションがあらかじめインストールされています。
 R20xx-10 シリーズ製品を購入された場合は、AI 機能を有効にするために Hailo の NPU モジュールを別途購入する必要があります。
-本機には Hailo アクセラレータドライバがプリインストールされているため、そのまま使用してテストケースを実行できます：
+本製品には Hailo アクセラレータドライバがプリインストールされているため、そのまま使用してテストケースを実行できます：
 
 1. テストケースのディレクトリに移動します
 
@@ -1060,7 +1060,7 @@ python basic_pipelines/detection_simple.py
 
 ## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける、複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
