@@ -8,12 +8,13 @@ keywords:
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif
 slug: /integration_of_real-time_heat_map_with_grafana_data_dashboard
+sku: 102991896, 108990119, 100029708
 sidebar_position: 10
 last_update:
   date: 12/21/2025
   author: Xinrui Wu
 createdAt: '2025-12-22'
-updatedAt: '2026-01-28'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard/
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
+description: Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, RS485, RS232, DI/DO testing, and UPS for safe shutdown.
 title: Configure reComputer R1100
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 2/26/2024
   author: Kasun Thushara
 createdAt: '2025-02-27'
-updatedAt: '2026-03-03'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_r1100_configure_system/
 ---
 
 ## Overview
 
-Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing,UPS for safe shutdown and more.
+Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, RS485, RS232, DI/DO testing,UPS for safe shutdown and more.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -245,7 +245,7 @@ cd ~/sx1302_hal/packet_forwarder
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
- LoRa® USB is now configured and running on reComputer R1100
+LoRa® USB is now configured and running on the reComputer R1100
 
 ## 4G Cellular over Mini-PCIe
 
@@ -280,151 +280,6 @@ ATD<phone_number>;
 - Replace `<phone_number>` with the desired phone number you want to dial.  
 - Make sure to include a **semicolon (;)** at the end of the command to indicate the end of the phone number.  
 
-## Zigbee over Mini-PCIe
-
-To test **Zigbee communication** between two Zigbee modules, follow these steps:  
-
-**Check Available Serial Ports**  
-
-Run the following command to check the available serial ports:  
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**Install a Serial Communication Tool**
-
-Install **CuteCom**, a graphical serial terminal, using:  
-
-```bash
-sudo apt-get install cutecom
-```
-
-**Configure the First Zigbee Module (Coordinator)**  
-
-- Open **CuteCom** and configure it for the **first serial port**.  
-- **Settings:**
-  - **Baud Rate:** 115200  
-  - **Enable "Hex output"** at the bottom of the interface.  
-
-**Steps to Configure as a Coordinator:**  
-
-1. **Set as Coordinator:** Send command:  
-
-   ```  
-   55 04 00 05 00 05  
-   ```  
-
-   - Expected response:  
-
-   ```  
-   55 04 00 05 00 05  
-   ```  
-
-2. **Reset Device:**  
-   - Press the **reset button**, or  
-   - Send command:  
-
-     ```  
-     55 07 00 04 00 FF FF 00 04  
-     ```  
-
-3. **Network Formation:**
-   - Send command:  
-
-   ```  
-   55 03 00 02 02  
-   ```  
-
-**Configure the Second Zigbee Module (Router)**  
-
-- Open another instance of **CuteCom** and configure it for the **second serial port** using the same settings.  
-
-**Steps to Configure as a Router:**  
-
-1. **Set as Router:** Send command:  
-
-   ```  
-   55 04 00 05 01 04  
-   ```  
-
-   - Expected response:  
-
-   ```  
-   55 04 00 05 00 05  
-   ```  
-
-2. **Reset Device:**  
-   - Press the **reset button**, or  
-   - Send command:  
-
-     ```  
-     55 07 00 04 00 FF FF 00 04  
-     ```  
-
-3. **Network Formation:** Send command:  
-
-   ```  
-   55 03 00 02 02  
-   ```  
-
-**Check Device Status**  
-To verify the device status, send:  
-
-```  
-55 03 00 00 00  
-```  
-
- Expected response:  
-
-```  
-55 2A 00 00 00 01 XX XX XX XX  
-```  
-
-- `XX` represents device-specific information.  
-
-**Enter Transparent Mode**
-
-If **network formation** is successful, enable **transparent mode** by sending:  
-
-```  
-55 07 00 11 00 03 00 01 13  
-```  
-
-**Both modules must be in transparent mode for direct communication.**  
-To **exit transparent mode**, send:  
-
-```  
-+++  
-```
-
-**Additional Notes**  
-
-- If **router configuration fails**, the device may already be a **coordinator**. To leave the network, send:  
-
-  ```  
-  55 07 00 04 02 XXXX XX  
-  ```  
-
-- To **test transmission power**, use:  
-  - **Query power:**  
-
-    ```  
-    55 04 0D 00 00 0D  
-    ```  
-
-  - **Set power:**  
-
-    ```  
-    55 04 0D 01 XXXX  
-    ```  
-
-Ensure you replace `/dev/ttyUSB*` with the **correct serial port** for each Zigbee module.  
-Follow these steps carefully to establish **successful Zigbee communication** between the two modules.
-
-Here’s the corrected and well-structured version with improved grammar, readability, and formatting:  
-
----
 
 ## RS485 Testing
 

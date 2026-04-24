@@ -12,7 +12,7 @@ last_update:
   date: 03/10/2023
   author: Peter Pan
 createdAt: '2023-03-17'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-14'
 url: https://wiki.seeedstudio.com/Edgebox-ESP-100-Arduino/
 ---
 
@@ -934,6 +934,20 @@ Do not Power Up the Edgebox-ESP-100 until next step
 - STEP 5: reset Power to monitor the Edgebox-ESP-100 controlling Solenoid.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
+
+## Resources
+
+[EdgeBox ESP 4G Module doc](https://files.seeedstudio.com/wiki/edge_box_esp/4G_module_A7670G_Spec.pdf)
+
+[Edge Series Warranty Regulations](https://files.seeedstudio.com/wiki/Edge_Box/Seeed_Studio_Edge_Series_Warranty_Regulations.pdf)
+
+[Edgebox-ESP-100-User Manual V1.1](https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_manual-V1.1.pdf)
+
+[EdgeBox-ESP-100 Product Datasheet](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_Edgebox-ESP-100.pdf)
+
+[EdgeBox ESP 3D File](https://files.seeedstudio.com/wiki/edge_box_esp/edgebox_esp_100.stp)
+
+[EdgeBox-ESP-100 Schematic](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_EdgeBox-ESP-100_Schematic.pdf)
 
 ## Tech Support & Product Discussion
 

@@ -1,10 +1,10 @@
 ---
-description: Introdução ao EdgeBox-ESP-100 com Arduino
-title: Introdução ao EdgeBox-ESP-100 com Arduino
+description: EdgeBox-ESP-100 Primeiros Passos com Arduino
+title: EdgeBox-ESP-100 Primeiros Passos com Arduino
 keywords:
   - Edge
-  - Controle de CLP
-  - Sistema de controle
+  - PLC Control
+  - Control system
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edgebox-ESP-100-Arduino
 sku: 102991558,102991559,102110771,102110772,102110773,102991734,102991735,102110779,E23010424,114993117
@@ -12,7 +12,7 @@ last_update:
   date: 03/10/2023
   author: Peter Pan
 createdAt: '2023-03-17'
-updatedAt: '2026-03-19'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/Edgebox-ESP-100-Arduino/
 ---
 
@@ -20,19 +20,19 @@ url: https://wiki.seeedstudio.com/pt-br/Edgebox-ESP-100-Arduino/
 
 <div align="center"><img width ={500} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/e/d/edgebox-esp100_1.jpg" style={{width: 600}}/></div>
 
-EdgeBox-ESP-100 é um controlador baseado em ESP32 projetado para soluções de automação leves. Ele suporta entrada analógica, monitorando e controlando efetivamente em um ambiente remoto, ideal para malhas de controle PID, controle de sequenciamento lógico ou um gateway com expansão flexível de sensores sem fio e de campo.
+O EdgeBox-ESP-100 é um controlador baseado em ESP32 projetado para soluções de automação leves. Ele suporta entrada analógica, monitorando e controlando efetivamente em um ambiente remoto, ideal para loops de controle PID, controle de sequência lógica ou um gateway com expansão flexível de sensores de campo e sem fio.
 
-Além do EdgeBox-ESP-100, também temos outros 2 produtos Edge para diferentes soluções na família Edge, alimentados por Raspberry Pi. Para ajudá-lo a entender melhor as diferenças e escolher a parte mais adequada para seus projetos, consulte a [Página da Série Edge](https://www.seeedstudio.com/raspberrypi/device/industry.html) da Seeed Studio.
+Além do EdgeBox-ESP-100, também temos os outros 2 produtos Edge para diferentes soluções na família Edge, alimentados por Raspberry Pi. Para ajudá-lo a entender profundamente as diferenças e escolher a parte mais adequada para seus projetos, consulte a [Página da Série Edge da Seeed Studio](https://www.seeedstudio.com/raspberrypi/device/industry.html).
 
-Ele oferece conexões Fieldbus isoladas CAN, RS485 e ricos recursos de IO para extensas instalações e entrada de sensores, tanto para sinais digitais quanto analógicos. É perfeitamente satisfatório para aplicações de automação de campo e CLP.
+Ele oferece conexões isoladas de CAN, RS485 Fieldbus e recursos ricos de E/S para extensas instalações e entrada de sensores, tanto para sinais digitais quanto analógicos. É perfeitamente satisfatório para aplicações de automação de campo e CLP.
 
-Como contém funções Wi-Fi e BLE integradas no chip, e também inclui um módulo Celular 4G LTE, o EdgeBox-ESP-100 pode ser utilizado para estabelecer um gateway industrial, permitindo que o CLP original se conecte à rede ou à nuvem.
+Como contém funções Wi-Fi e BLE no chip, e também inclui um módulo celular 4G LTE, o EdgeBox-ESP-100 pode ser utilizado para estabelecer um gateway industrial, permitindo que o CLP original se conecte à rede ou à nuvem.
 
-Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete de liga de alumínio, pelo qual mantém sua função em uma ampla faixa de temperatura e fornece alta proteção contra surtos e curto-circuito, para diversos métodos de implantação com base no seu negócio.
+Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete de liga de alumínio, mantendo sua função em uma ampla faixa de temperatura e fornecendo alta proteção contra surtos e curtos-circuitos, para diversos métodos de implantação baseados em seu negócio.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -40,15 +40,15 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 
 > ⚠️ **Aviso Importante: Disponibilidade da Função de Programação/Depuração USB**
 >
-> - A **função de Programação/Depuração USB está disponível apenas** na **versão mais recente** do **EdgeBox-ESP-100**.
+> - A **função de programação/depuração USB está disponível apenas** na **versão mais recente** do **EdgeBox-ESP-100**.
 > - A **versão anterior** suporta apenas **alimentação via porta USB-A** e **não suporta programação ou depuração**.
 
 ---
 
 > ❗**Aviso: Não Conecte a Porta USB-A das Versões Antigas a um PC**
 >
-> - Conectar a porta USB-A da **versão antiga** a uma porta USB de PC pode resultar em **comportamento inadequado**.
-> - Use apenas a **nova versão** se você planeja programar ou depurar o dispositivo via USB.
+> - Conectar a porta USB-A da **versão antiga** a uma porta USB do PC pode resultar em **comportamento inadequado**.
+> - Use apenas a **nova versão** se planejar programar ou depurar o dispositivo via USB.
 
 ---
 
@@ -68,10 +68,10 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 > - Exemplo: `102991735243800001`, `102991735243800093`
 > - `2438` = produzido a partir da **Semana 38 de 2024 em diante**
 
-- Suporte a Multi-Fieldbus: CAN, RS485, Ethernet
-- Capacidade Multiwireless: WiFi integrado no chip, conectividade BLE; módulo Celular 4G LTE embutido
-- Design de Hardware Confiável: Estrutura robusta, com redução de manutenção
-- Design Elétrico Confiável: Alta isolação, alta proteção contra surtos e curto-circuito
+- Suporte a Múltiplos Fieldbus: CAN, RS485, Ethernet
+- Capacidade Multi-sem Fio: Conectividade Wi-Fi no chip, BLE; módulo celular 4G LTE integrado
+- Design de Hardware Confiável: Estrutura robusta e de baixa manutenção
+- Design Elétrico Confiável: Alto isolamento, alta proteção contra surtos e curtos-circuitos
 - Suporte a programas compatíveis com IEC 61131-3 (em desenvolvimento)
 - Programável com ESP-IDF, Arduino
 
@@ -128,7 +128,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>WiFi</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>2,4 GHz integrado no chip</p>
+        <p>no chip 2.4 GHz</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -136,12 +136,12 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Bluetooth</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>Bluetooth 5.0 integrado no chip, BLE</p>
+        <p>no chip Bluetooth 5.0, BLE</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 132px;" style={{height: 46, width: 132}}>
-        <p>Celular</p>
+        <p>Cellular</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
         <p>4G - Módulo SIMCom LTE Cat 1 A7670G</p>
@@ -186,7 +186,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
     </tr>
     <tr data-style="height: 39px;" style={{height: 39}}>
       <td data-style="height: 39px; width: 132px;" style={{height: 39, width: 132}}>
-        <p>Serial RS</p>
+        <p>RS Serial</p>
       </td>
       <td data-style="height: 39px; width: 491px;" style={{height: 39, width: 491}}>
         <p>RS485 *1 (Isolado)</p>
@@ -197,14 +197,14 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Entrada Digital</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>4 (Isoladas) on-board</p>
+        <p>4 (Isolados) onboard</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
         <div>
           <div className="document">
-            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">Tensão de Entrada CC - 24V</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">Tensão de entrada CC - 24V</p>
           </div>
         </div>
       </td>
@@ -214,7 +214,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Saída Digital</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>6 (isoladas)</p>
+        <p>6 (isolados)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -227,7 +227,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Entrada Analógica</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>4 (Isoladas)</p>
+        <p>4 (Isolados)</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -257,7 +257,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Fonte de Alimentação</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>10.8 ~ 36 V</p>
+        <p>10,8 ~ 36 V</p>
       </td>
     </tr>
     <tr data-style="height: 46px;" style={{height: 46}}>
@@ -278,7 +278,7 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
         <p>Chip de Criptografia</p>
       </td>
       <td data-style="height: 46px; width: 491px;" style={{height: 46, width: 491}}>
-        <p>Atecc608a(opcional)</p>
+        <p>Atecc608a (opcional)</p>
       </td>
     </tr>
     <tr data-style="height: 64px;" style={{height: 64}}>
@@ -309,20 +309,20 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 </table>
 </div>
 
-## Visão geral de hardware
+## Visão geral do hardware
 
-### Visão frontal
+### Visão Frontal
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/edge_box_esp/font-port.png" /></div>
 
-### Portas laterais
+### Portas Laterais
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_side.png" /></div>
 
 1. 4 X LEDs
 2. Porta Ethernet
-3. Porta CAN bus e RS485
-4. Conector Phoenix multifunção
+3. Barramento CAN e Porta RS485
+4. Conector multifuncional Phoenix
 
 #### Indicador LED
 
@@ -332,8 +332,8 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 
 | Nome do LED | Sinal        | Descrição            |
 |  :---:   |  :---:        |    :---:               |
-|   PWR    | Status de energia  |                        |
-| Celular | 4G/LTE        |                        |
+|   PWR    | Status de Energia  |                        |
+| Cellular | 4G/LTE        |                        |
 |   ACT    | Status de TX Serial | Multiplexado com U0TXD |
 |   ERR    | Status de RX Serial | Multiplexado com U0RXD |
 
@@ -355,12 +355,12 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 |      6        |      RXN     |                                           |
 |      7        |      N.C.    |                                           |
 |      8        |      N.C.    |                                           |
-|   LED Amarelo  |    ACTIVE    |  Ativo quando dados TX e RX passam        |
-|   LED Verde   |     LINK     |          Ativo quando LINK UP             |
+|   LED Amarelo  |    ATIVO    |  Ativo quando dados TX e RX passam  |
+|   LED Verde   |     LINK     |          Ativo quando LINK UP              |
 
 </div>
 
-#### Porta CAN bus e RS485
+#### Barramento CAN e Porta RS485
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/eth.png" alt="pir" width={300} height="auto" /></div>
 
@@ -376,25 +376,25 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 |      6        |      N.C.     |                                           |
 |      7        |      RS485_A  |                                           |
 |      8        |      RS485_B  |                                           |
-|   LED Amarelo  |    ACTIVE     |  Ativo quando dados TX e RX do CAN BUS passam  |
-|   LED Verde   |     LINK      |  Ativo quando dados TX e RX do RS485 passam    |
+|   LED Amarelo  |    ATIVO     |  Ativo quando TX e RX de dados do CAN BUS passam  |
+|   LED Verde   |     LINK      |  Ativo quando TX e RX de dados do RS485 passam    |
 
 </div>
 
 :::note
 
-    1. O resistor de terminação de 120 Ohms para RS485 já foi instalado internamente.
-    2. O resistor de terminação de 120 Ohms para CAN BUS já foi instalado internamente.
+    1. O resistor de terminação de 120 Ohm para RS485 foi instalado internamente.
+    2. O resistor de terminação de 120 Ohm para CAN BUS foi instalado internamente.
 
 :::
 
-#### Conector Phoenix multifunção
+#### Conector multifuncional Phoenix
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/multi-func-connector.png" alt="pir" width={500} height="auto" /></div>
 
 <div class="table-center">
 
-| Função  | Nº do pino  |  Nº do pino | Função  |
+| Função  | PIN No.  |  PIN No. | Função  |
 |:---:      | :---: | :---: | :---: |
 |  S/S      | 2  | 1  | DO_24V  |
 |  DI0      | 4  | 3  | DO_0V  |
@@ -412,31 +412,31 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
 </div>
 
 :::note
-    1. Cabos de 24AWG a 16AWG são recomendados
+    1. Cabos de 24AWG a 16AWG são sugeridos
     2. GND e AGND são isolados
     3. Todos os sinais AGND são conectados internamente
-    4. A tensão CC para entrada é 24V(+- 10%)
-    5. A tensão CC para saída deve ser 24V(+- 10%). a capacidade de corrente é 1A.
+    4. A tensão DC para entrada é 24V (+- 10%)
+    5. A tensão DC para saída deve ser 24V (+- 10%). A capacidade de corrente é 1A.
 :::
 
-### Portas SUPERIORES
+### Portas Superiores
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/connector_top.png" alt="pir" width={500} height="auto" /></div>
 
-1. Porta de antena Wi-Fi (SMA Fêmea)
-2. CARTÃO SIM
+1. Porta da Antena Wi-Fi (SMA Fêmea)
+2. Cartão SIM
 3. Reset
-4. PORTA USB (somente saída de energia 5V)
-5. Porta de antena 4G/LTE (SMA Fêmea)
+4. Porta USB (apenas saída de energia 5V)
+5. Porta da Antena 4G/LTE (SMA Fêmea)
 
-### Multiplexação GPIO
+### Multiplexação de GPIO
 
 <div class="table-center">
 <table className="tg">
   <thead>
     <tr>
-      <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>Nome do pino</span></th>
-      <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>ESP32S3 IO</span></th>
+      <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>Nome do Pino</span></th>
+      <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>IO ESP32S3</span></th>
       <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>Tipo</span></th>
       <th className="tg-3gxb"><span style={{fontWeight: 'var(--ifm-table-head-font-weight)'}}>Função</span></th>
     </tr>
@@ -510,8 +510,8 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
     </tr>
     <tr>
       <td className="tg-lhaa">IO41</td>
-      <td className="tg-lhaa">Saída analógica</td>
-      <td className="tg-lhaa">Saída analógica 1</td>
+      <td className="tg-lhaa">Saída Analógica</td>
+      <td className="tg-lhaa">Saída Analógica 1</td>
     </tr>
     <tr>
       <td className="tg-rzif" rowSpan={3}>RS485 </td>
@@ -576,20 +576,20 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
     <tr>
       <td className="tg-rzif">CAN_TXD</td>
       <td className="tg-rzif">IO1</td>
-      <td className="tg-rzif">TX do barramento CAN</td>
+      <td className="tg-rzif">CAN BUS TX</td>
       <td className="tg-rzif" />
     </tr>
     <tr>
       <td className="tg-rzif">CAN_RXD</td>
       <td className="tg-rzif">IO2</td>
-      <td className="tg-rzif">RX do barramento CAN</td>
+      <td className="tg-rzif">CAN BUS RX</td>
       <td className="tg-rzif" />
     </tr>
     <tr>
       <td className="tg-rzif">TXD0/LED_ACT#</td>
       <td className="tg-rzif">U0TXD</td>
       <td className="tg-rzif" />
-      <td className="tg-rzif">Programação/Depuração e driver de LED</td>
+      <td className="tg-rzif">Programação/Debug e driver de LED</td>
     </tr>
     <tr>
       <td className="tg-rzif">RXD0/LED_ERR#</td>
@@ -601,12 +601,12 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
       <td className="tg-rzif">Beep</td>
       <td className="tg-rzif">IO45</td>
       <td className="tg-rzif">Beep</td>
-      <td className="tg-rzif">Ativo em nível alto habilita o buzzer</td>
+      <td className="tg-rzif">Ativo em Alto habilita o Buzzer</td>
     </tr>
     <tr>
       <td className="tg-rzif">Reset</td>
       <td className="tg-rzif">IO0</td>
-      <td className="tg-rzif">Botão de reset</td>
+      <td className="tg-rzif">Botão de Reset</td>
       <td className="tg-rzif" />
     </tr>
     <tr>
@@ -623,43 +623,43 @@ Esta caixa portátil vem com hardware robusto, um design elétrico e um gabinete
     <tr>
       <td className="tg-rzif">IO9</td>
       <td className="tg-rzif" />
-      <td className="tg-rzif">Alarme ou despertar a partir do PCF8563</td>
+      <td className="tg-rzif">Alarme ou Wake up do PCF8563</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-#### Porta de Programação/Depuração
+#### Porta de Programação/Debug
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
 <div class="table-center">
 
-| Porta de depuração | ESP32 IO | Outra função |
+| Porta de Debug | ESP32 IO | Outra Função |
 | :---:      | :---:    | :---:          |
 | RXD        | RXD0     | LED_ACT#       |
 | TXD        | TXD0     | LED_ERR#       |
 | GND        | GND      |                |
-| GPIO0      | IO0      | Botão RESET    |
+| GPIO0      | IO0      | Botão RESET   |
 
 </div>
 
 :::note
 
-O GIPIO0 também está conectado ao botão de Reset. E o RXD, TXD da UART0 são usados no modo de download.
+O GIPIO0 também está conectado ao Botão de Reset. E o RXD, TXD do UART0 são usados no modo de download.
 Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 :::
 
-### Dispositivos embutidos
+### Dispositivos Integrados
 
-#### Mapa de pinos I2C e dispositivos I2C embutidos
+#### Mapa de PINs I2C & Dispositivos I2C Integrados
 
-- Mapa de pinos I2C:
+- Mapa de PINs I2C:
 
 <div class="table-center">
 
-| Pino I2C | ESP32 IO |
+| PIN I2C | ESP32 IO |
 |  :---:  |  :---:   |  
 | I2C_SDA |   IO20   |
 | I2C_SCL |   IO19   |
@@ -667,11 +667,11 @@ Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 </div>
 
-- Dispositivos I2C embutidos e endereço:
+- Dispositivos I2C Integrados e Endereço:
 
 <div class="table-center">
 
-|  Dispositivo         | Endereço | Função        |
+|  Dispositivo              | Endereço | Função      |
 |  :---:               | :---:   | :---:         |
 |  FM24CL64B           |  0x50   | Memória de retenção |
 |  PCF8563             |  0x51   |   RTC         |
@@ -686,20 +686,20 @@ Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 <div class="table-center">
 
-| Módulo 4G A7670G | ESP32 IO| Função                                |
+| Módulo 4G A7670G  | ESP32 IO| Função                                |
 |  :---:            |  :---:  |  :---:                                  |
-|  PWR_EN           |  IO16   | Habilitar energia para o A7670G através do SY8089A |
+|  PWR_EN           |  IO16   | Habilita energia para A7670G via SY8089A |
 |  PWRKEY           |  IO21   | PWR_KEY                                 |
 |  RXD              |  IO48   | U2TXD                                   |
 |  TXD              |  IO47   | U2RXD                                   |
 
 </div>
 
-#### Entrada analógica (SGM58031)
+#### Entrada Analógica (SGM58031)
 
 <div class="table-center">
 
-| SGM58031 (endereço I2C 0x48) |  IO            |
+| SGM58031 (endereço I2C 0x48)  |  IO            |
 |   :---:                      |   :---:        |
 | CH1+                         |  AI0           |
 | CH2+                         |  AI1           |
@@ -712,14 +712,14 @@ Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 :::note
 
-  O tipo de entrada padrão é 4-20ma.
+  O tipo de entrada padrão é 4-20mA.
   O tipo de entrada 0-10V é opcional.
 
 :::
 
-#### Saída analógica
+#### Saída Analógica
 
- Os canais duplos de saída analógica são formados pela tecnologia PWM e LPF.
+ Os dois canais de Saída Analógica são compostos por tecnologia PWM e LPF.
 
 <div class="table-center">
 
@@ -732,7 +732,7 @@ Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 ## Especificações elétricas
 
-### Como alimentar
+### Como Alimentar
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/Edgebox-esp-how-to-power.png" alt="pir" width={500} height="auto" /></div>
 
@@ -742,19 +742,19 @@ Isso permite que os usuários desenvolvam o EdgeBox-ESP-100 em bare metal.
 
 :::note
 
-Na condição de alimentação de 24V
+Na condição de fonte de alimentação 24V
 
 :::
 
 <div class="table-center">
 
-| Modo de operação | Corrente(ma) |
+| Modo de operação | Corrente(mA) |
 | :---:             | :---:       |
-| Inativo           | 81          |
+| Inativo              | 81          |
 
 </div>
 
-## Introdução à programação com Arduino
+## Primeiros passos com Programação Arduino
 
 ### Requisitos
 
@@ -765,9 +765,9 @@ Você precisa preparar o seguinte:
 - 1 x [EdgeBox-ESP-100](https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html)
 - 1 x PC
 - 1 x Adaptador USB para Serial
-- 1 x Chave de fenda Phillips de cabeça PH2 (Opcional)
+- 1 x Chave de fenda Phillips PH2 (Opcional)
 - 1 x Chave Allen H2.5
-- 1 x Fonte de alimentação 12V3A (requisito mínimo de potência de entrada)
+- 1 x Fonte de alimentação 12V3A (Requisito mínimo de entrada de energia)
 
 #### Requisitos de software
 
@@ -777,29 +777,29 @@ Você precisa preparar o seguinte:
 
 #### Hardware
 
-- PASSO 1: Remova a case e localize a porta de Programação
+- PASSO 1: Remova a caixa e localize a porta de programação
 
-- PASSO 1-1: Localize e remova os dois parafusos pretos allen de cabeça sextavada
+- PASSO 1-1: Por favor, localize e remova os dois parafusos de cabeça sextavada preta
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_case.png" alt="pir" width={500} height="auto" /></div>
 
-- PASSO 1-2: Em seguida, remova os 3 parafusos M.3 PH2 de cabeça Phillips.
+- PASSO 1-2: Em seguida, remova os 3 parafusos M.3 PH2 Phillips.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/remove_PH.png" alt="pir" width={500} height="auto" /></div>
 
-- PASSO 1-3: Agora você deve conseguir localizar a porta de Programação.
+- PASSO 1-3: Agora você deve conseguir localizar a porta de programação.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming_port.png" alt="pir" width={300} height="auto" /></div>
 
-- PASSO 2: conecte o USB-para-Serial ao Edgebox-ESP-100
+- PASSO 2: conecte o USB-to-Serial ao Edgebox-ESP-100
 
-A conexão deve seguir como abaixo
+A conexão deve seguir conforme abaixo
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/programming.png" alt="pir" width={800} height="auto" /></div>
 
 :::caution
 
-Certifique-se de que a conexão está correta e que o Edgebox-ESP-100 esteja desligado durante a conexão.
+Certifique-se de que a conexão está correta, o Edgebox-ESP-100 está desligado durante a conexão.
 
 :::
 
@@ -808,7 +808,7 @@ Certifique-se de que a conexão está correta e que o Edgebox-ESP-100 esteja des
   <thead>
     <tr>
       <th className="tg-wp8o">Edgebox-ESP-100</th>
-      <th className="tg-c3ow">USB-Para-Serial</th>
+      <th className="tg-c3ow">USB-To-Serial</th>
     </tr>
   </thead>
   <tbody>
@@ -826,7 +826,7 @@ Certifique-se de que a conexão está correta e que o Edgebox-ESP-100 esteja des
     </tr>
     <tr>
       <td className="tg-c3ow" rowSpan={2}>GPIO0</td>
-      <td className="tg-c3ow">GND (modo de download de programa) <br /></td>
+      <td className="tg-c3ow">GND (Modo de Download de Programa) <br /></td>
     </tr>
     <tr>
       <td className="tg-c3ow">Desconectado quando usado como depurador serial<br /></td>
@@ -837,27 +837,27 @@ Certifique-se de que a conexão está correta e que o Edgebox-ESP-100 esteja des
 
 #### Software
 
-- PASSO 1: Baixe o Ardunio IDE 2.0.X do [site oficial do Arduino](https://www.arduino.cc/en/software) e então instale-o.
+- PASSO 1: Baixe o Arduino IDE 2.0.X do [site oficial do Arduino](https://www.arduino.cc/en/software) e então instale-o.
 
-- PASSO 2: Encontre e instale o ESP32 no gerenciador de placas.
+- PASSO 2: Encontre e Instale o ESP32 no gerenciador de placas.
 
-- PASSO 2-1: Abra o Arduino IDE e clique na `Board Tab` (segunda aba) para abrir o `Board Manager`
+- PASSO 2-1: Abra o Arduino IDE e clique na `Aba Placas` (Segunda aba) para abrir o `Gerenciador de Placas`
 
-- PASSO 2-2: Na barra de busca, digite **`ESP32`** e pressione enter, agora você deverá ver a biblioteca de placas esp32 listada.
+- PASSO 2-2: Na Barra de Pesquisa, digite **`ESP32`** e pressione enter, agora você deve conseguir ver a biblioteca da placa esp32 listada.
 
-- PASSO 2-3: Selecione a versão mais recente no menu suspenso de versão, por exemplo, no momento em que este wiki foi escrito a versão mais recente é **`version 2.0.7`**
+- PASSO 2-3: Selecione a versão mais recente no menu suspenso de versão, por exemplo, no momento em que este wiki foi escrito, a versão mais recente é **`versão 2.0.7`**
 
 :::note
 
-Por favor, instale a versão >= **`2.0.7`** da biblioteca de placas esp32.
+Por favor, instale a versão >= **`2.0.7`** da biblioteca da placa esp32.
 
 :::
 
-- PASSO 2-4: Clique em `Install`
+- PASSO 2-4: Clique em `Instalar`
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/download_board.png" alt="pir" width="auto" height="auto" /></div>
 
-### Edgebox-ESP-100 controlando solenóide com Arduino
+### Controlando Solenoide com Arduino no Edgebox-ESP-100
 
 #### Diagrama de fiação
 
@@ -865,7 +865,7 @@ Por favor, instale a versão >= **`2.0.7`** da biblioteca de placas esp32.
 
 #### Código
 
-Aqui está o código para percorrer todos os solenoides. Copie o código para o editor de código da Arduino IDE
+Aqui está o código para alternar todos os solenoides. Copie o código para o editor de código do Arduino IDE.
 
 ```c
 void setup() {
@@ -905,39 +905,53 @@ void loop() {
 
 ```
 
-#### Enviar código
+#### Uploadar código
 
-- PASSO 1: Agora conecte o adaptador USB-para-Serial ao seu PC e a conexão da Edgebox-ESP-100 com o conversor USB-para-Serial deve ser configurada para o modo de download de programa.
+- STEP 1: Agora conecte o adaptador USB-To-Serial ao seu PC e a conexão do Edgebox-ESP-100 com o conversor USB-To-Serial deve ser configurada no modo de download de programa.
 
 :::note
 
-Não ligue a Edgebox-ESP-100 até o próximo passo
+Não alimente o Edgebox-ESP-100 até o próximo passo.
 
 :::
 
-- PASSO 2: Ligue a Edgebox-ESP-100
+- STEP 2: Alimente o Edgebox-ESP-100.
 
-- PASSO 3: Selecione Board e PORTS
+- STEP 3: Selecione a Placa e PORTAS.
 
-- PASSO 3-1: Abra a janela de seleção de Board e Port
+- STEP 3-1: Abra a janela de seleção de Placa e Porta.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/select_boardandport.png" alt="pir" width="auto" height="auto" /></div>
 
-- PASSO 3: Selecione Boards e PORTS na `Board and Port selection window`; neste caso, podemos colocar edgebox na barra de pesquisa e selecionar Edgebox-ESP-100 como a placa, e selecionar a porta de acordo com o seu adaptador USB-para-Serial. Em seguida, pressione **`OK`** para confirmar.
+- STEP 3: Selecione Placa e PORTAS na `janela de seleção de Placa e Porta`. Neste caso, podemos inserir "edgebox" na barra de pesquisa e selecionar Edgebox-ESP-100 como placa, e selecionar a Porta conforme seu adaptador USB-To-Serial. Então pressione **`OK`** para confirmar.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/selectboard.png" alt="pir" width="auto" height="auto" /></div>
 
-- PASSO 4: Pressione o botão de envio de código para enviar o código.
+- STEP 4: Pressione o botão de upload de código para enviar o código.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/uploadcode.png" alt="pir" width="auto" height="auto" /></div>
 
-- PASSO 5: reinicie a alimentação para monitorar a Edgebox-ESP-100 controlando o solenoide.
+- STEP 5: Reinicie a alimentação para monitorar o Edgebox-ESP-100 controlando o Solenoid.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/demo.gif" alt="pir" width="auto" height="auto" /></div>
 
-## Suporte Técnico e Discussão de Produto
+## Recursos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+[Documentação do módulo EdgeBox ESP 4G](https://files.seeedstudio.com/wiki/edge_box_esp/4G_module_A7670G_Spec.pdf)
+
+[Regulamentos de Garantia da Série Edge](https://files.seeedstudio.com/wiki/Edge_Box/Seeed_Studio_Edge_Series_Warranty_Regulations.pdf)
+
+[Manual do Usuário Edgebox-ESP-100 V1.1](https://files.seeedstudio.com/wiki/edge_box_esp/EdgeBox-ESP-100-User_manual-V1.1.pdf)
+
+[Datasheet do Produto EdgeBox-ESP-100](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_Edgebox-ESP-100.pdf)
+
+[Arquivo 3D do EdgeBox ESP](https://files.seeedstudio.com/wiki/edge_box_esp/edgebox_esp_100.stp)
+
+[Esquema do EdgeBox-ESP-100](https://files.seeedstudio.com/wiki/edge_box_esp/Seeed_Studio_EdgeBox-ESP-100_Schematic.pdf)
+
+## Suporte técnico e discussão de produtos
+
+Agradecemos por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atendermos diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

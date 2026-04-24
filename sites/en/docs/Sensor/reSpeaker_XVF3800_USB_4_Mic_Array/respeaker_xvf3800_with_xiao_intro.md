@@ -12,7 +12,7 @@ last_update:
   date: 8/20/2025
   author: Kasun Thushara
 createdAt: '2025-07-16'
-updatedAt: '2026-04-08'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 ---
 
@@ -47,6 +47,21 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/
 - **Visual Feedback** :Programmable RGB LEDs and status indicators show device states and voice activity
 
 - **Equal or better audio quality** :compared to previous model
+
+## Getting Started (I2S vs USB firmware)
+
+By default, the reSpeaker XVF3800 USB 4 Microphone Array with XIAO ESP32S3 uses the **I2S firmware**. In the I2S mode it is **NOT** detected as an **USB device**.
+
+You can switch between I2S and USB mode by installing the related firmware. Use the safe mode to connect the device as USB device and to flash the firmare to update the firmware or to switch between modes.
+
+### Flash the I2S firmware
+
+To use the reSpeaker XVF3800 with XIAO ESP32S3, please make sure the reSpeaker XVF3800 firmware is the I2S version and update to the latest version.
+Please visit this [section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware).
+
+:::note
+To work with the XIAO ESP32S3, you need to flash it to the I2S firmware. However, the I2S firmware does not support USB DFU (the device is not detected as USB device). Switch to safe mode as it supports both USB DFU and I2C DFU. To learn more, please visit this [section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode).
+:::
 
 ## Hardware Overview
 
@@ -108,15 +123,6 @@ The reSpeaker XVF3800 exposes 3 input pins (GPI) and 5 output pins (GPO) for ext
 | X0D33        | Output (RW)   | WS2812 LED power control (high = on)                 |
 | X0D39        | Output (RW)   | Floating                                             |
 
-## Flash the I2S firmware
-
-To use the reSpeaker XVF3800  with XIAO ESP32S3, please make sure the reSpeaker XVF3800  firmware is the I2S version.
-Check Firmware Flash to flash the latest I2S firmware. Please vist for [this section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware).
-
-:::note
-To work with the XIAO ESP32S3, you need to flash the I2S firmware. However, it does not support USB DFU. If you are already using USB firmware, you can enter safe mode to flash the firmware. This method is more flexible because it supports both USB DFU and I2C DFU. To learn more, please visit this [section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode).
-:::
-
 ## Software Preparation
 
 ### Install Arduino IDE
@@ -164,7 +170,6 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 :::note
 Please install the [Arduino Audio Tools library](https://github.com/pschatzmann/arduino-audio-tools) in order to run the provided examples.
 :::
-
 
 ## Tech Support & Product Discussion
 

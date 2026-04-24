@@ -77,7 +77,7 @@ El arreglo de micrófonos XVF3800 necesita un MCLK de 12.288 MHz para funcionar,
 Nuestro firmware soluciona esta limitación, por lo que el micrófono funciona correctamente con Home Assistant.
 :::
 
-Puedes descargar el Firmware desde [Aquí](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
+Puedes descargar el Firmware desde [Aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
 La guía de instalación está [Aquí](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#update-firmware)
 

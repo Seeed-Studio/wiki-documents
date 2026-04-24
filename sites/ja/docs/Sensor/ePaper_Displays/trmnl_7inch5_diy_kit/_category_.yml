@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: 'TRMNL 7.5inch(OG) DIY キット'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: TRMNL_7inch5_diy_kit

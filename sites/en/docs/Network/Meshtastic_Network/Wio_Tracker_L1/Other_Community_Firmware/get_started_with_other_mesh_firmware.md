@@ -11,10 +11,20 @@ last_update:
   date: 3/4/2026
   author: Michelle Huang
 createdAt: '2026-02-28'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/get_started_with_other_mesh_firmware/
 ---
-       
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/1-100030144-wio-tracekr-l1-pro-meshcore.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-Pro-for-Meshcore-p-6717.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+<br></br>
+
 ## Firmware Flashing
 
 ### Method1 via Web Flasher
@@ -125,7 +135,7 @@ If the device doesn't respond when you press the button, please charge it first.
 
 ### Get APP
 
-Download from the Google Store or Apple Store. Or [click here](https://meshcore.co.uk/apps.html) to get the Meshcore APP.
+Download from the Google Store or Apple Store. Or [click here](https://meshcore.io/#download) to get the Meshcore APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Wio_Tracker_L1/MeshcoreAPP.png" alt="pir" width={300} height="auto" /></p>
 

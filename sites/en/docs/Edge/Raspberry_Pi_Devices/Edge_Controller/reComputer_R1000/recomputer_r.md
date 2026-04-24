@@ -11,7 +11,7 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_r/
 ---
 
@@ -64,8 +64,8 @@ With robust IoT network communication capabilities, the R1000 series supports mu
 - On-chip Wi-Fi
 
 - On-chip BLE
-- Mini-PCIe1: LTE, USB LoRa®, USB Zigbee
-- Mini-PCIe2: SPI LoRa®, USB LoRa®, USB Zigbee
+- Mini-PCIe1: LTE, USB LoRa®
+- Mini-PCIe2: SPI LoRa®, USB LoRa®
 
 ### Rich Interfaces
 
@@ -232,10 +232,6 @@ With robust IoT network communication capabilities, the R1000 series supports mu
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>4G Cellular</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>4G LTE*</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Zigbee</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>USB Zigbee*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Standards</strong></td>
@@ -723,14 +719,12 @@ It's important to note that not all SSD cards available in the market support th
 | ----------- | ------------------ |
 | Mini-PCIe 1 | 4G LTE             |
 |             | USB LoRa®          |
-|             | USB Zigbee         |
 | Mini-PCIe 2 | SPI LoRa®          |
 |             | USB LoRa®          |
-|             | USB Zigbee         |
 
 </div>
 
-This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-PCIe Slot 2. Slot 1 connects to SIM card slot and supports USB protocols, while Slot 2 supports both USB and SPI protocols but doesn't connect to SIM card slot. Therefore, devices such as 4G LTE, USB LoRa®, and USB Zigbee can be connected through Slot 1, while SPI LoRa®, USB LoRa®, and USB Zigbee devices can be connected through Slot 2.
+This device features two Mini-PCIe interfaces, namely Mini-PCIe Slot 1 and Mini-PCIe Slot 2. Slot 1 connects to SIM card slot and supports USB protocols, while Slot 2 supports both USB and SPI protocols but doesn't connect to SIM card slot. Therefore, devices such as 4G LTE and USB LoRa® can be connected through Slot 1, while SPI LoRa® and USB LoRa® devices can be connected through Slot 2.
 
 ### Reset Hole
 
@@ -899,18 +893,6 @@ Here is the accessories and optional modules list:
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061501</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}> </td>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Zigbee Module</td>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Mini-PCIe USB Zigbee Module</td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992005</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}> </td>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Zigbee Antenna</td>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Zigbee Antenna Kit for reComputer R</td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061641</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>This accessory is required for Wi-Fi function</td>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Wi-Fi/BLE Antenna</td>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Raspberry Pi Compute Module 4 Antenna Kit</td>
@@ -992,7 +974,7 @@ Here is the accessories and optional modules list:
 </table>
 </div>
 
-The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module, LoRa® module using the USB protocol and Zigbee module using USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol and Zigbee module using USB protocol.
+The reComputer R1000 mainboard features two Mini-PCIe slots. Mini-PCIe slot 1 supports 4G module and LoRa® module using the USB protocol; while Mini-PCIe slot 2 supports LoRa® module using the USB and SPI protocol.
 
 :::note
 Can not plug in 2 LoRa® modules on board.
@@ -1475,75 +1457,6 @@ This command specifies the configuration file to be used for LoRa® USB.
 </Tabs>
 
 <!-- Code END -->
-
-### Zigbee Module
-
-The Mini-PCIe slots offer support for Zigbee modules utilizing the USB protocol, allowing for seamless integration of Zigbee functionality into compatible devices. This feature enables efficient communication and control within Zigbee networks, enhancing the versatility and connectivity of the system. With two Mini-PCIe slots available for Zigbee modules, users have the flexibility to implement diverse applications for enhanced reliability.
-
-:::note
-Please note that if you require Zigbee functionality, it is necessary to purchase the corresponding Zigbee module and external antenna.
-[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
-:::
-
-#### Set up reComputer R1000 with Zigbee module as Zigbee Coordinator
-
-**Step 1.** Check Serial Ports:
-Use the following command to check available serial ports:
-
-```bash
-cat /dev/ttyACM*
-```
-
-**Step 2.** Install Serial Communication Tool, then enter *cutecom* open the UI:
-
-```bash
-sudo apt-get install cutecom
-```
-
-**Step 3.** Configure the setting and Open communication:
-
-- Configure the baudrate as 115200
-- Tick 'Hex output' at the bottom
-- Select correct Device port, for example: /dev/ttyACM0
-- Then click 'Open' to set up communication
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbee1.png" /></div>
-
-:::note
-For more detail information, please refer to [E18-MS1PA2-IPX](https://www.ebyte.com/product-view-news.html?id=894). For Hex command instruction, please refer to [Ebyte Zigbee 3.0 Module HEX Command Standard Specification](https://www.ebyte.com/pdf-down.aspx?id=2936).
-:::
-
-**Step 4.** Configure the Zigbee module as Coordinator
-Follow these steps to configure the first Zigbee module after checking module is at HEX code mode:
-
-- Set as coordinator: Send command `55 04 00 05 00 05`, expect response `55 04 00 05 00 05`.<br />
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand.png" /></div>
-
-- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand2.png" /></div>
-
-- Network formation: Send command `55 03 00 02 02`.<br />
-  <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand3.png" /></div>
-
-:::note
-For check digit calculation, can use such [Block Check Character calculator](https://bcc.beyerleinf.de/) tool; Can also use serial communication tools like SSCOM and XCOM with BCC calculate.
-:::
-
-**Step 5.** Check Device Status:
-Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information.
-
-**Step 6.** Enter Transparent Mode:
-If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. Don't forget to set Input mode as *None*. To exit transparent mode, send `+++`.
- <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand4.png" /></div>
-
-**Step 7.** Additional Notes:
-
-- If router configuration fails, the device may already be a coordinator. Leave the network using command `55 07 00 04 02 xx xx xx`.
-- Test transmission power using commands `55 04 0D 00 00 0D` (query) and `55 04 0D 01 XX XX` (set).
-
-Then can connect Zigbee device to reComputer R1000 via ZHA, zigbee2mqtt, Tasmota platforms,etc.
 
 ### PoE
 
