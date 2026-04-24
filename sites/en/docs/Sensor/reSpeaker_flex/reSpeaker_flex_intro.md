@@ -4,14 +4,14 @@ title: Getting Started with reSpeaker Flex
 keywords:
   - reSpeaker flex
   - xvf3800
-image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg
 slug: /respeaker_flex_introduction
 sku: 100005504,100099135,100070894,100026178
 last_update:
   date: 03/26/2026
   author: Kasun Thushara
 createdAt: '2026-03-26'
-updatedAt: '2026-04-08'
+updatedAt: '2026-04-16'
 url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex

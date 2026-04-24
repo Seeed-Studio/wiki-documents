@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/07/2026
+  date: 04/20/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-20'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,89 +18,43 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [RealSense 3D Segmentation](https://wiki.seeedstudio.com/realsense_3d_seg/)
+### [How to Build and Flash BSP Source for Jetson Thor](https://wiki.seeedstudio.com/how_to_build_and_flash_bsp_source_for_jetson_thor/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/3D_Seg/tableseg.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This demo showcases a RealSense-based 3D segmentation pipeline that leverages depth cameras and OpenCV to reconstruct point clouds and detect objects in 3D space, providing key spatial information such as object position, size, and orientation for robotic perception and grasping tasks.
+This wiki explains how to use the BSP source package to build and flash the **NVIDIA Jetson AGX Thor Developer Kit** from an Ubuntu host.
 
 </div>
 
-### [Getting Started with reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_introduction/)
+### [Connecting R1225 to AWS IoT](https://wiki.seeedstudio.com/connecting_r1225_to_aws_iot/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The reSpeaker Flex is a modular, split-architecture voice processing system built around the XMOS XVF3800 processor, designed specifically for robots and intelligent interaction terminals. Unlike conventional all-in-one mic arrays, the Flex separates the core processing board from the microphone array board the two connected via a flexible FPC ribbon cable allowing the array to be embedded at any physical position within a product enclosure while keeping the processing electronics elsewhere.
+This guide explains how to connect the Seeed Studio reComputer R1225 LoRaWAN gateway to AWS IoT Core, covering gateway setup, certificate provisioning, LoRa network configuration, and the creation of device profiles, destinations, and end devices in AWS for cloud-based data management.
 
 </div>
 
-### [reSpeaker Flex Control Wakeword and NLU with Pico-voice](https://wiki.seeedstudio.com/respeaker_flex_picovoice_nlu_keyword_spotting/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pico/pic10.png" alt="pir" width={800} height="auto" /></p>
+### [Configure Static IP on reCamera](https://wiki.seeedstudio.com/configure_static_ip_on_recamera/)
 
 <div style={{ textAlign: "justify" }}>
 
-This demo showcases how wake word detection using Picovoice Porcupine works together with Picovoice Rhino for efficient speech-to-intent processing on a Raspberry Pi. The system first listens for a keyword to activate, and once triggered, it directly converts spoken commands into actionable intents without relying on heavy cloud processing. This approach is highly optimized for low-resource embedded devices, making it ideal for robotics and edge AI applications. It enables low-latency, real-time voice interaction, ensuring fast and reliable performance even on constrained hardware.
-
-</div>
-
-### [Driving reTerminal D1001 Audio Peripherals](https://wiki.seeedstudio.com/driving_reterminal_d1001_audio_peripherals/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide demonstrates how to use and control the audio peripherals on the reTerminal D1001, including microphone input and speaker output, enabling voice interaction and audio processing for AIoT and HMI applications. It covers hardware features and basic setup to help developers quickly integrate audio capabilities into their projects.
-
-</div>
-
-### [Wio-E5 LoRaWAN Relay Function Guide](https://wiki.seeedstudio.com/lora-e5_relay/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/product1.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide introduces the LoRa-E5 relay feature based on the LoRaWAN Relay specification, enabling devices in poor coverage areas to communicate with the network via a relay node. It explains the roles of Relay Master and Slave, along with configuration steps and workflow for extending LoRaWAN network coverage.
-
-</div>
-
-### [Connecting reComputer R1225 to ChirpStack](https://wiki.seeedstudio.com/connecting_r1225_to_chirpstack/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Quick_Start_Content_Image/Chirpstack4.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide walks through how to connect the reComputer R1225 LoRaWAN gateway to the ChirpStack network server, covering gateway setup, configuration, and registration steps. It helps users quickly bring their gateway online and enable LoRaWAN device management and data transmission.
-
-</div>
-
-### [Connecting reComputer R1225 to TTN](https://wiki.seeedstudio.com/connecting_r1225_to_ttn/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Connecting_to_ttn/TTN1.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide explains how to connect the reComputer R1225 LoRaWAN gateway to The Things Network (TTN), including gateway registration, configuration, and data forwarding setup. It introduces connection methods such as Packet Forwarder and LoRa Basics™ Station, helping users quickly integrate their gateway with TTN for cloud-based LoRaWAN communication.
+This document explains how to configure a static IP address on reCamera (Buildroot system). The configuration includes three steps: edit the config file, set static network parameters, and restart the network service for verification.
 
 </div>
 
 <!-- ## Existing Wiki Updated
 
-### [Get Started with Wio Tracker L1](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/)
+### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)
 
-We have added an example of the [NodeDB Reset operation](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#nodedb-reset).
-
-### [Getting started with SO-ARM100 and SO-ARM101 robotic arm with LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
-
-We have added a tutorial on [Asynchronous Inference](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-and-evaluate) in Train And Evaluate. -->
+We have added a new project: [Project B – XIAO ESP32S3 Environmental Telemetry Node](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/#project-b-xiao-esp32s3-environmental-telemetry-node). -->
 
 ## The Efforts of Contributor
 
@@ -228,5 +182,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.3.16th](/Seeed_Elderly/weekly_wiki/2026/wiki260316)
 - [weekly wiki on 2026.3.23rd](/Seeed_Elderly/weekly_wiki/2026/wiki260323)
 - [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
+- [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
+- [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
 
 </details>

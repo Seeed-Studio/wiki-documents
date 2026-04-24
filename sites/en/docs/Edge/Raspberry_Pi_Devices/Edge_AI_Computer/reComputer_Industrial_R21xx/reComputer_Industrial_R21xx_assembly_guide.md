@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-02-10'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_assembly_guide/
 ---
 
@@ -23,7 +23,7 @@ url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_assembly_guide/
     </a>
 </div>
 
-The reComputer Industrial R21xx supports a variety of IoT wireless communications, including 4G, 5G, LoRa®, Wi-Fi/BLE, and Zigbee. It supports expansion via an M.2 slot for SSD storage or AI capabilities via an NPU accelerator. If you choose to include the AI ​​accelerator directly in your purchase, you'll gain an additional 26TOPS of computing power. Furthermore, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, and imaging services, providing comprehensive support tailored to your specific needs.
+The reComputer Industrial R21xx supports a variety of IoT wireless communications, including 4G, 5G, LoRa®, Wi-Fi/BLE. It supports expansion via an M.2 slot for SSD storage or AI capabilities via an NPU accelerator. If you choose to include the AI ​​accelerator directly in your purchase, you'll gain an additional 26TOPS of computing power. Furthermore, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, and imaging services, providing comprehensive support tailored to your specific needs.
 
 This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting
 
@@ -67,9 +67,9 @@ Following these steps should help you disassemble the device without any issues.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.3_assemble_ssd_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Assembling 5G/4G/LoRa®/Zigbee Module and Antenna
+## Assembling 5G/4G/LoRa® Module and Antenna
 
-**Step 1:** Remove the Expantion Board and load the 4G module/LoRa® Module/Zigbee Module into the Mini-PCIe/M.2 B-KEY slot and lock the screws.
+**Step 1:** Remove the Expantion Board and load the 4G module/LoRa® Module into the Mini-PCIe/M.2 B-KEY slot and lock the screws.
 
 **Step 2:** Connect the feeder to the antenna hole on the housing as shown in the following diagram.
 

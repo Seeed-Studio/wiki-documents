@@ -10,7 +10,7 @@ last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/
 ---
 
@@ -189,7 +189,7 @@ The J401 carrier board is a powerful extension board that supports NVIDIA Jetson
 
 Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD connected to the reComputer J4012/ J4011/ J3010 and J3011. All these devices come with J401 carrier board inside and the flashing procedure is the same for all.
 
-reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
+reComputer J40/ J30 series comes with JetPack 5.1.3 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
 
 ### Supported Module
 
@@ -329,7 +329,7 @@ The below image is for Orin NX 16GB
 
 <summary> Flash the device with a single command. </summary>
 
-The reComputer Jetson J30/40 has launched a one-click flashing script, which supports flashing Jetpack 5.1.1, 5.1.2 and 6.0. Currently, the one-click flashing for Jetpack 6.1 and other series of reComputer Jetson is under testing and will be available to everyone in the near future.
+The reComputer Jetson J30/40 has launched a one-click flashing script, which supports flashing Jetpack 5.1.1, 5.1.2 , 6.0 , 6.1 and 6.2. Currently, the one-click flashing for Jetpack 6.1 and other series of reComputer Jetson is under testing and will be available to everyone in the near future.
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh

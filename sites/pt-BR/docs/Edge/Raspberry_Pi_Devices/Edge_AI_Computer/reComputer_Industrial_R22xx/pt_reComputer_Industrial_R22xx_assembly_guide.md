@@ -1,5 +1,5 @@
 ---
-description: O reComputer Industrial R22xx é um NVR de nível industrial com IA, baseado no Raspberry Pi CM5, equipado com um acelerador de IA Hailo-8 que oferece até 26 TOPS. Com 4 portas Ethernet Gigabit com suporte PoE PSE, além de uma porta Ethernet Gigabit adicional, ele possibilita streaming de vídeo de alta largura de banda e implantação simplificada de PoE para câmeras IP. Oferece I/O industrial rico, conectividade sem fio flexível, design térmico sem ventoinha e ampla faixa de temperatura de operação de –20 °C a 50 °C, garantindo análise de vídeo por IA confiável e operação contínua e estável em cenários exigentes.
+description: O reComputer Industrial R22xx é um NVR industrial com IA integrado, baseado no Raspberry Pi CM5, equipado com um acelerador de IA Hailo-8 que oferece até 26 TOPS. Com 4 portas Ethernet Gigabit com suporte PoE PSE, além de uma porta Ethernet Gigabit adicional, ele possibilita streaming de vídeo de alta largura de banda e implantação simplificada de PoE para câmeras IP. Oferece I/O industrial rico, conectividade sem fio flexível, design térmico sem ventoinha e ampla faixa de temperatura de operação de –20 °C a 50 °C, garantindo análise de vídeo por IA confiável e operação contínua e estável em cenários exigentes.
 title: Guia de Montagem do reComputer Industrial R22xx
 keywords:
   - Controlador de Borda
@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-02'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r22xx_assembly_guide/
 ---
 
@@ -25,7 +25,7 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r22xx_assembly_gui
     </a>
 </div>
 
-O reComputer Industrial R22xx oferece suporte a uma variedade de comunicações sem fio de IoT, incluindo 4G, 5G, LoRa®, Wi-Fi/BLE e Zigbee. Ele permite expansão via slot M.2 para armazenamento SSD ou capacidades de IA por meio de um acelerador NPU. Se você optar por incluir o acelerador de IA diretamente na sua compra, ganhará 26 TOPS adicionais de poder computacional. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware e serviços de imageamento, oferecendo suporte abrangente e adaptado às suas necessidades específicas.
+O reComputer Industrial R22xx suporta uma variedade de comunicações sem fio para IoT, incluindo 4G, 5G, LoRa® e Wi-Fi/BLE. Ele suporta expansão por meio de um slot M.2 para armazenamento SSD ou capacidades de IA por meio de um acelerador NPU. Se você optar por incluir o acelerador de IA diretamente na sua compra, obterá 26 TOPS adicionais de poder de computação. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware e serviços de imagem, oferecendo suporte abrangente adaptado às suas necessidades específicas.
 
 Este Wiki mostrará como montar e desmontar a unidade para instalar componentes periféricos, bem como as opções de montagem.
 
@@ -35,82 +35,82 @@ Você precisa preparar o seguinte hardware
 
 - reComputer Industrial R22xx x 1
 - Acessórios
-- Jogo de chaves de fenda
+- Conjunto de chaves de fenda
   - Phillips + 3.5 bit
   - Phillips + 3.0 bit
-  - Slotted - 2.5 bit
+  - Fenda - 2.5 bit
 
 ## Guia de Desmontagem do Dispositivo
 
 Seguir estas etapas deve ajudá-lo a desmontar o dispositivo sem quaisquer problemas.
 
-**Passo 1:** Remova os quatro parafusos na parte inferior e remova os painéis frontal e traseiro:
+**Etapa 1:** Remova os quatro parafusos na parte inferior e remova os painéis frontal e traseiro:
 
 - Localize e desparafuse os quatro parafusos localizados na parte inferior do dispositivo usando uma chave de fenda apropriada.
 - Depois que os parafusos forem removidos, levante cuidadosamente os painéis frontal e traseiro do dispositivo.
 
-**Passo 2:**  Desparafuse as porcas dos conectores das antenas laterais e remova o painel inferior.
+**Etapa 2:**  Desparafuse as porcas dos conectores de antena laterais e remova o painel inferior.
 
-**Passo 3:**  Remova a placa de expansão.
+**Etapa 3:**  Remova a placa de expansão.
 
-**Passo 4:** Remova os quatro parafusos que fixam a placa de circuito impresso (PCB) no lugar
+**Etapa 4:** Remova os quatro parafusos que fixam a placa de circuito impresso (PCB) no lugar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.1-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Instalando um Cartão Nano SIM
 
-**Passo 1:** Insira o cartão Nano SIM no slot SIM.
+**Etapa 1:** Insira o cartão Nano SIM no slot SIM.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.2-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Instalando um SSD  
 
-**Passo 1:** Remova a tampa traseira seguindo o guia de desmontagem.
+**Etapa 1:** Remova a tampa traseira seguindo o guia de desmontagem.
 
-**Passo 2:** Insira o SSD no soquete M.2 e aperte os parafusos.
+**Etapa 2:** Insira o SSD no soquete M.2 e aperte os parafusos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.3-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Montar o Acelerador de IA M.2
 
-**Passo 1:** Desmonte todo o dispositivo seguindo a seção 4.1 "Guia de Desmontagem".
-**Passo 2:** Insira o Acelerador de IA no soquete M.2 e aperte os parafusos.
+**Etapa 1:** Desmonte todo o dispositivo seguindo a seção 4.1 "Disassembly Guide".
+**Etapa 2:** Insira o Acelerador de IA no soquete M.2 e aperte os parafusos.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.4-1.png" style={{width:800, height:'auto'}}/></div>
 
-## Montagem do Módulo e Antena 5G/4G/LoRa®/Zigbee
+## Montando o Módulo e a Antena 5G/4G/LoRa®
 
-**Passo 1:** Remova a placa de expansão e insira o módulo 4G/módulo LoRa®/módulo Zigbee no slot Mini-PCIe/M.2 B-KEY e aperte os parafusos.
+**Etapa 1:** Remova a placa de expansão e insira o módulo 4G/módulo LoRa® no slot Mini-PCIe/M.2 B-KEY e aperte os parafusos.
 
-**Passo 2:** Conecte o alimentador ao orifício da antena na carcaça, conforme mostrado no diagrama a seguir.
+**Etapa 2:** Conecte o alimentador ao orifício da antena no gabinete, conforme mostrado no diagrama a seguir.
 
-**Passo 3:** Instale o alimentador na base da antena do módulo correspondente.
+**Etapa 3:** Instale o alimentador na base da antena do módulo correspondente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.5-1.png" style={{width:800, height:'auto'}}/></div>
 
 
-## Montagem do Módulo TPM 2.0
+## Montando o Módulo TPM 2.0
 
-**Passo 1:** Remova a tampa traseira seguindo o guia de desmontagem.
+**Etapa 1:** Remova a tampa traseira seguindo o guia de desmontagem.
 
-**Passo 2:** Insira o módulo TPM 2.0 no soquete J26.
+**Etapa 2:** Insira o módulo TPM 2.0 no soquete J26.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.6-1.png" style={{width:800, height:'auto'}}/></div>
 
-## Montagem do Módulo UPS e PoE
+## Montando o Módulo de UPS e PoE
 
-**Passo 1:** Antes de instalar o módulo UPS e PoE no lado da placa do módulo CM5, desmonte todo o dispositivo seguindo o guia de desmontagem fornecido.
+**Etapa 1:** Antes de instalar o módulo de UPS e PoE no lado do módulo CM5 da placa, desmonte todo o dispositivo seguindo o guia de desmontagem fornecido.
 
-**Passo 2:** Instale o Módulo UPS**  
+**Etapa 2:** Instale o Módulo de UPS**  
 
-- Usando dois parafusos PM2.0xL5.0 e espaçadores M2.0x5.0, fixe o módulo UPS em dois furos sem pastilhas de contato metálicas.
-- Certifique-se de que o módulo UPS esteja devidamente alinhado e firmemente preso usando os parafusos e espaçadores fornecidos.
+- Usando dois parafusos PM2.0xL5.0 e espaçadores M2.0x5.0, fixe o módulo de UPS em dois furos sem almofadas de contato metálicas.
+- Certifique-se de que o módulo de UPS esteja devidamente alinhado e firmemente preso usando os parafusos e espaçadores fornecidos.
 
-**Passo 3: Instale o Módulo PoE**  
+**Etapa 3: Instale o Módulo PoE**  
 
 - Alinhe o **módulo PoE** com o **slot designado** na placa.  
-- **Solde cuidadosamente o módulo PoE** na placa, garantindo precisão para evitar danos a componentes próximos.
+- **Solde cuidadosamente o módulo PoE** na placa, garantindo precisão para evitar danos aos componentes próximos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.7-1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -118,31 +118,31 @@ Seguir estas etapas deve ajudá-lo a desmontar o dispositivo sem quaisquer probl
 
 ### Guia de Montagem em Trilho DIN
 
-O reComputer Industrial R21xx oferece vários métodos de instalação. O clipe para trilho DIN e os parafusos de instalação estão incluídos na embalagem. Siga o diagrama para fixar corretamente o clipe de trilho DIN nos orifícios de montagem na lateral do dispositivo. Depois que os parafusos estiverem firmemente presos, você poderá instalar o dispositivo no trilho de montagem.
+O reComputer Industrial R21xx oferece vários métodos de instalação. O clipe para trilho DIN e os parafusos de instalação estão incluídos na embalagem. Siga o diagrama para fixar corretamente o clipe de trilho DIN nos orifícios de montagem na lateral do dispositivo. Depois que os parafusos estiverem bem apertados, você poderá instalar o dispositivo no trilho de montagem.
 
 #### Etapas de Instalação
 
-- **Passo 1:** Posicione o dispositivo e o clipe do trilho na borda superior do trilho de perfil padrão na posição mostrada e empurre o dispositivo para baixo.
-- **Passo 2:** Gire o clipe do trilho do dispositivo por baixo através do trilho de perfil padrão.
-- **Passo 3:** Empurre o dispositivo na direção do trilho de perfil padrão. Você ouvirá o dispositivo encaixar no lugar.
+- **Etapa 1:** Coloque o dispositivo e o clipe de trilho na borda superior do trilho de perfil padrão na posição mostrada e empurre o dispositivo para baixo.
+- **Etapa 2:** Gire o clipe de trilho do dispositivo por baixo através do trilho de perfil padrão.
+- **Etapa 3:** Empurre o dispositivo na direção do trilho de perfil padrão. Você ouvirá o dispositivo encaixar no lugar.
 
 #### Etapas de Remoção
 
-- **Passo 1:** Empurre o dispositivo para baixo até que seja liberado pelo clipe do trilho.
-- **Passo 2:** Gire o dispositivo para fora do trilho de perfil padrão.
-- **Passo 3:** Levante o dispositivo para cima e retire-o
+- **Etapa 1:** Empurre o dispositivo para baixo até que ele seja liberado pelo clipe de trilho.
+- **Etapa 2:** Gire o dispositivo para fora do trilho de perfil padrão.
+- **Etapa 3:** Levante o dispositivo para cima e retire-o
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.1_din-rail_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
-### Guia de Montagem em Parede
+### Guia de Montagem na Parede
 
-O método de montagem vertical também é adequado para o reComputer Industrial R2000, porém os suportes de montagem não estão incluídos na caixa e precisam ser adquiridos separadamente.
+O método de montagem vertical também é adequado para o reComputer Industrial R2000, porém os suportes de montagem não estão incluídos na caixa, sendo necessária a compra adicional.
 
 #### Etapas de Instalação
 
-- **Passo 1:** Coloque os suportes de montagem na parte traseira do dispositivo.
-- **Passo 2:** Aperte os suportes com os parafusos fornecidos.
-- **Passo 3:** Marque os furos, faça as perfurações necessárias na parede e fixe o dispositivo na parede usando dois parafusos.
+- **Etapa 1:** Coloque os suportes de montagem na parte traseira do dispositivo.
+- **Etapa 2:** Prenda os suportes com os parafusos fornecidos.
+- **Etapa 3:** Marque os furos, faça as perfurações necessárias na parede e fixe o dispositivo na parede usando dois parafusos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.2_wall_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -184,7 +184,7 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena Wi-Fi/BLE</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/49.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Kit de Antena para Raspberry Pi Compute Module 4</a></td>
+      <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Kit de Antena Raspberry Pi Compute Module 4</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -262,7 +262,7 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>Adaptador de Energia</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-23.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Adaptador de Energia 3P-Preto-19V-4,74A/7,4*5mm</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Adaptador de Energia 3P-Preto-19V-4.74A/7.4*5mm</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313080684</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -292,7 +292,7 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos diversos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

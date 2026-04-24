@@ -10,7 +10,7 @@ last_update:
   date: 1/10/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip/
 ---
 
@@ -62,7 +62,7 @@ This product does not include a Seeed Studio XIAO board, please click [here](ht
 |---|---|
 |Operating voltage|3.3V / 3.7V Lithium Battery|
 |Load Capacity|800mA|
-|Charging current| 400mA (Max)|
+|Charging current| 500mA (Max)|
 |Operating Temperature|- 40°C to 85°C|
 |Storage Temperature|-55°C to 150°C|
 |Grove Interface|I2C *2 / UART* 1|

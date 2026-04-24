@@ -1,55 +1,91 @@
 ---
-description: This wiki demonstrates object detection using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration.
-title: YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
+description: This wiki demonstrates object detection using YOLOv8 on reComputer R Series with Raspberry-pi-AI-kit Acceleration.
+title: YOLOv8 Object Detection on reComputer R Series with Hailo-8L
 keywords:
   - Edge
-  - reComputer r1000
+  - reComputer R Series
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /yolov8_object_detection_on_recomputer_r1000_with_hailo_8l
-sku: 113991274,E24010521
+sku: 113991274, E24010521, 114993627, 100020831, 100061305, 103990763
 last_update:
-  date: 06/26/2024
-  author: Jiahao
+  date: 04/17/2026
+  author: William Zhang
 no_comments: false
 createdAt: '2024-06-27'
 updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/
 ---
 
-# YOLOv8 Object Detection on reComputer R1000 with Hailo-8L
+# YOLOv8 Object Detection on reComputer R Series with Hailo-8L
 
 ## Introduction
 
 [YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) is used to accelerate inference speed, featuring a 13 TOPS neural network inference accelerator built around the Hailo-8L chip.
 
-This wiki demonstrates object detection using YOLOv8 on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) with and without Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
+This wiki demonstrates object detection using YOLOv8 on the R Series with and without the Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
 
-## Prepare Hardware
+## Prepare Hardwares
 
 <div class="table-center">
- <table align="center">
- <tr>
-  <th>reComputer r1000</th>
-  <th>Raspberry Pi AI Kit</th>
- </tr>
+  <table align="center">
+    <tr>
+      <th>reComputer r1000</th>
+      <th>Raspberry Pi AI Kit</th>
+    </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" style={{width:600, height:'auto'}}/></div></td>
-   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113060086-raspberry-pi-ai-kit-45font.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113060086-raspberry-pi-ai-kit-45font.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-  <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-   </div></td>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-   </div></td>
-  </tr>
- </table>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
+  <table align="center">
+    <tr>
+      <th>reComputer AI Industrial R2100</th>
+      <th>reComputer Industrial R20xx</th>
+      <th>reComputer Industrial R21xx</th>
+      <th>reComputer AI R2100</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
 </div>
 
 ## Run this project
@@ -61,6 +97,8 @@ import TabItem from '@theme/TabItem';
 <TabItem value="Method 1" label="Run with Hailo-8L">
 
 ### Step 1: Install AI kit
+
+If you are using an R2000 series device with built-in AI acceleration, you may skip this step.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/install_AIkit.gif" alt="pir" width={1000} height="auto"/></p>
 
@@ -136,6 +174,8 @@ The right result show as bellow:
 
 Open terminal on the reComputer R1000, and input command as follows to run YOLOv8.
 
+Note: An external display must be connected via an HDMI cable during runtime; otherwise, the visualization interface will not load.
+
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
@@ -145,6 +185,17 @@ bash ./run.sh object-detection-hailo
 ### Result
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_with_AIkit.gif" alt="pir" width={1000} height="auto"/></p>
+
+### Note
+If you are connecting remotely via SSH or other methods and do not have an external display available, you can modify the image rendering method in the code so that the visualization interface can render without relying on an external display.
+
+Open the inference code file object-detection-hailo.py, modify line 165, and replace the entire line with the following code:
+```
+        pipeline_string += f"fpsdisplaysink video-sink=ximagesink name=hailo_display sync={self.sync} text-overlay={self.options_menu.show_fps} signal-fps-measurements=true "
+```
+
+
+
 </TabItem>
 
 <TabItem value="Method 2" label="Run without Hailo-8L">

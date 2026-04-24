@@ -1,10 +1,10 @@
 ---
-description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS を実現する産業グレードの AI 搭載 NVR です。PoE PSE をサポートする 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向けのシンプルな PoE 展開を可能にします。豊富な産業用 I/O、柔軟なワイヤレス接続、ファンレス熱設計、–20 °C から 50 °C までの広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を実現します。
+description: reComputer Industrial R22xx は、Raspberry Pi CM5 をベースに Hailo-8 AI アクセラレータを搭載し、最大 26 TOPS を実現する産業グレードの AI 搭載 NVR です。PoE PSE 対応の 4 つのギガビット Ethernet ポートに加え、さらに 1 つのギガビット Ethernet ポートを備え、高帯域幅のビデオストリーミングと IP カメラ向けのシンプルな PoE 展開を可能にします。豊富な産業用 I/O、柔軟なワイヤレス接続、ファンレス熱設計、–20 °C から 50 °C の広い動作温度範囲を備え、要求の厳しいシナリオにおいても信頼性の高い AI ビデオ解析と連続した安定動作を実現します。
 title: reComputer Industrial R22xx 組み立てガイド
 keywords:
-  - Edge Controller
+  - エッジコントローラ
   - Raspberry pi
-  - Edge Controller
+  - エッジコントローラ
   - reComputer Industrial R22xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_r22xx_assembly_guide
@@ -25,9 +25,9 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r22xx_assembly_guide/
     </a>
 </div>
 
-reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE、Zigbee を含むさまざまな IoT ワイヤレス通信をサポートします。M.2 スロットによる SSD ストレージ拡張、または NPU アクセラレータによる AI 機能拡張に対応しています。購入時に AI アクセラレータを同時に選択した場合、追加で 26TOPS の演算能力を得ることができます。さらに、当社のハードウェアエンジニアリングサービスでは、ロゴのカスタマイズ、パッケージブランディング、ラベリング、ファームウェアの書き込みおよびイメージングサービスなど、お客様のニーズに合わせた包括的なサポートを提供します。
+reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE を含むさまざまな IoT ワイヤレス通信をサポートします。M.2 スロット経由で SSD ストレージを拡張したり、NPU アクセラレータによって AI 機能を拡張したりすることができます。AI アクセラレータを同時購入として選択した場合、追加で 26TOPS の演算能力を得ることができます。さらに、当社のハードウェアエンジニアリングサービスでは、ロゴのカスタマイズ、パッケージブランディング、ラベリング、ファームウェアの書き込みおよびイメージングサービスを提供し、お客様の特定のニーズに合わせた包括的なサポートを行います。
 
-この Wiki では、周辺コンポーネントを取り付けるためのユニットの組み立ておよび分解方法に加え、マウントオプションについて説明します。
+この Wiki では、周辺機器コンポーネントを取り付けるためのユニットの組み立ておよび分解方法と、マウントオプションについて説明します。
 
 ## ハードウェアの前提条件
 
@@ -36,20 +36,20 @@ reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE、Zigbee を含�
 - reComputer Industrial R22xx x 1
 - 付属品
 - ドライバーセット
-  - プラスドライバー + 3.5 ビット
-  - プラスドライバー + 3.0 ビット
-  - マイナスドライバー - 2.5 ビット
+  - プラス + 3.5 ビット
+  - プラス + 3.0 ビット
+  - マイナス - 2.5 ビット
 
 ## デバイス分解ガイド
 
 次の手順に従うことで、問題なくデバイスを分解できます。
 
-**ステップ 1：** 底面の 4 本のネジを外し、前面パネルと背面パネルを取り外します：
+**ステップ 1：** 底面の 4 本のネジを外し、前面パネルと背面パネルを取り外します。
 
-- 適切なドライバーを使用して、デバイス底面にある 4 本のネジを見つけて取り外します。
+- デバイス底面にある 4 本のネジを、適切なドライバーを使用して見つけて取り外します。
 - ネジを外したら、デバイスから前面パネルと背面パネルを慎重に持ち上げて取り外します。
 
-**ステップ 2：** 側面のアンテナコネクタナットを外し、ボトムパネルを取り外します。
+**ステップ 2：** 側面のアンテナコネクタナットを外し、フロアパネルを取り外します。
 
 **ステップ 3：** 拡張ボードを取り外します。
 
@@ -73,19 +73,19 @@ reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE、Zigbee を含�
 
 ## M.2 AI アクセラレータの組み立て
 
-**ステップ 1：** セクション 4.1「Disassembly Guide」に従って、デバイス全体を分解します。
+**ステップ 1：** セクション 4.1「分解ガイド」に従って、デバイス全体を分解します。
 **ステップ 2：** AI アクセラレータを M.2 ソケットに挿入し、ネジで固定します。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.4-1.png" style={{width:800, height:'auto'}}/></div>
 
-## 5G/4G/LoRa®/Zigbee モジュールとアンテナの組み立て
+## 5G/4G/LoRa® モジュールとアンテナの組み立て
 
-**ステップ 1：** 拡張ボードを取り外し、4G モジュール / LoRa® モジュール / Zigbee モジュールを Mini-PCIe/M.2 B-KEY スロットに挿入してネジで固定します。
+**ステップ 1：** 拡張ボードを取り外し、4G モジュール / LoRa® モジュールを Mini-PCIe/M.2 B-KEY スロットに挿入してネジで固定します。
 
 **ステップ 2：** 次の図に示すように、フィーダーを筐体のアンテナ穴に接続します。
 
-**ステップ 3：** 対応するモジュールのアンテナベースにフィーダーを取り付けます。
+**ステップ 3：** フィーダーを対応するモジュールのアンテナベースに取り付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.5-1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -100,17 +100,17 @@ reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE、Zigbee を含�
 
 ## UPS および PoE モジュールの組み立て
 
-**ステップ 1：** CM5 モジュール側の基板に UPS および PoE モジュールを取り付ける前に、提供されている分解ガイドに従ってデバイス全体を分解します。
+**ステップ 1：** ボードの CM5 モジュール側に UPS および PoE モジュールを取り付ける前に、提供されている分解ガイドに従ってデバイス全体を分解します。
 
 **ステップ 2：** UPS モジュールを取り付けます**  
 
 - 2 本の PM2.0xL5.0 ネジと M2.0x5.0 スペーサーを使用して、金属接点パッドのない 2 つの穴に UPS モジュールを固定します。
-- UPS モジュールが正しく位置合わせされ、付属のネジとスペーサーでしっかりと固定されていることを確認します。
+- 付属のネジとスペーサーを使用して、UPS モジュールが正しく位置合わせされ、しっかりと取り付けられていることを確認します。
 
 **ステップ 3：PoE モジュールを取り付けます**  
 
-- **PoE モジュール**を基板上の**指定スロット**に合わせます。  
-- 近接するコンポーネントを損傷しないよう注意しながら、**PoE モジュールを基板にはんだ付け**します。
+- **PoE モジュール**をボード上の**指定スロット**に合わせます。  
+- 近接するコンポーネントを損傷しないよう注意しながら、**PoE モジュールをボードにはんだ付け**します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.7-1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -118,18 +118,18 @@ reComputer Industrial R22xx は、4G、5G、LoRa®、Wi-Fi/BLE、Zigbee を含�
 
 ### DIN レール取り付けガイド
 
-reComputer Industrial R21xx は、さまざまな取り付け方法に対応しています。DIN レールクリップと取り付けネジはパッケージに同梱されています。図に従って、デバイス側面の取り付け穴に DIN レールクリップを正しく取り付けてください。ネジをしっかりと締めたら、デバイスを取り付けレールに装着できます。
+reComputer Industrial R21xx は、さまざまな取り付け方法に対応しています。DIN レールクリップと取り付け用ネジはパッケージに同梱されています。図を参考にして、デバイス側面の取り付け穴に DIN レールクリップを正しく取り付けてください。ネジをしっかりと締めたら、デバイスを取り付けレールに装着できます。
 
 #### 取り付け手順
 
-- **ステップ 1：** デバイスとレールクリップを、示されている位置の標準プロファイルレールの上端に置き、デバイスを下方向に押します。
+- **ステップ 1：** デバイスとレールクリップを、示された位置の標準プロファイルレールの上端に置き、デバイスを下方向に押します。
 - **ステップ 2：** デバイスのレールクリップを、下側から標準プロファイルレールを通して回転させます。
 - **ステップ 3：** デバイスを標準プロファイルレールの方向に押します。カチッという音がして、デバイスが所定の位置に固定されます。
 
 #### 取り外し手順
 
-- **ステップ 1：** レールクリップから外れるまでデバイスを下方向に押します。
-- **ステップ 2：** デバイスを標準プロファイルレールから回転させて外します。
+- **ステップ 1：** デバイスを下方向に押し、レールクリップから解放します。
+- **ステップ 2：** デバイスを標準プロファイルレールから外側に回転させます。
 - **ステップ 3：** デバイスを持ち上げて取り外します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.1_din-rail_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
@@ -140,7 +140,7 @@ reComputer Industrial R21xx は、さまざまな取り付け方法に対応し�
 
 #### 取り付け手順
 
-- **ステップ 1：** デバイス背面に取り付けブラケットを配置します。
+- **ステップ 1：** 取り付けブラケットをデバイス背面に配置します。
 - **ステップ 2：** 付属のネジでブラケットを固定します。
 - **ステップ 3：** 穴位置に印を付けて必要な穴を壁に開け、2 本のネジを使用してデバイスを壁に固定します。
 
@@ -160,19 +160,19 @@ reComputer Industrial R21xx は、さまざまな取り付け方法に対応し�
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={4} style={{height: 18, width: '20%'}}>LoRa® モジュール</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={4} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/47.png" /></td>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN Gateway Module(SPI)-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN ゲートウェイモジュール (SPI) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992969</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN Gateway Module(SPI)-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN ゲートウェイモジュール (SPI) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993268</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN Gateway Module(USB)-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN ゲートウェイモジュール (USB) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992991</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN Gateway Module(USB)-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">地域オプション LoRaWAN ゲートウェイモジュール (USB) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992628</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -262,7 +262,7 @@ reComputer Industrial R21xx は、さまざまな取り付け方法に対応し�
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>電源アダプタ</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-23.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Power Adapter 3P-Black-19V-4.74A/7.4*5mm</a></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">電源アダプタ 3P-ブラック-19V-4.74A/7.4*5mm</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313080684</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>

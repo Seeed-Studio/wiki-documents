@@ -12,7 +12,7 @@ last_update:
   date: 06/06/2024
   author: Evelyn Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/
 ---
 # reComputer R1000 Assembly Guide
@@ -27,7 +27,7 @@ url: https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/
 
 <br />
 
-reComputer R1000 supports multiple IoT wireless communication including 4G, LoRa®, Wi-Fi/BLE, and Zigbee.  It allows expansion of SSD cards via M.2 socket for increased storage or NPU accelerator for AI capabilities.  Moreover, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, imaging service, and more, providing comprehensive support for your specific needs.
+reComputer R1000 supports multiple IoT wireless communication including 4G, LoRa® and Wi-Fi/BLE.  It allows expansion of SSD cards via M.2 socket for increased storage or NPU accelerator for AI capabilities.  Moreover, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, imaging service, and more, providing comprehensive support for your specific needs.
 
 This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting
 
@@ -102,13 +102,13 @@ Following these steps should help you disassemble the device without any issues.
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/LTE.gif" /></div>
 
-### Assemble 4G/LoRa®/Zigbee Module and Antenna
+### Assemble 4G/LoRa® Module and Antenna
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/LoRa.gif" /></div>
 
 **STEP 1:** Make sure the module for Mini-PCIe slots is loaded above the SSD card.
 
-**STEP 2:** Load the 4G module/LoRa® Module/Zigbee Module(following the matching relationship of each slot according to section"2.2.8") into the Mini-PCIe slot and lock the screws.
+**STEP 2:** Load the 4G module/LoRa® Module Module(following the matching relationship of each slot according to section"2.2.8") into the Mini-PCIe slot and lock the screws.
 
 **STEP 3:** Install the feeder line following the pictures below.
 
@@ -218,18 +218,6 @@ Vertical mounting method is also suitable for reComputer R1000, however the moun
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/49.png" /></td>
       <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Raspberry Pi Compute Module 4 Antenna Kit</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Zigbee Module</td>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}></td>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Mini-PCIe USB Zigbee Module</td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992005</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Zigbee Antenna</td>
-      <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/50.png" /></td>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Zigbee Antenna Kit for reComputer R</td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061641</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>4G Module</td>

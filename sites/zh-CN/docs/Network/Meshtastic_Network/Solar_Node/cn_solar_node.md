@@ -1,6 +1,6 @@
 ---
-description: 用于 Meshtastic 和 LoRa 的 SenseCAP 太阳能节点
-title: SenseCAP 太阳能节点
+description: 面向 Meshtastic 与 LoRa 的 SenseCAP 太阳能节点
+title: SenseCAP 太阳能节点介绍
 keywords:
   - Meshtastic
   - Solar
@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-11'
+updatedAt: '2026-03-10'
 url: https://wiki.seeedstudio.com/cn/meshtastic_solar_node/
 ---
 
@@ -29,11 +29,11 @@ url: https://wiki.seeedstudio.com/cn/meshtastic_solar_node/
 
 ## 版本对比
 
-Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
+Solar Node 提供两个版本可选：[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) 和 [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
 
-## 概述
+## 概览
 
 ### 特性
 
@@ -49,32 +49,32 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
 
 <table>
   <tr>
-    <td><b>主控制器</b></td>
+    <td><b>Main Controller</b></td>
     <th>
       <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html" target="_blank">XIAO nRF52840 Plus</a><br />
-      (Nordic nRF52840，带 FPU 的 ARM® Cortex®-M4 32 位处理器，64 MHz，256KB RAM，1MB Flash，2MB 板载 Flash)
+      (Nordic nRF52840，ARM® Cortex®-M4 32 位处理器，带 FPU，64 MHz，256KB RAM，1MB Flash，2MB 板载 Flash)
     </th>
   </tr>
   <tr>
-    <td><b>充电管理芯片</b></td>
+    <td><b>Charging Management Chip</b></td>
     <td>CN3165 (0.99A)</td>
   </tr>
   <tr>
-    <td><b>LoRa 模组</b></td>
+    <td><b>LoRa Module</b></td>
     <td>
       <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html" target="_blank">Wio-SX1262 Module</a><br />
       (Semtech SX1262，TXOP=22dBm@862-930MHz)
     </td>
   </tr>
   <tr>
-    <td><b>GPS 模组（适用于 P1-Pro 版本）</b></td>
+    <td><b>GPS Module(for P1-Pro version)</b></td>
     <td>
       <a href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">XIAO L76K</a><br />
       (支持 GPS/GLONASS/Galileo)
     </td>
   </tr>
   <tr>
-    <td rowSpan="3"><b>天线</b></td>
+    <td rowSpan="3"><b>Antenna</b></td>
     <td>
       <p>LoRa：</p>
       <p>类型：棒状橡胶天线</p>
@@ -94,18 +94,18 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
     <td>Bluetooth 5.0</td>
   </tr>
   <tr>
-    <td><b>太阳能板</b></td>
+    <td><b>Solar Panel</b></td>
     <td>5W</td>
   </tr>
   <tr>
-    <td rowSpan="2"><b>接口</b></td>
+    <td rowSpan="2"><b>Interface</b></td>
     <td>Grove *1：IIC/GPIO/UART</td>
   </tr>
   <tr>
     <td>USB-C 调试</td>
   </tr>
   <tr>
-    <td rowSpan="3"><b>按键</b></td>
+    <td rowSpan="3"><b>Button</b></td>
     <td>电源开/关</td>
   </tr>
   <tr>
@@ -128,7 +128,7 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
     <td>用户自定义 *1</td>
   </tr>
   <tr>
-    <td><b>电源</b></td>
+    <td><b>Power supply</b></td>
     <td>Type-C：5V 1A</td>
   </tr>
   <tr>
@@ -136,11 +136,11 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
     <td>太阳能供电：5V 1A</td>
   </tr>
   <tr>
-    <td><b>防水等级</b></td>
+    <td><b>Waterproof rating</b></td>
     <td>IPX5</td>
   </tr>
   <tr>
-    <td><b>电池（适用于 P1-Pro 版本）</b></td>
+    <td><b>Battery(for P1-Pro version)</b></td>
     <td>
       <p>- 4 节 18650 锂电池（每节 3350mAh）</p>
       <p>- 支持 Type-C 和太阳能充电。</p>
@@ -149,11 +149,11 @@ Solar Node 提供两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio
     </td>
   </tr>
   <tr>
-    <td><b>认证</b></td>
+    <td><b>Certification</b></td>
     <td>FCC、CE</td>
   </tr>
   <tr>
-    <td><b>尺寸</b></td>
+    <td><b>Dimension</b></td>
     <td>191.2 x 201.2 x 42.1 mm</td>
   </tr>
 </table>

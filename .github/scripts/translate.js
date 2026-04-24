@@ -12,8 +12,7 @@ try {
 }
 
 const openai = new OpenAI({
-  apiKey: process.env.TRANSLATION_API_KEY,
-  baseURL: 'https://openrouter.ai/api/v1'
+  apiKey: process.env.TRANSLATION_API_KEY
 });
 
 // 语言配置
@@ -799,7 +798,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await openai.chat.completions.create({
-          model: 'openai/gpt-5.1',
+          model: 'gpt-5.1',
           max_completion_tokens: 20000,
           temperature: 0,
           messages: [
@@ -824,10 +823,10 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用ChatGPT API (尝试 ${attempt}/${maxRetries})...`);
 
       const response = await openai.chat.completions.create({
-        model: 'openai/gpt-5.1',
+        model: 'gpt-5.1',
         max_completion_tokens: 20000,
         temperature: 0,
         messages: [
@@ -901,7 +900,6 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
-  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
 
   const langFilePrefix =
     targetLang === 'zh-CN' ? 'cn_' :
@@ -932,9 +930,8 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
      - 目标语言的 id 按下面的公式改写：
        1. 保留中间目录 A/B/C 不变
        2. 把最后一段 F 改成 "${langFilePrefix}F"
-       3. 最前面再加上语言前缀 "${localeFolder}/"
-       4. 也就是：英文 id = "A/B/C/F"
-          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
+       3. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 
