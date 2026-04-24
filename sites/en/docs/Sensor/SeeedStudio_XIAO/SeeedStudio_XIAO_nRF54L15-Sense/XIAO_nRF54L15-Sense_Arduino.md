@@ -1,5 +1,5 @@
 ---
-description: ''
+description: 'This article is developed based on the Arduino core for nRF54L15 written by developer lolren, aiming to provide reference tutorials for users of the XIAO nRF54L15 to develop on the Arduino IDE.'
 title: Arduino for Seeed Studio XIAO nRF54L15
 keywords:
   - nRF54L15
@@ -15,9 +15,9 @@ updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_arduino/
 ---
 
-## Acknowledgements
-
 This article is developed based on the XIAO nRF54L15 Sense with the Arduino platform.
+
+## Acknowledgements
 
 Special thanks to the developer **[lolren](https://github.com/lolren)** for providing Arduino adaptation support for the nRF54L15 chip. This enables the development and practical application of the XIAO nRF54L15 on the Arduino ecosystem. Gratitude is also extended for his continuous efforts and contributions to the related open-source ecological construction.
 
@@ -122,7 +122,7 @@ You need to prepare the XIAO nRF54L15 Sense and Grove devices.
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
         <th>Seeed Studio Grove Base for XIAO</th>
-         <th>Grove - Relay</th>
+         <th>Grove – Chainable RGB LED</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -177,7 +177,7 @@ void loop() {
 
 ### Result
 
-Connect the Grove-Rotary Angle Sensor to Pin 0 of the Seeed Studio Grove Base for XIAO. The Grove-Relay will present flashing and gradual dimming breathing effects.
+Connect the Grove – Chainable RGB LED to Pin 0 of the Seeed Studio Grove Base for XIAO. The Grove – Chainable RGB LED will present flashing and gradual dimming breathing effects.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/result_2.gif" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -259,8 +259,8 @@ Wiring
      <th>TX</th>
  </tr>
   <tr>
-     <th>RX</th>
      <th>TX</th>
+     <th>RX</th>
  </tr>
   <tr>
      <th>GND</th>
@@ -447,7 +447,7 @@ You need to prepare a XIAO nRF54L15 and a device that supports SPI communication
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -466,7 +466,7 @@ You need to prepare a XIAO nRF54L15 and a device that supports SPI communication
 
 ### Software
 
-- 安装  GxEPD2 库
+- Install the GxEPD2 library
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/arduino/arduino_6.png" style={{width:400, height:'auto'}}/></div><br/>
 
