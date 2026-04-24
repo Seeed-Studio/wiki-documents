@@ -19,7 +19,6 @@ url: https://wiki.seeedstudio.com/cn/damiao_series/
 
 # 达妙 43 系列电机入门指南
 
-本文将介绍如何开始使用达妙 43 系列电机，以及如何在 reComputer Mini Jetson Orin 上使用 C++ 和 Python 进行操作。
 
 <div align="center">
     <img width={400}
