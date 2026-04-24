@@ -3700,7 +3700,7 @@ const sidebars = {
                   type: 'category',
                   label: 'J601-Robotics 载板',
                   items: [
-                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/reComputer_Robotics_J601_Getting_Started',
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/cn_reComputer_Robotics_J601_Getting_Started',
                   ],
                 },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/cn_reComputer_A203_Flash_System',
