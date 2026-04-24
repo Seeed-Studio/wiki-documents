@@ -15,6 +15,7 @@ last_update:
   author: Zibo
 createdAt: '2026-04-14'
 updatedAt: '2026-04-14'
+url: https://wiki.seeedstudio.com/rtl8852be_wireless_module_for_jetson/
 ---
 
 <div align="center">

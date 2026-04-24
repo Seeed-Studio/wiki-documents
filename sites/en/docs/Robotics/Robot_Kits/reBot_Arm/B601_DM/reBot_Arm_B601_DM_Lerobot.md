@@ -11,13 +11,13 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zerop
 slug: /rebot_arm_b601_dm_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-15
+  date: 2026-04-15T00:00:00.000Z
   author: LiuJunjie
 translation:
   skip:
-    - [zh-CN]
+    - - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-09'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 

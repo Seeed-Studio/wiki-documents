@@ -1188,6 +1188,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Built-in-Sensor',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Power_Consumptions',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Arduino',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -4290,6 +4291,7 @@ const sidebars = {
               items: [
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Lerobot',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Grasping_Demo',
               ]
             }
           ]
