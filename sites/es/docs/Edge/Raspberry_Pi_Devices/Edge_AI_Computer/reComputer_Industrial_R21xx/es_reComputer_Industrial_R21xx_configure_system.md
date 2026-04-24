@@ -1,5 +1,5 @@
 ---
-description: Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R21xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 5G，4G, RS485, RS232, pruebas de DI/DO y UPS para un apagado seguro.
+description: Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R21xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 5G，4G, RS485, RS232, pruebas DI/DO y UPS para un apagado seguro.
 title: Configurar reComputer Industrial R21xx
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-12-16'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_R21xx_configure_system/
 ---
 
 ## Descripción general
 
-Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R21xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, RS485, RS232, CAN, pruebas de DI/DO, UPS para un apagado seguro y más.
+Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R21xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, RS485, RS232, CAN, pruebas DI/DO, UPS para un apagado seguro y más.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -29,7 +29,7 @@ Aprende a configurar y probar los componentes de hardware en la serie reComputer
 
 ## Consultar asignaciones y desplazamientos de GPIO
 
-Para consultar las asignaciones y los desplazamientos de GPIO, sigue estos pasos:
+Para consultar las asignaciones y desplazamientos de GPIO, sigue estos pasos:
 
 1. Copia y pega el siguiente comando para consultar las asignaciones de GPIO:
 
@@ -37,7 +37,7 @@ Para consultar las asignaciones y los desplazamientos de GPIO, sigue estos pasos
 cat /sys/kernel/debug/gpio
 ```
 
-**Este comando mostrará las asignaciones y los desplazamientos de GPIO**, proporcionando información esencial para depurar o configurar los pines GPIO.
+**Este comando mostrará las asignaciones y desplazamientos de GPIO**, proporcionando información esencial para depurar o configurar los pines GPIO.
 
 ## Prueba del LED de USUARIO
 
@@ -132,11 +132,11 @@ scan on
 
 Este comando iniciará el escaneo de dispositivos Bluetooth cercanos. Luego puedes usar otros comandos dentro de la interfaz de ***bluetoothctl*** para interactuar con dispositivos Bluetooth, como emparejarlos o conectarte a ellos.
 
-## LoRa® sobre Mini‑PCIe
+## LoRa® sobre Mini-PCIe
 
-### Configuración de LoRa® SPI  
+### Configuración LoRa® SPI  
 
-Después de instalar el LoRa® SPI en la ranura Mini‑PCIe 2, puedes configurar LoRa® SPI siguiendo estos pasos:
+Después de instalar el LoRa® SPI en la ranura Mini-PCIe 2, puedes configurar LoRa® SPI, sigue estos pasos:
 
 1. Clona el repositorio **SX1302_HAL**:
 
@@ -145,7 +145,7 @@ cd ~/
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-2. Ve al directorio clonado:
+2. Navega al directorio clonado:
 
 ```bash
 cd sx1302_hal
@@ -329,7 +329,7 @@ Estos pasos configurarán LoRa® SPI y ejecutarán el reenviador de paquetes con
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
-### Configuración de LoRa® USB
+### Configuración LoRa® USB
 
 Para LoRa® USB, los comandos anteriores siguen siendo los mismos que para LoRa® SPI. Sin embargo, el comando final debe cambiarse a:
 
@@ -345,7 +345,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 Este comando especifica el archivo de configuración que se utilizará para LoRa® USB.
 
-## Celular 5G sobre M.2 B‑KEY
+## Celular 5G sobre M.2 B-KEY
 
 Para interactuar con un módulo 5G/4G usando comandos AT a través de minicom, sigue estos pasos:
 
@@ -424,7 +424,7 @@ Este comando comprueba si el módulo responde. Deberías recibir una respuesta *
 ATD<phone_number>;
 ```
 
-Sustituye **phone_number** por el número de teléfono que quieras marcar.
+Sustituye **phone_number** por el número de teléfono que deseas marcar.
 Asegúrate de incluir un punto y coma ; al final del comando para indicar el final del número de teléfono.
 
 ## 4G celular sobre Mini-PCIe
@@ -471,7 +471,7 @@ Entra en minicom para enviar comandos:
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-● Pulsa ***Ctrl+A,Z,E*** en secuencia. Primero envía AT para probar si está conectado. Si aparece OK, la conexión se ha realizado correctamente.
+● Pulsa ***Ctrl+A,Z,E*** en secuencia. Primero envía AT para probar si está conectado. Si aparece OK, la conexión es correcta.
 Después de ejecutar el siguiente comando, el módulo se reiniciará automáticamente. Si no sales de minicom, puedes ver la información de configuración correspondiente.
 Acceso a Internet por marcación ECM:
 
@@ -481,10 +481,10 @@ AT+QCFG="usbnet",1
 
 Hasta que la última línea muestre OK, será exitoso.
 
-> Note
-> El dispositivo necesita esperar un rato, y luego podrás ver la dirección IP de usb0 en ifconfig.
+> Nota
+> El dispositivo necesita esperar un rato y luego podrás ver la dirección IP de usb0 en ifconfig.
 
-Prueba el estado de la red y la comunicación：
+Probar el estado de la red y la comunicación：
 
 ```bash
 # Check network status
@@ -498,11 +498,11 @@ ping www.baidu.com -I usb0
 El reComputer Industrial R21xx incluye **2x puertos RS485**. A continuación se muestran sus correspondientes **puertos COM** y **archivos de dispositivo**:  
 
 | **Número de puertos RS485** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|-----------------------------|
-| **RS485-3**               | COM3           | A3/B3/GND3                | `/dev/ttyACM2`              |
-| **RS485-4**               | COM4           | A4/B4/GND4                | `/dev/ttyACM3`              |
+|---------------------------|--------------|---------------------------|-----------------------------|
+| **RS485-3**               | COM3         | A3/B3/GND3                | `/dev/ttyACM2`              |
+| **RS485-4**               | COM4         | A4/B4/GND4                | `/dev/ttyACM3`              |
 
-Para probar la función RS485, puedes seguir los pasos a continuación (toma RS485_1 y RS485_2 como ejemplos):
+Para probar la función RS485, puedes seguir los pasos a continuación (tomando RS485_1 y RS485_2 como ejemplos):
 
 1. Conecta los terminales A y B de RS485_1 y RS485_2.
 2. Abre minicom en dos ventanas de terminal respectivamente:
@@ -513,7 +513,7 @@ sudo minicom -D /dev/ttyACM2
 ```
 
 :::note
- Si hay una placa de expansión, el número debe desplazarse una posición hacia atrás, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
+ Si hay una placa de expansión, el número necesita moverse un lugar hacia atrás, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
 3. Las siguientes operaciones deben realizarse en ambos ACM abiertos:
@@ -527,9 +527,9 @@ sudo minicom -D /dev/ttyACM2
 
 :::note
 
-Toma ACM2 y ACM3 como ejemplo:
-Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse de nuevo: ***ctrl+A***, luego pulsa ***Z*** y luego ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente, y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
-A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y luego  ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente, y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
+Tomando ACM2 y ACM3 como ejemplo:
+Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse de nuevo: ***ctrl+A***, luego pulsa ***Z*** y luego ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
+A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y luego  ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -539,15 +539,15 @@ A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de
 reComputer Industrial R21xx incluye **2x puertos RS232**, y los correspondientes **puertos COM** y **archivos de dispositivo** son los siguientes:
 
 | **Número de puertos RS232** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|-----------------------------|
-| **RS232-1**               | COM1           | RX1/TX1/GND1              | `/dev/ttyACM0`              |
-| **RS232-2**               | COM2           | RX2/TX2/GND2              | `/dev/ttyACM1`              |
+|---------------------------|--------------|---------------------------|-----------------------------|
+| **RS232-1**               | COM1         | RX1/TX1/GND1              | `/dev/ttyACM0`              |
+| **RS232-2**               | COM2         | RX2/TX2/GND2              | `/dev/ttyACM1`              |
 
 Debido a que RS232 es comunicación full-dúplex, cortocircuita directamente el TX y RX de RS232 para realizar una prueba de bucle de retorno.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
-Necesitas abrir dos terminales, ACM1 si la placa de expansión está conectada, y ACM2 si la placa de expansión no está conectada:
+Necesitas abrir dos terminales, ACM1 si la placa de expansión está conectada y ACM2 si la placa de expansión no está conectada:
 **Terminal 1:***
 
 ```bash
@@ -646,14 +646,10 @@ reComputer Industrial R21xx contiene 4x puertos DO, el usuario puede configurar 
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
+        <td>GPIO636</td>
+      </tr]
       <tr>
         <td>DO4</td>
-        <td>GPIO636</td>
-      </tr>
-      <tr>
-        <td>DO5</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
@@ -702,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
   </table>
 </div>
 
-1. Utiliza dos cables DuPont para cortocircuitar H-H y L-L de can0 y can1 para formar una prueba de bucle mínimo.
+1. Utiliza dos cables DuPont para hacer un cortocircuito entre H-H y L-L de can0 y can1 para formar una prueba de bucle mínimo.
 
 ```bash
 CAN-0_H─────●───── CAN-0_H
@@ -738,7 +734,7 @@ ip -d link show can1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_2.png" style={{width:800, height:'auto'}}/></div>
 
-5. Descarga e instala can-utils para usar herramientas esenciales como candump y cansend.
+5. Descarga e instala can-utils para utilizar herramientas esenciales como candump y cansend.
 
 ```bash
 sudo apt install can-utils
@@ -768,7 +764,7 @@ cansend can0 123#DE.AD.BE.EF.CA.FE.00.11
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_5.png" style={{width:800, height:'auto'}}/></div>
 
-8. Si quieres simplificar los inicios posteriores, puedes escribir el comando de inicio en un script. Solo necesitas ejecutarlo una vez al arrancar para levantar automáticamente la interfaz.
+8. Si quieres simplificar los inicios posteriores, puedes escribir el comando de inicio en un script. Solo necesitas ejecutarlo una vez al arrancar para activar automáticamente la interfaz.
 
 ```bash
 #!/bin/bash
@@ -795,7 +791,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-2. Verifica que ambas interfaces estén en estado UP: la salida "state UP" indica el estado UP.
+2. Verifica que ambas interfaces estén en estado UP: La salida "state UP" indica el estado UP.
 
 ```bash
 ip a show can0
@@ -863,7 +859,7 @@ deactivate
 
 ## Prueba del concentrador USB
 
-Para probar el concentrador USB, puedes usar los siguientes pasos:
+Para probar el concentrador USB, puedes utilizar los siguientes pasos:
 
 1. Comprueba si el concentrador USB es detectado ejecutando el comando ***lsusb***. Este comando lista todos los dispositivos USB conectados, incluidos los concentradores.
 
@@ -872,13 +868,13 @@ lsusb
 ```
 
 Al ejecutar este comando se debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
-Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece listado, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, puede que necesites solucionar problemas del concentrador USB o de sus conexiones.
+Si el concentrador USB funciona correctamente, deberías ver sus detalles en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
 
 ## Prueba del RTC (Reloj en Tiempo Real)
 
 Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
 
-1. Desactiva la sincronización automática de hora:
+1. Desactiva la sincronización automática de la hora:
 
 ```bash
 sudo systemctl stop systemd-timesyncd
@@ -915,7 +911,7 @@ Este comando leerá y mostrará la hora almacenada en el RTC.
 
 Para realizar una prueba del watchdog, sigue estos pasos:
 
-1. Instala el software de watchdog:
+1. Instala el software del watchdog:
 
 ```bash
 sudo apt install watchdog
@@ -1009,7 +1005,7 @@ ls /dev | grep tpm
 
 **Interpretación de la salida:**  
 
-Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) se detectan y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar usando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
+Si ves ***tpm0*** y ***tpmrm0*** en la salida, significa que los dispositivos TPM (Trusted Platform Module) se detectan y están disponibles en tu sistema. Esto indica que el hardware TPM es reconocido y accesible, lo cual es una buena señal. Puedes continuar utilizando funcionalidades o aplicaciones relacionadas con TPM sabiendo que los dispositivos están presentes y accesibles.
 
 ## ATECC608A
 
@@ -1077,14 +1073,14 @@ Una vez que identifiques la entrada correspondiente a tu SSD, puedes proceder a 
 
 ## UPS para apagado seguro
 
-Se utiliza un GPIO6 entre la CPU y la entrada de alimentación de CC para avisar a la CPU cuando se interrumpe la fuente de alimentación. Entonces la CPU debe realizar alguna tarea urgente en un script antes de que se agote la energía del supercondensador y ejecutar un "$ shutdown".
+Se utiliza un GPIO6 entre la CPU y la entrada de alimentación de CC para avisar a la CPU cuando se interrumpe la fuente de alimentación. Entonces la CPU debe realizar algo urgente en un script antes de que se agote la energía del supercondensador y ejecutar un "$ shutdown".
 Otra forma de usar esta función es iniciar un apagado cuando cambie el pin GPIO. El pin GPIO dado se configura como una tecla de entrada que genera eventos KEY_POWER. Este evento es gestionado por systemd-logind iniciando un apagado.
 
 1. Conexión de hardware.
 
 Asegúrate de que el pin ***'CM5_UPS_DET'*** del dispositivo UPS esté conectado al pin GPIO16 del dispositivo R21xx.
 
-2. Modificar el archivo de configuración.
+2. Modifica el archivo de configuración.
 
 - Abre la terminal.
 - Ejecuta el siguiente comando para editar el archivo de configuración:
@@ -1103,7 +1099,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
 
-4. Preparar el script de Python
+4. Prepara el script de Python
 
 - Crea un nuevo archivo de script de Python:
 
@@ -1171,14 +1167,14 @@ sudo python3 ups_shutdown.py
  Usa `sudo` para asegurarte de que el script tenga permisos suficientes para ejecutar el comando de apagado.
 :::
 
-6. Simular una prueba de fallo de alimentación
+6. Simula una prueba de fallo de alimentación
 
 - Corta la fuente de alimentación externa.
 - Observa si el sistema guarda automáticamente los datos y se apaga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-7. Verificar el resultado
+7. Verifica el resultado
 
 - Vuelve a conectar la fuente de alimentación.
 - Comprueba si los datos del sistema están completos y si se inicia con normalidad.
@@ -1186,7 +1182,7 @@ sudo python3 ups_shutdown.py
 :::note
 
 1. Para la función de UPS, ponte en contacto con nosotros para obtener más información.
-2. La señal de alarma es activa en nivel bajo.
+2. La señal de alarma es activa en nivel BAJO.
 
 :::
 
@@ -1208,7 +1204,7 @@ cd /mnt/hailo-rpi5-examples/
 source ./setup_env.sh
 ```
 
-3. Ejecuta el ejemplo de detección simple
+3. Ejecuta el ejemplo sencillo de detección
 
 ```bash
 python basic_pipelines/detection_simple.py

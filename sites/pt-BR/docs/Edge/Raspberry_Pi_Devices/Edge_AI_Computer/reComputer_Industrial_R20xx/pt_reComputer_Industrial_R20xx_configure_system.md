@@ -1,5 +1,5 @@
 ---
-description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
+description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki aborda mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
 title: Configurar reComputer Industrial R20xx
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-11-26'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## Visão geral
 
-Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
+Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki aborda mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -41,7 +41,7 @@ cat /sys/kernel/debug/gpio
 
 ## Teste do LED USER
 
-Fornecemos LEDs em três cores — vermelho, azul e verde — para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
+Fornecemos LEDs em três cores, vermelho, azul e verde, para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar:
 
 **1. Navegue até o diretório do LED**  
 
@@ -136,7 +136,7 @@ Este comando iniciará a varredura de dispositivos Bluetooth próximos. Você po
 
 ### Configuração de LoRa® SPI  
 
-Após instalar o LoRa® SPI no slot Mini‑PCIe 2, é possível configurar o LoRa® SPI seguindo estas etapas:
+Depois de instalar o LoRa® SPI no slot Mini‑PCIe 2, é possível configurar o LoRa® SPI seguindo estas etapas:
 
 1. Clone o repositório **SX1302_HAL**:
 
@@ -325,7 +325,7 @@ Modifique o parâmetro com_path, altere  ***"com_path": "/dev/spidev0.0"*** para
 sudo make
 ```
 
-Essas etapas irão configurar o LoRa® SPI e executar o packet forwarder com o arquivo de configuração especificado.
+Essas etapas irão configurar o LoRa® SPI e executar o encaminhador de pacotes com o arquivo de configuração especificado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -472,7 +472,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
 ● Pressione ***Ctrl+A,Z,E*** em sequência. Primeiro envie AT para testar se está conectado. Se aparecer OK, a conexão foi bem-sucedida.
-Após executar o seguinte comando, o módulo será reiniciado automaticamente. Se você não sair do minicom, poderá ver as informações de configuração correspondentes.
+Após executar o comando a seguir, o módulo será reiniciado automaticamente. Se você não sair do minicom, poderá ver as informações de configuração correspondentes.
 Acesso à Internet discado ECM:
 
 ```bash
@@ -484,7 +484,7 @@ Até que a última linha mostre OK, será bem-sucedido.
 > Note
 > O dispositivo precisa aguardar por um tempo e então você pode visualizar o endereço IP de usb0 em ifconfig.
 
-Teste o status da rede e a comunicação：
+Testar o status da rede e a comunicação：
 
 ```bash
 # Check network status
@@ -498,10 +498,10 @@ ping www.baidu.com -I usb0
 O reComputer Industrial R20xx inclui **três portas RS485**. Abaixo estão suas correspondentes **portas COM** e **arquivos de dispositivo**:  
 
 | **Número de portas RS485** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
-|---------------------------|--------------|---------------------------|----------------------------|
-| **RS485-2**               | COM2         | A2/B2/GND2                | `/dev/ttyACM1`             |
-| **RS485-3**               | COM3         | A3/B3/GND3                | `/dev/ttyACM2`             |
-| **RS485-4**               | COM4         | A4/B4/GND4                | `/dev/ttyACM3`             |
+|---------------------------|--------------|--------------------------|-----------------------------|
+| **RS485-2**               | COM2         | A2/B2/GND2               | `/dev/ttyACM1`              |
+| **RS485-3**               | COM3         | A3/B3/GND3               | `/dev/ttyACM2`              |
+| **RS485-4**               | COM4         | A4/B4/GND4               | `/dev/ttyACM3`              |
 
 Para testar a função RS485, você pode seguir os passos abaixo (tomando RS485_1 e RS485_2 como exemplos):
 
@@ -514,7 +514,7 @@ sudo minicom -D /dev/ttyACM2
 ```
 
 :::note
- Se houver uma placa de expansão, o número precisa ser movido uma casa para trás, por exemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
+ Se houver uma placa de expansão, o número precisa ser movido uma posição para trás, por exemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
 3. As seguintes operações precisam ser realizadas em ambos os ACMs abertos:
@@ -524,13 +524,13 @@ sudo minicom -D /dev/ttyACM2
 - Pressione ***O*** novamente para abrir a configuração, selecione Serial port setup e pressione ***Enter***; Abra todas as interfaces relacionadas a RS485, pressione ***H/I/J/K/L*** em sequência para abrir;
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Depois que todos exibirem "YES", pressione Enter para voltar e, em seguida, selecione Exit para sair.
+- Depois que todos os "YES" forem exibidos, pressione Enter para voltar e, em seguida, selecione Exit para sair.
 
 :::note
 
 Tomando ACM2 e ACM3 como exemplo:
-Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A***, depois pressione ***Z*** e então ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM2 à vontade, e você pode ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
-Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e então  ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM3 à vontade, e você pode ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
+Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A***, depois pressione ***Z*** e então ***E***, e então inicie o comando de escrita na porta serial. Neste momento, você pode imprimir strings em ACM2 à vontade, e você pode ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
+Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e então  ***E***, e então inicie o comando de escrita na porta serial. Neste momento, você pode imprimir strings em ACM3 à vontade, e você pode ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -540,10 +540,10 @@ Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser confi
 O reComputer Industrial R20xx inclui 1x porta RS232, e as portas COM e arquivos de dispositivo correspondentes são os seguintes:
 
 | **Número de portas RS232** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
-|---------------------------|--------------|---------------------------|----------------------------|
-| **RS232-1**               | COM1         | RX1/TX1/GND1              | `/dev/ttyACM0`             |
+|---------------------------|--------------|--------------------------|-----------------------------|
+| **RS232-1**               | COM1         | RX1/TX1/GND1             | `/dev/ttyACM0`              |
 
-Como o RS232 é comunicação full-duplex, faça um curto-circuito entre TX e RX do RS232 diretamente para realizar um teste de loopback.
+Como o RS232 é comunicação full-duplex, faça um curto-circuito diretamente entre TX e RX do RS232 para realizar um teste de loopback.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.12_rs232_testing_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -603,7 +603,7 @@ O reComputer Industrial R20xx contém 8x portas DI, o usuário pode configurar e
       <tr>
         <td>DI6</td>
         <td>GPIO574</td>
-      </tr>
+      </tr]
       <tr>
         <td>DI7</td>
         <td>GPIO575</td>
@@ -628,7 +628,7 @@ echo in > /sys/class/gpio/gpio588/direction
 cat /sys/class/gpio/gpio588/value
 ```
 
-3. Quando o nível externo é alto, o valor de ***/sys/class/gpio/gpio588/value*** é 0; quando o nível externo é baixo, ***/sys/class/gpio/gpio588/value*** é 1.
+3. Quando o nível externo for alto, o valor de ***/sys/class/gpio/gpio588/value*** é 0; quando o nível externo for baixo, ***/sys/class/gpio/gpio588/value*** é 1.
 
 ## DO (Saída Digital)
 
@@ -655,19 +655,19 @@ O reComputer Industrial R20xx contém 8x portas DO, o usuário pode configurar e
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
       <tr>
-        <td>DO6</td>
+        <td>DO5</td>
         <td>GPIO577</td>
+      </tr>
+      <tr>
+        <td>DO6</td>
+        <td>GPIO578</td>
       </tr>
       <tr>
         <td>DO7</td>
@@ -826,7 +826,7 @@ echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
 ```  
 
-2. Desligar o buzzer :Desligar o buzzer :
+2. Desligar o buzzer :Turn off the buzzer :
 
 ```bash
 echo 627 > /sys/class/gpio/export
@@ -893,7 +893,7 @@ Aqui estão os comandos para interagir com uma EEPROM (Electrically Erasable Pro
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
 ```  
 
-3. Leia o conteúdo do dispositivo EEPROM e exiba-o em formato ***hexadecimal*** usando o utilitário hexdump:
+3. Leia o conteúdo do dispositivo EEPROM e o exiba em formato ***hexadecimal*** usando o utilitário hexdump:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
@@ -907,7 +907,7 @@ Para listar os discos, incluindo o SSD, você pode usar o comando fdisk -l. Veja
 sudo fdisk -l
 ```
 
-Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele for detectado corretamente. Procure por entradas que representem o seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
+Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele estiver devidamente detectado. Procure por entradas que representem o seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
 Depois de identificar a entrada correspondente ao seu SSD, você pode prosseguir com o particionamento ou formatação conforme necessário.
 
 ## UPS para Desligamento Seguro
@@ -1027,7 +1027,7 @@ sudo python3 ups_shutdown.py
 
 ## Acelerador de IA
 
-O slot M.2 M-KEY 2280 no reComputer Industrial R20xx foi projetado para acomodar o Acelerador de IA PCIE M.2. E a série R20xx-12 vem pré-instalada com um módulo Hailo-8 M.2 de Aceleração de IA de até 26TOPS.
+O slot M.2 M-KEY 2280 no reComputer Industrial R20xx foi projetado para acomodar um Acelerador de IA PCIE M.2. E a série R20xx-12 vem pré-instalada com um módulo Hailo-8 M.2 de Aceleração de IA de até 26TOPS.
 Se você adquiriu o produto da série R20xx-10, será necessário adquirir o módulo NPU da Hailo para habilitar a funcionalidade de IA.
 O dispositivo vem pré-instalado com o driver do acelerador Hailo, portanto você pode usá-lo diretamente e executar o caso de teste:
 
@@ -1055,12 +1055,12 @@ Para fechar o aplicativo, pressione ***`Ctrl+C`*** .
 Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho do Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo do GStreamer é simplificado, minimizando as tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
 
 :::note
-Se o reComputer que você adquiriu não incluir o Hailo-8 e você estiver considerando adquirir um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
+Se o reComputer que você adquiriu não incluir o Hailo-8 e você estiver considerando adquirir um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser utilizado normalmente.
 :::
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
