@@ -25,10 +25,10 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>XIAO ePaper Display Board EN05</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.jpg"/></div>
 
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=EN05" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN05-p-6756.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
