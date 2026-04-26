@@ -89,8 +89,6 @@ The reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based Io
 
 ## Specifications
 
-<!--Power Consumption功耗待重新测试后补充-->
-
 <div class="table-center">
 <table >
   <tbody>
@@ -135,10 +133,6 @@ The reComputer R1225 is a powerful and flexible industrial Raspberry Pi-based Io
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Overvoltage Protection</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>40V</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Consumption</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}> comming soon </td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Power Switch</td>
@@ -376,19 +370,11 @@ It's worth noting that the PoE module provided with the reComputer R1225 is comp
 
 Please refer to the table below for the tested power consumption of reComputer R1225 in Seeed Studio's laboratory. Please note that this value is for reference only, as the test methods and environment can result in variations in the results.
 
-The power consumption table will be updated shortly.
-
-<!--
-| Status   | Voltage | Current | Power Consumption | Description                                                                                                         |
-|   ---    |    ---  |   ---   |         ---       |      ---                                                                                                            |
-|Shutdown  |24V      |  mA     |    W              | Static power consumption test in shutdown and power-off state.                                                      |
-|Idle      |24V      |  mA     |    W              | To test the input current when supplying 24V power to the reComputer R1225 device without running any test programs.|
-|Full Load |24V      |  mA     |    W              | Configure CPU to run at full load using the "stress -c 4" command. No external devices connected.                   |
--->
+[R1225 Power Consumption Table](https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/res/R1225_Power_Consumption_Table.xlsx)
 
 ### Power On and Power Off
 
-The reComputer R1225 does not come with a power button by default, and the system will automatically start up once power is connect- ed. When shutting down, please select the shutdown option in the operating system and wait for the system to fully shut down before cutting off power. To restart the system, simply reconnect to the power.
+The reComputer R1225 does not include a power button by default. The system will automatically power on once power is connected. When shutting down, please select the shutdown option in the operating system and wait for the system to fully shut down before cutting off power. To restart the system, simply reconnect to the power.
 
 :::note
 Please note that after shutting down, please wait for **at least 10 seconds** before restarting the system to allow for the internal capacitors to fully discharge.
@@ -515,6 +501,12 @@ STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
 
 #### Customizable LED lights via the Luci interface
+
+See the [Quick Start](https://wiki.seeedstudio.com/r1225_quick_start/#access-the-sensecap-gateway-os) Guide to access the Luci interface.
+
+Navigate to `System` > `LED Configuration`
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/led.png" alt="pir" width={800} height="auto" /></p>
 
 #### Control LED lights via commands
 
@@ -722,6 +714,17 @@ There is a Mini Push Button Switch located in the reset hole of reComputer R1225
 
 The reComputer R1225 comes with two Ethernet RJ45 ports. ETH0 is a CM4 native Gigabit Ethernet interface that supports three different speeds: 10/100/1000 Mbit/s. An additional PoE module can be purchased to enable power-over-Ethernet (PoE) delivery through this interface, providing power to the reComputer R1225. Another one ETH1 supports 10/100 Mbit/s which is converted from USB.
 
+#### Network Interface Architecture
+
+The reComputer R1225 is equipped with **two physical Ethernet ports** (ETH0 and ETH1). These two ports serve different roles based on the host-container architecture:
+
+|   Port   |       Role                | Description |
+|----------|---------------------------|-------------|
+| **ETH0** | Container (LXC) interface | This interface is **directly mapped (passthrough) from the hardware into the LXC container** via the host's LXC network configuration. The OpenWrt container has full control over this interface, managing it as a standard WAN or LAN port. All application-level traffic (LoRaWAN uplink, MQTT, Web UI access, etc.) flows through this port. |
+| **ETH1** | Host (Debian) interface   | This interface is **managed by the Debian host system**. It is used for host-level management tasks such as SSH access to the host, container management operations, firmware updates, and UPS monitoring communication. It remains isolated from the container network stack. |
+
+This separation ensures that even if the container network is misconfigured or unreachable, the host management interface remains accessible for recovery and maintenance.
+
 ### HDMI
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig17.png" /></div>
@@ -843,6 +846,8 @@ It is important to note that due to the reComputer R1225's metal casing, Wi-Fi/B
 #### Connect Wi-Fi
 
 ##### Connect to Wi-Fi via the Luci UI
+
+See the [Quick Start](https://wiki.seeedstudio.com/r1225_quick_start/#wifi-connection) Guide for Wi-Fi Connection
 
 ##### Command to connect to Wi-Fi
   
@@ -1067,6 +1072,7 @@ One DSI (J24) are reserved on board, for special usage. Users are requested to p
 - [reComputer R1225 3D File](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000.stp)
 - [reComputer R1225 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
 - [reComputer R1225 (R1000 v1.1) Pin Assignment](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
+- [R1225 Power Consumption Table](https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/res/R1225_Power_Consumption_Table.xlsx)
 
 ## Tech Support & Product Discussion
 
