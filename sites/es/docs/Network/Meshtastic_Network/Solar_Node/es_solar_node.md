@@ -1,6 +1,6 @@
 ---
-description: Nodo Solar SenseCAP para Meshtastic y LoRa
-title: Nodo Solar SenseCAP
+description: Nodo solar SenseCAP para Meshtastic y LoRa
+title: Introducción al nodo solar SenseCAP
 keywords:
   - Meshtastic
   - Solar
@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-11'
+updatedAt: '2026-03-10'
 url: https://wiki.seeedstudio.com/es/meshtastic_solar_node/
 ---
 
@@ -29,7 +29,7 @@ Es un nodo de comunicaciones o repetidor económico alimentado por energía sola
 
 ## Comparación de versiones
 
-El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) y [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
+El nodo solar está disponible en dos variantes: [SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-for-Meshtastic-LoRa-p-6425.html) y [SenseCAP Solar Node P1-Pro](https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html).
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-1_1.jpeg" alt="pir" width={800} height="auto" /></p>
 
@@ -38,14 +38,14 @@ El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
 ### Características
 
 - Integrado con un panel solar de 5W y admite baterías externas (que deben ser proporcionadas por los propios usuarios).
-- El dispositivo viene con el firmware Meshtastic preinstalado de fábrica. Puede integrarse perfectamente en el ecosistema Meshtastic.
+- El dispositivo viene con el firmware Meshtastic preinstalado de fábrica. Puede integrarse sin problemas en el ecosistema Meshtastic.
 - Compatible con el ecosistema Grove y admite la conexión plug-and-play de sensores como sensores de temperatura y humedad, sensores de luz, etc.
 - Es adecuado para uso prolongado en exteriores.
 - Admite transmisión de 8 a 9 KM en áreas abiertas. Puede utilizarse como nodo o repetidor exterior, ampliando fácilmente la red Mesh y mejorando la cobertura de la red.
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
-### Especificación
+### Especificaciones
 
 <table>
   <tr>
@@ -67,7 +67,7 @@ El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     </td>
   </tr>
   <tr>
-    <td><b>Módulo GPS (para versión P1-Pro)</b></td>
+    <td><b>Módulo GPS (para la versión P1-Pro)</b></td>
     <td>
       <a href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">XIAO L76K</a><br />
       (Compatible con GPS/GLONASS/Galileo)
@@ -122,7 +122,7 @@ El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>Luz indicadora de estado del panel solar *1</td>
   </tr>
   <tr>
-    <td>Luz de latido de la malla *1</td>
+    <td>Luz de latido de Mesh *1</td>
   </tr>
   <tr>
     <td>Definido por el usuario *1</td>
@@ -140,7 +140,7 @@ El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>IPX5</td>
   </tr>
   <tr>
-    <td><b>Batería (para versión P1-Pro)</b></td>
+    <td><b>Batería (para la versión P1-Pro)</b></td>
     <td>
       <p>- 4 baterías de litio 18650 (3350mAh cada una)</p>
       <p>- Compatible con carga por Type-C y solar.</p>
@@ -150,7 +150,7 @@ El Nodo Solar está disponible en dos variantes: [SenseCAP Solar Node P1](https:
   </tr>
   <tr>
     <td><b>Certificación</b></td>
-    <td>FCC, CE</td>
+    <td>FCC、CE</td>
   </tr>
   <tr>
     <td><b>Dimensiones</b></td>

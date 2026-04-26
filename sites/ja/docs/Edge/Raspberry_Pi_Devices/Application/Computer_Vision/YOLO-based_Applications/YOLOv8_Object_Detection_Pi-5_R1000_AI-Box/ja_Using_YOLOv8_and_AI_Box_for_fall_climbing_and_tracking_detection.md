@@ -1,6 +1,6 @@
 ---
-description: このwikiでは、転倒、障壁乗り越え、人物追跡のためのYOLOモデルをAI Boxで使用する方法を説明します。
-title: 転倒・登攀・追跡のためのAI BoxでのYOLOv8
+description: この Wiki では、転倒、フェンス乗り越え、および人物追跡のために AI Box 上で YOLO モデルを使用する方法を紹介します。
+title: 転倒・フェンス乗り越え・追跡向け AI Box 上の YOLOv8
 keywords:
   - Edge AI
   - rpi5
@@ -13,16 +13,16 @@ last_update:
   author: Jiahao
 no_comments: false
 createdAt: '2025-07-29'
-updatedAt: '2025-09-10'
+updatedAt: '2025-08-04'
 url: https://wiki.seeedstudio.com/ja/yolov8_on_ai_box_for_fall_climbing_tracking/
 ---
 
-# YOLOv8 AI Box：転倒・登攀・追跡
+# YOLOv8 AI Box: 転倒検知・フェンス乗り越え検知・追跡
 
 
 ## はじめに
 
-このプロジェクトでは、[reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html)または[reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html)を使用して、YOLOv8モデルによる転倒検出、登攀検出、追跡検出を実装する方法をガイドします。
+このプロジェクトでは、[reComputer AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) または [reComputer Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) を使用して、YOLOv8 モデルによる転倒検知、フェンス乗り越え検知、および追跡検知を実装する方法を説明します。
 
 
 ## ハードウェアの準備
@@ -67,10 +67,10 @@ url: https://wiki.seeedstudio.com/ja/yolov8_on_ai_box_for_fall_climbing_tracking
 </div>
 
 
-> 💡 **注意**: このプロジェクトにはreComputer AI BoxまたはreComputer Industry AI Boxが必要です。
+> 💡 **Note**: このプロジェクトには reComputer AI Box または reComputer Industry AI Box が必要です。
 
 
-##  転倒検出
+##  転倒検知
 
 ### ランタイム環境のインストール
 
@@ -85,7 +85,7 @@ git clone https://github.com/Seeed-Projects/fall_detection_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Python環境の準備
+### Python 環境の準備
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -103,7 +103,7 @@ python app.py -i ./falldown_test.mp4 -n ./yolov8n.hef --show-fps -l ./common/coc
 <iframe width="800" height="400" src="https://www.youtube.com/embed/H0NaAevLo2k" title="How the Seeed Raspberry Pi AI Box Helps in Abnormal Event Detection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## フェンス登攀
+## フェンス乗り越え
 
 ### ランタイム環境のインストール
 
@@ -118,7 +118,7 @@ git clone https://github.com/Seeed-Projects/cross_fence_with_AIBox.git
 cd cross_fence_with_AIBox
 ```
 
-### Python環境の準備
+### Python 環境の準備
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -152,7 +152,7 @@ git clone https://github.com/Seeed-Projects/track_people_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### Python環境の準備
+### Python 環境の準備
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -172,9 +172,9 @@ python app.py -i ./people-walking.mp4 -n ./yolov8n.hef --show-fps -l ./common/co
 </div>
 
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

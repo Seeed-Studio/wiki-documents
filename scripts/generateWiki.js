@@ -45,8 +45,12 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Application', 'meshcore_node_map_l1.md'), //4.3
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_ChirpStack.md'), //3.30
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_TTN.md'), //3.30
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_pinocchio.md'), //3.24
   path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_python_control.md'), //4.10
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_i2s_test.md'), //4.16
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'RTL8852BE_Wireless_Module_for_Jetson.md'), //4.14
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Getting_Started.md'), //4.13
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_AWS_IoT.md'), //4.7
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Grasping_Demo.md'), //4.22
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

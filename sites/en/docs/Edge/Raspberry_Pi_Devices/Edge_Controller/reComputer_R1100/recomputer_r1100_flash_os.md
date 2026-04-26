@@ -11,7 +11,7 @@ last_update:
   date: 3/3/2025
   author: Kasun Thushara
 createdAt: '2025-03-04'
-updatedAt: '2025-09-02'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_r1100_flash_os/
 ---
 
@@ -160,8 +160,6 @@ Use `Ctrl`+`x` to save the file, and then reboot your machine.
 
 ## Steps for Flashing Raspbian OS
 
-> **Note:** The latest system image packaged by Seeed, including the appropriate drivers: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
-
 - **Step 1.** Make sure switch is set to `Flash mode` according to the diagram below:
 
 <div class="table-center">
@@ -179,7 +177,7 @@ Use `Ctrl`+`x` to save the file, and then reboot your machine.
 
 - **Step 3.** Please connect the Power Cord from the power supply to the reComputer R1100 power port.
 
-<div style={{ textAlign: 'left', marginLeft: '40px' }}>
+<div style={{ textAlign: 'center', marginLeft: '40px' }}>
     <img
         width="100"
         src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png"
@@ -188,6 +186,10 @@ Use `Ctrl`+`x` to save the file, and then reboot your machine.
 </div>
 
 <br></br>
+
+- **Step 4.** Click [here](https://github.com/Seeed-Studio/pi-gen-expand) to download the latest official image adapted for reComputer R1100 devices from Seeed, which comes with the corresponding drivers pre-installed.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-updata/Raspberry Pi Devices/Edge Controller/reComputer R1100/reComputer R1100 Flash OS/download_preferredOS.png" alt="pir" width="600" height="auto"/></p>
 
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that regardless of how the power supply's positive and negative terminals are connected, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
@@ -207,15 +209,12 @@ Windows will now find the hardware and install the necessary drivers
 
 - **Step 4.** Open **file explorer** and you will see the eMMC of the Computer Module 4 shown as a **USB mass storage device**
 
-- **Step 5.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
+- **Step 5.** ** Click **[here](https://downloads.raspberrypi.com/imager/imager_2.0.7.exe)** to directly download the Windows version of Raspberry Pi Imager 2.0.7 (used in the following procedure), or visit the **[official website](https://www.raspberrypi.com/software/)** to select the appropriate version for your system.
 
 - **Step 6.** Open Raspberry Pi Imager software
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_1.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 7.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
 Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
 
@@ -223,29 +222,31 @@ Here you can **set a hostname, enable SSH, set a password, configure wiFi, set l
 The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100.
 :::
 
-- **Step 8.** Click **CHOOSE OS** and select your preferred OS
+- **Step 7.** Click "**OS**" and select **"Use custom"**, then select the image file you just downloaded in the pop-up window.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_3.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
+**NOTE:** Alternatively, you can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 Or you can use this link to download the image file:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntu for Raspberry Pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 8.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 10.** Finally, click **WRITE**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-updata/Raspberry Pi Devices/Edge Controller/reComputer R1100/reComputer R1100 Flash OS/select_device.png" alt="pir" width="600" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+- **Step 9.** Finally, click **WRITE**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-updata/Raspberry Pi Devices/Edge Controller/reComputer R1100/reComputer R1100 Flash OS/write.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
 
-- **Step 11.** Flip the **Boot Mode switch** back to the **Normal mode** position
+- **Step 10.** Flip the **Boot Mode switch** back to the **Normal mode** position
 
-Now you can skip to **[here](#install-drivers)**
+Now you can skip to **[here](#install-drivers)** to access reComputer R1100 via SSH
 
 ### For MAC
 
@@ -312,7 +313,7 @@ The system has preset a username and password. Please set the default username t
 
 Or you can use this link to download the image file:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntu for Raspberry Pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 11.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
@@ -324,7 +325,7 @@ Please wait a few minutes until the flashing process is complete.
 
 - **Step 13.** Flip the **Boot Mode switch** back to the **Normal mode** position
 
-Now you can skip to **[here](#install-drivers)**
+Now you can skip to **[here](#install-drivers)** to access reComputer R1100 via SSH
 
 ### For Linux
 
@@ -422,7 +423,7 @@ The system has preset a username and password. Please set the default username t
 
 Or you can use this link to download the image file:
 
-[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntu for Raspberry Pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
 - **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
@@ -465,7 +466,12 @@ if you see the following output after the ping command which means both devices 
 - **Step 1.** Open **Command Prompt** and type the following
 
 ```sh
-ssh pi@raspberrypi.local
+ssh <your username>@raspberrypi.local
+```
+If you are using the official pre-built image from Seeed provided in the card creation section above, the username is **recomputer** and the password is **12345678**.
+
+```sh
+ssh reComputer@raspberrypi.local
 ```
 
 - **Step 2.** Type **yes** for the prompt
@@ -475,7 +481,7 @@ ssh pi@raspberrypi.local
 - **Step 3.** Enter the password as follows
 
 ```sh
-raspberry
+12345678
 ```
 
 - **Step 4.** If you have sucessfully logged into the Raspberry Pi OS, you will see the following output

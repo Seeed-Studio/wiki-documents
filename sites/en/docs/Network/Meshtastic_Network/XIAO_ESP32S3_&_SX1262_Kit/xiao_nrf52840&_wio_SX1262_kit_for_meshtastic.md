@@ -1,0 +1,205 @@
+---
+description: Meshtastic based on XIAO nRF52840 & Wio-SX1262 Kit
+title: Get Started with XIAO nRF52840 & Wio-SX1262 Kit
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-kit.webp
+slug: /xiao_nrf52840&_wio_SX1262_kit_for_meshtastic
+sidebar_position: 2
+sku: 102010710
+last_update:
+  date: 12/11/2025
+  author: Michelle Huang
+createdAt: '2025-03-13'
+updatedAt: '2026-04-20'
+url: https://wiki.seeedstudio.com/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
+---
+
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-102010710-nrf52840_wio-sx1262-kit_1.jpg" alt="pir" width={800} height="auto" /></p>
+
+This kit combines the XIAO nRF52840 and Wio-SX1262, supporting BLE5.0, Thread, Zigbee and LoRa (862-930MHz), and operates with low power consumption. It can be applied in various fields such as [Meshtastic®](https://meshtastic.org/), sensor networks, environmental monitoring, asset tracking, education, and innovation.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+<br></br>
+
+## Overview
+
+### Features
+
+- **Versatile Microcontroller**: Incorporate the Nordic nRF52840 chip with FPU, operating up to 64 MHz, mounted multiple development ports, supported by Arduino / CircuitPython / Micropython
+- **Powerful LoRa Performance**: Long-range LoRa on Semtech SX1262, supports 868/915 MHz bands.
+- **Dual-core communication**: It supports both Bluetooth and LoRa dual modes, enabling cross-domain interconnection.
+- With dimensions of only **8mm × 22mm × 23mm**, it features an integrated antenna design.
+
+### Specification
+
+| **Product** | **Specifications** |  
+| :- | :- |  
+| [XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) | **MCU:** Nordic nRF52840  <br /> **Core:** ARM® Cortex®-M4 with FPU, up to 64 MHz |  
+| [Wio-SX1262](https://www.seeedstudio.com/Wio-SX1262-for-XIAO-p-6379.html) | **LoRa Module:** Semtech SX1262  <br /> **Frequency:** 862&#126;930MHz |  
+| **Wireless** | Bluetooth 5.0 / NFC |  
+| **Interface** | **XIAO nRF52840:**  <br /> - 1x UART, 1x I²C, 1x SPI (connects to SX1262)  <br /> - 1x NFC, 1x SWD, 11x GPIO (PWM)  <br /> - 6x ADC  <br /> **Wio-SX1262:**  <br />  - 1x SPI (connects to XIAO nRF52840) |  
+| **Power** | **Input Voltage:**  <br /> - Type-C: 5V  <br /> - Battery (BAT): 4.2V  <br /> **Battery Charging Current:** 50mA / 100mA  <br /> **Standby Power Consumption:** &lt;5µA |  
+| **Operating Temperature** | -40°C &#126; 65°C |  
+| **Dimensions** | 21 x 17.8mm |  
+
+### Pinout
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/imageXIAO_nRF52840-2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_Wio-SX1262_-1.png" alt="pir" width={800} height="auto" /></p>
+
+## Get Started
+
+The XIAO nRF52840 & Wio-SX1262 Kit comes pre-flashed with the Meshtastic firmware, allowing you to get started quickly.
+
+### Flash Firmware
+
+:::caution note
+Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
+
+**Video Instruction:**
+
+<div class="video-container">
+<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
+
+Connect the kit to your PC, select the device to `Seeed` → `Seeed XIAO nRF52840 Kit`, and choose the latest firmware, then click `Flash`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-device.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/filw-flash.png" alt="pir" width={800} height="auto" /></p>
+
+Click `Enter DFU Mode`, there will be a serial port named `XIAO-xxx`, click and connect it, and there should be a driver named `XIAO-xxx` display.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
+
+Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+
+### Check the Node Name
+
+Visit [Meshtastic Flasher](https://flasher.meshtastic.org/) and open the `Serial Monitor`, search for `nodenum` to find the corresponding node ID.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
+
+### Connect via App
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+<TabItem value="ios" label="IOS App">
+
+- Select the target device on the Bluetooth panel.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
+
+- Enter the code(default code is `123456`) and then click `OK` to connect the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="Android App">
+
+- Click `+` and choose the target device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
+
+- Enter the code(default code is `123456`) and then click `OK` to connect the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+### Configure the Parameters
+
+In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
+
+<Tabs>
+<TabItem value="ios" label="IOS App">
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+
+<TabItem value="android" label="Android App">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+**Region List**
+
+|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+| :-: | :-: | :-: | :-: | :-: |
+|UNSET|Unset|N/A|N/A|N/A|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
+
+Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
+
+:::info
+**EU_868** has to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
+:::
+
+Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
+
+#### GNSS Sensor Config
+
+Connect a [L76K GNSS Module](https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html) to make a tracker.
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image_102010710.gif" alt="pir" width={600} height="auto" /></p>
+
+
+### The Compatible SX-1262
+[Click here](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) to get the separately-selling SX1262.
+
+## Resource
+### File Resources
+
+- **[PDF]** [Xiao Reference Design](https://files.seeedstudio.com/wiki/XIAO/XIAO-Reference-Design.pdf)
+- **[PDF]** [Seeed Studio XlAO nRF52840 BLE Communication Distance Test Report](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf)
+- **[ZIP]** [Seeed Studio XlAO nRF52840 CE |FCC|MIC](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-CE-FCC-MIC.zip)
+- **[PDF]** [nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
+- **[PDF]** [Seeed Studio XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
+- **[DXF]** [Seeed Studio XIAO nRF52840 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
+- **[LBR]** [Seeed Studio XIAO nRF52840 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
+- **[XLSX]** [Seeed Studio XIAO nRF52840 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
+- 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[RAR]** [Wio SX-1262 for XIAO 3D file](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- **[PDF]** [The Schematic Diagram of the SX1262 compatible with Xiao nRF52840](https://files.seeedstudio.com/products/113010003/Wio-SX1262%20for%20XIAO%20V1.0.pdf)
+- **[PDF]** [Wio SX-1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf
+)
+
+### Course Resources
+
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+

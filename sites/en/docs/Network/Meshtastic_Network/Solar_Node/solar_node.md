@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa
-title: SenseCAP Solar Node
+title: SenseCAP Solar Node Introduction
 keywords:
   - Meshtastic
   - Solar
@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/meshtastic_solar_node/
 ---
 

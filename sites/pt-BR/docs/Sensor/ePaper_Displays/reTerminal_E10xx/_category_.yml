@@ -1,0 +1,7 @@
+position: 1
+label: 'Série reTerminal E'
+collapsible: true
+collapsed: true
+link:
+  type: "doc"
+  id: 'Sensor/ePaper_Displays/reTerminal_E10xx/pt_reterminal_e10xx_main_page'

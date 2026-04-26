@@ -18,7 +18,7 @@ last_update:
   date: 11/7/2025
   author: Nolan Chen
 createdAt: '2023-12-18'
-updatedAt: '2026-03-08'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/raspberry-pi-devices/
 ---
 
@@ -48,7 +48,7 @@ DIN-rail or wall-mount ready, the reComputer R series slides effortlessly into *
     <thead>
       <tr>
         <th>Name</th>
-        <th>reComputer AI Industrial R22xx-12</th>
+        <th>reComputer Industrial R22xx-12</th>
         <th>reComputer Industrial R20xx-12</th>
         <th>reComputer Industrial R21xx-12</th>
         <th>reComputer AI R21xx-12</th>

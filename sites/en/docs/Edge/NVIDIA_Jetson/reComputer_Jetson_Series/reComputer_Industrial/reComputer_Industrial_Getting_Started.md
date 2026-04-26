@@ -10,7 +10,7 @@ last_update:
   date: 05/16/2023
   author: Lakshantha
 createdAt: '2025-06-05'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/
 ---
 
@@ -20,7 +20,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-reComputer industrial series offers full systems including NVIDIA Jetson™ Xavier NX/ Orin Nano/Orin NX/ modules, ranging from 20 TOPS to 100 TOPS AI performance. Preinstalled with Jetpack 5.1.1, reComputer industrial simplifies development, ideal for bulding applications of video analytics, object detection, natural language processing, medical imaging, and robots, which brings digital transformantion across industries of smart cities, security, industrial automation, smart factories.
+reComputer industrial series offers full systems including NVIDIA Jetson™ Xavier NX/ Orin Nano/Orin NX/ modules, ranging from 20 TOPS to 100 TOPS AI performance. Preinstalled with Jetpack 5.1.3, reComputer industrial simplifies development, ideal for bulding applications of video analytics, object detection, natural language processing, medical imaging, and robots, which brings digital transformantion across industries of smart cities, security, industrial automation, smart factories.
 
 reComputer industrial comes with a passive heatsink and a fanless design, making it ideal for use in demanding environments. The passive heatsink allows for efficient cooling without the need for a fan, reducing the risk of component failure due to dust or other contaminants. The fanless design also reduces noise levels and power consumption, making it suitable for use in noise-sensitive environments and minimizing energy costs.
 
@@ -247,7 +247,7 @@ reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for p
 
 ## Flash JetPack
 
-reComputer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This included SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps.
+reComputer Industrial comes pre-installed with JetPack 5.1.3 on a 128GB SSD along with the necessary drivers. This included SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps.
 
 :::note
 If you want to use SSDs with reComputer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), and the [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) versions from Seeed.
@@ -558,8 +558,8 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQByoedqLYEuT4Y1TWtbQeYfAaYErd1Nzu46JpYpF6Ok4EE?e=uEK4OQ" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>f34512b24a07469f6014add6b88df060002f02c53705c91181ee380d73146b5e</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAJh3XDNNnbT7NU_WmR6d8-AV2KS89nk2raBrtbDX5lbRY" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>436017DA6FBA2EF910F5F6C5D80749FB53029EC5108A461101CA3A69C1F8CEC3</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>

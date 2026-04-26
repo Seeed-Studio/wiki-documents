@@ -1,5 +1,5 @@
 ---
-description: reComputer AI R2000 is a powerful Edge AI Computer based on the Raspberry Pi 5. With quad-core Arm Cortex-A76 processor 8GB RAM, M.2 SSD support, and an Hailo-8 AI acceleration module providing up to 26 TOPS, Enabling real-time, low latency & high-efficiency AI inferencing. it's the perfect chioce for a wide range of AI applications, including AI-powered video analytics, machine vision, and intelligent edge computing.
+description: reComputer AI R2000 is a powerful Edge AI Computer based on the Raspberry Pi 5. With quad-core Arm Cortex-A76 processor 8GB RAM, M.2 SSD support, and an Hailo-8 AI acceleration module providing up to 26 TOPS, Enabling real-time, low latency & high-efficiency AI inferencing. it's the perfect choice for a wide range of AI applications, including AI-powered video analytics, machine vision, and intelligent edge computing.
 title: Getting Start with reComputer AI R2000 Series
 keywords:
   - Raspberry pi
@@ -12,7 +12,7 @@ last_update:
   date: 1/09/2025
   author: Jiahao Li
 createdAt: '2025-01-09'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-16'
 url: https://wiki.seeedstudio.com/r2000_series_getting_start/
 ---
 
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/r2000_series_getting_start/
     </a>
 </div>
 
-reComputer AI R2000 series is a powerful Edge AI Computer based on the Raspberry Pi 5. With quad-core Arm Cortex-A76 processor 8GB RAM, M.2 SSD support, and an Hailo-8 AI acceleration module providing up to 26 TOPS, Enabling real-time, low latency & high-efficiency AI inferencing. it's the perfect chioce for a wide range of AI applications, including AI-powered video analytics, machine vision, and intelligent edge computing.
+reComputer AI R2000 series is a powerful Edge AI Computer based on the Raspberry Pi 5. With quad-core Arm Cortex-A76 processor 8GB RAM, M.2 SSD support, and an Hailo-8 AI acceleration module providing up to 26 TOPS, Enabling real-time, low latency & high-efficiency AI inferencing. it's the perfect choice for a wide range of AI applications, including AI-powered video analytics, machine vision, and intelligent edge computing.
 
 ## Features
 
@@ -96,25 +96,26 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 ### For Windows host computer
 
-- **Step 1.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
+- **Step 1.** Click **[here](https://downloads.raspberrypi.com/imager/imager_2.0.7.exe)** to directly download the Windows version of Raspberry Pi Imager 2.0.7 (used in the following procedure), or visit the **[official website](https://www.raspberrypi.com/software/)** to select the appropriate version for your system.
+
 
 - **Step 2.** Open Raspberry Pi Imager software
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_1.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 3.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+- **Step 3.** Click **CHOOSE OS** and select your preferred OS
 
-- **Step 4.** Click **CHOOSE OS** and select your preferred OS
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_2.png" alt="pir" width="600" height="auto"/></p>      
 
 **NOTE1:** We recommend flashing the (64-bit Raspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz] image for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
 Download [link](https://www.raspberrypi.com/software/operating-systems/).
+
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
+
 Then write it to your SD card using the imager with the Use custom option.
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/img.png" alt="pir" width="600" height="auto"/></p>
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_3.png" alt="pir" width="600" height="auto"/></p>
 
 If you still want to try the latest image, **you’ll need to install the Hailo software manually instead of using the one-command hailo-all route;** please follow this [link](https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software).
 
@@ -126,11 +127,11 @@ Or you can use this link to download the image file:
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 5.** Click **CHOOSE STORAGE**
+- **Step 5.** Click **STORAGE** and select the target storage device prepared for OS flashing.
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/piimager_show_4.png" alt="pir" width="600" height="auto"/></p>
 
 - **Step 6.** Finally, click **WRITE**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
 

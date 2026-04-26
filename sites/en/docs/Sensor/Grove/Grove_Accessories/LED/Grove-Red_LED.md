@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Red_LED
 sku: 104030007, 104020002, 104030005, 104020228, 104030014
 last_update:
-  date: 1/9/2023
+  date: 4/17/2025
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-17'
 url: https://wiki.seeedstudio.com/Grove-Red_LED/
 ---
 
@@ -73,7 +73,7 @@ Grove - Red LED is similar to the Grove - LED module which houses an LED light s
 
 | Seeeduino       | Grove-Red Led |
 |---------------|-------------------------|
-| 5V           | Red                     |
+| 3.3V           | Red                     |
 | GND           | Black                   |
 | Not Conencted | White                   |
 | D2            | Yellow                  |
