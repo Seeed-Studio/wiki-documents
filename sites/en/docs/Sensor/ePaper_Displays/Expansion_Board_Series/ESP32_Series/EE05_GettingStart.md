@@ -41,7 +41,7 @@ Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide ra
 
 ### Features
 
-- **Powered by XIAO ESP32-S3 Plus**：Works immediately when connected to a compatible ePaper display.
+- **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
 - **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays, supporting 24-Pin ePaper displays for various project requirements.
 - **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
