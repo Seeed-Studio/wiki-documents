@@ -3,13 +3,14 @@ description: Introdução à XIAO ePaper Display Board(nRF52840) - EN05
 sku: TBD
 title: Introdução à XIAO ePaper Display Board(nRF52840) - EN05
 sidebar_position: 1
+image: https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg
 slug: /epaper_en05
 last_update:
   date: 04/08/2026
   author: Jackson.Li
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/pt-br/epaper_en05/
-updatedAt: '2026-04-08'
+updatedAt: '2026-04-10'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -24,10 +25,10 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>XIAO ePaper Display Board EN05</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.jpg"/></div>
 
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=EN05" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN05-p-6756.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -37,14 +38,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é uma placa controladora de ePaper de ultra baixo consumo, projetada especificamente para displays ePaper de 24 pinos. Com uma chave de hardware para energia, ela é ideal para projetos alimentados por bateria, como etiquetas eletrônicas de prateleira, crachás inteligentes e quadros de informação IoT portáteis.
+Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é uma placa controladora de ePaper de ultra baixo consumo, projetada especificamente para displays ePaper de 24 pinos. Com um interruptor de energia por hardware, é ideal para projetos alimentados por bateria, como etiquetas eletrônicas de prateleira, crachás inteligentes e painéis portáteis de informações para IoT.
 
 ### Recursos
 
 - **Alimentada por XIAO nRF52840 Plus:** Recursos integrados de Bluetooth 5.0 para comunicação sem fio.
-- **Botões fáceis de usar:** Inclui 1 botão Reset montado na lateral e 3 botões de usuário (Botão 3 mapeado para D9) para interações personalizadas (por exemplo, despertar / página anterior / próxima página).
-- **Design de baixo consumo:** Conector de bateria JST 2,0 mm integrado com uma chave deslizante de hardware e desligamento automático dos periféricos durante o modo de suspensão do MCU.
-- **Design traseiro plano:** PCB preto fosco com parte traseira plana (sem pinos longos) para fácil fixação.
+- **Botões fáceis de usar:** Inclui 1 botão de Reset montado na lateral e 3 botões de usuário (Botão 3 mapeado para D9) para interações personalizadas (por exemplo, despertar / página anterior / próxima página).
+- **Design de baixo consumo:** Conector de bateria JST 2,0 mm integrado com chave deslizante de energia por hardware e desligamento automático dos periféricos durante o modo de suspensão do MCU.
+- **Design traseiro plano:** PCB preto fosco com parte traseira plana (sem pinos longos) para fácil montagem.
 
 ### Especificações
 
@@ -54,8 +55,8 @@ Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é uma placa con
 | **Sem fio** | Bluetooth 5.0 |
 | **Conector ePaper** | SPI FPC 24 pinos 0,5 mm |
 | **Conector de bateria** | JST 2,0 mm (bateria Li 3,7 V) |
-| **Chave** | Chave deslizante de energia em hardware |
-| **Botões** | 1x botão Reset (montado na lateral) <br/> 3x botões de usuário (montados na lateral) |
+| **Interruptor** | Chave deslizante de energia por hardware |
+| **Botões** | 1x botão de Reset (montado na lateral) <br/> 3x botões de usuário (montados na lateral) |
 | **Espessura da PCB** | 1,2 mm |
 
 ## Visão geral de hardware
@@ -64,14 +65,14 @@ Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é uma placa con
 
 A EN05 é compatível com uma variedade de displays ePaper SPI de 24 pinos, incluindo, mas não se limitando a:
 
-- [Display E-paper de 1,54" - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Display E-Paper de 2,13" - Flexível Monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Display E-Paper de 2,13" - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Display E-paper de 2,9" - Monocromático 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Display E-Paper de 4,2" - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Display E-Paper de 4,26" - Monocromático 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Display E-paper de 5,83" - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Display ePaper monocromático de 7,5" com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Display E-paper de 1,54 polegadas - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Display E-Paper de 2,13 polegadas - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Display E-Paper de 2,13 polegadas - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [Display E-paper de 2,9 polegadas - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Display E-Paper de 4,2 polegadas - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Display E-Paper de 4,26 polegadas - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Display E-paper de 5,83 polegadas - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Display ePaper monocromático de 7,5 polegadas com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
 
@@ -97,7 +98,7 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e iremos utilizá-lo mais tarde.
+Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e o utilizaremos mais tarde.
 
 :::tip
 Se você fizer a escolha errada, a tela não exibirá nada.
@@ -107,30 +108,30 @@ Portanto, certifique-se de selecionar o tipo correto de dispositivo ou component
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
 ## Primeiros passos
 
-Aqui, usamos um display monocromático de 7,5" como exemplo. Os passos são idênticos para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
+Aqui, usamos um display monocromático de 7,5 polegadas como exemplo. As etapas são idênticas para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
 
 ### Configurar e gravar o programa
 Selecione o exemplo mostrado na figura
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ser parecido com:
+Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ser assim:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-Depois disso, vá em **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
+Depois disso, vá para **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
 
 Em seguida, clique em **Upload** para enviar o código.
-Agora você verá o resultado na tela ePaper!
+Agora você verá o resultado na sua tela ePaper!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/2.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -140,12 +141,12 @@ Agora você verá o resultado na tela ePaper!
 
 ## Solução de problemas
 
-**P1: A tela não exibe nada após o upload do código.**
-- **Verifique o cabo FPC**: Certifique-se de que o cabo FPC do ePaper está inserido na orientação correta e firmemente travado no conector.
-- **Verifique a configuração do driver**: Confira `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
+**P1: A tela não exibe nada após o envio do código.**
+- **Verifique o cabo FPC**: Certifique-se de que o cabo FPC do ePaper esteja inserido na orientação correta e bem travado no conector.
+- **Verifique a configuração do driver**: Confira novamente `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
 
 **P2: A placa não liga quando conectada a uma bateria.**
-- **Chave de hardware**: Verifique se a chave deslizante de hardware na placa está alternada para a posição ON.
+- **Interruptor de hardware**: Verifique se a chave deslizante de energia na placa está alternada para a posição ON.
 - **Conexão da bateria**: Verifique a polaridade do conector JST 2,0 mm.
 
 ## Suporte técnico e discussão sobre o produto
