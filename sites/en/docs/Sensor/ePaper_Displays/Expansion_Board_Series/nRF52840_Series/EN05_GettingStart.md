@@ -1,16 +1,16 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(nRF52840) - EN05
-sku: TBD
+sku: 100085486
 title: Getting Started with XIAO ePaper Display Board(nRF52840) - EN05
 sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.jpg
 slug: /epaper_en05
 last_update:
-  date: 04/08/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/epaper_en05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';

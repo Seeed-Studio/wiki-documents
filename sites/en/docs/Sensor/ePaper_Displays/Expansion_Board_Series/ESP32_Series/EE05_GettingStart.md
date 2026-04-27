@@ -1,16 +1,16 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
-sku: TBD
+sku: 100057220
 title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
 sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.jpg
 slug: /epaper_ee05
 last_update:
-  date: 04/07/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/epaper_ee05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -42,7 +42,7 @@ Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide ra
 ### Features
 
 - **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays, supporting 24-Pin ePaper displays for various project requirements.
+- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays for various project requirements.
 - **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
 - **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to ePaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
