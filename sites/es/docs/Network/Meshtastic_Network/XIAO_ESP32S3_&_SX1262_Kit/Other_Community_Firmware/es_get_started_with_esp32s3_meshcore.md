@@ -231,7 +231,7 @@ Si quieres mostrar la posición del repetidor en un mapa de nodos MeshCore, prim
             style={{ width: 300, height: 'auto' }}
           />
         </div>
-      </td]
+      </td>
       <td>
         <div align="center">
           <img
