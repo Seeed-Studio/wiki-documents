@@ -3,7 +3,7 @@ description: This article explains how to utilize the hardware features of the X
 title: XIAO ePaper Display Board(ESP32-S3) with ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /EE04_with_esphome_advanced
-sidebar_position: 2
+sidebar_position: 9
 last_update:
   date: 10/07/2025
   author: Jason

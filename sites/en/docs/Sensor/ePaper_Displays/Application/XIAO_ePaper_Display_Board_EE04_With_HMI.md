@@ -3,7 +3,7 @@ description: Enable visual interface design for the XIAO EE04 ePaper Display usi
 title: XIAO ePaper Display Board EE04 with the SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
 slug: /EE04_with_hmi
-sidebar_position: 2
+sidebar_position: 8
 last_update:
   date: 10/30/2025
   author: Jason

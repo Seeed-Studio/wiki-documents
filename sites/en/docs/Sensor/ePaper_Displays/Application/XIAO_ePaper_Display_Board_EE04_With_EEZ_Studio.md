@@ -4,7 +4,7 @@ title: EE04 ePaper Display Board(ESP32-S3) with EEZ Studio
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
-sidebar_position: 1
+sidebar_position: 10
 slug: /epaper_ee04_eezstudio
 last_update:
   date: 09/28/2025

@@ -1,12 +1,12 @@
 ---
 description: Setup and Configure OpenDisplay with OpenDisplay Kit
-title: Setup and Configure OpenDisplay firmware with the OpenDisplay Kit
+title: Work with OpenDisplay
 keywords:
   - epaper
   - opendisplay
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
-sidebar_position: 1
+sidebar_position: 7
 slug: /EN04_opendisplay
 sku: E25120101
 last_update:

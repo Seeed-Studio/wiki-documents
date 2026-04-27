@@ -1,10 +1,10 @@
 ---
 description: PlatfromIO with XIAO ePaper Display Board EE04
-title: XIAO ePaper Display Board EE04 with PlatfromIO
+title: Work with PlatfromIO
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
-sidebar_position: 1
+sidebar_position: 2
 slug: /ee04_with_platformio
 last_update:
   date: 10/10/2025

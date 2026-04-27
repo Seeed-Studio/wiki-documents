@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Getting Started with XIAO ePaper Display EN05
+# Getting Started with XIAO ePaper Display Board - EN05
 
 <div class="table-center">
 <table align="center">

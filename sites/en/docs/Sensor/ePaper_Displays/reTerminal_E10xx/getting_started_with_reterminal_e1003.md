@@ -6,15 +6,18 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
 slug: /getting_started_with_reterminal_e1003
 sidebar_position: 4
 last_update:
-  date: 3/19/2026
-  author: Jackson.Li
+  date: 4/23/2026
+  author: Citric
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
 updatedAt: '2026-04-21'
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Getting Started with reTerminal E1003
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank">
@@ -24,7 +27,7 @@ updatedAt: '2026-04-21'
 
 ## Introduction
 
-reTerminal E1003 is a 10.3 inch open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Touch interaction is currently supported on SenseCraft HMI firmware v1.1.2. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Arduino and PlatformIO for further development. Support for Home Assistant (via ESPHome & Open Display) is planned for a future release. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use device delivers stunning visuals and flexible customization to meet all your needs.
+reTerminal E1003 is a 10.3 inch touch-supported, open-source monochrome ePaper display featuring 16 levels of grayscale and a high-resolution of 1404×1872 pixels, with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation. Whether for smart home dashboard visualization and control, office information displays, or educational projects, this ready-to-use touch-enabled device delivers stunning visuals and flexible customization to meet all your needs.
 
 :::tip
 Touch interaction for reTerminal E1003 is supported starting from SenseCraft HMI firmware v1.1.2.
@@ -33,98 +36,463 @@ Touch-related library support is planned for future open-source release, providi
 
 ESPHome support for reTerminal E1003 is under development and will be available in a future release.
 :::
+
 ### Features
 
-- **Up to 16-level grayscale clarity:** Boasting 16 levels of exquisite grayscale, every detail of text and graphics is rendered with exceptional sharpness and clarity.
-- **Ultra-Low Power Consumption:** The ePaper consumes power only during updates, resulting in longer battery life and greater energy efficiency.
-- **SenseCraft HMI Support:** The reTerminal E Series Display supports SenseCraft HMI by default firmware.
-- **Wide Range of Applications:** Supports high-speed refresh for low-latency updates with a TTL parallel interface (multi-line, high-throughput) — making it an ideal choice for smart home control panels.
-- **High-Resolution Touch ePaper Display:** The 10.3-inch 1404×1872 monochrome ePaper display is paired with a built-in responsive touchscreen, with touch interaction currently supported on SenseCraft HMI firmware v1.1.2.
-- **Adapting to Decoration Needs:** Wire-free for greater freedom; supports wall-mount and desktop placement, with flexible portrait and landscape orientation switching.
-
+- 3-Second Full Refresh for Faster ePaper Responsive Dashboards
+- Build Interactive Interfaces Easily with SenseCraft HMI and Touch Support
+- Crisp Visuals with 16-Level Grayscale and High-Resolution ePaper Display
+- 6-Month Battery Life for Truly Cable-Free Placement
+- Flexible Hardware & Software Customization
 
 
 ### Specification
 
-| Item | Description |
-| :--- | :--- |
-| **Product Name** | reTerminal E1003 |
-| **Processor** | ESP32-S3 with 8MB PSRAM |
-| **Storage** | 32MB Flash, support Micro SD card |
-| **Display** | 10.3" Monochrome/ 16-level Grayscale |
-| **Resolution** | 1404x1872 Pixels |
-| **Micro SD Card** | Maximum support 32GB SD card, FAT32 format |
-| **Wireless Connectivity** | 2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0 |
-| **Sensors** | Temperature, humidity sensors |
-| **Microphone** | Reserved for voice interaction application |
-| **Audio** | Buzzer for sound alert |
-| **Battery** | 3000mAh |
-| **Power Input** | USB-C 5V/1A |
-| **Software Support** | Default firmware support SenseCraft HMI(https://sensecraft.seeed.cc/hmi/)<br />Support Arduino/PlatformIO development platform |
-| **Working Temperature** | 0-40°C |
-| **Dimensions** | 224mm*187mm*18.6mm |
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th align="center">Item</th>
+			<th align="center">Description</th>
+		</tr>
+		<tr>
+			<td align="center"><strong>Product Name</strong></td>
+			<td align="center">reTerminal E1003</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Processor</strong></td>
+			<td align="center">ESP32-S3 with 8MB PSRAM</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Storage</strong></td>
+			<td align="center">32MB Flash, support Micro SD card</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Display</strong></td>
+			<td align="center">10.3" Monochrome / 16-level Grayscale</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Resolution</strong></td>
+			<td align="center">1404 x 1872 Pixels</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Micro SD Card</strong></td>
+			<td align="center">Maximum support 32GB SD card, FAT32 format</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Wireless Connectivity</strong></td>
+			<td align="center">2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Sensors</strong></td>
+			<td align="center">Temperature, humidity sensors</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Microphone</strong></td>
+			<td align="center">Reserved for voice interaction application</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Audio</strong></td>
+			<td align="center">Buzzer for sound alert</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Battery</strong></td>
+			<td align="center">3000mAh</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Power Input</strong></td>
+			<td align="center">USB-C 5V/1A</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Working Temperature</strong></td>
+			<td align="center">0-40°C</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Dimensions</strong></td>
+			<td align="center">224mm x 187mm x 18.6mm</td>
+		</tr>
+	</table>
+</div>
 
 ### Hardware Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/2.jpg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
-1. **Screen Refresh Button**
-2. **Page Up and Down Button**
-3. **Wi-Fi Antenna Area**
-4. **MicroSD Card/TF Card port**
-5. **Power Switch**
-6. **Red Power LED**
-7. **Green Status LED**
-8. **USB-C Data and Charge Port**
-9. **Expansion Port**
-10. **Stand Mounting Screw Hole**
-11. **Stand**
-12. **Stand Mounting Screw**
+1. **ePaper Display:** 10.3" 16-level grayscale ePaper display with capacitive touch support.
+2. **Buttons**: Located at the top of the device for manual screen usage
+3. **Microphone:** Reserved for voice interaction applications.
+4. **MicroSD Card / TF Card Slot:** For expandable storage (FAT32, up to 32GB).
+5. **Power Switch:** To turn the device on or off.
+6. **Red Charging LED:** Indicates the battery charging status.
+7. **Green Status LED:** Indicates the current operational or system status.
+8. **USB-C Data and Charge Port:** For charging the device and data transmission.
+9. **Expansion Port:** Pin header for connecting external expansion modules or peripherals.
+10. **Buzzer:** Audio output holes for sound alerts.
+11. **Stand Mounting Inserts:** Embedded nuts (screw holes) on the back of the device for attaching the 3D-printed support stand.
 
 ### Applications
 
-- **Home Automation Dashboards:** Display real-time smart home data like temperature, humidity, and air quality via Home Assistant (ESPHome driver support for E1003 is planned for a future release).
-- **Low-power Monochrome electronic photo frame:** With SenseCraft HMI or the App, you can easily upload a series of photos from your album remotely online. Combined with a large, high-resolution monochrome e-ink screen, it achieves ultra-low power image display, no longer have to worry about battery life.
-- **Smart Office Displays:** Show meeting room availability, office schedules, or directional guidance in low-power, always-on ePaper displays.
-- **Retail & Public Information Displays:** Low-power ePaper signs for menus, schedules, or occupancy indicators with long battery life.
+- 3-Second Full Refresh for Faster ePaper Responsive Dashboards
+- Build Interactive Interfaces Easily with SenseCraft HMI and Touch Support
+- Crisp Visuals with 16-Level Grayscale and High-Resolution ePaper Display
+- 6-Month Battery Life for Truly Cable-Free Placement
+- Flexible Hardware & Software Customization
 
-## Getting Started with SenseCraft HMI
+## Getting Started
 
 The reTerminal E1003 comes pre-loaded with firmware that supports **SenseCraft HMI**, a no-code platform that allows you to design and deploy personalized dashboards effortlessly.
 
-### Step 1. Power On and Network Configuration
+### Preliminary
 
-1. Turn on the **Power Button** to turn on the reTerminal E1003.
-2. Use your smartphone to connect to the device's hotspot (AP mode) to configure the Wi-Fi credentials.
-3. The screen will display a "Network Configuration" QR code or use browser open 192.168.4.1 page.
-4. Once connected to the internet, the device will display a **Device Code** or **Binding QR Code**.
+**Step 1.** Unbox your reTerminal E1003 and ensure all components are included:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/3.jpg" style={{width:800, height:'auto'}}/></div>
+- reTerminal E1003 device
+- USB-C cable
+- Quick start guide
+- long screwdriver
+- screws
+- 3D-printed support stand
 
-### Step 2. Bind the Device
+**Step 2.** (Optional) Install the 3D-printed support stand to place the device upright:
 
-1. Visit the [SenseCraft HMI Platform](https://sensecraft.seeed.cc/) on your computer browser.
-2. Log in to your account (or create one if you haven't).
-3. Navigate to the **Device Management** section and click **Add Device**.
-4. Enter the **Device Code** displayed on your reTerminal E1003 screen to complete the binding process.
+Locate the 3D-printed support stand included in the package. Position the support stand against the designated mounting area on the back of the reTerminal E1003 where the embedded nuts are located. Use a long screwdriver to secure the stand to the device by tightening the screws into the embedded nuts on the back of the reTerminal E1003. Once securely attached, place the reTerminal E1003 on a flat surface where the stand will support it in an upright position.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/5.jpg" style={{width:1000, height:'auto'}}/></div>
+:::note
+The stand provides a fixed viewing angle and cannot be adjusted. This fixed positioning is designed to offer optimal visibility in most usage scenarios.
+:::
 
-### Step 3. Create Content on the Platform
+**Step 3.** (Optional) Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
 
-1. Go to the **Home Page** select a template you want or **Workspace** to create your work from scratch.
-2. [Click this link to learn how to use HMI Platform if you have question.](https://sensecraft-hmi-docs.seeed.cc/en/)
+:::note
+The reTerminal E Series ePaper Display only supports MicroSD cards up to 32GB in Fat32 format.  
+The 32GB SD card is formatted as exFAT by default. After formatting it to FAT32, it can be successfully mounted and used to store images.
+:::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2.jpg" style={{width:1000, height:'auto'}}/></div>
+**Step 4.** (Optional) Install USB drivers if needed:
 
-### Step 4. Deploy Content to Device
+Depending on your operating system, you may need to install USB drivers to ensure proper communication with your reTerminal E1003:
 
-1. Once your design is ready, click the **Preview** button to check how it looks.
-2. Click the **Save** or **deploy** button.
-3. Select your bound reTerminal E1003 from the list.
-4. The platform will send the data to your device via Wi-Fi. The ePaper screen will refresh to display your new dashboard.
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/6.jpg" style={{width:1000, height:'auto'}}/></div>
+- Windows 11 systems typically include the driver by default
+- For Windows 10 and earlier versions, you may need to download and install the CH341 driver from [WCH official website](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+
+</TabItem>
+
+<TabItem value="MacOS" label="MacOS">
+
+Download and install the CH34X driver from [WCH official website](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
+
+</TabItem>
+
+<TabItem value="Linux" label="Linux">
+
+Most modern Linux distributions include the necessary drivers by default
+
+</TabItem>
+</Tabs>
+
+### Power On
+
+**Step 1.** Power on the device by sliding the power switch to the **ON** position. The power switch is located on the back of the unit.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/135.gif" style={{width:700, height:'auto'}}/></div>
+
+**Step 2.** On first boot, the device will display product information and network setup instructions.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/210.png" style={{width:600, height:'auto'}}/></div><br />
+
+**Step 3.** The green user LED will light up for approximately 30 seconds, indicating the device is powered on and initializing. 30 seconds of no operation of the device, in order to ensure the power, the device will automatically enter the sleep mode, the LED light will automatically turn off.
+
+:::tip
+So, we need to complete the next steps of configuring the network during this time. When the device goes to sleep, you will not be able to find the device's hotspot. If this is the case, you can wake up the device by pressing the **Refresh** button on the top of the unit.
+:::
+
+### Network Setup
+
+<Tabs>
+<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+
+**Step 1.** Connect to the device's Wi-Fi access point from your smartphone or computer. The AP name will appear on the screen (no password required). The network credentials are `reTerminal E1003-{MAC Address}`.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
+
+**Step 2.** Once connected, your phone should automatically redirect to the Wi-Fi configuration page. If not, open a browser and navigate to `192.168.4.1`.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
+
+**Step 3.** Select your local Wi-Fi network and enter the password, then click "Connect".
+
+:::note
+The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5GHz or other bands.
+:::
+
+**Step 4.** Upon successful connection, the device will emit a confirmation beep and display a pairing code screen.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/136.png" style={{width:600, height:'auto'}}/></div>
+
+### Connecting to SenseCraft Platform
+
+**Step 1.** Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
+    </a>
+</div><br />
+
+
+**Step 2.** In the left sidebar, click **Device** to enter the Device page, then click the **+ New Device** button in the upper-left corner.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/200.png" style={{width:600, height:'auto'}}/></div>
+
+**Step 3.** Name your device and enter the pairing code displayed on your device's screen and click **Create**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
+
+**Step 4.** Once paired, the device will display a message prompting you to create your first dashboard.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/211.png" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+
+This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
+
+First, download the SenseCraft App. You can find it by searching "SenseCraft" on the Google Play Store or Apple App Store. Alternatively, you can download it from this website.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Download APP 🖱️</font></span></strong>
+    </a>
+</div><br />
+
+**Step 1.** Open the SenseCraft App, sign in to your account, and navigate to the **User** tab. Tap on **Device Bluetooth Configuration** to begin the process.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 2.** On the "Please select the device type" screen, choose **reTerminal E1003**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 3.** Follow the on-screen instructions to put your device into Bluetooth broadcast mode. Ensure your phone's Bluetooth is enabled. Tap **Scan**, and the app will discover nearby devices. Select your device from the list to connect.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 4.** Once connected via Bluetooth, the app will prompt you to set up the Wi-Fi connection. Select your local 2.4GHz Wi-Fi network from the dropdown list, enter the password, and tap **Next**.
+
+:::note
+The device can only be configured via a 2.4G Wi-Fi network.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 5.** The app will send the Wi-Fi credentials to the device and add it to your SenseCraft account. A "Device added successfully" message will appear upon completion. You can now tap **Start exploring!** to proceed.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 6.** Your reTerminal will now appear in your device list on the main **Device** tab of the app, successfully connected to your SenseCraft account.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
+
+**Step 7.** You can tap on the device in the list to view its **Device Detail** page. From here, you can manage the device and upload photos. For more complex dashboard and canvas design, you will be prompted to use the web browser version of SenseCraft.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
+
+</TabItem>
+</Tabs>
+
+### Firmware Update
+
+After the device is successfully added to your SenseCraft account, the platform will automatically check the firmware version. If a newer firmware is available, you will be prompted to update.
+
+You can also check the firmware version manually at any time:
+
+**Step 1.** On the **Device** page, find your reTerminal E1003 to view its details, and note the **current firmware version**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/201.png" style={{width:350, height:'auto'}}/></div>
+
+**Step 2.** In the left sidebar, click **Tools** and open the **Firmware Flasher** tab to see the **latest firmware version** available for this device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/202.png" style={{width:1000, height:'auto'}}/></div>
+
+**Step 3.** If the current version is older than the latest one, follow the 3-step flow on the Firmware Flasher page to update:
+
+1. **Select your device** — plug the reTerminal E1003 into your computer via the USB-C cable, make sure the power switch is **ON**, then click **Select** and choose your device from the list.
+
+2. **Select firmware** — choose the latest firmware from the release options dropdown.
+
+3. **Flash** — click **Flash** and wait for the update to complete. Enable **Full Flash** only if you want to reset the device to factory state (all data, settings, and designs will be wiped).
+
+:::note
+
+1. Updating the firmware ensures optimal performance and access to the latest features. Touch interaction for reTerminal E1003 requires firmware **v1.1.2 or later**.
+
+2. It is not possible to flash the firmware properly when the device is in the shutdown or sleep state. If you select the correct port for your device but never see the flash firmware progress, you may need to wake up the device by pressing the **Refresh** button on the top of the unit and try again.
+
+3. **Do a standard Flash** to keep your setup: Wi-Fi, deployed designs, and pictures are preserved. **Do a Full Flash to start fresh**: all data, settings, and designs are wiped (factory state).
+
+:::
+
+## Display Content on Your reTerminal E1003
+
+Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft HMI** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1003 in just a few clicks.
+
+SenseCraft HMI has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
+
+- **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
+
+Since this article is a product **Getting Started**, we will not repeat the same content here — the following only shows how to quickly display something on your reTerminal E1003.
+
+### Home — Start From a Community Template
+
+The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft HMI, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1003 with one click.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
+
+### Workspace — Manage and Design Your Own Content
+
+The **Workspace** page is where you manage all pages and content shown on the currently bound device. From here you can:
+
+- Create and arrange your own design pages from scratch
+- Upload images and organize them into slideshows
+- Combine text, widgets, shapes, data, RSS feeds, web content, and more in a single drag-and-drop editor
+- Deploy the final design wirelessly to your reTerminal E1003
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/205.png" style={{width:1000, height:'auto'}}/></div>
+
+Once your design is saved, click **Deploy to Device**, select your paired reTerminal E1003, and the content will be transmitted wirelessly to the device. The ePaper display will update to show your design. With firmware **v1.1.2 or later**, you can also tap directly on the ePaper screen to interact with touch-enabled pages.
+
+For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
+
+## Operating the Device
+
+### Refresh Button
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/137.jpg" style={{width:700, height:'auto'}}/></div>
+
+The refresh button at the top of the device serves several functions:
+
+- **Single Press**: Manually refreshes the display and checks for new content from the SenseCraft platform. The buzzer will beep once to confirm the action. This button is also commonly used to wake up the device. You can use this button to wake up a device when it has gone to sleep and a dashboard refresh command is usually not immediately available to the device.
+
+- **Long Press** (future functionality): Will activate voice input mode.
+
+### Navigation Buttons
+
+The left and right buttons allow you to navigate between multiple pages if your dashboard contains more than one page:
+
+- **Left Button**: Navigate to the previous page
+
+- **Right Button**: Navigate to the next page
+
+### Network Reset
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/138.jpg" style={{width:700, height:'auto'}}/></div>
+
+If you need to connect to a different Wi-Fi network:
+
+**Step 1.** Press and hold both navigation buttons (left and right) simultaneously for 2 seconds.
+
+**Step 2.** The device will enter Wi-Fi configuration mode, and you can follow the [Network Setup](#network-setup) steps again to connect to a new network.
+
+### LED Indicators
+
+- **Red LED**:
+  - Off: Fully charged or not charging
+  - Always on: charging
+
+- **Green LED**:
+  - On for 30 seconds at boot: Device is powering on
+
+### Battery Operation
+
+When operating on battery power:
+
+- The device will automatically enter low-power mode between refreshes
+
+- Battery life depends on refresh frequency (typically 3-month on a full charge with default settings)
+
+- The device will display a low battery icon in the top-right corner when the battery level is below 20%
+
+:::tip
+If you want to write some code by yourself to read battery voltage, it will be more precise to add 10ms delay before analogRead() function.
+:::
+
+### Expansion Pins
+
+The reTerminal E1003 features an 8-pin expansion header (J2) that provides connectivity options for adding external sensors, modules, or other hardware to extend the functionality of your device. This expansion header exposes several ESP32-S3 GPIO pins and communication interfaces, making it a versatile connection point for your DIY projects.
+
+#### Expansion Header Pinout
+
+The 8-pin expansion header (J2) has the following pinout:
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Pin (from top to bottom)</th>
+			<th>Label</th>
+			<th>ESP32-S3 Pin</th>
+			<th>Function</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>HEADER_3V3</td>
+			<td>-</td>
+			<td>Power</td>
+			<td>3.3V power supply for external devices</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>GND</td>
+			<td>-</td>
+			<td>Ground</td>
+			<td>Common ground reference</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ESP_IO46</td>
+			<td>GPIO46</td>
+			<td>GPIO/ADC</td>
+			<td>General purpose I/O with analog input capability</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>ESP_IO2/ADC1_CH4</td>
+			<td>GPIO2</td>
+			<td>GPIO/ADC</td>
+			<td>General purpose I/O with analog input capability (ADC1 channel 4)</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>ESP_IO17/TX1</td>
+			<td>GPIO17</td>
+			<td>GPIO/UART TX</td>
+			<td>GPIO or UART transmit (TX) signal</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>ESP_IO18/RX1</td>
+			<td>GPIO18</td>
+			<td>GPIO/UART RX</td>
+			<td>GPIO or UART receive (RX) signal</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>ESP_IO20/I2C0_SCL</td>
+			<td>GPIO20</td>
+			<td>GPIO/I2C SCL</td>
+			<td>GPIO or I2C clock signal</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>ESP_IO19/I2C0_SDA</td>
+			<td>GPIO19</td>
+			<td>GPIO/I2C SDA</td>
+			<td>GPIO or I2C data signal</td>
+		</tr>
+	</table>
+</div>
 
 ## Troubleshooting
 
