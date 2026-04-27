@@ -4,7 +4,7 @@ title: Primeros pasos con ESP32 MeshCore
 keywords:
   - Meshcore
   - ESP32 MeshCore
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png
 slug: /get_started_with_esp32s3_meshcore
 sku: 102010611,113110064
 sidebar_position: 3
@@ -12,13 +12,13 @@ last_update:
   date: 4/20/2026
   author: Michelle Huang
 createdAt: '2026-04-20'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/es/get_started_with_esp32s3_meshcore/
 ---
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png" alt="pir" width={800} height="auto" /></p>
 
-[MeshCore](https://meshcore.io/) es un sistema de código abierto para habilitar comunicaciones seguras basadas en texto utilizando hardware LoRa Mes. Puedes usar el repetidor MeshCore y el nodo compañero MeshCore para construir tu red MeshCore. El [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) es una solución flexible para desarrollar un nodo MeshCore.
+[MeshCore](https://meshcore.io/) es un sistema de código abierto para habilitar comunicaciones seguras basadas en texto utilizando hardware LoRa Mesh. Puedes usar el repetidor MeshCore y el nodo compañero MeshCore para construir tu red MeshCore. El [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) es una solución flexible para desarrollar un nodo MeshCore.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
@@ -59,7 +59,7 @@ Elige `Erase device `, luego haz clic en `Flash` y selecciona el puerto serie ll
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Flash1.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando la barra de progreso esté completamente llena, indica que la grabación se ha completado. Entonces el dispositivo se reiniciará automáticamente.
+Cuando la barra de progreso esté completamente llena, indica que la grabación ha finalizado. Entonces el dispositivo se reiniciará automáticamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/FlashigComplete.png" alt="pir" width={800} height="auto" /></p>
 
@@ -74,13 +74,13 @@ El SX-1262 se puede conectar al Xiao ESP32-S3 mediante la interfaz B2B. El SX-12
 El siguiente diagrama muestra el mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1262.
 
 <div style={{textAlign:'center'}}>
-  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="Mapeo de pines B2B entre XIAO ESP32S3 y Wio-SX1262"/>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/ESP32-S3B2B%E5%BA%A7%E5%AD%90%E5%BC%95%E8%84%9A%E5%9B%BE.png" style={{width:700, height:'auto'}} alt="B2B pin mapping between XIAO ESP32S3 and Wio-SX1262"/>
 </div>
 :::warning
 El SX-1262 compatible solo se puede comprar dentro del kit.
 :::
 
-### (Opcional) Conectado a la batería
+### (Opcional) Conectado a una batería
 
 El XIAO ESP32S3 tiene un chip de gestión de energía integrado que permite alimentar el XIAO ESP32S3 de forma independiente usando una batería o cargar la batería a través del puerto USB del XIAO ESP32S3.
 
@@ -95,27 +95,65 @@ Si quieres conectar la batería para XIAO, te recomendamos comprar una batería 
 La placa de expansión sería una buena herramienta para la conexión y aplicaciones adicionales, como añadir fácilmente sensores y módulos Grove.
 
 <table align="center">
-<tbody><tr>
-<th>Kit XIAO ESP32S3 & Wio-SX1262 para Meshtastic y LoRa</th>
-<th>(Opcional) Módulo L76K GNSS</th>
-</tr>
-<tr>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" style={{width:300, height:'auto'}}/></div></td>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Expansion.jpg" style={{width:350, height:'auto'}}/></div></td>
-</tr>
-<tr>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora🖱️</font></span></strong>
-</a>
-</div></td>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
-</a>
-</div></td>
-</tr>
-</tbody></table>
+  <tbody>
+    <tr>
+      <th>Kit XIAO ESP32S3 & Wio-SX1262 para Meshtastic</th>
+      <th>(Opcional) Placa de expansión</th>
+    </tr>
+    <tr>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg"
+            style={{ width: 330, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Expansion.jpg"
+            style={{ width: 330, height: 'auto' }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Consigue uno ahora🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Consigue uno ahora🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Configuración
 
@@ -141,7 +179,7 @@ Cambia la región LoRa y guarda la configuración. Entonces el dispositivo se re
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
 :::info
-**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10 %, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
+**EU_868** debe cumplir una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto sobre una base móvil de 1 hora. Tu dispositivo dejará de transmitir si alcanzas este límite, hasta que se le permita de nuevo.
 :::
 
 Entonces puedes empezar a probar tu propia red Mesh.
@@ -162,7 +200,7 @@ Después de iniciar sesión, puedes ver la página de configuración. Ahora pued
 
 ### Configurar ruta
 
-Antes de añadir el repetidor a tu ruta, es posible que necesites usar el repetidor para enviar primero un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar anuncios manualmente o, de lo contrario, tendrás que esperar.
+Antes de añadir el repetidor a tu ruta, es posible que primero necesites usar el repetidor para enviar un anuncio. El repetidor enviará anuncios automáticamente a intervalos regulares. Este intervalo puede ser de varias horas (por defecto 3 horas). Así que necesitas enviar el anuncio manualmente o, de lo contrario, tendrás que esperar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/SendAdvert.png" alt="pir" width={800} height="auto" /></p>
 
@@ -170,7 +208,7 @@ Puedes configurar manualmente la ruta de envío de mensajes. Conecta tu disposit
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/SetPath1.png" alt="pir" width={600} height="auto" /></p>
 
-Después de configurar la ruta, el método de transmisión cambiará a "n hop". Por ejemplo, si añades 1 repetidor en tu ruta, cambiará a 1 hop.
+Después de configurar la ruta, el método de transmisión cambiará a "n hop". Por ejemplo, si añades 1 repetidor en tu ruta, cambiará a 1 salto.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/1Hop.png" alt="pir" width={300} height="auto" /></p>
 
@@ -179,27 +217,90 @@ Después de configurar la ruta, el método de transmisión cambiará a "n hop". 
 Si quieres mostrar la posición del repetidor en un mapa de nodos MeshCore, primero necesitas instalar un módulo GPS para el kit. 
 
 <table align="center">
-<tbody><tr>
-<th>Kit XIAO ESP32S3 & Wio-SX1262 para Meshtastic y LoRa</th>
-<th>(Opcional) Módulo L76K GNSS</th>
-</tr>
-<tr>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" style={{width:300, height:'auto'}}/></div></td>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:350, height:'auto'}}/></div></td>
-</tr>
-<tr>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora🖱️</font></span></strong>
-</a>
-</div></td>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Ver más🖱️</font></span></strong>
-</a>
-</div></td>
-</tr>
-</tbody></table>
+  <tbody>
+    <tr>
+      <th>Kit XIAO ESP32S3 & Wio-SX1262 para Meshtastic</th>
+      <th>Kit XIAO ESP32S3 & Wio-SX1262 con carcasa</th>
+      <th>(Opcional) Módulo L76K GNSS</th>
+    </tr>
+    <tr>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg"
+            style={{ width: 300, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/XiaoESP32S3Casing.jpg"
+            style={{ width: 300, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg"
+            style={{ width: 350, height: 'auto' }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Consigue uno ahora🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Consigue uno ahora🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Consigue uno ahora🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Coonection.png" style={{width:800, height:'auto'}}/></div>
 
@@ -207,7 +308,7 @@ Luego inicia sesión en el administrador para habilitar el GPS.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/GPSS.jpg" alt="pir" width={300} height="auto" /></p>
 
-Además, puedes ajustar el intervalo de difusión de anuncios. El rango de intervalo de `auto zero hop advert` es de 60 a 240 minutos. El rango de intervalo de `auto flood advert` es de 3 a 168 horas. 
+Además, puedes ajustar el intervalo de difusión de anuncios. El rango de intervalo de `auto zero hop advert` es de 60-240 minutos. El rango de intervalo de `auto flood advert` es de 3-168 horas. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/SolarNode/AdvertInterval.jpg" alt="pir" width={300} height="auto" /></p>
 
@@ -222,14 +323,14 @@ Además, puedes ajustar el intervalo de difusión de anuncios. El rango de inter
 - **[DXF]** [Dimensiones de Seeed Studio XIAO ESP32S3 en DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 - **[LBR]** [Huella Eagle de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
 - **[ZIP]** [Firmware de fábrica de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
-- **[XLSX]** [Hoja de asignación de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
+- **[XLSX]** [Hoja de pines de Seeed Studio XIAO ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 - 🔗 **[Kicad]** [Huella de Seeed Studio XIAO ESP32S3](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - [Archivo 3D de la carcasa](https://www.thingiverse.com/thing:6888371)
 ## Recursos del curso
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Gran potencia, pequeña placa. Dominando Arduino y TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[Ebook]** [XIAO: Big Power, Small Board Dominando Arduino y TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 ## Soporte técnico y debate sobre el producto
 
 Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
