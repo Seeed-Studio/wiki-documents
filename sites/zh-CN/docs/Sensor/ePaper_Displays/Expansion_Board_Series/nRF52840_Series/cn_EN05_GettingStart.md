@@ -62,7 +62,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 硬件概览
 
-### 支持的 ePaper 显示屏
+### 支持的电子纸屏幕
 
 EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 

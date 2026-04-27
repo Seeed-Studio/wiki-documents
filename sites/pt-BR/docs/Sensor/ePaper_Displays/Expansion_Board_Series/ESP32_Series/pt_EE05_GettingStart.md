@@ -60,7 +60,7 @@ Alimentada pelo **XIAO ESP32-S3 Plus**, a placa de display EE05 suporta uma ampl
 
 ## Visão geral de hardware
 
-### Displays ePaper suportados
+### Displays ePaper compatíveis
 
 A EE05 suporta uma variedade de displays ePaper SPI de 24 pinos, incluindo, mas não se limitando a:
 
@@ -127,14 +127,14 @@ Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ser ass
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE05
 ```
 
-Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** -> **Port** -> **Select the port your board is connected to**.
+Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
 
 
 Observe que o PSRAM deve estar habilitado.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Em seguida, clique em **Upload** para enviar o código.
-Agora você verá o resultado na sua tela ePaper! A seguir estão os resultados dos exemplos de Bitmap.
+Agora você verá o resultado na sua tela de ePaper! A seguir estão os resultados dos exemplos de Bitmap.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Recursos

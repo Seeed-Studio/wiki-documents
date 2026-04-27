@@ -109,7 +109,7 @@ Portanto, certifique-se de selecionar o tipo correto de dispositivo ou component
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -129,7 +129,7 @@ Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ficar a
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-Depois disso, vá em **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
+Depois disso, vá para **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
 
 Em seguida, clique em **Upload** para enviar o código.
 Agora você verá o resultado na sua tela ePaper!

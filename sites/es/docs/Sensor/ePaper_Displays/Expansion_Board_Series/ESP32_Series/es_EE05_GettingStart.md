@@ -80,7 +80,7 @@ La EE05 es compatible con una variedad de pantallas ePaper SPI de 24 pines, incl
 ### Instalar la biblioteca Seeed GFX
 
 :::tip
-Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, desinstálalas primero.
+Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de visualización similares, desinstálalas primero.
 :::
 
 Descarga e instala la biblioteca Seeed GFX desde GitHub.
