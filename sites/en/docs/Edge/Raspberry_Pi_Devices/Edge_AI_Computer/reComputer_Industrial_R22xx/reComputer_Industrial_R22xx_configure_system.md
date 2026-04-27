@@ -13,7 +13,7 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r22xx_configure_system/
 ---
 
@@ -531,14 +531,10 @@ reComputer Industrial R21xx contains 4x DO ports, user can configure these ports
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>

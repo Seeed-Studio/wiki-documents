@@ -34,7 +34,7 @@ O ReSpeaker XVF3800 USB 4-Mic Array é um array circular profissional de 4 micro
 
 - **Array de quatro microfones** :4 microfones de alto desempenho em padrão circular para captura de voz em campo distante de 360° até 5 metros
 
-- **Processamento de áudio avançado** :Com tecnologia XVF3800 com AEC, formação de múltiplos feixes, desreverberação, detecção de DoA, supressão dinâmica de ruído, faixa de AGC de 60 dB
+- **Processamento de áudio avançado** :Baseado no XVF3800 com AEC, formação de múltiplos feixes, desreverberação, detecção de DoA, supressão dinâmica de ruído, faixa de AGC de 60 dB
 
 - **Número de série exclusivo do dispositivo** :SN integrado permite implantações com múltiplos dispositivos e gerenciamento avançado de dispositivos
 
@@ -55,7 +55,7 @@ O ReSpeaker XVF3800 USB 4-Mic Array é um array circular profissional de 4 micro
 | **Componente / Recurso**      | **Descrição**                                                                                       |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **Processador de áudio principal** | **XMOS XVF3800**, realiza o processamento de áudio incluindo AEC, formação de feixe, supressão de ruído, etc. |
-| **Array de microfones**       | **Quatro microfones PDM MEMS** em padrão circular, com suporte a **captura de voz em campo distante de 360° (5 m)**. |
+| **Array de microfones**       | **Quatro microfones PDM MEMS** em padrão circular, suportando **captura de voz em campo distante de 360° (5 m)**. |
 | **Codec de áudio**            | **TLV320AIC3104**, realiza a conversão e saída de áudio.                                             |
 | **LEDs RGB**                  | **12x WS2812** LEDs RGB endereçáveis individualmente para feedback visual (por exemplo, status, atividade de voz). |
 | **Botão de mute**             | Pressione para **ativar/desativar o mute** da entrada do microfone.                                 |
@@ -73,7 +73,7 @@ O ReSpeaker XVF3800 USB 4-Mic Array é um array circular profissional de 4 micro
 | **Compatibilidade com código aberto** | Funciona com **Arduino, Raspberry Pi, PC/Mac** e é compatível com **XIAO Series**.                  |
 | **Recursos avançados de áudio** | AEC, formação de feixe, desreverberação, **detecção de DoA**, supressão de ruído baseada em DNN, AGC de 60 dB. |
 | **Feedback visual**           | Estado do dispositivo e atividade de áudio exibidos por meio de **padrões de LED RGB** e **indicadores de status**. |
-| **Qualidade de áudio**        | Igual ou melhor que os **projetos anteriores baseados em XVF3000**.                                 |
+| **Qualidade de áudio**        | Igual ou melhor do que os **projetos anteriores baseados em XVF3000**.                              |
 
 :::note
 O ReSpeaker XVF3800 é oferecido em duas variantes — uma sem XIAO e outra com o XIAO ESP32S3 integrado. A versão sem XIAO opera com o firmware USB padrão. Para usar a versão com XIAO integrado, você deve gravar um firmware desenvolvido para o **modo INT-Device (I2S)**. Para instruções detalhadas de configuração, consulte o [guia oficial da wiki](/pt-br/respeaker_xvf3800_xiao_getting_started).
@@ -106,7 +106,7 @@ O reSpeaker XVF3800 expõe 3 pinos de entrada (GPI) e 5 pinos de saída (GPO) pa
 | X0D33        | Saída (RW)    | Controle de alimentação do LED WS2812 (alto = ligado) |
 | X0D39        | Saída (RW)    | Flutuante                                           |
 
-## Introdução
+## Primeiros passos
 
 ### Preparação de hardware
 
@@ -163,7 +163,7 @@ Aqui você pode ver como conectar alto-falantes usando o conector de fone de ouv
 
 #### Modo de segurança
 
-O Modo de segurança é um modo especial de recuperação no ReSpeaker XVF3800 que permite gravar firmware via USB DFU ou I2C — para dispositivos como o Raspberry Pi e o ESP32. Se você já gravou o firmware I2S anteriormente e deseja voltar para o firmware USB, pode entrar no Modo de segurança e regravar o firmware USB usando USB DFU.
+O Modo de Segurança é um modo especial de recuperação no ReSpeaker XVF3800 que permite gravar firmware via USB DFU ou I2C — para dispositivos como o Raspberry Pi e o ESP32. Se você já gravou o firmware I2S anteriormente e deseja voltar para o firmware USB, pode entrar no Modo de Segurança e regravar o firmware USB usando USB DFU.
 
 :::note
 Cada tipo de firmware no ReSpeaker XVF3800 oferece suporte a diferentes métodos de atualização:
@@ -172,7 +172,7 @@ Cada tipo de firmware no ReSpeaker XVF3800 oferece suporte a diferentes métodos
 
 - O **firmware I2S** é o oposto — ele oferece suporte a **I2C DFU**, permitindo atualizações de firmware por meio de uma interface I2C, mas **não oferece suporte a USB DFU**.
 
-- O **firmware de Modo de Segurança**, que é armazenado na partição Factory, é o mais flexível. Ele oferece suporte a **USB DFU e I2C DFU**.
+- O **firmware do Modo de Segurança**, que é armazenado na partição Factory, é o mais flexível. Ele oferece suporte a **USB DFU e I2C DFU**.
 
 :::
 
@@ -180,22 +180,22 @@ Cada tipo de firmware no ReSpeaker XVF3800 oferece suporte a diferentes métodos
 
 - Seu firmware não está funcionando corretamente (por exemplo, USB não é detectado, o LED não acende como esperado).
 - Você precisa regravar um novo firmware, mas o atual não responde.
-- Você acidentalmente gravou algo errado e quer recuperar o dispositivo.
+- Você gravou algo errado por engano e quer recuperar o dispositivo.
 
 **Como entrar no Modo de Segurança**
 
 - Desligue completamente o dispositivo.
 - Pressione e segure o botão Mute.
 - Enquanto mantém o botão mute pressionado, reconecte a alimentação.
-- O LED vermelho começará a piscar — isso confirma que o dispositivo agora está em Modo de Segurança.
-- Agora o dispositivo executa o firmware de Modo de Segurança armazenado na partição Factory.
+- O LED vermelho começará a piscar — isso confirma que o dispositivo está agora em Modo de Segurança.
+- Agora o dispositivo executa o firmware do Modo de Segurança armazenado na partição Factory.
 
 ### Atualizar Firmware
 
 Três versões de firmware estão disponíveis no repositório oficial do GitHub. Você pode escolher e gravar o firmware apropriado dependendo dos requisitos da sua aplicação. Para mais detalhes e downloads, consulte o [Github Link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY)
 
-:::note 
-Certifique-se de que você precisa baixar o repositório inteiro. 
+:::note
+**NÃO** use "save as" para baixar os arquivos de firmware do GitHub, pois eles ficarão corrompidos. Clone o repositório ou use "Download as ZIP" para baixar todo o repositório (e todos os arquivos incluídos) como um arquivo ZIP.
 :::
 
 import Tabs from '@theme/Tabs';
@@ -204,25 +204,22 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-O firmware USB é projetado para uso com sistemas operacionais host como **Windows, Linux e macOS** ao se comunicar por meio da interface de hardware USB.
+O firmware USB é projetado para uso com sistemas operacionais hospedeiros como **Windows, Linux e macOS** ao se comunicar por meio da interface de hardware USB.
 
 Duas variantes de firmware estão disponíveis: **respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin**, que fornece áudio de **2 canais**, e **respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin**, que fornece áudio de **6 canais**. Ambas as versões de firmware operam a uma taxa de amostragem de **16 kHz** com profundidade de **32 bits**.
 
 Você pode explorar esses arquivos de firmware [neste link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/usb)
-
-
 
 | Firmware | Canais | Observações |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Saída processada de 2 canais <br /> Canal 0: Conferência <br /> Canal 1: ASR |
 | respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Canal 0: Áudio processado (Conferência) <br /> Canal 1: Áudio processado (ASR) <br /> Canal 2: Dados brutos do Mic 0 <br /> Canal 3: Dados brutos do Mic 1 <br /> Canal 4: Dados brutos do Mic 2 <br /> Canal 5: Dados brutos do Mic 3 |
 
-
 </TabItem>
 
  <TabItem value="I2S" label="I2S">
 
-O firmware I2S é destinado ao uso quando o dispositivo está conectado a um microcontrolador host como o **XIAO ESP32S3**. Nessa configuração, os dados de voz são transmitidos usando o protocolo I2S.
+O firmware I2S é destinado ao uso quando o dispositivo está conectado a um microcontrolador hospedeiro como o **XIAO ESP32S3**. Nessa configuração, os dados de voz são transmitidos usando o protocolo I2S.
 
 O arquivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está disponível [aqui](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s). Este firmware oferece suporte a áudio de **2 canais** com profundidade de **32 bits**.
 
@@ -237,31 +234,23 @@ O arquivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está di
 O firmware para Home Assistant é outro firmware baseado em I2S, projetado especificamente para integração com o Home Assistant. Este firmware otimizado usa áudio de 2 canais com taxa de amostragem de 48 kHz, proporcionando melhor compatibilidade e desempenho dentro do ambiente Home Assistant.
 Você pode visualizar o firmware a partir de [aqui](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
 
-
-
 | Firmware | Canais | Observações |
 |---------|----------|-------|
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Saída processada de 2 canais <br /> Canal 0: ASR <br /> Canal 1: Palavra de ativação |
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
-
-
 Conecte o reSpeaker XVF3800 ao seu PC via cabo USB. Observe que você precisa usar a porta XMOS USB-C (próxima à porta jack de 3,5 mm) para gravar o firmware da XMOS.
-
-
 
 #### Instalar DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) é uma ferramenta de linha de comando para atualização de firmware de dispositivos via USB.
 
-
-
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-- Baixe `dfu-util-0.11-binaries.tar.xz` e extraia-o, por exemplo, para `D:\dfu-util-0.11-binaries\win64\`  
+- Baixe `dfu-util-0.11-binaries.tar.xz` e extraia-o, por exemplo, em `D:\dfu-util-0.11-binaries\win64\`  
   [Download Link](http://dfu-util.sourceforge.net/)
 
 - Adicione o caminho para `dfu-util.exe` à variável de sistema `Path`:  
@@ -298,7 +287,7 @@ dfu-util -l
 
  <TabItem value="macos" label="macOS">
 
-- Instale o dfu-util com Homebrew:
+- Instale o dfu-util com o Homebrew:
 
 ```bash
 brew install dfu-util
@@ -398,10 +387,10 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 3. Defina:
    - **Host**: `Windows WASAPI`
-   - **Recording Device**: `reSpeaker 3800`
-   - **Channels**: `2 (Stereo)`
-   - **Sample Rate**: `16000 Hz` (para **Project** e **Default Sample Rate**)
-   - **Sample Format**: `24-bit`
+   - **Dispositivo de gravação**: `reSpeaker 3800`
+   - **Canais**: `2 (Stereo)`
+   - **Taxa de amostragem**: `16000 Hz` (tanto para **Project** quanto para **Default Sample Rate**)
+   - **Formato de amostra**: `24-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw2.png" alt="pir" width={600} height="auto"/></p>
 
@@ -426,10 +415,10 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac3.png" alt="pir" width={600} height="auto"/></p>
 
-- **Recording Device**: `reSpeaker 3800`
-- **Channels**: `2 (Stereo)`
-- **Sample Rate**: `16000 Hz` (para **Project** e **Default Sample Rate**)
-- **Sample Format**: `24-bit`
+- **Dispositivo de gravação**: `reSpeaker 3800`
+- **Canais**: `2 (Stereo)`
+- **Taxa de amostragem**: `16000 Hz` (tanto para **Project** quanto para **Default Sample Rate**)
+- **Formato de amostra**: `24-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
 
@@ -510,10 +499,10 @@ Aguarde a conclusão da instalação. Um novo ícone do Pi-Apps aparecerá no se
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy-1.PNG" alt="pir" width={600} height="auto"/></p>
 
-- Na janela Audio Settings:
+- Na janela de configurações de áudio:
   - Escolha o dispositivo de gravação correto (por exemplo, reSpeaker XVF3800).
   - Escolha o dispositivo de reprodução apropriado (por exemplo, reSpeaker XVF3800).
-  - Certifique-se de que Host esteja definido como ALSA para melhor compatibilidade no Raspberry Pi.
+  - Certifique-se de que o Host esteja definido como ALSA para melhor compatibilidade no Raspberry Pi.
 - Clique em OK para aplicar as configurações.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy.PNG" alt="pir" width={600} height="auto"/></p>
@@ -577,12 +566,12 @@ VERSION 2 0 2
 
 | Comando | Exemplo | Descrição |
 |--------|---------|-------------|
-| `led_effect` | `xvf_host.exe led_effect 1` | 0=desligado, 1=respiração, 2=arco-íris, 3=sólido, 4=DoA |
-| `led_color` | `xvf_host.exe led_color 0xff8800` | Define a cor em hexadecimal (laranja) |
-| `led_speed` | `xvf_host.exe led_speed 1` | Define a velocidade do efeito |
-| `led_brightness` | `xvf_host.exe led_brightness 255` | Define o brilho |
-| `led_gammify` | `xvf_host.exe led_gammify 1` | Ativa a correção de gama |
-| `led_doa_color` | `xvf_host.exe led_doa_color 0x0000ff 0xff0000` | Define a cor base/direcional do DoA |
+| `led_effect` | `xvf_host.exe led_effect 1` | 0=off, 1=breath, 2=rainbow, 3=solid, 4=DoA |
+| `led_color` | `xvf_host.exe led_color 0xff8800` | Definir cor em hexadecimal (laranja) |
+| `led_speed` | `xvf_host.exe led_speed 1` | Definir velocidade do efeito |
+| `led_brightness` | `xvf_host.exe led_brightness 255` | Definir brilho |
+| `led_gammify` | `xvf_host.exe led_gammify 1` | Ativar correção de gama |
+| `led_doa_color` | `xvf_host.exe led_doa_color 0x0000ff 0xff0000` | Definir cor base/direcional do DoA |
 
 🟠 Exemplo (respiração laranja):
 
@@ -652,8 +641,8 @@ AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.
 
 - **Focused beam 1**: Primeira direção fixa de escuta
 - **Focused beam 2**: Segunda direção fixa de escuta
-- **Free running beam**: Sempre escaneando a direção
-- **Auto selected beam**: Feixe final escolhido para o melhor áudio (usado para indicação de DoA)
+- **Free running beam**: Direção em varredura contínua
+- **Auto selected beam**: Feixe final escolhido para melhor áudio (usado para indicação de DoA)
 
 **Indicação de fala**
 
@@ -676,7 +665,7 @@ AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
 
 - **Focused beam 1**: Energia do primeiro feixe
 - **Focused beam 2**: Energia do segundo feixe
-- **Free running beam**: Energia do feixe de varredura
+- **Free running beam**: Energia do feixe em varredura
 - **Auto selected beam**: Energia do feixe escolhido para a saída final
 
 **Canais de saída de áudio**
@@ -689,13 +678,13 @@ Você pode **redirecionar** esses canais para emitir diferentes fontes.
 
 Comandos de exemplo
 
-Definir o canal esquerdo para Microfone Amplificado 0
+Definir canal esquerdo para Microfone Amplificado 0
 
 ```bash
 xvf_host.exe AUDIO_MGR_OP_L 3 0
 ```
 
-Definir o canal direito para dados de Far End (referência)
+Definir canal direito para dados de Far End (referência)
 
 ```bash
 xvf_host.exe AUDIO_MGR_OP_R 5 0
@@ -709,18 +698,22 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 **Modo de feixe fixo**
 
-Veja como configurar o modo de feixe fixo para detectar a faixa de 0–45 graus
+Aqui está como configurar o modo de feixe fixo para detectar a faixa de 0–45 graus
 
-Definir ângulos de azimute 
+Definir ângulos de azimute
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Definir elevação para 0
 
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Ativar modo de feixe fixo
+
 ```bash
 xvf_host.exe AEC_FIXEDBEAMSONOFF  1
 ```
@@ -854,9 +847,9 @@ AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.
 ```
 
 - **Focused beam 1**: Primeira direção fixa de escuta
-- **Feixe focado 2**: Segunda direção de escuta fixa
+- **Feixe focado 2**: Segunda direção fixa de escuta
 - **Feixe em execução livre**: Direção sempre em varredura
-- **Feixe selecionado automaticamente**: Feixe final escolhido para o melhor áudio (usado para indicação de DoA)
+- **Feixe selecionado automaticamente**: Feixe final escolhido para melhor áudio (usado para indicação de DoA)
 
 **Indicação de fala**
 
@@ -893,13 +886,13 @@ Você pode **redirecionar** esses canais para emitir diferentes fontes.
 
 Comandos de exemplo
 
-Definir o canal esquerdo para Microfone Amplificado 0
+Definir canal esquerdo para Microfone Amplificado 0
 
 ```bash
 ./xvf_host AUDIO_MGR_OP_L 3 0
 ```
 
-Definir o canal direito para dados de Extremidade Distante (referência)
+Definir canal direito para dados de Extremidade Distante (referência)
 
 ```bash
 ./xvf_host AUDIO_MGR_OP_R 5 0
@@ -920,27 +913,31 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 
 Veja como configurar o modo de feixe fixo para detectar a faixa de 0–45 graus
 
-Definir ângulos de azimute 
+Definir ângulos de azimute
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
 ```
+
 Definir elevação para 0
 
 ```bash
 ./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
 ```
+
 Ativar modo de feixe fixo
+
 ```bash
 ./xvf_host AEC_FIXEDBEAMSONOFF  1
 ```
 
 Parâmetros comuns:
 
-| Parâmetro                  | Significado                                      |
+| Parâmetro                  | Significado                                     |
 | -------------------------- | ---------------------------------------------- |
-| **AUDIO_MGR_REF_GAIN**  | Ganho de entrada do alto-falante (sinal de eco) |
+| **AUDIO_MGR_REF_GAIN**  | Ganho de entrada do alto-falante (sinal de eco)|
 | **AUDIO_MGR_MIC_GAIN**  | Ganho de entrada do microfone (quão alto o mic ouve) |
-| **AUDIO_MGR_SYS_DELAY** | Atraso entre os sinais do microfone e do alto-falante |
+| **AUDIO_MGR_SYS_DELAY** | Atraso entre os sinais de microfone e alto-falante |
 | **PP_AGCMAXGAIN**         | Nível máximo de controle automático de ganho   |
 | **AEC_ASROUTGAIN**        | Ganho para saída do feixe de ASR               |
 
@@ -966,6 +963,7 @@ Se o volume de saída do alto-falante do **ReSpeaker XVF3800** estiver muito bai
    ```bash
    alsamixer
    ```
+
 **Passo 2: Selecionar a placa de som XVF3800**
 
 1. Pressione **F6** para abrir o menu de seleção de placa de som.
@@ -990,7 +988,7 @@ Se o volume de saída do alto-falante do **ReSpeaker XVF3800** estiver muito bai
 
 **Passo 5: Opção adicional (usando PulseAudio)**
 
-Se você ainda não conseguir ouvir o som claramente após ajustar os níveis do ALSA, tente instalar o **Controle de Volume do PulseAudio** para ajustes de volume mais detalhados:
+Se você ainda não conseguir ouvir o som claramente após ajustar os níveis do ALSA, tente instalar o **PulseAudio Volume Control** para ajustes de volume mais detalhados:
 
 ```bash
 sudo apt install pavucontrol -y
@@ -1004,7 +1002,7 @@ Desinstale todos os drivers associados ao ReSpeaker no Gerenciador de Dispositiv
 
 ### Não é possível usar como dispositivos de som no Windows após gravar o firmware?
 
-Abra o menu Iniciar e digite Device manager. Encontre os dispositivos reSpeaker XVF 3800 relacionados, clique com o botão direito neles e selecione Uninstall devices. Depois disso, reinicie o dispositivo (desconecte e reconecte o USB) e o Windows irá reinstalar o driver correto de placa de som para ele.
+Abra o menu Iniciar e digite Device manager. Encontre os dispositivos reSpeaker XVF 3800 relacionados, clique com o botão direito neles e selecione Uninstall devices. Depois disso, reinicie o dispositivo (USB desconectando e conectando novamente) e o Windows irá reinstalar o driver de placa de som correto para ele.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 

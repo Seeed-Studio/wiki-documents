@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-03-20'
+updatedAt: '2026-02-10'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_R21xx_assembly_guide/
 ---
 
@@ -23,31 +23,31 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_R21xx_assembly_gui
     </a>
 </div>
 
-O reComputer Industrial R21xx oferece suporte a diversos tipos de comunicação sem fio para IoT, incluindo 4G, 5G, LoRa®, Wi‑Fi/BLE e Zigbee. Ele suporta expansão por meio de um slot M.2 para armazenamento SSD ou capacidades de IA por meio de um acelerador NPU. Se você optar por incluir o acelerador de IA diretamente na sua compra, obterá 26 TOPS adicionais de poder de computação. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware e serviços de imagem, oferecendo um suporte abrangente adaptado às suas necessidades específicas.
+O reComputer Industrial R21xx suporta uma variedade de comunicações sem fio para IoT, incluindo 4G, 5G, LoRa®, Wi-Fi/BLE. Ele suporta expansão por meio de um slot M.2 para armazenamento SSD ou capacidades de IA por meio de um acelerador NPU. Se você optar por incluir o acelerador de IA diretamente na sua compra, obterá 26 TOPS adicionais de poder de computação. Além disso, nossos serviços de engenharia de hardware incluem personalização de logotipo, branding de embalagem, rotulagem, gravação de firmware e serviços de imagem, fornecendo suporte abrangente adaptado às suas necessidades específicas.
 
 Este Wiki mostrará como montar e desmontar a unidade para instalar componentes periféricos, bem como as opções de montagem.
 
-## Pré‑requisitos de Hardware
+## Pré-requisitos de Hardware
 
 Você precisa preparar o seguinte hardware
 
 - reComputer Industrial R21xx x 1
 - Acessórios
 - Jogo de chaves de fenda
-  - Phillips + 3,5 bit
-  - Phillips + 3,0 bit
-  - Fenda - 2,5 bit
+  - Phillips + 3.5 bit
+  - Phillips + 3.0 bit
+  - Slotted - 2.5 bit
 
 ## Guia de Desmontagem do Dispositivo
 
-Seguir estas etapas deve ajudá‑lo a desmontar o dispositivo sem nenhum problema.
+Seguir estas etapas deve ajudá-lo a desmontar o dispositivo sem quaisquer problemas.
 
 **Etapa 1:** Remova os quatro parafusos na parte inferior e remova os painéis frontal e traseiro:
 
 - Localize e desparafuse os quatro parafusos localizados na parte inferior do dispositivo usando uma chave de fenda apropriada.
 - Depois que os parafusos forem removidos, levante cuidadosamente os painéis frontal e traseiro do dispositivo.
 
-**Etapa 2:**  Desparafuse as porcas dos conectores das antenas laterais e remova o painel inferior.
+**Etapa 2:**  Desparafuse as porcas dos conectores de antena laterais e remova o painel inferior.
 
 **Etapa 3:** Remova os quatro parafusos que fixam a placa de circuito impresso (PCB) no lugar
 
@@ -67,11 +67,11 @@ Seguir estas etapas deve ajudá‑lo a desmontar o dispositivo sem nenhum proble
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.3_assemble_ssd_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Montando o Módulo e a Antena 5G/4G/LoRa®/Zigbee
+## Montando o Módulo e a Antena 5G/4G/LoRa®
 
-**Etapa 1:** Remova a placa de expansão e insira o módulo 4G/módulo LoRa®/módulo Zigbee no slot Mini‑PCIe/M.2 B‑KEY e aperte os parafusos.
+**Etapa 1:** Remova a placa de expansão e insira o módulo 4G/módulo LoRa® no slot Mini-PCIe/M.2 B-KEY e aperte os parafusos.
 
-**Etapa 2:** Conecte o feeder ao furo da antena no gabinete, conforme mostrado na figura a seguir.
+**Etapa 2:** Conecte o feeder ao furo da antena no gabinete, conforme mostrado no diagrama a seguir.
 
 **Etapa 3:** Instale o feeder na base de antena do módulo correspondente.
 
@@ -91,8 +91,8 @@ Seguir estas etapas deve ajudá‑lo a desmontar o dispositivo sem nenhum proble
 
 **Etapa 2:** Instale o módulo de UPS**  
 
-- Usando dois parafusos PM2.0xL5.0 e espaçadores M2.0x5.0, fixe o módulo de UPS em dois furos sem pads de contato metálico.
-- Certifique‑se de que o módulo de UPS esteja devidamente alinhado e firmemente fixado usando os parafusos e espaçadores fornecidos.
+- Usando dois parafusos PM2.0xL5.0 e espaçadores M2.0x5.0, fixe o módulo de UPS em dois furos sem pads de contato metálicos.
+- Certifique-se de que o módulo de UPS esteja devidamente alinhado e firmemente preso usando os parafusos e espaçadores fornecidos.
 
 **Etapa 3: Instale o módulo PoE**  
 
@@ -109,27 +109,27 @@ O reComputer Industrial R21xx oferece vários métodos de instalação. O clipe 
 
 #### Etapas de Instalação
 
-- **Etapa 1:** Posicione o dispositivo e o clipe de trilho na borda superior do trilho de perfil padrão na posição mostrada e empurre o dispositivo para baixo.
+- **Etapa 1:** Coloque o dispositivo e o clipe de trilho na borda superior do trilho de perfil padrão na posição mostrada e empurre o dispositivo para baixo.
 - **Etapa 2:** Gire o clipe de trilho do dispositivo por baixo através do trilho de perfil padrão.
-- **Etapa 3:** Empurre o dispositivo na direção do trilho de perfil padrão. Você ouvirá um clique indicando que o dispositivo encaixou no lugar.
+- **Etapa 3:** Empurre o dispositivo na direção do trilho de perfil padrão. Você ouvirá o dispositivo encaixar no lugar.
 
 #### Etapas de Remoção
 
 - **Etapa 1:** Empurre o dispositivo para baixo até que ele seja liberado pelo clipe de trilho.
 - **Etapa 2:** Gire o dispositivo para fora do trilho de perfil padrão.
-- **Etapa 3:** Levante o dispositivo para cima e retire‑o
+- **Etapa 3:** Levante o dispositivo para cima e retire-o
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.1_din-rail_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Guia de Montagem na Parede
 
-O método de montagem vertical também é adequado para o reComputer Industrial R2000; no entanto, os suportes de montagem não estão incluídos na caixa, sendo necessária a compra adicional.
+O método de montagem vertical também é adequado para o reComputer Industrial R2000, porém os suportes de montagem não estão incluídos na caixa, sendo necessária a compra adicional.
 
 #### Etapas de Instalação
 
-- **Etapa 1:** Posicione os suportes de montagem na parte traseira do dispositivo.
+- **Etapa 1:** Coloque os suportes de montagem na parte traseira do dispositivo.
 - **Etapa 2:** Prenda os suportes com os parafusos fornecidos.
-- **Etapa 3:** Marque os furos de perfuração, faça os furos necessários na parede e fixe o dispositivo à parede usando dois parafusos.
+- **Etapa 3:** Marque os furos, faça as perfurações necessárias na parede e fixe o dispositivo na parede usando dois parafusos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.8.2_wall_mounting_guide_1.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -147,29 +147,29 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={4} style={{height: 18, width: '20%'}}>Módulo LoRa®</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={4} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/47.png" /></td>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com opção de região (SPI) - US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por região (SPI) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992969</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com opção de região (SPI) - EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por região (SPI) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993268</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com opção de região (USB) - US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por região (USB) - US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992991</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN com opção de região (USB) - EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por região (USB) - EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992628</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena LoRa®</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/48.png" /></td>
-      <td><a href="https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html" target="_blank" rel="noopener noreferrer">Kit de Antena LoRa - 868–915 MHz</a></td>
+      <td><a href="https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html" target="_blank" rel="noopener noreferrer">Kit de Antena LoRa - 868-915 MHz</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061501</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena Wi‑Fi/BLE</td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Antena Wi-Fi/BLE</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/49.png" /></td>
       <td><a href="https://www.seeedstudio.com/Compute-Module-CM4-Antenna-kit-p-4717.html" target="_blank" rel="noopener noreferrer">Kit de Antena Raspberry Pi Compute Module 4</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
@@ -213,7 +213,7 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061521</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Supercapacitor de UPS</td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Supercapacitor UPS</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/54.png" /></td>
       <td><a href="https://www.seeedstudio.com/SuperCAP-UPS-LTC3350-Module-p-5934.html" target="_blank" rel="noopener noreferrer">Módulo SuperCAP UPS LTC3350</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>
@@ -227,11 +227,11 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={5} style={{height: 18, width: '20%'}}>Cartão SSD</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={5} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/56.png" /></td>
-      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html" target="_blank" rel="noopener noreferrer">SSD NVMe M.2 2280 2TB</a></td>
+      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html" target="_blank" rel="noopener noreferrer">NVMe M.2 2280 SSD 2TB</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990267</td>
     </tr>
      <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html" target="_blank" rel="noopener noreferrer">SSD NVMe M.2 2280 1TB</a></td>
+      <td><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html" target="_blank" rel="noopener noreferrer">NVMe M.2 2280 SSD 1TB</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990267</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -260,7 +260,7 @@ O método de montagem vertical também é adequado para o reComputer Industrial 
 </table>
 </div>
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

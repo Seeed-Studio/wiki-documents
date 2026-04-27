@@ -11,7 +11,7 @@ last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_r/
 ---
 

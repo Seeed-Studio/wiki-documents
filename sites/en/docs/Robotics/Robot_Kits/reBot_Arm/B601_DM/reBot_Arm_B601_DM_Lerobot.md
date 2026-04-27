@@ -11,13 +11,13 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zerop
 slug: /rebot_arm_b601_dm_lerobot
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-15
+  date: 2026-04-15T00:00:00.000Z
   author: LiuJunjie
 translation:
   skip:
-    - [zh-CN]
+    - - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-09'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -311,102 +311,256 @@ lerobot-teleoperate \
 
 ## Add Cameras
 
+
 <details>
+<summary> If using RealSense D435i/D405 </summary>
 
-<summary> If using Orbbec Gemini2 Depth Camera </summary>
+RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
-- 🚀 Step 1: Install Orbbec SDK dependencies
-
-1. Clone the `pyorbbec` repository
-   ```bash
-   cd ~/
-   git clone https://github.com/orbbec/pyorbbecsdk.git
-   ```
-
-2. Download and install the corresponding **.whl file** for the SDK
-   Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),
-   Select and install according to Python version, for example:
-   ```bash
-   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
-   ```
-
-3. Install dependencies in the `pyorbbec` directory
-   ```bash
-   cd ~/pyorbbecsdk
-   pip install -r requirements.txt
-   ```
-
-   Force downgrade `numpy` version to `1.26.0`
-    ```bash
-    pip install numpy==1.26.0
-    ```
-   Red errors can be ignored.
-
-4. Clone the Orbbec SDK to the `~/lerobot/src/cameras` directory
-
-   ```bash
-   cd ~/rebot_lerobot/src/cameras
-   git clone https://github.com/ZhuYaoHui1998/orbbec.git
-   ```
-
-5. Modify utils.py and __init__.py
-- In the `~/lerobot/src/lerobot/cameras` directory, find `utils.py` and add the following code at line `40`:
-
-```python
-elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
-
-            cameras[key] = OrbbecCamera(cfg)
-```
+### RealSense D405
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
 
-- In the `~/lerobot/src/lerobot/cameras` directory, find `__init__.py` and add the following code at line `18`:
+The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
-```python
-from .orbbec.configuration_orbbec import OrbbecCameraConfig
-```
+### RealSense D435i
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
 </div>
 
-- 🚀 Step 2: Function calls and examples
+The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
-We added the `focus_area` hyperparameter because depth data that is too far away is meaningless for the robotic arm (cannot grasp). Therefore, depth data less than or greater than `focus_area` will become black. The default `focus_area` is (20, 600).
-Currently, supported resolution is limited to width: 640, height: 880.
+### 1. Switch to the Camera Branch
+
+Current camera support is available on the `DepthCameraSupport` branch:
 
 ```bash
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
+```
 
+Confirm the current branch:
+
+```bash
+git branch --show-current
+```
+
+Expected output:
+
+```bash
+DepthCameraSupport
+```
+
+### 2. Install LeRobot in Editable Mode
+
+If you only use RealSense:
+
+```bash
+pip install -e ".[realsense]"
+```
+
+### 3. Detect Cameras
+
+```bash
+lerobot-find-cameras realsense
+```
+
+This step will output:
+
+- Camera model
+- Serial number
+- USB information
+- Default stream configuration
+
+### 4. RealSense Example
+
+Dual RealSense test:
+
+```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+  --robot.cameras='{
+    d435i_color: {
+      type: realsense_d435i_color,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d435i_depth: {
+      type: realsense_d435i_depth,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      max_depth_m: 2.0,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+    d405_color: {
+      type: realsense_d405_color,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d405_depth: {
+      type: realsense_d405_depth,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      depth_alpha: 0.03,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true
-
 ```
+
+### 5. Parameter Notes
+
+- `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
+- If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
+- It is recommended to keep the resolution at `640x480` for a better balance of stability and real-time performance.
+
+</details>
+
+<details>
+
+<summary> If using Orbbec Gemini2 Depth Camera </summary>
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+providing synchronized RGB and depth streams with precise depth-to-color alignment. Combined with stereo depth sensing and a built-in 6-axis IMU, it is well suited for robotic tasks such as object detection, 3D perception, mapping, and navigation. Its compact design and full Orbbec SDK support make it suitable for both research and real-world deployment.
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
-Subsequent data collection, training and evaluation tasks are the same as regular RGB commands. Just replace:
+Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
+
+- 🚀 Step 1: Install Orbbec SDK dependencies
+
+### 1. Switch to the Camera Branch
+
+Current camera support is available on the `DepthCameraSupport` branch:
 
 ```bash
-  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
 ```
 
-into the regular RGB command. You can also add additional monocular RGB cameras after it.
+Confirm the current branch:
+
+```bash
+git branch --show-current
+```
+
+Expected output:
+
+```bash
+DepthCameraSupport
+```
+
+### 2. Install LeRobot in Editable Mode
+
+If you only use Orbbec:
+
+```bash
+pip install -e ".[orbbec]"
+```
+
+### 4. Orbbec Example
+
+
+Single Orbbec test:
+
+
+
+```bash
+lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
+    --robot.cameras="{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }" \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
+    --display_data=true
+```
+
+### 5. Parameter Notes
+
+- `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
+- If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
+- It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
+
+### 6. Common Issues
+
+If you see the following error:
+
+```bash
+No Orbbec camera found for 'XXXX'
+```
+
+it usually means the serial number in the configuration does not match the currently connected device. Run:
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+Then confirm the actual `serial` and update `serial_number_or_name` in your command.
 
 **💡 Author and Contribution**
 

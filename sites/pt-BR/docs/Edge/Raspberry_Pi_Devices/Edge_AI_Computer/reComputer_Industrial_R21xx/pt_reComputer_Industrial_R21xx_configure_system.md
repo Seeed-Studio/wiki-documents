@@ -1,5 +1,5 @@
 ---
-description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, Zigbee via Mini-PCIe, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
+description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, DI/DO, teste de DI/DO e UPS para desligamento seguro.
 title: Configurar reComputer Industrial R21xx
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_R21xx_configure_system/
 ---
 
-## Visão Geral
+## Visão geral
 
-Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G，Zigbee via Mini-PCIe, RS485, RS232, CAN, teste de DI/DO, UPS para desligamento seguro e mais.
+Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G, RS485, RS232, CAN, teste de DI/DO, UPS para desligamento seguro e mais.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -27,7 +27,7 @@ Aprenda como configurar e testar componentes de hardware na série reComputer In
     </a>
 </div>
 
-## Consultar Mapeamentos e Offsets de GPIO
+## Consultar mapeamentos e offsets de GPIO
 
 Para consultar mapeamentos e offsets de GPIO, siga estas etapas:
 
@@ -41,7 +41,7 @@ cat /sys/kernel/debug/gpio
 
 ## Teste do LED USER
 
-Fornecemos LEDs nas três cores vermelho, azul e verde para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
+Fornecemos LEDs em três cores, vermelho, azul e verde, para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
 
 **1. Navegue até o diretório do LED**  
 
@@ -59,7 +59,7 @@ echo 1 > /sys/class/leds/led-blue/brightness
 echo 1 > /sys/class/leds/led-green/brightness
 ```
 
-Isso irá **acender** o LED correspondente.
+Isso **acenderá** o LED correspondente.
 
 **3. Desligar os LEDs (opcional)**  
 Para **desligar** um LED específico, use:
@@ -70,9 +70,9 @@ echo 0 > /sys/class/leds/led-blue/brightness
 echo 0 > /sys/class/leds/led-green/brightness
 ```
 
-## Testando a Comunicação SPI
+## Testando a comunicação SPI
 
-Para testar a comunicação SPI curto-circuitando os pinos MISO e MOSI do módulo TPM, siga estas etapas:
+Para testar a comunicação SPI curto‑circuitando os pinos MISO e MOSI do módulo TPM, siga estas etapas:
 
 1. Clone o repositório spidev-test:
 
@@ -100,7 +100,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 Este comando testa a comunicação SPI no dispositivo SPI especificado (**/dev/spidev10.0**) com saída detalhada ( -v ) e envia a mensagem "hello" (**-p hello**).
-Ao curto-circuitar os pinos MISO e MOSI do módulo TPM, você cria efetivamente um cenário de loopback, onde os dados enviados em MOSI são recebidos em MISO. Esta configuração permite testar a comunicação SPI sem um dispositivo real conectado.
+Ao curto‑circuitar os pinos MISO e MOSI do módulo TPM, você está efetivamente criando um cenário de loopback, em que os dados enviados em MOSI são recebidos em MISO. Essa configuração permite testar a comunicação SPI sem um dispositivo real conectado.
 
 ## Varredura de Wi‑Fi
 
@@ -110,7 +110,7 @@ Para listar as redes Wi‑Fi disponíveis e seus detalhes, execute:
 sudo iwlist wlan0 scan
 ```
 
-- Este comando varre todas as redes Wi‑Fi próximas e exibe seus SSIDs, força de sinal e tipo de criptografia.  
+- Este comando faz a varredura de todas as redes Wi‑Fi próximas e exibe seus SSIDs, intensidade de sinal e tipo de criptografia.  
 
 ## Varredura de Bluetooth  
 
@@ -130,13 +130,13 @@ Este comando abrirá a interface de controle do Bluetooth. A partir daí, você 
 scan on
 ```
 
-Este comando iniciará a varredura de dispositivos Bluetooth próximos. Você pode então usar outros comandos dentro da interface ***bluetoothctl*** para interagir com dispositivos Bluetooth, como parear ou conectar-se a eles.
+Este comando iniciará a varredura de dispositivos Bluetooth próximos. Você pode então usar outros comandos dentro da interface ***bluetoothctl*** para interagir com dispositivos Bluetooth, como parear ou conectar‑se a eles.
 
-## LoRa® via Mini-PCIe
+## LoRa® via Mini‑PCIe
 
 ### Configuração LoRa® SPI  
 
-Depois de instalar o LoRa® SPI no slot 2 Mini-PCIe, é possível configurar o LoRa® SPI, seguindo estas etapas:
+Após instalar o LoRa® SPI no slot Mini‑PCIe 2, é possível configurar o LoRa® SPI, seguindo estas etapas:
 
 1. Clone o repositório **SX1302_HAL**:
 
@@ -145,7 +145,7 @@ cd ~/
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-2. Vá para o diretório clonado:
+2. Navegue até o diretório clonado:
 
 ```bash
 cd sx1302_hal
@@ -172,7 +172,7 @@ Para:
 ```
 
 Altere **#define I2C_DEVICE "/dev/i2c-1"** para **#define I2C_DEVICE "/dev/i2c-2".**
-Pressione **ctrl+x** para sair, pressione **y** para salvar as alterações e depois pressione **Enter** para retornar à página da linha de comando.
+Pressione **ctrl+x** para sair, pressione **y** para salvar as alterações e, em seguida, pressione **Enter** para voltar à página da linha de comando.
 
 4. 4.Adicione o arquivo packet_forwarder/reset_lgw.sh:
 
@@ -278,7 +278,7 @@ esac
 exit 0
 ```
 
-Pressione **ctrl+x** para sair, pressione **y** para salvar as alterações e depois pressione **Enter** para retornar à página da linha de comando.
+Pressione **ctrl+x** para sair, pressione **y** para salvar as alterações e, em seguida, pressione **Enter** para voltar à página da linha de comando.
 
 5. Modifique o código de configuração:
 
@@ -286,7 +286,7 @@ Pressione **ctrl+x** para sair, pressione **y** para salvar as alterações e de
 sudo vim ./tools/reset_lgw.sh
 ```
 
-Atualize as configurações de pinos:
+Atualize as configurações dos pinos:
 
 ```bash
 SX1302_RESET_PIN=632     # SX1302 reset
@@ -295,7 +295,7 @@ SX1261_RESET_PIN=634     # SX1261 reset (LBT / Spectral Scan)
 # AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Comente, respectivamente, as linhas 18, 29, 35, 42, 53 e 54:
+Comente as linhas 18, 29, 35, 42, 53 e 54, respectivamente:
 
 ```bash
 ......
@@ -309,7 +309,7 @@ Comente, respectivamente, as linhas 18, 29, 35, 42, 53 e 54:
 # echo "1" > /sys/class/gpio/gpio$AD5338R_RESET_PIN/value; WAIT_GPIO
 ```
 
-Pressione  ctrl+x  para sair, pressione  y  para salvar as alterações e depois pressione  Enter  para retornar à página da linha de comando.
+Pressione  ctrl+x  para sair, pressione  y  para salvar as alterações e, em seguida, pressione  Enter  para voltar à página da linha de comando.
 
 6. substitua a porta SPI padrão do módulo LoraWAN® no arquivo de configuração global_conf.json.sx1250.US915 (os arquivos de configuração são selecionados com base no módulo que você está usando):
 
@@ -317,7 +317,7 @@ Pressione  ctrl+x  para sair, pressione  y  para salvar as alterações e depois
 sudo nano packet_forwarder/global_conf.json.sx1250.US915
 ```
 
-Modifique o parâmetro com_path, alterando  ***"com_path": "/dev/spidev0.0"*** para  ***"com_path": "/dev/spidev2.0"***.
+Modifique o parâmetro com_path, altere  ***"com_path": "/dev/spidev0.0"*** para  ***"com_path": "/dev/spidev2.0"***.
 
 7. Compile o código:
 
@@ -325,13 +325,13 @@ Modifique o parâmetro com_path, alterando  ***"com_path": "/dev/spidev0.0"*** p
 sudo make
 ```
 
-Essas etapas irão configurar o LoRa® SPI e executar o packet forwarder com o arquivo de configuração especificado.
+Essas etapas irão configurar o LoRa® SPI e executar o encaminhador de pacotes com o arquivo de configuração especificado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Configuração LoRa® USB
 
-Para LoRa® USB, os comandos anteriores permanecem os mesmos do LoRa® SPI. No entanto, o comando final precisa ser alterado para:
+Para LoRa® USB, os comandos anteriores permanecem os mesmos que para LoRa® SPI. No entanto, o comando final precisa ser alterado para:
 
 ```bash
 cho  632  >  /sys/class/gpio/export
@@ -345,7 +345,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 Este comando especifica o arquivo de configuração a ser usado para LoRa® USB.
 
-## 5G Celular via M.2 B-KEY
+## 5G Celular via M.2 B‑KEY
 
 Para interagir com um módulo 5G/4G usando comandos AT via minicom, siga estas etapas:
 
@@ -392,7 +392,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-Após 10–15 segundos (leva um tempo para o módulo ligar e enumerar o USB), verifique se o nó do dispositivo aparece:
+Após 10-15 segundos (leva um tempo para o módulo ligar e enumerar o USB), verifique se o nó do dispositivo aparece:
 
 ```bash
 ls /dev/ttyUSB*
@@ -424,10 +424,10 @@ Este comando verifica se o módulo está respondendo. Você deve receber uma res
 ATD<phone_number>;
 ```
 
-Substitua **phone_number** pelo número de telefone desejado que você deseja discar.
+Substitua **phone_number** pelo número de telefone desejado que você quer discar.
 Certifique-se de incluir um ponto e vírgula ; no final do comando para indicar o fim do número de telefone.
 
-## 4G Celular via Mini-PCIe
+## 4G Cellular via Mini-PCIe
 
 Crie um novo arquivo power_4g.sh:
 
@@ -450,7 +450,7 @@ Execute o arquivo:
 sudo ./power_4g.sh
 ```
 
-Após 10–15 segundos (leva um tempo para o módulo ligar e enumerar o USB), verifique se o nó do dispositivo aparece:
+Após 10-15 segundos (leva um tempo para o módulo ligar e enumerar o USB), verifique se o nó do dispositivo aparece:
 
 ```bash
 ls /dev/ttyUSB*
@@ -471,20 +471,20 @@ Entre no minicom para enviar comandos:
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-● Pressione ***Ctrl+A,Z,E*** em sequência. Primeiro envie AT para testar se está conectado. Se OK aparecer, a conexão foi bem-sucedida.
-Após executar o comando a seguir, o módulo será reiniciado automaticamente. Se você não sair do minicom, poderá ver as informações de configuração correspondentes.
+● Pressione ***Ctrl+A,Z,E*** em sequência. Primeiro envie AT para testar se está conectado. Se aparecer OK, a conexão foi bem-sucedida.
+Após executar o seguinte comando, o módulo será reiniciado automaticamente. Se você não sair do minicom, poderá ver as informações de configuração correspondentes.
 Acesso à Internet discado ECM:
 
 ```bash
 AT+QCFG="usbnet",1
 ```
 
-Até que a última linha mostre OK, terá sido bem-sucedido.
+Até que a última linha mostre OK, será bem-sucedido.
 
 > Note
 > O dispositivo precisa aguardar por um tempo e então você pode visualizar o endereço IP de usb0 em ifconfig.
 
-Teste o status da rede e a comunicação：
+Testar o status da rede e a comunicação：
 
 ```bash
 # Check network status
@@ -493,66 +493,18 @@ ifconfig
 ping www.baidu.com -I usb0
 ```
 
-## Zigbee via Mini-PCIe
-
-Para testar a **comunicação Zigbee** entre dois módulos Zigbee, siga estas etapas:  
-
-1. Verificar portas seriais disponíveis
-
-Use o seguinte comando para verificar as portas seriais disponíveis:
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**Instalar uma ferramenta de comunicação serial**
-
-2. Instalar ferramenta de comunicação serial:
-
-```bash
-sudo apt-get install cutecom
-```
-
-3. Abrir porta serial para o Coordenador (Primeiro módulo Zigbee):
-
-- Abra a ferramenta cutecom e configure-a para a primeira porta serial:
-- Taxa de baud: ***115200***
-- Marque a opção ***"Hex output"*** na parte inferior da interface.
-- Siga estas etapas para configurar o primeiro módulo Zigbee:
-- Definir como coordenador: Envie o comando ***‘55 04 00 05 00 05’***, espere a resposta ***‘55 04 00 05 00 05’***.
-- Redefinir dispositivo: Pressione o botão de reset ou envie o comando ***‘55 07 00 04 00 FF FF 00 04’***.
-- Formação de rede: Envie o comando ***‘55 03 00 02 02’***.
-
-4. Abrir porta serial para o Roteador (Segundo módulo Zigbee):
-Abra outra instância do ***cutecom*** e configure-a para a segunda porta serial com as mesmas configurações de antes.
-Siga estas etapas para configurar o segundo módulo Zigbee:
-
-- Definir como roteador: Envie o comando ***‘55 04 00 05 01 04’***, espere a resposta ***‘55 04 00 05 00 05’***.
-- Redefinir dispositivo: Pressione o botão de reset ou envie o comando ***‘55 07 00 04 00 FF FF 00 04’***.
-- Formação de rede: Envie o comando ***‘55 03 00 02 02’***.
-
-5. Verificar status do dispositivo:
-Envie o comando ***‘55 03 00 00 00’*** para verificar o status do dispositivo. Espere uma resposta semelhante a ***‘55 2a 00 00 00 01 XX XX XX XX’***, onde ‘XX’ representa informações do dispositivo.
-6. Entrar em modo transparente:
-Se a formação de rede for bem-sucedida, entre no modo transparente enviando o comando ***55 07 00 11 00 03 00 01 13***. Ambos os módulos devem estar em modo transparente para comunicação direta. Para sair do modo transparente, envie "+++".
-7. Notas adicionais:
-
-- Se a configuração do roteador falhar, o dispositivo pode já ser um coordenador. Saia da rede usando o comando '55 07 00 04 02 xx xx xx'.
-- Teste a potência de transmissão usando os comandos '55 04 0D 00 00 0D' (consulta) e '55 04 0D 01 XX XX' (configurar).
-Certifique-se de substituir ***/dev/ttyUSB*** pela porta serial correta para cada módulo Zigbee. Siga cuidadosamente estas etapas para testar com sucesso a comunicação Zigbee entre os dois módulos.
-
 ## Teste de RS485
 
 O reComputer Industrial R21xx inclui **2x portas RS485**. Abaixo estão suas correspondentes **portas COM** e **arquivos de dispositivo**:  
 
-| **Número de portas RS485** | **Porta COM** | **Identificação serigráfica** | **Arquivo de dispositivo** |
-|---------------------------|--------------|----------------------|-----------------|
-| **RS485-3**               | COM3         | A3/B3/GND3           | `/dev/ttyACM2`  |
-| **RS485-4**               | COM4         | A4/B4/GND4           | `/dev/ttyACM3`  |
+| **Número de portas RS485** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
+|---------------------------|--------------|--------------------------|-----------------------------|
+| **RS485-3**               | COM3         | A3/B3/GND3               | `/dev/ttyACM2`              |
+| **RS485-4**               | COM4         | A4/B4/GND4               | `/dev/ttyACM3`              |
 
-Para testar a função RS485, você pode seguir as etapas abaixo (tomando RS485_1 e RS485_2 como exemplos):
+Para testar a função RS485, você pode seguir os passos abaixo (tomando RS485_1 e RS485_2 como exemplos):
 
-1. Conecte A e B de RS485_1 e RS485_2.
+1. Conecte os pinos A e B de RS485_1 e RS485_2.
 2. Abra o minicom em duas janelas de terminal, respectivamente:
 
 ```bash
@@ -566,9 +518,9 @@ sudo minicom -D /dev/ttyACM2
 
 3. As seguintes operações precisam ser realizadas em ambos os ACMs abertos:
 
-- Pressione ***Ctrl+A***, depois pressione ***Z***, e a interface de Resumo de Comandos do Minicom aparecerá:
+- Pressione ***Ctrl+A***, depois pressione ***Z***, e a interface Minicom Command Summary aparecerá:
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- Pressione ***O*** novamente para abrir a configuração, selecione Configuração da porta serial e pressione ***Enter***; Abra todas as interfaces relacionadas ao RS485, pressione ***H/I/J/K/L*** em sequência para abrir;
+- Pressione ***O*** novamente para abrir a configuração, selecione Serial port setup e pressione ***Enter***; Abra todas as interfaces relacionadas a RS485, pressione ***H/I/J/K/L*** em sequência para abrir;
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
 - Depois que todos exibirem "YES", pressione Enter para voltar e, em seguida, selecione Exit para sair.
@@ -576,26 +528,26 @@ sudo minicom -D /dev/ttyACM2
 :::note
 
 Tomando ACM2 e ACM3 como exemplo:
-Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A***, depois pressione ***Z*** e depois ***E***, e então inicie o comando de escrita na porta serial. Nesse momento, você pode imprimir strings em ACM2 à vontade, e poderá ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
-Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e depois  ***E***, e então inicie o comando de escrita na porta serial. Nesse momento, você pode imprimir strings em ACM3 à vontade, e poderá ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
+Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A***, depois pressione ***Z*** e então ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM2 à vontade, e poderá ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
+Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e então  ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM3 à vontade, e poderá ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
 ## Teste de RS232
 
-reComputer Industrial R21xx inclui **2x RS232** portas, e as correspondentes **portas COM** e **arquivos de dispositivo** são as seguintes:
+O reComputer Industrial R21xx inclui **2x portas RS232**, e as correspondentes **portas COM** e **arquivos de dispositivo** são os seguintes:
 
-| **Número de portas RS232** | **Porta COM** | **Identificação serigráfica** | **Arquivo de dispositivo** |
-|---------------------------|--------------|----------------------|-----------------|
-| **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
-| **RS232-2**               | COM2         | RX2/TX2/GND2         | `/dev/ttyACM1`  |
+| **Número de portas RS232** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
+|---------------------------|--------------|--------------------------|-----------------------------|
+| **RS232-1**               | COM1         | RX1/TX1/GND1             | `/dev/ttyACM0`              |
+| **RS232-2**               | COM2         | RX2/TX2/GND2             | `/dev/ttyACM1`              |
 
-Como o RS232 é comunicação full-duplex, faça curto-circuito diretamente entre TX e RX do RS232 para realizar um teste de loopback.
+Como o RS232 é comunicação full-duplex, faça um curto-circuito entre TX e RX do RS232 diretamente para realizar um teste de loopback.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
-Você precisa abrir dois terminais, ACM1 se a placa de expansão estiver conectada e ACM2 se a placa de expansão não estiver conectada:
+Você precisa abrir dois terminais, ACM1 se a placa de expansão estiver conectada, e ACM2 se a placa de expansão não estiver conectada:
 **Terminal 1:***
 
 ```bash
@@ -622,7 +574,7 @@ O Terminal 1 exibirá o conteúdo solicitado pelo Terminal 2 para ser impresso.
 
 ## Teste de DI (Entrada Digital)
 
-reComputer Industrial R21xx contém 4x portas DI, o usuário pode configurar essas portas de acordo com as necessidades reais.
+O reComputer Industrial R21xx contém 4x portas DI, o usuário pode configurar essas portas de acordo com as necessidades reais.
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -655,8 +607,8 @@ reComputer Industrial R21xx contém 4x portas DI, o usuário pode configurar ess
   </table>
 </div>
 
-O tipo de entrada das portas DI é PNP. Ela suporta tensão de entrada de 5VDC~24VDC, corrente - 1000mA.
-Para testar a funcionalidade da DI, você pode seguir estas etapas para testá-la:
+O tipo de entrada das portas DI é PNP. Ele suporta tensão de entrada de 5VDC~24VDC, corrente - 1000mA.
+Para testar a funcionalidade de DI, você pode seguir estes passos para testá-la:
 
 1. A conexão entre a porta DI do reComputer Industrial R21xx e a carga externa foi concluída.
 2. Insira o seguinte comando para obter o status do GPIO：
@@ -667,11 +619,11 @@ echo in > /sys/class/gpio/gpio588/direction
 cat /sys/class/gpio/gpio588/value
 ```
 
-3. Quando o nível externo estiver alto, o valor de ***/sys/class/gpio/gpio588/value*** será 0; quando o nível externo estiver baixo, ***/sys/class/gpio/gpio588/value*** será 1.
+3. Quando o nível externo for alto, o valor de ***/sys/class/gpio/gpio588/value*** será 0; quando o nível externo for baixo, ***/sys/class/gpio/gpio588/value*** será 1.
 
 ## DO (Saída Digital)
 
-O reComputer Industrial R21xx contém 4 portas DO; o usuário pode configurar essas portas de acordo com as necessidades reais.
+O reComputer Industrial R21xx contém 4x portas DO, o usuário pode configurar essas portas de acordo com as necessidades reais.
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -694,22 +646,18 @@ O reComputer Industrial R21xx contém 4 portas DO; o usuário pode configurar es
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-O tipo de saída das portas DO é transistor. Ela suporta tensão de saída - abaixo de 60 VDC, capacidade de corrente - 500 mA.
-Para testar a funcionalidade da DO, você pode seguir estas etapas para testá-la:
+O tipo de saída das portas DO é transistor. Ele suporta tensão de saída - abaixo de 60 VDC, capacidade de corrente - 500 mA.
+Para testar a funcionalidade de DO, você pode seguir estes passos para testá-la:
 
 1. A conexão entre a porta DO do reComputer Industrial R21xx e a carga externa foi concluída.
 2. Insira o seguinte comando para definir a saída para nível alto ou nível baixo：
@@ -750,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
   </table>
 </div>
 
-1. Use dois fios DuPont para curto-circuitar os H-H e L-L de can0 e can1, formando um teste de loop mínimo.
+1. Use dois fios DuPont para fazer um curto-circuito entre H-H e L-L de can0 e can1 para formar um teste de loop mínimo.
 
 ```bash
 CAN-0_H─────●───── CAN-0_H
@@ -768,7 +716,7 @@ dmesg | grep -i can
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_1.png" style={{width:800, height:'auto'}}/></div>
 
-3. Defina as duas interfaces CAN para 500 kbit/s e coloque-as online, prontas para enviar e receber dados (defina-as para nível baixo por segurança):
+3. Configure as duas interfaces CAN para 500 kbit/s e coloque-as online, prontas para enviar e receber dados (defina-as para nível baixo por segurança):
 
 ```bash
 sudo ip link set can0 down
@@ -786,7 +734,7 @@ ip -d link show can1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_2.png" style={{width:800, height:'auto'}}/></div>
 
-5. Baixe e instale o can-utils para usar ferramentas essenciais como candump e cansend.
+5. Baixe e instale can-utils para usar ferramentas essenciais como candump e cansend.
 
 ```bash
 sudo apt install can-utils
@@ -794,7 +742,7 @@ sudo apt install can-utils
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_3.png" style={{width:800, height:'auto'}}/></div>
 
-6. Enquanto monitora o can0, envie quadros a partir do can1. Se você conseguir ver a mensagem, isso significa que o caminho está normal.
+6. Enquanto monitora can0, envie quadros a partir de can1. Se você conseguir ver a mensagem, significa que o caminho está normal.
 
 ```bash
 # Terminal A
@@ -805,7 +753,7 @@ cansend can1 123#DE.AD.BE.EF.CA.FE.00.11
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_4.png" style={{width:800, height:'auto'}}/></div>
 
-7. Inversamente, você pode monitorar o can1 enquanto envia quadros a partir do can0. Se você conseguir ver a mensagem, isso significa que o caminho está normal.
+7. Inversamente, você pode monitorar can1 enquanto envia quadros a partir de can0. Se você conseguir ver a mensagem, significa que o caminho está normal.
 
 ```bash
 # Terminal A
@@ -816,7 +764,7 @@ cansend can0 123#DE.AD.BE.EF.CA.FE.00.11
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_5.png" style={{width:800, height:'auto'}}/></div>
 
-8. Se você quiser tornar inicializações subsequentes mais simples, pode escrever o comando de inicialização em um script. Você só precisa executá-lo uma vez na inicialização para ativar automaticamente a interface.
+8. Se você quiser tornar os inícios subsequentes mais simples, pode escrever o comando de inicialização em um script. Você só precisa executá-lo uma vez na inicialização para puxar a interface automaticamente.
 
 ```bash
 #!/bin/bash
@@ -829,8 +777,8 @@ echo "can0 & can1 are up @ 500 kbit/s"
 
 ### Teste com Python-CAN
 
-[Python-CAN](https://github.com/raspberrypi/usbboot) é uma biblioteca Python multiplataforma que fornece uma interface de programação unificada para comunicação em barramento Controller Area Network (CAN), suportando uma ampla gama de interfaces de hardware CAN e barramentos virtuais, permitindo a fácil implementação de transmissão, recepção, filtragem de mensagens CAN, monitoramento do barramento e outras operações.
-Da mesma forma, as interfaces CAN precisam estar conectadas fisicamente para realizar a comunicação em loopback.
+[Python-CAN](https://github.com/raspberrypi/usbboot) é uma biblioteca Python multiplataforma que fornece uma interface de programação unificada para comunicação via barramento Controller Area Network (CAN), suportando uma ampla variedade de interfaces de hardware CAN e barramentos virtuais, e permitindo a implementação fácil de transmissão, recepção, filtragem de mensagens CAN, monitoramento de barramento e outras operações.
+Da mesma forma, as interfaces CAN precisam estar fisicamente conectadas para alcançar a comunicação em loopback.
 
 1. Configure a taxa de baud CAN padrão (500 kbit/s):
 
@@ -909,9 +857,9 @@ deactivate
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
 
-## Teste do Hub USB
+## Teste do hub USB
 
-Para testar o hub USB, você pode usar as seguintes etapas:
+Para testar o hub USB, você pode usar os seguintes passos:
 
 1. Verifique se o hub USB é detectado executando o comando ***lsusb***. Este comando lista todos os dispositivos USB conectados, incluindo hubs.
 
@@ -920,11 +868,11 @@ lsusb
 ```
 
 A execução deste comando deve exibir informações sobre os dispositivos USB conectados ao seu sistema, incluindo quaisquer hubs USB presentes.
-Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes listados na saída do comando lsusb. Se ele não estiver listado, pode haver um problema com o hub ou com sua conexão ao sistema. Nesses casos, pode ser necessário solucionar problemas do hub USB ou de suas conexões.
+Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes listados na saída do comando lsusb. Se ele não estiver listado, pode haver um problema com o hub ou com sua conexão ao sistema. Nesses casos, talvez seja necessário solucionar problemas do hub USB ou de suas conexões.
 
-## Teste do RTC (Relógio em Tempo Real)
+## Teste do RTC (Relógio de Tempo Real)
 
-Para testar a funcionalidade do Relógio em Tempo Real (RTC), siga estas etapas:
+Para testar a funcionalidade do Relógio de Tempo Real (RTC), siga estas etapas:
 
 1. Desative a sincronização automática de horário:
 
@@ -959,11 +907,11 @@ Este comando irá ler e exibir o horário armazenado no RTC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Teste do Timer Watchdog
+## Teste do temporizador watchdog
 
-Para realizar um teste do watchdog, siga estas etapas:
+Para realizar um teste de watchdog, siga estas etapas:
 
-1. Instale o software do watchdog:
+1. Instale o software de watchdog:
 
 ```bash
 sudo apt install watchdog
@@ -1022,14 +970,14 @@ echo "c" > /proc/sysrq-trigger
 
 Este comando aciona um crash do kernel e deve fazer com que o watchdog reinicie o sistema.
 
-5. Monitore o sistema para confirmar que ele é reiniciado após o período de tempo limite especificado.
-Essas etapas ajudarão você a testar e garantir a funcionalidade do temporizador watchdog no seu sistema.
+5. Monitore o sistema para confirmar que ele reinicia após o período de tempo limite especificado.
+Essas etapas ajudarão você a testar e garantir a funcionalidade do temporizador watchdog em seu sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Controlando o Buzzer via GPIO  
+## Controlando o buzzer via GPIO  
 
-O GPIO correspondente ao buzzer é o gpio627. Digite o seguinte script para ligar/desligar o buzzer:
+O GPIO correspondente ao buzzer é o gpio627. Insira o seguinte script para ligar/desligar o buzzer:
 
 1. Ligar o buzzer:
 
@@ -1057,13 +1005,13 @@ ls /dev | grep tpm
 
 **Interpretando a saída:**  
 
-Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis no seu sistema. Isso indica que o hardware TPM foi reconhecido e está acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicativos relacionados ao TPM, sabendo que os dispositivos estão presentes e acessíveis.
+Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis em seu sistema. Isso indica que o hardware TPM foi reconhecido e está acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicações relacionadas a TPM sabendo que os dispositivos estão presentes e acessíveis.
 
 ## ATECC608A
 
 Para interagir com o dispositivo ATECC608A e gerar um número de série aleatório, siga estas etapas:
 
-1. Clonar o repositório atecc-util:
+1. Clone o repositório atecc-util:
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
@@ -1081,32 +1029,32 @@ dpkg -x ./atecc-util_0.4.12_arm64.deb .
 cd usr/bin
 ```
 
-4. Gerar um número de série aleatório:
+4. Gere um número de série aleatório:
 
 ```bash
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
 Este comando instrui o utilitário ATECC a usar o slot 10 (-b 10), definir o tamanho do número de série para 192 bits ***(-s 192)*** e gerar um número de série aleatório ***(-c 'serial')***. A saída será o número de série gerado, como ***"01235595d3d621f0ee"***.
-Esse processo permite que você interaja com o dispositivo ATECC608A e execute várias operações, como gerar números de série aleatórios.
+Este processo permite que você interaja com o dispositivo ATECC608A e execute várias operações, como gerar números de série aleatórios.
 
 ## Interagindo com a EEPROM
 
-Aqui estão os comandos para interagir com uma EEPROM (Electrically Erasable Programmable Read-Only Memory):
+Aqui estão os comandos para interagir com uma EEPROM (Memória Somente de Leitura Programável e Apagável Eletricamente):
 
-1. Conceder permissões totais (leitura, gravação e execução) ao arquivo de dispositivo da EEPROM:
+1. Conceda permissões completas (leitura, gravação e execução) ao arquivo de dispositivo da EEPROM:
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
 ```  
 
-2. Escrever a string "This is a test string" no dispositivo EEPROM:
+2. Grave a string "This is a test string" no dispositivo EEPROM:
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
 ```  
 
-3. Ler o conteúdo do dispositivo EEPROM e exibi-lo em formato ***hexadecimal*** usando o utilitário hexdump:
+3. Leia o conteúdo do dispositivo EEPROM e exiba-o em formato ***hexadecimal*** usando o utilitário hexdump:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
@@ -1125,14 +1073,14 @@ Depois de identificar a entrada correspondente ao seu SSD, você pode prosseguir
 
 ## UPS para desligamento seguro
 
-Um GPIO6 entre a CPU e a entrada de alimentação DC é usado para alertar a CPU quando a fonte de alimentação é desligada. Então a CPU deve fazer algo urgente em um script antes do esgotamento de energia do supercapacitor e executar um "$ shutdown".
-Outra maneira de usar essa função é iniciar um desligamento quando o pino GPIO mudar. O pino GPIO fornecido é configurado como uma tecla de entrada que gera eventos KEY_POWER. Este evento é tratado pelo systemd-logind iniciando um desligamento.
+Um GPIO6 entre a CPU e a entrada de alimentação DC é usado para alertar a CPU quando a fonte de alimentação é desligada. Em seguida, a CPU deve executar algo urgente em um script antes que a energia do supercapacitor se esgote e executar um "$ shutdown".
+Outra forma de usar essa função é iniciar um desligamento quando o pino GPIO mudar. O pino GPIO fornecido é configurado como uma tecla de entrada que gera eventos KEY_POWER. Esse evento é tratado pelo systemd-logind iniciando um desligamento.
 
 1. Conexão de hardware.
 
 Certifique-se de que o pino ***'CM5_UPS_DET'*** do dispositivo UPS esteja conectado ao pino GPIO16 do dispositivo R21xx.
 
-2. Modificar o arquivo de configuração.
+2. Modifique o arquivo de configuração.
 
 - Abra o terminal.
 - Execute o seguinte comando para editar o arquivo de configuração:
@@ -1151,7 +1099,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 Salve e saia do editor (pressione ***`Ctrl+O`*** para salvar, ***`Enter`*** para confirmar e ***`Ctrl+X`*** para sair).
 
-4. Preparar o script em Python
+4. Prepare o script em Python
 
 - Crie um novo arquivo de script em Python:
 
@@ -1160,7 +1108,7 @@ cd ~
 sudo nano ups_shutdown.py
 ```
 
-- Copie e cole o código a seguir no arquivo:
+- Copie e cole o seguinte código no arquivo:
 
 ```bash
 import RPi.GPIO as GPIO
@@ -1219,30 +1167,30 @@ sudo python3 ups_shutdown.py
  Use `sudo` para garantir que o script tenha permissões suficientes para executar o comando de desligamento.
 :::
 
-6. Simular teste de falha de energia
+6. Simule um teste de falha de energia
 
 - Corte a fonte de alimentação externa.
-- Observe se o sistema salva automaticamente os dados e desliga.
+- Observe se o sistema salva os dados automaticamente e desliga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-7. Verificar o resultado
+7. Verifique o resultado
 
 - Reconecte a fonte de alimentação.
 - Verifique se os dados do sistema estão completos e se ele inicia normalmente.
 
 :::note
 
-1. Para a função de UPS, entre em contato conosco para obter mais informações.
+1. Para a função de UPS, entre em contato conosco para mais informações.
 2. O sinal de alarme é ativo em nível BAIXO.
 
 :::
 
 ## Acelerador de IA
 
-O slot M.2 M-KEY 2280 no reComputer Industrial R21xx foi projetado para acomodar o Acelerador de IA PCIE M.2. E a série R21xx-12 já vem pré-instalada com um Hailo-8 M.2 AI Acceleration de até 26TOPS.
-Se você adquiriu o produto da série R21xx-10, será necessário adquirir o módulo NPU da Hailo para habilitar a funcionalidade de IA.
-O dispositivo vem pré-instalado com o driver do acelerador Hailo, então você pode usá-lo diretamente e executar o caso de teste:
+O slot M.2 M-KEY 2280 no reComputer Industrial R21xx foi projetado para acomodar um Acelerador de IA PCIE M.2. E a série R21xx-12 vem pré-instalada com um Hailo-8 M.2 Aceleração de IA de até 26TOPS.
+Se você comprou o produto da série R21xx-10, será necessário adquirir o módulo NPU da Hailo para habilitar a funcionalidade de IA.
+O dispositivo vem pré-instalado com o driver do acelerador Hailo, portanto você pode usá-lo diretamente e executar o caso de teste:
 
 1. Navegue até o diretório do caso de teste
 
@@ -1265,15 +1213,15 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 Para fechar o aplicativo, pressione ***`Ctrl+C`*** .
-Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho do Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo GStreamer é simplificado ao mínimo de tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
+Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho da Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo do GStreamer é simplificado, minimizando as tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
 
 :::note
-Se o reComputer que você comprou não incluir o Hailo-8 e você estiver considerando comprar um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
+Se o reComputer que você comprou não incluir o Hailo-8 e você estiver considerando adquirir um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
 :::
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
