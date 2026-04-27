@@ -1,16 +1,16 @@
 ---
 description: XIAO ePaper Display Board(ESP32-S3) - EE05 入門ガイド
-sku: TBD
-title: XIAO ePaper Display Board(ESP32-S3) - EE05 入門ガイド
+sku: 100057220
+title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
 sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
 last_update:
-  date: 04/07/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/ja/epaper_ee05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,15 +37,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO ESP32-S3 Plus** を搭載したディスプレイボード EE05 は、24 ピン ePaper ディスプレイをサポートするコンパクトな ePaper ドライバーボードです。JST 2.0 mm バッテリーコネクタと電源スイッチ、バッテリー残量検出回路を備え、リセットボタン 1 個とユーザーがプログラム可能なボタン 3 個を搭載しています。デジタルサイネージ、電子ラベル、携帯型情報ボードなど、低消費電力の ePaper プロジェクトに最適です。
+**XIAO ESP32-S3 Plus** を搭載したディスプレイボード EE05 は、幅広い 24 ピン ePaper ディスプレイをサポートし、SenseCraft HMI を用いたノーコード UI 設計とデプロイを可能にします。拡張 IO とバッテリーコネクタ用電源スイッチを備えており、低消費電力のスマートディスプレイ用途に最適です。
 
 ### 特長
 
 - **XIAO ESP32-S3 Plus 搭載:** 対応する ePaper ディスプレイに接続するだけで、すぐに動作します。
-- **多用途なディスプレイ対応:** 幅広い ePaper スクリーンと互換性があり、24 ピン SPI インターフェースをネイティブサポートします。
-- **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、ハードウェアスライドスイッチを統合することで、効率的な電源管理と省エネを実現します。さらに、XIAO ESP32 用のバッテリー残量検出回路を追加しています。
-- **ユーザーフレンドリーなボタン:** 側面実装のリセットボタン 1 個とユーザーがプログラム可能なボタン 3 個を備え、（スリープ解除 / 前のページ / 次のページ など）柔軟なカスタマイズ機能を提供します。
-- **低消費電力設計:** MCU スリープ中に周辺回路の電力消費を効果的に制御または遮断します。
+- **多用途なディスプレイ対応:** さまざまなプロジェクト要件に対応する、幅広い 24 ピン ePaper ディスプレイと互換性があります。
+- **拡張 IO ポート:** 温湿度センサなどの追加センサを接続でき、機能を拡張できます。
+- **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを内蔵することで効率的な電源管理と省エネを実現します。
+- **SenseCraft HMI によるノーコード UI 設計とデプロイ:** 新しい AI 搭載ノーコードプラットフォームである SenseCraft HMI を使って、パーソナライズされたダッシュボードを簡単に設計・デプロイできます。ドラッグ＆ドロップ要素で UI を作成したり、豊富なテンプレートから選択したり、AI に手伝ってもらうこともできます。Web API からリアルタイムデータを接続し、数回クリックするだけで完成したダッシュボードを ePaper ディスプレイにデプロイできます。設計からデータ設定、デプロイまで、すべてを 1 つのプラットフォーム上でシームレスに行えます。
 
 ### 仕様
 
@@ -80,7 +80,7 @@ EE05 は、以下を含むさまざまな 24 ピン SPI ePaper ディスプレ�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似したディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似ディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -97,7 +97,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-使用しているデバイスタイプを選択すると、いくつかのコードが生成されます。そのコードをコピーしておき、後で使用します。
+デバイスタイプを選択すると、いくつかのコードが生成されます。そのコードをコピーしておき、後で使用します。
 
 :::tip
 誤った選択をすると、画面には何も表示されません。
@@ -111,23 +111,23 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-## はじめての使用
+## はじめて使う
 
-ここでは、7.5 インチのモノクロディスプレイを例として使用します。他の対応スクリーンでも手順は同じで、ドライバー内で適切な画面サイズ識別子を選択するだけです。
+ここでは、7.5 インチのモノクロディスプレイを例として使用します。他の対応スクリーンでも手順は同じで、ドライバ内で適切な画面サイズ識別子を選択するだけです。
 
 ### プログラムの設定と書き込み
 図に示すサンプルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-新しい "driver.h" ファイルを作成し、先ほどのコードを貼り付けます。コードは次のようになります。
+新しい "driver.h" ファイルを作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE05
 ```
 
-その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **ボードが接続されているポートを選択** に進みます。
+その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **Select the port your board is connected to** を選択します。
 
 
 PSRAM を有効にする必要があることに注意してください。
@@ -140,16 +140,17 @@ PSRAM を有効にする必要があることに注意してください。
 ## リソース
 
 - **[PDF]** [XIAO ePaper Display Board Ex05 回路図](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_Ex05_V1.0.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE05 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_EE05_V1.11_SCH&PCB_260420.zip)
 
 ## トラブルシューティング
 
 **Q1: コードを書き込んだ後も画面に何も表示されません。**
-- **FPC ケーブルの確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
-- **ドライバー設定の確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
+- **FPC ケーブルを確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
+- **ドライバ設定を確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
 
-**Q2: 色が反転している、または異常なパターンが表示されます。**
-- **正確なモデルの選択:** 画面サイズや IC のリビジョンが異なると、専用のドライバー設定が必要です。コンボ番号が使用中のスクリーンモデルと完全に一致していることを確認してください。
-- **電源の確認:** （7.5 インチなどの）大型スクリーンでは、画面リフレッシュ時に十分な電流を供給できる電源を使用してください。
+**Q2: 色が反転している、または表示が異常なパターンになります。**
+- **正確なモデルを選択:** 画面サイズや IC のリビジョンが異なると、特定のドライバ設定が必要になります。コンボ番号が使用している画面モデルと完全に一致していることを確認してください。
+- **電源を確認:** （7.5 インチのような）大型スクリーンでは、画面リフレッシュ時に十分な電流を供給できる電源を使用してください。
 
 **Q3: バッテリー接続時にボードの電源が入りません。**
 - **ハードウェアスイッチ:** ボード上のハードウェアスライドスイッチが ON 位置になっていることを確認してください。
@@ -157,7 +158,7 @@ PSRAM を有効にする必要があることに注意してください。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
