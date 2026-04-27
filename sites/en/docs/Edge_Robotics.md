@@ -91,6 +91,9 @@ url: https://wiki.seeedstudio.com/robotics_page/
               <a href="/rebot_arm_b601_dm_lerobot/" className="content-card">
                 <span className="text">reBot with LeRobot</span>
               </a>
+              <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot Visual Graspng Demo</span>
+              </a>
           </div>
 
 
