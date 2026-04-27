@@ -17,6 +17,7 @@ updatedAt: '2025-10-09'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
 ---
 
+
 # Pin Multiplexing with Seeed Studio XIAO ESP32-S3 (Sense)
 
 <table align="center">
