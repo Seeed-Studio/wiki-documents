@@ -42,10 +42,10 @@ Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide ra
 ### Features
 
 - **Powered by XIAO ESP32-S3 Plus**：Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays, supporting 24-Pin epaper displays for various project requirements.
+- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays, supporting 24-Pin ePaper displays for various project requirements.
 - **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
 - **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
-- **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to epaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
+- **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to ePaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
 
 ### Specifications
 
@@ -134,7 +134,7 @@ Note that PSRAM must be enabled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.
-Now you will see the feedback in your epaper screen! Following are the results of Bitmap examples.
+Now you will see the feedback in your ePaper screen! Following are the results of Bitmap examples.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Resources
