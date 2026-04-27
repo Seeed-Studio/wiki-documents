@@ -1,16 +1,16 @@
 ---
 description: XIAO ePaper Display Board(nRF52840) - EN05 入門ガイド
-sku: TBD
+sku: 100085486
 title: XIAO ePaper Display Board(nRF52840) - EN05 入門ガイド
 sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
 last_update:
-  date: 04/08/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/ja/epaper_en05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,14 +38,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO nRF52840 Plus** を搭載したディスプレイボード EN05 は、24 ピン ePaper ディスプレイ専用に設計された超低消費電力の ePaper ドライバボードです。ハードウェア電源スイッチを備えており、電子棚札、スマートバッジ、ポータブル IoT 情報ボードなど、バッテリー駆動プロジェクトに最適です。
+**XIAO nRF52840 Plus** を搭載したディスプレイボード EN05 は、幅広い 24 ピン ePaper ディスプレイをサポートします。拡張 IO ポートを備えており、追加のセンサーを接続できるほか、電源スイッチ付き JST 2.0 mm バッテリーコネクタ、内蔵充電 IC、3 つのユーザーボタンを搭載しています。スマートネームバッジ、電子価格タグ、会議室サイネージ、携帯型情報ボードなど、超低消費電力の ePaper プロジェクトに最適です。
 
 ### 特長
 
-- **XIAO nRF52840 Plus 搭載:** ワイヤレス通信のための Bluetooth 5.0 機能を内蔵。
-- **ユーザーフレンドリーなボタン:** 側面実装の Reset ボタン 1 個とユーザーボタン 3 個（ボタン 3 は D9 にマッピング）を備え、カスタム操作（例：ウェイクアップ / 前のページ / 次のページ）に利用可能。
-- **低消費電力設計:** ハードウェアスライドスイッチ付き JST 2.0mm バッテリーコネクタを統合し、MCU スリープ中は周辺回路の電源を自動的にオフ。
-- **フラットバックデザイン:** マットブラック PCB とフラットな背面（ロングピンなし）により、取り付けが容易。
+- **XIAO nRF52840 Plus 搭載:** 対応する ePaper ディスプレイに接続するだけですぐに動作し、オンボード NFC インターフェースにより、タップして設定、ペアリング、コンテンツ更新のトリガーが可能です。
+- **多用途なディスプレイ対応:** 幅広い 24 ピン ePaper ディスプレイと互換性があり、さまざまなプロジェクト要件に対応する 24 ピン ePaper ディスプレイをサポートします。
+- **拡張 IO ポート:** 温湿度センサーなどの追加センサーを接続でき、機能を拡張できます。
+- **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
+- **さまざまなソフトウェアプラットフォームに対応:** Arduino、Platform IO、ESPHome など、お好みの方法でコーディングでき、このドライバボードは両方のアプローチをサポートし、プロジェクトに最大限の柔軟性を提供します。
 
 ### 仕様
 
@@ -56,7 +57,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 | **ePaper コネクタ** | SPI FPC 24 ピン 0.5mm |
 | **バッテリーコネクタ** | JST 2.0mm (3.7V リチウムバッテリー) |
 | **スイッチ** | ハードウェア電源スライドスイッチ |
-| **ボタン** | Reset ボタン 1 個（側面実装）<br/> ユーザーボタン 3 個（側面実装） |
+| **ボタン** | 1x リセットボタン（側面実装） <br/> 3x ユーザーボタン（側面実装） |
 | **PCB 厚さ** | 1.2mm |
 
 ## ハードウェア概要
@@ -81,7 +82,7 @@ EN05 は、以下を含むさまざまな 24 ピン SPI ePaper ディスプレ�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似ディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似したディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -103,7 +104,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 :::tip
 誤った選択をすると、画面には何も表示されません。
 
-必ず正しいデバイスまたはコンポーネントタイプを選択してください。
+そのため、必ず正しいデバイスまたはコンポーネントタイプを選択してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
@@ -114,21 +115,21 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ## はじめての使用
 
-ここでは、7.5 インチのモノクロディスプレイを例として使用します。手順は他の対応スクリーンでも同じで、ドライバ内で適切な画面サイズ識別子を選択するだけです。
+ここでは、7.5 インチのモノクロディスプレイを例として使用します。他の対応スクリーンでも手順は同じで、ドライバ内で適切な画面サイズ識別子を選択するだけです。
 
 ### プログラムの設定と書き込み
-図に示すサンプルを選択します。
+図に示すサンプルを選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-新しい "driver.h" ファイルを作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります。
+新しい "driver.h" ファイルを作成し、そのコードを貼り付けます。コードは次のようになります。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-その後、**Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** および **Tools** -> **Port** -> **ボードが接続されているポートを選択** に進みます。
+その後、**Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** および **Tools** -> **Port** -> **Select the port your board is connected to** を選択します。
 
 次に **Upload** をクリックしてコードを書き込みます。
 これで ePaper スクリーンにフィードバックが表示されます！
@@ -138,18 +139,20 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 ## リソース
 
 - **[PDF]** [XIAO ePaper Display Board Ex05 回路図](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_Ex05_V1.0.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN05 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN05/XIAO_ePaper_Display_Board_EN05_V1.11_SCH&PCB_260420.zip)
+
 
 ## トラブルシューティング
 
 **Q1: コードを書き込んだ後も画面に何も表示されません。**
-- **FPC ケーブルを確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタで確実にロックされていることを確認してください。
-- **ドライバ設定を確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
+- **FPC ケーブルの確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
+- **ドライバ設定の確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
 
 **Q2: バッテリーを接続してもボードの電源が入りません。**
-- **ハードウェアスイッチ:** ボード上のハードウェアスライドスイッチが ON 位置になっていることを確認してください。
+- **ハードウェアスイッチ:** ボード上のハードウェアスライドスイッチが ON 位置に切り替えられているか確認してください。
 - **バッテリー接続:** JST 2.0mm コネクタの極性を確認してください。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、サポートをご提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
