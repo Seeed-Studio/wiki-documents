@@ -18,35 +18,37 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is April 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [How to Build and Flash BSP Source for Jetson Thor](https://wiki.seeedstudio.com/how_to_build_and_flash_bsp_source_for_jetson_thor/)
+### [Get Started with ESP32 MeshCore](https://wiki.seeedstudio.com/get_started_with_esp32s3_meshcore/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki explains how to use the BSP source package to build and flash the **NVIDIA Jetson AGX Thor Developer Kit** from an Ubuntu host.
+[MeshCore](https://meshcore.io/) is an open sourced system for enabling secure text based communications utilising LoRa Mes hardware. You can use MeshCore repeater and MeshCore companion node to build your MeshCore network. [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) is flexible solution to develop a MeshCore node.
 
 </div>
 
-### [Connecting R1225 to AWS IoT](https://wiki.seeedstudio.com/connecting_r1225_to_aws_iot/)
+### [reBot Arm B601-DM Visual Grasping DemoreBot Arm B601-DM Visual Grasping Demov](https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to connect the Seeed Studio reComputer R1225 LoRaWAN gateway to AWS IoT Core, covering gateway setup, certificate provisioning, LoRa network configuration, and the creation of device profiles, destinations, and end devices in AWS for cloud-based data management.
+This tutorial uses YOLO together with the Orbbec Gemini 2 depth camera to build a working desktop visual grasping demo for the reBot Arm B601-DM, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
 </div>
 
-### [Configure Static IP on reCamera](https://wiki.seeedstudio.com/configure_static_ip_on_recamera/)
+### [Arduino for Seeed Studio XIAO nRF54L15](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_arduino/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991421-XIAO-nRF54L14.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document explains how to configure a static IP address on reCamera (Buildroot system). The configuration includes three steps: edit the config file, set static network parameters, and restart the network service for verification.
+This document introduces how to develop with the Seeed Studio XIAO nRF54L15 Sense using the Arduino platform, including environment setup, board configuration, and example applications, enabling rapid prototyping of low-power, multi-protocol wireless IoT projects with onboard sensors.
 
 </div>
 
