@@ -1,16 +1,16 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(nRF52840) - EN05
-sku: TBD
+sku: 100085486
 title: Getting Started with XIAO ePaper Display Board(nRF52840) - EN05
 sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg
+image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
 last_update:
-  date: 04/08/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-08'
 url: https://wiki.seeedstudio.com/epaper_en05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,14 +38,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by **XIAO nRF52840 Plus**, the display board EN05 is an ultra-low-power ePaper driver board specifically designed for 24-Pin ePaper displays. With a hardware power switch, it is ideal for battery-powered projects like electronic shelf labels, smart badges, and portable IoT information boards.
+Powered by **XIAO nRF52840 Plus**, the display board EN05 supports a wide range of 24-pin ePaper displays. It features extension IO port for connecting additional sensors, JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with three user buttons. Well-suited for ultra-low-power ePaper projects such as smart name badges, electronic price tags, meeting room signage, and portable information boards.
 
 ### Features
 
-- **XIAO nRF52840 Plus Powered:** Built-in Bluetooth 5.0 capabilities for wireless communication.
-- **User-Friendly Buttons:** Includes 1 side-mounted Reset button and 3 user buttons (Button 3 mapped to D9) for custom interactions (e.g., wake up / previous page / next page).
-- **Low Power Design:** Integrated JST 2.0mm battery connector with a hardware slide switch and automatic peripheral power-down during MCU sleep.
-- **Flat Back Design:** Matte black PCB with a flat back (no long pins) for easy mounting.
+- **Powered by XIAO nRF52840 Plus:** Works immediately when connected to a compatible ePaper display, with onboard NFC interface for tap-to-configure, pairing, or triggering content updates.
+- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays, supporting 24-Pin ePaper displays for various project requirements.
+- **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
+- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
+- **Compatible with Various Software Platforms:** Whether you prefer coding with Arduino, Platform IO, ESPHome and more, this driver board supports both approaches, providing maximum flexibility for your projects.
 
 ### Specifications
 
@@ -138,6 +139,8 @@ Now you will see the feedback on your ePaper screen!
 ## Resources
 
 - **[PDF]** [XIAO ePaper Display Board Ex05 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_Ex05_V1.0.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN05 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN05/XIAO_ePaper_Display_Board_EN05_V1.11_SCH&PCB_260420.zip)
+
 
 ## Troubleshooting
 
