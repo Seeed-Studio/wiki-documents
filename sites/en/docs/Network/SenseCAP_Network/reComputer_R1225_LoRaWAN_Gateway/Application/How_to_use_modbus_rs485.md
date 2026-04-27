@@ -198,7 +198,7 @@ Once enabled, you will see the Modbus RTU settings screen; simply configure it a
 
 **Step 6**: Click on`Save & Apply`
 
-Once the settings have taken effect, click the `Read Data`, you can see the retrieved data in the `Frame Sata`.
+Once the settings have taken effect, click the `Read Data`, you can see the retrieved data in the `Frame Data`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/How_to_use_modbus_rs485/rs485_5.png" alt="pir" width={800} height="auto" /></p>
 
