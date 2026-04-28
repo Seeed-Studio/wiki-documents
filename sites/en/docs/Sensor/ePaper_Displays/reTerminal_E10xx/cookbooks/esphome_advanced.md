@@ -1,23 +1,25 @@
 ---
-description: This article describes how to utilise the hardware capabilities of the reTerminal E Series ePaper Display on ESPHome.
-title: ESPHome Advanced Usage
+description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Advanced peripherals (buttons, buzzer, battery monitoring, SHT4x sensor, deep sleep, multi-page dashboards).
+title: ESPHome Cookbook - Advanced (reTerminal E Series)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
-sidebar_position: 2
-sidebar_label: Advanced Usage
+sidebar_position: 3
+sidebar_label: ESPHome (Advanced)
 last_update:
-  date: 07/24/2025
+  date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
+updatedAt: '2026-04-28'
 ---
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant
+# ESPHome Cookbook - Advanced: reTerminal E Series
+
+:::tip Prerequisites
+This page assumes you've already worked through the [Basic ESPHome cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome).
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 

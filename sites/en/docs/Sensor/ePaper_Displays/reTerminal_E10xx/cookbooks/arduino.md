@@ -1,26 +1,33 @@
 ---
-description: This article describes how to get the reTerminal E Series ePaper Display to work with Arduino.
-title: Work with Arduino
+description: End-to-end Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — Hello World on the ePaper screen plus full peripheral examples (LED, buzzer, buttons, SHT4x, BMS, microSD, BMP image rendering).
+title: Arduino Cookbook
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 last_update:
-  date: 08/21/2025
+  date: 04/28/2026
   author: Allen
 createdAt: '2025-08-21'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/
+updatedAt: '2026-04-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Getting Started with reTerminal E Series ePaper Display in Arduino
+# Arduino Cookbook: reTerminal E Series
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/147.png" style={{width:800, height:'auto'}}/></div>
 
+:::tip Read the main Arduino guide first
+This page is the **reTerminal-specific cookbook**. The shared boilerplate — Arduino IDE setup, ESP32 board package, installing `Seeed_GFX`, generating `driver.h` — lives in **[Work with Arduino](/epaper_work_with_arduino)**. Skim that first if you are new to Arduino on Seeed ePaper; the steps below assume you have the IDE ready.
+:::
+
 ## Introduction
 
-The reTerminal E Series represents Seeed Studio's latest advancement in industrial HMI solutions, featuring ESP32-S3 as the main controller and integrated ePaper displays. This guide will walk you through programming the ePaper display on reTerminal E Series devices using Arduino IDE, enabling you to create custom interfaces and applications with excellent visibility and ultra-low power consumption.
+The reTerminal E Series is Seeed Studio's industrial HMI line, built on the XIAO ESP32-S3 and featuring integrated ePaper displays. This cookbook walks through:
+
+- Hardware overview & buying links for E1001 / E1002 / E1003 / E1004.
+- A first **Hello World** on each model (with the matching `BOARD_SCREEN_COMBO`).
+- Hands-on examples for every onboard peripheral: LEDs, buzzer, three user buttons, SHT4x temperature/humidity sensor, battery management system, microSD card, and BMP image rendering from SD.
 
 ### Materials Required
 

@@ -1,19 +1,37 @@
 ---
-description: PlatfromIO with XIAO ePaper Display Board EE04
-title: XIAO ePaper Display Board EE04 with PlatfromIO
+description: PlatformIO cookbook for the XIAO ePaper Driver Board (EE0x) family - hardware overview, project bootstrap, library setup, and end-to-end programming on the ESP32-S3. EE04 is used as the running example; EE02 / EE03 / EE05 share the same workflow.
+title: PlatformIO Cookbook
 keywords:
-  - epaper
+  - ePaper display
+  - PlatformIO
+  - EE02
+  - EE03
+  - EE04
+  - EE05
+  - XIAO ESP32-S3
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/pio_show_1.webp
-sidebar_position: 1
+sidebar_position: 2
 slug: /ee04_with_platformio
+aliases:
+  - /ee0x_with_platformio
 last_update:
-  date: 10/10/2025
+  date: 04/28/2026
   author: Zeller
 createdAt: '2025-10-09'
-updatedAt: '2025-10-30'
-url: https://wiki.seeedstudio.com/ee04_with_platformio/
+updatedAt: '2026-04-28'
 ---
-# XIAO ePaper Display Board(ESP32-S3) EE04 with PlatfromIO
+
+# PlatformIO Cookbook: XIAO ePaper Driver Boards (EE0x)
+
+:::tip This cookbook covers the whole EE0x family
+Applicable to **EE02 / EE03 / EE04 / EE05**. Because all four boards share the same XIAO ESP32-S3 base and the same `Seeed_GFX` driver pipeline, the project setup, library list, and code patterns are identical; the only thing that changes between them is the `BOARD_SCREEN_COMBO` value you pick in the [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) for `driver.h`.
+
+**Worked example: EE04 + 7.5" 800×480 mono ePaper screen.** Substitute your own board + screen pair in `driver.h` and the rest of the workflow (button GPIOs, battery ADC, dashboard UI, button-driven page switching) carries over.
+:::
+
+:::note Looking for Arduino instead?
+This cookbook is **specific to PlatformIO**. If you'd rather use the **Arduino IDE** (the more common path for our ePaper line), see **[Work with Arduino](/epaper_work_with_arduino)** for the platform-level guide and the [reTerminal E Series Arduino cookbook](/reterminal_e10xx_with_arduino) for hardware-level examples that also apply to the EE0x boards (the Configuration Tool generates the right `driver.h`).
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 

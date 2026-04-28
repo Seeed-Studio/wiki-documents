@@ -1,35 +1,41 @@
 ---
-description: The XIAO ESP32C3-powered 7.5-inch E Ink® Display is a compact, energy-efficient solution for showcasing Home Assistant data.
-title: Works with ESPHome
+description: End-to-end ESPHome / Home Assistant cookbook for the TRMNL 7.5" (OG) DIY Kit - flashing ESPHome firmware, building dashboards in YAML, and integrating with Home Assistant.
+title: ESPHome Cookbook
 keywords:
   - ePaper display
+  - TRMNL
   - ESPHome
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover.webp
-slug: /xiao_075inch_epaper_panel_esphome
-sidebar_position: 4
+  - XIAO ESP32-S3 Plus
+image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
+slug: /ogdiy_kit_works_with_esphome
+sku: 104991005
+sidebar_position: 2
 last_update:
-  date: 03/12/2025
-  author: Allen
-createdAt: '2025-03-25'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome/
+  date: 04/28/2026
+  author: Citric
+createdAt: '2025-07-17'
+updatedAt: '2026-04-28'
 ---
-
-# XIAO 7.5" ePaper Panel Works with ESPHome
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/201.png" style={{width:900, height:'auto'}}/></div>
+# ESPHome Cookbook: TRMNL 7.5" (OG) DIY Kit
+
+:::tip Read the main ESPHome guide first
+This page is the **TRMNL DIY Kit-specific ESPHome cookbook**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. Looking for the **TRMNL cloud dashboard** workflow instead (no YAML, plug-in based)? See [Work with TRMNL](/reterminal_e10xx_trmnl).
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/byod_main.png" style={{width:900, height:'auto'}}/></div>
 
 <br></br>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-## Introduction to Home Assistant
+## Introduction to [Home Assistant](https://www.home-assistant.io/)
 
 Home Assistant is a powerful open-source home automation platform that allows you to control and monitor your smart home devices from a single, unified interface. It acts as the central hub for your smart home, enabling you to automate routines, monitor sensors, and create a more intelligent living space.
 
@@ -49,9 +55,9 @@ Home Assistant is a powerful open-source home automation platform that allows yo
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong></a>
 </div>
 
-### Why E-Paper Display with Home Assistant?
+### Why TRMNL 7.5inch(OG) DIY Kit with Home Assistant?
 
-The XIAO 7.5" ePaper Panel is an excellent companion for Home Assistant for several reasons:
+The TRMNL 7.5inch(OG) DIY Kit is an excellent companion for Home Assistant for several reasons:
 
 1. **Energy Efficiency**: The e-paper display only consumes power when updating content, making it perfect for displaying persistent information like weather forecasts, calendar events, or system status.
 
@@ -61,11 +67,11 @@ The XIAO 7.5" ePaper Panel is an excellent companion for Home Assistant for seve
 
 4. **Flexible Integration**: Through ESPHome, the display seamlessly integrates with Home Assistant, allowing you to show any data from your smart home system in an elegant, always-visible format.
 
-These advantages make the XIAO 7.5" ePaper Panel an ideal choice for creating an energy-efficient, always-on information display for your Home Assistant setup.
+These advantages make the TRMNL 7.5inch(OG) DIY Kit an ideal choice for creating an energy-efficient, always-on information display for your Home Assistant setup.
 
 ### ESPHome Integration
 
-ESPHome is an open-source firmware creation tool specifically designed for ESP8266/ESP32 devices. It allows you to create custom firmware using simple YAML configuration files, which can then be flashed to your device. For the XIAO 7.5" ePaper Panel, ESPHome serves as the essential middleware that enables communication between the device and Home Assistant.
+ESPHome is an open-source firmware creation tool specifically designed for ESP8266/ESP32 devices. It allows you to create custom firmware using simple YAML configuration files, which can then be flashed to your device. For the TRMNL 7.5inch(OG) DIY Kit, ESPHome serves as the essential middleware that enables communication between the device and Home Assistant.
 
 The system works by converting your YAML configuration into fully-featured firmware that runs on your ESP device. This firmware handles all the complex tasks of connecting to your network, communicating with Home Assistant, and controlling the ePaper display. When combined with Home Assistant, ESPHome provides a robust platform for creating sophisticated home automation displays and controls.
 
@@ -80,16 +86,16 @@ Before the tutorial content of this article begins, you may need to have the fol
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>XIAO 7.5" ePaper Panel</th>
+      <th>TRMNL 7.5inch(OG) DIY Kit</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/209.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -116,6 +122,72 @@ We have also written how to install Home Assistant for some of Seeed Studio prod
 If you are not using a Seeed Studio product, you can also check and learn how to install Home Assistant for other products on the official Home Assistant website.
 
 - **[Home Assistant Installation](https://www.home-assistant.io/installation/)**
+:::
+
+### Equipment Installation
+
+**Step 1. Connect Display to Driver Board**  
+Align the FPC cable with the connector on the XIAO ePaper Display Board, then secure the latch to ensure a firm connection.  
+
+:::tip
+The metal side of the FPC cable should face upwards, otherwise, no content will be displayed.
+
+Please follow the installation tutorial below, many people get it wrong.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Step 2. Attach Battery**  
+Connect the battery cable to the JST connector on the driver board, ensuring correct polarity (red wire to +, black to -).  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
+
+**Step 3. Enclosure Assembly (Optional)**  
+
+:::tip
+Please note that the screen's flexible cable is very fragile. Be careful when operating. If it gets damaged, the entire screen will stop working.
+:::
+Print open-source enclosure parts from [Resource part](#resources) and assemble the components inside.  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
+
+First, assemble driver board and battery.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/base.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Test TRMNL kit if it works well.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Plug the screen into the case and make the FPC able out.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+Connect FPC extension cable and assemble the whole case.
+
+<div class="table-center">
+<iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L-Shape enclosure is very similar.
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+If your TRMNL kit far away from your router, you can move the antenna outside the case. It would have better performance.
 :::
 
 ### Step 1. Install ESPHome
@@ -146,12 +218,12 @@ Go to ESPHome and click on **NEW DEVICE**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-Give the device a name you like and click on **NEXT**.
+Give the device a name you like and select **ESP32-S3** for chip type, then click on **SKIP**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'80%', marginLeft:'10%'}}>
-  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/2.png" style={{width:'100%', height:'auto'}}/></div>
+  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_s3.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
@@ -159,20 +231,19 @@ After you create a new device, click **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
+Inside the default generated code, the framework of esp32 may be `esp-idf`, which we need to change to `arduino`.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_arduino.png" style={{width:600, height:'auto'}}/></div>
+
 ### Step 3. Install firmware
 
 This is a very basic example and will show "Hello World!" on the display.
 
 **The main purpose is to show you different ways to install firmware to the device.**
 
-After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
-
-<details>
-
-<summary>Click here to preview the full code</summary>
+Now you can copy the code below and paste it after `captive_portal` as shown below.
 
 ```yaml
-
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
@@ -181,26 +252,24 @@ font:
 
 # define SPI interface
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: 30s
     lambda: |-
       it.print(0, 0, id(font1), "Hello World!");
 ```
 
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/5.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/BYOD_helloworld.png" style={{width:1000, height:'auto'}}/></div>
 
 Click **INSTALL** to install the code to the device and you will see the following image.
 
@@ -231,7 +300,7 @@ Use USB cable to **connect the ePaper panel to your computer** and click **CONNE
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-Select usbmodemxxx(Windows is COMxxx) and click connect. [Encountered a problem? Click here.](#Q5)
+Select usbmodemxxx(Windows is COMxxx) and click connect. [Encountered a problem? Click here.](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
@@ -284,7 +353,7 @@ Click the option and then the firmware will be installed to ePaper penal automat
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-Wait a moment and you will see the feedback like the following image. If it fails, it may be due to a weak signal. Please move the device closer to your router. [Encountered a problem? Click here.](#Q5)
+Wait a moment and you will see the feedback like the following image. If it fails, it may be due to a weak signal. Please move the device closer to your router. [Encountered a problem? Click here.](#Q4)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/73.png" style={{width:'100%', height:'auto'}}/></div>
@@ -300,23 +369,19 @@ Wait a moment and you will see the feedback like the following image. If it fail
 
 This example will show shape on the display.
 
-After installing ESPHome and add a new device, you can copy the code below and paste it to **captive_portal** part as the following image.
-
-<details>
-
-<summary> Click here to copy the code. </summary>
+You can copy the code below and paste it to **captive_portal** part as the following image.
 
 ```yaml
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
     model: 7.50inv2
-    cs_pin: GPIO3
-    dc_pin: GPIO5
-    reset_pin: GPIO2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
@@ -330,10 +395,6 @@ display:
       it.filled_rectangle(150, 80, 50, 50);
       it.filled_circle(250, 105, 25);
 ```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/40.png" style={{width:800, height:'auto'}}/></div>
 
 When you see the feedback like the following image, it means the code is running successfully.
 
@@ -362,12 +423,7 @@ And then, click **SUBMIT** and **FINISH**.
 
 After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
 
-<details>
-
-<summary>Click here to preview the full code</summary>
-
 ```yaml
-
 # Define font to show info
 font:
   - file: "gfonts://Inter@700"
@@ -396,18 +452,18 @@ sensor:
 
 # Display info via SPI
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: 30s
     lambda: |-
       //print info in log
@@ -420,8 +476,6 @@ display:
       it.printf(100, 200, id(myFont), "%.1f", id(myPressure).state);
 ```
 
-</details>
-
 Install those codes to your device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
@@ -429,6 +483,12 @@ Install those codes to your device.
 The function of the code is to get **weather**, **temperature** and **pressure** from HA and display them on the display.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
+
+:::tip
+If you find that your Home Assistant doesn't have a weather-related component, you can download an integration called **Open-Meteo** from within the integration.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_weather.png" style={{width:800, height:'auto'}}/></div>
+:::
 
 When you see the feedback like the following image, it means the code is running successfully.
 
@@ -457,11 +517,7 @@ And <span id="ttf">then</span>, create a new folder call **fonts** and download 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
-
-<details>
-
-<summary>Click here to preview the full code</summary>
+You can copy the code below and paste it after `captive_portal` as shown below.
 
 ```yaml
 font:
@@ -477,27 +533,23 @@ font:
     glyphs: *mdi-weather-glyphs
 
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: 30s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/21.png" style={{width:800, height:'auto'}}/></div>
 
 When you see the feedback like the following image, it means the code is running successfully.
 
@@ -537,14 +589,9 @@ And then put a image into **image** folder. You can click the below button to do
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
-After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
-
-<details>
-
-<summary>Click here to preview the full code</summary>
+You can copy the code below and paste it after `captive_portal` as shown below.
 
 ```yaml
-
 image:
   - file: /config/esphome/image/wifi.jpg    # the path where you save the image, png or jpg format
     id: myImage
@@ -553,26 +600,22 @@ image:
     invert_alpha: true   # invert color
 
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: 30s
     lambda: |-
       it.image(0, 0, id(myImage));
 ```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/22.png" style={{width:800, height:'auto'}}/></div>
 
 When you see the feedback like the following image, it means the code is running successfully.
 
@@ -634,14 +677,18 @@ You can take a look the effect of the screenshot by input this link in your brow
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
-After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
-
-<details>
-
-<summary>Click here to preview the full code</summary>
+Copy the code below and paste it after `esp32`:
 
 ```yaml
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
+```
 
+You can copy the code below and paste it after `captive_portal` as shown below.
+
+```yaml
 http_request:
   verify_ssl: false
   timeout: 10s
@@ -659,28 +706,23 @@ online_image:
       - component.update: main_display
 
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
     id: main_display
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
-
 ```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/93.jpg" style={{width:800, height:'auto'}}/></div>
 
 When you see the feedback like the following image, it means the code is running successfully.
 
@@ -692,13 +734,9 @@ When you see the feedback like the following image, it means the code is running
 During deep sleep mode, you can't upload code to the device directly. You need to enter the download mode.[Click here jump to Q3.](#port)
 :::
 
-This example will show how to use deep sleep mode to save power. Update info every 6 hours. A 2000mAh battery can last about 3 months.
+This example will show how to use deep sleep mode to save power. Update info every 6 hours.
 
-After installing ESPHome and adding a new device, you can copy the code below and paste it after `captive_portal` as shown below.
-
-<details>
-
-<summary>Click here to preview the full code</summary>
+You can copy the code below and paste it after `captive_portal` as shown below.
 
 ```yaml
 globals:
@@ -724,28 +762,24 @@ font:
     size: 24
 
 spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
 display:
   - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
     update_interval: 3min
     lambda: |-
       id(sleep_counter) += 1;
       ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/89.jpg" style={{width:800, height:'auto'}}/></div>
 
 You'll see a counter. It will increment by one every time it wakes up.
 
@@ -757,59 +791,47 @@ You'll see a counter. It will increment by one every time it wakes up.
 For you to understand better, we strongly recommend that you run the basic usages above first.
 :::
 
-This example will show how to get weather information and calendar information from HA and display them on the display. What's more, it will use **deep sleep mode** to save power. Update info every 6 hours. A 2000mAh battery can last about 3 months.
+This example demonstrates a comprehensive ESPHome configuration for the TRMNL 7.5-inch e-paper DIY kit. The YAML code integrates multiple features to create a smart, interactive display panel that works seamlessly with Home Assistant.
 
-First, you need to check if you have weather component in HA. Normally, you will have one when you install HA.
+**Purpose and Functionality:**
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/24.png" style={{width:800, height:'auto'}}/></div>
+- The configuration enables the device to connect to Wi-Fi and Home Assistant, supporting both API and OTA updates for easy management.
 
-Also you can go to **Developer Tools -> STATES** to check if you have weather information in HA. Here is the information you will get later.
+- It sets up the e-paper display to show different types of information on two switchable pages, controlled by physical buttons.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/25.png" style={{width:800, height:'auto'}}/></div>
+- The device reads battery voltage, calculates the battery percentage, and displays a corresponding battery icon and value.
 
-Second, you need to install calendar component in HA.
+- Weather conditions and temperature are fetched from Home Assistant and displayed with appropriate icons and units.
 
-Go to **Settings** -> **Devices & Services** -> **Integrations** -> **Add Integration**
+- The current time and date are also shown, synchronized with Home Assistant.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/28.png" style={{width:800, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/29.png" style={{width:800, height:'auto'}}/></div>
-
-Select **Local Calendar** and click **SUBMIT** button.
-
-<div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
-  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/30.png" style={{width:'100%', height:'auto'}}/></div>
-  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/31.png" style={{width:'95%', height:'auto'}}/></div>
-</div>
-
-After that, you will see the Local Calendar in Configured part and in your sidebar.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/32.png" style={{width:800, height:'auto'}}/></div>
-
-Click Calendar in your sidebar and create 3 new calendars name **calendar**, **epaper_event** and **new_calendar**. You can also use other name but please keep the same name in your code later.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/27.png" style={{width:800, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/26.png" style={{width:800, height:'auto'}}/></div>
-
-:::tip
-Before copy the code, please put [wifi.jpg](#image), [icon ttf file and font ttf file](#ttf) into **image** folder and **fonts** folder.
-:::
+This example showcases how to combine sensor readings, Home Assistant data, and user input to build a feature-rich, always-on smart display using ESPHome and the TRMNL 7.5-inch e-paper kit.
 
 <details>
 
 <summary>Click here to preview the full code</summary>
 
 ```yaml
-
 esphome:
-  name: dashboard
-  friendly_name: dashboard
+  name: obdy
+  friendly_name: obdy
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_battery_enable
+      - delay: 200ms
+      - component.update: battery_voltage
+      - component.update: battery_level
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
+
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
 
 # Enable logging
 logger:
@@ -817,469 +839,346 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "jBgx0v+Y9eKiQmYTk0SCnHgtDowNDZqgFU26Z2VTYzM="
+    key: "j0V30kuJ6Zdij9SU6Ee+7ruwid+7SQOxtinjld2PRc0="
 
 ota:
   - platform: esphome
-    password: "9f78b53ef216c5d689f7408bb1ebe728"
-
-# -------------------------------------- Keep your code above, change your code below --------------------------------------
-
-globals:
-  - id: wifi_status
-    type: int
-    restore_value: no
-    initial_value: "0"
-  - id: first_update_done
-    type: bool
-    restore_value: no
-    initial_value: "false"
+    password: "db786195ae6f9748f5b57ea9bd1d4161"
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
-  on_connect:
-    then:
-      - lambda: |-
-          id(wifi_status) = 1;
-  on_disconnect:
-    then:
-      - lambda: |-
-          id(wifi_status) = 0;
 
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Obdy Fallback Hotspot"
+    password: "IOfapF7hXq55"
 
 captive_portal:
 
-# Here is deep sleep part
-deep_sleep:
-  id: deep_sleep_1
-  run_duration: 1min  # Device wake up and run 60s (enough to pull data and update)
-  sleep_duration: 60min  # deep sleep for 1h
+# Deep-sleep, wake by GPIO4
+# deep_sleep:
+#   id: deep_sleep_1
+#   run_duration: 1min
+#   sleep_duration: 60min
+#   wakeup_pin: GPIO4
+#   wakeup_pin_mode: INVERT_WAKEUP
 
-script:
-  - id: update_display
-    then:
-      - component.update: my_display
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
 
-interval:
-  # Condition: wifi connected && data retrieved && first time
-  - interval: 10s  # Check every second
-    then:
-      - if:
-          condition:
-            and:
-              - wifi.connected:
-              - lambda: "return !id(ha_calendar_event_1).state.empty();"
-              - lambda: "return !id(first_update_done);"
-          then:
-            - lambda: |-
-                ESP_LOGD("Display", "Updating Display...");
-            - script.execute: update_display  # Refresh immediately
-            - lambda: "id(first_update_done) = true;"
-  - interval: 59s  # run this command before 1s of run_duration end
-    then:
-      - logger.log: "Entering deep sleep now..."
+# Fonts
+font:
+  - file: "gfonts://Inter@700"
+    id: small_font
+    size: 24
+  - file: "gfonts://Inter@700"
+    id: mid_font
+    size: 36
+  - file: "gfonts://Inter@700"
+    id: big_font
+    size: 180
+  - file: "gfonts://Inter@700"
+    id: time_font
+    size: 96      # for the big time display
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_bat_icon
+    size: 24
+    glyphs:
+      - "\U000F007A"  # mdi-battery-10
+      - "\U000F007B"  # mdi-battery-20
+      - "\U000F007C"  # mdi-battery-30
+      - "\U000F007D"  # mdi-battery-40
+      - "\U000F007E"  # mdi-battery-50
+      - "\U000F007F"  # mdi-battery-60
+      - "\U000F0080"  # mdi-battery-70
+      - "\U000F0081"  # mdi-battery-80
+      - "\U000F0082"  # mdi-battery-90
+      - "\U000F0079"  # mdi-battery
+  - file: "fonts/materialdesignicons-webfont.ttf" # <-- 替换成你的字体文件路径
+    id: weather_icon_font
+    size: 100
+    glyphs:
+      - "\U000F0599" # weather-sunny
+      - "\U000F0595" # weather-partly-cloudy
+      - "\U000F0F2F" # weather-cloudy
+      - "\U000F0597" # weather-rainy
+      - "\U000F0598" # weather-snowy
+      - "\U000F059B" # weather-windy
+      - "\U000F0594" # weather-fog
+      - "\U000F0596" # weather-lightning
 
+globals:
+  - id: page_index
+    type: int
+    restore_value: true
+    initial_value: '0'
+  - id: battery_glyph
+    type: std::string
+    restore_value: no
+    initial_value: "\"\\U000F0079\""   # default full battery
 
-image:
-  - file: image/wifi.jpg
-    type: BINARY
-    id: esphome_logo
-    resize: 400x240
-    invert_alpha: true
+sensor:
+  - platform: adc
+    pin: GPIO1
+    name: "Battery Voltage"
+    id: battery_voltage
+    update_interval: 60s
+    attenuation: 12db
+    filters:
+      - multiply: 2.0
+  - platform: template
+    name: "Battery Level"
+    id: battery_level
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    device_class: battery
+    state_class: measurement
+    lambda: 'return id(battery_voltage).state;'
+    update_interval: 60s
+    on_value:
+      then:
+        - lambda: |-
+            int pct = int(x);
+            if (pct <= 10)      id(battery_glyph) = "\U000F007A";
+            else if (pct <= 20) id(battery_glyph) = "\U000F007B";
+            else if (pct <= 30) id(battery_glyph) = "\U000F007C";
+            else if (pct <= 40) id(battery_glyph) = "\U000F007D";
+            else if (pct <= 50) id(battery_glyph) = "\U000F007E";
+            else if (pct <= 60) id(battery_glyph) = "\U000F007F";
+            else if (pct <= 70) id(battery_glyph) = "\U000F0080";
+            else if (pct <= 80) id(battery_glyph) = "\U000F0081";
+            else if (pct <= 90) id(battery_glyph) = "\U000F0082";
+            else                id(battery_glyph) = "\U000F0079";
+    filters:
+      - calibrate_linear:
+          - 4.15 -> 100.0
+          - 3.96 -> 90.0
+          - 3.91 -> 80.0
+          - 3.85 -> 70.0
+          - 3.80 -> 60.0
+          - 3.75 -> 50.0
+          - 3.68 -> 40.0
+          - 3.58 -> 30.0
+          - 3.49 -> 20.0
+          - 3.41 -> 10.0
+          - 3.30 -> 5.0
+          - 3.27 -> 0.0
+      - clamp:
+          min_value: 0
+          max_value: 100
 
-# Connect to Home Assistant to get time
+output:
+  - platform: gpio
+    pin: GPIO6
+    id: bsp_battery_enable
+
+binary_sensor:
+  - platform: gpio    # Next page KEY1
+    pin:
+      number: GPIO2
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key1
+    name: "Key1"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) + 1) % 2;
+            id(epaper_display).update();
+
+  - platform: gpio     # Prev page KEY2
+    pin:
+      number: GPIO3
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key2
+    name: "Key2"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) - 1 + 2) % 2;
+            id(epaper_display).update();
+
+  # - platform: gpio
+  #   pin:
+  #     number: GPIO5       # KEY3
+  #     mode: INPUT_PULLUP
+  #     inverted: true
+  #   id: key2
+  #   name: "Key2"
+  #   on_press:
+  #     then:
+
+# Home Assistant time
 time:
   - platform: homeassistant
-    id: homeassistant_time
+    id: ha_time
 
 text_sensor:
   - platform: homeassistant
-    id: ha_calendar_event_1
-    entity_id: calendar.calendar
-    attribute: "message"
-  - platform: homeassistant
-    id: ha_calendar_start_time_1
-    entity_id: calendar.calendar
-    attribute: "start_time"
-  - platform: homeassistant
-    id: ha_calendar_end_time_1
-    entity_id: calendar.calendar
-    attribute: "end_time"
-
-  - platform: homeassistant
-    id: ha_calendar_event_2
-    entity_id: calendar.epaper_event
-    attribute: "message"
-  - platform: homeassistant
-    id: ha_calendar_start_time_2
-    entity_id: calendar.epaper_event
-    attribute: "start_time"
-  - platform: homeassistant
-    id: ha_calendar_end_time_2
-    entity_id: calendar.epaper_event
-    attribute: "end_time"
-
-  - platform: homeassistant
-    id: ha_calendar_event_3
-    entity_id: calendar.new_calendar
-    attribute: "message"
-  - platform: homeassistant
-    id: ha_calendar_start_time_3
-    entity_id: calendar.new_calendar
-    attribute: "start_time"
-  - platform: homeassistant
-    id: ha_calendar_end_time_3
-    entity_id: calendar.new_calendar
-    attribute: "end_time"
-
-  - platform: homeassistant
-    entity_id: weather.forecast_home
+    entity_id: weather.home
     id: myWeather
   - platform: homeassistant
-    entity_id: weather.forecast_home
+    entity_id: weather.home
     id: temp
     attribute: "temperature"
-  - platform: homeassistant
-    entity_id: weather.forecast_home
-    id: humi
-    attribute: "humidity"
-  - platform: homeassistant
-    entity_id: weather.forecast_home
-    id: press
-    attribute: "pressure"
-  - platform: homeassistant
-    entity_id: weather.forecast_home
-    id: wind
-    attribute: "wind_speed"
-
-font:
-  - file: "fonts/Montserrat-Black.ttf"
-    id: web_font
-    size: 20
-  - file: "fonts/Montserrat-Black.ttf"
-    id: data_font
-    size: 30
-  - file: "fonts/Montserrat-Black.ttf"
-    id: sensor_font
-    size: 22
-
-  - file: "gfonts://Inter@700" #
-    id: font1
-    size: 24
-
-  - file: 'fonts/materialdesignicons-webfont.ttf' # Directory to save ttf file
-    id: font_mdi_large
-    size: 200
-    glyphs: &mdi-weather-glyphs # https://pictogrammers.com/library/mdi/
-      - "\U000F050F" # Thermometer
-      - "\U000F058E" # Humidity
-      - "\U000F059D" # Wind speed
-      - "\U000F0D60" # Atmospheric pressure
-      - "\U000F0590" # Cloudy weather
-      - "\U000F0596" # Rainy weather
-      - "\U000F0598" # Snowy weather
-      - "\U000F0599" # Sunny weather
-  - file: 'fonts/materialdesignicons-webfont.ttf'
-    id: font_weather # Copy the above icon and change the size to 40
-    size: 200
-    glyphs: *mdi-weather-glyphs
-  - file: 'fonts/materialdesignicons-webfont.ttf'
-    id: img_font_sensor # Copy the above icon and change the size to 40
-    size: 70
-    glyphs: *mdi-weather-glyphs
-
-spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
 
 display:
   - platform: waveshare_epaper
-    id: my_display
-    cs_pin: GPIO3
-    dc_pin: GPIO5
+    id: epaper_display
+    model: 7.50inv2
+    cs_pin: GPIO44
+    dc_pin: GPIO10
+    reset_pin: GPIO38
     busy_pin: 
       number: GPIO4
       inverted: true
-    reset_pin: GPIO2
-    model: 7.50inv2
-    update_interval: 50s
+    update_interval: never
     lambda: |-
-      if(id(wifi_status) == 0){
-        it.image(180, 0, id(esphome_logo));
-        it.print(230, 300, id(data_font), "WI-FI CONNECTING");
-      }else{
-        // Draw weather images here
-        std::string weather_string = id(myWeather).state.c_str();
-        if(weather_string == "rainy" || weather_string == "lightning" || weather_string == "pouring"){
-          // Draw rainy weather image
-          it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0596");
-        }else if(weather_string == "snowy"){
-          // Draw snowy weather image
-          it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0598");
-        }else if(weather_string == "sunny" || weather_string == "windy"){
-          // Draw sunny weather image
-          it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0599");
-        }else{
-          // Draw cloudy weather image
-          it.printf(120, 85, id(font_weather), TextAlign::CENTER, "\U000F0590");
+      // ----------  PAGE 0  ----------
+      if (id(page_index) == 0) {
+        // Screen dimension constants for easy adjustment
+        const int scr_w = 800;
+        const int scr_h = 480;
+        const int center_x = scr_w / 2; // Center X-coordinate of the screen (400)
+
+        // --- Top-right: Battery Info ---
+        // Display the battery icon using an icon font
+        it.printf(scr_w - 130, 13, id(font_bat_icon), "%s", id(battery_glyph).c_str());
+        // Display the battery percentage text
+        it.printf(scr_w - 100, 10, id(small_font), "%.0f%%", id(battery_level).state);
+
+        // --- Draw the vertical separator line ---
+        // Draw a vertical line in the middle to separate left and right areas
+        it.filled_rectangle(center_x, 100, 2, 280);
+
+        // ==================================================
+        //                    LEFT AREA: WEATHER INFO
+        // ==================================================
+        // Calculate the center X-coordinate of the left area for alignment
+        const int left_center_x = center_x / 2; // 200
+
+        // 1. Display the title "Weather" at the top of the left area
+        it.printf(left_center_x, 110, id(mid_font), TextAlign::TOP_CENTER, "Weather");
+
+        // 2. Get the weather condition and select the corresponding icon
+        std::string weather_condition = id(myWeather).state;
+        std::string weather_icon = "\U000F0599"; // Default icon (sunny), as a fallback for unknown states
+
+        if (weather_condition == "partlycloudy") {
+          weather_icon = "\U000F0595"; // weather-partly-cloudy
+        } else if (weather_condition == "cloudy") {
+          weather_icon = "\U000F0F2F"; // weather-cloudy
+        } else if (weather_condition == "rainy") {
+          weather_icon = "\U000F0597"; // weather-rainy
+        } else if (weather_condition == "snowy") {
+          weather_icon = "\U000F0598"; // weather-snowy
+        } else if (weather_condition == "windy") {
+          weather_icon = "\U000F059B"; // weather-windy
+        } else if (weather_condition == "fog") {
+          weather_icon = "\U000F0594"; // weather-fog
+        } else if (weather_condition == "lightning") {
+          weather_icon = "\U000F0596"; // weather-lightning
         }
+        // Display the weather icon in the center of the left area
+        it.printf(left_center_x, 240, id(weather_icon_font), TextAlign::CENTER, "%s", weather_icon.c_str());
 
-        auto time_now = id(homeassistant_time).now();
-        // Month conversion
-        const char* months[] = {
-          "January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December"
-        };
-        const char* month_str = months[time_now.month - 1];  // Month index starts from 0
-        // Get the day
-        int day = time_now.day_of_month;
-        // Draw the date
-        it.printf(250, 110, id(data_font), "%s %d", month_str, day);
-        // Get the day of the week
-        const char* days[] = {"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
-        const char* day_of_week = days[time_now.day_of_week];
-        it.printf(250, 70, id(data_font), "%s", day_of_week);
+        // 3. Display the weather condition text below the icon
+        it.printf(left_center_x, 400, id(mid_font), TextAlign::BOTTOM_CENTER, "%s", weather_condition.c_str());
 
-        int x = 20, y = 180, w = 180, h = 120, r = 10, thickness = 4;
-        // Draw four borders
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
-        // Draw four rounded corners
-        it.filled_circle(x + r, y + r, r); // Top-left corner
-        it.filled_circle(x + w - r, y + r, r); // Top-right corner
-        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
-        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
-        // Fill the inside with black to form a border
-        it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // Temperature
-        it.printf(x+10, y+10, id(sensor_font), "Temperature");
-        it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F050F");
-        // Get temperature data
-        it.printf(x+75,y+65, id(data_font), "%s°F", id(temp).state.c_str());
 
-        x = 220;
-        y = 180;
-        // Draw four borders
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
-        // Draw four rounded corners
-        it.filled_circle(x + r, y + r, r); // Top-left corner
-        it.filled_circle(x + w - r, y + r, r); // Top-right corner
-        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
-        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
-        // Fill the inside with black to form a border
-        it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // Humidity
-        it.printf(x+10, y+10, id(sensor_font), "Humidity");
-        it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F058E");
-        // Get humidity data
-        it.printf(x+75,y+65, id(data_font), "%s%%", id(humi).state.c_str());
+        // ==================================================
+        //                    RIGHT AREA: TEMPERATURE INFO
+        // ==================================================
+        // Calculate the center X-coordinate of the right area for alignment
+        const int right_center_x = center_x + (center_x / 2); // 600
 
-        x = 20;
-        y = 320;
-        // Draw four borders
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
-        // Draw four rounded corners
-        it.filled_circle(x + r, y + r, r); // Top-left corner
-        it.filled_circle(x + w - r, y + r, r); // Top-right corner
-        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
-        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
-        // Fill the inside with black to form a border
-        it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // Air Pressure
-        it.printf(x+10, y+10, id(sensor_font), "Air Pressure");
-        it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F0D60");
-        // Get atmospheric pressure data
-        it.printf(x+85,y+50, id(data_font), "%s", id(press).state.c_str());
-        it.printf(x+85,y+78, id(sensor_font), "inHg");
+        // 1. Display the title "Temperature" at the top of the right area
+        it.printf(right_center_x, 110, id(mid_font), TextAlign::TOP_CENTER, "Temperature");
 
-        x = 220;
-        y = 320;
-        // Draw four borders
-        it.filled_rectangle(x + r, y, w - 2 * r, thickness); // Top border
-        it.filled_rectangle(x + r, y + h - thickness, w - 2 * r, thickness); // Bottom border
-        it.filled_rectangle(x, y + r, thickness, h - 2 * r); // Left border
-        it.filled_rectangle(x + w - thickness, y + r, thickness, h - 2 * r); // Right border
-        // Draw four rounded corners
-        it.filled_circle(x + r, y + r, r); // Top-left corner
-        it.filled_circle(x + w - r, y + r, r); // Top-right corner
-        it.filled_circle(x + r, y + h - r, r); // Bottom-left corner
-        it.filled_circle(x + w - r, y + h - r, r); // Bottom-right corner
-        // Fill the inside with black to form a border
-        it.filled_rectangle(x + thickness, y + thickness, w - 2 * thickness, h - 2 * thickness, COLOR_OFF);
-        // Wind Speed
-        it.printf(x+10, y+10, id(sensor_font), "Wind Speed");
-        it.printf(x+45, y+75, id(img_font_sensor), TextAlign::CENTER, "\U000F059D");
-        // Get wind speed data
-        it.printf(x+85,y+50, id(data_font), "%s", id(wind).state.c_str());
-        it.printf(x+85,y+78, id(sensor_font), "mph");
-
-        // Draw a vertical line
-        it.filled_rectangle(430, 30, 5, 430);
-        // Right section
-        it.printf(540, 40, id(data_font), "Calendar");
-
-        // Define event structure
-        struct Event {
-            std::string message;
-            std::string start_time;
-            std::string end_time;
-            time_t start_timestamp;
-        };
-
-        // Parse time string to time_t (UNIX timestamp)
-        auto parse_time = [](const std::string &time_str) -> time_t {
-            struct tm timeinfo = {};
-            if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return 0;  // Invalid time
-            }
-            return mktime(&timeinfo);
-        };
-
-        // Create event list
-        std::vector<Event> events = {
-            {id(ha_calendar_event_1).state, id(ha_calendar_start_time_1).state, id(ha_calendar_end_time_1).state, parse_time(id(ha_calendar_start_time_1).state)},
-            {id(ha_calendar_event_2).state, id(ha_calendar_start_time_2).state, id(ha_calendar_end_time_2).state, parse_time(id(ha_calendar_start_time_2).state)},
-            {id(ha_calendar_event_3).state, id(ha_calendar_start_time_3).state, id(ha_calendar_end_time_3).state, parse_time(id(ha_calendar_start_time_3).state)}
-        };
-        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_1).state.c_str(), parse_time(id(ha_calendar_start_time_1).state));
-        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_2).state.c_str(), parse_time(id(ha_calendar_start_time_2).state));
-        ESP_LOGD("myCalendar", "Start Time: %s -> %ld", id(ha_calendar_start_time_3).state.c_str(), parse_time(id(ha_calendar_start_time_3).state));
-
-        // Filter invalid events (start_timestamp == 0)
-        events.erase(std::remove_if(events.begin(), events.end(), [](const Event &e) { return e.start_timestamp == 0; }), events.end());
-
-        // Sort by `start_timestamp` (earliest to latest)
-        std::sort(events.begin(), events.end(), [](const Event &a, const Event &b) {
-            return a.start_timestamp < b.start_timestamp;
-        });
-
-        // Define a function to format time
-        auto format_time = [](std::string time_str) -> std::string {
-            struct tm timeinfo;
-            if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return "Invalid";
-            }
-            char buffer[10];
-            strftime(buffer, sizeof(buffer), "%I:%M%p", &timeinfo); // Convert to 12-hour format
-            return std::string(buffer);
-        };
-        // Parse date
-        auto format_date = [](const std::string &time_str) -> std::string {
-            struct tm timeinfo = {};
-            if (strptime(time_str.c_str(), "%Y-%m-%d %H:%M:%S", &timeinfo) == nullptr) {
-                return "Invalid";
-            }
-            char buffer[6];  // Need to store "MM-DD\0"
-            strftime(buffer, sizeof(buffer), "%m-%d", &timeinfo);
-            return std::string(buffer);
-        };
-
-        // Draw events
-        int even_x_start_offset = 460;
-        int even_y_start_offset = 80;
-        for (const auto &event : events) {
-          if(even_y_start_offset >= 420){
-            break;
-          }
-
-          // Format time
-          std::string formatted_date = format_date(event.start_time);
-          std::string formatted_start_time = format_time(event.start_time);
-          std::string formatted_end_time = format_time(event.end_time);
-
-          // Combine time range string
-          std::string time_range = formatted_start_time + " - " + formatted_end_time;
-          time_range = formatted_date + "  " + time_range;
-          if(formatted_start_time == "Invalid" || formatted_end_time == "Invalid"){
-            time_range.clear();
-          }
-          // Display time range, e.g., "10:00AM - 11:00AM"
-          it.printf(even_x_start_offset, even_y_start_offset, id(sensor_font), "%s", time_range.c_str());
-          even_y_start_offset += 30;
-          // Display event name
-          it.printf(even_x_start_offset, even_y_start_offset, id(sensor_font), "%s", event.message.c_str());
-          even_y_start_offset += 40;
-        }
+        // 3. Display the temperature reading below the icon, with one decimal place
+        float temp_c = stof(id(temp).state);
+        double temp_f = temp_c * 9.0 / 5.0 + 32.0;
+        it.printf(right_center_x, 250, id(mid_font), TextAlign::CENTER, "%.0f°F", temp_f);
+        it.printf(right_center_x, 380, id(mid_font), TextAlign::CENTER, "%.1f°C", temp_c);
       }
+      // ----------  PAGE 1  ----------
+      else{
+        // Battery top-right
+        it.printf(670, 13, id(font_bat_icon), "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), "%.0f%%", id(battery_level).state);
 
+        auto now = id(ha_time).now();
+        struct tm timeinfo = now.to_c_tm();
 
+        // centering time HH:MM
+        char timeStr[6];
+        strftime(timeStr, sizeof(timeStr), "%H:%M", &timeinfo);
+        it.printf(400, 180, id(time_font), TextAlign::CENTER, timeStr);
+
+        // Date: Day of week
+        const char *weekday[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+        const char *wday = weekday[timeinfo.tm_wday];
+
+        // Date: month - day
+        char dateStr[12];
+        strftime(dateStr, sizeof(dateStr), "%b %d", &timeinfo);  // e.g. Jun 15
+
+        // Day of the week + date below the time
+        it.printf(400, 280, id(mid_font), TextAlign::CENTER, "%s, %s", wday, dateStr);
+      }
 ```
 
 </details>
 
 When you see the feedback like the following image, it means the code is running successfully.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/38.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_demo3_byod.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## FAQ
 
-#### Q1: Why is there no data?
-
-<div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
-  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/104.JPG" style={{width:'80%', height:'auto'}}/></div>
-  <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.png" style={{width:'100%', height:'auto'}}/></div>
-</div>
+### Q1: Why is there no data?
 
 In this case, you should go to Settings -> Devices & Services -> Integrations to **RECONGFIGURE** device. Haven't found your ePaper Penal? Try to reboot HA.
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-#### Q2: Why can't I get those data in Home Assistant? {#port}
+### Q2: Why can't I get those data in Home Assistant? {#port}
 
 In this case, you should go to Settings -> Devices & Services -> Integrations to **ADD** your device to HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-#### <span id="deepmode">Q3</span>: How can I upload a new program when device in deep sleep mode?
+### <span id="deepmode">Q3</span>: How can I upload a new program when device in deep sleep mode?
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-When device in deep sleep mode, you can't upload a new program derectly.
+When the device is in deep sleep mode, you can't upload a new program directly.
 
-1. First, make sure that device is turned on, and then press the **Boot** button on the back of the board.
+1. First, make sure the device is turned on. Then, press and hold the **Boot** button located next to the USB-C port on the XIAO ESP32-S3 Plus.
 
-2. Click one time **Reset** button and release **Boot** button.
+2. While holding the **Boot** button, press the **Reset** button once, then release the **Boot** button.
 
 3. After that, turn off the battery switch and unplug the power cable.
 
-4. Last, replug the cable and upload a new program.
+4. Finally, replug the cable and upload a new program.
 
-#### Q4: How long does the battery last?
-
-:::tip
-Remember to turn on the battery button when charging. Otherwise, the battery won't be able to charge.
-:::
-
-After our tests, refresh screen per 6 hours and the battery will last about 3 months in deep sleep mode.
-
-#### <span id="Q5">Q5</span>: ePaper Penel can't connect to you computer?
+### <span id="Q4">Q4</span>: TRMNL 7.5inch(OG) DIY Kit can't connect to you computer?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 Try unplugging and replugging it several times, or just install the driver according to the prompts.
 
-#### <span id="Q6">Q6</span>: Wi-Fi upload program failed?
+### <span id="Q5">Q5</span>: Wi-Fi upload program failed?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
 In this case, you epaper penal is offline or in deep sleep mode. Please get it online or wake it up.
-
-## Resources
-
-- **[STP]**: [3D Model enclosure](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
-- **[PDF]**: [ePaper Driver Board SCH PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
 ## Tech Support & Product Discussion
 
