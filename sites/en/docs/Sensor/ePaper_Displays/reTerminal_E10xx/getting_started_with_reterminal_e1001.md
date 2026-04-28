@@ -122,7 +122,7 @@ The reTerminal E1001 hardware includes:
 6. **Status LED**: User indicator (green)
 7. **Power LED**: Charge indicator (red)
 8. **USB-C Port**: For charging and firmware updates
-9. **Expansion Port**: 8-pin expansion header providing VDD, GND, I2C, and GPIO connections
+9. **Expansion Port**: 8-pin expansion header providing VDD, GND, UART, I2C, and GPIO connections
 10. **Stand Mounting Inserts**: Embedded nuts (screw holes) on the bottom back of the device for attaching the 3D-printed support stand
 
 ## Getting Started

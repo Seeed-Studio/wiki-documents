@@ -125,7 +125,7 @@ ESPHome support for reTerminal E1003 is under development and will be available 
 6. **Red Charging LED:** Indicates the battery charging status.
 7. **Green Status LED:** Indicates the current operational or system status.
 8. **USB-C Data and Charge Port:** For charging the device and data transmission.
-9. **Expansion Port:** Pin header for connecting external expansion modules or peripherals.
+9. **Expansion Port:** Pin header providing VDD, GND, UART, I2C, and GPIO connections for external sensors, modules, or peripherals.
 10. **Buzzer:** Audio output holes for sound alerts.
 11. **Stand Mounting Inserts:** Embedded nuts (screw holes) on the back of the device for attaching the 3D-printed support stand.
 

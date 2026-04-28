@@ -124,7 +124,7 @@ reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to
 7. **Green Status LED:** Indicates the current operational or system status.
 8. **Reset Button:** For resetting the device.
 9. **Boot Button:** Used for entering boot / firmware download mode.
-10. **Expansion Port:** Pin header for connecting external expansion modules or peripherals.
+10. **Expansion Port:** 2 × 4 pin header providing VDD, GND, UART, I2C, GPIO, and ADC connections for external sensors, modules, or peripherals.
 11. **Stand Mounting Inserts:** Threaded inserts on the back for securing the device onto its stand.
 
 ## Getting Started

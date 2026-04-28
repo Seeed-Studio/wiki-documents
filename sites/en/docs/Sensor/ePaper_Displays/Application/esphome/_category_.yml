@@ -1,9 +1,0 @@
-position: 2
-label: 'Work with ESPHome'
-collapsible: true
-collapsed: true
-link:
-  type: generated-index
-  slug: reterminal_e10xx_esphome
-  title: reTerminal E Series with ESPHome
-  description: Work with ESPHome for Home Assistant on reTerminal E Series ePaper Display, including basic and advanced usage.
