@@ -1,7 +1,7 @@
 ---
 description: XIAO ePaper Display Board(nRF52840) - EN05 入門ガイド
 sku: 100085486
-title: XIAO ePaper Display Board(nRF52840) - EN05 入門ガイド
+title: EN05 入門ガイド
 sidebar_position: 1
 image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EN05 入門ガイド
+# XIAO ePaper Display Board - EN05 入門ガイド
 
 <div class="table-center">
 <table align="center">
@@ -38,12 +38,12 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO nRF52840 Plus** を搭載したディスプレイボード EN05 は、幅広い 24 ピン ePaper ディスプレイをサポートします。拡張 IO ポートを備えており、追加のセンサーを接続できるほか、電源スイッチ付き JST 2.0 mm バッテリーコネクタ、内蔵充電 IC、3 つのユーザーボタンを搭載しています。スマートネームバッジ、電子価格タグ、会議室サイネージ、携帯型情報ボードなど、超低消費電力の ePaper プロジェクトに最適です。
+**XIAO nRF52840 Plus** を搭載したディスプレイボード EN05 は、幅広い 24 ピン ePaper ディスプレイをサポートします。追加センサー接続用の拡張 IO ポート、電源スイッチ付き JST 2.0 mm バッテリーコネクタ、内蔵充電 IC を備え、ユーザーボタンを 3 つ搭載しています。スマートネームバッジ、電子価格タグ、会議室サイネージ、携帯型インフォメーションボードなど、超低消費電力の ePaper プロジェクトに最適です。
 
 ### 特長
 
 - **XIAO nRF52840 Plus 搭載:** 対応する ePaper ディスプレイに接続するだけですぐに動作し、オンボード NFC インターフェースにより、タップして設定、ペアリング、コンテンツ更新のトリガーが可能です。
-- **多用途なディスプレイ対応:** 幅広い 24 ピン ePaper ディスプレイと互換性があり、さまざまなプロジェクト要件に対応する 24 ピン ePaper ディスプレイをサポートします。
+- **多用途なディスプレイサポート:** 幅広い 24 ピン ePaper ディスプレイに対応し、さまざまなプロジェクト要件に合わせて 24 ピン ePaper ディスプレイをサポートします。
 - **拡張 IO ポート:** 温湿度センサーなどの追加センサーを接続でき、機能を拡張できます。
 - **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
 - **さまざまなソフトウェアプラットフォームに対応:** Arduino、Platform IO、ESPHome など、お好みの方法でコーディングでき、このドライバボードは両方のアプローチをサポートし、プロジェクトに最大限の柔軟性を提供します。
@@ -95,7 +95,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 </a>
 </div>
 
-スクロールダウンして、このリンクを開きます。
+下にスクロールして、このリンクを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -104,7 +104,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 :::tip
 誤った選択をすると、画面には何も表示されません。
 
-そのため、必ず正しいデバイスまたはコンポーネントタイプを選択してください。
+必ず正しいデバイスまたはコンポーネントタイプを選択してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
@@ -118,7 +118,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 ここでは、7.5 インチのモノクロディスプレイを例として使用します。他の対応スクリーンでも手順は同じで、ドライバ内で適切な画面サイズ識別子を選択するだけです。
 
 ### プログラムの設定と書き込み
-図に示すサンプルを選択します
+図に示すサンプルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -129,7 +129,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-その後、**Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** および **Tools** -> **Port** -> **Select the port your board is connected to** を選択します。
+その後、**Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** および **Tools** -> **Port** -> **ボードが接続されているポートを選択** に進みます。
 
 次に **Upload** をクリックしてコードを書き込みます。
 これで ePaper スクリーンにフィードバックが表示されます！
@@ -144,12 +144,12 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ## トラブルシューティング
 
-**Q1: コードを書き込んだ後も画面に何も表示されません。**
-- **FPC ケーブルの確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
-- **ドライバ設定の確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
+**Q1: コードを書き込んだ後、画面に何も表示されません。**
+- **FPC ケーブルを確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
+- **ドライバ設定を確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
 
 **Q2: バッテリーを接続してもボードの電源が入りません。**
-- **ハードウェアスイッチ:** ボード上のハードウェアスライドスイッチが ON 位置に切り替えられているか確認してください。
+- **ハードウェアスイッチ:** ボード上のハードウェアスライドスイッチが ON 位置になっているか確認してください。
 - **バッテリー接続:** JST 2.0mm コネクタの極性を確認してください。
 
 ## 技術サポート & 製品ディスカッション

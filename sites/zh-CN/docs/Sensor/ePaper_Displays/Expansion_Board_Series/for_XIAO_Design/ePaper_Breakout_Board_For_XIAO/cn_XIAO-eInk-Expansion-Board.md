@@ -1,6 +1,6 @@
 ---
 description: ePaper Breakout Board 入门指南
-title: ePaper Breakout Board
+title: ePaper Breakout Board 入门指南
 keywords:
   - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
     </a>
 </div><br />
 
-认识 XIAO eInk Expansion Board，它是你使用 XIAO 系列轻松驱动 eInk 显示屏的首选解决方案。该板载有 24 针 FPC 连接器，可与我们的 eInk 产品系列无缝连接；如果你希望扩展更多选择，8 针 2.54 排针则允许你轻松集成任意你选择的微控制器。你可以把这块板子看作是你的 eInk 的“最佳拍档”，增强其功能，同时让你的开发更加轻松。
+认识一下 XIAO eInk Expansion Board，它是你使用 XIAO 系列轻松驱动 eInk 显示屏的首选解决方案。该板载有 24 针 FPC 连接器，可与我们的 eInk 产品系列无缝连接；如果你希望扩展更多选择，8 针 2.54 间距排针可以让你轻松集成任意你选择的微控制器。可以把这块板看作是你的 eInk 的“最佳拍档”，增强其功能，同时让你的开发更加轻松。
 
 :::note
 此 Breakout Board 不包含 eInk 显示屏；显示屏需要单独购买。
@@ -35,10 +35,10 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 ### 特性
 
 - 24 针 FPC 连接器：为 eInk 显示屏提供稳固可靠的连接。
-- XIAO 插座：允许你使用 XIAO 作为处理器，提供小巧而强大的控制方案。
-- 8 针 2.54 排针：通过连接任意微控制器，为你提供灵活性，开启无限可能。
-- 即插即用：以易用性为设计目标，非常适合初学者和专家使用。
-- 应用广泛：适用于从小尺寸到大尺寸的各种 eInk 显示屏。
+- XIAO 插座：允许你使用 XIAO 作为处理器，提供紧凑而强大的控制方案。
+- 8 针 2.54 排针：通过连接任意微控制器提供灵活性，开启无限可能。
+- 即插即用：为易用性而设计，非常适合初学者和专家。
+- 多种应用：适用于从小尺寸到大尺寸的各种 eInk 显示屏。
 
 ### 应用场景
 
@@ -60,7 +60,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 <div class="table-center">
 
-|  eInk SPI Pins |  XIAO  |
+|  eInk SPI 引脚 |  XIAO  |
 |       ---      |  ---   |
 |      RST       |   D0   |
 |      CS        |   D1   |
@@ -73,14 +73,14 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 ### 支持的 eInk
 
-1. [1.54-inch E-paper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-2. [2.13-inch E-Paper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-3. [2.13-inch E-Paper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-4. [2.9 inch E-paper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-5. [4.2-inch E-Paper - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-6. [4.26-inch E-Paper - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-7. [5.65-inch E-paper -  Sevencolor 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
-8. [5.83-inch E-paper - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+1. [1.54 英寸 E-paper - 点阵 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+2. [2.13 英寸 E-Paper - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+3. [2.13 英寸 E-Paper - 四色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+4. [2.9 英寸 E-paper - 单色 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+5. [4.2 英寸 E-Paper - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+6. [4.26 英寸 E-Paper - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+7. [5.65 英寸 E-paper - 七色 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
+8. [5.83 英寸 E-paper - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 
 
 
@@ -152,7 +152,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong>
     </a>
 </div>
 
@@ -173,7 +173,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 **步骤 3.** 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -200,7 +200,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
 
-下载库之后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库。
+下载库之后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -222,16 +222,16 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 #define USE_XIAO_EPAPER_BREAKOUT_BOARD
 ```
 
-之后，依次进入 **Tools** -> **Board** -> **XIAO ESP32C6** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
+之后，依次点击 **Tools** -> **Board** -> **XIAO ESP32C6** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
 
-现在你会在电子纸屏幕上看到反馈！下面是 Helloworld 示例的效果。
+现在你就能在你的电子纸屏幕上看到反馈了！下面是 Helloworld 示例的效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-如果你使用的是 1.54 英寸或 2.9 英寸的电子墨水屏，由于它们的驱动芯片，在使用时钟等动态效果时可能会出现闪烁现象。请放心，这不是程序问题。但不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
+如果你使用的是 1.54 英寸或 2.9 英寸的电子墨水屏，由于它们的驱动芯片，在使用时钟等动态效果时可能会出现闪烁现象。请放心，这不是程序问题。不过，不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
 
 如果你使用的是 5.83 英寸和 7.5 英寸的屏幕，它们使用不同的芯片，因此不会出现闪烁现象。
 :::
@@ -297,10 +297,10 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 #### 如何制作图片
 
-使用 Windows 内置软件 **Paint** 创建一张与所用屏幕**分辨率相同**的图片，并将其保存为 `BMP` 或 `JPG` 文件；
+使用 Windows 自带的 **Paint** 软件创建一张与所用屏幕**分辨率相同**的图片，并将其保存为 `BMP` 或 `JPG` 文件；
 
 :::note
-你的图片分辨率必须与所使用的屏幕相同，例如，4.2 英寸电子纸的分辨率是 400 x 300 像素，那么你不能使用 300 x 400 的尺寸，否则会导致 iamge2lcd 输出的 `.h` 文件多出 200 个字节。
+你的图片分辨率必须与所用屏幕相同，例如，4.2 英寸电子纸的分辨率是 400 x 300 像素，那么你不能使用 300 x 400 的尺寸，否则会导致 iamge2lcd 输出的 `.h` 文件多出 200 个字节。
 :::
 
 图片的颜色应与 Windows 自带画板的标准颜色保持一致。画板的颜色如下：
@@ -328,7 +328,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 **步骤 1.** 打开 [Image2lcd.7z](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image2Lcd.7z)，解压并打开应用程序。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1.png" style={{width:700, height:'auto'}}/></div>
 
-**步骤 2.** 打开图片，将 "Output file type" 选择为 "C array (*.c)"，将 "Scan mode" 选择为 "Horizon Scan"，其他参数设置如下所示：
+**步骤 2.** 打开图片，将 "Output file type" 选择为 "C array (*.c)"，将 "Scan mode" 选择为 "Horizon Scan"，其他参数设置如下：
 
 <div class="table-center">
   <table align="center">
@@ -336,7 +336,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
         <th>电子纸</th>
         <th>位像素</th>
         <th>最大宽度和高度</th>
-        <th>反色</th>
+        <th>反转颜色</th>
         <th>显示模式</th>
     </tr>
     <tr>
@@ -437,7 +437,7 @@ url: https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持，以确保您在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

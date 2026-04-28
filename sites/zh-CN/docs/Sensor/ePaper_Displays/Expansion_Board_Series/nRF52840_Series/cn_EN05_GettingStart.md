@@ -1,7 +1,7 @@
 ---
 description: XIAO ePaper Display Board(nRF52840) - EN05 入门指南
 sku: 100085486
-title: XIAO ePaper Display Board(nRF52840) - EN05 入门指南
+title: EN05 入门指南
 sidebar_position: 1
 image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EN05 入门指南
+# XIAO ePaper Display Board - EN05 入门指南
 
 <div class="table-center">
 <table align="center">
@@ -38,15 +38,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO nRF52840 Plus** 提供算力，EN05 显示板支持多种 24 针 ePaper 显示屏。它配备用于连接额外传感器的扩展 IO 端口、带电源开关的 JST 2.0 mm 电池接口、内置充电 IC，并集成了 3 个用户按键。非常适合超低功耗 ePaper 项目，例如智能姓名牌、电子价签、会议室标牌以及便携式信息看板等。
+由 **XIAO nRF52840 Plus** 提供算力，显示板 EN05 支持多种 24-pin ePaper 显示屏。它配备用于连接额外传感器的扩展 IO 端口、带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC，并带有三个用户按键。非常适合超低功耗 ePaper 项目，例如智能姓名牌、电子价签、会议室标牌和便携式信息板等。
 
 ### 特性
 
-- **由 XIAO nRF52840 Plus 供电：** 连接兼容的 ePaper 显示屏即可立即工作，板载 NFC 接口可用于轻触配置、配对或触发内容更新。
-- **多样化显示支持：** 兼容多种 24 针 ePaper 显示屏，可支持不同项目需求的 24 针 ePaper 显示屏。
+- **由 XIAO nRF52840 Plus 供电：** 当连接到兼容的 ePaper 显示屏时即可立即工作，板载 NFC 接口可用于轻触配置、配对或触发内容更新。
+- **多功能显示支持：** 兼容多种 24-pin ePaper 显示屏，支持 24-Pin ePaper 显示屏以满足不同项目需求。
 - **扩展 IO 端口：** 可连接额外的传感器，例如温湿度传感器，以增强功能。
-- **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
-- **兼容多种软件平台：** 无论你更喜欢使用 Arduino、Platform IO、ESPHome 等进行编程，此驱动板都能支持，为你的项目提供最大灵活性。
+- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
+- **兼容多种软件平台：** 无论你更喜欢使用 Arduino、Platform IO、ESPHome 等进行编程，此驱动板都支持这些方式，为你的项目提供最大灵活性。
 
 ### 规格参数
 
@@ -56,15 +56,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 | **无线** | Bluetooth 5.0 |
 | **ePaper 接口** | SPI FPC 24-Pin 0.5mm |
 | **电池接口** | JST 2.0mm（3.7V 锂电池） |
-| **开关** | 硬件电源拨动开关 |
+| **开关** | 硬件电源滑动开关 |
 | **按键** | 1x 复位按键（侧边安装） <br/> 3x 用户按键（侧边安装） |
 | **PCB 厚度** | 1.2mm |
 
 ## 硬件概览
 
-### 支持的电子纸屏幕
+### 支持的 ePaper 显示屏
 
-EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
+EN05 支持多种 24-Pin SPI ePaper 显示屏，包括但不限于：
 
 - [1.54-inch E-paper - Dotmatix 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-inch E-Paper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
@@ -82,7 +82,7 @@ EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 ### 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库功能相同，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库功能相同，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -102,9 +102,9 @@ EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 选择你的设备类型，它会生成一些代码。复制这些代码，我们稍后会用到。
 
 :::tip
-如果你选择错误，屏幕将不会显示任何内容。
+如果你做出了错误的选择，屏幕将不会显示任何内容。
 
-所以请务必确认你选择了正确的设备或器件类型。
+所以请确保你选择了正确的设备或元件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
@@ -115,14 +115,14 @@ EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 
 ## 入门
 
-这里我们以 7.5 英寸黑白显示屏为例。其他受支持的屏幕步骤完全相同；你只需在驱动中选择合适的屏幕尺寸标识符即可。
+这里我们以 7.5 英寸黑白显示屏为例。其他受支持的屏幕步骤相同；你只需在驱动中选择合适的屏幕尺寸标识符即可。
 
 ### 配置并烧录程序
 选择图中所示的示例
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-新建一个名为 "driver.h" 的文件，并将这些代码粘贴进去。代码应类似如下：
+新建一个名为 "driver.h" 的文件，并将这些代码粘贴进去。代码应类似于：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
@@ -139,22 +139,22 @@ EN05 支持多种 24 针 SPI ePaper 显示屏，包括但不限于：
 ## 资源
 
 - **[PDF]** [XIAO ePaper Display Board Ex05 原理图](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_Ex05_V1.0.pdf)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN05 原理图与 PCB](https://files.seeedstudio.com/wiki/Epaper/EN05/XIAO_ePaper_Display_Board_EN05_V1.11_SCH&PCB_260420.zip)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN05 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN05/XIAO_ePaper_Display_Board_EN05_V1.11_SCH&PCB_260420.zip)
 
 
 ## 故障排查
 
 **Q1：上传代码后屏幕没有任何显示。**
-- **检查 FPC 线缆：** 确保 ePaper 的 FPC 线缆插入方向正确，并且已经牢固锁紧在连接器中。
+- **检查 FPC 线缆：** 确保 ePaper FPC 线缆插入方向正确，并且已经牢固锁紧在连接器中。
 - **确认驱动配置：** 再次检查 `driver.h`，确保为你的具体屏幕尺寸选择了正确的 `BOARD_SCREEN_COMBO`。
 
 **Q2：连接电池后开发板无法上电。**
-- **硬件开关：** 确认板上的硬件拨动开关已切换到 ON 位置。
-- **电池连接：** 检查 JST 2.0mm 接口的极性是否正确。
+- **硬件开关：** 确认板上的硬件滑动开关已拨到 ON 位置。
+- **电池连接：** 检查 JST 2.0mm 接插件的极性。
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

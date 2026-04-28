@@ -1,17 +1,17 @@
 ---
-description: Primeiros Passos com XIAO ePaper Display Board(ESP32-S3) - EE04
-title: Primeiros Passos com XIAO ePaper Display Board(ESP32-S3) - EE04
+description: Introdução à XIAO ePaper Display Board(ESP32-S3) - EE04
+title: Introdução à EE04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
-sidebar_position: 1
 slug: /epaper_ee04
+sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
   date: 09/25/2025
   author: Jason
 createdAt: '2025-09-25'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-20'
 url: https://wiki.seeedstudio.com/pt-br/epaper_ee04/
 ---
 
@@ -19,12 +19,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Primeiros Passos com XIAO ePaper Display EE04
+# Introdução à XIAO ePaper Display Board - EE04
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>Placa de Exibição XIAO ePaper EE04</th>
+        <th>XIAO ePaper Display Board EE04</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
@@ -39,14 +39,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 suporta telas ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave de energia, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É bem adequada para projetos ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
+Alimentada pelo **XIAO ESP32-S3** Plus, a placa de display EE04 suporta telas ePaper de **24 pinos** e **50 pinos**. Ela possui um conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com um botão de reset e três botões de usuário. É ideal para projetos de ePaper de baixo consumo, como sinalização digital, etiquetas eletrônicas e quadros de informação portáteis.
 
 ### Características
 
-- **Alimentada por XIAO ESP32-S3 Plus:** Funciona imediatamente quando conectada a uma tela ePaper compatível.
-- **Suporte Versátil de Display:** Compatível com uma ampla gama de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com troca fácil por meio de jumpers.
-- **Conector de Bateria com Chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
-- **Botões Amigáveis ao Usuário:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
+- **Alimentada por XIAO ESP32-S3 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível.
+- **Suporte versátil a displays:** Compatível com uma ampla variedade de telas ePaper, suportando interfaces de 24 pinos e 50 pinos, com troca fácil por meio de jumpers.
+- **Conector de bateria com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
+- **Botões fáceis de usar:** Inclui 1 botão de reset e 3 botões programáveis pelo usuário, oferecendo flexibilidade para acelerar projetos e funções personalizáveis.
 
 ### Especificações
 
@@ -64,28 +64,28 @@ Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 suporta telas
     </tr>
     <tr>
       <th>Conector ePaper</th>
-      <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
+      <td>FPC 24 pinos 0,5mm<br />FPC 50 pinos 0,5mm</td>
     </tr>
     <tr>
-      <th>Conector de Bateria</th>
-      <td>JST 2.0mm</td>
+      <th>Conector de bateria</th>
+      <td>JST 2,0mm</td>
     </tr>
     <tr>
       <th>Chave</th>
-      <td>Lig/Desl da alimentação da bateria</td>
+      <td>Alimentação da bateria ON/OFF</td>
     </tr>
     <tr>
-      <th>Fonte de Alimentação</th>
-      <td>- Bateria Li 3,7V<br />- USB Tipo-C</td>
+      <th>Fonte de alimentação</th>
+      <td>- Bateria Li 3,7V<br />- USB Type-C</td>
     </tr>
     <tr>
       <th>Botão</th>
-      <td>- 1x botão de Reset<br />- 3x botões de Usuário</td>
+      <td>- 1x botão de reset<br />- 3x botões de usuário</td>
     </tr>
   </tbody>
 </table>
 
-### Guia de Seleção de Placa ePaper
+### Guia de seleção de placa ePaper
 
 <table>
     <thead>
@@ -104,37 +104,37 @@ Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 suporta telas
             <td>Série XIAO</td>
         </tr>
         <tr>
-            <th>Telas ePaper Compatíveis</th>
+            <th>Displays ePaper compatíveis</th>
             <td>ePaper de 24 pinos<br />ePaper de 50 pinos</td>
             <td>ePaper de 24 pinos</td>
             <td>ePaper de 24 pinos</td>
         </tr>
         <tr>
             <th>Conector ePaper</th>
-            <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
-            <td>FPC 24 Pin 0.5mm</td>
+            <td>FPC 24 pinos, 0,5mm<br />FPC 50 pinos, 0,5mm</td>
+            <td>FPC 24 pinos 0,5mm</td>
+            <td>FPC 24 pinos 0,5mm</td>
         </tr>
         <tr>
-            <th>Conector de Bateria</th>
-            <td>JST 2.0mm</td>
+            <th>Conector de bateria</th>
+            <td>JST 2,0mm</td>
             <td>/</td>
-            <td>JST 2.0mm</td>
+            <td>JST 2,0mm</td>
         </tr>
         <tr>
             <th>Chave</th>
-            <td>Lig/Desl da alimentação da bateria</td>
+            <td>Alimentação da bateria ON/OFF</td>
             <td>/</td>
-            <td>Lig/Desl da alimentação da bateria</td>
+            <td>Alimentação da bateria ON/OFF</td>
         </tr>
         <tr>
-            <th>Botão</th>
-            <td>1x botão de Reset<br />3x botões de Usuário</td>
+            <th>Porta de extensão de IO</th>
+            <td>/
             <td>/</td>
             <td>/</td>
         </tr>
         <tr>
-            <th>Porta de Extensão IO</th>
+            <th>Porta de IO de extensão</th>
             <td>/</td>
             <td>conexão de outros controladores</td>
             <td>conexão de sensores adicionais</td>
@@ -144,13 +144,13 @@ Alimentada pelo **XIAO ESP32-S3** Plus, a placa de exibição EE04 suporta telas
 
 ### Aplicações
 
-- **Painel de Casa Inteligente**: Exibir informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
-- **Monitoramento de Energia**: Mostrar dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
-- **Alertas de Segurança**: Exibir alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
-- **Display de Termostato Inteligente**: Exibir níveis de temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
-- **Porta-retratos Digital**: Criar um porta-retratos digital com WiFi que pode exibir imagens da sua rede de casa inteligente.
+- **Dashboard de casa inteligente**: Exibe informações em tempo real, como atualizações de clima, eventos de calendário e notificações de vários dispositivos de casa inteligente.
+- **Monitoramento de energia**: Mostra dados de consumo de energia de medidores inteligentes, ajudando moradores a acompanhar e gerenciar o uso de energia com mais eficiência.
+- **Alertas de segurança**: Exibe alertas e notificações sobre eventos de segurança, como detecção de movimento ou ativação de sensores de porta/janela.
+- **Display de termostato inteligente**: Mostra níveis de temperatura e umidade, bem como configurações de controle para o seu termostato inteligente.
+- **Porta-retratos digital**: Crie um porta-retratos digital com WiFi que pode exibir imagens da sua rede de casa inteligente.
 
-## Visão Geral de Hardware
+## Visão geral de hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -160,15 +160,15 @@ Esta versão XIAO ePaper Display Board(ESP32-S3) - EE04 não suporta funcionalid
 
 :::
 
-### ePaper Suportado
+### ePaper suportado
 
-#### Conector de 24 Pinos
+#### Conector de 24 pinos
 
-- [ePaper de 1,54 polegada - Monocromático 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [ePaper de 2,13 polegadas - Flexível Monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [ePaper de 1,54 polegadas - Monocromático 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [ePaper de 2,13 polegadas - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [ePaper de 2,13 polegadas - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
 - [ePaper de 2,9 polegadas - Monocromático 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [ePaper de 2,9 polegadas - Quádrupla cor 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [ePaper de 2,9 polegadas - Quádruplo colorido 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 - [ePaper de 4,2 polegadas - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
 - [ePaper de 4,26 polegadas - Monocromático 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
 - [ePaper de 5,83 polegadas - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
@@ -178,30 +178,30 @@ Esta versão XIAO ePaper Display Board(ESP32-S3) - EE04 não suporta funcionalid
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Ao usar a XIAO ePaper Display Board, certifique-se de definir o jumper de acordo com o tipo de tela ePaper:
+Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de acordo com o tipo de display ePaper:
 
-- Para telas ePaper de 24 pinos → defina o jumper para 24 pinos
+- Para displays ePaper de 24 pinos → ajuste o jumper para 24 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que a tela ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
+⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
-#### Conector de 50 Pinos
+#### Conector de 50 pinos
 
 - [ePaper Spectra6 de 7,3 polegadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/36.png" style={{width:800, height:'auto'}}/></div>
 :::tip
-Ao usar a XIAO ePaper Display Board, certifique-se de definir o jumper de acordo com o tipo de tela ePaper:
-- Para telas ePaper de 50 pinos → defina o jumper para 50 pinos
+Ao usar a XIAO ePaper Display Board, certifique-se de configurar o jumper de acordo com o tipo de display ePaper:
+- Para displays ePaper de 50 pinos → ajuste o jumper para 50 pinos
 
-⚠️ Usar a configuração de jumper incorreta pode fazer com que a tela ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
+⚠️ Usar a configuração de jumper incorreta pode fazer com que o ePaper não exiba nada ou mostre conteúdo anormal. Sempre verifique a posição do jumper antes de ligar.
 
 :::
 
-## Visão Geral de Software
+## Visão geral de software
 
-### Instalar a Biblioteca Seeed GFX
+### Instalar a biblioteca Seeed GFX
 
 :::tip
 Esta biblioteca tem a mesma função que a biblioteca TFT e não é compatível com ela. Se você tiver instalado a biblioteca TFT ou outras bibliotecas de display semelhantes, desinstale-as primeiro.
@@ -213,7 +213,7 @@ Baixe e instale a biblioteca Seeed GFX a partir do GitHub.
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Clique aqui para baixar</button></p>
 </a>
 </div>
 
@@ -221,7 +221,7 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código e o usaremos depois.
+Selecione o tipo do seu dispositivo e ele irá gerar algum código. Copie esse código e iremos usá-lo depois.
 
 :::tip
 Se você fizer a escolha errada, a tela não exibirá nada.
@@ -231,24 +231,24 @@ Portanto, certifique-se do tipo dos seus dispositivos ou componentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-Há 4 exemplos básicos, abra um exemplo básico que você gostar:
+Existem 4 exemplos básicos, abra um exemplo básico de que você goste:
 
-1. Bitmap: Exibir uma imagem bitmap.
-2. Clock: Exibir um relógio.
-3. Clock_digital: Exibir um relógio digital.
-4. Shape: Exibir tamanhos diferentes de palavras e formas aleatoriamente.
+1. Bitmap: Exibe uma imagem bitmap.
+2. Clock: Exibe um relógio.
+3. Clock_digital: Exibe um relógio digital.
+4. Shape: Exibe tamanhos diferentes de palavras e formas aleatoriamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Iniciando
+## Primeiros passos
 
 Aqui, usamos um display de 5,83 polegadas como exemplo. As etapas são as mesmas para todas as telas de 24 pinos; a única diferença é selecionar o tamanho de tela apropriado no driver.
 
-Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ficar assim:
+Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ser assim:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/40.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -264,20 +264,20 @@ Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32S3** e **Tools** ->
 Agora você verá o retorno na sua tela de epaper! A seguir estão os resultados dos exemplos de Helloworld.
 
 :::tip
-⚠️ Nota: Orientação do Cabo do ePaper
+⚠️ Nota: Orientação do cabo do ePaper
 Ao conectar o display ePaper à XIAO ePaper Display Board, certifique-se de que o cabo FPC seja inserido na direção correta.
 
-⚠️ Não inverta o conector! Inserir o cabo de cabeça para baixo pode fazer com que o ePaper não exiba nada ou até danificar a tela/placa.
+⚠️ Não inverta o conector! Inserir o cabo de cabeça para baixo pode fazer com que o ePaper deixe de exibir ou até danifique a tela/placa.
 A imagem abaixo mostra a conexão correta:
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### Botões de Usuário na XIAO ePaper Display Board(ESP32-S3) - EE04
+### Botões de usuário na XIAO ePaper Display Board(ESP32-S3) - EE04
 
 A EE04 possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder aos pressionamentos usando Arduino.
 
-Na EE04, os três botões são conectados ao XIAO ESP32-S3 Plus:
+Na EE04, os três botões estão conectados ao XIAO ESP32-S3 Plus:
 
 <table>
   <thead>
@@ -299,7 +299,7 @@ Na EE04, os três botões são conectados ao XIAO ESP32-S3 Plus:
 
 Todos os botões são ativos em nível baixo, o que significa que eles leem LOW quando pressionados e HIGH quando soltos.
 
-Exemplo Básico de Leitura de Botão
+Exemplo básico de leitura de botão
 
 Este exemplo demonstra como detectar pressionamentos de botões e imprimir mensagens no monitor serial.
 
@@ -389,13 +389,13 @@ void loop() {
 }
 ```
 
-### Bateria de Usuário na XIAO ePaper Display Board(ESP32-S3) - EE04
+### Bateria do usuário na XIAO ePaper Display Board(ESP32-S3) - EE04
 
 Ao operar com alimentação por bateria:
 
 - O dispositivo entrará automaticamente em modo de baixo consumo entre as atualizações
 
-- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com carga completa usando as configurações padrão)
+- A vida útil da bateria depende da frequência de atualização (tipicamente 3 meses com uma carga completa usando as configurações padrão)
 
 - O dispositivo exibirá um ícone de bateria fraca no canto superior direito quando o nível da bateria estiver abaixo de 20%
 
@@ -433,13 +433,13 @@ void loop() {
 }
 ```
 
-### Exibindo Imagens Personalizadas na XIAO ePaper Display Board (ESP32-S3) - EE04
+### Exibindo imagens personalizadas na XIAO ePaper Display Board (ESP32-S3) - EE04
 
 Encontre o exemplo Bitmap na biblioteca GFX e selecione-o.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
 
-Observe que você precisa criar um arquivo driver.h dentro do diretório do seu projeto.[Para mais detalhes, clique para saber mais.](#install-seeed-gfx-library).
+Observe que você precisa criar um arquivo driver.h dentro do diretório do seu projeto.[Para detalhes, clique para Saiba mais.](#install-seeed-gfx-library).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
 
@@ -451,7 +451,7 @@ Depois de enviar a imagem, gere o array em C (dados da imagem).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
 
-Copie o conteúdo do array. Tome cuidado para copiar apenas os dados em hexadecimal e não incluir quaisquer caracteres irrelevantes.
+Copie o conteúdo do array. Tome cuidado para copiar apenas os dados hexadecimais e não incluir caracteres irrelevantes.
 
 :::tip 
 Se as cores no seu display parecerem invertidas em comparação com o seu design original, selecione a opção Invert Colors na ferramenta HMI antes de gerar o código.
@@ -463,19 +463,19 @@ Substitua o array existente no arquivo image.c ou image.h dentro do seu sketch A
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
 
-Por fim, envie o programa para o seu XIAO ESP32-S3. Agora você deve ver sua imagem personalizada exibida na tela ePaper.
+Por fim, envie o programa para o seu XIAO ESP32-S3. Agora você deverá ver sua imagem personalizada exibida na tela ePaper.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## Recursos
 
-- **[PDF]** [Esquemático da Seeed Studio XIAO ePaper Display EE04](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
-- **[PDF]** [Arquivo 3D Grabcad da Seeed Studio XIAO ePaper Display EE04](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EE04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
 
 
 
-## Suporte Técnico & Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
