@@ -146,7 +146,7 @@ Seeed Studio XIAO ESP32-S3 是一款功能强大且用途广泛的开发板，�
     <tr>
    <td align="center">GPIO 15</td>
    <td align="center">DVP_Y2</td>
-  </tr]
+  </tr>
     <tr>
    <td align="center">GPIO 16</td>
    <td align="center">DVP_Y5</td>

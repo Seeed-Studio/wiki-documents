@@ -138,7 +138,7 @@ Abaixo está uma visão geral dos pinos funcionais do XIAO ESP32-S3.
     <tr>
    <td align="center">GPIO 13</td>
    <td align="center">DVP_PCLK</td>
-  </tr]
+  </tr>
     <tr>
    <td align="center">GPIO 14</td>
    <td align="center">DVP_Y6</td>

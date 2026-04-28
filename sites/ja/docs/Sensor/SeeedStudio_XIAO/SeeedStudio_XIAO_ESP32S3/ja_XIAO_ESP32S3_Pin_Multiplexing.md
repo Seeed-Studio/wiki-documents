@@ -146,7 +146,7 @@ XIAO ESP32-S3 は GPIO41 と GPIO42 をピン A11 および A12 に割り当て�
     <tr>
    <td align="center">GPIO 15</td>
    <td align="center">DVP_Y2</td>
-  </tr]
+  </tr>
     <tr>
    <td align="center">GPIO 16</td>
    <td align="center">DVP_Y5</td>

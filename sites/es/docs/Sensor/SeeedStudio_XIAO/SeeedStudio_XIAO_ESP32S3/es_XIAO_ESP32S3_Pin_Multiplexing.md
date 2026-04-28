@@ -146,7 +146,7 @@ A continuación se muestra una visión general de los pines funcionales de la XI
     <tr>
    <td align="center">GPIO 15</td>
    <td align="center">DVP_Y2</td>
-  </tr]
+  </tr>
     <tr>
    <td align="center">GPIO 16</td>
    <td align="center">DVP_Y5</td>
