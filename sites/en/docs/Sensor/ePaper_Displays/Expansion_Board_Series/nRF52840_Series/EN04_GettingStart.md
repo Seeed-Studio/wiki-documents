@@ -1,6 +1,6 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(nRF52840) - EN04
-title: Getting Started with XIAO ePaper Display Board(nRF52840) - EN04
+title: Getting Started with EN04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Getting Started with XIAO ePaper Display EN04
+# Getting Started with XIAO ePaper Display Board - EN04
 
 <div class="table-center">
 <table align="center">

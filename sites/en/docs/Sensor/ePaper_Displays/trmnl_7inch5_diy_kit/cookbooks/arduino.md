@@ -1,22 +1,28 @@
 ---
-description: This article describes how to use TRMNL 7.5inch(OG) DIY Kit to work with Arduino.
-title: works with Arduino
+description: End-to-end Arduino cookbook for the TRMNL 7.5" (OG) DIY Kit - leverages the XIAO ESP32-S3 Plus to drive the 7.5" ePaper display directly from custom Arduino sketches (rather than the TRMNL cloud platform).
+title: Arduino Cookbook
 keywords:
   - ePaper display
   - TRMNL
+  - Arduino
+  - XIAO ESP32-S3 Plus
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /ogdiy_kit_works_with_arduino
-sidebar_position: 3
+sidebar_position: 1
 last_update:
-  date: 06/29/2025
+  date: 04/28/2026
   author: Allen
 createdAt: '2025-07-17'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/
+updatedAt: '2026-04-28'
 ---
 
+# Arduino Cookbook: TRMNL 7.5" (OG) DIY Kit
 
-# Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino
+:::tip Read the main Arduino guide first
+This page is the **TRMNL DIY Kit-specific cookbook**. The shared boilerplate — Arduino IDE setup, ESP32 board package, installing `Seeed_GFX`, generating `driver.h` from the Configuration Tool — lives in **[Work with Arduino](/epaper_work_with_arduino)**. Skim that first if you're new to Arduino on Seeed ePaper; this page focuses on the parts that are specific to the TRMNL DIY Kit hardware.
+
+Looking for the **TRMNL cloud dashboard** workflow instead (no custom code, plug-in driven dashboards)? See **[Work with TRMNL](/reterminal_e10xx_trmnl)**.
+:::
 
 ## Introduction
 

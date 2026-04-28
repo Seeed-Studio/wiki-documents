@@ -1,6 +1,6 @@
 ---
 description: Getting Started with EE02 13.3-inch E-ink Driver Board
-title: Getting Started with XIAO ePaper Display Board - EE02
+title: Getting Started with EE02
 keywords:
   - E-ink
   - Driver Board
@@ -8,6 +8,7 @@ keywords:
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
+sidebar_position: 1
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
@@ -17,6 +18,8 @@ createdAt: '2025-12-19'
 updatedAt: '2026-03-05'
 url: https://wiki.seeedstudio.com/getting_started_with_ee02/
 ---
+
+# Getting Started with XIAO ePaper Display Board - EE02
 
 <div class="table-center">
 <table align="center">
