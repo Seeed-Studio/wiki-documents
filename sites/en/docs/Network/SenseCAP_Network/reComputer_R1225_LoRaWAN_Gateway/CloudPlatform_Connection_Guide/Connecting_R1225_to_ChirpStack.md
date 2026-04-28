@@ -96,7 +96,7 @@ Configure the gateway via the Web UI,please check the [Quick Start](https://file
 
 Navigate to **LoRa > LoRa Network**
 
-**Mode:** Packet Forward
+**Mode:** Packet Forwarder
 
 Packet Forwarder Settings:
 
