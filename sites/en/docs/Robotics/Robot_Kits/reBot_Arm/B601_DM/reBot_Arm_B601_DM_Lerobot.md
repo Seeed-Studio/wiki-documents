@@ -15,7 +15,7 @@ last_update:
   author: LiuJunjie
 translation:
   skip:
-    - - zh-CN
+    - zh-CN
 createdAt: '2026-04-09'
 updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
