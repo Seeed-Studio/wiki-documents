@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-11-26'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## 概述
 
-了解在安装设备后如何在 reComputer Industrial R20xx 系列上配置和测试硬件组件。本 Wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、RS485、RS232、DI/DO 测试、用于安全关机的 UPS 等内容。
+了解在安装设备后如何在 reComputer Industrial R20xx 系列上配置和测试硬件组件。本 Wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、RS485、RS232、DI/DO 测试、UPS 安全关机等内容。
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -99,8 +99,8 @@ gcc spidev_test.c -o spidev_test
 ./spidev_test -D /dev/spidev10.0 -v -p hello
 ```
 
-此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，启用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
-通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，其中 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有连接实际设备的情况下测试 SPI 通信。
+此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，使用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
+通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，其中 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有实际设备连接的情况下测试 SPI 通信。
 
 ## Wi-Fi 扫描
 
@@ -110,7 +110,7 @@ gcc spidev_test.c -o spidev_test
 sudo iwlist wlan0 scan
 ```
 
-- 此命令会扫描附近所有 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
+- 此命令会扫描所有附近的 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
 
 ## 蓝牙扫描  
 
@@ -130,7 +130,7 @@ sudo bluetoothctl
 scan on
 ```
 
-此命令将开始扫描附近的蓝牙设备。然后你可以在 ***bluetoothctl*** 界面中使用其他命令与蓝牙设备交互，例如配对或连接它们。
+此命令将开始扫描附近的蓝牙设备。然后你可以在 ***bluetoothctl*** 界面中使用其他命令与蓝牙设备交互，例如配对或连接。
 
 ## 通过 Mini-PCIe 使用 LoRa®
 
@@ -159,13 +159,13 @@ cd sx1302_hal
 sudo nano ./libloragw/inc/loragw_i2c.h
 ```
 
-将此行修改为：  
+修改这一行：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-1"
 ```
 
-修改为：  
+为：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-2"
@@ -174,7 +174,7 @@ sudo nano ./libloragw/inc/loragw_i2c.h
 将 **#define I2C_DEVICE "/dev/i2c-1"** 修改为 **#define I2C_DEVICE "/dev/i2c-2"。**
 按 **ctrl+x** 退出，按 **y** 保存更改，然后按 **Enter** 返回命令行页面。
 
-4. 添加 packet_forwarder/reset_lgw.sh 文件：
+4. 4.添加 packet_forwarder/reset_lgw.sh 文件：
 
 ```bash
 sudo nano packet_forwarder/reset_lgw.sh
@@ -519,7 +519,7 @@ sudo minicom -D /dev/ttyACM2
 
 3. 下面的操作需要在两个已打开的 ACM 上都执行：
 
-- 先按 ***Ctrl+A***，再按 ***Z***，会出现 Minicom Command Summary 界面：
+- 按 ***Ctrl+A***，然后按 ***Z***，会出现 Minicom Command Summary 界面：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
 - 再按 ***O*** 打开配置，选择 Serial port setup，并按 ***Enter***；打开所有 RS485 相关接口，依次按 ***H/I/J/K/L*** 打开；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
@@ -530,7 +530,7 @@ sudo minicom -D /dev/ttyACM2
 
 以 ACM2 和 ACM3 为例：
 如果你想从 ACM2 发送到 ACM3，需要重新设置 ACM2：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM2 中任意打印字符串，并且可以在 ACM3 中同时看到 ACM2 的内容；
-相反，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容，如图所示。
+反之，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容。如图所示。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -543,7 +543,7 @@ reComputer Industrial R20xx 包含 1 个 RS232 接口，对应的 COM 端口和�
 |---------------------------|--------------|----------------------|-----------------|
 | **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
 
-由于 RS232 为全双工通信，直接将 RS232 的 TX 和 RX 短接即可进行回环测试。
+由于 RS232 是全双工通信，直接将 RS232 的 TX 和 RX 短接即可进行回环测试。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.12_rs232_testing_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -616,7 +616,7 @@ reComputer Industrial R20xx 包含 8 个 DI 接口，用户可以根据实际需
   </table>
 </div>
 
-DI 接口的输入类型为 PNP。其支持的输入电压为 5VDC~24VDC，电流 - 1000mA。
+DI 接口的输入类型为 PNP。它支持的输入电压为 5VDC~24VDC，电流 - 1000mA。
 要测试 DI 的功能，你可以按照以下步骤进行测试：
 
 1. 已完成 reComputer Industrial R20xx 的 DI 接口与外部负载之间的连接。
@@ -655,19 +655,19 @@ reComputer Industrial R20xx 包含 8 个 DO 接口，用户可以根据实际需
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
       <tr>
-        <td>DO6</td>
+        <td>DO5</td>
         <td>GPIO577</td>
+      </tr>
+      <tr>
+        <td>DO6</td>
+        <td>GPIO578</td>
       </tr>
       <tr>
         <td>DO7</td>
@@ -682,7 +682,7 @@ reComputer Industrial R20xx 包含 8 个 DO 接口，用户可以根据实际需
 </div>
 
 DO 端口的输出类型为晶体管。它支持的输出电压小于 60 VDC，电流容量为 500 mA。
-要测试 DO 的功能，你可以按照以下步骤进行测试：
+要测试 DO 的功能，可以按照以下步骤进行测试：
 
 1. 完成 reComputer Industrial R20xx 的 DO 端口与外部负载之间的连接。
 2. 输入以下命令，将输出设置为高电平或低电平：
@@ -698,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 ## USB Hub 测试
 
-要测试 USB hub，你可以按照以下步骤进行：
+要测试 USB hub，可以按照以下步骤进行：
 
 1. 运行 ***lsusb*** 命令检查是否检测到 USB hub。该命令会列出所有已连接的 USB 设备，包括 hub。
 
@@ -706,12 +706,12 @@ echo 0 > /sys/class/gpio/gpio638/value
 lsusb
 ```
 
-运行此命令后，应显示系统中连接的 USB 设备信息，包括所有存在的 USB hub。
-如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是 hub 本身或其与系统连接存在问题。在这种情况下，你可能需要对 USB hub 或其连接进行故障排查。
+运行此命令后，应显示系统中已连接的 USB 设备信息，包括存在的任何 USB hub。
+如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是 hub 或其与系统连接存在问题。在这种情况下，你可能需要对 USB hub 或其连接进行故障排查。
 
 ## RTC（实时时钟）测试
 
-要测试实时时钟（RTC）功能，请按照以下步骤操作：
+要测试实时时钟（RTC）的功能，请按照以下步骤操作：
 
 1. 禁用自动时间同步：
 
@@ -742,7 +742,7 @@ sudo hwclock -r
 
 该命令将读取并显示存储在 RTC 中的时间。
 
-5. 断开 RTC 的电源，等待几分钟，然后重新接通电源并再次检查 RTC 时间，以确认是否保持了正确时间。
+5. 断开 RTC 的电源，等待几分钟，然后重新接通电源，再次检查 RTC 时间以确认是否保持了正确时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -809,8 +809,8 @@ echo "c" > /proc/sysrq-trigger
 
 该命令会触发内核崩溃，并应导致看门狗重启系统。
 
-5. 监控系统，以确认其在指定超时时间后重新启动。
-这些步骤将帮助你测试并确保系统上的看门狗定时器功能正常。
+5. 监控系统，以确认其在指定的超时时间后重新启动。
+这些步骤将帮助你测试并确保系统上看门狗定时器的功能正常。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -874,7 +874,7 @@ cd usr/bin
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
-该命令指示 ATECC 工具使用插槽 10（-b 10），将序列号大小设置为 192 位 ***(-s 192)***，并生成一个随机序列号 ***(-c 'serial')***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
+该命令指示 ATECC 工具使用槽 10（-b 10），将序列号大小设置为 192 位 ***( -s 192 )***，并生成一个随机序列号 ***( -c 'serial' )***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
 通过此过程，你可以与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
 
 ## 与 EEPROM 交互
@@ -901,23 +901,23 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 
 ## 检查 SSD 检测情况
 
-要列出包括 SSD 在内的磁盘，你可以使用 fdisk -l 命令。具体如下：
+要列出包括 SSD 在内的磁盘，可以使用 fdisk -l 命令。操作如下：
 
 ```bash
 sudo fdisk -l
 ```
 
-该命令会显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
-在确认对应于 SSD 的条目后，你可以根据需要继续对其进行分区或格式化。
+该命令将显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
+在识别出对应于 SSD 的条目后，你可以根据需要继续对其进行分区或格式化。
 
 ## 用于安全关机的 UPS
 
 CPU 与直流电源输入之间的 GPIO6 用于在电源掉电时向 CPU 报警。然后 CPU 应在超级电容能量耗尽前，通过脚本执行一些紧急操作并运行“$ shutdown”。
-使用此功能的另一种方式是：当 GPIO 引脚状态变化时发起关机。指定的 GPIO 引脚被配置为输入按键，用于产生 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
+使用此功能的另一种方式是：当 GPIO 引脚状态变化时发起关机。指定的 GPIO 引脚被配置为输入按键，用于生成 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
 
 1. 硬件连接。
 
-请确保 UPS 设备的 ***'CM5_UPS_DET'*** 引脚已连接到 R20xx 设备的 GPIO16 引脚。
+请确保 UPS 设备的 ***'CM5_UPS_DET'*** 引脚连接到 R20xx 设备的 GPIO16 引脚。
 
 2. 修改配置文件。
 
@@ -940,7 +940,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 4. 准备 Python 脚本
 
-- 新建一个 Python 脚本文件：
+- 创建一个新的 Python 脚本文件：
 
 ```bash
 cd ~
@@ -1027,8 +1027,8 @@ sudo python3 ups_shutdown.py
 
 ## AI 加速器
 
-reComputer Industrial R20xx 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R20xx-12 系列已预装 Hailo-8 M.2 AI 加速器，性能最高可达 26TOPS。
-如果你购买的是 R20xx-10 系列产品，则需要购买 Hailo 的 NPU 模块以启用 AI 功能。
+reComputer Industrial R20xx 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R20xx-12 系列已预装一块 Hailo-8 M.2 AI 加速卡，性能最高可达 26TOPS。
+如果你购买的是 R20xx-10 系列产品，则需要另行购买 Hailo 的 NPU 模块以启用 AI 功能。
 设备已预装 Hailo 加速器驱动，因此你可以直接使用并运行测试用例：
 
 1. 进入测试用例目录
@@ -1051,8 +1051,8 @@ python basic_pipelines/detection_simple.py
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
-要关闭应用程序，请按 ***`Ctrl+C`*** 。
-这是检测示例的轻量级版本，主要侧重于在尽量减小 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理管线通过最小化视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
+要关闭应用程序，请按 ***`Ctrl+C`***。
+这是检测示例的轻量级版本，主要侧重于在尽量减小 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理流水线通过尽量减少视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
 
 :::note
 如果你购买的 reComputer 不包含 Hailo-8，并计划购买 Hailo 设备进行集成，请参考 Hailo 官方文档 (https://github.com/hailo-ai) 配置固件和环境，并运行示例以验证设备是否可以正常使用。

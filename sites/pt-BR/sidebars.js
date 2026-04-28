@@ -1182,6 +1182,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/pt_XIAO_nRF54L15-Sense_Built-in-Sensor',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/pt_XIAO_nRF54L15-Sense_Power_Consumptions',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/pt_XIAO_nRF54L15-Sense_MicroPython',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/pt_XIAO_nRF54L15-Sense_Arduino',
             {
               type: 'category',
               label: 'Conexão sem fio',
@@ -3692,6 +3693,13 @@ const sidebars = {
                   label: 'Placa carrier J401-Robotics',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/pt_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Placa carrier J601-Robotics',
+                  items: [
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J601/pt_reComputer_Robotics_J601_Getting_Started',
                   ],
                 },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/pt_reComputer_A203_Flash_System',

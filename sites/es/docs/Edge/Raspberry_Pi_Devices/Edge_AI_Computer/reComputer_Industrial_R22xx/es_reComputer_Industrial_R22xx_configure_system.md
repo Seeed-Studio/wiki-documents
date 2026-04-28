@@ -1,5 +1,5 @@
 ---
-description: El reComputer Industrial R22xx es un NVR de grado industrial impulsado por IA, basado en Raspberry Pi CM5 y equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando analítica de video con IA fiable y un funcionamiento continuo y estable en escenarios exigentes.
+description: El reComputer Industrial R22xx es un NVR de grado industrial con IA integrado, basado en Raspberry Pi CM5 y equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando análisis de video con IA fiables y un funcionamiento continuo y estable en escenarios exigentes.
 title: Configurar reComputer Industrial R22xx
 keywords:
   - Controlador de Borde
@@ -13,13 +13,13 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_r22xx_configure_system/
 ---
 
 ## Descripción general
 
-Aprende cómo configurar y probar los componentes de hardware en la serie reComputer Industrial R22xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, prueba del LED de USUARIO, comunicación SPI, escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, pruebas de RS485, RS232, CAN, DI/DO, UPS para apagado seguro y más.
+Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R22xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, prueba del LED de USUARIO, comunicación SPI, escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, pruebas de RS485, RS232, CAN, DI/DO, UPS para apagado seguro y más.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -138,11 +138,11 @@ scan on
 
 Este comando iniciará el escaneo de dispositivos Bluetooth cercanos. Luego puedes usar otros comandos dentro de la interfaz de ***bluetoothctl*** para interactuar con dispositivos Bluetooth, como emparejarlos o conectarte a ellos.
 
-## LoRa® sobre Mini-PCIe
+## LoRa® sobre Mini‑PCIe
 
 ### Configuración LoRa® SPI  
 
-Después de instalar el LoRa® SPI en la ranura Mini-PCIe 2, puedes configurar LoRa® SPI siguiendo estos pasos:
+Después de instalar el LoRa® SPI en la ranura Mini‑PCIe 2, puedes configurar LoRa® SPI siguiendo estos pasos:
 
 1. Clona el repositorio **SX1302_HAL**:
 
@@ -180,13 +180,13 @@ A:
 Cambia **#define I2C_DEVICE "/dev/i2c-1"** a **#define I2C_DEVICE "/dev/i2c-2".**
 Pulsa **ctrl+x** para salir, pulsa **y** para guardar los cambios y luego pulsa **Enter** para volver a la página de la línea de comandos.
 
-4. 4.Añade el archivo packet_forwarder/reset_lgw.sh:
+4. 4.Agrega el archivo packet_forwarder/reset_lgw.sh:
 
 ```bash
 sudo nano packet_forwarder/reset_lgw.sh
 ```
 
-Añade el código de ejecución:
+Agrega el código de ejecución:
 
 ```bash
 SX1302_RESET_PIN=632     # SX1302 reset
@@ -216,7 +216,7 @@ cp ./tools/reset_lgw.sh ./packet_forwarder
 nano ./packet_forwarder/global_conf.json.sx1250.US915
 ```
 
-Cambia "com_path": "/dev/spidev0.0" por "com_path": "/dev/spidev2.0".
+Cambia "com_path": "/dev/spidev0.0" a "com_path": "/dev/spidev2.0".
 
 ```bash
  cd ./packet_forwarder
@@ -244,7 +244,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 Este comando especifica el archivo de configuración que se utilizará para LoRa® USB.
 
-## Red celular 5G sobre M.2 B-KEY
+## Celular 5G sobre M.2 B-KEY
 
 Para interactuar con un módulo 5G/4G usando comandos AT a través de minicom, sigue estos pasos:
 
@@ -299,7 +299,7 @@ ls /dev/ttyUSB*
 
 Salida /dev/ttyUSB0, etc.:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
-Abre minicom con el puerto serie y la velocidad en baudios apropiados:
+Abre minicom con el puerto serie y la velocidad en baudios adecuados:
 
 ```bash
 sudo apt update
@@ -323,10 +323,10 @@ Este comando comprueba si el módulo responde. Deberías recibir una respuesta *
 ATD<phone_number>;
 ```
 
-Sustituye **phone_number** por el número de teléfono que deseas marcar.
+Sustituye **phone_number** por el número de teléfono que quieras marcar.
 Asegúrate de incluir un punto y coma ; al final del comando para indicar el final del número de teléfono.
 
-## Red celular 4G sobre Mini-PCIe
+## Celular 4G sobre Mini‑PCIe
 
 Crea un nuevo archivo power_4g.sh:
 
@@ -359,11 +359,11 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-Pulsa en secuencia Ctrl+A, Z, E. Primero envía AT para probar si está conectado. Si aparece OK, la conexión se ha realizado correctamente.
+Pulsa Ctrl+A, Z, E en secuencia. Primero envía AT para probar si está conectado. Si aparece OK, la conexión se ha realizado correctamente.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.9-1.png" style={{width:800, height:'auto'}}/></div>
 
 
-Después de ejecutar el siguiente comando, el módulo se reiniciará automáticamente. Si no sales de minicom, puedes ver la información de configuración correspondiente.
+Después de ejecutar el siguiente comando, el módulo se reiniciará automáticamente. Si no sales de minicom, podrás ver la información de configuración correspondiente.
 Acceso a Internet por marcación ECM:
 
 ```bash
@@ -454,7 +454,7 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 ```
 
 
-El Terminal 1 mostrará el contenido que el Terminal 2 solicite imprimir.
+El Terminal 1 mostrará el contenido que el Terminal 2 solicita imprimir.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.12-2.png" style={{width:800, height:'auto'}}/></div>
 
 ## Prueba de DI (Entrada Digital)
@@ -531,21 +531,17 @@ reComputer Industrial R21xx contiene 4x puertos DO, el usuario puede configurar 
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-El tipo de salida de los puertos DO es transistor. Soporta tensión de salida - por debajo de 60 VDC, capacidad de corriente - 500 mA.
+El tipo de salida de los puertos DO es transistor. Soporta tensión de salida inferior a 60 VDC, capacidad de corriente - 500 mA.
 Para probar la funcionalidad de DO, puedes seguir estos pasos para probarla:
 
 1. Se ha completado la conexión entre el puerto DO de reComputer Industrial R21xx y la carga externa.
@@ -593,7 +589,7 @@ CAN_L─────●───── CAN-L
 G_CAN_H─────●───── G_CAN
 ```
 
-2. Confirma que las dos interfaces de red can0 y can1 realmente aparecen en el sistema para evitar que el controlador no se cargue:
+2. Confirma que las dos interfaces de red can0 y can1 aparecen en el sistema para evitar que el controlador no se cargue:
 
 ```bash
 # should print can0 can1
@@ -649,7 +645,7 @@ Si el concentrador USB funciona correctamente, deberías ver sus detalles listad
 
 Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
 
-1. Desactiva la sincronización automática de hora:
+1. Desactiva la sincronización automática de la hora:
 
 ```bash
 sudo systemctl stop systemd-timesyncd
@@ -762,7 +758,7 @@ echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
 ```  
 
-2. Apagar el zumbador: Apagar el zumbador:
+2. Apagar el zumbador :Turn off the buzzer :
 
 ```bash
 echo 627 > /sys/class/gpio/export
@@ -874,9 +870,9 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
 
-4. Prepara el script en Python
+4. Prepara el script de Python
 
-- Crea un nuevo archivo de script en Python:
+- Crea un nuevo archivo de script de Python:
 
 ```bash
 cd ~
@@ -952,19 +948,19 @@ sudo python3 ups_shutdown.py
 7. Verificar el resultado
 
 - Vuelve a conectar la fuente de alimentación.
-- Comprueba si los datos del sistema están completos y si se inicia con normalidad.
+- Comprueba si los datos del sistema están completos y se inicia con normalidad.
 
 :::note
 
-1. Para la función de SAI, ponte en contacto con nosotros para obtener más información.
+1. Para la función SAI, ponte en contacto con nosotros para obtener más información.
 2. La señal de alarma es activa en nivel BAJO.
 
 :::
 
 ## Acelerador de IA
 
-La ranura M.2 M-KEY 2240 del reComputer Industrial R21xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R21xx-12 viene preinstalada con un módulo Hailo-8 M.2 de aceleración de IA de hasta 26TOPS.
-Si compraste el producto de la serie R21xx-10, tendrás que adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
+La ranura M.2 M-KEY 2240 en el reComputer Industrial R21xx está diseñada para alojar un Acelerador de IA PCIE M.2. Y la serie R21xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
+Si compraste el producto de la serie R21xx-10, necesitarás adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
 El dispositivo viene preinstalado con el controlador del acelerador Hailo, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
 
 1. Navega al directorio del caso de prueba
@@ -1002,8 +998,8 @@ La serie reComputer Industrial R22xx está diseñada para flujos de video IP de 
 **Distribución del bus interno:**
 
 * **eth0 (Nativo)**: Conectado directamente al SoC. Ofrece la latencia más baja y se recomienda como **enlace ascendente principal (WAN)** o **puerto de gestión**.
-* **eth1 (Extensión USB)**: El puerto independiente situado junto al puerto nativo. Se amplía a través del **bus USB 3.0** y admite **salida PoE**.
-* **eth2, eth3, eth4 (Extensión PCIe)**: Los tres puertos consecutivos. Se amplían a través del **bus PCIe** y admiten **salida PoE**.
+* **eth1 (Extensión USB)**: El puerto independiente situado junto al puerto nativo. Se extiende a través del **bus USB 3.0** y admite **salida PoE**.
+* **eth2, eth3, eth4 (Extensión PCIe)**: Los tres puertos consecutivos. Se extienden a través del **bus PCIe** y admiten **salida PoE**.
 
 
 1. Especificaciones técnicas
@@ -1015,11 +1011,11 @@ La serie reComputer Industrial R22xx está diseñada para flujos de video IP de 
 | **Salida PoE por puerto** | **12W** (Máx.) | Optimizado para cámaras IP estándar |
 | **Salida PoE en paralelo** | Los 4 puertos admiten 12W simultáneamente | Requiere suficiente potencia de entrada del sistema |
 | **Rango de entrada de alimentación** | **9V - 36V DC** | El circuito elevador interno aumenta hasta **48V** para PoE |
-| **Funciones de seguridad** | Protección contra sobrecorriente y subtensión | **El hot-plugging está estrictamente prohibido** |
+| **Funciones de seguridad** | Protección contra sobrecorriente y subtensión | **Está estrictamente prohibido el hot-plugging** |
 
 2. Directrices críticas de seguridad
 * **NO HOT-PLUGGING**: 
-    > **ADVERTENCIA**: Conectar o desconectar cables Ethernet mientras la alimentación PoE está activa (GPIO en alto) puede causar picos transitorios que pueden dañar los chips LAN7800 o los puentes PCIe. Sigue siempre el principio de "**Conectar primero, alimentar después**".
+    > **ADVERTENCIA**: Conectar o desconectar cables Ethernet mientras la alimentación PoE está activa (GPIO en alto) puede causar sobretensiones transitorias que pueden dañar los chips LAN7800 o los puentes PCIe. Sigue siempre el principio de "**Conectar primero, alimentar después**".
 * **Recomendaciones de alimentación**:
     > Aunque el dispositivo admite entrada de 9V, recomendamos usar una fuente de alimentación industrial de **24V** con al menos **72W** (3A) de capacidad para garantizar una alta eficiencia de conversión cuando los 4 puertos PoE estén a plena carga (4 × 12W).
 
@@ -1082,7 +1078,7 @@ Utiliza `lspci` y `lsusb` para verificar que todos los controladores sean recono
 
 
 
-5. Preguntas frecuentes
+5. Preguntas frecuentes (FAQ)
 * **P: ¿Por qué mi cámara se reinicia constantemente?**
     * R: Comprueba si el consumo de energía de la cámara supera los **12W**. Las cámaras PTZ de alta potencia o aquellas con iluminadores IR potentes pueden superar este límite.
 * **P: ¿Puedo usar entrada de 12V DC para PoE?**
@@ -1096,7 +1092,7 @@ Utiliza `lspci` y `lsusb` para verificar que todos los controladores sean recono
 
 ### reComputer R22 y reCamera
 
-Esta guía proporciona un recorrido paso a paso para conectar una reCamera — una cámara de IA modular y de código abierto basada en la plataforma RISC-V y diseñada para un rápido despliegue de Edge AI — al reComputer R22 a través de PoE. Cubre el despliegue de un flujo RTSP usando Node-RED y la previsualización de la transmisión en vivo en el R22.
+Esta guía proporciona un recorrido paso a paso para conectar una reCamera — una cámara de IA modular y de código abierto basada en la plataforma RISC-V y diseñada para un rápido despliegue de Edge AI — al reComputer R22 mediante PoE. Cubre el despliegue de un flujo RTSP usando Node-RED y la previsualización de la transmisión en vivo en el R22.
 
 1. Conexión de hardware e inicialización
 
@@ -1112,7 +1108,7 @@ Esta guía proporciona un recorrido paso a paso para conectar una reCamera — u
     ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/ip.png" style={{width:800, height:'auto'}}/></div>
 
-2. Configuración de reCamera (importación de Node-RED con un clic)
+2. Configuración de reCamera (importación Node-RED con un clic)
 
 Utiliza el `flows.json` preconfigurado para desplegar rápidamente un flujo RTSP autenticado.
 
@@ -1122,7 +1118,7 @@ Utiliza el `flows.json` preconfigurado para desplegar rápidamente un flujo RTSP
       * Sube el archivo [**flows.json**](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/flows.json) y haz clic en **Import**.
 - **Autenticación personalizada (obligatoria):**
       * Haz doble clic en el nodo **`RTSP Output`** en el flujo.
-      * En la sección **Authentication**, establece tus credenciales:
+      * En la sección **Authentication**, configura tus credenciales:
           * **Username:** `seeed`
           * **Password:** `seeed`
 - **Desplegar:** Haz clic en el botón rojo **Deploy** en la esquina superior derecha.

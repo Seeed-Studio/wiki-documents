@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-23 15:48:16 (北京时间)
-// 多语言页面: 2261 个
+// 生成时间: 2026-04-27 14:09:13 (北京时间)
+// 多语言页面: 2263 个
 
 (function() {
   'use strict';
@@ -1221,6 +1221,13 @@
     "pt"
   ],
   "/recomputer_jetson_robotics_j401_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
     "cn",
     "en",
     "es",
@@ -11765,6 +11772,13 @@
     "pt"
   ],
   "/XIAO_BLE": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54l15_sense_arduino": [
     "cn",
     "en",
     "es",

@@ -21,26 +21,6 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'reComputer_Jetson_Series', 'reComputer_Rugged_J40', 'reComputer_Rugged_J40_Getting_Started.md'), //3.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', '_Flash_Watcher_Agent_Firmware.md'), //3.4
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'User_Guide', 'FAQ.md'), //3.12
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'User_Guide', 'Payload_Format.md'), //3.12
-  path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'Application', 'object_detection_with_yolov11_on_recomputer_rk.md'), //3.9
-  path.join(docsDirectory, 'Edge', 'RockChip_Devices', 'RK_Devices_Intro.md'), //3.9
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Application', 'meshtastic_node_map_t1000_e.md'), //3.19
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Application', 'meshtastic_node_map_l1.md'), //3.19
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'Application', 'meshtastic_node_map_esp32s3.md'), //3.19
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Firmware_Update.md'), //3.19
-  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_Quick_Start.md'), //3.13
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Firmware_Development_Tutorial', 'firmware_development_t1000e.md'), //3.18
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Firmware_Development_Tutorial', 'firmware_development.md'), //3.18
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_picovoice.md'), //3.24
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Bluetooth_Beacon', 'BC03_Indoor_Bluetooth_Beacon', 'BC03_Indoor_Bluetooth_Beacon_User_Guide.md'), //3.24
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'Firmware_Development_Tutorial', 'meshcore_source_code_pratical_tutorial_solar_node.md'), //3.27
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Firmware_Development_Tutorial', 'meshcore_source_code_pratical_tutorial_t1000_e.md'), //3.27
-  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Firmware_Development_Tutorial', 'meshcore_source_code_pratical_tutorial_l1.md'), //3.27
-  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_AI', 'Application', 'Create_New_Application.md'), //3.30
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_intro.md'), //3.26
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'Application', 'meshcore_node_map_t1000e.md'), //4.3
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'Application', 'meshcore_node_map_l1.md'), //4.3
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_ChirpStack.md'), //3.30
@@ -50,6 +30,8 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'RTL8852BE_Wireless_Module_for_Jetson.md'), //4.14
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Getting_Started.md'), //4.13
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_AWS_IoT.md'), //4.7
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Grasping_Demo.md'), //4.22
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'Robotics_J601', 'reComputer_Robotics_J601_Getting_Started.md') //4.24
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
