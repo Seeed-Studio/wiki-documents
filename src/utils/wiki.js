@@ -61,14 +61,14 @@ const docList = [
       "date": "2026-04-09",
       "title_cn": "基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程",
       "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Primeros pasos con reBot Arm B601-DM basado en LeRobot y reBot 102 Leader",
+      "title_es": "Introducción a reBot Arm B601-DM basado en LeRobot y reBot 102 Leader",
       "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader"
     }
   ],
   [
     {
       "path": "/epaper_en05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3.jpg",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp",
       "title": "Getting Started with XIAO ePaper Display EN05",
       "date": "2026-04-08",
       "title_cn": "XIAO ePaper Display EN05 入门指南",
@@ -90,13 +90,13 @@ const docList = [
   [
     {
       "path": "/epaper_ee05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg",
+      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp",
       "title": "Getting Started with XIAO ePaper Display EE05",
       "date": "2026-04-07",
       "title_cn": "XIAO ePaper Display EE05 入门指南",
       "title_ja": "XIAO ePaper Display EE05 入門ガイド",
       "title_es": "Introducción a XIAO ePaper Display EE05",
-      "title_pt": "Introdução ao XIAO ePaper Display EE05"
+      "title_pt": "Introdução à XIAO ePaper Display EE05"
     },
     {
       "path": "/meshcore_node_map_solar_node",

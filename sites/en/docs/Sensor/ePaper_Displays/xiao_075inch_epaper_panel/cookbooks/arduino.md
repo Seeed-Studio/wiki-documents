@@ -1,27 +1,31 @@
 ---
-description: The XIAO ESP32C3-powered 7.5-inch E-Ink Display is a compact, energy-efficient solution for showcasing data via Arduino.
-title: Works with Arduino
+description: End-to-end Arduino cookbook for the XIAO 7.5" ePaper Panel - Arduino IDE setup specific to the XIAO ESP32-C3, Seeed_GFX configuration, and Hello World walk-through.
+title: Arduino Cookbook
 keywords:
   - ePaper display
   - arduino
+  - XIAO ESP32-C3
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
 slug: /xiao_075inch_epaper_panel_arduino
-sidebar_position: 2
+sidebar_position: 1
 last_update:
-  date: 03/26/2025
+  date: 04/28/2026
   author: Allen
 createdAt: '2025-03-27'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino/
+updatedAt: '2026-04-28'
 ---
 
-# Getting Started with XIAO 7.5" ePaper Panel in Arduino
+# Arduino Cookbook: XIAO 7.5" ePaper Panel
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
+
+:::tip Read the main Arduino guide first
+This page is the **XIAO 7.5" Panel-specific cookbook**. The shared boilerplate — Arduino IDE setup, ESP32 board package, installing `Seeed_GFX`, generating `driver.h` from the Configuration Tool — lives in **[Work with Arduino](/epaper_work_with_arduino)**. Skim that first if you're new to Arduino on Seeed ePaper; this page focuses on what's different for the XIAO ESP32-C3-based panel.
+:::
 
 ## Overview
 

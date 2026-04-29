@@ -1,6 +1,6 @@
 ---
 description: Getting Started with ePaper Breakout Board
-title: ePaper Breakout Board
+title: Getting Started with ePaper Breakout Board
 keywords:
   - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png

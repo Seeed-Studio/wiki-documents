@@ -1,21 +1,39 @@
 ---
-description: This article explains how to utilize the hardware features of the XIAO ePaper Display Board EE04 in ESPHome and integrate it with Home Assistant.
-title: XIAO ePaper Display Board(ESP32-S3) with ESPHome
+description: ESPHome cookbook for the XIAO ePaper Driver Board (EE0x) family - Home Assistant integration on the XIAO ESP32-S3 + EE0x driver board with your choice of ePaper screen. EE04 is used as the running example; EE02 / EE03 / EE05 share the same workflow.
+title: ESPHome Cookbook
+keywords:
+  - ePaper display
+  - ESPHome
+  - Home Assistant
+  - EE02
+  - EE03
+  - EE04
+  - EE05
+  - XIAO ESP32-S3
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /EE04_with_esphome_advanced
-sidebar_position: 2
+aliases:
+  - /ee0x_with_esphome
+sidebar_position: 1
 last_update:
-  date: 10/07/2025
+  date: 04/28/2026
   author: Jason
 createdAt: '2023-08-20'
-updatedAt: '2025-12-08'
-url: https://wiki.seeedstudio.com/EE04_with_esphome_advanced/
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# XIAO ePaper Display Board(ESP32-S3) - EE04 ePaper Display Work with ESPHome
+# ESPHome Cookbook: XIAO ePaper Driver Boards (EE0x)
+
+:::tip Read the main ESPHome guide first
+This page is the **EE0x driver board ESPHome cookbook** — applicable to **EE02 / EE03 / EE04 / EE05**. Because all four boards share the same XIAO ESP32-S3 base and the same SPI-attached ePaper interface, the workflow is identical; the only thing that changes between them is the screen model you select in the YAML `display:` block.
+
+**Worked example: EE04 with the 7.5" 800×480 mono screen.** Substitute your own board + screen pair in the `display.model` line and the rest of the configuration applies as-is.
+
+The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper.
+:::
 
 ## What is ESPHome?
 
