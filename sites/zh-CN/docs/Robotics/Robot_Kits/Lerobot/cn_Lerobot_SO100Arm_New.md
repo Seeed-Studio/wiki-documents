@@ -769,6 +769,9 @@ lerobot-find-cameras realsense
 - 序列号（Serial number）
 - USB 信息
 - 默认流配置
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/realsense_ID.png" />
+</div>
 
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中。
 
@@ -908,6 +911,10 @@ lerobot-find-cameras orbbec
 - 序列号（Serial number）
 - USB 信息
 - 默认流配置
+
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
+</div>
 
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中
 
