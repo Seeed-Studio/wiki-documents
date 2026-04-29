@@ -2069,6 +2069,7 @@ const sidebars = {
               label: 'アプリケーション',
               items: [
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
               ],
             },
             {
