@@ -2068,6 +2068,7 @@ const sidebars = {
               label: 'Aplicación',
               items: [
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_picovoice',
+                'Sensor/reSpeaker_flex/es_reSpeaker_flex_lekiwi',
               ],
             },
             {
