@@ -15,14 +15,14 @@ last_update:
   author: LiuJunjie
 translation:
   skip:
-    - - zh-CN
+    - zh-CN
 createdAt: '2026-04-09'
 updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/
 ---
 
 
-# Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader
+# Introdução ao reBot Arm B601-DM baseado em LeRobot e reBot 102 Leader
 
 
 ![traj_sim_geodesic](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/dm_pinocchio_mashcat/v2.0.png)
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/
 </p>
 
 <p align="center">
-  <strong>Braço Robótico de 6 DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
+  <strong>Braço Robótico 6-DOF · Suporte a Múltiplos Motores · Solucionador de Cinemática · Planejamento de Trajetória · Totalmente Open Source</strong>
 </p>
 
 
@@ -48,19 +48,19 @@ url: https://wiki.seeedstudio.com/pt-br/rebot_arm_b601_dm_lerobot/
 
 
 
-[reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/) é um projeto de braço robótico open source lançado pela Seeed, dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós abrimos todo o design estrutural e código sem qualquer reserva, tornando a tecnologia de robótica acessível a todos.
+[reBot Arm B601-DM](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/) é um projeto de braço robótico open source lançado pela Seeed, dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós abrimos todo o design estrutural e código sem reservas, tornando a tecnologia de robótica acessível a todos.
 
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) se dedica a fornecer modelos, conjuntos de dados e ferramentas para robótica no mundo real em PyTorch. Seu objetivo é reduzir a barreira de entrada da robótica, permitindo que todos contribuam e se beneficiem do compartilhamento de conjuntos de dados e modelos pré-treinados. O LeRobot integra metodologias de ponta validadas para aplicação no mundo real, com foco em aprendizado por imitação e aprendizado por reforço. Ele fornece um conjunto de modelos pré-treinados, conjuntos de dados com demonstrações coletadas por humanos e ambientes de simulação, permitindo que os usuários comecem sem a necessidade de montar um robô.
 
 ### 📖 Introdução ao Projeto
 
-**reBot-DevArm (reBot Arm B601 DM e reBot Arm B601 RS)** é um projeto de braço robótico dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós focamos em **"Verdadeiro Open Source"** — não apenas código, abrimos todo o seguinte sem qualquer reserva:
+**reBot-DevArm (reBot Arm B601 DM e reBot Arm B601 RS)** é um projeto de braço robótico dedicado a reduzir a barreira para o aprendizado de inteligência incorporada. Nós focamos em **"Verdadeiro Open Source"** — não apenas código, abrimos sem reservas todos os itens a seguir:
 - 🦾 **Braços robóticos open source com duas versões de motor**: Fornecemos todos os arquivos open source para as versões de motor RoboStride e Damiao com a mesma aparência.
-- 🛠️ **Esquemas de hardware**: Arquivos-fonte das peças de chapa metálica e das peças impressas em 3D.
+- 🛠️ **Esquemas de hardware**: Arquivos-fonte de chapas metálicas e peças impressas em 3D.
 - 🔩 **BOM (Lista de Materiais)**: Detalhada até a especificação de cada parafuso e link de compra.
 - 💻 **Software e algoritmos**: Python SDK, ROS1/2, Isaac Sim, LeRobot, etc.
 
-## Construindo seu Braço Robótico reBot
+## Construindo Seu Braço Robótico reBot
 
 - Oferecemos cinco opções de kit:
   - **Kit de Motores do Corpo do Braço Robótico**: Inclui apenas os motores e chicotes de fios necessários para o braço robótico.
@@ -74,7 +74,7 @@ O kit de robô inteligente reBot-DevArm e reComputer Jetson AI combina perfeitam
 Este wiki fornece tutoriais de depuração para o reBot-DevArm e implementa coleta de dados e treinamento dentro do framework LeRobot.
 
 :::caution
-Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a documentação oficial. Se você encontrar problemas de software ou de ambiente que não possam ser resolvidos, verifique primeiro o FAQ no final do artigo ou entre em contato com o atendimento ao cliente para entrar no grupo de discussão SeeedStudio LeRobot. Você também pode fazer perguntas aqui: [LeRobot GitHub](https://github.com/huggingface/lerobot) ou [Discord Channel](https://discord.gg/8TnwDdjFGU).
+Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a documentação oficial. Se você encontrar problemas de software ou ambiente que não possam ser resolvidos, verifique primeiro o FAQ no final do artigo ou entre em contato com o atendimento ao cliente para entrar no grupo de discussão SeeedStudio LeRobot. Você também pode fazer perguntas aqui: [LeRobot GitHub](https://github.com/huggingface/lerobot) ou [Discord Channel](https://discord.gg/8TnwDdjFGU).
 :::
 
 ## 🔧 Recursos da Série reBot B601-DM:
@@ -89,7 +89,11 @@ Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a docu
    Fornece recursos de aprendizado open source abrangentes, incluindo guias de montagem e calibração, tutoriais de teste e coleta de dados, documentação de treinamento e implantação para ajudar os usuários a começar rapidamente e desenvolver aplicações de robótica.
 
 4. **Compatível com Plataforma Nvidia**
-   Suporta implantação por meio da plataforma reComputer Mini J4012 Orin NX 16GB.
+   Suporta implantação via plataforma reComputer Mini J4012 Orin NX 16GB.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Ambiente de Sistema Inicial
 
@@ -104,11 +108,15 @@ Os tutoriais da Seeed Studio são rigorosamente atualizados de acordo com a docu
   - Python 3.10
   - Torch 2.3+
 
-## Instalar o LeRobot
+## Instalar LeRobot
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 Você precisa instalar pytorch, torchvision e outros ambientes com base na sua versão do CUDA.
 
-### 1. Instalar o Miniforge
+### 1. Instalar Miniforge
 
 ```bash
 cd ~
@@ -147,7 +155,7 @@ git clone https://github.com/Seeed-Projects/lerobot-teleoperator-rebot-arm-102.g
 git clone https://github.com/Seeed-Projects/lerobot-robot-seeed-b601.git
 ```
 
-### 4. Criar Ambiente Conda e Instalar o LeRobot
+### 4. Criar Ambiente Conda e Instalar LeRobot
 
 O repositório lerobot já possui um pyproject.toml. Crie um ambiente conda e instale todas as dependências.
 
@@ -180,7 +188,7 @@ conda install ffmpeg -c conda-forge
 :::tip
 **Notas de Versão**:
 - Por padrão, o ffmpeg 7.X será instalado (suporta o codificador libsvtav1)
-- Se você encontrar problemas de compatibilidade de versão, pode especificar o ffmpeg 7.1.1:
+- Se você encontrar problemas de compatibilidade de versão, pode especificar ffmpeg 7.1.1:
   ```bash
   conda install ffmpeg=7.1.1 -c conda-forge
   ```
@@ -192,8 +200,12 @@ conda install ffmpeg -c conda-forge
 (Ignore esta etapa para PC) Para dispositivos Jetson JetPack 6.0+ (certifique-se de ter instalado Pytorch-gpu e Torchvision de acordo com [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) etapa 5 antes de executar esta etapa):
 
 ```bash
-pip install opencv-python==4.10.0.84  # Install specific OpenCV version
-pip install numpy==1.26.0  # This version should be compatible with torchvision
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson Jetpack 6.0+ only
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This version must be compatible with torchvision
 ```
 
 ### 7. Verificar Pytorch e Torchvision
@@ -202,7 +214,7 @@ pip install numpy==1.26.0  # This version should be compatible with torchvision
 Se você estiver usando um dispositivo Jetson, instale Pytorch e Torchvision de acordo com [este tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
 :::
 
-Como instalar o ambiente lerobot via pip irá desinstalar o Pytorch e o Torchvision originais e instalar as versões para CPU, você precisa realizar uma verificação em Python.
+Como instalar o ambiente lerobot via pip irá desinstalar o Pytorch e o Torchvision originais e instalar as versões de CPU, você precisa realizar uma verificação em Python.
 
 ```python
 python3
@@ -216,7 +228,11 @@ Se a saída for False, você precisa reinstalar Pytorch e Torchvision de acordo 
 
 ## Calibrar o Braço Robótico
 
-Em seguida, você precisa conectar a fonte de alimentação e o cabo de dados ao seu robô reBot B601-DM para calibração, a fim de garantir que os braços líder e seguidor tenham os mesmos valores de posição quando estiverem na mesma posição física. Esta calibração é essencial porque permite que uma rede neural treinada em um robô reBot B601-DM funcione em outro. Se você precisar recalibrar o braço robótico, exclua completamente os arquivos em `~/.cache/huggingface/lerobot/calibration/robots` ou `~/.cache/huggingface/lerobot/calibration/teleoperators` e recalibre o braço robótico. Caso contrário, aparecerá uma mensagem de erro. As informações de calibração do braço robótico serão armazenadas nos arquivos JSON neste diretório.
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+Em seguida, você precisa conectar a fonte de alimentação e o cabo de dados ao seu robô reBot B601-DM para calibração, a fim de garantir que os braços líder e seguidor tenham os mesmos valores de posição quando estiverem na mesma posição física. Essa calibração é essencial porque permite que uma rede neural treinada em um robô reBot B601-DM funcione em outro. Se você precisar recalibrar o braço robótico, exclua completamente os arquivos em `~/.cache/huggingface/lerobot/calibration/robots` ou `~/.cache/huggingface/lerobot/calibration/teleoperators` e recalcibre o braço robótico. Caso contrário, aparecerá uma mensagem de erro. As informações de calibração do braço robótico serão armazenadas nos arquivos JSON neste diretório.
 
 Primeiro, você precisa conceder permissões de interface executando os seguintes comandos:
 
@@ -225,18 +241,28 @@ sudo chmod 666 /dev/ttyUSB*  # Leader arm
 sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
 ```
 
-### Calibrar o Braço Seguidor
+### Calibrar o braço seguidor
 
-O B601-DM será automaticamente calibrado uma vez cada vez que você executar um programa relacionado ao LeRobot neste wiki.
-O que você precisa fazer é garantir que, antes de começar, coloque o B601-DM na posição mostrada na figura (gripper totalmente fechado).
+O B601-DM só precisa ser calibrado uma vez após a montagem. Aqui está o comando de calibração. Consulte a figura para a posição zero (garra totalmente fechada).
+
+```bash
+sudo chmod 666 /dev/ttyACM*  # follower arm (serial bridge)
+
+lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao
+```
+
   <div align="center">
-      <img width={800} 
+      <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
   </div>
 
 ### Calibrar o braço líder
 
-As etapas de calibração são cruciais e afetam diretamente se o braço robótico funcionará normalmente. Siga o processo rigorosamente.
+As etapas de calibração são cruciais e afetarão diretamente se o braço robótico funcionará normalmente. Siga o processo rigorosamente.
 
 <details>
 
@@ -244,14 +270,14 @@ As etapas de calibração são cruciais e afetam diretamente se o braço robóti
 
 :::tip
 **Notas de calibração do reBot 102 leader**:
-- Quando a calibração começar, a posição atual de cada servo no reBot Arm 102 será **redefinida para zero**
+- Quando a calibração começa, a posição atual de cada servo no reBot Arm 102 será **redefinida para zero**
 - `joint_ranges` (limites das juntas) são obtidos do arquivo de configuração `config_rebot_arm_102_leader.py`, não dos dados de calibração
-- Se uma junta parecer sempre travada perto de um limite, verifique primeiro a configuração de `joint_ranges`
+- Se uma junta parecer sempre travada próxima a um limite, verifique primeiro a configuração de `joint_ranges`
 - As direções das juntas são definidas no arquivo de configuração. Se as direções não corresponderem, modifique a configuração em vez de recalibrar
-- O reBot 102 leader usa um módulo USB‑para‑UART, normalmente mapeado para `/dev/ttyUSB*`
+- O reBot 102 leader usa um módulo USB-para-UART, normalmente mapeado para `/dev/ttyUSB*`
 - Use `ls /dev/ttyUSB*` para verificar o número de porta real
 
-Se esta for a primeira conexão, você pode receber um erro informando que `/dev/ttyACM0` não pode ser encontrado. Isso acontece porque o brltty está ocupando a porta serial. Execute as seguintes etapas:
+Se esta for a primeira conexão, você pode receber um erro informando que `/dev/ttyACM0` não pode ser encontrado. Isso ocorre porque o brltty está ocupando a porta serial. Execute as seguintes etapas:
 
 ```bash
 sudo dmesg | grep ttyUSB #Check the last line shows "disconnected"
@@ -290,6 +316,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 ## Teleoperação
 
+
 Primeiro conceda permissões às portas seriais:
 ```bash
 sudo chmod 666 /dev/ttyUSB*  # Leader arm
@@ -315,7 +342,7 @@ lerobot-teleoperate \
 <details>
 <summary> Se estiver usando RealSense D435i/D405 </summary>
 
-As câmeras de profundidade RealSense podem fornecer percepção RGB‑D para o LeRobot e são adequadas para tarefas como reconhecimento de objetos, reconstrução de nuvens de pontos e manipulação em mesa. Os modelos recomendados aqui são **RealSense D405** e **RealSense D435i**.
+As câmeras de profundidade RealSense podem fornecer percepção RGB-D para o LeRobot e são adequadas para tarefas como reconhecimento de objetos, reconstrução de nuvens de pontos e manipulação em mesas. Os modelos recomendados aqui são **RealSense D405** e **RealSense D435i**.
 
 ### RealSense D405
 
@@ -324,7 +351,7 @@ As câmeras de profundidade RealSense podem fornecer percepção RGB‑D para o 
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
 
-A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projetada para tarefas de alta precisão em curta distância, como manipulação robótica em mesa, com faixa de trabalho típica de **7 cm a 50 cm**.
+A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projetada para tarefas de alta precisão em curta distância, como manipulação robótica em mesas, com faixa de trabalho típica de **7 cm a 50 cm**.
 
 ### RealSense D435i
 
@@ -333,11 +360,11 @@ A RealSense D405 é uma câmera estéreo de profundidade de curto alcance projet
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
 </div>
 
-A RealSense D435i combina detecção de profundidade, imagem RGB e um IMU, tornando‑a adequada para aplicações de médio a curto alcance, como reconstrução 3D, SLAM e percepção de ambiente robótico.
+A RealSense D435i combina detecção de profundidade, imagem RGB e um IMU, tornando-a adequada para aplicações de médio a curto alcance, como reconstrução 3D, SLAM e percepção de ambiente robótico.
 
 ### 1. Mudar para o branch da câmera
 
-O suporte atual a câmeras está disponível no branch `DepthCameraSupport`:
+O suporte atual para câmeras está disponível no branch `DepthCameraSupport`:
 
 ```bash
 git checkout DepthCameraSupport
@@ -364,7 +391,13 @@ Se você usar apenas RealSense:
 pip install -e ".[realsense]"
 ```
 
-### 3. Detectar câmeras
+### 3. Conceder permissões
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detectar câmeras
 
 ```bash
 lerobot-find-cameras realsense
@@ -377,7 +410,7 @@ Esta etapa exibirá:
 - Informações de USB
 - Configuração padrão de stream
 
-### 4. Exemplo com RealSense
+### 5. Exemplo com RealSense
 
 Teste com duas RealSense:
 
@@ -438,11 +471,11 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. Notas sobre parâmetros
+### 6. Notas sobre parâmetros
 
-- `depth_alpha` controla o fator de escala da imagem de profundidade e pode ser ajustado com base no resultado exibido e na faixa de distância alvo.
+- `depth_alpha` controla o fator de escala da imagem de profundidade e pode ser ajustado com base no resultado de exibição e na faixa de distância alvo.
 - Se você conectar três ou mais câmeras de profundidade, é recomendável reduzir `fps` para `15` para melhorar a estabilidade geral.
-- Recomenda‑se manter a resolução em `640x480` para um melhor equilíbrio entre estabilidade e desempenho em tempo real.
+- Recomenda-se manter a resolução em `640x480` para um melhor equilíbrio entre estabilidade e desempenho em tempo real.
 
 </details>
 
@@ -466,13 +499,11 @@ fornecendo streams sincronizados de RGB e profundidade com alinhamento preciso d
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
-A Gemini 336 é um novo membro da série Gemini 330. Ela herda o forte desempenho de profundidade da Gemini 335 e melhora ainda mais a qualidade de imagem de profundidade em áreas internas reflexivas, regiões escuras em cenas de alta dinâmica e ambientes externos claros. Para aplicações de robótica, pode fornecer dados de profundidade mais estáveis e de alta qualidade para tarefas como percepção, localização e manipulação.
-
-- 🚀 Etapa 1: Instalar as dependências do Orbbec SDK
+A Gemini 336 é um novo membro da série Gemini 330. Ela herda o forte desempenho de profundidade da Gemini 335 e melhora ainda mais a qualidade de imagem de profundidade em áreas internas reflexivas, regiões escuras em cenas de alta dinâmica e ambientes externos claros. Para aplicações de robótica, ela pode fornecer dados de profundidade mais estáveis e de alta qualidade para tarefas como percepção, localização e manipulação.
 
 ### 1. Mudar para o branch da câmera
 
-O suporte atual a câmeras está disponível no branch `DepthCameraSupport`:
+O suporte atual para câmeras está disponível no branch `DepthCameraSupport`:
 
 ```bash
 git checkout DepthCameraSupport
@@ -499,7 +530,26 @@ Se você usar apenas Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-### 4. Exemplo com Orbbec
+### 3. Conceder permissões
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detectar câmeras
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+Esta etapa exibirá:
+
+- Modelo da câmera
+- Número de série
+- Informações de USB
+- Configuração padrão de stream
+
+### 5. Exemplo com Orbbec
 
 
 Teste com uma única Orbbec:
@@ -540,13 +590,13 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. Notas sobre parâmetros
+### 6. Notas sobre parâmetros
 
-- `depth_alpha` controla o fator de escala da imagem de profundidade. Um bom ponto de partida é `0.2`, depois você pode ajustá‑lo com base no resultado exibido.
-- Se você conectar três ou mais câmeras de profundidade, é recomendável reduzir `fps` para `15` para obter melhor estabilidade.
-- Recomenda‑se manter a resolução em `640x480` para uma exibição e transferência de dados mais estáveis.
+- `depth_alpha` controla o fator de escala da imagem de profundidade. Um bom ponto de partida é `0.2`, depois você pode ajustá-lo com base no resultado exibido.
+- Se você conectar três ou mais câmeras de profundidade, é recomendável reduzir o `fps` para `15` para obter melhor estabilidade.
+- Recomenda-se manter a resolução em `640x480` para uma exibição e transferência de dados mais estáveis.
 
-### 6. Problemas comuns
+### 7. Problemas comuns
 
 Se você vir o seguinte erro:
 
@@ -576,7 +626,7 @@ Para encontrar os índices das câmeras conectadas ao seu sistema, execute o seg
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
-O terminal exibirá as informações relevantes da câmera.
+O terminal exibirá informações relevantes da câmera.
 
 ```markdown
 --- Detected Cameras ---
@@ -616,7 +666,7 @@ lerobot-teleoperate \
 ```
 
 :::tip
-Imagens no formato `fourcc: "MJPG"` são compactadas. Você pode tentar resoluções mais altas e também pode testar o formato `YUYV`. No entanto, este último reduzirá a resolução da imagem e o FPS, causando atraso na operação do braço robótico. Atualmente, no formato `MJPG`, é possível suportar 3 câmeras com resolução de `1920*1080` mantendo `30FPS`. Porém, ainda não é recomendado conectar 2 câmeras a um computador por meio do mesmo HUB USB.
+Imagens no formato `fourcc: "MJPG"` são compactadas. Você pode tentar resoluções mais altas e também pode tentar o formato `YUYV`. No entanto, este último reduzirá a resolução da imagem e o FPS, levando a atrasos na operação do braço robótico. Atualmente, no formato `MJPG`, é possível suportar 3 câmeras com resolução de `1920*1080` mantendo `30FPS`. No entanto, ainda não é recomendado conectar 2 câmeras a um computador por meio do mesmo HUB USB.
 :::
 
 Se você tiver mais câmeras, poderá alterar o parâmetro `--robot.cameras` para adicioná-las. Você deve observar o formato de `index_or_path`, que é determinado pelo último dígito do ID da câmera exibido por `python -m lerobot.find_cameras opencv`.
@@ -637,7 +687,8 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-## Coleta de Conjunto de Dados
+## Coleta de conjunto de dados
+<!-- vidio todo -->
 
 <details>
 
@@ -663,14 +714,14 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-Entre eles, `repo_id` pode ser modificado de forma personalizada, e `push_to_hub=false`. Por fim, o conjunto de dados será salvo no diretório `~/.cache/huggingface/lerobot` na pasta home, onde a pasta `seeed_rebot_b601_dm/test` mencionada acima será criada.
+Entre eles, `repo_id` pode ser modificado de forma personalizada, e `push_to_hub=false`. Por fim, o conjunto de dados será salvo no diretório `~/.cache/huggingface/lerobot` na pasta pessoal, onde a pasta `seeed_rebot_b601_dm/test` mencionada acima será criada.
 
 </details>
 
 <details>
 <summary> Se você quiser usar os recursos do Hugging Face Hub para enviar seu conjunto de dados </summary>
 
-- Se você quiser usar os recursos do Hugging Face Hub para enviar seu conjunto de dados e ainda não fez isso antes, certifique-se de ter feito login usando um token com permissão de escrita, que pode ser gerado em [Hugging Face settings](https://huggingface.co/settings/tokens):
+- Se você quiser usar os recursos do Hugging Face Hub para enviar seu conjunto de dados e ainda não tiver feito isso antes, certifique-se de ter feito login usando um token com permissão de escrita, que pode ser gerado nas [configurações do Hugging Face](https://huggingface.co/settings/tokens):
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -712,25 +763,25 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 
 </details>
 
-**Função Record**
+**Função de gravação**
 
 A função **record** fornece um conjunto de ferramentas para capturar e gerenciar dados durante a operação do robô.
 
-**1. Armazenamento de Dados**
+**1. Armazenamento de dados**
 
 - Os dados são armazenados usando o formato `LeRobotDataset` e são gravados em disco durante a gravação.
-- Por padrão, o conjunto de dados é enviado para a sua página no Hugging Face após a gravação.
+- Por padrão, o conjunto de dados é enviado para a sua página do Hugging Face após a gravação.
 - Para desativar o envio, use: `--dataset.push_to_hub=False`.
 
-**2. Checkpoint e Retomada**
+**2. Checkpoint e retomada**
 
 - Checkpoints são criados automaticamente durante a gravação.
 - Para retomar após uma interrupção, execute novamente o mesmo comando com: `--resume=true`
 
-⚠️ **Observação Importante**: Ao retomar, defina `--dataset.num_episodes` para o número de episódios adicionais a serem gravados (não o número total de episódios desejado no conjunto de dados).
+⚠️ **Nota importante**: Ao retomar, defina `--dataset.num_episodes` para o número de episódios adicionais a serem gravados (não o número total de episódios desejado no conjunto de dados).
 - Para iniciar a gravação do zero, **exclua manualmente** o diretório do conjunto de dados.
 
-**3. Parâmetros de Gravação**
+**3. Parâmetros de gravação**
 
 Defina o fluxo de gravação de dados usando argumentos de linha de comando:
 
@@ -738,16 +789,16 @@ Defina o fluxo de gravação de dados usando argumentos de linha de comando:
 |------|------|--------|
 | --dataset.episode_time_s | Duração por episódio de dados (segundos) | 60 |
 | --dataset.reset_time_s | Tempo de reinicialização do ambiente após cada episódio (segundos) | 60 |
-| --dataset.num_episodes | Número total de episódios a serem gravados | 50 |
+| --dataset.num_episodes | Total de episódios a serem gravados | 50 |
 
-**4. Controles de Teclado Durante a Gravação**
+**4. Controles de teclado durante a gravação**
 
 Controle o fluxo de gravação de dados usando atalhos de teclado:
 
 | Tecla | Ação |
 |----|------|
-| → (Seta para a Direita) | Encerrar antecipadamente o episódio/reset atual; ir para o próximo. |
-| ← (Seta para a Esquerda) | Cancelar o episódio atual; regravá-lo. |
+| → (Seta para a direita) | Encerrar antecipadamente o episódio/reset atual; ir para o próximo. |
+| ← (Seta para a esquerda) | Cancelar o episódio atual; regravá-lo. |
 | ESC | Parar a sessão imediatamente, codificar os vídeos e enviar o conjunto de dados. |
 
 :::tip
@@ -757,29 +808,29 @@ pip install pynput==1.6.8
 ```
 :::
 
-**Dicas para Coletar Dados**
+**Dicas para coletar dados**
 
-- **Sugestão de Tarefa**: Agarrar objetos em diferentes locais e colocá-los em um recipiente.
+- **Sugestão de tarefa**: Agarrar objetos em diferentes locais e colocá-los em um recipiente.
 - **Escala**: Grave ≥50 episódios (10 episódios por local).
 - **Consistência**:
   - Mantenha as câmeras fixas.
   - Mantenha o mesmo comportamento de preensão.
-  - Garanta que os objetos manipulados estejam visíveis nos feeds das câmeras.
+  - Certifique-se de que os objetos manipulados estejam visíveis nos feeds das câmeras.
 - **Progressão**:
   - Comece com preensões confiáveis antes de adicionar variações (novos locais, técnicas de preensão, ajustes de câmera).
   - Evite aumentar a complexidade rapidamente para prevenir falhas.
 
-💡 **Regra Geral**: Você deve ser capaz de realizar a tarefa apenas olhando para as imagens da câmera na tela.
+💡 **Regra prática**: Você deve ser capaz de realizar a tarefa apenas olhando para as imagens da câmera na tela.
 
-Se quiser se aprofundar nesse tópico importante, você pode conferir o [post no blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escrevemos sobre o que torna um bom conjunto de dados.
+Se você quiser se aprofundar nesse tópico importante, pode conferir o [post no blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) que escrevemos sobre o que torna um bom conjunto de dados.
 
-**Solução de Problemas**
+**Solução de problemas**
 
 Problema específico do Linux:
-Se as teclas Seta para a Direita/Seta para a Esquerda/ESC não responderem durante a gravação:
-- Verifique se a variável de ambiente `$DISPLAY` está definida (veja [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html)).
+Se as teclas Seta para a direita/Seta para a esquerda/ESC não responderem durante a gravação:
+- Verifique se a variável de ambiente `$DISPLAY` está definida (veja [limitações do pynput](https://pynput.readthedocs.io/en/latest/limitations.html)).
 
-## Visualizar o Conjunto de Dados
+## Visualizar o conjunto de dados
 
 ```bash
 echo ${HF_USER}/rebot_test  
@@ -824,7 +875,7 @@ lerobot-replay \
     --dataset.episode=0
 ```
 
-Neste ponto, o robô deve executar as mesmas ações que você realizou durante a teleoperação na gravação.
+Neste ponto, o robô deve executar as mesmas ações que você realizou por teleoperação durante a gravação.
 
 ## Treinamento e Avaliação
 
@@ -864,13 +915,13 @@ lerobot-train \
   --steps=300000 
 ```
 
-**Explicação do comando**
+**Explicação do Comando**
 
-* **Especificação do conjunto de dados**: fornecemos o conjunto de dados por meio do parâmetro `--dataset.repo_id=${HF_USER}/rebot_test`.
-* **Etapas de treinamento**: modificamos o número de etapas de treinamento usando `--steps=300000`. O algoritmo usa por padrão 800000 etapas, e você pode ajustá-lo com base na dificuldade da sua tarefa e observando a perda durante o treinamento.
-* **Tipo de política**: fornecemos a política com `policy.type=act`. Da mesma forma, você pode alternar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]. Isso carregará a configuração de `configuration_act.py`. É importante ressaltar que essa política se adaptará automaticamente aos estados dos motores, ações dos motores e ao número de câmeras do seu robô (por exemplo, `laptop` e `phone`), pois essas informações já estão armazenadas no seu conjunto de dados.
-* **Seleção de dispositivo**: fornecemos `policy.device=cuda` porque estamos treinando em uma GPU Nvidia, mas você pode usar `policy.device=mps` para treinar em Apple Silicon.
-* **Ferramenta de visualização**: fornecemos `wandb.enable=true` para visualizar gráficos de treinamento usando o [Weights and Biases](https://docs.wandb.ai/quickstart). Isso é opcional, mas, se você usar, certifique-se de ter feito login executando `wandb login`.
+* **Especificação do conjunto de dados**: Fornecemos o conjunto de dados por meio do parâmetro `--dataset.repo_id=${HF_USER}/rebot_test`.
+* **Etapas de treinamento**: Modificamos o número de etapas de treinamento usando `--steps=300000`. O algoritmo usa por padrão 800000 etapas, e você pode ajustá-lo com base na dificuldade da sua tarefa e observando a perda durante o treinamento.
+* **Tipo de política**: Fornecemos a política com `policy.type=act`. Da mesma forma, você pode alternar entre políticas como [`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`]. Isso carregará a configuração de `configuration_act.py`. Importante: essa política se adaptará automaticamente aos estados dos motores, ações dos motores e ao número de câmeras do seu robô (por exemplo, `laptop` e `phone`), pois essas informações já estão armazenadas no seu conjunto de dados.
+* **Seleção de dispositivo**: Fornecemos `policy.device=cuda` porque estamos treinando em uma GPU Nvidia, mas você pode usar `policy.device=mps` para treinar em Apple Silicon.
+* **Ferramenta de visualização**: Fornecemos `wandb.enable=true` para visualizar gráficos de treinamento usando [Weights and Biases](https://docs.wandb.ai/quickstart). Isso é opcional, mas, se você usar, certifique-se de ter feito login executando `wandb login`.
 
 **Avaliação**
 
@@ -893,7 +944,7 @@ lerobot-record \
 1. O parâmetro `--policy.path` indica o caminho para o arquivo de pesos dos resultados do treinamento da sua política (por exemplo, `outputs/train/act_rebot_test/checkpoints/last/pretrained_model`). Se você enviar o arquivo de pesos do resultado do treinamento do modelo para o Hub, também poderá usar o repositório do modelo (por exemplo, `${HF_USER}/act_rebot_test`).
 2. O nome do conjunto de dados `dataset.repo_id` começa com `eval_`. Essa operação registrará separadamente vídeos e dados durante a avaliação, que serão salvos na pasta que começa com `eval_`, como `seeed/eval_test123`.
 3. Se você encontrar `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` durante a fase de avaliação, exclua primeiro a pasta que começa com `eval_` e execute o programa novamente.
-4. Ao encontrar `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, observe que palavras‑chave como `front` e `side` no parâmetro `--robot.cameras` devem ser estritamente consistentes com as usadas ao coletar o conjunto de dados.
+4. Ao encontrar `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, observe que palavras-chave como `front` e `side` no parâmetro `--robot.cameras` devem ser estritamente consistentes com as usadas ao coletar o conjunto de dados.
 
 </details>
 
@@ -1048,7 +1099,7 @@ lerobot-train \
 
 ## FAQ
 
-- Se você estiver seguindo este tutorial da documentação, faça git clone do repositório GitHub recomendado `https://github.com/Seeed-Projects/lerobot.git`. O repositório recomendado nesta documentação é uma versão estável verificada; o repositório oficial do LeRobot é continuamente atualizado para a versão mais recente, o que pode causar problemas imprevistos, como diferentes versões de conjuntos de dados, comandos diferentes etc.
+- Se você estiver seguindo este tutorial de documentação, faça git clone do repositório GitHub recomendado `https://github.com/Seeed-Projects/lerobot.git`. O repositório recomendado nesta documentação é uma versão estável verificada; o repositório oficial do LeRobot é continuamente atualizado para a versão mais recente, o que pode causar problemas imprevistos, como diferentes versões de conjuntos de dados, comandos diferentes etc.
 
 - Se você encontrar:
   ```bash
@@ -1062,11 +1113,11 @@ lerobot-train \
   ```
   Instale o ffmpeg 7.1.1 usando `conda install ffmpeg=7.1.1 -c conda-forge`.
 
-- Treinar ACT em 50 conjuntos de dados leva aproximadamente 6 horas em um laptop com uma RTX 3060 (8 GB) e cerca de 2–3 horas em computadores com GPUs RTX 4090 ou A100.
+- Treinar o ACT em 50 conjuntos de dados leva aproximadamente 6 horas em um laptop com uma RTX 3060 (8GB) e cerca de 2–3 horas em computadores com GPUs RTX 4090 ou A100.
 
-- Durante a coleta de dados, garanta que a posição da câmera, o ângulo e a iluminação ambiente estejam estáveis. Reduza a quantidade de fundo instável e de pedestres capturados pela câmera, pois mudanças excessivas no ambiente de implantação podem fazer com que o braço robótico não consiga agarrar corretamente.
+- Durante a coleta de dados, certifique-se de que a posição da câmera, o ângulo e a iluminação ambiente estejam estáveis. Reduza a quantidade de fundo instável e de pedestres capturados pela câmera, pois mudanças excessivas no ambiente de implantação podem fazer com que o braço robótico não consiga agarrar corretamente.
 
-- Para o comando de coleta de dados, certifique-se de que o parâmetro `num-episodes` esteja definido para coletar dados suficientes. Não pause manualmente no meio, pois a média e a variância dos dados são calculadas somente após a conclusão da coleta de dados, e elas são necessárias para o treinamento.
+- Para o comando de coleta de dados, certifique-se de que o parâmetro `num-episodes` esteja configurado para coletar dados suficientes. Não pause manualmente no meio do processo, pois a média e a variância dos dados são calculadas somente após a conclusão da coleta, e são necessárias para o treinamento.
 
 - Se o programa indicar que não consegue ler dados de imagem da câmera USB, certifique-se de que a câmera USB não esteja conectada por meio de um hub. A câmera USB deve estar conectada diretamente ao dispositivo para garantir alta velocidade de transmissão de imagem.
 
@@ -1088,7 +1139,7 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
 
-[ACT ou ALOHA](https://tonyzhaozh.github.io/aloha/)
+[ACT or ALOHA](https://tonyzhaozh.github.io/aloha/)
 
 [TDMPC](https://www.nicklashansen.com/td-mpc/)
 
