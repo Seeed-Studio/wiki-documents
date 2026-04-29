@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /io_expander_for_xiao
 sku: 103030415
 last_update:
-  date: 09/18/2023
+  date: 04/29/2026
   author: Stephen Lo
 createdAt: '2023-09-19'
 updatedAt: '2026-01-07'
@@ -36,7 +36,7 @@ The IO Expander for XIAO is a state-of-the-art expansion board designed to enhan
 - Communication Protocol: I2C
 - Default I2C Address: 0x21 (Configurable to 0x20)
 - Operating Voltage: 3.3V
-- Dimensions: 21mm x 17mm
+- Dimensions: 21mm x 17.8mm
 
 ## Applications
 
