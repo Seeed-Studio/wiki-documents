@@ -1,7 +1,7 @@
 ---
 description: Introdução à XIAO ePaper Display Board(nRF52840) - EN05
 sku: 100085486
-title: Introdução à XIAO ePaper Display Board(nRF52840) - EN05
+title: Introdução ao EN05
 sidebar_position: 1
 image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introdução à XIAO ePaper Display EN05
+# Introdução à XIAO ePaper Display Board - EN05
 
 <div class="table-center">
 <table align="center">
@@ -38,14 +38,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introdução
 
-Alimentada pela **XIAO nRF52840 Plus**, a placa de display EN05 suporta uma ampla gama de displays ePaper de 24 pinos. Ela possui porta de extensão de IO para conexão de sensores adicionais, conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com três botões de usuário. É ideal para projetos de ePaper de ultrabaixo consumo, como crachás inteligentes, etiquetas eletrônicas de preço, sinalização de salas de reunião e quadros de informação portáteis.
+Alimentada pelo **XIAO nRF52840 Plus**, a placa de display EN05 é compatível com uma ampla variedade de displays ePaper de 24 pinos. Ela possui porta de extensão de IO para conexão de sensores adicionais, conector de bateria JST 2,0 mm com chave liga/desliga, CI de carregamento integrado e vem com três botões de usuário. É ideal para projetos de ePaper de ultrabaixo consumo, como crachás inteligentes, etiquetas eletrônicas de preço, sinalização de salas de reunião e quadros de informação portáteis.
 
 ### Recursos
 
-- **Alimentada pela XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível, com interface NFC onboard para toque‑para‑configurar, parear ou acionar atualizações de conteúdo.
+- **Alimentada por XIAO nRF52840 Plus:** Funciona imediatamente quando conectada a um display ePaper compatível, com interface NFC onboard para toque‑para‑configurar, parear ou acionar atualizações de conteúdo.
 - **Suporte versátil a displays:** Compatível com uma ampla gama de displays ePaper de 24 pinos, oferecendo suporte a displays ePaper de 24 pinos para diferentes requisitos de projeto.
 - **Porta de extensão de IO:** Permite a conexão de sensores adicionais, como sensores de temperatura e umidade, para funcionalidade aprimorada.
-- **Conector de bateria com chave:** Fornece conexão simples de bateria e integra uma chave, permitindo gerenciamento eficiente de energia e economia de consumo.
+- **Conector de bateria com chave:** Fornece uma conexão de bateria simples e integra uma chave, permitindo gerenciamento de energia eficiente e economia de energia.
 - **Compatível com várias plataformas de software:** Quer você prefira programar com Arduino, Platform IO, ESPHome e outros, esta placa controladora oferece suporte a ambas as abordagens, proporcionando máxima flexibilidade para seus projetos.
 
 ### Especificações
@@ -66,14 +66,14 @@ Alimentada pela **XIAO nRF52840 Plus**, a placa de display EN05 suporta uma ampl
 
 A EN05 é compatível com diversos displays ePaper SPI de 24 pinos, incluindo, mas não se limitando a:
 
-- [Display E-paper de 1,54" - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [Display E-Paper de 2,13" - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-- [Display E-Paper de 2,13" - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Display E-paper de 2,9" - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Display E-Paper de 4,2" - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Display E-Paper de 4,26" - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Display E-paper de 5,83" - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [Display ePaper monocromático de 7,5" com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [Display E-paper de 1,54 polegada - Matriz de pontos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [Display E-Paper de 2,13 polegadas - Flexível monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [Display E-Paper de 2,13 polegadas - Quádruplo 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [Display E-paper de 2,9 polegadas - Monocor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Display E-Paper de 4,2 polegadas - Monocor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Display E-Paper de 4,26 polegadas - Monocor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Display E-paper de 5,83 polegadas - Monocor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Display ePaper monocromático de 7,5 polegadas com 800x480 pixels](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
 
@@ -109,13 +109,13 @@ Portanto, certifique-se de selecionar o tipo correto de dispositivo ou component
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN05/1.jpg" style={{width:800, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
 ## Primeiros passos
 
-Aqui, usamos um display monocromático de 7,5" como exemplo. As etapas são idênticas para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
+Aqui, usamos um display monocromático de 7,5 polegadas como exemplo. As etapas são idênticas para outras telas compatíveis; você só precisa selecionar o identificador de tamanho de tela apropriado no driver.
 
 ### Configurar e gravar o programa
 Selecione o exemplo mostrado na figura
@@ -129,7 +129,7 @@ Crie um novo arquivo "driver.h" e cole esse código nele. O código deve ficar a
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN05
 ```
 
-Depois disso, vá para **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
+Depois disso, vá em **Tools** -> **Board** -> **Seeed nRF52 Boards** -> **Seeed XIAO nRF52840 Sense** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**.
 
 Em seguida, clique em **Upload** para enviar o código.
 Agora você verá o resultado na sua tela ePaper!
@@ -146,7 +146,7 @@ Agora você verá o resultado na sua tela ePaper!
 
 **P1: A tela não exibe nada após o upload do código.**
 - **Verifique o cabo FPC**: Certifique-se de que o cabo FPC do ePaper esteja inserido na orientação correta e bem travado no conector.
-- **Verifique a configuração do driver**: Confira novamente `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
+- **Verifique a configuração do driver**: Confira novamente o `driver.h` para garantir que o `BOARD_SCREEN_COMBO` correto esteja selecionado para o tamanho específico da sua tela.
 
 **P2: A placa não liga quando conectada a uma bateria.**
 - **Chave de hardware**: Verifique se a chave deslizante de alimentação na placa está alternada para a posição ON.

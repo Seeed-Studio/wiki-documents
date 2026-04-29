@@ -1,10 +1,10 @@
 ---
 description: XIAO ePaper Display Board(ESP32-S3) - EE05 入門ガイド
 sku: 100057220
-title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
-sidebar_position: 1
+title: EE05 入門ガイド
 image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
+sidebar_position: 4
 last_update:
   date: 04/27/2026
   author: dimo
@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EE05 入門ガイド
+# XIAO ePaper Display Board - EE05 入門ガイド
 
 <div class="table-center">
 <table align="center">
@@ -42,10 +42,10 @@ import Steppers from '@site/src/components/utils/Stepper';
 ### 特長
 
 - **XIAO ESP32-S3 Plus 搭載:** 対応する ePaper ディスプレイに接続するだけで、すぐに動作します。
-- **多用途なディスプレイ対応:** さまざまなプロジェクト要件に対応する、幅広い 24 ピン ePaper ディスプレイと互換性があります。
+- **多用途なディスプレイ対応:** 幅広い 24 ピン ePaper ディスプレイに対応し、さまざまなプロジェクト要件に対応できます。
 - **拡張 IO ポート:** 温湿度センサなどの追加センサを接続でき、機能を拡張できます。
 - **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを内蔵することで効率的な電源管理と省エネを実現します。
-- **SenseCraft HMI によるノーコード UI 設計とデプロイ:** 新しい AI 搭載ノーコードプラットフォームである SenseCraft HMI を使って、パーソナライズされたダッシュボードを簡単に設計・デプロイできます。ドラッグ＆ドロップ要素で UI を作成したり、豊富なテンプレートから選択したり、AI に手伝ってもらうこともできます。Web API からリアルタイムデータを接続し、数回クリックするだけで完成したダッシュボードを ePaper ディスプレイにデプロイできます。設計からデータ設定、デプロイまで、すべてを 1 つのプラットフォーム上でシームレスに行えます。
+- **SenseCraft HMI によるノーコード UI 設計とデプロイ:** 新しい AI 搭載ノーコードプラットフォームである SenseCraft HMI を使って、パーソナライズされたダッシュボードを簡単に設計・デプロイできます。ドラッグ＆ドロップで UI を作成し、豊富なテンプレートから選ぶことも、AI に手伝ってもらうこともできます。Web API からリアルタイムデータを接続し、数回クリックするだけで完成したダッシュボードを ePaper ディスプレイにデプロイできます。設計からデータ設定、デプロイまで、すべてを 1 つのプラットフォーム上でシームレスに行えます。
 
 ### 仕様
 
@@ -80,7 +80,7 @@ EE05 は、以下を含むさまざまな 24 ピン SPI ePaper ディスプレ�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似ディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似したディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -102,7 +102,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 :::tip
 誤った選択をすると、画面には何も表示されません。
 
-そのため、必ず正しいデバイスまたはコンポーネントタイプを選択してください。
+必ず正しいデバイスまたはコンポーネントタイプを選択してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/1.jpg" style={{width:800, height:'auto'}}/></div>
@@ -111,7 +111,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-## はじめて使う
+## はじめての使用
 
 ここでは、7.5 インチのモノクロディスプレイを例として使用します。他の対応スクリーンでも手順は同じで、ドライバ内で適切な画面サイズ識別子を選択するだけです。
 
@@ -120,21 +120,21 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-新しい "driver.h" ファイルを作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります。
+新しい「driver.h」ファイルを作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen (UC8179)
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE05
 ```
 
-その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **Select the port your board is connected to** を選択します。
+その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **ボードが接続されているポートを選択** に進みます。
 
 
 PSRAM を有効にする必要があることに注意してください。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 その後、**Upload** をクリックしてコードを書き込みます。
-これで ePaper スクリーンにフィードバックが表示されます。以下は Bitmap サンプルの結果です。
+これで ePaper スクリーンにフィードバックが表示されます！以下は Bitmap サンプルの結果です。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## リソース
@@ -148,7 +148,7 @@ PSRAM を有効にする必要があることに注意してください。
 - **FPC ケーブルを確認:** ePaper の FPC ケーブルが正しい向きで挿入され、コネクタでしっかりロックされていることを確認してください。
 - **ドライバ設定を確認:** `driver.h` を再確認し、使用している画面サイズに対して正しい `BOARD_SCREEN_COMBO` が選択されていることを確認してください。
 
-**Q2: 色が反転している、または表示が異常なパターンになります。**
+**Q2: 色が反転している、または異常なパターンが表示されます。**
 - **正確なモデルを選択:** 画面サイズや IC のリビジョンが異なると、特定のドライバ設定が必要になります。コンボ番号が使用している画面モデルと完全に一致していることを確認してください。
 - **電源を確認:** （7.5 インチのような）大型スクリーンでは、画面リフレッシュ時に十分な電流を供給できる電源を使用してください。
 

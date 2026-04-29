@@ -1,9 +1,0 @@
-position: 2
-label: 'ESPHome'
-collapsible: true
-collapsed: true
-link:
-  type: generated-index
-  slug: reterminal_e10xx_esphome
-  title: 搭配 ESPHome 的 reTerminal E 系列
-  description: 在 reTerminal E 系列电子墨水屏上配合 Home Assistant 使用 ESPHome，包括基础和进阶用法。

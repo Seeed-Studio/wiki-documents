@@ -1,7 +1,7 @@
 ---
-description: Introducción a XIAO ePaper Display Board(nRF52840) - EN05
+description: Primeros pasos con XIAO ePaper Display Board(nRF52840) - EN05
 sku: 100085486
-title: Introducción a XIAO ePaper Display Board(nRF52840) - EN05
+title: Primeros pasos con EN05
 sidebar_position: 1
 image: https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp
 slug: /epaper_en05
@@ -17,7 +17,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Introducción a XIAO ePaper Display EN05
+# Primeros pasos con XIAO ePaper Display Board - EN05
 
 <div class="table-center">
 <table align="center">
@@ -38,15 +38,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible con una amplia gama de pantallas ePaper de 24 pines. Incorpora un puerto de extensión de E/S para conectar sensores adicionales, conector de batería JST de 2,0 mm con interruptor de alimentación, CI de carga integrado y tres botones de usuario. Es ideal para proyectos de ePaper de ultra bajo consumo, como credenciales inteligentes, etiquetas de precio electrónicas, señalización para salas de reuniones y paneles de información portátiles.
+Impulsada por **XIAO nRF52840 Plus**, la placa de pantalla EN05 es compatible con una amplia gama de pantallas ePaper de 24 pines. Incorpora un puerto de extensión de E/S para conectar sensores adicionales, conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y tres botones de usuario. Es ideal para proyectos de ePaper de ultra bajo consumo, como tarjetas de identificación inteligentes, etiquetas de precio electrónicas, señalización para salas de reuniones y paneles de información portátiles.
 
 ### Características
 
 - **Impulsada por XIAO nRF52840 Plus:** Funciona inmediatamente al conectarse a una pantalla ePaper compatible, con interfaz NFC integrada para configurar con un toque, emparejar o activar actualizaciones de contenido.
 - **Compatibilidad versátil con pantallas:** Compatible con una amplia gama de pantallas ePaper de 24 pines, admitiendo pantallas ePaper de 24 pines para distintos requisitos de proyecto.
-- **Puerto de extensión de E/S:** Permite la conexión de sensores adicionales, como sensores de temperatura y humedad, para ampliar la funcionalidad.
-- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro de consumo.
-- **Compatible con varias plataformas de software:** Tanto si prefieres programar con Arduino, Platform IO, ESPHome y más, esta placa controladora admite ambos enfoques, ofreciendo la máxima flexibilidad para tus proyectos.
+- **Puerto de extensión de E/S:** Permite la conexión de sensores adicionales, como sensores de temperatura y humedad, para una funcionalidad mejorada.
+- **Conector de batería con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión de energía eficiente y ahorro energético.
+- **Compatible con varias plataformas de software:** Tanto si prefieres programar con Arduino, Platform IO, ESPHome y más, esta placa controladora admite ambos enfoques, proporcionando la máxima flexibilidad para tus proyectos.
 
 ### Especificaciones
 
@@ -69,10 +69,10 @@ La EN05 es compatible con una variedad de pantallas ePaper SPI de 24 pines, incl
 - [Pantalla E-paper de 1,54 pulgadas - Matriz de puntos 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [Pantalla E-Paper de 2,13 pulgadas - Flexible monocroma 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [Pantalla E-Paper de 2,13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [Pantalla E-paper de 2,9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-- [Pantalla E-Paper de 4,2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [Pantalla E-Paper de 4,26 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [Pantalla E-paper de 5,83 pulgadas - Monocromo 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [Pantalla E-paper de 2,9 pulgadas - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [Pantalla E-Paper de 4,2 pulgadas - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [Pantalla E-Paper de 4,26 pulgadas - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [Pantalla E-paper de 5,83 pulgadas - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
 - [Pantalla ePaper monocroma de 7,5 pulgadas con 800x480 píxeles](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 
 
@@ -145,8 +145,8 @@ Luego haz clic en **Upload** para subir el código.
 ## Solución de problemas
 
 **P1: La pantalla no muestra nada después de subir el código.**
-- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado con la orientación correcta y bien bloqueado en el conector.
-- **Verifica la configuración del controlador**: Vuelve a comprobar `driver.h` para asegurarte de que el `BOARD_SCREEN_COMBO` correcto esté seleccionado para tu tamaño de pantalla específico.
+- **Comprueba el cable FPC**: Asegúrate de que el cable FPC de la pantalla ePaper esté insertado en la orientación correcta y bien bloqueado en el conector.
+- **Verifica la configuración del controlador**: Vuelve a comprobar `driver.h` para asegurarte de que se haya seleccionado el `BOARD_SCREEN_COMBO` correcto para el tamaño específico de tu pantalla.
 
 **P2: La placa no se enciende cuando se conecta a una batería.**
 - **Interruptor de hardware**: Verifica que el interruptor deslizante de hardware de la placa esté en la posición ON.

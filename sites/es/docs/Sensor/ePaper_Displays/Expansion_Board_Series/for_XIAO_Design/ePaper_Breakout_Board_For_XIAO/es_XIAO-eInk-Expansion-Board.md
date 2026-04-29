@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con la ePaper Breakout Board
-title: ePaper Breakout Board
+description: Introducción a la ePaper Breakout Board
+title: Introducción a la ePaper Breakout Board
 keywords:
   - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -14,7 +14,7 @@ createdAt: '2023-10-30'
 updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/es/XIAO-eInk-Expansion-Board/
 ---
-# Primeros pasos con la ePaper Breakout Board
+# Introducción a la ePaper Breakout Board
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/es/XIAO-eInk-Expansion-Board/
     </a>
 </div><br />
 
-Conoce la XIAO eInk Expansion Board, tu solución ideal para controlar pantallas eInk con la familia XIAO sin esfuerzo. Diseñada con un conector FPC de 24 pines, esta placa proporciona un enlace perfecto con nuestra serie de productos eInk; si quieres ampliar tus opciones, el header de 8 pines 2.54 te permite integrar fácilmente cualquier microcontrolador de tu elección. Piensa en esta placa como la “mejor amiga para siempre” de tu eInk, ampliando sus capacidades y facilitándote la vida.
+Conoce la XIAO eInk Expansion Board, tu solución ideal para controlar pantallas eInk con la familia XIAO sin esfuerzo. Diseñada con un conector FPC de 24 pines, esta placa proporciona un enlace perfecto con nuestra serie de productos eInk; si quieres ampliar tus opciones, el header de 8 pines 2.54 te permite integrar fácilmente cualquier microcontrolador de tu elección. Piensa en esta placa como la "mejor amiga para siempre" de tu eInk, ampliando sus capacidades y facilitándote la vida.
 
 :::note
 Esta breakout board no incluye una pantalla eInk; la pantalla debe comprarse por separado.
@@ -37,16 +37,16 @@ Esta breakout board no incluye una pantalla eInk; la pantalla debe comprarse por
 - Conector FPC de 24 pines: Proporciona una conexión robusta y fiable a las pantallas eInk.
 - Zócalo XIAO: Te permite usar XIAO como procesador, ofreciendo una solución de control compacta pero potente.
 - Header de 8 pines 2.54: Ofrece flexibilidad al permitirte conectar cualquier microcontrolador, abriendo un mundo de posibilidades.
-- Plug-and-Play: Diseñada para ser fácil de usar, perfecta tanto para principiantes como para expertos.
+- Plug-and-Play: Diseñada para facilitar su uso, lo que la hace perfecta tanto para principiantes como para expertos.
 - Aplicaciones versátiles: Adecuada para una amplia gama de pantallas eInk, desde tamaños pequeños hasta grandes.
 
 ### Aplicaciones
 
 - Señalización digital: Usa la eInk Breakout Board para crear carteles digitales dinámicos y de bajo consumo.
 - Lectores electrónicos: Construye tu propio lector electrónico personalizado con funciones adaptadas a tus necesidades.
-- Paneles de control para hogar inteligente: Integra la placa en un sistema de hogar inteligente para un panel de control moderno y elegante.
+- Paneles de control para hogar inteligente: Integra la placa en un sistema de hogar inteligente para obtener un panel de control moderno y elegante.
 - Etiquetas de precio para retail: Crea etiquetas de precio electrónicas para una experiencia de venta más eficiente y ecológica.
-- Herramientas educativas: Desarrolla materiales educativos interactivos que puedan actualizarse fácilmente y sean de bajo consumo.
+- Herramientas educativas: Desarrolla materiales educativos interactivos que puedan actualizarse fácilmente y que sean de bajo consumo energético.
 
 ## Descripción general del hardware
 
@@ -54,7 +54,7 @@ Esta breakout board no incluye una pantalla eInk; la pantalla debe comprarse por
 
 1. Conector FPC de 24 pines: Para la ePaper de 2,13 pulgadas.
 2. Zócalo XIAO: Para conectar la placa de desarrollo Seeed Studio XIAO.
-3. IO Break out: Para conectar otros controladores, como Arduino UNO o Raspberry Pi.
+3. Salida de IO: Para conectar otros controladores, como Arduino UNO o Raspberry Pi.
 
 ### Definiciones de pines
 
@@ -143,7 +143,7 @@ Esta breakout board no incluye una pantalla eInk; la pantalla debe comprarse por
 
  La herramienta de programación recomendada es el Arduino IDE, y necesitas configurar el entorno de Arduino para el XIAO y añadir el paquete integrado.
 :::tip
-Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Primeros pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
 **Paso 1.** Inicia la aplicación Arduino.
@@ -164,9 +164,9 @@ Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consu
 
 - Si quieres usar **Seeed Studio XIAO nRF52840** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_BLE/#software-setup)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO ESP32C3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started#software-setup)** para completar la adición.
+- Si quieres usar **Seeed Studio XIAO ESP32C3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started#preparación-del-software)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO ESP32S3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#software-preparation)** para completar la adición.
+- Si quieres usar **Seeed Studio XIAO ESP32S3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#preparación-del-software)** para completar la adición.
 
 ## Instalar la biblioteca Seeed GFX
 
@@ -190,10 +190,10 @@ Desplázate hacia abajo y abre este enlace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecciona el tipo de dispositivo y generará algo de código. Copia ese código y lo usaremos más tarde.
+Selecciona tu tipo de dispositivo y se generará algo de código. Copia ese código y lo usaremos más tarde.
 
 :::tip
-Si haces una elección incorrecta, la pantalla no mostrará nada.
+Si haces la elección equivocada, la pantalla no mostrará nada.
 
 Así que asegúrate del tipo de tus dispositivos o componentes.
 :::
@@ -279,7 +279,7 @@ Primero elige la imagen que quieras, intenta no exceder el tamaño de 800*480.
 
 **Paso 3**.Vista previa
 
-Una vez que la configuración esté completa, aquí podrás ver una vista previa de cómo aparecerá tu imagen
+Una vez que la configuración esté completa, podrás ver aquí una vista previa de cómo aparecerá tu imagen
 
 **Paso 4**.Salida
 
@@ -307,19 +307,19 @@ Los colores de la imagen deben ser coherentes con los colores estándar del tabl
 
 <div class="table-center">
 
-|      Papel electrónico      | Colores |
+|      E-paper      | Colores |
 |       ---      |  ---   |
-|Papel electrónico de 1,54 pulgadas - Matriz de puntos 200x200           | blanco y negro puros          |
-|Papel electrónico de 2,13 pulgadas - Flexible monocromo 212x104 | blanco y negro puros          |
-|Papel electrónico de 2,13 pulgadas - Cuádruple 212x104          | negro, blanco, rojo y amarillo |
-|Papel electrónico de 2,9 pulgadas - Monocolor 128x296           | blanco y negro puros          |
-|Papel electrónico de 2,9 pulgadas - Cuádruple color 128x296     | negro, blanco, rojo y amarillo |
-|Papel electrónico de 4,2 pulgadas - Monocolor 400x300           | blanco y negro puros          |
-|Papel electrónico de 4,26 pulgadas - Monocolor 800x480          | blanco y negro puros          |
-|Papel electrónico de 5,65 pulgadas - Siete colores 600x480        | negro, blanco, rojo, amarillo, azul, verde, naranja|
-|Papel electrónico de 5,83 pulgadas - Monocolor 648x480          | blanco y negro puros          |
-|Papel electrónico de 7,5 pulgadas - Monocolor 800x480           | blanco y negro puros          |
-|Papel electrónico de 7,5 pulgadas - Tricolor 800x480           | blanco y negro puros          |
+|1.54-inch E-paper - Dotmatix 200x200           | blanco y negro puros          |
+|2.13-inch E-Paper -Flexible Monochrome 212x104 | blanco y negro puros          |
+|2.13-inch E-Paper - Quadruple 212x104          | negro, blanco, rojo y amarillo |
+|2.9 inch E-paper - Monocolor 128x296           | blanco y negro puros          |
+|2.9-inch e-paper - Quadruple color 128x296     | negro, blanco, rojo y amarillo |
+|4.2-inch E-Paper - Monocolor 400x300           | blanco y negro puros          |
+|4.26-inch E-Paper - Monocolor 800x480          | blanco y negro puros          |
+|5.65-inch E-paper -  Sevencolor 600x480        | negro, blanco, rojo, amarillo, azul, verde, naranja|
+|5.83-inch E-paper - Monocolor 648x480          | blanco y negro puros          |
+|7.5-inch E-paper - Monocolor 800x480           | blanco y negro puros          |
+|7.5-inch E-paper - Tri-Color 800x480           | blanco y negro puros          |
 
 </div>
 
@@ -333,78 +333,78 @@ Los colores de la imagen deben ser coherentes con los colores estándar del tabl
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Papel electrónico</th>
+        <th>Epaper</th>
         <th>BitPixl</th>
-        <th>Ancho y alto máximos</th>
-        <th>Invertir color</th>
-        <th>Modo de visualización</th>
+        <th>Max Width and Height</th>
+        <th>Reverse color</th>
+        <th>Display mode</th>
     </tr>
     <tr>
-        <th>Papel electrónico de 1,54 pulgadas - Matriz de puntos 200x200</th>
-        <td align="center">Monocromo</td>
+        <th>1.54-inch E-paper - Dotmatix 200x200</th>
+        <td align="center">Monochrome</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
-        <td align="center">Espejo izquierda-derecha</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 2,13 pulgadas - Flexible monocromo 212x104</th>
-        <td align="center">Monocromo</td>
+        <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
+        <td align="center">Monochrome</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 2,13 pulgadas - Cuádruple 212x104 </th>
-        <td align="center">4 grises</td>
+        <th>2.13-inch E-Paper - Quadruple 212x104 </th>
+        <td align="center">4 Gray</td>
         <td align="center">104x212</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 2,9 pulgadas - Monocolor 128x296</th>
-         <td align="center">Monocromo</td>
+        <th>2.9 inch E-paper - Monocolor 128x296</th>
+         <td align="center">Monochrome</td>
         <td align="center">128x296</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 2,9 pulgadas - Cuádruple color 128x296 </th>
-        <td align="center">4 grises</td>
+        <th>2.9-inch e-paper - Quadruple color 128x296 </th>
+        <td align="center">4 Gray</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 4,2 pulgadas - Monocolor 400x300</th>
-        <td align="center">Monocromo</td>
+        <th>4.2-inch E-Paper - Monocolor 400x300</th>
+        <td align="center">Monochrome</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
-        <td align="center">Espejo izquierda-derecha</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 4,26 pulgadas - Monocolor 800x480</th>
-        <td align="center">Monocromo</td>
+        <th>4.26-inch E-Paper - Monocolor 800x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">Espejo izquierda-derecha</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 5,65 pulgadas - Siete colores 600x480</th>
-        <td align="center">256 colores</td>
+        <th>5.65-inch E-paper -  Sevencolor 600x480</th>
+        <td align="center">256 colors</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 5,83 pulgadas - Monocolor 648x480</th>
-        <td align="center">Monocromo</td>
+        <th>5.83-inch E-paper - Monocolor 648x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
-        <td align="center">Espejo izquierda-derecha</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>Papel electrónico de 7,5 pulgadas - Monocolor 800x480</th>
-        <td align="center">Monocromo</td>
+        <th>7.5-inch E-paper - Monocolor 800x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
         <td align="center">Espejo izquierda-derecha</td>
@@ -421,7 +421,7 @@ Los colores de la imagen deben ser coherentes con los colores estándar del tabl
 
 :::tip
 
-- Después de configurar el ancho y alto máximos, es necesario hacer clic en la flecha para confirmar.
+- Después de configurar el ancho y el alto máximos, es necesario hacer clic en la flecha para confirmar.
 - No incluyas los datos de cabecera.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
