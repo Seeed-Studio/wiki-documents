@@ -429,7 +429,7 @@ This project is open source under the **MIT License**.
 
 - [Pinocchio Official Documentation](https://stack-of-tasks.github.io/pinocchio/)
 - [MeshCat Official Documentation](https://github.com/rdeits/meshcat)
-- [motorbridge SDK](https://github.com/Damiao/motorbridge)
+- [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
 
