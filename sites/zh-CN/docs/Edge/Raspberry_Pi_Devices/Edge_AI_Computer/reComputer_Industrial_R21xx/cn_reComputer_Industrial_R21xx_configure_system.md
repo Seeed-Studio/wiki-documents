@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-12-16'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_configure_system/
 ---
 
@@ -100,7 +100,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，使用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
-通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，其中 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有实际设备连接的情况下测试 SPI 通信。
+通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，即 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有实际设备连接的情况下测试 SPI 通信。
 
 ## Wi-Fi 扫描
 
@@ -159,13 +159,13 @@ cd sx1302_hal
 sudo nano ./libloragw/inc/loragw_i2c.h
 ```
 
-将此行修改为：  
+修改这一行：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-1"
 ```
 
-修改为：  
+为：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-2"
@@ -174,7 +174,7 @@ sudo nano ./libloragw/inc/loragw_i2c.h
 将 **#define I2C_DEVICE "/dev/i2c-1"** 修改为 **#define I2C_DEVICE "/dev/i2c-2"。**
 按下 **ctrl+x** 退出，按下 **y** 保存更改，然后按下 **Enter** 返回命令行页面。
 
-4. 4.添加 packet_forwarder/reset_lgw.sh 文件：
+4. 添加 packet_forwarder/reset_lgw.sh 文件：
 
 ```bash
 sudo nano packet_forwarder/reset_lgw.sh
@@ -410,7 +410,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 该命令以指定的串口（***/dev/ttyUSB2***）和 115200 的波特率打开 minicom。
 
-1. 打开 minicom 后，你可以开始向 4G 模块发送 AT 指令。例如：
+1. 打开 minicom 后，就可以开始向 4G 模块发送 AT 指令。例如：
 
 ```bash
 AT
@@ -425,7 +425,7 @@ ATD<phone_number>;
 ```
 
 将 **phone_number** 替换为你想要拨打的目标电话号码。
-请确保在命令末尾包含分号 ;，以指示电话号码的结束。
+请确保在命令末尾包含分号 ;，以表示电话号码结束。
 
 ## 通过 Mini-PCIe 的 4G 蜂窝网络
 
@@ -464,7 +464,7 @@ cat /sys/class/gpio/gpio645/value # should be 0
 cat /sys/class/gpio/gpio639/value # should be 0
 ```
 
-两个值都为 0 → 脚本已被正确拉低，模块处于工作状态。
+两个值都为 0 → 脚本已正确拉低，模块处于工作状态。
 进入 minicom 发送指令：
 
 ```bash
@@ -495,16 +495,16 @@ ping www.baidu.com -I usb0
 
 ## RS485 测试
 
-reComputer Industrial R21xx 包含 **2 个 RS485 接口**。下面是它们对应的 **COM 端口** 和 **设备文件**：  
+reComputer Industrial R21xx 包含 **2 路 RS485 接口**。下面是它们对应的 **COM 口** 和 **设备文件**：  
 
-| **RS485 接口数量** | **COM 端口** | **丝印标识** | **设备文件** |
+| **RS485 接口数量** | **COM 口** | **丝印标识** | **设备文件** |
 |---------------------------|--------------|----------------------|-----------------|
 | **RS485-3**               | COM3         | A3/B3/GND3           | `/dev/ttyACM2`  |
 | **RS485-4**               | COM4         | A4/B4/GND4           | `/dev/ttyACM3`  |
 
 要测试 RS485 功能，你可以按照以下步骤进行（以 RS485_1 和 RS485_2 为例）：
 
-1. 请连接 RS485_1 和 RS485_2 的 A 和 B。
+1. 请将 RS485_1 和 RS485_2 的 A、B 端连接在一起。
 2. 分别在两个终端窗口中打开 minicom：
 
 ```bash
@@ -518,9 +518,9 @@ sudo minicom -D /dev/ttyACM2
 
 3. 下面的操作需要在两个已打开的 ACM 上都执行：
 
-- 按 ***Ctrl+A***，然后按 ***Z***，会出现 Minicom Command Summary 界面：
+- 按 ***Ctrl+A***，再按 ***Z***，会出现 Minicom Command Summary 界面：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- 再按 ***O*** 打开配置，选择 Serial port setup，并按 ***Enter***；打开所有与 RS485 相关的界面，依次按 ***H/I/J/K/L*** 打开；
+- 再按 ***O*** 打开配置，选择 Serial port setup，并按 ***Enter***；打开所有 RS485 相关接口，依次按 ***H/I/J/K/L*** 打开；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
 - 当全部显示为 "YES" 后，按 Enter 返回，然后选择 Exit 退出。
@@ -528,17 +528,17 @@ sudo minicom -D /dev/ttyACM2
 :::note
 
 以 ACM2 和 ACM3 为例：
-如果你想从 ACM2 发送到 ACM3，需要重新设置 ACM2：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM2 中任意打印字符串，并且可以在 ACM3 中同时看到 ACM2 的内容；
-相反，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容。如图所示。
+如果你想从 ACM2 发送到 ACM3，需要重新设置 ACM2：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时可以在 ACM2 中任意打印字符串，并且可以在 ACM3 中同时看到 ACM2 的内容；
+反之，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容，如图所示。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
 ## RS232 测试
 
-reComputer Industrial R21xx 包含 **2 个 RS232** 接口，对应的 **COM 端口** 和 **设备文件** 如下：
+reComputer Industrial R21xx 包含 **2 路 RS232** 接口，对应的 **COM 口** 和 **设备文件** 如下：
 
-| **RS232 接口数量** | **COM 端口** | **丝印标识** | **设备文件** |
+| **RS232 接口数量** | **COM 口** | **丝印标识** | **设备文件** |
 |---------------------------|--------------|----------------------|-----------------|
 | **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
 | **RS232-2**               | COM2         | RX2/TX2/GND2         | `/dev/ttyACM1`  |
@@ -547,14 +547,14 @@ reComputer Industrial R21xx 包含 **2 个 RS232** 接口，对应的 **COM 端�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
-你需要打开两个终端，如果连接了扩展板则为 ACM1，如果未连接扩展板则为 ACM2：
+你需要打开两个终端，连接了扩展板则为 ACM1，未连接扩展板则为 ACM2：
 **终端 1：***
 
 ```bash
 sudo minicom -D /dev/ttyACM1 -b 9600
 ```
 
-如果未连接扩展板，你需要将 ***/dev/ttyACM1*** 改为 ***/dev/ttyACM0***。
+如果未连接扩展板，需要将 ***/dev/ttyACM1*** 改为 ***/dev/ttyACM0***。
 
 **终端 2：**
 
@@ -574,14 +574,14 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 
 ## DI（数字输入）测试
 
-reComputer Industrial R21xx 包含 4 个 DI 接口，用户可以根据实际需求配置这些接口。
+reComputer Industrial R21xx 包含 4 路 DI 接口，用户可以根据实际需求配置这些接口。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
         <th>端口数量</th>
-        <th>DI 接口</th>
+        <th>DI 端口</th>
         <th>对应扩展 GPIO</th>
       </tr>
     </thead>
@@ -607,10 +607,10 @@ reComputer Industrial R21xx 包含 4 个 DI 接口，用户可以根据实际需
   </table>
 </div>
 
-DI 接口的输入类型为 PNP。支持的输入电压为 5VDC~24VDC，电流 - 1000mA。
+DI 端口的输入类型为 PNP。支持的输入电压为 5VDC~24VDC，电流 - 1000mA。
 要测试 DI 的功能，你可以按照以下步骤进行测试：
 
-1. 已完成 reComputer Industrial R21xx 的 DI 接口与外部负载之间的连接。
+1. 已完成 reComputer Industrial R21xx 的 DI 端口与外部负载之间的连接。
 2. 输入以下命令获取 GPIO 的状态：
 
 ```bash
@@ -623,14 +623,14 @@ cat /sys/class/gpio/gpio588/value
 
 ## DO（数字输出）
 
-reComputer Industrial R21xx 包含 4 个 DO 接口，用户可以根据实际需求配置这些接口。
+reComputer Industrial R21xx 包含 4 路 DO 接口，用户可以根据实际需求配置这些接口。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
         <th>端口数量</th>
-        <th>DI 接口</th>
+        <th>DI 端口</th>
         <th>对应扩展 GPIO</th>
       </tr>
     </thead>
@@ -646,24 +646,20 @@ reComputer Industrial R21xx 包含 4 个 DO 接口，用户可以根据实际需
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-DO 接口的输出类型为晶体管。支持的输出电压 - 小于 60 VDC，电流能力 - 500 mA。
+DO 端口的输出类型为晶体管。支持的输出电压 - 小于 60 VDC，电流能力 - 500 mA。
 要测试 DO 的功能，你可以按照以下步骤进行测试：
 
-1. 已完成 reComputer Industrial R21xx 的 DO 接口与外部负载之间的连接。
+1. 已完成 reComputer Industrial R21xx 的 DO 端口与外部负载之间的连接。
 2. 输入以下命令将输出设置为高电平或低电平：
 
 ```bash
@@ -738,7 +734,7 @@ ip -d link show can1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_2.png" style={{width:800, height:'auto'}}/></div>
 
-5. 下载并安装 can-utils，以使用 candump 和 cansend 等基本工具。
+5. 下载并安装 can-utils，以使用 candump 和 cansend 等基础工具。
 
 ```bash
 sudo apt install can-utils
@@ -781,8 +777,8 @@ echo "can0 & can1 are up @ 500 kbit/s"
 
 ### Python-CAN 测试
 
-[Python-CAN](https://github.com/raspberrypi/usbboot) 是一个跨平台的 Python 库，为控制器局域网（CAN）总线通信提供统一的编程接口，支持多种 CAN 硬件接口和虚拟总线，可轻松实现 CAN 报文的发送、接收、过滤、总线监控等操作。
-同样，需要将 CAN 接口在物理上连接起来，以实现回环通信。
+[Python-CAN](https://github.com/raspberrypi/usbboot) 是一个跨平台的 Python 库，为控制器局域网（CAN）总线通信提供统一的编程接口，支持多种 CAN 硬件接口和虚拟总线，可轻松实现 CAN 消息的发送、接收、过滤、总线监控等操作。
+同样地，需要将 CAN 接口在物理上连接起来，以实现回环通信。
 
 1. 配置标准 CAN 波特率（500 kbit/s）：
 
@@ -795,7 +791,7 @@ sudo ip link set up can0
 sudo ip link set up can1
 ```
 
-2. 验证两个接口都处于 UP 状态：输出 "state UP" 表示为 UP 状态。
+2. 验证两个接口是否处于 UP 状态：输出 "state UP" 表示为 UP 状态。
 
 ```bash
 ip a show can0
@@ -871,8 +867,8 @@ deactivate
 lsusb
 ```
 
-运行该命令后，应该会显示系统中已连接 USB 设备的信息，包括存在的任何 USB 集线器。
-如果 USB 集线器工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是集线器或其与系统连接存在问题。在这种情况下，你可能需要对 USB 集线器或其连接进行排查。
+运行该命令后，应会显示系统中已连接 USB 设备的信息，包括存在的任何 USB 集线器。
+如果 USB 集线器工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果未列出，可能是集线器或其与系统连接存在问题。在这种情况下，你可能需要对 USB 集线器或其连接进行排查。
 
 ## RTC（实时时钟）测试
 
@@ -907,7 +903,7 @@ sudo hwclock -r
 
 该命令将读取并显示存储在 RTC 中的时间。
 
-5. 断开 RTC 的电源，等待几分钟后重新接通电源，再次检查 RTC 时间，查看是否保持了正确时间。
+5. 断开 RTC 的电源，等待几分钟后重新接通电源，再次检查 RTC 时间，以确认其是否保持了正确时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -963,7 +959,7 @@ priority = 1
 sudo systemctl start watchdog
 ```
 
-4. 要测试看门狗功能，执行以下命令来模拟系统死机：
+4. 要测试看门狗功能，执行以下命令以模拟系统死机：
 
 ```bash
 sudo su
@@ -975,7 +971,7 @@ echo "c" > /proc/sysrq-trigger
 该命令会触发内核崩溃，并应使看门狗重启系统。
 
 5. 监控系统，以确认其在指定超时时间后重新启动。
-这些步骤将帮助你测试并确保系统上看门狗定时器的功能正常。
+通过这些步骤，你可以测试并确保系统上的看门狗定时器功能正常。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1009,7 +1005,7 @@ ls /dev | grep tpm
 
 **输出结果说明：**  
 
-如果在输出中看到 ***tpm0*** 和 ***tpmrm0***，则表示系统已检测到 TPM（可信平台模块）设备并可用。这说明 TPM 硬件已被识别且可访问，是一个良好信号。你可以在确认这些设备存在且可访问的前提下，继续使用与 TPM 相关的功能或应用程序。
+如果在输出中看到 ***tpm0*** 和 ***tpmrm0***，则表示系统已检测到 TPM（可信平台模块）设备且可用。这说明 TPM 硬件已被识别并可访问，是一个良好的信号。你可以在确认这些设备存在且可访问的前提下，继续使用与 TPM 相关的功能或应用程序。
 
 ## ATECC608A
 
@@ -1039,7 +1035,7 @@ cd usr/bin
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
-该命令指示 ATECC 工具使用插槽 10（-b 10），将序列号大小设置为 192 位 ***(-s 192)***，并生成一个随机序列号 ***(-c 'serial')***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
+该命令指示 ATECC 工具使用插槽 10（-b 10），将序列号大小设置为 192 位 ***( -s 192 )***，并生成一个随机序列号 ***( -c 'serial' )***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
 通过此过程，您可以与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
 
 ## 与 EEPROM 交互
@@ -1072,8 +1068,8 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 sudo fdisk -l
 ```
 
-该命令将显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如：***/dev/sda, /dev/sdb,*** 等）。
-确定与 SSD 对应的条目后，您就可以根据需要对其进行分区或格式化。
+该命令会显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表您 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
+确定与您的 SSD 对应的条目后，您就可以根据需要继续对其进行分区或格式化。
 
 ## UPS 安全关机
 
@@ -1185,7 +1181,7 @@ sudo python3 ups_shutdown.py
 
 :::note
 
-1. 关于 UPS 功能，请联系我们获取更多信息。
+1. 关于 UPS 功能，请联系我们以获取更多信息。
 2. 报警信号为低电平有效。
 
 :::
@@ -1193,7 +1189,7 @@ sudo python3 ups_shutdown.py
 ## AI 加速器
 
 reComputer Industrial R21xx 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R21xx-12 系列已预装一块 Hailo-8 M.2 AI 加速卡，性能最高可达 26TOPS。
-如果您购买的是 R21xx-10 系列产品，则需要另外购买 Hailo 的 NPU 模块以启用 AI 功能。
+如果您购买的是 R21xx-10 系列产品，则需要另行购买 Hailo 的 NPU 模块以启用 AI 功能。
 设备已预装 Hailo 加速器驱动，因此您可以直接使用并运行测试用例：
 
 1. 进入测试用例目录

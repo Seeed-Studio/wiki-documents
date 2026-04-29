@@ -11,7 +11,7 @@ last_update:
   date: 1/15/2026
   author: Brandy
 createdAt: '2025-09-26'
-updatedAt: '2026-03-12'
+updatedAt: '2026-01-19'
 url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_micropython/
 ---
 
@@ -19,43 +19,36 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_nrf54l15_sense_micropython/
 
 ### Entendendo o MicroPython
 
-Este tutorial tem como objetivo apresentar como usar o MicroPython no Thonny com base no XIAO nRF54L15.
+Este tutorial tem como objetivo apresentar como usar MicroPython no Thonny com base no XIAO nRF54L15.
 
-[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com um recurso parcial de compilação de código nativo. Ele fornece um subconjunto dos recursos do Python 3.5, implementado para processadores embarcados e sistemas com recursos limitados. É diferente do CPython e você pode ler mais sobre as diferenças [aqui](https://github.com/micropython/micropython/wiki/Differences). Se você precisar de coleções mais interessantes, pode verificar [aqui](
+[MicroPython](https://github.com/micropython/micropython/wiki) é um interpretador Python com um recurso parcial de compilação para código nativo. Ele fornece um subconjunto dos recursos do Python 3.5, implementado para processadores embarcados e sistemas com recursos limitados. Ele é diferente do CPython e você pode ler mais sobre as diferenças [aqui](https://github.com/micropython/micropython/wiki/Differences). Se você precisar de coleções mais interessantes, pode conferir  [aqui](
 https://awesome-micropython.com/)
 
 <!-- ## 安装Python3
 Thonny自带Python解释器，所以不需要额外安装Python环境
 Win + R -->
 
-## Preparar o Hardware.
+## Preparar o hardware.
 
 <table align="center">
  <tr>
   <th>Seeed Studio XIAO nRF54L15 </th>
         <th> Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio XIAO Debug Mate</th>
  </tr>
  <tr>
 
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/16.png" style={{width:150, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-xiao-debugger.jpg" style={{width:250, height:'auto'}}/></div></td>
  </tr>
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
-      </a>
-  </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -67,7 +60,7 @@ Win + R -->
 
 Escolha a versão apropriada para instalação. Aqui, estou instalando em um sistema Windows, então selecionei a versão para Windows.
 
-Siga as instruções para a versão Python desejada.
+Siga as instruções para a versão desejada do Python.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -76,7 +69,7 @@ Em seguida, basta seguir as etapas padrão de configuração.
 ### Baixar o repositório
 
 
-Clone-o para a máquina local e, em seguida, lembre-se do caminho onde o MicroPython do XIAO nRF54L15 está armazenado. Esse caminho será usado posteriormente.
+Clone-o para a máquina local e, em seguida, lembre-se do caminho onde o MicroPython do XIAO nRF54L15 está armazenado. Esse caminho será usado mais tarde.
 
 ```git
 git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
@@ -84,47 +77,47 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/2.png" style={{width:600, height:'auto'}}/></div>
 
-### Fazer upload do arquivo de placa
+### Fazer upload do arquivo da placa
 
 **Passo 0.** Conecte o XIAO NRF54L15 ao computador usando um cabo USB
 
 **Passo 1.** Grave o firmware MicroPython para o XIAO nRF54L15
 
 <!-- 如果您已经刷入了对应的MircroPython固件，可以跳过这一步骤 -->
-- Baixe o pacote de firmware e extraia-o para o local apropriado. Em seguida, clique em flash.bat e ele gravará o firmware automaticamente para você.
+- Baixe o pacote de firmware e extraia-o para o local apropriado. Em seguida, clique em flash.bat e ele irá gravar o firmware automaticamente para você.
 
-    **[Firmware]** [Firmware MicroPython para XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
+    **[Firmware]** [XIAO nRF54L15 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
 <!-- 这里的压缩包填入刷写固件的压缩包 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/10.png" style={{width:600, height:'auto'}}/></div>
 O resultado é o seguinte
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/3.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Este script possui comandos de toolchain de gravação pré-configurados. Se você estiver usando pela primeira vez, pode levar um pouco de tempo. Ele travará automaticamente após o download. Se o XIAO NRF54L15 não estiver conectado, ocorrerá um erro '200' durante a gravação.
+Este script possui comandos de cadeia de ferramentas de gravação pré-configurados. Se você estiver usando-o pela primeira vez, pode levar um pouco de tempo. Ele irá fechar automaticamente após o download. Se o XIAO NRF54L15 não estiver conectado, ocorrerá um erro “200” durante a gravação.
 :::
 
-**Passo 2.** Abra o Thonny IDE, clique no canto inferior direito da interface para configurar as opções do interpretador. Selecione MicroPython (generic) e a Porta
+**Passo 2.** Abra o Thonny IDE, depois clique no canto inferior direito da interface para configurar as opções do interpretador. Selecione MicroPython (generic) e Port
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_1.png" style={{width:600, height:'auto'}}/></div>
 
-**Passo 3.** Faça upload do arquivo de placas
+**Passo 3.** Faça upload do arquivo boards
 
-- Abra o "view", selecione "File", e o caminho do gerenciador de arquivos será exibido na barra lateral esquerda.
+- Abra “view”, selecione "File", e o caminho do gerenciador de arquivos será exibido na barra lateral esquerda.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/11.png" style={{width:600, height:'auto'}}/></div>
 
 - Abra o caminho do arquivo clonado ou baixado e abra `micropython-seeed-boards\examples`
--Clique com o botão direito na pasta "boards" e faça o upload para o flash. Em seguida, você poderá ver o arquivo enviado no dispositivo MicroPython/flash.
+-Clique com o botão direito na pasta "boards" e faça o upload para a flash. Em seguida, você poderá ver o arquivo enviado no dispositivo/flash MicroPython.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/12.png" style={{width:600, height:'auto'}}/></div>
 
-Quando estiver normal, um ícone aparecerá na posição '3'
+Quando estiver tudo normal, um ícone aparecerá na posição “3”
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/13.png" style={{width:600, height:'auto'}}/></div>
 
-**Passo 4.** Acender o LED
+**Passo 4.** Ligar o LED
 
-Abra um novo arquivo (XX.py) ou vá para a página inicial, copie o código e pressione `F5` para executá-lo.
+Abra um novo arquivo (XX.py) ou vá para a página inicial, depois copie o código e pressione `F5` para executá-lo.
 
 ```py
 import time
@@ -171,17 +164,17 @@ O resultado é o seguinte:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="Grove – Chainable RGB LED V2.0" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Chainable-RGB-Led-V2-0.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
@@ -214,8 +207,8 @@ if __name__ == "__main__":
     print("Pin A0 has been set to high level")  # Output prompt information
 ```
 
-Explicação do Código:
-Este código tem quatro partes, como importação de módulos, uma função para obter as informações GPIO do pino A0, uma função para definir o pino A0 para nível alto e a função principal, onde no programa principal ela chama a operação para definir o pino A0 para nível alto.
+Explicação do código:
+Este código possui quatro partes, como importação de módulos, uma função para obter as informações de GPIO do pino A0, uma função para definir o pino A0 em nível alto e a função principal, onde no programa principal ela chama a operação para definir o pino A0 em nível alto.
 
 ### Resultado
 <!-- 添加对应GIF图 -->
@@ -241,22 +234,22 @@ Este código tem quatro partes, como importação de módulos, uma função para
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -323,12 +316,12 @@ finally:
     pwm.deinit()
 ```
 
-Explicação do código:
-Este código pode ser dividido em quatro partes:
- - importação de módulos: incluindo o módulo time para operações de atraso, bem como os módulos XiaoADC e XiaoPWM
- - inicialização do hardware: definindo os pinos ADC e PWM, inicializando o ADC para ler a tensão do potenciômetro e inicializando o PWM para controlar o brilho do LED.
- - A lógica do programa principal: em um loop infinito, lê a tensão do potenciômetro, converte-a em um ciclo de trabalho PWM e ajusta o brilho do LED de acordo com a tensão.
- - Tratamento de exceções e limpeza: capturando interrupções do usuário (como pressionar Ctrl+C) e outras exceções para garantir que o programa saia com segurança.
+Code Explain:
+This code can be divided into four parts:
+ - importing modules:including the time module for delay operations, as well as the XiaoADC and XiaoPWM modules
+ - initializing the hardware:defining the ADC and PWM pins, and initializing the ADC to read the voltage of the potentiometer, and initializing the PWM to control the LED brightness. 
+ - The main program logic:in an infinite loop, reads the voltage of the potentiometer, converts it to a PWM duty cycle, and adjusts the LED brightness according to the voltage. 
+ - Exception handling and cleanup:capturing user interruptions (such as pressing Ctrl+C) and other exceptions to ensure the program exits safely.
 
 
 
@@ -344,7 +337,7 @@ Este código pode ser dividido em quatro partes:
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Seeed Studio Expansion Board Base for XIAO</th>
+   <th>Placa Base de Expansão Seeed Studio para XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -353,12 +346,12 @@ Este código pode ser dividido em quatro partes:
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -566,19 +559,19 @@ ssd1306_draw_text("NRF54L15", 30, 2)
 ssd1306_draw_text("HELLO WORLD", 20, 4)
 ```
 
-Explicação do Código:
+Explicação do código:
 
-Este código inicializa e controla um display OLED SSD1306 via comunicação I2C, define os comandos e parâmetros do display, e implementa funções para limpar a tela, inicialização e exibição de texto.
+Este código inicializa e controla um display OLED SSD1306 via comunicação I2C, define os comandos e parâmetros do display e implementa funções para limpar a tela, inicialização e exibição de texto.
 
 - Importar módulos e inicializar a comunicação I2C:
-       O módulo time foi importado para operações de atraso, e o módulo XiaoI2C foi importado para inicializar a comunicação I2C. Os pinos SDA e SCL do I2C foram definidos, e a frequência do I2C foi configurada. Em seguida, um objeto XiaoI2C foi criado para comunicação com dispositivos I2C, como um display OLED.
+       O módulo time foi importado para operações de atraso, e o módulo XiaoI2C foi importado para inicializar a comunicação I2C. Os pinos SDA e SCL do I2C foram definidos e a frequência do I2C foi configurada. Em seguida, um objeto XiaoI2C foi criado para comunicação com dispositivos I2C, como um display OLED.
 
 
 - Definir as instruções e parâmetros do display SSD1306:
-       Define o endereço I2C do display SSD1306 e uma série de comandos de controle (como configurar contraste, ligar/desligar o display, etc.). Também define os parâmetros de tamanho do display (largura, altura e número de páginas) e uma biblioteca de fontes simples em matriz de pontos 8x8 para exibir caracteres na tela.
-- Definir funções auxiliares:
-        Uma série de funções auxiliares são definidas para enviar comandos e dados ao SSD1306.
-- Lógica do programa principal:
+       Define o endereço I2C do display SSD1306 e uma série de comandos de controle (como ajuste de contraste, ligar/desligar o display, etc.). Também define os parâmetros de tamanho do display (largura, altura e número de páginas) e uma biblioteca de fonte em matriz de pontos 8x8 simples para exibir caracteres na tela.
+- Definir função auxiliar:
+        Uma série de funções auxiliares é definida para enviar comandos e dados ao SSD1306.
+- Lógica principal do programa:
       Primeiro, verifica se o display SSD1306 está conectado ao barramento I2C realizando uma varredura I2C. Se o display for encontrado, chama a função ssd1306_init para inicializar o display. Em seguida, chama a função ssd1306_draw_text para exibir as duas linhas de texto "NRF54L15" e "HELLO WORLD" no display.
 
 ### Resultado
@@ -593,7 +586,7 @@ Este código inicializa e controla um display OLED SSD1306 via comunicação I2C
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>ePaper Driver Board for Seeed Studio XIAO</th>
+   <th>Placa Controladora de ePaper para Seeed Studio XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -602,12 +595,12 @@ Este código inicializa e controla um display OLED SSD1306 via comunicação I2C
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -811,43 +804,43 @@ if __name__ == "__main__":
     main()
 ```
 
-Explicação do Código:
+Explicação do código:
 
-- Importação de Módulos
-        - `time`: Habilita funções relacionadas ao tempo, como atrasos.
-        - `XiaoPin and XiaoSPI`: Importados de `boards.xiao`; XiaoPin é usado para controlar pinos GPIO, enquanto XiaoSPI gerencia a comunicação SPI.
+- Importação de módulos
+        - `time`: Habilita funções relacionadas a tempo, como atrasos.
+        - `XiaoPin and XiaoSPI`: Importados de `boards.xiao`; XiaoPin é usado para controlar pinos GPIO, enquanto XiaoSPI lida com a comunicação SPI.
 
-- Configuração de Pinos e SPI
-        - Pinos específicos foram definidos: Reset (RST), Chip Select (CS), Data/Command (DC) e Busy (BUSY).
-        - Pinos relacionados ao SPI (SCK, MOSI, MISO) e o controlador SPI foram configurados.
-        - O modo de operação (entrada/saída) de todos os pinos GPIO foi inicializado.
-        - Uma instância SPI foi criada com frequência definida em 20 MHz.
+- Configuração de pinos e SPI
+        - Definidos pinos específicos: Reset (RST), Chip Select (CS), Data/Command (DC) e Busy (BUSY).
+        - Configurados os pinos relacionados ao SPI (SCK, MOSI, MISO) e o controlador SPI.
+        - Inicializado o modo de trabalho (entrada/saída) para todos os pinos GPIO.
+        - Criada uma instância de SPI com frequência definida de 20 MHz.
 
-- Funções Básicas do ePaper
-        - `reset()`: Executa uma operação de reset por hardware no display.
+- Funções básicas do ePaper
+        - `reset()`: Executa uma operação de reset de hardware no display.
         - `send_command(cmd)`: Transmite um comando de um único byte.
         - `send_data(data)`: Envia dados, que podem ser um único byte ou múltiplos bytes.
         - `wait_until_idle()`: Aguarda o display entrar em estado ocioso (atualmente implementado com um atraso simples).
-        - `init_display()`: Realiza os procedimentos de inicialização do display.
+        - `init_display()`: Executa os procedimentos de inicialização do display.
         - `clear_screen()`: Limpa a tela, definindo-a para um estado totalmente branco.
 
-- Parâmetros do Display
+- Parâmetros do display
         - `WIDTH, HEIGHT = 800, 480`: Especifica a resolução do display.
         - `BYTES_PER_ROW`: Indica o número de bytes necessários para cada linha de pixels.
         - `linebuf`: Um buffer de linha que armazena temporariamente os dados de pixels de uma única linha.
 
-- Sistema de Fontes
-        - Uma fonte simples de 5x7 pixels foi definida, armazenada no dicionário `G`.
-        - `glyph(ch)`: Recupera os dados de pixels correspondentes a um determinado caractere.
-        - `text_size()`: Calcula as dimensões do texto quando exibido em uma proporção de escala especificada.
+- Sistema de fontes
+        - Definida uma fonte simples de 5x7 pixels, armazenada no dicionário `G`.
+        - `glyph(ch)`: Obtém os dados de pixels correspondentes a um determinado caractere.
+        - `text_size()`: Calcula as dimensões do texto quando exibido em uma taxa de escala especificada.
         - `text_pixel()`: Determina se um pixel deve ser desenhado em uma posição específica (usado na renderização de texto).
 
-- Atualização do Display
+- Atualização do display
         - **epaper_update_lines(lines)**: A função principal para atualizar o display.
         - Primeiro, envia dados para definir um fundo totalmente branco.
         - Em seguida, calcula e transmite os novos dados de imagem linha por linha.
         - Por fim, aciona uma atualização do display para mostrar o novo conteúdo.
-        - Suporta exibição de texto em múltiplas linhas, onde cada linha pode ter posições e proporções de escala distintas.
+        - Suporta exibição de texto em várias linhas, onde cada linha pode ter posições e taxas de escala distintas.
 
 - Função main()
         - Inicializa o display.
@@ -862,21 +855,21 @@ Explicação do Código:
 
 ## Executar o programa automaticamente
 
-Se você deseja que seu programa seja executado automaticamente, pode seguir estas etapas:
+Se você quiser que seu programa de abreviação possa ser executado automaticamente, você pode seguir estas etapas:
 
-**Passo 1.** Crie um novo arquivo de programa e use Ctrl + S para salvá-lo na memória flash do dispositivo MicroPython, e nomeie-o como main.py.
+**Etapa 1.** Crie um novo arquivo de programa e use Ctrl + S para salvá-lo na memória flash do dispositivo MicroPython, e nomeie-o como main.py.
 
-Vamos usar o programa de piscar LED como exemplo aqui
+Vamos pegar o programa de piscar como exemplo aqui
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_2.png" style={{width:600, height:'auto'}}/></div>
 
-Em seguida, ele será exibido na seção de dispositivo MicroPython/flash.
+Então ele será exibido na seção MicroPython device/flash.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_3.png" style={{width:600, height:'auto'}}/></div>
 
-**Passo 2.** Ao pressionar o botão Reset na placa, o efeito de execução automática pode ser alcançado.
+**Etapa 2.** Ao pressionar o botão Reset on-board, o efeito de execução automática pode ser alcançado.
 
-Efeito:
+efeito:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -888,9 +881,9 @@ Efeito:
 
 ### Atualização do Bootloader
 
-Se você encontrar uma situação em que não consegue fazer upload de programas MicroPython usando o Thonny, porque o Bootloader usado durante a produção de fábrica era de uma versão mais antiga.
+Se você encontrar uma situação em que não consegue enviar programas MicroPython usando o Thonny, pode ser porque o Bootloader usado durante a produção de fábrica era de uma versão mais antiga. 
 
-**Passo 1.** Fiação
+**Etapa 1.** Fiação
 
 <div class="table-center">
   <table align="center">
@@ -924,24 +917,24 @@ Se você encontrar uma situação em que não consegue fazer upload de programas
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54_wiring_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Certifique-se de que as conexões dos pinos estão corretas para evitar falhas no processo de gravação.
+Certifique-se de que as conexões dos pinos estejam corretas para evitar que o processo de gravação falhe.
 :::
 
-**Passo 2.** Baixe o programa de gravação de firmware
+**Etapa 2.** Baixar o programa de gravação de firmware
 
 [xiao_samd11_flash](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_samd11_flash_nrf.zip)
 
-**Passo 3.** Execute o script
+**Etapa 3.** Executar o script
 
-Usando o sistema Windows como exemplo. Descompacte o arquivo baixado, clique com o botão direito na pasta e abra o terminal. Execute **.\xiao_samd11_openocd_flash.bat**. Se a fiação estiver correta, o resultado será como mostrado na imagem a seguir.
+Tomando o sistema Windows como exemplo. Descompacte o arquivo baixado, clique com o botão direito na pasta e abra o terminal. Execute **.\xiao_samd11_openocd_flash.bat**. Se a sua fiação estiver correta, o resultado será como mostrado na figura a seguir.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Em sistemas Mac/Linux, você precisa alterar **.bat** para **.sh**
+Em sistemas Mac/Linux, você precisa mudar **.bat** para **.sh**
 :::
 
-## Suporte Técnico e Discussão sobre Produtos
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

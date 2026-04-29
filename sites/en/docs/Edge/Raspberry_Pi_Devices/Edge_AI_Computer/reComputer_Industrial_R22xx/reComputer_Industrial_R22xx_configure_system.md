@@ -531,14 +531,10 @@ reComputer Industrial R21xx contains 4x DO ports, user can configure these ports
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
