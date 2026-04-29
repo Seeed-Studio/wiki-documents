@@ -205,7 +205,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
     <tr>
       <td>RTC</td>
       <td colSpan={3}>1x RTC 2 针；<br />1x RTC 座</td>
-    </tr]
+    </tr>
     <tr>
       <td>LED</td>
       <td colSpan={3}>2x LED（PWR 和 ACT）</td>

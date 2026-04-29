@@ -197,7 +197,7 @@ También es compatible con una amplia gama de frameworks de LLM y Physical AI, c
     <tr>
       <td>Ventilador</td>
       <td colSpan={3}>1x conector de ventilador de 4 pines (5V PWM); <br />1x conector de ventilador de 4 pines (12V PWM);</td>
-    </tr]
+    </tr>
     <tr>
       <td>Puerto de expansión</td>
       <td colSpan={3}>1x cabecera de expansión de 40 pines;<br />1x cabecera de control y UART de 12 pines;</td>

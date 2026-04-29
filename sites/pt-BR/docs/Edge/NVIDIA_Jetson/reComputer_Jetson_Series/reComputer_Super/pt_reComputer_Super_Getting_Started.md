@@ -193,7 +193,7 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
     <tr>
       <td>Display</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr]
+    </tr>
     <tr>
       <td>Ventoinha</td>
       <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM); <br />1x conector de ventoinha de 4 pinos (12V PWM);</td>
