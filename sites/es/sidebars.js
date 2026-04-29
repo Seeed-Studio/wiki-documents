@@ -2703,13 +2703,14 @@ const sidebars = {
                 'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/es_Connecting_R1225_to_AWS_IoT',
               ],
             },
-            /*{
+            {
               type: 'category',
-              label: 'Application',
+              label: 'Aplicación',
               items: [
-                ,
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/es_How_to_use_modbus_rs485',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/es_How_to_use_bacnet_ms_tp',
               ],
-            },*/
+            },
           ],
         },
         {
