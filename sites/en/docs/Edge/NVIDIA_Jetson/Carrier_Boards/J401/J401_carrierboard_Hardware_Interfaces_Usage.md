@@ -962,6 +962,58 @@ You will see the result as below, before connecting to the I2C, no I2C device wa
 If you want to use general IO pins for logic control, please refer to [this wiki](/reComputer_Jetson_GPIO).
 :::
 
+
+## CAN
+
+The reComputer J401 series provides a CAN interface where the CAN signal is output directly from the SOM at TTL/CMOS levels, which is a non-standard differential signal requiring an external CAN transceiver to connect to a standard CAN bus; it supports CAN FD frame formats, allowing extended data length and higher data rates, making it suitable for industrial automation, robotics, automotive prototyping, and other applications requiring reliable, real-time communication.
+
+
+#### Connection Overview
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can.jpg"/></div>
+
+
+#### Usage
+
+**Step 1.** Configure and open can0:
+
+```bash
+sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 500000
+sudo ip link set can0 up
+```
+
+**Step 2.** Communication test. Open a terminal to receive signals.
+```bash
+candump can0
+```
+**Step 3.** Open another terminal to send the signal.
+```bash
+cansend can0 123#abcdabcd
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can.png"/></div>
+
+#### CAN FD
+
+**Step 1.** Configure and open can0:
+```bash
+# Install can-utils Tools 
+sudo apt update && sudo apt install can-utils -y
+
+# Enable CAN0 interface (FD mode, 5Mbps data segment rate) 
+sudo ip link set can0 up type can bitrate 500000 dbitrate 2000000 fd on
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can_fd1.png"/></div>
+
+**Step 2.** Open another terminal to send the signal.
+```bash
+cansend can0 123#1122334455667788
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can_fd2.png"/></div>
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

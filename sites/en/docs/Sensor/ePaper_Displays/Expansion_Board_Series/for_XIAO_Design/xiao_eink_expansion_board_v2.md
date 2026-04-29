@@ -1,5 +1,5 @@
 ---
-title: ePaper Driver Board
+title: Getting Started with ePaper Driver Board
 description: The eInk expansion board For XIAO is a smart module from Seeed Studio designed to display something in epaper screen.
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /xiao_eink_expansion_board_v2

@@ -1,23 +1,28 @@
 ---
-description: This article describes how to get the reTerminal E Series ePaper Display to work with Home Assistant and ESPHome.
-title: ESPHome Basic Usage
+description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Basic Home Assistant integration, first dashboard, Wi-Fi setup, pre-built firmware ZIP.
+title: ESPHome Cookbook - Basic (reTerminal E Series)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
+aliases:
+  - /reterminal_e10xx_esphome
 sku: 100017057,100073581
-sidebar_position: 1
-sidebar_label: Basic Usage
+sidebar_position: 2
+sidebar_label: ESPHome (Basic)
 last_update:
-  date: 07/21/2025
+  date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-21'
-url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E Series ePaper Display Work with ESPHome for Home Assistant
+# ESPHome Cookbook - Basic: reTerminal E Series
+
+:::tip Read the main ESPHome guide first
+This page is the **reTerminal E Series-specific ESPHome cookbook (basic)**. The shared boilerplate — picking a flashing path, the generic YAML skeleton, connecting to Home Assistant — lives in **[Work with ESPHome](/epaper_work_with_esphome)**. Skim that first if you're new to ESPHome on Seeed ePaper. For onboard-peripheral examples (buttons, buzzer, battery, SHT4x, deep sleep), see the [Advanced cookbook](/reterminal_e10xx_with_esphome_advanced).
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
