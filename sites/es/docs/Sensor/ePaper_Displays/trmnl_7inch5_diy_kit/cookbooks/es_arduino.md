@@ -1,5 +1,5 @@
 ---
-description: Recetario Arduino de extremo a extremo para el TRMNL 7.5" (OG) DIY Kit: aprovecha el XIAO ESP32-S3 Plus para controlar directamente la pantalla ePaper de 7.5" desde sketches personalizados de Arduino (en lugar de la plataforma en la nube TRMNL).
+description: Recetario Arduino de extremo a extremo para el TRMNL 7.5" (OG) DIY Kit - aprovecha el XIAO ESP32-S3 Plus para controlar directamente la pantalla ePaper de 7.5" desde sketches personalizados de Arduino (en lugar de la plataforma en la nube TRMNL).
 title: Recetario de Arduino
 keywords:
   - pantalla ePaper

@@ -1,5 +1,5 @@
 ---
-description: Recetario Arduino de extremo a extremo para el Panel ePaper XIAO de 7,5": configuración del IDE de Arduino específica para el XIAO ESP32-C3, configuración de Seeed_GFX y recorrido de Hello World.
+description: Recetario Arduino de extremo a extremo para el Panel ePaper XIAO de 7,5" - configuración del IDE de Arduino específica para el XIAO ESP32-C3, configuración de Seeed_GFX y recorrido de Hello World.
 title: Recetario de Arduino
 keywords:
   - pantalla ePaper

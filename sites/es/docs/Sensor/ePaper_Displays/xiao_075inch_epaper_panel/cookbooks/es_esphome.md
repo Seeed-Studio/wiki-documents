@@ -1,5 +1,5 @@
 ---
-description: Recetario completo de ESPHome / Home Assistant para el Panel ePaper XIAO de 7,5": flashear el firmware, integrarlo con Home Assistant y crear paneles en YAML.
+description: Recetario completo de ESPHome / Home Assistant para el Panel ePaper XIAO de 7,5" - flashear el firmware, integrarlo con Home Assistant y crear paneles en YAML.
 title: Recetario de ESPHome
 keywords:
   - pantalla ePaper

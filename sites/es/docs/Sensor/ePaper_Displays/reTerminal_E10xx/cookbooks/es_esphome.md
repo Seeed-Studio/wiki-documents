@@ -1,5 +1,5 @@
 ---
-description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004: integración básica con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP.
+description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - integración básica con Home Assistant, primer panel, configuración de Wi‑Fi, firmware precompilado en ZIP.
 title: Recetario de ESPHome - Básico (reTerminal E Serie)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome

@@ -1,5 +1,5 @@
 ---
-description: Recetario de ESPHome para la familia de placas controladoras XIAO ePaper (EE0x): integración con Home Assistant en la XIAO ESP32-S3 + placa controladora EE0x con la pantalla ePaper que elijas. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
+description: Recetario de ESPHome para la familia de placas controladoras XIAO ePaper (EE0x) - integración con Home Assistant en la XIAO ESP32-S3 + placa controladora EE0x con la pantalla ePaper que elijas. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
 title: Recetario de ESPHome
 keywords:
   - pantalla ePaper

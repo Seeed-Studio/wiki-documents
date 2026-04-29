@@ -124,7 +124,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子墨水屏终端产�
 		<tr>
 			<td align="center"><strong>无线</strong></td>
 			<td align="center" colspan="4">2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>板载传感器</strong></td>
 			<td align="center" colspan="4">温湿度传感器</td>

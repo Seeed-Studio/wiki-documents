@@ -1,5 +1,5 @@
 ---
-description: Recetario completo de ESPHome / Home Assistant para el TRMNL 7.5" (OG) DIY Kit: flashear firmware ESPHome, crear paneles en YAML e integrar con Home Assistant.
+description: Recetario completo de ESPHome / Home Assistant para el TRMNL 7.5" (OG) DIY Kit - flashear firmware ESPHome, crear paneles en YAML e integrar con Home Assistant.
 title: Recetario de ESPHome
 keywords:
   - Pantalla de papel electrónico

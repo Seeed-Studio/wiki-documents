@@ -132,7 +132,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 		<tr>
 			<td align="center"><strong>Audio</strong></td>
 			<td align="center" colspan="4">Zumbador (alerta sonora) · Micrófono reservado en E1001 / E1002 / E1003</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Batería</strong></td>
 			<td align="center">2000 mAh<br/>~3 meses</td>

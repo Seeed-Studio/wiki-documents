@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible desde el IDE de Arduino: configuración del IDE de Arduino, instalación de la biblioteca Seeed_GFX, generación de driver.h. Los análisis detallados específicos de hardware se encuentran en el recetario de cada producto.
+description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible desde el IDE de Arduino:configuración del IDE de Arduino, instalación de la biblioteca Seeed_GFX, generación de driver.h. Los análisis detallados específicos de hardware se encuentran en el recetario de cada producto.
 title: Trabajar con Arduino
 keywords:
   - pantalla ePaper

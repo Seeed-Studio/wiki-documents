@@ -129,7 +129,7 @@ Alimentada pelo **XIAO ESP32-S3** Plus, a placa de display EE04 suporta telas eP
         </tr>
         <tr>
             <th>Porta de extensão de IO</th>
-            <td>/
+            <td>/</td>
             <td>/</td>
             <td>/</td>
         </tr>
