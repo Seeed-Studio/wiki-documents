@@ -2714,8 +2714,8 @@ const sidebars = {
               type: 'category',
               label: 'Application',
               items: [
-              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_modbus_rs485',
-              'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_bacnet_ms_tp',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_modbus_rs485',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_bacnet_ms_tp',
               ],
             },
           ],
