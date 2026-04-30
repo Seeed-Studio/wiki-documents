@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-20 13:51:59 (北京时间)
-// 多语言页面: 2259 个
+// 生成时间: 2026-04-30 11:29:59 (北京时间)
+// 多语言页面: 2266 个
 
 (function() {
   'use strict';
@@ -1221,6 +1221,13 @@
     "pt"
   ],
   "/recomputer_jetson_robotics_j401_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
     "cn",
     "en",
     "es",
@@ -3397,118 +3404,6 @@
     "ja",
     "pt"
   ],
-  "/driving_reterminal_d1001_speaker": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/driving_reterminal_d1001_microphone": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_reterminal_d1001": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_d10xx_main_page": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_eezstudio": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_esphome": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_esphome_advanced": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_lopaka": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_squareline_vision": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_trmnl": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_reterminal_e1001": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_reterminal_e1002": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_reterminal_e1003": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/getting_started_with_reterminal_e1004": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_main_page": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/object_detection_with_yolov11_on_recomputer_rk": [
     "cn",
     "en",
@@ -4286,6 +4181,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_meshcore_remote_terminal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor": [
     "cn",
     "en",
@@ -4301,6 +4203,13 @@
     "pt"
   ],
   "/xiao_esp32s3_&_wio_sx1262_kit_mqtt": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_started_with_esp32s3_meshcore": [
     "cn",
     "en",
     "es",
@@ -4791,6 +4700,20 @@
     "pt"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/how_to_use_bacnet_ms_tp_with_r1225": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/how_to_use_modbus_rs485_with_r1225": [
     "cn",
     "en",
     "es",
@@ -5607,6 +5530,13 @@
     "pt"
   ],
   "/rebot_b601_dm_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_grasping_demo": [
     "cn",
     "en",
     "es",
@@ -7362,34 +7292,6 @@
     "ja",
     "pt"
   ],
-  "/1-47inch_lcd_spi_display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/1-69inch_lcd_spi_display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/LCD_16-2_Characters-Green_Yellow_back_light": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/LCD_8-2_Characters-Blue_back_light": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/125Khz_RFID_module-UART": [
     "cn",
     "en",
@@ -7754,7 +7656,77 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_eezstudio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_esphome": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/EN04_opendisplay": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/EE04_with_hmi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_squareline_vision": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_trmnl": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_epaper_display_board_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ee04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -7775,35 +7747,7 @@
     "ja",
     "pt"
   ],
-  "/epaper_ee04_eezstudio": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/EE04_with_esphome_advanced": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/EE04_with_hmi": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/epaper_ee04": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ee04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -7817,7 +7761,14 @@
     "ja",
     "pt"
   ],
-  "/EN04_opendisplay": [
+  "/XIAO-eInk-Expansion-Board": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_eink_expansion_board_v2": [
     "cn",
     "en",
     "es",
@@ -7832,6 +7783,111 @@
     "pt"
   ],
   "/epaper_en05": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_reterminal_e1001": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_reterminal_e1002": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_reterminal_e1003": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_reterminal_e1004": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_main_page": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/seeed_epaper_displays": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ogdiy_kit_works_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ogdiy_kit_works_with_esphome": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/trmnl_7inch5_diy_kit_main_page": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_075inch_epaper_panel_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_075inch_epaper_panel_esphome": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_075inch_epaper_panel": [
     "cn",
     "en",
     "es",
@@ -8175,132 +8231,6 @@
     "pt"
   ],
   "/Grove-SPDT_Relay_30A": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-0.54_inch_Red_Dual_Alphanumeric_Display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-0.54_inch_Red_Quad_Alphanumeric_Display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/grove_1.2inch_ips_display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-16x2_LCD_Series": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-4-Digit_Display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-BlinkM": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-LCD_RGB_Backlight": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED-Display-0.66-SSD1306_v1.0": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED-Display-0.96-SSD1315": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED-Display-1.12-SH1107_V3.0": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED_Display_0.96inch": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-OLED_Display_1.12inch": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-Serial_Camera_Kit": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-Serial_LCD_V1.0": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-Triple_Color_E-Ink_Display_1_54": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Grove-Triple_Color_E-Ink_Display_2_13": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/I2C_LCD": [
     "cn",
     "en",
     "es",
@@ -10119,6 +10049,419 @@
     "ja",
     "pt"
   ],
+  "/1-47inch_lcd_spi_display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/1-69inch_lcd_spi_display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/round_display_animation_workshop": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/round_display_christmas_ball": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/using_lvgl_and_tft_on_round_display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/seeedstudio_round_display_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/get_start_round_display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-0.54_inch_Red_Dual_Alphanumeric_Display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-0.54_inch_Red_Quad_Alphanumeric_Display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/grove_1.2inch_ips_display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-16x2_LCD_Series": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-4-Digit_Display": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-BlinkM": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-LCD_RGB_Backlight": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED-Display-0.66-SSD1306_v1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED-Display-0.96-SSD1315": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED-Display-1.12-SH1107_V3.0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED_Display_0.96inch": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-OLED_Display_1.12inch": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-Serial_Camera_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-Serial_LCD_V1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-Triple_Color_E-Ink_Display_1_54": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Grove-Triple_Color_E-Ink_Display_2_13": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/I2C_LCD": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/LCD_16-2_Characters-Green_Yellow_back_light": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/LCD_8-2_Characters-Blue_back_light": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/driving_reterminal_d1001_speaker": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/driving_reterminal_d1001_microphone": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/getting_started_with_reterminal_d1001": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_d10xx_main_page": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Application_Home_Assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_LoRa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Application_LoRaWAN": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Application_Matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Application_ChatGPT": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Single_Channel_Gateway": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecap_indicator_project": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_BLE": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_Button": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_LoRa": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_Wi-Fi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_Buzzer": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_CO2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_Grove_ADC": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_Grove_IIC": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_MicroSD": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_RP2040_tVOC": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Dive_into_the_Hardware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_How_to_Create_your_own_UI": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ESP32_Arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_Native_Firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_ChatGPT": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_DALL-E": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/SenseCAP_Indicator_OpenAI_X_Overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/mmwave_for_xiao_to_ha_bt": [
     "cn",
     "en",
@@ -10288,6 +10631,13 @@
     "pt"
   ],
   "/respeaker_flex_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_lekiwi": [
     "cn",
     "en",
     "es",
@@ -11190,20 +11540,6 @@
     "ja",
     "pt"
   ],
-  "/epaper_breakout_board_with_oepl": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/XIAO-eInk-Expansion-Board": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/gnss_for_xiao": [
     "cn",
     "en",
@@ -11246,41 +11582,6 @@
     "ja",
     "pt"
   ],
-  "/round_display_animation_workshop": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/round_display_christmas_ball": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/using_lvgl_and_tft_on_round_display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/seeedstudio_round_display_usage": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/get_start_round_display": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/Seeeduino-XIAO-Expansion-Board": [
     "cn",
     "en",
@@ -11303,13 +11604,6 @@
     "pt"
   ],
   "/XIAO-RS485-Expansion-Board": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_eink_expansion_board_v2": [
     "cn",
     "en",
     "es",
@@ -11499,6 +11793,13 @@
     "pt"
   ],
   "/XIAO_BLE": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54l15_sense_arduino": [
     "cn",
     "en",
     "es",
@@ -11898,62 +12199,6 @@
     "pt"
   ],
   "/getting_started_with_rs485_vision_ai_cam": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/trmnl_7inch5_diy_kit_main_page": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ogdiy_kit_works_with_arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ogdiy_kit_works_with_esphome": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/ogdiy_kit_works_with_trmnl": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_075inch_epaper_panel_arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_075inch_epaper_panel_esphome": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_7_5_inch_epaper_panel_with_trmnl": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_075inch_epaper_panel": [
     "cn",
     "en",
     "es",
@@ -12409,202 +12654,6 @@
     "pt"
   ],
   "/SenseCAP_Decoder": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Application_Home_Assistant": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_LoRa": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Application_LoRaWAN": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Application_Matter": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Application_ChatGPT": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Single_Channel_Gateway": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/sensecap_indicator_project": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_BLE": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_Button": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_LoRa": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_Wi-Fi": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_Buzzer": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_CO2": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_Grove_ADC": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_Grove_IIC": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_MicroSD": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_RP2040_tVOC": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Dive_into_the_Hardware": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_How_to_Create_your_own_UI": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ESP32_Arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_Native_Firmware": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_ChatGPT": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_DALL-E": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/SenseCAP_Indicator_OpenAI_X_Overview": [
     "cn",
     "en",
     "es",

@@ -11,7 +11,7 @@ last_update:
   date: 1/15/2026
   author: Brandy
 createdAt: '2025-09-26'
-updatedAt: '2026-01-19'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/
 ---
 
@@ -34,13 +34,11 @@ Win + R -->
  <tr>
   <th>Seeed Studio XIAO nRF54L15 </th>
         <th> Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio XIAO Debug Mate</th>
  </tr>
  <tr>
   
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/16.png" style={{width:150, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-xiao-debugger.jpg" style={{width:250, height:'auto'}}/></div></td>
  </tr>
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -50,11 +48,6 @@ Win + R -->
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-  </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
   </div></td>

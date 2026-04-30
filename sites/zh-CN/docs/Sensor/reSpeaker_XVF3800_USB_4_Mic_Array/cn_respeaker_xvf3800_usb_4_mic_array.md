@@ -232,7 +232,7 @@ I2S 固件适用于设备连接到 **XIAO ESP32S3** 等微控制器主机时使�
 <TabItem value="HA" label="HA">
 
 Home Assistant 固件是另一种基于 I2S 的固件，专门为与 Home Assistant 集成而设计。该优化固件使用 2 通道音频和 48 kHz 采样率，在 Home Assistant 环境中提供更好的兼容性和性能。
-你可以从[这里](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)查看该固件
+你可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)查看该固件
 
 | 固件 | 通道数 | 说明 |
 |---------|----------|-------|

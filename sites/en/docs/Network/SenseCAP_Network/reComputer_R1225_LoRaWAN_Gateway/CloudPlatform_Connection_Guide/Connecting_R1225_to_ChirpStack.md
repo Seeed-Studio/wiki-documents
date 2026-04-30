@@ -14,7 +14,7 @@ last_update:
   author: Kian
 createdAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/connecting_r1225_to_chirpstack/
-updatedAt: '2026-04-15'
+updatedAt: '2026-04-26'
 ---
 ## ChirpStack Configuration
 
@@ -96,7 +96,7 @@ Configure the gateway via the Web UI,please check the [Quick Start](https://file
 
 Navigate to **LoRa > LoRa Network**
 
-**Mode:** Packet Forward
+**Mode:** Packet Forwarder
 
 Packet Forwarder Settings:
 

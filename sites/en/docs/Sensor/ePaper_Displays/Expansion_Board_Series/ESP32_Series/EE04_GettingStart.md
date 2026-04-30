@@ -1,17 +1,17 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE04
-title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE04
+title: Getting Started with EE04
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
-sidebar_position: 1
 slug: /epaper_ee04
+sidebar_position: 3
 sku: 104990861,100075670,100064541,E25102101
 last_update:
   date: 09/25/2025
   author: Jason
 createdAt: '2025-09-25'
-updatedAt: '2026-01-20'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/epaper_ee04/
 ---
 
@@ -19,7 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Getting Started with XIAO ePaper Display EE04
+# Getting Started with XIAO ePaper Display Board - EE04
 
 <div class="table-center">
 <table align="center">

@@ -9,7 +9,7 @@ last_update:
   date: 05/19/2025
   author: Citric
 createdAt: '2025-05-21'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/xiao_075inch_epaper_panel/
 ---
 
@@ -136,7 +136,7 @@ The following Wiki pages provide detailed information about different ways to pr
 
 - [**Works with Arduino**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino/) - Program your device using Arduino IDE with our library and examples for custom applications.
 
-- [**Works with TRMNL**](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl) - Control your display with trmnl, an open-source platform for smart visual dashboard management.
+- [**Works with TRMNL**](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl) - Control your display with TRMNL, an open-source platform for smart visual dashboard management. (Pick the **XIAO 7.5" Panel** tab in the unified TRMNL guide.)
 
 ## Resources
 

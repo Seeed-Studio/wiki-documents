@@ -232,7 +232,7 @@ I2S ファームウェアは、**XIAO ESP32S3** のようなマイコンホス�
 <TabItem value="HA" label="HA">
 
 Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう 1 つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz のサンプリングレートによる 2 チャンネルオーディオを使用し、Home Assistant 環境内でより良い互換性とパフォーマンスを提供します。
-ファームウェアは [here](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main) から確認できます。
+ファームウェアは [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) から確認できます。
 
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|

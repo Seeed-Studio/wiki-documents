@@ -1,6 +1,6 @@
 ---
 description: XIAO ePaper Display Board(nRF52840) - EN04 入門ガイド
-title: XIAO ePaper Display Board(nRF52840) - EN04 入門ガイド
+title: EN04 入門ガイド
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EN04 入門ガイド
+# XIAO ePaper Display Board - EN04 入門ガイド
 
 <div class="table-center">
 <table align="center">
@@ -38,47 +38,47 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO nRF52840** Plus を搭載した EN04 ディスプレイボードは、**24 ピン**および **50 ピン**の ePaper ディスプレイの両方をサポートします。JST 2.0 mm バッテリーコネクタ（電源スイッチ付き）、内蔵充電 IC、NFC 機能を備え、1 つのリセットボタンと 3 つのユーザーボタンが付属しています。デジタルサイネージ、電子ラベル、携帯情報ボードなどの低消費電力 ePaper プロジェクトに最適です。
+**XIAO nRF52840** Plus を搭載したディスプレイボード EN04 は、**24 ピン**および **50 ピン**の両方の ePaper ディスプレイをサポートします。JST 2.0 mm バッテリーコネクタ（電源スイッチ付き）、内蔵充電 IC、NFC 機能を備え、1 つのリセットボタンと 3 つのユーザーボタンが付属しています。デジタルサイネージ、電子ラベル、携帯型情報ボードなど、低消費電力の ePaper プロジェクトに最適です。
 
 ### 特長
 
-- **XIAO nRF52840 Plus 搭載：** 対応する ePaper ディスプレイを接続するだけで、すぐに動作します。
-- **多用途なディスプレイ対応：** 幅広い ePaper スクリーンに対応し、24 ピンおよび 50 ピンインターフェースの両方をサポート、ジャンパキャップで簡単に切り替えできます。
-- **スイッチ付き BAT コネクタ：** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
-- **使いやすいボタン：** 1 個のリセットボタンと 3 個のユーザープログラマブルボタンを備え、プロジェクトの迅速化や機能のカスタマイズに柔軟に対応できます。
+- **XIAO nRF52840 Plus 搭載:** 対応する ePaper ディスプレイに接続するだけですぐに動作します。
+- **多用途なディスプレイ対応:** 幅広い ePaper スクリーンに対応し、24 ピンおよび 50 ピンインターフェースの両方をサポート、ジャンパキャップで簡単に切り替え可能です。
+- **スイッチ付き BAT コネクタ:** シンプルなバッテリー接続を提供し、スイッチを統合することで効率的な電源管理と省エネを実現します。
+- **使いやすいボタン:** 1 個のリセットボタンと 3 個のユーザープログラマブルボタンを備え、プロジェクトの開発を加速し、柔軟なカスタマイズ機能を提供します。
 
 ### 仕様
 
 <table>
   <thead>
     <tr>
-      <th>Parameter</th>
-      <th>Description</th>
+      <th>パラメータ</th>
+      <th>説明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Processor</th>
+      <th>プロセッサ</th>
       <td>XIAO nRF52840 Plus</td>
     </tr>
     <tr>
-      <th>ePaper Connector</th>
+      <th>ePaper コネクタ</th>
       <td>FPC 24 Pin 0.5mm<br />FPC 50 Pin 0.5mm</td>
     </tr>
     <tr>
-      <th>Battery Connector</th>
+      <th>バッテリーコネクタ</th>
       <td>JST 2.0mm</td>
     </tr>
     <tr>
-      <th>Switch</th>
+      <th>スイッチ</th>
       <td>バッテリー電源 ON/OFF</td>
     </tr>
     <tr>
-      <th>Power Supply</th>
+      <th>電源</th>
       <td>- 3.7V リチウムバッテリー<br />- USB Type-C</td>
     </tr>
     <tr>
-      <th>Button</th>
+      <th>ボタン</th>
       <td>- 1x リセットボタン<br />- 3x ユーザーボタン</td>
     </tr>
   </tbody>
@@ -89,7 +89,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 <table>
     <thead>
         <tr>
-            <th>Product</th>
+            <th>製品</th>
             <th>ePaper Display Board EN04</th>
 <th><a href="https://wiki.seeedstudio.com/ja/XIAO-eInk-Expansion-Board/">ePaper Breakout</a></th>
 <th><a href="https://wiki.seeedstudio.com/ja/xiao_eink_expansion_board_v2/">ePaper Driver Board</a></th>
@@ -97,43 +97,43 @@ import Steppers from '@site/src/components/utils/Stepper';
     </thead>
     <tbody>
         <tr>
-            <th>Processor</th>
+            <th>プロセッサ</th>
             <td>XIAO nRF52840 Plus</td>
             <td>XIAO シリーズ</td>
             <td>XIAO シリーズ</td>
         </tr>
         <tr>
-            <th>Compatible ePaper Displays</th>
+            <th>対応 ePaper ディスプレイ</th>
             <td>24 Pin ePaper<br />50 Pin ePaper</td>
             <td>24 Pin ePaper</td>
             <td>24 Pin ePaper</td>
         </tr>
         <tr>
-            <th>ePaper Connector</th>
+            <th>ePaper コネクタ</th>
             <td>FPC 24 Pin, 0.5mm<br />FPC 50 Pin, 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
             <td>FPC 24 Pin 0.5mm</td>
         </tr>
         <tr>
-            <th>Battery Connector</th>
+            <th>バッテリーコネクタ</th>
             <td>JST 2.0mm</td>
             <td>/</td>
             <td>JST 2.0mm</td>
         </tr>
         <tr>
-            <th>Switch</th>
+            <th>スイッチ</th>
             <td>バッテリー電源 ON/OFF</td>
             <td>/</td>
             <td>バッテリー電源 ON/OFF</td>
         </tr>
         <tr>
-            <th>Button</th>
+            <th>ボタン</th>
             <td>1x リセットボタン<br />3x ユーザーボタン</td>
             <td>/</td>
             <td>/</td>
         </tr>
         <tr>
-            <th>Extension IO Port</th>
+            <th>拡張 IO ポート</th>
             <td>/</td>
             <td>他のコントローラとの接続</td>
             <td>追加センサーとの接続</td>
@@ -143,11 +143,11 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 応用例
 
-- **スマートホームダッシュボード**：天気情報、カレンダーイベント、各種スマートホームデバイスからの通知などをリアルタイムに表示します。
-- **エネルギーモニタリング**：スマートメーターからの電力消費データを表示し、家庭でのエネルギー使用状況を効率的に把握・管理できるようにします。
-- **セキュリティアラート**：モーション検知やドア／窓センサーの作動など、セキュリティイベントに関するアラートや通知を表示します。
-- **スマートサーモスタット表示**：温度や湿度の値、スマートサーモスタットの制御設定などを表示します。
-- **デジタルフォトフレーム**：スマートホームネットワーク上の画像を表示できる、WiFi 対応デジタルフォトフレームを作成します。
+- **スマートホームダッシュボード**: 天気情報、カレンダーイベント、各種スマートホームデバイスからの通知など、リアルタイム情報を表示します。
+- **エネルギーモニタリング**: スマートメーターからの電力消費データを表示し、家庭でのエネルギー使用状況をより効率的に把握・管理できるようにします。
+- **セキュリティアラート**: 動体検知やドア／窓センサーの作動など、セキュリティイベントに関するアラートや通知を表示します。
+- **スマートサーモスタットディスプレイ**: 温度や湿度レベル、スマートサーモスタットの制御設定を表示します。
+- **デジタルフォトフレーム**: スマートホームネットワーク上の画像を表示できる、WiFi 対応デジタルフォトフレームを作成します。
 
 ## ハードウェア概要
 
@@ -177,11 +177,11 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの種類に応じてジャンパを設定してください：
+XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの種類に応じてジャンパを必ず設定してください。
 
-- 24 Pin ePaper ディスプレイの場合 → ジャンパを 24 Pin に設定
+- 24 Pin ePaper ディスプレイの場合 → ジャンパを 24 Pin に設定します
 
-⚠️ ジャンパ設定が間違っていると、ePaper が表示されなかったり、異常な表示になることがあります。電源を入れる前に、必ずジャンパ位置を再確認してください。
+⚠️ ジャンパ設定が誤っていると、ePaper が表示されなかったり、異常な内容が表示されたりする可能性があります。電源を入れる前に、必ずジャンパ位置を再確認してください。
 
 :::
 
@@ -191,10 +191,10 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
-XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの種類に応じてジャンパを設定してください：
-- 50 Pin ePaper ディスプレイの場合 → ジャンパを 50 Pin に設定
+XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの種類に応じてジャンパを必ず設定してください。
+- 50 Pin ePaper ディスプレイの場合 → ジャンパを 50 Pin に設定します
 
-⚠️ ジャンパ設定が間違っていると、ePaper が表示されなかったり、異常な表示になることがあります。電源を入れる前に、必ずジャンパ位置を再確認してください。
+⚠️ ジャンパ設定が誤っていると、ePaper が表示されなかったり、異常な内容が表示されたりする可能性があります。電源を入れる前に、必ずジャンパ位置を再確認してください。
 
 :::
 
@@ -203,7 +203,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。すでに TFT ライブラリや類似のディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同等の機能を持ちますが、互換性はありません。TFT ライブラリや類似のディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -212,11 +212,11 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>クリックしてダウンロード</button></p>
 </a>
 </div>
 
-ページをスクロールして、このリンクを開きます。
+スクロールダウンして、このリンクを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -234,7 +234,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-基本的なサンプルが 4 つあります。好みの基本サンプルを開いてください：
+基本的なサンプルが 4 つあります。好みの基本サンプルを 1 つ開きます。
 
 1. Bitmap: ビットマップ画像を表示します。
 2. Clock: アナログ時計を表示します。
@@ -245,34 +245,34 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ## セットアップ開始
 
-ここでは例として 7.5 インチディスプレイを使用します。手順はすべての 24 ピン画面で同じであり、違いはドライバ内で適切な画面サイズを選択する点だけです。
+ここでは例として 7.5 インチディスプレイを使用します。手順はすべての 24 ピン画面で同じで、違いはドライバ内で適切な画面サイズを選択する点だけです。
 
-**新しい "driver.h" ファイル**を作成し、その中に先ほどのコードを貼り付けます。コードは次のようになります：
+**新しい "driver.h" ファイル**を作成し、そこに先ほどのコードを貼り付けます。コードは次のようになります。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **ボードが接続されているポートを選択** に進みます。次に **Upload** をクリックしてコードを書き込みます。
+その後、**Tools** -> **Board** -> **XIAO ESP32S3** および **Tools** -> **Port** -> **Select the port your board is connected to** を選択します。次に **Upload** をクリックしてコードを書き込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-これで、ePaper 画面上にフィードバックが表示されます！以下は Helloworld サンプルの結果です。（何も表示されない場合は、リセットボタンを押してください）
+これで、epaper 画面にフィードバックが表示されます！以下は Helloworld サンプルの結果です。（何も表示されない場合は、リセットボタンを押してください）
 
 :::tip
 ⚠️ 注意: ePaper ケーブルの向き
 ePaper ディスプレイを XIAO ePaper Display Board に接続する際は、FPC ケーブルが正しい向きで挿入されていることを確認してください。
 
-⚠️ コネクタの向きを逆にしないでください！ケーブルを上下逆さまに挿入すると、ePaper が表示できなくなったり、画面やボードを損傷したりするおそれがあります。
-下の画像は正しい接続方法を示しています：
+⚠️ コネクタを逆向きにしないでください！ケーブルを上下逆に挿すと、ePaper が表示されなくなったり、画面やボードを破損するおそれがあります。
+下図は正しい接続例です：
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### XIAO ePaper Display Board(nRF52840) - EN04 のユーザーボタン
 
-EN04 には、さまざまな制御用途に使用できるユーザープログラマブルボタンが 3 つ搭載されています。このセクションでは、Arduino を使用してボタン状態を読み取り、ボタン押下に応答する方法を示します。
+EN04 には、さまざまな制御用途に使用できるユーザー設定可能なボタンが 3 つ搭載されています。このセクションでは、Arduino を使用してボタンの状態を読み取り、ボタン押下に応答する方法を説明します。
 
 EN04 では、3 つのボタンは XIAO nRF52840 Plus に接続されています：
 
@@ -298,7 +298,7 @@ EN04 では、3 つのボタンは XIAO nRF52840 Plus に接続されていま�
 
 基本的なボタン読み取りの例
 
-このサンプルでは、ボタン押下を検出し、シリアルモニタにメッセージを出力する方法を示します。
+この例では、ボタン押下を検出し、シリアルモニタにメッセージを出力する方法を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -347,18 +347,18 @@ void loop() {
 }
 ```
 
-### XIAO ePaper Display Board(nRF52840) - EN04 のバッテリー機能
+### XIAO ePaper Display Board(nRF52840) - EN04 のバッテリー
 
 バッテリー駆動時：
 
-- リフレッシュの合間にデバイスは自動的に低消費電力モードに入ります
+- デバイスはリフレッシュの合間に自動的に低消費電力モードに入ります
 
-- バッテリー寿命はリフレッシュ頻度に依存します（デフォルト設定でフル充電から通常 3 か月程度）
+- バッテリー寿命はリフレッシュ頻度に依存します（デフォルト設定でフル充電時は通常 3 か月）
 
-- バッテリーレベルが 20% 未満になると、デバイスは右上隅にバッテリー残量低下アイコンを表示します
+- バッテリー残量が 20% 未満になると、デバイスは右上隅にバッテリー残量低下アイコンを表示します
 
 :::tip
-自分でバッテリー電圧を読み取るコードを書きたい場合は、`analogRead()` 関数の前に 10ms のディレイを入れると、より正確になります。
+自分でコードを書いてバッテリー電圧を読み取りたい場合は、`analogRead()` 関数の前に 10ms のディレイを追加すると、より正確になります。
 :::
 
 
@@ -399,7 +399,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます！製品をできるだけ快適にご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

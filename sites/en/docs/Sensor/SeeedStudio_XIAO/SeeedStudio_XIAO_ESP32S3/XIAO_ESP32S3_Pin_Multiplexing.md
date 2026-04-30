@@ -1,6 +1,6 @@
 ---
-description: Pin multiplexing with Seeed Studio XIAO ESP32S3.
-title: Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)
+description: Pin multiplexing with Seeed Studio XIAO ESP32-S3.
+title: Pin Multiplexing with Seeed Studio XIAO ESP32-S3 (Sense)
 keywords:
   - esp32s3
   - xiao
@@ -10,19 +10,20 @@ slug: /xiao_esp32s3_pin_multiplexing
 sku: 113991114, 113991115
 type: project
 last_update:
-  date: 03/30/2023
+  date: 4/27/2026
   author: Citric
 createdAt: '2022-11-15'
-updatedAt: '2025-10-09'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
 ---
 
-# Pin Multiplexing with Seeed Studio XIAO ESP32S3 (Sense)
+
+# Pin Multiplexing with Seeed Studio XIAO ESP32-S3 (Sense)
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -42,29 +43,29 @@ url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
  </tr>
 </table>
 
-The Seeed Studio XIAO ESP32S3 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will explore the pinout of the XIAO ESP32S3 and its related board, the XIAO ESP32S3 Sense, and learn how to use these pins for different purposes. Specifically, we will cover the usage of 1x UART, 1x lIC, 1x lIS, 1x SPI, 11x GPIOs (PWM), 9xADC, 1x User LED, 1x Charge LED, 1x Reset button, 1x Boot button, and, for the XIAO ESP32S3 Sense, 1x B2B Connector (with 2 additional GPIOs). By the end of this tutorial, you will have a good understanding of the pinout of the XIAO ESP32S3 and be able to use it effectively in your projects.
+The Seeed Studio XIAO ESP32-S3 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will explore the pinout of the XIAO ESP32-S3 and its related board, the XIAO ESP32-S3 Sense, and learn how to use these pins for different purposes. Specifically, we will cover the usage of 1x UART, 1x lIC, 1x lIS, 1x SPI, 11x GPIOs (PWM), 9xADC, 1x User LED, 1x Charge LED, 1x Reset button, 1x Boot button, and, for the XIAO ESP32-S3 Sense, 1x B2B Connector (with 2 additional GPIOs). By the end of this tutorial, you will have a good understanding of the pinout of the XIAO ESP32-S3 and be able to use it effectively in your projects.
 
 ## Getting Started
 
 ### Pinout Overview
 
-Before we begin, let's review all the pins that the XIAO ESP32S3 has and its functions with the following schematic.
+Before we begin, let's review all the pins that the XIAO ESP32-S3 has and its functions with the following schematic.
 
 <table align="center">
  <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense front indication diagram</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
     <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense back indication diagram</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
     <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense Pin List</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
@@ -81,7 +82,7 @@ Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to
 
 - GND - Power/data/signal ground
 
-Below is an overview of the functional pins for the XIAO ESP32S3.
+Below is an overview of the functional pins for the XIAO ESP32-S3.
 
 <div class="table-center">
  <table align="center">
@@ -185,7 +186,7 @@ Below is an overview of the functional pins for the XIAO ESP32S3.
 
 To use the functions of each pin according to this tutorial, we recommend to solder the pins beforehand.
 
-Due to the miniature size of XIAO ESP32S3, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
+Due to the miniature size of XIAO ESP32-S3, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/4.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -195,14 +196,14 @@ If you have chosen the Sense version, congratulations! You will have two additio
 
 ## Digital
 
-The XIAO ESP32S3 has up to 11 regular GPIO pins and 9 analog pins. In this example, we will use the XIAO ESP32S3, XIAO expansion board, and a relay to demonstrate how to use different digital pins for reading and writing.
+The XIAO ESP32-S3 has up to 11 regular GPIO pins and 9 analog pins. In this example, we will use the XIAO ESP32-S3, XIAO expansion board, and a relay to demonstrate how to use different digital pins for reading and writing.
 
 ### Hardware Preparation
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Relay</th>
  </tr>
@@ -236,7 +237,7 @@ The XIAO ESP32S3 has up to 11 regular GPIO pins and 9 analog pins. In this examp
  </tr>
 </table>
 
-Please install XIAO ESP32S3 or Sense onto the expansion board, and connect the relay to the **A0/D0** interface of the expansion board via a Grove cable. Finally, connect XIAO to the computer via a USB-C cable.
+Please install XIAO ESP32-S3 or Sense onto the expansion board, and connect the relay to the **A0/D0** interface of the expansion board via a Grove cable. Finally, connect XIAO to the computer via a USB-C cable.
 
 ### Software Implementation
 
@@ -279,7 +280,7 @@ If you want to use the digital function, then you should use the letter "D" as t
 
 ### For Sense Version
 
-For XIAO ESP32S3 Sense, in addition to using the 11 digital pins on XIAO, you can also use the two pins on the expansion board, which are **D11** and **D12**. If you want to use them, please follow the steps below.
+For XIAO ESP32-S3 Sense, in addition to using the 11 digital pins on XIAO, you can also use the two pins on the expansion board, which are **D11** and **D12**. If you want to use them, please follow the steps below.
 
 #### Step 1. Cut off the connection between J1 and J2
 
@@ -307,7 +308,7 @@ For the actual circuit schematic, please refer to the following diagram:
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Grove - Relay</th>
  </tr>
  <tr>
@@ -353,19 +354,19 @@ void loop() {
 The above method is also applicable to the [Digital as PWM](#digital-as-pwm) and [Analog](#analog) sections. You just need to modify the pin numbers of the expansion board that you want to use. This will not be repeated later.
 
 :::caution
-For the two additional pins D11 and D12 on the XIAO ESP32S3 Sense, we have not macro-defined the pins. That is, you can't use D11/A11 or D12/A12 to control these two pins yet, but you can control these two pins by using the GPIO numbers, GPIO42 and GPIO41, respectively. we will submit the macro definitions for these two pins as soon as possible, and once the submission is done, then you can D/A the pin definitions.
+For the two additional pins D11 and D12 on the XIAO ESP32-S3 Sense, we have not macro-defined the pins. That is, you can't use D11/A11 or D12/A12 to control these two pins yet, but you can control these two pins by using the GPIO numbers, GPIO42 and GPIO41, respectively. we will submit the macro definitions for these two pins as soon as possible, and once the submission is done, then you can D/A the pin definitions.
 :::
 
 ## Digital as PWM
 
-All GPIO pins on XIAO ESP32S3 support PWM output. Therefore, you can use any pin to output PWM to adjust the brightness of lights, control servos, and other functions.
+All GPIO pins on XIAO ESP32-S3 support PWM output. Therefore, you can use any pin to output PWM to adjust the brightness of lights, control servos, and other functions.
 
 ### Hardware Preparation
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Variable Color LED</th>
  </tr>
@@ -399,7 +400,7 @@ All GPIO pins on XIAO ESP32S3 support PWM output. Therefore, you can use any pin
  </tr>
 </table>
 
-Please install XIAO ESP32S3 or Sense onto the expansion board, then connect the Variable Color LED to the A0/D0 interface of the expansion board using a Grove cable. Finally, connect XIAO to your computer via USB-C cable.
+Please install XIAO ESP32-S3 or Sense onto the expansion board, then connect the Variable Color LED to the A0/D0 interface of the expansion board using a Grove cable. Finally, connect XIAO to your computer via USB-C cable.
 
 ### Software Implementation
 
@@ -438,7 +439,7 @@ If the program runs successfully, you will see the following running effect.
 
 ## Analog
 
-On XIAO ESP32S3, among the 11 built-in GPIO pins, except for D6 and D7 pins used for serial communication, the remaining 9 pins support Analog function. You can use these GPIO pins with analog functionality to read values from sensors that produce analog signals, such as oxygen sensors, light intensity sensors, and so on.
+On XIAO ESP32-S3, among the 11 built-in GPIO pins, except for D6 and D7 pins used for serial communication, the remaining 9 pins support Analog function. You can use these GPIO pins with analog functionality to read values from sensors that produce analog signals, such as oxygen sensors, light intensity sensors, and so on.
 
 :::caution
 Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
@@ -448,8 +449,8 @@ Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Oxygen Sensor</th>
  </tr>
@@ -483,7 +484,7 @@ Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to
  </tr>
 </table>
 
-Please install XIAO ESP32S3 or Sense on the expansion board, then connect the Oxygen Sensor to the A0/D0 interface on the expansion board with the Grove cable. Finally, connect the XIAO to the computer via USB-C cable.
+Please install XIAO ESP32-S3 or Sense on the expansion board, then connect the Oxygen Sensor to the A0/D0 interface on the expansion board with the Grove cable. Finally, connect the XIAO to the computer via USB-C cable.
 
 ### Software Implementation
 
@@ -613,13 +614,13 @@ We also use the `Serial.available()` function to check if there is any data avai
 
 Finally, we add a `delay()` function to wait for one second before repeating the loop. This code demonstrates how to use some of the commonly used Serial functions in Arduino IDE for sending and receiving data through the Serial port.
 
-After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 9600. You will see the following message on the serial monitor, which outputs 'Hello World!' every second. Also, you can send content to the XIAO ESP32S3 through the serial monitor, and XIAO will print out each byte of the content you send.
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 9600. You will see the following message on the serial monitor, which outputs 'Hello World!' every second. Also, you can send content to the XIAO ESP32-S3 through the serial monitor, and XIAO will print out each byte of the content you send.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
 ### Serial1 Usage
 
-According to the above XIAO ESP32S3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
+According to the above XIAO ESP32-S3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
 This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added.
 So next, we will use the pins led out by the chip for serial communication.
 
@@ -655,7 +656,7 @@ void loop() {
 }
 ```
 
-After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200.then,you can send content you want in the XIAO ESP32S3 through the serial monitor Serial ,and XIAO will print out each byte of the content you send.,In here,the content i entered is "Hello Everyone",my result chart is as follows
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200.then,you can send content you want in the XIAO ESP32-S3 through the serial monitor Serial ,and XIAO will print out each byte of the content you send.,In here,the content i entered is "Hello Everyone",my result chart is as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -771,8 +772,8 @@ Please be prepared for the following.
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>60GHz mmWave Sensor -<br/>Human Resting Breathing<br/>and Heartbeat Module</th>
  </tr>
  <tr>
@@ -904,14 +905,14 @@ If all goes well, you will see data messages on the serial monitor.
 
 ## IIC
 
-XIAO ESP32S3 has an I2C interface that can be used for data transmission and parsing of many sensors, as well as for using some OLED screens.
+XIAO ESP32-S3 has an I2C interface that can be used for data transmission and parsing of many sensors, as well as for using some OLED screens.
 
 ### Hardware Preparation
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
@@ -942,9 +943,9 @@ The OLED display on the XIAO expansion board uses the I2C protocol and is connec
 
 ### Software Implementation
 
-This example introduces how to use the OLED display on the Seeed Studio Expansion Base for XIAO ESP32S3.
+This example introduces how to use the OLED display on the Seeed Studio Expansion Base for XIAO ESP32-S3.
 
-#### Step 1. Install the Seeed Studio XIAO ESP32S3 on the Expansion board then conect the Type-C cable
+#### Step 1. Install the Seeed Studio XIAO ESP32-S3 on the Expansion board then conect the Type-C cable
 
 #### Step 2. Install the u8g2 library
 
@@ -981,7 +982,7 @@ In the `setup()` function, we initialize the OLED display using the `u8x8.begin(
 
 In the `loop()` function, we set the font using the `u8x8.setFont()` function and specify the position of the cursor on the display using the `u8x8.setCursor()` function. Finally, we use the `u8x8.print()` function to display the string "Hello World!" on the OLED display.
 
-If you upload a program to XIAO ESP32S3, you will see content displayed on the OLED display screen on the expansion board.
+If you upload a program to XIAO ESP32-S3, you will see content displayed on the OLED display screen on the expansion board.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/29.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -993,8 +994,8 @@ The ESP32-S3 chip integrates multiple peripherals, including an SPI interface th
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
  </tr>
  <tr>
@@ -1100,7 +1101,7 @@ For the sake of common sense, the J3 is simply described above as an interface t
 
 ## Touch Pins
 
-In addition to the common functional pins mentioned above, XIAO ESP32S3/XIAO ESP32S3 Sense also has 9 touch detection pins A0~A5, A8~A10.
+In addition to the common functional pins mentioned above, XIAO ESP32-S3/XIAO ESP32-S3 Sense also has 9 touch detection pins A0~A5, A8~A10.
 
 We can check if a pin has been touched by reading its analog value, which is very convenient. The following program is used to detect whether pin A5 has been touched.
 

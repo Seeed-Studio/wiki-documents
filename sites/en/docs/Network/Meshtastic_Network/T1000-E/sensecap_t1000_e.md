@@ -11,7 +11,7 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -129,6 +129,7 @@ If you want to text messages and communicate with other nodes in the website, yo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
+## Configuration
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -162,7 +163,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### Configure Sensor
+### (Optional) Configure Sensor
 
 |Sensor|Description|
 |-|-|
@@ -221,7 +222,7 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 After you update the device configuration, the device will restart, which may take some time.
 :::
 
-### Configure Ringtone
+### (Optional) Configure Ringtone
 
 Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
 
@@ -273,7 +274,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 </video>
 </div>
 
-### Configure GPS
+### (Optional) Configure GPS
 
 Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
 
@@ -282,6 +283,12 @@ Please set GPS enabled. You can adjust the update inerval and broadcast interval
 For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may deviate.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
+### (Optional) Configure Buzzer
+
+The buzzer is enabled by default. If you want to disable the buzzer, set `Alert Message buzzer`, `Alert bell buzzer` and `Use PWM bizzer` as the following screenshot.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
 ## Flash Firmware
 
