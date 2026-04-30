@@ -1,14 +1,36 @@
 const docList = [
   [
     {
+      "path": "/respeaker_flex_lekiwi",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
+      "title": "LeKiwi Voice Controller",
+      "date": "2026-04-28",
+      "title_cn": "LeKiwi 语音控制器",
+      "title_ja": "LeKiwi 音声コントローラ",
+      "title_es": "Controlador de voz LeKiwi",
+      "title_pt": "Controlador de Voz LeKiwi"
+    },
+    {
+      "path": "/get_started_with_meshcore_remote_terminal",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/first.png",
+      "title": "Get Started with MeshCore Remote Terminal",
+      "date": "2026-04-20",
+      "title_cn": "MeshCore Remote Terminal 入门指南",
+      "title_ja": "MeshCore Remote Terminal を使い始める",
+      "title_es": "Primeros pasos con MeshCore Remote Terminal",
+      "title_pt": "Introdução ao MeshCore Remote Terminal"
+    }
+  ],
+  [
+    {
       "path": "/get_started_with_esp32s3_meshcore",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png",
       "title": "Get Started with ESP32 MeshCore",
       "date": "2026-04-20",
       "title_cn": "ESP32 MeshCore 入门",
       "title_ja": "ESP32 MeshCore を使い始める",
       "title_es": "Primeros pasos con ESP32 MeshCore",
-      "title_pt": "Introdução ao ESP32 MeshCore"
+      "title_pt": "Primeiros Passos com ESP32 MeshCore"
     },
     {
       "path": "/sound_source_localization_of_recamera_gimbal",
@@ -59,22 +81,22 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg",
       "title": "Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader",
       "date": "2026-04-09",
-      "title_cn": "基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程",
+      "title_cn": "reBot Arm B601-DM入门Lerobot",
       "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Introducción a reBot Arm B601-DM basado en LeRobot y reBot 102 Leader",
-      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader"
+      "title_es": "Introducción al reBot Arm B601-DM basado en LeRobot y al reBot 102 Leader",
+      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e reBot 102 Leader"
     }
   ],
   [
     {
       "path": "/epaper_en05",
       "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp",
-      "title": "Getting Started with XIAO ePaper Display EN05",
+      "title": "Getting Started with XIAO ePaper Display Board - EN05",
       "date": "2026-04-08",
-      "title_cn": "XIAO ePaper Display EN05 入门指南",
-      "title_ja": "XIAO ePaper Display EN05 入門ガイド",
-      "title_es": "Introducción a XIAO ePaper Display EN05",
-      "title_pt": "Introdução à XIAO ePaper Display EN05"
+      "title_cn": "XIAO ePaper Display Board - EN05 入门指南",
+      "title_ja": "XIAO ePaper Display Board - EN05 入門ガイド",
+      "title_es": "Primeros pasos con XIAO ePaper Display Board - EN05",
+      "title_pt": "Introdução à XIAO ePaper Display Board - EN05"
     },
     {
       "path": "/respeaker_flex_xiao_introduction",
@@ -91,12 +113,12 @@ const docList = [
     {
       "path": "/epaper_ee05",
       "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp",
-      "title": "Getting Started with XIAO ePaper Display EE05",
+      "title": "Getting Started with XIAO ePaper Display Board - EE05",
       "date": "2026-04-07",
-      "title_cn": "XIAO ePaper Display EE05 入门指南",
-      "title_ja": "XIAO ePaper Display EE05 入門ガイド",
-      "title_es": "Introducción a XIAO ePaper Display EE05",
-      "title_pt": "Introdução à XIAO ePaper Display EE05"
+      "title_cn": "XIAO ePaper Display Board - EE05 入门指南",
+      "title_ja": "XIAO ePaper Display Board - EE05 入門ガイド",
+      "title_es": "Introducción a XIAO ePaper Display Board - EE05",
+      "title_pt": "Introdução à XIAO ePaper Display Board - EE05"
     },
     {
       "path": "/meshcore_node_map_solar_node",
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "MeshCore Node Map",
       "title_es": "Mapa de Nodos MeshCore",
       "title_pt": "Mapa de Nós MeshCore"
-    }
-  ],
-  [
-    {
-      "path": "/driving_reterminal_d1001_speaker",
-      "image": "https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp",
-      "title": "Driving reTerminal D1001 Speaker",
-      "date": "2026-04-02",
-      "title_cn": "驱动 reTerminal D1001 扬声器",
-      "title_ja": "reTerminal D1001 スピーカーの駆動",
-      "title_es": "Control del altavoz reTerminal D1001",
-      "title_pt": "Acionando o alto-falante do reTerminal D1001"
-    },
-    {
-      "path": "/respeaker_flex_picovoice_nlu_keyword_spotting",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg",
-      "title": "reSpeaker Flex Control Wakeword and NLU with Pico-voice",
-      "date": "2026-04-01",
-      "title_cn": "使用 Pico-voice 在 reSpeaker Flex 上控制唤醒词和 NLU",
-      "title_ja": "reSpeaker Flex Pico-voice によるウェイクワード制御と NLU",
-      "title_es": "reSpeaker Flex Control Despertador de Voz y NLU con Pico-voice",
-      "title_pt": "reSpeaker Flex Controle de Palavra de Ativação e NLU com Pico-voice"
     }
   ]
 ];

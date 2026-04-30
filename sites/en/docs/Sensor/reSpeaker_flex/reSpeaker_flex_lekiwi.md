@@ -5,7 +5,7 @@ keywords:
   - reSpeaker flex
   - LeKiwi
   - xvf3800
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png"
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png
 slug: /respeaker_flex_lekiwi
 sku: 100005504,100099135,100070894,100026178
 last_update:

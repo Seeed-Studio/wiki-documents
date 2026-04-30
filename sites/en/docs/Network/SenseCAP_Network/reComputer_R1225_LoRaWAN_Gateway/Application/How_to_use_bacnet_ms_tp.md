@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /how_to_use_bacnet_ms_tp_with_r1225
 sku: 100021896,100030154,100006298,100079154
 last_update:
-  date: 04/017/2026
+  date: 04/17/2026
   author: Kian
 ---
 
