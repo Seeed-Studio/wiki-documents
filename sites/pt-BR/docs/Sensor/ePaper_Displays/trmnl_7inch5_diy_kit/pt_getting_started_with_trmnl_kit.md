@@ -8,7 +8,7 @@ last_update:
   date: 06/29/2025
   author: Allen
 createdAt: '2025-07-16'
-updatedAt: '2025-09-15'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/trmnl_7inch5_diy_kit_main_page/
 ---
 
@@ -35,7 +35,7 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 ::: -->
 
 - **Compatibilidade com TRMNL BYOD**: Kit oficial para construir o dispositivo TRMNL 7.5'' OG com mais de 375 plugins e 8 layouts sem código (por exemplo, Calendar, Shopify, GitHub)
-- **Display E-Ink de 7,5"**: Display monocromático 800×480 com atualização parcial (0,34 s) e atualização completa (3,5 s)
+- **Display E-Ink de 7,5"**: Display monocromático 800×480 com atualização parcial (0,34s) e atualização completa (3,5s)
 - **Design de baixo consumo de energia**: Bateria de 2000mAh fornece até 3 meses de operação em modo de deep sleep (intervalo de atualização de 6 horas)
 - **Suporte a dois ecossistemas**: Compatível com Home Assistant (via ESPHome) e Arduino IDE para desenvolvimento personalizado
 - **Gabinetes open source**: Disponíveis no Printables e Thingiverse para fácil personalização
@@ -44,11 +44,11 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 
 | Parâmetro | Descrição |
 | --- | --- |
-| MCU | Placa de desenvolvimento XIAO ePaper Display com XIAO ESP32-S3 Plus onboard |
+| MCU | XIAO ePaper Display Dev Board com XIAO ESP32-S3 Plus onboard |
 | Display | Display ePaper monocromático de 7,5 polegadas |
 | Resolução | 800x480 |
 | Tensão de operação | 5V |
-| Bateria | Bateria recarregável de íons de lítio de 2000mAh (autonomia de 3 meses em modo de deep sleep) |
+| Bateria | Bateria Li-ion recarregável de 2000mAh (autonomia de 3 meses em modo de deep sleep) |
 | Temperatura de operação | -40°C a 85°C |
 | Gabinete | Não incluído (projetos open source no Printables e Thingiverse) |
 
@@ -62,11 +62,11 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 
 | Produto | Quantidade |
 | --- | --- |
-| Placa de desenvolvimento XIAO ePaper Display (XIAO ESP32-S3 Plus) | 1 |
+| XIAO ePaper Display Dev Board (XIAO ESP32-S3 Plus) | 1 |
 | Display ePaper monocromático de 7,5 polegadas (800×480) | 1 |
 | Cabo de extensão FPC (10 cm) | 1 |
 | Conector FPC | 1 |
-| Bateria recarregável de íons de lítio de 2000mAh | 1 |
+| Bateria Li-ion recarregável de 2000mAh | 1 |
 
 ## Primeiros passos
 
@@ -93,7 +93,7 @@ Conecte o cabo da bateria ao conector JST na placa controladora, garantindo a po
 :::tip
 Observe que o cabo flexível da tela é muito frágil. Tenha cuidado ao manuseá-lo. Se ele for danificado, toda a tela deixará de funcionar.
 :::
-Imprima as peças de gabinete open source a partir da [Resource part](#resources) e monte os componentes dentro.  
+Imprima as peças de gabinete open source a partir da [Resource part](#recursos) e monte os componentes dentro.  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
 
@@ -133,20 +133,20 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 </div>
 
 :::tip
-Se o seu kit TRMNL estiver longe do roteador, você pode mover a antena para fora do gabinete. Isso trará um desempenho melhor.
+Se o seu kit TRMNL estiver longe do roteador, você pode mover a antena para fora do gabinete. Isso proporcionará um desempenho melhor.
 :::
 
-## Centro Wiki
+## Centro da Wiki
 
 ### Explore guias detalhados
 
-#### 1. [Tutorial do ecossistema TRMNL BYOD](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_trmnl/)
+#### 1. [Tutorial do ecossistema TRMNL BYOD](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl/)
 
-Descubra como usar a plataforma TRMNL BYOD com mais de 375 plugins, incluindo criação de dashboards sem código para o seu trabalho e vida.
+Descubra como usar a plataforma TRMNL BYOD com mais de 375 plugins, incluindo criação de dashboards sem código para o seu trabalho e vida pessoal.
 
 #### 2. [Funciona com Home Assistant](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_esphome)
 
-Aprenda como configurar seu kit TRMNL com Home Assistant via ESPHome, incluindo upload de firmware e programação básica.
+Aprenda como configurar seu kit TRMNL com o Home Assistant via ESPHome, incluindo upload de firmware e programação básica.
 
 #### 3. [Funciona com Arduino](https://wiki.seeedstudio.com/pt-br/ogdiy_kit_works_with_arduino/)
 

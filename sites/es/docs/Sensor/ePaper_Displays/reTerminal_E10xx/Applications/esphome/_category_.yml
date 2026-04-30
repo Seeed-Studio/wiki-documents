@@ -1,9 +1,0 @@
-position: 2
-label: 'ESPHome'
-collapsible: true
-collapsed: true
-link:
-  type: generated-index
-  slug: reterminal_e10xx_esphome
-  title: Serie reTerminal E con ESPHome
-  description: Trabaje con ESPHome para Home Assistant en la pantalla de tinta electrónica de la serie reTerminal E, incluyendo el uso básico y avanzado.

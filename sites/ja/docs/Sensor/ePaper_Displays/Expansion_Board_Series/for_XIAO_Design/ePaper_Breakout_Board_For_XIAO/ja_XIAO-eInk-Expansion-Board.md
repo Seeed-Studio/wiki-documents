@@ -1,6 +1,6 @@
 ---
-description: ePaper Breakout Board のはじめかた
-title: ePaper Breakout Board
+description: ePaper Breakout Board 入門ガイド
+title: ePaper Breakout Board 入門ガイド
 keywords:
   - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -14,7 +14,7 @@ createdAt: '2023-10-30'
 updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/ja/XIAO-eInk-Expansion-Board/
 ---
-# ePaper Breakout Board のはじめかた
+# ePaper Breakout Board 入門ガイド
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/ja/XIAO-eInk-Expansion-Board/
     </a>
 </div><br />
 
-XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソリューション、XIAO eInk Expansion Board をご紹介します。24 ピン FPC コネクタを備え、このボードは当社の eInk 製品シリーズとのシームレスな接続を提供します。さらに選択肢を広げたい場合は、8 ピン 2.54 ヘッダにより、お好みの任意のマイコンを簡単に統合できます。このボードは、eInk の能力を高め、あなたの作業を楽にしてくれる「ベストフレンド」のような存在です。
+XIAO eInk Expansion Board は、XIAO ファミリで eInk ディスプレイを手軽に駆動するための最適なソリューションです。24 ピン FPC コネクタを備え、このボードは当社の eInk 製品シリーズとシームレスに接続できます。さらに選択肢を広げたい場合は、8 ピン 2.54 ヘッダを使って、お好みのマイコンを簡単に統合できます。このボードは、あなたの eInk の「永遠の親友」のような存在で、その機能を強化し、あなたの作業をより簡単にしてくれます。
 
 :::note
 このブレイクアウトボードには eInk ディスプレイは含まれていません。ディスプレイは別途購入する必要があります。
@@ -35,17 +35,17 @@ XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソ
 ### 特長
 
 - 24 ピン FPC コネクタ：eInk ディスプレイへの堅牢で信頼性の高い接続を提供します。
-- XIAO ソケット：プロセッサとして XIAO を使用でき、コンパクトでありながら強力な制御ソリューションを提供します。
+- XIAO ソケット：XIAO をプロセッサとして使用でき、コンパクトでありながら強力な制御ソリューションを提供します。
 - 8 ピン 2.54 ヘッダ：任意のマイコンに接続できるため、高い柔軟性があり、さまざまな可能性が広がります。
-- プラグアンドプレイ：使いやすさを重視して設計されており、初心者から上級者まで幅広く適しています。
+- プラグアンドプレイ：使いやすさを重視して設計されており、初心者から上級者まで幅広いユーザーに最適です。
 - 多用途なアプリケーション：小型から大型まで、幅広いサイズの eInk ディスプレイに対応します。
 
-### 用途例
+### 用途
 
-- デジタルサイネージ：eInk Breakout Board を使って、動的で省電力なデジタルサインを作成します。
+- デジタルサイネージ：eInk Breakout Board を使用して、動的で省電力なデジタルサインを作成します。
 - 電子書籍リーダー：自分のニーズに合わせた機能を備えたカスタム電子書籍リーダーを構築します。
 - スマートホーム制御パネル：スマートホームシステムに組み込んで、スタイリッシュでモダンな制御パネルを実現します。
-- 小売用電子プライスタグ：より効率的で環境にやさしい小売体験のために、電子プライスタグを作成します。
+- リテール用プライスタグ：より効率的で環境に優しい電子プライスタグを作成します。
 - 教育ツール：簡単に更新でき、省電力なインタラクティブ教育教材を開発します。
 
 ## ハードウェア概要
@@ -53,14 +53,14 @@ XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソ
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/xiao-expansion.png" style={{width:700, height:'auto'}}/></div>
 
 1. 24 ピン FPC コネクタ：2.13 インチ ePaper 用。
-2. XIAO ソケット：Seeed Studio XIAO 開発ボードを接続するためのソケット。
-3. IO ブレイクアウト：Arduino UNO や Raspberry Pi など、他のコントローラを接続するための端子。
+2. XIAO ソケット：Seeed Studio XIAO 開発ボードを接続するためのものです。
+3. IO ブレイクアウト：Arduino UNO や Raspberry Pi など、他のコントローラを接続するためのものです。
 
-### ピン配置定義
+### ピン配置の定義
 
 <div class="table-center">
 
-|  eInk SPI Pins |  XIAO  |
+|  eInk SPI ピン |  XIAO  |
 |       ---      |  ---   |
 |      RST       |   D0   |
 |      CS        |   D1   |
@@ -86,7 +86,7 @@ XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソ
 
 ### ハードウェアの準備
 
-**Step 1.** 部材の準備
+**ステップ 1.** 材料の準備
 
 <table align="center">
  <tr>
@@ -132,11 +132,11 @@ XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソ
  </tr>
 </table>
 
-**STEP 2.** XIAO を XIAO ソケットに挿入します：ピンを揃え、ボード上の XIAO ソケットに XIAO をやさしく差し込みます。
+**ステップ 2.** XIAO を XIAO ソケットに挿入します：ピンを揃え、ボード上の XIAO ソケットに XIAO をやさしく挿し込みます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_xiao.gif" style={{width:700, height:'auto'}}/></div>
 
-**STEP 3.** eInk を FPC コネクタに挿入します：ePaper Breakout Board 上の 24 ピン FPC コネクタに、E-paper を慎重に差し込みます。
+**ステップ 3.** eInk を FPC コネクタに挿入します：ePaper Breakout Board 上の 24 ピン FPC コネクタに、E-paper を慎重に差し込みます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_eink.gif" style={{width:700, height:'auto'}}/></div>
 
 ### ソフトウェアの準備
@@ -146,31 +146,31 @@ XIAO ファミリで eInk ディスプレイを簡単に駆動するためのソ
 初めて Arduino を使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-**Step 1.** Arduino アプリケーションを起動します。
+**ステップ 1.** Arduino アプリケーションを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong>
     </a>
 </div>
 
-**Step 2.** 使用する開発ボードのモデルを選択し、Arduino IDE に追加します。
+**ステップ 2.** 使用する開発ボードのモデルを選択し、Arduino IDE に追加します。
 
-- 後のサンプルで **Seeed Studio XIAO SAMD21** を使用したい場合は、**[this tutorial](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)** を参照して追加を完了してください。
+- 後の手順で **Seeed Studio XIAO SAMD21** を使用したい場合は、追加作業を完了するために **[this tutorial](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)** を参照してください。
 
-- 後のサンプルで **Seeed Studio XIAO RP2040** を使用したい場合は、**[this tutorial](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/#software-setup)** を参照して追加を完了してください。
+- 後の手順で **Seeed Studio XIAO RP2040** を使用したい場合は、追加作業を完了するために **[this tutorial](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/#software-setup)** を参照してください。
 
-- 後のサンプルで **Seeed Studio XIAO nRF52840** を使用したい場合は、**[this tutorial](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)** を参照して追加を完了してください。
+- 後の手順で **Seeed Studio XIAO nRF52840** を使用したい場合は、追加作業を完了するために **[this tutorial](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)** を参照してください。
 
-- 後のサンプルで **Seeed Studio XIAO ESP32C3** を使用したい場合は、**[this tutorial](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
+- 後の手順で **Seeed Studio XIAO ESP32C3** を使用したい場合は、追加作業を完了するために **[this tutorial](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照してください。
 
-- 後のサンプルで **Seeed Studio XIAO ESP32S3** を使用したい場合は、**[this tutorial](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)** を参照して追加を完了してください。
+- 後の手順で **Seeed Studio XIAO ESP32S3** を使用したい場合は、追加作業を完了するために **[this tutorial](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)** を参照してください。
 
 ## Seeed GFX ライブラリのインストール
 
-**Step 3.** Seeed GFX ライブラリをインストールします
+**ステップ 3.** Seeed GFX ライブラリをインストールします
 
 :::tip
 このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリや類似のディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
@@ -190,7 +190,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-お使いのデバイスタイプを選択するとコードが生成されます。そのコードをコピーしておき、後で使用します。
+使用しているデバイスタイプを選択するとコードが生成されます。そのコードをコピーしておき、後で使用します。
 
 :::tip
 誤った選択をすると、画面には何も表示されません。
@@ -207,9 +207,9 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 基本的なサンプルが 4 つあります。好みの基本サンプルを開きます：
 
 1. Bitmap: ビットマップ画像を表示します。
-2. Clock: 時計を表示します。
+2. Clock: アナログ時計を表示します。
 3. Clock_digital: デジタル時計を表示します。
-4. Shape: さまざまなサイズの文字と図形をランダムに表示します。
+4. Shape: さまざまなサイズの文字や図形をランダムに表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -231,20 +231,20 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-1.54 インチまたは 2.9 インチの電子ペーパー画面を使用している場合、ドライバチップの仕様により、時計などの動的エフェクトを使用するとフリッカーが発生することがあります。これはプログラムの問題ではないのでご安心ください。ただし、画面の寿命を縮めないよう、動的エフェクトのサンプルを長時間連続して実行することは推奨されません。
+1.54 インチまたは 2.9 インチの電子ペーパー画面を使用している場合、ドライバチップの仕様により、時計などの動的エフェクトを使用するとフリッカーが発生することがあります。これはプログラムの問題ではないのでご安心ください。ただし、画面の寿命を縮めないよう、動的エフェクトのサンプルを長時間連続して動作させることは推奨しません。
 
-5.83 インチおよび 7.5 インチの画面を使用している場合は、異なるチップを搭載しているため、このようなフリッカー現象は発生しません。
+5.83 インチおよび 7.5 インチの画面を使用している場合は、異なるチップを採用しているため、このようなフリッカー現象は発生しません。
 :::
 
-## 画像抽出ソフトウェア
+## 画像変換ソフトウェア
 
 ### Web サイトの使い方（推奨）
 
-ここではテスト用に 7.5 インチの電子ペーパー画面を使用します。
+ここではテスト用に 7.5 インチの電子ペーパー画面を使用しています。
 
 #### 画像の作成方法
 
-この [URL](https://jlamch.net/MXChipWelcome/) は非常に便利な画像抽出操作を提供しており、電子ペーパー画面上にさまざまな画像を簡単に表示できるようにしてくれます。さっそく始めましょう！
+この [URL](https://jlamch.net/MXChipWelcome/) は非常に便利な画像変換操作を提供しており、電子ペーパー画面上にさまざまな画像を簡単に表示できるようにしてくれます。さっそく始めましょう！
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
 
 **Step 1**.画像を選択
@@ -264,13 +264,13 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 - Transparent: 透明な背景
   - Invert Image Color
-  - Invert Image Color: このオプションは画像の色を反転させるために使用します。選択すると画像の色が反転します。
+  - Invert Image Color: 画像の色を反転させるためのオプションです。選択すると、画像の色が反転します。
 
 - Brightness / Alpha Threshold
-  - Brightness / Alpha Threshold: ピクセルの明るさの値を 0 から 255 の範囲で設定します。値が高いほどピクセルは明るくなり、この値より低いピクセルは黒になります。
+  - Brightness / Alpha Threshold: ピクセルの明るさの値を 0 ～ 255 の範囲で設定します。値が大きいほどピクセルは明るくなり、この値より低いピクセルは黒になります。
 
 - Scaling
-  - Scaling: 画像の拡大縮小方法を選択します。オプションには次のものがあります：
+  - Scaling: 画像の拡大縮小方法を選択します。オプションは次のとおりです：
 
 - Original size: 元のサイズを維持
   - その他のスケーリングオプション（具体的なオプションは別途説明が必要な場合があります）
@@ -297,10 +297,10 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 #### 画像の作成方法
 
-Windows に標準搭載されている **Paint** ソフトを使用して、使用している画面と**同じ解像度**の画像を作成し、`BMP` または `JPG` ファイルとして保存します。
+Windows に標準搭載されている **Paint** ソフトを使用して、使用中の画面と**同じ解像度**の画像を作成し、`BMP` または `JPG` ファイルとして保存します。
 
 :::note
-画像の解像度は、使用している画面と同じでなければなりません。例えば、4.2 インチの電子ペーパーは 400 x 300 ピクセルなので、300 x 400 のサイズは使用できません。そうすると iamge2lcd が出力する `.h` ファイルに 200 バイト余分に追加されてしまいます。
+画像の解像度は、使用している画面と同じでなければなりません。例えば、4.2 インチの電子ペーパーは 400 x 300 ピクセルなので、300 x 400 のサイズは使用できません。そうすると、image2lcd が出力する `.h` ファイルに 200 バイト余分に追加されてしまいます。
 :::
 
 画像の色は、Windows に付属する標準のペイントボードの色と一致している必要があります。ペイントボードの色は次のとおりです：
@@ -328,83 +328,83 @@ Windows に標準搭載されている **Paint** ソフトを使用して、使�
 **Step 1.** [Image2lcd.7z](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image2Lcd.7z) を開き、解凍してアプリケーションを起動します。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1.png" style={{width:700, height:'auto'}}/></div>
 
-**Step 2.** 画像を開き、「Output file type」を「C array (*.c)」に、「Scan mode」を「Horizon Scan」に設定し、その他のパラメータ設定は次のとおりです：
+**Step 2.** 画像を開き、「Output file type」を「C array (*.c)」に、「Scan mode」を「Horizon Scan」に設定し、その他のパラメータ設定は次のとおりにします：
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Epaper</th>
+        <th>電子ペーパー</th>
         <th>BitPixl</th>
-        <th>Max Width and Height</th>
-        <th>Reverse color</th>
-        <th>Display mode</th>
+        <th>最大幅と高さ</th>
+        <th>色反転</th>
+        <th>表示モード</th>
     </tr>
     <tr>
         <th>1.54-inch E-paper - Dotmatix 200x200</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右反転</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper - Quadruple 212x104 </th>
-        <td align="center">4 Gray</td>
+        <td align="center">4 階調グレー</td>
         <td align="center">104x212</td>
         <td align="center">/</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>2.9 inch E-paper - Monocolor 128x296</th>
-         <td align="center">Monochrome</td>
+         <td align="center">モノクロ</td>
         <td align="center">128x296</td>
         <td align="center">✅</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>2.9-inch e-paper - Quadruple color 128x296 </th>
-        <td align="center">4 Gray</td>
+        <td align="center">4 階調グレー</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>4.2-inch E-Paper - Monocolor 400x300</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右反転</td>
     </tr>
     <tr>
         <th>4.26-inch E-Paper - Monocolor 800x480</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右反転</td>
     </tr>
     <tr>
         <th>5.65-inch E-paper -  Sevencolor 600x480</th>
-        <td align="center">256 colors</td>
+        <td align="center">256 色</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
-        <td align="center">Normal</td>
+        <td align="center">通常</td>
     </tr>
     <tr>
         <th>5.83-inch E-paper - Monocolor 648x480</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
-        <td align="center">Mirror left-right</td>
+        <td align="center">左右反転</td>
     </tr>
     <tr>
         <th>7.5-inch E-paper - Monocolor 800x480</th>
-        <td align="center">Monochrome</td>
+        <td align="center">モノクロ</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
         <td align="center">左右反転</td>
@@ -421,7 +421,7 @@ Windows に標準搭載されている **Paint** ソフトを使用して、使�
 
 :::tip
 
-- Max Width と Height を設定した後、矢印をクリックして確定する必要があります。
+- Max Width と Height を設定した後、確定するために矢印をクリックする必要があります。
 - ヘッダーデータを含めないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
@@ -437,7 +437,7 @@ Windows に標準搭載されている **Paint** ソフトを使用して、使�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

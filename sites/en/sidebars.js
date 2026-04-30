@@ -2075,6 +2075,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
               ],
             },
             {
@@ -2710,13 +2711,14 @@ const sidebars = {
               'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/CloudPlatform_Connection_Guide/Connecting_R1225_to_AWS_IoT',
               ],
             },
-            /*{
+            {
               type: 'category',
               label: 'Application',
               items: [
-                ,
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_modbus_rs485',
+                'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/Application/How_to_use_bacnet_ms_tp',
               ],
-            },*/
+            },
           ],
         },
         {
@@ -4301,6 +4303,7 @@ const sidebars = {
               type: 'category',
               label: 'B601-DM',
               items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Getting_Started',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/reBot_Arm_B601_DM_Grasping_Demo',
