@@ -19,6 +19,7 @@ last_update:
   author: Zeller
 createdAt: '2025-10-09'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/ee04_with_platformio/
 ---
 
 # PlatformIO Cookbook: XIAO ePaper Driver Boards (EE0x)

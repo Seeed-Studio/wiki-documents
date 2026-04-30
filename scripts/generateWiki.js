@@ -31,7 +31,16 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Getting_Started.md'), //4.13
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_AWS_IoT.md'), //4.7
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Grasping_Demo.md'), //4.22
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'Robotics_J601', 'reComputer_Robotics_J601_Getting_Started.md') //4.24
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'Robotics_J601', 'reComputer_Robotics_J601_Getting_Started.md'), //4.24
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'seeed_epaper_displays.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_arduino.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_eez_studio.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_esphome.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_openepaperlink.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_sensecraft_hmi.md'), //4.28
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_trmnl.md'), //4.28
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'Application', 'How_to_use_bacnet_ms_tp.md'), //4.17
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'Application', 'How_to_use_modbus_rs485.md'), //4.14
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
