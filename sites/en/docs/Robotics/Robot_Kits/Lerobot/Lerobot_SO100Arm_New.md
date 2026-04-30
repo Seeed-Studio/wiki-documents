@@ -550,7 +550,7 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 5V. If you purchased the **SO101 Arm Kit Pro Edition**, the Leader Arm should be calibrated and operated at every step using a 5V power supply, while the Follower Arm should be calibrated and operated at every step using a 12V power supply.
 :::
 
-Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another. 
+Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another.
 
 If you need to re-calibrate the robotic arms, there are two options available:
 
@@ -558,7 +558,7 @@ Option 1: Clear Cache Files
 
 Completely delete the files under ~/.cache/huggingface/lerobot/calibration/robots or ~/.cache/huggingface/lerobot/calibration/teleoperators before re-calibrating. Otherwise, the system may trigger an error prompt, as the previous calibration data is stored in JSON files within these directories.
 
-Option 2: 
+Option 2:
 
 Use the Interactive Command
 Run the calibration command directly in the terminal. If the arm has been calibrated before, the following prompt will appear
@@ -612,7 +612,6 @@ lerobot-calibrate \
 :::tip
 
 If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
-
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -888,7 +887,6 @@ pip install -e ".[orbbec]"
 ```
 
 ### 3. Grant Camera Permissions
-
 
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
@@ -1302,6 +1300,7 @@ lerobot-train \
 :::tip
 
 If you are using an RTX 50-series GPU, you must append --dataset.video_backend=pyav to the training command. This bypasses missing APIs in the preview version of torchvision. The full training command should look like this:
+
 ```bash
 lerobot-train \
   --dataset.repo_id=seeedstudio123/test \
@@ -1313,8 +1312,8 @@ lerobot-train \
   --policy.push_to_hub=false \
   --steps=300000 \
 ```
-:::
 
+:::
 
 Let's explain it:
 

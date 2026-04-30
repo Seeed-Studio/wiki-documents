@@ -427,7 +427,6 @@ sudo chmod 666 /dev/ttyACM1
 
 ### 校准从动臂舵机
 
-
 将 USB 线从电脑连接到从动臂的舵机驱动板，并接通电源。然后，运行以下命令。
 
 ```bash
@@ -467,7 +466,6 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 当您完成所有步骤后，脚本将自动结束，此时舵机即可投入使用。现在，您可以将每根舵机的 3 针接口依次连接，并将第一个舵机（ID 为 1 的“shoulder pan”舵机）的线缆连接到驱动板。现在可以将驱动板安装到机械臂的底座上。
 
 ### 校准领导臂舵机
-
 
 对领导臂重复相同的步骤。
 
@@ -560,7 +558,6 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 
 方案2：直接在终端输入校准机械臂的命令，如果机械臂曾经被校准过，则在终端出现是否进行重新校准的命令 “ Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration: “ 此时在输入 'c ' 并按下 ENTER 则进行重新校准；直接按下 ENTER 则沿用之前的校准数据。
 
-
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
 :::tip
@@ -602,7 +599,6 @@ lerobot-calibrate \
 :::tip
 
 校准主臂或从臂时如果出现 “ Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port.,Try running lerobot-find-port ” 的报错，需要输入 “ sudo chmod 666 /dev/ttyACM* ” 再次赋予权限。
-
 
 :::
 
@@ -756,7 +752,6 @@ pip install -e ".[realsense]"
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-
 ### 4. 检测相机
 
 ```bash
@@ -769,6 +764,7 @@ lerobot-find-cameras realsense
 - 序列号（Serial number）
 - USB 信息
 - 默认流配置
+
 <div align="center">
     <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/realsense_ID.png" />
 </div>
@@ -1273,7 +1269,6 @@ lerobot-train \
   --steps=300000 
 ```
 
-
 **如果您想在本地数据集上进行训练，请确保 `repo_id` 与数据收集时使用的名称匹配，并添加 `--policy.push_to_hub=false`。**
 
 ```bash
@@ -1303,6 +1298,7 @@ lerobot-train \
   --policy.push_to_hub=false \
   --steps=300000 \
 ```
+
 :::
 
 命令解释
