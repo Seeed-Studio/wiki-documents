@@ -50,7 +50,7 @@ Seeed Studio **仅对硬件质量负责**。教程严格按官方文档更新，
 ## 🔧 SO-ARM10x 系列特点：
 
 1. **开源 & 低成本**  
-   本系列由 [TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100) 提供，是一套开源、低成本的机器人臂解决方案。
+   本系列由 [TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100) 提供，是一套开源、低成本的机器人手臂解决方案。
 
 2. **支持 LeRobot 平台集成**  
    专为与 [LeRobot 平台](https://github.com/huggingface/lerobot) 集成而设计。该平台提供 PyTorch 模型、数据集与工具，面向现实机器人任务的模仿学习（包括数据采集、仿真、训练与部署）。
@@ -218,25 +218,26 @@ For Jetson Orin:
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
-1. 安装 Miniconda：
+1. 安装 Miniforge：
 对于 Jetson：
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+chmod +x Miniforge3-Linux-aarch64.sh
+./Miniforge3-Linux-aarch64.sh
+# 按照提示输入 yes 或回车，安装完成后：
 source ~/.bashrc
 ```
 
 或者，对于 X86 Ubuntu 22.04：
 
 ```bash
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+chmod +x Miniforge3-Linux-x86_64.sh
+./Miniforge3-Linux-x86_64.sh
+# 按照提示安装完成后：
+source ~/.bashrc
+# 初始化所有 shell
 conda init --all
 ```
 
@@ -252,7 +253,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
-4. 使用 miniconda 时，在环境中安装 ffmpeg：
+4. 使用 miniforge 时，在环境中安装 ffmpeg：
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -299,9 +300,23 @@ pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 由于通过 pip 安装 lerobot 环境时会卸载原有的 Pytorch 和 Torchvision 并安装 CPU 版本，因此需要在 Python 中进行检查。
 
 ```python
+python   #  终端中开启python的命令
 import torch
 print(torch.cuda.is_available())
+exit()   #  退出python
 ```
+
+:::tip
+
+注意：NVIDIA的RTX50系列显卡需要安装CUDA 12.8 及以上版本的预览版
+
+下载示例如下：
+
+```bash
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+
+:::
 
 如果输出结果为 False，需要根据[官网教程](https://pytorch.org/index.html)重新安装 Pytorch 和 Torchvision。
 
@@ -382,6 +397,12 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
 
+:::tip
+
+在实际连接主从臂时，第一个插入的是ttyACM0（从臂）、第二个插入的是ttyACM1（主臂）
+
+:::
+
 **配置舵机**
 
 :::danger
@@ -403,6 +424,8 @@ sudo chmod 666 /dev/ttyACM1
 :::tip
 再次提醒，请确保舵机关节 ID 和齿轮比与 **SO-ARM101** 的严格对应。
 :::
+
+### 校准从动臂舵机
 
 将 USB 线从电脑连接到从动臂的舵机驱动板，并接通电源。然后，运行以下命令。
 
@@ -441,6 +464,8 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 在每次按 **Enter** 键之前，请务必检查您的线缆连接。例如，在操作电路板时，电源线可能会断开。
 
 当您完成所有步骤后，脚本将自动结束，此时舵机即可投入使用。现在，您可以将每根舵机的 3 针接口依次连接，并将第一个舵机（ID 为 1 的“shoulder pan”舵机）的线缆连接到驱动板。现在可以将驱动板安装到机械臂的底座上。
+
+### 校准领导臂舵机
 
 对领导臂重复相同的步骤。
 
@@ -525,7 +550,13 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 若购买 **SO101 Arm Kit 标准版**，所有电源均为5V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5V电源，Follower机械臂的校准及每一步骤均使用12V电源。  
 :::
 
-接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。
+
+如果需要重新校准机械臂，有两种方案
+
+方案1：请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+
+方案2：直接在终端输入校准机械臂的命令，如果机械臂曾经被校准过，则在终端出现是否进行重新校准的命令 “ Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration: “ 此时在输入 'c ' 并按下 ENTER 则进行重新校准；直接按下 ENTER 则沿用之前的校准数据。
 
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
@@ -564,6 +595,12 @@ lerobot-calibrate \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm
 ```
+
+:::tip
+
+校准主臂或从臂时如果出现 “ Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port.,Try running lerobot-find-port ” 的报错，需要输入 “ sudo chmod 666 /dev/ttyACM* ” 再次赋予权限。
+
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1&autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -709,7 +746,13 @@ DepthCameraSupport
 pip install -e ".[realsense]"
 ```
 
-### 3. 检测相机
+### 3. 赋予相机权限
+
+```bash
+chmod a+rw /dev/bus/usb/*/* 
+```
+
+### 4. 检测相机
 
 ```bash
 lerobot-find-cameras realsense
@@ -717,12 +760,18 @@ lerobot-find-cameras realsense
 
 该命令会输出以下信息：
 
-- 相机型号
-- 序列号
+- 相机型号（Name）
+- 序列号（Serial number）
 - USB 信息
 - 默认流配置
 
-### 4. RealSense 示例
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/realsense_ID.png" />
+</div>
+
+这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中。
+
+### 5. RealSense 示例
 
 双 RealSense 测试：
 
@@ -782,7 +831,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 5. 参数建议
+### 6. 参数建议
 
 - `depth_alpha` 用于控制深度图的缩放比例；可以根据画面显示效果和目标距离范围进行调整。
 - 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以减轻 USB 带宽与系统负载压力。
@@ -840,7 +889,13 @@ DepthCameraSupport
 pip install -e ".[orbbec]"
 ```
 
-### 3. 检测相机
+### 3. 赋予相机权限
+
+```bash
+chmod a+rw /dev/bus/usb/*/* 
+```
+
+### 4. 检测相机
 
 ```bash
 lerobot-find-cameras orbbec
@@ -848,12 +903,18 @@ lerobot-find-cameras orbbec
 
 该命令会输出以下信息：
 
-- 相机型号
-- 序列号
+- 相机型号（Name）
+- 序列号（Serial number）
 - USB 信息
 - 默认流配置
 
-### 4. Orbbec 示例
+<div align="center">
+    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
+</div>
+
+这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中
+
+### 5. Orbbec 示例
 
 单 Orbbec 测试：
 
@@ -890,13 +951,13 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 5. 参数建议
+### 6. 参数建议
 
 - `depth_alpha` 用于控制深度图的缩放比例；通常可以从 `0.2` 开始测试，再根据显示效果进行微调。
 - 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以提升整体稳定性。
 - 建议优先保持 `640x480` 分辨率，以获得更稳定的显示与传输效果。
 
-### 6. 常见问题
+### 7. 常见问题
 
 出现以下报错时：
 
@@ -1137,10 +1198,6 @@ Linux 问题：
 
 ## 可视化数据集
 
-:::tip
-不稳定，可跳过，可尝试。
-:::
-
 ```bash
 echo ${HF_USER}/so101_test  
 ```
@@ -1156,10 +1213,13 @@ lerobot-dataset-viz \
 
 ```bash
 lerobot-dataset-viz \
-  --repo-id seeedstudio123/test \
+  --repo-id seeedstudio123 \
+  --root ~/.cache/huggingface/lerobot/seeedstudio123 \
+  --episode-index 0 \
+  --display-compressed-images false
 ```
 
-这里，`seeedstudio123` 是数据收集时自定义的 `repo_id` 名称。
+这里，`repo-id`：`seeedstudio123` 是数据收集时自定义的名称，`root` 是数据集在硬盘上的绝对路径，`episode-index` 是想查看的具体轮次。
 
   <div align="center">
       <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" />
@@ -1167,22 +1227,21 @@ lerobot-dataset-viz \
 
 ## 回放一个数据集
 
-:::tip
-不稳定，可跳过，可尝试。
-:::
-
-现在，尝试在您的机器人上重播第一个数据集：
+现在，尝试在您的机器人上重播第一个数据集（数据保存在本地）：
 
 ```bash
 lerobot-replay \
-    --robot.type=so101_follower \
-    --robot.port=/dev/ttyACM0 \
-    --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.episode=0
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_awesome_follower_arm \
+  --dataset.repo_id=seeedstudio123 \
+  --dataset.root=~/.cache/huggingface/lerobot/seeedstudio123 \
+  --dataset.episode=0 \
 ```
 
 此时，机器人应该做出与你遥操记录时一样的动作。
+
+这里，`dataset.root` 是指定数据集的物理路径，`dataset.repo_id` 是数据收集时自定义的名称。
 
 ## 训练及评估
 
@@ -1223,6 +1282,24 @@ lerobot-train \
   --policy.push_to_hub=false\
   --steps=300000 
 ```
+
+:::tip
+
+如果您是RTX50系列显卡，在训练时需要增加--dataset.video_backend=pyav部分，绕过 torchvision 预览版的 API 缺失，即训练命令为：
+
+```bash
+lerobot-train \
+  --dataset.repo_id=seeedstudio123/test \
+  --dataset.video_backend=pyav \
+  --policy.type=act \
+  --output_dir=outputs/train/act_so101_test \
+  --policy.device=cuda \
+  --wandb.enable=false \
+  --policy.push_to_hub=false \
+  --steps=300000 \
+```
+
+:::
 
 命令解释
 
