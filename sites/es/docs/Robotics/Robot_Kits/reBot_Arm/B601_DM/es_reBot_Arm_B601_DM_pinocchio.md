@@ -429,7 +429,7 @@ Este proyecto es de código abierto bajo la **Licencia MIT**.
 
 - [Documentación oficial de Pinocchio](https://stack-of-tasks.github.io/pinocchio/)
 - [Documentación oficial de MeshCat](https://github.com/rdeits/meshcat)
-- [motorbridge SDK](https://github.com/Damiao/motorbridge)
+- [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
 
