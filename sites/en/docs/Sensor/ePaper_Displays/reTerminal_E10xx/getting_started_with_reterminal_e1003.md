@@ -10,7 +10,7 @@ last_update:
   author: Citric
 createdAt: '2026-03-18'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1003/
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-28'
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

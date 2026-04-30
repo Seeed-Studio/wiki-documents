@@ -12,8 +12,8 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-04-28'
-url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
+updatedAt: '2026-04-30'
+url: https://wiki.seeedstudio.com/respeaker_flex_lekiwi/
 ---
 
 

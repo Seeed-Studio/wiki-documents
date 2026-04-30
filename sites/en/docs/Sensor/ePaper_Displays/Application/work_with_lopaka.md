@@ -8,7 +8,7 @@ last_update:
   date: 9/12/2025
   author: Martin
 createdAt: '2025-09-19'
-updatedAt: '2026-04-21'
+updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_lopaka/
 ---
 
