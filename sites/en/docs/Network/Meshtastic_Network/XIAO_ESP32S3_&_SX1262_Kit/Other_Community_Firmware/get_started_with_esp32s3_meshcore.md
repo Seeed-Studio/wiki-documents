@@ -4,7 +4,7 @@ title: Get Started with ESP32 MeshCore
 keywords:
   - Meshcore
   - ESP32 MeshCore
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg
+image: https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png
 slug: /get_started_with_esp32s3_meshcore
 sku: 102010611,113110064
 sidebar_position: 3
@@ -16,7 +16,7 @@ updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/get_started_with_esp32s3_meshcore/
 ---
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png" alt="pir" width={800} height="auto" /></p>
 
 [MeshCore](https://meshcore.io/) is an open sourced system for enabling secure text based communications utilising LoRa Mes hardware. You can use MeshCore repeater and MeshCore companion node to build your MeshCore network. [XIAO ESP32S3 & Wio-SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) is flexible solution to develop a MeshCore node.
 
@@ -95,27 +95,65 @@ If you want to connect the battery for XIAO, we recommend you to purchase qualif
 Expansion board would be a good tool for connection and additional application such as adding grove sensors and modules easily.
 
 <table align="center">
-<tbody><tr>
-<th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa</th>
-<th>(Optional) L76K GNSS Module</th>
-</tr>
-<tr>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" style={{width:300, height:'auto'}}/></div></td>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Expansion.jpg" style={{width:350, height:'auto'}}/></div></td>
-</tr>
-<tr>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
-</a>
-</div></td>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
-</a>
-</div></td>
-</tr>
-</tbody></table>
+  <tbody>
+    <tr>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic</th>
+      <th>(Optional) Expansion Board</th>
+    </tr>
+    <tr>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg"
+            style={{ width: 330, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/Expansion.jpg"
+            style={{ width: 330, height: 'auto' }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Get One Now🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Get One Now🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Configuration
 
@@ -179,27 +217,90 @@ After setting the path, the transmission method will be changed to "n hop". For 
 If you want to show the position of the repeater on a MeshCore node map, you need to first install a GPS module for the kit. 
 
 <table align="center">
-<tbody><tr>
-<th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa</th>
-<th>(Optional) L76K GNSS Module</th>
-</tr>
-<tr>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" style={{width:300, height:'auto'}}/></div></td>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:350, height:'auto'}}/></div></td>
-</tr>
-<tr>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
-</a>
-</div></td>
-<td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank" rel="noopener noreferrer">
-<strong><span><font color={'FFFFFF'} size={"4"}> Check More🖱️</font></span></strong>
-</a>
-</div></td>
-</tr>
-</tbody></table>
+  <tbody>
+    <tr>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic</th>
+      <th>XIAO ESP32S3 & Wio-SX1262 Kit with casing</th>
+      <th>(Optional) L76K GNSS Module</th>
+    </tr>
+    <tr>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg"
+            style={{ width: 300, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/XiaoESP32S3Casing.jpg"
+            style={{ width: 300, height: 'auto' }}
+          />
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img
+            src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg"
+            style={{ width: 350, height: 'auto' }}
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Get One Now🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/XIAO-ESP32S3-for-Meshtastic-LoRa-with-3D-Printed-Enclosure-p-6314.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Get One Now🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+      <td align="center">
+        <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span style={{ color: '#FFFFFF', fontSize: '20px' }}>
+                Get One Now🖱️
+              </span>
+            </strong>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Coonection.png" style={{width:800, height:'auto'}}/></div>
 

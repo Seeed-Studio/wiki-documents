@@ -232,7 +232,7 @@ El archivo de firmware **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** está d
 <TabItem value="HA" label="HA">
 
 El firmware para Home Assistant es otro firmware basado en I2S diseñado específicamente para la integración con Home Assistant. Este firmware optimizado utiliza audio de 2 canales con una frecuencia de muestreo de 48 kHz, lo que proporciona mejor compatibilidad y rendimiento dentro del entorno de Home Assistant.
-Puedes ver el firmware desde [aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main)
+Puedes ver el firmware desde [aquí](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
 
 | Firmware | Canales | Notas |
 |---------|----------|-------|

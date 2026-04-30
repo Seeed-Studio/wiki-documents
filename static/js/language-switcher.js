@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-23 15:48:16 (北京时间)
-// 多语言页面: 2261 个
+// 生成时间: 2026-04-29 13:55:14 (北京时间)
+// 多语言页面: 2266 个
 
 (function() {
   'use strict';
@@ -1221,6 +1221,13 @@
     "pt"
   ],
   "/recomputer_jetson_robotics_j401_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_recomputer_robotics_j601_carrier_board_getting_started": [
     "cn",
     "en",
     "es",
@@ -4174,6 +4181,13 @@
     "ja",
     "pt"
   ],
+  "/get_started_with_meshcore_remote_terminal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/xiao_esp32s3_&_wio_sx1262_kit_meshmonitor": [
     "cn",
     "en",
@@ -4686,6 +4700,20 @@
     "pt"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/how_to_use_bacnet_ms_tp_with_r1225": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/how_to_use_modbus_rs485_with_r1225": [
     "cn",
     "en",
     "es",
@@ -7628,7 +7656,28 @@
     "ja",
     "pt"
   ],
-  "/ee04_with_platformio": [
+  "/epaper_work_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_eezstudio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/epaper_work_with_esphome": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_lopaka": [
     "cn",
     "en",
     "es",
@@ -7642,7 +7691,28 @@
     "ja",
     "pt"
   ],
-  "/epaper_ee04_eezstudio": [
+  "/EE04_with_hmi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_squareline_vision": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_trmnl": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_epaper_display_board_overview": [
     "cn",
     "en",
     "es",
@@ -7656,14 +7726,7 @@
     "ja",
     "pt"
   ],
-  "/EE04_with_hmi": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_epaper_display_board_overview": [
+  "/ee04_with_platformio": [
     "cn",
     "en",
     "es",
@@ -7698,13 +7761,6 @@
     "ja",
     "pt"
   ],
-  "/epaper_breakout_board_with_oepl": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
   "/XIAO-eInk-Expansion-Board": [
     "cn",
     "en",
@@ -7733,6 +7789,13 @@
     "ja",
     "pt"
   ],
+  "/reterminal_e10xx_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reterminal_e10xx_with_esphome": [
     "cn",
     "en",
@@ -7741,41 +7804,6 @@
     "pt"
   ],
   "/reterminal_e10xx_with_esphome_advanced": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_arduino": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_eezstudio": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_lopaka": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_with_squareline_vision": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/reterminal_e10xx_trmnl": [
     "cn",
     "en",
     "es",
@@ -7817,7 +7845,7 @@
     "ja",
     "pt"
   ],
-  "/trmnl_7inch5_diy_kit_main_page": [
+  "/seeed_epaper_displays": [
     "cn",
     "en",
     "es",
@@ -7838,7 +7866,7 @@
     "ja",
     "pt"
   ],
-  "/ogdiy_kit_works_with_trmnl": [
+  "/trmnl_7inch5_diy_kit_main_page": [
     "cn",
     "en",
     "es",
@@ -7853,13 +7881,6 @@
     "pt"
   ],
   "/xiao_075inch_epaper_panel_esphome": [
-    "cn",
-    "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/xiao_7_5_inch_epaper_panel_with_trmnl": [
     "cn",
     "en",
     "es",
@@ -10616,6 +10637,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_lekiwi": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
     "cn",
     "en",
@@ -11765,6 +11793,13 @@
     "pt"
   ],
   "/XIAO_BLE": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54l15_sense_arduino": [
     "cn",
     "en",
     "es",

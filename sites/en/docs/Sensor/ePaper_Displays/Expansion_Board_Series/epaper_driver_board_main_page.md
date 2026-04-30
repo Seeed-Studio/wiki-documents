@@ -121,6 +121,6 @@ The reTerminal E Series ePaper Display supports multiple development platforms a
 
   Explains how to plug the EN04 into Home Assistant and write simple programs to draw simple graphs in ESPHome via YAML.
 
-- [EE04 Driver Board works with TRMNL](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
+- [EE04 Driver Board works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
 
-  Utilize the dedicated TRMNL framework for simplified development and rapid deployment.
+  Utilize the dedicated TRMNL framework for simplified development and rapid deployment. (TRMNL primarily targets the reTerminal E Series and the XIAO 7.5" panels, not EE04 directly — see the unified guide for compatible hardware.)

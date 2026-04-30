@@ -1,5 +1,5 @@
 ---
-description: Aprende a configurar y probar componentes de hardware en la serie reComputer Industrial R20xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 5G，4G, RS485, RS232, pruebas DI/DO y UPS para un apagado seguro.
+description: Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R20xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 5G，4G, RS485, RS232, pruebas DI/DO y UPS para un apagado seguro.
 title: Configurar reComputer Industrial R20xx
 keywords:
   - Raspberry pi
@@ -11,13 +11,13 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2025-11-26'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_r20xx_configure_system/
 ---
 
 ## Descripción general
 
-Aprende a configurar y probar componentes de hardware en la serie reComputer Industrial R20xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, RS485, RS232, pruebas DI/DO, UPS para un apagado seguro y más.
+Aprende a configurar y probar los componentes de hardware en la serie reComputer Industrial R20xx después de instalar los dispositivos. Este wiki cubre el mapeo de GPIO, la prueba del LED de USUARIO, la comunicación SPI, el escaneo de Wi‑Fi y Bluetooth, LoRa®, 4G, 5G, RS485, RS232, pruebas DI/DO, UPS para un apagado seguro y más.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -29,7 +29,7 @@ Aprende a configurar y probar componentes de hardware en la serie reComputer Ind
 
 ## Consultar asignaciones y desplazamientos de GPIO
 
-Para consultar las asignaciones y los desplazamientos de GPIO, sigue estos pasos:
+Para consultar las asignaciones y desplazamientos de GPIO, sigue estos pasos:
 
 1. Copia y pega el siguiente comando para consultar las asignaciones de GPIO:
 
@@ -37,7 +37,7 @@ Para consultar las asignaciones y los desplazamientos de GPIO, sigue estos pasos
 cat /sys/kernel/debug/gpio
 ```
 
-**Este comando mostrará las asignaciones y los desplazamientos de GPIO**, proporcionando información esencial para depurar o configurar los pines GPIO.
+**Este comando mostrará las asignaciones y desplazamientos de GPIO**, proporcionando información esencial para depurar o configurar los pines GPIO.
 
 ## Prueba del LED de USUARIO
 
@@ -400,7 +400,7 @@ ls /dev/ttyUSB*
 
 Salida /dev/ttyUSB0, etc.:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
-Abre minicom con el puerto serie y la velocidad en baudios adecuados:
+Abre minicom con el puerto serie y la velocidad en baudios apropiados:
 
 ```bash
 sudo apt update
@@ -498,14 +498,14 @@ ping www.baidu.com -I usb0
 El reComputer Industrial R20xx incluye **tres puertos RS485**. A continuación se muestran sus correspondientes **puertos COM** y **archivos de dispositivo**:  
 
 | **Número de puertos RS485** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|----------------------------|
-| **RS485-2**               | COM2           | A2/B2/GND2                | `/dev/ttyACM1`             |
-| **RS485-3**               | COM3           | A3/B3/GND3                | `/dev/ttyACM2`             |
-| **RS485-4**               | COM4           | A4/B4/GND4                | `/dev/ttyACM3`             |
+|---------------------------|--------------|---------------------------|-----------------------------|
+| **RS485-2**               | COM2         | A2/B2/GND2                | `/dev/ttyACM1`              |
+| **RS485-3**               | COM3         | A3/B3/GND3                | `/dev/ttyACM2`              |
+| **RS485-4**               | COM4         | A4/B4/GND4                | `/dev/ttyACM3`              |
 
 Para probar la función RS485, puedes seguir los pasos a continuación (tomando RS485_1 y RS485_2 como ejemplos):
 
-1. Conecta por favor los A y B de RS485_1 y RS485_2.
+1. Conecta los terminales A y B de RS485_1 y RS485_2.
 2. Abre minicom en dos ventanas de terminal respectivamente:
 
 ```bash
@@ -537,11 +537,11 @@ Por el contrario, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurars
 
 ## Prueba de RS232
 
-reComputer Industrial R20xx incluye 1x puertos RS232, y los correspondientes puertos COM y archivos de dispositivo son los siguientes:
+reComputer Industrial R20xx incluye 1x puertos RS232, y los puertos COM y archivos de dispositivo correspondientes son los siguientes:
 
 | **Número de puertos RS232** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
-|---------------------------|----------------|---------------------------|----------------------------|
-| **RS232-1**               | COM1           | RX1/TX1/GND1              | `/dev/ttyACM0`             |
+|---------------------------|--------------|---------------------------|-----------------------------|
+| **RS232-1**               | COM1         | RX1/TX1/GND1              | `/dev/ttyACM0`              |
 
 Debido a que RS232 es comunicación full-dúplex, cortocircuita directamente el TX y RX de RS232 para realizar una prueba de bucle de retorno.
 
@@ -616,7 +616,7 @@ reComputer Industrial R20xx contiene 8x puertos DI, el usuario puede configurar 
   </table>
 </div>
 
-El tipo de entrada de los puertos DI es PNP. Soporta tensión de entrada de 5VDC~24VDC, corriente - 1000mA.
+El tipo de entrada de los puertos DI es PNP. Soporta un voltaje de entrada de 5VDC~24VDC, corriente - 1000mA.
 Para probar la funcionalidad de DI, puedes seguir estos pasos para probarlo:
 
 1. Se ha completado la conexión entre el puerto DI de reComputer Industrial R20xx y la carga externa.
@@ -655,19 +655,19 @@ reComputer Industrial R20xx contiene 8x puertos DO, el usuario puede configurar 
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
       <tr>
-        <td>DO6</td>
+        <td>DO5</td>
         <td>GPIO577</td>
+      </tr>
+      <tr>
+        <td>DO6</td>
+        <td>GPIO578</td>
       </tr>
       <tr>
         <td>DO7</td>
@@ -681,11 +681,11 @@ reComputer Industrial R20xx contiene 8x puertos DO, el usuario puede configurar 
   </table>
 </div>
 
-El tipo de salida de los puertos DO es transistor. Admite tensión de salida inferior a 60 VDC y capacidad de corriente de 500 mA.
-Para probar la funcionalidad de DO, puedes seguir estos pasos para probarla:
+El tipo de salida de los puertos DO es transistor. Admite tensión de salida - por debajo de 60 VDC, capacidad de corriente - 500 mA.
+Para probar la funcionalidad de DO, puedes seguir estos pasos para probarlo:
 
 1. Se ha completado la conexión entre el puerto DO de reComputer Industrial R20xx y la carga externa.
-2. Introduce el siguiente comando para ajustar la salida a nivel alto o nivel bajo：
+2. Introduce el siguiente comando para establecer la salida en nivel alto o nivel bajo：
 
 ```bash
 echo 638 > /sys/class/gpio/export
@@ -707,11 +707,11 @@ lsusb
 ```
 
 La ejecución de este comando debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
-Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que tengas que solucionar problemas del concentrador USB o de sus conexiones.
+Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
 
-## Prueba del RTC (reloj en tiempo real)
+## Prueba del RTC (Reloj en Tiempo Real)
 
-Para probar la funcionalidad del reloj en tiempo real (RTC), sigue estos pasos:
+Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
 
 1. Desactiva la sincronización automática de hora:
 
@@ -720,7 +720,7 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. Ajusta la hora:
+2. Establece la hora:
 Configura el RTC a una fecha y hora específicas:
 
 ```bash
@@ -814,7 +814,7 @@ Estos pasos te ayudarán a probar y garantizar la funcionalidad del temporizador
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Controlar el zumbador mediante GPIO  
+## Control del zumbador mediante GPIO  
 
 El GPIO correspondiente al zumbador es gpio627. Introduce el siguiente script para encender/apagar el zumbador:
 
@@ -877,9 +877,9 @@ cd usr/bin
 Este comando indica a la utilidad ATECC que use la ranura 10 (-b 10), establezca el tamaño del número de serie en 192 bits ***(-s 192)*** y genere un número de serie aleatorio ***(-c 'serial')***. La salida será el número de serie generado, como ***"01235595d3d621f0ee"***.
 Este proceso te permite interactuar con el dispositivo ATECC608A y realizar varias operaciones, como generar números de serie aleatorios.
 
-## Interactuar con la EEPROM
+## Interacción con la EEPROM
 
-Aquí están los comandos para interactuar con una EEPROM (Electrically Erasable Programmable Read-Only Memory):
+Aquí están los comandos para interactuar con una EEPROM (Memoria de Solo Lectura Programable y Borrable Eléctricamente):
 
 1. Concede permisos completos (lectura, escritura y ejecución) al archivo de dispositivo de la EEPROM:
 
@@ -938,9 +938,9 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
 
-4. Prepara el script en Python
+4. Prepara el script de Python
 
-- Crea un nuevo archivo de script en Python:
+- Crea un nuevo archivo de script de Python:
 
 ```bash
 cd ~
@@ -1027,7 +1027,7 @@ sudo python3 ups_shutdown.py
 
 ## Acelerador de IA
 
-La ranura M.2 M-KEY 2280 del reComputer Industrial R20xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con un módulo Hailo-8 M.2 de aceleración de IA de hasta 26TOPS.
+La ranura M.2 M-KEY 2280 del reComputer Industrial R20xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
 Si compró el producto de la serie R20xx-10, deberá adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
 El dispositivo viene con el controlador del acelerador Hailo preinstalado, por lo que puede usarlo directamente y ejecutar el caso de prueba:
 
@@ -1052,10 +1052,10 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 Para cerrar la aplicación, presione ***`Ctrl+C`*** .
-Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de video de GStreamer se simplifica al minimizar las tareas de procesamiento de video, y se utiliza el modelo YOLOv6 Nano.
+Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de vídeo de GStreamer se simplifica al minimizar las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
 
 :::note
-Si el reComputer que compró no incluye Hailo-8 y está considerando adquirir un dispositivo Hailo para integrarlo, consulte la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecute los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
+Si el reComputer que compró no incluye Hailo-8 y está considerando adquirir un dispositivo Hailo para su integración, consulte la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecute los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
 :::
 
 ## Soporte técnico y debate sobre el producto

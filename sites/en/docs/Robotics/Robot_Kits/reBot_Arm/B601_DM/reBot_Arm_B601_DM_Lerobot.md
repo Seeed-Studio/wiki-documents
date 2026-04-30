@@ -15,7 +15,7 @@ last_update:
   author: LiuJunjie
 translation:
   skip:
-    - - zh-CN
+    - zh-CN
 createdAt: '2026-04-09'
 updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
@@ -91,6 +91,10 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 4. **Nvidia Platform Compatible**
    Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Initial System Environment
 
 **For Ubuntu x86:**
@@ -105,6 +109,10 @@ Seeed Studio tutorials are strictly updated according to official documentation.
   - Torch 2.3+
 
 ## Install LeRobot
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 You need to install pytorch, torchvision and other environments based on your CUDA version.
 
@@ -192,8 +200,12 @@ conda install ffmpeg -c conda-forge
 (Skip this step for PC) For Jetson JetPack 6.0+ devices (please ensure you have installed Pytorch-gpu and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) step 5 before executing this step):
 
 ```bash
-pip install opencv-python==4.10.0.84  # Install specific OpenCV version
-pip install numpy==1.26.0  # This version should be compatible with torchvision
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson Jetpack 6.0+ only
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This version must be compatible with torchvision
 ```
 
 ### 7. Check Pytorch and Torchvision
@@ -216,6 +228,10 @@ If the output is False, you need to reinstall Pytorch and Torchvision according 
 
 ## Calibrate the Robotic Arm
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 Next, you need to connect the power supply and data cable to your reBot B601-DM robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one reBot B601-DM robot to work on another. If you need to recalibrate the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
 
 First, you need to grant interface permissions by running the following commands:
@@ -227,10 +243,20 @@ sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
 
 ### Calibrate the Follower Arm
 
-B601-DM will automatically calibrate once each time you execute a LeRobot-related program in this wiki.
-What you need to do is ensure that before starting, place the B601-DM in the position shown in the figure (gripper fully closed).
+B601-DM only needs to be calibrated once after assembly. Here is the calibration command. Refer to the figure for the zero position (gripper fully closed).
+
+```bash
+sudo chmod 666 /dev/ttyACM*  # follower arm (serial bridge)
+
+lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao
+```
+
   <div align="center">
-      <img width={800} 
+      <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
   </div>
 
@@ -290,6 +316,7 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 ## Teleoperate
 
+
 First grant permissions to the serial ports:
 ```bash
 sudo chmod 666 /dev/ttyUSB*  # Leader arm
@@ -311,102 +338,279 @@ lerobot-teleoperate \
 
 ## Add Cameras
 
+
 <details>
+<summary> If using RealSense D435i/D405 </summary>
 
-<summary> If using Orbbec Gemini2 Depth Camera </summary>
+RealSense depth cameras can provide RGB-D perception for LeRobot and are suitable for tasks such as object recognition, point cloud reconstruction, and tabletop manipulation. The recommended models here are **RealSense D405** and **RealSense D435i**.
 
-- 🚀 Step 1: Install Orbbec SDK dependencies
-
-1. Clone the `pyorbbec` repository
-   ```bash
-   cd ~/
-   git clone https://github.com/orbbec/pyorbbecsdk.git
-   ```
-
-2. Download and install the corresponding **.whl file** for the SDK
-   Go to [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases),
-   Select and install according to Python version, for example:
-   ```bash
-   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
-   ```
-
-3. Install dependencies in the `pyorbbec` directory
-   ```bash
-   cd ~/pyorbbecsdk
-   pip install -r requirements.txt
-   ```
-
-   Force downgrade `numpy` version to `1.26.0`
-    ```bash
-    pip install numpy==1.26.0
-    ```
-   Red errors can be ignored.
-
-4. Clone the Orbbec SDK to the `~/lerobot/src/cameras` directory
-
-   ```bash
-   cd ~/rebot_lerobot/src/cameras
-   git clone https://github.com/ZhuYaoHui1998/orbbec.git
-   ```
-
-5. Modify utils.py and __init__.py
-- In the `~/lerobot/src/lerobot/cameras` directory, find `utils.py` and add the following code at line `40`:
-
-```python
-elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
-
-            cameras[key] = OrbbecCamera(cfg)
-```
+### RealSense D405
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
 
-- In the `~/lerobot/src/lerobot/cameras` directory, find `__init__.py` and add the following code at line `18`:
+The RealSense D405 is a short-range stereo depth camera designed for high-precision close-range tasks such as tabletop robotic manipulation, with a typical working range of **7 cm to 50 cm**.
 
-```python
-from .orbbec.configuration_orbbec import OrbbecCameraConfig
-```
+### RealSense D435i
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
 </div>
 
-- 🚀 Step 2: Function calls and examples
+The RealSense D435i combines depth sensing, RGB imaging, and an IMU, making it suitable for mid- to close-range applications such as 3D reconstruction, SLAM, and robotic environment perception.
 
-We added the `focus_area` hyperparameter because depth data that is too far away is meaningless for the robotic arm (cannot grasp). Therefore, depth data less than or greater than `focus_area` will become black. The default `focus_area` is (20, 600).
-Currently, supported resolution is limited to width: 640, height: 880.
+### 1. Switch to the Camera Branch
+
+Current camera support is available on the `DepthCameraSupport` branch:
 
 ```bash
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
+```
 
+Confirm the current branch:
+
+```bash
+git branch --show-current
+```
+
+Expected output:
+
+```bash
+DepthCameraSupport
+```
+
+### 2. Install LeRobot in Editable Mode
+
+If you only use RealSense:
+
+```bash
+pip install -e ".[realsense]"
+```
+
+### 3. Grant Permissions
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detect Cameras
+
+```bash
+lerobot-find-cameras realsense
+```
+
+This step will output:
+
+- Camera model
+- Serial number
+- USB information
+- Default stream configuration
+
+### 5. RealSense Example
+
+Dual RealSense test:
+
+```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+  --robot.cameras='{
+    d435i_color: {
+      type: realsense_d435i_color,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d435i_depth: {
+      type: realsense_d435i_depth,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      max_depth_m: 2.0,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+    d405_color: {
+      type: realsense_d405_color,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d405_depth: {
+      type: realsense_d405_depth,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      depth_alpha: 0.03,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true
-
 ```
+
+### 6. Parameter Notes
+
+- `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
+- If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
+- It is recommended to keep the resolution at `640x480` for a better balance of stability and real-time performance.
+
+</details>
+
+<details>
+
+<summary> If using Orbbec Gemini2 Depth Camera </summary>
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+providing synchronized RGB and depth streams with precise depth-to-color alignment. Combined with stereo depth sensing and a built-in 6-axis IMU, it is well suited for robotic tasks such as object detection, 3D perception, mapping, and navigation. Its compact design and full Orbbec SDK support make it suitable for both research and real-world deployment.
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
-Subsequent data collection, training and evaluation tasks are the same as regular RGB commands. Just replace:
+Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
+
+### 1. Switch to the Camera Branch
+
+Current camera support is available on the `DepthCameraSupport` branch:
 
 ```bash
-  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
 ```
 
-into the regular RGB command. You can also add additional monocular RGB cameras after it.
+Confirm the current branch:
+
+```bash
+git branch --show-current
+```
+
+Expected output:
+
+```bash
+DepthCameraSupport
+```
+
+### 2. Install LeRobot in Editable Mode
+
+If you only use Orbbec:
+
+```bash
+pip install -e ".[orbbec]"
+```
+
+### 3. Grant Permissions
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detect Cameras
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+This step will output:
+
+- Camera model
+- Serial number
+- USB information
+- Default stream configuration
+
+### 5. Orbbec Example
+
+
+Single Orbbec test:
+
+
+
+```bash
+lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
+    --robot.cameras="{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }" \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
+    --display_data=true
+```
+
+### 6. Parameter Notes
+
+- `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
+- If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
+- It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
+
+### 7. Common Issues
+
+If you see the following error:
+
+```bash
+No Orbbec camera found for 'XXXX'
+```
+
+it usually means the serial number in the configuration does not match the currently connected device. Run:
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+Then confirm the actual `serial` and update `serial_number_or_name` in your command.
 
 **💡 Author and Contribution**
 
@@ -484,6 +688,7 @@ lerobot-teleoperate \
 ```
 
 ## Dataset Collection
+<!-- vidio todo -->
 
 <details>
 

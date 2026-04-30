@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO ESP32S3 的引脚复用。
-title: Seeed Studio XIAO ESP32S3 (Sense) 引脚复用
+description: 使用 Seeed Studio XIAO ESP32-S3 进行引脚复用。
+title: 使用 Seeed Studio XIAO ESP32-S3（Sense）进行引脚复用
 keywords:
   - esp32s3
   - xiao
@@ -10,19 +10,20 @@ slug: /xiao_esp32s3_pin_multiplexing
 sku: 113991114, 113991115
 type: project
 last_update:
-  date: 03/30/2023
+  date: 4/27/2026
   author: Citric
 createdAt: '2022-11-15'
 updatedAt: '2025-10-09'
 url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_pin_multiplexing/
 ---
 
-# Seeed Studio XIAO ESP32S3 (Sense) 引脚复用
+
+# 使用 Seeed Studio XIAO ESP32-S3（Sense）进行引脚复用
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -31,40 +32,40 @@ url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_pin_multiplexing/
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-Seeed Studio XIAO ESP32S3 是一款功能强大且多功能的开发板，具有多种外设接口和 GPIO 引脚。这些引脚可用于各种用途，如与其他设备通信、读取模拟传感器、控制 LED 等。在本教程中，我们将探索 XIAO ESP32S3 及其相关板卡 XIAO ESP32S3 Sense 的引脚分布，并学习如何将这些引脚用于不同的用途。具体来说，我们将涵盖 1x UART、1x I2C、1x I2S、1x SPI、11x GPIO（PWM）、9x ADC、1x 用户 LED、1x 充电 LED、1x 复位按钮、1x Boot 按钮的使用，以及对于 XIAO ESP32S3 Sense，还有 1x B2B 连接器（带 2 个额外的 GPIO）。在本教程结束时，您将对 XIAO ESP32S3 的引脚分布有很好的理解，并能够在您的项目中有效地使用它。
+Seeed Studio XIAO ESP32-S3 是一款功能强大且用途广泛的开发板，具有多种外设接口和 GPIO 引脚。这些引脚可用于多种用途，例如与其他设备通信、读取模拟传感器、控制 LED 等。在本教程中，我们将探索 XIAO ESP32-S3 及其相关板卡 XIAO ESP32-S3 Sense 的引脚分布，并学习如何将这些引脚用于不同的用途。具体来说，我们将介绍 1 路 UART、1 路 IIC、1 路 IIS、1 路 SPI、11 路 GPIO（PWM）、9 路 ADC、1 个用户 LED、1 个充电 LED、1 个复位按钮、1 个 Boot 按钮，以及对于 XIAO ESP32-S3 Sense，1 个 B2B 连接器（带有额外 2 个 GPIO）。在完成本教程后，你将对 XIAO ESP32-S3 的引脚分布有较好的理解，并能够在你的项目中高效地使用它。
 
 ## 入门指南
 
-### 引脚概览
+### 引脚总览
 
-在开始之前，让我们通过以下原理图回顾一下 XIAO ESP32S3 的所有引脚及其功能。
+在开始之前，让我们先通过下图示意图回顾一下 XIAO ESP32-S3 拥有的所有引脚及其功能。
 
 <table align="center">
  <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense 正面指示图</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense 正面标注示意图</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
     <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense 背面指示图</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense 背面标注示意图</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
     <tr>
-     <th>XIAO ESP32S3/XIAO ESP32S3 Sense 引脚列表</th>
+     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense 引脚列表</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
@@ -72,16 +73,16 @@ Seeed Studio XIAO ESP32S3 是一款功能强大且多功能的开发板，具有
 </table>
 
 :::caution
-虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给引脚 A11 和 A12，但由于 ESP32-S3 芯片的特性，引脚 A11 和 A12 不支持 ADC 功能。请务必区分和辨别它们。
+虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给 A11 和 A12 引脚，但由于 ESP32-S3 芯片本身的特性，A11 和 A12 引脚不支持 ADC 功能。请务必加以区分和辨别。
 :::
 
-- 5V - 这是来自 USB 端口的 5V 输出。您也可以将其用作电压输入，但您必须在外部电源和此引脚之间有某种二极管（肖特基、信号、功率），阳极连接电池，阴极连接 5V 引脚。
+- 5V - 这是来自 USB 端口的 5V 输出。你也可以将其用作电压输入，但必须在外部电源和该引脚之间串联某种二极管（肖特基、信号或功率二极管），二极管的阳极接电池，阴极接 5V 引脚。
 
-- 3V3 - 这是板载稳压器的调节输出。您可以提取 700mA 电流
+- 3V3 - 这是板载稳压器输出的稳压电源。你最多可以从中汲取 700mA 电流
 
 - GND - 电源/数据/信号地
 
-以下是 XIAO ESP32S3 功能引脚的概览。
+下面是 XIAO ESP32-S3 功能引脚的概览。
 
 <div class="table-center">
  <table align="center">
@@ -183,28 +184,28 @@ Seeed Studio XIAO ESP32S3 是一款功能强大且多功能的开发板，具有
 
 ### 焊接排针
 
-为了根据本教程使用每个引脚的功能，我们建议事先焊接引脚。
+为了按照本教程使用各个引脚的功能，我们建议你事先将排针焊接好。
 
-由于 XIAO ESP32S3 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽层或其他组件上。否则，可能会导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
+由于 XIAO ESP32-S3 体积非常小，请在焊接排针时务必小心，不要将不同的引脚焊接到一起，也不要让焊锡粘到屏蔽罩或其他元器件上。否则可能导致 XIAO 短路或无法正常工作，由此造成的后果将由用户自行承担。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/4.jpg" style={{width:400, height:'auto'}}/></div>
 
-如果您选择了 Sense 版本，恭喜您！您将拥有两个额外的 GPIO 引脚。如果您计划使用它们，可以在它们上面焊接一个单独的排针。
+如果你选择了 Sense 版本，那么恭喜你！你将拥有额外的两个 GPIO 引脚。如果你计划使用它们，可以单独在这两个引脚上焊接一个排针。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/18.jpg" style={{width:400, height:'auto'}}/></div>
 
 ## 数字引脚
 
-XIAO ESP32S3 有多达 11 个常规 GPIO 引脚和 9 个模拟引脚。在这个例子中，我们将使用 XIAO ESP32S3、XIAO 扩展板和一个继电器来演示如何使用不同的数字引脚进行读写。
+XIAO ESP32-S3 具有多达 11 个常规 GPIO 引脚和 9 个模拟引脚。在本示例中，我们将使用 XIAO ESP32-S3、XIAO 扩展板和一个继电器，演示如何使用不同的数字引脚进行读写操作。
 
 ### 硬件准备
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Seeed Studio XIAO 扩展底板（带 Grove OLED）</th>
-        <th>Grove - 继电器</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove - Relay</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -215,32 +216,32 @@ XIAO ESP32S3 有多达 11 个常规 GPIO 引脚和 9 个模拟引脚。在这个
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-请将 XIAO ESP32S3 或 Sense 安装到扩展板上，并通过 Grove 线缆将继电器连接到扩展板的 **A0/D0** 接口。最后，通过 USB-C 线缆将 XIAO 连接到计算机。
+请将 XIAO ESP32-S3 或 Sense 安装到扩展板上，并通过 Grove 线缆将继电器连接到扩展板的 **A0/D0** 接口。最后，通过 USB-C 线缆将 XIAO 连接到电脑。
 
 ### 软件实现
 
-在这个例子中，我们将使用连接到 XIAO 扩展板的按钮来实现对继电器开/关状态的控制。当按钮被按下时，继电器打开，当按钮被释放时，继电器关闭。
+在本示例中，我们将通过连接到 XIAO 扩展板的按钮来实现对继电器开关状态的控制。当按下按钮时，继电器吸合（打开），当松开按钮时，继电器断开（关闭）。
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -269,37 +270,37 @@ void loop() {
 }
 ```
 
-如果一切顺利，上传程序后，您应该看到以下效果。
+如果一切顺利，在上传程序后，你应该会看到如下效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/19.gif" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-如果您想使用数字功能，则应使用字母"D"作为引脚编号的前缀，例如 D4、D5。相反，如果您想使用引脚的模拟功能，则应使用字母"A"作为引脚编号的前缀，例如 A4、A5。
+如果你想使用数字功能，那么你应该使用字母 "D" 作为引脚编号的前缀，例如 D4、D5。相反，如果你想使用引脚的模拟功能，你应该使用字母 "A" 作为引脚编号的前缀，例如 A4、A5。
 :::
 
-### Sense 版本
+### 适用于 Sense 版本
 
-对于 XIAO ESP32S3 Sense，除了使用 XIAO 上的 11 个数字引脚外，您还可以使用扩展板上的两个引脚，即 **D11** 和 **D12**。如果您想使用它们，请按照以下步骤操作。
+对于 XIAO ESP32-S3 Sense，除了可以使用 XIAO 上的 11 个数字引脚外，你还可以使用扩展板上的两个引脚，即 **D11** 和 **D12**。如果你想使用它们，请按照以下步骤操作。
 
 #### 步骤 1. 切断 J1 和 J2 之间的连接
 
-由于 ESP32-S3 的引脚数量有限，Sense 扩展板上的 D11 和 D12 默认为麦克风保留。如果您确实需要将 D11 和 D12 用于其他目的，您可以翻转 Sense 扩展板，使用锋利的刀具沿着两个焊盘之间的白线切断 J1 和 J2 之间的连接。
+由于 ESP32-S3 的引脚数量有限，Sense 扩展板上的 D11 和 D12 默认预留给麦克风使用。如果你确实需要将 D11 和 D12 用于其他用途，可以将 Sense 扩展板翻过来，用一把锋利的刀沿着两个焊盘之间的白线切断 J1 和 J2 之间的连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/20.png" style={{width:400, height:'auto'}}/></div>
 
 :::caution
-从图片中可以看出，由于 XIAO 的空间限制，许多线路布局都非常紧凑。因此，在切断 J1 和 J2 之间的连接时，请非常小心不要切到白线外面，否则可能导致开发板故障！
+从图片中可以看出，由于 XIAO 的空间限制，很多走线布局非常紧凑。因此，在切断 J1 和 J2 之间的连接时，请务必小心，不要切到白线之外，否则可能会导致开发板无法正常工作！
 
-虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给引脚 A11 和 A12，但由于 ESP32-S3 芯片的特性，引脚 A11 和 A12 不支持 ADC 功能。请务必区分和辨别它们。
+虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给 A11 和 A12 引脚，但由于 ESP32-S3 芯片本身的特性，A11 和 A12 引脚不支持 ADC 功能。请务必加以区分和辨别。
 :::
 
 :::tip
-切断 J1 和 J2 之间的连接后，扩展板上的麦克风功能将不再可用。如果您需要使用麦克风功能，D11 和 D12 引脚不能同时使用。在这种情况下，您可以分别焊接 J1 和 J2 的两个焊盘来恢复麦克风功能。如下图所示，分别焊接红色和绿色区域。
+在你切断 J1 和 J2 之间的连接后，扩展板上的麦克风功能将不再可用。如果你需要使用麦克风功能，则不能同时使用 D11 和 D12 引脚。在这种情况下，你可以分别给 J1 和 J2 的两个焊盘上锡，以恢复麦克风功能。如下面图片所示，分别给红色和绿色区域焊接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/21.png" style={{width:400, height:'auto'}}/></div>
 :::
 
-有关实际电路原理图，请参考以下图表：
+实际电路原理图请参考下图：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/92.png" style={{width:600, height:'auto'}}/></div>
 
@@ -307,8 +308,8 @@ void loop() {
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Grove - 继电器</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+        <th>Grove - Relay</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:200, height:'auto'}}/></div></td>
@@ -317,12 +318,12 @@ void loop() {
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -330,7 +331,7 @@ void loop() {
 
 #### 步骤 3. 软件实现
 
-以下程序每 500 毫秒切换一次继电器。将继电器的 SIG 引脚连接到扩展板的 GPIO42 接口。
+下面的程序每 500 毫秒切换一次继电器。将继电器的 SIG 引脚连接到扩展板的 GPIO42 接口。
 
 ```c
 const int relayPin = 42;
@@ -350,24 +351,24 @@ void loop() {
 }
 ```
 
-上述方法也适用于 [数字作为 PWM](#数字作为-pwm) 和 [模拟](#模拟) 部分。您只需要修改要使用的扩展板的引脚编号。这在后面不会重复。
+上述方法同样适用于[数字作为 PWM](#digital-as-pwm)和[模拟](#analog)部分。你只需要修改你想要使用的扩展板引脚编号。后文将不再重复说明。
 
 :::caution
-对于 XIAO ESP32S3 Sense 上的两个额外引脚 D11 和 D12，我们尚未对引脚进行宏定义。也就是说，您还不能使用 D11/A11 或 D12/A12 来控制这两个引脚，但您可以通过使用 GPIO 编号（分别为 GPIO42 和 GPIO41）来控制这两个引脚。我们将尽快提交这两个引脚的宏定义，一旦提交完成，您就可以使用 D/A 引脚定义了。
+对于 XIAO ESP32-S3 Sense 上额外的两个引脚 D11 和 D12，我们尚未对这些引脚进行宏定义。也就是说，你目前还不能使用 D11/A11 或 D12/A12 来控制这两个引脚，但你可以分别通过使用 GPIO 编号 GPIO42 和 GPIO41 来控制这两个引脚。我们会尽快提交这两个引脚的宏定义，一旦提交完成，你就可以使用 D/A 形式的引脚定义。
 :::
 
 ## 数字作为 PWM
 
-XIAO ESP32S3 上的所有 GPIO 引脚都支持 PWM 输出。因此，您可以使用任何引脚输出 PWM 来调节灯光亮度、控制舵机和其他功能。
+在 XIAO ESP32-S3 上，所有 GPIO 引脚都支持 PWM 输出。因此，你可以使用任意引脚输出 PWM 来调节灯光亮度、控制舵机等功能。
 
 ### 硬件准备
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Seeed Studio XIAO 扩展底板（带 Grove OLED）</th>
-        <th>Grove - 可变色 LED</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove - Variable Color LED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -378,32 +379,32 @@ XIAO ESP32S3 上的所有 GPIO 引脚都支持 PWM 输出。因此，您可以�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-请将 XIAO ESP32S3 或 Sense 安装到扩展板上，然后使用 Grove 线缆将可变色 LED 连接到扩展板的 A0/D0 接口。最后，通过 USB-C 线缆将 XIAO 连接到您的计算机。
+请将 XIAO ESP32-S3 或 Sense 安装到扩展板上，然后使用 Grove 线缆将 Variable Color LED 连接到扩展板的 A0/D0 接口。最后，通过 USB-C 线缆将 XIAO 连接到你的电脑。
 
 ### 软件实现
 
-在此示例中，我们将演示如何使用 PWM 输出来控制灯光的亮度。
+在本示例中，我们将演示如何使用 PWM 输出来控制灯光的亮度。
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -432,26 +433,26 @@ void loop() {
 }
 ```
 
-如果程序运行成功，您将看到以下运行效果。
+如果程序运行成功，你将看到如下运行效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/22.gif" style={{width:500, height:'auto'}}/></div>
 
 ## 模拟
 
-在 XIAO ESP32S3 上，在 11 个内置 GPIO 引脚中，除了用于串行通信的 D6 和 D7 引脚外，其余 9 个引脚都支持模拟功能。您可以使用这些具有模拟功能的 GPIO 引脚来读取产生模拟信号的传感器的值，例如氧气传感器、光强度传感器等。
+在 XIAO ESP32-S3 上，在 11 个内置 GPIO 引脚中，除用于串行通信的 D6 和 D7 引脚外，其余 9 个引脚都支持模拟功能。你可以使用这些具有模拟功能的 GPIO 引脚来读取输出模拟信号的传感器的数值，例如氧气传感器、光强传感器等。
 
 :::caution
-虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给引脚 A11 和 A12，但由于 ESP32-S3 芯片的特性，引脚 A11 和 A12 不支持 ADC 功能。请务必区分和辨别它们。
+虽然 XIAO ESP32-S3 将 GPIO41 和 GPIO42 分配给 A11 和 A12 引脚，但由于 ESP32-S3 芯片本身的特性，A11 和 A12 引脚不支持 ADC 功能。请务必加以区分和辨别。
 :::
 
 ### 硬件准备
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Seeed Studio XIAO 扩展底板（带 Grove OLED）</th>
-        <th>Grove - 氧气传感器</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove - Oxygen Sensor</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -462,32 +463,32 @@ void loop() {
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Oxygen-Sensor-ME2-O2-f20.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-请将 XIAO ESP32S3 或 Sense 安装在扩展板上，然后使用 Grove 线缆将氧气传感器连接到扩展板上的 A0/D0 接口。最后，通过 USB-C 线缆将 XIAO 连接到计算机。
+Please install XIAO ESP32-S3 or Sense on the expansion board, then connect the Oxygen Sensor to the A0/D0 interface on the expansion board with the Grove cable. Finally, connect the XIAO to the computer via USB-C cable.
 
 ### 软件实现
 
-在以下程序中，我们将使用 `analogRead()` 方法读取传感器的模拟值，并通过串口接口打印传感器结果。
+In the following program, we will use the `analogRead()` method to read the analog value of the sensor, and print the sensor result by using the Serial interface.
 
 ```cpp
 // Grove - Gas Sensor(O2) test code
@@ -557,31 +558,31 @@ float readConcentration()
 ```
 
 :::tip
-如果您想使用引脚的模拟功能，应该使用字母"A"作为引脚编号的前缀，例如 A4、A5。相反，如果您想使用数字功能，则应该使用字母"D"作为引脚编号的前缀，例如 D4、D5。
+If you want to use the Analog function of a pin, you should use the letter "A" as the prefix for the pin number, such as A4, A5. Conversely, if you want to use the digital function, then you should use the letter "D" as the prefix for the pin number, such as D4, D5.
 :::
 
-上传程序后，在 Arduino IDE 中打开串口监视器并将波特率设置为 9600。等待氧气传感器预热，然后您将能够看到准确的氧气浓度值。
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 9600. Wait for the oxygen sensor to warm up, and then you will be able to see the accurate oxygen concentration value.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/23.png" style={{width:600, height:'auto'}}/></div>
 
-## 串口通信
+## 串口
 
-在使用 Arduino IDE 时，串口通信是许多项目的重要组成部分。要在 Arduino IDE 中使用串口，您需要首先打开串口监视器窗口。这可以通过点击工具栏中的 **Serial Monitor** 图标或按 **Ctrl+Shift+M** 快捷键来完成。
+When working with Arduino IDE, Serial communication is an essential part of many projects. To use Serial in Arduino IDE, you need to start by opening the Serial Monitor window. This can be done by clicking on the **Serial Monitor** icon in the toolbar or by pressing the **Ctrl+Shift+M** shortcut key.
 
-### 常规用法
+### 通用用法
 
-一些常用的串口函数包括：
+Some of the commonly used Serial functions include:
 
-- `Serial.begin()` -- 以指定的波特率初始化通信；
-- `Serial.print()` -- 以可读格式向串口发送数据；
-- `Serial.write()` -- 向串口发送二进制数据；
-- `Serial.available()` -- 检查串口是否有可读取的数据；
-- `Serial.read()` -- 从串口读取单个字节的数据；
-- `Serial.flush()` -- 等待串口输出数据传输完成。
+- `Serial.begin()` -- which initializes the communication at a specified baud rate;
+- `Serial.print()` -- which sends data to the Serial port in a readable format;
+- `Serial.write()` -- which sends binary data to the Serial port;
+- `Serial.available()` -- which checks if there is any data available to be read from the Serial port;
+- `Serial.read()` -- which reads a single byte of data from the Serial port;
+- `Serial.flush()` -- which waits for the transmission of outgoing serial data to complete.
 
-通过使用这些串口函数，您可以在 Arduino 开发板和计算机之间发送和接收数据，这为创建交互式项目开辟了许多可能性。
+By using these Serial functions, you can send and receive data between the Arduino board and your computer, which opens up many possibilities for creating interactive projects.
 
-以下是一个示例程序：
+Here is an example program:
 
 ```c
 void setup() {
@@ -607,33 +608,33 @@ void loop() {
 }
 ```
 
-在这段代码中，我们首先在 `setup()` 函数中使用 `Serial.begin()` 函数以波特率 **9600** 初始化串口通信。然后，在 `loop()` 函数中，我们使用 `Serial.print()` 函数向串口发送"Hello World!"。
+In this code, we first initialize the Serial communication at a baud rate of **9600** using the `Serial.begin()` function in the `setup()` function. Then, in the `loop()` function, we use the `Serial.print()` function to send "Hello World!" to the Serial port.
 
-我们还使用 `Serial.available()` 函数检查串口是否有可读取的数据。如果有，我们使用 `Serial.read()` 函数读取传入的字节并将其存储在名为 incomingByte 的变量中。然后我们使用 `Serial.print()` 和 `Serial.println()` 函数向串口监视器打印"I received: "，后跟 incomingByte 的值。
+We also use the `Serial.available()` function to check if there is any data available to be read from the Serial port. If there is, we read the incoming byte using the `Serial.read()` function and store it in a variable called incomingByte. We then use the `Serial.print()` and `Serial.println()` functions to print "I received: " followed by the value of incomingByte to the Serial monitor.
 
-最后，我们添加一个 `delay()` 函数等待一秒钟，然后重复循环。这段代码演示了如何在 Arduino IDE 中使用一些常用的串口函数通过串口发送和接收数据。
+Finally, we add a `delay()` function to wait for one second before repeating the loop. This code demonstrates how to use some of the commonly used Serial functions in Arduino IDE for sending and receiving data through the Serial port.
 
-上传程序后，在 Arduino IDE 中打开串口监视器并将波特率设置为 9600。您将在串口监视器上看到以下消息，每秒输出一次'Hello World!'。此外，您可以通过串口监视器向 XIAO ESP32S3 发送内容，XIAO 将打印出您发送内容的每个字节。
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 9600. You will see the following message on the serial monitor, which outputs 'Hello World!' every second. Also, you can send content to the XIAO ESP32-S3 through the serial monitor, and XIAO will print out each byte of the content you send.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/24.png" style={{width:600, height:'auto'}}/></div>
 
 ### Serial1 用法
 
-根据上述 XIAO ESP32S3 引脚图的具体参数，我们可以观察到有 TX 引脚和 RX 引脚。
-这与串口通信不同，但用法也非常相似，只是需要添加一些参数。
-接下来，我们将使用芯片引出的引脚进行串口通信。
+According to the above XIAO ESP32-S3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
+This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added.
+So next, we will use the pins led out by the chip for serial communication.
 
-需要包含的核心函数：
+Core Function that need to be include:
 
-- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- 启用 Serial1，函数原型：`<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
-  - `baud`：波特率
-  - `config`：配置位
-  - `rxPin`：接收引脚
-  - `txPin`：发送引脚
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- enalbe Serial1,the function prototype : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+  - `baud`  :baud rate
+  - `config`:Configuration bit
+  - `rxPin` :Receive Pin
+  - `txPin` :Send Pin
 
-值得注意的是，如果我们使用数字引脚端口来定义，这里应该是 `#define RX_PIN D7`、`#define TX_PIN D6`，如果我们使用 GPIO 引脚端口来定义，这里应该是 `#define RX_PIN 44`、`#define TX_PIN 43`，具体参数请参考不同 XIAO 系列的引脚图。
+It is worth nothing that if we use digital pin port to define,this place should be`#define RX_PIN D7`、`#define TX_PIN D6`,if we use GPIO pin port to define,this place should be `#define RX_PIN 44`、`#define TX_PIN 43`,please refer to the pin diagrams of different XIAO Series for specific parameters
 
-以下是一个示例程序：
+Here is an example program:
 
 ```c
 #define RX_PIN D7
@@ -655,17 +656,17 @@ void loop() {
 }
 ```
 
-上传程序后，在 Arduino IDE 中打开串口监视器并将波特率设置为 115200。然后，您可以通过串口监视器 Serial 向 XIAO ESP32S3 发送您想要的内容，XIAO 将打印出您发送内容的每个字节。在这里，我输入的内容是"Hello Everyone"，我的结果图如下：
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200.then,you can send content you want in the XIAO ESP32-S3 through the serial monitor Serial ,and XIAO will print out each byte of the content you send.,In here,the content i entered is "Hello Everyone",my result chart is as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
 ### 软件串口的使用
 
-如果您觉得一个硬件串口不够用，您也可以使用 ESP32 的软件串口功能将一些引脚设置为软件串口来扩展串口数量。
+If you feel that one hardware serial port is not enough, you can also use the ESP32's software serial function to set some pins as software serial to expand the number of serial ports.
 
-当然，我们建议使用映射硬件串口的第二种方法，因为这是 ESP32 的独特功能。您可以在[其他硬件串口](#其他硬件串口)部分了解更多信息。
+Of course, we would recommend using the second method of mapping hardware serial ports as it is a unique feature of the ESP32. You can read more about it in the [Other Hardware Serial](#Other-Hardware-Serial) section.
 
-对于 ESP32 系列芯片产品，如果您需要使用软串口，需要单独下载第三方软串口库。这里提供一个参考。
+For ESP32 series chip products, if you need to use the soft serial port, you need to download the third-party soft serial port library separately. A reference is provided here.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/plerup/espsoftwareserial" target="_blank" rel="noopener noreferrer">
@@ -674,17 +675,17 @@ void loop() {
 </div><br />
 
 :::tip
-目前我们推荐使用 EspSoftwareSerial 库的 7.0.0 版本。其他版本可能存在不同程度的问题，导致软串口无法正常工作。
+目前我们推荐使用 EspSoftwareSerial 库的 7.0.0 版本。其他版本可能存在不同程度的问题，导致软件串口无法正常工作。
 :::
 
-由于您已经下载了 zip 库文件，请打开您的 Arduino IDE，点击 **Sketch > Include Library > Add .ZIP Library**。选择您刚刚下载的 zip 文件，如果库安装正确，您将在通知窗口中看到 **Library added to your libraries**。这意味着库已成功安装。
+既然你已经下载好了 zip 库，打开 Arduino IDE，点击 **Sketch > Include Library > Add .ZIP Library**。选择刚刚下载的 zip 文件，如果库安装正确，你会在提示窗口中看到 **Library added to your libraries**。这就表示库已经成功安装。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-接下来，您就可以使用 ESP32 的软串口了。
+接下来，你就可以使用 ESP32 的软件串口了。
 
 :::caution
-如果您的计算机上安装了其他软串口库，很可能会导致冲突，请自行检查。
+如果你的电脑上安装了其他软件串口库，很有可能会产生冲突，请自行检查确认。
 :::
 
 ```c
@@ -717,25 +718,25 @@ void loop() {
 }
 ```
 
-在这个程序中，我们首先包含 `SoftwareSerial.h` 库来使用软件串口。然后，我们创建一个名为 mySerial 的新 SoftwareSerial 对象，分别使用引脚 2 和 3 作为 RX 和 TX。
+在这个程序中，我们首先包含 `SoftwareSerial.h` 库以使用软件串口。然后，我们使用引脚 2 和 3 分别作为 RX 和 TX，创建了一个名为 mySerial 的新的 SoftwareSerial 对象。
 
-在 `setup()` 函数中，我们初始化硬件串口（`Serial.begin()`）和软件串口（`mySerial.begin()`）。
+在 `setup()` 函数中，我们初始化了硬件串口（`Serial.begin()`）和软件串口（`mySerial.begin()`）。
 
-在 `loop()` 函数中，我们使用 `mySerial.available()` 函数检查软件串口是否有可读取的数据。如果有，我们使用 `mySerial.read()` 函数读取传入的字节并将其存储在名为 data 的变量中。然后我们使用 `Serial.print()` 和 `Serial.println()` 函数将 "Received data: " 后跟 data 的值打印到硬件串口。
+在 `loop()` 函数中，我们使用 `mySerial.available()` 函数检查软件串口是否有可读取的数据。如果有，我们使用 `mySerial.read()` 函数读取传入的字节，并将其存储在名为 data 的变量中。然后使用 `Serial.print()` 和 `Serial.println()` 函数在硬件串口上打印出 "Received data: "，后面跟上 data 的值。
 
-我们还使用 `mySerial.print()` 函数将 "Hello World!" 写入软件串口。这将从 XIAO 向连接到软件串口的设备发送数据。
+我们还使用 `mySerial.print()` 函数向软件串口写入 "Hello World!"。这会将数据从 XIAO 发送到连接在软件串口上的设备。
 
-最后，我们添加一个 `delay()` 函数，在重复循环之前等待一秒钟。
+最后，我们添加了一个 `delay()` 函数，在重复循环之前等待一秒钟。
 
 :::note
-请注意，为了在 ESP32-S3 上使用软件串口，您需要为 RX 和 TX 选择适当的引脚，这些引脚不能用于任何其他目的。在此示例中，我们分别使用引脚 9 和 10 作为 RX 和 TX。
+请注意，要在 ESP32-S3 上使用软件串口，你需要选择未被其他用途占用的合适 RX 和 TX 引脚。在本示例中，我们使用了 9 和 10 引脚分别作为 RX 和 TX。
 :::
 
 ### 其他硬件串口
 
-ESP32S3 总共有三个 UART 通信接口，编号从 0 到 2，分别是 UART0、UART1 和 UART2。这三个串口的引脚不是固定的，可以重新映射到任何 IO 端口。
+ESP32S3 一共有三个 UART 通信接口，从 0 到 2 编号，分别为 UART0、UART1 和 UART2。这三个串口的引脚都不是固定的，可以重映射到任意 IO 口。
 
-默认情况下，我们不使用 **UART0**，因为它用于 USB 串口通信。您可以通过自定义硬件串口映射来使用其他硬件串口。
+默认情况下，我们不使用 **UART0**，因为它被用于 USB 串口通信。你可以通过自定义硬件串口映射来使用其他硬件串口。
 
 ```c
 // Need this for the lower level access to set them up.
@@ -765,14 +766,14 @@ void loop()
 }
 ```
 
-接下来，我们将以正在销售的 [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，说明如何使用 D9 和 D10 硬件串口以及 USB 串口。
+下面我们以正在销售的 [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，说明如何使用 D9 和 D10 硬件串口以及 USB 串口。
 
-请准备以下物品。
+请准备好以下物品。
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>60GHz mmWave Sensor -<br/>Human Resting Breathing<br/>and Heartbeat Module</th>
  </tr>
  <tr>
@@ -783,23 +784,23 @@ void loop()
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-将传感器库下载到您的计算机。并将其添加到 Arduino IDE。
+将传感器库下载到你的电脑上，并将其添加到 Arduino IDE 中。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank" rel="noopener noreferrer">
@@ -807,7 +808,7 @@ void loop()
     </a>
 </div>
 
-在这里，我们想要解析心跳和呼吸数据信息，那么您可以像这样重写您的程序。
+在这里，我们希望解析心跳和呼吸数据信息，然后你可以像下面这样重写你的程序。
 
 ```c
 #include "Arduino.h"
@@ -896,22 +897,22 @@ void loop()
 }
 ```
 
-请上传程序，然后打开串口监视器并将波特率设置为 115200。
+请上传程序，然后打开串口监视器，并将波特率设置为 115200。
 
-如果一切顺利，您将在串口监视器上看到数据消息。
+如果一切顺利，你会在串口监视器上看到数据消息。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
 
 ## IIC
 
-XIAO ESP32S3 具有 I2C 接口，可用于许多传感器的数据传输和解析，以及使用一些 OLED 屏幕。
+XIAO ESP32-S3 具有一个 I2C 接口，可用于许多传感器的数据传输和解析，也可以用于驱动一些 OLED 屏幕。
 
 ### 硬件准备
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
@@ -922,29 +923,29 @@ XIAO ESP32S3 具有 I2C 接口，可用于许多传感器的数据传输和解�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，通过板上的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插入扩展板并编程以在屏幕上显示内容。
+XIAO 扩展板上的 OLED 显示屏使用 I2C 协议，并通过板载的 I2C 电路连接到 XIAO 的 I2C 接口。因此，我们可以直接将 XIAO 插到扩展板上，并通过编程在屏幕上显示内容。
 
 ### 软件实现
 
-本示例介绍如何使用 Seeed Studio Expansion Base for XIAO ESP32S3 上的 OLED 显示屏。
+本示例介绍如何使用 Seeed Studio Expansion Base for XIAO ESP32-S3 上的 OLED 显示屏。
 
-#### 步骤 1. 将 Seeed Studio XIAO ESP32S3 安装到扩展板上，然后连接 Type-C 线缆
+#### 步骤 1. 将 Seeed Studio XIAO ESP32-S3 安装到扩展板上，然后连接 Type-C 线缆
 
 #### 步骤 2. 安装 u8g2 库
 
@@ -975,26 +976,26 @@ void loop(void) {
 }
 ```
 
-在代码的前几行中，我们包含了所需的库，如 Arduino.h、U8x8lib.h 和 Wire.h。U8x8lib.h 库提供了控制 OLED 显示屏的函数，Wire.h 库提供了 I2C 通信的函数。
+在代码的前几行中，我们包含了所需的库，例如 Arduino.h、U8x8lib.h 和 Wire.h。U8x8lib.h 库提供了控制 OLED 显示屏的函数，而 Wire.h 库提供了用于 I2C 通信的函数。
 
 在 `setup()` 函数中，我们使用 `u8x8.begin()` 函数初始化 OLED 显示屏。我们还使用 `u8x8.setFlipMode()` 函数设置显示屏的翻转模式，将屏幕旋转 180 度。
 
 在 `loop()` 函数中，我们使用 `u8x8.setFont()` 函数设置字体，并使用 `u8x8.setCursor()` 函数指定显示屏上光标的位置。最后，我们使用 `u8x8.print()` 函数在 OLED 显示屏上显示字符串 "Hello World!"。
 
-如果您将程序上传到 XIAO ESP32S3，您将看到内容显示在扩展板上的 OLED 显示屏上。
+如果你向 XIAO ESP32-S3 上传程序，你将在扩展板上的 OLED 显示屏上看到显示的内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/29.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## SPI
 
-ESP32-S3 芯片集成了多个外设，包括 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示屏、传感器等。ESP32-S3 还支持高速 SPI 传输模式，可实现最高 80 MHz 的 SPI 传输速率，满足大多数 SPI 设备的数据传输需求。
+ESP32-S3 芯片集成了多个外设，其中包括一个 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示屏、传感器等。ESP32-S3 还支持高速 SPI 传输模式，最高 SPI 传输速率可达 80 MHz，能够满足大多数 SPI 设备的数据传输需求。
 
 ### 硬件准备
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32S3</th>
-     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+     <th>Seeed Studio XIAO ESP32-S3</th>
+     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
  </tr>
  <tr>
@@ -1005,29 +1006,29 @@ ESP32-S3 芯片集成了多个外设，包括 SPI 接口，可用于连接外部
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-准备好上述硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考以下图表进行接线。
+按照上述说明准备好硬件后，使用跳线将 XIAO 和 OLED 的 SPI 接口连接起来。请参考下图了解接线方式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/30.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 软件实现
 
-接下来，我们将以下面的程序为例，介绍如何使用 SPI 接口控制 OLED 屏幕显示。
+接下来，我们将以下程序作为示例，介绍如何使用 SPI 接口控制 OLED 屏幕显示。
 
 安装 u8g2 库。
 
@@ -1059,50 +1060,50 @@ void loop(void) {
 }
 ```
 
-在 `setup()` 函数中，使用适当的构造函数参数实例化 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类，这些参数指定了用于片选 (cs)、数据/命令 (dc) 和复位的引脚。然后，调用 `u8g2.begin()` 函数来初始化显示屏。
+在 `setup()` 函数中，使用合适的构造函数参数实例化 `U8G2_SH1107_128X128_1_4W_HW_SPI` 类，这些参数指定了用于片选（cs）、数据/命令（dc）和复位的引脚。然后调用 `u8g2.begin()` 函数来初始化显示屏。
 
-在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数更新显示屏的新内容。`u8g2.firstPage()` 函数设置显示缓冲区以供写入，而 `u8g2.nextPage()` 显示更新的内容。do-while 循环确保内容持续显示，直到程序停止。
+在 `loop()` 函数中，使用 `u8g2.firstPage()`、`u8g2.setFont()` 和 `u8g2.drawStr()` 函数来用新内容更新显示屏。`u8g2.firstPage()` 函数用于为写入设置显示缓冲区，而 `u8g2.nextPage()` 用于显示更新后的内容。do-while 循环确保内容会持续显示，直到程序停止。
 
-总的来说，这段代码演示了如何使用 U8g2 库来控制 OLED 显示屏并在其上显示文本。
+总体来说，这段代码演示了如何使用 U8g2 库来控制 OLED 显示屏并在其上显示文本。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/31.jpg" style={{width:600, height:'auto'}}/></div>
 
-### 对于 Sense 版本
+### 适用于 Sense
 
-如果您购买的是 Sense 版本并需要连接到扩展板，请注意扩展板上的 SD 卡将占用 SPI 引脚，这可能导致 SPI 引脚不可用。
+如果你购买的是 Sense 版本并且需要连接扩展板，请注意扩展板上的 SD 卡会占用 SPI 引脚，这可能会导致 SPI 引脚不可用。
 
 Sense 扩展板上提供的焊盘接口允许用户选择所需的功能。其中，**J3** 焊盘的功能是启用 SPI 或 SD 卡功能。
 
 <table align="center">
  <tr>
-     <th>如果您想使用 SPI 引脚 / 禁用扩展板的 SD 卡</th>
-     <th>如果您想启用扩展板上的 SD 卡 / 禁用 SPI 引脚</th>
+     <th>如果你想使用 SPI 引脚 / 禁用扩展板上的 SD 卡</th>
+     <th>如果你想启用扩展板上的 SD 卡 / 禁用 SPI 引脚</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
  </tr>
   <tr>
-    <td>沿着白色细线切割以断开焊盘连接。</td>
+    <td>沿着白色细线切断，以断开焊盘连接。</td>
     <td>将两个焊盘焊接在一起。</td>
   </tr>
 </table>
 
 :::caution
-从图片中可以看出，由于 XIAO 的空间限制，许多线路布局都非常紧凑。因此，在切断 J3 连接时，请非常小心不要切到白线外面，否则可能导致开发板故障！
+从图片中可以看出，由于 XIAO 的空间限制，很多走线都非常紧凑。因此，在切断 J3 的连接时，请务必非常小心，不要切到白线外面，否则可能会导致开发板无法正常工作！
 :::
 
 :::caution
-为了常识起见，上面简单地将 J3 描述为开启或关闭 SD 卡功能的接口，但这实际上是不准确的。实际的电路连接如下所示。切断 J3 实际上是断开了 R4 到 R6 的上拉电阻，这是 SD 卡功能被禁用而 SPI 功能恢复正常的主要原因。
+出于通俗描述的考虑，上文只是简单地将 J3 描述为一个打开或关闭 SD 卡功能的接口，但这实际上并不准确。实际的电路连接如下图所示。切断 J3 实际上是断开了从 R4 到 R6 的上拉电阻，这才是 SD 卡功能被禁用而 SPI 功能恢复正常的主要原因。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/93.png" style={{width:800, height:'auto'}}/></div>
 :::
 
 ## 触摸引脚
 
-除了上述常见的功能引脚外，XIAO ESP32S3/XIAO ESP32S3 Sense 还有 9 个触摸检测引脚 A0~A5、A8~A10。
+除了上述常见的功能引脚外，XIAO ESP32-S3/XIAO ESP32-S3 Sense 还具有 9 个触摸检测引脚 A0~A5、A8~A10。
 
-我们可以通过读取引脚的模拟值来检查引脚是否被触摸，这非常方便。以下程序用于检测引脚 A5 是否被触摸。
+我们可以通过读取引脚的模拟值来检查该引脚是否被触摸，非常方便。下面的程序用于检测引脚 A5 是否被触摸。
 
 ```c
 const int touch_pin = A5;
@@ -1118,53 +1119,53 @@ void loop(void) {
 }
 ```
 
-上传程序后，打开串口监视器并将波特率设置为 9600。然后触摸引脚 A5，您会发现模拟读取值会明显大于触摸前的值。
+上传程序后，打开串口监视器并将波特率设置为 9600。然后触摸引脚 A5，你会发现模拟读取值会明显大于触摸前的数值。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
 ## USB 引脚
 
-ESP32-S3 是一个集成了 Wi-Fi 和蓝牙功能的微控制器，其 D+ 和 D- 引脚用于支持 USB 通信。具体来说，这两个引脚是用于 USB 2.0 设备和主机之间高速数据传输的差分信号线。
+ESP32-S3 是一款集成了 Wi-Fi 和 Bluetooth 功能的微控制器，其 D+ 和 D- 引脚用于支持 USB 通信。具体来说，这两个引脚是差分信号线，用于在 USB 2.0 设备与主机之间进行高速数据传输。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.png" style={{width:200, height:'auto'}}/></div>
 
-D+ 引脚是用于发送数据的正极性线，而 D- 引脚是用于发送数据的负极性线。当 USB 设备连接到主机时，主机检测这两个引脚上的电压变化以确定设备的连接状态和传输速度。在数据传输过程中，D+ 和 D- 引脚交替传输数据位和同步信号，以实现可靠的数据传输。
+D+ 引脚是用于发送数据的正极线，而 D- 引脚是用于发送数据的负极线。当 USB 设备连接到主机时，主机会检测这两个引脚上的电压变化，以判断设备的连接状态和传输速度。在数据传输过程中，D+ 和 D- 引脚交替传输数据位和同步信号，以实现可靠的数据传输。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/34.png" style={{width:800, height:'auto'}}/></div>
 
 ## JTAG 引脚
 
-ESP32-S3 的 JTAG（联合测试行动组）接口是一个调试和测试接口，可用于开发、调试和测试期间的极低级硬件调试和编程。JTAG 接口包括一组标准信号线，包括时钟线、数据输入线、数据输出线、测试模式选择线、测试模式时钟线等。
+ESP32-S3 的 JTAG（Joint Test Action Group）接口是一个调试和测试接口，可用于在开发、调试和测试过程中进行非常底层的硬件调试和编程。JTAG 接口包括一组标准信号线，包括时钟线、数据输入线、数据输出线、测试模式选择线、测试模式时钟线等。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/35.png" style={{width:200, height:'auto'}}/></div>
 
-ESP32-S3 的 JTAG 接口可用于以下目的：
+ESP32-S3 的 JTAG 接口可以用于以下用途：
 
-1. 调试：JTAG 接口可用于在 ESP32-S3 芯片中进行调试和单步执行，帮助开发人员发现和解决代码错误。
+1. 调试：JTAG 接口可用于在 ESP32-S3 芯片中进行调试和单步执行，帮助开发者发现并解决代码错误。
 
 2. 烧录程序：通过 JTAG 接口，可以将程序或调试固件加载到 ESP32-S3 芯片中。
 
-3. 读取 CPU 状态：JTAG 接口可用于读取 ESP32-S3 芯片的 CPU 状态、内存内容和寄存器值，用于调试和测试。
+3. 读取 CPU 状态：JTAG 接口可用于读取 ESP32-S3 芯片的 CPU 状态、内存内容和寄存器值，以便进行调试和测试。
 
-需要注意的是，使用 JTAG 接口需要专用的硬件设备和软件工具，以及相应的专业知识和技能。因此，一般情况下，JTAG 接口仅在开发、调试和测试等特定场景中使用。对于一般用户来说，使用 ESP32-S3 的其他功能和接口已经足够。
+需要注意的是，使用 JTAG 接口需要专用的硬件设备和软件工具，以及相应的专业知识和技能。因此，一般情况下，JTAG 接口只在开发、调试和测试等特定场景中使用。对于普通用户来说，使用 ESP32-S3 的其他功能和接口已经足够。
 
-如果您想了解更多关于 JTAG 调试的信息，请阅读官方的 [ESP32 文档](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html)。
+如果你想了解更多关于 JTAG 调试的信息，请阅读官方的 [ESP32 文档](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html)。
 
-## 故障排除
+## 故障排查
 
-### Q1：为什么在使用串口监视器时出现以下错误？
+### Q1：为什么我在使用串口监视器时会出现如下错误？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/25.png" style={{width:600, height:'auto'}}/></div>
 
-A：如果您遇到这种类型的错误，请打开 **USB CDC On Boot** 开关。
+A：如果你遇到此类错误，请打开 **USB CDC On Boot** 开关。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/28.png" style={{width:600, height:'auto'}}/></div>
 
-这个问题也可能表现为 Arduino IDE 2.x 中的串口输出为空，也可能是由同样的原因引起的。
+这个问题在 Arduino IDE 2.x 中也可能表现为串口输出为空，并且也可能是由同样的原因引起的。
 
-### Q2：ESP-32 支持或不支持哪些功能？
+### Q2：ESP-32 支持或不支持哪些特性？
 
-A：以下是 [ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html) 提供的支持/不支持功能列表。截至 2023 年 4 月 10 日。
+A：以下是 [ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html) 提供的已支持/未支持特性列表，数据截至 2023 年 4 月 10 日。
 
 | 外设          | ESP32         | ESP32-S2      | ESP32-C3      | ESP32-S3      | 备注                   |
 |---------------|---------------|---------------|---------------|---------------|------------------------|
@@ -1191,21 +1192,21 @@ A：以下是 [ESP32](https://docs.espressif.com/projects/arduino-esp32/en/lates
 | USB           | Not Supported | Yes           | Yes           | Yes           | ESP32-C3 only CDC/JTAG |
 | Wi-Fi         | Yes           | Yes           | Yes           | Yes           |                        |
 
-### Q3：为什么我总是能在串口监视器中看到芯片的调试信息？
+### Q3：为什么我在串口监视器中总能看到芯片的调试信息？
 
-A：您可以尝试使用以下方法关闭调试信息的输出，在 Arduino IDE 中选择 **Tool -> Core Debug Level: -> None**。
+A：你可以尝试通过以下方法关闭调试信息的输出，在 Arduino IDE 中选择 **Tool -> Core Debug Level: -> None**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/90.png" style={{width:500, height:'auto'}}/></div>
 
-然而，这种方法并不总是有效，实际上，ESP32-S3 的调试信息总是从串口打印出来，这是无法改变的。请原谅它，它只是太急于让你知道它正在正常工作。
+然而，这种方法并不总是有效，实际上，ESP32-S3 的调试信息始终是从串口输出的，这是无法更改的。请多包涵，它只是太迫切地想让你知道它正在正常工作。
 
-### Q4: 为什么我切断了 J3 的连接，但仍然测试到 D8 和 D9 引脚为高电平？写入 microSD 卡仍然有成功的概率？
+### Q4：为什么我切断了 J3 的连接，但测试时 D8 和 D9 引脚仍然为高电平？向 microSD 卡写入数据仍然有一定成功概率？
 
-在 SD 卡设计方面，正确的电路必须有上拉电阻才能使 microSD 卡正常工作。如果你发现切断 J3 后引脚电平和卡读写仍然正常，这可能只是一种幸运的情况，我们不建议你在这种情况下读写卡，这可能会导致写入数据丢失的问题。而 D8 和 D9 引脚可以在切断 J3 后通过写入低电平来修改电平。
+从 SD 卡设计的角度来看，正确的电路必须带有上拉电阻，才能让 microSD 卡正常工作。如果你发现切断 J3 之后，引脚电平以及卡的读写仍然正常，这可能只是一个幸运的情况，我们并不建议你在这种情况下对卡进行读写操作，这可能会导致已写入数据丢失的问题。而在切断 J3 之后，可以通过写入低电平来改变 D8 和 D9 引脚的电平。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

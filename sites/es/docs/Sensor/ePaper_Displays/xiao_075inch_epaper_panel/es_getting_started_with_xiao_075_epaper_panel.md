@@ -9,7 +9,7 @@ last_update:
   date: 05/19/2025
   author: Citric
 createdAt: '2025-05-21'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel/
 ---
 
@@ -23,13 +23,13 @@ url: https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel/
 
 ## Introducción
 
-Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantalla inteligente E Ink® versátil y de bajo consumo que admite una amplia gama de aplicaciones populares de la comunidad, incluidas [Home Assistant](https://www.home-assistant.io/), [TRMNL](https://trmnl.app/), Arduino y más. Esta solución de pantalla flexible es perfecta para mostrar datos de paneles, actualizaciones meteorológicas, horarios e información personalizada. Con imágenes nítidas, una excepcional duración de batería de 3 meses (2000 mAh) en modo de suspensión profunda y amplias posibilidades de personalización, este dispositivo compacto se adapta a diversos casos de uso. Perfecto para espacios de vida modernos y entornos de proyectos, combina funcionalidad con un diseño elegante para una experiencia visual mejorada en múltiples plataformas.
+Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantalla E Ink® inteligente versátil y de bajo consumo que admite una amplia gama de aplicaciones populares de la comunidad, incluidas [Home Assistant](https://www.home-assistant.io/), [TRMNL](https://trmnl.app/), Arduino y más. Esta solución de pantalla flexible es perfecta para mostrar datos de paneles de control, actualizaciones meteorológicas, horarios e información personalizada. Con imágenes nítidas, una excepcional duración de batería de 3 meses (2000 mAh) en modo de suspensión profunda y amplias posibilidades de personalización, este dispositivo compacto se adapta a diversos casos de uso. Perfecto para espacios de vida modernos y entornos de proyectos, combina funcionalidad con un diseño elegante para una experiencia visual mejorada en múltiples plataformas.
 
 ### Características
 
 - Integración nativa con Home Assistant
 - Pantalla E Ink® de 7,5" para automatización del hogar
-- Diseño de bajo consumo energético
+- Diseño de alta eficiencia energética con bajo consumo
 - Compatibilidad con desarrollo en Arduino
 - Factor de forma elegante
 
@@ -38,7 +38,7 @@ Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantall
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>Elemento</th>
+   <th>Ítem</th>
    <th>Descripción</th>
   </tr>
   <tr>
@@ -55,7 +55,7 @@ Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantall
   </tr>
   <tr>
    <td>Batería</td>
-   <td>2000 mAh</td>
+   <td>2000mAh</td>
   </tr>
   <tr>
    <td>Dimensiones</td>
@@ -63,14 +63,14 @@ Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantall
   </tr>
   <tr>
    <td>Peso</td>
-   <td>218 g</td>
+   <td>218g</td>
   </tr>
   <tr>
    <td>Temperatura de funcionamiento</td>
    <td>-25°C a 50°C</td>
   </tr>
   <tr>
-   <td>Alimentación</td>
+   <td>Fuente de alimentación</td>
    <td>USB Type-C 5V</td>
   </tr>
         <tr>
@@ -82,7 +82,7 @@ Impulsada por XIAO ESP32-C3, esta pantalla ePaper de 7,5 pulgadas es una pantall
 
 ## Descripción del hardware
 
-El panel ePaper XIAO de 7,5" consta de varios componentes clave como se muestra en el diagrama de vista explotada:
+El panel ePaper XIAO de 7,5" consta de varios componentes clave como se muestra en el diagrama de vista explosionada:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/207.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -101,11 +101,11 @@ El dispositivo utiliza un diseño interno en capas que coloca la pantalla ePaper
 
 Para comenzar a usar tu panel ePaper XIAO de 7,5":
 
-1. **Abrir el soporte**: levanta suavemente la pantalla usando la muesca en la parte inferior para revelar el soporte integrado. Coloca el dispositivo sobre una superficie plana con el soporte extendido.
+1. **Abre el soporte**: levanta suavemente la pantalla usando la muesca en la parte inferior para revelar el soporte integrado. Coloca el dispositivo sobre una superficie plana con el soporte extendido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/206.gif" style={{width:500, height:'auto'}}/></div>
 
-2. **Encender**: con la pantalla mirando hacia ti, localiza el interruptor de encendido en la esquina inferior izquierda. Deslízalo a la posición "ON" (la etiqueta ON está oculta detrás del soporte, a tu derecha cuando miras la pantalla).
+2. **Enciende el dispositivo**: con la pantalla frente a ti, localiza el interruptor de encendido en la esquina inferior izquierda. Deslízalo a la posición "ON" (la etiqueta ON está oculta detrás del soporte, a tu derecha cuando miras la pantalla).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/205.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -136,7 +136,7 @@ Las siguientes páginas Wiki proporcionan información detallada sobre las difer
 
 - [**Funciona con Arduino**](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino/) - Programa tu dispositivo usando Arduino IDE con nuestra biblioteca y ejemplos para aplicaciones personalizadas.
 
-- [**Funciona con TRMNL**](https://wiki.seeedstudio.com/es/xiao_7_5_inch_epaper_panel_with_trmnl) - Controla tu pantalla con trmnl, una plataforma de código abierto para la gestión de paneles visuales inteligentes.
+- [**Funciona con TRMNL**](https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl) - Controla tu pantalla con TRMNL, una plataforma de código abierto para la gestión inteligente de paneles visuales. (Elige la pestaña **XIAO 7.5" Panel** en la guía unificada de TRMNL).
 
 ## Recursos
 

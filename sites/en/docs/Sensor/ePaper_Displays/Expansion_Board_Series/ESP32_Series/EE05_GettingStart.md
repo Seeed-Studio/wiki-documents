@@ -1,23 +1,23 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
-sku: TBD
-title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
-sidebar_position: 1
-image: https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg
+sku: 100057220
+title: Getting Started with EE05
+image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
+sidebar_position: 4
 last_update:
-  date: 04/07/2026
-  author: Jackson.Li
+  date: 04/27/2026
+  author: dimo
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/epaper_ee05/
-updatedAt: '2026-04-10'
+updatedAt: '2026-04-27'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Getting Started with XIAO ePaper Display EE05
+# Getting Started with XIAO ePaper Display Board - EE05
 
 <div class="table-center">
 <table align="center">
@@ -25,9 +25,9 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>XIAO ePaper Display Board EE05</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE05/4.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=EE05" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE05-p-6755.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -37,15 +37,15 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-Powered by **XIAO ESP32-S3 Plus**, the display board EE05 is a compact ePaper driver board supporting 24-Pin ePaper displays. It features a JST 2.0 mm battery connector with a power switch, built-in battery level detection circuitry, and comes with one reset button and three user-programmable buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+Powered by the **XIAO ESP32-S3 Plus**, the display board EE05 supports a wide range of 24-pin ePaper displays and enables no-code UI design and deployment with SenseCraft HMI. With extension IO and a battery connector power switch, it is ideal for low-power smart display applications.
 
 ### Features
 
 - **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of ePaper screens, natively supporting 24-Pin SPI interfaces.
-- **BAT Connector with Switch:** Provides a simple battery connection and integrates a hardware slide switch, enabling efficient power management and energy savings. Added additional circuitry for XIAO ESP32 battery level detection.
-- **User-Friendly Buttons:** Includes 1 side-mounted reset button and 3 user-programmable buttons, offering flexibility for customizable functions (e.g., wake up / previous page / next page).
-- **Low Power Design:** Effectively controls or shuts down peripheral power consumption during MCU sleep.
+- **Versatile Display Support:** Compatible with a wide range of 24-pin ePaper displays for various project requirements.
+- **Extension IO Port:** Enables connection of additional sensors, such as temperature and humidity sensors, for enhanced functionality.
+- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
+- **No-Code UI Design & Deployment with SenseCraft HMI:** Design and deploy personalized dashboards effortlessly with SenseCraft HMI, our new AI-powered no-code platform. Create your UI through simple drag-and-drop elements, choose from our rich templates, or let AI help you. Connect real-time data from web APIs, then deploy your finished dashboard to ePaper display with just a few clicks. From design to data configuration to deployment, everything happens seamlessly on one single platform.
 
 ### Specifications
 
@@ -134,12 +134,13 @@ Note that PSRAM must be enabled.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 Then click **Upload** to upload the code.
-Now you will see the feedback in your epaper screen! Following are the results of Bitmap examples.
+Now you will see the feedback in your ePaper screen! Following are the results of Bitmap examples.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE05/a_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Resources
 
 - **[PDF]** [XIAO ePaper Display Board Ex05 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_Ex05_V1.0.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE05 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE05/XIAO_ePaper_Display_Board_EE05_V1.11_SCH&PCB_260420.zip)
 
 ## Troubleshooting
 
