@@ -9,7 +9,7 @@ slug: /get_start_round_display
 sidebar_position: 1
 sku: 104030087
 last_update:
-  date: 07/11/2024
+  date: 4/30/2026
   author: Spencer
 createdAt: '2023-03-17'
 updatedAt: '2026-01-07'
@@ -381,7 +381,7 @@ A: This may be caused by you not selecting the appropriate compile option for th
 - **[PDF]** [GJX0128A4-15HY Datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH&PCB_230407.zip)
-- **[3DM]** [The 3D model of the Round Display for XIAO](https://grabcad.com/library/seeed-studio-round-display-for-xiao-1)
+- **[3DM]** [The 3D model of the Seeed Studio Round Display for XIAO](https://grabcad.com/library/seeed-studio-round-display-for-xiao-1)
 - **[STL]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 - **[STL]** [Seeed Studio XIAO ESP32 S3 Sense Case With Round Screen](https://files.seeedstudio.com/wiki/round_display_for_xiao/Seeed_Studio-XIAO-ESP32-S3-Sense-Case-With-Round-Screen.stl)
 
