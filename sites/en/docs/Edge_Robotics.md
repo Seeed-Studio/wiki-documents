@@ -94,6 +94,9 @@ url: https://wiki.seeedstudio.com/robotics_page/
               <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
                 <span className="text">reBot Visual Graspng Demo</span>
               </a>
+              <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM ROS2 Integration</span>
+              </a>
           </div>
 
 
