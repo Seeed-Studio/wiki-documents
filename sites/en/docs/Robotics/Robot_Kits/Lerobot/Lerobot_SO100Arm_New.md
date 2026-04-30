@@ -231,25 +231,26 @@ All the parts for the leader or follower are for easy 3D printing already contai
 
 Environments such as pytorch and torchvision need to be installed based on your CUDA.
 
-1. Install Miniconda:
+1. Install Miniforge:
 For Jetson:
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
-chmod +x Miniconda3-latest-Linux-aarch64.sh
-./Miniconda3-latest-Linux-aarch64.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+chmod +x Miniforge3-Linux-aarch64.sh
+./Miniforge3-Linux-aarch64.sh
+# Follow the prompts by entering 'yes' or pressing Enter. Once the installation is complete:
 source ~/.bashrc
 ```
 
 Or, For X86 Ubuntu 22.04:
 
 ```bash
-mkdir -p ~/miniconda3
-cd miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm ~/miniconda3/miniconda.sh
-source ~/miniconda3/bin/activate
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+chmod +x Miniforge3-Linux-x86_64.sh
+./Miniforge3-Linux-x86_64.sh
+# Once the installation is complete:
+source ~/.bashrc
+# Initialize all shells
 conda init --all
 ```
 
@@ -265,7 +266,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
 ```
 
-4. When using miniconda, install ffmpeg in your environment:
+4. When using miniforge, install ffmpeg in your environment:
 
 ```bash
 conda install ffmpeg -c conda-forge
@@ -313,9 +314,23 @@ pip3 install numpy==1.26.0  # This should match torchvision
 Since installing the lerobot environment via pip will uninstall the original Pytorch and Torchvision and install the CPU versions of Pytorch and Torchvision, you need to perform a check in Python.
 
 ```python
+python   # Command to start Python in the terminal
 import torch
 print(torch.cuda.is_available())
+exit()   # Exit Python
 ```
+
+:::tip
+
+Note: NVIDIA RTX 50-series GPUs require the preview version of CUDA 12.8 or higher.
+
+The download command is as follows:
+
+```bash
+pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+
+:::
 
 If the printed result is False, you need to reinstall Pytorch and Torchvision according to the [official website tutorial](https://pytorch.org/index.html).
 
@@ -388,6 +403,12 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
 
+:::tip
+
+When connecting the arms, the first device plugged in will be assigned to ttyACM0 (Slave/Follower arm), and the second device plugged in will be assigned to ttyACM1 (Master/Leader arm).
+
+:::
+
 **Configure your motors**
 
 :::danger
@@ -409,6 +430,8 @@ If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy
 :::tip
 Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
 :::
+
+### Calibrate Follower Arm Servos
 
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
@@ -449,6 +472,8 @@ Check your cabling at each step before pressing Enter. For instance, the power s
 :::
 
 When you are done, the script will simply finish, at which point the motors are ready to be used. You can now plug the 3-pin cable from each motor to the next one, and the cable from the first motor (the ‘shoulder pan’ with id=1) to the controller board, which can now be attached to the base of the arm.
+
+### Calibrate Leader Arm Servos
 
 Do the same steps for the leader arm.
 
@@ -525,7 +550,28 @@ The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO
 If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 5V. If you purchased the **SO101 Arm Kit Pro Edition**, the Leader Arm should be calibrated and operated at every step using a 5V power supply, while the Follower Arm should be calibrated and operated at every step using a 12V power supply.
 :::
 
-Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another. If you need to recalibrate the robotic arm, delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
+Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another.
+
+If you need to re-calibrate the robotic arms, there are two options available:
+
+Option 1: Clear Cache Files
+
+Completely delete the files under ~/.cache/huggingface/lerobot/calibration/robots or ~/.cache/huggingface/lerobot/calibration/teleoperators before re-calibrating. Otherwise, the system may trigger an error prompt, as the previous calibration data is stored in JSON files within these directories.
+
+Option 2:
+
+Use the Interactive Command
+Run the calibration command directly in the terminal. If the arm has been calibrated before, the following prompt will appear
+
+    "Press ENTER to use provided calibration file associated with the id my_awesome_leader_arm, or type 'c' and press ENTER to run calibration:"
+
+    Type 'c' and press ENTER to start the re-calibration.
+
+    Press ENTER to keep and use the existing calibration data.
+
+Calibration Setup
+
+Connect the 6 robot servos via the 3-pin interfaces and connect the chassis servo to the servo driver board. Then, run the following command or API example to calibrate the arm:
 
 :::tip
 On PC (Linux) and Jetson devices, the first USB device you plug in typically maps to `ttyACM0`, and the second maps to `ttyACM1`. Double-check which port is mapped to the leader and follower before running commands.
@@ -562,6 +608,10 @@ lerobot-calibrate \
     --teleop.port=/dev/ttyACM1 \# <- The port of your robot
     --teleop.id=my_awesome_leader_arm  # <- Give the robot a unique name
 ```
+
+:::tip
+
+If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -697,7 +747,13 @@ If you only use RealSense:
 pip install -e ".[realsense]"
 ```
 
-### 3. Detect Cameras
+### 3. Grant Camera Permissions
+
+```bash
+chmod a+rw /dev/bus/usb/*/* 
+```
+
+### 4. Detect Cameras
 
 ```bash
 lerobot-find-cameras realsense
@@ -710,7 +766,9 @@ This step will output:
 - USB information
 - Default stream configuration
 
-### 4. RealSense Example
+Enter the retrieved `Serial number` into the `serial_number_or_name` parameter of the camera command below.
+
+### 5. RealSense Example
 
 Dual RealSense test:
 
@@ -770,7 +828,7 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 5. Parameter Notes
+### 6. Parameter Notes
 
 - `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
@@ -828,7 +886,13 @@ If you only use Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-### 3. Detect Cameras
+### 3. Grant Camera Permissions
+
+```bash
+chmod a+rw /dev/bus/usb/*/* 
+```
+
+### 4. Detect Cameras
 
 ```bash
 lerobot-find-cameras orbbec
@@ -836,12 +900,14 @@ lerobot-find-cameras orbbec
 
 This step will output:
 
-- Camera model
-- Serial number
+- Camera model（Name）
+- Serial number（Serial number）
 - USB information
 - Default stream configuration
 
-### 4. Orbbec Example
+Enter the retrieved `Serial Number` into the `serial_number_or_name` parameter of the camera command shown below.
+
+### 5. Orbbec Example
 
 Single Orbbec test:
 
@@ -878,13 +944,13 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 5. Parameter Notes
+### 6. Parameter Notes
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-### 6. Common Issues
+### 7. Common Issues
 
 If you see the following error:
 
@@ -1185,11 +1251,14 @@ lerobot-replay \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.episode=0
+    --dataset.repo_id=seeedstudio123 \
+    --dataset.root=~/.cache/huggingface/lerobot/seeedstudio123 \
+    --dataset.episode=0 \
 ```
 
 Your robot should replicate movements similar to those you recorded.
+
+In this command, `dataset.root` specifies the physical path to the dataset, and dataset.`repo_id` is the custom name defined during data collection.
 
 ## Train And Evaluate
 
@@ -1227,6 +1296,24 @@ lerobot-train \
   --policy.push_to_hub=false\
   --steps=300000 
 ```
+
+:::tip
+
+If you are using an RTX 50-series GPU, you must append --dataset.video_backend=pyav to the training command. This bypasses missing APIs in the preview version of torchvision. The full training command should look like this:
+
+```bash
+lerobot-train \
+  --dataset.repo_id=seeedstudio123/test \
+  --dataset.video_backend=pyav \
+  --policy.type=act \
+  --output_dir=outputs/train/act_so101_test \
+  --policy.device=cuda \
+  --wandb.enable=false \
+  --policy.push_to_hub=false \
+  --steps=300000 \
+```
+
+:::
 
 Let's explain it:
 
