@@ -36,7 +36,7 @@ O IO Expander para XIAO é uma placa de expansão de última geração projetada
 - Protocolo de comunicação: I2C
 - Endereço I2C padrão: 0x21 (configurável para 0x20)
 - Tensão de operação: 3,3 V
-- Dimensões: 21 mm x 17 mm
+- Dimensões: 21mm x 17.8mm
 
 ## Aplicações
 
