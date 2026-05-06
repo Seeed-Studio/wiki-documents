@@ -3,7 +3,7 @@ import css from './form.module.scss'
 import clsx from 'clsx'
 import 'react-toastify/dist/ReactToastify.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { detectLocaleFromPath, localizedLink, localizeHref } from '../../pages/home/lib/locale';
+import { detectLocaleFromPath, localizeHref } from '../../pages/home/lib/locale';
 
 const getIndexImage = (src) => {
   return src && require(`../../../assets/index/browse/${src}`).default;
@@ -428,6 +428,31 @@ function IndexLatestedViki(props) {
           title_pt_br: 'Integração do SenseCAP para Home Assistant',
         }
       ]
+    },
+    {
+      key: 'rockchip',
+      image: 'rockchip',
+      moreLink:'https://wiki.seeedstudio.com/object_detection_with_yolov11_on_recomputer_rk/',
+      docList: [
+        {
+          path: 'https://sensecraft.seeed.cc/ai-lab',
+          image: 'https://files.seeedstudio.com/wiki/object_detection_with_yolov11_on_recomputer-rk/recomputer_ai_lab_cover.webp',
+          title: 'reComputer AI Lab',
+          title_cn: 'reComputer AI Lab',
+          title_ja: 'reComputer AI Lab',
+          title_es: 'reComputer AI Lab',
+          title_pt_br: 'reComputer AI Lab',
+        },
+        {
+          path: '/object_detection_with_yolov11_on_recomputer_rk',
+          image: 'https://files.seeedstudio.com/wiki/object_detection_with_yolov11_on_recomputer-rk/demonstration.webp',
+          title: 'Object Detection with YOLOv11 on reComputer-RK',
+          title_cn: '在 reComputer-RK 上使用 YOLOv11 进行目标检测',
+          title_ja: 'reComputer-RK で YOLOv11 を使用した物体検出',
+          title_es: 'Detección de objetos con YOLOv11 en reComputer-RK',
+          title_pt_br: 'Detecção de objetos com YOLOv11 no reComputer-RK',
+        }
+      ]
     }
   ];
 
@@ -481,7 +506,7 @@ function IndexLatestedViki(props) {
         <div className={css.browseBy_container}>
           {docList.map((item, index) => {
             return (
-              <a className={css.doc_item} href={localizedLink(item.path, locale)} key={`${item.path}-${index}`}>
+              <a className={css.doc_item} href={localizeHref(item.path, locale)} key={`${item.path}-${index}`}>
                 <img src={item.image} alt="" />
                 <div className={clsx(css.wiki_name,'ellipsis-2')}>
                   {getLocalizedTitle(item, locale)}
