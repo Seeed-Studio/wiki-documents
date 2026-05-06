@@ -20,7 +20,7 @@ updatedAt: '2026-04-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
-# 基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程
+# reBot Arm B601-DM入门Lerobot
 
 <p align="center">
     <a href="./LICENSE">
@@ -82,6 +82,9 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 4. **兼容 Nvidia 平台**  
    支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
 
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 初始系统环境
 **For Ubuntu X86:**
@@ -97,6 +100,10 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
   - Torch 2.3+
 
 ## 安装LeRobot
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
@@ -186,8 +193,12 @@ conda install ffmpeg -c conda-forge
 (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
-pip install opencv-python==4.10.0.84  # 安装指定版本 OpenCV
-pip install numpy==1.26.0  # 该版本需与 torchvision 兼容
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
+conda remove opencv   # 卸载 OpenCV
+pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
 ### 7. 检查 Pytorch 和 Torchvision
@@ -214,6 +225,10 @@ print(torch.cuda.is_available())#输出结果应该为True
 
 ## 校准机械臂
 
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
 这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
@@ -224,11 +239,19 @@ sudo chmod 666 /dev/ttyUSB*  # leader 臂
 sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
 
-
-
 ### 校准follower臂
-B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次校准。  
-你需要做的确保是在启动前，将B601-DM放置到如图所示的位置（夹爪要完全闭合）。
+B601-DM只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
+
+```bash
+sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
+
+lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao
+```
+
   <div align="center">
       <img width={800} 
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
@@ -288,6 +311,9 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 </details>
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ## 遥操作
 
@@ -357,7 +383,7 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-### 2. 以可编辑模式安装 LeRobot
+### 2. 安装 RealSense：
 
 如果只使用 RealSense：
 
@@ -365,7 +391,14 @@ DepthCameraSupport
 pip install -e ".[realsense]"
 ```
 
-### 3. 检测相机
+### 3. 给予权限
+
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. 检测相机
 
 ```bash
 lerobot-find-cameras realsense
@@ -378,7 +411,7 @@ lerobot-find-cameras realsense
 * USB 信息
 * 默认流配置
 
-### 4. RealSense 示例
+### 5. RealSense 示例
 
 双 RealSense 测试：
 
@@ -439,7 +472,7 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. 参数说明
+### 6. 参数说明
 
 * `depth_alpha` 用于控制深度图的缩放比例，可根据显示效果和目标距离范围进行调整。
 * 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以提高整体稳定性。
@@ -492,15 +525,34 @@ git branch --show-current
 DepthCameraSupport
 ```
 
-### 2. 以可编辑模式安装 LeRobot
+### 2. 安装Orbbec
 
-如果只使用 Orbbec：
 
 ```bash
 pip install -e ".[orbbec]"
 ```
 
-### 4. Orbbec 示例
+### 3. 给予权限
+
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. 检测相机
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+该步骤将输出：
+
+* 相机型号
+* 序列号
+* USB 信息
+* 默认流配置
+
+### 5. Orbbec 示例
 
 单 Orbbec 测试：
 
@@ -538,7 +590,7 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. 参数说明
+### 6. 参数说明
 
 * `depth_alpha` 控制深度图缩放比例，建议从 `0.2` 开始，根据显示效果微调。
 * 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以获得更好的稳定性。
@@ -602,6 +654,9 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ```bash
 lerobot-teleoperate \
@@ -638,9 +693,20 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 
 ## 数据集制作采集
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 <details>
 

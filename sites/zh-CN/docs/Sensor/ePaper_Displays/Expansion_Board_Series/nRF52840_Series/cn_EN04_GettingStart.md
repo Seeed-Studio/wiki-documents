@@ -1,6 +1,6 @@
 ---
 description: XIAO ePaper Display Board(nRF52840) - EN04 入门指南
-title: XIAO ePaper Display Board(nRF52840) - EN04 入门指南
+title: EN04 入门指南
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# XIAO ePaper Display EN04 入门指南
+# XIAO ePaper Display Board - EN04 入门指南
 
 <div class="table-center">
 <table align="center">
@@ -38,13 +38,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO nRF52840** Plus 提供算力，显示板 EN04 同时支持 **24‑pin** 和 **50‑pin** ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC、NFC 功能，并带有 1 个复位按键和 3 个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息看板。
+由 **XIAO nRF52840** Plus 提供动力，显示板 EN04 支持 **24-pin** 和 **50-pin** 两种 ePaper 显示屏。它配备带电源开关的 JST 2.0 mm 电池连接器、内置充电 IC、NFC 功能，并带有一个复位按键和三个用户按键。非常适合用于低功耗 ePaper 项目，例如数字标牌、电子标签和便携式信息板。
 
 ### 特性
 
-- **由 XIAO nRF52840 Plus 供电：** 连接到兼容的 ePaper 显示屏后即可立即工作。
-- **多功能显示支持：** 兼容多种 ePaper 屏幕，支持 24-Pin 和 50-Pin 接口，并可通过跳线帽轻松切换。
-- **带开关的电池连接器：** 提供简单的电池连接，并集成电源开关，实现高效电源管理与节能。
+- **由 XIAO nRF52840 Plus 供电：** 连接兼容的 ePaper 显示屏后即可立即工作。
+- **多样化显示支持：** 兼容多种 ePaper 屏幕，支持 24-Pin 和 50-Pin 接口，并可通过跳线帽轻松切换。
+- **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
 - **用户友好按键：** 包含 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
 
 ### 规格
@@ -135,19 +135,19 @@ import Steppers from '@site/src/components/utils/Stepper';
         <tr>
             <th>扩展 IO 端口</th>
             <td>/</td>
-            <td>用于连接其他控制器</td>
-            <td>用于连接额外传感器</td>
+            <td>连接其他控制器</td>
+            <td>连接额外传感器</td>
         </tr>
     </tbody>
 </table>
 
 ### 应用
 
-- **智能家居仪表盘**：显示天气更新、日历事件以及来自各类智能家居设备的通知等实时信息。
-- **能耗监测**：展示来自智能电表的能耗数据，帮助家庭用户更高效地跟踪和管理能源使用。
-- **安防警报**：显示安防事件的警报和通知，例如运动检测或门/窗传感器被触发。
-- **智能恒温器显示屏**：显示温度和湿度水平，以及智能恒温器的控制设置。
-- **数字相框**：创建一款支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
+- **智能家居仪表盘**：显示天气更新、日历事件以及来自各种智能家居设备的通知等实时信息。
+- **能耗监测**：显示来自智能电表的能耗数据，帮助用户更高效地跟踪和管理能源使用。
+- **安全警报**：显示关于安全事件的警报和通知，例如运动检测或门/窗传感器触发。
+- **智能恒温器显示**：显示温度和湿度水平，以及智能恒温器的控制设置。
+- **数字相框**：创建一个支持 WiFi 的数字相框，用于显示来自智能家居网络的图片。
 
 ## 硬件概览
 
@@ -177,11 +177,11 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-在使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏的类型正确设置跳线：
+使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型正确设置跳线：
 
 - 对于 24 Pin ePaper 显示屏 → 将跳线设置为 24 Pin
 
-⚠️ 使用错误的跳线设置可能会导致 ePaper 无法显示或显示异常内容。通电前请务必再次确认跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。上电前请务必再次确认跳线位置。
 
 :::
 
@@ -191,10 +191,10 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
-在使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏的类型正确设置跳线：
+使用 XIAO ePaper Display Board 时，请务必根据 ePaper 显示屏类型正确设置跳线：
 - 对于 50 Pin ePaper 显示屏 → 将跳线设置为 50 Pin
 
-⚠️ 使用错误的跳线设置可能会导致 ePaper 无法显示或显示异常内容。通电前请务必再次确认跳线位置。
+⚠️ 使用错误的跳线设置可能导致 ePaper 无法显示或显示异常内容。上电前请务必再次确认跳线位置。
 
 :::
 
@@ -203,7 +203,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 ### 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先将其卸载。
+该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -212,7 +212,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
 </a>
 </div>
 
@@ -220,32 +220,32 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-选择你的设备类型，页面会生成一些代码。复制这些代码，我们稍后会用到。
+选择你的设备类型，它会生成一些代码。复制这些代码，我们稍后会用到。
 
 :::tip
 如果选择错误，屏幕将不会显示任何内容。
 
-因此请务必确认你的设备或组件类型。
+因此请务必确认你的设备或元件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
-下载库文件后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择刚刚下载的库。
+下载库之后，依次进入 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
 这里有 4 个基础示例，打开一个你喜欢的基础示例：
 
 1. Bitmap：显示位图图像。
-2. Clock：显示一个时钟。
-3. Clock_digital：显示一个数字时钟。
+2. Clock：显示时钟。
+3. Clock_digital：显示数字时钟。
 4. Shape：显示不同大小的文字和图形。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## 入门
 
-这里我们以 7.5 英寸显示屏为例。对于所有 24-pin 屏幕，步骤都是相同的，唯一的区别是在驱动程序中选择合适的屏幕尺寸。
+这里以 7.5 英寸显示屏为例。所有 24-pin 屏幕的步骤相同，唯一的区别是在驱动中选择合适的屏幕尺寸。
 
 创建一个 **新的 "driver.h" 文件**，并将这些代码粘贴进去。代码应类似如下：
 
@@ -254,17 +254,17 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 来上传代码。
+之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择你的开发板所连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-现在你将在电子纸屏幕上看到反馈！下面是 Helloworld 示例的运行结果。（如果没有任何显示，请按一下复位按钮）
+现在你会在电子纸屏幕上看到反馈！下面是 Helloworld 示例的运行结果。（如果没有任何显示，请按一下复位按钮）
 
 :::tip
 ⚠️ 注意：电子纸排线方向
 将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 排线插入方向正确。
 
-⚠️ 请勿反向插入连接器！将排线倒置插入可能导致电子纸无法显示，甚至损坏屏幕/主板。
+⚠️ 请不要反向插入连接器！将排线倒置插入可能导致电子纸无法显示，甚至损坏屏幕/电路板。
 下图展示了正确的连接方式：
 :::
 
@@ -272,9 +272,9 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ### XIAO 电子纸显示板（nRF52840）- EN04 上的用户按键
 
-EN04 提供了 3 个可由用户编程的按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并响应按键按下。
+EN04 提供了三个用户可编程按键，可用于各种控制用途。本节演示如何使用 Arduino 读取按键状态并对按键按下做出响应。
 
-在 EN04 上，这 3 个按键连接到 XIAO nRF52840 Plus：
+在 EN04 上，这三个按键连接到 XIAO nRF52840 Plus：
 
 <table>
   <thead>
@@ -298,7 +298,7 @@ EN04 提供了 3 个可由用户编程的按键，可用于各种控制用途。
 
 基础按键读取示例
 
-此示例演示如何检测按键按下并在串口监视器中打印消息。
+此示例演示如何检测按键按下并向串口监视器打印消息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -347,18 +347,18 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板（nRF52840）- EN04 的电池使用
+### XIAO 电子纸显示板（nRF52840）- EN04 上的电池
 
 当使用电池供电时：
 
-- 设备将在两次刷新之间自动进入低功耗模式
+- 设备会在两次刷新之间自动进入低功耗模式
 
 - 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
 
 - 当电池电量低于 20% 时，设备会在右上角显示低电量图标
 
 :::tip
-如果你想自己编写代码来读取电池电压，在 `analogRead()` 函数前添加 10ms 延时会更精确。
+如果你想自己编写代码读取电池电压，在 `analogRead()` 函数前增加 10ms 延时会更加精确。
 :::
 
 
@@ -394,12 +394,12 @@ void loop() {
 
 
 ## 资源
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 原理图&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将通过多种方式为你提供支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

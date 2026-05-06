@@ -17,7 +17,7 @@ translation:
   skip:
     - - zh-CN
 createdAt: '2026-03-24'
-updatedAt: '2026-04-17'
+updatedAt: '2026-04-29'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
 ---
 
@@ -429,7 +429,7 @@ This project is open source under the **MIT License**.
 
 - [Pinocchio Official Documentation](https://stack-of-tasks.github.io/pinocchio/)
 - [MeshCat Official Documentation](https://github.com/rdeits/meshcat)
-- [motorbridge SDK](https://github.com/Damiao/motorbridge)
+- [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
 

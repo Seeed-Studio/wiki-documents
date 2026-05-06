@@ -1,6 +1,6 @@
 ---
 description: Introdução à ePaper Breakout Board
-title: ePaper Breakout Board
+title: Introdução à ePaper Breakout Board
 keywords:
   - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/pt-br/XIAO-eInk-Expansion-Board/
     </a>
 </div><br />
 
-Conheça a XIAO eInk Expansion Board, sua solução ideal para controlar displays eInk com a família XIAO sem esforço. Projetada com um conector FPC de 24 pinos, esta placa fornece uma ligação perfeita à nossa série de produtos eInk; se você quiser ampliar suas opções, o Header de 8 pinos 2,54 permite integrar facilmente qualquer microcontrolador de sua escolha. Pense nesta placa como a “melhor amiga para sempre” do seu eInk, ampliando suas capacidades e facilitando sua vida.
+Conheça a XIAO eInk Expansion Board, sua solução ideal para controlar displays eInk com a família XIAO sem esforço. Projetada com um conector FPC de 24 pinos, esta placa fornece uma ligação perfeita à nossa série de produtos eInk; se você quiser ampliar suas opções, o Header de 8 pinos 2,54 permite integrar facilmente qualquer microcontrolador de sua escolha. Pense nesta placa como a “melhor amiga para sempre” do seu eInk, ampliando seus recursos e facilitando sua vida.
 
 :::note
 Esta breakout board não inclui um display eInk; o display deve ser adquirido separadamente.
@@ -37,8 +37,8 @@ Esta breakout board não inclui um display eInk; o display deve ser adquirido se
 - Conector FPC de 24 pinos: fornece uma conexão robusta e confiável para displays eInk.
 - Soquete XIAO: permite usar o XIAO como processador, oferecendo uma solução de controle compacta e poderosa.
 - Header de 8 pinos 2,54: oferece flexibilidade ao permitir que você conecte qualquer microcontrolador, abrindo um mundo de possibilidades.
-- Plug-and-Play: projetada para facilidade de uso, sendo perfeita tanto para iniciantes quanto para especialistas.
-- Aplicações versáteis: adequada para uma ampla gama de displays eInk, de tamanhos pequenos a grandes.
+- Plug-and-Play: projetado para facilidade de uso, sendo perfeito tanto para iniciantes quanto para especialistas.
+- Aplicações versáteis: adequado para uma ampla gama de displays eInk, de tamanhos pequenos a grandes.
 
 ### Aplicações
 
@@ -141,9 +141,9 @@ Esta breakout board não inclui um display eInk; o display deve ser adquirido se
 
 ### Preparação de software
 
- A ferramenta de programação recomendada é a Arduino IDE, e você precisa configurar o ambiente Arduino para o XIAO e adicionar o pacote on-board.
+ A ferramenta de programação recomendada é a Arduino IDE, e você precisa configurar o ambiente Arduino para o XIAO e adicionar o pacote da placa.
 :::tip
-Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
+Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
 :::
 
 **Passo 1.** Inicie o aplicativo Arduino.
@@ -152,7 +152,7 @@ Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que cons
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-        <strong><span><font color={'FFFFFF'} size={"4"}>Baixar Arduino IDE</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
     </a>
 </div>
 
@@ -170,7 +170,7 @@ Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que cons
 
 ## Instalar a biblioteca Seeed GFX
 
-**Passo 3.** Instalar a biblioteca Seeed GFX
+**Passo 3.** Instale a biblioteca Seeed GFX
 
 :::tip
 Esta biblioteca tem a mesma função que a biblioteca TFT e não é compatível com ela. Se você instalou a biblioteca TFT ou outras bibliotecas de display semelhantes, desinstale-as primeiro.
@@ -190,7 +190,7 @@ Role para baixo e abra este link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
-Selecione o tipo do seu dispositivo e algum código será gerado. Copie esse código, pois o usaremos depois.
+Selecione o tipo do seu dispositivo e ele irá gerar algum código. Copie esse código e o usaremos mais tarde.
 
 :::tip
 Se você fizer a escolha errada, a tela não exibirá nada.
@@ -200,7 +200,7 @@ Portanto, certifique-se do tipo dos seus dispositivos ou componentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
 
-Após baixar a biblioteca, vá em **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
+Depois de baixar a biblioteca, vá para **Sketch** -> **Include Library** -> **Add .ZIP Library** e selecione a biblioteca baixada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -215,23 +215,23 @@ Existem 4 exemplos básicos, abra um exemplo básico de que você goste:
 
 ### Enviar o código
 
-Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ficar assim:
+Crie um **novo arquivo "driver.h"** e cole esse código nele. O código deve ser assim:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
 #define USE_XIAO_EPAPER_BREAKOUT_BOARD
 ```
 
-Depois disso, vá em **Tools** -> **Board** -> **XIAO ESP32C6** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**. Em seguida, clique em **Upload** para enviar o código.
+Depois disso, vá para **Tools** -> **Board** -> **XIAO ESP32C6** e **Tools** -> **Port** -> **Selecione a porta à qual sua placa está conectada**. Em seguida, clique em **Upload** para enviar o código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Agora você verá o resultado na sua tela de epaper! A seguir estão os resultados dos exemplos Helloworld.
+Agora você verá o retorno na sua tela de epaper! A seguir estão os resultados dos exemplos Helloworld.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-Se você estiver usando uma tela e-ink de 1,54 ou 2,9 polegadas, devido aos chips de driver delas, pode ocorrer cintilação ao usar efeitos dinâmicos, como relógios. Fique tranquilo, isso não é um problema de programação. No entanto, não é recomendado executar exemplos de efeitos dinâmicos por longos períodos para evitar reduzir a vida útil da tela.
+Se você estiver usando uma tela e-ink de 1,54 polegadas ou 2,9 polegadas, devido aos seus chips de driver, pode ocorrer cintilação ao usar efeitos dinâmicos, como relógios. Fique tranquilo, isso não é um problema de programa. No entanto, não é recomendado executar exemplos de efeitos dinâmicos por longos períodos para evitar reduzir a vida útil da tela.
 
 Se você estiver usando telas de 5,83 e 7,5 polegadas, elas possuem chips diferentes, portanto não terão o fenômeno de cintilação.
 :::
@@ -242,7 +242,7 @@ Se você estiver usando telas de 5,83 e 7,5 polegadas, elas possuem chips difere
 
 Aqui estou usando uma tela e-ink de 7,5 polegadas para o teste
 
-#### Como criar uma imagem
+#### Como fazer uma imagem
 
 Este [URL](https://jlamch.net/MXChipWelcome/) fornece uma operação de extração de imagem muito conveniente, que pode facilmente nos ajudar a exibir uma variedade de imagens na tela e-ink, vamos começar!
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/9191.jpg" style={{width:700, height:'auto'}}/></div>
@@ -267,19 +267,19 @@ Primeiro escolha a imagem desejada, tente não exceder o tamanho de 800*480.
   - Invert Image Color: Esta opção é usada para inverter as cores da imagem. Quando selecionada, as cores da imagem serão invertidas.
 
 - Brilho / Limite de Alfa
-  - Brilho / Limite de Alfa: Defina o valor de brilho dos pixels, variando de 0 a 255. Valores mais altos deixam os pixels mais claros; pixels abaixo desse valor ficarão pretos.
+  - Brilho / Limite de Alfa: Defina o valor de brilho dos pixels, variando de 0 a 255. Valores mais altos tornam os pixels mais claros; pixels abaixo desse valor ficarão pretos.
 
 - Redimensionamento
   - Redimensionamento: Escolha o método de redimensionamento da imagem. As opções incluem:
 
 - Tamanho original: Manter o tamanho original
-  - Outras opções de redimensionamento (opções específicas podem precisar de explicação adicional)
+  - Outras opções de redimensionamento (opções específicas podem precisar de mais explicações)
 - Centralizar
   - Centralizar: Escolha se deseja centralizar a imagem na tela. Observação: esta opção só funciona se a imagem for maior que o tamanho original.
 
 **Passo 3**. Pré-visualização
 
-Depois que as configurações estiverem concluídas, você poderá ver aqui uma pré-visualização de como sua imagem será exibida
+Depois que as configurações estiverem concluídas, você poderá ver aqui uma pré-visualização de como sua imagem aparecerá
 
 **Passo 4**. Saída
 
@@ -295,12 +295,12 @@ Depois que as configurações estiverem concluídas, você poderá ver aqui uma 
 
 ### Uso do software Image2lcd
 
-#### Como criar uma imagem
+#### Como fazer uma imagem
 
-Use o software interno **Paint** do Windows para criar uma imagem com a **mesma resolução** da tela que você está usando e salve-a como arquivo `BMP` ou `JPG`;
+Use o software interno **Paint** no Windows para criar uma imagem com a **mesma resolução** da tela que você está usando e salve-a como arquivo `BMP` ou `JPG`;
 
 :::note
-A resolução da sua imagem deve ser a mesma da tela que você está usando, por exemplo, a E-paper de 4,2 polegadas é 400 x 300 pixels, então você não pode usar o tamanho de 300 x 400, isso fará com que o image2lcd gere um arquivo `.h` com 200 bytes extras.
+A resolução da sua imagem deve ser a mesma da tela que você está usando, por exemplo, o E-paper de 4,2 polegadas é 400 x 300 pixels, então você não pode usar o tamanho de 300 x 400, isso fará com que o iamge2lcd gere um arquivo `.h` com 200 bytes extras.
 :::
 
 As cores da imagem devem ser consistentes com as cores padrão da prancheta que vem com o Windows. A cor da prancheta é a seguinte:
@@ -335,76 +335,76 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta que 
     <tr>
         <th>Epaper</th>
         <th>BitPixl</th>
-        <th>Largura e altura máximas</th>
-        <th>Inverter cor</th>
-        <th>Modo de exibição</th>
+        <th>Max Width and Height</th>
+        <th>Reverse color</th>
+        <th>Display mode</th>
     </tr>
     <tr>
         <th>1.54-inch E-paper - Dotmatix 200x200</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
-        <td align="center">Espelhar esquerda-direita</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper -Flexible Monochrome 212x104</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
         <th>2.13-inch E-Paper - Quadruple 212x104 </th>
-        <td align="center">4 tons de cinza</td>
+        <td align="center">4 Gray</td>
         <td align="center">104x212</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
         <th>2.9 inch E-paper - Monocolor 128x296</th>
-         <td align="center">Monocromático</td>
+         <td align="center">Monochrome</td>
         <td align="center">128x296</td>
         <td align="center">✅</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
         <th>2.9-inch e-paper - Quadruple color 128x296 </th>
-        <td align="center">4 tons de cinza</td>
+        <td align="center">4 Gray</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
         <th>4.2-inch E-Paper - Monocolor 400x300</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
-        <td align="center">Espelhar esquerda-direita</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
         <th>4.26-inch E-Paper - Monocolor 800x480</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">Espelhar esquerda-direita</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
         <th>5.65-inch E-paper -  Sevencolor 600x480</th>
-        <td align="center">256 cores</td>
+        <td align="center">256 colors</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
         <td align="center">Normal</td>
     </tr>
     <tr>
         <th>5.83-inch E-paper - Monocolor 648x480</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
-        <td align="center">Espelhar esquerda-direita</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
         <th>7.5-inch E-paper - Monocolor 800x480</th>
-        <td align="center">Monocromático</td>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
         <td align="center">Espelhar esquerda-direita</td>
@@ -435,7 +435,7 @@ As cores da imagem devem ser consistentes com as cores padrão da prancheta que 
 
 - **[ZIP]** [Arquivo Eagle de PCB&SCH](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/epaperIO.zip)
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

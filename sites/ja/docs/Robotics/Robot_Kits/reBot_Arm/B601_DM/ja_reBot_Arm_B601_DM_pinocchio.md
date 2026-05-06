@@ -429,7 +429,7 @@ uv run python example/9_gravity_compensation.py
 
 - [Pinocchio 公式ドキュメント](https://stack-of-tasks.github.io/pinocchio/)
 - [MeshCat 公式ドキュメント](https://github.com/rdeits/meshcat)
-- [motorbridge SDK](https://github.com/Damiao/motorbridge)
+- [motorbridge SDK](https://github.com/motorbridge/motorbridge)
 
 ---
 

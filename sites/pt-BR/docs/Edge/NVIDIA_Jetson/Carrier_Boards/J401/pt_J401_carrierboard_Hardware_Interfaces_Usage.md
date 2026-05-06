@@ -2,23 +2,23 @@
 description: Uso de hardware e interfaces para a placa carrier J401
 title: Uso das Interfaces
 tags:
-  - placa carrier J401
+  - J401 carrier board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /J401_carrierboard_Hardware_Interfaces_Usage
 last_update:
   date: 04/29/2024
   author: Jiahao
 createdAt: '2024-05-13'
-updatedAt: '2026-03-20'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/pt-br/J401_carrierboard_Hardware_Interfaces_Usage/
 ---
 ## Introdução
 
-A **[placa carrier reComputer J401](https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-p-5636.html)** oferece suporte ao **NVIDIA Jetson Orin Nano/NX([Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**, **[Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html))**, oferecendo desempenho excepcional e sendo projetada para lidar com tarefas exigentes de computação de borda com facilidade. É a escolha perfeita para desenvolver sistemas de automação industrial, construir aplicações avançadas de IA e muito mais.
+A **[placa carrier reComputer J401](https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-p-5636.html)** é compatível com **NVIDIA Jetson Orin Nano/NX([Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**, **[Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html))**, oferecendo desempenho excepcional e sendo projetada para lidar com facilidade com tarefas exigentes de computação de borda. É a escolha perfeita para desenvolver sistemas de automação industrial, construir aplicações poderosas de IA e muito mais.
 
-Ela possui capacidade de rede equipada com 1x **porta Gigabit Ethernet** para rede rápida. Também vem com 4x **portas USB 3.2 Type-A (10Gbps)**, 1x **porta USB 2.0 Type-C** e 1x **conector CAN** para opções versáteis de conectividade. Esta placa de expansão foi montada com 1x **M.2 Key M 2280** para cartão SSD (inclui SSD NVMe 2280 de 128GB) e 1x slot **M.2 Key E** para expansão de conectividade sem fio LTE.
+Ela possui capacidade de rede equipada com 1x **porta Gigabit Ethernet** para rede rápida. Também vem com 4x **portas USB 3.2 Type-A (10Gbps)**, 1x **porta USB 2.0 Type-C** e 1x **conector CAN** para opções versáteis de conectividade. Esta placa de expansão foi equipada com 1x **M.2 Key M 2280** para cartão SSD (inclui SSD NVMe 2280 de 128GB) e 1x slot **M.2 Key E** para expansão de conectividade sem fio LTE.
 
-Além disso, há vários periféricos com suporte na placa. Ela permite que os usuários capturem e exibam conteúdo de vídeo em alta qualidade com 2x **MIPI-CSI de 15 pinos** e 1x conector **HDMI 2.1** para conexão de câmera e display. Também inclui um conector de **ventoinha PWM 5V**, um **soquete RTC** e um **conector RTC de 2 pinos**.
+Além disso, há vários periféricos suportados na placa. Ela permite que os usuários capturem e exibam conteúdo de vídeo em alta qualidade com 2x **MIPI-CSI de 15 pinos** e 1x conector **HDMI 2.1** para conexão de câmera e display. Também inclui um **conector de ventoinha PWM de 5V**, um **soquete RTC** e um **conector RTC de 2 pinos**.
 
 A placa suporta uma ampla faixa de entrada de **9-19V DC**, tornando-a flexível para integração em uma variedade de tarefas de computação. Ela mantém a operação na faixa de temperatura de -10°C a 60°C.
 
@@ -33,7 +33,7 @@ Para mais sugestões de acessórios, consulte a [página de bundle do reComputer
 
 ## SODIMM de 260 pinos
 
-A função principal do SODIMM de 260 pinos é conectar sua placa carrier ao **[NVIDIA Jetson Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[NVIDIA Jetson Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**, **[NVIDIA Jetson Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[NVIDIA Jetson Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)**.
+A função principal do SODIMM de 260 pinos é conectar sua placa carrier com **[NVIDIA Jetson Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[NVIDIA Jetson Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**, **[NVIDIA Jetson Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[NVIDIA Jetson Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)**.
 
 ### Visão geral da conexão
 
@@ -45,9 +45,9 @@ Se a conexão estiver correta, quando você conectar o adaptador de energia, ver
 
 ## M.2 Key M
 
-M.2 Key M é uma especificação para o layout físico e elétrico de um conector M.2 que suporta transferência de dados em alta velocidade usando a interface PCIe (Peripheral Component Interconnect Express). Conectores M.2 Key M são comumente usados para conectar unidades de estado sólido (SSDs) e outras placas de expansão de alto desempenho a uma placa-mãe ou outro dispositivo host. A designação "Key M" refere-se à configuração específica dos pinos e ao encaixe do conector M.2, que determina o tipo de dispositivos que podem ser conectados a ele.
+M.2 Key M é uma especificação para o layout físico e elétrico de um conector M.2 que suporta transferência de dados em alta velocidade usando a interface PCIe (Peripheral Component Interconnect Express). Conectores M.2 Key M são comumente usados para conectar unidades de estado sólido (SSDs) e outras placas de expansão de alto desempenho a uma placa-mãe ou outro dispositivo host. A designação "Key M" refere-se à configuração específica de pinos e à chave do conector M.2, que determina o tipo de dispositivos que podem ser conectados a ele.
 
-### SSDs compatíveis são os seguintes
+### Os SSDs compatíveis são os seguintes
 
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
@@ -65,13 +65,13 @@ Se você quiser remover o SSD incluído e instalar um novo, pode seguir as etapa
 
 Vamos explicar como fazer um benchmark simples no SSD conectado.
 
-- **Etapa 1:** Verifique a velocidade de gravação executando o comando abaixo.
+- **Passo 1:** Verifique a velocidade de gravação executando o comando abaixo.
 
 ```sh
 sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
 ```
 
-- **Etapa 2:** Verifique a velocidade de leitura executando os comandos abaixo. Certifique-se de executar isto depois de executar o comando acima para a velocidade de gravação.
+- **Passo 2:** Verifique a velocidade de leitura executando os comandos abaixo. Certifique-se de executar isto depois de executar o comando acima para a velocidade de gravação.
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -80,7 +80,7 @@ sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
 
 ## M.2 Key E
 
-M.2 Key E é uma especificação para o layout físico e elétrico de um conector M.2 que suporta módulos de comunicação sem fio, como placas Wi‑Fi e Bluetooth. A designação "Key E" refere-se à configuração específica dos pinos e ao encaixe do conector M.2, que é otimizada para dispositivos de rede sem fio. Conectores M.2 Key E são comumente encontrados em placas-mãe e outros dispositivos que exigem opções de conectividade sem fio. Aqui recomendamos o módulo [Intel wifi/bluetooth](https://www.seeedstudio.com/RTL8822CE-Wireless-NIC-Kits-for-Nvidia-Jetson-Orin.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Ijg4MjIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjozLCJjX3RvdGFsX3Jlc3VsdHMiOjQsImNfc2VhcmNoX3Jlc3VsdF90eXBlIjoiUHJvZHVjdCIsImNfc2VhcmNoX2ZpbHRlcnMiOiJzdG9yZUNvZGU6W3JldGFpbGVyXSJ9).
+M.2 Key E é uma especificação para o layout físico e elétrico de um conector M.2 que suporta módulos de comunicação sem fio, como placas Wi-Fi e Bluetooth. A designação "Key E" refere-se à configuração específica de pinos e à chave do conector M.2, que é otimizada para dispositivos de rede sem fio. Conectores M.2 Key E são comumente encontrados em placas-mãe e outros dispositivos que exigem opções de conectividade sem fio. Aqui recomendamos o módulo [Intel wifi/bluetooth](https://www.seeedstudio.com/RTL8822CE-Wireless-NIC-Kits-for-Nvidia-Jetson-Orin.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Ijg4MjIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjozLCJjX3RvdGFsX3Jlc3VsdHMiOjQsImNfc2VhcmNoX3Jlc3VsdF90eXBlIjoiUHJvZHVjdCIsImNfc2VhcmNoX2ZpbHRlcnMiOiJzdG9yZUNvZGU6W3JldGFpbGVyXSJ9).
 
 ### Visão geral da conexão
 
@@ -88,11 +88,11 @@ M.2 Key E é uma especificação para o layout físico e elétrico de um conecto
 
 ### Uso
 
-Depois de instalar o módulo wifi/bluetooth, você poderá ver o ícone de wifi/bluetooth no canto superior direito.
+Após instalar o módulo wifi/bluetooth, você poderá ver o ícone de wifi/bluetooth no canto superior direito.
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/></div>
 
-#### Teste de Wi‑Fi
+#### Teste de Wi-Fi
 
 ```
 ifconfig
@@ -115,9 +115,9 @@ paired-devices #show all paired devices
 
 ## Câmeras CSI
 
-CSI significa Camera Serial Interface. É uma especificação que descreve uma interface de comunicação serial para transferir dados de vídeo de sensores de imagem para um processador host. CSI é comumente usada em dispositivos móveis, câmeras e sistemas embarcados para permitir a transferência em alta velocidade e eficiente de dados de imagem e vídeo para processamento e análise.
+CSI significa Camera Serial Interface. É uma especificação que descreve uma interface de comunicação serial para transferir dados de vídeo de sensores de imagem para um processador host. CSI é comumente usada em dispositivos móveis, câmeras e sistemas embarcados para permitir a transferência rápida e eficiente de dados de imagem e vídeo para processamento e análise.
 
-### Câmeras compatíveis são as seguintes
+### As câmeras compatíveis são as seguintes
 
 - Câmeras IMX219
 
@@ -128,16 +128,16 @@ CSI significa Camera Serial Interface. É uma especificação que descreve uma i
   - [IMX219-200 8MP Camera with 200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html) -->
 
   - [Câmera IMX219-77 8MP com FOV de 77°](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
-  - [Módulo de Câmera CMOS IMX219 montagem M12/CS](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
-  - [Módulo de Câmera 3D Estéreo IMX219-83 8MP](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
-  - [Câmera de Visão Noturna IR IMX219-77IR 8MP com FOV de 77°](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
+  - [Módulo de câmera CMOS IMX219 montagem M12/CS](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
+  - [Módulo de câmera estéreo 3D IMX219-83 8MP](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
+  - [Câmera de visão noturna IR IMX219-77IR 8MP com FOV de 77°](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
   - [Câmera IMX219-160IR 8MP com FOV de 160°](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
 
 - Câmeras IMX477
 
   - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
   - [Raspberry Pi HQ Camera - montagem M12](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
-  - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
+  - [High Quality Camera para Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
 ### Visão geral da conexão
 
@@ -159,7 +159,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Method 1" label="Método 1">
+<TabItem value="Method 1" label="Method 1">
 
 Para a porta CAM0
 
@@ -180,13 +180,13 @@ Se você quiser alterar mais configurações da câmera, pode digitar **"nvgstca
 
 <TabItem value="Method 2" label="Method 2">
 
-Para a porta CAM0
+Para porta CAM0
 
 ```sh
 gst-launch-1.0 nvarguscamerasrc sensor-id=0 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
-Para a porta CAM1
+Para porta CAM1
 
 ```sh
 gst-launch-1.0 nvarguscamerasrc sensor-id=1 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
@@ -200,14 +200,14 @@ Se você quiser alterar mais configurações da câmera, pode atualizar os argum
 
 ## RTC
 
-RTC significa Real-Time Clock (Relógio de Tempo Real). É um relógio que mantém o controle da hora e data atuais de forma independente do relógio principal do sistema. RTCs são comumente usados em computadores, sistemas embarcados e outros dispositivos eletrônicos para manter a marcação precisa do tempo mesmo quando o dispositivo está desligado. Eles geralmente são alimentados por uma pequena bateria para garantir operação contínua e reter as informações de hora e data durante ciclos de energia.
+RTC significa Relógio de Tempo Real (Real-Time Clock). É um relógio que acompanha a hora e a data atuais de forma independente do relógio principal do sistema. RTCs são comumente usados em computadores, sistemas embarcados e outros dispositivos eletrônicos para manter a cronometragem precisa mesmo quando o dispositivo está desligado. Eles geralmente são alimentados por uma pequena bateria para garantir operação contínua e reter as informações de hora e data durante ciclos de energia.
 
 ### Visão geral da conexão
 
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
 
-Conecte uma **bateria tipo moeda CR1220 de 3V** ao soquete de RTC na placa, como mostrado abaixo. Certifique-se de que a extremidade **positiva (+)** da bateria esteja voltada para cima.
+Conecte uma **bateria tipo moeda CR1220 de 3V** ao soquete RTC na placa, como mostrado abaixo. Certifique-se de que a extremidade **positiva (+)** da bateria esteja voltada para cima.
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell-back.gif"/></div>
 
@@ -224,11 +224,11 @@ Conecte uma **bateria tipo moeda CR2302 de 3V com conector JST** ao soquete JST 
 
 ### Uso
 
-- **Passo 1:** Conecte uma bateria de RTC conforme mencionado acima.
+- **Passo 1:** Conecte uma bateria RTC conforme mencionado acima.
 
 - **Passo 2:** Ligue o reComputer Industrial.
 
-- **Passo 3:** No Ubuntu Desktop, clique no menu suspenso no canto superior direito, navegue até `Settings > Date & Time`, conecte-se a uma rede por meio de um cabo Ethernet e selecione **Automatic Date & Time** para obter a data/hora automaticamente.
+- **Passo 3:** No Ubuntu Desktop, clique no menu suspenso no canto superior direito, navegue até `Settings > Date & Time`, conecte-se a uma rede via cabo Ethernet e selecione **Automatic Date & Time** para obter a data/hora automaticamente.
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
@@ -246,7 +246,7 @@ Você verá uma saída semelhante à abaixo, que não é a data/hora correta.
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-RTC.png"/></div>
 
-- **Passo 5:** Altere a hora do relógio de hardware para a hora atual do relógio do sistema digitando o comando abaixo.
+- **Passo 5:** Altere a hora do relógio de hardware para a hora atual do relógio do sistema inserindo o comando abaixo.
 
 ```sh
 sudo hwclock --systohc
@@ -260,7 +260,7 @@ sudo reboot
 
 - **Passo 7:** Verifique a hora do relógio de hardware para confirmar que a data/hora permanece a mesma mesmo que o dispositivo tenha sido desligado.
 
-- **Passo 8:** Crie um novo script de shell usando qualquer editor de texto de sua preferência. Aqui usamos o editor de texto **vi**.
+- **Passo 8:** Crie um novo script shell usando qualquer editor de texto de sua preferência. Aqui usamos o editor de texto **vi**.
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
@@ -320,14 +320,14 @@ sudo systemctl status hwtosys.service
 
 - **Passo 16:** Reinicie a placa e você verá que o relógio do sistema agora está sincronizado com o relógio de hardware.
 
-## Controle da ventoinha
+## Controle de ventoinha
 
-nvfancontrol é um daemon em espaço de usuário para controle da velocidade da ventoinha. Ele gerencia a velocidade da ventoinha com base na tabela de mapeamento temperatura‑para‑velocidade da ventoinha no arquivo de configuração do nvfancontrol.
+nvfancontrol é um daemon em espaço de usuário para controle de velocidade da ventoinha. Ele gerencia a velocidade da ventoinha com base na tabela de mapeamento temperatura-para-velocidade da ventoinha no arquivo de configuração do nvfancontrol.
 
-Existem alguns elementos básicos no serviço nvfancontrol, incluindo Tmargin, kickstart PWM, perfil de ventoinha, controle de ventoinha e governor de ventoinha. Todos eles podem ser programados por meio do arquivo de configuração com base nas preferências do usuário. Este capítulo explicará cada um deles nas seções a seguir.
+Existem alguns elementos básicos no serviço nvfancontrol, incluindo Tmargin, kickstart PWM, perfil de ventoinha, controle de ventoinha e governador de ventoinha. Todos eles podem ser programados por meio do arquivo de configuração com base nas preferências do usuário. Este capítulo explicará cada um deles nas seções a seguir.
 
 :::note
-Se você quiser alterar o nvfancontrol.conf, certifique-se de ter lido [isto](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)
+Se você quiser alterar nvfancontrol.conf, certifique-se de ter lido [isso](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)
 :::
 
 ### Uso
@@ -335,20 +335,20 @@ Se você quiser alterar o nvfancontrol.conf, certifique-se de ter lido [isto](ht
 <Tabs>
 <TabItem value="Method 1" label="Method 1">
 
-- **Passo 1:** Pare o serviço systemd do nvfancontrol.
+- **Passo 1:** Pare o serviço systemd nvfancontrol.
 
 ```
 sudo systemctl stop nvfancontrol
 ```
 
-- **Passo 2:** Altere o nvfancontrol.conf.
+- **Passo 2:** Altere nvfancontrol.conf.
 
 ```
 vi /etc/nvfancontrol.conf 
 ```
 
 :::note
-Depois de alterar o nvfancontrol.conf, digite `Ese` e `:q` para sair
+Depois de alterar nvfancontrol.conf, digite `Ese` e `:q` para sair
 :::
 
 - **Passo 3:** Remova o arquivo de status.
@@ -357,7 +357,7 @@ Depois de alterar o nvfancontrol.conf, digite `Ese` e `:q` para sair
 sudo rm /var/lib/nvfancontrol/status
 ```
 
-- **Passo 4:** Reinicie o serviço systemd do nvfancontrol.
+- **Passo 4:** Reinicie o serviço systemd nvfancontrol.
 
 ```
 sudo systemctl restart nvfancontrol
@@ -373,20 +373,20 @@ sudo systemctl restart nvfancontrol
 sudo -i
 ```
 
-- **Passo 2:**  Pare o serviço systemd do nvfancontrol.
+- **Passo 2:**  Pare o serviço systemd nvfancontrol.
 
 ```
 sudo systemctl stop nvfancontrol
 ```
 
-- **Passo 3:**  Altere o valor PWM.
+- **Passo 3:**  Altere o valor de PWM.
 
 ```
 echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon3/pwm1
 ```
 
 :::note
-Quanto maior o valor, mais rápida será a velocidade da ventoinha. O valor de PWM deve estar entre 0 e 255; pode ser que **hwmon3** não seja o seu caminho, então verifique o seu próprio caminho
+Quanto maior o valor, mais rápida a velocidade da ventoinha. O valor de PWM deve estar entre 0 e 255, talvez **hwmon3** não seja o seu caminho, então verifique o seu próprio caminho
 :::
 
 - **Passo 4:**  Verifique o rpm.
@@ -436,7 +436,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>I2C1_SDA</td>
       <td>191</td>
       <td>DP_AUX_CH3_N</td>
-      <td>Dados I2C #1</td>
+      <td>Dados I2C nº 1</td>
       <td>-</td>
     </tr>
     <tr>
@@ -452,7 +452,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>I2C1_SCL</td>
       <td>189</td>
       <td>DP_AUX_CH3_P</td>
-      <td>Clock I2C #1</td>
+      <td>Clock I2C nº 1</td>
       <td>-</td>
     </tr>
     <tr>
@@ -476,7 +476,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>UART1_TXD</td>
       <td>203</td>
       <td>UART1_TX</td>
-      <td>Transmissão UART #1</td>
+      <td>Transmissão UART nº 1</td>
       <td>GPIO</td>
     </tr>
     <tr>
@@ -492,7 +492,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>UART1_RXD</td>
       <td>205</td>
       <td>UART1_RX</td>
-      <td>Recepção UART #1</td>
+      <td>Recepção UART nº 1</td>
       <td>GPIO</td>
     </tr>
     <tr>
@@ -501,7 +501,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>207</td>
       <td>UART1_RTS</td>
       <td>GPIO</td>
-      <td>UART #2 Request to Send</td>
+      <td>UART nº 2 Request to Send</td>
     </tr>
     <tr>
       <td>12</td>
@@ -509,7 +509,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>199</td>
       <td>DAP5_SCLK</td>
       <td>GPIO</td>
-      <td>Clock de Áudio I2S #0</td>
+      <td>Clock de Áudio I2S nº 0</td>
     </tr>
     <tr>
       <td>13</td>
@@ -517,7 +517,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>106</td>
       <td>SPI3_SCK</td>
       <td>GPIO</td>
-      <td>Clock de Deslocamento SPI #1</td>
+      <td>Clock de Deslocamento SPI nº 1</td>
     </tr>
     <tr>
       <td>14</td>
@@ -541,7 +541,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>112</td>
       <td>SPI3_CS1</td>
       <td>GPIO</td>
-      <td>Chip Select SPI #1 nº 1</td>
+      <td>Chip Select nº 1 do SPI nº 1</td>
     </tr>
     <tr>
       <td>17</td>
@@ -557,7 +557,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>110</td>
       <td>SPI3_CS0</td>
       <td>GPIO</td>
-      <td>Chip Select SPI #0 nº 0</td>
+      <td>Chip Select nº 0 do SPI nº 0</td>
     </tr>
     <tr>
       <td>19</td>
@@ -565,7 +565,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>89</td>
       <td>SPI1_MOSI</td>
       <td>GPIO</td>
-      <td>SPI #0 Master Out/Slave In</td>
+      <td>SPI nº 0 Master Out/Slave In</td>
     </tr>
     <tr>
       <td>20</td>
@@ -581,7 +581,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>93</td>
       <td>SPI1_MISO</td>
       <td>GPIO</td>
-      <td>SPI #0 Master In/Slave Out</td>
+      <td>SPI nº 0 Master In/Slave Out</td>
     </tr>
     <tr>
       <td>22</td>
@@ -589,7 +589,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>108</td>
       <td>SPI3_MISO</td>
       <td>GPIO</td>
-      <td>SPI #1 Master In/Slave Out</td>
+      <td>SPI nº 1 Master In/Slave Out</td>
     </tr>
     <tr>
       <td>23</td>
@@ -597,7 +597,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>91</td>
       <td>SPI1_SCK</td>
       <td>GPIO</td>
-      <td>Clock de Deslocamento SPI #0</td>
+      <td>Clock de Deslocamento SPI nº 0</td>
     </tr>
     <tr>
       <td>24</td>
@@ -605,7 +605,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>95</td>
       <td>SPI1_CS0</td>
       <td>GPIO</td>
-      <td>Chip Select #0 do SPI #0</td>
+      <td>SPI nº 0 Chip Select nº 0</td>
     </tr>
     <tr>
       <td>25</td>
@@ -621,14 +621,14 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>97</td>
       <td>SPI1_CS1</td>
       <td>GPIO</td>
-      <td>Chip Select #1 do SPI #0</td>
+      <td>SPI nº 0 Chip Select nº 1</td>
     </tr>
     <tr>
       <td>27</td>
       <td>I2C0_SDA</td>
       <td>187</td>
       <td>GEN2_I2C_SDA</td>
-      <td>Dados do I2C #0</td>
+      <td>I2C nº 0 Dados</td>
       <td>GPIO</td>
     </tr>
     <tr>
@@ -636,7 +636,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>I2C0_SCL</td>
       <td>185</td>
       <td>GEN2_I2C_SCL</td>
-      <td>Clock do I2C #0</td>
+      <td>I2C nº 0 Clock</td>
       <td>GPIO</td>
     </tr>
     <tr>
@@ -645,7 +645,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>118</td>
       <td>SOC_GPIO41</td>
       <td>GPIO</td>
-      <td>Clock de Uso Geral #0</td>
+      <td>Clock de uso geral nº 0</td>
     </tr>
     <tr>
       <td>30</td>
@@ -661,7 +661,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>216</td>
       <td>SOC_GPIO42</td>
       <td>GPIO</td>
-      <td>Clock de Uso Geral #1</td>
+      <td>Clock de uso geral nº 1</td>
     </tr>
     <tr>
       <td>32</td>
@@ -693,7 +693,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>197</td>
       <td>DAP5_FS</td>
       <td>GPIO</td>
-      <td>Seleção de Campo de Áudio I2S #0</td>
+      <td>Áudio I2S nº 0 Field Select</td>
     </tr>
     <tr>
       <td>36</td>
@@ -701,7 +701,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>209</td>
       <td>UART1_CTS</td>
       <td>GPIO</td>
-      <td>Clear to Send da UART #1</td>
+      <td>UART nº 1 Clear to Send</td>
     </tr>
     <tr>
       <td>37</td>
@@ -709,7 +709,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>104</td>
       <td>SPI3_MOSI</td>
       <td>GPIO</td>
-      <td>Master Out/Slave In do SPI #1</td>
+      <td>SPI nº 1 Master Out/Slave In</td>
     </tr>
     <tr>
       <td>38</td>
@@ -717,7 +717,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>195</td>
       <td>DAP5_DIN</td>
       <td>GPIO</td>
-      <td>Entrada de Dados de Áudio I2S #0</td>
+      <td>Áudio I2S nº 0 Dados de entrada</td>
     </tr>
     <tr>
       <td>39</td>
@@ -733,7 +733,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>193</td>
       <td>DAP5_DOUT</td>
       <td>GPIO</td>
-      <td>Saída de Dados de Áudio I2S #0</td>
+      <td>Áudio I2S nº 0 Dados de saída</td>
     </tr>
   </tbody>
 </table>
@@ -741,9 +741,9 @@ cat /sys/class/hwmon/hwmon0/rpm
 
 ### UART
 
-UART significa Universal Asynchronous Receiver/Transmitter. É um protocolo de comunicação usado para comunicação serial entre dois dispositivos. A comunicação UART envolve dois pinos: um para transmissão de dados (TX) e um para recepção de dados (RX). Ela é assíncrona, o que significa que os dados são transmitidos sem um sinal de clock compartilhado entre os dispositivos. UART é comumente usado em várias aplicações, como microcontroladores, sensores e comunicação entre diferentes dispositivos eletrônicos.
+UART significa Universal Asynchronous Receiver/Transmitter. É um protocolo de comunicação usado para comunicação serial entre dois dispositivos. A comunicação UART envolve dois pinos: um para transmitir dados (TX) e um para receber dados (RX). É assíncrona, o que significa que os dados são transmitidos sem um sinal de clock compartilhado entre os dispositivos. UART é comumente usado em várias aplicações, como microcontroladores, sensores e comunicação entre diferentes dispositivos eletrônicos.
 
-#### Visão Geral da Conexão
+#### Visão geral da conexão
 
 A interface UART está usando o pino abaixo, ou você pode usar outra interface UART no J401:
 
@@ -751,12 +751,12 @@ A interface UART está usando o pino abaixo, ou você pode usar outra interface 
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Pino do Header</th>
-      <th>Nome do Pino do Módulo</th>
-      <th>Pino do Módulo</th>
-      <th>Nome do Pino do SoC</th>
-      <th>Uso Padrão</th>
-      <th>Funcionalidade Alternativa</th>
+      <th>Pino do header</th>
+      <th>Nome do pino do módulo</th>
+      <th>Pino do módulo</th>
+      <th>Nome do pino do SoC</th>
+      <th>Uso padrão</th>
+      <th>Funcionalidade alternativa</th>
     </tr>
   </thead>
   <tbody>
@@ -773,7 +773,7 @@ A interface UART está usando o pino abaixo, ou você pode usar outra interface 
       <td>UART1_TXD</td>
       <td>203</td>
       <td>UART1_TX</td>
-      <td>Transmissão da UART #1</td>
+      <td>UART nº 1 Transmitir</td>
       <td>GPIO</td>
     </tr>
     <tr>
@@ -781,7 +781,7 @@ A interface UART está usando o pino abaixo, ou você pode usar outra interface 
       <td>UART1_RXD</td>
       <td>205</td>
       <td>UART1_RX</td>
-      <td>Recepção da UART #1</td>
+      <td>UART nº 1 Receber</td>
       <td>GPIO</td>
     </tr>
   </tbody>
@@ -793,9 +793,9 @@ Conecte o J401 com TTL com UART como abaixo:
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Pino do Header J401</th>
+      <th>Pino do header J401</th>
       <th> Uso</th>
-      <th>USB para TTL</th>
+      <th>USB traduz para TTL</th>
       <th>Uso</th>
     </tr>
   </thead>
@@ -830,16 +830,16 @@ Conecte o J401 com TTL com UART como abaixo:
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-windows-uart-set.png"/></div>
 
-- **Passo 2:** Instale o PuTTy no Jetson, abra seu terminal (ALT+Ctrl+T) e digite o seguinte comando.
+- **Passo 2:** Instale o PuTTy no Jetson, abra o seu terminal (ALT+Ctrl+T) e digite o seguinte comando.
 
 ```
 sudo apt install putty
 ```
 
-- **Passo 3:** Use o PuTTy no Windows para enviar 'hello linux' para o Jetson e use o PuTTy no Jetson para enviar 'hello windows' para o Windows.
+- **Passo 3:** Use o PuTTy no Windows para enviar 'hello linux' para o Jetson, e use o PuTTy no Jetson para enviar 'hello windows' para o Windows.
 
 :::note
-Certifique-se de que o seu baudrate foi configurado para 115200.
+Certifique-se de que o seu baudrate foi definido para 115200.
 :::
 
 O resultado é o seguinte:
@@ -848,9 +848,9 @@ O resultado é o seguinte:
 
 ### I2C
 
-I2C significa Inter-Integrated Circuit. É um protocolo de comunicação serial amplamente utilizado que permite a comunicação entre múltiplos circuitos integrados em um sistema. O I2C usa duas linhas bidirecionais: uma para dados (SDA) e uma para clock (SCL). Os dispositivos conectados em um barramento I2C podem atuar como mestre ou escravo, permitindo que vários dispositivos se comuniquem entre si. O I2C é popular por sua simplicidade, flexibilidade e capacidade de conectar uma variedade de dispositivos, como sensores, chips de memória e outros periféricos em sistemas embarcados e dispositivos eletrônicos.
+I2C significa Inter-Integrated Circuit. É um protocolo de comunicação serial amplamente utilizado que permite a comunicação entre vários circuitos integrados em um sistema. I2C usa duas linhas bidirecionais: uma para dados (SDA) e uma para clock (SCL). Os dispositivos conectados em um barramento I2C podem atuar como mestre ou escravo, permitindo que vários dispositivos se comuniquem entre si. I2C é popular por sua simplicidade, flexibilidade e capacidade de conectar uma variedade de dispositivos, como sensores, chips de memória e outros periféricos em sistemas embarcados e dispositivos eletrônicos.
 
-#### Visão Geral da Conexão
+#### Visão geral da conexão
 
 A interface I2C está usando o pino abaixo, ou você pode usar outra interface I2C no J401:
 
@@ -858,12 +858,12 @@ A interface I2C está usando o pino abaixo, ou você pode usar outra interface I
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Pino do Header</th>
-      <th>Nome do Pino do Módulo</th>
-      <th>Pino do Módulo</th>
-      <th>Nome do Pino do SoC</th>
-      <th>Uso Padrão</th>
-      <th>Funcionalidade Alternativa</th>
+      <th>Pino do header</th>
+      <th>Nome do pino do módulo</th>
+      <th>Pino do módulo</th>
+      <th>Nome do pino do SoC</th>
+      <th>Uso padrão</th>
+      <th>Funcionalidade alternativa</th>
     </tr>
   </thead>
     <tr>
@@ -871,7 +871,7 @@ A interface I2C está usando o pino abaixo, ou você pode usar outra interface I
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>Alimentação Principal 5,0V</td>
+      <td>Fonte principal de 5,0 V</td>
       <td>-</td>
     </tr>
     <tr>
@@ -879,7 +879,7 @@ A interface I2C está usando o pino abaixo, ou você pode usar outra interface I
       <td>I2C1_SDA</td>
       <td>191</td>
       <td>DP_AUX_CH3_N</td>
-      <td>Dados do I2C #1</td>
+      <td>I2C nº 1 Dados</td>
       <td>-</td>
     </tr>
     <tr>
@@ -887,7 +887,7 @@ A interface I2C está usando o pino abaixo, ou você pode usar outra interface I
       <td>I2C1_SCL</td>
       <td>189</td>
       <td>DP_AUX_CH3_P</td>
-      <td>Clock do I2C #1</td>
+      <td>I2C nº 1 Clock</td>
       <td>-</td>
     </tr>
     <tr>
@@ -915,7 +915,7 @@ Conecte o J401 ao [Grove-3-Axis Digital Accelerometer](https://www.seeedstudio.c
   </thead>
     <tr>
       <td>2</td>
-      <td>Alimentação 5V</td>
+      <td>Fonte de 5 V</td>
       <td>Vcc</td>
       <td>-</td>
     </tr>
@@ -944,7 +944,7 @@ Conecte o J401 ao [Grove-3-Axis Digital Accelerometer](https://www.seeedstudio.c
 
 #### Teste
 
-Abra seu terminal (ALT+Ctrl+T) e digite o seguinte comando:
+Abra o seu terminal (ALT+Ctrl+T) e digite o seguinte comando:
 
 ```
 i2cdetect -y -r 7
@@ -954,7 +954,7 @@ i2cdetect -y -r 7
 Seu canal pode ser diferente do meu no comando: ```i2cdetect -y -r x```.
 :::
 
-Você verá o resultado abaixo; antes de conectar ao I2C, nenhum dispositivo I2C foi detectado no canal 7, mas depois disso um dispositivo I2C com o endereço 0x19 foi detectado.
+Você verá o resultado abaixo, antes de conectar ao I2C, nenhum dispositivo I2C foi detectado no canal 7, mas depois um dispositivo I2C com o endereço 0x19 foi detectado.:
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
 
@@ -962,9 +962,61 @@ Você verá o resultado abaixo; antes de conectar ao I2C, nenhum dispositivo I2C
 Se você quiser usar pinos IO gerais para controle lógico, consulte [este wiki](/pt-br/reComputer_Jetson_GPIO).
 :::
 
-## Suporte Técnico & Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja o mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+## CAN
+
+A série reComputer J401 fornece uma interface CAN onde o sinal CAN é enviado diretamente do SOM em níveis TTL/CMOS, que é um sinal diferencial não padrão exigindo um transceptor CAN externo para se conectar a um barramento CAN padrão; ela suporta formatos de quadro CAN FD, permitindo comprimento de dados estendido e taxas de dados mais altas, tornando-a adequada para automação industrial, robótica, prototipagem automotiva e outras aplicações que exigem comunicação confiável e em tempo real.
+
+
+#### Visão geral da conexão
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can.jpg"/></div>
+
+
+#### Uso
+
+**Passo 1.** Configurar e abrir can0:
+
+```bash
+sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 500000
+sudo ip link set can0 up
+```
+
+**Passo 2.** Teste de comunicação. Abra um terminal para receber sinais.
+```bash
+candump can0
+```
+**Passo 3.** Abra outro terminal para enviar o sinal.
+```bash
+cansend can0 123#abcdabcd
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can.png"/></div>
+
+#### CAN FD
+
+**Passo 1.** Configurar e abrir can0:
+```bash
+# Install can-utils Tools 
+sudo apt update && sudo apt install can-utils -y
+
+# Enable CAN0 interface (FD mode, 5Mbps data segment rate) 
+sudo ip link set can0 up type can bitrate 500000 dbitrate 2000000 fd on
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can_fd1.png"/></div>
+
+**Passo 2.** Abra outro terminal para enviar o sinal.
+```bash
+cansend can0 123#1122334455667788
+```
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/can_fd2.png"/></div>
+
+## Suporte Técnico e Discussão de Produtos
+
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

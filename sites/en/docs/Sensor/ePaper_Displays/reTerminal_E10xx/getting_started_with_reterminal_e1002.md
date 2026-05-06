@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';
@@ -48,9 +48,76 @@ reTerminal E1002 is a 7.3 inch open-source full color ePaper display with except
 - **Works with Popular Software Platforms**
 - **Flexible Hardware & Software Customization**
 
+## Specification
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th align="center">Item</th>
+			<th align="center">Description</th>
+		</tr>
+		<tr>
+			<td align="center"><strong>Product Name</strong></td>
+			<td align="center">reTerminal E1002</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Processor</strong></td>
+			<td align="center">ESP32-S3 with 8MB PSRAM</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Storage</strong></td>
+			<td align="center">32MB Flash, support Micro SD card</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Display</strong></td>
+			<td align="center">7.3" Full Color (E Ink® Spectra™ 6)</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Resolution</strong></td>
+			<td align="center">800 x 480 Pixels</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Micro SD Card</strong></td>
+			<td align="center">Maximum support 32GB SD card, FAT32 format</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Wireless Connectivity</strong></td>
+			<td align="center">2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Sensors</strong></td>
+			<td align="center">Temperature, humidity sensors</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Microphone</strong></td>
+			<td align="center">Reserved for voice interaction application</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Buzzer</strong></td>
+			<td align="center">Buzzer for sound alert</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Battery</strong></td>
+			<td align="center">2000mAh</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Power Input</strong></td>
+			<td align="center">USB-C 5V/1A</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Working Temperature</strong></td>
+			<td align="center">0-40°C</td>
+		</tr>
+		<tr>
+			<td align="center"><strong>Dimensions</strong></td>
+			<td align="center">176mm x 120mm x 53mm (With Stand) / 17mm (Without Stand)</td>
+		</tr>
+	</table>
+</div>
+
 ## Hardware Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/150.png" style={{width:1000, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/207.png" style={{width:1000, height:'auto'}}/></div><br />
 
 The reTerminal E1002 hardware includes:
 
@@ -62,75 +129,65 @@ The reTerminal E1002 hardware includes:
 6. **Status LED**: User indicator (green)
 7. **Power LED**: Charge indicator (red)
 8. **USB-C Port**: For charging and firmware updates
-9. **Expansion Port**: 8-pin expansion header providing VDD, GND, I2C, and GPIO connections
+9. **Expansion Port**: 8-pin expansion header providing VDD, GND, UART, I2C, and GPIO connections
+10. **Stand Mounting Inserts**: Embedded nuts (screw holes) on the bottom back of the device for attaching the 3D-printed support stand
 
 ## Getting Started
 
 ### Preliminary
 
 **Step 1.** Unbox your reTerminal E1002 and ensure all components are included:
+
 - reTerminal E1002 device
 - USB-C cable
 - Quick start guide
+- long screwdriver
+- screws
+- 3D-printed support stand
 
-**Step 2.** (Optional) Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
+**Step 2.** (Optional) Install the 3D-printed support stand to place the device upright:
+
+Locate the 3D-printed support stand included in the package. Position the support stand against the designated mounting area on the bottom back of the reTerminal E1002 where the embedded nuts are located. Use a long screwdriver to secure the stand to the device by tightening the screws into the embedded nuts on the back of the reTerminal E1002. Once securely attached, place the reTerminal E1002 on a flat surface where the stand will support it in an upright position.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
+
+:::note
+The stand provides a fixed viewing angle and cannot be adjusted. This fixed positioning is designed to offer optimal visibility in most usage scenarios.
+:::
+
+**Step 3.** (Optional) Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-The reTerminal E Series ePaper Display only supports MicroSD cards up to 64GB in Fat32 format.  
-The 64GB SD card is formatted as exFAT by default. After formatting it to FAT32, it can be successfully mounted and used to store images.
+The reTerminal E Series ePaper Display only supports MicroSD cards up to 32GB in Fat32 format.  
+The 32GB SD card is formatted as exFAT by default. After formatting it to FAT32, it can be successfully mounted and used to store images.
 :::
 
-**Step 3.** (Optional) Install USB drivers if needed:
+**Step 4.** (Optional) Install USB drivers if needed:
 
 Depending on your operating system, you may need to install USB drivers to ensure proper communication with your reTerminal E1002:
 
-- **For Mac computers**: Download and install the CH34X driver from [WCH official website](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
 
-- **For Windows computers**: 
-  - Windows 11 systems typically include the driver by default
-  - For Windows 10 and earlier versions, you may need to download and install the CH341 driver from [WCH official website](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+- Windows 11 systems typically include the driver by default
+- For Windows 10 and earlier versions, you may need to download and install the CH341 driver from [WCH official website](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
-- **For Linux systems**: Most modern Linux distributions include the necessary drivers by default
+</TabItem>
 
-**Step 4.** Update the firmware to ensure your device is running the latest version:
+<TabItem value="MacOS" label="MacOS">
 
-1. Connect your reTerminal E1002 to your computer using the USB-C cable
+Download and install the CH34X driver from [WCH official website](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
 
-2. Power on the device using the power switch on the back
+</TabItem>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/134.jpg" style={{width:700, height:'auto'}}/></div>
+<TabItem value="Linux" label="Linux">
 
-3. Visit **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** and sign in to your account
+Most modern Linux distributions include the necessary drivers by default
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
-    </a>
-</div><br />
-
-4. Navigate to the **Workspace** section
-
-5. Click on **Device Flasher** in the upper right corner
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/9.png" style={{width:1000, height:'auto'}}/></div>
-
-6. Select your reTerminal E1002 device from the list. According to this tutorial, you should choose **reTerminal E1002 7.3" Full Color Display**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/11.png" style={{width:800, height:'auto'}}/></div>
-
-7. Choose the latest firmware version from the dropdown menu
-
-8. Click **Flash** and wait for the update process to complete
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/10.png" style={{width:800, height:'auto'}}/></div>
-
-:::note
-1. Updating the firmware ensures optimal performance and access to the latest features. It's recommended to perform this update before using your device for the first time.
-
-2. It is not possible to flash the firmware properly when the device is in the shutdown or sleep state. If you select the correct port for your device but never see the flash firmware progress, then you may need to wake up the device by pressing the green button on the top of the unit and try again.
-:::
+</TabItem>
+</Tabs>
 
 ### Power On
 
@@ -184,9 +241,9 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 </div><br />
 
 
-**Step 2.** Navigate to the **Workspace** section and click **Add Device**.
+**Step 2.** In the left sidebar, click **Device** to enter the Device page, then click the **+ New Device** button in the upper-left corner.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/200.png" style={{width:600, height:'auto'}}/></div>
 
 **Step 3.** Name your device and enter the pairing code displayed on your device's screen and click **Create**.
 
@@ -244,54 +301,68 @@ The device can only be configured via a 2.4G Wi-Fi network.
 </TabItem>
 </Tabs>
 
-## Creating a Dashboard
+### Firmware Update
 
-The reTerminal E1002 integrates seamlessly with the SenseCraft HMI platform, which provides powerful tools for creating and customizing content for your device. Instead of detailing step-by-step operations here, let's explore the platform's key features to help you understand what's possible.
+After the device is successfully added to your SenseCraft account, the platform will automatically check the firmware version. If a newer firmware is available, you will be prompted to update.
 
-### SenseCraft HMI Features
+You can also check the firmware version manually at any time:
 
-**AI Generator**
+**Step 1.** On the **Device** page, find your reTerminal E1002 to view its details, and note the **current firmware version**.
 
-Let artificial intelligence design your dashboard! Simply describe what information you want displayed, and the AI Generator will automatically create an attractive, functional layout. This is perfect for quickly generating weather displays, calendars, to-do lists, or informational panels without manual design work.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/201.png" style={{width:350, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
+**Step 2.** In the left sidebar, click **Tools** and open the **Firmware Flasher** tab to see the **latest firmware version** available for this device.
 
-**Gallery**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/202.png" style={{width:1000, height:'auto'}}/></div>
 
-Transform your reTerminal E1002 into a digital photo frame with the Gallery feature. Upload your favorite images, and the platform will optimize them for the ePaper display. Create slideshows with custom transition times.
+**Step 3.** If the current version is older than the latest one, follow the 3-step flow on the Firmware Flasher page to update:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/13.png" style={{width:1000, height:'auto'}}/></div>
+1. **Select your device** — plug the reTerminal E1002 into your computer via the USB-C cable, make sure the power switch is **ON**, then click **Select** and choose your device from the list.
 
-**Canvas**
+2. **Select firmware** — choose the latest firmware from the release options dropdown.
 
-Design your dashboard from scratch with Canvas, a drag-and-drop interface offering various elements:
-- Text blocks with customizable fonts and sizes
-- Image placeholders
-- Widgets for time, date, and weather
-- Data visualization tools
-- Shapes and dividers for layout organization
+3. **Flash** — click **Flash** and wait for the update to complete. Enable **Full Flash** only if you want to reset the device to factory state (all data, settings, and designs will be wiped).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/14.png" style={{width:1000, height:'auto'}}/></div>
+:::note
 
-**RSS Feed Integration**
+1. Updating the firmware ensures optimal performance and access to the latest features.
 
-Stay updated with your favorite news sources, blogs, or websites by adding RSS feeds to your dashboard. The RSS feature allows you to display headlines, summaries, or full articles from multiple sources.
+2. It is not possible to flash the firmware properly when the device is in the shutdown or sleep state. If you select the correct port for your device but never see the flash firmware progress, you may need to wake up the device by pressing the green button on the top of the unit and try again.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/15.png" style={{width:1000, height:'auto'}}/></div>
+3. **Do a standard Flash** to keep your setup: Wi-Fi, deployed designs, and pictures are preserved. **Do a Full Flash to start fresh**: all data, settings, and designs are wiped (factory state).
 
-**Web Content Display**
+:::
 
-Capture and display specific web content on your device. The Web feature can render selected portions of websites, allowing you to display information like transit schedules, stock tickers, or other online data sources.
+## Display Content on Your reTerminal E1002
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/22.png" style={{width:1000, height:'auto'}}/></div>
+Once your device is paired, you can start using it to display whatever you like. We recommend **SenseCraft HMI** — a no-code cloud platform that lets you design and deploy content to your reTerminal E1002 in just a few clicks.
 
-### Getting Started with SenseCraft HMI
+SenseCraft HMI has its own dedicated Wiki with full tutorials and feature documentation. For in-depth guides (account setup, firmware flashing, advanced editor usage, deployment, etc.), please refer to:
 
-After pairing your device with the SenseCraft platform as described in the previous section, you'll be ready to create your first dashboard. For detailed instructions on using each feature, please refer to the corresponding Wiki pages:
+- **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
-- [SenseCraft HMI Overview](https://sensecraft-hmi-docs.seeed.cc/en/)
+Since this article is a product **Getting Started**, we will not repeat the same content here — the following only shows how to quickly display something on your reTerminal E1002.
 
-Once you've created and saved your dashboard in the SenseCraft platform, simply click "Deploy to Device," select your paired reTerminal E1002, and your custom content will be wirelessly transmitted to the device. The ePaper display will update to show your dashboard, and you can use the navigation buttons to switch between multiple pages if you've created them.
+### Home — Start From a Community Template
+
+The fastest way to get something on your screen is to start from a ready-made template. On the **Home** page of SenseCraft HMI, you will find a large and continuously growing collection of templates contributed by the community — dashboards, clocks, weather panels, quote walls, calendars, photo frames, and more. Browse the gallery, pick whichever design you like, and deploy it to your reTerminal E1002 with one click.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
+
+### Workspace — Manage and Design Your Own Content
+
+The **Workspace** page is where you manage all pages and content shown on the currently bound device. From here you can:
+
+- Create and arrange your own design pages from scratch
+- Upload images and organize them into slideshows
+- Combine text, widgets, shapes, data, RSS feeds, web content, and more in a single drag-and-drop editor
+- Deploy the final design wirelessly to your reTerminal E1002
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/205.png" style={{width:1000, height:'auto'}}/></div>
+
+Once your design is saved, click **Deploy to Device**, select your paired reTerminal E1002, and the content will be transmitted wirelessly to the device. The ePaper display will update to show your design, and you can use the left/right navigation buttons on the device to switch between multiple pages if you created them.
+
+For everything else — detailed editor operations, tips, and release notes — refer to the [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
 ## Operating the Device
 
@@ -421,26 +492,6 @@ The 8-pin expansion header (J2) has the following pinout:
 		</tr>
 	</table>
 </div>
-
-## Device Placement
-
-The reTerminal E1002 comes with a 3D-printed support stand accessory that allows you to position the device upright for optimal viewing:
-
-**Step 1.** Locate the 3D-printed support stand included in the package.
-
-**Step 2.** Position the support stand against the designated mounting area on the bottom back of the reTerminal E1002 where the embedded nuts are located.
-
-**Step 3.** Use a long screwdriver to secure the stand to the device by tightening the screws into the embedded nuts on the back of the reTerminal E1002.
-
-**Step 4.** Once securely attached, place the reTerminal E1002 on a flat surface where the stand will support it in an upright position.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
-
-:::note
-The stand provides a fixed viewing angle and cannot be adjusted. This fixed positioning is designed to offer optimal visibility in most usage scenarios.
-
-The stand allows the device to be placed on desks, countertops, or shelves, making it ideal for use as an information display, control panel, or digital photo frame in various environments.
-:::
 
 ## Troubleshooting
 

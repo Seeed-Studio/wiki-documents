@@ -1,23 +1,23 @@
 ---
 description: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
 sku: 100057220
-title: Getting Started with XIAO ePaper Display Board(ESP32-S3) - EE05
-sidebar_position: 1
+title: Getting Started with EE05
 image: https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp
 slug: /epaper_ee05
+sidebar_position: 4
 last_update:
   date: 04/27/2026
   author: dimo
 createdAt: '2026-04-07'
 url: https://wiki.seeedstudio.com/epaper_ee05/
-updatedAt: '2026-04-27'
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Getting Started with XIAO ePaper Display EE05
+# Getting Started with XIAO ePaper Display Board - EE05
 
 <div class="table-center">
 <table align="center">

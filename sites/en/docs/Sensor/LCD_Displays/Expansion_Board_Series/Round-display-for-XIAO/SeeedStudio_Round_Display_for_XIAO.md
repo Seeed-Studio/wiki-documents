@@ -9,10 +9,10 @@ slug: /get_start_round_display
 sidebar_position: 1
 sku: 104030087
 last_update:
-  date: 07/11/2024
+  date: 4/30/2026
   author: Spencer
 createdAt: '2023-03-17'
-updatedAt: '2026-04-21'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/get_start_round_display/
 ---
 
@@ -239,7 +239,7 @@ Name the new file as `driver.h`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/12_create_driver_h.png" style={{width:1000, height:'auto'}}/></div>
 
-Go to the [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/), and select "TRMNL 7.5" (OG) DIY Kit" as shown in the image.
+Go to the [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/), and select "Round Display for Seeed Studio XIAO" as shown in the image.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/108.png" style={{width:600, height:'auto'}}/></div>
 
@@ -249,7 +249,7 @@ Copy the generated code and paste it into the `driver.h` file you created. The c
 #define BOARD_SCREEN_COMBO 501 // Round Display for Seeed Studio XIAO （GC9A01)
 ```
 
-Now you can upload the example to your TRMNL DIY Kit and see the ePaper display in action!
+Now you can upload the example to your Round Display and see the LCD display in action!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/107.jpg" style={{width:600, height:'auto'}}/></div>
 

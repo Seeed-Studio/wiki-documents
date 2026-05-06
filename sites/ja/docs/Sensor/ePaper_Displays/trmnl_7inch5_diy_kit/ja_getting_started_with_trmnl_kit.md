@@ -8,7 +8,7 @@ last_update:
   date: 06/29/2025
   author: Allen
 createdAt: '2025-07-16'
-updatedAt: '2025-09-15'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/ja/trmnl_7inch5_diy_kit_main_page/
 ---
 
@@ -45,24 +45,24 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 | パラメータ | 説明 |
 | --- | --- |
 | MCU | XIAO ESP32-S3 Plus 搭載 XIAO 電子ペーパーディスプレイ開発ボード |
-| Display | 7.5 インチ単色電子ペーパーディスプレイ |
-| Resolution | 800x480 |
-| Operating Voltage | 5V |
-| Battery | 2000mAh 充電式リチウムイオンバッテリー（ディープスリープモードで最大 3 か月のバッテリー寿命） |
-| Operating Temperature | -40°C ～ 85°C |
-| Enclosure | 付属しません（Printables および Thingiverse 上のオープンソース設計を利用） |
+| ディスプレイ | 7.5 インチ単色電子ペーパーディスプレイ |
+| 解像度 | 800x480 |
+| 動作電圧 | 5V |
+| バッテリー | 2000mAh 充電式リチウムイオンバッテリー（ディープスリープモードで最大 3 か月のバッテリー寿命） |
+| 動作温度 | -40°C ～ 85°C |
+| エンクロージャ | 付属しません（Printables および Thingiverse 上のオープンソース設計を利用） |
 
 ## ハードウェア概要
 
-### 構成図
+### 構成部品図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/overview.png" style={{width:600, height:'auto'}}/></div>
 
-### パーツ一覧
+### 同梱物一覧
 
 | 製品 | 数量 |
 | --- | --- |
-| XIAO 電子ペーパーディスプレイ開発ボード（XIAO ESP32-S3 Plus） | 1 |
+| XIAO 電子ペーパーディスプレイ開発ボード（XIAO ESP32-S3 Plus 搭載） | 1 |
 | 7.5 インチ単色電子ペーパーディスプレイ（800×480） | 1 |
 | FPC 延長ケーブル（10 cm） | 1 |
 | FPC コネクタ | 1 |
@@ -73,12 +73,12 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 ### 機器の取り付け
 
 **ステップ 1. ディスプレイをドライバボードに接続する**  
-FPC ケーブルを XIAO 電子ペーパーディスプレイボード上のコネクタに合わせ、ラッチを固定して確実に接続されていることを確認します。  
+FPC ケーブルを XIAO 電子ペーパーディスプレイボード上のコネクタに合わせ、ラッチを固定して確実に接続してください。  
 
 :::tip
-FPC ケーブルの金属面は上向きにする必要があります。向きが逆だと、何も表示されません。
+FPC ケーブルの金属面は上向きにする必要があります。向きが逆だと、画面に何も表示されません。
 
-多くの方が間違えるため、必ず以下の取り付けチュートリアルに従ってください。
+多くの方が間違える箇所なので、必ず以下の取り付けチュートリアルに従ってください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
@@ -88,12 +88,12 @@ FPC ケーブルの金属面は上向きにする必要があります。向き�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
 
-**ステップ 3. ケースの組み立て（オプション）**  
+**ステップ 3. エンクロージャの組み立て（任意）**  
 
 :::tip
 画面のフレキシブルケーブルは非常に繊細です。作業時は十分注意してください。損傷すると、画面全体が動作しなくなります。
 :::
-下記の [Resource part](#リソース) からオープンソースの筐体パーツを印刷し、その中に各コンポーネントを組み込みます。  
+下記の [Resource part](#resource) からオープンソースのエンクロージャ部品を印刷し、その中に各コンポーネントを組み込んでください。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
 
@@ -111,7 +111,7 @@ TRMNL キットが正常に動作するかテストします。
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-画面をケースに差し込み、FPC を外に出せるようにします。
+画面をケースに差し込み、FPC が外に出せるようにします。
 
 <div class="table-center">
 <iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
@@ -125,7 +125,7 @@ FPC 延長ケーブルを接続し、ケース全体を組み立てます。
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-L 字型ケースもほぼ同様です。
+L 字型エンクロージャもほぼ同様です。
 
 <div class="table-center">
 <iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
@@ -133,16 +133,16 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 </div>
 
 :::tip
-TRMNL キットがルーターから遠い場合は、アンテナをケースの外に出すことで、より良い性能が得られます。
+TRMNL キットがルーターから遠い場合は、アンテナをケースの外に出すことができます。その方が性能が向上します。
 :::
 
 ## Wiki センター
 
-### 詳細ガイドを探す
+### 詳細ガイドを探索する
 
-#### 1. [TRMNL BYOD エコシステムチュートリアル](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_trmnl/)
+#### 1. [TRMNL BYOD エコシステムチュートリアル](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl/)
 
-TRMNL BYOD プラットフォームを使い、375 以上のプラグインや、仕事や生活のためのノーコードダッシュボード作成を行う方法を学びます。
+TRMNL BYOD プラットフォームを使って 375 以上のプラグインを活用し、仕事や生活のためのノーコードダッシュボードを作成する方法を学びましょう。
 
 #### 2. [Home Assistant との連携](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)
 
@@ -150,20 +150,20 @@ ESPHome を介して Home Assistant と TRMNL キットを連携させる方法�
 
 #### 3. [Arduino との連携](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino/)
 
-TRMNL キットの制御について、Arduino を用いた更新メカニズム、グラフィックス描画、電源管理などを習得します。
+Arduino を用いて TRMNL キットを制御する方法を、リフレッシュ機構、グラフィックス描画、電源管理を含めてマスターしましょう。
 
 ## <span id="resource">リソース</span>
 
-- **[Firmware]** [TRMNL 電子ペーパーライブラリ (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
-- **[Hardware]** [ドライバボード回路図](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
-- **[Printable]** [三角形ベース](https://www.printables.com/model/1354873)  
-- **[Printable]** [保護付き三角形ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
+- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
+- **[Hardware]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
+- **[Printable]** [三角ベース](https://www.printables.com/model/1354873)  
+- **[Printable]** [保護付き三角ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
 - **[Printable]** [L 字型ベース](https://www.printables.com/model/1354879)  
-- **[Thingiverse]** [三角形ベース](https://www.thingiverse.com/thing:7091094)
-- **[Thingiverse]** [保護付き三角形ベース](https://www.thingiverse.com/thing:7097231)
+- **[Thingiverse]** [三角ベース](https://www.thingiverse.com/thing:7091094)
+- **[Thingiverse]** [保護付き三角ベース](https://www.thingiverse.com/thing:7097231)
 - **[Thingiverse]** [L 字型ベース](https://www.thingiverse.com/thing:7091096)
-- **[Makerworld]** [三角形ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
-- **[Makerworld]** [保護付き三角形ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [三角ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
+- **[Makerworld]** [保護付き三角ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L 字型ベース](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## 技術サポート & 製品ディスカッション

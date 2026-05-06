@@ -1,6 +1,6 @@
 ---
 description: EE03 10.3 英寸电子墨水驱动板快速上手
-title: XIAO 电子纸显示板 EE03 快速上手
+title: EE03 快速上手
 keywords:
   - E-ink
   - Driver Board
@@ -9,6 +9,7 @@ keywords:
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
 slug: /getting_started_with_ee03
+sidebar_position: 2
 sku: 100080566
 last_update:
   date: 2026-03-1
@@ -18,6 +19,8 @@ updatedAt: '2026-03-04'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_ee03/
 ---
 
+# XIAO 电子纸显示板 EE03 快速上手
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
@@ -25,8 +28,8 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE03</th>
-        <th>10.3" Monochrome ePaper Display</th>
+        <th>XIAO 电子纸显示板 EE03</th>
+        <th>10.3" 单色电子纸显示屏</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg"/></div>
@@ -47,18 +50,18 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 介绍
 
-由 **XIAO ESP32-S3 Plus** 提供算力，电子纸驱动板 EE03 支持 **10.3 英寸黑白电子纸显示屏**。它配备带电源开关的 JST 2.0 mm 电池接口、内置充电 IC，并带有一个复位按键和三个用户按键。非常适合用于低功耗电子纸项目，例如数码相框和信息看板。
+由 **XIAO ESP32-S3 Plus** 提供算力，电子纸驱动板 EE03 支持 **10.3 单色电子纸显示屏**。它配备带电源开关的 JST 2.0 mm 电池接口、板载充电 IC，并带有 1 个复位按键和 3 个用户按键。非常适合用于低功耗电子纸项目，例如数码相框和信息公告板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### 特性
 
 - **内置 XIAO ESP32-S3 Plus：** 连接兼容的电子纸显示屏即可立即工作。
-- **专为 10.3" 黑白电子纸显示屏设计：** 专门针对 10.3" 高速刷新电子纸显示屏设计，确保快速上手和稳定运行。
-- **支持高速刷新：** 集成 T-CON 时序控制，确保精确的高速驱动，同时板载 SHT40 提供实时温度感应，用于波形补偿。
+- **专为 10.3" 单色电子纸显示屏设计：** 专门针对 10.3" 高速刷新电子纸显示屏设计，确保快速上手和稳定运行。
+- **支持高速刷新：** 集成 T-CON 时序控制，确保精确的高速驱动，同时板载 SHT40 提供实时温度感知，用于波形补偿。
 - **带开关的电池接口：** 提供简单的电池连接并集成开关，实现高效电源管理和节能。
 - **用户友好按键：** 配备 1 个复位按键和 3 个用户可编程按键，为项目加速和自定义功能提供灵活性。
-- **预烧录 SenseCraft HMI 固件：** 即插即用，直接搭配 SenseCraft HMI——我们基于 AI 的零代码 UI 设计平台使用。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可部署到电子纸显示屏。
+- **预烧录 SenseCraft HMI 固件：** 即插即用，直接搭配 SenseCraft HMI——我们的 AI 加持零代码 UI 设计平台。可从丰富模板中选择，或通过拖拽式 UI 搭建（可选 AI 辅助），仅需几次点击即可将界面部署到电子纸显示屏。
 
 ### 规格
 
@@ -67,61 +70,61 @@ import Steppers from '@site/src/components/utils/Stepper';
 | **处理器** | XIAO ESP32-S3 Plus |
 | **电子纸接口** | FPC 40 Pin 0.5mm |
 | **电池接口** | JST 2.0mm |
-| **开关** | 电池电源 ON/OFF |
+| **开关** | 电池电源开/关 |
 | **电源供给** | - 3.7V 锂电池<br/>- USB Type-C |
 | **按键** | - 1x 复位按键<br/>- 3x 用户按键 |
 
 ### 应用
 
-- **数字电子书阅读器：** 提供纸质般的黑白阅读体验，支持 16 级灰度和快速刷新，实现更顺畅的翻页和更灵敏的内容更新。
-- **实时信息看板：** 显示天气更新、日程安排、关键通知以及能耗、传感器状态或 KPI 等数据小组件。
-- **安防告警：** 显示关于安防事件的告警和通知，例如运动检测或门/窗传感器触发。
-- **公共交通到站信息牌：** 一目了然地显示公交/地铁的实时到站时间、线路状态和服务提醒，方便日常通勤。
+- **数字电子书阅读器：** 提供纸质般的单色阅读体验，支持 16 级灰度和快速刷新，实现更顺畅的翻页和更灵敏的内容更新。
+- **实时信息看板：** 显示天气更新、日程安排、关键通知以及能耗、传感器状态或 KPI 等数据组件。
+- **安全告警：** 显示关于安全事件的告警和通知，例如运动检测或门/窗传感器触发。
+- **公共交通到站信息牌：** 一目了然地显示公交/地铁的实时到站时间、线路状态和服务告警，方便日常通勤。
 
 ## 硬件概览
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/2.png" style={{width:800, height:'auto'}}/></div>
 
-- **USB Type-C**：用于供电和烧录固件。
+- **USB Type-C**：用于供电和固件烧录。
 - **FPC 接口**：用于连接电子纸显示屏。
 - **复位按键**：用于复位开发板。
-- **用户按键**：用于用户交互的可编程按键。
+- **用户按键**：可编程按键，用于用户交互。
 - **电源开关**：控制电池电源的开/关。
 - **Boot 按键**：用于进入 bootloader 模式。
 - **LED 指示灯**：用于指示电源和充电状态。
 - **JST 接口**：2 针 JST 2.0mm 接口，用于连接电池。
 
-## SenseCraft HMI 快速上手
+## 搭配 SenseCraft HMI 快速上手
 
-本节将指导你将 EE03 连接到 SenseCraft HMI 平台，从而可以轻松实现无线更新屏幕内容。
+本节将引导你将 EE03 连接到 SenseCraft HMI 平台，从而可以轻松实现屏幕内容的无线更新。
 
 ### 设备安装
 
-**步骤 1. 连接屏幕和开发板**
+**步骤 1. 连接屏幕与开发板**
 小心地将电子纸屏幕的 FPC 线缆连接到 EE03 驱动板上的连接器，确保锁扣机构已牢固锁紧。
 
 **步骤 2. 上电**
-使用 USB Type-C 线将 EE03 板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎界面。
+使用 USB Type-C 线将 EE03 开发板连接到电源（电脑或 USB 适配器）。上电后，屏幕会刷新并显示欢迎界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_1.jpg" style={{width:300,height:'auto'}}/></div>
 
 **步骤 3. 进入网络配置模式**
-在欢迎界面之后，屏幕会自动刷新并显示 Network Configuration 界面，这表示设备已准备好连接 Wi-Fi。
+在欢迎界面之后，屏幕会自动刷新并显示网络配置界面，这表示设备已准备好连接 Wi-Fi。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_3.jpg" style={{width:300,height:'auto'}}/></div>
 
 
 ### 网络配置
 
-**步骤 4. 使用手机配置 Wi-Fi**
+**步骤 4. 通过手机配置 Wi-Fi**
 使用手机扫描屏幕上显示的二维码。根据手机上的提示输入本地 Wi-Fi 的 SSID 和密码，将 EE03 连接到互联网。
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕会再次刷新并显示一个唯一的 **Pairing Code**。你将在下一步中用到此配对码。
+网络配置成功后，屏幕会再次刷新并显示一个唯一的 **配对码（Pairing Code）**。你将在下一步中用到该配对码。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_2.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft HMI 上绑定设备**
-前往 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择 "Add Device"。输入你的电子墨水屏上显示的 Pairing Code。
+前往 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录你的账号，进入设备管理页面并选择 “Add Device”。输入电子纸屏幕上显示的配对码（Pairing Code）。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
 **步骤 7. 创建并推送新界面**     
 在 SenseCraft HMI 平台上，选择适用于 10.3 英寸屏幕的模板来创建新界面，或上传一张图片。
@@ -139,12 +142,12 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_7.jpg" style={{width:300, height:'auto'}}/></div>
 
 
-## Arduino 快速上手
+## 搭配 Arduino 快速上手
 
 ### 安装 Seeed GFX 库
 
 :::tip
-该库与 TFT 库具有相同功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+该库与 TFT 库功能相同，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -153,7 +156,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
 </a>
 </div>
 向下滚动并打开此链接。
@@ -170,7 +173,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/3.png" style={{width:800, height:'auto'}}/></div>
 
-下载库之后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择下载好的库文件。
+下载库之后，依次点击 **Sketch** -> **Include Library** -> **Add .ZIP Library**，然后选择刚刚下载的库。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -180,14 +183,14 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/4.png" style={{width:800, height:'auto'}}/></div>
 
-新建一个 "driver.h" 文件，并将这些代码粘贴进去。代码应类似如下：
+新建一个名为 "driver.h" 的文件，并将这些代码粘贴进去。代码应类似如下：
 ```cpp
 #define BOARD_SCREEN_COMBO 511 // 10.3 inch monochrome ePaper Screen（ED103TC2）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE03
 ```
 
 
-之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **Select the port your board is connected to**。 
+之后，前往 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 以及 **Tools** -> **Port** -> **Select the port your board is connected to**。 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/5.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -195,7 +198,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/6.jpg" style={{width:1000, height:'auto'}}/></div>
 
 然后点击 **Upload** 上传代码。
-现在你会在电子纸屏幕上看到反馈！下面是 Bitmap 示例的显示效果。
+现在你将在电子纸屏幕上看到反馈！以下是 Bitmap 示例的显示效果。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/7.jpg" style={{width:500, height:'auto'}}/></div>
 
 
@@ -219,7 +222,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。
 
 <div class="table-center">
   <div class="button_tech_support_container">
