@@ -13,7 +13,7 @@ last_update:
   author: Zeller
 createdAt: '2026-04-28'
 updatedAt: '2026-04-30'
-url: https://wiki.seeedstudio.com/xiao_esp32c5_with_freertos/
+url: https://wiki.seeedstudio.com/xiao_esp32c5_with_zephyr/
 ---
 
 The [**Zephyr**](https://www.zephyrproject.org/) OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
@@ -178,7 +178,7 @@ Sample Output for Successful Download
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/zephyr_3.png" style={{width:800, height:'auto'}}/></div>
 
-5. Phenomenon Demonstration
+6. Phenomenon Demonstration
 
 After downloading successfully, the LED will start blinking.
 
@@ -301,7 +301,7 @@ sudo chmod 666 /dev/ttyACM0
 west flash
 ```
 
-### Result
+#### Result
 
 The Expansion Board Base for XIAO will display a screen effect.
 
