@@ -21,18 +21,18 @@ updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/recamera_udp_face_analysis/
 ---
 
-# UDP Face Analysis with ReCamera
+# UDP Face Analysis with reCamera
 
 ## Introduction
 
-This demo demonstrates how to build a real-time face analysis system using ReCamera. The system performs:
+This demo demonstrates how to build a real-time face analysis system using reCamera. The system performs:
 
 - **Face Detection**: Using YOLO face detection model
 - **Attribute Analysis**: Age, Gender, and Race estimation using FairFace model
 - **Emotion Recognition**: 7-class emotion detection
 - **UDP Streaming**: Send JPEG frames with detection metadata to PC via UDP
 
-The C++ application runs on ReCamera and pushes video frames along with detection results (bounding boxes, attributes) through UDP. A Python receiver script running on your PC displays the annotated video stream in real-time.
+The C++ application runs on reCamera and pushes video frames along with detection results (bounding boxes, attributes) through UDP. A Python receiver script running on your PC displays the annotated video stream in real-time.
 
 **Key Features**:
 - Real-time face detection with confidence threshold control
