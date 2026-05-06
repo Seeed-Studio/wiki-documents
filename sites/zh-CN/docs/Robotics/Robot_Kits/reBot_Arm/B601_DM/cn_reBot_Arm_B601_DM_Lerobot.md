@@ -239,8 +239,6 @@ sudo chmod 666 /dev/ttyUSB*  # leader 臂
 sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
 
-
-
 ### 校准follower臂
 B601-DM只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
 
@@ -313,6 +311,9 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 </details>
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ## 遥操作
 
@@ -653,6 +654,9 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ```bash
 lerobot-teleoperate \
@@ -689,6 +693,9 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 
 ## 数据集制作采集
@@ -697,6 +704,9 @@ lerobot-teleoperate \
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 <details>
 
