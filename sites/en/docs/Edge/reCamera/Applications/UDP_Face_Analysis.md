@@ -1,8 +1,8 @@
 ---
-description: This demo shows how to perform real-time face detection, attribute analysis (age/gender/race), and emotion recognition on ReCamera, then stream results via UDP to a PC for display.
-title: UDP Face Analysis with ReCamera
+description: This demo shows how to perform real-time face detection, attribute analysis (age/gender/race), and emotion recognition on reCamera, then stream results via UDP to a PC for display.
+title: UDP Face Analysis with reCamera
 keywords:
-  - ReCamera
+  - reCamera
   - Face Detection
   - Age Gender Race
   - Emotion Recognition
