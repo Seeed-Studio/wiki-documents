@@ -1298,6 +1298,7 @@ const sidebars = {
               label: 'RTOS',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/cn_XIAO_ESP32C5_With_FreeRTOS',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/cn_XIAO_ESP32C5_With_Zephyr',
               ],
             },
           ],
