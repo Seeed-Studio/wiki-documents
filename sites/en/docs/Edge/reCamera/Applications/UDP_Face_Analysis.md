@@ -11,6 +11,7 @@ keywords:
   - YOLO
 image: https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif
 slug: /recamera_udp_face_analysis
+sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899,108990119,108990120,E20245041001,100018917, 100041077, 100029708, 100074316
 sidebar_position: 12
 last_update:
   date: 04/30/2026
