@@ -83,16 +83,16 @@ En el flujo de despliegue puedes insertar con un solo clic las funciones integra
 
 Tool Blocks disponibles:
 
-- **[AI Vision](./Tool_Blocks.md#ai-vision)** — Despliega modelos de visión para reconocimiento, detección y clasificación de objetos en hardware compatible.
-- **[AI Audio](./Tool_Blocks.md#ai-audio)** — Despliega modelos de reconocimiento de voz en hardware compatible.
-- **[AI Vibration](./Tool_Blocks.md#ai-vibration)** — Detecta anomalías de vibración aprendiendo los patrones de vibración normales y marcando las desviaciones.
-- **[Node-RED](./Tool_Blocks.md#node-red)** — Crea y despliega flujos lógicos visuales para reCamera.
-- **[Aily Blockly](./Tool_Blocks.md#aily-blockly)** — Graba en los dispositivos perimetrales los programas creados en el entorno visual Aily Blockly.
-- **[Deploy container app](./Tool_Blocks.md#deploy-container-app)** — Despliega aplicaciones contenedorizadas en hardware compatible.
-- **[Flash firmware](./Tool_Blocks.md#flash-firmware)** — Graba imágenes de firmware en los dispositivos con un solo clic.
+- **[AI Vision](/sensecraft-ai/application/tool-blocks#visión-por-ia)** — Despliega modelos de visión para reconocimiento, detección y clasificación de objetos en hardware compatible.
+- **[AI Audio](/sensecraft-ai/application/tool-blocks#audio-por-ia)** — Despliega modelos de reconocimiento de voz en hardware compatible.
+- **[AI Vibration](/sensecraft-ai/application/tool-blocks#vibración-por-ia)** — Detecta anomalías de vibración aprendiendo los patrones de vibración normales y marcando las desviaciones.
+- **[Node-RED](/sensecraft-ai/application/tool-blocks#node-red)** — Crea y despliega flujos lógicos visuales para reCamera.
+- **[Aily Blockly](/sensecraft-ai/application/tool-blocks#aily-blockly)** — Graba en los dispositivos perimetrales los programas creados en el entorno visual Aily Blockly.
+- **[Deploy container app](/sensecraft-ai/application/tool-blocks#desplegar-aplicación-de-contenedor)** — Despliega aplicaciones contenedorizadas en hardware compatible.
+- **[Flash firmware](/sensecraft-ai/application/tool-blocks#grabar-firmware)** — Graba imágenes de firmware en los dispositivos con un solo clic.
 - **Debug tools** *(próximamente)* — Inspecciona y soluciona problemas de comportamiento del dispositivo durante el despliegue.
 
-Consulta [Tool Blocks](./Tool_Blocks.md) para ver los detalles completos de configuración de cada bloque.
+Consulta [Tool Blocks](/sensecraft-ai/application/tool-blocks) para ver los detalles completos de configuración de cada bloque.
 
 ### Paso 3: Lista de materiales (BOM)
 

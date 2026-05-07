@@ -83,16 +83,16 @@ url: https://wiki.seeedstudio.com/ja/sensecraft-ai/application/create-new-applic
 
 利用可能なツールブロック:
 
-- **[AI Vision](./Tool_Blocks.md#AI-Vision)** — 対応ハードウェア上で、物体認識、検出、分類用のビジョンモデルをデプロイします。
-- **[AI Audio](./Tool_Blocks.md#AI-Audio)** — 対応ハードウェア上で音声認識モデルをデプロイします。
-- **[AI Vibration](./Tool_Blocks.md#AI-Vibration)** — 通常の振動パターンを学習し、その逸脱を検知することで振動異常を検出します。
-- **[Node-RED](./Tool_Blocks.md#Node-RED)** — reCamera 向けのビジュアルなロジックフローを構築・デプロイします。
-- **[Aily Blockly](./Tool_Blocks.md#Aily-Blockly)** — Aily Blockly のビジュアル環境で作成したプログラムをエッジデバイスに書き込みます。
-- **[Deploy container app](./Tool_Blocks.md#Deploy-container-app)** — コンテナ化されたアプリケーションを対応ハードウェアにデプロイします。
-- **[Flash firmware](./Tool_Blocks.md#Flash-firmware)** — デバイスにファームウェアイメージを書き込みます。
+- **[AI Vision](/sensecraft-ai/application/tool-blocks#ai-vision)** — 対応ハードウェア上で、物体認識、検出、分類用のビジョンモデルをデプロイします。
+- **[AI Audio](/sensecraft-ai/application/tool-blocks#ai-audio)** — 対応ハードウェア上で音声認識モデルをデプロイします。
+- **[AI Vibration](/sensecraft-ai/application/tool-blocks#ai-vibration)** — 通常の振動パターンを学習し、その逸脱を検知することで振動異常を検出します。
+- **[Node-RED](/sensecraft-ai/application/tool-blocks#node-red)** — reCamera 向けのビジュアルなロジックフローを構築・デプロイします。
+- **[Aily Blockly](/sensecraft-ai/application/tool-blocks#aily-blockly)** — Aily Blockly のビジュアル環境で作成したプログラムをエッジデバイスに書き込みます。
+- **[Deploy container app](/sensecraft-ai/application/tool-blocks#コンテナアプリのデプロイ)** — コンテナ化されたアプリケーションを対応ハードウェアにデプロイします。
+- **[Flash firmware](/sensecraft-ai/application/tool-blocks#ファームウェアを書き込む)** — デバイスにファームウェアイメージを書き込みます。
 - **デバッグツール** *(近日公開)* — デプロイ中のデバイスの動作を確認・トラブルシュートします。
 
-各ブロックの詳細な設定については、[Tool Blocks](./Tool_Blocks.md) を参照してください。
+各ブロックの詳細な設定については、[Tool Blocks](/sensecraft-ai/application/tool-blocks) を参照してください。
 
 ### ステップ 3: 部品表 (BOM)
 

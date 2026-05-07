@@ -83,16 +83,16 @@ No fluxo de implantação você pode inserir, com um clique, recursos integrados
 
 Tool Blocks disponíveis:
 
-- **[AI Vision](./Tool_Blocks.md#ai-vision)** — Implante modelos de visão para reconhecimento, detecção e classificação de objetos em hardware compatível.
-- **[AI Audio](./Tool_Blocks.md#ai-audio)** — Implante modelos de reconhecimento de fala em hardware compatível.
-- **[AI Vibration](./Tool_Blocks.md#ai-vibration)** — Detecte anomalias de vibração aprendendo padrões normais de vibração e sinalizando desvios.
-- **[Node-RED](./Tool_Blocks.md#node-red)** — Crie e implante fluxos lógicos visuais para reCamera.
-- **[Aily Blockly](./Tool_Blocks.md#aily-blockly)** — Grave em dispositivos de borda programas criados no ambiente visual Aily Blockly.
-- **[Deploy container app](./Tool_Blocks.md#deploy-container-app)** — Implante aplicativos conteinerizados em hardware compatível.
-- **[Flash firmware](./Tool_Blocks.md#flash-firmware)** — Grave imagens de firmware em dispositivos com um clique.
+- **[AI Vision](/sensecraft-ai/application/tool-blocks#visão-com-ia)** — Implante modelos de visão para reconhecimento, detecção e classificação de objetos em hardware compatível.
+- **[AI Audio](/sensecraft-ai/application/tool-blocks#áudio-com-ia)** — Implante modelos de reconhecimento de fala em hardware compatível.
+- **[AI Vibration](/sensecraft-ai/application/tool-blocks#vibração-com-ia)** — Detecte anomalias de vibração aprendendo padrões normais de vibração e sinalizando desvios.
+- **[Node-RED](/sensecraft-ai/application/tool-blocks#node-red)** — Crie e implante fluxos lógicos visuais para reCamera.
+- **[Aily Blockly](/sensecraft-ai/application/tool-blocks#aily-blockly)** — Grave em dispositivos de borda programas criados no ambiente visual Aily Blockly.
+- **[Deploy container app](/sensecraft-ai/application/tool-blocks#implantar-aplicativo-em-contêiner)** — Implante aplicativos conteinerizados em hardware compatível.
+- **[Flash firmware](/sensecraft-ai/application/tool-blocks#gravar-firmware)** — Grave imagens de firmware em dispositivos com um clique.
 - **Ferramentas de depuração** *(em breve)* — Inspecione e solucione problemas de comportamento do dispositivo durante a implantação.
 
-Consulte [Tool Blocks](./Tool_Blocks.md) para detalhes completos de configuração de cada bloco.
+Consulte [Tool Blocks](/sensecraft-ai/application/tool-blocks) para detalhes completos de configuração de cada bloco.
 
 ### Etapa 3: Lista de materiais (BOM)
 

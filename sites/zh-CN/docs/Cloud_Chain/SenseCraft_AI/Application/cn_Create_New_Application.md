@@ -83,16 +83,16 @@ url: https://wiki.seeedstudio.com/cn/sensecraft-ai/application/create-new-applic
 
 可用的工具块：
 
-- **[AI Vision](./Tool_Blocks.md#ai-vision)** — 在支持的硬件上部署用于目标识别、检测和分类的视觉模型。
-- **[AI Audio](./Tool_Blocks.md#ai-audio)** — 在支持的硬件上部署语音识别模型。
-- **[AI Vibration](./Tool_Blocks.md#ai-vibration)** — 通过学习正常振动模式并标记偏差来检测振动异常。
-- **[Node-RED](./Tool_Blocks.md#node-red)** — 为 reCamera 构建并部署可视化逻辑流程。
-- **[Aily Blockly](./Tool_Blocks.md#aily-blockly)** — 将在 Aily Blockly 可视化环境中构建的程序烧录到边缘设备。
-- **[Deploy container app](./Tool_Blocks.md#deploy-container-app)** — 将容器化应用部署到支持的硬件。
-- **[Flash firmware](./Tool_Blocks.md#flash-firmware)** — 一键将固件镜像烧录到设备。
+- **[AI Vision](/sensecraft-ai/application/tool-blocks#ai-视觉)** — 在支持的硬件上部署用于目标识别、检测和分类的视觉模型。
+- **[AI Audio](/sensecraft-ai/application/tool-blocks#ai-音频)** — 在支持的硬件上部署语音识别模型。
+- **[AI Vibration](/sensecraft-ai/application/tool-blocks#ai-振动)** — 通过学习正常振动模式并标记偏差来检测振动异常。
+- **[Node-RED](/sensecraft-ai/application/tool-blocks#node-red)** — 为 reCamera 构建并部署可视化逻辑流程。
+- **[Aily Blockly](/sensecraft-ai/application/tool-blocks#aily-blockly)** — 将在 Aily Blockly 可视化环境中构建的程序烧录到边缘设备。
+- **[Deploy container app](/sensecraft-ai/application/tool-blocks#部署容器应用)** — 将容器化应用部署到支持的硬件。
+- **[Flash firmware](/sensecraft-ai/application/tool-blocks#烧录固件)** — 一键将固件镜像烧录到设备。
 - **调试工具** *(即将推出)* — 在部署过程中检查和排查设备行为。
 
-有关每个工具块的完整配置详情，请参见 [Tool Blocks](./Tool_Blocks.md)。
+有关每个工具块的完整配置详情，请参见 [Tool Blocks](/sensecraft-ai/application/tool-blocks)。
 
 ### 步骤 3：物料清单（BOM）
 
