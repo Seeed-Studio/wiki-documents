@@ -1,5 +1,5 @@
 ---
-description: reComputer Industrial R22xx 是一款基于 Raspberry Pi CM5 的工业级 AI NVR，内置 Hailo-8 AI 加速器，算力高达 26 TOPS。其配备 4 个支持 PoE PSE 的千兆以太网端口以及 1 个额外的千兆以太网端口，可实现高带宽视频流传输，并简化 IP 摄像头的 PoE 部署。提供丰富的工业 I/O、灵活的无线连接、无风扇散热设计，以及 -20 °C 至 50 °C 的宽工作温度范围，确保在严苛场景下实现可靠的 AI 视频分析和持续稳定运行。
+description: reComputer Industrial R22xx 是一款基于 Raspberry Pi CM5 的工业级 AI NVR，搭载 Hailo-8 AI 加速器，提供高达 26 TOPS 的算力。其配备 4 个支持 PoE PSE 的千兆以太网端口以及 1 个额外的千兆以太网端口，可实现高带宽视频流传输，并简化 IP 摄像头的 PoE 部署。提供丰富的工业 I/O、灵活的无线连接、无风扇散热设计，以及 -20 °C 至 50 °C 的宽工作温度范围，确保在严苛场景下实现可靠的 AI 视频分析和持续稳定运行。
 title: 配置 reComputer Industrial R22xx
 keywords:
   - 边缘控制器
@@ -13,13 +13,13 @@ last_update:
   date: 02/09/2026
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-03-23'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r22xx_configure_system/
 ---
 
 ## 概述
 
-在安装好设备后，了解如何在 reComputer Industrial R22xx 系列上配置和测试硬件组件。本 Wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、CAN、DI/DO 测试、安全关机 UPS 等内容。
+在安装好设备后，了解如何在 reComputer Industrial R22xx 系列上配置和测试硬件组件。本 Wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、RS485、RS232、CAN、DI/DO 测试、安全关机 UPS 等内容。
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -39,11 +39,11 @@ url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r22xx_configure_syste
 cat /sys/kernel/debug/gpio
 ```
 
-**此命令将显示 GPIO 映射和偏移**，为调试或配置 GPIO 引脚提供关键信息。
+**该命令将显示 GPIO 映射和偏移**，为调试或配置 GPIO 引脚提供关键信息。
 
 ## USER LED 测试
 
-我们为用户提供了红、蓝、绿三种颜色的 LED。你可以进入 /sys/class/leds/ 目录查看：
+我们为用户提供了红、蓝和绿三种颜色的 LED。你可以进入 /sys/class/leds/ 目录查看：
 
 **1. 进入 LED 目录**  
 
@@ -105,7 +105,7 @@ gcc spidev_test.c -o spidev_test
 ./spidev_test -D /dev/spidev10.0 -v -p hello
 ```
 
-该命令会在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，启用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
+该命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，启用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
 通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，即 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有实际外接设备的情况下测试 SPI 通信。
 
 ## Wi-Fi 扫描
@@ -116,7 +116,7 @@ gcc spidev_test.c -o spidev_test
 sudo iwlist wlan0 scan
 ```
 
-- 此命令会扫描附近所有 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
+- 该命令会扫描附近所有 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
 
 ## 蓝牙扫描  
 
@@ -128,7 +128,7 @@ sudo iwlist wlan0 scan
 sudo bluetoothctl
 ```
 
-此命令将打开蓝牙控制界面。之后，你可以运行其他命令来扫描附近的蓝牙设备。
+该命令将打开蓝牙控制界面。在此界面中，你可以运行其他命令来扫描附近的蓝牙设备。
 
 **启用扫描：**  
 
@@ -136,7 +136,7 @@ sudo bluetoothctl
 scan on
 ```
 
-此命令将开始扫描附近的蓝牙设备。然后你可以在 ***bluetoothctl*** 界面中使用其他命令与蓝牙设备交互，例如配对或连接。
+该命令将开始扫描附近的蓝牙设备。然后你可以在 ***bluetoothctl*** 界面中使用其他命令与蓝牙设备交互，例如配对或连接。
 
 ## 通过 Mini-PCIe 的 LoRa®
 
@@ -165,13 +165,13 @@ cd sx1302_hal
 sudo nano ./libloragw/inc/loragw_i2c.h
 ```
 
-将此行修改为：  
+修改这一行：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-1"
 ```
 
-修改为：  
+为：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-2"
@@ -196,7 +196,7 @@ SX1261_RESET_PIN=634     # SX1261 reset (LBT / Spectral Scan)
 
 ```
 
-固件原生支持 SPI 型号 WM1302-SPI-US915-M。如果你希望使用其他型号，可以查询对应 RESET_PIN 的定义，并参考以下命令修改 RESET_PIN。
+固件原生支持 SPI 型号 WM1302-SPI-US915-M。若你希望使用其他型号，可以查询对应 RESET_PIN 的定义，并参考以下命令修改 RESET_PIN。
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -242,7 +242,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.2_lora_usb_1.png" style={{width:800, height:'auto'}}/></div>
 
-此命令指定用于 LoRa® USB 的配置文件。
+该命令指定用于 LoRa® USB 的配置文件。
 
 ## 通过 M.2 B-KEY 的 5G 蜂窝网络
 
@@ -291,7 +291,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-等待 10-15 秒（模块上电并通过 USB 枚举需要一定时间），然后检查设备节点是否出现：
+等待 10-15 秒（模块上电并枚举 USB 需要一定时间），然后检查设备节点是否出现：
 
 ```bash
 ls /dev/ttyUSB*
@@ -307,7 +307,7 @@ sudo apt install minicom
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-此命令使用指定串口（***/dev/ttyUSB2***）并以 115200 波特率打开 minicom。
+该命令使用指定串口（***/dev/ttyUSB2***）以 115200 波特率打开 minicom。
 
 1. 打开 minicom 后，你可以开始向 4G 模块发送 AT 命令。例如：
 
@@ -315,7 +315,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 AT
 ```
 
-此命令用于检查模块是否有响应。如果模块工作正常，你应当收到 ***"OK"*** 的响应。
+该命令用于检查模块是否有响应。如果模块工作正常，你应当收到 ***"OK"*** 的响应。
 
 2. 要使用 4G 模块拨打电话号码，可以使用 ATD 命令并在后面加上电话号码：
 
@@ -323,7 +323,7 @@ AT
 ATD<phone_number>;
 ```
 
-将 **phone_number** 替换为你想要拨打的电话号码。
+将 **phone_number** 替换为你想要拨打的目标电话号码。
 请确保在命令末尾添加分号 ;，以表示电话号码的结束。
 
 ## 通过 Mini-PCIe 的 4G 蜂窝网络
@@ -384,54 +384,6 @@ ifconfig
 ping www.baidu.com -I usb0
 ```
 
-## 基于 Mini-PCIe 的 Zigbee
-
-要测试两个 Zigbee 模块之间的 **Zigbee 通信**，请按照以下步骤操作：  
-
-1. 检查可用串口
-
-使用以下命令检查可用串口：
-
-```bash
-cat /dev/ttyUSB*
-```
-
-**安装串口通信工具**
-
-2. 安装串口通信工具：
-
-```bash
-sudo apt-get install cutecom
-```
-
-3. 为协调器（第一个 Zigbee 模块）打开串口：
-
-- 打开 cutecom 工具，并为第一个串口进行配置：
-- 波特率：***115200***
-- 在界面底部勾选 ***"Hex output"*** 选项。
-- 按照以下步骤配置第一个 Zigbee 模块：
-- 设置为协调器：发送命令 ***‘55 04 00 05 00 05’***，期望响应 ***‘55 04 00 05 00 05’***。
-- 复位设备：按下复位按钮或发送命令 ***‘55 07 00 04 00 FF FF 00 04’***。
-- 建立网络：发送命令 ***‘55 03 00 02 02’***。
-
-4. 为路由器（第二个 Zigbee 模块）打开串口：
-再打开一个 ***cutecom*** 实例，并使用与之前相同的设置为第二个串口进行配置。
-按照以下步骤配置第二个 Zigbee 模块：
-
-- 设置为路由器：发送命令 ***‘55 04 00 05 01 04’***，期望响应 ***‘55 04 00 05 00 05’***。
-- 复位设备：按下复位按钮或发送命令 ***‘55 07 00 04 00 FF FF 00 04’***。
-- 建立网络：发送命令 ***‘55 03 00 02 02’***。
-
-5. 检查设备状态：
-发送命令 ***‘55 03 00 00 00’*** 来检查设备状态。期望收到类似 ***‘55 2a 00 00 00 01 XX XX XX XX’*** 的响应，其中 ‘XX’ 表示设备信息。
-6. 进入透传模式：
-如果建网成功，通过发送命令 ***55 07 00 11 00 03 00 01 13*** 进入透传模式。两个模块都应处于透传模式以实现直接通信。要退出透传模式，发送 "+++"。
-7. 补充说明：
-
-- 如果路由器配置失败，设备可能已经是协调器。可通过命令 '55 07 00 04 02 xx xx xx' 退出网络。
-- 使用命令 '55 04 0D 00 00 0D'（查询）和 '55 04 0D 01 XX XX'（设置）测试发射功率。
-请确保将 ***/dev/ttyUSB*** 替换为每个 Zigbee 模块对应的正确串口。请仔细按照这些步骤操作，以成功测试两个模块之间的 Zigbee 通信。
-
 ## RS485 测试
 
 reComputer Industrial R21xx 包含 **2 个 RS485 接口**。下面是它们对应的 **COM 端口** 和 **设备文件**：  
@@ -443,7 +395,7 @@ reComputer Industrial R21xx 包含 **2 个 RS485 接口**。下面是它们对�
 
 要测试 RS485 功能，可以按照以下步骤进行（以 RS485_1 和 RS485_2 为例）：
 
-1. 请将 RS485_1 和 RS485_2 的 A 和 B 连接在一起。
+1. 请将 RS485_1 和 RS485_2 的 A 和 B 端连接在一起。
 2. 分别在两个终端窗口中打开 minicom：
 
 ```bash
@@ -452,17 +404,17 @@ sudo minicom -D /dev/ttyACM2
 ```
 
 :::note
- 如果有扩展板，编号需要往后移一位，例如 ***/dev/ttyAcM2***、***/dev/ttyAcM3***。
+ 如果有扩展板，编号需要往后顺延一位，例如 ***/dev/ttyAcM2***、***/dev/ttyAcM3***。
 :::
 
 3. 需要在两个已打开的 ACM 上执行以下操作：
 
 - 按下 ***Ctrl+A***，然后按 ***Z***，会出现 Minicom Command Summary 界面：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- 再按 ***O*** 打开配置，选择 Serial port setup，并按 ***Enter***；打开所有与 RS485 相关的选项，依次按 ***H/I/J/K/L*** 将其打开；
+- 再按 ***O*** 打开配置，选择 Serial port setup，并按 ***Enter***；打开所有与 RS485 相关的接口，依次按 ***H/I/J/K/L*** 将其打开；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- 当所有选项都显示为 "YES" 后，按 Enter 返回，然后选择 Exit 退出。
+- 当全部显示为 "YES" 后，按 Enter 返回，然后选择 Exit 退出。
 
 :::note
 
@@ -486,7 +438,7 @@ reComputer Industrial R21xx 包含 **2 个 RS232** 接口，对应的 **COM 端�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.12-1.png" style={{width:800, height:'auto'}}/></div>
 
-你需要打开两个终端，如果连接了扩展板则使用 ACM1，如果未连接扩展板则使用 ACM2：
+需要打开两个终端，如果连接了扩展板则使用 ACM1，如果未连接扩展板则使用 ACM2：
 **终端 1：***
 
 ```bash
@@ -507,7 +459,7 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 
 ## DI（数字输入）测试
 
-reComputer Industrial R21xx 包含 4 个 DI 接口，用户可以根据实际需求对这些接口进行配置。
+reComputer Industrial R21xx 包含 4 个 DI 接口，用户可以根据实际需求配置这些接口。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -552,11 +504,11 @@ echo in > /sys/class/gpio/gpio588/direction
 cat /sys/class/gpio/gpio588/value
 ```
 
-3. 当外部电平为高时，***/sys/class/gpio/gpio588/value*** 的值为 0；当外部电平为低时，***/sys/class/gpio/gpio588/value*** 的值为 1。
+3. 当外部电平为高电平时，***/sys/class/gpio/gpio588/value*** 的值为 0；当外部电平为低电平时，***/sys/class/gpio/gpio588/value*** 的值为 1。
 
 ## DO（数字输出）
 
-reComputer Industrial R21xx 包含 4 个 DO 接口，用户可以根据实际需求对这些接口进行配置。
+reComputer Industrial R21xx 包含 4 个 DO 接口，用户可以根据实际需求配置这些接口。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -579,14 +531,10 @@ reComputer Industrial R21xx 包含 4 个 DO 接口，用户可以根据实际需
       </tr>
       <tr>
         <td>DO3</td>
-        <td>GPIO590</td>
-      </tr>
-      <tr>
-        <td>DO4</td>
         <td>GPIO636</td>
       </tr>
       <tr>
-        <td>DO5</td>
+        <td>DO4</td>
         <td>GPIO635</td>
       </tr>
     </tbody>
@@ -606,7 +554,7 @@ echo 1 > /sys/class/gpio/gpio638/value
 echo 0 > /sys/class/gpio/gpio638/value
 ```
 
-3. 当外部电平为高时，/sys/class/gpio/gpio638/value 的值为 0；当外部电平为低时，/sys/class/gpio/gpio638/value 的值为 1。
+3. 当外部电平为高电平时，/sys/class/gpio/gpio638/value 的值为 0；当外部电平为低电平时，/sys/class/gpio/gpio638/value 的值为 1。
 
 ## CAN 测试
 
@@ -631,9 +579,9 @@ echo 0 > /sys/class/gpio/gpio638/value
   </table>
 </div>
 
-由于 reComputer Industiral R22xx 仅配备单路 CAN 接口，无法独立进行回环测试。要验证其通信功能，需要一个外部对端设备或 USB 转 CAN 适配器。在本次测试中，将使用配备双路 CAN 接口的 reComputer Industiral R21xx 作为对端节点，与 reComputer Industiral R22xx 建立连接。具体的连接方案和配置步骤请参考以下教程：
+由于 reComputer Industiral R22xx 仅配备单路 CAN 接口，无法进行独立回环测试。要验证其通信功能，需要一个外部对端设备或 USB 转 CAN 适配器。本次测试中，将使用配备双路 CAN 接口的 reComputer Industiral R21xx 作为对端节点，与 reComputer Industiral R22xx 建立连接。具体连接方案和配置步骤请参考以下教程：
 
-1. 使用两根杜邦线将 can0 和 can1 的 H-H 与 L-L 短接，形成最小回路测试。
+1. 使用两根杜邦线将 can0 和 can1 的 H-H、L-L 短接，形成最小回环测试。
 
 ```bash
 CAN_H─────●───── CAN-H
@@ -641,7 +589,7 @@ CAN_L─────●───── CAN-L
 G_CAN_H─────●───── G_CAN
 ```
 
-2. 确认系统中确实出现了 can0 和 can1 这两个网络接口，以防驱动未加载：
+2. 确认系统中确实出现了 can0 和 can1 两个网络接口，以防驱动未加载：
 
 ```bash
 # should print can0 can1
@@ -664,7 +612,7 @@ sudo ip link set can1 up type can bitrate 500000
 ```
 
 4. 通信测试（单向）
-使用 can-utils 来发送和接收数据。
+使用 can-utils 发送和接收数据。
 
 步骤 A：R21xx（CAN1）发送 → R22xx（CAN0）接收
 
@@ -690,12 +638,12 @@ sudo ip link set can1 up type can bitrate 500000
 lsusb
 ```
 
-运行该命令后，应显示系统中已连接 USB 设备的信息，包括存在的任何 USB hub。
-如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是 hub 本身或其与系统连接存在问题。在这种情况下，你可能需要对 USB hub 或其连接进行排查。
+运行该命令后，应该会显示系统中已连接的 USB 设备信息，包括存在的 USB hub。
+如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果未列出，可能是 hub 或其与系统连接存在问题，此时需要对 USB hub 或其连接进行排查。
 
 ## RTC（实时时钟）测试
 
-要测试实时时钟（RTC）功能，请按以下步骤操作：
+要测试实时时钟（RTC）功能，请按照以下步骤操作：
 
 1. 禁用自动时间同步：
 
@@ -705,7 +653,7 @@ sudo systemctl disable systemd-timesyncd
 ```
 
 2. 设置时间：
-将 RTC 设置为特定的日期和时间：
+将 RTC 设置为指定的日期和时间：
 
 ```bash
 sudo hwclock --set --date "2025-10-23 16:00:00"
@@ -724,15 +672,15 @@ sudo hwclock --hctosys
 sudo hwclock -r
 ```
 
-该命令将读取并显示存储在 RTC 中的时间。
+此命令将读取并显示存储在 RTC 中的时间。
 
-5. 断开 RTC 的电源，等待几分钟，然后重新接通电源并再次检查 RTC 时间，以确认它是否保持了正确时间。
+5. 将 RTC 的电源断开，等待几分钟，然后重新接通电源并再次检查 RTC 时间，以确认它是否保持了正确时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.17-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## 看门狗定时器测试
 
-要执行看门狗测试，请按以下步骤操作：
+要执行看门狗测试，请按照以下步骤操作：
 
 1. 安装看门狗软件：
 
@@ -791,10 +739,10 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-该命令会触发内核崩溃，并应导致看门狗重启系统。
+此命令会触发内核崩溃，并应使看门狗重启系统。
 
 5. 监控系统，以确认其在指定超时时间后重新启动。
-这些步骤将帮助你测试并确保系统上的看门狗定时器功能正常。
+这些步骤将帮助你测试并确保系统上看门狗定时器的功能正常。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -832,7 +780,7 @@ ls /dev | grep tpm
 
 ## ATECC608A
 
-要与 ATECC608A 设备交互并生成随机序列号，请按以下步骤操作：
+要与 ATECC608A 设备交互并生成随机序列号，请按照以下步骤操作：
 
 1. 克隆 atecc-util 仓库：
 
@@ -858,8 +806,8 @@ cd usr/bin
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
-该命令指示 ATECC 工具使用插槽 10（-b 10），将序列号大小设置为 192 位 ***( -s 192 )***，并生成一个随机序列号 ***( -c 'serial' )***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
-通过该过程，你可以与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
+此命令指示 ATECC 工具使用插槽 10（***-b 10***），将序列号大小设置为 192 位（***-s 192***），并生成一个随机序列号（***-c 'serial'***）。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
+此过程允许你与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
 
 ## 与 EEPROM 交互
 
@@ -885,23 +833,23 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 
 ## 检查 SSD 是否被检测到
 
-要列出包括 SSD 在内的磁盘，可以使用 fdisk -l 命令。具体如下：
+要列出包括 SSD 在内的磁盘，你可以使用 `fdisk -l` 命令。操作如下：
 
 ```bash
 sudo fdisk -l
 ```
 
-该命令会显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
-在确定与 SSD 对应的条目后，你可以根据需要继续对其进行分区或格式化。
+此命令将显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。查找代表你 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
+一旦确定了与你的 SSD 对应的条目，你就可以根据需要继续对其进行分区或格式化。
 
 ## 用于安全关机的 UPS
 
-CPU 与直流电源输入之间的 GPIO6 用于在电源掉电时向 CPU 报警。然后 CPU 应在超级电容能量耗尽前，通过脚本执行一些紧急操作并运行“$ shutdown”。
-使用此功能的另一种方式是：当 GPIO 引脚状态变化时发起关机。给定的 GPIO 引脚被配置为输入按键，用于产生 KEY_POWER 事件。systemd-logind 处理该事件并发起关机。
+CPU 与直流电源输入之间的 GPIO6 用于在电源掉电时向 CPU 报警。然后 CPU 应该在超级电容能量耗尽之前，通过脚本执行一些紧急操作并运行“$ shutdown”。
+使用此功能的另一种方式是：当 GPIO 引脚状态改变时发起关机。给定的 GPIO 引脚被配置为输入按键，用于产生 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
 
 1. 硬件连接。
 
-请确保 UPS 设备的 ***'CM5_UPS_DET'*** 引脚连接到 R21xx 设备的 GPIO16 引脚。
+请确保 UPS 设备的 ***“CM5_UPS_DET”*** 引脚连接到 R21xx 设备的 GPIO16 引脚。
 
 2. 修改配置文件。
 
@@ -924,14 +872,14 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 4. 准备 Python 脚本
 
-- 新建一个 Python 脚本文件：
+- 创建一个新的 Python 脚本文件：
 
 ```bash
 cd ~
 sudo nano ups_shutdown.py
 ```
 
-- 将以下代码复制并粘贴到该文件中：
+- 将以下代码复制并粘贴到文件中：
 
 ```bash
 import RPi.GPIO as GPIO
@@ -975,7 +923,7 @@ while True:
         os.system('sudo shutdown -h now')
 ```
 
-保存并退出编辑器（按 ***`Ctrl+O`*** 保存，***`Enter`*** 确认，***`Ctrl+X`*** 退出）。
+保存并退出编辑器（按 ***`Ctrl+O`*** 保存，***`Enter`*** 确认，然后按 ***`Ctrl+X`*** 退出）。
 
 5. 运行脚本。
 
@@ -1004,14 +952,14 @@ sudo python3 ups_shutdown.py
 
 :::note
 
-1. 如需了解 UPS 功能，请联系我们获取更多信息。
+1. 关于 UPS 功能，请联系我们以获取更多信息。
 2. 报警信号为低电平有效。
 
 :::
 
 ## AI 加速器
 
-reComputer Industrial R21xx 上的 M.2 M-KEY 2240 插槽用于安装 PCIE M.2 AI 加速器。而 R21xx-12 系列已预装 Hailo-8 M.2 AI 加速模块，性能最高可达 26TOPS。
+reComputer Industrial R21xx 上的 M.2 M-KEY 2240 插槽用于安装 PCIE M.2 AI 加速器。而 R21xx-12 系列已预装一块 Hailo-8 M.2 AI 加速卡，性能最高可达 26TOPS。
 如果你购买的是 R21xx-10 系列产品，则需要另行购买 Hailo 的 NPU 模块以启用 AI 功能。
 设备已预装 Hailo 加速器驱动，因此你可以直接使用并运行测试用例：
 
@@ -1036,22 +984,22 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 要关闭应用程序，请按 ***`Ctrl+C`***。
-这是检测示例的轻量级版本，主要侧重于在尽量降低 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理流水线通过最小化视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
+这是检测示例的轻量级版本，主要侧重于在尽量减小 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理流水线通过最小化视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
 
 :::note
-如果你购买的 reComputer 不包含 Hailo-8，并计划购买 Hailo 设备进行集成，请参考 Hailo 官方文档 (https://github.com/hailo-ai) 配置固件和环境，并运行示例以验证设备是否可以正常使用。
+如果你购买的 reComputer 不包含 Hailo-8，并计划额外购买 Hailo 设备进行集成，请参考官方 Hailo 文档（https://github.com/hailo-ai）来配置固件和环境，并运行示例以验证设备可以正常使用。
 :::
 
 ## PoE IP 摄像机
 
 
-reComputer Industrial R22xx 系列专为高密度 IP 视频流和工业自动化而设计。其配备 **5 个物理千兆以太网端口**，采用混合总线架构，以确保最大带宽和稳定性。
+reComputer Industrial R22xx 系列专为高密度 IP 视频流和工业自动化而设计。它配备了 **5 个物理千兆以太网端口**，采用混合总线架构，以确保最大带宽和稳定性。
 
 **内部总线分布：**
 
-* **eth0（原生）**：直接连接到 SoC。具有最低延迟，推荐用作 **主上行链路（WAN）** 或 **管理端口**。
-* **eth1（USB 扩展）**：位于原生端口旁边的独立端口。通过 **USB 3.0 总线** 扩展，并支持 **PoE 输出**。
-* **eth2、eth3、eth4（PCIe 扩展）**：连续的三个端口。通过 **PCIe 总线** 扩展，并支持 **PoE 输出**。
+* **eth0（原生）**：直接连接到 SoC。提供最低延迟，推荐用作**主上行链路（WAN）**或**管理端口**。
+* **eth1（USB 扩展）**：位于原生端口旁边的独立端口。通过 **USB 3.0 总线**扩展，并支持 **PoE 输出**。
+* **eth2、eth3、eth4（PCIe 扩展）**：连续的三个端口。通过 **PCIe 总线**扩展，并支持 **PoE 输出**。
 
 
 1. 技术规格
@@ -1059,17 +1007,17 @@ reComputer Industrial R22xx 系列专为高密度 IP 视频流和工业自动化
 | 类别 | 规格 | 备注 |
 | :--- | :--- | :--- |
 | **端口总数** | 1（原生）+ 4（扩展） | 5x RJ45 千兆以太网 |
-| **PoE 模式** | **Alternative A（模式 A）** | 通过数据线对（1/2, 3/6）供电 |
-| **单端口 PoE 输出** | **12W**（最大） | 针对标准 IP 摄像机优化 |
-| **并行 PoE 输出** | 所有 4 个端口同时支持 12W | 需要足够的系统电源输入 |
-| **电源输入范围** | **9V - 36V DC** | 内部升压电路将电压升至 **48V** 以供 PoE 使用 |
+| **PoE 模式** | **Alternative A（模式 A）** | 通过数据线对（1/2、3/6）供电 |
+| **每端口 PoE 输出** | **12W**（最大） | 针对标准 IP 摄像机优化 |
+| **并行 PoE 输出** | 所有 4 个端口可同时支持 12W | 需要足够的系统电源输入 |
+| **电源输入范围** | **9V - 36V DC** | 内部升压电路将电压升至 **48V** 以用于 PoE |
 | **安全特性** | 过流与欠压保护 | **严禁热插拔** |
 
 2. 关键安全指南
-* **禁止热插拔**：
-    > **警告**：当 PoE 供电处于激活状态（GPIO 高电平）时插拔网线，会产生瞬态浪涌，可能损坏 LAN7800 或 PCIe 桥接芯片。务必遵循“**先连接，再上电**”原则。
+* **禁止热插拔**： 
+    > **警告**：在 PoE 供电处于激活状态（GPIO 为高电平）时插拔以太网线，可能会导致瞬态浪涌，从而损坏 LAN7800 或 PCIe 桥接芯片。务必遵循“**先连接，再上电**”原则。
 * **电源推荐**：
-    > 虽然设备支持 9V 输入，但我们建议使用 **24V** 工业电源，功率至少 **72W**（3A），以确保在 4 个 PoE 端口满载（4 × 12W）时仍具有较高的转换效率。
+    > 虽然设备支持 9V 输入，但我们建议使用 **24V** 工业电源，功率至少 **72W**（3A），以确保在 4 个 PoE 端口全部满载（4 × 12W）时仍具有较高的转换效率。
 
 
 3. 配置步骤
@@ -1123,8 +1071,8 @@ done
 
 4. 验证与故障排查
 
-- 检查总线连接情况
-使用 `lspci` 和 `lsusb` 来验证系统是否识别到所有控制器：
+- 检查总线连通性
+使用 `lspci` 和 `lsusb` 验证系统是否识别到所有控制器：
 * **PCIe 扩展端口（eth2-4）**：运行 `lspci | grep Ethernet`
 * **USB 扩展端口（eth1）**：运行 `lsusb -t` 并查找 `lan78xx` 驱动。
 
@@ -1133,18 +1081,18 @@ done
 5. 常见问题
 * **问：为什么我的摄像机一直在重启？**
     * 答：检查摄像机的功耗是否超过 **12W**。高功率云台摄像机或带有强红外补光灯的摄像机可能会超过此限制。
-* **问：我可以使用 12V DC 输入来供电 PoE 吗？**
+* **问：我可以使用 12V DC 输入来供 PoE 吗？**
     * 答：可以。内部电路会将 12V 升压到 48V。但请确保你的 12V 电源能够承受较大的电流，因为在较低输入电压下转换损耗更高。
 * **问：接口名称不是 eth1-4。**
     * 答：使用 `ip link` 查找实际的内核名称（例如 `enp1s0`），并在 `.network` 文件中更新 `Name=` 字段。
 
-6. 4 路 PoE 摄像机支持状态：
+6. 4 通道 PoE 摄像机支持状态：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.26-1.png" style={{width:800, height:'auto'}}/></div>
 
 ### reComputer R22 与 reCamera
 
-本指南提供了通过 PoE 将 reCamera（一款基于 RISC-V 平台、面向快速边缘 AI 部署的开源模块化 AI 摄像机）连接到 reComputer R22 的分步说明。内容涵盖使用 Node-RED 部署 RTSP 流，并在 R22 上预览实时画面。
+本指南提供了通过 PoE 将 reCamera（基于 RISC-V 平台、面向快速边缘 AI 部署的开源模块化 AI 摄像机）连接到 reComputer R22 的分步操作说明。内容涵盖使用 Node-RED 部署 RTSP 流，并在 R22 上预览实时画面。
 
 1. 硬件连接与初始化
 
@@ -1164,16 +1112,16 @@ done
 
 使用预配置的 `flows.json` 快速部署带身份验证的 RTSP 流。
 
-- **访问控制台：** 在浏览器中打开 `http://10.0.3.200:1880`（reCamera 默认 IP）。
+- **访问控制台：** 打开浏览器并访问 `http://10.0.3.200:1880`（reCamera 默认 IP）。
 - **导入配置：**
-      * 点击右上角菜单图标 `≡` -\> **Import**。
+      * 点击右上角的菜单图标 `≡` -\> **Import**。
       * 上传 [**flows.json**](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/flows.json) 文件并点击 **Import**。
 - **自定义身份验证（必需）：**
       * 双击流程中的 **`RTSP Output`** 节点。
       * 在 **Authentication** 部分设置你的凭据：
           * **Username：** `seeed`
           * **Password：** `seeed`
-- **部署：** 点击右上角红色 **Deploy** 按钮。
+- **部署：** 点击右上角红色的 **Deploy** 按钮。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/config.png" style={{width:800, height:'auto'}}/></div>
 
 3. 在 R22 上预览视频流
@@ -1205,7 +1153,7 @@ ffplay -fflags nobuffer -flags low_delay rtsp://seeed:seeed@10.0.3.200:554/live
 | 问题 | 可能原因 | 解决方案 |
 | :--- | :--- | :--- |
 | **无法 Ping 通 10.0.3.200** | R22 内部 IP 冲突 | 检查 `eth3/eth4` 是否都使用 `10.0.3.10`。手动修改其中一个。 |
-| **reCamera 无法启动** | 未启用 PoE 供电 | 确保 `GPIO 652` 被设置为 `1` 且输入电源 \> 12V/3A。 |
+| **reCamera 无法启动** | 未启用 PoE 供电 | 确保 `GPIO 652` 被设置为 `1`，且输入电源 \> 12V/3A。 |
 | **视频卡顿/延迟** | 网络或 MTU 问题 | 确保在 R22 与 reCamera 之间没有大量广播流量。 |
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/recamera.png" style={{width:800, height:'auto'}}/></div>

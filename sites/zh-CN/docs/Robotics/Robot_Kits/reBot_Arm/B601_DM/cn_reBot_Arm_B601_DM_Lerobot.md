@@ -20,7 +20,7 @@ updatedAt: '2026-04-09'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_lerobot/
 ---
 
-# 基于 LeRobot 的 reBot Arm B601-DM 和 reBot 102 leader入门教程
+# reBot Arm B601-DM入门Lerobot
 
 <p align="center">
     <a href="./LICENSE">
@@ -82,6 +82,9 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
 4. **兼容 Nvidia 平台**  
    支持通过 reComputer Mini J4012 Orin NX 16GB 平台进行部署。
 
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1mFo7BiEwX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 初始系统环境
 **For Ubuntu X86:**
@@ -97,6 +100,10 @@ Seeed Studio 教程严格按官方文档更新，如遇无法解决的软件或�
   - Torch 2.3+
 
 ## 安装LeRobot
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV12Fo7BvE7G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 需要根据你的 CUDA 版本安装 pytorch 和 torchvision 等环境。
 
@@ -186,8 +193,12 @@ conda install ffmpeg -c conda-forge
 (电脑端可跳过这一步) 对于 Jetson Jetpack 6.0+ 设备（请确保在执行此步骤前按照 [此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) 的第 5 步安装了 Pytorch-gpu 和 Torchvision）：
 
 ```bash
-pip install opencv-python==4.10.0.84  # 安装指定版本 OpenCV
-pip install numpy==1.26.0  # 该版本需与 torchvision 兼容
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # 通过 conda 安装 OpenCV 和其他依赖，仅适用于 Jetson Jetpack 6.0+
+conda remove opencv   # 卸载 OpenCV
+pip3 install opencv-python==4.10.0.84  # 使用 pip3 安装指定版本 OpenCV
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # 该版本需与 torchvision 兼容
 ```
 
 ### 7. 检查 Pytorch 和 Torchvision
@@ -214,6 +225,10 @@ print(torch.cuda.is_available())#输出结果应该为True
 
 ## 校准机械臂
 
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1KFo7BiE1h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 接下来，你需要对你的 reBot B601-DM 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。  
 这个校准过程至关重要，因为它可以让在一个 reBot B601-DM 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
@@ -224,11 +239,19 @@ sudo chmod 666 /dev/ttyUSB*  # leader 臂
 sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
 ```
 
-
-
 ### 校准follower臂
-B601-DM每次执行本wiki中lerobot相关的程序，都会自动进行一次校准。  
-你需要做的确保是在启动前，将B601-DM放置到如图所示的位置（夹爪要完全闭合）。
+B601-DM只需要在组装完成后校准一次，以下是校准指令，参考零位如图（夹爪要完全闭合）。
+
+```bash
+sudo chmod 666 /dev/ttyACM*  # follower 臂（串口桥）
+
+lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao
+```
+
   <div align="center">
       <img width={800} 
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
@@ -288,6 +311,9 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 </details>
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ## 遥操作
 
@@ -314,107 +340,277 @@ lerobot-teleoperate \
 ## 添加摄像头
 
 <details>
+<summary> 如果使用 RealSense D435i/D405 </summary>
 
-<summary> 如果是Orbbec Gemini2深度相机 </summary>
+RealSense 深度相机可以为 LeRobot 提供 RGB-D 感知能力，适用于目标识别、点云重建以及桌面操作等任务。这里推荐使用的型号是 **RealSense D405** 和 **RealSense D435i**。
 
-- 🚀 步骤 1：安装 Orbbec SDK 依赖环境
-
-1. 拉取 `pyorbbec` 仓库
-   ```bash
-   cd ~/
-   git clone https://github.com/orbbec/pyorbbecsdk.git
-   ```
-
-2. 下载并安装 SDK 对应的 **.whl 文件**  
-   前往 [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)，  
-   根据 Python 版本选择并安装，例如：
-   ```bash
-   pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
-   ```
-
-3. 在 `pyorbbec` 目录下安装依赖
-   ```bash
-   cd ~/pyorbbecsdk
-   pip install -r requirements.txt
-   ```
-
-  强制降低`numpy`版本到`1.26.0`
-    ```bash
-    pip install numpy==1.26.0
-    ```
-  可以忽略红色报错。
-
-4.将orbbec sdk克隆到`~/lerobot/src/cameras`目录下
-
-  ```bash
-  cd ~/rebot_lerobot/src/cameras
-  git clone https://github.com/ZhuYaoHui1998/orbbec.git
-  ```
-
-5.修改utils.py和__init__.py
-- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在`40`行处添加如下代码：
-
-```python
-elif cfg.type == "orbbec":
-            from .orbbec.camera_orbbec import OrbbecCamera
-
-            cameras[key] = OrbbecCamera(cfg)
-```
+### RealSense D405
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD405/D405.jpg" />
 </div>
 
-- 在`~/lerobot/src/lerobot/cameras`目录下找到`__init__.py`，在`18`行处添加如下代码：
+RealSense D405 是一款短距离双目深度相机，专为高精度近距离任务（如桌面机器人操作）设计，典型工作范围为 **7 cm 到 50 cm**。
 
-```python
-from .orbbec.configuration_orbbec import OrbbecCameraConfig
-```
+### RealSense D435i
 
 <div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/init.png" />
+    <img width={420}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/RealsenseD435i/D435i_1.jpg" />
 </div>
 
+RealSense D435i 集成了深度感知、RGB 成像以及 IMU，适用于中近距离应用，例如 3D 重建、SLAM 以及机器人环境感知。
 
+### 1. 切换到 Camera 分支
 
-
--  🚀 步骤 2：函数调用与示例
-
-我们加入了focus_area超参数，因为过远的深度数据对于机械臂没有意义（抓取不到），因此小于或者大于focus_area的深度数据将会变为黑色,默认的focus_area是(20,600)
-目前支持的分辨率只限于 width: 640, height: 880
+当前相机支持位于 `DepthCameraSupport` 分支：
 
 ```bash
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
+````
 
+确认当前分支：
+
+```bash
+git branch --show-current
+```
+
+预期输出：
+
+```bash
+DepthCameraSupport
+```
+
+### 2. 安装 RealSense：
+
+如果只使用 RealSense：
+
+```bash
+pip install -e ".[realsense]"
+```
+
+### 3. 给予权限
+
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. 检测相机
+
+```bash
+lerobot-find-cameras realsense
+```
+
+该步骤将输出：
+
+* 相机型号
+* 序列号
+* USB 信息
+* 默认流配置
+
+### 5. RealSense 示例
+
+双 RealSense 测试：
+
+```bash
 lerobot-teleoperate \
     --robot.type=seeed_b601_dm_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=follower1 \
     --robot.can_adapter=damiao \
-    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --robot.cameras='{
+    d435i_color: {
+      type: realsense_d435i_color,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d435i_depth: {
+      type: realsense_d435i_depth,
+      serial_number_or_name: "419522072950",
+      width: 640,
+      height: 480,
+      fps: 30,
+      max_depth_m: 2.0,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+    d405_color: {
+      type: realsense_d405_color,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      color_stream_format: rgb8,
+      rotation: 0,
+      warmup_s: 1
+    },
+    d405_depth: {
+      type: realsense_d405_depth,
+      serial_number_or_name: "409122273421",
+      width: 640,
+      height: 480,
+      fps: 30,
+      depth_alpha: 0.03,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }' \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
     --teleop.id=rebot_arm_102_leader \
     --display_data=true
-
 ```
 
+### 6. 参数说明
+
+* `depth_alpha` 用于控制深度图的缩放比例，可根据显示效果和目标距离范围进行调整。
+* 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以提高整体稳定性。
+* 建议分辨率保持在 `640x480`，以在稳定性和实时性能之间取得平衡。
+
+</details>
+
+<details>
+
+<summary> 如果使用 Orbbec Gemini2 深度相机 </summary>
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/orbbec_result.png" />
+    src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/0/-/0-101090144--orbbec-gemini-2-3d-camera.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank" rel="noopener noreferrer" >
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+</a></div>
+
+该设备提供同步的 RGB 和深度数据流，并具有精确的深度与彩色对齐能力。结合双目深度感知和内置 6 轴 IMU，非常适用于目标检测、3D 感知、建图以及导航等机器人任务。其紧凑设计以及完整的 Orbbec SDK 支持，使其既适合科研也适用于实际部署。
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp" />
 </div>
 
+Gemini 336 是 Gemini 330 系列的新成员。它继承了 Gemini 335 强大的深度性能，并在室内反光区域、高动态场景中的暗区以及户外强光环境下进一步提升了深度成像质量。在机器人应用中，可为感知、定位和操作等任务提供更稳定、更高质量的深度数据。
 
-后续采集数据、训练及评估任务与常规RGB命令一样，只需要把:
+* 🚀 步骤 1：安装 Orbbec SDK 依赖
+
+### 1. 切换到 Camera 分支
+
+当前相机支持位于 `DepthCameraSupport` 分支：
 
 ```bash
-  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+git checkout DepthCameraSupport
+git pull origin DepthCameraSupport
 ```
 
-替换到常规rgb命令中即可，你也可以再后面添加额外的单目RGB相机。
+确认当前分支：
 
+```bash
+git branch --show-current
+```
+
+预期输出：
+
+```bash
+DepthCameraSupport
+```
+
+### 2. 安装Orbbec
+
+
+```bash
+pip install -e ".[orbbec]"
+```
+
+### 3. 给予权限
+
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. 检测相机
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+该步骤将输出：
+
+* 相机型号
+* 序列号
+* USB 信息
+* 默认流配置
+
+### 5. Orbbec 示例
+
+单 Orbbec 测试：
+
+```bash
+lerobot-teleoperate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao \
+    --robot.cameras="{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    }
+  }" \
+    --teleop.type=rebot_arm_102_leader \
+    --teleop.port=/dev/ttyUSB0 \
+    --teleop.id=rebot_arm_102_leader \
+    --display_data=true
+```
+
+### 6. 参数说明
+
+* `depth_alpha` 控制深度图缩放比例，建议从 `0.2` 开始，根据显示效果微调。
+* 如果连接三台及以上深度相机，建议将 `fps` 降低至 `15` 以获得更好的稳定性。
+* 建议分辨率保持在 `640x480`，以获得更稳定的显示和数据传输。
+
+### 6. 常见问题
+
+如果出现如下错误：
+
+```bash
+No Orbbec camera found for 'XXXX'
+```
+
+通常表示配置中的序列号与当前连接设备不匹配。请运行：
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+然后确认实际的 `serial`，并更新命令中的 `serial_number_or_name`。
 
 
 **💡 作者与贡献**
@@ -458,6 +654,9 @@ Camera #0:
 
 之后，您就可以在遥控操作时在电脑上显示摄像头画面了，只需运行以下代码即可。这对于在录制第一个数据集之前准备您的设置非常有用。
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 ```bash
 lerobot-teleoperate \
@@ -494,9 +693,20 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 
 ## 数据集制作采集
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1W3okBNEAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+:::danger
+遥操作过程中如果主从臂电源脱落，电源接触不良，信号线脱落，必须先停止代码，机械臂恢复到初始0点位置，在通上电源重新运行程序，避免数据错乱导致机械臂失控造成危险。
+:::
 
 <details>
 

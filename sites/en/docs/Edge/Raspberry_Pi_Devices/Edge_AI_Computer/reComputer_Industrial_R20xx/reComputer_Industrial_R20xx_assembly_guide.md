@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2023-05-22'
-updatedAt: '2026-02-10'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/recomputer_industrial_r20xx_assembly_guide/
 ---
 

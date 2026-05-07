@@ -1,5 +1,5 @@
 ---
-description: Tutorial básico do XIAO Round Dislay
+description: Tutorial básico da XIAO Round Dislay
 title: Introdução ao Seeed Studio Round Display para XIAO
 keywords:
   - XIAO
@@ -9,7 +9,7 @@ slug: /get_start_round_display
 sidebar_position: 1
 sku: 104030087
 last_update:
-  date: 07/11/2024
+  date: 4/30/2026
   author: Spencer
 createdAt: '2023-03-17'
 updatedAt: '2026-01-07'
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/pt-br/get_start_round_display/
 
 ## Introdução
 
-O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com todas as placas de desenvolvimento XIAO. Ele possui uma tela sensível ao toque totalmente coberta em um dos lados, projetada como um disco de 39 mm. Contém RTC onboard, chip de carregamento, slot para cartão TF em seu tamanho compacto, perfeito para telas interativas em casas inteligentes, wearables e muito mais.
+O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com todas as placas de desenvolvimento XIAO. Ele possui uma tela sensível ao toque totalmente coberta em um lado, projetada como um disco de 39 mm. Contém RTC onboard, chip de carregamento, slot para cartão TF em seu tamanho compacto, perfeito para exibições interativas em casas inteligentes, wearables e muito mais.
 
 <table align="center">
  <tr>
@@ -45,7 +45,7 @@ O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com
  </tr>
  <tr>
   <td>v1.1</td>
-  <td>1.Alterar o CI de carregamento da bateria de lítio<br />2.Adicionar uma chave para A0 e D6</td>
+  <td>1.Alterar IC de carregamento da bateria de lítio<br />2.Adicionar uma chave para A0 e D6</td>
   <td>2023/4/7</td>
   <td>Linus.Liao</td>
  </tr>
@@ -56,7 +56,7 @@ O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com
 <table align="center">
  <tr>
      <th>Item</th>
-     <th>Detalhe</th>
+     <th>Detalhes</th>
  </tr>
  <tr>
      <th>Fonte de alimentação</th>
@@ -72,7 +72,7 @@ O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com
  </tr>
   <tr>
      <th>Tela</th>
-     <td>Tela sensível ao toque de 1,28 polegadas <br></br> Resolução 240×240 <br></br> 65K cores</td>
+     <td>Tela sensível ao toque de 1,28 polegada <br></br> Resolução 240×240 <br></br> 65K cores</td>
  </tr>
   <tr>
      <th>Outros equipamentos externos</th>
@@ -86,7 +86,7 @@ O Seeed Studio Round Display para XIAO é uma placa de expansão compatível com
 
 ### Recursos
 
-- **Placa de expansão com tela sensível ao toque capacitiva**: Tela redonda de 1,28 polegadas, resolução 240×240, 65K cores, proporcionando exibição de imagens nítidas e coloridas
+- **Placa de expansão com tela sensível ao toque capacitiva**: Tela redonda de 1,28 polegada, resolução 240×240, 65K cores, proporcionando exibição de imagens nítidas e coloridas
 - **Alta compatibilidade**: Altamente compatível com todos os produtos da série XIAO, facilmente integrada aos seus projetos atuais
 - **Periféricos ricos**: Possui RTC onboard, chip de carregamento de bateria, slot para cartão TF, conector JST 1.25, tudo dentro de seu tamanho compacto
 - **Design do tamanho de um relógio**: Vem com design circular de 39 mm, adequado para projetos vestíveis e com espaço limitado
@@ -98,7 +98,7 @@ Antes de começarmos, podemos consultar as imagens a seguir para entender o desi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/round-pinout.png" style={{width:800, height:'auto'}}/></div>
 
-Desde 7 de abril de 2023, o Round Display reformulado adiciona uma chave de 2 bits para controlar a luz de fundo da tela e a leitura da tensão da bateria. Para que o usuário possa escolher livremente se deseja usar o pino ou liberá-lo. Clique [aqui](https://wiki.seeedstudio.com/pt-br/seeedstudio_round_display_usage/#botão-ke--gpio) para ler mais detalhes.
+Desde 7 de abril de 2023, o Round Display reformulado adiciona uma chave de 2 bits para controlar a luz de fundo da tela e a leitura da tensão da bateria. Para que o usuário possa escolher livremente se deseja usar o pino ou liberá-lo. Clique [aqui](https://wiki.seeedstudio.com/pt-br/seeedstudio_round_display_usage/#ke-button--gpio) para ler mais detalhes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/round-display-v1.1-pinout.png" style={{width:800, height:'auto'}}/></div>
 
@@ -166,10 +166,10 @@ A orientação recomendada para o Round Display é: quando você estiver de fren
 Para usar o Round Display, precisamos programar a série XIAO. A ferramenta de programação recomendada é o Arduino IDE, e você precisa configurar o ambiente Arduino para o XIAO e adicionar o pacote da placa.
 
 :::tip
-Se esta for a sua primeira vez usando o Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
+Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
 :::
 
-#### Passo 1. Baixe e instale a versão estável do Arduino IDE de acordo com o seu sistema operacional
+#### Etapa 1. Baixe e instale a versão estável do Arduino IDE de acordo com o seu sistema operacional
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
@@ -177,21 +177,21 @@ Se esta for a sua primeira vez usando o Arduino, recomendamos fortemente que voc
     </a>
 </div>
 
-#### Passo 2. Inicie o aplicativo Arduino
+#### Etapa 2. Inicie o aplicativo Arduino
 
-#### Passo 3. Configure o Arduino IDE para o XIAO que você está usando
+#### Etapa 3. Configure o Arduino IDE para o XIAO que você está usando
 
 - Se você quiser usar o **Seeed Studio XIAO RP2350** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/getting-started-xiao-rp2350/)** para concluir a adição.
 
-- Se você quiser usar o **Seeed Studio XIAO nRF52840** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_BLE/#configuração-de-software)** para concluir a adição.
+- Se você quiser usar o **Seeed Studio XIAO nRF52840** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_BLE/#software-setup)** para concluir a adição.
 
-- Se você quiser usar o **Seeed Studio XIAO ESP32C3** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_ESP32C3_Getting_Started#configuração-de-software)** para concluir a adição.
+- Se você quiser usar o **Seeed Studio XIAO ESP32C3** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/XIAO_ESP32C3_Getting_Started#software-setup)** para concluir a adição.
 
 - Se você quiser usar o **Seeed Studio XIAO ESP32C6** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/xiao_esp32c6_getting_started/#preparação-de-software)** para concluir a adição.
 
 - Se você quiser usar o **Seeed Studio XIAO ESP32S3** para as rotinas posteriores, consulte **[este tutorial](https://wiki.seeedstudio.com/pt-br/xiao_esp32s3_getting_started#preparação-de-software)** para concluir a adição.
 
-#### Passo 4. Instalação das bibliotecas gráficas e das bibliotecas do driver da tela
+#### Etapa 4. Instalação das bibliotecas gráficas e das bibliotecas de driver da tela
 
 Para usar o round display, precisamos instalar duas bibliotecas com antecedência. Uma é a biblioteca de driver do dispositivo round display, que é usada para acionar as funções de tela e toque do dispositivo. A outra é a biblioteca de exibição gráfica, que fornece algumas interfaces muito comuns para desenhar gráficos.
 
@@ -199,7 +199,7 @@ Para usar o round display, precisamos instalar duas bibliotecas com antecedênci
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_RoundDisplay" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download da biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -239,22 +239,22 @@ Nomeie o novo arquivo como `driver.h`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/12_create_driver_h.png" style={{width:1000, height:'auto'}}/></div>
 
-Vá para a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/), e selecione "TRMNL 7.5" (OG) DIY Kit" como mostrado na imagem.
+Acesse a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/), e selecione "Round Display for Seeed Studio XIAO" como mostrado na imagem.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/108.png" style={{width:600, height:'auto'}}/></div>
 
-Copie o código gerado e cole-o no arquivo `driver.h` que você criou. O código deve ser semelhante a este:
+Copie o código gerado e cole no arquivo `driver.h` que você criou. O código deve ser semelhante a este:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 501 // Round Display for Seeed Studio XIAO （GC9A01)
 ```
 
-Agora você pode fazer o upload do exemplo para o seu TRMNL DIY Kit e ver o display ePaper em ação!
+Agora você pode fazer o upload do exemplo para o seu Round Display e ver o LCD em ação!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/107.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-Observe que o código para todas as telas subsequentes precisa ser acompanhado por um arquivo driver.h, que é usado para selecionar o tipo de tela a ser utilizada.
+Observe que o código de todas as telas subsequentes precisa ser acompanhado por um arquivo driver.h, que é usado para selecionar o tipo de tela a ser utilizada.
 :::
 
 ### Demo 2: TFT Clock
@@ -264,7 +264,7 @@ Consulte o Demo1, crie um novo arquivo `driver.h` no mesmo diretório do arquivo
 :::
 
 :::tip
-Precisamos usar a função RTC no round display, então você também precisa procurar e instalar a biblioteca **I2C BM8563 RTC**.
+Precisamos usar a função de RTC no round display, então você também precisa procurar e instalar a biblioteca **I2C BM8563 RTC**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/63.png" style={{width:800, height:'auto'}}/></div>
 :::
@@ -281,7 +281,7 @@ Você pode encontrar este programa de exemplo na Arduino IDE em **File -> Exampl
 
 Basta selecionar o XIAO que você está usando e o número da porta onde o XIAO está conectado, compilar e fazer o upload.
 
-Certifique-se de que a chave do Round Display esteja alternada para a posição ON.
+Certifique-se de que o interruptor do Round Display esteja na posição ON.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/59.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -311,7 +311,7 @@ Como o demo HardwareTest é um pouco complexo e ocupa uma quantidade maior de me
 Este programa de exemplo pode ser usado para verificar se o relógio RTC, o cartão SD e as funções de toque do Round Display estão funcionando corretamente.
 
 :::tip
-Precisamos usar a função RTC no round display, então você também precisa procurar e instalar a biblioteca **I2C BM8563 RTC**.
+Precisamos usar a função de RTC no round display, então você também precisa procurar e instalar a biblioteca **I2C BM8563 RTC**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/63.png" style={{width:800, height:'auto'}}/></div>
 :::
@@ -322,7 +322,7 @@ Você pode encontrar este programa de exemplo na Arduino IDE em **File -> Exampl
 
 Basta selecionar o XIAO que você está usando e o número da porta onde o XIAO está conectado, compilar e fazer o upload.
 
-Certifique-se de que a chave do Round Display esteja alternada para a posição ON.
+Certifique-se de que o interruptor do Round Display esteja na posição ON.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/59.jpg" style={{width:400, height:'auto'}}/></div>
 
@@ -331,13 +331,13 @@ Se o programa rodar sem problemas, você verá o seguinte efeito.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/60.gif" style={{width:600, height:'auto'}}/></div>
 
 :::note
-Este programa de exemplo irá testar todos os itens funcionais da placa de expansão, incluindo a função RTC. Se você não tiver a biblioteca I2C BM8563 RTC instalada, poderá ser relatado um erro; você pode comentar a função `lv_hardware_test()`, então a detecção funcional do cartão SD também será desativada.
+Este programa de exemplo irá testar todos os itens funcionais da placa de expansão, incluindo a função de RTC. Se você não tiver a biblioteca I2C BM8563 RTC instalada, poderá ocorrer um erro; você pode comentar a função `lv_hardware_test()`, então a detecção funcional do cartão SD também será desativada.
 :::
 
 ## Atualização do firmware de calibração
 
 :::tip
-Se você achar que o toque às vezes não responde, pode seguir os passos abaixo para atualizar o firmware de calibração da tela.
+Se você perceber que o toque às vezes não responde, pode seguir os passos abaixo para atualizar o firmware de calibração da tela.
 :::
 
 1. Baixe os códigos a partir deste [link](https://github.com/Seeed-Studio/Seeed_Arduino_RoundDisplay/tree/main/examples/TP_firmware_update)
@@ -348,15 +348,15 @@ Se você achar que o toque às vezes não responde, pode seguir os passos abaixo
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/c3.png" style={{width:600, height:'auto'}}/></div>
 
-3. Abra o monitor serial e você verá uma mensagem de sucesso como na imagem abaixo, o que significa que a atualização foi concluída com sucesso e você pode enviar seu programa para testá-lo!
+3. Abra o monitor serial e você verá uma mensagem de sucesso como na imagem abaixo, o que significa que a atualização foi concluída com sucesso e você pode fazer o upload do seu programa para testá-la!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/c2.png" style={{width:600, height:'auto'}}/></div>
 
 ## Solução de problemas
 
-### P1: Por que o display não mostra nada depois que eu envio o programa?
+### P1: Por que o display não mostra nada depois que eu faço o upload do programa?
 
-R: Verifique se a chave do Round Display está ligada. Se você estiver usando o XIAO ESP32C3, talvez também seja necessário pressionar Reset após enviar o programa para que ele funcione.
+R: Verifique se o interruptor do Round Display está ligado. Se você estiver usando o XIAO ESP32C3, talvez também seja necessário pressionar Reset após fazer o upload do programa para que ele funcione.
 
 ### P2: Se eu quiser conectar o Seeed Studio XIAO ESP32S3 Sense a esta tela de expansão, haverá conflito com dois slots de cartão TF?
 
@@ -376,16 +376,16 @@ R: Isso pode ser causado por você não ter selecionado a opção de compilaçã
 - **[PDF]** [Folha de dados ETA3410](https://files.seeedstudio.com/wiki/round_display_for_xiao/ETA3410-datasheet.pdf)
 - **[PDF]** [Folha de dados do RTC PCF8563](https://files.seeedstudio.com/wiki/round_display_for_xiao/RTC-PCF8563-datasheet.pdf)
 - **[PDF]** [Folha de dados do Display de Cristal Líquido TFT a-Si de 1,28''](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
-- **[PDF]** [Esquemático do Seeed Studio Round Display for XIAO](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH_230308.pdf)
-- **[PDF]** [Esquemático do Seeed Studio Round Display for XIAO v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH_230407.pdf)
+- **[PDF]** [Esquemático do Seeed Studio Round Display para XIAO](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH_230308.pdf)
+- **[PDF]** [Esquemático do Seeed Studio Round Display para XIAO v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH_230407.pdf)
 - **[PDF]** [Folha de dados GJX0128A4-15HY](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
-- **[ZIP]** [Esquemático e PCB do Seeed Studio Round Display for XIAO](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
-- **[ZIP]** [Esquemático e PCB do Seeed Studio Round Display for XIAO v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH&PCB_230407.zip)
-- **[3DM]** [O modelo 3D do Round Display for XIAO](https://grabcad.com/library/seeed-studio-round-display-for-xiao-1)
+- **[ZIP]** [Esquemático e PCB do Seeed Studio Round Display para XIAO](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
+- **[ZIP]** [Esquemático e PCB do Seeed Studio Round Display para XIAO v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH&PCB_230407.zip)
+- **[3DM]** [O modelo 3D do Round Display para XIAO](https://grabcad.com/library/seeed-studio-round-display-for-xiao-1)
 - **[STL]** [O diagrama do modelo 3D da carcaça para o Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 - **[STL]** [Case Seeed Studio XIAO ESP32 S3 Sense com tela redonda](https://files.seeedstudio.com/wiki/round_display_for_xiao/Seeed_Studio-XIAO-ESP32-S3-Sense-Case-With-Round-Screen.stl)
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico e Discussão de Produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

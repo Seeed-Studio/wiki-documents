@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-02-03'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/robotics_page/
 ---
 
@@ -90,6 +90,12 @@ url: https://wiki.seeedstudio.com/robotics_page/
               </a>
               <a href="/rebot_arm_b601_dm_lerobot/" className="content-card">
                 <span className="text">reBot with LeRobot</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_grasping_demo/" className="content-card">
+                <span className="text">reBot Visual Graspng Demo</span>
+              </a>
+              <a href="/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM ROS2 Integration</span>
               </a>
           </div>
 

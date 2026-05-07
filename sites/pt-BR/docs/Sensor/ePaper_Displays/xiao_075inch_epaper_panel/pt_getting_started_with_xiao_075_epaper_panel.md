@@ -9,7 +9,7 @@ last_update:
   date: 05/19/2025
   author: Citric
 createdAt: '2025-05-21'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel/
 ---
 
@@ -23,13 +23,13 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel/
 
 ## Introdução
 
-Alimentado pelo XIAO ESP32-C3, este display ePaper de 7,5 polegadas é uma tela E Ink® inteligente versátil e energeticamente eficiente, que oferece suporte a uma ampla gama de aplicações populares da comunidade, incluindo [Home Assistant](https://www.home-assistant.io/), [TRMNL](https://trmnl.app/), Arduino e muito mais. Esta solução de display flexível é perfeita para exibir dados de dashboards, atualizações de clima, agendas e informações personalizadas. Com visuais nítidos, excepcional duração de bateria de 3 meses (2000mAh) em modo de sono profundo e amplas possibilidades de personalização, este dispositivo compacto se adapta a diversos casos de uso. Perfeito para ambientes residenciais modernos e projetos, ele combina funcionalidade com design elegante para uma experiência visual aprimorada em múltiplas plataformas.
+Alimentado pelo XIAO ESP32-C3, este display ePaper de 7,5 polegadas é uma tela E Ink® inteligente versátil e energeticamente eficiente, que oferece suporte a uma ampla gama de aplicações populares da comunidade, incluindo [Home Assistant](https://www.home-assistant.io/), [TRMNL](https://trmnl.app/), Arduino e muito mais. Esta solução de display flexível é perfeita para exibir dados de dashboards, atualizações de clima, agendas e informações personalizadas. Com visuais nítidos, excepcional duração de bateria de 3 meses (2000mAh) em modo de sono profundo e amplas possibilidades de personalização, este dispositivo compacto se adapta a diversos casos de uso. Perfeito para ambientes de vida modernos e cenários de projeto, ele combina funcionalidade com design elegante para uma experiência visual aprimorada em múltiplas plataformas.
 
 ### Recursos
 
 - Integração nativa com Home Assistant
 - Display E Ink® de 7,5" para automação residencial
-- Design energeticamente eficiente com baixo consumo de energia
+- Design eficiente em energia com baixo consumo
 - Suporte a desenvolvimento com Arduino
 - Fator de forma elegante
 
@@ -58,7 +58,7 @@ Alimentado pelo XIAO ESP32-C3, este display ePaper de 7,5 polegadas é uma tela 
    <td>2000mAh</td>
   </tr>
   <tr>
-   <td>Dimensão</td>
+   <td>Dimensões</td>
    <td>178 x 131 x 19 mm</td>
   </tr>
   <tr>
@@ -80,7 +80,7 @@ Alimentado pelo XIAO ESP32-C3, este display ePaper de 7,5 polegadas é uma tela 
  </table>
 </div>
 
-## Visão geral do hardware
+## Visão geral de hardware
 
 O painel ePaper XIAO 7,5" é composto por vários componentes principais, conforme mostrado na vista explodida:
 
@@ -101,17 +101,17 @@ O dispositivo utiliza um design interno em camadas que posiciona o display ePape
 
 Para começar a usar o seu painel ePaper XIAO 7,5":
 
-1. **Abra o suporte**: Levante suavemente a tela usando o recorte na parte inferior para revelar o suporte embutido. Coloque o dispositivo sobre uma superfície plana com o suporte estendido.
+1. **Abra o suporte**: Levante suavemente a tela usando o recorte na parte inferior para revelar o suporte embutido. Coloque o dispositivo em uma superfície plana com o suporte estendido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/206.gif" style={{width:500, height:'auto'}}/></div>
 
-2. **Ligue o dispositivo**: Com o display voltado para você, localize a chave de alimentação no canto inferior esquerdo. Deslize-a para a posição "ON" (o rótulo ON fica oculto atrás do suporte, no seu lado direito quando estiver de frente para o display).
+2. **Ligue o dispositivo**: Com o display voltado para você, localize a chave de alimentação no canto inferior esquerdo. Deslize-a para a posição "ON" (o rótulo ON fica escondido atrás do suporte, ao seu lado direito quando estiver de frente para o display).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/205.jpg" style={{width:600, height:'auto'}}/></div>
 
-3. **Inicialização**: Após ligar, o dispositivo começará automaticamente a exibir uma sequência de três páginas de introdução para demonstrar sua funcionalidade.
+3. **Inicialização**: Depois de ligado, o dispositivo começará automaticamente a exibir uma sequência de três páginas de introdução para demonstrar sua funcionalidade.
 
-Depois de concluir estas etapas, o seu painel ePaper estará pronto para configuração e uso com a sua plataforma de programação preferida.
+Após concluir estas etapas, o seu painel ePaper estará pronto para configuração e uso com a sua plataforma de programação preferida.
 
 ### Botões de programação
 
@@ -130,13 +130,13 @@ Esses botões são fundamentais para a programação do dispositivo, atualizaç�
 
 ## Centro Wiki
 
-As seguintes páginas da Wiki fornecem informações detalhadas sobre diferentes maneiras de programar e usar o seu painel ePaper XIAO 7,5":
+As seguintes páginas Wiki fornecem informações detalhadas sobre diferentes maneiras de programar e usar o seu painel ePaper XIAO 7,5":
 
 - [**Funciona com ESPHome no Home Assistant**](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_esphome) - Configure e controle o seu painel ePaper por meio da integração ESPHome, ideal para usuários do Home Assistant criarem dashboards personalizados.
 
-- [**Funciona com Arduino**](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino/) - Programe seu dispositivo usando a IDE Arduino com nossa biblioteca e exemplos para aplicações personalizadas.
+- [**Funciona com Arduino**](https://wiki.seeedstudio.com/pt-br/xiao_075inch_epaper_panel_arduino/) - Programe o seu dispositivo usando a IDE Arduino com nossa biblioteca e exemplos para aplicações personalizadas.
 
-- [**Funciona com TRMNL**](https://wiki.seeedstudio.com/pt-br/xiao_7_5_inch_epaper_panel_with_trmnl) - Controle seu display com o trmnl, uma plataforma open-source para gerenciamento inteligente de dashboards visuais.
+- [**Funciona com TRMNL**](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_trmnl) - Controle o seu display com o TRMNL, uma plataforma open-source para gerenciamento inteligente de dashboards visuais. (Selecione a aba **XIAO 7.5" Panel** no guia unificado do TRMNL.)
 
 ## Recursos
 

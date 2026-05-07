@@ -1,6 +1,6 @@
 ---
 description: Getting Started with EE03 10.3-inch E-ink Driver Board
-title: Getting Started with XIAO ePaper Display Board - EE03
+title: Getting Started with EE03
 keywords:
   - E-ink
   - Driver Board
@@ -9,14 +9,17 @@ keywords:
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
 slug: /getting_started_with_ee03
+sidebar_position: 2
 sku: 100080566
 last_update:
   date: 2026-03-1
   author: Jackson.Li
 createdAt: '2026-03-02'
-updatedAt: '2026-03-04'
+updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/getting_started_with_ee03/
 ---
+
+# Getting Started with XIAO ePaper Display Board - EE03
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
