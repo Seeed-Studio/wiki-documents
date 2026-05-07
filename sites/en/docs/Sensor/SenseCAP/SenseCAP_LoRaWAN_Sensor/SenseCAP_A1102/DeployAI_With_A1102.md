@@ -88,11 +88,11 @@ The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabil
 
 ## Official AI Model Delpying Process
 
-### Step 1. Open our platform and Select A1102 in Workspace
+**Step 1.** Access the SenseCAP A1102 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`**, or use this [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 2. Connect to our Platform by serial port
+**Step 2. Connect to our Platform by serial port**
 
 - Use a Type-C cable to connect the device to your PC (make sure you are connecting to the upper Type-C port, which is the Himax serial port, as shown in the image below).
 
@@ -108,7 +108,7 @@ If the correct port is selected, you will be able to view the preview video stre
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture5.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 3. Select the AI model you want to deploy to device
+**Step 3. Select the AI model you want to deploy to device**
 
 - Click `Select Model`
 
@@ -128,7 +128,7 @@ Your device is now using the AI model you depoly to detect and upload result! Pl
 Our AI model can be trained with many classes, but since the recognition results are transmitted via **S2100**, only the **first 9 classes** are effectively supported for reporting.
 :::
 
-### Step 1. Get your dataset from Roboflow
+**Step 1. Get your dataset from Roboflow**
 
 - [Create a free Roboflow account](https://app.roboflow.com/) 
 
@@ -144,7 +144,7 @@ Only the first 9 classes (label indices 0–8) are valid and can be recognized b
 If your dataset contains more than 9 classes, you must select only the required nine classes by removing the others before exporting the model.
 :::
 
-### Step 2. Export your dataset from Roboflow
+**Step 2. Export your dataset from Roboflow**
 
 - Click Overview and Check the classes
 
@@ -175,17 +175,17 @@ If your model contains more than 9 classes, you must select the nine classes you
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p6.png" style={{width:600, height:'auto'}}/></div>
 
-### Step 3. Train your AI model with dataset
+**Step 3. Train your AI model with dataset**
 
 - Follow the [Model training quick start](https://wiki.seeedstudio.com/grove_vision_ai_v2_sscma#training-dataset-exported-model) to train your AI model with your prepared dataset.
 
 - After training is complete, export the trained model in .tflite format, which will be used for deployment on the device.
 
-### Step 4. Upload and flash the custom AI Model 
+**Step 4. Upload and flash the custom AI Model**
 
-- Open our [platform](https://sensecraft.seeed.cc/ai/home) and Select A1102 in Workspace
+- Access the SenseCAP A1102 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`**, or use this [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
 - Connect to our Platform by serial port
 

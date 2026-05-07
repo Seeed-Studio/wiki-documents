@@ -16,9 +16,13 @@ url: https://wiki.seeedstudio.com/sensecraft-ai/application/create-new-applicati
 ---
 # Creating a New Application in SenseCraft AI
 
-## Create Application
+## Creating the  Application
 
-Go to the **My Applications** page, and click **Create App** > **Upload**.
+Go to the `My Applications` page, and click `Create App > Upload`.
+
+<div style={{textAlign: 'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/app_creation/creating-application.png" alt="Create application" style={{width: '100%'}} />
+</div>
 
 To protect your work, once you enter the editing page, your changes will be **saved automatically**, and the navigation bar will show the save status in real time.
 
@@ -30,19 +34,32 @@ The application creation process is divided into four clear steps, which you can
 
 This is the first way others will learn about your application. Please consider it carefully to make your app more engaging.
 
-- **Application Name**: Give your application a clear name so others can understand what it does at a glance.
+#### Application Name and Description
 
-- **Application Excerpt**: Summarize the core scenario, technologies, devices, and so on in concise language.
+Give your application a clear name so others can understand what it does at a glance, and summarize the core scenario, technologies, devices, and so on in concise language.
 
-- **Scene**: Choose the most appropriate category tag for your application. This matters for discovery and promotion.
+The application name is limited to **60 characters**, and the description is limited to **300 characters**.
 
-- **License**: Set your license here, including whether others may copy and modify your work, and whether commercial use is allowed.
+#### Scene
+
+Choose the most appropriate category tag for your application. This matters for discovery and promotion.
+
+Available scenes: `Maker/DIY`, `Smart Home`, `Industrial`, `Agriculture`, `Security`, `Education`, `Healthcare`, `Retail`, `Other`.
+
+#### License
+
+Set your license here, including whether others may copy and modify your work, and whether commercial use is allowed.
+
+- **Allow others to duplicate and modify your app**: Others can duplicate your application into a new editable project of their own, including all images, documentation, models, code, and configurations. If disabled, others can still view and deploy your app but cannot create their own copy. Only enable this if you have the rights to redistribute every asset in the project.
+- **Allow your work to be used for commercial purposes**: Others may use your application — and any derivative works they create from it — in commercial products, paid services, or other revenue-generating contexts, without owing you royalties or additional permission.
 
 :::caution
 If you change the license later, actions that already took place before the change (such as duplicating) and their outcomes are not affected.
 :::
 
-- **Images**: Display images strongly influence how attractive your application looks. The first image is used as the cover by default. You can upload up to 16 images; each file must be 2MB or smaller. A **4:3** aspect ratio is recommended.
+#### Images
+
+Display images strongly influence how attractive your application looks. The first image is used as the cover by default. You can upload up to 16 images; each file must be 2MB or smaller. A **4:3** aspect ratio is recommended.
 
 ### Step 2: Documentation
 
@@ -58,202 +75,24 @@ Here you can describe the background, principles, and design of your project in 
 
 #### Application deployment
 
-Describe your deployment process step by step so others can reproduce your application, including prerequisites for each step. Click the `+` control to add operation steps. Keep the order logical and the instructions detailed. Toggle the live preview to check whether someone else could follow your steps successfully.
+Describe your deployment process step by step so others can reproduce your application, including prerequisites for each step. Click the `+` control to add deployment steps. Keep the order logical and the instructions detailed. Toggle the live preview to check whether someone else could follow your steps successfully.
 
 #### Using Tool Blocks
 
 In the deployment flow you can insert SenseCraft AI integrated features in one click. They streamline both your authoring experience and end-user deployment.
 
-##### AI Vision
-
-Deploy AI vision models for object recognition, detection, classification, and related tasks on supported hardware. Inference results can be streamed in real time via MQTT, GPIO, or serial (Serial), depending on configuration.
-
-The tool block currently supports **Detection** and **Classification**. Segmentation and pose estimation are planned for a later release.
-
-**Supported devices:**
-
-- [XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
-- [Grove - Vision AI V2](https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html)
-- [SenseCAP Watcher](https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html)
-- [SenseCAP A1102](https://www.seeedstudio.com/SenseCAP-A1102-LoRaWAN-Vision-AI-Sensor-p-6347.html)
-- [reCamera](https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html)
-
-**SenseCraft AI model:** Select high-quality models shared publicly by the community from the model library.
-
-**My model:** Pick a model from your private saved list.
-
-:::caution
-When you publish an application that includes this model to the community, the private model will automatically become public.
-:::
-
-- **Upload model:** Upload model files trained on third-party platforms. You must provide the model name, task type (Task), model categories (Class ID and Class Name), attach the model file, and select supported devices. After upload, the model appears under **My model**.
-
-- **Train model:** To train a new model or retrain from an existing one, open the training entry and follow the wizard. When finished, open **Historical models**, choose **Send to SenseCraft**, complete the upload flow, and save the result to **My model**.
-
-**Select device:** From the drop-down, choose the hardware you actually use from the list supported by this model.
-
-**Adjust recommended parameters:** Tune inference and device settings for your scenario. These values are written to the device as defaults at deployment time.
-
-- **Confidence threshold:** Criterion for whether the model emits a final prediction. Raising the threshold tends to reduce false positives; lowering it tends to reduce false negatives.
-
-- **IOU threshold:** In detection tasks, IoU compares predicted boxes to ground truth. A higher threshold helps separate overlapping objects but may produce duplicate boxes on one object if set too high. A lower threshold merges duplicates but may merge two nearby objects if set too low.
-
-- **Output mode**
-
-  - **None:** After power-on, inference does not start until another trigger runs. Suited to low-power setups where inference runs only when needed.
-
-  - **MQTT:** Start inference immediately after power-on and send results over Wi-Fi via MQTT.
-
-    - **SenseCraft official service (recommended):** Select or create a Dev Kit for your application and MQTT is configured automatically. Open the [SenseCraft Data platform](https://sensecap.seeed.cc) to view and process incoming data.
-
-    - **Third-party service:** Use your own or a third-party MQTT broker and configure parameters manually.
-
-  - **GPIO:** Drive GPIO pins with level signals.
-
-    - **Trigger conditions:** Define rules with object, condition, and confidence threshold.
-
-    - **Trigger actions:** When conditions match, the device can pull a pin high/low, save captures to SD card, light an LED, and so on.
-
-  - **Serial:** Use the [SSCMACore library](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA?tab=readme-ov-file#seeed_arduino_sscma-library) to export inference data over UART (GPIO), I2C, or SPI.
-
-  ```text
-    **UART (GPIO)**
-    Baud Rate Value: 921600
-    Data Format: 8N1
-    TX: GPIO43
-    RX: GPIO44
-
-    **I2C**
-    Slave Address: 0x62
-    SDA: GPIO5 (PULLUP)
-    SCL: GPIO6 (PULLUP)
-    Protocol:
-    - READ：0x10，0x01, LEN << 8, LEN & 0xff
-    - WRITE: 0x10，0x02, LEN << 8, LEN & 0xff
-    - AVAIL(to read): 0x10，0x03
-    - RESET(clear buffer): 0x10，0x06
-
-    **SPI**
-    Slave CPOL0 CPHA0
-    MOSI GPIO9 (PULLUP)
-    MISO GPIO8,
-    SCLK GPIO7 (PULLUP)
-    CS GPIO4 (PULLUP)
-    Protocol:
-    - READ：0x10，0x01, LEN << 8, LEN & 0xff
-    - WRITE: 0x10，0x02, LEN << 8, LEN & 0xff
-    - AVAIL(to read): 0x10，0x03
-    - RESET(clear buffer): 0x10，0x06
-  ```
-
-##### AI Audio
-
-Deploy AI audio models for speech recognition on supported hardware. Results can be streamed via MQTT, GPIO, or serial, depending on configuration.
-
-**Supported devices:**
-
-- [XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
-
-**SenseCraft AI model:** Select community-shared models from the library.
-
-**My model:** Choose from your private list.
-
-:::caution
-When you publish an application that includes this model to the community, the private model will automatically become public.
-:::
-
-- **Upload model:** Upload model files trained on third-party platforms. Provide the model name and categories (Class ID and Class Name). After upload, the model appears under **My model**.
-
-- **Train model:** Train a new or updated model, then send it to SenseCraft from **Historical models** as with vision models.
-
-**Select device:** Audio models currently support XIAO ESP32S3 Sense only.
-
-**Adjust recommended parameters:** Fine-tune values for your scenario.
-
-- **Confidence threshold:** Same role as for vision; adjust the trade-off between missed and spurious outputs.
-
-- **Output mode:** Default output path for the audio model.
-
-##### AI Vibration
-
-Deploy vibration anomaly detection by learning “normal” vibration and flagging deviations.
-
-**Supported devices:**
-
-- XIAO ESP32S3 Sense (with [3-axis accelerometer](https://seeedstudio.feishu.cn/record/QFIprpQsmesStwcOpZWc98Ccn9n))
-
-**Adjust recommended parameters:** Tune sampling, power-on behavior, GPIO, and output for your setup.
-
-- **Sampling window:** Samples per time unit. Too large slows inference; too small may underfit normal vibration.
-
-- **Enable default power-on inference:** When off, inference does not auto-start at power-on; use an external trigger for low-power use.
-
-- **GPIO:** Drive pins on abnormal vibration—for example set a level or toggle an LED.
-
-- **Output mode:** Default output path for the vibration model.
-
-##### Node-RED
-
-The Node-RED block helps you build visual logic flows for reCamera.
-
-**Prepare your workflow:** After you add the Node-RED block, configure the flow in either of these ways:
-
-1. **Create new workflow:** Connect to reCamera (wired or wireless), open its Dashboard, and edit online.
-
-2. **Upload local file:** Upload a JSON flow you already built. The system validates file type so it can be parsed reliably.
-
-**Select AI vision model:** JSON flows do not embed model binaries. Specify which model this flow should use:
-
-1. **Device built-in:** Use models preinstalled on reCamera, including YOLO11n variants for classification, detection, segmentation, and pose.
-
-2. **Public models:** Browse SenseCraft public models shared by others for reCamera.
-
-3. **My model:** Choose from your private library.
-
-:::caution
-**Publishing:** If you use a private model under **My model** and publish the app to the public community, that model will be made public as well. You will be prompted before publishing.
-:::
-
-##### Aily Blockly
-
-Aily Blockly is a visual programming environment. With this block you can flash programs you built in Aily Blockly to edge devices in one step.
-
-**Supported products:**
-
-- [Seeed Studio XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html)
-- [Seeed Studio XIAO ESP32C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html)
-- [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
-- [Seeed Studio XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
-- [Seeed Studio XIAO ESP32S3 Sense](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)
-- [Seeed Studio XIAO ESP32S3 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html)
-- [Seeed Studio XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html)
-- [Seeed Studio XIAO nRF52840 Sense](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
-- [Seeed Studio XIAO nRF52840 Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html)
-- [Seeed Studio XIAO nRF52840 Sense Plus](https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Sense-Plus-p-6360.html)
-- [Seeed Studio XIAO RP2040](https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html)
-- [Seeed Studio XIAO RP2350](https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html)
-- [Seeed Studio XIAO RA4M1](https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html)
-- [Seeed Studio XIAO MG24](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
-- [Seeed Studio XIAO MG24 Sense](https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html)
-- [Wio Terminal (D51R)](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)
-- [Seeeduino Lotus](https://www.seeedstudio.com/Seeeduino-Lotus-V1-1-ATMega328-Board-with-Grove-Interface.html)
-- [Grove Beginner Kit for Arduino](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
-
-**Bind Project ID:** Enter the project code that points to your public Aily Blockly template.
-
-- **How do I get a Project ID?** Open the Aily Blockly desktop app. In **CLOUD SPACE** on the right, find your project card. The string under the card (for example `prj_be881f`) is your Project ID.
-
-![](https://seeedstudio.feishu.cn/space/api/box/stream/download/asynccode/?code=YjczYzljYmQ3NjhlNDg4NzhlNDBiZmM1YjZlNTYzOWRfa1VaTU5hNEFRN2g3WFF6a1g1c0VMNGFkcDNxcWoyTjVfVG9rZW46WWFmSmJER09yb3JVaUh4RmZITGNueFlSbmNlXzE3NzQ4NTczMzg6MTc3NDg2MDkzOF9WNA)
-
-**Deployment device:** Select your hardware from the drop-down.
-
-##### Deploy container app (coming soon)
-
-##### Flash firmware (coming soon)
-
-##### Configure MQTT (coming soon)
-
-##### Debug tools (coming soon)
+Available tool blocks:
+
+- **[AI Vision](./Tool_Blocks.md#ai-vision)** — Deploy vision models for object recognition, detection, and classification on supported hardware.
+- **[AI Audio](./Tool_Blocks.md#ai-audio)** — Deploy speech recognition models on supported hardware.
+- **[AI Vibration](./Tool_Blocks.md#ai-vibration)** — Detect vibration anomalies by learning normal vibration patterns and flagging deviations.
+- **[Node-RED](./Tool_Blocks.md#node-red)** — Build and deploy visual logic flows for reCamera.
+- **[Aily Blockly](./Tool_Blocks.md#aily-blockly)** — Flash programs built in the Aily Blockly visual environment to edge devices.
+- **[Deploy container app](./Tool_Blocks.md#deploy-container-app)** — Deploy containerized applications to supported hardware.
+- **[Flash firmware](./Tool_Blocks.md#flash-firmware)** — Flash firmware images to devices in one click.
+- **Debug tools** *(coming soon)* — Inspect and troubleshoot device behavior during deployment.
+
+See [Tool Blocks](./Tool_Blocks.md) for full configuration details on each block.
 
 ### Step 3: Bill of Materials (BOM)
 
@@ -273,18 +112,18 @@ List required software or platforms—for example Arduino IDE, Home Assistant, o
 
 ### Step 4: Preview and publish
 
-Review the full application as an end user would. Before **Publish**, confirm required fields are complete, you have the right to distribute the code and assets, and nothing confidential or illegal is included.
+Review the full application as an end user would. Before **Publish**, confirm required fields are complete, and agree to [Declaration for Publishing](https://sensecraft.seeed.cc/legal/en/declaration), where you need to confirm that you have the right to distribute the code and assets, and nothing confidential or illegal is included.
 
-After you publish, the app enters review. You cannot keep editing that draft until the review state changes. If you are not ready to publish, exit the editor—progress is still saved automatically.
+After you publish, the application draft will be sent for review. You cannot edit that draft until the review is complete. If you are not ready to publish, exit the editor—progress is still saved automatically. Learn more about the publishing process in the following section.
 
 ## Publishing the application
 
 :::caution
-If your application uses models that are not yet public (for example ones you trained yourself), publishing the app will publish those models as well. We will remind you before it happens.
+If your application uses models that are not yet public (for example a model you trained/uploaded yourself), publishing the app will make those models publically available as well. We will remind you before it happens.
 :::
 
 :::caution
-If your application depends on someone else's model and that model is later removed, you will be notified. Your application can stay published, but deployments can no longer use that model.
+If your application depends on someone else's model and that model is later removed, you will be notified. Your application can stay published, but the model will no longer be available during deployments.
 :::
 
 ### Application review
@@ -317,44 +156,53 @@ Administrators check the following areas:
 
    - **Accurate BOM:** Listed hardware matches what the deployment steps actually use.
 
-   - **Reproducible deployment:** Steps are coherent; pin wiring, thresholds, MQTT settings, and similar details are explicit.
+   - **Reproducible deployment:** Steps follow a logical order, and concrete details such as pin wiring, threshold values, and MQTT settings are spelled out clearly.
 
 4. **Community guidelines**
 
    - **No spam:** Meaningless duplicates or ads without technical value are not allowed.
 
 :::caution
-To keep the SenseCraft AI community safe and high quality, the platform keeps final say on review decisions. Projects that break laws, policies, or security expectations may be rejected or removed at any time.
+To keep the SenseCraft AI community safe and trustworthy, all review decisions are ultimately made at the platform's discretion. Applications that violate laws, platform policies, or security standards may be rejected or removed at any time.
 :::
 
 ## App management
 
-### Manage public apps in the Application Store
+Every application has two states that can drift apart over time:
 
-When you open **your own published** application from the store, you can manage the **currently published** revision.
+- **Draft** — the working copy you edit. Always private, only visible to you.
+- **Published version** — the snapshot currently visible in the Application Store. Updated only when a new draft passes review.
 
-- **Duplicate:** Copy the stable published revision into a brand-new project.
+You can manage an application from two places, and the available actions depend on which copy you are acting on.
 
-- **Edit:** Open the draft for this app (same as **My Applications** > **Edit**).
+### From the Application Store
 
-- **Unpublish:** Temporarily hide the app from the public; its status becomes private.
+When you open **your own published** application from the store, the actions act on the **published version**.
 
-### Manage apps in My Applications
+- **Duplicate:** Create a new standalone project from the published version. Useful for branching off a known-good release.
 
-- **Edit:** Open the editor. Edits apply to the **draft** only and do not change the live published version.
+- **Edit:** Jump into the editor for this app's draft (same as opening it from **My Applications**).
 
-- **Duplicate:** Copy the current draft into a new standalone project.
+- **Unpublish:** Remove the app from the store and switch its status back to private. The draft is unaffected.
 
-- **Publish / Publish update:** Submit for review. After approval, the listing updates in the Application Store and replaces the previous public version when applicable.
+### From My Applications
 
-- **Unpublish:** If the app is public, you can pull it back to private here.
+The actions here operate on your **draft**.
+
+- **Edit:** Open the draft in the editor. Changes do not affect the published version until you publish again.
+
+- **Duplicate:** Create a new standalone project from the current draft.
+
+- **Publish** / **Publish update:** Submit the draft for review. The button is labeled **Publish** the first time and **Publish update** afterward. After approval, the new version replaces the existing public listing in the Application Store.
+
+- **Unpublish:** Take a public app off the store and return it to private status.
 
 :::tip
-If your draft and the published version differ, after unpublish you may lose convenient access to the published snapshot. **Duplicate** the published version before unpublishing if you need to continue from it.
+If your draft has moved on from the published version, unpublishing leaves you without easy access to that older public snapshot. If you might want to keep building from it, **Duplicate** the published version (from the Application Store) before you unpublish.
 :::
 
-- **Delete:** Remove the application entirely.
+- **Delete:** Permanently remove the application.
 
 :::caution
-If the app is currently published, delete will unpublish it from the store and then delete it permanently. Proceed carefully.
+Deleting a currently published app first unpublishes it from the store, then deletes it. This cannot be undone.
 :::
