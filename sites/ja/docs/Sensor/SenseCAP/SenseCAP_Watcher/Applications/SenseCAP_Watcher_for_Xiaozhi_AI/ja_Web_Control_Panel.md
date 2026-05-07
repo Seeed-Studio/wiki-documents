@@ -16,8 +16,8 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2025-05-27'
-updatedAt: '2025-10-13'
+createdAt: '2025-05-07'
+updatedAt: '2025-10-17'
 url: https://wiki.seeedstudio.com/ja/watcher_web_control_panel/
 ---
 
@@ -25,30 +25,31 @@ url: https://wiki.seeedstudio.com/ja/watcher_web_control_panel/
 
 ## 概要
 
-SenseCAP Watcher Web コントロールパネル（ベータ版）は、Watcher デバイスの管理と Agent 設定の構成を行うための Web ベースのインターフェースを提供します。このベータ版には、デバイス管理と Agent カスタマイズのための基本機能が含まれています。
+SenseCAP Watcher Web コントロールパネル（ベータ版）は、Watcher デバイスの管理や Agent 設定の構成を行うための Web ベースのインターフェースを提供します。このベータ版には、デバイス管理と Agent カスタマイズのための基本機能が含まれています。
 
-以下の動画は、Web コントロールパネルを使用してデバイスを設定する方法のステップバイステップチュートリアルです。
+以下の動画は、Web コントロールパネルを使用してデバイスを設定するためのステップバイステップのチュートリアルです。
 <div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ## 現在の機能
 
-Web コントロールパネルのベータ版には、以下の主要機能が含まれています：
+Web コントロールパネルのベータ版には、次の主な機能が含まれます：
 
-1. デバイスバインディング
+1. デバイスのバインド
 2. Agent 設定
-3. LLM モデル選択
-4. チャット履歴管理
-5. デバイス情報表示
+3. LLM モデルの選択
+4. チャット履歴の管理
+5. デバイス情報の表示
 
-## デバイスバインディング
+## デバイスのバインド
 
-### バインディングプロセス
-1. [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) にアクセスします
-2. コントロールパネルにアクセスするには、ページの右上角にある Watcher Agent をクリックします。
-   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-3. "Bind Device" ボタンをクリックします
+### バインド手順
+1. **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`** の順に進んで Watcher Agent コントロールパネルにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/37)を使用し、左サイドバーの **`Watcher Agent`** をクリックします。
+
+   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
+
+2. 「Bind Device」ボタンをクリックします
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/page1.jpg" style={{width:300, height:'auto'}}/></div> 
-4. 画面の指示に従い、デバイスに表示される 6 桁の認証コードを入力します
+3. 画面の指示に従い、デバイスに表示されている 6 桁の認証コードを入力します
 
 
 
@@ -59,40 +60,40 @@ Web コントロールパネルのベータ版には、以下の主要機能が�
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
 
 ### ロールテンプレート
-- プリセットテンプレートを提供しており、独自のテンプレートを作成したり、プリセットテンプレートを変更したりすることもできます。
+- あらかじめ用意されたテンプレートを提供しており、自分でテンプレートを作成したり、既存のテンプレートを編集することもできます。
 
-### アシスタントニックネーム
+### アシスタントのニックネーム
 - Agent の名前をカスタマイズします。
 :::note
-この機能は Agent のウェイクワードを変更しません。
-Agent のウェイクワードは、ファームウェアをコンパイルする際にのみ変更できます。
-デフォルトのウェイクアップワードは "Jarvis" です。
+この機能は Agent のウェイクワードは変更しません。 
+Agent のウェイクワードは、ファームウェアをコンパイルする際にのみ変更できます。 
+デフォルトのウェイクワードは「Jarvis」です。
 :::
 
 
 ### キャラクターボイス
 - 異なる音声を選択します
 
-### ロール紹介/プロンプト
+### ロール紹介 / プロンプト
 1. 事前定義されたロールテンプレートから選択
 2. カスタムロールテンプレートを作成
-3. 既存のテンプレートを変更
+3. 既存テンプレートを編集
 :::note
-上記で設定したアシスタントニックネームは、ロール紹介に `assistant nickname` が追加された場合にのみ機能します。
-現在の時刻を取得するには、__DATE__ を追加する必要があります。
+上で設定したアシスタントのニックネームは、ロール紹介に `assistant nickname` が追加されている場合にのみ有効になります。
+現在時刻を取得するには、__DATE__ を追加する必要があります。
 :::
 
 
-### 履歴の表示
+### 履歴の閲覧
 - チャットログにアクセス
-- 個別のメッセージを表示
+- 個々のメッセージを表示
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/history%20del.jpg" style={{width:600, height:'auto'}}/></div> 
 
 ## デバイス情報
 
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/device%20list.jpg" style={{width:800, height:'auto'}}/></div> 
 
-コントロールパネルには、以下の重要なデバイス情報が表示されます：
+コントロールパネルには、次のような重要なデバイス情報が表示されます：
 
 - ボード名
 - MAC アドレス
@@ -102,7 +103,7 @@ Agent のウェイクワードは、ファームウェアをコンパイルす�
 - 操作
 
 :::note
-これは Web コントロールパネルのベータ版であり、将来のリリースで機能が更新または変更される可能性があります。最新の機能については、定期的にアップデートを確認してください。
+これは Web コントロールパネルのベータ版であり、今後のリリースで機能が更新または変更される場合があります。最新の機能を利用するため、定期的にアップデートを確認してください。
 :::
 
 ## 技術サポート

@@ -10,13 +10,13 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2026-03-20'
+updatedAt: '2025-09-05'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao/
 ---
 
 # Usando XIAO ESP32S3 Sense como um Sensor de IA com SenseCraft AI
 
-Este wiki fornece um guia passo a passo sobre como configurar a saída de um modelo no SenseCraft AI e usar o XIAO ESP32S3 Sense como um sensor de IA. Seguindo estas instruções, você aprenderá como conectar o XIAO ESP32S3 Sense ao seu computador, selecionar o método de saída apropriado e recuperar os dados do modelo usando diferentes protocolos de comunicação, como UART, I2C e SPI.
+Este wiki fornece um guia passo a passo sobre como configurar a saída de um modelo no SenseCraft AI e usar o XIAO ESP32S3 Sense como um sensor de IA. Seguindo estas instruções, você aprenderá como conectar o XIAO ESP32S3 Sense ao seu computador, selecionar o método de saída apropriado e obter os dados do modelo usando diferentes protocolos de comunicação, como UART, I2C e SPI.
 
 ## Pré-requisitos
 
@@ -45,42 +45,34 @@ Antes de continuar, certifique-se de que você tem o seguinte:
   </table>
 </div>
 
-## Passo 1. Acesse o SenseCraft AI Vision Workspace e conecte o XIAO ESP32S3 Sense
+## Etapa 1. Acessar o Workspace do XIAO ESP32S3 Sense e conectar o dispositivo
 
-Abra o seu navegador e acesse a página do SenseCraft AI Vision Workspace.
+Acesse o workspace do XIAO ESP32S3 Sense via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/32).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1733300644024" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
-    </a>
-</div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-Selecione a placa XIAO ESP32S3 Sense entre os dispositivos disponíveis.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
-
-Usando o cabo USB-C, conecte sua placa XIAO ESP32S3 Sense ao computador. Depois de conectada, clique no botão **Connect** localizado no canto superior esquerdo da página do SenseCraft AI Vision Workspace.
+Usando o cabo USB-C, conecte sua placa XIAO ESP32S3 Sense ao computador. Depois de conectada, clique no botão **Connect** localizado no canto superior esquerdo da página do workspace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
-## Passo 2. Certifique-se de que um modelo está carregado no XIAO ESP32S3 Sense
+## Etapa 2. Certificar-se de que um Modelo está Carregado no XIAO ESP32S3 Sense
 
-Antes de continuar, verifique se a sua placa XIAO ESP32S3 Sense tem um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
+Antes de continuar, certifique-se de que sua placa XIAO ESP32S3 Sense tenha um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
 
 - [Usando um modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_pretrained_models_for_xiao/)
 
-Se você quiser usar o seu próprio modelo treinado, pode consultar os dois Wikis a seguir.
+Se você quiser usar seu próprio modelo treinado, pode consultar os dois Wikis a seguir.
 
 - [Tipo de treinamento - Classificação](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_classification/)
 - [Tipo de treinamento - Detecção de Objetos](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_object_detection/)
 
-## Passo 3. Prepare a forma e o programa que você deseja usar
+## Etapa 3. Preparar o meio e o programa que você deseja usar
 
-O XIAO suporta a saída dos resultados do modelo via UART, IIC ou SPI; você pode escolher como deseja enviar os resultados de acordo com a situação real.
+O XIAO oferece suporte à saída dos resultados do modelo via UART, IIC ou SPI; você pode escolher como deseja enviar os resultados de acordo com a situação real.
 
 ### Opção 1. Comunicação UART
 
-Conecte os pinos TX e RX das duas placas XIAO entre si. Para o XIAO ESP32S3 Sense como Sensor de IA (já modelado), os pinos de saída são definidos como:
+Conecte os pinos TX e RX das duas placas XIAO entre si. Para o XIAO ESP32S3 Sense do Sensor de IA (já modelado), os pinos de saída são definidos como:
 
 - **TX: GPIO43**
 - **RX: GPIO44**
@@ -95,10 +87,10 @@ Baixe a biblioteca [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/Seeed_A
     </a>
 </div><br />
 
-Use o código do seguinte exemplo:
+Use o código do exemplo a seguir:
 
 :::note
-Defina a taxa de baud para 921600 com 8 bits de dados, sem paridade e 1 bit de parada (8N1).
+Defina a taxa de transmissão para 921600 com 8 bits de dados, sem paridade e 1 bit de parada (8N1).
 :::
 
 ```cpp
@@ -215,11 +207,11 @@ Se tudo correr bem, você verá a mensagem de saída do resultado do modelo, com
 
 ### Opção 2. Comunicação I2C
 
-Conecte os pinos SDA e SCL das duas placas XIAO entre si. Para o XIAO ESP32S3 Sense como Sensor de IA (já modelado), os pinos de saída são definidos como:
+Conecte os pinos SDA e SCL das duas placas XIAO entre si. Para o XIAO ESP32S3 Sense do Sensor de IA (já modelado), os pinos de saída são definidos como:
 
 - **SDA: GPIO5** (com resistor de pull-up)
 - **SCL: GPIO6** (com resistor de pull-up)
-- Endereço escravo I2C em `0x62`
+- Endereço escravo I2C para `0x62`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/iic_connection.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -227,11 +219,11 @@ Baixe a biblioteca [Seeed_Arduino_SSCMA](https://github.com/Seeed-Studio/Seeed_A
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA/tree/main" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-Use o código do seguinte exemplo:
+Use o código do exemplo a seguir:
 
 :::note
 Use o seguinte protocolo para comunicação I2C:
@@ -338,7 +330,7 @@ void loop()
 }
 ```
 
-Se tudo correr bem, você verá a mensagem de saída do resultado do modelo, como mostrado abaixo.
+Se tudo correr bem, você verá a mensagem de saída do resultado do modelo como mostrado abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/71.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -357,7 +349,7 @@ Se tudo correr bem, você verá a mensagem de saída do resultado do modelo, com
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA/tree/main" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar a biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -468,13 +460,13 @@ void loop()
 }
 ```
 
-Se tudo correr bem, você verá a mensagem de saída do resultado do modelo, como mostrado abaixo.
+Se tudo correr bem, você verá a mensagem de saída do resultado do modelo como mostrado abaixo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/72.png" style={{width:1000, height:'auto'}}/></div>
 
-## Passo 4: Envie o Código e Execute
+## Etapa 4: Carregar o código e executar
 
-Abra o código de exemplo apropriado na IDE do Arduino com base no protocolo de comunicação escolhido. Verifique e carregue o código para a placa XIAO receptora. Abra o monitor serial na IDE do Arduino para visualizar os dados do modelo recebidos.
+Abra o código de exemplo apropriado na IDE do Arduino com base no protocolo de comunicação escolhido. Verifique e envie o código para a placa XIAO receptora. Abra o monitor serial na IDE do Arduino para visualizar os dados do modelo recebidos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/73.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -484,13 +476,13 @@ Seguindo este guia passo a passo, você configurou com sucesso a saída de um mo
 
 Lembre-se de consultar o código de exemplo fornecido e fazer as modificações necessárias com base na sua configuração específica e na escolha do protocolo de comunicação.
 
-Se você encontrar algum problema ou tiver mais dúvidas, consulte a documentação da Seeed Studio ou peça ajuda nos fóruns da comunidade.
+Se você encontrar algum problema ou tiver mais perguntas, consulte a documentação da Seeed Studio ou peça ajuda nos fóruns da comunidade.
 
 Boas medições com o seu XIAO ESP32S3 Sense e SenseCraft AI!
 
 ## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

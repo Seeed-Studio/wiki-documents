@@ -14,7 +14,7 @@ last_update:
   date: 08/22/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/cn/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
@@ -40,7 +40,7 @@ SenseCraft AI-Jetson 是一款为 NVIDIA Jetson 边缘 AI 设备设计的开发�
 **快速开始**<br />
 
 1. 将 Jetson 连接到显示器并开机<br />
-2. 将鼠标和键盘插入设备，在终端中输入以下命令来运行应用
+2. 将鼠标和键盘插入设备，在终端中输入以下命令以运行应用
 
 ```
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
@@ -61,7 +61,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 - **(Recommended if your root partition is smaller than 32 GB). [y/n] (default: n): n**<br />
 
-边缘 AI 程序运行至少需要 32G 的存储空间，如果没有，你可以选择将 docker 数据卷挂载到外部磁盘。
+边缘 AI 程序运行至少需要 32G 的存储空间，如果达不到，你可以选择将 docker 数据卷挂载到外部磁盘。
 
 4. 现在你可以体验 SenseCraft AI-Jetson 了
 
@@ -69,15 +69,15 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 ### 添加设备
 
-1. 在设备工作空间页面点击 "Add Device" 按钮
+1. 在 SenseCraft AI 平台上，依次进入 **`Models`** > **`Workspace`** > **`NVIDIA Jetson`**，然后点击 **`Add Device`**。
 2. 输入设备自定义名称，并从设备上获取绑定码。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image28.png)
 
 3. 回到设备上的 SenseCraft AI 应用。点击 "Bind to SenseCraft AI platform"，然后应用会显示绑定码和临时名称。
 
-- Bind Code: 在 SenseCraft AI-Model Zoo 上输入正确且有效的绑定码以完成设备绑定。
-- Temporary Name: 如果绑定码重复，则需要输入正确的临时名称。
+- 绑定码：在 SenseCraft AI 平台上输入正确且有效的绑定码以完成设备绑定。
+- 临时名称：如果绑定码重复，则需要输入正确的临时名称。
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image29.png)
 
@@ -85,7 +85,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 4. 输入正确且有效的绑定码并点击 "Comfirm" 按钮
 
-5. 绑定成功，现在你可以管理该设备
+5. 绑定成功后，你就可以管理该设备了
 
 :::note
 
@@ -112,7 +112,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 | **Device Name** | 设备自定义名称，用户可以修改名称 |
 | **Device SN** | 设备唯一生产序列号 |
 | **Device EUI** | 设备 EUI |
-| **Online Status** | Online: 设备在线<br />Offline: 设备离线，用户无法操作离线设备 |
+| **Online Status** | Online：设备在线<br />Offline：设备离线，用户无法操作离线设备 |
 | **Equipped Module** | 设备所搭载的模组 |
 | **CPU Usage** | 设备 CPU 使用率 |
 | **Memory** | 设备 RAM 使用率 |
@@ -130,7 +130,7 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 ### 视频流管理
 
-视频流可以远程查看实时推理结果并管理设备视频流，支持添加流、编辑流、查看流以及删除流。
+视频流可以远程查看实时推理结果并管理设备视频流。支持添加流、编辑流、查看流以及删除流。
 
 #### 实时推理
 
@@ -140,43 +140,43 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 
 #### 添加流
 
-点击 "Add Stream" 并输入有效的视频流信息，然后点击 "Confirm" 按钮将新视频流发送到设备。设备添加新视频流需要一定时间，平台信息会稍后更新。详细信息请查看下表。
+点击 "Add Stream" 并输入有效的流信息，然后点击 "Confirm" 按钮将新流发送到设备。设备添加新流需要一定时间，平台信息会稍后更新。详细信息请查看下表。
 
 :::note
 
-设备必须在线才能添加新视频流
+设备必须在线才能添加新流
 
 :::
 
 | **字段** | **内容** |
 | --- | --- |
-| **Stream Name** | 1 此视频流的自定义名称。<br />2 不能为空 |
+| **Stream Name** | 1 此流的自定义名称。<br />2 不能为空 |
 | **Video Type** | 1 Ip camera：接入 IP 摄像头，需要输入有效的 rtsp url<br />2 Usb camera：将 USB 摄像头连接到设备，自动识别 USB，然后在视频路径中选择正确的 USB 摄像头。 |
 | **Video Path** | 视频路径，格式由 "Video Type" 决定，如果错误，将使用默认视频。 |
 | **Device AI Model** | 1 选择一个已经下载到设备上的 AI 模型<br />2 如果设备上没有 AI 模型，请前往 AI Models 页面将模型下载到设备。 |
 | **Confidence Threshold** | 1 目标检测的置信度阈值。<br />2 格式：float [0, 1] |
 | **IoU Threshold** | 1 IoU 用于评估预测框与真实框的重叠精度 2 格式：float [0, 1] |
-| **FPS** | 1 视频流的每秒帧数<br />2 格式：INT [1,60] |
-| **Quality** | 1 输出视频流质量。默认：50<br />2 格式：int [0,100] |
+| **FPS** | 1 流的每秒帧数<br />2 格式：INT [1,60] |
+| **Quality** | 1 输出流质量。默认：50<br />2 格式：int [0,100] |
 | **Maximum Detections** | 1 每张图像的最大检测数量。默认：3002 格式：int [0,1000] |
-| **Display Frame Rate** | 1 是否显示视频流的帧率<br />2 格式：Bool [True,False]<br />● True: 显示 FPS<br />● False: 不显示 FPS |
-| **Display Clock** | 1 是否显示时间<br />2 格式：Bool [True,False]<br />● True: 显示时间<br />● False: 不显示时间 |
+| **Display Frame Rate** | 1 是否显示流的帧率<br />2 格式：Bool [True,False]<br />● True：显示 FPS<br />● False：不显示 FPS |
+| **Display Clock** | 1 是否显示时间<br />2 格式：Bool [True,False]<br />● True：显示时间<br />● False：不显示时间 |
 
 #### 流详情
 
-点击视频流的 "Eye" 图标，你将看到该视频流的详细信息
+点击流的 "Eye" 图标，你将看到该流的详细信息
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image36.png)
 
 #### 编辑流
 
-点击视频流的 "Edit" 图标，用户可以编辑该视频流的所有配置，并点击 "Confirm" 按钮将修改后的视频流信息发送到设备。设备更新视频流配置需要一定时间，平台信息会稍后更新。
+点击流的 "Edit" 图标，用户可以编辑该流的所有配置，并点击 "Confirm" 按钮将修改后的流信息发送到设备。设备更新流配置需要一定时间，平台信息会稍后更新
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image37.png)
 
 #### 删除流
 
-点击视频流的 "Delete" 图标以删除该视频流。设备删除视频流需要一定时间，平台信息会稍后更新
+点击流的 "Delete" 图标以删除该流。设备删除流需要一定时间，平台信息会稍后更新
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image38.png)
 
