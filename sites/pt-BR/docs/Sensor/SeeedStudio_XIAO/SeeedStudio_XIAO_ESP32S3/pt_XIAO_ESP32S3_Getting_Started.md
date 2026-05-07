@@ -82,7 +82,7 @@ A **câmera OV2640** foi descontinuada, e as versões subsequentes do XIAO ESP32
     <td>/</td>
     <td>1x sensor de câmera OV3660<br/>1x microfone digital</td>
     <td>/</td>
-  </tr]
+  </tr>
   <tr>
     <th>Memória</th>
     <td>8MB PSRAM &amp; 8MB Flash integrados</td>
