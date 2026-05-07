@@ -159,7 +159,7 @@ Compatible with **M1 Gate**, **Raspberry Pi 4 / 5**, **NVIDIA Jetson**, and **Se
 
 ### How it works with SenseCraft Fleet
 
-Container apps are managed on [**SenseCraft Fleet**](https://seeed-fleet.com) and deployed through [**SenseCraft AI**](https://sensecraft.seeed.cc/ai/home):
+Container apps are managed on [**SenseCraft Fleet**](https://seeed-fleet.com) and deployed through [**SenseCraft AI**](https://sensecraft.seeed.cc/ai) (under **`Applications`**):
 
 - **SenseCraft Fleet** is where container images live—you upload images, define their configuration schema, and bind your devices.
 - **SenseCraft AI** is where you pick an app from your library, choose a target device, configure it, and trigger deployment.

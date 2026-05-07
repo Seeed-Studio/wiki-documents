@@ -166,7 +166,7 @@ It may become ineffective after multiple restarts and needs to be reset.
 
 ### 2.2 Install programs from SenseCraft platforms in reCamera
 
-Go to the [SenseCraft platform](https://sensecraft.seeed.cc/ai/home) - Application - search box and enter "Real-time Crowd Heatmap" to search, find the application called "Real-time Crowd Heatmap" and deploy it to your reCamera.
+On the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai), navigate to **`Applications`** > **`Application Square`**, then enter "Real-time Crowd Heatmap" in the search box. Find the application called "Real-time Crowd Heatmap" and deploy it to your reCamera.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_92.png" /></div>
 

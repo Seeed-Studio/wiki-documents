@@ -214,16 +214,9 @@ Finally, click the **Flash** button and wait for the programme to be uploaded su
 
 ### Step 6. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-First, we need to open the main SenseCraft AI page.
+Access the Grove Vision AI V2 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/36).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
-</div>
-<br />
-
-Click on **Vision Workspace -> Grove Vision AI V2** in the navigation menu.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/52.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
 Please use a Type-C type cable to connect **Grove Vision AI V2** to your computer.
 
