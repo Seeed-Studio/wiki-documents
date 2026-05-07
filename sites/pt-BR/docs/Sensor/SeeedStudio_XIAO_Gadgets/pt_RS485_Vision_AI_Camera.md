@@ -12,7 +12,7 @@ last_update:
   date: 12/26/2024
   author: Jason
 createdAt: '2025-01-03'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_rs485_vision_ai_cam/
 ---
 
@@ -23,16 +23,16 @@ url: https://wiki.seeedstudio.com/pt-br/getting_started_with_rs485_vision_ai_cam
 
 - [**Introdução sem código com SenseCraft AI**](#jump1)
   - [O que é SenseCraft AI?](#jump2)
-  - [Primeiros passos com o SenseCraft AI Model Assistant](#jump3)
+  - [Introdução ao SenseCraft AI Model Assistant](#jump3)
 - [**Programar no Arduino conectando com a placa Seeed Studio XIAO**](#jump4)
   - [Introdução à biblioteca Arduino](#jump5)
-  - [Primeiros passos com Seeed Studio XIAO](#jump6)
+  - [Introdução ao Seeed Studio XIAO](#jump6)
 
 ## Visão geral do hardware
 
 ### Introdução
 
-A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina um MCU ESP32-C3 (Seeed Studio XIAO) com um processador Himax WiseEye2 HX6538, com núcleo duplo Arm Cortex-M55 e um processador neural Ethos-U55 integrado. Esta câmera avançada oferece reconhecimento de IA de alto desempenho com resolução de 480×480 e 10 FPS, mantendo baixo consumo de energia por meio de opções flexíveis para transmissão dos resultados de inferência. Com sua interface Modbus RS485 padrão, integra-se perfeitamente a sistemas industriais e oferece suporte a conectividade LoRaWAN e 4G por meio de SenseCAP DTUs ou outros dispositivos DTU RS485 padrão. Protegida por um gabinete com classificação IP66, suporta condições ambientais adversas, tornando-a ideal para aplicações internas e externas. A câmera se destaca em várias tarefas de visão computacional, incluindo contagem de pessoas, detecção de objetos e classificação. Os usuários podem implantar modelos a partir de mais de 300 modelos pré-treinados ou treinar modelos personalizados na plataforma sem código SenseCraft AI, enquanto modelos de IA nos frameworks TensorFlow e PyTorch são suportados. Questões de privacidade são abordadas por meio do seu design para transmitir apenas os resultados de inferência, com transmissão opcional de quadros-chave via Wi-Fi quando necessário.
+A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina um MCU ESP32-C3 (Seeed Studio XIAO) com um processador Himax WiseEye2 HX6538, com núcleo duplo Arm Cortex-M55 e um processador neural Ethos-U55 integrado. Esta câmera avançada oferece reconhecimento de IA de alto desempenho em resolução de 480×480 e 10 FPS, mantendo baixo consumo de energia por meio de opções flexíveis para transmissão dos resultados de inferência. Com sua interface Modbus RS485 padrão, integra-se perfeitamente a sistemas industriais e oferece suporte tanto a conectividade LoRaWAN quanto 4G por meio de SenseCAP DTUs ou outros dispositivos RS485 DTU padrão. Protegida por um gabinete com classificação IP66, suporta condições ambientais adversas, sendo ideal para aplicações internas e externas. A câmera se destaca em várias tarefas de visão computacional, incluindo contagem de pessoas, detecção de objetos e classificação. Os usuários podem implantar modelos a partir de mais de 300 modelos pré-treinados ou treinar modelos personalizados na plataforma sem código SenseCraft AI, enquanto modelos de IA nos frameworks TensorFlow e PyTorch são suportados. Questões de privacidade são tratadas por meio do seu design para transmitir apenas os resultados de inferência, com transmissão opcional de quadros-chave via Wi-Fi quando necessário.
 
 ### Preparação de equipamentos
 
@@ -58,7 +58,7 @@ A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina 
 
 - Computação de borda para alta segurança de dados: inferência de imagem local, enviando apenas o resultado final, adequada para aplicações que exigem transmissão de dados limitada e alta privacidade de dados.  
 
-- Modelos de IA multifuncionais: fornecida com 3 modelos integrados de detecção de humanos, contagem de pessoas e leitura de medidores, e também é fácil implantar modelos públicos de IA ou treinar modelos personalizados de IA no SenseCraft AI com poucos cliques. Suporta os frameworks TensorFlow e PyTorch.
+- Modelos de IA multifuncionais: fornecida com 3 modelos integrados de detecção de humanos, contagem de pessoas e leitura de medidores, e também é fácil implantar modelos de IA públicos ou treinar modelos de IA personalizados no SenseCraft AI com poucos cliques. Suporta os frameworks TensorFlow e PyTorch.
 
 - Múltiplos protocolos de transmissão: suporta transmissão de resultados de inferência via protocolo RS485 padrão; conecte-se ao SenseCAP S2100/ 4G Sensor Hub DTU para obter os resultados via LoRaWAN ou 4G. Também suporta transmissão de quadros-chave via Wi-Fi.
 
@@ -83,7 +83,7 @@ A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina 
  </tr>
  <tr>
      <th>Microcontrolador</th>
-        <td align="center">Visão de IA: <strong>Himax-6538</strong> <br></br> Rede: <strong>XIAO ESP32C3</strong> <br></br></td>
+        <td align="center">Vision AI: <strong>Himax-6538</strong> <br></br> Rede: <strong>XIAO ESP32C3</strong> <br></br></td>
  </tr>
     <tr>
         <th>Câmera</th>
@@ -105,9 +105,9 @@ A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina 
         <td align="center">
             Chip:<strong>TP8485E, transceptor half-duplex
             Protocolo RS485 Modbus-RTU</strong><br />
-            Conexão de terminais: <strong>Conexão de terminais: terminal de 3 pinos para fio de sinal e terminal de 3 pinos para alimentação</strong><br />
+            Conexão do terminal: <strong>Conexão do terminal: borne de 3 pinos para fio de sinal e borne de 3 pinos para alimentação</strong><br />
             Alcance de transmissão:<strong>Alcance de transmissão: até 1200 metros (varia conforme o ambiente)</strong><br />
-            Velocidade de transmissão: <strong>Velocidade de transmissão: 250k bps (Máx)</strong>
+            Velocidade de transmissão: <strong>Velocidade de transmissão: 250k bps (máx.)</strong>
         </td>
     </tr>
     <tr>
@@ -150,14 +150,14 @@ A Seeed Studio RS485 Vision AI Camera é um dispositivo inteligente que combina 
 
 ### Diagrama de pinagem
 
-De acordo com a figura abaixo, as diferentes cores de fios do A1102 correspondem a diferentes funções de pinos. As funções específicas dos pinos são as seguintes:
+De acordo com a imagem abaixo, as diferentes cores de fios do A1102 correspondem a diferentes funções de pinos. As funções específicas dos pinos são as seguintes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/pin.png" style={{width:600, height:'auto'}}/></div>
 
-Encontre a função que corresponde ao datalogger para fazer a conexão
+Encontre a função que corresponde ao datalogger para conectar
 
 :::tip
-Se você usar 5v, não precisa usar 12v; 12v e 5v escolhem uma das tensões de alimentação, lembre-se de não usar juntas!
+Se você usar 5V, não precisa usar 12V; 12V e 5V escolhem uma das fontes de alimentação, lembre-se de não usar juntas!
 :::
 
 ## Visão geral do software
@@ -170,7 +170,7 @@ Se você usar 5v, não precisa usar 12v; 12v e 5v escolhem uma das tensões de a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/30.png" style={{width:400, height:'auto'}}/></div>
 
-**Passo 2 :** Marque o dispositivo “RS485 Vision AI Camera”.
+**Passo 2 :** Verifique o dispositivo “RS485 Vision AI Camera”.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/31.png" style={{width:400, height:'auto'}}/></div>
 
@@ -182,7 +182,7 @@ Se você usar 5v, não precisa usar 12v; 12v e 5v escolhem uma das tensões de a
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/42.jpg" style={{width:400, height:'auto'}}/></div>
 
-**Passo 5 :** Se você precisar vincular o “DataLogger”, insira o número SN correspondente; se você não definir a “confidence” de que precisa, clique em “Preview” para acessar o sensor de imagem para coletar a imagem.
+**Passo 5 :** Se você precisar vincular o “DataLogger”, insira o número SN correspondente; se você não definir a “confidence” de que precisa, clique em “Preview” para acessar o sensor de imagem e coletar a imagem.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/33.png" style={{width:400, height:'auto'}}/></div>
 
@@ -194,7 +194,7 @@ Parabéns por usar com sucesso o dispositivo RS485 Vision AI V2 no SenseCraft AP
 
 ### Modelos de IA personalizados com SenseCraft AI
 
-Se você quiser personalizar o seu modelo, mostraremos como usar o SenseCraft AI para implantar seu modelo de aprendizado de máquina favorito no dispositivo RS485 Vision AI Camera para personalizar funcionalidades e aplicações.
+Se você quiser personalizar seu modelo, mostraremos como usar o SenseCraft AI para implantar seu modelo de aprendizado de máquina favorito no dispositivo RS485 Vision AI Camera para personalizar recursos e aplicações.
 
 #### Fluxo de trabalho de hardware
 
@@ -204,11 +204,11 @@ Conecte a porta Type-C ao Vision AI V2 ao seu computador de acordo com as instru
 
 #### Fluxo de trabalho do software
 
-**Passo 1 .** Primeiro, clique em [SenseCraftAI](https://sensecraft.seeed.cc/ai/#/home) e encontre **“Pretrained Models”** na barra de menu na parte superior do site SenseCraft AI e clique nela.
+**Passo 1 .** Abra o [SenseCraft AI](https://sensecraft.seeed.cc/ai) e navegue até **`Models`** > **`Model Library`**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/1.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 2 .** Encontre **“SenseCAP A1102”** na seção Supported Devices. Aqui você precisa encontrar o modelo de dispositivo que corresponde ao modelo adaptado.
+**Passo 2 .** Encontre o **“SenseCAP A1102”** na seção Supported Devices. Aqui você precisa encontrar o modelo de dispositivo que corresponde ao modelo adaptado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/2.png" style={{width:700, height:'auto'}}/></div>
 
@@ -216,53 +216,53 @@ Conecte a porta Type-C ao Vision AI V2 ao seu computador de acordo com as instru
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/3.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 4 .** Após entrar no modelo, encontre a opção **“Deploy Model”**.
+**Passo 4 .** Uma vez dentro do modelo, encontre a opção **“Deploy Model”**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/4.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 5.** Encontre o dispositivo de conexão e a opção correspondente **“SenseCAP A1102”**.
+**Passo 5 .** Encontre o Connect Device e a opção correspondente **“SenseCAP A1102”**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/5.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 6.** Depois de acessar, conecte seu dispositivo A1102 e encontre a porta serial correspondente para se conectar.
+**Passo 6.** Depois de entrar, conecte seu dispositivo A1102 e encontre a porta serial correspondente para se conectar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/6.png" style={{width:700, height:'auto'}}/></div>
 
-**Passo 7.** Por fim, podemos ver o modelo gravado e exibir os resultados correspondentes
+**Passo 7.** Finalmente, podemos ver o modelo gravado e exibir os resultados correspondentes
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/7.png" style={{width:700, height:'auto'}}/></div>
 
 `Confidence:`
-    - Confidence se refere ao nível de certeza ou probabilidade atribuído por um modelo às suas previsões.
+    - Confidence refere-se ao nível de certeza ou probabilidade atribuído por um modelo às suas previsões.
 
 `IoU:`
-    - IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras reais.
+    - IoU é usado para avaliar a precisão das caixas delimitadoras previstas em comparação com as caixas delimitadoras verdadeiras.
 
 Neste ponto, implantamos com sucesso o modelo de que precisamos no dispositivo RS485 Vision AI Camera. Em seguida, prosseguimos para a próxima etapa da operação!
 
-### Leitura de Dados com XIAO
+### Leitura de dados com XIAO
 
 Para ler dados de modelos gravados via XIAO, acesse este [wiki](https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_software_support/), que explica em detalhes como ler dados do Vision AI V2 via XIAO.
 
-### Transmissão de Dados RS485
+### Transmissão de dados RS485
 
-#### Esquemático de Conexão
+#### Esquema de conexão
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/Camera_Connecting.png" style={{width:900, height:'auto'}}/></div>
 
 :::tip
-Se você usar 5 V, não precisa usar 12 V; escolha apenas uma das tensões de alimentação, 12 V ou 5 V, lembre-se de não usar as duas ao mesmo tempo!
+Se você usar 5 V, não precisa usar 12 V. 12 V e 5 V devem ser escolhidos como uma única fonte de alimentação, lembre-se de não usá-los juntos!
 :::
 
-Depois de ter feito a conexão com sucesso de acordo com o diagrama acima, clique neste link do [wiki](https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_rs485/) para uma explicação mais detalhada de como usar o código para acionar a câmera.
+Depois de ter conectado com sucesso de acordo com o diagrama acima, clique neste link do [wiki](https://wiki.seeedstudio.com/pt-br/grove_vision_ai_v2_rs485/) para uma explicação mais detalhada de como usar o código para controlar a câmera.
 
 ## Recursos
 
 - 📄 **[PDF]** [Esquemático da Seeed Studio RS485 Vision AI Camera](https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/SenseCAP_RS485_Vision_AI_Sensor_SCH.pdf)
 
-## Suporte Técnico e Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos diversos canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

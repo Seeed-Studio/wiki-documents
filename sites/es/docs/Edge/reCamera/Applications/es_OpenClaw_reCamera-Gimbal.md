@@ -7,12 +7,13 @@ keywords:
   - OpenClaw
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_9.png
 slug: /use_cpenclaw_to_control_the_recamera_gimbal
+sku: 100029708
 sidebar_position: 10
 last_update:
   date: 03/27/2026
   author: Xinrui Wu
 createdAt: '2026-03-27'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/es/use_cpenclaw_to_control_the_recamera_gimbal/
 ---
 
@@ -22,10 +23,10 @@ url: https://wiki.seeedstudio.com/es/use_cpenclaw_to_control_the_recamera_gimbal
 ## Introducción
 
 Este proyecto rompe con éxito la barrera entre los grandes modelos virtuales y el mundo físico mediante la profunda integración del framework OpenClaw Agent con la cámara edge AI reCamera Gimbal de Seeed Studio.  
-Basándonos en la potente arquitectura RISC-V, el entorno low-code integrado Node-RED y la capacidad de cómputo en el borde de 1 TOPS de reCamera, hemos desarrollado una Skill subyacente de interacción dedicada para OpenClaw.  
+Basándonos en la potente arquitectura RISC-V, el entorno low-code integrado Node-RED y la capacidad de computación en el borde de 1 TOPS de reCamera, hemos desarrollado una Skill de interacción subyacente dedicada para OpenClaw.  
 Ahora, el gran modelo ya no es un "cerebro en un frasco" que solo puede escribir en la pantalla. Tiene un "cuello" que puede girar activamente 360°, "ojos" (captura de imagen + análisis VLM) que pueden ver el mundo físico, "manos" (control de LED) que pueden cambiar el entorno y "oídos y boca" (micrófono y altavoz) para la interacción bidireccional.
 
-A continuación se muestra el efecto de uso después de completar esta demo.
+Aquí está el efecto de uso después de completar esta demostración.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw.gif" /></div>
 
@@ -59,7 +60,7 @@ un ordenador
 ## 1. Instalar OpenClaw en tu ordenador
 
 :::note
-Es necesario tener instalados Git y nodejs antes de la instalación. Si eres usuario de Windows10, también necesitas instalar Visual Studio. Si no está instalado, se producirá un error.
+Git y nodejs deben estar instalados antes de la instalación. Si eres usuario de Windows10, también es necesario instalar Visual Studio. Si no está instalado, se producirá un error.
 :::
 
 Visita la página oficial de OpenClaw para ver el tutorial de instalación detallado: [OpenClaw-Personal AI Assistant](https://openclaw.ai/)
@@ -68,7 +69,7 @@ Después de la instalación, puedes entrar directamente en la página web para i
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_2.png" /></div>
 
-También puedes hacer clic en la página "Overview" en el lado izquierdo para comprobar si el "Status" es normal.
+También puedes hacer clic en la página "Overview" en la parte izquierda para comprobar si el "Status" es normal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_3.png" /></div>
 
@@ -76,7 +77,7 @@ También puedes hacer clic en la página "Overview" en el lado izquierdo para co
 
 ### 2.1 Nueva carpeta de skills
 
-En la carpeta donde está instalado OpenClaw, busca `workspace` y crea una nueva carpeta llamada "skills" en esta ruta.
+En la carpeta donde está instalado OpenClaw, busca `workspace` y crea una nueva carpeta llamada "skills" bajo esta ruta.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_1.png" /></div>
 
@@ -94,13 +95,13 @@ Después de descargar y descomprimir, coloca la carpeta "recamera-gimbal" del pr
 
 ### 2.3 Configuración de openclaw.json
 
-openclaw.json se encuentra en la carpeta donde instalaste OpenClaw. Este archivo contiene todas las configuraciones que necesitas para acceder al modelo de IA. Lo que necesitas hacer es añadir el siguiente contenido sobre reCamera Gimbal a openclaw.json:
+openclaw.json se encuentra en la carpeta de tu instalación de OpenClaw. Este archivo contiene todas las configuraciones que necesitas para acceder al modelo de IA. Lo que necesitas hacer es añadir el siguiente contenido sobre reCamera Gimbal a openclaw.json:
 
 :::note
 
-1. Sustituye "C :\\ Users\\seeed\\.openclaw\\workspace\\skills" por la ruta real de tu carpeta skills
+1. Sustituye "C :\\ Users\\seeed\\.openclaw\\workspace\\skills" por la ruta real de tu carpeta de skills
 
-2. Sustituye "192.168.31.198" por la dirección IP real de tu reCamera Gimbal
+2. Sustituye "192.168.31.198" por la dirección IP real donde está tu reCamera Gimbal
 
 3. Sustituye "recamera.1" por la contraseña real de tu reCamera Gimbal
 
@@ -139,17 +140,17 @@ Primero, no conectes la alimentación de reCamera Gimbal, conecta directamente e
 
 ### 3.2 Despliegue de la aplicación
 
-Abre la [Application](https://sensecraft.seeed.cc/ai/application) de SenseCraft, busca el proyecto llamado "OpenClaw & reCamera Gimbal", haz clic en "Deploy Application"-"Visit Workspace Via USB", y el flujo de trabajo que veas después del despliegue debería ser como se muestra en la siguiente figura:
+En la plataforma SenseCraft AI, navega a **`Applications`** > **`Application Square`** (o ábrela [directamente](https://sensecraft.seeed.cc/ai/application)), busca el proyecto llamado "OpenClaw & reCamera Gimbal", haz clic en **`Deploy Application`** > **`Visit Workspace Via USB`**, y el flujo de trabajo que veas después del despliegue debería ser como se muestra en la siguiente figura:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_4.png" /></div>
 
 ## 4. Probar el motor y hacer fotos
 
-A continuación, desconecta el cable Type-C, conecta la fuente de alimentación de 12 V, espera a que se complete la calibración automática de reCamera Gimbal, vuelve a visitar la dirección IP anterior en el navegador, entra en la interfaz de reCamera Gimbal y asegúrate de que Node-RED haya comenzado a funcionar con normalidad. A continuación, probamos si las dos interfaces HTTP expuestas pueden funcionar con normalidad:
+Luego desconecta el cable Type-C, conecta la fuente de alimentación de 12V, espera a que se complete la calibración automática de reCamera Gimbal, vuelve a visitar la dirección IP anterior en el navegador, entra en la interfaz de reCamera Gimbal y asegúrate de que Node-RED haya comenzado a funcionar con normalidad. A continuación, probamos si las dos interfaces HTTP expuestas pueden funcionar con normalidad:
 
 ### 4.1 Probar el motor
 
-Primero prueba si el motor del gimbal funciona con normalidad, por favor sustituye "`<DEVICE_IP>`" por la IP real de tu reCamera Gimbal:
+Primero prueba si el motor del pan-tilt funciona con normalidad, por favor sustituye "`<DEVICE_IP>`" por la IP real de tu reCamera Gimbal:
 
 ```http
 http://<DEVICE_IP>:1880/api/gimbal?yaw=120&pitch=90
@@ -173,17 +174,17 @@ Asegúrate de que reCamera Gimbal y tu ordenador estén conectados a la misma re
 
 ## 5. Prueba en OpenClaw
 
-Antes de la prueba necesitamos confirmar dos cosas:
+Antes de probar, necesitamos confirmar dos cosas:
 
 ### 5.1 Asegúrate de que tus Skills estén configuradas correctamente
 
-Si has configurado las Skills según el paso 2, en la interfaz de OpenClaw, después de hacer clic en "Skills" en el lado izquierdo y luego hacer clic en "WORKSPACE SKILLS", deberías poder ver el "recamera-gimbal" que has configurado localmente"
+Si has configurado las Skills según el paso 2, en la interfaz de OpenClaw, después de hacer clic en "Skills" a la izquierda y luego en "WORKSPACE SKILLS", deberías poder ver el "recamera-gimbal" que has configurado localmente.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_6.png" /></div>
 
 ### 5.2 Asegúrate de que tu modelo esté configurado correctamente
 
-Asegúrate de que tu modelo esté configurado correctamente. Después de hacer clic en "Agent" en el lado izquierdo, puedes ver el modelo que has configurado en "Primary model". Aquí estoy usando el modelo GLM4.7.
+Asegúrate de que tu modelo esté configurado correctamente. Después de hacer clic en "Agent" a la izquierda, podrás ver el modelo que has configurado en "Primary model". Aquí estoy usando el modelo GLM4.7.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_7.png" /></div>
 
@@ -197,7 +198,7 @@ La ejecución de tareas por parte de OpenClaw será muy lenta, y las instruccion
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -7,12 +7,13 @@ keywords:
   - OpenClaw
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_9.png
 slug: /use_cpenclaw_to_control_the_recamera_gimbal
+sku: 100029708
 sidebar_position: 10
 last_update:
   date: 03/27/2026
   author: Xinrui Wu
 createdAt: '2026-03-27'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/cn/use_cpenclaw_to_control_the_recamera_gimbal/
 ---
 
@@ -64,7 +65,7 @@ url: https://wiki.seeedstudio.com/cn/use_cpenclaw_to_control_the_recamera_gimbal
 
 请访问 OpenClaw 官网查看详细安装教程：[OpenClaw-Personal AI Assistant](https://openclaw.ai/)
 
-安装完成后，你可以直接进入网页尝试与它聊天。如果此时可以正常获得反馈，那么说明你已经成功安装并配置好 OpenClaw，请继续按步骤往下操作。如果安装 OpenClaw 出现问题，请自行排查原因并解决。
+安装完成后，你可以直接进入网页尝试与它聊天。如果此时可以正常获得反馈，那么你已经成功安装并配置好 OpenClaw，请继续按步骤往下操作。如果安装 OpenClaw 出现问题，请自行排查原因并解决。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_2.png" /></div>
 
@@ -133,23 +134,23 @@ openclaw.json 位于你安装 OpenClaw 的文件夹中。该文件包含了访�
 
 ### 3.1 设置 reCamera Gimbal
 
-首先，不要接入 reCamera Gimbal 的电源，直接用 Type-C 连接电脑，并访问 192.168.42.1。进入后，点击左下角的 "Login to SenseCraft"。登录后，为其连接 WiFi，确保连接的 WiFi 与电脑相同。然后查看 reCamera Gimbal 的 IP 地址，复制该 IP 地址并访问，确认是否可以正常访问。
+首先，不要连接 reCamera Gimbal 的电源，直接将 Type-C 连接到电脑并访问 192.168.42.1。进入后，点击左下角的 "Login to SenseCraft"。登录后，为其连接 WiFi，确保连接的 WiFi 与电脑相同。然后查看 reCamera Gimbal 的 IP 地址，复制该 IP 地址并访问，确认是否可以正常访问。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_5.png" /></div>
 
 ### 3.2 部署应用
 
-打开 SenseCraft 的 [Application](https://sensecraft.seeed.cc/ai/application)，找到名为 "OpenClaw & reCamera Gimbal" 的项目，点击 "Deploy Application"-"Visit Workspace Via USB"，部署完成后你看到的工作流应如下图所示：
+在 SenseCraft AI 平台上，依次进入 **`Applications`** > **`Application Square`**（或[直接打开](https://sensecraft.seeed.cc/ai/application)），找到名为 "OpenClaw & reCamera Gimbal" 的项目，点击 **`Deploy Application`** > **`Visit Workspace Via USB`**，部署后你看到的工作流应如下面图片所示：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_4.png" /></div>
 
 ## 4. 测试电机和拍照
 
-然后拔掉 Type-C 线，插上 12V 电源，等待 reCamera Gimbal 自动校准完成，在浏览器中重新访问刚才的 IP 地址，进入 reCamera Gimbal 的界面，并确保 Node-RED 已经正常启动运行。接下来，我们测试拉出的两个 HTTP 接口是否可以正常工作：
+然后拔下 Type-C 线，插上 12V 电源，等待 reCamera Gimbal 自动校准完成，在浏览器中重新访问刚才的 IP 地址，进入 reCamera Gimbal 的界面，并确保 Node-RED 已经正常启动运行。接下来，我们测试拉出的两个 HTTP 接口是否可以正常工作：
 
 ### 4.1 测试电机
 
-先测试云台电机是否正常，请将 "`<DEVICE_IP>`" 替换为你 reCamera Gimbal 的真实 IP：
+首先测试云台电机是否正常，请将 "`<DEVICE_IP>`" 替换为你 reCamera Gimbal 的真实 IP：
 
 ```http
 http://<DEVICE_IP>:1880/api/gimbal?yaw=120&pitch=90
@@ -165,7 +166,7 @@ http://<DEVICE_IP>:1880/api/gimbal?yaw=120&pitch=90
 http://<DEVICE_IP>:1880/api/photo
 ```
 
-如果一切正常，那么当你访问该 URL 时，你可以在网页中看到 reCamera Gimbal 此刻拍摄到的图像。
+如果一切正常，那么当你访问该 URL 时，你可以在网页中看到 reCamera Gimbal 此刻拍摄的图像。
 
 :::note
 请确保 reCamera Gimbal 和你的电脑连接在同一个 WiFi 下
@@ -177,19 +178,19 @@ http://<DEVICE_IP>:1880/api/photo
 
 ### 5.1 确保你的 Skills 配置正确
 
-如果你已经按照步骤 2 配置好 Skills，在 OpenClaw 界面中，点击左侧的 "Skills"，再点击 "WORKSPACE SKILLS"，你应该可以看到你在本地配置好的 "recamera-gimbal"。
+如果你已经按照步骤 2 配置了 Skills，在 OpenClaw 界面中，点击左侧的 "Skills"，再点击 "WORKSPACE SKILLS"，你应该可以看到你在本地配置好的 "recamera-gimbal"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_6.png" /></div>
 
 ### 5.2 确保你的模型配置正确
 
-请确保你的模型配置正确。点击左侧的 "Agent" 后，你可以在 "Primary model" 下看到你配置的模型。我这里使用的是 GLM4.7 模型。
+请确保你的模型配置正确。点击左侧的 "Agent" 后，你可以在 "Primary model" 下看到你配置的模型。这里我使用的是 GLM4.7 模型。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_7.png" /></div>
 
 ### 5.3 开始使用 OpenClaw Gimbal 控制你的 reCamera
 
-请直接在聊天窗口对 OpenClaw 说“打开相机的 LED 灯”、“环顾四周看看有没有人”、“录制一段 5s 的音频并播放”等任务，或者你也可以尝试更复杂的任务，例如：“打开 reCamera 的哨兵模式（快速环顾四周，将一次扫描周期，也就是一圈扫描控制在 6s 内），如果画面中出现穿白色 T 恤的人，就打开相机补光灯并播放 test.wav 音频，分析画面内容并将图片保存到本地”，然后稍等片刻，观察 reCamera Gimbal 的反应。
+请直接在聊天窗口中对 OpenClaw 说“打开相机的 LED 灯”、“环顾四周看看有没有人”、“录制一段 5s 的音频并播放”等任务，或者你也可以尝试更复杂的任务，例如“打开 reCamera 的哨兵模式（快速环顾四周，一次扫描周期，即一圈扫描控制在 6s 内），如果画面中出现穿白色 T 恤的人，就打开相机灯并播放 test.wav 音频，分析画面内容并将图片保存到本地”，然后稍等片刻，观察 reCamera Gimbal 的反应。
 
 :::note
 OpenClaw 执行任务会比较慢，复杂指令大约需要两三分钟才能看到效果，所以请耐心等待，这是正常现象。
@@ -197,7 +198,7 @@ OpenClaw 执行任务会比较慢，复杂指令大约需要两三分钟才能�
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们为你提供多种支持方式，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
