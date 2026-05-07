@@ -4619,7 +4619,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Isaag Lab',
+          label: 'Isaac Lab',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',
