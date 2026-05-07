@@ -11,7 +11,7 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/sensecraft-ai-main/
 ---
 
@@ -27,19 +27,19 @@ url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-A seção de Visão geral fornece uma introdução de alto nível ao SenseCraft AI, explicando seu propósito, principais recursos e benefícios. Ela serve como um ponto de partida para que os usuários entendam a plataforma e suas capacidades. A visão geral também inclui links para guias de Primeiros passos e FAQs para ajudar os usuários a começar rapidamente a usar o SenseCraft AI.
+A seção de Visão geral fornece uma introdução de alto nível ao SenseCraft AI, explicando seu propósito, principais recursos e benefícios. Ela serve como ponto de partida para que os usuários entendam a plataforma e suas capacidades. A visão geral também inclui links para guias de Introdução e FAQs para ajudar os usuários a começar rapidamente a usar o SenseCraft AI.
 
-## Modelos pré-treinados
+## Biblioteca de modelos
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_pretrained_models_main_page/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Modelos pré-treinados 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Biblioteca de modelos 🖱️</font></span></strong>
     </a>
 </div><br />
 
-A seção de Modelos pré-treinados contém informações sobre os modelos prontos para uso que podem ser implantados em vários dispositivos compatíveis com o SenseCraft AI. Esses modelos são otimizados para hardwares específicos e podem ser usados em diferentes aplicações sem a necessidade de treinamento personalizado. A seção é ainda dividida em subseções com base nos dispositivos suportados:
+A Biblioteca de modelos (acessada via **`Models`** > **`Model Library`** na plataforma SenseCraft AI) contém informações sobre os modelos pré-treinados prontos para uso que podem ser implantados em vários dispositivos compatíveis com o SenseCraft AI. Esses modelos são otimizados para hardwares específicos e podem ser usados em diferentes aplicações sem a necessidade de treinamento personalizado. A seção é ainda dividida em subseções com base nos dispositivos suportados:
 
 - **para XIAO ESP32S3 Sense**: Esta subseção lista os modelos pré-treinados compatíveis com a placa XIAO ESP32S3 Sense, juntamente com suas descrições e casos de uso.
 
@@ -57,7 +57,7 @@ A seção de Modelos pré-treinados contém informações sobre os modelos pront
     </a>
 </div><br />
 
-- **para SenseCAP Watcher**: Esta subseção fornece informações sobre os modelos pré-treinados que podem ser usados com o dispositivo SenseCAP Watcher, possibilitando diversas funcionalidades de monitoramento e detecção.
+- **para SenseCAP Watcher**: Esta subseção fornece informações sobre os modelos pré-treinados que podem ser usados com o dispositivo SenseCAP Watcher, habilitando diversas funcionalidades de monitoramento e detecção.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_pretrained_models_for_watcher/" target="_blank" rel="noopener noreferrer">
@@ -121,28 +121,28 @@ A seção Saída dos modelos foca em como configurar e utilizar a saída de mode
 
 - Saída de modelo do XIAO ESP32S3 Sense: Aqui, você encontra informações sobre como trabalhar com as saídas de modelo na placa XIAO ESP32S3 Sense. A subseção é ainda dividida em:
 
-  - **via GPIO**: Esta parte fornece guias sobre como mapear as saídas do modelo para os pinos GPIO do XIAO ESP32-S3 Sense, permitindo o controle de hardware externo com base nas previsões do modelo.
+  - **via GPIO**: Esta parte fornece guias sobre como mapear as saídas do modelo para os pinos GPIO do XIAO ESP32-S3 Sense, permitindo o controle de hardwares externos com base nas previsões do modelo.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>via GPIO</font></span></strong>
     </a></div><br />
 
-  - **via MQTT**: Aqui, você aprende como enviar as saídas do modelo do XIAO ESP32S3 Sense para outros dispositivos ou sistemas usando o protocolo MQTT, facilitando a integração e comunicação contínuas.
+  - **via MQTT**: Aqui, você aprende como enviar saídas de modelo do XIAO ESP32S3 Sense para outros dispositivos ou sistemas usando o protocolo MQTT, facilitando a integração e comunicação contínuas.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>via MQTT</font></span></strong>
     </a></div><br />
 
-  - **Como um sensor**: Esta parte explicará como usar o XIAO, que já fez upload de um modelo, como um sensor. Pode ser necessário usar um XIAO adicional ou um dispositivo Arduino.
+  - **Como um sensor**: Esta parte explicará como usar o XIAO, que já tem um modelo carregado, como um sensor. Isso pode exigir que você use um XIAO adicional ou um dispositivo Arduino.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Como um sensor</font></span></strong>
     </a></div><br />
 
-  - **Usar a biblioteca SSCMACore para saída de informações do modelo**: Se você não quiser usar um XIAO adicional para receber os dados de saída do seu modelo, então o tutorial aqui pode ser para você.
+  - **Usar saída de informações de modelo da biblioteca SSCMACore**: Se você não quiser usar um XIAO adicional para receber os dados de saída do seu modelo, então o tutorial aqui pode ser para você.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/sensecraft_ai_sscmacore_library/" target="_blank" rel="noopener noreferrer">
@@ -163,9 +163,9 @@ A seção Saída dos modelos foca em como configurar e utilizar a saída de mode
 
 A seção de Aplicação apresenta exemplos reais e estudos de caso que demonstram como o SenseCraft AI pode ser usado para resolver diversos problemas em diferentes domínios. Ela inclui descrições detalhadas de projetos, exemplos de código e melhores práticas para inspirar e orientar os usuários no desenvolvimento de suas próprias aplicações de IA usando o SenseCraft AI.
 
-## Suporte técnico e discussão de produtos
+## Suporte Técnico e Discussão de Produtos
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -176,3 +176,4 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

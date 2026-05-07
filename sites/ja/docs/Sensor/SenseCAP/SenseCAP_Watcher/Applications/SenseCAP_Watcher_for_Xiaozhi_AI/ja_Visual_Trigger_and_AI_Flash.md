@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Watcher Agent にファームウェアをフラッシュするためのガイド
+description: SenseCAP Watcher Agent にファームウェアを書き込むためのガイド
 title: ビジュアルトリガーと AI フラッシュ
 sidebar_position: 4
 keywords:
@@ -18,8 +18,8 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2025-10-20'
-updatedAt: '2025-12-05'
+createdAt: '2025-10-17'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/ja/visual_trigger_and_ai_flash/
 ---
 
@@ -30,11 +30,11 @@ import TabItem from '@theme/TabItem';
 
 ## 概要
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を申し上げます。
+このプロジェクトを実現するうえで多大な貢献をしてくださったオープンソースプロジェクト [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を申し上げます。
 
-このガイドでは、SenseCAP Watcher にビジュアル認識トリガー会話ファームウェアをフラッシュする方法と、デバイス上の AI モデルを交換または更新する方法に焦点を当てています。これらの操作のための実践的な指導ガイドとして意図されています。
+このガイドでは、SenseCAP Watcher に「ビジュアル認識トリガー会話」ファームウェアを書き込む方法と、デバイス上の AI モデルを置き換えたり更新したりする方法に焦点を当てています。これらの操作を実践的に説明する手順ガイドです。
 
-Watcher の機能、アプリケーション、使用例の完全な紹介については、以下を参照してください：[SenseCAP Watcher - 世界と積極的に相互作用する AI アシスタント](https://wiki.seeedstudio.com/ja/solutions/hello_watcher_llms/)
+Watcher の機能、アプリケーション、ユースケースの詳細な紹介については、[SenseCAP Watcher - 世界と能動的に対話する AI アシスタント](https://wiki.seeedstudio.com/ja/solutions/hello_watcher_llms/) を参照してください。
 
 ## 前提条件
 
@@ -45,11 +45,11 @@ Watcher の機能、アプリケーション、使用例の完全な紹介につ
 - Windows PC  
 
 :::note
-**ビジュアルアクティベーションファームウェア**をフラッシュする場合で、Watcher デバイスのモデルが **-EN ではない**場合、通常の使用のために認証ファイルを手動でフラッシュする必要があります（一度だけ必要）。  
-詳細な手順については、[Watcher Agent ファームウェアフラッシュガイド](https://wiki.seeedstudio.com/ja/flash_watcher_agent_firmware/)を参照してください。
+**Visual Activation Firmware** をフラッシュし、かつお使いの Watcher デバイスのモデルが **-EN ではない** 場合、通常使用のために認証ファイルを手動でフラッシュする必要があります（1 回のみ必要）。  
+詳しい手順については、[Watcher Agent Firmware フラッシュガイド](https://wiki.seeedstudio.com/ja/flash_watcher_agent_firmware/)を参照してください。
 :::
 
-## ファームウェアフラッシュプロセス
+## ファームウェアのフラッシュ手順
 
 <Tabs>
 <TabItem value="sensecraft" label="SenseCraft AI" default>
@@ -60,129 +60,133 @@ The official version will be available soon.
 Please use another method to flash the firmware for now.
 ::: -->
 
-- 前提条件
+**前提条件**
 
-  - [SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai/home)
+- [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 
-- ステップ 1. プラットフォームを開き、ワークスペースで SenseCAP Watcher を選択
+**Step 1.** **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** から SenseCAP Watcher ワークスペースにアクセスするか、この[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/37)を使用します。
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-- ステップ 2. シリアルポート経由でプラットフォームに接続
+**Step 2. シリアルポート経由でプラットフォームに接続する**
 
-  -  `Connect` をクリック 
+- `Connect` をクリックします
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-  - 正しいシリアルポート（"A" で終わるもの）を選択
+- 正しいシリアルポート（末尾が “A” のもの）を選択します
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
+:::note
+macOS または Linux を使用している場合は、番号が小さい方のポートを選択してください。
+:::
+
+- `Connect` をクリックします
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
+
+**Step 3. デバイスバージョンの確認と更新**
+
+- `Update` をクリックします
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
+
+- 正しいシリアルポート（末尾が "B" のもの）を選択します
 
   :::note
-  macOS または Linux を使用している場合は、番号の小さいポートを選択してください。
+  macOS または Linux を使用している場合は、番号が大きい方のポートを選択してください。
   :::
 
-  - `Connect` をクリック
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 
-- ステップ 3. デバイスバージョンの確認と更新
+- 'Connect' をクリックします
 
-  - `Update` をクリック
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
+- フラッシュしたいバージョンを選択し、`Confirm` をクリックします
 
-  - 正しいシリアルポート（"B" で終わるもの）を選択
-  :::note
-  macOS または Linux を使用している場合は、番号の大きいポートを選択してください。
-  :::
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
+- 更新と再起動のプロセスが完了するまで待ちます
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div> 
-
-  - 'Connect' をクリック
-
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
-
-  - フラッシュしたいバージョンを選択し、`Confirm` をクリック
-
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
-
-  - 更新と再起動プロセスを待機
-
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 
 <TabItem value="flasher1" label="Flash Download Tool">
 
-- 前提条件
+**前提条件**
 
-  - **ビジュアルトリガーファームウェア v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+- **Visual Trigger Firmware v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
-  - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 以降)
+- [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)（バージョン 3.9.6 以降）
 
-- ステップ 1. デバイスに接続（デバイス底面の Type-C ポート）し、Flash Download Tool を開く
+**Step 1. デバイス（本体底面の Type-C ポート）を接続し、Flash Download Tool を開きます**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
-- ステップ 2. ファームウェア設定の構成
+**Step 2. ファームウェア設定を構成する**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
 
-- ステップ 3. COM ポートとフラッシュ設定の選択
+**Step 3. COM ポートとフラッシュ設定を選択する**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
-  - START をクリックしてもフラッシュが開始されない場合は、STOP をクリックして "B" で終わる COM ポートを選択していることを確認してください。
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+- START をクリックしてもフラッシュが開始されない場合は、STOP をクリックし、末尾が “B” の COM ポートを選択しているか確認してください。
 
-- ステップ 4. 消去とフラッシュ
-  - `ERASE` ボタンをクリックして既存のファームウェアをクリア
-  - 消去プロセスの完了を待機
-  - `START` ボタンをクリックしてフラッシュを開始
-  - ログウィンドウに進行状況情報が表示されるはずです
-  - 進行状況が表示されないか失敗した場合は、他の COM ポートを試してください
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 
-- ステップ 5. 成功の確認
+**Step 4. 消去とフラッシュ**
 
-  - ログウィンドウに成功メッセージが表示されたら、フラッシュプロセスは完了です。
+- 既存のファームウェアを消去するために `ERASE` ボタンをクリックします
+- 消去プロセスが完了するまで待ちます
+- `START` ボタンをクリックしてフラッシュを開始します
+- ログウィンドウに進行状況が表示されるはずです
+- 進行状況が表示されない、または失敗する場合は、別の COM ポートを試してください
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish1.jpg" style={{width:300, height:'auto'}}/></div>
+**Step 5. 成功を確認する**
 
-- ステップ 6. デバイスの再起動
+- ログウィンドウに成功メッセージが表示されたら、フラッシュプロセスは完了です。
 
-  - Watcher デバイスのリセット穴を見つける
-  - ピンを使ってリセットボタンを軽く押す
-  - デバイスが新しいファームウェアで再起動します
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish1.jpg" style={{width:300, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
+**Step 6. デバイスを再起動する**
+
+- Watcher デバイス上のリセットホールを探します
+- ピンを使ってリセットボタンを軽く押します
+- デバイスは新しいファームウェアで再起動します
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
 
 </TabItem>
 
-<TabItem value="flasher2" label="コマンドライン" default>
+<TabItem value="flasher2" label="Command Line" default>
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Visual Trigger Firmware v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
-- ステップ 1. ダウンロードしたファームウェアパッケージを展開し、esptool.py を使用してフラッシュを実行
+**Step 1. ダウンロードしたファームウェアパッケージを展開し、esptool.py を使用してフラッシュを実行します**
 
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-  *(注意: システムに応じてポート `/dev/ttyACM0` を調整してください。例：Windows では `COM3`)*
+```shell
+esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
+```
 
-- ステップ 2. デバイスの再起動
+*(注: ポート `/dev/ttyACM0` はお使いのシステムに合わせて調整してください。例: Windows では `COM3` など)*
 
-  - Watcher デバイスのリセット穴を見つける
-  - ピンを使ってリセットボタンを軽く押す
-  - デバイスが新しいファームウェアで再起動します
+**Step 2. デバイスを再起動する**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
+- Watcher デバイス上のリセットホールを探します
+- ピンを使ってリセットボタンを軽く押します
+- デバイスは新しいファームウェアで再起動します
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
 
 </TabItem>
 
@@ -193,145 +197,154 @@ Please use another method to flash the firmware for now.
 
   - [オープンソースリポジトリ（Xiaozhi AI コラボレーション）](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
-- ステップ 1. ESP-IDF CMD を開き、プロジェクトフォルダに移動
-  ```shell
-  cd xiaozhi-esp32
-  ```
+**Step 1. ESP-IDF CMD を開き、プロジェクトフォルダに移動する**
 
-- ステップ 2. ターゲットチップの設定
-  ```shell
-  idf.py set-target esp32s3
-  ```
+```shell
+cd xiaozhi-esp32
+```
 
-- ステップ 3. 設定メニューを開く
-  ```shell
-  idf.py menuconfig
-  ```
+**Step 2. 対象チップを設定する**
 
-- ステップ 4. ボードタイプを SenseCAP Watcher に設定
+```shell
+idf.py set-target esp32s3
+```
 
-  - Xiaozhi Assistant を選択
+**Step 3. 設定メニューを開く**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig1.png" style={{width:700, height:'auto'}}/></div>
+```shell
+idf.py menuconfig
+```
 
-  - Board Type を選択
+**Step 4. ボードタイプを SenseCAP Watcher に設定する**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig2.png" style={{width:700, height:'auto'}}/></div>
+- Xiaozhi Assistant を選択します
 
-  - SenseCAP Watcher を選択
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig1.png" style={{width:700, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
+- Board Type を選択します
 
-- ステップ 5. 必要に応じて追加設定を構成（オプション）
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig2.png" style={{width:700, height:'auto'}}/></div>
 
-  - デフォルト表示言語と AEC（自動エコーキャンセレーション / 音声割り込み処理）
+- SenseCAP Watcher を選択します
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig4.png" style={{width:700, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
 
-  - ウェイクワードとトリガー
+**Step 5. 必要に応じて追加設定を行う（オプション）**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig5.png" style={{width:700, height:'auto'}}/></div>
+- 既定の表示言語と AEC（Automatic Echo Cancellation / 音声割り込み処理）
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig6.png" style={{width:700, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig4.png" style={{width:700, height:'auto'}}/></div>
 
-  - アプリケーション固有のその他のオプションパラメータ
+- ウェイクワードとトリガー
 
-  - 設定完了後、メニューを保存して終了
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig5.png" style={{width:700, height:'auto'}}/></div>
 
-- ステップ 7. ファームウェアのビルドとフラッシュ
-  ```shell
-  idf.py build flash
-  ```
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig6.png" style={{width:700, height:'auto'}}/></div>
+
+- アプリケーション固有のその他のオプションパラメータ
+
+- 設定が完了したら、メニューを保存して終了します
+
+**Step 7. ファームウェアをビルドしてフラッシュする**
+
+```shell
+idf.py build flash
+```
 
 </TabItem>
 </Tabs>
 
 :::note
-ファームウェアバージョン 1.8.8 以上のみがビジュアルウェイクアップ機能をサポートしています。
-ファームウェアバージョン v2.0.3 以上では、ビジュアル検出を有効にするために Xiaozhi に "Turn on the inference switch" と言う必要があります。
+ビジュアルウェイクアップ機能をサポートするのは、ファームウェアバージョン 1.8.8 以降のみです。
+v2.0.3 より上のファームウェアバージョンでは、ビジュアル検出を有効にするために Xiaozhi に「Turn on the inference switch」と話しかける必要があります。
 :::
 
-## AI モデルフラッシュプロセス
+## AI モデルのフラッシュ手順
 
-### 前提条件
-- [SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai/home)
+- 前提条件
 
-### ステップ 1. プラットフォームを開き、ワークスペースで SenseCAP Watcher を選択
+  - [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
+**Step 1.** **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** から SenseCAP Watcher ワークスペースにアクセスするか、この[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/37)を使用します。
 
-### ステップ 2. シリアルポート経由でプラットフォームに接続
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-- `Connect` をクリック 
+**ステップ 2. シリアルポートでプラットフォームに接続する**
+
+- `Connect` をクリックします
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-- 正しいシリアルポート（"A"で終わるもの）を選択します
+- 正しいシリアルポート（末尾が “A” のもの）を選択します
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
 :::note
-macOSまたはLinuxを使用している場合は、番号の小さいポートを選択してください。
+macOS または Linux を使用している場合は、番号が小さい方のポートを選択してください。
 :::
 
-- `Connect`をクリックします
+- `Connect` をクリックします
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ3. 既存のモデルを確認し、新しいモデルに変更する
+**ステップ 3. 既存モデルの確認と新しいモデルへの変更**
 
 - モデル名とモデルバージョンを確認します
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
-- `Select Model...`をクリックし、フラッシュしたいモデルをクリックします
+- `Select Model...` をクリックし、書き込みたいモデルをクリックします
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
-- `Confirm`をクリックします
+- `Confirm` をクリックします
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ4. 効果をプレビューし、パラメータを調整する
+**ステップ 4. 効果をプレビューし、パラメータを調整する**
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-現在のビジュアルウェイクアップ機能では、以下の設定オプションが提供されています：
+現在のビジュアルウェイクアップ機能では、次の設定オプションが利用できます：
 
-- **ターゲットID** (`target`)：検出するターゲットIDを指定します。このIDは使用するビジュアルモデルに依存し、デフォルト値は0です。
-- **検出時間** (`duration`)：単位は秒で、ビジュアルウェイクアップの感度を調整するために使用されます。デフォルトは1秒です（このデフォルトには1秒のデバウンス処理は含まれません）。
-- **信頼度閾値** (`threshold`)：ビジュアルモデルがオブジェクトを認識するための信頼度の下限で、検出感度を調整するために使用されます。パーセンテージで表され、デフォルトは75%です。
-- **クールダウン期間** (`interval`)：単位は秒で、1つの会話が終了した後、再度トリガーされるまでに必要な待機時間を示し、同じオブジェクトによる頻繁な中断を避けるために使用されます。デフォルトは8秒です。
+- **Target ID** (`target`)：検出するターゲット ID を指定します。この ID は使用するビジュアルモデルに依存し、デフォルト値は 0 です。
+- **Detection Duration** (`duration`)：単位は秒で、ビジュアルウェイクアップの感度を調整するために使用します。デフォルトは 1 秒です（このデフォルトには 1 秒のデバウンス処理は含まれません）。
+- **Confidence Threshold** (`threshold`)：ビジュアルモデルが物体を認識するための信頼度の下限で、検出感度を調整するために使用します。パーセンテージで表され、デフォルトは 75% です。
+- **Cooldown Period** (`interval`)：単位は秒で、1 回の会話が終了してから再度トリガーされるまでに必要な待ち時間を示し、同じ物体による頻繁な割り込みを避けるために使用します。デフォルトは 8 秒です。
 
-例えば、`threshold`パラメータを変更することで、モデルの感度を調整できます。現在の閾値が厳しすぎると感じる場合は、Watcherに「信頼度閾値を60%に設定してください」と言うだけです。
+例えば、`threshold` パラメータを変更することでモデルの感度を調整できます。現在のしきい値が厳しすぎると感じた場合は、Watcher に「信頼度のしきい値を 60% に設定してください」と話しかけてください。
 
 ## トラブルシューティング
 
 ### よくある問題
 
-1. **COMポートが検出されない**
-   - 下部のType-Cポートを使用していることを確認してください
-   - 別のUSBケーブルを試してください
-   - USBドライバが正しくインストールされているか確認してください
+1. **COM ポートが検出されない**
+   - 下側の Type-C ポートを使用していることを確認してください
+   - 別の USB ケーブルを試してください
+   - USB ドライバが正しくインストールされているか確認してください
 
-2. **フラッシュが失敗する**
-   - Himaxをフラッシュする際は、"A"で終わるCOMポートを選択してください。
-   - ESP32-S3をフラッシュする際は、"B"で終わるCOMポートを選択してください。
+2. **フラッシュに失敗する**
+   - Himax をフラッシュする場合は、末尾が “A” の COM ポートを選択してください。
+   - ESP32-S3 をフラッシュする場合は、末尾が “B” の COM ポートを選択してください。
 
-3. **デバイスが応答しない**
+3. **デバイスが反応しない**
    - ピンを使ってリセットボタンを軽く押してください
-   - フラッシュ前に消去を試してください
+   - フラッシュする前に一度消去を試してください
 
-4. **デバイスがビジュアル検出でウェイクアップしない**
+4. **ビジュアル検出でデバイスがウェイクアップしない**
    - シリアル出力に関連するログメッセージがあるか確認してください。
-   - ファームウェアバージョンv2.0.3では、この機能を有効にするために小智に「推論スイッチをオンにして」と言う必要があります。
+   - ファームウェアバージョン v2.0.3 では、この機能を有効にするために Xiaozhi に「Turn on inference switch」と話しかける必要があります。
 
-5. **シリアルにビジュアル認識ログが表示されるが、デバイスがまだウェイクアップできない**
-   - SenseCraft AIプラットフォームに移動し、PersonモデルをAIチップにフラッシュしてください。
+5. **シリアルにビジュアル認識ログが表示されるが、デバイスが依然としてウェイクアップしない**
+   - SenseCraft AI Platform にアクセスし、Person モデルを AI チップにフラッシュしてください。
 
 ## FAQ
 
-**Q: Himaxに他のAIモデルをフラッシュできますか？**
+**Q: Himax に他の AI モデルを書き込むことはできますか？**
 
-A: 現在、FaceとPersonモデルのみがサポートされています。他のモデルのフラッシュはまだサポートされておらず、将来のアップデートで利用可能になる予定です。
+A: 現在サポートされているのは Face モデルと Person モデルのみです。他のモデルの書き込みはまだサポートされておらず、今後のアップデートで利用可能になる予定です。
 
-## 技術サポート
+## テクニカルサポート
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

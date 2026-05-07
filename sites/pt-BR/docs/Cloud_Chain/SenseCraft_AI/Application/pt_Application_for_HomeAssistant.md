@@ -8,29 +8,29 @@ image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
   - /connect_vision_ai_v2_to_ha
-sidebar_position: 2
+sidebar_position: 3
 last_update:
   date: 01/10/2024
   author: Citric
 createdAt: '2024-01-11'
-updatedAt: '2026-03-31'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/application/application-for-homeassistant/
 ---
 # Conectar o Grove Vision AI V2 ao Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a4.png" style={{width:1000, height:'auto'}}/></div>
 
-Integrar o Grove Vision AI V2 ao Home Assistant pode elevar a configuração da sua casa inteligente, adicionando capacidades avançadas de detecção visual. Essa integração permite análise ambiental em tempo real e automações personalizadas, tornando o ambiente da sua casa mais inteligente e responsivo.
+Integrar o Grove Vision AI V2 ao Home Assistant pode elevar a configuração da sua casa inteligente, adicionando recursos avançados de detecção visual. Essa integração permite análise ambiental em tempo real e automações personalizadas, tornando o ambiente da sua casa mais inteligente e responsivo.
 
 Para facilitar essa integração, o plugin SenseCraft-HomeAssistant, acessível pela loja HACS, conecta o seu Grove Vision AI V2 ao Home Assistant por meio da SenseCraft Data Platform. Esse processo é simplificado e amigável, exigindo apenas o login em uma conta SenseCraft para trazer seu dispositivo e dados de sensores para o ecossistema do Home Assistant, prontos para você personalizar e controlar.
 
 Abaixo está a estrutura principal do conteúdo deste artigo.
 
-1. [Instalando o plugin HACS](#instalando-o-plugin-hacs): Instale a Home Assistant Community Store (HACS) para habilitar a instalação do plugin SenseCraft da Seeed Studio dentro do Home Assistant.
-2. [Instalando o plugin SenseCraft](#instalando-o-plugin-sensecraft): Instale o plugin SenseCraft da Seeed Studio, que permite a rápida implantação dos produtos da Seeed Studio no Home Assistant.
-3. [Preparando o modelo para o Grove Vision AI V2](#preparando-o-modelo-para-o-grove-vision-ai-v2): Selecione e faça o deploy do modelo que você deseja usar com o Grove Vision AI V2 e, em seguida, o Home Assistant receberá as informações da cena de reconhecimento e dos resultados do Vision AI.
-4. [Construindo serviços MQTT no Home Assistant](#construindo-serviços-mqtt-no-home-assistant): Aproveite um serviço MQTT local para transmitir dados do Grove Vision AI V2 e do XIAO para o Home Assistant.
-5. [Integrar o Grove Vision AI V2 ao Home Assistant](#integrar-o-grove-vision-ai-v2-ao-home-assistant): Integre o Grove Vision AI V2 ao Home Assistant e configure um painel visual para configuração.
+1. [Installing the HACS plugin](#Installing-the-HACS-plugin): Instale a Home Assistant Community Store (HACS) para habilitar a instalação do plugin SenseCraft da Seeed Studio dentro do Home Assistant.
+2. [Installing the SenseCraft plugin](#Installing-the-SenseCraft-plugin): Instale o plugin SenseCraft da Seeed Studio, que permite a rápida implantação dos produtos da Seeed Studio no Home Assistant.
+3. [Preparing the model for Grove Vision AI V2](#Preparing-the-model-for-Grove-Vision-AI-V2): Selecione e faça o deploy do modelo que você deseja usar com o Grove Vision AI V2 e, em seguida, o Home Assistant receberá as informações da cena de reconhecimento e dos resultados do Vision AI.
+4. [Building MQTT Services at Home Assistant](#Building-MQTT-Services-at-Home-Assistant): Aproveite um serviço MQTT local para transmitir dados do Grove Vision AI V2 e do XIAO para o Home Assistant.
+5. [Integrate Grove Vision AI V2 into Home Assistant](#Integrate-Grove-Vision-AI-V2-into-Home-Assistant): Integre o Grove Vision AI V2 ao Home Assistant e configure um painel visual para configuração.
 
 ## Introdução
 
@@ -70,15 +70,15 @@ Antes de começar o conteúdo do tutorial deste artigo, você pode precisar ter 
  </table>
 </div>
 
-Home Assistant Green é a maneira mais fácil e com maior foco em privacidade para automatizar sua casa. Ele oferece uma configuração sem esforço e permite controlar todos os dispositivos inteligentes com apenas um sistema, em que todos os dados são armazenados localmente por padrão. Esta placa se beneficia do próspero ecossistema do Home Assistant e será aprimorada todos os meses por meio de código aberto.
+O Home Assistant Green é a maneira mais fácil e com maior foco em privacidade para automatizar sua casa. Ele oferece uma configuração simples e permite controlar todos os dispositivos inteligentes com apenas um sistema, em que todos os dados são armazenados localmente por padrão. Esta placa se beneficia do próspero ecossistema do Home Assistant e será aprimorada todos os meses pelo código aberto.
 
 Recomendamos usar o Home Assistant Green como o host do Home Assistant para este tutorial, ou você pode usar qualquer host do Home Assistant com Supervisor.
 
-Em seguida, você precisa conectar o XIAO e o Grove Vision AI V2 pela fileira de pinos (ou usar a placa de expansão e a interface Grove).
+Em seguida, você precisa conectar o XIAO e o Grove Vision AI V2 por meio da fileira de pinos (ou usar a placa de expansão e a interface Grove).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/10.gif" style={{width:600, height:'auto'}}/></div>
 
-## Instalando o plugin HACS
+## Installing the HACS plugin
 
 ### Etapa 1. Ativar o Modo Avançado no Home Assistant
 
@@ -152,7 +152,7 @@ Depois que você autorizar o Home Assistant a usar sua conta do GitHub, o HACS c
 
 Talvez seja necessário reiniciar o Home Assistant para que o HACS seja totalmente integrado ao seu sistema.
 
-## Instalando o plugin SenseCraft
+## Installing the SenseCraft plugin
 
 ### Etapa 4. Instalação do plugin SenseCraft via HACS
 
@@ -160,7 +160,7 @@ Procure por HACS na barra lateral e clique nele para abrir a interface do HACS. 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/14.png" style={{width:1000, height:'auto'}}/></div>
 
-Uma caixa de diálogo aparecerá pedindo que você insira a URL do repositório. Aqui, você deve inserir a URL do repositório personalizado para a integração SenseCraft. Depois de inserir a URL, selecione a categoria (para a integração SenseCraft, você deve selecionar **Integration**).
+Uma caixa de diálogo aparecerá pedindo para você inserir a URL do repositório. Aqui, você deve inserir a URL do repositório personalizado para a integração SenseCraft. Depois de inserir a URL, selecione a categoria (para a integração SenseCraft, você deve selecionar **Integration**).
 
 ```
 https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
@@ -168,7 +168,7 @@ https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-Clique em **Add**. O repositório agora foi adicionado ao seu HACS e você já deve conseguir encontrar a integração SenseCraft na lista em **Integrations**.
+Clique em **Add**. O repositório agora está adicionado ao seu HACS e você deverá conseguir encontrar a integração SenseCraft na lista em **Integrations**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/16.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -178,9 +178,9 @@ Localize a integração SenseCraft e clique em "DOWNLOAD".
 
 Neste ponto, concluímos com sucesso a instalação do plugin SenseCraft.
 
-## Preparando o modelo para o Grove Vision AI V2
+## Preparando o modelo para Grove Vision AI V2
 
-### Passo 5. Gravar o firmware para o XIAO ESP32C3
+### Etapa 5. Gravar o firmware para o XIAO ESP32C3
 
 Conecte o XIAO ESP32C3 ao seu computador usando um cabo USB-C adequado. Certifique-se de que os drivers do dispositivo estejam instalados corretamente.
 
@@ -212,18 +212,11 @@ Clique no botão abaixo para baixar o arquivo de firmware e clique no botão **A
 
 Por fim, clique no botão **Flash** e aguarde o upload do programa ser concluído com sucesso antes de desconectar o XIAO ESP32C3 do computador.
 
-### Passo 6. Conectar o Grove Vision AI V2 ao SenseCraft AI Model Assistant
+### Etapa 6. Conectar o Grove Vision AI V2 ao SenseCraft AI Model Assistant
 
-Primeiro, precisamos abrir a página principal do SenseCraft AI.
+Acesse o workspace do Grove Vision AI V2 por meio de **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/36).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
-</div>
-<br />
-
-Clique em **Vision Workspace -> Grove Vision AI V2** no menu de navegação.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/52.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
 Use um cabo do tipo Type-C para conectar o **Grove Vision AI V2** ao seu computador.
 
@@ -231,15 +224,15 @@ Em seguida, clique no botão **Connect** no canto superior esquerdo e selecione 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/53.png" style={{width:500, height:'auto'}}/></div>
 
-### Passo 7. Fazer upload de um modelo adequado
+### Etapa 7. Fazer upload de um modelo adequado
 
-Depois, selecione o modelo apropriado que você deseja usar após clicar em **Select Model** para enviá-lo para o Grove Vision AI V2.
+Depois, selecione o modelo apropriado que você deseja usar após clicar em **Select Model** para fazer o upload para o Grove Vision AI V2.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/54.png" style={{width:1000, height:'auto'}}/></div>
 
 Aguarde de 1 a 2 minutos para o upload do modelo.
 
-### Passo 8. Observações
+### Etapa 8. Observações
 
 Quando o modelo for carregado com sucesso, você poderá ver a transmissão ao vivo da câmera do Grove Vision AI V2 na visualização (Preview) à direita.
 
@@ -247,7 +240,7 @@ Quando o modelo for carregado com sucesso, você poderá ver a transmissão ao v
 
 <br />
 
-Podemos ver que, em Preview Settings no lado direito, há duas opções de configuração que podem ser alteradas para otimizar a precisão de reconhecimento do modelo.
+Podemos ver que, nas configurações de Preview no lado direito, há duas opções de configuração que podem ser alteradas para otimizar a precisão de reconhecimento do modelo.
 
 :::tip
 Se não houver tela exibida em Preview ou não houver informações nas informações do modelo, pode haver um problema com o modelo e você precisa selecioná-lo novamente ou fazer o upload outra vez.
@@ -255,7 +248,7 @@ Se não houver tela exibida em Preview ou não houver informações nas informa�
 
 ## Construindo serviços MQTT no Home Assistant
 
-### Passo 9. Instalar o EMQX
+### Etapa 9. Instalar o EMQX
 
 Clique em **Settings** na barra lateral para acessar o menu de configurações. Clique em **Add-ons** para acessar a loja de add-ons.
 
@@ -297,15 +290,15 @@ Clique no interruptor ao lado do banco de dados para habilitá-lo. O status do b
 
 ## Integrar o Grove Vision AI V2 ao Home Assistant
 
-### Passo 10. Configurando a rede para o Grove Vision AI V2 e o XIAO
+### Etapa 10. Configurando a rede para Grove Vision AI V2 e XIAO
 
 Conecte o Grove Vision AI V2 ao seu computador e abra a página de configuração do Grove Vision AI V2.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/56.png" style={{width:1000, height:'auto'}}/></div>
 
-Depois de clicar no canto superior esquerdo para conectar ao Grove Vision AI V2, ative o botão MQTT e insira as seguintes informações que você precisa preencher na página.
+Depois de clicar no canto superior esquerdo para se conectar ao Grove Vision AI V2, ative o botão MQTT e insira as seguintes informações que você precisa preencher na página.
 
-- **SSID & Password**: O dispositivo precisa estar na mesma LAN que o host onde o Home Assistant está instalado. Portanto, configure a rede sob a mesma LAN. O XIAO suporta apenas WiFi 2.4G, rede 5G não é suportada.
+- **SSID & Password**: O dispositivo precisa estar na mesma LAN que o host onde o Home Assistant está instalado. Portanto, configure a rede sob a mesma LAN. O XIAO suporta apenas WiFi 2,4G, rede 5G não é suportada.
 - **Encryption**: Selecione **AUTO**.
 - **Host**: Endereço IP do host onde o Home Assistant está instalado.
 - **Port**: `1883`.
@@ -318,10 +311,10 @@ Em seguida, clique no botão **Apply** abaixo. Após salvar, isso **não signifi
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/57.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-Quando o IP Address é exibido, significa que não há problema com o WIFI, e Service status deve ser o texto da figura para representar o estado normal. Observe que, se o WIFI não estiver normal, o MQTT definitivamente não estará normal; quando você acabou de mudar para esta aba, pode mostrar desconectado, e você precisa esperar cerca de 10 s. Não é necessário atualizar para ver o status, ele mostrará automaticamente o status mais recente após a mudança de estado.
+Quando o endereço IP é exibido, significa que não há problema com o WIFI, e o Service status deve ser o texto mostrado na figura para representar o funcionamento normal. Observe que, se o WIFI não estiver normal, o MQTT definitivamente não estará normal; quando você acabou de mudar para esta aba, pode mostrar como desconectado, e você precisa esperar cerca de 10 s. Não é necessário atualizar para ver o status, ele mostrará automaticamente o status mais recente após a mudança de estado.
 :::
 
-### Passo 11. Integração ao Home Assistant
+### Etapa 11. Integração ao Home Assistant
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -329,7 +322,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="Scenario 1. If the device has been found" label="Cenário 1. Se o dispositivo foi encontrado">
 
-Neste ponto, normalmente, você já pode pesquisar o Grove Vision AI V2 dentro de **Settings->Devices & services** no Home Assistant.
+Neste ponto, normalmente, você já pode pesquisar o Grove Vision AI V2 em **Settings->Devices & services** no Home Assistant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/34.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -344,7 +337,7 @@ Em **Settings->Devices & services**, você poderá ver os detalhes do dispositiv
 :::note
 
 1. Se você configurou um nome de usuário e senha nas etapas anteriores, poderá ser solicitado a inseri-los ao adicionar um dispositivo.
-2. Se você tiver mais de um dispositivo Vision AI para adicionar ao Home Assistant, fique atento ao número de ID do dispositivo, que serve como uma marca distintiva entre as diferentes flags Grove.
+2. Se você tiver mais de um dispositivo Vision AI para adicionar ao Home Assistant, fique atento ao número de ID do dispositivo, que serve como uma marca distintiva entre as diferentes bandeiras Grove.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/42.png" style={{width:600, height:'auto'}}/></div>
 :::
@@ -391,7 +384,7 @@ A próxima etapa é configurar o serviço MQTT. Insira as informações que corr
 
 Se a configuração for bem-sucedida, o sistema geralmente solicitará que você selecione um local para o seu dispositivo. Escolha o cômodo ou área apropriada com base na sua situação real e clique em **Finish**.
 
-Depois que a configuração estiver concluída, você poderá visualizar seu dispositivo e seu status na página "Overview" do Home Assistant.
+Quando a configuração estiver concluída, você poderá visualizar seu dispositivo e seu status na página "Overview" do Home Assistant.
 
 Seguindo essas etapas, você deverá conseguir adicionar com sucesso o dispositivo "SenseCraft" à sua instância do Home Assistant e configurá-lo para usar o serviço MQTT.
 
@@ -401,7 +394,7 @@ Seguindo essas etapas, você deverá conseguir adicionar com sucesso o dispositi
 
 ### P1: O que devo fazer se eu nunca mais vir as mensagens de dados no HA depois que o Grove Vision AI V2 cair?
 
-Talvez você precise excluir o dispositivo e adicioná-lo novamente no SenseCraft. Depois de excluí-lo, pode não ser possível pesquisá-lo automaticamente novamente e você precisará adicionar o dispositivo manualmente. Consulte as **[etapas aqui](#etapa-11-integração-ao-home-assistant)** para readicionar o dispositivo.
+Talvez você precise excluir o dispositivo e adicioná-lo novamente no SenseCraft. Depois de excluí-lo, ele pode não ser mais pesquisado automaticamente e você precisará adicionar o dispositivo manualmente. Consulte os **[passos aqui](#etapa-11-integração-ao-home-assistant)** para readicionar o dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/44.png" style={{width:1000, height:'auto'}}/></div>
 

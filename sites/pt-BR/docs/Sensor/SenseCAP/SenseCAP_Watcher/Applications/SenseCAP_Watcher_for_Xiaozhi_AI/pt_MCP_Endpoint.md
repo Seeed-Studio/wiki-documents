@@ -22,7 +22,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-22'
-updatedAt: '2026-03-16'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/pt-br/mcp_endpoint/
 ---
 
@@ -32,29 +32,27 @@ url: https://wiki.seeedstudio.com/pt-br/mcp_endpoint/
 
 Agradecimentos especiais ao [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por suas contribuições de código aberto que tornaram este projeto possível.
 
-**MCP (Model Context Protocol)** é um framework poderoso que estende as capacidades da IA ao permitir controle remoto, computação, operações de e-mail, pesquisas de conhecimento e muito mais.
+**MCP (Model Context Protocol)** é um framework poderoso que estende as capacidades da IA, permitindo controle remoto, computação, operações de e-mail, buscas de conhecimento e muito mais.
 
-O MCP permite que servidores exponham ferramentas chamáveis para modelos de linguagem por meio de um protocolo bem definido. Essas ferramentas permitem que o modelo interaja com sistemas externos, como consultar bancos de dados, invocar APIs ou realizar cálculos complexos. Cada ferramenta é identificada exclusivamente por um nome e descrita por metadados que definem sua funcionalidade.
+O MCP permite que servidores exponham ferramentas chamáveis para modelos de linguagem por meio de um protocolo bem definido. Essas ferramentas permitem que o modelo interaja com sistemas externos, como consultar bancos de dados, invocar APIs ou realizar cálculos complexos. Cada ferramenta é identificada de forma exclusiva por um nome e descrita por metadados que definem sua funcionalidade.
 
-O **Endpoint MCP** serve como ponte entre o seu serviço MCP local e o modelo Xiaozhi AI. Ele fornece uma interface para dispositivos com voz e outros terminais aproveitarem perfeitamente essas capacidades externas.
+O **Endpoint MCP** serve como ponte entre o seu serviço MCP local e o modelo Xiaozhi AI. Ele fornece uma interface para dispositivos habilitados por voz e outros terminais aproveitarem essas capacidades externas de forma transparente.
 
 ## Obter o Endpoint MCP
 
-1. Acesse a [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
+1. Acesse o painel de controle do Watcher Agent via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/37) e então clique em **`Watcher Agent`** na barra lateral esquerda.
 
-2. Para acessar o Painel de Controle, clique em Watcher Agent no canto superior direito da página.
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-
-3. Abra a configuração do agent
+2. Abra a configuração do agente
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
 
-4. Clique em `MCP Setting` e `Get MCP Endpoint`
+3. Clique em `MCP Setting` e `Get MCP Endpoint`
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI14.png" style={{width:800, height:'auto'}}/></div>
 
-5. Obtenha o endereço do Endpoint e o Status da Conexão
+4. Obtenha o endereço do Endpoint e o Status da Conexão
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
 
@@ -62,7 +60,7 @@ O **Endpoint MCP** serve como ponte entre o seu serviço MCP local e o modelo Xi
 
 Agradecimentos especiais ao [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por suas contribuições de código aberto que tornaram este projeto possível.
 
-Você pode obter o seguinte código no [MCP Example Code Github](https://github.com/78/mcp-calculator)
+Você pode obter o seguinte código em [MCP Example Code Github](https://github.com/78/mcp-calculator)
 
 ### Exemplo de código de servidor MCP
 
@@ -93,9 +91,9 @@ Você pode obter o seguinte código no [MCP Example Code Github](https://github.
 
 ### Explicação do código
 
-Abaixo está uma explicação detalhada de algumas partes principais do exemplo de servidor MCP:
+Abaixo está uma explicação detalhada de algumas partes-chave do exemplo de servidor MCP:
 
-- `@mcp.tool()` : Registra a função seguinte como uma ferramenta MCP que pode ser chamada remotamente pelo modelo de IA.
+- `@mcp.tool()` : Registra a função a seguir como uma ferramenta MCP que pode ser chamada remotamente pelo modelo de IA.
 
 - `def calculator(python_expression: str) -> dict`: Define uma ferramenta que recebe uma expressão matemática do modelo.
 
@@ -174,12 +172,12 @@ Calculating formula: math.comb(10, 3), result: 120
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
 
-- Connection Status: Mostra se a sua conexão MCP está funcionando corretamente.
+- Status da Conexão: Mostra se a sua conexão MCP está funcionando corretamente.
 - Ícone de atualização: Atualiza o status da sua conexão MCP.
-- Enabled Services: Lista todos os serviços MCP que o seu watcher pode usar.
-- Endpoint Address: Seu mcp_endpoint_address (não compartilhe isso com ninguém, a menos que seja exigido pelo suporte técnico oficial)
+- Serviços habilitados: Lista todos os serviços MCP que o seu watcher pode usar.
+- Endereço do Endpoint: Seu mcp_endpoint_address (não compartilhe isso com ninguém, a menos que seja exigido pelo suporte técnico oficial)
 
-### Log de conversas
+### Registro de conversas
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -188,14 +186,14 @@ Calculating formula: math.comb(10, 3), result: 120
 ### Precauções
 #### 1. Nomeação de ferramentas e parâmetros no MCP
 
-Os nomes das ferramentas e de seus parâmetros devem ser claros para que o modelo grande entenda seu propósito. 
+Os nomes das ferramentas e de seus parâmetros devem ser claros para que o modelo de grande porte entenda seu propósito. 
 Evite usar abreviações sempre que possível e forneça um comentário explicando a função da ferramenta e quando ela deve ser usada. 
 
 Por exemplo, uma ferramenta chamada calculator permite que o modelo saiba que se trata de uma calculadora, e o parâmetro python_expression indica que o modelo deve inserir uma expressão Python.
 
 Se você estiver escrevendo uma ferramenta bing_search, o nome do parâmetro deve ser keywords.
 
-#### 2. Orientação via docstring da função
+#### 2. Orientação por docstring de função
 
 A docstring (usando """...""") orienta o modelo sobre quando usar a ferramenta.
 
@@ -203,7 +201,7 @@ Ela também pode mencionar que funções das bibliotecas math e random podem ser
 
 Essas duas bibliotecas já foram importadas no código de exemplo.
 
-#### 3. Fazer log em vez de imprimir
+#### 3. Uso de logging em vez de print
 
 Como a entrada/saída padrão neste exemplo de Servidor MCP é usada para transmissão de dados, você não pode usar print para exibir informações. 
 
@@ -211,29 +209,29 @@ Use logger para depuração e registro em log.
 
 #### 4. Valores de retorno
 
-Os valores de retorno MCP geralmente são uma string ou JSON. No exemplo, o resultado do cálculo é retornado em um campo JSON chamado result.
+Os valores de retorno do MCP geralmente são uma string ou JSON. No exemplo, o resultado do cálculo é retornado em um campo JSON chamado result.
 
-O comprimento dos valores de retorno costuma ser limitado, semelhante a comandos de dispositivos IoT, normalmente dentro de 1024 bytes.
+O tamanho dos valores de retorno geralmente é limitado, semelhante a comandos de dispositivos IoT, tipicamente dentro de 1024 bytes.
 
 #### 5. Limite da lista de ferramentas
 
-A lista de ferramentas MCP possui um limite máximo. 
+A lista de ferramentas MCP tem um limite máximo. 
 
-Mais tarde, ela será exibida na página de configuração, calculada com base na contagem de tokens.
+Mais tarde, isso será exibido na página de configuração, calculado com base na contagem de tokens.
 
 Observação: Ter ferramentas demais pode afetar a eficiência de agendamento do dispositivo.
 
-#### 6. Limite de conexão
+#### 6. Limite de conexões
 
-Cada endpoint MCP possui um número máximo de conexões simultâneas.
+Cada endpoint MCP tem um número máximo de conexões simultâneas.
 
-Observação: Exceder esse limite ou ter conexões simultâneas em excesso pode reduzir o desempenho do dispositivo.
+Observação: Ultrapassar esse limite ou ter conexões simultâneas demais pode reduzir o desempenho do dispositivo.
 
 ## Selecionar serviços MCP pré-fornecidos
 
 Os quatro serviços MCP a seguir estão disponíveis para você escolher em MCP Setting, mencionado anteriormente.
 
-Depois de salvar a configuração e reiniciar o dispositivo, os serviços selecionados entrarão em vigor automaticamente.
+Depois que você salvar a configuração e reiniciar o dispositivo, os serviços selecionados entrarão em vigor automaticamente.
 
 Você pode remover o serviço clicando em `×`
 

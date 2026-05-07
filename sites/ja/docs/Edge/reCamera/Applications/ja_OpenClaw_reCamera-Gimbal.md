@@ -7,12 +7,13 @@ keywords:
   - OpenClaw
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_9.png
 slug: /use_cpenclaw_to_control_the_recamera_gimbal
+sku: 100029708
 sidebar_position: 10
 last_update:
   date: 03/27/2026
   author: Xinrui Wu
 createdAt: '2026-03-27'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/ja/use_cpenclaw_to_control_the_recamera_gimbal/
 ---
 
@@ -21,11 +22,11 @@ url: https://wiki.seeedstudio.com/ja/use_cpenclaw_to_control_the_recamera_gimbal
 
 ## はじめに
 
-このプロジェクトでは、OpenClaw Agent フレームワークと Seeed Studio のエッジ AI カメラ reCamera Gimbal を深く統合することで、仮想の大規模モデルと物理世界との間の障壁を打ち破ることに成功しました。  
-強力な RISC-V アーキテクチャ、組み込みの Node-RED ローコード環境、そして reCamera の 1 TOPS エッジコンピューティング性能に依拠して、OpenClaw 用の専用の低レベルインタラクション Skill を開発しました。  
-これにより、大規模モデルはもはや画面上で文字を打つだけの「瓶詰めの脳」ではありません。能動的に 360° 回転できる「首」、物理世界を見ることができる「目」（画像取得 + VLM 解析）、環境を変えることができる「手」（LED 制御）、そして双方向の対話を行うための「耳と口」（マイクとスピーカー）を持つようになりました。
+このプロジェクトでは、OpenClaw Agent フレームワークと Seeed Studio の reCamera Gimbal エッジ AI カメラを深く統合することで、仮想の大規模モデルと物理世界との間の障壁を打ち破ることに成功しました。  
+強力な RISC-V アーキテクチャ、組み込みの Node-RED ローコード環境、そして reCamera の 1 TOPS エッジコンピューティング性能に基づき、OpenClaw 用の専用の低レベルインタラクション Skill を開発しました。  
+これにより、大規模モデルはもはや画面上で文字を打つだけの「瓶詰めの脳」ではありません。能動的に 360° 回転できる「首」、物理世界を見ることができる「目」（画像取得 + VLM 解析）、環境を変えられる「手」（LED 制御）、そして双方向のやり取りを行うための「耳と口」（マイクとスピーカー）を持つようになりました。
 
-以下は、このデモを完了した後の使用イメージです。
+以下は、このデモを完了した後の動作イメージです。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw.gif" /></div>
 
@@ -62,9 +63,9 @@ reCamera Gimbal 1 台
 インストール前に Git と nodejs をインストールしておく必要があります。Windows10 ユーザーの場合は、さらに Visual Studio をインストールする必要があります。インストールしていない場合はエラーが発生します。
 :::
 
-詳細なインストールチュートリアルを見るには、OpenClaw の公式サイトにアクセスしてください：[OpenClaw-Personal AI Assistant](https://openclaw.ai/)
+詳細なインストールチュートリアルを見るには、OpenClaw の公式サイトをご覧ください：[OpenClaw-Personal AI Assistant](https://openclaw.ai/)
 
-インストール後、ブラウザから直接 Web ページにアクセスしてチャットを試すことができます。この時点で正常に応答が得られれば、OpenClaw のインストールと設定は完了しています。そのまま次のステップに進んでください。もし OpenClaw のインストールに問題がある場合は、原因を特定してご自身で解決してください。
+インストール後、ブラウザから直接 Web ページにアクセスしてチャットを試すことができます。この時点で正常に応答が得られれば、OpenClaw のインストールと設定は完了しています。そのまま手順を進めてください。OpenClaw のインストールに問題がある場合は、原因を特定してご自身で解決してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_2.png" /></div>
 
@@ -74,9 +75,9 @@ reCamera Gimbal 1 台
 
 ## 2. reCamera Gimbal の Skills をインポートする
 
-### 2.1 Skills フォルダを新規作成する
+### 2.1 Skills フォルダを新規作成
 
-OpenClaw をインストールしたフォルダ内で workspace を探し、そのパスの下に "skills" という名前の新しいフォルダを作成します。
+OpenClaw をインストールしたフォルダ内で workspace を探し、このパスの下に "skills" という名前の新しいフォルダを作成します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_1.png" /></div>
 
@@ -94,15 +95,15 @@ https://github.com/Seeed-Projects/reCamera_Gimbal-OpenClaw
 
 ### 2.3 openclaw.json の設定
 
-openclaw.json は、OpenClaw をインストールしたフォルダ内にあります。このファイルには、AI モデルにアクセスするために必要なすべての設定が含まれています。あなたが行う必要があるのは、reCamera Gimbal に関する以下の内容を openclaw.json に追加することです：
+openclaw.json は、OpenClaw をインストールしたフォルダ内にあります。このファイルには、AI モデルにアクセスするために必要なすべての設定が含まれています。ここでは、reCamera Gimbal に関する以下の内容を openclaw.json に追加する必要があります：
 
 :::note
 
 1. "C :\\ Users\\seeed\\.openclaw\\workspace\\skills" を、実際の skills フォルダのパスに置き換えてください
 
-2. "192.168.31.198" を、実際に reCamera Gimbal が接続されている IP アドレスに置き換えてください
+2. "192.168.31.198" を、実際の reCamera Gimbal の IP アドレスに置き換えてください
 
-3. "recamera.1" を、あなたの reCamera Gimbal の実際のパスワードに置き換えてください
+3. "recamera.1" を、実際の reCamera Gimbal のパスワードに置き換えてください
 
 :::
 
@@ -133,19 +134,19 @@ openclaw.json は、OpenClaw をインストールしたフォルダ内にあり
 
 ### 3.1 reCamera Gimbal の設定
 
-まず、reCamera Gimbal の電源は接続せず、Type-C を直接コンピュータに接続して 192.168.42.1 にアクセスします。アクセス後、左下の "Login to SenseCraft" をクリックします。ログイン後、WiFi を接続し、接続する WiFi があなたのコンピュータと同じであることを確認します。その後、reCamera Gimbal の IP アドレスを確認し、その IP アドレスをコピーしてアクセスし、正常にアクセスできるか確認します。
+まず、reCamera Gimbal の電源は接続せず、Type-C を直接コンピュータに接続して 192.168.42.1 にアクセスします。アクセス後、左下の "Login to SenseCraft" をクリックします。ログイン後、WiFi を接続し、接続する WiFi がパソコンと同じであることを確認します。その後、reCamera Gimbal の IP アドレスを確認し、その IP アドレスをコピーしてアクセスし、正常にアクセスできるか確認します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_5.png" /></div>
 
 ### 3.2 アプリケーションのデプロイ
 
-SenseCraft の [Application](https://sensecraft.seeed.cc/ai/application) を開き、"OpenClaw & reCamera Gimbal" という名前のプロジェクトを見つけて、"Deploy Application" - "Visit Workspace Via USB" をクリックします。デプロイ後に表示されるワークフローは、次の図のようになっているはずです：
+SenseCraft AI プラットフォーム上で、**`Applications`** > **`Application Square`** に移動します（または[こちら](https://sensecraft.seeed.cc/ai/application)から直接開きます）。"OpenClaw & reCamera Gimbal" という名前のプロジェクトを見つけ、**`Deploy Application`** > **`Visit Workspace Via USB`** をクリックします。デプロイ後に表示されるワークフローは、次の図のようになっているはずです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_4.png" /></div>
 
 ## 4. モーターと撮影のテスト
 
-次に Type-C ケーブルを抜き、12V 電源を接続します。reCamera Gimbal の自動キャリブレーションが完了するのを待ってから、ブラウザで先ほどの IP アドレスに再度アクセスし、reCamera Gimbal のインターフェースに入り、Node-RED が正常に動作を開始していることを確認します。続いて、引き出した 2 つの HTTP インターフェースが正常に動作するかテストします：
+次に Type-C ケーブルを抜き、12V 電源を接続します。reCamera Gimbal の自動キャリブレーションが完了するのを待ってから、先ほどの IP アドレスをブラウザで再度開き、reCamera Gimbal の画面に入り、Node-RED が正常に動作を開始していることを確認します。続いて、引き出した 2 つの HTTP インターフェースが正常に動作するかテストします：
 
 ### 4.1 モーターのテスト
 
@@ -155,7 +156,7 @@ SenseCraft の [Application](https://sensecraft.seeed.cc/ai/application) を開�
 http://<DEVICE_IP>:1880/api/gimbal?yaw=120&pitch=90
 ```
 
-すべてが正常であれば、この URL にアクセスしたときに reCamera Gimbal のモーターが回転するのが確認でき、120 や 90 を他の角度に置き換えることもできます。
+すべて正常であれば、この URL にアクセスしたときに reCamera Gimbal のモーターが回転するのが確認できます。また、120 や 90 を他の角度に置き換えることもできます。
 
 ### 4.2 撮影のテスト
 
@@ -165,10 +166,10 @@ http://<DEVICE_IP>:1880/api/gimbal?yaw=120&pitch=90
 http://<DEVICE_IP>:1880/api/photo
 ```
 
-すべてが正常であれば、この URL にアクセスしたときに、Web ページ上で reCamera Gimbal が現在撮影した画像を見ることができます。
+すべて正常であれば、この URL にアクセスしたときに、reCamera Gimbal が現在撮影した画像を Web ページ上で確認できます。
 
 :::note
-reCamera Gimbal とあなたのコンピュータが同じ WiFi に接続されていることを確認してください
+reCamera Gimbal とパソコンが同じ WiFi に接続されていることを確認してください
 :::
 
 ## 5. OpenClaw でテストする
@@ -177,7 +178,7 @@ reCamera Gimbal とあなたのコンピュータが同じ WiFi に接続され�
 
 ### 5.1 Skills が正しく設定されていることを確認する
 
-手順 2 に従って Skills を設定していれば、OpenClaw のインターフェースで左側の "Skills" をクリックし、続いて "WORKSPACE SKILLS" をクリックすると、ローカルで設定した "recamera-gimbal" が表示されるはずです。
+手順 2 に従って Skills を設定していれば、OpenClaw の画面で左側の "Skills" をクリックし、その後 "WORKSPACE SKILLS" をクリックすると、ローカルで設定した "recamera-gimbal" が表示されるはずです。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_6.png" /></div>
 
@@ -189,15 +190,15 @@ reCamera Gimbal とあなたのコンピュータが同じ WiFi に接続され�
 
 ### 5.3 OpenClaw で reCamera Gimbal の制御を始める
 
-チャットウィンドウで OpenClaw に対して、「カメラの LED を点灯して」「周りを見回して人がいるか確認して」「5 秒間の音声を録音して再生して」などのタスクを直接指示してください。また、「reCamera のセントリーモードをオンにして（周囲を素早くスキャンし、1 回のスキャンサイクル、つまり 1 周のスキャンを 6 秒以内に収める）、もし画像の中に白い T シャツを着た人がいたらカメラのライトを点灯し、test.wav の音声を再生し、画像の内容を解析して画像をローカルに保存する」といった、より複雑なタスクを試すこともできます。その後、しばらく待って reCamera Gimbal の反応を確認してください。
+チャットウィンドウで OpenClaw に対して、「カメラの LED を点灯して」「周りを見回して人がいるか確認して」「5 秒間の音声を録音して再生して」などのタスクを直接指示してください。また、「reCamera のセンチネルモードをオンにする（周囲を素早くスキャンし、1 回のスキャンサイクル、つまり 1 周のスキャンを 6 秒以内に収める）。もし画像の中に白い T シャツを着た人がいたら、カメラのライトを点灯し、test.wav の音声を再生し、画像の内容を解析して画像をローカルに保存する」といった、より複雑なタスクを試してみても構いません。その後、しばらく待って reCamera Gimbal の反応を確認してください。
 
 :::note
-OpenClaw によるタスクの実行はかなり時間がかかり、複雑な指示では効果が現れるまで 2～3 分ほどかかります。これは正常な動作なので、焦らずお待ちください。
+OpenClaw によるタスクの実行はかなり時間がかかります。複雑な指示の場合、効果が現れるまで 2～3 分ほどかかることがありますので、正常な動作として、焦らずお待ちください。
 :::
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

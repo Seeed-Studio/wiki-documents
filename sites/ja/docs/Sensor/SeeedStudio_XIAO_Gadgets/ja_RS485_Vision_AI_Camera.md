@@ -1,6 +1,6 @@
 ---
-description: RS485 Vision AI カメラの使用開始
-title: RS485 Vision AI カメラ
+description: RS485 Vision AI Camera の使用を開始する
+title: RS485 Vision AI Camera
 keywords:
   - RS485 Vision
   - Camera
@@ -11,7 +11,7 @@ sidebar_position: 4
 last_update:
   date: 12/26/2024
   author: Jason
-createdAt: '2025-05-27'
+createdAt: '2025-01-03'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/getting_started_with_rs485_vision_ai_cam/
 ---
@@ -19,95 +19,95 @@ url: https://wiki.seeedstudio.com/ja/getting_started_with_rs485_vision_ai_cam/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.jpg" style={{width:800, height:'auto'}}/></div>
 
-## サポートされているソフトウェアの概要
+## 対応ソフトウェア概要
 
-- [**SenseCraft AI でのノーコード入門**](#jump1)
+- [**コード不要で始める SenseCraft AI**](#jump1)
   - [SenseCraft AI とは？](#jump2)
-  - [SenseCraft AI Model Assistant の使用開始](#jump3)
-- [**Seeed Studio XIAO ボードと接続した Arduino でのプログラミング**](#jump4)
+  - [SenseCraft AI Model Assistant の使い方](#jump3)
+- [**Seeed Studio XIAO ボードと接続して Arduino で開発**](#jump4)
   - [Arduino ライブラリの紹介](#jump5)
-  - [Seeed Studio XIAO の使用開始](#jump6)
+  - [Seeed Studio XIAO のはじめ方](#jump6)
 
-## ハードウェアの概要
+## ハードウェア概要
 
-### 紹介
+### はじめに
 
-Seeed Studio RS485 Vision AI カメラは、ESP32-C3 MCU（Seeed Studio XIAO）と Himax WiseEye2 HX6538 プロセッサを組み合わせたインテリジェントデバイスで、デュアルコア Arm Cortex-M55 と統合された Ethos-U55 ニューラルプロセッサを搭載しています。この先進的なカメラは、480×480 解像度、10 FPS で高性能な AI 認識を提供し、推論結果を送信するための柔軟なオプションを通じて低消費電力を維持します。標準的な Modbus RS485 インターフェースにより、産業システムとシームレスに統合され、SenseCAP DTU やその他の標準 RS485 DTU デバイスを通じて LoRaWAN と 4G 接続の両方をサポートします。IP66 定格のエンクロージャで保護されており、過酷な環境条件に耐え、屋内外の両方のアプリケーションに最適です。このカメラは、人数カウント、物体検出、分類など、さまざまなコンピュータビジョンタスクに優れています。ユーザーは 300 以上の事前訓練済みモデルからモデルを展開するか、ノーコード SenseCraft AI プラットフォームでカスタムモデルを訓練でき、TensorFlow と PyTorch フレームワークの AI モデルがサポートされています。プライバシーの懸念は、推論結果のみを送信する設計により対処されており、必要に応じてオプションの Wi-Fi キーフレーム送信が利用できます。
+Seeed Studio RS485 Vision AI Camera は、ESP32-C3 MCU（Seeed Studio XIAO）と Himax WiseEye2 HX6538 プロセッサを組み合わせたインテリジェントデバイスで、デュアルコア Arm Cortex-M55 と統合型 Ethos-U55 ニューラルプロセッサを搭載しています。この高性能カメラは、480×480 解像度・10 FPS での高精度な AI 認識を実現しつつ、推論結果の送信方法を柔軟に選択できるため、低消費電力を維持できます。標準的な Modbus RS485 インターフェースを備え、産業用システムとのシームレスな統合が可能で、SenseCAP DTU やその他の標準 RS485 DTU デバイスを介した LoRaWAN および 4G 接続にも対応します。IP66 等級の筐体により、過酷な環境条件にも耐え、屋内外を問わず長期運用に適しています。人数カウント、物体検出、分類など、さまざまなコンピュータビジョンタスクで優れた性能を発揮します。ユーザーは 300 以上の事前学習済みモデルから選択してデプロイできるほか、ノーコードの SenseCraft AI プラットフォーム上でカスタムモデルを学習させることも可能で、TensorFlow および PyTorch フレームワークの AI モデルにも対応しています。プライバシー面では、推論結果のみを送信する設計により懸念を軽減し、必要に応じて Wi-Fi によるキーフレーム送信も選択できます。
 
-### 機器の準備
+### 機材の準備
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>RS485 Vision AI カメラ </th>
+        <th>RS485 Vision AI Camera </th>
     </tr>
     <tr>
     <td><div align="center"><img width ={550} src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/shop.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Vision-AI-Camera-p-6346.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
  </table>
 </div>
 
-### 特徴
+### 特長
 
-- 強力なビジュアルAI処理能力：デュアルコアArm Cortex-M55と統合されたArm Ethos-U55ニューラルネットワークユニットを搭載したWiseEye2 HX6538プロセッサーにより、最大480*480 10FPSのローカル推論が可能。
+- 強力なビジュアル AI 処理能力：WiseEye2 HX6538 プロセッサ（デュアルコア Arm Cortex-M55 と統合 Arm Ethos-U55 ニューラルネットワークユニット搭載）により、ローカル推論を最大 480×480・10FPS で実行可能。
 
-- 高データセキュリティのためのエッジコンピューティング：ローカル画像推論により最終結果のみを送信し、限定的なデータ伝送と高いデータプライバシーが要求されるアプリケーションに適している。
+- 高いデータセキュリティを実現するエッジコンピューティング：画像をローカルで推論し、最終結果のみを送信。データ伝送量を抑えつつ高いデータプライバシーが求められる用途に最適。  
 
-- 多機能AIモデル：人物検出、人数カウント、メーター読み取りの3つの内蔵モデルを搭載し、SenseCraft AIで数クリックでパブリックAIモデルのデプロイやカスタマイズAIモデルの訓練も簡単に行える。TensorFlowとPyTorchフレームワークをサポート。
+- 多機能 AI モデル：人検出、人数カウント、メーター読み取りの 3 つのビルトインモデルを搭載。公開 AI モデルのデプロイや、SenseCraft AI 上で数クリックでカスタム AI モデルを学習・展開することも容易。TensorFlow および PyTorch フレームワークをサポート。
 
-- 多重伝送プロトコル：標準RS485プロトコル経由での推論結果の送信をサポート；SenseCAP S2100/ 4G Sensor Hub DTUと接続してLoRaWANまたは4G経由で結果を取得可能。Wi-Fi経由でのキーフレーム送信もサポート。
+- マルチ伝送プロトコル：標準 RS485 プロトコルで推論結果を送信可能。SenseCAP S2100 / 4G Sensor Hub DTU と接続することで、LoRaWAN または 4G 経由で結果を取得可能。さらに Wi-Fi によるキーフレーム送信にも対応。
 
-- 防塵・防水性能：IP66等級の保護により、屋内外環境での安定した長期展開を保証。
+- 防塵・防水性能：IP66 等級の保護により、屋内外環境での長期安定運用を実現。
 
-- SenseCraft Appによるモデル管理：数回のタップで事前インストールされたAIモデルの設定と切り替えが可能。特定の用途に合わせてモデル信頼度閾値を簡単に調整し、性能を最適化。
+- SenseCraft アプリによるモデル管理：数回のタップでプリインストールされた AI モデルの設定や切り替えが可能。モデルの信頼度しきい値を簡単に調整し、用途に合わせて性能を最適化できます。
 
 ### 仕様
 
 <table align="center">
  <tr>
-     <th>製品モデル</th>
+     <th>製品型番</th>
         <th>S-VA-01B</th>
  </tr>
  <tr>
-     <th>入力電流</th>
+     <th>電流入力</th>
         <th>1A</th>
  </tr>
  <tr>
-     <th>入力電圧</th>
+     <th>電圧入力</th>
         <th>5V/12V</th>
  </tr>
  <tr>
-     <th>マイクロコントローラー</th>
-        <td align="center">Vision AI: <strong>Himax-6538</strong> <br></br> ネットワーク: <strong>XIAO ESP32C3</strong> <br></br></td>
+     <th>マイクロコントローラ</th>
+        <td align="center">Vision AI: <strong>Himax-6538</strong> <br></br> Network: <strong>XIAO ESP32C3</strong> <br></br></td>
  </tr>
     <tr>
         <th>カメラ</th>
         <td align="center">
-            レンズサイズ: <strong>"1/4"</strong><br />
+            レンズサイズ: <strong>“1/4"</strong><br />
             焦点距離: <strong>3.4 mm（調整可能）</strong><br />
-            解像度: <strong>2592 × 1944 ピクセル</strong><br />
-            ピクセルサイズ: <strong>1.4 µm × 1.4 µm</strong><br />
-            最大フレームレート: <strong>1080p @ 30 fps、720p @ 60 fps</strong><br />
-            FOV: <strong>62°</strong>
+            解像度: <strong>2592 × 1944 pixels</strong><br />
+            画素サイズ: <strong>1.4 µm × 1.4 µm</strong><br />
+            最大フレームレート: <strong>1080p @ 30 fps, 720p @ 60 fps</strong><br />
+            視野角 (FOV): <strong>62°</strong>
         </td>
     </tr>
     <tr>
-     <th>モデル実行と推論</th>
+     <th>モデル実行および推論</th>
         <th>480 * 480  >10 fps</th>
     </tr>
     <tr>
         <th>Modbus RS485</th>
         <td align="center">
-            チップ:<strong>TP8485E、半二重トランシーバー
-            RS485 Modbus-RTUプロトコル</strong><br />
-            端子接続: <strong>端子接続: 信号線用3ピン端子と電源用3ピン端子</strong><br />
-            伝送範囲:<strong>伝送範囲: 最大1200メートル（環境により変動）</strong><br />
-            伝送速度: <strong>伝送速度: 250k bps（最大）</strong>
+            チップ:<strong>TP8485E、半二重トランシーバ
+            RS485 Modbus-RTU プロトコル</strong><br />
+            端子接続: <strong>端子接続: 信号線用 3 ピン端子および電源用 3 ピン端子</strong><br />
+            伝送距離:<strong>伝送距離: 最大 1200 m（環境により異なる）</strong><br />
+            伝送速度: <strong>伝送速度: 最大 250k bps</strong>
         </td>
     </tr>
     <tr>
@@ -120,10 +120,10 @@ Seeed Studio RS485 Vision AI カメラは、ESP32-C3 MCU（Seeed Studio XIAO）�
     </tr>
  <tr>
      <th>メモリ</th>
-        <th>8GB MicroSDカード（クラス10）</th>
+        <th>8GB MicroSD カード（Class 10）</th>
  </tr>
  <tr>
-     <th>IP等級</th>
+     <th>IP 等級</th>
         <th>IP66</th>
  </tr>
  <tr>
@@ -132,137 +132,137 @@ Seeed Studio RS485 Vision AI カメラは、ESP32-C3 MCU（Seeed Studio XIAO）�
  </tr>
  <tr>
      <th>動作湿度</th>
-        <th>0 - 100 %RH（結露なし）</th>
+        <th>0 - 100 %RH（結露なきこと）</th>
  </tr>
  <tr>
-     <th>デバイスサイズ</th>
+     <th>本体サイズ</th>
         <th>180mm*75mm*70mm</th>
  </tr>
  <tr>
-     <th>デバイス重量</th>
+     <th>本体重量</th>
         <th>439g</th>
  </tr>
  <tr>
      <th>ケーブル長</th>
-        <th>2メートル</th>
+        <th>2 meters</th>
  </tr>
 </table>
 
-### ピンアウト図
+### ピン配置図
 
-下の図に従って、A1102の異なるワイヤー色は異なるピン機能に対応しています。具体的なピン機能は以下の通りです：
+下図のように、A1102 のワイヤーカラーごとに対応するピン機能が異なります。具体的なピン機能は次のとおりです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/pin.png" style={{width:600, height:'auto'}}/></div>
 
-データロガーに対応する機能を見つけて接続してください
+データロガーに対応する機能を見つけて接続してください。
 
 :::tip
-5vにアクセスする場合、12vにアクセスする必要はありません。12vと5vのうち一つの電圧供給を選択し、一緒に使用しないことを忘れないでください！
+5V を接続する場合は 12V を接続する必要はありません。12V と 5V はどちらか一方の電源を選択し、同時に使用しないようにしてください！
 :::
 
 ## ソフトウェア概要
 
-### 工場出荷時AIモデルの展開
+### 工場出荷時 AI モデルのデプロイ
 
 #### ソフトウェアワークフロー
 
-**ステップ 1 :** アプリにログインした後、下のボックスの「ユーザー」をクリックし、Bluetooth接続デバイスの設定を見つけます。
+**Step 1 :** アプリにログインしたら、下のボックス内の「User」をクリックし、Bluetooth 接続デバイスの設定を見つけます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/30.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 2 :** デバイス「RS485 Vision AI Camera」をチェックします。
+**Step 2 :** デバイス「RS485 Vision AI Camera」を確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/31.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 3 :** RS485 Vision AI Cameraの電源を入れた後にスキャンします
+**Step 3 :** RS485 Vision AI Camera の電源を入れた後にスキャンします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/40.jpg" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 4 :** 「AIモデル」をクリックして工場設定のAIモデルを表示し、必要なタイプを展開します。
+**Step 4 :** 「AI Model」をクリックして、工場出荷時に設定されている AI モデルを確認し、使用したいタイプをデプロイします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/42.jpg" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 5 :** 「DataLogger」をバインドする必要がある場合は、対応するSN番号を入力してください。必要な「信頼度」を設定しない場合は、「プレビュー」をクリックすると、画像センサーに移動して画像を収集できます。
+**Step 5 :** 「DataLogger」をバインドする必要がある場合は、対応する SN 番号を入力してください。「confidence」を設定しない場合は、「Preview」をクリックすると、イメージセンサーに移動して画像を取得できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/33.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 6 :** 画像を表示
+**Step 6 :** 画像を表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/41.jpg" style={{width:400, height:'auto'}}/></div>
 
-SenseCraft APPでRS485 Vision AI V2デバイスを正常に使用できました！🎉
+SenseCraft APP 上で RS485 Vision AI V2 デバイスを正常に使用できました。おめでとうございます！🎉
 
-### SenseCraft AIによるカスタムAIモデル
+### SenseCraft AI によるカスタム AI モデル
 
-モデルをカスタマイズしたい場合は、SenseCraft AIを使用して、お気に入りの機械学習モデルをRS485 Vision AI Cameraデバイスに展開し、機能とアプリケーションをパーソナライズする方法をご案内します。
+モデルをカスタマイズしたい場合は、SenseCraft AI を使って、お好みの機械学習モデルを RS485 Vision AI Camera デバイス上にデプロイし、機能やアプリケーションをパーソナライズする手順を説明します。
 
 #### ハードウェアワークフロー
 
-以下の指示に従って、Type-CポートをVision AI V2に接続してコンピューターに接続します
+以下の手順に従って、Type-C ポートを Vision AI V2 とコンピュータに接続します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/1.gif" style={{width:700, height:'auto'}}/></div>
 
 #### ソフトウェアワークフロー
 
-**ステップ 1 .** まず、[SenseCraftAI](https://sensecraft.seeed.cc/ai/#/home)をクリックし、SenseCraft AIウェブサイトの上部のメニューバーで**「Pretrained Models」**を見つけてクリックします。
+**Step 1 .** [SenseCraft AI](https://sensecraft.seeed.cc/ai) を開き、**`Models`** > **`Model Library`** に移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/1.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 2 .** Supported Devicesセクションで**「SenseCAP A1102」**を見つけます。ここで、適応されたモデルに対応するデバイスモデルを見つける必要があります。
+**Step 2 .** Supported Devices セクションで **“SenseCAP A1102”** を探します。ここでは、適合するモデルに対応したデバイスモデルを見つける必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/2.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 3 .** ここでは、31ページの**「Face Detection」**のモデルをデモ例として選択します。
+**Step 3 .** ここでは例として、31 ページにある **“Face Detection”** モデルをデモとして選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/3.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 4 .** モデル内に入ったら、**「Deploy Model」**オプションを見つけます。
+**Step 4 .** モデル画面に入ったら、**“Deploy Model”** オプションを見つけます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/4.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 5 .** Connect Deviceと対応するオプション**「SenseCAP A1102」**を見つけます。
+**Step 5 .** Connect Device を見つけ、対応するオプション **“SenseCAP A1102”** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/5.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 6 .** 内部に入ったら、A1102デバイスを接続し、対応するシリアルポートを見つけて接続します。
+**ステップ 6.** 画面が表示されたら、A1102 デバイスを接続し、対応するシリアルポートを見つけて接続します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/6.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 7 .** 最後に、モデルが書き込まれ、対応する結果が表示されることを確認できます
+**ステップ 7.** 最後に、書き込まれたモデルと、それに対応する結果が表示されていることを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/7.png" style={{width:700, height:'auto'}}/></div>
 
 `Confidence:`
-    - Confidenceは、モデルがその予測に割り当てる確実性または確率のレベルを指します。
+    - Confidence は、モデルが予測に対してどの程度確信しているか、あるいはどのくらいの確率を割り当てているかを示します。
 
 `IoU:`
-    - IoUは、真実のバウンディングボックスと比較して予測されたバウンディングボックスの精度を評価するために使用されます。
+    - IoU は、予測されたバウンディングボックスと真値のバウンディングボックスを比較して、その精度を評価するために使用されます。
 
-この時点で、RS485 Vision AI Cameraデバイスに必要なモデルを正常に展開しました。次に、次のステップの操作に進みます！
+この時点で、必要なモデルを RS485 Vision AI Camera デバイス上に正常にデプロイできました。次に、操作の次のステップに進みましょう！
 
-### XIAOによるデータ読み取り
+### XIAO でデータを読み取る
 
-XIAOを介して書き込みモデルからデータを読み取るには、この[wiki](https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_software_support/)にアクセスしてください。XIAOを介してVision AI V2データを読み取る方法について詳しく説明されています。
+XIAO を介してバーンイン済みモデルからデータを読み取るには、この [wiki](https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_software_support/) にアクセスしてください。XIAO を使用して Vision AI V2 のデータを読み取る方法が詳しく説明されています。
 
-### データ送信 RS485
+### RS485 でのデータ送信
 
 #### 接続回路図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/Camera_Connecting.png" style={{width:900, height:'auto'}}/></div>
 
 :::tip
-5vにアクセスする場合、12vにアクセスする必要はありません。12vと5vのうち一つの電圧供給を選択し、一緒に使用しないことを忘れないでください！
+5V を給電する場合は 12V を接続する必要はありません。12V と 5V はどちらか一方の電圧を選んで給電し、同時に使用しないように注意してください！
 :::
 
-上の図に従って正常に接続したら、この[wiki](https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_rs485/)リンクをクリックして、コードを使用してドライブする方法についてより詳細な説明を確認してください
+上の図に従って正常に接続できたら、この [wiki](https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_rs485/) リンクをクリックして、コードを使用して駆動する方法についての、より詳細な説明を確認してください。
 
-## Resources
+## リソース
 
-- 📄 **[PDF]** [Seeed Studio RS485 Vision AI Camera Schematic](https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/SenseCAP_RS485_Vision_AI_Sensor_SCH.pdf)
+- 📄 **[PDF]** [Seeed Studio RS485 Vision AI Camera 回路図](https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/SenseCAP_RS485_Vision_AI_Sensor_SCH.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
