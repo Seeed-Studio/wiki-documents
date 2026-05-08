@@ -41,6 +41,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_trmnl.md'), //4.28
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'Application', 'How_to_use_bacnet_ms_tp.md'), //4.17
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'Application', 'How_to_use_modbus_rs485.md'), //4.14
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_ROS2_Integration.md'), //4.29
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
