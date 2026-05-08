@@ -20,9 +20,9 @@ This WiKi article will teach you how to use our SenseCraft to train your own AI 
 
 ## SenseCraft Website Setup AI Model
 
-### Step 1 . Open [SenseCraft](https://sensecraft.seeed.cc/) Website
+### Step 1 . Open [SenseCraft AI](https://sensecraft.seeed.cc/ai)
 
-Click on "Products" in the top menu bar to see the dropdown options, and then select "SenseCraft AI"Click.
+Open the [SenseCraft AI](https://sensecraft.seeed.cc/ai) platform, then navigate to **`Models`** > **`Training`** to begin training a model.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -98,7 +98,7 @@ After setting everything up, click Confirm.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/6.png" style={{width:800, height:'auto'}}/></div>
 
-Return to Pretrained Models and click on My Own Models to see the model you have trained.
+Open **`Models`** > **`My Models`** to see the model you have trained.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/7.png" style={{width:800, height:'auto'}}/></div>
 

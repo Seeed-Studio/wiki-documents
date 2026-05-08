@@ -1,161 +1,161 @@
 ---
-description: SenseCraftからWatcher用のAIモデルをデプロイする
-title: Watcher用モデルのトレーニング
+description: SenseCraft から Watcher へ AI モデルをデプロイする
+title: Watcher 用モデルのトレーニング
 image: https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png
 slug: /training_model_for_watcher
 sidebar_position: 2
 last_update:
   date: 10/9/2024
   author: Jason
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2024-10-11'
+updatedAt: '2025-09-10'
 url: https://wiki.seeedstudio.com/ja/training_model_for_watcher/
 ---
 
-# Watcher用モデルのトレーニング
+# Watcher 用モデルのトレーニング
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png" style={{width:1000, height:'auto'}}/></div>
 
-このWiKi記事では、SenseCraftを使用して独自のAIモデルをトレーニングし、Watcherにデプロイする方法を説明します。これは非常に興味深いプロセスになるでしょう。SenseCraftが何かまだご存じでない場合は、[こちら](https://sensecraft.seeed.cc/)をクリックしてください。これは、Seeed Studioデバイス上で様々なオープンソースAIモデルをデプロイできるプラットフォームです。
+この WiKi 記事では、SenseCraft を使って独自の AI モデルをトレーニングし、それを Watcher にデプロイする方法を説明します。とても興味深いプロセスになります。まだ SenseCraft が何か分からない場合は、[here](https://sensecraft.seeed.cc/) をクリックしてください。これは、さまざまなオープンソース AI モデルを Seeed Studio デバイス上にデプロイできるプラットフォームです。
 
-## SenseCraft WebサイトでのAIモデルセットアップ
+## SenseCraft Web サイトで AI モデルをセットアップ
 
-### ステップ1. [SenseCraft](https://sensecraft.seeed.cc/)ウェブサイトを開く
+### Step 1 . [SenseCraft AI](https://sensecraft.seeed.cc/ai) を開く
 
-トップメニューバーの「Products」をクリックしてドロップダウンオプションを表示し、「SenseCraft AI」を選択してクリックします。
+[SenseCraft AI](https://sensecraft.seeed.cc/ai) プラットフォームを開き、**`Models`** > **`Training`** に移動してモデルのトレーニングを開始します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/1.png" style={{width:800, height:'auto'}}/></div>
 
-### ステップ2. トレーニングタイプの設定
+### Step 2 . トレーニングタイプを設定
 
 :::tip
-**_ここではカメラからトレーニングデータを収集するためにGrove Vision AI (V2)を使用することをお勧めします。WatcherはGrove Vision AI V2と同じチップ（Arm Cortex-M55）を使用しているため、WatcherのモデルをトレーニングするためにGrove Vision AI V2が選択されました。写真撮影に使用する最適なデバイスは、デプロイ先のデバイスであり、これが最終的な精度に直接影響します。_**
+**_ここではカメラからトレーニングデータを収集するために Grove Vision AI (V2) を使用することを推奨します。Watcher は Grove Vision AI V2（Arm Cortex-M55）と同じチップを使用しているため、Watcher のモデルをトレーニングするデバイスとして Grove Vision AI V2 が選ばれています。写真撮影に使用するデバイスは、実際にデプロイするデバイスと同じものを使うのが最適であり、それが最終的な精度に直接影響します。_**
 :::
 
-便宜上、ここではコンピューターのカメラを使用してデータをキャプチャします。
+ここでは手軽さを優先して、PC のカメラを使ってデータを取得します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/2.png" style={{width:800, height:'auto'}}/></div>
 
-### ステップ3. データの収集
+### Step 3 . データ収集
 
 **トレーニング手順**
 
 - カテゴリを追加
-- カテゴリタグを修正
-- 選択したカテゴリで「Hold to Record」をクリック
-- Grove Vision AI(V2)を選択
-- トレーニング開始
+- カテゴリのタグを編集
+- 選択したカテゴリで "Hold to Record" をクリック
+- Grove Vision AI(V2) を選択
+- トレーニングを開始
 
-Collect Classification Dataで、必要なカテゴリを追加できます。ここでは、carとdollをカテゴリとして追加し、タグを修正しました。
+Collect Classification Data では、必要なカテゴリを追加できます。ここでは、カテゴリとして car と doll を追加し、タグを編集しました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/3.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-取得するデータが多く、ピクセルが鮮明であるほど、トレーニング結果が良くなります。
+取得するデータ量が多く、かつ画素が鮮明であるほど、トレーニング結果は良くなります。
 :::
 
-トレーニング後、Start Trainingタグの下にある「Click here」をクリックする必要があります。
+トレーニング後、Start Training の下にある "Click here" タグをクリックする必要があります。
 
-### ステップ4. モデルの選択
+### Step 4 . モデルを選択
 
-トレーニング完了後、モデルファイルを確認できます
+トレーニングが完了すると、モデルファイルを確認できます。
 
 - モデルファイルをクリック
-- 「Save to SenseCraft」をクリック
+- "Save to SenseCraft" をクリック
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/4.png" style={{width:800, height:'auto'}}/></div>
 
-### ステップ5. モデルの説明
+### Step 5 . モデルの説明
 
-**Model Name**、**Model Excerpt**、**Model Introduction**、**Model Deployment Preparation**を提供してください。モデルを公開する場合、この情報は皆にとって非常に役立ちます。これはテストなので、簡潔に記述されています。
+**Model Name**、**Model Excerpt**、**Model Introduction**、**Model Deployment Preparation** を入力してください。モデルを公開する場合、この情報は多くの人にとって非常に有用です。これはテスト用なので、ここでは簡単に記入しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/5(2).png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Supported DevicesでSenseCAP WatcherとGrove-Vision AI V2を選択してください。
+Supported Devices で SenseCAP Watcher と Grove-Vision AI V2 を選択してください。
 :::
 
-### ステップ6. モデルパラメータの設定
+### Step 6 . モデルパラメータを設定
 
-モデルに基づいて希望するAI Frameworkを選択できます。
+モデルに応じて、使用したい AI Framework を選択できます。
 
 Confidence Threshold
 
-- Confidenceは、モデルがその予測に割り当てる確実性または確率のレベルを指します。
+- Confidence とは、モデルが予測に対してどの程度確信を持っているか、あるいはどの程度の確率を割り当てているかを指します。
 
-- Confidenceは、モデルが予測結果に対して持つ確実性または確率の度合いです。通常、パーセンテージで表され、0%から100%の範囲です。
+- Confidence は、モデルが予測結果に対して持つ確信度や確率の度合いであり、通常は 0% から 100% のパーセンテージで表されます。
 
 IOU Threshold
 
-- IoUは、真実の境界ボックスと比較した予測境界ボックスの精度を評価するために使用されます。
+- IoU は、予測されたバウンディングボックスと真のバウンディングボックスを比較して、その精度を評価するために使用されます。
 
-- IoUは、物体検出モデルの性能を評価する重要な指標です。予測境界ボックスと実際の境界ボックス間の重複度を測定します。
+- IoU は物体検出モデルの性能を評価するための重要な指標であり、予測バウンディングボックスと実際のバウンディングボックスの重なり具合を測定します。
 
-- 0%は重複なしを示します。
-- 100%は完全な重複を示します。
+- 0% は重なりがまったくないことを示します。
+- 100% は完全に重なっていることを示します。
 
-すべてを設定した後、Confirmをクリックします。
+すべての設定が完了したら、Confirm をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/6.png" style={{width:800, height:'auto'}}/></div>
 
-Pretrained Modelsに戻り、My Own Modelsをクリックして、トレーニングしたモデルを確認します。
+**`Models`** > **`My Models`** を開くと、トレーニングしたモデルを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/7.png" style={{width:800, height:'auto'}}/></div>
 
-## SenseCraft APP ウォッチャーのセットアップ
+## SenseCraft APP で Watcher をセットアップ
 
-### ステップ 1 . Watcherを選択する
+### Step 1 . 使用する Watcher を選択
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/20.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 2 . 手動セットアップタスクを見つけて入る
+### Step 2 . Manually Set Up Task を見つけて入る
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/21.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 3 . 'Use TinyML Model'をチェックする
+### Step 3 . 'Use TinyML Model' にチェックを入れる
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/22.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 4 . デプロイしたモデルを見つける
+### Step 4 . デプロイしたモデルを探す
 
-名前を入力するか、下にスクロールしてデプロイしたAIモデルを見つけてチェックします
+名前を入力するかスクロールして、デプロイした AI モデルを見つけてチェックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/23.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 5 . 閾値と条件を設定する
+### Step 5 . しきい値と条件を設定
 
-信頼度は、モデルが予測結果に対して持つ信頼の度合いで、通常0から1の値、または0%から100%のパーセンテージで表されます。
-例えば、モデル出力の信頼度が80%の場合、予測が正しいと信じる確率が80%であることを示します。
+Confidence は、モデルが予測結果に対してどの程度の確信を持っているかを示す指標で、通常は 0〜1 の値、または 0%〜100% のパーセンテージで表されます。
+例えば、モデル出力の信頼度が 80% の場合、その予測が正しいとモデルが 80% の確率で判断していることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/24.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 6 . タスク名を設定する
+### Step 6 . タスク名を設定
 
-タスク名を設定して、ビューアーに直接送信してモデルを実行できるようにします
+タスク名を設定すると、そのタスクを直接 Watcher に送信してモデルを実行させることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/25.jpg" style={{width:300, height:'auto'}}/></div>
 
-### ステップ 7 . Watcherのモデルデプロイを待つ
+### Step 7 . Watcher がモデルをデプロイするのを待つ
 
-AIモデルを選択し、対応するパラメータを設定したら、ビューアーがダウンロードするのを待つことができます
+AI モデルを選択し、対応するパラメータを設定したら、Watcher がモデルをダウンロードするのを待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/26.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-この期間中、他の外部要因によりダウンロードが失敗する場合があります。パラメータを再選択・設定して、ダウンロードを続行するだけで済みます。
+この間、外部要因によりダウンロードが失敗する場合があります。その場合は、再度選択してパラメータを設定し、ダウンロードを続行してください。
 :::
 
-## Watcher AIモデル表示
+## Watcher の AI モデル表示
 
-### 結果デモンストレーション
+### 結果のデモ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/gif.gif" style={{width:500, height:'auto'}}/></div>
 
-これは私のAIモデルがWatcher上で動作する簡単な表示効果です。皆さんのAIモデルがWatcher上で輝くことを楽しみにしています！
+これは、私の AI モデルを Watcher 上で表示したシンプルな例です。皆さんの AI モデルが Watcher 上で輝くことを楽しみにしています！
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

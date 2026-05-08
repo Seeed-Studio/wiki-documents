@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-04-30 11:29:59 (北京时间)
-// 多语言页面: 2266 个
+// 生成时间: 2026-05-07 17:28:36 (北京时间)
+// 多语言页面: 2270 个
 
 (function() {
   'use strict';
@@ -39,6 +39,13 @@
     "pt"
   ],
   "/sensecraft-ai/application/create-new-application": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/sensecraft-ai/application/tool-blocks": [
     "cn",
     "en",
     "es",
@@ -3236,6 +3243,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_udp_face_analysis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
@@ -5551,6 +5565,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_pinocchio_meshcat": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_b601_dm_ros2_integration": [
     "cn",
     "en",
     "es",
@@ -11156,6 +11177,13 @@
     "pt"
   ],
   "/xiao_esp32c5_with_freertos": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_esp32c5_with_zephyr": [
     "cn",
     "en",
     "es",
