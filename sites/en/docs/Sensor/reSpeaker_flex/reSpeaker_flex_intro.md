@@ -579,6 +579,14 @@ Wait for the installation to complete. A new Pi-Apps icon will appear in your me
 </TabItem>
 </Tabs>
 
+## Resources 
+
+[reSpeaker Flex XVF3800 Circular step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+
+[reSpeaker Flex XVF3800 Linear step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+
+[reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+
 
 ## Tech Support & Product Discussion
 
