@@ -76,9 +76,16 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 
 ## Platforms Supported
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
+<table align="center">
+  <tr>
+    <th>Arduino</th>
+    <th>Raspberry Pi</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+</table>
 
 :::caution
 The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -95,7 +102,71 @@ The platforms mentioned above as supported is/are an indication of the module's 
 :::note
 If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+### Play With  PlatformIo 
 
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+<table align="center">
+  <tr>
+    <th>XIAO ESP32 C3</th>
+    <th>Seeed Studio Grove Base for XIAO</th>
+    <th>Grove - Soil Moisture Sensor</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991054-seeed-studio-xiao-esp32c3-45font_1.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881132_3.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+  </tr>
+</table>
+
+- **Step 2.** Connect Grove-Moisture Sensor to port A0 of Seeed Studio Grove Base for XIAO.
+- **Step 3.** Plug XIAO into Seeed Studio Grove Base for XIAO.
+- **Step 4.** Connect XIAO to PC via a USB cable.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/xiao.jpg" /></div>
+
+**Software**
+
+- **Step 1.** Copy the code into Platformio 
+
+```cpp
+int sensorPin = A0;
+int sensorValue = 0;
+
+void setup() {
+    Serial.begin(9600);
+}
+void loop() {
+    // read the value from the sensor:
+    sensorValue = analogRead(sensorPin);
+    Serial.print("Moisture = " );
+    Serial.println(sensorValue);
+    delay(1000);
+}
+```
+
+- **Step 2.** We will see the moisture display on terminal as below.
+
+```
+Moisture = 0
+Moisture = 31
+Moisture = 48
+Moisture = 139
+Moisture = 155
+Moisture = 124
+Moisture = 236
+Moisture = 218
+Moisture = 215
+Moisture = 221
+```
+You can find some practical or artistic demonstrations in the "Wiki & Learn" section of the product details page.
 ### Play With Arduino
 
 **Hardware**
@@ -103,7 +174,7 @@ If this is the first time you work with Arduino, we firmly recommend you to see 
 - **Step 1.** Prepare the below stuffs:
 
 | Seeeduino V4.2 | Base Shield|  Grove-Moisture Sensor |
-|--------------|-------------|-----------------|
+|--------------|-------------|-----------------| 
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Moisture_sensor_S.jpg" /></div>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get One Now](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
 
@@ -111,7 +182,7 @@ If this is the first time you work with Arduino, we firmly recommend you to see 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Seeeduino_moisture.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Seeeduino_moisture.jpg" /></div>
 
 :::note
 If we don't have Grove Base Shield, We also can directly connect Grove-Moisture Sensor to Seeeduino as below.
@@ -340,7 +411,6 @@ Moisture value: 1, Dry
     time.sleep(1)
 KeyboardInterrupt
 
-
 ```
 
 You can use this sensor to detect the air quality. Press ++ctrl+c++ to quit.
@@ -430,7 +500,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_moisture_sensor.py
 
 **Hardware**
 
-The following sketch demonstrates a simple application of sensing the moisture in soil.With this, you can know whether your plant needs water or not by observing the result from the output of the sensor
+The following sketch demonstrates a simple application of sensing the moisture in soil.With this, you can know whether a plant needs water or not by observing the results that the sensor outputs
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/images/Moisture.jpg" /></div>
 
@@ -532,4 +602,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

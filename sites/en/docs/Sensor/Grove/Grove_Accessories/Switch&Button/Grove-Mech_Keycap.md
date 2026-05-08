@@ -34,7 +34,7 @@ You will find that this is an interesting and stable module to make some really 
 20,000,000 cycles of operation shall be performed continuously at a rate of 300 cycles per minute without load.
 :::
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" style={{maxWidth: '300px', height: 'auto'}} alt="Get One Now" /></a></p>
 
 ## Features
 
@@ -90,6 +90,122 @@ The platforms mentioned above as supported is/are an indication of the module's 
 :::note
 If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+### Play With  PlatformIo 
+
+**Hardware**
+
+- **Step 1.** Prepare the below stuffs:
+
+<table align="center">
+  <tr>
+    <th>XIAO nRF52840 Sense</th>
+    <th>Seeed Studio Grove Base for XIAO</th>
+    <th>Grove-Mech keycap</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840sence.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank" rel="noopener noreferrer">Get One Now</a></td>
+  </tr>
+</table>
+
+
+- **Step 1.** Connect Grove-Mech keycap signal pins: `S1` -> `D1`, `S2` -> `D2` on the Seeed Studio Grove Base for XIAO.  (VCC/GND as usual)
+- **Step 2.** Plug the Grove Base into the XIAO nRF52840 Sense.
+- **Step 3.** Connect XIAO to your PC via USB.
+
+**Software** 
+
+- **Step 1.** Install `Adafruit_NeoPixel` library in PlatformIO .
+- **Step 2.** Create a new sketch / project and paste the code below.
+- **Step 3.** Upload to XIAO and open Serial Monitor (baud 115200) to see status.
+
+**What it does** 
+
+- Each single press of the Grove-Mech keycap cycles the embedded RGB LED through a list of colors.
+
+Code 
+```cpp
+/*
+  Grove-Mech Keycap demo for XIAO (nRF52840 Sense)
+  Wiring: S1 -> D1 (button), S2 -> D2 (pixel data)
+*/
+#include <Adafruit_NeoPixel.h>
+
+#define BUTTON_PIN 1   // D1
+#define PIXEL_PIN  2   // D2
+#define PIXEL_COUNT 1
+
+Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+uint8_t colorPos = 0;
+bool lastState = LOW;
+unsigned long lastDebounce = 0;
+const unsigned long debounceDelay = 50;
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  strip.begin();
+  strip.show();
+  Serial.begin(115200);
+  Serial.println("Grove-Mech Keycap: ready");
+}
+
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void cycleColor() {
+  colorPos += 32; // step size
+  strip.setPixelColor(0, Wheel(colorPos));
+  strip.show();
+  Serial.print("Color pos: "); Serial.println(colorPos);
+}
+
+void loop() {
+  bool reading = digitalRead(BUTTON_PIN) == LOW ? true : false; // pressed = LOW for INPUT_PULLUP
+
+  if (reading != lastState) {
+    lastDebounce = millis();
+  }
+
+  if ((millis() - lastDebounce) > debounceDelay) {
+    // stable state
+    static bool pressed = false;
+    if (reading && !pressed) {
+      // button pressed (edge)
+      cycleColor();
+      pressed = true;
+    } else if (!reading) {
+      pressed = false;
+    }
+  }
+
+  lastState = reading;
+}
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/xiao_capkey.gif" style={{width:400, height:'auto'}}/></div>
+
+:::note
+ If your wiring or pin mapping differs, change `BUTTON_PIN` and `PIXEL_PIN` accordingly.
+:::
+
+
 
 ### Play With Arduino
 
