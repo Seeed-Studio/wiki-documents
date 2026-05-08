@@ -1,6 +1,6 @@
 ---
 description: Voice-controlled Kiwi-drive robot using Raspberry Pi, XIAO ESP32, ReSpeaker Lite, and voice embeddings for intelligent hands-free robotic control.
-title: LeKiwi Voice Controller
+title: Add Voice Interaction to Your LeKiwi Robot with reSpeaker Flex
 keywords:
   - reSpeaker flex
   - LeKiwi
