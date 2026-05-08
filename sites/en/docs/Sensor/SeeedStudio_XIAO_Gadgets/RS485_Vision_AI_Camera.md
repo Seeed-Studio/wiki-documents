@@ -204,7 +204,7 @@ Connect the Type-C port to the Vision AI V2 to your computer according to the fo
 
 #### Software Workflow
 
-**Step 1 .** First, Click [SenseCraftAI](https://sensecraft.seeed.cc/ai/#/home) and find **“Pretrained Models”** in the menu bar at the top of the SenseCraft AI website and click on it.
+**Step 1 .** Open [SenseCraft AI](https://sensecraft.seeed.cc/ai) and navigate to **`Models`** > **`Model Library`**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/1.png" style={{width:700, height:'auto'}}/></div>
 

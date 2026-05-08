@@ -43,12 +43,13 @@ The beta version of the Web Control Panel includes the following key features:
 ## Device Binding
 
 ### Binding Process
-1. Enter the [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
-2. To access the Control Panel, click Watcher Agent in the upper-right corner of the page.
-   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-3. Click on the "Bind Device" button
+1. Access the Watcher Agent control panel via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37) and then click **`Watcher Agent`** in the left sidebar.
+
+   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
+
+2. Click on the "Bind Device" button
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/page1.jpg" style={{width:300, height:'auto'}}/></div> 
-4. Follow the on-screen instructions and enter the 6-digit verification code displayed on the device
+3. Follow the on-screen instructions and enter the 6-digit verification code displayed on the device
 
 
 

@@ -29,17 +29,17 @@ url: https://wiki.seeedstudio.com/sensecraft-ai/sensecraft-ai-main/
 
 The Overview section provides a high-level introduction to SenseCraft AI, explaining its purpose, key features, and benefits. It serves as a starting point for users to understand the platform and its capabilities. The overview also includes links to Getting Started guides and FAQs to help users quickly get up and running with SenseCraft AI.
 
-## Pretrained Models
+## Model Library
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_pretrained_models_main_page/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Pretrained Models 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Model Library 🖱️</font></span></strong>
     </a>
 </div><br />
 
-The Pretrained Models section contains information about the readily available models that can be deployed on various devices supported by SenseCraft AI. These models are optimized for specific hardware and can be used for different applications without the need for custom training. The section is further divided into subsections based on the supported devices:
+The Model Library (accessed via **`Models`** > **`Model Library`** on the SenseCraft AI platform) contains information about the readily available pretrained models that can be deployed on various devices supported by SenseCraft AI. These models are optimized for specific hardware and can be used for different applications without the need for custom training. The section is further divided into subsections based on the supported devices:
 
 - **for XIAO ESP32S3 Sense**: This subsection lists the pretrained models compatible with the XIAO ESP32S3 Sense board, along with their descriptions and use cases.
 

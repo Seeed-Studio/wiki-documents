@@ -11,7 +11,7 @@ last_update:
   date: 11/27/2024
   author: Citrc
 createdAt: '2024-11-27'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/sensecraft-ai-main/
 ---
 
@@ -27,19 +27,19 @@ url: https://wiki.seeedstudio.com/es/sensecraft-ai/sensecraft-ai-main/
     </a>
 </div><br />
 
-La sección de Descripción general ofrece una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La descripción general también incluye enlaces a las guías de inicio rápido y a las preguntas frecuentes para ayudar a los usuarios a comenzar a utilizar SenseCraft AI rápidamente.
+La sección de descripción general ofrece una introducción de alto nivel a SenseCraft AI, explicando su propósito, características clave y beneficios. Sirve como punto de partida para que los usuarios comprendan la plataforma y sus capacidades. La descripción general también incluye enlaces a las guías de inicio rápido y a las preguntas frecuentes (FAQ) para ayudar a los usuarios a comenzar a utilizar SenseCraft AI rápidamente.
 
-## Modelos preentrenados
+## Biblioteca de modelos
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_pretrained_models_main_page/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Modelos preentrenados 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Biblioteca de modelos 🖱️</font></span></strong>
     </a>
 </div><br />
 
-La sección de Modelos preentrenados contiene información sobre los modelos disponibles que se pueden desplegar en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden utilizarse para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide a su vez en subsecciones según los dispositivos compatibles:
+La Biblioteca de modelos (a la que se accede mediante **`Models`** > **`Model Library`** en la plataforma SenseCraft AI) contiene información sobre los modelos preentrenados disponibles que se pueden desplegar en varios dispositivos compatibles con SenseCraft AI. Estos modelos están optimizados para hardware específico y pueden utilizarse para diferentes aplicaciones sin necesidad de entrenamiento personalizado. La sección se divide a su vez en subsecciones según los dispositivos compatibles:
 
 - **para XIAO ESP32S3 Sense**: Esta subsección enumera los modelos preentrenados compatibles con la placa XIAO ESP32S3 Sense, junto con sus descripciones y casos de uso.
 
@@ -83,7 +83,7 @@ La sección de Modelos preentrenados contiene información sobre los modelos dis
     </a>
 </div><br />
 
-La sección de Entrenamiento está dedicada a guiar a los usuarios en el proceso de creación de modelos personalizados utilizando SenseCraft AI. Se divide en dos subsecciones principales:
+La sección de Entrenamiento está dedicada a guiar a los usuarios a través del proceso de creación de modelos personalizados utilizando SenseCraft AI. Se divide en dos subsecciones principales:
 
 - Clasificación: Esta subsección proporciona tutoriales paso a paso y buenas prácticas para entrenar modelos de clasificación de imágenes utilizando SenseCraft AI.
 
@@ -109,7 +109,7 @@ La sección de Entrenamiento está dedicada a guiar a los usuarios en el proceso
     </a>
 </div><br />
 
-La sección de Salida de modelos se centra en cómo configurar y utilizar la salida de los modelos entrenados en diferentes dispositivos compatibles con SenseCraft AI. Está organizada en las siguientes subsecciones:
+La sección Salida de modelos se centra en cómo configurar y utilizar la salida de los modelos entrenados en diferentes dispositivos compatibles con SenseCraft AI. Está organizada en las siguientes subsecciones:
 
 - **Salida de modelos Grove Vision AI V2**: Esta subsección explica cómo configurar y acceder a la salida de los modelos desplegados en el dispositivo Grove Vision AI V2. Cubre temas como la configuración de disparadores, la integración con sistemas externos y la visualización de las predicciones del modelo.
 
@@ -121,21 +121,21 @@ La sección de Salida de modelos se centra en cómo configurar y utilizar la sal
 
 - Salida de modelos XIAO ESP32S3 Sense: Aquí puedes encontrar información sobre cómo trabajar con las salidas de los modelos en la placa XIAO ESP32S3 Sense. La subsección se divide a su vez en:
 
-  - **a través de GPIO**: Esta parte proporciona guías sobre cómo asignar las salidas del modelo a los pines GPIO del XIAO ESP32-S3 Sense, lo que permite controlar hardware externo en función de las predicciones del modelo.
+  - **mediante GPIO**: Esta parte proporciona guías sobre cómo asignar las salidas de los modelos a los pines GPIO de la XIAO ESP32-S3 Sense, lo que permite controlar hardware externo en función de las predicciones del modelo.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>a través de GPIO</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>mediante GPIO</font></span></strong>
     </a></div><br />
 
-  - **a través de MQTT**: Aquí puedes aprender cómo enviar las salidas del modelo desde el XIAO ESP32S3 Sense a otros dispositivos o sistemas utilizando el protocolo MQTT, lo que facilita una integración y comunicación fluidas.
+  - **mediante MQTT**: Aquí puedes aprender cómo enviar las salidas de los modelos desde la XIAO ESP32S3 Sense a otros dispositivos o sistemas utilizando el protocolo MQTT, lo que facilita una integración y comunicación fluidas.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>a través de MQTT</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>mediante MQTT</font></span></strong>
     </a></div><br />
 
-  - **Como sensor**: Esta parte explicará cómo utilizar XIAO, que ya ha cargado un modelo, como un sensor. Es posible que necesites utilizar un dispositivo XIAO o Arduino adicional.
+  - **Como sensor**: Esta parte explicará cómo utilizar XIAO, que ya ha cargado un modelo, como sensor. Es posible que necesites utilizar un dispositivo XIAO o Arduino adicional.
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
@@ -161,11 +161,11 @@ La sección de Salida de modelos se centra en cómo configurar y utilizar la sal
     </a>
 </div><br />
 
-La sección de Aplicación muestra ejemplos y casos de estudio del mundo real que demuestran cómo SenseCraft AI puede utilizarse para resolver diversos problemas en diferentes dominios. Incluye descripciones detalladas de proyectos, ejemplos de código y buenas prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA utilizando SenseCraft AI.
+La sección de Aplicación muestra ejemplos y casos de estudio del mundo real que demuestran cómo puede utilizarse SenseCraft AI para resolver diversos problemas en diferentes dominios. Incluye descripciones detalladas de proyectos, ejemplos de código y buenas prácticas para inspirar y guiar a los usuarios en el desarrollo de sus propias aplicaciones de IA utilizando SenseCraft AI.
 
-## Soporte técnico y debate sobre productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
@@ -176,3 +176,4 @@ Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes t
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

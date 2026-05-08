@@ -7,12 +7,13 @@ keywords:
   - OpenClaw
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_9.png
 slug: /use_cpenclaw_to_control_the_recamera_gimbal
+sku: 100029708
 sidebar_position: 10
 last_update:
   date: 03/27/2026
   author: Xinrui Wu
 createdAt: '2026-03-27'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/pt-br/use_cpenclaw_to_control_the_recamera_gimbal/
 ---
 
@@ -22,10 +23,10 @@ url: https://wiki.seeedstudio.com/pt-br/use_cpenclaw_to_control_the_recamera_gim
 ## Introdução
 
 Este projeto rompeu com sucesso a barreira entre grandes modelos virtuais e o mundo físico ao integrar profundamente o framework OpenClaw Agent com a câmera de borda com IA reCamera Gimbal da Seeed Studio.  
-Apoiando-se na poderosa arquitetura RISC-V, no ambiente low-code Node-RED integrado e em 1 TOPS de poder de computação de borda da reCamera, desenvolvemos uma Skill subjacente dedicada de interação para o OpenClaw.  
+Com base na poderosa arquitetura RISC-V, no ambiente low-code Node-RED integrado e em 1 TOPS de poder de computação de borda da reCamera, desenvolvemos uma Skill subjacente dedicada de interação para o OpenClaw.  
 Agora, o grande modelo não é mais um "cérebro em um frasco" que só consegue digitar na tela. Ele tem um "pescoço" que pode girar ativamente 360°, "olhos" (captura de imagem + análise VLM) que podem ver o mundo físico, "mãos" (controle de LED) que podem mudar o ambiente e "ouvidos e boca" (microfone e alto-falante) para interação bidirecional.
 
-Aqui está o efeito de uso após concluir este demo.
+A seguir está o efeito de uso após concluir este demo.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw.gif" /></div>
 
@@ -59,12 +60,12 @@ um computador
 ## 1. Instale o OpenClaw no seu computador
 
 :::note
-Git e nodejs precisam ser instalados antes da instalação. Se for um usuário do Windows10, o Visual Studio também precisa ser instalado. Se não estiver instalado, será exibido um erro.
+Git e nodejs precisam ser instalados antes da instalação. Se for um usuário Windows10, o Visual Studio também precisa ser instalado. Se não estiver instalado, será exibido um erro.
 :::
 
-Visite o site oficial do OpenClaw para ver o tutorial de instalação detalhado: [OpenClaw-Personal AI Assistant](https://openclaw.ai/)
+Acesse o site oficial do OpenClaw para ver o tutorial de instalação detalhado: [OpenClaw-Personal AI Assistant](https://openclaw.ai/)
 
-Após a instalação, você pode acessar diretamente a página web para tentar conversar com ele. Se você conseguir obter retorno normalmente neste momento, então você instalou e configurou o OpenClaw com sucesso. Continue passo a passo. Se houver algum problema com a instalação do OpenClaw, encontre o motivo e resolva-o por conta própria.
+Após a instalação, você pode entrar diretamente na página web para tentar conversar com ele. Se você conseguir obter retorno normalmente neste momento, então você instalou e configurou o OpenClaw com sucesso. Por favor, continue passo a passo. Se houver algum problema com a instalação do OpenClaw, encontre o motivo e resolva-o por conta própria.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_2.png" /></div>
 
@@ -76,7 +77,7 @@ Você também pode clicar na página "Overview" à esquerda para verificar se o 
 
 ### 2.1 nova pasta de skills
 
-Na pasta onde o OpenClaw está instalado, encontre o workspace e crie uma nova pasta chamada "skills" neste caminho.
+Na pasta onde o OpenClaw está instalado, encontre a workspace e crie uma nova pasta chamada "skills" neste caminho.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_1.png" /></div>
 
@@ -88,7 +89,7 @@ O endereço do projeto é:
 https://github.com/Seeed-Projects/reCamera_Gimbal-OpenClaw
 ```
 
-Após baixar e descompactar, coloque a pasta "recamera-gimbal" do projeto dentro da pasta "skills" criada na etapa 2.1.
+Após baixar e descompactar, coloque a pasta "recamera-gimbal" do projeto na pasta "skills" criada na etapa 2.1.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_8.png" /></div>
 
@@ -139,7 +140,7 @@ Primeiro, não conecte a alimentação da reCamera Gimbal, conecte diretamente o
 
 ### 3.2 implantação da aplicação
 
-Abra o [Application](https://sensecraft.seeed.cc/ai/application) do SenseCraft, encontre o projeto chamado "OpenClaw & reCamera Gimbal", clique em "Deploy Application"-"Visit Workspace Via USB", e o fluxo de trabalho que você verá após a implantação deve ser como mostrado na figura a seguir:
+Na plataforma SenseCraft AI, navegue até **`Applications`** > **`Application Square`** (ou abra [diretamente](https://sensecraft.seeed.cc/ai/application)), encontre o projeto chamado "OpenClaw & reCamera Gimbal", clique em **`Deploy Application`** > **`Visit Workspace Via USB`**, e o fluxo de trabalho que você verá após a implantação deve ser como o mostrado na figura a seguir:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_4.png" /></div>
 
@@ -168,7 +169,7 @@ http://<DEVICE_IP>:1880/api/photo
 Se tudo estiver OK, então, quando você visitar este URL, poderá ver na página web a imagem que a reCamera Gimbal acabou de tirar.
 
 :::note
-Certifique-se de que a reCamera Gimbal e o seu computador estejam conectados ao mesmo WiFi
+Certifique-se de que a reCamera Gimbal e o seu computador estejam conectados na mesma rede WiFi
 :::
 
 ## 5. Teste no OpenClaw
@@ -177,7 +178,7 @@ Antes de testar, precisamos confirmar duas coisas:
 
 ### 5.1 Certifique-se de que suas Skills estejam configuradas corretamente
 
-Se você configurou as Skills de acordo com o passo 2, na interface do OpenClaw, depois de clicar em "Skills" à esquerda e depois em "WORKSPACE SKILLS", você deverá conseguir ver o "recamera-gimbal" que configurou localmente"
+Se você configurou as Skills de acordo com o passo 2, na interface do OpenClaw, após clicar em "Skills" à esquerda e depois clicar em "WORKSPACE SKILLS", você deverá conseguir ver o "recamera-gimbal" que você configurou localmente"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_6.png" /></div>
 
@@ -192,7 +193,7 @@ Certifique-se de que seu modelo esteja configurado corretamente. Depois de clica
 Diga diretamente ao OpenClaw na janela de chat "turn on the LED of the camera", "look around to see if there is anyone", "record a 5s audio and play it" e outras tarefas, ou você pode tentar tarefas mais complexas, como "turn on the sentinel mode of the reCamera (quickly scan around, one scan cycle, that is, one scan circle is controlled within 6s), if there is a person wearing a white T-shirt in the picture, you will turn on the camera light and play test.wav audio, analyze the content of the picture and save the picture to the local", e então aguarde um momento para ver a reação da reCamera Gimbal.
 
 :::note
-A execução de tarefas pelo OpenClaw será bem lenta, e instruções complexas levarão cerca de dois ou três minutos para mostrar efeito, portanto, aguarde pacientemente, isso é normal.
+A execução de tarefas pelo OpenClaw será muito lenta, e instruções complexas levarão cerca de dois ou três minutos para mostrar o efeito, portanto, aguarde pacientemente, isso é normal.
 :::
 
 ## Suporte técnico e discussão sobre o produto
