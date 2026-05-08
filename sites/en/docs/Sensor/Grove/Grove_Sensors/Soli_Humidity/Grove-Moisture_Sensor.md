@@ -102,7 +102,7 @@ The platforms mentioned above as supported is/are an indication of the module's 
 :::note
 If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-### Play With PlatforIO
+### Play With PlatformIO
 **Hardware**
 
 - **Step 1.** Prepare the below stuffs:
@@ -133,7 +133,7 @@ If this is the first time you work with Arduino, we firmly recommend you to see 
 
 **Software**
 
-- **Step 1.** Copy the code into Platformio 
+- **Step 1.** Copy the code into PlatformIO 
 
 ```cpp
 int sensorPin = A0;
