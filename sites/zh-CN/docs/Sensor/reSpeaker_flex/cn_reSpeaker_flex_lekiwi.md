@@ -1,6 +1,6 @@
 ---
 description: 使用 Raspberry Pi、XIAO ESP32、ReSpeaker Lite 和语音嵌入，实现智能免手动语音控制的 Kiwi 驱动机器人。
-title: LeKiwi 语音控制器
+title: 使用 reSpeaker Flex 为你的 LeKiwi 机器人添加语音交互
 keywords:
   - reSpeaker flex
   - LeKiwi
@@ -18,11 +18,10 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 
 
 ## 概述
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
 用你的声音控制一台三轮 Kiwi 驱动机器人！本项目将 Seeed Studio XIAO ESP32（电机控制器）与 Raspberry Pi（语音处理大脑）结合起来，并通过 reSpeaker Flex 提供高质量音频采集，再配合 Voice Embeddings，实现更智能、更个性化的语音交互。你可以使用自然语言指令来驱动、转向和控制机器人，实现完全免手动操作，并获得更高的准确性和响应速度。
-
-
 
 ## 所需硬件
 
@@ -69,7 +68,6 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 
 - [**Groq**](https://groq.com/) 账号：免费层就足以开始使用
 
-
 ## 工作原理
 
 ```
@@ -82,6 +80,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 4. **LLaMA 3** 决定机器人应执行的动作
 5. **Groq Orpheus TTS** 将回复语音播报出来
 6. 通过串口向 ESP32 发送指令，由其驱动电机
+
 ---
 
 ## 准备 XIAO ESP32（电机控制器）
@@ -109,17 +108,14 @@ ESP32 运行 Arduino 草图，用 **Kiwi 驱动运动学** 实际驱动三个轮
 你只需要完成**物理组装**，可以跳过所有关于克隆 LeRobot GitHub 仓库的步骤，因为本项目使用的是不同的设置。
 :::
 
-
 ### 步骤 3 — 上传 Arduino 草图
-
-
 
 该草图（`lekiwi_motor_control.ino`）完成以下工作：
 
 - 将三个舵机全部初始化为**位置模式**，将其居中，然后切换到**轮子（连续旋转）模式**
 - 在 USB 串口上监听单字符指令
 - 使用 **Kiwi 驱动运动学** 计算每个轮子的正确速度
-- 仅支持 **点动模式**（短暂脉冲，然后自动停止） 
+- 仅支持 **点动模式**（短暂脉冲，然后自动停止）
 **串口指令参考：**
 
 | 按键 | 动作 |
@@ -467,12 +463,13 @@ void loop() {
 
 </details>
 
- ## 准备树莓派（语音大脑）
+## 准备树莓派（语音大脑）
 
 ### 步骤 1 — 获取 Groq API 密钥
 
 1. 在 [console.groq.com](https://console.groq.com/) 注册
 2. 创建一个新的 API 密钥并复制它——你将在步骤 4 中用到
+
 ### 步骤 2 — 克隆此仓库
 
 ```bash
