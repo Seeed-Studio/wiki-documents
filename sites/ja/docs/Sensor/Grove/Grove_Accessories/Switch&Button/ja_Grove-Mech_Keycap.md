@@ -1,20 +1,18 @@
 ---
-description: Grove-Mech keycap
-title: Grove-Mech keycap
+description: Grove-メカニカルキーキャップ
+title: Grove-メカニカルキーキャップ
 keywords:
   - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mech_Keycap
 sku: 111020049
 last_update:
-  date: 05/15/2025
+  date: 2/22/2023
   author: jianjing Huang
-createdAt: '2025-05-27'
+createdAt: '2023-02-28'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/Grove-Mech_Keycap/
 ---
-
-
 <!-- ---
 name: Grove-Mech keycap
 category: Sensor
@@ -28,35 +26,35 @@ tags:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/2.jpg)
 
-Grove-Mech keycapは、内蔵LEDを備えたメカニカルスイッチです。255色のフルカラーRGB LEDにより、スイッチの状態を簡単に表示することができます。このキーキャップは非常に信頼性が高く、2,000万回の押下操作寿命を持っています。
+Grove-Mech keycap は、LED を内蔵したメカニカルスイッチです。255 色フルカラー RGB LED によって、スイッチの状態を簡単かつ直感的に表示できます。このキーキャップは 2,000 万回の押下動作寿命を持ち、とても信頼性が高いです。
 
-このモジュールは、楽しいプロジェクトや製品を作るための興味深く安定したモジュールであることがわかるでしょう。実際、複数のGrove-Mechキーキャップを使用してメカニカルキーボードを作ることも可能です。
+このモジュールは、楽しくて実用的なプロジェクトや製品を作るのに適した、興味深く安定したモジュールであることが分かるでしょう。実際、複数の Grove-Mech keycap を使ってメカニカルキーボードを作ることもできます。
 
 :::tip
-2,000万回の操作は、負荷なしで1分間に300回の速度で連続して行うことができます。
+負荷なしで、1 分間あたり 300 サイクルの速度で連続して 2,000 万サイクルの動作を行うことができます。
 :::
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" style={{maxWidth: '300px', height: 'auto'}} alt="今すぐ入手" /></a></p>
 
 ## 特徴
 
-- プログラム可能なLED
+- プログラム可能な LED
 - 信頼性の高いメカニカル構造  
-- 非常に長い操作寿命
+- 非常に長い動作寿命
 
 ## 仕様
 
 |項目|値|
 |---|---|
-|動作電圧|3V-5V|
-|絶縁抵抗|100MΩ 最小|
-|接触抵抗|200mΩ 最大|
-|負荷なしの操作寿命|2,000万回|
+|動作電圧|3v-5v|
+|絶縁抵抗|100MΩ 以上|
+|接触抵抗|200 mΩ 以下|
+|無負荷での動作寿命|20,000,000|
 
 ## 応用例
 
-- 自動車機器
-- 視覚機器
+- 車載機器
+- 映像機器
 - 家庭用電気製品
 - 情報機器
 
@@ -70,11 +68,11 @@ Grove-Mech keycapは、内蔵LEDを備えたメカニカルスイッチです。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/schametic.jpg)
 
-K1はボタンに接続されています。キーが開いているとき、**SIG1**はR2によってプルダウンされ、**SIG1**の出力は低くなります。  
-ボタンが押されると、K1が閉じ、**SIG1**が**VCC**に接続され、**SIG1**の出力が高くなります。
+K1 はボタンに接続されており、キーがオープンのときは **SIG1** が R2 によってプルダウンされるため、**SIG1** の出力は Low になります。
+ボタンが押されると K1 がクローズし、**SIG1** が **VCC** に接続されるので、**SIG1** の出力は High になります。
 
 :::note
-このセクションでは回路図の一部のみを示しています。完全なドキュメントについては[Resources](#リソース)をご参照ください。
+このセクションでは回路図の一部のみを示しています。完全なドキュメントについては [Resources](/ja/#リソース) を参照してください。
 :::
 
 ## 対応プラットフォーム
@@ -84,84 +82,201 @@ K1はボタンに接続されています。キーが開いているとき、**S
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-上記で対応プラットフォームとして挙げられているものは、モジュールのソフトウェアまたは理論的な互換性を示しています。ほとんどの場合、Arduinoプラットフォーム用のソフトウェアライブラリまたはコード例のみを提供しています。すべての可能なMCUプラットフォームに対してソフトウェアライブラリやデモコードを提供することはできません。そのため、ユーザー自身でソフトウェアライブラリを作成する必要があります。
+上記で対応として挙げたプラットフォームは、このモジュールのソフトウェアまたは理論上の互換性を示すものです。ほとんどの場合、ソフトウェアライブラリやコード例は Arduino プラットフォーム向けのみ提供しています。存在しうるすべての MCU プラットフォーム向けにソフトウェアライブラリやデモコードを提供することは不可能なため、ユーザー自身でソフトウェアライブラリを作成する必要があります。
 :::
 
-## はじめに
+## 入門ガイド
 
 :::note
-Arduinoを初めて使用する場合は、開始する前に[Arduinoの使い方](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)をご覧になることを強くお勧めします。
+Arduino を扱うのが初めての場合は、始める前に [Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を読むことを強くお勧めします。
+:::
+### PlatformIO で遊ぶ
+
+**ハードウェア**
+
+
+<table align="center">
+  <tr>
+    <th>XIAO nRF52840 Sense</th>
+    <th>Seeed Studio Grove Base for XIAO</th>
+    <th>Grove-Mech keycap</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840sence.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank" rel="noopener noreferrer">今すぐ入手</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">今すぐ入手</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank" rel="noopener noreferrer">今すぐ入手</a></td>
+  </tr>
+</table>
+
+
+- **Step 1.** Grove-Mech keycap の信号ピンを接続します: `S1` -> `D1`, `S2` -> `D2` （VCC/GND は通常どおり）を Seeed Studio Grove Base for XIAO 上で接続します。
+- **Step 2.** Grove Base を XIAO nRF52840 Sense に挿し込みます。
+- **Step 3.** XIAO を USB で PC に接続します。
+
+**ソフトウェア** 
+
+- **Step 1.** PlatformIO に `Adafruit_NeoPixel` ライブラリをインストールします。
+- **Step 2.** 新しいスケッチ / プロジェクトを作成し、以下のコードを貼り付けます。
+- **Step 3.** XIAO に書き込み、シリアルモニタ（ボーレート 115200）を開いて状態を確認します。
+
+**動作内容** 
+
+- Grove-Mech keycap を 1 回押すごとに、内蔵 RGB LED の色がリスト内の色に順番に切り替わります。
+
+コード 
+```cpp
+/*
+  Grove-Mech Keycap demo for XIAO (nRF52840 Sense)
+  Wiring: S1 -> D1 (button), S2 -> D2 (pixel data)
+*/
+#include <Adafruit_NeoPixel.h>
+
+#define BUTTON_PIN 1   // D1
+#define PIXEL_PIN  2   // D2
+#define PIXEL_COUNT 1
+
+Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+uint8_t colorPos = 0;
+bool lastState = LOW;
+unsigned long lastDebounce = 0;
+const unsigned long debounceDelay = 50;
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  strip.begin();
+  strip.show();
+  Serial.begin(115200);
+  Serial.println("Grove-Mech Keycap: ready");
+}
+
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void cycleColor() {
+  colorPos += 32; // step size
+  strip.setPixelColor(0, Wheel(colorPos));
+  strip.show();
+  Serial.print("Color pos: "); Serial.println(colorPos);
+}
+
+void loop() {
+  bool reading = digitalRead(BUTTON_PIN) == LOW ? true : false; // pressed = LOW for INPUT_PULLUP
+
+  if (reading != lastState) {
+    lastDebounce = millis();
+  }
+
+  if ((millis() - lastDebounce) > debounceDelay) {
+    // stable state
+    static bool pressed = false;
+    if (reading && !pressed) {
+      // button pressed (edge)
+      cycleColor();
+      pressed = true;
+    } else if (!reading) {
+      pressed = false;
+    }
+  }
+
+  lastState = reading;
+}
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/xiao_capkey.gif" style={{width:400, height:'auto'}}/></div>
+
+:::note
+ 配線やピンマッピングが異なる場合は、`BUTTON_PIN` と `PIXEL_PIN` をそれに応じて変更してください。
 :::
 
-### Arduinoで遊ぶ
+
+
+### Arduino で遊ぶ
 
 #### ハードウェア
 
-**必要な材料**
+**必要な部材**
 
-| Seeeduino V4.2 | Base Shield | Grove-Mech keycap |
-|----------------|-------------|-------------------|
-|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">今すぐ購入</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">今すぐ購入</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">今すぐ購入</a>|
+| Seeeduino V4.2 | Base Shield| Grove-Mech keycap |
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">今すぐ入手</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">今すぐ入手</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">今すぐ入手</a>|
 
 :::note
-**1** USBケーブルを優しく差し込んでください。そうしないとポートが損傷する可能性があります。内部に4本のワイヤーがあるUSBケーブルを使用してください。2本のワイヤーしかないケーブルではデータを転送できません。使用しているケーブルが不明な場合は、[こちら](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)をクリックして購入できます。
+**1** USB ケーブルは優しく挿し込んでください。そうしないとポートを破損するおそれがあります。内部に 4 本の線が入っている USB ケーブルを使用してください。2 本線のケーブルではデータ転送ができません。お持ちのケーブルが確実でない場合は、[こちら](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) から購入できます。
 
-**2** Groveモジュールは購入時にGroveケーブルが付属しています。Groveケーブルを紛失した場合は、[こちら](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html)をクリックして購入できます。
+**2** 各 Grove モジュールには、購入時に Grove ケーブルが 1 本付属しています。Grove ケーブルを紛失した場合は、[こちら](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) から購入できます。
 :::
 
-- **ステップ 1.** Grove-Mech keycapをGrove-Base Shieldのポート**D2**に接続します。
+- **Step 1.** Grove-Mech keycap を Grove-Base Shield のポート **D2** に接続します。
 
-- **ステップ 2.** Grove - Base ShieldをSeeeduinoに差し込みます。
+- **Step 2.** Grove - Base Shield を Seeeduino に挿し込みます。
 
-- **ステップ 3.** USBケーブルを使用してSeeeduinoをPCに接続します。
+- **Step 3.** Seeeduino を USB ケーブルで PC に接続します。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/light1400-1050%C2%B7.jpg)
 
 :::note
-Grove Base Shieldがない場合は、以下のようにGrove-Mech keycapをSeeeduinoに直接接続することもできます。
+Grove Base Shield がない場合でも、以下のように Grove-Mech keycap を Seeeduino に直接接続することができます。
 :::
 
 | Seeeduino     | Grove-Mech keycap       |
 |---------------|-------------------------|
-| 5V            | 赤                     |
-| GND           | 黒                     |
-| D3            | 白                     |
-| D2            | 黄色                   |
+| 5V            | Red                     |
+| GND           | Black                   |
+| D3         | White                   |
+| D2            | Yellow                  |
 
 #### ソフトウェア
 
-- **ステップ 1.** [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip)ライブラリをGithubからダウンロードします。
+- **Step 1.** Github から [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip) ライブラリをダウンロードします。
 
-- **ステップ 2.** [Arduinoライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library)を参照して、Arduino用のライブラリをインストールします。
+- **Step 2.** Arduino 用のライブラリをインストールするには、[How to install library](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library) を参照してください。
 
-- **ステップ 3.** Arduino IDEを開き、新しいファイルを作成して、以下のコードを新しいファイルにコピーします。
+- **Step 3.** Arduino IDE を開き、新しいファイルを作成してから、次のコードをその新しいファイルにコピーします。
 
 ```cpp
 /**
- * これはGrove - Mech Keycapの例です。
- * キーを押すたびにSK6805 RGB LEDの色が変わります。SK6805はNeoPixel互換のチップです。
+ * This is an exmaple of the Grove - Mech Keycap.
+ * Every press of the key will change the color the SK6805 RGB LED. The SK6805 is a NeoPixel compatible chip.
  * 
- * クレジット:
+ * Credit:
  * Adafruit_NeoPixel - https://github.com/adafruit/Adafruit_NeoPixel/blob/master/COPYING
  */
 
 #include <Adafruit_NeoPixel.h>
 
-#define BUTTON_PIN   2    // ボタンに接続されたデジタルIOピン。このピンはプルアップ抵抗で駆動されるため、
-                          // スイッチは一時的にピンをグランドに引き下げます。高 -> 低の変化でボタン押下ロジックが実行されます。
+#define BUTTON_PIN   2    // Digital IO pin connected to the button.  This will be
+                          // driven with a pull-up resistor so the switch should
+                          // pull the pin to ground momentarily.  On a high -> low
+                          // transition the button press logic will execute.
 
-#define PIXEL_PIN    3    // NeoPixelsに接続されたデジタルIOピン。
+#define PIXEL_PIN    3    // Digital IO pin connected to the NeoPixels.
 
 #define PIXEL_COUNT 60
 
-// パラメータ1 = ストリップ内のピクセル数、neopixel stickは8
-// パラメータ2 = ピン番号（ほとんどが有効）
-// パラメータ3 = ピクセルタイプフラグ、必要に応じて加算:
-//   NEO_RGB     ピクセルはRGBビットストリーム用に配線されています
-//   NEO_GRB     ピクセルはGRBビットストリーム用に配線されています（neopixel stickに適しています）
-//   NEO_KHZ400  400 KHzビットストリーム（例: FLORAピクセル）
-//   NEO_KHZ800  800 KHzビットストリーム（例: 高密度LEDストリップ）、neopixel stickに適しています
+// Parameter 1 = number of pixels in strip,  neopixel stick has 8
+// Parameter 2 = pin number (most are valid)
+// Parameter 3 = pixel type flags, add together as needed:
+//   NEO_RGB     Pixels are wired for RGB bitstream
+//   NEO_GRB     Pixels are wired for GRB bitstream, correct for neopixel stick
+//   NEO_KHZ400  400 KHz bitstream (e.g. FLORA pixels)
+//   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip), correct for neopixel stick
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
 bool oldState = LOW;
@@ -174,22 +289,22 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   strip.begin();
   strip.clear();
-  strip.show(); // すべてのピクセルを「オフ」に初期化
+  strip.show(); // Initialize all pixels to 'off'
   Serial.begin(9600); 
 }
 
 void loop()
 {
-  
-  // 現在のボタン状態を取得
+
+  // Get current button state.
   bool newState = digitalRead(BUTTON_PIN);
 
-  // 状態が低から高に変化したか（ボタン押下）を確認
+  // Check if state changed from low to high (button press).
   if (newState == HIGH && oldState == LOW) {
       timecheck = millis(); 
-    // ボタンのデバウンスのための短い遅延
+    // Short delay to debounce button.
     delay(20);
-    // デバウンス後にボタンがまだ低いか確認
+    // Check if button is still low after debounce.
     newState = digitalRead(BUTTON_PIN);
     if (newState == HIGH){
       color_pos+=8;
@@ -221,13 +336,13 @@ void loop()
  }
   }
    }
- 
-  // 最後のボタン状態を古い状態に設定
+
+  // Set the last button state to the old state.
   oldState = newState;
 }
 
-// 0から255の値を入力して色の値を取得
-// 色はr - g - b - rに戻る遷移です
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
 uint32_t Wheel(byte WheelPos) {
   WheelPos = 255 - WheelPos;
   if(WheelPos < 85) {
@@ -243,41 +358,41 @@ uint32_t Wheel(byte WheelPos) {
 
 ```
 
-- **ステップ 4.** デモをアップロードします。コードのアップロード方法がわからない場合は、[コードのアップロード方法](https://wiki.seeedstudio.com/ja/Upload_Code/)をご確認ください。
+- **Step 4.** デモをアップロードします。コードのアップロード方法がわからない場合は、[How to upload code](https://wiki.seeedstudio.com/ja/Upload_Code/) を参照してください。
 
-- **ステップ 5.** Grove-Mech Keycapを押すたびに、LEDの色が変わるのがわかります。ボタンを約2秒間押し続けると、呼吸ライト効果が表示されます。
+- **Step 5.** Grove-Mech Keycap を押すたびに、LED の色が変化します。ボタンを約 2 秒間押し続けると、ブリージングライト効果が表示されます。
 
-### Raspberry Piで遊ぶ
+### Raspberry Pi で遊ぶ
 
 #### ハードウェア
 
-- **ステップ 1.** このプロジェクトで使用するもの:
+- **Step 1**. このプロジェクトで使用するもの：
 
-| Raspberry Pi | Grove Base Hat for RasPi | Grove - Mech Keycap |
-|--------------|---------------------------|---------------------|
-|![画像を入力してください](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![画像を入力してください](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
-|[今すぐ購入](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[今すぐ購入](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Mech Keycap|
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
 
-- **ステップ 2**. Grove Base Hat を Raspberry に接続します。
-- **ステップ 3**. Grove - Mech Keycap を Base Hat の PWM ポート（ポート 12）に接続します。
+- **Step 2**. Grove Base Hat を Raspberry に接続します。
+- **Step 3**. Grove - Mech Keycap を Base Hat の PWM ポート（ポート 12）に接続します。
 
 :::note
-PWM 機能のピンは以下のピン列の値のいずれかを使用し、対応するスロットにデバイスを接続してください。
+pin は PWM 機能用に、以下の値のいずれかを pin 列に指定し、対応するスロットにデバイスを接続してください。
 :::
 
-|ピン|スロット|
+|Pin|Slot|
 |---|---|
 |18|D18|
 |12|PWM|
 
-- **ステップ 4**. Raspberry Pi を USB ケーブルを使用して PC に接続します。
+- **Step 4**. Raspberry Pi を USB ケーブルで PC に接続します。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/Mech_Hat.jpg)
 
 #### ソフトウェア
 
-- **ステップ 1**. [Setting Software](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation) に従って開発環境を設定します。
-- **ステップ 2**. grove.py ライブラリをクローンしてソースファイルをダウンロードします。
+- **Step 1**. 開発環境を構成するには、[Setting Software](https://wiki.seeedstudio.com/ja/Grove_Base_Hat_for_Raspberry_Pi/#installation) に従ってください。
+- **Step 2**. grove.py ライブラリをクローンしてソースファイルをダウンロードします。
 
 ```
 cd ~
@@ -285,7 +400,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **ステップ 3**. 以下のコマンドを実行してコードを実行します。
+- **Step 3**. 以下のコマンドを実行してコードを動かします。
 
 ```
 cd grove.py/grove
@@ -294,7 +409,7 @@ sudo python grove_mech_keycap.py 12
 ```
 
 :::caution
-Unix には「セキュリティモデル」があります。通常のユーザーとしては、いくつかの操作が可能ですが、同じコンピュータ上の他の人のファイルにアクセスすることはできません。また、ユーザーとしてコンピュータが動作を停止する原因を作ることもできません。"/dev/mem" は GPIO を変更する以上の「いたずら」を許可するため、通常のユーザーから保護する必要があります。そのため、このコードを実行するには、コマンドラインで **sudo python grove_mech_keycap.py** を入力する必要があります。
+Unix には「セキュリティモデル」があります。通常のユーザーとして、いろいろな操作はできますが、同じコンピュータ上の他人のファイルにアクセスできてはいけません。また、ユーザーとしてコンピュータの動作を停止させることもできてはいけません。ところが "/dev/mem" を使うと、GPIO を変更するだけではなく、はるかに多くの「いたずら」が可能になります。そのため /dev/mem は一般ユーザーから保護されていなければなりません。したがってこのコードを実行するには、コマンドラインで **sudo python grove_mech_keycap.py** と入力する必要があります。
 :::
 
 以下は grove_mech_keycap.py のコードです。
@@ -307,9 +422,9 @@ from grove.factory import Factory
 
 class GroveKeycap(object):
     def __init__(self, pin):
-        # High = 押された状態
+        # High = pressed
         self.__btn = Factory.getButton("GPIO-HIGH", pin)
-        # 単一の WS2812 LED
+        # single WS2812 LED
         self.__led = Factory.getOneLed("WS2812-PWM", pin + 1)
         self.__on_event = None
         self.__btn.on_event(self, GroveKeycap.__handle_event)
@@ -334,13 +449,13 @@ class GroveKeycap(object):
         event = evt['code']
         if event & Button.EV_SINGLE_CLICK:
             self.__led.light(True)
-            print("LED をオンにします")
+            print("turn on  LED")
         elif event & Button.EV_DOUBLE_CLICK:
             self.__led.blink()
-            print("LED を点滅させます")
+            print("blink    LED")
         elif event & Button.EV_LONG_PRESS:
             self.__led.light(False)
-            print("LED をオフにします")
+            print("turn off LED")
 
 
 Grove = GroveKeycap
@@ -352,11 +467,11 @@ def main():
 
     ledbtn = GroveKeycap(pin)
 
-    # 以下の ''' ペアを削除して実験を開始してください
+    # remove ''' pairs below to begin your experiment
     '''
-    # カスタマイズされたイベントハンドラを定義
+    # define a customized event handle your self
     def cust_on_event(index, event, tm):
-        print("コード {}, 時間 {}".format(event, tm))
+        print("event with code {}, time {}".format(event, tm))
 
     ledbtn.on_event = cust_on_event
     '''
@@ -371,18 +486,18 @@ if __name__ == '__main__':
 ```
 
 :::tip
-すべてが正常に動作すれば、以下の結果が表示されます。キーキャップをシングルクリックすると「LED をオンにします」が表示され、ダブルクリックすると「LED を点滅させます」が表示されます。キーキャップを長押しすると「LED をオフにします」が表示されます。
+すべてがうまくいけば、次の結果が確認できます。キ―キャップをシングルクリックすると「turn on LED」が表示され、ダブルクリックすると「blink LED」が表示されます。長押しすると「turn off LED」が表示されます。
 :::
 
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ sudo python grove_mech_keycap.py 12
 Hat Name = 'Grove Base Hat RPi'
-LED をオンにします
-LED をオンにします
-LED を点滅させます
-LED をオンにします
-LED をオフにします
+turn on  LED
+turn on  LED
+blink    LED
+turn on  LED
+turn off LED
 ^CTraceback (most recent call last):
   File "grove_mech_keycap.py", line 98, in <module>
     main()
@@ -393,7 +508,7 @@ KeyboardInterrupt
 
 ```
 
-このプログラムを終了するには、++ctrl+c++ を押すだけです。
+++ctrl+c++ を押すだけで、このプログラムを終了できます。
 
 ## 回路図オンラインビューア
 
@@ -408,15 +523,15 @@ KeyboardInterrupt
 
 ## プロジェクト
 
-こちらはこの製品の紹介動画です。簡単なデモが含まれており、試してみることができます。
+これはこの製品の紹介ビデオで、簡単なデモを含んでいます。ぜひお試しください。
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

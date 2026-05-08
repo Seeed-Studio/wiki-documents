@@ -1,6 +1,16 @@
 const docList = [
   [
     {
+      "path": "/recamera_udp_face_analysis",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif",
+      "title": "UDP Face Analysis with reCamera",
+      "date": "2026-04-30",
+      "title_cn": "使用 reCamera 进行 UDP 人脸分析",
+      "title_ja": "reCamera を用いた UDP 顔解析",
+      "title_es": "Análisis de Rostros por UDP con reCamera",
+      "title_pt": "Análise de Rosto via UDP com reCamera"
+    },
+    {
       "path": "/respeaker_flex_lekiwi",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
       "title": "LeKiwi Voice Controller",
@@ -9,6 +19,18 @@ const docList = [
       "title_ja": "LeKiwi 音声コントローラ",
       "title_es": "Controlador de voz LeKiwi",
       "title_pt": "Controlador de Voz LeKiwi"
+    }
+  ],
+  [
+    {
+      "path": "/xiao_esp32c5_with_zephyr",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
+      "title": "XIAO ESP32-C5 With Zephyr(RTOS)",
+      "date": "2026-04-28",
+      "title_cn": "XIAO ESP32-C5 与 Zephyr(RTOS)",
+      "title_ja": "XIAO ESP32-C5 と Zephyr(RTOS)",
+      "title_es": "XIAO ESP32-C5 con Zephyr(RTOS)",
+      "title_pt": "XIAO ESP32-C5 com Zephyr(RTOS)"
     },
     {
       "path": "/get_started_with_meshcore_remote_terminal",
@@ -83,8 +105,8 @@ const docList = [
       "date": "2026-04-09",
       "title_cn": "reBot Arm B601-DM入门Lerobot",
       "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Introducción al reBot Arm B601-DM basado en LeRobot y al reBot 102 Leader",
-      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e reBot 102 Leader"
+      "title_es": "Introducción a reBot Arm B601-DM basado en LeRobot y reBot 102 Leader",
+      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader"
     }
   ],
   [
@@ -107,28 +129,6 @@ const docList = [
       "title_ja": "reSpeaker Flex with XIAO ESP32S3",
       "title_es": "reSpeaker Flex con XIAO ESP32S3",
       "title_pt": "reSpeaker Flex com XIAO ESP32S3"
-    }
-  ],
-  [
-    {
-      "path": "/epaper_ee05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EE05",
-      "date": "2026-04-07",
-      "title_cn": "XIAO ePaper Display Board - EE05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EE05 入門ガイド",
-      "title_es": "Introducción a XIAO ePaper Display Board - EE05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EE05"
-    },
-    {
-      "path": "/meshcore_node_map_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg",
-      "title": "MeshCore Node Map",
-      "date": "2026-04-3",
-      "title_cn": "MeshCore 节点地图",
-      "title_ja": "MeshCore Node Map",
-      "title_es": "Mapa de Nodos MeshCore",
-      "title_pt": "Mapa de Nós MeshCore"
     }
   ]
 ];
