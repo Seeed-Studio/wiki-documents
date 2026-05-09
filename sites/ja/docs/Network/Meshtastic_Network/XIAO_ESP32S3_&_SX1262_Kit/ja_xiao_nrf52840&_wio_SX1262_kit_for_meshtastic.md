@@ -66,7 +66,7 @@ XIAO nRF52840 & Wio-SX1262 Kit にはあらかじめ Meshtastic ファームウ�
 **動画による手順説明：**
 
 <div class="video-container">
-<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
