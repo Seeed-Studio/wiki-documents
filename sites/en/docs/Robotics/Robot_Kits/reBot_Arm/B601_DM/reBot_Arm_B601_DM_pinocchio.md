@@ -15,7 +15,7 @@ last_update:
   author: LiuJunjie
 translation:
   skip:
-    - - zh-CN
+    - zh-CN
 createdAt: '2026-03-24'
 updatedAt: '2026-04-29'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_pinocchio_meshcat/
