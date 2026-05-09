@@ -64,6 +64,7 @@ Please `don't use NRF-OTA` to update the firmware, it may cause the device to be
 :::
 
 **Video Instruction:**
+
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

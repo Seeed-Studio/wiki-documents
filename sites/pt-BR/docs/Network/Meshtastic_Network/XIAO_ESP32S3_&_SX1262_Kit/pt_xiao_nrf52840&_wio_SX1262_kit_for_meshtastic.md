@@ -66,7 +66,7 @@ Por favor, `don't use NRF-OTA` para atualizar o firmware, isso pode fazer com qu
 **Instruções em vídeo:**
 
 <div class="video-container">
-<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
