@@ -1,6 +1,6 @@
 ---
 description: This tutorial shows how to set up the ROS2 control workspace for the reBot Arm B601-DM, including arm control, gripper control, trajectory interfaces, gravity compensation, and RViz visualization.
-title: reBot Arm B601-DM ROS2 Integration 
+title: reBot Arm B601-DM ROS2 Integration
 keywords:
   - reBot Arm
   - B601-DM
@@ -19,7 +19,7 @@ translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-04-29'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/
 ---
 

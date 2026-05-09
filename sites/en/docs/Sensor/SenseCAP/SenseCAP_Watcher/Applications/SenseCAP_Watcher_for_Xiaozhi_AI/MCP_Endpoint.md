@@ -22,7 +22,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-22'
-updatedAt: '2025-12-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/mcp_endpoint/
 ---
 
