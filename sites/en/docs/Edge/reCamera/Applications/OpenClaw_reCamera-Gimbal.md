@@ -140,7 +140,7 @@ First, do not connect reCamera Gimbal's power supply, directly connect the Type-
 
 ### 3.2 deployment application
 
-Open the SenseCraft[Application](https://sensecraft.seeed.cc/ai/application), find the project named "OpenClaw & reCamera Gimbal", click "Deploy Application"-"Visit Workspace Via USB", and the workflow you see after deployment should be as shown in the following figure:
+On the SenseCraft AI platform, navigate to **`Applications`** > **`Application Square`** (or open it [directly](https://sensecraft.seeed.cc/ai/application)), find the project named "OpenClaw & reCamera Gimbal", click **`Deploy Application`** > **`Visit Workspace Via USB`**, and the workflow you see after deployment should be as shown in the following figure:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/OpenClaw&Gimbal/openclaw_4.png" /></div>
 

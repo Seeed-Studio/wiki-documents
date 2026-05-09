@@ -1,6 +1,6 @@
 ---
 sidebar_position: 13
-description: Espacio de trabajo de Nvidia Jetson en la plataforma SenseCraft AI
+description: Espacio de trabajo Nvidia Jetson en la plataforma SenseCraft AI
 title: Espacio de trabajo reComputer Jetson
 keywords:
   - Cloud and Chain
@@ -14,16 +14,16 @@ last_update:
   date: 08/22/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2026-03-23'
+updatedAt: '2026-03-20'
 url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/nvidia-jetson-workspace/
 ---
 
 
 ## Introducción
 
-Antes de añadir un dispositivo Jetson al espacio de trabajo, primero instala la aplicación SenseCraft AI en el Jetson.
+Antes de añadir un dispositivo Jetson al espacio de trabajo, primero instala la app SenseCraft AI en el Jetson.
 
-SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dispositivos NVIDIA Jetson Edge AI. Simplemente ejecuta el "Quickstart Script" y se mostrará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un vídeo precargado y un modelo de IA precargado. Si quieres añadir tu propia cámara USB o cámara IP, ¡puedes hacerlo fácilmente con unos pocos clics!
+SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dispositivos Edge AI NVIDIA Jetson. Simplemente ejecuta el "Quickstart Script" y se mostrará una interfaz de usuario interactiva para ver una aplicación de ejemplo con un vídeo precargado y un modelo de IA precargado. Si quieres añadir tu propia cámara USB o cámara IP, ¡puedes hacerlo fácilmente con unos pocos clics!
 
 **Requisitos de hardware**
 
@@ -39,7 +39,7 @@ SenseCraft AI-Jetson es un kit de desarrollo y una plataforma diseñada para dis
 
 **Inicio rápido**<br />
 
-1. Conecta Jetson a una pantalla y enciéndelo<br />
+1. Conecta el Jetson a una pantalla y enciéndelo<br />
 2. Conecta un ratón y un teclado al dispositivo y escribe el siguiente comando en una terminal para ejecutar la aplicación
 
 ```
@@ -52,10 +52,10 @@ bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai
 proporciona el script jetson_clocks para maximizar el rendimiento de Jetson estableciendo una frecuencia máxima estática para los relojes de CPU, GPU y EMC.
 
 - **[Opcional] ¿Ahorrar espacio desinstalando algunos paquetes innecesarios como libreoffice, cambiar el tamaño de la memoria Swap? (/swapfile) [y/n] (por defecto: n): n**<br />
-En caso de memoria insuficiente (especialmente en Jetson Nano), es mejor habilitar swap para garantizar el funcionamiento normal del programa.
+En caso de memoria insuficiente (especialmente en Jetson Nano), es mejor habilitar la Swap para garantizar el funcionamiento normal del programa.
 
 - **[Opcional] ¿Quieres crear o cambiar el tamaño de la memoria Swap? (/swapfile)?**<br />
-Para obtener un mejor rendimiento de Nano, activa Swap.
+Para obtener un mejor rendimiento del Nano, activa la Swap.
 
 - **[Opcional] ¿Usar almacenamiento externo · para guardar el directorio de datos de Docker? (para imágenes y volúmenes de Docker)?**<br />
 
@@ -69,14 +69,14 @@ El programa de edge AI requiere un mínimo de 32G de espacio de almacenamiento p
 
 ### Añadir dispositivo
 
-1. Haz clic en el botón "Add Device" en la página Device Workspace
+1. En la plataforma SenseCraft AI, ve a **`Models`** > **`Workspace`** > **`NVIDIA Jetson`** y haz clic en **`Add Device`**.
 2. Introduce un nombre personalizado para el dispositivo y obtén el código de vinculación desde el dispositivo.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image28.png)
 
 3. Vuelve a la aplicación SenseCraft AI del dispositivo. Haz clic en "Bind to SenseCraft AI platform", y entonces la aplicación mostrará el código de vinculación y el nombre temporal.
 
-- Código de vinculación: introduce el código de vinculación correcto y válido en SenseCraft AI-Model Zoo para finalizar la vinculación del dispositivo.
+- Código de vinculación: introduce el código de vinculación correcto y válido en la plataforma SenseCraft AI para finalizar la vinculación del dispositivo.
 - Nombre temporal: si el código de vinculación está duplicado, entonces debes introducir el nombre temporal correcto.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image29.png)
@@ -140,7 +140,7 @@ Si se han añadido flujos de vídeo al dispositivo, los usuarios pueden ver los 
 
 #### Añadir flujo
 
-Haz clic en "Add Stream" e introduce información de flujo válida, y luego haz clic en el botón "Confirm" para enviar el nuevo flujo al dispositivo.  El dispositivo tarda un tiempo en añadir un nuevo flujo, la información de la plataforma se actualizará más tarde. Consulta la tabla siguiente para obtener información detallada.
+Haz clic en "Add Stream" e introduce información de flujo válida, y luego haz clic en el botón "Confirm" para enviar el nuevo flujo al dispositivo.   El dispositivo tarda un tiempo en añadir un nuevo flujo, la información de la plataforma se actualizará más tarde. Consulta la tabla siguiente para obtener información detallada.
 
 :::note
 
@@ -152,7 +152,7 @@ El dispositivo debe estar en línea para añadir un nuevo flujo
 | --- | --- |
 | **Nombre del flujo** | 1 Nombre personalizado para este flujo.<br />2 No puede estar vacío |
 | **Tipo de vídeo** | 1 Cámara IP: acceder a una cámara IP, es necesario introducir una URL rtsp válida<br />2 Cámara USB: conecta la cámara USB al dispositivo, reconoce automáticamente el USB y luego selecciona la cámara USB correcta en la ruta de vídeo. |
-| **Ruta de vídeo** | Ruta de vídeo, el formato lo decide "Video Type", si es incorrecto, se utilizará el vídeo por defecto. |
+| **Ruta de vídeo** | Ruta de vídeo, el formato lo decide "Video Type"; si es incorrecto, se utilizará el vídeo por defecto. |
 | **Modelo de IA del dispositivo** | 1 Selecciona un modelo de IA que ya se haya descargado en el dispositivo<br />2 Si no hay ningún modelo de IA en tu dispositivo, ve a la página AI Models para descargar el modelo en tu dispositivo. |
 | **Umbral de confianza** | 1 Umbral de confianza de objeto para la detección.<br />2 Formato: float [0, 1] |
 | **Umbral de IoU** | 1 IoU se utiliza para evaluar la precisión de los cuadros delimitadores predichos en comparación con los cuadros delimitadores reales2 Formato: float [0, 1] |
@@ -160,7 +160,7 @@ El dispositivo debe estar en línea para añadir un nuevo flujo
 | **Calidad** | 1 Calidad del flujo de salida.  Por defecto: 50<br />2 Formato: int [0,100] |
 | **Detecciones máximas** | 1 número máximo de detecciones por imagen. Por defecto:3002 Formato: int [0,1000] |
 | **Velocidad de fotogramas en pantalla** | 1 Si se muestra la velocidad de fotogramas del flujo<br />2 Formato: Bool [True,False]<br />● True: mostrar FPS<br />● False: no mostrar FPS |
-| **Reloj en pantalla** | 1 Si se muestra la hora<br />2 Formato: Bool [True,False]<br />● True: mostrar la hora<br />● False: no mostrar la hora |
+| **Mostrar reloj** | 1 Si se muestra la hora<br />2 Formato: Bool [True,False]<br />● True: mostrar hora<br />● False: no mostrar hora |
 
 #### Detalle del flujo
 
@@ -170,7 +170,7 @@ Haz clic en el icono "Eye" del flujo, verás la información detallada del flujo
 
 #### Editar flujo
 
-Haz clic en el icono "Edit" del flujo, los usuarios pueden editar todas las configuraciones del flujo y hacer clic en el botón "Confirm" para enviar la información del flujo modificada al dispositivo.  El dispositivo tarda un tiempo en actualizar la configuración del flujo, la información de la plataforma se actualizará más tarde
+Haz clic en el icono "Edit" del flujo, los usuarios pueden editar todas las configuraciones del flujo y hacer clic en el botón "Confirm" para enviar la información de flujo modificada al dispositivo.  El dispositivo tarda un tiempo en actualizar la configuración del flujo, la información de la plataforma se actualizará más tarde
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image37.png)
 

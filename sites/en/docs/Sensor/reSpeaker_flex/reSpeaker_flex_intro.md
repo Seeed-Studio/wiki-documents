@@ -19,13 +19,13 @@ url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 The reSpeaker Flex is a modular, split-architecture voice processing system built around the XMOS XVF3800 processor, designed specifically for robots and intelligent interaction terminals. Unlike conventional all-in-one mic arrays, the Flex separates the core processing board from the microphone array board the two connected via a flexible FPC ribbon cable allowing the array to be embedded at any physical position within a product enclosure while keeping the processing electronics elsewhere.
 The system supports two interchangeable microphone array configurations: a **circular 4-mic array** for omnidirectional 360° capture, and a **linear 4-mic array** for directional front-facing pickup with rear suppression. Both boards connect to the same core board through a standardized 24-pin FPC interface, and the system operates in either USB (UAC 2.0 plug-and-play) or I2S mode for embedded integration. An optional XIAO ESP32S3 module can be soldered onto the core board for wireless connectivity and expanded control.
 
-### Circular mic Series 
+### Circular mic Series
 
 <table align="center">
   <tr>
     <th>reSpeaker Flex XVF3800 Circular </th>
     <th>reSpeaker Flex XVF3800 Circular with XIAO ESP32S3</th>
-    
+
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -49,15 +49,13 @@ The system supports two interchangeable microphone array configurations: a **cir
   </tr>
 </table>
 
-
-
-### Linear mic Series 
+### Linear mic Series
 
 <table align="center">
   <tr>
     <th>reSpeaker Flex XVF3800 Linear</th>
     <th>reSpeaker Flex XVF3800 Linear with XIAO ESP32S3</th>
-    
+
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -81,7 +79,7 @@ The system supports two interchangeable microphone array configurations: a **cir
   </tr>
 </table>
 
-## Features 
+## Features
 
 - **Split modular design**: Core board and microphone array board are physically separate, connected via FPC ribbon cable for flexible placement in any product chassis
 
@@ -101,7 +99,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 
 - **Python SDK**: Adjustable recording format, volume, algorithm parameters, and channel routing via Python
 
-## Main Components 
+## Main Components
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main_noxiao.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -126,11 +124,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 | **XIAO ESP32S3** | Supports soldering XIAO ESP32S3 when used as the host device |
 | **XIAO ESP32S3 GPIO** | Remaining GPIO can be used for IO and peripheral expansion |
 
-
-
-
-
-### Circular Array Board 
+### Circular Array Board
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_doa.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -140,9 +134,6 @@ The system supports two interchangeable microphone array configurations: a **cir
 | **Pickup Pattern** | 360° omnidirectional audio capture |
 | **Interface** | FPC connector to the core board |
 | **Mounting** | 3 × M3 mounting holes for enclosure or housing attachment |
-
-
-
 
 ### Linear Array Board
 
@@ -155,8 +146,7 @@ The system supports two interchangeable microphone array configurations: a **cir
 | **Interface** | FPC connector; cable can be routed from the side or rear |
 | **Mounting** | 2 × M3 mounting holes |
 
-
-### XIAO ESP32S3 Support 
+### XIAO ESP32S3 Support
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>
 
@@ -170,16 +160,13 @@ When the XIAO is fitted, the following connections are wired between it and the 
 - **RST line** — XIAO can assert a hardware reset on the XVF3800 via a dedicated IO pin
 - **Remaining XIAO IO** — brought out to labelled pin headers/pads for user expansion
 
-
-
-### Pin Header 
+### Pin Header
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_1.png" alt="pir" width={600} height="auto" /></p>
 
-
-### 24 FPC cable 
+### 24 FPC cable
 
 The FPC mic array interface is a 24-pin, 0.5mm pitch connector with a locking latch, and the 20cm FPC ribbon cable included in the box is keyed to this connector.
 
@@ -214,44 +201,45 @@ The FPC mic array interface is a 24-pin, 0.5mm pitch connector with a locking la
 
 ## Getting Started
 
-### Hardware Preparation 
+### Hardware Preparation
 
-- USB Type-c Cable 
-- Host Computer or Raspberry Pi 
+- USB Type-c Cable
+- Host Computer or Raspberry Pi
 
-### Software Preparation 
+### Software Preparation
 
-### Out of Box Usage 
+### Out of Box Usage
 
-#### Reset 
+#### Reset
 
 The reset (RST) button provides a hardware reset for the reSpeaker Flex when pressed, it restarts the chip and reinitializes the system from the very beginning, just like a full power cycle.
 
-#### Speaker connection 
+#### Speaker connection
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/speaker-connection .jpg" alt="pir" width={600} height="auto" /></p>
 
 Here you can see how to connect speakers using either the 3.5mm AUX headphone jack or the onboard JST speaker interface, depending on your audio output preference.
 
-#### Safe Mode 
+#### Safe Mode
 
 **Safe Mode** is a special recovery mode on the **reSpeaker Flex** that allows you to flash firmware via **USB DFU** or I2C for devices like the Raspberry Pi and **ESP32**.
 
 If you've previously flashed the **I2S firmware** and want to switch back to the **USB firmware**, you can enter **Safe Mode** and reflash the USB firmware using **USB DFU**.
 
 :::note
+
 - USB firmware
-    - Supports USB DFU only.
-    - You can update the device through a USB connection.
-    - It does not support I2C DFU.
+  - Supports USB DFU only.
+  - You can update the device through a USB connection.
+  - It does not support I2C DFU.
 - I2S firmware
-    - Supports I2C DFU.
-    - Allows firmware updates through the I2C interface.
-    - It does not support USB DFU.
+  - Supports I2C DFU.
+  - Allows firmware updates through the I2C interface.
+  - It does not support USB DFU.
 - Safe Mode firmware
-    - Stored in the Factory partition.
-    - Supports both USB DFU and I2C DFU.
-    - This is the most flexible recovery firmware.
+  - Stored in the Factory partition.
+  - Supports both USB DFU and I2C DFU.
+  - This is the most flexible recovery firmware.
 
 :::
 
@@ -261,8 +249,7 @@ If you've previously flashed the **I2S firmware** and want to switch back to the
 - You need to **re-flash new firmware**, but the current firmware is **not responding**.
 - You **accidentally flashed the wrong firmware** and want to recover the device.
 
-
- **How to Enter Safe Mode** 
+ **How to Enter Safe Mode**
 
 - **Power off** the device completely.
 - **Press and hold the Boot button**.
@@ -270,15 +257,13 @@ If you've previously flashed the **I2S firmware** and want to switch back to the
 - The **red LED will start blinking**, confirming that the device has entered **Safe Mode.**
 Now the device is running the **Safe Mode firmware stored in the Factory partition.**
 
+### Update firmware
 
-### Update firmware 
+Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the Github [Link](https://github.com/respeaker/reSpeaker_Flex)
 
-Three firmware versions are available in the official GitHub repository. You can choose and flash the appropriate firmware depending on your application requirements. For more details and downloads, please refer to the Github [Link](https://github.com/respeaker/reSpeaker_Flex) 
-
-:::note 
+:::note
 Please make sure that you will need to download whole repository.
 :::
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -321,7 +306,6 @@ Connect the reSpeaker Flex to your PC via the USB cable. Note that you need to u
 </Tabs>
 
 ### Install DFU Util
-
 
 `dfu-util` is a command line tool for Device Firmware Upgrade via USB.
 
@@ -428,22 +412,19 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
   </TabItem>
 </Tabs>
 
-### Flash Firmware 
+### Flash Firmware
 
 Download the complete firmware repository from GitHub here reSpeaker Flex XVF 3800
 
 - Run the following command to flash the firmware
 
-    - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+  - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 - On Linux, run it with sudo
 
-    - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+  - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
-
-
-## Record and playback with USB Firmware 
-
+## Record and playback with USB Firmware
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -579,6 +560,13 @@ Wait for the installation to complete. A new Pi-Apps icon will appear in your me
 </TabItem>
 </Tabs>
 
+## Resources
+
+[reSpeaker Flex XVF3800 Circular step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+
+[reSpeaker Flex XVF3800 Linear step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+
+[reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 ## Tech Support & Product Discussion
 
@@ -593,6 +581,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

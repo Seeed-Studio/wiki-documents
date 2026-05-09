@@ -1,6 +1,6 @@
 ---
 description: Raspberry Pi、XIAO ESP32、ReSpeaker Lite、および音声埋め込みを使用した音声制御 Kiwi ドライブロボット。ハンズフリーでインテリジェントなロボット制御を実現します。
-title: LeKiwi 音声コントローラ
+title: reSpeaker Flex で LeKiwi ロボットに音声インタラクションを追加
 keywords:
   - reSpeaker flex
   - LeKiwi
@@ -18,11 +18,10 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 
 
 ## 概要
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
 3 輪 Kiwi ドライブロボットを音声で操作しましょう！このプロジェクトでは、Seeed Studio XIAO ESP32（モータコントローラ）と Raspberry Pi（音声処理ブレイン）を組み合わせ、reSpeaker Flex による高品質な音声取得と Voice Embeddings による、よりスマートでパーソナライズされた音声インタラクションを実現します。自然言語コマンドを使って、ロボットの走行、操舵、制御を完全ハンズフリーで行うことができ、精度と応答性も向上します。
-
-
 
 ## 必要なハードウェア
 
@@ -69,7 +68,6 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 
 - [**Groq**](https://groq.com/) アカウント：無料プランで十分に始められます
 
-
 ## 動作の仕組み
 
 ```
@@ -82,6 +80,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 4. **LLaMA 3** がロボットが取るべき動作を判断します
 5. **Groq Orpheus TTS** が応答を音声で読み上げます
 6. シリアルコマンドが ESP32 に送信され、モータを駆動します
+
 ---
 
 ## XIAO ESP32（モータコントローラ）の準備
@@ -109,17 +108,14 @@ ESP32 は Arduino スケッチを実行し、**Kiwi ドライブの運動学**�
 完了する必要があるのは**物理的な組み立て**だけです。このプロジェクトでは別の構成を使用するため、LeRobot GitHub リポジトリのクローンに関する手順はすべてスキップしてください。
 :::
 
-
 ### ステップ 3 — Arduino スケッチを書き込む
-
-
 
 スケッチ（`lekiwi_motor_control.ino`）は次のことを行います：
 
 - 3 つのサーボすべてを **位置モード** で初期化し、センタリングしてから **ホイール（連続回転）モード** に切り替えます
 - USB シリアルポートで 1 文字のコマンドを待ち受けます
 - **Kiwi ドライブの運動学**を使用して、各車輪の正しい速度を計算します
-- **ナッジモード**（短いバースト後に自動停止）のみをサポートします 
+- **ナッジモード**（短いバースト後に自動停止）のみをサポートします
 **シリアルコマンドリファレンス：**
 
 | キー | 動作 |
@@ -467,12 +463,13 @@ void loop() {
 
 </details>
 
- ## Raspberry Pi（Voice Brain）の準備
+## Raspberry Pi（Voice Brain）の準備
 
 ### ステップ 1 — Groq API キーを取得する
 
 1. [console.groq.com](https://console.groq.com/) に登録します
 2. 新しい API キーを作成してコピーします — ステップ 4 で必要になります
+
 ### ステップ 2 — このリポジトリをクローンする
 
 ```bash

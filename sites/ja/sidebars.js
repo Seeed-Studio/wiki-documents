@@ -1298,6 +1298,7 @@ const sidebars = {
               label: 'RTOS',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_FreeRTOS',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_Zephyr',
               ],
             },
           ],
@@ -4619,7 +4620,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Isaag Lab',
+          label: 'Isaac Lab',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',

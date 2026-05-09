@@ -17,38 +17,39 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-05-07'
-updatedAt: '2026-03-16'
+updatedAt: '2025-10-17'
 url: https://wiki.seeedstudio.com/pt-br/watcher_web_control_panel/
 ---
 
 # Guia do Painel de Controle Web Beta
 
-## Visão Geral
+## Visão geral
 
 O Painel de Controle Web (Beta) do SenseCAP Watcher fornece uma interface baseada na web para gerenciar seu dispositivo Watcher e configurar as definições do Agent. Esta versão beta inclui recursos essenciais para gerenciamento do dispositivo e personalização do Agent.
 
 O vídeo a seguir serve como um tutorial passo a passo sobre como configurar seu dispositivo usando o Painel de Controle Web.
 <div class="video-container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/6UDVsv953Tw?si=0yD96_pQq1cMjjAG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
-## Recursos Atuais
+## Recursos atuais
 
 A versão beta do Painel de Controle Web inclui os seguintes recursos principais:
 
-1. Vinculação de Dispositivo
+1. Vinculação de dispositivo
 2. Configuração do Agent
-3. Seleção de Modelo LLM
-4. Gerenciamento de Histórico de Conversas
-5. Exibição de Informações do Dispositivo
+3. Seleção de modelo de LLM
+4. Gerenciamento do histórico de chat
+5. Exibição de informações do dispositivo
 
-## Vinculação de Dispositivo
+## Vinculação de dispositivo
 
-### Processo de Vinculação
-1. Acesse a [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
-2. Para acessar o Painel de Controle, clique em Watcher Agent no canto superior direito da página.
-   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-3. Clique no botão "Bind Device"
+### Processo de vinculação
+1. Acesse o painel de controle do Watcher Agent via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/37) e então clique em **`Watcher Agent`** na barra lateral esquerda.
+
+   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
+
+2. Clique no botão "Bind Device"
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/page1.jpg" style={{width:300, height:'auto'}}/></div> 
-4. Siga as instruções na tela e insira o código de verificação de 6 dígitos exibido no dispositivo
+3. Siga as instruções na tela e insira o código de verificação de 6 dígitos exibido no dispositivo
 
 
 
@@ -58,10 +59,10 @@ A versão beta do Painel de Controle Web inclui os seguintes recursos principais
 
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
 
-### Modelo de Papel
+### Modelo de função
 - Fornecemos modelos predefinidos; você também pode criar seus próprios modelos ou modificar os modelos predefinidos.
 
-### Apelido do Assistente
+### Apelido do assistente
 - Personalize o nome do seu Agent.
 :::note
 Este recurso não altera a palavra de ativação do Agent. 
@@ -70,42 +71,42 @@ A palavra de ativação padrão é “Jarvis”.
 :::
 
 
-### Voz do Personagem
+### Voz do personagem
 - Selecione vozes diferentes
 
-### Introdução/Prompt do Papel
-1. Escolha entre modelos de papel predefinidos
-2. Crie modelos de papel personalizados
+### Introdução/Prompt da função
+1. Escolha entre modelos de função predefinidos
+2. Crie modelos de função personalizados
 3. Modifique modelos existentes
 :::note
-O Apelido do Assistente definido acima só funcionará se `assistant nickname` for adicionado à Introdução do Papel.
-Para obter a hora atual, é necessário adicionar: __DATE__
+O Apelido do assistente definido acima só funcionará se `assistant nickname` for adicionado à Introdução da função.
+Para obter a hora atual, você precisa adicionar: __DATE__
 :::
 
 
-### Visualização do Histórico
-- Acesse os registros de conversas
-- Visualize mensagens individuais
+### Visualização do histórico
+- Acesse os registros de chat
+- Veja mensagens individuais
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/history%20del.jpg" style={{width:600, height:'auto'}}/></div> 
 
-## Informações do Dispositivo
+## Informações do dispositivo
 
    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/device%20list.jpg" style={{width:800, height:'auto'}}/></div> 
 
 O painel de controle exibe informações essenciais do dispositivo, incluindo:
 
-- Nome da Placa
+- Nome da placa
 - Endereço MAC
 - Versão do APP
-- Último Horário de Conexão
-- Interruptor de Atualização Automática
+- Último horário de conexão
+- Interruptor de atualização automática
 - Operação
 
 :::note
-Esta é uma versão beta do Painel de Controle Web e os recursos podem ser atualizados ou alterados em versões futuras. Verifique regularmente se há atualizações para obter a funcionalidade mais recente.
+Esta é uma versão beta do Painel de Controle Web, e os recursos podem ser atualizados ou alterados em versões futuras. Verifique regularmente se há atualizações para obter a funcionalidade mais recente.
 :::
 
-## Suporte Técnico
+## Suporte técnico
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
