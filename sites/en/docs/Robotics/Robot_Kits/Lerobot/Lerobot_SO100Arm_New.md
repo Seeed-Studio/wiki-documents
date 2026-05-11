@@ -612,6 +612,7 @@ lerobot-calibrate \
 :::tip
 
 If you encounter the error “Could not connect on port '/dev/ttyACM0'. Make sure you are using the correct port., Try running lerobot-find-port” while calibrating the Leader or Follower arms, you need to grant the necessary permissions by running:`sudo chmod 666 /dev/ttyACM*`
+:::
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
