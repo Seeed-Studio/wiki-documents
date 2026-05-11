@@ -13,12 +13,12 @@ const docList = [
     {
       "path": "/respeaker_flex_lekiwi",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
-      "title": "LeKiwi Voice Controller",
+      "title": "Add Voice Interaction to Your LeKiwi Robot with reSpeaker Flex",
       "date": "2026-04-28",
-      "title_cn": "LeKiwi 语音控制器",
-      "title_ja": "LeKiwi 音声コントローラ",
-      "title_es": "Controlador de voz LeKiwi",
-      "title_pt": "Controlador de Voz LeKiwi"
+      "title_cn": "使用 reSpeaker Flex 为你的 LeKiwi 机器人添加语音交互",
+      "title_ja": "reSpeaker Flex で LeKiwi ロボットに音声インタラクションを追加",
+      "title_es": "Añade interacción por voz a tu robot LeKiwi con reSpeaker Flex",
+      "title_pt": "Adicione interação por voz ao seu robô LeKiwi com o reSpeaker Flex"
     }
   ],
   [

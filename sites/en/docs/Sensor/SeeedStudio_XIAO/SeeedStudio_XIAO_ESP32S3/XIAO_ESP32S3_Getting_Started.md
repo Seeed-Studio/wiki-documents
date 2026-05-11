@@ -12,7 +12,7 @@ last_update:
   date: 05/08/2026
   author: Spencer
 createdAt: '2023-03-22'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-08'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
 ---
 import Tabs from '@theme/Tabs';

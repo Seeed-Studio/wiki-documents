@@ -9,7 +9,7 @@ last_update:
   date: 12/11/2025
   author: Michelle Huang
 createdAt: '2025-03-13'
-updatedAt: '2026-04-20'
+updatedAt: '2026-05-09'
 url: https://wiki.seeedstudio.com/xiao_nrf52840&_wio_SX1262_kit_for_meshtastic/
 ---
 
@@ -66,7 +66,7 @@ Please `don't use NRF-OTA` to update the firmware, it may cause the device to be
 **Video Instruction:**
 
 <div class="video-container">
-<iframe width="100%" height="500" src="https://youtu.be/54Ep36bkHOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
