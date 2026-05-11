@@ -888,11 +888,32 @@ pip install -e ".[orbbec]"
 
 ### 3. Grant Camera Permissions
 
+
 ```bash
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. Detect Cameras
+### 4. USBFS Cache Size Configuration
+
+By default, the USBFS cache size is 16 MB. This value is insufficient for high-resolution images, multiple data streams, and multi-device scenarios. Users can increase the cache size up to 128 MB.
+
+Check the USBFS Cache Size
+```bash
+cat /sys/module/usbcore/parameters/usbfs_memory_mb
+```
+
+Temporarily Increase USBFS Cache Size
+```bash
+sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'
+```
+
+:::tip
+
+If you still encounter the `timeout error TimeoutError: Timed out waiting for frame from <lerobot.cameras.orbbec.camera_orbbec.OrbbecDepthCamera object at 0x7ba4ba130910.........>`, simply reconnect the camera.
+
+:::
+
+### 5. Detect Cameras
 
 ```bash
 lerobot-find-cameras orbbec
@@ -907,7 +928,7 @@ This step will output:
 
 Enter the retrieved `Serial Number` into the `serial_number_or_name` parameter of the camera command shown below.
 
-### 5. Orbbec Example
+### 6. Orbbec Example
 
 Single Orbbec test:
 
@@ -944,13 +965,61 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. Parameter Notes
+Single Orbbec Camera Test + Standard Camera Test:
+
+```bash
+  lerobot-teleoperate \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras='{
+      orbbec_color: {
+        type: orbbec_color,
+        serial_number_or_name: "CP9JA530003A",
+        width: 640,
+        height: 480,
+        fps: 30,
+        color_mode: rgb,
+        rotation: 0,
+        warmup_s: 1
+      },
+      orbbec_depth: {
+        type: orbbec_depth,
+        serial_number_or_name: "CP9JA530003A",
+        width: 640,
+        height: 400,
+        fps: 30,
+        depth_alpha: 0.2,
+        rotation: 0,
+        warmup_s: 5
+      },
+      side: {
+      type: opencv,
+      index_or_path: 8,
+      width: 640,
+      height: 480,
+      fps: 30,
+      fourcc: "MJPG"} 
+    }' \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM1 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true
+```
+
+:::tip
+When using a single Orbbec camera together with a standard camera, it is recommended to plug in the Orbbec camera first, followed by the standard camera.
+
+When running the lerobot-find-cameras opencv command to detect camera IDs, you will find that the Orbbec camera occupies 3 consecutive camera numbers. Therefore, it is advisable to plug in the standard camera last so that its number is assigned at the end.
+:::
+
+### 7. Parameter Notes
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-### 7. Common Issues
+### 8. Common Issues
 
 If you see the following error:
 
@@ -1622,6 +1691,16 @@ Recommended order:
 pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 ```
 
+:::tip
+
+If you are using an RTX 50 Series GPU, the following requirements must be met: Python=3.10, CUDA=12.8, Torch=2.7.1
+
+The download command is as follows:
+```bash
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+```
+:::
+
 3. Install the build dependencies for `flash-attn`, then install `flash-attn` itself.
 
 ```bash
@@ -1629,6 +1708,16 @@ pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
 python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
 ```
+
+:::tip
+
+If you are using an RTX 50 Series GPU, the following requirement must be met: flash_attn=2.8.0
+
+The download command is as follows:
+```bash
+pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
+```
+:::
 
 4. Install LeRobot with the `groot` optional dependencies (`lerobot[groot]`).
 
