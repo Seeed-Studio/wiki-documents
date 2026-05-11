@@ -16,6 +16,9 @@ last_update:
   author: dimo
 aliases:
   - /epaper_breakout_board_with_oepl
+createdAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/EN04_opendisplay/
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';

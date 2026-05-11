@@ -10,7 +10,7 @@ last_update:
   date: 2/22/2023
   author: jianjing Huang
 createdAt: '2023-02-28'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Mech_Keycap/
 ---
 <!-- ---
@@ -28,13 +28,13 @@ tags:
 
 O Grove-Mech keycap é um switch mecânico com um LED embutido. O LED RGB de 255 cores completas torna simples e fácil mostrar o estado do seu switch. Este keycap é muito confiável, com vida útil operacional de 20.000.000 de pressionamentos.
 
-Você achará que este é um módulo interessante e estável para fazer projetos ou produtos realmente divertidos. Na verdade, você pode até fazer um teclado mecânico usando vários Grove-Mech keycaps.
+Você vai perceber que este é um módulo interessante e estável para fazer projetos ou produtos realmente divertidos. Na verdade, você pode até fazer um teclado mecânico usando vários Grove-Mech keycaps.
 
 :::tip
-20.000.000 ciclos de operação devem ser executados continuamente a uma taxa de 300 ciclos por minuto sem carga.
+20.000.000 ciclos de operação devem ser realizados continuamente a uma taxa de 300 ciclos por minuto sem carga.
 :::
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" style={{maxWidth: '300px', height: 'auto'}} alt="Adquira agora" /></a></p>
 
 ## Recursos
 
@@ -49,7 +49,7 @@ Você achará que este é um módulo interessante e estável para fazer projetos
 |Tensão de trabalho|3v-5v|
 |Resistência de isolação|100MΩ mín.|
 |Resistência de contato|200 mΩ máx.|
-|Vida útil de operação sem carga|20.000.000|
+|Vida útil operacional sem carga|20.000.000|
 
 ## Aplicações
 
@@ -68,11 +68,11 @@ Você achará que este é um módulo interessante e estável para fazer projetos
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/schametic.jpg)
 
-O K1 está ligado ao botão, quando a tecla está aberta, o **SIG1** será puxado para baixo por R2, então a saída de **SIG1** deve ser baixa.
-Assim que o botão for pressionado, o K1 será fechado e o **SIG1** será conectado ao **VCC**, então a saída de **SIG1** se tornará alta.
+O K1 está ligado ao botão; quando a tecla está aberta, o **SIG1** será puxado para baixo por R2, então a saída de **SIG1** deve ser baixa.
+Quando o botão é pressionado, o K1 será fechado e o **SIG1** será conectado ao **VCC**, então a saída de **SIG1** se torna alta.
 
 :::note
-Nesta seção mostramos apenas parte do esquemático, para o documento completo consulte [Resources](/pt-br/#Recursos)
+Nesta seção mostramos apenas parte do esquemático; para o documento completo, consulte [Resources](/pt-br/#Recursos)
 :::
 
 ## Plataformas compatíveis
@@ -85,11 +85,126 @@ Nesta seção mostramos apenas parte do esquemático, para o documento completo 
 As plataformas mencionadas acima como suportadas são uma indicação da compatibilidade de software ou teórica do módulo. Na maioria dos casos, fornecemos apenas biblioteca de software ou exemplos de código para a plataforma Arduino. Não é possível fornecer biblioteca de software / código de demonstração para todas as possíveis plataformas de MCU. Portanto, os usuários precisam escrever sua própria biblioteca de software.
 :::
 
-## Primeiros Passos
+## Introdução
 
 :::note
 Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortemente que veja [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/) antes de começar.
 :::
+### Brincar com PlatformIO
+
+**Hardware**
+
+
+<table align="center">
+  <tr>
+    <th>XIAO nRF52840 Sense</th>
+    <th>Seeed Studio Grove Base para XIAO</th>
+    <th>Grove-Mech keycap</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840sence.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+  </tr>
+</table>
+
+
+- **Passo 1.** Conecte os pinos de sinal do Grove-Mech keycap: `S1` -> `D1`, `S2` -> `D2` no Seeed Studio Grove Base para XIAO.  (VCC/GND como de costume)
+- **Passo 2.** Conecte o Grove Base ao XIAO nRF52840 Sense.
+- **Passo 3.** Conecte o XIAO ao seu PC via USB.
+
+**Software** 
+
+- **Passo 1.** Instale a biblioteca `Adafruit_NeoPixel` no PlatformIO.
+- **Passo 2.** Crie um novo sketch / projeto e cole o código abaixo.
+- **Passo 3.** Faça o upload para o XIAO e abra o Serial Monitor (baud 115200) para ver o status.
+
+**O que ele faz** 
+
+- Cada pressão única do Grove-Mech keycap percorre a lista de cores do LED RGB embutido.
+
+Código 
+```cpp
+/*
+  Grove-Mech Keycap demo for XIAO (nRF52840 Sense)
+  Wiring: S1 -> D1 (button), S2 -> D2 (pixel data)
+*/
+#include <Adafruit_NeoPixel.h>
+
+#define BUTTON_PIN 1   // D1
+#define PIXEL_PIN  2   // D2
+#define PIXEL_COUNT 1
+
+Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+uint8_t colorPos = 0;
+bool lastState = LOW;
+unsigned long lastDebounce = 0;
+const unsigned long debounceDelay = 50;
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  strip.begin();
+  strip.show();
+  Serial.begin(115200);
+  Serial.println("Grove-Mech Keycap: ready");
+}
+
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void cycleColor() {
+  colorPos += 32; // step size
+  strip.setPixelColor(0, Wheel(colorPos));
+  strip.show();
+  Serial.print("Color pos: "); Serial.println(colorPos);
+}
+
+void loop() {
+  bool reading = digitalRead(BUTTON_PIN) == LOW ? true : false; // pressed = LOW for INPUT_PULLUP
+
+  if (reading != lastState) {
+    lastDebounce = millis();
+  }
+
+  if ((millis() - lastDebounce) > debounceDelay) {
+    // stable state
+    static bool pressed = false;
+    if (reading && !pressed) {
+      // button pressed (edge)
+      cycleColor();
+      pressed = true;
+    } else if (!reading) {
+      pressed = false;
+    }
+  }
+
+  lastState = reading;
+}
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/xiao_capkey.gif" style={{width:400, height:'auto'}}/></div>
+
+:::note
+ Se a sua fiação ou mapeamento de pinos for diferente, altere `BUTTON_PIN` e `PIXEL_PIN` de acordo.
+:::
+
+
 
 ### Brincar com Arduino
 
@@ -103,16 +218,16 @@ Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortement
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Adquira agora</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">Adquira agora</a>|
 
 :::note
-**1** Conecte o cabo USB com cuidado, caso contrário você poderá danificar a porta. Use o cabo USB com 4 fios internos, o cabo de 2 fios não consegue transferir dados. Se você não tiver certeza sobre o cabo que possui, pode clicar [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar.
+**1** Conecte o cabo USB com cuidado, caso contrário você pode danificar a porta. Use o cabo USB com 4 fios internos; o cabo de 2 fios não consegue transferir dados. Se você não tiver certeza sobre o cabo que possui, pode clicar [aqui](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar.
 
-**2** Cada módulo Grove vem com um cabo Grove quando você compra. Caso você perca o cabo Grove, pode clicar [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) para comprar.
+**2** Cada módulo Grove vem com um cabo Grove quando você compra. Caso você perca o cabo Grove, pode clicar [aqui](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) para comprar.
 :::
 
-- **Step 1.** Conecte o Grove-Mech keycap à porta **D2** do Grove-Base Shield.
+- **Passo 1.** Conecte o Grove-Mech keycap à porta **D2** do Grove-Base Shield.
 
-- **Step 2.** Conecte o Grove - Base Shield ao Seeeduino.
+- **Passo 2.** Conecte o Grove - Base Shield ao Seeeduino.
 
-- **Step 3.** Conecte o Seeeduino ao PC por meio de um cabo USB.
+- **Passo 3.** Conecte o Seeeduino ao PC por meio de um cabo USB.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/light1400-1050%C2%B7.jpg)
 
@@ -122,18 +237,18 @@ Se não tivermos o Grove Base Shield, também podemos conectar o Grove-Mech keyc
 
 | Seeeduino     | Grove-Mech keycap       |
 |---------------|-------------------------|
-| 5V            | Red                     |
-| GND           | Black                   |
-| D3         | White                   |
-| D2            | Yellow                  |
+| 5V            | Vermelho                |
+| GND           | Preto                   |
+| D3         | Branco                  |
+| D2            | Amarelo                 |
 
 #### Software
 
-- **Step 1.** Baixe a biblioteca [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip) do Github.
+- **Passo 1.** Baixe a biblioteca [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip) do Github.
 
-- **Step 2.** Consulte [How to install library](https://wiki.seeedstudio.com/pt-br/How_to_install_Arduino_Library) para instalar a biblioteca para Arduino.
+- **Passo 2.** Consulte [How to install library](https://wiki.seeedstudio.com/pt-br/How_to_install_Arduino_Library) para instalar a biblioteca para Arduino.
 
-- **Step 3.** Abra a IDE do Arduino e crie um novo arquivo, depois copie o código a seguir para o novo arquivo.
+- **Passo 3.** Abra a IDE do Arduino e crie um novo arquivo, depois copie o código a seguir para o novo arquivo.
 
 ```cpp
 /**
@@ -243,17 +358,17 @@ uint32_t Wheel(byte WheelPos) {
 
 ```
 
-- **Step 4.** Envie o demo. Se você não souber como enviar o código, verifique [How to upload code](https://wiki.seeedstudio.com/pt-br/Upload_Code/).
+- **Passo 4.** Faça o upload do demo. Se você não souber como fazer o upload do código, consulte [How to upload code](https://wiki.seeedstudio.com/pt-br/Upload_Code/).
 
-- **Step 5.** Toda vez que você pressionar o Grove-Mech Keycap, verá a cor do LED mudar. Se você pressionar e segurar o botão por cerca de 2 segundos, verá o efeito de luz respiratória.
+- **Passo 5.** Toda vez que você pressionar o Grove-Mech Keycap, verá a cor do LED mudar. Se você pressionar e segurar o botão por cerca de 2 segundos, verá o efeito de luz respiratória.
 
 ### Brincar com Raspberry Pi
 
 #### Hardware
 
-- **Step 1**. Itens usados neste projeto:
+- **Passo 1**. Itens usados neste projeto:
 
-| Raspberry pi | Grove Base Hat for RasPi| Grove - Mech Keycap|
+| Raspberry pi | Grove Base Hat para RasPi| Grove - Mech Keycap|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
 |[Adquira agora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
@@ -294,7 +409,7 @@ sudo python grove_mech_keycap.py 12
 ```
 
 :::caution
-Unix tem um "modelo de segurança". Como usuário normal você pode fazer coisas, mas não deve ser capaz de acessar os arquivos de outras pessoas no mesmo computador. E, como usuário, você não deve ser capaz de fazer o computador parar de funcionar. Agora, "/dev/mem" permite muito, muito mais "travessuras" do que apenas mudar um GPIO. Por isso /dev/mem deve ser protegido contra usuários normais. Assim, para rodar este código, você deve digitar **sudo python grove_mech_keycap.py** na linha de comando
+Unix tem um "modelo de segurança". Como usuário normal você pode fazer coisas, mas não deve conseguir acessar arquivos de outras pessoas no mesmo computador. E, como usuário, você não deve ser capaz de fazer o computador parar de funcionar. Agora, "/dev/mem" permite muito, muito mais "travessuras" do que apenas mudar um GPIO. Por isso /dev/mem deve ser protegido contra usuários normais. Assim, para rodar este código, você deve digitar **sudo python grove_mech_keycap.py** na linha de comando
 :::
 
 A seguir está o código grove_mech_keycap.py.
@@ -371,7 +486,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-Se tudo correr bem, você conseguirá ver o seguinte resultado. Se você clicar uma vez no keycap, verá "turn on LED", se você der um clique duplo no keycap, verá "blink LED". Pressionar o keycap por tempo prolongado mostrará "turn off LED".
+Se tudo correr bem, você poderá ver o seguinte resultado. Se você clicar uma vez no keycap, verá "turn on LED", se você clicar duas vezes no keycap, verá "blink LED". Pressionar e segurar o keycap resultará em "turn off LED".
 :::
 
 ```python
@@ -404,11 +519,11 @@ Você pode sair deste programa simplesmente pressionando ++ctrl+c++.
 
 - **[Zip]** [Arquivo eagle do Grove-Mech Keycap](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Grove-Mech_Keycap_eagle.zip)
 - **[Zip]** [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip)
-- **[PDF]** [Resumo do produto do interruptor](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/DIP_Mech_Key.pdf)
+- **[PDF]** [Resumo do produto do switch](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/DIP_Mech_Key.pdf)
 
 ## Projeto
 
-Este é o vídeo de introdução deste produto, com demonstrações simples; você pode experimentar.
+Este é o vídeo de introdução deste produto, com demos simples, que você pode experimentar.
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

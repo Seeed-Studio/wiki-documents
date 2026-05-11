@@ -13,7 +13,7 @@ last_update:
   date: 04/11/2025
   author: Zibo
 createdAt: '2025-04-14'
-updatedAt: '2025-09-15'
+updatedAt: '2026-05-08'
 url: https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/
 ---
 
@@ -24,14 +24,14 @@ url: https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/
 reComputer  is a powerful and compact intelligent edge box to bring up to 275TOPS modern AI performance to the edge.When you have configured and installed the software and environment necessary for your business on recomputer, and need to replicate the project from another new recomputer, reinstalling the software is not efficient. Therefore, this wiki page will use [reComputer J3011](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html) to introduce how to back up your existing software and environment on the recomputer series, making it convenient for you to restore and transplant it to the new recomputer.
 
 :::note
-Our testing platform is reComputer J3011, JetPack 5.1.3 is provided for reference.
+Our testing platform is reComputer J3011, JetPack 5.1.3 and JetPack 6.2 are provided for reference. Please select the appropriate section based on your JetPack version.
 :::
 
 ## Prerequisite
 
 - Ubuntu Host Computer
 - USB Type-C data transmission cable
-- reComputer J3011 (with JetPack 5.1.3 OS)
+- reComputer J3011 (with JetPack 5.1.3 or JetPack 6.2 OS)
 
 :::info
 Installed and configured necessary software and applications on your reComputer. Ensure these modifications do not impair the device's boot functionality. It's recommended to reboot the device after making changes to confirm stability.
@@ -41,7 +41,9 @@ Like the screenshot above, we installed the jtop software, where we can use thes
 <a id="Recovery"></a>
 :::
 
-## Backing Up the System
+## JetPack 5.1.3
+### Backing Up the System
+
 
 **Step 1.** Setting the device into recovery mode refer to this [wiki page](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode).
 
@@ -108,7 +110,7 @@ During this process, your device may reboot many times like the flashing  proces
 Usually  these are temporary device tree overlay object files; they don't affect the  backup and restore results. But if you made modifications to BSP, you will  need to merge your overlay files.
 :::
 
-## Restoring the System
+### Restoring the System
 
 **Step 1.** Insert a new, empty [SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html) into your reComputer.
 
@@ -136,6 +138,88 @@ Additionally, following cases have been tested for backup and restore:
 - Restore the backup to different SSD.  
 - Restore the backup to same carrier board, with Jetson module in same  batch, different SSDs.
 
+:::
+
+## JetPack 6.2
+### Backing Up the System
+
+For JetPack 6.2 (L4T 36.4.3), the backup process requires downloading the compiled Seeed BSP firmware and compiling the source code before performing the backup.
+
+**Step 1.** Download the compiled Seeed BSP firmware: [L4T-36.4.3](https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/L4T36-4-3_plus.tar)
+
+**Step 2.** Extract the downloaded package and generate the necessary content using the following commands in your PC terminal:
+
+```bash
+sudo tar xpf L4T36-4-3_plus.tar
+# For example: sudo tar xpf L4T36-4-3_plus.tar
+
+cd Linux_for_Tegra/
+sudo ./apply_binaries.sh
+cd ..
+```
+
+**Step 3.** Set up environment variables in the extracted directory (where the tar.gz package is located):
+
+```bash
+export ARCH=arm64 
+export CROSS_COMPILE="$PWD/aarch64--glibc--stable-2022.08-1/bin/aarch64-buildroot-linux-gnu-"
+export PATH="$PWD/aarch64--glibc--stable-2022.08-1/bin:$PATH"
+export INSTALL_MOD_PATH="$PWD/Linux_for_Tegra/rootfs/"
+```
+
+**Step 4.** Navigate to the source directory and compile the source code (this process will take some time):
+
+```bash
+cd Linux_for_Tegra/source
+./nvbuild.sh
+```
+
+**Step 5.** After compilation is complete, copy and install the compiled components:
+
+```bash
+./do_copy.sh
+./nvbuild.sh -i
+```
+
+**Step 6.** The working directory is now prepared. Navigate to the `Linux_for_Tegra/` directory,Setting the device into recovery mode refer to this [wiki page](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode) and execute the backup script:
+
+```bash
+cd ../
+sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b recomputer-orin-j401
+```
+
+:::info
+-b `<target_board>` replace with your device. For JetPack 6.2, the default target board is `recomputer-orin-j401`.
+:::
+
+Wait patiently until it finishes. If all goes well, you will see a success message in the terminal.
+
+:::note
+During this process, your device may reboot many times like the flashing process, you are not recommended to use virtual machines or WSL because it might lose connection and cause the backup/restore process failed.
+:::
+
+### Restoring the System
+
+**Step 1.** Insert a new, empty [SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html) into your reComputer.
+
+**Step 2.** Enter force recovery mode as [previously described.](#Recovery)
+
+**Step 3.** On your host system, navigate to your `Linux_for_Tegra/` directory and execute the restore command on host:
+
+```bash
+sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r recomputer-orin-j401
+```
+
+If all goes well, you will see a success message in the terminal.
+
+**Step 4.** Power up the Jetson device, use the username and password we previously set. And test some software we previously installed. If it worked, then our restore is successful.
+
+:::info
+Additionally, following cases have been tested for backup and restore:
+
+- Restore the backup to original SSD.
+- Restore the backup to different SSD.
+- Restore the backup to same carrier board, with Jetson module in same batch, different SSDs.
 :::
 
 ## Resources

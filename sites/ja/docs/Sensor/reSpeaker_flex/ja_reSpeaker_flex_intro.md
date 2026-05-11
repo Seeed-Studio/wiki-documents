@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジュラー型・分離アーキテクチャの音声処理システムで、ロボットやインテリジェントインタラクション端末向けに特別に設計されています。従来の一体型マイクアレイとは異なり、Flex ではコア処理ボードとマイクアレイボードが分離されており、両者は柔軟な FPC フラットケーブルで接続されます。これにより、マイクアレイを製品筐体内の任意の物理位置に組み込む一方で、処理用エレクトロニクスを別の場所に配置することができます。
 本システムは 2 種類の交換可能なマイクアレイ構成をサポートします。全方位 360° 収音用の**円形 4 マイクアレイ**と、背面方向を抑圧した前方指向性の**線形 4 マイクアレイ**です。どちらのボードも標準化された 24 ピン FPC インターフェースを介して同じコアボードに接続され、システムは USB（UAC 2.0 プラグアンドプレイ）または I2S モードで動作し、組み込み統合に対応します。オプションとして XIAO ESP32S3 モジュールをコアボード上にはんだ付けすることで、ワイヤレス接続と拡張制御機能を追加できます。
 
-### 円形マイクシリーズ 
+### 円形マイクシリーズ
 
 <table align="center">
   <tr>
@@ -49,9 +49,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
   </tr>
 </table>
 
-
-
-### 線形マイクシリーズ 
+### 線形マイクシリーズ
 
 <table align="center">
   <tr>
@@ -81,7 +79,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
   </tr>
 </table>
 
-## 特長 
+## 特長
 
 - **分離型モジュラー設計**：コアボードとマイクアレイボードが物理的に分離されており、FPC フラットケーブルで接続することで、任意の製品シャーシ内に柔軟に配置可能
 
@@ -101,7 +99,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 
 - **Python SDK**：Python 経由で録音フォーマット、音量、アルゴリズムパラメータ、チャンネルルーティングを調整可能
 
-## 主なコンポーネント 
+## 主なコンポーネント
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main_noxiao.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -126,11 +124,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 | **XIAO ESP32S3** | ホストデバイスとして使用する際に XIAO ESP32S3 をはんだ付け可能 |
 | **XIAO ESP32S3 GPIO** | 残りの GPIO は IO および周辺機能拡張に利用可能 |
 
-
-
-
-
-### 円形アレイボード 
+### 円形アレイボード
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_doa.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -140,9 +134,6 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 | **収音パターン** | 360° 全方位の音声収音 |
 | **インターフェース** | コアボードへの FPC コネクタ |
 | **取付** | エンクロージャや筐体への固定用 3 × M3 取付穴 |
-
-
-
 
 ### 線形アレイボード
 
@@ -155,8 +146,7 @@ reSpeaker Flex は XMOS XVF3800 プロセッサを中心に構成されたモジ
 | **インターフェース** | FPC コネクタ。ケーブルは側面または背面から配線可能 |
 | **取付** | 2 × M3 取付穴 |
 
-
-### XIAO ESP32S3 対応 
+### XIAO ESP32S3 対応
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>
 
@@ -170,16 +160,13 @@ XIAO が実装されている場合、XIAO と XVF3800 の間には次の接続�
 - **RST ライン** — XIAO は専用 IO ピンを介して XVF3800 にハードウェアリセットをかけることが可能
 - **残りの XIAO IO** — ユーザー拡張用にラベル付きピンヘッダ／パッドとして引き出し
 
-
-
-### ピンヘッダ 
+### ピンヘッダ
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_1.png" alt="pir" width={600} height="auto" /></p>
 
-
-### 24 FPC ケーブル 
+### 24 FPC ケーブル
 
 FPC マイクアレイインターフェースは、ロックラッチ付きの 24 ピン・0.5mm ピッチコネクタで、同梱されている 20cm の FPC フラットケーブルはこのコネクタにキーイングされています。
 
@@ -240,18 +227,19 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 以前に **I2S ファームウェア** を書き込んでいて、**USB ファームウェア** に戻したい場合は、**Safe Mode** に入って **USB DFU** を使用して USB ファームウェアを書き込み直すことができます。
 
 :::note
+
 - USB ファームウェア
-    - USB DFU のみをサポートします。
-    - USB 接続を介してデバイスを更新できます。
-    - I2C DFU はサポートしません。
+  - USB DFU のみをサポートします。
+  - USB 接続を介してデバイスを更新できます。
+  - I2C DFU はサポートしません。
 - I2S ファームウェア
-    - I2C DFU をサポートします。
-    - I2C インターフェースを介したファームウェア更新が可能です。
-    - USB DFU はサポートしません。
+  - I2C DFU をサポートします。
+  - I2C インターフェースを介したファームウェア更新が可能です。
+  - USB DFU はサポートしません。
 - Safe Mode ファームウェア
-    - Factory パーティションに保存されています。
-    - USB DFU と I2C DFU の両方をサポートします。
-    - 最も柔軟なリカバリ用ファームウェアです。
+  - Factory パーティションに保存されています。
+  - USB DFU と I2C DFU の両方をサポートします。
+  - 最も柔軟なリカバリ用ファームウェアです。
 
 :::
 
@@ -261,7 +249,6 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 - **新しいファームウェアを書き込み直す**必要があるが、現在のファームウェアが**応答しない**場合。
 - **誤ったファームウェアを書き込んでしまい**、デバイスを復旧したい場合。
 
-
  **Safe Mode に入る方法**
 
 - デバイスの電源を**完全にオフ**にします。
@@ -270,15 +257,13 @@ FPC マイクアレイインターフェースは、ロックラッチ付きの 
 - **赤色 LED が点滅し始め**たら、デバイスが **Safe Mode** に入ったことが確認できます。
 これでデバイスは、Factory パーティションに保存されている **Safe Mode ファームウェア** で動作しています。
 
-
 ### ファームウェアの更新
 
 公式 GitHub リポジトリには 3 種類のファームウェアが用意されています。用途に応じて適切なファームウェアを選択して書き込むことができます。詳細およびダウンロードについては、Github の [Link](https://github.com/respeaker/reSpeaker_Flex) を参照してください。
 
-:::note 
+:::note
 必ずリポジトリ全体をダウンロードしてください。
 :::
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -321,7 +306,6 @@ USB ケーブルで reSpeaker Flex を PC に接続します。XMOS のファー
 </Tabs>
 
 ### DFU Util のインストール
-
 
 `dfu-util` は、USB 経由で Device Firmware Upgrade を行うためのコマンドラインツールです。
 
@@ -434,16 +418,13 @@ GitHub から reSpeaker Flex XVF 3800 の完全なファームウェアリポジ
 
 - 次のコマンドを実行してファームウェアを書き込みます
 
-    - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+  - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 - Linux では sudo を付けて実行します
 
-    - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
-
-
+  - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 ## USB ファームウェアで録音と再生を行う
-
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -579,6 +560,13 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 </TabItem>
 </Tabs>
 
+## リソース
+
+[reSpeaker Flex XVF3800 Circular STEP ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+
+[reSpeaker Flex XVF3800 Linear STEP ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+
+[reSpeaker Flex XVF3800 Core Board STEP ファイル](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 ## 技術サポートと製品ディスカッション
 
@@ -593,6 +581,3 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

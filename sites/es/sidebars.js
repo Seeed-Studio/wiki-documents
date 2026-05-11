@@ -1297,6 +1297,7 @@ const sidebars = {
               label: 'RTOS',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/es_XIAO_ESP32C5_With_FreeRTOS',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/es_XIAO_ESP32C5_With_Zephyr',
               ],
             },
           ],
@@ -4293,6 +4294,7 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_pinocchio',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_Grasping_Demo',
+                'Robotics/Robot_Kits/reBot_Arm/B601_DM/es_reBot_Arm_B601_DM_ROS2_Integration',
               ]
             }
           ]
@@ -4617,7 +4619,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Isaag Lab',
+          label: 'Isaac Lab',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/Application/Robotics',

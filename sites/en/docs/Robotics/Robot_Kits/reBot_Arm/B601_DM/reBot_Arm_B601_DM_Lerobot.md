@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -316,6 +316,9 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 
 ## Teleoperate
 
+:::danger
+During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
+:::
 
 First grant permissions to the serial ports:
 ```bash
@@ -689,6 +692,10 @@ lerobot-teleoperate \
 
 ## Dataset Collection
 <!-- vidio todo -->
+
+:::danger
+During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
+:::
 
 <details>
 

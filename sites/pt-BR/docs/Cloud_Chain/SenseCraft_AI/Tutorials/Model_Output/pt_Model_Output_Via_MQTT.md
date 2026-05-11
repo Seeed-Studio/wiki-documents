@@ -10,17 +10,17 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2026-03-13'
+updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/pt-br/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao/
 ---
 
-# Configurando a Saída de Modelo via MQTT no SenseCraft AI para XIAO ESP32S3 Sense
+# Configurando a saída de modelo via MQTT no SenseCraft AI para XIAO ESP32S3 Sense
 
-Este artigo da wiki fornece um guia passo a passo sobre como configurar a saída de modelo usando MQTT (Message Queuing Telemetry Transport) para a placa XIAO ESP32S3 Sense na plataforma SenseCraft AI. MQTT é um protocolo de mensagens leve que permite uma comunicação eficiente entre dispositivos. Seguindo estas instruções, você aprenderá como configurar a comunicação MQTT e obter os resultados de inferência do modelo a partir do seu XIAO ESP32S3 Sense.
+Este artigo da wiki fornece um guia passo a passo sobre como configurar a saída de modelo usando MQTT (Message Queuing Telemetry Transport) para a placa XIAO ESP32S3 Sense na plataforma SenseCraft AI. MQTT é um protocolo de mensagens leve que permite comunicação eficiente entre dispositivos. Seguindo estas instruções, você aprenderá como configurar a comunicação MQTT e obter os resultados de inferência do modelo do seu XIAO ESP32S3 Sense.
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de que você tenha o seguinte:
+Antes de começar, certifique-se de que você tem o seguinte:
 
 1. Placa XIAO ESP32S3 Sense
 2. Cabo de dados USB-C para conectar a placa XIAO ao seu computador
@@ -37,45 +37,37 @@ Antes de começar, certifique-se de que você tenha o seguinte:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Etapa 1. Acesse o SenseCraft AI Vision Workspace e conecte o XIAO ESP32S3 Sense
+## Etapa 1. Acessar o workspace do XIAO ESP32S3 Sense e conectar o dispositivo
 
-Abra o seu navegador e acesse a página do SenseCraft AI Vision Workspace.
+Acesse o workspace do XIAO ESP32S3 Sense via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, ou use o [link direto para o workspace](https://sensecraft.seeed.cc/ai/device/local/32).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1733300644024" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Acesso Direto com Um Clique 🖱️</font></span></strong>
-    </a>
-</div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-Selecione a placa XIAO ESP32S3 Sense entre os dispositivos disponíveis.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
-
-Usando o cabo USB-C, conecte sua placa XIAO ESP32S3 Sense ao computador. Depois de conectada, clique no botão **Connect** localizado no canto superior esquerdo da página do SenseCraft AI Vision Workspace.
+Usando o cabo USB-C, conecte sua placa XIAO ESP32S3 Sense ao computador. Depois de conectar, clique no botão **Connect** localizado no canto superior esquerdo da página do workspace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
-## Etapa 2. Certifique-se de que um Modelo esteja Carregado no XIAO ESP32S3 Sense
+## Etapa 2. Certificar-se de que um modelo está carregado no XIAO ESP32S3 Sense
 
-Antes de prosseguir, certifique-se de que a sua placa XIAO ESP32S3 Sense tenha um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
+Antes de prosseguir, verifique se a sua placa XIAO ESP32S3 Sense tem um modelo treinado carregado. Se você ainda não carregou um modelo, consulte a documentação do SenseCraft AI sobre como treinar e implantar modelos no seu dispositivo.
 
 - [Usando um modelo para XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_pretrained_models_for_xiao/)
 
-Se você quiser usar o seu próprio modelo treinado, pode consultar as duas Wikis a seguir.
+Se você quiser usar seu próprio modelo treinado, pode consultar as duas Wikis a seguir.
 
 - [Tipo de treinamento - Classificação](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_classification/)
 - [Tipo de treinamento - Detecção de Objetos](https://wiki.seeedstudio.com/pt-br/sensecraft_ai_training_object_detection/)
 
-## Etapa 3. Configurar a Saída MQTT
+## Etapa 3. Configurar a saída MQTT
 
-Na barra lateral esquerda da página do Vision Workspace, clique na opção **Output**. Entre as opções de saída disponíveis, selecione **MQTT** para acessar as configurações de MQTT.
+Na barra lateral esquerda da página do workspace, clique na opção **Output**. Entre as opções de saída disponíveis, selecione **MQTT** para acessar as configurações de configuração do MQTT.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/56.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -93,8 +85,8 @@ Preencha os campos de configuração MQTT:
 - **Host**: Insira o hostname ou endereço IP do seu broker MQTT (por exemplo, broker.emqx.io).
 - **Port**: Especifique o número da porta para comunicação MQTT (por exemplo, 1883).
 - **Client ID**: Forneça um Client ID exclusivo para o seu XIAO ESP32S3 Sense (por exemplo, xiao_esp32s3).
-- **User Name**: Insira o seu nome de usuário MQTT, se exigido pelo broker MQTT.
-- **Password**: Forneça a sua senha MQTT, se exigida pelo broker MQTT.
+- **User Name**: Insira seu nome de usuário MQTT, se for exigido pelo seu broker MQTT.
+- **Password**: Forneça sua senha MQTT, se for exigida pelo seu broker MQTT.
 - **SSL**: Escolha se deseja habilitar a criptografia SSL. Se o seu broker MQTT suportar SSL, você pode selecionar "Yes" para aumentar a segurança da comunicação.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/57.png" style={{width:700, height:'auto'}}/></div>
@@ -109,7 +101,7 @@ Se tudo estiver configurado corretamente, você deverá conseguir ver as seguint
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/60.png" style={{width:1000, height:'auto'}}/></div>
 
-## Etapa 5. Configurar o Cliente MQTT (MQTTX)
+## Etapa 5. Configurar o cliente MQTT (MQTTX)
 
 Abra o [aplicativo MQTTX](https://mqttx.app/) no seu computador.
 
@@ -123,15 +115,15 @@ Crie uma nova conexão com as seguintes configurações:
 
 Clique no botão **Connect** para estabelecer uma conexão com o broker MQTT.
 
-## Etapa 6. Inscrever-se no Tópico MQTT
+## Etapa 6. Assinar o tópico MQTT
 
-No aplicativo MQTTX, clique no botão **New Subscribe** para criar uma nova inscrição. Insira o tópico `sscma/v0/#` e clique em **Subscribe**.
+No aplicativo MQTTX, clique no botão **New Subscribe** para criar uma nova assinatura. Insira o tópico `sscma/v0/#` e clique em **Subscribe**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/59.png" style={{width:1000, height:'auto'}}/></div>
 
-Este tópico será usado para receber as informações de inferência do modelo do seu XIAO ESP32S3 Sense.
+Este tópico será usado para receber informações de inferência do modelo do seu XIAO ESP32S3 Sense.
 
-## Etapa 7. Enviar Comando para Obter os Resultados de Inferência do Modelo
+## Etapa 7. Enviar comando para obter os resultados de inferência do modelo
 
 No aplicativo MQTTX, navegue até o canal de tópico do dispositivo. Você pode obtê-lo clicando no botão **Query device's topic** na página MQTT do SenseCraft AI.
 
@@ -144,18 +136,18 @@ Certifique-se de que você está enviando para o tópico correto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/62.png" style={{width:1000, height:'auto'}}/></div>
 
-Se você perceber que ainda não há nenhum dado relacionado ao reconhecimento do modelo sendo reportado, tente enviar o comando em formato HEX.
+Se você perceber que ainda não tem nenhum dado relacionado ao reconhecimento do modelo sendo reportado, tente enviar o comando em formato HEX.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/65.png" style={{width:1000, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/66.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
-O XIAO ESP32S3 Sense processará o comando e publicará os resultados de inferência do modelo no tópico inscrito. No aplicativo MQTTX, você receberá os resultados de inferência sob o tópico `sscma/v0/#`.
+O XIAO ESP32S3 Sense processará o comando e publicará os resultados de inferência do modelo no tópico assinado. No aplicativo MQTTX, você receberá os resultados de inferência sob o tópico `sscma/v0/#`.
 
 **Exemplo**:
 
-Vamos supor que o seu modelo treinado foi projetado para detectar objetos em uma imagem. Quando você envia o comando 'AT+INVOKE=-1,0', o XIAO ESP32S3 Sense irá capturar uma imagem, executar a inferência do modelo e publicar os resultados via MQTT. Os resultados de inferência podem incluir informações como os objetos detectados, seus bounding boxes e escores de confiança. Por exemplo, o payload da mensagem MQTT pode ser:
+Vamos supor que o seu modelo treinado foi projetado para detectar objetos em uma imagem. Quando você enviar o comando 'AT+INVOKE=-1,0', o XIAO ESP32S3 Sense capturará uma imagem, executará a inferência do modelo e publicará os resultados via MQTT. Os resultados de inferência podem incluir informações como os objetos detectados, seus bounding boxes e pontuações de confiança. Por exemplo, o payload da mensagem MQTT pode ser:
 
 ```json
 {"type":1,"name":"INVOKE","code":0,"data":{"count":989,"image":"/9j/4AAQSkZJRgABAQEAAAAAAAD...CUxBQAYoAPpQAc0AA/9X/2Q==","boxes":[[208.46,215.41,69.49,48.64,80.60,0]],"perf":[70,470,0],"rotation":0,"width":240,"height":240}}
@@ -164,7 +156,7 @@ Vamos supor que o seu modelo treinado foi projetado para detectar objetos em uma
 Para uma descrição detalhada do formato JSON, leia a documentação **[aqui](https://github.com/Seeed-Studio/SSCMA-Micro/blob/main/docs/protocol/at-protocol-en_US.md#box-type)**.
 
 :::tip
-No firmware do dispositivo, há um conjunto de protocolos de comunicação estabelecidos que especificam o formato da saída dos resultados do modelo e o que o usuário pode fazer com os modelos. Devido a questões de espaço, não vamos detalhar os específicos desses protocolos nesta wiki; vamos detalhar essa seção por meio de documentação no Github. Se você tem interesse em um desenvolvimento mais aprofundado, acesse **[aqui](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md)**.
+No firmware do dispositivo, há um conjunto de protocolos de comunicação estabelecidos que especificam o formato da saída dos resultados do modelo e o que o usuário pode fazer com os modelos. Devido a questões de espaço, não entraremos em detalhes sobre esses protocolos nesta wiki; detalharemos esta seção por meio de documentação no Github. Se você estiver interessado em um desenvolvimento mais aprofundado, acesse **[aqui](https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md)**.
 :::
 
 Para decodificar a imagem codificada em base64:
@@ -183,11 +175,11 @@ Para decodificar a imagem codificada em base64:
 
 ## Conclusão
 
-Seguindo este guia passo a passo, você aprendeu como configurar a saída de modelo usando MQTT na plataforma SenseCraft AI para a placa XIAO ESP32S3 Sense. Agora você pode obter os resultados de inferência do modelo via MQTT e integrá-los às suas aplicações ou sistemas. Lembre-se de garantir uma conexão Wi-Fi estável e configurar corretamente o seu broker MQTT e as configurações do cliente para uma comunicação sem falhas.
+Seguindo este guia passo a passo, você aprendeu como configurar a saída de modelo usando MQTT na plataforma SenseCraft AI para a placa XIAO ESP32S3 Sense. Agora você pode obter os resultados de inferência do modelo via MQTT e integrá-los às suas aplicações ou sistemas. Lembre-se de garantir uma conexão Wi-Fi estável e configurar corretamente as definições do seu broker e cliente MQTT para uma comunicação sem interrupções.
 
 ## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que a sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

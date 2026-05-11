@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-04-13'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/es/robotics_page/
 ---
 
@@ -94,6 +94,9 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
               <a href="/es/rebot_arm_b601_dm_grasping_demo/" className="content-card">
                 <span className="text">Demostración de agarre visual de reBot</span>
               </a>
+              <a href="/es/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">Integración de reBot B601-DM con ROS2</span>
+              </a>
           </div>
 
 
@@ -118,7 +121,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
                 <span className="text">Phospho Lerobot</span>
               </a>
               <a href="/es/training_soarm101_policy_with_isaacLab/" className="content-card">
-                  <span className="text">Entrenamiento RL de So Arm</span>
+                  <span className="text">Entrenamiento RL del brazo SO</span>
                   <span className="tag recommended">Nuevo</span>
               </a>
               <a href="/es/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
@@ -186,13 +189,13 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
 
       <div className="card-container">
           <a href="/es/myactuator_series/" className="content-card">
-            <span className="text">MyActuator Serie X</span>
+            <span className="text">Serie MyActuator X</span>
           </a>
           <a href="/es/damiao_series/" className="content-card">
-            <span className="text">Damiao Serie DM43</span>
+            <span className="text">Serie Damiao DM43</span>
           </a>
           <a href="/es/feetech_servo/" className="content-card">
-            <span className="text">Feetech STS3215 Servo</span>
+            <span className="text">Servo Feetech STS3215</span>
           </a>
           <a href="/es/hightorque_control" className="content-card">
             <span className="text">Serie HighTorque</span>
@@ -204,7 +207,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
             <span className="text">Serie Stackforce</span>
           </a>
           <a href="/es/robstride_control/" className="content-card">
-            <span className="text">RobStride Control</span>
+            <span className="text">Control RobStride</span>
             <span className="tag recommended">Nuevo</span>
           </a>
       </div>
@@ -342,7 +345,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <span className="tag recommended">Nuevo</span>
       </a>
       <a href="/es/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">Simulación SO100 Arm Isaac</span>
+        <span className="text">SO100 Arm Isaac Sim</span>
         <span className="tag recommended">Nuevo</span>
       </a>
       </div>
@@ -377,7 +380,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
-          <h3>Fundamentos de ROS 1: 8 lecciones</h3>
+          <h3>Fundamentos de ROS 1: 8 clases</h3>
           <p>Aprende sobre nodos, tópicos, servicios y conceptos básicos.</p>
           <span className="btn-start">Aprender</span>
         </div>
@@ -388,7 +391,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
-          <h3>Simulación de robots con ROS 1: 7 lecciones.</h3>
+          <h3>Simulación de robots con ROS 1: 7 clases.</h3>
           <p>	Desde el modelado hasta la navegación autónoma.</p>
           <span className="btn-start">Aprender</span>
         </div>
@@ -399,7 +402,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 8h</span></div>
-          <h3>Fundamentos de ROS 2 Humble: 8 lecciones</h3>
+          <h3>Fundamentos de ROS 2 Humble: 8 clases</h3>
           <p>Aprende sobre nodos, tópicos, servicios y conceptos básicos.</p>
           <span className="btn-start">Aprender</span>
         </div>
@@ -435,7 +438,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 12h</span></div>
-          <h3>NVIDIA Isaac Sim &amp; Lab</h3>
+          <h3>NVIDIA Isaac Sim & Lab</h3>
           <p>Flujos de trabajo Sim2Real, canalizaciones USD y creación de entornos.</p>
           <span className="btn-plan">Planificación</span>
         </div>
@@ -474,7 +477,7 @@ url: https://wiki.seeedstudio.com/es/robotics_page/
         <div className="course-cover c-human">Humanoide</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 5h</span></div>
-          <h3>Curso de pequeños robots humanoides con servos</h3>
+          <h3>Curso de robots humanoides pequeños con servos</h3>
           <p>Control de hardware, coreografía de movimiento y baile, y desarrollo secundario para pequeños robots humanoides.</p>
           <span className="btn-plan">Planificación</span>
         </div>
