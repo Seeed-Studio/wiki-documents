@@ -143,7 +143,7 @@ Need more details on pinouts? Navigate to [Assets and Resources](#assets--resour
 | D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, SPI Clock                      |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
 | ADC_BAT                 |            | GPIO29       |                    | Read the BAT voltage value           |
-| ADC_BAT_EN              |            | GPIO19       |                    | BAT voltage detect enable           | 
+| ADC_BAT_EN              |            | GPIO19       |                    | BAT voltage detect enable            | 
 | Reset                   |            | RUN          |                    | RUN                                  |
 | Boot                    |            | RP2040_BOOT  |                    | Enter Boot Mode                      |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
@@ -233,6 +233,8 @@ Please be careful not to short-circuit the positive and negative terminals and b
 
 In the battery sampling circuit of the XIAO RP2350, a voltage sampling solution based on the SX1801CCR is adopted. A voltage divider circuit is formed by two 470 kΩ resistors, resulting in a voltage division ratio of 2. The program uses 3.3 V as the reference voltage, and the actual battery voltage can be calculated through the voltage restoration formula.
 
+The following example uses a watchdog-reboot approach to simulate deep sleep since the Arduino IDE cannot easily integrate the pico-extras library required for true deep sleep.
+
 <details>
 <summary>Program</summary>
 
@@ -291,7 +293,7 @@ static void shutdownPeripherals() {
     disableADC();
 
     // Pull down all unused pins to eliminate floating leakage
-    const uint8_t unused[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16, 17};
+    const uint8_t unused[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18};
     for (uint8_t pin : unused) {
         pinMode(pin, INPUT_PULLDOWN);
     }
