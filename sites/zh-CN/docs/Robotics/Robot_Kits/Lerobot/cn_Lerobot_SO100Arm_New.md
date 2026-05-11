@@ -895,7 +895,27 @@ pip install -e ".[orbbec]"
 chmod a+rw /dev/bus/usb/*/* 
 ```
 
-### 4. 检测相机
+### 4. USBFS 缓存大小配置
+
+默认情况下，USBFS 缓存大小为 16 MB。此值不足以用于高分辨率图像或多个流和多个设备使用。用户可以将缓存大小增加到 128 MB。
+
+检查 USBFS 缓存大小
+```bash
+cat /sys/module/usbcore/parameters/usbfs_memory_mb
+```
+
+临时增加 USBFS 缓存大小
+```bash
+sudo sh -c 'echo 128> /sys/module/usbcore/parameters/usbfs_memory_mb'
+```
+
+:::tip
+
+如果仍然遇到 `TimeoutError: Timed out waiting for frame from <lerobot.cameras.orbbec.camera_orbbec.OrbbecDepthCamera object at 0x7ba4ba130910.........` 超时的报错，对相机进行拔插即可。
+
+:::
+
+### 5. 检测相机
 
 ```bash
 lerobot-find-cameras orbbec
@@ -914,7 +934,7 @@ lerobot-find-cameras orbbec
 
 这里需要将采集到的 `Serial number` 输入到下面调用相机命令的 `serial_number_or_name` 参数中
 
-### 5. Orbbec 示例
+### 6. Orbbec 示例
 
 单 Orbbec 测试：
 
@@ -951,13 +971,62 @@ lerobot-teleoperate \
   --display_data=true
 ```
 
-### 6. 参数建议
+单 Orbbec 测试 + 普通相机测试：
+
+```bash
+lerobot-teleoperate \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM0 \
+  --robot.id=my_awesome_follower_arm \
+  --robot.cameras='{
+    orbbec_color: {
+      type: orbbec_color,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 480,
+      fps: 30,
+      color_mode: rgb,
+      rotation: 0,
+      warmup_s: 1
+    },
+    orbbec_depth: {
+      type: orbbec_depth,
+      serial_number_or_name: "CP9JA530003A",
+      width: 640,
+      height: 400,
+      fps: 30,
+      depth_alpha: 0.2,
+      rotation: 0,
+      warmup_s: 5
+    },
+     side: {
+     type: opencv,
+     index_or_path: 8,
+     width: 640,
+     height: 480,
+     fps: 30,
+     fourcc: "MJPG"} 
+  }' \
+  --teleop.type=so101_leader \
+  --teleop.port=/dev/ttyACM1 \
+  --teleop.id=my_awesome_leader_arm \
+  --display_data=true
+```
+
+:::tip
+
+在使用单 Orbbec + 普通相机时，建议先插入 Orbbec 后再插入普通相机，因为在使用 ` lerobot-find-cameras opencv ` 命令查找相机编号时会发现 Orbbec 会存在3个连续的相机编号，因此建议最后插入普通相机，让普通相机的编号排在最后。
+
+:::
+
+
+### 7. 参数建议
 
 - `depth_alpha` 用于控制深度图的缩放比例；通常可以从 `0.2` 开始测试，再根据显示效果进行微调。
 - 如果需要连接三个及以上深度相机，建议将 `fps` 降低到 `15`，以提升整体稳定性。
 - 建议优先保持 `640x480` 分辨率，以获得更稳定的显示与传输效果。
 
-### 7. 常见问题
+### 8. 常见问题
 
 出现以下报错时：
 
@@ -1585,6 +1654,15 @@ GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model），
 pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
 ```
 
+:::tip
+如果您是RTX 50系列，需要满足下面要求：Python=3.10，CUDA=12.8，Torch=2.7.1
+
+下载命令如下：
+```bash
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
+```
+:::
+
 3. 安装 flash-attn 依赖与 flash-attn 本体：
 
 ```bash
@@ -1592,6 +1670,15 @@ pip install ninja "packaging>=24.2,<26.0"
 pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
 python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
 ```
+
+:::tip
+如果您是RTX 50系列，需要满足下面要求：flash_attn=2.8.0
+
+下载命令如下：
+```bash
+pip install flash_attn==2.8.0.post2 torch==2.7.1 --no-build-isolation
+```
+:::
 
 4. 安装 LeRobot 的 groot 依赖：
 

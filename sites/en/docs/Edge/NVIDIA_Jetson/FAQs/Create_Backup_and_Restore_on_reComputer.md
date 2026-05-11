@@ -13,7 +13,7 @@ last_update:
   date: 04/11/2025
   author: Zibo
 createdAt: '2025-04-14'
-updatedAt: '2025-09-15'
+updatedAt: '2026-05-08'
 url: https://wiki.seeedstudio.com/create_backup_and_restore_on_recomputer/
 ---
 
