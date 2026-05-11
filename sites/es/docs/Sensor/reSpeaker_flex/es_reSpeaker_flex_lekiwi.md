@@ -1,11 +1,11 @@
 ---
 description: Robot Kiwi-drive controlado por voz usando Raspberry Pi, XIAO ESP32, ReSpeaker Lite y embeddings de voz para un control robótico inteligente y manos libres.
-title: Controlador de voz LeKiwi
+title: Añade interacción por voz a tu robot LeKiwi con reSpeaker Flex
 keywords:
   - reSpeaker flex
   - LeKiwi
   - xvf3800
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png"
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png
 slug: /respeaker_flex_lekiwi
 sku: 100005504,100099135,100070894,100026178
 last_update:
@@ -18,11 +18,10 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
 
 
 ## Descripción general
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
 ¡Controla un robot Kiwi-drive de 3 ruedas con tu voz! Este proyecto combina un Seeed Studio XIAO ESP32 (controlador de motores) con una Raspberry Pi (cerebro de procesamiento de voz), mejorado con el reSpeaker Flex para captura de audio de alta calidad y Voice Embeddings para una interacción de voz más inteligente y personalizada. Usando comandos en lenguaje natural, puedes conducir, girar y controlar el robot completamente manos libres con mayor precisión y capacidad de respuesta.
-
-
 
 ## Hardware necesario
 
@@ -69,7 +68,6 @@ url: https://wiki.seeedstudio.com/es/respeaker_flex_introduction/
 
 - [**Groq**](https://groq.com/) cuenta: el nivel gratuito es suficiente para comenzar
 
-
 ## Cómo funciona
 
 ```
@@ -82,6 +80,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 4. **LLaMA 3** decide qué acción debe realizar el robot
 5. **Groq Orpheus TTS** pronuncia una respuesta en voz alta
 6. Se envía un comando serie al ESP32, que acciona los motores
+
 ---
 
 ## Preparar el XIAO ESP32 (controlador de motores)
@@ -109,17 +108,14 @@ Sigue el video tutorial oficial de Seeed Studio para montar el chasis, colocar l
 Solo necesitas completar el **montaje físico**; omite cualquier paso sobre clonar el repositorio de GitHub de LeRobot, ya que este proyecto utiliza una configuración diferente.
 :::
 
-
 ### Paso 3 — Cargar el sketch de Arduino
-
-
 
 El sketch (`lekiwi_motor_control.ino`) hace lo siguiente:
 
 - Inicializa los tres servos en **modo de posición**, los centra y luego cambia al **modo rueda (rotación continua)**
 - Escucha en el puerto serie USB comandos de un solo carácter
 - Usa **cinemática Kiwi-drive** para calcular la velocidad correcta para cada rueda
-- Solo admite **modo de empuje** (impulso corto y luego parada automática) 
+- Solo admite **modo de empuje** (impulso corto y luego parada automática)
 **Referencia de comandos serie:**
 
 | Tecla | Acción |
@@ -467,12 +463,13 @@ void loop() {
 
 </details>
 
- ## Preparar la Raspberry Pi (Voice Brain)
+## Preparar la Raspberry Pi (Voice Brain)
 
 ### Paso 1 — Consigue una clave de API de Groq
 
 1. Regístrate en [console.groq.com](https://console.groq.com/)
 2. Crea una nueva clave de API y cópiala — la necesitarás en el Paso 4
+
 ### Paso 2 — Clona este repositorio
 
 ```bash

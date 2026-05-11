@@ -14,6 +14,7 @@ last_update:
   author: Allen
 createdAt: '2025-07-17'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/
 ---
 
 # Arduino Cookbook: TRMNL 7.5" (OG) DIY Kit

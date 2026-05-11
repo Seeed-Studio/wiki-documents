@@ -78,6 +78,18 @@
   color: var(--ifm-navbar-link-hover-color, var(--ifm-color-primary)) !important;
 }
 
+.navbar__items .navbar__link:hover,
+.navbar__items .navbar__item:hover > .navbar__link,
+.navbar__items .dropdown:hover > .navbar__link,
+.navbar__items .navbar_dorp_items:hover,
+.navbar__items .navbar_doc_right_items:hover {
+  color: var(--ifm-navbar-link-hover-color, var(--ifm-color-primary)) !important;
+}
+
+.navbar__items .dropdown__link:hover {
+  color: var(--ifm-navbar-link-hover-color, var(--ifm-color-primary)) !important;
+}
+
 /* Flag和文字样式 */
 .navbar-language-switcher .lang-flag {
   font-size: 0.875rem;
@@ -439,6 +451,36 @@
 	background-image: url('/static/img/SSCMA.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+.ai-platform-menu-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.ai-platform-menu-item::after {
+	content: '';
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	flex: 0 0 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.sensecraft-ai-menu-item::after {
+	background-image: url('/img/SSCMA.svg');
+}
+
+.recomputer-ai-lab-menu-item::after {
+	background-image: url('/img/recomputer-ai-lab.png');
+}
+
+.ai-platform-dropdown + .dropdown__menu {
+	left: 0;
+	right: auto;
 }
 
 /* embedded world product list button */

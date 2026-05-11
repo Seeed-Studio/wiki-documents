@@ -10,8 +10,11 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /how_to_use_modbus_rs485_with_r1225
 sku: 100021896,100030154,100006298,100079154
 last_update:
-  date: 04/014/2026
+  date: 04/14/2026
   author: Kian
+createdAt: '2026-04-26'
+url: https://wiki.seeedstudio.com/how_to_use_modbus_rs485_with_r1225/
+updatedAt: '2026-04-30'
 ---
 
 ## Introduction

@@ -22,7 +22,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-22'
-updatedAt: '2025-12-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/mcp_endpoint/
 ---
 
@@ -40,21 +40,19 @@ MCP allows servers to expose callable tools to language models through a well-de
 
 ## Get MCP Endpoint
 
-1. Enter the [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
+1. Access the Watcher Agent control panel via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37) and then click **`Watcher Agent`** in the left sidebar.
 
-2. To access the Control Panel, click Watcher Agent in the upper-right corner of the page.
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-
-3. Open the agent configuration
+2. Open the agent configuration
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
 
-4. Click `MCP Setting` and `Get MCP Endpoint`
+3. Click `MCP Setting` and `Get MCP Endpoint`
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI14.png" style={{width:800, height:'auto'}}/></div>
 
-5. Get Endpoint adddress and Connection Status
+4. Get Endpoint adddress and Connection Status
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
 

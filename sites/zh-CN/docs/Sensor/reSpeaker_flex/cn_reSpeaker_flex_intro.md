@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/cn/respeaker_flex_introduction/
 reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式语音处理系统，专为机器人和智能交互终端设计。与传统的一体化麦克风阵列不同，Flex 将核心处理板与麦克风阵列板分离，两者通过柔性 FPC 软排线连接，使阵列可以嵌入产品外壳内的任意物理位置，同时将处理电子部分放置在其他位置。
 该系统支持两种可互换的麦克风阵列配置：用于全向 360° 采集的**环形 4 麦阵列**，以及用于前向定向拾音并抑制后方声音的**线性 4 麦阵列**。两块阵列板均通过标准化的 24 针 FPC 接口连接到同一核心板，系统可在 USB（UAC 2.0 即插即用）或 I2S 模式下运行，以便嵌入式集成。可选的 XIAO ESP32S3 模块可以焊接到核心板上，以实现无线连接和扩展控制。
 
-### 环形麦克风系列 
+### 环形麦克风系列
 
 <table align="center">
   <tr>
@@ -49,9 +49,7 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
   </tr>
 </table>
 
-
-
-### 线性麦克风系列 
+### 线性麦克风系列
 
 <table align="center">
   <tr>
@@ -81,7 +79,7 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
   </tr>
 </table>
 
-## 特性 
+## 特性
 
 - **分体式模块化设计**：核心板与麦克风阵列板物理分离，通过 FPC 软排线连接，可在任意产品机壳内灵活布置
 
@@ -101,7 +99,7 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
 
 - **Python SDK**：可通过 Python 调整录音格式、音量、算法参数和通道路由
 
-## 主要组件 
+## 主要组件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main_noxiao.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -126,11 +124,7 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
 | **XIAO ESP32S3** | 支持在作为主机设备时焊接 XIAO ESP32S3 |
 | **XIAO ESP32S3 GPIO** | 剩余 GPIO 可用于 IO 和外设扩展 |
 
-
-
-
-
-### 环形阵列板 
+### 环形阵列板
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_doa.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -140,9 +134,6 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
 | **拾音模式** | 360° 全向音频采集 |
 | **接口** | 连接到核心板的 FPC 连接器 |
 | **安装方式** | 3 × M3 安装孔，用于固定在外壳或机箱上 |
-
-
-
 
 ### 线性阵列板
 
@@ -155,8 +146,7 @@ reSpeaker Flex 是一款基于 XMOS XVF3800 处理器构建的模块化分体式
 | **接口** | FPC 连接器；排线可从侧面或背面走线 |
 | **安装方式** | 2 × M3 安装孔 |
 
-
-### XIAO ESP32S3 支持 
+### XIAO ESP32S3 支持
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/xiao_esp32s3.png" alt="pir" width={700} height="auto" /></p>
 
@@ -170,16 +160,13 @@ reSpeaker Flex 核心板预留了专用焊盘，可焊接 Seeed Studio XIAO ESP3
 - **RST 线** — XIAO 可通过专用 IO 引脚对 XVF3800 进行硬件复位
 - **剩余 XIAO IO** — 引出到带标签的排针/焊盘，供用户扩展
 
-
-
-### 排针 
+### 排针
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/pinheader_1.png" alt="pir" width={600} height="auto" /></p>
 
-
-### 24 FPC 线缆 
+### 24 FPC 线缆
 
 FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包装内附带的 20cm FPC 软排线已按此连接器进行钥匙位设计。
 
@@ -214,44 +201,45 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 
 ## 入门指南
 
-### 硬件准备 
+### 硬件准备
 
-- USB Type-C 线缆 
-- 主机电脑或 Raspberry Pi 
+- USB Type-C 线缆
+- 主机电脑或 Raspberry Pi
 
-### 软件准备 
+### 软件准备
 
-### 开箱即用 
+### 开箱即用
 
-#### 复位 
+#### 复位
 
 当按下复位（RST）按钮时，会对 reSpeaker Flex 执行一次硬件复位，它会从最开始重新启动芯片并重新初始化系统，就像完整的断电重启一样。
 
-#### 扬声器连接 
+#### 扬声器连接
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/speaker-connection .jpg" alt="pir" width={600} height="auto" /></p>
 
 在这里你可以看到如何根据你的音频输出偏好，使用 3.5mm AUX 耳机插孔或板载 JST 扬声器接口来连接扬声器。
 
-#### 安全模式 
+#### 安全模式
 
 **安全模式（Safe Mode）** 是 **reSpeaker Flex** 上的一种特殊恢复模式，它允许你通过 **USB DFU** 或 I2C（例如 Raspberry Pi 和 **ESP32** 等设备）来烧录固件。
 
 如果你之前已经烧录了 **I2S 固件**，并且想切换回 **USB 固件**，可以进入 **安全模式（Safe Mode）**，然后使用 **USB DFU** 重新烧录 USB 固件。
 
 :::note
+
 - USB 固件
-    - 仅支持 USB DFU。
-    - 你可以通过 USB 连接来更新设备。
-    - 不支持 I2C DFU。
+  - 仅支持 USB DFU。
+  - 你可以通过 USB 连接来更新设备。
+  - 不支持 I2C DFU。
 - I2S 固件
-    - 支持 I2C DFU。
-    - 允许通过 I2C 接口进行固件更新。
-    - 不支持 USB DFU。
+  - 支持 I2C DFU。
+  - 允许通过 I2C 接口进行固件更新。
+  - 不支持 USB DFU。
 - 安全模式固件
-    - 存储在 Factory 分区中。
-    - 同时支持 USB DFU 和 I2C DFU。
-    - 这是最灵活的恢复固件。
+  - 存储在 Factory 分区中。
+  - 同时支持 USB DFU 和 I2C DFU。
+  - 这是最灵活的恢复固件。
 
 :::
 
@@ -261,8 +249,7 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 - 你需要**重新烧录新固件**，但当前固件**没有响应**。
 - 你**不小心烧录了错误的固件**，想要恢复设备。
 
-
- **如何进入安全模式（Safe Mode）** 
+ **如何进入安全模式（Safe Mode）**
 
 - 将设备**完全断电**。
 - **按住 Boot 按钮不放**。
@@ -270,15 +257,13 @@ FPC 麦克风阵列接口为 24 针、0.5mm 间距、带锁扣的连接器，包
 - **红色 LED 会开始闪烁**，表示设备已经进入 **安全模式（Safe Mode）。**
 此时设备正在运行存储在 Factory 分区中的 **安全模式固件**。
 
+### 更新固件
 
-### 更新固件 
+在官方 GitHub 仓库中提供了三个固件版本。你可以根据应用需求选择并烧录合适的固件。更多详情和下载，请参考 Github [链接](https://github.com/respeaker/reSpeaker_Flex)
 
-在官方 GitHub 仓库中提供了三个固件版本。你可以根据应用需求选择并烧录合适的固件。更多详情和下载，请参考 Github [链接](https://github.com/respeaker/reSpeaker_Flex) 
-
-:::note 
+:::note
 请确保你需要下载整个仓库。
 :::
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -321,7 +306,6 @@ I2S 固件适用于设备连接到 XIAO ESP32S3 等微控制器主机时使用�
 </Tabs>
 
 ### 安装 DFU Util
-
 
 `dfu-util` 是一个通过 USB 进行设备固件升级（Device Firmware Upgrade）的命令行工具。
 
@@ -428,22 +412,19 @@ Found DFU: [2886:001a] ver=0202, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
   </TabItem>
 </Tabs>
 
-### 烧录固件 
+### 烧录固件
 
 从 GitHub 下载完整的固件仓库：reSpeaker Flex XVF 3800
 
 - 运行以下命令来烧录固件
 
-    - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+  - dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 - 在 Linux 上，请使用 sudo 运行
 
-    - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+  - sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
-
-
-## 使用 USB 固件进行录音和回放 
-
+## 使用 USB 固件进行录音和回放
 
 <Tabs>
 <TabItem value="windows" label="Windows">
@@ -579,6 +560,13 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 </TabItem>
 </Tabs>
 
+## 资源
+
+[reSpeaker Flex XVF3800 Circular STEP 文件](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+
+[reSpeaker Flex XVF3800 Linear STEP 文件](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+
+[reSpeaker Flex XVF3800 核心板 STEP 文件](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 ## 技术支持与产品讨论
 
@@ -593,6 +581,3 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

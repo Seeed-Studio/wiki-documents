@@ -10,6 +10,7 @@ last_update:
   author: Citric
 createdAt: '2025-07-25'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
 ---
 
 import Tabs from '@theme/Tabs';

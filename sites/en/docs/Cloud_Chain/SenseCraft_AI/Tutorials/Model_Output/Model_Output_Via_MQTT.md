@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao/
 ---
 
@@ -44,21 +44,13 @@ Before you begin, ensure that you have the following:
   </table>
 </div>
 
-## Step 1. Access the SenseCraft AI Vision Workspace and connect the XIAO ESP32S3 Sense
+## Step 1. Access the XIAO ESP32S3 Sense Workspace and connect the device
 
-Open your web browser and navigate to the SenseCraft AI Vision Workspace page.
+Access the XIAO ESP32S3 Sense workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`XIAO ESP32S3 Sense`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/32).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1733300644024" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
-    </a>
-</div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/xiao_esp32s3_sense_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-Select the XIAO ESP32S3 Sense board from the available devices.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
-
-Using the USB-C cable, connect your XIAO ESP32S3 Sense board to your computer. Once connected, click the **Connect** button located in the top-left corner of the SenseCraft AI Vision Workspace page.
+Using the USB-C cable, connect your XIAO ESP32S3 Sense board to your computer. Once connected, click the **Connect** button located in the top-left corner of the workspace page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
@@ -75,7 +67,7 @@ If you want to use your own trained model, you can refer to the following two Wi
 
 ## Step 3. Configure MQTT Output
 
-In the left sidebar of the Vision Workspace page, click on the **Output** option. From the available output options, select **MQTT** to access the MQTT configuration settings.
+In the left sidebar of the workspace page, click on the **Output** option. From the available output options, select **MQTT** to access the MQTT configuration settings.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/56.png" style={{width:1000, height:'auto'}}/></div>
 

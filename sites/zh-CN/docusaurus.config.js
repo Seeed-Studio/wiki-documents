@@ -597,15 +597,22 @@ module.exports = (async () => {
               className: 'navbar_doc_right_items',
             },
             {
-              to: 'https://sensecraft.seeed.cc/ai/#/home',
-              label: 'SenseCraft AI',
+              type: 'dropdown',
+              label: 'AI 平台',
               position: 'right',
-              className: 'navbar_doc_right_items',
-            },
-            {
-              href: 'https://sensecraft.seeed.cc/ai/#/home',
-              position: 'right',
-              className: 'header-SSCMA',
+              className: 'navbar_doc_right_items ai-platform-dropdown',
+              items: [
+                {
+                  label: 'SenseCraft AI',
+                  to: 'https://sensecraft.seeed.cc/ai/#/home',
+                  className: 'ai-platform-menu-item sensecraft-ai-menu-item',
+                },
+                {
+                  label: 'reComputer AI Lab',
+                  to: 'https://sensecraft.seeed.cc/ai-lab',
+                  className: 'ai-platform-menu-item recomputer-ai-lab-menu-item',
+                },
+              ],
             },
             {
               href: 'https://github.com/Seeed-Studio/wiki-documents',
