@@ -311,6 +311,19 @@ export const translations = {
       videoCta: 'Watch Demo'
     },
     examples: {
+      title: 'One-Command Deployment',
+      desc: 'Deploy AI models instantly with jetson-examples',
+      installTitle: 'Install jetson-examples',
+      deployTitle: 'Deploy LLaVA',
+      modelsTitle: 'Supported Models',
+      features: ['20+ Examples', 'One Command', 'Open Source'],
+      quickLinks: {
+        github: 'GitHub Repo',
+        docs: 'Full Docs',
+        models: 'Model List'
+      }
+    },
+    demoHero: {
       title: 'One-Command AI Deployment',
       desc: 'Deploy 20+ AI models with a single command. From LLMs to computer vision, run cutting-edge AI on your Jetson device instantly. No complex setup required.',
       cta: 'Get Started'
