@@ -14,7 +14,7 @@ updatedAt: '2025-09-19'
 url: https://wiki.seeedstudio.com/ja/mmwave_radar_Intro/
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:'auto', height:'auto'}}/></div>
 
 Seeed Studio の mmWave レーダーセンサーの世界へようこそ。このページは包括的な情報源として設計されており、これらのセンサーのあらゆる側面についてガイドします。
 

@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';
@@ -25,7 +25,7 @@ import TabItem from '@theme/TabItem';
 </div><br />
 
 :::caution Consejos para actualizar el firmware
-Recomendamos que **[completes la actualización del firmware de tu producto](#preliminar)** tan pronto como lo recibas para obtener la mejor experiencia.
+Recomendamos que **[completes la actualización del firmware de tu producto](#preliminary)** tan pronto como lo recibas para obtener la mejor experiencia.
 :::
 
 :::danger Advertencia sobre la vida útil de la pantalla
@@ -33,17 +33,17 @@ Recomendamos que **[completes la actualización del firmware de tu producto](#pr
 
 2. Siempre que sea posible, no muestres una misma imagen en pantalla durante un período prolongado (más de 1 día), ya que esto puede crear una imagen residual, y se recomienda que la imagen de la pantalla se actualice al menos una vez al día. Si el dispositivo no se utiliza durante mucho tiempo, se recomienda borrar el contenido mostrado en el dispositivo.
 
-3. Actualiza la pantalla con la menor frecuencia posible cuando utilices y depures el programa. Refrescar la pantalla a alta velocidad durante un período prolongado también puede reducir la vida útil de la pantalla.
+3. Por favor, actualiza la pantalla con la menor frecuencia posible cuando utilices y depures el programa. Actualizar la pantalla a alta velocidad durante un período prolongado también puede reducir la vida útil de la pantalla.
 :::
 
 ## Introducción
 
-reTerminal E1002 es una pantalla ePaper a color de código abierto de 7,3 pulgadas con una excepcional duración de batería de 3 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz sin código SenseCraft HMI para una creación de paneles sin esfuerzo, y además es compatible con Home Assistant, TRMNL E-ink dashboard, Arduino y ESP-IDF para un desarrollo adicional. Con la pantalla ePaper a todo color E Ink® Spectra™ 6, es perfecta para marcos digitales y visualización de paneles de control a color.
+reTerminal E1002 es una pantalla ePaper a color de código abierto de 7,3 pulgadas con una excepcional duración de batería de 3 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz HMI SenseCraft sin código para una creación de paneles sencilla, y además es compatible con Home Assistant, TRMNL E-ink dashboard, Arduino y ESP-IDF para un desarrollo adicional. Con la pantalla ePaper a todo color E Ink® Spectra™ 6, es perfecta para marcos digitales y visualización de paneles de control a color.
 
 ### Características
 
 - **Hermosa pantalla ePaper a color E Ink® Spectra™6 lista para usar**
-- **Ultrabajo consumo con 3 meses de duración de batería**
+- **Ultrabajo consumo con batería de 3 meses de duración**
 - **Diseño e implementación de interfaz sin código con SenseCraft HMI**
 - **Funciona con plataformas de software populares**
 - **Personalización flexible de hardware y software**
@@ -82,7 +82,7 @@ reTerminal E1002 es una pantalla ePaper a color de código abierto de 7,3 pulgad
 		</tr>
 		<tr>
 			<td align="center"><strong>Conectividad inalámbrica</strong></td>
-			<td align="center">Wi-Fi 2,4GHz 802.11 b/g/n, Bluetooth 5.0</td>
+			<td align="center">Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 5.0</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Sensores</strong></td>
@@ -134,7 +134,7 @@ El hardware de reTerminal E1002 incluye:
 
 ## Primeros pasos
 
-### Preliminar
+### Preparativos
 
 **Paso 1.** Desempaqueta tu reTerminal E1002 y asegúrate de que todos los componentes estén incluidos:
 
@@ -160,7 +160,7 @@ El soporte proporciona un ángulo de visión fijo y no se puede ajustar. Esta po
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-La pantalla ePaper de la reTerminal E Serie solo admite tarjetas MicroSD de hasta 32GB en formato Fat32.  
+La pantalla ePaper reTerminal E Serie solo admite tarjetas MicroSD de hasta 32GB en formato Fat32.  
 La tarjeta SD de 32GB viene formateada como exFAT por defecto. Después de formatearla a FAT32, se puede montar correctamente y utilizar para almacenar imágenes.
 :::
 
@@ -223,7 +223,7 @@ Por lo tanto, necesitamos completar los siguientes pasos de configuración de re
 **Paso 3.** Selecciona tu red Wi-Fi local e introduce la contraseña, luego haz clic en "Connect".
 
 :::note
-La pantalla ePaper de la reTerminal E Serie solo admite redes WiFi de 2,4GHz, no de 5GHz ni otras bandas.
+La pantalla ePaper reTerminal E Serie solo admite redes WiFi de 2,4GHz, no 5GHz ni otras bandas.
 :::
 
 **Paso 4.** Tras una conexión correcta, el dispositivo emitirá un pitido de confirmación y mostrará una pantalla con el código de emparejamiento.
@@ -245,7 +245,7 @@ La pantalla ePaper de la reTerminal E Serie solo admite redes WiFi de 2,4GHz, no
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/200.png" style={{width:600, height:'auto'}}/></div>
 
-**Paso 3.** Ponle un nombre a tu dispositivo e introduce el código de emparejamiento que se muestra en la pantalla de tu dispositivo y haz clic en **Create**.
+**Paso 3.** Nombra tu dispositivo e introduce el código de emparejamiento que se muestra en la pantalla de tu dispositivo y haz clic en **Create**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -254,7 +254,7 @@ La pantalla ePaper de la reTerminal E Serie solo admite redes WiFi de 2,4GHz, no
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/18.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Configuración de red mediante SenseCraft APP">
 
 Este método utiliza la aplicación móvil SenseCraft para configurar la red del dispositivo y añadirlo a tu cuenta de SenseCraft mediante Bluetooth.
 
@@ -274,7 +274,7 @@ Primero, descarga la aplicación SenseCraft. Puedes encontrarla buscando "SenseC
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 3.** Sigue las instrucciones en pantalla para poner tu dispositivo en modo de difusión Bluetooth. Normalmente se hace pulsando simultáneamente los botones de página **Up** y **Down**. Asegúrate de que el Bluetooth de tu teléfono esté activado. Toca **Scan** y la aplicación descubrirá los dispositivos cercanos. Selecciona tu dispositivo de la lista para conectarte.
+**Paso 3.** Sigue las instrucciones en pantalla para poner tu dispositivo en modo de difusión Bluetooth. Normalmente se hace pulsando simultáneamente los botones de página **Up** y **Down**. Asegúrate de que el Bluetooth de tu teléfono esté activado. Toca **Scan** y la aplicación detectará los dispositivos cercanos. Selecciona tu dispositivo de la lista para conectarte.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -290,11 +290,11 @@ El dispositivo solo se puede configurar mediante una red Wi‑Fi de 2,4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 6.** Tu reTerminal ahora aparecerá en tu lista de dispositivos en la pestaña principal **Device** de la aplicación, conectado correctamente a tu cuenta de SenseCraft.
+**Paso 6.** Tu reTerminal aparecerá ahora en tu lista de dispositivos en la pestaña principal **Device** de la aplicación, conectado correctamente a tu cuenta de SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 7.** Puedes tocar el dispositivo en la lista para ver su página de **Device Detail**. Desde aquí, puedes gestionar el dispositivo y subir fotos. Para un diseño de panel de control y lienzo más complejo, se te pedirá que uses la versión de navegador web de SenseCraft.
+**Paso 7.** Puedes tocar el dispositivo en la lista para ver su página de **Device Detail**. Desde aquí puedes gestionar el dispositivo y subir fotos. Para un diseño de panel de control y lienzo más complejo, se te pedirá que uses la versión de SenseCraft para navegador web.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -303,9 +303,9 @@ El dispositivo solo se puede configurar mediante una red Wi‑Fi de 2,4G.
 
 ### Actualización de firmware
 
-Después de que el dispositivo se añada correctamente a tu cuenta de SenseCraft, la plataforma comprobará automáticamente la versión del firmware. Si hay un firmware más reciente disponible, se te pedirá que lo actualices.
+Después de que el dispositivo se haya añadido correctamente a tu cuenta de SenseCraft, la plataforma comprobará automáticamente la versión del firmware. Si hay un firmware más reciente disponible, se te pedirá que lo actualices.
 
-También puedes comprobar la versión del firmware manualmente en cualquier momento:
+También puedes comprobar manualmente la versión del firmware en cualquier momento:
 
 **Paso 1.** En la página **Device**, busca tu reTerminal E1002 para ver sus detalles y toma nota de la **versión actual del firmware**.
 
@@ -317,11 +317,11 @@ También puedes comprobar la versión del firmware manualmente en cualquier mome
 
 **Paso 3.** Si la versión actual es más antigua que la última, sigue el flujo de 3 pasos en la página Firmware Flasher para actualizar:
 
-1. **Select your device** — conecta el reTerminal E1002 a tu ordenador mediante el cable USB‑C, asegúrate de que el interruptor de encendido esté en **ON**, luego haz clic en **Select** y elige tu dispositivo de la lista.
+1. **Select your device** — conecta el reTerminal E1002 a tu ordenador mediante el cable USB‑C, asegúrate de que el interruptor de encendido esté en **ON** y luego haz clic en **Select** y elige tu dispositivo de la lista.
 
 2. **Select firmware** — elige el firmware más reciente en el menú desplegable de opciones de lanzamiento.
 
-3. **Flash** — haz clic en **Flash** y espera a que la actualización se complete. Activa **Full Flash** solo si quieres restablecer el dispositivo al estado de fábrica (todos los datos, ajustes y diseños se borrarán).
+3. **Flash** — haz clic en **Flash** y espera a que se complete la actualización. Activa **Full Flash** solo si quieres restablecer el dispositivo al estado de fábrica (todos los datos, ajustes y diseños se borrarán).
 
 :::note
 
@@ -329,7 +329,7 @@ También puedes comprobar la versión del firmware manualmente en cualquier mome
 
 2. No es posible grabar el firmware correctamente cuando el dispositivo está apagado o en estado de suspensión. Si seleccionas el puerto correcto para tu dispositivo pero nunca ves el progreso de la grabación del firmware, puede que necesites activar el dispositivo pulsando el botón verde en la parte superior de la unidad e intentarlo de nuevo.
 
-3. **Haz un Flash estándar** para mantener tu configuración: se conservan el Wi‑Fi, los diseños desplegados y las imágenes. **Haz un Full Flash para empezar desde cero**: todos los datos, ajustes y diseños se borran (estado de fábrica).
+3. **Haz un Flash estándar** para mantener tu configuración: se conservan el Wi‑Fi, los diseños desplegados y las imágenes. **Haz un Full Flash para empezar de cero**: todos los datos, ajustes y diseños se borran (estado de fábrica).
 
 :::
 
@@ -337,21 +337,21 @@ También puedes comprobar la versión del firmware manualmente en cualquier mome
 
 Una vez que tu dispositivo esté emparejado, puedes empezar a usarlo para mostrar lo que quieras. Recomendamos **SenseCraft HMI**, una plataforma en la nube sin código que te permite diseñar y desplegar contenido en tu reTerminal E1002 con solo unos pocos clics.
 
-SenseCraft HMI tiene su propio Wiki dedicado con tutoriales completos y documentación de funciones. Para guías detalladas (configuración de cuenta, grabación de firmware, uso avanzado del editor, despliegue, etc.), consulta:
+SenseCraft HMI tiene su propio Wiki dedicado con tutoriales completos y documentación de funciones. Para guías detalladas (configuración de cuenta, flasheo de firmware, uso avanzado del editor, despliegue, etc.), consulta:
 
 - **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
 Dado que este artículo es una **Guía de inicio** del producto, no repetiremos el mismo contenido aquí; a continuación solo se muestra cómo visualizar rápidamente algo en tu reTerminal E1002.
 
-### Home — Empieza desde una plantilla de la comunidad
+### Home — Comienza desde una plantilla de la comunidad
 
-La forma más rápida de mostrar algo en tu pantalla es empezar desde una plantilla ya preparada. En la página **Home** de SenseCraft HMI encontrarás una colección grande y en continuo crecimiento de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplíegalo en tu reTerminal E1002 con un solo clic.
+La forma más rápida de mostrar algo en tu pantalla es comenzar desde una plantilla ya preparada. En la página **Home** de SenseCraft HMI encontrarás una amplia y continuamente creciente colección de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplíegalo en tu reTerminal E1002 con un solo clic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Workspace — Gestiona y diseña tu propio contenido
 
-La página **Workspace** es donde gestionas todas las páginas y el contenido que se muestran en el dispositivo actualmente vinculado. Desde aquí puedes:
+La página **Workspace** es donde gestionas todas las páginas y el contenido que se muestra en el dispositivo actualmente vinculado. Desde aquí puedes:
 
 - Crear y organizar tus propias páginas de diseño desde cero
 - Subir imágenes y organizarlas en presentaciones de diapositivas
@@ -360,7 +360,7 @@ La página **Workspace** es donde gestionas todas las páginas y el contenido qu
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/205.png" style={{width:1000, height:'auto'}}/></div>
 
-Una vez que tu diseño esté guardado, haz clic en **Deploy to Device**, selecciona tu reTerminal E1002 emparejado y el contenido se transmitirá de forma inalámbrica al dispositivo. La pantalla de tinta electrónica se actualizará para mostrar tu diseño, y podrás usar los botones de navegación izquierda/derecha del dispositivo para cambiar entre varias páginas si las has creado.
+Una vez que tu diseño esté guardado, haz clic en **Deploy to Device**, selecciona tu reTerminal E1002 emparejado y el contenido se transmitirá de forma inalámbrica al dispositivo. La pantalla de tinta electrónica se actualizará para mostrar tu diseño y podrás usar los botones de navegación izquierda/derecha del dispositivo para cambiar entre varias páginas si las has creado.
 
 Para todo lo demás —operaciones detalladas del editor, consejos y notas de lanzamiento— consulta el [SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/).
 
@@ -372,7 +372,7 @@ Para todo lo demás —operaciones detalladas del editor, consejos y notas de la
 
 El botón de actualización en la parte superior del dispositivo cumple varias funciones:
 
-- **Pulsación corta**: actualiza manualmente la pantalla y comprueba si hay contenido nuevo desde la plataforma SenseCraft. El zumbador emitirá un pitido para confirmar la acción. Este botón también se usa habitualmente para activar el dispositivo. Puedes usar este botón para activar un dispositivo cuando se ha puesto en reposo y normalmente un comando de actualización del panel de control no está disponible de inmediato para el dispositivo.
+- **Pulsación corta**: actualiza manualmente la pantalla y comprueba si hay contenido nuevo desde la plataforma SenseCraft. El zumbador emitirá un pitido para confirmar la acción. Este botón también se utiliza habitualmente para activar el dispositivo. Puedes usar este botón para activar un dispositivo cuando se ha puesto en reposo y normalmente un comando de actualización del panel de control no está disponible inmediatamente para el dispositivo.
 
 - **Pulsación larga** (funcionalidad futura): activará el modo de entrada de voz.
 
@@ -411,10 +411,10 @@ Cuando funciona con alimentación por batería:
 
 - La duración de la batería depende de la frecuencia de actualización (normalmente 3 meses con una carga completa y la configuración predeterminada)
 
-- El dispositivo mostrará un icono de batería baja en la esquina superior derecha cuando el nivel de batería sea inferior al 20 %
+- El dispositivo mostrará un icono de batería baja en la esquina superior derecha cuando el nivel de batería sea inferior al 20%
 
 :::tip
-Si quieres escribir algo de código por tu cuenta para leer el voltaje de la batería, será más preciso añadir un retardo de 10 ms antes de la función analogRead().
+Si quieres escribir algo de código por tu cuenta para leer el voltaje de la batería, será más preciso añadir un retardo de 10 ms antes de la función analogRead().
 :::
 
 ### Pines de expansión
@@ -439,7 +439,7 @@ El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pi
 			<td>HEADER_3V3</td>
 			<td>-</td>
 			<td>Alimentación</td>
-			<td>Fuente de alimentación de 3,3 V para dispositivos externos</td>
+			<td>Fuente de alimentación de 3,3 V para dispositivos externos</td>
 		</tr>
 		<tr>
 			<td>2</td>
@@ -467,14 +467,14 @@ El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pi
 			<td>ESP_IO17/TX1</td>
 			<td>GPIO17</td>
 			<td>GPIO/UART TX</td>
-			<td>GPIO o señal de transmisión (TX) UART</td>
+			<td>GPIO o señal de transmisión UART (TX)</td>
 		</tr>
 		<tr>
 			<td>6</td>
 			<td>ESP_IO18/RX1</td>
 			<td>GPIO18</td>
 			<td>GPIO/UART RX</td>
-			<td>GPIO o señal de recepción (RX) UART</td>
+			<td>GPIO o señal de recepción UART (RX)</td>
 		</tr>
 		<tr>
 			<td>7</td>
@@ -499,21 +499,21 @@ El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pi
 
 - Asegúrate de que el interruptor de encendido esté en la posición ON
 - Conecta el cable USB‑C para cargar el dispositivo
-- Comprueba si el LED rojo está siempre encendido (indicando que está cargando)
+- Comprueba si el LED rojo está siempre encendido (indicando carga)
 - Si utilizas alimentación por batería, asegúrate de que la batería esté correctamente conectada y cargada
 
-### P2: No se puede conectar a la red Wi‑Fi
+### P2: No se puede conectar a la Wi‑Fi
 
 - Verifica que estés introduciendo la contraseña Wi‑Fi correcta
 - Asegúrate de que tu red Wi‑Fi esté operativa
-- Comprueba si tu router Wi‑Fi es compatible con redes de 2,4 GHz (5 GHz no es compatible)
+- Comprueba si tu router Wi‑Fi es compatible con redes de 2,4 GHz (5 GHz no es compatible)
 - Intenta colocar el dispositivo más cerca de tu router Wi‑Fi
 
 ### P3: La pantalla no se actualiza
 
 - Pulsa el botón de actualización para activar manualmente una actualización
-- Verifica que el dispositivo esté conectado a la red Wi‑Fi (sin icono de desconexión en la esquina)
-- Comprueba tu cuenta de SenseCraft para asegurarte de que el panel de control esté correctamente implementado
+- Verifica que el dispositivo esté conectado a la Wi‑Fi (sin icono de desconexión en la esquina)
+- Comprueba tu cuenta de SenseCraft para asegurarte de que el panel de control esté desplegado correctamente
 - Si el problema persiste, intenta reiniciar el dispositivo
 - Si el dispositivo sigue sin responder después de reiniciarlo, vuelve a grabar el firmware correspondiente en la plataforma SenseCraft HMI y comprueba si el dispositivo puede actualizarse con normalidad
 
@@ -544,7 +544,7 @@ Abre la app **CH34xVCPDriver** desde Launchpad, haz clic en **Install**, luego v
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
 </div>
 
-**Paso 3. Conectar y verificar**
+**Paso 3. Conecta y verifica**
 Asegúrate de que el **interruptor de encendido del dispositivo esté en ON** y utiliza un **cable USB‑C de datos** (no solo de carga). Abre Terminal y ejecuta:
 ```bash
 ls /dev/tty.wch*
@@ -556,7 +556,7 @@ Si ves la ruta del dispositivo en la salida, el controlador está instalado corr
 
 ### P6: El dispositivo no carga
 
-Si ves que el dispositivo no se está cargando, intenta sustituir el cabezal de carga por un adaptador de corriente de una marca que no sea Apple.
+Si ves que el dispositivo no se está cargando, intenta sustituir el cabezal de carga por un adaptador de alimentación de una marca que no sea Apple.
 
 ## Recursos
 
