@@ -5,7 +5,7 @@ keywords:
   - mmwave
   - radar
   - MR60FDA2
-image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
+image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /ha_with_mr60fda2
 sidebar_position: 1
 last_update:
@@ -39,7 +39,7 @@ MR60FDA2は、XIAO ESP32C6マイクロコントローラーとの統合用に設
          <th>MR60FDA2 mmWaveセンサー</th>
       </tr>
       <tr>
-         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
+         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
       </tr>
       <tr>
          <td>
