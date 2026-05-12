@@ -5,7 +5,7 @@ keywords:
   - mmwave
   - radar
   - MR60FDA2
-image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
+image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /getting_started_with_mr60fda2_mmwave_kit
 sku: 114993388
 sidebar_position: 0

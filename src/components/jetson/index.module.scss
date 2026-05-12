@@ -1563,6 +1563,214 @@
     }
   }
 
+  // ========== Seeed Jetson DevelopTool Styles ==========
+  .devtool_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .devtool_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fcf0 100%);
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #76b900;
+      box-shadow: 0 8px 32px rgba(118, 185, 0, 0.15);
+    }
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .devtool_info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .devtool_header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: rgba(118, 185, 0, 0.12);
+    color: #76b900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .devtool_title_group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .devtool_subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #76b900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .devtool_main_title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+
+  .devtool_description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .devtool_features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_feature_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+  }
+
+  .devtool_feature_icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1.4;
+  }
+
+  .devtool_feature_text {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .devtool_tags_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .devtool_tag {
+    padding: 4px 12px;
+    background: rgba(118, 185, 0, 0.1);
+    color: #5a9100;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+
+  .devtool_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .devtool_cta_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #76b900;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #5a9100;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+  }
+
+  .devtool_cta_secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #76b900;
+      color: #76b900;
+    }
+  }
+
+  .devtool_video {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: #f5f7fa;
+    gap: 12px;
+  }
+
+  .devtool_video_label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .devtool_video_frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
   // ========== Dark Mode Styles ==========
   &.dark {
     // Dark Mode Page Tabs
@@ -2223,6 +2431,66 @@
 
     .bsp_main_card:hover .bsp_arrow {
       background: linear-gradient(135deg, #76b900 0%, #5a9400 100%);
+    }
+
+    // Dark Mode Seeed Jetson DevelopTool
+    .devtool_card {
+      background: linear-gradient(135deg, #242526 0%, #1f2b18 100%);
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        box-shadow: 0 8px 32px rgba(118, 185, 0, 0.25);
+      }
+    }
+
+    .devtool_icon {
+      background: rgba(118, 185, 0, 0.18);
+      color: #8bc34a;
+    }
+
+    .devtool_main_title {
+      color: #f5f6f7;
+    }
+
+    .devtool_subtitle {
+      color: #8bc34a;
+    }
+
+    .devtool_description {
+      color: #b0b0b0;
+    }
+
+    .devtool_feature_item {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .devtool_feature_text {
+      color: #ccc;
+    }
+
+    .devtool_tag {
+      background: rgba(118, 185, 0, 0.2);
+      color: #8bc34a;
+    }
+
+    .devtool_cta_secondary {
+      background: #1b1b1d;
+      color: #f5f6f7;
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        color: #8bc34a;
+      }
+    }
+
+    .devtool_video {
+      background: #1b1b1d;
+    }
+
+    .devtool_video_label {
+      color: #a0a0a0;
     }
   }
 

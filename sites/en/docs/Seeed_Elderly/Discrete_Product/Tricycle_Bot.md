@@ -62,7 +62,7 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 **This kit does not include the Arduino/Genuino 101 and breadboard.**
 
-## Assembly Introdutions
+## Assembly Introductions
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/1.png)
 
@@ -214,7 +214,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%" />
 </div>
 
-1. [Assemble the Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
+1. [Assemble the Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introductions)
 2. Fix the Grove modules on the shores and top plate.
 3. Connect Grove Buzzer to **D4**, Grove Ultrasonic Ranger to **D5** and LED strip to **D6** of the Base Shield.
 4. Finish it!
