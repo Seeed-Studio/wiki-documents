@@ -80,7 +80,7 @@ reTerminal E1001 は、3 か月という優れたバッテリー駆動時間を�
 		<tr>
 			<td align="center"><strong>センサ</strong></td>
 			<td align="center">温度・湿度センサ</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>マイク</strong></td>
 			<td align="center">音声インタラクション用途向けに予約</td>
