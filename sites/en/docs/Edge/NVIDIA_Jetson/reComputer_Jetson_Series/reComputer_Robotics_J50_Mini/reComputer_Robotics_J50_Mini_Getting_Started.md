@@ -8,12 +8,13 @@ keywords:
   - Getting Started
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_robotics_j50_mini_getting_started
+sku: E2025123101
 last_update:
   date: 05/12/2026
-  author: Seeed Studio
+  author: Dayu
 createdAt: '2026-05-12'
 updatedAt: '2026-05-12'
-url: https://wiki.seeedstudio.com/recomputer_robotics_j50_mini_getting_started/
+url: https://wiki.seeedstudio.com/ai_robotics_recomputer_robotics_j50_mini_getting_started/
 ---
 
 # Getting Started with reComputer Robotics J50 Mini
