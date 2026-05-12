@@ -1,6 +1,6 @@
 ---
-description: mmWave Radar Sensor Introdution
-title: mmWave Radar Sensor Introdution
+description: mmWave Radar Sensor Introduction
+title: mmWave Radar Sensor Introduction
 keywords:
   - Grove
   - mmWave Radar Sensor
@@ -14,7 +14,7 @@ updatedAt: '2025-09-02'
 url: https://wiki.seeedstudio.com/mmwave_radar_Intro/
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:'auto', height:'auto'}}/></div>
 
 Welcome to discover Seeed Studio's mmWave Radar Sensors. This page is designed to be a comprehensive source of information, guiding you through all aspects of these sensors.
 

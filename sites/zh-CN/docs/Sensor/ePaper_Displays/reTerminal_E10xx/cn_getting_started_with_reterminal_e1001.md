@@ -9,7 +9,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001/
 ---
 import Tabs from '@theme/Tabs';
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-reTerminal E1001 是一款 7.5 英寸开源黑白电子纸显示屏，拥有长达 3 个月的卓越电池续航。其由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 零代码 UI 平台，可轻松创建仪表盘，同时也支持 Home Assistant、TRMNL E-ink dashboard、Arduino 和 ESP-IDF 进行进一步开发。无论是用于智能家居仪表盘可视化、办公显示，还是教育项目，这款开箱即用的 HMI 设备都能在一体化的优雅外观中提供精美的显示效果和灵活的自定义能力。
+reTerminal E1001 是一款 7.5 英寸开源黑白电子纸显示屏，拥有长达 3 个月的卓越续航时间。其由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 零代码 UI 平台，可轻松创建仪表盘，同时也支持 Home Assistant、TRMNL E-ink dashboard、Arduino 和 ESP-IDF 进行进一步开发。无论是用于智能家居仪表盘可视化、办公显示，还是教育项目，这款开箱即用的 HMI 设备都能在一体化的优雅外观中提供精美的显示效果和灵活的自定义能力。
 
 ### 特性
 
@@ -119,11 +119,11 @@ reTerminal E1001 硬件包括：
 3. **麦克风**
 4. **MicroSD 卡槽**：用于扩展存储
 5. **电源开关**：位于背面，用于开启/关闭设备电源
-6. **状态指示灯**：用户指示灯（绿色）
-7. **电源指示灯**：充电指示灯（红色）
+6. **状态 LED**：用户指示灯（绿色）
+7. **电源 LED**：充电指示灯（红色）
 8. **USB-C 接口**：用于充电和固件更新
 9. **扩展接口**：8 针扩展排针，提供 VDD、GND、UART、I2C 和 GPIO 连接
-10. **支架安装孔位**：设备背面底部内嵌螺母（螺丝孔），用于安装 3D 打印支架
+10. **支架安装嵌件**：设备背面底部的嵌入式螺母（螺丝孔），用于安装 3D 打印支架
 
 ## 快速上手
 
@@ -145,7 +145,7 @@ reTerminal E1001 硬件包括：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 ::::note
-该支架提供固定的观看角度，无法调节。此固定角度旨在在大多数使用场景下提供最佳可视性。
+该支架提供固定的观看角度，无法调节。此固定位置旨在在大多数使用场景下提供最佳可视性。
 ::::
 
 **步骤 3.**（可选）如果你计划将设备用作电子相框或需要额外存储空间，请插入一张 microSD 卡。
@@ -164,14 +164,14 @@ reTerminal E 系列电子纸显示屏仅支持容量不超过 32GB、格式为 F
 <Tabs>
 <TabItem value="Windows" label="Windows" default>
 
-- Windows 11 系统通常默认已包含该驱动
-- 对于 Windows 10 及更早版本，你可能需要从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)下载并安装 CH341 驱动
+- Windows 11 系统通常已默认包含该驱动
+- 对于 Windows 10 及更早版本，你可能需要从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH341SER_ZIP.html) 下载并安装 CH341 驱动
 
 </TabItem>
 
 <TabItem value="MacOS" label="MacOS">
 
-从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)下载并安装 CH34X 驱动
+从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) 下载并安装 CH34X 驱动
 
 </TabItem>
 
@@ -192,16 +192,16 @@ reTerminal E 系列电子纸显示屏仅支持容量不超过 32GB、格式为 F
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/1.png" style={{width:600, height:'auto'}}/></div><br />
 
-**步骤 3.** 绿色用户指示灯会点亮约 30 秒，表示设备已上电并正在初始化。在 30 秒内如果没有对设备进行任何操作，为了保证电量，设备会自动进入睡眠模式，指示灯会自动熄灭。
+**步骤 3.** 绿色用户 LED 将点亮约 30 秒，表示设备已上电并正在初始化。在 30 秒内如果没有对设备进行任何操作，为了保证电量，设备会自动进入睡眠模式，LED 指示灯会自动熄灭。
 
 :::tip
-因此，我们需要在这段时间内完成后续的网络配置步骤。当设备进入睡眠后，你将无法找到设备的热点。如果出现这种情况，可以按一次设备上的绿色唤醒按键来唤醒设备。
+因此，我们需要在这段时间内完成后续的网络配置步骤。当设备进入睡眠后，你将无法找到设备的热点。如果出现这种情况，可以按一次设备上的绿色唤醒按钮来唤醒设备。
 :::
 
 ### 网络配置
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup via PC" label="通过电脑进行网络配置" default>
 
 **步骤 1.** 使用手机或电脑连接设备的 Wi-Fi 热点。AP 名称会显示在屏幕上（无需密码）。网络凭据为 `reTerminal E1001-{MAC Adress}`。
 
@@ -246,7 +246,7 @@ reTerminal E 系列电子纸显示屏仅支持 2.4GHz WiFi 网络，不支持 5G
 </TabItem>
 <TabItem value="Network Setup vis SenseCraft APP" label="通过 SenseCraft APP 进行网络设置">
 
-这种方式使用 SenseCraft 手机应用，通过蓝牙配置设备网络并将其添加到你的 SenseCraft 账号中。
+这种方法使用 SenseCraft 手机应用，通过蓝牙配置设备网络并将其添加到你的 SenseCraft 账号中。
 
 首先，下载 SenseCraft App。你可以在 Google Play Store 或 Apple App Store 中搜索 "SenseCraft" 获取。或者，你也可以从以下网站下载。
 
@@ -264,7 +264,7 @@ reTerminal E 系列电子纸显示屏仅支持 2.4GHz WiFi 网络，不支持 5G
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 3.** 按照屏幕提示将设备置于蓝牙广播模式。通常通过同时按下 **Up** 和 **Down** 翻页按键来完成。确保手机的蓝牙已开启。点击 **Scan**，应用会搜索附近的设备。从列表中选择你的设备进行连接。
+**步骤 3.** 按照屏幕上的指示将设备置于蓝牙广播模式。通常通过同时按下 **Up** 和 **Down** 翻页按键来完成。确保手机的蓝牙已开启。点击 **Scan**，应用会搜索附近的设备。从列表中选择你的设备进行连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -280,7 +280,7 @@ reTerminal E 系列电子纸显示屏仅支持 2.4GHz WiFi 网络，不支持 5G
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**步骤 6.** 你的 reTerminal 现在会出现在应用主界面的 **Device** 选项卡中的设备列表里，并已成功连接到你的 SenseCraft 账号。
+**步骤 6.** 你的 reTerminal 现在会出现在应用主界面的 **Device** 选项卡设备列表中，并已成功连接到你的 SenseCraft 账号。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -307,7 +307,7 @@ reTerminal E 系列电子纸显示屏仅支持 2.4GHz WiFi 网络，不支持 5G
 
 **步骤 3.** 如果当前版本低于最新版本，请按照 Firmware Flasher 页面上的 3 步流程进行更新：
 
-1. **选择你的设备** — 使用 USB-C 线将 reTerminal E1001 连接到电脑，确保电源开关为 **ON**，然后点击 **Select** 并在列表中选择你的设备。
+1. **选择你的设备** — 使用 USB-C 线将 reTerminal E1001 连接到电脑，确保电源开关处于 **ON** 状态，然后点击 **Select** 并在列表中选择你的设备。
 
 2. **选择固件** — 在发布选项下拉菜单中选择最新固件。
 
@@ -317,7 +317,7 @@ reTerminal E 系列电子纸显示屏仅支持 2.4GHz WiFi 网络，不支持 5G
 
 1. 更新固件可以确保最佳性能并获取最新功能。
 
-2. 当设备处于关机或睡眠状态时，无法正确烧录固件。如果你选择了正确的设备端口但始终看不到固件烧录进度，可能需要按下设备顶部的绿色按键唤醒设备，然后重试。
+2. 当设备处于关机或睡眠状态时，无法正确烧录固件。如果你为设备选择了正确的端口，但始终看不到固件烧录进度，你可能需要按下设备顶部的绿色按键唤醒设备，然后重试。
 
 3. **执行标准 Flash** 可保留你的配置：Wi-Fi、已部署的设计和图片都会被保留。**执行 Full Flash 重新开始**：所有数据、设置和设计都会被清除（恢复出厂状态）。
 
@@ -331,15 +331,15 @@ SenseCraft HMI 拥有专门的 Wiki，提供完整的教程和功能文档。关
 
 - **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
-由于本文是产品的 **快速上手**，我们不会在此重复相同内容——下面仅展示如何在你的 reTerminal E1001 上快速显示一些内容。
+由于本文是产品 **快速上手**，我们不会在此重复相同内容——下面仅展示如何在你的 reTerminal E1001 上快速显示一些内容。
 
-### Home —— 从社区模板开始
+### Home — 从社区模板开始
 
-最快在屏幕上显示内容的方式是从现成模板开始。在 SenseCraft HMI 的 **Home** 页面，你可以找到一个庞大且持续增长的模板集合，这些模板由社区贡献——仪表盘、时钟、天气面板、语录墙、日历、相框等。浏览图库，选择你喜欢的设计，一键部署到你的 reTerminal E1001 上。
+最快在屏幕上显示内容的方法是从现成模板开始。在 SenseCraft HMI 的 **Home** 页面，你会看到一个由社区贡献的大量且持续增长的模板集合——仪表盘、时钟、天气面板、语录墙、日历、相框等。浏览模板库，选择你喜欢的设计，一键部署到你的 reTerminal E1001 上。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
-### Workspace —— 管理并设计你自己的内容
+### Workspace — 管理和设计你自己的内容
 
 **Workspace** 页面用于管理当前绑定设备上显示的所有页面和内容。在这里你可以：
 
@@ -362,13 +362,13 @@ SenseCraft HMI 拥有专门的 Wiki，提供完整的教程和功能文档。关
 
 设备顶部的刷新按键具有多种功能：
 
-- **单击**：手动刷新显示并从 SenseCraft 平台检查新内容。蜂鸣器会响一声以确认操作。该按键也常用于唤醒设备。当设备进入睡眠状态且仪表盘刷新指令通常无法立即发送到设备时，你可以使用此按键唤醒设备。
+- **单击**：手动刷新显示并从 SenseCraft 平台检查新内容。蜂鸣器会响一声以确认操作。该按键也常用于唤醒设备。当设备进入睡眠状态且通常无法立即接收到仪表盘刷新指令时，你可以使用此按键唤醒设备。
 
 - **长按**（未来功能）：将激活语音输入模式。
 
 ### 导航按键
 
-如果你的仪表盘包含多个页面，左右按键可用于在页面之间导航：
+如果你的仪表盘包含多个页面，可以使用左右按键在页面之间导航：
 
 - **左键**：跳转到上一页
 
@@ -380,9 +380,9 @@ SenseCraft HMI 拥有专门的 Wiki，提供完整的教程和功能文档。关
 
 如果你需要连接到不同的 Wi-Fi 网络：
 
-**步骤 1.** 同时按住两个导航按键（左和右）2 秒钟。
+**步骤 1.** 同时按住左右两个导航按键 2 秒。
 
-**步骤 2.** 设备将进入 Wi-Fi 配置模式，你可以再次按照 [Network Setup](#Network-Setup) 的步骤连接到新网络。
+**步骤 2.** 设备将进入 Wi-Fi 配置模式，你可以再次按照 [Network Setup](#network-setup) 的步骤连接到新网络。
 
 ### LED 指示灯
 
@@ -397,19 +397,19 @@ SenseCraft HMI 拥有专门的 Wiki，提供完整的教程和功能文档。关
 
 当使用电池供电时：
 
-- 设备将在两次刷新之间自动进入低功耗模式
+- 设备将在每次刷新之间自动进入低功耗模式
 
 - 电池寿命取决于刷新频率（在默认设置下，满电情况下通常可使用 3 个月）
 
 - 当电池电量低于 20% 时，设备会在右上角显示低电量图标
 
 :::tip
-如果你想自己编写代码来读取电池电压，在 `analogRead()` 函数前增加 10ms 延时会更加精确。
+如果你想自己编写代码来读取电池电压，在 `analogRead()` 函数前添加 10ms 延时会更加精确。
 :::
 
 ### 扩展引脚
 
-reTerminal E1001 配备了一个 8 针扩展排针（J2），可用于连接外部传感器、模块或其他硬件，以扩展设备功能。该扩展排针引出了多个 ESP32-S3 GPIO 引脚和通信接口，使其成为 DIY 项目中非常灵活的连接点。
+reTerminal E1001 配备了一个 8 针扩展排针（J2），可用于连接外部传感器、模块或其他硬件，以扩展设备的功能。该扩展排针引出了多个 ESP32-S3 GPIO 引脚和通信接口，使其成为 DIY 项目中一个多功能的连接点。
 
 #### 扩展排针引脚定义
 
@@ -419,7 +419,7 @@ reTerminal E1001 配备了一个 8 针扩展排针（J2），可用于连接外�
  <table align="center">
   <tr>
    <th>引脚（从上到下）</th>
-   <th>标号</th>
+   <th>标识</th>
    <th>ESP32-S3 引脚</th>
    <th>功能</th>
    <th>描述</th>
@@ -522,7 +522,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - 检查你的 Wi-Fi 路由器是否支持 2.4GHz 网络（不支持 5GHz）
 - 尝试将设备放置在更靠近 Wi-Fi 路由器的位置
 
-### Q3：显示不更新
+### Q3：显示未更新
 
 - 按下刷新按钮手动触发一次更新
 - 确认设备已连接到 Wi-Fi（角落中没有断连图标）
@@ -534,7 +534,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 
 - 设备会自动尝试重新连接已知网络
 - 重新连接后，Wi-Fi 断连图标会消失
-- 如果仍无法重新连接，请按照上文的网络重置步骤操作
+- 如果无法重新连接，请按照上文的网络重置步骤操作
 
 ### Q5：在 macOS 上找不到串口（COM）
 
@@ -581,7 +581,7 @@ ls /dev/tty.wch*
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
