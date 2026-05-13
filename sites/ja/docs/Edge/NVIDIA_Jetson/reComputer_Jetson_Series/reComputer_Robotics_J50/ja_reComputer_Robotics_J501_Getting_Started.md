@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、reComputer Jetson Robotics J501キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、デュアルM.2 Key Mスロット、10GbE + 4x 1GbE Ethernet、USB 3.0、4系統のCANインターフェース（2ネイティブ + 2 SPI-to-CAN）、UART、DI/DO、I2S、GMSL2カメラ拡張など、さまざまなインターフェースの実用的なガイドを網羅し、ユーザーがJ501プラットフォームでのロボット開発を素早く開始できるよう支援します。
+description: このWikiでは、reComputer Jetson Robotics J501キャリアボードのハードウェア機能とインターフェースの使用方法について包括的に紹介します。詳細な仕様、対応モジュール、セットアップ手順、デュアルM.2 Key Mスロット、10GbE + 4x 1GbE Ethernet、USB 3.0、4系統のCANインターフェース（2ネイティブ + 2 SPI-to-CAN）、UART、DI/DO、I2S、GMSL2カメラ拡張など、さまざまなインターフェースの実用的なガイドを網羅し、ユーザーがJ501プラットフォーム上でのロボティクス開発を素早く開始できるよう支援します。
 title: Jetpack のフラッシュ && インターフェースの使用
 tags:
   - reComputer Robotics J501
@@ -14,18 +14,18 @@ sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 12/09/2025
   author: Lorraine
-createdAt: '2026-01-12'
-updatedAt: '2026-03-04'
+createdAt: '2026-01-14'
+updatedAt: '2026-03-05'
 url: https://wiki.seeedstudio.com/ja/ai_robotics_recomputer_j501_robotics_getting_started/
 ---
 
-# Robotics J501 ハードウェアと入門ガイド
+# Robotics J501 ハードウェアと入門
 
-reComputer Robotics J501 は、高度なロボットおよび産業用途向けに設計された高性能エッジAIキャリアボードです。MAXNモードのNVIDIA Jetson AGX Orinモジュール（32GB/64GB）に対応し、最大275 TOPSのAI性能を発揮します。
+reComputer Robotics J501 は、高度なロボティクスおよび産業用途向けに設計された高性能エッジAIキャリアボードです。MAXNモードのNVIDIA Jetson AGX Orinモジュール（32GB/64GB）に対応し、最大275 TOPSのAI性能を発揮します。
 
 1x 10GbEおよび4x 1GbE Ethernetポート、NVMe SSD用デュアルM.2 Key Mスロット、5GおよびWi-Fi/BTモジュール用M.2スロット、複数のUSB 3.0ポート、4系統のCANインターフェース（2ネイティブ + 2 SPI-to-CAN）、GMSL2カメラ拡張、DI/DO、I2S、UART、RS485を含む包括的なI/Oなど、豊富な接続オプションを備え、複雑なマルチセンサーフュージョンとリアルタイムAI処理のための強力なロボットブレインとして機能します。
 
-JetPack 6.2.1 と Linux BSP をプリインストールしており、シームレスなデプロイを実現します。NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートすることで、J501 は大規模言語モデルによる意思決定と実ロボット制御をつなぎ、すぐに使えるインターフェースと最適化されたAIフレームワークによって自律ロボット開発を加速します。
+JetPack 6.2.1 と Linux BSP がプリインストールされており、シームレスなデプロイを実現します。NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1 などのフレームワークをサポートすることで、J501 は大規模言語モデルによる意思決定と物理ロボット制御をつなぎ、すぐに使えるインターフェースと最適化されたAIフレームワークによって自律ロボット開発を加速します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
@@ -40,11 +40,11 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
 ## 主な特長  
 
 - **高性能AI**: Jetson AGX Orin 32/64GBモジュール、Ampere GPUおよびDLAエンジンにより最大275 TOPS
-- **豊富な接続性**: デュアルM.2 Key M（NVMe）、Key E（WiFi/BT）+ Key B（5G）、1x 10GbE + 4x 1GbE、3x USB 3.0、2x USB-C
+- **豊富な接続性**: デュアルM.2 Key M（NVMe）；Key E（WiFi/BT）+ Key B（5G）；1x 10GbE + 4x 1GbE；3x USB 3.0；2x USB-C
 - **4系統CAN-FD**: 電気的絶縁付き 2x ネイティブ + 2x SPI-to-CAN インターフェース
 - **GMSL2 ビジョン**: 高速カメラ接続用シングルGMSL2インターフェース（1x）
-- **産業グレード設計**: 19〜48V DC入力、-10〜60°C動作、絶縁インターフェース、JetPack 6.2.1プリインストール
-- **ロボティクス対応**: ROS 2/1、Isaac ROS対応、DI/DO、I2S、UART、RS485、AMRおよび自動化向けに最適化
+- **産業グレード設計**: 19〜48V DC入力；-10〜60°C動作；絶縁インターフェース；JetPack 6.2.1 プリインストール
+- **ロボティクス対応**: ROS 2/1、Isaac ROS サポート；DI/DO、I2S、UART、RS485；AMRおよび自動化向けに最適化
 
 ## 仕様
 
@@ -123,7 +123,7 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
     </tr>
     <tr>
       <th>GMSL</th>
-      <td colSpan={2}>2x ミニFakraコネクタ（8x GMSL2カメラ用）（オプション）</td>
+      <td colSpan={2}>2x Mini-Fakra コネクタ（8x GMSL2 カメラ用）（オプション）</td>
     </tr>
     <tr>
       <th>シリアル</th>
@@ -147,11 +147,11 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
     </tr>
     <tr>
       <th>RTC</th>
-      <td colSpan={2}>1x CR1220 バッテリホルダ、1x RTC 2ピンヘッダ</td>
+      <td colSpan={2}>1x CR1220 電池ホルダー、1x RTC 2ピンヘッダ</td>
     </tr>
     <tr>
       <th>電源入力</th>
-      <td colSpan={2}>5.08mm端子台経由 19〜48V DC（電源アダプタは付属しません）</td>
+      <td colSpan={2}>5.08mm 端子台経由 19〜48V DC（電源アダプタは付属しません）</td>
     </tr>
     <tr>
       <th>消費電力</th>
@@ -166,13 +166,13 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
       <td colSpan={2}>
         寸法: 210mm x 180mm x 87mm（スタンド含む）<br/>
         重量: 200g<br/>
-        取り付け方法: デスク / 壁掛け / DINレール（DINブラケットは付属品に含まれます）<br/>
+        取り付け方法: デスク / 壁 / DINレール（DINブラケットは付属品に含まれます）<br/>
         動作温度: -10℃〜60℃（25W）/ -10℃〜55℃（MAXN）
       </td>
     </tr>
     <tr>
       <th>保証</th>
-      <td colSpan={2}>2年間</td>
+      <td colSpan={2}>2年</td>
     </tr>
     <tr>
       <th>認証</th>
@@ -276,7 +276,7 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
       <th>Jetpack バージョン</th>
       <th>Jetson モジュール</th>
       <th> GMSL </th>
-      <th>Download Link1</th>
+      <th>ダウンロードリンク1</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -299,21 +299,21 @@ JetPack 6.2.1 と Linux BSP をプリインストールしており、シーム�
 </div>
 
 :::danger
-Jetpack6 のイメージファイルは約 **14.2GB** のサイズがあり、ダウンロードには約60分かかります。ダウンロードが完了するまでお待ちください。
+Jetpack6 のイメージファイルは約 **14.2GB** あり、ダウンロードにはおよそ60分かかります。完了するまでお待ちください。
 :::
 
 :::info
-ダウンロードしたファームウェアの完全性を確認するには、SHA256ハッシュ値を比較します。
+ダウンロードしたファームウェアの完全性を検証するには、SHA256 ハッシュ値を比較してください。
 
-Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。出力されたハッシュがWikiに記載されているSHA256ハッシュと一致すれば、ダウンロードしたファームウェアが完全で破損していないことが確認できます。
+Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki に記載されている SHA256 ハッシュと一致すれば、ダウンロードしたファームウェアが完全かつ破損していないことが確認できます。
 :::
 
-⚙️ **SEEED の Jetson キャリアボード向けのすべての `.dts` ファイルおよびその他のソースコードは、** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra) からダウンロードできます
+⚙️ **SEEED の Jetson キャリアボード向けのすべての `.dts` ファイルおよびその他のソースコードは、次の場所からダウンロードできます：** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
 
-### Force Recovery モードに入る
+### 強制リカバリーモードに入る
 
 :::info
-インストール手順に進む前に、ボードが Force Recovery モードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードが強制リカバリーモードになっていることを確認する必要があります。
 :::
 
 <details>
@@ -326,18 +326,18 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマ�
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png" />
 </div>
 
-**Step 2.** ピンを使用して RECOVERY ホールに差し込み、リカバリボタンを押し続けます。
+**Step 2.** ピンを使用して RECOVERY ホールに差し込み、リカバリーボタンを押し続けます。
 
 **Step 3.** 電源を接続します。
 
-**Step 4.** リカバリボタンを離します。
+**Step 4.** リカバリーボタンを離します。
 
-**Step 5.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返された内容に以下のいずれかの出力が含まれていれば、ボードは Force Recovery モードになっています。
+**Step 5.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
 
 - AGX Orin 32GB の場合: **0955:7223 NVidia Corp**
 - AGX Orin 64GB の場合: **0955:7023 NVidia Corp**
 
-以下の画像は AGX Orin 32GB の例です:
+以下の画像は AGX Orin 32GB の例です：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png"/>
@@ -347,7 +347,7 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>` コマ�
 
 ### Jetson へのフラッシュ
 
-**Step 1:** ダウンロードしたイメージファイルを解凍します:
+**Step 1:** ダウンロードしたイメージファイルを解凍します：
 
 ```bash
 cd <path-to-image>
@@ -355,7 +355,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
-**Step 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします:
+**Step 2:** 次のコマンドを実行して、JetPack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -363,7 +363,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュ処理が正常に完了すると、次のような出力が表示されます
+フラッシュ処理が成功すると、次のような出力が表示されます。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -371,14 +371,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドの実行には 2〜10 分かかる場合があります。
 :::
 
-**Step 3:** Robotics J501 をディスプレイに接続します。PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します:
+**Step 3:** Robotics J501 を PD から HDMI へのアダプタを使用して HDMI 入力対応ディスプレイに接続するか、PD ケーブルを使用して PD 入力対応ディスプレイに直接接続し、初期設定を完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-**System Configuration** を、ニーズに応じて完了してください。
+ニーズに応じて **System Configuration** を完了してください。
 :::
 
 ## 🔌 インターフェースの使用方法
@@ -389,7 +389,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 J501 には、PCIe Gen4x4 NVMe SSD に対応したデュアル M.2 Key M スロットが搭載されており、高速なストレージ拡張が可能です。
 
-### 対応 SSD は以下の通りです
+### 対応 SSD は次のとおりです
 
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
@@ -407,14 +407,14 @@ J501 には、PCIe Gen4x4 NVMe SSD に対応したデュアル M.2 Key M スロ�
 
 Jetson デバイスでターミナルを開き、次のコマンドを入力して SSD の読み書き速度をテストします。
 
-**Step 1.** テスト用ディレクトリとファイルを作成します:
+**Step 1.** テスト用ディレクトリとファイルを作成します：
 
 ```bash
 mkdir ssd
 touch ~/ssd/test
 ```
 
-**Step 2.** 書き込み性能をテストします:
+**Step 2.** 書き込み性能をテストします：
 
 ```bash
 dd if=/dev/zero of=/home/$USER/ssd/test bs=1024M count=5 conv=fdatasync
@@ -424,7 +424,7 @@ dd if=/dev/zero of=/home/$USER/ssd/test bs=1024M count=5 conv=fdatasync
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_m2.png"/>
 </div>
 
-**Step 3.** SSD 情報を確認します:
+**Step 3.** SSD 情報を確認します：
 
 ```bash
 nvme list
@@ -440,7 +440,7 @@ nvme list
 
 ## M.2 Key E (WiFi/BT)
 
-M.2 Key E スロットは、Wi-Fi 6 および Bluetooth 5.x モジュールに対応しており、ワイヤレス接続を提供します。
+M.2 Key E スロットは、Wi-Fi 6 および Bluetooth 5.x モジュールをサポートし、ワイヤレス接続を提供します。
 
 
 ### ハードウェア接続
@@ -451,7 +451,7 @@ M.2 Key E スロットは、Wi-Fi 6 および Bluetooth 5.x モジュールに�
 
 :::tip
 
-**注意: インターフェースを使用する前に、筐体のネジを外し、下図のように対応するモジュールを取り付ける必要があります。**
+**注意: インターフェースを使用する前に、下図のように筐体のネジを外し、対応するモジュールを取り付ける必要があります。**
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/open-board.png"/>
 </div>
@@ -480,7 +480,7 @@ Bluetooth 機能は M.2 Key E スロット経由で利用できます。
 
 ## M.2 Key B (4G/5G モジュール)
 
-M.2 Key B スロットは、Nano SIM カードホルダー付きの 4G/5G セルラーモジュールに対応しています。
+M.2 Key B スロットは、Nano SIM カードホルダー付きの 4G/5G セルラーモジュールをサポートします。
 
 ### ハードウェア接続
 
@@ -490,7 +490,7 @@ M.2 Key B スロットは、Nano SIM カードホルダー付きの 4G/5G セル
 
 :::tip
 
-**注意: インターフェースを使用する前に、筐体のネジを外し、下図のように対応するモジュールを取り付ける必要があります。**
+**注意: インターフェースを使用する前に、下図のように筐体のネジを外し、対応するモジュールを取り付ける必要があります。**
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/open-board.png"/>
 </div>
@@ -504,20 +504,20 @@ M.2 Key B スロットは、Nano SIM カードホルダー付きの 4G/5G セル
 lsusb 
 ```
 
-このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー (ID)、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G というデバイスが表示されていれば、5G モジュールが存在していることを示します。
+このコマンドは、システムに接続されているすべての USB デバイスの一覧を、メーカー（ID）、種類、その他の情報とともに表示します。たとえば、出力に Quectel Wireless Solutions Co., Ltd. EM12-G などのデバイスが表示されていれば、5G モジュールが存在していることを示します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_1.png"/>
 </div>
 
-**Step 2.** ドライバのロードを確認します
-5G モジュールに必要な option ドライバがロードされていることを確認することが重要です。これを確認するために lsmod コマンドを使用できます。
+**Step 2.** ドライバーのロードを確認します
+5G モジュールに必要な option ドライバーがロードされていることを確認することが重要です。これを確認するために lsmod コマンドを使用できます。
 
 ```bash
 lsmod | grep option 
 ```
 
-option ドライバが正常にロードされていれば、出力にドライバに関する関連情報が表示されます。
+option ドライバーが正常にロードされていれば、出力にドライバーに関する関連情報が表示されます。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_2.png"/>
@@ -540,19 +540,19 @@ ModemManager が 5G モジュールを正しく認識できるかどうかを確
 mmcli -L 
 ```
 
-5G モジュールが認識されていれば、/org/freedesktop/ModemManager1/Modem/0 のような出力が表示され、検出されたモデムデバイスへのパスを示します。
+5G モジュールが認識されている場合、/org/freedesktop/ModemManager1/Modem/0 のような出力が表示され、検出されたモデムデバイスへのパスを示します。
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_3.png"/>
 </div>
 
 **Step 5.** APN を設定します
-APN (Access Point Name) は、モバイルデバイスをネットワークに接続するために重要です。ここでは nmcli コマンドを使用してベアラープロファイルを作成します。China Mobile を例に、次のコマンドで設定ファイルを作成できます:
+APN（Access Point Name）は、モバイルデバイスをネットワークに接続するために重要です。ここでは nmcli コマンドを使用してベアラープロファイルを作成します。中国移動通信（China Mobile）を例に、次のコマンドで設定ファイルを作成できます：
 
 ```bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-このコマンドは、新しい GSM (Global System for Mobile Communications) タイプの接続を追加し、APN を "CMNET" に指定し、IPv4 の自動設定を使用します。
+このコマンドは、新しい GSM（Global System for Mobile Communications）タイプの接続を追加し、APN を "CMNET" に指定し、IPv4 の自動設定を使用します。
 
 **Step 6.** 接続を有効化します
 ベアラープロファイルを作成したら、接続を有効化する必要があります。
@@ -573,21 +573,21 @@ APN を設定した後もモジュールが認識されていることを確認�
 mmcli -L 
 ```
 
-**Step 8.** モジュールステータスを確認します
+**Step 8.** モジュールの状態を確認します
 最後に、mmcli -m 0 コマンドを使用して、IP 割り当て、キャリア、ネットワーク接続状態など、モジュールに関する詳細情報を表示できます。
 
 ```bash
 mmcli -m 0 
 ```
 
-このコマンドは、メーカー、モデル、サポートおよび現在使用中のネットワーク技術、デバイスステータス、接続中のネットワークオペレーターなど、5G モジュールに関する包括的な詳細を提供します。
+このコマンドは、メーカー、モデル、サポートおよび現在使用中のネットワーク技術、デバイスの状態、接続中のネットワークオペレーターなど、5G モジュールに関する包括的な詳細を提供します。
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_5.png"/>
 </div>
 
 ## Ethernet
 
-Robotics J501 は、1x 10GbE (ネイティブ) と 4x 1GbE (PCIe スイッチ経由) の RJ45 ポートを備えています。10GbE ポートには TI TQSPH-10G PHY が搭載されており、10/5/2.5/1/0.1 GbE の 5 つの速度をサポートします。1GbE ポートは 10/100/1000M の速度をサポートします。
+Robotics J501 は、1x 10GbE（ネイティブ）および 4x 1GbE（PCIe スイッチ経由）の RJ45 ポートを備えています。10GbE ポートは TI TQSPH-10G PHY を搭載し、10/5/2.5/1/0.1 GbE の 5 つの速度をサポートします。1GbE ポートは 10/100/1000M の速度をサポートします。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/eth_1.png"/>
@@ -596,9 +596,9 @@ Robotics J501 は、1x 10GbE (ネイティブ) と 4x 1GbE (PCIe スイッチ経
 **ポートごとの LED インジケータ:**
 
 - **緑色 LED:** 10G/5G/2.5G/1000M リンク時に点灯
-- **黄色 LED:** ネットワークアクティビティ時に点滅
+- **Yellow LED:** ネットワークアクティビティ時に点滅します
 
-Ethernet ポートの速度をテストするには、次のように `iperf3` を使用します:
+Ethernet ポート速度をテストするには、次のように `iperf3` を使用します：
 
 ```bash
 iperf3 -c <server_ip> -B <bind_ip>
@@ -606,7 +606,7 @@ iperf3 -c <server_ip> -B <bind_ip>
 
 :::info
 `<server_ip>` は iperf3 サーバーの IP アドレスです。クライアントはこのサーバーに接続して帯域幅テストを実行します。
-`<bind_ip>` は、テストトラフィックの送信元として使用するローカル IP アドレスを指定してバインドします。
+`<bind_ip>` は、テストトラフィックの送信元として指定したローカル IP アドレスをバインドします。
 :::
 
 <div align="center">
@@ -618,8 +618,8 @@ iperf3 -c <server_ip> -B <bind_ip>
 J501 には複数のステータス LED が搭載されています：
 
 - **PWR LED:** 電源ステータス（緑）
-- **ACT LED:** システム動作状況（黄）
-- **USR LED:** GPIO 制御経由
+- **ACT LED:** システムアクティビティ（黄）
+- **USR LED:** GPIO による制御
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/led_1.png"/>
@@ -643,7 +643,7 @@ echo 0 | sudo tee /sys/class/leds/on-board:blue/brightness
 
 ```
 
-LED 制御の効果は、次の図のようになります：
+LED 制御の効果は、以下の図のとおりです：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/led_test.png"/>
@@ -651,9 +651,9 @@ LED 制御の効果は、次の図のようになります：
 
 ## USB
 
-Robotics J501 には、4 つの USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由で、最大 5Gbps のデータレートをサポートし、高速な周辺機器、ストレージデバイス、カメラなどの接続が可能）と、1 つの USB 2.0 Type-C デバッグポート（シリアルコンソールとして機能し、システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新の実行に使用）があります。
+Robotics J501 は、4 つの USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由で、高速な周辺機器、ストレージデバイス、カメラを接続するために最大 5Gbps のデータレートをサポート）と、1 つの USB 2.0 Type-C デバッグポート（シリアルコンソールとして機能し、システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新の実行に使用）を提供します。
 
-### USB-A スピードテスト
+### USB-A 速度テスト
 
 USB デバイスの速度をテストするスクリプトを作成します：
 
@@ -756,10 +756,10 @@ sudo chmod +x test_usb.sh
 
 ## Fan
 
-Robotics J501 には、Jetson モジュールおよびキャリアボード上のコンポーネントを冷却するために設計された 4 ピン PWM ファンコネクタが 2 つ搭載されています：
+Robotics J501 には、Jetson モジュールとキャリアボード上のコンポーネントを冷却するために設計された 2 つの 4 ピン PWM ファンコネクタが用意されています：
 
-- **12V Fan**: 2.54 mm コネクタ、最大 1.5A、高性能冷却に適しています
-- **5V Fan**: 1.25 mm JST コネクタ、最大 1.5A、低消費電力かつ静音冷却に最適です
+- **12V Fan**: 2.54 mm コネクタ、最大 1.5A、高性能冷却に最適
+- **5V Fan**: 1.25 mm JST コネクタ、最大 1.5A、低消費電力かつ静音冷却に最適
 
 PWM 制御により、システム温度に基づいてファン速度を動的かつ精密に調整でき、効率的な冷却を実現しつつ、ノイズと消費電力を最小限に抑えることができます。
 
@@ -817,7 +817,7 @@ jtop
 
 ## CAN
 
-reComputer Robotics J501 には、4 つの独立した CAN インターフェース（CAN 0、CAN 1、CAN 2、CAN 3）が搭載されており、DI/DO インターフェースと J25 2x10P コネクタを共有しています。これらのインターフェースは Classic CAN と CAN FD の両方の通信プロトコルをサポートし、高い耐干渉性能とリアルタイムなデータ伝送を備えているため、自動車電子機器、産業オートメーション、ロボティクスなどの産業用制御シナリオに適しています。
+reComputer Robotics J501 には 4 つの独立した CAN インターフェース（CAN 0、CAN 1、CAN 2、CAN 3）が搭載されており、DI/DO インターフェースと J25 2x10P コネクタを共有しています。これらのインターフェースは Classic CAN と CAN FD の両方の通信プロトコルをサポートし、高い耐干渉性能とリアルタイムデータ伝送を備えているため、自動車エレクトロニクス、産業オートメーション、ロボティクスなどの産業用制御シナリオに適しています。
 
 ### 使用手順
 
@@ -875,7 +875,7 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 #### Classic CAN モード
 
-次のスクリプトは、CAN0/CAN1 および CAN2/CAN3 間のループバック通信テストを実装しており、終端抵抗の有効化、ビットレートの設定、双方向データ伝送を含みます。
+次のスクリプトは、CAN0/CAN1 および CAN2/CAN3 間のループバック通信テストを実装し、終端抵抗の有効化、ビットレートの設定、双方向データ伝送を含みます。
 
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/can_hw_2.png"/>
@@ -896,7 +896,7 @@ sudo gpioset --mode=wait gpiochip1 7=1
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/CAN-connect.png"/>
 </div>
 
-標準モードで CAN0↔CAN1 および CAN2↔CAN3 間のデータ送受信をテストするために、`test_can.sh` を作成します：
+標準モードで CAN0↔CAN1 および CAN2↔CAN3 間のデータ送受信をテストするために `test_can.sh` を作成します：
 
 ```bash
 touch test_can.sh
@@ -1188,13 +1188,13 @@ sudo gpioset --mode=wait 1 9=1
 sudo gpioset --mode=wait 1 8=1
 ```
 
-DO プルアップ前：
+プルアップ前の DO：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/di_do_before.png"/>
 </div>
 
-DO プルアップ後：
+プルアップ後の DO：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/do_after.png"/>
@@ -1218,7 +1218,7 @@ sudo gpioset --mode=wait 1 8=0
 
 **デジタル入力（DI）の操作**
 
-`gpioget` コマンドを使用して DI チャネルの入力レベルを読み取り（戻り値 `1` = High レベル、`0` = Low レベル）、周辺機器の状態を取得します。
+`gpioget` コマンドを使用して DI チャネルの入力レベルを読み取ります（戻り値 `1` = High レベル、`0` = Low レベル）ことで、周辺機器の状態を取得します。
 
 DI チャネルレベルを読み取るコマンドは次のとおりです：
 
@@ -1270,7 +1270,7 @@ sudo modprobe spidev
 ```
 
 :::note
-コマンド実行時にエラーが表示されなければ、モジュールが正常にロードされていることを意味します。すでにロード済みの場合、コマンドは何も情報を返しませんが、これは正常な動作です。
+コマンド実行時にエラーが表示されなければ、モジュールが正常にロードされていることを意味します。すでにロード済みの場合は、コマンドは何も情報を返しませんが、これは正常な動作です。
 :::
 
 **ステップ 2：SPI デバイスノードの確認**
@@ -1280,7 +1280,7 @@ reComputer Robotics J501 の SPI インターフェースにマッピングさ�
 ls /dev/spidev*
 ```
 
-デバイスノードが表示されない場合は、`spidev` モジュールが正常にロードされていないことを意味します。`sudo modprobe spidev` を再実行し、システムログを確認してトラブルシューティングを行ってください。
+デバイスノードが表示されない場合は、`spidev` モジュールが正しくロードされていないことを意味します。`sudo modprobe spidev` を再実行し、システムログを確認してトラブルシューティングを行ってください。
 
 **ステップ 3: SPI テストコードの取得とコンパイル**
 GitHub から `spidev-test` テストコードを取得し、コンパイルします：
@@ -1292,7 +1292,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 **ステップ 4: SPI テストプログラムの実行**
-ターミナルで次のコマンドを入力して SPI テストプログラムを実行します（`/dev/spidev2.0` を例とします）：
+SPI テストプログラムを実行するために、ターミナルで次のコマンドを入力します（`/dev/spidev2.0` を例とします）：
 
 ```bash
 sudo ./spidev_test -v -D /dev/spidev2.0 -s 100000
@@ -1304,7 +1304,7 @@ sudo ./spidev_test -v -D /dev/spidev2.0 -s 100000
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/spi_out.png"/>
 </div>
 
-> 重要な判定基準：TX（送信）データと RX（受信）データが一致していれば、SPI ループバックテストが成功し、SPI インターフェース機能が正常であることを示します。
+> 重要な判定基準: TX（送信）データと RX（受信）データが一致していれば、SPI ループバックテストが成功し、SPI インターフェース機能が正常であることを示します。
 
 ## UART
 
@@ -1314,30 +1314,30 @@ reComputer Robotics J501 には、RS232、RS422、および RS485 通信モー�
 
 #### UART インターフェースチャネル
 
-| チャネル名 | デバイスノード | 対応モード | デフォルトボーレート | GPIO 有効化コマンド | モード切り替え方法 |
+| チャネル名 | デバイスノード | 対応モード | デフォルトボーレート | GPIO 有効化コマンド | モード切替方法 |
 |--------------|-------------|-----------------|-------------------|--------------------|-------------------|
 | UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | SW3 ディップスイッチ（8 ピン DIP） |
-| UART2 (DB9-2) | /dev/ttyTHS4 | RS232（デフォルト） | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | RS232 固定（スイッチなし） |
+| UART2 (DB9-2) | /dev/ttyTHS4 | RS232（デフォルト） | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | RS232 固定（切替不可） |
 
 **ピン配置定義（DB9 コネクタ）**
 
-各 DB9 ピンの機能は通信モードによって異なります。正確な配線のために、以下の表を参照してください（ピン番号は標準的な DB9 オスコネクタ仕様に従います）：
+各 DB9 ピンの機能は通信モードによって異なります。正確な配線のため、以下の表を参照してください（ピン番号は標準的な DB9 オスコネクタ仕様に従います）：
 
 | DB9 ピン番号 | RS232 モード機能 | RS422 モード機能 | RS485 モード機能 |
 |----------------|---------------------|---------------------|---------------------|
 | 1              | -                   | TXD-（送信データ -） | Data-（差動データ -） |
-| 2              | RXD（受信データ）   | TXD+（送信データ +） | Data+（差動データ +） |
-| 3              | TXD（送信データ）   | RXD+（受信データ +） | -                   |
+| 2              | RXD（受信データ）  | TXD+（送信データ +） | Data+（差動データ +） |
+| 3              | TXD（送信データ）  | RXD+（受信データ +） | -                   |
 | 4              | -                   | RXD-（受信データ -） | -                   |
-| 5              | GND（グラウンド）   | GND（グラウンド）   | GND（グラウンド）   |
+| 5              | GND（グラウンド）  | GND（グラウンド）  | GND（グラウンド）  |
 | 6              | -                   | -                   | -                   |
-| 7              | RTS（送信要求）     | -                   | -                   |
-| 8              | CTS（送信許可）     | -                   | -                   |
+| 7              | RTS（送信要求）    | -                   | -                   |
+| 8              | CTS（送信許可）    | -                   | -                   |
 | 9              | -                   | -                   | -                   |
 
 **モード設定（SW3 ディップスイッチ）**
 
-モード切り替えに SW3 ディップスイッチを使用できるのは UART1（DB9-1）のみです（UART2 は RS232 固定）。スイッチは 8 ピン DIP タイプで、回路図上では MODE_0、MODE_1、MODE_2 として示されるコア設定ピンがあります。
+SW3 ディップスイッチによるモード切替に対応しているのは UART1（DB9-1）のみです（UART2 は RS232 固定）。スイッチは 8 ピン DIP タイプで、回路図上では MODE_0、MODE_1、MODE_2 とラベル付けされたピンが主要な設定ピンです。
 
 インターフェースは次の図のようになっています：
 <div align="center">
@@ -1348,19 +1348,19 @@ reComputer Robotics J501 には、RS232、RS422、および RS485 通信モー�
 
 | 動作モード | ディップスイッチの組み合わせ（MODE_2, MODE_1, MODE_0） | スイッチ状態の操作 |
 |--------------|------------------------------------------------|------------------------|
-| RS232        | 0 (OFF), 0 (OFF), 1 (ON)                       | MODE_0：ON に切り替え；MODE_1/MODE_2：OFF のまま |
-| RS422        | 0 (OFF), 0 (OFF), 0 (OFF) または 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1：OFF のまま；MODE_2：任意（ON/OFF） |
-| RS485        | 0 (OFF), 1 (ON), 0 (OFF) または 1 (ON), 1 (ON), 0 (OFF) | MODE_1：ON に切り替え；MODE_0/MODE_2：任意（ON/OFF） |
+| RS232        | 0 (OFF), 0 (OFF), 1 (ON)                       | MODE_0: ON に切り替え; MODE_1/MODE_2: OFF のまま |
+| RS422        | 0 (OFF), 0 (OFF), 0 (OFF) または 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1: OFF のまま; MODE_2: 任意（ON/OFF） |
+| RS485        | 0 (OFF), 1 (ON), 0 (OFF) または 1 (ON), 1 (ON), 0 (OFF) | MODE_1: ON に切り替え; MODE_0/MODE_2: 任意（ON/OFF） |
 
 :::note
-ハードウェア接続が完了したら、ターミナルソフトウェア（例：CuteCom）を使用して UART 通信機能をテストします。CuteCom がインストールされていない場合は、`sudo apt-get install cutecom` を実行してインストールしてください。UART チャネルが GPIO コマンドによって有効化されていることを確認してください。
+ハードウェア接続を完了したら、ターミナルソフトウェア（例: CuteCom）を使用して UART 通信機能をテストします。CuteCom がインストールされていない場合は、`sudo apt-get install cutecom` を実行してインストールしてください。UART チャネルが GPIO コマンドによって有効化されていることを確認してください。
 :::
 
 ### 使用手順
 
 **GPIO 有効化コマンド**
 
-接続前に、ターミナルで GPIO 有効化コマンドを実行して、対応する UART チャネルを有効にします：
+接続前に、対応する UART チャネルを有効にするため、ターミナルで GPIO 有効化コマンドを実行します：
 
 ```bash
 # Enable UART1 (ttyTHS1)
@@ -1398,7 +1398,7 @@ sudo gpioset --mode=wait gpiochip2 15=0
 "Open Device" をクリックしてシリアルポートを開きます。
 
 **ステップ 4: テストデータの送信**
-テストデータ（例："232 test from jetson"）を送信し、周辺機器からのデータ受信を確認します。
+テストデータ（例: "232 test from jetson"）を送信し、周辺機器側でデータが受信できることを確認します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs232_2.png"/>
@@ -1431,7 +1431,7 @@ sudo gpioset --mode=wait gpiochip2 15=0
 "Open Device" をクリックしてシリアルポートを開きます。
 
 **ステップ 4: テストデータの送信**
-テストデータ（例："485 test from jetson"）を送信し、周辺機器からのデータ受信を確認します。
+テストデータ（例: "485 test from jetson"）を送信し、周辺機器側でデータが受信できることを確認します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs485_1.png"/>
@@ -1461,7 +1461,7 @@ sudo gpioset --mode=wait gpiochip2 15=0
 "Open Device" をクリックしてシリアルポートを開きます。
 
 **ステップ 4: テストデータの送信**
-テストデータ（例："422 test from jetson"）を送信し、周辺機器からのデータ受信を確認します。
+テストデータ（例: "422 test from jetson"）を送信し、周辺機器側でデータが受信できることを確認します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rs422.png"/>
@@ -1469,10 +1469,10 @@ sudo gpioset --mode=wait gpiochip2 15=0
 
 ## RTC
 
-reComputer Robotics J501 には、バッテリバックアップ付きのハードウェア RTC が搭載されており、正確な時刻保持が可能です。RTC にバックアップ電源を供給する方法は 2 通りあります：
+reComputer Robotics J501 には、バッテリバックアップ付きのハードウェア RTC が搭載されており、正確な時刻保持が可能です。RTC にバックアップ電源を供給する方法は次の 2 通りです：
 
 1. CR1220 コイン電池ホルダ（J14）を使用する
-2. RTC 2 ピンヘッダ J4 を使用して外部電源を接続する
+2. 外部電源接続用の RTC 2 ピンヘッダ J4 を使用する
 
 ### ハードウェア接続
 
@@ -1486,7 +1486,7 @@ reComputer Robotics J501 には、バッテリバックアップ付きのハー�
 
 **方法 2: RTC 2 ピンヘッダを使用**
 
-RTC 2 ピンヘッダは、RTC に外部電源を接続するための代替手段を提供します。
+RTC 2 ピンヘッダは、外部電源を RTC に接続するための代替手段を提供します。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_2pin_pinout.png"/>
@@ -1498,14 +1498,14 @@ RTC 2 ピンヘッダは、RTC に外部電源を接続するための代替手�
 
 **ステップ 2.** reComputer Robotics J501 の電源を入れます。
 
-**ステップ 3.** Ubuntu デスクトップで右上のドロップダウンメニューをクリックし、`Settings > Date & Time` に移動して、Ethernet ケーブルでネットワークに接続し、**Automatic Date & Time** を選択して日付と時刻を自動取得します。
+**ステップ 3.** Ubuntu デスクトップで右上のドロップダウンメニューをクリックし、`Settings > Date & Time` に移動して、Ethernet ケーブルでネットワークに接続し、**Automatic Date & Time** を選択して日時を自動取得します。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_1.png"/>
 </div>
 
 :::note
-Ethernet 経由でインターネットに接続していない場合は、ここで日付と時刻を手動で設定できます。
+Ethernet 経由でインターネットに接続していない場合は、ここで日時を手動設定できます。
 :::
 
 **ステップ 4.** ターミナルウィンドウを開き、次のコマンドを実行してハードウェアクロックの時刻を確認します：
@@ -1677,7 +1677,7 @@ gst-launch-1.0 \
 <!-- - [Mechanical Document-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf) -->
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

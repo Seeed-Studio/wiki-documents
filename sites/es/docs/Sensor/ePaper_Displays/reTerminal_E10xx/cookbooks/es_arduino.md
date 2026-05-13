@@ -1,14 +1,15 @@
 ---
-description: Recetario Arduino de extremo a extremo para reTerminal E1001 / E1002 / E1003 / E1004 - Hola Mundo en la pantalla de ePaper más ejemplos completos de periféricos (LED, zumbador, botones, SHT4x, BMS, microSD, renderizado de imágenes BMP).
+description: Recetario Arduino de extremo a extremo para reTerminal E1001 / E1002 / E1003 / E1004: Hola Mundo en la pantalla de ePaper más ejemplos completos de periféricos (LED, zumbador, botones, SHT4x, BMS, microSD, renderizado de imágenes BMP).
 title: Recetario de Arduino
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
-  author: Allen
+  date: 05/13/2026
+  author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-13'
+url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -18,7 +19,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/147.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip Lee primero la guía principal de Arduino
-Esta página es el **recetario específico de reTerminal**. La plantilla compartida — configuración del IDE de Arduino, paquete de placas ESP32, instalación de `Seeed_GFX`, generación de `driver.h` — se encuentra en **[Work with Arduino](/es/epaper_work_with_arduino)**. Échale un vistazo primero si eres nuevo en Arduino en las pantallas ePaper de Seeed; los pasos siguientes asumen que ya tienes el IDE listo.
+Esta página es el **recetario específico para reTerminal**. La plantilla compartida — configuración del IDE de Arduino, paquete de placas ESP32, instalación de `Seeed_GFX`, generación de `driver.h` — se encuentra en **[Work with Arduino](/es/epaper_work_with_arduino)**. Échale un vistazo primero si eres nuevo en Arduino en las pantallas ePaper de Seeed; los pasos siguientes asumen que ya tienes el IDE listo.
 :::
 
 ## Introducción
@@ -74,7 +75,7 @@ Para completar este tutorial, prepara uno de los siguientes dispositivos reTermi
 
 ### Preparación del entorno
 
-Para programar la pantalla ePaper de reTerminal E Serie con Arduino, necesitas configurar el IDE de Arduino con soporte para ESP32.
+Para programar la pantalla ePaper de reTerminal E Serie con Arduino, necesitarás configurar el IDE de Arduino con soporte para ESP32.
 
 :::tip
 Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
@@ -82,7 +83,7 @@ Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consu
 
 #### Configuración del IDE de Arduino
 
-**Paso 1.** Descarga e instala el [Arduino IDE](https://www.arduino.cc/en/software) y abre la aplicación de Arduino.
+**Paso 1.** Descarga e instala el [Arduino IDE](https://www.arduino.cc/en/software) y ejecuta la aplicación de Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -114,11 +115,11 @@ Ve a **Tools > Board > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
 ## Programación de la pantalla ePaper
 
-El **reTerminal E1001 incorpora una pantalla ePaper en blanco y negro de 7,5 pulgadas**, mientras que el **reTerminal E1002 está equipado con una pantalla ePaper a todo color de 7,3 pulgadas**. Ambas pantallas ofrecen una excelente visibilidad en diversas condiciones de iluminación con un consumo de energía ultrabajo, lo que las hace ideales para aplicaciones industriales que requieren pantallas siempre encendidas con un uso mínimo de energía.
+La **reTerminal E1001 incorpora una pantalla ePaper en blanco y negro de 7,5 pulgadas**, mientras que la **reTerminal E1002 está equipada con una pantalla ePaper a todo color de 7,3 pulgadas**. Ambas pantallas ofrecen una excelente visibilidad en diversas condiciones de iluminación con un consumo de energía ultrabajo, lo que las hace ideales para aplicaciones industriales que requieren pantallas siempre encendidas con un consumo mínimo de energía.
 
 ### Uso de la biblioteca Seeed_GFX
 
-Para controlar la pantalla ePaper, usaremos la biblioteca Seeed_GFX, que proporciona compatibilidad completa con varios dispositivos de visualización de Seeed Studio.
+Para controlar la pantalla ePaper, utilizaremos la biblioteca Seeed_GFX, que proporciona soporte completo para varios dispositivos de visualización de Seeed Studio.
 
 **Paso 1.** Descarga la biblioteca Seeed_GFX desde GitHub:
 
@@ -141,7 +142,7 @@ Si has instalado previamente la biblioteca TFT_eSPI, puede que necesites elimina
 
 Vamos a explorar un ejemplo sencillo que demuestra operaciones básicas de dibujo en la pantalla ePaper en blanco y negro.
 
-**Paso 1.** Abre el ejemplo de sketch de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+**Paso 1.** Abre el sketch de ejemplo de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
 **Paso 2.** Habilita OPI PSRAM en el IDE de Arduino: **Tools > PSRAM > OPI PSRAM**
 
@@ -192,16 +193,16 @@ La pantalla ePaper a todo color admite colores rojo, negro y blanco, lo que perm
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
 ```
 
-**Paso 6.** Carga el sketch en tu reTerminal E1002. La pantalla mostrará gráficos coloridos que demuestran las capacidades de color completo de la pantalla de tinta electrónica.
+**Paso 6.** Carga el sketch en tu reTerminal E1002. La pantalla mostrará gráficos coloridos que demuestran las capacidades de color completo de la pantalla de papel electrónico.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Programming reTerminal E1003" label="Programming reTerminal E1003">
 
-#### Programar reTerminal E1003 (tinta electrónica de 10,3 pulgadas)
+#### Programar reTerminal E1003 (pantalla de papel electrónico de 10,3 pulgadas)
 
-Sigue el mismo flujo de trabajo usando la biblioteca Seeed_GFX para configurar y controlar la tinta electrónica en el reTerminal E1003.
+Sigue el mismo flujo de trabajo usando la biblioteca Seeed_GFX para configurar y controlar la pantalla de papel electrónico en el reTerminal E1003.
 
 **Paso 1.** Abre un sketch de ejemplo de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -223,16 +224,16 @@ Sigue el mismo flujo de trabajo usando la biblioteca Seeed_GFX para configurar y
 #define BOARD_SCREEN_COMBO 522 // reTerminal E1003 (ED103TC2)
 ```
 
-**Paso 6.** Carga el sketch en tu reTerminal E1003 para verificar primitivas de dibujo, renderizado de texto y comportamientos de refresco de pantalla completa.
+**Paso 6.** Carga el sketch en tu reTerminal E1003 para verificar primitivas de dibujo, renderizado de texto y comportamientos de actualización de pantalla completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Programming reTerminal E1004" label="Programming reTerminal E1004">
 
-#### Programar reTerminal E1004 (tinta electrónica a todo color de 13,3 pulgadas)
+#### Programar reTerminal E1004 (pantalla de papel electrónico a todo color de 13,3 pulgadas)
 
-Utiliza la biblioteca Seeed_GFX para configurar y controlar la pantalla de tinta electrónica a todo color E Ink® Spectra™ 6 en el reTerminal E1004.
+Utiliza la biblioteca Seeed_GFX para configurar y controlar la pantalla de papel electrónico a todo color E Ink® Spectra™ 6 en el reTerminal E1004.
 
 **Paso 1.** Abre el sketch de ejemplo en color de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
@@ -254,7 +255,7 @@ Utiliza la biblioteca Seeed_GFX para configurar y controlar la pantalla de tinta
 #define BOARD_SCREEN_COMBO 523 // reTerminal E1004 (T133A01)
 ```
 
-**Paso 6.** Carga el sketch en tu reTerminal E1004 para verificar el renderizado de color, primitivas de dibujo, renderizado de texto y comportamientos de refresco de pantalla completa.
+**Paso 6.** Carga el sketch en tu reTerminal E1004 para verificar el renderizado de color, primitivas de dibujo, renderizado de texto y comportamientos de actualización de pantalla completa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -263,7 +264,7 @@ Utiliza la biblioteca Seeed_GFX para configurar y controlar la pantalla de tinta
 
 ### Uso de la biblioteca GxEPD2
 
-Además de Seeed_GFX, también puedes usar la biblioteca `GxEPD2` para controlar la pantalla de tinta electrónica del reTerminal. `GxEPD2` es una biblioteca potente y popular que admite una amplia gama de pantallas de tinta electrónica.
+Además de Seeed_GFX, también puedes usar la biblioteca `GxEPD2` para controlar la pantalla de papel electrónico del reTerminal. `GxEPD2` es una biblioteca potente y popular que admite una amplia gama de pantallas de papel electrónico.
 
 **Instalar la biblioteca GxEPD2**
 
@@ -273,16 +274,16 @@ Para asegurarte de tener las funciones y compatibilidad de dispositivos más rec
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/ZinggJM/GxEPD2" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **Paso 2.** En el IDE de Arduino, instala la biblioteca desde el archivo descargado. Ve a **Sketch > Include Library > Add .ZIP Library...** y selecciona el archivo ZIP que acabas de descargar.
 
-**Paso 3.** La biblioteca `GxEPD2` requiere la `Adafruit GFX Library` para funcionar, la cual también debes instalar. La forma más sencilla de hacerlo es a través del Library Manager: ve a **Tools > Manage Libraries...**, busca "Adafruit GFX Library" y haz clic en "Install".
+**Paso 3.** La biblioteca `GxEPD2` requiere la `Adafruit GFX Library` para funcionar, que también debes instalar. La forma más sencilla de hacerlo es a través del Library Manager: ve a **Tools > Manage Libraries...**, busca "Adafruit GFX Library" y haz clic en "Install".
 
 :::note
-Aunque `GxEPD2` está disponible en el Arduino Library Manager por comodidad, la versión que se encuentra allí a menudo puede estar desactualizada. El repositorio de GitHub es la fuente definitiva para la versión más reciente, que incluye las funciones más nuevas, correcciones de errores y compatibilidad con las pantallas de tinta electrónica más recientes. Por lo tanto, descargar la biblioteca directamente desde GitHub es el enfoque recomendado para asegurarte de tener el código más actualizado.
+Aunque `GxEPD2` está disponible en el Arduino Library Manager por comodidad, la versión que se encuentra allí a menudo puede estar desactualizada. El repositorio de GitHub es la fuente definitiva para la versión más reciente, que incluye las funciones más nuevas, correcciones de errores y compatibilidad con las pantallas de papel electrónico más recientes. Por lo tanto, descargar la biblioteca directamente desde GitHub es el enfoque recomendado para asegurarte de tener el código más actualizado.
 :::
 
 <Tabs>
@@ -290,7 +291,7 @@ Aunque `GxEPD2` está disponible en el Arduino Library Manager por comodidad, la
 
 #### Programar reTerminal E1001 (pantalla en blanco y negro)
 
-Aquí tienes el código de ejemplo para mostrar "Hello World!" en la pantalla de tinta electrónica en blanco y negro del reTerminal E1001 usando la biblioteca `GxEPD2`. Establece `EPD_SELECT` en `0` para seleccionar el controlador para el E1001.
+Aquí tienes el código de ejemplo para mostrar "Hello World!" en la pantalla de papel electrónico en blanco y negro del reTerminal E1001 usando la biblioteca `GxEPD2`. Establece `EPD_SELECT` en `0` para seleccionar el controlador para el E1001.
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -380,7 +381,7 @@ void loop() {};
 
 #### Programar reTerminal E1002 (pantalla a todo color)
 
-Para el reTerminal E1002, simplemente necesitas cambiar el valor de `EPD_SELECT` a `1`. Esto seleccionará el controlador apropiado para la pantalla de tinta electrónica a todo color de 7,3 pulgadas. El resto del código permanece igual.
+Para el reTerminal E1002, simplemente necesitas cambiar el valor de `EPD_SELECT` a `1`. Esto seleccionará el controlador apropiado para la pantalla de papel electrónico a todo color de 7,3 pulgadas. El resto del código permanece igual.
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -515,7 +516,7 @@ void loop() {
 
 ### Control del zumbador
 
-La reTerminal E Serie incluye un zumbador en GPIO7 que puede producir varios tonos y sonidos de alerta.
+La reTerminal E Serie incluye un zumbador en el GPIO7 que puede producir varios tonos y sonidos de alerta.
 
 ```cpp
 // reTerminal E Series - Buzzer Control Example
@@ -716,7 +717,7 @@ void loop() {
 
 ### Botones de usuario
 
-La reTerminal E Serie cuenta con tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones utilizando Arduino.
+La reTerminal E Serie cuenta con tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
 
 La reTerminal E Serie tiene tres botones conectados al ESP32-S3:
 
@@ -953,7 +954,7 @@ void loop() {
 
 1. **Retardo**: Espera 5 segundos entre mediciones para evitar el sobremuestreo
 2. **Medición**: Usa `measureHighPrecision()` para lecturas precisas (toma ~8.3 ms)
-3. **Gestión de errores**: Comprueba errores y los convierte en mensajes legibles usando `errorToString()`
+3. **Manejo de errores**: Comprueba errores y los convierte en mensajes legibles usando `errorToString()`
 4. **Mostrar resultados**: Imprime la temperatura en grados Celsius y el porcentaje de humedad relativa
 
 **Salida esperada**
@@ -969,7 +970,18 @@ Temperature: 27.38°C Humidity: 53.37%
 
 ### Sistema de gestión de batería
 
-La reTerminal E Serie incluye capacidad de monitorización de voltaje de batería a través de un pin ADC con un circuito divisor de voltaje.
+La reTerminal E Serie incluye capacidad de monitorización de voltaje de batería mediante un pin ADC con un circuito divisor de voltaje.
+
+:::note
+
+El `BATTERY_ENABLE_PIN` en la reTerminal E1003 es diferente al de la E1001/E1002/E1004.
+
+- E1001/E1002/E1004: `BATTERY_ENABLE_PIN` → `GPIO21`
+- E1003: `BATTERY_ENABLE_PIN` → `IO40`
+
+Actualiza tu código en consecuencia cuando portes ejemplos entre diferentes modelos reTerminal E10xx.
+
+:::
 
 #### Monitorización simple del voltaje de la batería
 
@@ -1057,7 +1069,7 @@ Inserta una tarjeta microSD si planeas usar el dispositivo como marco de fotos d
 La reTerminal E Serie solo admite tarjetas MicroSD de hasta 64 GB formateadas con el sistema de archivos **Fat32**.
 :::
 
-#### Operaciones básicas con tarjeta SD: listar archivos
+#### Operaciones básicas con la tarjeta SD: listar archivos
 
 Este ejemplo muestra cómo inicializar la tarjeta SD, detectar cuándo se inserta o se extrae y listar todos los archivos y directorios en su raíz. El código es idéntico tanto para la **reTerminal E1001** como para la **reTerminal E1002**.
 
@@ -1230,7 +1242,7 @@ void loop() {
 
 ##### Explicación del código
 
-- **Definiciones de pines:** El código comienza definiendo los pines GPIO usados para la ranura de la tarjeta MicroSD. Ten en cuenta que los pines SPI (`MOSI`, `SCK`) se comparten con la pantalla de papel electrónico, pero un Chip Select separado (`SD_CS_PIN`) y una instancia SPI dedicada (`spiSD`) garantizan que puedan usarse de forma independiente.
+- **Definiciones de pines:** El código comienza definiendo los pines GPIO utilizados para la ranura de la tarjeta MicroSD. Ten en cuenta que los pines SPI (`MOSI`, `SCK`) se comparten con la pantalla de papel electrónico, pero un Chip Select separado (`SD_CS_PIN`) y una instancia SPI dedicada (`spiSD`) garantizan que puedan usarse de forma independiente.
 - **Inicialización de SPI:** Creamos una nueva instancia de SPI, `spiSD(HSPI)`, para usar el segundo controlador SPI por hardware del ESP32 (HSPI). Esta es la mejor práctica para evitar conflictos con otros dispositivos SPI.
 - **Detección de tarjeta:** La función `isCardInserted()` lee el `SD_DET_PIN`. En el hardware del reTerminal, este pin se mantiene en nivel BAJO cuando hay una tarjeta presente.
 - **Montar/Desmontar:** La función `mountSD()` habilita la alimentación de la tarjeta, configura el bus HSPI con los pines correctos y llama a `SD.begin()` para inicializar el sistema de archivos. `unmountSD()` libera los recursos.
@@ -1265,7 +1277,7 @@ Verás una salida correspondiente a las siguientes acciones:
 [FILE] live.1.indexPostings  4096 bytes
 ```
 
-### Ejemplo avanzado: Mostrar imágenes BMP desde la tarjeta SD
+### Ejemplo avanzado: mostrar imágenes BMP desde la tarjeta SD
 
 Este ejemplo completo combina las funcionalidades de las secciones anteriores. Escribiremos un programa que lea un archivo de imagen Bitmap (`.bmp`) desde una tarjeta MicroSD y lo muestre en la pantalla de papel electrónico del reTerminal. Esto demuestra una aplicación práctica y real del dispositivo.
 
@@ -1286,7 +1298,7 @@ El método para preparar la imagen difiere ligeramente según el modelo de tu re
 <Tabs>
 <TabItem value="For reTerminal E1001 (B&W Screen)" label="Para reTerminal E1001 (Pantalla B&N)" default>
 
-La pantalla en blanco y negro solo puede mostrar píxeles negros y blancos. Aunque nuestro código puede convertir una imagen en color a escala de grises en tiempo real, obtendrás mucho mejor contraste y detalle si **pre-conviertes la imagen a una imagen en escala de grises de alta calidad en tu ordenador**.
+La pantalla en blanco y negro solo puede mostrar píxeles negros y blancos. Aunque nuestro código puede convertir una imagen en color a escala de grises en tiempo real, obtendrás mucho mejor contraste y detalle si **preconviertes la imagen a una imagen en escala de grises de alta calidad en tu ordenador**.
 
 1. **Redimensionar la imagen:** Redimensiona tu imagen a **800x480 píxeles**.
 
@@ -1307,7 +1319,7 @@ La pantalla en color puede mostrar 6 colores: Negro, Blanco, Rojo, Amarillo, Azu
 
 1. **Redimensionar la imagen:** Usando cualquier editor de imágenes, redimensiona tu imagen a **800x480 píxeles**.
 
-2. **Guardar como un BMP estándar:** El código está diseñado para leer archivos BMP de 24 o 32 bits **sin comprimir**. Usar un editor de imágenes profesional es la mejor forma de asegurarte de que el formato sea correcto. Recomendamos el software libre y de código abierto **GIMP**:
+2. **Guardar como un BMP estándar:** El código está diseñado para leer archivos BMP **sin comprimir** de 24 o 32 bits. Usar un editor de imágenes profesional es la mejor forma de asegurarte de que el formato sea correcto. Recomendamos el software libre y de código abierto **GIMP**:
     - Abre tu imagen redimensionada en GIMP.
     - Ve al menú **File > Export As...**.
     - Nombra el archivo `test.bmp` y haz clic en **Export**.
@@ -1604,7 +1616,7 @@ void loop() {
 ```
 
 </TabItem>
-<TabItem value="For reTerminal E1002 (Color Screen)" label="Para reTerminal E1002 (pantalla en color)">
+<TabItem value="For reTerminal E1002 (Color Screen)" label="Para reTerminal E1002 (Pantalla en color)">
 
 ```cpp
 #include <SD.h>
@@ -1886,7 +1898,7 @@ void loop() {
 #### Cómo funciona
 
 - **`setup()`**: La función `setup` inicializa en secuencia todo el hardware necesario: el puerto Serial para depuración, el bus SPI compartido, la pantalla de papel electrónico y, por último, la tarjeta SD. Si todas las inicializaciones se realizan correctamente, hace una única llamada a `drawBmp()` para ejecutar la tarea principal.
-- **`drawBmp()`**: Esta es la función principal. Abre el archivo BMP, analiza la cabecera para leer sus dimensiones y propiedades, y realiza comprobaciones de validación cruciales. En concreto, comprueba si hay tipos de compresión no compatibles y proporciona un mensaje de error útil si encuentra alguno.
+- **`drawBmp()`**: Esta es la función principal. Abre el archivo BMP, analiza la cabecera para leer sus dimensiones y propiedades, y realiza comprobaciones de validación cruciales. En concreto, verifica si hay tipos de compresión no compatibles y proporciona un mensaje de error útil si encuentra alguno.
 - **Bucle de dibujo**: La función lee la imagen desde la tarjeta SD una fila cada vez. Para cada píxel de la fila, extrae los valores de color Rojo, Verde y Azul.
 - **Gestión del color**: Aquí es donde la lógica se divide en función de la macro `EPD_SELECT`:
   - **Para color (E1002)**: Llama a `findNearestColor(r, g, b)`. Esta función calcula la "distancia" entre el color del píxel y cada uno de los 6 colores de la paleta de la pantalla. Devuelve el color de la paleta con la distancia más pequeña, garantizando la representación de color más precisa posible.
@@ -1917,7 +1929,7 @@ digitalWrite(SD_EN_PIN, HIGH);
 pinMode(SD_DET_PIN, INPUT_PULLUP);
 ```
 
-Para resolver esto, debes asegurarte de que la tarjeta MicroSD esté correctamente habilitada utilizando el código proporcionado arriba. El código inicializa y habilita la tarjeta MicroSD configurando los estados correctos de los pines, lo que evita conflictos en el bus SPI y permite que tanto la tarjeta SD como la pantalla ePaper funcionen juntas. Utiliza siempre el código de inicialización recomendado cuando uses una tarjeta MicroSD con el reTerminal para evitar este tipo de problemas.
+Para resolver esto, debes asegurarte de que la tarjeta MicroSD esté correctamente habilitada utilizando el código proporcionado arriba. El código inicializa y habilita la tarjeta MicroSD configurando los estados correctos de los pines, lo que evita conflictos en el bus SPI y permite que tanto la tarjeta SD como la pantalla de tinta electrónica funcionen juntas. Utiliza siempre el código de inicialización recomendado cuando uses una tarjeta MicroSD con el reTerminal para evitar este tipo de problemas.
 
 Si la tarjeta MicroSD no se utiliza en tu proyecto, recomendamos apagar el dispositivo y retirar la tarjeta antes de ejecutar el programa de la pantalla. Si la tarjeta se ha insertado en el reTerminal, tendrás que añadir el código anterior para asegurarte de que la pantalla pueda mostrarse correctamente, independientemente de si estás utilizando una tarjeta MicroSD o no.
 
@@ -1933,7 +1945,7 @@ Entonces, es probable que tu Arduino IDE esté configurado con una velocidad de 
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
