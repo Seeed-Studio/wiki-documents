@@ -116,7 +116,7 @@ reComputer Robotics J501 是一款面向高级机器人和工业应用的高性�
     <tr>
       <th>USB</th>
       <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C（Recovery）<br/>1x USB 2.0 Type-C（调试 UART）</td>
-    </tr]
+    </tr>
     <tr>
       <th>DI/DO/CAN</th>
       <td colSpan={2}>1x 2x10P 3.81mm 端子排 - 4x DI @12V + 4x DO @40V + 4x CAN（支持 CAN-FD，电气隔离）</td>
