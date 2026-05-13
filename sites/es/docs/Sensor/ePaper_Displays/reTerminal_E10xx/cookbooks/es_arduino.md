@@ -1,5 +1,5 @@
 ---
-description: Recetario Arduino de extremo a extremo para reTerminal E1001 / E1002 / E1003 / E1004: Hola Mundo en la pantalla de ePaper más ejemplos completos de periféricos (LED, zumbador, botones, SHT4x, BMS, microSD, renderizado de imágenes BMP).
+description: Recetario Arduino de extremo a extremo para reTerminal E1001 / E1002 / E1003 / E1004 - Hola Mundo en la pantalla de ePaper más ejemplos completos de periféricos (LED, zumbador, botones, SHT4x, BMS, microSD, renderizado de imágenes BMP).
 title: Recetario de Arduino
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
