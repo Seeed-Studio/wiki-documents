@@ -520,20 +520,20 @@
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.4.3 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcWxzMVxULFJoPMMzcb2OU4B0TrE5PUoP-3-9uh9LFgA4g?e=oAUYmS",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo",
         "mirrorlink": "",
-        "filename": "mfi_reserver-agx-orin-64g-j501-6.2-36.4.3-2025-04-02.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2026-05-06.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-6.2-36.4.3",
-        "sha256": "B6A9F41B8B42060D19F811B718E4B71FCBE699BB9EC7A50B4B24DF205003111B"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.4.3 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQaWP2i_eNlOuzhWEQYy8YkBvKksE58swLgIqCXOO4m-kg?e=D95cXx",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo",
         "mirrorlink": "",
-        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2025-04-02.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2026-05-06.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3",
-        "sha256": "AA04EFB99374DCDC89A57C039FA4E1FF5C9371B22F8ED83612AC4C799CCB2640"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",

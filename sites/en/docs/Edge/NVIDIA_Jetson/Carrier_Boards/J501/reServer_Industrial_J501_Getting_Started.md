@@ -280,14 +280,14 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
     <tr>
       <td>AGX Orin 64GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcWxzMVxULFJoPMMzcb2OU4B0TrE5PUoP-3-9uh9LFgA4g?e=oAUYmS" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td> - </td>
       <td>B6A9F41B8B42060D19F811B718E4B71<br />FCBE699BB9EC7A50B4B24DF205003111B</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQaWP2i_eNlOuzhWEQYy8YkBvKksE58swLgIqCXOO4m-kg?e=D95cXx" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td> - </td>
       <td>AA04EFB99374DCDC89A57C039FA4E1F<br />F5C9371B22F8ED83612AC4C799CCB2640</td>
     </tr>
