@@ -244,7 +244,7 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/3.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
 
