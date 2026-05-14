@@ -334,7 +334,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'A complete learning journey covering Jetson fundamentals, computer vision, generative AI, robotics, and edge deployment. Perfect for developers new to edge AI.',
       stats: [
-        { value: '9', label: 'Learning Modules' },
+        { value: '10', label: 'Learning Modules' },
         { value: '70+', label: 'Code Examples' },
         { value: '6', label: 'Application Categories' }
       ],
@@ -346,7 +346,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'Physical AI', desc: 'Build autonomous robots, AMR systems, and robotic arm applications', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Managed Services', desc: 'Cloud-based management and deployment services for Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'Start Learning on GitHub'
+      cta: 'GitHub Repository',
+      ctaOnline: 'Read Online Tutorial'
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -471,7 +472,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Jetsonの基礎、コンピュータビジョン、生成AI、ロボティクス、エッジデプロイメントをカバーする完全な学習ジャーニー。エッジAI初心者の開発者に最適です。',
       stats: [
-        { value: '9', label: '学習モジュール' },
+        { value: '10', label: '学習モジュール' },
         { value: '70+', label: 'コード例' },
         { value: '6', label: 'アプリケーションカテゴリー' }
       ],
@@ -483,7 +484,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: '物理AI', desc: '自律型ロボット、AMRシステム、ロボットアームアプリケーションを構築', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'マネージドサービス', desc: 'Jetson向けクラウドベース管理・デプロイメントサービス', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'GitHubで学習を開始'
+      cta: 'GitHub リポジトリ',
+      ctaOnline: 'オンラインチュートリアルを読む'
     },
     faq: {
       title: 'よくある質問',
@@ -608,7 +610,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: '涵盖 Jetson 基础、计算机视觉、生成式 AI、机器人和边缘部署的完整学习之旅。非常适合边缘 AI 新手开发者。',
       stats: [
-        { value: '9', label: '学习模块' },
+        { value: '10', label: '学习模块' },
         { value: '70+', label: '代码示例' },
         { value: '6', label: '应用分类' }
       ],
@@ -620,7 +622,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: '物理 AI', desc: '构建自主机器人、AMR 系统和机械臂应用', topics: ['ROS2', '机器人', '控制'] },
         { key: 'managed', icon: '☁️', title: '托管服务', desc: 'Jetson 的云端管理和部署服务', topics: ['Cloud', 'OTA', '管理'] }
       ],
-      cta: '在 GitHub 上开始学习'
+      cta: 'GitHub 仓库',
+      ctaOnline: '在线阅读教程'
     },
     faq: {
       title: '常见问题',
@@ -745,7 +748,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Un viaje de aprendizaje completo que cubre fundamentos de Jetson, visión por computadora, IA generativa, robótica y despliegue en el borde. Perfecto para desarrolladores nuevos en IA de borde.',
       stats: [
-        { value: '9', label: 'Módulos' },
+        { value: '10', label: 'Módulos' },
         { value: '70+', label: 'Ejemplos' },
         { value: '6', label: 'Categorías' }
       ],
@@ -757,7 +760,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construya robots autónomos, sistemas AMR y aplicaciones de brazos robóticos', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Servicios Gestionados', desc: 'Servicios de gestión y despliegue basados en la nube para Jetson', topics: ['Cloud', 'OTA', 'Gestionar'] }
       ],
-      cta: 'Comenzar en GitHub'
+      cta: 'Repositorio GitHub',
+      ctaOnline: 'Leer tutorial en línea'
     },
     faq: {
       title: 'Preguntas Frecuentes',
@@ -882,7 +886,7 @@ export const translations = {
       mainTitle: 'reComputer Jetson for Beginners',
       mainDesc: 'Uma jornada completa de aprendizado cobrindo fundamentos do Jetson, visão computacional, IA generativa, robótica e implantação na borda. Perfeito para desenvolvedores iniciantes em IA de borda.',
       stats: [
-        { value: '9', label: 'Módulos de Aprendizado' },
+        { value: '10', label: 'Módulos de Aprendizado' },
         { value: '70+', label: 'Exemplos de Código' },
         { value: '6', label: 'Categorias de Aplicação' }
       ],
@@ -894,7 +898,8 @@ export const translations = {
         { key: 'physical', icon: '🏭', title: 'IA Física', desc: 'Construa robôs autônomos, sistemas AMR e aplicações com braços robóticos', topics: ['ROS2', 'Robot', 'Control'] },
         { key: 'managed', icon: '☁️', title: 'Serviços Gerenciados', desc: 'Serviços baseados em nuvem para gerenciamento e implantação no Jetson', topics: ['Cloud', 'OTA', 'Manage'] }
       ],
-      cta: 'Começar no GitHub'
+      cta: 'Repositório GitHub',
+      ctaOnline: 'Ler tutorial online'
     },
     faq: {
       title: 'Perguntas Frequentes',
@@ -1483,15 +1488,26 @@ const RecomputerPage = ({ lang }: Props) => {
                   })}
                 </div>
 
-                <a
-                  href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.beginner_cta_button}
-                >
-                  <span>{t.beginnerGuide.cta}</span>
-                  <span>→</span>
-                </a>
+                <div className={styles.beginner_cta_group}>
+                  <a
+                    href="https://sensecraft.seeed.cc/ai-lab/tutorials/j/introduction"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.beginner_cta_button}
+                  >
+                    <span>{t.beginnerGuide.ctaOnline}</span>
+                    <span>→</span>
+                  </a>
+                  <a
+                    href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.beginner_cta_button_secondary}
+                  >
+                    <span>{t.beginnerGuide.cta}</span>
+                    <span>→</span>
+                  </a>
+                </div>
               </div>
             )}
           </div>

@@ -2492,6 +2492,17 @@
     .devtool_video_label {
       color: #a0a0a0;
     }
+
+    .beginner_cta_button_secondary {
+      background: #1b1b1d;
+      color: #f5f6f7;
+      border-color: #303030;
+
+      &:hover {
+        border-color: #76b900;
+        color: #8bc34a;
+      }
+    }
   }
 
   // ========== Pagination ==========
@@ -2928,6 +2939,40 @@
     &:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(118, 185, 0, 0.3);
+    }
+  }
+
+  .beginner_cta_group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    > a {
+      flex: 1 1 0;
+      min-width: 220px;
+    }
+  }
+
+  .beginner_cta_button_secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: #76b900;
+      color: #76b900;
+      box-shadow: 0 4px 12px rgba(118, 185, 0, 0.15);
     }
   }
 

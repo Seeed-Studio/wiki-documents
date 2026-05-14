@@ -5,10 +5,11 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
-  author: Allen
+  date: 05/13/2026
+  author: Luki
 createdAt: '2025-08-21'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-13'
+url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -18,20 +19,20 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/147.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip 请先阅读主 Arduino 指南
-本页是**针对 reTerminal 的专用菜谱**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed ePaper 上使用 Arduino，请先快速浏览那一页；下面的步骤默认你已经准备好 IDE 环境。
+本页是**针对 reTerminal 的专用菜谱**。通用的基础内容——Arduino IDE 设置、ESP32 开发板包、安装 `Seeed_GFX`、生成 `driver.h`——都在 **[Work with Arduino](/cn/epaper_work_with_arduino)** 中。如果你是第一次在 Seeed ePaper 上使用 Arduino，请先快速浏览那一页；下面的步骤默认你已经准备好 IDE。
 :::
 
 ## 介绍
 
-reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成了 ePaper 显示屏。本菜谱将带你完成以下内容：
+reTerminal E 系列是 Seeed Studio 的工业 HMI 产品线，基于 XIAO ESP32-S3，集成了 ePaper 显示屏。本菜谱将带你完成：
 
 - E1001 / E1002 / E1003 / E1004 的硬件概览与购买链接。
-- 在每一款型号上运行第一个 **Hello World**（使用匹配的 `BOARD_SCREEN_COMBO`）。
-- 针对每个板载外设的动手示例：LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池管理系统、microSD 卡，以及从 SD 渲染 BMP 图像。
+- 每个型号的第一个 **Hello World**（使用匹配的 `BOARD_SCREEN_COMBO`）。
+- 每个板载外设的动手示例：LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池管理系统、microSD 卡，以及从 SD 渲染 BMP 图像。
 
 ### 所需材料
 
-要完成本教程，请准备以下任意一款 reTerminal E 系列设备：
+要完成本教程，请准备以下 reTerminal E 系列设备之一：
 
 <div class="table-center">
   <table align="center">
@@ -106,7 +107,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **步骤 4.** 选择正确的开发板。
 
-进入 **Tools > Board > ESP32 Arduino**，选择 **XIAO_ESP32S3**。
+依次点击 **Tools > Board > ESP32 Arduino**，然后选择 **XIAO_ESP32S3**。
 
 **步骤 5.** 使用 USB-C 线将 reTerminal E 系列 ePaper 显示屏连接到电脑。
 
@@ -114,7 +115,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ## ePaper 显示屏编程
 
-**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 则配备 7.3 英寸全彩 ePaper 显示屏**。这两款显示屏在各种光照条件下都具有出色的可视性，并且功耗极低，非常适合需要始终点亮但功耗极小的工业应用场景。
+**reTerminal E1001 配备 7.5 英寸黑白 ePaper 显示屏**，而 **reTerminal E1002 则配备 7.3 英寸全彩 ePaper 显示屏**。这两款显示屏在各种光照条件下都具有出色的可视性，并且功耗极低，非常适合需要始终点亮且功耗极低的工业应用场景。
 
 ### 使用 Seeed_GFX 库
 
@@ -124,20 +125,20 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**步骤 2.** 在 Arduino IDE 中通过添加 ZIP 文件来安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library**，然后选择刚刚下载的 ZIP 文件。
+**步骤 2.** 在 Arduino IDE 中通过添加 ZIP 文件来安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library**，然后选择下载好的 ZIP 文件。
 
 :::note
-如果你之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 基础上派生的分支，并为 Seeed Studio 显示屏增加了额外特性。
+如果你之前安装过 TFT_eSPI 库，可能需要暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突，因为 Seeed_GFX 是在 TFT_eSPI 基础上派生的分支，并为 Seeed Studio 显示屏增加了额外功能。
 :::
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001" label="为 reTerminal E1001 编程" default>
+<TabItem value="Programming reTerminal E1001" label="编程 reTerminal E1001" default>
 
-#### 为 reTerminal E1001 编程（7.5 英寸黑白 ePaper）
+#### 编程 reTerminal E1001（7.5 英寸黑白 ePaper）
 
 下面我们通过一个简单示例来演示在黑白 ePaper 显示屏上的基本绘图操作。
 
@@ -161,14 +162,14 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
 ```
 
-**步骤 6.** 将草图上传到 reTerminal E1001。你应该会看到显示屏上呈现出多种图形，包括线条、文本和形状，用于展示基本的绘图能力。
+**步骤 6.** 将草图上传到你的 reTerminal E1001。你应该会看到显示屏上呈现出多种图形，包括线条、文本和形状，用于演示基本绘图能力。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/148.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1002" label="为 reTerminal E1002 编程">
+<TabItem value="Programming reTerminal E1002" label="编程 reTerminal E1002">
 
-#### 为 reTerminal E1002 编程（7.3 英寸全彩 ePaper）
+#### 编程 reTerminal E1002（7.3 英寸全彩 ePaper）
 
 全彩 ePaper 显示屏支持红色、黑色和白色三种颜色，可以实现更加丰富的可视化界面。
 
@@ -186,24 +187,24 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/gfx2.jpg" style={{width:900, height:'auto'}}/></div>
 
-**步骤 5.** 复制生成的配置代码，并将其粘贴到 `driver.h` 文件中。代码应类似如下：
+**步骤 5.** 复制生成的配置代码，并将其粘贴到 `driver.h` 文件中。代码应类似如下所示：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
 ```
 
-**步骤 6.** 将示例程序上传到你的 reTerminal E1002。显示屏将显示彩色图形，以展示这块彩色电子墨水屏的完整色彩能力。
+**步骤 6.** 将示例程序上传到你的 reTerminal E1002。显示屏将显示彩色图形，以展示电子纸显示屏的全彩能力。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1003" label="Programming reTerminal E1003">
+<TabItem value="Programming reTerminal E1003" label="编程 reTerminal E1003">
 
-#### 编程 reTerminal E1003（10.3 英寸电子墨水屏）
+#### 编程 reTerminal E1003（10.3 英寸电子纸）
 
-使用相同的工作流程，借助 Seeed_GFX 库来配置并驱动 reTerminal E1003 上的电子墨水屏。
+使用 Seeed_GFX 库按照相同的工作流程来配置和驱动 reTerminal E1003 上的电子纸。
 
-**步骤 1.** 在 Seeed_GFX 库中打开一个示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库中打开一个示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
 **步骤 2.** 在 Arduino IDE 中启用 OPI PSRAM：**Tools > PSRAM > OPI PSRAM**
 
@@ -228,13 +229,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Programming reTerminal E1004" label="Programming reTerminal E1004">
+<TabItem value="Programming reTerminal E1004" label="编程 reTerminal E1004">
 
-#### 编程 reTerminal E1004（13.3 英寸全彩电子墨水屏）
+#### 编程 reTerminal E1004（13.3 英寸全彩电子纸）
 
-使用 Seeed_GFX 库来配置并驱动 reTerminal E1004 上的 E Ink® Spectra™ 6 全彩电子墨水显示屏。
+使用 Seeed_GFX 库来配置和驱动 reTerminal E1004 上的 E Ink® Spectra™ 6 全彩电子纸显示屏。
 
-**步骤 1.** 在 Seeed_GFX 库中打开彩色示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库中打开彩色示例程序：**File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
 **步骤 2.** 在 Arduino IDE 中启用 OPI PSRAM：**Tools > PSRAM > OPI PSRAM**
 
@@ -263,34 +264,34 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ### 使用 GxEPD2 库
 
-除了 Seeed_GFX，你也可以使用 `GxEPD2` 库来驱动 reTerminal 的电子墨水显示屏。`GxEPD2` 是一个功能强大且广受欢迎的库，支持多种电子墨水屏。
+除了 Seeed_GFX，你也可以使用 `GxEPD2` 库来驱动 reTerminal 的电子纸显示屏。`GxEPD2` 是一个功能强大且广受欢迎的库，支持多种电子纸显示屏。
 
 **安装 GxEPD2 库**
 
 为确保你拥有最新的功能和设备支持，最好从其 GitHub 仓库手动安装 `GxEPD2` 库。
 
-**步骤 1.** 前往 GxEPD2 的 GitHub 仓库。点击 "Code" 按钮，然后选择 "Download ZIP" 将该库下载到你的电脑。
+**步骤 1.** 前往 GxEPD2 的 GitHub 仓库。点击 "Code" 按钮，然后选择 "Download ZIP" 将库下载到你的电脑。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/ZinggJM/GxEPD2" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **步骤 2.** 在 Arduino IDE 中，从下载的文件安装该库。依次点击 **Sketch > Include Library > Add .ZIP Library...**，然后选择你刚刚下载的 ZIP 文件。
 
-**步骤 3.** `GxEPD2` 库需要 `Adafruit GFX Library` 才能正常工作，你也必须安装它。最简单的方式是通过库管理器安装：前往 **Tools > Manage Libraries...**，搜索 "Adafruit GFX Library"，然后点击 "Install"。
+**步骤 3.** `GxEPD2` 库需要 `Adafruit GFX Library` 才能运行，你也必须安装它。最简单的方式是通过库管理器安装：前往 **Tools > Manage Libraries...**，搜索 "Adafruit GFX Library"，然后点击 "Install"。
 
 :::note
-虽然为了方便，`GxEPD2` 也可以通过 Arduino Library Manager 获取，但其中的版本往往比较陈旧。GitHub 仓库才是最新版本的权威来源，其中包含最新的功能、错误修复以及对最新电子墨水屏的支持。因此，建议直接从 GitHub 下载该库，以确保你使用的是最新的代码。
+虽然 `GxEPD2` 为了方便可以通过 Arduino 库管理器获取，但其中的版本往往比较陈旧。GitHub 仓库才是最新版本的权威来源，其中包含最新的功能、错误修复以及对最新电子纸显示屏的支持。因此，直接从 GitHub 下载该库是推荐的方式，以确保你使用的是最新的代码。
 :::
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001 GxEPD2" label="Programming reTerminal E1001" default>
+<TabItem value="Programming reTerminal E1001 GxEPD2" label="编程 reTerminal E1001" default>
 
 #### 编程 reTerminal E1001（黑白屏）
 
-下面是一个示例代码，用于在 reTerminal E1001 的黑白电子墨水屏上使用 `GxEPD2` 库显示 “Hello World!”。将 `EPD_SELECT` 设置为 `0` 以选择 E1001 的驱动。
+下面是一个使用 `GxEPD2` 库在 reTerminal E1001 的黑白电子纸显示屏上显示 “Hello World!” 的示例代码。将 `EPD_SELECT` 设置为 `0` 以选择 E1001 的驱动。
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -376,11 +377,11 @@ void loop() {};
 ```
 
 </TabItem>
-<TabItem value="Programming reTerminal E1002 GxEPD2" label="Programming reTerminal E1002">
+<TabItem value="Programming reTerminal E1002 GxEPD2" label="编程 reTerminal E1002">
 
 #### 编程 reTerminal E1002（全彩屏）
 
-对于 reTerminal E1002，你只需将 `EPD_SELECT` 的值改为 `1`。这将选择适用于 7.3 英寸全彩电子墨水屏的驱动程序。其余代码保持不变。
+对于 reTerminal E1002，你只需要将 `EPD_SELECT` 的值更改为 `1`。这将选择适用于 7.3 英寸全彩电子纸显示屏的驱动程序。其余代码保持不变。
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -470,16 +471,16 @@ void loop() {};
 </Tabs>
 
 :::note
-ePaper 显示屏的刷新率相对较慢（通常完全刷新需要 1-3 秒）。这是正常现象，是为了实现超低功耗以及在无背光情况下依然具有出色可视性的权衡。
+ePaper 显示屏的刷新率相对较慢（通常完全刷新需要 1-3 秒）。这是正常现象，是为了实现超低功耗以及在无背光情况下依然具有出色可视性所做的权衡。
 :::
 
 ## reTerminal 硬件的使用示例
 
-现在让我们通过 Arduino 代码示例来探索 reTerminal E 系列的主要特性。
+现在让我们通过 Arduino 代码示例来探索 reTerminal E 系列的主要功能。
 
 ### LED 控制
 
-reTerminal E 系列具有一个板载 LED，可通过 GPIO6 控制。请注意，LED 逻辑是反向的（LOW = 亮，HIGH = 灭）。
+reTerminal E 系列带有一个板载 LED，可通过 GPIO6 控制。请注意，LED 逻辑是反向的（LOW = 亮，HIGH = 灭）。
 
 ```cpp
 // reTerminal E Series - LED Control Example
@@ -515,7 +516,7 @@ void loop() {
 
 ### 蜂鸣器控制
 
-reTerminal E 系列在 GPIO7 上集成了一个蜂鸣器，可以发出各种音调和提示音。
+reTerminal E 系列在 GPIO7 上集成了一个蜂鸣器，可以发出不同的音调和提示音。
 
 ```cpp
 // reTerminal E Series - Buzzer Control Example
@@ -705,9 +706,9 @@ void loop() {
 
 - `digitalWrite()`: 用于基本蜂鸣的简单开/关控制
 - `tone(pin, frequency, duration)`: 生成特定频率，用于旋律或警报
-- `noTone(pin)`: 停止音调生成
+- `noTone(pin)`: 停止产生音调
 
-**常见警报模式：**
+**常见提示音模式：**
 
 - 单声蜂鸣：确认
 - 双声蜂鸣：警告
@@ -716,15 +717,15 @@ void loop() {
 
 ### 用户按键
 
-reTerminal E 系列配备了三个用户可编程按键，可用于各种控制用途。本节演示如何读取按键状态，并使用 Arduino 对按键按下做出响应。
+reTerminal E 系列配备了三个用户可编程按键，可用于各种控制用途。本节演示如何读取按键状态并使用 Arduino 响应按键按下。
 
 reTerminal E 系列有三个连接到 ESP32-S3 的按键：
 
-- **KEY0** (GPIO3): 右键（绿色按键）
-- **KEY1** (GPIO4): 中间按键
-- **KEY2** (GPIO5): 左键
+- **KEY0** (GPIO3)：右键（绿色按键）
+- **KEY1** (GPIO4)：中键
+- **KEY2** (GPIO5)：左键
 
-所有按键为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
+所有按键都是低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
 
 #### 基本按键读取示例
 
@@ -820,7 +821,7 @@ void loop() {
 
 2. **引脚配置**：在 `setup()` 中，将每个按键引脚配置为 `INPUT`。
 
-3. **按键检测**：在 `loop()` 中，我们持续检查每个按键的状态，使用 `digitalRead()`。当按键被按下时，引脚读取为 LOW。
+3. **按键检测**：在 `loop()` 中，我们持续使用 `digitalRead()` 检查每个按键的状态。当按键被按下时，引脚读取为 LOW。
 
 4. **消抖**：在每次按键后加入简单的 200ms 延时，可防止由于机械抖动导致一次按键被多次检测。
 
@@ -947,7 +948,7 @@ void loop() {
 1. **串口初始化**：使用 `Serial1`，并将引脚 44（RX）和 43（TX）配置为 reTerminal E 系列专用串口
 2. **I2C 初始化**：使用引脚 19（SDA）和 20（SCL）配置 I2C
 3. **传感器初始化**：调用 `sht4x.begin(Wire, 0x44)` 在地址 0x44 初始化 SHT4x 传感器
-4. **序列号读取**：读取并显示传感器的唯一序列号以进行验证
+4. **读取序列号**：读取并显示传感器的唯一序列号以便验证
 
 **Loop 函数：**
 
@@ -970,6 +971,17 @@ Temperature: 27.38°C Humidity: 53.37%
 ### 电池管理系统
 
 reTerminal E 系列通过带分压电路的 ADC 引脚实现电池电压监测功能。
+
+:::note
+
+reTerminal E1003 上的 `BATTERY_ENABLE_PIN` 与 E1001/E1002/E1004 不同。
+
+- E1001/E1002/E1004：`BATTERY_ENABLE_PIN` → `GPIO21`
+- E1003：`BATTERY_ENABLE_PIN` → `IO40`
+
+在不同 reTerminal E10xx 型号之间移植示例时，请相应更新你的代码。
+
+:::
 
 #### 简单电池电压监测
 
@@ -1047,7 +1059,7 @@ Battery: 4.18 V
 
 ### 使用 MicroSD 卡
 
-对于需要额外存储空间的应用，例如数码相框或数据记录，reTerminal E 系列配备了一个 MicroSD 卡槽。
+对于需要额外存储空间的应用（例如数码相框或数据记录），reTerminal E 系列配备了一个 MicroSD 卡槽。
 
 如果你计划将设备用作数码相框或需要额外存储空间，请插入一张 microSD 卡。
 
@@ -1059,7 +1071,7 @@ reTerminal E 系列仅支持容量不超过 64GB 且使用 **Fat32** 文件系�
 
 #### 基本 SD 卡操作：列出文件
 
-本示例演示如何初始化 SD 卡、检测其插入或移除状态，并列出其根目录中的所有文件和文件夹。对于 **reTerminal E1001** 和 **reTerminal E1002**，代码完全相同。
+本示例演示如何初始化 SD 卡、检测其插入或移除状态，并列出其根目录中的所有文件和文件夹。该代码在 **reTerminal E1001** 和 **reTerminal E1002** 上完全相同。
 
 将以下代码复制到你的 Arduino IDE 草图中。
 
@@ -1232,11 +1244,11 @@ void loop() {
 
 - **引脚定义：** 代码首先定义了用于 MicroSD 卡槽的 GPIO 引脚。请注意，SPI 引脚（`MOSI`、`SCK`）与电子纸显示屏共享，但通过单独的片选引脚（`SD_CS_PIN`）和独立的 SPI 实例（`spiSD`），可以确保它们彼此独立使用。
 - **SPI 初始化：** 我们实例化了一个新的 SPI 对象 `spiSD(HSPI)`，以使用 ESP32 的第二个硬件 SPI 控制器（HSPI）。这是避免与其他 SPI 设备冲突的最佳实践。
-- **卡检测：** `isCardInserted()` 函数读取 `SD_DET_PIN`。在 reTerminal 硬件上，当卡插入时，该引脚会被拉低。
+- **卡检测：** `isCardInserted()` 函数读取 `SD_DET_PIN`。在 reTerminal 硬件上，当卡存在时，该引脚被拉低。
 - **挂载/卸载：** `mountSD()` 函数为卡供电，使用正确的引脚配置 HSPI 总线，并调用 `SD.begin()` 初始化文件系统。`unmountSD()` 用于释放资源。
 - **文件列出：** `listRoot()` 打开根目录（`/`），而 `listDir()` 是一个递归函数，用于遍历文件系统并打印所有文件和目录的名称。
-- **`setup()`：** 初始化用于输出的 `Serial1`，配置卡检测引脚，并在设备上电时执行一次初始检查，以查看是否已经插入了卡。
-- **`loop()`：** 代码没有持续不断地检查卡，而是使用非阻塞定时器（`millis()`）每秒检查一次卡状态是否发生变化。如果检测到变化（插入或移除卡），则挂载或卸载卡，并将状态打印到串口监视器。
+- **`setup()`：** 初始化用于输出的 `Serial1`，配置卡检测引脚，并在设备上电时执行初始检查，以查看是否已经插入了卡。
+- **`loop()`：** 代码没有持续不断地检查卡，而是使用非阻塞定时器（`millis()`）每秒检查一次卡状态是否发生变化。如果检测到变化（插入或移除卡），则挂载或卸载该卡，并将状态打印到串口监视器。
 
 ##### 预期结果
 
@@ -1267,9 +1279,9 @@ void loop() {
 
 ### 高级示例：从 SD 卡显示 BMP 图像
 
-这个综合示例结合了前面章节的功能。我们将编写一个程序，从 MicroSD 卡中读取一个 Bitmap（`.bmp`）图像文件，并将其显示在 reTerminal 的电子纸屏幕上。这展示了一个实用的、真实世界的应用场景。
+这个综合示例结合了前面章节的功能。我们将编写一个程序，从 MicroSD 卡中读取一个 Bitmap（`.bmp`）图像文件，并将其显示在 reTerminal 的电子纸屏幕上。这展示了该设备的一个实用的真实应用场景。
 
-程序会在 SD 卡根目录中查找名为 `test.bmp` 的文件。
+程序将在 SD 卡根目录中查找名为 `test.bmp` 的文件。
 
 #### 准备工作
 
@@ -1286,12 +1298,12 @@ void loop() {
 <Tabs>
 <TabItem value="For reTerminal E1001 (B&W Screen)" label="适用于 reTerminal E1001（黑白屏）" default>
 
-黑白屏只能显示黑白像素。虽然我们的代码可以实时将彩色图像转换为灰度图像，但如果你**在电脑上预先将图像转换为高质量灰度图像**，将会获得更好的对比度和细节。
+黑白屏只能显示黑白像素。虽然我们的代码可以实时将彩色图像转换为灰度图像，但如果你在电脑上**预先将图像转换为高质量灰度图像**，将会获得更好的对比度和细节。
 
 1. **调整图像尺寸：** 将图片调整为 **800x480 像素**。
 
 2. **转换为灰度（推荐）：** 在你的图像编辑器中，先将图像转换为灰度。在 **GIMP** 中：
-    - 打开菜单 **Colors > Desaturate > Desaturate...**。选择类似 “Luminosity” 的模式以获得最佳效果。
+    - 打开菜单 **Colors > Desaturate > Desaturate...**。选择类似 "Luminosity" 的模式以获得最佳效果。
 
 3. **保存为标准 BMP：** 按照彩色屏幕指南中的相同步骤保存文件。即使图像是灰度的，将其保存为 24 位 BMP 也能确保与代码具有最大的兼容性。
     - 进入 **File > Export As...**，将其命名为 `test.bmp`。
@@ -1886,11 +1898,11 @@ void loop() {
 #### 工作原理
 
 - **`setup()`**：`setup` 函数按顺序初始化所有必要的硬件：用于调试的串口、共享的 SPI 总线、电子纸显示屏，最后是 SD 卡。如果所有初始化都成功，它会调用一次 `drawBmp()` 来执行主要任务。
-- **`drawBmp()`**：这是核心函数。它打开 BMP 文件，解析文件头以读取其尺寸和属性，并执行关键的校验。它会特别检查是否存在不支持的压缩类型，如果发现则给出有用的错误提示。
+- **`drawBmp()`**：这是核心函数。它打开 BMP 文件，解析文件头以读取其尺寸和属性，并执行关键的校验。它会特别检查是否存在不支持的压缩类型，如果发现，则提供有用的错误信息。
 - **绘制循环**：该函数一次从 SD 卡读取图像的一行。对于该行中的每个像素，它会提取红、绿、蓝三种颜色值。
 - **颜色处理**：这里的逻辑会根据 `EPD_SELECT` 宏进行分支：
-  - **彩色（E1002）**：调用 `findNearestColor(r, g, b)`。该函数计算像素颜色与屏幕调色板中 6 种颜色之间的“距离”，并返回距离最小的调色板颜色，从而尽可能准确地还原颜色。
-  - **黑白（E1001）**：使用标准亮度公式（`r * 0.299 + g * 0.587 + b * 0.114`）将 RGB 颜色转换为单一亮度值。如果该值低于阈值（128），则将像素绘制为黑色；否则绘制为白色。
+  - **彩色屏（E1002）**：调用 `findNearestColor(r, g, b)`。该函数计算像素颜色与屏幕调色板中 6 种颜色之间的“距离”。它返回距离最小的调色板颜色，从而尽可能准确地还原颜色。
+  - **黑白屏（E1001）**：使用标准亮度公式（`r * 0.299 + g * 0.587 + b * 0.114`）将 RGB 颜色转换为单一亮度值。如果该值低于阈值（128），则将像素绘制为黑色；否则绘制为白色。
 
 #### 上传并运行
 
@@ -1906,9 +1918,9 @@ void loop() {
 
 ## 故障排查
 
-### Q1：为什么运行上述代码时，reTerminal 的电子纸显示屏没有任何显示或不刷新？
+### Q1：为什么在运行上述代码时，reTerminal 的电子纸显示屏没有任何显示或不刷新？
 
-如果你在 reTerminal 中插入了 MicroSD 卡，可能会出现此问题。原因是 MicroSD 卡和电子纸显示屏在 reTerminal 上共用同一条 SPI 总线。如果插入了 MicroSD 卡但其使能（片选）引脚未被正确管理，就会在 SPI 总线上产生冲突。具体来说，MicroSD 卡可能会一直将 BUSY 线保持为高电平，从而阻止电子纸显示屏正常工作——导致没有显示更新或刷新。
+如果你在 reTerminal 中插入了 MicroSD 卡，可能会出现此问题。原因是 MicroSD 卡和电子纸显示屏在 reTerminal 上共用同一条 SPI 总线。如果插入了 MicroSD 卡，但其使能（片选）引脚未被正确管理，就会在 SPI 总线上产生冲突。具体来说，MicroSD 卡可能会将 BUSY 线保持为高电平，从而阻止电子纸显示屏正常工作——导致没有显示更新或刷新。
 
 ```cpp
 // Initialize SD Card
@@ -1923,7 +1935,7 @@ pinMode(SD_DET_PIN, INPUT_PULLUP);
 
 ### Q2: 为什么我无法向 reTerminal 上传程序？
 
-如果你在向 reTerminal 上传程序时遇到如下错误。
+如果你在向 reTerminal 上传程序时遇到以下错误。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -1933,7 +1945,7 @@ pinMode(SD_DET_PIN, INPUT_PULLUP);
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
