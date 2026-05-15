@@ -18,9 +18,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
 当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+
 1. 尚未完成消息传输过程
 2. 正在配置中
 :::
+
 ## 视频教程
 
 ### 第 1 部分：开箱与设置
@@ -130,6 +132,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ## 配置
+
 ### 配置 LoRa
 
 为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
@@ -405,7 +408,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
- - 如果仍然无效，按住设备按键，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#device-bricked)重新安装引导程序
+- 如果仍然无效，按住设备按键，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#device-bricked)重新安装引导程序
 
 ### 设备卡在启动循环中
 
@@ -492,8 +495,6 @@ python -m pip show adafruit-nrfutil
 对于 Windows 用户，你可能需要手动添加路径。复制上一步显示的安装位置，然后按如下方式添加：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -618,20 +619,21 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  请检查端口是否正确，或者尝试另一个端口。
 
- ### 设备自动关机
+### 设备自动关机
 
- #### 描述
+#### 描述
 
- - 设备开机后，过一段时间会自动关机或重启。
- - 串口日志运行一段时间后停止。
+- 设备开机后，过一段时间会自动关机或重启。
+- 串口日志运行一段时间后停止。
 
  这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
 
- #### 故障排查
+#### 故障排查
 
  [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)执行 flash 擦除操作。
 
- ### 恢复出厂设置
+### 恢复出厂设置
+
 如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
 
 - [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)对设备进行 flash 擦除。然后重新烧录最新固件。
@@ -688,6 +690,7 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 - **Reset NodeDB**：只清除节点数据库。
 - **Factory Reset**：将设备恢复到出厂设置，并移除更多配置信息。
+
 :::
 
 **重置后会发生什么**
@@ -709,9 +712,9 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 ### 信号质量
 
-  - **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上工作。SNR 低于 -10 dB 的设备表示性能较差。
 
-  - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
+- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
       为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
 
@@ -724,10 +727,6 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 - [Meshtastic 文档](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker 数据手册](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
-
-
-
-## 资源
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
