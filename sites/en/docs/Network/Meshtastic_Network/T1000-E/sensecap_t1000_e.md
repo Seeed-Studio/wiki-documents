@@ -18,9 +18,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+
 1. Not finishing the message transmission process
 2. Being configured
 :::
+
 ## Video Tutorial
 
 ### Part 1: Unboxing Setup
@@ -100,14 +102,14 @@ import TabItem from '@theme/TabItem';
 
 ### Connect via Website
 
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
 
   Step 1: Open the Website
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Step 2: Add the new device 
+  Step 2: Add the new device
   
     Click "+ New Connection". 
 
@@ -130,6 +132,7 @@ If you want to text messages and communicate with other nodes in the website, yo
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ## Configuration
+
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -401,11 +404,11 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 - Change the charging cable
 
-- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters: 
+- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
- 
- - If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
+
+- If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
 
 ### Device stuck in boot loop
 
@@ -449,9 +452,9 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 **Step1: Adafruit-nrfutil Installation**
 
-For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line. 
+For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line.
 
-For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line.
 
 **Prerequisites**
 
@@ -492,8 +495,6 @@ This is the installation location:
 For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -618,25 +619,26 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  Check if the port is correct, or try another port.
 
- ### Device automatically turn off
+### Device automatically turn off
 
- #### Description
+#### Description
 
- - After the device turning on, it will turn off or reboot automatically after a while. 
- - The serial port log ran for a while and then stopped.
+- After the device turning on, it will turn off or reboot automatically after a while.
+- The serial port log ran for a while and then stopped.
 
  This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
 
- #### Troubleshoot
+#### Troubleshoot
 
- [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase. 
+ [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase.
 
- ### Factory Reset
+### Factory Reset
+
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
 
 - [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to flash erase the device. And then re-flash the latest firmware.
 
-- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB Reset
@@ -688,6 +690,7 @@ Please note the difference between the following options:
 
 - **Reset NodeDB**: Only clears the node database.
 - **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+
 :::
 
 **What happens after reset**
@@ -709,9 +712,9 @@ You may observe the following:
 
 ### Signal Quality
 
-  - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+- **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
 
-  - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance. 
+- **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
@@ -719,15 +722,11 @@ You may observe the following:
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
-## Resource
+## Resources
 
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
-
-
-
-## Resources
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
