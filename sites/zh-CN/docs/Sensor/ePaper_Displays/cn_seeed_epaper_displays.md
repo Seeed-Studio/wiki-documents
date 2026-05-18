@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
 slug: /seeed_epaper_displays
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
+  date: 05/18/2026
   author: dimo
 createdAt: '2026-04-28'
 updatedAt: '2026-04-28'
@@ -22,7 +22,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 
 1. **reTerminal E 系列** — 完全集成、开箱即用的 ePaper 终端（只需上电即可使用）。
 2. **驱动 / 扩展板** — 将 MCU 与通用或大尺寸 ePaper 屏幕配对，构建你自己的产品。
-3. **DIY 套件与裸屏** — 为创客社区设计，针对 TRMNL 或 XIAO 等特定平台进行了优化。
+3. **DIY 套件和裸屏** — 为创客社区设计，针对 TRMNL 或 XIAO 等特定平台进行了优化。
 
 这三条产品线共享**同一软件生态系统**：SenseCraft HMI（零代码）、Home Assistant / ESPHome、TRMNL、Arduino / ESP-IDF / PlatformIO，以及 SquareLine Vision、EEZ Studio、Lopaka 等可视化 UI 工具。选择任意一款硬件系列，其余工具链保持一致。
 
@@ -55,9 +55,9 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
       <td>针对 TRMNL 平台预先调校；同样支持 ESPHome 和 Arduino。</td>
     </tr>
     <tr>
-      <td>将 7.5" ePaper 面板直接插接到 Seeed Studio XIAO 模块上</td>
+      <td>将 7.5" ePaper 面板直接插入 Seeed Studio XIAO 模块</td>
       <td><a href="https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer"><strong>XIAO 7.5" ePaper 面板 →</strong></a></td>
-      <td>裸屏 + 与任意 XIAO 开发板配对的转接板；占板面积极小。</td>
+      <td>裸屏 + 与任意 XIAO 开发板配合使用的转接板；占板面积极小。</td>
     </tr>
   </table>
 </div>
@@ -109,7 +109,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
   <table align="center">
     <tr>
       <th>开发板</th>
-      <th>目标屏幕</th>
+      <th>适配屏幕</th>
       <th>亮点</th>
       <th>Wiki</th>
     </tr>
@@ -128,13 +128,13 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
     <tr>
       <td align="center"><strong>EE04</strong></td>
       <td align="center">24-pin / 50-pin 通用</td>
-      <td>跳线可选引脚布局；适配大多数市售小尺寸 ePaper 屏幕。</td>
+      <td>跳线可选引脚布局；适配大多数现成小尺寸 ePaper 屏幕。</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/cn/epaper_ee04" target="_blank" rel="noopener noreferrer">EE04 →</a></td>
     </tr>
     <tr>
       <td align="center"><strong>EE05</strong></td>
-      <td align="center">24-pin / 50-pin 通用（最新）</td>
-      <td>EE04 的布局升级版；同样基于 XIAO ESP32-S3，提供最新固件支持。</td>
+      <td align="center">24-pin 通用（最新）</td>
+      <td>EE04 的更新布局；同样基于 XIAO ESP32-S3，提供最新固件支持。</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/cn/epaper_ee05" target="_blank" rel="noopener noreferrer">EE05 →</a></td>
     </tr>
   </table>
@@ -146,7 +146,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
   <table align="center">
     <tr>
       <th>开发板</th>
-      <th>目标屏幕</th>
+      <th>适配屏幕</th>
       <th>亮点</th>
       <th>Wiki</th>
     </tr>
@@ -158,8 +158,8 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
     </tr>
     <tr>
       <td align="center"><strong>EN05</strong></td>
-      <td align="center">24-pin / 50-pin 通用（最新）</td>
-      <td>EN04 的布局升级版；同样基于 nRF52840，提供最新固件支持。</td>
+      <td align="center">24-pin 通用（最新）</td>
+      <td>EN04 的更新布局；同样基于 nRF52840，提供最新固件支持。</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/cn/epaper_en05" target="_blank" rel="noopener noreferrer">EN05 →</a></td>
     </tr>
   </table>
@@ -181,7 +181,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
     </tr>
     <tr>
       <td align="center"><strong>XIAO ePaper Breakout Board</strong></td>
-      <td>用于 XIAO + ePaper 的原始转接板；配有完善文档并支持 OpenEpaperLink (OEPL)。</td>
+      <td>最初的 XIAO + ePaper 转接板；配有完善文档，并支持 OpenEpaperLink (OEPL)。</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board" target="_blank" rel="noopener noreferrer">Breakout →</a></td>
     </tr>
   </table>
@@ -191,36 +191,36 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 我们还提供了一个汇总的 **[ePaper 驱动板总览](https://wiki.seeedstudio.com/cn/xiao_epaper_display_board_overview)**，其中并排列出了每块板卡的特性。
 :::
 
-## DIY 套件与裸屏
+## DIY 套件和裸屏
 
-对于更喜欢自己动手组装全部硬件的创客，有两种灵活选择：
+对于更喜欢自己动手组装一切的创客，有两种灵活选择：
 
 <div class="table-center">
   <table align="center">
     <tr>
       <th>产品</th>
       <th>包装内包含 / 产品说明</th>
-      <th>最适合的场景</th>
+      <th>最适合</th>
       <th>Wiki</th>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong><br/><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.webp" style={{width:200, height:'auto'}}/></div></td>
-      <td>7.5" 单色电子纸 + ESP32 驱动板 + 亚克力支架。为 TRMNL 云平台预先调优；也可运行 ESPHome 和 Arduino。</td>
+      <td>7.5" 单色电子纸 + ESP32 驱动板 + 亚克力支架。为 TRMNL 云平台预先调校；也可运行 ESPHome 和 Arduino。</td>
       <td>以最低 BOM 成本实现 TRMNL 风格仪表盘的最快路径。</td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/cn/trmnl_7inch5_diy_kit_main_page" target="_blank" rel="noopener noreferrer">TRMNL 套件 →</a></td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/cn/trmnl_7inch5_diy_kit_main_page" target="_blank" rel="noopener noreferrer">TRMNL Kit →</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong><br/><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp" style={{width:200, height:'auto'}}/></div></td>
-      <td>裸 7.5" 电子纸面板，带有可直接与 XIAO 模组焊盘对接的 FPC 连接器。</td>
-      <td>适用于已经拥有 XIAO、只想增加屏幕的紧凑、低成本项目。</td>
-      <td align="center"><a href="https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer">XIAO 面板 →</a></td>
+      <td>裸 7.5" 电子纸面板，带有可直接连接到 XIAO 模组焊盘的 FPC 连接器。</td>
+      <td>紧凑、低成本项目中，当你已经有一个 XIAO 并希望添加屏幕时使用。</td>
+      <td align="center"><a href="https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel" target="_blank" rel="noopener noreferrer">XIAO Panel →</a></td>
     </tr>
   </table>
 </div>
 
 ## 软件生态一览
 
-每一款 Seeed 电子纸产品都汇聚到同一个软件生态中。选择与你技能水平匹配的工作流——你也可以自由组合使用：
+每一款 Seeed 电子纸产品最终都汇聚到同一个软件生态中。选择与你技能水平匹配的工作流——你也可以自由混搭使用：
 
 <div class="table-center">
   <table align="center">
@@ -257,7 +257,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
     <tr>
       <td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision" target="_blank" rel="noopener noreferrer"><strong>SquareLine Vision</strong></a></td>
       <td align="center">可视化 UI 设计</td>
-      <td>在浏览器中拖拽式创建 LVGL UI，然后导出可直接编译的代码。</td>
+      <td>在浏览器中拖拽式设计 LVGL UI，然后导出可直接编译的代码。</td>
       <td>reTerminal E1001 / E1002</td>
     </tr>
     <tr>
@@ -275,7 +275,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
     <tr>
       <td><a href="https://wiki.seeedstudio.com/cn/EN04_opendisplay" target="_blank" rel="noopener noreferrer"><strong>OpenEPaperLink / OpenDisplay</strong></a></td>
       <td align="center">开源固件（BLE）</td>
-      <td>基于 BLE 的开源电子纸固件。OpenDisplay 开箱即用支持 EN04；OEPL Config Builder 面向 Breakout Board + XIAO nRF52840 DIY 路径。</td>
+      <td>基于 BLE 驱动的开源电子纸固件。OpenDisplay 开箱即用地支持 EN04；OEPL Config Builder 面向 Breakout Board + XIAO nRF52840 DIY 路径。</td>
       <td>EN04 · XIAO ePaper Breakout Board</td>
     </tr>
   </table>
@@ -283,28 +283,28 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 
 ## 应用教程索引
 
-下面每篇教程都带你从头到尾走完一个平台：
+下面每篇教程都带你从头到尾走完一个平台的完整流程：
 
 ### 智能家居与仪表盘框架
 
-- [搭配 ESPHome 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_esphome) — 主参考：刷机路径、通用 YAML 骨架、Home Assistant 集成。按产品划分的实战手册：[reTerminal E（基础）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)、[reTerminal E（进阶）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)。
-- [搭配 TRMNL 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl) — 通过 TRMNL 云平台部署电子墨水仪表盘。一篇文章同时覆盖 reTerminal E1001/E1002、TRMNL DIY Kit 和 XIAO 7.5" ePaper Panel——在标签页中选择你的硬件即可。
+- [搭配 ESPHome 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_esphome) — 主要参考：刷机路径、通用 YAML 模板、Home Assistant 集成。按产品划分的实战手册：[reTerminal E（基础）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)、[reTerminal E（进阶）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)。
+- [搭配 TRMNL 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl) — 通过 TRMNL 云平台部署电子墨水仪表盘。单篇文章现已覆盖 reTerminal E1001/E1002、TRMNL DIY Kit 和 XIAO 7.5" 电子纸面板——在标签页中选择你的硬件即可。</td>
 
 ### 零代码 / 可视化 UI 设计工具
 
 - [搭配 SenseCraft HMI 使用](https://wiki.seeedstudio.com/cn/EE04_with_hmi) — Seeed 的零代码可视化界面平台；覆盖 reTerminal E 系列和 EE0x 驱动板。
 - [搭配 SquareLine Vision 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision)
-- [搭配 EEZ Studio 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_eezstudio) — 组合 reTerminal E 系列 + EE04 的 LVGL 工作流。
+- [搭配 EEZ Studio 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_eezstudio) — 结合 reTerminal E 系列 + EE04 的 LVGL 工作流。
 - [搭配 Lopaka 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_lopaka)
 
 ### 基于代码的开发
 
-- [搭配 Arduino 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino) — 主参考：IDE 配置、`Seeed_GFX` 库、`driver.h` 生成。按产品划分的实战手册：[reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino)。
+- [搭配 Arduino 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_arduino) — 主要参考：IDE 配置、`Seeed_GFX` 库、`driver.h` 生成。按产品划分的实战手册：[reTerminal E 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino)。
 - [搭配 PlatformIO 使用 — EE04](https://wiki.seeedstudio.com/cn/ee04_with_platformio)
 
 ### 开源 ESL / OEPL
 
-- [搭配 OpenEPaperLink / OpenDisplay 使用](https://wiki.seeedstudio.com/cn/EN04_opendisplay) — 一篇文章同时覆盖 EN04 BLE 套件和 ePaper Breakout Board + XIAO nRF52840 DIY 路径。
+- [搭配 OpenEPaperLink / OpenDisplay 使用](https://wiki.seeedstudio.com/cn/EN04_opendisplay) — 单篇文章覆盖 EN04 BLE 套件以及 ePaper Breakout Board + XIAO nRF52840 DIY 路径。
 
 ## 资源
 
@@ -315,7 +315,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
