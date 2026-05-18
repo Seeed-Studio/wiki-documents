@@ -85,7 +85,7 @@ with ReachyMini() as mini:
 * **[AI Integrations](/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
 * **[Building & Publishing Apps](/reachymini_sdk_apps)**: Create, test, publish, and debug Reachy Mini apps.
 * **[Core Concepts](/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
-* **[Tutorials](/reachymini_sdk-tutorials)**: Hands-on Jupyter notebooks to learn the SDK step by step.
+* **[Tutorials](/reachymini_examples_minimal_demo)**: Hands-on examples to learn the SDK step by step.
 * 📂 [**Browse the Examples Folder**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 Hardware Overview

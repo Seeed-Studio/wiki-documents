@@ -47,7 +47,7 @@ url: https://wiki.seeedstudio.com/reachymini_troubleshooting/
   - 在最新的标记版本上，或
   - 与`main`分支保持同步（`git pull`）。
 
-**无线Reachy Mini**：运行`reachyminios_check`以确保一切正常（请参阅[入门](./platforms/reachy_mini/get_started.md)）
+**无线Reachy Mini**：运行`reachyminios_check`以确保一切正常（请参阅[入门](/reachymini_platforms_reachy_mini_get_started)）
 
 </details>
 
@@ -78,7 +78,7 @@ url: https://wiki.seeedstudio.com/reachymini_troubleshooting/
 - 电机显示"过载错误"等错误。
 - 找不到电机："未在端口上找到电机"、"电机缺失"等。
 
-如果您有以下任何症状，请参阅[电机诊断和故障排除指南](./troubleshooting/motors_diagnosis.md)获取诊断和修复电机相关问题的详细步骤。
+如果您有以下任何症状，请参阅[电机诊断和故障排除指南](/reachymini_troubleshooting_motors_diagnosis)获取诊断和修复电机相关问题的详细步骤。
 
 使用Reachy Mini Testbench应用将帮助您有效地识别和解决这些问题。
 
@@ -108,7 +108,7 @@ Dynamixel电机上的电击错误意味着电源或短路存在问题。
 - 如果您的电缆是黑色的，请检查带"主板"字样的一面朝上（见下图）。
 ![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/black_fpc_cable.png)
 
-如果您的电缆插好了但仍然有问题，很可能是麦克风的FPC电缆损坏了。请参阅教程[如何更换Reachy Mini麦克风的FPC电缆？](./troubleshooting/change_mic_fpc_cable.md)来修复此问题。
+如果您的电缆插好了但仍然有问题，很可能是麦克风的FPC电缆损坏了。请参阅教程[如何更换Reachy Mini麦克风的FPC电缆？](/reachymini_troubleshooting_change_mic_fpc_cable)来修复此问题。
 
 </details>
 
@@ -118,7 +118,7 @@ Dynamixel电机上的电击错误意味着电源或短路存在问题。
 - 将您的机器人更新到1.2.3或更高版本
 
 有关详细信息，请参阅文档：
-[入门](./platforms/reachy_mini/get_started.md)
+[入门](/reachymini_platforms_reachy_mini_get_started)
 
 </details>
 
@@ -165,7 +165,7 @@ Dynamixel电机上的电击错误意味着电源或短路存在问题。
 
 如果您在机器人头部移动时听到尖锐的吱吱声或摩擦声，Stewart平台连杆上的球形关节（球窝接头）可能需要维护。您可能还会注意到连接杆周围有深色灰尘或残留物。
 
-这是正常的磨损。请按照[球形关节维护指南](./troubleshooting/spherical_joints_maintenance.md)清洁和重新润滑关节。
+这是正常的磨损。请按照[球形关节维护指南](/reachymini_troubleshooting_spherical_joints_maintenance)清洁和重新润滑关节。
 
 </details>
 
@@ -238,7 +238,7 @@ Dynamixel电机上的电击错误意味着电源或短路存在问题。
 
 ![switch_position](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/wireless_switch.png)
 
-如果开关在正确位置但您仍然看不到接入点，您可能需要按照[重新刷新RPI ISO教程](/reachymini_platforms_reachy_mini_reflash_the_rpi_ISO)重新刷新Raspberry Pi的iso。
+如果开关在正确位置但您仍然看不到接入点，您可能需要按照[重新刷新RPI ISO教程](/reachymini_platforms_reachy_mini_reflash_the_rpi_iso)重新刷新Raspberry Pi的iso。
 
 </details>
 
@@ -286,8 +286,8 @@ Reachy Mini数字组装指南[BETA](https://huggingface.co/spaces/pollen-robotic
 **不需要**
 
 - 使用Reachy Mini（无线版）时，守护进程已经在嵌入式Raspberry Pi上运行。
-- 使用Reachy Mini Lite时，您可以使用[桌面应用](./platforms/reachy_mini_lite/get_started.md)。
-- 如果桌面应用在您的系统上不起作用（例如ARM64、不常见的发行版），您可以直接[安装和使用Python SDK](./SDK/installation.md)——这是一种完全受支持的替代方案！
+- 使用Reachy Mini Lite时，您可以使用[桌面应用](/reachymini_platforms_reachy_mini_lite_get_started)。
+- 如果桌面应用在您的系统上不起作用（例如ARM64、不常见的发行版），您可以直接[安装和使用Python SDK](/reachymini_sdk_installation)——这是一种完全受支持的替代方案！
 
 </details>
 
@@ -296,14 +296,14 @@ Reachy Mini数字组装指南[BETA](https://huggingface.co/spaces/pollen-robotic
 <details>
 <summary><strong>如何将机器人连接到WiFi？</strong></summary>
 
-请参阅[Reachy Mini无线指南](./platforms/reachy_mini/get_started.md)获取连接WiFi的详细说明。
+请参阅[Reachy Mini无线指南](/reachymini_platforms_reachy_mini_get_started)获取连接WiFi的详细说明。
 
 </details>
 
 <details>
 <summary><strong>如何重置WiFi热点？</strong></summary>
 
-如果您需要重置机器人的WiFi热点（例如，如果您无法连接或想要更改网络），请按照[WiFi重置指南](./platforms/reachy_mini/reset.md)中的说明操作。
+如果您需要重置机器人的WiFi热点（例如，如果您无法连接或想要更改网络），请按照[WiFi重置指南](/reachymini_platforms_reachy_mini_reset)中的说明操作。
 
 </details>
 
@@ -434,7 +434,7 @@ _基于开源权重模型的方法正在开发中，请继续关注！_
 <details>
 <summary><strong>在哪里可以找到更多硬件信息？</strong></summary>
 
-请参阅[Reachy Mini硬件页面](./platforms/reachy_mini/hardware.md)获取机器人硬件组件的详细信息。
+请参阅[Reachy Mini硬件页面](/reachymini_platforms_reachy_mini_hardware)获取机器人硬件组件的详细信息。
 
 </details>
 
@@ -493,7 +493,7 @@ No motors found at baudrate 115200
 Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
-2. Lite：您也可以使用Dynamixel Wizard读取电机参数。请参阅[此处](./platforms/reachy_mini_lite/wizard.md)的指南。
+2. Lite：您也可以使用Dynamixel Wizard读取电机参数。请参阅[此处](/reachymini_platforms_reachy_mini_lite_wizard)的指南。
 
 </details>
 
@@ -545,7 +545,7 @@ Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 <details>
 <summary><strong>我可以修改外观（皮肤/CAD）吗？</strong></summary>
 
-* **CAD：** 完整的STEP文件尚未发布，但我们计划在未来发布。同时，您可以在仓库的[资产文件夹](/src/reachy_mini/descriptions/reachy_mini/mjcf/assets)中找到一些STL文件。
+* **CAD：** 完整的STEP文件尚未发布，但我们计划在未来发布。同时，您可以在仓库的[资产文件夹](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/descriptions/reachy_mini/mjcf/assets)中找到一些STL文件。
 * **皮肤：** 可以，社区已经创建了自定义构建。一些"皮肤"STEP文件已在discord上共享，在["Pimp my Reachy Mini"](https://discord.com/channels/519098054377340948/1453340883775651861)频道。
 
 </details>
@@ -592,7 +592,7 @@ with ReachyMini() as mini:
 reachy-mini-app-assistant create my_app_name /path/to/destination --publish
 ```
 
-请参阅完整指南：[构建和发布应用](./SDK/apps.md) — 涵盖应用结构、测试、发布、调试和部署。
+请参阅完整指南：[构建和发布应用](/reachymini_sdk_apps) — 涵盖应用结构、测试、发布、调试和部署。
 
 </details>
 
@@ -609,7 +609,7 @@ ssh pollen@reachy-mini.local "/venvs/apps_venv/bin/python3 -c 'from my_app.main 
 python -c "from my_app.main import MyApp"
 ```
 
-有关更多调试提示（查看日志、常见陷阱），请参阅[调试应用](./SDK/apps.md#debugging-apps)。
+有关更多调试提示（查看日志、常见陷阱），请参阅[调试应用](/reachymini_sdk_apps#debugging-apps)。
 
 </details>
 

@@ -98,7 +98,7 @@ Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymin
 
 If you need to reinstall the Raspberry Pi from scratch or create a custom image, follow the expert guides.
 
-**[Reflash the ISO](/reachymini_platforms_reachy_mini_reflash_the_rpi_ISO)**
+**[Reflash the ISO](/reachymini_platforms_reachy_mini_reflash_the_rpi_iso)**
 
 **[Install Daemon from a Specific Branch](/reachymini_platforms_reachy_mini_install_daemon_from_branch)**
 

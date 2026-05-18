@@ -85,7 +85,7 @@ with ReachyMini() as mini:
 * **[AI集成](/reachymini_sdk_integration)**：连接LLM、构建应用并发布到Hugging Face。
 * **[构建和发布应用](/reachymini_sdk_apps)**：创建、测试、发布和调试Reachy Mini应用。
 * **[核心概念](/reachymini_sdk_core-concept)**：架构、坐标系统和安全限制。
-* **[教程](/reachymini_sdk-tutorials)**：实践Jupyter笔记本逐步学习SDK。
+* **[教程](/reachymini_examples_minimal_demo)**：实践示例逐步学习SDK。
 * 📂 [**浏览示例文件夹**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 硬件概述

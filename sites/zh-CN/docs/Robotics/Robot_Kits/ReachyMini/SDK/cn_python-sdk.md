@@ -134,7 +134,7 @@ with ReachyMini(media_backend="default") as mini:
 - `media_backend="default"` - 自动检测最佳后端：在与守护进程同一台机器上运行时使用LOCAL，远程时使用WEBRTC（推荐给大多数用户）。
 - `media_backend="local"` - 强制使用LOCAL后端（GStreamer IPC摄像头+GStreamer音频）。在与守护进程同一台机器上运行时使用。
 - `media_backend="webrtc"` - 强制使用WEBRTC后端。守护进程通过WebRTC向客户端流传输H.264视频和Opus音频。目前只有Linux作为远程客户端得到完全支持。其他平台（Windows、macOS）将在[未来版本](https://github.com/pollen-robotics/reachy_mini/issues/572)中得到支持。
-- `media_backend="no_media"` - 停用媒体管理器并告诉守护进程释放摄像头和音频硬件。当您需要通过OpenCV、sounddevice或任何其他外部库直接访问时使用此选项。硬件在上下文管理器退出时会自动重新获取。请参阅[媒体架构 - 禁用媒体](/reachymini_sdk_media-architecture#disabling-media--direct-hardware-access)和[自定义媒体管理器](../examples/custom_media_manager.md)示例。
+- `media_backend="no_media"` - 停用媒体管理器并告诉守护进程释放摄像头和音频硬件。当您需要通过OpenCV、sounddevice或任何其他外部库直接访问时使用此选项。硬件在上下文管理器退出时会自动重新获取。请参阅[媒体架构 - 禁用媒体](/reachymini_sdk_media-architecture#disabling-media--direct-hardware-access)和[自定义媒体管理器](/reachymini_examples_custom_media_manager)示例。
 
 > **💡 提示：** 对于大多数设置，后端会根据您是本地运行还是远程运行自动选择。无需指定`media_backend`值！
 

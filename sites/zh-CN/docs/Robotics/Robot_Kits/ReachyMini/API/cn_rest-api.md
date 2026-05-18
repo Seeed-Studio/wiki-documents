@@ -60,4 +60,4 @@ Reachy Mini守护进程在`http://<daemon-ip>:8000/api`公开HTTP和WebSocket AP
 
 ## 更复杂的应用
 
-请参阅[JavaScript SDK和Web应用](../SDK/javascript-sdk.md)页面，了解使用JavaScript SDK的更复杂应用的示例，该SDK利用WebRTC传输并为视频、音频和机器人控制提供更高级别的抽象。
+请参阅[JavaScript SDK和Web应用](/reachymini_sdk_javascript-sdk)页面，了解使用JavaScript SDK的更复杂应用的示例，该SDK利用WebRTC传输并为视频、音频和机器人控制提供更高级别的抽象。

@@ -96,7 +96,7 @@ reachyminios_check
 
 如果您需要从头重新安装Raspberry Pi或创建自定义镜像，请按照专家指南操作。
 
-**[重新刷新ISO](/reachymini_platforms_reachy_mini_reflash_the_rpi_ISO)**
+**[重新刷新ISO](/reachymini_platforms_reachy_mini_reflash_the_rpi_iso)**
 
 **[从特定分支安装守护进程](/reachymini_platforms_reachy_mini_install_daemon_from_branch)**
 

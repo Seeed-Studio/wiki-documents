@@ -27,7 +27,7 @@ Reachy Mini拥有由Hugging Face Spaces提供支持的 应用生态系统。您�
 
 <div align="center">
   <a href="https://www.youtube.com/watch?v=h2lyqR2eMyM" target="_blank">
-    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style="border: 1px solid #ddd; border-radius: 8px;" />
+    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style={{border: "1px solid #ddd", borderRadius: "8px"}} />
     <p><i>▶️ 点击在YouTube上观看：Reachy Mini SDK运行指南</i></p>
   </a>
 </div>
