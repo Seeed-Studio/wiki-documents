@@ -9,10 +9,10 @@ slug: /xiao_esp32s3_getting_started
 sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
-  date: 05/08/2026
-  author: Spencer
+  date: 05/14/2026
+  author: Luki
 createdAt: '2023-03-22'
-updatedAt: '2026-05-08'
+updatedAt: '2026-05-14'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
 ---
 import Tabs from '@theme/Tabs';
@@ -243,7 +243,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | Onboard SD Card__CS     |                  | GPIO3                                                  |                    | SD card chip select pin              |
 | Onboard SD Card_SCK     |                  | GPIO7                                                  |                    | SD card clock pin                    |
 | Onboard SD Card_MISO    |                  | GPIO8                                                  |                    | SD card data input pin               |
-| Onboard SD Card Slot_MOSI |                | GPIO10                                                 |          |      SD card data output pin              |
+| Onboard SD Card Slot_MOSI |                | GPIO9                                                 |          |      SD card data output pin              |
 
 **Camera**
 | Chip Pin  | Description                          |

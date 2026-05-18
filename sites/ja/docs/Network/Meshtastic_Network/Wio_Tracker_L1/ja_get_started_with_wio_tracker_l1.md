@@ -20,6 +20,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 :::tip
 Wio Tracker L1 シリーズは同じハードウェアフレームワークを共有しています。動画ガイドは L1 Pro 向けですが、L1 シリーズの他のすべての製品にも適用できます。
 :::
+
 ## ビデオチュートリアル
 
 ### パート 1 開封
@@ -47,9 +48,11 @@ L1、L1 Lite または L1 E-Ink モデルを初めて使用する場合は、USB
 </div>
 
 #### 4 方向ジョイスティック
+
 L1 E-Ink ファームウェアは現在、4 方向ジョイスティックをサポートしていません。ジョイスティックを使用したい場合は、他のモデルを購入してください。
 
 #### メニューバー
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
 メニューバーをサポートしているのは 2.7 ファームウェアのみです。メニューバーを使用したい場合は、[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#パート-2-ファームウェアの書き込み) に従ってファームウェアを更新してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
@@ -57,6 +60,7 @@ L1 E-Ink ファームウェアは現在、4 方向ジョイスティックをサ
 #### ブザー
 
 ブザーをオンまたはオフにしたい場合は、まずファームウェアをバージョン `2.7` に `update the firmware` してください。メニューバーがあるのは 2.7 バージョンのファームウェアのみです。
+
 - ブザーをオンにする
 Setting (歯車の形をしたアイコン) -> Notification -> Buzzer Action -> Disable
 - ブザーをオフにする
@@ -82,6 +86,7 @@ Setting (歯車の形をしたアイコン) -> Notification -> Buzzer Action -> 
 
 :::danger note
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
+
 1. メッセージ送信処理が完了していない
 2. 設定中である
 :::
@@ -105,7 +110,6 @@ L1 E-Ink の場合は、ターゲットデバイスとして `Seeed Wio Tracker 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
-
 
 デバイスの電源を入れ、`Enter DFU Mode` をクリックします。`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続します。`Tracker L1` という名前のドライブが表示されるはずです。
 
@@ -184,7 +188,6 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-
 ### LoRa を設定する
 
 メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、自分がいる地域に合わせて設定する必要があります。
@@ -228,7 +231,6 @@ IOS の場合は、`Accurate Location` をオンにしてください。そう�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
-
 ### センサー接続
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
@@ -268,7 +270,6 @@ Grove インターフェースを介してデバイスにセンサーを追加�
   </tr>
 </table>
 
-
 <Tabs>
 
 <TabItem value="ios" label="IOS">
@@ -293,16 +294,19 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Telemetryscreen.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### 画面接続
- - E-Ink スクリーン
+
+- E-Ink スクリーン
   互換性のある E-Ink スクリーンを入手するには[Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)をクリックしてください。
+
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED スクリーン
 互換性のある OLED スクリーンを入手するには[Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)をクリックしてください。現在の OLED ドライバは SSD1306 です。
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
-
 ### バーチャルキーボード
+
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
 バージョン 2.7 のファームウェアではバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力し、他のデバイスと通信できます。ファームウェアを更新するには、[Flash Firmware Tutorial](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)に従ってください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
@@ -335,7 +339,6 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 
   上記の手順を完了したら、この[step](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってアプリケーションファームウェアを書き込むことができます。[DFU モードに手動で入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)必要がある場合があります。
 
-
 ### DFU に入れない & DFU モードへの手動移行
 
 デバイスを PC に接続し、`Reset` ボタンを 2 回押します。黄色の LED が点灯したままになり、`Tracker L1` という名前の新しい USB ドライブが PC に表示されます。
@@ -344,25 +347,26 @@ Grove インターフェースを介してデバイスにセンサーを追加�
 
 DFU モードを終了するには、`Reset` ボタンを 1 回押します。
 
- ### デバイスが自動的に電源オフになる
+### デバイスが自動的に電源オフになる
 
- #### 説明
+#### 説明
 
- - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
- - シリアルポートログがしばらく動作した後に停止します。
+- デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
+- シリアルポートログがしばらく動作した後に停止します。
 
  これは、メッセージ送信プロセスが完了していない、設定中であるなど、以下の状態にあるときにデバイスを手動かつ強制的に再起動または電源オフしたことが原因である可能性があります。
 
- #### トラブルシューティング
+#### トラブルシューティング
 
 動画を見るには[click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
 ### 工場出荷時リセット
+
 デフォルト設定に戻したい場合は、工場出荷時リセットを実行できます。工場出荷時リセットを行う方法は 2 つあります。
 
 - 動画を見るには[click here](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)をクリックしてください。フラッシュの消去を実行し、その後最新のファームウェアを書き込み直す必要があります。
 
-- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。 
+- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB リセット
@@ -431,6 +435,7 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 - **Reset NodeDB**：ノードデータベースのみを消去します。
 - **Factory Reset**：デバイスを工場出荷時設定に戻し、より多くの設定データを削除します。
+
 :::
 
 **リセット後に起こること**
@@ -462,9 +467,17 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリック](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)して入手してください。
 
+## リソース
 
-
-## 参考資料
+- [ブートローダ](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [(V1) 3D プリント参照ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 新しい 4 方向ジョイスティック) 3D プリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
+- [L1 エンクロージャ設計チャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
+- [外形ファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [TELEC 認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
+- [FCC 認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [消費電力テストおよびバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 <JetsonLeadQuote
   buttonText="見積もり依頼"
@@ -472,14 +485,3 @@ L1 Pro 用にアンテナの交換が必要な場合は、[こちらをクリッ
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
-
-## リソース
-- [ブートローダ](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3D プリント参照ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 新しい 4 方向ジョイスティック) 3D プリント参照ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
-- [L1 エンクロージャ設計チャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
-- [外形ファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
-- [TELEC 認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
-- [FCC 認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
-- [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
-- [消費電力テストおよびバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

@@ -15,7 +15,7 @@ last_update:
   date: 06/10/2025
   author: Zibo
 createdAt: '2025-04-29'
-updatedAt: '2026-03-24'
+updatedAt: '2026-05-14'
 url: https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/
 ---
 
@@ -793,7 +793,27 @@ Please configure the communication settings as shown in the following picture.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_software.png"/>
 </div>
 
-**Step 3.** Jetson sends data to the PC:
+
+**Step 3.** Configure the GPIO.
+
+Since the CAN transceiver of Robotics J401 has an idle mode, it needs to be awakened via GPIO. Please execute the following command on the Jetson terminal:
+
+```bash
+# Install the toolkit (skip if already installed)
+sudo apt-get update && sudo apt-get install -y libgpiod-utils
+
+# Activate the CAN0 and CAN1 transceivers (pull the STB pin low)
+# It is necessary to use the '&' symbol to make it run in the background.
+# Otherwise, the pin state will be reset after the command exits.
+sudo gpioset --mode=wait 2 3=0 &
+sudo gpioset --mode=wait 2 4=0 &
+```
+
+:::note
+Here, 2 3 = 0 corresponds to CAN0, and 2 4 = 0 corresponds to CAN1. If you only use one of the ports, simply execute the corresponding command.
+:::
+
+**Step 4.** Jetson sends data to the PC:
 
 ```bash
 cansend can1 123#abcdabcd
@@ -803,7 +823,7 @@ cansend can1 123#abcdabcd
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pc_rcan1.png"/>
 </div>
 
-**Step 3.** PC sends data to the Jetson:
+**Step 5.** PC sends data to the Jetson:
 
 ```bash
 #CAN1 monitors PC data
@@ -852,6 +872,9 @@ sudo ip link set can1 type can bitrate 500000 dbitrate 2000000 fd on
 #open the interface
 sudo ip link set can0 up
 sudo ip link set can1 up
+
+sudo gpioset --mode=wait 2 3=0 &
+sudo gpioset --mode=wait 2 4=0 &
 
 ```
 

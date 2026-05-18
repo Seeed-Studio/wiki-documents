@@ -12,12 +12,12 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-14'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
-When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+When the device is in either of the states below, do not manually reboot or turn it off. Otherwise, the device may become bricked.
 1. Not finishing the message transmission process
 2. Being configured
 :::
@@ -28,11 +28,11 @@ Before formal deployment, please test and configure the node first.
 ### Flash Firmware
 
 :::caution note
-Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
-Before flashing the firmware, please flash the erased firmware first!
+Do not use `NRF-OTA` to update the firmware, as it may cause the device to become completely unresponsive.
+Before flashing the firmware, please run the flash erase step first!
 :::
 
-Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Select the target device to `Seeed SenseCAP Solar Node` .
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Select `Seeed SenseCAP Solar Node` as the target device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
@@ -46,25 +46,25 @@ Download and copy the erase firmware.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Click `Enter DFU Mode`, there will be a serial port named `XIAO-xxx`, click and connect it, and there should be a driver named `XIAO-xxx` display. Paste the erase firmware to the disk.
+Click `Enter DFU Mode`, select and connect to the serial port named `XIAO-xxx`, and a drive named `XIAO-xxx` should appear. Copy the erase firmware to the drive.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-This process may take some times. Please wait for the "XIAO-XXX" disk disappearing.
+This process may take some time. Please wait for the "XIAO-XXX" drive to disappear.
 
 #### Flash Application Firmware
 
-Choose the firmware version you want. click `flash`. 
+Choose the firmware version you want. Click `flash`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-Download the UF2 file and enter the DFU. Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+Download the UF2 file and enter DFU mode. Drag the UF2 file to the DFU drive. The firmware should be flashed after the file is copied and the device reboots.
 
-### Install Battery and GPS Module(Optional)
+### Install Battery and GPS Module (Optional)
 
 :::tip
-When you need to install or replace the battery, use `Button-top` 18650(3.6V) battery.
+When you need to install or replace the battery, use a `button-top` 18650 (3.6 V) battery.
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Pro version has built-in battery and GPS module, for P1 version, user needs to install the battery and GPS module manually if needed.
+The P1-Pro version has a built-in battery and GPS module. For the P1 version, users need to install the battery and GPS module manually if needed.
 :::
 
 
@@ -73,7 +73,7 @@ P1-Pro version has built-in battery and GPS module, for P1 version, user needs t
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
-- Step 2: Install battery and the GPS module.
+- Step 2: Install the battery and GPS module.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/install-bat-gps.png" alt="pir" width={800} height="auto" /></p>
 
@@ -89,14 +89,14 @@ Ensure that the shell is properly mounted and the screws are firmly tightened to
 
 ### Power on the device
 
-The device needs to be activated by connecting the USB cable for the first use. If the blue Mesh light blink, it means that the device has been successfully turned on. Just as shown in the video below: 
+The device needs to be activated by connecting the USB cable before first use. If the blue Mesh light blinks, the device has been successfully turned on, as shown in the video below:
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::tip
-If the device doesn't respond when you press the button, please charge it first. Do not use the fast-charging charger.
+If the device does not respond when you press the button, please charge it first. Do not use a fast charger.
 :::
 
 ### Connect via App
@@ -106,13 +106,13 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="iOS App">
 
 - Select the target device on the Bluetooth panel.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- Enter the code(default code is `123456`) and then click `OK` to connect the device.
+- Enter the code (the default code is `123456`) and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -124,7 +124,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- Enter the code(default code is `123456`) and then click `OK` to connect the device.
+- Enter the code (the default code is `123456`) and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -134,11 +134,11 @@ import TabItem from '@theme/TabItem';
 
 ### Connect via Website
 
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+If you want to send text messages and communicate with other nodes in the web client, you can connect the device to the [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) now.
 
   Step 1: Open the Website
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the website.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   Step 2: Add the new device 
@@ -151,15 +151,15 @@ If you want to text messages and communicate with other nodes in the website, yo
 
  Method 1: Via Bluetooth
   
-    Choose bluetooth method. Choose the device ID in the pop-up window.
+    Choose the Bluetooth method. Select the device ID in the pop-up window.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  Method 2: Via Serial
 
-    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
+    Choose the serial method. Open the device manager to see which port the device is connected to. Select that port in the pop-up window.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
+    Your device will be shown in the list. Click to connect. If the connection succeeds, you can see the device status directly on the website.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -168,7 +168,7 @@ If you want to text messages and communicate with other nodes in the website, yo
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="iOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -198,11 +198,11 @@ Now that you have set the LoRa region on your device, you can continue with conf
 
 ### Configure GPS
 
-Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
+Please enable GPS. You can adjust the update interval and broadcast interval to obtain more up-to-date location information.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
 
-For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may deviate.
+For iOS, please turn on `Accurate Location`. Otherwise, the positioning may be inaccurate.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
@@ -230,43 +230,43 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 ### Step-by-step Installation Guidance
 
-- Step1: Connect part 1 to the bottom of the device using washers and screws.
+- Step 1: Connect part 1 to the bottom of the device using washers and screws.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step2: Connect the universal joint(part 2) and the bracket(part 3)  with screws.
+- Step 2: Connect the universal joint (part 2) and the bracket (part 3) with screws.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step3: Connect the RF cable(part 4)  and antenna(part 5) .
+- Step 3: Connect the RF cable (part 4) and antenna (part 5).
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step4: Install the hoop ring in the appropriate position.
+- Step 4: Install the hoop ring in the appropriate position.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step5: Connect the universal joint bracket.
+- Step 5: Connect the universal joint bracket.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step6: Loosen the screws, adjust the universal joint to the appropriate position, and then tighten the screws.
+- Step 6: Loosen the screws, adjust the universal joint to the appropriate position, and then tighten the screws.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step7: Connect the antenna to the device.
+- Step 7: Connect the antenna to the device.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -280,9 +280,9 @@ Since the device will be used outdoors for extended periods, please avoid instal
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Add sensors to solar node (Optional)
+### Add sensors to Solar Node (Optional)
 
-- You can install your sensor through this video.
+- You can install your sensor by following this video.
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -323,7 +323,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
   </tr>
 </table>
 
-### Upgrate atenna (Optional)
+### Upgrade Antenna (Optional)
 
 - You can replace the antenna with a fiberglass one by watching this video.
 
@@ -339,7 +339,7 @@ If you need an antenna with higher gain, we recommend the [860-930MHz 3dBi fiber
 
 - Reason 
 
-This is usually caused by the firmware flashing failure. When flashing the firmware, please maintain a stable connection. 
+This is usually caused by a firmware flashing failure. When flashing the firmware, please maintain a stable connection.
 
 - Troubleshoot
 
@@ -349,7 +349,7 @@ This is usually caused by the firmware flashing failure. When flashing the firmw
 
 #### Description
 
-The device not responding, no LED, can not pair with your App.
+The device does not respond, the LED does not light up, and it cannot pair with your app.
 
 **1) Device can still enter the DFU mode, then try to flash the bootloader**.
 
@@ -363,9 +363,9 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 **Step1: Adafruit-nrfutil Installation**
 
-For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line. 
+For Windows users, press the "Win" key and "R" key, then enter "cmd" in the pop-up window and press "Enter". This opens the command line.
 
-For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+For Mac users, press the "Command" key and "Space" key to open Spotlight. Then enter "terminal" and press "Return". This opens the command line.
 
 **Prerequisites**
 
@@ -373,7 +373,7 @@ For MAC user, press "Command" key and "Space" key, so that you can open Spotligh
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 
-Check in your command line that whether or not the python and pip are installed successfully.
+Check in your command line whether Python and pip are installed successfully.
 
 ```
 python --version
@@ -383,12 +383,12 @@ python --version
 python -m pip --version
 ```
 
-Then "Python xxx" and "pip xxx" should appear. If it does not, please try install python again.
+Then "Python xxx" and "pip xxx" should appear. If they do not, please try installing Python again.
 
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
-This is recommended method, to install latest version:
+This is the recommended method for installing the latest version:
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -405,7 +405,7 @@ This is the installation location:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/location.png" alt="pir" width={600} height="auto" /></p>
 
-For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
+For Windows users, you may need to add the path manually. Copy the installation location shown in the last step. Then add it as follows:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -414,14 +414,14 @@ For window user, you may need to add the  path manually. Copy the installation l
 
 <TabItem value="sou" label="Installing from Source">
 
-Use this method if you have issue installing with PyPi or want to modify the tool. First clone this repo and go into its folder.
+Use this method if you have issues installing with PyPI or want to modify the tool. First, clone this repo and go into its folder.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Note: following commands use `python3`, however if you are on Windows, you may need to change it to `python` since windows installation of python 3.x still uses the name python.exe
+Note: The following commands use `python3`; however, if you are on Windows, you may need to change it to `python`, since Windows installations of Python 3.x still use the name `python.exe`.
 
 To install in user space in your home directory:
 
@@ -454,8 +454,8 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on windows).
-Copy or move it elsewhere for your convenience, such as directory in your %PATH%.
+You will find the executable in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (with `.exe` if you are on Windows).
+Copy or move it elsewhere for your convenience, such as a directory in your `%PATH%`.
 
 </TabItem>
 </Tabs>
@@ -464,26 +464,26 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 Connect your device to your PC, and check the port number.
 
-For Window user, for example:
+For Windows users, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/Port.png" alt="pir" width={400} height="auto" /></p>
 
-For Mac user, for example:
+For Mac users, for example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **Step3: Flash the bootloader**
 
-In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
+In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the port with the correct one for your device:
 
 - **For Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
 ```
-Please change COMXX to your com number. For example, if your device is on com6, change the command to be:
+Please change COMXX to your COM port number. For example, if your device is on COM6, change the command to:
 
 `adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COM6 -b 115200 --singlebank --touch 1200`
 
- Some of the device will change their port number after you enter this command. So if the installation fail, check the port number again.
+ Some devices will change their port number after you enter this command. If the installation fails, check the port number again.
 
 
 - **For others**:
@@ -494,29 +494,29 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to flash the application firmware.
+When you have completed the above steps, follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to flash the application firmware.
 
- ### Device automatically turn off
+ ### Device automatically turns off
 
  #### Description
 
- - After the device turning on, it will turn off or reboot automatically after a while. 
+ - After the device turns on, it turns off or reboots automatically after a while.
  - The serial port log ran for a while and then stopped.
 
- This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
+ This may be caused by manually and forcibly rebooting or turning off the device while it is in one of the following states: not finishing the message transmission process or being configured.
 
  #### Troubleshoot
 
-[click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
+[Click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase, and then re-flash the latest firmware.
 
 
 ### Factory Reset
 
-If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
+If you want to restore the default settings, you can perform a factory reset. There are two methods for doing the factory reset.
 
-- [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
+- [Click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase, and then re-flash the latest firmware.
 
-- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+- Click the `Factory Reset` button in the app. The device will automatically reboot with the factory configuration.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB Reset
@@ -524,10 +524,10 @@ If you want to restore to the default settings, you can do the factory reset. Th
 NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
 
 - **Node ID**
-- **User Name**
-- **Location Information**
-- **Signal Information (SNR)**
-- **Last Seen Time**
+- **User name**
+- **Location information**
+- **Signal information (SNR)**
+- **Last seen time**
 
 **When to reset**
 
@@ -567,7 +567,7 @@ Step 2: Tap `Reset NodeDB` on the **Device Config** page.
 Please note the difference between the following options:
 
 - **Reset NodeDB**: Only clears the node database.
-- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+- **Factory Reset**: Restores the device to factory settings and removes additional configuration data.
 :::
 
 **What happens after reset**
@@ -592,7 +592,7 @@ You may observe the following:
 Power consumption primarily depends on factors such as the data transmission frequency and GPS update rate.
 The figures below are for reference only; actual consumption may vary based on real-world usage conditions.
 
-- **Shutdown Sleep Mode Power Consumption**
+- **Shutdown sleep mode power consumption**
 
 |Description|Consumption|
 |---|---|
@@ -607,7 +607,7 @@ The figures below are for reference only; actual consumption may vary based on r
 |3350|136.8|
 |12000|490.2|
 
-- **Active Mode Power Consumption**
+- **Active mode power consumption**
 
 |Mode|Current|
 |---|---|
@@ -619,17 +619,17 @@ The figures below are for reference only; actual consumption may vary based on r
 
 ### Signal Quality
 
-- **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+- **SNR** reflects the quality of the communication link. A normal device usually operates above -7 dB. A device with an SNR lower than -10 dB indicates poor performance.
 
-- **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
+- **RSSI** is determined jointly by the device and its surrounding environment. A normal device usually operates above -110 dBm. A device with an RSSI lower than -115 dBm is considered to have poor performance.
 
-      To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+      To achieve the best signal performance, please use the device in an open, unobstructed area with minimal interference.
 
 ### Charging Current
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar_node_diagram.png" alt="pir" width={800} height="auto" /></p>
 
-The Xiao nRF-52840 Plus maximum charging current is 200 mA. The charging management chip CN3165 is 0.99A. So the maximum charging current is 1A.
+The Xiao nRF-52840 Plus maximum charging current is 200 mA. The CN3165 charging management chip supports 0.99 A. Therefore, the maximum charging current is 1 A.
 
 ## Resource
 - [Solar Node Battery Life Calculation Table](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

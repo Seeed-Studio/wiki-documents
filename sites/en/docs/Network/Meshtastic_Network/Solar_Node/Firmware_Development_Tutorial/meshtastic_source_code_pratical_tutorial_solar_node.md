@@ -14,7 +14,7 @@ last_update:
   author: ycl
 url: https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/
 createdAt: '2026-03-19'
-updatedAt: '2026-04-15'
+updatedAt: '2026-05-14'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -960,6 +960,70 @@ On the remote sensor node, you should be able to see the environmental telemetry
 On the nearby node, the same readings should appear in the `Nodes` view after they are forwarded through the mesh:
 
 ![img](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Practical-Tutorial/img/s3image10.png)
+
+## Project C: T1000-E startup and shutdown chime customization
+
+### Project goal
+
+This compact example focuses on a very small but easy-to-feel source-level customization: replacing the default T1000-E startup and shutdown sounds with a cleaner custom chime.
+
+Compared with Project A and Project B, this project changes only one source file and only two functions. It is a good example of how to make a board-specific behavior change without affecting the rest of the Meshtastic codebase.
+
+### Modify `buzz.cpp`
+
+The only file changed in this project is:
+
+- `src/buzz/buzz.cpp`
+
+The two modified functions are:
+
+- `playStartMelody()`
+- `playShutdownMelody()`
+
+In both places, a `#if defined(TRACKER_T1000_E)` branch is added.
+
+That structure is important because it keeps the customization isolated to the `T1000-E` target:
+
+- `TRACKER_T1000_E` uses the custom startup chime
+- `TRACKER_T1000_E` uses the matching custom shutdown chime
+- All other Meshtastic boards still follow the original default melody in the existing `#else` path
+
+This means the change is intentionally narrow in scope. It customizes the user experience for one board, while preserving the original behavior for every other supported target.
+
+In my local test version, the startup melody is changed to a more phone-like ascending chime, and the shutdown melody is changed to a matching descending chime.
+
+If you want to document the modification more clearly, it is enough to capture one screenshot that includes both functions in the same view:
+
+- the `#if defined(TRACKER_T1000_E)` block in `playStartMelody()`
+- the `#if defined(TRACKER_T1000_E)` block in `playShutdownMelody()`
+
+That single screenshot already explains both the code change and the board-specific scope, so you do not need a separate image just to explain that other boards are unaffected.
+
+### Build and verify
+
+After the modification is complete, build the T1000-E target:
+
+```bash
+pio run -e tracker-t1000-e
+```
+
+In my test build, this target compiled successfully after the melody change.
+
+After the build passes, flash the firmware to the T1000-E and verify the result directly on hardware:
+
+1. Power on the device and confirm that the new startup chime plays.
+2. Power off the device and confirm that the matching shutdown chime plays.
+3. If possible, compare the new sound with the original default melody so the difference is easy to notice.
+
+### Suggested images
+
+To keep Project C short and readable, three images are usually enough:
+
+1. One `buzz.cpp` screenshot showing both `playStartMelody()` and `playShutdownMelody()` in the same frame
+2. One terminal screenshot showing `pio run -e tracker-t1000-e` succeeded
+3. One real-device verification image or short video showing the T1000-E power-on or power-off test
+
+If the buzzer does not play during testing, first check whether the device buzzer mode is enabled. In `playTones()`, the code returns early when the buzzer is disabled or set to notification-only mode.
 
 ## Common issues
 

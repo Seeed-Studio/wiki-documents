@@ -9,7 +9,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-13'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001/
 ---
 import Tabs from '@theme/Tabs';
@@ -201,7 +201,7 @@ So, we need to complete the next steps of configuring the network during this ti
 ### Network Setup
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
 **Step 1.** Connect to the device's Wi-Fi access point from your smartphone or computer. The AP name will appear on the screen (no password required). The network credentials are `reTerminal E1001-{MAC Adress}`.
 
@@ -244,7 +244,7 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/3.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
 

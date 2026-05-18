@@ -11,7 +11,7 @@ last_update:
   date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
-updatedAt: '2026-03-24'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
@@ -20,6 +20,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 :::tip
 The Wio Tracker L1 Series share the same hardware framework. Although the video guide was for the L1 Pro, it is applicable to all other products in the L1 series.
 :::
+
 ## Video Tutorial
 
 ### Part 1 Unboxing
@@ -47,16 +48,19 @@ Please `don't use NRF-OTA` to update the firmware, it may cause the device to be
 </div>
 
 #### Four-way Joystick
-L1 E-Ink firmware currently don't support the four-way joystick. If you want to use the joystick, please purchase other models. 
+
+L1 E-Ink firmware currently don't support the four-way joystick. If you want to use the joystick, please purchase other models.
 
 #### Menu Bar
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
 Only the 2.7 firmware support the menu bar. If you want to use the menu bar, follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### Buzzer
 
-If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 version firmware has the menu bar. 
+If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 version firmware has the menu bar.
+
 - Turn on the buzzer
 Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> Disable
 - Turn off the buzzer
@@ -82,6 +86,7 @@ Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enab
 
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+
 1. Not finishing the message transmission process
 2. Being configured
 :::
@@ -105,7 +110,6 @@ For L1 E-Ink, select the target device to `Seeed Wio Tracker L1 E-Ink` and choos
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
-
 
 Switch on the device, click `Enter DFU Mode`, there will be a serial port named `Tracker L1`, click and connect it, and there should be a driver named `Tracker L1` display.
 
@@ -155,14 +159,14 @@ import TabItem from '@theme/TabItem';
 
 ### Connect via Website
 
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
 
   Step 1: Open the Website
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Step 2: Add the new device 
+  Step 2: Add the new device
   
     Click "+ New Connection". 
 
@@ -183,7 +187,6 @@ If you want to text messages and communicate with other nodes in the website, yo
     Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-
 
 ### Configure the LoRa
 
@@ -228,7 +231,6 @@ For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
-
 ### Sensor connection
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/SensorConnection.jpg" alt="pir" width={700} height="auto" /></p>
@@ -268,7 +270,6 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
-
 <Tabs>
 
 <TabItem value="ios" label="IOS">
@@ -293,16 +294,19 @@ The OLED will show sensor data if you enable `on screen`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Telemetryscreen.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### Screen Connection
- - E-Ink Screen
+
+- E-Ink Screen
   [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
+
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED Screen
 [Click here](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) to get the compatible OLED screen. The current OLED driver is SSD1306.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
-
 ### Virtual Keyboard
+
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
 The 2.7 version firmware now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
@@ -335,7 +339,6 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
   When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware. You may need to [enter the DFUmode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
-
 ### Unable to enter DFU & Entering DFU Mode Manually
 
 Connect the device to your PC, double-press the `Reset` button. The yellow LED will stay solid, and a new USB drive named `Tracker L1` will appear on your PC.
@@ -344,25 +347,26 @@ Connect the device to your PC, double-press the `Reset` button. The yellow LED w
 
 Press the `Reset` button once to exit DFU mode.
 
- ### Device automatically turn off
+### Device automatically turn off
 
- #### Description
+#### Description
 
- - After the device turning on, it will turn off or reboot automatically after a while. 
- - The serial port log ran for a while and then stopped.
+- After the device turning on, it will turn off or reboot automatically after a while.
+- The serial port log ran for a while and then stopped.
 
  This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
 
- #### Troubleshoot
+#### Troubleshoot
 
 [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to see the video. You need to perform a flash erase, and the re-flash the latest firmware.
 
 ### Factory Reset
+
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
 
 - [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to see the video. You need to perform a flash erase, and the re-flash the latest firmware.
 
-- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB Reset
@@ -431,6 +435,7 @@ Please note the difference between the following options:
 
 - **Reset NodeDB**: Only clears the node database.
 - **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+
 :::
 
 **What happens after reset**
@@ -462,9 +467,17 @@ You may observe the following:
 
 If you need a antenna replacement for L1 Pro, [click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) to get one.
 
-
-
 ## Resources
+
+- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
+- [L1 Enclosure Design Challenge](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
+- [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [TELEC Certification](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
+- [FCC Certification](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [CE Certification](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [Power Consumption Test and Battery Life Calculation](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
@@ -472,14 +485,3 @@ If you need a antenna replacement for L1 Pro, [click here](https://www.seeedstud
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
-
-## Resource
-- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
-- [L1 Enclosure Design Challenge](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
-- [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
-- [TELEC Certification](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
-- [FCC Certification](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
-- [CE Certification](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
-- [Power Consumption Test and Battery Life Calculation](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
