@@ -12,13 +12,13 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-22
+  date: 2026-05-18
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-04-22'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
