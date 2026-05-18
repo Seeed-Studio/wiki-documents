@@ -3831,6 +3831,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Robotics J50 Mini',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50_Mini/reComputer_Robotics_J50_Mini_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/recomputer_j401b_getting_start',
@@ -4330,6 +4337,21 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/intro',
               label: 'Introduction',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
+              label: 'Getting Started',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/AGENTS',
+              label: 'AI Agent Guide',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/vibe-code-with-your-agent',
+              label: 'Vibe Code with Your Agent',
             },
             {
               type: 'category',

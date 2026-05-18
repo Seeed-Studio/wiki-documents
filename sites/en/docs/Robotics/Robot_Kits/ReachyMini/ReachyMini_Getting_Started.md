@@ -52,7 +52,8 @@ The **Reachy Mini** is the first open-source desktop robot designed to explore h
 Optimized and manufactured by **Seeed Studio**, Reachy Mini combines expressive physical interaction with modern AI capabilities. Whether you're building voice assistants, computer vision applications, or educational tools, Reachy Mini provides a complete platform for real-world AI experimentation.
 
 
-:::tip[What You'll Learn]
+:::tip
+What You'll Learn
 
 - The key features and architecture of Reachy Mini
 - Hardware specifications and differences between Lite and Full versions
@@ -91,15 +92,15 @@ Reachy Mini packs impressive capabilities into a compact, desktop-sized package.
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', margin: '24px 0'}}>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachy_mini_dimensions.png" alt="Reachy Mini Dimensions"/>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachy_mini_dimensions.png" alt="Reachy Mini Dimensions" />
     <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Physical Dimensions</p>
   </div>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/dof_table.png" alt="Degrees of Freedom Table"/>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/dof_table.png" alt="Degrees of Freedom Table" />
     <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>DOF Specifications</p>
   </div>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram"/>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram" />
     <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Motion Range</p>
   </div>
 </div>
@@ -209,7 +210,7 @@ Reachy Mini is sold as a kit that takes approximately **2-3 hours** to assemble.
 - **Interactive Assembly Guide:** [Step-by-step online instructions](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)
 
 
-:::caution[Assembly Tips]
+:::warning[Assembly Tips]
 
 - Set aside 2-3 hours in a clean, well-lit workspace
 - A set of small screwdrivers is required (included in kit)

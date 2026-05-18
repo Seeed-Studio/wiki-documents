@@ -12,29 +12,27 @@ keywords:
   - ssh
   - update
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_get_started/
 ---
 
 # Reachy Mini (Wireless) - Setup Guide
 
-The **Reachy Mini (Wireless)** is the autonomous version powered by a Raspberry Pi 4. It runs independently using its internal battery and Wi-Fi connection.
+The **Reachy Mini (Wireless)** is the autonomous version powered by a Raspberry Pi Compute Module 4 (CM4). It runs independently using its internal battery and Wi-Fi connection.
 
 ## 1. 🔧 Assembly
 
 Reachy Mini comes as a kit. Building it is the first step of your journey!
 
-:::info Assembly Details
 * **Time required:** 2 to 3 hours.
 * **Tools:** Everything is included in the box.
 * **Instructions:** We strongly recommend following the video guide alongside the manual.
-:::
 
 :::tip Pro Tip
 We strongly recommend having the **Online Guide** or the **assembly video** open alongside the paper booklet (see below). The online version includes short video extracts for every step, which makes the assembly much easier to understand.
@@ -42,56 +40,46 @@ We strongly recommend having the **Online Guide** or the **assembly video** open
 
 | **📖 Interactive Digital Guide** | **📺 Full Assembly Video** |
 | :---: | :---: |
-| [![Assembly Guide](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/digital_assembly_guide_preview_mini.jpg)](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)<br/>[**Open Step-by-Step Guide**](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)<br/>*(Includes short video loops)* | [![Watch on YouTube](https://img.youtube.com/vi/WeKKdnuXca4/maxresdefault.jpg)](https://www.youtube.com/watch?v=WeKKdnuXca4)<br/>[**Watch on YouTube**](https://www.youtube.com/watch?v=WeKKdnuXca4)<br/>*(Video with sections for each step)* |
+| [![Assembly Guide](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/digital_assembly_guide_preview_mini.jpg)](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)<br/>[**Open Step-by-Step Guide**](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)<br/>*(Includes short video loops)* | [![Watch on YouTube](https://img.youtube.com/vi/WeKKdnuXca4/maxresdefault.jpg)](https://www.youtube.com/watch?v=WeKKdnuXca4)<br/>[**Watch on YouTube**](https://www.youtube.com/watch?v=WeKKdnuXca4)<br/>*(Video with sections for each step)* |
+
 
 ## 2. 🛜 First Boot & Wi-Fi Configuration
 
 Once assembled, you need to connect the robot to your Wi-Fi network.
 
-:::tip Step 1: Power On
-Turn on your Reachy Mini.
-:::
-
-:::info Step 2: Connect to Reachy
-Wait a few moments. The robot will create a Wi-Fi network named **`reachy-mini-ap`**.
-* **Password:** `reachy-mini`
-* *Or scan the QR Code:*
-
-![QR-Code reachy-mini-ap](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/qrcode-ap.png)
-:::
-
-:::tip Step 3: Configure Wi-Fi
-* Open your browser and go to: **[http://reachy-mini.local:8000/settings](http://reachy-mini.local:8000/settings)**.
-* Enter your local Wi-Fi credentials (SSID & Password) and click **"Connect"**.
-* Wait a few moments for Reachy Mini to connect to your Wi-Fi network. The access point will disappear once connected. If the connection fails, Reachy Mini will restart the access point, and you can try again.
-:::
+1.  **Power On:** Turn on your Reachy Mini.
+2. **Download Reachy Mini Control:** If you haven't already, download and install the **Reachy Mini Control** app from the [official website](https://hf.co/reachy-mini/#/download).
+3. **Run the App:** Open **Reachy Mini Control** and click on the bottom link **"First time connecting..."**.
+![First time connecting](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/first-setup-wifi-1.png)
+4. **Follow the Instructions:** The app will guide you through the connection process. It will ask you to connect to the robot's Wi-Fi AP and then configure your Wi-Fi.
+![Configuring your WiFi](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/first-setup-wifi-2.png)
 
 ## 3. 🔄 Update System
 
-:::warning Recommended
 Before going further, it is highly recommended to update your robot to the latest version.
-:::
 
-1.  **Open Settings:** Go to **[http://reachy-mini.local:8000/settings](http://reachy-mini.local:8000/settings)**.
-2.  **Check for Updates:** Click the **"Check for updates"** button.
-3.  **Install:** If a new version is available, follow the on-screen instructions to install it.
+1. Connect to your robot using **Reachy Mini Control**.
+2. Once connected, click on the **"⚙️"** settings tab.
+![Settings Tab](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-settings.png)
+3. Go to the **System Updates** section.
+![System Update Section](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-update.png)
+4.  **Install:** If a new version is available, follow the on-screen instructions to install it.
+
 
 ## 4. 🕹️ Next Step: Using the Robot
 
 Now that your robot is online and up to date, you can start controlling it!
 
 👉 **[Go to the Usage Guide](/reachymini_platforms_reachy_mini_usage)** to learn how to:
-* Access the **Dashboard**.
+* Use the **Reachy Mini Control**.
 * Install and run **Apps** (like Conversation or Games).
 * Program your Reachy with **Python**.
 
 ## 5. 💻 Advanced: Connect directly to the internal Raspberry Pi via SSH
 
-:::info SSH Credentials
 If you need to connect to Reachy Mini's internal Raspberry Pi via SSH, credentials are:
-:::
 
-```bash
+```
 username: pollen
 password: root
 ```
@@ -108,9 +96,10 @@ Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymin
 
 ## Expert Mode
 
-:::warning Expert Guides
-If you need to reinstall the Raspberry Pi from scratch or create a custom image, follow the expert guides below.
-:::
+If you need to reinstall the Raspberry Pi from scratch or create a custom image, follow the expert guides.
 
-<!-- * **[Reflash the ISO](../reflash_the_rpi_ISO.md)** -->
-<!-- * **[Install Daemon from a Specific Branch](../install_daemon_from_branch.md)** -->
+**[Reflash the ISO](/reachymini_platforms_reachy_mini_reflash_the_rpi_ISO)**
+
+**[Install Daemon from a Specific Branch](/reachymini_platforms_reachy_mini_install_daemon_from_branch)**
+
+**[Development Workflow](/reachymini_platforms_reachy_mini_development_workflow)** - Best practices for developing and testing code on the Wireless Reachy Mini

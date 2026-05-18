@@ -13,13 +13,13 @@ keywords:
   - goto_target
   - set_target
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_sdk_python-sdk/
 ---
 
@@ -131,17 +131,14 @@ In both cases, the channels and samplerate information can be reliably retrieved
 
 Choose the appropriate media backend based on your Reachy Mini version and requirements:
 
-**Reachy Mini Lite:**
-- `media_backend="default"` - Uses OpenCV for camera and Sounddevice for audio (recommended for most users)
-- `media_backend="gstreamer"` - Uses GStreamer for both camera and audio ([installation required](/reachymini_sdk_gstreamer-installation))
+- `media_backend="default"` - Auto-detects the best backend: LOCAL when running on the same machine as the daemon, WEBRTC when remote (recommended for most users).
+- `media_backend="local"` - Forces the LOCAL backend (GStreamer IPC camera + GStreamer audio). Use when running on the same machine as the daemon.
+- `media_backend="webrtc"` - Forces the WEBRTC backend. The daemon streams H.264 video and Opus audio over WebRTC to the client.
+- `media_backend="no_media"` - Deactivates the media manager and tells the daemon to release camera and audio hardware. Use this when you need direct access via OpenCV, sounddevice, or any other external library. The hardware is automatically re-acquired when the context manager exits. See [Media Architecture - Disabling Media](/reachymini_sdk_media-architecture#disabling-media--direct-hardware-access) and the [Custom Media Manager](../examples/custom_media_manager.md) example.
 
-**Reachy Mini Wireless:**
-- **Local execution** (running on the robot with SSH): Automatically uses `"gstreamer"`
-- **Remote execution** (controlling from your computer): Automatically uses `"webrtc"`. With this backend, GStreamer runs locally on the Raspberry Pi, and streams both audio and video on the remote computer using WebRTC.
+> **💡 Tip:** For most setups, the backend is automatically selected based on whether you're running locally or remotely. No need to specify the `media_backend` value!
 
-> **💡 Tip:** For wireless setups, the backend is automatically selected based on whether you're running locally or remotely. No need to specify the `media_backend` value !
-
-> **💡 Tip:** For wireless setups, the WebRTC backend is requires a specific installation see [gstreamer-installation.md](/reachymini_sdk_gstreamer-installation). For now only the Linux platform is supported as a client. Other platforms (Windows, macOS) will be supported in [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
+> **💡 Tip:** The WebRTC backend requires GStreamer to be installed on the client machine. See [GStreamer Installation](/reachymini_sdk_gstreamer-installation). For now only Linux is fully supported as a remote client. Other platforms (Windows, macOS) will be supported in [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
 
 ## Recording Moves
 You can record a motion by moving the robot (compliant mode) or sending commands, and save it for later replay.
