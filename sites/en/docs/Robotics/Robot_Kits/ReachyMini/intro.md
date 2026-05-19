@@ -11,13 +11,13 @@ keywords:
   - python sdk
   - ai robot
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_intro/
 ---
 
@@ -29,7 +29,7 @@ url: https://wiki.seeedstudio.com/reachymini_intro/
 
 🛒 [**Buy Reachy Mini**](https://www.hf.co/reachy-mini/)
 
-[![Reachy Mini Hello](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_hello.gif)](https://www.pollen-robotics.com/reachy-mini/)
+[![Reachy Mini Hello](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_hello.gif)](https://www.pollen-robotics.com/reachy-mini/)
 
 ## ⚡️ Build and start your own robot
 
@@ -37,7 +37,7 @@ url: https://wiki.seeedstudio.com/reachymini_intro/
 
 | **🤖 Reachy Mini (Wireless)** | **🔌 Reachy Mini Lite** | **💻 Simulation** |
 | :---: | :---: | :---: |
-| The full autonomous experience.<br/>Raspberry Pi 4 + Battery + WiFi. | The developer version.<br/>USB connection to your computer. | No hardware required.<br/>Prototype in MuJoCo. |
+| The full autonomous experience.<br/>Raspberry Pi CM4 + Battery + WiFi. | The developer version.<br/>USB connection to your computer. | No hardware required.<br/>Prototype in MuJoCo. |
 | 👉 [**Go to Wireless Guide**](/reachymini_platforms_reachy_mini_get_started) | 👉 [**Go to Lite Guide**](/reachymini_platforms_reachy_mini_lite_get_started) | 👉 [**Go to Simulation**](/reachymini_platforms_simulation_get_started) |
 
 :::tip Pro tip
@@ -46,7 +46,7 @@ Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for 10-100
 
 ## 📱 Apps & Ecosystem
 
-Reachy Mini comes with an app store powered by Hugging Face Spaces. You can install these apps directly from your robot's dashboard with one click!
+Reachy Mini comes with an app store powered by Hugging Face Spaces. You can install these apps directly from Reachy Mini Control with one click!
 
 * **🗣️ [Conversation App](https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app):** Talk naturally with Reachy Mini (powered by LLMs).
 * **📻 [Radio](https://huggingface.co/spaces/pollen-robotics/reachy_mini_radio):** Listen to the radio with Reachy Mini!
@@ -56,13 +56,12 @@ Reachy Mini comes with an app store powered by Hugging Face Spaces. You can inst
 
 ## 🚀 Getting Started with Reachy Mini SDK
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/h2lyqR2eMyM"
-  frameborder="0"
-  allowfullscreen
-/>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=h2lyqR2eMyM" target="_blank">
+    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style={{border: '1px solid #ddd', borderRadius: '8px'}} />
+    <p><i>▶️ 点击在 YouTube 上观看：Reachy Mini SDK 运行指南</i></p>
+  </a>
+</div>
 
 ### Quick Look
 Control your robot in just **a few lines of code**:
@@ -84,15 +83,16 @@ with ReachyMini() as mini:
 * **[Quickstart Guide](/reachymini_sdk_quickstart)**: Run your first behavior on Reachy Mini
 * **[Python SDK](/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
 * **[AI Integrations](/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
+* **[Building & Publishing Apps](/reachymini_sdk_apps)**: Create, test, publish, and debug Reachy Mini apps.
 * **[Core Concepts](/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
-* 🤗[**Share your app with the community**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
+* **[Tutorials](/reachymini_examples_minimal_demo)**: Hands-on examples to learn the SDK step by step.
 * 📂 [**Browse the Examples Folder**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 Hardware Overview
 
 Reachy Mini robots are sold as kits and generally take **2 to 3 hours** to assemble. Detailed step-by-step guides are available in the platform-specific folders linked above.
 
-* **Reachy Mini (Wireless):** Runs onboard (RPi 4), autonomous, includes IMU. [See specs](/reachymini_platforms_reachy_mini_hardware).
+* **Reachy Mini (Wireless):** Runs onboard (RPi CM4), autonomous, includes IMU. [See specs](/reachymini_platforms_reachy_mini_hardware).
 * **Reachy Mini Lite:** Runs on your PC, powered via wall outlet. [See specs](/reachymini_platforms_reachy_mini_lite_hardware).
 
 ## ❓ Troubleshooting
@@ -101,8 +101,9 @@ Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymin
 
 ## 🤝 Community & Contributing
 
-* **Join the Community:** Join [Discord](https://discord.com/2bAhWfXme9) to share your moments with Reachy, build apps together, and get help.
+* **Join the Community:** Join [Discord](https://discord.gg/2bAhWfXme9) to share your moments with Reachy, build apps together, and get help.
 * **Found a bug?** Open an issue on [this repository](https://github.com/pollen-robotics/reachy_mini/issues).
+* **Next Steps:** Check out our [roadmap](/reachymini_troubleshooting_roadmap) and share your feedback!
 
 ## License
 
