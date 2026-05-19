@@ -134,7 +134,7 @@ Choose the appropriate media backend based on your Reachy Mini version and requi
 - `media_backend="default"` - Auto-detects the best backend: LOCAL when running on the same machine as the daemon, WEBRTC when remote (recommended for most users).
 - `media_backend="local"` - Forces the LOCAL backend (GStreamer IPC camera + GStreamer audio). Use when running on the same machine as the daemon.
 - `media_backend="webrtc"` - Forces the WEBRTC backend. The daemon streams H.264 video and Opus audio over WebRTC to the client.
-- `media_backend="no_media"` - Deactivates the media manager and tells the daemon to release camera and audio hardware. Use this when you need direct access via OpenCV, sounddevice, or any other external library. The hardware is automatically re-acquired when the context manager exits. See [Media Architecture - Disabling Media](/reachymini_sdk_media-architecture#disabling-media--direct-hardware-access) and the [Custom Media Manager](../examples/custom_media_manager.md) example.
+- `media_backend="no_media"` - Deactivates the media manager and tells the daemon to release camera and audio hardware. Use this when you need direct access via OpenCV, sounddevice, or any other external library. The hardware is automatically re-acquired when the context manager exits. See [Media Architecture - Disabling Media](/reachymini_sdk_media-architecture#disabling-media--direct-hardware-access) and the [Custom Media Manager](/reachymini_examples_custom_media_manager) example.
 
 > **💡 Tip:** For most setups, the backend is automatically selected based on whether you're running locally or remotely. No need to specify the `media_backend` value!
 

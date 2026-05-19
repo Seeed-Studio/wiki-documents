@@ -61,4 +61,4 @@ Reachy Mini デーモンは `http://<daemon-ip>:8000/api` で HTTP および Web
 
 ## より複雑なアプリ
 
-より複雑なアプリの例については、JavaScript SDK を使用し、WebRTC トランスポートを活用してビデオ、オーディオ、およびロボット制御向けの高レベルな抽象化を提供する [JavaScript SDK & Web Apps](../SDK/javascript-sdk.md) のページを参照してください。
+より複雑なアプリの例については、JavaScript SDK を使用し、WebRTC トランスポートを活用してビデオ、オーディオ、およびロボット制御向けの高レベルな抽象化を提供する [JavaScript SDK & Web Apps](/ja/reachymini_sdk_javascript-sdk) のページを参照してください。

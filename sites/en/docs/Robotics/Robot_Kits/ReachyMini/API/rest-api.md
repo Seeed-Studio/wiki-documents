@@ -61,4 +61,4 @@ without a running daemon.
 
 ## More complex apps
 
-See the [JavaScript SDK & Web Apps](../SDK/javascript-sdk.md) page for examples of more complex apps using the JavaScript SDK, which leverages the WebRTC transport and provides higher-level abstractions for video, audio, and robot control.
+See the [JavaScript SDK & Web Apps](/reachymini_sdk_javascript-sdk) page for examples of more complex apps using the JavaScript SDK, which leverages the WebRTC transport and provides higher-level abstractions for video, audio, and robot control.

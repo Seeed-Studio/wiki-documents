@@ -48,7 +48,7 @@ To restart your robot, press OFF, wait 5 seconds, then press ON. This simple pro
   - On the latest tagged release, or
   - Up to date with the `main` branch (`git pull`).
 
-**Wireless Reachy Mini**: run `reachyminios_check` to make sure everything is fine (see [Get Started](./platforms/reachy_mini/get_started.md))
+**Wireless Reachy Mini**: run `reachyminios_check` to make sure everything is fine (see [Get Started](/reachymini_platforms_reachy_mini_get_started))
 
 </details>
 
@@ -81,7 +81,7 @@ This concerns issues like:
 - Motors showing errors like "Overload Error"
 - Missing motors: "No motor found on port", "Missing motor", etc.
 
-If you have any of the following symptoms, please refer to the [Motors diagnosis and troubleshooting guide](./troubleshooting/motors_diagnosis.md) for detailed steps to diagnose and fix motor-related issues.
+If you have any of the following symptoms, please refer to the [Motors diagnosis and troubleshooting guide](/reachymini_troubleshooting_motors_diagnosis) for detailed steps to diagnose and fix motor-related issues.
 
 Using the Reachy Mini Testbench app will help you identify and resolve these problems effectively.
 
@@ -112,7 +112,7 @@ You may have plugged the microphone cable upside down.
 ![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/black_fpc_cable.png)
 
 
-If your cable is plugged properly and you still have issues, it is likely that the FPC cable of the microphone is damaged. Please refer to the tutorial [How to change the FPC cable of the microphone of Reachy Mini?](./troubleshooting/change_mic_fpc_cable.md) to fix this issue.
+If your cable is plugged properly and you still have issues, it is likely that the FPC cable of the microphone is damaged. Please refer to the tutorial [How to change the FPC cable of the microphone of Reachy Mini?](/reachymini_troubleshooting_change_mic_fpc_cable) to fix this issue.
 
 </details>
 
@@ -124,7 +124,7 @@ If your cable is plugged properly and you still have issues, it is likely that t
 - Update your robot to version 1.2.3 or later
 
 For more details, see the documentation:
-[Getting Started](./platforms/reachy_mini/get_started.md)
+[Getting Started](/reachymini_platforms_reachy_mini_get_started)
 
 </details>
 
@@ -171,7 +171,7 @@ If it doesn't help, you can also try to increase D to 10 on the same motors.
 
 If you hear high-pitched squeaking or friction noises when the robot's head moves, the spherical joints (ball joints) on the Stewart platform rods likely need maintenance. You may also notice dark dust or residue around the connecting rods.
 
-This is normal wear over time. Follow the [Spherical Joints Maintenance guide](./troubleshooting/spherical_joints_maintenance.md) to clean and re-grease the joints.
+This is normal wear over time. Follow the [Spherical Joints Maintenance guide](/reachymini_troubleshooting_spherical_joints_maintenance) to clean and re-grease the joints.
 
 </details>
 
@@ -292,8 +292,8 @@ You do not need to install them.
 **NO**
 
 - With Reachy Mini (Wireless), the daemon is already running on the embedded Raspberry Pi.
-- With Reachy Mini Lite, you can use [the desktop app](./platforms/reachy_mini_lite/get_started.md).
-- If the desktop app doesn't work on your system (e.g., ARM64, unusual distributions), you can [install and use the Python SDK](./SDK/installation.md) directly - it's a fully supported alternative!
+- With Reachy Mini Lite, you can use [the desktop app](/reachymini_platforms_reachy_mini_lite_get_started).
+- If the desktop app doesn't work on your system (e.g., ARM64, unusual distributions), you can [install and use the Python SDK](/reachymini_sdk_installation) directly - it's a fully supported alternative!
 
 </details>
 
@@ -304,14 +304,14 @@ You do not need to install them.
 <details>
 <summary><strong>How do I connect the robot to Wi-Fi?</strong></summary>
 
-See the [Reachy Mini Wireless guide](./platforms/reachy_mini/get_started.md) for detailed instructions on connecting to Wi-Fi.
+See the [Reachy Mini Wireless guide](/reachymini_platforms_reachy_mini_get_started) for detailed instructions on connecting to Wi-Fi.
 
 </details>
 
 <details>
 <summary><strong>How do I reset the Wi-Fi hotspot?</strong></summary>
 
-If you need to reset the robot's Wi-Fi hotspot (for example, if you can't connect or want to change the network), follow the instructions in the [Wi-Fi Reset Guide](./platforms/reachy_mini/reset.md).
+If you need to reset the robot's Wi-Fi hotspot (for example, if you can't connect or want to change the network), follow the instructions in the [Wi-Fi Reset Guide](/reachymini_platforms_reachy_mini_reset).
 
 </details>
 
@@ -443,7 +443,7 @@ _Approaches based on open weight models are in the works, stay tuned!_
 <details>
 <summary><strong>Where can I find more information about hardware?</strong></summary>
 
-Refer to the [Reachy Mini Hardware page](./platforms/reachy_mini/hardware.md) for detailed information about the robot's hardware components.
+Refer to the [Reachy Mini Hardware page](/reachymini_platforms_reachy_mini_hardware) for detailed information about the robot's hardware components.
 
 </details>
 
@@ -502,7 +502,7 @@ No motors found at baudrate 115200
 Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
-2. Lite: You can also use the Dynamixel Wizard to read motors parameters. Follow the guide [here](./platforms/reachy_mini_lite/wizard.md).
+2. Lite: You can also use the Dynamixel Wizard to read motors parameters. Follow the guide [here](/reachymini_platforms_reachy_mini_lite_wizard).
 
 </details>
 
@@ -602,7 +602,7 @@ Use the app assistant CLI:
 reachy-mini-app-assistant create my_app_name /path/to/destination --publish
 ```
 
-See the full guide: [Building & Publishing Apps](./SDK/apps.md) — covers app structure, testing, publishing, debugging, and deployment.
+See the full guide: [Building & Publishing Apps](/reachymini_sdk_apps) — covers app structure, testing, publishing, debugging, and deployment.
 
 </details>
 
@@ -619,7 +619,7 @@ ssh pollen@reachy-mini.local "/venvs/apps_venv/bin/python3 -c 'from my_app.main 
 python -c "from my_app.main import MyApp"
 ```
 
-For more debugging tips (viewing logs, common pitfalls), see [Debugging Apps](./SDK/apps.md#debugging-apps).
+For more debugging tips (viewing logs, common pitfalls), see [Debugging Apps](/reachymini_sdk_apps#debugging-apps).
 
 </details>
 

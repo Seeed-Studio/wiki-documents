@@ -48,7 +48,7 @@ Para reiniciar o seu robô, pressione OFF, espere 5 segundos e então pressione 
   - Na versão mais recente marcada (tagged release), ou
   - Atualizado com a branch `main` (`git pull`).
 
-**Reachy Mini Wireless**: execute `reachyminios_check` para garantir que tudo está correto (veja [Get Started](./platforms/reachy_mini/get_started.md))
+**Reachy Mini Wireless**: execute `reachyminios_check` para garantir que tudo está correto (veja [Get Started](/pt-br/reachymini_platforms_reachy_mini_get_started))
 
 </details>
 
@@ -81,7 +81,7 @@ Isto diz respeito a problemas como:
 - Motores exibindo erros como "Overload Error"
 - Motores ausentes: "No motor found on port", "Missing motor", etc.
 
-Se você tiver qualquer um dos seguintes sintomas, consulte o [guia de diagnóstico e solução de problemas dos motores](./troubleshooting/motors_diagnosis.md) para etapas detalhadas de diagnóstico e correção de problemas relacionados aos motores.
+Se você tiver qualquer um dos seguintes sintomas, consulte o [guia de diagnóstico e solução de problemas dos motores](/pt-br/reachymini_troubleshooting_motors_diagnosis) para etapas detalhadas de diagnóstico e correção de problemas relacionados aos motores.
 
 Usar o aplicativo Reachy Mini Testbench ajudará você a identificar e resolver esses problemas de forma eficaz.
 
@@ -112,7 +112,7 @@ Você pode ter conectado o cabo do microfone de cabeça para baixo.
 ![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/black_fpc_cable.png)
 
 
-Se o seu cabo estiver conectado corretamente e você ainda tiver problemas, é provável que o cabo FPC do microfone esteja danificado. Consulte o tutorial [Como trocar o cabo FPC do microfone do Reachy Mini?](./troubleshooting/change_mic_fpc_cable.md) para corrigir esse problema.
+Se o seu cabo estiver conectado corretamente e você ainda tiver problemas, é provável que o cabo FPC do microfone esteja danificado. Consulte o tutorial [Como trocar o cabo FPC do microfone do Reachy Mini?](/pt-br/reachymini_troubleshooting_change_mic_fpc_cable) para corrigir esse problema.
 
 </details>
 
@@ -124,7 +124,7 @@ Se o seu cabo estiver conectado corretamente e você ainda tiver problemas, é p
 - Atualize o seu robô para a versão 1.2.3 ou posterior
 
 Para mais detalhes, consulte a documentação:
-[Getting Started](./platforms/reachy_mini/get_started.md)
+[Getting Started](/pt-br/reachymini_platforms_reachy_mini_get_started)
 
 </details>
 
@@ -171,7 +171,7 @@ Se isso não ajudar, você também pode tentar aumentar D para 10 nos mesmos mot
 
 Se você ouvir ruídos agudos de rangido ou atrito quando a cabeça do robô se move, é provável que as juntas esféricas (ball joints) das hastes da plataforma Stewart precisem de manutenção. Você também pode notar poeira escura ou resíduos ao redor das hastes de conexão.
 
-Este é um desgaste normal ao longo do tempo. Siga o [guia de manutenção das juntas esféricas](./troubleshooting/spherical_joints_maintenance.md) para limpar e lubrificar novamente as juntas.
+Este é um desgaste normal ao longo do tempo. Siga o [guia de manutenção das juntas esféricas](/pt-br/reachymini_troubleshooting_spherical_joints_maintenance) para limpar e lubrificar novamente as juntas.
 
 </details>
 
@@ -292,8 +292,8 @@ Você não precisa instalá-los.
 **NÃO**
 
 - Com o Reachy Mini (Wireless), o daemon já está em execução no Raspberry Pi embarcado.
-- Com o Reachy Mini Lite, você pode usar [o aplicativo desktop](./platforms/reachy_mini_lite/get_started.md).
-- Se o aplicativo desktop não funcionar no seu sistema (por exemplo, ARM64, distribuições incomuns), você pode [instalar e usar diretamente o SDK em Python](./SDK/installation.md) — é uma alternativa totalmente suportada!
+- Com o Reachy Mini Lite, você pode usar [o aplicativo desktop](/pt-br/reachymini_platforms_reachy_mini_lite_get_started).
+- Se o aplicativo desktop não funcionar no seu sistema (por exemplo, ARM64, distribuições incomuns), você pode [instalar e usar diretamente o SDK em Python](/pt-br/reachymini_sdk_installation) — é uma alternativa totalmente suportada!
 
 </details>
 
@@ -304,14 +304,14 @@ Você não precisa instalá-los.
 <details>
 <summary><strong>Como conecto o robô ao Wi‑Fi?</strong></summary>
 
-Veja o [guia Reachy Mini Wireless](./platforms/reachy_mini/get_started.md) para instruções detalhadas sobre como se conectar ao Wi‑Fi.
+Veja o [guia Reachy Mini Wireless](/pt-br/reachymini_platforms_reachy_mini_get_started) para instruções detalhadas sobre como se conectar ao Wi‑Fi.
 
 </details>
 
 <details>
 <summary><strong>Como redefino o hotspot Wi‑Fi?</strong></summary>
 
-Se você precisar redefinir o hotspot Wi‑Fi do robô (por exemplo, se não conseguir se conectar ou quiser mudar a rede), siga as instruções no [Guia de Redefinição de Wi‑Fi](./platforms/reachy_mini/reset.md).
+Se você precisar redefinir o hotspot Wi‑Fi do robô (por exemplo, se não conseguir se conectar ou quiser mudar a rede), siga as instruções no [Guia de Redefinição de Wi‑Fi](/pt-br/reachymini_platforms_reachy_mini_reset).
 
 </details>
 
@@ -443,7 +443,7 @@ _Abordagens baseadas em modelos de pesos abertos estão em desenvolvimento, fiqu
 <details>
 <summary><strong>Onde posso encontrar mais informações sobre o hardware?</strong></summary>
 
-Consulte a [página de Hardware do Reachy Mini](./platforms/reachy_mini/hardware.md) para informações detalhadas sobre os componentes de hardware do robô.
+Consulte a [página de Hardware do Reachy Mini](/pt-br/reachymini_platforms_reachy_mini_hardware) para informações detalhadas sobre os componentes de hardware do robô.
 
 </details>
 
@@ -502,7 +502,7 @@ No motors found at baudrate 115200
 Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
-2. Lite: Você também pode usar o Dynamixel Wizard para ler os parâmetros dos motores. Siga o guia [aqui](./platforms/reachy_mini_lite/wizard.md).
+2. Lite: Você também pode usar o Dynamixel Wizard para ler os parâmetros dos motores. Siga o guia [aqui](/pt-br/reachymini_platforms_reachy_mini_lite_wizard).
 
 </details>
 
@@ -602,7 +602,7 @@ Use o assistente de apps na CLI:
 reachy-mini-app-assistant create my_app_name /path/to/destination --publish
 ```
 
-Veja o guia completo: [Criando e Publicando Apps](./SDK/apps.md) — abrange estrutura do app, testes, publicação, depuração e implantação.
+Veja o guia completo: [Criando e Publicando Apps](/pt-br/reachymini_sdk_apps) — abrange estrutura do app, testes, publicação, depuração e implantação.
 
 </details>
 
@@ -619,7 +619,7 @@ ssh pollen@reachy-mini.local "/venvs/apps_venv/bin/python3 -c 'from my_app.main 
 python -c "from my_app.main import MyApp"
 ```
 
-Para mais dicas de depuração (visualização de logs, armadilhas comuns), veja [Depurando Apps](./SDK/apps.md#depurando-apps).
+Para mais dicas de depuração (visualização de logs, armadilhas comuns), veja [Depurando Apps](/pt-br/reachymini_sdk_apps#depurando-apps).
 
 </details>
 

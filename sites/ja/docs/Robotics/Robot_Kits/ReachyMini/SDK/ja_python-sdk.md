@@ -134,7 +134,7 @@ Reachy Mini のバージョンと要件に応じて、適切なメディアバ�
 - `media_backend="default"` - 最適なバックエンドを自動検出します：デーモンと同じマシン上で動作している場合は LOCAL、リモートの場合は WEBRTC（ほとんどのユーザーに推奨）。
 - `media_backend="local"` - LOCAL バックエンド（GStreamer IPC カメラ + GStreamer オーディオ）を強制します。デーモンと同じマシン上で動作している場合に使用します。
 - `media_backend="webrtc"` - WEBRTC バックエンドを強制します。デーモンは H.264 ビデオと Opus オーディオを WebRTC 経由でクライアントにストリーミングします。
-- `media_backend="no_media"` - メディアマネージャーを無効化し、デーモンにカメラとオーディオハードウェアを解放させます。OpenCV、sounddevice、その他の外部ライブラリから直接アクセスする必要がある場合に使用します。コンテキストマネージャーが終了すると、ハードウェアは自動的に再取得されます。[Media Architecture - Disabling Media](/ja/reachymini_sdk_media-architecture#メディアの無効化--ハードウェアへの直接アクセス) および [Custom Media Manager](../examples/custom_media_manager.md) のサンプルを参照してください。
+- `media_backend="no_media"` - メディアマネージャーを無効化し、デーモンにカメラとオーディオハードウェアを解放させます。OpenCV、sounddevice、その他の外部ライブラリから直接アクセスする必要がある場合に使用します。コンテキストマネージャーが終了すると、ハードウェアは自動的に再取得されます。[Media Architecture - Disabling Media](/ja/reachymini_sdk_media-architecture#メディアの無効化--ハードウェアへの直接アクセス) および [Custom Media Manager](/ja/reachymini_examples_custom_media_manager) のサンプルを参照してください。
 
 > **💡 ヒント:** ほとんどの構成では、ローカルで実行しているかリモートで実行しているかに基づいてバックエンドが自動的に選択されます。`media_backend` の値を指定する必要はありません！
 

@@ -61,4 +61,4 @@ sin necesidad de que el daemon esté en ejecución.
 
 ## Apps más complejas
 
-Consulta la página [JavaScript SDK & Web Apps](../SDK/javascript-sdk.md) para ver ejemplos de apps más complejas que usan el JavaScript SDK, el cual aprovecha el transporte WebRTC y proporciona abstracciones de mayor nivel para vídeo, audio y control del robot.
+Consulta la página [JavaScript SDK & Web Apps](/es/reachymini_sdk_javascript-sdk) para ver ejemplos de apps más complejas que usan el JavaScript SDK, el cual aprovecha el transporte WebRTC y proporciona abstracciones de mayor nivel para vídeo, audio y control del robot.
