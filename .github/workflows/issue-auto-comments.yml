@@ -32,14 +32,18 @@ jobs:
           script: |
             const issue = context.payload.issue;
 
+            const body = [
+              `👋 @${issue.user.login}`,
+              '',
+              'Thank you for raising an issue. We will investigate into the matter and get back to you as soon as possible.',
+              'Please make sure you have given us as much context as possible.'
+            ].join('\n');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number,
-              body: `👋 @${issue.user.login}
-
-Thank you for raising an issue. We will investigate into the matter and get back to you as soon as possible.
-Please make sure you have given us as much context as possible.`
+              body
             });
 
       # Issue closed
@@ -51,13 +55,17 @@ Please make sure you have given us as much context as possible.`
           script: |
             const issue = context.payload.issue;
 
+            const body = [
+              `✅ @${issue.user.login}`,
+              '',
+              'This issue is closed, If you have any questions, you can comment and reply.'
+            ].join('\n');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number,
-              body: `✅ @${issue.user.login}
-
-This issue is closed, If you have any questions, you can comment and reply.`
+              body
             });
 
       # PR opened
@@ -69,15 +77,19 @@ This issue is closed, If you have any questions, you can comment and reply.`
           script: |
             const pr = context.payload.pull_request;
 
+            const body = [
+              `👍 @${pr.user.login}`,
+              '',
+              'Thank you for raising your pull request and contributing to our Community',
+              'Please make sure you have followed our contributing guidelines. We will review it as soon as possible.',
+              'If you encounter any problems, please feel free to connect with us.'
+            ].join('\n');
+
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: pr.number,
-              body: `👍 @${pr.user.login}
-
-Thank you for raising your pull request and contributing to our Community
-Please make sure you have followed our contributing guidelines. We will review it as soon as possible.
-If you encounter any problems, please feel free to connect with us.`
+              body
             });
 
       # PR merged
