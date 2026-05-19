@@ -18,9 +18,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
 デバイスが以下の状態にあるときは、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
+
 1. メッセージ送信プロセスが完了していない
 2. 設定中である
 :::
+
 ## ビデオチュートリアル
 
 ### パート 1: 開封とセットアップ
@@ -130,6 +132,7 @@ Web サイト上でメッセージを送信し、他のノードと通信した�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ## 設定
+
 ### LoRa の設定
 
 メッシュ上で通信を開始するには、リージョンを設定する必要があります。この設定はデバイスが使用する周波数帯域を制御し、お住まいの地域に合わせて設定する必要があります。
@@ -401,11 +404,11 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルのコ�
 
 - 充電ケーブルを交換する
 
-- 電源が切れているように見えても、実際には LED とブザーが有効化されていないだけの場合があります。次のパラメータを確認してください： 
+- 電源が切れているように見えても、実際には LED とブザーが有効化されていないだけの場合があります。次のパラメータを確認してください：
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
- - それでも解決しない場合は、デバイスボタンを押し続けたまま充電ケーブルを接続し、PC にディスクが表示されるかどうか確認してください。表示される場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#device-bricked)してブートローダーを再インストールしてください
+- それでも解決しない場合は、デバイスボタンを押し続けたまま充電ケーブルを接続し、PC にディスクが表示されるかどうか確認してください。表示される場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#device-bricked)してブートローダーを再インストールしてください
 
 ### デバイスがブートループに陥る
 
@@ -449,9 +452,9 @@ DFU モードに正常に入るには、この操作を素早く行う必要が�
 
 **ステップ 1: Adafruit-nrfutil のインストール**
 
-Windows ユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。 
+Windows ユーザーは、「Win」キーと「r」キーを押し、ポップアップウィンドウに「cmd」と入力して「Enter」を押します。これでコマンドラインを開くことができます。
 
-Mac ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開き、「termial」と入力して「Return」を押します。これでコマンドラインを開くことができます。 
+Mac ユーザーは、「Command」キーと「Space」キーを押して Spotlight を開き、「termial」と入力して「Return」を押します。これでコマンドラインを開くことができます。
 
 **前提条件**
 
@@ -492,8 +495,6 @@ python -m pip show adafruit-nrfutil
 Windows ユーザーは、パスを手動で追加する必要がある場合があります。前のステップで表示されたインストール場所をコピーし、次のように追加します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -618,25 +619,26 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  ポートが正しいか確認するか、別のポートを試してください。
 
- ### デバイスが自動的に電源オフになる
+### デバイスが自動的に電源オフになる
 
- #### 説明
+#### 説明
 
- - デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。 
- - シリアルポートのログがしばらく流れた後、停止します。
+- デバイスの電源を入れた後、しばらくすると自動的に電源が切れる、または再起動します。
+- シリアルポートのログがしばらく流れた後、停止します。
 
  これは、デバイスが次の状態にあるときに手動で強制的に再起動または電源オフしたことが原因の可能性があります：メッセージ送信プロセスが完了していない、設定処理中 など……
 
- #### トラブルシューティング
+#### トラブルシューティング
 
- [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)してフラッシュ消去を実行します。 
+ [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)してフラッシュ消去を実行します。
 
- ### 工場出荷時リセット
+### 工場出荷時リセット
+
 デフォルト設定に戻したい場合は、工場出荷時リセットを行うことができます。工場出荷時リセットを行う方法は 2 つあります。
 
 - [ここをクリック](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)してデバイスをフラッシュ消去します。その後、最新のファームウェアを書き込みます。
 
-- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。 
+- アプリで `Factory Reset` ボタンをクリックします。デバイスは工場出荷時の設定で自動的に再起動します。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### NodeDB リセット
@@ -688,6 +690,7 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 - **Reset NodeDB**: ノードデータベースのみを消去します。
 - **Factory Reset**: デバイスを工場出荷時設定に戻し、より多くの設定データを削除します。
+
 :::
 
 **リセット後に起こること**
@@ -709,9 +712,9 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 
 ### 信号品質
 
-  - **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より高い値で動作します。SNR が -10 dB より低いデバイスは性能が低いことを示します。
+- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB より高い値で動作します。SNR が -10 dB より低いデバイスは性能が低いことを示します。
 
-  - **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm より低いデバイスは、性能が低いと見なされます。 
+- **RSSI** はデバイスとその周囲の環境の両方によって決まります。通常のデバイスは -110 dBm より高い値で動作します。RSSI が -115 dBm より低いデバイスは、性能が低いと見なされます。
 
       最良の信号状態を得るために、干渉が最小限で、開けていて障害物のない場所でデバイスを使用してください。
 
@@ -724,10 +727,6 @@ NodeDB をリセットしても、デバイスに保存されているノード�
 - [Meshtastic ドキュメント](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker データシート](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
-
-
-
-## リソース
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
