@@ -1,6 +1,7 @@
 ---
 description: 本文介绍如何在 Nvidia Jetson Thor 上部署 NVIDIA 的 NemoClaw/OpenClaw 智能体框架，并集成 reBot Arm B601 机械臂，构建集视觉感知、LLM 推理与机器人执行于一体的本地 AI 自动化系统。文中提供完整的搭建指南，涵盖硬件连接、NemoClaw 与 Ollama 安装、机械臂后端配置、权限管理、systemd 自启动服务以及故障排查。
-title: 在 Nvidia Jetson Thor 上使用 NemoClaw 控制 Rebot Arm
+title: 在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
@@ -15,7 +16,7 @@ updatedAt: '2026-05-18'
 
 ## 1. 项目概述
 
-NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenClaw 常驻助手。本 Wiki 说明如何在 Jetson Thor 上部署 NemoClaw，并将 `reBot Arm B601` 的能力接入 NemoClaw 智能体工作流，形成“语义理解 + 视觉检测 + 机器人执行”的闭环。
+NVIDIA `NemoClaw` 是一个开源参考栈，可简化更安全地运行 OpenClaw 常驻助手。本 Wiki 说明如何在 Jetson Thor 上部署 NemoClaw，并将 `reBot Arm B601` 的能力接入 NemoClaw 智能体工作流，形成“语义理解 + 视觉检测 + 机器人执行”的闭环。
 
 - `NemoClaw`：用于任务编排和指令路由的本地智能体/控制框架。
 - `Nemotron3`：可选模型能力，用于意图理解和高层决策。
@@ -31,7 +32,7 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 
 - Nvidia Jetson Thor（已安装 JetPack 7.x）
 - [reBot Arm B601 DM](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
-- [USB-to-CAN 适配器](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- [USB-to-CAN adapter](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
 - USB 摄像头
 - 机械臂电源和 USB 线缆
 - USB 按钮（可选）
@@ -39,8 +40,8 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> NVIDIA® Jetson AGX Thor™ 开发套件 </th>
-        <th> SO-ARM101 低成本 AI 机械臂 </th>
+        <th> reBot Arm B601 </th>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
     </tr>
     <tr>
         <td>
@@ -128,7 +129,7 @@ curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 然后运行 `nemoclaw onboard` 来创建一个新应用。下面展示了一个交互式引导日志示例：
 
 <details>
-<summary> nemoclaw onboard 日志 </summary>
+<summary> nemoclaw onboard log </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -501,7 +502,7 @@ uv run rebot-arm-service
 ### 6.2 启动键盘监听器（可选）
 
 为了快速触发检测/抓取（无需等待较长的智能体推理时间），可以使用 F1 热键监听器。  
-当按下 F1 时，它会自动请求抓取任务的端点。
+当按下 F1 时，它会自动请求抓取任务端点。
 
 直接运行：
 
@@ -612,7 +613,7 @@ sudo journalctl -u rebot-f1-listener.service -f
 4. Torch 导入失败，提示缺少库  
 确保 `LD_LIBRARY_PATH` 同时包含 `nvpl` 和 `cuda_v12` 路径。
 
-5. F1 热键无效  
+5. F1 热键无效果  
 检查 `rebot-f1-listener.service` 日志，并确认它监听的是正确的键盘设备。
 
 6. 启动监听器后其他键盘按键失效  
@@ -631,7 +632,7 @@ sudo journalctl -u rebot-f1-listener.service -f
 
 ## 10. 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,7 @@
 ---
-description: Este artigo explica como implantar o framework de agentes NemoClaw/OpenClaw da NVIDIA no Nvidia Jetson Thor e integrar o braço robótico reBot Arm B601 para construir um sistema local de automação de IA que combina percepção visual, raciocínio com LLM e execução robótica. Ele fornece um guia completo de configuração que abrange conexões de hardware, instalação do NemoClaw e do Ollama, configuração do backend do braço robótico, gerenciamento de permissões, serviços de inicialização automática com systemd e solução de problemas.
-title: Controlar o Rebot Arm com NemoClaw no Nvidia Jetson Thor
+description: Este artigo explica como implantar o framework de agente NemoClaw/OpenClaw da NVIDIA no Nvidia Jetson Thor e integrar o braço robótico reBot Arm B601 para construir um sistema local de automação de IA que combina percepção visual, raciocínio com LLM e execução robótica. Ele fornece um guia de configuração completo que abrange conexões de hardware, instalação do NemoClaw e do Ollama, configuração do backend do braço robótico, gerenciamento de permissões, serviços de inicialização automática com systemd e solução de problemas.
+title: Controlar o reBot Arm com NemoClaw no Nvidia Jetson Thor
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
@@ -15,12 +16,12 @@ updatedAt: '2026-05-18'
 
 ## 1. Visão geral do projeto
 
-NVIDIA `NemoClaw` é uma pilha de referência open source que simplifica a execução de assistentes OpenClaw always-on com mais segurança. Este wiki explica como implantar o NemoClaw no Jetson Thor e conectar os recursos do `reBot Arm B601` ao fluxo de trabalho do agente NemoClaw, formando um ciclo fechado de: compreensão semântica + detecção visual + execução robótica.
+NVIDIA `NemoClaw` é uma pilha de referência open-source que simplifica a execução de assistentes OpenClaw always-on com mais segurança. Este wiki explica como implantar o NemoClaw no Jetson Thor e conectar os recursos do `reBot Arm B601` ao fluxo de trabalho do agente NemoClaw, formando um ciclo fechado de: compreensão semântica + detecção visual + execução robótica.
 
 - `NemoClaw`: Framework local de agente/controle para orquestração de tarefas e roteamento de comandos.
 - `Nemotron3`: Capacidade opcional de modelo para compreensão de intenção e tomada de decisão em alto nível.
 - `Nvidia Jetson Thor`: Plataforma de computação local para inferência, serviços de backend e drivers de dispositivos.
-- `reBot Arm B601`: braço robótico para apreensão e posicionamento.
+- `reBot Arm B601`: braço robótico para agarrar e posicionar objetos.
 
 <div align="center">
     <img width={900} 
@@ -39,8 +40,8 @@ NVIDIA `NemoClaw` é uma pilha de referência open source que simplifica a execu
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> Kit de Desenvolvimento NVIDIA® Jetson AGX Thor™ </th>
-        <th> SO-ARM101 Braço de IA de Baixo Custo </th>
+        <th> reBot Arm B601 </th>
+        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
     </tr>
     <tr>
         <td>
@@ -125,7 +126,7 @@ Instale o NemoClaw no Jetson:
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Em seguida, execute `nemoclaw onboard` para criar um novo app. Um exemplo de log interativo de onboarding é mostrado em:
+Em seguida, execute `nemoclaw onboard` para criar um novo app. Um exemplo de log de onboarding interativo é mostrado em:
 
 <details>
 <summary> nemoclaw onboard log </summary>
@@ -418,13 +419,13 @@ seeed@seeed:~$
 ```
 </details>
 
-Considerando que talvez precisemos acessar serviços implantados na máquina host de dentro do contêiner NeMoClaw no futuro, execute o seguinte comando para configurar o acesso de rede para este aplicativo.
+Considerando que talvez precisemos acessar serviços implantados na máquina host a partir do contêiner NeMoClaw no futuro, execute o seguinte comando para configurar o acesso de rede para este aplicativo.
 
 ```bash
 nemoclaw my-assistant policy-add --from-file ~/rebot_arm_service/host-camera.yaml --yes
 ```
 
-Se a integração for bem-sucedida, execute:
+Se o onboarding for bem-sucedido, execute:
 
 ```bash
 nemoclaw my-assistant connect
@@ -438,7 +439,7 @@ Você deve entrar em um ambiente funcional do aplicativo OpenClaw:
 </div>
 
 :::info
-Mais detalhes sobre o NemoClaw CLI:
+Mais detalhes do NemoClaw CLI:
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
@@ -498,12 +499,12 @@ Acesso:
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
-### 6.2 Iniciar ouvinte de teclado (opcional)
+### 6.2 Iniciar listener de teclado (Opcional)
 
-Para acionar rapidamente detecção/agarre (sem esperar por um longo raciocínio do agente), use o ouvinte de tecla de atalho F1.  
-Quando F1 é pressionada, ele solicita automaticamente o endpoint da missão de agarre.
+Para acionar rapidamente detecção/agarre (sem esperar por um longo raciocínio do agente), use o listener de tecla de atalho F1.  
+Quando F1 é pressionado, ele solicita automaticamente o endpoint da missão de agarre.
 
-Execute diretamente:
+Executar diretamente:
 
 ```bash
 cd ~/rebot_arm_service
@@ -517,7 +518,7 @@ cd ~/rebot_arm_service
 ./scripts/start_space_listener_evdev.sh
 ```
 
-### 6.3 Habilitar inicialização automática na partida (opcional)
+### 6.3 Habilitar inicialização automática na partida (Opcional)
 
 Configure dois serviços systemd:
 
@@ -601,7 +602,7 @@ sudo journalctl -u rebot-f1-listener.service -f
 ## 8. Solução de problemas
 
 1. Porta serial ocupada (`Device or resource busy`)  
-Interrompa processos antigos e reconecte. Certifique-se de que apenas um processo de controle esteja usando o braço.
+Interrompa processos obsoletos e reconecte. Certifique-se de que apenas um processo controlador esteja usando o braço.
 
 2. Cena vazia no WebUI  
 Verifique se as requisições de URDF e malha retornam `200`, especialmente `/assets/urdf/...`.
@@ -613,9 +614,9 @@ Verifique se `camera/status` está com `running=true`, depois verifique o endpoi
 Certifique-se de que `LD_LIBRARY_PATH` inclua os caminhos de `nvpl` e `cuda_v12`.
 
 5. A tecla de atalho F1 não tem efeito  
-Verifique os logs de `rebot-f1-listener.service` e confirme se ele está ouvindo o dispositivo de teclado correto.
+Verifique os logs de `rebot-f1-listener.service` e confirme se ele está escutando o dispositivo de teclado correto.
 
-6. Outras teclas do teclado param de funcionar após o início do ouvinte  
+6. Outras teclas do teclado param de funcionar após o início do listener  
 Certifique-se de que o script não use `dev.grab()` (a captura exclusiva do teclado deve ser removida).
 
 7. Falha na conexão do segundo braço  
@@ -629,7 +630,7 @@ Certifique-se de que a conexão anterior foi totalmente liberada; chame disconne
 - https://docs.openclaw.ai/
 - https://wiki.seeedstudio.com/pt-br/lerobot_so100m_new/
 
-## 10. Suporte técnico e discussão sobre o produto
+## 10. Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
