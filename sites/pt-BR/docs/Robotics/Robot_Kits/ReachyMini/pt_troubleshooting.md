@@ -1,5 +1,5 @@
 ---
-description: Guia abrangente de solução de problemas e FAQ para o Reachy Mini, cobrindo problemas frequentes, montagem, conexão, hardware, SDK e mensagens de erro.
+description: Guia abrangente de solução de problemas e FAQ do Reachy Mini cobrindo problemas frequentes, montagem, conexão, hardware, SDK e mensagens de erro.
 title: Solução de Problemas & FAQ
 slug: /reachymini_troubleshooting
 keywords:
@@ -14,300 +14,330 @@ keywords:
   - sdk
   - errors
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-03-16'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/pt-br/reachymini_troubleshooting/
 ---
 
 # Solução de Problemas & FAQ
 
-Bem-vindo à página de suporte do Reachy Mini. Encontre abaixo respostas para perguntas comuns e soluções.
+Bem-vindo à página de suporte do Reachy Mini. Clique nas perguntas abaixo para revelar as respostas.
 
 ## 🛠️ Solução de problemas - Questões frequentes
 
-:::warning Solução de problemas essencial
-**Leia isto primeiro** - resolve a maioria dos problemas mais conhecidos!
-:::
+**Solução de problemas essencial - Leia isto primeiro, resolve todos os problemas conhecidos!**
 
-### Antes de qualquer coisa e para qualquer problema: atualizar & reiniciar
 
-:::tip Primeiro passo: Atualizar & Reiniciar
+<details>
+<summary><strong>Antes de qualquer coisa e para qualquer problema: atualize & reinicie</strong></summary>
+
 **Certifique-se de que está usando o software atualizado e de que você reiniciou tanto o seu robô quanto o seu computador.**
-
-Para reiniciar o seu robô, pressione OFF, espere 5 segundos e então pressione ON. Esse procedimento simples corrige vários problemas comuns e bem conhecidos.
-:::
+Para reiniciar o seu robô, pressione OFF, espere 5 segundos e então pressione ON. Este procedimento simples corrige vários problemas comuns e bem conhecidos.
 
 **Como atualizar o software:**
 
-* **Se você estiver usando o painel em um navegador web**
-  Abra `Settings`, depois clique em **Check for updates**.
-  ![Update](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/update.png)
-* **Se você estiver usando o novo painel/app**
-  A partir da versão 0.8.5 do app,
-* **Se você estiver usando um repositório clonado**
-  Certifique-se de que você está:
-  * Na última versão marcada (tagged release), ou
-  * Em dia com o branch `develop` (`git pull`).
+- **Se você estiver usando o Reachy Mini Control**
+  Na aba de configurações "⚙️", clique em "Check for updates". Se uma atualização estiver disponível, clique em "Update now".
+- **Se você estiver usando um repositório clonado**
+  Certifique-se de estar:
+  - Na versão mais recente marcada (tagged release), ou
+  - Atualizado com a branch `main` (`git pull`).
 
-**Reachy Mini Wireless**: execute `reachyminios_check` para garantir que está tudo certo (veja [Get Started](/pt-br/reachymini_platforms_reachy_mini_get_started))
+**Reachy Mini Wireless**: execute `reachyminios_check` para garantir que tudo está correto (veja [Get Started](./platforms/reachy_mini/get_started.md))
 
-### Problemas relacionados aos motores
+</details>
+
+
+<details>
+<summary><strong>Falha no bootstrap ou atualização / Problemas com o ambiente Python (Lite & Simulation)</strong></summary>
+
+Se o Reachy Mini Control falhar durante o bootstrap inicial, travar ao criar o ambiente virtual ou se uma atualização deixar o ambiente Python em um estado quebrado, você pode redefinir os ambientes virtuais diretamente a partir do aplicativo desktop.
+
+Duas opções de redefinição estão disponíveis:
+
+- **Reset apps environment** — recria apenas o `apps_venv` (o ambiente usado pelos apps instalados). Os apps instalados precisarão ser reinstalados. Use esta opção primeiro se apenas os apps falharem ao iniciar ou instalar.
+- **Full Environment Reset** — apaga todos os arquivos Python e baixa tudo novamente (interpretador + ambos os venvs). Use esta opção se o próprio bootstrap falhar ou se "Reset apps environment" não ajudar. Isso pode levar alguns minutos.
+
+**Onde encontrar esses botões:**
+
+- **Antes de conectar** (tela Finding Robot): clique no ícone ⚙️ no canto superior direito. Um menu aparece em "Local environment (USB & Sim)" com "Reset apps environment" e a opção de redefinição completa.
+- **Depois de conectado** (modo USB / Simulation): abra o painel de Settings e vá para a seção "Environment", que contém os botões "Reset Apps Environment" e "Full Environment Reset".
+
+Após uma redefinição completa, o aplicativo desktop executará novamente o bootstrap no próximo lançamento.
+
+</details>
+
+
+<details>
+<summary><strong>Problemas relacionados aos motores</strong></summary>
 
 Isto diz respeito a problemas como:
-* Motores piscando em vermelho ou que não respondem/não se movem.
-* Motores exibindo erros como "Overload Error"
-* Motores ausentes: "No motor found on port", "Missing motor", etc.
+- Motores piscando em vermelho ou que não respondem/não se movem.
+- Motores exibindo erros como "Overload Error"
+- Motores ausentes: "No motor found on port", "Missing motor", etc.
 
-:::info Diagnóstico dos motores
-Se você tiver qualquer um dos seguintes sintomas, consulte o [guia de diagnóstico e solução de problemas dos motores](/pt-br/reachymini_troubleshooting_motors_diagnosis) para etapas detalhadas de diagnóstico e correção de problemas relacionados aos motores.
+Se você tiver qualquer um dos seguintes sintomas, consulte o [guia de diagnóstico e solução de problemas dos motores](./troubleshooting/motors_diagnosis.md) para etapas detalhadas de diagnóstico e correção de problemas relacionados aos motores.
 
 Usar o aplicativo Reachy Mini Testbench ajudará você a identificar e resolver esses problemas de forma eficaz.
-:::
 
-### Erro de Choque Elétrico
+</details>
 
-:::danger Erro de Choque Elétrico
-Um erro de choque elétrico nos motores Dynamixel significa que há um problema na fonte de alimentação ou um curto-circuito em algum lugar.
+<details>
+<summary><strong>Erro de choque elétrico </strong></summary>
 
+Um erro de choque elétrico em motores Dynamixel significa que há um problema com a fonte de alimentação ou um curto-circuito em algum lugar.
 Verifique se algum cabo está danificado, desde a PCB do pé até a cabeça. Especialmente os seguintes cabos:
-* Cabo de alimentação (preto & vermelho)
-* Cabos de 3 fios para motores (300mm, 200mm, 100mm e 40mm)
+- Cabo de alimentação (preto & vermelho)
+- Cabos de 3 fios para motores (300mm, 200mm, 100mm e 40mm)
 
-Também pode ser o mesmo problema descrito acima em "Motor piscando vermelho ou Overload Error".
-:::
+Também pode ser o mesmo problema descrito em "Motor piscando em vermelho ou Overload Error" acima.
 
-### Microfone não funciona
+</details>
 
-:::warning Problemas com o microfone
+<details>
+<summary><strong>Microfone não funciona</strong></summary>
+
 Se você tiver um dos seguintes sintomas:
-* Gravação de áudio não funciona / retorna silêncio
-* Gravação de áudio retornando zeros
+- Gravação de áudio não funciona / retorna silêncio
+- Gravação de áudio retornando zeros
 
-**Você pode ter conectado o cabo do microfone de cabeça para baixo.**
-* Se o seu cabo for branco e azul, verifique novamente as instruções de montagem para garantir que o lado azul esteja para cima.
-* Se o seu cabo for preto, verifique se o lado com a inscrição "Main Board" está para cima (veja a imagem abaixo).
+Você pode ter conectado o cabo do microfone de cabeça para baixo.
+- Se o seu cabo for branco e azul, verifique novamente as instruções de montagem para ter certeza de que o lado azul está para cima.
+- Se o seu cabo for preto, verifique se o lado com a inscrição "Main Board" está para cima (veja a imagem abaixo).
+![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/black_fpc_cable.png)
 
-![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/black_fpc_cable.png)
-:::
 
-Se o seu cabo estiver conectado corretamente e você ainda tiver problemas, é provável que o cabo FPC do microfone esteja danificado. Consulte o tutorial [How to change the FPC cable of the microphone of Reachy Mini?](/pt-br/reachymini_troubleshooting_change_mic_fpc_cable) para corrigir esse problema.
+Se o seu cabo estiver conectado corretamente e você ainda tiver problemas, é provável que o cabo FPC do microfone esteja danificado. Consulte o tutorial [Como trocar o cabo FPC do microfone do Reachy Mini?](./troubleshooting/change_mic_fpc_cable.md) para corrigir esse problema.
 
-### Volume de áudio baixo
+</details>
 
-:::tip
-* Atualize seu robô para a versão 1.2.3 ou posterior
 
-Para mais detalhes, veja a documentação: [Getting Started](/pt-br/reachymini_platforms_reachy_mini_get_started)
-:::
+<details>
 
-### Erros de permissão
+<summary><strong>Volume de áudio baixo</strong></summary>
 
-:::tip
-* Atualize seu robô para a versão 1.2.3 ou posterior
-* Reinicie o robô
-:::
+- Atualize o seu robô para a versão 1.2.3 ou posterior
 
-### Uma antena aparece girada em 90° ou 180°
+Para mais detalhes, consulte a documentação:
+[Getting Started](./platforms/reachy_mini/get_started.md)
 
-Isso é um problema de fabricação.
+</details>
+
+<details>
+<summary><strong>Erros de permissão</strong></summary>
+
+- Atualize o seu robô para a versão 1.2.3 ou posterior
+- Reinicie o robô
+
+</details>
+
+<details>
+<summary><strong>Uma antena aparece girada em 90° ou 180°</strong></summary>
+
+Isto é um problema de fabricação.
 
 É fácil de corrigir seguindo este guia:
-[Antenna repositioning guide](https://drive.google.com/file/d/1FsmNpwELuXUbdhGHDMjG_CNpYXOMtR7A/view?usp=drive_link)
+[Guia de reposicionamento da antena](https://drive.google.com/file/d/1FsmNpwELuXUbdhGHDMjG_CNpYXOMtR7A/view?usp=drive_link)
 
-### Um motor está trêmulo
+</details>
 
-Isso pode acontecer se os valores de PID do motor não forem ideais. Com frequência, os motores 10 (pé), 17 e 18 (as antenas) podem apresentar pequenas trepidações ao manter posição.
-São "ajustes" finos que o motor está fazendo, que neste caso acabam sendo uma correção excessiva.
-A boa notícia é que você pode [ajustar os valores de controle PID](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/config/hardware_config.yaml#L66C1-L67C1) para acalmar essas trepidações.
+<details>
+<summary><strong>Um motor está tremendo</strong></summary>
 
-:::tip
-Você pode primeiro tentar reduzir P para 180 nos motores 10, 17 e 18.
+**Antenas tremendo**
+
+Este é o caso mais comum. As antenas (motores 17 e 18) tendem a tremer quando ajustadas para a posição vertical (0°). Nesse ângulo, a folga da caixa de engrenagens coloca o motor em um equilíbrio instável — como um pêndulo invertido. O motor tenta constantemente corrigir sua posição em torno de um ponto onde o atrito é muito baixo, o que causa a oscilação.
+
+A correção mais simples é deslocar as antenas alguns graus (tipicamente 10° são suficientes). Isso permite que a gravidade aplique um pequeno viés que elimina a folga mecânica em uma direção, eliminando a trepidação.
+
+Este agora é o comportamento padrão no Reachy Mini — veja [PR #952](https://github.com/pollen-robotics/reachy_mini/pull/952) para detalhes.
+
+**Ajustando valores de PID**
+
+Outra opção é [ajustar os valores de controle PID](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/config/hardware_config.yaml#L66C1-L67C1). Os valores ideais podem variar entre unidades do robô, pois pequenas diferenças de atrito na fabricação são suficientes para alterar o comportamento.
+
+Você pode tentar primeiro reduzir P para 180 nos motores 10 (pé), 17 e 18 (antenas).
 Se isso não ajudar, você também pode tentar aumentar D para 10 nos mesmos motores.
-:::
 
-### A imagem está escura na versão Lite
+</details>
 
-:::info Correção rápida: ajustar o tempo de exposição nas configurações da câmera
-Para corrigir uma imagem escura, ative a exposição automática ou aumente manualmente o tempo de exposição usando um aplicativo de controle de câmera. Esses aplicativos fornecem uma interface intuitiva para ajustar a exposição e outros parâmetros da câmera.
-:::
+<details>
+<summary><strong>A cabeça faz ruídos de rangido ou atrito durante o movimento</strong></summary>
+
+Se você ouvir ruídos agudos de rangido ou atrito quando a cabeça do robô se move, é provável que as juntas esféricas (ball joints) das hastes da plataforma Stewart precisem de manutenção. Você também pode notar poeira escura ou resíduos ao redor das hastes de conexão.
+
+Este é um desgaste normal ao longo do tempo. Siga o [guia de manutenção das juntas esféricas](./troubleshooting/spherical_joints_maintenance.md) para limpar e lubrificar novamente as juntas.
+
+</details>
+
+<details>
+<summary><strong>A imagem está escura na versão Lite</strong></summary>
+
+**➡️ Correção rápida: Ajuste o tempo de exposição nas configurações da câmera**
+
+Para corrigir uma imagem escura, ative a autoexposição ou aumente manualmente o tempo de exposição usando um aplicativo de controle de câmera. Esses aplicativos fornecem uma interface intuitiva para ajustar a exposição e outros parâmetros da câmera.
 
 **Aplicativos recomendados:**
 
-* **macOS:** [CameraController](https://github.com/itaybre/CameraController) - Aplicativo GUI open-source para controle de câmeras USB
-* **Linux:** qv4l2 - Aplicativo GUI baseado em Qt para controle de câmeras V4L2
-  * Instalação: `sudo apt install qv4l2`
-* **Windows:** [Webcam Settings](https://www.softpedia.com/get/Internet/WebCam/Webcam-Settings-Tool.shtml) ou [ManyCam](https://manycam.com/) para controle avançado de câmera
+- **macOS:** [CameraController](https://github.com/itaybre/CameraController) - Aplicativo GUI de código aberto para controle de câmeras USB
+- **Linux:** qv4l2 - Aplicativo GUI baseado em Qt para controle de câmeras V4L2
+  - Instalação: `sudo apt install qv4l2`
+- **Windows:** [Webcam Settings](https://www.softpedia.com/get/Internet/WebCam/Webcam-Settings-Tool.shtml) ou [ManyCam](https://manycam.com/) para controle avançado da câmera
 
 Esses aplicativos permitem ajustar o tempo de exposição, brilho e outros parâmetros da câmera por meio de uma interface gráfica intuitiva.
 
 ---
 
-:::info Avançado: usando libuvc para controle detalhado da câmera
+**➡️ Avançado: Usando libuvc para controle aprofundado da câmera**
+
 Para usuários avançados que desejam controle preciso sobre os parâmetros da câmera, você pode usar utilitários de linha de comando baseados em libuvc. Essas ferramentas fornecem acesso em baixo nível a todos os controles de câmeras UVC.
 
-Para corrigir especificamente o problema de imagem escura, defina `auto-exposure-priority=1` usando essas ferramentas de linha de comando.
-:::
+Para corrigir especificamente o problema de escuridão, defina `auto-exposure-priority=1` usando essas ferramentas de linha de comando.
 
 **Ferramentas de linha de comando por plataforma:**
 
-* **macOS:** [uvc-util](https://github.com/jtfrey/uvc-util)
+- **macOS:** [uvc-util](https://github.com/jtfrey/uvc-util)
 
-* **Linux:** [v4l2-ctl](https://manpages.debian.org/testing/v4l-utils/v4l2-ctl.1.en.html)
-  * Instalação: `sudo apt install v4l-utils`
+- **Linux:** [v4l2-ctl](https://manpages.debian.org/testing/v4l-utils/v4l2-ctl.1.en.html)
+  - Instalação: `sudo apt install v4l-utils`
 
-* **Windows:** O Windows não tem um equivalente direto.
+- **Windows:** O Windows não possui um equivalente direto.
 
-:::note
-Essas ferramentas de linha de comando exigem conhecimento técnico e o acesso aos parâmetros da câmera pode variar dependendo da ferramenta selecionada. Use `--help` e liste os controles disponíveis antes de fazer qualquer alteração.
-:::
+**Observação:** Essas ferramentas de linha de comando exigem conhecimento técnico e o acesso aos parâmetros da câmera pode variar dependendo da ferramenta selecionada. Use `--help` e liste os controles disponíveis antes de fazer qualquer alteração.
 
-### Está faltando uma peça no meu kit
+</details>
 
-:::tip Verifique primeiro
-Certifique-se de desembrulhar tudo primeiro. Algumas peças vêm pré-montadas (por exemplo, a parte inferior da cabeça já vem colocada na parte traseira da cabeça).
+<details>
+<summary><strong>Uma peça está faltando no meu pacote</strong></summary>
 
-![head_parts](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/head_parts.jpg)
+Certifique-se de desempacotar tudo primeiro. Algumas peças vêm pré-montadas (por exemplo, a parte inferior da cabeça já está colocada na parte traseira da cabeça).
 
-Depois, verifique a lista de peças do guia de montagem para ver se você realmente está sem alguma peça.
-:::
+![head_parts](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/head_parts.jpg)
 
-Se você tiver 100% de certeza de que está faltando uma peça, entre em contato com sales@pollen-robotics.com com uma foto de todas as peças que você tem e o número do pedido ou número da nota fiscal.
-Você também pode encontrar [arquivos stl](https://github.com/pollen-robotics/reachy_mini/tree/develop/src/reachy_mini/descriptions/reachy_mini/mjcf/assets) para imprimir a peça você mesmo enquanto isso.
+Em seguida, verifique a lista de peças do guia de montagem para ver se você realmente está sem alguma peça:
+Se você tiver 100% de certeza de que está faltando uma peça, entre em contato com sales@pollen-robotics.com com uma foto de todas as peças que você tem e o número do pedido ou número da fatura.
+Você também pode encontrar [arquivos stl](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/descriptions/reachy_mini/mjcf/assets) para imprimi-la você mesmo enquanto isso.
+</details>
 
-### Não consigo conectar ao meu Reachy Mini Wireless usando um cabo USB-C
 
-:::info
-As unidades Wireless não expõem o robô via USB da mesma forma que a versão Lite, então conectar um cabo USB-C ao seu laptop não fornecerá uma conexão funcional.
+<details>
+<summary><strong>Não consigo conectar ao meu Reachy Mini Wireless usando um cabo USB-C</strong></summary>
 
-**Em vez disso:**
-* Conecte o robô à sua rede Wi‑Fi e use o cliente do SDK no seu laptop para controlá-lo remotamente.
-* Se você quiser executar código diretamente no Raspberry Pi embarcado, faça SSH nele e execute seus scripts lá (é isso que o Dashboard faz depois que você publica/instala um app).
-* Para um link com cabo, use um adaptador USB-C‑para‑Ethernet mais um cabo Ethernet — isso simplesmente substitui o Wi‑Fi por Ethernet cabeada.
-:::
+As unidades Wireless não expõem o robô via USB da mesma forma que a versão Lite, portanto conectar um cabo USB-C ao seu laptop não fornecerá uma conexão funcional.
+Em vez disso:
 
-### O ponto de acesso Wireless não aparece - RPI não inicia
+- Conecte o robô à sua rede Wi-Fi e use o cliente SDK no seu laptop para controlá-lo remotamente.
+- Se você quiser executar código diretamente no Raspberry Pi embarcado, acesse via SSH e execute seus scripts lá (é isso que o Reachy Mini Control faz depois que você publica/instala um app).
+- Para uma conexão com cabo, use um adaptador USB-C‑para‑Ethernet mais um cabo Ethernet — isso simplesmente substitui o Wi‑Fi por Ethernet com fio.
 
-Há uma chave na placa na cabeça que precisa estar em uma determinada posição. E, se não estiver, o AP não aparece. É possível que essa chave tenha sido movida durante a montagem ou talvez por erro de fábrica.
+</details>
 
-:::warning
-Verifique se a chave está na posição "**debug**" e não em "**download**". Veja a imagem abaixo:
+<details>
+<summary><strong>O ponto de acesso sem fio não aparece - o RPI não inicia</strong></summary>
+Há uma chave na placa na cabeça que precisa estar em uma determinada posição. E se não estiver, o AP não aparece. É possível que essa chave tenha sido movida durante a montagem ou até mesmo por um erro de fábrica.
+Verifique se a chave está na posição "debug" e não em "download". Veja a imagem abaixo:
 
-![switch_position](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/wireless_switch.png)
-:::
+![switch_position](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/wireless_switch.png)
 
-Se essa chave estiver na posição correta e você ainda não conseguir ver o AP, talvez seja necessário regravar a iso do Raspberry Pi, seguindo o tutorial [reflash the RPI Iso tutorial](/pt-br/reachymini_platforms_reachy_mini_reflash_the_rpi_iso).
+Se essa chave estiver na posição correta e você ainda não conseguir ver o AP, talvez seja necessário regravar a iso do Raspberry Pi, seguindo o [tutorial de regravação da Iso do RPI](/pt-br/reachymini_platforms_reachy_mini_reflash_the_rpi_iso).
+
+</details>
 
 ## 🚀 Primeiros Passos & Montagem
 
-### Quanto tempo a montagem geralmente leva?
+<details>
+<summary><strong>Quanto tempo a montagem geralmente leva?</strong></summary>
 
-:::tip
-A maioria dos testadores relata entre **1,5 e 2 horas**. Pode levar até 4 horas dependendo do seu nível de experiência.
-:::
+A maioria dos testadores relata entre **1,5 e 2 horas**. Pode levar até 4 horas, dependendo do seu nível de experiência.
 
-### Existem etapas difíceis durante a montagem?
+</details>
 
-Na verdade não, os testadores a descrevem como **divertida, simples e satisfatória**. Ferramentas básicas e paciência são suficientes. O roteamento dos cabos e o aperto correto das peças são os elementos mais delicados. Quando você compra um Reachy Mini Lite ou Wireless, ele vem com um guia do usuário impresso e você também tem acesso a um vídeo e ao guia digital.
+<details>
+<summary><strong>Há alguma etapa difícil durante a montagem?</strong></summary>
 
+Na verdade não, os testadores a descrevem como **divertida, simples e satisfatória**. Ferramentas básicas e paciência são suficientes. O **roteamento de cabos** e o **aperto correto das peças** são os elementos mais complicados. Quando você compra um Reachy Mini Lite ou Wireless, ele vem com um guia do usuário impresso, e você também tem acesso a um vídeo e ao guia digital.
 Vídeo para Reachy Mini [BETA](https://www.youtube.com/watch?v=_r0cHySFbeY), LITE, WIRELESS
 
 Guia Digital de Montagem para Reachy Mini [BETA](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide), LITE, WIRELESS
 
-### Terminei a montagem e sobraram 2 cabos e alguns parafusos. Isso é normal?
+</details>
 
-:::info
+<details>
+<summary><strong>Fiquei com 2 cabos e alguns parafusos após terminar a montagem. Isso é normal?</strong></summary>
+
 Sim, isso é completamente normal.
-
-Nós intencionalmente incluímos cabos e parafusos sobressalentes no kit para o caso de algumas peças serem danificadas ou perdidas durante a montagem.
+Nós incluímos intencionalmente cabos e parafusos sobressalentes no kit caso algumas peças sejam danificadas ou perdidas durante a montagem.
 
 Você não precisa instalá-los.
-:::
 
-### Meu Reachy Mini não se move na primeira inicialização. O que devo verificar?
+</details>
 
-:::warning Checklist
-* **Fonte de alimentação:** Certifique-se de que a fonte de alimentação de 7V-5A está conectada. A conexão USB não é suficiente para alimentar os motores.
-* **Cabos:** Verifique se todos os cabos estão totalmente inseridos. Cabos de alimentação soltos são uma causa comum de erros de "motor not responding".
-* **Seção de Solução de Problemas:** Veja a seção de Solução de Problemas Essencial no topo desta página.
-:::
+<details>
+<summary><strong>Meu Reachy Mini não se move na primeira inicialização. O que devo verificar?</strong></summary>
 
-### Preciso iniciar o daemon manualmente?
+* **Fonte de alimentação:** Certifique-se de que a fonte de alimentação de 7V-5A esteja conectada. A conexão USB não é suficiente para alimentar os motores.
+* **Cabos:** Verifique se todos os cabos estão totalmente inseridos. Cabos de alimentação soltos são uma causa comum de erros de "motor não respondendo".
+* **Seção de Solução de Problemas:** Veja a seção Essencial de Solução de Problemas no topo desta página.
 
-:::success NÃO
-* Com o Reachy Mini (Wireless), o daemon já está em execução no Raspberry Pi embarcado.
-* Com o Reachy Mini Lite, você pode usar [o app desktop](/pt-br/reachymini_platforms_reachy_mini_lite_get_started).
-* Se o app desktop não funcionar no seu sistema (por exemplo, ARM64, distribuições incomuns), você pode [instalar e usar o Python SDK](/pt-br/reachymini_sdk_installation) diretamente - é uma alternativa totalmente suportada!
-:::
+</details>
 
-## 🔌 Conexão & Dashboard
+<details>
+<summary><strong>Preciso iniciar o daemon manualmente?</strong></summary>
 
-### Como conecto o robô ao Wi‑Fi?
+**NÃO**
 
-Veja o [guia Reachy Mini Wireless](/pt-br/reachymini_platforms_reachy_mini_get_started) para instruções detalhadas sobre como conectar ao Wi‑Fi.
+- Com o Reachy Mini (Wireless), o daemon já está em execução no Raspberry Pi embarcado.
+- Com o Reachy Mini Lite, você pode usar [o aplicativo desktop](./platforms/reachy_mini_lite/get_started.md).
+- Se o aplicativo desktop não funcionar no seu sistema (por exemplo, ARM64, distribuições incomuns), você pode [instalar e usar diretamente o SDK em Python](./SDK/installation.md) — é uma alternativa totalmente suportada!
 
-### Como faço para redefinir o hotspot Wi‑Fi?
+</details>
 
-Se você precisar redefinir o hotspot Wi‑Fi do robô (por exemplo, se não conseguir conectar ou quiser mudar de rede), siga as instruções no [Guia de Redefinição de Wi‑Fi](/pt-br/reachymini_platforms_reachy_mini_reset).
 
-### O dashboard em http://localhost:8000 não funciona.
 
-:::info Etapas de solução de problemas
-**1. Verifique as permissões do navegador**: Certifique‑se de que seu navegador pode acessar redes locais. No _macOS_, essas permissões ficam em Configurações do Sistema → Privacidade e Segurança → Rede Local.
+## 🔌 Conexão & Controle do Reachy Mini
 
-**2. Para Reachy Mini Wireless**: Certifique‑se de que tanto o seu computador quanto o robô estejam conectados à **mesma rede** e, em seguida, verifique a conectividade executando o seguinte comando no seu terminal:
-:::
+<details>
+<summary><strong>Como conecto o robô ao Wi‑Fi?</strong></summary>
 
-```bash
-ping reachy-mini
-```
+Veja o [guia Reachy Mini Wireless](./platforms/reachy_mini/get_started.md) para instruções detalhadas sobre como se conectar ao Wi‑Fi.
 
-:::info Para Reachy Mini Lite
-Faça estas verificações:
-* _Ambiente Virtual:_ Certifique‑se de que você está executando dentro do seu ambiente virtual (`.venv`, `reachy_mini_env`,...).
-* _Atualização do SDK:_ Certifique‑se de ter a versão mais recente.
+</details>
 
-Com `pip`, execute:
-```bash
-pip install -U reachy-mini
-```
+<details>
+<summary><strong>Como redefino o hotspot Wi‑Fi?</strong></summary>
 
-Com `uv`, execute:
-```bash
-uv pip install -U reachy-mini
-```
+Se você precisar redefinir o hotspot Wi‑Fi do robô (por exemplo, se não conseguir se conectar ou quiser mudar a rede), siga as instruções no [Guia de Redefinição de Wi‑Fi](./platforms/reachy_mini/reset.md).
 
-* _Daemon:_ Certifique‑se de que o daemon `reachy-mini-daemon` esteja em execução em um terminal.
-:::
+</details>
 
-### O robô tem uma Web API?
+<details>
+<summary><strong>O robô tem uma Web API?</strong></summary>
 
-:::info Sim!
-O daemon fornece uma REST API (FastAPI) e suporte a WebSocket.
-* **Documentação:** `http://localhost:8000/docs` (disponível quando o daemon está em execução).
+Sim. O daemon fornece uma REST API (FastAPI) e suporte a WebSocket.
+* **Docs:** `http://localhost:8000/docs` (disponível quando o daemon está em execução).
 * **Recursos:** Obter estado, mover juntas, controlar o daemon.
-:::
 
-Você pode usar a API para controlar o robô, obter seu estado e até mesmo controlar o próprio daemon. A API é implementada usando modelos [FastAPI](https://fastapi.tiangolo.com/) e [pydantic](https://docs.pydantic.dev/latest/).
+Você pode usar a API para controlar o robô, obter seu estado e até controlar o próprio daemon. A API é implementada usando modelos [FastAPI](https://fastapi.tiangolo.com/) e [pydantic](https://docs.pydantic.dev/latest/).
 
 Ela deve fornecer todos os endpoints necessários para interagir com o robô, incluindo:
 
-* Obter o estado do robô (posições das juntas, status dos motores, etc.)
-* Mover as juntas do robô ou definir poses específicas
+- Obter o estado do robô (posições das juntas, status dos motores, etc.)
+- Mover as juntas do robô ou definir poses específicas
 
 A API é documentada usando OpenAPI, e você pode acessar todas as rotas disponíveis e testá‑las em http://localhost:8000/docs quando o daemon estiver em execução. Você também pode acessar o esquema OpenAPI bruto em http://localhost:8000/openapi.json.
 
-Isso pode ser útil se você quiser gerar código cliente para sua linguagem ou framework de programação preferido, conectá‑la ao seu aplicativo de IA, ou até mesmo criar seu servidor MCP.
+Isso pode ser útil se você quiser gerar código cliente para sua linguagem de programação ou framework preferido, conectá‑lo ao seu aplicativo de IA ou até mesmo criar seu servidor MCP.
 
 **Suporte a WebSocket**
 
-A API também oferece suporte a conexões WebSocket para atualizações em tempo real. Por exemplo, você pode assinar atualizações de estado das juntas:
+A API também oferece suporte a conexões WebSocket para atualizações em tempo real. Por exemplo, você pode assinar atualizações do estado das juntas:
 
-```javascript
+```
 let ws = new WebSocket(`ws://127.0.0.1:8000/api/state/ws/full`);
 
 ws.onmessage = (event) => {
@@ -316,64 +346,152 @@ ws.onmessage = (event) => {
 };
 ```
 
-### Por que eu preciso de um ambiente virtual (.venv)?
+</details>
 
-:::tip
+<details>
+<summary><strong>Por que eu preciso de um ambiente virtual (.venv)?</strong></summary>
+
 Ajuda a evitar conflitos de pacotes durante a instalação do SDK.
-:::
+
+</details>
+
+<details>
+<summary><strong>reachy-mini.local não é resolvido</strong></summary>
+
+Uma unidade sem fio se anuncia como `reachy-mini.local` via mDNS. Isso funciona na maioria das redes domésticas e de escritório, mas pode falhar em algumas redes corporativas, de conferências ou de hotéis.
+
+Se `reachy-mini.local` não for resolvido:
+- Verifique a lista de clientes DHCP do seu roteador para encontrar o endereço IP do robô.
+- Use o aplicativo Reachy Mini Control — ele pode descobrir o robô na rede local.
+- Em último caso, faça uma varredura na sub‑rede:
+```bash
+for i in $(seq 1 254); do
+  curl -sf --connect-timeout 0.3 "http://192.168.1.${i}:8000/api/daemon/status" > /dev/null 2>&1 && echo "Found: 192.168.1.${i}"
+done
+```
+Ajuste o prefixo `192.168.1.` para corresponder à sua rede.
+
+</details>
+
+<details>
+<summary><strong>O robô e o computador não conseguem se comunicar no Wi‑Fi de conferência/hotel</strong></summary>
+
+Muitas redes Wi‑Fi de conferências e hotéis ativam a **isolação de clientes**, o que impede que dispositivos na mesma rede se comuniquem entre si. Sintomas: ambos os dispositivos estão conectados ao Wi‑Fi, ambos têm endereços IP na mesma sub‑rede, mas não conseguem alcançar os endpoints HTTP um do outro.
+
+**Solução alternativa:** Use o hotspot de um telefone celular. Conecte tanto o robô quanto o seu computador ao hotspot. Isso fornece uma rede simples em que os dispositivos podem se ver.
+
+Como alternativa, use um adaptador USB‑C‑para‑Ethernet e um cabo Ethernet para se conectar diretamente ao robô (versão Wireless).
+
+</details>
+
+<details>
+<summary><strong>Como acessar os serviços da HuggingFace a partir da China?</strong></summary>
+
+Você pode usar este espelho: https://hf-mirror.com/
+
+Você precisará definir a seguinte variável de ambiente:
+```bash
+export HF_ENDPOINT=https://hf-mirror.com/
+```
+
+Observe que talvez você também precise usar espelhos para acessar serviços como PyPI e GitHub.
+
+</details>
+
+<details>
+<summary><strong>Como fazer o aplicativo de conversa funcionar na China?</strong></summary>
+
+O aplicativo de conversa do Reachy Mini depende da API OpenAI gpt-realtime, que pode estar inacessível a partir da China.
+
+A melhor solução alternativa no momento é configurar uma VPN na sua máquina (versão Lite), no robô (versão Wireless) ou diretamente no seu roteador.
+
+Ao configurar as regras de roteamento da VPN:
+
+1) Direcione o tráfego pela VPN, exceto o tráfego da rede local, para que o dispositivo permaneça acessível a partir da sua rede local.
+
+Você deve colocar na lista de permissões:
+- Sua faixa de IP da LAN local (por exemplo, 192.168.0.0/16, 192.168.1.0/24, etc., dependendo da configuração da sua rede).
+- As seguintes portas:
+  - 22 (SSH)
+  - 8000 (daemon do Reachy Mini)
+  - 5353 TCP/UDP (mDNS / descoberta local)
+
+Isso garante que o robô permaneça acessível e detectável localmente, e o mDNS (`reachy-mini.local`) deve continuar funcionando na rede.
+
+2) Se a sua VPN suportar roteamento seletivo, uma abordagem melhor é rotear apenas os serviços externos necessários pela VPN, em vez de tunelar todo o tráfego HTTPS.
+
+Se possível, configure a VPN para ser usada apenas para `huggingface.co` e `api.openai.com`.
+
+Isso minimiza os efeitos colaterais na rede e mantém os serviços locais funcionando normalmente.
+
+Para a versão Wireless, depois que a VPN estiver configurada no robô, reinicie o daemon para que as alterações entrem em vigor:
+```
+sudo systemctl restart reachy-mini-daemon
+```
+Para verificar se o robô está acessível a partir de um dispositivo na mesma rede, você pode executar:
+```
+ping reachy-mini.local
+```
+
+_Abordagens baseadas em modelos de pesos abertos estão em desenvolvimento, fique ligado!_
+
+</details>
+
 
 ## 🤖 Hardware, Motores & Limites
 
-### Onde posso encontrar mais informações sobre hardware?
+<details>
+<summary><strong>Onde posso encontrar mais informações sobre o hardware?</strong></summary>
 
-Consulte a [página de Hardware do Reachy Mini](/pt-br/reachymini_platforms_reachy_mini_hardware) para informações detalhadas sobre os componentes de hardware do robô.
+Consulte a [página de Hardware do Reachy Mini](./platforms/reachy_mini/hardware.md) para informações detalhadas sobre os componentes de hardware do robô.
 
-### Quais são os limites de segurança (Cabeça & Corpo)?
+</details>
 
-:::warning Limites de Segurança
+<details>
+<summary><strong>Quais são os limites de segurança (Cabeça & Corpo)?</strong></summary>
+
 Se você comandar uma pose fora desses limites, o robô irá automaticamente limitar para a pose segura mais próxima.
-:::
 
-* **Yaw do Corpo:** [-180°, 180°].
-* **Pitch/Roll da Cabeça:** [-40°, 40°].
-* **Yaw da Cabeça:** [-180°, 180°].
+* **Giro do Corpo (Body Yaw):** [-180°, 180°].
+* **Inclinação/Rolagem da Cabeça (Head Pitch/Roll):** [-40°, 40°].
+* **Giro da Cabeça (Head Yaw):** [-180°, 180°].
 * **Limite Combinado:** A diferença entre `body_yaw` e `head_yaw` deve estar dentro de **[-65°, 65°]**.
 
-### Por que os motores estão “moles” ou “rígidos”? (Conformidade)
+</details>
 
-* **`enable_motors()`**: Motores **LIGADOS** (Rígidos). O robô mantém a posição.
-* **`disable_motors()`**: Motores **DESLIGADOS** (Moles). Você pode movê‑lo com a mão.
-* **`make_motors_compliant()`**: Motores **LIGADOS mas Macios**. Útil para ensino por demonstração.
+<details>
+<summary><strong>Por que os motores estão "moles" ou "rígidos"? (Compliancy)</strong></summary>
 
-### Como acesso os parâmetros dos motores?
+* **`enable_motors()`**: Motores **LIGADOS** (rígidos). O robô mantém a posição.
+* **`disable_motors()`**: Motores **DESLIGADOS** (moles). Você pode movê‑lo com a mão.
+* **`make_motors_compliant()`**: Motores **LIGADOS porém suaves**. Útil para ensino por demonstração.
 
-1. Você pode consultar fazendo o scan dos motores usando o [script scan_motors.py](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/tools/scan_motors.py).
+</details>
 
-:::tip Se o seu robô for Lite
-Você pode executar o script diretamente no seu computador:
+<details>
+<summary><strong>Como acesso os parâmetros dos motores?</strong></summary>
+
+1. Você pode consultar fazendo a varredura dos motores usando o [script scan_motors.py](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/tools/scan_motors.py).
+
+- Se o seu robô for Lite, você pode executar o script diretamente no seu computador:
 ```bash
 python -m reachy_mini.tools.scan_motors
 ```
-:::
-
-:::tip Se o seu robô for Wireless
-Acesse o robô via SSH:
+- Se o seu robô for Wireless, faça ssh no robô:
 ```bash
 ssh pollen@reachy-mini.local
 ```
-Ative o venv:
+- Ative o venv:
 ```bash
 source /venvs/mini_daemon/bin/activate
 ```
-E execute o script (os motores devem estar ligados para isso!):
+- E execute o script (os motores devem estar ligados para isso!):
 ```bash
 python -m reachy_mini.tools.scan_motors --wireless
 ```
-:::
+- Ele deve imprimir a lista de motores detectados. Você deve ter todos os motores na taxa de transmissão 1000000, com os seguintes IDs: 10,11, 12, 13, 14, 15,17, 18. Se alguns estiverem faltando, verifique os cabos novamente. Se houver um motor com um ID ou taxa de transmissão diferente, entre em contato com o suporte.
 
-Ele deve imprimir a lista de motores detectados. Você deve ter todos os motores na baudrate 1000000, com os seguintes IDs: 10,11, 12, 13, 14, 15,17, 18. Se algum estiver faltando, verifique os cabos novamente. Se houver um motor com um ID ou baudrate diferente, entre em contato com o suporte.
-
-Exemplo de saída correta:
+Exemplo da saída correta:
 ```
 Trying baudrate: 9600
 No motors found at baudrate 9600
@@ -384,75 +502,84 @@ No motors found at baudrate 115200
 Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
+2. Lite: Você também pode usar o Dynamixel Wizard para ler os parâmetros dos motores. Siga o guia [aqui](./platforms/reachy_mini_lite/wizard.md).
 
-2. Lite: Você também pode usar o Dynamixel Wizard para ler os parâmetros dos motores. Siga o guia [aqui](/pt-br/reachymini_platforms_reachy_mini_lite_wizard).
+</details>
 
-### Os motores param de responder depois de um tempo.
+<details>
+<summary><strong>Os motores param de responder depois de um tempo.</strong></summary>
 
 * Verifique a conexão da fonte de alimentação.
 * Os motores podem ter entrado em modo de proteção térmica (superaquecimento). Desligue e ligue novamente.
 * Atualizar o SDK (`pip install -U reachy-mini`) resolveu isso para alguns usuários.
-* Se o LED do motor piscar em vermelho, veja a seção “Motor piscando em vermelho ou Erro de Sobrecarga” na parte de Solução de Problemas Essenciais acima.
+* Se o led do motor piscar em vermelho, consulte a seção "Motor piscando em vermelho ou erro de sobrecarga" na parte de Solução de Problemas Essenciais acima.
 
-### A bateria possui recursos de segurança?
+</details>
 
-:::info
+<details>
+<summary><strong>A bateria possui recursos de segurança?</strong></summary>
 O modelo Wireless inclui um carregador de bateria adequado.
-A bateria integra um BMS com um sensor de temperatura também.
-:::
+A bateria integra também um BMS com um sensor de temperatura.
 
-### Como vejo a carga restante da bateria?
+</details>
 
-:::warning
+<details>
+<summary><strong>Como vejo a carga restante da bateria?</strong></summary>
 Não temos a possibilidade de verificar o status da bateria, isso é uma limitação conhecida do projeto.
 
-Só temos a indicação por LED de “bateria fraca” quando é hora de carregá‑la. (verde -> laranja -> vermelho)
-:::
+Nós só temos a indicação por led para "bateria fraca" quando é hora de carregá-la. (verde -> laranja -> vermelho)
 
-### Como remover a bateria
+</details>
 
-:::tip
-* Verifique primeiro se o LED verde não está aceso.
-* Remova os 3 parafusos na parte inferior e puxe o pé um pouco para fora.
-![remove_foot](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/remove_foot.png)
-* Desconecte o conector indicado (seta vermelha) para poder remover a bateria. Deve haver uma fita dupla face que mantém a bateria no lugar, então pode ser um pouco difícil removê‑la.
-![battery_location](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/battery_connector.png)
-* Quando você for remontar, faça essas etapas novamente em ordem inversa. Apenas tome cuidado para não prender nenhum cabo.
-:::
+<details>
+<summary><strong>Como remover a bateria</strong></summary>
 
-### A cabeça pode tocar o corpo durante alguns movimentos oficiais
+- Primeiro, verifique se o led verde não está aceso.
+- Remova os 3 parafusos na parte de baixo e puxe um pouco o pé para fora.
+![remove_foot](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/remove_foot.png)
+- Desconecte o conector indicado (seta vermelha) para poder remover a bateria. Deve haver uma fita dupla face que mantém a bateria no lugar, então pode ser um pouco difícil de remover.
+![battery_location](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/battery_connector.png)
+- Quando você for remontá-la, faça essas etapas novamente na ordem inversa. Apenas tome cuidado para não prender nenhum cabo.
 
-:::info
+</details>
+
+<details>
+<summary><strong>A cabeça pode tocar o corpo durante alguns movimentos oficiais</strong></summary>
+
 Esse comportamento é esperado e não é um bug de hardware ou software.
+No entanto, como pode ser confuso, vamos atualizar esses movimentos para evitar esse contato.
 
-No entanto, como pode ser confuso, iremos atualizar esses movimentos para evitar esse contato.
-:::
+</details>
 
-### Posso modificar a aparência (Skins/CAD)?
+<details>
+<summary><strong>Posso modificar a aparência (Skins/CAD)?</strong></summary>
 
-:::info
-* **CAD:** Os arquivos STEP completos ainda não foram lançados, mas planejamos disponibilizá‑los no futuro. Enquanto isso, você pode encontrar alguns arquivos STL na [pasta assets](https://github.com/pollen-robotics/reachy_mini/tree/develop/src/reachy_mini/descriptions/reachy_mini/mjcf/assets) do repositório.
-* **Skins:** Sim, a comunidade criou versões personalizadas. Alguns arquivos STEP de “skins” foram compartilhados no Discord, no canal ["Pimp my Reachy Mini"](https://discord.com/channels/519098054377340948/1453340883775651861).
-:::
+* **CAD:** Os arquivos STEP completos ainda não foram lançados, mas planejamos lançá-los no futuro. Enquanto isso, você pode encontrar alguns arquivos STL na [pasta assets](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/descriptions/reachy_mini/mjcf/assets) do repositório.
+* **Skins:** Sim, a comunidade criou versões personalizadas. Alguns arquivos STEP de "skin" foram compartilhados no Discord, no canal ["Pimp my Reachy Mini"](https://discord.com/channels/519098054377340948/1453340883775651861).
 
-### Meu cabo flat do microfone está quebrado
+</details>
 
-:::info Especificações
+<details>
+<summary><strong>O cabo flat do meu microfone quebrou</strong></summary>
+
 As especificações do cabo do microfone são as seguintes:
-* Cabo flat flexível FFC/FPC
-* 12 pinos
-* Espaçamento de 0,5mm
-* Tipo A (conectores no mesmo lado)
-* 15mm de comprimento
-:::
+- Cabo flat flexível FFC/FPC
+- 12 pinos
+- Espaçamento de 0,5mm
+- Tipo A (conectores do mesmo lado)
+- Comprimento de 15mm
 
-Aqui estão algumas referências se você estiver procurando um cabo de substituição para o seu microfone:
-* [Amazon](https://www.amazon.fr/dp/B09TR4X1BP?ref=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z&ref_=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z&social_share=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z)
-* [Farnell](https://fr.farnell.com/molex/15020-0127/cordon-ffc-12-cond-152mm-blanc/dp/3862090)
+Aqui estão algumas referências se você estiver procurando um substituto para o cabo do microfone:
+- [Amazon](https://www.amazon.fr/dp/B09TR4X1BP?ref=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z&ref_=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z&social_share=cm_sw_r_cso_cp_apan_dp_1NV8C5T7V97Z78X6J80Z)
+- [Farnell](https://fr.farnell.com/molex/15020-0127/cordon-ffc-12-cond-152mm-blanc/dp/3862090)
 
-## 🐍 SDK, Apps & Programação
+</details>
 
-### Como me conecto a partir do Python?
+
+## 🐍 SDK, Apps e Programação
+
+<details>
+<summary><strong>Como me conecto a partir do Python?</strong></summary>
 
 Use a classe `ReachyMini`.
 
@@ -464,52 +591,79 @@ with ReachyMini() as mini:
     print(mini.state)
 ```
 
-### Como crio um novo App?
+</details>
 
-1.  Use o gerador: `reachy-mini-make-app my_app_name`.
-2.  Edite o `main.py` na pasta gerada.
-3.  Execute: `python my_app_name/main.py`.
+<details>
+<summary><strong>Como crio um novo App?</strong></summary>
 
-Confira o [Tutorial da Hugging Face](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps) para detalhes.
+Use o assistente de apps na CLI:
 
-### A instalação de todos os apps falha no Windows!
+```bash
+reachy-mini-app-assistant create my_app_name /path/to/destination --publish
+```
 
-:::tip
-Claro! Você pode instalar apps diretamente pelo seu Dashboard se forem nativos, ou adicioná‑los aos favoritos se forem baseados na Web.
-:::
+Veja o guia completo: [Criando e Publicando Apps](./SDK/apps.md) — abrange estrutura do app, testes, publicação, depuração e implantação.
 
-### Todas as instalações de apps falham no Windows !
+</details>
 
-:::warning
+<details>
+<summary><strong>Meu app trava silenciosamente ou não inicia</strong></summary>
+
+Se o seu app depender de um pacote não instalado no ambiente, ele irá falhar ao importar sem erro visível. Teste as importações manualmente:
+
+```bash
+# On Wireless
+ssh pollen@reachy-mini.local "/venvs/apps_venv/bin/python3 -c 'from my_app.main import MyApp'"
+
+# On Lite / local
+python -c "from my_app.main import MyApp"
+```
+
+Para mais dicas de depuração (visualização de logs, armadilhas comuns), veja [Depurando Apps](./SDK/apps.md#depurando-apps).
+
+</details>
+
+<details>
+<summary><strong>Instalar apps diretamente pelo Reachy Mini Control é suportado?</strong></summary>
+
+Sim! Você pode instalar apps diretamente pelo Reachy Mini Control se forem nativos, ou adicioná-los aos seus favoritos se forem baseados na web.
+
+</details>
+
+<details>
+<summary><strong>Todas as instalações de apps falham no Windows!</strong></summary>
+
 Isso pode estar relacionado a permissões insuficientes para criar symlinks no Windows. Você pode definir a variável de ambiente `HF_HUB_DISABLE_SYMLINKS_WARNING` para 1 para remover os avisos que causam a falha.
 
 Em um terminal, execute:
 ```powershell
 set HF_HUB_DISABLE_SYMLINKS_WARNING=1
 ```
-:::
 
-### A instalação de apps pela Hugging Face falha.
+</details>
 
-:::tip
-Atualize seu SDK. Versões iniciais tinham um bug com a instalação de Spaces.
+<details>
+<summary><strong>A instalação de apps a partir do Hugging Face falha.</strong></summary>
+
+Atualize seu SDK. As primeiras versões tinham um bug com a instalação de Spaces.
 
 ```bash
 pip install -U reachy-mini
 ```
-:::
 
-### Existe um modo de Simulação?
+</details>
 
-:::info
+<details>
+<summary><strong>Existe um modo de Simulação?</strong></summary>
+
 Sim, via MuJoCo. Ainda está em desenvolvimento, mas você pode executar código com a flag `--sim` ou `ReachyMini(media_backend="no_media")` se estiver apenas testando lógica sem física.
-:::
 
-### Como depuro um app no modelo Wireless?
+</details>
 
-:::info
-Acesse o computador embarcado via SSH, clone (ou copie) seu app e execute‑o manualmente. Isso reproduz o que o dashboard faz ao iniciar seu app.
-:::
+<details>
+<summary><strong>Como depuro um app no modelo Wireless?</strong></summary>
+
+Faça SSH no computador embarcado, clone (ou copie) seu app e execute-o manualmente. Isso reproduz o que o Reachy Mini Control faz ao iniciar seu app.
 
 ```bash
 ssh pollen@reachy-mini.local
@@ -518,13 +672,18 @@ cd your_app_name
 python your_app_name/main.py
 ```
 
-Sua interface gráfica (GUI) será aberta no endereço de sempre (por exemplo, `http://reachy-mini.local:8042`).
+Sua interface gráfica abrirá no endereço de sempre (por exemplo, `http://reachy-mini.local:8042`).
+
+</details>
+
+
 
 ## 🕹️ Movendo o Robô
 
-### Como movo a cabeça?
+<details>
+<summary><strong>Como movo a cabeça?</strong></summary>
 
-Use `goto_target` with `create_head_pose`:
+Use `goto_target` com `create_head_pose`:
 
 ```python
 from reachy_mini.utils import create_head_pose
@@ -533,18 +692,21 @@ from reachy_mini.utils import create_head_pose
 mini.goto_target(head=create_head_pose(yaw=-10, pitch=20))
 ```
 
-### Qual é a diferença entre `goto_target` e `set_target`?
+</details>
 
-:::info
+<details>
+<summary><strong>Qual é a diferença entre `goto_target` e `set_target`?</strong></summary>
+
 * **`goto_target`**: **Suave**. Interpola o movimento ao longo do tempo (padrão 0,5s). Melhor para gestos.
 * **`set_target`**: **Instantâneo**. Define o alvo imediatamente. Melhor para controle de alta frequência (teleoperação, trajetórias matemáticas).
-:::
 
-### Como faço para gravar e reproduzir movimentos?
+</details>
 
-:::tip Recording
-Chame `start_recording()` e `stop_recording()` ao redor do seu loop de controle.
-:::
+<details>
+<summary><strong>Como gravo e reproduzo movimentos?</strong></summary>
+
+**Gravação:**
+Chame `start_recording()` e `stop_recording()` em torno do seu loop de controle.
 
 ```python
 mini.start_recording()
@@ -552,26 +714,25 @@ mini.start_recording()
 move = mini.stop_recording()
 ```
 
-:::tip Replaying
-Use a classe `RecordedMoves` para carregar movimentos a partir da [biblioteca do Hugging Face](https://github.com/pollen-robotics/reachy_mini_dances_library).
-:::
+**Reprodução:**
+Use a classe `RecordedMoves` para carregar movimentos da [biblioteca no Hugging Face](https://github.com/pollen-robotics/reachy_mini_dances_library).
 
 ```python
 mini.play_move(recorded_moves.get("dance_1"))
 ```
 
-### Os movimentos do meu robô parecem trêmulos. O loop de controle está rodando corretamente?
+</details>
 
-:::info
-Você pode verificar se o loop de controle dos motores está rodando corretamente checando o status do daemon:
-:::
+<details>
+<summary><strong>Os movimentos do meu robô parecem trêmulos. O loop de controle está rodando corretamente?</strong></summary>
 
-* via SDK
+Você pode verificar se o loop de controle do motor está rodando corretamente checando o status do daemon:
+- via o SDK
 ```python
 mini = ReachyMini()
 print(mini.client.get_status())
 ```
-* via a dashboard API em `http://localhost:8000/docs` na versão lite e `http://reachy-mini.local:8000/docs` para a versão sem fio (procure pelo endpoint `/api/daemon/status`)
+- via a REST API em `http://localhost:8000/docs` em um Lite e `http://reachy-mini.local:8000/docs` para o Wireless (procure pelo endpoint `/api/daemon/status`)
 
 Você deve ver valores em torno de 50Hz (~20ms de período):
 ```python
@@ -582,21 +743,24 @@ Você deve ver valores em torno de 50Hz (~20ms de período):
 }
 ```
 
-:::warning
 Se o período for muito maior que 20ms, significa que o loop de controle não está rodando rápido o suficiente. Isso pode ser devido a:
-* Carga pesada de CPU no computador (por exemplo, outros apps usando muita CPU).
-* (apenas para lite) alta latência USB (tente configurar sua porta serial).
-:::
+- Carga pesada de CPU no computador (por exemplo, outros apps usando muita CPU).
+- (apenas para Lite) alta latência USB (tente configurar sua porta serial).
 
-## 👁️ Visão & Áudio
+</details>
 
-### O volume está muito baixo (Linux)
 
-1.  Rode `alsamixer`.
-2.  Defina **PCM1** em 100%.
+
+## 👁️ Visão e Áudio
+
+<details>
+<summary><strong>O volume está muito baixo (Linux)</strong></summary>
+
+1.  Execute `alsamixer`.
+2.  Defina **PCM1** para 100%.
 3.  Use **PCM,0** para ajustar o volume global.
 
-Para torná‑lo permanente:
+Para torná-lo permanente:
 ```bash
 CARD=$(aplay -l | grep -i "reSpeaker" | head -n1 | sed -n 's/^card \([0-9]*\):.*/\1/p')
 amixer -c "$CARD" set PCM,1 100%
@@ -605,17 +769,23 @@ sudo alsactl store "$CARD"
 
 Este é um [problema conhecido](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/02_setting_up_the_hardware.html#low-volume-of-playback-audio-on-linux-for-project-ua) da placa de som baseada em XVF3800.
 
-### Como obtenho frames da câmera?
+</details>
+
+<details>
+<summary><strong>Como obtenho frames da câmera?</strong></summary>
 
 Use o objeto `media`.
 
 ```python
 with ReachyMini() as mini:
     frame = mini.media.get_frame()
-    # Returns an OpenCV-compatible numpy array
+    # Returns a numpy array (BGR format, compatible with OpenCV)
 ```
 
-### Como uso o Microfone / Alto-falante?
+</details>
+
+<details>
+<summary><strong>Como usar o Microfone / Alto-falante?</strong></summary>
 
 ```python
 # Get audio
@@ -625,109 +795,149 @@ sample = mini.media.get_audio_sample()
 mini.media.push_audio_sample(numpy_chunk)
 ```
 
-### Como faço o Reachy olhar para alguma coisa?
+</details>
+
+<details>
+<summary><strong>Como faço o Reachy olhar para algo?</strong></summary>
 
 * **2D (Imagem):** `mini.look_at_image(x, y)` - (0,0 é o canto superior esquerdo).
 * **3D (Mundo):** `mini.look_at_world(x, y, z)` - Coordenadas no referencial do robô.
 
-### O rastreamento de rosto parece lento.
+</details>
 
-:::tip
-O desempenho depende muito das condições de iluminação. Garanta que o rosto esteja bem iluminado. Usar o backend GStreamer também pode melhorar a latência em comparação com o backend padrão do OpenCV.
-:::
+<details>
+<summary><strong>O rastreamento de rosto parece lento.</strong></summary>
 
-### Como verifico se o sistema de som está funcionando?
+O desempenho depende muito das condições de iluminação. Certifique-se de que o rosto esteja bem iluminado. O backend LOCAL (GStreamer IPC) oferece a menor latência para aplicações embarcadas.
 
-#### Reachy Mini Versão Lite
+</details>
 
-:::info
-A maneira mais fácil de testar a versão Lite é usar diretamente o dispositivo *Pollen Robotics Reachy Mini Audio* a partir do seu computador para verificar o funcionamento adequado.
-:::
+<details>
+<summary><strong>Como verifico se o sistema de som está funcionando?</strong></summary>
 
-#### Reachy Mini Versão Wireless
+### Versão Reachy Mini Lite
 
-:::info
+A maneira mais fácil de testar a versão Lite é usar diretamente o dispositivo *Pollen Robotics Reachy Mini Audio* a partir do seu computador para verificar se tudo está funcionando corretamente.
+
+### Versão Reachy Mini Wireless
+
 Para a versão Wireless, você pode usar os seguintes comandos GStreamer para testar a gravação e reprodução de áudio:
-:::
 
+No caso da versão wireless, você pode usar os seguintes comandos:
 ```bash
 # record a sound
 gst-launch-1.0 -e alsasrc device="reachymini_audio_src" ! audioconvert ! audioresample ! wavenc ! filesink location="test.wav"
 # playback the recording
 gst-launch-1.0 filesrc location=test.wav ! wavparse ! audioconvert ! alsasink device=reachymini_audio_sink
 #playback a test sound (pink noise)
-gst-launch-1.0 audiotestsrc wave="pink-noise" ! audioconvert ! audioresample ! alsasink device=reachymini_audio_sink
+gst-launch-1.0 audiotestsrc wave="pink-noise" ! audioconvert ! audioresample ! alsasink device="reachymini_audio_sink"
 ```
 
-:::tip Advanced Testing
-Você pode reproduzir um som enquanto grava simultaneamente para testar o desempenho da cancelamento de eco. Isso ajuda a verificar se a matriz de microfones está processando o áudio corretamente e cancelando o eco dos alto-falantes.
+**Teste avançado:**
+Você pode reproduzir um som enquanto grava simultaneamente para testar o desempenho do cancelamento de eco. Isso ajuda a verificar se o array de microfones está processando o áudio corretamente e cancelando o eco dos alto-falantes.
 
 **Dicas de solução de problemas:**
-* Verifique se o arquivo `.asoundrc` existe no diretório home
-* Verifique se o microfone é detectado: `arecord -l`
-* Verifique se o alto-falante é detectado: `aplay -l`
-:::
+- Certifique-se de que o arquivo `.asoundrc` exista no diretório home
+- Verifique se o microfone é detectado: `arecord -l`
+- Verifique se o alto-falante é detectado: `aplay -l`
+- Se a configuração da placa de áudio falhar com `No Reachy Mini Audio USB device found!`,
+  execute o código do SDK na máquina que tem a placa de áudio ReSpeaker conectada.
+  Para a versão Lite, esta é o seu computador; para a Wireless, é o próprio robô.
 
-## 🔧 Mensagens de Erro Específicas & Correções
+</details>
 
-### Erros de hardware do motor `'<name>'`: ['Input Voltage Error']
 
-:::info
-Estamos usando uma voltagem mais alta no Reachy Mini, é de propósito :)
-:::
 
-### Erro: "OSError: PortAudio library not found"
+## 🔧 Mensagens de erro específicas e correções
 
-:::warning
-Está faltando uma dependência de sistema. Rode:
+<details>
+<summary><strong>Erros de hardware do motor &#39;&lt;name&gt;&#39;: [&#39;Input Voltage Error&#39;]</strong></summary>
+Estamos usando uma tensão mais alta no Reachy Mini, é de propósito :)
+
+</details>
+
+
+
+<details>
+<summary><strong>Erro: "OSError: PortAudio library not found"</strong></summary>
+
+Esse erro ocorre ao usar `sounddevice` diretamente (por exemplo, após chamar `release_media()`). Instale a dependência de sistema:
 
 ```bash
 sudo apt-get install libportaudio2
 ```
 
-Depois reinicie o daemon.
-:::
+</details>
 
-### Aviso: "Circular buffer overrun" (Simulação/Mujoco)
+<details>
+<summary><strong>Aviso: "Circular buffer overrun" (Simulação/Mujoco)</strong></summary>
 
-:::tip
-Isso aparece se você se conectar ao robô mas não consumir os frames de vídeo, fazendo o buffer encher.
+Isso aparece se você se conectar ao robô mas não consumir os frames de vídeo, fazendo com que o buffer fique cheio.
+* **Correção:** Se você não precisa de vídeo, inicialize com `ReachyMini(media_backend="no_media")`.
 
-**Correção:** Se você não precisa de vídeo, inicialize com `ReachyMini(media_backend="no_media")`.
-:::
+</details>
 
-### Sem Entrada de Microfone / Direção de Chegada (Unidades Beta)
+<details>
+<summary><strong>Aplicativo Conversation trava ao iniciar após atualização (perfil personalizado)</strong></summary>
 
-:::warning
-* **Sem Entrada:** Requer firmware 2.1.3. Rode o [script de atualização](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/firmware/update.sh).
-* **Sem Direção:** Requer firmware 2.1.0+.
-* Verifique se o cabo flat flexível está instalado na orientação correta (Slides 45-47 do guia de montagem).
-:::
+Se você criou um perfil personalizado para o aplicativo Conversation em uma versão mais antiga e o aplicativo agora fecha imediatamente após a atualização, o aplicativo está procurando o perfil em um caminho que não existe mais — o local padrão do perfil mudou em uma versão recente.
 
-## 📦 Envio & Garantia
+**Sintomas** — os logs terminam com um `SystemExit: 1` gerado a partir de `prompts.py`, por exemplo:
+```
+File ".../reachy_mini_conversation_app/prompts.py", line 88, in get_session_instructions
+    sys.exit(1)
+SystemExit: 1
+```
 
-### Meu pacote está danificado ou faltando.
+**Correção (recomendada):** No aplicativo de desktop Reachy Mini Control, clique em **Reset apps environment** (veja "Bootstrap or update fails / Python environment issues" acima). Os aplicativos precisarão ser reinstalados depois.
 
-:::danger
-Entre em contato com a equipe da **Pollen Robotics** imediatamente. Você pode nos enviar um e-mail para sales@pollen-robotics.com com fotos do pacote, número do recibo ou número da fatura e seu nome completo. Em seguida, verificaremos com a transportadora e manteremos você atualizado.
-:::
+**Alternativa (avançado):** Faça SSH no robô (Wireless: `ssh pollen@reachy-mini.local`) e exclua diretamente o venv dos aplicativos, depois reinstale o aplicativo Conversation:
+```bash
+rm -rf /venvs/apps_venv
+```
 
-### Política de Reembolso
+</details>
 
-:::info
-* **Antes do envio:** Contate `sales@pollen-robotics.com` para um reembolso de 100%.
-* **Após o envio:** Você tem 30 dias para devolver seu pacote. Contate o setor de vendas (sales@pollen-robotics.com) com comprovante de entrega e número da fatura ou recibo. Se você tiver comentários / feedback, por favor nos avise, nosso foco é construir um robô que a comunidade open-source goste de montar.
-:::
 
-### Garantia
+<details>
+<summary><strong>Sem entrada de microfone / Direção de chegada (unidades Beta)</strong></summary>
 
-:::info
-Se uma peça estiver quebrada/com mau funcionamento, a equipe de pós-venda da Pollen determinará se é um defeito de hardware coberto pela garantia. Em seguida, nosso fabricante fornecerá peças de reparo ou substituição. Você pode nos enviar um e-mail para sales@pollen-robotics.com com fotos do problema, número do recibo ou número da fatura e seu nome completo.
-:::
+* **Sem entrada:** Requer firmware 2.1.3. Execute o [script de atualização](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/assets/firmware/update.sh).
+* **Sem direção:** Requer firmware 2.1.0+.
+* Verifique se o cabo flat flexível está instalado do lado correto (Slides 45-47 do guia de montagem).
+
+</details>
+
+
+
+## 📦 Envio e garantia
+
+<details>
+<summary><strong>Meu pacote está danificado ou faltando.</strong></summary>
+
+Entre em contato imediatamente com a equipe da **Pollen Robotics**. Você pode nos enviar um e-mail para sales@pollen-robotics.com com fotos da embalagem, número do recibo ou número da fatura e seu nome completo. Em seguida, verificaremos com a transportadora e manteremos você atualizado.
+
+</details>
+
+<details>
+<summary><strong>Política de reembolso</strong></summary>
+
+* **Antes do envio:** Entre em contato com `sales@pollen-robotics.com` para um reembolso de 100%.
+* **Após o envio:** Você tem 30 dias para devolver seu pacote. Entre em contato com o setor de vendas (sales@pollen-robotics.com) com o comprovante de entrega e o número da fatura ou do recibo. Se você tiver comentários / feedback, conte para nós, nosso foco é construir um robô que a comunidade de código aberto goste de montar.
+
+</details>
+
+<details>
+<summary><strong>Garantia</strong></summary>
+
+Se uma peça estiver quebrada/com defeito, a equipe de pós-venda da Pollen determinará se é um defeito de hardware coberto pela garantia. Então, nosso fabricante fornecerá peças de reparo ou substituição. Você pode nos enviar um e-mail para sales@pollen-robotics.com com fotos do problema, número do recibo ou número da fatura e seu nome completo.
+
+</details>
+
 
 ## 💬 Ainda com dúvidas?
 
 Se você não encontrou a resposta para o seu problema neste guia, entre em contato diretamente conosco!
-A equipe da Pollen Robotics e a comunidade estão ativas no Discord para ajudar você a resolver problemas específicos.
+A equipe da Pollen Robotics e a comunidade estão ativas no Discord para ajudar você a solucionar problemas específicos.
 
 👉 **[Entre no Discord da Pollen Robotics](https://discord.gg/Y7FgMqHsub)**
