@@ -12,12 +12,12 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-22
+  date: 2026-05-18
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-04-30'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -153,20 +153,16 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### Step 2. Create the Python environment
+### Step 2. Create and configure the conda environment
 
 ```bash
-conda create -n rebotarm python=3.10 -y
+conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-### Step 3. Install project dependencies
+If you want to use a different environment name, replace `rebotarm` in the command with your own name.
 
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4. Install the robotic arm SDK
+### Step 3. Install the robotic arm SDK
 
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -175,7 +171,7 @@ pip install -e .
 cd ../..
 ```
 
-### Step 5. Install the Orbbec Gemini 2 SDK
+### Step 4. Install the Orbbec Gemini 2 SDK
 
 This project depends on `pyorbbecsdk`. The repository does not bundle `sdk/pyorbbecsdk` by default, so you need to clone the official repository under `sdk/` yourself or install it in another way.
 
@@ -206,7 +202,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### Step 6. Verify the dependencies
+### Step 5. Verify the dependencies
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
@@ -364,7 +360,7 @@ This usually means the robotic arm SDK dependencies are not installed in the cur
 
 ```bash
 conda activate rebotarm
-pip install -r requirements.txt
+conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
