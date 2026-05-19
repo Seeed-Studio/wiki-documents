@@ -1,6 +1,7 @@
 ---
-description: Este artículo explica cómo desplegar el framework de agentes NemoClaw/OpenClaw de NVIDIA en Nvidia Jetson Thor e integrar el brazo robótico reBot Arm B601 para construir un sistema local de automatización con IA que combine percepción visual, razonamiento con LLM y ejecución robótica. Proporciona una guía de configuración completa que cubre conexiones de hardware, instalación de NemoClaw y Ollama, configuración del backend del brazo robótico, gestión de permisos, servicios de auto‑inicio con systemd y resolución de problemas.
+description: Este artículo explica cómo desplegar el framework de agentes NemoClaw/OpenClaw de NVIDIA en Nvidia Jetson Thor e integrar el brazo robótico reBot Arm B601 para construir un sistema local de automatización con IA que combine percepción visual, razonamiento con LLM y ejecución robótica. Proporciona una guía de configuración completa que cubre conexiones de hardware, instalación de NemoClaw y Ollama, configuración del backend del brazo robótico, gestión de permisos, servicios de autoarranque con systemd y resolución de problemas.
 title: Controlar reBot Arm con NemoClaw en Nvidia Jetson Thor
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
@@ -15,7 +16,7 @@ updatedAt: '2026-05-18'
 
 ## 1. Descripción general del proyecto
 
-NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la ejecución de asistentes OpenClaw siempre activos de forma más segura. Este wiki explica cómo desplegar NemoClaw en Jetson Thor y conectar las capacidades de `reBot Arm B601` en el flujo de trabajo del agente NemoClaw, formando un bucle cerrado de: comprensión semántica + detección visual + ejecución robótica.
+NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la ejecución de asistentes OpenClaw siempre activos de forma más segura. Este wiki explica cómo desplegar NemoClaw en Jetson Thor y conectar las capacidades de `reBot Arm B601` al flujo de trabajo del agente NemoClaw, formando un bucle cerrado de: comprensión semántica + detección visual + ejecución robótica.
 
 - `NemoClaw`: Framework local de agente/control para orquestación de tareas y enrutamiento de comandos.
 - `Nemotron3`: Capacidad de modelo opcional para comprensión de intención y toma de decisiones de alto nivel.
@@ -31,7 +32,7 @@ NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la
 
 - Nvidia Jetson Thor (JetPack 7.x instalado)
 - [reBot Arm B601 DM](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
-- [Adaptador USB a CAN](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- [Adaptador USB-a-CAN](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
 - Cámara USB
 - Fuente de alimentación y cable USB para el brazo robótico
 - Botón USB (opcional)
@@ -39,8 +40,8 @@ NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
+        <th> reBot Arm B601 </th>
         <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> SO-ARM101 Low-Cost AI Arm </th>
     </tr>
     <tr>
         <td>
@@ -76,7 +77,7 @@ NVIDIA `NemoClaw` es una pila de referencia de código abierto que simplifica la
 ## 3. Conexión de hardware
 
 1. Ensambla y configura el brazo robótico.
-2. Conecta el adaptador USB a CAN, la cámara USB y el brazo robótico a los puertos USB Type-A de Jetson Thor.
+2. Conecta el adaptador USB-a-CAN, la cámara USB y el brazo robótico a los puertos USB Type-A de Jetson Thor.
 
 <div align="center">
     <img width={900} 
@@ -125,10 +126,10 @@ Instala NemoClaw en Jetson:
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Luego ejecuta `nemoclaw onboard` para crear una nueva app. Un registro de incorporación interactiva de ejemplo se muestra en:
+Luego ejecuta `nemoclaw onboard` para crear una nueva aplicación. Un registro de incorporación interactiva de ejemplo se muestra en:
 
 <details>
-<summary> nemoclaw onboard log </summary>
+<summary> registro de `nemoclaw onboard` </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -618,7 +619,7 @@ Comprueba los registros de `rebot-f1-listener.service` y confirma que escucha el
 6. Otras teclas del teclado dejan de funcionar después de iniciar el listener  
 Asegúrate de que el script no use `dev.grab()` (la captura exclusiva del teclado debe eliminarse).
 
-7. Fallo en la conexión del segundo brazo  
+7. Fallo en la conexión de un segundo brazo  
 Asegúrate de que la conexión anterior esté completamente liberada; llama a disconnect antes de volver a conectar.
 
 ## 9. Referencias
