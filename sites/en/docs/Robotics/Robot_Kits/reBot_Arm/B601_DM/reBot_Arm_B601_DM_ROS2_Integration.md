@@ -16,8 +16,7 @@ last_update:
   date: 2026-05-14
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-04-29'
 updatedAt: '2026-05-14'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/

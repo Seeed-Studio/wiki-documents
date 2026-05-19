@@ -18,9 +18,11 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
 Cuando el dispositivo se encuentre en los estados siguientes, no lo reinicies ni lo apagues manualmente. De lo contrario, el dispositivo puede quedar inutilizado.
+
 1. No ha finalizado el proceso de transmisión de mensajes
 2. Está siendo configurado
 :::
+
 ## Tutorial en video
 
 ### Parte 1: Configuración tras el desempaquetado
@@ -100,14 +102,14 @@ import TabItem from '@theme/TabItem';
 
 ### Conectar mediante el sitio web
 
-Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, ahora puedes conectar el dispositivo al [sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0). 
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, ahora puedes conectar el dispositivo al [sitio web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0).
 
   Paso 1: Abre el sitio web
 
-[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web. 
+[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Paso 2: Añadir el nuevo dispositivo 
+  Paso 2: Añadir el nuevo dispositivo
 
     Haz clic en "+ New Connection". 
 
@@ -130,6 +132,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ## Configuración
+
 ### Configurar LoRa
 
 Para empezar a comunicarte a través de la malla, debes establecer tu región. Este ajuste controla qué rango de frecuencias utiliza tu dispositivo y debe configurarse según tu ubicación regional.
@@ -401,11 +404,11 @@ Copia el archivo UF2 a la unidad DFU. El firmware debería flashearse después d
 
 - Cambia el cable de carga
 
-- A veces parece que está apagado, pero en realidad es porque el LED y el zumbador no se han activado. Comprueba los siguientes parámetros: 
+- A veces parece que está apagado, pero en realidad es porque el LED y el zumbador no se han activado. Comprueba los siguientes parámetros:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
- - Si aún así no funciona, mantén pulsado el botón del dispositivo y luego conecta el cable de carga; comprueba si aparece o no un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#device-bricked) para volver a instalar el bootloader
+- Si aún así no funciona, mantén pulsado el botón del dispositivo y luego conecta el cable de carga; comprueba si aparece o no un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#device-bricked) para volver a instalar el bootloader
 
 ### El dispositivo se queda atascado en un bucle de arranque
 
@@ -449,9 +452,9 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 **Paso 1: Instalación de Adafruit-nrfutil**
 
-Para usuarios de Windows, pulsa la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto abrirá la línea de comandos. 
+Para usuarios de Windows, pulsa la tecla "Win" y la tecla "r", luego introduce "cmd" en la ventana emergente y pulsa "Enter". Esto abrirá la línea de comandos.
 
-Para usuarios de Mac, pulsa la tecla "Command" y la tecla "Space" para abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto abrirá la línea de comandos. 
+Para usuarios de Mac, pulsa la tecla "Command" y la tecla "Space" para abrir Spotlight. Luego introduce "termial" y pulsa "Return". Esto abrirá la línea de comandos.
 
 **Requisitos previos**
 
@@ -492,8 +495,6 @@ Esta es la ubicación de instalación:
 Para usuarios de Windows, puede que tengas que añadir la ruta manualmente. Copia la ubicación de instalación mostrada en el último paso. Luego añádela como se muestra a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -618,25 +619,26 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
  Comprueba si el puerto es correcto o prueba con otro puerto.
 
- ### El dispositivo se apaga automáticamente
+### El dispositivo se apaga automáticamente
 
- #### Descripción
+#### Descripción
 
- - Después de encender el dispositivo, se apagará o se reiniciará automáticamente al cabo de un rato. 
- - El registro del puerto serie funciona durante un tiempo y luego se detiene.
+- Después de encender el dispositivo, se apagará o se reiniciará automáticamente al cabo de un rato.
+- El registro del puerto serie funciona durante un tiempo y luego se detiene.
 
  Esto posiblemente se deba a reiniciar o apagar el dispositivo manualmente y a la fuerza cuando el dispositivo está en los siguientes estados: sin haber terminado el proceso de transmisión de mensajes, estando en configuración......
 
- #### Solución de problemas
+#### Solución de problemas
 
- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para realizar un borrado de la flash. 
+ [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para realizar un borrado de la flash.
 
- ### Restablecimiento de fábrica
+### Restablecimiento de fábrica
+
 Si quieres restaurar la configuración predeterminada, puedes hacer un restablecimiento de fábrica. Hay dos métodos para que realices el restablecimiento de fábrica.
 
 - [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para borrar la flash del dispositivo. Y luego vuelve a flashear el firmware más reciente.
 
-- Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica. 
+- Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará automáticamente con la configuración de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Restablecimiento de NodeDB
@@ -688,6 +690,7 @@ Ten en cuenta la diferencia entre las siguientes opciones:
 
 - **Reset NodeDB**: Solo borra la base de datos de nodos.
 - **Factory Reset**: Restaura el dispositivo a la configuración de fábrica y elimina más datos de configuración.
+
 :::
 
 **Qué ocurre después del restablecimiento**
@@ -709,9 +712,9 @@ Puedes observar lo siguiente:
 
 ### Calidad de la señal
 
-  - **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+- **SNR** refleja la calidad del enlace de comunicación. Un dispositivo normal suele funcionar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente. 
+- **RSSI** está determinado conjuntamente por el dispositivo y su entorno. Un dispositivo normal suele funcionar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
       Para conseguir el mejor efecto de señal, utiliza el dispositivo en una zona abierta y sin obstáculos, con una interferencia mínima.
 
@@ -724,10 +727,6 @@ Puedes observar lo siguiente:
 - [Documentación de Meshtastic](https://meshtastic.org/docs/introduction/)
 - [Hoja de datos del SenseCAP T1000 Tracker](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
-
-
-
-## Recursos
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"
