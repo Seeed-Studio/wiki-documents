@@ -1,23 +1,23 @@
 ---
-description: Understanding Reachy Mini's core concepts and architecture including client-server design, coordinate systems, safety limits, and motor modes for robust application development.
+description: Core concepts and architecture documentation for Reachy Mini covering coordinate systems, safety limits, motor modes, and software architecture.
 title: Core Concepts & Architecture
 slug: /reachymini_sdk_core-concept
 keywords:
+  - core concepts
   - architecture
   - coordinate systems
   - safety limits
   - motor modes
-  - client-server
-  - daemon
-  - sdk
+  - head frame
+  - world frame
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_sdk_core-concept/
 ---
 
@@ -46,12 +46,12 @@ When moving the robot, you will work with two main reference frames:
 ### 1. Head Frame
 Located at the base of the head. Used for `goto_target` and `set_target` commands.
 
-![Reachy Mini Head Frame](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/head_frame.png)
+[![Reachy Mini Head Frame](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/head_frame.png)](https://github.com/pollen-robotics/reachy_mini/tree/main/docs/assets)
 
 ### 2. World Frame
 Fixed relative to the robot's base. Used for `look_at_world` commands.
 
-![Reachy Mini World Frame](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/world_frame.png)
+[![Reachy Mini World Frame](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/world_frame.png)](https://github.com/pollen-robotics/reachy_mini/tree/main/docs/assets)
 
 ## Safety Limits ⚠️
 
