@@ -1,47 +1,46 @@
 ---
-description: This article explains how to deploy NVIDIA’s NemoClaw/OpenClaw agent framework on Nvidia Jetson Thor and integrate the reBot Arm B601 robotic arm to build a local AI automation system combining visual perception, LLM reasoning, and robotic execution. It provides a complete setup guide covering hardware connections, NemoClaw and Ollama installation, robotic arm backend configuration, permission management, systemd auto-start services, and troubleshooting.
-title: Control Rebot Arm with NemoClaw on Nvidia Jetson Thor
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
+description: 本文介绍如何在 Nvidia Jetson Thor 上部署 NVIDIA 的 NemoClaw/OpenClaw 智能体框架，并集成 reBot Arm B601 机械臂，构建集视觉感知、LLM 推理与机器人执行于一体的本地 AI 自动化系统。文中提供完整的搭建指南，涵盖硬件连接、NemoClaw 与 Ollama 安装、机械臂后端配置、权限管理、systemd 自启动服务以及故障排查。
+title: 在 Nvidia Jetson Thor 上使用 NemoClaw 控制 Rebot Arm
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
   date: 05/18/2026
   author: youjiang
 createdAt: '2026-05-18'
-url: https://wiki.seeedstudio.com/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/
+url: https://wiki.seeedstudio.com/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/
 updatedAt: '2026-05-18'
 ---
 
-# Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor
+# 在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm B601
 
-## 1. Project Overview
+## 1. 项目概述
 
-NVIDIA `NemoClaw` is an open-source reference stack that simplifies running OpenClaw always-on assistants more safely.  This wiki explains how to deploy NemoClaw on Jetson Thor and connect `reBot Arm B601` capabilities into the NemoClaw agent workflow, forming a closed loop of: semantic understanding + visual detection + robotic execution.
+NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenClaw 常驻助手。本 Wiki 说明如何在 Jetson Thor 上部署 NemoClaw，并将 `reBot Arm B601` 的能力接入 NemoClaw 智能体工作流，形成“语义理解 + 视觉检测 + 机器人执行”的闭环。
 
-- `NemoClaw`: Local agent/control framework for task orchestration and command routing.
-- `Nemotron3`: Optional model capability for intent understanding and high-level decision making.
-- `Nvidia Jetson Thor`: Local compute platform for inference, backend services, and device drivers.
-- `reBot Arm B601`: robotic arm for grasping and placement.
+- `NemoClaw`：用于任务编排和指令路由的本地智能体/控制框架。
+- `Nemotron3`：可选模型能力，用于意图理解和高层决策。
+- `Nvidia Jetson Thor`：用于推理、后端服务和设备驱动的本地计算平台。
+- `reBot Arm B601`：用于抓取与放置的机械臂。
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/overview.png" />
 </div>
 
-## 2. Hardware Requirements
+## 2. 硬件需求
 
-- Nvidia Jetson Thor (JetPack 7.x installed)
+- Nvidia Jetson Thor（已安装 JetPack 7.x）
 - [reBot Arm B601 DM](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
-- [USB-to-CAN adapter](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
-- USB camera
-- Power supply and USB cable for the robotic arm
-- USB button (optional)
+- [USB-to-CAN 适配器](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- USB 摄像头
+- 机械臂电源和 USB 线缆
+- USB 按钮（可选）
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
-        <th> reBot Arm B601 </th>
-        <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
+        <th> NVIDIA® Jetson AGX Thor™ 开发套件 </th>
+        <th> SO-ARM101 低成本 AI 机械臂 </th>
     </tr>
     <tr>
         <td>
@@ -59,14 +58,14 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -74,10 +73,10 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
 </table>
 </div>
 
-## 3. Hardware Connection
+## 3. 硬件连接
 
-1. Assemble and configure the robotic arm.
-2. Connect the USB-to-CAN adapter, USB camera, and robotic arm to Jetson Thor USB Type-A ports.
+1. 组装并配置机械臂。
+2. 将 USB-to-CAN 适配器、USB 摄像头和机械臂连接到 Jetson Thor 的 USB Type-A 接口。
 
 <div align="center">
     <img width={900} 
@@ -85,28 +84,28 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
 </div>
 
 :::info
-Jetson devices may only provide two USB Type-A ports. Use a USB hub if you need more ports.
+Jetson 设备可能只提供两个 USB Type-A 接口。如果你需要更多接口，请使用 USB 集线器。
 :::
 
-After power-on, verify devices:
+上电后，验证设备：
 
 ```bash
 ls /dev/ttyACM*
 ls /dev/video*
 ```
 
-If everything is connected correctly, you should see output similar to:
+如果一切连接正确，你应该会看到类似如下的输出：
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/check_device.png" />
 </div>
 
-## 4. System and Dependency Setup
+## 4. 系统与依赖环境配置
 
-### 4.1 Install Ollama
+### 4.1 安装 Ollama
 
-If local LLM capability is needed (optional):
+如果需要本地 LLM 能力（可选）：
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
@@ -118,18 +117,18 @@ ollama pull nemotron3:33b
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/download_llm.png" />
 </div>
 
-### 4.2 Install NemoClaw
+### 4.2 安装 NemoClaw
 
-Install NemoClaw on Jetson:
+在 Jetson 上安装 NemoClaw：
 
 ```bash
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Then run `nemoclaw onboard` to create a new app. A sample interactive onboarding log is shown in:
+然后运行 `nemoclaw onboard` 来创建一个新应用。下面展示了一个交互式引导日志示例：
 
 <details>
-<summary> nemoclaw onboard log </summary>
+<summary> nemoclaw onboard 日志 </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -419,19 +418,19 @@ seeed@seeed:~$
 ```
 </details>
 
-Considering that we may need to access services deployed on the host machine from within the NeMoClaw container in the future, please execute the following command to configure the network access for this application.
+考虑到我们未来可能需要在 NeMoClaw 容器内访问部署在主机上的服务，请执行以下命令为该应用配置网络访问。
 
 ```bash
 nemoclaw my-assistant policy-add --from-file ~/rebot_arm_service/host-camera.yaml --yes
 ```
 
-If onboarding succeeds, run:
+如果接入成功，运行：
 
 ```bash
 nemoclaw my-assistant connect
 ```
 
-You should enter a working OpenClaw app environment:
+你应该进入一个可用的 OpenClaw 应用环境：
 
 <div align="center">
     <img width={900} 
@@ -439,13 +438,13 @@ You should enter a working OpenClaw app environment:
 </div>
 
 :::info
-More NemoClaw CLI details:
+更多 NemoClaw CLI 详情：
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
-### 4.3 Install Robotic Arm Service
+### 4.3 安装机械臂服务
 
-Run on Jetson:
+在 Jetson 上运行：
 
 ```bash
 git clone https://github.com/yuyoujiang/rebot_arm_service.git ~
@@ -462,17 +461,17 @@ python -c "import torch; print(torch.cuda.is_available())"
 </div>
 
 
-## 5. Device Permission Setup
+## 5. 设备权限设置
 
-There are two ways to setpu the device permission.
+有两种方式设置设备权限。
 
-1. Temporary permission (lost after reboot):
+1. 临时权限（重启后失效）：
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
 ```
 
-2. Persistent udev rule (recommended):
+2. 持久化 udev 规则（推荐）：
 
 ```bash
 echo 'SUBSYSTEM=="tty", KERNEL=="ttyACM0", MODE:="0666", GROUP:="dialout"' | sudo tee /etc/udev/rules.d/99-rebot-arm.rules
@@ -480,9 +479,9 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-## 6. Start Services
+## 6. 启动服务
 
-### 6.1 Start Robotic Arm Backend
+### 6.1 启动机械臂后端
 
 ```bash
 cd ~/rebot_arm_service
@@ -490,39 +489,39 @@ export REBOT_CAMERA_DEVICE_INDEX=0
 uv run rebot-arm-service
 ```
 
-Access:
-- WebUI: `http://127.0.0.1:8000/webui`
-- Health check: `http://127.0.0.1:8000/healthz`
+访问：
+- WebUI：`http://127.0.0.1:8000/webui`
+- 健康检查：`http://127.0.0.1:8000/healthz`
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
-### 6.2 Start Keyboard Listener (Optional)
+### 6.2 启动键盘监听器（可选）
 
-To quickly trigger detection/grasp (without waiting for long agent reasoning), use the F1 hotkey listener.  
-When F1 is pressed, it automatically requests the grasp mission endpoint.
+为了快速触发检测/抓取（无需等待较长的智能体推理时间），可以使用 F1 热键监听器。  
+当按下 F1 时，它会自动请求抓取任务的端点。
 
-Run directly:
+直接运行：
 
 ```bash
 cd ~/rebot_arm_service
 sudo ./.venv/bin/python scripts/space_mission_listener_evdev.py
 ```
 
-Or via script:
+或通过脚本：
 
 ```bash
 cd ~/rebot_arm_service
 ./scripts/start_space_listener_evdev.sh
 ```
 
-### 6.3 Enable Auto-Start at Boot (Optional)
+### 6.3 启用开机自启动（可选）
 
-Configure two systemd services:
+配置两个 systemd 服务：
 
-- `rebot-arm.service`: backend service
+- `rebot-arm.service`：后端服务
 
 <details>
 <summary> /etc/systemd/system/rebot-arm.service </summary>
@@ -548,7 +547,7 @@ WantedBy=multi-user.target
 ```
 </details>
 
-- `rebot-f1-listener.service`: F1 hotkey trigger
+- `rebot-f1-listener.service`：F1 热键触发器
 
 <details>
 <summary> /etc/systemd/system/rebot-f1-listener.service </summary>
@@ -576,10 +575,10 @@ WantedBy=multi-user.target
 </details>
 
 :::danger
-Please modify the path in the configuration file before starting the service.
+在启动服务之前，请先修改配置文件中的路径。
 :::
 
-Management commands:
+管理命令：
 
 ```bash
 sudo systemctl daemon-reload
@@ -588,51 +587,51 @@ systemctl status rebot-arm.service
 sudo systemctl status rebot-f1-listener.service
 ```
 
-Logs:
+日志：
 
 ```bash
 journalctl -u rebot-arm.service -f
 sudo journalctl -u rebot-f1-listener.service -f
 ```
 
-## 7. Feature Demo
+## 7. 功能演示
 
 
 
-## 8. Troubleshooting
+## 8. 故障排查
 
-1. Serial busy (`Device or resource busy`)  
-Stop stale processes, then reconnect. Ensure only one controller process is using the arm.
+1. 串口忙（`Device or resource busy`）  
+停止陈旧进程，然后重新连接。确保只有一个控制进程在使用机械臂。
 
-2. Empty WebUI scene  
-Check URDF and mesh requests return `200`, especially `/assets/urdf/...`.
+2. WebUI 场景为空  
+检查 URDF 和 mesh 请求是否返回 `200`，尤其是 `/assets/urdf/...`。
 
-3. Detection does not respond  
-Check `camera/status` is `running=true`, then check mission status endpoint.
+3. 检测没有响应  
+检查 `camera/status` 是否为 `running=true`，然后检查任务状态端点。
 
-4. Torch import fails with missing libs  
-Ensure `LD_LIBRARY_PATH` includes both `nvpl` and `cuda_v12` paths.
+4. Torch 导入失败，提示缺少库  
+确保 `LD_LIBRARY_PATH` 同时包含 `nvpl` 和 `cuda_v12` 路径。
 
-5. F1 hotkey has no effect  
-Check `rebot-f1-listener.service` logs and confirm it listens to the correct keyboard device.
+5. F1 热键无效  
+检查 `rebot-f1-listener.service` 日志，并确认它监听的是正确的键盘设备。
 
-6. Other keyboard keys stop working after listener starts  
-Make sure the script does not use `dev.grab()` (exclusive keyboard capture must be removed).
+6. 启动监听器后其他键盘按键失效  
+确保脚本未使用 `dev.grab()`（必须移除独占键盘捕获）。
 
-7. Second arm connection fails  
-Ensure previous connection is fully released; call disconnect before reconnecting.
+7. 第二个机械臂连接失败  
+确保之前的连接已完全释放；在重新连接前调用断开连接。
 
-## 9. References
+## 9. 参考资料
 
 - https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/index.html
 - https://github.com/Seeed-Projects/reBot-DevArm
 - https://docs.nvidia.com/nemoclaw/latest/about/overview.html
 - https://docs.openclaw.ai/
-- https://wiki.seeedstudio.com/lerobot_so100m_new/
+- https://wiki.seeedstudio.com/cn/lerobot_so100m_new/
 
-## 10. Tech Support & Product Discussion
+## 10. 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
