@@ -39,8 +39,8 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
+        <th> reBot Arm B601 </th>
         <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> SO-ARM101 Low-Cost AI Arm </th>
     </tr>
     <tr>
         <td>
