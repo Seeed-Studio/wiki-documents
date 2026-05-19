@@ -1,24 +1,23 @@
 ---
-description: Este tutorial muestra cómo construir una demostración completa de agarre visual para el reBot Arm B601-DM usando Orbbec Gemini 2 y un flujo de trabajo de agarre YOLO/OBB.
+description: Este tutorial muestra cómo construir una demostración completa de agarre visual para el reBot Arm B601-DM usando Orbbec Gemini 2 y una canalización de agarre YOLO/OBB.
 title: Demostración de agarre visual con reBot Arm B601-DM
 keywords:
   - reBot Arm
   - B601-DM
-  - Grasping
+  - Agarre
   - Gemini 2
   - YOLO
-  - Hand-Eye Calibration
+  - Calibración mano-ojo
   - Robot
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-22
+  date: 2026-05-18
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-04-22'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -42,7 +41,7 @@ url: https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_grasping_demo/
   <strong>Percepción de profundidad · Detección de objetos · Calibración mano-ojo · Agarre autónomo · Totalmente de código abierto</strong>
 </p>
 
-YOLO es una familia ampliamente utilizada de modelos de detección de objetos en tiempo real que puede localizar y clasificar objetivos en una sola pasada hacia adelante. Este tutorial usa YOLO junto con la cámara de profundidad Orbbec Gemini 2 para construir una demostración funcional de agarre visual de escritorio para el reBot Arm B601-DM, que cubre la configuración del entorno, la integración de la cámara, la calibración mano-ojo y la validación del agarre.
+YOLO es una familia ampliamente utilizada de modelos de detección de objetos en tiempo real que puede localizar y clasificar objetivos en una sola pasada hacia adelante. Este tutorial usa YOLO junto con la cámara de profundidad Orbbec Gemini 2 para construir una demostración funcional de agarre visual de escritorio para el reBot Arm B601-DM, cubriendo la configuración del entorno, la integración de la cámara, la calibración mano-ojo y la validación del agarre.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
@@ -52,7 +51,7 @@ YOLO es una familia ampliamente utilizada de modelos de detección de objetos en
 ## Características del proyecto
 
 1. **Estimación directa de la pose de agarre desde YOLO + OBB**  
-   El flujo de trabajo usa directamente las cajas de detección o los rectángulos de área mínima OBB y toma el eje corto como la dirección de apertura de la pinza, evitando el procesamiento complejo de nubes de puntos 3D.
+   La canalización usa directamente las cajas de detección o los rectángulos de área mínima OBB y toma el eje corto como la dirección de apertura de la pinza, evitando el procesamiento complejo de nubes de puntos 3D.
 
 2. **Integración ligera del brazo robótico y la pinza**  
    El script principal de agarre reutiliza la interfaz `RebotArm` e integra IK, control de trayectoria y la máquina de estados de la pinza.
@@ -101,7 +100,7 @@ El hardware para este tutorial es proporcionado por [Seeed Studio](https://www.s
       <td>PC con Ubuntu 22.04+</td>
     </tr>
     <tr>
-      <td>Versión recomendada de Python</td>
+      <td>Versión de Python recomendada</td>
       <td>Python 3.10</td>
     </tr>
   </tbody>
@@ -154,20 +153,16 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### Paso 2. Crear el entorno de Python
+### Paso 2. Crear y configurar el entorno conda
 
 ```bash
-conda create -n rebotarm python=3.10 -y
+conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-### Paso 3. Instalar las dependencias del proyecto
+Si quieres usar un nombre de entorno diferente, reemplaza `rebotarm` en el comando por tu propio nombre.
 
-```bash
-pip install -r requirements.txt
-```
-
-### Paso 4. Instalar el SDK del brazo robótico
+### Paso 3. Instalar el SDK del brazo robótico
 
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -176,7 +171,7 @@ pip install -e .
 cd ../..
 ```
 
-### Paso 5. Instalar el SDK Orbbec Gemini 2
+### Paso 4. Instalar el SDK Orbbec Gemini 2
 
 Este proyecto depende de `pyorbbecsdk`. El repositorio no incluye `sdk/pyorbbecsdk` por defecto, por lo que debes clonar tú mismo el repositorio oficial dentro de `sdk/` o instalarlo de otra manera.
 
@@ -190,7 +185,7 @@ cd pyorbbecsdk
 pip install -e .
 ```
 
-También puedes usar el mirror de Gitee:
+También puedes usar el espejo de Gitee:
 
 ```bash
 cd sdk
@@ -207,24 +202,24 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### Paso 6. Verificar las dependencias
+### Paso 5. Verificar las dependencias
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 python -c "import motorbridge; print('motorbridge OK')"
 ```
 
-Para el primer uso de la cámara Orbbec, se recomienda ejecutar `scripts/install_udev_rules.sh` dentro de tu directorio `pyorbbecsdk` instalado; de lo contrario, es posible que la cámara no se abra correctamente.
+Para el primer uso de la cámara Orbbec, se recomienda ejecutar `scripts/install_udev_rules.sh` dentro de tu directorio `pyorbbecsdk` instalado, de lo contrario la cámara puede no abrirse correctamente.
 
 ## Calibración mano-ojo
 
-Antes de ejecutar el flujo completo de agarre, completa primero la calibración mano-ojo Eye-in-Hand.
+Antes de ejecutar la canalización completa de agarre, completa primero la calibración mano-ojo Eye-in-Hand.
 
 ```bash
 python scripts/collect_handeye_eih.py
 ```
 
-Antes de ejecutarlo, asegúrate de que el siguiente parámetro de tamaño de ArUco en `config/default.yaml` coincida con el marcador impreso real:
+Antes de ejecutarla, asegúrate de que el siguiente parámetro de tamaño de ArUco en `config/default.yaml` coincida con el marcador impreso real:
 
 ```yaml
 calibration:
@@ -232,7 +227,7 @@ calibration:
     marker_length_m: 0.1
 ```
 
-En el modo automático, el brazo recorre 50 poses preestablecidas y registra una muestra siempre que el marcador ArUco se detecta de forma estable. Incluso si interrumpes el proceso con `c` o `q`, el script sigue intentando calcular el resultado de calibración a partir de las muestras recopiladas.
+En el modo automático, el brazo recorre 50 poses preestablecidas y registra una muestra cada vez que el marcador ArUco se detecta de forma estable. Incluso si interrumpes el proceso con `c` o `q`, el script aún intenta calcular el resultado de calibración a partir de las muestras recopiladas.
 
 Si quieres mover el brazo robótico manualmente durante la recopilación, usa el modo manual:
 
@@ -334,7 +329,7 @@ Mantenerlo como `null` suele ser suficiente porque el programa intentará detect
 Flujo principal del programa:
 
 1. Inicializar el brazo robótico y la pinza
-2. Mover a la pose de preparado. Si quieres cambiar la pose inicial de preparado, modifica `config/default.yaml`:
+2. Mover a la pose de preparado. Si quieres cambiar la pose de preparado de inicio, modifica `config/default.yaml`:
 
 ```yaml
 robot:
@@ -347,9 +342,9 @@ robot:
     duration: 3.0
 ```
 
-3. Detectar en tiempo real los objetivos sobre la mesa
+3. Detectar objetivos sobre la mesa en tiempo real
 4. Estimar la pose de agarre a partir del eje corto
-5. Pulsar `G` para capturar el fotograma actual y ejecutar el agarre
+5. Pulsa `G` para capturar el fotograma actual y ejecutar el agarre
 
 Teclas en tiempo de ejecución:
 
@@ -365,7 +360,7 @@ Esto normalmente significa que las dependencias del SDK del brazo robótico no e
 
 ```bash
 conda activate rebotarm
-pip install -r requirements.txt
+conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
@@ -400,11 +395,11 @@ Puedes intentar ajustar:
 ## Referencias
 
 - [Guía rápida de inicio de reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/)
-- [Primeros pasos con Pinocchio y MeshCat para reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_pinocchio_meshcat/)
-- [Primeros pasos con reBot Arm B601-DM basado en LeRobot y reBot 102 Leader](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_lerobot/)
+- [Introducción a Pinocchio y MeshCat para reBot Arm B601-DM](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_pinocchio_meshcat/)
+- [Introducción al reBot Arm B601-DM basado en LeRobot y reBot 102 Leader](https://wiki.seeedstudio.com/es/rebot_arm_b601_dm_lerobot/)
 - [Página de producto de Orbbec Gemini 2](https://www.orbbec.com/products/stereo-vision-camera/gemini-2/)
 - [Orbbec SDK v2](https://github.com/orbbec/OrbbecSDK_v2)
 - [Guía de la API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/)
-- [Repositorio de pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
+- [Repositorio pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Documentación de pyorbbecsdk](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
