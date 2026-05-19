@@ -3880,6 +3880,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',

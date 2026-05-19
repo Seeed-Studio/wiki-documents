@@ -1,6 +1,7 @@
 ---
 description: この記事では、NVIDIA の NemoClaw/OpenClaw エージェントフレームワークを Nvidia Jetson Thor 上にデプロイし、reBot Arm B601 ロボットアームを統合して、視覚認識・LLM 推論・ロボット実行を組み合わせたローカル AI オートメーションシステムを構築する方法を説明します。ハードウェア接続、NemoClaw と Ollama のインストール、ロボットアームのバックエンド設定、権限管理、systemd 自動起動サービス、およびトラブルシューティングを含む、完全なセットアップガイドを提供します。
-title: Nvidia Jetson Thor 上の NemoClaw で Rebot Arm を制御する
+title: Nvidia Jetson Thor 上の NemoClaw で reBot Arm を制御する
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
@@ -17,7 +18,7 @@ updatedAt: '2026-05-18'
 
 NVIDIA の `NemoClaw` は、OpenClaw の常時稼働アシスタントをより安全かつ簡単に実行するためのオープンソース・リファレンススタックです。本 Wiki では、Jetson Thor 上に NemoClaw をデプロイし、`reBot Arm B601` の機能を NemoClaw エージェントのワークフローに接続して、「意味理解 + 画像認識 + ロボット実行」のクローズドループを構成する方法を説明します。
 
-- `NemoClaw`: タスクのオーケストレーションとコマンドルーティングのためのローカルエージェント／制御フレームワーク。
+- `NemoClaw`: タスクのオーケストレーションとコマンドルーティングを行うローカルエージェント／制御フレームワーク。
 - `Nemotron3`: インテント理解と高レベル意思決定のためのオプションのモデル機能。
 - `Nvidia Jetson Thor`: 推論、バックエンドサービス、デバイスドライバ用のローカルコンピュートプラットフォーム。
 - `reBot Arm B601`: 把持および配置を行うロボットアーム。
@@ -39,8 +40,8 @@ NVIDIA の `NemoClaw` は、OpenClaw の常時稼働アシスタントをより�
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
+        <th> reBot Arm B601 </th>
         <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> SO-ARM101 低コスト AI アーム </th>
     </tr>
     <tr>
         <td>
@@ -125,7 +126,7 @@ Jetson に NemoClaw をインストールします：
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-その後、`nemoclaw onboard` を実行して新しいアプリを作成します。対話的なオンボーディングログの一例は次を参照してください：
+その後 `nemoclaw onboard` を実行して新しいアプリを作成します。対話的なオンボーディングログの一例は次を参照してください：
 
 <details>
 <summary> nemoclaw onboard ログ </summary>
@@ -438,13 +439,13 @@ nemoclaw my-assistant connect
 </div>
 
 :::info
-NemoClaw CLI の詳細はこちら：
+NeMoClaw CLI の詳細はこちら：
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
 ### 4.3 ロボットアームサービスのインストール
 
-Jetson 上で実行：
+Jetson 上で実行します：
 
 ```bash
 git clone https://github.com/yuyoujiang/rebot_arm_service.git ~
@@ -609,7 +610,7 @@ URDF とメッシュのリクエストが `200` を返しているか確認し�
 3. 検出が反応しない  
 `camera/status` が `running=true` であることを確認し、その後ミッションステータスのエンドポイントを確認します。
 
-4. ライブラリ不足で Torch の import に失敗する  
+4. ライブラリ不足で Torch のインポートに失敗する  
 `LD_LIBRARY_PATH` に `nvpl` と `cuda_v12` の両方のパスが含まれていることを確認してください。
 
 5. F1 ホットキーが効かない  
@@ -619,7 +620,7 @@ URDF とメッシュのリクエストが `200` を返しているか確認し�
 スクリプトが `dev.grab()` を使用していないことを確認してください（排他的なキーボードキャプチャは削除する必要があります）。
 
 7. 2 台目のアーム接続に失敗する  
-以前の接続が完全に解放されていることを確認し、再接続の前に disconnect を呼び出してください。
+前の接続が完全に解放されていることを確認し、再接続の前に切断を呼び出してください。
 
 ## 9. 参考資料
 
@@ -631,7 +632,7 @@ URDF とメッシュのリクエストが `200` を返しているか確認し�
 
 ## 10. 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択できるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -12,19 +12,19 @@ last_update:
   author: Youjiang
 createdAt: '2026-05-18'
 updatedAt: '2026-05-18'
-url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
+url: https://wiki.seeedstudio.com/pt-br/rebot_arm_jetson_bundle/
 ---
 
-# reBot Arm B601 × NVIDIA Jetson Getting Started
+# Introdução ao reBot Arm B601 × NVIDIA Jetson
 
-## Introduction
+## Introdução
 
-An All-in-One Embodied AI Development Platform for the New Era of Physical AI.
-As generative AI evolves from simply “understanding the world” to actively “interacting with the world,” robotics development is entering a new era: Physical AI.
-To help developers, researchers, and educators accelerate their journey into Embodied AI, Seeed Studio combines the fully open-source reBot Arm B601 with the cutting-edge NVIDIA Jetson Developer Kit to create a powerful next-generation robotics development bundle.
+Uma plataforma de desenvolvimento de IA incorporada tudo-em-um para a nova era da IA Física.
+À medida que a IA generativa evolui de simplesmente “entender o mundo” para “interagir com o mundo” ativamente, o desenvolvimento em robótica está entrando em uma nova era: IA Física.
+Para ajudar desenvolvedores, pesquisadores e educadores a acelerar sua jornada em IA incorporada, a Seeed Studio combina o reBot Arm B601 totalmente open source com o avançado NVIDIA Jetson Developer Kit para criar um poderoso bundle de desenvolvimento de robótica de próxima geração.
 
-This bundle delivers not only precise robotic manipulation capabilities, but also the massive AI computing power required for running multimodal AI models, vision-language models (VLMs), and real-time robotic inference locally at the edge.
-It is a complete platform for building the next wave of intelligent robots — from learning and research to rapid prototyping and deployment.
+Este bundle oferece não apenas capacidades precisas de manipulação robótica, mas também o enorme poder de computação de IA necessário para executar modelos de IA multimodal, modelos visão-linguagem (VLMs) e inferência robótica em tempo real localmente na borda.
+É uma plataforma completa para construir a próxima onda de robôs inteligentes — desde aprendizado e pesquisa até prototipagem rápida e implantação.
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
@@ -53,22 +53,22 @@ It is a complete platform for building the next wave of intelligent robots — f
     <tr>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/quick_start.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/reComputer_J30_40_with_Jetson_getting_start/">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Quick Start </font></span></strong>
+                <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Início Rápido </font></span></strong>
                 </a>
             </div>
         </td>
@@ -77,21 +77,21 @@ It is a complete platform for building the next wave of intelligent robots — f
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J3011-p-5590.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -100,41 +100,41 @@ It is a complete platform for building the next wave of intelligent robots — f
 </div>
 
 :::danger
-Here, we use the NVIDIA Jetson Thor as an example to demonstrate how to quickly control the reBot Arm B601 robotic arm with Jetson. You can also choose other Jetson devices based on your specific needs.
+Aqui, usamos o NVIDIA Jetson Thor como exemplo para demonstrar como controlar rapidamente o braço robótico reBot Arm B601 com o Jetson. Você também pode escolher outros dispositivos Jetson com base em suas necessidades específicas.
 :::
 
-## Why This Bundle?
+## Por que este bundle?
 
-A Complete Embodied AI Development Platform
+Uma plataforma completa de desenvolvimento de IA incorporada
 
-Traditional robotics development often comes with several limitations:
+O desenvolvimento tradicional em robótica geralmente apresenta várias limitações:
 
-1. Closed hardware ecosystems
-2. Insufficient AI computing power
-3. Fragmented software stacks
-4. High development barriers
-5. Difficulty validating real-world Physical AI scenarios
+1. Ecossistemas de hardware fechados
+2. Poder de computação de IA insuficiente
+3. Pilhas de software fragmentadas
+4. Altas barreiras de desenvolvimento
+5. Dificuldade em validar cenários reais de IA Física
 
-The reBot Arm × Jetson Bundle is designed to solve these challenges.
+O reBot Arm × Jetson Bundle foi projetado para resolver esses desafios.
 
-With this bundle, you get:
+Com este bundle, você obtém:
 
-1. A fully open-source 6+1 DoF robotic arm platform
-2. NVIDIA’s flagship edge AI computing platform powered by GPU
-3. Native support for ROS1, ROS2, Isaac Sim, and LeRobot
-4. Ready for multimodal AI and generative AI workflows
-5. A unified environment for education, research, and AI robotics prototyping
+1. Uma plataforma de braço robótico 6+1 DoF totalmente open source
+2. A principal plataforma de computação de IA de borda da NVIDIA, alimentada por GPU
+3. Suporte nativo para ROS1, ROS2, Isaac Sim e LeRobot
+4. Pronto para fluxos de trabalho de IA multimodal e IA generativa
+5. Um ambiente unificado para educação, pesquisa e prototipagem em robótica de IA
 
-## Getting Started
+## Primeiros passos
 
-### Hardware Connection
+### Conexão de hardware
 
-1. Refer to [this guide](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) to assemble the robotic arm.
-2. Use a USB-to-CAN adapter to connect the robotic arm to the NVIDIA Jetson via the Type-C interface.
+1. Consulte [este guia](https://wiki.seeedstudio.com/pt-br/rebot_b601_dm_getting_started/) para montar o braço robótico.
+2. Use um adaptador USB-para-CAN para conectar o braço robótico ao NVIDIA Jetson pela interface Type-C.
 
-### One-Click Install Arm Driver
+### Instalar driver do braço com um clique
 
-Open the terminal window on the Jetson and run the following command.
+Abra a janela do terminal no Jetson e execute o seguinte comando.
 
 ```bash
 uv pip install motorbridge
@@ -147,20 +147,20 @@ uv pip install motorbridge
 
 ### WebUI
 
-run this command on Nvidia Jetson:
+Execute este comando no Nvidia Jetson:
 
 ```bash
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see the following page. From this interface, you can adjust motor parameters, check the status of the robotic arm, and perform other operations.
+Em seguida, abra `https://rebot-devarm.w0x7ce.eu/` no seu navegador, e você verá a seguinte página. A partir dessa interface, você pode ajustar parâmetros do motor, verificar o status do braço robótico e realizar outras operações.
 
 <div align="center">
     <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/webui.png" />
 </div>
 
-## Application
+## Aplicação
 
 <div
     style={{
@@ -171,7 +171,7 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
     }}
 >
     <a
-        href="/rebot_arm_b601_dm_lerobot/"
+        href="/pt-br/rebot_arm_b601_dm_lerobot/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -192,12 +192,12 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Getting Started with reBot Arm B601-DM in LeRobot
+                Primeiros passos com o reBot Arm B601-DM no LeRobot
             </h3>
         </div>
     </a>
     <a
-        href="/rebot_arm_b601_dm_grasping_demo/"
+        href="/pt-br/rebot_arm_b601_dm_grasping_demo/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -218,12 +218,12 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                reBot Arm B601-DM Visual Grasping Demo
+                Demo de apreensão visual do reBot Arm B601-DM
             </h3>
         </div>
     </a>
     <a
-        href="/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+        href="/pt-br/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
             textDecoration: 'none',
             color: 'inherit',
@@ -244,15 +244,15 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
         </div>
         <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Control reBot Arm with NemoClaw on Nvidia Jetson Thor
+                Controle o reBot Arm com NemoClaw no Nvidia Jetson Thor
             </h3>
         </div>
     </a>
 </div>
 
-## Tech Support & Product Discussion
+## Suporte técnico e discussão sobre o produto
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
