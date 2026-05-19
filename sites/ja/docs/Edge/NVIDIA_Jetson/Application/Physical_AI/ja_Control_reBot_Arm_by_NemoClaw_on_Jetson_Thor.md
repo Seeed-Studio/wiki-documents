@@ -1,47 +1,46 @@
 ---
-description: This article explains how to deploy NVIDIA’s NemoClaw/OpenClaw agent framework on Nvidia Jetson Thor and integrate the reBot Arm B601 robotic arm to build a local AI automation system combining visual perception, LLM reasoning, and robotic execution. It provides a complete setup guide covering hardware connections, NemoClaw and Ollama installation, robotic arm backend configuration, permission management, systemd auto-start services, and troubleshooting.
-title: Control Rebot Arm with NemoClaw on Nvidia Jetson Thor
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg
+description: この記事では、NVIDIA の NemoClaw/OpenClaw エージェントフレームワークを Nvidia Jetson Thor 上にデプロイし、reBot Arm B601 ロボットアームを統合して、視覚認識・LLM 推論・ロボット実行を組み合わせたローカル AI オートメーションシステムを構築する方法を説明します。ハードウェア接続、NemoClaw と Ollama のインストール、ロボットアームのバックエンド設定、権限管理、systemd 自動起動サービス、およびトラブルシューティングを含む、完全なセットアップガイドを提供します。
+title: Nvidia Jetson Thor 上の NemoClaw で Rebot Arm を制御する
 slug: /control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor
 sku: 100060965 | 100046482
 last_update:
   date: 05/18/2026
   author: youjiang
 createdAt: '2026-05-18'
-url: https://wiki.seeedstudio.com/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/
+url: https://wiki.seeedstudio.com/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/
 updatedAt: '2026-05-18'
 ---
 
-# Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor
+# Nvidia Jetson Thor 上の NemoClaw で reBot Arm B601 を制御する
 
-## 1. Project Overview
+## 1. プロジェクト概要
 
-NVIDIA `NemoClaw` is an open-source reference stack that simplifies running OpenClaw always-on assistants more safely.  This wiki explains how to deploy NemoClaw on Jetson Thor and connect `reBot Arm B601` capabilities into the NemoClaw agent workflow, forming a closed loop of: semantic understanding + visual detection + robotic execution.
+NVIDIA の `NemoClaw` は、OpenClaw の常時稼働アシスタントをより安全かつ簡単に実行するためのオープンソース・リファレンススタックです。本 Wiki では、Jetson Thor 上に NemoClaw をデプロイし、`reBot Arm B601` の機能を NemoClaw エージェントのワークフローに接続して、「意味理解 + 画像認識 + ロボット実行」のクローズドループを構成する方法を説明します。
 
-- `NemoClaw`: Local agent/control framework for task orchestration and command routing.
-- `Nemotron3`: Optional model capability for intent understanding and high-level decision making.
-- `Nvidia Jetson Thor`: Local compute platform for inference, backend services, and device drivers.
-- `reBot Arm B601`: robotic arm for grasping and placement.
+- `NemoClaw`: タスクのオーケストレーションとコマンドルーティングのためのローカルエージェント／制御フレームワーク。
+- `Nemotron3`: インテント理解と高レベル意思決定のためのオプションのモデル機能。
+- `Nvidia Jetson Thor`: 推論、バックエンドサービス、デバイスドライバ用のローカルコンピュートプラットフォーム。
+- `reBot Arm B601`: 把持および配置を行うロボットアーム。
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/overview.png" />
 </div>
 
-## 2. Hardware Requirements
+## 2. ハードウェア要件
 
-- Nvidia Jetson Thor (JetPack 7.x installed)
+- Nvidia Jetson Thor（JetPack 7.x インストール済み）
 - [reBot Arm B601 DM](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
-- [USB-to-CAN adapter](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
-- USB camera
-- Power supply and USB cable for the robotic arm
-- USB button (optional)
+- [USB-to-CAN アダプタ](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
+- USB カメラ
+- ロボットアーム用の電源および USB ケーブル
+- USB ボタン（オプション）
 
 <div class="table-center">
 <table style={{ textAlign: 'center' }}>
     <tr>
         <th> NVIDIA® Jetson AGX Thor™ Developer Kit </th>
-        <th> SO-ARM101 Low-Cost AI Arm </th>
+        <th> SO-ARM101 低コスト AI アーム </th>
     </tr>
     <tr>
         <td>
@@ -59,14 +58,14 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
@@ -74,10 +73,10 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
 </table>
 </div>
 
-## 3. Hardware Connection
+## 3. ハードウェア接続
 
-1. Assemble and configure the robotic arm.
-2. Connect the USB-to-CAN adapter, USB camera, and robotic arm to Jetson Thor USB Type-A ports.
+1. ロボットアームを組み立てて設定します。
+2. USB-to-CAN アダプタ、USB カメラ、およびロボットアームを Jetson Thor の USB Type-A ポートに接続します。
 
 <div align="center">
     <img width={900} 
@@ -85,28 +84,28 @@ NVIDIA `NemoClaw` is an open-source reference stack that simplifies running Open
 </div>
 
 :::info
-Jetson devices may only provide two USB Type-A ports. Use a USB hub if you need more ports.
+Jetson デバイスは USB Type-A ポートを 2 つしか備えていない場合があります。より多くのポートが必要な場合は USB ハブを使用してください。
 :::
 
-After power-on, verify devices:
+電源投入後、デバイスを確認します：
 
 ```bash
 ls /dev/ttyACM*
 ls /dev/video*
 ```
 
-If everything is connected correctly, you should see output similar to:
+すべて正しく接続されていれば、次のような出力が表示されます：
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/check_device.png" />
 </div>
 
-## 4. System and Dependency Setup
+## 4. システムおよび依存関係のセットアップ
 
-### 4.1 Install Ollama
+### 4.1 Ollama のインストール
 
-If local LLM capability is needed (optional):
+ローカル LLM 機能が必要な場合（オプション）：
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
@@ -118,18 +117,18 @@ ollama pull nemotron3:33b
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/download_llm.png" />
 </div>
 
-### 4.2 Install NemoClaw
+### 4.2 NemoClaw のインストール
 
-Install NemoClaw on Jetson:
+Jetson に NemoClaw をインストールします：
 
 ```bash
 curl -fsSL https://www.nvidia.com/nemoclaw.sh | bash
 ```
 
-Then run `nemoclaw onboard` to create a new app. A sample interactive onboarding log is shown in:
+その後、`nemoclaw onboard` を実行して新しいアプリを作成します。対話的なオンボーディングログの一例は次を参照してください：
 
 <details>
-<summary> nemoclaw onboard log </summary>
+<summary> nemoclaw onboard ログ </summary>
 
 ```bash
 seeed@seeed:~$ nemoclaw onboard --no-gpu
@@ -419,19 +418,19 @@ seeed@seeed:~$
 ```
 </details>
 
-Considering that we may need to access services deployed on the host machine from within the NeMoClaw container in the future, please execute the following command to configure the network access for this application.
+将来的に NeMoClaw コンテナ内からホストマシン上にデプロイされたサービスへアクセスする必要があることを考慮し、このアプリケーションのネットワークアクセスを構成するために、次のコマンドを実行してください。
 
 ```bash
 nemoclaw my-assistant policy-add --from-file ~/rebot_arm_service/host-camera.yaml --yes
 ```
 
-If onboarding succeeds, run:
+オンボーディングが成功したら、次を実行します：
 
 ```bash
 nemoclaw my-assistant connect
 ```
 
-You should enter a working OpenClaw app environment:
+動作している OpenClaw アプリ環境に入るはずです：
 
 <div align="center">
     <img width={900} 
@@ -439,13 +438,13 @@ You should enter a working OpenClaw app environment:
 </div>
 
 :::info
-More NemoClaw CLI details:
+NemoClaw CLI の詳細はこちら：
 https://docs.nvidia.com/nemoclaw/latest/reference/cli-selection-guide.html
 :::
 
-### 4.3 Install Robotic Arm Service
+### 4.3 ロボットアームサービスのインストール
 
-Run on Jetson:
+Jetson 上で実行：
 
 ```bash
 git clone https://github.com/yuyoujiang/rebot_arm_service.git ~
@@ -462,17 +461,17 @@ python -c "import torch; print(torch.cuda.is_available())"
 </div>
 
 
-## 5. Device Permission Setup
+## 5. デバイス権限の設定
 
-There are two ways to setpu the device permission.
+デバイス権限を設定する方法は 2 つあります。
 
-1. Temporary permission (lost after reboot):
+1. 一時的な権限（再起動後に失われます）：
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
 ```
 
-2. Persistent udev rule (recommended):
+2. 永続的な udev ルール（推奨）：
 
 ```bash
 echo 'SUBSYSTEM=="tty", KERNEL=="ttyACM0", MODE:="0666", GROUP:="dialout"' | sudo tee /etc/udev/rules.d/99-rebot-arm.rules
@@ -480,9 +479,9 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-## 6. Start Services
+## 6. サービスの起動
 
-### 6.1 Start Robotic Arm Backend
+### 6.1 ロボットアームバックエンドの起動
 
 ```bash
 cd ~/rebot_arm_service
@@ -490,39 +489,39 @@ export REBOT_CAMERA_DEVICE_INDEX=0
 uv run rebot-arm-service
 ```
 
-Access:
+アクセス：
 - WebUI: `http://127.0.0.1:8000/webui`
-- Health check: `http://127.0.0.1:8000/healthz`
+- ヘルスチェック: `http://127.0.0.1:8000/healthz`
 
 <div align="center">
     <img width={900} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
-### 6.2 Start Keyboard Listener (Optional)
+### 6.2 キーボードリスナーの起動（オプション）
 
-To quickly trigger detection/grasp (without waiting for long agent reasoning), use the F1 hotkey listener.  
-When F1 is pressed, it automatically requests the grasp mission endpoint.
+検出／把持を素早くトリガーするため（エージェントの長い推論を待たずに）、F1 ホットキーリスナーを使用します。  
+F1 が押されると、自動的に把持ミッションのエンドポイントへリクエストを送信します。
 
-Run directly:
+直接実行：
 
 ```bash
 cd ~/rebot_arm_service
 sudo ./.venv/bin/python scripts/space_mission_listener_evdev.py
 ```
 
-Or via script:
+スクリプト経由：
 
 ```bash
 cd ~/rebot_arm_service
 ./scripts/start_space_listener_evdev.sh
 ```
 
-### 6.3 Enable Auto-Start at Boot (Optional)
+### 6.3 起動時の自動開始を有効化（オプション）
 
-Configure two systemd services:
+2 つの systemd サービスを構成します：
 
-- `rebot-arm.service`: backend service
+- `rebot-arm.service`: バックエンドサービス
 
 <details>
 <summary> /etc/systemd/system/rebot-arm.service </summary>
@@ -548,7 +547,7 @@ WantedBy=multi-user.target
 ```
 </details>
 
-- `rebot-f1-listener.service`: F1 hotkey trigger
+- `rebot-f1-listener.service`: F1 ホットキートリガー
 
 <details>
 <summary> /etc/systemd/system/rebot-f1-listener.service </summary>
@@ -576,10 +575,10 @@ WantedBy=multi-user.target
 </details>
 
 :::danger
-Please modify the path in the configuration file before starting the service.
+サービスを起動する前に、設定ファイル内のパスを必ず修正してください。
 :::
 
-Management commands:
+管理コマンド：
 
 ```bash
 sudo systemctl daemon-reload
@@ -588,51 +587,51 @@ systemctl status rebot-arm.service
 sudo systemctl status rebot-f1-listener.service
 ```
 
-Logs:
+ログ：
 
 ```bash
 journalctl -u rebot-arm.service -f
 sudo journalctl -u rebot-f1-listener.service -f
 ```
 
-## 7. Feature Demo
+## 7. 機能デモ
 
 
 
-## 8. Troubleshooting
+## 8. トラブルシューティング
 
-1. Serial busy (`Device or resource busy`)  
-Stop stale processes, then reconnect. Ensure only one controller process is using the arm.
+1. シリアルがビジー（`Device or resource busy`）  
+古いプロセスを停止してから再接続してください。1 つのコントローラプロセスだけがアームを使用していることを確認します。
 
-2. Empty WebUI scene  
-Check URDF and mesh requests return `200`, especially `/assets/urdf/...`.
+2. WebUI のシーンが空  
+URDF とメッシュのリクエストが `200` を返しているか確認し、特に `/assets/urdf/...` を確認してください。
 
-3. Detection does not respond  
-Check `camera/status` is `running=true`, then check mission status endpoint.
+3. 検出が反応しない  
+`camera/status` が `running=true` であることを確認し、その後ミッションステータスのエンドポイントを確認します。
 
-4. Torch import fails with missing libs  
-Ensure `LD_LIBRARY_PATH` includes both `nvpl` and `cuda_v12` paths.
+4. ライブラリ不足で Torch の import に失敗する  
+`LD_LIBRARY_PATH` に `nvpl` と `cuda_v12` の両方のパスが含まれていることを確認してください。
 
-5. F1 hotkey has no effect  
-Check `rebot-f1-listener.service` logs and confirm it listens to the correct keyboard device.
+5. F1 ホットキーが効かない  
+`rebot-f1-listener.service` のログを確認し、正しいキーボードデバイスをリッスンしていることを確認してください。
 
-6. Other keyboard keys stop working after listener starts  
-Make sure the script does not use `dev.grab()` (exclusive keyboard capture must be removed).
+6. リスナー起動後に他のキーボードキーが動作しなくなる  
+スクリプトが `dev.grab()` を使用していないことを確認してください（排他的なキーボードキャプチャは削除する必要があります）。
 
-7. Second arm connection fails  
-Ensure previous connection is fully released; call disconnect before reconnecting.
+7. 2 台目のアーム接続に失敗する  
+以前の接続が完全に解放されていることを確認し、再接続の前に disconnect を呼び出してください。
 
-## 9. References
+## 9. 参考資料
 
 - https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/index.html
 - https://github.com/Seeed-Projects/reBot-DevArm
 - https://docs.nvidia.com/nemoclaw/latest/about/overview.html
 - https://docs.openclaw.ai/
-- https://wiki.seeedstudio.com/lerobot_so100m_new/
+- https://wiki.seeedstudio.com/ja/lerobot_so100m_new/
 
-## 10. Tech Support & Product Discussion
+## 10. 技術サポートと製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+弊社製品をお選びいただきありがとうございます。製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択できるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

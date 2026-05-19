@@ -12,13 +12,12 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-22
+  date: 2026-05-18
   author: YinHaizhou
 translation:
-  skip:
-    - [zh-CN]
+  skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-04-22'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -51,13 +50,13 @@ YOLO は広く使われているリアルタイム物体検出モデルのファ
 
 ## プロジェクトの特長
 
-1. **YOLO + OBB による直接的な把持姿勢推定**  
-   パイプラインは検出ボックスまたは OBB の最小外接矩形を直接使用し、短軸をグリッパの開閉方向として扱うことで、複雑な 3D 点群処理を回避します。
+1. **YOLO + OBB からの直接把持姿勢推定**  
+   このパイプラインでは、検出ボックスまたは OBB の最小外接矩形を直接使用し、短軸をグリッパの開閉方向として扱うことで、複雑な 3D 点群処理を回避します。
 
-2. **軽量なロボットアームとグリッパの統合**  
-   主要な把持スクリプトは `RebotArm` インターフェースを再利用し、IK、軌道制御、グリッパのステートマシンを統合しています。
+2. **軽量ロボットアームとグリッパの統合**  
+   メインの把持スクリプトは `RebotArm` インターフェースを再利用し、IK、軌道制御、グリッパのステートマシンを統合しています。
 
-3. **オープンソースかつ拡張可能**  
+3. **オープンソースで拡張可能**  
    すべてのソースコードは公開されており、ユーザーは自分のニーズに応じて制御アルゴリズムや動作をカスタマイズできます。
 
 ## 仕様
@@ -138,7 +137,7 @@ sudo chmod 666 /dev/ttyUSB0
 | オペレーティングシステム | Ubuntu 22.04+ |
 | Python | 3.10 |
 | 推奨環境 | conda |
-| 推奨ワークスペースフォルダ | `rebot_grasp` |
+| 推奨作業フォルダ | `rebot_grasp` |
 | 推奨 conda 環境名 | `rebotarm` |
 
 ## インストール手順
@@ -154,20 +153,16 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### ステップ 2. Python 環境を作成する
+### ステップ 2. conda 環境を作成・設定する
 
 ```bash
-conda create -n rebotarm python=3.10 -y
+conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-### ステップ 3. プロジェクト依存関係をインストールする
+別の環境名を使いたい場合は、コマンド内の `rebotarm` を任意の名前に置き換えてください。
 
-```bash
-pip install -r requirements.txt
-```
-
-### ステップ 4. ロボットアーム SDK をインストールする
+### ステップ 3. ロボットアーム SDK をインストールする
 
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -176,9 +171,9 @@ pip install -e .
 cd ../..
 ```
 
-### ステップ 5. Orbbec Gemini 2 SDK をインストールする
+### ステップ 4. Orbbec Gemini 2 SDK をインストールする
 
-このプロジェクトは `pyorbbecsdk` に依存しています。リポジトリにはデフォルトで `sdk/pyorbbecsdk` は同梱されていないため、`sdk/` 配下に公式リポジトリを自分でクローンするか、別の方法でインストールする必要があります。
+このプロジェクトは `pyorbbecsdk` に依存しています。リポジトリにはデフォルトで `sdk/pyorbbecsdk` が同梱されていないため、`sdk/` 配下に公式リポジトリを自分でクローンするか、別の方法でインストールする必要があります。
 
 ```bash
 sudo apt-get update
@@ -207,14 +202,14 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### ステップ 6. 依存関係を検証する
+### ステップ 5. 依存関係を確認する
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
 python -c "import motorbridge; print('motorbridge OK')"
 ```
 
-Orbbec カメラを初めて使用する場合は、インストールした `pyorbbecsdk` ディレクトリ内で `scripts/install_udev_rules.sh` を実行することを推奨します。そうしないと、カメラが正しくオープンできない可能性があります。
+Orbbec カメラを初めて使用する場合は、インストールした `pyorbbecsdk` ディレクトリ内で `scripts/install_udev_rules.sh` を実行することを推奨します。そうしないと、カメラが正しくオープンできない場合があります。
 
 ## ハンドアイキャリブレーション
 
@@ -232,15 +227,15 @@ calibration:
     marker_length_m: 0.1
 ```
 
-自動モードでは、アームが 50 個のプリセット姿勢を走査し、ArUco マーカーが安定して検出されたタイミングでサンプルを記録します。途中で `c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
+自動モードでは、アームが 50 個のプリセット姿勢を走査し、ArUco マーカーが安定して検出されたタイミングでサンプルを記録します。途中で `c` や `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
 
-収集中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
+サンプリング中にロボットアームを手動で動かしたい場合は、マニュアルモードを使用します：
 
 ```bash
 python scripts/collect_handeye_eih.py --manual
 ```
 
-マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視点に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了および結果の計算を行います。
+マニュアルモードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視野角に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了し結果を計算します。
 
 キャリブレーション結果は次の場所に保存されます：
 
@@ -250,12 +245,12 @@ config/calibration/orbbec_gemini2/hand_eye.npz
 
 推奨サンプル数：
 
-- 最低：5 サンプル
+- 最小：5 サンプル
 - 推奨：少なくとも 15 サンプル
 
 ## 実行とデバッグ
 
-### 1. 物体検出のみを検証する
+### 1. 物体検出のみを確認する
 
 ```bash
 python scripts/object_detection.py
@@ -278,9 +273,9 @@ yolo:
 
 - カメラが正しくオープンできているか
 - YOLO モデルが正しくロードされているか
-- YOLO 物体検出が期待どおりに動作しているか
+- YOLO の物体検出が期待どおりに動作しているか
 
-### 2. 把持推定のみを検証する
+### 2. 把持推定のみを確認する
 
 ```bash
 python scripts/ordinary_grasp_pipeline.py
@@ -296,16 +291,16 @@ grasp_pipeline:
     pregrasp_offset_m: 0.080
 ```
 
-このスクリプトはロボットアームには接続しません。次の点を検証するためだけに使用します：
+このスクリプトはロボットアームには接続しません。次の点を確認するためだけに使用します：
 
 - OBB または最小外接矩形が妥当かどうか
-- 把持点がターゲットの中心付近に位置しているかどうか
-- 短軸方向が期待されるグリッパ開閉方向と一致しているかどうか
+- 把持点がターゲットの中心付近にあるかどうか
+- 短軸方向が期待するグリッパ開閉方向と一致しているかどうか
 
-主な操作キー：
+主な操作：
 
 - 左クリック：選択したピクセルの深度を確認
-- `G`: 現在の最良把持姿勢を表示
+- `G`: 現在の最良把持姿勢を出力
 - `Q` / `Esc`: 終了
 
 ### 3. メインの把持プログラムを実行する
@@ -320,9 +315,9 @@ python scripts/main.py
 python scripts/main.py --dry-run
 ```
 
-実際の把持を行う前に、まず `--dry-run` で姿勢と到達可能な作業空間を検証することを推奨します。
+実際に把持を行う前に、まず `--dry-run` で姿勢と到達可能な作業空間を検証することを推奨します。
 
-`reBotArm_control_py` がデフォルトの場所にない場合は、`config/default.yaml` で指定します：
+`reBotArm_control_py` がデフォルトの場所にない場合は、`config/default.yaml` で指定してください：
 
 ```yaml
 robot:
@@ -333,8 +328,8 @@ robot:
 
 メインプログラムの流れ：
 
-1. ロボットアームとグリッパを初期化する
-2. レディ姿勢へ移動する。起動時のレディ姿勢を変更したい場合は、`config/default.yaml` を編集します：
+1. ロボットアームとグリッパを初期化
+2. レディ姿勢へ移動します。起動時のレディ姿勢を変更したい場合は、`config/default.yaml` を編集します：
 
 ```yaml
 robot:
@@ -347,9 +342,9 @@ robot:
     duration: 3.0
 ```
 
-3. テーブル上のターゲットをリアルタイムに検出する
-4. 短軸から把持姿勢を推定する
-5. `G` を押して現在のフレームをキャプチャし、把持を実行する
+3. テーブルトップ上のターゲットをリアルタイムに検出
+4. 短軸から把持姿勢を推定
+5. `G` を押して現在のフレームをキャプチャし、把持を実行
 
 実行時のキー操作：
 
@@ -365,7 +360,7 @@ robot:
 
 ```bash
 conda activate rebotarm
-pip install -r requirements.txt
+conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
@@ -375,7 +370,7 @@ cd sdk/reBotArm_control_py && pip install -e .
 
 - `hand_eye.npz` が存在しない
 - ハンドアイキャリブレーションモードが `eye_in_hand` になっていない
-- ターゲット姿勢が IK によって到達可能ではない
+- ターゲット姿勢が IK で到達可能ではない
 
 次を実行することを推奨します：
 
@@ -393,7 +388,7 @@ python scripts/main.py --dry-run
 
 ## お問い合わせ
 
-- 技術サポート: [Submit an Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
+- 技術サポート: [Issue を送信](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
 - プロジェクトページ: [GitHub](https://github.com/EclipseaHime017/reBot-DevArm-Grasp)
 - フォーラム: [Seeed Studio Forum](https://forum.seeedstudio.com/)
 
