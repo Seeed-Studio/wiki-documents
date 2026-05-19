@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 # reBot Arm B601 × NVIDIA Jetson 入门指南
 
 ## 介绍
+
 面向物理智能新时代的一体化具身智能开发平台。
 随着生成式 AI 从单纯“理解世界”发展到主动“与世界交互”，机器人开发正迈入一个全新的时代：物理智能（Physical AI）。
 为了帮助开发者、研究人员和教育工作者加速迈入具身智能领域，Seeed Studio 将完全开源的 reBot Arm B601 与前沿的 NVIDIA Jetson 开发套件相结合，打造出强大的下一代机器人开发套装。
@@ -103,9 +104,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 :::
 
 ## 为什么选择这个套装？
+
 一个完整的具身智能开发平台
 
 传统的机器人开发通常存在以下几个限制：
+
 1. 封闭的硬件生态系统
 2. 不足的 AI 计算能力
 3. 支离破碎的软件栈
@@ -115,6 +118,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_jetson_bundle/
 reBot Arm × Jetson 套装正是为了解决这些挑战而设计的。
 
 通过这个套装，你将获得：
+
 1. 一个完全开源的 6+1 自由度机械臂平台
 2. 由 GPU 提供动力的 NVIDIA 旗舰边缘 AI 计算平台
 3. 对 ROS1、ROS2、Isaac Sim 和 LeRobot 的原生支持
@@ -124,6 +128,7 @@ reBot Arm × Jetson 套装正是为了解决这些挑战而设计的。
 ## 入门指南
 
 ### 硬件连接
+
 1. 参考[本指南](https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/)组装机械臂。
 2. 使用 USB 转 CAN 适配器，通过 Type-C 接口将机械臂连接到 NVIDIA Jetson。
 
@@ -136,10 +141,9 @@ uv pip install motorbridge
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/install_driver.png" />
 </div>
-
 
 ### WebUI
 
@@ -152,11 +156,12 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
 然后在浏览器中打开 `https://rebot-devarm.w0x7ce.eu/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态并执行其他操作。
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/webui.png" />
 </div>
 
 ## 应用
+
 <div
     style={{
         display: 'grid',
@@ -165,8 +170,8 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         marginTop: '24px'
     }}
 >
-
-    <a [LINE_169]        href="/cn/rebot_arm_b601_dm_lerobot/"
+    <a
+        href="/cn/rebot_arm_b601_dm_lerobot/"
         style={{
         textDecoration: 'none',
             color: 'inherit',
@@ -177,83 +182,79 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
             }}
-        >
-    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-            </div>
+            />
+        </div>
         <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-            在 LeRobot 中使用 reBot Arm B601-DM 入门
-                </h3>
-            </div>
-        </a>
-
-    <a [LINE_196]        href="/cn/rebot_arm_b601_dm_grasping_demo/"
-    style={{
-        textDecoration: 'none',
-        color: 'inherit',
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                在 LeRobot 中使用 reBot Arm B601-DM 入门
+            </h3>
+        </div>
+    </a>
+    <a
+        href="/cn/rebot_arm_b601_dm_grasping_demo/"
+        style={{
+            textDecoration: 'none',
+            color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-            >
+        }}
+    >
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-    <img
-        src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-            alt="Visual Grasping Demo for reBot Arm B601-DM"
+            <img
+                src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
+                alt="Visual Grasping Demo for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
                 />
-                </div>
-            <div style={{padding: '18px'}}>
-        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-        reBot Arm B601-DM 视觉抓取演示
+        </div>
+        <div style={{padding: '18px'}}>
+            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+                reBot Arm B601-DM 视觉抓取演示
             </h3>
-                </div>
-            </a>
-
-    <a [LINE_223]        href="/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+        </div>
+    </a>
+    <a
+        href="/cn/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
-    textDecoration: 'none',
-        color: 'inherit',
-        border: '1px solid #d9d9d9',
+            textDecoration: 'none',
+            color: 'inherit',
+            border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-            }}
-            >
-            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-        <img
-    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-        alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
-            style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-                />
-                </div>
-                <div style={{padding: '18px'}}>
+        }}
+    >
+        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+            <img
+                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+                alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
+                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+            />
+        </div>
+        <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-        在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm
-        </h3>
-            </div>
-                </a>
-            </div>
-
+                在 Nvidia Jetson Thor 上使用 NemoClaw 控制 reBot Arm
+            </h3>
+        </div>
+    </a>
+</div>
 
 ## 技术支持与产品讨论
 
 感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>

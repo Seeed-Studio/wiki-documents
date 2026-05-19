@@ -18,6 +18,7 @@ url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
 # reBot Arm B601 × NVIDIA Jetson Getting Started
 
 ## Introduction
+
 An All-in-One Embodied AI Development Platform for the New Era of Physical AI.
 As generative AI evolves from simply “understanding the world” to actively “interacting with the world,” robotics development is entering a new era: Physical AI.
 To help developers, researchers, and educators accelerate their journey into Embodied AI, Seeed Studio combines the fully open-source reBot Arm B601 with the cutting-edge NVIDIA Jetson Developer Kit to create a powerful next-generation robotics development bundle.
@@ -103,9 +104,11 @@ Here, we use the NVIDIA Jetson Thor as an example to demonstrate how to quickly 
 :::
 
 ## Why This Bundle?
+
 A Complete Embodied AI Development Platform
 
 Traditional robotics development often comes with several limitations:
+
 1. Closed hardware ecosystems
 2. Insufficient AI computing power
 3. Fragmented software stacks
@@ -115,6 +118,7 @@ Traditional robotics development often comes with several limitations:
 The reBot Arm × Jetson Bundle is designed to solve these challenges.
 
 With this bundle, you get:
+
 1. A fully open-source 6+1 DoF robotic arm platform
 2. NVIDIA’s flagship edge AI computing platform powered by GPU
 3. Native support for ROS1, ROS2, Isaac Sim, and LeRobot
@@ -124,6 +128,7 @@ With this bundle, you get:
 ## Getting Started
 
 ### Hardware Connection
+
 1. Refer to [this guide](https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/) to assemble the robotic arm.
 2. Use a USB-to-CAN adapter to connect the robotic arm to the NVIDIA Jetson via the Type-C interface.
 
@@ -136,10 +141,9 @@ uv pip install motorbridge
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/install_driver.png" />
 </div>
-
 
 ### WebUI
 
@@ -152,11 +156,12 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
 Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see the following page. From this interface, you can adjust motor parameters, check the status of the robotic arm, and perform other operations.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/webui.png" />
 </div>
 
 ## Application
+
 <div
     style={{
         display: 'grid',
@@ -165,7 +170,6 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
         marginTop: '24px'
     }}
 >
-
     <a
         href="/rebot_arm_b601_dm_lerobot/"
         style={{
@@ -192,7 +196,6 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
             </h3>
         </div>
     </a>
-
     <a
         href="/rebot_arm_b601_dm_grasping_demo/"
         style={{
@@ -219,7 +222,6 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
             </h3>
         </div>
     </a>
-
     <a
         href="/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
         style={{
@@ -247,7 +249,6 @@ Then, Open `https://rebot-devarm.w0x7ce.eu/` in your browser, and you will see t
         </div>
     </a>
 </div>
-
 
 ## Tech Support & Product Discussion
 
