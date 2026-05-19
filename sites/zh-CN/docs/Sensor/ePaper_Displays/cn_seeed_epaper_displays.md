@@ -288,7 +288,7 @@ Seeed Studio 提供端到端的 ePaper 产品组合，围绕三个产品线进�
 ### 智能家居与仪表盘框架
 
 - [搭配 ESPHome 使用](https://wiki.seeedstudio.com/cn/epaper_work_with_esphome) — 主要参考：刷机路径、通用 YAML 模板、Home Assistant 集成。按产品划分的实战手册：[reTerminal E（基础）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)、[reTerminal E（进阶）](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/cn/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_esphome)。
-- [搭配 TRMNL 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl) — 通过 TRMNL 云平台部署电子墨水仪表盘。单篇文章现已覆盖 reTerminal E1001/E1002、TRMNL DIY Kit 和 XIAO 7.5" 电子纸面板——在标签页中选择你的硬件即可。</td>
+- [搭配 TRMNL 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl) — 通过 TRMNL 云平台部署电子墨水仪表盘。单篇文章现已覆盖 reTerminal E1001/E1002、TRMNL DIY Kit 和 XIAO 7.5" 电子纸面板——在标签页中选择你的硬件即可。
 
 ### 零代码 / 可视化 UI 设计工具
 
