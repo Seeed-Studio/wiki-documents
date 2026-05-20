@@ -1,5 +1,5 @@
 ---
-description: XIAO ePaper Driver Board (EE0x) ファミリ向け PlatformIO クックブック - ハードウェア概要、プロジェクトのブートストラップ、ライブラリ設定、および ESP32-S3 上でのエンドツーエンドのプログラミング。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
+description: XIAO ePaper Driver Board (EE0x) ファミリ向け PlatformIO クックブック - ハードウェア概要、プロジェクトのブートストラップ、ライブラリ設定、ESP32-S3 へのエンドツーエンドの書き込みまでを解説します。EE04 を動作例として使用しますが、EE02 / EE03 / EE05 も同じワークフローを共有します。
 title: PlatformIO クックブック
 keywords:
   - 電子ペーパーディスプレイ
@@ -19,31 +19,32 @@ last_update:
   author: Zeller
 createdAt: '2025-10-09'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/ja/ee04_with_platformio/
 ---
 
 # PlatformIO クックブック: XIAO ePaper Driver Boards (EE0x)
 
 :::tip このクックブックは EE0x ファミリ全体をカバーします
-**EE02 / EE03 / EE04 / EE05** に適用できます。4 つのボードはいずれも同じ XIAO ESP32-S3 ベースと同じ `Seeed_GFX` ドライバパイプラインを共有しているため、プロジェクト設定、ライブラリ一覧、コードパターンはすべて同一です。ボード間で変わる唯一の点は、`driver.h` 用の [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) で選択する `BOARD_SCREEN_COMBO` の値だけです。
+**EE02 / EE03 / EE04 / EE05** に適用できます。4 つのボードはいずれも同じ XIAO ESP32-S3 をベースにし、同じ `Seeed_GFX` ドライバパイプラインを共有しているため、プロジェクト設定、ライブラリ一覧、コードパターンはすべて同一です。ボード間で変わる唯一の点は、`driver.h` 用の [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) で選択する `BOARD_SCREEN_COMBO` の値だけです。
 
-**動作例: EE04 + 7.5 インチ 800×480 モノクロ電子ペーパースクリーン。** `driver.h` 内のボード + スクリーンの組み合わせを自分のものに置き換えれば、残りのワークフロー（ボタン GPIO、バッテリ ADC、ダッシュボード UI、ボタンドリブンのページ切り替え）はそのまま引き継がれます。
+**動作例: EE04 + 7.5 インチ 800×480 モノクロ電子ペーパースクリーン。** `driver.h` 内のボード + スクリーンの組み合わせを自分のものに置き換えれば、残りのワークフロー（ボタン GPIO、バッテリー ADC、ダッシュボード UI、ボタン操作によるページ切り替え）はそのまま流用できます。
 :::
 
 :::note Arduino を使いたい場合はこちら
-このクックブックは **PlatformIO 専用** です。より一般的なパスである **Arduino IDE** を使いたい場合は、プラットフォームレベルのガイドとして **[Work with Arduino](/ja/epaper_work_with_arduino)** を、EE0x ボードにも適用できるハードウェアレベルの例として [reTerminal E シリーズ Arduino クックブック](/ja/reterminal_e10xx_with_arduino) を参照してください（Configuration Tool が正しい `driver.h` を生成します）。
+このクックブックは **PlatformIO 専用** です。より一般的なパスである **Arduino IDE** を使いたい場合は、プラットフォームレベルのガイドとして **[Work with Arduino](/ja/epaper_work_with_arduino)**、表示レンダリングの例として [reTerminal E シリーズ — ePaper Display クックブック](/ja/reterminal_e10xx_with_arduino)、ハードウェアレベルの例（LED、ブザー、ボタン、SHT4x、バッテリー、microSD）として [reTerminal E シリーズ — Onboard Peripherals クックブック](/ja/reterminal_e10xx_with_arduino_peripherals) を参照してください。これらは EE0x ボードにも適用できます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
-## PlatformIO の紹介
+## PlatformIO の概要
 
-PlatformIO は、組み込みシステム向けに設計された強力かつ高い拡張性を備えた開発エコシステムです。多数の開発ボードやマイコンをシームレスにサポートし、比類ない柔軟性を提供します。PlatformIO を際立たせているのは、その優れたスケーラビリティです。特定のボードがネイティブサポートされていない場合でも、そのアーキテクチャによりカスタムボード定義を容易に追加できます。
+PlatformIO は、組み込みシステム向けに設計された強力かつ高い拡張性を備えた開発エコシステムです。多数の開発ボードやマイコンをシームレスにサポートし、比類ない柔軟性を提供します。PlatformIO を際立たせているのは、その優れたスケーラビリティです。たとえあなたのボードがネイティブサポートされていなくても、そのアーキテクチャにより、カスタムボード定義を簡単に追加できます。
 
-特に、Arduino に慣れた開発者にとっては、関連ライブラリをインクルードするだけで Arduino スタイルのコードをコンパイルおよびデプロイできるため、PlatformIO はそのギャップを埋める存在となります。
+特に重要なのは、Arduino に慣れた開発者にとっての橋渡しとなる点です。関連ライブラリをインクルードするだけで、Arduino スタイルのコードをコンパイルして書き込むことができます。
 
 ### ハードウェアの準備
 
-XIAO ePaper Display Board EE04 と、サポートされているサイズのスクリーンを用意する必要があります。このチュートリアルでは、24 ピン 800×480 7.5 インチの電子ペーパースクリーンを例として使用します。
+XIAO ePaper Display Board EE04 と、サポートされているサイズのスクリーンを用意する必要があります。このチュートリアルでは、例として 24 ピン 800×480 7.5 インチの電子ペーパースクリーンを使用します。
 <div class="table-center">
 <table align="center">
     <tr>
@@ -69,7 +70,7 @@ XIAO ePaper Display Board EE04 と、サポートされているサイズのス�
 
 ### Vscode のダウンロード
 
-使用しているシステムに応じて [Vscode](https://code.visualstudio.com/download) をダウンロードします。
+使用している OS に応じて [Vscode](https://code.visualstudio.com/download) をダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -88,7 +89,7 @@ VSCode を開き、Extensions をクリックして PlatformIO を検索し、�
 - Name: プロジェクト名を入力します。
 - Board: Seeed Studio XIAO ESP32S3 を選択します。
 - Framework: Ardunio を選択します。
-- Location: プロジェクトファイルのパスはカスタムパスを設定するか、デフォルトパスを選択できます。
+- Location: プロジェクトファイルのパスは、カスタムパスを設定するか、デフォルトパスを選択できます。
 - 「Finish」をクリックし、作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
@@ -96,7 +97,7 @@ VSCode を開き、Extensions をクリックして PlatformIO を検索し、�
 ### Seeed GFX ライブラリの追加
 
 :::tip
-このライブラリは TFT ライブラリと同等の機能を持ちますが、互換性はありません。TFT ライブラリやその他の類似したディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
+このライブラリは TFT ライブラリと同等の機能を持ちますが、互換性はありません。TFT ライブラリや、その他の類似したディスプレイライブラリをインストールしている場合は、先にアンインストールしてください。
 :::
 
 ここでは Seeed_GFX ライブラリを使用します。これは、さまざまな Seeed Studio 製ディスプレイデバイスを包括的にサポートします。
@@ -105,15 +106,15 @@ VSCode を開き、Extensions をクリックして PlatformIO を検索し、�
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**Step 2.** 展開したファイルをプロジェクトファイルの `lib` ディレクトリに移動します。
+**Step 2.** 展開したファイルを、プロジェクトの `lib` ディレクトリに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_library_1.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 3.** `driver.h` ファイルを追加します。
+**Step 3.** `driver.h` ファイルを追加します
 
 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
 
@@ -127,7 +128,7 @@ VSCode を開き、Extensions をクリックして PlatformIO を検索し、�
 
 :::tip
 誤った選択をすると、スクリーンには何も表示されません。
-そのため、ご使用のデバイスやコンポーネントの種類を必ず確認してください。
+そのため、デバイスやコンポーネントの種類を必ず確認してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_driver_1.png" style={{width:800, height:'auto'}}/></div>
@@ -138,7 +139,7 @@ VSCode を開き、Extensions をクリックして PlatformIO を検索し、�
 
 ### アップロード
 
-コードを `main.cpp` にコピーし、`Build` をクリックして完了後にアップロードします。
+コードを `main.cpp` にコピーし、`Build` をクリックしてビルドが完了したら、アップロードします。
 
 ```cpp
 #include "TFT_eSPI.h"
@@ -182,9 +183,9 @@ void loop()
 
 ### ユーザーボタン
 
-EE04 には、さまざまな制御用途に使用できる 3 つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduino を使用してボタンの状態を読み取り、ボタン押下に応答する方法を示します。
+EE04 には、さまざまな制御用途に使用できる 3 つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduino を使ってボタン状態を読み取り、ボタン押下に応答する方法を説明します。
 
-EE04 では、3 つのボタンは ESP32-S3 に次のように接続されています。
+EE04 では、3 つのボタンは ESP32-S3 に次のように接続されています:
 
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
@@ -305,8 +306,8 @@ void loop() {
 - **コアロジックの解析**
 
 1. **状態比較による検出**  
-   - 各ボタンの「前回の状態」（例：`lastKey0State`）を記録し、ループ内で「現在の状態」を読み取ります。  
-   - 「現在の状態 ≠ 前回の状態」であれば、ボタンが動作した（押された／離された）ことを示します。
+   - 各ボタンの「前回の状態」（`lastKey0State` など）を記録し、ループ内で「現在の状態」を読み取ります。  
+   - 「現在の状態 ≠ 前回の状態」の場合、ボタンが動作した（押された／離された）ことを示します。
 
 2. **ボタン動作の判定**  
    - 状態が HIGH から LOW に変化したとき：これは「押された」と判定され（"pressed" を出力）、  
@@ -314,9 +315,9 @@ void loop() {
    - 各状態変化の後、「前回の状態」を現在の状態に更新し、次回比較の基準とします。
 
 3. **ループ実行**  
-   - `loop()` 関数は無限ループで動作し、「状態を読む → 状態を比較する → 結果を出力する」という処理を繰り返し実行することで、リアルタイム検出を実現します。
+   - `loop()` 関数は無限ループで動作し、「状態を読む → 状態を比較する → 結果を出力する」という処理を繰り返し実行してリアルタイム検出を実現します。
 
-- 動作例：
+- 効果のデモ：
 
 Serial Monitor でシリアルポートの状態を表示できます。
 
@@ -331,7 +332,7 @@ Serial Monitor でシリアルポートの状態を表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_0.png" style={{width:600, height:'auto'}}/></div><br/>
 
-バッテリー電圧を監視するためのプログラムです。あくまで参考用です。
+バッテリー電圧を監視するためのプログラムです。参考用です。
 
 ```cpp
 #include <Arduino.h>
@@ -394,7 +395,7 @@ void loop() {
 
     - **役割**：プログラム起動時に 1 回だけ実行され、ハードウェアや各種パラメータを設定します。
     - **主な処理**：
-      - `Serial.begin(115200)`：シリアル通信を初期化し（ボーレート 115200）、電圧データを出力できるようにします。
+      - `Serial.begin(115200)`：シリアル通信を初期化し（ボーレート 115200）、電圧データを出力します。
       - `analogReadResolution(12)`：ADC 分解能を 12 ビット（読み取り範囲：0～4095）に設定し、測定精度を高めます。
       - `pinMode(BATTERY_ADC, INPUT)`：バッテリー検出ピン（A0）をアナログ信号入力モードに設定します。
       - `pinMode(ADC_EN, OUTPUT)` と `digitalWrite(ADC_EN, HIGH)`：ADC モジュールを有効化します（低消費電力用途では、測定時のみオンにすることも可能）。
@@ -404,20 +405,20 @@ void loop() {
     - **役割**：初期化後に繰り返し実行され、周期的に電圧を検出して出力します。
     - **主な処理**：
       - `readBatteryVoltage()` を呼び出して現在のバッテリー電圧を取得します。
-      - `Serial.print()`／`Serial.println()` を用いて、電圧値を小数点以下 2 桁（例："Battery Voltage: 3.82 V"）で整形して出力します。
+      - `Serial.print()`／`Serial.println()` を用いて、"Battery Voltage: 3.82 V" のように小数点以下 2 桁でフォーマットした電圧を出力します。
       - `delay(500)`：測定間隔を 0.5 秒に設定します。
 
   - `readBatteryVoltage()`（コア測定関数）
 
-    - **役割**：ADC 信号を読み取り、結果を最適化し、実際の電圧値に変換します。
+    - **役割**：ADC 信号を読み取り、結果を最適化し、実際の電圧に変換します。
     - **主な処理**：
       - **平均サンプリング**：ADC を 10 回読み取り、合計して平均化することでノイズを低減します。
       - `analogRead(BATTERY_ADC)`：A0 ピンからアナログ電圧を読み取ります（戻り値は 0～4095）。
       - `delay(2)`：サンプル間に 2ms の間隔を設け、測定の安定性を高めます。
-      - **電圧計算**：`(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` の式で実際のバッテリー電圧を算出します。
-      - 計算された電圧値（float 型）を `loop()` に返し、そこで利用します。
+      - **電圧計算**：`(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` の式を用いて実際のバッテリー電圧を算出します。
+      - 計算された電圧（float 型）を `loop()` に返し、そこで利用します。
 
-- 動作例：
+- 効果のデモ：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_battery_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -444,7 +445,7 @@ LVGL 公式ドキュメント： [LVGL docs](https://docs.lvgl.io/master/example
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-完成版の参考コード： [EE04_Dashboard_ui.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_dashboard_ui.zip)
+完成したリファレンスコード： [EE04_Dashboard_ui.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_dashboard_ui.zip)
 
 <details>
 
@@ -678,7 +679,7 @@ EE04 ボード上のボタンを押すことで、対応する UI インター�
 
 ### リソース
 
-- **7.5" モノクロ eInk エンクロージャ（3D モデル）**: [Download from Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+- **7.5" モノクロ eInk エンクロージャ（3D モデル）**: [Printables からダウンロード](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
 
 
 ## 技術サポート & 製品ディスカッション

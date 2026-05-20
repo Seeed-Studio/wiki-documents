@@ -1,5 +1,5 @@
 ---
-description: Guia de referência para controlar qualquer produto Seeed ePaper compatível a partir da IDE Arduino - configuração da IDE Arduino, instalação da biblioteca Seeed_GFX, geração de driver.h. As análises detalhadas específicas de hardware ficam no cookbook de cada produto.
+description: Guia de referência para controlar qualquer produto Seeed ePaper compatível a partir da IDE Arduino - configuração da IDE Arduino, instalação da biblioteca Seeed_GFX, geração de driver.h. Os detalhes específicos de hardware estão no cookbook de cada produto.
 title: Trabalhar com Arduino
 keywords:
   - display ePaper
@@ -14,6 +14,9 @@ sidebar_position: 4
 last_update:
   date: 04/28/2026
   author: dimo
+createdAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino/
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -21,17 +24,18 @@ import TabItem from '@theme/TabItem';
 
 # Trabalhar com Arduino
 
-Esta página é o **manual de referência** para controlar qualquer produto Seeed ePaper compatível a partir da IDE Arduino. Ela cobre as partes que são idênticas em todos os hardwares:
+Esta página é o **manual de referência** para controlar qualquer produto Seeed ePaper compatível a partir da IDE Arduino. Ela cobre as partes que são idênticas em todo o hardware:
 
 1. Configurar a IDE Arduino e o suporte à placa ESP32.
 2. Instalar a biblioteca **Seeed_GFX** — nosso fork mantido de `TFT_eSPI` com suporte de primeira classe para Seeed ePaper.
 3. Gerar um `driver.h` para a combinação da sua placa + tela usando a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 4. (Opcionalmente) usar a biblioteca de terceiros **GxEPD2** como driver alternativo.
 
-Para o **passo a passo completo de “abrir a caixa, gravar um hello world, acender sensores e botões”**, vá para o **cookbook** do seu hardware específico — essas páginas reutilizam esta referência para o boilerplate e depois adicionam exemplos específicos do produto (periféricos, exemplos de código, solução de problemas):
+Para o **passo a passo completo de “abrir a caixa, gravar um hello world, acender sensores e botões”**, vá direto ao **cookbook** do seu hardware específico — essas páginas reutilizam esta referência para o boilerplate e depois adicionam exemplos específicos do produto (periféricos, trechos de código, solução de problemas):
 
-- [reTerminal E Series Arduino cookbook](/pt-br/reterminal_e10xx_with_arduino) — cobre reTerminal E1001 / E1002 / E1003 / E1004 com exemplos completos de periféricos (LEDs, buzzer, botões, SHT4x, BMS, microSD, renderização de imagem BMP).
-- Mais cookbooks (Painel XIAO 7,5", placas driver EE0x, …) serão adicionados à medida que os produtos correspondentes forem incluídos na plataforma.
+- [reTerminal E Series — ePaper Display cookbook](/pt-br/reterminal_e10xx_with_arduino) — cobre reTerminal E1001 / E1002 / E1003 / E1004 com exemplos Hello World usando tanto `Seeed_GFX` quanto `GxEPD2`.
+- [reTerminal E Series — Onboard Peripherals cookbook](/pt-br/reterminal_e10xx_with_arduino_peripherals) — exemplos completos de periféricos para os mesmos modelos: LED, buzzer, três botões de usuário, sensor SHT4x, monitor de bateria, cartão microSD e renderização de imagem BMP a partir do SD.
+- Mais cookbooks (Painel XIAO 7,5", placas driver EE0x, …) serão adicionados conforme os produtos correspondentes forem incluídos na plataforma.
 
 Se você só precisa do boilerplate (um `Hello World` em um produto novo ainda não coberto por um cookbook), esta página por si só é suficiente.
 
@@ -54,7 +58,7 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
     <tr>
       <td><strong>EE02 / EE03 / EE04 / EE05</strong></td>
       <td>XIAO ESP32-S3 / ESP32-S3 Plus</td>
-      <td>Use a Configuration Tool com a tela de sua escolha</td>
+      <td>Use a Configuration Tool com a sua escolha de tela</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05</strong></td>
@@ -67,14 +71,14 @@ Todo produto Seeed ePaper na [página principal do hub](/pt-br/seeed_epaper_disp
       <td>Veja o [guia dedicado Painel XIAO 7,5" + Arduino](/pt-br/xiao_075inch_epaper_panel_arduino)</td>
     </tr>
     <tr>
-      <td><strong>Kit DIY TRMNL 7,5" (OG)</strong></td>
+      <td><strong>TRMNL 7,5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td>Veja o [guia dedicado Kit DIY TRMNL + Arduino](/pt-br/ogdiy_kit_works_with_arduino)</td>
+      <td>Veja o [guia dedicado TRMNL DIY Kit + Arduino](/pt-br/ogdiy_kit_works_with_arduino)</td>
     </tr>
     <tr>
-      <td><strong>Placa de Expansão XIAO eInk v2 / Placa Breakout ePaper</strong></td>
+      <td><strong>XIAO eInk Expansion Board v2 / ePaper Breakout Board</strong></td>
       <td>Qualquer XIAO que você conectar</td>
-      <td>Use a Configuration Tool com sua escolha de XIAO + tela</td>
+      <td>Use a Configuration Tool com a sua combinação de XIAO + tela</td>
     </tr>
   </table>
 </div>
@@ -107,7 +111,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **Etapa 4.** Escolha a placa correta para o seu hardware:
 
-- **reTerminal E Series / EE04 com EE04 plus / Kit DIY TRMNL**: `XIAO_ESP32S3_PLUS`
+- **reTerminal E Series / EE04 com EE04 plus / TRMNL DIY Kit**: `XIAO_ESP32S3_PLUS`
 - **EE02 / EE03 / EE04 / EE05 padrão / EN04 (caminho Arduino)**: `XIAO_ESP32S3` (ou `XIAO_nRF52840` para placas baseadas em nRF52840)
 - **Painel ePaper XIAO 7,5"**: `XIAO_ESP32C3`
 
@@ -115,7 +119,7 @@ Se você não tiver certeza de qual escolher, o cookbook do seu produto informar
 
 **Etapa 5.** Conecte seu hardware via USB-C e selecione a porta correta em **Tools → Port**.
 
-**Etapa 6.** Para placas ESP32-S3 (a maioria dos reTerminal E Series e placas EE0x) ative a PSRAM:
+**Etapa 6.** Para placas ESP32-S3 (a maioria das reTerminal E Series e placas EE0x) ative a PSRAM:
 
 **Tools → PSRAM → OPI PSRAM**
 
@@ -123,7 +127,7 @@ Se você não tiver certeza de qual escolher, o cookbook do seu produto informar
 
 ## Etapa 2: Instalar a biblioteca Seeed_GFX
 
-Seeed_GFX é um fork de `TFT_eSPI` com suporte de primeira classe para displays Seeed. É a biblioteca recomendada para toda a nossa linha ePaper.
+Seeed_GFX é um fork de `TFT_eSPI` com suporte de primeira classe para displays Seeed. É a biblioteca recomendada para toda a nossa linha de ePaper.
 
 **Etapa 1.** Baixe a biblioteca Seeed_GFX do GitHub:
 
@@ -152,7 +156,7 @@ Todo sketch de exemplo em `Seeed_GFX` procura por um `driver.h` local na pasta d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**Etapa 3.** Abra a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) e escolha seu hardware. Cada dispositivo pré-configurado produz o valor correto de `BOARD_SCREEN_COMBO` (e quaisquer defines extras, por exemplo `USE_XIAO_EPAPER_DISPLAY_BOARD_EE04`).
+**Etapa 3.** Abra a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) e escolha o seu hardware. Cada dispositivo pré-configurado produz o valor `BOARD_SCREEN_COMBO` correto (e quaisquer `defines` extras, por exemplo `USE_XIAO_EPAPER_DISPLAY_BOARD_EE04`).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/gfx.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -199,13 +203,13 @@ Todo sketch de exemplo em `Seeed_GFX` procura por um `driver.h` local na pasta d
 
 Para qualquer outra combinação, **sempre confie na saída da Configuration Tool** — escolha sua placa XIAO (ou `None` se for um kit integrado reTerminal/EN04) mais a tela que você conectou.
 
-**Etapa 5.** Envie o sketch para o seu hardware. Na primeira energização pode aparecer uma atualização parcial; as atualizações subsequentes exibem o exemplo completo de Hello World.
+**Etapa 5.** Envie o sketch para o seu hardware. Na primeira energização pode aparecer uma atualização parcial; as atualizações subsequentes exibem o exemplo Hello World completo.
 
 ## Etapa 4 (opcional): Usar GxEPD2 em vez disso
 
-`Seeed_GFX` é a biblioteca recomendada, mas se você já tem uma base de código baseada em `GxEPD2`, também pode controlar o Seeed ePaper com ela. `GxEPD2` é uma biblioteca popular da comunidade que cobre uma ampla gama de displays e-paper.
+`Seeed_GFX` é a biblioteca recomendada, mas se você já tem uma base de código baseada em `GxEPD2`, também pode controlar o Seeed ePaper com ela. `GxEPD2` é uma biblioteca popular da comunidade que cobre uma ampla gama de displays de papel eletrônico.
 
-Para instalá-la manualmente a partir do GitHub para obter o suporte mais recente a dispositivos:
+Para instalá-la manualmente a partir do GitHub com o suporte mais recente a dispositivos:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/ZinggJM/GxEPD2" target="_blank" rel="noopener noreferrer">
@@ -217,32 +221,33 @@ Para instalá-la manualmente a partir do GitHub para obter o suporte mais recent
 
 ## Para onde ir em seguida — Cookbooks
 
-Esta página intencionalmente para no boilerplate. Os exemplos de código específicos de hardware e os tutoriais ponta a ponta ficam no cookbook de cada produto:
+Esta página intencionalmente para no boilerplate. Os exemplos de código específicos de hardware e os passo a passos completos estão no cookbook de cada produto:
 
-- **[reTerminal E Series Arduino cookbook](/pt-br/reterminal_e10xx_with_arduino)** — Hello World no E1001/E1002/E1003/E1004, além do conjunto completo de periféricos: controle de LED, buzzer (bipes PWM passivos + reprodução de melodia), entrada de 3 botões, temperatura/umidade SHT4x, gerenciamento de bateria, cartão microSD, renderização de imagem BMP a partir do SD.
-- **[Painel ePaper XIAO 7,5" + Arduino](/pt-br/xiao_075inch_epaper_panel_arduino)** — passo a passo com XIAO ESP32-C3 usando `Seeed_GFX`.
-- **[Kit DIY TRMNL 7,5" + Arduino](/pt-br/ogdiy_kit_works_with_arduino)** — usando o hardware do kit em sketches Arduino personalizados (em vez da plataforma em nuvem TRMNL).
+- **[reTerminal E Series — ePaper Display cookbook](/pt-br/reterminal_e10xx_with_arduino)** — Hello World no E1001/E1002/E1003/E1004 com `Seeed_GFX` e `GxEPD2`.
+- **[reTerminal E Series — Onboard Peripherals cookbook](/pt-br/reterminal_e10xx_with_arduino_peripherals)** — o conjunto completo de periféricos para os mesmos modelos: controle de LED, buzzer (bipes PWM passivos + reprodução de melodia), entrada de 3 botões, SHT4x temperatura/umidade, gerenciamento de bateria, cartão microSD, renderização de imagem BMP a partir do SD.
+- **[XIAO 7,5" ePaper Panel + Arduino](/pt-br/xiao_075inch_epaper_panel_arduino)** — passo a passo com XIAO ESP32-C3 usando `Seeed_GFX`.
+- **[TRMNL 7,5" DIY Kit + Arduino](/pt-br/ogdiy_kit_works_with_arduino)** — usando o hardware do kit em sketches Arduino personalizados (em vez da plataforma em nuvem TRMNL).
 
-Quando novos produtos ePaper forem lançados, o cookbook correspondente será adicionado na pasta de cada produto; esta página principal será atualizada para apontar para ele.
+Quando novos produtos de ePaper são enviados, o cookbook correspondente é adicionado na pasta de cada produto; esta página principal é atualizada para apontar para ele.
 
-## Problemas Comuns
+## Problemas comuns
 
 ### A tela não mostra nada ou não atualiza
 
-- Na maioria das vezes, o cabo FPC do ePaper está solto ou invertido. Recoloque-o com os contatos metálicos voltados para cima.
+- Na maioria das vezes o cabo FPC do ePaper está solto ou de cabeça para baixo. Recoloque-o com os contatos metálicos voltados para cima.
 - Verifique se `OPI PSRAM` está habilitado em **Tools → PSRAM** para placas ESP32-S3.
-- Confirme se `BOARD_SCREEN_COMBO` em `driver.h` corresponde ao seu hardware. O valor incorreto produz silenciosamente uma tela em branco.
+- Confirme se `BOARD_SCREEN_COMBO` em `driver.h` corresponde ao seu hardware. O valor errado produz silenciosamente uma tela em branco.
 - Verifique se o sketch de exemplo que você abriu corresponde à sua tela (Básico vs Colorido).
 
 ### Não é possível fazer upload para a placa
 
 - Tente um cabo USB-C diferente (cabo de dados, não apenas de alimentação).
-- Para placas ESP32-S3: mantenha pressionado o botão **BOOT** antes de conectar o cabo USB para entrar no modo de download e, em seguida, solte.
+- Para placas ESP32-S3: mantenha pressionado o botão **BOOT** antes de conectar o cabo USB para entrar no modo de download e depois solte.
 - Confirme se **Tools → Port** aponta para o dispositivo serial correto após reconectar.
 
-Para uma solução de problemas mais detalhada em um produto específico, consulte o cookbook para esse hardware.
+Para uma solução de problemas mais aprofundada em um produto específico, consulte o cookbook para esse hardware.
 
-## Suporte Técnico e Discussão de Produtos
+## Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

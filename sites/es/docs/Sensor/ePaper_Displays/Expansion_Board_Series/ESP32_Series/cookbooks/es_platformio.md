@@ -1,5 +1,5 @@
 ---
-description: Recetario de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x) - descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
+description: Recetario de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x): descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
 title: Recetario de PlatformIO
 keywords:
   - Pantalla ePaper
@@ -19,6 +19,7 @@ last_update:
   author: Zeller
 createdAt: '2025-10-09'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/es/ee04_with_platformio/
 ---
 
 # Recetario de PlatformIO: XIAO ePaper Driver Boards (EE0x)
@@ -26,11 +27,11 @@ updatedAt: '2026-04-28'
 :::tip Este recetario cubre toda la familia EE0x
 Aplicable a **EE02 / EE03 / EE04 / EE05**. Como las cuatro placas comparten la misma base XIAO ESP32-S3 y la misma canalización de controlador `Seeed_GFX`, la configuración del proyecto, la lista de librerías y los patrones de código son idénticos; lo único que cambia entre ellas es el valor de `BOARD_SCREEN_COMBO` que eliges en la [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) para `driver.h`.
 
-**Ejemplo práctico: EE04 + pantalla ePaper monocroma de 7,5" 800×480.** Sustituye tu propia combinación de placa + pantalla en `driver.h` y el resto del flujo de trabajo (GPIO de botones, ADC de batería, panel de control, cambio de página mediante botones) se mantiene igual.
+**Ejemplo práctico: EE04 + pantalla ePaper monocroma de 7,5" y 800×480.** Sustituye tu propio par placa + pantalla en `driver.h` y el resto del flujo de trabajo (GPIO de botones, ADC de batería, panel de control, cambio de página mediante botones) se mantiene igual.
 :::
 
 :::note ¿Buscas Arduino en su lugar?
-Este recetario es **específico de PlatformIO**. Si prefieres usar el **Arduino IDE** (la ruta más común para nuestra línea de ePaper), consulta **[Trabajar con Arduino](/es/epaper_work_with_arduino)** para la guía a nivel de plataforma y el [recetario de Arduino para reTerminal E Serie](/es/reterminal_e10xx_with_arduino) para ejemplos a nivel de hardware que también se aplican a las placas EE0x (la Configuration Tool genera el `driver.h` correcto).
+Este recetario es **específico de PlatformIO**. Si prefieres usar el **Arduino IDE** (la ruta más común para nuestra línea de ePaper), consulta **[Work with Arduino](/es/epaper_work_with_arduino)** para la guía a nivel de plataforma, el [reTerminal E Series — ePaper Display cookbook](/es/reterminal_e10xx_with_arduino) para ejemplos de renderizado de pantalla y el [reTerminal E Series — Onboard Peripherals cookbook](/es/reterminal_e10xx_with_arduino_peripherals) para ejemplos a nivel de hardware (LED, zumbador, botones, SHT4x, batería, microSD) que también se aplican a las placas EE0x.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
@@ -69,7 +70,7 @@ Necesitas preparar una XIAO ePaper Display Board EE04 junto con pantallas del ta
 
 ### Descargar Vscode
 
-Descarga [Vscode](https://code.visualstudio.com/download) según el sistema que estés utilizando
+Descarga [Vscode](https://code.visualstudio.com/download) según el sistema que estés utilizando.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -88,7 +89,7 @@ Abre VSCode, haz clic en Extensions, luego busca PlatformIO y selecciona instala
 - Name: Ponle un nombre a tu proyecto
 - Board: Selecciona Seeed Studio XIAO ESP32S3
 - Framework: Selecciona Ardunio
-- Location: La ruta de los archivos del proyecto puede establecerse como una ruta personalizada o puedes seleccionar la ruta predeterminada.
+- Location: La ruta de los archivos del proyecto puede establecerse como una ruta personalizada o se puede seleccionar la ruta predeterminada.
 - Haz clic en "Finish" y espera a que se complete la creación. Luego, abre el archivo del proyecto en el espacio de trabajo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
@@ -182,9 +183,9 @@ void loop()
 
 ### Botón de usuario
 
-El EE04 incorpora tres botones programables por el usuario que pueden utilizarse para diversos fines de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones utilizando Arduino.
+La EE04 incorpora tres botones programables por el usuario que pueden utilizarse para diversos fines de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones utilizando Arduino.
 
-En el EE04, los tres botones están conectados al ESP32-S3:
+En la EE04, los tres botones están conectados al ESP32-S3:
 
 - KEY1 (GPIO2_D1/A1)
 - KEY2 (GPIO3_D2/A2)
@@ -285,22 +286,22 @@ void loop() {
 
 Explicación del código:
 
-- **Análisis de funciones principales**
+- **Análisis de la función principal**
 
 1. **`pinMode(pin, mode)`**  
-   - Función: configura el modo del pin.  
-   - Aquí se utiliza el modo `INPUT_PULLUP` para habilitar la resistencia de pull‑up interna. Esto hace que el pin entregue un nivel alto (HIGH) por defecto cuando el botón no está presionado, y entregue un nivel bajo (LOW) cuando el botón está presionado (ya que se conecta a tierra).
+   - Función: Configura el modo del pin.  
+   - Aquí se utiliza el modo `INPUT_PULLUP` para habilitar la resistencia de pull-up interna. Esto hace que el pin emita un nivel alto (HIGH) por defecto cuando el botón no está presionado, y emita un nivel bajo (LOW) cuando el botón está presionado (ya que se conecta a tierra).
 
 2. **`digitalRead(pin)`**  
-   - Función: lee el estado de nivel (HIGH o LOW) del pin especificado.  
+   - Función: Lee el estado de nivel (HIGH o LOW) del pin especificado.  
    - Se utiliza en el bucle para obtener en tiempo real el estado actual del botón, lo que ayuda a determinar si el botón ha sido activado.
 
-3. **`Serial.begin(baud)`** and **`Serial.println()`**  
+3. **`Serial.begin(baud)`** y **`Serial.println()`**  
    - La primera inicializa la comunicación serie (con una velocidad en baudios de 115200), mientras que la segunda envía información de texto al puerto serie. Esto se utiliza para mostrar el estado del botón en el monitor.
 
 4. **`delay(ms)`**  
-   - Función: pausa el programa durante un número específico de milisegundos.  
-   - Aquí se utiliza en dos escenarios: primero, para esperar la conexión del puerto serie en `setup()`; segundo, para retrasar 50 ms después de que cambie el estado del botón. Esto logra un antirrebote por hardware al "esperar a que desaparezca el ruido", evitando disparos falsos.
+   - Función: Pausa el programa durante un número especificado de milisegundos.  
+   - Aquí se utiliza en dos escenarios: primero, para esperar la conexión del puerto serie en `setup()`; segundo, para retrasar 50 ms después de que cambie el estado del botón. Esto logra el antirrebote por hardware al "esperar a que desaparezca el ruido", evitando disparos falsos.
 
 - **Análisis de la lógica principal**
 
@@ -314,7 +315,7 @@ Explicación del código:
    - Después de cada cambio de estado, se actualiza el "estado anterior" al estado actual, que servirá como referencia para la siguiente comparación.
 
 3. **Ejecución del bucle**  
-   - La función `loop()` se ejecuta en un bucle infinito, repitiendo continuamente el proceso de "leer el estado → comparar el estado → mostrar el resultado" para lograr una detección en tiempo real.
+   - La función `loop()` se ejecuta en un bucle infinito, repitiendo el proceso de "leer el estado → comparar el estado → mostrar el resultado" para lograr una detección en tiempo real.
 
 - Demostración del efecto:
 
@@ -383,38 +384,38 @@ Explicación del código:
 
 - Funciones principales:
 
-  - **Adquisición del voltaje de la batería**: leer el voltaje de la batería dividido por resistencias a través del pin ADC (el voltaje de la batería puede superar el voltaje de referencia del ADC de Arduino, por lo que es necesario dividirlo primero).
-  - **Optimización de la precisión**: reducir la interferencia de ruido del circuito promediando múltiples muestras.
-  - **Conversión de voltaje**: convertir la señal digital del ADC al voltaje real de la batería (teniendo en cuenta la relación de división de voltaje y el voltaje de referencia).
-  - **Salida serie**: imprimir periódicamente el voltaje medido a través del puerto serie para que dispositivos externos (por ejemplo, un ordenador) puedan verlo.
+  - **Adquisición del voltaje de la batería**: Leer el voltaje de la batería dividido por resistencias a través del pin ADC (el voltaje de la batería puede superar el voltaje de referencia del ADC de Arduino, por lo que primero se requiere la división).
+  - **Optimización de la precisión**: Reducir la interferencia de ruido del circuito promediando múltiples muestras.
+  - **Conversión de voltaje**: Convertir la señal digital del ADC al voltaje real de la batería (teniendo en cuenta la relación de división de voltaje y el voltaje de referencia).
+  - **Salida serie**: Imprimir periódicamente el voltaje medido a través del puerto serie para que dispositivos externos (por ejemplo, un ordenador) puedan verlo.
 
 - Funciones principales y sus roles
 
   - `setup()` (Función de inicialización)
 
-    - **Rol**: se ejecuta una vez al iniciar el programa para configurar el hardware y los parámetros.
+    - **Rol**: Se ejecuta una vez al iniciar el programa para configurar el hardware y los parámetros.
     - **Operaciones clave**:
-      - `Serial.begin(115200)`: inicializa la comunicación serie (velocidad en baudios 115200) para la salida de datos de voltaje.
-      - `analogReadResolution(12)`: establece la resolución del ADC en 12 bits (rango de lectura: 0~4095) para mayor precisión.
-      - `pinMode(BATTERY_ADC, INPUT)`: configura el pin de detección de la batería (A0) en modo de entrada para señales analógicas.
-      - `pinMode(ADC_EN, OUTPUT)` & `digitalWrite(ADC_EN, HIGH)`: habilitan el módulo ADC (para bajo consumo: encender solo al medir).
+      - `Serial.begin(115200)`: Inicializa la comunicación serie (velocidad en baudios 115200) para la salida de datos de voltaje.
+      - `analogReadResolution(12)`: Establece la resolución del ADC en 12 bits (rango de lectura: 0~4095) para mayor precisión.
+      - `pinMode(BATTERY_ADC, INPUT)`: Configura el pin de detección de la batería (A0) en modo de entrada para señales analógicas.
+      - `pinMode(ADC_EN, OUTPUT)` y `digitalWrite(ADC_EN, HIGH)`: Habilitan el módulo ADC (para bajo consumo: encender solo al medir).
 
   - `loop()` (Función de bucle principal)
 
-    - **Rol**: se ejecuta repetidamente tras la inicialización para la detección y salida periódica del voltaje.
+    - **Rol**: Se ejecuta repetidamente tras la inicialización para la detección y salida periódica del voltaje.
     - **Operaciones clave**:
       - Llamar a `readBatteryVoltage()` para obtener el voltaje actual de la batería.
       - Usar `Serial.print()`/`Serial.println()` para imprimir el voltaje formateado (2 decimales, por ejemplo, "Battery Voltage: 3.82 V").
-      - `delay(500)`: establece un intervalo de 0.5 segundos entre mediciones.
+      - `delay(500)`: Establece un intervalo de 0.5 segundos entre mediciones.
 
-  - `readBatteryVoltage()` (Función central de medición)
+  - `readBatteryVoltage()` (Función principal de medición)
 
-    - **Rol**: leer las señales del ADC, optimizar los resultados y convertirlos al voltaje real.
+    - **Rol**: Leer las señales del ADC, optimizar los resultados y convertirlos al voltaje real.
     - **Operaciones clave**:
-      - **Muestreo promedio**: leer el ADC 10 veces, sumar y luego promediar (reduce el ruido).
-      - `analogRead(BATTERY_ADC)`: lee el voltaje analógico del pin A0 (devuelve 0~4095).
-      - `delay(2)`: intervalo de 2 ms entre muestras para mayor estabilidad.
-      - **Cálculo del voltaje**: usar la fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obtener el voltaje real de la batería.
+      - **Muestreo promedio**: Leer el ADC 10 veces, sumar y luego promediar (reduce el ruido).
+      - `analogRead(BATTERY_ADC)`: Lee el voltaje analógico del pin A0 (devuelve 0~4095).
+      - `delay(2)`: Intervalo de 2 ms entre muestras para mayor estabilidad.
+      - **Cálculo del voltaje**: Utilizar la fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obtener el voltaje real de la batería.
       - Devuelve el voltaje calculado (tipo float) para que lo use `loop()`.
 
 - Demostración del efecto:
@@ -433,12 +434,12 @@ Documentación oficial de LVGL: [LVGL docs](https://docs.lvgl.io/master/examples
 
 ### Software
 
-- Añade la biblioteca LVGL. En la herramienta Library de la interfaz PIO Home, busca LVGL y luego selecciona añadir la biblioteca al proyecto actual. Se recomienda elegir una versión de LVGL 9.0 o superior.
+- Añade la biblioteca LVGL. En la herramienta Library de la interfaz PIO Home, busca LVGL y luego selecciona añadir la biblioteca al proyecto actual. Se recomienda que elijas una versión de LVGL 9.0 o superior.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_1.png" style={{width:800, height:'auto'}}/></div>
 
 - En el directorio **lib**
-  - Crea una carpeta **dashboard** y luego crea los archivos `dashboard_ui.cpp` y `dashboard_ui.h`. Estos archivos se utilizan principalmente para almacenar el código de dibujo para LGVL.
+  - Crea una carpeta **dashboard** y luego crea los archivos `dashboard_ui.cpp` y `dashboard_ui.h`. Estos archivos se utilizan principalmente para almacenar el código de dibujo de LGVL.
   - Crea la carpeta **e1001_display** y añade los archivos del controlador de pantalla `e1001_display.c` y `e1001_display.h`
   - Crea la carpeta **lvgl_conf** y añade el archivo de configuración `lv_conf.h` de LVGL.
 
@@ -656,8 +657,8 @@ void loop()
 
 Al presionar los botones en la placa EE04 se puede cambiar a la interfaz de usuario correspondiente:
 
-- KEY1: Panel de vehículo
-- KEY2: Panel de hogar inteligente
+- KEY1: Tablero de vehículo
+- KEY2: Tablero de hogar inteligente
 - KEY3: Super Mario
 - Predeterminado: Super Mario
 
@@ -678,7 +679,7 @@ Al presionar los botones en la placa EE04 se puede cambiar a la interfaz de usua
 
 ### Recursos
 
-- **Carcasa eInk monocromática de 7.5" (modelo 3D)**: [Download from Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
+- **Carcasa eInk monocromática de 7,5" (modelo 3D)**: [Download from Printables](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)
 
 
 ## Soporte técnico y debate sobre el producto
