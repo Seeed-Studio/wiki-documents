@@ -16,8 +16,6 @@ sku: null
 translation:
   skip:
     - zh-CN
-    - ja
-    - es
 last_update:
   date: 1/7/2026
   author: TienjuiWong
@@ -49,8 +47,7 @@ url: https://wiki.seeedstudio.com/pt-br/reachymini_getting_started/
 
 O **Reachy Mini** é o primeiro robô de mesa open-source projetado para explorar a interação humano-robô e aplicações criativas personalizadas. Desenvolvido em colaboração pela **Pollen Robotics** e **Hugging Face**, este robô humanóide compacto leva capacidades de robótica em nível profissional para a sua mesa a um preço acessível.
 
-Otimizado e fabricado pela **Seeed Studio**, o Reachy Mini combina interação física expressiva com recursos modernos de IA. Seja para criar assistentes de voz, aplicações de visão computacional ou ferramentas educacionais, o Reachy Mini oferece uma plataforma completa para experimentação de IA no mundo real.
-
+Otimizado e fabricado pela **Seeed Studio**, o Reachy Mini combina interação física expressiva com capacidades modernas de IA. Seja para criar assistentes de voz, aplicações de visão computacional ou ferramentas educacionais, o Reachy Mini oferece uma plataforma completa para experimentação com IA no mundo real.
 
 :::tip
 O que você vai aprender
@@ -101,7 +98,7 @@ O Reachy Mini reúne capacidades impressionantes em um formato compacto de mesa.
   </div>
   <div align="center">
     <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram" />
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Amplitude de movimento</p>
+    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Faixa de movimento</p>
   </div>
 </div>
 
@@ -110,16 +107,19 @@ O Reachy Mini reúne capacidades impressionantes em um formato compacto de mesa.
 O Reachy Mini é especificamente projetado para uma interação humano-robô expressiva e envolvente:
 
 ### Movimento expressivo
-- **Cabeça com 6 graus de liberdade:** Movimentos de panorâmica, inclinação e rotação com aparência natural
+
+- **Cabeça com 6 graus de liberdade:** Movimentos de pan, tilt e roll com aparência natural
 - **Rotação completa do corpo:** Rotação de 360 graus para posicionamento dinâmico
 - **Antenas animadas:** Duas antenas expressivas que adicionam personalidade e feedback
 
 ### Sensoriamento multimodal
+
 - **Matriz de 4 microfones:** Captura de áudio avançada para reconhecimento de voz e localização de som
-- **Câmera grande angular:** Recursos de visão computacional para detecção de rostos, reconhecimento de objetos e mais
+- **Câmera grande angular:** Capacidades de visão computacional para detecção de rostos, reconhecimento de objetos e mais
 - **Alto-falante de 5W:** Saída de áudio clara para síntese de fala e efeitos sonoros
 
 ### Aberto e extensível
+
 - **Totalmente open-source:** Projeto de hardware, SDK de software e ambiente de simulação
 - **SDK em Python:** Interface de programação intuitiva, com suporte a JavaScript e Scratch em breve
 - **Integração com Hugging Face:** Acesso direto a modelos de IA de ponta para fala, visão e muito mais
@@ -174,48 +174,51 @@ O Reachy Mini é especificamente projetado para uma interação humano-robô exp
 A versão Lite é ideal para desenvolvedores que preferem computação externa ou que já possuem um ambiente de desenvolvimento preferido.
 
 **Ideal para:**
+
 - Desenvolvedores com sistemas Mac/Linux
 - Usuários que desejam controle máximo sobre os recursos de computação
 - Ambientes educacionais com laboratórios de informática existentes
 - Projetos que exigem integração com infraestrutura existente
 
 **Limitações:**
+
 - Requer conexão com fio ao computador host
 - Sem capacidade WiFi
 - Sem acelerômetro
-- Deve ser alimentado via tomada
+- Deve ser alimentado via tomada de parede
 
 ### Reachy Mini Full (US$ 449)
 
 A versão Full inclui computação embarcada para total autonomia e operação sem fio.
 
 **Ideal para:**
+
 - Aplicações de robô autônomo
 - Pesquisa e desenvolvimento sem fio
 - Projetos que exigem dados de acelerômetro
 - Demonstrações e implantações portáteis
 
 **Recursos adicionais:**
-- Computador Raspberry Pi 4 integrado
+
+- Computador Raspberry Pi 4 embarcado
 - Conectividade WiFi
 - Bateria para operação sem fio
 - Acelerômetro integrado
 
 ## Guia de montagem
 
-O Reachy Mini é vendido como um kit que leva aproximadamente **2 a 3 horas** para ser montado. O processo de montagem foi projetado para ser acessível a construtores de todos os níveis de experiência.
+O Reachy Mini é vendido como um kit que leva aproximadamente **2 a 3 horas** para ser montado. O processo de montagem foi projetado para ser acessível a montadores de todos os níveis de experiência.
 
 ### Recursos de montagem
 
 - **Guia de montagem interativo:** [Instruções online passo a passo](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)
 
-
 :::warning[Dicas de montagem]
 
 - Reserve de 2 a 3 horas em um espaço de trabalho limpo e bem iluminado
-- É necessário um conjunto de chaves de fenda pequenas (incluídas no kit)
+- É necessário um conjunto de pequenas chaves de fenda (incluídas no kit)
 - Siga o guia online passo a passo para obter os melhores resultados
-- Teste cada subsistema à medida que for montando (câmera, microfones, servos)
+- Teste cada subsistema à medida que você monta (câmera, microfones, servos)
 
 :::
 
@@ -226,11 +229,13 @@ O Reachy Mini é vendido como um kit que leva aproximadamente **2 a 3 horas** pa
 Dependendo da sua versão, você vai precisar de:
 
 **Reachy Mini Lite:**
+
 - Computador Mac ou Linux (suporte para Windows em breve)
 - Python 3.8 ou superior
 - Conexão USB
 
 **Reachy Mini Full:**
+
 - Rede WiFi ou conexão Ethernet
 - Navegador web para acesso ao dashboard
 
@@ -269,6 +274,7 @@ with ReachyMini() as mini:
 Um dashboard baseado na web oferece uma interface intuitiva para testar e controlar o Reachy Mini sem escrever código.
 
 **Recursos:**
+
 - Controle de motores em tempo real
 - Exibição do feed da câmera
 - Teste de microfones
@@ -283,11 +289,12 @@ Baixe o dashboard do [repositório oficial](https://github.com/pollen-robotics/r
 
 ## Ecossistema de Apps do Hugging Face
 
-O Reachy Mini conta com um ecossistema em crescimento de aplicativos prontos para uso, alimentados pelo Hugging Face Spaces. Instale esses apps diretamente pelo dashboard do seu robô com um clique.
+O Reachy Mini conta com um ecossistema em crescimento de aplicações prontas para uso, alimentadas pelo Hugging Face Spaces. Instale esses apps diretamente pelo dashboard do seu robô com um clique.
 
 ### Apps em Destaque
 
 **App de Conversa**
+
 - Interação em linguagem natural alimentada por Large Language Models
 - Reconhecimento de voz e síntese de fala
 - Personalidade e base de conhecimento personalizáveis
@@ -297,23 +304,25 @@ O Reachy Mini conta com um ecossistema em crescimento de aplicativos prontos par
 </div>
 
 **Hand Tracker**
+
 - Rastreamento de mão em tempo real usando visão computacional
 - O robô segue os movimentos da sua mão
 - Ótimo para demonstrações e experimentos de interação
 
 **Rádio**
+
 - Transmissão de rádio controlada por voz
-- Solicitações em linguagem natural para músicas e estações
+- Pedidos em linguagem natural para músicas e estações
 - Demonstra as capacidades de processamento de áudio
 
-**E Muitos Outros:**
+**E muitos outros:**
 Navegue pela coleção completa de apps no [Hugging Face Spaces](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini)
 
 <div align="center">
     <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/apps.png" alt="Reachy Mini Apps Ecosystem"/>
 </div>
 
-## Criando Aplicativos Personalizados
+## Criando Aplicações Personalizadas
 
 ### SDK em Python
 
@@ -343,7 +352,7 @@ with ReachyMini() as mini:
 
 ### Integração de IA
 
-O Reachy Mini se integra perfeitamente ao amplo ecossistema de modelos do Hugging Face:
+O Reachy Mini se integra perfeitamente ao extenso ecossistema de modelos do Hugging Face:
 
 - **Reconhecimento de Fala:** Whisper, Wav2Vec2
 - **Síntese de Fala:** Bark, SpeechT5
@@ -362,7 +371,7 @@ Compartilhe suas criações com a comunidade global do Reachy Mini:
 
 ## Desenvolvimento em Simulação
 
-Prototipe e desenvolva aplicativos para o Reachy Mini sem hardware usando o ambiente de simulação MuJoCo:
+Prototipe e desenvolva aplicações para o Reachy Mini sem hardware usando o ambiente de simulação MuJoCo:
 
 ```bash
 pip install reachy-mini[simulation]
@@ -374,7 +383,7 @@ Teste seu código, itere rapidamente e faça o deploy no hardware quando estiver
 
 ### Sistema de Motores
 
-- **Graus de Liberdade:** movimento de cabeça com 6 DOF
+- **Graus de Liberdade:** movimento da cabeça com 6 DOF
 - **Controle:** servomotores de alta precisão
 - **Segurança:** limitação de corrente e feedback de posição
 - **Movimento Suave:** trajetórias interpoladas para um movimento natural
@@ -384,7 +393,7 @@ Teste seu código, itere rapidamente e faça o deploy no hardware quando estiver
 - **Matriz de Microfones:** 4 microfones dispostos para localização de som ideal
 - **Beamforming:** processamento de áudio em nível de hardware
 - **SNR:** alta relação sinal-ruído para captura de voz clara
-- **Alto-falante:** saída de 5 W com resposta de frequência nítida
+- **Alto-falante:** saída de 5W com resposta de frequência nítida
 
 ### Sistema de Visão
 
@@ -396,13 +405,15 @@ Teste seu código, itere rapidamente e faça o deploy no hardware quando estiver
 ### Requisitos de Energia
 
 **Versão Lite:**
+
 - Alimentada via USB a partir do computador host ou adaptador de tomada
-- Consumo típico: 5 V @ 2 A
+- Consumo típico: 5V @ 2A
 
 **Versão Full:**
+
 - Bateria interna para operação sem fio
 - Carregamento via USB-C
-- Duração da bateria: 2–4 horas, dependendo do uso
+- Duração da bateria: 2–4 horas dependendo do uso
 
 ## Privacidade e Segurança
 
@@ -410,7 +421,7 @@ Teste seu código, itere rapidamente e faça o deploy no hardware quando estiver
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/astronaut.png" alt="Reachy Mini Astronaut" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
 </div>
 
-O Reachy Mini é projetado com foco em privacidade:
+O Reachy Mini foi projetado com foco em privacidade:
 
 - **Sem Coleta de Dados:** o robô não armazena, transmite ou processa dados pessoais por padrão
 - **Processamento Local:** todo o processamento de IA pode ser feito localmente
@@ -421,7 +432,7 @@ O Reachy Mini não envia nenhum dado para a Pollen Robotics ou para o Hugging Fa
 
 ## Comunidade e Suporte
 
-### Junte-se à Comunidade
+### Participe da Comunidade
 
 - **Discord:** [Entre no Discord do Reachy Mini](https://discord.com/invite/2bAhWfXme9)
 - **GitHub:** [Reporte problemas e contribua](https://github.com/pollen-robotics/reachy_mini)
@@ -435,26 +446,25 @@ O Reachy Mini não envia nenhum dado para a Pollen Robotics ou para o Hugging Fa
 - **[SDK em Python](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/python-sdk.md):** aprenda a mover, ver, falar e ouvir
 - **[Integrações de IA](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/integration.md):** conecte LLMs, crie Apps e publique no Hugging Face
 - **[Conceitos Centrais](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/core-concept.md):** arquitetura, sistemas de coordenadas e limites de segurança
-- **[Desenvolvimento Secundário](https://github.com/Seeed-Projects/reachy-mini-starter):** guia inicial da Seeed para desenvolvimento de aplicativos personalizados
+- **[Desenvolvimento Secundário](https://github.com/Seeed-Projects/reachy-mini-starter):** guia inicial da Seeed para desenvolvimento de aplicações personalizadas
 - **[Guia de Montagem](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide):** instruções de montagem passo a passo
 - 🤗[**Compartilhe seu app com a comunidade**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
 
+## O que vem a seguir?
 
-## E Agora?
-
-### Roadmap
+### Roteiro
 
 A plataforma Reachy Mini está em constante evolução:
 
 - **Suporte a JavaScript:** em breve, para desenvolvimento baseado na web
 - **Integração com Scratch:** programação em blocos para iniciantes
-- **Apps Adicionais:** ecossistema em crescimento de aplicativos da comunidade
+- **Apps Adicionais:** ecossistema em crescimento de aplicações da comunidade
 - **Expansões de Hardware:** acessórios e upgrades modulares
 - **Modelos de IA Aprimorados:** modelos otimizados para processamento embarcado
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico e Discussão sobre o Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte e garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,6 +1,6 @@
 ---
-description: Build and control ReachyMini, a compact, open-source desktop humanoid robot for AI and robotics learning.
-title: ReachyMini Getting Started
+description: ReachyMini は、AI とロボティクス学習のための、コンパクトでオープンソースなデスクトップ型ヒューマノイドロボットを構築・制御するためのプラットフォームです。
+title: ReachyMini 入門ガイド
 keywords:
   - Lerobot
   - Huggingface
@@ -21,7 +21,7 @@ last_update:
   author: TienjuiWong
 createdAt: '2026-01-07'
 updatedAt: '2026-01-12'
-url: https://wiki.seeedstudio.com/reachymini_getting_started/
+url: https://wiki.seeedstudio.com/ja/reachymini_getting_started/
 ---
 
 <div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>
@@ -35,99 +35,101 @@ url: https://wiki.seeedstudio.com/reachymini_getting_started/
     style={{display: 'block'}}
     ref={(video) => { if (video) video.play().catch(() => {}); }}>
     <source src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.mp4" type="video/mp4"/>
-    Your browser does not support the video tag.
+    お使いのブラウザは video タグをサポートしていません。
   </video>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.pollen-robotics.com/reachy-mini/#order" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🤖</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🤖</font></span></strong>
 </a>
 </div>
 
-The **Reachy Mini** is the first open-source desktop robot designed to explore human-robot interaction and creative custom applications. Developed collaboratively by **Pollen Robotics** and **Hugging Face**, this compact humanoid robot brings professional-grade robotics capabilities to your desk at an affordable price point.
+**Reachy Mini** は、人とロボットのインタラクションや創造的なカスタムアプリケーションを探求するために設計された、初のオープンソース・デスクトップロボットです。**Pollen Robotics** と **Hugging Face** によって共同開発されたこのコンパクトなヒューマノイドロボットは、プロフェッショナルレベルのロボティクス機能を、手頃な価格であなたのデスクにもたらします。
 
-Optimized and manufactured by **Seeed Studio**, Reachy Mini combines expressive physical interaction with modern AI capabilities. Whether you're building voice assistants, computer vision applications, or educational tools, Reachy Mini provides a complete platform for real-world AI experimentation.
-
+**Seeed Studio** によって最適化・製造された Reachy Mini は、表現力豊かな物理的インタラクションと最新の AI 機能を兼ね備えています。音声アシスタント、コンピュータビジョンアプリケーション、教育ツールなど、どのようなものを構築する場合でも、Reachy Mini は実世界の AI 実験のための完全なプラットフォームを提供します。
 
 :::tip
-What You'll Learn
+このページで学べること
 
-- The key features and architecture of Reachy Mini
-- Hardware specifications and differences between Lite and Full versions
-- How to assemble and configure your Reachy Mini
-- How to control the robot using the Python SDK
-- How to integrate with Hugging Face models and applications
-- Where to find community resources and support
+- Reachy Mini の主な機能とアーキテクチャ
+- Lite 版と Full 版のハードウェア仕様と違い
+- Reachy Mini の組み立てと設定方法
+- Python SDK を使ったロボットの制御方法
+- Hugging Face のモデルやアプリケーションとの連携方法
+- コミュニティリソースやサポートの見つけ方
 
 :::
 
-## Key Features & Specifications
+## 主な機能と仕様
 
-Reachy Mini packs impressive capabilities into a compact, desktop-sized package.
+Reachy Mini は、コンパクトなデスクトップサイズの筐体に、驚くほど多くの機能を詰め込んでいます。
 
-| Feature | Reachy Mini Lite | Reachy Mini (Full) |
+| 機能 | Reachy Mini Lite | Reachy Mini (Full) |
 |:---|:---|:---|
-| **Price** | $299 + shipping | $449 + shipping |
-| **Compute** | External (Mac/Linux compatible) | Raspberry Pi 4 onboard |
-| **Connectivity** | Wired only | WiFi + Ethernet (via USB-C adapter) |
-| **Power** | Wired power | Battery + wired operation |
-| **Microphones** | 4 | 4 |
-| **Speaker** | 5W | 5W |
-| **Camera** | Wide-angle | Wide-angle |
-| **Accelerometer** | No | Yes |
-| **Head Movement** | 6-DOF | 6-DOF |
-| **Body Rotation** | Yes | Yes |
-| **Animated Antennas** | 2 | 2 |
-| **Height** | 28 cm (11") | 28 cm (11") |
-| **Weight** | 1.5 kg (3.3 lbs) | 1.5 kg (3.3 lbs) |
+| **価格** | $299 + 送料 | $449 + 送料 |
+| **コンピュート** | 外部（Mac/Linux 対応） | Raspberry Pi 4 搭載 |
+| **接続性** | 有線のみ | WiFi + Ethernet（USB-C アダプタ経由） |
+| **電源** | 有線電源 | バッテリー + 有線動作 |
+| **マイク** | 4 | 4 |
+| **スピーカー** | 5W | 5W |
+| **カメラ** | 広角 | 広角 |
+| **加速度センサー** | なし | あり |
+| **頭部の可動** | 6 自由度 | 6 自由度 |
+| **胴体の回転** | あり | あり |
+| **アニメーションアンテナ** | 2 | 2 |
+| **高さ** | 28 cm (11") | 28 cm (11") |
+| **重量** | 1.5 kg (3.3 lbs) | 1.5 kg (3.3 lbs) |
 
-### Physical Dimensions
+### 物理的寸法
 
-- **Height:** 28 cm / 11 inches (approximately 23 cm / 9 inches in sleep mode)
-- **Width:** 16 cm / 6.3 inches
-- **Weight:** 1.5 kg / 3.3 lbs
+- **高さ:** 28 cm / 11 インチ（スリープモード時は約 23 cm / 9 インチ）
+- **幅:** 16 cm / 6.3 インチ
+- **重量:** 1.5 kg / 3.3 lbs
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', margin: '24px 0'}}>
   <div align="center">
     <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachy_mini_dimensions.png" alt="Reachy Mini Dimensions" />
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Physical Dimensions</p>
+    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>物理的寸法</p>
   </div>
   <div align="center">
     <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/dof_table.png" alt="Degrees of Freedom Table" />
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>DOF Specifications</p>
+    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>自由度仕様</p>
   </div>
   <div align="center">
     <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram" />
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Motion Range</p>
+    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>動作範囲</p>
   </div>
 </div>
 
-## Designed for Human-Robot Interaction
+## 人とロボットのインタラクションのための設計
 
-Reachy Mini is specifically engineered for expressive, engaging human-robot interaction:
+Reachy Mini は、表現力が高く魅力的な人とロボットのインタラクションのために、特別に設計されています。
 
-### Expressive Movement
-- **6 Degrees of Freedom Head:** Natural-looking pan, tilt, and roll movements
-- **Full Body Rotation:** 360-degree rotation for dynamic positioning
-- **Animated Antennas:** Two expressive antennas that add personality and feedback
+### 表現力豊かな動き
 
-### Multimodal Sensing
-- **4-Microphone Array:** Advanced audio capture for voice recognition and sound localization
-- **Wide-Angle Camera:** Computer vision capabilities for face detection, object recognition, and more
-- **5W Speaker:** Clear audio output for speech synthesis and sound effects
+- **6 自由度の頭部:** 自然なパン・チルト・ロール動作
+- **胴体の全回転:** ダイナミックなポジショニングのための 360 度回転
+- **アニメーションアンテナ:** 個性とフィードバックを与える 2 本の表現力豊かなアンテナ
 
-### Open & Extensible
-- **Fully Open-Source:** Hardware design, software SDK, and simulation environment
-- **Python SDK:** Intuitive programming interface with JavaScript and Scratch support coming soon
-- **Hugging Face Integration:** Direct access to state-of-the-art AI models for speech, vision, and more
+### マルチモーダルセンシング
+
+- **4 マイクアレイ:** 音声認識や音源定位のための高度な音声取得
+- **広角カメラ:** 顔検出、物体認識などのコンピュータビジョン機能
+- **5W スピーカー:** 音声合成や効果音のためのクリアな音声出力
+
+### オープンかつ拡張可能
+
+- **完全オープンソース:** ハードウェア設計、ソフトウェア SDK、シミュレーション環境を公開
+- **Python SDK:** 直感的なプログラミングインターフェース（JavaScript と Scratch 対応は近日追加予定）
+- **Hugging Face 連携:** 音声・ビジョンなど最先端の AI モデルへ直接アクセス可能
 
 <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', margin: '24px 0', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto'}}>
   <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
     <iframe
       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
       src="https://www.youtube.com/embed/wLftEz-QF1E"
-      title="Reachy Mini Demo 1"
+      title="Reachy Mini デモ 1"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -136,7 +138,7 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
     <iframe
       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
       src="https://www.youtube.com/embed/JvdBJZ-qR18"
-      title="Reachy Mini Demo 2"
+      title="Reachy Mini デモ 2"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -145,7 +147,7 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
     <iframe
       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
       src="https://www.youtube.com/embed/vRh8G46Nc5k"
-      title="Reachy Mini Demo 3"
+      title="Reachy Mini デモ 3"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -154,14 +156,14 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
     <iframe
       style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
       src="https://www.youtube.com/embed/dMpLCGvE2A0"
-      title="Reachy Mini Demo 4"
+      title="Reachy Mini デモ 4"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 </div>
 
-## Hardware Versions
+## ハードウェアバージョン
 
 <div style={{float: 'right', marginLeft: '24px', marginBottom: '16px'}}>
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/plumber.png" alt="Reachy Mini Plumber" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
@@ -169,86 +171,91 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
 
 ### Reachy Mini Lite ($299)
 
-The Lite version is ideal for developers who prefer external compute or already have a preferred development environment.
+Lite 版は、外部コンピュートを好む開発者や、すでに好みの開発環境を持っているユーザーに最適です。
 
-**Best for:**
-- Developers with Mac/Linux systems
-- Users who want maximum control over compute resources
-- Educational settings with existing computer labs
-- Projects requiring integration with existing infrastructure
+**最適な用途:**
 
-**Limitations:**
-- Requires wired connection to host computer
-- No WiFi capability
-- No accelerometer
-- Must be powered via wall outlet
+- Mac/Linux システムを使用している開発者
+- コンピュートリソースを最大限自分で制御したいユーザー
+- 既存のコンピュータラボを備えた教育現場
+- 既存インフラとの統合が必要なプロジェクト
+
+**制限事項:**
+
+- ホストコンピュータとの有線接続が必要
+- WiFi 機能なし
+- 加速度センサーなし
+- コンセントから給電する必要あり
 
 ### Reachy Mini Full ($449)
 
-The Full version includes onboard computing for complete autonomy and wireless operation.
+Full 版にはオンボードコンピュートが搭載されており、完全な自律動作とワイヤレス動作が可能です。
 
-**Best for:**
-- Standalone robot applications
-- Wireless research and development
-- Projects requiring accelerometer data
-- Portable demonstrations and deployments
+**最適な用途:**
 
-**Additional Features:**
-- Raspberry Pi 4 onboard computer
-- WiFi connectivity
-- Battery for wireless operation
-- Built-in accelerometer
+- スタンドアロンのロボットアプリケーション
+- ワイヤレスでの研究開発
+- 加速度センサーデータが必要なプロジェクト
+- 持ち運び可能なデモや導入
 
-## Assembly Guide
+**追加機能:**
 
-Reachy Mini is sold as a kit that takes approximately **2-3 hours** to assemble. The assembly process is designed to be approachable for builders of all experience levels.
+- Raspberry Pi 4 オンボードコンピュータ
+- WiFi 接続
+- ワイヤレス動作用バッテリー
+- 内蔵加速度センサー
 
-### Assembly Resources
+## 組み立てガイド
 
-- **Interactive Assembly Guide:** [Step-by-step online instructions](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)
+Reachy Mini はキットとして販売されており、組み立てにはおよそ **2〜3 時間** かかります。組み立てプロセスは、あらゆるレベルのビルダーが取り組みやすいように設計されています。
 
+### 組み立て用リソース
 
-:::warning[Assembly Tips]
+- **インタラクティブ組み立てガイド:** [ステップバイステップのオンライン手順](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)
 
-- Set aside 2-3 hours in a clean, well-lit workspace
-- A set of small screwdrivers is required (included in kit)
-- Follow the online guide step-by-step for best results
-- Test each subsystem as you assemble (camera, microphones, servos)
+:::warning[組み立てのコツ]
+
+- 2〜3 時間を確保し、清潔で明るい作業スペースを用意する
+- 小型ドライバーセットが必要です（キットに同梱）
+- 最良の結果のために、オンラインガイドをステップごとに順番に従う
+- 組み立てながら各サブシステム（カメラ、マイク、サーボ）をテストする
 
 :::
 
-## Getting Started with Software
+## ソフトウェアのはじめ方
 
-### Prerequisites
+### 前提条件
 
-Depending on your version, you'll need:
+お使いのバージョンに応じて、次のものが必要です。
 
 **Reachy Mini Lite:**
-- Mac or Linux computer (Windows support coming soon)
-- Python 3.8 or higher
-- USB connection
+
+- Mac または Linux コンピュータ（Windows 対応は近日追加予定）
+- Python 3.8 以上
+- USB 接続
 
 **Reachy Mini Full:**
-- WiFi network or Ethernet connection
-- Web browser for dashboard access
 
-### Quick Start Installation
+- WiFi ネットワークまたは Ethernet 接続
+- ダッシュボードにアクセスするための Web ブラウザ
+
+### クイックスタートインストール
 
 <div style={{float: 'right', marginLeft: '24px', marginBottom: '16px', clear: 'both'}}>
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/cowboy.png" alt="Reachy Mini Cowboy" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
 </div>
 
-Install the Reachy Mini SDK with the following command:
+次のコマンドで Reachy Mini SDK をインストールします。
 
 ```bash
 pip install reachy-mini
 ```
 
-> **Pro tip:** Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for 10-100x faster app installations (auto-detected, falls back to `pip`).
+> **プロ向けヒント:** [uv](https://docs.astral.sh/uv/getting-started/installation/) をインストールすると、アプリのインストールが 10〜100 倍高速になります（自動検出され、失敗した場合は `pip` にフォールバックします）。
 
-### Hello World Example
+### Hello World の例
 
-Control your robot in just a few lines of code:
+わずか数行のコードでロボットを制御できます。
 
 ```python
 from reachy_mini import ReachyMini
@@ -262,56 +269,60 @@ with ReachyMini() as mini:
     )
 ```
 
-## Dashboard Control
+## ダッシュボードによる制御
 
-A web-based dashboard provides an intuitive interface for testing and controlling Reachy Mini without writing code.
+Web ベースのダッシュボードにより、コードを書くことなく Reachy Mini をテスト・制御できる直感的なインターフェースが提供されます。
 
-**Features:**
-- Real-time motor control
-- Camera feed display
-- Microphone testing
-- App management
-- System diagnostics
+**機能:**
 
-Download the dashboard from the [official repository](https://github.com/pollen-robotics/reachy_mini) or access it directly from your Reachy Mini Full's local network.
+- リアルタイムのモーター制御
+- カメラ映像の表示
+- マイクのテスト
+- アプリ管理
+- システム診断
+
+ダッシュボードは[公式リポジトリ](https://github.com/pollen-robotics/reachy_mini)からダウンロードするか、Reachy Mini Full のローカルネットワークから直接アクセスできます。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_webui.png"/>
 </div>
 
-## Hugging Face Apps Ecosystem
+## Hugging Face アプリエコシステム
 
-Reachy Mini features a growing ecosystem of ready-to-use applications powered by Hugging Face Spaces. Install these apps directly from your robot's dashboard with one click.
+Reachy Mini には、Hugging Face Spaces によって提供される、すぐに使えるアプリケーションのエコシステムが拡大し続けています。これらのアプリは、ロボットのダッシュボードからワンクリックで直接インストールできます。
 
-### Featured Apps
+### 注目のアプリ
 
-**Conversation App**
-- Natural language interaction powered by Large Language Models
-- Voice recognition and speech synthesis
-- Customizable personality and knowledge base
+**Conversation アプリ**
+
+- 大規模言語モデルによる自然言語インタラクション
+- 音声認識と音声合成
+- カスタマイズ可能な人格とナレッジベース
 
 <div style={{float: 'left', marginRight: '24px', marginBottom: '16px', clear: 'both'}}>
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-hand-tracking-app.jpg" alt="Reachy Mini Hand Tracking" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
 </div>
 
 **Hand Tracker**
-- Real-time hand tracking using computer vision
-- The robot follows your hand movements
-- Great for demonstrations and interaction experiments
+
+- コンピュータビジョンを用いたリアルタイムの手のトラッキング
+- ロボットがあなたの手の動きに追従
+- デモやインタラクション実験に最適
 
 **Radio**
-- Voice-controlled radio streaming
-- Natural language requests for songs and stations
-- Demonstrates audio processing capabilities
 
-**And Many More:**
-Browse the complete app collection on [Hugging Face Spaces](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini)
+- 音声操作によるラジオストリーミング
+- 楽曲や局を自然言語でリクエスト
+- オーディオ処理機能をデモンストレーション
+
+**その他多数：**
+[Hugging Face Spaces](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini)でアプリコレクション全体を参照してください
 
 <div align="center">
     <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/apps.png" alt="Reachy Mini Apps Ecosystem"/>
 </div>
 
-## Building Custom Applications
+## カスタムアプリケーションの構築
 
 ### Python SDK
 
@@ -319,7 +330,7 @@ Browse the complete app collection on [Hugging Face Spaces](https://huggingface.
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-conversation-app.jpg" alt="Reachy Mini Conversation" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
 </div>
 
-The Python SDK provides comprehensive control over all Reachy Mini systems:
+Python SDK は、Reachy Mini のすべてのシステムを包括的に制御するための機能を提供します：
 
 ```python
 from reachy_mini import ReachyMini
@@ -339,120 +350,121 @@ with ReachyMini() as mini:
     orientation = mini.imu.get_orientation()
 ```
 
-### AI Integration
+### AI 連携
 
-Reachy Mini seamlessly integrates with Hugging Face's extensive model ecosystem:
+Reachy Mini は、Hugging Face の幅広いモデルエコシステムとシームレスに統合できます：
 
-- **Speech Recognition:** Whisper, Wav2Vec2
-- **Speech Synthesis:** Bark, SpeechT5
-- **Vision:** ViT, CLIP, YOLO
-- **Language:** LLaMA, Mistral, GPT models
-- **Multimodal:** GPT-4V, LLaVA
+- **音声認識：** Whisper、Wav2Vec2
+- **音声合成：** Bark、SpeechT5
+- **ビジョン：** ViT、CLIP、YOLO
+- **言語：** LLaMA、Mistral、GPT モデル
+- **マルチモーダル：** GPT-4V、LLaVA
 
-### Publishing Apps
+### アプリの公開
 
-Share your creations with the global Reachy Mini community:
+作成したアプリを世界中の Reachy Mini コミュニティと共有しましょう：
 
-1. Build your app using the SDK
-2. Create a Hugging Face Space
-3. Add the `reachy-mini` tag
-4. Publish and share with millions of Hugging Face users
+1. SDK を使ってアプリを構築する
+2. Hugging Face Space を作成する
+3. `reachy-mini` タグを追加する
+4. 公開して、数百万の Hugging Face ユーザーと共有する
 
-## Simulation Development
+## シミュレーション開発
 
-Prototype and develop Reachy Mini applications without hardware using the MuJoCo simulation environment:
+MuJoCo シミュレーション環境を使用して、ハードウェアなしで Reachy Mini アプリケーションのプロトタイピングと開発が行えます：
 
 ```bash
 pip install reachy-mini[simulation]
 ```
 
-Test your code, iterate quickly, and deploy to hardware when ready.
+コードをテストし、素早く反復し、準備ができたらハードウェアにデプロイします。
 
-## Technical Specifications Deep Dive
+## 技術仕様の詳細
 
-### Motor System
+### モーターシステム
 
-- **Degrees of Freedom:** 6-DOF head movement
-- **Control:** High-precision servo motors
-- **Safety:** Current limiting and position feedback
-- **Smooth Motion:** Interpolated trajectories for natural movement
+- **自由度：** 6-DOF の頭部動作
+- **制御：** 高精度サーボモーター
+- **安全性：** 電流制限と位置フィードバック
+- **スムーズな動き：** 自然な動きを実現する補間軌道
 
-### Audio System
+### オーディオシステム
 
-- **Microphone Array:** 4 microphones arranged for optimal sound localization
-- **Beamforming:** Hardware-level audio processing
-- **SNR:** High signal-to-noise ratio for clear voice capture
-- **Speaker:** 5W output with clear frequency response
+- **マイクアレイ：** 最適な音源定位のために配置された 4 つのマイク
+- **ビームフォーミング：** ハードウェアレベルのオーディオ処理
+- **SNR：** 明瞭な音声取得のための高い信号対雑音比
+- **スピーカー：** 明瞭な周波数特性を持つ 5W 出力
 
-### Vision System
+### ビジョンシステム
 
-- **Sensor:** Wide-angle camera
-- **Resolution:** HD video capture
-- **FPS:** 30 frames per second
-- **Field of View:** Optimized for desktop interaction
+- **センサー：** 広角カメラ
+- **解像度：** HD ビデオキャプチャ
+- **FPS：** 1 秒あたり 30 フレーム
+- **視野角：** デスクトップでのインタラクションに最適化
 
-### Power Requirements
+### 電源要件
 
-**Lite Version:**
-- Powered via USB from host computer or wall adapter
-- Typical consumption: 5V @ 2A
+**Lite バージョン：**
 
-**Full Version:**
-- Internal battery for wireless operation
-- USB-C charging
-- Battery life: 2-4 hours depending on usage
+- ホストコンピュータまたは AC アダプタから USB 経由で給電
+- 典型的な消費電力：5V @ 2A
 
-## Privacy & Security
+**Full バージョン：**
+
+- ワイヤレス動作用の内蔵バッテリー
+- USB-C 充電
+- バッテリー駆動時間：使用状況に応じて 2〜4 時間
+
+## プライバシーとセキュリティ
 
 <div style={{float: 'left', marginRight: '24px', marginBottom: '16px', clear: 'both'}}>
   <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/astronaut.png" alt="Reachy Mini Astronaut" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
 </div>
 
-Reachy Mini is designed with privacy in mind:
+Reachy Mini はプライバシーを重視して設計されています：
 
-- **No Data Collection:** The robot does not store, transmit, or process personal data by default
-- **Local Processing:** All AI processing can be done locally
-- **User Control:** Camera and microphone functions are fully under user control
-- **Open Source:** Full transparency in software and hardware
+- **データ収集なし：** ロボットはデフォルトでは個人データを保存・送信・処理しません
+- **ローカル処理：** すべての AI 処理はローカルで実行可能
+- **ユーザーコントロール：** カメラとマイクの機能は完全にユーザーの管理下にあります
+- **オープンソース：** ソフトウェアとハードウェアの完全な透明性
 
-Reachy Mini does not send any data to Pollen Robotics or Hugging Face. All processing happens locally unless you explicitly configure cloud services.
+Reachy Mini は、Pollen Robotics や Hugging Face にいかなるデータも送信しません。明示的にクラウドサービスを設定しない限り、すべての処理はローカルで行われます。
 
-## Community & Support
+## コミュニティとサポート
 
-### Join the Community
+### コミュニティに参加する
 
-- **Discord:** [Join the Reachy Mini Discord](https://discord.com/invite/2bAhWfXme9)
-- **GitHub:** [Report issues and contribute](https://github.com/pollen-robotics/reachy_mini)
-- **Official Website:** [https://www.pollen-robotics.com/reachy-mini/](https://www.pollen-robotics.com/reachy-mini/)
+- **Discord：** [Reachy Mini Discord に参加](https://discord.com/invite/2bAhWfXme9)
+- **GitHub：** [問題の報告とコントリビュート](https://github.com/pollen-robotics/reachy_mini)
+- **公式サイト：** [https://www.pollen-robotics.com/reachy-mini/](https://www.pollen-robotics.com/reachy-mini/)
 
-### Documentation & Learning Resources
+### ドキュメントと学習リソース
 
-- **[Official Development Guide](https://github.com/pollen-robotics/reachy_mini/blob/develop/README.md):** Complete official documentation and development resources
-- **[SDK Installation](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/installation.md):** 5 minutes to set up your computer
-- **[Quickstart Guide](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/quickstart.md):** Run your first behavior on Reachy Mini
-- **[Python SDK](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/python-sdk.md):** Learn to move, see, speak, and hear
-- **[AI Integrations](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/integration.md):** Connect LLMs, build Apps, and publish to Hugging Face
-- **[Core Concepts](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/core-concept.md):** Architecture, coordinate systems, and safety limits
-- **[Secondary Development](https://github.com/Seeed-Projects/reachy-mini-starter):** Seeed's starter guide for custom application development
-- **[Assembly Guide](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide):** Step-by-step assembly instructions
-- 🤗[**Share your app with the community**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
+- **[公式開発ガイド](https://github.com/pollen-robotics/reachy_mini/blob/develop/README.md)：** 公式ドキュメントと開発リソース一式
+- **[SDK インストール](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/installation.md)：** 5 分でコンピュータをセットアップ
+- **[クイックスタートガイド](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/quickstart.md)：** Reachy Mini で最初の挙動を実行
+- **[Python SDK](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/python-sdk.md)：** 動く・見る・話す・聞くを学ぶ
+- **[AI 連携](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/integration.md)：** LLM を接続し、アプリを構築して Hugging Face に公開
+- **[コアコンセプト](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/core-concept.md)：** アーキテクチャ、座標系、安全限界
+- **[セカンダリ開発](https://github.com/Seeed-Projects/reachy-mini-starter)：** カスタムアプリケーション開発のための Seeed スターターガイド
+- **[組み立てガイド](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)：** ステップバイステップの組み立て手順
+- 🤗[**アプリをコミュニティと共有しましょう**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
 
+## 次のステップは？
 
-## What's Next?
+### ロードマップ
 
-### Roadmap
+Reachy Mini プラットフォームは継続的に進化しています：
 
-The Reachy Mini platform is continuously evolving:
+- **JavaScript 対応：** Web ベース開発向けに近日対応予定
+- **Scratch 連携：** 初心者向けのブロックベースプログラミング
+- **追加アプリ：** コミュニティアプリケーションのエコシステム拡大
+- **ハードウェア拡張：** モジュラーアクセサリとアップグレード
+- **強化された AI モデル：** オンボード処理向けに最適化されたモデル
 
-- **JavaScript Support:** Coming soon for web-based development
-- **Scratch Integration:** Block-based programming for beginners
-- **Additional Apps:** Growing ecosystem of community applications
-- **Hardware Expansions:** Modular accessories and upgrades
-- **Enhanced AI Models:** Optimized models for onboard processing
+## 技術サポートと製品ディスカッション
 
-## Tech Support & Product Discussion
-
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+当社の製品をお選びいただきありがとうございます。お客様が製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
