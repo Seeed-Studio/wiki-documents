@@ -19,33 +19,21 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-03-16'
+updatedAt: '2026-02-28'
 url: https://wiki.seeedstudio.com/pt-br/reachymini_platforms_reachy_mini_lite_media_advanced_controls/
 ---
 
 # Controles Avançados de Mídia
 
-Esta página descreve configurações avançadas para ajustar com precisão a câmera e o sistema de som do Reachy Mini Lite. Apenas o acesso à câmera difere um pouco em relação à versão padrão.
+Esta página descreve configurações avançadas para ajustar com precisão a câmera e o sistema de som do Reachy Mini Lite. Apenas o acesso à câmera difere ligeiramente da versão padrão.
 
 ## Câmera
 
 A câmera do Raspberry Pi é montada em um adaptador CSI-para-USB e é detectada pelo sistema como uma câmera UVC. Ela pode ser acessada diretamente por qualquer programa capaz de abrir um dispositivo de câmera.
 
-### Windows e macOS
+### Acesso à Câmera
 
-Atualmente, o backend padrão para essas plataformas é o OpenCV. Os parâmetros podem ser definidos no [código](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_opencv.py):
-
-```python
-self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self._resolution.value[0])
-self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self._resolution.value[1])
-
-# Example camera control settings:
-# self.cap.set(cv2.CAP_PROP_BRIGHTNESS, 0.5)
-# self.cap.set(cv2.CAP_PROP_CONTRAST, 0.5)
-# self.cap.set(cv2.CAP_PROP_SATURATION, 64)
-```
-
-Consulte a seção Linux abaixo para obter uma lista de parâmetros disponíveis.
+O daemon gerencia o hardware da câmera e expõe quadros por meio de um endpoint IPC local ou streaming WebRTC. O código do lado do cliente lê os quadros através do MediaManager usando o backend LOCAL ou WEBRTC.
 
 ### Linux
 
@@ -108,13 +96,13 @@ v4l2-ctl --device=/dev/video2 --list-ctrls
 # exposure_dynamic_framerate 0x009a0903 (bool)   : default=0 value=1
 ```
 
-Usar GStreamer permite visualizar diretamente o efeito das alterações de parâmetros:
+Usar GStreamer permite visualizar diretamente o efeito das mudanças de parâmetros:
 
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video2 extra-controls=s,exposure_auto=1,exposure_absolute=100,saturation=0 ! videoconvert ! autovideosink
 ```
 
-No nível do SDK, a câmera é controlada pelo GStreamer usando o componente [v4l2src](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py). Você pode visualizar os parâmetros disponíveis com o seguinte comando:
+No nível do SDK, a câmera é controlada pelo GStreamer usando o componente [v4l2src](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py). Você pode ver os parâmetros disponíveis com o seguinte comando:
 
 Os parâmetros podem ser definidos [no código](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py) da seguinte forma:
 
@@ -129,7 +117,7 @@ camsrc.set_property("device", cam_path)
 self.pipeline.add(camsrc)
 ```
 
-O backend padrão OpenCV também está disponível para Linux.
+O backend padrão do OpenCV também está disponível para Linux.
 
 ## Microfones e Alto-falantes
 

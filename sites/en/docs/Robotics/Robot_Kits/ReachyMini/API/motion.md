@@ -1,56 +1,61 @@
 ---
-description: Complete API reference for Reachy Mini motion including base classes, goto moves, and recorded moves.
-title: Motion API Reference
+description: Motion API reference for Reachy Mini covering move base classes, goto moves, and recorded moves.
+title: Motion API
 slug: /reachymini_api_motion
 keywords:
-  - api
   - motion
-  - moves
+  - api
   - goto
-  - interpolation
-  - recording
-  - playback
+  - recorded moves
+  - move
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_api_motion/
 ---
+
 # Motion
 
 ## Base Classes
 
 ### `reachy_mini.motion.move.Move`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/move.py#L11)**
-
-Abstract base class for defining a move on the `ReachyMini` robot.
+Base class for all move types in the Reachy Mini motion system.
 
 ### Methods
 
-#### `evaluate`
+#### `goto_target`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/move.py#L25)**
-
-Evaluate the move at time t, typically called at a high-frequency (eg. 100Hz).
+Go to a target pose using task space interpolation.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `t` | `float` | The time at which to evaluate the move (in seconds). It will always be between 0 and duration. |
+| `head` | `Optional[np.ndarray]` | 4x4 pose matrix representing the target head pose. |
+| `antennas` | `Optional[Union[np.ndarray, List[float]]]` | 1D array with two elements representing the angles of the antennas in radians. |
+| `duration` | `float` | Duration of the movement in seconds. |
+| `method` | `InterpolationTechnique` | Interpolation method to use ("linear", "minjerk", "ease_in_out", "cartoon"). |
+| `body_yaw` | `float \| None` | Body yaw angle in radians. |
 
-**Returns:**
+---
+
+#### `set_target`
+
+Set the target pose of the head and/or the target position of the antennas (real-time control).
+
+**Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `head` | - | The head position (4x4 homogeneous matrix). |
-| `antennas` | - | The antennas positions (rad). |
-| `body_yaw` | - | The body yaw angle (rad). |
+| `head` | `Optional[np.ndarray]` | 4x4 pose matrix representing the head pose. |
+| `antennas` | `Optional[Union[np.ndarray, List[float]]]` | 1D array with two elements representing the angles of the antennas in radians. |
+| `body_yaw` | `Optional[float]` | Body yaw angle in radians. |
 
 ---
 
@@ -58,17 +63,20 @@ Evaluate the move at time t, typically called at a high-frequency (eg. 100Hz).
 
 ### `reachy_mini.motion.goto.GotoMove`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/goto.py#L15)**
-
-A goto move to a target head pose and/or antennas position.
+GotoMove class for movements using task space interpolation.
 
 ### Methods
 
-#### `evaluate`
+#### `play`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/goto.py#L51)**
+Play the goto move with specified duration and interpolation method.
 
-Evaluate the goto at time t.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `duration` | `float` | Duration of the movement in seconds. |
+| `method` | `str` | Interpolation method to use. |
 
 ---
 
@@ -76,70 +84,66 @@ Evaluate the goto at time t.
 
 ### `reachy_mini.motion.recorded_move.RecordedMove`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L70)**
-
-Represent a recorded move.
+A single recorded move that can be played back on the robot.
 
 ### Methods
 
 #### `evaluate`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L98)**
-
-Evaluate the move at time t.
-
-**Returns:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `head` | - | The head position (4x4 homogeneous matrix). |
-| `antennas` | - | The antennas positions (rad). |
-| `body_yaw` | - | The body yaw angle (rad). |
-
----
-
-### `reachy_mini.motion.recorded_move.RecordedMoves`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L156)**
-
-Load a library of recorded moves from a HuggingFace dataset.
-
-:::info
-
-Uses local cache only to avoid blocking network calls during playback.
-
-The dataset should be pre-downloaded at daemon startup via `preload_default_datasets()`.
-
-If not cached, falls back to network download (which may cause delays).
-
-:::
-
-### Methods
-
-#### `get`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L209)**
-
-Get a recorded move by name.
+Evaluate the recorded move at a specific time.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `move_name` | `str` | The name of the move to retrieve. |
+| `t` | `float` | Time in seconds to evaluate the move. |
+
+**Returns:**
+
+`Dict` — Dictionary containing head pose, antennas positions, and body yaw at time t.
 
 ---
 
-#### `list_moves`
+#### `play`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L218)**
+Play the recorded move on the robot.
 
-List all moves in the loaded library.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `play_frequency` | `float` | Frequency at which to evaluate the move (in Hz). |
+| `initial_goto_duration` | `float` | Duration for the initial goto to the starting position (in seconds). |
+| `sound` | `bool` | Whether to play the associated sound. |
 
 ---
 
-#### `process`
+### `reachy_mini.motion.recorded_move.RecordedMoves`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L189)**
+Collection of recorded moves, typically loaded from a HuggingFace dataset.
 
-Populate recorded moves and sounds.
+### Methods
+
+#### `get`
+
+Get a specific recorded move by name.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `name` | `str` | Name of the recorded move to retrieve. |
+
+**Returns:**
+
+`RecordedMove` — The requested recorded move.
+
+---
+
+#### `list`
+
+List all available recorded move names.
+
+**Returns:**
+
+`List[str]` — List of available move names.

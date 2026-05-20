@@ -14,13 +14,13 @@ keywords:
   - electronics
   - lite
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_hardware/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_hardware
 
 ## Global description
 
-![Dimensions](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_dimensions.png)
+![Dimensions](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_dimensions.png)
 
 - Dimensions: 30x20x15.5cm (extended)
 - Mass: 1.350 Kg
@@ -38,25 +38,25 @@ url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_hardware
     - Body : 1 rotation
     - Antennas : 1 rotation (x2)
 
-    ![Dofs](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/degrees_of_freedom.png)
+    ![Dofs](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/degrees_of_freedom.png)
 
-    ![dof_table](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/dof_table.png)
+    ![dof_table](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/dof_table.png)
 
 
 - Power input voltage: 6.8 - 7.6V
 - Wide angle camera:  120° - 12MP - Autofocus
 - Sound : Mic Array + Speaker
 
-![Mics_and_camera](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/mic_and_camera.png)
+![Mics_and_camera](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/mic_and_camera.png)
 
 
-![back_interface](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/back_interface.png)
+![back_interface](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/back_interface.png)
 
 - Control: USB-C Connection for computer interface.
 Please note that it will *not* charge through this USB port.
 Reachy Mini Lite is a device plugged on a computer
 
-![Components](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_components.png)
+![Components](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_components.png)
 
 
 ## Specific components
@@ -66,7 +66,7 @@ Reachy Mini Lite is a device plugged on a computer
     - Antennas: 2x Dynamixel [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/)
     - Stewart Platform: 6x Dynamixel [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/)
 
-    ![Motors](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/motors_detail.png)
+    ![Motors](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/motors_detail.png)
 
 - Mic Array Board
     - 4 PDM MEMS digital mics
@@ -82,7 +82,7 @@ Reachy Mini Lite is a device plugged on a computer
 - Power board
     - Input voltage: 6.8 - 7.6V
 
-    ![Electronics](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/electronics.png)
+    ![Electronics](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/electronics.png)
 
 
 - Lite controller board:

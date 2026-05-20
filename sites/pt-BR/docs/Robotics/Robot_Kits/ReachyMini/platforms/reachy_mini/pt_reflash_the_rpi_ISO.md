@@ -1,16 +1,16 @@
 ---
 description: Guia avançado para regravar a imagem ReachyMiniOS no CM4 do Reachy Mini usando rpiboot e bmaptool em Linux, macOS e Windows.
-title: Regravar a Imagem do Raspberry Pi OS
+title: Regravar a imagem do Raspberry Pi OS
 slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:
   - reflash
-  - factory reset
-  - os image
+  - restauração de fábrica
+  - imagem do sistema operacional
   - rpiboot
   - bmaptool
   - cm4
-  - expert
-  - recovery
+  - avançado
+  - recuperação
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
@@ -18,27 +18,27 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-03-16'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/pt-br/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
 ---
 
 # Avançado: Regravar a imagem do Raspberry Pi OS
 
-:::danger Guia apenas para especialistas
-Este guia explica como regravar a imagem ReachyMiniOS no CM4 do Reachy Mini. Fazer isso irá fazer um _factory reset_ no seu Reachy Mini.
+:::warning Guia apenas para usuários experientes
+Este guia explica como regravar a imagem ReachyMiniOS no CM4 do Reachy Mini. Fazer isso irá realizar uma _restauração de fábrica_ no seu Reachy Mini.
 
-A maioria dos usuários não precisa disso. O Reachy Mini vem pré-instalado. Siga estas etapas apenas se você tiver uma instalação corrompida que não conseguiu depurar.
+A maioria dos usuários não precisa disso. O Reachy Mini já vem pré-instalado. Siga estas etapas apenas se você tiver uma instalação corrompida que não conseguiu depurar.
 :::
 
 ---
 
-## Baixar a imagem do OS (e o bmap)
+## Baixar a imagem do sistema operacional (e o bmap)
 
-Primeiro, baixe a versão mais recente da imagem do OS e o arquivo `.bmap` em:
+Primeiro, baixe a versão mais recente da imagem do sistema operacional e o arquivo `.bmap` em:
 https://github.com/pollen-robotics/reachy-mini-os/releases
 
 :::tip
-O arquivo `.bmap` é usado pelo `bmaptool` (Linux/macOS). Se você estiver gravando com o Raspberry Pi Imager (Windows), só precisa do arquivo de imagem do OS.
+O arquivo `.bmap` é usado pelo `bmaptool` (Linux/macOS). Se você estiver gravando com o Raspberry Pi Imager (Windows), você só precisa do arquivo de imagem do sistema operacional.
 :::
 
 ---
@@ -51,7 +51,7 @@ https://github.com/raspberrypi/usbboot?tab=readme-ov-file#building-1
 :::
 
 :::info Windows
-Baixe e instale a interface gráfica do rpiboot do repositório oficial do Raspberry Pi:
+Baixe e instale a interface gráfica do rpiboot a partir do repositório oficial do Raspberry Pi:
 https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe
 :::
 
@@ -67,7 +67,7 @@ sudo apt install bmap-tools
 :::
 
 :::tip Usuários de Linux
-Usuários de Linux podem usar tanto o `bmaptool` quanto o Raspberry Pi Imager (a opção do Windows). O Raspberry Pi Imager é geralmente _muito mais lento_ que o `bmaptool` para este fluxo de trabalho, então prefira o `bmaptool` quando disponível.
+Usuários de Linux podem usar tanto o `bmaptool` quanto o Raspberry Pi Imager (a opção do Windows). O Raspberry Pi Imager é geralmente _muito mais lento_ que o `bmaptool` para este fluxo de trabalho, portanto, prefira o `bmaptool` quando disponível.
 :::
 
 :::info macOS
@@ -80,7 +80,7 @@ bmaptool --version
 :::
 
 :::tip Usuários de macOS
-Usuários de macOS podem usar tanto o `bmaptool` quanto o Raspberry Pi Imager (a opção do Windows). O Raspberry Pi Imager é geralmente _muito mais lento_ que o `bmaptool` para este fluxo de trabalho, então prefira o `bmaptool` quando disponível.
+Usuários de macOS podem usar tanto o `bmaptool` quanto o Raspberry Pi Imager (a opção do Windows). O Raspberry Pi Imager é geralmente _muito mais lento_ que o `bmaptool` para este fluxo de trabalho, portanto, prefira o `bmaptool` quando disponível.
 :::
 
 :::info Windows
@@ -105,7 +105,7 @@ Inicie o **rpiboot** (ele ficará aguardando o robô ser conectado):
 * **Windows**: execute o executável **RPiBoot** que você instalou na etapa anterior.
 
 :::tip Passo 3
-Coloque a chave em **DOWNLOAD (SW1)** na PCB da cabeça:
+Coloque a chave em **DOWNLOAD (SW1)** na placa PCB da cabeça:
 
 ![pcb_usb_and_switch](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/pcb_usb_and_switch.png)
 :::
@@ -118,12 +118,15 @@ A eMMC interna agora deve aparecer como um dispositivo de armazenamento em massa
 
 ---
 
-## Desmontar e Gravar o ISO
+## Desmontar e gravar a ISO
 
 :::info Linux
-:::warning Certifique-se de que o dispositivo esteja desmontado antes de gravar.
 
-**Verificar e Desmontar o Dispositivo**
+:::warning
+Certifique-se de que o dispositivo esteja desmontado antes de gravar.
+:::
+
+**Verificar e desmontar o dispositivo**
 
 Seu dispositivo deve estar visível como `/dev/sdx` (algo como `/dev/sda`).
 
@@ -132,7 +135,7 @@ Seu dispositivo deve estar visível como `/dev/sdx` (algo como `/dev/sda`).
 lsblk
 ```
 
-Se você vir `bootfs` e `rootfs` como abaixo, significa que ele está **montado**:
+Se você vir `bootfs` e `rootfs` como abaixo, isso significa que ele está **montado**:
 ```
 sda           8:0    1  14.6G  0 disk
 ├─sda1        8:1    1   512M  0 part /media/<username>/bootfs
@@ -145,7 +148,7 @@ sudo umount /media/<username>/bootfs
 sudo umount /media/<username>/rootfs
 ```
 
-**Gravar o ISO**
+**Gravar a ISO**
 ```bash
 sudo bmaptool copy <reachy_mini_os>.zip --bmap <reachy_mini_os>.bmap /dev/sda
 ```
@@ -156,10 +159,14 @@ sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11
 ```
 :::
 
-:::info macOS
-:::warning Certifique-se de que o dispositivo esteja desmontado antes de gravar.
 
-**Verificar e Desmontar o Dispositivo**
+:::info macOS
+
+:::warning
+Certifique-se de que o dispositivo esteja desmontado antes de gravar.
+:::
+
+**Verificar e desmontar o dispositivo**
 
 Seu dispositivo deve estar visível como `/dev/diskX` (algo como `/dev/disk4`).
 
@@ -181,7 +188,7 @@ Substitua `/dev/disk4` pelo identificador real do seu disco.
 `unmountDisk` desmonta todos os volumes do disco (`bootfs`, `rootfs`...) de uma só vez.
 :::
 
-:::warning Gravar o ISO
+:::warning Gravar a ISO
 Use `/dev/rdiskX` (note o prefixo **`r`**!) em vez de `/dev/diskX`. O prefixo `r` fornece acesso bruto ao disco, o que é obrigatório para que o comando de gravação seja bem-sucedido.
 :::
 
@@ -196,18 +203,18 @@ sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11
 :::
 
 :::info Windows (Raspberry Pi Imager)
-Use o executável **Raspberry Pi Imager** para gravar a imagem do OS:
+Use o executável **Raspberry Pi Imager** para gravar a imagem do sistema operacional:
 
 1. Abra o **Raspberry Pi Imager**
-2. Selecione `Raspberry Pi 4` como dispositivo
-3. Selecione `Use custom` para o sistema operacional e forneça a imagem do OS baixada (`.zip`, ou o `.img` extraído)
+2. Selecione `Raspberry Pi 4` como o dispositivo
+3. Selecione `Use custom` para o sistema operacional e forneça a imagem do sistema operacional baixada (`.zip`, ou o `.img` extraído)
 4. Selecione o único disco disponível para o sistema de armazenamento (normalmente `RPi-MSD- 0001`)
 5. Clique em **Write**
 :::
 
 ---
 
-## Restaurar o Modo de Boot Normal
+## Restaurar o modo de boot normal
 
 **Passo 1:** Desligue o robô
 
@@ -219,11 +226,13 @@ Use o executável **Raspberry Pi Imager** para gravar a imagem do OS:
 
 ---
 
-## Verificar se Tudo Está Funcionando
+## Verificar se tudo está funcionando
 
-:::tip Conecte seu computador ao hotspot WiFi do robô:
-* Nome da rede: `reachy-mini-ap`
-* Senha: `reachy-mini`
+:::tip
+Conecte seu computador ao hotspot WiFi do robô:
+
+- Nome da rede: `reachy-mini-ap`
+- Senha: `reachy-mini`
 :::
 
 Acesse o robô via SSH:

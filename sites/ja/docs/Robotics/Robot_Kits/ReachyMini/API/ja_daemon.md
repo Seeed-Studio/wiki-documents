@@ -1,1090 +1,310 @@
 ---
-description: Reachy Mini デーモンの完全な API リファレンス。コアデーモンクラス、バックエンドクラス、デーモンユーティリティ、アプリモデル、およびアプリルーターを含みます。
-title: デーモン API リファレンス
+description: Reachy Mini の Daemon API リファレンス。コア daemon クラス、ロボットアプリロック、バックエンドクラス、およびすべてのルーターエンドポイントを網羅します。
+title: Daemon API
 slug: /reachymini_api_daemon
 keywords:
-  - api
   - daemon
+  - api
   - backend
-  - app models
-  - app routers
-  - fastapi
-  - rest
-  - websocket
+  - app lock
+  - router
+  - motors
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_api_daemon/
 ---
-# デーモン
 
-## コアデーモンクラス
+# Daemon
 
-### `reachy_mini.daemon.daemon.Daemon`
+## コア Daemon クラス
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L37)**
+[[autodoc]] reachy_mini.daemon.daemon.Daemon
 
-シミュレーションまたは実機の Reachy Mini ロボット用デーモン。
+[[autodoc]] reachy_mini.daemon.daemon.DaemonState
 
-適切なバックエンド（シミュレーション用の Mujoco または実機用の RobotBackend）でサーバーを実行します。
+[[autodoc]] reachy_mini.daemon.daemon.DaemonStatus
 
-### メソッド
+## ロボットアプリロック
 
-#### `restart`
+ロボットの *app lock* は、どのマネージドアプリが現在ロボットを保持しているかについての、daemon における唯一の信頼できる情報源です。
+マネージドアプリがロボットを保持しているかについての唯一の情報源です。これは 2 つのマネージド
+エントリポイントを直列化します — :class:`AppManager` によって起動されるローカル Python アプリと、
+中央シグナリングリレーを経由してルーティングされるリモート WebRTC クライアントです。
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L366)**
+これは、ロボットを駆動できるすべてのコードパスを制御するわけでは**ありません**。
+daemon と LAN/WebSocket 経由で直接通信する SDK クライアントはこれをバイパスします。
+名称に「app」を用いているのは、そのより狭いスコープを意図的に反映するためです。
 
-Reachy Mini デーモンを再起動します。
+### 並行性モデル
 
-**パラメータ:**
+2 つのマネージドエントリポイントがロボットとのセッションを開くことができます：
 
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | True の場合、Mujoco を使用したシミュレーションモードで実行します。デフォルトは None（前回の値を使用）。 |
-| `mockup_sim` | `bool` | True の場合、軽量シミュレーションモード（MuJoCo なし）で実行します。デフォルトは None（前回の値を使用）。 |
-| `serialport` | `str` | 実機モーター用のシリアルポート。デフォルトは None（前回の値を使用）。 |
-| `scene` | `str` | シミュレーションモードで読み込むシーン名（"empty" または "minimal"）。デフォルトは None（前回の値を使用）。 |
-| `headless` | `bool` | True の場合、Mujoco をヘッドレスモード（GUI なし）で実行します。デフォルトは None（前回の値を使用）。 |
-| `use_audio` | `bool` | True の場合、オーディオを有効にします。デフォルトは None（前回の値を使用）。 |
-| `localhost_only` | `bool` | True の場合、サーバーを localhost のクライアントのみに制限します。デフォルトは None（前回の値を使用）。 |
-| `wake_up_on_start` | `bool` | True の場合、起動時に Reachy Mini を起こします。デフォルトは None（起こさない）。 |
-| `goto_sleep_on_stop` | `bool` | True の場合、停止時に Reachy Mini をスリープさせます。デフォルトは None（スリープさせない）。 |
+1. **ローカルパス** — 
+   ``POST /api/apps/start`` によって起動される Python アプリ。daemon のサブプロセスとして実行され、
+   バックエンドと直接通信します。
+2. **リモートパス** — 
+   HuggingFace の中央シグナリングサーバーで認証され、WebRTC 経由でロボットにルーティングされるブラウザクライアント。
+   独自のスレッド内で ``CentralSignalingRelay`` によって処理されます。
 
-**戻り値:**
+調整がなければ、両方のパスが同時にロボットをつかみ、
+モーターコマンド、カメラ、オーディオを奪い合う可能性があります。:class:`RobotAppLock` は、
+次の 3 つの相互排他的な状態によってそれを防ぎます：
 
-| Type | Description |
-|------|-------------|
-| `DaemonState` | 再起動を試行した後のデーモンの現在の状態。 |
+- ``free`` — どのマネージドアプリもスロットを保持していません。
+- ``local_app(name)`` — Python アプリが実行中です。
+- ``remote_session(name)`` — リモート WebRTC クライアントが接続されています。
 
----
+**取得ルール:**
 
-#### `run4ever`
+- ローカルパスは :meth:`RobotAppLock.acquire_local_evicting_remote` を使用します。
+  リモートセッションがアクティブな場合、ロックはアトミックに
+  ``local_app`` に遷移し、リレーに対してリモートピアおよびローカル GStreamer に
+  ``endSession`` を送信するよう要求します。これにより既存の WebRTC
+  接続がクリーンに切断されます。別の Python アプリがすでにロックを保持している場合、
+  取得は ``RuntimeError`` を送出します。
+- リモートパスは :meth:`RobotAppLock.try_acquire_remote` を使用します。これは
+  ロックが ``free`` でない場合は常にすぐに失敗（``False`` を返す）し、
+  受信したリモートセッションは次のメッセージで拒否されます：
+  ``{"type": "endSession", "reason": "robot_busy_local_app"}``。
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L462)**
+**解放ルール:**
 
-Reachy Mini デーモンを無期限に実行します。
+- :meth:`RobotAppLock.release_local` はサブプロセス
+  モニターの ``finally`` ブロックから呼び出されるため、正常終了、クラッシュ、``SIGKILL``、
+  OOM、およびタスクキャンセルのすべてでロックが解放されます。
+- :meth:`RobotAppLock.release_remote` はすべての
+  ``endSession`` ハンドラー（両方向）から、
+  切断/再接続時の ``_close_connections`` から、そしてリレーの
+  ``stop()`` から呼び出されます。すべての解放呼び出しは冪等であり、
+  ロックが対応する状態でない場合は何もしません。
 
-最初にデーモンを起動し、その後ステータスを継続的に確認し、ユーザー割り込み（Ctrl+C）によるグレースフルシャットダウンを可能にします。
+**スレッド間の考慮事項:** ロック状態は
+``threading.Lock`` によって保護されています。退去コールバックはリレーによって登録され、
+AppManager によってメインの asyncio ループから呼び出されますが、実際のセッション終了処理は
+リレー自身のイベントループ上で ``asyncio.run_coroutine_threadsafe`` を介してディスパッチされます。
+AppManager は Python サブプロセスを生成する前にセッション終了処理を待機するため、
+ローカルアプリがメディアハンドルを開く前に、リモートピアはメディアハンドルを
+解放済みとなります。
 
-**パラメータ:**
+### API リファレンス
 
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | True の場合、Mujoco を使用したシミュレーションモードで実行します。デフォルトは False。 |
-| `mockup_sim` | `bool` | True の場合、軽量シミュレーションモード（MuJoCo なし）で実行します。デフォルトは False。 |
-| `serialport` | `str` | 実機モーター用のシリアルポート。デフォルトは "auto" で、自動的にポート検出を試みます。 |
-| `scene` | `str` | シミュレーションモードで読み込むシーン名（"empty" または "minimal"）。デフォルトは "empty"。 |
-| `localhost_only` | `bool` | True の場合、サーバーを localhost のクライアントのみに制限します。デフォルトは True。 |
-| `wake_up_on_start` | `bool` | True の場合、起動時に Reachy Mini を起こします。デフォルトは True。 |
-| `goto_sleep_on_stop` | `bool` | True の場合、停止時に Reachy Mini をスリープさせます。デフォルトは True。 |
-| `check_collision` | `bool` | True の場合、衝突判定を有効にします。デフォルトは False。 |
-| `kinematics_engine` | `str` | 使用する運動学エンジン。デフォルトは "AnalyticalKinematics"。 |
-| `headless` | `bool` | True の場合、Mujoco をヘッドレスモード（GUI なし）で実行します。デフォルトは False。 |
-| `use_audio` | `bool` | True の場合、オーディオを有効にします。デフォルトは True。 |
+[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLock
 
----
+[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLockState
 
-#### `start`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L144)**
-
-Reachy Mini デーモンを起動します。
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | True の場合、Mujoco を使用したシミュレーションモードで実行します。デフォルトは False。 |
-| `mockup_sim` | `bool` | True の場合、軽量シミュレーションモード（MuJoCo なし）で実行します。デフォルトは False。 |
-| `serialport` | `str` | 実機モーター用のシリアルポート。デフォルトは "auto" で、自動的にポート検出を試みます。 |
-| `scene` | `str` | シミュレーションモードで読み込むシーン名（"empty" または "minimal"）。デフォルトは "empty"。 |
-| `localhost_only` | `bool` | True の場合、サーバーを localhost のクライアントのみに制限します。デフォルトは True。 |
-| `wake_up_on_start` | `bool` | True の場合、起動時に Reachy Mini を起こします。デフォルトは True。 |
-| `check_collision` | `bool` | True の場合、衝突判定を有効にします。デフォルトは False。 |
-| `kinematics_engine` | `str` | 使用する運動学エンジン。デフォルトは "AnalyticalKinematics"。 |
-| `headless` | `bool` | True の場合、Mujoco をヘッドレスモード（GUI なし）で実行します。デフォルトは False。 |
-| `use_audio` | `bool` | True の場合、オーディオを有効にします。デフォルトは True。 |
-| `hardware_config_filepath` | `str \| None` | ハードウェア構成 YAML ファイルへのパス。デフォルトは None。 |
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `DaemonState` | 起動を試行した後のデーモンの現在の状態。 |
-
----
-
-#### `status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L436)**
-
-Reachy Mini デーモンの現在のステータスを取得します。
-
----
-
-#### `stop`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L287)**
-
-Reachy Mini デーモンを停止します。
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `goto_sleep_on_stop` | `bool` | True の場合、停止時に Reachy Mini をスリープさせます。デフォルトは True。 |
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `DaemonState` | 停止を試行した後のデーモンの現在の状態。 |
-
----
-
-### `reachy_mini.daemon.daemon.DaemonState`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L591)**
-
-Reachy Mini デーモンの状態を表す Enum。
-
----
-
-### `reachy_mini.daemon.daemon.DaemonStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L603)**
-
-Reachy Mini デーモンのステータスを表す Dataclass。
-
----
+[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLockStatus
 
 ## バックエンドクラス
 
 ### 抽象バックエンド
 
-#### `reachy_mini.daemon.backend.abstract.MotorControlMode`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/abstract.py#L43)**
-
-モーター制御モード用の Enum。
-
----
+[[autodoc]] reachy_mini.daemon.backend.abstract.MotorControlMode
 
 ### ロボットバックエンド
 
-#### `reachy_mini.daemon.backend.robot.RobotBackend`
+[[autodoc]] reachy_mini.daemon.backend.robot.RobotBackend
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L28)**
+[[autodoc]] reachy_mini.daemon.backend.robot.RobotBackendStatus
 
-Reachy Mini 用の実機ロボットバックエンド。
+### MuJoCo バックエンド
 
-### メソッド
+[[autodoc]] reachy_mini.daemon.backend.mujoco.MujocoBackend
 
-#### `close`
+[[autodoc]] reachy_mini.daemon.backend.mujoco.MujocoBackendStatus
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L316)**
+### モックアップシミュレーションバックエンド
 
-モーターコントローラとの接続を閉じ、リソースを解放します。
+[[autodoc]] reachy_mini.daemon.backend.mockup_sim.MockupSimBackend
 
----
+[[autodoc]] reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus
 
-#### `compensate_head_gravity`
+## Daemon ユーティリティ
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L513)**
+[[autodoc]] reachy_mini.daemon.utils.find_serial_port
 
-重力を補償するために必要な電流を計算します。
-
----
-
-#### `disable_motors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L336)**
-
-トルクをオフにしてモーターを無効化します。
-
----
-
-#### `enable_motors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L329)**
-
-トルクをオンにしてモーターを有効化します。
-
----
-
-#### `get_all_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L438)**
-
-ロボットの現在の関節位置を取得します。
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `tuple` | 2 つのリストを含むタプル。1 つ目のリストは頭部の関節位置、2 つ目のリストはアンテナの関節位置です。 |
-
----
-
-#### `get_imu_data`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L477)**
-
-現在の IMU データ（加速度計、ジャイロスコープ、クォータニオン、温度）を取得します。
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `dict \| None` | 'accelerometer'、'gyroscope'、'quaternion'、'temperature' キーを持つ dict、または IMU が利用できない場合は None。 |
-
----
-
-#### `get_present_antenna_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L466)**
-
-アンテナの現在の関節位置を取得します。
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `list` | アンテナの関節位置のリスト。 |
-
----
-
-#### `get_present_head_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L455)**
-
-頭部の現在の関節位置を取得します。
-
-**戻り値:**
-
-| Type | Description |
-|------|-------------|
-| `list` | 体の回転を含む、頭部の関節位置のリスト。 |
-
----
-
-#### `get_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L323)**
-
-ロボットバックエンドの現在のステータスを取得します。
-
----
-
-#### `read_hardware_errors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L614)**
-
-モーターコントローラからハードウェアエラーを読み取ります。
-
----
-
-#### `run`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L136)**
-
-ロボットバックエンドの制御ループを実行します。
-
-このメソッドは、指定された周波数でモーターコントローラを継続的に更新します。関節位置を読み取り、モーターコントローラを更新し、関節位置をパブリッシュします。また、モーターコントローラが応答しない場合のエラー処理とリトライも行います。
-
----
-
-#### `set_antennas_operation_mode`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L398)**
-
-アンテナモーターの動作モードを変更します。
-
-:::warning
-
-このメソッドは現在の feetech モーターではうまく動作しません。これらはトルク制御をサポートしていないためです。そのため、このメソッドはトルク制御モードではアンテナを無効化します。
-
-:::
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `mode` | `int` | アンテナモーターの動作モード（0: トルク制御、3: 位置制御、5: 電流ベース位置制御）。 |
-
----
-
-#### `set_head_operation_mode`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L343)**
-
-ヘッドモーターの動作モードを変更します。
-
-動作モードは次のとおりです：
-- 0: トルク制御
-- 3: 位置制御
-- 5: 電流ベース位置制御
-
-:::warning
-
-このメソッドは、現在のfeetechモーター（ボディ回転）ではトルク制御をサポートしていないため、うまく動作しません。そのため、このメソッドはトルク制御モードのときにアンテナを無効にします。ヘッドに使用されているdynamixelモーターはトルク制御をサポートしているため、このメソッドは期待どおりに動作します。
-
-:::
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `mode` | `int` | ヘッドモーターの動作モード。 |
-
----
-
-#### `set_motor_torque_ids`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L579)**
-
-特定のモーター名に対してトルク状態を設定します。
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `ids` | `list[int]` | トルク状態を設定するモーターIDのリスト。 |
-| `on` | `bool` | トルクを有効にする場合はTrue、無効にする場合はFalse。 |
-
----
-
-### `reachy_mini.daemon.backend.robot.RobotBackendStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L678)**
-
-Robot Backendのステータス。
-
----
-
-### MuJoCo Backend
-
-#### `reachy_mini.daemon.backend.mujoco.MujocoMockupBackend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mujoco/__init__.py#L15)**
-
-MuJoCoがインストールされていない場合にインポートエラーを回避するためのモックアップクラス。
-
----
-
-#### `reachy_mini.daemon.backend.mujoco.MujocoMockupBackendStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mujoco/__init__.py#L28)**
-
-MuJoCoがインストールされていない場合にインポートエラーを回避するためのモックアップクラス。
-
----
-
-### モックアップシミュレーションBackend
-
-#### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L21)**
-
-MuJoCoなしで動作する軽量なReachy Miniシミュレーション。
-
-このバックエンドは、物理シミュレーションを行わずに目標位置が即座に適用されるシンプルなシミュレーションを提供します。アプリはウェブカメラ/マイクに直接アクセスします（UDPストリーミング経由ではありません）。
-
-### メソッド
-
-#### `get_present_antenna_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L149)**
-
-アンテナの現在の関節位置を取得します。
-
----
-
-#### `get_present_head_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L143)**
-
-ヘッドの現在の関節位置を取得します。
-
----
-
-#### `get_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L139)**
-
-バックエンドのステータスを取得します。
-
----
-
-#### `run`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L68)**
-
-シミュレーションループを実行します。
-
-mockup-simモードでは、目標位置は即座に適用されます。
-
----
-
-#### `set_motor_torque_ids`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L163)**
-
-特定のモーター名に対してモータートルク状態を設定します。
-
-:::note
-
-mockup-simモードでは何もしません。
-
-:::
-
----
-
-### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L172)**
-
-MockupSimバックエンドのステータス。
-
----
-
-## Daemonユーティリティ
-
-### `reachy_mini.daemon.utils.convert_enum_to_dict`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L164)**
-
-Enumを含むデータクラスを、Enumの値を持つ辞書に変換します。
-
----
-
-### `reachy_mini.daemon.utils.find_serial_port`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L101)**
-
-VIDとPID、またはワイヤレス版用のRaspberry Pi UARTに基づいてReachy Miniのシリアルポートを検索します。
-
-**パラメータ:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `wireless_version` | `bool` | Raspberry Pi UARTを使用してワイヤレス版を探すかどうか。 |
-| `vid` | `str` | デバイスのベンダーID（例: "1a86"）。 |
-| `pid` | `str` | デバイスのプロダクトID（例: "55d3"）。 |
-| `pi_uart` | `str` | Raspberry Pi UARTデバイスへのパス（例: "/dev/ttyAMA3"）。 |
-
----
-
-### `reachy_mini.daemon.utils.get_ip_address`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L129)**
-
-特定のネットワークインターフェース（LinuxおよびWindows）のIPアドレスを取得します。
-
----
+[[autodoc]] reachy_mini.daemon.utils.get_ip_address
 
 ## アプリ
 
 ### モデル
 
-#### `reachy_mini.daemon.app.models.Matrix4x4Pose`
+[[autodoc]] reachy_mini.daemon.app.models.Matrix4x4Pose
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L14)**
+[[autodoc]] reachy_mini.daemon.app.models.XYZRPYPose
 
-4x4変換行列によって3Dポーズを表します（並進はメートル単位で表現されます）。
+[[autodoc]] reachy_mini.daemon.app.models.FullBodyTarget
 
----
+[[autodoc]] reachy_mini.daemon.app.models.DoAInfo
 
-#### `reachy_mini.daemon.app.models.XYZRPYPose`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L68)**
-
-位置（x, y, z、メートル単位）と姿勢（roll, pitch, yaw、ラジアン単位の角度）を用いて3Dポーズを表します。
-
----
-
-#### `reachy_mini.daemon.app.models.FullBodyTarget`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L116)**
-
-ヘッドポーズとアンテナの関節を含む全身を表します。
-
----
-
-#### `reachy_mini.daemon.app.models.DoAInfo`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L144)**
-
-マイクアレイからの到来方向（Direction of Arrival）情報。
-
----
-
-#### `reachy_mini.daemon.app.models.FullState`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L151)**
-
-すべての関節位置とポーズを含むロボットの完全な状態を表します。
-
----
+[[autodoc]] reachy_mini.daemon.app.models.FullState
 
 ### 依存関係
 
-#### `reachy_mini.daemon.app.dependencies.get_daemon`
+[[autodoc]] reachy_mini.daemon.app.dependencies.get_daemon
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L10)**
+[[autodoc]] reachy_mini.daemon.app.dependencies.get_backend
 
-リクエスト依存関係としてdaemonを取得します。
+[[autodoc]] reachy_mini.daemon.app.dependencies.get_app_manager
 
----
-
-#### `reachy_mini.daemon.app.dependencies.get_backend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L16)**
-
-リクエスト依存関係としてバックエンドを取得します。
-
----
-
-#### `reachy_mini.daemon.app.dependencies.get_app_manager`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L27)**
-
-リクエスト依存関係としてアプリマネージャーを取得します。
-
----
-
-#### `reachy_mini.daemon.app.dependencies.ws_get_backend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L33)**
-
-WebSocket依存関係としてバックエンドを取得します。
-
----
+[[autodoc]] reachy_mini.daemon.app.dependencies.ws_get_backend
 
 ### ジョブ
 
-#### `reachy_mini.daemon.app.bg_job_register.JobStatus`
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobStatus
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L15)**
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobInfo
 
-ジョブステータス用のEnum。
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobHandler
 
----
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.run_command
 
-#### `reachy_mini.daemon.app.bg_job_register.JobInfo`
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.get_info
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L24)**
-
-インストールジョブのステータス用Pydanticモデル。
-
----
-
-#### `reachy_mini.daemon.app.bg_job_register.JobHandler`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L33)**
-
-バックグラウンドジョブのハンドラー。
-
----
-
-#### `reachy_mini.daemon.app.bg_job_register.run_command`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L44)**
-
-バックグラウンドジョブを開始し、カスタムロガーを使用して、そのjob_idを返します。
-
----
-
-#### `reachy_mini.daemon.app.bg_job_register.get_info`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L93)**
-
-IDによってジョブの情報を取得します。
-
----
-
-#### `reachy_mini.daemon.app.bg_job_register.ws_poll_info`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L103)**
-
-ジョブログをリアルタイムでストリーミングするWebSocketエンドポイント。
-
----
+[[autodoc]] reachy_mini.daemon.app.bg_job_register.ws_poll_info
 
 ### メインアプリケーション
 
-#### `reachy_mini.daemon.app.main.Args`
+[[autodoc]] reachy_mini.daemon.app.main.Args
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L54)**
+[[autodoc]] reachy_mini.daemon.app.main.create_app
 
-Reachy Mini daemonを構成するための引数。
+[[autodoc]] reachy_mini.daemon.app.main.run_app
 
----
-
-#### `reachy_mini.daemon.app.main.create_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L91)**
-
-FastAPIアプリケーションを作成して構成します。
-
----
-
-#### `reachy_mini.daemon.app.main.run_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L264)**
-
-FastAPIアプリをUvicornで実行します。
-
----
-
-#### `reachy_mini.daemon.app.main`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L383)**
-
-FastAPIアプリをUvicornで実行します。
-
----
+[[autodoc]] reachy_mini.daemon.app.main.main
 
 ## アプリルーター
 
-### Daemonルーター
+### Daemon ルーター
 
-#### `reachy_mini.daemon.app.routers.daemon.start_daemon`
+[[autodoc]] reachy_mini.daemon.app.routers.daemon.start_daemon
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L19)**
+[[autodoc]] reachy_mini.daemon.app.routers.daemon.stop_daemon
 
-daemonを起動します。
+[[autodoc]] reachy_mini.daemon.app.routers.daemon.restart_daemon
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.daemon.get_daemon_status
 
-#### `reachy_mini.daemon.app.routers.daemon.stop_daemon`
+[[autodoc]] reachy_mini.daemon.app.routers.daemon.get_robot_app_lock_status
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L48)**
+### State ルーター
 
-必要に応じてロボットをスリープ状態にしてdaemonを停止します。
+[[autodoc]] reachy_mini.daemon.app.routers.state.get_head_pose
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.state.get_body_yaw
 
-#### `reachy_mini.daemon.app.routers.daemon.restart_daemon`
+[[autodoc]] reachy_mini.daemon.app.routers.state.get_antenna_joint_positions
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L64)**
+[[autodoc]] reachy_mini.daemon.app.routers.state.get_doa
 
-デーモンを再起動します。
+[[autodoc]] reachy_mini.daemon.app.routers.state.get_full_state
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.state.ws_full_state
 
-#### `reachy_mini.daemon.app.routers.daemon.get_daemon_status`
+### Motors ルーター
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L80)**
 
-デーモンの現在のステータスを取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.motors.get_motor_status
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.motors.set_motor_mode
 
-### State Router
+### Move ルーター
 
-#### `reachy_mini.daemon.app.routers.state.get_head_pose`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L21)**
 
-現在のヘッドポーズを取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.move.get_running_moves
 
-**パラメータ:**
+[[autodoc]] reachy_mini.daemon.app.routers.move.goto
 
-| 名前 | 型 | 説明 |
-|------|------|-------------|
-| `use_pose_matrix` | `bool` | ポーズを行列表現（4x4 をフラット化）で使用するか、並進 + オイラー角表現（x, y, z, roll, pitch, yaw）で使用するかを指定します。 |
-| `backend` | `Backend` | backend インスタンス。 |
+[[autodoc]] reachy_mini.daemon.app.routers.move.play_wake_up
 
-**戻り値:**
+[[autodoc]] reachy_mini.daemon.app.routers.move.play_goto_sleep
 
-| 型 | 説明 |
-|------|-------------|
-| `AnyPose` | 現在のヘッドポーズ。 |
+[[autodoc]] reachy_mini.daemon.app.routers.move.list_recorded_move_dataset
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.move.play_recorded_move_dataset
 
-#### `reachy_mini.daemon.app.routers.state.get_body_yaw`
+[[autodoc]] reachy_mini.daemon.app.routers.move.stop_move
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L39)**
+[[autodoc]] reachy_mini.daemon.app.routers.move.set_target
 
-現在のボディヨー角（ラジアン）を取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.move.ws_move_updates
 
----
+### Apps ルーター
 
-#### `reachy_mini.daemon.app.routers.state.get_antenna_joint_positions`
+[[autodoc]] reachy_mini.daemon.app.routers.apps.list_available_apps
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L47)**
+[[autodoc]] reachy_mini.daemon.app.routers.apps.list_all_available_apps
 
-現在のアンテナ関節位置（ラジアン）（left, right）を取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.apps.install_app
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.apps.remove_app
 
-#### `reachy_mini.daemon.app.routers.state.get_doa`
+[[autodoc]] reachy_mini.daemon.app.routers.apps.job_status
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L57)**
+[[autodoc]] reachy_mini.daemon.app.routers.apps.ws_apps_manager
 
-マイクアレイからの到来方向（Direction of Arrival）を取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.apps.start_app
 
-角度をラジアンで返します（0=left、π/2=front、π=right）および音声検出ステータスを返します。オーディオデバイスが利用できない場合は None を返します。
+[[autodoc]] reachy_mini.daemon.app.routers.apps.restart_app
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.apps.stop_app
 
-#### `reachy_mini.daemon.app.routers.state.get_full_state`
+[[autodoc]] reachy_mini.daemon.app.routers.apps.current_app_status
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L74)**
+[[autodoc]] reachy_mini.daemon.app.routers.apps.install_private_space
 
-オプションフィールドを含むロボットの完全な状態を取得します。
+### Update ルーター
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.update.available
 
-#### `reachy_mini.daemon.app.routers.state.ws_full_state`
+[[autodoc]] reachy_mini.daemon.app.routers.update.start_update
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L130)**
+[[autodoc]] reachy_mini.daemon.app.routers.update.get_update_info
 
-ロボットの完全な状態をストリーミングするための WebSocket エンドポイント。
+[[autodoc]] reachy_mini.daemon.app.routers.update.websocket_logs
 
----
+### Cache ルーター
 
-### Motors Router
+[[autodoc]] reachy_mini.daemon.app.routers.cache.clear_huggingface_cache
 
-#### `reachy_mini.daemon.app.routers.motors.get_motor_status`
+[[autodoc]] reachy_mini.daemon.app.routers.cache.reset_apps
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/motors.py#L27)**
+### Kinematics ルーター
 
-モーターの現在のステータスを取得します。
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_kinematics_info
 
-#### `reachy_mini.daemon.app.routers.motors.set_motor_mode`
+[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_urdf
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/motors.py#L33)**
+[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_stl_file
 
-モーターの制御モードを設定します。
+### Volume ルーター
 
----
 
-### Move Router
+[[autodoc]] reachy_mini.daemon.app.routers.volume.get_volume
 
-#### `reachy_mini.daemon.app.routers.move.get_running_moves`
+[[autodoc]] reachy_mini.daemon.app.routers.volume.set_volume
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L131)**
+[[autodoc]] reachy_mini.daemon.app.routers.volume.play_test_sound
 
-現在実行中の move タスクの一覧を取得します。
+[[autodoc]] reachy_mini.daemon.app.routers.volume.get_microphone_volume
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.volume.set_microphone_volume
 
-#### `reachy_mini.daemon.app.routers.move.goto`
+### Logs ルーター
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L137)**
+[[autodoc]] reachy_mini.daemon.app.routers.logs.websocket_daemon_logs
 
-特定のターゲットへの移動を要求します。
+### HF Auth ルーター
 
----
+[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.save_token
 
-#### `reachy_mini.daemon.app.routers.move.play_wake_up`
+[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.get_auth_status
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L152)**
-
-ロボットに wake up を実行するよう要求します。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.play_goto_sleep`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L158)**
-
-ロボットに sleep 状態へ移行するよう要求します。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.list_recorded_move_dataset`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L164)**
-
-データセット内で利用可能な recorded move の一覧を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.play_recorded_move_dataset`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L177)**
-
-データセットから事前定義された recorded move を再生するようロボットに要求します。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.stop_move`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L195)**
-
-実行中の move タスクを停止します。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.set_target`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L216)**
-
-単一の FullBodyTarget を設定するための POST ルート。
-
----
-
-#### `reachy_mini.daemon.app.routers.move.ws_move_updates`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L201)**
-
-move の更新をストリーミングするための WebSocket ルート。
-
----
-
-### Apps Router
-
-#### `reachy_mini.daemon.app.routers.apps.list_available_apps`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L46)**
-
-利用可能なアプリ（未インストールを含む）の一覧を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.list_all_available_apps`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L55)**
-
-すべての利用可能なアプリ（未インストールを含む）の一覧を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.install_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L63)**
-
-アプリ情報に基づいて新しいアプリをインストールします（バックグラウンドで実行され、job_id を返します）。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.remove_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L78)**
-
-名前を指定してインストール済みアプリを削除します（バックグラウンドで実行され、job_id を返します）。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.job_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L91)**
-
-ジョブのステータス／ログを取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.ws_apps_manager`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L101)**
-
-ジョブのライブステータス／ログをストリーミングするための WebSocket ルートで、新しいログが利用可能になり次第更新を送信します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.start_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L109)**
-
-名前を指定してアプリを起動します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.restart_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L121)**
-
-現在実行中のアプリを再起動します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.stop_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L132)**
-
-現在実行中のアプリを停止します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.current_app_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L143)**
-
-現在実行中のアプリがあれば、そのステータスを取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.apps.install_private_space`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L157)**
-
-プライベートな HuggingFace space をインストールします。
-
-事前に HF トークンを /api/hf-auth/save-token 経由で保存しておく必要があります。
-
----
-
-### Update Router
-
-#### `reachy_mini.daemon.app.routers.update.available`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L32)**
-
-Reachy Mini Wireless 用のアップデートが利用可能かどうかを確認します。
-
----
-
-#### `reachy_mini.daemon.app.routers.update.start_update`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L58)**
-
-Reachy Mini Wireless バージョンのアップデート処理を開始します。
-
----
-
-#### `reachy_mini.daemon.app.routers.update.get_update_info`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L117)**
-
-アップデートジョブの情報を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.update.websocket_logs`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L126)**
-
-アップデートログをリアルタイムでストリーミングするための WebSocket エンドポイント。
-
----
-
-### Cache Router
-
-#### `reachy_mini.daemon.app.routers.cache.clear_huggingface_cache`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/cache.py#L13)**
-
-HuggingFace のキャッシュディレクトリをクリアします。
-
----
-
-#### `reachy_mini.daemon.app.routers.cache.reset_apps`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/cache.py#L32)**
-
-アプリケーションの仮想環境ディレクトリを削除します。
-
----
-
-### Kinematics Router
-
-#### `reachy_mini.daemon.app.routers.kinematics.get_kinematics_info`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L29)**
-
-現在の運動学情報を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.kinematics.get_urdf`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L42)**
-
-ロボットの URDF 表現を取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.kinematics.get_stl_file`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L48)**
-
-STL アセットファイルへのパスを取得します。
-
----
-
-### Volume Router
-
-#### `reachy_mini.daemon.app.routers.volume.get_volume`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L79)**
-
-現在の出力ボリュームレベルを取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.volume.set_volume`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L86)**
-
-出力音量レベルを設定し、テストサウンドを再生します。
-
----
-
-#### `reachy_mini.daemon.app.routers.volume.play_test_sound`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L107)**
-
-テストサウンドを再生します。
-
----
-
-#### `reachy_mini.daemon.app.routers.volume.get_microphone_volume`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L139)**
-
-現在のマイク入力音量レベルを取得します。
-
----
-
-#### `reachy_mini.daemon.app.routers.volume.set_microphone_volume`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L146)**
-
-マイク入力音量レベルを設定します。
-
----
-
-### ログルーター
-
-#### `reachy_mini.daemon.app.routers.logs.websocket_daemon_logs`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/logs.py#L15)**
-
-reachy-mini-daemon サービスの journalctl ログをリアルタイムでストリーミングする WebSocket エンドポイントです。
-
----
-
-### HF 認証ルーター
-
-#### `reachy_mini.daemon.app.routers.hf_auth.save_token`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L33)**
-
-検証後に HuggingFace トークンを保存します。
-
----
-
-#### `reachy_mini.daemon.app.routers.hf_auth.get_auth_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L49)**
-
-ユーザーが HuggingFace で認証されているかどうかを確認します。
-
----
-
-#### `reachy_mini.daemon.app.routers.hf_auth.delete_token`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L79)**
-
-保存されている HuggingFace トークンを削除します。
+[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.delete_token
