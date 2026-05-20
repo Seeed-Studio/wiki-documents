@@ -151,8 +151,17 @@ Before starting this tutorial, please finish the content in [reBot Arm B601-DM Q
 
 ### Step 1. Clone the repository
 
+Prefer the official Seeed-Projects repository:
+
 ```bash
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
+cd rebot_grasp
+```
+
+You can also use the current development repository:
+
+```bash
+git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
