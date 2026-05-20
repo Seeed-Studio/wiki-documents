@@ -24,7 +24,7 @@ url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_reflash_the_r
 
 # Advanced: Reflash the Raspberry Pi OS image
 
-:::danger Expert Guide Only
+:::warning Expert Guide Only
 This guide explains how to reflash the ReachyMiniOS image to Reachy Mini's CM4. Doing this will _factory reset_ your Reachy Mini.
 
 Most users do not need this. Reachy Mini comes pre-installed. Only follow these steps if you have a broken installation that you couldn't debug.
@@ -121,7 +121,10 @@ The internal eMMC should now appear as a mass-storage device.
 ## Unmount and Flash the ISO
 
 :::info Linux
-:::warning Make sure the device is unmounted before flashing.
+
+:::warning
+Make sure the device is unmounted before flashing.
+:::
 
 **Check and Unmount the Device**
 
@@ -156,8 +159,12 @@ sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11
 ```
 :::
 
+
 :::info macOS
-:::warning Make sure the device is unmounted before flashing.
+
+:::warning
+Make sure the device is unmounted before flashing.
+:::
 
 **Check and Unmount the Device**
 
@@ -221,9 +228,11 @@ Use the **Raspberry Pi Imager** executable to flash the OS image:
 
 ## Check that Everything Is Working
 
-:::tip Connect your computer to the robot's WiFi hotspot:
-* Network name: `reachy-mini-ap`
-* Password: `reachy-mini`
+:::tip
+Connect your computer to the robot's WiFi hotspot:
+
+- Network name: `reachy-mini-ap`
+- Password: `reachy-mini`
 :::
 
 SSH into the robot:

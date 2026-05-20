@@ -5,7 +5,7 @@ keywords:
   - mmwave
   - radar
   - MR60FDA2
-image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
+image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /ha_with_mr60fda2
 sidebar_position: 1
 last_update:
@@ -39,7 +39,7 @@ MR60FDA2 是一个 60GHz 毫米波跌倒检测传感器模块，专为与 XIAO E
          <th>MR60FDA2 毫米波传感器</th>
       </tr>
       <tr>
-         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
+         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:360, height:'auto', "border-radius": '6px'}}/></div></td>
       </tr>
       <tr>
          <td>

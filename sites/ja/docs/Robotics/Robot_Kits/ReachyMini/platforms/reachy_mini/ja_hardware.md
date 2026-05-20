@@ -1,5 +1,5 @@
 ---
-description: Reachy Mini の寸法、自由度、モーター仕様、カメラ、マイクアレイ、および電子部品を含む、完全なハードウェアデータシート。
+description: Reachy Mini の寸法、自由度、モーター仕様、カメラ、マイクアレイ、および電子部品を含む、完全なハードウェアデータシートです。
 title: Reachy Mini ハードウェアデータシート
 slug: /reachymini_platforms_reachy_mini_hardware
 keywords:
@@ -14,13 +14,13 @@ keywords:
   - electronics
   - cm4
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_hardware/
 ---
 
@@ -28,7 +28,7 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_hardware/
 
 ## 全体概要
 
-![Dimensions](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_dimensions.png)
+![Dimensions](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_dimensions.png)
 
 - 寸法: 30x20x15.5cm（伸長時）
 - 質量: 1.475 Kg
@@ -38,23 +38,23 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_hardware/
     - ボディ: 1 回転
     - アンテナ: 1 回転（x2）
 
-    ![Dofs](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/degrees_of_freedom.png)
+    ![Dofs](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/degrees_of_freedom.png)
 
-    ![dof_table](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/dof_table.png)
+    ![dof_table](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/dof_table.png)
 
 
 - 電源入力電圧: 6.8 - 7.6V
-- 広角カメラ: 120° - 12MP - オートフォーカス
+- 広角カメラ: 120°・12MP・オートフォーカス
 - サウンド: マイクアレイ + スピーカー
 
-![Mics_and_camera](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/mic_and_camera.png)
+![Mics_and_camera](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/mic_and_camera.png)
 
 
-![back_interface](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/back_interface.png)
+![back_interface](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/back_interface.png)
 
-- 制御: Raspberry 4 Compute Module（ワイヤレスバージョン）
+- 制御: Raspberry 4 Compute Module（ワイヤレス版）
 
-![Components](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_components.png)
+![Components](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_components.png)
 
 
 ## 個別コンポーネント
@@ -64,14 +64,14 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_hardware/
     - アンテナ: 2x Dynamixel [XL330-M077-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m077/)
     - スチュワートプラットフォーム: 6x Dynamixel [XL330-M288-T](https://emanual.robotis.com/docs/en/dxl/x/xl330-m288/)
 
-    ![Motors](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/motors_detail.png)
+    ![Motors](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/motors_detail.png)
 
 - マイクアレイボード
     - 4 個の PDM MEMS デジタルマイク
     - 最大サンプリングレート 16 kHz / -26 dB FS 感度 / 64 dBA SNR
     - Seeed Studio の reSpeaker XMOS XVF3800 をベース
 - カメラ
-    - Raspberry pi camera v3 wide angle
+    - Raspberry pi camera v3 広角
         - Sony IMX708
         - 12MP
         - オートフォーカス
@@ -79,9 +79,9 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_hardware/
 - 5W @4Ohms スピーカー
 - 電源ボード
     - 入力電圧: 6.8 - 7.6V
-    - LiFePO4 バッテリー、2000mAh、6.4V、12.8Wh、過充電保護、過放電保護、過電流保護、短絡保護、温度センサー。
+    - LiFePO4 バッテリー、2000mAh、6.4V、12.8Wh、過充電保護、過放電保護、過電流保護、短絡保護、温度センサー付き。
 
-    ![Electronics](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/electronics.png)
+    ![Electronics](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/electronics.png)
 
 
 - CM4 コントローラーボード

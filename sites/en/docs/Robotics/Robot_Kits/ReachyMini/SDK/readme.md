@@ -23,13 +23,13 @@ url: https://wiki.seeedstudio.com/reachymini_sdk_readme/
 
 # Build, play, and innovate with Reachy Mini 🤖
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/h2lyqR2eMyM"
-  frameborder="0"
-  allowfullscreen
-/>
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=h2lyqR2eMyM" target="_blank">
+    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style={{border: '1px solid #ddd', borderRadius: '8px'}} />
+    <p><i>▶️ 点击在 YouTube 上观看：Reachy Mini SDK 运行指南</i></p>
+  </a>
+</div>
 
 ## ⚡️ Quick Look
 Control your robot in just **a few lines of code**:
@@ -47,41 +47,32 @@ with ReachyMini() as mini:
 ```
 
 ## 🚀 Get Started
-
-:::tip New to Reachy Mini?
-Follow these guides in order:
-:::
-
-* **[Installation](https://wiki.seeedstudio.com/reachymini_sdk_installation)**: 5 minutes to set up your computer
-* **[Quickstart Guide](https://wiki.seeedstudio.com/reachymini_sdk_quickstart)**: Run your first behavior on Reachy Mini
-* **[Python SDK](https://wiki.seeedstudio.com/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
-* **[AI Integrations](https://wiki.seeedstudio.com/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
-* **[Core Concepts](https://wiki.seeedstudio.com/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
+* **[Installation](/reachymini_sdk_installation)**: 5 minutes to set up your computer
+* **[Quickstart Guide](/reachymini_sdk_quickstart)**: Run your first behavior on Reachy Mini
+* **[Python SDK](/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
+* **[AI Integrations](/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
+* **[Building & Publishing Apps](/reachymini_sdk_apps)**: Create, test, publish, and debug Reachy Mini apps.
+* **[Core Concepts](/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
 
 ## 📂 Code Examples
 
-:::info Ready to run
 We provide a collection of ready-to-run scripts to help you understand how to use specific features of the robot.
-:::
 
 [**👉 Browse the Examples Folder**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🤖 AI-Assisted Development
 
-:::tip For AI coding agents
 Using an AI coding agent (Claude Code, Codex, Copilot, etc.)? You can start building apps right away. Paste this prompt to your agent:
-:::
 
-> *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/develop/AGENTS.md*
+> *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/main/AGENTS.md*
 
 This [**AGENTS.md**](/reachymini_agents) guide gives AI agents everything they need: SDK patterns, best practices, example apps, and step-by-step skills.
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](https://wiki.seeedstudio.com/reachymini_troubleshooting)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**
 
 ## 💬 Community
-
 * [Discord](https://discord.gg/Y7FgMqHsub) - Get help and share projects.
 * [Hugging Face Spaces](https://huggingface.co/spaces?q=reachy_mini) - Discover community apps.
 * [GitHub Discussions](https://github.com/pollen-robotics/reachy_mini/discussions) - Feature requests and bugs.

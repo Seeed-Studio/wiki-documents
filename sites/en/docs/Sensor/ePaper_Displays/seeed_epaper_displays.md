@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png
 slug: /seeed_epaper_displays
 sidebar_position: 1
 last_update:
-  date: 04/28/2026
+  date: 05/18/2026
   author: dimo
 createdAt: '2026-04-28'
 updatedAt: '2026-04-28'
@@ -133,7 +133,7 @@ If you already have (or want to source separately) a 24-pin, 50-pin, 10.3", or 1
     </tr>
     <tr>
       <td align="center"><strong>EE05</strong></td>
-      <td align="center">24-pin / 50-pin universal (latest)</td>
+      <td align="center">24-pin universal (latest)</td>
       <td>Refreshed layout of EE04; same XIAO ESP32-S3 base, latest firmware support.</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/epaper_ee05" target="_blank" rel="noopener noreferrer">EE05 →</a></td>
     </tr>
@@ -158,7 +158,7 @@ If you already have (or want to source separately) a 24-pin, 50-pin, 10.3", or 1
     </tr>
     <tr>
       <td align="center"><strong>EN05</strong></td>
-      <td align="center">24-pin / 50-pin universal (latest)</td>
+      <td align="center">24-pin universal (latest)</td>
       <td>Refreshed layout of EN04; same nRF52840 base with latest firmware support.</td>
       <td align="center"><a href="https://wiki.seeedstudio.com/epaper_en05" target="_blank" rel="noopener noreferrer">EN05 →</a></td>
     </tr>

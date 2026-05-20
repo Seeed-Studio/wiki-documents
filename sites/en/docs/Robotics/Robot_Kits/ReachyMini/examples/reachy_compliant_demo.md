@@ -10,13 +10,13 @@ keywords:
   - human-robot interaction
   - soft mode
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_examples_reachy_compliant_demo/
 ---
 
@@ -28,4 +28,4 @@ You can gently push the robot and it will follow your movements. When you stop p
 
 Note: This demo currently only works with Placo as the kinematics engine.
 
-See the full example at: [reachy_compliant_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/reachy_compliant_demo.py)
+See the full example at: [reachy_compliant_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/reachy_compliant_demo.py)

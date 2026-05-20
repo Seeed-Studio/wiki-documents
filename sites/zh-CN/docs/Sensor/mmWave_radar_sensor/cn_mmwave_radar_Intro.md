@@ -14,7 +14,7 @@ updatedAt: '2025-09-17'
 url: https://wiki.seeedstudio.com/cn/mmwave_radar_Intro/
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp" style={{width:'auto', height:'auto'}}/></div>
 
 欢迎了解 Seeed Studio 的毫米波雷达传感器。本页面旨在成为一个全面的信息来源，指导您了解这些传感器的各个方面。
 

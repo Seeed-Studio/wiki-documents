@@ -2071,6 +2071,7 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
               ],
             },
             {
@@ -3873,6 +3874,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/ja_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_RTL8852BE_Wireless_Module_for_Jetson',
@@ -3983,7 +3985,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
               ]
             },
             // Managed Services
@@ -4317,6 +4320,21 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/ja_intro',
               label: 'Introduction',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/ja_ReachyMini_Getting_Started',
+              label: 'はじめに',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/ja_AGENTS',
+              label: 'AIエージェントガイド',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/ja_vibe-code-with-your-agent',
+              label: 'エージェントとVibe Coding',
             },
             {
               type: 'category',

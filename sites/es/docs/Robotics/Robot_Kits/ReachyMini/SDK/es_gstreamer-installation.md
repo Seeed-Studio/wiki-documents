@@ -18,7 +18,7 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
+createdAt: '2026-02-27'
 updatedAt: '2026-02-28'
 url: https://wiki.seeedstudio.com/es/reachymini_sdk_gstreamer-installation/
 ---
@@ -120,45 +120,7 @@ echo 'export GST_PLUGIN_PATH=/opt/gst-plugins-rs/lib/x86_64-linux-gnu:$GST_PLUGI
 source ~/.bashrc
 ```
 
-> **💡 Nota:** Para sistemas ARM64 (como Raspberry Pi), reemplaza `x86_64-linux-gnu` por `aarch64-linux-gnu` en el comando de export.
-
-
-</hfoption>
-<hfoption id="macOS">
-
-No es necesario instalar GStreamer manualmente ya que se proporcionan los wheels. Sin embargo, aún es posible evitar usar los wheels y depender de la instalación del sistema.
-
-### Usando Homebrew
-
-```bash
-brew install gstreamer libnice-gstreamer
-```
-
-El plugin WebRTC está habilitado por defecto en el paquete de Homebrew.
-
-
-</hfoption>
-<hfoption id="Windows">
-
-No es necesario instalar GStreamer manualmente ya que se proporcionan los wheels. Sin embargo, aún es posible evitar usar los wheels y depender de la instalación del sistema.
-
-### Paso 1: Instalar GStreamer usando el instalador oficial
-
-<div align="center">
-
-[![Download GStreamer for Windows](https://img.shields.io/badge/Download-GStreamer%20for%20Windows-blue?style=for-the-badge&logo=windows&logoColor=white)](https://gstreamer.freedesktop.org/download/)
-
-</div>
-
-1. Descarga el instalador **runtime** (versión MSVC)
-2. Instala con la opción de instalación **Complete**
-3. Edita las variables de entorno y añade al PATH del sistema: `C:\Program Files\gstreamer\1.0\msvc_x86_64\bin`
-4. Añade a PYTHONPATH: `C:\Program Files\gstreamer\1.0\msvc_x86_64\lib\site-packages`
-
-> **💡 Importante:** Reemplaza `C:\Program Files\gstreamer` por tu carpeta real de instalación de GStreamer si lo instalaste en una ubicación diferente.
-
-</hfoption>
-</hfoptions>
+> **💡 Nota:** Para sistemas ARM64 (como Raspberry Pi), reemplaza `x86_64-linux-gnu` por `aarch64-linux-gnu` en el comando de exportación.
 
 ## ✅ Verificar la instalación
 
@@ -180,6 +142,8 @@ También deberías poder importar las bibliotecas de GStreamer en un entorno de 
 python -c "import gi"
 ```
 
+</hfoption>
+</hfoptions>
 
 ## Resolución de problemas y pruebas unitarias
 

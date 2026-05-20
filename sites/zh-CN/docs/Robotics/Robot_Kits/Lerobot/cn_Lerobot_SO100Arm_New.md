@@ -358,7 +358,7 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 :::
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
+    <img width={800} src="https://files.seeedstudio.com//wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
 </div>
 
 ***以下是代码校准步骤，请参照上图中接线舵机进行校准***

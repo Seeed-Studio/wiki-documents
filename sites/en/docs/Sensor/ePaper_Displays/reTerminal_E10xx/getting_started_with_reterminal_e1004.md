@@ -16,7 +16,7 @@ last_update:
   date: 4/24/2026
   author: Citric
 createdAt: '2026-01-29'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-13'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/
 ---
 import Tabs from '@theme/Tabs';
@@ -249,7 +249,7 @@ The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5
 **Step 4.** Once paired, the device will display a message prompting you to create your first dashboard.
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 This method uses the SenseCraft mobile app to configure the device's network and add it to your SenseCraft account via Bluetooth.
 

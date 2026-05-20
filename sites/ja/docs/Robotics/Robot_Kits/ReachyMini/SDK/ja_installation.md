@@ -1,5 +1,5 @@
 ---
-description: Linux、macOS、Windows 向けの Reachy Mini Python SDK とデーモンの包括的なインストールガイドです。前提条件、仮想環境のセットアップ、トラブルシューティングを網羅しています。
+description: Linux、macOS、Windows における Reachy Mini Python SDK とデーモンの包括的なインストールガイド。前提条件、仮想環境のセットアップ、トラブルシューティングを網羅します。
 title: インストールガイド
 slug: /reachymini_sdk_installation
 keywords:
@@ -12,92 +12,85 @@ keywords:
   - prerequisites
   - cross-platform
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_sdk_installation/
 ---
 
 # 📦 インストールガイド
 
-:::note Reachy Mini へようこそ！
-このガイドでは、ロボットを操作し始めるための Python SDK とデーモンのインストール方法を説明します。
-:::
-
-<div align="center">
+> **Reachy Mini へようこそ！** このガイドでは、ロボットを操作し始めるための Python SDK とデーモンのインストール方法を説明します。
 
 | 🐧 **Linux** | 🍎 **macOS** | 🪟 **Windows** |
 |:---:|:---:|:---:|
 | ✅ 対応 | ✅ 対応 | ✅ 対応 |
 
-</div>
-
 **サポートが必要ですか？** 問題が発生した場合は、遠慮なく[issue](https://github.com/pollen-robotics/reachy_mini/issues) を作成してください。
 
-## コマンドラインを使うのは初めてですか？ 🖥️
+## コマンドラインは初めてですか？ 🖥️
 
-:::note コマンドラインは初めてですか？
-**コマンドライン**（ターミナルやコマンドプロンプトとも呼ばれます）は、コンピュータと対話するためにコマンドを入力するテキストベースのインターフェースです。心配はいりません——見た目よりずっと簡単です！
+<details>
+<summary>ターミナル / コマンドラインの使用が初めての場合はこちらをクリック</summary>
+
+**コマンドライン**（ターミナルやコマンドプロンプトとも呼ばれます）は、コンピュータと対話するためにコマンドを入力するテキストベースのインターフェースです。心配はいりません — 見た目ほど難しくはありません！
 
 **コマンドラインの開き方：**
 * **Windows:** `Win + R` を押し、`cmd` または `powershell` と入力して Enter を押します
 * **macOS:** `Cmd + Space` を押し、`Terminal` と入力して Enter を押します
-* **Linux:** `Ctrl + Alt + T` を押すか、アプリケーションで「Terminal」を検索します
+* **Linux:** `Ctrl + Alt + T` を押すか、アプリケーション内で「Terminal」を検索します
 
 **基本的なヒント：**
-* 手順に記載されているコマンドは、表示されているとおりに正確に入力してください
+* 手順に記載されているとおりにコマンドを正確に入力します
 * 各コマンドを入力したら `Enter` を押して実行します
-* コマンドはコピー＆ペーストできます（ほとんどのコマンドラインインターフェースでは右クリックで貼り付けできます）
-:::
+* コマンドはコピー＆ペーストできます（多くのコマンドラインインターフェースでは右クリックで貼り付けできます）
 
 :::tip
 _怖がらないでください！_ コマンドラインは、コンピュータに指示を与えるもう一つの方法にすぎません。コマンドを一つずつ順番に実行していけば、すぐに Reachy Mini を操作できるようになります！
 :::
 
-## 1. 📋 前提条件
+</details>
 
-<div align="center">
+## 1. 📋 事前準備
 
-| ツール | バージョン | 目的 |
+| ツール | バージョン | 用途 |
 |------|---------|---------|
 | 🐍 **Python** | 3.10 - 3.12 | Reachy Mini SDK を実行 |
 | 📂 **Git** | 最新 | ソースコードとアプリをダウンロード |
 | 📦 **Git LFS** | 最新 | モデルアセットをダウンロード |
 
-</div>
+### 🐍 Python をインストール
 
-### 🐍 Python をインストールする
+ここでは `uv` を使用します。高速な Python パッケージマネージャーで、インストールが簡単になります！
 
-ここでは `uv` を使用します。これは、高速な Python パッケージマネージャで、インストールを簡単にしてくれます！
+#### ステップ 1: uv をインストール
 
-#### ステップ 1: uv をインストールする
-
-:::tip Linux / macOS
+:::info Linux / macOS
 ターミナルで次を実行します：
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 :::
 
-:::tip Windows
+:::info Windows
 ターミナルで次を実行します：
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 :::
 
-:::success インストールの確認
-インストールが完了したら、ターミナルを一度閉じて新しく開き直してください。次のコマンドで、すべてが正しくインストールされたか確認できます：
+**✅ インストールの確認：**
+
+インストールが完了したら、一度ターミナルを閉じて新しく開き直してください。次のコマンドで正しくインストールされたか確認できます：
 ```bash
 uv --version
 ```
-:::
 
-#### ステップ 2: Python をインストールする
+#### ステップ 2: Python をインストール
 
 ターミナルで次を実行します：
 ```bash
@@ -105,13 +98,13 @@ uv python install 3.12 --default
 ```
 
 :::tip
-Reachy Mini では、サポートされている最新バージョンである Python 3.12 を推奨します。
+Reachy Mini では、サポートされている最新バージョンである Python 3.12 の使用を推奨します。
 :::
 
-### 📂 Git と Git LFS をインストールする
+### 📂 Git と Git LFS をインストール
 
 :::info Linux
-#### Git と Git LFS をインストールする
+#### Git と Git LFS をインストール
 
 ターミナルで次を実行します：
 ```bash
@@ -120,28 +113,28 @@ sudo apt install git git-lfs
 :::
 
 :::info macOS
-#### 1. Homebrew をインストールする（未インストールの場合）
+#### 1. Homebrew をインストール（未インストールの場合）
 
 ターミナルで次を実行します：
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Apple Silicon（M1, M2 など）の場合、次のコマンドを実行するように求められます：
+Apple Silicon（M1, M2 など）の場合、次のコマンドを実行するように指示されます：
 
 ```zsh
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-:::success Homebrew の確認
+✅ Homebrew の確認：
+
 インストールが完了したら、次のコマンドで正しくインストールされたか確認できます：
 ```zsh
 brew --version
 ```
-:::
 
-#### 2. Git と Git LFS をインストールする
+#### 2. Git と Git LFS をインストール
 
 ターミナルで次を実行します：
 ```zsh
@@ -150,33 +143,32 @@ brew install git git-lfs
 :::
 
 :::info Windows
-#### Git for Windows をダウンロードしてインストールする
+#### Git for Windows をダウンロードしてインストール
 
 Git for Windows をダウンロードしてインストールします：
 https://git-scm.com/install/windows
 :::
 
-:::success インストールの仕上げ
+**✅ インストールの最終処理：**
+
 最後に、次のコマンドで Git LFS を初期化する必要があります：
+
 ```bash
 git lfs install
 ```
-:::
 
-## 2. 🏠 仮想環境をセットアップする
+## 2. 🏠 仮想環境をセットアップ
 
-:::tip なぜ仮想環境を使うのですか？
-Reachy Mini のインストールを分離し、他の Python プロジェクトとの競合を防ぐためです。現在の Python 開発では必須の手法です！
-:::
+> **なぜ仮想環境を使うのですか？** Reachy Mini のインストールを他の Python プロジェクトから分離し、依存関係の競合を防ぐためです。現在の Python 開発では必須の手法です！
 
-### 環境を作成する
+### 環境を作成
 
 ターミナルで次を実行します：
 ```bash
 uv venv reachy_mini_env --python 3.12
 ```
 
-### 環境を有効化する
+### 環境を有効化
 
 :::info Linux / macOS
 ターミナルで次を実行します：
@@ -189,89 +181,56 @@ source reachy_mini_env/bin/activate
 仮想環境を有効化する前に、Windows にスクリプトの実行を許可する必要があります。これは一度だけ行えば大丈夫です！
 
 **ステップ 1:** 管理者としてターミナルを開く
-- `Win + R` を押し、`powershell` と入力します
-- 「Windows PowerShell」を右クリックし、「Run as administrator」を選択します
+- `Win + R` を押し、`powershell` と入力
+- 「Windows PowerShell」を右クリックし、「管理者として実行」を選択
 
-**ステップ 2:** スクリプト実行を有効化する
+**ステップ 2:** スクリプトの実行を有効化
 
 管理者権限のターミナルで次を実行します：
 ```powershell
 powershell Set-ExecutionPolicy RemoteSigned
 ```
 
-**ステップ 3:** 管理者権限のターミナルを閉じ、通常のターミナルを開く
+**ステップ 3:** 管理者ターミナルを閉じて、通常のターミナルを開く
 
-これで、次のコマンドを実行して仮想環境を有効化できるようになります：
+その後、次を実行して仮想環境を有効化できます：
 ```powershell
 reachy_mini_env\Scripts\activate
 ```
 :::
 
-:::success 成功の目印
-コマンドラインプロンプトの先頭に `(reachy_mini_env)` と表示されていれば成功です！
-:::
+> **✅ 成功の目印：** コマンドラインプロンプトの先頭に `(reachy_mini_env)` と表示されていれば成功です！
 
-## 3. 🚀 Reachy Mini をインストールする
+## 3. 🚀 Reachy Mini をインストール
 
 インストール方法を選択してください：
 
-<div align="center">
-
-| 📦 **PyPI からインストール** | 🔧 **ソースからインストール** |
-|:---:|:---:|
-| **すべてのユーザー向け** | **開発者向け** |
-| すぐに利用可能 | コードを変更可能 |
-
-</div>
-
-### 📦 オプション A: PyPI からインストール
-
-:::tip ほとんどのユーザーに推奨
-ロボットを操作したいだけですか？この方法がおすすめです！
-:::
+:::info 📦 オプション A: PyPI
+**ほとんどのユーザーに推奨** — とにかくロボットを操作したいだけなら、この方法がおすすめです！
 
 ターミナルで次を実行します：
 ```bash
 uv pip install "reachy-mini"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
 ```
 
 シミュレーションモードを使用したい場合は、`mujoco` エクストラを追加する必要があります：
 ```bash
 uv pip install "reachy-mini[mujoco]"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
 ```
 
-:::note
-gstreamer のインストール後処理は、PyPi に関する[issue](https://github.com/pypi/support/issues/8847#issuecomment-3899714506) が原因で必要になっており、将来的には解決される予定です。
+:::tip
+gstreamer の事後インストールは、PyPi に関する[issue](https://github.com/pypi/support/issues/8847#issuecomment-3899714506) が原因で必要になっており、将来的には解消される予定です。
 :::
 
-### 🔧 オプション B: ソースからインストール
+<details>
+<summary>🐧 <strong>Linux ユーザー: 追加の手順が必要です</strong></summary>
 
-:::info 開発者向け
-SDK を変更したり、コントリビュートしたい場合は、このオプションを選択してください！
-:::
+**GStreamer** は Linux では手動でインストールする必要があります：
 
-ターミナルで次を実行します：
-```bash
-git clone https://github.com/pollen-robotics/reachy_mini
-cd reachy_mini
-uv pip install -e .
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
-```
+**[📖 GStreamer インストールガイド](https://wiki.seeedstudio.com/ja/reachymini_sdk_gstreamer-installation/)**
 
-シミュレーションモードを使用したい場合は、`mujoco` エクストラを追加する必要があります：
-```bash
-uv pip install -e ".[mujoco]"
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
-```
+**USB 権限** — Reachy Mini と USB 接続するために必要です：
 
-### 🐧 Linux ユーザー向け
-
-:::info Linux + USB 接続ですか？
-Reachy Mini のシリアルポートへのアクセス権を付与する必要があります。
-
-ターミナルで次のコマンドを実行します：
 ```bash
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE="0666", GROUP="dialout"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666", GROUP="dialout"' \
@@ -280,35 +239,50 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666"
 sudo udevadm control --reload-rules && sudo udevadm trigger
 sudo usermod -aG dialout $USER
 ```
-:::
 
 :::warning
 変更を反映させるには、一度ログアウトしてから再度ログインしてください！
 :::
 
-:::tip PortAudio
-デフォルトのバックエンドで音声機能を有効にするには、システムに portaudio がインストールされていることを確認してください。
-
-ターミナルで次のコマンドを実行します：
-```bash
-sudo apt-get install libportaudio2
-```
+</details>
 :::
 
-#### Gstreamer
+:::info 🔧 オプション B: ソース
+**開発者向け** — SDK を変更したり、コントリビュートしたい場合はこちらを選択してください！
 
-メディア管理は GStreamer ライブラリによって行われます。Windows と MacOSX ユーザーは、pip を使ってインストールできます：
+ターミナルで次を実行します：
 ```bash
-uv pip install --upgrade --index-url https://gitlab.freedesktop.org/api/v4/projects/1340/packages/pypi/simple gstreamer==1.28.0
+git clone https://github.com/pollen-robotics/reachy_mini && cd reachy_mini
+uv sync
 ```
 
-Linux ユーザーは、追加の手順に従う必要があります：
+シミュレーションモードを使用したい場合は、`mujoco` エクストラを追加する必要があります：
+```bash
+uv sync --extra mujoco
+```
 
-<div align="center">
+<details>
+<summary>🐧 <strong>Linux ユーザー: 追加の手順が必要です</strong></summary>
 
-[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](/ja/reachymini_sdk_gstreamer-installation)
+**GStreamer** は Linux では手動でインストールする必要があります：
 
-</div>
+**[📖 GStreamer インストールガイド](https://wiki.seeedstudio.com/ja/reachymini_sdk_gstreamer-installation/)**
+
+**USB 権限** — Reachy Mini と USB 接続するために必要です：
+
+```bash
+echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", MODE="0666", GROUP="dialout"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="38fb", ATTRS{idProduct}=="1001", MODE="0666", GROUP="dialout"' \
+| sudo tee /etc/udev/rules.d/99-reachy-mini.rules
+
+sudo udevadm control --reload-rules && sudo udevadm trigger
+sudo usermod -aG dialout $USER
+```
+
+> [!WARNING]
+> 変更を反映させるには、一度ログアウトしてから再度ログインしてください！
+
+</details>
 
 ## 🎉 おめでとうございます！
 
@@ -316,11 +290,11 @@ Reachy Mini のインストールが完了しました！ロボットを動か�
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](/ja/reachymini_troubleshooting)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](/ja/reachymini_troubleshooting)**
 
 ## 次のステップ
 
-* **[クイックスタートガイド](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の挙動を実行する
-* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞く方法を学ぶ
-* **[AI 連携](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開する
-* **[コアコンセプト](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について
+* **[クイックスタートガイド](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の挙動を実行します
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞く方法を学びます。
+* **[AI 連携](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
+* **[コアコンセプト](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について説明します。

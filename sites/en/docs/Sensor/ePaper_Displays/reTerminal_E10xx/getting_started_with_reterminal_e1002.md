@@ -8,7 +8,7 @@ last_update:
   date: 07/21/2025
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-13'
 url: https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002/
 ---
 import Tabs from '@theme/Tabs';
@@ -210,7 +210,7 @@ So, we need to complete the next steps of configuring the network during this ti
 ### Network Setup
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
 **Step 1.** Connect to the device's Wi-Fi access point from your smartphone or computer. The AP name will appear on the screen (no password required). The network credentials are `reTerminal E1002-{MAC Adress}`.
 
