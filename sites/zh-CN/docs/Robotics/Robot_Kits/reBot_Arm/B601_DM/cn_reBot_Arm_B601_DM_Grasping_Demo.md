@@ -12,13 +12,13 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-04-22
+  date: 2026-05-18
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-04-22'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -149,20 +149,16 @@ git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
-### 步骤 2. 创建 Python 环境
+### 步骤 2. 创建并配置 conda 环境
 
 ```bash
-conda create -n rebotarm python=3.10 -y
+conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-### 步骤 3. 安装项目依赖
+如果你想使用其他环境名，可以将命令中的 `rebotarm` 替换为自定义名称。
 
-```bash
-pip install -r requirements.txt
-```
-
-### 步骤 4. 安装机械臂 SDK
+### 步骤 3. 安装机械臂 SDK
 
 ```bash
 git clone https://github.com/vectorBH6/reBotArm_control_py.git sdk/reBotArm_control_py
@@ -171,7 +167,7 @@ pip install -e .
 cd ../..
 ```
 
-### 步骤 5. 安装 Orbbec Gemini 2 SDK
+### 步骤 4. 安装 Orbbec Gemini 2 SDK
 
 本项目依赖 `pyorbbecsdk`。仓库默认不包含 `sdk/pyorbbecsdk`，需要你自行进入 `sdk/` 目录拉取官方仓库，或通过其他方式安装。
 
@@ -202,7 +198,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### 步骤 6. 验证依赖
+### 步骤 5. 验证依赖
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
@@ -356,7 +352,7 @@ robot:
 
 ```bash
 conda activate rebotarm
-pip install -r requirements.txt
+conda env update -n rebotarm -f environment.yml
 cd sdk/reBotArm_control_py && pip install -e .
 ```
 
