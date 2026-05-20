@@ -49,7 +49,6 @@ The **Reachy Mini** is the first open-source desktop robot designed to explore h
 
 Optimized and manufactured by **Seeed Studio**, Reachy Mini combines expressive physical interaction with modern AI capabilities. Whether you're building voice assistants, computer vision applications, or educational tools, Reachy Mini provides a complete platform for real-world AI experimentation.
 
-
 :::tip
 What You'll Learn
 
@@ -108,16 +107,19 @@ Reachy Mini packs impressive capabilities into a compact, desktop-sized package.
 Reachy Mini is specifically engineered for expressive, engaging human-robot interaction:
 
 ### Expressive Movement
+
 - **6 Degrees of Freedom Head:** Natural-looking pan, tilt, and roll movements
 - **Full Body Rotation:** 360-degree rotation for dynamic positioning
 - **Animated Antennas:** Two expressive antennas that add personality and feedback
 
 ### Multimodal Sensing
+
 - **4-Microphone Array:** Advanced audio capture for voice recognition and sound localization
 - **Wide-Angle Camera:** Computer vision capabilities for face detection, object recognition, and more
 - **5W Speaker:** Clear audio output for speech synthesis and sound effects
 
 ### Open & Extensible
+
 - **Fully Open-Source:** Hardware design, software SDK, and simulation environment
 - **Python SDK:** Intuitive programming interface with JavaScript and Scratch support coming soon
 - **Hugging Face Integration:** Direct access to state-of-the-art AI models for speech, vision, and more
@@ -172,12 +174,14 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
 The Lite version is ideal for developers who prefer external compute or already have a preferred development environment.
 
 **Best for:**
+
 - Developers with Mac/Linux systems
 - Users who want maximum control over compute resources
 - Educational settings with existing computer labs
 - Projects requiring integration with existing infrastructure
 
 **Limitations:**
+
 - Requires wired connection to host computer
 - No WiFi capability
 - No accelerometer
@@ -188,12 +192,14 @@ The Lite version is ideal for developers who prefer external compute or already 
 The Full version includes onboard computing for complete autonomy and wireless operation.
 
 **Best for:**
+
 - Standalone robot applications
 - Wireless research and development
 - Projects requiring accelerometer data
 - Portable demonstrations and deployments
 
 **Additional Features:**
+
 - Raspberry Pi 4 onboard computer
 - WiFi connectivity
 - Battery for wireless operation
@@ -206,7 +212,6 @@ Reachy Mini is sold as a kit that takes approximately **2-3 hours** to assemble.
 ### Assembly Resources
 
 - **Interactive Assembly Guide:** [Step-by-step online instructions](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide)
-
 
 :::warning[Assembly Tips]
 
@@ -224,11 +229,13 @@ Reachy Mini is sold as a kit that takes approximately **2-3 hours** to assemble.
 Depending on your version, you'll need:
 
 **Reachy Mini Lite:**
+
 - Mac or Linux computer (Windows support coming soon)
 - Python 3.8 or higher
 - USB connection
 
 **Reachy Mini Full:**
+
 - WiFi network or Ethernet connection
 - Web browser for dashboard access
 
@@ -267,6 +274,7 @@ with ReachyMini() as mini:
 A web-based dashboard provides an intuitive interface for testing and controlling Reachy Mini without writing code.
 
 **Features:**
+
 - Real-time motor control
 - Camera feed display
 - Microphone testing
@@ -286,6 +294,7 @@ Reachy Mini features a growing ecosystem of ready-to-use applications powered by
 ### Featured Apps
 
 **Conversation App**
+
 - Natural language interaction powered by Large Language Models
 - Voice recognition and speech synthesis
 - Customizable personality and knowledge base
@@ -295,11 +304,13 @@ Reachy Mini features a growing ecosystem of ready-to-use applications powered by
 </div>
 
 **Hand Tracker**
+
 - Real-time hand tracking using computer vision
 - The robot follows your hand movements
 - Great for demonstrations and interaction experiments
 
 **Radio**
+
 - Voice-controlled radio streaming
 - Natural language requests for songs and stations
 - Demonstrates audio processing capabilities
@@ -394,10 +405,12 @@ Test your code, iterate quickly, and deploy to hardware when ready.
 ### Power Requirements
 
 **Lite Version:**
+
 - Powered via USB from host computer or wall adapter
 - Typical consumption: 5V @ 2A
 
 **Full Version:**
+
 - Internal battery for wireless operation
 - USB-C charging
 - Battery life: 2-4 hours depending on usage
@@ -436,7 +449,6 @@ Reachy Mini does not send any data to Pollen Robotics or Hugging Face. All proce
 - **[Secondary Development](https://github.com/Seeed-Projects/reachy-mini-starter):** Seeed's starter guide for custom application development
 - **[Assembly Guide](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide):** Step-by-step assembly instructions
 - 🤗[**Share your app with the community**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
-
 
 ## What's Next?
 

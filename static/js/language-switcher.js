@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-19 10:03:03 (北京时间)
-// 多语言页面: 2272 个
+// 生成时间: 2026-05-20 10:37:45 (北京时间)
+// 多语言页面: 2279 个
 
 (function() {
   'use strict';
@@ -1438,6 +1438,13 @@
     "pt"
   ],
   "/Mini_AI_Computer_T906": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_arm_jetson_bundle": [
     "cn",
     "en",
     "es",
@@ -5260,222 +5267,273 @@
     "pt"
   ],
   "/reachymini_agents": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_apps": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_daemon": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_media": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_motion": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_reachymini": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_api_rest-api": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_tools": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_api_utils": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_examples_custom_media_manager": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_goto_interpolation_playground": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_imu": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_joy_controller": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_look_at": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_minimal_demo": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_mini_head_position_gui": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_reachy_compliant_demo": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_recorded_moves": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_rerun_viewer": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sequence": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_doa": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_play": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_sound_record": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_examples_take_picture": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_intro": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_development_workflow": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_hardware": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_install_daemon_from_branch": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_media_advanced_controls": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_reflash_the_rpi_iso": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_reset": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_usage": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_hardware": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_media_advanced_controls": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_usage": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_reachy_mini_lite_wizard": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_platforms_simulation_get_started": [
+    "cn",
     "en",
     "es",
     "ja",
@@ -5483,75 +5541,118 @@
   ],
   "/reachymini_getting_started": [
     "cn",
-    "en"
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_sdk_apps": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
   ],
   "/reachymini_sdk_core-concept": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_gstreamer-installation": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_installation": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_integration": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_javascript-sdk": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_media-architecture": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_python-sdk": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_quickstart": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_sdk_readme": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting_change_mic_fpc_cable": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting_motors_diagnosis": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_troubleshooting_roadmap": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_troubleshooting_spherical_joints_maintenance": [
+    "cn",
     "en",
     "es",
     "ja",
     "pt"
   ],
   "/reachymini_troubleshooting": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reachymini_vibe-code-with-your-agent": [
+    "cn",
     "en",
     "es",
     "ja",
