@@ -1,5 +1,5 @@
 ---
-description: OpenCV と GStreamer v4l2src を使用したカメラ設定に加え、マイクとスピーカーの設定を含む Reachy Mini Lite 向けの高度なメディアコントロール。
+description: OpenCV と GStreamer v4l2src を使用したカメラ設定に加え、マイクとスピーカーの設定を含む、Reachy Mini Lite 向けの高度なメディアコントロールについて説明します。
 title: 高度なメディアコントロール
 slug: /reachymini_platforms_reachy_mini_lite_media_advanced_controls
 keywords:
@@ -25,31 +25,19 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_lite_media
 
 # 高度なメディアコントロール
 
-このページでは、Reachy Mini Lite のカメラとサウンドシステムを細かく調整するための高度な設定について説明します。標準版と比べて異なるのは、カメラへのアクセス方法のみです。
+このページでは、Reachy Mini Lite のカメラとサウンドシステムを細かく調整するための高度な設定について説明します。標準版とわずかに異なるのはカメラへのアクセス方法だけです。
 
 ## カメラ
 
 Raspberry Pi カメラは CSI-to-USB アダプタに取り付けられており、システムからは UVC カメラとして認識されます。カメラデバイスを開くことができる任意のプログラムから直接アクセスできます。
 
-### Windows と macOS
+### カメラアクセス
 
-現在、これらのプラットフォームのデフォルトバックエンドは OpenCV です。パラメータは[コード](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_opencv.py)内で設定できます：
-
-```python
-self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self._resolution.value[0])
-self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self._resolution.value[1])
-
-# Example camera control settings:
-# self.cap.set(cv2.CAP_PROP_BRIGHTNESS, 0.5)
-# self.cap.set(cv2.CAP_PROP_CONTRAST, 0.5)
-# self.cap.set(cv2.CAP_PROP_SATURATION, 64)
-```
-
-利用可能なパラメータの一覧については、以下の Linux セクションを参照してください。
+デーモンはカメラハードウェアを管理し、ローカル IPC エンドポイントまたは WebRTC ストリーミングを介してフレームを公開します。クライアント側コードは、MediaManager を通じて LOCAL または WEBRTC バックエンドを使用してフレームを読み取ります。
 
 ### Linux
 
-Linux ユーザーは、次のコマンドでカメラを確認できます：
+Linux ユーザーは次の方法でカメラを確認できます：
 
 ```bash
 v4l2-ctl --list-devices
@@ -116,7 +104,7 @@ gst-launch-1.0 v4l2src device=/dev/video2 extra-controls=s,exposure_auto=1,expos
 
 SDK レベルでは、カメラは [v4l2src](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py) コンポーネントを使用して GStreamer によって制御されます。利用可能なパラメータは次のコマンドで確認できます：
 
-パラメータは、次のように[コード](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py)内で設定できます：
+パラメータは、[コード](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_gstreamer.py) 内で次のように設定できます：
 
 ```python
 camsrc = Gst.ElementFactory.make("v4l2src")
@@ -133,4 +121,4 @@ self.pipeline.add(camsrc)
 
 ## マイクとスピーカー
 
-ハードウェアは Lite 版でもまったく同じなので、[Reachy Mini ドキュメント](/ja/reachymini_platforms_reachy_mini_media_advanced_controls#microphones-and-speakers)を参照してください。
+[Reachy Mini ドキュメント](/ja/reachymini_platforms_reachy_mini_media_advanced_controls#microphones-and-speakers)を参照してください。Lite 版でもハードウェアはまったく同じです。

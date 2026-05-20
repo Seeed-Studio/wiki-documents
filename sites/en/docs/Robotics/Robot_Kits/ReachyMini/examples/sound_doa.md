@@ -10,13 +10,13 @@ keywords:
   - sound localization
   - look at
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/reachymini_examples_sound_doa/
 ---
 
@@ -36,4 +36,4 @@ This example demonstrates how to use the microphone array to detect the Directio
 - Real-time transformation from head to world coordinates
 
 
-See the full example at: [sound_doa.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/sound_doa.py)
+See the full example at: [sound_doa.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/sound_doa.py)

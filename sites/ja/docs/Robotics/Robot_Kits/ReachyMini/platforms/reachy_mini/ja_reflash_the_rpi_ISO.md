@@ -17,14 +17,14 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso/
 ---
 
 # 上級者向け: Raspberry Pi OS イメージを書き込み直す
 
-:::danger エキスパート向けガイドのみ
+:::warning エキスパート向けガイドのみ
 このガイドでは、ReachyMiniOS イメージを Reachy Mini の CM4 に書き込み直す方法を説明します。これを行うと Reachy Mini は _工場出荷状態にリセット_ されます。
 
 ほとんどのユーザーにはこの作業は不要です。Reachy Mini にはあらかじめインストールされています。デバッグできない壊れたインストール状態になっている場合にのみ、以下の手順に従ってください。
@@ -34,11 +34,11 @@ url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_reflash_th
 
 ## OS イメージ（と bmap）をダウンロードする
 
-まず、最新の OS イメージと `.bmap` ファイルを次からダウンロードします:
+まず、最新の OS イメージと `.bmap` ファイルを以下からダウンロードします：
 https://github.com/pollen-robotics/reachy-mini-os/releases
 
 :::tip
-`.bmap` ファイルは `bmaptool`（Linux/macOS）で使用されます。Raspberry Pi Imager（Windows）でフラッシュする場合は、OS イメージファイルのみが必要です。
+`.bmap` ファイルは `bmaptool`（Linux/macOS）で使用されます。Raspberry Pi Imager（Windows）で書き込む場合は、OS イメージファイルのみが必要です。
 :::
 
 ---
@@ -46,21 +46,21 @@ https://github.com/pollen-robotics/reachy-mini-os/releases
 ## rpiboot をインストールする
 
 :::info Linux / macOS
-ビルド手順はこちらに従ってください:
+ビルド手順はこちらに従ってください：
 https://github.com/raspberrypi/usbboot?tab=readme-ov-file#building-1
 :::
 
 :::info Windows
-公式 Raspberry Pi リポジトリから rpiboot GUI をダウンロードしてインストールします:
+公式 Raspberry Pi リポジトリから rpiboot GUI をダウンロードしてインストールします：
 https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe
 :::
 
 ---
 
-## フラッシュツールをインストールする
+## 書き込みツールをインストールする
 
 :::info Linux
-bmaptool をインストールします:
+bmaptool をインストールします：
 ```bash
 sudo apt install bmap-tools
 ```
@@ -71,7 +71,7 @@ Linux ユーザーは `bmaptool` か Raspberry Pi Imager（Windows オプショ�
 :::
 
 :::info macOS
-公式リポジトリから bmaptool をインストールします:
+公式リポジトリから bmaptool をインストールします：
 ```bash
 python3 -m pip install --user "git+https://github.com/yoctoproject/bmaptool.git"
 export PATH="$HOME/.local/bin:$PATH"
@@ -84,7 +84,7 @@ macOS ユーザーは `bmaptool` か Raspberry Pi Imager（Windows オプショ�
 :::
 
 :::info Windows
-Raspberry Pi Imager をダウンロードしてインストールします:
+Raspberry Pi Imager をダウンロードしてインストールします：
 https://www.raspberrypi.com/software/
 :::
 
@@ -92,25 +92,25 @@ https://www.raspberrypi.com/software/
 
 ## セットアップ
 
-**ステップ 1:** 先に進む前にロボットの電源を完全に切ります。
+**ステップ 1:** 作業を進める前に、ロボットの電源を完全に切ります。
 
 :::tip ステップ 2: rpiboot を起動する
-**rpiboot** を起動します（ロボットが接続されるのを待機します）:
+**rpiboot** を起動します（ロボットが接続されるのを待機します）：
 :::
 
-* **Linux / macOS**: ターミナルで `rpiboot` コマンドを実行します:
+* **Linux / macOS**: ターミナルで `rpiboot` コマンドを実行します：
   ```bash
   sudo ./rpiboot -d mass-storage-gadget64
   ```
 * **Windows**: 前のステップでインストールした **RPiBoot** 実行ファイルを実行します。
 
 :::tip ステップ 3
-ヘッド PCB 上のスイッチを **DOWNLOAD (SW1)** に設定します:
+ヘッド PCB 上のスイッチを **DOWNLOAD (SW1)** に設定します：
 
 ![pcb_usb_and_switch](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/pcb_usb_and_switch.png)
 :::
 
-**ステップ 4:** USB ケーブル（上の画像に示されている **USB2** と名前の付いたもの）を接続します。
+**ステップ 4:** USB ケーブル（上の画像で示されている **USB2** と名前の付いたもの）を接続します。
 
 **ステップ 5:** ロボットの電源を入れます。
 
@@ -118,59 +118,66 @@ https://www.raspberrypi.com/software/
 
 ---
 
-## ISO のアンマウントとフラッシュ
+## アンマウントして ISO を書き込む
 
 :::info Linux
-:::warning フラッシュする前に、デバイスがアンマウントされていることを必ず確認してください。
+
+:::warning
+書き込みを行う前に、デバイスがアンマウントされていることを必ず確認してください。
+:::
 
 **デバイスの確認とアンマウント**
 
 デバイスは `/dev/sdx`（`/dev/sda` のようなもの）として表示されるはずです。
 
-次を実行して **マウントされているパーティションを確認** します:
+次のコマンドを実行して、**マウントされているパーティションを確認** します：
 ```bash
 lsblk
 ```
 
-以下のように `bootfs` と `rootfs` が表示されていれば、それは **マウントされています**:
+以下のように `bootfs` と `rootfs` が表示されていれば、**マウントされている** ことを意味します：
 ```
 sda           8:0    1  14.6G  0 disk
 ├─sda1        8:1    1   512M  0 part /media/<username>/bootfs
 └─sda2        8:2    1  14.1G  0 part /media/<username>/rootfs
 ```
 
-パーティションを**アンマウント**します:
+パーティションを**アンマウント**します：
 ```bash
 sudo umount /media/<username>/bootfs
 sudo umount /media/<username>/rootfs
 ```
 
-**ISO をフラッシュする**
+**ISO を書き込む**
 ```bash
 sudo bmaptool copy <reachy_mini_os>.zip --bmap <reachy_mini_os>.bmap /dev/sda
 ```
 
-例えば `v0.0.10` リリースの場合:
+例えば、`v0.0.10` リリースの場合：
 ```bash
 sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11-19-reachyminios-lite-v0.0.10.bmap /dev/sda
 ```
 :::
 
+
 :::info macOS
-:::warning フラッシュする前に、デバイスがアンマウントされていることを必ず確認してください。
+
+:::warning
+書き込みを行う前に、デバイスがアンマウントされていることを必ず確認してください。
+:::
 
 **デバイスの確認とアンマウント**
 
 デバイスは `/dev/diskX`（`/dev/disk4` のようなもの）として表示されるはずです。
 
-次を実行して **マウントされているパーティションを確認** します:
+次のコマンドを実行して、**マウントされているパーティションを確認** します：
 ```bash
 mount
 ```
 
 `bootfs` や `rootfs` に言及している `/dev/disk4s1` や `/dev/disk4s2` のようなエントリを探します。
 
-個々のパーティションではなく、ディスク全体を**アンマウント**します:
+個々のパーティションではなく、ディスク全体を**アンマウント**します：
 ```bash
 diskutil unmountDisk /dev/disk4
 ```
@@ -181,22 +188,22 @@ diskutil unmountDisk /dev/disk4
 `unmountDisk` はディスク上のすべてのボリューム（`bootfs`、`rootfs` など）を一度にアンマウントします。
 :::
 
-:::warning ISO をフラッシュする
-`/dev/diskX` の代わりに `/dev/rdiskX`（先頭の **`r`** に注意！）を使用します。`r` プレフィックスは生ディスクアクセスを提供し、フラッシュコマンドを成功させるために必須です。
+:::warning ISO を書き込む
+`/dev/diskX` の代わりに `/dev/rdiskX`（先頭の **`r`** に注意！）を使用してください。`r` プレフィックスは生ディスクアクセスを提供し、フラッシュコマンドを成功させるために必須です。
 :::
 
 ```bash
 sudo bmaptool copy <reachy_mini_os>.zip --bmap <reachy_mini_os>.bmap /dev/rdiskX
 ```
 
-例えば `v0.0.10` リリースの場合（`/dev/rdisk4` は実際のディスク識別子に置き換えてください）:
+例えば、`v0.0.10` リリースの場合（`/dev/rdisk4` は実際のディスク識別子に置き換えてください）：
 ```bash
 sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11-19-reachyminios-lite-v0.0.10.bmap /dev/rdisk4
 ```
 :::
 
 :::info Windows (Raspberry Pi Imager)
-**Raspberry Pi Imager** 実行ファイルを使用して OS イメージをフラッシュします:
+**Raspberry Pi Imager** 実行ファイルを使用して OS イメージを書き込みます：
 
 1. **Raspberry Pi Imager** を開きます
 2. デバイスとして `Raspberry Pi 4` を選択します
@@ -221,24 +228,26 @@ sudo bmaptool copy image_2025-11-19-reachyminios-lite-v0.0.10.zip --bmap 2025-11
 
 ## すべてが正常に動作しているか確認する
 
-:::tip コンピュータをロボットの WiFi ホットスポットに接続します:
-* ネットワーク名: `reachy-mini-ap`
-* パスワード: `reachy-mini`
+:::tip
+PC をロボットの WiFi ホットスポットに接続します：
+
+- ネットワーク名: `reachy-mini-ap`
+- パスワード: `reachy-mini`
 :::
 
-ロボットに SSH 接続します:
+ロボットに SSH 接続します：
 ```bash
 ssh pollen@reachy-mini.local
 # password: root
 ```
 
-その後、次を実行します:
+その後、次を実行します：
 ```bash
 reachyminios_check
 ```
 
 :::success
-成功すると、次のように表示されます:
+成功すると、次のように表示されます：
 ```bash
 Image validation PASSED
 ```

@@ -1,5 +1,5 @@
 ---
-description: Guía para restablecer la conexión inalámbrica de Reachy Mini usando la app nRF Connect o un navegador con Bluetooth Web API para restablecer el punto de acceso Wi‑Fi o el daemon.
+description: Guía para restablecer la conexión inalámbrica de Reachy Mini usando la app Reachy Mini Control, Web Bluetooth o nRF Connect para restablecer el punto de acceso Wi‑Fi o el daemon.
 title: Restablecer Reachy Mini vía Bluetooth
 slug: /reachymini_platforms_reachy_mini_reset
 keywords:
@@ -16,80 +16,88 @@ last_update:
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/es/reachymini_platforms_reachy_mini_reset/
 ---
 
-# Panel sencillo de Bluetooth para smartphone
+# Herramientas de reinicio y restablecimiento por Bluetooth (inalámbrico)
 
-Con un smartphone y un navegador compatible con Bluetooth Web API (basado en Chrome/Opera/Edge) simplemente ve aquí 👉 [Bluetooth tool](https://pollen-robotics.github.io/reachy_mini/) y restablece el hotspot, comprueba el estado de la red u otras tareas.
+Si necesitas restablecer el punto de acceso Wi‑Fi del robot, reiniciar el daemon o ejecutar otros comandos de mantenimiento por Bluetooth, usa una de las opciones siguientes. **Da preferencia a la app oficial Reachy Mini Control** cuando estés en un portátil o sobremesa: incluye una consola Bluetooth y evita tener que alternar entre un navegador o una app de teléfono por separado.
 
-Si tu dispositivo/navegador no es compatible, por favor revisa la otra solución.
+## 1. Reachy Mini Control — Consola Bluetooth (recomendado)
 
+Usa la aplicación de escritorio **Reachy Mini Control** ([download](https://hf.co/reachy-mini/#/download)). El Bluetooth debe estar activado en tu ordenador.
 
-# Guía de ReachyMini con nRF Connect
+1. Abre **Reachy Mini Control**. En la pantalla **Connect to Reachy** (antes de iniciar una sesión), desplázate hasta el pie de página y haz clic en **First time WiFi setup**.
 
-Reachy Mini wireless emite una señal Bluetooth que te permite restablecer el punto de acceso Wi‑Fi o el daemon.
+[![control-app-first-time-wifi-setup.png](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-first-time-wifi-setup.png)](https://hf.co/reachy-mini/#/download)
 
-## 1. Instalar nRF Connect
-- **Android**: [Download here](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en-US&pli=1)
-- **iOS**: [Download here](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+2. En el asistente **First Time WiFi Setup**, usa el enlace del pie de página **Try the Bluetooth Console** (por ejemplo, si no se detecta el punto de acceso, o siempre que quieras acceder directamente a la consola).
 
+[![control-app-wifi-wizard-bluetooth-console.png](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-wifi-wizard-bluetooth-console.png)](https://hf.co/reachy-mini/#/download)
 
-## 2. Escanear y conectar
+Desde la consola Bluetooth puedes restablecer el punto de acceso, comprobar el estado de la red y ejecutar el mismo tipo de comandos que en los otros métodos siguientes.
+
+> **Nota:** En algunas versiones de la app, el enlace de entrada puede mostrarse como **First time connecting to your WiFi...** en lugar de **First time WiFi setup**; abre el mismo flujo de configuración de Wi‑Fi.
+
+## 2. Panel Web Bluetooth (navegador de teléfono o escritorio)
+
+Con un smartphone o un ordenador de escritorio y un **navegador compatible con Bluetooth** (Chrome, Opera o Edge), abre la herramienta independiente: [Bluetooth tool](https://pollen-robotics.github.io/reachy_mini/). Puedes restablecer el punto de acceso, comprobar el estado de la red y más sin instalar la app de escritorio.
+
+Si tu dispositivo o navegador no es compatible con la API Web Bluetooth, usa la app de escritorio (arriba) o el método con nRF Connect que se indica a continuación.
+
+## 3. nRF Connect (avanzado)
+
+Reachy Mini inalámbrico expone una interfaz Bluetooth GATT para que puedas restablecer el punto de acceso Wi‑Fi o el daemon desde un cliente BLE genérico.
+
+### 3.1 Instalar nRF Connect
+
+- **Android**: [Google Play](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en-US&pli=1)
+- **iOS**: [App Store](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+
+### 3.2 Escanear y conectar
+
 1. Abre nRF Connect.
-2. Escanea los dispositivos y selecciona **ReachyMini**.
-![bluetooth_1.jpg](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/bluetooth_1.jpg)
+2. Escanea dispositivos y selecciona **ReachyMini**.
+
+[![bluetooth_1.jpg](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/bluetooth_1.jpg)
+
 3. Conéctate al dispositivo.
 
+### 3.3 Servicio desconocido y sección WRITE
 
+- Abre el **Unknown Service**.
+- Usa la sección **WRITE** para enviar comandos.
+- Puedes usar la sección **READ** de arriba para inspeccionar las respuestas del robot.
 
-## 3. Unknown Service y sección WRITE
-- Navega hasta **Unknown Service**.
-- Localiza la sección **WRITE**.
-- También puedes usar la sección **READ** de arriba para comprobar la respuesta del robot.
-![bluetooth_2.jpg](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/bluetooth_2.jpg)
+[![bluetooth_2.jpg](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/bluetooth_2.jpg)
 
+### 3.4 Envío de comandos
 
+Los comandos se envían como **cadenas hexadecimales** (o como texto plano como `STATUS` o `CMD_HOTSPOT`). Usa [este conversor](https://www.rapidtables.com/convert/number/ascii-to-hex.html) si necesitas ASCII → hex.
 
-## 4. Envío de comandos
-Los comandos se envían como **cadenas hexadecimales**. Usa [this tool](https://www.rapidtables.com/convert/number/ascii-to-hex.html) para convertir ASCII a hex si es necesario.
-Los comandos también se pueden enviar usando el formato de texto original, como "STATUS" o "CMD_HOTSPOT".
+**Envía siempre el PIN antes de cualquier otro comando.**
 
-**Antes de enviar cualquier comando, asegúrate de enviar primero el código PIN.**
+#### Código PIN
 
-### Comandos disponibles
-| Command                | Hex Value (send after `0x`)       |
-|------------------------|-----------------------------------|
-| STATUS                 | 535441545553                      |
-| PIN_00018              | 50494E5F3030303138                |
-| CMD_HOTSPOT            | 434D445F484F5453504F54            |
+El PIN son los **últimos 5 dígitos** del número de serie del robot. Por ejemplo, si el número de serie es `xxxxxxxx4918400018`, el PIN es `00018` — envía `PIN_00018` (o el valor hexadecimal de abajo).
+
+#### Referencia de comandos
+
+| Comando                | Valor hex (después de `0x`)         |
+|------------------------|-------------------------------------|
+| STATUS                 | 535441545553                        |
+| PIN_00018              | 50494E5F3030303138                  |
+| CMD_HOTSPOT            | 434D445F484F5453504F54              |
 | CMD_RESTART_DAEMON     | 434D445F524553544152545F4441454D4F4E |
 | CMD_SOFTWARE_RESET     | 434D445F534F4654574152455F5245534554 |
 
+Si usas **CMD_SOFTWARE_RESET**, el robot se reinicia y puede tardar **unos 5 minutos** antes de que vuelva a estar accesible.
 
-### Código PIN
+#### Consejos
 
-El PIN son los **últimos 5 dígitos** del número de serie del robot. Por ejemplo, si el número de serie es `xxxxxxxx4918400018`, el PIN será `00018`, así que envía `PIN_00018` o el valor hexadecimal correspondiente.
+Es práctico guardar los comandos que usas con frecuencia para reutilizarlos.
 
-### Comandos disponibles
-| Command                | Hex Value (send after `0x`)       |
-|------------------------|-----------------------------------|
-| STATUS                 | 535441545553                      |
-| PIN_00018              | 50494E5F3030303138                |
-| CMD_HOTSPOT            | 434D445F484F5453504F54            |
-| CMD_RESTART_DAEMON     | 434D445F524553544152545F4441454D4F4E |
-| CMD_SOFTWARE_RESET     | 434D445F534F4654574152455F5245534554 |
-
-Nota: Si usas el comando de software reset, el robot se reiniciará y tendrás que esperar unos 5 minutos para que vuelva a estar disponible.
-
-### Consejos
-
-Es una buena práctica guardar los comandos para usarlos más tarde.
-![bluetooth_3.jpg](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/bluetooth_3.jpg)
-![bluetooth_4.jpg](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/bluetooth_4.jpg)
-
-
-
-
+[![bluetooth_3.jpg](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/bluetooth_3.jpg)
+[![bluetooth_4.jpg](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/bluetooth_4.jpg)
