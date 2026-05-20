@@ -1,5 +1,5 @@
 ---
-description: reComputer J401B 是一款紧凑型高性能边缘 AI 设备，搭载 NVIDIA Jetson Orin 模组，提供丰富的 I/O 接口，并支持 JetPack 5.1.3 至 6.2，适用于多种 AI 应用。本指南涵盖其规格参数、刷机说明以及接口使用，便于开发与部署。
+description: reComputer J401B 是一款紧凑型高性能边缘 AI 设备，搭载 NVIDIA Jetson Orin 模组，提供丰富的 I/O 接口，并支持 JetPack 5.1.3 至 6.2，可用于多种 AI 应用。本指南涵盖其规格参数、刷机说明以及接口使用，便于开发与部署。
 title: reComputer J401B 入门指南
 keywords:
   - reComputer
@@ -18,27 +18,32 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # reComputer J401B 入门指南
 
+## 介绍
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.jpg"/>
 </div>
 
+reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVIDIA Jetson Orin NX 8GB 模组的 reComputer J4011B 是一款功能强大且紧凑的边缘 AI 设备，具备丰富的接口：2 路 USB 3.2、HDMI、以太网、用于 Wi-Fi 模组的 M.2 Key E、用于 SSD 的 M.2 Key M、用于 LTE 模组的 mini-PCIe、CAN、40 针接口等。
+
+:::note
+支持 Logo 品牌定制、包装定制以及固件烧录定制。
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
 </div>
-
-## 介绍
-
-reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVIDIA Jetson Orin NX 8GB 模组的 reComputer J4011B 是一款功能强大且紧凑的边缘 AI 设备，具备丰富的接口：2x USB 3.2、HDMI、以太网、用于 Wi-Fi 模组的 M.2 Key E、用于 SSD 的 M.2 Key M、用于 LTE 模组的 mini-PCIe、CAN、40 针接口等。
 
 ## 特性
 
-- **打造最强大的嵌入式 AI 平台：** 兼容 Jetson Orin NX 模组，提供最高 100 TOPS 的算力。
+- **打造最强大的嵌入式 AI 平台：** 兼容 Jetson Orin NX 模组，提供最高 100 TOPS 算力。
 
-- **兼顾开发与量产设计：** 配备丰富的 I/O 接口：2x USB3.2、HDMI、以太网、M.2 Key M、M.2 Key E、mini-PCIe、40-pin GPIO 等。支持包括 Wi-Fi 和 LTE 在内的多种有线与无线通信。
+- **面向开发与量产的设计：** 配备丰富的 I/O：2 路 USB3.2、HDMI、以太网、M.2 Key M、M.2 Key E、mini-PCIe、40 针 GPIO 等。支持包括 Wi-Fi 和 LTE 在内的多种有线与无线通信。
 
 - **快速推向市场：** 预装 JetPack5.1.3，Linux OS BSP 开箱即用。
 
-- **认证包括** ROHS、CE、FCC、KC、UKCA、REACH
+- **认证包括** ROHS、CE、FCC、KC、UKCA、REACH。
 
 - **长期供货：** 预计供货周期：至少至 2032 年。
 
@@ -71,9 +76,9 @@ reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVI
     </tr>
     <tr>
       <td>GPU</td>
-      <td>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
-      <td>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
-      <td colspan='2' align='center'>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores</td>
+      <td>512 核 NVIDIA Ampere 架构 GPU，带 16 个 Tensor Core</td>
+      <td>1024 核 NVIDIA Ampere 架构 GPU，带 32 个 Tensor Core</td>
+      <td colspan='2' align='center'>1024 核 NVIDIA Ampere 架构 GPU，带 32 个 Tensor Core</td>
     </tr>
     <tr>
       <td>GPU 最大频率</td>
@@ -83,9 +88,9 @@ reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVI
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan='2'>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU<br />1.5MB L2 + 4MB L3</td>
-      <td>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
-      <td>8-core Arm® Cortex®-A78AE v8.2 64-bit CPU 2MB L2 + 4MB L3</td>
+      <td colSpan='2'>6 核 Arm® Cortex®-A78AE v8.2 64 位 CPU<br />1.5MB L2 + 4MB L3</td>
+      <td>6 核 Arm® Cortex®-A78AE v8.2 64 位 CPU 1.5MB L2 + 4MB L3</td>
+      <td>8 核 Arm® Cortex®-A78AE v8.2 64 位 CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>CPU 最大频率</td>
@@ -94,16 +99,16 @@ reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVI
     </tr>
     <tr>
       <td>内存</td>
-      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
-      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>4GB 64 位 LPDDR5<br />34 GB/s</td>
+      <td>8GB 128 位 LPDDR5<br />68 GB/s</td>
+      <td>8GB 128 位 LPDDR5 102.4GB/s</td>
+      <td>16GB 128 位 LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
       <td>DL 加速器</td>
       <td colSpan='2' align='center'>/</td>
-      <td>1x NVDLA v2</td>
-      <td>2x NVDLA v2</td>
+      <td>1× NVDLA v2</td>
+      <td>2× NVDLA v2</td>
     </tr>
     <tr>
       <td>DLA 最大频率</td>
@@ -113,7 +118,7 @@ reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVI
     <tr>
       <td>视觉加速器</td>
       <td colSpan='2' align='center'>/</td>
-      <td colSpan='2' align='center'>1x PVA v2</td>
+      <td colSpan='2' align='center'>1× PVA v2</td>
     </tr>
     <tr>
       <td>存储</td>
@@ -121,80 +126,80 @@ reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVI
     </tr>
     <tr>
       <td>视频编码器</td>
-      <td colSpan='2' align='center'>1080p30 supported by 1-2 CPU cores</td>
-      <td colSpan='2' align='center'>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
+      <td colSpan='2' align='center'>由 1–2 个 CPU 核心支持 1080p30</td>
+      <td colSpan='2' align='center'>1× 4K60 (H.265) | 3× 4K30 (H.265)<br />6× 1080p60 (H.265) | 12× 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>视频解码器</td>
-      <td colSpan='2' align='center'>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
-      <td colSpan='2' align='center'>1x 8K30 (H.265) | 2x 4K60 (H.265) | 4x 4K30 (H.265)<br />9x 1080p60 (H.265) | 18x 1080p30 (H.265)</td>
+      <td colSpan='2' align='center'>1× 4K60 (H.265)<br />2× 4K30 (H.265)<br />5× 1080p60 (H.265)<br />11× 1080p30 (H.265)</td>
+      <td colSpan='2' align='center'>1× 8K30 (H.265) | 2× 4K60 (H.265) | 4× 4K30 (H.265)<br />9× 1080p60 (H.265) | 18× 1080p30 (H.265)</td>
     </tr>
     <tr>
       <td>显示</td>
-      <td colSpan='4' align='center'>1* HDMI 2.1</td>
+      <td colSpan='4' align='center'>1× HDMI 2.1</td>
     </tr>
     <tr>
       <td>CSI 摄像头</td>
-      <td colSpan='4' align='center'>2* CSI （2-lane 15pin）</td>
+      <td colSpan='4' align='center'>2× CSI（2-lane 15pin）</td>
     </tr>
     <tr>
       <td>网络</td>
-      <td colSpan='4' align='center'>1* 千兆以太网 (10/100/1000M)</td>
+      <td colSpan='4' align='center'>1× 千兆以太网 (10/100/1000M)</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan='4' align='center'>2* USB 3.2 Type-A (10Gbps); 1* USB2.0 Type-C (Device Mode)</td>
+      <td colSpan='4' align='center'>2× USB 3.2 Type-A (10Gbps)；1× USB2.0 Type-C（设备模式）</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
-      <td colSpan='4' align='center'>1* M.2 Key M</td>
+      <td colSpan='4' align='center'>1× M.2 Key M</td>
     </tr>
     <tr>
       <td>M.2 Key E</td>
-      <td colSpan='4' align='center'>1* M.2 Key E</td>
+      <td colSpan='4' align='center'>1× M.2 Key E</td>
     </tr>
     <tr>
       <td>Mini PCIe</td>
-      <td colSpan='4' align='center'>1* mini-PCIe for LTE module</td>
+      <td colSpan='4' align='center'>1× mini-PCIe，用于 LTE 模组</td>
     </tr>
     <tr>
       <td>风扇</td>
-      <td colSpan='4' align='center'>1* 4 pin Fan Connector(5V PWM)</td>
+      <td colSpan='4' align='center'>1× 4 针风扇连接器 (5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan='4' align='center'>1* CAN</td>
+      <td colSpan='4' align='center'>1× CAN</td>
     </tr>
     <tr>
       <td>多功能接口</td>
-      <td colSpan='4' align='center'>1* 40-Pin Expansion header,1* 12-Pin Control and UART header</td>
+      <td colSpan='4' align='center'>1× 40 针扩展排针，1× 12 针控制与 UART 排针</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan='4' align='center'>RTC 2-pin, RTC socket (supports CR1220 but not included)</td>
+      <td colSpan='4' align='center'>RTC 2 针，RTC 座（支持 CR1220，但不包含电池）</td>
     </tr>
     <tr>
       <td>电源</td>
-      <td colSpan='4' align='center'> DC 9-19V，通过 5525 直流插孔供电 </td>
+      <td colSpan='4' align='center'> 通过 5525 直流插座输入 DC 9–19V </td>
     </tr>
     <tr>
       <td>电源适配器</td>
       <td colSpan='4' align='center'>不包含电源适配器</td>
     </tr>
     <tr>
-      <td>温度</td>
+      <td>工作温度</td>
       <td colSpan='4' align='center'>-10℃~60℃</td>
     </tr>
     <tr>
       <td>机械尺寸</td>
-      <td colSpan='4' align='center'>130mm x120mm x 58.5mm</td>
+      <td colSpan='4' align='center'>130mm × 120mm × 58.5mm</td>
     </tr>
   </tbody>
 </table>
 
 ## 刷写 JetPack
 
-在这里，我们将向你展示如何将 [Jetpack](https://developer.nvidia.com/embedded/jetpack) 刷写到连接在 reComputer J4012B/ J4011B/ J3010B 和 J3011B 上的 NVMe SSD 中。以上所有设备内部都搭载 J401B 载板，刷机流程完全相同。
+在这里，我们将向你展示如何将 [Jetpack](https://developer.nvidia.com/embedded/jetpack) 刷写到连接在 reComputer J4012B / J4011B / J3010B 和 J3011B 上的 NVMe SSD。所有这些设备内部都搭载 J401B 载板，刷机流程完全相同。
 
 :::danger
 reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，因此你无需重新刷写。不过，如果你希望重新刷写 JetPack，可以按照本指南进行操作。
@@ -210,18 +215,18 @@ reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，
 ### 前置条件
 
 - Ubuntu 主机电脑
-- reComputer J4012B/ J4011B/ J3010B 或 J3011B
+- reComputer J4012B / J4011B / J3010B 或 J3011B
 - USB Type-C 数据传输线
 
 :::info
 我们建议你使用物理 Ubuntu 主机设备，而不是虚拟机。
-请参考下表准备主机设备。
+请参考下表准备主机环境。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack Version </td>
-        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+        <td  rowspan="2"> JetPack 版本 </td>
+        <td class="dbon" colspan="3"> Ubuntu 版本（主机电脑） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -247,15 +252,15 @@ reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，
 
 :::note
 
-- 我们不建议使用虚拟机和 ARM 架构的 Ubuntu 进行刷机。
+- 我们不建议使用虚拟机以及 ARM 架构的 Ubuntu 进行刷机。
 
 :::
 
 ### 进入强制恢复模式
 
-在继续安装步骤之前，我们需要确保 jetson 设备处于强制恢复模式。
+在继续安装步骤之前，我们需要确保 Jetson 设备处于强制恢复模式。
 
-请参考以下步骤将 jetson 设备设置为强制恢复模式。
+请参考以下步骤将 Jetson 设备设置为强制恢复模式。
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
 
@@ -265,18 +270,18 @@ reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，
 
 <details>
 
-<summary> Step-by-Step </summary>
+<summary> 分步说明 </summary>
 
-**Step 1.** 使用一根跳线将 **FC REC** 引脚与 **GND** 引脚连接。
+**步骤 1.** 使用一根跳线将 **FC REC** 引脚与 **GND** 引脚连接起来。
 
 <table align="center">
 <thead>
   <tr>
     <th> </th>
-    <th>Button Header</th>
-    <th>Description</th>
-    <th>Button Header</th>
-    <th>Description</th>
+    <th>按键排针</th>
+    <th>描述</th>
+    <th>按键排针</th>
+    <th>描述</th>
   </tr>
 </thead>
 <tbody>
@@ -320,11 +325,11 @@ reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，
 </tbody>
 </table>
 
-**Step 2.** 将电源适配器的附带电源线连接到 reComputer 以供电，并使用 USB Type-C 数据传输线将载板与 Ubuntu 主机 PC 连接。
+**步骤 2.** 将电源适配器附带的电源线连接到 reComputer 以其上电，并使用 USB Type-C 数据传输线将该板连接到 Ubuntu 主机 PC
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
-**步骤 3.** 在 Linux 主机 PC 上打开 Terminal 窗口并输入命令 `lsusb`。如果返回的内容中根据你所使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 3.** 在 Linux 主机 PC 上打开一个终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下输出之一，则说明该板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -339,7 +344,7 @@ reComputer J401B 系列在随机附带的 NVMe SSD 上已预装 JetPack 5.1.3，
 
 </details>
 
-### 刷写 Jetpack OS
+### 刷写 Jetpack 操作系统
 
 :::note
 在继续刷写之前，需要注意 Jetson Orin NX 模组仅支持 JetPack 5.1 及以上版本，而 Jetson Orin Nano 模组仅支持 JetPack 5.1.1 及以上版本。
@@ -381,7 +386,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例如（username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"）：
+例如（用户名："nvidia"，密码："nvidia"，设备名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -407,7 +412,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 
 **步骤 5（可选）：** 安装 Nvidia Jetpack SDK
 
-请在**Jetson 设备**上打开 terminal 并执行以下命令：
+请在**Jetson 设备**上打开终端并执行以下命令：
 
 ```bash
 sudo apt update
@@ -433,7 +438,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-现在我们需要应用来自 NVIDIA 的一个补丁，该补丁是 JP5.1.2 所必需的，并在官方 NVIDIA JetPack Release Notes 的 4.2.3 节[此处](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)进行了说明。
+现在我们需要应用来自 NVIDIA 的一个补丁，该补丁是 JP5.1.2 所必需的，并在官方 NVIDIA JetPack 发行说明第 4.2.3 节[此处](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)进行了说明。
 
 **步骤 3：** 导航到以下目录
 
@@ -441,7 +446,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 cd Linux_for_Tegra/bootloader/t186ref/BCT
 ```
 
-**步骤 4：** 打开文件 **"tegra234-mb2-bct-scr-p3767-0000.dts"**，并在 **tfc** 部分下添加以下几行
+**步骤 4：** 打开文件 **"tegra234-mb2-bct-scr-p3767-0000.dts"** 并在 **tfc** 部分下添加以下几行
 
 ```sh
 tfc {
@@ -458,7 +463,7 @@ cd Linux_for_Tegra
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例如（username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"）：
+例如（用户名："nvidia"，密码："nvidia"，设备名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
@@ -485,7 +490,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1   -c t
 
 **步骤 7（可选）：** 安装 Nvidia Jetpack SDK
 
-请在**Jetson 设备**上打开 terminal 并执行以下命令：
+请在**Jetson 设备**上打开终端并执行以下命令：
 
 ```bash
 sudo apt update
@@ -498,7 +503,7 @@ sudo apt install nvidia-jetpack
 
 这里我们将在 reComputer 上安装 Jetpack 5.1.3。
 
-**步骤 1：** 将与你所使用的 Jetson 模组对应的系统镜像下载到 Ubuntu PC：
+**步骤 1：** 在你的 Ubuntu PC 上下载与你所使用的 Jetson 模组对应的系统镜像：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -543,9 +548,9 @@ sudo apt install nvidia-jetpack
 </div>
 
 :::info
-为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
+要验证已下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上打开 terminal 并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端并运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 **步骤 2：** 解压下载的镜像文件：
@@ -555,7 +560,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**步骤 3：** 进入解压后的目录，并执行以下命令将 jetpack 系统刷写到 NVMe SSD：
+**步骤 3：** 进入解压后的目录，并执行以下命令将 Jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -574,7 +579,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 **步骤 4：** 使用板载的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置。
 
 :::info
-请根据你的需求完成**系统配置（System Configuration）**。
+请根据你的需求完成**系统配置**。
 :::
 
 </TabItem>
@@ -583,13 +588,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 这里我们将使用 NVIDIA L4T 36.3 在 reComputer 上安装 Jetpack 6.0
 
-**步骤 1：** 将与你所使用的 Jetson 模组对应的系统镜像下载到 Ubuntu PC：
+**步骤 1：** 将与你所使用 Jetson 模块对应的系统镜像下载到 Ubuntu 电脑上：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetson 模组</th>
+      <th>Jetson 模块</th>
       <th>下载链接 1</th>
       <th>下载链接 2</th>
       <th>SHA256</th>
@@ -599,40 +604,40 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EavQHXoSEg9PuLs4vuujXLcB0-GW6Ti1zHGL2UHzgS6TWg?e=J7oRrf" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EavQHXoSEg9PuLs4vuujXLcB0-GW6Ti1zHGL2UHzgS6TWg?e=J7oRrf" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>
-        <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EbEZRxHDtgBDjBrHK_7ltfEB6JBa3VGXLx3meNc0OJUL_g?e=8MNsTg" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EbEZRxHDtgBDjBrHK_7ltfEB6JBa3VGXLx3meNc0OJUL_g?e=8MNsTg" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>20b38d9524327fd714c37cb293036006e070b5335d6b4f6978a862be51c3db52</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcfUdbmSiOBFo_Po-Cui3jkBDORKexZ4S43Jde5XApqdeQ?e=zqealW" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcfUdbmSiOBFo_Po-Cui3jkBDORKexZ4S43Jde5XApqdeQ?e=zqealW" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>
-      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQawJy3jmKBAmJgHght-vVUBHbsC3vtlvMsYfW7vsie3LQ?e=vor3t3" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQawJy3jmKBAmJgHght-vVUBHbsC3vtlvMsYfW7vsie3LQ?e=vor3t3" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>da966e7616ed86b45e184b6db9c3eb81e779a5f4524f6c3c5610e56c53532fe1</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EauK-aXvruxHsC1-bAmTwZkBNB0PsvPX6S6oV4Q1UrAUFw?e=rytWvU" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EauK-aXvruxHsC1-bAmTwZkBNB0PsvPX6S6oV4Q1UrAUFw?e=rytWvU" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>
-      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EeJP8SNF76BKiJg2e-FKNd4BhJwlWiMbLcT6Y286tRO7JQ?e=ct6qLf" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EeJP8SNF76BKiJg2e-FKNd4BhJwlWiMbLcT6Y286tRO7JQ?e=ct6qLf" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>e0fa101c5df6f507d123c2332e9fedea0ac54f8a5253cb28e71fdff01147fa68</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcHfrgY9GxVNiwGh6YTB50cBCc5QcKgnGpTZQfv94x4VNw?e=Rl73Zh" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcHfrgY9GxVNiwGh6YTB50cBCc5QcKgnGpTZQfv94x4VNw?e=Rl73Zh" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>
-      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERQJluPq9X1LmpLXTSGZVMwBVg9ikWw8veG2aOdHv504Gw?e=hujab4" target="_blank" rel="noopener noreferrer">下载</a>
+      <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERQJluPq9X1LmpLXTSGZVMwBVg9ikWw8veG2aOdHv504Gw?e=hujab4" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td>80ebeac0a843baa2c3104ee6341d44f39a2cfab1c9c725e176c7b2a219b79dfc</td>
     </tr>
@@ -641,9 +646,9 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-为了验证下载固件的完整性，您可以对比 SHA256 哈希值。
+为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 **步骤 2：** 解压下载的镜像文件：
@@ -653,7 +658,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**步骤 3：** 进入解压后的目录，并执行以下命令将 jetpack 系统烧录到 NVMe SSD：
+**步骤 3：** 进入解压后的目录，执行以下命令将 Jetpack 系统烧录到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -661,7 +666,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-如果烧录过程成功，您将看到如下输出
+如果烧录过程成功，你将看到如下输出
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -669,15 +674,15 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 烧录命令可能需要运行 2-10 分钟。
 :::
 
-**步骤 4：** 使用板载的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
+**步骤 4：** 使用板载 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-请根据您的需求完成 **System Configuration**。
+请根据你的需求完成 **System Configuration**。
 :::
 
-**步骤 5：** 系统启动后，您需要执行以下命令以重新激活无线网卡驱动：
+**步骤 5：** 系统启动后，你需要执行以下命令以重新启用无线网卡驱动：
 
 ```bash
 sudo rm /lib/modules/5.15.136-tegra/build
@@ -691,13 +696,13 @@ sudo apt install -y iwlwifi-modules
 
 这里我们将使用 NVIDIA L4T 36.4 在 reComputer 上安装 Jetpack 6.1
 
-**步骤 1：** 根据您使用的 Jetson 模组，将对应的系统镜像下载到 Ubuntu 电脑：
+**步骤 1：** 将与你所使用 Jetson 模块对应的系统镜像下载到 Ubuntu 电脑上：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetson 模组</th>
+      <th>Jetson 模块</th>
       <th>下载链接</th>
       <th>SHA256</th>
     </tr>
@@ -706,28 +711,28 @@ sudo apt install -y iwlwifi-modules
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAeJrT8r6rJSKVpp2_32UtQAZJzy4wNyCuHqVSCy0f-q4U?e=84CkEW" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAeJrT8r6rJSKVpp2_32UtQAZJzy4wNyCuHqVSCy0f-q4U?e=84CkEW" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> b848e327b87c408565b899a11c52022b42df6de4f3dce1e5470cb2a7baccc898 </td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB9gz3ZuAZ1Rb_ml6eY-5eCAV-k2piT1qWtbedMSEUfyzk?e=LTL5kI" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB9gz3ZuAZ1Rb_ml6eY-5eCAV-k2piT1qWtbedMSEUfyzk?e=LTL5kI" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> 3839c99fc9e2da1f35de824c42b7bb56f9660d8f4a6ce68b196c6cb50d5d4fb4 </td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDfJ9e2HfndQKxZp7e2_A_0Ab97_Oe0zA53nK6AZ6EHDYs?e=B3tvCO" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDfJ9e2HfndQKxZp7e2_A_0Ab97_Oe0zA53nK6AZ6EHDYs?e=B3tvCO" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> a0863e7209351f9165cf6bd2d756a6a726b2e8fc1fa54b5d66279d5b136a3a33 </td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDrUdIOhLv6SrDpKbnUCnfgAR9URACZr46gifnBSEdOphA?e=TNUkWg" target="_blank" rel="noopener noreferrer">下载</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDrUdIOhLv6SrDpKbnUCnfgAR9URACZr46gifnBSEdOphA?e=TNUkWg" target="_blank" rel="noopener noreferrer">Download</a>
       </td>
       <td> a40edfbcda9a7a07fbf72ca4e3149d171236f5ede2c4e3a5e243da77562f9b13 </td>
     </tr>
@@ -736,9 +741,9 @@ sudo apt install -y iwlwifi-modules
 </div>
 
 :::info
-为了验证下载固件的完整性，您可以对比 SHA256 哈希值。
+为了验证下载固件的完整性，你可以对比 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上打开终端，运行命令 `sha256sum <File>` 获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 **步骤 2：** 解压下载的镜像文件：
@@ -748,99 +753,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-6.1-36.4.0-2026-02-07.tar.gz
 ```
 
-**步骤 3：** 进入解压后的目录，并执行以下命令将 jetpack 系统烧录到 NVMe SSD：
-
-```bash
-cd mfi_xxxx
-# For example: cd mfi_recomputer-orin-j401
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
-```
-
-如果烧录过程成功，您将看到如下输出
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
-
-:::note
-烧录命令可能需要运行 2-10 分钟。
-:::
-
-**步骤 4：** 使用板载的 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
-
-:::info
-请根据您的需求完成 **System Configuration**。
-:::
-
-</TabItem>
-
-<TabItem value="JP6.2" label="JP6.2">
-
-这里我们将使用 NVIDIA L4T 36.4.3 在 reComputer 上安装 Jetpack 6.2
-
-**步骤 1：** 根据您使用的 Jetson 模组，将对应的系统镜像下载到 Ubuntu 电脑：
-
-<div class="table-center">
-<table style={{textAlign: 'center'}}>
-  <thead>
-    <tr>
-      <th>Jetson 模组</th>
-      <th>下载链接</th>
-      <th>SHA256</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Orin NX 16GB</td>
-      <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDTDQf5Gh0LSIg9QSsHPNgBAcegrhbyGeZYrQF7kMpdgFQ?e=ahwlIc" target="_blank" rel="noopener noreferrer">下载</a>
-      </td>
-      <td>b9529f008cf9a65460db3ee17736db971b8d110049f9f6ea8ecc8fe4d1691869</td>
-    </tr>
-    <tr>
-      <td>Orin NX 8GB</td>
-      <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDR6PGcF5i6Q5tWR9dJa1vSAfZrQUfHfQhTFe2DOeMKXuo?e=lf88Um" target="_blank" rel="noopener noreferrer">下载</a>
-      </td>
-      <td>b7106b4f8c5835011040c071dd14e1144b5298af300f920e44517b99c183ed05</td>
-    </tr>
-    <tr>
-      <td>Orin Nano 8GB</td>
-      <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDM6v_9Ggo4R5OXqj4R1T0PAf_uevclLKzjmj8XpkX0_jQ?e=B5oC3m" target="_blank" rel="noopener noreferrer">下载</a>
-      </td>
-      <td> c2247262dec1379fd4494def6a6ed2d4414605a8dcb902c6d6afbb94a5e48499 </td>
-    </tr>
-    <tr>
-      <td>Orin Nano 4GB</td>
-      <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9g-hqq4_KR5bdPc2PgfgmAYq3mRxdRBkgrUtZBOm-jtE?e=WMICt2" target="_blank" rel="noopener noreferrer">下载</a>
-      </td>
-      <td> 1d570b54853bba4ecc115789d1b03c5ba07b34344f7616dfa3c3772c9ff37e64 </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-:::info
-为了验证下载固件的完整性，您可以对比 SHA256 哈希值。
-
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果结果与 wiki 中提供的 SHA256 哈希值一致，则说明您下载的固件是完整且未损坏的。
-:::
-
-:::note
-请注意，由于启用 `super mode` 后功耗和发热量增加，[reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html) 和 [reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html) 无法在最高模式下稳定运行。因此，本次更新不包含这两款产品。
-我们目前正在设计新版本的 reComputer，敬请期待！
-:::
-
-**步骤 2：** 解压下载的镜像文件：
-
-```bash
-sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2026-02-05.tar.gz
-```
-
-**步骤 3：** 进入解压后的目录，并执行以下命令将 jetpack 系统烧录到 NVMe SSD：
+**步骤 3：** 进入解压后的目录，执行以下命令将 Jetpack 系统烧录到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -866,17 +779,109 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 </TabItem>
 
+<TabItem value="JP6.2" label="JP6.2">
+
+这里我们将使用 NVIDIA L4T 36.4.3 在 reComputer 上安装 Jetpack 6.2
+
+**步骤 1：** 将与你所使用 Jetson 模块对应的系统镜像下载到 Ubuntu 电脑上：
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <thead>
+    <tr>
+      <th>Jetson 模块</th>
+      <th>下载链接</th>
+      <th>SHA256</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Orin NX 16GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDTDQf5Gh0LSIg9QSsHPNgBAcegrhbyGeZYrQF7kMpdgFQ?e=ahwlIc" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>b9529f008cf9a65460db3ee17736db971b8d110049f9f6ea8ecc8fe4d1691869</td>
+    </tr>
+    <tr>
+      <td>Orin NX 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDR6PGcF5i6Q5tWR9dJa1vSAfZrQUfHfQhTFe2DOeMKXuo?e=lf88Um" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td>b7106b4f8c5835011040c071dd14e1144b5298af300f920e44517b99c183ed05</td>
+    </tr>
+    <tr>
+      <td>Orin Nano 8GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDM6v_9Ggo4R5OXqj4R1T0PAf_uevclLKzjmj8XpkX0_jQ?e=B5oC3m" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td> c2247262dec1379fd4494def6a6ed2d4414605a8dcb902c6d6afbb94a5e48499 </td>
+    </tr>
+    <tr>
+      <td>Orin Nano 4GB</td>
+      <td>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9g-hqq4_KR5bdPc2PgfgmAYq3mRxdRBkgrUtZBOm-jtE?e=WMICt2" target="_blank" rel="noopener noreferrer">Download</a>
+      </td>
+      <td> 1d570b54853bba4ecc115789d1b03c5ba07b34344f7616dfa3c3772c9ff37e64 </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+:::info
+为了验证下载固件的完整性，您可以比较 SHA256 哈希值。
+
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果生成的哈希值与 wiki 中提供的 SHA256 哈希值一致，则表明您下载的固件是完整且未损坏的。
+:::
+
+:::note
+请注意，由于启用 `super mode` 后功耗和发热量增加，[reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html) 和 [reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html) 无法在最高模式下稳定运行。因此，本次更新不包含这两款产品。
+我们目前正在设计新版本的 reComputer，敬请期待！
+:::
+
+**步骤 2：** 解压下载的镜像文件：
+
+```bash
+sudo tar xpf mfi_xxxx.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2026-02-05.tar.gz
+```
+
+**步骤 3：** 进入解压后的目录，并执行以下命令将 JetPack 系统烧录到 NVMe SSD：
+
+```bash
+cd mfi_xxxx
+# For example: cd mfi_recomputer-orin-j401
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
+```
+
+如果烧录过程成功，您将看到如下输出
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
+
+:::note
+烧录命令可能需要运行 2-10 分钟。
+:::
+
+**步骤 4：** 使用板载 HDMI 接口将 J401 连接到显示器，并完成初始配置设置：
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+请根据您的需求完成 **System Configuration**。
+:::
+
+</TabItem>
+
 </Tabs>
 
 ## 接口使用
 
 :::info
-有关接口使用的更多信息，请参考此 [wiki 页面](/cn/recomputer_j401b_interfaces_usage)。
+有关接口使用的更多信息，请参考此[wiki 页面](/cn/recomputer_j401b_interfaces_usage)。
 :::
 
 ## 资源
 
-- [reComputer J401B 规格书](https://files.seeedstudio.com/wiki/reComputer/reComputer_J401B_datasheet_v1.pdf)
+- [reComputer J401B 数据手册](https://files.seeedstudio.com/wiki/reComputer/reComputer_J401B_datasheet_v1.pdf)
 - [reComputer J401B 原理图](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_CarrierBoard_SCH_V1.0.pdf)
 - [LTE 板卡原理图](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_LTE_SCH_V1.0.pdf)
 - [Seeed Jetson 系列目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
@@ -884,10 +889,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 - [Seeed Jetson 系列对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson 设备一览](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 - [Jetson 示例](https://github.com/Seeed-Projects/jetson-examples)
-- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+- [reComputer-Jetson-入门教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
 <JetsonLeadQuote
-  buttonText="获取定制报价"
+  buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
   imageAlt="Request Quote for Jetson"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
@@ -895,7 +900,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

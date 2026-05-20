@@ -1,5 +1,5 @@
 ---
-description: O reComputer R1100 é um gateway e controlador IoT com tecnologia Raspberry Pi CM4 e recursos de IA. Com 2GB de RAM, 8GB de eMMC, Ethernet dupla, USB, RS485, RS232, DI/DO e conectividade sem fio (4G, LoRa®, Wi‑Fi/BLE), é perfeito para automação industrial e computação de borda.
+description: O reComputer R1100 é um gateway e controlador IoT com tecnologia Raspberry Pi CM4 e recursos de IA. Com 2GB de RAM, 8GB de eMMC, Ethernet dupla, USB, RS485, RS232, DI/DO e conectividade sem fio (4G, LoRa®, Wi-Fi/BLE), é perfeito para automação industrial e computação de borda.
 title: Introdução ao reComputer R1100
 keywords:
   - Raspberry pi
@@ -7,11 +7,12 @@ keywords:
   - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer2.jpg
 slug: /recomputer_r1100_intro
+sku: 113991334,113991374,113991375
 last_update:
   date: 2/25/2024
   author: Kasun Thushara
 createdAt: '2025-02-27'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/
 ---
 
@@ -19,36 +20,39 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 ## Visão geral
 
-O reComputer R1100, com tecnologia Raspberry Pi CM4, é um gateway IoT de borda versátil com recursos de IA. Ele possui uma ampla gama de interfaces industriais, incluindo **2x Ethernet, 2x USB, 2x RS485, 2x RS232, 2x DI e 2x DO**, além de opções flexíveis de conectividade sem fio, como **4G, LoRa® e Wi‑Fi/BLE**. Esses recursos o tornam uma escolha ideal para diversas aplicações industriais.
-A série reComputer R1100 é amplamente utilizada em aplicações de IoT, incluindo **aquisição de dados e monitoramento de processos, controle de automação e robótica, manufatura inteligente e comunicação e redes industriais**. Seu tamanho compacto, flexibilidade, baixo custo e capacidade de programação oferecem forte suporte para **automação, sistemas IoT e além**.
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:800, height:'auto'}}/></div>
 
+O reComputer R1100, equipado com o Raspberry Pi CM4, é um gateway IoT de borda versátil com recursos de IA. Ele possui uma ampla gama de interfaces industriais, incluindo **2x Ethernet, 2x USB, 2x RS485, 2x RS232, 2x DI e 2x DO**, além de opções flexíveis de conectividade sem fio, como **4G, LoRa® e Wi-Fi/BLE**. Esses recursos o tornam uma escolha ideal para diversas aplicações industriais.
+A série reComputer R1100 é amplamente utilizada em aplicações de IoT, incluindo **aquisição de dados e monitoramento de processos, controle de automação e robótica, manufatura inteligente e comunicação e redes industriais**. Seu tamanho compacto, flexibilidade, baixo custo e programabilidade fornecem forte suporte para **automação, sistemas de IoT e além**.
+
+:::note
+Personalização está disponível para marca em logotipo, embalagem e gravação de firmware.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-    </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar agora ➜</font></span></strong></a>
 </div>
 
 ## Recursos
 
-**Projetado para Automação e Sistemas IoT**  
+**Projetado para sistemas de automação e IoT**  
 
 - Suporta os protocolos **BACnet, Modbus RTU, Modbus TCP/IP e KNX**  
 - Compatível com **Node-RED, CODESYS, Balena e mais**  
 - **Indicadores LED em ambos os lados** para verificações rápidas de status  
-- **Gabinete metálico resistente**, compatível com **montagem em trilho DIN e em parede**  
+- **Gabinete metálico durável**, compatível com **montagem em trilho DIN e em parede**  
 - Suporta **Yocto e Buildroot** para um sistema operacional personalizado  
 
 **Desempenho poderoso**  
 
-- Com tecnologia **Raspberry Pi CM4**  
-- **Broadcom BCM2711** quad‑core **Cortex-A72 (ARM v8) SoC de 64 bits @ 1,5GHz**  
+- Alimentado por **Raspberry Pi CM4**  
+- **Broadcom BCM2711** quad-core **Cortex-A72 (ARM v8) SoC de 64 bits @ 1,5GHz**  
 - Até **8GB de RAM** e **32GB de armazenamento eMMC**  
 
 **Ricas capacidades sem fio**  
 
-- **Wi‑Fi e BLE integrados**  
+- **Wi-Fi e BLE integrados**  
 - **Mini-PCIe 1**: Suporta **LTE, USB LoRa® 
 - **Mini-PCIe 2**: Suporta **SPI LoRa®, USB LoRa®
 
@@ -72,7 +76,7 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
   - **ESD**: EN61000-4-2, Nível 3  
   - **EFT**: EN61000-4-4, Nível 2  
   - **Proteção contra surtos**: EN61000-4-5, Nível 2  
-- **Vida útil de produção**: O **reComputer R1100** permanecerá em produção **até pelo menos dezembro de 2030**  
+- **Vida útil de produção**: O **reComputer R1100** permanecerá em produção **pelo menos até dezembro de 2030**  
 
 ## Especificação
 
@@ -80,7 +84,7 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 |------------------------|----------------|
 | **Especificação de hardware** | |
 | **Série de produtos** | R11xx-10, R11xx-00 |
-| **CPU** | Raspberry Pi CM4, Quad-core Cortex-A72 @ 1.5GHz |
+| **CPU** | Raspberry Pi CM4, Quad-core Cortex-A72 @ 1,5GHz |
 | **Sistema operacional** | Raspbian, Debian, Yocto, Buildroot |
 | **RAM** | 1GB / 2GB / 4GB / 8GB |
 | **Armazenamento eMMC** | 8GB / 16GB / 32GB |
@@ -88,12 +92,12 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 | **Entrada de energia** | DC 9V~36V, bloco de terminais de 2 pinos |
 | **PoE (como dispositivo alimentado)** | Padrão IEEE 802.3af 12,95W PoE* |
 | **Proteção contra sobretensão** | 40V |
-| **Consumo de energia** | Ocioso: 2,88W; Carga total: 5,52W |
+| **Consumo de energia** | Em espera: 2,88W; Carga total: 5,52W |
 | **Interruptor de energia** | Não |
 | **Interruptor de reinicialização** | Sim |
 | **Interface** | |
 | **Ethernet** | 1x 10/100/1000Mbps (suporta PoE*), 1x 10/100Mbps IEEE 802.3/802.3u |
-| **USB** | 2x USB-A 2.0 Host, 1x USB-C 2.0 (para gravação do SO) |
+| **USB** | 2x USB-A 2.0 Host, 1x USB-C 2.0 (para gravação de SO) |
 | **RS485** | 2x RS485 (Isoladas) |
 | **RS232** | 2x RS232 (Isoladas) |
 | **DI (Entrada Digital)** | 2x portas DI isoladas, tensão de entrada: 5~24V DC |
@@ -106,11 +110,11 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 | **Botão de reset** | 1 |
 | **HDMI** | 1x HDMI 2.0 |
 | **Comunicação sem fio** | |
-| **Wi‑Fi 2,4/5,0GHz** | Wi‑Fi integrado* |
+| **Wi-Fi 2,4/5,0GHz** | Wi-Fi integrado* |
 | **BLE 5.0** | BLE integrado* |
 | **LoRa®** | USB LoRa®*/ SPI LoRa®* |
 | **4G Celular** | 4G LTE* |
-| **Normas** | |
+| **Padrões** | |
 | **Conformidade EMC** | ESD: EN61000-4-2, Nível 3; EFT: EN61000-4-4, Nível 2; Surto: EN61000-4-5, Nível 2 |
 | **Certificação** | CE, FCC, TELEC, RoHS, REACH |
 | **Condições ambientais** | |
@@ -124,13 +128,13 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 | **RTC** | RTC de alta precisão |
 | **Segurança** | |
 | **Chip de criptografia** | TPM 2.0*, ATECC608A |
-| **Sistema de resfriamento** | Sem ventoinha |
+| **Sistema de refrigeração** | Sem ventoinha |
 | **Garantia** | 2 anos |
 | **Vida útil de produção** | Até dezembro de 2030 |
 | **Declaração** | As opções marcadas com * exigem compra adicional de acordo com a lista de acessórios. |
 | **Status de componentes e interfaces** | |
 | **Reservado** | Designado para uso ou expansão futura. |
-| **Opcional** | Componentes não essenciais; o usuário pode optar por incluir ou não. |
+| **Opcional** | Componentes não essenciais; os usuários podem optar por incluir ou excluir. |
 | **Ocupado** | Atualmente em uso e parte integrante da funcionalidade do produto. |
 | **Incluído** | Componentes essenciais fornecidos com o pacote padrão. |
 
@@ -141,7 +145,7 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 | **Parâmetro** | **Descrição** |
 |--------------|----------------|
 | **Dimensão (L x A x P)** | 130 mm x 93 mm x 49,6 mm |
-| **Gabinete** | Carcaça em liga de alumínio 6061 com painéis laterais em PC transparente |
+| **Gabinete** | Gabinete em liga de alumínio 6061 com painéis laterais em PC transparente |
 | **Montagem** | Trilho DIN / Parede |
 | **Peso (líquido)** | 560g |
 
@@ -159,37 +163,37 @@ A série reComputer R1100 é amplamente utilizada em aplicações de IoT, inclui
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/mainboard.PNG" style={{width:800, height:'auto'}}/></div>
 
-#### Diagrama de energia
+#### Diagrama de alimentação
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/power.PNG" style={{width:800, height:'auto'}}/></div>
 
 O reComputer R1100 oferece duas opções de alimentação: um terminal DC e uma porta PoE. Por padrão, ele é alimentado pelo terminal DC usando o adaptador de energia regional oficial (SKU: 110061505/110061506). Alternativamente, está disponível uma fonte de alimentação PoE opcional (módulo PoE, SKU: 110991925). Essa flexibilidade permite integração perfeita com diferentes fontes de energia, atendendo a diversas necessidades de aplicação.
 
-**Terminal de energia de 2 pinos**
+**Terminal de alimentação de 2 pinos**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:400, height:'auto'}}/></div>
 
-O reComputer R1100 opera com uma fonte de tensão DC de 9 a 36V, conectada por meio de um bloco de terminais de energia de 2 pinos. Para aterramento, o fio terra pode ser fixado com segurança ao parafuso localizado no canto superior esquerdo do terminal de energia.
+O reComputer R1100 opera com uma fonte de alimentação DC variando de 9 a 36V, conectada por meio de um bloco de terminais de alimentação de 2 pinos. Para aterramento, o fio terra pode ser fixado com segurança ao parafuso localizado no canto superior esquerdo do terminal de alimentação.
 
 **PoE**
 
-Com o módulo PoE instalado, a porta ETH0 do reComputer R1100 suporta alimentação PoE, oferecendo uma forma conveniente e eficiente de alimentar o dispositivo via Ethernet. Essa opção simplifica a instalação e minimiza a fiação, sendo ideal para aplicações com fontes de energia limitadas ou locais sem tomadas de energia facilmente disponíveis.
+Com o módulo PoE instalado, a porta ETH0 do reComputer R1100 suporta alimentação via PoE, oferecendo uma forma conveniente e eficiente de alimentar o dispositivo por meio do Ethernet. Essa opção simplifica a instalação e minimiza a fiação, tornando-a ideal para aplicações com fontes de energia limitadas ou locais sem tomadas de energia facilmente disponíveis.
 
 - **Entrada PoE**: 44~57V (Típico: 48V)
-- **Saída PoE**: 12V, 1,1A máx.
+- **Saída PoE**: 12V, 1,1A Máx
 
 :::note
-O módulo PoE incluído está em conformidade com o padrão IEEE 802.3af e fornece uma potência máxima de 12,95W. No entanto, para periféricos de alta potência, como SSDs ou módulos 4G, a alimentação PoE pode não ser suficiente. Nesses casos, recomenda‑se usar o terminal DC para garantir operação estável e confiável do dispositivo.
+O módulo PoE incluído está em conformidade com o padrão IEEE 802.3af e fornece uma potência máxima de saída de 12,95W. No entanto, para periféricos de alta potência, como SSDs ou módulos 4G, a alimentação PoE pode não ser suficiente. Nesses casos, é recomendável usar o terminal DC para alimentação, a fim de garantir operação estável e confiável do dispositivo.
 :::
 
 **Consumo de energia**
 
-A tabela abaixo apresenta os valores de consumo de energia testados para o reComputer R1100, com base em medições realizadas no laboratório da Seeed Studio. Observe que esses valores são apenas para referência, pois variações nos métodos de teste e nas condições ambientais podem afetar os resultados.  
+A tabela abaixo fornece os valores de consumo de energia testados para o reComputer R1100, com base em medições realizadas no laboratório da Seeed Studio. Observe que esses valores são apenas para referência, pois variações nos métodos de teste e nas condições ambientais podem afetar os resultados.  
 
 | **Status**   | **Tensão** | **Corrente** | **Consumo de energia** | **Descrição** |
 |-------------|------------|------------|----------------------|----------------|
-| **Desligado** | 24V | 51mA | 1,224W | Teste de consumo de energia estático em estado de desligamento e sem alimentação. |
-| **Ocioso** | 24V | 120mA | 2,88W | Mede a corrente de entrada ao fornecer 24V de energia sem executar nenhum programa de teste. |
+| **Desligado** | 24V | 51mA | 1,224W | Teste de consumo de energia estático em estado desligado e sem alimentação. |
+| **Em espera** | 24V | 120mA | 2,88W | Mede a corrente de entrada ao fornecer 24V de energia sem executar nenhum programa de teste. |
 | **Carga total** | 24V | 230mA | 5,52W | A CPU opera em carga total usando o comando `"stress -c 4"`, sem dispositivos externos conectados. |
 
  **Ligar e desligar**  
@@ -208,54 +212,54 @@ Isso garante operação segura e evita possível perda de dados ou problemas no 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/IIC.PNG" style={{width:600, height:'auto'}}/></div>
 
-## Descrição das interfaces
+## Descrição da Interface
 
 | **Interface** | **Descrição** |
 |--------------|----------------|
 | **Ethernet** | 1 × 10/100/1000 Mbps (suporta PoE*) , 1 × 10/100 Mbps (IEEE 802.3/802.3u) |
-| **USB** | 2 × USB-A 2.0 (Host) , 1 × USB-C 2.0 (para gravação do SO) |
-| **RS485** | 2 × RS485 (Isoladas) |
-| **RS232** | 2 × RS232 (Isoladas) |
-| **DI (Entrada Digital)** | 2 × portas DI isoladas , tensão de entrada: 5~24V DC |
-| **DO (Saída Digital)** | 2 × portas DO isoladas ,  tensão de saída: < 60V DC |
+| **USB** | 2 × USB-A 2.0 (Host) , 1 × USB-C 2.0 (para gravar o SO) |
+| **RS485** | 2 × RS485 (Isolado) |
+| **RS232** | 2 × RS232 (Isolado) |
+| **DI (Digital Input)** | 2 × Portas DI isoladas , Tensão de entrada: 5~24V DC |
+| **DO (Digital Output)** | 2 × Portas DO isoladas ,  Tensão de saída: < 60V DC |
 | **HDMI** | 1 × HDMI 2.0 |
 | **Slot para cartão SD** | Suporta cartão MicroSD |
 | **Slot para cartão SIM** | Suporta cartão Nano SIM |
 | **Slot M.2** | Suporta SSD M.2 NVMe |
-| **Indicadores LED** | 12 × indicadores LED |
+| **Indicadores LED** | 12 × Indicadores LED |
 | **Buzzer** | 1 |
-| **Botão de reset** | 1 |
+| **Botão de Reset** | 1 |  
 
-### Status do Indicador LED
+### Status dos Indicadores LED
 
-O computador R1100 possui 12 LEDs para indicação do status do sistema. Suas funções específicas estão descritas na tabela abaixo.
+O computador R1100 possui 12 LEDs para indicação do status do sistema. As funções específicas estão descritas na tabela abaixo.
 
-Aqui está a tabela de **Status do Indicador LED** em um formato estruturado:  
+Aqui está a tabela de **Status dos Indicadores LED** em um formato estruturado:  
 
 | **Indicador LED** | **Cor** | **Status** | **Descrição** |
 |------------------|---------|-----------|----------------|
-| **PWR** | Verde | Ligado | O dispositivo está conectado à alimentação. |
-| | | Desligado | O dispositivo não está conectado à alimentação. |
+| **PWR** | Verde | On | O dispositivo está conectado à alimentação. |
+| | | Off | O dispositivo não está conectado à alimentação. |
 | **ACT** | Verde | Piscando | Indica acesso ao eMMC no Linux. Se ocorrer um erro durante a inicialização, ele pisca um padrão de erro (consulte a documentação do Raspberry Pi). |
 | **USER** | Verde/Vermelho/Azul | Definido pelo usuário | Pode ser programado pelo usuário. |
-| **4G** | Verde | Ligado | A discagem foi bem-sucedida e a conexão está normal. |
-| | | Desligado | O sinal 4G não está conectado ou o dispositivo não está ligado. |
-| **DI1** | Verde | Ligado/Piscando | Sinal de entrada detectado. |
-| | | Desligado | Sem alimentação ou sem transmissão de dados. |
-| **DI2** | Verde | Ligado/Piscando | Sinal de entrada detectado. |
-| | | Desligado | Sem alimentação ou sem transmissão de dados. |
-| **DO1** | Verde | Ligado/Piscando | Sinal de saída detectado. |
-| | | Desligado | Sem alimentação ou sem transmissão de dados. |
-| **DO2** | Verde | Ligado/Piscando | Sinal de saída detectado. |
-| | | Desligado | Sem alimentação ou sem transmissão de dados. |
-| **COM1 (Canal RS485 1)** | Verde | Ligado/Piscando | Recebendo ou enviando dados. |
-| | | Desligado | Nenhuma transferência de dados no Canal RS485 1. |
-| **COM2 (Canal RS485 2)** | Verde | Ligado/Piscando | Recebendo ou enviando dados. |
-| | | Desligado | Nenhuma transferência de dados no Canal RS485 2. |
-| **COM3 (Canal RS232 1)** | Verde | Ligado/Piscando | Recebendo ou enviando dados. |
-| | | Desligado | Nenhuma transferência de dados no Canal RS232 1. |
-| **COM4 (Canal RS232 2)** | Verde | Ligado/Piscando | Recebendo ou enviando dados. |
-| | | Desligado | Nenhuma transferência de dados no Canal RS232 2. |
+| **4G** | Verde | On | A discagem foi bem-sucedida e a conexão está normal. |
+| | | Off | O sinal 4G não está conectado ou o dispositivo não está ligado. |
+| **DI1** | Verde | On/Blink | Sinal de entrada detectado. |
+| | | Off | Sem alimentação ou sem transmissão de dados. |
+| **DI2** | Verde | On/Blink | Sinal de entrada detectado. |
+| | | Off | Sem alimentação ou sem transmissão de dados. |
+| **DO1** | Verde | On/Blink | Sinal de saída detectado. |
+| | | Off | Sem alimentação ou sem transmissão de dados. |
+| **DO2** | Verde | On/Blink | Sinal de saída detectado. |
+| | | Off | Sem alimentação ou sem transmissão de dados. |
+| **COM1 (Canal RS485 1)** | Verde | On/Blink | Recebendo ou enviando dados. |
+| | | Off | Nenhuma transferência de dados no Canal RS485 1. |
+| **COM2 (Canal RS485 2)** | Verde | On/Blink | Recebendo ou enviando dados. |
+| | | Off | Nenhuma transferência de dados no Canal RS485 2. |
+| **COM3 (Canal RS232 1)** | Verde | On/Blink | Recebendo ou enviando dados. |
+| | | Off | Nenhuma transferência de dados no Canal RS232 1. |
+| **COM4 (Canal RS232 2)** | Verde | On/Blink | Recebendo ou enviando dados. |
+| | | Off | Nenhuma transferência de dados no Canal RS232 2. |
 
 ### Códigos de Status do ACT
 
@@ -278,7 +282,7 @@ Aqui está uma tabela estruturada para os **Códigos de Status do ACT**:
 | 4 | 6 | Falha de energia tipo A |
 | 4 | 7 | Falha de energia tipo B |
 
-**Notas Adicionais:**  
+**Notas adicionais:**  
 
 - Se o **LED ACT piscar em um padrão regular de quatro piscadas**, isso indica que o bootcode (`start.elf`) está ausente.  
 - Se o **LED ACT piscar em um padrão irregular**, o processo de inicialização foi iniciado.  
@@ -307,13 +311,13 @@ cat /sys/kernel/debug/gpio
 Isso exibirá **gpio587** como o GPIO atribuído ao buzzer.  
 
 **Nota:**  
-Para detalhes sobre o **teste do buzzer**, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#controlar-o-buzzer-via-gpio).
+Para detalhes sobre o **teste do buzzer**, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#controlando-o-buzzer-via-gpio).
 
 ### RS485
 
-A série reComputer R1100 possui **duas portas RS485** com **terminais Phoenix de 6 pinos com espaçamento de 3,5 mm**. Cada porta RS485 é rotulada com a serigrafia **"A/B/GND"** para fácil identificação.  
+A série reComputer R1100 possui **duas portas RS485** com **terminais Phoenix de 6 pinos e espaçamento de 3,5 mm**. Cada porta RS485 é rotulada com a serigrafia **"A/B/GND"** para fácil identificação.  
 
-**Definições de Pinos**  
+**Definições dos Pinos**  
 As atribuições dos pinos do terminal são as seguintes:  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs485.PNG" style={{width:600, height:'auto'}}/></div>
@@ -340,16 +344,16 @@ Para detalhes sobre testes de RS485, consulte [Esta Seção](https://wiki.seeeds
 
 ### RS232
 
-A série reComputer R1100 possui 2 portas RS232 com terminais Phoenix de 6 pinos com espaçamento de 3,5 mm.
+A série reComputer R1100 possui 2 portas RS232 com terminais Phoenix de 6 pinos e espaçamento de 3,5 mm.
 A serigrafia de uma única porta RS232 é **TX/RX/GND**.
 
-**Definição de Pinos**
+**Definição dos Pinos**
 
 Os pinos do terminal são definidos da seguinte forma:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/rs285.PNG" style={{width:600, height:'auto'}}/></div>
 
-Aqui está a tabela para as definições de pinos RS232:
+Aqui está a tabela para as definições dos pinos RS232:
 
 | **ID do Pino** | **Nome do Pino**  |
 |-----------|--------------|
@@ -371,18 +375,18 @@ Para instruções detalhadas de teste RS232, consulte Para detalhes sobre testes
 
 :::
 
-### DI (Entrada Digital)
+### DI (Digital Input)
 
-A série reComputer R1100 inclui 2 portas DI com terminais Phoenix de 3 pinos com espaçamento de 3,5 mm.  
+A série reComputer R1100 inclui 2 portas DI com terminais Phoenix de 3 pinos e espaçamento de 3,5 mm.  
 A serigrafia de uma única porta DI é **"DI/G_DI"**.  
 
-**Definição de Pinos**
+**Definição dos Pinos**
 
 Os pinos do terminal são definidos da seguinte forma:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DI.PNG" style={{width:600, height:'auto'}}/></div>
 
-Aqui está a tabela para a **Definição de Pinos DI (Entrada Digital)**:  
+Aqui está a tabela para a **Definição dos Pinos DI (Digital Input)**:  
 
 | **ID do Pino** | **Nome do Pino** |
 |-----------|------------|
@@ -394,7 +398,7 @@ Aqui está a tabela para a **Definição de Pinos DI (Entrada Digital)**:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DI_connect.PNG" style={{width:600, height:'auto'}}/></div>
 
-Aqui está a tabela para os **Parâmetros DI (Entrada Digital)**:  
+Aqui está a tabela para os **Parâmetros DI (Digital Input)**:  
 
 | **Parâmetro**           | **Descrição**    |
 |------------------------|-------------------|
@@ -403,16 +407,16 @@ Aqui está a tabela para os **Parâmetros DI (Entrada Digital)**:
 | DI para G_DI (estado ON) | 5~30 VDC          |
 
 :::note
-Para detalhes sobre testes de DI, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#teste-di-entrada-digital).
+Para detalhes sobre testes de DI, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#teste-di-digital-input).
 :::
 
-### DO (Saída Digital)
+### DO (Digital Output)
 
-Os equipamentos da série reComputer R1100 incluem 2 portas DO, terminais Phoenix de 3 pinos com espaçamento de 3,5 mm. A serigrafia de uma única DO é **"DO/G_DO".**
+Os equipamentos da série reComputer R1100 incluem 2 portas DO, terminais Phoenix de 3 pinos e espaçamento de 3,5 mm. A serigrafia de uma única DO é **"DO/G_DO".**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DO.PNG" style={{width:600, height:'auto'}}/></div>
 
-**Tabela de Definição de Pinos**
+**Tabela de Definição dos Pinos**
 
 | ID do Pino | Nome do Pino |  
 |--------|------------|  
@@ -422,7 +426,7 @@ Os equipamentos da série reComputer R1100 incluem 2 portas DO, terminais Phoeni
 
  **Conexão de Cabos**
 
- Diagrama esquemático dos fios de uma única DO é o seguinte:
+ O diagrama esquemático dos fios de uma única DO é o seguinte:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/DO_connect.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -432,10 +436,10 @@ Os equipamentos da série reComputer R1100 incluem 2 portas DO, terminais Phoeni
 |----------------------|----------------|  
 | Tipo de Saída        | Transistor      |  
 | Proteção de Isolação | 5 kV           |  
-| Nota de Saída        | &lt; 60VDC         |
+| Observação de Saída  | &lt; 60VDC         |
 
 :::note
-Para detalhes sobre testes de DO, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#do-saida-digital).
+Para detalhes sobre testes de DO, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_configure_system/#do-digital-output).
 :::
 
 ### Chave de Boot
@@ -444,7 +448,7 @@ Para detalhes sobre testes de DO, consulte [Esta Seção](https://wiki.seeedstud
 
 A Chave de Boot no reComputer R1100 está ligada ao pino nRPI_BOOT do módulo CM4. Esta chave permite que os usuários selecionem a fonte de boot entre eMMC e USB.  
 
-- **Modo Normal:** Ajuste a chave **afastando-se** do rótulo "BOOT" para inicializar a partir do eMMC.  
+- **Modo Normal:** Ajuste a chave **afastada** do rótulo "BOOT" para inicializar a partir do eMMC.  
 - **Modo de Gravação:** Ajuste a chave **em direção** ao rótulo "BOOT" para inicializar a partir da interface USB Type-C para gravação da imagem do sistema.
 
 Aqui está a tabela para as posições da Chave de Boot e seus modos correspondentes:  
@@ -460,44 +464,44 @@ Aqui está a tabela para as posições da Chave de Boot e seus modos corresponde
 
 O reComputer R1100 possui uma porta USB Type-C e duas portas USB Type-A. A tabela abaixo descreve suas funções e descrições.
 
-Aqui está a tabela para as portas USB e suas funções:  
+Aqui está a tabela das portas USB e suas funções:  
 
 | **Tipo**   | **Quantidade** | **Protocolo** | **Função**   | **Descrição** |
 |-----------|------------|------------|--------------|---------------|
 | Type-C   | 1          | USB 2.0    | USB-Device   | Usada para depuração de porta serial, gravação de imagens, etc. |
 | Type-A   | 2          | USB 2.0    | USB-Host     | Conecta diferentes dispositivos USB, como pen drives, teclados USB ou mouses. |
 
-### Slot para SD
+### Slot SD
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SD.PNG" style={{width:200, height:'auto'}}/></div>
 
-Os equipamentos da série reComputer R1100 incluem um slot para cartão micro SD, que é usado para instalar um cartão micro SD para armazenar dados do usuário.
+Os equipamentos da série reComputer R1100 incluem um slot para cartão micro SD, que é usado para instalar um cartão micro SD para armazenamento de dados do usuário.
 
-### Slot para SIM (Interno)
+### Slot SIM (Interno)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/simslot.PNG" style={{width:600, height:'auto'}}/></div>
 
-A série reComputer R1100 inclui um slot interno para cartão Nano SIM, projetado para instalar um cartão Nano SIM para habilitar a conectividade 4G. A tabela abaixo ilustra as diferenças de tamanho entre os cartões Standard SIM, Micro SIM e Nano SIM.
+A série reComputer R1100 inclui um slot interno para cartão Nano SIM, projetado para instalar um cartão Nano SIM para habilitar conectividade 4G. A tabela abaixo ilustra as diferenças de tamanho entre os cartões Standard SIM, Micro SIM e Nano SIM.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SIMsizes.PNG" style={{width:400, height:'auto'}}/></div>
 
 :::note
-A versão padrão do reComputer R1100 não inclui um módulo 4G integrado. Se a funcionalidade 4G for necessária, um módulo 4G adicional deve ser adquirido separadamente. Para mais detalhes, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/#optional-interfaces-and-modules).
+A versão padrão do reComputer R1100 não inclui um módulo 4G integrado. Se a funcionalidade 4G for necessária, um módulo 4G adicional deve ser adquirido separadamente. Para mais detalhes, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/#interfaces-e-módulos-opcionais).
 :::
 
-### Slot para SSD
+### Slot SSD
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/SSD.PNG" style={{width:600, height:'auto'}}/></div>
 
-O reComputer R1100 está equipado com um **slot NVMe M.2 2280 SSD**, suportando capacidades de armazenamento de **128GB, 256GB, 512GB e 1TB**. Este slot permite expansão de armazenamento em alta velocidade, permitindo aos usuários melhorar tanto o **desempenho** quanto a **capacidade** do sistema.  
+O reComputer R1100 está equipado com um **slot NVMe M.2 2280 SSD**, suportando capacidades de armazenamento de **128GB, 256GB, 512GB e 1TB**. Este slot permite expansão de armazenamento em alta velocidade, possibilitando aos usuários melhorar tanto o **desempenho** quanto a **capacidade** do sistema.  
 
 **Nota:**  
 Existem dois usos principais para os cartões SSD:  
 
 1. **Armazenamento de alta capacidade** – SSDs podem ser usados para grandes necessidades de armazenamento.  
-2. **Unidade de boot com imagem de sistema** – Alguns SSDs podem ser usados tanto como armazenamento de alta capacidade quanto como unidade de boot para o sistema.  
+2. **Unidade de boot com imagem do sistema** – Alguns SSDs podem ser usados tanto como armazenamento de alta capacidade quanto como unidade de boot para o sistema.  
 
-No entanto, nem todos os SSDs suportam a funcionalidade de boot. Se você planeja usar um SSD como unidade de boot e não tem certeza de qual modelo comprar, recomendamos o **SSD de 1TB (SKU112990267)**, pois ele foi testado e verificado quanto à funcionalidade de boot. Isso reduz problemas de compatibilidade e minimiza custos de tentativa e erro.
+No entanto, nem todos os SSDs suportam a funcionalidade de boot. Se você planeja usar um SSD como unidade de boot e não tem certeza de qual modelo comprar, recomendamos o **SSD de 1TB (SKU112990267)**, pois ele foi testado e verificado para a funcionalidade de boot. Isso reduz problemas de compatibilidade e minimiza custos de tentativa e erro.
 
 ### Slots Mini-PCIe no reComputer R1100
 
@@ -506,7 +510,7 @@ No entanto, nem todos os SSDs suportam a funcionalidade de boot. Se você planej
 O reComputer R1100 está equipado com **dois slots Mini-PCIe**, suportando vários protocolos de comunicação. A tabela abaixo descreve os protocolos suportados por cada slot:  
 
 | **Slot**       | **Protocolos Suportados**   |  
-|---------------|-----------------------------|  
+|---------------|--------------------------|  
 | **Mini-PCIe 1** | 4G LTE, USB LoRa® |  
 | **Mini-PCIe 2** | SPI LoRa®, USB LoRa® |  
 
@@ -514,8 +518,8 @@ Esses slots permitem que os usuários expandam as opções de conectividade, pos
 
 Este dispositivo inclui duas **interfaces Mini-PCIe**: **Slot 1** e **Slot 2**.  
 
-- O **Slot Mini-PCIe 1** está ligado ao **slot do cartão SIM** e suporta **protocolos USB**, sendo adequado para conectar **módulos 4G LTE e USB LoRa®**.  
-- O **Slot Mini-PCIe 2** suporta **protocolos USB e SPI**, mas **não está conectado** ao slot do cartão SIM. Ele pode acomodar **dispositivos SPI LoRa® e USB LoRa®**.  
+- **Mini-PCIe Slot 1** está ligado ao **slot do cartão SIM** e suporta **protocolos USB**, sendo adequado para conectar **módulos 4G LTE e USB LoRa®**.  
+- **Mini-PCIe Slot 2** suporta **protocolos USB e SPI**, mas **não está conectado** ao slot do cartão SIM. Ele pode acomodar **dispositivos SPI LoRa® e USB LoRa®**.  
 
 Esses slots fornecem opções de expansão flexíveis para vários módulos de comunicação sem fio.
 
@@ -525,8 +529,8 @@ Esses slots fornecem opções de expansão flexíveis para vários módulos de c
 
 O reComputer R1100 possui um **Mini Push Button Switch** localizado dentro do orifício de reset. Ao pressionar esse botão com um objeto fino, os usuários podem **resetar o CM4**.  
 
-- Quando este pino está em nível **alto**, isso indica que o **CM4 foi iniciado**.  
-- Quando este pino é **forçado ao nível baixo**, ele **reseta o módulo**.
+- Quando este pino está em nível **alto**, indica que o **CM4 foi iniciado**.  
+- Quando este pino é **colocado em nível baixo**, ele **reseta o módulo**.
 
 ### Ethernet RJ45  
 
@@ -534,14 +538,14 @@ O reComputer R1100 possui um **Mini Push Button Switch** localizado dentro do or
 
 O **reComputer R1100** está equipado com duas portas Ethernet:  
 
-| Nome  | Tipo                         | Velocidades          | Suporte a PoE                |
-|-------|------------------------------|----------------------|------------------------------|
-| ETH0  | Ethernet Gigabit nativo do CM4 | 10/100/1000 Mbit/s | Suportado (com módulo adicional) |
-| ETH1  | Convertido de USB            | 10/100 Mbit/s        | Não suportado               |
+| Nome  | Tipo                         | Velocidades              | Suporte a PoE                |
+|-------|------------------------------|---------------------|----------------------------|
+| ETH0  | Ethernet Gigabit nativo do CM4  | 10/100/1000 Mbit/s  | Suportado (com módulo adicional) |
+| ETH1  | Convertido de USB           | 10/100 Mbit/s       | Não suportado             |
 
 O **reComputer R1100** está equipado com duas portas Ethernet RJ45:  
 
-- **ETH0**: Uma interface **Ethernet Gigabit nativa do CM4** que suporta velocidades de **10/100/1000 Mbit/s**. Ela pode ser atualizada com um **módulo PoE** adicional para habilitar **Power over Ethernet (PoE)** para alimentar o dispositivo.  
+- **ETH0**: Uma interface **Ethernet Gigabit nativa do CM4** que suporta velocidades de **10/100/1000 Mbit/s**. Ela pode ser atualizada com um **módulo PoE** adicional para habilitar **Power over Ethernet (PoE)** para alimentação do dispositivo.  
 - **ETH1**: Uma interface **Ethernet convertida de USB** que suporta velocidades de **10/100 Mbit/s**, mas **PoE não é suportado**.
 
 **Nota**  
@@ -555,7 +559,7 @@ O reComputer R1100 possui uma interface HDMI nativa do CM4, suportando saída de
 
 ### RTC  
 
-O reComputer R1100 inclui um **circuito RTC (Relógio de Tempo Real)** com uma **bateria CR2032** pré-instalada, garantindo a manutenção precisa da hora mesmo durante quedas de energia.  
+O reComputer R1100 inclui um **circuito RTC (Real-Time Clock)** com uma **bateria CR2032** pré-instalada, garantindo a manutenção precisa da hora mesmo durante a perda de energia.  
 
 :::note
 Para detalhes sobre testes de RTC, consulte [Esta Seção](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/#rtc-real-time-clock-testing).
@@ -571,14 +575,14 @@ Para detalhes sobre testes do watchdog, consulte [Esta Seção](https://wiki.see
 
 ## Interfaces e Módulos Opcionais  
 
-O reComputer R1100 suporta uma **ampla gama de módulos de expansão e acessórios**, tornando-o adaptável a vários casos de uso. Se você estiver interessado em personalizar o reComputer R1100, entre em contato com **odm@seeed.cc** para mais informações.  
+O reComputer R1100 suporta uma **ampla gama de módulos de expansão e acessórios**, tornando-o adaptável a vários casos de uso. Se você estiver interessado em customizar o reComputer R1100, entre em contato com **odm@seeed.cc** para mais informações.  
 
 #### Lista de Acessórios e Módulos Opcionais
 
 Aqui está a tabela formatada para melhor legibilidade:  
 
 | **Observação**                                     | **Item**               | **Nome do Produto**                                      | **SKU**         |
-|------------------------------------------------|------------------------|----------------------------------------------------------|----------------|
+|------------------------------------------------|------------------------|------------------------------------------------------|----------------|
 | **Devem ser usados juntos para a função LoRa® WAN** | Módulo LoRa®           | Region optional LoRaWAN Gateway Module (SPI) - US915 | 114992969      |
 |                                                |                        | Region optional LoRaWAN Gateway Module (SPI) - EU868 | 114993268      |
 |                                                |                        | Region optional LoRaWAN Gateway Module (USB) - US915 | 114992991      |
@@ -601,13 +605,13 @@ Aqui está a tabela formatada para melhor legibilidade:
 | **Este módulo precisa ser soldado na placa carrier do reComputer R1100** | PoE | MQ7813T120 PoE Module Kit for reTerminal DM | 110991925 |
 | **UPS**                                        | UPS                   | SuperCAP UPS LTC3350 Module                         | 110992004      |
 
-A placa principal do **reComputer R1100** possui **dois slots Mini-PCIe** com a seguinte compatibilidade:  
+A placa-mãe **reComputer R1100** possui **dois slots Mini-PCIe** com a seguinte compatibilidade:  
 
-- **Slot Mini-PCIe 1** oferece suporte a:  
+- O **Slot Mini-PCIe 1** oferece suporte a:  
   - **Módulo 4G** (protocolo USB)  
   - **Módulo LoRa®** (protocolo USB)  
 
-- **Slot Mini-PCIe 2** oferece suporte a:  
+- O **Slot Mini-PCIe 2** oferece suporte a:  
   - **Módulo LoRa®** (protocolo USB e SPI)  
 
 :::note
@@ -624,10 +628,10 @@ O **reComputer R1100-10** é alimentado pelo **CM4** com uma **versão com Wi-Fi
 
 ### Módulo 4G
 
-A placa-mãe do **reComputer R1100** possui **dois slots Mini-PCIe**, com o **Slot Mini-PCIe 1** oferecendo suporte a um **módulo 4G via protocolo USB**. O **módulo 4G Quectel EC25** foi totalmente testado quanto à compatibilidade com o reComputer R1100.  
+A placa-mãe **reComputer R1100** possui **dois slots Mini-PCIe**, sendo que o **Slot Mini-PCIe 1** oferece suporte a um **módulo 4G via protocolo USB**. O **módulo 4G Quectel EC25** foi totalmente testado quanto à compatibilidade com o reComputer R1100.  
 
 :::note
-Se você precisar de **funcionalidade 4G**, deverá **comprar o módulo 4G correspondente e uma antena externa**, e seguir as instruções em [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/).
+Se você precisar de **funcionalidade 4G**, deverá **adquirir o módulo 4G correspondente e uma antena externa**, e seguir as instruções em [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/).
 :::
 
 ### Módulo LoRa®  
@@ -635,14 +639,14 @@ Se você precisar de **funcionalidade 4G**, deverá **comprar o módulo 4G corre
 Ambos os **slots Mini-PCIe** oferecem suporte a **módulos LoRa® via protocolo USB**. Além disso, o **Slot Mini-PCIe 2** oferece suporte a um **módulo LoRa® usando o protocolo SPI**. O **módulo WM1302 da Seeed Studio** foi totalmente testado quanto à compatibilidade com o reComputer R1100.
 
 :::note
-Se você precisar de **funcionalidade LoRa®**, deverá **comprar o módulo LoRa® correspondente e uma antena externa**, e seguir as instruções em [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/).
+Se você precisar de **funcionalidade LoRa®**, deverá **adquirir o módulo LoRa® correspondente e uma antena externa**, e seguir as instruções em [Assemble 4G/LoRa® and Antenna](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_assembly_guide/).
 :::
 
 ### PoE (Power over Ethernet)
 
 O **reComputer R1100 é compatível com o padrão IEEE 802.3af PD (Powered Devices)** por meio da adição de um **módulo de alimentação PoE**. O **soquete PoE vem pré-soldado na placa**, mas os usuários devem **desmontar o dispositivo para instalar o módulo PoE** a fim de obter a funcionalidade PoE via Ethernet.  
 
-Para orientações de desmontagem, consulte o [Guia de Desmontagem](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-ups-and-poe-module)  
+Para orientações de desmontagem, consulte o [Guia de Desmontagem](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#montando-o-módulo-de-ups-e-poe)  
 
 :::note  
 
@@ -654,20 +658,20 @@ Para orientações de desmontagem, consulte o [Guia de Desmontagem](https://wiki
 
 ### SSD (Expansão de Armazenamento)
 
-O **reComputer R1100 oferece suporte a SSDs NVMe 2280** por meio de um **slot PCIe (J62) localizado abaixo dos dois slots Mini-PCIe na placa**.  
+O **reComputer R1100 é compatível com SSDs NVMe 2280** por meio de um **slot PCIe (J62) localizado abaixo dos dois slots Mini-PCIe na placa**.  
 
 :::note
 
 - A **interface PCIe do CM4 é Gen 2.0**, com uma **velocidade teórica máxima de 5Gbps**.  
 - Se você usar um **SSD Gen 3.0 ou superior**, ele pode não atingir sua velocidade máxima.  
-- **Resultados de teste do reTerminal DM mostram:**  
+- **Os resultados de teste do reTerminal DM mostram:**  
   - **Velocidade máxima de gravação:** 230MB/s  
   - **Velocidade máxima de leitura:** 370MB/s  
-- A compatibilidade de SSD pode variar, portanto é **recomendado comprar SSDs da lista de acessórios aprovados**.  
+- A compatibilidade de SSD pode variar, portanto é **recomendado adquirir SSDs da lista de acessórios aprovados**.  
 
 :::
 
-**Cenários de uso de SSD:**  
+**Cenários de Uso de SSD:**  
 
 - **Armazenamento de alta capacidade** – SSDs podem ser usados para expandir o espaço de armazenamento.  
 - **Unidade de boot com imagem de sistema** – Alguns SSDs podem armazenar imagens de sistema e **inicializar diretamente a partir do SSD**.  
@@ -681,7 +685,7 @@ Se você precisar de um SSD para boot e não tiver certeza de qual comprar, a Se
 
 O reComputer R1100 é compatível com o **OPTIGA™ TPM SLB9670 da Infineon**, que está em conformidade com a especificação **Trusted Computing Group (TCG) TPM 2.0**.  
 
-**Principais recursos:**  
+**Principais Recursos:**  
 
 - **Chip de criptografia para segurança**  
 - **Interface SPI** (conectada à **porta J13** na placa)  
@@ -691,7 +695,7 @@ O reComputer R1100 é compatível com o **OPTIGA™ TPM SLB9670 da Infineon**, q
   - **Serviços criptográficos**  
 
 :::note  
-Para instruções de instalação, consulte [Assemble TPM 2.0 Module](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#assembling-the-tpm-20-module)  
+Para instruções de instalação, consulte [Assemble TPM 2.0 Module](https://wiki.seeedstudio.com/pt-br/recomputer_r1100_intro/recomputer_r1100_assembly_guide/#montando-o-módulo-tpm-20)  
 
 :::
 
@@ -701,14 +705,14 @@ Para instruções de instalação, consulte [Assemble TPM 2.0 Module](https://wi
 
 O **módulo UPS** no reComputer R1100 é um sistema de backup de energia baseado em **supercapacitor de 7F** que opera **em série**.  
 
-**Como funciona:**  
+**Como Funciona:**  
 
 1. Posicionado entre a **fonte de alimentação DC 5V** e o **CM4**.  
 2. Usa um **sinal GPIO** para notificar a **CPU** quando a **fonte de alimentação de 5V falha**.  
-3. A CPU executa um **script de emergência** antes da queda total de energia.  
-4. O script executa um comando **"$ shutdown"** para desligamento seguro do sistema.  
+3. A CPU executa um **script de emergência** antes que a energia se esgote.  
+4. O script executa o comando **"$ shutdown"** para um desligamento seguro do sistema.  
 
-**Duração do backup:**  
+**Duração do Backup:**  
 O **tempo de funcionamento do UPS** depende da **carga do sistema**. Abaixo estão os resultados de teste com:  
 
 - **CM4 (4GB RAM, 32GB eMMC, módulo Wi-Fi).**  

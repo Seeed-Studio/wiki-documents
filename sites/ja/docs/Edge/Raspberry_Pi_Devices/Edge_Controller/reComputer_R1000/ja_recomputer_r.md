@@ -6,12 +6,12 @@ keywords:
   - reComputer R1000
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /recomputer_r
-sku: 113991274,E24010521,113991334,113991375
+sku: 113991274,E24010521,113991314,113991294,113991295
 last_update:
   date: 09/15/2025
   author: Kasun Thushara
 createdAt: '2024-05-10'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/ja/recomputer_r/
 ---
 
@@ -29,28 +29,29 @@ tags:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" alt="pir" width="600" height="auto"/></p>
 
+reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi CM4 プラットフォーム上に構築されており、最大 8GB RAM と 32GB eMMC をサポートするクアッドコア A72 プロセッサを搭載しています。柔軟に設定可能なデュアル Ethernet インターフェースを備え、さらに BACnet、Modbus RTU、Modbus TCP/IP プロトコルをサポートする 3 系統の絶縁 RS485 チャネルを搭載しています。
+強力な IoT ネットワーク通信機能を備えた R1000 シリーズは、4G、LoRa®、Wi-Fi/BLE など複数の無線通信オプションをサポートし、対応する無線ゲートウェイとして柔軟に構成できます。このコントローラは、遠隔デバイス管理、エネルギー管理、その他スマートビルディング分野のさまざまなシナリオに最適です。
+
+:::note
+ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズに対応しています。
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-    </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐカスタマイズ ➜</font></span></strong></a>
 </div>
-
-<br />
-
-reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi CM4 プラットフォームをベースとしており、クアッドコア A72 プロセッサを搭載し、最大 8GB RAM と 32GB eMMC をサポートします。柔軟に設定可能なデュアル Ethernet インターフェースを備え、さらに BACnet、Modbus RTU、Modbus TCP/IP プロトコルをサポートする 3 系統の絶縁 RS485 チャネルを搭載しています。
-強力な IoT ネットワーク通信機能を備えた R1000 シリーズは、4G、LoRa®、Wi-Fi/BLE など複数の無線通信オプションをサポートし、対応するワイヤレスゲートウェイとして柔軟に構成できます。このコントローラは、遠隔デバイス管理、エネルギー管理、スマートビルディング分野におけるさまざまなシナリオに最適です。
 
 ## 特長
 
-### ビルオートメーションシステム向け設計
+### ビルオートメーションシステム向けに設計
 
 - 複数の絶縁 RS485 チャネルにより、高速および低速通信をサポート
 
-- BACnet、Modbus RTU、および Modbus TCP/IP プロトコルをサポート
+- BACnet、Modbus RTU、Modbus TCP/IP プロトコルをサポート
 - 最大 8GB RAM により数千のデータポイント処理をサポートし、高効率なパフォーマンスを実現
 - 両面のわかりやすい LED インジケータにより、動作状態を素早く確認可能
-- 高品質な金属筐体で、DIN レールおよび壁面取り付けに対応
-- カスタマイズ OS 向けに Yocto と Buildroot をサポート
+- 高品質な金属ケースで、DIN レールおよび壁面取り付けに対応
+- カスタマイズ OS 用に Yocto と Buildroot をサポート
 
 ### 強力なパフォーマンス
 
@@ -87,9 +88,9 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
 - ESD: EN61000-4-2, レベル 3
 - EFT: EN61000-4-4, レベル 2
 - サージ: EN61000-4-5, レベル 2
-- 生産ライフタイム: reComputer R1000 は少なくとも 2030 年 12 月まで生産継続予定
+- 生産寿命: reComputer R1000 は少なくとも 2030 年 12 月まで生産継続予定
 
-> \*4G および LoRa® モジュールは標準では reComputer R1000 に同梱されていません。必要に応じて該当モジュールを別途ご購入ください。
+> \*4G および LoRa® モジュールは reComputer R1000 には標準では付属しません。必要に応じて該当モジュールを別途ご購入ください。
 
 ## 型番ルール
 
@@ -114,11 +115,11 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>CPU</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4, Quad-core Cortex-A72@ 1.5GHz</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4、クアッドコア Cortex-A72@ 1.5GHz</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>オペレーティングシステム</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS, Ubuntu</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS、Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RAM</td>
@@ -185,16 +186,16 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x HDMI 2.0</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIMカードスロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカードに対応</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM Card Slot</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカード対応</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2スロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSDに対応</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2 Slot</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSD 対応</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LED</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LEDインジケータ × 6</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LED インジケータ × 6</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>ブザー</td>
@@ -206,23 +207,23 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI（予約済み）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCDに対応*（筐体内のオンボード）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD 対応*（筐体内のオンボード）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>スピーカー（予約済み）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>マイクに対応*（筐体内のオンボード）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>マイク対応*（筐体内のオンボード）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>無線通信</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi 2.4/5.0 GHz</td>
-      <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップWi-Fi*</td>
+      <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップ Wi-Fi*</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>なし</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE 5.0</td>
-      <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップBLE*</td>
+      <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップ BLE*</td>
       <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>なし</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -230,7 +231,7 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>USB LoRa®/SPI LoRa®*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>4Gセルラー</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>4G セルラー</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>4G LTE*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -238,13 +239,13 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>EMC</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>ESD：EN61000-4-2、レベル3</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>ESD：EN61000-4-2、レベル 3</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>EFT：EN61000-4-4、レベル2</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>EFT：EN61000-4-4、レベル 2</td>
     </tr>
      <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>サージ：EN61000-4-5、レベル2</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>サージ：EN61000-4-5、レベル 2</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={4} style={{height: 18, width: '35.4622%'}}>認証</td>
@@ -282,16 +283,16 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>その他</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>スーパーキャパシタUPS</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350モジュール*</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>スーパーキャパシタ UPS</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350 モジュール*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>ハードウェアウォッチドッグ</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1～255秒</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1～255s</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RTC</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>高精度RTC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>高精度 RTC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>セキュリティ</td>
@@ -306,22 +307,22 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>保証</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2年間</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 年</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>製品ライフタイム</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2030年12月まで</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2030 年 12 月まで</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>注記</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>＊印のオプションは、アクセサリ一覧に従って別途購入が必要です。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>＊印のオプションは、アクセサリ一覧に従って追加購入が必要です。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>コンポーネントおよびインターフェースの状態に関する説明</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>コンポーネントおよびインターフェース状態に関する説明</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>予約済み</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>将来の使用または拡張のために確保されています。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>将来の使用または拡張用に確保されています。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>オプション</td>
@@ -333,10 +334,10 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>同梱</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準パッケージに含まれる必須コンポーネントです。</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準パッケージに含まれる必須コンポーネント。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>機構</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>機械仕様</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>寸法 (W x H x D)</td>
@@ -351,7 +352,7 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>DIN レール / 壁面</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>重量 (正味)</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>重量（正味）</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>560g</td>
     </tr>
   </tbody>
@@ -372,32 +373,32 @@ reComputer R1000 エッジ IoT コントローラは、高性能な Raspberry Pi
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
 
-reComputer R1000 は、AC、DC 端子、および PoE ポートの 3 種類の電源供給オプションをサポートします。デフォルトでは、reComputer R1000 は AC/DC 端子（公式リージョン電源アダプタ SKU:110061505/110061506）から給電されますが、**PoE 給電（PoE モジュール、SKU:110991925）はオプションです**。これにより、電源の選択に柔軟性が生まれ、さまざまな電源ソースとの容易な統合が可能になります。
+reComputer R1000 は、AC、DC 端子、および PoE ポートの 3 種類の電源供給オプションをサポートします。デフォルトでは、reComputer R1000 は AC/DC 端子（公式地域別電源アダプタ SKU:110061505/110061506）から給電されますが、**PoE 給電（PoE モジュール、SKU:110991925）はオプションです**。これにより、電源の選択に柔軟性が生まれ、さまざまな電源ソースとの容易な統合が可能になります。
 
 ### 2 ピン電源端子
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1000 は、公称 AC 電圧 12\~24 V または DC 電圧 \9~36 V で給電されます。電源は 2 ピン電源端子ブロックコネクタを介して接続されます。reComputer R1000 を接地するには、電源端子左上のネジにアース線を固定します。
+reComputer R1000 は、公称 AC 電圧 12～24 V または DC 電圧 9～36 V で給電されます。電源は 2 ピン電源端子ブロックコネクタを介して接続されます。reComputer R1000 を接地するには、電源端子左上にあるネジにアース線を固定します。
 
 :::note
-この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを使用しており、AC と DC の両入力に対応しています。これにより、**電源のプラス端子とマイナス端子がどのように接続されていても**回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
+この電源ソリューションは、逆極性保護のためにブリッジ整流ダイオードを使用しており、AC と DC の両方の入力に対応しています。これにより、**電源のプラス端子とマイナス端子がどのように接続されていても**回路が損傷することはありません。ブリッジ整流器を使用することで、入力 DC の極性に関係なく出力電圧の極性が一定に保たれ、効果的な逆極性保護が実現されます。
 :::
 
 ### POE（オプション）
 
-PoE モジュールを搭載すると、reComputer R1000 の ETH0 ポートは PoE 給電をサポートし、Ethernet 経由でデバイスに電力を供給する便利で効率的な方法を提供します。このオプションにより、設置プロセスが簡素化され、必要な配線の量が削減されるため、電源が限られているアプリケーションや電源コンセントが容易に利用できない環境に最適なソリューションとなります。
+PoE モジュールを搭載すると、reComputer R1000 の ETH0 ポートは PoE 給電をサポートし、Ethernet 経由でデバイスに電力を供給する便利で効率的な方法を提供します。このオプションにより、設置プロセスが簡素化され、必要な配線の量が削減されるため、電源が限られている、または電源コンセントが容易に利用できない用途に最適なソリューションとなります。
 
-- PoE 入力：範囲 44~57V、標準 48V
+- PoE 入力：範囲 44～57V、標準 48V
 - PoE 出力：12V、最大 1.1A
 
 :::note
-reComputer R1000 に付属する PoE モジュールは IEEE 802.3af 規格に準拠しており、最大 12.95W の電力供給が可能である点に注意してください。そのため、SSD や 4G モジュールなどの高消費電力の周辺機器を接続する必要がある場合、PoE 給電だけでは不十分な可能性があります。この場合は、デバイスの安定かつ信頼性の高い動作を確保するために、代わりに AC/DC 端子から給電することを推奨します。
+reComputer R1000 に付属する PoE モジュールは IEEE 802.3af 規格に準拠しており、最大 12.95W の電力を供給できます。そのため、SSD や 4G モジュールなどの高消費電力の周辺機器を接続する必要がある場合、PoE 給電だけでは十分でない可能性があります。この場合は、デバイスの安定かつ信頼性の高い動作を確保するために、代わりに AC/DC 端子から給電することを推奨します。
 :::
 
 ### 消費電力
 
-reComputer R1000 の消費電力について、Seeed Studio のラボで測定した結果を以下の表に示します。なお、この値はあくまで参考値であり、テスト方法や環境によって結果が変動する可能性があります。
+以下の表は、Seeed Studio のラボで測定した reComputer R1000 の消費電力です。なお、この値はあくまで参考値であり、テスト方法や環境によって結果が変動する可能性があります。
 
 | 状態   | 電圧 | 電流 | 消費電力 | 説明 |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
@@ -407,7 +408,7 @@ reComputer R1000 の消費電力について、Seeed Studio のラボで測定�
 
 ### 電源オンおよび電源オフ
 
-reComputer R1000 にはデフォルトで電源ボタンは搭載されておらず、電源が接続されるとシステムは自動的に起動します。シャットダウンする際は、オペレーティングシステム上でシャットダウンオプションを選択し、システムが完全に停止するまで待ってから電源を切ってください。システムを再起動するには、電源を再接続するだけで構いません。
+reComputer R1000 にはデフォルトで電源ボタンは搭載されておらず、電源が接続されるとシステムは自動的に起動します。シャットダウンする際は、オペレーティングシステムでシャットダウンオプションを選択し、電源を切る前にシステムが完全にシャットダウンするまでお待ちください。システムを再起動するには、電源を再接続するだけです。
 
 :::note
 シャットダウン後は、内部コンデンサが完全に放電するまで少なくとも 10 秒待ってからシステムを再起動してください。
@@ -445,7 +446,7 @@ reComputer R1000 にはデフォルトで電源ボタンは搭載されておら
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x 3 ピン端子ブロック（絶縁）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x 3 ピン端子台（絶縁）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>HDMI</td>
@@ -477,11 +478,11 @@ reComputer R1000 にはデフォルトで電源ボタンは搭載されておら
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD をサポート*（筐体内のオンボード）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD をサポート*(筐体内のオンボード)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>スピーカー*</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>マイクをサポート*（筐体内のオンボード）</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Speaker*</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Microphone をサポート*(筐体内のオンボード)</td>
     </tr>
   </tbody>
 </table>
@@ -499,59 +500,59 @@ cat /sys/kernel/debug/gpio
 
 reComputer R1000 には 6 つの LED インジケータが搭載されており、機器の動作状態を示します。各 LED の具体的な機能と状態については、以下の表を参照してください。
 
-| LED インジケータ | 色             | 状態 | 説明                                                          |
-| ------------- | -------------- | ---- | ------------------------------------------------------------ |
-| PWR           | 緑             | On   | デバイスが電源に接続されています。                           |
-|               |                | Off  | デバイスが電源に接続されていません。                         |
-| ACT           | 緑             |      | Linux では、このピンは eMMC アクセスを示すために点滅します。<br /> 起動中にエラーが発生した場合、この LED はエラー<br />パターンで点滅し、[Raspberry Pi のウェブサイトの表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を使用して解読できます。 |
-| USER          | 緑/赤/青       |      | ユーザーによって定義する必要があります。                     |
-| RS485-1       | 緑             | Off  | RS485 チャネル 1 でデータ転送が行われていません。           |
-|               |                | Blink| RS485 チャネル 1 がデータを送受信しています。               |
-| RS485-2       | 緑             | Off  | RS485 チャネル 2 でデータ転送が行われていません。           |
-|               |                | Blink| RS485 チャネル 2 がデータを送受信しています。               |
-| RS485-3       | 緑             | Off  | RS485 チャネル 3 でデータ転送が行われていません。           |
-|               |                | Blink| RS485 チャネル 3 がデータを送受信しています。               |
+| LED インジケータ | 色             | 状態 | 説明                                                           |
+| ------------- | -------------- | ------ | ------------------------------------------------------------ |
+| PWR           | 緑             | On     | デバイスが電源に接続されています。                            |
+|               |                | Off    | デバイスが電源に接続されていません。                         |
+| ACT           | 緑             |        | Linux では、このピンは eMMC アクセスを示すために点滅します。<br /> 起動中にエラーが発生した場合、この LED はエラー<br />パターンで点滅し、[Raspberry Pi のウェブサイト上の表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を使用して解読できます。 |
+| USER          | 緑/赤/青       |        | ユーザーによって定義する必要があります。                      |
+| RS485-1       | 緑             | Off    | RS485 チャネル 1 でデータ転送が行われていません。            |
+|               |                | Blink  | RS485 チャネル 1 がデータを送受信しています。                |
+| RS485-2       | 緑             | Off    | RS485 チャネル 2 でデータ転送が行われていません。            |
+|               |                | Blink  | RS485 チャネル 2 がデータを送受信しています。                |
+| RS485-3       | 緑             | Off    | RS485 チャネル 3 でデータ転送が行われていません。            |
+|               |                | Blink  | RS485 チャネル 3 がデータを送受信しています。                |
 
 **ACT ステータス表**
 
 | **長い点滅** | **短い点滅** | **ステータス**                    |
-| ------------ | ------------ | --------------------------------- |
-| 0            | 3            | 一般的な起動失敗                  |
-| 0            | 4            | start*.elf が見つかりません       |
-| 0            | 7            | カーネルイメージが見つかりません  |
-| 0            | 8            | SDRAM 障害                        |
-| 0            | 9            | SDRAM 不足                        |
-| 0            | 10           | HALT 状態                         |
-| 2            | 1            | パーティションが FAT ではありません |
-| 2            | 2            | パーティションからの読み取りに失敗 |
-| 2            | 3            | 拡張パーティションが FAT ではありません |
-| 2            | 4            | ファイル署名/ハッシュの不一致 - Pi 4 |
-| 4            | 4            | 非対応のボードタイプ              |
-| 4            | 5            | 致命的なファームウェアエラー      |
-| 4            | 6            | 電源障害タイプ A                  |
-| 4            | 7            | 電源障害タイプ B                  |
+| ---------------- | ----------------- | ----------------------------------- |
+| 0                | 3                 | 一般的な起動失敗                   |
+| 0                | 4                 | start*.elf が見つかりません        |
+| 0                | 7                 | カーネルイメージが見つかりません   |
+| 0                | 8                 | SDRAM 障害                         |
+| 0                | 9                 | SDRAM 不足                         |
+| 0                | 10                | HALT 状態                          |
+| 2                | 1                 | パーティションが FAT ではありません |
+| 2                | 2                 | パーティションからの読み取りに失敗 |
+| 2                | 3                 | 拡張パーティションが FAT ではありません |
+| 2                | 4                 | ファイル署名/ハッシュの不一致 - Pi 4 |
+| 4                | 4                 | 非対応のボードタイプ               |
+| 4                | 5                 | 致命的なファームウェアエラー       |
+| 4                | 6                 | 電源障害タイプ A                   |
+| 4                | 7                 | 電源障害タイプ B                   |
 
-ACT LED が規則的な 4 回点滅パターンで点滅する場合、bootcode（start.elf）を見つけられていません。
+ACT LED が規則的な 4 回点滅パターンで点滅する場合、bootcode (start.elf) が見つかりません。
 ACT LED が不規則なパターンで点滅する場合は、起動が開始されています。
-ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続しない状態でもう一度試してください。詳細については Raspberry Pi フォーラムを確認してください。
+ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続せずに再度試して確認してください。詳細については Raspberry Pi フォーラムを確認してください。
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 詳細については [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151) を確認してください。
 
-ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用を推奨します。sysfs は、さまざまなカーネルサブシステム、ハードウェアデバイス、およびそれらに関連するドライバに関する情報を公開します。ReComputer R1000 では、ユーザー LED インターフェースを 3 つのデバイスファイル（led-red、led-blue、led-green）に抽象化しており、これらのファイルを操作するだけで LED ライトを簡単に制御できます。以下に例を示します。
+ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムであり、さまざまなカーネルサブシステム、ハードウェアデバイス、およびそれらに関連するドライバに関する情報を公開する sysfs の使用を推奨します。ReComputer R1000 では、ユーザー LED インターフェースを 3 つのデバイスファイル (led-red、led-blue、led-green) に抽象化しており、これらのファイルを操作するだけで LED ライトを簡単に制御できます。例は次のとおりです。
 
-1. 赤色 LED を点灯するには、ターミナルで次のコマンドを入力してください：
+1. 赤色 LED を点灯するには、Terminal で次のコマンドを入力してください。
 
 ```bash
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-2. 赤色 LED を消灯するには、ターミナルで次のコマンドを入力してください：
+2. 赤色 LED を消灯するには、Terminal で次のコマンドを入力してください。
 
 ```bash
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. 赤色 LED と緑色 LED を同時に点灯させることもできます。ターミナルで次のコマンドを入力してください：
+3. 赤色と緑色の LED を同時に点灯させるには、Terminal で次のコマンドを入力してください。
 
 ```bash
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -562,20 +563,20 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
-reComputer R1000 にはアクティブブザーが搭載されており、アラームやイベント通知などさまざまな用途に使用できます。reComputer R1000 v1.0 ではブザーは GPIO21 を介して CM4 に接続されており、reComputer R1000 1.1 では GPIO20 を介して CM4 に接続されています。
+reComputer R1000 にはアクティブブザーが搭載されており、アラームやイベント通知など、さまざまな用途に使用できます。reComputer R1000 v1.0 ではブザーは GPIO21 から CM4 に接続されており、reComputer R1000 1.1 では GPIO20 から CM4 に接続されています。
 
 :::note
-ハードウェアリビジョン（v1.0 と v1.1）を区別するには、[reComputer R1000 V1.1 Product change details](https://wiki.seeedstudio.com/ja/recomputer_r1000_v1_1_description/) を参照してください。
+ハードウェアリビジョン (v1.0 と v1.1) を区別するには、[reComputer R1000 V1.1 Product change details](https://wiki.seeedstudio.com/ja/recomputer_r1000_v1_1_description/) を参照してください。
 :::
 
-reComputer R1000 v1.0 ユーザーの場合、ブザーは GPIO-21 に接続されています。ブザーをオン/オフするには、ターミナルで次のコマンドを入力してください：
+reComputer R1000 v1.0 ユーザーの場合、ブザーは GPIO-21 に接続されています。ブザーをオン/オフにするには、Terminal で次のコマンドを入力してください。
 
 ```bash
 raspi-gpio set 21 op dh # turn on
 raspi-gpio set 21 op dl # turn off
 ```
 
-reComputer R1000 v1.1 ユーザーの場合、ブザーは PCA9535 P15 に接続されています。ブザーをオフ（オン）にするには、ターミナルで次のコマンドを入力してください：
+reComputer R1000 v1.1 ユーザーの場合、ブザーは PCA9535 P15 に接続されています。ブザーをオフ(オン)にするには、Terminal で次のコマンドを入力してください。
 
 ```bash
 echo 591 | sudo tee /sys/class/gpio/export
@@ -588,8 +589,8 @@ echo 0 | sudo tee /sys/class/gpio/gpio591/value # turn off
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
-reComputer R1000 には 3 ピンコネクタを使用した 3 系統の RS485 インターフェースが搭載されており、信号と電源の両方が絶縁されているため、産業用およびオートメーション用途において安全かつ信頼性の高い動作を実現します。RS485A および RS485B 信号は容量結合によるアイソレーションが施されており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
-デフォルトでは、120Ω の終端抵抗は実装されていません。ただし、パッケージボックスには表面実装抵抗が 5 個同梱されています。必要に応じて、ユーザー自身でデバイスに抵抗をはんだ付けしてください。
+reComputer R1000 には 3 ピンコネクタを使用した 3 組の RS485 インターフェースが搭載されており、信号と電源の両方が絶縁されているため、産業用およびオートメーション用途において安全かつ信頼性の高い動作を実現します。RS485A および RS485B 信号は容量結合によるアイソレーションを使用しており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
+デフォルトでは、120Ω の終端抵抗は実装されていません。ただし、パッケージボックスには 5 個の表面実装抵抗が同梱されています。必要に応じて、ユーザー自身でデバイスに抵抗をはんだ付けする必要があります。
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
 
@@ -600,31 +601,31 @@ RS485 インターフェースは絶縁電源を使用しているため、RS485
 
 :::
 
-以下は、reComputer の 485 インターフェースに関連するピンのデータテーブルです。
+以下は、データテーブル用の reComputer の 485 インターフェースに関連するピンです。
 
-| RS485         | RS485_POWER_EN         | OS デバイスファイル | P14         | 既定値（High） |
-| ------------- | ---------------------- | ------------------- | ----------- | -------------- |
-| TX5           |                        | /dev/ttyAMA5        | GPIO12      |                |
-| RX5           |                        |                     | GPIO13      |                |
-| TX2           | ID_SD                  | /dev/ttyAMA2        | GPIO0/ID_SD |                |
-| RX2           | ID_SC                  |                     | GPIO1/ID_SC |                |
-| TX3           |                        | /dev/ttyAMA3        | GPIO4       |                |
-| RX3           |                        |                     | GPIO5       |                |
-| RS485_1_DE/RE | (Hight/DE \|\| Low/RE) | /dev/ttyAMA2        | GPIO6       | 既定値 Low     |
-| RS485_2_DE/RE |                        | /dev/ttyAMA3        | GPIO17      | 既定値 Low     |
-| RS485_3_DE/RE |                        | /dev/ttyAMA5        | GPIO24      | 既定値 Low     |
+| RS485         | RS485_POWER_EN         | OS デバイスファイル | P14         | デフォルト(High) |
+| ------------- | ---------------------- | -------------- | ----------- | ------------- |
+| TX5           |                        | /dev/ttyAMA5   | GPIO12      |               |
+| RX5           |                        |                | GPIO13      |               |
+| TX2           | ID_SD                  | /dev/ttyAMA2   | GPIO0/ID_SD |               |
+| RX2           | ID_SC                  |                | GPIO1/ID_SC |               |
+| TX3           |                        | /dev/ttyAMA3   | GPIO4       |               |
+| RX3           |                        |                | GPIO5       |               |
+| RS485_1_DE/RE | (Hight/DE \|\| Low/RE) | /dev/ttyAMA2   | GPIO6       | デフォルト Low |
+| RS485_2_DE/RE |                        | /dev/ttyAMA3   | GPIO17      | デフォルト Low |
+| RS485_3_DE/RE |                        | /dev/ttyAMA5   | GPIO24      | デフォルト Low |
 
 デフォルトでは、RS485 ポートの電源イネーブルポートは High であり、各 RS485 インターフェースは受信状態になっています。簡単な実験を行うことができます。
 
 PC と reComputer-R を接続する 485 ポート。
 
-reComputer のターミナルで次を入力します：
+reComputer の Terminal で次を入力します。
 
 ```shell
 cat /dev/ttyAMA2
 ```
 
-その後、PC 側のシリアルデバッグツールでいくつかのデータを送信すると、reComputer のターミナルウィンドウでそのデータを確認できます。
+その後、コンピュータのシリアルデバッグツールでいくつかのデータを送信すると、reComputer のターミナルウィンドウでデータを確認できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/21.png" /></div>
 <br />
@@ -634,14 +635,14 @@ cat /dev/ttyAMA2
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-reComputer R1000 のブートスイッチは、CM4 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらをブートソースとして選択するかを切り替えることができます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に倒し、Type-C USB インターフェースからシステムを起動できるようにします。
+reComputer R1000 の Boot Switch は CM4 の nRPI_BOOT ピンに接続されています。このスイッチにより、ユーザーは eMMC と USB のどちらをブートソースとして選択するかを切り替えることができます。通常モードでは、スイッチを「BOOT」ラベル側から離した位置に設定し、システムを eMMC から起動させます。逆に、システムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に倒し、システムを Type-C USB インターフェースから起動させます。
 
 <div class="table-center">
 
 | スイッチ位置                                                     | モード      | 説明           | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | 通常モード  | eMMC から起動  | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | フラッシュモード | USB から起動   | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | 通常モード  | eMMC から起動 | Low       |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | フラッシュモード | USB から起動  | High      |
 
 </div>
 
@@ -651,12 +652,12 @@ reComputer R1000 のブートスイッチは、CM4 の nRPI_BOOT ピンに接続
 
 reComputer R1000 には USB Type-C ポートが 1 つと USB Type-A ポートが 2 つ搭載されています。それぞれの機能と説明については、以下の表を参照してください。
 
-| **タイプ** | **数量** | **プロトコル** | **機能**      | **説明**                                                       |
-| ---------- | -------- | -------------- | ------------- | ------------------------------------------------------------ |
-| **Type-C** | *1       | USB2.0         | USB-Device    | シリアルポートデバッグ、イメージ書き込みなどに使用します。    |
-| **Type-A** | *2       | USB2.0         | USB-Host      | フラッシュドライブ、<br /> USB キーボードやマウスなど、さまざまな USB デバイスを接続します。 |
+| **タイプ** | **数量** | **プロトコル** | **機能**     | **説明**                                                      |
+| ---------- | -------- | -------------- | ------------ | ------------------------------------------------------------ |
+| **Type-C** | *1       | USB2.0         | USB-Device   | シリアルポートデバッグ、イメージの書き込みなどに使用します。 |
+| **Type-A** | *2       | USB2.0         | USB-Host     | フラッシュドライブ、<br /> USB キーボードやマウスなど、さまざまな USB デバイスを接続します。 |
 
-USB ハブが検出されているかどうかを確認するには、**lsusb** コマンドを実行します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
+**lsusb** コマンドを実行して、USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
 
 ```shell
 lsusb
@@ -681,7 +682,7 @@ USB ハブが正常に動作している場合、**lsusb** コマンドの出力
 <br />
 reComputer R1000 は、産業用途で一般的に使用される標準サイズの SIM カードスロットを採用しており、25mm x 15mm の標準 SIM カードが必要です。
 :::note
-標準版の reComputer R1000 には 4G モジュールは付属していないことに注意してください。4G 機能が必要な場合は、別途 4G モジュールを追加購入する必要があります。
+標準版の reComputer R1000 には 4G モジュールは付属していません。4G 機能が必要な場合は、別途 4G モジュールを追加購入する必要があります。
 :::
 
 ### SSD スロット
@@ -691,20 +692,20 @@ reComputer R1000 は、産業用途で一般的に使用される標準サイズ
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig04.png" /></div>
 reComputer R1000 の SSD スロットは、容量 128GB、256GB、512GB、1TB の NVMe M.2 2280 SSD を搭載できるように設計されています。このスロットにより、高速なストレージ拡張が可能となり、システムの性能と容量を向上させることができます。
 
-SSD を含むディスクを一覧表示するには、*fdisk -l* コマンドを使用できます。手順は次のとおりです。
+SSD を含むディスクを一覧表示するには、*fdisk -l* コマンドを使用します。手順は次のとおりです。
 
 ```bash
 sudo fdisk -l
 ```
 
-このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、正しく検出されていれば SSD も含まれます。SSD を表すエントリを探してください。通常、/dev/sd に続いて文字が付いた形式（例：/dev/sda、/dev/sdb など）になります。
+このコマンドは、システムに接続されているすべてのディスクの一覧を表示し、SSD が正しく検出されていればそれも含まれます。SSD を表すエントリを探してください。通常、/dev/sd に続いて文字が付いた形式（例：/dev/sda、/dev/sdb など）になります。
 SSD に対応するエントリを特定したら、必要に応じてパーティション作成やフォーマットを行うことができます。
 
 :::note
 SSD カードには主に 2 つの用途があります。<br />
 1.大容量ストレージ：SSD カードは大容量ストレージ用途に利用できます。<br />
-2.イメージを格納したブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとしてだけでなくシステムイメージの保存にも使用し、SSD カードから直接起動できるようにすることです。<br />
-ただし、市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、当社推奨の 1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性の問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
+2.イメージを格納したブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。<br />
+市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、当社推奨の 1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
 :::
 
 ### Mini-PCle スロット
@@ -724,7 +725,7 @@ SSD カードには主に 2 つの用途があります。<br />
 
 </div>
 
-本機には Mini-PCIe インターフェースが 2 つあり、Mini-PCIe スロット 1 と Mini-PCIe スロット 2 と呼びます。スロット 1 は SIM カードスロットに接続されており、USB プロトコルをサポートします。一方、スロット 2 は USB と SPI の両方のプロトコルをサポートしますが、SIM カードスロットには接続されていません。そのため、4G LTE や USB LoRa® などのデバイスはスロット 1 に接続でき、SPI LoRa® および USB LoRa® デバイスはスロット 2 に接続できます。
+このデバイスには、Mini-PCIe スロット 1 と Mini-PCIe スロット 2 の 2 つの Mini-PCIe インターフェースがあります。スロット 1 は SIM カードスロットに接続され、USB プロトコルをサポートします。一方、スロット 2 は USB と SPI の両方のプロトコルをサポートしますが、SIM カードスロットには接続されていません。そのため、4G LTE や USB LoRa® などのデバイスはスロット 1 に接続でき、SPI LoRa® および USB LoRa® デバイスはスロット 2 に接続できます。
 
 ### リセットホール
 
@@ -738,14 +739,14 @@ reComputer R1000 のリセットホール内にはミニプッシュボタンス
 <br />
 <div class="table-center">
 
-| 名称 | タイプ                      | 速度               | PoE                                   |
-| ---- | --------------------------- | ------------------ | ------------------------------------- |
-| ETH0 | CM4 ネイティブ Gigabit Ethernet | 10/100/1000 Mbit/s | 対応（追加モジュールが必要）          |
-| ETH1 | USB から変換                | 10/100 Mbit/s      | 非対応                                |
+| 名称 | タイプ                      | 速度               | PoE                                  |
+| ---- | --------------------------- | ------------------ | ------------------------------------ |
+| ETH0 | CM4 ネイティブギガビット Ethernet | 10/100/1000 Mbit/s | 対応（追加モジュールが必要）        |
+| ETH1 | USB から変換                | 10/100 Mbit/s      | 非対応                               |
 
 </div>
 
-reComputer R1000 には 2 つの Ethernet RJ45 ポートが搭載されています。ETH0 は CM4 ネイティブの Gigabit Ethernet インターフェースで、10/100/1000 Mbit/s の 3 種類の速度をサポートします。追加の PoE モジュールを購入することで、このインターフェースを介して電力供給（PoE）を行い、reComputer R1000 に給電することができます。もう一方の ETH1 は USB から変換されたインターフェースで、10/100 Mbit/s をサポートします。
+reComputer R1000 には 2 つの Ethernet RJ45 ポートが搭載されています。ETH0 は CM4 ネイティブのギガビット Ethernet インターフェースで、10/100/1000 Mbit/s の 3 つの速度に対応しています。追加の PoE モジュールを購入することで、このインターフェースを介して電力供給（PoE）を行い、reComputer R1000 に給電することができます。もう一方の ETH1 は USB から変換されたインターフェースで、10/100 Mbit/s に対応しています。
 
 ### HDMI
 
@@ -785,7 +786,7 @@ sudo hwclock -r
 ```
 
 このコマンドは、RTC に保存されている時刻を読み取り、表示します。
-5. RTC から電源を取り外し、数分待ってから再接続し、RTC の時刻が正しく保持されているかどうかを再度確認します。
+5. RTC から電源を取り外し、数分待ってから再接続し、RTC の時刻が正しく保持されているか再度確認します。
 
 ### ウォッチドッグ
 
@@ -840,7 +841,7 @@ priority  = 1
 sudo systemctl start watchdog
 ```
 
-4. ウォッチドッグの機能をテストするには、次のコマンドを実行してシステムハングをシミュレートします。
+4. ウォッチドッグ機能をテストするには、次のコマンドを実行してシステムハングをシミュレートします。
 
 ```bash
 sudo su
@@ -857,8 +858,8 @@ echo "c" > /proc/sysrq-trigger
 
 ## オプションインターフェースおよびモジュール
 
-reComputer R1000 は豊富な拡張モジュールとアクセサリをサポートしており、幅広いシナリオや要件に対応できます。reComputer R1000 のカスタマイズにご興味がある場合は、詳細について odm@seeed.cc までお問い合わせください。
-以下はアクセサリおよびオプションモジュールの一覧です：
+reComputer R1000 は、豊富な拡張モジュールとアクセサリをサポートしており、幅広いシナリオや要件に対応できます。reComputer R1000 のカスタマイズにご興味がある場合は、詳細について odm@seeed.cc までお問い合わせください。
+アクセサリおよびオプションモジュールの一覧は次のとおりです：
 
 <div class="table-center">
 <table >
@@ -899,7 +900,7 @@ reComputer R1000 は豊富な拡張モジュールとアクセサリをサポー
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={8} style={{height: 18, width: '25%'}}>4G 機能には 4G モジュールと 4G アンテナが必要であり、GPS 機能には 4G モジュールと GPS アンテナが必要です</td>
+      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={8} style={{height: 18, width: '25%'}}>4G 機能には 4G モジュールと 4G アンテナが、GPS 機能には 4G モジュールと GPS アンテナが必要です</td>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={6} style={{height: 18, width: '25%'}}>4G モジュール</td>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>LTE Cat 4 EC25-AFXGA-Mini-PCIe モジュール - 北米向け</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>113991134</td>
@@ -967,7 +968,7 @@ reComputer R1000 は豊富な拡張モジュールとアクセサリをサポー
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}> </td>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>UPS</td>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>SuperCAP UPS LTC3350 モジュール</td>
+      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>SuperCAP UPS LTC3350 Module</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>
     </tr>
   </tbody>
@@ -977,15 +978,15 @@ reComputer R1000 は豊富な拡張モジュールとアクセサリをサポー
 reComputer R1000 メインボードには 2 つの Mini-PCIe スロットがあります。Mini-PCIe スロット 1 は USB プロトコルを使用する 4G モジュールと LoRa® モジュールをサポートし、Mini-PCIe スロット 2 は USB および SPI プロトコルを使用する LoRa® モジュールをサポートします。
 
 :::note
-基板上に 2 つの LoRa® モジュールを同時に挿すことはできません。
+ボード上に 2 つの LoRa® モジュールを同時に挿すことはできません。
 :::
 
 ### Wi-Fi/BLE
 
-reComputer R1000-10 は、オンボード Wi-Fi/BLE 搭載バージョンの CM4 を採用しており、Wi-Fi/BLE パラメータは CM4 と同一です。詳細なパラメータ情報については、Raspberry Pi 公式サイトを参照してください。
+reComputer R1000-10 は、オンボード Wi-Fi/BLE バージョンの CM4 を搭載しており、CM4 と同じ Wi-Fi/BLE パラメータを提供します。詳細なパラメータ情報については、Raspberry Pi 公式ウェブサイトを参照してください。
 
 :::note
-reComputer R1000 の金属筐体のため、Wi-Fi/BLE 信号が金属外装を透過しにくい場合がある点に注意してください。Wi-Fi/BLE 機能が必要な場合は、外付けアンテナを購入し、[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-wi-fible-antenna)。
+reComputer R1000 の金属製筐体のため、Wi-Fi/BLE 信号が金属外装を通過しにくい場合がある点に注意が必要です。Wi-Fi/BLE 機能が必要な場合は、外部アンテナを購入し、[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-wi-fible-antenna)。
 :::
 
 #### Wi-Fi に接続する
@@ -1003,7 +1004,7 @@ sudo nmcli dev wifi connect network-ssid password "network-password"
 sudo nmcli --ask dev wifi connect network-ssid #If you don't want to write your password on the screen, you can use the --ask option.
 ```
 
-ステップ 3. デバイスの電源投入後、自動的に Wi-Fi に接続されます。保存された WiFi 情報を削除したい場合：
+ステップ 3. デバイスの電源を入れると、自動的に Wi-Fi に接続されます。保存されている Wi-Fi 情報を削除したい場合は：
 
 ```bash
 nmcli con del network-ssid
@@ -1021,14 +1022,14 @@ sudo systemctl status bluetooth
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/32.png" /></div>
 <br />
-Bluetooth サービスのステータスが active でない場合は、まず有効化する必要があります。その後、デバイス起動時に自動的に開始されるようサービスを開始します。
+Bluetooth サービスのステータスが active でない場合は、まず有効にする必要があります。その後、デバイス起動時に自動的に開始されるようにサービスを開始します。
 
 ```bash
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 ```
 
-bluetoothctl ツールを使用して Bluetooth に接続および管理できます。以下は一般的なコマンドとその説明です：
+bluetoothctl ツールを使用して Bluetooth に接続および管理できます。以下は、いくつかの一般的なコマンドとその説明です：
 
 ```bash
 #Scan attachments to the device
@@ -1085,7 +1086,7 @@ exit
 reComputer R1000 メインボードには 2 つの Mini-PCIe スロットがあり、Mini-PCIe スロット 1 は USB プロトコルを使用する 4G モジュールをサポートします。Quectel 社の EC25 4G モジュールは、reComputer R1000 との互換性が十分にテストされています。
 
 :::note
-4G 機能が必要な場合は、対応する 4G モジュールと外付けアンテナを購入する必要がある点に注意してください。[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna)。
+4G 機能が必要な場合は、対応する 4G モジュールと外部アンテナを購入する必要があることに注意してください。[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna)。
 :::
 
 #### ECM モードで 4G モジュールに接続する
@@ -1119,7 +1120,7 @@ sudo minicom -D /dev/ttyUSB2 -b 1152008n1
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image31.png"/></div>
 
-**ステップ 5.** 4G モジュールを有効にして 4G ネットワークに接続します
+**ステップ 5.** 4G モジュールが 4G ネットワークに接続できるようにします
 
 同じ minicom のシリアルウィンドウで、次のように入力してください：
 
@@ -1133,7 +1134,7 @@ AT+QCFG="usbnet"
 AT+QCFG="usbnet",1
 ```
 
-次に、モデムの再起動を強制するため、以下のコマンドを入力します：
+次に、モデムの再起動を強制するために、次のコマンドを入力します：
 
 ```sh
 AT+CFUN=1,1
@@ -1141,9 +1142,9 @@ AT+CFUN=1,1
 
 その後、再起動するか、モジュールが SIM カードのキャリアからインターネット接続を取得するまでしばらく待ちます。
 
-また、`ifconfig` コマンドを使用して reComputer R1000 のネットワーク状態を確認することもできます。
+reComputer R1000 のネットワーク状態を確認するには、`ifconfig` コマンドを使用することもできます。
 
-ECM モードでは、使用可能な新しいネットワークインターフェース `usb0` が作成されます。
+ECM モードでは、使用できる新しいネットワークインターフェース `usb0` が作成されます。
 
 
 #### QMI モードで 4G モジュールに接続する
@@ -1189,11 +1190,11 @@ China Telecom: "ctnet"
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-1.png"/></div>
 
-ifconfig を入力して、IP アドレスが割り当てられているか確認します。
+ifconfig を入力して、IP アドレスが割り当てられているか確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-2.png"/></div>
 
-ネットワーク接続テストが成功したら、システム起動時に 4G モジュールが自動的に接続されるよう、systemd サービスを作成できます。
+ネットワーク接続テストが成功したら、システム起動時に 4G モジュールが自動的に接続されるように、systemd サービスを作成できます。
 
 **ステップ 4.** systemd サービスファイルを作成します。
 
@@ -1246,9 +1247,9 @@ sudo systemctl start auto_4G
 
 その後、再起動するか、モジュールが SIM カードのキャリアからインターネット接続を取得するまでしばらく待ちます。
 
-また、`ifconfig` コマンドを使用して reComputer R1000 のネットワーク状態を確認することもできます。
+reComputer R1000 のネットワーク状態を確認するには、`ifconfig` コマンドを使用することもできます。
 
-QMI モードでは、使用可能な新しいネットワークインターフェース `wwan0` が作成されます。
+QMI モードでは、使用できる新しいネットワークインターフェース `wwan0` が作成されます。
 
 
 
@@ -1256,9 +1257,9 @@ QMI モードでは、使用可能な新しいネットワークインターフ�
 ### LoRa® モジュール
 
 :::note
-2 つの Mini-PCIe スロットはいずれも USB プロトコルを使用する LoRa® モジュールをサポートします。一方で、Mini-PCIe スロット 2 は SPI プロトコルを使用する LoRa® モジュールもサポートします。Seeed Studio の WM1302 モジュールは、reComputer R1000 との互換性が十分にテストされています。ただし、USB バージョンは 4G モジュール用に設計された Mini PCIe を使用する必要があるため、4G モジュールと LoraWAN® モジュールの両方を使用したい場合は、WM1302 LoraWAN® モジュールの SPI バージョンを選択してください。
+2 つの Mini-PCIe スロットはいずれも USB プロトコルを使用する LoRa® モジュールをサポートします。一方、Mini-PCIe スロット 2 は SPI プロトコルを使用する LoRa® モジュールもサポートします。Seeed Studio の WM1302 モジュールは、reComputer R1000 との互換性が十分にテストされています。ただし、USB バージョンは 4G モジュール用に設計された Mini PCIe を使用する必要があるため、4G モジュールと LoraWAN® モジュールの両方を使用したい場合は、WM1302 LoraWAN® モジュールの SPI バージョンを選択してください。
 <br />
-LoRa® 機能が必要な場合は、対応する LoRa® モジュールと外付けアンテナを購入する必要がある点に注意してください。
+LoRa® 機能が必要な場合は、対応する LoRa® モジュールと外部アンテナを購入する必要があることに注意してください。
 :::
 
 <!-- Code -->
@@ -1279,7 +1280,7 @@ import TabItem from '@theme/TabItem';
 
 <br />
 
-**Step 1.** `WM1302 SPI LoraWAN® Module` を、*`Lora`* シルク印刷が見える `LoraWAN® Mini PCIe slot` に取り付けるために、[LoraWAN® Module Hardware assembly](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) ガイドを参照してください。
+**Step 1.** `Lora` シルクスクリーンが見えるはずの `LoraWAN® Mini PCIe slot` に `WM1302 SPI LoraWAN® Module` を取り付けるには、[LoraWAN® Module Hardware assembly](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) ガイドを参照してください。
 
 **Step 2.** コマンドラインで `sudo raspi-config` と入力して、Raspberry Pi Software Configuration Tool を開きます：
 
@@ -1361,7 +1362,7 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**Step 1.** `WM1302 USB LoraWAN®  Module` を、*`4G`* シルク印刷が見える `4G Mini PCIe slot` に取り付けるために、[LoraWAN® Module Hardware assembly](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) ガイドを参照してください。
+**Step 1.** `4G` シルクスクリーンが見えるはずの `4G Mini PCIe slot` に `WM1302 USB LoraWAN®  Module` を取り付けるには、[LoraWAN® Module Hardware assembly](/ja/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) ガイドを参照してください。
 
 **Step 2.** コマンドラインで `sudo raspi-config` と入力して、Raspberry Pi Software Configuration Tool を開きます：
 
@@ -1460,17 +1461,17 @@ cd ~/sx1302_hal/packet_forwarder
 
 ### PoE
 
-給電デバイスとして動作する reComputer R1000 は、PoE 電源モジュールを追加することで IEEE 802.3af 規格をサポートできます。ユーザーは、Ethernet PoE 機能を実現するために、デバイスを分解して PoE モジュールを取り付ける必要があります。
+給電デバイスとして動作する reComputer R1000 は、PoE 電源モジュールを追加することで IEEE 802.3af 規格をサポートできます。ユーザーは、Ethernet PoE 機能を実現するために PoE モジュールを取り付ける際、デバイスを分解する必要があります。
 
 :::note
-reComputer R1000 は PoE 電源供給をサポートしていますが、標準製品にはデフォルトで PoE モジュールは含まれていません。Seeed はバッチカスタマイズ注文に対して、PoE のはんだ付けおよび組み立てサービスを提供できます。ただし、顧客がサンプルをテストしている場合は、[PoE モジュールを自分ではんだ付けおよび組み立てる](/ja/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module) 必要があります。
+reComputer R1000 は PoE 電源供給をサポートしていますが、標準製品にはデフォルトで PoE モジュールは含まれていません。Seeed はバッチカスタマイズ注文向けに PoE のはんだ付けおよび組立サービスを提供できます。ただし、顧客がサンプルを評価している場合は、[PoE モジュールを自分ではんだ付けおよび組み立てる](/ja/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module) 必要があります。
 :::
 
 ### M.2 スロット
 
-reComputer R1000 は、基板上の 2 つの Mini-PCIe スロットの下にある PCIe スロット (J62) を使用することで、2280 NVMe SSD と AI アクセラレータ (Hailo) をサポートします。CM4 の PCIe は Gen2.0 であり、理論上の最大速度は 5Gbps であることに注意することが重要です。Gen3.0 以上の SSD を使用している場合、SSD の最大速度を達成できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み取り速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することができます。
+reComputer R1000 は、基板上の 2 つの Mini-PCIe スロットの下にある PCIe スロット (J62) を使用することで、2280 NVMe SSD および AI アクセラレータ (Hailo) をサポートします。CM4 の PCIe は Gen2.0 であり、理論上の最大速度は 5Gbps であることに注意することが重要です。Gen3.0 以上の SSD を使用している場合、SSD の最大速度を発揮できない可能性があります。テストの結果、SSD を搭載した reTerminal DM は、最大書き込み速度 230MB/s、最大読み取り速度 370MB/s を達成できます。どの SSD が互換性があるか不明な場合は、以下のアクセサリリストに従って購入することができます。
 
-[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-ssd)。
+[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-ssd).
 
 <div class="table-center">
 
@@ -1498,18 +1499,18 @@ reComputer R1000 は、基板上の 2 つの Mini-PCIe スロットの下にあ�
 </div>
 
 :::note
-次の点に注意してください：<br />
+次の点にご注意ください：<br />
 1- 速度テストの結果は、SSD モデル、テスト方法、およびテスト環境によって異なる場合があります。ここで示す値は Seeed のラボで取得した参考値です。<br />
 
 SSD カードには主に 2 つの用途があります：<br />
-1.大容量ストレージ：SSD カードは大容量ストレージ用途に使用できます。<br />
-2.イメージ付きブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。<br />
-市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意することが重要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか分からない場合は、当社が推奨する **1TB SSD(SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html))** を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性の問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えます。
+1.大容量ストレージ：SSD カードは大容量ストレージ用途に利用できます。<br />
+2.イメージを格納したブートドライブ：もう 1 つの用途は、SSD を大容量ストレージとして使用すると同時にシステムイメージを保存し、SSD カードから直接起動できるようにすることです。<br />
+市場に出回っているすべての SSD カードが 2 番目の用途をサポートしているわけではないことに注意が必要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか分からない場合は、当社推奨の **1TB SSD(SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html))** を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みであり、互換性問題のリスクを軽減し、試行錯誤にかかるコストを最小限に抑えることができます。
 :::
 
-### 暗号チップ TPM 2.0
+### 暗号化チップ TPM 2.0
 
-TPM は、Trusted Computing Group (TCG) TPM 2.0 仕様に準拠した Infineon の OPTIGA™ TPM SLB9670 を搭載しており、reComputer R1000 向けの暗号チップとして推奨されています。このチップは、基板上のポート J13 に適用される SPI インターフェースを備えており、プラットフォームの完全性のための信頼の基点、リモート認証、および暗号サービスを有効にします。
+TPM は、Trusted Computing Group (TCG) TPM 2.0 仕様に準拠した Infineon の OPTIGA™ TPM SLB9670 を搭載しており、reComputer R1000 向けの暗号化チップとして推奨されています。このチップは、基板上のポート J13 に適用される SPI インターフェースを備えており、プラットフォームの完全性のための信頼の基点、リモート認証、および暗号サービスを有効にします。
 
 :::note
 [組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
@@ -1521,7 +1522,7 @@ TPM 2.0 モジュールをデバイスに接続した場合、以下のコード
 ls /dev | grep tpm
 ```
 
-出力に **tpm0** と **tpmrm0** が表示されていれば、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識されアクセス可能であることを示しており、良好な状態です。デバイスが存在しアクセス可能であることを確認したうえで、TPM 関連の機能やアプリケーションを使用することができます。
+出力に **tpm0** と **tpmrm0** が表示されていれば、TPM（Trusted Platform Module）デバイスが検出され、システム上で利用可能であることを意味します。これは TPM ハードウェアが認識されアクセス可能であることを示しており、良好な状態です。デバイスが存在しアクセス可能であることを確認したうえで、TPM 関連の機能やアプリケーションを使用に進むことができます。
 
 ### UPS
 
@@ -1593,7 +1594,7 @@ while True:
 
 ### DSI & Speaker
 
-特別な用途のために、基板上には 1 つの DSI（J24）と 1 つの 4 ピンスピーカー（J7）インターフェースが予約されています。ユーザーは自身のニーズに応じてプラグインを購入する必要があります。
+1 つの DSI（J24）と 1 つの 4 ピンスピーカー（J7）インターフェースが、特別な用途のために基板上に予約されています。ユーザーは自身のニーズに応じてプラグインを購入する必要があります。
 
 ## 追加リソース
 
@@ -1618,7 +1619,7 @@ while True:
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -10,30 +10,34 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-20'
+updatedAt: '2026-03-04'
 url: https://wiki.seeedstudio.com/pt-br/reServer_Industrial_Getting_Started/
 ---
 
-# Primeiros Passos com o reServer Industrial
+# Introdução ao reServer Industrial
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png"/></div>
 
-A série reServer Industrial oferece servidores NVR (Network Video Recorder) com IA, compactos e sem ventoinha, incluindo módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA variando de 20 TOPS a 100 TOPS. O reServer Industrial vem pré-instalado com o Jetpack 5.1.1, simplificando o desenvolvimento, ideal para construir um VMS (Video Management System) juntamente com poderosos recursos de IA, o que traz transformação digital em setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
+A série reServer Industrial oferece servidores NVR (Network Video Recorder) compactos, sem ventoinha e habilitados para IA, incluindo módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA variando de 20 TOPS a 100 TOPS. O reServer Industrial vem pré-instalado com Jetpack 5.1.1, simplifica o desenvolvimento, é ideal para construir VMS (Video Management System) juntamente com poderosos recursos de IA, o que traz transformação digital para setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
 
 O reServer Industrial vem com um dissipador de calor passivo e um design sem ventoinha, tornando-o ideal para uso em ambientes exigentes. O dissipador de calor passivo permite um resfriamento eficiente sem a necessidade de uma ventoinha, reduzindo o risco de falha de componentes devido a poeira ou outros contaminantes. O design sem ventoinha também reduz os níveis de ruído e o consumo de energia, tornando-o adequado para uso em ambientes sensíveis a ruído e minimizando os custos de energia.
 
-O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE para fornecer energia via Ethernet a dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A porta GbE restante é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
+O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE para fornecer energia via Ethernet para dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A porta GbE restante é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
+
+:::note
+Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+:::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar agora ➜</font></span></strong></a>
+</div>
 
-## Características
+## Recursos
 
 - **Servidor de Borda de IA Compacto e sem Ventoinha:** Alimentado por módulos NVIDIA Jetson™ Orin Nano/Orin NX, com desempenho de IA variando de 20 TOPS a 100 TOPS, faixa de temperatura mais ampla de -20 ~ 60°C com fluxo de ar de 0,7 m/s
-- **Processamento Multi-Fluxo:** 5× GbE RJ45 (4 para 802.3af PSE), lida com múltiplos fluxos com processamento em tempo real
-- **Armazenamento Expansível:** 2 compartimentos para unidades de 2,5" SATA HDD/SSD, além de um soquete M.2 2280 para SSD NVMe
+- **Processamento Multi-Stream:** 5× GbE RJ45 (4 para 802.3af PSE), lida com múltiplos streams com processamento em tempo real
+- **Armazenamento Expansível:** 2 baias para unidades SATA HDD/SSD de 2,5", além de um soquete M.2 2280 para SSD NVMe
 - **Interfaces Industriais:** Inclui porta COM, portas DI/DO, porta CAN, USB 3.1 e módulo TPM2.0 opcional
 - **Conectividade Híbrida:** Suporta 5G/4G/LTE/LoRaWAN® (módulo opcional) com slot para cartão Nano SIM
 - **Certificações:** FCC, CE, UKCA, ROHS, KC
@@ -81,12 +85,12 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     <tr>
       <td>CPU</td>
       <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos, 64 bits; 2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits, 1,5MB L2 + 4MB L3</td>
+      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits, 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memória</td>
-      <td>16GB 128-bit LPDDR5 102,4GB/s</td>
-      <td>8GB 128-bit LPDDR5 102,4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
       <td>8GB 128-bit LPDDR5 68 GB/s</td>
       <td>4GB 64-bit LPDDR5 34 GB/s</td>
     </tr>
@@ -110,7 +114,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
       <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD (inclui M.2 NVMe SSD 128G)</td>
     </tr>
     <tr>
-      <td rowSpan={9}>E/S</td>
+      <td rowSpan={9}>I/O</td>
       <td>Ethernet</td>
       <td colSpan={4}>1× LAN0 RJ45 GbE (10/100/1000Mbps)</td>
     </tr>
@@ -121,7 +125,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     <tr>
       <td>USB</td>
       <td colSpan={4}>4× USB3.1, 1× USB2.0 Tipo C (modo Device), 1× USB2.0 Tipo C para Debug UART &amp; RP2040</td>
-    </tr>
+    </tr]
     <tr>
       <td>DI/DO</td>
       <td colSpan={4}>4×DI,4×DO,3×GND_DI,2×GND_DO,1×GND_ISO,1×CAN</td>
@@ -131,13 +135,13 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
       <td colSpan={4}>1× DB9 (RS232/RS422/RS485)</td>
     </tr>
     <tr>
-      <td>Vídeo</td>
+      <td>Display</td>
       <td colSpan={2}>1×HDMI 2.1 Tipo A 7680x4320 a 30 Hz</td>
       <td colSpan={2}>1×HDMI 1.4 Tipo A 3840x2160 a 30 Hz</td>
     </tr>
     <tr>
       <td>SATA</td>
-      <td colSpan={4}>2 compartimentos para unidades compatíveis com 2,5" SATA HDD/SSD (SATA III 6,0Gbps)</td>
+      <td colSpan={4}>2 baias para suportar SATA HDD/SSD de 2,5" (SATA III 6.0Gbps)</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -145,7 +149,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     </tr>
     <tr>
       <td>Botão</td>
-      <td colSpan={4}>Botão de Reset, Botão de Recovery</td>
+      <td colSpan={4}>Botão de Reset, Botão de Recuperação</td>
     </tr>
     <tr>
       <td rowSpan={5}>Expansão</td>
@@ -154,7 +158,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td colSpan={4}>M.2 Key B (3042/3052) com suporte a 4G/5G (Módulo opcional) </td>
+      <td colSpan={4}>M.2 Key B (3042/3052) suporta 4G/5G (Módulo opcional) </td>
     </tr>
     <tr>
       <td>Ventoinha</td>
@@ -180,11 +184,11 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     <tr>
       <td rowSpan={9}>Mecânico</td>
       <td>Dimensões (L x P x A)</td>
-      <td colSpan={4}>194,33mm×187mm×95,5mm</td>
+      <td colSpan={4}>194.33mm×187mm×95.5mm</td>
     </tr>
     <tr>
       <td>Peso</td>
-      <td colSpan={4}>2,8kg</td>
+      <td colSpan={4}>2.8kg</td>
     </tr>
     <tr>
       <td>Instalação</td>
@@ -192,7 +196,7 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     </tr>
     <tr>
       <td>Temperatura de Operação</td>
-      <td colSpan={4}>-20 ~ 60°C com 0,7 m/s</td>
+      <td colSpan={4}>-20 ~ 60°C com 0.7m/s</td>
     </tr>
     <tr>
       <td>Umidade de Operação</td>
@@ -204,18 +208,18 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
     </tr>
     <tr>
       <td>Umidade de Armazenamento</td>
-      <td colSpan={4}>60°C@ 95% UR (Sem condensação)</td>
+      <td colSpan={4}>60°C@ 95% RH (Sem condensação)</td>
     </tr>
     <tr>
       <td>Vibração</td>
-      <td colSpan={4}>3 Grms @ 5 ~ 500 Hz, aleatória, 1 hr/eixo</td>
+      <td colSpan={4}>3 Grms @ 5 ~ 500 Hz, aleatório, 1 hr/eixo</td>
     </tr>
     <tr>
       <td>Choque</td>
-      <td colSpan={4}>Aceleração de pico de 50G (duração de 11 ms, eMMC, microSD ou mSATA)</td>
+      <td colSpan={4}>Aceleração de pico de 50G (duração de 11 mseg., eMMC, microSD ou mSATA)</td>
     </tr>
     <tr>
-      <td colSpan={2}>SO</td>
+      <td colSpan={2}>OS</td>
       <td colSpan={4}>Jetpack 5.1.1 (ou superior) pré-instalado (fornece sistema operacional Linux com pacote de suporte à placa) </td>
     </tr>
     <tr>
@@ -242,10 +246,10 @@ O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE 
 ## Gravar o JetPack
 
 :::danger
-O dispositivo virá pré-instalado com o JetPack 5.1.1. Se não houver requisitos especiais, você não precisa regravar o sistema.
+O dispositivo virá pré-instalado com JetPack 5.1.1. Se não houver requisitos especiais, você não precisa regravar o sistema.
 :::
 
-O reServer Industrial vem pré-instalado com o JetPack 5.1.1 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes do SDK, como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o JetPack no SSD incluído ou em um novo SSD, pode seguir as etapas abaixo. Atualmente, fornecemos apenas orientações para o JP5.1.1 e continuaremos atualizando isso no futuro.
+O reServer Industrial vem pré-instalado com JetPack 5.1.1 em um SSD de 128GB juntamente com os drivers necessários. Isso inclui componentes do SDK como CUDA, CUDNN e TensorRT. No entanto, se você quiser regravar o Jetpack no SSD incluído ou em um novo SSD, você pode seguir as etapas abaixo. Atualmente, fornecemos orientação apenas para JP5.1.1 e continuaremos atualizando isso no futuro.
 
 :::note
 Se você quiser usar SSDs com o reServer Industrial, recomendamos apenas que escolha as versões de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) e [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) da Seeed.
@@ -253,19 +257,19 @@ Se você quiser usar SSDs com o reServer Industrial, recomendamos apenas que esc
 
 ### Pré-requisitos
 
-Você precisa preparar o seguinte hardware antes de começar com o reServer Industrial
+Você precisa preparar o seguinte hardware antes de começar a usar o reServer Industrial
 
 - reServer Industrial
-- Adaptador de energia fornecido com cabo de alimentação ([versão US](https://www.seeedstudio.com/AC-US-p-5122.html) ou [versão EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
-- PC Host com Ubuntu (nativo ou VM usando VMware Workstation Player)
+- Fonte de alimentação fornecida com cabo de energia ([versão US](https://www.seeedstudio.com/AC-US-p-5122.html) ou [versão EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
+- PC host com Ubuntu (nativo ou VM usando VMware Workstation Player)
 - Cabo de transmissão de dados USB Tipo-C
 - Monitor externo
 - Cabo HDMI
 - Teclado e mouse
 
-### Entrar no Modo de Recuperação Forçada
+### Entrar no modo Force Recovery
 
-Agora você precisa entrar no modo de recuperação na placa reServer Industrial para poder gravar o dispositivo. Conecte um cabo USB Tipo-C entre a porta **DEVICE** e o seu PC. Use um pino e insira no orifício **REC** para pressionar o botão de recuperação e, enquanto o mantém pressionado, conecte o **conector de alimentação do bloco terminal de 2 pinos** incluído ao conector de alimentação na placa (certifique-se de usar os 2 parafusos para fixar o terminal no lugar) e conecte o adaptador de energia incluído com um cabo de alimentação para ligar a placa
+Agora você precisa entrar no modo de recuperação na placa reServer Industrial para poder gravar o dispositivo. Conecte um cabo USB Tipo-C entre a porta **DEVICE** e o seu PC. Use um pino e insira no orifício **REC** para pressionar o botão de recuperação e, enquanto o mantém pressionado, conecte o **conector de alimentação de bloco terminal de 2 pinos** incluído ao conector de alimentação na placa (certifique-se de usar os 2 parafusos para fixar o terminal no lugar) e conecte o adaptador de energia incluído com um cabo de energia para ligar a placa
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reServer-Industrial/4.jpg"/></div>
 
@@ -273,18 +277,18 @@ Agora você precisa entrar no modo de recuperação na placa reServer Industrial
 Certifique-se de ligar o dispositivo enquanto mantém o botão RECOVERY pressionado, caso contrário ele não entrará no modo de recuperação
 :::
 
-No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você utiliza, então a placa está em modo de recuperação forçada.
+No PC host com Ubuntu, abra uma janela do Terminal e insira o comando **lsusb**. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
 - Para Orin Nano 8GB: **0955:7523 NVidia Corp**
 - Para Orin Nano 4GB: **0955:7623 NVidia Corp**
 
-### Diferentes Métodos de Gravação
+### Diferentes métodos de gravação
 
 Aqui oferecemos 2 métodos diferentes de gravação.
 
-1. Baixar a imagem completa do sistema que preparamos, que inclui NVIDIA JetPack, drivers de periféricos de hardware e gravá-la no dispositivo
+1. Baixar a imagem completa do sistema que preparamos, que inclui NVIDIA JetPack, drivers de periféricos de hardware e gravar no dispositivo
 2. Baixar o NVIDIA L4T oficial, usar os drivers de periféricos de hardware incluídos e gravar no dispositivo
 
 :::note
@@ -299,7 +303,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="method1" label="Método 1">
 
-#### Baixar Imagem do Sistema
+#### Baixar imagem do sistema
 
 - **Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente à placa que você está usando.
 
@@ -310,8 +314,8 @@ import TabItem from '@theme/TabItem';
         <th>Dispositivo</th>
         <th>Versão do JetPack</th>
         <th>Versão do L4T</th>
-        <th>Link da Imagem</th>
-        <th>Link Alternativo da Imagem</th>
+        <th>Link da imagem</th>
+        <th>Link alternativo da imagem</th>
       </tr>
     </thead>
     <tbody>
@@ -447,7 +451,7 @@ import TabItem from '@theme/TabItem';
         <td>
           <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdqRMLVCzHtIkHUShgZ91xoBK367uzXyC_mTGQOzlfJhyQ?e=wgOhwj" target="_blank" rel="noopener noreferrer">Download2</a>
         </td>
-      </tr>
+      </tr]
       <tr>
         <td>6.1</td>
         <td>36.4</td>
@@ -529,32 +533,32 @@ import TabItem from '@theme/TabItem';
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
-- **Etapa 2:** Extraia o arquivo gerado
+- **Step 2:** Extract the generated file
 
 ```sh
 tar -xvf <file_name>.tar.gz
 ```
 
-#### Gravar no Jetson
+#### Flash to Jetson
 
-- **Etapa 1:** Navegue até o arquivo extraído anteriormente e execute o comando de gravação da seguinte forma
+- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_reserver-orin-industrial
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for bem-sucedida, você verá a saída abaixo
+Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Etapa 2:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
+- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
 
-Depois disso, a placa será reiniciada e estará pronta para uso!
+After that, the board will reboot and will be ready to use!
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
@@ -577,7 +581,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 #### Baixar e preparar os drivers
 
-- **Etapa 1:** Baixe os arquivos de driver para o seu PC com Ubuntu correspondentes à placa que você está usando
+- **Step 1:** Baixe os arquivos de driver para o seu PC Ubuntu correspondentes à placa que você está usando
 
 <table>
   <thead>
@@ -608,24 +612,24 @@ sudo ./tools/l4t_flash_prerequisites.sh
   </tbody>
 </table>
 
-- **Etapa 2:** Mova os drivers de periféricos baixados para a mesma pasta do diretório **Linux_For_Tegra**
+- **Step 2:** Mova os drivers de periféricos baixados para a mesma pasta do diretório **Linux_For_Tegra**
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
 
-- **Etapa 3:** Extraia o arquivo .zip de driver baixado. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
+- **Step 3:** Extraia o arquivo .zip de driver baixado. Aqui instalamos adicionalmente o pacote **unzip**, que é necessário para descompactar o arquivo .zip
 
 ```sh
 sudo apt install unzip
 sudo unzip xxxx.zip # Replace xxxx with the driver file name
 ```
 
-Aqui será perguntado se você deseja substituir os arquivos. Digite A e pressione ENTER para substituir os arquivos necessários
+Aqui será perguntado se deseja substituir os arquivos. Digite A e pressione ENTER para substituir os arquivos necessários
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/30.png"/></div>
 
 #### Gravar no Jetson
 
-- **Etapa 1:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de gravação da seguinte forma
+- **Step 1:** Navegue até o diretório **Linux_for_Tegra** e execute o comando de gravação como a seguir
 
 ```sh
 cd Linux_for_Tegra
@@ -636,7 +640,7 @@ Agora ele começará a gravar a imagem do sistema na placa. Se a gravação for 
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Etapa 2:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
+- **Step 2:** Conecte a placa a um monitor usando o conector HDMI na placa e finalize a configuração inicial
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -646,7 +650,7 @@ Depois disso, a placa será reiniciada e você verá o seguinte
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Etapa 3:** Abra uma janela de terminal no dispositivo, execute o seguinte, o dispositivo será reiniciado e ficará pronto para uso!
+- **Step 3:** Abra uma janela de terminal no dispositivo, execute o seguinte, o dispositivo será reiniciado e ficará pronto para uso!
 
 ```sh
 systemctl disable nvgetty.service
@@ -654,7 +658,7 @@ sudo depmod -a
 sudo reboot
 ```
 
-Além disso, se você quiser instalar componentes de SDK como CUDA, cuDNN, TensorRT, execute o seguinte
+Além disso, se você quiser instalar componentes do SDK como CUDA, cuDNN, TensorRT, execute o seguinte
 
 ```sh
 sudo apt update
@@ -668,22 +672,22 @@ sudo apt install nvidia-jetpack -y
 
 <!-- Code END -->
 
-## Uso de Hardware e Interfaces
+## Uso de hardware e interfaces
 
 :::info
-  Para saber mais sobre como usar todo o hardware e interfaces na placa reServer Industrial, você precisa seguir este [**wiki**](/pt-br/reserver_industrial_hardware_interface_usage):
+  Para saber mais sobre como usar todo o hardware e as interfaces na placa reServer Industrial, você precisa seguir este [**wiki**](/pt-br/reserver_industrial_hardware_interface_usage):
 :::
 
 ## Recursos
 
 (alterar os links)
 
-- [Datasheet do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
-- [Guia de Referência do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
-- [Comparação de Dispositivos NVIDIA Jetson e Placas Carrier](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
+- [Folha de dados do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
+- [Guia de referência do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
+- [Comparação de dispositivos NVIDIA Jetson e placas carrier](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [Arquivo 3D do reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-3D.stp)
 
-## Suporte Técnico
+## Suporte técnico
 
 Não hesite em enviar problemas em nosso [fórum](https://forum.seeedstudio.com/).
 

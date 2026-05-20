@@ -9,8 +9,8 @@ sku: 114110247,114110248,114110250,114110249
 last_update:
   date: 09/22/2023
   author: Lakshantha
-createdAt: '2025-05-27'
-updatedAt: '2026-03-05'
+createdAt: '2023-06-08'
+updatedAt: '2026-03-04'
 url: https://wiki.seeedstudio.com/ja/reServer_Industrial_Getting_Started/
 ---
 
@@ -18,25 +18,29 @@ url: https://wiki.seeedstudio.com/ja/reServer_Industrial_Getting_Started/
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png"/></div>
 
-reServer Industrial シリーズは、NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載したファンレスでコンパクトな AI 対応 NVR（Network Video Recorder）サーバーを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。reServer Industrial は Jetpack 5.1.1 をプリインストールしており、開発を簡素化し、強力な AI 機能とともに VMS（Video Management System）を構築するのに最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの産業分野におけるデジタル変革をもたらします。
+reServer Industrial シリーズは、NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載したファンレスでコンパクトな AI 対応 NVR（Network Video Recorder）サーバーを提供し、20 TOPS から 100 TOPS までの AI 性能を実現します。reServer Industrial は Jetpack 5.1.1 をプリインストールしており、開発を簡素化し、強力な AI 機能と組み合わせて VMS（Video Management System）を構築するのに最適で、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなど、さまざまな業界におけるデジタルトランスフォーメーションを実現します。
 
-reServer Industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを必要とせず効率的な冷却が可能となり、ほこりやその他の汚染物質による部品故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、騒音に敏感な環境での使用に適しており、エネルギーコストの最小化にもつながります。
+reServer Industrial はパッシブヒートシンクとファンレス設計を採用しており、要求の厳しい環境での使用に最適です。パッシブヒートシンクによりファンを必要とせず効率的な冷却が可能となり、ほこりやその他の汚染物質によるコンポーネント故障のリスクを低減します。ファンレス設計は騒音レベルと消費電力も低減するため、静音性が求められる環境での使用に適しており、エネルギーコストの削減にもつながります。
 
-reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給します。これにより別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。残りの GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
+reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4 つは PoE PSE ポートで、IP カメラなどのデバイスに Ethernet 経由で電力を供給できます。これにより別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でもネットワーク機器を容易に展開できます。残りの GbE ポートはネットワークスイッチやルーターへの接続に使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
+
+:::note
+ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズが可能です。
+:::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐカスタマイズ ➜</font></span></strong></a>
+</div>
 
 ## 特長
 
-- **ファンレスコンパクト Edge AI サーバー：** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載し、20 TOPS から 100 TOPS までの AI 性能を実現、動作温度範囲は -20 ～ 60°C（0.7m/s の気流条件）
-- **マルチストリーム処理：** 5× GbE RJ45（うち 4 ポートは 802.3af PSE）、複数ストリームをリアルタイム処理
-- **拡張可能なストレージ：** 2.5" SATA HDD/SSD 用の 2 つのドライブベイに加え、NVMe SSD 用の M.2 2280 ソケットを搭載
-- **産業用インターフェース：** COM ポート、DI/DO ポート、CAN ポート、USB 3.1、およびオプションの TPM2.0 モジュールを搭載
-- **ハイブリッド接続性：** Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
-- **認証：** FCC、CE、UKCA、ROHS、KC
+- **ファンレスコンパクト Edge AI サーバー:** NVIDIA Jetson™ Orin Nano/Orin NX モジュールを搭載し、20 TOPS から 100 TOPS までの AI 性能を実現、動作温度範囲は -20 ～ 60°C（0.7m/s の気流条件）
+- **マルチストリーム処理:** 5× GbE RJ45（うち 4 ポートは 802.3af PSE）、複数ストリームをリアルタイムで処理
+- **拡張可能なストレージ:** 2.5" SATA HDD/SSD 用の 2 つのドライブベイに加え、NVMe SSD 用の M.2 2280 ソケットを搭載
+- **産業用インターフェース:** COM ポート、DI/DO ポート、CAN ポート、USB 3.1、およびオプションの TPM2.0 モジュールを搭載
+- **ハイブリッド接続性:** Nano SIM カードスロットを備え、5G/4G/LTE/LoRaWAN®（モジュールはオプション）をサポート
+- **認証:** FCC、CE、UKCA、ROHS、KC
 
 ## 仕様
 
@@ -80,8 +84,8 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8 コア Arm® Cortex®-A78AE v8.2 64-bit CPU、2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>6 コア Arm® Cortex®-A78AE v8.2 64-bit CPU、1.5MB L2 + 4MB L3</td>
+      <td>8 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU、2MB L2 + 4MB L3 </td>
+      <td colSpan={3}>6 コア Arm® Cortex®-A78AE v8.2 64 ビット CPU、1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>メモリ</td>
@@ -92,13 +96,13 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>ビデオエンコード</td>
-      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, AV1 1×4K60 (H.265) | 3×4K30 (H.265) | 6×1080p60 (H.265) | 12×1080p30 (H.265)</td>
-      <td colSpan={2}>1～2 個の CPU コアで 1080p30 をサポート </td>
+      <td colSpan={2}>対応規格: H.265 (HEVC)、H.264、AV1 1×4K60 (H.265) | 3×4K30 (H.265) | 6×1080p60 (H.265) | 12×1080p30 (H.265)</td>
+      <td colSpan={2}>1～2 コアの CPU により 1080p30 をサポート </td>
     </tr>
     <tr>
       <td>ビデオデコード</td>
-      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, VP9, AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
-      <td colSpan={2}>対応規格: H.265 (HEVC), H.264, VP9, AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
+      <td colSpan={2}>対応規格: H.265 (HEVC)、H.264、VP9、AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
+      <td colSpan={2}>対応規格: H.265 (HEVC)、H.264、VP9、AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
     </tr>
     <tr>
       <td rowSpan={2}>ストレージ</td>
@@ -120,24 +124,24 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={4}>4× USB3.1、1× USB2.0 Type C（デバイスモード）、1× USB2.0 Type C（Debug UART &amp; RP2040 用）</td>
+      <td colSpan={4}>4× USB3.1、1× USB2.0 Type C（デバイスモード）、1× USB2.0 Type C（デバッグ UART &amp; RP2040 用）</td>
     </tr>
     <tr>
       <td>DI/DO</td>
       <td colSpan={4}>4×DI、4×DO、3×GND_DI、2×GND_DO、1×GND_ISO、1×CAN</td>
-    </tr>
+    </tr]
     <tr>
       <td>COM</td>
       <td colSpan={4}>1× DB9 (RS232/RS422/RS485)</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
-      <td colSpan={2}>1×HDMI 2.1 Type A 7680x4320 @ 30 Hz</td>
-      <td colSpan={2}>1×HDMI 1.4 Type A 3840x2160 @ 30 Hz</td>
+      <td colSpan={2}>1×HDMI 2.1 Type A 7680x4320 30 Hz</td>
+      <td colSpan={2}>1×HDMI 1.4 Type A 3840x2160 30 Hz</td>
     </tr>
     <tr>
       <td>SATA</td>
-      <td colSpan={4}>2.5" SATA HDD/SSD（SATA III 6.0Gbps）をサポートする 2 つのドライブベイ</td>
+      <td colSpan={4}>2.5" SATA HDD/SSD（SATA III 6.0Gbps）対応の 2 つのドライブベイ</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -154,7 +158,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>M.2 Key B</td>
-      <td colSpan={4}>M.2 Key B (3042/3052) 4G/5G をサポート（モジュールはオプション） </td>
+      <td colSpan={4}>M.2 Key B (3042/3052) 4G/5G 対応（モジュールはオプション） </td>
     </tr>
     <tr>
       <td>ファン</td>
@@ -192,7 +196,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>動作温度</td>
-      <td colSpan={4}>-20 ～ 60°C（0.7m/s 条件）</td>
+      <td colSpan={4}>-20 ～ 60°C（0.7m/s）</td>
     </tr>
     <tr>
       <td>動作湿度</td>
@@ -212,7 +216,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td>衝撃</td>
-      <td colSpan={4}>50G ピーク加速度（11 msec. 継続時間、eMMC、microSD、または mSATA）</td>
+      <td colSpan={4}>50G ピーク加速度（11 msec. 継続、eMMC、microSD、または mSATA）</td>
     </tr>
     <tr>
       <td colSpan={2}>OS</td>
@@ -220,7 +224,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     </tr>
     <tr>
       <td colSpan={2}>認証</td>
-      <td colSpan={4}>FCC, CE, RoHS, UKCA, KC</td>
+      <td colSpan={4}>FCC、CE、RoHS、UKCA、KC</td>
     </tr>
     <tr>
       <td colSpan={2}>保証</td>
@@ -245,10 +249,10 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
 本製品には JetPack 5.1.1 がプリインストールされています。特別な要件がない限り、システムを再フラッシュする必要はありません。
 :::
 
-reServer Industrial には、必要なドライバーとともに JetPack 5.1.1 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD または新しい SSD に Jetpack を再フラッシュしたい場合は、以下の手順に従うことができます。現在、JP5.1.1 向けのガイドのみを提供しており、今後も随時更新していきます。
+reServer Industrial には、必要なドライバーとともに JetPack 5.1.1 が 128GB SSD にプリインストールされています。これには CUDA、CUDNN、TensorRT などの SDK コンポーネントが含まれます。ただし、付属の SSD または新しい SSD に JetPack を再フラッシュしたい場合は、以下の手順に従ってください。現在は JP5.1.1 のみを対象としたガイドを提供しており、今後も随時更新していきます。
 
 :::note
-reServer Industrial で SSD を使用したい場合は、Seeed の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、および [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) バージョンのみを選択することを推奨します。
+reServer Industrial で SSD を使用する場合は、Seeed 製の [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)、[1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) の各バージョンのみを推奨します。
 :::
 
 ### 前提条件
@@ -256,7 +260,7 @@ reServer Industrial で SSD を使用したい場合は、Seeed の [128GB](http
 reServer Industrial を使い始める前に、以下のハードウェアを準備する必要があります
 
 - reServer Industrial
-- 付属の電源コード付き電源アダプタ（[US version](https://www.seeedstudio.com/AC-US-p-5122.html) または [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html)）
+- 付属の電源アダプタと電源コード（[US version](https://www.seeedstudio.com/AC-US-p-5122.html) または [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html)）
 - Ubuntu ホスト PC（ネイティブ環境、または VMware Workstation Player を使用した VM）
 - USB Type-C データ転送ケーブル
 - 外部モニタ
@@ -265,12 +269,12 @@ reServer Industrial を使い始める前に、以下のハードウェアを準
 
 ### 強制リカバリーモードに入る
 
-次に、デバイスを書き込むために reServer Industrial ボードをリカバリーモードにする必要があります。USB Type-C ケーブルを **DEVICE** ポートと PC の間に接続します。ピンを使用して **REC** ホールに差し込み、リカバリーボタンを押し続けたまま、付属の **2-Pin Terminal block power connector** をボード上の電源コネクタに接続します（端子を固定するために 2 本のネジを必ず締めてください）。その後、付属の電源アダプタと電源コードを接続してボードの電源を入れます
+次に、デバイスを書き込むために reServer Industrial ボードをリカバリーモードにする必要があります。**DEVICE** ポートと PC の間を USB Type-C ケーブルで接続します。ピンを使用して **REC** ホールに差し込み、リカバリーボタンを押し続けたまま、付属の **2-Pin Terminal block power connector** をボード上の電源コネクタに接続します（端子を固定するために 2 本のネジを必ず締めてください）。その後、付属の電源アダプタと電源コードを接続してボードの電源を入れます
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reServer-Industrial/4.jpg"/></div>
 
 :::note
-RECOVERY ボタンを押し続けた状態で電源を入れていることを確認してください。そうしないとリカバリーモードに入ることができません
+RECOVERY ボタンを押したまま電源を入れていることを確認してください。そうしないとリカバリーモードに入ることができません
 :::
 
 Ubuntu ホスト PC でターミナルウィンドウを開き、コマンド **lsusb** を入力します。使用している Jetson SoM に応じて、返された内容に次のいずれかの出力が含まれていれば、ボードは強制リカバリーモードになっています。
@@ -280,9 +284,9 @@ Ubuntu ホスト PC でターミナルウィンドウを開き、コマンド **
 - Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
 - Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
 
-### 書き込みの異なる方法
+### 書き込み方法の種類
 
-ここでは 2 つの異なる書き込み方法を提供します。
+ここでは 2 通りの書き込み方法を提供します。
 
 1. NVIDIA JetPack、ハードウェア周辺機器ドライバを含む、当社が用意したシステムイメージ全体をダウンロードしてデバイスに書き込む
 2. 公式の NVIDIA L4T をダウンロードし、付属のハードウェア周辺機器ドライバを使用してデバイスに書き込む
@@ -301,7 +305,7 @@ import TabItem from '@theme/TabItem';
 
 #### システムイメージをダウンロード
 
-- **Step 1:** 使用しているボードに対応するシステムイメージを Ubuntu PC にダウンロードします。
+- **Step 1:** 使用しているボードに対応したシステムイメージを Ubuntu PC にダウンロードします。
 
 <div class="table-center">
   <table style={{textAlign: 'center'}}>
@@ -524,7 +528,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * Download1 と Download2 の両方のイメージファイルは同じです。ダウンロード速度が速い方のリンクを選択できます。
+  * Download1 と Download2 の両方のイメージファイルは同じです。ダウンロード速度が速い方のリンクを選択してください。
 </p>
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
@@ -535,7 +539,7 @@ import TabItem from '@theme/TabItem';
 tar -xvf <file_name>.tar.gz
 ```
 
-#### Jetson へのフラッシュ
+#### Jetson へフラッシュ
 
 - **Step 1:** 先ほど解凍したファイルへ移動し、次のようにフラッシュコマンドを実行します
 
@@ -548,7 +552,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** ボードを HDMI コネクタ経由でディスプレイに接続し、初期設定を完了します
+- **Step 2:** ボードを HDMI コネクタを使ってディスプレイに接続し、初期設定を完了します
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -619,11 +623,11 @@ sudo apt install unzip
 sudo unzip xxxx.zip # Replace xxxx with the driver file name
 ```
 
-ここでファイルを置き換えるかどうかを尋ねられます。必要なファイルを置き換えるために A と入力し、ENTER キーを押します
+ここでファイルを置き換えるかどうかを尋ねられます。必要なファイルを置き換えるために A と入力して ENTER を押します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/30.png"/></div>
 
-#### Jetson へのフラッシュ
+#### Jetson へフラッシュ
 
 - **Step 1:** **Linux_for_Tegra** ディレクトリへ移動し、次のようにフラッシュコマンドを実行します
 
@@ -636,7 +640,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-- **Step 2:** ボードを HDMI コネクタ経由でディスプレイに接続し、初期設定を完了します
+- **Step 2:** ボードを HDMI コネクタを使ってディスプレイに接続し、初期設定を完了します
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
 
@@ -671,7 +675,7 @@ sudo apt install nvidia-jetpack -y
 ## ハードウェアおよびインターフェースの使用方法
 
 :::info
-  reServer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、この[**wiki**](/ja/reserver_industrial_hardware_interface_usage)に従ってください：
+  reServer Industrial ボード上のすべてのハードウェアおよびインターフェースの使用方法について詳しく知るには、この [**wiki**](/ja/reserver_industrial_hardware_interface_usage) に従ってください：
 :::
 
 ## リソース
@@ -685,7 +689,7 @@ sudo apt install nvidia-jetpack -y
 
 ## 技術サポート
 
-ご不明な点がありましたら、遠慮なく私たちの[フォーラム](https://forum.seeedstudio.com/)に issue を投稿してください。
+ご不明な点がありましたら、遠慮なく私たちの [forum](https://forum.seeedstudio.com/) にイシューを投稿してください。
 
 <div>
   <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>

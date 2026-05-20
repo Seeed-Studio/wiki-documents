@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-04-09'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/recomputer_jetson_super_getting_started/
 ---
 
@@ -20,18 +20,22 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # reComputer Super 入门指南
 
-reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，AI 性能最高可提升 1.7 倍，达到 157 TOPS。该系列包含 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）两大模块型号。
-它面向开发与量产双重场景设计，集成丰富接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 与 Linux OS BSP，可实现开箱即用、快速推向市场。
-它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用融合，助力 Physical AI 的丰富开发。
-
 <div align="center">
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
+reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，在 AI 性能方面最高可提升 1.7 倍，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
+它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 与 Linux OS BSP，可实现开箱即用、快速推向市场。
+它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
+
+:::note
+支持 Logo 品牌定制、包装定制以及固件烧录定制服务。
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
+</div>
 
 ## 主要特性  
 
@@ -40,25 +44,25 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
 - 相比 reComputer Classic，​**AI 性能提升 1.7 倍**，可提供 ​**157 TOPS**  
 - 由 ​**Jetson Orin Nano**（型号：11410311, 11410312）和 ​**Jetson Orin NX**（型号：11410313, 11410314）驱动  
 
-### 🔌 ​**丰富连接与接口**  
+### 🔌 ​**丰富的连接与接口**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe**，便于扩展  
-- ​**双 RJ45 以太网** 接口，支持高速网络  
+- ​**双 RJ45 以太网** 接口，支持高速网络连接  
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（摄像头串行接口）  
 - 支持 ​**CAN 总线**，适用于工业/机器人应用  
 
-### 🛠️ ​**面向开发与量产**  
+### 🛠️ ​**即用于开发与量产**  
 
 - 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，开箱即可部署  
-- 与以下框架无缝集成边缘 AI：  
+- 与以下边缘 AI 框架无缝集成：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
-  - ​**ROS2/1**，用于机器人应用  
-- 支持 ​**多模态 AI** 与 ​**Physical AI** 开发  
+  - 面向机器人应用的 ​**ROS2/1**  
+- 支持 ​**多模态 AI** 和 ​**Physical AI** 开发  
 
-### 🤖 ​**针对边缘 AI 与机器人优化**  
+### 🤖 ​**面向边缘 AI 与机器人优化**  
 
 - 在边缘侧融合 ​**LLM（大语言模型）** 能力与 ​**Physical AI**  
-- 非常适合机器人、工业自动化和实时 AI 推理  
+- 非常适合机器人、工业自动化以及实时 AI 推理场景  
 - 通过预配置的软件栈加速 ​**产品上市**  
 
 :::tip
@@ -69,7 +73,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
 
 - ​**Jetson Orin Nano**：12V 5A（5525 圆孔电源接口）  
 - ​**Jetson Orin NX**：19V 4.74A（5525 圆孔电源接口）  
-- 请务必使用 ​**官方适配器**，并满足供电要求。  
+- 请务必使用 ​**官方适配器** 并满足供电要求。  
 
 #### 2. ​**交流电源线**  
 
@@ -162,7 +166,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
     </tr>
     <tr>
       <td>存储</td>
-      <td colSpan={4}>1x M.2 KEY M PCIe（内置 128G M.2 NVMe 2280 SSD）</td>
+      <td colSpan={4}>1x M.2 KEY M PCIe（内置 1 块 M.2 NVMe 2280 SSD 128G）</td>
     </tr>
     <tr>
       <td rowSpan={3}>网络</td>
@@ -215,7 +219,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
       <td colSpan={3}>1x PWR；<br />1x RESET；</td>
     </tr>
     <tr>
-      <td>DIP 开关</td>
+      <td>拨码开关</td>
       <td colSpan={3}>1x REC</td>
     </tr>
     <tr>
@@ -236,7 +240,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
     </tr>
     <tr>
       <td>安装方式</td>
-      <td colSpan={4}>桌面、壁挂</td>
+      <td colSpan={4}>桌面、壁挂安装</td>
     </tr>
     <tr>
       <td>工作温度</td>
@@ -248,7 +252,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
     </tr>
     <tr>
       <td>认证</td>
-      <td colSpan={4}>CE,FCC,RoHS,REACH,Telec, KC, 振动测试（GB/T 2423）</td>
+      <td colSpan={4}>CE、FCC、RoHS、REACH、Telec、KC、振动测试（GB/T 2423）</td>
     </tr>
   </tbody>
 </table>
@@ -316,7 +320,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，A
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">下载</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
@@ -371,7 +375,7 @@ Jetpack6 镜像文件大小约为 **14.1GB**，下载大约需要 60 分钟。�
 
 **步骤 3.** 使用 USB Type-C 数据传输线将 Super 连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -408,7 +412,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-刷写命令可能会运行 2-10 分钟。
+刷写命令可能需要运行 2-10 分钟。
 :::
 
 **步骤 3：** 使用 HDMI 线连接显示器，并完成 reComputer Super 系统的初始化配置：
@@ -441,7 +445,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品时拥有尽可能顺畅的体验。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-04-09'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_getting_started/
 ---
 
@@ -20,18 +20,22 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Introdução ao reComputer Super
 
-A linha reComputer Super turbina o reComputer Classic, oferecendo até 1,7x de aumento, chegando a 157 TOPS em desempenho de IA. Ela inclui modelos com Jetson Orin Nano (11410311, 11410312) e Jetson Orin NX (11410313, 11410314).
-Projetado tanto para desenvolvimento quanto para produção, vem com uma rica variedade de interfaces, incluindo M.2 Key E/M, Ethernet RJ45 dupla, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI e CAN. Com Jetpack 6.2 e Linux OS BSP pré-instalados, permite entrada imediata no mercado.
-Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch e ROS2/1 na borda de forma contínua, até mesmo combinando essas capacidades multimodais com aplicações de robótica para enriquecer o desenvolvimento de IA Física.
-
 <div align="center">
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
+A linha reComputer Super turbina o reComputer Classic, oferecendo até 1,7x mais desempenho de IA, chegando a 157 TOPS. Ela inclui modelos com Jetson Orin Nano (11410311, 11410312) e Jetson Orin NX (11410313, 11410314).
+Projetado tanto para desenvolvimento quanto para produção, vem com uma rica variedade de interfaces, incluindo M.2 Key E/M, Ethernet RJ45 dupla, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI e CAN. Com Jetpack 6.2 e Linux OS BSP pré-instalados, permite entrada imediata no mercado.
+Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch e ROS2/1 na borda de forma transparente, até mesmo combinando essas capacidades multimodais com aplicações de robótica para enriquecer o desenvolvimento de IA Física.
+
+:::note
+Personalização disponível para marca com logotipo, embalagem e gravação de firmware.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalize agora ➜</font></span></strong></a>
+</div>
 
 ## Principais recursos  
 
@@ -43,14 +47,14 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
 ### 🔌 ​**Conectividade e interfaces ricas**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para expansibilidade  
-- ​**Ethernet RJ45 dupla** para rede de alta velocidade  
+- ​**Portas Ethernet RJ45 duplas** para rede de alta velocidade  
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
-- Suporte a ​**barramento CAN** para aplicações industriais/robótica  
+- Suporte a ​**barramento CAN** para aplicações industriais/robóticas  
 
 ### 🛠️ ​**Pronto para desenvolvimento e produção**  
 
 - ​**Jetpack 6.2** e ​**Linux OS BSP** pré-instalados para implantação imediata  
-- Integração de IA na borda sem interrupções com frameworks:  
+- Integração perfeita de IA na borda com frameworks:  
   - ​**NVIDIA**, ​**Hugging Face**, ​**ONNX**, ​**PyTorch**  
   - ​**ROS2/1** para aplicações de robótica  
 - Suporta desenvolvimento de ​**IA multimodal** e ​**IA Física**  
@@ -184,7 +188,7 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
     </tr>
     <tr>
       <td>Câmera</td>
-      <td colSpan={3}>4x mipi CSI (2-lane 15-Pin)</td>
+      <td colSpan={3}>4x mipi CSI (2 pistas, 15 pinos)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -193,7 +197,7 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
     <tr>
       <td>Display</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr>
+    </tr]
     <tr>
       <td>Ventoinha</td>
       <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM); <br />1x conector de ventoinha de 4 pinos (12V PWM);</td>
@@ -204,14 +208,14 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC de 2 pinos;<br />1x soquete RTC</td>
+      <td colSpan={3}>1x RTC 2 pinos;<br />1x soquete RTC</td>
     </tr>
     <tr>
       <td>LED</td>
       <td colSpan={3}>2x LED (PWR e ACT)</td>
     </tr>
     <tr>
-      <td>Botão pinhole</td>
+      <td>Botão de pino</td>
       <td colSpan={3}>1x PWR;<br />1x RESET;</td>
     </tr>
     <tr>
@@ -254,7 +258,7 @@ Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, 
 </table>
 </div>
 
-## Gravar o JetPack OS
+## Gravar o sistema JetPack OS
 
 ### Módulo compatível
 
@@ -278,7 +282,7 @@ Consulte a tabela abaixo para preparar a máquina host.
   <tbody>
     <tr>
         <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador Host) </td>
+        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -348,13 +352,13 @@ O arquivo de imagem do Jetpack6 tem aproximadamente **14,1GB** de tamanho e deve
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
 
 :::info
-Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
+Antes de podermos prosseguir para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
 :::
 
 <details>
@@ -369,9 +373,9 @@ Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a
 
 **Passo 2.** Ligue o reComputer Super conectando o cabo de alimentação.
 
-**Passo 3.** Conecte o Super ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C.
+**Passo 3.** Conecte o Super ao PC host com Ubuntu usando um cabo de transmissão de dados USB Type-C.
 
-**Passo 4.** No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
+**Passo 4.** No PC host com Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -396,7 +400,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
 ```
 
-**Passo 2:** Execute o seguinte comando para gravar o sistema jetpack no SSD NVMe:
+**Passo 2:** Execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -424,7 +428,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 ## Recursos
 
-- [Folha de dados da placa carrier reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Robotics J401 Carrier Board Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [Arquivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [Documento mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)

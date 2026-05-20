@@ -1,6 +1,6 @@
 ---
-description: Este artigo fornece um guia de primeiros passos para o reComputer Mini (baseado na plataforma NVIDIA Jetson Orin), incluindo as especificações do dispositivo e as etapas para a configuração e preparação inicial.
-title: Primeiros Passos com o reComputer Mini
+description: Este artigo fornece um guia de primeiros passos para o reComputer Mini (baseado na plataforma NVIDIA Jetson Orin), incluindo as especificações do dispositivo e as etapas para configuração e ajustes iniciais.
+title: Primeiros passos com o reComputer Mini
 keywords:
   - reComputer
   - reComputer mini
@@ -19,38 +19,35 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_mini_getting_started/
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Primeiros Passos com o reComputer Mini
+# Primeiros passos com o reComputer Mini
 
 <!-- change image -->
-
-O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVIDIA Jetson Orin Nano/Orin NX, oferecendo até 100 TOPS de desempenho de IA. Ele é equipado com uma porta PCIe na parte inferior para fornecer ricas capacidades de expansão, que também podem ser personalizadas de forma flexível. Todo o sistema é projetado para ser embutido em máquinas autônomas, como drones, robôs de patrulha, robôs de entrega, etc. Ele pode aceitar diretamente entrada DC de 54V, podendo ser amplamente utilizado em sistemas alimentados por bateria.
 
 <div align="center">
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
 </div>
 
+O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVIDIA Jetson Orin Nano/Orin NX, oferecendo até 100 TOPS de desempenho de IA. Ele é equipado com uma porta PCIe na parte inferior para fornecer ricas capacidades de expansão, que também podem ser personalizadas de forma flexível. Todo o sistema é projetado para ser incorporado em máquinas autônomas, como drones, robôs de patrulha, robôs de entrega, etc. Ele pode receber diretamente entrada DC de 54V, podendo ser amplamente utilizado em sistemas alimentados por bateria.
+
+:::note
+Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalize agora ➜</font></span></strong></a>
+</div>
 
 <!-- Buy links -->
 
 ## Recursos
 
-- **Brilhante desempenho de IA para produção:** Alcança até **100 TOPS** de desempenho de IA com baixo consumo de energia e baixa latência, construído com o SoC NVIDIA Orin que combina a arquitetura de GPU NVIDIA Ampere™ com capacidade operacional de 64 bits, processamento avançado integrado de vídeo e imagem multifunção e Aceleradores de Deep Learning da NVIDIA.
-- **Dispositivo de IA de borda do tamanho da mão:** Tamanho compacto de **63mmx95mmx42mm**, com módulo NVIDIA Jetson Orin NX 16GB, placa-carregadora Mini J401, ventoinha e gabinete. Suporta montagem em mesa e na parede.
+- **Brilhante desempenho de IA para produção:** Alcança até **100 TOPS** de desempenho de IA com baixo consumo de energia e baixa latência, construído com o SoC NVIDIA Orin que combina a arquitetura de GPU NVIDIA Ampere™ com capacidade operacional de 64 bits, processamento avançado integrado de vídeo e imagem multifunção e NVIDIA Deep Learning Accelerators.
+- **Dispositivo Edge AI do tamanho da mão:** Tamanho compacto de **63mmx95mmx42mm**, apresentando um módulo NVIDIA Jetson Orin NX 16GB, placa-carregadora Mini J401, ventoinha e gabinete. Suporta montagem em mesa e na parede.
 - **Expansível com I/Os ricos:** Inclui até 7x USB, 1x DP 2.1, 1x RJ45 para GbE, M.2 Key E, M.2 Key M, CAN de canal duplo e GPIO com placa de extensão.
-- **Acelere soluções para o mercado:** JetPack 6.0 **pré-instalado** em SSD NVMe de 128GB, BSP de sistema operacional Linux, suportando software Jetson e principais frameworks de IA.
-- **Escalonável para implantação:** suporta OTA, serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
+- **Acelere as soluções para o mercado:** JetPack 6.0 pré-instalado em SSD NVMe de 128GB, BSP de sistema operacional Linux, suportando software Jetson e principais frameworks de IA.
+- **Escalável para implantação:** suporta OTA e serviços de gerenciamento remoto fornecidos pela Allxon e Balena.
 - **Personalização flexível:** inclui alteração de módulos de acessórios, logotipo e modificação de interfaces de hardware com base no design original do reComputer Mini J4012.
-
-<JetsonLeadQuote
-  buttonText="Solicitar orçamento personalizado"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
-  imageAlt="Request Quote for Jetson"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
 
 ## Especificações
 
@@ -88,12 +85,12 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64-bit<br />1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64-bit 1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos, 64-bit 2MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos e 64 bits<br />1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos e 64 bits 1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos e 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>Frequência Máxima da CPU</td>
+      <td>Frequência máxima da CPU</td>
       <td colSpan={2}>1,5 GHz</td>
       <td colSpan={2}>2 GHz</td>
     </tr>
@@ -111,21 +108,21 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>Codificador de Vídeo</td>
-      <td colSpan={2}>1080p30 suportado por 1-2 núcleos de CPU</td>
+      <td>Codificador de vídeo</td>
+      <td colSpan={2}>1080p30 suportado por 1–2 núcleos de CPU</td>
       <td colSpan={2}>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <td>Decodificador de Vídeo</td>
+      <td>Decodificador de vídeo</td>
       <td colSpan={2}>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
       <td colSpan={2}>1x 8K30 (H.265)<br />2x 4K60 (H.265)<br />4x 4K30 (H.265)<br />9x 1080p60 (H.265)<br />18x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa-Carregadora</th>
+      <th colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa-carregadora</th>
     </tr>
     <tr>
       <td>Armazenamento</td>
-      <td colSpan={4}>128GB NVMe SSD</td>
+      <td colSpan={4}>SSD NVMe de 128GB</td>
     </tr>
     <tr>
       <td>Rede</td>
@@ -139,7 +136,7 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
     </tr>
     <tr>
       <td>UART</td>
-      <td colSpan={3}>1x UART; 1x UART para Debug</td>
+      <td colSpan={3}>1x UART; 1x UART para depuração</td>
     </tr>
     <tr>
       <td>Display</td>
@@ -151,11 +148,11 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
     </tr>
     <tr>
       <td>Botão</td>
-      <td colSpan={3}>1x botão Reset; 1x botão Recovery</td>
+      <td colSpan={3}>1x botão de reset; 1x botão de recuperação</td>
     </tr>
     <tr>
-      <td>Porta de Extensão</td>
-      <td colSpan={3}>2x conectores High Speed de 60 pinos (para placa de extensão)<br />1x conector de energia de 10 pinos (para placa de extensão)</td>
+      <td>Porta de extensão</td>
+      <td colSpan={3}>2x conectores de alta velocidade de 60 pinos (para placa de extensão)<br />1x conector de alimentação de 10 pinos (para placa de extensão)</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -163,10 +160,10 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
     </tr>
     <tr>
       <td>Alimentação</td>
-      <td colSpan={4}>1x conector XT30 (12-54V DC)</td>
+      <td colSpan={4}>1x conector XT30 (12–54V DC)</td>
     </tr>
     <tr>
-      <td colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa de Extensão</td>
+      <td colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Placa de extensão</td>
     </tr>
     <tr>
       <td>Rede</td>
@@ -196,13 +193,13 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
     </tr>
     <tr>
       <td>Alimentação</td>
-      <td colSpan={4}>2x conectores XT30 2+2 (12-54V DC)</td>
+      <td colSpan={4}>2x conectores XT30 2+2 (12–54V DC)</td>
     </tr>
     <tr>
       <td colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>Outros</td>
     </tr>
     <tr>
-      <td rowSpan={3}>Mecânica</td>
+      <td rowSpan={3}>Mecânico</td>
       <td >Dimensões (L x P x A)</td>
       <td colSpan={3}>63mm * 95mm * 42mm (sem extensão)<br />63mm * 95mm * 66,7mm (com extensão)</td>
     </tr>
@@ -215,18 +212,18 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
       <td colSpan={3}>Mesa, montagem na parede</td>
     </tr>
     <tr>
-      <td>Temperatura de Operação</td>
+      <td>Temperatura de operação</td>
       <td colSpan={4}>-10℃ ~ 50℃</td>
     </tr>
     <tr>
       <td>Garantia</td>
-      <td colSpan={4}>1 Ano</td>
+      <td colSpan={4}>1 ano</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-## Visão Geral de Hardware
+## Visão geral do hardware
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/hardware_overview.png"/>  
@@ -248,11 +245,11 @@ O reComputer Mini é um minúsculo computador de IA alimentado pelo módulo NVID
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B4.png"/>  
 </div>
 
-## Gravar o JetPack OS
+## Gravar o sistema JetPack OS
 
 Aqui, mostraremos como gravar o [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) em um SSD NVMe conectado ao reComputer Mini.
 
-### Módulo Nvidia Jetson Suportado
+### Módulo Nvidia Jetson compatível
 
 - [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
 - [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
@@ -261,7 +258,7 @@ Aqui, mostraremos como gravar o [Jetpack 6.0](https://developer.nvidia.com/embed
 
 ### Pré-requisitos
 
-- Computador Host com Ubuntu
+- Computador host com Ubuntu
 - reComputer Mini J4012/ J4011/ J3010 ou J3011
 - Cabo USB Micro-B para transmissão de dados
 
@@ -274,7 +271,7 @@ Consulte a tabela abaixo para preparar a máquina host.
   <tbody>
     <tr>
         <td  rowspan="2"> Versão do JetPack </td>
-        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador Host) </td>
+        <td class="dbon" colspan="3"> Versão do Ubuntu (computador host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -298,9 +295,9 @@ Consulte a tabela abaixo para preparar a máquina host.
 
 :::
 
-### Preparar a Imagem do Jetpack
+### Preparar a imagem do Jetpack
 
-Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspondente ao módulo Jetson que estamos utilizando:
+Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspondente ao módulo Jetson que estamos usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -308,7 +305,7 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <th>Versão do Jetpack</th>
       <th>Módulo Jetson</th>
-      <th>Link para Download</th>
+      <th>Link para download</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -371,13 +368,13 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
 </div>
 
 :::danger
-O arquivo de imagem do Jetpack6 tem aproximadamente **16,7GB** de tamanho e deve levar cerca de 60 minutos para ser baixado. Por favor, aguarde até que o download seja concluído.
+O arquivo de imagem do Jetpack6 tem aproximadamente **16,7GB** de tamanho e deve levar cerca de 60 minutos para ser baixado. Aguarde gentilmente até que o download seja concluído.
 :::
 
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e íntegro.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
@@ -399,9 +396,9 @@ Antes de podermos prosseguir para as etapas de instalação, precisamos ter cert
 </div>
 
 - **Passo 1.**  Conecte um cabo USB Micro-B entre a porta USB2.0 DEVICE e o PC host com Ubuntu.
-- **Passo 2.**  Use um pino e insira-o no orifício RECOVERY para pressionar o botão de recovery e, mantendo-o pressionado.
+- **Passo 2.**  Use um pino e insira-o no orifício RECOVERY para pressionar o botão de recuperação e, enquanto o mantém pressionado.
 - **Passo 3.**  Conecte a fonte de alimentação.
-- **Passo 4.**  Solte o botão de recovery.
+- **Passo 4.**  Solte o botão de recuperação.
 
 </details>
 
@@ -450,7 +447,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Passo 2:** Execute o seguinte comando para gravar o sistema jetpack no SSD NVMe:
+**Passo 2:** Execute o seguinte comando para gravar o sistema Jetpack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -463,10 +460,10 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode levar de 2 a 10 minutos para ser executado.
+O comando de gravação pode ser executado por 2-10 minutos.
 :::
 
-**Passo 3:** Conecte o J401 a um monitor usando a **USB Type-C com DisplayPort** na placa e conclua a configuração inicial:
+**Passo 3:** Conecte o J401 a um monitor usando o **USB Type-C com DisplayPort** na placa e finalize a configuração inicial:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -476,9 +473,9 @@ O comando de gravação pode levar de 2 a 10 minutos para ser executado.
 Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 :::
 
-**Passo 4 (Opcional):** Instalar Nvidia Jetpack SDK
+**Passo 4 (Opcional):** Instalar o Nvidia Jetpack SDK
 
-Por favor, abra o terminal no dispositivo Jetson e execute os seguintes comandos:
+Abra o terminal no dispositivo Jetson e execute os seguintes comandos:
 
 ```bash
 sudo apt update
@@ -501,7 +498,14 @@ Se você quiser saber mais sobre as especificações detalhadas e o uso da inter
 - [Seeed Jetson Serials Comparision](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-## Suporte Técnico & Discussão sobre o Produto
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
+
+## Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
