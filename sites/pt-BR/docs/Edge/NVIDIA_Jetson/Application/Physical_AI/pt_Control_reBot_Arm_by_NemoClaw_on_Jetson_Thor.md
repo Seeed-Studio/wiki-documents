@@ -23,7 +23,7 @@ NVIDIA `NemoClaw` é uma pilha de referência open source que simplifica a execu
 - `reBot Arm B601`: braço robótico para apreensão e posicionamento.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/overview.png" />
 </div>
 
@@ -79,7 +79,7 @@ NVIDIA `NemoClaw` é uma pilha de referência open source que simplifica a execu
 2. Conecte o adaptador USB-para-CAN, a câmera USB e o braço robótico às portas USB Type-A do Jetson Thor.
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/hardware_connection.jpg" />
 </div>
 
@@ -97,7 +97,7 @@ ls /dev/video*
 Se tudo estiver conectado corretamente, você deverá ver uma saída semelhante a:
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/check_device.png" />
 </div>
 
@@ -113,7 +113,7 @@ ollama pull nemotron3:33b
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/download_llm.png" />
 </div>
 
@@ -416,6 +416,7 @@ Gateway inference configured:
 
 seeed@seeed:~$ 
 ```
+
 </details>
 
 Considerando que talvez precisemos acessar serviços implantados na máquina host de dentro do contêiner NeMoClaw no futuro, execute o seguinte comando para configurar o acesso de rede para este aplicativo.
@@ -433,7 +434,7 @@ nemoclaw my-assistant connect
 Você deve entrar em um ambiente funcional do aplicativo OpenClaw:
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/openclaw_webui.png" />
 </div>
 
@@ -456,10 +457,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/gpu_torch.png" />
 </div>
-
 
 ## 5. Configuração de permissão do dispositivo
 
@@ -490,11 +490,12 @@ uv run rebot-arm-service
 ```
 
 Acesso:
+
 - WebUI: `http://127.0.0.1:8000/webui`
 - Verificação de integridade: `http://127.0.0.1:8000/healthz`
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
@@ -545,6 +546,7 @@ RestartSec=2
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 - `rebot-f1-listener.service`: gatilho de tecla de atalho F1
@@ -572,6 +574,7 @@ RestartSec=2
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 :::danger
@@ -596,7 +599,9 @@ sudo journalctl -u rebot-f1-listener.service -f
 
 ## 7. Demonstração de recursos
 
-
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 8. Solução de problemas
 

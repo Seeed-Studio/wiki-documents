@@ -23,7 +23,7 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 - `reBot Arm B601`：用于抓取与放置的机械臂。
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/overview.png" />
 </div>
 
@@ -79,7 +79,7 @@ NVIDIA `NemoClaw` 是一个开源参考栈，可更安全地简化运行 OpenCla
 2. 将 USB-to-CAN 适配器、USB 摄像头和机械臂连接到 Jetson Thor 的 USB Type-A 接口。
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/hardware_connection.jpg" />
 </div>
 
@@ -97,7 +97,7 @@ ls /dev/video*
 如果一切连接正确，你应该会看到类似如下的输出：
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/check_device.png" />
 </div>
 
@@ -113,7 +113,7 @@ ollama pull nemotron3:33b
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/download_llm.png" />
 </div>
 
@@ -416,6 +416,7 @@ Gateway inference configured:
 
 seeed@seeed:~$ 
 ```
+
 </details>
 
 考虑到我们未来可能需要在 NeMoClaw 容器内访问部署在主机上的服务，请执行以下命令为该应用配置网络访问。
@@ -433,7 +434,7 @@ nemoclaw my-assistant connect
 你应该进入一个可用的 OpenClaw 应用环境：
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/openclaw_webui.png" />
 </div>
 
@@ -456,10 +457,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/gpu_torch.png" />
 </div>
-
 
 ## 5. 设备权限设置
 
@@ -490,11 +490,12 @@ uv run rebot-arm-service
 ```
 
 访问：
+
 - WebUI：`http://127.0.0.1:8000/webui`
 - 健康检查：`http://127.0.0.1:8000/healthz`
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png" />
 </div>
 
@@ -545,6 +546,7 @@ RestartSec=2
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 - `rebot-f1-listener.service`：F1 热键触发器
@@ -572,6 +574,7 @@ RestartSec=2
 [Install]
 WantedBy=multi-user.target
 ```
+
 </details>
 
 :::danger
@@ -596,7 +599,9 @@ sudo journalctl -u rebot-f1-listener.service -f
 
 ## 7. 功能演示
 
-
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## 8. 故障排查
 
