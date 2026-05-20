@@ -202,7 +202,48 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### Step 5. Verify the dependencies
+### Step 5. Configure GraspNet (optional)
+
+You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet baseline, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
+
+```bash
+cd sdk
+git clone https://github.com/graspnet/graspnet-baseline.git
+cd graspnet-baseline
+
+# Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
+pip install open3d tensorboard Pillow tqdm
+
+# Build CUDA operators
+cd pointnet2
+python setup.py install
+cd ../knn
+python setup.py install
+cd ..
+
+# Install GraspNet API
+git clone https://github.com/graspnet/graspnetAPI.git
+cd graspnetAPI
+pip install .
+cd ../../..
+```
+
+After downloading the official GraspNet pretrained weight, place `checkpoint-rs.tar` at:
+
+```bash
+sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
+```
+
+Then verify `config/default.yaml`:
+
+```yaml
+graspnet:
+  checkpoint: "checkpoint-rs.tar"
+```
+
+The `checkpoint` field supports three forms: a file name is resolved under `sdk/graspnet-baseline/checkpoints/`; a relative path is resolved from the project root; an absolute path is used directly.
+
+### Step 6. Verify the dependencies
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
@@ -352,6 +393,31 @@ Runtime keys:
 - `R`: resume live preview
 - `Q` / `Esc`: exit
 
+### 4. GraspNet camera estimation demo (optional)
+
+```bash
+python scripts/graspnet_camera_demo.py
+```
+
+This script runs GraspNet 6D grasp pose estimation with only the RGB-D camera, without connecting to the robotic arm. It keeps a live camera preview, uses YOLO bounding boxes to select the target area, and filters feasible GraspNet full-scene candidates by the target bbox.
+
+Key controls:
+
+- `G` / `Space`: run GraspNet inference on the current frame
+- `R`: resume live preview
+- `Q` / `Esc`: exit
+
+After inference, Open3D can visualize the point cloud and grasp candidates.
+
+### 5. GraspNet robotic grasping program (optional)
+
+```bash
+python scripts/grasp.py --dry-run
+python scripts/grasp.py --target-class "light blue coffee cup"
+```
+
+This script connects the GraspNet estimate to the robotic arm execution flow. YOLO selects the target, GraspNet outputs a 6D grasp pose, hand-eye calibration transforms it into the robot base frame, and the script checks IK reachability before running the pre-grasp, grasp, and retreat motion sequence. For debugging, start with `--dry-run` to print the target poses and candidate filtering result without moving the arm.
+
 ## FAQ
 
 ### 1. `ModuleNotFoundError: No module named 'motorbridge'`
@@ -385,6 +451,51 @@ You can try adjusting:
 - `grasp_pipeline.grasp.depth_quantile`
 - The installation height of the camera relative to the workspace
 - Reflective properties of the target surface
+
+### 4. GraspNet reports that `pointnet2_utils` cannot be imported from `pointnet2`
+
+This usually means the local CUDA extension under `sdk/graspnet-baseline/pointnet2` was not built in the active conda environment, or Python is resolving a different `pointnet2` package. Make sure the project environment is active, then rebuild both `pointnet2` and `knn` in that same environment:
+
+```bash
+conda activate rebotarm
+cd sdk/graspnet-baseline/pointnet2
+python setup.py install
+
+cd ../knn
+python setup.py install
+```
+
+Verify:
+
+```bash
+python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
+```
+
+### 5. CUDA architecture compatibility issues on newer GPUs
+
+If you see `no kernel image is available for execution on the device`, or PyTorch reports that the current GPU CUDA capability is unsupported, the installed PyTorch wheel likely does not include CUDA kernels for that GPU architecture. Install a PyTorch build that supports your current CUDA/GPU architecture, then rebuild the GraspNet local CUDA extensions.
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
+
+cd sdk/graspnet-baseline/pointnet2
+python setup.py install
+
+cd ../knn
+python setup.py install
+```
+
+If you need to specify the build architecture manually, set `TORCH_CUDA_ARCH_LIST` before rebuilding. Choose the value according to your GPU architecture and PyTorch/CUDA version.
+
+### 6. GraspNet inference reports `RuntimeError: CPU not supported`
+
+The sampling operators in `pointnet2` only support CUDA tensors. Confirm that CUDA is available, the GraspNet network and input point cloud are on GPU, and `pointnet2` / `knn` were built against the PyTorch version in the active environment.
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+If the output is `False`, fix the CUDA / PyTorch installation first. If it is `True` but the error remains, rebuild `pointnet2` and `knn`.
 
 ## Contact
 
