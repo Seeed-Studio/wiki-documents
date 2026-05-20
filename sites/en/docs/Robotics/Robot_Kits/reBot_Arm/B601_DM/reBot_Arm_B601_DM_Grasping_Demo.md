@@ -12,12 +12,12 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-18
+  date: 2026-05-20
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -53,10 +53,13 @@ YOLO is a widely used family of real-time object detection models that can local
 1. **Direct grasp pose estimation from YOLO + OBB**  
    The pipeline uses detection boxes or OBB minimum-area rectangles directly and takes the short axis as the gripper opening direction, avoiding complex 3D point-cloud processing.
 
-2. **Lightweight robotic arm and gripper integration**  
+2. **GraspNet-Baseline 6D grasp pose estimation (optional)**  
+   The project also supports GraspNet-Baseline (`graspnet/graspnet-baseline`) for 6D grasp pose estimation from RGB-D point clouds, with YOLO bounding boxes used to select target candidates for more complex grasping experiments.
+
+3. **Lightweight robotic arm and gripper integration**  
    The main grasping script reuses the `RebotArm` interface and integrates IK, trajectory control, and the gripper state machine.
 
-3. **Open Source and Extensible**  
+4. **Open Source and Extensible**  
    All source code is open, and users can customize control algorithms and effects based on their own needs.
 
 ## Specifications
@@ -204,7 +207,7 @@ sudo udevadm trigger
 
 ### Step 5. Configure GraspNet (optional)
 
-You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet baseline, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
+You do not need GraspNet for `scripts/main.py` or `scripts/ordinary_grasp_pipeline.py`. Configure it only when you want to run `scripts/graspnet_camera_demo.py` or `scripts/grasp.py`, which require GraspNet, CUDA-enabled PyTorch, the PointNet2/knn CUDA operators, and a pretrained checkpoint.
 
 ```bash
 cd sdk
@@ -284,10 +287,7 @@ The calibration result is saved to:
 config/calibration/orbbec_gemini2/hand_eye.npz
 ```
 
-Recommended sample count:
-
-- Minimum: 5 samples
-- Recommended: at least 15 samples
+Recommended sample count is at least 5 samples, with 15 or more recommended.
 
 ## Running and Debugging
 
@@ -412,11 +412,14 @@ After inference, Open3D can visualize the point cloud and grasp candidates.
 ### 5. GraspNet robotic grasping program (optional)
 
 ```bash
+python scripts/grasp.py
 python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-This script connects the GraspNet estimate to the robotic arm execution flow. YOLO selects the target, GraspNet outputs a 6D grasp pose, hand-eye calibration transforms it into the robot base frame, and the script checks IK reachability before running the pre-grasp, grasp, and retreat motion sequence. For debugging, start with `--dry-run` to print the target poses and candidate filtering result without moving the arm.
+This script connects the GraspNet estimate to the robotic arm execution flow. YOLO selects the target, GraspNet outputs a 6D grasp pose, hand-eye calibration transforms it into the robot base frame, and the script checks IK reachability before running the pre-grasp, grasp, and retreat motion sequence.
+
+Running `python scripts/grasp.py` starts the full GraspNet robotic grasping flow and actually controls the robotic arm. `--dry-run` only prints the target pose and candidate filtering result without executing the grasp motion. `--target-class "light blue coffee cup"` specifies the YOLO target class and only filters and grasps GraspNet candidates for that class.
 
 ## FAQ
 
@@ -471,7 +474,7 @@ Verify:
 python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
 ```
 
-### 5. CUDA architecture compatibility issues on newer GPUs
+### 5. CUDA architecture compatibility issues on newer GPUs when running GraspNet
 
 If you see `no kernel image is available for execution on the device`, or PyTorch reports that the current GPU CUDA capability is unsupported, the installed PyTorch wheel likely does not include CUDA kernels for that GPU architecture. Install a PyTorch build that supports your current CUDA/GPU architecture, then rebuild the GraspNet local CUDA extensions.
 
@@ -514,3 +517,5 @@ If the output is `False`, fix the CUDA / PyTorch installation first. If it is `T
 - [pyorbbecsdk Repository](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk Documentation](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [Graspnet-Baseline Repository](https://github.com/graspnet/graspnet-baseline)
+- [Graspnet(Anygrasp) Docs](https://graspnet.net/)
