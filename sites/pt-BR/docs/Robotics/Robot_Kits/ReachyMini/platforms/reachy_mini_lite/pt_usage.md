@@ -1,80 +1,73 @@
 ---
-description: Guia de uso do Reachy Mini Lite que abrange o painel do aplicativo desktop, demonstrações de ações rápidas, instalação de apps e guia rápido do SDK em Python.
+description: Guia de uso do Reachy Mini Lite que abrange o painel do aplicativo para desktop, demonstrações de ações rápidas, instalação do app e início rápido do SDK em Python.
 title: Usando o Reachy Mini Lite
 slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:
-  - usage
-  - dashboard
-  - desktop app
-  - applications
-  - demos
+  - uso
+  - painel
+  - aplicativo para desktop
+  - aplicativos
+  - demonstrações
   - python
   - sdk
-  - control
+  - controle
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-03-16'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/pt-br/reachymini_platforms_reachy_mini_lite_usage/
 ---
 
 # Usando o Reachy Mini Lite
 
-A versão Lite depende do seu computador para executar sua inteligência. O hub central para isso é o aplicativo **Reachy Mini Control**.
+Agora que seu robô está conectado, veja como interagir com ele. Você pode controlá-lo visualmente usando o **Reachy Mini Control** ou programaticamente usando **Python**.
 
-:::info
-Confira [este guia](/pt-br/reachymini_platforms_reachy_mini_lite_get_started) se você ainda não o instalou.
-:::
+Confira [este guia](/pt-br/reachymini_platforms_reachy_mini_lite_get_started) se você ainda não instalou o app.
 
-## 1. Reachy Mini Control (Dashboard) 🖥️
+## 1. Reachy Mini Control 🖥️
 
-Ao abrir o aplicativo, você acessa o painel de controle completo do seu robô.
+**Reachy Mini Control** é o aplicativo para desktop do seu robô. Ele permite verificar o status do robô, atualizar o sistema e gerenciar aplicativos.
 
-:::info Status & Visualizer (Painel Esquerdo)
-* **Vista 3D:** Mostra a posição em tempo real do robô.
-* **Pronto/Não Pronto:** Indica se o robô está corretamente conectado via USB.
-* **Sensores:** Monitora a entrada do microfone e o volume do alto-falante.
-* **Logs:** Veja detalhes técnicos e eventos de conexão na parte inferior.
-:::
+Abra o **Reachy Mini Control** e conecte seu robô via USB. Depois de conectado, você verá informações em tempo real sobre o seu robô.
 
-## 2. Aplicativos & Demos 📱
+* **Status & Visualizer (Painel Esquerdo):**
+    * **3D View:** Mostra a posição em tempo real do robô.
+    * **Ready/Not Ready:** Indica se o robô está corretamente conectado via USB.
+    * **Sensors:** Monitora a entrada do microfone e o volume do alto-falante.
+    * **Logs:** Veja detalhes técnicos e eventos de conexão na parte inferior.
 
-:::tip
-Você não precisa programar para começar a se divertir. O app vem com um ecossistema integrado.
-:::
+### Funcionalidades
 
-### Ações Rápidas
+* Controle a **Cabeça** e as **Antenas** usando a aba *Controller*.
 
-Localizadas no canto inferior direito, são demos integradas prontas para serem executadas instantaneamente:
-* **Expressões:** Faça o Reachy expressar emoções (Feliz, Triste, Bravo, etc.).
-* **Controller:** Teleopere o robô usando um controle de videogame ou sliders.
+![Controller Tab](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-controller.png)
 
-### Instalando Novos Apps
+* Brinque com **Expressões**: Faça seu robô ficar feliz, triste, bravo e muito mais com as expressões integradas.
 
-Para ampliar as capacidades do Reachy com comportamentos criados pela comunidade:
+![Expressions Tab](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-expressions.png)
 
-**Passo 1:** Clique no botão **"Discover apps"**. Isso abrirá a loja Hugging Face Spaces.
+## 2. Aplicativos 📱
 
-**Passo 2:** Selecione um app (como um jogo ou uma demo de Conversação) e clique em "Install".
+O Reachy Mini pode executar "Apps" — comportamentos autônomos empacotados para o robô (como uma demonstração de Conversa, um Jogo ou uma Dança).
 
-**Passo 3:** Depois de instalado, o app aparecerá na sua lista "Applications". Basta clicar em **"Play"** para iniciá-lo.
+### Como usar Apps
+1.  **Browse:** Vá até a aba *Applications* no Reachy Mini Control e clique em "Discover Apps". Isso abrirá o ecossistema Hugging Face Spaces, onde você pode encontrar apps compatíveis para o seu robô.
+2.  **Install:** Clique no botão "Install" em um app para adicioná-lo ao seu robô.
+3.  **Launch:** Clique no botão "Start ▶️" em um app instalado. O robô iniciará o comportamento imediatamente.
+4.  **Stop:** Clique no botão "Stop" ⏹️ para parar o aplicativo.
 
-:::warning
-Quando um App está em execução, ele controla o robô. Pare o app antes de tentar executar seus próprios scripts em Python.
-:::
+> **Nota:** Quando um App está em execução, ele assume o controle do robô. Você não pode executar scripts em Python enquanto um App estiver ativo.
 
-## 3. Programando com Python 🐍
+## 3. Início rápido em código 🐍
 
-:::info
 Pronto para escrever sua própria lógica? O Reachy Mini é controlado por meio de um SDK em Python simples.
-:::
 
-👉 **[Vá para a documentação do SDK](/pt-br/reachymini_sdk_readme)** para uma visão geral completa.
+👉 **[Ir para a documentação do SDK](/pt-br/reachymini_sdk_readme)** para uma visão geral completa.
 
-## ❓ Solução de Problemas
+## ❓ Solução de problemas
 
-Encontrou um problema? 👉 **[Confira o Guia de Solução de Problemas & FAQ](/pt-br/reachymini_troubleshooting)**
+Encontrou algum problema? 👉 **[Confira o Guia de Solução de Problemas & FAQ](/pt-br/reachymini_troubleshooting)**
