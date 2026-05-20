@@ -6,10 +6,10 @@ slug: /reterminal_e10xx_with_arduino
 sidebar_position: 1
 sidebar_label: Arduino – Display
 last_update:
-  date: 05/15/2026
-  author: dimo
+  date: 04/28/2026
+  author: Allen
 createdAt: '2025-08-21'
-updatedAt: '2026-05-15'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -1909,232 +1909,117 @@ void showGeometryDemo()
       const int ey = fanCy - (int)(150.0f * sinf(rad));
       display.drawLine(fanCx, fanCy, ex, ey, GxEPD_BLACK);
     }
-
-    // Bottom-right: concentric circles and rounded rectangles
-    const int p4x = contentX + panelW + gapX;
-    const int p4y = contentY + panelH + gapY;
-    drawCardShell(p4x, p4y, panelW, panelH, "Rounded Shapes");
-    const int ccx = p4x + 240;
-    const int ccy = p4y + 235;
-    for (int r = 30; r <= 150; r += 24) {
-      display.drawCircle(ccx, ccy, r, GxEPD_BLACK);
-    }
-    const int rrx = p4x + 520;
-    const int rry = p4y + 120;
-    for (int i = 0; i < 4; i++) {
-      display.drawRoundRect(rrx + i * 14, rry + i * 14,
-                            250 - i * 28, 230 - i * 28,
-                            24 - i * 3, GxEPD_BLACK);
-    }
-
-    drawPageFooter("Adafruit GFX primitives on a wide e-paper canvas");
-
-  } while (display.nextPage());
-}
-
-// =====================================================================
-// Screen 5: Patterns
-// =====================================================================
-void showPatternDemo()
-{
-  const uint16_t W = display.width();
-  const uint16_t H = display.height();
-
-  display.setRotation(0);
-  display.setFullWindow();
-  display.firstPage();
-  do {
-    display.fillScreen(GxEPD_WHITE);
-    drawPageHeader("Pattern & Fill Demo", "Six pattern tiles arranged in a clean 3 x 2 grid");
-
-    const int contentX = PAGE_MARGIN;
-    const int contentY = HEADER_H + 18;
-    const int contentW = W - 2 * PAGE_MARGIN;
-    const int contentH = H - HEADER_H - FOOTER_H - 36;
-    const int gapX = PANEL_GAP;
-    const int gapY = PANEL_GAP;
-    const int tileW = (contentW - 2 * gapX) / 3;
-    const int tileH = (contentH - gapY) / 2;
-
-    struct TileSpec {
-      const char* title;
-    };
-
-    TileSpec tiles[] = {
-      {"Checkerboard"},
-      {"H-Stripes"},
-      {"V-Stripes"},
-      {"Dot Grid"},
-      {"Diagonal"},
-      {"Dither Gradient"},
-    };
-
-    for (int i = 0; i < 6; i++) {
-      const int col = i % 3;
-      const int row = i / 3;
-      const int x = contentX + col * (tileW + gapX);
-      const int y = contentY + row * (tileH + gapY);
-      drawCardShell(x, y, tileW, tileH, tiles[i].title);
-
-      const int innerX = x + 16;
-      const int innerY = y + 58;
-      const int innerW = tileW - 32;
-      const int innerH = tileH - 74;
-
-      if (i == 0) {
-        const int sz = 22;
-        for (int py = 0; py < innerH / sz + 1; py++) {
-          for (int px = 0; px < innerW / sz + 1; px++) {
-            if ((px + py) & 1) {
-              display.fillRect(innerX + px * sz, innerY + py * sz, sz, sz, GxEPD_BLACK);
-            }
-          }
-        }
-      } else if (i == 1) {
-        for (int py = 0; py < innerH; py += 14) {
-          if ((py / 14) & 1) {
-            display.fillRect(innerX, innerY + py, innerW, 14, GxEPD_BLACK);
-          }
-        }
-      } else if (i == 2) {
-        for (int px = 0; px < innerW; px += 14) {
-          if ((px / 14) & 1) {
-            display.fillRect(innerX + px, innerY, 14, innerH, GxEPD_BLACK);
-          }
-        }
-      } else if (i == 3) {
-        for (int py = 0; py < innerH; py += 22) {
-          for (int px = 0; px < innerW; px += 22) {
-            display.fillCircle(innerX + px + 11, innerY + py + 11, 4, GxEPD_BLACK);
-          }
-        }
-      } else if (i == 4) {
-        display.drawRect(innerX, innerY, innerW, innerH, GxEPD_BLACK);
-        for (int d = -innerH; d < innerW; d += 18) {
-          int x0 = innerX + max(0, d);
-          int y0 = innerY + max(0, -d);
-          int x1 = innerX + min(innerW - 1, d + innerH - 1);
-          int y1 = innerY + min(innerH - 1, -d + innerW - 1);
-          display.drawLine(x0, y0, x1, y1, GxEPD_BLACK);
-        }
-      } else {
-        display.drawRect(innerX, innerY, innerW, innerH, GxEPD_BLACK);
-        for (int py = 0; py < innerH; py++) {
-          for (int px = 0; px < innerW; px++) {
-            int density = (px * 255) / innerW;
-            if ((((px * 7 + py * 13) ^ (px * py)) & 0xFF) < density) {
-              display.drawPixel(innerX + px, innerY + py, GxEPD_BLACK);
-            }
-          }
-        }
-      }
-    }
-
-    drawPageFooter("Patterns are easier to compare when each sample gets the same amount of space");
-
-  } while (display.nextPage());
-}
-
-// =====================================================================
-// Screen 6: Dashboard-style layout
-// =====================================================================
-void showDashboardDemo()
-{
-  const uint16_t W = display.width();
-  const uint16_t H = display.height();
-
-  display.setRotation(0);
-  display.setFullWindow();
-  display.firstPage();
-  do {
-    display.fillScreen(GxEPD_WHITE);
-    drawPageHeader("Dashboard Demo", "A large, readable layout with metrics, logs and a status bar");
-
-    const int contentX = PAGE_MARGIN;
-    const int contentY = HEADER_H + 18;
-    const int contentW = W - 2 * PAGE_MARGIN;
-    const int contentH = H - HEADER_H - FOOTER_H - 36;
-    const int gapX = PANEL_GAP;
-    const int gapY = PANEL_GAP;
-
-    // Top row metrics
-    const int metricH = 220;
-    const int metricW = (contentW - 3 * gapX) / 4;
-
-    char uptimeBuf[16];
-    snprintf(uptimeBuf, sizeof(uptimeBuf), "%lu", millis() / 1000);
-
-    char heapBuf[16];
-    snprintf(heapBuf, sizeof(heapBuf), "%lu", (unsigned long)(ESP.getFreeHeap() / 1024));
-
-    drawMetricCard(contentX + 0 * (metricW + gapX), contentY, metricW, metricH, "Temperature", "23.5", "Celsius");
-    drawMetricCard(contentX + 1 * (metricW + gapX), contentY, metricW, metricH, "Humidity", "65", "% RH");
-    drawMetricCard(contentX + 2 * (metricW + gapX), contentY, metricW, metricH, "Free Heap", heapBuf, "kB");
-    drawMetricCard(contentX + 3 * (metricW + gapX), contentY, metricW, metricH, "Uptime", uptimeBuf, "seconds");
-
-    // Activity log panel
-    const int logY = contentY + metricH + gapY;
-    const int logH = 460;
-    drawCardShell(contentX, logY, contentW, logH, "Activity Log");
-
-    const char* logEntries[] = {
-      "[00:00:01] System boot complete - ESP32-S3 @ 240MHz",
-      "[00:00:02] PSRAM initialized: 8192 kB available",
-      "[00:00:03] IT8951 controller detected (FW: eSee_d.v.0)",
-      "[00:00:03] Panel: ED103TC2 1872x1404, VCOM=-1.40V",
-      "[00:00:04] SPI bus configured: HSPI @ 10MHz",
-      "[00:00:05] Display driver ready - full refresh mode",
-      "[00:00:06] Demo sequence started...",
-    };
-
-    display.setFont(&FreeMono9pt7b);
-    const int lineX = contentX + 24;
-    const int lineY = logY + 72;
-    const int lineH = 48;
-
-    for (int i = 0; i < 7; i++) {
-      display.setCursor(lineX, lineY + i * lineH);
-      display.print(logEntries[i]);
-      if (i < 6) {
-        display.drawFastHLine(contentX + 20, lineY + i * lineH + 18, contentW - 40, GxEPD_BLACK);
-      }
-    }
-
-    // Bottom status strip
-    const int statusY = logY + logH + gapY;
-    const int statusH = contentH - metricH - logH - 2 * gapY;
-    drawPanelFrame(contentX, statusY, contentW, statusH);
-
-    display.fillRoundRect(contentX + 4, statusY + 4, contentW - 8, 42, 10, GxEPD_BLACK);
-    display.setTextColor(GxEPD_WHITE);
-    drawCenteredTextInBox("Progress", contentX + 20, statusY + 10, 160, 24, &FreeSansBold12pt7b);
-
-    const int barX = contentX + 180;
-    const int barY = statusY + 18;
-    const int barW = contentW - 360;
-    const int barH = 28;
-
-    display.setTextColor(GxEPD_BLACK);
-    display.drawRect(barX, barY, barW, barH, GxEPD_BLACK);
-    display.fillRect(barX + 2, barY + 2, barW - 4, barH - 4, GxEPD_BLACK);
-
-    display.setFont(&FreeSans9pt7b);
-    display.setCursor(barX + barW + 16, barY + 22);
-    display.print("100% - Demo Complete!");
-
-    display.setFont(&FreeSans9pt7b);
-    display.setCursor(contentX + 24, statusY + statusH - 18);
-    display.print("E-paper is ideal for dashboards: the image stays visible without refresh power");
-
-    drawPageFooter("Wide screens work better when the key information is grouped into strong blocks");
-
-  } while (display.nextPage());
 }
 ```
 
-</details>
+**Setup Function:**
 
-The following figure shows the actual display effect of the E1003 example:
+1. **Serial Initialization**: Uses `Serial1` with pins 44 (RX) and 43 (TX) specific to reTerminal E Series
+2. **I2C Initialization**: Configures I2C with pins 19 (SDA) and 20 (SCL)
+3. **Sensor Initialization**: Calls `sht4x.begin(Wire, 0x44)` to initialize the SHT4x sensor at address 0x44
+4. **Serial Number Reading**: Reads and displays the sensor's unique serial number for verification
+
+**Loop Function:**
+
+1. **Delay**: Waits 5 seconds between measurements to avoid oversampling
+2. **Measurement**: Uses `measureHighPrecision()` for accurate readings (takes ~8.3ms)
+3. **Error Handling**: Checks for errors and converts them to readable messages using `errorToString()`
+4. **Display Results**: Prints temperature in Celsius and relative humidity percentage
+
+**Expected Output**
+
+```
+SHT4x Basic Example
+Serial Number: 331937553
+
+Temperature: 27.39°C Humidity: 53.68%
+Temperature: 27.40°C Humidity: 53.51%
+Temperature: 27.38°C Humidity: 53.37%
+```
+
+### Battery Management System
+
+The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
+
+#### Simple Battery Voltage Monitoring
+
+```cpp
+// reTerminal E Series - Simple Battery Voltage Reading
+
+// Serial configuration
+#define SERIAL_RX 44
+#define SERIAL_TX 43
+
+// Battery monitoring pins
+#define BATTERY_ADC_PIN 1      // GPIO1 - Battery voltage ADC
+#define BATTERY_ENABLE_PIN 21  // GPIO21 - Battery monitoring enable
+
+void setup() {
+  // Initialize serial
+  Serial1.begin(115200, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
+  while (!Serial1) {
+    delay(10);
+  }
+  
+  Serial1.println("Battery Voltage Monitor");
+  
+  // Configure battery monitoring enable pin
+  pinMode(BATTERY_ENABLE_PIN, OUTPUT);
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Enable battery monitoring
+  
+  // Configure ADC
+  analogReadResolution(12);  // 12-bit resolution
+  analogSetPinAttenuation(BATTERY_ADC_PIN, ADC_11db);
+  
+  delay(100);  // Allow circuit to stabilize
+}
+
+void loop() {
+  // Enable battery monitoring
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);
+  delay(5);
+  
+  // Read voltage in millivolts
+  int mv = analogReadMilliVolts(BATTERY_ADC_PIN);
+  
+  // Disable battery monitoring
+  digitalWrite(BATTERY_ENABLE_PIN, LOW);
+  
+  // Calculate actual battery voltage (2x due to voltage divider)
+  float batteryVoltage = (mv / 1000.0) * 2;
+  
+  // Print voltage
+  Serial1.print("Battery: ");
+  Serial1.print(batteryVoltage, 2);
+  Serial1.println(" V");
+  
+  delay(2000);
+}
+```
+
+**Code Explanation:**
+
+- GPIO1 reads the divided battery voltage through ADC
+- GPIO21 enables the battery monitoring circuit
+- The actual battery voltage is twice the measured voltage due to the voltage divider
+- For a fully charged LiPo battery, expect around 4.2V
+- When battery is low, voltage drops to around 3.3V
+
+**Expected Output**
+
+```
+Battery Voltage Monitor
+
+Battery: 4.18 V
+Battery: 4.19 V
+Battery: 4.18 V
+```
+
+### Using the MicroSD Card
+
+For applications requiring additional storage, such as a digital photo frame or data logging, the reTerminal E Series includes a MicroSD card slot.
+
+Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/240.png" style={{width:600, height:'auto'}}/></div>
 
