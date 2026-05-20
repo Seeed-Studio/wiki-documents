@@ -598,6 +598,11 @@ sudo journalctl -u rebot-f1-listener.service -f
 
 
 
+<div class="video-container">
+<iframe width="800" height="450" src="https://www.youtube.com/embed/Npw494pmh4A" title="Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
 ## 8. Troubleshooting
 
 1. Serial busy (`Device or resource busy`)  
