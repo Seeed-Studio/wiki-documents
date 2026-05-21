@@ -13,36 +13,39 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-01-07'
+updatedAt: '2026-04-21'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r20xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    </a>
-</div>
-
-reComputer Industrial R20xx 由 Raspberry Pi CM5 提供算力，是一款具备 AI 能力的灵活边缘 AI/IoT 控制器。它具备完备的工业接口 **（2x 以太网、4x USB、3x RS485、1x RS232、8x DI 和 8x DO）** 以及灵活的无线连接选项 **（4G/5G、LoRa®、Wi-Fi/BLE），** 非常适合多种工业应用场景。
+reComputer Industrial R20xx 由 Raspberry Pi CM5 提供算力，是一款具备 AI 能力的可适配边缘 AI/IoT 控制器。它具备完备的工业接口 **（2x 以太网、4x USB、3x RS485、1x RS232、8x DI 和 8x DO）** 以及灵活的无线连接选项 **（4G/5G、LoRa®、Wi-Fi/BLE），** 非常适合多种工业应用场景。
 reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于数据采集与过程监控、自动化与机器人控制、智能制造以及工业通信与网络等方面。凭借其小巧尺寸、灵活性、低成本和可编程性，为自动化与物联网系统等提供了强有力的支持。
+
+:::note
+可定制选项：Logo 品牌定制、包装和固件烧录。
+:::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>立即定制 ➜</font></span></strong></a>
+</div>
 
 ## 特性
 
 **工业级可靠性**
 
-- 无风扇紧凑型 PC，支持 -20°C 至 60°C 的宽温范围
+- 无风扇紧凑型 PC，支持 -20°C 至 60°C 宽温
 - 硬件看门狗
-- UPS 超级电容（可选）
-- 高质量金属外壳，兼容导轨和壁挂安装
+- 超级电容 UPS（可选）
+- 高质量金属外壳，支持导轨和壁挂安装
 - 生产生命周期：reComputer Industrial R2000 至少生产至 2030 年 12 月
 
 **高效 AI 计算**
 
 - 由 Raspberry Pi CM5 提供算力
-- Broadcom BCM2711 四核 Cortex-A72（ARM v8）64 位 SoC，主频 1.5GHz
-- 最高支持 16GB RAM 和 64GB eMMC
+- Broadcom BCM2711 四核 Cortex-A72（ARM v8）64 位 SoC @ 1.5GHz
+- 最高 16GB RAM 和 64GB eMMC
 - 搭载 Hailo-8 AI 加速器，最高 26 TOPS（可选）
 
 **丰富的无线能力**
@@ -52,7 +55,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
 - Mini-PCIe：LTE、USB LoRa®
 - M.2 KEY-B：4G/5G
 
-**丰富的接口**
+**丰富接口**
 
 - 3x RS485（隔离）、1x RS232（隔离）、8x 隔离 DI 端口、8x 隔离 DO 端口
 - 1x 10M/100M/1000M 以太网（支持 PoE PD）
@@ -60,7 +63,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
 - 2x HDMI 2.0
 - 3x Type-A USB3.0
 - 1x Type-A USB2.0
-- 1x Type-C USB2.0（用于操作系统更新的 USB 控制台）
+- 1x Type-C USB2.0（用于 OS 更新的 USB 控制台）
 - 1x Nano SIM 卡槽
 
 ## 规格参数
@@ -68,8 +71,8 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>Parameter </th>
-        <th colspan="2">Description</th>
+        <th>参数</th>
+        <th colspan="2">描述</th>
       </tr>
     </thead>
     <tbody>
@@ -86,12 +89,12 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
         <td colspan="2">Raspberry Pi Compute Module 5，2.4GHz 四核 64 位 Arm Cortex-A76</td>
       </tr>
       <tr>
-        <td> **AI Processor** </td>
-        <td>预装 1x Hailo-8 M.2 AI 加速器，26TOPS</td>
+        <td> **AI 处理器** </td>
+        <td>预装 1x Hailo-8 M.2 AI 加速卡，26TOPS</td>
         <td>*</td>
       </tr>
       <tr>
-        <td> **Operating System** </td>
+        <td> **操作系统** </td>
         <td colspan="2">Raspbian，Debian </td>
       </tr>
       <tr>
@@ -107,11 +110,11 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
       </tr>
       <tr>
         <td> 电源输入 </td>
-        <td colspan="2">DC 9V~36V，2 针端子座</td>
+        <td colspan="2">DC 9V~36V，2 针端子</td>
       </tr>
       <tr>
         <td>PoE（作为受电设备）</td>
-        <td colspan="2">IEEE 802.3at 标准 25.5W PoE</td>
+        <td colspan="2">IEEE 802.3at 标准 25.5W PoE</td>
       </tr>
       <tr>
         <td>电源开关</td>
@@ -136,7 +139,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
         <td colspan="3"> 3 x USB-A 3.0 Host；1 x USB-A 2.0 Host </td>
       </tr>
       <tr>
-        <td colspan="3"> 1 x USB-C 2.0（用于刷写 OS 和调试） </td>
+        <td colspan="3"> 1 x USB-C 2.0（用于烧录 OS 和调试） </td>
       </tr>
       <tr>
         <td> RS485 </td>
@@ -158,7 +161,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
         <td colspan="3"> 8 x 隔离 DO 端口 </td>
       </tr>
       <tr>
-        <td colspan="3"> 输出电压：小于 60V DC </td>
+        <td colspan="3"> 输出电压：不高于 60V DC </td>
       </tr>
       <tr>
         <td>SIM 卡</td>
@@ -169,7 +172,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
         <td>1x M.2 M-KEY 2280 插槽，用于 NVMe SSD；
 1x M.2 M-KEY 2280 插槽，用于 AI 加速器
 1x M.2 NVMe 插槽，t，M.2 M-KEY 2280
-（预装 1x Hailo-8 M.2 AI 加速器 26TOPS）；
+（预装 1x Hailo-8 M.2 AI 加速卡 26TOPS）；
 1x M.2 B-KEY 3042/3052 插槽，用于 5G/4G LTE；</td>
         <td>1x M.2 M-KEY 2280 插槽，用于 NVMe SSD；
 1x M.2 M-KEY 2280 插槽，用于 AI 加速器；
@@ -221,13 +224,13 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
       </tr>
       <tr>
         <td rowspan="3">EMC</td>
-        <td colspan="2">ESD：EN61000-4-2，Level 3</td>
+        <td colspan="2">ESD：EN61000-4-2，3 级</td>
       </tr>
       <tr>
-        <td colspan="2">EFT：EN61000-4-4，Level 2</td>
+        <td colspan="2">EFT：EN61000-4-4，2 级</td>
       </tr>
       <tr>
-        <td colspan="2">Surge：EN61000-4-5，Level 2</td>
+        <td colspan="2">浪涌：EN61000-4-5，2 级</td>
       </tr>
       <tr>
         <td rowspan="3">认证</td>
@@ -308,7 +311,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th colspan="2">元器件与接口状态说明</th>
+        <th colspan="2">元件与接口状态说明</th>
       </tr>
     </thead>
     <tbody>
@@ -330,7 +333,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
       </tr>
       <tr>
         <td>Included</td>
-        <td colspan="2">标配中提供的关键组件。</td>
+        <td colspan="2">标准包装中提供的关键组件。</td>
       </tr>
     </tbody>
   </table>
@@ -376,7 +379,7 @@ reComputer Industrial R20xx 支持两种电源供电方式：DC 端子和 PoE �
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R2000 通过 9~36V 的端子 DC 电压供电。电源通过 2-Pin 电源端子接线端子连接。
+reComputer Industrial R2000 通过 9~36V 的端子 DC 电压供电。电源通过 2-Pin 电源端子块连接器接入。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
 要对 reComputer Industrial R2000 进行接地，可以将地线固定在电源端子右侧的螺丝上。
@@ -388,18 +391,18 @@ reComputer Industrial R2000 的 ETH0（PoE PD）端口支持 PoE 供电，提供
 - PoE PD：IEEE 802.3at，最大 25.5W
 
 > 注意：
-> 需要注意的是，reComputer Industrial R2000 所配备的 PoE 模块符合 IEEE 802.3at 标准，最大可提供 25W 的电源。因此，如果需要连接 5G 或 4G 模块等高功耗外设，PoE 供电可能不足。在这种情况下，建议改用 DC 端子供电，以确保设备稳定可靠运行。
+> 需要注意的是，随 reComputer Industrial R2000 提供的 PoE 模块符合 IEEE 802.3at 标准，最大可提供 25W 的电源。因此，如果需要连接 5G 或 4G 模块等高功率外设，PoE 供电可能不足。在这种情况下，建议改用 DC 端子供电，以确保设备稳定可靠运行。
 
 **开关机**
 
-reComputer Industrial R2000 默认不带电源按钮，接通电源后系统会自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关机后再切断电源。要重启系统，只需重新接通电源即可。
+reComputer Industrial R2000 默认不带电源按钮，系统在接通电源后会自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关机后再切断电源。要重启系统，只需重新接通电源即可。
 
 #### 方框图
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.4_block_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.4_block_diagram_2.png" style={{width:800, height:'auto'}}/></div>
 
-#### IIC 示意图
+#### IIC 框图
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.5_iic_diagram_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -408,22 +411,22 @@ reComputer Industrial R2000 默认不带电源按钮，接通电源后系统会�
 | 类型            | 描述                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------|
 | **以太网**      | 1 x 10/100/1000 Mbps（支持 POE PD）；1 x 10/100 Mbps IEEE802.3/802.3u                |
-| **USB**         | 3 x USB-A 3.0 Host；1 x USB-C 2.0（用于烧录 OS 和调试）                               |
+| **USB**         | 3 x USB-A 3.0 Host；1 x USB-C 2.0（用于烧录 OS 和调试）                              |
 | **RS485**       | 3x RS485（隔离）                                                                      |
 | **RS232**       | 1x RS232（隔离）                                                                      |
 | **DI**          | 8 x 隔离 DI 端口（输入电压：5-24V DC）                                               |
 | **DO**          | 8 x 隔离 DO 端口（输出电压：60V DC）                                                 |
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
 | **LED**        | 4 x LED 指示灯                                                                        |
-| **SIM 卡槽** | 支持 Nano SIM 卡                                                                      |
-| **M.2 M-KEY 插槽**  | 1x 2280 用于 M.2 NVMe SSD；1x 2280 用于 AI 加速卡                               |
-| **M.2 B-KEY 插槽**  | 1x 用于 5G/4G LTE                                                                 |
+| **SIM 卡槽**      | 支持 Nano SIM 卡                                                                    |
+| **M.2 M-KEY 插槽**  | 1x 2280 用于 M.2 NVMe SSD；1x 2280 用于 AI 加速卡                                 |
+| **M.2 B-KEY 插槽**  | 1x 用于 5G/4G LTE                                                                  |
 | **蜂鸣器**          | 1                                                                                 |
-| **复位按钮**    | 1                                                                                 |
+| **复位按钮**        | 1                                                                                 |
 
 ### LED 指示灯状态
 
-reComputer Industrial R2000 配备了 4 个 LED 指示灯，用于指示设备的运行状态。各个 LED 的具体功能和状态请参见下表：
+reComputer Industrial R2000 配备了 4 个 LED 指示灯，用于指示设备的运行状态。各指示灯的具体功能和状态请参考下表：
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
@@ -473,11 +476,11 @@ reComputer Industrial R2000 配备了 4 个 LED 指示灯，用于指示设备�
 
 #### ACT 状态表
 
-| 长闪次数 | 短闪次数 | 状态                                   |
+| 长闪次数 | 短闪次数 | 状态                                      |
 |--------------|---------------|-------------------------------------|
-| 0            | 3             | 通用启动失败                         |
+| 0            | 3             | 通用启动失败                          |
 | 0            | 4             | 未找到 start*.elf                    |
-| 0            | 7             | 未找到内核镜像                       |
+| 0            | 7             | 未找到内核镜像                        |
 | 0            | 8             | SDRAM 故障                           |
 | 0            | 9             | SDRAM 不足                           |
 | 0            | 10            | 处于 HALT 状态                       |
@@ -487,13 +490,13 @@ reComputer Industrial R2000 配备了 4 个 LED 指示灯，用于指示设备�
 | 2            | 4             | 文件签名/哈希不匹配 - Pi 4           |
 | 4            | 4             | 不支持的板卡类型                     |
 | 4            | 5             | 致命固件错误                         |
-| 4            | 6             | 电源故障 A 类型                      |
-| 4            | 7             | 电源故障 B 类型                      |
+| 4            | 6             | 电源故障类型 A                       |
+| 4            | 7             | 电源故障类型 B                       |
 
-如果 ACT LED 以规则的四次闪烁模式闪烁，则表示找不到引导代码（bootcode，start.elf）。
+如果 ACT LED 以规则的四次闪烁模式闪烁，则表示找不到启动代码（start.elf）。
 如果 ACT LED 以不规则模式闪烁，则表示启动已经开始。
-如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在未连接任何外设的情况下再试一次。更多详情请查看 Raspberry Pi 论坛：
-置顶帖：你的 Pi 无法启动吗？（启动问题置顶帖）- Raspberry Pi 论坛。
+如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在未连接任何外设的情况下重试以确认。更多详情请查看 Raspberry Pi 论坛：
+STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums.
 更多详情请查看 [Raspberry Pi 论坛](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)
 
 #### USER 指示灯
@@ -703,14 +706,14 @@ reComputer Industrial R2000 系列设备包含 8 个 DI 接口，3-Pin 3.5mm 间
       </tr>
       <tr>
         <td>DI 到 G_DI</td>
-        <td>ON 状态：5~30 VDC</td>
+        <td>导通状态：5~30 VDC</td>
       </tr>
     </tbody>
   </table>
 </div>
 
 > 注意
-> 有关 DI 测试的详细信息，请参阅章节 [link](https://wiki.seeedstudio.com/cn/recomputer_industrial_r20xx_configure_system/di-(digital-input)-testing).
+> 有关 DI 测试的详细信息，请参阅章节 [link](https://wiki.seeedstudio.com/cn/recomputer_industrial_r20xx_configure_system/di-(digital-input)-testing)。
 
 ### DO（数字输出）
 
@@ -804,7 +807,7 @@ reComputer Industrial R2000 系列设备包含 8 个 DO 接口，3-Pin 3.5mm 间
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R20xx 的启动开关连接到 CM5 的 nRPI_BOOT 引脚。该开关为用户提供在 eMMC 和 USB 之间选择启动源的选项。在正常模式下，开关应拨到远离带有 "BOOT" 标签的一侧，使系统从 eMMC 启动。相反，当用户需要烧录系统镜像时，应将开关拨向带有 "BOOT" 标签的一侧，使系统从 Type-C USB 接口启动。
+reComputer Industrial R20xx 的启动开关连接到 CM5 的 nRPI_BOOT 引脚。该开关为用户提供在 eMMC 和 USB 之间选择启动源的选项。在正常模式下，开关应拨到远离带有 "BOOT" 标签一侧的位置，使系统从 eMMC 启动。相反，当用户需要烧录系统镜像时，应将开关拨向带有 "BOOT" 标签的一侧，使系统从 Type-C USB 接口启动。
 
 | 开关位置 | 模式         | 描述      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
@@ -836,8 +839,8 @@ reComputer Industrial R2000 系列设备包含一个内部 Nano SIM 卡槽，用
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_2.png" style={{width:900, height:'auto'}}/></div>
 
 > **注意**  
-> 请注意，标准版本的 reComputer Industrial R2000 不带 5G/4G 模块。
-> 如果你需要 5G/4G 功能，必须另外单独购买 5G/4G 模块。
+> 请注意，reComputer Industrial R2000 标准版本不带 5G/4G 模块。
+> 如果您需要 5G/4G 功能，必须另外单独购买 5G/4G 模块。
 
 ### M.2 M-KEY 插槽
 
@@ -860,7 +863,7 @@ reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽用于安装容量为 12
 >  
 > 需要特别注意的是，市面上并非所有 SSD 卡都支持第二种用法。因此，如果你打算将其用作启动盘且不确定购买哪一款型号，我们建议选择我们推荐的 2TB SSD（SKU 114993467）。该型号已经过启动功能测试和验证，可降低兼容性问题风险并减少试错成本。
 
-reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽还可用于安装 PCIE M.2 AI Accelerator。而 R20xx-12 系列已预装一块 Hailo-8 M.2 AI 加速模块，算力最高可达 26TOPS。
+reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R20xx-12 系列已预装一块 Hailo-8 M.2 AI 加速卡，算力最高可达 26TOPS。
 
 ### Mini-PCIe 插槽
 
@@ -870,14 +873,14 @@ reComputer Industrial R2000 上的 MiniPCIe 插槽可用于安装 4G LTE、USB L
 
 ### M.2 B-KEY 插槽
 
-reComputer Industrial R2000 上的 M.2 B-KEY 插槽可用于安装 5G/4G LTE 模块。
+reComputer Industrial R2000 上的 M.2 B-KEY 插槽可用于安装 5G/4G LTE。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.12_m.2_b-key__slot_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### 复位孔
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.13_reset_hole_1.png" style={{width:200, height:'auto'}}/></div>
-在 reComputer Industrial R2000 的复位孔内有一个微型按键开关。使用细小物体按下该按键即可复位 CM5。当该引脚为高电平时，表示 CM5 已经启动；将该引脚拉低则会复位模块。
+reComputer Industrial R2000 的复位孔内设有一个微型按键开关。通过使用细小物体按下该按键，可以复位 CM5。当该引脚为高电平时，表示 CM5 已经启动；将该引脚拉低则会复位模块。
 
 ### 以太网 RJ45  
 
@@ -890,22 +893,22 @@ reComputer Industrial R2000 上的 M.2 B-KEY 插槽可用于安装 5G/4G LTE 模
 | ETH0  | CM5 原生千兆以太网  | 10/100/1000 Mbit/s  | 支持       |
 | ETH1  | 由 USB 转换           | 10/100 Mbit/s       | 不支持   |
 
-reComputer Industrial R2000 配备两个以太网 RJ45 端口。ETH0 是 CM5 的原生千兆以太网接口，支持 10/100/1000 Mbit/s 三种速率。该接口支持以太网供电（PoE），可通过该接口为 reComputer Industrial R2000 供电。另一个 ETH1 由 USB 转换而来，支持 10/100 Mbit/s。
+reComputer Industrial R2000 配备两个以太网 RJ45 端口。ETH0 是 CM5 原生千兆以太网接口，支持 10/100/1000 Mbit/s 三种速率。该接口支持以太网供电（PoE），可为 reComputer Industrial R2000 提供电源。另一个 ETH1 由 USB 转换而来，支持 10/100 Mbit/s。
 
 ### HDMI
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.15_hdmi_1.png" style={{width:200, height:'auto'}}/></div>
 
-reComputer Industrial R2000 具有来自 CM5 的 2 路原生 HDMI 接口，支持最高 4K @ 60 fps 视频输出。非常适合需要多屏显示的应用场景，用户可以将内容输出到外部大屏幕。
+reComputer Industrial R2000 具有来自 CM5 的 2 路原生 HDMI 接口，支持最高 4K @ 60 fps 视频输出。非常适合需要多屏显示的应用场景，允许用户将内容输出到外部大屏幕。
 
 ### RTC
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.16_rtc_1.png" style={{width:200, height:'auto'}}/></div>
-reComputer Industrial R2000 集成了由电容供电的 RTC 电路，即使在断电情况下也能保持计时功能。
+reComputer Industrial R2000 配备由电容供电的 RTC 电路，即使在断电情况下也能保持计时功能。
 
 ### 看门狗
 
-reComputer Industrial R2000 配备了独立的硬件看门狗电路，可在系统异常崩溃时自动重启系统。看门狗电路通过 RTC 实现，并支持 1 到 255 秒范围内灵活设置喂狗时间。
+reComputer Industrial R2000 内置独立硬件看门狗电路，当系统异常崩溃时可自动重启系统。看门狗电路通过 RTC 实现，并支持 1 到 255 秒范围内灵活设置喂狗时间。
 
 ## 可选接口与模块  
 
@@ -955,7 +958,7 @@ reComputer Industrial R2000 支持丰富的扩展模块和配件，适用于多�
         <td>110061501</td>
       </tr>
       <tr>
-        <td rowspan="8">4G 天线需与 4G 模块配合使用以实现 4G 功能，GPS 天线需与 4G 模块配合使用以实现 GPS 功能</td>
+        <td rowspan="8">4G 天线需与 4G 模块配合以实现 4G 功能，GPS 天线需与 4G 模块配合以实现 GPS 功能</td>
         <td rowspan="6">4G 模块</td>
         <td>LTE Cat 4 EC25-AFXGA-Mini-PCIe 模块 - 适用于北美</td>
         <td>113991134</td>
@@ -982,12 +985,12 @@ reComputer Industrial R2000 支持丰富的扩展模块和配件，适用于多�
       </tr>
       <tr>
         <td>4G 天线</td>
-        <td>适用于 4G 模块的 4G 天线套件</td>
+        <td>4G 模块用 4G 天线套件</td>
         <td>110061502</td>
       </tr>
       <tr>
         <td>GPS 天线</td>
-        <td>适用于 EC25 4G 模块的 GPS 天线套件</td>
+        <td>EC25 4G 模块用 GPS 天线套件</td>
         <td>110061521</td>
       </tr>
       <tr>
@@ -1041,7 +1044,7 @@ reComputer Industrial R20xx 主板配备两个 Mini-PCIe 插槽。Mini-PCIe 插�
 
 ### Wi-Fi/BLE  
 
-reComputer Industrial R20xx 由带板载 Wi-Fi/BLE 版本的 CM5 提供算力，其 Wi-Fi/BLE 参数与 CM5 保持一致。详细参数信息请参考 Raspberry Pi 官方网站。  
+reComputer Industrial R20xx 由带板载 Wi-Fi/BLE 版本的 CM5 提供支持，其 Wi-Fi/BLE 参数与 CM5 保持一致。详细参数信息请参考 Raspberry Pi 官方网站。  
 
 ### 4G 模块
 
@@ -1049,32 +1052,32 @@ reComputer Industrial R20xx 主板配备一个 M.2 B-KEY 插槽和一个 Mini-PC
 
 ### 5G 模块
 
-reComputer Industrial R20xx 主板配备一个 M.2 B-KEY 插槽，支持通过 USB 协议的 4G/5G 模块。来自 Quectel 的 EC25 4G 模块已通过全面测试，可与 reComputer Industrial R20xx 兼容使用。
+reComputer Industrial R20xx 主板配备一个 M.2 B-KEY 插槽，支持使用 USB 协议的 4G/5G 模块。来自 Quectel 的 EC25 4G 模块已通过全面测试，可与 reComputer Industrial R20xx 兼容使用。
 
 > 注意
-> 请注意，如果你需要 4G/5G 功能，必须购买相应的 4G 模块和外置天线，并按照第 4.5 节“组装 4G/LoRa® 模块和天线”的说明进行操作。
+> 请注意，如果你需要 4G/5G 功能，必须购买相应的 4G 模块和外置天线，并按照 4.5 节“组装 4G/LoRa® 模块和天线”的说明进行操作。
 
 ### LoRa® 模块  
 
 Mini-PCIe 插槽支持使用 USB 和 SPI 协议的 LoRa® 模块。来自 Seeed Studio 的 WM1302 模块已通过全面测试，可与 reComputer Industrial R2000 兼容使用。
 
 > 注意
-> 请注意，如果你需要 LoRa® 功能，必须购买相应的 LoRa® 模块和外置天线，并按照第 4.5 节“组装 4G/LoRa® 模块和天线”的说明进行操作。
+> 请注意，如果你需要 LoRa® 功能，必须购买相应的 LoRa® 模块和外置天线，并按照 4.5 节“组装 4G/LoRa® 模块和天线”的说明进行操作。
 
 ### SSD
 
 reComputer Industrial R2000 通过使用 PCIe 插槽（J7）支持 2280 NVMe SSD。需要注意的是，CM5 的 PCIe 为 Gen2.0，最大理论速度为 5Gbps。如果你使用的是 Gen3.0 或更高版本的 SSD，可能无法达到该 SSD 的最高速度。经过测试，安装 SSD 的 reTerminal DM 可实现最高 230MB/s 的写入速度和 370MB/s 的读取速度。如果你不确定哪些 SSD 兼容，可以参考下方的配件列表进行购买。
 
-> Note
+> 注意
 > 请注意：
 > 速度测试结果可能会因 SSD 型号、测试方法和测试环境的不同而有所差异。此处提供的数值仅供参考，且是在 Seeed 的实验室中获得的。
 
-> Note
+> 注意
 > SSD 卡主要有两种用途：
 >
 > 1. **大容量存储：** SSD 卡可用于大容量存储需求。
-> 2. **带镜像的启动盘：** 另一种用法是将 SSD 同时用于大容量存储和存放系统镜像，从而可以直接从 SSD 卡启动系统。
-> 需要注意的是，市面上并非所有 SSD 卡都支持第二种用法。因此，如果你打算将其用作启动盘且不确定购买哪种型号，我们建议选择我们推荐的 1TB SSD（SKU 112990267）。该型号已通过启动功能测试和验证，可降低兼容性问题的风险，并减少试错成本。
+> 2. **带镜像的启动盘：** 另一种用法是将 SSD 同时用作大容量存储和系统镜像存储介质，从而可以直接从 SSD 卡启动系统。
+> 需要注意的是，市面上并非所有 SSD 卡都支持第二种用法。因此，如果你打算将其用作启动盘且不确定购买哪种型号，我们建议选择我们推荐的 1TB SSD（SKU 112990267）。该型号已经过启动功能测试和验证，可降低兼容性问题风险并减少试错成本。
 
 ### 加密芯片 TPM 2.0
 
@@ -1084,8 +1087,8 @@ reComputer Industrial R2000 通过使用 PCIe 插槽（J7）支持 2280 NVMe SSD
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/UPS_2.png" style={{width:900, height:'auto'}}/></div>
 
-UPS 为 7F，串联工作。UPS 模块位于 DC5V 与 CM5 组件之间，使用一个 GPIO 信号在 5V 电源丢失时向 CPU 发出警报。CPU 在接收到该信号后，会在超级电容能量耗尽之前执行紧急脚本，触发“$ shutdown”命令。
-UPS 提供的备份时长在很大程度上取决于系统负载。以下是使用配备 4GB RAM、32GB eMMC 存储和 Wi-Fi 模块的 CM5 模块进行测试的一些典型场景。
+UPS 为 7F，串联工作。UPS 模块位于 DC5V 与 CM5 组件之间，并使用一个 GPIO 信号在 5V 电源掉电时向 CPU 发出警报。CPU 在接收到该信号后，会在超级电容能量耗尽之前执行紧急脚本，发出 "$ shutdown" 命令。
+UPS 提供的备份时长在很大程度上取决于系统负载。下面是使用配备 4GB RAM、32GB eMMC 存储和 Wi-Fi 模块的 CM5 模块进行测试的一些典型场景。
 
 | **工作模式** | **时间（秒）**  | **备注**          |
 |-----------------------|------------------------------|---------------------|
@@ -1093,7 +1096,7 @@ UPS 提供的备份时长在很大程度上取决于系统负载。以下是使�
 | CPU 满载              | 6            | stress -c 4 -t 10m -v &       |
 
 :::note
-如需 UPS 功能的更多信息，请联系我们，且告警信号为低电平有效（active LOW）。
+如需 UPS 功能的更多信息，请联系我们，且告警信号为有效低电平（LOW）。
 :::
 
 ## 其他资源

@@ -30,12 +30,12 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance. It‘s equipped with PCIe port at the bottom to provide rich expansion capabilities, which also can be customized flexibly. The whole system is designed for embedding into autonomous machines such as drones, patrol robots, delivering robots, etc. It can directly occupy 54V DC input, able to be widely used in battery powered systems.
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Customize Now ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
 
 <!-- Buy links -->
