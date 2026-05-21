@@ -33,7 +33,7 @@ The full system includes one NVIDIA Jetson Orin production module, a heatsink, a
 If you are looking for the version without power adapter, please check out [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

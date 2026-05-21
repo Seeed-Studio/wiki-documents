@@ -28,7 +28,7 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 > **Purchase Notice:** 4G and LoRa® modules do not come with reTerminal DM by default. Please purchase the relevant modules accordingly, such as the [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html).
 >
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

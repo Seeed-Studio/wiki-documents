@@ -27,7 +27,7 @@ reComputer industrial comes with a passive heatsink and a fanless design, making
 reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The other GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
