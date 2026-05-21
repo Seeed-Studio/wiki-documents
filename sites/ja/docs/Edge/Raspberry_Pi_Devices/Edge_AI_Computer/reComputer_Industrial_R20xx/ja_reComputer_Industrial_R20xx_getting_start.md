@@ -155,7 +155,7 @@ reComputer Industrial R20xx シリーズは、産業向け AI アプリケーシ
       </tr>
       <tr>
         <td colspan="3"> 入力電圧：5～24V DC </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> DO </td>
         <td colspan="3"> 8 x アイソレート DO ポート </td>
@@ -763,7 +763,7 @@ reComputer Industrial R2000 シリーズ機器には、8× DO ポート（3 ピ�
       <tr>
         <td>28</td>
         <td>DO8</td>
-      </tr]
+      </tr>
       <tr>
         <td>30</td>
         <td>G_DO</td>
@@ -943,7 +943,7 @@ reComputer Industrial R2000 は豊富な拡張モジュールとアクセサリ�
       <tr>
         <td>地域別オプション LoRaWAN Gateway Module(SPI)-EU868</td>
         <td>114993268</td>
-      </tr]
+      </tr>
       <tr>
         <td>地域別オプション LoRaWAN Gateway Module(SPI)-EU868</td>
         <td>114992549</td>

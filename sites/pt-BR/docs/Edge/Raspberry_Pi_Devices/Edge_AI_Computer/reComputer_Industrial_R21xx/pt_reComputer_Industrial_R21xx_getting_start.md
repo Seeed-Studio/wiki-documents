@@ -148,7 +148,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       <tr>
         <td> RS485 </td>
         <td colspan="3"> 2x RS485 (Isolado) </td>
-      </tr]
+      </tr>
       <tr>
         <td> RS232 </td>
         <td colspan="3"> 2x RS232 (Isolado) </td>

@@ -129,7 +129,7 @@ reServer Industrial には 5 つの RJ45 GbE ポートがあり、そのうち 4
     <tr>
       <td>DI/DO</td>
       <td colSpan={4}>4×DI、4×DO、3×GND_DI、2×GND_DO、1×GND_ISO、1×CAN</td>
-    </tr]
+    </tr>
     <tr>
       <td>COM</td>
       <td colSpan={4}>1× DB9 (RS232/RS422/RS485)</td>

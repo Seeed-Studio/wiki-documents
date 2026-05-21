@@ -174,7 +174,7 @@ reComputer Industrial R21xx シリーズは、産業用 AI アプリケーショ
       <tr>
         <td>SIM カード</td>
         <td colspan="3">1x Nano SIM カードスロット</td>
-      </tr]
+      </tr>
       <tr>
         <td>M.2 スロット</td>
         <td>1x M.2 M-KEY 2280 スロット（NVMe SSD 用）；

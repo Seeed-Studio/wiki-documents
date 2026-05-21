@@ -187,7 +187,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
       <tr>
         <td>LED</td>
         <td colspan="2">4 x indicadores LED</td>
-      </tr]
+      </tr>
       <tr>
         <td>Buzzer</td>
         <td colspan="2">1</td>

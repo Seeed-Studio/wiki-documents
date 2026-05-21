@@ -263,7 +263,7 @@ reComputer Industrial R22xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td>超级电容 UPS</td>
         <td>SuperCAP UPS LTC3350 模块*</td>
-      </tr]
+      </tr>
       <tr>
         <td>硬件看门狗</td>
         <td>1~255s</td>
@@ -977,7 +977,7 @@ reComputer Industrial R2000 支持丰富的扩展模块和配件，适用于多�
         <td>4G 天线</td>
         <td>适用于 4G 模块的 4G 天线套件</td>
         <td>110061502</td>
-      </tr]
+      </tr>
       <tr>
         <td>GPS 天线</td>
         <td>适用于 EC25 4G 模块的 GPS 天线套件</td>

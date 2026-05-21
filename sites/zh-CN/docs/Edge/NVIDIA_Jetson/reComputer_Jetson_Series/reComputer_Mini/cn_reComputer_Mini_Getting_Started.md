@@ -214,7 +214,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模组驱动的小�
     <tr>
       <td>工作温度</td>
       <td colSpan={4}>-10℃ ~ 50℃</td>
-    </tr]
+    </tr>
     <tr>
       <td>质保</td>
       <td colSpan={4}>1 年</td>

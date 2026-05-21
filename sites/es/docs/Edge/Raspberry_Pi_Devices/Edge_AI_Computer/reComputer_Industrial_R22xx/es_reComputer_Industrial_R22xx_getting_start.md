@@ -165,7 +165,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <tr>
         <td>Tarjeta SIM</td>
         <td colspan="2">1x ranura para tarjeta Nano SIM</td>
-      </tr]
+      </tr>
       <tr>
         <td>Ranura M.2</td>
         <td>2x ranuras M.2 M-key 2280 para SSD NVMe；
@@ -994,7 +994,7 @@ Aquí está la lista de accesorios y módulos opcionales:
         <td rowspan="5">Tarjeta SSD</td>
         <td>NVMe M.2 2280 SSD 2TB</td>
         <td>114993467</td>
-      </tr]
+      </tr>
       <tr>
         <td>NVMe M.2 2280 SSD 1TB</td>
         <td>114993467</td>

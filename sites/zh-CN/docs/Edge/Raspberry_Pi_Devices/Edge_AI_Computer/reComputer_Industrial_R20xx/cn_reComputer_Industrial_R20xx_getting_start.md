@@ -263,7 +263,7 @@ reComputer Industrial R20xx 系列非常适用于工业 AI 应用。它可用于
       <tr>
         <td>存储温度</td>
         <td colspan="2">-40~85 °C</td>
-      </tr]
+      </tr>
       <tr>
         <td colspan="3">其他</td>
       </tr>
@@ -665,7 +665,7 @@ reComputer Industrial R2000 系列设备包含 8 个 DI 接口，3-Pin 3.5mm 间
       <tr>
         <td>23</td>
         <td>DI6</td>
-      </tr]
+      </tr>
       <tr>
         <td>25</td>
         <td>DI7</td>

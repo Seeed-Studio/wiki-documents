@@ -125,7 +125,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     <tr>
       <td>USB</td>
       <td colSpan={4}>4× USB3.1, 1× USB2.0 Tipo C (modo Device), 1× USB2.0 Tipo C para Debug UART &amp; RP2040</td>
-    </tr]
+    </tr>
     <tr>
       <td>DI/DO</td>
       <td colSpan={4}>4×DI,4×DO,3×GND_DI,2×GND_DO,1×GND_ISO,1×CAN</td>
@@ -451,7 +451,7 @@ import TabItem from '@theme/TabItem';
         <td>
           <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdqRMLVCzHtIkHUShgZ91xoBK367uzXyC_mTGQOzlfJhyQ?e=wgOhwj" target="_blank" rel="noopener noreferrer">Download2</a>
         </td>
-      </tr]
+      </tr>
       <tr>
         <td>6.1</td>
         <td>36.4</td>

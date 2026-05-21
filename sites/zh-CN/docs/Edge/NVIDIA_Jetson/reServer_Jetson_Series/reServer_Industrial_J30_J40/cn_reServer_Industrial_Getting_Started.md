@@ -155,7 +155,7 @@ reServer Industrial 具有 5 个 RJ45 GbE 接口，其中 4 个为 PoE PSE 接�
       <td rowSpan={5}>扩展</td>
       <td>Mini PCIe</td>
       <td colSpan={4}>Mini PCIe，用于 LoRaWAN®/4G/系列无线（模块可选）</td>
-    </tr]
+    </tr>
     <tr>
       <td>M.2 Key B</td>
       <td colSpan={4}>M.2 Key B (3042/3052)，支持 4G/5G（模块可选）</td>

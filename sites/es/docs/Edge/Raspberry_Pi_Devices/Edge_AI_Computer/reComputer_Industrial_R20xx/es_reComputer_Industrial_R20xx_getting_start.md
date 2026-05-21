@@ -148,7 +148,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <tr>
         <td> RS232 </td>
         <td colspan="3"> 1x RS232 (aislado) </td>
-      </tr]
+      </tr>
       <tr>
         <td rowspan="2"> DI </td>
         <td colspan="3"> 8 x puertos DI aislados </td>

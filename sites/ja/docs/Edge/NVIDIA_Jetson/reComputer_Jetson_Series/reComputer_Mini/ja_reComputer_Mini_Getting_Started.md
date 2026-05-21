@@ -153,7 +153,7 @@ reComputer Mini は NVIDIA Jetson Orin Nano/Orin NX モジュールを搭載し�
     <tr>
       <td>拡張ポート</td>
       <td colSpan={3}>2x 60 ピン高速コネクタ（拡張ボード用）<br />1x 10 ピン電源コネクタ（拡張ボード用）</td>
-    </tr]
+    </tr>
     <tr>
       <td>RTC</td>
       <td colSpan={3}>1x RTC 2 ピン</td>

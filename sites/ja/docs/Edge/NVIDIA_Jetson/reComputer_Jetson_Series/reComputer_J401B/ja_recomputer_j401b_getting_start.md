@@ -153,7 +153,7 @@ reComputer J401B シリーズは、reComputer Classic シリーズの改良版�
     <tr>
       <td>M.2 Key M</td>
       <td colSpan='4' align='center'>1* M.2 Key M</td>
-    </tr]
+    </tr>
     <tr>
       <td>M.2 Key E</td>
       <td colSpan='4' align='center'>1* M.2 Key E</td>

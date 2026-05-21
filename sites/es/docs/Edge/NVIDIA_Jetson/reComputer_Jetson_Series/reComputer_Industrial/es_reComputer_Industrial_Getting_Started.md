@@ -96,7 +96,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <td>CPU Arm® Cortex®-A78AE v8.2 de 64 bits y 8 núcleos<br />2MB L2 + 4MB L3</td>
       <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 64 bits y 6 núcleos<br />1.5MB L2 + 4MB L3</td>
       <td colSpan={2}>CPU NVIDIA Carmel ARM®v8.2 de 64 bits y 6 núcleos, 6MB L2 + 4MB L3</td>
-    </tr]
+    </tr>
     <tr>
       <td>Memoria</td>
       <td>16GB 128-bit LPDDR5<br />102.4GB/s</td>

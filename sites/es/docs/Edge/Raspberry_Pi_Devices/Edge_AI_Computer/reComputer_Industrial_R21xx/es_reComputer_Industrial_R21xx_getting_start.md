@@ -187,7 +187,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 1x ranura M.2 B-KEY 3042/3052 para 5G/4G LTE
 2x ranura M.2 NVMe, t, M.2 M-KEY 2280;
 1x ranura M.2 NVMe, t, M.2 B-KEY </td>
-      </tr]
+      </tr>
       <tr>
         <td>Mini-PCIe</td>
         <td colspan="2">1x Mini-PCIe para módulo LoRa</td>
