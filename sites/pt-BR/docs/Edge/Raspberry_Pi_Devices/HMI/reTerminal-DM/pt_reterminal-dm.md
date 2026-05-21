@@ -28,7 +28,7 @@ Ele é equipado com rica escalabilidade e conectividade híbrida, suportando bar
 > **Aviso de compra:** os módulos 4G e LoRa® não acompanham o reTerminal DM por padrão. Adquira separadamente os módulos relevantes, como o [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html).
 >
 :::note
-Personalização está disponível para marca em logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

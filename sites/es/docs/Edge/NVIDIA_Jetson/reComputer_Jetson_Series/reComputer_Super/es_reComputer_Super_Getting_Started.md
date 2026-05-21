@@ -29,7 +29,7 @@ Diseñada tanto para desarrollo como para producción, viene con una amplia gama
 También es compatible con una amplia gama de frameworks de LLM y Physical AI, como NVIDIA, Hugging Face, ONNX, PyTorch y ROS2/1 en el edge de forma fluida, incluso combinando estas capacidades multimodales con aplicaciones de robótica para enriquecer el desarrollo de Physical AI.
 
 :::note
-Hay personalización disponible para la marca del logotipo, el embalaje y la grabación de firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

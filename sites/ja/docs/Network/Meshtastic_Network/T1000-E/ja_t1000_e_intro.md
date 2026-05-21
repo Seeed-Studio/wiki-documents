@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 これは [Meshtastic®](https://meshtastic.org/) 向けに設計された高性能トラッカーで、クレジットカードほどのサイズであり、ポケットに簡単に収まるほか、資産に取り付けて使用できます。Semtech の LR1110、Nordic の nRF52840、Mediatek の AG3335 GPS モジュールを内蔵し、[Meshtastic®](https://meshtastic.org/) ユーザーに高精度かつ低消費電力の測位および通信ソリューションを提供します。
 
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズに対応しています。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

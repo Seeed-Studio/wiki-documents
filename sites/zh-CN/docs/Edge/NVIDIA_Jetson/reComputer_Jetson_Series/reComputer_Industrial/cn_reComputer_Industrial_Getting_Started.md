@@ -27,7 +27,7 @@ reComputer 工业版配备被动散热片并采用无风扇设计，非常适合
 reComputer 工业版具有 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接口，可为 IP 摄像头等设备提供以太网供电。这消除了单独电源的需求，使在缺乏现成电源插座的区域部署网络设备更加容易。另一个 GbE 接口用于连接到网络交换机或路由器，从而实现与网络上其他设备的通信并访问互联网。
 
 :::note
-可提供 Logo 品牌定制、包装定制和固件烧录定制服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

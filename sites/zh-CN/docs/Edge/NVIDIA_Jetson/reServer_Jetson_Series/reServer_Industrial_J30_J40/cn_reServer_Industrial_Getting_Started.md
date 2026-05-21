@@ -25,7 +25,7 @@ reServer Industrial 采用被动散热片和无风扇设计，非常适合在严
 reServer Industrial 具有 5 个 RJ45 GbE 接口，其中 4 个为 PoE PSE 接口，可为 IP 摄像机等设备提供以太网供电。这消除了单独电源的需求，使在缺乏电源插座的区域部署网络设备更加容易。剩余的 GbE 接口用于连接网络交换机或路由器，实现与网络中其他设备的通信以及访问互联网。
 
 :::note
-支持 Logo 品牌定制、包装定制和固件烧录定制。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

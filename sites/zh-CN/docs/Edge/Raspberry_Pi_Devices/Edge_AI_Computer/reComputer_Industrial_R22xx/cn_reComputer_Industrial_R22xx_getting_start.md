@@ -24,7 +24,7 @@ reComputer Industrial R22xx 由 Raspberry Pi CM5 提供算力，是一款具备 
 reComputer Industrial R22xx 系列非常适用于工业 AI 应用。它可用于数据采集与过程监控、自动化与机器人控制、智能制造以及工业通信与网络等方面。凭借其小巧尺寸、灵活性、低成本和可编程性，为自动化与物联网系统等提供了有力支持。
 
 :::note
-可提供 Logo 品牌定制、包装定制以及固件烧录服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

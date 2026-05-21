@@ -33,7 +33,7 @@ El controlador IoT perimetral reComputer R1000 está construido sobre la platafo
 Con sólidas capacidades de comunicación de red IoT, la serie R1000 admite múltiples opciones de comunicación inalámbrica, incluidas 4G, LoRa®, Wi-Fi/BLE, lo que permite configuraciones flexibles para funcionar como pasarelas inalámbricas correspondientes. Este controlador es ideal para la gestión remota de dispositivos, la gestión energética y diversos otros escenarios en el ámbito de los edificios inteligentes.
 
 :::note
-Hay opciones de personalización disponibles para la marca del logotipo, el embalaje y la grabación del firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

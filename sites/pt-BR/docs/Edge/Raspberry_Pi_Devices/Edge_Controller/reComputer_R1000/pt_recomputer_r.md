@@ -33,7 +33,7 @@ O controlador IoT de borda reComputer R1000 é construído sobre a plataforma de
 Com robustas capacidades de comunicação de rede IoT, a série R1000 suporta múltiplas opções de comunicação sem fio, incluindo 4G, LoRa®, Wi-Fi/BLE, permitindo configurações flexíveis para atuar como gateways sem fio correspondentes. Este controlador é ideal para gerenciamento remoto de dispositivos, gerenciamento de energia e vários outros cenários no campo de edifícios inteligentes.
 
 :::note
-Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

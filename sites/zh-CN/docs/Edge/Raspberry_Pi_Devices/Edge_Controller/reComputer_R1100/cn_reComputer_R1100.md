@@ -26,7 +26,7 @@ reComputer R1100 由 Raspberry Pi CM4 提供算力，是一款多功能的边缘
 reComputer R1100 系列广泛应用于物联网场景，包括 **数据采集与过程监控、自动化与机器人控制、智能制造以及工业通信与网络**。其小巧的尺寸、灵活性、低成本和可编程性，为 **自动化、物联网系统及更多应用** 提供了有力支持。
 
 :::note
-支持 Logo 品牌定制、包装定制以及固件烧录定制。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

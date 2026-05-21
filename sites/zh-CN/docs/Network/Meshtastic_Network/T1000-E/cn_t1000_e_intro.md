@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 这是一款为 [Meshtastic®](https://meshtastic.org/) 设计的高性能追踪器，小巧如信用卡，可轻松放入口袋或固定在资产上。其内置 Semtech 的 LR1110、Nordic 的 nRF52840 和 Mediatek 的 AG3335 GPS 模块，为 [Meshtastic®](https://meshtastic.org/) 用户提供高精度、低功耗的定位与通信解决方案。
 
 :::note
-支持 Logo 品牌定制、包装定制以及固件烧录定制。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

@@ -30,7 +30,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 reComputer Mini es un diminuto ordenador de IA impulsado por el módulo NVIDIA Jetson Orin Nano/Orin NX, que ofrece hasta 100 TOPS de rendimiento de IA. Está equipado con un puerto PCIe en la parte inferior para proporcionar amplias capacidades de expansión, que también se pueden personalizar de forma flexible. Todo el sistema está diseñado para integrarse en máquinas autónomas como drones, robots de patrulla, robots de reparto, etc. Puede aceptar directamente una entrada de CC de 54 V, por lo que puede utilizarse ampliamente en sistemas alimentados por batería.
 
 :::note
-Hay opciones de personalización para la marca del logotipo, el embalaje y la grabación del firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

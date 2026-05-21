@@ -25,7 +25,7 @@ O reServer Industrial vem com um dissipador de calor passivo e um design sem ven
 O reServer Industrial possui 5 portas RJ45 GbE, 4 das quais são portas PoE PSE para fornecer energia via Ethernet para dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A porta GbE restante é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
 
 :::note
-Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

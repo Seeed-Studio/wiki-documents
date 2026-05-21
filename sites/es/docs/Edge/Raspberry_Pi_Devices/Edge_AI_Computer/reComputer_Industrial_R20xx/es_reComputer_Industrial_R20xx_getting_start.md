@@ -23,7 +23,7 @@ El reComputer Industrial R20xx, impulsado por Raspberry Pi CM5, es un controlado
 La serie reComputer Industrial R20xx es ideal para su uso en aplicaciones de IA industrial. Puede utilizarse en aspectos como adquisición de datos y monitorización de procesos, automatización y control de robots, fabricación inteligente y comunicación y redes industriales. Gracias a su tamaño reducido, flexibilidad, bajo coste y programabilidad, proporciona un sólido soporte para sistemas de automatización e IoT y más.
 
 :::note
-Hay opciones de personalización disponibles para la marca del logotipo, el embalaje y la grabación de firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

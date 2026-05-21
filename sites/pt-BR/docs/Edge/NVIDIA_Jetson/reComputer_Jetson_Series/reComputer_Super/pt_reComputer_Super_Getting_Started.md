@@ -29,7 +29,7 @@ Projetado tanto para desenvolvimento quanto para produção, vem com uma rica va
 Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch e ROS2/1 na borda de forma transparente, até mesmo combinando essas capacidades multimodais com aplicações de robótica para enriquecer o desenvolvimento de IA Física.
 
 :::note
-Personalização disponível para marca com logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

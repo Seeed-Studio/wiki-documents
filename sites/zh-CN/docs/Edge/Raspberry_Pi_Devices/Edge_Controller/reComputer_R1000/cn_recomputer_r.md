@@ -33,7 +33,7 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
 凭借强大的物联网网络通信能力，R1000 系列支持包括 4G、LoRa®、Wi-Fi/BLE 在内的多种无线通信方式，可灵活配置为相应的无线网关。该控制器非常适合用于远程设备管理、能源管理以及智慧楼宇领域的多种应用场景。
 
 :::note
-可提供 Logo 品牌定制、包装定制以及固件烧录服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

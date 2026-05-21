@@ -26,7 +26,7 @@ O reComputer Industrial R21xx, com tecnologia Raspberry Pi CM5, é um computador
 A série reComputer Industrial R21xx é ideal para uso em aplicações de IA industrial. Ela pode ser usada em aspectos como aquisição de dados e monitoramento de processos, automação e controle de robôs, manufatura inteligente e comunicação e redes industriais. Com seu tamanho reduzido, flexibilidade, baixo custo e programabilidade, oferece forte suporte para sistemas de automação e IoT e muito mais.
 
 :::note
-Personalização disponível para marca (logo), embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

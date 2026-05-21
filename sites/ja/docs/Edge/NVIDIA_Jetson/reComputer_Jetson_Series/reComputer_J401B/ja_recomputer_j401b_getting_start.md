@@ -27,7 +27,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 reComputer J401B シリーズは、reComputer Classic シリーズの改良版です。NVIDIA Jetson Orin NX 8GB モジュールを搭載した reComputer J4011B は、2x USB 3.2、HDMI、Ethernet、Wi-Fi モジュール用 M.2 Key E、SSD 用 M.2 Key M、LTE モジュール用 mini-PCIe、CAN、40 ピンなど、豊富なインターフェースを備えた強力かつコンパクトなエッジ AI デバイスです。
 
 :::note
-ロゴのブランディング、パッケージング、ファームウェアのフラッシュについてはカスタマイズが可能です。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

@@ -30,7 +30,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 reComputer Mini は NVIDIA Jetson Orin Nano/Orin NX モジュールを搭載した小型 AI コンピュータで、最大 100 TOPS の AI 性能を発揮します。底面には PCIe ポートを備え、豊富な拡張性を提供するとともに、柔軟なカスタマイズも可能です。本システムはドローン、パトロールロボット、配送ロボットなどの自律型マシンへの組み込みを想定して設計されています。54V DC 入力に直接対応しており、バッテリー駆動システムで幅広く利用できます。
 
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズに対応しています。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

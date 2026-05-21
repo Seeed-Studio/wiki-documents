@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker/Introduction/
 [**SenseCAP T1000**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) は、GNSS/Wi-Fi/Bluetooth を活用して屋内外で高精度な位置情報を追跡できるコンパクトな LoRaWAN® トラッカーです。自己地理適応機能、ローカルデータストレージ、そして数か月に及ぶ優れたバッテリー寿命を備えています。さらに、温度・照度・モーションセンサーを搭載しており、さまざまな位置情報ベースのアプリケーションに最適です。
 
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズが可能です。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

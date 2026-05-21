@@ -29,7 +29,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
 它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
 
 :::note
-支持 Logo 品牌定制、包装定制以及固件烧录定制服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

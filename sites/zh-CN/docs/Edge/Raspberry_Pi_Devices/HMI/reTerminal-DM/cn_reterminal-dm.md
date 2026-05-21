@@ -28,7 +28,7 @@ reTerminal DM 是一款 10.1 英寸开源坚固型 HMI——一体化设备主�
 > **购买须知：**4G 和 LoRa® 模块默认不随 reTerminal DM 一同提供。请根据需要单独购买相关模块，例如 [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)。
 >
 :::note
-可提供 Logo 品牌定制、包装定制以及固件烧录服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

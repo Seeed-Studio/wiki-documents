@@ -33,7 +33,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 如果你在寻找不带电源适配器的版本，请查看 [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html)。
 
 :::note
-我们提供 Logo 品牌定制、包装定制以及固件烧录等定制服务。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

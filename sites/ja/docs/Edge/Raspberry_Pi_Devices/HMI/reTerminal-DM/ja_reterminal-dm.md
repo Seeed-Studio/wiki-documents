@@ -28,7 +28,7 @@ CAN バス、RS485、RS232、ギガビット Ethernet ポートなどのイン�
 > **購入に関する注意:** 4G および LoRa® モジュールは、標準では reTerminal DM に同梱されません。[4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html) など、必要に応じて関連モジュールを別途ご購入ください。
 >
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズが可能です。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

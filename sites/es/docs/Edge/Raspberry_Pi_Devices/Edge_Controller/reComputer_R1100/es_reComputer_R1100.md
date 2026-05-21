@@ -26,7 +26,7 @@ El reComputer R1100, impulsado por la Raspberry Pi CM4, es una versátil pasarel
 La serie reComputer R1100 se utiliza ampliamente en aplicaciones IoT, incluyendo **adquisición de datos y monitorización de procesos, control de automatización y robótica, fabricación inteligente y comunicación y redes industriales**. Su tamaño compacto, flexibilidad, bajo coste y programabilidad proporcionan un sólido soporte para **automatización, sistemas IoT y más allá**.
 
 :::note
-Hay opciones de personalización disponibles para la marca del logotipo, el embalaje y la grabación del firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

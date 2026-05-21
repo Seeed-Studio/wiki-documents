@@ -21,7 +21,7 @@ url: https://wiki.seeedstudio.com/ja/t1000e_for_lorawan_introduction/
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
 
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズに対応しています。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

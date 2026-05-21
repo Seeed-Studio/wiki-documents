@@ -29,7 +29,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
 また、NVIDIA、Hugging Face、ONNX、PyTorch、ROS2/1 など、幅広い LLM および Physical AI フレームワークをエッジでシームレスにサポートし、これらのマルチモーダル機能をロボティクスアプリケーションと統合することで、Physical AI 開発をさらに充実させます。
 
 :::note
-ロゴブランディング、パッケージング、ファームウェア書き込みのカスタマイズが可能です。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

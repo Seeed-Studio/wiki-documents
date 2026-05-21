@@ -33,7 +33,7 @@ Jetson Orin を搭載した reComputer J30/40 は、最大 100TOPS の最新 AI 
 電源アダプタなしのバージョンをお探しの場合は、[reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) をご確認ください。
 
 :::note
-ロゴブランディング、パッケージング、ファームウェアのフラッシュについてはカスタマイズが可能です。
+カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

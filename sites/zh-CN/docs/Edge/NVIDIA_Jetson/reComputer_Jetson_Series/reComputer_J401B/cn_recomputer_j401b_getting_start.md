@@ -27,7 +27,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 reComputer J401B 系列是 reComputer Classic 系列的迭代产品。搭载 NVIDIA Jetson Orin NX 8GB 模组的 reComputer J4011B 是一款功能强大且紧凑的边缘 AI 设备，具备丰富的接口：2 路 USB 3.2、HDMI、以太网、用于 Wi-Fi 模组的 M.2 Key E、用于 SSD 的 M.2 Key M、用于 LTE 模组的 mini-PCIe、CAN、40 针接口等。
 
 :::note
-支持 Logo 品牌定制、包装定制以及固件烧录定制。
+可定制选项：Logo 品牌定制、包装和固件烧录。
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

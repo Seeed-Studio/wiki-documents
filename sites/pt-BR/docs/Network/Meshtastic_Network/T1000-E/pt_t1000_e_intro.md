@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/pt-br/t1000_e_intro/
 É um tracker de alto desempenho projetado para [Meshtastic®](https://meshtastic.org/), tão pequeno quanto um cartão de crédito, cabendo facilmente no seu bolso ou podendo ser preso aos seus ativos. Ele incorpora o LR1110 da Semtech, o nRF52840 da Nordic e o módulo GPS AG3335 da Mediatek, fornecendo aos usuários do [Meshtastic®](https://meshtastic.org/) uma solução de posicionamento e comunicação de alta precisão e baixo consumo de energia.
 
 :::note
-Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

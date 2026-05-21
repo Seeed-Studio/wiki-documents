@@ -26,7 +26,7 @@ O reComputer R1100, equipado com o Raspberry Pi CM4, é um gateway IoT de borda 
 A série reComputer R1100 é amplamente utilizada em aplicações de IoT, incluindo **aquisição de dados e monitoramento de processos, controle de automação e robótica, manufatura inteligente e comunicação e redes industriais**. Seu tamanho compacto, flexibilidade, baixo custo e programabilidade fornecem forte suporte para **automação, sistemas de IoT e além**.
 
 :::note
-Personalização está disponível para marca em logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

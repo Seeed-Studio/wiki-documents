@@ -27,7 +27,7 @@ O reComputer industrial vem com um dissipador de calor passivo e um design sem v
 O reComputer industrial possui 2 portas RJ45 GbE, uma das quais é uma porta PoE PSE para fornecer energia via Ethernet a dispositivos como câmeras IP. Isso elimina a necessidade de uma fonte de alimentação separada e facilita a implantação de dispositivos de rede em áreas sem tomadas de energia facilmente disponíveis. A outra porta GbE é usada para conectar a um switch de rede ou roteador, permitindo a comunicação com outros dispositivos na rede e o acesso à Internet.
 
 :::note
-Personalização está disponível para marca com logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

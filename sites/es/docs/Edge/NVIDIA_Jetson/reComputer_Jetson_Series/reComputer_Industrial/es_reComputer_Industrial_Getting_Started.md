@@ -27,7 +27,7 @@ reComputer Industrial viene con un disipador pasivo y un diseño sin ventilador,
 reComputer Industrial dispone de 2 puertos RJ45 GbE, uno de los cuales es un puerto PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación independiente y facilita el despliegue de dispositivos de red en zonas sin tomas de corriente fácilmente disponibles. El otro puerto GbE se utiliza para conectarse a un switch o router de red, lo que permite la comunicación con otros dispositivos de la red y el acceso a Internet.
 
 :::note
-Hay personalización disponible para la marca del logotipo, el embalaje y la grabación del firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

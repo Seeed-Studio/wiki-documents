@@ -33,7 +33,7 @@ El sistema completo incluye un módulo de producción NVIDIA Jetson Orin, un dis
 Si estás buscando la versión sin adaptador de corriente, consulta [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
 :::note
-Hay personalización disponible para la marca del logotipo, el embalaje y la grabación de firmware.
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

@@ -27,7 +27,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 A série reComputer J401B é uma iteração da série reComputer Classic. O reComputer J4011B com módulos NVIDIA Jetson Orin NX 8GB é um dispositivo de borda de IA poderoso e compacto com interfaces ricas: 2x USB 3.2, HDMI, Ethernet, M.2 Key E para módulo Wi-Fi, M.2 Key M para SSD, mini-PCIe para módulo LTE, CAN, conector de 40 pinos e mais.
 
 :::note
-Personalização está disponível para marca de logotipo, embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>

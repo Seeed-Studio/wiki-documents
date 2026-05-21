@@ -24,7 +24,7 @@ O reComputer Industrial R22xx, com Raspberry Pi CM5, é um NVR de borda com IA a
 A série reComputer Industrial R22xx é ideal para uso em aplicações industriais de IA. Ela pode ser utilizada em aspectos como aquisição de dados e monitoramento de processos, automação e controle de robôs, manufatura inteligente e comunicação e redes industriais. Com seu tamanho reduzido, flexibilidade, baixo custo e programabilidade, oferece forte suporte para sistemas de automação e IoT e muito mais.
 
 :::note
-Personalização está disponível para marca (logo), embalagem e gravação de firmware.
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
