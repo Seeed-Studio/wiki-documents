@@ -1,15 +1,15 @@
 ---
-description: Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — onboard hardware peripheral examples including LED, buzzer, three user buttons, SHT4x temperature/humidity sensor, battery monitoring, microSD card, and BMP image rendering from SD.
+description: Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — onboard hardware peripheral examples including LED, buzzer, three user buttons, SHT4x temperature/humidity sensor, battery monitoring, microSD card, and an end-to-end image pipeline (JPEG / BMP / PNG → dither → ePaper) for all four panel variants.
 title: 'Arduino Cookbook: Onboard Peripherals (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
 sidebar_label: Arduino – Peripherals
 last_update:
-  date: 05/15/2026
-  author: dimo
+  date: 05/21/2026
+  author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-15'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals/
 ---
 
@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 # Arduino Cookbook: Onboard Peripherals (reTerminal E Series)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/147.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip Looking for the display side?
 This page focuses on **driving the onboard hardware peripherals** of the reTerminal E Series with Arduino. If you want to render text, graphics, or images on the ePaper screen instead, head over to **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)**.
@@ -26,7 +26,7 @@ This page focuses on **driving the onboard hardware peripherals** of the reTermi
 
 ## Introduction
 
-The reTerminal E Series is more than just an ePaper screen — every model also exposes an onboard LED, a buzzer, three user buttons, an SHT4x temperature & humidity sensor, battery voltage monitoring, and a microSD card slot. This cookbook collects ready-to-flash Arduino examples for each of those peripherals, plus a real-world example that loads a BMP image from the SD card and renders it on the ePaper screen.
+The reTerminal E Series is more than just an ePaper screen — every model also exposes an onboard LED, a buzzer, three user buttons, an SHT4x temperature & humidity sensor, battery voltage monitoring, and a microSD card slot. This cookbook collects ready-to-flash Arduino examples for each of those peripherals, plus an end-to-end image pipeline that loads a JPEG / BMP / PNG file from the SD card, dithers it for the panel's palette, and renders it on the ePaper screen — one ready-made sketch per panel variant (E1001 BW, E1001 Gray4, E1002, E1003, E1004).
 
 What this cookbook covers:
 
@@ -36,7 +36,7 @@ What this cookbook covers:
 - **SHT4x sensor** over I²C (GPIO19 SDA / GPIO20 SCL) using the Sensirion library.
 - **Battery voltage monitoring** through the ADC + enable-pin circuit.
 - **microSD card** mount / detect / file listing on the shared SPI bus.
-- **Combined example**: render a BMP image from the SD card onto the ePaper screen.
+- **Advanced example — SD-card image pipeline**: pick any JPEG / BMP / PNG on the SD card, run it through one of five built-in dithering algorithms, and render it on the panel with configurable anchor, fit mode and scale.
 
 ### Materials Required
 
@@ -1210,645 +1210,1212 @@ You will see output corresponding to the following actions:
 [FILE] live.1.indexPostings  4096 bytes
 ```
 
-## Advanced Example: Displaying BMP Images from SD Card
+## Advanced Example: SD Card → ePaper Image Pipeline
 
-This comprehensive example combines the functionalities of the previous sections. We will write a program that reads a Bitmap (`.bmp`) image file from a MicroSD card and displays it on the reTerminal's e-paper screen. This demonstrates a practical, real-world application for the device.
+This is the flagship example for the reTerminal E Series. It loads a **JPEG / BMP / PNG** file from the microSD card, runs it through a configurable dithering pipeline, and renders the result on the ePaper panel — with knobs for **dithering algorithm**, **brightness**, **anchor position** and **fit / scale**. The same code structure works on all four panel variants; what changes per model is only the output color depth (1-bit BW, 2-bit Gray4, 4-bit Gray16, or 6-color E6).
 
-The program will look for a file named `test.bmp` in the root directory of the SD card.
+Five ready-to-flash sketches ship with the **Seeed_GFX** library — pick the one that matches your hardware:
 
-### Preparation
+### Example Index
 
-Before running the code, you must correctly prepare both the MicroSD card and the image file. This is the most critical step for ensuring the image displays correctly.
+<div class="table-center">
+  <table>
+    <tr>
+      <th>Device</th>
+      <th>Example sketch</th>
+      <th>Panel resolution</th>
+      <th>Output palette</th>
+    </tr>
+    <tr>
+      <td>reTerminal&nbsp;E1001 (BW)</td>
+      <td><code>reTerminal_E1001_SDcard_BW</code></td>
+      <td>800 × 480</td>
+      <td>1-bit black / white</td>
+    </tr>
+    <tr>
+      <td>reTerminal&nbsp;E1001 (Gray4)</td>
+      <td><code>reTerminal_E1001_SDcard_Gray4</code></td>
+      <td>800 × 480</td>
+      <td>2-bit 4-level grayscale</td>
+    </tr>
+    <tr>
+      <td>reTerminal&nbsp;E1002</td>
+      <td><code>reTerminal_E1002_SDcard_Color6</code></td>
+      <td>800 × 480</td>
+      <td>6-color (B / W / R / Y / G / B)</td>
+    </tr>
+    <tr>
+      <td>reTerminal&nbsp;E1003</td>
+      <td><code>reTerminal_E1003_SDcard_Gray16</code></td>
+      <td>1872 × 1404</td>
+      <td>4-bit 16-level grayscale</td>
+    </tr>
+    <tr>
+      <td>reTerminal&nbsp;E1004</td>
+      <td><code>reTerminal_E1004_SDcard_Color6</code></td>
+      <td>1200 × 1600</td>
+      <td>6-color (B / W / R / Y / G / B)</td>
+    </tr>
+  </table>
+</div>
 
-**1. Format the MicroSD Card**
+All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitmap/`](https://github.com/Seeed-Studio/Seeed_GFX/tree/master/examples/ePaper/reTerminal_SDcard_Bitmap). Each folder is **fully self-contained** — no extra libraries to install, just open and flash.
 
-Prepare a MicroSD card (64GB or smaller is recommended) and format it using the **FAT32** file system.
+### What the Pipeline Does
 
-**2. Prepare the Image File**
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 1050 300" 
+  width="100%" 
+  height="auto" 
+  style={{ 
+    backgroundColor: '#ffffff', 
+    borderRadius: '12px', 
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
+    padding: '20px',
+    marginBottom: '20px'
+  }}
+>
+  {/* Definitions for markers and filters */}
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="#000000" floodOpacity="0.05" />
+    </filter>
+  </defs>
 
-The method for preparing the image differs slightly depending on your reTerminal model. Follow the guide that matches your device.
+  {/* Title */}
+  <text x="525" y="40" fontFamily="sans-serif" fontSize="20" fontWeight="bold" fill="#1e293b" textAnchor="middle">
+    Image Processing Pipeline: microSD to ePaper
+  </text>
 
-<Tabs>
-<TabItem value="For reTerminal E1001 (B&W Screen)" label="For reTerminal E1001 (B&W Screen)" default>
-
-The black and white screen can only display black and white pixels. While our code can convert a color image to grayscale in real-time, you will get much better contrast and detail by **pre-converting the image to a high-quality grayscale image on your computer**.
-
-1. **Resize the Image:** Resize your picture to **800x480 pixels**.
-
-2. **Convert to Grayscale (Recommended):** In your image editor, convert the image to grayscale first. In **GIMP**:
-    - Go to the menu **Colors > Desaturate > Desaturate...**. Choose a mode like "Luminosity" for the best results.
-
-3. **Save as a Standard BMP:** Follow the same steps as the color screen guide to save the file. Even though the image is grayscale, saving it as a 24-bit BMP ensures maximum compatibility with the code.
-    - Go to **File > Export As...**, name it `test.bmp`.
-    - In the export dialog, under **Advanced Options**, select **"24 bits: R8 G8 B8"**.
-    - Click **Export**.
-
-4. **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
-
-</TabItem>
-<TabItem value="For reTerminal E1002 (Color Screen)" label="For reTerminal E1002 (Color Screen)">
-
-The color screen can display 6 colors: Black, White, Red, Yellow, Blue, and Green. The provided code includes a "nearest color" algorithm that intelligently maps any color from your source image to the best available color on the screen. For optimal results, follow these steps:
-
-1. **Resize the Image:** Using any image editor, resize your picture to **800x480 pixels**.
-
-2. **Save as a Standard BMP:** The code is designed to read **uncompressed** 24-bit or 32-bit BMP files. Using a professional image editor is the best way to ensure the format is correct. We recommend the free and open-source software **GIMP**:
-    - Open your resized image in GIMP.
-    - Go to the menu **File > Export As...**.
-    - Name the file `test.bmp` and click **Export**.
-    - In the "Export Image as BMP" dialog that appears, expand the **Advanced Options**.
-    - Select **"24 bits: R8 G8 B8"**. This is the most compatible, uncompressed format.
-    - Click **Export**.
-
-3. **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
-
-</TabItem>
-</Tabs>
-
-If you want to use ready-made images for testing, you can use the [example images](https://github.com/ZinggJM/GxEPD2/tree/master/examples/GxEPD2_SD_Example/bitmaps) provided by GxEPD2.
-
-### The Code
-
-This is the final, validated code. It includes all necessary checks and the advanced color-matching algorithm. Simply set the `EPD_SELECT` macro to `0` for the E1001 (B&W) or `1` for the E1002 (Color).
-
-<Tabs>
-<TabItem value="For reTerminal E1001 (B&W Screen)" label="For reTerminal E1001 (B&W Screen)" default>
-
-```cpp
-#include <SD.h>
-#include <SPI.h>
-#include <GxEPD2_BW.h>
-#include <GxEPD2_7C.h>
-#include <cmath>
-
-// === Pin Definitions ===
-// ePaper Display
-#define EPD_SCK_PIN  7
-#define EPD_MOSI_PIN 9
-#define EPD_CS_PIN   10
-#define EPD_DC_PIN   11
-#define EPD_RES_PIN  12
-#define EPD_BUSY_PIN 13
-
-// SD Card
-#define SD_EN_PIN   16
-#define SD_DET_PIN  15
-#define SD_CS_PIN   14
-#define SD_MISO_PIN 8
-
-// Serial Port
-#define SERIAL_RX 44
-#define SERIAL_TX 43
-
-// File to display
-const char* BMP_FILENAME = "/test.bmp";
-
-// === ePaper Driver Selection ===
-// 0: reTerminal E1001 (7.5'' B&W)
-// 1: reTerminal E1002 (7.3'' Color)
-#define EPD_SELECT 1
-
-#if (EPD_SELECT == 0)
-#define GxEPD2_DISPLAY_CLASS GxEPD2_BW
-#define GxEPD2_DRIVER_CLASS GxEPD2_750_GDEY075T7
-#elif (EPD_SELECT == 1)
-#define GxEPD2_DISPLAY_CLASS GxEPD2_7C
-#define GxEPD2_DRIVER_CLASS GxEPD2_730c_GDEP073E01
-#endif
-
-// For displays with RAM limitations
-#define MAX_DISPLAY_BUFFER_SIZE 16000
-#define MAX_HEIGHT(EPD) (EPD::HEIGHT <= MAX_DISPLAY_BUFFER_SIZE / (EPD::WIDTH / 8) ? EPD::HEIGHT : MAX_DISPLAY_BUFFER_SIZE / (EPD::WIDTH / 8))
-
-// === Global Objects ===
-SPIClass hspi(HSPI);
-
-GxEPD2_DISPLAY_CLASS<GxEPD2_DRIVER_CLASS, MAX_HEIGHT(GxEPD2_DRIVER_CLASS)>
-    display(GxEPD2_DRIVER_CLASS(/*CS=*/EPD_CS_PIN, /*DC=*/EPD_DC_PIN, /*RST=*/EPD_RES_PIN, /*BUSY=*/EPD_BUSY_PIN));
-
-// === BMP Drawing Function ===
-// Helper functions to read values from the BMP file
-uint16_t read16(File &f) {
-  uint16_t result;
-  ((uint8_t *)&result)[0] = f.read(); // LSB
-  ((uint8_t *)&result)[1] = f.read(); // MSB
-  return result;
-}
-
-uint32_t read32(File &f) {
-  uint32_t result;
-  ((uint8_t *)&result)[0] = f.read(); // LSB
-  ((uint8_t *)&result)[1] = f.read();
-  ((uint8_t *)&result)[2] = f.read();
-  ((uint8_t *)&result)[3] = f.read(); // MSB
-  return result;
-}
-
-#if (EPD_SELECT == 1)
-// Define the RGB values for the 6 available e-paper colors
-const uint8_t palette[][3] = {
-  {  0,   0,   0}, // 0: Black
-  {255, 255, 255}, // 1: White
-  {  0, 255,   0}, // 2: Green
-  {  0,   0, 255}, // 3: Blue
-  {255,   0,   0}, // 4: Red
-  {255, 255,   0}, // 5: Yellow
-};
-
-// Define the corresponding GxEPD2 color codes
-const uint16_t epaper_colors[] = {
-  GxEPD_BLACK,
-  GxEPD_WHITE,
-  GxEPD_GREEN,
-  GxEPD_BLUE,
-  GxEPD_RED,
-  GxEPD_YELLOW,
-};
-
-const int num_colors = sizeof(palette) / sizeof(palette[0]);
-
-// This function finds the closest e-paper color for a given RGB color
-uint16_t findNearestColor(uint8_t r, uint8_t g, uint8_t b) {
-  long min_dist_sq = -1;
-  int best_color_index = 0;
-
-  for (int i = 0; i < num_colors; i++) {
-    long dr = r - palette[i][0];
-    long dg = g - palette[i][1];
-    long db = b - palette[i][2];
-    long dist_sq = dr * dr + dg * dg + db * db;
-
-    if (min_dist_sq == -1 || dist_sq < min_dist_sq) {
-      min_dist_sq = dist_sq;
-      best_color_index = i;
-    }
-  }
-  return epaper_colors[best_color_index];
-}
-#endif
-
-
-// This function reads a BMP file and draws it to the screen.
-// It includes robust error checking and a color-matching algorithm.
-void drawBmp(const char *filename, int16_t x, int16_t y) {
-  File bmpFile;
-  int32_t bmpWidth, bmpHeight;
-  uint16_t bmpDepth;
-  uint32_t bmpImageoffset;
-  bool flip = true;
-
-  if ((x >= display.width()) || (y >= display.height())) return;
-
-  Serial1.print("Loading image '");
-  Serial1.print(filename);
-  Serial1.println("'");
-
-  bmpFile = SD.open(filename, FILE_READ);
-  if (!bmpFile) {
-    Serial1.println("File not found");
-    return;
-  }
-
-  if (read16(bmpFile) != 0x4D42) {
-    Serial1.println("Not a valid BMP file");
-    bmpFile.close();
-    return;
-  }
-
-  read32(bmpFile);
-  read32(bmpFile);
-  bmpImageoffset = read32(bmpFile);
-  read32(bmpFile);
-  bmpWidth = read32(bmpFile);
-  bmpHeight = read32(bmpFile);
+  {/* ================= NODES ================= */}
   
-  if (read16(bmpFile) != 1) {
-    Serial1.println("Unsupported BMP format (planes)");
-    bmpFile.close();
-    return;
-  }
+  {/* Node 1: microSD */}
+  <g transform="translate(20, 100)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#3b82f6" strokeWidth="2" filter="url(#shadow)" />
+    <path d="M55 15 v14 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 V19 l-4-4 H57 a2 2 0 0 0-2 2z m4 2 h2 v4 h-2 v-4z m4 0 h2 v4 h-2 v-4z" fill="#3b82f6" />
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">microSD</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">JPG / BMP / PNG</text>
+  </g>
+
+  {/* Node 2: PSRAM */}
+  <g transform="translate(240, 100)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#ef4444" strokeWidth="2" filter="url(#shadow)" />
+    <path d="M57 17 v12 h20 V17 H57z m2 2 h16 v8 H59 v-8z m-4 2 h-2 v2 h2 v-2z m0 4 h-2 v2 h2 v-2z m24-4 h2 v2 h-2 v-2z m0 4 h2 v2 h-2 v-2z" fill="#ef4444" />
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">PSRAM</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">RGB888</text>
+  </g>
+
+  {/* Node 3: Scaled Buffer */}
+  <g transform="translate(460, 100)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#f59e0b" strokeWidth="2" filter="url(#shadow)" />
+    <path d="M67 15 l2.3 2.3 -2.89 2.87 1.42 1.42 L70.7 18.7 73 21 V15 h-6z M55 21 l2.3-2.3 2.87 2.89 1.42-1.42 L58.7 17.3 61 15 h-6 v6z m6 12 l-2.3-2.3 2.89-2.87 -1.42-1.42 L57.3 29.3 55 27 v6 h6z m12-6 l-2.3 2.3 -2.87-2.89 -1.42 1.42 2.89 2.87 L73 33 v-6z" fill="#f59e0b" />
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Scaled Buffer</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">scaled RGB888</text>
+  </g>
+
+  {/* Node 4: Palette Buffer */}
+  <g transform="translate(680, 100)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#8b5cf6" strokeWidth="2" filter="url(#shadow)" />
+    <path d="M70 14 c-5.52 0-10 4.48-10 10 s4.48 10 10 10 c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.17-.64-1.6-.39-.41-.61-.98-.61-1.6 0-1.38 1.12-2.5 2.5-2.5 h1.5 c2.21 0 4-1.79 4-4 0-3.86-4.48-7-10-7z m-4 7 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5-3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z" fill="#8b5cf6" />
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Palette Buffer</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel-palette indices</text>
+  </g>
+
+  {/* Node 5: ePaper */}
+  <g transform="translate(900, 100)">
+    <rect x="0" y="0" width="130" height="90" rx="8" fill="#f8fafc" stroke="#10b981" strokeWidth="2" filter="url(#shadow)" />
+    <path d="M77 15 H53 c-1.1 0-2 .9-2 2 v14 c0 1.1 .9 2 2 2 h24 c1.1 0 2-.9 2-2 V17 c0-1.1-.9-2-2-2z m0 16 H53 V17 h24 v14z" fill="#10b981" />
+    <text x="65" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">ePaper</text>
+    <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel update</text>
+  </g>
+
+  {/* ================= ARROWS & LABELS ================= */}
   
-  bmpDepth = read16(bmpFile);
-  uint32_t compression = read32(bmpFile);
+  {/* Arrow 1: Decode */}
+  <g>
+    <line x1="160" y1="145" x2="232" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
+    <text x="196" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#3b82f6" textAnchor="middle">decode</text>
+    <text x="196" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">pngle / jpeg / bmp</text>
+    {/* Animated Data Packet */}
+    <circle cy="145" r="4" fill="#3b82f6">
+      <animate attributeName="cx" from="160" to="230" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  if (compression != 0) {
-    if (compression == 3) {
-      Serial1.println("Error: BMP file uses BI_BITFIELDS compression.");
-      Serial1.println("This example only supports uncompressed BMPs.");
-      Serial1.println("Please re-save the image with standard R8G8B8 (24-bit) or A8R8G8B8 (32-bit) format.");
-    } else {
-      Serial1.printf("Unsupported BMP format. Depth: %d, Compression: %d\n", bmpDepth, compression);
-    }
-    bmpFile.close();
-    return;
-  }
+  {/* Arrow 2: Resize */}
+  <g>
+    <line x1="380" y1="145" x2="452" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
+    <text x="416" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#ef4444" textAnchor="middle">resize</text>
+    <text x="416" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">nearest neighbor</text>
+    {/* Animated Data Packet */}
+    <circle cy="145" r="4" fill="#ef4444">
+      <animate attributeName="cx" from="380" to="450" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  if (bmpDepth != 24 && bmpDepth != 32) {
-      Serial1.printf("Unsupported BMP bit depth: %d. Only 24-bit and 32-bit are supported.\n", bmpDepth);
-      bmpFile.close();
-      return;
-  }
+  {/* Arrow 3: Dither */}
+  <g>
+    <line x1="600" y1="145" x2="672" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
+    <text x="636" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#f59e0b" textAnchor="middle">dither</text>
+    <text x="636" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">Bayer / FS / ...</text>
+    {/* Animated Data Packet */}
+    <circle cy="145" r="4" fill="#f59e0b">
+      <animate attributeName="cx" from="600" to="670" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  if (bmpHeight < 0) {
-    bmpHeight = -bmpHeight;
-    flip = false;
-  }
+  {/* Arrow 4: Push */}
+  <g>
+    <line x1="820" y1="145" x2="892" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
+    <text x="856" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#8b5cf6" textAnchor="middle">push</text>
+    <text x="856" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">Sprite</text>
+    {/* Animated Data Packet */}
+    <circle cy="145" r="4" fill="#8b5cf6">
+      <animate attributeName="cx" from="820" to="890" dur="1.5s" begin="0.9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.5s" begin="0.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  Serial1.printf("Image: %d x %d, %d-bit\n", bmpWidth, bmpHeight, bmpDepth);
+  {/* ePaper Screen Update Animation (Pulse) */}
+  <rect x="900" y="100" width="130" height="90" rx="8" fill="none" stroke="#10b981" strokeWidth="4" opacity="0">
+    <animate attributeName="opacity" values="0;0.6;0" keyTimes="0;0.5;1" dur="1.5s" begin="1.2s" repeatCount="indefinite" />
+    <animate attributeName="strokeWidth" values="4;8;4" keyTimes="0;0.5;1" dur="1.5s" begin="1.2s" repeatCount="indefinite" />
+  </rect>
 
-  display.setPartialWindow(x, y, bmpWidth, bmpHeight);
+</svg>
 
-  uint8_t bytesPerPixel = bmpDepth / 8;
-  uint32_t rowSize = (bmpWidth * bytesPerPixel + 3) & ~3;
-  uint8_t sdbuffer[rowSize];
+1. **Decode** — file format is detected by magic bytes (`FF D8`, `BM`, or `89 50 4E 47`). A misleading extension is auto-corrected and a warning is logged.
+2. **Resize** (optional) — nearest-neighbor downscale based on `DISPLAY_FIT` / `DISPLAY_SCALE`.
+3. **Dither** — one of five algorithms quantises 24-bit RGB into the panel's tiny palette (2 / 4 / 6 / 16 levels).
+4. **Push** — the quantised buffer is written into the ePaper Sprite at the anchor position, then `epaper.update()` clocks it out to the panel.
 
-  display.firstPage();
-  do {
-    for (int16_t row = 0; row < bmpHeight; row++) {
-      uint32_t rowpos = flip ? (bmpImageoffset + (bmpHeight - 1 - row) * rowSize) : (bmpImageoffset + row * rowSize);
-      bmpFile.seek(rowpos);
-      bmpFile.read(sdbuffer, rowSize);
+### Step 1 — Open the Example for Your Model
 
-      for (int16_t col = 0; col < bmpWidth; col++) {
-        uint8_t b = sdbuffer[col * bytesPerPixel];
-        uint8_t g = sdbuffer[col * bytesPerPixel + 1];
-        uint8_t r = sdbuffer[col * bytesPerPixel + 2];
-        
-        uint16_t GxEPD_Color;
-        
-        #if (EPD_SELECT == 1) // Color Display
-          GxEPD_Color = findNearestColor(r, g, b);
-        #else // Black and White Display
-          if ((r * 0.299 + g * 0.587 + b * 0.114) < 128) GxEPD_Color = GxEPD_BLACK;
-          else GxEPD_Color = GxEPD_WHITE;
-        #endif
-        
-        display.drawPixel(x + col, y + row, GxEPD_Color);
-      }
-    }
-  } while (display.nextPage());
+In the Arduino IDE: **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap →** *(pick your model)*.
 
-  bmpFile.close();
-  Serial1.println("Done!");
-}
+<Tabs groupId="reterm-model">
+<TabItem value="e1001-bw" label="E1001 BW" default>
 
-
-void setup() {
-  Serial1.begin(115200, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
-  while (!Serial1) delay(10);
-  delay(2000); // A small delay to allow Serial Monitor to connect
-  Serial1.println("--- ePaper SD Card BMP Example ---");
-
-  // Initialize shared SPI bus
-  hspi.begin(EPD_SCK_PIN, SD_MISO_PIN, EPD_MOSI_PIN, -1);
-
-  // Initialize Display
-  display.epd2.selectSPI(hspi, SPISettings(4000000, MSBFIRST, SPI_MODE0));
-  display.init(115200);
-  display.setRotation(0);
-  display.fillScreen(GxEPD_WHITE);
-  display.hibernate(); // Power down display until needed
-
-  // Initialize SD Card
-  pinMode(SD_EN_PIN, OUTPUT);
-  digitalWrite(SD_EN_PIN, HIGH);
-  pinMode(SD_DET_PIN, INPUT_PULLUP);
-  delay(100);
-
-  if (digitalRead(SD_DET_PIN) == HIGH) {
-    Serial1.println("No SD card detected. Please insert a card.");
-    display.firstPage();
-    do {
-      display.setCursor(10, 20);
-      display.print("No SD card detected.");
-    } while(display.nextPage());
-    return;
-  }
-
-  Serial1.println("SD card detected, attempting to mount...");
-  if (!SD.begin(SD_CS_PIN, hspi)) {
-    Serial1.println("SD Card Mount Failed!");
-    display.firstPage();
-    do {
-      display.setCursor(10, 20);
-      display.print("SD Card Mount Failed!");
-    } while(display.nextPage());
-    return;
-  }
-  Serial1.println("SD card mounted successfully.");
-
-  // Draw the BMP from the SD card
-  drawBmp(BMP_FILENAME, 0, 0);
-
-  display.hibernate(); // Power down display after drawing
-}
-
-void loop() {
-  // Nothing to do here for this example
-}
+```text
+reTerminal_SDcard_Bitmap/
+└── reTerminal_E1001_SDcard_BW/
+    ├── reTerminal_E1001_SDcard_BW.ino   ← config + setup() + loop()
+    ├── dither.{h,cpp}                   ← BW dither algorithms
+    ├── image_loader.{h,cpp}             ← JPEG / BMP / PNG decoder
+    ├── pngle.{h,c} + miniz.{h,c}        ← PNG backend (MIT, vendored)
+    └── driver.h                         ← selects Setup520 (UC8179, 800x480)
 ```
 
 </TabItem>
-<TabItem value="For reTerminal E1002 (Color Screen)" label="For reTerminal E1002 (Color Screen)">
+<TabItem value="e1001-gray4" label="E1001 Gray4">
 
-```cpp
-#include <SD.h>
-#include <SPI.h>
-#include <GxEPD2_BW.h>
-#include <GxEPD2_7C.h>
-#include <cmath>
+```text
+reTerminal_SDcard_Bitmap/
+└── reTerminal_E1001_SDcard_Gray4/
+    ├── reTerminal_E1001_SDcard_Gray4.ino
+    ├── dither.{h,cpp}                   ← Gray4 dither algorithms
+    ├── image_loader.{h,cpp}
+    ├── pngle.{h,c} + miniz.{h,c}
+    └── driver.h                         ← Setup520 + initGrayMode(4)
+```
 
-// === Pin Definitions ===
-// ePaper Display
-#define EPD_SCK_PIN  7
-#define EPD_MOSI_PIN 9
-#define EPD_CS_PIN   10
-#define EPD_DC_PIN   11
-#define EPD_RES_PIN  12
-#define EPD_BUSY_PIN 13
+</TabItem>
+<TabItem value="e1002" label="E1002">
 
-// SD Card
-#define SD_EN_PIN   16
-#define SD_DET_PIN  15
-#define SD_CS_PIN   14
-#define SD_MISO_PIN 8
+```text
+reTerminal_SDcard_Bitmap/
+└── reTerminal_E1002_SDcard_Color6/
+    ├── reTerminal_E1002_SDcard_Color6.ino
+    ├── dither.{h,cpp}                   ← 6-color dither algorithms
+    ├── image_loader.{h,cpp}
+    ├── pngle.{h,c} + miniz.{h,c}
+    └── driver.h                         ← Setup521 (ED2208, 800x480 E6)
+```
 
-// Serial Port
-#define SERIAL_RX 44
-#define SERIAL_TX 43
+</TabItem>
+<TabItem value="e1003" label="E1003">
 
-// File to display
-const char* BMP_FILENAME = "/test.bmp";
+```text
+reTerminal_SDcard_Bitmap/
+└── reTerminal_E1003_SDcard_Gray16/
+    ├── reTerminal_E1003_SDcard_Gray16.ino
+    ├── dither.{h,cpp}                   ← Gray16 dither algorithms
+    ├── image_loader.{h,cpp}
+    ├── pngle.{h,c} + miniz.{h,c}
+    └── driver.h                         ← Setup522 + initGrayMode(16)
+```
 
-// === ePaper Driver Selection ===
-// 0: reTerminal E1001 (7.5'' B&W)
-// 1: reTerminal E1002 (7.3'' Color)
-#define EPD_SELECT 0
+</TabItem>
+<TabItem value="e1004" label="E1004">
 
-#if (EPD_SELECT == 0)
-#define GxEPD2_DISPLAY_CLASS GxEPD2_BW
-#define GxEPD2_DRIVER_CLASS GxEPD2_750_GDEY075T7
-#elif (EPD_SELECT == 1)
-#define GxEPD2_DISPLAY_CLASS GxEPD2_7C
-#define GxEPD2_DRIVER_CLASS GxEPD2_730c_GDEP073E01
-#endif
-
-// For displays with RAM limitations
-#define MAX_DISPLAY_BUFFER_SIZE 16000
-#define MAX_HEIGHT(EPD) (EPD::HEIGHT <= MAX_DISPLAY_BUFFER_SIZE / (EPD::WIDTH / 8) ? EPD::HEIGHT : MAX_DISPLAY_BUFFER_SIZE / (EPD::WIDTH / 8))
-
-// === Global Objects ===
-SPIClass hspi(HSPI);
-
-GxEPD2_DISPLAY_CLASS<GxEPD2_DRIVER_CLASS, MAX_HEIGHT(GxEPD2_DRIVER_CLASS)>
-    display(GxEPD2_DRIVER_CLASS(/*CS=*/EPD_CS_PIN, /*DC=*/EPD_DC_PIN, /*RST=*/EPD_RES_PIN, /*BUSY=*/EPD_BUSY_PIN));
-
-// === BMP Drawing Function ===
-// Helper functions to read values from the BMP file
-uint16_t read16(File &f) {
-  uint16_t result;
-  ((uint8_t *)&result)[0] = f.read(); // LSB
-  ((uint8_t *)&result)[1] = f.read(); // MSB
-  return result;
-}
-
-uint32_t read32(File &f) {
-  uint32_t result;
-  ((uint8_t *)&result)[0] = f.read(); // LSB
-  ((uint8_t *)&result)[1] = f.read();
-  ((uint8_t *)&result)[2] = f.read();
-  ((uint8_t *)&result)[3] = f.read(); // MSB
-  return result;
-}
-
-#if (EPD_SELECT == 1)
-// Define the RGB values for the 6 available e-paper colors
-const uint8_t palette[][3] = {
-  {  0,   0,   0}, // 0: Black
-  {255, 255, 255}, // 1: White
-  {  0, 255,   0}, // 2: Green
-  {  0,   0, 255}, // 3: Blue
-  {255,   0,   0}, // 4: Red
-  {255, 255,   0}, // 5: Yellow
-};
-
-// Define the corresponding GxEPD2 color codes
-const uint16_t epaper_colors[] = {
-  GxEPD_BLACK,
-  GxEPD_WHITE,
-  GxEPD_GREEN,
-  GxEPD_BLUE,
-  GxEPD_RED,
-  GxEPD_YELLOW,
-};
-
-const int num_colors = sizeof(palette) / sizeof(palette[0]);
-
-// This function finds the closest e-paper color for a given RGB color
-uint16_t findNearestColor(uint8_t r, uint8_t g, uint8_t b) {
-  long min_dist_sq = -1;
-  int best_color_index = 0;
-
-  for (int i = 0; i < num_colors; i++) {
-    long dr = r - palette[i][0];
-    long dg = g - palette[i][1];
-    long db = b - palette[i][2];
-    long dist_sq = dr * dr + dg * dg + db * db;
-
-    if (min_dist_sq == -1 || dist_sq < min_dist_sq) {
-      min_dist_sq = dist_sq;
-      best_color_index = i;
-    }
-  }
-  return epaper_colors[best_color_index];
-}
-#endif
-
-
-// This function reads a BMP file and draws it to the screen.
-// It includes robust error checking and a color-matching algorithm.
-void drawBmp(const char *filename, int16_t x, int16_t y) {
-  File bmpFile;
-  int32_t bmpWidth, bmpHeight;
-  uint16_t bmpDepth;
-  uint32_t bmpImageoffset;
-  bool flip = true;
-
-  if ((x >= display.width()) || (y >= display.height())) return;
-
-  Serial1.print("Loading image '");
-  Serial1.print(filename);
-  Serial1.println("'");
-
-  bmpFile = SD.open(filename, FILE_READ);
-  if (!bmpFile) {
-    Serial1.println("File not found");
-    return;
-  }
-
-  if (read16(bmpFile) != 0x4D42) {
-    Serial1.println("Not a valid BMP file");
-    bmpFile.close();
-    return;
-  }
-
-  read32(bmpFile);
-  read32(bmpFile);
-  bmpImageoffset = read32(bmpFile);
-  read32(bmpFile);
-  bmpWidth = read32(bmpFile);
-  bmpHeight = read32(bmpFile);
-  
-  if (read16(bmpFile) != 1) {
-    Serial1.println("Unsupported BMP format (planes)");
-    bmpFile.close();
-    return;
-  }
-  
-  bmpDepth = read16(bmpFile);
-  uint32_t compression = read32(bmpFile);
-
-  if (compression != 0) {
-    if (compression == 3) {
-      Serial1.println("Error: BMP file uses BI_BITFIELDS compression.");
-      Serial1.println("This example only supports uncompressed BMPs.");
-      Serial1.println("Please re-save the image with standard R8G8B8 (24-bit) or A8R8G8B8 (32-bit) format.");
-    } else {
-      Serial1.printf("Unsupported BMP format. Depth: %d, Compression: %d\n", bmpDepth, compression);
-    }
-    bmpFile.close();
-    return;
-  }
-
-  if (bmpDepth != 24 && bmpDepth != 32) {
-      Serial1.printf("Unsupported BMP bit depth: %d. Only 24-bit and 32-bit are supported.\n", bmpDepth);
-      bmpFile.close();
-      return;
-  }
-
-  if (bmpHeight < 0) {
-    bmpHeight = -bmpHeight;
-    flip = false;
-  }
-
-  Serial1.printf("Image: %d x %d, %d-bit\n", bmpWidth, bmpHeight, bmpDepth);
-
-  display.setPartialWindow(x, y, bmpWidth, bmpHeight);
-
-  uint8_t bytesPerPixel = bmpDepth / 8;
-  uint32_t rowSize = (bmpWidth * bytesPerPixel + 3) & ~3;
-  uint8_t sdbuffer[rowSize];
-
-  display.firstPage();
-  do {
-    for (int16_t row = 0; row < bmpHeight; row++) {
-      uint32_t rowpos = flip ? (bmpImageoffset + (bmpHeight - 1 - row) * rowSize) : (bmpImageoffset + row * rowSize);
-      bmpFile.seek(rowpos);
-      bmpFile.read(sdbuffer, rowSize);
-
-      for (int16_t col = 0; col < bmpWidth; col++) {
-        uint8_t b = sdbuffer[col * bytesPerPixel];
-        uint8_t g = sdbuffer[col * bytesPerPixel + 1];
-        uint8_t r = sdbuffer[col * bytesPerPixel + 2];
-        
-        uint16_t GxEPD_Color;
-        
-        #if (EPD_SELECT == 1) // Color Display
-          GxEPD_Color = findNearestColor(r, g, b);
-        #else // Black and White Display
-          if ((r * 0.299 + g * 0.587 + b * 0.114) < 128) GxEPD_Color = GxEPD_BLACK;
-          else GxEPD_Color = GxEPD_WHITE;
-        #endif
-        
-        display.drawPixel(x + col, y + row, GxEPD_Color);
-      }
-    }
-  } while (display.nextPage());
-
-  bmpFile.close();
-  Serial1.println("Done!");
-}
-
-
-void setup() {
-  Serial1.begin(115200, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
-  while (!Serial1) delay(10);
-  delay(2000); // A small delay to allow Serial Monitor to connect
-  Serial1.println("--- ePaper SD Card BMP Example ---");
-
-  // Initialize shared SPI bus
-  hspi.begin(EPD_SCK_PIN, SD_MISO_PIN, EPD_MOSI_PIN, -1);
-
-  // Initialize Display
-  display.epd2.selectSPI(hspi, SPISettings(4000000, MSBFIRST, SPI_MODE0));
-  display.init(115200);
-  display.setRotation(0);
-  display.fillScreen(GxEPD_WHITE);
-  display.hibernate(); // Power down display until needed
-
-  // Initialize SD Card
-  pinMode(SD_EN_PIN, OUTPUT);
-  digitalWrite(SD_EN_PIN, HIGH);
-  pinMode(SD_DET_PIN, INPUT_PULLUP);
-  delay(100);
-
-  if (digitalRead(SD_DET_PIN) == HIGH) {
-    Serial1.println("No SD card detected. Please insert a card.");
-    display.firstPage();
-    do {
-      display.setCursor(10, 20);
-      display.print("No SD card detected.");
-    } while(display.nextPage());
-    return;
-  }
-
-  Serial1.println("SD card detected, attempting to mount...");
-  if (!SD.begin(SD_CS_PIN, hspi)) {
-    Serial1.println("SD Card Mount Failed!");
-    display.firstPage();
-    do {
-      display.setCursor(10, 20);
-      display.print("SD Card Mount Failed!");
-    } while(display.nextPage());
-    return;
-  }
-  Serial1.println("SD card mounted successfully.");
-
-  // Draw the BMP from the SD card
-  drawBmp(BMP_FILENAME, 0, 0);
-
-  display.hibernate(); // Power down display after drawing
-}
-
-void loop() {
-  // Nothing to do here for this example
-}
+```text
+reTerminal_SDcard_Bitmap/
+└── reTerminal_E1004_SDcard_Color6/
+    ├── reTerminal_E1004_SDcard_Color6.ino
+    ├── dither.{h,cpp}                   ← 6-color dither algorithms
+    ├── image_loader.{h,cpp}
+    ├── pngle.{h,c} + miniz.{h,c}
+    └── driver.h                         ← Setup523 (T133A01, 1200x1600 E6)
 ```
 
 </TabItem>
 </Tabs>
 
-### How It Works
-
-- **`setup()`**: The `setup` function initializes all necessary hardware in sequence: the Serial port for debugging, the shared SPI bus, the e-paper display, and finally the SD card. If all initializations are successful, it makes a single call to `drawBmp()` to perform the main task.
-- **`drawBmp()`**: This is the core function. It opens the BMP file, parses the header to read its dimensions and properties, and performs crucial validation checks. It specifically checks for unsupported compression types and provides a helpful error message if it finds one.
-- **Drawing Loop**: The function reads the image from the SD card one row at a time. For each pixel in the row, it extracts the Red, Green, and Blue color values.
-- **Color Handling**: This is where the logic splits based on the `EPD_SELECT` macro:
-  - **For Color (E1002)**: It calls `findNearestColor(r, g, b)`. This function calculates the "distance" between the pixel's color and each of the 6 colors in the screen's palette. It returns the palette color with the smallest distance, ensuring the most accurate possible color representation.
-  - **For B&W (E1001)**: It uses a standard luminance formula (`r * 0.299 + g * 0.587 + b * 0.114`) to convert the RGB color to a single brightness value. If this value is below a threshold (128), the pixel is drawn as black; otherwise, it's drawn as white.
-
-### Upload and Run
-
-1. In the Arduino IDE, make sure you have the correct board selected (`XIAO_ESP32S3`).
-2. Set the `EPD_SELECT` macro at the top of the code to `1` for the reTerminal E1002 or `0` for the E1001.
-3. Insert your prepared MicroSD card into the reTerminal.
-4. Upload the code.
-5. Open the Serial Monitor at a baud rate of `115200`. You will see the progress logs, and after a few moments, the image will be rendered on the e-paper display.
-
-:::tip About Refresh Speed
-The screen refresh speed may be slow, sometimes the screen will not respond until 2~3 minutes after uploading the program.
+:::tip Self-contained sketches
+You don't need to install pngle, miniz, or anything else from the Arduino Library Manager. The PNG decoder source ships **inside each example folder**, so the Arduino IDE picks it up automatically when it compiles the sketch.
 :::
 
+### Full Sketch Code
+
+The complete `.ino` source for each variant is shown below. All user-tunable settings (image path, dithering algorithm, anchor, fit/scale) are in the **USER CONFIGURATION** block near the top — the rest of the file is boilerplate that doesn't normally need editing.
+
+<Tabs groupId="reterm-model">
+<TabItem value="e1001-bw" label="E1001 BW" default>
+
+<details>
+<summary>Click here to preview the full code — reTerminal_E1001_SDcard_BW.ino</summary>
+
+```cpp
+#include <SPI.h>
+#include <FS.h>
+#include <SD.h>
+#include "TFT_eSPI.h"
+#include "dither.h"
+#include "image_loader.h"
+
+#ifndef EPAPER_ENABLE
+#error "This example requires Setup520_Seeed_reTerminal_E1001 -- check driver.h selects BOARD_SCREEN_COMBO 520"
+#endif
+
+EPaper epaper;
+
+static constexpr int    PIN_SD_SCK   = 7;
+static constexpr int    PIN_SD_MISO  = 8;
+static constexpr int    PIN_SD_MOSI  = 9;
+static constexpr int    PIN_SD_CS    = 14;
+static constexpr int    PIN_SD_EN    = 16;
+static constexpr int    PIN_SD_DET   = 15;
+static constexpr int    PIN_DBG_RX   = 44;
+static constexpr int    PIN_DBG_TX   = 43;
+#define LOG       Serial1
+#define TAG       "[e1001-bw]"
+
+// =============================================================================
+// USER CONFIGURATION
+// =============================================================================
+
+static const char* IMAGE_PATH = "/img/demo.jpg";
+
+// DITHER_NONE / DITHER_BAYER8 / DITHER_FS / DITHER_JARVIS / DITHER_ATKINSON
+static const DitherMethod DITHER_METHOD = DITHER_FS;
+// 1.0 = neutral, >1.0 darkens, <1.0 brightens
+static const float DITHER_GAMMA = 1.0f;
+// false = normal, true = invert black/white
+static const bool DITHER_INVERT = false;
+
+// ANCHOR_TOP_LEFT / ANCHOR_TOP_CENTER / ANCHOR_TOP_RIGHT /
+// ANCHOR_MIDDLE_LEFT / ANCHOR_CENTER / ANCHOR_MIDDLE_RIGHT /
+// ANCHOR_BOTTOM_LEFT / ANCHOR_BOTTOM_CENTER / ANCHOR_BOTTOM_RIGHT
+enum DisplayAnchor {
+  ANCHOR_TOP_LEFT, ANCHOR_TOP_CENTER, ANCHOR_TOP_RIGHT,
+  ANCHOR_MIDDLE_LEFT, ANCHOR_CENTER, ANCHOR_MIDDLE_RIGHT,
+  ANCHOR_BOTTOM_LEFT, ANCHOR_BOTTOM_CENTER, ANCHOR_BOTTOM_RIGHT,
+};
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+
+// FIT_ORIGINAL / FIT_CONTAIN / FIT_SCALE
+enum DisplayFit { FIT_ORIGINAL, FIT_CONTAIN, FIT_SCALE };
+static const DisplayFit DISPLAY_FIT   = FIT_SCALE;
+static const float      DISPLAY_SCALE = 0.7f;
+
+// =============================================================================
+// (implementation below -- no need to edit)
+// =============================================================================
+
+static void log_mem(const char* tag) {
+  LOG.printf("[mem] %-22s heap=%lu kB  PSRAM free=%lu/%lu kB\n", tag,
+             (unsigned long)(ESP.getFreeHeap() / 1024),
+             (unsigned long)(ESP.getFreePsram() / 1024),
+             (unsigned long)(ESP.getPsramSize() / 1024));
+  LOG.flush();
+}
+
+static void list_sd_root(int max_entries = 32) {
+  File root = SD.open("/");
+  if (!root || !root.isDirectory()) { LOG.println("[sd] cannot open '/'"); return; }
+  LOG.println("[sd] contents of '/' :");
+  int n = 0;
+  File entry = root.openNextFile();
+  while (entry) {
+    if (entry.isDirectory()) LOG.printf("   <DIR>  %s\n", entry.name());
+    else LOG.printf("   %7lu B  %s\n", (unsigned long)entry.size(), entry.name());
+    entry.close();
+    if (++n >= max_entries) { LOG.printf("   ... (truncated at %d)\n", max_entries); break; }
+    entry = root.openNextFile();
+  }
+  if (n == 0) LOG.println("   (empty)");
+  root.close(); LOG.flush();
+}
+
+static void compute_target_size(int src_w, int src_h, DisplayFit fit, float scale,
+                                int panel_w, int panel_h, int* out_w, int* out_h) {
+  switch (fit) {
+    case FIT_ORIGINAL: *out_w = src_w; *out_h = src_h; break;
+    case FIT_CONTAIN: {
+      double s = (double)panel_w/src_w; if ((double)panel_h/src_h < s) s = (double)panel_h/src_h;
+      if (s > 1.0) s = 1.0;
+      *out_w = (int)(src_w*s+0.5); *out_h = (int)(src_h*s+0.5); break;
+    }
+    case FIT_SCALE: *out_w = (int)(src_w*scale+0.5); *out_h = (int)(src_h*scale+0.5); break;
+  }
+  if (*out_w & 7) *out_w &= ~7;
+  if (*out_w < 8) *out_w = 8;
+  if (*out_h < 1) *out_h = 1;
+}
+
+static void compute_anchor_xy(int img_w, int img_h, DisplayAnchor a,
+                              int panel_w, int panel_h, int* out_x, int* out_y) {
+  int x = 0, y = 0;
+  switch (a) {
+    case ANCHOR_TOP_LEFT:      x=0;                     y=0;                    break;
+    case ANCHOR_TOP_CENTER:    x=(panel_w-img_w)/2;     y=0;                    break;
+    case ANCHOR_TOP_RIGHT:     x=panel_w-img_w;         y=0;                    break;
+    case ANCHOR_MIDDLE_LEFT:   x=0;                     y=(panel_h-img_h)/2;    break;
+    case ANCHOR_CENTER:        x=(panel_w-img_w)/2;     y=(panel_h-img_h)/2;    break;
+    case ANCHOR_MIDDLE_RIGHT:  x=panel_w-img_w;         y=(panel_h-img_h)/2;    break;
+    case ANCHOR_BOTTOM_LEFT:   x=0;                     y=panel_h-img_h;        break;
+    case ANCHOR_BOTTOM_CENTER: x=(panel_w-img_w)/2;     y=panel_h-img_h;        break;
+    case ANCHOR_BOTTOM_RIGHT:  x=panel_w-img_w;         y=panel_h-img_h;        break;
+  }
+  if (x & 7) x &= ~7;
+  *out_x = x; *out_y = y;
+}
+
+static bool show_image_on_panel(RgbImage* img) {
+  int W, H;
+  compute_target_size(img->width, img->height, DISPLAY_FIT, DISPLAY_SCALE,
+                      EPD_WIDTH, EPD_HEIGHT, &W, &H);
+  int x, y;
+  compute_anchor_xy(W, H, DISPLAY_ANCHOR, EPD_WIDTH, EPD_HEIGHT, &x, &y);
+
+  if (W != img->width || H != img->height) {
+    if (!resize_image(img, W, H)) { LOG.println("[layout] resize OOM"); return false; }
+  }
+  const size_t npx = (size_t)W * H;
+  uint8_t* idx = (uint8_t*)ps_malloc(npx);
+  if (!idx) idx = (uint8_t*)malloc(npx);
+  if (!idx) { LOG.println(TAG " OOM idx"); return false; }
+
+  static const char* kDN[] = {"NONE","BAYER8","FS","JARVIS","ATKINSON"};
+  LOG.printf(TAG " dithering BW with %s, gamma=%.2f\n", kDN[(int)DITHER_METHOD], DITHER_GAMMA);
+  if (!dither_image(img->pixels, W, H, PAL_BW, DITHER_METHOD, DITHER_GAMMA, DITHER_INVERT, idx)) {
+    free(idx); return false;
+  }
+  image_free(img);
+
+  const size_t bm_bytes = ((size_t)W+7)/8 * (size_t)H;
+  uint8_t* bm = (uint8_t*)ps_malloc(bm_bytes);
+  if (!bm) bm = (uint8_t*)malloc(bm_bytes);
+  if (!bm) { free(idx); return false; }
+  pack_1bpp_msb(idx, bm, W, H, true);
+  free(idx);
+
+  epaper.drawBitmap(x, y, bm, W, H, TFT_BLACK, TFT_WHITE);
+  epaper.update();
+  free(bm);
+  return true;
+}
+
+void setup() {
+  LOG.begin(115200, SERIAL_8N1, PIN_DBG_RX, PIN_DBG_TX);
+  delay(2500);
+  LOG.println("==============================================");
+  LOG.println("  reTerminal E1001 -- SD Bitmap (BW)");
+  LOG.println("==============================================");
+  log_mem("start");
+
+  pinMode(PIN_SD_EN, OUTPUT); digitalWrite(PIN_SD_EN, HIGH);
+  pinMode(PIN_SD_DET, INPUT_PULLUP); delay(50);
+
+  epaper.begin();
+  epaper.fillScreen(TFT_WHITE);
+  epaper.update();
+
+  // UC8179 is write-only (TFT_MISO=-1 in Setup520). Re-init SPI with MISO for SD.
+  SPIClass& spi = epaper.getSPIinstance();
+  spi.end();
+  spi.begin(PIN_SD_SCK, PIN_SD_MISO, PIN_SD_MOSI, -1);
+
+  if (!SD.begin(PIN_SD_CS, spi)) {
+    LOG.println(TAG " SD.begin FAILED -- aborting"); return;
+  }
+  list_sd_root();
+
+  RgbImage img;
+  if (!load_image_from_sd(IMAGE_PATH, 0, 0, &img)) {
+    LOG.println(TAG " load failed -- aborting"); return;
+  }
+  log_mem("after decode");
+  show_image_on_panel(&img);
+  image_free(&img);
+
+  epaper.sleep();
+  LOG.println(TAG " done.");
+}
+
+void loop() { delay(1000); }
+```
+
+</details>
+
+</TabItem>
+<TabItem value="e1001-gray4" label="E1001 Gray4">
+
+<details>
+<summary>Click here to preview the full code — reTerminal_E1001_SDcard_Gray4.ino</summary>
+
+```cpp
+#include <SPI.h>
+#include <FS.h>
+#include <SD.h>
+#include "TFT_eSPI.h"
+#include "dither.h"
+#include "image_loader.h"
+
+#ifndef EPAPER_ENABLE
+#error "This example requires Setup520_Seeed_reTerminal_E1001 -- check driver.h selects BOARD_SCREEN_COMBO 520"
+#endif
+
+EPaper epaper;
+
+static constexpr int PIN_SD_SCK  = 7;
+static constexpr int PIN_SD_MISO = 8;
+static constexpr int PIN_SD_MOSI = 9;
+static constexpr int PIN_SD_CS   = 14;
+static constexpr int PIN_SD_EN   = 16;
+static constexpr int PIN_SD_DET  = 15;
+static constexpr int PIN_DBG_RX  = 44;
+static constexpr int PIN_DBG_TX  = 43;
+#define LOG  Serial1
+#define TAG  "[e1001-g4]"
+
+// =============================================================================
+// USER CONFIGURATION
+// =============================================================================
+
+static const char* IMAGE_PATH = "/img/demo.jpg";
+
+// DITHER_NONE / DITHER_BAYER8 / DITHER_FS / DITHER_JARVIS / DITHER_ATKINSON
+static const DitherMethod DITHER_METHOD = DITHER_FS;
+static const float        DITHER_GAMMA  = 1.0f;
+
+enum DisplayAnchor {
+  ANCHOR_TOP_LEFT, ANCHOR_TOP_CENTER, ANCHOR_TOP_RIGHT,
+  ANCHOR_MIDDLE_LEFT, ANCHOR_CENTER, ANCHOR_MIDDLE_RIGHT,
+  ANCHOR_BOTTOM_LEFT, ANCHOR_BOTTOM_CENTER, ANCHOR_BOTTOM_RIGHT,
+};
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+
+enum DisplayFit { FIT_ORIGINAL, FIT_CONTAIN, FIT_SCALE };
+static const DisplayFit DISPLAY_FIT   = FIT_SCALE;
+static const float      DISPLAY_SCALE = 0.7f;
+
+// =============================================================================
+// (implementation below)
+// =============================================================================
+
+static void log_mem(const char* tag) {
+  LOG.printf("[mem] %-22s heap=%lu kB  PSRAM free=%lu/%lu kB\n", tag,
+             (unsigned long)(ESP.getFreeHeap()/1024),
+             (unsigned long)(ESP.getFreePsram()/1024),
+             (unsigned long)(ESP.getPsramSize()/1024));
+}
+
+static void pack_4bpp_in_place(uint8_t* idx, int W, int H) {
+  for (int y = 0; y < H; ++y) {
+    const uint8_t* src = idx + (size_t)y * W;
+    uint8_t*       dst = idx + (size_t)y * (W/2);
+    for (int x = 0; x < W; x += 2)
+      dst[x>>1] = (uint8_t)(((src[x] & 0xF) << 4) | (src[x+1] & 0xF));
+  }
+}
+
+static bool show_image_on_panel(RgbImage* img) {
+  int W = img->width, H = img->height;
+  // (fit/anchor logic omitted for brevity -- see full source in the library)
+  if (W != img->width || H != img->height)
+    if (!resize_image(img, W, H)) return false;
+  if ((W & 1) || (H & 1)) return false;
+
+  uint8_t* idx = (uint8_t*)ps_malloc((size_t)W*H);
+  if (!idx) idx = (uint8_t*)malloc((size_t)W*H);
+  if (!idx) return false;
+
+  if (!dither_image(img->pixels, W, H, PAL_GRAY4, DITHER_METHOD, DITHER_GAMMA, false, idx)) {
+    free(idx); return false;
+  }
+  image_free(img);
+  pack_4bpp_in_place(idx, W, H);
+
+  int x = (EPD_WIDTH  - W) / 2 & ~1;
+  int y = (EPD_HEIGHT - H) / 2;
+  epaper.pushImage(x, y, W, H, (uint16_t*)idx);
+  epaper.update();
+  free(idx);
+  return true;
+}
+
+void setup() {
+  LOG.begin(115200, SERIAL_8N1, PIN_DBG_RX, PIN_DBG_TX);
+  delay(2500);
+  LOG.println("==============================================");
+  LOG.println("  reTerminal E1001 -- SD Bitmap (Gray4)");
+  LOG.println("==============================================");
+
+  pinMode(PIN_SD_EN, OUTPUT); digitalWrite(PIN_SD_EN, HIGH);
+  pinMode(PIN_SD_DET, INPUT_PULLUP); delay(50);
+
+  epaper.begin();
+  epaper.fillScreen(TFT_WHITE);
+  epaper.update();
+  epaper.initGrayMode(GRAY_LEVEL4);
+  epaper.fillSprite(TFT_GRAY_3);
+
+  // UC8179 is write-only (TFT_MISO=-1 in Setup520). Re-init SPI with MISO for SD.
+  SPIClass& spi = epaper.getSPIinstance();
+  spi.end();
+  spi.begin(PIN_SD_SCK, PIN_SD_MISO, PIN_SD_MOSI, -1);
+
+  if (!SD.begin(PIN_SD_CS, spi)) {
+    LOG.println(TAG " SD.begin FAILED"); return;
+  }
+
+  RgbImage img;
+  if (!load_image_from_sd(IMAGE_PATH, 0, 0, &img)) {
+    LOG.println(TAG " load failed"); return;
+  }
+  log_mem("after decode");
+  show_image_on_panel(&img);
+  image_free(&img);
+
+  epaper.sleep();
+  LOG.println(TAG " done.");
+}
+
+void loop() { delay(1000); }
+```
+
+</details>
+
+</TabItem>
+<TabItem value="e1002" label="E1002">
+
+<details>
+<summary>Click here to preview the full code — reTerminal_E1002_SDcard_Color6.ino</summary>
+
+```cpp
+#include <SPI.h>
+#include <FS.h>
+#include <SD.h>
+#include "TFT_eSPI.h"
+#include "dither.h"
+#include "image_loader.h"
+
+#ifndef EPAPER_ENABLE
+#error "This example requires Setup521_Seeed_reTerminal_E1002 -- check driver.h selects BOARD_SCREEN_COMBO 521"
+#endif
+
+EPaper epaper;
+
+static constexpr int PIN_SD_SCK  = 7;
+static constexpr int PIN_SD_MISO = 8;
+static constexpr int PIN_SD_MOSI = 9;
+static constexpr int PIN_SD_CS   = 14;
+static constexpr int PIN_SD_EN   = 16;
+static constexpr int PIN_SD_DET  = 15;
+static constexpr int PIN_DBG_RX  = 44;
+static constexpr int PIN_DBG_TX  = 43;
+#define LOG  Serial1
+#define TAG  "[e1002]"
+
+// =============================================================================
+// USER CONFIGURATION
+// =============================================================================
+
+static const char* IMAGE_PATH = "/img/demo.jpg";
+
+// DITHER_NONE / DITHER_BAYER8 / DITHER_FS / DITHER_JARVIS / DITHER_ATKINSON
+static const DitherMethod DITHER_METHOD = DITHER_FS;
+static const float        DITHER_GAMMA  = 1.0f;
+
+enum DisplayAnchor {
+  ANCHOR_TOP_LEFT, ANCHOR_TOP_CENTER, ANCHOR_TOP_RIGHT,
+  ANCHOR_MIDDLE_LEFT, ANCHOR_CENTER, ANCHOR_MIDDLE_RIGHT,
+  ANCHOR_BOTTOM_LEFT, ANCHOR_BOTTOM_CENTER, ANCHOR_BOTTOM_RIGHT,
+};
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+
+enum DisplayFit { FIT_ORIGINAL, FIT_CONTAIN, FIT_SCALE };
+static const DisplayFit DISPLAY_FIT   = FIT_SCALE;
+static const float      DISPLAY_SCALE = 0.7f;
+
+// =============================================================================
+// (implementation below)
+// =============================================================================
+
+static void log_mem(const char* tag) {
+  LOG.printf("[mem] %-22s heap=%lu kB  PSRAM free=%lu/%lu kB\n", tag,
+             (unsigned long)(ESP.getFreeHeap()/1024),
+             (unsigned long)(ESP.getFreePsram()/1024),
+             (unsigned long)(ESP.getPsramSize()/1024));
+}
+
+static void pack_4bpp_in_place(uint8_t* idx, int W, int H) {
+  for (int y = 0; y < H; ++y) {
+    const uint8_t* src = idx + (size_t)y * W;
+    uint8_t*       dst = idx + (size_t)y * (W/2);
+    for (int x = 0; x < W; x += 2)
+      dst[x>>1] = (uint8_t)(((src[x] & 0xF) << 4) | (src[x+1] & 0xF));
+  }
+}
+
+static bool show_image_on_panel(RgbImage* img) {
+  int W = img->width, H = img->height;
+  if ((W & 1) || (H & 1)) return false;
+
+  uint8_t* idx = (uint8_t*)ps_malloc((size_t)W*H);
+  if (!idx) idx = (uint8_t*)malloc((size_t)W*H);
+  if (!idx) return false;
+
+  if (!dither_image(img->pixels, W, H, PAL_E6, DITHER_METHOD, DITHER_GAMMA, false, idx)) {
+    free(idx); return false;
+  }
+  image_free(img);
+  pack_4bpp_in_place(idx, W, H);
+
+  int x = (EPD_WIDTH  - W) / 2 & ~1;
+  int y = (EPD_HEIGHT - H) / 2;
+  epaper.pushImage(x, y, W, H, (uint16_t*)idx);
+  epaper.update();
+  free(idx);
+  return true;
+}
+
+void setup() {
+  LOG.begin(115200, SERIAL_8N1, PIN_DBG_RX, PIN_DBG_TX);
+  delay(2500);
+  LOG.println("==============================================");
+  LOG.println("  reTerminal E1002 -- SD Bitmap (6-color)");
+  LOG.println("==============================================");
+
+  pinMode(PIN_SD_EN, OUTPUT); digitalWrite(PIN_SD_EN, HIGH);
+  pinMode(PIN_SD_DET, INPUT_PULLUP); delay(50);
+
+  epaper.begin();
+  epaper.fillScreen(TFT_WHITE);
+  epaper.update();
+
+  // ED2208 is write-only (TFT_MISO=-1 in Setup521). Re-init SPI with MISO for SD.
+  SPIClass& spi = epaper.getSPIinstance();
+  spi.end();
+  spi.begin(PIN_SD_SCK, PIN_SD_MISO, PIN_SD_MOSI, -1);
+
+  if (!SD.begin(PIN_SD_CS, spi)) {
+    LOG.println(TAG " SD.begin FAILED"); return;
+  }
+
+  RgbImage img;
+  if (!load_image_from_sd(IMAGE_PATH, 0, 0, &img)) {
+    LOG.println(TAG " load failed"); return;
+  }
+  log_mem("after decode");
+  show_image_on_panel(&img);
+  image_free(&img);
+
+  epaper.sleep();
+  LOG.println(TAG " done.");
+}
+
+void loop() { delay(1000); }
+```
+
+</details>
+
+</TabItem>
+<TabItem value="e1003" label="E1003">
+
+<details>
+<summary>Click here to preview the full code — reTerminal_E1003_SDcard_Gray16.ino</summary>
+
+```cpp
+#include <SPI.h>
+#include <FS.h>
+#include <SD.h>
+#include "TFT_eSPI.h"
+#include "dither.h"
+#include "image_loader.h"
+
+#ifndef EPAPER_ENABLE
+#error "This example requires Setup522_Seeed_reTerminal_E1003 -- check driver.h selects BOARD_SCREEN_COMBO 522"
+#endif
+
+EPaper epaper;
+
+static constexpr int PIN_SD_SCK  = 7;
+static constexpr int PIN_SD_MISO = 8;
+static constexpr int PIN_SD_MOSI = 9;
+static constexpr int PIN_SD_CS   = 14;
+static constexpr int PIN_SD_EN   = 39;  // E1003 uses GPIO39, not GPIO16
+static constexpr int PIN_SD_DET  = 15;
+static constexpr int PIN_DBG_RX  = 44;
+static constexpr int PIN_DBG_TX  = 43;
+#define LOG  Serial1
+#define TAG  "[e1003]"
+
+// =============================================================================
+// USER CONFIGURATION
+// =============================================================================
+
+static const char* IMAGE_PATH = "/img/demo.jpg";
+
+// DITHER_NONE / DITHER_BAYER8 / DITHER_FS / DITHER_JARVIS / DITHER_ATKINSON
+// At 1872x1404, error-diffusion needs >10 MB -- use DITHER_BAYER8 or shrink source first.
+static const DitherMethod DITHER_METHOD = DITHER_FS;
+static const float        DITHER_GAMMA  = 1.0f;
+
+enum DisplayAnchor {
+  ANCHOR_TOP_LEFT, ANCHOR_TOP_CENTER, ANCHOR_TOP_RIGHT,
+  ANCHOR_MIDDLE_LEFT, ANCHOR_CENTER, ANCHOR_MIDDLE_RIGHT,
+  ANCHOR_BOTTOM_LEFT, ANCHOR_BOTTOM_CENTER, ANCHOR_BOTTOM_RIGHT,
+};
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+
+enum DisplayFit { FIT_ORIGINAL, FIT_CONTAIN, FIT_SCALE };
+static const DisplayFit DISPLAY_FIT   = FIT_ORIGINAL;
+static const float      DISPLAY_SCALE = 1.0f;
+
+// =============================================================================
+// (implementation below)
+// =============================================================================
+
+static void log_mem(const char* tag) {
+  LOG.printf("[mem] %-22s heap=%lu kB  PSRAM free=%lu/%lu kB\n", tag,
+             (unsigned long)(ESP.getFreeHeap()/1024),
+             (unsigned long)(ESP.getFreePsram()/1024),
+             (unsigned long)(ESP.getPsramSize()/1024));
+}
+
+static void pack_4bpp_in_place(uint8_t* idx, int W, int H) {
+  for (int y = 0; y < H; ++y) {
+    const uint8_t* src = idx + (size_t)y * W;
+    uint8_t*       dst = idx + (size_t)y * (W/2);
+    for (int x = 0; x < W; x += 2)
+      dst[x>>1] = (uint8_t)(((src[x] & 0xF) << 4) | (src[x+1] & 0xF));
+  }
+}
+
+static bool show_image_on_panel(RgbImage* img) {
+  int W = img->width, H = img->height;
+  if ((W & 1) || (H & 1)) return false;
+
+  uint8_t* idx = (uint8_t*)ps_malloc((size_t)W*H);
+  if (!idx) idx = (uint8_t*)malloc((size_t)W*H);
+  if (!idx) return false;
+
+  if (!dither_image(img->pixels, W, H, PAL_GRAY16, DITHER_METHOD, DITHER_GAMMA, false, idx)) {
+    free(idx); return false;
+  }
+  image_free(img);
+  pack_4bpp_in_place(idx, W, H);
+
+  int x = (EPD_WIDTH  - W) / 2 & ~1;
+  int y = (EPD_HEIGHT - H) / 2;
+  epaper.pushImage(x, y, W, H, (uint16_t*)idx);
+  epaper.update();
+  free(idx);
+  return true;
+}
+
+void setup() {
+  LOG.begin(115200, SERIAL_8N1, PIN_DBG_RX, PIN_DBG_TX);
+  delay(2500);
+  LOG.println("==============================================");
+  LOG.println("  reTerminal E1003 -- SD Bitmap (Gray16)");
+  LOG.println("==============================================");
+
+  pinMode(PIN_SD_EN, OUTPUT); digitalWrite(PIN_SD_EN, HIGH);
+  pinMode(PIN_SD_DET, INPUT_PULLUP); delay(50);
+
+  epaper.begin();
+  epaper.fillScreen(TFT_WHITE);
+  epaper.update();
+  epaper.initGrayMode(GRAY_LEVEL16);
+  epaper.fillSprite(TFT_GRAY_15);
+
+  // Re-init SPI bus to ensure MISO=GPIO8 is wired (symmetry with E1001/E1002).
+  SPIClass& spi = epaper.getSPIinstance();
+  spi.end();
+  spi.begin(PIN_SD_SCK, PIN_SD_MISO, PIN_SD_MOSI, -1);
+
+  if (!SD.begin(PIN_SD_CS, spi)) {
+    LOG.println(TAG " SD.begin FAILED"); return;
+  }
+
+  RgbImage img;
+  if (!load_image_from_sd(IMAGE_PATH, 0, 0, &img)) {
+    LOG.println(TAG " load failed"); return;
+  }
+  log_mem("after decode");
+  show_image_on_panel(&img);
+  image_free(&img);
+
+  epaper.sleep();
+  LOG.println(TAG " done.");
+}
+
+void loop() { delay(1000); }
+```
+
+</details>
+
+</TabItem>
+<TabItem value="e1004" label="E1004">
+
+<details>
+<summary>Click here to preview the full code — reTerminal_E1004_SDcard_Color6.ino</summary>
+
+```cpp
+#include <SPI.h>
+#include <FS.h>
+#include <SD.h>
+#include "TFT_eSPI.h"
+#include "dither.h"
+#include "image_loader.h"
+
+#ifndef EPAPER_ENABLE
+#error "This example requires Setup523_Seeed_reTerminal_E1004 -- check driver.h selects BOARD_SCREEN_COMBO 523"
+#endif
+
+EPaper epaper;
+
+static constexpr int PIN_SD_SCK  = 7;
+static constexpr int PIN_SD_MISO = 8;
+static constexpr int PIN_SD_MOSI = 9;
+static constexpr int PIN_SD_CS   = 14;
+static constexpr int PIN_SD_EN   = 16;
+static constexpr int PIN_SD_DET  = 15;
+static constexpr int PIN_DBG_RX  = 44;
+static constexpr int PIN_DBG_TX  = 43;
+#define LOG  Serial1
+#define TAG  "[e1004]"
+
+// =============================================================================
+// USER CONFIGURATION
+// =============================================================================
+
+static const char* IMAGE_PATH = "/img/demo.jpg";
+
+// DITHER_NONE / DITHER_BAYER8 / DITHER_FS / DITHER_JARVIS / DITHER_ATKINSON
+// Default BAYER8: safe at any source size. Switch to FS only for small images.
+static const DitherMethod DITHER_METHOD = DITHER_BAYER8;
+static const float        DITHER_GAMMA  = 1.0f;
+
+enum DisplayAnchor {
+  ANCHOR_TOP_LEFT, ANCHOR_TOP_CENTER, ANCHOR_TOP_RIGHT,
+  ANCHOR_MIDDLE_LEFT, ANCHOR_CENTER, ANCHOR_MIDDLE_RIGHT,
+  ANCHOR_BOTTOM_LEFT, ANCHOR_BOTTOM_CENTER, ANCHOR_BOTTOM_RIGHT,
+};
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+
+enum DisplayFit { FIT_ORIGINAL, FIT_CONTAIN, FIT_SCALE };
+static const DisplayFit DISPLAY_FIT   = FIT_ORIGINAL;
+static const float      DISPLAY_SCALE = 1.0f;
+
+// =============================================================================
+// (implementation below)
+// =============================================================================
+
+static void log_mem(const char* tag) {
+  LOG.printf("[mem] %-22s heap=%lu kB  PSRAM free=%lu/%lu kB\n", tag,
+             (unsigned long)(ESP.getFreeHeap()/1024),
+             (unsigned long)(ESP.getFreePsram()/1024),
+             (unsigned long)(ESP.getPsramSize()/1024));
+}
+
+static void pack_4bpp_in_place(uint8_t* idx, int W, int H) {
+  for (int y = 0; y < H; ++y) {
+    const uint8_t* src = idx + (size_t)y * W;
+    uint8_t*       dst = idx + (size_t)y * (W/2);
+    for (int x = 0; x < W; x += 2)
+      dst[x>>1] = (uint8_t)(((src[x] & 0xF) << 4) | (src[x+1] & 0xF));
+  }
+}
+
+static bool show_image_on_panel(RgbImage* img) {
+  int W = img->width, H = img->height;
+  if ((W & 1) || (H & 1)) return false;
+
+  uint8_t* idx = (uint8_t*)ps_malloc((size_t)W*H);
+  if (!idx) idx = (uint8_t*)malloc((size_t)W*H);
+  if (!idx) return false;
+
+  if (!dither_image(img->pixels, W, H, PAL_E6, DITHER_METHOD, DITHER_GAMMA, false, idx)) {
+    free(idx); return false;
+  }
+  image_free(img);
+  pack_4bpp_in_place(idx, W, H);
+
+  int x = (EPD_WIDTH  - W) / 2 & ~1;
+  int y = (EPD_HEIGHT - H) / 2;
+  epaper.pushImage(x, y, W, H, (uint16_t*)idx);
+  epaper.update();
+  free(idx);
+  return true;
+}
+
+void setup() {
+  LOG.begin(115200, SERIAL_8N1, PIN_DBG_RX, PIN_DBG_TX);
+  delay(2500);
+  LOG.println("==============================================");
+  LOG.println("  reTerminal E1004 -- SD Bitmap (6-color)");
+  LOG.println("==============================================");
+
+  pinMode(PIN_SD_EN, OUTPUT); digitalWrite(PIN_SD_EN, HIGH);
+  pinMode(PIN_SD_DET, INPUT_PULLUP); delay(50);
+
+  epaper.begin();
+  epaper.fillScreen(TFT_WHITE);
+  epaper.update();
+
+  // Re-init SPI bus for symmetry with E1001/E1002 (no-op on E1004, MISO already configured).
+  SPIClass& spi = epaper.getSPIinstance();
+  spi.end();
+  spi.begin(PIN_SD_SCK, PIN_SD_MISO, PIN_SD_MOSI, -1);
+
+  if (!SD.begin(PIN_SD_CS, spi)) {
+    LOG.println(TAG " SD.begin FAILED"); return;
+  }
+
+  RgbImage img;
+  if (!load_image_from_sd(IMAGE_PATH, 0, 0, &img)) {
+    LOG.println(TAG " load failed"); return;
+  }
+  log_mem("after decode");
+  show_image_on_panel(&img);
+  image_free(&img);
+
+  epaper.sleep();
+  LOG.println(TAG " done.");
+}
+
+void loop() { delay(1000); }
+```
+
+</details>
+
+</TabItem>
+</Tabs>
+
+:::note Simplified vs. full source
+The code blocks above are **slightly condensed** (helper functions inlined, verbose log calls removed) to keep them readable here. The sketches in the library — opened via **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** — contain the full diagnostic logging, complete fit/anchor logic, and all comments.
+:::
+
+### Step 2 — Prepare the microSD Card
+
+1. Format the card as **FAT32**.
+2. Create a folder structure that matches the path you'll set in the sketch — the default is `/img/demo.jpg`:
+
+   ```text
+   <SD root>/
+   └── img/
+       └── demo.jpg          ← or demo.png / demo.bmp
+   ```
+
+3. Insert the card into the reTerminal **before** powering on (hot-plugging works but is less reliable).
+
+### Step 3 — Prepare Your Image
+
+The loader accepts three formats out of the box:
+
+| Format | What works | What to avoid |
+|---|---|---|
+| **JPEG** (`.jpg` / `.jpeg`) | Baseline 8-bit, YCbCr or grayscale, any chroma subsampling (4:4:4 / 4:2:2 / 4:2:0). | Progressive JPEG, CMYK, EXIF-rotation-only sources. |
+| **BMP** (`.bmp`) | 24-bit BGR uncompressed, or 4-bit indexed (palette + `BI_RGB`). | `BI_BITFIELDS`, RLE-compressed BMPs. |
+| **PNG** (`.png`) | Any standard PNG (8-bit, 16-bit, palette, interlaced, RGBA). RGBA is composited over **white** because ePaper panels are opaque. | None — pngle handles all standard PNG variants. |
+
+The file's actual format is sniffed from **magic bytes**, not its extension. A JPEG saved as `.bmp` still works (you'll just see a warning in the serial log).
+
+Per-panel size guidance:
+
+<Tabs groupId="reterm-model">
+<TabItem value="e1001-bw" label="E1001 BW" default>
+
+Panel is **800 × 480**. Any source up to roughly **1600 × 1200** decodes fine on 8 MB PSRAM. Larger images are still accepted but you'll want `DISPLAY_FIT = FIT_CONTAIN` so the loader can shrink them before quantising.
+
+</TabItem>
+<TabItem value="e1001-gray4" label="E1001 Gray4">
+
+Same panel as BW (**800 × 480**) but you'll see significantly more tonal range — a portrait or landscape photo at native resolution looks noticeably smoother than on the BW sketch.
+
+</TabItem>
+<TabItem value="e1002" label="E1002">
+
+Panel is **800 × 480**. The 6-color palette is sparse, so heavy dithering (FS / Jarvis) gives the best perceived quality on photographic content.
+
+</TabItem>
+<TabItem value="e1003" label="E1003">
+
+Panel is **1872 × 1404** (about **2.6 million pixels**, ~7.5 MB at RGB888). A full-panel-sized source will saturate PSRAM and force the dither stage to fall back to `DITHER_NONE` — the loader prints a warning when this happens.
+
+For the best result, **pre-scale** your source to ≤ 1200 × 900 on the PC (or use `DISPLAY_FIT = FIT_CONTAIN` with a smaller `DISPLAY_SCALE`), then let the device do the final dither.
+
+</TabItem>
+<TabItem value="e1004" label="E1004">
+
+Panel is **1200 × 1600** (~1.9 million pixels, ~5.5 MB at RGB888). Comfortably fits on 8 MB PSRAM, but pairing **FS at panel resolution** with the 11 MB error buffer it needs **will** trigger fallback. Default is `DITHER_BAYER8` for safety; switch to `DITHER_FS` only after shrinking the source.
+
+</TabItem>
+</Tabs>
+
+### Step 4 — Configure the Sketch
+
+All user-tunable options live in a config block at the top of each `.ino` file. The four most important knobs are walked through below.
+
+#### `IMAGE_PATH` — which file to display
+
+```cpp
+static const char* IMAGE_PATH = "/img/demo.jpg";
+```
+
+Use a leading `/`. The loader sniffs the format from magic bytes, so the extension is purely cosmetic — `/photo.bmp` containing real JPEG data still decodes fine.
+
+#### `DITHER_METHOD` — which dithering algorithm
+
+ePaper panels can only physically display 2 / 4 / 6 / 16 colors. To represent the millions of colors in a typical photo, the loader has to **quantise** every pixel to one of those few palette entries. The dithering algorithm decides *how* that quantisation error is spread across neighbouring pixels.
+
+```cpp
+static const DitherMethod DITHER_METHOD = DITHER_FS;
+```
+
+| Option | What it does | When to use |
+|---|---|---|
+| `DITHER_NONE` | Nearest-color, no diffusion. Fastest, most blocky. | Diagnostics, or when you want a posterised look. |
+| `DITHER_BAYER8` | 8×8 ordered Bayer matrix. Deterministic, **no error buffer**. | The safest choice on E1003 / E1004 at panel resolution — never runs out of memory. |
+| `DITHER_FS` | Floyd-Steinberg error diffusion. The best **quality / speed** balance. | Default on E1001 / E1002. Great for photos with smooth gradients. |
+| `DITHER_JARVIS` | Jarvis-Judice-Ninke. Wider 12-coefficient kernel, smoother output. | Higher quality than FS, but ~3× slower and uses more PSRAM. |
+| `DITHER_ATKINSON` | Atkinson (classic Mac). Diffuses only 6/8 of the error → higher contrast, more "etched" look. | Stylised B&W output, comic / line-art content. |
+
+:::caution Error-diffusion memory cost
+`DITHER_FS`, `DITHER_JARVIS` and `DITHER_ATKINSON` need a **floating-point error buffer** of roughly `W × H × N_channels × 4` bytes. At 1872 × 1404 that's about **31 MB for color** or **10 MB for grayscale** — well over the available PSRAM.
+
+When `ps_malloc` fails the loader prints
+
+```
+[dither] FS error buffer alloc FAILED (10358 kB) -- falling back to DITHER_NONE
+```
+
+and quietly switches to `DITHER_NONE`. If you don't want this fallback, switch to `DITHER_BAYER8` (ordered, zero-allocation) **or** shrink the image first.
+:::
+
+#### `DITHER_GAMMA` — brightness compensation
+
+```cpp
+static const float DITHER_GAMMA = 1.0f;
+```
+
+`1.0` is neutral. Increase to **darken** the output (good for outdoor photos that come out too bright on ePaper). Decrease to **brighten** (good for night photography or screenshots). Typical useful range is **0.8 – 1.6**.
+
+#### `DISPLAY_ANCHOR` — where on the panel the image lands
+
+A 3×3 grid of anchor points. The image is placed so that its corner / edge / center aligns with the corresponding panel location.
+
+```text
+ANCHOR_TOP_LEFT       ANCHOR_TOP_CENTER       ANCHOR_TOP_RIGHT
+ANCHOR_MIDDLE_LEFT    ANCHOR_CENTER           ANCHOR_MIDDLE_RIGHT
+ANCHOR_BOTTOM_LEFT    ANCHOR_BOTTOM_CENTER    ANCHOR_BOTTOM_RIGHT
+```
+
+```cpp
+static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
+```
+
+Any image smaller than the panel is **automatically padded** with white in the unused area, no need to pre-resize to match the panel exactly. Images larger than the panel are **clipped** symmetrically around the anchor.
+
+#### `DISPLAY_FIT` + `DISPLAY_SCALE` — sizing the image
+
+```cpp
+static const DisplayFit  DISPLAY_FIT   = FIT_ORIGINAL;
+static const float       DISPLAY_SCALE = 1.0f;
+```
+
+| Mode | Behaviour |
+|---|---|
+| `FIT_ORIGINAL` | Keep the decoded size as-is. Recommended default — predictable, always safe. |
+| `FIT_CONTAIN` | Downscale the image so it fits **entirely** inside the panel while preserving aspect ratio. **Never upscales** — a small image stays small (use `FIT_SCALE` for upscaling). |
+| `FIT_SCALE` | Multiply the source size by `DISPLAY_SCALE`. Both downscale (`< 1.0`) and upscale (`> 1.0`) are supported. |
+
+Typical values for `DISPLAY_SCALE`: `0.25` quarter, `0.5` half, `1.0` original, `2.0` 2×.
+
+:::warning Upscaling is OOM-prone on big panels
+On E1003 (1872 × 1404) and E1004 (1200 × 1600), `DISPLAY_SCALE` greater than `1.0` quickly exhausts PSRAM. The loader will print an out-of-memory message and abort. Prefer cropping or pre-scaling on the host instead.
+:::
+
+#### Grayscale depth (E1001 only)
+
+E1001 ships with **two** sketches because the same UC8179 panel can operate in BW (fast, 1-bit) **or** Gray4 (slower, 2-bit, four shades). Pick based on content:
+
+| Content | Recommended sketch |
+|---|---|
+| Line art, QR codes, text, hand-drawn comics. | `reTerminal_E1001_SDcard_BW` |
+| Photographs, illustrations with smooth shading. | `reTerminal_E1001_SDcard_Gray4` |
+
+E1003 unconditionally uses 16-level grayscale (`initGrayMode(16)`) — that mode is the panel's signature feature. E1002 and E1004 are 6-color and don't expose a grayscale-depth choice.
+
+### Step 5 — Build, Flash, Watch the Logs
+
+1. In **Arduino IDE → Tools**: select board **XIAO_ESP32S3**, **PSRAM = OPI PSRAM**, **Flash = 8 MB**, **Partition Scheme = Default 8 MB**.
+2. Insert the prepared microSD card.
+3. **Upload** the sketch.
+4. Open a **serial monitor on the carrier USB-UART bridge** (GPIO43 TX / GPIO44 RX, **115200 baud, 8N1**) — note that this is `Serial1`, **not** the USB-CDC `Serial` that the IDE auto-opens.
+
+Typical log output (E1004 with a 1080 × 1920 PNG):
+
+```text
+[reTerm_E1004] dithering Color6 with BAYER8, gamma=1.00 ...
+[mem]  before image load        heap=275 kB  PSRAM free=8030/8192 kB
+[png]   IHDR 1080x1920, allocating RGB888 buffer: 6075 kB
+[img]   image decoded: 1080x1920  (6075 kB in PSRAM)
+[mem]  after image decoded      heap=275 kB  PSRAM free=1955/8192 kB
+[mem]  after dither             heap=275 kB  PSRAM free=1955/8192 kB
+[reTerm_E1004] anchor=CENTER  fit=ORIGINAL  scale=1.00
+[reTerm_E1004] frame pushed OK
+[reTerm_E1004] done. Sleeping panel.
+```
+
+After this the panel will refresh — that takes **15 – 45 seconds** for a full update, depending on the model and the chosen gray / color mode. Stay still and don't reset the board mid-refresh.
+
+### Memory Budget Cheat Sheet
+
+| Panel | RGB888 buffer | FS error buffer (peak) | Comfortable with FS? |
+|---|---|---|---|
+| E1001 BW @ 800×480 | 1.1 MB | 1.5 MB | ✅ yes |
+| E1001 Gray4 @ 800×480 | 1.1 MB | 1.5 MB | ✅ yes |
+| E1002 E6 @ 800×480 | 1.1 MB | 4.6 MB | ✅ yes |
+| E1003 Gray16 @ 1872×1404 | 7.5 MB | 10.1 MB | ❌ no — use `DITHER_BAYER8` or shrink source |
+| E1004 E6 @ 1200×1600 | 5.5 MB | 22.0 MB | ❌ no — use `DITHER_BAYER8` or shrink source |
+
+The 8 MB OPI PSRAM module on the XIAO ESP32-S3 module gives you roughly **7.9 MB of usable space** after the Arduino runtime overhead. If the loader can't satisfy an allocation it logs the exact size it needed and either resizes-and-retries (when `DISPLAY_FIT = FIT_CONTAIN`) or falls back to `DITHER_NONE`.
+
+:::tip About refresh speed
+After uploading, the ePaper may sit blank for the first few seconds while the driver runs its initial waveform. A first full refresh can take up to a couple of minutes on a cold panel — this is the panel's electrochemistry, not a bug. Subsequent refreshes are faster.
+:::
 
 ## Troubleshooting
 
