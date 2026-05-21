@@ -10,13 +10,13 @@ keywords:
   - recording
   - microphone array
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_examples_sound_record/
 ---
 
@@ -32,16 +32,16 @@ Este ejemplo muestra cómo grabar audio desde la matriz de micrófonos de Reachy
 5. Guarda los datos de audio en un archivo WAV usando `soundfile`
 
 **Características:**
-- Duración de grabación configurable (por defecto: 5 segundos)
+- Duración de grabación configurable (predeterminado: 5 segundos)
 - Detección automática de la frecuencia de muestreo
 - Protección por tiempo de espera para evitar bucles infinitos
 - Compatibilidad con diferentes backends de medios
 
 **Uso:**
 ```bash
-python sound_record.py --backend [default_no_video|gstreamer_no_video|webrtc]
+python sound_record.py --backend [default|local|webrtc]
 ```
 
 El audio grabado se guardará como `recorded_audio.wav` en el directorio actual.
 
-Consulta el ejemplo completo en: [sound_record.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/sound_record.py)
+Consulta el ejemplo completo en: [sound_record.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/sound_record.py)

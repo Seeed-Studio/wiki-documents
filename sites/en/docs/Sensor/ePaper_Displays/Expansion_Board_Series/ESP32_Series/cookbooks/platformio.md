@@ -31,7 +31,7 @@ Applicable to **EE02 / EE03 / EE04 / EE05**. Because all four boards share the s
 :::
 
 :::note Looking for Arduino instead?
-This cookbook is **specific to PlatformIO**. If you'd rather use the **Arduino IDE** (the more common path for our ePaper line), see **[Work with Arduino](/epaper_work_with_arduino)** for the platform-level guide and the [reTerminal E Series Arduino cookbook](/reterminal_e10xx_with_arduino) for hardware-level examples that also apply to the EE0x boards (the Configuration Tool generates the right `driver.h`).
+This cookbook is **specific to PlatformIO**. If you'd rather use the **Arduino IDE** (the more common path for our ePaper line), see **[Work with Arduino](/epaper_work_with_arduino)** for the platform-level guide, the [reTerminal E Series — ePaper Display cookbook](/reterminal_e10xx_with_arduino) for display-rendering examples, and the [reTerminal E Series — Onboard Peripherals cookbook](/reterminal_e10xx_with_arduino_peripherals) for hardware-level examples (LED, buzzer, buttons, SHT4x, battery, microSD) that also apply to the EE0x boards.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>

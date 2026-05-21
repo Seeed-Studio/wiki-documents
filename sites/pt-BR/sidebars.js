@@ -2070,6 +2070,7 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
               ],
             },
             {
@@ -3817,13 +3818,6 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics J50 Mini',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50_Mini/pt_reComputer_Robotics_J50_Mini_Getting_Started',
-                  ],
-                },
-                {
-                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/pt_recomputer_j401b_getting_start',
@@ -3879,6 +3873,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/pt_Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/pt_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8852BE_Wireless_Module_for_Jetson',
@@ -3989,7 +3984,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
               ]
             },
             // Managed Services
@@ -4323,6 +4319,21 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/pt_intro',
               label: 'Introdução',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_ReachyMini_Getting_Started',
+              label: 'Primeiros passos',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_AGENTS',
+              label: 'Guia do agente de IA',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_vibe-code-with-your-agent',
+              label: 'Programe com seu agente',
             },
             {
               type: 'category',

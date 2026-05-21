@@ -1,35 +1,35 @@
 ---
-description: Referência completa do SDK em Python para o Reachy Mini, cobrindo controle de movimento, câmera, IMU, gravação e reprodução de áudio, e opções de backend de mídia.
+description: Referência completa do SDK em Python para o Reachy Mini, cobrindo controle de movimento, câmera, IMU, gravação e reprodução de áudio e opções de backend de mídia.
 title: Referência do SDK em Python
 slug: /reachymini_sdk_python-sdk
 keywords:
   - python
   - sdk
-  - movimento
-  - câmera
+  - movement
+  - camera
   - imu
-  - áudio
-  - backend de mídia
+  - audio
+  - media backend
   - goto_target
   - set_target
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-03-16'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/pt-br/reachymini_sdk_python-sdk/
 ---
 
 # Referência do SDK em Python
 
-> **💡 Lembrete:** O SDK agora detecta automaticamente se deve conectar via USB/localhost ou via rede, então `ReachyMini()` funciona imediatamente. Você ainda pode forçar um modo com `ReachyMini(connection_mode="localhost_only" | "network")` se necessário.
+> **💡 Lembrete:** O SDK agora detecta automaticamente se deve se conectar via USB/localhost ou via rede, então `ReachyMini()` funciona imediatamente. Você ainda pode forçar um modo com `ReachyMini(connection_mode="localhost_only" | "network")` se necessário.
 
 ## Movimento
 
-### Controle Básico (`goto_target`)
+### Controle básico (`goto_target`)
 Interpolação suave entre pontos. Você pode controlar `head`, `antennas` e `body_yaw`.
 
 ```python
@@ -50,12 +50,12 @@ with ReachyMini() as mini:
 
 **Métodos de interpolação:** `linear`, `minjerk` (padrão), `ease_in_out`, `cartoon`.
 
-### Controle Instantâneo (`set_target`)
-Ignora a interpolação. Use isto para controle de alta frequência (por exemplo, seguindo um joystick ou trajetória gerada).
+### Controle instantâneo (`set_target`)
+Ignora a interpolação. Use isto para controle de alta frequência (por exemplo, seguindo um joystick ou uma trajetória gerada).
 
 ## Sensores e Mídia
 
-A arquitetura de mídia é descrita em detalhes na seção [Media Architecture](/pt-br/reachymini_sdk_media-architecture). Embora acessar áudio e vídeo a partir do SDK seja similar entre as versões do Reachy Mini, a implementação subjacente é diferente.
+A arquitetura de mídia é descrita em detalhes na seção [Media Architecture](/pt-br/reachymini_sdk_media-architecture). Embora o acesso a áudio e vídeo a partir do SDK seja semelhante entre as versões do Reachy Mini, a implementação subjacente é diferente.
 
 ### Câmera 📷
 
@@ -71,7 +71,7 @@ O frame retornado é um array numpy com formato `(height, width, 3)` e tipo de d
 
 ### IMU 🧭
 
-> ⚠️ A IMU está disponível apenas na versão sem fio do Reachy Mini
+> ⚠️ A IMU só está disponível na versão sem fio do Reachy Mini
 
 Dê uma olhada [neste exemplo](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/imu_example.py)
 ```python
@@ -120,31 +120,28 @@ with ReachyMini(media_backend="default") as mini:
 ```
 
 **Formato dos dados de áudio:**
-- `get_audio_sample()` retorna um array numpy com formato `(samples, 2)` e tipo de dado `float32`, amostrado a 16kHz.
-- `push_audio_sample()` espera um array numpy com formato `(samples, 1 or 2)` e tipo de dado `float32`, amostrado a 16kHz.
+- `get_audio_sample()` retorna um array numpy com formato `(samples, 2)` e tipo de dado `float32`, amostrado a 16 kHz.
+- `push_audio_sample()` espera um array numpy com formato `(samples, 1 or 2)` e tipo de dado `float32`, amostrado a 16 kHz.
 
-Em ambos os casos, as informações de canais e taxa de amostragem podem ser recuperadas de forma confiável com `get_input/output_audio_samplerate()` e `get_input/output_channels()`.
+Em ambos os casos, as informações de canais e taxa de amostragem podem ser obtidas de forma confiável com `get_input/output_audio_samplerate()` e `get_input/output_channels()`.
 
-> **⚠️ Nota:** `push_audio_sample()` é não bloqueante, o que significa que retorna imediatamente enquanto o áudio é reproduzido em segundo plano. Se você precisar esperar até o fim da reprodução, calcule a duração com base no tamanho do sample e na taxa de amostragem.
+> **⚠️ Observação:** `push_audio_sample()` é não bloqueante, o que significa que ele retorna imediatamente enquanto o áudio é reproduzido em segundo plano. Se você precisar esperar até o fim da reprodução, calcule a duração com base no comprimento do sample e na taxa de amostragem.
 
-## Opções de Backend de Mídia
+## Opções de backend de mídia
 
-Escolha o backend de mídia apropriado com base na sua versão do Reachy Mini e nos seus requisitos:
+Escolha o backend de mídia apropriado com base na versão do seu Reachy Mini e nos seus requisitos:
 
-**Reachy Mini Lite:**
-- `media_backend="default"` - Usa OpenCV para câmera e Sounddevice para áudio (recomendado para a maioria dos usuários)
-- `media_backend="gstreamer"` - Usa GStreamer tanto para câmera quanto para áudio ([instalação necessária](/pt-br/reachymini_sdk_gstreamer-installation))
+- `media_backend="default"` - Detecta automaticamente o melhor backend: LOCAL quando executado na mesma máquina que o daemon, WEBRTC quando remoto (recomendado para a maioria dos usuários).
+- `media_backend="local"` - Força o backend LOCAL (câmera IPC GStreamer + áudio GStreamer). Use quando estiver executando na mesma máquina que o daemon.
+- `media_backend="webrtc"` - Força o backend WEBRTC. O daemon transmite vídeo H.264 e áudio Opus via WebRTC para o cliente.
+- `media_backend="no_media"` - Desativa o gerenciador de mídia e instrui o daemon a liberar o hardware de câmera e áudio. Use isto quando você precisar de acesso direto via OpenCV, sounddevice ou qualquer outra biblioteca externa. O hardware é readquirido automaticamente quando o gerenciador de contexto é encerrado. Veja [Media Architecture - Disabling Media](/pt-br/reachymini_sdk_media-architecture#desativando-a-mídia--acesso-direto-ao-hardware) e o exemplo [Custom Media Manager](/pt-br/reachymini_examples_custom_media_manager).
 
-**Reachy Mini Wireless:**
-- **Execução local** (rodando no robô via SSH): usa automaticamente `"gstreamer"`
-- **Execução remota** (controlando a partir do seu computador): usa automaticamente `"webrtc"`. Com este backend, o GStreamer roda localmente no Raspberry Pi e faz o streaming de áudio e vídeo no computador remoto usando WebRTC.
+> **💡 Dica:** Para a maioria das configurações, o backend é selecionado automaticamente com base em você estar executando localmente ou remotamente. Não é necessário especificar o valor de `media_backend`!
 
-> **💡 Dica:** Para configurações sem fio, o backend é selecionado automaticamente com base em se você está rodando localmente ou remotamente. Não é necessário especificar o valor de `media_backend`!
+> **💡 Dica:** O backend WebRTC requer que o GStreamer esteja instalado na máquina cliente. Veja [GStreamer Installation](/pt-br/reachymini_sdk_gstreamer-installation). Por enquanto, apenas Linux é totalmente suportado como cliente remoto. Outras plataformas (Windows, macOS) serão suportadas em [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
 
-> **💡 Dica:** Para configurações sem fio, o backend WebRTC requer uma instalação específica, veja [gstreamer-installation.md](/pt-br/reachymini_sdk_gstreamer-installation). Por enquanto apenas a plataforma Linux é suportada como cliente. Outras plataformas (Windows, macOS) serão suportadas em [futuras versões](https://github.com/pollen-robotics/reachy_mini/issues/572).
-
-## Gravando Movimentos
-Você pode gravar um movimento movendo o robô (modo compliant) ou enviando comandos, e salvá-lo para reprodução posterior.
+## Gravando movimentos
+Você pode gravar um movimento movendo o robô (modo complacente) ou enviando comandos, e salvá-lo para reprodução posterior.
 
 ```python
 from reachy_mini import ReachyMini
@@ -154,11 +151,11 @@ with ReachyMini() as mini:
     recorded_data = mini.stop_recording()
 ```
 
-## Próximos Passos
-* **[Navegar pela Pasta de Exemplos](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
-* **[Integrações de IA](/pt-br/reachymini_sdk_integration)**: Conecte LLMs, construa Apps e publique na Hugging Face.
-* **[Conceitos Centrais](/pt-br/reachymini_sdk_core-concept)**: Arquitetura, sistemas de coordenadas e limites de segurança.
+## Próximos passos
+* **[Navegue pela pasta de exemplos](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
+* **[Integrações de IA](/pt-br/reachymini_sdk_integration)**: Conecte LLMs, crie Apps e publique na Hugging Face.
+* **[Conceitos centrais](/pt-br/reachymini_sdk_core-concept)**: Arquitetura, sistemas de coordenadas e limites de segurança.
 
-## ❓ Solução de Problemas
+## ❓ Solução de problemas
 
-Encontrou algum problema? 👉 **[Consulte o Guia de Solução de Problemas e FAQ](/pt-br/reachymini_troubleshooting)**
+Encontrou algum problema? 👉 **[Confira o guia de solução de problemas e FAQ](/pt-br/reachymini_troubleshooting)**

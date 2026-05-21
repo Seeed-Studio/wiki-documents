@@ -560,6 +560,97 @@ Wait for the installation to complete. A new Pi-Apps icon will appear in your me
 </TabItem>
 </Tabs>
 
+## How to Tuning parameters?
+
+Tuning allows users to configure parameters of the built-in audio algorithms and communicate directly with the XMOS chip.
+
+A dedicated Python control interface is provided for parameter configuration and device interaction.
+
+
+[**Python Control Directory**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
+
+Using the provided Python scripts, you can:
+
+* Configure built-in audio algorithm parameters
+* Retrieve DoA (Direction of Arrival) data
+* Retrieve VAD (Voice Activity Detection) data
+* Control onboard LEDs
+* Control the voice processing pipeline
+* Communicate directly with the XMOS device
+
+**System Requirements**
+
+The following dependencies are required to use the Python control interface:
+
+* Python 3.6 or later
+* `pyusb` Python library
+* `libusb` system library
+
+
+### Installation & Dependencies
+
+Install the required Python dependency using:
+
+```bash
+pip install pyusb
+```
+
+Depending on your operating system, you may also need to install the `libusb` package separately.
+
+---
+
+### Usage
+
+**Basic Syntax**
+
+```bash
+python xvf_host.py [options] command [value(s)...]
+```
+
+---
+
+**Command Options**
+
+| Option         | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| `-l`, `--list` | List all supported commands with detailed information |
+| `--vid`        | Set USB Vendor ID (default: `0x2886`)                 |
+| `--pid`        | Set USB Product ID (default: `0x001A`)                |
+| `--values`     | Provide values for write commands (optional)          |
+
+---
+
+### Usage Examples
+
+**1. List All Available Commands**
+
+```bash
+python xvf_host.py --list
+```
+
+Displays all supported commands and their descriptions.
+
+---
+
+**2. Read Firmware Version Information**
+
+```bash
+python xvf_host.py VERSION
+```
+
+Reads and displays the current firmware version information from the device.
+
+---
+
+**3. Read DOA (Direction of Arrival) Values**
+
+```bash
+python xvf_host.py DOA_VALUE
+```
+
+Retrieves the current Direction of Arrival (DOA) value detected by the microphone array.
+
+
 ## Resources
 
 [reSpeaker Flex XVF3800 Circular step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)

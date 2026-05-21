@@ -2071,6 +2071,7 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
               ],
             },
             {
@@ -3816,13 +3817,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/cn_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
-                {
-                  type: 'category',
-                  label: 'reComputer Robotics J50 Mini',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50_Mini/cn_reComputer_Robotics_J50_Mini_Getting_Started',
-                  ],
-                },
+
                 {
                   type: 'category',
                   label: 'reComputer J401B',
@@ -3880,6 +3875,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/cn_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8852BE_Wireless_Module_for_Jetson',
@@ -3990,7 +3986,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
               ]
             },
             // Managed Services
@@ -4320,6 +4317,207 @@ const sidebars = {
           items: [
             'Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
           ]
+        },
+        {
+          type: 'category',
+          label: 'ReachyMini',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_intro',
+              label: '简介',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
+              label: '快速入门',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_AGENTS',
+              label: 'AI代理指南',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_vibe-code-with-your-agent',
+              label: '使用代理进行Vibe Code编程',
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini (无线版)',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_get_started',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_usage',
+                  label: '使用方法',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_hardware',
+                  label: '硬件',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_media_advanced_controls',
+                  label: '媒体高级控制',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_reset',
+                  label: '重置',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_install_daemon_from_branch',
+                  label: '从分支安装守护进程',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_development_workflow',
+                  label: '开发工作流程',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/cn_reflash_the_rpi_ISO',
+                  label: '重新刷写ISO',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini Lite',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_get_started',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_usage',
+                  label: '使用方法',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_hardware',
+                  label: '硬件',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_media_advanced_controls',
+                  label: '媒体高级控制',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/cn_wizard',
+                  label: '向导',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '仿真',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/cn_get_started',
+                  label: '快速入门',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SDK指南',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_installation',
+                  label: '安装',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_quickstart',
+                  label: '快速入门',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_python-sdk',
+                  label: 'Python SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_integration',
+                  label: 'AI集成',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_core-concept',
+                  label: '核心概念',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/cn_gstreamer-installation',
+                  label: 'GStreamer安装',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '帮助与故障排除',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/cn_troubleshooting',
+                  label: '故障排除',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_motors_diagnosis',
+                  label: '电机诊断',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/cn_change_mic_fpc_cable',
+                  label: '更换麦克风FPC线缆',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: '示例',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'API参考',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
+              ],
+            },
+          ],
         },
       ]
     },

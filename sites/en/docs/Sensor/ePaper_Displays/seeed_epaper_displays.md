@@ -299,7 +299,7 @@ Each tutorial below walks through one platform end-to-end:
 
 ### Code-based development
 
-- [Work with Arduino](https://wiki.seeedstudio.com/epaper_work_with_arduino) — main reference: IDE setup, `Seeed_GFX` library, `driver.h` generation. Per-product cookbooks: [reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino), [TRMNL DIY Kit](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino).
+- [Work with Arduino](https://wiki.seeedstudio.com/epaper_work_with_arduino) — main reference: IDE setup, `Seeed_GFX` library, `driver.h` generation. Per-product cookbooks: reTerminal E Series — [ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino) & [Onboard Peripherals](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino).
 - [Work with PlatformIO — EE04](https://wiki.seeedstudio.com/ee04_with_platformio)
 
 ### Open-source ESL / OEPL
