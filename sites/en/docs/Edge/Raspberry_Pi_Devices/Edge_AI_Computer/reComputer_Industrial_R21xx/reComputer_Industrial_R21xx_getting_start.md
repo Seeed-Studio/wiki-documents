@@ -26,12 +26,12 @@ The reComputer Industrial R21xx, powered by Raspberry Pi CM5, is an adaptable ed
 The reComputer Industrial R21xx series is ideal for use in industrial AI applications. It can be used in aspects such as data acquisition and process monitoring, automation and robot control, intelligent manufacturing, and industrial communication and networking. With its small size, flexibility, low cost, and programmability, it provides strong support for automation & IoT system and more.
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Customize Now ➜</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
 
 ## Features

@@ -12,13 +12,13 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-18
+  date: 2026-05-20
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -49,10 +49,13 @@ YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推�
 1. **YOLO + OBB 直接估计抓取姿态**  
    直接利用检测框或 OBB 最小外接矩形，使用短轴作为夹爪开合方向，避免复杂 3D 点云处理。
 
-2. **机械臂与夹爪驱动轻量封装**  
+2. **GraspNet-Baseline 6D 夹取姿态估计（可选）**  
+   支持基于 GraspNet-Baseline（`graspnet/graspnet-baseline`）对 RGB-D 点云进行 6D 夹取姿态估计，并结合 YOLO 检测框筛选目标候选，用于更复杂物体的夹取调试。
+
+3. **机械臂与夹爪驱动轻量封装**  
    主抓取脚本统一复用 `RebotArm` 接口，集成 IK、轨迹控制和夹爪状态机。
 
-3. **开源 & 可扩展**  
+4. **开源 & 可扩展**  
    所有代码开源，支持用户根据需求自定义控制算法和效果。
 
 ## 规格参数
@@ -144,8 +147,17 @@ sudo chmod 666 /dev/ttyUSB0
 
 ### 步骤 1. 克隆仓库
 
+优先使用 Seeed-Projects 官方仓库：
+
 ```bash
 git clone https://github.com/Seeed-Projects/reBot-DevArm-Grasp.git rebot_grasp
+cd rebot_grasp
+```
+
+也可以使用当前开发仓库：
+
+```bash
+git clone https://github.com/EclipseaHime017/reBot-DevArm-Grasp.git rebot_grasp
 cd rebot_grasp
 ```
 
@@ -198,7 +210,48 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### 步骤 5. 验证依赖
+### 步骤 5. 配置 GraspNet（可选）
+
+如果只运行 `scripts/main.py` 或 `scripts/ordinary_grasp_pipeline.py`，不需要配置 GraspNet。只有在运行 `scripts/graspnet_camera_demo.py` 或 `scripts/grasp.py` 时，才需要准备 GraspNet、CUDA 版 PyTorch、PointNet2/knn CUDA 算子和预训练权重。
+
+```bash
+cd sdk
+git clone https://github.com/graspnet/graspnet-baseline.git
+cd graspnet-baseline
+
+# 按你的 CUDA 版本安装 PyTorch 后，再安装 GraspNet 运行依赖
+pip install open3d tensorboard Pillow tqdm
+
+# 编译 CUDA 算子
+cd pointnet2
+python setup.py install
+cd ../knn
+python setup.py install
+cd ..
+
+# 安装 GraspNet API
+git clone https://github.com/graspnet/graspnetAPI.git
+cd graspnetAPI
+pip install .
+cd ../../..
+```
+
+下载 GraspNet 官方预训练权重后，将 `checkpoint-rs.tar` 放到：
+
+```bash
+sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
+```
+
+然后在 `config/default.yaml` 中确认：
+
+```yaml
+graspnet:
+  checkpoint: "checkpoint-rs.tar"
+```
+
+`checkpoint` 支持三种写法：仅文件名会自动从 `sdk/graspnet-baseline/checkpoints/` 查找；相对路径会按项目根目录解析；绝对路径会直接使用。
+
+### 步骤 6. 验证依赖
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
@@ -240,10 +293,7 @@ python scripts/collect_handeye_eih.py --manual
 config/calibration/orbbec_gemini2/hand_eye.npz
 ```
 
-样本数建议：
-
-- 最少 5 个样本
-- 建议不少于 15 个样本
+样本数建议最少 5 个样本且建议不少于 15 个样本。
 
 ## 运行与调试
 
@@ -344,6 +394,34 @@ robot:
 - `R`：恢复实时预览
 - `Q` / `Esc`：退出程序
 
+### 4. GraspNet 相机估计 Demo（可选）
+
+```bash
+python scripts/graspnet_camera_demo.py
+```
+
+该脚本不连接机械臂，仅使用 RGB-D 相机运行 GraspNet 6D 夹取姿态估计。脚本会保留实时相机预览，并使用 YOLO 检测框选择目标区域，再从 GraspNet 全场景候选中筛选目标 bbox 内的可行夹取。
+
+按键说明：
+
+- `G` / `Space`：对当前帧运行 GraspNet 推理
+- `R`：恢复实时预览
+- `Q` / `Esc`：退出
+
+推理后可通过 Open3D 查看点云与夹取候选。
+
+### 5. GraspNet 机械臂抓取程序（可选）
+
+```bash
+python scripts/grasp.py
+python scripts/grasp.py --dry-run
+python scripts/grasp.py --target-class "light blue coffee cup"
+```
+
+该脚本基于 GraspNet 估计结果接入机械臂执行流程：YOLO 选择目标，GraspNet 输出 6D 夹取姿态，经手眼标定转换到机械臂基坐标系，再检查 IK 可达性并执行预夹取、夹取、退回动作。
+
+运行`python scripts/grasp.py`将运行完整 GraspNet 机械臂抓取流程，会实际控制机械臂运动。`--dry-run`：只打印目标位姿和候选筛选结果，不执行抓取动作。`--target-class "light blue coffee cup"`可以指定 YOLO 目标类别，只对该类别对应目标进行 GraspNet 候选筛选与抓取。
+
 ## FAQ
 
 ### 1. `ModuleNotFoundError: No module named 'motorbridge'`
@@ -378,6 +456,51 @@ python scripts/main.py --dry-run
 - 相机与目标的安装高度
 - 目标表面的反光情况
 
+### 4. GraspNet 报 `pointnet2_utils` 无法从 `pointnet2` 导入
+
+这通常是 `sdk/graspnet-baseline/pointnet2` 本地 CUDA 扩展没有在当前 conda 环境中正确编译安装，或 Python 路径解析到了错误的 `pointnet2` 包。建议确认已激活项目环境，并在同一个环境中重新编译安装 `pointnet2` 与 `knn`：
+
+```bash
+conda activate rebotarm
+cd sdk/graspnet-baseline/pointnet2
+python setup.py install
+
+cd ../knn
+python setup.py install
+```
+
+验证：
+
+```bash
+python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
+```
+
+### 5. 针对新显卡运行 GraspNet 时出现 CUDA 架构不兼容
+
+如果出现 `no kernel image is available for execution on the device` 或 PyTorch 提示当前 GPU 的 CUDA capability 不受支持，通常说明当前 PyTorch wheel 不包含该显卡架构对应的 CUDA kernel。建议安装支持当前 CUDA/显卡架构的 PyTorch 版本，然后重新编译 GraspNet 的本地 CUDA 扩展。
+
+```bash
+python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
+
+cd sdk/graspnet-baseline/pointnet2
+python setup.py install
+
+cd ../knn
+python setup.py install
+```
+
+如需手动指定编译架构，可在重新编译前设置 `TORCH_CUDA_ARCH_LIST`，具体取值请按当前显卡架构和 PyTorch/CUDA 版本确认。
+
+### 6. GraspNet 推理时报 `RuntimeError: CPU not supported`
+
+`pointnet2` 中的采样算子只支持 CUDA tensor。请确认 CUDA 可用、GraspNet 网络和输入点云都在 GPU 上，并且 `pointnet2` / `knn` 是在当前环境和当前 PyTorch 版本下编译的。
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+如果输出为 `False`，需要先修复 CUDA / PyTorch 安装；如果输出为 `True` 但仍报错，建议重新编译 `pointnet2` 和 `knn`。
+
 ## 联系方式
 
 - 技术支持：[提交 Issue](https://github.com/EclipseaHime017/reBot-DevArm-Grasp/issues)
@@ -396,3 +519,5 @@ python scripts/main.py --dry-run
 - [pyorbbecsdk 仓库](https://github.com/orbbec/pyorbbecsdk)
 - [pyorbbecsdk 文档](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
+- [Graspnet-Baseline 仓库](https://github.com/graspnet/graspnet-baseline)
+- [Graspnet(Anygrasp) 文档](https://graspnet.net/)

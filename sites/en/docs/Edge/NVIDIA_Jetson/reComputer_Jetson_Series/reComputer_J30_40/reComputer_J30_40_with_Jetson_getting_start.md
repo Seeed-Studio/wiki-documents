@@ -33,12 +33,12 @@ The full system includes one NVIDIA Jetson Orin production module, a heatsink, a
 If you are looking for the version without power adapter, please check out [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Customize Now ➜</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
 
 ## Features

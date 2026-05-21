@@ -10,7 +10,7 @@ last_update:
   date: 09/22/2023
   author: Lakshantha
 createdAt: '2023-06-08'
-updatedAt: '2026-03-05'
+updatedAt: '2026-03-04'
 url: https://wiki.seeedstudio.com/es/reServer_Industrial_Getting_Started/
 ---
 
@@ -22,12 +22,16 @@ La serie reServer Industrial ofrece servidores NVR (Network Video Recorder) comp
 
 reServer Industrial viene con un disipador de calor pasivo y un diseño sin ventilador, lo que lo hace ideal para su uso en entornos exigentes. El disipador de calor pasivo permite una refrigeración eficiente sin necesidad de un ventilador, reduciendo el riesgo de fallos de componentes debido al polvo u otros contaminantes. El diseño sin ventilador también reduce los niveles de ruido y el consumo de energía, lo que lo hace adecuado para su uso en entornos sensibles al ruido y minimiza los costos energéticos.
 
-reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación independiente y facilita el despliegue de dispositivos de red en áreas sin tomas de corriente fácilmente disponibles. El puerto GbE restante se utiliza para conectarse a un switch de red o router, lo que permite la comunicación con otros dispositivos en la red y el acceso a Internet.
+reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación independiente y facilita el despliegue de dispositivos de red en áreas sin tomas de corriente fácilmente disponibles. El puerto GbE restante se utiliza para conectarse a un switch o router de red, lo que permite la comunicación con otros dispositivos en la red y el acceso a Internet.
+
+:::note
+Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware.
+:::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
-</a></div>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html"><strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar ahora ➜</font></span></strong></a>
+</div>
 
 ## Características
 
@@ -80,8 +84,8 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
     </tr>
     <tr>
       <td>CPU</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos, 64 bits; 2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits, 1.5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos y 64 bits; 2MB L2 + 4MB L3 </td>
+      <td colSpan={3}>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos y 64 bits 1.5MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Memoria</td>
@@ -91,12 +95,12 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
       <td>4GB 64-bit LPDDR5 34 GB/s</td>
     </tr>
     <tr>
-      <td>Codificación de video</td>
+      <td>Codificación de vídeo</td>
       <td colSpan={2}>Estándares compatibles: H.265 (HEVC), H.264, AV1 1×4K60 (H.265) | 3×4K30 (H.265) | 6×1080p60 (H.265) | 12×1080p30 (H.265)</td>
       <td colSpan={2}>1080p30 compatible con 1-2 núcleos de CPU </td>
     </tr>
     <tr>
-      <td>Decodificación de video</td>
+      <td>Decodificación de vídeo</td>
       <td colSpan={2}>Estándares compatibles: H.265 (HEVC), H.264, VP9, AV1 1×8K30 (H.265) | 2×4K60 (H.265) | 4×4K30 (H.265) | 9×1080p60 (H.265) | 18×1080p30 (H.265)</td>
       <td colSpan={2}>Estándares compatibles: H.265 (HEVC), H.264, VP9, AV1 1×4K60 (H.265) | 2×4K30 (H.265) | 5×1080p60 (H.265) | 11×1080p30 (H.265)</td>
     </tr>
@@ -120,7 +124,7 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan={4}>4× USB3.1, 1× USB2.0 Type C (modo dispositivo), 1× USB2.0 Type C para Debug UART y RP2040</td>
+      <td colSpan={4}>4× USB3.1, 1× USB2.0 Type C (modo dispositivo), 1× USB2.0 Type C para Debug UART &amp; RP2040</td>
     </tr>
     <tr>
       <td>DI/DO</td>
@@ -137,7 +141,7 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
     </tr>
     <tr>
       <td>SATA</td>
-      <td colSpan={4}>2 bahías para unidades que admiten HDD/SSD SATA de 2.5" (SATA III 6.0Gbps)</td>
+      <td colSpan={4}>2 bahías para unidades que admiten SATA HDD/SSD de 2.5" (SATA III 6.0Gbps)</td>
     </tr>
     <tr>
       <td>SIM</td>
@@ -166,7 +170,7 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={4}>1× zócalo RTC (incluye CR1220),×RTC de 2 pines</td>
+      <td colSpan={4}>1× zócalo RTC (incluye CR1220),×RTC 2-pin</td>
     </tr>
     <tr>
       <td rowSpan={2}>Alimentación</td>
@@ -212,7 +216,7 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
     </tr>
     <tr>
       <td>Choque</td>
-      <td colSpan={4}>Aceleración máxima de 50G (duración de 11 mseg, eMMC, microSD o mSATA)</td>
+      <td colSpan={4}>Aceleración máxima de 50G (duración 11 mseg., eMMC, microSD o mSATA)</td>
     </tr>
     <tr>
       <td colSpan={2}>SO</td>
@@ -239,13 +243,13 @@ reServer Industrial tiene 5 puertos RJ45 GbE, 4 de los cuales son puertos PoE PS
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
 
-## Flashear JetPack
+## Grabar JetPack
 
 :::danger
-El dispositivo vendrá preinstalado con JetPack 5.1.1. Si no hay requisitos especiales, no es necesario volver a flashear el sistema.
+El dispositivo vendrá preinstalado con JetPack 5.1.1. Si no hay requisitos especiales, no es necesario volver a grabar el sistema.
 :::
 
-reServer Industrial viene preinstalado con JetPack 5.1.1 en un SSD de 128GB junto con los controladores necesarios. Esto incluye componentes del SDK como CUDA, CUDNN y TensorRT. Sin embargo, si deseas volver a flashear Jetpack en el SSD incluido o en un nuevo SSD, puedes seguir los pasos a continuación. Actualmente solo proporcionamos instrucciones para JP5.1.1 y seguiremos actualizándolas en el futuro.
+reServer Industrial viene preinstalado con JetPack 5.1.1 en un SSD de 128GB junto con los controladores necesarios. Esto incluye componentes del SDK como CUDA, CUDNN y TensorRT. Sin embargo, si deseas volver a grabar Jetpack en el SSD incluido o en un nuevo SSD, puedes seguir los pasos a continuación. Actualmente solo proporcionamos una guía para JP5.1.1 y seguiremos actualizándola en el futuro.
 
 :::note
 Si deseas utilizar SSD con reServer Industrial, solo te recomendamos que elijas las versiones de [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) y [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) de Seeed.
@@ -256,7 +260,7 @@ Si deseas utilizar SSD con reServer Industrial, solo te recomendamos que elijas 
 Debes preparar el siguiente hardware antes de comenzar con reServer Industrial
 
 - reServer Industrial
-- Adaptador de corriente suministrado con cable de alimentación ([versión US](https://www.seeedstudio.com/AC-US-p-5122.html) o [versión EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
+- Adaptador de corriente incluido con cable de alimentación ([versión US](https://www.seeedstudio.com/AC-US-p-5122.html) o [versión EU](https://www.seeedstudio.com/AC-EU-p-5121.html))
 - PC host con Ubuntu (nativo o VM usando VMware Workstation Player)
 - Cable de transmisión de datos USB tipo C
 - Monitor externo
@@ -270,7 +274,7 @@ Ahora debes entrar en modo de recuperación en la placa reServer Industrial para
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reServer-Industrial/4.jpg"/></div>
 
 :::note
-Asegúrate de encender el dispositivo mientras mantienes presionado el botón RECOVERY, de lo contrario no entrará en modo de recuperación
+Asegúrate de encender el dispositivo mientras mantienes presionado el botón RECOVERY; de lo contrario, no entrará en modo de recuperación
 :::
 
 En el PC host con Ubuntu, abre una ventana de Terminal e introduce el comando **lsusb**. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que utilices, entonces la placa está en modo de recuperación forzada.
@@ -476,14 +480,14 @@ import TabItem from '@theme/TabItem';
           <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETo-G6kS2atGpfsWK6uX2HIBcrwsAboHjDBB_rypE4iyTA?e=GZyglq" target="_blank" rel="noopener noreferrer">Download1</a>
         </td>
         <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">Descargar2</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">Descarga2</a>
         </td>
       </tr>
       <tr>
         <td>5.1.3</td>
         <td>35.5.0</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQADLFrAQ2RAQb74nXNq6MlnAeaN-qPzaTk0Sg21ZqawFxA?e=KXkWZZ" target="_blank" rel="noopener noreferrer">Descargar1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQADLFrAQ2RAQb74nXNq6MlnAeaN-qPzaTk0Sg21ZqawFxA?e=KXkWZZ" target="_blank" rel="noopener noreferrer">Descarga1</a>
         </td>
         <td>
           -
@@ -493,17 +497,17 @@ import TabItem from '@theme/TabItem';
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQgrBDUICyZCnKBI_qVeupoBYqQJ1dP7_lcxUwxUphg6Qw?e=ObUzPI" target="_blank" rel="noopener noreferrer">Descargar1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQgrBDUICyZCnKBI_qVeupoBYqQJ1dP7_lcxUwxUphg6Qw?e=ObUzPI" target="_blank" rel="noopener noreferrer">Descarga1</a>
         </td>
         <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">Descargar2</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">Descarga2</a>
         </td>
       </tr>
       <tr>
         <td>6.1</td>
         <td>36.4</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ET-LxPOYaNtIjoJQ4I-gKEcBxU-AmFX9R-mWPH1p-eyBdA?e=EpAopw" target="_blank" rel="noopener noreferrer">Descargar1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ET-LxPOYaNtIjoJQ4I-gKEcBxU-AmFX9R-mWPH1p-eyBdA?e=EpAopw" target="_blank" rel="noopener noreferrer">Descarga1</a>
         </td>
         <td>
           -
@@ -513,7 +517,7 @@ import TabItem from '@theme/TabItem';
         <td>6.2</td>
         <td>36.4.3</td>
         <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBUl_MHgm8YSY6OQyCuNEf-AfgUPNTd9-rd2I6pimkcraE?e=KzSPtW" target="_blank" rel="noopener noreferrer">Descargar1</a>
+          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBUl_MHgm8YSY6OQyCuNEf-AfgUPNTd9-rd2I6pimkcraE?e=KzSPtW" target="_blank" rel="noopener noreferrer">Descarga1</a>
         </td>
         <td>
           -
@@ -524,7 +528,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * Los archivos de imagen de Descargar1 y Descargar2 son los mismos. Puedes elegir el enlace con la velocidad de descarga más rápida.
+  * Los archivos de imagen de Descarga1 y Descarga2 son los mismos. Puedes elegir el enlace con la velocidad de descarga más rápida.
 </p>
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
@@ -537,7 +541,7 @@ tar -xvf <file_name>.tar.gz
 
 #### Flashear a Jetson
 
-- **Paso 1:** Navega hasta el archivo extraído anteriormente y ejecuta el comando de flasheo como se indica a continuación
+- **Paso 1:** Navega al archivo extraído anteriormente y ejecuta el comando de flasheo como se indica a continuación
 
 ```sh
 cd mfi_reserver-orin-industrial
@@ -575,9 +579,9 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-#### Descargar y preparar controladores
+#### Descargar y preparar los controladores
 
-- **Paso 1:** Descarga los archivos del controlador en tu PC con Ubuntu correspondientes a la placa que estás utilizando
+- **Paso 1:** Descarga los archivos de controladores en tu PC con Ubuntu correspondientes a la placa que estás utilizando
 
 <table>
   <thead>
@@ -591,7 +595,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
   <tbody>
     <tr>
       <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB</td>
-      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nx-8-16-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nx-8-16-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descarga</a></td>
       <td rowSpan={4}>5.1.1</td>
       <td rowSpan={4}>35.3.1</td>
     </tr>
@@ -599,11 +603,11 @@ sudo ./tools/l4t_flash_prerequisites.sh
     </tr>
     <tr>
       <td>Jetson Orin Nano 8GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-8-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-8-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descarga</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-4-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-4-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Descarga</a></td>
     </tr>
   </tbody>
 </table>
@@ -646,7 +650,7 @@ Después de eso, la placa se reiniciará y verás lo siguiente
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
 
-- **Paso 3:** Abre una ventana de terminal dentro del dispositivo, ejecuta lo siguiente, el dispositivo se reiniciará y estará listo para usar.
+- **Paso 3:** Abre una ventana de terminal dentro del dispositivo, ejecuta lo siguiente, ¡el dispositivo se reiniciará y estará listo para usar!
 
 ```sh
 systemctl disable nvgetty.service
@@ -671,12 +675,12 @@ sudo apt install nvidia-jetpack -y
 ## Uso del hardware e interfaces
 
 :::info
-  Para aprender más sobre cómo usar todo el hardware e interfaces en la placa reServer Industrial, debes seguir esta [**wiki**](/es/reserver_industrial_hardware_interface_usage):
+  Para obtener más información sobre cómo usar todo el hardware y las interfaces en la placa reServer Industrial, debes seguir esta [**wiki**](/es/reserver_industrial_hardware_interface_usage):
 :::
 
 ## Recursos
 
-(cambiar los enlaces)
+(cambia los enlaces)
 
 - [Hoja de datos de reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [Guía de referencia de reServer Industrial](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)

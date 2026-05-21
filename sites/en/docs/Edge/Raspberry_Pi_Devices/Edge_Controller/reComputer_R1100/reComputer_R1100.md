@@ -26,12 +26,12 @@ The reComputer R1100, powered by the Raspberry Pi CM4, is a versatile edge IoT g
 The reComputer R1100 series is widely used in IoT applications, including **data acquisition and process monitoring, automation and robotics control, intelligent manufacturing, and industrial communication and networking**. Its compact size, flexibility, low cost, and programmability provide strong support for **automation, IoT systems, and beyond**.
 
 :::note
-Customization is available for logo branding, packaging, and firmware flashing.
+Available customization options: logo branding, packaging, and firmware flashing.
 :::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1124-10-p-6257.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Customize Now ➜</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
 
 ## Features
