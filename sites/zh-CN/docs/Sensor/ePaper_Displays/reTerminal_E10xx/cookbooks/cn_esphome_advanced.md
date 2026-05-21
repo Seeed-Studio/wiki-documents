@@ -1,15 +1,16 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 使用手册 - 高级外设（按键、蜂鸣器、电池监控、SHT4x 传感器、深度睡眠、多页面仪表板）。
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 ESPHome 使用手册 - 进阶外设（按键、蜂鸣器、电池监测、SHT4x 传感器、深度睡眠、多页面仪表板）。
 title: ESPHome 使用手册 - 高级（reTerminal E 系列）
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: ESPHome（高级）
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,12 +19,12 @@ import TabItem from '@theme/TabItem';
 # ESPHome 使用手册 - 高级：reTerminal E 系列
 
 :::tip 前置条件
-本页假定你已经完成了 [reTerminal E 系列的 ESPHome 基础使用手册](/cn/reterminal_e10xx_with_esphome)（设备已连接 Wi-Fi、已与 Home Assistant 集成、首个仪表板已渲染）。有关平台级 YAML 骨架和 Home Assistant 集成步骤，请参阅 [使用 ESPHome](/cn/epaper_work_with_esphome)。
+本页假定你已经完成了[reTerminal E 系列基础 ESPHome 使用手册](/cn/reterminal_e10xx_with_esphome)（设备已连接 Wi-Fi、已与 Home Assistant 集成、首个仪表板已渲染）。有关平台级 YAML 骨架和 Home Assistant 集成步骤，请参阅[使用 ESPHome](/cn/epaper_work_with_esphome)。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-本文在我们之前的 [ESPHome 基础用法指南](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome) 的基础上，探索适用于 reTerminal E 系列电子墨水屏设备的高级 ESPHome 配置。如果你刚接触 ESPHome 或 reTerminal E 系列，建议先阅读基础指南，再来尝试这些高级应用。
+本文在我们[ESPHome 基础用法指南](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)所涵盖的基础概念之上，探索适用于 reTerminal E 系列电子墨水屏设备的高级 ESPHome 配置。如果你刚接触 ESPHome 或 reTerminal E 系列，建议先阅读基础指南，再深入学习这些高级应用。
 
 ## 硬件能力
 
@@ -33,7 +34,7 @@ reTerminal E 系列电子墨水屏包含多种硬件组件，可以通过 ESPHom
 
 - 蜂鸣器（GPIO45）
 
-- 电池电量监控（GPIO1 电压检测）
+- 电池电量监测（GPIO1 电压）
 
 - 板载 LED（GPIO6）
 
@@ -43,13 +44,13 @@ reTerminal E 系列电子墨水屏包含多种硬件组件，可以通过 ESPHom
 
 ## reTerminal E 系列电子墨水屏硬件组件控制
 
-下面我们将介绍如何在 Home Assistant 中使用 reTerminal E 系列电子墨水屏上的各个硬件组件。
+下面我们来看看如何在 Home Assistant 中使用 reTerminal E 系列电子墨水屏上的各个硬件组件。
 
 ### 按键和 LED
 
 本示例演示如何使用 reTerminal E 系列电子墨水屏上的三个按键来控制功能，并通过板载 LED 提供视觉反馈。
 
-你可以将下面的示例代码复制并粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用。
+你可以通过复制下面的示例代码，并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用本示例。
 
 ```yaml
 # Button configuration
@@ -112,9 +113,9 @@ light:
 该配置：
 
 - 将三个按键全部设置为带上拉电阻的输入
-- 配置按键 1 以短暂闪烁 LED
-- 配置按键 2 以双闪模式闪烁 LED
-- 配置按键 3 以切换 LED 的开/关
+- 将按键 1 配置为短暂闪烁 LED
+- 将按键 2 配置为双闪模式闪烁 LED
+- 将按键 3 配置为切换 LED 的开/关
 - 使 LED 作为可控灯光实体在 Home Assistant 中可用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/45.gif" style={{width:250, height:'auto'}}/></div>
@@ -123,7 +124,7 @@ light:
 
 reTerminal E 系列电子墨水屏在 GPIO45 上集成了一个蜂鸣器，可用于提供声音反馈。以下是配置方法：
 
-你可以将下面的示例代码复制并粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用。
+你可以通过复制下面的示例代码，并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用本示例。
 
 ```yaml
 # This component creates a raw PWM (Pulse Width Modulation) output signal.
@@ -176,15 +177,15 @@ binary_sensor:
 
 - 将蜂鸣器设置为 PWM 输出
 - 创建一个用于控制蜂鸣器的灯光实体
-- 配置按键 1 在按下时播放一个短促的蜂鸣模式
+- 将按键 1 配置为在按下时播放一个短促的蜂鸣模式
 
 :::tip
 你可以调整 `frequency` 参数来改变蜂鸣器的音调。数值越高，音调越尖锐。
 :::
 
-### 电池监控
+### 电池监测
 
-reTerminal E 系列电子墨水屏可以通过 GPIO1 上的模拟输入监控电池电量。以下是设置方法：
+reTerminal E 系列电子墨水屏可以通过 GPIO1 上的模拟输入监测电池电量。以下是设置方法：
 
 ```yaml
 esphome:
@@ -270,17 +271,17 @@ sensor:
 
 - 通过 ADC 读取电池电压
 - 使用校准曲线将电压转换为电池百分比
-- 使原始电压值和百分比值都可以在 Home Assistant 中使用
+- 使原始电压和百分比都可以在 Home Assistant 中使用
 
 :::caution
-要测量电池电量，你需要使 **GPIO21** 引脚处于使能状态。否则无法从 GPIO1 读取电池电压值。
+要测量电池电量，你需要使能 **GPIO21** 引脚。否则无法从 GPIO1 读取电池电压值。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
-## 示例 2. 将 Home Assistant 仪表板截屏显示
+## 示例 2. 将 Home Assistant 仪表板截屏
 
-本示例演示如何捕获 Home Assistant 仪表板的截图，并将其显示在 reTerminal E 系列设备上。
+本示例演示如何捕获 Home Assistant 仪表板的截图，并将其显示在 reTerminal E 系列上。
 
 ### 安装 [Puppet](https://github.com/balloob/home-assistant-addons) 插件
 
@@ -288,7 +289,7 @@ sensor:
 
 <div align="center">
 <a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=0f1cc410_puppet&repository_url=https%3A%2F%2Fgithub.com%2Fballoob%2Fhome-assistant-addons" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#03A9F4', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Install Puppet Add-on</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#03A9F4', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>安装 Puppet 插件</button></p>
 </a>
 </div>
 
@@ -310,7 +311,7 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/51.png" style={{width:800, height:'auto'}}/></div>
 
-步骤 6. 返回 Puppet 插件的配置界面，并将令牌粘贴到 "Long-Lived Access Token" 字段中。
+步骤 6. 返回 Puppet 插件配置界面，并将令牌粘贴到 "Long-Lived Access Token" 字段中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/52.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -320,7 +321,7 @@ sensor:
 
 ### 了解 Screenshot API
 
-Puppet 插件在端口 10000 上启动一个服务器，用于生成任意 Home Assistant 页面截图。以下是使用方法：
+Puppet 插件会在端口 10000 上启动一个服务器，用于生成任意 Home Assistant 页面截图。以下是使用方法：
 
 #### 基本截图 URL 格式
 
@@ -356,7 +357,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-在浏览器中输入你的截图 URL 进行测试。你应该会看到所选 Home Assistant 页面的截图。
+在浏览器中输入你的截图 URL 进行测试。你应该能看到所选 Home Assistant 页面的截图。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -481,10 +482,10 @@ display:
 ## 示例 3：深度睡眠模式
 
 :::tip
-如果你开始使用深度睡眠程序，我们建议你最好配合右侧的白色按键使用，并将右侧的白色按键设置为唤醒睡眠按键。这样，当你想要更新程序时，就不会遇到设备处于睡眠状态而无法通过串口上传程序的尴尬情况。
+如果你开始使用深度睡眠程序，我们建议你优先配合右侧的白色按键使用，并将右侧白色按键设置为唤醒睡眠按键。这样，当你想要更新程序时，就不会遇到设备处于睡眠状态而无法通过串口上传程序的尴尬情况。
 :::
 
-此示例演示如何使用深度睡眠模式显著降低功耗，使你的 reTerminal E 系列电子纸显示屏适用于电池供电应用。
+本示例演示如何使用深度睡眠模式显著降低功耗，使你的 reTerminal E 系列电子纸显示屏适用于电池供电应用。
 
 你可以通过复制下面的代码，并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
@@ -595,7 +596,7 @@ display:
 - 使用当前唤醒次数更新显示屏
 - 可选地配置一个按键来唤醒设备
 
-运行时，你会看到每次设备从睡眠中唤醒时计数器都会递增：
+运行时，你会看到每次设备从睡眠中唤醒时，计数器都会递增：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1263,17 +1264,17 @@ display:
 
 </details>
 
-当你的配置成功上传并运行后，你的 reTerminal E 系列电子墨水屏将显示一个包含环境数据、时间和电池状态的综合仪表盘：
+当你的配置成功上传并运行后，你的 reTerminal E 系列电子墨水屏将显示一个包含环境数据、时间和电池状态的综合仪表板：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
 ### 理解这个综合示例
 
-此示例实现了：
+该示例实现了：
 
-1. **多页面**：显示屏在两个页面之间切换——气候仪表盘和时间/日期显示
+1. **多页面**：显示屏在两个页面之间切换——气候仪表板和时间/日期显示
 2. **按键导航**：使用 GPIO3 和 GPIO5 上的按键在页面之间导航
-3. **电池监测**：电池电量通过相应图标显示，并会根据电量水平变化
+3. **电池监测**：电池电量通过相应图标显示，并根据电量水平变化
 4. **硬件初始化**：在启动时启用 SD 卡和电池监测电路
 5. **温湿度显示**：通过 I²C 使用板载 SHT4x 传感器
 6. **动态图标**：Material Design Icons 会根据传感器数值变化
@@ -1286,7 +1287,7 @@ display:
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2：为什么我无法在 Home Assistant 中获取这些数据？ {#port}
+### Q2: 为什么我无法在 Home Assistant 中获取这些数据？ {#port}
 
 在这种情况下，你需要前往 Settings -> Devices & Services -> Integrations，将你的设备**添加**到 Home Assistant 中。
 
@@ -1309,7 +1310,7 @@ Step 3. Turn off the battery switch and unplug the power cable.
 
 Step 4. Finally, replug the cable and upload a new program. -->
 
-### Q3：通过 Wi-Fi 上传程序失败？
+### Q3: 通过 Wi-Fi 上传程序失败？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1317,7 +1318,7 @@ Step 4. Finally, replug the cable and upload a new program. -->
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
