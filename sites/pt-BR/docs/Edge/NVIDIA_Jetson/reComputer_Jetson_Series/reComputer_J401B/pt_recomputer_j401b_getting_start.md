@@ -1,6 +1,6 @@
 ---
-description: O reComputer J401B é um dispositivo de borda de IA compacto e de alto desempenho com módulos NVIDIA Jetson Orin, oferecendo interfaces ricas de E/S e suporte ao JetPack 5.1.3 até 6.2 para aplicações de IA versáteis. Este guia abrange suas especificações, instruções de gravação e uso de interfaces para desenvolvimento e implantação.
-title: Primeiros passos com o reComputer J401B
+description: O reComputer J401B é um dispositivo de borda de IA compacto e de alto desempenho com módulos NVIDIA Jetson Orin, oferecendo interfaces de E/S ricas e suporte ao JetPack 5.1.3 até 6.2 para aplicações de IA versáteis. Este guia aborda suas especificações, instruções de gravação de imagem e uso de interfaces para desenvolvimento e implantação.
+title: Introdução ao reComputer J401B
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
@@ -16,38 +16,36 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_j401b_getting_start/
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Primeiros passos com o reComputer J401B
+# Introdução ao reComputer J401B
+
+## Introdução
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.jpg"/>
 </div>
 
+A série reComputer J401B é uma iteração da série reComputer Classic. O reComputer J4011B com módulos NVIDIA Jetson Orin NX 8GB é um dispositivo de borda de IA poderoso e compacto com interfaces ricas: 2x USB 3.2, HDMI, Ethernet, M.2 Key E para módulo Wi-Fi, M.2 Key M para SSD, mini-PCIe para módulo LTE, CAN, conector de 40 pinos e mais.
+
+:::note
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalizar agora ➜</font></span></strong></a>
 </div>
-
-## Introdução
-
-A série reComputer J401B é uma evolução da série reComputer Classic. O reComputer J4011B com módulos NVIDIA Jetson Orin NX 8GB é um dispositivo de borda de IA poderoso e compacto, com interfaces ricas: 2x USB 3.2, HDMI, Ethernet, M.2 Key E para módulo Wi-Fi, M.2 Key M para SSD, mini-PCIe para módulo LTE, CAN, conector de 40 pinos e mais.
 
 ## Recursos
 
-- **Construa a Plataforma de IA Embarcada Mais Poderosa:** Compatível com o módulo Jetson Orin NX, oferecendo até 100 TOPS.
+- **Construa a plataforma de IA embarcada mais poderosa:** Compatível com o módulo Jetson Orin NX, oferecendo até 100 TOPS.
 
-- **Projetado Tanto para Desenvolvimento quanto para Produção:** Equipado com um conjunto rico de E/S: 2x USB3.2, HDMI, Ethernet, M.2 Key M, M.2 Key E, mini-PCIe, GPIO de 40 pinos, etc. Suporta múltiplas comunicações com e sem fio, incluindo Wi-Fi e LTE
+- **Projetado tanto para desenvolvimento quanto para produção:** Equipado com um conjunto rico de E/S: 2x USB3.2, HDMI, Ethernet, M.2 Key M, M.2 Key E, mini-PCIe, GPIO de 40 pinos, etc. Suporta múltiplas comunicações com e sem fio, incluindo Wi-Fi e LTE
 
-- **Vá Imediatamente para o Mercado:** JetPack5.1.3 pré-instalado, BSP de SO Linux pronto
+- **Vá imediatamente para o mercado:** JetPack5.1.3 pré-instalado, BSP de sistema operacional Linux pronto
 
 - **Certificações incluem** ROHS, CE, FCC, KC, UKCA, REACH
 
-- **Fornecimento de Longa Duração:** Vida útil de produção: até pelo menos 2032
-
-<JetsonLeadQuote
-  buttonText="Solicitar orçamento personalizado"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
-  imageAlt="Request Quote for Jetson"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
+- **Fornecimento de longa duração:** Vida útil de produção: até pelo menos 2032
 
 ## Especificações
 
@@ -83,19 +81,19 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
       <td colspan='2' align='center'>GPU NVIDIA Ampere com 1024 núcleos e 32 Tensor Cores</td>
     </tr>
     <tr>
-      <td>Frequência Máx. da GPU</td>
+      <td>Frequência máxima da GPU</td>
       <td colSpan='2' align='center'>625 MHz</td>
       <td>765 MHz</td>
       <td>918 MHz</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan='2'>CPU de 6 núcleos Arm® Cortex®-A78AE v8.2 64-bit<br />1,5MB L2 + 4MB L3</td>
-      <td>CPU de 6 núcleos Arm® Cortex®-A78AE v8.2 64-bit 1,5MB L2 + 4MB L3</td>
-      <td>CPU de 8 núcleos Arm® Cortex®-A78AE v8.2 64-bit 2MB L2 + 4MB L3</td>
+      <td colSpan='2'>CPU Arm® Cortex®-A78AE v8.2 64-bit de 6 núcleos<br />1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 64-bit de 6 núcleos 1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 64-bit de 8 núcleos 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>Frequência Máx. da CPU</td>
+      <td>Frequência máxima da CPU</td>
       <td colSpan='2' align='center'>1,5 GHz</td>
       <td colSpan='2' align='center'>2 GHz</td>
     </tr>
@@ -113,12 +111,12 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>Frequência Máx. da DLA</td>
+      <td>Frequência máxima da DLA</td>
       <td colSpan='2' align='center'>/</td>
       <td colSpan='2' align='center'>614 MHz</td>
     </tr>
     <tr>
-      <td>Acelerador de Visão</td>
+      <td>Acelerador de visão</td>
       <td colSpan='2' align='center'>/</td>
       <td colSpan='2' align='center'>1x PVA v2</td>
     </tr>
@@ -127,12 +125,12 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
       <td colSpan='4' align='center'>SSD NVMe de 128GB</td>
     </tr>
     <tr>
-      <td>Codificador de Vídeo</td>
+      <td>Codificador de vídeo</td>
       <td colSpan='2' align='center'>1080p30 suportado por 1-2 núcleos de CPU</td>
       <td colSpan='2' align='center'>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <td>Decodificador de Vídeo</td>
+      <td>Decodificador de vídeo</td>
       <td colSpan='2' align='center'>1x 4K60 (H.265)<br />2x 4K30 (H.265)<br />5x 1080p60 (H.265)<br />11x 1080p30 (H.265)</td>
       <td colSpan='2' align='center'>1x 8K30 (H.265) | 2x 4K60 (H.265) | 4x 4K30 (H.265)<br />9x 1080p60 (H.265) | 18x 1080p30 (H.265)</td>
     </tr>
@@ -142,7 +140,7 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
     </tr>
     <tr>
       <td>Câmera CSI</td>
-      <td colSpan='4' align='center'>2* CSI (2 trilhas, 15 pinos)</td>
+      <td colSpan='4' align='center'>2* CSI （2-lane 15pin）</td>
     </tr>
     <tr>
       <td>Rede</td>
@@ -150,7 +148,7 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan='4' align='center'>2* USB 3.2 Type-A (10Gbps); 1* USB2.0 Type-C (Modo Dispositivo)</td>
+      <td colSpan='4' align='center'>2* USB 3.2 Tipo-A (10Gbps); 1* USB2.0 Tipo-C (Modo Device)</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
@@ -173,19 +171,19 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
       <td colSpan='4' align='center'>1* CAN</td>
     </tr>
     <tr>
-      <td>Porta Multifuncional</td>
+      <td>Porta multifuncional</td>
       <td colSpan='4' align='center'>1* cabeçalho de expansão de 40 pinos, 1* cabeçalho de controle e UART de 12 pinos</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan='4' align='center'>RTC de 2 pinos, soquete RTC (compatível com CR1220, mas não incluída)</td>
+      <td colSpan='4' align='center'>RTC 2 pinos, soquete RTC (suporta CR1220, mas não incluída)</td>
     </tr>
     <tr>
       <td>Alimentação</td>
       <td colSpan='4' align='center'> DC 9-19V via conector DC 5525 </td>
     </tr>
     <tr>
-      <td>Fonte de Alimentação</td>
+      <td>Fonte de alimentação</td>
       <td colSpan='4' align='center'>Adaptador de energia não incluído</td>
     </tr>
     <tr>
@@ -201,13 +199,13 @@ A série reComputer J401B é uma evolução da série reComputer Classic. O reCo
 
 ## Gravar o JetPack
 
-Aqui, mostraremos como gravar o [Jetpack](https://developer.nvidia.com/embedded/jetpack) em um SSD NVMe conectado ao reComputer J4012B/ J4011B/ J3010B e J3011B. Todos esses dispositivos vêm com a placa-mãe J401B interna e o procedimento de gravação é o mesmo para todos.
+Aqui, mostraremos como gravar o [Jetpack](https://developer.nvidia.com/embedded/jetpack) em um SSD NVMe conectado ao reComputer J4012B/ J4011B/ J3010B e J3011B. Todos esses dispositivos vêm com a placa-carregadora J401B dentro e o procedimento de gravação é o mesmo para todos.
 
 :::danger
-A série reComputer J401B vem com o JetPack 5.1.3 pré-instalado no SSD NVMe incluído, portanto você não precisa gravá-lo. No entanto, se quiser gravá-lo novamente com o JetPack, pode seguir este guia.
+A série reComputer J401B vem com o JetPack 5.1.3 pré-instalado no SSD NVMe incluído, portanto você não precisa gravá-lo. No entanto, se quiser gravá-lo novamente com o JetPack, você pode seguir este guia.
 :::
 
-### Módulo Suportado
+### Módulo compatível
 
 - [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
 - [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
@@ -216,9 +214,9 @@ A série reComputer J401B vem com o JetPack 5.1.3 pré-instalado no SSD NVMe inc
 
 ### Pré-requisitos
 
-- Computador Host com Ubuntu
+- Computador host com Ubuntu
 - reComputer J4012B/ J4011B/ J3010B ou J3011B
-- Cabo de transmissão de dados USB Type-C
+- Cabo de transmissão de dados USB Tipo-C
 
 :::info
 Recomendamos que você use dispositivos host físicos com Ubuntu em vez de máquinas virtuais.
@@ -227,8 +225,8 @@ Consulte a tabela abaixo para preparar a máquina host.
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> Versão JetPack </td>
-        <td class="dbon" colspan="3"> Versão Ubuntu (Computador Host) </td>
+        <td  rowspan="2"> Versão do JetPack </td>
+        <td class="dbon" colspan="3"> Versão do Ubuntu (Computador Host) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -258,21 +256,21 @@ Consulte a tabela abaixo para preparar a máquina host.
 
 :::
 
-### Entrar no Modo de Recuperação Forçada
+### Entrar no modo Force Recovery
 
-Antes de prosseguirmos para as etapas de instalação, precisamos garantir que o dispositivo Jetson esteja em modo de recuperação forçada.
+Antes de podermos prosseguir para as etapas de instalação, precisamos garantir que o dispositivo Jetson esteja em modo de recuperação forçada.
 
 Consulte as etapas a seguir para colocar o dispositivo Jetson em modo de recuperação forçada.
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
 
 :::note
-A placa-mãe no GIF animado é a J401, mas não se preocupe — as etapas para entrar no modo de recuperação forçada são as mesmas para as placas-mãe J401 e J401B.
+A placa-carregadora no GIF animado é a J401, mas não se preocupe — as etapas para entrar no modo de recuperação forçada são as mesmas para as placas-carregadoras J401 e J401B.
 :::
 
 <details>
 
-<summary> Passo a Passo </summary>
+<summary> Passo a passo </summary>
 
 **Passo 1.** Use um fio jumper para conectar o pino **FC REC** e o pino **GND**.
 
@@ -280,9 +278,9 @@ A placa-mãe no GIF animado é a J401, mas não se preocupe — as etapas para e
 <thead>
   <tr>
     <th> </th>
-    <th>Cabeçalho de Botões</th>
+    <th>Header de botão</th>
     <th>Descrição</th>
-    <th>Cabeçalho de Botões</th>
+    <th>Header de botão</th>
     <th>Descrição</th>
   </tr>
 </thead>
@@ -327,7 +325,7 @@ A placa-mãe no GIF animado é a J401, mas não se preocupe — as etapas para e
 </tbody>
 </table>
 
-**Passo 2.** Ligue o reComputer conectando o cabo incluído do adaptador de energia e conecte a placa ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C
+**Passo 2.** Ligue o reComputer conectando o cabo incluso ao adaptador de energia e conecte a placa ao PC host Ubuntu com um cabo USB Type-C de transmissão de dados
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
@@ -346,13 +344,13 @@ A imagem abaixo é para Orin NX 16GB
 
 </details>
 
-### Gravar o sistema Jetpack OS
+### Gravar o sistema operacional Jetpack
 
 :::note
-Antes de prosseguir para a gravação, deve‑se notar que o módulo Jetson Orin NX suporta apenas JetPack 5.1 e superior, enquanto o módulo Jetson Orin Nano suporta apenas JetPack 5.1.1 e superior.
+Antes de prosseguir para a gravação, deve-se observar que o módulo Jetson Orin NX suporta apenas JetPack 5.1 e superior, enquanto o módulo Jetson Orin Nano suporta apenas JetPack 5.1.1 e superior.
 :::
 
-Primeiro, instale as dependências necessárias abaixo no PC host com Ubuntu antes de prosseguir para gravar o JetPack.
+Primeiro, instale as dependências necessárias abaixo no PC host Ubuntu antes de prosseguir para gravar o JetPack.
 
 ```sh
 sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
@@ -368,11 +366,11 @@ import TabItem from '@theme/TabItem';
 
 Aqui usaremos NVIDIA L4T 35.3.1 para instalar o Jetpack 5.1.1 no reComputer
 
-**Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3531) os drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
+**Passo 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3531) dos drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**Passo 2:** Extraia **Jetson_Linux_R35.3.1_aarch64** e **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** navegando até a pasta que contém esses arquivos, aplique as alterações e instale os pré‑requisitos necessários
+**Passo 2:** Extraia **Jetson_Linux_R35.3.1_aarch64** e **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** navegando até a pasta que contém esses arquivos, aplique as alterações e instale os pré-requisitos necessários
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64
@@ -382,7 +380,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**Passo 3 (Opcional):** Configure seu nome de usuário, senha e hostname para que você não precise inserir o assistente de instalação do Ubuntu após o dispositivo terminar de inicializar
+**Passo 3 (Opcional):** Configure seu nome de usuário, senha e hostname para que você não precise entrar no assistente de instalação do Ubuntu depois que o dispositivo terminar de inicializar
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -402,14 +400,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
-Você verá a seguinte saída se o processo de gravação for bem‑sucedido
+Você verá a seguinte saída se o processo de gravação for bem-sucedido
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 Agora, você pode conectar o mouse, teclado e monitor ao dispositivo Jetson. Ele estará pronto para uso!
 
 :::tip
-Se o seu dispositivo Jetson levar muito tempo para abrir a área de trabalho, reconecte a fonte de alimentação.
+Se o seu dispositivo Jetson demorar muito para abrir a área de trabalho, reconecte a fonte de alimentação.
 :::
 
 **Passo 5 (Opcional):** Instalar Nvidia Jetpack SDK
@@ -426,11 +424,11 @@ sudo apt install nvidia-jetpack
 
 Aqui usaremos NVIDIA L4T 35.4.1 para instalar o Jetpack 5.1.2 no reComputer
 
-**Passo 1:** [Baixe](https://developer.nvidia.com/embedded/jetson-linux-r3541) os drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
+**Passo 1:** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) dos drivers NVIDIA no PC host. Os drivers necessários são mostrados abaixo:
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**Passo 2:** Extraia **Jetson_Linux_R35.4.1_aarch64** e **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** navegando até a pasta que contém esses arquivos, aplique as alterações e instale os pré‑requisitos necessários
+**Passo 2:** Extraia **Jetson_Linux_R35.4.1_aarch64** e **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** navegando até a pasta que contém esses arquivos, aplique as alterações e instale os pré-requisitos necessários
 
 ```sh
 tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
@@ -440,7 +438,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-Agora precisamos aplicar um patch da NVIDIA que é necessário para JP5.1.2 e está explicado [aqui](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf) na seção 4.2.3 das Notas de Lançamento oficiais do NVIDIA JetPack.
+Agora precisamos aplicar um patch da NVIDIA que é necessário para JP5.1.2 e explicado [aqui](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf) na seção 4.2.3 das Notas de Lançamento oficiais do NVIDIA JetPack.
 
 **Passo 3:** Navegue até o seguinte diretório
 
@@ -458,7 +456,7 @@ tfc {
     };
 ```
 
-**Passo 5 (Opcional):** Navegue até o diretório **"Linux_for_Tegra"** e insira o comando abaixo para configurar seu nome de usuário, senha e hostname para que você não precise inserir o assistente de instalação do Ubuntu após o dispositivo terminar de inicializar
+**Passo 5 (Opcional):** Navegue até o diretório **"Linux_for_Tegra"** e insira o comando abaixo para configurar seu nome de usuário, senha e hostname para que você não precise entrar no assistente de instalação do Ubuntu depois que o dispositivo terminar de inicializar
 
 ```sh
 cd Linux_for_Tegra
@@ -480,14 +478,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1   -c t
 
 ```
 
-Você verá a seguinte saída se o processo de gravação for bem‑sucedido
+Você verá a seguinte saída se o processo de gravação for bem-sucedido
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 Agora, você pode conectar o mouse, teclado e monitor ao dispositivo Jetson. Ele estará pronto para uso!
 
 :::tip
-Se o seu dispositivo Jetson levar muito tempo para abrir a área de trabalho, reconecte a fonte de alimentação.
+Se o seu dispositivo Jetson demorar muito para abrir a área de trabalho, reconecte a fonte de alimentação.
 :::
 
 **Passo 7 (Opcional):** Instalar Nvidia Jetpack SDK
@@ -505,14 +503,14 @@ sudo apt install nvidia-jetpack
 
 Aqui iremos instalar o Jetpack 5.1.3 no reComputer.
 
-**Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente ao módulo Jetson que você está usando:
+**Passo 1:** Baixe a imagem do sistema para o seu PC Ubuntu correspondente ao módulo Jetson que você está usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
       <th>Módulo Jetson</th>
-      <th>Link de Download</th>
+      <th>Link para Download</th>
       <th>SHA256</th>
     </tr>
   </thead>
@@ -552,7 +550,7 @@ Aqui iremos instalar o Jetpack 5.1.3 no reComputer.
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 **Passo 2:** Extraia o arquivo de imagem baixado:
@@ -570,12 +568,12 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-Você verá a seguinte saída se o processo de gravação for bem‑sucedido
+Você verá a seguinte saída se o processo de gravação for bem-sucedido
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode ser executado por 2–10 minutos.
+O comando de gravação pode ser executado por 2 a 10 minutos.
 :::
 
 **Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e finalize a configuração inicial.
@@ -588,7 +586,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 <TabItem value="JP6.0" label="JP6.0">
 
-Aqui usaremos NVIDIA L4T 36.3 para instalar o Jetpack 6.0 no reComputer
+Aqui usaremos o NVIDIA L4T 36.3 para instalar o Jetpack 6.0 no reComputer
 
 **Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente ao módulo Jetson que você está usando:
 
@@ -650,7 +648,7 @@ Aqui usaremos NVIDIA L4T 36.3 para instalar o Jetpack 6.0 no reComputer
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 **Passo 2:** Extraia o arquivo de imagem baixado:
@@ -660,7 +658,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Passo 3:** Navegue até o diretório descompactado e execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:
+**Passo 3:** Navegue até o diretório descompactado e execute o seguinte comando para gravar o sistema Jetpack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -698,7 +696,7 @@ sudo apt install -y iwlwifi-modules
 
 Aqui usaremos o NVIDIA L4T 36.4 para instalar o Jetpack 6.1 no reComputer
 
-**Passo 1:** Baixe a imagem do sistema para o seu PC Ubuntu correspondente ao módulo Jetson que você está usando:
+**Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente ao módulo Jetson que você está usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -745,7 +743,7 @@ Aqui usaremos o NVIDIA L4T 36.4 para instalar o Jetpack 6.1 no reComputer
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 **Passo 2:** Extraia o arquivo de imagem baixado:
@@ -755,7 +753,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-6.1-36.4.0-2026-02-07.tar.gz
 ```
 
-**Passo 3:** Navegue até o diretório descompactado e execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:
+**Passo 3:** Navegue até o diretório descompactado e execute o seguinte comando para gravar o sistema Jetpack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -785,7 +783,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 Aqui usaremos o NVIDIA L4T 36.4.3 para instalar o Jetpack 6.2 no reComputer
 
-**Passo 1:** Baixe a imagem do sistema para o seu PC Ubuntu correspondente ao módulo Jetson que você está usando:
+**Passo 1:** Baixe a imagem do sistema para o seu PC com Ubuntu correspondente ao módulo Jetson que você está usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -832,11 +830,11 @@ Aqui usaremos o NVIDIA L4T 36.4.3 para instalar o Jetpack 6.2 no reComputer
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido no wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 :::note
-Observe que, devido ao aumento do consumo de energia e da geração de calor após ativar o `super mode`, o [reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html) e o [reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html) não podem operar de forma estável no modo mais alto. Portanto, esta atualização não inclui esses dois produtos.
+Observe que, devido ao aumento do consumo de energia e da geração de calor após habilitar o `super mode`, o [reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html) e o [reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html) não conseguem operar de forma estável no modo mais alto. Portanto, esta atualização não inclui esses dois produtos.
 Atualmente estamos projetando uma nova versão do reComputer. Fique ligado!
 :::
 
@@ -860,10 +858,10 @@ Você verá a seguinte saída se o processo de gravação for bem-sucedido
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-O comando de gravação pode levar de 2 a 10 minutos para ser concluído.
+O comando de gravação pode levar de 2 a 10 minutos.
 :::
 
-**Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e finalize a configuração inicial:
+**Passo 4:** Conecte o J401 a um monitor usando o conector HDMI na placa e conclua a configuração inicial:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
@@ -878,24 +876,31 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 ## Uso das Interfaces
 
 :::info
-Consulte esta [página wiki](/pt-br/recomputer_j401b_interfaces_usage) para mais informações sobre o Uso das Interfaces.
+Consulte esta [página da wiki](/pt-br/recomputer_j401b_interfaces_usage) para mais informações sobre o Uso das Interfaces.
 :::
 
 ## Recursos
 
-- [reComputer J401B Datasheet](https://files.seeedstudio.com/wiki/reComputer/reComputer_J401B_datasheet_v1.pdf)
+- [Datasheet do reComputer J401B](https://files.seeedstudio.com/wiki/reComputer/reComputer_J401B_datasheet_v1.pdf)
 - [Esquemático do reComputer J401B](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_CarrierBoard_SCH_V1.0.pdf)
 - [Esquemáticos da placa LTE](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_LTE_SCH_V1.0.pdf)
-- [Catálogo Seeed Jetson Serials](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Casos de Sucesso de Edge AI da Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Comparação das Séries Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Catálogo da linha Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Casos de sucesso de Edge AI da Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Comparação da linha Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Página única dos dispositivos Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
-- [Exemplos Jetson](https://github.com/Seeed-Projects/jetson-examples)
-- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+- [Exemplos para Jetson](https://github.com/Seeed-Projects/jetson-examples)
+- [reComputer-Jetson-para-Iniciantes](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
 ## Suporte Técnico & Discussão de Produtos
 
-Agradecemos por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

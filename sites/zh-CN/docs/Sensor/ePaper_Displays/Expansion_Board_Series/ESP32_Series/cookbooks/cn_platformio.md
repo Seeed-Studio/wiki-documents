@@ -1,8 +1,8 @@
 ---
-description: 针对 XIAO ePaper Driver Board（EE0x）系列的 PlatformIO 使用手册——硬件概览、项目初始化、库配置，以及在 ESP32-S3 上的端到端编程。文中以 EE04 为示例；EE02 / EE03 / EE05 共享相同的工作流程。
+description: 适用于 XIAO ePaper Driver Board（EE0x）系列的 PlatformIO 使用手册——硬件概览、项目初始化、库配置，以及在 ESP32-S3 上的端到端编程。文中以 EE04 为示例；EE02 / EE03 / EE05 共享相同的工作流程。
 title: PlatformIO 使用手册
 keywords:
-  - 电子纸显示屏
+  - ePaper 显示屏
   - PlatformIO
   - EE02
   - EE03
@@ -19,18 +19,19 @@ last_update:
   author: Zeller
 createdAt: '2025-10-09'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/cn/ee04_with_platformio/
 ---
 
-# PlatformIO 使用手册：XIAO ePaper Driver Boards（EE0x）
+# PlatformIO 使用手册：XIAO ePaper Driver Board（EE0x）
 
 :::tip 本手册覆盖整个 EE0x 系列
-适用于 **EE02 / EE03 / EE04 / EE05**。由于这四块板都基于相同的 XIAO ESP32-S3，并使用相同的 `Seeed_GFX` 驱动链路，因此项目配置、库列表和代码模式完全一致；它们之间唯一的区别，是你在 [Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) 中为 `driver.h` 选择的 `BOARD_SCREEN_COMBO` 值。
+适用于 **EE02 / EE03 / EE04 / EE05**。由于这四块板都基于相同的 XIAO ESP32-S3，并使用相同的 `Seeed_GFX` 驱动流水线，因此项目配置、库列表和代码模式完全一致；它们之间唯一的差别，是你在 `driver.h` 的[配置工具](https://seeed-studio.github.io/Seeed_GFX/)中选择的 `BOARD_SCREEN_COMBO` 值。
 
-**示例工程：EE04 + 7.5 英寸 800×480 单色电子纸屏。** 在 `driver.h` 中替换为你自己的板卡 + 屏幕组合，其余工作流程（按键 GPIO、电池 ADC、仪表盘 UI、按键驱动的页面切换）都可以直接沿用。
+**示例工程：EE04 + 7.5" 800×480 单色 ePaper 屏幕。** 你只需在 `driver.h` 中替换为自己的板卡 + 屏幕组合，其余工作流程（按键 GPIO、电池 ADC、仪表盘 UI、按键驱动的页面切换）都可以直接沿用。
 :::
 
 :::note 想用 Arduino 吗？
-本手册**专门面向 PlatformIO**。如果你更倾向于使用 **Arduino IDE**（这是我们电子纸产品线更常见的路径），请参考 **[Work with Arduino](/cn/epaper_work_with_arduino)** 获取平台级指南，以及 [reTerminal E 系列 Arduino 使用手册](/cn/reterminal_e10xx_with_arduino) 获取同样适用于 EE0x 板卡的硬件级示例（Configuration Tool 会生成正确的 `driver.h`）。
+本手册**专门面向 PlatformIO**。如果你更倾向于使用 **Arduino IDE**（这是我们 ePaper 产品线更常见的路径），请参考 **[使用 Arduino](/cn/epaper_work_with_arduino)** 获取平台级指南，参考 [reTerminal E 系列 — ePaper 显示屏使用手册](/cn/reterminal_e10xx_with_arduino) 获取显示渲染示例，以及 [reTerminal E 系列 — 板载外设使用手册](/cn/reterminal_e10xx_with_arduino_peripherals) 获取硬件级示例（LED、蜂鸣器、按键、SHT4x、电池、microSD），这些示例同样适用于 EE0x 板卡。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
@@ -39,16 +40,16 @@ updatedAt: '2026-04-28'
 
 PlatformIO 是一个功能强大且高度可扩展的嵌入式系统开发生态。它无缝集成了对大量开发板和微控制器的支持，提供了极高的灵活性。PlatformIO 的突出优势在于其卓越的可扩展性：即使你的特定开发板未被原生支持，也可以通过其架构轻松定义自定义开发板。
 
-更重要的是，PlatformIO 为熟悉 Arduino 的开发者架起了桥梁，只需包含相关库，就可以编译和部署 Arduino 风格的代码。
+更重要的是，PlatformIO 为熟悉 Arduino 的开发者架起了桥梁，只需引入相关库，就可以编译和部署 Arduino 风格的代码。
 
 ### 硬件准备
 
-你需要准备一块 XIAO ePaper Display Board EE04，以及一块受支持尺寸的屏幕。本教程中使用的是一块 24 针 800×480 7.5 英寸电子墨水屏作为示例。
+你需要准备一块 XIAO ePaper Display Board EE04，以及一块支持尺寸范围内的屏幕。本教程中使用的是一块 24 针接口的 800×480 7.5 英寸墨水屏作为示例。
 <div class="table-center">
 <table align="center">
     <tr>
         <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
-        <th>7.5" 单色电子墨水屏</th>
+        <th>7.5" 单色 eInk</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -96,16 +97,16 @@ PlatformIO 是一个功能强大且高度可扩展的嵌入式系统开发生态
 ### 添加 Seeed GFX 库
 
 :::tip
-该库与 TFT 库具有相同的功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同的功能，但与其不兼容。如果你已经安装了 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
-我们将使用 Seeed_GFX 库，它为多种 Seeed Studio 显示设备提供了完整的支持。
+我们将使用 Seeed_GFX 库，它为多种 Seeed Studio 显示设备提供了完整支持。
 
 **步骤 1.** 从 GitHub 下载 Seeed_GFX 库：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -115,9 +116,9 @@ PlatformIO 是一个功能强大且高度可扩展的嵌入式系统开发生态
 
 **步骤 3.** 添加 `driver.h` 文件
 
-[Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
+[Seeed GFX 配置工具](https://seeed-studio.github.io/Seeed_GFX/)
 
-- 在工具页面中，选择你所使用的屏幕规格。这里选择的是 7.5 英寸单色电子纸屏。
+- 在工具页面中，选择你正在使用的屏幕规格。这里选择的是 7.5 英寸单色电子纸屏幕。
 - 驱动板选择 XIAO ePaper Display Board EE04，然后会生成对应的驱动代码。
 
 ```cpp
@@ -288,12 +289,12 @@ void loop() {
 - **核心函数解析**
 
 1. **`pinMode(pin, mode)`**  
-   - 作用：配置引脚的工作模式。  
-   - 这里使用 `INPUT_PULLUP` 模式以启用内部上拉电阻。这样在按键未按下时，引脚默认输出高电平（HIGH），按键按下（接地）时输出低电平（LOW）。
+   - 作用：配置引脚模式。  
+   - 这里使用 `INPUT_PULLUP` 模式以启用内部上拉电阻。这样在按键未按下时，引脚默认输出高电平（HIGH），按键按下（与地相连）时输出低电平（LOW）。
 
 2. **`digitalRead(pin)`**  
    - 作用：读取指定引脚的电平状态（HIGH 或 LOW）。  
-   - 在循环中使用它实时获取按键当前状态，以判断按键是否被触发。
+   - 在循环中使用它实时获取按键当前状态，以便判断按键是否被触发。
 
 3. **`Serial.begin(baud)`** 和 **`Serial.println()`**  
    - 前者用于初始化串口通信（波特率为 115200），后者用于向串口输出文本信息，用来在监视器中显示按键状态。
@@ -324,7 +325,7 @@ void loop() {
 
 ### 电池电压
 
-- XIAO ePaper Display Board EE04 使用 3.7V - 4.2V 锂电池供电。此外，还提供了一个 ADC 接口，方便你测量电压并实时监测电池电压。
+- XIAO ePaper Display Board EE04 使用 3.7V - 4.2V 锂电池供电。此外，它还提供了一个 ADC 接口，方便你测量电压并实时监测电池电压。
 - ADC 测量引脚为 `A0 (GPIO1)`，ADC 使能引脚为 `D5 (GPIO_6)`。
 
 连接：
@@ -383,8 +384,8 @@ void loop() {
 
 - 主要功能：
 
-  - **电池电压采集**：通过 ADC 引脚读取分压后的电池电压（电池电压可能高于 Arduino 的 ADC 参考电压，因此需要先进行分压）。
-  - **精度优化**：通过多次采样取平均值，降低电路噪声干扰。
+  - **电池电压采集**：通过 ADC 引脚读取分压后的电池电压（电池电压可能超过 Arduino 的 ADC 参考电压，因此需要先进行分压）。
+  - **精度优化**：通过多次采样取平均值来减小电路噪声干扰。
   - **电压换算**：将 ADC 的数字信号转换为实际电池电压（考虑分压比和参考电压）。
   - **串口输出**：周期性地通过串口打印测得电压，方便外部设备（如电脑）查看。
 
@@ -411,7 +412,7 @@ void loop() {
 
     - **作用**：读取 ADC 信号，对结果进行优化，并换算为实际电压。
     - **关键操作**：
-      - **多次取样平均**：读取 ADC 10 次，累加后取平均值（降低噪声）。
+      - **多次平均采样**：读取 ADC 10 次，累加后取平均值（降低噪声）。
       - `analogRead(BATTERY_ADC)`：从 A0 引脚读取模拟电压（返回 0~4095）。
       - `delay(2)`：两次采样之间间隔 2ms，以提高稳定性。
       - **电压计算**：使用公式 `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` 得到真实电池电压。
@@ -423,7 +424,7 @@ void loop() {
 
 ## UI 设计
 
-EE04 可以让你进行各种创意设计，例如仪表盘和图像显示。结合按键使用，还可以实现多页面之间的切换。下面是一个仪表盘示例。
+EE04 可以帮助你实现各种创意设计，例如仪表盘和图像显示。配合按键使用，可以实现多页面之间的切换。下面是一个仪表盘示例。
 
 :::tip
 在本示例中，仪表盘的绘制操作是基于 LVGL 库完成的。
@@ -437,7 +438,7 @@ LVGL 官方文档：[LVGL docs](https://docs.lvgl.io/master/examples.html#get-st
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_1.png" style={{width:800, height:'auto'}}/></div>
 
-- 在 **lib** 目录下
+- 在 **lib** 目录中
   - 创建 **dashboard** 文件夹，然后创建 `dashboard_ui.cpp` 和 `dashboard_ui.h` 文件。这些文件主要用于存放基于 LGVL 的绘图代码。
   - 创建 **e1001_display** 文件夹，并添加屏幕驱动文件 `e1001_display.c` 和 `e1001_display.h`
   - 创建 **lvgl_conf** 文件夹，并添加 LVGL 的配置文件 `lv_conf.h`。

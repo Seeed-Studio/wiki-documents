@@ -1,56 +1,61 @@
 ---
-description: Referencia completa de la API para el movimiento de Reachy Mini, incluidas las clases base, movimientos goto y movimientos grabados.
-title: Referencia de la API de Movimiento
+description: Referencia de la API de movimiento para Reachy Mini que cubre las clases base de movimiento, movimientos goto y movimientos grabados.
+title: API de movimiento
 slug: /reachymini_api_motion
 keywords:
+  - movimiento
   - api
-  - motion
-  - moves
   - goto
-  - interpolation
-  - recording
-  - playback
+  - movimientos grabados
+  - movimiento
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_api_motion/
 ---
+
 # Movimiento
 
 ## Clases base
 
 ### `reachy_mini.motion.move.Move`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/move.py#L11)**
-
-Clase base abstracta para definir un movimiento en el robot `ReachyMini`.
+Clase base para todos los tipos de movimiento en el sistema de movimiento de Reachy Mini.
 
 ### Métodos
 
-#### `evaluate`
+#### `goto_target`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/move.py#L25)**
-
-Evalúa el movimiento en el tiempo t, normalmente llamada a alta frecuencia (p. ej. 100Hz).
+Ir a una pose objetivo utilizando interpolación en el espacio de tareas.
 
 **Parámetros:**
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `t` | `float` | El tiempo en el que se evalúa el movimiento (en segundos). Siempre estará entre 0 y la duración. |
+| `head` | `Optional[np.ndarray]` | Matriz de pose 4x4 que representa la pose objetivo de la cabeza. |
+| `antennas` | `Optional[Union[np.ndarray, List[float]]]` | Arreglo 1D con dos elementos que representan los ángulos de las antenas en radianes. |
+| `duration` | `float` | Duración del movimiento en segundos. |
+| `method` | `InterpolationTechnique` | Método de interpolación a utilizar ("linear", "minjerk", "ease_in_out", "cartoon"). |
+| `body_yaw` | `float \| None` | Ángulo de guiñada del cuerpo en radianes. |
 
-**Devuelve:**
+---
+
+#### `set_target`
+
+Establece la pose objetivo de la cabeza y/o la posición objetivo de las antenas (control en tiempo real).
+
+**Parámetros:**
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `head` | - | La posición de la cabeza (matriz homogénea 4x4). |
-| `antennas` | - | Las posiciones de las antenas (rad). |
-| `body_yaw` | - | El ángulo de guiñada del cuerpo (rad). |
+| `head` | `Optional[np.ndarray]` | Matriz de pose 4x4 que representa la pose de la cabeza. |
+| `antennas` | `Optional[Union[np.ndarray, List[float]]]` | Arreglo 1D con dos elementos que representan los ángulos de las antenas en radianes. |
+| `body_yaw` | `Optional[float]` | Ángulo de guiñada del cuerpo en radianes. |
 
 ---
 
@@ -58,17 +63,20 @@ Evalúa el movimiento en el tiempo t, normalmente llamada a alta frecuencia (p. 
 
 ### `reachy_mini.motion.goto.GotoMove`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/goto.py#L15)**
-
-Un movimiento goto hacia una pose objetivo de la cabeza y/o una posición de antenas.
+Clase GotoMove para movimientos que utilizan interpolación en el espacio de tareas.
 
 ### Métodos
 
-#### `evaluate`
+#### `play`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/goto.py#L51)**
+Reproduce el movimiento goto con la duración y el método de interpolación especificados.
 
-Evalúa el movimiento goto en el tiempo t.
+**Parámetros:**
+
+| Nombre | Tipo | Descripción |
+|------|------|-------------|
+| `duration` | `float` | Duración del movimiento en segundos. |
+| `method` | `str` | Método de interpolación a utilizar. |
 
 ---
 
@@ -76,70 +84,66 @@ Evalúa el movimiento goto en el tiempo t.
 
 ### `reachy_mini.motion.recorded_move.RecordedMove`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L70)**
-
-Representa un movimiento grabado.
+Un único movimiento grabado que se puede reproducir en el robot.
 
 ### Métodos
 
 #### `evaluate`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L98)**
-
-Evalúa el movimiento en el tiempo t.
-
-**Devuelve:**
-
-| Nombre | Tipo | Descripción |
-|------|------|-------------|
-| `head` | - | La posición de la cabeza (matriz homogénea 4x4). |
-| `antennas` | - | Las posiciones de las antenas (rad). |
-| `body_yaw` | - | El ángulo de guiñada del cuerpo (rad). |
-
----
-
-### `reachy_mini.motion.recorded_move.RecordedMoves`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L156)**
-
-Carga una biblioteca de movimientos grabados desde un conjunto de datos de HuggingFace.
-
-:::info
-
-Utiliza solo la caché local para evitar llamadas de red bloqueantes durante la reproducción.
-
-El conjunto de datos debe descargarse previamente al inicio del daemon mediante `preload_default_datasets()`.
-
-Si no está en caché, recurre a la descarga por red (lo que puede causar retrasos).
-
-:::
-
-### Métodos
-
-#### `get`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L209)**
-
-Obtiene un movimiento grabado por nombre.
+Evalúa el movimiento grabado en un momento específico.
 
 **Parámetros:**
 
 | Nombre | Tipo | Descripción |
 |------|------|-------------|
-| `move_name` | `str` | El nombre del movimiento que se va a recuperar. |
+| `t` | `float` | Tiempo en segundos en el que se evalúa el movimiento. |
+
+**Devuelve:**
+
+`Dict` — Diccionario que contiene la pose de la cabeza, las posiciones de las antenas y la guiñada del cuerpo en el tiempo t.
 
 ---
 
-#### `list_moves`
+#### `play`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L218)**
+Reproduce el movimiento grabado en el robot.
 
-Enumera todos los movimientos en la biblioteca cargada.
+**Parámetros:**
+
+| Nombre | Tipo | Descripción |
+|------|------|-------------|
+| `play_frequency` | `float` | Frecuencia a la que se evalúa el movimiento (en Hz). |
+| `initial_goto_duration` | `float` | Duración del goto inicial hasta la posición de inicio (en segundos). |
+| `sound` | `bool` | Indica si se debe reproducir el sonido asociado. |
 
 ---
 
-#### `process`
+### `reachy_mini.motion.recorded_move.RecordedMoves`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/motion/recorded_move.py#L189)**
+Colección de movimientos grabados, normalmente cargados desde un conjunto de datos de HuggingFace.
 
-Rellena los movimientos y sonidos grabados.
+### Métodos
+
+#### `get`
+
+Obtiene un movimiento grabado específico por nombre.
+
+**Parámetros:**
+
+| Nombre | Tipo | Descripción |
+|------|------|-------------|
+| `name` | `str` | Nombre del movimiento grabado que se desea recuperar. |
+
+**Devuelve:**
+
+`RecordedMove` — El movimiento grabado solicitado.
+
+---
+
+#### `list`
+
+Enumera todos los nombres de movimientos grabados disponibles.
+
+**Devuelve:**
+
+`List[str]` — Lista de nombres de movimientos disponibles.

@@ -2070,6 +2070,7 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
               ],
             },
             {
@@ -3817,13 +3818,6 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics J50 Mini',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50_Mini/pt_reComputer_Robotics_J50_Mini_Getting_Started',
-                  ],
-                },
-                {
-                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/pt_recomputer_j401b_getting_start',
@@ -4325,6 +4319,21 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/pt_intro',
               label: 'Introdução',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_ReachyMini_Getting_Started',
+              label: 'Primeiros passos',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_AGENTS',
+              label: 'Guia do agente de IA',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_vibe-code-with-your-agent',
+              label: 'Programe com seu agente',
             },
             {
               type: 'category',

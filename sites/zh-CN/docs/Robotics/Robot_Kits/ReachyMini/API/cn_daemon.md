@@ -1,6 +1,6 @@
 ---
-description: Reachy Mini守护进程API参考，涵盖核心守护进程类、机器人应用锁、后端类和所有路由器端点。
-title: 守护进程API
+description: Reachy Mini 守护进程 API 参考，涵盖核心守护进程类、机器人应用锁、后端类及所有路由端点。
+title: 守护进程 API
 slug: /reachymini_api_daemon
 keywords:
   - daemon
@@ -24,251 +24,1401 @@ url: https://wiki.seeedstudio.com/reachymini_api_daemon/
 
 ## 核心守护进程类
 
-[[autodoc]] reachy_mini.daemon.daemon.Daemon
+### `reachy_mini.daemon.daemon.Daemon`
 
-[[autodoc]] reachy_mini.daemon.daemon.DaemonState
+用于控制 Reachy Mini 机器人的主守护进程类。
 
-[[autodoc]] reachy_mini.daemon.daemon.DaemonStatus
+### 方法
+
+#### `start`
+
+启动守护进程及其所有组件。
+
+---
+
+#### `stop`
+
+停止守护进程及其所有组件。
+
+---
+
+#### `restart`
+
+重启守护进程。
+
+---
+
+#### `get_status`
+
+获取守护进程的当前状态。
+
+**返回：**
+
+`DaemonStatus` — 守护进程的当前状态。
+
+---
+
+#### `is_running`
+
+检查守护进程是否正在运行。
+
+**返回：**
+
+`bool` — 如果守护进程正在运行则为 True。
+
+---
+
+### `reachy_mini.daemon.daemon.DaemonState`
+
+表示守护进程状态的枚举。
+
+### 值
+
+| 值 | 描述 |
+|-------|-------------|
+| `STOPPED` | 守护进程未运行。 |
+| `STARTING` | 守护进程正在启动。 |
+| `RUNNING` | 守护进程正常运行。 |
+| `STOPPING` | 守护进程正在关闭。 |
+| `ERROR` | 守护进程遇到错误。 |
+
+---
+
+### `reachy_mini.daemon.daemon.DaemonStatus`
+
+包含守护进程状态和信息的状态对象。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `state` | `DaemonState` | 守护进程的当前状态。 |
+| `uptime` | `float` | 守护进程启动后的时间（秒）。 |
+| `version` | `str` | 守护进程版本字符串。 |
+| `robot_connected` | `bool` | 机器人是否已连接。 |
+
+---
 
 ## 机器人应用锁
 
-机器人*应用锁*是守护进程关于当前持有机器人的托管应用的唯一真实来源。它序列化两个托管入口点——由:class:`AppManager`启动的本地Python应用和通过中央信号继电器路由的远程WebRTC客户端。
+机器人 *应用锁* 是守护进程关于当前持有机器人的托管应用的唯一真实来源。它将两个托管入口点序列化——由 :class:`AppManager` 启动的本地 Python 应用和通过中央信令中继路由的远程 WebRTC 客户端。
 
-它**不会**阻塞每个可以驱动机器人的代码路径：直接通过LAN/WebSocket与守护进程通信的SDK客户端会绕过它。名称特意使用"app"来反映这个较窄的范围。
+它**不会**对每个可以驱动机器人的代码路径进行门控：直接通过 LAN/WebSocket 与守护进程通信的 SDK 客户端会绕过它。名称中使用"app"是特意为了反映这个较窄的范围。
 
 ### 并发模型
 
-两个托管入口点可以打开与机器人的会话：
+两个托管入口点可以与机器人建立会话：
 
-1. **本地路径** — 通过``POST /api/apps/start``启动的Python应用。作为守护进程的子进程运行，直接与后端通信。
-2. **远程路径** — 通过HuggingFace中央信号服务器认证的浏览器客户端，通过WebRTC路由到机器人。由``CentralSignalingRelay``在自己的线程中处理。
+1. **本地路径** — 通过 ``POST /api/apps/start`` 启动的 Python 应用。作为守护进程的子进程运行，直接与后端通信。
+2. **远程路径** — 通过 HuggingFace 中央信令服务器进行身份验证的浏览器客户端，通过 WebRTC 路由到机器人。由 ``CentralSignalingRelay`` 在自己的线程中处理。
 
-如果没有协调，两个路径可以同时获取机器人并在电机命令、摄像头和音频上产生竞争。:class:`RobotAppLock`通过三种互斥状态来防止这种情况：
+如果没有协调，两个路径可以同时获取机器人并争夺电机命令、摄像头和音频。:class:`RobotAppLock` 通过三种互斥状态来防止这种情况：
 
 - ``free`` — 没有托管应用持有该槽。
-- ``local_app(name)`` — 一个Python应用正在运行。
-- ``remote_session(name)`` — 远程WebRTC客户端已连接。
+- ``local_app(name)`` — 一个 Python 应用正在运行。
+- ``remote_session(name)`` — 一个远程 WebRTC 客户端已连接。
 
 **获取规则：**
 
-- 本地路径使用:meth:`RobotAppLock.acquire_local_evicting_remote`。如果有远程会话处于活动状态，锁会原子地转换到``local_app``，并要求继电器向远程对等方发送``endSession``，并向本地GStreamer发送，以使现有的WebRTC连接干净地断开。如果另一个Python应用已经持有锁，获取会抛出``RuntimeError``。
-- 远程路径使用:meth:`RobotAppLock.try_acquire_remote`。当锁不是``free``时，此操作会快速失败（返回``False``）——传入的远程会话会被拒绝，并显示``{"type": "endSession", "reason": "robot_busy_local_app"}``。
+- 本地路径使用 :meth:`RobotAppLock.acquire_local_evicting_remote`。如果有远程会话活跃，锁会原子性地转换为 ``local_app``，并且中继会被要求向远程对等方发送 ``endSession``，同时向本地 GStreamer 发送，以便现有的 WebRTC 连接能够干净地拆除。如果另一个 Python 应用已经持有锁，获取操作会抛出 ``RuntimeError``。
+- 远程路径使用 :meth:`RobotAppLock.try_acquire_remote`。每当锁不是 ``free`` 时，它会快速失败（返回 ``False``）—— 传入的远程会话会被拒绝，并返回 ``{"type": "endSession", "reason": "robot_busy_local_app"}``。
 
 **释放规则：**
 
-- :meth:`RobotAppLock.release_local`从子进程监视器的``finally``块调用，因此干净的退出、崩溃、``SIGKILL``、OOM和任务取消都会释放锁。
-- :meth:`RobotAppLock.release_remote`从每个``endSession``处理程序（两个方向）、``_close_connections``在断开/重连时以及继电器的``stop()``调用。所有释放调用都是幂等的——如果锁不在相应状态，它们会直接返回。
+- :meth:`RobotAppLock.release_local` 从子进程监视器的 ``finally`` 块中调用，因此干净的退出、崩溃、``SIGKILL``、OOM 和任务取消都会释放锁。
+- :meth:`RobotAppLock.release_remote` 从每个 ``endSession`` 处理程序（双向）、从 ``_close_connections`` 在断开/重新连接时、以及从中继的 ``stop()`` 中调用。所有释放调用都是幂等的——如果锁不在相应状态，它们会静默忽略。
 
-**跨线程注意事项：** 锁状态由``threading.Lock``保护。驱逐回调由继电器注册，由AppManager从主asyncio循环调用，但将实际的会话拆除分派到继电器自己的事件循环上，通过``asyncio.run_coroutine_threadsafe``。AppManager在生成Python子进程之前等待拆除完成，因此远程对等方在其本地应用打开它们之前已经释放了其媒体句柄。
+**跨线程注意事项：** 锁状态由 ``threading.Lock`` 保护。驱逐回调由中继注册并由 AppManager 从主 asyncio 循环调用，但通过 ``asyncio.run_coroutine_threadsafe`` 将实际的会话拆除分派到中继自己的事件循环。AppManager 在生成 Python 子进程之前等待拆除完成，因此远程对等方在本地应用打开其媒体句柄之前已释放了其媒体句柄。
 
-### API参考
+### API 参考
 
-[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLock
+### `reachy_mini.daemon.robot_app_lock.RobotAppLock`
 
-[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLockState
+用于管理机器人访问的机器人应用锁。
 
-[[autodoc]] reachy_mini.daemon.robot_app_lock.RobotAppLockStatus
+### 方法
+
+#### `acquire_local_evicting_remote`
+
+为本地 Python 应用获取锁，驱逐任何远程会话。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app_name` | `str` | 获取锁的应用名称。 |
+
+**返回：**
+
+`bool` — 如果锁成功获取则为 True。
+
+---
+
+#### `try_acquire_remote`
+
+尝试为远程 WebRTC 会话获取锁。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `session_name` | `str` | 获取锁的会话名称。 |
+
+**返回：**
+
+`bool` — 如果锁成功获取则为 True。
+
+---
+
+#### `release_local`
+
+从本地 Python 应用释放锁。
+
+---
+
+#### `release_remote`
+
+从远程会话释放锁。
+
+---
+
+#### `get_status`
+
+获取机器人应用锁的当前状态。
+
+**返回：**
+
+`RobotAppLockStatus` — 锁的当前状态。
+
+---
+
+#### `is_free`
+
+检查锁是否空闲。
+
+**返回：**
+
+`bool` — 如果没有应用持有锁则为 True。
+
+---
+
+#### `is_local_app`
+
+检查本地应用是否当前持有锁。
+
+**返回：**
+
+`bool` — 如果本地应用持有锁则为 True。
+
+---
+
+#### `is_remote_session`
+
+检查远程会话是否当前持有锁。
+
+**返回：**
+
+`bool` — 如果远程会话持有锁则为 True。
+
+---
+
+### `reachy_mini.daemon.robot_app_lock.RobotAppLockState`
+
+表示机器人应用锁状态的枚举。
+
+### 值
+
+| 值 | 描述 |
+|-------|-------------|
+| `free` | 没有托管应用持有该槽。 |
+| `local_app` | 一个 Python 应用正在运行。 |
+| `remote_session` | 一个远程 WebRTC 客户端已连接。 |
+
+---
+
+### `reachy_mini.daemon.robot_app_lock.RobotAppLockStatus`
+
+包含机器人应用锁状态和信息的状态对象。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `state` | `RobotAppLockState` | 锁的当前状态。 |
+| `holder_name` | `str \| None` | 当前持有者的名称（如果有）。 |
+| `holder_type` | `str \| None` | 持有者类型（"local_app" 或 "remote_session"）。 |
+
+---
 
 ## 后端类
 
 ### 抽象后端
 
-[[autodoc]] reachy_mini.daemon.backend.abstract.MotorControlMode
+### `reachy_mini.daemon.backend.abstract.MotorControlMode`
+
+表示电机控制模式的枚举。
+
+### 值
+
+| 值 | 描述 |
+|-------|-------------|
+| `enabled` | 电机已完全启用并响应命令。 |
+| `disabled` | 电机已禁用，不响应命令。 |
+| `gravity_compensation` | 电机处于重力补偿模式。 |
+
+---
 
 ### 机器人后端
 
-[[autodoc]] reachy_mini.daemon.backend.robot.RobotBackend
+### `reachy_mini.daemon.backend.robot.RobotBackend`
 
-[[autodoc]] reachy_mini.daemon.backend.robot.RobotBackendStatus
+用于控制实际物理机器人的后端。
 
-### MuJoCo后端
+### 方法
 
-[[autodoc]] reachy_mini.daemon.backend.mujoco.MujocoBackend
+#### `connect`
 
-[[autodoc]] reachy_mini.daemon.backend.mujoco.MujocoBackendStatus
+连接到机器人硬件。
 
-### Mockup仿真后端
+**参数：**
 
-[[autodoc]] reachy_mini.daemon.backend.mockup_sim.MockupSimBackend
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `port` | `str` | 要连接的串口。 |
 
-[[autodoc]] reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus
+---
+
+#### `disconnect`
+
+断开与机器人硬件的连接。
+
+---
+
+#### `get_motor_status`
+
+获取所有电机的状态。
+
+**返回：**
+
+`Dict` — 电机状态字典。
+
+---
+
+#### `set_motor_mode`
+
+设置电机的控制模式。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `mode` | `MotorControlMode` | 要设置的控制模式。 |
+
+---
+
+#### `send_position_command`
+
+向电机发送位置命令。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `positions` | `Dict` | 电机位置字典。 |
+
+---
+
+#### `get_joint_positions`
+
+从机器人获取当前关节位置。
+
+**返回：**
+
+`Dict` — 当前关节位置字典。
+
+---
+
+### `reachy_mini.daemon.backend.robot.RobotBackendStatus`
+
+包含机器人后端状态和信息的状态对象。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `connected` | `bool` | 后端是否已连接到机器人。 |
+| `motor_mode` | `MotorControlMode` | 当前电机控制模式。 |
+| `last_update` | `float` | 最后更新的时间戳。 |
+
+---
+
+### MuJoCo 后端
+
+### `reachy_mini.daemon.backend.mujoco.MujocoBackend`
+
+用于机器人 MuJoCo 仿真的后端。
+
+### 方法
+
+#### `load_model`
+
+加载 MuJoCo 机器人模型。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `model_path` | `str` | MuJoCo 模型文件的路径。 |
+
+---
+
+#### `step`
+
+步进仿真。
+
+---
+
+#### `get_state`
+
+获取当前仿真状态。
+
+**返回：**
+
+`Dict` — 仿真的当前状态。
+
+---
+
+#### `set_control`
+
+设置仿真的控制目标。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `targets` | `Dict` | 控制目标字典。 |
+
+---
+
+#### `reset`
+
+将仿真重置为初始状态。
+
+---
+
+### `reachy_mini.daemon.backend.mujoco.MujocoBackendStatus`
+
+包含 MuJoCo 后端状态和信息的状态对象。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `model_loaded` | `bool` | 是否已加载模型。 |
+| `simulation_time` | `float` | 当前仿真时间。 |
+| `real_time_factor` | `float` | 仿真的实时因子。 |
+
+---
+
+### 模拟仿真后端
+
+### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackend`
+
+用于模拟仿真的后端（无实际物理）。
+
+### 方法
+
+#### `start`
+
+启动模拟仿真。
+
+---
+
+#### `stop`
+
+停止模拟仿真。
+
+---
+
+#### `get_state`
+
+获取当前模拟状态。
+
+**返回：**
+
+`Dict` — 模拟的当前状态。
+
+---
+
+#### `set_positions`
+
+设置模拟的目标位置。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `positions` | `Dict` | 目标位置字典。 |
+
+---
+
+### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus`
+
+包含模拟仿真状态和信息的状态对象。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `running` | `bool` | 模拟是否正在运行。 |
+| `positions` | `Dict` | 当前目标位置。 |
+
+---
 
 ## 守护进程工具
 
-[[autodoc]] reachy_mini.daemon.utils.find_serial_port
+### `reachy_mini.daemon.utils.find_serial_port`
 
-[[autodoc]] reachy_mini.daemon.utils.get_ip_address
+查找连接到 Reachy Mini 机器人的串口。
+
+**返回：**
+
+`str` — 串口路径，如果未找到则为 None。
+
+---
+
+### `reachy_mini.daemon.utils.get_ip_address`
+
+获取当前机器的 IP 地址。
+
+**返回：**
+
+`str` — IP 地址字符串。
+
+---
 
 ## 应用
 
 ### 模型
 
-[[autodoc]] reachy_mini.daemon.app.models.Matrix4x4Pose
+### `reachy_mini.daemon.app.models.Matrix4x4Pose`
 
-[[autodoc]] reachy_mini.daemon.app.models.XYZRPYPose
+用于机器人定位的 4x4 矩阵姿态表示。
 
-[[autodoc]] reachy_mini.daemon.app.models.FullBodyTarget
+### 属性
 
-[[autodoc]] reachy_mini.daemon.app.models.DoAInfo
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `matrix` | `np.ndarray` | 4x4 变换矩阵。 |
+| `translation` | `np.ndarray` | 平移向量 (x, y, z)。 |
+| `rotation` | `np.ndarray` | 3x3 旋转矩阵。 |
 
-[[autodoc]] reachy_mini.daemon.app.models.FullState
+---
+
+### `reachy_mini.daemon.app.models.XYZRPYPose`
+
+使用 XYZ+RPY（位置和欧拉角）的姿态表示。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `x` | `float` | X 位置（米）。 |
+| `y` | `float` | Y 位置（米）。 |
+| `z` | `float` | Z 位置（米）。 |
+| `roll` | `float` | 横滚角（弧度）。 |
+| `pitch` | `float` | 俯仰角（弧度）。 |
+| `yaw` | `float` | 偏航角（弧度）。 |
+
+---
+
+### `reachy_mini.daemon.app.models.FullBodyTarget`
+
+包括头部和天线的完整身体目标姿态。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `head` | `Matrix4x4Pose \| None` | 目标头部姿态。 |
+| `antennas` | `List[float] \| None` | 目标天线位置。 |
+| `body_yaw` | `float \| None` | 目标身体偏航角。 |
+
+---
+
+### `reachy_mini.daemon.app.models.DoAInfo`
+
+音频的到达方向信息。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `doa_angle` | `float` | 到达方向角度（度）。 |
+| `energy` | `float` | 音频能量级别。 |
+
+---
+
+### `reachy_mini.daemon.app.models.FullState`
+
+包含所有传感器和电机的机器人完整状态。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `joint_positions` | `Dict` | 当前关节位置。 |
+| `head_pose` | `Matrix4x4Pose` | 当前头部姿态。 |
+| `antennas` | `List[float]` | 当前天线位置。 |
+| `body_yaw` | `float` | 当前身体偏航角。 |
+| `motor_mode` | `MotorControlMode` | 当前电机控制模式。 |
+
+---
 
 ### 依赖项
 
-[[autodoc]] reachy_mini.daemon.app.dependencies.get_daemon
+### `reachy_mini.daemon.app.dependencies.get_daemon`
 
-[[autodoc]] reachy_mini.daemon.app.dependencies.get_backend
+守护进程实例的依赖提供器。
 
-[[autodoc]] reachy_mini.daemon.app.dependencies.get_app_manager
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.dependencies.ws_get_backend
+`Daemon` — 单例守护进程实例。
+
+---
+
+### `reachy_mini.daemon.app.dependencies.get_backend`
+
+当前后端的依赖提供器。
+
+**返回：**
+
+`RobotBackend \| MujocoBackend \| MockupSimBackend` — 当前后端实例。
+
+---
+
+### `reachy_mini.daemon.app.dependencies.get_app_manager`
+
+AppManager 实例的依赖提供器。
+
+**返回：**
+
+`AppManager` — AppManager 实例。
+
+---
+
+### `reachy_mini.daemon.app.dependencies.ws_get_backend`
+
+后端的 WebSocket 依赖提供器。
+
+**返回：**
+
+`RobotBackend \| MujocoBackend \| MockupSimBackend` — 当前后端实例。
+
+---
 
 ### 作业
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobStatus
+### `reachy_mini.daemon.app.bg_job_register.JobStatus`
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobInfo
+表示后台作业状态的枚举。
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.JobHandler
+### 值
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.run_command
+| 值 | 描述 |
+|-------|-------------|
+| `PENDING` | 作业正在等待启动。 |
+| `RUNNING` | 作业正在执行。 |
+| `COMPLETED` | 作业成功完成。 |
+| `FAILED` | 作业失败并出错。 |
+| `CANCELLED` | 作业已被取消。 |
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.get_info
+---
 
-[[autodoc]] reachy_mini.daemon.app.bg_job_register.ws_poll_info
+### `reachy_mini.daemon.app.bg_job_register.JobInfo`
+
+关于后台作业的信息。
+
+### 属性
+
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `id` | `str` | 唯一作业标识符。 |
+| `name` | `str` | 作业名称。 |
+| `status` | `JobStatus` | 当前作业状态。 |
+| `created_at` | `float` | 作业创建时的时间戳。 |
+| `started_at` | `float \| None` | 作业启动时的时间戳。 |
+| `completed_at` | `float \| None` | 作业完成时的时间戳。 |
+| `error` | `str \| None` | 作业失败时的错误消息。 |
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.JobHandler`
+
+用于管理后台作业执行的处理程序。
+
+### 方法
+
+#### `start`
+
+启动作业处理程序。
+
+---
+
+#### `stop`
+
+停止作业处理程序。
+
+---
+
+#### `submit`
+
+提交新作业以执行。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `job_id` | `str` | 唯一作业标识符。 |
+| `func` | `Callable` | 要执行的函数。 |
+| `args` | `List` | 函数的位置参数。 |
+| `kwargs` | `Dict` | 函数的关键字参数。 |
+
+---
+
+#### `cancel`
+
+取消正在运行的作业。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `job_id` | `str` | 唯一作业标识符。 |
+
+---
+
+#### `get_status`
+
+获取作业的状态。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `job_id` | `str` | 唯一作业标识符。 |
+
+**返回：**
+
+`JobInfo` — 作业的当前状态。
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.run_command`
+
+作为后台作业运行 shell 命令。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `command` | `str` | 要执行的命令。 |
+| `job_id` | `str` | 唯一作业标识符。 |
+
+**返回：**
+
+`JobInfo` — 关于已启动作业的信息。
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.get_info`
+
+获取特定作业的信息。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `job_id` | `str` | 唯一作业标识符。 |
+
+**返回：**
+
+`JobInfo \| None` — 如果找到则返回作业信息。
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.ws_poll_info`
+
+用于轮询作业信息的 WebSocket 端点。
+
+---
 
 ### 主应用
 
-[[autodoc]] reachy_mini.daemon.app.main.Args
+### `reachy_mini.daemon.app.main.Args`
 
-[[autodoc]] reachy_mini.daemon.app.main.create_app
+守护进程应用的命令行参数。
 
-[[autodoc]] reachy_mini.daemon.app.main.run_app
+### 属性
 
-[[autodoc]] reachy_mini.daemon.app.main.main
+| 属性 | 类型 | 描述 |
+|----------|------|-------------|
+| `host` | `str` | 要绑定的主机（默认："0.0.0.0"）。 |
+| `port` | `int` | 要绑定的端口（默认：8000）。 |
+| `backend` | `str` | 要使用的后端类型（"robot"、"mujoco"、"mockup"）。 |
+| `debug` | `bool` | 启用调试模式。 |
 
-## 应用路由器
+---
 
-### 守护进程路由器
+### `reachy_mini.daemon.app.main.create_app`
 
-[[autodoc]] reachy_mini.daemon.app.routers.daemon.start_daemon
+创建 FastAPI 应用。
 
-[[autodoc]] reachy_mini.daemon.app.routers.daemon.stop_daemon
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.daemon.restart_daemon
+`FastAPI` — 配置好的 FastAPI 应用。
 
-[[autodoc]] reachy_mini.daemon.app.routers.daemon.get_daemon_status
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.daemon.get_robot_app_lock_status
+### `reachy_mini.daemon.app.main.run_app`
 
-### 状态路由器
+运行 FastAPI 应用。
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.get_head_pose
+**参数：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.get_body_yaw
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app` | `FastAPI` | 要运行的 FastAPI 应用。 |
+| `host` | `str` | 要绑定的主机。 |
+| `port` | `int` | 要绑定的端口。 |
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.get_antenna_joint_positions
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.get_doa
+### `reachy_mini.daemon.app.main.main`
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.get_full_state
+守护进程应用的主入口点。
 
-[[autodoc]] reachy_mini.daemon.app.routers.state.ws_full_state
+**参数：**
 
-### 电机路由器
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `args` | `Args` | 命令行参数。 |
 
-[[autodoc]] reachy_mini.daemon.app.routers.motors.get_motor_status
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.motors.set_motor_mode
+## 应用路由
 
-### 移动路由器
+### 守护进程路由
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.get_running_moves
+#### `reachy_mini.daemon.app.routers.daemon.start_daemon`
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.goto
+启动守护进程服务。
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.play_wake_up
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.play_goto_sleep
+`Dict` — 指示守护进程已启动的状态消息。
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.list_recorded_move_dataset
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.play_recorded_move_dataset
+#### `reachy_mini.daemon.app.routers.daemon.stop_daemon`
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.stop_move
+停止守护进程服务。
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.set_target
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.move.ws_move_updates
+`Dict` — 指示守护进程已停止的状态消息。
 
-### 应用路由器
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.list_available_apps
+#### `reachy_mini.daemon.app.routers.daemon.restart_daemon`
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.list_all_available_apps
+重启守护进程服务。
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.install_app
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.remove_app
+`Dict` — 指示守护进程已重启的状态消息。
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.job_status
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.ws_apps_manager
+#### `reachy_mini.daemon.app.routers.daemon.get_daemon_status`
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.start_app
+获取守护进程的当前状态。
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.restart_app
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.stop_app
+`DaemonStatus` — 当前守护进程状态。
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.current_app_status
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.apps.install_private_space
+#### `reachy_mini.daemon.app.routers.daemon.get_robot_app_lock_status`
 
-### 更新路由器
+获取机器人应用锁的当前状态。
 
-[[autodoc]] reachy_mini.daemon.app.routers.update.available
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.update.start_update
+`RobotAppLockStatus` — 当前机器人应用锁状态。
 
-[[autodoc]] reachy_mini.daemon.app.routers.update.get_update_info
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.update.websocket_logs
+### 状态路由
 
-### 缓存路由器
+#### `reachy_mini.daemon.app.routers.state.get_head_pose`
 
-[[autodoc]] reachy_mini.daemon.app.routers.cache.clear_huggingface_cache
+获取当前头部姿态。
 
-[[autodoc]] reachy_mini.daemon.app.routers.cache.reset_apps
+**返回：**
 
-### 运动学路由器
+`Matrix4x4Pose` — 当前头部姿态矩阵。
 
-[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_kinematics_info
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_urdf
+#### `reachy_mini.daemon.app.routers.state.get_body_yaw`
 
-[[autodoc]] reachy_mini.daemon.app.routers.kinematics.get_stl_file
+获取当前身体偏航角。
 
-### 音量路由器
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.volume.get_volume
+`float` — 当前偏航角（弧度）。
 
-[[autodoc]] reachy_mini.daemon.app.routers.volume.set_volume
+---
 
-[[autodoc]] reachy_mini.daemon.app.routers.volume.play_test_sound
+#### `reachy_mini.daemon.app.routers.state.get_antenna_joint_positions`
 
-[[autodoc]] reachy_mini.daemon.app.routers.volume.get_microphone_volume
+获取当前天线关节位置。
 
-[[autodoc]] reachy_mini.daemon.app.routers.volume.set_microphone_volume
+**返回：**
 
-### 日志路由器
+`List[float]` — 当前天线位置（弧度）。
 
-[[autodoc]] reachy_mini.daemon.app.routers.logs.websocket_daemon_logs
+---
 
-### HF认证路由器
+#### `reachy_mini.daemon.app.routers.state.get_doa`
 
-[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.save_token
+获取当前到达方向信息。
 
-[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.get_auth_status
+**返回：**
 
-[[autodoc]] reachy_mini.daemon.app.routers.hf_auth.delete_token
+`DoAInfo` — 当前 DOA 信息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.state.get_full_state`
+
+获取完整的机器人状态。
+
+**返回：**
+
+`FullState` — 完整的当前机器人状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.state.ws_full_state`
+
+用于流式传输完整机器人状态更新的 WebSocket 端点。
+
+---
+
+### 电机路由
+
+#### `reachy_mini.daemon.app.routers.motors.get_motor_status`
+
+获取所有电机的状态。
+
+**返回：**
+
+`Dict` — 包含位置、速度和扭矩的电机状态字典。
+
+---
+
+#### `reachy_mini.daemon.app.routers.motors.set_motor_mode`
+
+设置电机控制模式。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `mode` | `str` | 电机控制模式（"enabled"、"disabled"、"gravity_compensation"）。 |
+
+**返回：**
+
+`Dict` — 确认模式更改的状态消息。
+
+---
+
+### 移动路由
+
+#### `reachy_mini.daemon.app.routers.move.get_running_moves`
+
+获取当前正在运行的移动列表。
+
+**返回：**
+
+`List[Dict]` — 包含其 ID 和进度的运行中移动列表。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.goto`
+
+发送 goto 命令以移动机器人。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `head` | `List[List[float]]` | 4x4 头部姿态矩阵（16 个值）。 |
+| `antennas` | `List[float]` | 天线目标位置 [左, 右]（弧度）。 |
+| `body_yaw` | `float` | 身体偏航目标（弧度）。 |
+| `duration` | `float` | 移动持续时间（秒）。 |
+| `method` | `str` | 插值方法（"linear"、"minjerk"、"ease_in_out"、"cartoon"）。 |
+
+**返回：**
+
+`Dict` — 移动 ID 和状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.play_wake_up`
+
+播放唤醒动画以将机器人置于就绪状态。
+
+**返回：**
+
+`Dict` — 确认唤醒已开始的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.play_goto_sleep`
+
+播放进入睡眠动画以将机器人置于睡眠姿态。
+
+**返回：**
+
+`Dict` — 确认睡眠已开始的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.list_recorded_move_dataset`
+
+列出可用的录制移动数据集。
+
+**返回：**
+
+`List[str]` — 可用数据集名称列表。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.play_recorded_move_dataset`
+
+从数据集中播放录制移动。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `dataset` | `str` | 包含该移动的数据集名称。 |
+| `move_name` | `str` | 要播放的具体移动名称。 |
+| `initial_goto_duration` | `float` | 前往起始位置的初始 goto 持续时间。 |
+| `sound` | `bool` | 是否播放关联的声音。 |
+
+**返回：**
+
+`Dict` — 确认移动已开始的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.stop_move`
+
+停止当前正在运行的移动。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `move_id` | `str` | 要停止的移动的 ID。 |
+
+**返回：**
+
+`Dict` — 确认移动已停止的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.set_target`
+
+设置实时目标位置以进行连续控制。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `head` | `List[List[float]]` | 4x4 头部姿态矩阵（16 个值）。 |
+| `antennas` | `List[float]` | 天线目标位置 [左, 右]（弧度）。 |
+| `body_yaw` | `float` | 身体偏航目标（弧度）。 |
+
+**返回：**
+
+`Dict` — 确认目标已设置的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.move.ws_move_updates`
+
+用于流式传输移动更新的 WebSocket 端点。
+
+---
+
+### 应用路由
+
+#### `reachy_mini.daemon.app.routers.apps.list_available_apps`
+
+列出可供安装的应用。
+
+**返回：**
+
+`List[Dict]` — 包含元数据的可用应用列表。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.list_all_available_apps`
+
+列出所有应用，包括已安装和可用的。
+
+**返回：**
+
+`List[Dict]` — 所有应用的完整列表。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.install_app`
+
+从源安装应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `source` | `str` | 应用的源 URL 或路径。 |
+
+**返回：**
+
+`Dict` — 安装状态和作业 ID。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.remove_app`
+
+移除已安装的应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app_name` | `str` | 要移除的应用名称。 |
+
+**返回：**
+
+`Dict` — 移除状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.job_status`
+
+获取应用操作作业的状态。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `job_id` | `str` | 要检查的作业的 ID。 |
+
+**返回：**
+
+`JobInfo` — 当前作业状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.ws_apps_manager`
+
+用于应用管理器更新的 WebSocket 端点。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.start_app`
+
+启动已安装的应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app_name` | `str` | 要启动的应用名称。 |
+
+**返回：**
+
+`Dict` — 启动状态和会话信息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.restart_app`
+
+重启正在运行的应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app_name` | `str` | 要重启的应用名称。 |
+
+**返回：**
+
+`Dict` — 重启状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.stop_app`
+
+停止正在运行的应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `app_name` | `str` | 要停止的应用名称。 |
+
+**返回：**
+
+`Dict` — 停止状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.current_app_status`
+
+获取当前正在运行的应用的状态。
+
+**返回：**
+
+`Dict` — 当前应用状态，包括名称、状态和会话信息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.apps.install_private_space`
+
+将私有 HuggingFace Space 安装为应用。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `space_id` | `str` | HuggingFace Space 标识符。 |
+
+**返回：**
+
+`Dict` — 安装状态和作业 ID。
+
+---
+
+### 更新路由
+
+#### `reachy_mini.daemon.app.routers.update.available`
+
+检查可用的更新。
+
+**返回：**
+
+`Dict` — 可用的更新信息，包括版本和变更日志。
+
+---
+
+#### `reachy_mini.daemon.app.routers.update.start_update`
+
+开始更新过程。
+
+**返回：**
+
+`Dict` — 更新状态和进度。
+
+---
+
+#### `reachy_mini.daemon.app.routers.update.get_update_info`
+
+获取关于更新的详细信息。
+
+**返回：**
+
+`Dict` — 详细的更新信息，包括下载大小和估计时间。
+
+---
+
+#### `reachy_mini.daemon.app.routers.update.websocket_logs`
+
+用于流式传输更新日志的 WebSocket 端点。
+
+---
+
+### 缓存路由
+
+#### `reachy_mini.daemon.app.routers.cache.clear_huggingface_cache`
+
+清除 HuggingFace 缓存以释放磁盘空间。
+
+**返回：**
+
+`Dict` — 缓存清除状态和释放的空间量。
+
+---
+
+#### `reachy_mini.daemon.app.routers.cache.reset_apps`
+
+将所有应用重置为初始状态。
+
+**返回：**
+
+`Dict` — 重置状态。
+
+---
+
+### 运动学路由
+
+#### `reachy_mini.daemon.app.routers.kinematics.get_kinematics_info`
+
+获取机器人的运动学信息。
+
+**返回：**
+
+`Dict` — 运动学参数，包括 DH 参数和关节限制。
+
+---
+
+#### `reachy_mini.daemon.app.routers.kinematics.get_urdf`
+
+获取 URDF 机器人描述。
+
+**返回：**
+
+`str` — 描述机器人的 URDF XML 字符串。
+
+---
+
+#### `reachy_mini.daemon.app.routers.kinematics.get_stl_file`
+
+获取机器人组件的 STL 网格文件。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `component` | `str` | 组件名称（例如，"head"、"antenna"）。 |
+
+**返回：**
+
+`bytes` — STL 文件数据。
+
+---
+
+### 音量路由
+
+#### `reachy_mini.daemon.app.routers.volume.get_volume`
+
+获取当前扬声器音量。
+
+**返回：**
+
+`int` — 当前音量级别（0-100）。
+
+---
+
+#### `reachy_mini.daemon.app.routers.volume.set_volume`
+
+设置扬声器音量。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `volume` | `int` | 音量级别（0-100）。 |
+
+**返回：**
+
+`int` — 实际设置的音量（可能被限制）。
+
+---
+
+#### `reachy_mini.daemon.app.routers.volume.play_test_sound`
+
+播放测试声音以验证音频输出。
+
+**返回：**
+
+`Dict` — 确认测试声音已播放的状态消息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.volume.get_microphone_volume`
+
+获取当前麦克风音量。
+
+**返回：**
+
+`int` — 当前麦克风音量（0-100）。
+
+---
+
+#### `reachy_mini.daemon.app.routers.volume.set_microphone_volume`
+
+设置麦克风音量。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `volume` | `int` | 音量级别（0-100）。 |
+
+**返回：**
+
+`int` — 实际设置的音量（可能被限制）。
+
+---
+
+### 日志路由
+
+#### `reachy_mini.daemon.app.routers.logs.websocket_daemon_logs`
+
+用于流式传输守护进程日志的 WebSocket 端点。
+
+---
+
+### HF 认证路由
+
+#### `reachy_mini.daemon.app.routers.hf_auth.save_token`
+
+保存 HuggingFace 认证令牌。
+
+**参数：**
+
+| 名称 | 类型 | 描述 |
+|------|------|-------------|
+| `token` | `str` | HuggingFace API 令牌。 |
+
+**返回：**
+
+`Dict` — 保存状态。
+
+---
+
+#### `reachy_mini.daemon.app.routers.hf_auth.get_auth_status`
+
+获取当前认证状态。
+
+**返回：**
+
+`Dict` — 认证状态，包括令牌是否有效和用户信息。
+
+---
+
+#### `reachy_mini.daemon.app.routers.hf_auth.delete_token`
+
+删除保存的认证令牌。
+
+**返回：**
+
+`Dict` — 删除状态。

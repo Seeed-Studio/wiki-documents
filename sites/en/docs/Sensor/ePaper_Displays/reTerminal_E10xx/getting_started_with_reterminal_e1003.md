@@ -123,7 +123,7 @@ ESPHome support for reTerminal E1003 is under development and will be available 
 
 ## Hardware Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/221.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
 1. **Screen Refresh Button:** Located at the top of the device for manual screen refresh.
 2. **Page Up and Down Buttons:** Located at the top of the device for navigating between pages.
@@ -449,7 +449,7 @@ When operating on battery power:
 If you want to write some code by yourself to read battery voltage, it will be more precise to add 10ms delay before analogRead() function.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/232.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/232.png" style={{width:300, height:'auto'}}/></div>
 
 
 ### Expansion Pins
