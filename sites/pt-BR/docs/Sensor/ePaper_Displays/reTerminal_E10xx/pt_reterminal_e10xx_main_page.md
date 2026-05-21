@@ -132,7 +132,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		<tr>
 			<td align="center"><strong>Áudio</strong></td>
 			<td align="center" colspan="4">Buzzer (alerta sonoro) · Microfone reservado em E1001 / E1002 / E1003</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Bateria</strong></td>
 			<td align="center">2000 mAh<br/>~3 meses</td>

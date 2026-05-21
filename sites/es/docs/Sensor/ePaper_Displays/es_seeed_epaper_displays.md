@@ -220,7 +220,7 @@ Para makers que prefieren ensamblar todo por sí mismos, dos opciones flexibles:
 
 ## Ecosistema de software de un vistazo
 
-Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige el flujo de trabajo que coincida con tu nivel de habilidad — puedes mezclar y combinar:</td>
+Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige el flujo de trabajo que coincida con tu nivel de habilidad — puedes mezclar y combinar:
 
 <div class="table-center">
   <table align="center">
@@ -283,28 +283,28 @@ Cada producto ePaper de Seeed converge en el mismo ecosistema de software. Elige
 
 ## Índice de tutoriales de aplicaciones
 
-Cada tutorial a continuación recorre una plataforma de principio a fin:</td>
+Cada tutorial a continuación recorre una plataforma de principio a fin:
 
 ### Marcos para hogar inteligente y paneles de control
 
 - [Trabajar con ESPHome](https://wiki.seeedstudio.com/es/epaper_work_with_esphome) — referencia principal: rutas de flasheo, esqueleto YAML genérico, integración con Home Assistant. Recetarios por producto: [reTerminal E (Básico)](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome), [reTerminal E (Avanzado)](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome_advanced), [EE04](https://wiki.seeedstudio.com/es/EE04_with_esphome_advanced), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_esphome), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_esphome).
-- [Trabajar con TRMNL](https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl) — despliega paneles E-Ink a través de la plataforma en la nube TRMNL. Un único artículo ahora cubre reTerminal E1001/E1002, el TRMNL DIY Kit y el XIAO 7.5" ePaper Panel — elige tu hardware en las pestañas.</td>
+- [Trabajar con TRMNL](https://wiki.seeedstudio.com/es/reterminal_e10xx_trmnl) — despliega paneles E-Ink a través de la plataforma en la nube TRMNL. Un único artículo ahora cubre reTerminal E1001/E1002, el TRMNL DIY Kit y el XIAO 7.5" ePaper Panel — elige tu hardware en las pestañas.
 
 ### Herramientas sin código / de diseño visual de UI
 
-- [Trabajar con SenseCraft HMI](https://wiki.seeedstudio.com/es/EE04_with_hmi) — plataforma de interfaz visual sin código de Seeed; cubre reTerminal E Serie y las placas controladoras EE0x.</td>
+- [Trabajar con SenseCraft HMI](https://wiki.seeedstudio.com/es/EE04_with_hmi) — plataforma de interfaz visual sin código de Seeed; cubre reTerminal E Serie y las placas controladoras EE0x.
 - [Trabajar con SquareLine Vision](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_squareline_vision)
-- [Trabajar con EEZ Studio](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_eezstudio) — flujo de trabajo combinado reTerminal E Serie + EE04 con LVGL.</td>
+- [Trabajar con EEZ Studio](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_eezstudio) — flujo de trabajo combinado reTerminal E Serie + EE04 con LVGL.
 - [Trabajar con Lopaka](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_lopaka)
 
 ### Desarrollo basado en código
 
-- [Trabajar con Arduino](https://wiki.seeedstudio.com/es/epaper_work_with_arduino) — referencia principal: configuración del IDE, biblioteca `Seeed_GFX`, generación de `driver.h`. Recetarios por producto: reTerminal E Serie — [Pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) y [Periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino).</td>
+- [Trabajar con Arduino](https://wiki.seeedstudio.com/es/epaper_work_with_arduino) — referencia principal: configuración del IDE, biblioteca `Seeed_GFX`, generación de `driver.h`. Recetarios por producto: reTerminal E Serie — [Pantalla ePaper](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino) y [Periféricos integrados](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_arduino_peripherals), [TRMNL DIY Kit](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_arduino), [XIAO 7.5" Panel](https://wiki.seeedstudio.com/es/xiao_075inch_epaper_panel_arduino).
 - [Trabajar con PlatformIO — EE04](https://wiki.seeedstudio.com/es/ee04_with_platformio)
 
 ### ESL / OEPL de código abierto
 
-- [Trabajar con OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/es/EN04_opendisplay) — un único artículo cubre el kit EN04 BLE y la ruta de bricolaje con ePaper Breakout Board + XIAO nRF52840.</td>
+- [Trabajar con OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/es/EN04_opendisplay) — un único artículo cubre el kit EN04 BLE y la ruta de bricolaje con ePaper Breakout Board + XIAO nRF52840.
 
 ## Recursos
 
@@ -315,7 +315,7 @@ Cada tutorial a continuación recorre una plataforma de principio a fin:</td>
 
 ## Soporte técnico y debate sobre productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.</td>
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

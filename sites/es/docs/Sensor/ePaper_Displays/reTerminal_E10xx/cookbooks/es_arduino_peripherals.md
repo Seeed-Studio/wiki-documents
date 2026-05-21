@@ -1,5 +1,5 @@
 ---
-description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004: ejemplos de periféricos de hardware integrados, incluyendo LED, zumbador, tres botones de usuario, sensor de temperatura/humedad SHT4x, monitorización de batería, tarjeta microSD y renderizado de imágenes BMP desde la SD.
+description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - ejemplos de periféricos de hardware integrados, incluyendo LED, zumbador, tres botones de usuario, sensor de temperatura/humedad SHT4x, monitorización de batería, tarjeta microSD y renderizado de imágenes BMP desde la SD.
 title: 'Recetario de Arduino: Periféricos Integrados (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals

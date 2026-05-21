@@ -287,35 +287,35 @@ Seeed Studio は、次の 3 つの製品ラインを中心に構成されたエ�
 
 ### スマートホーム & ダッシュボードフレームワーク
 
-- [ESPHome を使う](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：フラッシュ手順、汎用 YAML スケルトン、Home Assistant 連携。製品別クックブック：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" パネル](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY キット](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。</td>
-- [TRMNL を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl) — TRMNL クラウドプラットフォームを通じて E-Ink ダッシュボードをデプロイします。1つの記事で reTerminal E1001/E1002、TRMNL DIY キット、XIAO 7.5" ePaper パネルをまとめて扱っており、タブでハードウェアを選択します。</td>
+- [ESPHome を使う](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：フラッシュ手順、汎用 YAML スケルトン、Home Assistant 連携。製品別クックブック：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" パネル](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY キット](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。
+- [TRMNL を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl) — TRMNL クラウドプラットフォームを通じて E-Ink ダッシュボードをデプロイします。1つの記事で reTerminal E1001/E1002、TRMNL DIY キット、XIAO 7.5" ePaper パネルをまとめて扱っており、タブでハードウェアを選択します。
 
 ### ノーコード / ビジュアル UI デザインツール
 
-- [SenseCraft HMI を使う](https://wiki.seeedstudio.com/ja/EE04_with_hmi) — Seeed のノーコードビジュアルインターフェースプラットフォーム；reTerminal E シリーズと EE0x ドライバボードをカバーします。</td>
-- [SquareLine Vision を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision)</td>
-- [EEZ Studio を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio) — reTerminal E シリーズ + EE04 の統合 LVGL ワークフロー。</td>
-- [Lopaka を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka)</td>
+- [SenseCraft HMI を使う](https://wiki.seeedstudio.com/ja/EE04_with_hmi) — Seeed のノーコードビジュアルインターフェースプラットフォーム；reTerminal E シリーズと EE0x ドライバボードをカバーします。
+- [SquareLine Vision を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision)
+- [EEZ Studio を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio) — reTerminal E シリーズ + EE04 の統合 LVGL ワークフロー。
+- [Lopaka を使う](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka)
 
 ### コードベース開発
 
-- [Arduino を使う](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDE セットアップ、`Seeed_GFX` ライブラリ、`driver.h` 生成。製品別クックブック：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) と [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY キット](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" パネル](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。</td>
-- [PlatformIO を使う — EE04](https://wiki.seeedstudio.com/ja/ee04_with_platformio)</td>
+- [Arduino を使う](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDE セットアップ、`Seeed_GFX` ライブラリ、`driver.h` 生成。製品別クックブック：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) と [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY キット](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" パネル](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。
+- [PlatformIO を使う — EE04](https://wiki.seeedstudio.com/ja/ee04_with_platformio)
 
 ### オープンソース ESL / OEPL
 
-- [OpenEPaperLink / OpenDisplay を使う](https://wiki.seeedstudio.com/ja/EN04_opendisplay) — EN04 BLE キットと ePaper Breakout Board + XIAO nRF52840 の DIY パスを1つの記事でカバーします。</td>
+- [OpenEPaperLink / OpenDisplay を使う](https://wiki.seeedstudio.com/ja/EN04_opendisplay) — EN04 BLE キットと ePaper Breakout Board + XIAO nRF52840 の DIY パスを1つの記事でカバーします。
 
 ## リソース
 
-- [SenseCraft HMI ドキュメント](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview/)</td>
-- [ESP32-S3 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)</td>
-- [XIAO シリーズ概要](https://wiki.seeedstudio.com/ja/xiao_topic_page/)</td>
-- [Seeed Studio 電子ペーパーカテゴリストア](https://www.seeedstudio.com/catalogsearch/result/?q=epaper)</td>
+- [SenseCraft HMI ドキュメント](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview/)
+- [ESP32-S3 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
+- [XIAO シリーズ概要](https://wiki.seeedstudio.com/ja/xiao_topic_page/)
+- [Seeed Studio 電子ペーパーカテゴリストア](https://www.seeedstudio.com/catalogsearch/result/?q=epaper)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。</td>
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

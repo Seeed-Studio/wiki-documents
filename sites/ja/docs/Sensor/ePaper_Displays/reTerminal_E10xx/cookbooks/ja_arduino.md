@@ -247,7 +247,7 @@ Seeed_GFX ライブラリを使用して、reTerminal E1004 上の E Ink® Spect
 
 **ステップ 5.** スケッチを reTerminal E1004 に書き込み、カラー描画、描画プリミティブ、テキスト描画、およびフルスクリーンリフレッシュの動作を確認します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div]
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_3.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>

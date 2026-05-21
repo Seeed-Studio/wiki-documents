@@ -1,5 +1,5 @@
 ---
-description: Recetario de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x): descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
+description: Recetario de PlatformIO para la familia de XIAO ePaper Driver Board (EE0x) - descripción de hardware, arranque de proyecto, configuración de librerías y programación de extremo a extremo en el ESP32-S3. EE04 se usa como ejemplo práctico; EE02 / EE03 / EE05 comparten el mismo flujo de trabajo.
 title: Recetario de PlatformIO
 keywords:
   - Pantalla ePaper
