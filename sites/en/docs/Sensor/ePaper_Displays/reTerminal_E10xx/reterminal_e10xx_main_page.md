@@ -442,8 +442,16 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino">Work with Arduino</a></td>
-			<td>Program the ePaper display directly from Arduino IDE on the ESP32-S3.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino">Arduino — ePaper Display</a></td>
+			<td>Render text, graphics, and images on the ePaper screen with the Seeed_GFX or GxEPD2 libraries.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals">Arduino — Onboard Peripherals</a></td>
+			<td>Drive the onboard LED, buzzer, three user buttons, SHT4x sensor, battery monitor, and microSD card.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>

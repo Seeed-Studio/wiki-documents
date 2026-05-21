@@ -1,6 +1,6 @@
 ---
 description: Gravar o JetPack no reComputer J4012 (placa carrier J401)
-title: Primeiros passos com o reComputer J30/40
+title: Introdução ao reComputer J30/40
 keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,44 +10,44 @@ last_update:
   date: 6/29/2023
   author: Lakshantha
 createdAt: '2024-04-08'
-updatedAt: '2026-03-24'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/pt-br/reComputer_J30_40_with_Jetson_getting_start/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
-# Primeiros passos com o reComputer J30/40
+# Introdução ao reComputer J30/40
+
+## Introdução
 
 <div class="video-container">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/-KAyUHzRxHc" title="Unboxing &amp; Plug in reComputer J4012 - Powered by NVIDIA Jetson Orin NX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
-</a></div>
+<br />
 
-## Introdução
-O reComputer J30/40 construído com Jetson Orin é um box de borda inteligente poderoso e compacto para levar até 100 TOPS de desempenho de IA moderno para a borda, combinando a arquitetura de GPU NVIDIA Ampere™ com capacidade de operação de 64 bits.
+O reComputer J30/40 construído com Jetson Orin é uma caixa de borda inteligente poderosa e compacta que traz até 100 TOPS de desempenho de IA moderno para a borda, combinando a arquitetura de GPU NVIDIA Ampere™ com capacidade operacional de 64 bits.
 
 O sistema completo inclui um módulo de produção NVIDIA Jetson Orin, um dissipador de calor e um adaptador de energia. O reComputer J30/40 vem pré-instalado com Jetpack 5.1.3, simplifica o desenvolvimento e é adequado para implantação por provedores de soluções de IA de borda que trabalham com análise de vídeo, detecção de objetos, processamento de linguagem natural, imagem médica e robótica em setores como cidades inteligentes, segurança, automação industrial e fábricas inteligentes.
 
 Se você está procurando a versão sem adaptador de energia, confira o [reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html).
 
+:::note
+Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
+:::
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Personalize agora ➜</font></span></strong></a>
+</div>
+
 ## Recursos
 
 - **Brilhante desempenho de IA para produção:** processamento no dispositivo com até 100 TOPS de desempenho de IA com baixo consumo de energia e baixa latência
-- **Dispositivo de IA de borda do tamanho da mão:** tamanho compacto de 130mm x120mm x 58.5mm, inclui módulo de produção NVIDIA Jetson Orin, dissipador de calor, gabinete e adaptador de energia. Suporta uso em mesa, montagem em parede, encaixa em qualquer lugar
+- **Dispositivo de IA de borda do tamanho da mão:** tamanho compacto de 130mm x120mm x 58,5mm, inclui módulo de produção NVIDIA Jetson Orin, um dissipador de calor, gabinete e um adaptador de energia. Suporta uso em mesa, montagem na parede, se encaixa em qualquer lugar
 - **Expansível com ricas E/S:** 4x USB3.2, HDMI 2.1, 2xCSI, 1xRJ45 para GbE, M.2 Key E, M.2 Key M, CAN e GPIO
-- **Acelere sua solução para o mercado:** Jetpack pré-instalado com NVIDIA JetPack™ 5.1 no SSD NVMe de 128GB incluído, BSP de SO Linux, SSD de 128GB, módulo combo WiFi BT, 2x antenas, suporta software Jetson e principais frameworks e plataformas de software de IA
+- **Acelere a solução para o mercado:** Jetpack pré-instalado com NVIDIA JetPack™ 5.1 no SSD NVMe de 128GB incluído, BSP de SO Linux, SSD de 128GB, módulo combo WiFi BT, 2x antenas, suporta software Jetson e principais frameworks e plataformas de software de IA
 - **Certificações abrangentes:** FCC, CE, RoHS, UKCA
-
-<JetsonLeadQuote
-  buttonText="Solicitar orçamento personalizado"
-  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
-  imageAlt="Request Quote for Jetson"
-  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
-/>
 
 ## Especificações
 
@@ -90,21 +90,21 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan='2'>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits<br />1.5MB L2 + 4MB L3</td>
-      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits 1.5MB L2 + 4MB L3</td>
+      <td colSpan='2'>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits<br />1,5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 6 núcleos, 64 bits 1,5MB L2 + 4MB L3</td>
       <td>CPU Arm® Cortex®-A78AE v8.2 de 8 núcleos, 64 bits 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Frequência Máx. da CPU</td>
-      <td colSpan='2' align='center'>1.5 GHz</td>
+      <td colSpan='2' align='center'>1,5 GHz</td>
       <td colSpan='2' align='center'>2 GHz</td>
     </tr>
     <tr>
       <td>Memória</td>
       <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
       <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>8GB 128-bit LPDDR5 102,4GB/s</td>
+      <td>16GB 128-bit LPDDR5 102,4GB/s</td>
     </tr>
     <tr>
       <td>Acelerador DL</td>
@@ -142,15 +142,15 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
     </tr>
     <tr>
       <td>Câmera CSI</td>
-      <td colSpan='4' align='center'>2* CSI (2-lane 15pin)</td>
+      <td colSpan='4' align='center'>2* CSI （2-lane 15pin）</td>
     </tr>
     <tr>
       <td>Rede</td>
-      <td colSpan='4' align='center'>1* Gigabit Ethernet (10/100/1000M)</td>
+      <td colSpan='4' align='center'>1* Ethernet Gigabit (10/100/1000M)</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan='4' align='center'>4* USB 3.2 Type-A (10Gbps); 1* USB2.0 Type-C (Modo Dispositivo)</td>
+      <td colSpan='4' align='center'>4* USB 3.2 Tipo-A (10Gbps); 1* USB2.0 Tipo-C (Modo Dispositivo)</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
@@ -162,7 +162,7 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
     </tr>
     <tr>
       <td>Ventoinha</td>
-      <td colSpan='4' align='center'>1* conector de ventoinha de 4 pinos (5V PWM)</td>
+      <td colSpan='4' align='center'>1* Conector de ventoinha de 4 pinos (5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -170,7 +170,7 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
     </tr>
     <tr>
       <td>Porta Multifuncional</td>
-      <td colSpan='4' align='center'>1* conector de expansão de 40 pinos, 1* conector de controle e UART de 12 pinos</td>
+      <td colSpan='4' align='center'>1* cabeçalho de expansão de 40 pinos, 1* cabeçalho de controle e UART de 12 pinos</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -189,24 +189,24 @@ Se você está procurando a versão sem adaptador de energia, confira o [reCompu
       <td colSpan='4' align='center'>-10℃~60℃</td>
     </tr>
     <tr>
-      <td>Mecânica</td>
-      <td colSpan='4' align='center'>130mm x120mm x 58.5mm</td>
+      <td>Mecânico</td>
+      <td colSpan='4' align='center'>130mm x120mm x 58,5mm</td>
     </tr>
   </tbody>
 </table>
 
-## Gravar o JetPack
+## Gravar JetPack
 
 :::info
-reComputer J30/40 alimentado pela placa Carrier J401.
-Consulte esta [página wiki](/pt-br/reComputer_J4012_Flash_Jetpack) para obter mais informações sobre gravação do JetPack.
+reComputer J30/40 alimentado pela placa carrier J401.
+Consulte esta [página wiki](/pt-br/reComputer_J4012_Flash_Jetpack) para mais informações sobre gravação do JetPack.
 :::
 
 ## Uso das Interfaces
 
 :::info
-reComputer J30/40 alimentado pela placa Carrier J401.
-Consulte esta [página wiki](/pt-br/J401_carrierboard_Hardware_Interfaces_Usage) para obter mais informações sobre o uso das interfaces.
+reComputer J30/40 alimentado pela placa carrier J401.
+Consulte esta [página wiki](/pt-br/J401_carrierboard_Hardware_Interfaces_Usage) para mais informações sobre o uso das interfaces.
 :::
 
 
@@ -222,8 +222,14 @@ Consulte esta [página wiki](/pt-br/J401_carrierboard_Hardware_Interfaces_Usage)
 - [Exemplos Jetson](https://github.com/Seeed-Projects/jetson-examples)
 - [reComputer-Jetson-para-Iniciantes](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
+<JetsonLeadQuote
+  buttonText="Request Quote of Customization"
+  imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/NVIDIA_Jetson.jpg"
+  imageAlt="Request Quote for Jetson"
+  triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
+/>
 
-## Suporte Técnico e Discussão do Produto
+## Suporte Técnico e Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
@@ -233,6 +239,6 @@ Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tip
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

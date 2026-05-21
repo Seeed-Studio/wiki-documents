@@ -6,7 +6,7 @@ slug: /reterminal_e10xx_with_esphome
 aliases:
   - /reterminal_e10xx_esphome
 sku: 100017057,100073581
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: ESPHome (Basic)
 last_update:
   date: 04/28/2026

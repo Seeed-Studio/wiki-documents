@@ -2071,6 +2071,7 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
               ],
             },
             {
@@ -3807,13 +3808,6 @@ const sidebars = {
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
-                  ],
-                },
-                {
-                  type: 'category',
-                  label: 'reComputer Robotics J50',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/ja_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
