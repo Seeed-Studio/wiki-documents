@@ -2,10 +2,10 @@
 description: Este wiki fornece o Guia Completo de Controle de Motor RobStride
 title: Guia Completo de Controle de Motor RobStride
 keywords:
-  - actuator
+  - atuador
   - motor
-  - arm
-  - robotics
+  - braço
+  - robótica
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /robstride_control
 last_update:
@@ -15,13 +15,13 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-19'
-updatedAt: '2026-03-16'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/pt-br/robstride_control/
 ---
 
 # Biblioteca de Controle RobStride - Documentação Técnica Completa
 
-> Linha de base de controle de motor RobStride de alto desempenho com implementações em Python, C++, Rust e Arduino
+> Base de controle de motor RobStride de alto desempenho com implementações em Python, C++, Rust e Arduino
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20ESP32-lightgrey.svg)
@@ -51,33 +51,33 @@ A Biblioteca de Controle RobStride é uma biblioteca de controle de motor de alt
 ### Recursos Principais
 
 - ✅ **Suporte a múltiplas linguagens**: Implementações em Python, C++, Rust e Arduino
-- ✅ **Vários Modos de Controle**: Modo MIT, Modo de Posição, Modo de Velocidade
-- ✅ **Desempenho em Tempo Real**: Frequência de controle de 50–200Hz com baixa latência
-- ✅ **Estabilidade de Grau Industrial**: Suporta operação contínua de longo prazo
-- ✅ **Compatibilidade Multiplataforma**: Sistemas Linux, ESP32 e outras plataformas embarcadas
-- ✅ **Interface Padronizada**: Design de API unificado para facilitar a troca de linguagem
+- ✅ **Múltiplos modos de controle**: Modo MIT, Modo de Posição, Modo de Velocidade
+- ✅ **Desempenho em tempo real**: Frequência de controle de 50-200Hz com baixa latência
+- ✅ **Estabilidade de nível industrial**: Suporta operação contínua de longo prazo
+- ✅ **Compatibilidade multiplataforma**: Sistemas Linux, ESP32 e outras plataformas embarcadas
+- ✅ **Interface padronizada**: Design de API unificada para facilitar a troca de linguagem
 
 ### Vantagens Técnicas
 
-- **Alto Desempenho**: Comunicação SocketCAN direta sem sobrecarga de middleware
-- **Segurança de Memória**: A implementação em Rust fornece garantias de segurança de memória
-- **Controle em Tempo Real**: A implementação em C++ atinge frequência de controle de 200Hz
-- **Facilidade de Uso**: A implementação em Python fornece interface interativa amigável
-- **Amigável a Sistemas Embarcados**: A implementação em Arduino é adequada para ambientes com recursos limitados
+- **Alto desempenho**: Comunicação SocketCAN direta sem sobrecarga de middleware
+- **Segurança de memória**: A implementação em Rust fornece garantias de segurança de memória
+- **Controle em tempo real**: A implementação em C++ atinge frequência de controle de 200Hz
+- **Facilidade de uso**: A implementação em Python fornece uma interface interativa amigável
+- **Amigável para sistemas embarcados**: A implementação em Arduino é adequada para ambientes com recursos limitados
 
 ---
 
 ## Modelos de Motor Suportados
 
-| Modelo | Torque Máx. | Velocidade Máx. | Faixa KP | Faixa KD |
+| Modelo | Torque Máximo | Velocidade Máxima | Faixa de KP | Faixa de KD |
 |--------|------------|-----------|----------|----------|
-| RS-00 | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| RS-01 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| RS-02 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| RS-03 | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| RS-04 | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| RS-05 | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| RS-06 | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
 
 ---
 
@@ -105,26 +105,26 @@ graph TB
 ### Protocolo de Comunicação
 
 - **Camada Física**: Padrão CAN 2.0B
-- **Camada de Enlace de Dados**: Formato de quadro estendido (ID de 29 bits)
+- **Camada de Enlace de Dados**: Formato de Quadro Estendido (ID de 29 bits)
 - **Camada de Aplicação**: Protocolo RobStride personalizado
 - **Taxa de Transmissão**: 1 Mbps
 
 ### Detalhes do Modo de Controle
 
 #### 1. Modo MIT (Modo 0)
-- **Características**: Controle de torque direto com alta velocidade de resposta
-- **Casos de Uso**: Aplicações que exigem resposta rápida
-- **Parâmetros de Controle**: P, D, T, Posição, Velocidade
+- **Características**: Controle direto de torque com alta velocidade de resposta
+- **Casos de uso**: Aplicações que exigem resposta rápida
+- **Parâmetros de controle**: P, D, T, Posição, Velocidade
 
 #### 2. Modo de Posição (Modo 1)
-- **Características**: Controle em malha fechada de posição com posicionamento preciso
-- **Casos de Uso**: Posicionamento de precisão, controle de juntas de robôs
-- **Parâmetros de Controle**: Posição, Velocidade, Torque Máx.
+- **Características**: Controle de malha fechada de posição com posicionamento preciso
+- **Casos de uso**: Posicionamento de precisão, controle de juntas de robôs
+- **Parâmetros de controle**: Posição, Velocidade, Torque Máximo
 
 #### 3. Modo de Velocidade (Modo 2)
-- **Características**: Controle em malha fechada de velocidade com regulação estável
-- **Casos de Uso**: Aplicações que exigem velocidade constante
-- **Parâmetros de Controle**: Velocidade, Torque Máx.
+- **Características**: Controle de malha fechada de velocidade com regulação estável
+- **Casos de uso**: Aplicações que exigem velocidade constante
+- **Parâmetros de controle**: Velocidade, Torque Máximo
 
 ---
 
@@ -159,7 +159,7 @@ cd RobStride_Control
 
 | Linguagem | Frequência de Controle | Uso de Memória | Casos de Uso |
 |----------|-------------------|--------------|-----------|
-| Python | 50-100Hz | ~50MB | Protótipo rápido, validação de algoritmo |
+| Python | 50-100Hz | ~50MB | Prototipagem rápida, validação de algoritmos |
 | C++ | 200Hz | ~10MB | Aplicações de alto desempenho, controle em tempo real |
 | Rust | 150Hz | ~8MB | Crítico para segurança, requisitos de segurança de memória |
 | Arduino | 100Hz | ~2KB | Embarcado, ambientes com recursos limitados |
@@ -395,7 +395,7 @@ impl RobStrideController {
 }
 ```
 
-### Recursos de Segurança de Memória
+### Recursos de segurança de memória
 
 ```rust
 // Multi-thread safe shared CAN interface
@@ -431,7 +431,7 @@ cargo run --release -- 1
 
 ## Implementação em Arduino
 
-### Configuração de Hardware
+### Configuração de hardware
 
 ```
 ESP32           CAN Transceiver      RobStride Motor
@@ -441,7 +441,7 @@ GPIO4   <--->   RX                    CAN L
 GND     <--->   GND                   Ground
 ```
 
-### Código Básico
+### Código básico
 
 ```cpp
 #include <ESP32-TWAI-CAN.h>
@@ -490,7 +490,7 @@ public:
 };
 ```
 
-### Exemplo de Controle com Arduino
+### Exemplo de controle com Arduino
 
 ```cpp
 RobStrideMotor motor(1);
@@ -523,28 +523,28 @@ void loop() {
 
 ---
 
-## Detalhes do Protocolo
+## Detalhes do protocolo
 
-### Formato do Quadro CAN
+### Formato do quadro CAN
 
 | Campo | Tamanho | Descrição |
 |-------|------|-------------|
 | ID | 29 bits | Identificador de quadro estendido |
-| DLC | 4 bits | Comprimento dos dados (fixo em 8) |
-| Dados | 8 bytes | Dados de controle |
+| DLC | 4 bits | Comprimento de dados (fixo em 8) |
+| Data | 8 bytes | Dados de controle |
 | CRC | 16 bits | Verificação de redundância cíclica |
 
-### Regras de Alocação de ID
+### Regras de alocação de ID
 
-- **0x200 + ID**: Comandos de controle em modo MIT
-- **0x300 + ID**: Comandos de controle em modo de posição
-- **0x400 + ID**: Comandos de controle em modo de velocidade
-- **0x500 + ID**: Consultas de status do sistema
-- **0x600 + ID**: Comandos de configuração do sistema
+- **0x200 + ID**: comandos de controle em modo MIT
+- **0x300 + ID**: comandos de controle em modo de posição
+- **0x400 + ID**: comandos de controle em modo de velocidade
+- **0x500 + ID**: consultas de status do sistema
+- **0x600 + ID**: comandos de configuração do sistema
 
-### Formato do Pacote de Dados
+### Formato do pacote de dados
 
-#### Comando de Controle em Modo MIT (8 bytes)
+#### Comando de controle em modo MIT (8 bytes)
 
 ```c
 struct mit_command_t {
@@ -556,7 +556,7 @@ struct mit_command_t {
 };
 ```
 
-#### Feedback de Status do Motor (8 bytes)
+#### Feedback de status do motor (8 bytes)
 
 ```c
 struct motor_status_t {
@@ -568,7 +568,7 @@ struct motor_status_t {
 };
 ```
 
-### Temporização de Comunicação
+### Temporização de comunicação
 
 ```mermaid
 sequenceDiagram
@@ -589,11 +589,11 @@ sequenceDiagram
 
 ---
 
-## Otimização de Desempenho
+## Otimização de desempenho
 
-### Ajuste do Sistema
+### Ajuste do sistema
 
-#### 1. Otimização de Parâmetros do Kernel Linux
+#### 1. Otimização de parâmetros do kernel Linux
 
 ```bash
 # Real-time priority setting
@@ -606,7 +606,7 @@ sudo taskset -cp 0-3 $(pgrep robstride-control)
 sudo sysctl -w vm.swappiness=1
 ```
 
-#### 2. Escalonamento em Tempo Real
+#### 2. Escalonamento em tempo real
 
 ```cpp
 #include <sched.h>
@@ -619,16 +619,16 @@ sched_setscheduler(0, SCHED_FIFO, &param);
 mlockall(MCL_CURRENT | MCL_FUTURE);
 ```
 
-### Benchmarks de Desempenho
+### Benchmarks de desempenho
 
-| Linguagem | Frequência de Controle | Uso de CPU | Latência | Uso de Memória |
+| Linguagem | Frequência de controle | Uso de CPU | Latência | Uso de memória |
 |----------|-------------------|-----------|---------|--------------|
 | Python | 50-100Hz | 15-20% | 2-5ms | ~50MB |
-| C++ | 200Hz | 5-8% | 0.5-1ms | ~10MB |
+| C++ | 200Hz | 5-8% | 0,5-1ms | ~10MB |
 | Rust | 150Hz | 8-12% | 1-2ms | ~8MB |
 | Arduino | 100Hz | 40-60% | 1-3ms | ~2KB |
 
-### Dicas de Otimização
+### Dicas de otimização
 
 #### Otimização em Python
 
@@ -683,11 +683,11 @@ struct MotorCommand {
 
 ---
 
-## Solução de Problemas
+## Solução de problemas
 
-### Problemas Comuns
+### Problemas comuns
 
-#### 1. Falha na Comunicação CAN
+#### 1. Falha na comunicação CAN
 
 ```bash
 # Check CAN interface status
@@ -701,7 +701,7 @@ sudo ip link set can0 down
 sudo ip link set can0 up type can bitrate 1000000
 ```
 
-#### 2. Motor Sem Resposta
+#### 2. Motor sem resposta
 
 ```bash
 # Scan devices on bus
@@ -713,7 +713,7 @@ print(f'Found motors: {motors}')
 "
 ```
 
-#### 3. Problemas de Desempenho
+#### 3. Problemas de desempenho
 
 ```bash
 # Check CPU usage
@@ -723,17 +723,17 @@ top -p $(pgrep robstride-control)
 sudo chrt -f 99 $(pgrep robstride-control)
 ```
 
-### Códigos de Erro
+### Códigos de erro
 
 | Código | Descrição | Solução |
 |------|-------------|----------|
 | 0x01 | Tempo limite de comunicação | Verifique a conexão CAN |
 | 0x02 | Parâmetro fora do intervalo | Verifique os intervalos dos parâmetros de controle |
 | 0x03 | Sobrecorrente do motor | Verifique a carga e os limites de torque |
-| 0x04 | Overflow de posição | Verifique os limites e a posição alvo |
+| 0x04 | Estouro de posição | Verifique os limites e a posição alvo |
 | 0x05 | Temperatura muito alta | Verifique o resfriamento e a carga |
 
-### Ferramentas de Depuração
+### Ferramentas de depuração
 
 ```bash
 # Real-time CAN bus monitoring
@@ -751,9 +751,9 @@ cangen can0 -I 211 -D r
 
 ---
 
-## Guia de Desenvolvimento
+## Guia de desenvolvimento
 
-### Estrutura do Projeto
+### Estrutura do projeto
 
 ```
 RobStride_Control/
@@ -777,15 +777,15 @@ RobStride_Control/
 └── tools/               # Helper tools
 ```
 
-### Diretrizes de Contribuição
+### Diretrizes de contribuição
 
-1. **Estilo de Código**
-   - Python: Siga o PEP 8
-   - C++: Siga o Google C++ Style Guide
-   - Rust: Use rustfmt
-   - Arduino: Siga o Arduino Style Guide
+1. **Estilo de código**
+   - Python: seguir PEP 8
+   - C++: seguir o Google C++ Style Guide
+   - Rust: usar rustfmt
+   - Arduino: seguir o Arduino Style Guide
 
-2. **Convenção de Commits**
+2. **Convenção de commits**
    ```
    feat: Add new feature
    fix: Bug fix
@@ -796,7 +796,7 @@ RobStride_Control/
    chore: Build process or auxiliary tool changes
    ```
 
-3. **Requisitos de Teste**
+3. **Requisitos de testes**
    ```bash
    # Run all tests
    python3 -m pytest python/tests/
@@ -804,7 +804,7 @@ RobStride_Control/
    cd rust && cargo test
    ```
 
-### Scripts de Build
+### Scripts de build
 
 ```bash
 #!/bin/bash
@@ -836,7 +836,7 @@ echo "Open arduino/mi_motor_control/mi_motor_control.ino"
 echo "Build completed!"
 ```
 
-### Guia de Deploy
+### Guia de implantação
 
 #### Ubuntu/Debian
 
@@ -878,16 +878,16 @@ CMD ["./cpp/build/robstride-mit-position", "1"]
 
 ## Recursos
 
-- **URL do Projeto**: https://github.com/Seeed-Projects/RobStride_Control
-- **Relato de Problemas**: https://github.com/Seeed-Projects/RobStride_Control/issues
-- **Mantenedor**: @tianrking
+- **URL do projeto**: https://github.com/Seeed-Projects/RobStride_Control
+- **Relato de problemas**: https://github.com/Seeed-Projects/RobStride_Control/issues
+- **Responsável pela manutenção**: @tianrking
 
 
 ---
 
-## Suporte Técnico & Discussão de Produto
+## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
