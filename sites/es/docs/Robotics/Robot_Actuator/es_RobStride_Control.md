@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona la Guía Completa de Control de Motor RobStride
+description: Esta wiki proporciona la Guía Completa de Control de Motor RobStride
 title: Guía Completa de Control de Motor RobStride
 keywords:
   - actuador
@@ -15,7 +15,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-19'
-updatedAt: '2026-02-28'
+updatedAt: '2026-02-27'
 url: https://wiki.seeedstudio.com/es/robstride_control/
 ---
 
@@ -51,7 +51,7 @@ La Biblioteca de Control RobStride es una biblioteca de control de motores de al
 ### Funciones Principales
 
 - ✅ **Compatibilidad con múltiples lenguajes**: Implementaciones en Python, C++, Rust y Arduino
-- ✅ **Múltiples modos de control**: MIT Mode, Position Mode, Speed Mode
+- ✅ **Múltiples modos de control**: Modo MIT, Modo de Posición, Modo de Velocidad
 - ✅ **Rendimiento en tiempo real**: Frecuencia de control de 50-200Hz con baja latencia
 - ✅ **Estabilidad de grado industrial**: Admite funcionamiento continuo a largo plazo
 - ✅ **Compatibilidad multiplataforma**: Sistemas Linux, ESP32 y otras plataformas embebidas
@@ -71,13 +71,13 @@ La Biblioteca de Control RobStride es una biblioteca de control de motores de al
 
 | Modelo | Par Máximo | Velocidad Máxima | Rango KP | Rango KD |
 |--------|------------|------------------|----------|----------|
-| RS-00 | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| RS-01 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| RS-02 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| RS-03 | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| RS-04 | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| RS-05 | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| RS-06 | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
 
 ---
 
@@ -106,23 +106,23 @@ graph TB
 
 - **Capa física**: Estándar CAN 2.0B
 - **Capa de enlace de datos**: Formato de trama extendida (ID de 29 bits)
-- **Capa de aplicación**: Protocolo personalizado RobStride
+- **Capa de aplicación**: Protocolo RobStride personalizado
 - **Velocidad de transmisión**: 1 Mbps
 
-### Detalles de los Modos de Control
+### Detalles del Modo de Control
 
-#### 1. MIT Mode (Mode 0)
+#### 1. Modo MIT (Modo 0)
 - **Características**: Control directo de par con alta velocidad de respuesta
 - **Casos de uso**: Aplicaciones que requieren respuesta rápida
 - **Parámetros de control**: P, D, T, Posición, Velocidad
 
-#### 2. Position Mode (Mode 1)
+#### 2. Modo de Posición (Modo 1)
 - **Características**: Control de lazo cerrado de posición con posicionamiento preciso
 - **Casos de uso**: Posicionamiento de precisión, control de articulaciones de robots
 - **Parámetros de control**: Posición, Velocidad, Par Máximo
 
-#### 3. Speed Mode (Mode 2)
-- **Características**: Control de lazo cerrado de velocidad con regulación estable de velocidad
+#### 3. Modo de Velocidad (Modo 2)
+- **Características**: Control de lazo cerrado de velocidad con regulación estable
 - **Casos de uso**: Aplicaciones que requieren velocidad constante
 - **Parámetros de control**: Velocidad, Par Máximo
 
@@ -155,10 +155,10 @@ git clone https://github.com/Seeed-Projects/RobStride_Control.git
 cd RobStride_Control
 ```
 
-### Elige la Implementación en tu Lenguaje
+### Elige la Implementación de tu Lenguaje
 
 | Lenguaje | Frecuencia de Control | Uso de Memoria | Casos de Uso |
-|----------|------------------------|----------------|-------------|
+|----------|-----------------------|----------------|-------------|
 | Python | 50-100Hz | ~50MB | Prototipado rápido, validación de algoritmos |
 | C++ | 200Hz | ~10MB | Aplicaciones de alto rendimiento, control en tiempo real |
 | Rust | 150Hz | ~8MB | Crítico para la seguridad, requisitos de seguridad de memoria |
@@ -395,7 +395,7 @@ impl RobStrideController {
 }
 ```
 
-### Funciones de Seguridad de Memoria
+### Funciones de seguridad de memoria
 
 ```rust
 // Multi-thread safe shared CAN interface
@@ -777,13 +777,13 @@ RobStride_Control/
 └── tools/               # Helper tools
 ```
 
-### Guía para contribuir
+### Directrices para contribuir
 
 1. **Estilo de código**
    - Python: Sigue PEP 8
-   - C++: Sigue Google C++ Style Guide
+   - C++: Sigue la guía de estilo de Google C++
    - Rust: Usa rustfmt
-   - Arduino: Sigue Arduino Style Guide
+   - Arduino: Sigue la guía de estilo de Arduino
 
 2. **Convención de commits**
    ```
@@ -879,15 +879,15 @@ CMD ["./cpp/build/robstride-mit-position", "1"]
 ## Recursos
 
 - **URL del proyecto**: https://github.com/Seeed-Projects/RobStride_Control
-- **Reporte de incidencias**: https://github.com/Seeed-Projects/RobStride_Control/issues
-- **Responsable**: @tianrking
+- **Informe de incidencias**: https://github.com/Seeed-Projects/RobStride_Control/issues
+- **Responsable de mantenimiento**: @tianrking
 
 
 ---
 
-## Soporte técnico y discusión de productos
+## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
