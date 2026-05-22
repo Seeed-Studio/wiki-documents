@@ -40,6 +40,11 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
 
 reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-DM，从组装到使用。
 本文的内容正在光速赶来，各位敬请期待。
+
+:::tip
+如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
+:::
+
 ## 购买选项
 
 reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。

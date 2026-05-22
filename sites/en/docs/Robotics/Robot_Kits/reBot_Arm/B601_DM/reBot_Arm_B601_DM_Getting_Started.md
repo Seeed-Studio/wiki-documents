@@ -47,6 +47,10 @@ The content of this guide is racing towards you at the speed of light — stay t
 
 The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-DM, from assembly to operation.
 
+:::tip
+If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
+:::
+
 ## Purchasing Options
 
 The reBot Arm B601-DM is available in multiple configurations to meet different user needs.
