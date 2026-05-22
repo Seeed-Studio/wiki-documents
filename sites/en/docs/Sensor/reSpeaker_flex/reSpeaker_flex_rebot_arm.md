@@ -21,12 +21,6 @@ url: https://wiki.seeedstudio.com/control_rebot_arm_using_voice_with_respeaker_f
 
 # Control reBot Arm using voice with reSpeaker Flex
 
-> **Document Version**:v1.0
-
-> **Applicable object**: zero basic white user
-
-**Last Updated**: July 2026
-
 >
 
 > This document will take you hand in hand from scratch to build a "listening and moving" intelligent robot arm system. Even if you have never touched the robotic arm or hardware development, as long as you follow the steps, you can successfully reproduce this project!
@@ -72,9 +66,9 @@ In short, this system does three things:
 
 1. **Listen**-capture your voice through the microphone array, and can also determine which direction the sound is coming from
 
-2. - - understand **-identify what you say through AI and understand your intention
+2. **understand**-identify what you say through AI and understand your intention
 
-3. - - move **-control the mechanical arm to make corresponding actions (turn, nod, dance, wave, etc.)
+3. **move**-control the mechanical arm to make corresponding actions (turn, nod, dance, wave, etc.)
 
 ### **1.2 Two Interaction Modes**
 
@@ -107,33 +101,33 @@ A more specialized architecture diagram is described as follows:
 
 **Hardware layer** (devices you can touch):
 
--reSpeaker Flex(4 Microphone Array XIAO ESP32S3 Controller)
+  - reSpeaker Flex(4 Microphone Array XIAO ESP32S3 Controller)  
 
--reBot Arm B601-DM (6-DOF manipulator)
+  - reBot Arm B601-DM (6-DOF manipulator)  
 
--Ubuntu 22.04 computer (running the main program)
+  - Ubuntu 22.04 computer (running the main program)  
 
 **Driver Layer** (enables hardware to communicate):
 
--USB Audio communication (pyusb/libusb)-connect microphone array
+  - USB Audio communication (pyusb/libusb)-connect microphone array  
 
--Serial communication (MotorBridge)-Connect the mechanical arm
+  - Serial communication (MotorBridge)-Connect the mechanical arm  
 
--Web API(Groq Cloud)-connect to cloud AI services
+  - Web API(Groq Cloud)-connect to cloud AI services  
 
 **Algorithm layer** (the "brain" that processes the data):
 
--DOA sound source localization (local real-time calculation)
+  - DOA sound source localization (local real-time calculation)
 
--Whisper speech recognition (Groq Cloud)
+  - Whisper speech recognition (Groq Cloud)
 
--Llama-3.3 Intent Understanding (Groq Cloud)
+  - Llama-3.3 Intent Understanding (Groq Cloud)
 
--Motion interpolation planning (local smoothing control)
+  - Motion interpolation planning (local smoothing control)
 
 **Application Layer** (you can see the effect):
 
--DOA tracking mode voice control mode breathing standby animation voice broadcast
+  - DOA tracking mode voice control mode breathing standby animation voice broadcast
 
 ---
 
@@ -156,7 +150,7 @@ Before you begin, make sure you have all the following hardware ready. If you ar
 
 #### 2.2.1 reBot Arm B601-DM Arm
 
-This is a desktop-level mechanical arm with ** 7 "joints" ** (professionally called 7 degrees of freedom), just like a human arm, it can make various flexible movements.
+This is a desktop-level mechanical arm with **7 "joints"** (professionally called 7 degrees of freedom), just like a human arm, it can make various flexible movements.
 
 **Joint description** (top to bottom):
 
@@ -174,27 +168,27 @@ This is a desktop-level mechanical arm with ** 7 "joints" ** (professionally cal
 
 ⚠** Assembly Warning *: If you are buying parts that need to be assembled by yourself, please pay special attention:
 
--The kit contains a large number of screws and structural parts, and some parts are very similar in appearance
+- The kit contains a large number of screws and structural parts, and some parts are very similar in appearance
 
--**It is strongly recommended to use an electric screwdriver**, the torque is adjusted to the middle and low range (3 ~ 6kgf.cm)
+- **It is strongly recommended to use an electric screwdriver**, the torque is adjusted to the middle and low range (3 ~ 6kgf.cm)
 
--Excessive torque can easily lead to **lock screw sliding wire**
+- Excessive torque can easily lead to **lock screw sliding wire**
 
--Please pay attention to safety when assembling to prevent hand clamping and crushing
+- Please pay attention to safety when assembling to prevent hand clamping and crushing
 
 #### 2.2.2 reSpeaker Flex XVF3800 Microphone Array
 
-This is a ** 4 microphone ** intelligent voice processing module, the core features are:
+This is a **4 microphone** intelligent voice processing module, the core features are:
 
--**Split design**: The core board and the microphone array board can be separated, which is convenient for you to arrange flexibly in different devices
+- **Split design**: The core board and the microphone array board can be separated, which is convenient for you to arrange flexibly in different devices
 
--**360 ° pickup**:4 microphones are arranged in a ring, which can receive sound from all directions
+- **360 ° pickup**:4 microphones are arranged in a ring, which can receive sound from all directions
 
--**Built-in intelligent processing**: Integrated XMOS XVF3800 chip, with echo cancellation, noise suppression, sound source localization (DOA) and other functions
+- **Built-in intelligent processing**: Integrated XMOS XVF3800 chip, with echo cancellation, noise suppression, sound source localization (DOA) and other functions
 
--**Dual USB interface**: There are two connection modes: USB-C interface and PH2.0 lock interface
+- **Dual USB interface**: There are two connection modes: USB-C interface and PH2.0 lock interface
 
--**Built-in power amplifier**: can directly drive a 10W speaker (through JST interface)
+- **Built-in power amplifier**: can directly drive a 10W speaker (through JST interface)
 
 **Core Components**:
 
@@ -213,19 +207,19 @@ This is a ** 4 microphone ** intelligent voice processing module, the core featu
 
 Ubuntu is a free and open source operating system (similar to Windows, but more popular with developers). Requirements of this project:
 
--**Operating System**:Ubuntu 22.04 LTS(64-bit version)
+- **Operating System**:Ubuntu 22.04 LTS(64-bit version)
 
--**Architecture**:x86_64 (that is, a normal Intel/AMD processor computer)
+- **Architecture**:x86_64 (that is, a normal Intel/AMD processor computer)
 
--**Minimum configuration recommendations**:
+- **Minimum configuration recommendations**:
 
--CPU:4 cores or above
+- CPU:4 cores or above
 
--Memory: 8GB or more
+- Memory: 8GB or more
 
--Hard disk: 50GB free space
+- Hard disk: 50GB free space
 
--Network: can access the Internet (used to call cloud AI)
+- Network: can access the Internet (used to call cloud AI)
 
 💡**What if you have a Windows system on your computer?**
 
@@ -233,7 +227,7 @@ You have two options:
 
 1. **Install dual system**: Keep Windows and Ubuntu on the computer at the same time (recommended)
 
-2. - - Use virtual machine **: run Ubuntu virtually with software (such as VMware) in the Windows (there will be some loss of performance, not recommended for this project)
+2. **Use virtual machine**: run Ubuntu virtually with software (such as VMware) in the Windows (there will be some loss of performance, not recommended for this project)
 
 Ubuntu 22.04 Installation Tutorial:[https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)
 
@@ -305,9 +299,9 @@ Codename:       jammy
 
 💡**What if the display is not Ubuntu 22.04?**
 
--If it is Ubuntu 20.04 or other versions, it is recommended to upgrade to 22.04, because this project has been tested on this version
+- If it is Ubuntu 20.04 or other versions, it is recommended to upgrade to 22.04, because this project has been tested on this version
 
--If not Ubuntu, you need to install Ubuntu 22.04
+- If not Ubuntu, you need to install Ubuntu 22.04
 
 ### 3.2 confirm Python version
 
@@ -322,7 +316,7 @@ python3 --version
 Python 3.10.12
 ```
 
-As long as the version is **3.10.x ** (x is any number).
+As long as the version is **3.10.x** (x is any number).
 
 💡**What if it's not a Python 3.10?**
 
@@ -381,11 +375,11 @@ Voice mode requires networking to call the Groq API, please ensure that the netw
 
 Miniforge is a Python environment management tool, similar to Python's "App Store Version Manager". It can help you:
 
--Create an independent Python 3.10 environment without affecting the system default Python
+- Create an independent Python 3.10 environment without affecting the system default Python
 
--One-click installation of all project dependencies
+- One-click installation of all project dependencies
 
--Switch between different Python versions for different projects
+- Switch between different Python versions for different projects
 
 **Install command**:
 
@@ -631,11 +625,11 @@ Save the file: Press 'Ctrl O', then 'Enter', then 'Ctrl X' to exit.
 
 ⚠️ **Safety Reminder**:
 
--**Don't** share your API Key to a public code repository or forum
+- **Don't** share your API Key to a public code repository or forum
 
--**Don't** send API Key screenshots to social media
+- **Don't** send API Key screenshots to social media
 
--If the API Key is leaked, please delete it in the Groq console and generate a new one.
+- If the API Key is leaked, please delete it in the Groq console and generate a new one.
 
 ### 4.11 Step 11: Network Proxy Settings (if needed)
 
@@ -669,13 +663,13 @@ For example, if your proxy address is' http:// 192.168.4.7:7897 ':
 
 💡**How do I know my proxy address?**
 
--If you use Clash: usually at 'http:// 127.0.0.1:7890'
+- If you use Clash: usually at 'http:// 127.0.0.1:7890'
 
--If you use v2rayN: usually at 'http:// 127.0.0.1:10809'
+- If you use v2rayN: usually at 'http:// 127.0.0.1:10809'
 
--If it is a LAN proxy server: Please ask the network administrator
+- If it is a LAN proxy server: Please ask the network administrator
 
--The proxy format is usually: 'http:// IP address: port number'
+- The proxy format is usually: 'http:// IP address: port number'
 
 ---
 
@@ -699,7 +693,7 @@ Now that all the software has been installed, let's connect the hardware.
 
 2. Connect the robotic arm to the computer with a USB-A to USB-C cable
 
-3. Connect 24V power supply (XT30 interface), but ** do not power on first **
+3. Connect 24V power supply (XT30 interface), but **do not power on first**
 
 ⚠️ **Safety checklist before power-on**:
 
@@ -756,13 +750,13 @@ crw-rw-rw- 1 root dialout 188, 0 ... /dev/ttyUSB0
 
 💡**If you can't see the device?**
 
--Check whether the USB cable is plugged tightly
+- Check whether the USB cable is plugged tightly
 
--Try changing a USB port
+- Try changing a USB port
 
--Check whether the cable is a data cable (some lines can only be charged and cannot transmit data)
+- Check whether the cable is a data cable (some lines can only be charged and cannot transmit data)
 
--refer to [9. troubleshooting guide](#9 troubleshooting guide-faq)
+- refer to [9. troubleshooting guide](#9 troubleshooting guide-faq)
 
 ---
 
@@ -888,11 +882,11 @@ When Mode 1 is selected, the program:
 
 **Test method**: Stand next to the robotic arm and talk or clap your hands to observe whether the robotic arm:
 
--Turn in the direction you are
+- Turn in the direction you are
 
--Perform nodding movements
+- Perform nodding movements
 
--Then back to standby
+- Then back to standby
 
 #### Voice Mode Test
 
@@ -912,11 +906,11 @@ When mode 2 is selected, the program:
 
 4. Observe whether:
 
--Recognize your voice
+- Recognize your voice
 
--The mechanical arm performs the greeting action
+- The mechanical arm performs the greeting action
 
--Hear voice broadcast reply
+- Hear voice broadcast reply
 
 ---
 
@@ -926,7 +920,7 @@ When mode 2 is selected, the program:
 
 #### What is DOA?
 
-The full name of DOA is ** Direction of Arrival ** (sound wave arrival direction), which is simply: ** judge from which direction the sound comes **. Just as you can use both ears to roughly determine whether the sound is on the left or right, reSpeaker Flex uses four microphones to calculate the direction of the sound more accurately.
+The full name of DOA is **Direction of Arrival** (sound wave arrival direction), which is simply: **judge from which direction the sound comes**. Just as you can use both ears to roughly determine whether the sound is on the left or right, reSpeaker Flex uses four microphones to calculate the direction of the sound more accurately.
 
 #### Workflow
 
@@ -1253,7 +1247,7 @@ python --version  # 应该是 3.10.x
 
 **Troubleshooting steps**:
 
-1. - - Check whether the USB cable is plugged tightly **: Plug and unplug the USB-C cable again
+1. **Check whether the USB cable is plugged tightly**: Plug and unplug the USB-C cable again
 
 2. **Change USB Port**: Try other USB ports on your computer (especially USB 3.0 blue port)
 
@@ -1480,11 +1474,11 @@ python sound_tracking_arm.py --port /dev/ttyUSB1
 
 **Possible Causes**:
 
--The mechanical arm is blocked by external force, and the motor continues to exert force
+- The mechanical arm is blocked by external force, and the motor continues to exert force
 
--Moving too fast
+- Moving too fast
 
--Long continuous operation
+- Long continuous operation
 
 **Solution**:
 
@@ -1520,7 +1514,7 @@ cat /proc/asound/cards
 arecord -D plughw:2,0 -c 6 -r 16000 -f S16_LE -d 3 /tmp/test.wav
 ```
 
-4. - - Check whether the microphone array is correctly connected **: Confirm that the FPC cable is plugged in tightly
+4. **Check whether the microphone array is correctly connected**: Confirm that the FPC cable is plugged in tightly
 
 #### Q19: DOA angle not allowed/jump
 
@@ -1530,7 +1524,7 @@ arecord -D plughw:2,0 -c 6 -r 16000 -f S16_LE -d 3 /tmp/test.wav
 
 2. **Microphone array is not flat**: Ensure that the reSpeaker is placed horizontally
 
-3. - - Strong sound source interference nearby **: Keep away from fans, speakers and other equipment
+3. **Strong sound source interference nearby**: Keep away from fans, speakers and other equipment
 
 4. Adjust the trigger threshold: Raise the '-- threshold' parameter.
 
@@ -1608,43 +1602,43 @@ The system has built-in joint limit protection, the following table is for refer
 
 ### 10.2 Electrical Safety
 
--**No live plugging and unplugging**: Before plugging and unplugging the XT30 2 2 power interface, the power must be turned off first
+- **No live plugging and unplugging**: Before plugging and unplugging the XT30 2 2 power interface, the power must be turned off first
 
--**No motor hot plug**: Do not plug or unplug the motor cable when the power is on
+- **No motor hot plug**: Do not plug or unplug the motor cable when the power is on
 
--**Use the correct power supply**: Only 24V 15A power supply can be used, using other power supplies may cause damage to the equipment
+- **Use the correct power supply**: Only 24V 15A power supply can be used, using other power supplies may cause damage to the equipment
 
--**Avoid humid environment**: Do not use in humid, dusty, and high temperature environments
+- **Avoid humid environment**: Do not use in humid, dusty, and high temperature environments
 
--**Check the cable**: Check whether the power cord and signal line are intact and damaged before use
+- **Check the cable**: Check whether the power cord and signal line are intact and damaged before use
 
 ### 10.3 use environment safety
 
--**Minors need to use under adult supervision**: the mechanical arm has a certain strength, improper operation may cause injury
+- **Minors need to use under adult supervision**: the mechanical arm has a certain strength, improper operation may cause injury
 
--**Stable workbench**: Ensure that the robotic arm is fixed on a stable horizontal table
+- **Stable workbench**: Ensure that the robotic arm is fixed on a stable horizontal table
 
--**Adequate space**: At least 1 meter of safe space is reserved around the robotic arm
+- **Adequate space**: At least 1 meter of safe space is reserved around the robotic arm
 
--**Good lighting**: Easy to observe the operating status of the robotic arm
+- **Good lighting**: Easy to observe the operating status of the robotic arm
 
--**Keep away from water sources**: Electronic equipment and water are not accessible
+- **Keep away from water sources**: Electronic equipment and water are not accessible
 
 ### 10.4 motor reset safety instructions
 
 Before motor reset:
 
--2 tooling fixtures (size ≥ 3 inches)
+- 2 tooling fixtures (size ≥ 3 inches)
 
--Maintain a safe distance of at least 1 m during commissioning and operation
+- Maintain a safe distance of at least 1 m during commissioning and operation
 
--It is forbidden to hot plug the motor; the power supply must be disconnected before plugging and unplugging the XT30 2 2 interface
+- It is forbidden to hot plug the motor; the power supply must be disconnected before plugging and unplugging the XT30 2 2 interface
 
--Prohibit motor overload, overspeed operation
+- Prohibit motor overload, overspeed operation
 
--Check wiring and fasteners before equipment start-up
+- Check wiring and fasteners before equipment start-up
 
--Do not use in humid, high temperature, dusty environment
+- Do not use in humid, high temperature, dusty environment
 
 ---
 
@@ -1698,11 +1692,11 @@ The project uses Meta's Llama-3.3-70B large language model, called through the G
 
 In the code, we give the AI a detailed "instruction template" and tell it:
 
--What actions can be performed (turn left, turn right, say hello, etc.)
+- What actions can be performed (turn left, turn right, say hello, etc.)
 
--Meaning of each action
+- Meaning of each action
 
--Output format requirements (JSON)
+- Output format requirements (JSON)
 
 For example, when the user says "help me turn my head to the left:
 
@@ -1803,11 +1797,11 @@ This ensures that the robot arm does not exceed physical limits, avoiding damage
 
 ### 12.6 Community and Support
 
--**GitHub Issues**: If you encounter a problem that is not covered by this document, you can submit an Issue in the project GitHub repository.
+- **GitHub Issues**: If you encounter a problem that is not covered by this document, you can submit an Issue in the project GitHub repository.
 
--**Seeed Studio Forum**:https://forum.seeedstudio.com/ (reSpeaker related technical discussions)
+- **Seeed Studio Forum**:https://forum.seeedstudio.com/ (reSpeaker related technical discussions)
 
--**Groq Discord**:https://discord.gg/groq (API-related issues)
+- **Groq Discord**:https://discord.gg/groq (API-related issues)
 
 ---
 
