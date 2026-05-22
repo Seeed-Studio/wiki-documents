@@ -11,13 +11,13 @@ keywords:
   - audio en vivo
   - tono sinusoidal
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_examples_sound_play/
 ---
 
@@ -40,6 +40,6 @@ python sound_play.py --live --backend webrtc --tone-hz 440
 - `--wav <path>`: Ruta a un archivo WAV para reproducir.
 - `--live`: Enviar un tono sinusoidal continuo.
 - `--tone-hz <freq>`: Frecuencia de la onda sinusoidal en Hz (solo en modo `--live`, valor predeterminado: 440).
-- `--backend`: Backend de medios a utilizar (`default_no_video`, `gstreamer_no_video` o `webrtc`).
+- `--backend`: Backend de medios a usar (`default`, `local` o `webrtc`).
 
-Consulta el ejemplo completo en: [sound_play.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/sound_play.py)
+Consulta el ejemplo completo en: [sound_play.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/sound_play.py)

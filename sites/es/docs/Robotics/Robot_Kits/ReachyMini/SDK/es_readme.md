@@ -4,32 +4,32 @@ title: Reachy Mini SDK
 slug: /reachymini_sdk_readme
 keywords:
   - sdk
-  - quick start
+  - inicio rápido
   - python
-  - code examples
-  - tutorials
-  - getting started
-  - robot control
+  - ejemplos de código
+  - tutoriales
+  - primeros pasos
+  - control de robots
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
+createdAt: '2026-02-27'
 updatedAt: '2026-02-28'
 url: https://wiki.seeedstudio.com/es/reachymini_sdk_readme/
 ---
 
-# Crea, juega e innova con Reachy Mini 🤖
+# Construye, juega e innova con Reachy Mini 🤖
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/h2lyqR2eMyM"
-  frameborder="0"
-  allowfullscreen
-/>
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=h2lyqR2eMyM" target="_blank">
+    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style={{border: '1px solid #ddd', borderRadius: '8px'}} />
+    <p><i>▶️ 点击在 YouTube 上观看：Reachy Mini SDK 运行指南</i></p>
+  </a>
+</div>
 
 ## ⚡️ Vista rápida
 Controla tu robot con solo **unas pocas líneas de código**:
@@ -46,42 +46,33 @@ with ReachyMini() as mini:
     )
 ```
 
-## 🚀 Primeros pasos
-
-:::tip New to Reachy Mini?
-Sigue estas guías en orden:
-:::
-
-* **[Installation](https://wiki.seeedstudio.com/es/reachymini_sdk_installation)**: 5 minutos para configurar tu ordenador
-* **[Quickstart Guide](https://wiki.seeedstudio.com/es/reachymini_sdk_quickstart)**: Ejecuta tu primer comportamiento en Reachy Mini
-* **[Python SDK](https://wiki.seeedstudio.com/es/reachymini_sdk_python-sdk)**: Aprende a moverte, ver, hablar y escuchar.
-* **[AI Integrations](https://wiki.seeedstudio.com/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publica en Hugging Face.
-* **[Core Concepts](https://wiki.seeedstudio.com/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+## 🚀 Comenzar
+* **[Instalación](/es/reachymini_sdk_installation)**: 5 minutos para configurar tu ordenador
+* **[Guía de inicio rápido](/es/reachymini_sdk_quickstart)**: Ejecuta tu primer comportamiento en Reachy Mini
+* **[SDK de Python](/es/reachymini_sdk_python-sdk)**: Aprende a moverte, ver, hablar y escuchar.
+* **[Integraciones de IA](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Creación y publicación de Apps](/es/reachymini_sdk_apps)**: Crea, prueba, publica y depura aplicaciones de Reachy Mini.
+* **[Conceptos clave](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
 
 ## 📂 Ejemplos de código
 
-:::info Listo para ejecutar
-Proporcionamos una colección de scripts listos para ejecutar que te ayudarán a entender cómo usar funciones específicas del robot.
-:::
+Proporcionamos una colección de scripts listos para ejecutar para ayudarte a entender cómo utilizar funciones específicas del robot.
 
-[**👉 Explora la carpeta de ejemplos**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
+[**👉 Explorar la carpeta de ejemplos**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🤖 Desarrollo asistido por IA
 
-:::tip For AI coding agents
-¿Usas un agente de programación con IA (Claude Code, Codex, Copilot, etc.)? Puedes empezar a crear apps de inmediato. Pega este prompt en tu agente:
-:::
+¿Usas un agente de programación con IA (Claude Code, Codex, Copilot, etc.)? Puedes empezar a crear aplicaciones de inmediato. Pega esta instrucción en tu agente:
 
-> *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/develop/AGENTS.md*
+> *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/main/AGENTS.md*
 
 Esta guía [**AGENTS.md**](/es/reachymini_agents) proporciona a los agentes de IA todo lo que necesitan: patrones del SDK, buenas prácticas, aplicaciones de ejemplo y habilidades paso a paso.
 
-## ❓ Resolución de problemas
+## ❓ Solución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y preguntas frecuentes](https://wiki.seeedstudio.com/es/reachymini_troubleshooting)**
+¿Tienes algún problema? 👉 **[Consulta la guía de solución de problemas y preguntas frecuentes](/es/reachymini_troubleshooting)**
 
 ## 💬 Comunidad
-
 * [Discord](https://discord.gg/Y7FgMqHsub) - Obtén ayuda y comparte proyectos.
 * [Hugging Face Spaces](https://huggingface.co/spaces?q=reachy_mini) - Descubre aplicaciones de la comunidad.
-* [GitHub Discussions](https://github.com/pollen-robotics/reachy_mini/discussions) - Solicitudes de funciones y reporte de errores.
+* [GitHub Discussions](https://github.com/pollen-robotics/reachy_mini/discussions) - Solicitudes de funciones y errores.
