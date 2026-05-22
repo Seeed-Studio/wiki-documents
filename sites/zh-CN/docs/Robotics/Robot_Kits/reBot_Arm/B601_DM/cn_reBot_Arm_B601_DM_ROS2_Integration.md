@@ -1,5 +1,5 @@
 ---
-description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂、夹爪、轨迹接口、重力补偿和 RViz 可视化集成。
+description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂控制、RViz 可视化和 MoveIt2 集成。
 title: reBot Arm B601-DM ROS2 集成
 keywords:
   - reBot Arm
@@ -37,14 +37,17 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
     <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
     <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Hardware-B601--DM-lightgrey.svg" alt="Hardware" />
 </p>
 
 <p align="center">
-  <strong>ROS2 控制 · 夹爪控制 · 标准轨迹接口 · 重力补偿 · RViz 可视化 · 全开源</strong>
+  <strong>ROS2 控制 · RViz 可视化 · MoveIt2 支持</strong>
 </p>
 
 本教程介绍如何在 reBot Arm B601-DM 上运行 ROS2 控制工作空间 `rebotarm_ros2`。该工作空间将底层 `reBotArm_control_py` Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、视觉抓取、RViz 可视化和二次开发流程。
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1cHLU67EfN&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 本文默认以 `Ubuntu 24.04 + ROS2 Jazzy + Python 3.12` 为主要环境。ROS2 Humble / Ubuntu 22.04 可参考相同流程使用。
@@ -243,7 +246,9 @@ rebotarmcontroller MoveToPose
 
 ## 快速启动
 
+:::caution
 在正式开始使用机械臂前请注意： **机械臂的控制器具有较高自由度，启用控制器或者给机械臂上电前务必注意械臂工作空间内无人和障碍物。同时，请严格审查每一次对机械臂的运动控制，避免出现意外。严禁危险操作，造成后果自负。**
+:::
 
 ### 启动完整系统
 
@@ -315,7 +320,7 @@ ros2 run rebotarmcontroller reBotArmController
 ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 ```
 
-此时 `/rebotarm/joint_states` 会变为 `/left_arm/joint_states`。命名空间只影响 ROS graph 中的 topic、service、action 名字，不会自动修改 URDF 中的 TF frame 名称。
+此时 `/rebotarm/joint_states` 会变为 `/left_arm/joint_states`。
 
 ## 常用 API
 
