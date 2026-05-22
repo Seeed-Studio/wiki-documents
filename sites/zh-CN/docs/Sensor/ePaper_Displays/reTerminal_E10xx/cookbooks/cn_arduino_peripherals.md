@@ -1,46 +1,46 @@
 ---
-description: Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — onboard hardware peripheral examples including LED, buzzer, three user buttons, SHT4x temperature/humidity sensor, battery monitoring, microSD card, and an end-to-end image pipeline (JPEG / BMP / PNG → dither → ePaper) for all four panel variants.
-title: 'Arduino Cookbook: Onboard Peripherals (reTerminal E Series)'
+description: 适用于 reTerminal E1001 / E1002 / E1003 / E1004 的 Arduino 菜谱——包含板载硬件外设示例，如 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池监测、microSD 卡，以及一个端到端图像处理流水线（JPEG / BMP / PNG → 抖动 → 电子纸）覆盖全部四种面板版本。
+title: 'Arduino 菜谱：板载外设（reTerminal E 系列）'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals
 sidebar_position: 2
-sidebar_label: Arduino – Peripherals
+sidebar_label: Arduino – 外设
 last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
 updatedAt: '2026-05-21'
-url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals/
+url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino Cookbook: Onboard Peripherals (reTerminal E Series)
+# Arduino 菜谱：板载外设（reTerminal E 系列）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
-:::tip Looking for the display side?
-This page focuses on **driving the onboard hardware peripherals** of the reTerminal E Series with Arduino. If you want to render text, graphics, or images on the ePaper screen instead, head over to **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)**.
+:::tip 在找显示相关内容？
+本页重点介绍如何使用 Arduino **驱动 reTerminal E 系列的板载硬件外设**。如果你想在电子纸屏幕上渲染文本、图形或图像，请前往 **[Arduino 菜谱：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)**。
 :::
 
-## Introduction
+## 介绍
 
-The reTerminal E Series is more than just an ePaper screen — every model also exposes an onboard LED, a buzzer, three user buttons, an SHT4x temperature & humidity sensor, battery voltage monitoring, and a microSD card slot. This cookbook collects ready-to-flash Arduino examples for each of those peripherals, plus an end-to-end image pipeline that loads a JPEG / BMP / PNG file from the SD card, dithers it for the panel's palette, and renders it on the ePaper screen — one ready-made sketch per panel variant (E1001 BW, E1001 Gray4, E1002, E1003, E1004).
+reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提供了板载 LED、蜂鸣器、三个用户按键、SHT4x 温湿度传感器、电池电压监测以及 microSD 卡槽。本菜谱收集了针对这些外设的可直接烧录的 Arduino 示例，外加一个端到端图像处理流水线：从 SD 卡加载 JPEG / BMP / PNG 文件，为面板的调色板进行抖动处理，并将其渲染到电子纸屏幕上——每种面板版本（E1001 BW、E1001 Gray4、E1002、E1003、E1004）都提供一份现成的示例草图。
 
-What this cookbook covers:
+本菜谱涵盖内容：
 
-- **LED control** on GPIO6 (inverted logic).
-- **Buzzer** alerts and music tones on GPIO45.
-- **Three user buttons** (KEY0 / KEY1 / KEY2) with debounced state detection.
-- **SHT4x sensor** over I²C (GPIO19 SDA / GPIO20 SCL) using the Sensirion library.
-- **Battery voltage monitoring** through the ADC + enable-pin circuit.
-- **microSD card** mount / detect / file listing on the shared SPI bus.
-- **Advanced example — SD-card image pipeline**: pick any JPEG / BMP / PNG on the SD card, run it through one of five built-in dithering algorithms, and render it on the panel with configurable anchor, fit mode and scale.
+- **LED 控制**，使用 GPIO6（反向逻辑）。
+- **蜂鸣器** 警报和音乐音调，使用 GPIO45。
+- **三个用户按键**（KEY0 / KEY1 / KEY2），带消抖状态检测。
+- 通过 I²C（GPIO19 SDA / GPIO20 SCL）使用 Sensirion 库的 **SHT4x 传感器**。
+- 通过 ADC + 使能引脚电路进行 **电池电压监测**。
+- 在共享 SPI 总线上进行 **microSD 卡** 挂载 / 检测 / 文件列出。
+- **高级示例——SD 卡图像流水线**：从 SD 卡中选择任意 JPEG / BMP / PNG 文件，使用五种内置抖动算法之一进行处理，并以可配置的锚点、适配模式和缩放比例将其渲染到面板上。
 
-### Materials Required
+### 所需材料
 
-This cookbook applies to all four reTerminal E Series models. Pick whichever device you have on hand:
+本菜谱适用于全部四款 reTerminal E 系列型号。请选择你手头拥有的设备：
 
 <div class="table-center">
   <table align="center">
@@ -59,46 +59,46 @@ This cookbook applies to all four reTerminal E Series models. Pick whichever dev
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-### Prerequisites
+### 前置准备
 
-Before running any example below, you should already have:
+在运行下面的任何示例之前，你应该已经完成：
 
-- The **Arduino IDE** installed with the **ESP32 board package** and the **XIAO_ESP32S3** board selected.
-- A working **USB-C data cable** and the correct serial port selected.
-- Verified that you can flash a basic sketch to the device — see the environment setup in [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino#environmental-preparation) if you haven't done this yet.
+- 已安装 **Arduino IDE**，并安装好 **ESP32 开发板包**，选择了 **XIAO_ESP32S3** 开发板。
+- 准备好一根可用的 **USB-C 数据线**，并选择了正确的串口。
+- 已确认可以向设备烧录一个基础草图——如果尚未完成，请参考 [Arduino 菜谱：电子纸显示](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino#环境准备) 中的环境搭建部分。
 
-All sketches in this cookbook print debug information through `Serial1` on pins **GPIO44 (RX) / GPIO43 (TX)** at **115200 baud**. Open the Arduino Serial Monitor and select the matching port and baud rate to follow along.
+本菜谱中的所有草图都会通过 `Serial1` 在 **GPIO44（RX）/ GPIO43（TX）** 引脚上以 **115200 波特率** 输出调试信息。请打开 Arduino 串口监视器，并选择匹配的端口和波特率以便查看输出。
 
-## LED Control
+## LED 控制
 
-The reTerminal E Series has an onboard LED that can be controlled via GPIO. Note that the LED logic is inverted (LOW = ON, HIGH = OFF). The LED pin differs across models:
+reTerminal E 系列带有一个可通过 GPIO 控制的板载 LED。请注意，该 LED 逻辑是反向的（LOW = 亮，HIGH = 灭）。不同型号的 LED 引脚如下：
 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>Model</th>
+			<th>型号</th>
 			<th>LED GPIO</th>
 		</tr>
 		<tr>
@@ -131,9 +131,9 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("LED Control Example");
-  
+
   // Configure LED pin
   pinMode(LED_PIN, OUTPUT);
 }
@@ -143,7 +143,7 @@ void loop() {
   digitalWrite(LED_PIN, LOW);
   Serial1.println("LED ON");
   delay(1000);
-  
+
   // Turn LED OFF (HIGH because it's inverted)
   digitalWrite(LED_PIN, HIGH);
   Serial1.println("LED OFF");
@@ -166,9 +166,9 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("LED Control Example");
-  
+
   // Configure LED pin
   pinMode(LED_PIN, OUTPUT);
 }
@@ -178,7 +178,7 @@ void loop() {
   digitalWrite(LED_PIN, LOW);
   Serial1.println("LED ON");
   delay(1000);
-  
+
   // Turn LED OFF (HIGH because it's inverted)
   digitalWrite(LED_PIN, HIGH);
   Serial1.println("LED OFF");
@@ -201,9 +201,9 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("LED Control Example");
-  
+
   // Configure LED pin
   pinMode(LED_PIN, OUTPUT);
 }
@@ -213,7 +213,7 @@ void loop() {
   digitalWrite(LED_PIN, LOW);
   Serial1.println("LED ON");
   delay(1000);
-  
+
   // Turn LED OFF (HIGH because it's inverted)
   digitalWrite(LED_PIN, HIGH);
   Serial1.println("LED OFF");
@@ -224,9 +224,9 @@ void loop() {
 </TabItem>
 </Tabs>
 
-## Buzzer Control
+## 蜂鸣器控制
 
-The reTerminal E Series includes a buzzer on GPIO45 that can produce various tones and alert sounds.
+reTerminal E 系列在 GPIO45 上集成了一个蜂鸣器，可以发出各种音调和提示音。
 
 ```cpp
 // reTerminal E Series - Buzzer Control Example
@@ -240,7 +240,7 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("Buzzer Control Example");
 }
 
@@ -248,18 +248,18 @@ void loop() {
   Serial1.println("Simple beep");
   tone(BUZZER_PIN, 1000, 100);  // 1kHz for 100ms
   delay(1000);
-  
+
   Serial1.println("Double beep");
   for (int i = 0; i < 2; i++) {
     tone(BUZZER_PIN, 2000, 50);  // 2kHz for 50ms
     delay(100);
   }
   delay(900);
-  
+
   Serial1.println("Long beep");
   tone(BUZZER_PIN, 800, 500);  // 800Hz for 500ms
   delay(1500);
-  
+
   Serial1.println("Alarm sound");
   for (int i = 0; i < 5; i++) {
     tone(BUZZER_PIN, 1500, 100);
@@ -271,10 +271,10 @@ void loop() {
 }
 ```
 
-**Buzzer with Tones**
+**带音调的蜂鸣器**
 
 <details>
-<summary>Click to expand the full Buzzer example code</summary>
+<summary>点击展开完整蜂鸣器示例代码</summary>
 
 ```cpp
 #define SERIAL_RX 44
@@ -399,9 +399,9 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("Buzzer Control Example");
-  
+
   // Configure buzzer pin
   pinMode(BUZZER_PIN, OUTPUT);
 }
@@ -417,26 +417,26 @@ void loop() {
 
 </details>
 
-**Buzzer Functions:**
+**蜂鸣器功能：**
 
-- `digitalWrite()`: Simple ON/OFF control for basic beeps
-- `tone(pin, frequency, duration)`: Generate specific frequencies for melodies or alerts
-- `noTone(pin)`: Stop tone generation
+- `digitalWrite()`: 用于基本蜂鸣的简单开/关控制
+- `tone(pin, frequency, duration)`: 生成特定频率，用于旋律或警报
+- `noTone(pin)`: 停止音调生成
 
-**Common Alert Patterns:**
+**常见警报模式：**
 
-- Single beep: Confirmation
-- Double beep: Warning
-- Triple beep: Error
-- Continuous: Critical alert
+- 单声蜂鸣：确认
+- 双声蜂鸣：警告
+- 三声蜂鸣：错误
+- 持续蜂鸣：严重警报
 
-## User Buttons
+## 用户按键
 
-The reTerminal E Series features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
+reTerminal E 系列配备了三个用户可编程按键，可用于各种控制用途。本节演示如何读取按键状态，并使用 Arduino 响应按键按下。
 
-The reTerminal E Series has three buttons connected to the ESP32-S3 via KEY0 (GPIO3), KEY1 (GPIO4), and KEY2 (GPIO5). All buttons are active-low, meaning they read LOW when pressed and HIGH when released.
+reTerminal E 系列有三个按键，通过 KEY0（GPIO3）、KEY1（GPIO4）和 KEY2（GPIO5）连接到 ESP32-S3。所有按键为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
 
-The physical layout and function of these buttons differ between models:
+这些按键在不同型号上的物理布局和功能有所不同：
 
 <div class="table-center">
 	<table align="center">
@@ -447,29 +447,29 @@ The physical layout and function of these buttons differ between models:
 		</tr>
 		<tr>
 			<td><strong>KEY0</strong> (GPIO3)</td>
-			<td>Right button (Green Button)</td>
-			<td>Right direction button (front)</td>
+			<td>右侧按键（绿色按键）</td>
+			<td>右方向按键（正面）</td>
 		</tr>
 		<tr>
 			<td><strong>KEY1</strong> (GPIO4)</td>
-			<td>Middle button</td>
-			<td>Left direction button (front)</td>
+			<td>中间按键</td>
+			<td>左方向按键（正面）</td>
 		</tr>
 		<tr>
 			<td><strong>KEY2</strong> (GPIO5)</td>
-			<td>Left button</td>
-			<td>Refresh button (front-left)</td>
+			<td>左侧按键</td>
+			<td>刷新按键（左前方）</td>
 		</tr>
 	</table>
 </div>
 
 :::note
-E1004 has buttons on both the front and back of the device. The KEY0–KEY2 connections listed above correspond to the buttons on the front panel.
+E1004 在设备的正面和背面都有按键。上述 KEY0–KEY2 的连接对应的是前面板上的按键。
 :::
 
-### Basic Button Reading Example
+### 基本按键读取示例
 
-This example demonstrates how to detect button presses and print messages to the serial monitor.
+此示例演示如何检测按键按下，并向串口监视器打印消息。
 
 ```cpp
 // reTerminal E Series - Button Test
@@ -491,24 +491,24 @@ void setup() {
   while (!Serial1) {
     delay(10); // Wait for serial port to connect
   }
-  
+
   Serial1.println("=================================");
   Serial1.println("reTerminal E Series - Button Test");
   Serial1.println("=================================");
   Serial1.println("Press any button to see output");
   Serial1.println();
-  
+
   // Configure button pins as inputs
   // Hardware already has pull-up resistors, so use INPUT mode
   pinMode(BUTTON_KEY0, INPUT);
   pinMode(BUTTON_KEY1, INPUT);
   pinMode(BUTTON_KEY2, INPUT);
-  
+
   // Read initial states
   lastKey0State = digitalRead(BUTTON_KEY0);
   lastKey1State = digitalRead(BUTTON_KEY1);
   lastKey2State = digitalRead(BUTTON_KEY2);
-  
+
   Serial1.println("Setup complete. Ready to detect button presses...");
 }
 
@@ -517,7 +517,7 @@ void loop() {
   bool key0State = digitalRead(BUTTON_KEY0);
   bool key1State = digitalRead(BUTTON_KEY1);
   bool key2State = digitalRead(BUTTON_KEY2);
-  
+
   // Check KEY0
   if (key0State != lastKey0State) {
     if (key0State == LOW) {
@@ -528,7 +528,7 @@ void loop() {
     lastKey0State = key0State;
     delay(50); // Debounce delay
   }
-  
+
   // Check KEY1
   if (key1State != lastKey1State) {
     if (key1State == LOW) {
@@ -539,7 +539,7 @@ void loop() {
     lastKey1State = key1State;
     delay(50); // Debounce delay
   }
-  
+
   // Check KEY2
   if (key2State != lastKey2State) {
     if (key2State == LOW) {
@@ -550,34 +550,34 @@ void loop() {
     lastKey2State = key2State;
     delay(50); // Debounce delay
   }
-  
+
   delay(10); // Small delay to prevent excessive CPU usage
 }
 ```
 
-**How the Code Works:**
+**代码工作原理：**
 
-1. **Pin Definition**: We define constants for each button's GPIO pin number.
+1. **引脚定义**：我们为每个按键的 GPIO 引脚号定义常量。
 
-2. **Pin Configuration**: In `setup()`, we configure each button pin as `INPUT`.
+2. **引脚配置**：在 `setup()` 中，将每个按键引脚配置为 `INPUT`。
 
-3. **Button Detection**: In `loop()`, we continuously check each button's state using `digitalRead()`. When a button is pressed, the pin reads LOW.
+3. **按键检测**：在 `loop()` 中，使用 `digitalRead()` 持续检查每个按键的状态。当按键被按下时，引脚读取为 LOW。
 
-4. **Debouncing**: A simple 200ms delay after each button press prevents multiple detections from a single press due to mechanical bounce.
+4. **消抖**：在每次按键按下后加入简单的 200ms 延时，以防止由于机械抖动导致一次按下被多次检测。
 
-5. **Serial Output**: Each button press triggers a message to the serial monitor for debugging and verification.
+5. **串口输出**：每次按键按下都会向串口监视器发送一条消息，用于调试和验证。
 
 ---
 
-**Step 1.** Upload the code to your reTerminal E Series device.
+**步骤 1.** 将代码上传到你的 reTerminal E 系列设备。
 
-**Step 2.** Open the Serial Monitor in Arduino IDE (Tools > Serial Monitor).
+**步骤 2.** 在 Arduino IDE 中打开串口监视器（Tools > Serial Monitor）。
 
-**Step 3.** Set the baud rate to 115200.
+**步骤 3.** 将波特率设置为 115200。
 
-**Step 4.** Press each button and observe the output in the Serial Monitor.
+**步骤 4.** 依次按下每个按键，并观察串口监视器中的输出。
 
-Expected output when pressing buttons:
+按下按键时的预期输出：
 
 ```
 =================================
@@ -593,18 +593,18 @@ KEY2 (GPIO5) pressed!
 KEY2 (GPIO5) released!
 ```
 
-## Environmental Sensor (SHT4x)
+## 环境传感器（SHT4x）
 
-The reTerminal E Series includes an integrated SHT4x temperature and humidity sensor connected via I2C.
+reTerminal E 系列集成了一个通过 I2C 连接的 SHT4x 温湿度传感器。
 
-### Installing Required Libraries
+### 安装所需库
 
-Install two libraries via Arduino Library Manager (**Tools > Manage Libraries...**):
+通过 Arduino 库管理器（**Tools > Manage Libraries...**）安装两个库：
 
-1. Search and install "**Sensirion I2C SHT4x**"
-2. Search and install "**Sensirion Core**" (dependency)
+1. 搜索并安装 "**Sensirion I2C SHT4x**"
+2. 搜索并安装 "**Sensirion Core**"（依赖库）
 
-### Basic Temperature and Humidity Example
+### 基本温湿度示例
 
 ```cpp
 // reTerminal E Series - SHT40 Temperature & Humidity Sensor Example
@@ -631,10 +631,10 @@ void setup() {
     }
 
     Serial1.println("SHT4x Basic Example");
-    
+
     // Initialize I2C with custom pins
     Wire.begin(I2C_SDA, I2C_SCL);
-    
+
     uint16_t error;
     char errorMessage[256];
 
@@ -664,10 +664,10 @@ void loop() {
 
     float temperature;
     float humidity;
-    
+
     // Measure temperature and humidity with high precision
     error = sht4x.measureHighPrecision(temperature, humidity);
-    
+
     if (error) {
         Serial1.print("Error trying to execute measureHighPrecision(): ");
         errorToString(error, errorMessage, 256);
@@ -683,21 +683,21 @@ void loop() {
 }
 ```
 
-**Setup Function:**
+**Setup 函数：**
 
-1. **Serial Initialization**: Uses `Serial1` with pins 44 (RX) and 43 (TX) specific to reTerminal E Series
-2. **I2C Initialization**: Configures I2C with pins 19 (SDA) and 20 (SCL)
-3. **Sensor Initialization**: Calls `sht4x.begin(Wire, 0x44)` to initialize the SHT4x sensor at address 0x44
-4. **Serial Number Reading**: Reads and displays the sensor's unique serial number for verification
+1. **串口初始化**：使用 `Serial1`，引脚 44（RX）和 43（TX）为 reTerminal E 系列特定引脚
+2. **I2C 初始化**：使用引脚 19（SDA）和 20（SCL）配置 I2C
+3. **传感器初始化**：调用 `sht4x.begin(Wire, 0x44)` 在地址 0x44 初始化 SHT4x 传感器
+4. **序列号读取**：读取并显示传感器的唯一序列号以进行验证
 
-**Loop Function:**
+**Loop 函数：**
 
-1. **Delay**: Waits 5 seconds between measurements to avoid oversampling
-2. **Measurement**: Uses `measureHighPrecision()` for accurate readings (takes ~8.3ms)
-3. **Error Handling**: Checks for errors and converts them to readable messages using `errorToString()`
-4. **Display Results**: Prints temperature in Celsius and relative humidity percentage
+1. **延时**：在两次测量之间等待 5 秒，以避免过度采样
+2. **测量**：使用 `measureHighPrecision()` 进行高精度读数（耗时约 8.3ms）
+3. **错误处理**：检查错误并使用 `errorToString()` 将其转换为可读消息
+4. **显示结果**：以摄氏度打印温度，并打印相对湿度百分比
 
-**Expected Output**
+**预期输出**
 
 ```
 SHT4x Basic Example
@@ -708,11 +708,11 @@ Temperature: 27.40°C Humidity: 53.51%
 Temperature: 27.38°C Humidity: 53.37%
 ```
 
-## Battery Management System
+## 电池管理系统
 
-The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
+reTerminal E 系列通过带分压电路的 ADC 引脚实现电池电压监测功能。
 
-### Simple Battery Voltage Monitoring
+### 简单电池电压监测
 
 ```cpp
 // reTerminal E Series - Simple Battery Voltage Reading
@@ -731,17 +731,17 @@ void setup() {
   while (!Serial1) {
     delay(10);
   }
-  
+
   Serial1.println("Battery Voltage Monitor");
-  
+
   // Configure battery monitoring enable pin
   pinMode(BATTERY_ENABLE_PIN, OUTPUT);
   digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Enable battery monitoring
-  
+
   // Configure ADC
   analogReadResolution(12);  // 12-bit resolution
   analogSetPinAttenuation(BATTERY_ADC_PIN, ADC_11db);
-  
+
   delay(100);  // Allow circuit to stabilize
 }
 
@@ -749,34 +749,34 @@ void loop() {
   // Enable battery monitoring
   digitalWrite(BATTERY_ENABLE_PIN, HIGH);
   delay(5);
-  
+
   // Read voltage in millivolts
   int mv = analogReadMilliVolts(BATTERY_ADC_PIN);
-  
+
   // Disable battery monitoring
   digitalWrite(BATTERY_ENABLE_PIN, LOW);
-  
+
   // Calculate actual battery voltage (2x due to voltage divider)
   float batteryVoltage = (mv / 1000.0) * 2;
-  
+
   // Print voltage
   Serial1.print("Battery: ");
   Serial1.print(batteryVoltage, 2);
   Serial1.println(" V");
-  
+
   delay(2000);
 }
 ```
 
-**Code Explanation:**
+**代码说明：**
 
-- GPIO1 reads the divided battery voltage through ADC
-- GPIO21 enables the battery monitoring circuit
-- The actual battery voltage is twice the measured voltage due to the voltage divider
-- For a fully charged LiPo battery, expect around 4.2V
-- When battery is low, voltage drops to around 3.3V
+- GPIO1 通过 ADC 读取分压后的电池电压
+- GPIO21 启用电池监测电路
+- 由于分压器的存在，实际电池电压是测量电压的两倍
+- 对于完全充电的锂聚合物电池，电压大约为 4.2V
+- 当电池电量低时，电压会下降到大约 3.3V
 
-**Expected Output**
+**预期输出**
 
 ```
 Battery Voltage Monitor
@@ -786,26 +786,26 @@ Battery: 4.19 V
 Battery: 4.18 V
 ```
 
-## Using the MicroSD Card
+## 使用 MicroSD 卡
 
-For applications requiring additional storage, such as a digital photo frame or data logging, the reTerminal E Series includes a MicroSD card slot.
+对于需要额外存储空间的应用，例如数码相框或数据记录，reTerminal E 系列配备了一个 MicroSD 卡槽。
 
-Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
+如果计划将设备用作数码相框或需要额外存储空间，请插入一张 microSD 卡。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-The reTerminal E Series only supports MicroSD cards up to 64GB formatted with the **Fat32** file system.
+reTerminal E 系列仅支持容量不超过 64GB 且使用 **Fat32** 文件系统格式化的 MicroSD 卡。
 :::
 
-### Basic SD Card Operations: Listing Files
+### 基本 SD 卡操作：列出文件
 
-This example demonstrates how to initialize the SD card, detect when it is inserted or removed, and list all the files and directories in its root. The SD card power enable pin (`SD_EN_PIN`) differs across models:
+本示例演示如何初始化 SD 卡、检测其插入或移除状态，并列出其根目录中的所有文件和文件夹。SD 卡电源使能引脚（`SD_EN_PIN`）在不同型号之间有所不同：
 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th>Model</th>
+			<th>型号</th>
 			<th>SD_EN_PIN</th>
 			<th>GPIO</th>
 		</tr>
@@ -822,13 +822,13 @@ This example demonstrates how to initialize the SD card, detect when it is inser
 	</table>
 </div>
 
-All other SD card pins (DET, CS, MOSI, MISO, SCK) are the same across models. Select the tab for your device and copy the code into your Arduino IDE sketch.
+所有其他 SD 卡引脚（DET、CS、MOSI、MISO、SCK）在各型号之间都是相同的。请选择与你的设备对应的选项卡，并将代码复制到 Arduino IDE 草稿中。
 
 <Tabs>
 <TabItem value="e1001_e1002_e1004" label="E1001 / E1002 / E1004" default>
 
 <details>
-<summary>Click to expand the full SD Card example code</summary>
+<summary>点击展开完整的 SD 卡示例代码</summary>
 
 ```cpp
 #include <SD.h>
@@ -1001,7 +1001,7 @@ void loop() {
 <TabItem value="e1003" label="E1003">
 
 <details>
-<summary>Click to expand the full SD Card example code</summary>
+<summary>点击展开完整的 SD 卡示例代码</summary>
 
 ```cpp
 #include <SD.h>
@@ -1173,27 +1173,27 @@ void loop() {
 </TabItem>
 </Tabs>
 
-#### Code Explanation
+#### 代码说明
 
-- **Pin Definitions:** The code begins by defining the GPIO pins used for the MicroSD card slot. Note that the SPI pins (`MOSI`, `SCK`) are shared with the e-paper display, but a separate Chip Select (`SD_CS_PIN`) and a dedicated SPI instance (`spiSD`) ensure they can be used independently.
-- **SPI Initialization:** We instantiate a new SPI object, `spiSD(HSPI)`, to use the ESP32's second hardware SPI controller (HSPI). This is best practice to avoid conflicts with other SPI devices.
-- **Card Detection:** The `isCardInserted()` function reads the `SD_DET_PIN`. On the reTerminal hardware, this pin is pulled LOW when a card is present.
-- **Mount/Unmount:** The `mountSD()` function enables power to the card, configures the HSPI bus with the correct pins, and calls `SD.begin()` to initialize the file system. `unmountSD()` releases the resources.
-- **File Listing:** `listRoot()` opens the root directory (`/`), and `listDir()` is a recursive function that traverses the file system, printing the names of all files and directories.
-- **`setup()`:** Initializes `Serial1` for output, configures the card detection pin, and performs an initial check to see if a card is already inserted when the device powers on.
-- **`loop()`:** Instead of constantly checking the card, the code uses a non-blocking timer (`millis()`) to check for a change in the card's status once per second. If a change is detected (card inserted or removed), it mounts or unmounts the card and prints the status to the serial monitor.
+- **引脚定义：** 代码首先定义了用于 MicroSD 卡槽的 GPIO 引脚。请注意，SPI 引脚（`MOSI`、`SCK`）与电子纸显示屏共享，但通过单独的片选引脚（`SD_CS_PIN`）和独立的 SPI 实例（`spiSD`），可以确保它们被独立使用。
+- **SPI 初始化：** 我们实例化了一个新的 SPI 对象 `spiSD(HSPI)`，以使用 ESP32 的第二个硬件 SPI 控制器（HSPI）。这是避免与其他 SPI 设备冲突的最佳实践。
+- **卡检测：** `isCardInserted()` 函数读取 `SD_DET_PIN`。在 reTerminal 硬件上，当卡存在时，该引脚会被拉低。
+- **挂载/卸载：** `mountSD()` 函数为卡供电，使用正确的引脚配置 HSPI 总线，并调用 `SD.begin()` 初始化文件系统。`unmountSD()` 用于释放资源。
+- **文件列出：** `listRoot()` 打开根目录（`/`），而 `listDir()` 是一个递归函数，用于遍历文件系统并打印所有文件和目录的名称。
+- **`setup()`：** 初始化用于输出的 `Serial1`，配置卡检测引脚，并在设备上电时执行一次初始检查，以查看是否已经插入了卡。
+- **`loop()`：** 代码没有持续不断地检查卡，而是使用非阻塞定时器（`millis()`）每秒检查一次卡状态是否发生变化。如果检测到变化（插入或移除卡），则挂载或卸载该卡，并将状态打印到串口监视器。
 
-#### Expected Results
+#### 预期结果
 
-1. Upload the code to your reTerminal.
-2. Open the Arduino IDE's Serial Monitor (**Tools > Serial Monitor**).
-3. Make sure the baud rate is set to **115200**.
+1. 将代码上传到你的 reTerminal。
+2. 打开 Arduino IDE 的串口监视器（**Tools > Serial Monitor**）。
+3. 确保波特率设置为 **115200**。
 
-You will see output corresponding to the following actions:
+你将看到与以下操作相对应的输出：
 
-- **On startup with no card:** The monitor will print `[SD] No card detected at startup...`
-- **When you insert a card:** The monitor will print `[SD] Card inserted.`, followed by a full listing of all files and directories on the card.
-- **When you remove the card:** The monitor will print `[SD] Card removed.`
+- **启动时没有插卡：** 监视器会打印 `[SD] No card detected at startup...`
+- **当你插入一张卡时：** 监视器会打印 `[SD] Card inserted.`，随后会完整列出卡上所有文件和目录。
+- **当你移除该卡时：** 监视器会打印 `[SD] Card removed.`
 
 ```
 [FILE] live.0.shadowIndexGroups  6 bytes
@@ -1210,58 +1210,58 @@ You will see output corresponding to the following actions:
 [FILE] live.1.indexPostings  4096 bytes
 ```
 
-## Advanced Example: SD Card → ePaper Image Pipeline
+## 高级示例：SD 卡 → 电子纸图像流水线
 
-This is the flagship example for the reTerminal E Series. It loads a **JPEG / BMP / PNG** file from the microSD card, runs it through a configurable dithering pipeline, and renders the result on the ePaper panel — with knobs for **dithering algorithm**, **brightness**, **anchor position** and **fit / scale**. The same code structure works on all four panel variants; what changes per model is only the output color depth (1-bit BW, 2-bit Gray4, 4-bit Gray16, or 6-color E6).
+这是 reTerminal E 系列的旗舰示例。它从 microSD 卡中加载一个 **JPEG / BMP / PNG** 文件，将其送入可配置的抖动处理流水线，并将结果渲染到电子纸面板上——你可以调节 **抖动算法**、**亮度**、**锚点位置** 以及 **适配 / 缩放**。同一套代码结构适用于全部四种面板版本；每个型号唯一变化的是输出色深（1 位黑白、2 位 4 级灰度、4 位 16 级灰度，或 6 色 E6）。
 
-Five ready-to-flash sketches ship with the **Seeed_GFX** library — pick the one that matches your hardware:
+**Seeed_GFX** 库中提供了五个可直接烧录的示例草图——选择与你的硬件匹配的那个：
 
-### Example Index
+### 示例索引
 
 <div class="table-center">
   <table>
     <tr>
-      <th>Device</th>
-      <th>Example sketch</th>
-      <th>Panel resolution</th>
-      <th>Output palette</th>
+      <th>设备</th>
+      <th>示例草图</th>
+      <th>面板分辨率</th>
+      <th>输出调色板</th>
     </tr>
     <tr>
-      <td>reTerminal&nbsp;E1001 (BW)</td>
+      <td>reTerminal&nbsp;E1001（BW）</td>
       <td><code>reTerminal_E1001_SDcard_BW</code></td>
       <td>800 × 480</td>
-      <td>1-bit black / white</td>
+      <td>1 位黑 / 白</td>
     </tr>
     <tr>
-      <td>reTerminal&nbsp;E1001 (Gray4)</td>
+      <td>reTerminal&nbsp;E1001（Gray4）</td>
       <td><code>reTerminal_E1001_SDcard_Gray4</code></td>
       <td>800 × 480</td>
-      <td>2-bit 4-level grayscale</td>
+      <td>2 位 4 级灰度</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1002</td>
       <td><code>reTerminal_E1002_SDcard_Color6</code></td>
       <td>800 × 480</td>
-      <td>6-color (B / W / R / Y / G / B)</td>
+      <td>6 色（B / W / R / Y / G / B）</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1003</td>
       <td><code>reTerminal_E1003_SDcard_Gray16</code></td>
       <td>1872 × 1404</td>
-      <td>4-bit 16-level grayscale</td>
+      <td>4 位 16 级灰度</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1004</td>
       <td><code>reTerminal_E1004_SDcard_Color6</code></td>
       <td>1200 × 1600</td>
-      <td>6-color (B / W / R / Y / G / B)</td>
+      <td>6 色（B / W / R / Y / G / B）</td>
     </tr>
   </table>
 </div>
 
-All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitmap/`](https://github.com/Seeed-Studio/Seeed_GFX/tree/master/examples/ePaper/reTerminal_SDcard_Bitmap). Each folder is **fully self-contained** — no extra libraries to install, just open and flash.
+这五个草图都位于 [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitmap/`](https://github.com/Seeed-Studio/Seeed_GFX/tree/master/examples/ePaper/reTerminal_SDcard_Bitmap) 下。每个文件夹都是**完全自包含**的——无需安装额外库，只需打开并烧录即可。
 
-### What the Pipeline Does
+### 流水线的工作内容
 
 <svg 
   xmlns="http://www.w3.org/2000/svg" 
@@ -1288,11 +1288,11 @@ All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitma
 
   {/* Title */}
   <text x="525" y="40" fontFamily="sans-serif" fontSize="20" fontWeight="bold" fill="#1e293b" textAnchor="middle">
-    Image Processing Pipeline: microSD to ePaper
+    图像处理流水线：microSD 到电子纸
   </text>
 
   {/* ================= NODES ================= */}
-  
+
   {/* Node 1: microSD */}
   <g transform="translate(20, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#3b82f6" strokeWidth="2" filter="url(#shadow)" />
@@ -1313,7 +1313,7 @@ All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitma
   <g transform="translate(460, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#f59e0b" strokeWidth="2" filter="url(#shadow)" />
     <path d="M67 15 l2.3 2.3 -2.89 2.87 1.42 1.42 L70.7 18.7 73 21 V15 h-6z M55 21 l2.3-2.3 2.87 2.89 1.42-1.42 L58.7 17.3 61 15 h-6 v6z m6 12 l-2.3-2.3 2.89-2.87 -1.42-1.42 L57.3 29.3 55 27 v6 h6z m12-6 l-2.3 2.3 -2.87-2.89 -1.42 1.42 2.89 2.87 L73 33 v-6z" fill="#f59e0b" />
-    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Scaled Buffer</text>
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">缩放缓冲区</text>
     <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">scaled RGB888</text>
   </g>
 
@@ -1321,24 +1321,24 @@ All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitma
   <g transform="translate(680, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#8b5cf6" strokeWidth="2" filter="url(#shadow)" />
     <path d="M70 14 c-5.52 0-10 4.48-10 10 s4.48 10 10 10 c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.17-.64-1.6-.39-.41-.61-.98-.61-1.6 0-1.38 1.12-2.5 2.5-2.5 h1.5 c2.21 0 4-1.79 4-4 0-3.86-4.48-7-10-7z m-4 7 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5-3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z" fill="#8b5cf6" />
-    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Palette Buffer</text>
-    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel-palette indices</text>
+    <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">调色板缓冲区</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">面板调色板索引</text>
   </g>
 
   {/* Node 5: ePaper */}
   <g transform="translate(900, 100)">
     <rect x="0" y="0" width="130" height="90" rx="8" fill="#f8fafc" stroke="#10b981" strokeWidth="2" filter="url(#shadow)" />
     <path d="M77 15 H53 c-1.1 0-2 .9-2 2 v14 c0 1.1 .9 2 2 2 h24 c1.1 0 2-.9 2-2 V17 c0-1.1-.9-2-2-2z m0 16 H53 V17 h24 v14z" fill="#10b981" />
-    <text x="65" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">ePaper</text>
-    <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel update</text>
+    <text x="65" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">电子纸</text>
+    <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">面板刷新</text>
   </g>
 
   {/* ================= ARROWS & LABELS ================= */}
-  
+
   {/* Arrow 1: Decode */}
   <g>
     <line x1="160" y1="145" x2="232" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
-    <text x="196" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#3b82f6" textAnchor="middle">decode</text>
+    <text x="196" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#3b82f6" textAnchor="middle">解码</text>
     <text x="196" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">pngle / jpeg / bmp</text>
     {/* Animated Data Packet */}
     <circle cy="145" r="4" fill="#3b82f6">
@@ -1391,14 +1391,14 @@ All five sketches live under [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_Bitma
 
 </svg>
 
-1. **Decode** — file format is detected by magic bytes (`FF D8`, `BM`, or `89 50 4E 47`). A misleading extension is auto-corrected and a warning is logged.
-2. **Resize** (optional) — nearest-neighbor downscale based on `DISPLAY_FIT` / `DISPLAY_SCALE`.
-3. **Dither** — one of five algorithms quantises 24-bit RGB into the panel's tiny palette (2 / 4 / 6 / 16 levels).
-4. **Push** — the quantised buffer is written into the ePaper Sprite at the anchor position, then `epaper.update()` clocks it out to the panel.
+1. **解码（Decode）** — 通过魔数（`FF D8`、`BM` 或 `89 50 4E 47`）检测文件格式。具有误导性的扩展名会被自动纠正，并记录一条警告日志。
+2. **缩放（Resize）**（可选）— 基于 `DISPLAY_FIT` / `DISPLAY_SCALE` 的最近邻降采样。
+3. **抖动（Dither）** — 五种算法之一将 24 位 RGB 量化为面板的微小调色板（2 / 4 / 6 / 16 级）。
+4. **推送（Push）** — 量化后的缓冲区被写入 ePaper Sprite 的锚点位置，然后由 `epaper.update()` 将其时钟输出到面板。
 
-### Step 1 — Open the Example for Your Model
+### 步骤 1 — 打开适用于你型号的示例
 
-In the Arduino IDE: **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap →** *(pick your model)*.
+在 Arduino IDE 中：**File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap →** *(选择你的型号)*。
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
@@ -1468,19 +1468,19 @@ reTerminal_SDcard_Bitmap/
 </TabItem>
 </Tabs>
 
-:::tip Self-contained sketches
-You don't need to install pngle, miniz, or anything else from the Arduino Library Manager. The PNG decoder source ships **inside each example folder**, so the Arduino IDE picks it up automatically when it compiles the sketch.
+:::tip 自包含示例草图
+你不需要从 Arduino Library Manager 安装 pngle、miniz 或任何其他库。PNG 解码器源码就放在**每个示例文件夹内部**，因此 Arduino IDE 在编译草图时会自动将其包含进来。
 :::
 
-### Full Sketch Code
+### 完整草图代码
 
-The complete `.ino` source for each variant is shown below. All user-tunable settings (image path, dithering algorithm, anchor, fit/scale) are in the **USER CONFIGURATION** block near the top — the rest of the file is boilerplate that doesn't normally need editing.
+每个变体的完整 `.ino` 源码如下所示。所有用户可调节的设置（图像路径、抖动算法、锚点、适配/缩放）都位于靠前位置的 **USER CONFIGURATION** 配置块中——文件的其余部分是通常无需编辑的样板代码。
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
 
 <details>
-<summary>Click here to preview the full code — reTerminal_E1001_SDcard_BW.ino</summary>
+<summary>点击此处预览完整代码 — reTerminal_E1001_SDcard_BW.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1679,7 +1679,7 @@ void loop() { delay(1000); }
 <TabItem value="e1001-gray4" label="E1001 Gray4">
 
 <details>
-<summary>Click here to preview the full code — reTerminal_E1001_SDcard_Gray4.ino</summary>
+<summary>点击此处预览完整代码 — reTerminal_E1001_SDcard_Gray4.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1818,7 +1818,7 @@ void loop() { delay(1000); }
 <TabItem value="e1002" label="E1002">
 
 <details>
-<summary>Click here to preview the full code — reTerminal_E1002_SDcard_Color6.ino</summary>
+<summary>点击此处预览完整代码 — reTerminal_E1002_SDcard_Color6.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -1952,7 +1952,7 @@ void loop() { delay(1000); }
 <TabItem value="e1003" label="E1003">
 
 <details>
-<summary>Click here to preview the full code — reTerminal_E1003_SDcard_Gray16.ino</summary>
+<summary>点击此处预览完整代码 — reTerminal_E1003_SDcard_Gray16.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -2089,7 +2089,7 @@ void loop() { delay(1000); }
 <TabItem value="e1004" label="E1004">
 
 <details>
-<summary>Click here to preview the full code — reTerminal_E1004_SDcard_Color6.ino</summary>
+<summary>点击此处预览完整代码 — reTerminal_E1004_SDcard_Color6.ino</summary>
 
 ```cpp
 #include <SPI.h>
@@ -2223,14 +2223,14 @@ void loop() { delay(1000); }
 </TabItem>
 </Tabs>
 
-:::note Simplified vs. full source
-The code blocks above are **slightly condensed** (helper functions inlined, verbose log calls removed) to keep them readable here. The sketches in the library — opened via **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** — contain the full diagnostic logging, complete fit/anchor logic, and all comments.
+:::note 精简版与完整源码
+上面的代码块经过了**轻微精简**（内联了一些辅助函数，移除了冗长的日志调用），以便在此处保持可读性。库中的示例草图——通过 **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** 打开——包含完整的诊断日志、完整的适配/锚点逻辑以及所有注释。
 :::
 
-### Step 2 — Prepare the microSD Card
+### 步骤 2 — 准备 microSD 卡
 
-1. Format the card as **FAT32**.
-2. Create a folder structure that matches the path you'll set in the sketch — the default is `/img/demo.jpg`:
+1. 将卡格式化为 **FAT32**。
+2. 创建一个与您在草图中设置的路径相匹配的文件夹结构——默认是 `/img/demo.jpg`：
 
    ```text
    <SD root>/
@@ -2238,103 +2238,103 @@ The code blocks above are **slightly condensed** (helper functions inlined, verb
        └── demo.jpg          ← or demo.png / demo.bmp
    ```
 
-3. Insert the card into the reTerminal **before** powering on (hot-plugging works but is less reliable).
+3. 在上电 **之前** 将卡插入 reTerminal（热插拔也能工作，但可靠性较差）。
 
-### Step 3 — Prepare Your Image
+### 步骤 3 — 准备你的图像
 
-The loader accepts three formats out of the box:
+加载器开箱即用地支持三种格式：
 
-| Format | What works | What to avoid |
+| 格式 | 适用情况 | 需要避免 |
 |---|---|---|
-| **JPEG** (`.jpg` / `.jpeg`) | Baseline 8-bit, YCbCr or grayscale, any chroma subsampling (4:4:4 / 4:2:2 / 4:2:0). | Progressive JPEG, CMYK, EXIF-rotation-only sources. |
-| **BMP** (`.bmp`) | 24-bit BGR uncompressed, or 4-bit indexed (palette + `BI_RGB`). | `BI_BITFIELDS`, RLE-compressed BMPs. |
-| **PNG** (`.png`) | Any standard PNG (8-bit, 16-bit, palette, interlaced, RGBA). RGBA is composited over **white** because ePaper panels are opaque. | None — pngle handles all standard PNG variants. |
+| **JPEG** (`.jpg` / `.jpeg`) | 基线 8 位，YCbCr 或灰度，任意色度抽样（4:4:4 / 4:2:2 / 4:2:0）。 | 渐进式 JPEG、CMYK、仅依赖 EXIF 旋转信息的源文件。 |
+| **BMP** (`.bmp`) | 24 位 BGR 无压缩，或 4 位索引色（调色板 + `BI_RGB`）。 | `BI_BITFIELDS`、RLE 压缩的 BMP。 |
+| **PNG** (`.png`) | 任意标准 PNG（8 位、16 位、调色板、隔行、RGBA）。RGBA 会在**白色**背景上进行合成，因为电子墨水屏是非透明的。 | 无——pngle 能处理所有标准 PNG 变体。 |
 
-The file's actual format is sniffed from **magic bytes**, not its extension. A JPEG saved as `.bmp` still works (you'll just see a warning in the serial log).
+文件的实际格式是通过 **magic bytes** 嗅探出来的，而不是通过扩展名。一个保存为 `.bmp` 的 JPEG 依然可以正常工作（你只会在串口日志中看到一条警告）。
 
-Per-panel size guidance:
+针对不同面板的尺寸建议：
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
 
-Panel is **800 × 480**. Any source up to roughly **1600 × 1200** decodes fine on 8 MB PSRAM. Larger images are still accepted but you'll want `DISPLAY_FIT = FIT_CONTAIN` so the loader can shrink them before quantising.
+面板为 **800 × 480**。任意不超过约 **1600 × 1200** 的源图像在 8 MB PSRAM 上都能正常解码。更大的图像也可以接受，但你会希望将 `DISPLAY_FIT = FIT_CONTAIN`，这样加载器可以在量化之前先将其缩小。
 
 </TabItem>
 <TabItem value="e1001-gray4" label="E1001 Gray4">
 
-Same panel as BW (**800 × 480**) but you'll see significantly more tonal range — a portrait or landscape photo at native resolution looks noticeably smoother than on the BW sketch.
+与 BW 使用相同的面板（**800 × 480**），但你会看到明显更多的色调范围——在原生分辨率下的人像或风景照片，相比 BW 草图看起来要平滑得多。
 
 </TabItem>
 <TabItem value="e1002" label="E1002">
 
-Panel is **800 × 480**. The 6-color palette is sparse, so heavy dithering (FS / Jarvis) gives the best perceived quality on photographic content.
+面板为 **800 × 480**。6 色调色板较为稀疏，因此对照片内容使用较强的抖动（FS / Jarvis）可以获得最佳的主观画质。
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
 
-Panel is **1872 × 1404** (about **2.6 million pixels**, ~7.5 MB at RGB888). A full-panel-sized source will saturate PSRAM and force the dither stage to fall back to `DITHER_NONE` — the loader prints a warning when this happens.
+面板为 **1872 × 1404**（约 **260 万像素**，在 RGB888 下约 7.5 MB）。一张与面板同尺寸的源图像会占满 PSRAM，并迫使抖动阶段回退到 `DITHER_NONE`——当发生这种情况时，加载器会打印一条警告。
 
-For the best result, **pre-scale** your source to ≤ 1200 × 900 on the PC (or use `DISPLAY_FIT = FIT_CONTAIN` with a smaller `DISPLAY_SCALE`), then let the device do the final dither.
+为了获得最佳效果，请在 PC 上将源图像**预缩放**到 ≤ 1200 × 900（或使用较小的 `DISPLAY_SCALE` 搭配 `DISPLAY_FIT = FIT_CONTAIN`），然后让设备执行最终的抖动。
 
 </TabItem>
 <TabItem value="e1004" label="E1004">
 
-Panel is **1200 × 1600** (~1.9 million pixels, ~5.5 MB at RGB888). Comfortably fits on 8 MB PSRAM, but pairing **FS at panel resolution** with the 11 MB error buffer it needs **will** trigger fallback. Default is `DITHER_BAYER8` for safety; switch to `DITHER_FS` only after shrinking the source.
+面板为 **1200 × 1600**（约 190 万像素，在 RGB888 下约 5.5 MB）。在 8 MB PSRAM 上可以轻松容纳，但如果在面板分辨率下配合 **FS** 使用，它所需的 11 MB 误差缓冲区**一定会**触发回退。默认使用 `DITHER_BAYER8` 以保证安全；只有在先缩小源图像之后，再切换到 `DITHER_FS`。
 
 </TabItem>
 </Tabs>
 
-### Step 4 — Configure the Sketch
+### 步骤 4 — 配置草图
 
-All user-tunable options live in a config block at the top of each `.ino` file. The four most important knobs are walked through below.
+所有用户可调选项都位于每个 `.ino` 文件顶部的配置块中。下面将逐一介绍四个最重要的控制项。
 
-#### `IMAGE_PATH` — which file to display
+#### `IMAGE_PATH` — 要显示的文件
 
 ```cpp
 static const char* IMAGE_PATH = "/img/demo.jpg";
 ```
 
-Use a leading `/`. The loader sniffs the format from magic bytes, so the extension is purely cosmetic — `/photo.bmp` containing real JPEG data still decodes fine.
+请使用前导 `/`。加载器会从 magic bytes 嗅探格式，因此扩展名纯粹是装饰——包含真实 JPEG 数据的 `/photo.bmp` 依然可以正常解码。
 
-#### `DITHER_METHOD` — which dithering algorithm
+#### `DITHER_METHOD` — 使用哪种抖动算法
 
-ePaper panels can only physically display 2 / 4 / 6 / 16 colors. To represent the millions of colors in a typical photo, the loader has to **quantise** every pixel to one of those few palette entries. The dithering algorithm decides *how* that quantisation error is spread across neighbouring pixels.
+电子墨水屏在物理上只能显示 2 / 4 / 6 / 16 种颜色。为了表示典型照片中数以百万计的颜色，加载器必须将每个像素**量化**到这少数几个调色板条目之一。抖动算法决定了这种量化误差是如何在相邻像素之间分布的。
 
 ```cpp
 static const DitherMethod DITHER_METHOD = DITHER_FS;
 ```
 
-| Option | What it does | When to use |
+| 选项 | 作用 | 适用场景 |
 |---|---|---|
-| `DITHER_NONE` | Nearest-color, no diffusion. Fastest, most blocky. | Diagnostics, or when you want a posterised look. |
-| `DITHER_BAYER8` | 8×8 ordered Bayer matrix. Deterministic, **no error buffer**. | The safest choice on E1003 / E1004 at panel resolution — never runs out of memory. |
-| `DITHER_FS` | Floyd-Steinberg error diffusion. The best **quality / speed** balance. | Default on E1001 / E1002. Great for photos with smooth gradients. |
-| `DITHER_JARVIS` | Jarvis-Judice-Ninke. Wider 12-coefficient kernel, smoother output. | Higher quality than FS, but ~3× slower and uses more PSRAM. |
-| `DITHER_ATKINSON` | Atkinson (classic Mac). Diffuses only 6/8 of the error → higher contrast, more "etched" look. | Stylised B&W output, comic / line-art content. |
+| `DITHER_NONE` | 最近颜色，无误差扩散。最快，但最块状。 | 诊断用途，或当你想要海报化效果时。 |
+| `DITHER_BAYER8` | 8×8 有序 Bayer 矩阵。确定性，**无需误差缓冲区**。 | 在 E1003 / E1004 上以面板分辨率运行时最安全的选择——绝不会耗尽内存。 |
+| `DITHER_FS` | Floyd-Steinberg 误差扩散。在**画质 / 速度**之间取得最佳平衡。 | 在 E1001 / E1002 上为默认值。非常适合具有平滑渐变的照片。 |
+| `DITHER_JARVIS` | Jarvis-Judice-Ninke。更宽的 12 系数卷积核，输出更平滑。 | 画质高于 FS，但速度约慢 3 倍，并占用更多 PSRAM。 |
+| `DITHER_ATKINSON` | Atkinson（经典 Mac）。只扩散 6/8 的误差 → 对比度更高，更具“蚀刻”感。 | 风格化黑白输出、漫画 / 线稿内容。 |
 
-:::caution Error-diffusion memory cost
-`DITHER_FS`, `DITHER_JARVIS` and `DITHER_ATKINSON` need a **floating-point error buffer** of roughly `W × H × N_channels × 4` bytes. At 1872 × 1404 that's about **31 MB for color** or **10 MB for grayscale** — well over the available PSRAM.
+:::caution 误差扩散的内存开销
+`DITHER_FS`、`DITHER_JARVIS` 和 `DITHER_ATKINSON` 需要一个大约为 `W × H × N_channels × 4` 字节的**浮点误差缓冲区**。在 1872 × 1404 分辨率下，彩色约为 **31 MB**，灰度约为 **10 MB**——远远超过可用的 PSRAM。
 
-When `ps_malloc` fails the loader prints
+当 `ps_malloc` 失败时，加载器会打印
 
 ```
 [dither] FS error buffer alloc FAILED (10358 kB) -- falling back to DITHER_NONE
 ```
 
-and quietly switches to `DITHER_NONE`. If you don't want this fallback, switch to `DITHER_BAYER8` (ordered, zero-allocation) **or** shrink the image first.
+并悄悄切换到 `DITHER_NONE`。如果你不希望出现这种回退，请改用 `DITHER_BAYER8`（有序、零分配）**或者**先缩小图像。
 :::
 
-#### `DITHER_GAMMA` — brightness compensation
+#### `DITHER_GAMMA` — 亮度补偿
 
 ```cpp
 static const float DITHER_GAMMA = 1.0f;
 ```
 
-`1.0` is neutral. Increase to **darken** the output (good for outdoor photos that come out too bright on ePaper). Decrease to **brighten** (good for night photography or screenshots). Typical useful range is **0.8 – 1.6**.
+`1.0` 为中性。增大可**压暗**输出（适合在电子墨水屏上显得过亮的户外照片）。减小可**提亮**（适合夜景照片或截图）。典型的有效范围为 **0.8 – 1.6**。
 
-#### `DISPLAY_ANCHOR` — where on the panel the image lands
+#### `DISPLAY_ANCHOR` — 图像在面板上的落点位置
 
-A 3×3 grid of anchor points. The image is placed so that its corner / edge / center aligns with the corresponding panel location.
+一个 3×3 的锚点网格。图像会被放置为其角 / 边 / 中心与对应的面板位置对齐。
 
 ```text
 ANCHOR_TOP_LEFT       ANCHOR_TOP_CENTER       ANCHOR_TOP_RIGHT
@@ -2346,46 +2346,46 @@ ANCHOR_BOTTOM_LEFT    ANCHOR_BOTTOM_CENTER    ANCHOR_BOTTOM_RIGHT
 static const DisplayAnchor DISPLAY_ANCHOR = ANCHOR_CENTER;
 ```
 
-Any image smaller than the panel is **automatically padded** with white in the unused area, no need to pre-resize to match the panel exactly. Images larger than the panel are **clipped** symmetrically around the anchor.
+任何比面板小的图像都会在未使用区域**自动填充**白色，无需预先调整尺寸以与面板完全匹配。比面板大的图像会围绕锚点**对称裁剪**。
 
-#### `DISPLAY_FIT` + `DISPLAY_SCALE` — sizing the image
+#### `DISPLAY_FIT` + `DISPLAY_SCALE` — 调整图像尺寸
 
 ```cpp
 static const DisplayFit  DISPLAY_FIT   = FIT_ORIGINAL;
 static const float       DISPLAY_SCALE = 1.0f;
 ```
 
-| Mode | Behaviour |
+| 模式 | 行为 |
 |---|---|
-| `FIT_ORIGINAL` | Keep the decoded size as-is. Recommended default — predictable, always safe. |
-| `FIT_CONTAIN` | Downscale the image so it fits **entirely** inside the panel while preserving aspect ratio. **Never upscales** — a small image stays small (use `FIT_SCALE` for upscaling). |
-| `FIT_SCALE` | Multiply the source size by `DISPLAY_SCALE`. Both downscale (`< 1.0`) and upscale (`> 1.0`) are supported. |
+| `FIT_ORIGINAL` | 保持解码后的尺寸不变。推荐默认值——可预测且始终安全。 |
+| `FIT_CONTAIN` | 按比例缩小图像，使其在保持纵横比的前提下**完全**适配到面板内。**从不放大**——小图像会保持小（如需放大请使用 `FIT_SCALE`）。 |
+| `FIT_SCALE` | 将源尺寸乘以 `DISPLAY_SCALE`。支持缩小（`< 1.0`）和放大（`> 1.0`）。 |
 
-Typical values for `DISPLAY_SCALE`: `0.25` quarter, `0.5` half, `1.0` original, `2.0` 2×.
+`DISPLAY_SCALE` 的典型取值：`0.25` 四分之一，`0.5` 一半，`1.0` 原始大小，`2.0` 2 倍。
 
-:::warning Upscaling is OOM-prone on big panels
-On E1003 (1872 × 1404) and E1004 (1200 × 1600), `DISPLAY_SCALE` greater than `1.0` quickly exhausts PSRAM. The loader will print an out-of-memory message and abort. Prefer cropping or pre-scaling on the host instead.
+:::warning 在大面板上放大很容易导致内存不足（OOM）
+在 E1003（1872 × 1404）和 E1004（1200 × 1600）上，`DISPLAY_SCALE` 大于 `1.0` 会很快耗尽 PSRAM。加载器会打印内存不足信息并中止。建议改用裁剪或在主机端预缩放。
 :::
 
-#### Grayscale depth (E1001 only)
+#### 灰度深度（仅限 E1001）
 
-E1001 ships with **two** sketches because the same UC8179 panel can operate in BW (fast, 1-bit) **or** Gray4 (slower, 2-bit, four shades). Pick based on content:
+E1001 随机附带**两个**示例程序，因为同一块 UC8179 面板可以工作在 BW（快速，1 位）**或** Gray4（较慢，2 位，4 级灰度）模式。请根据内容选择：
 
-| Content | Recommended sketch |
+| 内容 | 推荐示例程序 |
 |---|---|
-| Line art, QR codes, text, hand-drawn comics. | `reTerminal_E1001_SDcard_BW` |
-| Photographs, illustrations with smooth shading. | `reTerminal_E1001_SDcard_Gray4` |
+| 线稿、二维码、文本、手绘漫画。 | `reTerminal_E1001_SDcard_BW` |
+| 照片、具有平滑明暗过渡的插画。 | `reTerminal_E1001_SDcard_Gray4` |
 
-E1003 unconditionally uses 16-level grayscale (`initGrayMode(16)`) — that mode is the panel's signature feature. E1002 and E1004 are 6-color and don't expose a grayscale-depth choice.
+E1003 始终使用 16 级灰度（`initGrayMode(16)`）——该模式是这块面板的标志性特性。E1002 和 E1004 为 6 色面板，不提供灰度深度选择。
 
-### Step 5 — Build, Flash, Watch the Logs
+### 步骤 5 —— 构建、烧录并查看日志
 
-1. In **Arduino IDE → Tools**: select board **XIAO_ESP32S3**, **PSRAM = OPI PSRAM**, **Flash = 8 MB**, **Partition Scheme = Default 8 MB**.
-2. Insert the prepared microSD card.
-3. **Upload** the sketch.
-4. Open a **serial monitor on the carrier USB-UART bridge** (GPIO43 TX / GPIO44 RX, **115200 baud, 8N1**) — note that this is `Serial1`, **not** the USB-CDC `Serial` that the IDE auto-opens.
+1. 在 **Arduino IDE → Tools** 中：选择开发板 **XIAO_ESP32S3**，**PSRAM = OPI PSRAM**，**Flash = 8 MB**，**Partition Scheme = Default 8 MB**。
+2. 插入准备好的 microSD 卡。
+3. **上传**示例程序。
+4. 打开**载板上的 USB-UART 转串口桥**的串口监视器（GPIO43 TX / GPIO44 RX，**115200 波特率，8N1**）——注意这是 `Serial1`，**而不是** IDE 自动打开的 USB-CDC `Serial`。
 
-Typical log output (E1004 with a 1080 × 1920 PNG):
+典型日志输出（E1004，使用 1080 × 1920 PNG）：
 
 ```text
 [reTerm_E1004] dithering Color6 with BAYER8, gamma=1.00 ...
@@ -2399,31 +2399,31 @@ Typical log output (E1004 with a 1080 × 1920 PNG):
 [reTerm_E1004] done. Sleeping panel.
 ```
 
-After this the panel will refresh — that takes **15 – 45 seconds** for a full update, depending on the model and the chosen gray / color mode. Stay still and don't reset the board mid-refresh.
+之后面板会刷新——一次完整刷新需要 **15 – 45 秒**，具体取决于型号以及所选灰度 / 彩色模式。请保持静止，不要在刷新过程中重置开发板。
 
-### Memory Budget Cheat Sheet
+### 内存预算速查表
 
-| Panel | RGB888 buffer | FS error buffer (peak) | Comfortable with FS? |
+| 面板 | RGB888 缓冲区 | 文件系统错误缓冲区（峰值） | 适合与文件系统一起使用？ |
 |---|---|---|---|
-| E1001 BW @ 800×480 | 1.1 MB | 1.5 MB | ✅ yes |
-| E1001 Gray4 @ 800×480 | 1.1 MB | 1.5 MB | ✅ yes |
-| E1002 E6 @ 800×480 | 1.1 MB | 4.6 MB | ✅ yes |
-| E1003 Gray16 @ 1872×1404 | 7.5 MB | 10.1 MB | ❌ no — use `DITHER_BAYER8` or shrink source |
-| E1004 E6 @ 1200×1600 | 5.5 MB | 22.0 MB | ❌ no — use `DITHER_BAYER8` or shrink source |
+| E1001 BW @ 800×480 | 1.1 MB | 1.5 MB | ✅ 是 |
+| E1001 Gray4 @ 800×480 | 1.1 MB | 1.5 MB | ✅ 是 |
+| E1002 E6 @ 800×480 | 1.1 MB | 4.6 MB | ✅ 是 |
+| E1003 Gray16 @ 1872×1404 | 7.5 MB | 10.1 MB | ❌ 否——请使用 `DITHER_BAYER8` 或缩小源图像 |
+| E1004 E6 @ 1200×1600 | 5.5 MB | 22.0 MB | ❌ 否——请使用 `DITHER_BAYER8` 或缩小源图像 |
 
-The 8 MB OPI PSRAM module on the XIAO ESP32-S3 module gives you roughly **7.9 MB of usable space** after the Arduino runtime overhead. If the loader can't satisfy an allocation it logs the exact size it needed and either resizes-and-retries (when `DISPLAY_FIT = FIT_CONTAIN`) or falls back to `DITHER_NONE`.
+XIAO ESP32-S3 模块上的 8 MB OPI PSRAM 模块在扣除 Arduino 运行时开销后，大约有 **7.9 MB 可用空间**。如果加载器无法满足一次内存分配，它会记录所需的确切大小，并在 `DISPLAY_FIT = FIT_CONTAIN` 时尝试调整尺寸后重试，或回退到 `DITHER_NONE`。
 
-:::tip About refresh speed
-After uploading, the ePaper may sit blank for the first few seconds while the driver runs its initial waveform. A first full refresh can take up to a couple of minutes on a cold panel — this is the panel's electrochemistry, not a bug. Subsequent refreshes are faster.
+:::tip 关于刷新速度
+上传后，电子墨水屏在前几秒内可能保持空白，因为驱动正在运行初始波形。第一次完整刷新在冷屏状态下可能需要长达几分钟——这是面板的电化学特性，而不是 Bug。后续刷新会更快。
 :::
 
-## Troubleshooting
+## 故障排查
 
-For Arduino IDE setup issues, USB driver problems, upload failures, or "ePaper display doesn't refresh" issues, see the **Troubleshooting** section of [Arduino Cookbook: ePaper Display](/reterminal_e10xx_with_arduino#troubleshooting).
+关于 Arduino IDE 安装问题、USB 驱动问题、上传失败，或“电子墨水屏不刷新”等问题，请参阅 [Arduino Cookbook: ePaper Display](/cn/reterminal_e10xx_with_arduino#故障排查) 中的 **Troubleshooting** 部分。
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

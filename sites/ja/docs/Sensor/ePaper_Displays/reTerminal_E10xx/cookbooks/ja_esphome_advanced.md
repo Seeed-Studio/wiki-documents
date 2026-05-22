@@ -3,13 +3,14 @@ description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome クック�
 title: ESPHome クックブック - 上級編 (reTerminal E シリーズ)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: ESPHome (Advanced)
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,16 +19,16 @@ import TabItem from '@theme/TabItem';
 # ESPHome クックブック - 上級編: reTerminal E シリーズ
 
 :::tip 前提条件
-このページでは、すでに [reTerminal E シリーズ向け ESPHome 基本クックブック](/ja/reterminal_e10xx_with_esphome)（デバイスが Wi-Fi に接続済み、Home Assistant との連携がオンライン、最初のダッシュボードが表示済み）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンや Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。
+このページでは、すでに [reTerminal E シリーズ向け ESPHome 基本クックブック](/ja/reterminal_e10xx_with_esphome)（デバイスを Wi-Fi に接続、Home Assistant との連携完了、最初のダッシュボードが表示済み）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンや Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-この記事では、reTerminal E シリーズ ePaper Display デバイス向けの高度な ESPHome 設定について、[ESPHome 基本使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎概念を踏まえて解説します。ESPHome や reTerminal E シリーズを初めて扱う場合は、まず基本ガイドから始めてから、これらの応用例に進むことをおすすめします。
+この記事では、reTerminal E シリーズ ePaper Display デバイス向けの高度な ESPHome 設定について、[ESPHome 基本使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎概念を踏まえて解説します。ESPHome や reTerminal E シリーズを初めて扱う場合は、まず基本ガイドから始めてから、ここで紹介する応用例に進むことをおすすめします。
 
 ## ハードウェア機能
 
-reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assistant で活用できる複数のハードウェアコンポーネントが搭載されています：
+reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assistant から活用できる複数のハードウェアコンポーネントが搭載されています：
 
 - 3 つのプログラマブルボタン（GPIO3、GPIO4、GPIO5）
 
@@ -39,7 +40,7 @@ reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assi
 
 - 温度・湿度センサ（I²C インターフェース）
 
-ここでは、これら各コンポーネントを実用的なアプリケーションでどのように使うかを見ていきます。
+ここでは、これら各コンポーネントを実際のアプリケーションでどのように使うかを見ていきます。
 
 ## reTerminal E シリーズ ePaper Display ハードウェアコンポーネント制御
 
@@ -115,13 +116,13 @@ light:
 - ボタン 1 を押したときに LED を短く点滅させるように設定
 - ボタン 2 を押したときに LED をダブルブリンクパターンで点滅させるように設定
 - ボタン 3 を押したときに LED のオン／オフをトグルするように設定
-- LED を Home Assistant 上で制御可能な light エンティティとして利用可能にする
+- LED を Home Assistant 上で制御可能な light エンティティとして利用できるようにする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/45.gif" style={{width:250, height:'auto'}}/></div>
 
 ### ブザー制御
 
-reTerminal E シリーズ ePaper Display には、可聴フィードバックに使用できるブザーが GPIO45 上に搭載されています。ここでは、その設定方法を示します：
+reTerminal E シリーズ ePaper Display には、GPIO45 に接続されたブザーが搭載されており、音によるフィードバックに利用できます。ここでは、その設定方法を説明します：
 
 この例を使用するには、以下のコードをコピーして、Yaml ファイル内の `captive_portal` コード行の後に貼り付けてください。
 
@@ -184,7 +185,7 @@ binary_sensor:
 
 ### バッテリー監視
 
-reTerminal E シリーズ ePaper Display は、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。ここでは、その設定方法を示します：
+reTerminal E シリーズ ePaper Display は、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。ここでは、その設定方法を説明します：
 
 ```yaml
 esphome:
@@ -269,7 +270,7 @@ sensor:
 この設定では、次のことを行います：
 
 - ADC を通じてバッテリー電圧を読み取る
-- キャリブレーションカーブを用いて電圧をバッテリー残量（パーセンテージ）に変換する
+- キャリブレーションカーブを用いて電圧をバッテリー残量（パーセンテージ）に変換
 - 生の電圧値とパーセンテージの両方を Home Assistant で利用可能にする
 
 :::caution
@@ -278,13 +279,13 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
-## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして取得する
+## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして取得
 
-この例では、Home Assistant ダッシュボードのスクリーンショットを取得し、それを reTerminal E シリーズに表示する方法を示します。
+この例では、Home Assistant のダッシュボードをスクリーンショットとして取得し、それを reTerminal E シリーズに表示する方法を示します。
 
 ### [Puppet](https://github.com/balloob/home-assistant-addons) アドオンのインストール
 
-手順 1. まず Puppet アドオンをインストールする必要があります。以下のボタンをクリックすると、お使いの Home Assistant インスタンス内のアドオンインストールページへ直接移動します：
+ステップ 1. まず Puppet アドオンをインストールする必要があります。以下のボタンをクリックすると、お使いの Home Assistant インスタンス内のアドオンインストールページに直接移動します：
 
 <div align="center">
 <a href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=0f1cc410_puppet&repository_url=https%3A%2F%2Fgithub.com%2Fballoob%2Fhome-assistant-addons" target="_blank">
@@ -292,17 +293,17 @@ sensor:
 </a>
 </div>
 
-手順 2. アドオンのページで "INSTALL" ボタンをクリックし、インストールが完了するまで待ちます。
+ステップ 2. アドオンのページで "INSTALL" ボタンをクリックし、インストールが完了するまで待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/48.png" style={{width:1000, height:'auto'}}/></div>
 
 ### アクセストークンの作成
 
-手順 3. インストール後、Puppet アドオンの Configuration ページに移動します。ここでトークンを入力する必要があることが分かります。このアドオン用のアクセストークンを作成する必要があります。
+ステップ 3. インストール後、Puppet アドオンの Configuration ページに移動します。ここでトークンを入力する必要があることが分かります。このアドオン用のアクセストークンを作成しましょう。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/49.png" style={{width:800, height:'auto'}}/></div>
 
-手順 4. Home Assistant の左下にある自分のユーザー名をクリックしてプロフィール画面に移動し、ページ下部の "Long-Lived Access Tokens" を選択します。
+ステップ 4. Home Assistant の左下に表示されている自分のユーザー名をクリックしてプロフィール画面に移動し、ページ下部の "Long-Lived Access Tokens" を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/50.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -318,9 +319,9 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
-### Screenshot API の理解
+### Screenshot API を理解する
 
-Puppet アドオンは、任意の Home Assistant ページのスクリーンショットを生成するサーバーをポート 10000 で起動します。使い方は次のとおりです：
+Puppet アドオンは、ポート 10000 上でサーバーを起動し、任意の Home Assistant ページのスクリーンショットを生成します。使い方は次のとおりです：
 
 #### 基本的なスクリーンショット URL 形式
 
@@ -365,7 +366,7 @@ http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ステップ 11. 次のコードを、ESPHome 設定ファイルの `captive_portal` セクションの後に追加します：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 
@@ -415,7 +416,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 
@@ -460,18 +461,18 @@ display:
 </Tabs>
 
 :::caution
-ネットワーク内でローカル DNS 解決が機能しない場合は、`homeassistant.local` を実際の Home Assistant の IP アドレスに置き換えてください。
+ネットワーク内でローカル DNS 解決が機能しない場合は、`homeassistant.local` を Home Assistant の実際の IP アドレスに置き換えてください。
 :::
 
 設定が正常にアップロードされて動作すると、reTerminal E シリーズ ePaper Display に Home Assistant ダッシュボードのスクリーンショットが表示されます：
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/166.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -481,15 +482,15 @@ display:
 ## デモ 3: ディープスリープモード
 
 :::tip
-Deep Sleep プログラムを使い始める場合は、右側の白いボタンを優先的に使用し、右側の白いボタンをスリープ解除ボタンとして設定することを強くお勧めします。こうすることで、プログラムを更新したいときに、デバイスがスリープ中でシリアルポート経由でプログラムをアップロードできないという気まずい状況を避けられます。
+ディープスリーププログラムを使い始める場合は、右側の白いボタンを優先的に使用し、右側の白いボタンをスリープ解除ボタンとして設定することを強くお勧めします。こうすることで、プログラムを更新したいときに、デバイスがスリープ中でシリアルポート経由でプログラムをアップロードできないという気まずい状況を避けることができます。
 :::
 
-この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E シリーズ ePaper Display をバッテリー駆動の用途に適したものにする方法を示します。
+この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E シリーズ ePaper Display をバッテリー駆動のアプリケーションに適したものにする方法を示します。
 
-この例は、以下のコードをコピーして、Yaml ファイル内の `captive_portal` コード行の後に貼り付けることで使用できます。
+以下のコードをコピーして、Yaml ファイル内の `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 globals:
@@ -541,7 +542,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="For E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 globals:
@@ -591,11 +592,11 @@ display:
 この設定では：
 
 - スリープサイクル間で保持されるカウンタを作成します
-- デバイスが 30 秒間起動し、その後 3 分間スリープするように設定します
+- デバイスを 30 秒間起動し、その後 3 分間スリープするように設定します
 - 現在の起床回数でディスプレイを更新します
 - オプションで、ボタンでデバイスを起床させるように設定します
 
-実行中は、デバイスがスリープから起床するたびにカウンタが 1 ずつ増加するのがわかります：
+実行中は、デバイスがスリープから起床するたびにカウンタが 1 ずつ増加するのが確認できます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -614,10 +615,10 @@ display:
 5. バッテリー監視
 
 <details>
-<summary>クリックして完全なコードを表示</summary>
+<summary>完全なコードを表示するにはここをクリック</summary>
 
 <Tabs>
-<TabItem value="For E1001" label="For E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 esphome:
@@ -1263,7 +1264,7 @@ display:
 
 </details>
 
-設定が正常にアップロードされ実行されると、reTerminal E シリーズ ePaper ディスプレイに、環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
+設定が正常にアップロードされ実行されると、reTerminal E シリーズ ePaper Display に環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -1273,7 +1274,7 @@ display:
 
 1. **複数ページ**：ディスプレイは、気候ダッシュボードと時刻/日付表示という 2 つのページを切り替えます
 2. **ボタンナビゲーション**：GPIO3 と GPIO5 上のボタンを使用してページ間を移動します
-3. **バッテリー監視**：バッテリー残量は、充電レベルに応じて変化する適切なアイコンで表示されます
+3. **バッテリー監視**：バッテリーレベルは、充電レベルに応じて変化する適切なアイコンで表示されます
 4. **ハードウェア初期化**：起動時に SD カードとバッテリー監視回路が有効化されます
 5. **温度と湿度の表示**：オンボードの SHT4x センサーを I²C 経由で使用します
 6. **動的アイコン**：Material Design Icons がセンサー値に応じて変化します
@@ -1288,7 +1289,7 @@ display:
 
 ### Q2: なぜ Home Assistant でこれらのデータを取得できないのですか？ {#port}
 
-この場合、Settings -> Devices & Services -> Integrations に移動して、デバイスを Home Assistant に **追加** する必要があります。
+この場合、Settings -> Devices & Services -> Integrations に移動して、デバイスを Home Assistant に**追加**する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1317,7 +1318,7 @@ Step 4. Finally, replug the cable and upload a new program. -->
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
