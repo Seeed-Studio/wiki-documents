@@ -101,33 +101,33 @@ A more specialized architecture diagram is described as follows:
 
 **Hardware layer** (devices you can touch):
 
-  - reSpeaker Flex(4 Microphone Array XIAO ESP32S3 Controller)  
+- reSpeaker Flex(4 Microphone Array XIAO ESP32S3 Controller)  
 
-  - reBot Arm B601-DM (6-DOF manipulator)  
+- reBot Arm B601-DM (6-DOF manipulator)  
 
-  - Ubuntu 22.04 computer (running the main program)  
+- Ubuntu 22.04 computer (running the main program)  
 
 **Driver Layer** (enables hardware to communicate):
 
-  - USB Audio communication (pyusb/libusb)-connect microphone array  
+- USB Audio communication (pyusb/libusb)-connect microphone array  
 
-  - Serial communication (MotorBridge)-Connect the mechanical arm  
+- Serial communication (MotorBridge)-Connect the mechanical arm  
 
-  - Web API(Groq Cloud)-connect to cloud AI services  
+- Web API(Groq Cloud)-connect to cloud AI services  
 
 **Algorithm layer** (the "brain" that processes the data):
 
-  - DOA sound source localization (local real-time calculation)
+- DOA sound source localization (local real-time calculation)
 
-  - Whisper speech recognition (Groq Cloud)
+- Whisper speech recognition (Groq Cloud)
 
-  - Llama-3.3 Intent Understanding (Groq Cloud)
+- Llama-3.3 Intent Understanding (Groq Cloud)
 
-  - Motion interpolation planning (local smoothing control)
+- Motion interpolation planning (local smoothing control)
 
 **Application Layer** (you can see the effect):
 
-  - DOA tracking mode voice control mode breathing standby animation voice broadcast
+- DOA tracking mode voice control mode breathing standby animation voice broadcast
 
 ---
 
@@ -166,7 +166,7 @@ This is a desktop-level mechanical arm with **7 "joints"** (professionally calle
 
 💡**You can understand this**:J1 is like the rotation of a person's waist, J2 is like the lifting of the shoulder, J3 is like the bending of the elbow, J4/J5/J6 is like the various rotations of the wrist, and J6 is like a finger. These joints are combined, and the robotic arm can make a very rich movement.
 
-⚠** Assembly Warning *: If you are buying parts that need to be assembled by yourself, please pay special attention:
+⚠**Assembly Warning**: If you are buying parts that need to be assembled by yourself, please pay special attention:
 
 - The kit contains a large number of screws and structural parts, and some parts are very similar in appearance
 
@@ -452,11 +452,11 @@ conda env create -f environment.yml
 
 This process may take **10-30 minutes**, depending on your network speed. It will automatically:
 
--Create a Python 3.10.2 environment called 'flex'
+- Create a Python 3.10.2 environment called 'flex'
 
--Install pinocchio, numpy and other scientific computing libraries from the conda-forge channel
+- Install pinocchio, numpy and other scientific computing libraries from the conda-forge channel
 
--Install pyusb for USB communication
+- Install pyusb for USB communication
 
 ✅**Sign of successful installation** (the last few lines look like this):
 
@@ -1811,13 +1811,13 @@ Congratulations on reading the end of the document! If you follow this Wiki step
 
 This project involves sound processing, AI speech interaction, robot motion control and other fields of technology, for beginners is a good comprehensive practice project. I hope you can continue to explore this:
 
--Try modifying voice commands to add more custom actions
+- Try modifying voice commands to add more custom actions
 
--Adjust DOA parameters to make sound source tracking more sensitive
+- Adjust DOA parameters to make sound source tracking more sensitive
 
--Explore deploying projects to embedded devices such as Raspberry Pi
+- Explore deploying projects to embedded devices such as Raspberry Pi
 
--Added vision module to make the robot arm "see"
+- Added vision module to make the robot arm "see"
 
 If you have any questions or suggestions, welcome feedback via GitHub Issue. Have fun!🤖
 
