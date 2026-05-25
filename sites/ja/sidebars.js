@@ -4535,6 +4535,27 @@ const sidebars = {
             'Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
+        {
+          type: 'category',
+          label: 'ヒューマノイド',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/ja_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/ja_Atom-X',
+              ]
+            },
+
+          ]
+        },
       ]
     },
     {
