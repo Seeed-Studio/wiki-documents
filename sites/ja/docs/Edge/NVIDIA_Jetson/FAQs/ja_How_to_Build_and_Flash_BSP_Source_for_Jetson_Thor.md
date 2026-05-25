@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 デフォルトのボード設定は **Thor J601** 向けに既に構成されています：
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ sudo -E ./thor_build_flash.sh flash
 デフォルトをオーバーライドする必要がある場合は、環境変数を使用します：
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \
