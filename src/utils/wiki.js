@@ -1,6 +1,50 @@
 const docList = [
   [
     {
+      "path": "/control_rebot_arm_using_voice_with_respeaker_flex",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg",
+      "title": "Control reBot Arm using voice with reSpeaker Flex",
+      "date": "2026-05-22",
+      "title_cn": "使用 reSpeaker Flex 通过语音控制 reBot Arm",
+      "title_ja": "reSpeaker Flex を使って音声で reBot Arm を制御する",
+      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Flex",
+      "title_pt": "Controle o reBot Arm usando voz com o reSpeaker Flex"
+    },
+    {
+      "path": "/atom_s",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp",
+      "title": "Getting started with Atom-S",
+      "date": "5/22/2026",
+      "title_cn": "Atom-S 入门指南",
+      "title_ja": "Atom-S 入門ガイド",
+      "title_es": "Primeros pasos con Atom-S",
+      "title_pt": "Introdução ao Atom-S"
+    }
+  ],
+  [
+    {
+      "path": "/atom_x",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-x/atom_x_overview.webp",
+      "title": "Getting started with Atom-X",
+      "date": "5/22/2026",
+      "title_cn": "Atom-X 入门指南",
+      "title_ja": "Atom-X 入門ガイド",
+      "title_es": "Primeros pasos con Atom-X",
+      "title_pt": "Introdução ao uso do Atom-X"
+    },
+    {
+      "path": "/respeaker_flex_soarm",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png",
+      "title": "Add Voice Interaction to Your SO-ARM10x with reSpeaker Flex",
+      "date": "2026-05-19",
+      "title_cn": "使用 reSpeaker Flex 为你的 SO-ARM10x 添加语音交互",
+      "title_ja": "reSpeaker Flex で SO-ARM10x に音声インタラクションを追加する",
+      "title_es": "Añade interacción por voz a tu SO-ARM10x con reSpeaker Flex",
+      "title_pt": "Adicione Interação por Voz ao Seu SO-ARM10x com reSpeaker Flex"
+    }
+  ],
+  [
+    {
       "path": "/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor",
       "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/img_v3_0210p_67d75fe6-a1fe-40a9-b025-ac92efb1bbbg_1.jpg",
       "title": "Control reBot Arm B601 with NemoClaw on Nvidia Jetson Thor",
@@ -11,6 +55,18 @@ const docList = [
       "title_pt": "Controlar o reBot Arm B601 com NemoClaw no Nvidia Jetson Thor"
     },
     {
+      "path": "/reterminal_e10xx_with_arduino_peripherals",
+      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
+      "title": "Arduino Cookbook: Onboard Peripherals (reTerminal E Series)",
+      "date": "2026-05-15",
+      "title_cn": "Arduino 菜谱：板载外设（reTerminal E 系列）",
+      "title_ja": "Arduino クックブック: オンボードペリフェラル (reTerminal E シリーズ)",
+      "title_es": "Recetario de Arduino: Periféricos Integrados (reTerminal E Serie)",
+      "title_pt": "Livro de Receitas Arduino: Periféricos Onboard (reTerminal E Série)"
+    }
+  ],
+  [
+    {
       "path": "/recamera_udp_face_analysis",
       "image": "https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif",
       "title": "UDP Face Analysis with reCamera",
@@ -19,9 +75,7 @@ const docList = [
       "title_ja": "reCamera を用いた UDP 顔解析",
       "title_es": "Análisis de Rostros por UDP con reCamera",
       "title_pt": "Análise de Rosto via UDP com reCamera"
-    }
-  ],
-  [
+    },
     {
       "path": "/respeaker_flex_lekiwi",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
@@ -31,7 +85,9 @@ const docList = [
       "title_ja": "reSpeaker Flex で LeKiwi ロボットに音声インタラクションを追加",
       "title_es": "Añade interacción por voz a tu robot LeKiwi con reSpeaker Flex",
       "title_pt": "Adicione interação por voz ao seu robô LeKiwi com o reSpeaker Flex"
-    },
+    }
+  ],
+  [
     {
       "path": "/xiao_esp32c5_with_zephyr",
       "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
@@ -41,9 +97,7 @@ const docList = [
       "title_ja": "XIAO ESP32-C5 と Zephyr(RTOS)",
       "title_es": "XIAO ESP32-C5 con Zephyr(RTOS)",
       "title_pt": "XIAO ESP32-C5 com Zephyr(RTOS)"
-    }
-  ],
-  [
+    },
     {
       "path": "/get_started_with_meshcore_remote_terminal",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/first.png",
@@ -53,7 +107,9 @@ const docList = [
       "title_ja": "MeshCore Remote Terminal を使い始める",
       "title_es": "Primeros pasos con MeshCore Remote Terminal",
       "title_pt": "Introdução ao MeshCore Remote Terminal"
-    },
+    }
+  ],
+  [
     {
       "path": "/get_started_with_esp32s3_meshcore",
       "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png",
@@ -63,9 +119,7 @@ const docList = [
       "title_ja": "ESP32 MeshCore を使い始める",
       "title_es": "Primeros pasos con ESP32 MeshCore",
       "title_pt": "Primeiros Passos com ESP32 MeshCore"
-    }
-  ],
-  [
+    },
     {
       "path": "/sound_source_localization_of_recamera_gimbal",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_reSpeaker/reCamera_reSpeaker.gif",
@@ -75,60 +129,6 @@ const docList = [
       "title_ja": "reCamera Gimbal の音源定位",
       "title_es": "Localización de fuentes de sonido con reCamera Gimbal",
       "title_pt": "Localização de fonte sonora do reCamera Gimbal"
-    },
-    {
-      "path": "/driving_reterminal_d1001_microphone",
-      "image": "https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp",
-      "title": "Driving reTerminal D1001 Microphone",
-      "date": "2026-04-17",
-      "title_cn": "驱动 reTerminal D1001 麦克风",
-      "title_ja": "reTerminal D1001 マイクの駆動",
-      "title_es": "Control del micrófono de reTerminal D1001",
-      "title_pt": "Acionando o Microfone do reTerminal D1001"
-    }
-  ],
-  [
-    {
-      "path": "/how_to_build_and_flash_bsp_source_for_jetson_thor",
-      "image": "https://files.seeedstudio.com/wiki/other/thor-post.png",
-      "title": "How to Build and Flash BSP Source for Jetson Thor",
-      "date": "2026-04-14",
-      "title_cn": "如何为 Jetson Thor 构建和刷写 BSP 源码",
-      "title_ja": "Jetson Thor 向け BSP ソースのビルドとフラッシュ方法",
-      "title_es": "Cómo Compilar y Flashear el Código Fuente BSP para Jetson Thor",
-      "title_pt": "Como Construir e Gravar a Fonte BSP para o Jetson Thor"
-    },
-    {
-      "path": "/configure_static_ip_on_recamera",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/static_ip_banner.png",
-      "title": "Configure Static IP on reCamera",
-      "date": "2026-04-13",
-      "title_cn": "在 reCamera 上配置静态 IP",
-      "title_ja": "reCameraでの静的IP設定",
-      "title_es": "Configurar IP estática en reCamera",
-      "title_pt": "Configurar IP Estático no reCamera"
-    }
-  ],
-  [
-    {
-      "path": "/rebot_arm_b601_dm_lerobot",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg",
-      "title": "Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader",
-      "date": "2026-04-09",
-      "title_cn": "reBot Arm B601-DM入门Lerobot",
-      "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Introducción a reBot Arm B601-DM basado en LeRobot y reBot 102 Leader",
-      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e ao reBot 102 Leader"
-    },
-    {
-      "path": "/epaper_en05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EN05",
-      "date": "2026-04-08",
-      "title_cn": "XIAO ePaper Display Board - EN05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EN05 入門ガイド",
-      "title_es": "Primeros pasos con XIAO ePaper Display Board - EN05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EN05"
     }
   ]
 ];
