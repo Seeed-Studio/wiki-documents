@@ -598,6 +598,10 @@ lerobot-calibrate \
 
 O vídeo abaixo mostra como realizar a calibração. Primeiro você precisa mover o robô para a posição em que todas as juntas estejam no meio de seus intervalos. Em seguida, após pressionar Enter, você deve mover cada junta por toda a sua amplitude de movimento.
 
+:::tip
+Devido à atualização do repositório lerobot, é normal que o terminal não receba sinal do servo 5 ao realizar a calibração do braço mestre-escravo. Você pode continuar a operação.
+:::
+
 **Calibração manual do braço líder**
 
 Siga os mesmos passos para calibrar o braço líder, executando o seguinte comando ou exemplo de API:
