@@ -369,6 +369,7 @@ module.exports = (async () => {
       
       'docusaurus-plugin-image-zoom',
       'docusaurus-plugin-sass',
+      'docusaurus-plugin-copy-page-button',
     ],
 
     themeConfig:
