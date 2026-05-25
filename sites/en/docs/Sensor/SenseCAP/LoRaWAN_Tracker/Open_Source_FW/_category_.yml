@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: 'Open Source Firmware Instruction'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: lorawan_tracker_open_source_fw
+link:
+  type: generated-index
+  slug: lorawan_tracker_open_source_fw
+  title: LoRaWAN Tracker Open Source Firmware Instruction
+  description: LoRaWAN Tracker(Software Open source)

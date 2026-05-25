@@ -1,0 +1,13 @@
+position: 1.5
+label: 'Setup Guide'
+collapsible: true
+collapsed: true
+className: indicator_application
+link:
+  type: generated-index
+  title: Initial Setup Guidance
+  keywords: 
+    guides
+  slug: SenseCAP_Indicator_Setup_Guide
+  description: |+
+    Get started with your SenseCAP Indicator on how to use both the Native Firmware and the OpenAI Firmware. 

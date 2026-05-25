@@ -1,0 +1,530 @@
+---
+description: Seeed Jetson フルシリーズ開発ボード向けのクロスプラットフォーム（Windows/Linux/macOS）デバッグガイド。シリアルデバッグ、ブートログ解析、システムモニタリング、フラッシュ/リカバリを網羅します。
+title: Seeed Jetson クロスプラットフォーム デバッグガイド
+keywords:
+  - jetson
+  - debug
+  - uart
+  - serial
+  - reComputer
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /jetson_debug_guide
+last_update:
+  date: 03/19/2026
+  author: Seeed Studio
+createdAt: '2026-03-20'
+url: https://wiki.seeedstudio.com/ja/jetson_debug_guide/
+updatedAt: '2026-03-20'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+{/* ============ Hero Banner ============ */}
+
+<div className="container" style={{margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
+  <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
+    <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
+      <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>🔧</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Jetson クロスプラットフォーム デバッグガイド</span>
+    </h1>
+    <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
+      Seeed Studio の Jetson キャリアボード全シリーズ向けに設計されており、Windows / Linux / macOS プラットフォームをカバーします。<br/>
+      シリアルデバッグからシステムモニタリングまで、ブート失敗、カーネルクラッシュ、フラッシュ問題に対するワンストップソリューションを提供します。
+    </p>
+  </div>
+</div>
+
+## 🎯 ドキュメント概要
+
+このガイドは、**Seeed Jetson 全シリーズキャリアボード**向けに特別に設計されており、NVIDIA 公式のデバッグ仕様と Seeed ハードウェアの特長を統合して、統一されたクロスプラットフォームデバッグソリューションを提供します。
+
+対象範囲：**シリアルデバッグ** · **ブートログ解析** · **システムモニタリング** · **ハードウェアレベルのトレース** · **フラッシュ & リカバリ**
+
+:::info 対応ハードウェア
+reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServer Industrial · J501 シリーズ
+:::
+
+## 📚 公式コアリファレンスリソース
+
+| No. | リソース名 | リンク | コアバリュー |
+|:---:|---|---|---|
+| 1 | Jetson Linux Developer Guide | [NVIDIA Official](https://developer.nvidia.com/embedded/jetson-linux) | システムアーキテクチャ、ブートプロセス、UART 設定 |
+| 2 | Jetson ハードウェア仕様 / 回路図 | [NVIDIA Download Center](https://developer.nvidia.com/embedded/downloads) | デバッグインターフェースのピン定義、電圧規格 |
+| 3 | Seeed Studio Wiki | [Seeed Official](https://wiki.seeedstudio.com/ja/) | Seeed キャリアボードのデバッグポート位置、インターフェース説明 |
+| 4 | NVIDIA SDK Manager | [NVIDIA Official](https://developer.nvidia.com/sdk-manager) | グラフィカルなフラッシュ、環境構築 |
+| 5 | CoreSight ハードウェアデバッグドキュメント | Jetson Linux Debug 章 | Arm ハードウェアトレース、クラッシュ解析 |
+
+## 🛠️ デバッグ前提条件
+
+### ハードウェア準備
+
+- Seeed Jetson 開発ボード（正常に給電されていること）
+- USB データケーブル（キャリアボードのモデルに応じて USB-C または Micro-B を選択） / 3.3V USB-UART モジュール
+- ホストコンピュータ（Windows / Linux / macOS いずれか）
+
+### ソフトウェアツール（クロスプラットフォーム）
+
+| システム | 推奨ツール |
+|---|---|
+| **Windows** | PuTTY / MobaXterm / Device Manager |
+| **Linux** | `screen` / `minicom` / `picocom` |
+| **macOS** | `screen` / `minicom` |
+
+## 🔌 UART シリアルデバッグ（コア）
+
+UART シリアルポートは Jetson デバッグの**ローレベル入口**であり、完全な Bootloader とカーネルブートログを確認でき、ブラックスクリーン、起動失敗、シリアルポート占有などのコアな問題を解決できます。
+
+:::danger 電圧に関する警告
+すべての Seeed Jetson デバッグポートは **3.3V レベル**です。**5V モジュールの使用は厳禁**であり、使用するとデバイスが永久的に破損します！
+:::
+
+### 各シリーズのデバッグポート接続方法
+
+お使いのデバイスシリーズを選択して、対応するデバッグポート位置と接続方法を確認してください：
+
+<Tabs groupId="product-series">
+<TabItem value="super" label="🟢 reComputer Super" default>
+
+**対応モデル**：reComputer Super J4012 / J4011 / J3011 / J3010
+
+**デバッグポート種別**：オンボード **USB-C デバッグポート**
+
+**接続方法**：
+1. **USB Type-C** データケーブルを使用して、キャリアボードのデバッグポートとホストの USB ポートを直接接続します
+2. 追加の UART モジュールは不要で、接続するだけで使用できます
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super" />
+</div>
+
+:::tip デバッグポート位置
+Super シリーズのデバッグポートは、USB-C コネクタのある筐体側面に位置し、`DEBUG` または `UART` と表示されています。接続後、ホスト側ではシリアルデバイスとして認識されます。
+:::
+
+</TabItem>
+<TabItem value="classic" label="🔵 reComputer Classic">
+
+**対応モデル**：reComputer J4012 / J4011 / J3011 / J3010（B バージョンを含む）
+
+**デバッグポート種別**：J14 ヘッダ **UART デバッグヘッダ**
+
+**接続方法**：
+1. **3.3V USB-UART** モジュールを用意します
+2. ヘッダのピン定義を参照して、以下のように配線します：
+   - **TX (Pin 9)** → ホスト RX
+   - **RX (Pin 10)** → ホスト TX
+   - **GND (Pin 6)** → 共通 GND
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg" alt="reComputer Classic" />
+</div>
+
+**J401 キャリアボード ピン定義**：
+
+| Pin | 機能 | Pin | 機能 |
+|:---:|---|:---:|---|
+| 1 | PWR BTN | 7 | AUTO ON |
+| 2 | GND | 8 | DIS |
+| 3 | FC REC | 9 | **UART TXD** |
+| 4 | GND | 10 | **UART RXD** |
+| 5 | SYS RET | 11 | LED + |
+| 6 | **GND** | 12 | LED - |
+
+:::tip USB-C 代替手段
+Classic シリーズには USB Type-C DEVICE ポートも搭載されています。一部のファームウェアバージョンでは、USB-C 直接接続によるデバッグに対応しています。実際の状況に応じて選択してください。
+:::
+
+</TabItem>
+<TabItem value="mini" label="🟡 reComputer Mini">
+
+**対応モデル**：reComputer Mini J4012 / J4011 / J3011 / J3010
+
+**デバッグポート種別**：オンボード **USB Micro-B デバッグポート**
+
+**接続方法**：
+1. **USB Micro-B** データケーブルを使用して、キャリアボードの USB2.0 DEVICE ポートとホストを接続します
+2. 追加の UART モジュールは不要です
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="reComputer Mini" />
+</div>
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" alt="reComputer Mini Interface" />
+</div>
+
+</TabItem>
+<TabItem value="robotics" label="🤖 reComputer Robotics">
+
+**対応モデル**：reComputer Robotics J4012 / J4011 / J3011 / J3010
+
+**デバッグポート種別**：オンボード **USB Type-C デバッグポート**
+
+**接続方法**：
+1. **USB Type-C** データケーブルを使用して、キャリアボードとホストを接続します
+2. 追加の UART モジュールは不要です
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics" />
+</div>
+
+</TabItem>
+<TabItem value="industrial" label="🏭 reComputer Industrial">
+
+**対応モデル**：reComputer Industrial J4012 / J4011 / J3011 / J3010 / J2012 / J2011
+
+**デバッグポート種別**：オンボード **USB Type-C デバッグポート**
+
+**接続方法**：
+1. **USB Type-C** データケーブルを使用して、キャリアボードの USB2.0 DEVICE ポートとホストを接続します
+2. 追加の UART モジュールは不要です
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg" alt="reComputer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="reserver" label="🖥️ reServer Industrial">
+
+**対応モデル**：reServer Industrial J4012 / J4011 / J3011 / J3010
+
+**デバッグポート種別**：オンボード **USB Type-C デバッグポート**（DEVICE ポート）
+
+**接続方法**：
+1. **USB Type-C** データケーブルを使用して、DEVICE ポートとホストを接続します
+2. 追加の UART モジュールは不要です
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg" alt="reServer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="j501" label="⚡ J501 シリーズ">
+
+**対応モデル**：reServer Industrial J501 / reComputer Robotics J501 Mini / reComputer Robotics J501（AGX Orin 32GB/64GB）
+
+**デバッグポート種別**：オンボード **USB Type-C デバッグポート**
+
+**接続方法**：
+1. **USB Type-C** データケーブルを使用して、キャリアボードとホストを接続します
+2. 追加の UART モジュールは不要です
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" alt="J501 Series" />
+</div>
+
+</TabItem>
+</Tabs>
+
+### クロスプラットフォームでのポート識別
+
+デバッグケーブルを接続した後、ホスト側でシリアルデバイスを特定します：
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+**Device Manager** を開き → **Ports (COM & LPT)** を展開 → 対応する `USB Serial Port` の COM 番号（例：`COM3`）を確認します。
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+ls /dev/ttyACM* /dev/ttyUSB*
+```
+
+通常は `/dev/ttyACM0` または `/dev/ttyUSB0` として表示されます。
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+ls /dev/cu.usbmodem* /dev/tty.usbserial*
+```
+
+</TabItem>
+</Tabs>
+
+### ModemManager によるシリアルポート占有の修正（Linux）
+
+:::warning Linux 固有の問題
+Linux ホスト上の `ModemManager` サービスが Jetson のデバッグシリアルポートを誤って占有し、接続失敗を引き起こすことがあります。
+:::
+
+```bash
+# Troubleshoot port occupation
+sudo lsof /dev/ttyACM0
+
+# Temporarily stop service (recommended)
+sudo systemctl stop ModemManager
+
+# Permanently disable (when 4G/5G module is not needed)
+sudo systemctl disable ModemManager
+```
+
+**udev ルールを設定する（sudo 不要でシリアルポートへアクセス）**:
+
+```bash
+sudo vim /etc/udev/rules.d/99-tegra-serial.rules
+```
+
+次の内容を追加します:
+
+```text
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0955", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+```
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### シリアル接続（ボーレート: 115200）
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+**PuTTY** を使用する場合:
+1. 接続タイプとして `Serial` を選択
+2. COM 番号を入力（例: `COM3`）
+3. ボーレートを `115200` に設定
+4. `Open` をクリック
+
+または **MobaXterm** を使用: New Serial Session → COM ポートを選択 → ボーレートを `115200` に設定
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+screen /dev/ttyACM0 115200
+```
+
+`screen` の終了ショートカット: `Ctrl+A` を押してから `K` を押し、`y` で確認します。
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+screen /dev/cu.usbmodemXXX 115200
+```
+
+`XXX` を実際のデバイス番号に置き換えてください。
+
+</TabItem>
+</Tabs>
+
+## 🚀 システム起動とカーネルデバッグ
+
+UART シリアルポートを通して、Jetson の起動ログを完全に取得し、起動ハング、カーネルクラッシュなどの問題を特定できます。
+
+### 起動の 3 段階
+
+```text
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Bootloader     │ →  │  Kernel Boot     │ →  │  System Init     │
+│  CBoot/U-Boot   │    │  Linux Load Drivers│   │  systemd Service│
+│  Serial Only    │    │  Core Debug Info  │    │  User Mode      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+```
+
+### 完全な起動ログを有効化
+
+デフォルトでは、`quiet` パラメータにより多くのログが非表示になります。次の手順で有効化できます:
+
+1. 起動設定ファイルを編集します:
+
+```bash
+sudo vim /boot/extlinux/extlinux.conf
+```
+
+2. `APPEND` 行を見つけ、`quiet` を**削除**し、`ignore_loglevel` を**追加**します
+3. 再起動後、シリアルポート経由で完全なカーネルログを確認できます
+
+:::tip リモート環境
+SSH で接続できる場合は、カーネルログを直接確認することもできます:
+
+```bash
+dmesg --follow
+journalctl -k -f
+```
+
+:::
+
+## 📊 システムモニタリングと高度なハードウェアデバッグ
+
+### tegrastats — リアルタイムシステムモニタリング
+
+`tegrastats` は、CPU/GPU 使用率、温度、周波数などを確認できる、NVIDIA 公式の Jetson システムモニタリングツールです:
+
+```bash
+# Real-time monitoring
+tegrastats
+
+# Customized output (1 second refresh, total 10 times)
+tegrastats --interval 1000 --stop 10
+```
+
+### jtop — 強化されたビジュアルモニタリング
+
+`jtop` は対話的な TUI インターフェースを提供します。インストール方法:
+
+```bash
+sudo pip3 install -U jetson-stats
+sudo systemctl restart jtop.service
+jtop
+```
+
+### CoreSight ハードウェアレベルデバッグ（上級）
+
+**再現が難しいクラッシュやパフォーマンスボトルネック**の解析に使用され、OpenCSD + perf ツールに基づいています:
+
+```bash
+# Record instruction execution flow
+perf record -e cs_etm/@<trace-id>/u ls
+
+# Analyze logs
+perf report --stdio --dump
+```
+
+:::info
+CoreSight は STM（System Trace Macrocell）をサポートしており、`printk` によるソフトウェアデバッグを効率的に置き換えることができます。詳細な設定については、[NVIDIA 公式デバッグドキュメント](https://developer.nvidia.com/embedded/jetson-linux) を参照してください。
+:::
+
+## 🔄 フラッシュ & リカバリ
+
+システムがクラッシュしたり起動しなくなった場合は、公式ツールを使用して再フラッシュできます。
+
+:::tip クイックフラッシュガイド
+詳細なフラッシュ手順については、**[Flashing Jetson Linux](/ja/flash/jetpack_to_selected_product)** ページを参照してください。ここでは、以下を含むデバイス別の完全なフラッシュガイドを提供しています:
+- BSP のダウンロードと検証
+- 環境の準備
+- デバイス別のフラッシュ手順
+- よくある問題のトラブルシューティング
+:::
+
+### リカバリモードの確認
+
+フラッシュ前に、デバイスがリカバリモードに入っていることを確認してください。Ubuntu ホスト上で実行します:
+
+```bash
+lsusb
+```
+
+出力に次のいずれかの ID が含まれていれば、デバイスはリカバリモードに入っています:
+
+| モジュール | USB ID |
+|---|---|
+| Orin NX 16GB | `0955:7323` |
+| Orin NX 8GB | `0955:7423` |
+| Orin Nano 8GB | `0955:7523` |
+| Orin Nano 4GB | `0955:7623` |
+| AGX Orin 32GB | `0955:7223` |
+| AGX Orin 64GB | `0955:7023` |
+| Xavier NX | `0955:7e19` |
+
+:::info リカバリモードへの移行
+デバイスごとにリカバリモードへ入る方法は異なります。対応するデバイスの詳細な手順については、**[Flashing Jetson Linux](/ja/flash/jetpack_to_selected_product)** ページを参照してください。
+:::
+
+### フラッシュ時のデバッグログ
+
+フラッシュに失敗した場合は、トラブルシューティングのために必ず次の 2 種類のログを収集してください:
+
+1. **ホスト側**: フラッシュを実行したターミナルの完全な出力ログ
+2. **ターゲット側**: UART シリアルポートで取得した Jetson の起動ログ（コアとなる解析の基礎）
+
+:::tip デバッグのコツ
+- フラッシュに失敗した場合は、まず UART シリアルポートのログを確認してください。多くの場合、ここに根本原因が現れます
+- よくある問題には、BSP バージョンの不一致、USB 接続の問題、ホスト環境の設定不備などがあります
+- サポートが必要な場合は、完全なログを収集してからテクニカルサポートへお問い合わせください
+:::
+
+## ❓ よくある問題のトラブルシューティング
+
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
+
+| 問題 | トラブルシューティングの方向性 |
+|---|---|
+| **シリアル接続に失敗する** | ModemManager サービス、USB ケーブル、ポート番号、電圧規格（3.3V）を確認 |
+| **起動ログが出力されない** | デバッグポートが正しく接続されているか確認；カーネルの `quiet` 起動パラメータを削除 |
+| **フラッシュに失敗する** | UART シリアルポートのログを優先的に確認；キャリアボードのモデルと JetPack バージョンが一致しているか検証 |
+| **シリアルポートの権限が不足している** | udev ルールを設定；`sudo usermod -aG plugdev $USER` |
+| **デバイスがリカバリモードに入れない** | ジャンパ/ボタンの設定が正しいか確認；USB ケーブルやポートを変更して試す |
+
+  </div>
+</div>
+
+## 📎 付録: 公式リソース
+
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>📖 Developer Guide</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA Jetson Linux 公式開発者ガイド。システムアーキテクチャ、起動プロセス、デバッグ設定などを解説しています。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/embedded/jetson-linux" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Jetson Linux Guide</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🌱 Seeed Wiki</h3>
+      </div>
+      <div className="card__body">
+        <p>Seeed Studio 公式 Wiki。全キャリアボードシリーズのハードウェアインターフェース説明と使用チュートリアルを収録しています。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://wiki.seeedstudio.com/ja/" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Seeed Studio Wiki</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 SDK Manager</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA 公式のグラフィカルなフラッシュおよび SDK 環境構築ツールです。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/sdk-manager" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>NVIDIA SDK Manager</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🤝 テクニカルサポートと製品ディスカッション
+
+弊社製品をお選びいただきありがとうございます。ご利用中の体験がスムーズになるよう、さまざまなサポートを提供いたします。
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -1,0 +1,5 @@
+position: 9
+label: 'Paquete de Misión'
+collapsible: true
+collapsed: true
+className: _mission-pack-v3

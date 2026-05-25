@@ -1,0 +1,10 @@
+position: 4
+label: '设备集成与控制'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: cn/device-integration-control
+#   title: 设备集成与控制
+#   description: 自动化和协议兼容性示例。

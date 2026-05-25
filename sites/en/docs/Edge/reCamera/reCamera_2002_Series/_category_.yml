@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'reCamera 2002 Series'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: recamera_2002_series
+link:
+  type: generated-index
+  slug: recamera_2002_series
+  title: reCamera 2002 Series
+  description: reCamera 2002 Series documentation

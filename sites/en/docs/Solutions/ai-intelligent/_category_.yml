@@ -1,0 +1,10 @@
+position: 1.3
+label: 'AI Intelligent'
+collapsible: true
+collapsed: true
+className: _ai-intelligent
+# link:
+#   type: generated-index
+#   slug: solution-ai-intelligent
+#   title: AI Intelligent
+#   description: AI-powered solutions and applications.

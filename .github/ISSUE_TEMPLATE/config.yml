@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🤖 Discord chat
+    url: https://discord.com/invite/eWkprNDMU7
+    about: To chat with all people instantly, use the Discord server.
+  - name: 🗨️ Seeed Forum
+    url: http://forum.seeedstudio.com/
+    about: Use the forum for slightly more advanced questions.
+  - name: 💁 Contacts
+    url: https://www.seeedstudio.com/contacts
+    about: Please contact us if you have any questions.

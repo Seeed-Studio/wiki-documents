@@ -1,0 +1,530 @@
+---
+description: Guía de depuración multiplataforma (Windows/Linux/macOS) para todas las placas de desarrollo Seeed Jetson, que cubre depuración serie, análisis de registros de arranque, monitorización del sistema y flasheo/recuperación.
+title: Guía de Depuración Multiplataforma de Seeed Jetson
+keywords:
+  - jetson
+  - debug
+  - uart
+  - serial
+  - reComputer
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /jetson_debug_guide
+last_update:
+  date: 03/19/2026
+  author: Seeed Studio
+createdAt: '2026-03-20'
+url: https://wiki.seeedstudio.com/es/jetson_debug_guide/
+updatedAt: '2026-03-20'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+{/* ============ Hero Banner ============ */}
+
+<div className="container" style={{margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
+  <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
+    <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
+      <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>🔧</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Guía de Depuración Multiplataforma de Jetson</span>
+    </h1>
+    <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
+      Diseñada para todas las placas carrier Jetson de Seeed Studio, cubriendo las plataformas Windows / Linux / macOS,<br/>
+      Desde la depuración serie hasta la monitorización del sistema, solución integral para fallos de arranque, cuelgues del kernel y problemas de flasheo.
+    </p>
+  </div>
+</div>
+
+## 🎯 Descripción General del Documento
+
+Esta guía está diseñada específicamente para **todas las placas carrier Seeed Jetson**, integrando las especificaciones oficiales de depuración de NVIDIA con las características de hardware de Seeed para proporcionar una solución de depuración multiplataforma unificada.
+
+Cobertura: **Depuración Serie** · **Análisis de Registros de Arranque** · **Monitorización del Sistema** · **Trazado a Nivel de Hardware** · **Flasheo y Recuperación**
+
+:::info Hardware Compatible
+reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServer Industrial · Serie J501
+:::
+
+## 📚 Recursos Básicos Oficiales de Referencia
+
+| Nº | Nombre del Recurso | Enlace | Valor Principal |
+|:---:|---|---|---|
+| 1 | Jetson Linux Developer Guide | [NVIDIA Official](https://developer.nvidia.com/embedded/jetson-linux) | Arquitectura del sistema, proceso de arranque, configuración de UART |
+| 2 | Especificaciones de Hardware / Esquemáticos de Jetson | [NVIDIA Download Center](https://developer.nvidia.com/embedded/downloads) | Definiciones de pines de la interfaz de depuración, estándares de voltaje |
+| 3 | Seeed Studio Wiki | [Seeed Official](https://wiki.seeedstudio.com/es/) | Ubicación de los puertos de depuración de las placas carrier de Seeed, descripciones de interfaces |
+| 4 | NVIDIA SDK Manager | [NVIDIA Official](https://developer.nvidia.com/sdk-manager) | Flasheo gráfico, despliegue de entorno |
+| 5 | Documentación de Depuración de Hardware CoreSight | Jetson Linux Debug Chapter | Trazado de hardware Arm, análisis de cuelgues |
+
+## 🛠️ Requisitos Previos para la Depuración
+
+### Preparación de Hardware
+
+- Placa de desarrollo Seeed Jetson (alimentada normalmente)
+- Cable de datos USB (elige USB-C o Micro-B según el modelo de la placa carrier) / Módulo USB a UART de 3,3 V
+- Ordenador host (cualquiera de Windows / Linux / macOS)
+
+### Herramientas de Software (Multiplataforma)
+
+| Sistema | Herramientas Recomendadas |
+|---|---|
+| **Windows** | PuTTY / MobaXterm / Device Manager |
+| **Linux** | `screen` / `minicom` / `picocom` |
+| **macOS** | `screen` / `minicom` |
+
+## 🔌 Depuración Serie UART (Núcleo)
+
+El puerto serie UART es el **punto de entrada de bajo nivel** para la depuración de Jetson, que te permite ver los registros completos de arranque del Bootloader y del kernel, resolviendo problemas clave como pantalla en negro, fallo de arranque y ocupación del puerto serie.
+
+:::danger Advertencia de Voltaje
+Todos los puertos de depuración Seeed Jetson son de **nivel 3,3 V**, **queda estrictamente prohibido usar módulos de 5 V**, ¡de lo contrario el dispositivo se dañará permanentemente!
+:::
+
+### Métodos de Conexión del Puerto de Depuración para Cada Serie
+
+Selecciona tu serie de dispositivo para ver la ubicación correspondiente del puerto de depuración y el método de conexión:
+
+<Tabs groupId="product-series">
+<TabItem value="super" label="🟢 reComputer Super" default>
+
+**Modelos Compatibles**: reComputer Super J4012 / J4011 / J3011 / J3010
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB-C** integrado
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Type-C** para conectar directamente el puerto de depuración de la placa carrier al puerto USB del host
+2. No se requiere módulo UART adicional, conectar y usar
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super" />
+</div>
+
+:::tip Ubicación del Puerto de Depuración
+El puerto de depuración de la serie Super está situado en el lateral del chasis, en el conector USB-C, etiquetado como `DEBUG` o `UART`. Tras la conexión, el host lo reconocerá como un dispositivo serie.
+:::
+
+</TabItem>
+<TabItem value="classic" label="🔵 reComputer Classic">
+
+**Modelos Compatibles**: reComputer J4012 / J4011 / J3011 / J3010 (incluyendo versiones B)
+
+**Tipo de Puerto de Depuración**: Conector J14 **Cabecera de Depuración UART**
+
+**Método de Conexión**:
+1. Prepara un módulo **USB a UART de 3,3 V**
+2. Consulta las definiciones de pines del conector y conecta los pines:
+   - **TX (Pin 9)** → RX del host
+   - **RX (Pin 10)** → TX del host
+   - **GND (Pin 6)** → Tierra común
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg" alt="reComputer Classic" />
+</div>
+
+**Definiciones de Pines de la Placa Carrier J401**:
+
+| Pin | Función | Pin | Función |
+|:---:|---|:---:|---|
+| 1 | PWR BTN | 7 | AUTO ON |
+| 2 | GND | 8 | DIS |
+| 3 | FC REC | 9 | **UART TXD** |
+| 4 | GND | 10 | **UART RXD** |
+| 5 | SYS RET | 11 | LED + |
+| 6 | **GND** | 12 | LED - |
+
+:::tip Alternativa USB-C
+La serie Classic también incorpora un puerto USB Type-C DEVICE. Algunas versiones de firmware admiten la depuración mediante conexión USB-C directa. Elige según la situación real.
+:::
+
+</TabItem>
+<TabItem value="mini" label="🟡 reComputer Mini">
+
+**Modelos Compatibles**: reComputer Mini J4012 / J4011 / J3011 / J3010
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB Micro-B** integrado
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Micro-B** para conectar el puerto USB2.0 DEVICE de la placa carrier al host
+2. No se requiere módulo UART adicional
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="reComputer Mini" />
+</div>
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" alt="Interfaz de reComputer Mini" />
+</div>
+
+</TabItem>
+<TabItem value="robotics" label="🤖 reComputer Robotics">
+
+**Modelos Compatibles**: reComputer Robotics J4012 / J4011 / J3011 / J3010
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB Type-C** integrado
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Type-C** para conectar la placa carrier al host
+2. No se requiere módulo UART adicional
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics" />
+</div>
+
+</TabItem>
+<TabItem value="industrial" label="🏭 reComputer Industrial">
+
+**Modelos Compatibles**: reComputer Industrial J4012 / J4011 / J3011 / J3010 / J2012 / J2011
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB Type-C** integrado
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Type-C** para conectar el puerto USB2.0 DEVICE de la placa carrier al host
+2. No se requiere módulo UART adicional
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg" alt="reComputer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="reserver" label="🖥️ reServer Industrial">
+
+**Modelos Compatibles**: reServer Industrial J4012 / J4011 / J3011 / J3010
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB Type-C** integrado (puerto DEVICE)
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Type-C** para conectar el puerto DEVICE al host
+2. No se requiere módulo UART adicional
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg" alt="reServer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="j501" label="⚡ Serie J501">
+
+**Modelos Compatibles**: reServer Industrial J501 / reComputer Robotics J501 Mini / reComputer Robotics J501 (AGX Orin 32GB/64GB)
+
+**Tipo de Puerto de Depuración**: **Puerto de Depuración USB Type-C** integrado
+
+**Método de Conexión**:
+1. Usa un cable de datos **USB Type-C** para conectar la placa carrier al host
+2. No se requiere módulo UART adicional
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" alt="Serie J501" />
+</div>
+
+</TabItem>
+</Tabs>
+
+### Identificación de Puertos Multiplataforma
+
+Después de conectar el cable de depuración, identifica el dispositivo serie en el host:
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+Abre **Device Manager** → Despliega **Ports (COM & LPT)** → Busca el número de COM correspondiente a `USB Serial Port` (por ejemplo, `COM3`).
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+ls /dev/ttyACM* /dev/ttyUSB*
+```
+
+Normalmente se muestra como `/dev/ttyACM0` o `/dev/ttyUSB0`.
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+ls /dev/cu.usbmodem* /dev/tty.usbserial*
+```
+
+</TabItem>
+</Tabs>
+
+### Solución a la Ocupación del Puerto Serie por ModemManager (Linux)
+
+:::warning Problema Específico de Linux
+El servicio `ModemManager` en hosts Linux ocupará por error el puerto serie de depuración de Jetson, provocando fallos de conexión.
+:::
+
+```bash
+# Troubleshoot port occupation
+sudo lsof /dev/ttyACM0
+
+# Temporarily stop service (recommended)
+sudo systemctl stop ModemManager
+
+# Permanently disable (when 4G/5G module is not needed)
+sudo systemctl disable ModemManager
+```
+
+**Configurar reglas de udev (para acceso al puerto serie sin sudo)**:
+
+```bash
+sudo vim /etc/udev/rules.d/99-tegra-serial.rules
+```
+
+Añade el siguiente contenido:
+
+```text
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0955", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+```
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### Conexión serie (Baudios: 115200)
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+Usando **PuTTY**:
+1. Selecciona el tipo de conexión `Serial`
+2. Introduce el número de COM (p. ej., `COM3`)
+3. Establece la velocidad en baudios a `115200`
+4. Haz clic en `Open`
+
+O usando **MobaXterm**: Nueva sesión serie → Selecciona el puerto COM → Velocidad en baudios `115200`
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+screen /dev/ttyACM0 115200
+```
+
+Atajo para salir de `screen`: `Ctrl+A` y luego pulsa `K`, confirma con `y`.
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+screen /dev/cu.usbmodemXXX 115200
+```
+
+Sustituye `XXX` por el número real del dispositivo.
+
+</TabItem>
+</Tabs>
+
+## 🚀 Arranque del sistema y depuración del kernel
+
+A través del puerto serie UART, puedes capturar completamente los registros de arranque de Jetson para localizar bloqueos de arranque, fallos del kernel y otros problemas.
+
+### Tres etapas de arranque
+
+```text
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Bootloader     │ →  │  Kernel Boot     │ →  │  System Init     │
+│  CBoot/U-Boot   │    │  Linux Load Drivers│   │  systemd Service│
+│  Serial Only    │    │  Core Debug Info  │    │  User Mode      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+```
+
+### Habilitar registros de arranque completos
+
+De forma predeterminada, el parámetro `quiet` oculta una gran cantidad de registros. Puedes habilitarlos mediante los siguientes pasos:
+
+1. Edita el archivo de configuración de arranque:
+
+```bash
+sudo vim /boot/extlinux/extlinux.conf
+```
+
+2. Busca la línea `APPEND`, **elimina** `quiet`, **añade** `ignore_loglevel`
+3. Después de reiniciar, podrás ver los registros completos del kernel a través del puerto serie
+
+:::tip Escenario remoto
+Si puedes conectarte mediante SSH, también puedes ver directamente los registros del kernel:
+
+```bash
+dmesg --follow
+journalctl -k -f
+```
+
+:::
+
+## 📊 Monitorización del sistema y depuración avanzada de hardware
+
+### tegrastats — Monitorización del sistema en tiempo real
+
+`tegrastats` es la herramienta oficial de monitorización del sistema Jetson proporcionada por NVIDIA para ver uso de CPU/GPU, temperatura, frecuencia, etc.:
+
+```bash
+# Real-time monitoring
+tegrastats
+
+# Customized output (1 second refresh, total 10 times)
+tegrastats --interval 1000 --stop 10
+```
+
+### jtop — Monitorización visual mejorada
+
+`jtop` proporciona una interfaz TUI interactiva. Método de instalación:
+
+```bash
+sudo pip3 install -U jetson-stats
+sudo systemctl restart jtop.service
+jtop
+```
+
+### Depuración a nivel de hardware CoreSight (Avanzado)
+
+Se utiliza para analizar **fallos difíciles de reproducir, cuellos de botella de rendimiento**, basado en OpenCSD + herramientas perf:
+
+```bash
+# Record instruction execution flow
+perf record -e cs_etm/@<trace-id>/u ls
+
+# Analyze logs
+perf report --stdio --dump
+```
+
+:::info
+CoreSight es compatible con STM (System Trace Macrocell), que puede reemplazar de forma eficiente la depuración por software con `printk`. Para una configuración detallada, consulta la [Documentación oficial de depuración de NVIDIA](https://developer.nvidia.com/embedded/jetson-linux).
+:::
+
+## 🔄 Flasheo y modo de recuperación
+
+Cuando el sistema se bloquea o no puede arrancar, puedes volver a flashear usando las herramientas oficiales.
+
+:::tip Guía rápida de flasheo
+Para pasos detallados de flasheo, consulta la página **[Flashing Jetson Linux](/es/flash/jetpack_to_selected_product)**, que proporciona guías de flasheo completas específicas para cada dispositivo, incluyendo:
+- Descarga y verificación del BSP
+- Preparación del entorno
+- Pasos de flasheo específicos del dispositivo
+- Solución de problemas comunes
+:::
+
+### Verificación del modo de recuperación
+
+Antes de flashear, asegúrate de que el dispositivo haya entrado en modo de recuperación. Ejecuta en el host Ubuntu:
+
+```bash
+lsusb
+```
+
+Si la salida contiene cualquiera de los siguientes ID, el dispositivo ha entrado en modo de recuperación:
+
+| Módulo | ID USB |
+|---|---|
+| Orin NX 16GB | `0955:7323` |
+| Orin NX 8GB | `0955:7423` |
+| Orin Nano 8GB | `0955:7523` |
+| Orin Nano 4GB | `0955:7623` |
+| AGX Orin 32GB | `0955:7223` |
+| AGX Orin 64GB | `0955:7023` |
+| Xavier NX | `0955:7e19` |
+
+:::info Entrada en modo de recuperación
+Diferentes dispositivos tienen distintos métodos para entrar en modo de recuperación. Consulta los pasos detallados para el dispositivo correspondiente en la página **[Flashing Jetson Linux](/es/flash/jetpack_to_selected_product)**.
+:::
+
+### Registros de depuración de flasheo
+
+Cuando el flasheo falla, asegúrate de recopilar dos tipos de registros para la resolución de problemas:
+
+1. **Lado del host**: Registro completo de salida del terminal de flasheo
+2. **Lado del objetivo**: Registro de arranque de Jetson capturado por el puerto serie UART (base principal para la resolución de problemas)
+
+:::tip Consejos de depuración
+- Cuando el flasheo falle, prioriza la comprobación del registro del puerto serie UART, que normalmente revela la causa raíz
+- Los problemas comunes incluyen: incompatibilidad de versión del BSP, problemas de conexión USB, configuración del entorno del host, etc.
+- Si necesitas ayuda, recopila los registros completos y contacta con el soporte técnico
+:::
+
+## ❓ Solución de problemas comunes
+
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
+
+| Problema | Dirección de solución de problemas |
+|---|---|
+| **Fallo en la conexión serie** | Comprueba el servicio ModemManager, el cable USB, el número de puerto, el estándar de voltaje (3,3V) |
+| **Sin registros de arranque** | Confirma que el puerto de depuración está conectado correctamente; elimina el parámetro de arranque `quiet` del kernel |
+| **Fallo en el flasheo** | Prioriza la comprobación de los registros del puerto serie UART; verifica que el modelo de la placa portadora coincida con la versión de JetPack |
+| **Permisos insuficientes del puerto serie** | Configura reglas de udev; `sudo usermod -aG plugdev $USER` |
+| **El dispositivo no puede entrar en modo de recuperación** | Comprueba si los jumpers/botones son correctos; intenta cambiar el cable o el puerto USB |
+
+  </div>
+</div>
+
+## 📎 Apéndice: Recursos oficiales
+
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>📖 Guía para desarrolladores</h3>
+      </div>
+      <div className="card__body">
+        <p>Guía oficial para desarrolladores de NVIDIA Jetson Linux, arquitectura del sistema, proceso de arranque, configuración de depuración.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/embedded/jetson-linux" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Guía de Jetson Linux</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🌱 Seeed Wiki</h3>
+      </div>
+      <div className="card__body">
+        <p>Wiki oficial de Seeed Studio, que contiene descripciones de interfaces de hardware y tutoriales de uso para toda la serie de placas portadoras.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://wiki.seeedstudio.com/es/" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Seeed Studio Wiki</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 SDK Manager</h3>
+      </div>
+      <div className="card__body">
+        <p>Herramienta oficial de NVIDIA para flasheo gráfico y despliegue del entorno SDK.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/sdk-manager" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>NVIDIA SDK Manager</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🤝 Soporte técnico y discusión de productos
+
+¡Gracias por elegir nuestros productos! Te proporcionaremos diversos tipos de soporte para garantizar una experiencia fluida durante su uso.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -1,0 +1,1 @@
+We offer two different PR ways on the wiki platform. Please check the [Contributor Guide](https://wiki.seeedstudio.com/Contributor/).

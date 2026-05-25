@@ -1,0 +1,27 @@
+{
+  "zh-CN": {
+    "Trilateration": "三角定位",
+    "Get One Now": "立即获取",
+    "Check More": "查看更多",
+    "Learn More": "了解更多",
+    "Available customization options: logo branding, packaging, and firmware flashing.": "可定制选项：Logo 品牌定制、包装和固件烧录。"
+  },
+  "ja": {
+    "Get One Now": "今すぐ入手",
+    "Check More": "もっと見る",
+    "Learn More": "詳しく見る",
+    "Available customization options: logo branding, packaging, and firmware flashing.": "カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。"
+  },
+  "es": {
+    "Get One Now": "Consigue uno ahora",
+    "Check More": "Ver más",
+    "Learn More": "Más información",
+    "Available customization options: logo branding, packaging, and firmware flashing.": "Opciones de personalización disponibles: branding del logotipo, embalaje y flasheo de firmware."
+  },
+  "pt-BR": {
+    "Get One Now": "Adquira agora",
+    "Check More": "Ver mais",
+    "Learn More": "Saiba mais",
+    "Available customization options: logo branding, packaging, and firmware flashing.": "Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware."
+  }
+}

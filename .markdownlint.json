@@ -1,0 +1,25 @@
+{
+    "default": true,
+    "no-trailing-punctuation": {
+      "punctuation": ".,;:!"
+    },
+    "MD002": { "level": 2 },
+    "MD013": false,
+    "MD024": false,
+    "MD033": false,
+    "MD025": false,
+    "MD026": false,
+    "MD045": false,
+    "MD029": false,
+    "first-line-h1": false,
+    "no-hard-tabs": true,
+    "no-trailing-spaces": {
+      "br_spaces": 2
+    },
+    "MD004": {
+      "style": "dash"
+    },
+    "MD034": false,
+    "MD049": { "style": "asterisk" },
+    "MD050": { "style": "asterisk" }
+  }

@@ -1,0 +1,10 @@
+position: 2 # 浮動小数点の位置がサポートされています
+label: 'アプリケーション'
+collapsible: true # カテゴリを折りたたみ可能にする
+collapsed: true # デフォルトでカテゴリを開いた状態にする
+className: wio_e5
+# link:
+#   type: generated-index
+#   slug: m2_start_kit_application
+#   title: アプリケーション
+#   description: このチュートリアルでは、スターターキットを使用した開発プロセスを案内します。

@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'XIAO ESP32S3 & Wio-SX1262 Kit'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_esp32s3_&_wio_sx1262_kit
+link:
+  type: generated-index
+  slug: wio_sx1262_with_xiao_esp32s3_kit_class
+  title: Wio-SX1262 with XIAO ESP32S3 Kit
+  description: Wio-SX1262 with XIAO ESP32S3 Kit Documentation.

@@ -1,0 +1,10 @@
+position: 6 # float position is supported
+label: 'Firmware Architecture Overview'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: watcher_firmware_architecture_overview
+link:
+  type: generated-index
+  slug: watcher_firmware_architecture_main_page
+  title: Firmware Architecture Overview
+  description: Introduces the software framework and development guidelines for the SenseCAP Watcher open source firmware.

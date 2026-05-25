@@ -1,0 +1,5 @@
+position: 5 # float position is supported
+label: '料金'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: sensecraft_data-platform_fee

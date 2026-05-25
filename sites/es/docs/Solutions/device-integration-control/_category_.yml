@@ -1,0 +1,10 @@
+position: 4
+label: 'Integración y Control de Dispositivos'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: es/device-integration-control
+#   title: Integración y Control de Dispositivos
+#   description: Ejemplos de automatización y compatibilidad de protocolos.

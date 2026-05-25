@@ -1,0 +1,10 @@
+position: 4
+label: 'Device Integration & Control'
+collapsible: true
+collapsed: true
+className: _device-integration-control
+# link:
+#   type: generated-index
+#   slug: device-integration-control
+#   title: Device Integration & Control
+#   description: Automation and protocol compatibility examples.

@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: 'XIAO MG24'
+collapsible: true # hacer la categoría plegable
+collapsed: true # mantener la categoría abierta por defecto
+className: xiao_mg24

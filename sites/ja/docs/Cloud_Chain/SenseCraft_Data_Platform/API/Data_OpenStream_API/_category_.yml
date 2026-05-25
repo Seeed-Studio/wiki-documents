@@ -1,0 +1,5 @@
+position: 4 # float position is supported
+label: 'データ Openstream API'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: data_openstream_api

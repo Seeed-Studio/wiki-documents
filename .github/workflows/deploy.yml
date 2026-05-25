@@ -1,0 +1,147 @@
+name: Deploy to GitHub Pages
+
+on:
+  pull_request:
+    branches: [docusaurus-version]
+  push:
+    branches: [docusaurus-version]
+
+env:
+  NODE_OPTIONS: --max-old-space-size=6144
+  DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
+
+permissions:
+  contents: write
+  statuses: write
+
+jobs:
+  test-deploy:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Show runner memory
+        run: node -v && free -h && df -h
+
+      - name: Add extra swap (4G)
+        run: |
+          set -euxo pipefail
+          echo "== Before =="
+          sudo swapon --show || true
+          free -h
+
+          SWAP=/mnt/ci.swap
+          if [ -f "$SWAP" ]; then
+            sudo swapoff "$SWAP" || true
+            sudo rm -f "$SWAP"
+          fi
+
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo chmod 600 "$SWAP"
+          sudo mkswap "$SWAP"
+          sudo swapon "$SWAP"
+
+          echo "== After =="
+          sudo swapon --show || true
+          free -h
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Create shared symlinks
+        run: |
+          set -euxo pipefail
+          ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
+          for site in sites/en sites/zh-CN sites/ja sites/es sites/pt-BR; do
+            rm -rf "$site/assets"
+            ln -s "$ROOT_ASSETS" "$site/assets"
+          done
+
+      - name: Test build website
+        run: yarn build
+
+      - name: Report status to PR
+        if: always()
+        continue-on-error: true
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const success = '${{ job.status }}' === 'success';
+            const sha = context.payload.pull_request?.head?.sha || context.sha;
+            const statusContext = 'Test deployment (required)';
+            try {
+              await github.rest.repos.createCommitStatus({
+                owner,
+                repo,
+                sha,
+                state: success ? 'success' : 'failure',
+                target_url: `https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }}`,
+                description: success ? '✅ Build succeeded' : '❌ Build failed',
+                context: statusContext
+              });
+              core.info(`Status reported on ${sha}: ${statusContext} = ${success ? 'success' : 'failure'}`);
+            } catch (error) {
+              core.warning('Failed to report status: ' + error.message);
+            }
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Show runner memory
+        run: node -v && free -h && df -h
+
+      - name: Add extra swap (4G)
+        run: |
+          set -euxo pipefail
+          echo "== Before =="
+          sudo swapon --show || true
+          free -h
+
+          SWAP=/mnt/ci.swap
+          if [ -f "$SWAP" ]; then
+            sudo swapoff "$SWAP" || true
+            sudo rm -f "$SWAP"
+          fi
+
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo chmod 600 "$SWAP"
+          sudo mkswap "$SWAP"
+          sudo swapon "$SWAP"
+
+          echo "== After =="
+          sudo swapon --show || true
+          free -h
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Create shared symlinks
+        run: |
+          set -euxo pipefail
+          ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
+          for site in sites/en sites/zh-CN sites/ja sites/es sites/pt-BR; do
+            rm -rf "$site/assets"
+            ln -s "$ROOT_ASSETS" "$site/assets"
+          done
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          git config --global user.email "2768073931@qq.com"
+          git config --global user.name "MatthewJeffson"
+          yarn deploy

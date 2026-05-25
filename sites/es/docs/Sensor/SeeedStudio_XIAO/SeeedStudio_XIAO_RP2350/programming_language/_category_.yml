@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Lenguaje de Programación'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_rp2350_programming_language
+# link:
+#   type: generated-index
+#   slug: es/Develop_with_SenseCAP_Indicator
+#   title: Desarrollar con SenseCAP Indicator
+#   description: Este tutorial te guiará a través del proceso de desarrollo con SenseCAP Indicator.

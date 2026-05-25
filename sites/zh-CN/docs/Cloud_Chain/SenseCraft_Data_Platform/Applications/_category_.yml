@@ -1,0 +1,5 @@
+position: 3 # float position is supported
+label: '应用程序'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: sensecraft_data-platform_applications

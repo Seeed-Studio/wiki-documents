@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'LoRaWAN Network Server'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: lorawan_network_server
+link:
+  type: generated-index
+  slug: lorawan_network_server_class
+  title: LoRaWAN Network Server
+  description: LoRaWAN Network Server Documentation.

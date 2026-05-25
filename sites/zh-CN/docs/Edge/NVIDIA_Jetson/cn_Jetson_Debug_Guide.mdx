@@ -1,0 +1,530 @@
+---
+description: 面向 Seeed Jetson 全系列开发板的跨平台（Windows/Linux/macOS）调试指南，涵盖串口调试、启动日志分析、系统监控以及刷机/恢复。
+title: Seeed Jetson 跨平台调试指南
+keywords:
+  - jetson
+  - debug
+  - uart
+  - serial
+  - reComputer
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /jetson_debug_guide
+last_update:
+  date: 03/19/2026
+  author: Seeed Studio
+createdAt: '2026-03-20'
+url: https://wiki.seeedstudio.com/cn/jetson_debug_guide/
+updatedAt: '2026-03-20'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+{/* ============ Hero Banner ============ */}
+
+<div className="container" style={{margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
+  <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
+    <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
+      <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>🔧</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Jetson 跨平台调试指南</span>
+    </h1>
+    <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
+      面向 Seeed Studio 全系列 Jetson 载板，覆盖 Windows / Linux / macOS 平台，<br/>
+      从串口调试到系统监控，一站式解决黑屏、无法启动、刷机异常等核心问题。
+    </p>
+  </div>
+</div>
+
+## 🎯 文档概览
+
+本指南专为 **Seeed Jetson 全系列载板** 设计，结合 NVIDIA 官方调试规范与 Seeed 硬件特性，提供统一的跨平台调试方案。
+
+覆盖范围：**串口调试** · **启动日志分析** · **系统监控** · **硬件级追踪** · **刷机与恢复**
+
+:::info 支持的硬件
+reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServer Industrial · J501 系列
+:::
+
+## 📚 官方核心参考资源
+
+| 序号 | 资源名称 | 链接 | 核心价值 |
+|:---:|---|---|---|
+| 1 | Jetson Linux Developer Guide | [NVIDIA Official](https://developer.nvidia.com/embedded/jetson-linux) | 系统架构、启动流程、UART 配置 |
+| 2 | Jetson 硬件规格 / 原理图 | [NVIDIA Download Center](https://developer.nvidia.com/embedded/downloads) | 调试接口引脚定义、电压标准 |
+| 3 | Seeed Studio Wiki | [Seeed Official](https://wiki.seeedstudio.com/cn/) | Seeed 载板调试口位置、接口说明 |
+| 4 | NVIDIA SDK Manager | [NVIDIA Official](https://developer.nvidia.com/sdk-manager) | 图形化刷机、环境部署 |
+| 5 | CoreSight 硬件调试文档 | Jetson Linux Debug 章节 | Arm 硬件追踪、崩溃分析 |
+
+## 🛠️ 调试前提条件
+
+### 硬件准备
+
+- Seeed Jetson 开发板（正常供电）
+- USB 数据线（根据载板型号选择 USB-C 或 Micro-B）/ 3.3V USB 转 UART 模块
+- 主机电脑（任意 Windows / Linux / macOS）
+
+### 软件工具（跨平台）
+
+| 系统 | 推荐工具 |
+|---|---|
+| **Windows** | PuTTY / MobaXterm / Device Manager |
+| **Linux** | `screen` / `minicom` / `picocom` |
+| **macOS** | `screen` / `minicom` |
+
+## 🔌 UART 串口调试（核心）
+
+UART 串口是 Jetson 调试的**底层入口**，可查看完整 Bootloader 与内核启动日志，解决黑屏、无法启动、串口被占用等核心问题。
+
+:::danger 电压警告
+所有 Seeed Jetson 调试口均为 **3.3V 电平**，**严禁使用 5V 模块**，否则会造成设备永久损坏！
+:::
+
+### 各系列调试口连接方式
+
+请选择你的设备系列，查看对应的调试口位置与连接方式：
+
+<Tabs groupId="product-series">
+<TabItem value="super" label="🟢 reComputer Super" default>
+
+**支持型号**：reComputer Super J4012 / J4011 / J3011 / J3010
+
+**调试口类型**：板载 **USB-C 调试口**
+
+**连接方式**：
+1. 使用一根 **USB Type-C** 数据线，将载板调试口直接连接到主机 USB 口
+2. 无需额外 UART 模块，即插即用
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super" />
+</div>
+
+:::tip 调试口位置
+Super 系列调试口位于机箱侧面的 USB-C 接口处，丝印标记为 `DEBUG` 或 `UART`。连接后，主机会识别为串口设备。
+:::
+
+</TabItem>
+<TabItem value="classic" label="🔵 reComputer Classic">
+
+**支持型号**：reComputer J4012 / J4011 / J3011 / J3010（含 B 版本）
+
+**调试口类型**：J14 排针 **UART 调试排针**
+
+**连接方式**：
+1. 准备一个 **3.3V USB 转 UART** 模块
+2. 参考排针引脚定义连接各引脚：
+   - **TX（Pin 9）** → 主机 RX
+   - **RX（Pin 10）** → 主机 TX
+   - **GND（Pin 6）** → 公共地
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg" alt="reComputer Classic" />
+</div>
+
+**J401 载板引脚定义**：
+
+| 引脚 | 功能 | 引脚 | 功能 |
+|:---:|---|:---:|---|
+| 1 | PWR BTN | 7 | AUTO ON |
+| 2 | GND | 8 | DIS |
+| 3 | FC REC | 9 | **UART TXD** |
+| 4 | GND | 10 | **UART RXD** |
+| 5 | SYS RET | 11 | LED + |
+| 6 | **GND** | 12 | LED - |
+
+:::tip USB-C 替代方案
+Classic 系列同样提供 USB Type-C DEVICE 口，部分固件版本支持通过直接 USB-C 连接进行调试，请根据实际情况选择。
+:::
+
+</TabItem>
+<TabItem value="mini" label="🟡 reComputer Mini">
+
+**支持型号**：reComputer Mini J4012 / J4011 / J3011 / J3010
+
+**调试口类型**：板载 **USB Micro-B 调试口**
+
+**连接方式**：
+1. 使用一根 **USB Micro-B** 数据线，将载板 USB2.0 DEVICE 口连接到主机
+2. 无需额外 UART 模块
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="reComputer Mini" />
+</div>
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" alt="reComputer Mini Interface" />
+</div>
+
+</TabItem>
+<TabItem value="robotics" label="🤖 reComputer Robotics">
+
+**支持型号**：reComputer Robotics J4012 / J4011 / J3011 / J3010
+
+**调试口类型**：板载 **USB Type-C 调试口**
+
+**连接方式**：
+1. 使用一根 **USB Type-C** 数据线，将载板连接到主机
+2. 无需额外 UART 模块
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics" />
+</div>
+
+</TabItem>
+<TabItem value="industrial" label="🏭 reComputer Industrial">
+
+**支持型号**：reComputer Industrial J4012 / J4011 / J3011 / J3010 / J2012 / J2011
+
+**调试口类型**：板载 **USB Type-C 调试口**
+
+**连接方式**：
+1. 使用一根 **USB Type-C** 数据线，将载板 USB2.0 DEVICE 口连接到主机
+2. 无需额外 UART 模块
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg" alt="reComputer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="reserver" label="🖥️ reServer Industrial">
+
+**支持型号**：reServer Industrial J4012 / J4011 / J3011 / J3010
+
+**调试口类型**：板载 **USB Type-C 调试口**（DEVICE 口）
+
+**连接方式**：
+1. 使用一根 **USB Type-C** 数据线，将 DEVICE 口连接到主机
+2. 无需额外 UART 模块
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg" alt="reServer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="j501" label="⚡ J501 Series">
+
+**支持型号**：reServer Industrial J501 / reComputer Robotics J501 Mini / reComputer Robotics J501（AGX Orin 32GB/64GB）
+
+**调试口类型**：板载 **USB Type-C 调试口**
+
+**连接方式**：
+1. 使用一根 **USB Type-C** 数据线，将载板连接到主机
+2. 无需额外 UART 模块
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" alt="J501 Series" />
+</div>
+
+</TabItem>
+</Tabs>
+
+### 跨平台串口识别
+
+连接调试线后，在主机上识别对应的串口设备：
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+打开 **Device Manager** → 展开 **Ports (COM & LPT)** → 查找 `USB Serial Port` 对应的 COM 号（例如 `COM3`）。
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+ls /dev/ttyACM* /dev/ttyUSB*
+```
+
+通常显示为 `/dev/ttyACM0` 或 `/dev/ttyUSB0`。
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+ls /dev/cu.usbmodem* /dev/tty.usbserial*
+```
+
+</TabItem>
+</Tabs>
+
+### ModemManager 串口占用问题修复（Linux）
+
+:::warning Linux 特有问题
+Linux 主机上的 `ModemManager` 服务会误占用 Jetson 调试串口，导致连接失败。
+:::
+
+```bash
+# Troubleshoot port occupation
+sudo lsof /dev/ttyACM0
+
+# Temporarily stop service (recommended)
+sudo systemctl stop ModemManager
+
+# Permanently disable (when 4G/5G module is not needed)
+sudo systemctl disable ModemManager
+```
+
+**配置 udev 规则（免 sudo 访问串口）**：
+
+```bash
+sudo vim /etc/udev/rules.d/99-tegra-serial.rules
+```
+
+添加以下内容：
+
+```text
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0955", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+```
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### 串口连接（波特率：115200）
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+使用 **PuTTY**：
+1. 选择 `Serial` 连接类型
+2. 输入 COM 号（例如 `COM3`）
+3. 将波特率设置为 `115200`
+4. 点击 `Open`
+
+或者使用 **MobaXterm**：New Serial Session → 选择 COM 端口 → 波特率 `115200`
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+screen /dev/ttyACM0 115200
+```
+
+退出 `screen` 快捷键：先按 `Ctrl+A`，然后按 `K`，确认 `y`。
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+screen /dev/cu.usbmodemXXX 115200
+```
+
+将 `XXX` 替换为实际的设备编号。
+
+</TabItem>
+</Tabs>
+
+## 🚀 系统启动与内核调试
+
+通过 UART 串口，你可以完整捕获 Jetson 启动日志，用于定位启动卡死、内核崩溃等问题。
+
+### 启动三阶段
+
+```text
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Bootloader     │ →  │  Kernel Boot     │ →  │  System Init     │
+│  CBoot/U-Boot   │    │  Linux Load Drivers│   │  systemd Service│
+│  Serial Only    │    │  Core Debug Info  │    │  User Mode      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+```
+
+### 启用完整启动日志
+
+默认情况下，`quiet` 参数会隐藏大量日志。你可以通过以下步骤将其开启：
+
+1. 编辑启动配置文件：
+
+```bash
+sudo vim /boot/extlinux/extlinux.conf
+```
+
+2. 找到 `APPEND` 行，**删除** `quiet`，**添加** `ignore_loglevel`
+3. 重启后，即可通过串口查看完整内核日志
+
+:::tip 远程场景
+如果可以通过 SSH 连接，也可以直接查看内核日志：
+
+```bash
+dmesg --follow
+journalctl -k -f
+```
+
+:::
+
+## 📊 系统监控与高级硬件调试
+
+### tegrastats — 实时系统监控
+
+`tegrastats` 是 NVIDIA 官方提供的 Jetson 系统监控工具，用于查看 CPU/GPU 使用率、温度、频率等信息：
+
+```bash
+# Real-time monitoring
+tegrastats
+
+# Customized output (1 second refresh, total 10 times)
+tegrastats --interval 1000 --stop 10
+```
+
+### jtop — 增强型可视化监控
+
+`jtop` 提供交互式 TUI 界面。安装方法：
+
+```bash
+sudo pip3 install -U jetson-stats
+sudo systemctl restart jtop.service
+jtop
+```
+
+### CoreSight 硬件级调试（高级）
+
+用于分析**难以复现的崩溃、性能瓶颈**，基于 OpenCSD + perf 工具：
+
+```bash
+# Record instruction execution flow
+perf record -e cs_etm/@<trace-id>/u ls
+
+# Analyze logs
+perf report --stdio --dump
+```
+
+:::info
+CoreSight 支持 STM（System Trace Macrocell），可以高效替代 `printk` 软件调试。详细配置请参考 [NVIDIA 官方调试文档](https://developer.nvidia.com/embedded/jetson-linux)。
+:::
+
+## 🔄 刷机与恢复
+
+当系统崩溃或无法启动时，可以使用官方工具重新刷机。
+
+:::tip 快速刷机指南
+详细刷机步骤请参考 **[Flashing Jetson Linux](/cn/flash/jetpack_to_selected_product)** 页面，其中提供了完整的设备专用刷机指南，包括：
+- BSP 下载与校验
+- 环境准备
+- 各设备专用刷机步骤
+- 常见问题排查
+:::
+
+### 恢复模式验证
+
+刷机前，请确保设备已进入恢复模式。在 Ubuntu 主机上执行：
+
+```bash
+lsusb
+```
+
+如果输出中包含以下任一 ID，则说明设备已进入恢复模式：
+
+| 模块 | USB ID |
+|---|---|
+| Orin NX 16GB | `0955:7323` |
+| Orin NX 8GB | `0955:7423` |
+| Orin Nano 8GB | `0955:7523` |
+| Orin Nano 4GB | `0955:7623` |
+| AGX Orin 32GB | `0955:7223` |
+| AGX Orin 64GB | `0955:7023` |
+| Xavier NX | `0955:7e19` |
+
+:::info 进入恢复模式
+不同设备进入恢复模式的方法不同。请在 **[Flashing Jetson Linux](/cn/flash/jetpack_to_selected_product)** 页面中参考对应设备的详细步骤。
+:::
+
+### 刷机调试日志
+
+当刷机失败时，请务必收集两类日志用于排查：
+
+1. **主机侧**：刷机终端的完整输出日志
+2. **目标侧**：通过 UART 串口捕获的 Jetson 启动日志（核心排查依据）
+
+:::tip 调试小贴士
+- 刷机失败时，优先查看 UART 串口日志，通常可以直接暴露根因
+- 常见问题包括：BSP 版本不匹配、USB 连接问题、主机环境配置等
+- 如需协助，请收集完整日志并联系技术支持
+:::
+
+## ❓ 常见问题排查
+
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
+
+| 问题 | 排查方向 |
+|---|---|
+| **串口连接失败** | 检查 ModemManager 服务、USB 线缆、端口号、电压标准（3.3V） |
+| **无启动日志** | 确认调试口连接正确；移除内核 `quiet` 启动参数 |
+| **刷机失败** | 优先查看 UART 串口日志；确认载板型号与 JetPack 版本匹配 |
+| **串口权限不足** | 配置 udev 规则；`sudo usermod -aG plugdev $USER` |
+| **设备无法进入恢复模式** | 检查跳线/按键是否正确；尝试更换 USB 线或端口 |
+
+  </div>
+</div>
+
+## 📎 附录：官方资源
+
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>📖 开发者指南</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA Jetson Linux 官方开发者指南，包含系统架构、启动流程、调试配置等内容。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/embedded/jetson-linux" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Jetson Linux 指南</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🌱 Seeed Wiki</h3>
+      </div>
+      <div className="card__body">
+        <p>Seeed Studio 官方 Wiki，包含全系列载板的硬件接口说明与使用教程。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://wiki.seeedstudio.com/cn/" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Seeed Studio Wiki</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 SDK Manager</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA 官方图形化刷机与 SDK 环境部署工具。</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/sdk-manager" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>NVIDIA SDK Manager</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🤝 技术支持与产品交流
+
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用过程中拥有顺畅的体验。
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

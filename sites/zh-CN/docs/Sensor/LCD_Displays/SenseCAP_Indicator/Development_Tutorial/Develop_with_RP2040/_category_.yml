@@ -1,0 +1,8 @@
+position: 3 # float position is supported
+label: '使用 RP2040 开发'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: indicator_dev
+# link:
+#   type: generated-index
+#   title: Tutorial overview

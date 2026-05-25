@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Aplicações'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: reterminal_d10xx_applications
+link:
+  type: generated-index
+  slug: reterminal_d10xx_applications
+  title: Aplicações da Série reTerminal D
+  description: Este artigo é uma página de coleção para a aplicação da Série reTerminal D.

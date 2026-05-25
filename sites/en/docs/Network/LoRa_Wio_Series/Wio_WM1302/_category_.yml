@@ -1,0 +1,10 @@
+position: 3 # float position is supported
+label: 'Wio-WM1302'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_wm1302
+link:
+  type: generated-index
+  slug: wio_wm1302_class
+  title: Wio-WM1302
+  description: Wio-WM1302 Product Documentation.

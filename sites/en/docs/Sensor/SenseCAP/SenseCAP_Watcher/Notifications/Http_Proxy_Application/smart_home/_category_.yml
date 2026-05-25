@@ -1,0 +1,10 @@
+position: 1 # float position is supported
+label: 'Smart Home'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: smart_home_with_watcher
+link:
+  type: generated-index
+  slug: smart_main_page
+  title: Smart Home with Watcher
+  description: It focuses on the use of Watcher in the smart home.

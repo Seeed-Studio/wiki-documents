@@ -1,0 +1,80 @@
+name: Generate_pdf
+
+on:
+#   pull_request:
+#     paths-ignore:
+#       - "ISSUE_TEMPLATE/**"
+#       - ".github/**.md"
+#       - ".gitignore"
+#       - "demo/**"
+#       - "docker/**"
+#       - "HOW_TO.md"
+#       - "TASK.md"
+#       - "SECURITY.md"
+#       - "README.md"
+#       - "README_zh-CN.md"
+  push:
+    branches:
+      - HTML_RE
+    paths-ignore:
+      - "ISSUE_TEMPLATE/**"
+      - ".github/**.md"
+      - ".gitignore"
+      - "demo/**"
+      - "docker/**"
+      - "HOW_TO.md"
+      - "TASK.md"
+      - "SECURITY.md"
+      - "README.md"
+      - "README_zh-CN.md"
+      
+
+jobs:
+  lint:
+    name: Generate_pdf
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1.0.0
+
+      - name: Checkout
+        uses: actions/checkout@master
+        
+      - name: INSTALL SSH KEY
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PC }} 
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+        
+
+      - name: GIT CLONE
+        run: |
+            sudo apt-get update
+            sudo apt-get install \
+                  git -y 
+            git config --global user.name 'tianrking'
+            git config --global user.email 'tian.r.king@gmail.com'
+            
+      - name: NPM RUN for HTML BUILD
+        run: |
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            cd  ~/
+            sudo apt remove cmdtest
+            sudo apt update && sudo apt install yarn
+            
+      
+      - name: PUBLISH to WEBSITE
+        run: |
+            git clone -b HTML_RE git@github.com:Seeed-Studio/wiki-documents.git ~/HTML_RE
+            cd ~/HTML_RE
+            yarn add docusaurus-prince-pdf
+            npx docusaurus-prince-pdf -u https://wiki.seeedstudio.com/Sensor/SenseCAP
+            git add .
+            git commit -m "Add: pdf"
+            git push -u origin HTML_RE
+
+
+
+
+
+          

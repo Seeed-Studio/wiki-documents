@@ -1,0 +1,5 @@
+position: 4 # float position is supported
+label: 'Saída_do_Modelo'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: sensecraft_ai_Models_Model_Output

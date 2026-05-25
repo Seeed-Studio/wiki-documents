@@ -1,0 +1,125 @@
+---
+description: Reconhecimento Óptico de Caracteres em tempo real
+title: OCR em tempo real com reComputer AI Box
+keywords:
+  - Borda
+  - reComputer R2000
+  - reComputer R2100
+  - yolov5
+image: https://files.seeedstudio.com/wiki/Edge_Box/ocr.webp
+slug: /real-time-ocr
+last_update:
+  date: 6/16/2025
+  author: Jiahao Li
+createdAt: '2025-06-17'
+updatedAt: '2026-03-16'
+url: https://wiki.seeedstudio.com/pt-br/real-time-ocr/
+---
+
+## Introdução
+
+OCR, ou Reconhecimento Óptico de Caracteres, pode ser aplicado a vários cenários, como reconhecimento de placas e processamento de faturas. Neste projeto, o modelo PGNet é implantado no reComputer R2000 ou reComputer R2000 produzido pela Seeed Studio para permitir detecção OCR acelerada e em tempo real.
+
+## Preparação de hardware
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+ <th>reComputer R1125</th>
+  <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+ </tr>
+    <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+> **Note:** Please insert the USB camera into the USB port.
+
+## Preparação de software
+
+### Atualizar o sistema
+
+```bash
+sudo apt update && sudo apt full-upgrade -y
+sudo apt install hailo-all -y
+```
+
+### Baixar o projeto
+
+```bash
+python -m venv .env --system-site-packages
+source .env/bin/activate
+pip install -r requirements.txt
+```
+
+## Executar este projeto
+
+```bash
+python inference_pgnet.py pgnet_640.hef --camera 0
+```
+
+## Resultado
+
+Você pode ver o modelo de OCR detectando o texto no recibo em tempo real.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Edge_Box/OCR.gif" alt="pir" width={1000} height="auto"/></p>
+
+## Suporte técnico
+
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

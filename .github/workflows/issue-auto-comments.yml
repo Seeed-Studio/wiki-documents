@@ -1,0 +1,154 @@
+name: Issue Auto Comment
+
+on:
+  issues:
+    types:
+      - opened
+      - closed
+      - assigned
+  pull_request_target:
+    types:
+      - opened
+      - closed
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+
+    steps:
+      # Issue opened
+      - name: Auto Comment on Issues Opened
+        if: github.event_name == 'issues' && github.event.action == 'opened' && github.event.issue.author_association != 'COLLABORATOR'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+
+            const body = [
+              `👋 @${issue.user.login}`,
+              '',
+              'Thank you for raising an issue. We will investigate into the matter and get back to you as soon as possible.',
+              'Please make sure you have given us as much context as possible.'
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body
+            });
+
+      # Issue closed
+      - name: Auto Comment on Issues Closed
+        if: github.event_name == 'issues' && github.event.action == 'closed' && github.event.issue.author_association != 'COLLABORATOR'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+
+            const body = [
+              `✅ @${issue.user.login}`,
+              '',
+              'This issue is closed, If you have any questions, you can comment and reply.'
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body
+            });
+
+      # PR opened
+      - name: Auto Comment on Pull Request Opened
+        if: github.event_name == 'pull_request_target' && github.event.action == 'opened' && github.event.pull_request.author_association != 'COLLABORATOR'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+
+            const body = [
+              `👍 @${pr.user.login}`,
+              '',
+              'Thank you for raising your pull request and contributing to our Community',
+              'Please make sure you have followed our contributing guidelines. We will review it as soon as possible.',
+              'If you encounter any problems, please feel free to connect with us.'
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body
+            });
+
+      # PR merged
+      - name: Auto Comment on Pull Request Merged
+        if: github.event_name == 'pull_request_target' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr = context.payload.pull_request;
+
+            const comment = await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `❤️ Great PR @${pr.user.login} ❤️`
+            });
+
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: comment.data.id,
+              content: 'hooray'
+            });
+
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: comment.data.id,
+              content: '+1'
+            });
+
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              comment_id: comment.data.id,
+              content: 'heart'
+            });
+
+      # Remove inactive label when issue author interacts
+      - name: Remove inactive
+        if: github.event_name == 'issues' && github.event.issue.state == 'open' && github.actor == github.event.issue.user.login
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue = context.payload.issue;
+
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                name: 'Inactive'
+              });
+            } catch (error) {
+              if (error.status === 404) {
+                core.info('Inactive label is not present, nothing to remove.');
+              } else {
+                throw error;
+              }
+            }

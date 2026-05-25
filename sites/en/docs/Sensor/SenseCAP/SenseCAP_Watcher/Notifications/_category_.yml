@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: 'Notifications'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: notification_with_watcher
+link:
+  type: generated-index
+  slug: notifications_with_watcher_main_page
+  title: SenseCAP Watcher Notifications Series
+  description: The "Notification" section of the SenseCAP Watcher wiki is to show different notification ways from watcher. You can see RGB light and hear sound and get APP notification when trigger alarm. What's more, you can use UART and HTTP potocol to send those alarm message to different devices and platforms.

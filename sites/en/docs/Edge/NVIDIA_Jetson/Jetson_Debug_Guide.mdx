@@ -1,0 +1,530 @@
+---
+description: Cross-platform (Windows/Linux/macOS) debugging guide for Seeed Jetson full series development boards, covering serial debugging, boot log analysis, system monitoring, and flashing/recovery.
+title: Seeed Jetson Cross-Platform Debugging Guide
+keywords:
+  - jetson
+  - debug
+  - uart
+  - serial
+  - reComputer
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /jetson_debug_guide
+last_update:
+  date: 03/19/2026
+  author: Seeed Studio
+createdAt: '2026-03-20'
+url: https://wiki.seeedstudio.com/jetson_debug_guide/
+updatedAt: '2026-03-20'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+{/* ============ Hero Banner ============ */}
+
+<div className="container" style={{margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
+  <div style={{padding: '2.5rem 1.5rem', borderRadius: '18px', background: 'radial-gradient(900px circle at 85% 25%, rgba(141,194,21,0.35), transparent 55%), radial-gradient(900px circle at 15% 20%, rgba(0,58,74,0.28), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)), var(--ifm-background-surface-color)', border: '1px solid rgba(141,194,21,0.35)', boxShadow: '0 18px 44px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.06) inset', textAlign: 'center'}}>
+    <h1 style={{margin: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', lineHeight: 1.1}}>
+      <span style={{fontSize: '2.2rem', filter: 'drop-shadow(0 6px 14px rgba(141,194,21,0.35))'}}>🔧</span>
+      <span style={{fontSize: '2.2rem', fontWeight: 800}}>Jetson Cross-Platform Debugging Guide</span>
+    </h1>
+    <p style={{margin: '0.75rem auto 0', maxWidth: '60ch', fontSize: '1.05rem', color: 'var(--ifm-font-color-base)', opacity: 0.92}}>
+      Designed for Seeed Studio full series Jetson carrier boards, covering Windows / Linux / macOS platforms,<br/>
+      From serial debugging to system monitoring, one-stop solution for boot failures, kernel crashes, and flashing issues.
+    </p>
+  </div>
+</div>
+
+## 🎯 Document Overview
+
+This guide is specifically designed for **Seeed Jetson full series carrier boards**, integrating NVIDIA official debugging specifications with Seeed hardware features to provide a unified cross-platform debugging solution.
+
+Coverage: **Serial Debugging** · **Boot Log Analysis** · **System Monitoring** · **Hardware-level Tracing** · **Flashing & Recovery**
+
+:::info Supported Hardware
+reComputer Super / Classic / Mini / Robotics · reComputer Industrial · reServer Industrial · J501 Series
+:::
+
+## 📚 Official Core Reference Resources
+
+| No. | Resource Name | Link | Core Value |
+|:---:|---|---|---|
+| 1 | Jetson Linux Developer Guide | [NVIDIA Official](https://developer.nvidia.com/embedded/jetson-linux) | System architecture, boot process, UART configuration |
+| 2 | Jetson Hardware Specs / Schematics | [NVIDIA Download Center](https://developer.nvidia.com/embedded/downloads) | Debug interface pin definitions, voltage standards |
+| 3 | Seeed Studio Wiki | [Seeed Official](https://wiki.seeedstudio.com/) | Seeed carrier board debug port locations, interface descriptions |
+| 4 | NVIDIA SDK Manager | [NVIDIA Official](https://developer.nvidia.com/sdk-manager) | Graphical flashing, environment deployment |
+| 5 | CoreSight Hardware Debug Documentation | Jetson Linux Debug Chapter | Arm hardware tracing, crash analysis |
+
+## 🛠️ Debugging Prerequisites
+
+### Hardware Preparation
+
+- Seeed Jetson development board (powered normally)
+- USB data cable (choose USB-C or Micro-B based on carrier board model) / 3.3V USB to UART module
+- Host computer (Windows / Linux / macOS any)
+
+### Software Tools (Cross-Platform)
+
+| System | Recommended Tools |
+|---|---|
+| **Windows** | PuTTY / MobaXterm / Device Manager |
+| **Linux** | `screen` / `minicom` / `picocom` |
+| **macOS** | `screen` / `minicom` |
+
+## 🔌 UART Serial Debugging (Core)
+
+UART serial port is the **low-level entry point** for Jetson debugging, allowing you to view complete Bootloader and kernel boot logs, solving core issues like black screen, failure to boot, and serial port occupation.
+
+:::danger Voltage Warning
+All Seeed Jetson debug ports are **3.3V level**, **strictly prohibit using 5V modules**, otherwise the device will be permanently damaged!
+:::
+
+### Debug Port Connection Methods for Each Series
+
+Select your device series to view the corresponding debug port location and connection method:
+
+<Tabs groupId="product-series">
+<TabItem value="super" label="🟢 reComputer Super" default>
+
+**Supported Models**: reComputer Super J4012 / J4011 / J3011 / J3010
+
+**Debug Port Type**: Onboard **USB-C Debug Port**
+
+**Connection Method**:
+1. Use a **USB Type-C** data cable to directly connect the carrier board debug port to the host USB port
+2. No additional UART module required, plug and play
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114110311-recomputer-super-j3010_1.jpg" alt="reComputer Super" />
+</div>
+
+:::tip Debug Port Location
+Super series debug port is located on the side of the chassis at the USB-C connector, labeled `DEBUG` or `UART`. After connection, the host will recognize it as a serial device.
+:::
+
+</TabItem>
+<TabItem value="classic" label="🔵 reComputer Classic">
+
+**Supported Models**: reComputer J4012 / J4011 / J3011 / J3010 (including B versions)
+
+**Debug Port Type**: J14 Header **UART Debug Header**
+
+**Connection Method**:
+1. Prepare a **3.3V USB to UART** module
+2. Refer to the header pin definitions and connect the pins:
+   - **TX (Pin 9)** → Host RX
+   - **RX (Pin 10)** → Host TX
+   - **GND (Pin 6)** → Common ground
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/r/e/recomputer_classic_optional_accessories_nvidia_jetson_orin_powered_edge_ai_box.jpeg" alt="reComputer Classic" />
+</div>
+
+**J401 Carrier Board Pin Definitions**:
+
+| Pin | Function | Pin | Function |
+|:---:|---|:---:|---|
+| 1 | PWR BTN | 7 | AUTO ON |
+| 2 | GND | 8 | DIS |
+| 3 | FC REC | 9 | **UART TXD** |
+| 4 | GND | 10 | **UART RXD** |
+| 5 | SYS RET | 11 | LED + |
+| 6 | **GND** | 12 | LED - |
+
+:::tip USB-C Alternative
+Classic series also features a USB Type-C DEVICE port. Some firmware versions support debugging through direct USB-C connection. Please choose based on actual situation.
+:::
+
+</TabItem>
+<TabItem value="mini" label="🟡 reComputer Mini">
+
+**Supported Models**: reComputer Mini J4012 / J4011 / J3011 / J3010
+
+**Debug Port Type**: Onboard **USB Micro-B Debug Port**
+
+**Connection Method**:
+1. Use a **USB Micro-B** data cable to connect the carrier board USB2.0 DEVICE port to the host
+2. No additional UART module required
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="reComputer Mini" />
+</div>
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" alt="reComputer Mini Interface" />
+</div>
+
+</TabItem>
+<TabItem value="robotics" label="🤖 reComputer Robotics">
+
+**Supported Models**: reComputer Robotics J4012 / J4011 / J3011 / J3010
+
+**Debug Port Type**: Onboard **USB Type-C Debug Port**
+
+**Connection Method**:
+1. Use a **USB Type-C** data cable to connect the carrier board to the host
+2. No additional UART module required
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="reComputer Robotics" />
+</div>
+
+</TabItem>
+<TabItem value="industrial" label="🏭 reComputer Industrial">
+
+**Supported Models**: reComputer Industrial J4012 / J4011 / J3011 / J3010 / J2012 / J2011
+
+**Debug Port Type**: Onboard **USB Type-C Debug Port**
+
+**Connection Method**:
+1. Use a **USB Type-C** data cable to connect the carrier board USB2.0 DEVICE port to the host
+2. No additional UART module required
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1--recomputer-industrial-bundle.jpg" alt="reComputer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="reserver" label="🖥️ reServer Industrial">
+
+**Supported Models**: reServer Industrial J4012 / J4011 / J3011 / J3010
+
+**Debug Port Type**: Onboard **USB Type-C Debug Port** (DEVICE port)
+
+**Connection Method**:
+1. Use a **USB Type-C** data cable to connect the DEVICE port to the host
+2. No additional UART module required
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110247-reserver-industrial-j4012-first.jpg" alt="reServer Industrial" />
+</div>
+
+</TabItem>
+<TabItem value="j501" label="⚡ J501 Series">
+
+**Supported Models**: reServer Industrial J501 / reComputer Robotics J501 Mini / reComputer Robotics J501 (AGX Orin 32GB/64GB)
+
+**Debug Port Type**: Onboard **USB Type-C Debug Port**
+
+**Connection Method**:
+1. Use a **USB Type-C** data cable to connect the carrier board to the host
+2. No additional UART module required
+
+<div style={{textAlign: 'center', margin: '1em 0'}}>
+  <img width={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg" alt="J501 Series" />
+</div>
+
+</TabItem>
+</Tabs>
+
+### Cross-Platform Port Identification
+
+After connecting the debug cable, identify the serial device on the host:
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+Open **Device Manager** → Expand **Ports (COM & LPT)** → Look for `USB Serial Port` corresponding COM number (e.g., `COM3`).
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+ls /dev/ttyACM* /dev/ttyUSB*
+```
+
+Usually displayed as `/dev/ttyACM0` or `/dev/ttyUSB0`.
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+ls /dev/cu.usbmodem* /dev/tty.usbserial*
+```
+
+</TabItem>
+</Tabs>
+
+### ModemManager Serial Port Occupation Fix (Linux)
+
+:::warning Linux-Specific Issue
+The `ModemManager` service on Linux hosts will mistakenly occupy the Jetson debug serial port, causing connection failures.
+:::
+
+```bash
+# Troubleshoot port occupation
+sudo lsof /dev/ttyACM0
+
+# Temporarily stop service (recommended)
+sudo systemctl stop ModemManager
+
+# Permanently disable (when 4G/5G module is not needed)
+sudo systemctl disable ModemManager
+```
+
+**Configure udev rules (for sudo-free serial port access)**:
+
+```bash
+sudo vim /etc/udev/rules.d/99-tegra-serial.rules
+```
+
+Add the following content:
+
+```text
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0955", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+```
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### Serial Connection (Baud Rate: 115200)
+
+<Tabs groupId="host-os">
+<TabItem value="windows" label="Windows" default>
+
+Using **PuTTY**:
+1. Select `Serial` connection type
+2. Enter COM number (e.g., `COM3`)
+3. Set baud rate to `115200`
+4. Click `Open`
+
+Or using **MobaXterm**: New Serial Session → Select COM port → Baud rate `115200`
+
+</TabItem>
+<TabItem value="linux" label="Linux">
+
+```bash
+screen /dev/ttyACM0 115200
+```
+
+Exit `screen` shortcut: `Ctrl+A` then press `K`, confirm `y`.
+
+</TabItem>
+<TabItem value="macos" label="macOS">
+
+```bash
+screen /dev/cu.usbmodemXXX 115200
+```
+
+Replace `XXX` with the actual device number.
+
+</TabItem>
+</Tabs>
+
+## 🚀 System Boot and Kernel Debugging
+
+Through the UART serial port, you can fully capture Jetson boot logs to locate boot hangs, kernel crashes, and other issues.
+
+### Boot Three Stages
+
+```text
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│  Bootloader     │ →  │  Kernel Boot     │ →  │  System Init     │
+│  CBoot/U-Boot   │    │  Linux Load Drivers│   │  systemd Service│
+│  Serial Only    │    │  Core Debug Info  │    │  User Mode      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+```
+
+### Enable Complete Boot Logs
+
+By default, the `quiet` parameter hides a large amount of logs. You can enable them through the following steps:
+
+1. Edit the boot configuration file:
+
+```bash
+sudo vim /boot/extlinux/extlinux.conf
+```
+
+2. Find the `APPEND` line, **remove** `quiet`, **add** `ignore_loglevel`
+3. After reboot, you can view full kernel logs via serial port
+
+:::tip Remote Scenario
+If you can connect via SSH, you can also view kernel logs directly:
+
+```bash
+dmesg --follow
+journalctl -k -f
+```
+
+:::
+
+## 📊 System Monitoring and Advanced Hardware Debugging
+
+### tegrastats — Real-time System Monitoring
+
+`tegrastats` is the official NVIDIA-provided Jetson system monitoring tool for viewing CPU/GPU usage, temperature, frequency, etc.:
+
+```bash
+# Real-time monitoring
+tegrastats
+
+# Customized output (1 second refresh, total 10 times)
+tegrastats --interval 1000 --stop 10
+```
+
+### jtop — Enhanced Visual Monitoring
+
+`jtop` provides an interactive TUI interface. Installation method:
+
+```bash
+sudo pip3 install -U jetson-stats
+sudo systemctl restart jtop.service
+jtop
+```
+
+### CoreSight Hardware-Level Debugging (Advanced)
+
+Used for analyzing **hard-to-reproduce crashes, performance bottlenecks**, based on OpenCSD + perf tools:
+
+```bash
+# Record instruction execution flow
+perf record -e cs_etm/@<trace-id>/u ls
+
+# Analyze logs
+perf report --stdio --dump
+```
+
+:::info
+CoreSight supports STM (System Trace Macrocell), which can efficiently replace `printk` software debugging. For detailed configuration, please refer to [NVIDIA Official Debug Documentation](https://developer.nvidia.com/embedded/jetson-linux).
+:::
+
+## 🔄 Flashing & Recovery
+
+When the system crashes or fails to boot, you can reflash using official tools.
+
+:::tip Quick Flashing Guide
+For detailed flashing steps, please refer to the **[Flashing Jetson Linux](/flash/jetpack_to_selected_product)** page, which provides complete device-specific flashing guides, including:
+- BSP download and verification
+- Environment preparation
+- Device-specific flashing steps
+- Common issue troubleshooting
+:::
+
+### Recovery Mode Verification
+
+Before flashing, ensure the device has entered recovery mode. Execute on Ubuntu host:
+
+```bash
+lsusb
+```
+
+If the output contains any of the following IDs, the device has entered recovery mode:
+
+| Module | USB ID |
+|---|---|
+| Orin NX 16GB | `0955:7323` |
+| Orin NX 8GB | `0955:7423` |
+| Orin Nano 8GB | `0955:7523` |
+| Orin Nano 4GB | `0955:7623` |
+| AGX Orin 32GB | `0955:7223` |
+| AGX Orin 64GB | `0955:7023` |
+| Xavier NX | `0955:7e19` |
+
+:::info Entering Recovery Mode
+Different devices have different methods to enter recovery mode. Please refer to the detailed steps for the corresponding device in the **[Flashing Jetson Linux](/flash/jetpack_to_selected_product)** page.
+:::
+
+### Flashing Debug Logs
+
+When flashing fails, be sure to collect two types of logs for troubleshooting:
+
+1. **Host side**: Complete output log from the flashing terminal
+2. **Target side**: Jetson boot log captured by UART serial port (core troubleshooting basis)
+
+:::tip Debugging Tips
+- When flashing fails, prioritize checking the UART serial port log, which usually reveals the root cause
+- Common issues include: BSP version mismatch, USB connection problems, host environment configuration, etc.
+- If you need help, please collect complete logs and contact technical support
+:::
+
+## ❓ Common Issue Troubleshooting
+
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
+
+| Issue | Troubleshooting Direction |
+|---|---|
+| **Serial connection failed** | Check ModemManager service, USB cable, port number, voltage standard (3.3V) |
+| **No boot logs** | Confirm debug port is connected correctly; remove kernel `quiet` boot parameter |
+| **Flashing failed** | Prioritize checking UART serial port logs; verify carrier board model matches JetPack version |
+| **Insufficient serial port permissions** | Configure udev rules; `sudo usermod -aG plugdev $USER` |
+| **Device cannot enter recovery mode** | Check if jumpers/buttons are correct; try changing USB cable or port |
+
+  </div>
+</div>
+
+## 📎 Appendix: Official Resources
+
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>📖 Developer Guide</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA Jetson Linux official developer guide, system architecture, boot process, debug configuration.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/embedded/jetson-linux" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Jetson Linux Guide</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🌱 Seeed Wiki</h3>
+      </div>
+      <div className="card__body">
+        <p>Seeed Studio official Wiki, containing hardware interface descriptions and usage tutorials for the full series of carrier boards.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://wiki.seeedstudio.com/" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>Seeed Studio Wiki</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 SDK Manager</h3>
+      </div>
+      <div className="card__body">
+        <p>NVIDIA official graphical flashing and SDK environment deployment tool.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://developer.nvidia.com/sdk-manager" target="_blank" rel="noopener noreferrer"
+          className="button button--block"
+          style={{background: 'linear-gradient(135deg, #8dc21f 0%, #6fbf3a 100%)', border: '1px solid rgba(141,194,31,0.95)', color: '#fff', borderRadius: '12px', fontSize: '0.95rem', fontWeight: 700, padding: '0.7rem 0.9rem', minHeight: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.6rem', lineHeight: 1.2, textDecoration: 'none', boxShadow: '0 10px 22px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.06) inset'}}>
+          <span>NVIDIA SDK Manager</span>
+          <span aria-hidden="true" style={{opacity: 0.85}}>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🤝 Technical Support and Product Discussion
+
+Thank you for choosing our products! We will provide you with various support to ensure a smooth experience during your use.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

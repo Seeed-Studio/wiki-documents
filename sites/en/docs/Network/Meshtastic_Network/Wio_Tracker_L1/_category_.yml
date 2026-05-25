@@ -1,0 +1,10 @@
+position: 4 # float position is supported
+label: 'Wio Tracker L1 Series'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: wio_tracker_l1_node
+link:
+  type: generated-index
+  slug: wio_tracker_node
+  title: Wio Tracker L1 Node
+  description: Wio Tracker L1 Meshtastic Node
