@@ -4321,6 +4321,27 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: '人形机器人',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/cn_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/cn_Atom-X',
+              ]
+            },
+
+          ]
+        },
+        {
+          type: 'category',
           label: 'ReachyMini',
           collapsible: true,
           collapsed: false,
