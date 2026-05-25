@@ -2070,6 +2070,8 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_rebot_arm',
               ],
             },
             {
@@ -3817,13 +3819,6 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics J50',
-                  items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/pt_reComputer_Robotics_J501_Getting_Started',
-                  ],
-                },
-                {
-                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/pt_recomputer_j401b_getting_start',
@@ -4537,6 +4532,27 @@ const sidebars = {
           items: [
             'Robotics/Robot_Kits/StackForce/pt_StackForce_Giant_Bipedal_Wheeled_Robot',
             'Robotics/Robot_Kits/StackForce/pt_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Humanoide',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/pt_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/pt_Atom-X',
+              ]
+            },
+
           ]
         },
       ]

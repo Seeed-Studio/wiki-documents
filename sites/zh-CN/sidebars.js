@@ -2071,6 +2071,8 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
               ],
             },
             {
@@ -4315,6 +4317,27 @@ const sidebars = {
           label: 'StackForce',
           items: [
             'Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
+        {
+          type: 'category',
+          label: '人形机器人',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/cn_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/cn_Atom-X',
+              ]
+            },
+
           ]
         },
         {

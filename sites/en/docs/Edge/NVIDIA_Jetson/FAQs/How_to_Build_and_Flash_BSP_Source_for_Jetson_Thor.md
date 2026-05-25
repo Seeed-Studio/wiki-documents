@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 Default board settings are already configured for **Thor J601**:
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ For the first flash, the split `prepare -> build -> flash` flow is recommended b
 Use environment variables when you need to override defaults:
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \

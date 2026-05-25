@@ -598,6 +598,10 @@ lerobot-calibrate \
 
 El video a continuación muestra cómo realizar la calibración. Primero debes mover el robot a la posición donde todas las articulaciones estén en el centro de sus rangos. Luego, después de pulsar Enter, tienes que mover cada articulación a través de todo su rango de movimiento.
 
+:::tip
+Debido a la actualización del repositorio lerobot, es normal que el terminal no reciba una señal del servo 5 al realizar la calibración del brazo maestro-esclavo. Puedes continuar con la operación.
+:::
+
 **Calibración manual del brazo líder**
 
 Realiza los mismos pasos para calibrar el brazo líder, ejecuta el siguiente comando o ejemplo de API:

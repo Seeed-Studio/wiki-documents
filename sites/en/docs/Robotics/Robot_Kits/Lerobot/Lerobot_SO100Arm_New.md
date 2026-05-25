@@ -598,6 +598,10 @@ lerobot-calibrate \
 
 The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
 
+:::tip
+Due to the update of the lerobot repository, it is normal that the terminal does not receive a signal from servo 5 when performing master-slave arm calibration. You can continue with the operation.
+:::
+
 **Manual calibration of leader arm**
 
 Do the same steps to calibrate the leader arm, run the following command or API example:
