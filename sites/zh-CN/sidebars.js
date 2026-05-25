@@ -2072,6 +2072,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/cn_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/cn_reSpeaker_flex_rebot_arm',
               ],
             },
             {
