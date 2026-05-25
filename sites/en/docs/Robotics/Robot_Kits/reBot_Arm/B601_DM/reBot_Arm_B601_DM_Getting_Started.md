@@ -47,6 +47,10 @@ The content of this guide is racing towards you at the speed of light — stay t
 
 The reBot Arm project has been open-sourced on [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). This guide will take you through the quick start of B601-DM, from assembly to operation.
 
+:::tip
+If you purchased a pre-assembled kit, please skip directly to the tutorial video in **Step 3** at the end of this article and follow along. There is no need to write motor IDs or calibrate zero positions.
+:::
+
 ## Purchasing Options
 
 The reBot Arm B601-DM is available in multiple configurations to meet different user needs.
@@ -63,23 +67,23 @@ The reBot Arm B601-DM is available in multiple configurations to meet different 
 ## Step 1: [Assembly Guide](https://youtu.be/rfTQoFCfnMc)
 
 Before Assembly:
+
 - Please read the following instructions carefully to ensure a smooth assembly process.
   1. This kit includes various screws and parts with similar appearances. Verify specifications and orientation before fastening.
   2. The video was recorded in early April. Minor updates may exist, but assembly remains the same. Refer to shipped parts as final.
   3. Shipped screws have thread-lock applied. Use proper tools or an electric screwdriver (recommended). Set torque to (3–6 kgf·cm) to avoid stripping. If stripping occurs, stop immediately and replace or realign the screw. Stripped thread-lock screws are difficult to remove and may damage parts.
   4. Ensure safety during assembly. Avoid pinching or injury. Children must be supervised.
 
-
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/rfTQoFCfnMc?si=KkEfY0NePxC96Xdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-##  Step 2: Reset Motors ID
+## Step 2: Reset Motors ID
 
 ### Before Reset Motors:
   
   Before motor parameter configuration, note the following preparations and safety rules:
+
 - Buy 2 tooling clamps (≥3 inches) and a 24V 15A XT30-output switching power supply (use regular brand, no inferior products).
 - Keep ≥1m distance during debugging/operation.
 - No motor hot-plugging; cut off power before plugging/unplugging XT30 2+2 interface.
@@ -88,7 +92,9 @@ Before Assembly:
 - **Strictly follow these rules. Seller is not liable for risks/liabilities from illegal operation or personal mistakes.**
 
 ### Preparation List
+
 #### Hardware
+
 - [reBot Arm B601 DM Robotic Arm × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - [USB-CAN Adapter Board × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
 - [Signal-Power Separation Board × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
@@ -98,16 +104,16 @@ Before Assembly:
 - [Power Cord-US](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \  [Power Cord-EU](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
 
 #### Computer Requirement
+
 - Dual-boot personal computer (Windows + Ubuntu / macOS)
 
 #### Software
-- [DM_Tools_v.1.8.0.1.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)
 
+- [DM_Tools_v.1.8.0.1.exe (Supports Windows Only)](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 ## Step 3: Calibration reBot Arm and Getting Started
 
@@ -126,33 +132,39 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-###  Step 2: Environment Setup
+### Step 2: Environment Setup
 
 Create a virtual environment with Python 3.12:
+
 ```
 conda create -y -n rebot python=3.12
 ```
 
 Then activate your virtual environment, you have to do this each time you open a shell to use rebot:
+
 ```bash
 conda activate rebot
 ```
 
-###  Step3: Install motorbridge
+### Step3: Install motorbridge
+
 After activating the reBot virtual environment, run the following command to install motorbridge:
+
 ```bash
 pip install motorbridge
 ```
 
-###  Step4: Connect the rebot
+### Step4: Connect the rebot
+
 After connecting the robotic arm to your computer through USB cable and turning on its power supply, you need to configure 666 access permissions for the serial port.
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```
 
-###  Step5: Open the motorbridge
-Open `https://rebot-devarm.w0x7ce.eu/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal. 
+### Step5: Open the motorbridge
+
+Open `https://rebot-devarm.w0x7ce.eu/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
 
 For example on Windows:
 
@@ -165,10 +177,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
 
-
 #### For subsequent operation steps, please refer to our tutorial video.
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/SI1PRQYkhdg?si=E0m7uTF4IhCVZYl_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
