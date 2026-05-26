@@ -13,7 +13,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-05-22'
 updatedAt: '2026-05-22'
-url: https://wiki.seeedstudio.com/cn/Using Stream Deck to control reCamera Gimbal/
+url: https://wiki.seeedstudio.com/cn/using_stream_deck_to_control_recamera_gimbal/
 ---
 
 ## 介绍
@@ -31,21 +31,27 @@ url: https://wiki.seeedstudio.com/cn/Using Stream Deck to control reCamera Gimba
 ---
 
 ## 硬件准备
-<table align="center">
-<tbody><tr>
-<th>Seeed Studio reCamera Gimbal</th>
-</tr>
-<tr>
-<td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:210, height:'auto'}}/></div></td>
-</tr>
-</tbody></table>
 
-<div style="display: flex; justify-content: center; transform: scale(1.3); transform-origin: center; margin: 20px 0;">
-  <div class="get_one_now_container" style="text-align: center;">
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank" style="display: inline-block; padding: 10px 24px; background: #00e30fa1; color: #ffffff; font-size: 16px; font-weight: bold; text-decoration: none; border-radius: 6px;">
-      立即购买 🖱️
-    </a>
-  </div>
+<div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+  <table style={{ margin: '0 auto', textAlign: 'center' }}>
+    <tr>
+      <table align="center">
+      <tr>
+        <th>Seeed Studio reCamera Gimbal</th>
+      </tr>
+      <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/></div></td>
+      </tr>
+      <tr>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        </a>
+        </div></td>
+      </tr>
+      </table>
+    </tr>
+  </table>
 </div>
 
 ## reCamera 配置
