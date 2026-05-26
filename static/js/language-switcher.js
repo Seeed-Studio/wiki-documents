@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-20 16:55:06 (北京时间)
-// 多语言页面: 2280 个
+// 生成时间: 2026-05-26 10:23:45 (北京时间)
+// 多语言页面: 2285 个
 
 (function() {
   'use strict';
@@ -5196,6 +5196,20 @@
     "ja",
     "pt"
   ],
+  "/atom_s": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/atom_x": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -7926,6 +7940,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals": [
     "cn",
     "en",
     "es",
@@ -10795,6 +10816,13 @@
     "pt"
   ],
   "/respeaker_flex_python_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/control_rebot_arm_using_voice_with_respeaker_flex": [
     "cn",
     "en",
     "es",
@@ -15948,6 +15976,12 @@
   "/Raspberry_Pi": [
     "cn",
     "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
     "es",
     "ja",
     "pt"

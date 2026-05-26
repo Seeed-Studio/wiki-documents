@@ -21,11 +21,6 @@ const excludedPaths = [
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
 
   // 排除指定文档
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_python_control.md'), //4.10
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_i2s_test.md'), //4.16
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'RTL8852BE_Wireless_Module_for_Jetson.md'), //4.14
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Getting_Started.md'), //4.13
-  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'CloudPlatform_Connection_Guide', 'Connecting_R1225_to_AWS_IoT.md'), //4.7
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_Grasping_Demo.md'), //4.22
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Carrier_Boards', 'Robotics_J601', 'reComputer_Robotics_J601_Getting_Started.md'), //4.24
   path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'seeed_epaper_displays.md'), //4.28
@@ -39,6 +34,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'Application', 'How_to_use_modbus_rs485.md'), //4.14
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'reBot_Arm', 'B601_DM', 'reBot_Arm_B601_DM_ROS2_Integration.md'), //4.29
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'reComputer_Jetson_Series', 'reComputer_Robotics_J50_Mini', 'reComputer_Robotics_J50_Mini_Getting_Started.md'), //5.12
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'reBot_Arm_Jetson_Bundle.md'), //5.18
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）

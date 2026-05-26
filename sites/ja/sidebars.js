@@ -1938,6 +1938,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2_voice_pipeline',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
@@ -2072,6 +2073,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
               ],
             },
             {
@@ -4532,6 +4534,27 @@ const sidebars = {
           items: [
             'Robotics/Robot_Kits/StackForce/ja_StackForce_Giant_Bipedal_Wheeled_Robot',
             'Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'ヒューマノイド',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/ja_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/ja_Atom-X',
+              ]
+            },
+
           ]
         },
       ]
