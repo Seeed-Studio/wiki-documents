@@ -5,7 +5,7 @@ keywords:
   - AI Human Detection
   - Edge AI
   - GPIO Trigger
-slug: /Using_Stream_Deck_to_control_reCamera_Gimbal
+slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
