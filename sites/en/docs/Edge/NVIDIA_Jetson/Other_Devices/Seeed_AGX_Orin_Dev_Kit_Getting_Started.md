@@ -9,7 +9,7 @@ keywords:
   - Getting Started
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ai_robotics_seeed_agx_orin_dev_kit_getting_started
-sku:
+sku: 100003716, 100006184
 last_update:
   date: 05/26/2026
   author: Dayu
