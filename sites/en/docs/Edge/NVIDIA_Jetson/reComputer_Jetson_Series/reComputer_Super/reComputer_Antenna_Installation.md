@@ -8,13 +8,13 @@ keywords:
   - Wi-Fi antenna
   - 4G antenna
 image: https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg
-slug: /reComputer_Antenna_Installation
+slug: /recomputer_antenna_installation
 last_update:
   date: 05/26/2026
   author: Lorraine
 createdAt: '2026-05-26'
 updatedAt: '2026-05-26'
-url: https://wiki.seeedstudio.com/reComputer_Antenna_Installation/
+url: https://wiki.seeedstudio.com/recomputer_antenna_installation/
 ---
 
 This guide walks you through installing antennas on the **reComputer Super** series and the **reComputer Classic** series. The procedures differ between the two product lines, so please follow the section that matches your device.

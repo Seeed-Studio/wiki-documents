@@ -4049,7 +4049,30 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
+
           ]
+        },
+        // Seeed Jetson DevelopTool
+        {
+          type: 'category',
+          label: 'Seeed Jetson DevelopTool',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Overview',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Supported_Devices',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Installation',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Connect_Device',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Flash_Firmware',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Device_Management',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_App_Market',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Skills',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_Remote_Development',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/Jetson_DevelopTool_FAQ',
+          ],
         },
         // FAQs
         {
