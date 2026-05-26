@@ -23,7 +23,7 @@ The **Device Management** module provides a quick dashboard for understanding th
 
 ## Connecting to a Device
 
-Enter the Jetson's IP address, SSH username, and password in the connection panel, then click **Connect**. See [Connect Device](./Jetson_DevelopTool_Connect_Device) for network setup details.
+Enter the Jetson's IP address, SSH username, and password in the connection panel, then click **Connect**. See [Connect Device](/jetson_developtool_connect_device) for network setup details.
 
 ## Features
 

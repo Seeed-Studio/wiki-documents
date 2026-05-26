@@ -75,8 +75,8 @@ On Ubuntu, if you get a display error such as `cannot connect to X server`, make
 
 ## Next Steps
 
-- [Connect Your Device →](./Jetson_DevelopTool_Connect_Device)
-- [Flash Firmware →](./Jetson_DevelopTool_Flash_Firmware)
+- [Connect Your Device →](/jetson_developtool_connect_device)
+- [Flash Firmware →](/jetson_developtool_flash_firmware)
 
 ## Tech Support & Product Discussion
 

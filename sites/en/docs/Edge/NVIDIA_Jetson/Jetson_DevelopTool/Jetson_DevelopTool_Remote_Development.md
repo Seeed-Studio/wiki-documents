@@ -149,7 +149,7 @@ The **Jetson Init** module provides a guided serial terminal wizard that walks y
 7. Once setup is complete, the Jetson reboots and the assigned IP address is displayed.
 
 :::tip
-After Jetson Init completes, you can immediately switch to [Device Management](./Jetson_DevelopTool_Device_Management) or use the **Remote Dev** tools above with the IP address shown.
+After Jetson Init completes, you can immediately switch to [Device Management](/jetson_developtool_device_management) or use the **Remote Dev** tools above with the IP address shown.
 :::
 
 ## Tech Support & Product Discussion

@@ -32,14 +32,14 @@ The **Flash Center** module lets you download and flash official JetPack firmwar
 
 ## Before You Start
 
-- A native Linux host (Ubuntu 20.04/22.04/24.04) is strongly recommended. See [Connect Device](./Jetson_DevelopTool_Connect_Device) for USB Recovery mode setup.
+- A native Linux host (Ubuntu 20.04/22.04/24.04) is strongly recommended. See [Connect Device](/jetson_developtool_connect_device) for USB Recovery mode setup.
 - Ensure you have at least **20 GB** of free disk space for the firmware download and extraction.
 
 ## Flash Workflow
 
 **Step 1. Select your device and L4T version.**
 
-In the **Flash Center** tab, choose your device model (e.g. `J4012s`) and the target L4T version from the dropdown. See [Supported Devices](./Jetson_DevelopTool_Supported_Devices) for the full compatibility list.
+In the **Flash Center** tab, choose your device model (e.g. `J4012s`) and the target L4T version from the dropdown. See [Supported Devices](/jetson_developtool_supported_devices) for the full compatibility list.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/flash-step1-select-device.png" style={{width:800, height:'auto'}}/></div>
 

@@ -36,7 +36,7 @@ The **App Market** module lets you browse and install popular AI applications di
 
 ## Installing an App
 
-1. Connect to your Jetson device (see [Connect Device](./Jetson_DevelopTool_Connect_Device)).
+1. Connect to your Jetson device (see [Connect Device](/jetson_developtool_connect_device)).
 2. Open the **App Market** tab.
 3. Browse the available apps or use the search bar to filter by category.
 

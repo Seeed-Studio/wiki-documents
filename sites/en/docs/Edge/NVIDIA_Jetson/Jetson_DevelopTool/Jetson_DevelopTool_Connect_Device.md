@@ -57,7 +57,7 @@ For all non-flashing features, the DevelopTool connects to Jetson over SSH via E
 
 **Steps:**
 
-1. Connect Jetson and the host PC to the same network, or use a direct Ethernet cable with [PC Network Sharing](./Jetson_DevelopTool_PC_Network_Sharing) enabled.
+1. Connect Jetson and the host PC to the same network, or use a direct Ethernet cable with [PC Network Sharing](/jetson_developtool_remote_development) enabled.
 2. In the DevelopTool, open the **Remote Dev** tab.
 3. Enter the Jetson's IP address, SSH username, and password in the **Device Connection** panel.
 4. Click **Connect**.
@@ -67,7 +67,7 @@ For all non-flashing features, the DevelopTool connects to Jetson over SSH via E
 Once connected, the device status panel shows real-time CPU, GPU, memory, and temperature information.
 
 :::tip
-If you don't know your Jetson's IP address, use the [Jetson Init](./Jetson_DevelopTool_Jetson_Init) serial wizard on first boot to configure the network and display the assigned IP.
+If you don't know your Jetson's IP address, use the [Jetson Init](/jetson_developtool_remote_development) serial wizard on first boot to configure the network and display the assigned IP.
 :::
 
 ## Tech Support & Product Discussion

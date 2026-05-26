@@ -56,9 +56,9 @@ Firmware flashing is most reliable on a **native Linux host**. On Windows, the t
 
 ## Get Started
 
-- [Installation →](./Jetson_DevelopTool_Installation)
-- [Connect Your Device →](./Jetson_DevelopTool_Connect_Device)
-- [Flash Firmware →](./Jetson_DevelopTool_Flash_Firmware)
+- [Installation →](/jetson_developtool_installation)
+- [Connect Your Device →](/jetson_developtool_connect_device)
+- [Flash Firmware →](/jetson_developtool_flash_firmware)
 
 ## Tech Support & Product Discussion
 

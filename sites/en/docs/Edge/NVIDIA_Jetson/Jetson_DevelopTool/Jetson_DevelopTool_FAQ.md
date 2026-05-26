@@ -42,13 +42,13 @@ url: https://wiki.seeedstudio.com/jetson_developtool_faq/
 
 **Q: Cannot connect to Jetson over SSH.**
 
-- Verify the Jetson and PC are on the same network, or that [PC Network Sharing](./Jetson_DevelopTool_PC_Network_Sharing) is enabled.
+- Verify the Jetson and PC are on the same network, or that [PC Network Sharing](/jetson_developtool_remote_development) is enabled.
 - Confirm the SSH service is running on Jetson: `sudo systemctl status ssh`
 - Check the IP address — use the Jetson Init serial wizard or check your router's DHCP table.
 
 **Q: SSH connects but then immediately disconnects.**
 
-- The Jetson may have run out of memory. Check with `free -h` and consider enabling swap via the [Skills](./Jetson_DevelopTool_Skills) module.
+- The Jetson may have run out of memory. Check with `free -h` and consider enabling swap via the [Skills](/jetson_developtool_skills) module.
 
 ---
 
@@ -70,11 +70,11 @@ url: https://wiki.seeedstudio.com/jetson_developtool_faq/
 
 **Q: App installation fails with "Docker not found".**
 
-- Use the [Skills](./Jetson_DevelopTool_Skills) module to install Docker first, or run: `curl -fsSL https://get.docker.com | sh`
+- Use the [Skills](/jetson_developtool_skills) module to install Docker first, or run: `curl -fsSL https://get.docker.com | sh`
 
 **Q: A Docker image fails to pull.**
 
-- This is usually a network issue. Ensure the Jetson has internet access — use [PC Network Sharing](./Jetson_DevelopTool_PC_Network_Sharing) if needed.
+- This is usually a network issue. Ensure the Jetson has internet access — use [PC Network Sharing](/jetson_developtool_remote_development) if needed.
 - If you are behind a proxy, enable **Auto Proxy Forward** in the PC Network Sharing tab.
 
 ---
