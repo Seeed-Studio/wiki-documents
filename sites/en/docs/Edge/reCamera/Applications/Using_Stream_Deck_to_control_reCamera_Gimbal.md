@@ -2,9 +2,8 @@
 title: Control reCamera Gimbal Using Stream Deck
 description: This wiki demonstrates how to control the reCamera Gimbal using a Stream Deck.
 keywords:
-  - AI Human Detection
-  - Edge AI
-  - GPIO Trigger
+  - reCamera Gimbal
+  - Sensory control
 slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
