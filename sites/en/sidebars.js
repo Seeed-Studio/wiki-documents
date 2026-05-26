@@ -3847,7 +3847,8 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_Getting_Started',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_Hardware_Interfaces_Usage',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/Replace_the_Thermal_Conductive_Paste_for_reComputer'
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/Replace_the_Thermal_Conductive_Paste_for_reComputer',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Antenna_Installation'
                   ],
                 },
               ]
