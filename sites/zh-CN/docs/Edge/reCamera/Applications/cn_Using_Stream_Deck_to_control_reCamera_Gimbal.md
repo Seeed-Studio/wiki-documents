@@ -31,28 +31,30 @@ url: https://wiki.seeedstudio.com/cn/using_stream_deck_to_control_recamera_gimba
 ---
 
 ## 硬件准备
+一个reCamera Gimbal。
+一个Stream Deck。
 
-<div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-  <table style={{ margin: '0 auto', textAlign: 'center' }}>
-    <tr>
-      <table align="center">
-      <tr>
-        <th>Seeed Studio reCamera Gimbal</th>
-      </tr>
-      <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/></div></td>
-      </tr>
-      <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-        </a>
-        </div></td>
-      </tr>
-      </table>
-    </tr>
-  </table>
-</div>
+<table align="center">
+ <tr>
+  <th>reCamera Gimbal</th>
+ </tr>
+ <tr>
+  <td>
+    <div style={{textAlign:'center'}}>
+      <img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/>
+    </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+      </a>
+    </div>
+  </td>
+ </tr>
+</table>
 
 ## reCamera 配置
 在浏览器输入reCamera Gimbal的IP地址，即可登陆reCamera Gimbal然后进入Dashboard，配置http通信节点，用于接收Stream Deck发送的指令。

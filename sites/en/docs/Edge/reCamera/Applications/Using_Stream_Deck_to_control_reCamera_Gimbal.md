@@ -31,28 +31,30 @@ Rotate the dial on the Stream Deck to control the X-axis of the reCamera Gimbal 
 ---
 
 ## Hardware Preparation
+one reCamera Gimbal.
+one Stream Deck.
 
-<div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-  <table style={{ margin: '0 auto', textAlign: 'center' }}>
-    <tr>
-      <table align="center">
-      <tr>
-        <th>Seeed Studio reCamera Gimbal</th>
-      </tr>
-      <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/></div></td>
-      </tr>
-      <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-        </a>
-        </div></td>
-      </tr>
-      </table>
-    </tr>
-  </table>
-</div>
+<table align="center">
+ <tr>
+  <th>reCamera Gimbal</th>
+ </tr>
+ <tr>
+  <td>
+    <div style={{textAlign:'center'}}>
+      <img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/>
+    </div>
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+      </a>
+    </div>
+  </td>
+ </tr>
+</table>
 
 ## reCamera Configuration
 Enter the IP address of the reCamera Gimbal in your browser to log into the Dashboard. Next, configure the HTTP communication nodes to receive commands sent from the Stream Deck.
