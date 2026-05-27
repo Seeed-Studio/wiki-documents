@@ -1,5 +1,5 @@
 ---
-title: Control reCamera Gimbal Using Stream Deck
+title: Using Stream Deck to Control reCamera Gimbal 
 description: This wiki demonstrates how to control the reCamera Gimbal using a Stream Deck.
 keywords:
   - reCamera Gimbal
@@ -31,8 +31,9 @@ Rotate the dial on the Stream Deck to control the X-axis of the reCamera Gimbal 
 ---
 
 ## Hardware Preparation
-one reCamera Gimbal.
-one Stream Deck.
+
+- one reCamera Gimbal
+- one Stream Deck
 
 <table align="center">
  <tr>
@@ -49,7 +50,7 @@ one Stream Deck.
   <td>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
       </a>
     </div>
   </td>

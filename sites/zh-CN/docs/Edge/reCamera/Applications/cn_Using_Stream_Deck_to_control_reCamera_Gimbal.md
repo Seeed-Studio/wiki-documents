@@ -31,8 +31,8 @@ url: https://wiki.seeedstudio.com/cn/using_stream_deck_to_control_recamera_gimba
 ---
 
 ## 硬件准备
-一个reCamera Gimbal。
-一个Stream Deck。
+- 一个reCamera Gimbal
+- 一个Stream Deck
 
 <table align="center">
  <tr>
