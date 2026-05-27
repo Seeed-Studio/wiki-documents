@@ -4049,7 +4049,6 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
-
           ]
         },
         // Seeed Jetson DevelopTool

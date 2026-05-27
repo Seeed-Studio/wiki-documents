@@ -1,5 +1,5 @@
 ---
-description: Preguntas frecuentes y consejos de solución de problemas para Seeed Jetson DevelopTool: incluye flasheo, SSH, VNC, uso compartido de red y más.
+description: Preguntas frecuentes y consejos de solución de problemas para Seeed Jetson DevelopTool - incluye flasheo, SSH, VNC, uso compartido de red y más.
 title: Preguntas frecuentes
 keywords:
   - reComputer
