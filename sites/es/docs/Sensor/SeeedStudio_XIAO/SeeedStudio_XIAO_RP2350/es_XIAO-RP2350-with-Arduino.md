@@ -1,6 +1,6 @@
 ---
 description: Uso de Arduino en tu placa XIAO RP2350
-title: Primeros pasos con Seeed Studio XIAO RP2350(Arduino)
+title: Primeros pasos con Seeed Studio XIAO RP2350 (Arduino)
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP2350-45font_1.webp
 slug: /xiao_rp2350_arduino
 sidebar_position: 1
@@ -8,7 +8,7 @@ last_update:
   date: 2024-10-30T01:39:16.136Z
   author: Spencer
 createdAt: '2024-10-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-11'
 url: https://wiki.seeedstudio.com/es/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -16,18 +16,18 @@ import TabItem from '@theme/TabItem';
 
 # Seeed Studio XIAO RP2350 con Arduino
 
-La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, gracias al [arduino-pico core](https://github.com/earlephilhower/arduino-pico). Esta guía te ayudará a configurar y empezar a usar Arduino en tu placa RP2350.
+La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, gracias al [arduino-pico core](https://github.com/earlephilhower/arduino-pico). Esta guía te ayudará a configurar y comenzar a usar Arduino en tu placa RP2350.
 
 ## Características
 
-- **Potente placa MCU:** Equipada con un chip Raspberry Pi RP2350 con doble núcleo Arm Cortex-M33 simétrico a 150MHz con FPU.
+- **Potente placa MCU:** Equipada con un chip Raspberry Pi RP2350 con doble núcleo simétrico Arm Cortex-M33 @ 150MHz con FPU.
 - **Funciones de seguridad mejoradas:** El arranque seguro integrado y el bootloader cifrado garantizan la seguridad de la aplicación.
 - **Compatibilidad de software:** Compatible con C/C++ y MicroPython, lo que garantiza un desarrollo y prototipado de proyectos sencillo.
 - **Ricos recursos integrados:** Integra un LED RGB, 2MB de Flash, 520kB de SRAM y 19 GPIO multifunción (Analógico, Digital, I²C, UART, SPI, PWM).
-- **8 nuevos IO ampliados:** En comparación con las anteriores MCU XIAO, la incorporación de 8 pines IO en la parte posterior admite aplicaciones más complejas.
-- **Diseño de energía eficiente:** Consumo de energía ultrabajo de solo 50μA en modo de suspensión, lo que permite la alimentación por batería. La medición directa del voltaje de la batería a través de un IO interno mejora el sistema de gestión de batería (BMS).
+- **8 nuevos IO ampliados:** En comparación con las MCU XIAO anteriores, la adición de 8 pines IO en la parte posterior admite aplicaciones más complejas.
+- **Diseño de alimentación eficiente:** Consumo de energía ultrabajo de solo 50μA en modo de suspensión, lo que permite la alimentación por batería. La medición directa del voltaje de la batería a través de un IO interno mejora el sistema de gestión de batería (BMS).
 - **Diseño compacto del tamaño de un pulgar:** Con unas dimensiones de 21 x 17.8mm, adopta el factor de forma clásico XIAO de Seeed Studio, ideal para aplicaciones con limitaciones de espacio.
-- **Amigable para producción:** Diseño de dispositivo de montaje superficial (SMD) con todos los componentes en la parte frontal y orificios tipo sello en ambos lados, lo que facilita una producción en masa eficiente.
+- **Amigable para producción:** Diseño de dispositivo de montaje superficial (SMD) con todos los componentes en la parte frontal y orificios tipo sello en ambos lados, lo que facilita la producción en masa eficiente.
 
 ## Especificación
 
@@ -39,8 +39,8 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
   </tr>
   <tr>
     <th>Procesador</th>
-    <td>Raspberry Pi RP2040<br/>Doble Cortex-M0+ @ 133MHz</td>
-    <td>Raspberry Pi RP2350<br/>Doble Cortex-M33 @ 150MHz, FPU</td>
+    <td>Raspberry Pi RP2040<br/>Dual Cortex-M0+ @ 133MHz</td>
+    <td>Raspberry Pi RP2350<br/>Dual Cortex-M33 @ 150MHz, FPU</td>
   </tr>
   <tr>
     <th>RAM</th>
@@ -54,8 +54,8 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
   </tr>
   <tr>
     <th>LEDs</th>
-    <td>1x LED de usuario<br/>1x LED de encendido<br/>1x LED RGB</td>
-    <td>1x LED de usuario<br/>1x LED de encendido<br/>1x LED RGB</td>
+    <td>1x LED de usuario<br/>1x LED de alimentación<br/>1x LED RGB</td>
+    <td>1x LED de usuario<br/>1x LED de alimentación<br/>1x LED RGB</td>
   </tr>
   <tr>
     <th>Interfaz</th>
@@ -91,34 +91,19 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
 
 ## Descripción general del hardware
 
-<div class="table-center">
-<table align="center">
- <tr>
-     <th>Distribución de pines frontal de XIAO RP2350</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-front.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Front Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>Distribución de pines trasera de XIAO RP2350</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>Componentes de XIAO RP2350</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-components.png" style={{width:480, height:'auto'}} alt="XIAO RP2350 Components" /></div></td>
- </tr>
-</table>
-</div>
+### Parte frontal
 
-¿Necesitas más detalles sobre la distribución de pines? Navega a [Assets and Resources](#assets--resources) más abajo.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Parte posterior
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+¿Necesitas más detalles sobre el pinout? Ve a [Recursos y materiales](#recursos--materiales) más abajo.
 
 
 ## **Mapa de pines**
-| Pin XIAO                 | Función   | Pin del chip | Funciones alternativas | Descripción                          |
+| Pin XIAO                | Función   | Pin del chip | Funciones alternativas | Descripción                          |
 | :---------------------: | :-------: | :----------: | :--------------------: | :---------------------------------- |
 | 5V                      | VBUS       |              |                    | Entrada/Salida de alimentación       |
 | GND                     |            |              |                    |                                      |
@@ -142,13 +127,13 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
 | D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, datos SPI                      |
 | D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, reloj SPI                      |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
-| ADC_BAT                 |            | GPIO29       |                    | Leer el valor de voltaje de la batería |
-| ADC_BAT_EN              |            | GPIO19       |                    | Habilitar detección de voltaje de la batería | 
+| ADC_BAT                 |            | GPIO29       |                    | Leer el valor de voltaje de la BAT   |
+| ADC_BAT_EN              |            | GPIO19       |                    | Habilitar detección de voltaje BAT   | 
 | Reset                   |            | RUN          |                    | RUN                                  |
 | Boot                    |            | RP2040_BOOT  |                    | Entrar en modo Boot                  |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
 | RGB LED                 |            | GPIO22       |                    | LED RGB                              |
-| USER_LED                |            | GPIO25       |                    | Luz de usuario_Amarilla              |
+| USER_LED                |            | GPIO25       |                    | Luz de usuario_Amarillo              |
 ## Requisitos previos
 
 Para comenzar, asegúrate de tener:
@@ -165,7 +150,7 @@ Descarga e instala la última versión del Arduino IDE desde el sitio oficial: [
 
 ### 2. Añadir compatibilidad con la placa RP2350
 
-1. Abre el Arduino IDE y navega a **File** > **Preferences**.
+1. Abre el Arduino IDE y ve a **File** > **Preferences**.
 2. En el campo **Additional Boards Manager URLs**, añade esta URL:
 
     ```shell
@@ -182,7 +167,7 @@ Descarga e instala la última versión del Arduino IDE desde el sitio oficial: [
 6. Después de la instalación, ve a **Tools** > **Board** y selecciona la placa que se muestra a continuación como tu placa.
 
 :::note
-Asegúrate de instalar la versión 4.2.0 o posterior para obtener compatibilidad completa con la placa XIAO RP2350.
+Asegúrate de instalar la versión 4.2.0 o posterior para la compatibilidad completa con la placa XIAO RP2350.
 :::
 
 <div style={{ textAlign: 'center' }}>
@@ -217,26 +202,26 @@ Antes de cargar un sketch, pon tu XIAO RP2350 en modo BOOT. Usa uno de los méto
 
 ## Verificación del rendimiento de bajo consumo
 
-El diseño de la fuente de alimentación de XIAO RP2350 ofrece un rendimiento excelente en escenarios de bajo consumo y puede aplicarse ampliamente a diversas aplicaciones de baja potencia.
+El diseño de alimentación de XIAO RP2350 ofrece un rendimiento excelente en escenarios de bajo consumo y puede aplicarse ampliamente a diversas aplicaciones de baja potencia.
 
 ### Conexión de la batería
 
-El XIAO RP2350 puede alimentarse con una batería de litio de 3,7 V. Puedes consultar el siguiente diagrama para el cableado.
+El XIAO RP2350 puede alimentarse con una batería de litio de 3.7V. Puedes consultar el siguiente diagrama para el cableado.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la batería y el equipo al soldar.
+Por favor, tenga cuidado de no cortocircuitar los terminales positivo y negativo y quemar la batería y el equipo al soldar.
 :::
 
-### Grabar el firmware
+### Flashear el firmware
 
-En el circuito de muestreo de batería del XIAO RP2350, se adopta una solución de muestreo de voltaje basada en el SX1801CCR. Se forma un circuito divisor de voltaje mediante dos resistencias de 470 kΩ, lo que da como resultado una relación de división de voltaje de 2. El programa utiliza 3,3 V como voltaje de referencia y el voltaje real de la batería puede calcularse mediante la fórmula de restauración de voltaje.
+En el circuito de muestreo de batería del XIAO RP2350, se adopta una solución de muestreo de voltaje basada en el SX1801CCR. Se forma un circuito divisor de voltaje mediante dos resistencias de 470 kΩ, lo que da como resultado una relación de división de voltaje de 2. El programa utiliza 3,3 V como voltaje de referencia, y el voltaje real de la batería se puede calcular mediante la fórmula de restauración de voltaje.
 
-El siguiente ejemplo utiliza un enfoque de reinicio por watchdog para simular el modo de suspensión profunda, ya que el IDE de Arduino no puede integrar fácilmente la biblioteca pico-extras necesaria para una suspensión profunda real.
+El siguiente ejemplo utiliza un enfoque de reinicio mediante watchdog para simular el modo de sueño profundo, ya que el IDE de Arduino no puede integrar fácilmente la biblioteca pico-extras necesaria para un sueño profundo real.
 
 <details>
-<summary>Program</summary>
+<summary>Programa</summary>
 
 ```cpp
 #include <Arduino.h>
@@ -372,57 +357,57 @@ void loop() {
 
 </details>
 <br/>
-A continuación puedes cargar el programa.
+Luego puede cargar el programa.
 
-Como alternativa, puedes utilizar nuestro firmware preescrito para la verificación y las pruebas de rendimiento.
+Alternativamente, puede utilizar nuestro firmware preescrito para la verificación y las pruebas de rendimiento.
 
-Descarga el [Firmware de prueba de bajo consumo de XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), y arrástralo al sistema de archivos.
+Descargue [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), y arrástrelo al sistema de archivos.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
 
 ### Resultado
 
-Tras las pruebas y verificaciones instrumentales, la corriente media del XIAO RP2350 es de **53 μA** cuando entra en modo de bajo consumo.
+Después de las pruebas y la verificación con instrumentos, la corriente media del XIAO RP2350 es de **53 μA** cuando entra en modo de baja potencia.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_4.jpg" alt="pir" width="800" height="auto"/></div>
 <br/>
 
 :::tip
 
-1. La corriente media en modo de bajo consumo medida por diferentes instrumentos puede variar. Por favor, consulta los resultados reales de la prueba.
-2. Este resultado de prueba se obtiene después de grabar el firmware de prueba de bajo consumo.
+1. La corriente media en modo de baja potencia medida por diferentes instrumentos puede variar. Por favor, consulte los resultados de las pruebas reales.
+2. Este resultado de prueba se obtiene después de flashear el firmware de prueba de baja potencia.
 3. Para las pruebas de consumo de energía, el cableado de prueba debe conectarse a la interfaz BAT en la parte posterior.
-4. Dado que el IDE de Arduino tiene dificultades para integrar la biblioteca pico-extras (que contiene pico/sleep.h, necesaria para la suspensión profunda), se recomienda utilizar el SDK de Pico o el framework PlatformIO + arduino-pico para el desarrollo de ultra bajo consumo.
+4. Dado que el IDE de Arduino tiene dificultades para integrar la biblioteca pico-extras (que contiene pico/sleep.h, necesaria para el sueño profundo), se recomienda utilizar el SDK de Pico o el framework PlatformIO + arduino-pico para el desarrollo de ultra bajo consumo.
 
 :::
 
 ## Recursos y materiales
 
 **Diseño de hardware**
-- **📄[Datasheet]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
-- **📄[Schematic]** [Esquemático de XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
-- **🗃️[PCB Design Files]** [Proyecto KiCad de XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
-- **🗃️[PCB Design Libraries]** 
-  - [Huellas KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
-  - [Símbolos SCH KiCad de la Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]** [Hoja de pinout de XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
+- **📄[Hoja de datos]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
+- **📄[Esquemático]** [XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
+- **🗃️[Archivos de diseño de PCB]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[Bibliotecas de diseño de PCB]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de pines]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
 **Diseño mecánico**
-- **📄[2D Dimensions]** [Dimensiones de XIAO RP2350 en DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
-- **🔗[3D Model]** [Modelo 3D de XIAO RP2350](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
+- **📄[Dimensiones 2D]** [XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[Modelo 3D]** [XIAO RP2350 3D Model](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
 **Software y herramientas**
-- **📄[Test Firmware]** [Firmware de prueba de bajo consumo de XIAO RP2350](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
+- **📄[Firmware de prueba]** [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
 **Otros**
-- **📄[Document]** [Primeros pasos con Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
-  - Una guía completa para configurar y programar placas Raspberry Pi Pico, ideal para principiantes que deseen aprender MicroPython o C/C++.
-- **📄[Document]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
+- **📄[Documento]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
+  - Una guía completa para configurar y programar las placas Raspberry Pi Pico, ideal para principiantes que deseen aprender MicroPython o C/C++.
+- **📄[Documento]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
   - El libro que documenta los tutoriales de configuración de MicroPython y las APIs
-- **📄[Document]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
+- **📄[Documento]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
   - El libro que documenta las APIs del SDK de Pico en C/C++
  - **📄[arduino-pico GitHub]**(https://github.com/earlephilhower/arduino-pico)
-- **📄[Arduino-Pico Core Documentation]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
+- **📄[Documentación del núcleo Arduino-Pico]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
 
 ## Soporte y debate
 

@@ -24,7 +24,7 @@ Ao contrário dos displays tradicionais que consomem energia continuamente, a re
 
 ## Matriz de produtos em um relance
 
-Quatro modelos, um ecossistema. Escolha por **tamanho de tela**, **cor vs. monocromático**, **toque** e **vida útil da bateria**:
+Quatro modelos, um ecossistema. Escolha por **tamanho de tela**, **cor vs. monocromático**, **toque** e **duração da bateria**:
 
 <div class="table-center">
   <table align="center">
@@ -41,15 +41,15 @@ Quatro modelos, um ecossistema. Escolha por **tamanho de tela**, **cor vs. monoc
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2-reterminal-e1004-epaper-display.jpg" style={{width:240, height:'auto'}}/></div></td>
     </tr>
     <tr>
-      <td align="center"><strong>7,5" Monocromático</strong><br/>Escala de cinza de 4 níveis<br/>bateria de ~3 meses</td>
-      <td align="center"><strong>7,3" Colorido</strong><br/>E Ink® Spectra™ 6<br/>bateria de ~3 meses</td>
-      <td align="center"><strong>10,3" Monocromático</strong><br/>Escala de cinza de 16 níveis + Toque<br/>bateria de ~6 meses</td>
-      <td align="center"><strong>13,3" Colorido</strong><br/>E Ink® Spectra™ 6<br/>bateria de ~6 meses</td>
+      <td align="center"><strong>7,5" Monocromático</strong><br/>Escala de cinza de 4 níveis<br/>Bateria de ~3 meses</td>
+      <td align="center"><strong>7,3" Totalmente colorido</strong><br/>E Ink® Spectra™ 6<br/>Bateria de ~3 meses</td>
+      <td align="center"><strong>10,3" Monocromático</strong><br/>Escala de cinza de 16 níveis + Toque<br/>Bateria de ~6 meses</td>
+      <td align="center"><strong>13,3" Totalmente colorido</strong><br/>E Ink® Spectra™ 6<br/>Bateria de ~6 meses</td>
     </tr>
     <tr>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer"><strong>Comprar E1001</strong></a><br/><a href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer"><strong>Comprar E1002</strong></a><br/><a href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
-      <td align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer"><strong>Comprar E1003</strong></a><br/><a href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer"><strong>Comprar E1003</strong></a><br/><a href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
       <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer"><strong>Comprar E1004</strong></a><br/><a href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
     </tr>
   </table>
@@ -57,7 +57,7 @@ Quatro modelos, um ecossistema. Escolha por **tamanho de tela**, **cor vs. monoc
 
 ## Comparação de especificações
 
-Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi 4 / Bluetooth 5.0, sensor de T/U e buzzer integrados, entrada USB-C 5 V / 1 A e faixa de operação de 0–40 °C — tudo em um gabinete metálico. As diferenças estão principalmente no **painel de display**, **comportamento de atualização**, **bateria**, **expansão** e **certificações**:
+Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi 4 / Bluetooth 5.0, sensor de T/U e buzzer integrados, entrada USB-C 5 V / 1 A e faixa de operação de 0–40 °C — tudo em um gabinete de metal. As diferenças estão principalmente no **painel de display**, **comportamento de atualização**, **bateria**, **expansão** e **certificações**:
 
 <div class="table-center">
 	<table align="center">
@@ -78,9 +78,9 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		<tr>
 			<td align="center"><strong>Tipo de display</strong></td>
 			<td align="center">Monocromático<br/>(escala de cinza de 4 níveis)</td>
-			<td align="center">Colorido<br/>(E Ink® Spectra™ 6)</td>
+			<td align="center">Totalmente colorido<br/>(E Ink® Spectra™ 6)</td>
 			<td align="center">Monocromático<br/>(escala de cinza de 16 níveis)</td>
-			<td align="center">Colorido<br/>(E Ink® Spectra™ 6)</td>
+			<td align="center">Totalmente colorido<br/>(E Ink® Spectra™ 6)</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Resolução</strong></td>
@@ -113,7 +113,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		<tr>
 			<td align="center"><strong>Processador</strong></td>
 			<td align="center" colspan="4">ESP32-S3 com 8 MB PSRAM</td>
-		</tr>
+		</tr]
 		<tr>
 			<td align="center"><strong>Armazenamento</strong></td>
 			<td align="center">32 MB Flash<br/>microSD até 32 GB</td>
@@ -123,7 +123,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		</tr>
 		<tr>
 			<td align="center"><strong>Wireless</strong></td>
-			<td align="center" colspan="4">2,4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0</td>
+			<td align="center" colspan="4">Wi-Fi 2,4 GHz 802.11 b/g/n + Bluetooth 5.0</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Sensores integrados</strong></td>
@@ -158,8 +158,8 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		</tr>
 		<tr>
 			<td align="center"><strong>Dimensões</strong></td>
-			<td align="center">176 × 120 × 53 mm<br/>(17 mm sem base)</td>
-			<td align="center">176 × 120 × 53 mm<br/>(17 mm sem base)</td>
+			<td align="center">176 × 120 × 53 mm<br/>(17 mm sem suporte)</td>
+			<td align="center">176 × 120 × 53 mm<br/>(17 mm sem suporte)</td>
 			<td align="center">224 × 187 × 18,6 mm</td>
 			<td align="center">376 × 311 × 40 mm</td>
 		</tr>
@@ -168,7 +168,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 			<td align="center">Conector de 8 pinos<br/>UART / I²C / GPIO</td>
 			<td align="center">Conector de 8 pinos<br/>UART / I²C / GPIO</td>
 			<td align="center">Conector de pinos<br/>UART / I²C / GPIO</td>
-			<td align="center">Cabeçalho 2 × 4<br/>UART / I²C / GPIO / ADC</td>
+			<td align="center">Conector 2 × 4<br/>UART / I²C / GPIO / ADC</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Certificações</strong></td>
@@ -194,7 +194,7 @@ Use o guia rápido abaixo para reduzir a escolha a um modelo. Se várias linhas 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th align="center">Se sua prioridade é…</th>
+			<th align="center">Se a sua prioridade é…</th>
 			<th align="center">Modelo recomendado</th>
 			<th align="center">Por quê</th>
 		</tr>
@@ -206,7 +206,7 @@ Use o guia rápido abaixo para reduzir a escolha a um modelo. Se várias linhas 
 		<tr>
 			<td>Mesmo formato do E1001, mas você quer conteúdo vívido e totalmente colorido</td>
 			<td align="center"><strong>E1002</strong></td>
-			<td>Painel colorido completo Spectra™ 6 de 7,3" — galeria, receitas, quadro de tarefas das crianças, sinalização de varejo. Observação: o colorido completo troca a atualização parcial por visuais mais ricos (~15–20 s para atualização completa).</td>
+			<td>Painel totalmente colorido Spectra™ 6 de 7,3" — galeria, receitas, quadro de tarefas das crianças, sinalização de varejo. Observação: o modo totalmente colorido troca a atualização parcial por visuais mais ricos (~15–20 s para atualização completa).</td>
 		</tr>
 		<tr>
 			<td>Interação por toque / painéis interativos / grande leitor monocromático</td>
@@ -216,20 +216,20 @@ Use o guia rápido abaixo para reduzir a escolha a um modelo. Se várias linhas 
 		<tr>
 			<td>Maior, mais nítido, display colorido em nível de porta-retratos</td>
 			<td align="center"><strong>E1004</strong></td>
-			<td>13,3" Spectra™ 6 totalmente colorido, 1200×1600, bateria de 5000 mAh, microSD de 16 GB pré-instalada.</td>
+			<td>13,3" Spectra™ 6 totalmente colorido, 1200×1600, bateria de 5000 mAh, cartão microSD de 16 GB pré-instalado.</td>
 		</tr>
 		<tr>
-			<td>Precisa de integração com Home Assistant / ESPHome hoje</td>
+			<td>Need Home Assistant / ESPHome integration today</td>
 			<td align="center"><strong>E1001 / E1002 / E1004</strong></td>
-			<td>Suporte direto ao Home Assistant está disponível no E1001, E1002 e E1004. ESPHome no E1003 está planejado.</td>
+			<td>O suporte direto ao Home Assistant está disponível nos modelos E1001, E1002 e E1004. O ESPHome para o E1003 está planejado.</td>
 		</tr>
 		<tr>
-			<td>Quer um dashboard E-Ink TRMNL</td>
+			<td>Want a TRMNL E-Ink dashboard</td>
 			<td align="center"><strong>E1001 / E1002</strong></td>
-			<td>Ambos são oficialmente suportados. O E1002 atualmente roda em modo monocromático sob o TRMNL.</td>
+			<td>Ambos são oficialmente suportados. O E1002 atualmente funciona em modo monocromático sob o TRMNL.</td>
 		</tr>
 		<tr>
-			<td>Vida útil da bateria é o fator mais importante</td>
+			<td>Battery life is the single most important factor</td>
 			<td align="center"><strong>E1003 / E1004</strong></td>
 			<td>Até 6 meses de duração de bateria com as configurações padrão de atualização.</td>
 		</tr>
@@ -249,11 +249,11 @@ Use o guia rápido abaixo para reduzir a escolha a um modelo. Se várias linhas 
   </a>
 </div><br />
 
-O reTerminal E1001 possui uma tela ePaper monocromática de 7,5 polegadas com capacidade de escala de cinza de 4 níveis. Com sua resolução de 800×480, oferece texto nítido e imagens claras consumindo energia mínima. A tela monocromática é perfeita para aplicações em que a legibilidade do texto e a duração da bateria são prioridades.
+O reTerminal E1001 possui uma tela ePaper monocromática de 7,5 polegadas com capacidade de escala de cinza em 4 níveis. Com resolução de 800×480, oferece texto nítido e imagens claras consumindo energia mínima. A tela monocromática é perfeita para aplicações em que a legibilidade do texto e a duração da bateria são prioridades.
 
 ### Principais recursos
 
-- Tela ePaper monocromática de 7,5 polegadas com escala de cinza de 4 níveis
+- Tela ePaper monocromática de 7,5 polegadas com escala de cinza em 4 níveis
 - Resolução de 800×480
 - Consumo de energia ultrabaixo para maior duração da bateria
 - Perfeito para aplicações com muito texto, como calendários, listas de tarefas e painéis de informação
@@ -271,14 +271,14 @@ O reTerminal E1001 possui uma tela ePaper monocromática de 7,5 polegadas com ca
   </a>
 </div><br />
 
-O reTerminal E1002 possui uma tela ePaper colorida de 7,3 polegadas com tecnologia ACeP (Advanced Color ePaper). Essa tela colorida oferece os mesmos benefícios de eficiência energética da tecnologia ePaper, permitindo ao mesmo tempo um conteúdo visualmente mais envolvente com múltiplas cores, tornando-o ideal para aplicações em que distinção visual e apelo estético são importantes.
+O reTerminal E1002 possui uma vibrante tela ePaper colorida de 7,3 polegadas com tecnologia ACeP (Advanced Color ePaper). Essa tela colorida oferece os mesmos benefícios de eficiência energética da tecnologia ePaper, permitindo ao mesmo tempo conteúdos visualmente mais envolventes com múltiplas cores, tornando-o ideal para aplicações em que distinção visual e apelo estético são importantes.
 
 ### Principais recursos
 
 - Tela ePaper colorida de 7,3 polegadas com tecnologia ACeP
 - Resolução de 800×480
 - Representação de cores rica mantendo baixo consumo de energia
-- Perfeito para exibições de galeria, dashboards coloridos e aplicações orientadas ao visual
+- Perfeito para exibição de galerias, dashboards coloridos e aplicações orientadas ao visual
 
 ## reTerminal E1003
 
@@ -288,20 +288,20 @@ O reTerminal E1002 possui uma tela ePaper colorida de 7,3 polegadas com tecnolog
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1003 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Adquira agora</font></span></strong>
   </a>
 </div><br />
 
-O reTerminal E1003 é uma tela ePaper monocromática open-source de 10,3 polegadas com 16 níveis de escala de cinza e alta resolução de 1404×1872 pixels, com até 6 meses de duração de bateria. A interação por toque é atualmente suportada no firmware SenseCraft HMI v1.1.2. Alimentado por ESP32-S3, ele oferece suporte nativo ao design de UI sem código do SenseCraft HMI, enquanto Arduino e PlatformIO estão disponíveis para desenvolvimento adicional.
+O reTerminal E1003 é uma tela ePaper monocromática open-source de 10,3 polegadas com 16 níveis de escala de cinza e alta resolução de 1404×1872 pixels, com até 6 meses de duração de bateria. A interação por toque é atualmente suportada no firmware SenseCraft HMI v1.1.2. Alimentado por ESP32-S3, oferece suporte nativo ao design de UI sem código do SenseCraft HMI, enquanto Arduino e PlatformIO estão disponíveis para desenvolvimento adicional.
 
-A biblioteca relacionada ao toque está planejada para ser disponibilizada como open-source no futuro, oferecendo maior flexibilidade para personalizar os painéis. Mais atualizações serão compartilhadas em breve. O suporte ao driver ESPHome para o E1003 também está planejado para uma versão futura.
+A biblioteca relacionada ao toque está planejada para ser disponibilizada como open-source no futuro, proporcionando maior flexibilidade para personalizar os painéis. Mais atualizações serão compartilhadas em breve. O suporte ao driver ESPHome para o E1003 também está planejado para uma versão futura.
 
 ### Principais recursos
 
 - Tela ePaper monocromática de 10,3 polegadas com suporte a interação por toque no firmware HMI v1.1.2
-- Escala de cinza de 16 níveis com alta resolução de 1404×1872
-- Até 6 meses de duração de bateria com operação de consumo ultrabaixo
+- Escala de cinza em 16 níveis com alta resolução de 1404×1872
+- Até 6 meses de duração de bateria com operação de ultrabaixo consumo
 - Suporte nativo ao SenseCraft HMI, além de compatibilidade com Arduino e PlatformIO, com suporte ao driver ESPHome planejado
 
 ## reTerminal E1004
@@ -317,12 +317,12 @@ A biblioteca relacionada ao toque está planejada para ser disponibilizada como 
   </a>
 </div><br />
 
-O reTerminal E1004 possui uma tela ePaper colorida de 13,3 polegadas e até 6 meses de duração de bateria. Alimentado por ESP32-S3, ele oferece suporte ao SenseCraft HMI para criação de dashboards sem código e upload de imagens, além de suportar Home Assistant, Arduino e ESP-IDF para fluxos de trabalho de desenvolvimento avançados.
+O reTerminal E1004 possui uma tela ePaper colorida de 13,3 polegadas e até 6 meses de duração de bateria. Alimentado por ESP32-S3, oferece suporte ao SenseCraft HMI para criação de dashboards sem código e envio de imagens, além de suportar Home Assistant, Arduino e ESP-IDF para fluxos de trabalho de desenvolvimento avançados.
 
 ### Principais recursos
 
 - Tela ePaper colorida de 13,3 polegadas
-- Até 6 meses de duração de bateria para cenários always-on
+- Até 6 meses de duração de bateria para cenários sempre ligados
 - Plataforma ESP32-S3 com suporte sem código SenseCraft HMI
 - Compatível com Home Assistant, Arduino e ESP-IDF
 
@@ -337,19 +337,19 @@ O reTerminal E1004 possui uma tela ePaper colorida de 13,3 polegadas e até 6 me
   </a>
 </div><br />
 
-Todo dispositivo da série reTerminal E vem com o firmware **SenseCraft HMI** de fábrica, para que você possa começar a usar sem escrever uma única linha de código. O aplicativo web cuida do login, design do dashboard e implantação over-the-air para o seu dispositivo:
+Todo dispositivo da reTerminal E Series é enviado com o firmware **SenseCraft HMI** pronto para uso, para que você possa começar sem escrever uma única linha de código. O aplicativo web cuida do login, design do dashboard e implantação over-the-air para o seu dispositivo:
 
 - **AI Generator** — descreva um dashboard em texto simples e deixe a IA organizá-lo para você.
-- **Gallery** — envie imagens e apresentações de slides diretamente para o painel para casos de uso de porta-retratos digital.
+- **Gallery** — envie imagens e apresentações de slides diretamente para o painel para casos de uso como porta-retratos digitais.
 - **Canvas** — arraste e solte widgets para criar dashboards personalizados.
-- **RSS / Web Content** — traga notícias, clima, calendário ou qualquer feed da web em tempo real para a tela.
+- **RSS / Web Content** — traga notícias em tempo real, clima, calendário ou qualquer feed da web para a tela.
 - **Interação por toque** — totalmente suportada no E1003 a partir do firmware HMI v1.1.2.
 
 Se você precisar de mais controle do que o fluxo de trabalho sem código oferece, cada dispositivo também expõe o ESP32-S3 subjacente, para que você possa passar para os tutoriais de aplicação abaixo a qualquer momento.
 
 ## Aplicações e tutoriais
 
-Além do SenseCraft HMI, a série reTerminal E integra-se com várias plataformas padrão da indústria e ferramentas visuais de design de UI. A matriz abaixo mostra, para cada tutorial, quais modelos ele cobre atualmente.
+Além do SenseCraft HMI, a reTerminal E Series se integra a várias plataformas padrão da indústria e ferramentas visuais de design de UI. A matriz abaixo mostra, para cada tutorial, quais modelos ele cobre atualmente.
 
 ### Frameworks de casa inteligente e dashboards
 
@@ -404,7 +404,7 @@ Além do SenseCraft HMI, a série reTerminal E integra-se com várias plataforma
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_squareline_vision">Work with SquareLine Vision</a></td>
-			<td>Arraste e solte UI LVGL no navegador e depois exporte o código pronto para compilação.</td>
+			<td>Crie uma UI LVGL com arrastar e soltar no navegador e depois exporte o código pronto para compilação.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
@@ -435,7 +435,7 @@ Além do SenseCraft HMI, a série reTerminal E integra-se com várias plataforma
 	<table align="center">
 		<tr>
 			<th>Tutorial</th>
-			<th>O que faz</th>
+			<th>O que ele faz</th>
 			<th>E1001</th>
 			<th>E1002</th>
 			<th>E1003</th>
@@ -443,15 +443,23 @@ Além do SenseCraft HMI, a série reTerminal E integra-se com várias plataforma
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino">Arduino — ePaper Display</a></td>
-			<td>Renderize texto, gráficos e imagens na tela ePaper com as bibliotecas Seeed_GFX ou GxEPD2.</td>
+			<td>Renderize texto, gráficos e imagens na tela de ePaper com as bibliotecas Seeed_GFX ou GxEPD2.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals">Arduino — Onboard Peripherals</a></td>
-			<td>Controle o LED onboard, buzzer, três botões de usuário, sensor SHT4x, monitor de bateria e cartão microSD.</td>
+			<td><a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals">Arduino — Periféricos integrados</a></td>
+			<td>Controle o LED integrado, buzzer, três botões de usuário, sensor SHT4x, monitor de bateria e cartão microSD.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC, baixo consumo &amp; áudio</a></td>
+			<td>Gerenciamento de horário via RTC, deep sleep / light sleep e gravação de microfone I2S (apenas E1001 / E1002 / E1003 para o microfone).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -461,7 +469,7 @@ Além do SenseCraft HMI, a série reTerminal E integra-se com várias plataforma
 </div>
 
 :::tip
-Procurando as instruções de primeiros passos por dispositivo (desembalagem, configuração de Wi‑Fi, atualização de firmware)? Vá para o Wiki do produto vinculado na matriz acima:
+Procurando as instruções de primeiros passos específicas de cada dispositivo (unboxing, configuração de Wi‑Fi, atualização de firmware)? Vá para o Wiki do produto vinculado na matriz acima:
 [E1001](https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1001) ·
 [E1002](https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1002) ·
 [E1003](https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003) ·
@@ -472,7 +480,7 @@ Procurando as instruções de primeiros passos por dispositivo (desembalagem, co
 
 - [Documentação do SenseCraft HMI](https://wiki.seeedstudio.com/pt-br/sensecraft_hmi_overview/)
 - [Datasheet do ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [Certificado de Rádio MIC do reTerminal](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
+- [Certificado de Rádio do reTerminal MIC](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
 ## Aviso da FCC
 
@@ -482,7 +490,7 @@ Quaisquer alterações ou modificações não expressamente aprovadas pela parte
 
 (2) este dispositivo deve aceitar qualquer interferência recebida, incluindo interferência que possa causar operação indesejada. Este transmissor não deve ser instalado no mesmo local ou operado em conjunto com qualquer outra antena ou transmissor.
 
-Nota: Este equipamento foi testado e considerado em conformidade com os limites para um dispositivo digital Classe B, de acordo com a Parte 15 das Regras da FCC. Esses limites são projetados para fornecer proteção razoável contra interferência prejudicial em uma instalação residencial. Este equipamento gera, usa e pode irradiar energia de radiofrequência e, se não for instalado e utilizado de acordo com as instruções, pode causar interferência prejudicial às comunicações por rádio. No entanto, não há garantia de que a interferência não ocorrerá em uma instalação específica. Se este equipamento causar interferência prejudicial à recepção de rádio ou televisão, o que pode ser determinado desligando e ligando o equipamento, recomenda‑se que o usuário tente corrigir a interferência por meio de uma ou mais das seguintes medidas:
+Nota: Este equipamento foi testado e considerado em conformidade com os limites para um dispositivo digital Classe B, de acordo com a Parte 15 das Regras da FCC. Esses limites são projetados para fornecer proteção razoável contra interferência prejudicial em uma instalação residencial. Este equipamento gera, usa e pode irradiar energia de radiofrequência e, se não for instalado e utilizado de acordo com as instruções, pode causar interferência prejudicial às comunicações de rádio. No entanto, não há garantia de que a interferência não ocorrerá em uma instalação específica. Se este equipamento causar interferência prejudicial à recepção de rádio ou televisão, o que pode ser determinado desligando e ligando o equipamento, recomenda-se que o usuário tente corrigir a interferência por meio de uma ou mais das seguintes medidas:
 
 – Reoriente ou reposicione a antena receptora.
 
@@ -492,9 +500,9 @@ Nota: Este equipamento foi testado e considerado em conformidade com os limites 
 
 – Consulte o revendedor ou um técnico experiente em rádio/TV para obter ajuda. Este dispositivo está em conformidade com os limites de exposição à radiação da FCC estabelecidos para um ambiente não controlado. Este dispositivo deve ser instalado e operado com uma distância mínima de 20 cm entre o radiador e o seu corpo.
 
-## Suporte Técnico e Discussão de Produto
+## Suporte técnico & discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Agradecemos por escolher nossos produtos! Estamos aqui para oferecer diferentes formas de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -9,35 +9,48 @@ last_update:
   date: 07/25/2024
   author: Spencer
 createdAt: '2023-01-16'
-updatedAt: '2025-09-19'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/
 ---
 
 # 引脚复用
 
-Seeed Studio XIAO ESP32C3 具有丰富的接口。它有 **11 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **4 个模拟输入**引脚可用作 **ADC 引脚**。它支持四种串行通信接口，如 **UART、I2C、SPI 和 I2S**。本教程将帮助您了解这些接口并在您的下一个项目中实现它们！
+Seeed Studio XIAO ESP32C3 拥有丰富的接口。它有 **11 个数字 I/O** 可用作 **PWM 引脚**，以及 **4 个模拟输入** 可用作 **ADC 引脚**。它支持 **UART、I2C、SPI 和 I2S** 四种串行通信接口。本篇 wiki 将帮助你了解这些接口，并在你的下一个项目中加以实现！
 
-## 数字
+## 硬件总览
 
-将一个按钮连接到引脚 D6，将一个 LED 连接到引脚 D10。然后上传以下代码，使用按钮控制 LED 的开/关。
+> *A3(GP105) - 使用 ADC2，可能会因为错误采样信号而失效。为了获得可靠的模拟读取，请改用 ADC1(A0/A1/A2)。请参考 ESP32-C3 数据手册。
+
+### 正面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### 背面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+
+## 数字引脚
+
+将一个按键连接到 D6 引脚，将一个 LED 连接到 D10 引脚。然后上传以下代码，通过按键控制 LED 的开/关。
 
 ```c
 const int buttonPin = D6;     // pushbutton connected to digital pin 6
 const int ledPin =  D10;      // LED connected to digital pin 10
- 
+
 int buttonState = 0;         // variable for reading the pushbutton status
- 
+
 void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
- 
+
 void loop() {
   // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
- 
+
   // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
     // turn LED on:
@@ -49,9 +62,9 @@ void loop() {
 }
 ```
 
-## 数字信号作为 PWM 使用
+## 数字引脚作为 PWM
 
-将 LED 连接到 D10 引脚。然后上传以下代码，观察 LED 逐渐变暗和变亮的效果。
+将一个 LED 连接到 D10 引脚。然后上传以下代码，即可看到 LED 逐渐变暗。
 
 ```cpp
 int ledPin = D10;    // LED connected to digital pin 10
@@ -80,12 +93,12 @@ void loop() {
 }
 ```
 
-## 模拟
+## 模拟引脚
 
-将电位器连接到引脚 A0，将 LED 连接到引脚 D10。然后上传以下代码，通过旋转电位器旋钮来控制 LED 的闪烁间隔。
+将一个电位器连接到 A0 引脚，将一个 LED 连接到 D10 引脚。然后上传以下代码，通过旋转电位器旋钮来控制 LED 的闪烁间隔。
 
 :::tip
-ADC 映射范围是 0-2500mV。
+ADC 映射范围为 0-2500mV。
 :::
 
 ```c
@@ -113,16 +126,16 @@ void loop() {
 
 ## 串口 - UART
 
-### 常规方法 - 选择使用 USB 串口或 UART0 串口中的一种
+### 常规方式 - 二选一使用 USB 串口或 UART0 串口
 
-此开发板上有 2 个串口接口：
+该开发板上有 2 个串行接口：
 
 - USB 串口
 - UART0 串口
 
 :::note
 XIAO ESP32 C3 没有 `Serial2`。
-另外，如果您需要使用 `Serial1`，必须定义引脚；否则可能无法接收数据。对于 XIAO ESP32 系列，使用 `Serial1` 的方法如下：
+另外，如果你需要使用 `Serial1`，必须先定义引脚，否则可能无法接收数据。对于 XIAO ESP32 系列，请按如下方式使用 `Serial1`：
 
 ```cpp
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
@@ -130,39 +143,39 @@ Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 
 :::
 
-默认情况下，USB串口是启用的，这意味着您可以通过USB Type-C将开发板连接到PC，并在Arduino IDE上打开串口监视器来查看通过串口发送的数据。
+默认情况下，USB 串口是启用的，这意味着你可以通过 USB Type-C 将开发板连接到电脑，并在 Arduino IDE 上打开串口监视器来查看通过串口发送的数据。
 
-但是，如果您想使用UART0作为串口，您需要将引脚D6作为TX引脚，引脚D7作为RX引脚，并连接USB-串口适配器。
+然而，如果你想使用 UART0 作为串口，则需要将 D6 引脚作为 TX 引脚、D7 引脚作为 RX 引脚，并连接到一个 USB-Serial 转换器。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
-此外，您需要在Arduino IDE中将**USB CDC On Boot**设置为**Disabled**。
+此外，你还需要在 Arduino IDE 中将 **USB CDC On Boot** 设置为 **Disabled**。
 
-**注意：当开发板在Arduino开发板管理器中显示时更换照片**
+**注意：当开发板在 Arduino Board Manager 中显示出来时，请更换照片**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
-将以下代码上传到Arduino IDE以通过串口发送字符串"Hello World!"
+将以下代码上传到 Arduino IDE，通过串口发送字符串 "Hello World!"
 
 ```cpp
 void setup() {
     Serial.begin(115200);
     while (!Serial);
 }
- 
+
 void loop() {
     Serial.println("Hello World!");
     delay(1000);
 }
 ```
 
-输出将在 Arduino 串口监视器中显示如下
+在 Arduino 串口监视器上的输出如下所示
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
 
-### 特殊方法 - 同时使用 USB 串口和 UART0/UART1
+### 特殊方式 - 同时使用 USB 串口和 UART0/UART1
 
-很多时候，我们需要使用 UART 传感器连接到 XIAO ESP32C3 硬件串口来获取数据，同时，您可能需要使用 USB 串口在串口监视器上显示数据。这可以通过一些特殊方法来实现。
+很多时候，我们需要使用 UART 传感器连接到 XIAO ESP32C3 的硬件串口来获取数据，同时你可能还需要使用 USB 串口在串口监视器上显示这些数据。通过一些特殊方法可以实现这一点。
 
 - 示例程序：
 
@@ -194,16 +207,16 @@ void loop()
 }
 ```
 
-如您所见，XIAO ESP32C3 实际上有三个可用的 UART。
+可以看到，XIAO ESP32C3 实际上有三个可用的 UART。
 
-在下面的内容中，我们将以正在销售的 [60GHz 毫米波传感器 - 人体静息呼吸和心跳模块](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，解释如何使用 D6 和 D7 硬件串口以及 USB 串口。
+下面我们以正在销售的 [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) 为例，说明如何使用 D6 和 D7 硬件串口以及 USB 串口。
 
-请准备以下物品。
+请准备好以下器件。
 
 <table align="center">
  <tr>
      <th>XIAO ESP32C3</th>
-        <th>60GHz 毫米波传感器 -<br/>人体静息呼吸<br/>和心跳模块</th>
+        <th>60GHz mmWave Sensor -<br/>Human Resting Breathing<br/>and Heartbeat Module</th>
  </tr>
     <tr>
         <td><div align="center"><img width = {120} src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div></td>
@@ -215,11 +228,11 @@ void loop()
  </tr>
 </table>
 
-将传感器库下载到您的计算机。并将其添加到 Arduino IDE 中。
+将传感器库下载到你的电脑，并将其添加到 Arduino IDE 中。
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
-在这里，我们想要解析心跳和呼吸数据信息，那么您可以像这样重写您的程序。
+在这里，我们希望解析心率和呼吸数据，然后你可以像这样重写你的程序。
 
 ```c
 #include "Arduino.h"
@@ -308,33 +321,33 @@ void loop()
 }
 ```
 
-请上传程序，然后打开串口监视器并将波特率设置为115200。
+请上传程序，然后打开串口监视器，并将波特率设置为 115200。
 
-接下来，我们可以使用以下连接方法将传感器连接到XIAO ESP32C3。
+接下来，我们可以按照以下连接方式将传感器连接到 XIAO ESP32C3。
 
 <div align="center"><img width = {700} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.jpg"/></div>
 
-如果一切顺利，您将在串口监视器上看到数据消息。
+如果一切顺利，你会在串口监视器上看到数据消息。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
 
 ### Serial1 使用方法
 
-根据上述XIAO ESP32C3引脚图的具体参数，我们可以观察到有TX引脚和RX引脚。
-这与串口通信不同，但使用方法也非常相似，只是需要添加一些参数。
-因此接下来，我们将使用芯片引出的引脚进行串口通信。
+根据上面 XIAO ESP32C3 引脚图中的具体参数，我们可以看到有 TX 引脚和 RX 引脚。
+这与普通串口通信有所不同，但用法也非常相似，只是需要额外添加几个参数。
+所以接下来，我们将使用芯片引出的引脚进行串口通信。
 
 需要包含的核心函数：
 
-- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- 启用Serial1，函数原型：`<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
-  - `baud`：波特率
-  - `config`：配置位
-  - `rxPin`：接收引脚
-  - `txPin`：发送引脚
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- 使能 Serial1，函数原型：`<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+  - `baud`  :波特率
+  - `config`:配置位
+  - `rxPin` :接收引脚
+  - `txPin` :发送引脚
 
-值得注意的是，如果我们使用数字引脚端口来定义，这里应该是`#define RX_PIN D7`、`#define TX_PIN D6`，具体参数请参考不同XIAO系列的引脚图。
+值得注意的是，如果我们使用数字引脚端口来定义，这里应该是 `#define RX_PIN D7`、`#define TX_PIN D6`，具体参数请参考不同 XIAO 系列的引脚图。
 
-以下是一个示例程序：
+下面是一个示例程序：
 
 ```c
 #define RX_PIN D7
@@ -344,7 +357,7 @@ void loop()
 void setup() {
     Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);
 }
- 
+
 void loop() {
   if(Serial1.available() > 0)
   {
@@ -356,7 +369,7 @@ void loop() {
 }
 ```
 
-上传程序后，在 Arduino IDE 中打开串口监视器并将波特率设置为 115200。然后，您可以通过串口监视器向 XIAO ESP32C3 发送您想要的内容，XIAO 将打印出您发送内容的每个字节。在这里，我输入的内容是"Hello Everyone"，我的结果图表如下所示
+上传程序后，在 Arduino IDE 中打开串口监视器，并将波特率设置为 115200。然后，你就可以通过串口监视器向 XIAO ESP32C3 发送你想要的内容，XIAO 会打印出你发送内容的每一个字节。在这里，我输入的内容是 "Hello Everyone"，我的结果图如下所示
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
@@ -365,7 +378,7 @@ void loop() {
 要使用软件串口，请安装 [EspSoftwareSerial](https://github.com/plerup/espsoftwareserial) 库。
 
 :::tip
-目前我们推荐使用 EspSoftwareSerial 库的 7.0.0 版本。其他版本可能存在不同程度的问题，导致软串口无法正常工作。
+目前我们推荐使用 EspSoftwareSerial 库的 7.0.0 版本。其他版本可能存在不同程度的问题，导致软件串口无法正常工作。
 :::
 
 ```cpp
@@ -393,15 +406,15 @@ void loop() {
 }
 ```
 
-这个示例在引脚 `D7 (RX)` 和 `D6 (TX)` 上设置软件串口，波特率为 9600。它监控硬件串口（USB）和软件串口端口，在它们之间回显接收到的数据。
+此示例在引脚 `D7 (RX)` 和 `D6 (TX)` 上以 9600 波特率配置软件串口。它同时监视硬件串口（USB）和软件串口，并在两者之间回显接收到的数据。
 
 ## I2C
 
 ### 硬件连接
 
-按照以下硬件连接将 [Grove - OLED 黄蓝显示屏 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) 连接到 XIAO ESP32C3。
+将 [Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) 按照如下硬件连接方式连接到 XIAO ESP32C3。
 
-|  Grove - OLED 黄蓝显示屏 0.96 (SSD1315) |  XIAO ESP32C3 |
+|  Grove - OLED Yellow&Blue Display 0.96 (SSD1315) |  XIAO ESP32C3 |
 |-----------|-----------|
 | SCL       | SCL       |
 | SDA       | SDA       |
@@ -414,16 +427,16 @@ void loop() {
 
 - **步骤 1.** 打开 Arduino IDE，导航到 `Sketch > Include Library > Manage Libraries...`
 
-- **步骤 2.** 搜索 **u8g2** 并安装它
+- **步骤 2.** 搜索 **u8g2** 并安装
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 3.** 上传以下代码以在 OLED 显示屏上显示文本字符串
+- **步骤 3.** 上传以下代码，在 OLED 显示屏上显示文本字符串
 
 ```cpp
 //#include <Arduino.h>
 #include <U8g2lib.h>
- 
+
 #ifdef U8X8_HAVE_HW_SPI
 #include <SPI.h>
 #endif
@@ -432,12 +445,12 @@ void loop() {
 #endif
 
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);    //Low spped I2C
- 
+
 void setup(void) {
   u8g2.begin();
 //  u8x8.setFlipMode(1);   // set number from 1 to 3, the screen word will rotary 180
 }
- 
+
 void loop(void) {
   u8g2.clearBuffer();                   // clear the internal memory
   u8g2.setFont(u8g2_font_ncenB08_tr);   // choose a suitable font
@@ -453,9 +466,9 @@ void loop(void) {
 
 ### 硬件连接
 
-按照以下硬件连接方式，将 [Grove - 高精度气压传感器 (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) 连接到 XIAO ESP32C3。
+将 [Grove - High Precision Barometric Pressure Sensor (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) 按照如下硬件连接方式连接到 XIAO ESP32C3。
 
-| Grove - 高精度气压传感器 (DPS310) | XIAO ESP32C3 |
+| Grove - High Precision Barometric Pressure Sensor (DPS310) | XIAO ESP32C3 |
 |-----------|------------|
 | 3V3        | 3V3       |
 | SDI        | MOSI      |
@@ -468,11 +481,11 @@ void loop(void) {
 
 ### 软件设置
 
-- **步骤 1**. 下载 [Seeed_Arduino_DPS310 库](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) 作为 zip 文件
+- **步骤 1**. 将 [Seeed_Arduino_DPS310 Library](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) 下载为 zip 文件
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-5.png" alt="pir" width={1000} height="auto" /></div>
 
-- **步骤 2**. 打开 Arduino IDE，导航到 `Sketch > Include Library > Add .ZIP Library...` 并打开下载的 zip 文件
+- **步骤 2**. 打开 Arduino IDE，导航到 `Sketch > Include Library > Add .ZIP Library...` 并打开下载好的 zip 文件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
@@ -480,7 +493,7 @@ void loop(void) {
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-6.png" alt="pir" width={450} height="auto" /></div>
 
-或者您也可以从下面复制代码
+或者你也可以从下面复制代码
 
 ```cpp
 #include <Dps310.h>
@@ -577,48 +590,48 @@ void loop() {
 }
 ```
 
-- **步骤 4.** 上传代码并打开**串口监视器**
+- **步骤 4.** 上传代码并打开 **串口监视器**
 
-**注意：** 一旦你上传了代码，它不会自动执行，直到你点击 Arduino 窗口右上角的**串口监视器**。
+**注意：** 上传代码后，不会自动执行，直到你点击 Arduino 窗口右上角的 **Serial Monitor（串口监视器）**。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-8.jpg" alt="pir" width={600} height="auto" /></div>
 
-现在你将看到温度和压力数据如上所示在串口监视器上依次显示！
+现在你会在串口监视器上看到温度和气压数据依次显示，如上图所示！
 
-## XIAO ESP32C3 IO 分配注意事项
+## 关于 XIAO ESP32C3 IO 分配的注意事项
 
 ### D9
 
-XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9 (15)、上拉电阻 (R6) 和 BOOT 按钮。BOOT 按钮（和 RESET 按钮）允许你手动切换 ESP32-C3 的启动模式。
+XIAO ESP32C3 的 D9 连接到 ESP32-C3 的 GPIO9（15）、上拉电阻（R6）和 BOOT 按钮。BOOT 按钮（以及 RESET 按钮）允许你手动切换 ESP32-C3 的启动模式（Boot Mode）。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
-按下 BOOT 按钮会将 D9 连接到 GND。**因此最好将 D9 用作开关输入**。
+按下 BOOT 按钮会将 D9 与 GND 连接。**因此最好将 D9 用作开关输入**。
 
 ### D6
 
-XIAO ESP32C3 的 D6 连接到 ESP32-C3 的 U0TXD (28)。第一/第二阶段引导加载程序的运行状态以文本形式输出到 U0TXD。
+XIAO ESP32C3 的 D6 连接到 ESP32-C3 的 U0TXD（28）。第 1/2 阶段引导加载程序的运行状态会以文本形式输出到 U0TXD。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
-D6 在启动时被设置为 UART 输出，所以如果你将 D6 用作输入，可能会意外产生大电流。**因此建议仅在输出模式下使用 D6 引脚**。
+D6 在启动时被设置为 UART 输出，因此如果你将 D6 用作输入，可能会意外产生较大的电流。**因此建议仅在输出模式下使用 D6 引脚**。
 
-但是，由于这个 D6 是 UART 输出，你必须注意几件事：一是在不通信时的待机模式下它是 HIGH。另一个是第一/第二阶段引导加载程序的文本输出。信号在启动后立即在 HIGH/LOW 之间跳动，必要时必须加以抵消。
+但是，由于这个 D6 是 UART 输出，你需要注意几点：其一，在未通信的待机模式下它为 HIGH；其二，是第 1/2 阶段引导加载程序的文本输出。启动后信号会在 HIGH/LOW 之间快速跳变，如有需要必须采取对策。
 
-所以尽量不要使用 D6。（当然，在你理解它之后使用它是可以的。）
+所以尽量不要使用 D6。（当然，在你理解其行为之后再使用也是可以的。）
 
 ### D8
 
-Seeed Studio XIAO ESP32C3 的 D8 连接到 ESP32-C3 的 GPIO8 (14)。
+Seeed Studio XIAO ESP32C3 的 D8 连接到 ESP32-C3 的 GPIO8（14）。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
-当通过按住 BOOT 按钮将启动模式设置为下载启动时，会引用 GPIO8，此时必须为 HIGH。（[这里](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)说："GPIO8 = 0 和 GPIO9 = 0 的绑定组合是无效的，会触发意外行为。"）
+当按住 BOOT 按钮将启动模式设置为下载启动（download boot）时，会参考 GPIO8 的状态，并且此时它必须为 HIGH。（[此处](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) 写道：“The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour.”）
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
-如果你使用下载启动，**添加一个上拉电阻以使 GPIO8 在启动时为 HIGH**。
+如果你使用下载启动，**请在启动时为 GPIO8 添加上拉电阻以使其保持 HIGH**。
 
-特别感谢 SeeedJP 同事 **matsujirushi** 对本节的测试和贡献。这里是原文的参考链接。
+特别感谢 SeeedJP 同事 **matsujirushi** 对本节内容进行测试和贡献。这里是原始文章的参考链接。
 
-- [Seeed Studio XIAO ESP32C3のI/O割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)
+- [Seeed Studio XIAO ESP32C3のI/O 割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)
