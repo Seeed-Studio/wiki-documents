@@ -3835,6 +3835,7 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Super_Hardware_Interfaces_Usage',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_Replace_the_Thermal_Conductive_Paste_for_reComputer',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/ja_reComputer_Antenna_Installation'
                   ],
                 },
               ]
@@ -3885,6 +3886,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_Mini_AI_Computer_T906',
+                'Edge/NVIDIA_Jetson/Other_Devices/ja_Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/ja_reComputer_Jetson_Series_GPIO_Grove',
@@ -4036,6 +4038,28 @@ const sidebars = {
               ]
             },
           ]
+        },
+        // Seeed Jetson DevelopTool
+        {
+          type: 'category',
+          label: 'Seeed Jetson DevelopTool',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Overview',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Supported_Devices',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Installation',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Connect_Device',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Flash_Firmware',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Device_Management',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_App_Market',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Skills',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_Remote_Development',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/ja_Jetson_DevelopTool_FAQ',
+          ],
         },
         // FAQs
         {
@@ -4301,6 +4325,13 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Lerobot',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/ja_reBot_Arm_B601_DM_ROS2_Integration',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'B601-RS',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/ja_reBot_Arm_B601_RS_Getting_Started',
               ]
             }
           ]

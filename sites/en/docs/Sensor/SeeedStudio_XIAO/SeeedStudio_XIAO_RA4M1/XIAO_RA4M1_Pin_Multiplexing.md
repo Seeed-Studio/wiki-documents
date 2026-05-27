@@ -16,6 +16,18 @@ updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/xiao_ra4m1_pin_multiplexing/
 ---
 
+## Hardware Overview
+
+Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO RA4M1.
+
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 ## Digital
 
 The XIAO RA4M1 has up to 11 regular GPIO pins , 6 analog pins and 8 reusable IO ports behind it. In this example, we will use the XIAO RA4M1, XIAO expansion board, and a relay to demonstrate how to use different digital pins for reading and writing.
