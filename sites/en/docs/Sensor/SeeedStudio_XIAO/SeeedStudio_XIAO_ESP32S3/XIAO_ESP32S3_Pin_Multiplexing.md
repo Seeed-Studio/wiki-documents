@@ -17,28 +17,37 @@ updatedAt: '2026-04-27'
 url: https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Pin Multiplexing with Seeed Studio XIAO ESP32-S3 (Sense)
 
 <table align="center">
  <tr>
-     <th>Seeed Studio XIAO ESP32-S3</th>
-     <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+  <th>Seeed Studio XIAO ESP32-S3</th>
+  <th>Seeed Studio XIAO ESP32-S3 Sense</th>
+  <th>Seeed Studio XIAO ESP32-S3 Plus</th>
  </tr>
  <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3plus.png" style={{width:250, height:'auto'}}/></div></td>
  </tr>
-    <tr>
-     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
+ <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
   </div></td>
-     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
   </div></td>
  </tr>
 </table>
@@ -51,29 +60,173 @@ The Seeed Studio XIAO ESP32-S3 is a powerful and versatile development board tha
 
 Before we begin, let's review all the pins that the XIAO ESP32-S3 has and its functions with the following schematic.
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense front indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense back indication diagram</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-S3/XIAO ESP32-S3 Sense Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+## Hardware Overview
+
+Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO ESP32-S3.
+
+<Tabs>
+<TabItem value="ESP32S3" label="XIAO ESP32-S3" default>
+
+### XIAO ESP32-S3 Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO ESP32-S3 Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |           |                    | Power Input/Output                   |
+| GND                     |                  |           |                    |                                      |
+| 3V3                     | 3V3_OUT          |           |                    | Power Output                         |
+| D0                      | Analog           | GPIO1     | TOUCH1             | GPIO, ADC                            |
+| D1                      | Analog           | GPIO2     | TOUCH2             | GPIO, ADC                            |
+| D2                      | Analog           | GPIO3     | TOUCH3             | GPIO, ADC                            |
+| D3                      | Analog           | GPIO4     | TOUCH4             | GPIO, ADC                            |
+| D4                      | Analog, SDA      | GPIO5     | TOUCH5             | GPIO, I2C Data, ADC                  |
+| D5                      | Analog, SCL      | GPIO6     | TOUCH6             | GPIO, I2C Clock, ADC                 |
+| D6                      | TX               | GPIO43    |                    | GPIO, UART Transmit                  |
+| D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
+| D8                      | Analog, SCK      | GPIO7     | TOUCH7             | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog, MISO     | GPIO8     | TOUCH8             | GPIO, SPI Data, ADC                  |
+| D10                     | Analog, MOSI     | GPIO9     | TOUCH9             | GPIO, SPI Data, ADC                  |
+| D11                     | Analog           | GPIO42    | TOUCH12            | GPIO, ADC                            |
+| D12                     | Analog           | GPIO41    | TOUCH13            | GPIO, ADC                            |
+| MTDO                    |                  | GPIO40    |                    | JTAG                                 |
+| MTDI                    |                  | GPIO41    |                    | JTAG, ADC                            |
+| MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
+| MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
+| Reset                   |                  | CHIP_PU   |                    |                                      |
+| Boot                    |                  | GPIO0     |                    | Enter Boot Mode                      |
+| U.FL-R-SMT1             |                  | LNA_IN    |                    | UFL antenna                          |
+| CHARGE_LED              |                  |           |                    | CHG-LED                              |
+| USER_LED                |                  | GPIO21    |                    | User Light                           |
+
+</TabItem>
+<TabItem value="ESP32S3Sense" label="XIAO ESP32-S3 Sense">
+
+### XIAO ESP32-S3 Sense Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO ESP32-S3 Sense Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |           |                    | Power Input/Output                   |
+| GND                     |                  |           |                    |                                      |
+| 3V3                     | 3V3_OUT          |           |                    | Power Output                         |
+| D0                      | Analog           | GPIO1     | TOUCH1             | GPIO, ADC                            |
+| D1                      | Analog           | GPIO2     | TOUCH2             | GPIO, ADC                            |
+| D2                      | Analog           | GPIO3     | TOUCH3             | GPIO, ADC                            |
+| D3                      | Analog           | GPIO4     | TOUCH4             | GPIO, ADC                            |
+| D4                      | Analog, SDA      | GPIO5     | TOUCH5             | GPIO, I2C Data, ADC                  |
+| D5                      | Analog, SCL      | GPIO6     | TOUCH6             | GPIO, I2C Clock, ADC                 |
+| D6                      | TX               | GPIO43    |                    | GPIO, UART Transmit                  |
+| D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
+| D8                      | Analog, SCK      | GPIO7     | TOUCH7             | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog, MISO     | GPIO8     | TOUCH8             | GPIO, SPI Data, ADC                  |
+| D10                     | Analog, MOSI     | GPIO9     | TOUCH9             | GPIO, SPI Data, ADC                  |
+| D11                     | Analog           | GPIO42    | TOUCH12            | GPIO, ADC                            |
+| D12                     | Analog           | GPIO41    | TOUCH13            | GPIO, ADC                            |
+| MTDO                    |                  | GPIO40    |                    | JTAG                                 |
+| MTDI                    |                  | GPIO41    |                    | JTAG, ADC                            |
+| MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
+| MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
+| Reset                   |                  | CHIP_PU   |                    |                                      |
+| Boot                    |                  | GPIO0     |                    | Enter Boot Mode                      |
+| U.FL-R-SMT1             |                  | LNA_IN    |                    | UFL antenna                          |
+| CHARGE_LED              |                  |           |                    | CHG-LED                              |
+| USER_LED                |                  | GPIO21    |                    | User Light                           |
+| Digital microphone_CLK  |                  | GPIO42    |                    | PDM clock pin for MIC                |
+| Digital microphone_DATA |                  | GPIO41    |                    | PDM data pin for MIC                 |
+| Onboard SD Card__CS     |                  | GPIO3     |                    | SD card chip select pin              |
+| Onboard SD Card_SCK     |                  | GPIO7     |                    | SD card clock pin                    |
+| Onboard SD Card_MISO    |                  | GPIO8     |                    | SD card data input pin               |
+| Onboard SD Card Slot_MOSI|                 | GPIO9     |                    | SD card data output pin              |
+
+**Camera**
+
+| Chip Pin  | Description                          |
+| :-------: | :---------------------------------- |
+| GPIO10    | Camera-related clock pin            |
+| GPIO11    | Camera video data pin (Y8)          |
+| GPIO12    | Camera video data pin (Y7)          |
+| GPIO13    | Camera pixel clock pin              |
+| GPIO14    | Camera video data pin (Y6)          |
+| GPIO15    | Camera video data pin (Y2)          |
+| GPIO16    | Camera video data pin (Y5)          |
+| GPIO17    | Camera video data pin (Y3)          |
+| GPIO18    | Camera video data pin (Y4)          |
+| GPIO40    | I2C data pin for Camera             |
+| GPIO39    | I2C clock pin for Camera            |
+| GPIO38    | Camera vertical sync pin            |
+| GPIO47    | Camera horizontal sync pin          |
+| GPIO48    | Camera video data pin (Y9)          |
+
+</TabItem>
+<TabItem value="ESP32S3Plus" label="XIAO ESP32-S3 Plus">
+
+### XIAO ESP32-S3 Plus Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO ESP32-S3 Plus Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/XIAO_ESP32-S3_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |           |                    | Power Input/Output                   |
+| GND                     |                  |           |                    |                                      |
+| 3V3                     | 3V3_OUT          |           |                    | Power Output                         |
+| D0                      | Analog           | GPIO1     |                    | GPIO, ADC                            |
+| D1                      | Analog           | GPIO2     |                    | GPIO, ADC                            |
+| D2                      | Analog           | GPIO3     |                    | GPIO, ADC                            |
+| D3                      | Analog           | GPIO4     |                    | GPIO, ADC                            |
+| D4                      | Analog, SDA      | GPIO5     |                    | GPIO, I2C Data, ADC                  |
+| D5                      | Analog, SCL      | GPIO6     |                    | GPIO, I2C Clock, ADC                 |
+| D6                      | TX               | GPIO43    |                    | GPIO, UART Transmit                  |
+| D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
+| D8                      | Analog, SCK      | GPIO7     |                    | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog, MISO     | GPIO8     |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog, MOSI     | GPIO9     |                    | GPIO, SPI Data, ADC                  |
+| D11                     |                  | GPIO38    |                    | GPIO, ADC                            |
+| D12                     |                  | GPIO39    |                    | GPIO, ADC                            |
+| D13                     |                  | GPIO40    |                    |                                      |
+| D14                     |                  | GPIO41    |                    |                                      |
+| D15                     |                  | GPIO42    |                    |                                      |
+| D16                     |                  | GPIO10    |                    |                                      |
+| D17                     |                  | GPIO13    |                    |                                      |
+| D18                     |                  | GPIO12    |                    |                                      |
+| D19                     |                  | GPIO11    |                    |                                      |
+| MTDO                    |                  | GPIO40    |                    | JTAG                                 |
+| MTDI                    |                  | GPIO41    |                    | JTAG, ADC                            |
+| MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
+| MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
+| Reset                   |                  | CHIP_PU   |                    |                                      |
+| Boot                    |                  | GPIO0     |                    | Enter Boot Mode                      |
+| ADC_BAT                 |                  | GPIO10    |                    | Read the BAT voltage value           |
+| U.FL-R-SMT1             |                  | LNA_IN    |                    | UFL antenna                          |
+| CHARGE_LED              |                  | VCC_3V3   |                    | CHG-LED                              |
+| USER_LED                |                  | GPIO21    |                    | User Light                           |
+
+</TabItem>
+</Tabs>
 
 :::caution
-Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+- Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+
+- The B2B connector of XIAO ESP32-S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
 :::
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
