@@ -45,20 +45,13 @@ The Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC]
 
 Before we begin, let's review all the pins that the XIAO ESP32C6 has and its functions with the following schematic.
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/XIAO_ESP32-C6_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
