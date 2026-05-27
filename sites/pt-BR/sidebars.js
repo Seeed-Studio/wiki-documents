@@ -3885,6 +3885,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Mini_AI_Computer_T906',
+                'Edge/NVIDIA_Jetson/Other_Devices/pt_Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_Jetson_Series_GPIO_Grove'
