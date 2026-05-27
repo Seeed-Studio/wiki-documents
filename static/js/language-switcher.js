@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-26 10:23:45 (北京时间)
-// 多语言页面: 2285 个
+// 生成时间: 2026-05-27 10:57:58 (北京时间)
+// 多语言页面: 2298 个
 
 (function() {
   'use strict';
@@ -1409,6 +1409,76 @@
     "ja",
     "pt"
   ],
+  "/jetson_developtool_app_market": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_connect_device": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_device_management": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_flash_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_installation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_remote_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_skills": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/update_orin_nano_developer_kit_to_super_kit": [
     "cn",
     "en",
@@ -1487,6 +1557,13 @@
     "pt"
   ],
   "/rtl8852be_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -1676,6 +1753,13 @@
     "pt"
   ],
   "/ai_robotics_recomputer_rugged_j40_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_antenna_installation": [
     "cn",
     "en",
     "es",
@@ -5701,6 +5785,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_b601_rs_getting_started": [
     "cn",
     "en",
     "es",
@@ -11088,6 +11179,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_xvf3800_xiao_tensorflow": [
     "cn",
     "en",
@@ -15976,12 +16074,6 @@
   "/Raspberry_Pi": [
     "cn",
     "en",
-    "es",
-    "ja",
-    "pt"
-  ],
-  "/respeaker_xvf3800_ros2_voice_pipeline": [
-    "cn",
     "es",
     "ja",
     "pt"
