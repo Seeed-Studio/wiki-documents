@@ -20,8 +20,9 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/245.png" style={{width:600, height:'auto'}}/></div>
 
-:::tip Looking for the display side?
-This page focuses on **driving the onboard hardware peripherals** of the reTerminal E Series with Arduino. If you want to render text, graphics, or images on the ePaper screen instead, head over to **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)**.
+:::tip Other cookbooks in this series
+- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — rendering text, graphics, and images on the ePaper screen.
+- **[Arduino Cookbook: RTC, Low Power & Audio](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, and I2S microphone recording.
 :::
 
 ## Introduction
@@ -68,7 +69,7 @@ This cookbook applies to all four reTerminal E Series models. Pick whichever dev
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -2419,7 +2420,7 @@ After uploading, the ePaper may sit blank for the first few seconds while the dr
 
 ## Troubleshooting
 
-For Arduino IDE setup issues, USB driver problems, upload failures, or "ePaper display doesn't refresh" issues, see the **Troubleshooting** section of [Arduino Cookbook: ePaper Display](/reterminal_e10xx_with_arduino#troubleshooting).
+For Arduino IDE setup issues, USB driver problems, upload failures, or "ePaper display doesn't refresh" issues, see the **Troubleshooting** section of [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino#troubleshooting).
 
 ## Tech Support & Product Discussion
 

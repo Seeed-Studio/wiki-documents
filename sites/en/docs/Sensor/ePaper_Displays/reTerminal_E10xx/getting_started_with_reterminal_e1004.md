@@ -373,7 +373,6 @@ The refresh button is located either as the leftmost button on the lower front o
 
 - **Single Press**: Manually refreshes the display and checks for new content from the SenseCraft platform. The buzzer will beep once to confirm the action. This button is also commonly used to wake up the device. You can use this button to wake up a device when it has gone to sleep and a dashboard refresh command is usually not immediately available to the device.
 
-- **Long Press** (future functionality): Will activate voice input mode.
 
 ### Navigation Buttons
 
