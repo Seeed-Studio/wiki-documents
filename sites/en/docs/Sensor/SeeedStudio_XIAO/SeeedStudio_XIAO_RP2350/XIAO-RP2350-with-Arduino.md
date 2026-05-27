@@ -216,7 +216,7 @@ Please be careful not to short-circuit the positive and negative terminals and b
 
 ### Flash the firmware
 
-In the battery sampling circuit of the XIAO RP2350, a voltage sampling solution based on the SX1801CCR is adopted. A voltage divider circuit is formed by two 470 kΩ resistors, resulting in a voltage division ratio of 2. The program uses 3.3 V as the reference voltage, and the actual battery voltage can be calculated through the voltage restoration formula.
+<!-- In the battery sampling circuit of the XIAO RP2350, a voltage sampling solution based on the SX1801CCR is adopted. A voltage divider circuit is formed by two 470 kΩ resistors, resulting in a voltage division ratio of 2. The program uses 3.3 V as the reference voltage, and the actual battery voltage can be calculated through the voltage restoration formula.
 
 The following example uses a watchdog-reboot approach to simulate deep sleep since the Arduino IDE cannot easily integrate the pico-extras library required for true deep sleep.
 
@@ -357,13 +357,23 @@ void loop() {
 
 </details>
 <br/>
-Then you can upload the program.
+Then you can upload the program. -->
 
-Alternatively, you can use our pre-written firmware for verification and performance testing.
+You can use our pre-written firmware for verification and performance testing.
 
 Download [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), drag it into the file system.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
+
+:::note
+
+This UF2 firmware is compiled from a third-party source. For the firmware source code, please refer to: [pico-examples/powman/powman_timer](https://github.com/peterharperuk/pico-examples/tree/powman/powman/powman_timer)
+
+This firmware source code depends on the [pico-sdk](https://github.com/raspberrypi/pico-sdk). Before use, you need to download the relevant toolchain in a Linux environment following the steps in the pico-sdk README.
+
+Please note that due to the rapid updates of pico-sdk and the toolchain, you may encounter function parameter conflicts and other compilation errors (this example library is not maintained as an official Raspberry Pi library, and there may be version and environment gaps). If you only need to verify the low-power capability of XIAO RP2350, it is recommended to use the UF2 firmware directly for quick and convenient testing.
+
+:::
 
 ### Result
 
