@@ -16,6 +16,8 @@ url: https://wiki.seeedstudio.com/respeaker_flex_introduction/
 ---
 # Getting Started with reSpeaker Flex
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex-banner.jpg" alt="pir" width={800} height="auto" /></p>
+
 The reSpeaker Flex is a modular, split-architecture voice processing system built around the XMOS XVF3800 processor, designed specifically for robots and intelligent interaction terminals. Unlike conventional all-in-one mic arrays, the Flex separates the core processing board from the microphone array board the two connected via a flexible FPC ribbon cable allowing the array to be embedded at any physical position within a product enclosure while keeping the processing electronics elsewhere.
 The system supports two interchangeable microphone array configurations: a **circular 4-mic array** for omnidirectional 360° capture, and a **linear 4-mic array** for directional front-facing pickup with rear suppression. Both boards connect to the same core board through a standardized 24-pin FPC interface, and the system operates in either USB (UAC 2.0 plug-and-play) or I2S mode for embedded integration. An optional XIAO ESP32S3 module can be soldered onto the core board for wireless connectivity and expanded control.
 
@@ -650,6 +652,59 @@ python xvf_host.py DOA_VALUE
 
 Retrieves the current Direction of Arrival (DOA) value detected by the microphone array.
 
+## Troubleshooting
+
+### Does playback sound from speaker output not enough ?
+
+If the speaker output volume of the **reSpeaker Flex** is too low on Linux, you may need to adjust the **ALSA mixer levels** for the XVF3800 sound card. Follow the steps below to increase the output volume.
+
+**Step 1: Open ALSA Mixer**
+
+1. Open a terminal.
+2. Type the following command and press **Enter**:
+
+   ```bash
+   alsamixer
+   ```
+
+**Step 2: Select the XVF3800 Flex Sound Card**
+
+1. Press **F6** to open the sound card selection menu.
+2. Use the **up/down arrow keys** to highlight the **XVF3800 Flex** sound card.
+3. Press **Enter** to confirm the selection.
+
+**Step 3: Adjust the PCM-1 Volume**
+
+1. Use the **left/right arrow keys** to navigate to **PCM-1**.
+2. Use the **up arrow key** to increase the volume level up to **100%**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
+
+**Step 4: Save ALSA Settings**
+
+1. Press **ESC** to exit `alsamixer`.
+2. Before unplugging the reSpeaker Flex , run the following command to save your settings:
+
+```bash
+   sudo alsactl store
+   ```
+
+**Step 5: Additional Option (Using PulseAudio)**
+
+If you still cannot hear sound clearly after adjusting ALSA levels, try installing **PulseAudio Volume Control** for more detailed volume adjustments:
+
+```bash
+sudo apt install pavucontrol -y
+```
+
+You can then open **pavucontrol** and increase the output volume beyond 100% if needed.
+
+### Cannot use as sound devices in Windows after flashing firmware ?
+
+Open the start menu and type Device manager. Find  related reSpeaker Flex devices, right click them and select Uninstall devices. After that, restart the device (usb plug and unplugged) and Windows will re-install the right sound card driver for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
 
 ## Resources
 
@@ -658,6 +713,8 @@ Retrieves the current Direction of Arrival (DOA) value detected by the microphon
 [reSpeaker Flex XVF3800 Linear step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
 
 [reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+
+
 
 ## Tech Support & Product Discussion
 

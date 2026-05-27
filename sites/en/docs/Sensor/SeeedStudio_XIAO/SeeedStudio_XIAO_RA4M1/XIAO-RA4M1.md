@@ -65,31 +65,17 @@ The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up t
 | **Working Temperature** | -20°C~70°C |
 | **Dimensions** | 21×17.8 mm |
 
-### Hardware Overview
+## Hardware Overview
 
 Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Seeed Studio XIAO RA4M1.
 
-<!-- 硬件相关 -->
+### Front
 
-<!-- 引脚等的定义 -->
-<table>
- <tr>
-     <th>XIAO RA4M1 front indication diagram</th>
- </tr>
-    <tr>
-        <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-components.png" style={{width:380, height:'auto'}}/></div>
-        <br />
-    </tr>
-    <tr>
-        <th>XIAO RA4M1 Pin List</th>
-    </tr>
-    <tr>
-        <br />
-        <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO-RA4M1-pinout.png" style={{width:880, height:'auto'}}/></div>
-        <br />
-    </tr>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 ## **Pin Map**
 | XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          | Arduino Name |
