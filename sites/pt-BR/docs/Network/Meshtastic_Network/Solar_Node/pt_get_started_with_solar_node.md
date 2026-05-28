@@ -1,6 +1,6 @@
 ---
-description: Comece a usar o SenseCAP Solar Node para Meshtastic & LoRa
-title: Comece a usar o SenseCAP Solar Node
+description: Introdução ao SenseCAP Solar Node para Meshtastic e LoRa
+title: Introdução ao SenseCAP Solar Node
 keywords:
   - Meshtastic
   - Solar
@@ -12,31 +12,31 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-05-13'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-14'
 url: https://wiki.seeedstudio.com/pt-br/get_started_with_meshtastic_solar_node/
 ---
 
 :::danger note
-Quando o dispositivo estiver em qualquer um dos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ser inutilizado.
+Quando o dispositivo estiver em qualquer um dos estados abaixo, não reinicie nem desligue manualmente. Caso contrário, o dispositivo pode ficar inutilizável.
 1. Não concluir o processo de transmissão de mensagem
 2. Estar em configuração
 :::
 ## Introdução
 
-Antes da implantação formal, teste e configure o node primeiro.
+Antes da implantação formal, teste e configure primeiro o nó.
 
-### Gravar o firmware
+### Gravar firmware
 
 :::caution note
 Não use `NRF-OTA` para atualizar o firmware, pois isso pode fazer com que o dispositivo fique completamente sem resposta.
-Antes de gravar o firmware, execute primeiro a etapa de apagar a flash!
+Antes de gravar o firmware, execute primeiro a etapa de apagar a memória flash!
 :::
 
 Visite o [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecione `Seeed SenseCAP Solar Node` como o dispositivo de destino.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-#### Apagar a flash
+#### Apagar memória flash
 
 Clique no símbolo `trash`.
 
@@ -59,7 +59,7 @@ Escolha a versão de firmware desejada. Clique em `flash`.
 
 Baixe o arquivo UF2 e entre no modo DFU. Arraste o arquivo UF2 para a unidade DFU. O firmware deverá ser gravado após a cópia do arquivo e a reinicialização do dispositivo.
 
-### Instalar bateria e módulo GPS (Opcional)
+### Instalar bateria e módulo GPS (opcional)
 
 :::tip
 Quando precisar instalar ou substituir a bateria, use uma bateria 18650 (3,6 V) `button-top`.
@@ -84,7 +84,7 @@ A versão P1-Pro possui bateria e módulo GPS integrados. Para a versão P1, os 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
-Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d’água do dispositivo.
+Certifique-se de que a carcaça esteja corretamente montada e os parafusos bem apertados para manter a integridade à prova d'água do dispositivo.
 :::
 
 ### Ligar o dispositivo
@@ -96,10 +96,10 @@ O dispositivo precisa ser ativado conectando o cabo USB antes do primeiro uso. S
 </div>
 
 :::tip
-Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use carregador rápido.
+Se o dispositivo não responder quando você pressionar o botão, carregue-o primeiro. Não use um carregador rápido.
 :::
 
-### Conectar via app
+### Conectar via aplicativo
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -134,14 +134,14 @@ import TabItem from '@theme/TabItem';
 
 ### Conectar via site
 
-Se você quiser enviar mensagens de texto e se comunicar com outros nodes no cliente web, pode conectar o dispositivo ao [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) agora.
+Se você quiser enviar mensagens de texto e se comunicar com outros nós no cliente web, agora pode conectar o dispositivo ao [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0).
 
-  Etapa 1: Abra o site
+  Etapa 1: Abrir o site
 
-[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para ir ao site.
+[Clique aqui](https://client.meshtastic.org/messages/broadcast/0) para acessar o site.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Etapa 2: Adicione o novo dispositivo 
+  Etapa 2: Adicionar o novo dispositivo 
 
     Clique em "+ New Connection". 
 
@@ -191,12 +191,12 @@ Para começar a se comunicar pela malha, você deve definir sua região. Essa co
 Consulte [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) para uma lista mais abrangente.
 
 :::info
-**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto em uma base contínua de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
+**EU_868** deve obedecer a uma limitação de ciclo de trabalho horário de 10%, calculada a cada minuto com base em uma janela móvel de 1 hora. Seu dispositivo deixará de transmitir se você atingir esse limite, até que seja permitido novamente.
 :::
 
 Agora que você definiu a região LoRa no seu dispositivo, pode continuar configurando quaisquer [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para atender às suas necessidades.
 
-### Configurar o GPS
+### Configurar GPS
 
 Ative o GPS. Você pode ajustar o intervalo de atualização e o intervalo de transmissão para obter informações de localização mais atualizadas.
 
@@ -211,7 +211,7 @@ No iOS, ative `Accurate Location`. Caso contrário, o posicionamento pode ser im
 |Ação do botão|Descrição|
 |--|--|
 |Pressione PWR por 3s|Ligar|
-|Pressione PWR duas vezes|Atualizar informações do node/localização|
+|Pressione PWR duas vezes|Atualizar informações do nó/localização|
 |Pressione PWR três vezes|Ligar/desligar o GPS|
 |Pressione PWR por 5s|Desligar|
 |Pressione RST duas vezes|Entrar manualmente em DFU|
@@ -219,7 +219,7 @@ No iOS, ative `Accurate Location`. Caso contrário, o posicionamento pode ser im
 ## Instalação
 
 :::danger note
-Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel na posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa corretamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
+Como o dispositivo será usado ao ar livre por longos períodos, evite instalar o painel em posição horizontal. Recomenda-se uma instalação inclinada ou diagonal para evitar acúmulo de água. Além disso, certifique-se de que todos os parafusos estejam bem apertados e a tampa devidamente instalada. Para maior proteção contra água, você também pode considerar aplicar medidas extras de vedação.
 :::
 
 - **Lista de peças**
@@ -339,7 +339,7 @@ Se você precisar de uma antena com ganho mais alto, recomendamos a antena [860-
 
 - Motivo 
 
-Isso geralmente é causado por uma falha ao gravar o firmware. Ao gravar o firmware, mantenha uma conexão estável.
+Isso geralmente é causado por uma falha na gravação do firmware. Ao gravar o firmware, mantenha uma conexão estável.
 
 - Solução de problemas
 
@@ -383,7 +383,7 @@ python --version
 python -m pip --version
 ```
 
-Em seguida, "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
+Então "Python xxx" e "pip xxx" devem aparecer. Se não aparecerem, tente instalar o Python novamente.
 
 <Tabs>
 <TabItem value="pypi" label="Instalando a partir do PyPI">
@@ -414,7 +414,7 @@ Para usuários do Windows, talvez seja necessário adicionar o caminho manualmen
 
 <TabItem value="sou" label="Instalando a partir do código-fonte">
 
-Use este método se você tiver problemas para instalar com o PyPI ou quiser modificar a ferramenta. Primeiro, clone este repositório e acesse a pasta dele.
+Use este método se você tiver problemas ao instalar com o PyPI ou quiser modificar a ferramenta. Primeiro, clone este repositório e acesse a pasta dele.
 
 ```
 git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
@@ -430,7 +430,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a flag `--user`:
+Se você receber erros de permissão ao executar `pip3 install`, seu `pip3` é mais antigo ou está configurado para tentar instalar nos diretórios do sistema. Nesse caso, use a opção `--user`:
 
 ```
 pip3 install -r --user requirements.txt
@@ -500,10 +500,10 @@ Quando você tiver concluído as etapas acima, siga esta [etapa](https://wiki.se
 
  #### Descrição
 
- - Após o dispositivo ligar, ele desliga ou reinicia automaticamente depois de um tempo.
+ - Depois que o dispositivo é ligado, ele desliga ou reinicia automaticamente após um tempo.
  - O log da porta serial é executado por um tempo e depois para.
 
- Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo enquanto ele está em um dos seguintes estados: sem concluir o processo de transmissão de mensagens ou enquanto está sendo configurado.
+ Isso pode ser causado por reiniciar ou desligar manualmente e à força o dispositivo enquanto ele está em um dos seguintes estados: sem concluir o processo de transmissão de mensagens ou estando em configuração.
 
  #### Solução de problemas
 
@@ -519,73 +519,35 @@ Se você quiser restaurar as configurações padrão, pode realizar uma restaura
 - Clique no botão `Factory Reset` no aplicativo. O dispositivo será reiniciado automaticamente com a configuração de fábrica.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Redefinição do NodeDB
+### Falha em mensagem direta
 
-NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual, incluindo:
+#### Redefinir NodeDB
 
-- **ID do nó**
-- **Nome de usuário**
-- **Informações de localização**
-- **Informações de sinal (SNR)**
-- **Horário da última visualização**
+NodeDB é o banco de dados local que armazena informações sobre os nós descobertos na rede Mesh atual. Se você encontrar uma situação em que não consegue se comunicar com um determinado nó, isso pode ser porque o seu NodeDB armazenou informações desatualizadas para esse nó. Você precisará atualizá-lo.
 
-**Quando redefinir**
-
-Redefina o NodeDB quando:
-
-- A lista de nós contiver entradas desatualizadas, duplicadas ou inválidas.
-- Você se mover para um ambiente Mesh diferente e quiser redescobrir os nós próximos.
-- As informações do nó no aplicativo parecerem incorretas ou incompletas.
-
-:::danger
-Redefinir o NodeDB apenas limpa o banco de dados de nós armazenado no dispositivo. Isso **não executa uma restauração de fábrica** e **não remove a configuração básica do dispositivo**.
-:::
-
-**Redefinir pelo aplicativo**
-
-1. Abra o aplicativo e conecte-se ao dispositivo de destino.
-2. Vá para **Settings**.
-3. Toque em **Device**.
-4. Role até a parte inferior da página **Device Config** e encontre **Reset NodeDB**.
-5. Toque nela e confirme a ação.
-
-**Caminho no aplicativo**
-
-`Settings > Device > Reset NodeDB`
-
-**Telas de exemplo**
-
-Etapa 1: Abra **Device** na página **Settings**.
+Abra o aplicativo e conecte-se ao dispositivo de destino. Vá para **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-Etapa 2: Toque em `Reset NodeDB` na página **Device Config**.
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-Observe a diferença entre as seguintes opções:
+#### Trocar informações de usuário
 
-- **Reset NodeDB**: Apenas limpa o banco de dados de nós.
-- **Factory Reset**: Restaura o dispositivo para as configurações de fábrica e remove dados de configuração adicionais.
+Cada nó enviará periodicamente suas próprias informações de nó, permitindo que outros nós na malha o "vejam" e o "reconheçam". Dois nós precisam trocar suas informações de nó entre si para poder se comunicar um com o outro. Se você não conseguir enviar ou receber mensagens privadas com outro nó na lista, pode solicitá-los manualmente a trocar informações no aplicativo.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### Regenerar chave privada
+
+Dois nós precisam conhecer a chave privada um do outro para poder se comunicar entre si. Se um nó continuar falhando na transmissão de mensagens privadas, tente regenerar a chave privada para ele.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+Reinicie o dispositivo com falha para que a configuração tenha efeito.
+
+:::note
+Após a regeneração da chave, o outro dispositivo precisa se reconectar ao nó. Portanto, é melhor excluir o nó na lista de nós do outro dispositivo.
 :::
-
-**O que acontece após a redefinição**
-
-Depois que **Reset NodeDB** for executado, o dispositivo limpa a lista de nós atualmente armazenada. À medida que o dispositivo continua em funcionamento, ele redescobrirá e registrará novamente os nós próximos.
-
-Você pode observar o seguinte:
-
-- A lista de nós pode ficar temporariamente vazia ou menor.
-- Os nós reaparecerão gradualmente à medida que o dispositivo continuar operando.
-- Os registros históricos de nós armazenados anteriormente não estarão mais disponíveis.
-
-**Observações**
-
-- Antes de redefinir, certifique-se de que o problema esteja realmente relacionado a uma lista de nós anormal.
-- Se o problema for apenas um atraso na exibição dos nós, aguarde um pouco primeiro para ver se ele se recupera automaticamente.
-- Se o problema permanecer após redefinir o NodeDB, continue solucionando a configuração do dispositivo ou outras possíveis causas.
-- Use **Factory Reset** com cuidado para evitar remover acidentalmente a configuração do dispositivo.
 
 ### Consumo de energia
 
@@ -596,7 +558,7 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 |Descrição|Consumo|
 |---|---|
-|Corrente de trabalho do GPS_LED|1,02 mA|
+|Corrente de operação do GPS_LED|1,02 mA|
 |Alimentado, mas não ativado|56,195 μA|
 |Alimentado e ativado|611 μA|
 
@@ -621,7 +583,7 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 - **SNR** reflete a qualidade do link de comunicação. Um dispositivo normal geralmente opera acima de -7 dB. Um dispositivo com SNR inferior a -10 dB indica desempenho ruim.
 
-- **RSSI** é determinado em conjunto pelo dispositivo e seu ambiente ao redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
+- **RSSI** é determinado em conjunto pelo dispositivo e pelo ambiente ao seu redor. Um dispositivo normal geralmente opera acima de -110 dBm. Um dispositivo com RSSI inferior a -115 dBm é considerado como tendo desempenho ruim.
 
       Para obter o melhor desempenho de sinal, use o dispositivo em uma área aberta, desobstruída e com interferência mínima.
 
@@ -631,5 +593,5 @@ Os valores abaixo são apenas para referência; o consumo real pode variar com b
 
 A corrente máxima de carregamento do Xiao nRF-52840 Plus é 200 mA. O chip de gerenciamento de carregamento CN3165 suporta 0,99 A. Portanto, a corrente máxima de carregamento é 1 A.
 
-## Recurso
+## Recursos
 - [Tabela de cálculo da vida útil da bateria do Solar Node](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
