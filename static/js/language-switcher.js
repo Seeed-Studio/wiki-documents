@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-28 10:25:27 (北京时间)
-// 多语言页面: 2301 个
+// 生成时间: 2026-05-28 16:55:08 (北京时间)
+// 多语言页面: 2303 个
 
 (function() {
   'use strict';
@@ -10942,6 +10942,20 @@
     "pt"
   ],
   "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_udp_streaming": [
     "cn",
     "en",
     "es",
