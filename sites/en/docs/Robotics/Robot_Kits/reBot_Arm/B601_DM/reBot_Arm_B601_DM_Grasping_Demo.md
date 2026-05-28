@@ -12,12 +12,12 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-20
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-20'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -26,6 +26,13 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -43,10 +50,13 @@ url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_grasping_demo/
 
 YOLO is a widely used family of real-time object detection models that can localize and classify targets in a single forward pass. This tutorial uses YOLO together with the Orbbec Gemini 2 depth camera to build a working desktop visual grasping demo for the reBot Arm B601-DM, covering environment setup, camera integration, hand-eye calibration, and grasping validation.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+<p align="center">
+  <img src="/img/rebot_arm_b601_dm_grasping_demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
+</p>
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/6dqKZNh_D7k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Project Features
 
@@ -252,6 +262,13 @@ cd graspnet-baseline
 # Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
 pip install open3d tensorboard Pillow tqdm
 
+# Configure CUDA build paths before building the local operators.
+export CUDA_HOME=$CONDA_PREFIX
+export TORCH_CUDA_ARCH_LIST="12.0"
+export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+
 # Build CUDA operators
 cd pointnet2
 pip install . --no-build-isolation
@@ -263,14 +280,15 @@ cd ..
 git clone https://github.com/graspnet/graspnetAPI.git
 cd graspnetAPI
 sed -i "s/'sklearn'/'scikit-learn'/" setup.py
-sed -i "s/'numpy==1.23.4'/'numpy>=1.24.0'/" setup.py
 pip install .
 cd ../../..
 ```
 
 ***Note: If you follow the official graspnet-baseline repository documentation and use `python setup.py install`, CUDA / PyTorch related errors may occur. We recommend using `pip install . --no-build-isolation` so the extension is built against the PyTorch and CUDA configuration already installed in the active conda environment.***
 
-***In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` commands replace it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. They also adjust `numpy==1.23.4` to `numpy>=1.24.0`, preventing GraspNet API installation from downgrading NumPy and conflicting with the robotic arm control dependencies.***
+***If building fails with `fatal error: cusparse.h: No such file or directory`, run `find $CONDA_PREFIX -name cusparse.h` and make sure the directory that contains `cusparse.h` is included in `CPATH` / `CPLUS_INCLUDE_PATH`. If you installed CUDA headers from conda `cuda-toolkit`, the include path is usually `$CONDA_PREFIX/targets/x86_64-linux/include` instead of the pip `nvidia/cu13/include` path shown above.***
+
+***In addition, older GraspNet API dependencies may still use the deprecated `sklearn` package name. The `sed` command replaces it with the currently recommended `scikit-learn` package name to avoid `The 'sklearn' PyPI package is deprecated` during installation. Unless you also upgrade the older GraspNet API dependencies, keep its `numpy==1.23.4` constraint because `transforms3d==0.3.1` still uses old NumPy aliases such as `np.float`.***
 
 Refer to the official graspnet-baseline repository to download the official GraspNet pretrained weight, then place `checkpoint-rs.tar` at:
 
