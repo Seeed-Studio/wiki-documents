@@ -125,7 +125,7 @@ void setupI2SInput() {
   i2s_config.pin_ws = 7;
   i2s_config.pin_data = 44;
   i2s_config.pin_data_rx = 43;
-  i2s_config.is_master = fasle;
+  i2s_config.is_master = false;
   
   i2s_in.begin(i2s_config);
   Serial.println("I2S input started.");
