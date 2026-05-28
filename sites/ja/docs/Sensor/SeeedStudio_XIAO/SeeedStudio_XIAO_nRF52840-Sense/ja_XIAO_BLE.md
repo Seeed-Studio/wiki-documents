@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
-  date: 2024-11-28T03:15:24.000Z
+  date: 2025-04-17T00:00:00.000Z
   author: Clara
 createdAt: '2023-01-16'
-updatedAt: '2026-03-31'
+updatedAt: '2026-04-23'
 url: https://wiki.seeedstudio.com/ja/XIAO_BLE/
 ---
 import Tabs from '@theme/Tabs';
@@ -124,13 +124,13 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   </table>
 </div>
 
-Seeed Studio XIAO ファミリで最初のワイヤレス製品である **Seeed Studio XIAO nRF52840** は、**Bluetooth 5.0** 接続機能を統合した強力な **Nordic nRF52840 MCU** を搭載しています。同時に、**小型で精巧なフォームファクタ** を備えており、ウェアラブルデバイスや IoT プロジェクトに使用できます。**片面実装対応の表面実装設計** とオンボードの **Bluetooth アンテナ** により、IoT プロジェクトを迅速に展開することが大幅に容易になります。
+Seeed Studio XIAO ファミリにおける最初のワイヤレス製品として、**Seeed Studio XIAO nRF52840** は強力な **Nordic nRF52840 MCU** を搭載し、**Bluetooth 5.0** 接続機能を統合しています。同時に、**小型で精巧なフォームファクタ** を備えており、ウェアラブルデバイスや IoT プロジェクトに使用できます。**片面実装可能なサーフェスマウント設計** とオンボードの **Bluetooth アンテナ** により、IoT プロジェクトを迅速に展開することが大幅に容易になります。
 
-さらに、このボードには上位版である **Seeed Studio XIAO nRF52840 Sense** があります。これはオンボードセンサを 2 つ追加で統合しています。1 つは **パルス密度変調 (PDM) デジタルマイク** で、リアルタイムにオーディオデータを取得できるため、音声認識用途に使用できます。もう 1 つは **6 軸慣性計測ユニット (IMU)** で、ジェスチャ認識のような TinyML プロジェクトで非常に有用です。これらのオンボードセンサにより、ボードが超小型でありながらユーザに大きな利便性を提供します。
+さらに、このボードには上位版である **Seeed Studio XIAO nRF52840 Sense** があります。これは 2 つの追加オンボードセンサを統合しています。1 つは **パルス密度変調 (PDM) デジタルマイク** で、リアルタイムに音声データを取得できるため、音声認識に利用できます。もう 1 つは **6 軸慣性計測ユニット (IMU)** で、ジェスチャ認識のような TinyML プロジェクトで非常に有用です。これらのオンボードセンサにより、ボードが超小型でありながらユーザに大きな利便性を提供します。
 
-新たにアップグレードされた **XIAO nRF52840 Plus および XIAO nRF52840 Sense Plus** は、機能性と使いやすさが大幅に向上しています。多機能ピンの数は **20** 本に増加し、より複雑なプロジェクトをサポートするために **I2S** と **SPI** リソースが追加されました。IoT やスマートカードアプリケーションへの統合を容易にするために **NFC ピン** が引き出され、はんだ付けのしやすさを高めるために **BAT ピン** の位置が変更されました。その結果、よりユーザフレンドリなハードウェア体験を実現しています。
+新たにアップグレードされた **XIAO nRF52840 Plus と XIAO nRF52840 Sense Plus** は、機能性と使いやすさが大幅に向上しています。多機能ピンの数は **20** に増加し、より複雑なプロジェクトをサポートするために **I2S** と **SPI** リソースが追加されました。IoT やスマートカードアプリケーションへの統合を容易にするため **NFC ピン** が引き出され、さらに **BAT ピン** ははんだ付けのしやすさを高める位置に再配置され、よりユーザフレンドリなハードウェア体験を実現しています。
 
-Seeed Studio XIAO RP2040 と比較すると、Seeed Studio XIAO nRF52840 は **より豊富なインターフェース** を備えています。まず注目すべき点は、ボード上の **近距離無線通信 (NFC) インターフェース** が使用可能であることです。次に、Type-C インターフェースの側面には小型の **リセットボタン** があります。反対側には、バッテリ接続時の充電状態を示す **チャージ LED** とともに **3-in-one LED (ユーザ LED)** が配置されています。**11 本のデジタル I/O** は **PWM ピン** として使用でき、**6 本のアナログ I/O** は **ADC ピン** として使用できます。**UART、I2C、SPI** といった一般的な 3 種類のシリアルインターフェースすべてをサポートします。Seeed Studio XIAO RP2040 と同様に、**オンボード 2 MB フラッシュ** を搭載しており、**Arduino、MicroPython、CircuitPython などのプログラミング言語** でプログラムすることができます。
+Seeed Studio XIAO RP2040 と比較すると、Seeed Studio XIAO nRF52840 は **より豊富なインターフェース** を備えています。まず注目すべき点は、ボード上の **近距離無線通信 (NFC) インターフェース** が使用可能であることです。次に、Type-C インターフェースの側面には小型の **リセットボタン** があります。反対側には、バッテリ接続時の充電状態を示す **チャージ LED** とともに **3-in-one LED (ユーザ LED)** が配置されています。**11 個のデジタル I/O** は **PWM ピン** として使用でき、**6 個のアナログ I/O** は **ADC ピン** として使用できます。**UART、I2C、SPI** といった一般的な 3 種類すべてのシリアルインターフェースをサポートします。Seeed Studio XIAO RP2040 と同様に、**オンボード 2 MB フラッシュ** を搭載しており、**Arduino、MicroPython、CircuitPython などのプログラミング言語** でプログラムすることができます。
 
 Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換性があります。
 
@@ -140,15 +140,15 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
     </a>
 </div>
 
-## 特徴
+## 特長
 
 - 強力なワイヤレス機能：オンボードアンテナ付き Bluetooth 5.0
 - 強力な CPU：Nordic nRF52840、FPU 搭載 ARM® Cortex®-M4 32 ビットプロセッサ、64 MHz
 - 超低消費電力：スタンバイ時消費電流 5μA 未満
 - バッテリ充電チップ：リチウムバッテリの充放電管理をサポート
 - オンボード 2 MB フラッシュ
-- オンボード PDM マイク (Seeed Studio XIAO nRF52840 Sense のみ)
-- オンボード 6 軸 LSM6DS3TR-C IMU (Seeed Studio XIAO nRF52840 Sense のみ)
+- オンボード PDM マイク（Seeed Studio XIAO nRF52840 Sense のみ）
+- オンボード 6 軸 LSM6DS3TR-C IMU（Seeed Studio XIAO nRF52840 Sense のみ）
 - 超小型サイズ：21 x 17.8mm、ウェアラブルデバイス向け Seeed Studio XIAO シリーズのクラシックなフォームファクタ
 - 豊富なインターフェース：XIAO nRF52840 (Sense) では 1xUART、1xI2C、1xSPI、1xNFC、1xSWD、11xGPIO(PWM)、6xADC；XIAO nRF52840 (Sense) Plus では 2xUART、1xI2C、2xSPI、1xI2S、1xNFC、1xSWD、18xGPIO(PWM)、6xADC
 - 片面実装コンポーネント、表面実装設計
@@ -200,7 +200,7 @@ Bluetooth Mesh/NFC</td>
   </tr>
   <tr>
       <th>オンボード LED</th>
-      <td colspan="4" align="center">3-in-one LED/ チャージ LED</td>
+      <td colspan="4" align="center">3-in-one LED/ Charge LED</td>
   </tr>
   <tr>
       <th>バッテリ充電チップ</th>
@@ -216,147 +216,206 @@ Bluetooth Mesh/NFC</td>
 ## ハードウェア概要
 
 <Tabs>
-<TabItem  value="52540(Sense)" label="XIAO nRF52840/XIAO nRF52840 Sense" default>
+<TabItem value="nRF52840" label="XIAO nRF52840" default>
 
-<table align="center">
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense 表面インジケータ図</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/front-pinout-4.jpg" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense 裏面インジケータ図</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/back-pinout-5.jpg" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense ピン一覧</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png" style={{width:1000, height:'auto'}}/></div></td>
-  </tr>
-</table>
+### XIAO nRF52840 表面
 
- **ピンマップ**
-| XIAO ピン                 | 機能         | チップピン                          | 説明                          |Arduino 名称 |     
-| :---------------------: | :-------------: | :-------:                      | :-------------------------------------- | :-------:   |
-| 5V                      | VBUS             |                               | 電源入力/出力                       |           |
-| GND                     |                  |                               |                                          |           |
-| 3V3                     | 3V3_OUT          |                              | 電源出力                             |            |
-| D0                      | アナログ          | P0.02                        | GPIO, AIN0                                |       0      |
-| D1                      | アナログ          | P0.03                        | GPIO, AIN1                               |       1       |
-| D2                      | アナログ          | P0.28                        | GPIO, AIN4                                |        2     |
-| D3                      | アナログ          | P0.29                        | GPIO, AIN5                               |       3     |
-| D4                      | アナログ,SDA       | P0.04                         | GPIO, I2C データ, AIN2                      |     4      |
-| D5                      | アナログ,SCL       | P0.05                         | GPIO, I2C クロック, AIN3                     |     5       |
-| D6                      | TX               | P1.11                         | GPIO, UART 送信                      |     7/6        |
-| D7                      | RX               | P1.12                         | GPIO, UART 受信                       |     8/7       |
-| D8                      | SPI_SCK          | P1.13                         | GPIO, SPI クロック                          |      9/8    |
-| D9                      | SPI_MISO         | P1.14                         | GPIO, SPI データ                           |     10/9     |
-| D10                     | SPI_MOSI         | P1.15                         | GPIO, SPI データ                           |       11/10   |
-| NFC1                    |                  | P0.09                         | NFC                                      |          |
-| NFC2                    |                  | P0.10                         | NFC                                      |          |
-| Reset                   |                  | P0.18                         | リセット                                    |          |
-| ADC_BAT                 |                  | P0.14                         | BAT 電圧値の読み取り               |          |
-| 6 DOF IMU_PWR           |                  | P1.08                         | 6D モジュールの電源スイッチ            |          |
-| 6 DOF IMU__INT1         |                  | P0.11                         | 6D モジュールの割り込み信号ピン    |          |
-| PDM Microphone_DATA     |                  | P0.16                         | PDM オーディオデータ入力ピン                 |          |
-| PDM Microphone_CLK      |                  | P1.00                         | PDM オーディオクロック出力ピン               |          |
-| RF Switch Port Select   |                  | P2.05                         | オンボードアンテナの切り替え                   |          |
-| RF Switch Power         |                  | P2.03                         | 電源                                    |          |
-| CHARGE_LED              |                  | P0.17                         | CHG-LED_Red                              |          |
-| USER_LED_R              |                  | P0.26                         | ユーザ制御の赤色 RGB LED ピン          |     11     |
-| USER_LED_B              |                  | P0.06                         | ユーザ制御の青色 RGB LED ピン         |     13/12     |
-| USER_LED_G              |                  | P0.30                         | ユーザ制御の緑色 RGB LED ピン        |      12/13    |
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
- </TabItem>
- <TabItem value="52840Plus" label="XIAO nRF52840 Plus/XIAO nRF52840 Sense Plus" default>
+### XIAO nRF52840 裏面
 
- <table align="center">
-  <tr>
-    <th>XIAO nRF52840 Plus 表面インジケータ図</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_front.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840 Plus 裏面インジケータ図</th>
-  </tr>
-    <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_back.png" style={{width:700, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-    <th>XIAO nRF52840 Plus ピン一覧</th>
-  </tr>
-  <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_pinout.png" style={{width:1000, height:'auto'}}/></div></td>
-  </tr>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
- </table>
+**ピンマップ**
 
-| XIAO ピン               | 機能                 | チップピン | 代替機能              | 説明                                       |Arduino 名称 |   
-| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |:-------:   |
-| 5V                      | VBUS                 |           |                    | 電源入力/出力                              |       |
-| GND                     |                      |           |                    |                                          |       |
-| 3V3                     | 3V3_OUT              |           |                    | 電源出力                                   |       |
-| D0                      | アナログ             | P0.02     |                    | GPIO、ADC                                |    0      |
-| D1                      | アナログ             | P0.03     |                    | GPIO、ADC                                |    1      |
-| D2                      | アナログ             | P0.28     |                    | GPIO、ADC                                |    2      |
-| D3                      | アナログ             | P0.29     |                    | GPIO、ADC                                |    3      |
-| D4                      | アナログ、SDA        | P0.04     |                    | GPIO、I2C データ、ADC                     |    4      |
-| D5                      | アナログ、SCL        | P0.05     |                    | GPIO、I2C クロック、ADC                   |    5      |
-| D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                           | 7/6        |
-| D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                           | 8/7       |
-| D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                        |  9/8    |
-| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                          | 10/9     |
-| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                          | 11/10   |
-| D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                           |      |
-| D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                           |      |
-| D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                           |      |
-| D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                      |      |
-| D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                      |      |
-| D16                     | BAT                  | P0.31     |                    | GPIO                                     |      |
-| D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                |      |
-| D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                |      |
-| D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                |      |
-| ADC_BAT                 |                      | P0.14     |                    | BAT 電圧値の読み取り                      |      |
-| 6 DOF IMU_PWR           |                      | P1.08     |                    | 6D モジュールの電源スイッチ               |      |
-| 6 DOF IMU__INT1         |                      | P0.11     |                    | 6D モジュールの割り込み信号ピン           |      |
-| PDM Microphone_DATA     |                      | P0.16     |                    | PDM オーディオデータ入力ピン              |      |
-| PDM Microphone_CLK      |                      | P1.00     |                    | PDM オーディオクロック出力ピン            |      |
-| Reset                   |                      | P0.18     |                    | リセット                                   |      |
-| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え              |      |
-| RF Switch Power         |                      | P2.03     |                    | 電源                                      |      |
-| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |      |
-| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン           | 11     |
-| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン           | 13/12     |
-| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン           |  12/13    |
+| XIAO ピン               | 機能             | チップピン      | 説明                                                | Arduino 名   |
+| :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
+| 5V                      | VBUS             |               | 電源入力/出力                                       |              |
+| GND                     |                  |               |                                                      |              |
+| 3V3                     | 3V3_OUT          |               | 電源出力                                            |              |
+| D0                      | アナログ         | P0.02         | GPIO, AIN0                                           | 0            |
+| D1                      | アナログ         | P0.03         | GPIO, AIN1                                           | 1            |
+| D2                      | アナログ         | P0.28         | GPIO, AIN4                                           | 2            |
+| D3                      | アナログ         | P0.29         | GPIO, AIN5                                           | 3            |
+| D4                      | アナログ, SDA    | P0.04         | GPIO, I2C データ, AIN2                               | 4            |
+| D5                      | アナログ, SCL    | P0.05         | GPIO, I2C クロック, AIN3                             | 5            |
+| D6                      | TX               | P1.11         | GPIO, UART 送信                                      | 7/6          |
+| D7                      | RX               | P1.12         | GPIO, UART 受信                                      | 8/7          |
+| D8                      | SPI_SCK          | P1.13         | GPIO, SPI クロック                                   | 9/8          |
+| D9                      | SPI_MISO         | P1.14         | GPIO, SPI データ                                     | 10/9         |
+| D10                     | SPI_MOSI         | P1.15         | GPIO, SPI データ                                     | 11/10        |
+| NFC1                    |                  | P0.09         | NFC                                                  |              |
+| NFC2                    |                  | P0.10         | NFC                                                  |              |
+| Reset                   |                  | P0.18         | リセット                                             |              |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | バッテリ電圧読み取り用イネーブル制御                |              |
+| RF Switch Port Select   |                  | P2.05         | オンボードアンテナの切り替え                        |              |
+| RF Switch Power         |                  | P2.03         | 電源                                                 |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
+| USER_LED_R              |                  | P0.26         | ユーザ制御の赤色 RGB LED ピン                        | 11           |
+| USER_LED_B              |                  | P0.06         | ユーザ制御の青色 RGB LED ピン                        | 13/12        |
+| USER_LED_G              |                  | P0.30         | ユーザ制御の緑色 RGB LED ピン                        | 12/13        |
 
 </TabItem>
+<TabItem value="nRF52840Plus" label="XIAO nRF52840 Plus">
 
+### XIAO nRF52840 Plus 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Plus 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**ピンマップ**
+
+| XIAO ピン               | 機能                 | チップピン | 代替機能              | 説明                                       | Arduino 名  |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
+| 5V                      | VBUS                 |           |                    | 電源入力/出力                              |              |
+| GND                     |                      |           |                    |                                          |              |
+| 3V3                     | 3V3_OUT              |           |                    | 電源出力                                   |              |
+| D0                      | アナログ             | P0.02     |                    | GPIO、ADC                                | 0            |
+| D1                      | アナログ             | P0.03     |                    | GPIO、ADC                                | 1            |
+| D2                      | アナログ             | P0.28     |                    | GPIO、ADC                                | 2            |
+| D3                      | アナログ             | P0.29     |                    | GPIO、ADC                                | 3            |
+| D4                      | アナログ、SDA        | P0.04     |                    | GPIO、I2C データ、ADC                     | 4            |
+| D5                      | アナログ、SCL        | P0.05     |                    | GPIO、I2C クロック、ADC                   | 5            |
+| D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                           | 7/6          |
+| D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                           | 8/7          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                        | 9/8          |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                          | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                          | 11/10        |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                           |              |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                           |              |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                           |              |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                      |              |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                      |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | バッテリー電圧 ADC 読み取りピン           |              |
+| D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                |              |
+| D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                |              |
+| D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリー電圧読み取り用の有効化制御       |              |
+| Reset                   |                      | P0.18     |                    | リセット                                   |              |
+| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え               |              |
+| RF Switch Power         |                      | P2.03     |                    | 電源                                       |              |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
+| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン            | 11           |
+| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン            | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン            | 12/13        |
+
+</TabItem>
+<TabItem value="nRF52840Sense" label="XIAO nRF52840 Sense">
+
+### XIAO nRF52840 Sense 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Sense 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**ピンマップ**
+
+| XIAO ピン               | 機能             | チップピン      | 説明                                                 | Arduino 名  |
+| :---------------------: | :-------------: | :-------:     | :-------------------------------------------------- | :-------:    |
+| 5V                      | VBUS             |               | 電源入力/出力                                        |              |
+| GND                     |                  |               |                                                      |              |
+| 3V3                     | 3V3_OUT          |               | 電源出力                                             |              |
+| D0                      | アナログ          | P0.02         | GPIO、AIN0                                           | 0            |
+| D1                      | アナログ          | P0.03         | GPIO、AIN1                                           | 1            |
+| D2                      | アナログ          | P0.28         | GPIO、AIN4                                           | 2            |
+| D3                      | アナログ          | P0.29         | GPIO、AIN5                                           | 3            |
+| D4                      | アナログ、SDA     | P0.04         | GPIO、I2C データ、AIN2                               | 4            |
+| D5                      | アナログ、SCL     | P0.05         | GPIO、I2C クロック、AIN3                             | 5            |
+| D6                      | TX               | P1.11         | GPIO、UART 送信                                      | 7/6          |
+| D7                      | RX               | P1.12         | GPIO、UART 受信                                      | 8/7          |
+| D8                      | SPI_SCK          | P1.13         | GPIO、SPI クロック                                   | 9/8          |
+| D9                      | SPI_MISO         | P1.14         | GPIO、SPI データ                                     | 10/9         |
+| D10                     | SPI_MOSI         | P1.15         | GPIO、SPI データ                                     | 11/10        |
+| NFC1                    |                  | P0.09         | NFC                                                  |              |
+| NFC2                    |                  | P0.10         | NFC                                                  |              |
+| Reset                   |                  | P0.18         | リセット                                             |              |
+| ADC_BAT                 | READ_BAT_ENABLE  | P0.14         | バッテリー電圧読み取り用の有効化制御                 |              |
+| 6 DOF IMU_PWR           |                  | P1.08         | 6D モジュールの電源スイッチ                          |              |
+| 6 DOF IMU__INT1         |                  | P0.11         | 6D モジュールの割り込み信号ピン                      |              |
+| PDM Microphone_DATA     |                  | P0.16         | PDM オーディオデータ入力ピン                         |              |
+| PDM Microphone_CLK      |                  | P1.00         | PDM オーディオクロック出力ピン                       |              |
+| RF Switch Port Select   |                  | P2.05         | オンボードアンテナの切り替え                         |              |
+| RF Switch Power         |                  | P2.03         | 電源                                                 |              |
+| CHARGE_LED              |                  | P0.17         | CHG-LED_Red                                          |              |
+| USER_LED_R              |                  | P0.26         | ユーザー制御の赤色 RGB LED ピン                      | 11           |
+| USER_LED_B              |                  | P0.06         | ユーザー制御の青色 RGB LED ピン                      | 13/12        |
+| USER_LED_G              |                  | P0.30         | ユーザー制御の緑色 RGB LED ピン                      | 12/13        |
+
+</TabItem>
+<TabItem value="nRF52840SensePlus" label="XIAO nRF52840 Sense Plus">
+
+### XIAO nRF52840 Sense Plus 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF52840 Sense Plus 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_Sense_Plus_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+**ピンマップ**
+
+| XIAO ピン                 | 機能                 | チップピン | 代替機能              | 説明                                       | Arduino 名  |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- | :-------:    |
+| 5V                      | VBUS                 |           |                    | 電源入力/出力                              |              |
+| GND                     |                      |           |                    |                                          |              |
+| 3V3                     | 3V3_OUT              |           |                    | 電源出力                                   |              |
+| D0                      | アナログ              | P0.02     |                    | GPIO、ADC                                | 0            |
+| D1                      | アナログ              | P0.03     |                    | GPIO、ADC                                | 1            |
+| D2                      | アナログ              | P0.28     |                    | GPIO、ADC                                | 2            |
+| D3                      | アナログ              | P0.29     |                    | GPIO、ADC                                | 3            |
+| D4                      | アナログ、SDA         | P0.04     |                    | GPIO、I2C データ、ADC                     | 4            |
+| D5                      | アナログ、SCL         | P0.05     |                    | GPIO、I2C クロック、ADC                   | 5            |
+| D6                      | TX                   | P1.11     |                    | GPIO、UART 送信                           | 7/6          |
+| D7                      | RX                   | P1.12     |                    | GPIO、UART 受信                           | 8/7          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO、SPI クロック                        | 9/8          |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO、SPI データ                          | 10/9         |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO、SPI データ                          | 11/10        |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO、I2S、ADC                           |              |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO、I2S、ADC                           |              |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO、I2S、ADC                           |              |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO、UART 受信、ADC                      |              |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO、UART 送信、ADC                      |              |
+| D16                     | AIN7_BAT             | P0.31     |                    | バッテリー電圧 ADC 読み取りピン           |              |
+| D17                     | SCK1                 | P1.03     |                    | GPIO、SPI                                |              |
+| D18                     | MISO1                | P1.05     |                    | GPIO、SPI                                |              |
+| D19                     | MOSI1                | P1.07     |                    | GPIO、SPI                                |              |
+| ADC_BAT                 | READ_BAT_ENABLE      | P0.14     |                    | バッテリー電圧読み取り用の有効化制御       |              |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | 6D モジュールの電源スイッチ               |              |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | 6D モジュールの割り込み信号ピン           |              |
+| PDM Microphone_DATA     |                      | P0.16     |                    | PDM オーディオデータ入力ピン              |              |
+| PDM Microphone_CLK      |                      | P1.00     |                    | PDM オーディオクロック出力ピン            |              |
+| Reset                   |                      | P0.18     |                    | リセット                                   |              |
+| RF Switch Port Select   |                      | P2.05     |                    | オンボードアンテナの切り替え              |              |
+| RF Switch Power         |                      | P2.03     |                    | 電源                                      |              |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |              |
+| USER_LED_R              |                      | P0.26     |                    | ユーザー制御の赤色 RGB LED ピン           | 11           |
+| USER_LED_B              |                      | P0.06     |                    | ユーザー制御の青色 RGB LED ピン           | 13/12        |
+| USER_LED_G              |                      | P0.30     |                    | ユーザー制御の緑色 RGB LED ピン           | 12/13        |
+
+</TabItem>
 </Tabs>
-
-
-
 
 
 ## 2 つの Arduino ライブラリ
 
-Seeed Studio XIAO nRF52840 は多くの機能を小さなボード 1 枚に集約しており、ときにはそれぞれの機能を最大限に発揮できない場合があります。そのため Seeed は、**各機能の性能を最大限に引き出す**ために 2 つの Arduino ライブラリを公開しています。したがって：
+Seeed Studio XIAO nRF52840 は多くの機能を小さな 1 枚のボードに集約しており、ときにはそれぞれの機能を最大限に発揮できない場合があります。そのため Seeed は、**各機能の性能を最大限に引き出す** ために 2 つの Arduino ライブラリを公開しています。したがって：
 
-- **Bluetooth 機能**や「**低消費電力機能**」を利用したい場合は、`Seeed nRF52 Boards` ライブラリを使用することを推奨します。
-- **組み込み機械学習アプリケーション**で使用したい場合や「**IMU & PDM 高度機能**」を利用したい場合は、`Seeed nRF52 mbed-enabled Boards` ライブラリを使用することを推奨します。
-- どちらのライブラリも、**LED、デジタル、アナログ、シリアル、I2C、SPI** などの基本的な使い方については十分にサポートしています。
+- **Bluetooth 機能** や「**低消費電力機能**」を利用したい場合は、`Seeed nRF52 Boards` ライブラリを使用することを推奨します。
+- **組み込み機械学習アプリケーション** で使用したい場合や「**IMU & PDM 高度機能**」を利用したい場合は、`Seeed nRF52 mbed-enabled Boards` ライブラリを使用することを推奨します。
+- どちらのライブラリも、**LED、デジタル、アナログ、シリアル、I2C、SPI** といった基本的な使い方に関しては非常に良好にサポートしています。
 
-これら 2 つのライブラリでサポートされるピン定義は少し異なる場合があり、Seeed は内容が明確になるまで wiki を継続的に更新していきます。
+これら 2 つのライブラリでサポートされるピン定義は少し異なる場合があり、Seeed はそれが明確になるまで本 Wiki を継続的に更新していきます。
 
 :::tip
 
-1. Seeed nRF52 Boards のオンボードパッケージを使用する場合、Serial 機能がコンパイルできないことがあります。解決策として、コード内に `#include <Adafruit_TinyUSB.h>` の行を追加してください。このパッケージは次のリンクからダウンロードできます: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
+1. Seeed nRF52 Boards のオンボードパッケージを使用する場合、Serial 機能がコンパイルできないことがあります。解決策は、コード内に `#include <Adafruit_TinyUSB.h>` の 1 行を追加することです。このパッケージは次のリンクからダウンロードできます: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
 
-2. もっと簡単な方法を好む場合は、最初から Seeed nRF52 mbed-enabled Boards を選択することもできます。こちらは追加の変更を行わなくても Serial 機能のコンパイルをサポートしています。
+2. もっと簡単な方法を好む場合は、最初から Seeed nRF52 mbed-enabled Boards を選択することもできます。こちらは Serial 機能のコンパイルを追加の修正なしでサポートします。
 
 :::
 
@@ -366,7 +425,7 @@ Seeed Studio XIAO nRF52840 は多くの機能を小さなボード 1 枚に集�
 
 ### ハードウェアの準備
 
-次のものを用意してください：
+次のものを用意します：
 
 - 1 x [Seeed Studio XIAO nRF52840](https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html) または [Studio XIAO nRF52840 Sense](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
 - 1 x コンピュータ
@@ -375,7 +434,7 @@ Seeed Studio XIAO nRF52840 は多くの機能を小さなボード 1 枚に集�
 :::tip
 一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルを持っていない場合や、お使いの USB ケーブルがデータ転送に対応しているか分からない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) を確認してください。
 :::
-USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840（Sense）をコンピュータに接続します。
+Seeed Studio XIAO nRF52840（Sense）を USB Type-C ケーブルでコンピュータに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/bletpyecconnect.png" alt="pir" width={500} height="auto" /></p>
 
@@ -387,14 +446,14 @@ USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840（Sense）�
 
 - **ステップ 2.** Arduino アプリケーションを起動します
 
-- **ステップ 3.** Arduino IDE に Seeed Studio XIAO nRF52840（Sense）ボードパッケージを追加します
+- **ステップ 3.** Seeed Studio XIAO nRF52840（Sense）ボードパッケージを Arduino IDE に追加します
 
 **File > Preferences** に移動し、**"Additional Boards Manager URLs"** に以下の URL を入力します：
     *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width="700" height="auto" /></p>
 
-**Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード「**seeed nrf52**」と入力して、使用したいボードの最新バージョンを選択し、インストールします。両方インストールしても構いません。
+**Tools > Board > Boards Manager...** に移動し、検索ボックスに「**seeed nrf52**」というキーワードを入力し、使用したいボードの最新バージョンを選択してインストールします。両方インストールしても構いません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528401.png" alt="pir" width={700} height="auto" /></p>
 
@@ -402,17 +461,17 @@ USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840（Sense）�
 
 **ボード**
 
-ボードパッケージをインストールしたら、**Tools > Board** に移動して使用したいボードを選択し、「**Seeed XIAO nRF52840 Sense**」を選択します。これで Arduino IDE 用の Seeed Studio XIAO nRF52840（Sense）の設定が完了しました。
+ボードパッケージをインストールしたら、**Tools > Board** に移動して使用したいボードを選択し、「**Seeed XIAO nRF52840 Sense**」を選びます。これで Arduino IDE 用の Seeed Studio XIAO nRF52840（Sense）の設定が完了しました。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528402.png" alt="pir" width={700} height="auto" /></p>
 
 **ポート**
 
-**Tools > Port** に移動し、接続されている Seeed Studio XIAO nRF52840 (Sense) のシリアルポート名を選択します。これはおそらく COM3 以上です（**COM1** と **COM2** は通常ハードウェアシリアルポート用に予約されています）。接続されている Seeed Studio XIAO nRF52840 (Sense) のシリアルポートには、通常かっこ内に **Seeed Studio XIAO nRF52840**（**Seeed Studio XIAO nRF52840** 用）または **Seeed Studio XIAO nRF52840 Sense**（**Seeed Studio XIAO nRF52840 Sense** 用）と表示されます。
+**Tools > Port** に移動し、接続されている Seeed Studio XIAO nRF52840（Sense）のシリアルポート名を選択します。これは通常 COM3 以上です（**COM1** と **COM2** は通常ハードウェアシリアルポート用に予約されています）。接続されている Seeed Studio XIAO nRF52840（Sense）のシリアルポートには、**Seeed Studio XIAO nRF52840** の場合は **Seeed Studio XIAO nRF52840**、**Seeed Studio XIAO nRF52840 Sense** の場合は **Seeed Studio XIAO nRF52840 Sense** と、かっこ内に記載されていることが一般的です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/port.png" alt="pir" width={550} height="auto" /></p>
 
-- **Step 5.** **File > Examples > 01.Basics > Blink** に移動して **Blink** サンプルを開きます
+- **ステップ 5.** **File > Examples > 01.Basics > Blink** に移動して、**Blink** サンプルを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={550} height="auto" /></p>
 
@@ -420,13 +479,13 @@ USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840（Sense）�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={500} height="auto" /></p>
 
-アップロードが完了すると、内蔵の赤色 LED が 1 秒間隔で点滅するのが確認できます。これは接続が正常であることを意味し、これで Seeed Studio XIAO nRF52840 (Sense) を使ってさらに多くのプロジェクトを探索できます！
+アップロードが完了すると、内蔵の赤色 LED が 1 秒ごとの間隔で点滅しているのが確認できます。これは接続が正常であることを意味し、これで Seeed Studio XIAO nRF52840 (Sense) を使って、さらに多くのプロジェクトを試すことができます！
 
 ## 内蔵 3-in-one LED を使ってみる
 
 Seeed Studio XIAO nRF52840 (Sense) にはユーザーがプログラム可能な **オンボード 3-in-one LED** が搭載されています。ここでは Arduino を使って RGB の各色を 1 つずつ制御する方法を学びます。
 
-まず、この LED をコードで制御する場合の動作が通常とは異なることを理解する必要があります。**LOW 信号** を与えると **LED が点灯し**、**HIGH 信号** を与えると **消灯します**。これは、この LED がコモンアノードで制御されており、低レベル信号のときのみ点灯するためです。
+まず、この LED の動作は、コードで制御したときに一般的なものとは異なることを理解する必要があります。**LOW 信号** を与えると **LED が点灯し**、**HIGH 信号** を与えると **消灯** します。これは、この LED がコモンアノードで制御されており、低レベル信号のときだけ点灯するためです。
 
 サンプルコードは次のようになります：
 
@@ -452,7 +511,7 @@ void loop() {
 
 Seeed Studio XIAO nRF52840 は低消費電力であり、ここではその検証方法を提供します。ここでは `Seeed nRF52 Boards` ライブラリを使用することを強く推奨します。
 
-- **Step 1.** **JLink** ダウンローダを使用して、Seeed Studio XIAO nRF52840 (Sense) 用の [ブートローダファームウェア](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) を書き込みます。
+- **Step 1.** **JLink** ダウンローダを使用して、Seeed Studio XIAO nRF52840 (Sense) 用の [bootloader firmware](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex) を書き込みます。
 
 :::note
 Seeed Studio XIAO nRF52840 の工場出荷時ファームウェアを使用している場合、または Seeed Studio XIAO nRF52840 のファームウェアを一度も変更していない場合は、この手順をスキップできます。
@@ -584,7 +643,7 @@ void loop() {
 
 ## バッテリー充電電流
 
-バッテリー充電電流は 50mA または 100mA を選択でき、**Pin13** を High または Low に設定することで 50mA か 100mA に切り替えることができます。低電流充電時は、入力モードで HIGH レベルに設定され、高電流充電時は、出力モードで LOW レベルに設定されます。
+バッテリー充電電流は 50mA または 100mA を選択でき、**Pin13** を High または Low に設定することで 50mA か 100mA に切り替えることができます。低電流充電時の充電電流は、入力モードが HIGH LEVEL に設定されているときであり、高電流充電時の充電電流は、出力モードが LOW LEVEL に設定されているときです。
 
 **低電流充電**
 
@@ -608,7 +667,7 @@ digitalWrite(P0_13, LOW);
 }
 ```
 
-## デバッグおよびブートローダ再書き込みのために SWD ピンへアクセスする
+## デバッグおよびブートローダの再書き込みのために SWD ピンへアクセスする
 
 **必要なハードウェア**
 
@@ -627,7 +686,7 @@ Web サイトから [Segger](https://www.segger.com/downloads/jlink/) ソフト�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD2.png" alt="pir" width={500} height="auto" /></p>
 
-- **Step 3.** "Target" をクリックし、次に "Connect" を選択します。
+- **Step 3.** "Target" をクリックし、"Connect" を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD3.png" alt="pir" width={500} height="auto" /></p>
 
@@ -637,17 +696,19 @@ Web サイトから [Segger](https://www.segger.com/downloads/jlink/) ソフト�
 
 ### Q1: ボードにコードをアップロードするときに Arduino IDE がフリーズします
 
-まず「Reset Button」を 1 回クリックしてボードを**リセット**してみてください。それでも解決しない場合は、**ブートローダモード**に入るために素早く 2 回クリックします。それでも動作しない場合は、ボードを PC から取り外し、再度接続してください。
+まず、"Reset Button" を 1 回クリックしてボードを**リセット**してみてください。それでも解決しない場合は、**bootloader mode** に入るために素早く 2 回クリックします。それでも動作しない場合は、ボードを PC から取り外し、再度接続してください。
 
 ### Q2: Arduino IDE 上でボードがシリアルデバイスとして表示されません
 
-まず「Reset Button」を 1 回クリックしてボードを**リセット**してみてください。それでも解決しない場合は、**ブートローダモード**に入るために素早く 2 回クリックします。
+まず、"Reset Button" を 1 回クリックしてボードを**リセット**してみてください。それでも解決しない場合は、**bootloader mode** に入るために素早く 2 回クリックします。
 
-### Q3: XIAO nRF52840 (Sense) を使用してバッテリー充電を行う際の注意点は何ですか？
+### Q3: XIAO nRF52840 (Sense) をバッテリー充電に使用する際の注意点は何ですか？
 
-P0.14 (D14) が 3.3V の High レベルで ADC 機能をオフにすると、P0.31 は入力電圧制限である 3.6V に達します。P0.31 ピンが焼損するリスクがあります。
+XIAO nRF52840 Sense のバッテリー回路では、**P0.14** が **READ_BAT_ENABLE** 制御ピンであり、**P0.31** がバッテリー電圧を測定するための **AIN7_BAT** ADC 読み取りピンです。
 
-現在この問題に対しては、ユーザーがバッテリー充電中に P0.14 (D14) の ADC 機能をオフにしたり、P0.14 (D14) を High に設定したりしないことを推奨します。
+P0.14 を HIGH に設定すると、バッテリー電圧読み取り経路は無効になり、P0.31 は入力電圧上限の 3.6V に達する可能性があり、P0.31 ピンを損傷するリスクがあります。バッテリー電圧を安全に読み取るには、P0.14 を LOW（読み取り経路を有効化）に設定してから、P0.31 上の ADC 値を読み取ってください。
+
+バッテリー電圧を読み取る際には、常に P0.14 を LOW に設定したままにし、バッテリー充電中に P0.14 を HIGH に設定しないことを推奨します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
@@ -655,12 +716,12 @@ P0.14 (D14) が 3.3V の High レベルで ADC 機能をオフにすると、P0.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/nRF_RGB.png" alt="nRF52840 RGB Schematic" width="120" height="auto" /></p>
 
-`P0.17` ピンは緑色インジケーターランプの動作を制御するために使用され、充電状態を示します：
+`P0.17` ピンは緑色のインジケータランプの動作を制御するために使用され、充電状態を示します：
 
-- Low レベル：**充電中** のとき。
-- High レベル：バッテリーが **充電されていない**、または **満充電** のとき。
+- 低レベル：**充電中** のとき。
+- 高レベル：バッテリーが **充電されていない**、または **満充電** のとき。
 
-Low レベルのとき、`RED_CHG` LED が点灯します。
+低レベルのとき、`RED_CHG` LED が点灯します。
 
 詳細については、PMIC のデータシート [BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) および [XIAO nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf) を参照してください。
 
@@ -669,37 +730,37 @@ Low レベルのとき、`RED_CHG` LED が点灯します。
 ### Seeed Studio XIAO nRF52840
 
 **ハードウェア設計**
-- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[データシート]** [Flash P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **📄[回路図]** [XIAO nRF52840 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **📄[データシート]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[回路図]** [XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
 - **🗃️[PCB 設計ファイル]** 
   - [XIAO nRF52840 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
-- **🗃️[PCB ライブラリ]** 
+- **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO nRF52840 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx )
 
-**メカニカル設計**
+**メカ設計**
 - **📄[2D 寸法]** [XIAO nRF52840 DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip )
 - **📄[2D 寸法]** [XIAO nRF52840 ボトムパッドデータ](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
 
 ### Seeed Studio XIAO nRF52840 Sense
 
 **ハードウェア設計**
-- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[データシート]** [Flash-P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
-- **📄[データシート]** [Charger IC-BQ25101 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
-- **📄[データシート]** [IMU-LSM6DS3TR データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
-- **📄[データシート]** [Mic-MSM261D3526H1CPM データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
-- **📄[回路図]** [XIAO nRF52840 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **📄[データシート]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash-P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[データシート]** [Charger IC-BQ25101 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
+- **📄[データシート]** [IMU-LSM6DS3TR Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
+- **📄[データシート]** [Mic-MSM261D3526H1CPM Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
+- **📄[回路図]** [XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
 - **🗃️[PCB 設計ファイル]** 
   - [XIAO nRF52840 Sense KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
-- **🗃️[PCB ライブラリ]** 
+- **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO nRF52840 Sense ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx )
 
-**メカニカル設計**
+**メカ設計**
 - **📄[2D 寸法]** [XIAO nRF52840 Sense DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
 - **📄[2D 寸法]** [XIAO nRF52840 ボトムパッドデータ](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
 - **📄[3D モデル]** [XIAO nRF52840 Sense 3D モデル](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip )
@@ -710,18 +771,18 @@ Low レベルのとき、`RED_CHG` LED が点灯します。
 ### Seeed Studio XIAO nRF52840 (Sense) Plus
 
 **ハードウェア設計**
-- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
-- **📄[データシート]** [Flash-P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[データシート]** [Nordic nRF52840 Datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash-P25Q16H-UXH-IR Datasheet](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
 - **🗃️[回路図]** [XIAO nRF52840 (Sense) Plus 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip )
 - **🗃️[PCB 設計ファイル]** 
   - [XIAO nRF52840 (Sense) Plus KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus.zip )
-  - [XIAO Plus Base （ボトムパッド引き出しあり）KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
-  - [XIAO Plus Base （ボトムパッド引き出しなし）KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
-- **🗃️[PCB ライブラリ]** 
+  - [XIAO Plus Base （ボトムパッド引き出しあり） KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
+  - [XIAO Plus Base （ボトムパッド引き出しなし） KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
+- **🗃️[PCB 設計ライブラリ]** 
   - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
-**メカニカル設計**
+**メカ設計**
 - **🗃️[2D 寸法]** [XIAO nRF52840 Sense DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
 
 <JetsonLeadQuote
@@ -739,7 +800,7 @@ Low レベルのとき、`RED_CHG` LED が点灯します。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

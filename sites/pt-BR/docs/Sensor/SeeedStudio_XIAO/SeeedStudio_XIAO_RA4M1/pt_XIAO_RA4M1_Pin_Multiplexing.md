@@ -1,6 +1,6 @@
 ---
 description: Multiplexação de pinos com o Seeed Studio XIAO RA4M1.
-title: Multiplexação de Pinos com Seeed Studio XIAO RA4M1
+title: Multiplexação de pinos com Seeed Studio XIAO RA4M1
 keywords:
   - ra4m1
   - xiao
@@ -12,15 +12,27 @@ last_update:
   date: 08/15/2024
   author: Jason
 createdAt: '2024-08-21'
-updatedAt: '2026-03-12'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/pt-br/xiao_ra4m1_pin_multiplexing/
 ---
 
+## Visão geral de hardware
+
+Antes de começar, é essencial conhecer alguns parâmetros básicos do produto. A tabela a seguir fornece informações sobre as características do Seeed Studio XIAO RA4M1.
+
+### Frente
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Verso
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 ## Digital
 
-O XIAO RA4M1 possui até 11 pinos GPIO regulares, 6 pinos analógicos e 8 portas de IO reutilizáveis. Neste exemplo, usaremos o XIAO RA4M1, a placa de expansão XIAO e um relé para demonstrar como usar diferentes pinos digitais para leitura e escrita.
+O XIAO RA4M1 possui até 11 pinos GPIO regulares, 6 pinos analógicos e 8 portas de IO reutilizáveis na parte traseira. Neste exemplo, usaremos o XIAO RA4M1, a placa de expansão XIAO e um relé para demonstrar como usar diferentes pinos digitais para leitura e escrita.
 
-### Preparação de Hardware
+### Preparação de hardware
 
 <table align="center">
   <tr>
@@ -36,27 +48,27 @@ O XIAO RA4M1 possui até 11 pinos GPIO regulares, 6 pinos analógicos e 8 portas
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-Instale o XIAO RA4M1 ou Sense na placa de expansão e conecte o relé à interface **A0/D0** da placa de expansão através de um cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
+Instale o XIAO RA4M1 ou Sense na placa de expansão e conecte o relé à interface **A0/D0** da placa de expansão por meio de um cabo Grove. Por fim, conecte o XIAO ao computador por meio de um cabo USB-C.
 
-### Implementação de Software
+### Implementação de software
 
-Neste exemplo, vamos implementar o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão for pressionado, o relé liga, e quando o botão for solto, o relé desliga.
+Neste exemplo, implementaremos o controle do estado ligado/desligado de um relé usando um botão conectado à placa de expansão XIAO. Quando o botão é pressionado, o relé liga, e quando o botão é solto, o relé desliga.
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -91,9 +103,9 @@ Se tudo correr bem, após o upload do programa, você deverá ver o seguinte efe
 
 ## Digital como PWM
 
-Todos os pinos GPIO do XIAO RA4M1 suportam saída PWM. Portanto, você pode usar qualquer pino para gerar PWM para ajustar o brilho de luzes, controlar servos e outras funções.
+Todos os pinos GPIO do XIAO RA4M1 suportam saída PWM. Portanto, você pode usar qualquer pino para gerar PWM a fim de ajustar o brilho de luzes, controlar servos e outras funções.
 
-### Preparação de Hardware
+### Preparação de hardware
 
 <table align="center">
  <tr>
@@ -109,25 +121,25 @@ Todos os pinos GPIO do XIAO RA4M1 suportam saída PWM. Portanto, você pode usar
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-Instale o XIAO RA4M1 ou Sense na placa de expansão e, em seguida, conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador via cabo USB-C.
+Instale o XIAO RA4M1 ou Sense na placa de expansão e, em seguida, conecte o Variable Color LED à interface A0/D0 da placa de expansão usando um cabo Grove. Por fim, conecte o XIAO ao seu computador por meio de um cabo USB-C.
 
-### Implementação de Software
+### Implementação de software
 
 Neste exemplo, demonstraremos como usar a saída PWM para controlar o brilho de uma luz.
 
@@ -158,13 +170,13 @@ void loop() {
 }
 ```
 
-Se o programa for executado com sucesso, você verá o seguinte efeito.
+Se o programa for executado com sucesso, você verá o seguinte efeito em funcionamento.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
 ## Analógico
 
-A placa de desenvolvimento XIAO RA4M1 possui ADC de até 14 bits para leitura de alta resolução de valores de sensores analógicos, o que pode nos ajudar a ler valores mais precisos. O conversor analógico‑digital (ADC) em uma placa de desenvolvimento XIAO RA4M1, por padrão, tem a resolução definida em 10 bits, que pode ser alterada para 12 bits e 14 bits para melhorar a precisão das leituras analógicas.
+A placa de desenvolvimento XIAO RA4M1 possui ADC de até 14 bits para leitura de alta resolução de valores de sensores analógicos, o que pode nos ajudar a ler valores mais precisos. O conversor analógico‑digital (ADC) em uma placa de desenvolvimento XIAO RA4M1, por padrão, tem a resolução configurada para 10 bits, que pode ser ajustada tanto para 12 bits quanto para 14 bits para melhorar a precisão das leituras analógicas.
 
 Dados detalhados por precisão do ADC
 
@@ -174,7 +186,7 @@ Dados detalhados por precisão do ADC
 
 Em seguida, escolheremos dois sensores para refletir as características do ADC.
 
-### Preparação de Hardware
+### Preparação de hardware
 
 <table align="center">
  <tr>
@@ -192,28 +204,28 @@ Em seguida, escolheremos dois sensores para refletir as características do ADC.
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-### Implementação de Software
+### Implementação de software
 
 ``` cpp
 #define ADC_Bit_Fourteen 14
@@ -270,7 +282,7 @@ Ao trabalhar com a Arduino IDE, a comunicação Serial é uma parte essencial de
 
 ### Uso geral
 
-Algumas das funções Serial mais comumente usadas incluem:
+Algumas das funções Serial mais usadas incluem:
 
 - `Serial.begin()` -- que inicializa a comunicação em uma taxa de baud especificada;
 - `Serial.print()` -- que envia dados para a porta Serial em um formato legível;
@@ -307,9 +319,9 @@ void loop() {
 }
 ```
 
-### Uso do Serial1
+### Uso de Serial1
 
-De acordo com os diagramas de pinos do XIAO RA4M1 acima para parâmetros específicos, podemos observar que existem os pinos TX e RX.
+De acordo com os diagramas de pinos do XIAO RA4M1 acima para parâmetros específicos, podemos observar que há pinos TX e RX.
 Isso é diferente da comunicação serial padrão, mas o uso também é muito semelhante, exceto que alguns parâmetros precisam ser adicionados.
 Então, a seguir, usaremos os pinos expostos pelo chip para comunicação serial.
 
@@ -332,7 +344,7 @@ void loop() {
 }
 ```
 
-### Uso do Software Serial
+### Uso de Software Serial
 
 ```c
 #include <SoftwareSerial.h>
@@ -368,7 +380,7 @@ Neste programa, primeiro incluímos a biblioteca `SoftwareSerial.h` para usar a 
 
 Na função `setup()`, inicializamos tanto a serial de hardware (`Serial.begin()`) quanto a serial por software (`mySerial.begin()`).
 
-Na função `loop()`, usamos a função `mySerial.available()` para verificar se há algum dado disponível para ser lido da serial por software. Se houver, lemos o byte recebido usando a função `mySerial.read()` e o armazenamos em uma variável chamada data. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "Received data: " seguida do valor de data na serial de hardware.
+Na função `loop()`, usamos a função `mySerial.available()` para verificar se há algum dado disponível para ser lido da serial por software. Se houver, lemos o byte recebido usando a função `mySerial.read()` e o armazenamos em uma variável chamada data. Em seguida, usamos as funções `Serial.print()` e `Serial.println()` para imprimir "Received data: " seguido do valor de data na serial de hardware.
 
 Também usamos a função `mySerial.print()` para escrever "Hello World!" na serial por software. Isso enviará os dados do XIAO para o dispositivo conectado à porta serial por software.
 
@@ -383,7 +395,7 @@ O XIAO RA4M1 possui uma interface I2C que pode ser usada para transmissão e an�
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Seeed Studio Expansion Base para XIAO com Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -392,18 +404,18 @@ O XIAO RA4M1 possui uma interface I2C que pode ser usada para transmissão e an�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos conectar diretamente o XIAO à placa de expansão e programá-lo para exibir conteúdo na tela.
+O display OLED na placa de expansão XIAO usa o protocolo I2C e é conectado à interface I2C do XIAO através do circuito I2C na placa. Portanto, podemos simplesmente encaixar o XIAO na placa de expansão e programá-lo para exibir conteúdo na tela.
 
 ### Implementação de software
 
@@ -415,11 +427,11 @@ Este exemplo apresenta como usar o display OLED na Seeed Studio Expansion Base p
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-#### Passo 3. Copie o código e cole na Arduino IDE e depois envie-o
+#### Passo 3. Copie o código e cole na Arduino IDE e depois envie
 
 ```c
 #include <Arduino.h>
@@ -446,13 +458,13 @@ Na função `setup()`, inicializamos o display OLED usando a função `u8x8.begi
 
 Na função `loop()`, definimos a fonte usando a função `u8x8.setFont()` e especificamos a posição do cursor no display usando a função `u8x8.setCursor()`. Por fim, usamos a função `u8x8.print()` para exibir a string "Hello World!" no display OLED.
 
-Se você enviar um programa para o XIAO RA4M1, verá conteúdo exibido na tela OLED na placa de expansão.
+Se você carregar um programa no XIAO RA4M1, verá conteúdo exibido na tela OLED na placa de expansão.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/21.png" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-O chip RA4M1 integra múltiplos periféricos, incluindo uma interface SPI que pode ser usada para conectar dispositivos SPI externos, como memória flash, displays, sensores e muito mais. O XIAO RA4M1 também suporta modo de transferência SPI em alta velocidade, que pode atingir uma taxa máxima de transferência SPI de 80 MHz, atendendo às necessidades de transferência de dados da maioria dos dispositivos SPI.
+O chip RA4M1 integra vários periféricos, incluindo uma interface SPI que pode ser usada para conectar dispositivos SPI externos, como memória flash, displays, sensores e muito mais. O XIAO RA4M1 também suporta modo de transferência SPI de alta velocidade, que pode atingir uma taxa máxima de transferência SPI de 80 MHz, atendendo às necessidades de transferência de dados da maioria dos dispositivos SPI.
 
 ### Preparação de hardware
 
@@ -468,20 +480,20 @@ O chip RA4M1 integra múltiplos periféricos, incluindo uma interface SPI que po
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-Após preparar o hardware como mencionado acima, use fios jumper para conectar a interface SPI do XIAO e do OLED. Consulte o diagrama a seguir para o método de fiação.
+Depois de preparar o hardware conforme mencionado acima, use jumpers para conectar a interface SPI do XIAO e do OLED. Consulte o diagrama a seguir para o método de fiação.
 
-### Implementação de Software
+### Implementação de software
 
 Em seguida, usaremos o seguinte programa como exemplo para apresentar como usar a interface SPI para controlar a exibição da tela OLED.
 
@@ -489,7 +501,7 @@ Instale a biblioteca u8g2.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -515,9 +527,9 @@ void loop(void) {
 }
 ```
 
-Na função `setup()`, a classe `U8G2_SH1107_128X128_1_4W_HW_SPI` é instanciada com os argumentos de construtor apropriados que especificam os pinos usados para chip select (cs), dados/comando (dc) e reset. Em seguida, a função `u8g2.begin()` é chamada para inicializar o display.
+Na função `setup()`, a classe `U8G2_SH1107_128X128_1_4W_HW_SPI` é instanciada com os argumentos de construtor apropriados que especificam os pinos usados para chip select (cs), data/command (dc) e reset. Em seguida, a função `u8g2.begin()` é chamada para inicializar o display.
 
-Na função `loop()`, o display é atualizado com novo conteúdo usando as funções `u8g2.firstPage()`, `u8g2.setFont()` e `u8g2.drawStr()`. A função `u8g2.firstPage()` configura o buffer de exibição para escrita, enquanto `u8g2.nextPage()` exibe o conteúdo atualizado. O loop do-while garante que o conteúdo seja exibido continuamente até que o programa seja interrompido.
+Na função `loop()`, o display é atualizado com novo conteúdo usando as funções `u8g2.firstPage()`, `u8g2.setFont()` e `u8g2.drawStr()`. A função `u8g2.firstPage()` configura o buffer de exibição para escrita, enquanto `u8g2.nextPage()` exibe o conteúdo atualizado. O laço do-while garante que o conteúdo seja exibido continuamente até que o programa seja interrompido.
 
 No geral, este código demonstra como usar a biblioteca U8g2 para controlar um display OLED e exibir texto nele.
 
@@ -525,12 +537,12 @@ No geral, este código demonstra como usar a biblioteca U8g2 para controlar um d
 
 ## CAN (Placa de Expansão XIAO CAN Bus)
 
-### Preparação de Hardware
+### Preparação de hardware
 
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-     <th>Placa de Expansão XIAO CAN Bus</th>
+     <th>XIAO CAN Bus Expansion Board</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -539,12 +551,12 @@ No geral, este código demonstra como usar a biblioteca U8g2 para controlar um d
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-CAN-Bus-Breakout-Board-for-XIAO-and-QT-Py-p-5702.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira Agora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -558,13 +570,13 @@ No geral, este código demonstra como usar a biblioteca U8g2 para controlar um d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
 
-### Preparação de Software
+### Preparação de software
 
-Nós fornecemos uma [biblioteca Arduino para a placa MCP2515](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515).
+Fornecemos uma [biblioteca Arduino para a placa MCP2515](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515).
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Arduino_CAN_BUS_MCP2515" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Baixar as Bibliotecas</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -573,17 +585,17 @@ Nós fornecemos uma [biblioteca Arduino para a placa MCP2515](https://github.com
 A biblioteca inclui vários exemplos, incluindo:
 
 - ***OBDII-PIDs*** - recuperar dados da interface OBD-II
-- ***send*** - enviar um frame para o barramento CAN
-- ***recv*** - receber um frame do barramento CAN
-- ***set_mask_filter_recv*** - receber um frame do barramento CAN com configurações de máscara e filtro
+- ***send*** - enviar um quadro para o barramento CAN
+- ***recv*** - receber um quadro do barramento CAN
+- ***set_mask_filter_recv*** - receber um quadro do barramento CAN com configurações de máscara e filtro
 
-### Implementação de Software
+### Implementação de software
 
 :::tip
-Não é permitido ligar simultaneamente e fazer o download de programas para dois XIAO RA4M1, pois isso resultará em erros ao fazer o download pela porta serial. Depois de fazer o download para um, desconecte-o, então ligue o outro XIAO RA4M1 para baixar o programa e, finalmente, ligue-os ao mesmo tempo para verificar a mensagem da porta serial
+Não é permitido ligar e baixar programas simultaneamente para dois XIAO RA4M1, pois isso resultará em erros ao baixar pela porta serial. Depois de baixar para um, desconecte-o, ligue o outro XIAO RA4M1 para baixar o programa e, por fim, ligue ambos ao mesmo tempo para verificar a mensagem da porta serial
 :::
 
-**Código de Escrita CAN**
+**Código de escrita CAN**
 
 ```c
 
@@ -663,7 +675,7 @@ void loop()
 // END FILE
 ```
 
-**Código de Leitura CAN**
+**Código de leitura CAN**
 
 ```c
 /*  receive a frame from can bus
@@ -769,7 +781,7 @@ void loop()
 ```
 
 :::tip
-Neste exemplo, você precisa soldar um dos pinos do terminal P1 da placa de breakout do barramento CAN. Só então qualquer velocidade poderá ser usada; caso contrário, você só poderá usar abaixo de 125 de baudrate CAN.
+Neste exemplo, você precisa soldar um dos pinos do terminal P1 da CAN Bus Breakout Board. Só então qualquer velocidade poderá ser usada; caso contrário, você só poderá usar baudrate CAN abaixo de 125.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
@@ -925,12 +937,12 @@ void loop()
 
 ***Quando o resistor terminal pode ser desconectado?***
 
-- 1. Comunicação de curta distância: Em algumas aplicações de curta distância (normalmente menos de 1 metro), os resistores terminais podem ser omitidos, pois o impacto da reflexão de sinal na comunicação é relativamente pequeno.
+- 1. Comunicação de curta distância: Em algumas aplicações de curta distância (geralmente menos de 1 metro), os resistores terminais podem ser omitidos porque o impacto da reflexão de sinal na comunicação é relativamente pequeno.
 - 2. Comunicação com nó único: Se houver apenas um nó no barramento (como em um ambiente de depuração) e a distância for curta, o resistor terminal pode ser temporariamente desconectado.
 
 <table align="center">
  <tr>
-     <th>Resultado do código do remetente</th>
+     <th>Resultado do código do transmissor</th>
      <th>Resultado do código do receptor</th>
  </tr>
  <tr>
@@ -939,7 +951,7 @@ void loop()
  </tr>
 </table>
 
-## Suporte técnico e discussão de produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

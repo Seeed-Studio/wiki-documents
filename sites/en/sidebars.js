@@ -2080,6 +2080,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
                 'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
               ],
             },
             {
@@ -2091,6 +2092,8 @@ const sidebars = {
               },
               items: [
                 'Sensor/reSpeaker_flex/reSpeaker_flex_i2s_test',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_playback_record',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_udp_stream',
               ],
             },
             'Sensor/reSpeaker_flex/reSpeaker_flex_python_control',

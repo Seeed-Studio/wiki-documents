@@ -9,7 +9,7 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
