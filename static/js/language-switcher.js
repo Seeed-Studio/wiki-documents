@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-27 10:57:58 (北京时间)
-// 多语言页面: 2298 个
+// 生成时间: 2026-05-28 10:25:27 (北京时间)
+// 多语言页面: 2301 个
 
 (function() {
   'use strict';
@@ -3356,6 +3356,13 @@
     "pt"
   ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/using_stream_deck_to_control_recamera_gimbal": [
     "cn",
     "en",
     "es",
@@ -8044,6 +8051,13 @@
     "ja",
     "pt"
   ],
+  "/reterminal_e10xx_with_arduino_peripherals_2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/reterminal_e10xx_with_esphome": [
     "cn",
     "en",
@@ -10914,6 +10928,13 @@
     "pt"
   ],
   "/control_rebot_arm_using_voice_with_respeaker_flex": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_ros2_voice_pipeline": [
     "cn",
     "en",
     "es",
