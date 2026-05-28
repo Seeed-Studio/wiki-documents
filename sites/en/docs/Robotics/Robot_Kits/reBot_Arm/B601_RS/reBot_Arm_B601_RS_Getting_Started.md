@@ -10,7 +10,6 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
-# image:
 slug: /rebot_b601_rs_getting_started
 translation:
   skip:
