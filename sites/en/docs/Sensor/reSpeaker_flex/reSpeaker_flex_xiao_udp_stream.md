@@ -20,13 +20,33 @@ url: https://wiki.seeedstudio.com/respeaker_flex_xiao_playback_record/
 
 This project demonstrates real-time audio streaming using the **ReSpeaker Flex XVF3800** microphone array with a **XIAO ESP32S3** board. The audio is captured via I2S, and transmitted over UDP to a server running on a local machine, where it can be stored and processed as a .wav file.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<table align="center">
+  <tr>
+    <th>reSpeaker Flex XVF3800 Linear with XIAO ESP32S3 </th>
+    <th>reSpeaker Flex XVF3800 Circular with XIAO ESP32S3</th>
+    
+  </tr>
+  <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Linear-4-with-XIAO-ESP32S3-p-6736.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-with-XIAO-ESP32S3-p-6739.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
+    </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+
+    </div></td>
+  </tr>
+</table>
 
 ## Functionality Overview
 
