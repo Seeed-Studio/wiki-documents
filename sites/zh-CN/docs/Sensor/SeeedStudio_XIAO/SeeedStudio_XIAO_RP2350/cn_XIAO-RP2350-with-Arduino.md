@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
   </tr>
   <tr>
     <th>Flash</th>
-    <td>2MB 板载</td>
+    <td>板载 2MB</td>
     <td>2MB Flash</td>
   </tr>
   <tr>
@@ -136,7 +136,7 @@ import TabItem from '@theme/TabItem';
 | USER_LED                |            | GPIO25       |                    | 用户指示灯_黄色                       |
 ## 前置准备
 
-在开始之前，请确保你已经具备：
+在开始之前，请确保你已经准备好：
 
 - 一块 RP2350 开发板
 - Arduino IDE
@@ -251,13 +251,13 @@ XIAO RP2350 可以使用 3.7V 锂电池供电。你可以参考下图进行接�
 ## 资源与资料
 
 **硬件设计**
-- **📄[Datasheet]** [Raspberry Pi RP2350 数据手册](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
-- **📄[Schematic]** [XIAO RP2350 原理图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
-- **🗃️[PCB Design Files]** [XIAO RP2350 KiCad 工程](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
-- **🗃️[PCB Design Libraries]** 
+- **📄[数据手册]** [Raspberry Pi RP2350 数据手册](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
+- **📄[原理图]** [XIAO RP2350 原理图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
+- **🗃️[PCB 设计文件]** [XIAO RP2350 KiCad 工程](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[PCB 设计库]** 
   - [XIAO 系列 KiCad 封装库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip )
   - [XIAO 系列 KiCad 原理图符号库](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Pinout Diagram]** [XIAO RP2350 引脚分布表](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
+- **📄[引脚图]** [XIAO RP2350 引脚说明表](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
 **结构设计**
 - **📄[2D Dimensions]** [XIAO RP2350 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
@@ -271,10 +271,10 @@ XIAO RP2350 可以使用 3.7V 锂电池供电。你可以参考下图进行接�
   - 一份关于 Raspberry Pi Pico 系列开发板的完整入门指南，非常适合希望学习 MicroPython 或 C/C++ 的初学者。
 - **📄[Document]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
   - 记录 MicroPython 安装教程和 API 的手册
-- **📄[Document]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
+- **📄[文档]** [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
   - 记录 Pico C/C++ SDK API 的手册
  - **📄[arduino-pico GitHub]**(https://github.com/earlephilhower/arduino-pico)
-- **📄[Arduino-Pico Core Documentation]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
+- **📄[Arduino-Pico Core 文档]**(https://arduino-pico.readthedocs.io/en/latest/install.html)
 
 ## 技术支持与讨论
 

@@ -1,5 +1,5 @@
 ---
-title: Multiplexación de Pines con Seeed Studio XIAO nRF54L15 Sense
+title: Multiplexación de pines con Seeed Studio XIAO nRF54L15 Sense
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
@@ -11,49 +11,81 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2025-09-29'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
-Para facilitar su uso, todos los siguientes ejemplos de multiplexación de pines están en **PlatformIO**. Por favor, haga clic en este enlace para obtener una guía de configuración y uso para el [XIAO nRF54L5](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/)
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Para facilitar su uso, todos los siguientes ejemplos de multiplexación de pines se realizan en **PlatformIO**. Haz clic en este enlace para ver una guía de configuración y uso para la [XIAO nRF54L5](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/)
 
 :::tip
-Basado en VS Code, si desea usar el siguiente caso en el nRF Connect SDK, consulte la conexión proporcionada, agregue el archivo app.overlay y modifique el contenido en prj.conf
+Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, añade el archivo app.overlay y modifica el contenido en prj.conf
 
-[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+[XIAO nRF54L15 Añadir archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
 
 :::
 
-## Botones Integrados
+## Botones integrados
 
-XIAO nRF54L15(Sense) viene equipado con dos botones físicos importantes que desempeñan roles cruciales en la operación del dispositivo y la programación del firmware: el **Botón de Reset** y el **Botón de Usuario**. Comprender sus funciones es esencial para el uso diario y las actualizaciones de firmware.
+XIAO nRF54L15(Sense) viene equipado con dos botones físicos importantes que desempeñan funciones cruciales en el funcionamiento del dispositivo y la programación del firmware: el **Botón de reinicio** y el **Botón de usuario**. Comprender sus funciones es esencial para el uso diario y las actualizaciones de firmware.
 
 ---
 
-### Botón de Reset
+## Descripción general del hardware
 
-El botón de Reset se utiliza para realizar una operación de reinicio completo en el dispositivo.
+<Tabs>
+<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
+
+### Parte frontal de XIAO nRF54L15
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Parte trasera de XIAO nRF54L15
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+
+</TabItem>
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
+
+### Parte frontal de XIAO nRF54L15 Sense
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Parte trasera de XIAO nRF54L15 Sense
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
+
+### Botón de reinicio
+
+El botón de reinicio se utiliza para realizar una operación de reinicio forzado en el dispositivo.
 
 - **Funcionalidad:**
-  - **Reinicio Forzado:** Presionar este botón interrumpe inmediatamente todas las operaciones actuales del dispositivo y hace que se reinicie, similar a un ciclo de energía.
-  - **Resolver Programas Bloqueados:** Cuando el programa en ejecución del dispositivo se bloquea, entra en un bucle infinito o deja de responder, presionar el botón de Reset es la forma más rápida de forzarlo a volver a un estado operativo normal.
-  - **Sin Impacto en el Firmware:** Una operación de reset no borra ni altera el firmware ya programado en el dispositivo. Simplemente reinicia la aplicación que se está ejecutando actualmente.
+  - **Reinicio forzado:** Al pulsar este botón se interrumpen inmediatamente todas las operaciones actuales del dispositivo y se provoca su reinicio, similar a un ciclo de encendido.
+  - **Resolución de programas bloqueados:** Cuando el programa en ejecución del dispositivo se bloquea, entra en un bucle infinito o deja de responder, pulsar el botón de reinicio es la forma más rápida de forzarlo a volver a un estado de funcionamiento normal.
+  - **Sin impacto en el firmware:** Una operación de reinicio no borra ni modifica el firmware ya programado en el dispositivo. Simplemente reinicia la aplicación que se está ejecutando.
 
 ---
 
-### Botón de Usuario
+### Botón de usuario
 
-El botón de Usuario es una entrada versátil y programable que ofrece control flexible dentro de sus aplicaciones.
+El botón de usuario es una entrada programable y versátil que ofrece un control flexible dentro de tus aplicaciones.
 
 **Funcionalidad:**
 
-- Entrada Personalizable：A diferencia de la función fija del botón de Reset, la acción del botón de Usuario está completamente definida por su firmware programado.
+- Entrada personalizable: A diferencia de la función fija del botón de reinicio, la acción del botón de usuario está totalmente definida por el firmware que programes.
 
-- Activación de Eventos： Puede programarse para activar eventos específicos, controlar diferentes funcionalidades o actuar como una entrada de propósito general para sus aplicaciones.
+- Disparo de eventos: Se puede programar para activar eventos específicos, controlar diferentes funcionalidades o actuar como una entrada de propósito general para tus aplicaciones.
 
 ## Digital
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
   <tr>
@@ -69,27 +101,27 @@ El botón de Usuario es una entrada versátil y programable que ofrece control f
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-### Implementación de Software
+### Implementación de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-gpio" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -159,53 +191,53 @@ int main(void)
 }
 ```
 
-**Configuración del Árbol de Dispositivos**
+**Configuración del Device Tree**
 
 `static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(DT_ALIAS(sw1), gpios);`
 
-- Esta línea de código utiliza el sistema de árbol de dispositivos de Zephyr para obtener la información del dispositivo GPIO del botón a través de un alias llamado sw1. Este enfoque desacopla el código de los pines de hardware específicos y mejora la portabilidad.
+- Esta línea de código utiliza el sistema de device tree de Zephyr para obtener la información del dispositivo GPIO del botón mediante un alias llamado sw1. Este enfoque desacopla el código de los pines de hardware específicos y mejora la portabilidad.
 
 `static const struct gpio_dt_spec relay = GPIO_DT_SPEC_GET(DT_ALIAS(relay0), gpios);`
 
-- Nuevamente, esta línea de código obtiene información sobre el dispositivo GPIO del relé llamado relay0.
+- De nuevo, esta línea de código obtiene información sobre el dispositivo GPIO del relé llamado relay0.
 
-**Verificación de preparación del dispositivo**
+**Comprobación de disponibilidad del dispositivo**
 
-`if (!gpio_is_ready_dt(&button))` y `if (!gpio_is_ready_dt(&relay))`
+`if (!gpio_is_ready_dt(&button))` and `if (!gpio_is_ready_dt(&relay))`
 
-- Antes de que el programa comience a realizar cualquier operación, el código verifica si los dispositivos del botón y el relé están inicializados correctamente y listos. Esta es una mejor práctica en la programación de controladores de Zephyr y evita que el programa se bloquee si los dispositivos no están configurados correctamente.
+- Antes de que el programa comience a realizar cualquier operación, el código comprueba si los dispositivos del botón y del relé se han inicializado correctamente y están listos. Esta es una buena práctica en la programación de controladores en Zephyr y evita que el programa se bloquee si los dispositivos no están configurados correctamente.
 
-**Configuración de Pines**
+**Configuración de pines**
 
 `gpio_pin_configure_dt(&button, GPIO_INPUT);`
 
-- Esta línea de código configura el pin GPIO del botón en modo de entrada. Este es un paso necesario para leer el nivel del pin, y el programa monitoreará el nivel de voltaje del pin para determinar si el botón está presionado.
+- Esta línea de código configura el pin GPIO del botón en modo de entrada. Este es un paso necesario para leer el nivel del pin, y el programa supervisará el nivel de voltaje del pin para determinar si el botón está pulsado.
 
 `gpio_pin_configure_dt(&relay, GPIO_OUTPUT_ACTIVE);`
 
-- Esta línea de código configura el pin GPIO del relé en modo de salida. La bandera `GPIO_OUTPUT_ACTIVE` generalmente indica que el pin estará activo después de la configuración en preparación para controlar el relé.
+- Esta línea de código configura el pin GPIO del relé en modo de salida. La marca `GPIO_OUTPUT_ACTIVE` suele indicar que el pin estará activo después de la configuración, en preparación para controlar el relé.
 
-**Lógica del Bucle Principal**
+**Lógica del bucle principal**
 
 `while (1):` El código entra en un bucle infinito que realiza continuamente las siguientes acciones.
 
 `int button_state = gpio_pin_get_dt(&button);:` En cada bucle, el programa lee el estado de nivel actual de los pines del botón.
 
-`if (button_state == 0):` Esta lógica verifica si el botón está presionado. En muchos diseños de circuitos, presionar un botón conecta el pin a tierra (GND), resultando en un nivel de 0 (es decir, bajo).
+`if (button_state == 0):` Esta lógica comprueba si el botón está presionado. En muchos diseños de circuitos, al presionar un botón se conecta el pin a tierra (GND), lo que da como resultado un nivel de 0 (es decir, bajo).
 
-`gpio_pin_set_dt(&relay, 1);:` Si el estado del botón es 0 (presionado), entonces el pin del relé se establece en 1 (alto), lo que cierra el relé y enciende el dispositivo (por ejemplo, lámpara) al que está conectado.
+`gpio_pin_set_dt(&relay, 1);:` Si el estado del botón es 0 (presionado), entonces el pin del relé se establece en 1 (alto), lo que cierra el relé y enciende el dispositivo (por ejemplo, una lámpara) al que está conectado.
 
-`else:` Si el botón no está presionado (el estado es 1), `ejecutar gpio_pin_set_dt(&relay, 0);` para establecer el pin del relé en 0 (bajo), lo que cierra el relé y apaga el dispositivo al que está conectado.
+`else:` Si el botón no está presionado (el estado es 1), `perform gpio_pin_set_dt(&relay, 0);` para establecer el pin del relé en 0 (bajo), lo que cierra el relé y apaga el dispositivo al que está conectado.
 
-`k_msleep(10);:` el código agrega un breve retraso de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un manejo simple anti-rebote. Este es un manejo simple anti-rebote que previene múltiples activaciones debido al rebote físico de los botones y también reduce el consumo de energía.
+`k_msleep(10);:` el código añade un breve retardo de 10 milisegundos al final de cada bucle para evitar que la CPU esté ocupada, etc. Este es un manejo simple de anti‑rebote. Este es un manejo simple de anti‑rebote que evita múltiples disparos debido al rebote físico de los botones y también reduce el consumo de energía.
 
-### Gráfico de Resultados
+### Gráfico de resultado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:700, height:'auto'}}/></div>
 
 ## Analógico
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <table align="center">
  <tr>
@@ -216,39 +248,39 @@ int main(void)
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/10.jpg" style={{width:500, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/10.jpg" style={{width:500, height:'auto'}}/></div></td>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:500, height:'auto'}}/></div></td>
  </tr>
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-### Implementación de Software
+### Implementación de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-pwm" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -366,71 +398,72 @@ int main(void)
 }
 ```
 
-**Configuración de Dispositivos ADC (Convertidor Analógico-Digital) y PWM (Modulación por Ancho de Pulso)**
+**Configuración de los dispositivos ADC (Convertidor Analógico‑Digital) y PWM (Modulación por Ancho de Pulso)**
 
-- Módulo de Registro pot_pwm_example:
+- Módulo de registro pot_pwm_example:
 
-  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro a la configuración predeterminada del sistema, lo que facilita la depuración.
+  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): Esto registra un módulo de registro llamado pot_pwm_example y establece su nivel de registro en la configuración predeterminada del sistema, lo que facilita la depuración.
 
-- Configuración ADC:
+- Configuración del ADC:
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva de preprocesador es una verificación del Device Tree que asegura que existe un archivo de superposición válido que contiene definiciones de canales ADC. Esto obliga a que el usuario debe proporcionar la configuración correcta para el hardware específico.
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: Esta directiva del preprocesador es una comprobación del Device Tree que garantiza que exista un archivo de superposición válido que contenga las definiciones de los canales del ADC. Esto exige que el usuario proporcione la configuración correcta para el hardware específico.
 
-  - static const struct adc_dt_spec adc_channels[];: Esta parte del código aprovecha el Device Tree de Zephyr para recuperar automáticamente información de todos los canales ADC configurados. Este enfoque hace que el código sea flexible y portable entre diferentes hardware sin cambios manuales de configuración.
+  - static const struct adc_dt_spec adc_channels[];: Esta parte del código aprovecha el Device Tree de Zephyr para obtener automáticamente información de todos los canales de ADC configurados. Este enfoque hace que el código sea flexible y portátil entre diferentes hardware sin cambios de configuración manuales.
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Se define una macro para especificar a qué canal en el array adc_channels está conectado el potenciómetro.
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: Se define una macro para especificar a qué canal del arreglo adc_channels está conectado el potenciómetro.
 
-- Configuración PWM:
+- Configuración de PWM:
 
-  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: Esta línea recupera la información del dispositivo PWM para el alias pwm_led del Device Tree. Esta es una práctica estándar de Zephyr para buscar y referenciar dispositivos de hardware.
+  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: Esta línea obtiene la información del dispositivo PWM para el alias pwm_led desde el Device Tree. Esta es una práctica estándar de Zephyr para buscar y referenciar dispositivos de hardware.
 
-  - #define PWM_PERIOD_NS 1000000UL: Esto define el período de la señal PWM como 1 milisegundo (1,000,000 nanosegundos), lo que corresponde a una frecuencia de 1 kHz. Esta frecuencia es adecuada para el atenuado de LED ya que es lo suficientemente alta para prevenir el parpadeo visible.
+  - #define PWM_PERIOD_NS 1000000UL: Esto define el período de la señal PWM como 1 milisegundo (1 000 000 nanosegundos), lo que corresponde a una frecuencia de 1 kHz. Esta frecuencia es adecuada para el control de brillo de un LED, ya que es lo suficientemente alta como para evitar parpadeos visibles.
 
-**Inicialización y Configuración**
+**Inicialización y configuración**
 
-- Información de Registro:
+- Información de registro:
 
   - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: Se imprime un mensaje de registro informativo al inicio del programa para notificar al usuario que el ejemplo ha comenzado.
 
-- Inicialización ADC:
+- Inicialización del ADC:
 
-  - !adc_is_ready_dt(): Antes de intentar usar el dispositivo ADC, se realiza una verificación para confirmar que está listo. Si el dispositivo no está listo, se registra un error y el programa termina.
+  - !adc_is_ready_dt(): Antes de intentar usar el dispositivo ADC, se realiza una comprobación para confirmar que está listo. Si el dispositivo no está listo, se registra un error y el programa termina.
 
-  - adc_channel_setup_dt(): Esta función configura el canal ADC específico conectado al potenciómetro, incluyendo su resolución y ganancia.
+  - adc_channel_setup_dt(): Esta función configura el canal específico del ADC conectado al potenciómetro, incluida su resolución y ganancia.
 
-- Inicialización PWM:
+- Inicialización del PWM:
 
-  - !device_is_ready(led.dev): Similar al ADC, esta línea verifica si el dispositivo PWM está listo. Si no, se registra un error y el programa termina.
+  - !device_is_ready(led.dev): De forma similar al ADC, esta línea comprueba si el dispositivo PWM está listo. Si no lo está, se registra un error y el programa termina.
 
-  - LOG_INF(...): La información del período PWM y la frecuencia se imprimen para ayudar al usuario a confirmar la configuración.
+  - LOG_INF(...): Se imprimen la información del período y la frecuencia del PWM para ayudar al usuario a confirmar la configuración.
 
-- Configuración de Secuencia ADC:
+- Configuración de la secuencia del ADC:
 
-  - struct adc_sequence sequence: Se define una estructura adc_sequence para describir una sola operación de conversión ADC. Especifica el buffer (adc_raw_value) para almacenar el resultado, su tamaño (sizeof(adc_raw_value)), y la resolución ADC a usar.
+  - struct adc_sequence sequence: Se define una estructura adc_sequence para describir una única operación de conversión del ADC. Especifica el búfer (adc_raw_value) para almacenar el resultado, su tamaño (sizeof(adc_raw_value)) y la resolución del ADC que se va a utilizar.
 
-**Bucle Principal**
-La lógica central del código se ejecuta dentro de un bucle infinito while (1):
+**Bucle principal**
+La lógica principal del código se ejecuta dentro de un bucle infinito while (1):
 
-- Lectura ADC:
-  - adc_sequence_init_dt(): La secuencia ADC se inicializa para asegurar que se use la configuración correcta para cada lectura.
+- Lectura del ADC:
 
-  - adc_read(): Esto activa una conversión ADC para leer el valor analógico del potenciómetro. Si la lectura falla, se registra un error y el programa pausa durante 100 milisegundos antes de continuar.
+  - adc_sequence_init_dt(): La secuencia del ADC se inicializa para garantizar que se use la configuración correcta en cada lectura.
 
-  - int sensor_value = adc_raw_value;: El valor ADC crudo se asigna a la variable sensor_value.
+  - adc_read(): Esto desencadena una conversión del ADC para leer el valor analógico del potenciómetro. Si la lectura falla, se registra un error y el programa se pausa durante 100 milisegundos antes de continuar.
 
-- Mapeo del Valor ADC al Ciclo de Trabajo PWM:
+  - int sensor_value = adc_raw_value;: El valor bruto del ADC se asigna a la variable sensor_value.
 
-  - uint32_t max_adc_raw: Esto calcula el valor ADC crudo máximo posible.
+- Mapeo del valor del ADC al ciclo de trabajo del PWM:
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica de mapeo central. Escala el valor ADC crudo (sensor_value) proporcionalmente al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajuste el brillo del LED.
+  - uint32_t max_adc_raw: Esto calcula el valor bruto máximo posible del ADC.
 
-- Configuración del Ciclo de Trabajo PWM:
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: Esta es la lógica principal de mapeo. Escala el valor bruto del ADC (sensor_value) de forma proporcional al rango del período PWM (PWM_PERIOD_NS) para obtener un valor de ciclo de trabajo que ajusta el brillo del LED.
 
-  - pwm_set_dt(): Esta función aplica el ciclo de trabajo recién calculado (output_duty_ns) al dispositivo PWM, cambiando instantáneamente el brillo del LED.
+- Configuración del ciclo de trabajo del PWM:
 
-- Retraso:
+  - pwm_set_dt(): Esta función aplica el nuevo ciclo de trabajo calculado (output_duty_ns) al dispositivo PWM, cambiando instantáneamente el brillo del LED.
 
-  - k_msleep(100): El programa pausa durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas ADC y actualizaciones PWM, evitando una carga excesiva de CPU y proporcionando una experiencia de usuario estable.
+- Retardo:
+
+  - k_msleep(100): El programa se pausa durante 100 milisegundos después de cada bucle. Esto controla la frecuencia de las lecturas del ADC y las actualizaciones del PWM, evitando una carga excesiva de la CPU y proporcionando una experiencia de usuario estable.
 
 ### Gráfico de resultados
 
@@ -438,13 +471,13 @@ La lógica central del código se ejecuta dentro de un bucle infinito while (1):
 
 ## UART
 
-### Preparación del Hardware
+### Preparación de hardware
 
 <div class="table-center">
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Módulo GNSS L76K para Seeed Studio XIAO</th>
+   <th>Módulo L76K GNSS para Seeed Studio XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -453,23 +486,23 @@ La lógica central del código se ejecuta dentro de un bucle infinito while (1):
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### Implementación del Software
+### Implementación de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-gps" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -957,71 +990,71 @@ static Coordinates transform(Coordinates gps)
 
 </details>
 
-**Configuración e Inicialización del Módulo GPS**
+**Configuración e inicialización del módulo GPS**
 
-- Módulo de Log `gps_app`:
+- Módulo de registro `gps_app`:
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Esto registra un módulo de log llamado gps_app y establece su nivel de log en INFO. Esto permite al programa generar información a través del sistema de logging de Zephyr, lo cual es útil para depuración y monitoreo.
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` Esto registra un módulo de registro llamado gps_app y establece su nivel de registro en INFO. Esto permite que el programa emita información a través del sistema de registro de Zephyr, lo cual es útil para la depuración y la monitorización.
 
-- Definiciones de Tipos y Macros:
+- Definiciones de tipos y macros:
 
- -`UBYTE`, `UWORD`, `UDOUBLE:` Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
+ -`UBYTE`, `UWORD`, `UDOUBLE:`Estos son alias de tipos enteros sin signo personalizados que mejoran la legibilidad del código al aclarar el tamaño esperado de las variables.
 
-- `SENTENCE_SIZE, BUFFSIZE:` Estos definen tamaños fijos para buffers utilizados para almacenar sentencias NMEA y buffers de datos más grandes.
+- `SENTENCE_SIZE, BUFFSIZE:` Estos definen tamaños fijos para los búferes utilizados para almacenar sentencias NMEA y búferes de datos más grandes.
 
-- Macros como `HOT_START, SET_NMEA_OUTPUT:` Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de operación, frecuencia de salida, velocidad de baudios, etc.
+- Macros como `HOT_START, SET_NMEA_OUTPUT:`Estas macros definen varios comandos del protocolo NMEA enviados al módulo GPS L76X para configurar su modo de funcionamiento, frecuencia de salida, velocidad en baudios, etc.
 
-- Definiciones de Estructuras:
+- Definiciones de estructuras:
 
-  - `GNRMC:` Esta estructura se utiliza para almacenar información clave analizada de una sentencia NMEA GNRMC (GPS Recommended Minimum Specific data), incluyendo longitud, latitud, tiempo, estado y direcciones cardinales.
+  - `GNRMC:` Esta estructura se utiliza para almacenar información clave analizada de una sentencia NMEA GNRMC (GPS Recommended Minimum Specific data), incluyendo longitud, latitud, hora, estado y direcciones cardinales.
 
-  - `Coordinates:` Una estructura simple para almacenar la longitud y latitud de una coordenada geográfica.
+  - `Coordinates:` Una estructura simple para almacenar la longitud y la latitud de una coordenada geográfica.
 
-- Variables Globales y Constantes:
+- Variables globales y constantes:
 
-  - `buff_t:` Un buffer global de tamaño BUFFSIZE utilizado para almacenar datos UART sin procesar.
+  - `buff_t:` Un búfer global de tamaño BUFFSIZE utilizado para almacenar datos UART en bruto.
 
- -` GPS: `Una instancia global de estructura GNRMC utilizada para contener los datos GPS analizados.
+ -` GPS: `Una instancia global de la estructura GNRMC utilizada para contener los datos GPS analizados.
 
-- `uart_dev:` Un puntero a la estructura del dispositivo UART, utilizado para comunicación UART.
+- `uart_dev:` Un puntero a la estructura del dispositivo UART, utilizado para la comunicación UART.
 
-- `new_gnrmc_available:` Una bandera booleana volátil que se establece en verdadero cuando se recibe una nueva sentencia GNRMC válida, notificando al bucle principal que hay nuevos datos disponibles para procesamiento.
+- `new_gnrmc_available:` Una bandera booleana volátil que se establece en true cuando se recibe una nueva sentencia GNRMC válida, notificando al bucle principal que hay nuevos datos disponibles para procesar.
 
 - Función `uart_callback()`:
 
   - Esta es una función de callback de interrupción UART que se activa cuando el UART recibe datos.
 
-  - La función lee el FIFO UART byte por byte y procesa los datos como una sentencia completa cuando se encuentra un carácter de nueva línea \n.
+  - La función lee el FIFO del UART byte a byte y procesa los datos como una sentencia completa cuando se encuentra un carácter de nueva línea \n.
 
-**Función Principal main()**
+**Función principal main()**
 
-- Inicialización del Sistema:
+- Inicialización del sistema:
 
-  - `nrfx_power_constlat_mode_request():` Solicita un modo de latencia constante para asegurar que la gestión de energía no interfiera con las operaciones en tiempo real.
+  - `nrfx_power_constlat_mode_request():` Solicita un modo de latencia constante para garantizar que la gestión de energía no interfiera con las operaciones en tiempo real.
 
-  - `uart_dev = DEVICE_DT_GET:` Obtiene el manejador del dispositivo UART y utiliza device_is_ready() para verificar si el dispositivo está listo.
+  - `uart_dev = DEVICE_DT_GET:` Obtiene el manejador del dispositivo UART y utiliza device_is_ready() para comprobar si el dispositivo está listo.
 
-  - `uart_irq_callback_user_data_set()` y `uart_irq_rx_enable():` Estos configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupción para asegurar la recepción asíncrona de datos GPS.
+  - `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():`Estas funciones configuran y habilitan la interrupción de recepción UART, registrando la función uart_callback como el manejador de interrupciones para garantizar la recepción asíncrona de datos GPS.
 
-- Inicialización del Módulo GPS:
+- Inicialización del módulo GPS:
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):` Se envía un comando para configurar el módulo GPS para que genere solo sentencias NMEA especificadas como GNRMC, reduciendo el tráfico de datos innecesario.
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):`Se envía un comando para configurar el módulo GPS a fin de que emita solo sentencias NMEA específicas como GNRMC, reduciendo el tráfico de datos innecesario.
 
- -` L76X_Send_Command(SET_POS_FIX_1S): `Establece la frecuencia de actualización de posición del módulo GPS a 1 segundo.
+ -` L76X_Send_Command(SET_POS_FIX_1S): `Establece la frecuencia de actualización de posición del módulo GPS en 1 segundo.
 
-- Bucle Principal:
+- Bucle principal:
 
-  - El bucle se ejecuta indefinidamente, verificando continuamente la bandera new_gnrmc_available.
+  - El bucle se ejecuta indefinidamente, comprobando continuamente la bandera new_gnrmc_available.
 
-  - Si la bandera es verdadera, copia la última sentencia GPS de latest_gnrmc a buff_t, y luego llama a L76X_Gat_GNRMC() para analizar los datos.
+  - Si la bandera es true, copia la última sentencia GPS de latest_gnrmc a buff_t y luego llama a L76X_Gat_GNRMC() para analizar los datos.
 
-  - Basándose en el resultado del análisis, imprime la hora, longitud y latitud WGS-84, y las coordenadas convertidas de Baidu y Google.
+  - En función del resultado del análisis, imprime la hora, la longitud y latitud WGS-84, y las coordenadas convertidas de Baidu y Google.
 
-  - Si GPS.Status es 0, imprime un mensaje de "posicionamiento fallido".
+  - Si GPS.Status es 0, imprime un mensaje de "fallo en el posicionamiento".
 
-  - Si no hay nuevos datos disponibles, imprime "No hay nuevos datos GNRMC disponibles."
+  - Si no hay datos nuevos disponibles, imprime "No new GNRMC data available."
 
-  - k_msleep(2000): El programa hace una pausa de 2 segundos después de cada bucle para controlar la frecuencia de salida.
+  - k_msleep(2000): El programa se detiene durante 2 segundos después de cada bucle para controlar la frecuencia de salida.
 
 ### Gráfico de resultados
 
@@ -1036,7 +1069,7 @@ static Coordinates transform(Coordinates gps)
 
 ## I2C
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <div class="table-center">
  <table align="center">
@@ -1051,23 +1084,23 @@ static Coordinates transform(Coordinates gps)
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### Implementación de Software
+### Implementación de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-expansion-base-for-xiao/oled" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1219,27 +1252,28 @@ int main(void) {
 
     return 0;
 }
+
 ```
 
-**Configuración e Inicialización del Dispositivo de Pantalla**
+**Configuración e inicialización del dispositivo de visualización**
 
-- Módulo de Log `main_app`:
+- Módulo de registro `main_app`:
 
-  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL y LOG_MODULE_REGISTER(main_app, LOG_LEVEL) registran un módulo de log llamado main_app y establecen su nivel de log a la configuración predeterminada del sistema. Esto permite a los desarrolladores depurar fácilmente y generar información a través del sistema de logging de Zephyr.
+  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL y LOG_MODULE_REGISTER(main_app, LOG_LEVEL) registran un módulo de registro llamado main_app y establecen su nivel de registro en la configuración predeterminada del sistema. Esto permite a los desarrolladores depurar y mostrar información fácilmente a través del sistema de registro de Zephyr.
 
 - Función `display_init()`:
 
-  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta línea recupera el dispositivo de pantalla elegido del Device Tree de Zephyr. Este enfoque asegura que el código sea independiente del hardware.
+  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` Esta línea obtiene el dispositivo de visualización elegido desde el Device Tree de Zephyr. Este enfoque garantiza que el código sea independiente del hardware.
 
-  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta establecer el formato de píxel de la pantalla a PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto asegura que la pantalla opere en modo monocromo, lo cual es necesario para algunas tecnologías de pantalla (por ejemplo, OLED o e-Paper).
+  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`El código intenta configurar el formato de píxel de la pantalla a PIXEL_FORMAT_MONO10. Si esto falla, entonces intenta PIXEL_FORMAT_MONO01. Esto garantiza que la pantalla funcione en modo monocromo, lo cual es necesario para algunas tecnologías de visualización (por ejemplo, OLED o e-Paper).
 
 - Función `framebuffer_setup()`:
 
-  - `cfb_framebuffer_init(dev):`Esto inicializa el Compact Framebuffer (CFB). CFB es una biblioteca de gráficos ligera en Zephyr utilizada para dibujar texto y gráficos simples en pantallas.
+  - `cfb_framebuffer_init(dev):`Esto inicializa el Compact Framebuffer (CFB). CFB es una biblioteca gráfica ligera en Zephyr utilizada para dibujar texto y gráficos simples en pantallas.
 
-  - `cfb_framebuffer_clear(dev, true):`Esto limpia el framebuffer e inmediatamente escribe su contenido a la pantalla, asegurando una pantalla limpia.
+  - `cfb_framebuffer_clear(dev, true):`Esto borra el framebuffer y escribe inmediatamente su contenido en la pantalla, garantizando una pantalla limpia.
 
-  - `display_blanking_off(dev):`Esto desactiva la función de blanking de la pantalla, que típicamente es una señal de que la pantalla está lista para recibir datos y mostrar una imagen.
+  - `display_blanking_off(dev):`Esto desactiva la función de blanking de la pantalla, que normalmente es una señal de que la pantalla está lista para recibir datos y mostrar una imagen.
 
 - Función `select_font()`:
 
@@ -1247,30 +1281,30 @@ int main(void) {
 
   - El código prioriza una fuente de píxeles` 8x8 `, ya que es una fuente pequeña común y fácil de leer.
 
-  - Si no se encuentra una fuente `8x8`, selecciona la primera fuente disponible de tamaño no cero como respaldo.
+  - Si no se encuentra una fuente `8x8`, selecciona la primera fuente disponible de tamaño distinto de cero como respaldo.
 
   - `cfb_framebuffer_set_font(dev, chosen_font_idx):` Una vez que se encuentra una fuente adecuada, se establece como la fuente actual para el framebuffer.
 
 - Función `print_text_by_row_col()`:
 
- -` int pixel_x = col * font_width; `y `int pixel_y = row * font_height;:` Esta función convierte las coordenadas de fila y columna del texto (en unidades de caracteres) a coordenadas de píxeles, haciendo el posicionamiento del texto más intuitivo.
+ -` int pixel_x = col * font_width; `y `int pixel_y = row * font_height;:` Esta función convierte las coordenadas de fila y columna del texto (en unidades de caracteres) a coordenadas de píxeles, haciendo que la posición del texto sea más intuitiva.
 
-- `cfb_print():` Esta es la función principal de la biblioteca CFB utilizada para imprimir texto en la ubicación de píxel especificada.
+- `cfb_print():` Esta es la función principal de la biblioteca CFB utilizada para imprimir texto en la ubicación de píxeles especificada.
 
-**Bucle Principal**
-La lógica principal del código se ejecuta dentro de un bucle infinito `while (1)`:
+**Bucle principal**
+La lógica central del código se ejecuta dentro de un bucle infinito `while (1)`:
 
-- Limpieza de la Pantalla: `cfb_framebuffer_clear(dev, false):` Al comienzo de cada bucle, esto limpia el framebuffer sin refrescar inmediatamente la pantalla. Esto permite que múltiples elementos se dibujen a la vez, previniendo el parpadeo de la pantalla.
+- Borrado de la pantalla: `cfb_framebuffer_clear(dev, false):` Al comienzo de cada bucle, esto borra el framebuffer sin actualizar inmediatamente la pantalla. Esto permite dibujar varios elementos a la vez, evitando el parpadeo de la pantalla.
 
-- Impresión de Texto:
+- Impresión de texto:
 
   - Se definen dos cadenas, `line1_text` y `line2_text`.
 
   - print_text_by_row_col(): La función personalizada se utiliza para imprimir estas dos líneas de texto en posiciones específicas de fila y columna en la pantalla. La primera línea se imprime en `(1, 2)` y la segunda línea en `(2, 1).`
 
-  - Refrescado de la Pantalla: `cfb_framebuffer_finalize(dev)`: Esta función envía todos los comandos de dibujo pendientes del framebuffer a la pantalla de una vez, haciendo que todo el contenido aparezca simultáneamente.
+  - Actualización de la pantalla: `cfb_framebuffer_finalize(dev)`: Esta función envía todos los comandos de dibujo pendientes desde el framebuffer a la pantalla de una sola vez, haciendo que todo el contenido aparezca simultáneamente.
 
-  - Retraso: `k_sleep(K_MSEC(1000)):` Después de cada bucle, el programa hace una pausa de 1000 milisegundos (1 segundo). Esto controla la frecuencia de actualización de la pantalla, lo cual es adecuado para aplicaciones que muestran información estática, como un reloj o datos de sensores, de manera estable.
+  - Retardo: `k_sleep(K_MSEC(1000)):` Después de cada bucle, el programa se detiene durante 1000 milisegundos (1 segundo). Esto controla la frecuencia de actualización de la pantalla, lo cual es adecuado para aplicaciones que muestran información estática, como un reloj o datos de sensores, de manera estable.
 
 ### Gráfico de resultado
 
@@ -1278,13 +1312,13 @@ La lógica principal del código se ejecuta dentro de un bucle infinito `while (
 
 ## SPI
 
-### Preparación de Hardware
+### Preparación de hardware
 
 <div class="table-center">
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Placa Controladora ePaper para Seeed Studio XIAO</th>
+   <th>ePaper Driver Board for Seeed Studio XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -1293,23 +1327,23 @@ La lógica principal del código se ejecuta dentro de un bucle infinito `while (
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### Implementación de Software
+### Implementación de software
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-epaper" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1427,59 +1461,59 @@ int main(void)
 }
 ```
 
-**Inicialización del Dispositivo:**
+**Inicialización del dispositivo:**
 
-- El código primero obtiene el dispositivo de pantalla del árbol de dispositivos usando `DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).`
+- El código primero obtiene el dispositivo de pantalla desde el device tree usando `DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).`
 
-- Luego llama a `device_is_ready()` para verificar si el dispositivo está correctamente inicializado y listo para operar. Este es un primer paso crucial para cualquier interacción con hardware.
+- Luego llama a `device_is_ready()` para comprobar si el dispositivo está correctamente inicializado y listo para funcionar. Este es un primer paso crucial para cualquier interacción con el hardware.
 
 **Inicialización de LVGL:**
 
-- `lv_init()` es el punto de entrada para la biblioteca gráfica LVGL. Debe ser llamada antes de que se creen objetos LVGL o se realicen operaciones, ya que inicializa el estado interno de la biblioteca.
+- `lv_init()` es el punto de entrada para la biblioteca gráfica LVGL. Debe llamarse antes de que se creen cualquier objeto LVGL o se realice cualquier operación, ya que inicializa el estado interno de la biblioteca.
 
-**Limpieza de Pantalla:**
+**Limpieza de la pantalla:**
 
-- Se llama a la función `display_blanking_off()`. Para pantallas E-Paper, esto típicamente activa una actualización completa para limpiar cualquier contenido antiguo en la pantalla.
+- Se llama a la función `display_blanking_off()`. Para pantallas de tinta electrónica (E-Paper), esto normalmente desencadena una actualización completa para borrar cualquier contenido antiguo en la pantalla.
 
-- Para asegurar aún más un lienzo limpio, el código usa `lv_scr_act()` para obtener la pantalla activa actual y establece su color de fondo a blanco usando `lv_obj_set_style_bg_color()`, cubriendo toda el área de la pantalla.
+- Para garantizar aún más un lienzo limpio, el código usa `lv_scr_act()` para obtener la pantalla activa actual y establece su color de fondo en blanco usando `lv_obj_set_style_bg_color()`, cubriendo toda el área de visualización.
 
-**Preparación del Diseño de Pantalla:**
+**Preparación del diseño de la pantalla:**
 
-- Las funciones `lv_disp_get_hor_res()` y `lv_disp_get_ver_res()` se usan para obtener el ancho y alto reales de la pantalla, lo cual es útil para la colocación precisa de elementos de UI más adelante.
+- Las funciones `lv_disp_get_hor_res()` y `lv_disp_get_ver_res()` se utilizan para obtener el ancho y la altura reales de la pantalla, lo cual es útil para una colocación precisa de los elementos de la interfaz de usuario más adelante.
 
-- El código también elimina el relleno de la pantalla `(lv_obj_set_style_pad_all())` y la barra de desplazamiento `(lv_obj_set_scrollbar_mode())` para maximizar el área de dibujo utilizable.
+- El código también elimina el relleno de la pantalla `(lv_obj_set_style_pad_all())` y la barra de desplazamiento ` (lv_obj_set_scrollbar_mode()) ` para maximizar el área de dibujo utilizable.
 
-**Creación y Configuración de Elementos de UI:**
+**Creación y configuración de elementos de la UI:**
 
-- Panel: Se crea un objeto panel con `lv_obj_create(scr)`. Su tamaño y alineación centrada se establecen usando `lv_obj_set_size()` y `lv_obj_align()`. Su estilo, incluyendo el fondo blanco y borde negro, se configura con funciones como `lv_obj_set_style_bg_color()` y `lv_obj_set_style_border_color().`
+- Panel: Se crea un objeto panel con `lv_obj_create(scr)`. Su tamaño y alineación centrada se establecen usando `lv_obj_set_size()` y `lv_obj_align()`. Su estilo, incluido el fondo blanco y el borde negro, se configura con funciones como `lv_obj_set_style_bg_color()` y `lv_obj_set_style_border_color().`
 
 - Etiquetas:
 
-  - `lv_label_create()` se usa para crear etiquetas de texto.
+  - `lv_label_create()` se utiliza para crear etiquetas de texto.
 
   - `lv_label_set_text()` establece el contenido de texto de las etiquetas.
 
-  - `lv_obj_set_style_text_color()` y lv_obj_set_style_text_font() se usan para establecer el color del texto y el tamaño de fuente.
+  - `lv_obj_set_style_text_color()` y lv_obj_set_style_text_font() se utilizan para establecer el color del texto y el tamaño de la fuente.
 
-- La función `lv_obj_align()` coloca cada etiqueta en una ubicación específica en la pantalla, como centro, arriba-derecha, abajo-izquierda, y abajo-derecha.
+- La función `lv_obj_align()` coloca cada etiqueta en una ubicación específica en la pantalla, como el centro, la parte superior derecha, la parte inferior izquierda y la parte inferior derecha.
 
-Cuadrados: Se usa un bucle for para crear cuatro objetos cuadrados pequeños. Su tamaño, estilo (relleno blanco con borde negro), y posición se establecen secuencialmente, organizándolos horizontalmente en la esquina superior izquierda de la pantalla.
+Cuadrados: Se utiliza un bucle for para crear cuatro pequeños objetos cuadrados. Su tamaño, estilo (relleno blanco con borde negro) y posición se establecen secuencialmente, organizándolos horizontalmente en la esquina superior izquierda de la pantalla.
 
-**Bucle Principal:**
+**Bucle principal:**
 
-- El bucle `while(1)` es la parte de ejecución continua del programa.
+- `The while(1)` loop es la parte de ejecución continua del programa.
 
-- `lv_task_handler()` se llama continuamente dentro del bucle para procesar todas las tareas internas de LVGL, como actualizar elementos de UI y manejar eventos.
+- `lv_task_handler()` se llama continuamente dentro del bucle para procesar todas las tareas internas de LVGL, como actualizar elementos de la UI y manejar eventos.
 
-- `k_sleep(K_MSEC(1000))` pausa el hilo por 1000 milisegundos. Para d
+- `k_sleep(K_MSEC(1000))` pausa el hilo durante 1000 milisegundos. Para d estáticos
 
 ### Gráfico de resultado
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_nrf54.jpg" style={{width:600, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión del Producto
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

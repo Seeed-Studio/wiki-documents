@@ -1,5 +1,5 @@
 ---
-description: Seeed Studio XIAO ESP32C3のピン多重化
+description: Seeed Studio XIAO ESP32C3 におけるピン多重化
 title: ピン多重化
 keywords:
   - xiao
@@ -8,36 +8,49 @@ slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
   date: 07/25/2024
   author: Spencer
-createdAt: '2025-05-27'
-updatedAt: '2025-09-25'
+createdAt: '2023-01-16'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Pin_Multiplexing/
 ---
 
 # ピン多重化
 
-Seeed Studio XIAO ESP32C3は豊富なインターフェースを備えています。**PWMピン**として使用できる**11個のデジタルI/O**と、**ADCピン**として使用できる**4個のアナログ入力**があります。**UART、I2C、SPI、I2S**などの4つのシリアル通信インターフェースをサポートしています。このwikiは、これらのインターフェースについて学び、次のプロジェクトで実装するのに役立ちます！
+Seeed Studio XIAO ESP32C3 は豊富なインターフェースを備えています。**PWM ピン**として使用できる**11 個のデジタル I/O**と、**ADC ピン**として使用できる**4 個のアナログ入力**があります。**UART、I2C、SPI、I2S** といった 4 種類のシリアル通信インターフェースをサポートしています。本 Wiki は、これらのインターフェースについて学び、次回のプロジェクトで活用するのに役立ちます。
+
+## ハードウェア概要
+
+> *A3(GP105) - ADC2 を使用しており、誤ったサンプリング信号により動作しなくなる場合があります。信頼性の高いアナログ読み取りには、代わりに ADC1(A0/A1/A2) を使用してください。詳細は ESP32-C3 のデータシートを参照してください。
+
+### 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 
 ## デジタル
 
-プッシュボタンをピンD6に、LEDをピンD10に接続します。次に、以下のコードをアップロードして、プッシュボタンを使用してLEDのON/OFFを制御します。
+プッシュボタンをピン D6 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、プッシュボタンを使って LED の ON/OFF を制御します。
 
 ```c
 const int buttonPin = D6;     // pushbutton connected to digital pin 6
 const int ledPin =  D10;      // LED connected to digital pin 10
- 
+
 int buttonState = 0;         // variable for reading the pushbutton status
- 
+
 void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
   // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
- 
+
 void loop() {
   // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
- 
+
   // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
     // turn LED on:
@@ -49,9 +62,9 @@ void loop() {
 }
 ```
 
-## デジタルとしての PWM
+## PWM としてのデジタル
 
-LEDをピンD10に接続してください。その後、以下のコードをアップロードすると、LEDが徐々にフェードしていく様子を確認できます。
+LED をピン D10 に接続します。次に、以下のコードを書き込んで、LED が徐々に明るくなったり暗くなったりする様子を確認します。
 
 ```cpp
 int ledPin = D10;    // LED connected to digital pin 10
@@ -82,10 +95,10 @@ void loop() {
 
 ## アナログ
 
-ポテンショメータをピンA0に、LEDをピンD10に接続します。その後、以下のコードをアップロードして、ポテンショメータのノブを回すことでLEDの点滅間隔を制御します。
+可変抵抗器をピン A0 に、LED をピン D10 に接続します。次に、以下のコードを書き込んで、可変抵抗器のつまみを回すことで LED の点滅間隔を制御します。
 
 :::tip
-ADCマッピング範囲は0-2500mVです。
+ADC のマッピング範囲は 0〜2500mV です。
 :::
 
 ```c
@@ -111,18 +124,18 @@ void loop() {
 }
 ```
 
-## Serial - UART
+## シリアル - UART
 
-### 通常の方法 - USB シリアルまたは UART0 シリアルのいずれかを選択して使用
+### 通常の方法 - USB シリアルか UART0 シリアルのどちらか一方を使用
 
-このボードには2つのシリアルインターフェースがあります：
+このボードには 2 つのシリアルインターフェースがあります：
 
-- USB Serial
-- UART0 Serial
+- USB シリアル
+- UART0 シリアル
 
 :::note
-XIAO ESP32 C3には`Serial2`はありません。
-また、`Serial1`を使用する必要がある場合は、ピンを定義する必要があります。そうしないと、データを受信できない可能性があります。XIAO ESP32シリーズでは、以下のように`Serial1`を使用します：
+XIAO ESP32 C3 には `Serial2` はありません。
+また、`Serial1` を使用する必要がある場合は、ピンを定義しなければなりません。そうしないと、データを受信できない可能性があります。XIAO ESP32 シリーズでは、`Serial1` を次のように使用します。
 
 ```cpp
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
@@ -130,39 +143,39 @@ Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 
 :::
 
-デフォルトでは、USBシリアルが有効になっているため、USB Type-Cでボードをパソコンに接続し、Arduino IDEでシリアルモニターを開いてシリアル経由で送信されたデータを表示できます。
+デフォルトでは USB シリアルが有効になっており、USB Type-C を介してボードを PC に接続し、Arduino IDE 上でシリアルモニタを開いて、シリアル経由で送信されたデータを表示できます。
 
-ただし、UART0をシリアルとして使用したい場合は、ピンD6をTXピンとして、ピンD7をRXピンとしてUSB-Serialアダプターに接続する必要があります。
+しかし、UART0 をシリアルとして使用したい場合は、ピン D6 を TX ピン、ピン D7 を RX ピンとして USB-シリアルアダプタに接続する必要があります。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-3.png" alt="pir" width={1000} height="auto" /></div>
 
-また、Arduino IDEで**USB CDC On Boot**を**Disabled**に設定する必要があります。
+また、Arduino IDE で **USB CDC On Boot** を **Disabled** に設定する必要があります。
 
-**注意：ボードがArduino Board Managerに表示されたら写真を変更してください**
+**注意：ボードが Arduino Board Manager に表示される写真に変更してください**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-1.png" alt="pir" width={600} height="auto" /></div>
 
-以下のコードをArduino IDEにアップロードして、シリアル経由で文字列「Hello World!」を送信します
+次のコードを Arduino IDE に書き込んで、文字列 "Hello World!" をシリアル経由で送信します
 
 ```cpp
 void setup() {
     Serial.begin(115200);
     while (!Serial);
 }
- 
+
 void loop() {
     Serial.println("Hello World!");
     delay(1000);
 }
 ```
 
-出力はArduino Serial Monitorで以下のように表示されます
+Arduino シリアルモニタ上では、次のように出力されます
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-2.jpg" alt="pir" width={450} height="auto" /></div>
 
-### 特別な方法 - USBシリアルとUART0/UART1を同時に使用する
+### 特殊な方法 - USB シリアルと UART0/UART1 を同時に使用
 
-非常に多くの場合、UARTセンサーをXIAO ESP32C3ハードウェアシリアルポートに接続してデータを取得し、同時にUSBシリアルを使用してシリアルモニターにデータを表示する必要があります。これは特別な方法で実現できます。
+多くの場合、UART センサーを XIAO ESP32C3 のハードウェアシリアルポートに接続してデータを取得し、同時に USB シリアルを使用してシリアルモニタ上にデータを表示する必要があります。これは、いくつかの特殊な方法によって実現できます。
 
 - サンプルプログラム：
 
@@ -194,11 +207,11 @@ void loop()
 }
 ```
 
-ご覧のとおり、XIAO ESP32C3 には実際に3つのUARTが利用可能です。
+ご覧のとおり、XIAO ESP32C3 には実際には 3 つの UART が利用可能です。
 
-以下では、販売されている[60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html)を例に取り、D6とD7のハードウェアシリアルポートとUSBシリアルポートの使用方法について説明します。
+以下では、販売中の [60GHz mmWave Sensor - Human Resting Breathing and Heartbeat Module](https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html) を例に、D6 と D7 のハードウェアシリアルポートおよび USB シリアルポートの使用方法を説明します。
 
-以下をご準備ください。
+次のものを準備してください。
 
 <table align="center">
  <tr>
@@ -210,16 +223,16 @@ void loop()
         <td><div align="center"><img width = {240} src="https://files.seeedstudio.com/wiki/60GHzradar/newpic.png"/></div></td>
     </tr>
  <tr>
-        <td align = "center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">今すぐ購入取</a></td>
-        <td align = "center"><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">今すぐ購入取</a></td>
+        <td align = "center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">今すぐ入手</a></td>
+        <td align = "center"><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html">今すぐ入手</a></td>
  </tr>
 </table>
 
-センサーライブラリをコンピューターにダウンロードしてください。そしてArduino IDEに追加してください。
+センサーライブラリをコンピュータにダウンロードし、Arduino IDE に追加します。
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed-Studio-MR60BHA1-Sensor/" target="_blank"><div align="center"><img width = {300} src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
-ここで、心拍と呼吸データ情報を解析したい場合は、プログラムを次のように書き換えることができます。
+ここでは、心拍と呼吸のデータ情報を解析したいので、次のようにプログラムを書き換えることができます。
 
 ```c
 #include "Arduino.h"
@@ -308,31 +321,31 @@ void loop()
 }
 ```
 
-プログラムをアップロードし、シリアルモニターを開いてボーレートを115200に設定してください。
+プログラムを書き込んだら、シリアルモニタを開き、ボーレートを115200に設定してください。
 
-次に、以下の接続方法を使用してセンサーをXIAO ESP32C3に接続できます。
+次に、以下の接続方法を使用してセンサを XIAO ESP32C3 に接続します。
 
 <div align="center"><img width = {700} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.jpg"/></div>
 
-すべてがうまくいけば、シリアルモニターにデータメッセージが表示されます。
+すべてが正常であれば、シリアルモニタ上にデータメッセージが表示されます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
 
-### Serial1の使用方法
+### Serial1 の使用
 
-上記のXIAO ESP32C3ピン図の具体的なパラメータによると、TXピンとRXピンがあることが確認できます。
-これはシリアル通信とは異なりますが、使用方法も非常に似ており、いくつかのパラメータを追加する必要があるだけです。
-そこで次に、チップから引き出されたピンをシリアル通信に使用します。
+上記の XIAO ESP32C3 のピン図に示される具体的なパラメータによると、TX ピンと RX ピンがあることがわかります。
+これは通常のシリアル通信とは異なりますが、いくつかのパラメータを追加する必要がある点を除けば、使い方は非常によく似ています。
+そこで次に、チップから引き出されたピンを使用してシリアル通信を行います。
 
-含める必要があるコア関数：
+含める必要があるコア関数は次のとおりです：
 
-- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- Serial1を有効にする、関数プロトタイプ：`<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
-  - `baud`：ボーレート
-  - `config`：設定ビット
-  - `rxPin`：受信ピン
-  - `txPin`：送信ピン
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- Serial1 を有効にします。関数プロトタイプ : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+  - `baud`  :ボーレート
+  - `config`:設定ビット
+  - `rxPin` :受信ピン
+  - `txPin` :送信ピン
 
-注目すべき点は、デジタルピンポートを使用して定義する場合、ここは`#define RX_PIN D7`、`#define TX_PIN D6`とする必要があることです。具体的なパラメータについては、異なるXIAOシリーズのピン図を参照してください。
+デジタルピンポートを使用して定義する場合、この部分は `#define RX_PIN D7`、`#define TX_PIN D6` とする必要があることに注意してください。具体的なパラメータについては、各 XIAO シリーズのピン図を参照してください。
 
 以下はサンプルプログラムです：
 
@@ -344,7 +357,7 @@ void loop()
 void setup() {
     Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);
 }
- 
+
 void loop() {
   if(Serial1.available() > 0)
   {
@@ -356,16 +369,16 @@ void loop() {
 }
 ```
 
-プログラムをアップロードした後、Arduino IDEでシリアルモニターを開き、ボーレートを115200に設定します。その後、シリアルモニターSerial経由でXIAO ESP32C3に送信したいコンテンツを送ることができ、XIAOは送信したコンテンツの各バイトを出力します。ここでは、入力したコンテンツは「Hello Everyone」で、結果チャートは以下の通りです
+プログラムを書き込んだら、Arduino IDE でシリアルモニタを開き、ボーレートを 115200 に設定します。次に、シリアルモニタ Serial を介して XIAO ESP32C3 に任意の内容を送信できます。XIAO は、送信した内容の各バイトを出力します。ここでは、入力した内容は "Hello Everyone" であり、結果のチャートは次のとおりです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
 ### ソフトウェアシリアル
 
-ソフトウェアシリアルを使用するには、[EspSoftwareSerial](https://github.com/plerup/espsoftwareserial)ライブラリをインストールしてください。
+ソフトウェアシリアルを使用するには、[EspSoftwareSerial](https://github.com/plerup/espsoftwareserial) ライブラリをインストールします。
 
 :::tip
-現在、EspSoftwareSerialライブラリのバージョン7.0.0を推奨しています。他のバージョンでは、ソフトシリアルポートが正常に動作しない様々な程度の問題が発生する可能性があります。
+現在、EspSoftwareSerial ライブラリのバージョン 7.0.0 を推奨しています。他のバージョンでは、ソフトシリアルポートが正常に動作しないさまざまな問題が発生する可能性があります。
 :::
 
 ```cpp
@@ -393,13 +406,13 @@ void loop() {
 }
 ```
 
-この例では、ピン`D7 (RX)`と`D6 (TX)`でソフトウェアシリアルを9600ボーで設定します。ハードウェアシリアル（USB）とソフトウェアシリアルポートの両方を監視し、受信したデータを相互にエコーします。
+この例では、`D7 (RX)` と `D6 (TX)` ピンに 9600 ボーのソフトウェアシリアルを設定します。ハードウェアシリアル（USB）とソフトウェアシリアルの両方を監視し、受信したデータを相互にエコーバックします。
 
 ## I2C
 
 ### ハードウェア接続
 
-[Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html)をXIAO ESP32C3に以下のハードウェア接続に従って接続します。
+[Grove - OLED Yellow&Blue Display 0.96 (SSD1315)](https://www.seeedstudio.com/Grove-OLED-Yellow-Blue-Display-0-96-SSD1315-V1-0-p-5010.html) を、以下のハードウェア接続に従って XIAO ESP32C3 に接続します。
 
 |  Grove - OLED Yellow&Blue Display 0.96 (SSD1315) |  XIAO ESP32C3 |
 |-----------|-----------|
@@ -412,18 +425,18 @@ void loop() {
 
 ### ソフトウェアセットアップ
 
-- **ステップ 1.** Arduino IDEを開き、`Sketch > Include Library > Manage Libraries...`に移動します
+- **Step 1.** Arduino IDE を開き、`Sketch > Include Library > Manage Libraries...` に移動します
 
-- **ステップ 2.** **u8g2**を検索してインストールします
+- **Step 2.** **u8g2** を検索してインストールします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 3.** 以下のコードをアップロードして、OLEDディスプレイにテキスト文字列を表示します
+- **Step 3.** 以下のコードを書き込んで、OLED ディスプレイにテキスト文字列を表示します
 
 ```cpp
 //#include <Arduino.h>
 #include <U8g2lib.h>
- 
+
 #ifdef U8X8_HAVE_HW_SPI
 #include <SPI.h>
 #endif
@@ -432,12 +445,12 @@ void loop() {
 #endif
 
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);    //Low spped I2C
- 
+
 void setup(void) {
   u8g2.begin();
 //  u8x8.setFlipMode(1);   // set number from 1 to 3, the screen word will rotary 180
 }
- 
+
 void loop(void) {
   u8g2.clearBuffer();                   // clear the internal memory
   u8g2.setFont(u8g2_font_ncenB08_tr);   // choose a suitable font
@@ -453,7 +466,7 @@ void loop(void) {
 
 ### ハードウェア接続
 
-以下のハードウェア接続に従って、[Grove - High Precision Barometric Pressure Sensor (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) を XIAO ESP32C3 に接続します。
+[Grove - High Precision Barometric Pressure Sensor (DPS310)](https://www.seeedstudio.com/Grove-High-Precision-Barometer-Sensor-DPS310-p-4397.html) を、以下のハードウェア接続に従って XIAO ESP32C3 に接続します。
 
 | Grove - High Precision Barometric Pressure Sensor (DPS310) | XIAO ESP32C3 |
 |-----------|------------|
@@ -468,19 +481,19 @@ void loop(void) {
 
 ### ソフトウェアセットアップ
 
-- **ステップ 1**. [Seeed_Arduino_DPS310 Library](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) をzipファイルとしてダウンロードします
+- **Step 1**. [Seeed_Arduino_DPS310 Library](https://github.com/Seeed-Studio/Seeed_Arduino_DPS310) を zip ファイルとしてダウンロードします
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-5.png" alt="pir" width={1000} height="auto" /></div>
 
-- **ステップ 2**. Arduino IDEを開き、`Sketch > Include Library > Add .ZIP Library...` に移動して、ダウンロードしたzipファイルを開きます
+- **Step 2**. Arduino IDE を開き、`Sketch > Include Library > Add .ZIP Library...` に移動して、ダウンロードした zip ファイルを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 3.** `File > Examples > DigitalPressureSensor > spi_background` に移動して、**spi_background** サンプルを開きます
+- **Step 3.** `File > Examples > DigitalPressureSensor > spi_background` に移動して、**spi_background** サンプルを開きます
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-6.png" alt="pir" width={450} height="auto" /></div>
 
-または、以下からコードをコピーすることもできます
+または、以下からコードをコピーして使用することもできます。
 
 ```cpp
 #include <Dps310.h>
@@ -577,48 +590,48 @@ void loop() {
 }
 ```
 
-- **ステップ4.** コードをアップロードし、**シリアルモニター**を開く
+- **ステップ 4.** コードをアップロードし、**シリアルモニタ** を開きます
 
-**注意:** コードをアップロードしても、Arduinoウィンドウの右上角にある**シリアルモニター**をクリックするまで自動的に実行されません。
+**注意：** コードをアップロードしても、Arduino ウィンドウ右上の **Serial Monitor** をクリックするまで自動的には実行されません。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pins-8.jpg" alt="pir" width={600} height="auto" /></div>
 
-これで、上記のようにシリアルモニターに温度と圧力データが順次表示されるのが確認できます！
+これで、上図のようにシリアルモニタ上に温度と気圧のデータが交互に表示されるのが確認できます！
 
-## XIAO ESP32C3 IO割り当てに関する注意事項
+## XIAO ESP32C3 の IO 割り当てに関する注意
 
 ### D9
 
-XIAO ESP32C3のD9は、ESP32-C3のGPIO9 (15)、プルアップ抵抗 (R6)、およびBOOTボタンに接続されています。BOOTボタン（およびRESETボタン）により、ESP32-C3のブートモードを手動で切り替えることができます。
+XIAO ESP32C3 の D9 は、ESP32-C3 の GPIO9（15）、プルアップ抵抗（R6）、および BOOT ボタンに接続されています。BOOT ボタン（および RESET ボタン）により、ESP32-C3 のブートモードを手動で切り替えることができます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/10.png" alt="pir" width={600} height="auto" /></div>
 
-BOOTボタンを押すとD9がGNDに接続されます。**そのため、D9はスイッチ入力として使用することをお勧めします**。
+BOOT ボタンを押すと、D9 は GND に接続されます。**したがって、D9 はスイッチ入力として使用するのが望ましいです**。
 
 ### D6
 
-XIAO ESP32C3のD6は、ESP32-C3のU0TXD (28)に接続されています。1st/2ndステージブートローダーの動作状況がテキストとしてU0TXDに出力されます。
+XIAO ESP32C3 の D6 は、ESP32-C3 の U0TXD（28）に接続されています。第 1 / 第 2 段階ブートローダの動作状態はテキストとして U0TXD に出力されます。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/11.png" alt="pir" width={400} height="auto" /></div>
 
-D6は起動時にUART出力として設定されるため、D6を入力として使用すると誤って大電流が発生する可能性があります。**そのため、D6ピンは出力モードでのみ使用することをお勧めします**。
+D6 は起動時に UART 出力として設定されるため、D6 を入力として使用すると、誤って大電流を発生させてしまう可能性があります。**したがって、D6 ピンは出力モードでのみ使用することを推奨します**。
 
-ただし、このD6はUART出力であるため、いくつかの点に注意する必要があります：一つは通信していない待機モード時にHIGHになることです。もう一つは1st/2ndステージブートローダーのテキスト出力です。起動直後に信号がHIGH/LOWに変動するため、必要に応じて対策を講じる必要があります。
+しかし、この D6 は UART 出力であるため、いくつか注意すべき点があります。1 つは、通信していない待機状態では HIGH であることです。もう 1 つは、第 1 / 第 2 段階ブートローダのテキスト出力です。起動直後に信号が HIGH/LOW とパタパタ変化するため、必要に応じて対策を講じる必要があります。
 
-そのため、D6の使用は避けるようにしてください。（もちろん、理解した上で使用するのは問題ありません。）
+そのため、D6 はできるだけ使用しないようにしてください。（もちろん、理解した上であれば使用しても問題ありません。）
 
 ### D8
 
-Seeed Studio XIAO ESP32C3のD8は、ESP32-C3のGPIO8 (14)に接続されています。
+Seeed Studio XIAO ESP32C3 の D8 は、ESP32-C3 の GPIO8（14）に接続されています。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
-GPIO8は、BOOTボタンを押し続けてブートモードをダウンロードブートに設定する際に参照され、その時点でHIGHである必要があります。（[こちら](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf)には「GPIO8 = 0とGPIO9 = 0のストラッピング組み合わせは無効であり、予期しない動作を引き起こします」と記載されています。）
+GPIO8 は、BOOT ボタンを押し続けてダウンロードブートモードを設定する際に参照され、そのとき HIGH でなければなりません。（[ここ](https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf) には次のように記載されています： "The strapping combination of GPIO8 = 0 and GPIO9 = 0 is invalid and will trigger unexpected behaviour."）
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/13.png" alt="pir" width={700} height="auto" /></div>
 
-ダウンロードブートを使用する場合は、**起動時にGPIO8をHIGHにするためのプルアップ抵抗を追加してください**。
+ダウンロードブートを使用する場合は、**起動時に GPIO8 が HIGH になるようにプルアップ抵抗を追加してください**。
 
-このセクションのテストと貢献をしてくれたSeeedJPの同僚**matsujirushi**に特別な感謝を表します。以下が元記事への参考リンクです。
+このセクションのテストと貢献をしてくれた SeeedJP の同僚 **matsujirushi** に特別な感謝を捧げます。元記事への参考リンクはこちらです。
 
 - [Seeed Studio XIAO ESP32C3のI/O割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)

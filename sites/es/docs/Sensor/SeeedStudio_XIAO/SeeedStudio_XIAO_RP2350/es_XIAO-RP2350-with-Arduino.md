@@ -39,8 +39,8 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
   </tr>
   <tr>
     <th>Procesador</th>
-    <td>Raspberry Pi RP2040<br/>Doble Cortex-M0+ @ 133MHz</td>
-    <td>Raspberry Pi RP2350<br/>Doble Cortex-M33 @ 150MHz, FPU</td>
+    <td>Raspberry Pi RP2040<br/>Dual Cortex-M0+ @ 133MHz</td>
+    <td>Raspberry Pi RP2350<br/>Dual Cortex-M33 @ 150MHz, FPU</td>
   </tr>
   <tr>
     <th>RAM</th>
@@ -133,7 +133,7 @@ La placa Seeed Studio XIAO RP2350 ahora admite programación mediante Arduino, g
 | Boot                    |            | RP2040_BOOT  |                    | Entrar en modo Boot                  |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
 | RGB LED                 |            | GPIO22       |                    | LED RGB                              |
-| USER_LED                |            | GPIO25       |                    | Luz de usuario_Amarilla              |
+| USER_LED                |            | GPIO25       |                    | Luz de usuario_Amarillo              |
 ## Requisitos previos
 
 Para comenzar, asegúrate de tener:
@@ -167,7 +167,7 @@ Descarga e instala la última versión del Arduino IDE desde el sitio oficial: [
 6. Después de la instalación, ve a **Tools** > **Board** y selecciona la placa que se muestra a continuación como tu placa.
 
 :::note
-Asegúrate de instalar la versión 4.2.0 o posterior para obtener compatibilidad completa con la placa XIAO RP2350.
+Asegúrate de instalar la versión 4.2.0 o posterior para la compatibilidad completa con la placa XIAO RP2350.
 :::
 
 <div style={{ textAlign: 'center' }}>

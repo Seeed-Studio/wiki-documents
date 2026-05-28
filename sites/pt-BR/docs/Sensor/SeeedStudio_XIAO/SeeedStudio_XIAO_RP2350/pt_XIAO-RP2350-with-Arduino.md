@@ -27,18 +27,18 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
 - **8 novos IOs expandidos:** Em comparação com os MCUs XIAO anteriores, a adição de 8 pinos IO na parte traseira suporta aplicações mais complexas.
 - **Projeto de energia eficiente:** Consumo de energia ultrabaixo de apenas 50μA em modo de suspensão, permitindo alimentação por bateria. A medição direta da tensão da bateria via IO interno aprimora o sistema de gerenciamento de bateria (BMS).
 - **Design compacto do tamanho de um polegar:** Medindo 21 x 17,8 mm, adotando o formato clássico XIAO da Seeed Studio, ideal para aplicações com restrição de espaço.
-- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos em forma de selo em ambos os lados, facilitando a produção em massa eficiente.
+- **Amigável à produção:** Design SMD (Surface Mount Device) com todos os componentes na frente e furos de solda em ambos os lados, facilitando a produção em massa eficiente.
 
 ## Especificações
 
 <table>
   <tr>
-    <th>Produto</th>
+    <th>Product</th>
     <td>XIAO RP2040</td>
     <td>XIAO RP2350</td>
   </tr>
   <tr>
-    <th>Processador</th>
+    <th>Processor</th>
     <td>Raspberry Pi RP2040<br/>Dual Cortex-M0+ @ 133MHz</td>
     <td>Raspberry Pi RP2350<br/>Dual Cortex-M33 @ 150MHz, FPU</td>
   </tr>
@@ -54,31 +54,31 @@ A placa Seeed Studio XIAO RP2350 agora oferece suporte à programação via Ardu
   </tr>
   <tr>
     <th>LEDs</th>
-    <td>1x LED de usuário<br/>1x LED de alimentação<br/>1x LED RGB</td>
-    <td>1x LED de usuário<br/>1x LED de alimentação<br/>1x LED RGB</td>
+    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
+    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
   </tr>
   <tr>
     <th>Interface</th>
-    <td>11 pinos (todos PWM):<br/>4x Analógico<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
-    <td>19 pinos (todos PWM):<br/>3x Analógico<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
+    <td>11 Pins (All PWM):<br/>4x Analog<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
+    <td>19 Pins (All PWM):<br/>3x Analog<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
   </tr>
   <tr>
-    <th>Botão</th>
-    <td>1x botão RESET<br/>1x botão BOOT</td>
-    <td>1x botão RESET<br/>1x botão BOOT</td>
+    <th>Button</th>
+    <td>1x RESET button<br/>1x BOOT button</td>
+    <td>1x RESET button<br/>1x BOOT button</td>
   </tr>
   <tr>
-    <th>Segurança</th>
+    <th>Security</th>
     <td>-</td>
     <td>OTP, Secure Boot, Arm TrustZone</td>
   </tr>
   <tr>
-    <th>Compatibilidade de software</th>
-    <td>Suporta Micropython / Arduino / CircuitPython</td>
-    <td>Suporta Micropython / Arduino / C,C++</td>
+    <th>Software compatibility</th>
+    <td>Support Micropython / Arduino / CircuitPython</td>
+    <td>Support Micropython / Arduino / C,C++</td>
   </tr>
   <tr>
-    <th>Temperatura de trabalho</th>
+    <th>Working Temperature</th>
     <td>-20°C-70°C</td>
     <td>-20°C-70°C</td>
   </tr>
@@ -139,18 +139,18 @@ Precisa de mais detalhes sobre o pinout? Navegue até [Assets and Resources](#as
 Para começar, certifique-se de ter:
 
 - Uma placa RP2350
-- A Arduino IDE
+- A IDE Arduino
 - Um cabo USB
 
 ## Configurando o software
 
-### 1. Instale a Arduino IDE
+### 1. Instale a IDE Arduino
 
-Baixe e instale a versão mais recente da Arduino IDE no site oficial: [Arduino Software](https://www.arduino.cc/en/software).
+Baixe e instale a versão mais recente da IDE Arduino no site oficial: [Arduino Software](https://www.arduino.cc/en/software).
 
 ### 2. Adicione o suporte à placa RP2350
 
-1. Abra a Arduino IDE e navegue até **File** > **Preferences**.
+1. Abra a IDE Arduino e navegue até **File** > **Preferences**.
 2. No campo **Additional Boards Manager URLs**, adicione esta URL:
 
     ```shell
@@ -181,18 +181,18 @@ Antes de enviar um sketch, coloque seu XIAO RP2350 em modo BOOT. Use um dos mét
 <Tabs>
 <TabItem value="method1" label="Método 1: Antes de conectar ao computador" default>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Conecte o cabo -> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Conecte o cabo-> Solte Boot</em></div></div>
 
 </TabItem>
 
 <TabItem value="method2" label="Método 2: Enquanto conectado ao computador">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot -> Clique em Reset -> Solte Boot</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Segure Boot-> Clique em Reset-> Solte Boot</em></div></div>
 
 </TabItem>
 </Tabs>
 
-1. Abra a Arduino IDE e crie um novo sketch.
+1. Abra a IDE Arduino e crie um novo sketch.
 2. Escreva seu código. Por exemplo, use o código de exemplo `Blink`.
 3. Vá em **Tools** > **Port** e selecione a porta em que seu RP2350 está conectado.
 
