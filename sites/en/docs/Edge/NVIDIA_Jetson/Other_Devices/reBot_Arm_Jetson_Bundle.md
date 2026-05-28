@@ -2,7 +2,7 @@
 description: ....
 title: reBot Arm Jetson Bundle
 tags:
-  - reBot Arm 
+  - reBot Arm
   - reComputer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rebot_arm_jetson_bundle
@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/rebot_arm_jetson_bundle/
 ---
 

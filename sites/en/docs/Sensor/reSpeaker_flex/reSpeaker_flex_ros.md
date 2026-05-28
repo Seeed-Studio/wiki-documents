@@ -1,6 +1,5 @@
 ---
 description: A voice-controlled ROS2 TurtleSim project using reSpeaker Flex and Groq AI to convert spoken commands into real-time robot motion, turn actions, and spoken feedback.
-
 title: ROS2 Voice Pipeline on reSpeaker Flex
 keywords:
   - reSpeaker
