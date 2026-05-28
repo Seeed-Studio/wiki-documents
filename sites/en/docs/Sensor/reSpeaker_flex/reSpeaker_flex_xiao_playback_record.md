@@ -28,6 +28,10 @@ At the top, we configure an AudioInfo object specifying **16kHz sample rate, 2 a
 The setup() function initializes the serial console for debugging, sets up the I2S peripheral with custom pins **(BCK = pin 8, WS = pin 7, DATA OUT = pin 44, DATA IN = pin 43)**, and configures the ESP32 as the I2S master device. This setup reflects the hardware wiring between the ESP32 and reSpeaker Flex XVF3800 module.
 In the loop() function, the I2S output is first stopped with out.end(), then reconfigured into **RX** mode to record incoming audio data from XVF3800’s output. It uses out.readBytes() to fill the buffer[] with raw audio samples. After recording, it switches back to **TX mode**, re-initializes I2S, and sends the audio back out using out.write(). This creates a full **record–store–playback cycle** every loop iteration.
 
+:::note
+The firmware used in this example is the I2S 16 kHz version. Make sure your XIAO ESP32S3 firmware is configured for I2S audio at 16 kHz.
+:::
+
 ```c
 
 #include "AudioTools.h"
