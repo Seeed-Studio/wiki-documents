@@ -113,7 +113,7 @@ Todos os quatro modelos compartilham a mesma plataforma ESP32-S3, wireless Wi-Fi
 		<tr>
 			<td align="center"><strong>Processador</strong></td>
 			<td align="center" colspan="4">ESP32-S3 com 8 MB PSRAM</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Armazenamento</strong></td>
 			<td align="center">32 MB Flash<br/>microSD até 32 GB</td>

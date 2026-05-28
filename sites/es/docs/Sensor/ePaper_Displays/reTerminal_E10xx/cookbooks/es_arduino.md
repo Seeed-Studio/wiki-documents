@@ -1,5 +1,5 @@
 ---
-description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004: controla la pantalla de tinta electrónica desde Arduino usando las bibliotecas Seeed_GFX y GxEPD2, incluyendo ejemplos de Hello World más escala de grises de 4 niveles en el E1001 y de 16 niveles en el E1003.
+description: Recetario de Arduino para reTerminal E1001 / E1002 / E1003 / E1004 - controla la pantalla de tinta electrónica desde Arduino usando las bibliotecas Seeed_GFX y GxEPD2, incluyendo ejemplos de Hello World más escala de grises de 4 niveles en el E1001 y de 16 niveles en el E1003.
 title: 'Recetario de Arduino: pantalla de tinta electrónica (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
