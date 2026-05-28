@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP235
 slug: /xiao_rp2350_arduino
 sidebar_position: 1
 last_update:
-  date: 2024-10-30T01:39:16.136Z
-  author: Spencer
+  date: 05/27/2026
+  author: Carla
 createdAt: '2024-10-30'
-updatedAt: '2026-05-11'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/ja/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -21,13 +21,13 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 ## 特長
 
 - **高性能 MCU ボード:** Raspberry Pi RP2350 チップを搭載し、対称型デュアル Arm Cortex-M33（FPU 搭載）@ 150MHz を備えています。
-- **強化されたセキュリティ機能:** セキュアブートと暗号化ブートローダーを内蔵し、アプリケーションの安全性を確保します。
+- **強化されたセキュリティ機能:** セキュアブートと暗号化ブートローダーを内蔵し、アプリケーションのセキュリティを確保します。
 - **ソフトウェアサポート:** C/C++ および MicroPython に対応しており、プロジェクト開発やプロトタイピングを容易にします。
 - **豊富なオンボードリソース:** RGB LED、2MB フラッシュ、520kB SRAM、19 本の多機能 GPIO（アナログ、デジタル、I²C、UART、SPI、PWM）を統合しています。
-- **8 本の新しい IO の拡張:** 既存の XIAO MCU と比較して、背面に 8 本の IO ピンが追加され、より複雑なアプリケーションをサポートします。
-- **高効率な電源設計:** スリープモードでわずか 50μA の超低消費電力で、バッテリー駆動が可能です。内部 IO によるバッテリー電圧の直接測定により、バッテリーマネジメントシステム（BMS）を強化します。
+- **8 本の新しい IO の拡張:** 以前の XIAO MCU と比較して、背面に 8 本の IO ピンが追加され、より複雑なアプリケーションをサポートします。
+- **効率的な電源設計:** スリープモードでわずか 50μA の超低消費電力で、バッテリー駆動が可能です。内部 IO によるバッテリー電圧の直接測定により、バッテリーマネジメントシステム（BMS）を強化します。
 - **親指サイズのコンパクト設計:** 21 x 17.8mm のサイズで、Seeed Studio のクラシックな XIAO フォームファクタを採用しており、省スペース用途に最適です。
-- **量産に適した設計:** すべての部品を表面側に配置した表面実装デバイス（SMD）設計と、両側のスタンピングホールにより、高効率な量産を容易にします。
+- **量産に適した設計:** すべての部品を表面側に配置した表面実装デバイス（SMD）設計と、両側のスタンピングホールにより、効率的な量産を容易にします。
 
 ## 仕様
 
@@ -58,9 +58,9 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
     <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
   </tr>
   <tr>
-    <th>Interface</th>
-    <td>11 Pins (All PWM):<br/>4x Analog<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
-    <td>19 Pins (All PWM):<br/>3x Analog<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
+    <th>インターフェース</th>
+    <td>11 ピン（すべて PWM）：<br/>アナログ x4<br/>デジタル x11<br/>I²C x1<br/>UART x1<br/>SPI x1</td>
+    <td>19 ピン（すべて PWM）：<br/>アナログ x3<br/>デジタル x19<br/>I²C x2<br/>UART x2<br/>SPI x2</td>
   </tr>
   <tr>
     <th>Button</th>
@@ -70,7 +70,7 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
   <tr>
     <th>Security</th>
     <td>-</td>
-    <td>OTP, Secure Boot, Arm TrustZone</td>
+    <td>OTP、Secure Boot、Arm TrustZone</td>
   </tr>
   <tr>
     <th>Software compatibility</th>
@@ -103,14 +103,14 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 
 
 ## **ピンマップ**
-| XIAO Pin                 | 機能   | チップピン     | 代替機能 | 説明                          |
+| XIAO ピン                 | 機能   | チップピン     | 代替機能 | 説明                          |
 | :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
 | 5V                      | VBUS       |              |                    | 電源入力/出力                   |
 | GND                     |            |              |                    |                                      |
 | 3V3                     | 3V3_OUT    |              |                    | 電源出力                         |
-| D0                      | Analog     | GPIO26       |                    | GPIO、ADC                            |
-| D1                      | Analog     | GPIO27       |                    | GPIO、ADC                            |
-| D2                      | Analog     | GPIO28       |                    | GPIO、ADC                            |
+| D0                      | アナログ     | GPIO26       |                    | GPIO、ADC                            |
+| D1                      | アナログ     | GPIO27       |                    | GPIO、ADC                            |
+| D2                      | アナログ     | GPIO28       |                    | GPIO、ADC                            |
 | D3                      | SPI0_CSn   | GPIO5        |                    | GPIO、SPI                            |
 | D4                      | SDA1       | GPIO6        |                    | GPIO、I2C データ                       |
 | D5                      | SCL1       | GPIO7        |                    | GPIO、I2C クロック                      |
@@ -151,7 +151,7 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
 ### 2. RP2350 ボードサポートを追加する
 
 1. Arduino IDE を開き、**File** > **Preferences** に移動します。
-2. **Additional Boards Manager URLs** フィールドに、次の URL を追加します:
+2. **Additional Boards Manager URLs** フィールドに、次の URL を追加します：
 
     ```shell
     https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
@@ -202,7 +202,7 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 
 ## 低消費電力性能の検証
 
-XIAO RP2350 の電源設計は、低消費電力シナリオで優れた性能を発揮し、さまざまな低消費電力アプリケーションに広く適用できます。
+XIAO RP2350 の電源設計は低消費電力シナリオで優れた性能を発揮し、さまざまな低消費電力アプリケーションに広く適用できます。
 
 ### バッテリー接続
 
@@ -211,159 +211,26 @@ XIAO RP2350 は 3.7V リチウムバッテリーで給電できます。配線�
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付けの際には、正極と負極を短絡させてバッテリーや機器を損傷させないよう、十分に注意してください。
+はんだ付けの際には、正極端子と負極端子を短絡させてバッテリーや機器を損傷させないよう、十分に注意してください。
 :::
 
 ### ファームウェアを書き込む
 
-XIAO RP2350 のバッテリーサンプリング回路では、SX1801CCR に基づく電圧サンプリングソリューションが採用されています。2 つの 470 kΩ 抵抗によって分圧回路が構成され、分圧比は 2 になります。プログラムでは 3.3 V を基準電圧として使用し、電圧復元式によって実際のバッテリー電圧を算出できます。
-
-次のサンプルでは、Arduino IDE では真のディープスリープに必要な pico-extras ライブラリを容易に統合できないため、ウォッチドッグによる再起動方式を用いてディープスリープを模擬しています。
-
-<details>
-<summary>プログラム</summary>
-
-```cpp
-#include <Arduino.h>
-#include "hardware/powman.h"
-#include "hardware/adc.h"
-#include "hardware/watchdog.h"
-
-// ── Pin Definitions ──────────────────────────────────────────────
-#define BAT_ADC_EN    19
-#define BAT_ADC_READ  29
-#define SLEEP_SEC     30
-
-#define VOLTAGE_DIVIDER_RATIO  2.0f
-#define VBAT_LOW_THRESHOLD     3.5f
-#define SCRATCH_MAGIC          0xDEADBEEF
-
-// ── Global voltage storage (can be output via other methods, e.g., LED alert) ──────────
-static float g_vbat   = 0.0f;
-static bool  g_lowBat = false;
-
-// ── Disable ADC Peripheral ──────────────────────────────────────
-static void disableADC() {
-    adc_run(false);
-    hw_clear_bits(&adc_hw->cs, ADC_CS_EN_BITS);
-}
-
-// ── Read Battery Voltage ─────────────────────────────────────────
-static float readVbat() {
-    digitalWrite(BAT_ADC_EN, HIGH);
-    delayMicroseconds(500);
-
-    adc_init();
-    adc_gpio_init(BAT_ADC_READ);
-    adc_select_input(3);
-    analogReadResolution(12);
-    (void)analogRead(BAT_ADC_READ);   // Discard the first reading
-
-    int32_t sum = 0;
-    for (int i = 0; i < 5; i++) {
-        sum += analogRead(BAT_ADC_READ);
-        delayMicroseconds(200);
-    }
-
-    digitalWrite(BAT_ADC_EN, LOW);    // ★ Disable voltage divider immediately after sampling
-    disableADC();
-
-    return ((float)sum / 5.0f / 4095.0f * 3.3f) * VOLTAGE_DIVIDER_RATIO;
-}
-
-// ── Shut Down All Unnecessary Peripherals ─────────────────────────
-static void shutdownPeripherals() {
-    // ADC
-    digitalWrite(BAT_ADC_EN, LOW);
-    disableADC();
-
-    // Pull down all unused pins to eliminate floating leakage
-    const uint8_t unused[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18};
-    for (uint8_t pin : unused) {
-        pinMode(pin, INPUT_PULLDOWN);
-    }
-
-    // Reduce frequency to 18MHz to significantly reduce dynamic power consumption
-    set_sys_clock_khz(18000, false);
-}
-
-// ── Low-Power Wait (Watchdog Reboot to Simulate Sleep) ───────────
-static void sleepWithReboot(uint32_t seconds) {
-    // Start POWMAN Timer (LPOSC 1kHz)
-    if (!powman_timer_is_running()) powman_timer_start();
-    powman_timer_set_1khz_tick_source_lposc();
-
-    // Store wake-up target time in scratch registers
-    uint64_t wake_ms = powman_timer_get_ms() + (uint64_t)seconds * 1000ULL;
-    watchdog_hw->scratch[4] = SCRATCH_MAGIC;
-    watchdog_hw->scratch[5] = (uint32_t)(wake_ms & 0xFFFFFFFF);
-    watchdog_hw->scratch[6] = (uint32_t)(wake_ms >> 32);
-
-    shutdownPeripherals();
-
-    // Watchdog timeout reboot (max 8.3s), CPU waits in low-frequency WFE
-    rp2040.wdt_begin(8300);
-    while (true) {
-        __wfe();
-    }
-}
-
-// ─────────────────────────────────────────────────────────────────
-void setup() {
-    // First action on power-up: pull ADC_EN low
-    pinMode(BAT_ADC_EN, OUTPUT);
-    digitalWrite(BAT_ADC_EN, LOW);
-    pinMode(BAT_ADC_READ, INPUT);
-
-    // ── Check if waking up from sleep reboot ───────────────────────
-    if (watchdog_hw->scratch[4] == SCRATCH_MAGIC) {
-        if (!powman_timer_is_running()) powman_timer_start();
-        powman_timer_set_1khz_tick_source_lposc();
-
-        uint64_t wake_ms = (uint64_t)watchdog_hw->scratch[5]
-                         | ((uint64_t)watchdog_hw->scratch[6] << 32);
-        uint64_t now_ms  = powman_timer_get_ms();
-
-        if (now_ms < wake_ms) {
-            // Not time to wake up yet, continue waiting
-            sleepWithReboot((uint32_t)((wake_ms - now_ms) / 1000 + 1));
-            // Will not return
-        }
-
-        // Time to wake up, clear flag
-        watchdog_hw->scratch[4] = 0;
-    }
-
-    // ── Restore normal frequency, execute application logic ───────
-    set_sys_clock_khz(125000, true);
-
-    // Sample voltage
-    g_vbat   = readVbat();
-    g_lowBat = (g_vbat < VBAT_LOW_THRESHOLD);
-
-    // TODO: Process sampling results here
-    // Example: Turn on LED alert for low battery
-    // if (g_lowBat) { digitalWrite(LED_PIN, HIGH); delay(100); ... }
-
-    // Enter sleep mode 2 seconds after power-up
-    delay(2000);
-}
-
-void loop() {
-    sleepWithReboot(SLEEP_SEC);
-    // Will not return; restarts from setup() after wake-up
-}
-```
-
-</details>
-<br/>
-その後、プログラムをアップロードできます。
-
-または、検証および性能テスト用に、当社があらかじめ用意したファームウェアを使用することもできます。
+検証および性能テストには、あらかじめ用意されたファームウェアを使用できます。
 
 [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ) をダウンロードし、ファイルシステムにドラッグします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
+
+:::note
+
+この UF2 ファームウェアはサードパーティソースからコンパイルされたものです。ファームウェアのソースコードについては、[pico-examples/powman/powman_timer](https://github.com/peterharperuk/pico-examples/tree/powman/powman/powman_timer) を参照してください。
+
+このファームウェアのソースコードは [pico-sdk](https://github.com/raspberrypi/pico-sdk) に依存しています。使用前に、pico-sdk の README に記載された手順に従い、Linux 環境で関連ツールチェーンをダウンロードする必要があります。
+
+pico-sdk およびツールチェーンの更新が頻繁であるため、関数パラメータの競合などのコンパイルエラーが発生する可能性がある点に注意してください（このサンプルライブラリは公式の Raspberry Pi ライブラリとして保守されておらず、バージョンや環境の差異が存在する可能性があります）。XIAO RP2350 の低消費電力性能のみを検証したい場合は、UF2 ファームウェアをそのまま使用して、迅速かつ簡便にテストすることを推奨します。
+
+:::
 
 ### 結果
 
@@ -377,7 +244,7 @@ void loop() {
 1. 低消費電力モードにおける平均電流は、使用する計測機器によって異なる場合があります。実際のテスト結果を参照してください。
 2. このテスト結果は、低消費電力テスト用ファームウェアを書き込んだ後に得られたものです。
 3. 消費電力テストを行う場合、テスト配線は裏面の BAT インターフェースに接続してください。
-4. Arduino IDE では、ディープスリープに必要な pico/sleep.h を含む pico-extras ライブラリの統合が困難なため、超低消費電力開発には Pico SDK または PlatformIO + arduino-pico フレームワークの使用を推奨します。
+4. Arduino IDE では pico-extras ライブラリ（ディープスリープに必要な pico/sleep.h を含む）を統合するのが難しいため、超低消費電力開発には Pico SDK または PlatformIO + arduino-pico フレームワークの使用を推奨します。
 
 :::
 
@@ -392,9 +259,9 @@ void loop() {
   - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 - **📄[ピン配置図]** [XIAO RP2350 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
-**メカニカル設計**
-- **📄[2D 寸法]** [DXF 形式の XIAO RP2350 寸法図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
-- **🔗[3D モデル]** [XIAO RP2350 3D モデル](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
+**メカ設計**
+- **📄[2D 寸法]** [XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[3D モデル]** [XIAO RP2350 3D Model](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
 **ソフトウェア & ツール**
 - **📄[テスト用ファームウェア]** [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
