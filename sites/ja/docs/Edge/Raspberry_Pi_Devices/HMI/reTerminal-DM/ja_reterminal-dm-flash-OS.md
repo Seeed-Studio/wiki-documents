@@ -1,334 +1,334 @@
 ---
-description: reTerminal DM Flash OS
-title: reTerminal DM Flash OS
+description: reTerminal DM OS 書き込み
+title: reTerminal DM OS 書き込み
 keywords:
   - Edge
   - reTerminal-DM
-  - Flash OS
+  - OS 書き込み
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reterminal-dm-flash-OS
 sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 04/23/2023
   author: Peter Pan
-createdAt: '2025-05-27'
+createdAt: '2023-04-24'
 updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/
 ---
-# reTerminal DM に Raspbian OS を eMMC にフラッシュ
+# reTerminal DM に Raspbian OS を eMMC へ書き込む
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
-reTerminal DMは10.1インチのオープンソース産業用HMIで、データフローを統合し、現場デバイスを管理する統合デバイスマスターです。
+reTerminal DM は 10.1 インチのオープンソース産業用 HMI であり、データフローを統合し、現場デバイスを管理するための統合デバイスマスターです。
 
-Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウェイのオールインワンデバイスとして、reTerminal DMはIP65産業グレードの大型スクリーンを備えた新世代のインタラクティブセンシングハブです。
+Raspberry Pi CM4 をベースにした、パネル PC、HMI、PLC、IIoT ゲートウェイが一体となったデバイスとして、reTerminal DM は IP65 産業グレードの大型スクリーンを備えた新世代のインタラクティブセンシングハブです。
 
-豊富な拡張性とハイブリッド接続性を備え、CANバス、RS485、RS232、ギガビットイーサネットポート、その他のインターフェースをサポートし、4G、LoRa®、WiFi、BLEなどの強力なワイヤレス通信機能も備えています。
+CAN バス、RS485、RS232、ギガビット Ethernet ポートなどのインターフェースをサポートし、豊富な拡張性とハイブリッド接続性を備えるとともに、4G、LoRa®、WiFi、BLE などの強力な無線通信機能も備えています。
 
-> \*4GおよびLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途購入してください。
-> [4Gバンドル](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
+> \*4G および LoRa® モジュールはデフォルトでは reTerminal DM に同梱されていません。必要に応じて、以下のような関連モジュールを別途購入してください。
+> [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 :::note
-Sensecraft Edge OSは[**こちら**](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download)からダウンロードできます。このSensecraft Edge OSは現在reTerminal DMをベースに開発されており、プロダクション版reTerminal DMでのみ動作することにご注意ください。
+Sensecraft Edge OS は [**こちら**](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download) からダウンロードできます。この Sensecraft Edge OS は現在 reTerminal DM をベースに開発されており、量産版 reTerminal DM でのみ動作することに注意してください。
 :::
 
 ## ハードウェア要件
 
-以下のハードウェアを準備する必要があります
+以下のハードウェアを用意する必要があります
 
 - reTerminal DM x 1
 - ホストコンピュータ（Windows/Mac/Linux）x 1
-- イーサネットケーブル x 1
-- 電源アダプタ（12V-24V）BYO
-- USB Type-Cケーブル x 1
+- Ethernet ケーブル x 1
+- 電源アダプタ (12V-24V) BYO
+- USB Type-C ケーブル x 1
 
 ## ソフトウェア要件
 
-- [usbbootツール](https://github.com/raspberrypi/usbboot)
+- [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
-## Raspbian OSフラッシュの手順
+## Raspbian OS を書き込む手順
 
-> **注意：** Seedによってパッケージ化された最新のシステムイメージには、適切なドライバが含まれています：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
+> **Note:** Seeed によってパッケージ化された最新のシステムイメージには、適切なドライバが含まれています: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
-- **ステップ1.** USB Type-Cポートの隣にある`boot mode switch`を切り替え、下図に従ってスイッチが`disable eMMC boot mode`に設定されていることを確認してください：
+- **Step 1.** USB Type-C ポートの横にある `boot mode switch` を切り替え、下図のようにスイッチが `disable eMMC boot mode` に設定されていることを確認します。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/flash.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ2.** USB Type-Cデータケーブルを使用して、上図に示すようにreTerminal DMのType-Cポートに接続してください。
+- **Step 2.** 上の画像に示すように、USB Type-C データケーブルを使用して reTerminal DM の Type-C ポートに接続します。
 
-- **ステップ3.** 電源から電源コードをreTerminal DMの電源ポートに接続してください。
-  
+- **Step 3.** 電源コードを電源から reTerminal DM の電源ポートに接続してください。
+
 :::danger
 
-電源コードが正しい極性で接続されていることを確認してください。
+電源コードが正しい極性で接続されていることを必ず確認してください。
 
 :::
-  
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/power.png" alt="pir" width="800" height="auto"/></p>
 
-次に、ホストコンピュータでのソフトウェアセットアップに進みましょう。お使いのオペレーティングシステムに応じて手順に従ってください。
+それでは、ホストコンピュータ上でのソフトウェアセットアップに進みましょう。使用したいオペレーティングシステムに応じて、以下の手順に従ってください。
 
-### Windows用
+### Windows の場合
 
-- **ステップ1.** **[こちら](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)**をクリックして**rpibootセットアップインストーラー**をダウンロードし、必要なドライバとブートツールをインストールします
+- **Step 1.** 必要なドライバとブートツールをインストールするために、**[here](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** をクリックして **rpiboot setup installer** をダウンロードします。
 
-- **ステップ2.** USB Type-CケーブルでreTerminal DMをPCに接続します
+- **Step 2.** USB Type-C ケーブルで reTerminal DM を PC に接続します。
 
-Windowsがハードウェアを検出し、必要なドライバをインストールします
+Windows はハードウェアを検出し、必要なドライバをインストールします。
 
-- **ステップ3.** 以前にインストールした**rpiboot**ツールを検索して開きます
+- **Step 3.** 先ほどインストールした **rpiboot** ツールを検索して開きます。
 
-- **ステップ4.** **ファイルエクスプローラー**を開くと、Compute Module 4のeMMCが**USBマスストレージデバイス**として表示されます
+- **Step 4.** **エクスプローラー** を開くと、Compute Module 4 の eMMC が **USB マスストレージデバイス** として表示されます。
 
-- **ステップ5.** **[こちら](https://www.raspberrypi.org/software/)**から**Raspberry Pi Imager**ソフトウェアをダウンロードします
+- **Step 5.** **[here](https://www.raspberrypi.org/software/)** から **Raspberry Pi Imager** ソフトウェアをダウンロードします。
 
-- **ステップ6.** Raspberry Pi Imagerソフトウェアを開きます
+- **Step 6.** Raspberry Pi Imager ソフトウェアを開きます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ7.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **Step 7.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます。
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-ここで**ホスト名の設定、SSHの有効化、パスワードの設定、WiFiの設定、ロケール設定**などを行うことができます
+ここで、**ホスト名の設定、SSH の有効化、パスワードの設定、WiFi の設定、ロケール設定** などを行うことができます。
 
-- **ステップ8.** **CHOOSE OS**をクリックして、お好みのOSを選択します
+- **Step 8.** **CHOOSE OS** をクリックし、希望する OS を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** **Other general purpose OS**に移動することで、**64ビットUbuntu**などの他のOSを選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** などの他の OS を選択できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ9.** **CHOOSE STORAGE**をクリックして、接続されたeMMCドライブを選択します
+- **Step 9.** **CHOOSE STORAGE** をクリックし、接続されている eMMC ドライブを選択します。
 
-- **ステップ10.** 最後に、**WRITE**をクリックします
+- **Step 10.** 最後に **WRITE** をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-フラッシュプロセスが完了するまで数分お待ちください。
+書き込みプロセスが完了するまで、数分間お待ちください。
 
-- **ステップ11.** **Boot Mode switch**を元の位置に戻します
+- **Step 11.** **Boot Mode switch** を元の位置に戻します。
 
-これで**[こちら](#install-drivers)**にスキップできます
+これで **[here](#install-drivers)** までスキップできます。
 
 :::note
 
-上記の手順が完了し、reTerminal DMに電源を再投入すると、電源LEDが黄色に点灯し、ACT LEDが緑色に点滅するはずですが、画面は空白でバックライトもありません。パニックにならないでください。[ドライバのインストール](#install-drivers)の手順に従って画面を復活させる必要があります。
+上記の手順が完了し、reTerminal DM に再度電源を投入すると、Power LED は黄色に点灯し、ACT LED は緑色に点滅しますが、画面は真っ黒でバックライトも点きません。慌てる必要はありません。[install drivers](#install-drivers) の手順に従えば、画面を復帰させることができます。
 
 :::
 
-### Mac用
+### MAC の場合
 
 :::caution
-**以下の手順を進める前に[homebrew](https://brew.sh/)をインストールする必要があります。**
-ターミナルを開いて```brew -V```と入力し、正しいhomebrew環境がセットアップされているかを確認してください。インストールされているhomebrew環境のバージョンが表示されるはずです。
+**以下の手順を進める前に、[homebrew](https://brew.sh/) をインストールする必要があります。**
+ターミナルを開き、```brew -V``` と入力して、正しく homebrew 環境がセットアップされているか確認してください。インストールされている homebrew 環境のバージョンが表示されるはずです。
 :::
 
-- **ステップ1.** **usbboot**リポジトリをクローンします
+- **Step 1.** **usbboot** リポジトリをクローンします。
 
 ```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **ステップ 2.** **libusb** をインストールする
+- **Step 2.** **libusb** をインストールします。
 
 ```sh
 brew install libusb
 ```
 
-- **ステップ 3.** **pkg-config** をインストールする
+- **Step 3.** **pkg-config** をインストールします。
 
 ```sh
 brew install pkg-config
 ```
 
-- **ステップ 4.** makeを使用してビルドする
+- **Step 4.** make を使ってビルドします。
 
 ```sh
 make
 ```
 
-- **ステップ 5.** Run the binary
+- **Step 5.** バイナリを実行します。
 
 ```sh
 sudo ./rpiboot
 ```
 
-- **ステップ 6.** reTerminalをUSB Type-Cケーブルを使ってMacコンピュータに接続します
+- **Step 6.** USB Type-C ケーブルで reTerminal を Mac コンピュータに接続します。
 
-- **ステップ 7.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
+- **Step 7.** [this link](https://www.raspberrypi.org/software/) にアクセスして **Raspberry Pi Imager** アプリケーションをダウンロードしてインストールします。
 
-- **ステップ 8.** **Raspberry Pi Imager**アプリケーションを開きます
+- **Step 8.** **Raspberry Pi Imager** アプリケーションを開きます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ 9.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **Step 9.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます。
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-ここで**ホスト名の設定、SSHの有効化、パスワードの設定、wifiの設定、ロケール設定**などを行うことができます
+ここで、**ホスト名の設定、SSH の有効化、パスワードの設定、wifi の設定、ロケール設定** などを行うことができます。
 
-- **ステップ 10.** **CHOOSE OS**をクリックして、お好みのOSを選択します
+- **Step 10.** **CHOOSE OS** をクリックし、希望する OS を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意:** **Other general purpose OS**に移動することで、**64-bit Ubuntu**などのOSを選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** などの OS を選択できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 11.** **CHOOSE STORAGE**をクリックして、接続されたeMMCドライブを選択します
+- **Step 11.** **CHOOSE STORAGE** をクリックし、接続されている eMMC ドライブを選択します。
 
-- **ステップ 12.** 最後に、**WRITE**をクリックします
+- **Step 12.** 最後に **WRITE** をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-フラッシュプロセスが完了するまで数分お待ちください。
+書き込みプロセスが完了するまで、数分間お待ちください。
 
-- **ステップ 13.** **Boot Mode switch**を元の位置に戻します
+- **Step 13.** **Boot Mode switch** を元の位置に戻します。
 
-これで**[こちら](#install-drivers)**にスキップできます
+これで **[here](#install-drivers)** までスキップできます。
 
 :::note
 
-上記の手順が完了し、reTerminal DMに電源を再投入すると、Power LEDが黄色に点灯し、ACT LEDが緑色に点滅するはずですが、画面は空白でバックライトもありません。慌てる必要はありません。画面を復活させるには[ドライバーのインストール](#install-drivers)の手順に従うだけです。
+上記の手順が完了し、reTerminal DM に再度電源を投入すると、Power LED は黄色に点灯し、ACT LED は緑色に点滅しますが、画面は真っ黒でバックライトも点きません。慌てる必要はありません。[install drivers](#install-drivers) の手順に従えば、画面を復帰させることができます。
 
 :::
 
-### Linux用
+### Linux の場合
 
-**rpiboot**のソースコードを取得するためにGitを使用するので、Gitがインストールされていることを確認してください
+**rpiboot** のソースコードを取得するために Git を使用するので、Git がインストールされていることを確認してください。
 
-- **ステップ 1.** **ターミナル**ウィンドウを開き、以下を入力して**パッケージリスト**を更新します
+- **Step 1.** **ターミナル** ウィンドウを開き、**パッケージリスト** を更新するために次のコマンドを入力します。
 
 ```sh
 sudo apt-get update
 ```
 
-- **ステップ 2.** 以下のコマンドで **Git** をインストールします
+- **Step 2.** 次のコマンドで **Git** をインストールします。
 
 ```sh
 sudo apt install git libusb-1.0-0-dev pkg-config build-essential
 ```
 
-- **ステップ 3.** 日付が適切に設定されていない場合、Gitはエラーを出力する可能性があります。これを修正するには以下を入力してください
+- **Step 3.** 日付が正しく設定されていない場合、Git はエラーを出すことがあります。これを修正するために次のコマンドを入力します。
 
 ```sh
 sudo date MMDDhhmm
 ```
 
-**注意:** ここで **MM** は月、**DD** は日付、**hh** と **mm** はそれぞれ時と分です。
+**NOTE:** ここで **MM** は月、**DD** は日付、**hh** と **mm** はそれぞれ時と分です。
 
-- **ステップ 4.** **usbboot** ツールリポジトリをクローンする
+- **Step 4.** **usbboot** ツールのリポジトリをクローンします。
 
 ```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **ステップ 5.** usbbootツールをビルドしてインストールする
+- **Step 5.** usbboot ツールをビルドしてインストールします。
 
 ```sh
 make
 ```
 
-- **ステップ 6.** usbbootツールを実行すると、接続を待機します
+- **Step 6.** usbboot ツールを実行すると、接続待ちの状態になります。
 
 ```sh
 sudo ./rpiboot
 ```
 
-結果は以下のように表示されます：
+結果は次のように表示されます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 7.** USB Type-Cケーブルを使用してreTerminalをPCに接続します
+- **Step 7.** USB Type-C ケーブルで reTerminal を PC に接続します。
 
-- **ステップ 8.** snapをダウンロードします
+- **Step 8.** snap をダウンロードします。
 
 ```sh
 sudo apt install snap
 ```
 
-- **ステップ 9.** **rpi-imager** をダウンロードします
+- **Step 9.** **rpi-imager** をダウンロードします。
 
 ```sh
 snap install rpi-imager
 ```
 
-- **ステップ 10.** Raspberry Pi Imager ソフトウェアを開く
+- **Step 10.** Raspberry Pi Imager ソフトウェアを開きます。
 
 ```sh
 rpi-imager
 ```
 
-結果は以下のように表示されます：
+結果は次のように表示されます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ 11.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
+- **Step 11.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
 
-ホスト名の設定、パスワードの設定、WiFiの設定、ロケール設定を行います
+ホスト名の設定、パスワードの設定、Wi-Fi の設定、ロケール設定を行います
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
 
-SSHを有効にします
+SSH を有効化します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
-ここで **ホスト名の設定、SSHの有効化、パスワードの設定、WiFiの設定、ロケール設定** などを行うことができます
+ここでは、**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ロケール設定** などを行うことができます
 
-- **ステップ 11.** **CHOOSE OS** をクリックして、お好みのOSを選択します
+- **Step 11.** **CHOOSE OS** をクリックして、希望する OS を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意:** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などのOSを選択できます
+**NOTE:** **Other general purpose OS** に進むことで、**64-bit Ubuntu** などの OS を選択できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 12.** **CHOOSE STORAGE** をクリックして、接続されたeMMCドライブを選択します
+- **Step 12.** **CHOOSE STORAGE** をクリックして、接続されている eMMC ドライブを選択します
 
-- **ステップ 13.** 最後に、**NEXT** をクリックして **YES** をクリックします
+- **Step 13.** 最後に **NEXT** と **YES** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
-フラッシュプロセスが完了するまで数分お待ちください。
-結果は以下のように表示されます：
+フラッシュ処理が完了するまで数分お待ちください。
+結果は次のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ 14.** **Boot Mode Switch** を元の位置に戻します
+- **Step 14.** **Boot Mode Switch** を元の位置に戻します
 
 :::note
 
-上記の手順が完了し、reTerminal DMに電源を再投入すると、Power LEDが黄色に点灯し、ACT LEDが緑色に点滅するはずですが、画面は空白でバックライトもありません。慌てる必要はありません。画面を復活させるには、[ドライバーのインストール](#install-drivers)の手順に従ってください。
+上記の手順が完了し、reTerminal DM の電源を再投入すると、Power LED は黄色に点灯し、ACT LED は緑色に点滅しますが、画面は真っ暗でバックライトも点きません。この場合でも慌てる必要はありません。[install drivers](#install-drivers) の手順に従えば、画面を復旧できます。
 
 :::
 
-## Install Drivers
+## ドライバのインストール
 
-### SSH経由でreTerminal DMにアクセス
+### SSH 経由で reTerminal DM にアクセスする
 
 :::note
 
-以下の手順には基本的なLinuxコマンドラインの知識が必要です。コーヒーを一杯用意して準備してください。
+以下の手順には、基本的な Linux コマンドラインの知識が必要です。コーヒーを一杯用意して、準備を整えてください。
 
 :::
 
-上記のOSフラッシュ手順に従って、reTerminal DMはSSHが有効になり、ホスト名は `raspberrypi.local` になっているはずです。
+上記の OS フラッシュ手順に従うと、reTerminal DM ではホスト名 `raspberrypi.local` で SSH が有効になっているはずです。
 
-次に、EthernetケーブルをreTerminal DMとホストコンピューターと同じネットワーク上のルーターに接続してください。
+次に、reTerminal DM とホストコンピュータと同じネットワーク上にあるルーターを Ethernet ケーブルで接続してください。
 
 :::tip
 
-reTerminal DMがホストコンピューターと同じネットワーク上にあるかテストするには、`ping raspberrypi.local` を使用できます
+reTerminal DM がホストコンピュータと同じネットワーク上にあるかテストするには、`ping raspberrypi.local` を使用できます
 
-pingコマンドの後に以下の出力が表示されれば、両方のデバイスが同じネットワーク上にあることを意味します：
+ping コマンドの後に次のような出力が表示されれば、両方のデバイスが同じネットワーク上にあることを意味します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ping.png" alt="pir" width="600" height="auto"/></p>
 
@@ -336,130 +336,131 @@ pingコマンドの後に以下の出力が表示されれば、両方のデバ�
 
 ##### Windows の場合
 
-- **ステップ 1.** **コマンドプロンプト** を開いて以下を入力します
+- **Step 1.** **Command Prompt** を開き、次のように入力します
 
 ```sh
 # ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
-- **ステップ 2.** プロンプトに対して **yes** と入力します
+- **Step 2.** プロンプトが表示されたら **yes** と入力します
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></p>
 
-- **ステップ 3.** 以下のようにパスワードを入力します
+- **Step 3.** 次のようにパスワードを入力します
 
 ```sh
 raspberry
 ```
 
-- **ステップ 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
+- **Step 4.** Raspberry Pi OS へのログインに成功すると、次のような出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
 ##### Mac/Linux の場合
 
-- **ステップ 1.** コンピュータで**ターミナル**を開き、以下を入力します
+- **Step 1.** コンピュータで **Terminal** を開き、次のように入力します
 
 ```sh
 ssh pi@raspberrypi.local
 ```
 
-- **ステップ2.** 以下のメッセージに対して **yes** と入力してください
+- **Step 2.** 次のメッセージが表示されたら **yes** と入力します
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **ステップ 3.** パスワードを求められたら、以下を入力してください
+- **Step 3.** パスワードを求められたら、次のように入力します
 
 ```sh
 raspberry
 ```
 
-- **ステップ 4.** Raspberry Pi OSに正常にログインできた場合、以下の出力が表示されます
+- **Step 4.** Raspberry Pi OS へのログインに成功すると、次のような出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
-### 新しいRaspbian OSをフラッシュした後のreTerminalドライバーのインストール
+### 新しい Raspbian OS をフラッシュした後に reTerminal ドライバをインストールする
 
-reTerminal DMには必要なドライバーが最初から事前インストールされているため、追加のドライバーをインストールする必要はありません。ただし、自分で新しいOSをフラッシュした場合は、必要なドライバーを別途インストールする必要があります。
+reTerminal DM には必要なドライバがあらかじめインストールされているため、追加のドライバをインストールする必要はありません。ただし、自分で新しい OS をフラッシュした場合は、必要なドライバを別途インストールする必要があります。
 
 :::tip
 
-**32ビットOSドライバーのインストールについては、以下の手順を慎重に実行してください：**
+**32-bit OS ドライバをインストールするには、以下の手順に注意して従ってください：**
 
-reTerminal DMに事前インストールされているオペレーティングシステムは64ビットです。32ビットOSをインストールしたい場合は、以下の方法を使用してDTSドライバーをインストールしてください。
+reTerminal DM にプリインストールされているオペレーティングシステムは 64-bit です。32-bit OS をインストールしたい場合は、次の方法を使用して DTS ドライバをインストールしてください。
 
->⚠️注意：32ビットOSをフラッシュした後は、reTerminal DMを再起動してください。
+>⚠️注意 : 32-bit OS をフラッシュした後は、reTerminal DM を再起動してください。
 
-[**SSH経由でreTerminal DMにアクセス**](#access-reterminal-dm-via-ssh)の手順に従い、その後以下のコマンドを入力してください：
+[**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) の手順に従い、その後、次のコマンドを入力してください：
 
 ```sh
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 ```
 
-新しいRaspbian OSをフラッシュした後の[**ドライバーインストールプロセス**](#install-reterminal-drivers-after-flashing-new-raspbian-os)を続行してください
+その後、[**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os) を続けてください
 
+同時に、最新の公式 32-bit Raspberry Pi OS を使用している場合、その新しいカーネルは本製品と互換性がなく、ドライバの更新に失敗し、画面が真っ暗になる原因となります。開発用に 32-bit OS イメージが必要な場合は、古いバージョンの 32-bit イメージを使用することをお勧めします。
 :::
 
-- **ステップ 1.** 上記の手順でreTerminal DMに接続したsshシェルで以下のリポジトリをクローンします
+- **Step 1.** 上記の手順で接続した reTerminal DM への ssh シェルで、次のリポジトリをクローンします
 
 ```sh
 sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **ステップ 2.** リポジトリに入る
+- **Step 2.** リポジトリに入ります
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
-- **ステップ 3.** 以下を入力してドライバーをインストールします
+- **Step 3.** ドライバをインストールするために次のコマンドを入力します
 
 ```sh
 sudo ./scripts/reTerminal.sh --device reTerminal-DM
 ```
 
-<!-- ドライバーが正常にインストールされた場合、以下の出力が表示されます
+<!-- You will see the following output if you have successfully installed the drivers
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p> -->
 
-- **ステップ 4.** reTerminal DM を再起動します
+- **Step 4.** reTerminal DM を再起動します
 
 ```sh
 sudo reboot
 ```
 
-画面が点灯し、正常に動作するはずです。
+これで画面が点灯し、正常に動作するはずです。
 
 ## FAQ
 
 ### タッチスクリーンの向き
 
-**Q: スクリーンのタッチパネルの向きが画面表示と異なりますか？**
+**Q: 画面のタッチパネルの向きが、画面表示と異なっていますか？**
 
-**A: 以下の手順を慎重に実行してください：**
+**A: 以下の手順に注意して従ってください：**
 
-[SSH経由でreTerminal DMにアクセス](#access-reterminal-dm-via-ssh)の手順に従い、次のコマンドを入力してください：
+[access reTerminal DM via SSH](#access-reterminal-dm-via-ssh) の手順に従い、その後、次のコマンドを入力してください：
 
 ```sh
 echo 'ATTRS{name}=="gt9271", ENV{LIBINPUT_CALIBRATION_MATRIX}="0  1.0  0 -1.0 0 1.0 0 0 1.0"' | sudo tee -a /etc/udev/rules.d/98-touchscreen-cal.rules
 ```
 
-その後再起動します：
+その後、再起動します：
 
 ```sh
 sudo reboot
 ```
 
-画面の向きがまだ正しくない場合は、`ENV{LIBINPUT_CALIBRATION_MATRIX}` の追加オプションを[こちら](https://wayland.freedesktop.org/libinput/doc/1.11.3/udev_config.html)で見つけることができます。
+それでも画面の向きが正しくない場合は、`ENV{LIBINPUT_CALIBRATION_MATRIX}` の追加オプションが[こちら](https://wayland.freedesktop.org/libinput/doc/1.11.3/udev_config.html)にあります。
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

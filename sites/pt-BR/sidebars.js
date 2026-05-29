@@ -2087,6 +2087,8 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_i2s_test',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_playback_record',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_udp_stream',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_http_stream',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_mqtt',
               ],
             },
             'Sensor/reSpeaker_flex/pt_reSpeaker_flex_python_control',
