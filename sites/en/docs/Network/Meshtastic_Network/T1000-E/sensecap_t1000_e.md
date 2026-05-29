@@ -641,7 +641,7 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### Direct Message Fail
+### Message Communication Fail
 
 #### NodeDB Reset
 
@@ -665,10 +665,11 @@ Two nodes need to know their private key with each other in order to be able to 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
 
-Reboot the faulty device to make the configuration function.
+Reboot the faulty device to make the configuration function. After the key regeneration, other device needs to reconnect with the node. So it is better to delete the node in other device's node list.
 
 :::note
-After the key regeneration, other device needs to reconnect with the node. So it is better to delete the node in other device's node list.
+For more information about the communication with other LoRa chip, please refer to: [link](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/)
+
 :::
 
 ### Signal Quality
