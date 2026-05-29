@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-03-10'
+updatedAt: '2026-04-20'
 url: https://wiki.seeedstudio.com/ja/meshtastic_solar_node/
 ---
 
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/ja/meshtastic_solar_node/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-これは [Meshtastic®](https://meshtastic.org/) をベースとした、XIAO nRF52840 Plus メインコントローラと Wio-SX1262 LoRa モジュールを統合した、経済的なソーラー駆動の通信ノード／リピータです。ネットワークカバレッジのないエリア向けに特別に設計されており、長距離通信、高精度な位置測位、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
+これは [Meshtastic®](https://meshtastic.org/) をベースにした経済的なソーラー駆動の通信ノード／リピーターで、XIAO nRF52840 Plus メインコントローラと Wio-SX1262 LoRa モジュールを統合しています。ネットワークカバレッジのない地域向けに特別に設計されており、長距離通信、高精度な位置測位、低消費電力動作をサポートします。屋外エリアでのネットワークカバレッジ拡張に適しています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
@@ -38,10 +38,10 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
 ### 特長
 
 - 5W ソーラーパネルを内蔵し、外部バッテリー（ユーザー自身で用意する必要があります）にも対応します。
-- 工場出荷時に Meshtastic ファームウェアがプリインストールされており、Meshtastic エコシステムにシームレスに統合できます。
+- デバイスには工場出荷時に Meshtastic ファームウェアがプリインストールされており、Meshtastic エコシステムにシームレスに統合できます。
 - Grove エコシステムと互換性があり、温湿度センサ、照度センサなどのセンサをプラグアンドプレイで接続できます。
 - 長期の屋外使用に適しています。
-- 開けた場所で 8～9km の伝送をサポートします。屋外ノードまたはリピータとして使用でき、Mesh ネットワークを容易に拡張し、ネットワークカバレッジを強化します。
+- 開けた場所で 8～9km の通信距離をサポートします。屋外ノードまたはリピーターとして使用でき、Mesh ネットワークを容易に拡張し、ネットワークカバレッジを強化します。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -52,7 +52,7 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
     <td><b>メインコントローラ</b></td>
     <th>
       <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html" target="_blank">XIAO nRF52840 Plus</a><br />
-      (Nordic nRF52840、FPU 搭載 ARM® Cortex®-M4 32 ビットプロセッサ、64 MHz、256KB RAM、1MB Flash、2MB オンボード Flash)
+      (Nordic nRF52840、FPU 搭載 ARM® Cortex®-M4 32-bit プロセッサ、64 MHz、256KB RAM、1MB Flash、2MB オンボード Flash)
     </th>
   </tr>
   <tr>
@@ -67,7 +67,7 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
     </td>
   </tr>
   <tr>
-    <td><b>GPS モジュール（P1-Pro バージョン用）</b></td>
+    <td><b>GPS モジュール（P1-Pro バージョン）</b></td>
     <td>
       <a href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">XIAO L76K</a><br />
       (GPS/GLONASS/Galileo をサポート)
@@ -116,13 +116,13 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
   </tr>
   <tr>
     <td rowSpan="4"><b>LED</b></td>
-    <td>充電状態インジケータライト *2</td>
+    <td>充電状態インジケータランプ *2</td>
   </tr>
   <tr>
-    <td>ソーラーパネル状態インジケータライト *1</td>
+    <td>ソーラーパネル状態インジケータランプ *1</td>
   </tr>
   <tr>
-    <td>Mesh ハートビートライト *1</td>
+    <td>Mesh ハートビートランプ *1</td>
   </tr>
   <tr>
     <td>ユーザー定義 *1</td>
@@ -137,12 +137,12 @@ Solar Node には、[SenseCAP Solar Node P1](https://www.seeedstudio.com/SenseCA
   </tr>
   <tr>
     <td><b>防水等級</b></td>
-    <td>IPX5</td>
+    <td>IPX6</td>
   </tr>
   <tr>
-    <td><b>バッテリー（P1-Pro バージョン用）</b></td>
+    <td><b>バッテリー（P1-Pro バージョン）</b></td>
     <td>
-      <p>- 18650 リチウムバッテリー 4 本（各 3350mAh）</p>
+      <p>- 18650 リチウム（NMC）バッテリー 4 本（各 3350mAh）</p>
       <p>- Type-C およびソーラー充電に対応。</p>
       <p>- 放電環境：-40～60°C</p>
       <p>- 充電環境：0～50°C</p>

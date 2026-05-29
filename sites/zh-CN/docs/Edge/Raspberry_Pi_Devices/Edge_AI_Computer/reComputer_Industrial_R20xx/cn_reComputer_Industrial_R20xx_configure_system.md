@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/cn/recomputer_industrial_r20xx_configure_system/
 ---
 
@@ -62,7 +62,7 @@ echo 1 > /sys/class/leds/led-green/brightness
 这将**点亮**对应的 LED。
 
 **3. 关闭 LED（可选）**  
-要**关闭**某个特定 LED，请使用：
+要**关闭**某个特定的 LED，请使用：
 
 ```bash
 echo 0 > /sys/class/leds/led-red/brightness
@@ -100,7 +100,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，使用详细输出（ -v ），并发送消息 "hello"（**-p hello**）。
-通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，其中 MOSI 发送的数据会在 MISO 上被接收。此设置允许你在没有实际设备连接的情况下测试 SPI 通信。
+通过短接 TPM 模块的 MISO 和 MOSI 引脚，你实际上创建了一个回环场景，即 MOSI 发送的数据会在 MISO 上被接收。该设置允许你在没有实际设备连接的情况下测试 SPI 通信。
 
 ## Wi-Fi 扫描
 
@@ -110,7 +110,7 @@ gcc spidev_test.c -o spidev_test
 sudo iwlist wlan0 scan
 ```
 
-- 此命令会扫描所有附近的 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
+- 此命令会扫描附近所有 Wi-Fi 网络，并显示其 SSID、信号强度和加密类型。  
 
 ## 蓝牙扫描  
 
@@ -159,19 +159,19 @@ cd sx1302_hal
 sudo nano ./libloragw/inc/loragw_i2c.h
 ```
 
-修改这一行：  
+将此行修改为：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-1"
 ```
 
-为：  
+修改为：  
 
 ```c
 #define I2C_DEVICE "/dev/i2c-2"
 ```
 
-将 **#define I2C_DEVICE "/dev/i2c-1"** 修改为 **#define I2C_DEVICE "/dev/i2c-2"。**
+将 **#define I2C_DEVICE "/dev/i2c-1"** 修改为 **#define I2C_DEVICE "/dev/i2c-2".**
 按 **ctrl+x** 退出，按 **y** 保存更改，然后按 **Enter** 返回命令行页面。
 
 4. 4.添加 packet_forwarder/reset_lgw.sh 文件：
@@ -317,7 +317,7 @@ SX1261_RESET_PIN=634     # SX1261 reset (LBT / Spectral Scan)
 sudo nano packet_forwarder/global_conf.json.sx1250.US915
 ```
 
-修改 com_path 参数，将 ***"com_path": "/dev/spidev0.0"*** 更改为 ***"com_path": "/dev/spidev2.0"***。
+修改 com_path 参数，将  ***"com_path": "/dev/spidev0.0"*** 更改为  ***"com_path": "/dev/spidev2.0"***。
 
 7. 编译代码：
 
@@ -325,7 +325,7 @@ sudo nano packet_forwarder/global_conf.json.sx1250.US915
 sudo make
 ```
 
-这些步骤将配置 LoRa® SPI，并使用指定的配置文件运行数据包转发程序。
+这些步骤将配置 LoRa® SPI，并使用指定的配置文件运行数据转发程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -425,7 +425,7 @@ ATD<phone_number>;
 ```
 
 将 **phone_number** 替换为你想要拨打的目标电话号码。
-请确保在命令末尾包含分号 ;，以指示电话号码的结束。
+请确保在命令末尾包含分号 ;，以表示电话号码结束。
 
 ## 通过 Mini-PCIe 的 4G 蜂窝网络
 
@@ -464,8 +464,8 @@ cat /sys/class/gpio/gpio645/value # should be 0
 cat /sys/class/gpio/gpio639/value # should be 0
 ```
 
-两个值都为 0 → 脚本已被正确拉低，模块处于工作状态。
-进入 minicom 发送命令：
+两个值都为 0 → 脚本已正确拉低，模块处于工作状态。
+进入 minicom 发送指令：
 
 ```bash
 sudo minicom -D /dev/ttyUSB2 -b 115200
@@ -530,7 +530,7 @@ sudo minicom -D /dev/ttyACM2
 
 以 ACM2 和 ACM3 为例：
 如果你想从 ACM2 发送到 ACM3，需要重新设置 ACM2：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM2 中任意打印字符串，并且可以在 ACM3 中同时看到 ACM2 的内容；
-反之，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容。如图所示。
+反之，如果你想从 ACM3 发送到 ACM2，需要重新设置 ACM3：***ctrl+A***，然后按 ***Z*** 再按 ***E***，然后开始串口写命令。此时你可以在 ACM3 中任意打印字符串，并且可以在 ACM2 中同时看到 ACM3 的内容，如图所示。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -543,7 +543,7 @@ reComputer Industrial R20xx 包含 1 个 RS232 接口，对应的 COM 端口和�
 |---------------------------|--------------|----------------------|-----------------|
 | **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
 
-由于 RS232 是全双工通信，直接将 RS232 的 TX 和 RX 短接即可进行回环测试。
+由于 RS232 为全双工通信，直接将 RS232 的 TX 和 RX 短接即可进行回环测试。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.12_rs232_testing_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -554,7 +554,7 @@ reComputer Industrial R20xx 包含 1 个 RS232 接口，对应的 COM 端口和�
 sudo minicom -D /dev/ttyACM1 -b 9600
 ```
 
-如果未连接扩展板，你需要将 ***/dev/ttyACM1*** 改为 ***/dev/ttyACM0***。
+如果未连接扩展板，需要将 ***/dev/ttyACM1*** 改为 ***/dev/ttyACM0***。
 
 **终端 2：**
 
@@ -682,9 +682,9 @@ reComputer Industrial R20xx 包含 8 个 DO 接口，用户可以根据实际需
 </div>
 
 DO 端口的输出类型为晶体管。它支持的输出电压小于 60 VDC，电流容量为 500 mA。
-要测试 DO 的功能，可以按照以下步骤进行测试：
+要测试 DO 的功能，你可以按照以下步骤进行测试：
 
-1. 完成 reComputer Industrial R20xx 的 DO 端口与外部负载之间的连接。
+1. 已完成 reComputer Industrial R20xx 的 DO 端口与外部负载之间的连接。
 2. 输入以下命令，将输出设置为高电平或低电平：
 
 ```bash
@@ -698,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 ## USB Hub 测试
 
-要测试 USB hub，可以按照以下步骤进行：
+要测试 USB hub，你可以按照以下步骤进行：
 
 1. 运行 ***lsusb*** 命令检查是否检测到 USB hub。该命令会列出所有已连接的 USB 设备，包括 hub。
 
@@ -706,12 +706,18 @@ echo 0 > /sys/class/gpio/gpio638/value
 lsusb
 ```
 
-运行此命令后，应显示系统中已连接的 USB 设备信息，包括存在的任何 USB hub。
-如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是 hub 或其与系统连接存在问题。在这种情况下，你可能需要对 USB hub 或其连接进行故障排查。
+运行此命令后，应显示系统中连接的 USB 设备信息，包括所有存在的 USB hub。
+如果 USB hub 工作正常，你应当能在 lsusb 命令的输出中看到它的详细信息。如果没有列出，可能是 hub 本身或其与系统连接存在问题。在这种情况下，你可能需要对 USB hub 或其连接进行故障排查。
 
 ## RTC（实时时钟）测试
 
-要测试实时时钟（RTC）的功能，请按照以下步骤操作：
+:::note
+由于 reComputer 设备搭载了 CM5 芯片，设备上有两个 RTC 单元：① CM5 内置 RTC（rtc0）；② reComputer 上组装的 RTC（rtc1）。
+
+rtc0 无法保持时间数据。因此，要使用 RTC 功能，在设置时间时需要手动指定设备号 rtc1。
+:::
+
+要测试实时时钟（RTC）功能，请按照以下步骤操作：
 
 1. 禁用自动时间同步：
 
@@ -724,27 +730,27 @@ sudo systemctl disable systemd-timesyncd
 将 RTC 设置为特定的日期和时间：
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
 3. 将 RTC 时间同步到系统
 将系统时间更新为与 RTC 时间一致：  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
 4. 检查 RTC 时间：
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
 该命令将读取并显示存储在 RTC 中的时间。
 
-5. 断开 RTC 的电源，等待几分钟，然后重新接通电源，再次检查 RTC 时间以确认是否保持了正确时间。
+5. 断开 RTC 的电源，等待几分钟，然后重新接通电源并再次检查 RTC 时间，以确认是否保持了正确时间。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
 ## 看门狗定时器测试
 
@@ -807,10 +813,10 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-该命令会触发内核崩溃，并应导致看门狗重启系统。
+该命令会触发内核崩溃，并应使看门狗重启系统。
 
 5. 监控系统，以确认其在指定的超时时间后重新启动。
-这些步骤将帮助你测试并确保系统上看门狗定时器的功能正常。
+通过这些步骤，你可以测试并确保系统上的看门狗定时器功能正常。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -844,7 +850,7 @@ ls /dev | grep tpm
 
 **输出结果说明：**  
 
-如果你在输出中看到 ***tpm0*** 和 ***tpmrm0***，这意味着系统已检测到 TPM（可信平台模块）设备并可用。这表明 TPM 硬件已被识别且可访问，这是一个良好信号。你可以在确认这些设备存在且可访问的前提下，继续使用与 TPM 相关的功能或应用程序。
+如果你在输出中看到 ***tpm0*** 和 ***tpmrm0***，这意味着系统已检测到 TPM（可信平台模块）设备并可用。这表明 TPM 硬件已被识别且可访问，这是一个良好的信号。你可以在确认这些设备存在且可访问的前提下，继续使用与 TPM 相关的功能或应用程序。
 
 ## ATECC608A
 
@@ -874,20 +880,20 @@ cd usr/bin
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
-该命令指示 ATECC 工具使用槽 10（-b 10），将序列号大小设置为 192 位 ***( -s 192 )***，并生成一个随机序列号 ***( -c 'serial' )***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
-通过此过程，你可以与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
+该命令指示 ATECC 工具使用插槽 10（-b 10），将序列号大小设置为 192 位 ***(-s 192)***，并生成一个随机序列号 ***(-c 'serial')***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
+通过该过程，你可以与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
 
 ## 与 EEPROM 交互
 
 以下是与 EEPROM（电可擦可编程只读存储器）交互的命令：
 
-1. 为 EEPROM 设备文件授予完整权限（读、写和执行）：
+1. 为 EEPROM 设备文件授予完全权限（读、写和执行）：
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
 ```  
 
-2. 将字符串 "This is a test string" 写入 EEPROM 设备：
+2. 向 EEPROM 设备写入字符串 "This is a test string"：
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
@@ -901,19 +907,19 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 
 ## 检查 SSD 检测情况
 
-要列出包括 SSD 在内的磁盘，可以使用 fdisk -l 命令。操作如下：
+要列出包括 SSD 在内的磁盘，你可以使用 fdisk -l 命令。具体如下：
 
 ```bash
 sudo fdisk -l
 ```
 
-该命令将显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
-在识别出对应于 SSD 的条目后，你可以根据需要继续对其进行分区或格式化。
+该命令会显示系统中连接的所有磁盘列表，如果 SSD 被正确检测到，也会包含在内。请查找代表 SSD 的条目，它们通常以 ***/dev/sd*** 开头，后面跟一个字母（例如 ***/dev/sda, /dev/sdb,*** 等）。
+在确认与 SSD 对应的条目后，你可以根据需要继续对其进行分区或格式化。
 
 ## 用于安全关机的 UPS
 
 CPU 与直流电源输入之间的 GPIO6 用于在电源掉电时向 CPU 报警。然后 CPU 应在超级电容能量耗尽前，通过脚本执行一些紧急操作并运行“$ shutdown”。
-使用此功能的另一种方式是：当 GPIO 引脚状态变化时发起关机。指定的 GPIO 引脚被配置为输入按键，用于生成 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
+使用此功能的另一种方式是：当 GPIO 引脚状态变化时发起关机。指定的 GPIO 引脚被配置为输入按键，用于产生 KEY_POWER 事件。systemd-logind 通过处理该事件来发起关机。
 
 1. 硬件连接。
 
@@ -940,7 +946,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 4. 准备 Python 脚本
 
-- 创建一个新的 Python 脚本文件：
+- 新建一个 Python 脚本文件：
 
 ```bash
 cd ~
@@ -996,7 +1002,7 @@ while True:
 5. 运行脚本。
 
 - 打开终端。
-- 执行以下命令运行脚本：
+- 执行以下命令来运行脚本：
 
 ```bash
 sudo python3 ups_shutdown.py
@@ -1015,20 +1021,20 @@ sudo python3 ups_shutdown.py
 
 7. 验证结果
 
-- 重新连接电源。
+- 重新接通电源。
 - 检查系统数据是否完整且能正常启动。
 
 :::note
 
 1. 如需了解 UPS 功能，请联系我们获取更多信息。
-2. 报警信号为有效低电平。
+2. 报警信号为低电平有效。
 
 :::
 
 ## AI 加速器
 
-reComputer Industrial R20xx 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R20xx-12 系列已预装一块 Hailo-8 M.2 AI 加速卡，性能最高可达 26TOPS。
-如果你购买的是 R20xx-10 系列产品，则需要另行购买 Hailo 的 NPU 模块以启用 AI 功能。
+reComputer Industrial R20xx 上的 M.2 M-KEY 2280 插槽用于安装 PCIE M.2 AI 加速器。而 R20xx-12 系列已预装 Hailo-8 M.2 AI 加速器，性能高达 26TOPS。
+如果你购买的是 R20xx-10 系列产品，则需要购买 Hailo 的 NPU 模块以启用 AI 功能。
 设备已预装 Hailo 加速器驱动，因此你可以直接使用并运行测试用例：
 
 1. 进入测试用例目录
@@ -1052,15 +1058,15 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 要关闭应用程序，请按 ***`Ctrl+C`***。
-这是检测示例的轻量级版本，主要侧重于在尽量减小 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理流水线通过尽量减少视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
+这是检测示例的轻量级版本，主要侧重于在尽量减小 CPU 负载的同时展示 Hailo 的性能。内部的 GStreamer 视频处理管线通过最小化视频处理任务进行了简化，并使用 YOLOv6 Nano 模型。
 
 :::note
-如果你购买的 reComputer 不包含 Hailo-8，并计划购买 Hailo 设备进行集成，请参考 Hailo 官方文档 (https://github.com/hailo-ai) 配置固件和环境，并运行示例以验证设备是否可以正常使用。
+如果你购买的 reComputer 不包含 Hailo-8，并计划购买 Hailo 设备进行集成，请参考 Hailo 官方文档 (https://github.com/hailo-ai) 来配置固件和环境，并运行示例以验证设备是否可以正常使用。
 :::
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
