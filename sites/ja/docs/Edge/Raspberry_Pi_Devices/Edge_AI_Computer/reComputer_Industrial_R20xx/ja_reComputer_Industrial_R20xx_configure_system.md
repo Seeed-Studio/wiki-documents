@@ -660,7 +660,7 @@ reComputer Industrial R20xx には 8 つの DO ポートが含まれており、
       <tr>
         <td>DO4</td>
         <td>GPIO635</td>
-      </tr]
+      </tr>
       <tr>
         <td>DO5</td>
         <td>GPIO577</td>

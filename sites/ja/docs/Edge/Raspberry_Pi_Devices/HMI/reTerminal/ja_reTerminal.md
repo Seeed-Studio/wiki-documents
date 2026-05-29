@@ -122,7 +122,7 @@ reTerminal には出荷時に Raspberry Pi OS がプリインストールされ�
     <tr>
       <td rowSpan={3}>マルチメディア</td>
       <td>H.265 (4Kp60 デコード)</td>
-    </tr]
+    </tr>
     <tr>
       <td>H.264 (1080p60 デコード、1080p30 エンコード)</td>
     </tr>

@@ -528,7 +528,7 @@ O reComputer Industrial R21xx contém 4 portas DO, e o usuário pode configurá-
       <tr>
         <td>DO2</td>
         <td>GPIO637</td>
-      </tr]
+      </tr>
       <tr>
         <td>DO3</td>
         <td>GPIO636</td>
