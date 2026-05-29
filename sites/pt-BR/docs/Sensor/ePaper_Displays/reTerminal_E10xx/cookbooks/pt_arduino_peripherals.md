@@ -9,7 +9,7 @@ last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals/
 ---
 
@@ -35,9 +35,9 @@ O que este livro de receitas cobre:
 - **Buzzer** para alertas e tons musicais no GPIO45.
 - **Três botões de usuário** (KEY0 / KEY1 / KEY2) com detecção de estado com debounce.
 - **Sensor SHT4x** via I²C (GPIO19 SDA / GPIO20 SCL) usando a biblioteca da Sensirion.
-- **Monitoramento de tensão da bateria** através do circuito de ADC + pino de habilitação.
+- **Monitoramento da tensão da bateria** através do circuito de ADC + pino de habilitação.
 - **Cartão microSD** montagem / detecção / listagem de arquivos no barramento SPI compartilhado.
-- **Exemplo avançado — pipeline de imagem com cartão SD**: escolha qualquer JPEG / BMP / PNG no cartão SD, execute-o em um dos cinco algoritmos de dithering integrados e renderize-o no painel com âncora, modo de ajuste e escala configuráveis.
+- **Exemplo avançado — pipeline de imagem com cartão SD**: escolha qualquer JPEG / BMP / PNG no cartão SD, execute-o em um de cinco algoritmos de dithering integrados e renderize-o no painel com âncora, modo de ajuste e escala configuráveis.
 
 ### Materiais Necessários
 
@@ -88,9 +88,9 @@ Antes de executar qualquer exemplo abaixo, você já deve ter:
 
 - A **IDE Arduino** instalada com o **pacote de placas ESP32** e a placa **XIAO_ESP32S3** selecionada.
 - Um **cabo de dados USB-C** funcional e a porta serial correta selecionada.
-- Verificado que você consegue gravar um sketch básico no dispositivo — veja a preparação do ambiente em [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#preparação-do-ambiente) se ainda não tiver feito isso.
+- Verificado que você consegue gravar um sketch básico no dispositivo — veja a preparação do ambiente em [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#environmental-preparation) se você ainda não fez isso.
 
-Todos os sketches deste livro de receitas imprimem informações de depuração por meio de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud**. Abra o Monitor Serial do Arduino e selecione a porta e a taxa de baud correspondentes para acompanhar.
+Todos os sketches deste livro de receitas imprimem informações de depuração por meio de `Serial1` nos pinos **GPIO44 (RX) / GPIO43 (TX)** a **115200 baud**. Abra o Monitor Serial do Arduino e selecione a porta e taxa de baud correspondentes para acompanhar.
 
 ## Controle de LED
 
@@ -275,7 +275,7 @@ void loop() {
 **Buzzer com Tons**
 
 <details>
-<summary>Clique para expandir o código completo do exemplo de Buzzer</summary>
+<summary>Clique para expandir o código completo de exemplo do Buzzer</summary>
 
 ```cpp
 #define SERIAL_RX 44
@@ -426,16 +426,16 @@ void loop() {
 
 **Padrões de alerta comuns:**
 
-- Bip único: Confirmação
-- Bip duplo: Aviso
-- Três bipes: Erro
+- Um único bipe: Confirmação
+- Bipe duplo: Aviso
+- Bipe triplo: Erro
 - Contínuo: Alerta crítico
 
 ## Botões do usuário
 
-O reTerminal E Series possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder aos pressionamentos usando Arduino.
+A reTerminal E Series possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder aos pressionamentos usando Arduino.
 
-O reTerminal E Series possui três botões conectados ao ESP32-S3 via KEY0 (GPIO3), KEY1 (GPIO4) e KEY2 (GPIO5). Todos os botões são ativos em nível baixo, o que significa que leem LOW quando pressionados e HIGH quando soltos.
+A reTerminal E Series possui três botões conectados ao ESP32-S3 via KEY0 (GPIO3), KEY1 (GPIO4) e KEY2 (GPIO5). Todos os botões são ativos em nível baixo, o que significa que leem BAIXO quando pressionados e ALTO quando soltos.
 
 A disposição física e a função desses botões diferem entre os modelos:
 
@@ -459,7 +459,7 @@ A disposição física e a função desses botões diferem entre os modelos:
 		<tr>
 			<td><strong>KEY2</strong> (GPIO5)</td>
 			<td>Botão esquerdo</td>
-			<td>Botão de atualizar (frontal esquerdo)</td>
+			<td>Botão de atualização (frontal esquerdo)</td>
 		</tr>
 	</table>
 </div>
@@ -562,7 +562,7 @@ void loop() {
 
 2. **Configuração de pinos**: Em `setup()`, configuramos cada pino de botão como `INPUT`.
 
-3. **Detecção de botões**: Em `loop()`, verificamos continuamente o estado de cada botão usando `digitalRead()`. Quando um botão é pressionado, o pino lê LOW.
+3. **Detecção de botões**: Em `loop()`, verificamos continuamente o estado de cada botão usando `digitalRead()`. Quando um botão é pressionado, o pino lê BAIXO.
 
 4. **Debouncing**: Um simples atraso de 200 ms após cada pressionamento de botão evita múltiplas detecções de um único toque devido ao bounce mecânico.
 
@@ -574,7 +574,7 @@ void loop() {
 
 **Passo 2.** Abra o Serial Monitor na Arduino IDE (Tools > Serial Monitor).
 
-**Passo 3.** Defina a taxa de baud para 115200.
+**Passo 3.** Defina a taxa de transmissão para 115200.
 
 **Passo 4.** Pressione cada botão e observe a saída no Serial Monitor.
 
@@ -596,7 +596,7 @@ KEY2 (GPIO5) released!
 
 ## Sensor ambiental (SHT4x)
 
-O reTerminal E Series inclui um sensor integrado de temperatura e umidade SHT4x conectado via I2C.
+A reTerminal E Series inclui um sensor integrado de temperatura e umidade SHT4x conectado via I2C.
 
 ### Instalando as bibliotecas necessárias
 
@@ -686,7 +686,7 @@ void loop() {
 
 **Função setup:**
 
-1. **Inicialização serial**: Usa `Serial1` com os pinos 44 (RX) e 43 (TX) específicos do reTerminal E Series
+1. **Inicialização serial**: Usa `Serial1` com os pinos 44 (RX) e 43 (TX) específicos da reTerminal E Series
 2. **Inicialização I2C**: Configura o I2C com os pinos 19 (SDA) e 20 (SCL)
 3. **Inicialização do sensor**: Chama `sht4x.begin(Wire, 0x44)` para inicializar o sensor SHT4x no endereço 0x44
 4. **Leitura do número de série**: Lê e exibe o número de série exclusivo do sensor para verificação
@@ -711,7 +711,17 @@ Temperature: 27.38°C Humidity: 53.37%
 
 ## Sistema de gerenciamento de bateria
 
-O reTerminal E Series inclui capacidade de monitoramento da tensão da bateria por meio de um pino ADC com circuito divisor de tensão.
+A reTerminal E Series inclui capacidade de monitoramento da tensão da bateria por meio de um pino ADC com circuito divisor de tensão.
+
+:::note
+
+O BATTERY_ENABLE_PIN na reTerminal E1003 é diferente do E1001/E1002/E1004.
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+Atualize seu código de acordo ao portar exemplos entre diferentes modelos reTerminal E10xx.
+
+:::
 
 ### Monitoramento simples da tensão da bateria
 
@@ -771,8 +781,8 @@ void loop() {
 
 **Explicação do código:**
 
-- O GPIO1 lê a tensão dividida da bateria através do ADC
-- GPIO21 habilita o circuito de monitoramento da bateria
+- O GPIO1 lê a tensão da bateria dividida por meio do ADC
+- O GPIO21 habilita o circuito de monitoramento da bateria
 - A tensão real da bateria é o dobro da tensão medida devido ao divisor de tensão
 - Para uma bateria LiPo totalmente carregada, espere cerca de 4,2 V
 - Quando a bateria está fraca, a tensão cai para cerca de 3,3 V
@@ -789,14 +799,14 @@ Battery: 4.18 V
 
 ## Usando o cartão MicroSD
 
-Para aplicações que exigem armazenamento adicional, como um porta-retratos digital ou registro de dados, o reTerminal E Series inclui um slot para cartão MicroSD.
+Para aplicações que exigem armazenamento adicional, como um porta-retratos digital ou registro de dados, a reTerminal E Series inclui um slot para cartão MicroSD.
 
 Insira um cartão microSD se você planeja usar o dispositivo como um porta-retratos digital ou se precisar de armazenamento adicional.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-O reTerminal E Series suporta apenas cartões MicroSD de até 64 GB formatados com o sistema de arquivos **Fat32**.
+A reTerminal E Series suporta apenas cartões MicroSD de até 64 GB formatados com o sistema de arquivos **Fat32**.
 :::
 
 ### Operações básicas com cartão SD: listando arquivos
@@ -823,7 +833,7 @@ Este exemplo demonstra como inicializar o cartão SD, detectar quando ele é ins
 	</table>
 </div>
 
-Todos os outros pinos do cartão SD (DET, CS, MOSI, MISO, SCK) são os mesmos em todos os modelos. Selecione a aba do seu dispositivo e copie o código para o sketch da sua IDE Arduino.
+Todos os outros pinos do cartão SD (DET, CS, MOSI, MISO, SCK) são os mesmos em todos os modelos. Selecione a aba do seu dispositivo e copie o código para o sketch da Arduino IDE.
 
 <Tabs>
 <TabItem value="e1001_e1002_e1004" label="E1001 / E1002 / E1004" default>
@@ -1178,7 +1188,7 @@ void loop() {
 
 - **Definições de pinos:** O código começa definindo os pinos GPIO usados para o slot do cartão MicroSD. Observe que os pinos SPI (`MOSI`, `SCK`) são compartilhados com o display de e-paper, mas um Chip Select separado (`SD_CS_PIN`) e uma instância SPI dedicada (`spiSD`) garantem que eles possam ser usados de forma independente.
 - **Inicialização do SPI:** Instanciamos um novo objeto SPI, `spiSD(HSPI)`, para usar o segundo controlador SPI de hardware do ESP32 (HSPI). Esta é a melhor prática para evitar conflitos com outros dispositivos SPI.
-- **Detecção do cartão:** A função `isCardInserted()` lê o `SD_DET_PIN`. No hardware do reTerminal, esse pino é puxado para LOW quando um cartão está presente.
+- **Detecção do cartão:** A função `isCardInserted()` lê o `SD_DET_PIN`. No hardware do reTerminal, este pino é puxado para LOW quando um cartão está presente.
 - **Montar/Desmontar:** A função `mountSD()` habilita a alimentação do cartão, configura o barramento HSPI com os pinos corretos e chama `SD.begin()` para inicializar o sistema de arquivos. `unmountSD()` libera os recursos.
 - **Listagem de arquivos:** `listRoot()` abre o diretório raiz (`/`), e `listDir()` é uma função recursiva que percorre o sistema de arquivos, imprimindo os nomes de todos os arquivos e diretórios.
 - **`setup()`:** Inicializa `Serial1` para saída, configura o pino de detecção do cartão e realiza uma verificação inicial para ver se um cartão já está inserido quando o dispositivo é ligado.
@@ -1228,7 +1238,7 @@ Cinco sketches prontos para gravação são fornecidos com a biblioteca **Seeed_
       <th>Paleta de saída</th>
     </tr>
     <tr>
-      <td>reTerminal&nbsp;E1001 (BW)</td>
+      <td>reTerminal&nbsp;E1001 (PB)</td>
       <td><code>reTerminal_E1001_SDcard_BW</code></td>
       <td>800 × 480</td>
       <td>Preto / branco de 1 bit</td>
@@ -1237,7 +1247,7 @@ Cinco sketches prontos para gravação são fornecidos com a biblioteca **Seeed_
       <td>reTerminal&nbsp;E1001 (Gray4)</td>
       <td><code>reTerminal_E1001_SDcard_Gray4</code></td>
       <td>800 × 480</td>
-      <td>Escala de cinza de 2 bits e 4 níveis</td>
+      <td>Escala de cinza de 4 níveis e 2 bits</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1002</td>
@@ -1249,7 +1259,7 @@ Cinco sketches prontos para gravação são fornecidos com a biblioteca **Seeed_
       <td>reTerminal&nbsp;E1003</td>
       <td><code>reTerminal_E1003_SDcard_Gray16</code></td>
       <td>1872 × 1404</td>
-      <td>Escala de cinza de 4 bits e 16 níveis</td>
+      <td>Escala de cinza de 16 níveis e 4 bits</td>
     </tr>
     <tr>
       <td>reTerminal&nbsp;E1004</td>
@@ -1313,7 +1323,7 @@ Todos os cinco sketches estão em [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_
   {/* Node 3: Scaled Buffer */}
   <g transform="translate(460, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#f59e0b" strokeWidth="2" filter="url(#shadow)" />
-    <path d="M67 15 l2.3 2.3 -2.89 2.87 1.42 1.42 L70.7 18.7 73 21 V15 h-6z M55 21 l2.3-2.3 2.87 2.89 1.42-1.42 L58.7 17.3 61 15 h-6 v6z m6 12 l-2.3-2.3 2.89-2.87 -1.42-1.42 L57.3 29.3 55 27 v6h6z m12-6 l-2.3 2.3 -2.87-2.89 -1.42 1.42 2.89 2.87 L73 33 v-6z" fill="#f59e0b" />
+    <path d="M67 15 l2.3 2.3 -2.89 2.87 1.42 1.42 L70.7 18.7 73 21 V15 h-6z M55 21 l2.3-2.3 2.87 2.89 1.42-1.42 L58.7 17.3 61 15 h-6 v6z m6 12 l-2.3-2.3 2.89-2.87 -1.42-1.42 L57.3 29.3 55 27 v6 h6z m12-6 l-2.3 2.3 -2.87-2.89 -1.42 1.42 2.89 2.87 L73 33 v-6z" fill="#f59e0b" />
     <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">Scaled Buffer</text>
     <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">scaled RGB888</text>
   </g>
@@ -1392,10 +1402,10 @@ Todos os cinco sketches estão em [`Seeed_GFX/examples/ePaper/reTerminal_SDcard_
 
 </svg>
 
-1. **Decodificar** — o formato do arquivo é detectado por bytes mágicos (`FF D8`, `BM` ou `89 50 4E 47`). Uma extensão enganosa é corrigida automaticamente e um aviso é registrado.
-2. **Redimensionar** (opcional) — redução de escala por vizinho mais próximo com base em `DISPLAY_FIT` / `DISPLAY_SCALE`.
-3. **Dither** — um de cinco algoritmos quantiza RGB de 24 bits na pequena paleta do painel (2 / 4 / 6 / 16 níveis).
-4. **Push** — o buffer quantizado é gravado no Sprite do ePaper na posição de ancoragem e, em seguida, `epaper.update()` o envia para o painel.
+1. **Decode** — o formato do arquivo é detectado por magic bytes (`FF D8`, `BM` ou `89 50 4E 47`). Uma extensão enganosa é corrigida automaticamente e um aviso é registrado.
+2. **Resize** (opcional) — redução de escala por vizinho mais próximo com base em `DISPLAY_FIT` / `DISPLAY_SCALE`.
+3. **Dither** — um de cinco algoritmos quantiza o RGB de 24 bits na pequena paleta do painel (2 / 4 / 6 / 16 níveis).
+4. **Push** — o buffer quantizado é gravado no Sprite de ePaper na posição de ancoragem e, em seguida, `epaper.update()` o envia para o painel.
 
 ### Etapa 1 — Abra o exemplo para o seu modelo
 
@@ -1475,7 +1485,7 @@ Você não precisa instalar pngle, miniz ou qualquer outra coisa pelo Arduino Li
 
 ### Código completo do sketch
 
-O código-fonte completo `.ino` para cada variante é mostrado abaixo. Todas as configurações ajustáveis pelo usuário (caminho da imagem, algoritmo de dithering, âncora, ajuste/escala) estão no bloco de **CONFIGURAÇÃO DO USUÁRIO** próximo ao topo — o restante do arquivo é código padrão que normalmente não precisa ser editado.
+O código-fonte completo `.ino` para cada variante é mostrado abaixo. Todas as configurações ajustáveis pelo usuário (caminho da imagem, algoritmo de dithering, âncora, ajuste/escala) estão no bloco de **USER CONFIGURATION** perto do topo — o restante do arquivo é código padrão que normalmente não precisa ser editado.
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
@@ -2247,7 +2257,7 @@ O carregador aceita três formatos prontos para uso:
 
 | Formato | O que funciona | O que evitar |
 |---|---|---|
-| **JPEG** (`.jpg` / `.jpeg`) | Baseline 8 bits, YCbCr ou escala de cinza, qualquer subamostragem de croma (4:4:4 / 4:2:2 / 4:2:0). | JPEG progressivo, CMYK, fontes com rotação apenas por EXIF. |
+| **JPEG** (`.jpg` / `.jpeg`) | Baseline 8 bits, YCbCr ou escala de cinza, qualquer subamostragem de croma (4:4:4 / 4:2:2 / 4:2:0). | JPEG progressivo, CMYK, fontes com rotação apenas via EXIF. |
 | **BMP** (`.bmp`) | BGR de 24 bits sem compactação, ou indexado de 4 bits (paleta + `BI_RGB`). | `BI_BITFIELDS`, BMPs compactados com RLE. |
 | **PNG** (`.png`) | Qualquer PNG padrão (8 bits, 16 bits, paleta, entrelaçado, RGBA). RGBA é composto sobre **branco** porque os painéis de ePaper são opacos. | Nenhum — o pngle lida com todas as variantes padrão de PNG. |
 
@@ -2256,19 +2266,19 @@ O formato real do arquivo é detectado pelos **magic bytes**, não pela extensã
 Orientação de tamanho por painel:
 
 <Tabs groupId="reterm-model">
-<TabItem value="e1001-bw" label="E1001 PB" default>
+<TabItem value="e1001-bw" label="E1001 BW" default>
 
 O painel é **800 × 480**. Qualquer fonte de até aproximadamente **1600 × 1200** é decodificada sem problemas em 8 MB de PSRAM. Imagens maiores ainda são aceitas, mas você vai querer `DISPLAY_FIT = FIT_CONTAIN` para que o carregador possa reduzi-las antes da quantização.
 
 </TabItem>
-<TabItem value="e1001-gray4" label="E1001 Cinza4">
+<TabItem value="e1001-gray4" label="E1001 Gray4">
 
-Mesmo painel que o PB (**800 × 480**), mas você verá uma faixa tonal significativamente maior — uma foto de retrato ou paisagem na resolução nativa parece visivelmente mais suave do que no sketch PB.
+Mesmo painel que o BW (**800 × 480**), mas você verá uma faixa tonal significativamente maior — uma foto em modo retrato ou paisagem na resolução nativa parece visivelmente mais suave do que no sketch BW.
 
 </TabItem>
 <TabItem value="e1002" label="E1002">
 
-O painel é **800 × 480**. A paleta de 6 cores é esparsa, então uma dithering forte (FS / Jarvis) oferece a melhor qualidade percebida em conteúdo fotográfico.
+O painel é **800 × 480**. A paleta de 6 cores é esparsa, então dithering pesado (FS / Jarvis) oferece a melhor qualidade percebida em conteúdo fotográfico.
 
 </TabItem>
 <TabItem value="e1003" label="E1003">
@@ -2295,11 +2305,11 @@ Todas as opções ajustáveis pelo usuário ficam em um bloco de configuração 
 static const char* IMAGE_PATH = "/img/demo.jpg";
 ```
 
-Use uma `/` inicial. O carregador detecta o formato pelos magic bytes, então a extensão é puramente cosmética — `/photo.bmp` contendo dados JPEG reais ainda é decodificado normalmente.
+Use uma `/` inicial. O carregador detecta o formato pelos magic bytes, então a extensão é puramente cosmética — `/photo.bmp` contendo dados JPEG reais ainda é decodificado corretamente.
 
 #### `DITHER_METHOD` — qual algoritmo de dithering
 
-Os painéis de ePaper só conseguem exibir fisicamente 2 / 4 / 6 / 16 cores. Para representar os milhões de cores de uma foto típica, o carregador precisa **quantizar** cada pixel para uma dessas poucas entradas de paleta. O algoritmo de dithering decide *como* esse erro de quantização é distribuído entre os pixels vizinhos.
+Os painéis de ePaper só conseguem exibir fisicamente 2 / 4 / 6 / 16 cores. Para representar os milhões de cores de uma foto típica, o carregador precisa **quantizar** cada pixel para uma dessas poucas entradas de paleta. O algoritmo de dithering decide *como* esse erro de quantização é espalhado pelos pixels vizinhos.
 
 ```cpp
 static const DitherMethod DITHER_METHOD = DITHER_FS;
@@ -2311,7 +2321,7 @@ static const DitherMethod DITHER_METHOD = DITHER_FS;
 | `DITHER_BAYER8` | Matriz Bayer ordenada 8×8. Determinístico, **sem buffer de erro**. | A escolha mais segura no E1003 / E1004 na resolução do painel — nunca fica sem memória. |
 | `DITHER_FS` | Difusão de erro Floyd-Steinberg. A melhor relação **qualidade / velocidade**. | Padrão no E1001 / E1002. Ótimo para fotos com gradientes suaves. |
 | `DITHER_JARVIS` | Jarvis-Judice-Ninke. Kernel mais amplo de 12 coeficientes, saída mais suave. | Qualidade mais alta que FS, mas ~3× mais lento e usa mais PSRAM. |
-| `DITHER_ATKINSON` | Atkinson (Mac clássico). Difunde apenas 6/8 do erro → contraste mais alto, visual mais "gravado". | Saída PB estilizada, conteúdo em quadrinhos / arte de linha. |
+| `DITHER_ATKINSON` | Atkinson (Mac clássico). Difunde apenas 6/8 do erro → contraste mais alto, visual mais "gravado". | Saída P&B estilizada, conteúdo em quadrinhos / arte de linha. |
 
 :::caution Custo de memória da difusão de erro
 `DITHER_FS`, `DITHER_JARVIS` e `DITHER_ATKINSON` precisam de um **buffer de erro em ponto flutuante** de aproximadamente `W × H × N_channels × 4` bytes. Em 1872 × 1404 isso dá cerca de **31 MB para cor** ou **10 MB para escala de cinza** — bem acima da PSRAM disponível.
@@ -2322,7 +2332,7 @@ Quando `ps_malloc` falha, o carregador imprime
 [dither] FS error buffer alloc FAILED (10358 kB) -- falling back to DITHER_NONE
 ```
 
-e muda silenciosamente para `DITHER_NONE`. Se você não quiser esse fallback, mude para `DITHER_BAYER8` (ordenado, sem alocação) **ou** reduza a imagem antes.
+e muda silenciosamente para `DITHER_NONE`. Se você não quiser esse fallback, mude para `DITHER_BAYER8` (ordenado, sem alocação) **ou** reduza a imagem primeiro.
 :::
 
 #### `DITHER_GAMMA` — compensação de brilho
@@ -2331,9 +2341,9 @@ e muda silenciosamente para `DITHER_NONE`. Se você não quiser esse fallback, m
 static const float DITHER_GAMMA = 1.0f;
 ```
 
-`1.0` é neutro. Aumente para **escurecer** a saída (bom para fotos ao ar livre que ficam claras demais no ePaper). Diminua para **clarear** (bom para fotografia noturna ou capturas de tela). A faixa típica útil é **0,8 – 1,6**.
+`1.0` é neutro. Aumente para **escurecer** a saída (bom para fotos externas que ficam claras demais no ePaper). Diminua para **clarear** (bom para fotografia noturna ou capturas de tela). A faixa típica útil é **0,8 – 1,6**.
 
-#### `DISPLAY_ANCHOR` — onde no painel a imagem é posicionada
+#### `DISPLAY_ANCHOR` — onde a imagem é posicionada no painel
 
 Uma grade 3×3 de pontos de ancoragem. A imagem é posicionada de modo que seu canto / borda / centro se alinhe com a localização correspondente no painel.
 
@@ -2364,27 +2374,27 @@ static const float       DISPLAY_SCALE = 1.0f;
 
 Valores típicos para `DISPLAY_SCALE`: `0.25` um quarto, `0.5` metade, `1.0` original, `2.0` 2×.
 
-:::warning Ampliação tende a causar OOM em painéis grandes
-No E1003 (1872 × 1404) e E1004 (1200 × 1600), `DISPLAY_SCALE` maior que `1.0` esgota rapidamente a PSRAM. O carregador exibirá uma mensagem de falta de memória e abortará. Em vez disso, prefira recortar ou pré-redimensionar no host.
+:::warning Ampliação é propensa a OOM em painéis grandes
+No E1003 (1872 × 1404) e E1004 (1200 × 1600), `DISPLAY_SCALE` maior que `1.0` esgota rapidamente a PSRAM. O carregador imprimirá uma mensagem de falta de memória e abortará. Em vez disso, prefira recortar ou pré-redimensionar no host.
 :::
 
-#### Profundidade de escala de cinza (apenas E1001)
+#### Profundidade de escala de cinza (somente E1001)
 
 O E1001 vem com **dois** sketches porque o mesmo painel UC8179 pode operar em BW (rápido, 1 bit) **ou** Gray4 (mais lento, 2 bits, quatro tons). Escolha com base no conteúdo:
 
 | Conteúdo | Sketch recomendado |
 |---|---|
-| Arte de linha, códigos QR, texto, quadrinhos desenhados à mão. | `reTerminal_E1001_SDcard_BW` |
+| Arte linear, códigos QR, texto, quadrinhos desenhados à mão. | `reTerminal_E1001_SDcard_BW` |
 | Fotografias, ilustrações com sombreamento suave. | `reTerminal_E1001_SDcard_Gray4` |
 
 O E1003 usa incondicionalmente escala de cinza de 16 níveis (`initGrayMode(16)`) — esse modo é o recurso característico do painel. E1002 e E1004 são de 6 cores e não expõem uma escolha de profundidade de escala de cinza.
 
-### Etapa 5 — Compile, grave e observe os logs
+### Etapa 5 — Compilar, Gravar, Observar os Logs
 
 1. Em **Arduino IDE → Tools**: selecione a placa **XIAO_ESP32S3**, **PSRAM = OPI PSRAM**, **Flash = 8 MB**, **Partition Scheme = Default 8 MB**.
 2. Insira o cartão microSD preparado.
 3. **Envie** o sketch.
-4. Abra um **monitor serial na ponte USB-UART da carrier** (GPIO43 TX / GPIO44 RX, **115200 baud, 8N1**) — observe que isto é `Serial1`, **não** o USB-CDC `Serial` que o IDE abre automaticamente.
+4. Abra um **monitor serial na ponte USB-UART da carrier** (GPIO43 TX / GPIO44 RX, **115200 baud, 8N1**) — observe que este é o `Serial1`, **não** o USB-CDC `Serial` que o IDE abre automaticamente.
 
 Saída típica de log (E1004 com um PNG 1080 × 1920):
 
@@ -2402,7 +2412,7 @@ Saída típica de log (E1004 com um PNG 1080 × 1920):
 
 Depois disso o painel será atualizado — isso leva **15 – 45 segundos** para uma atualização completa, dependendo do modelo e do modo de cinza / cor escolhido. Fique parado e não reinicie a placa durante a atualização.
 
-### Folha de consulta rápida do orçamento de memória
+### Folha de Dicas do Orçamento de Memória
 
 | Painel | Buffer RGB888 | Buffer de erro do FS (pico) | Confortável com FS? |
 |---|---|---|---|
@@ -2418,13 +2428,13 @@ O módulo OPI PSRAM de 8 MB no módulo XIAO ESP32-S3 oferece aproximadamente **7
 Após o envio, o ePaper pode permanecer em branco nos primeiros segundos enquanto o driver executa sua forma de onda inicial. Uma primeira atualização completa pode levar até alguns minutos em um painel frio — isso é a eletroquímica do painel, não um bug. Atualizações subsequentes são mais rápidas.
 :::
 
-## Solução de problemas
+## Solução de Problemas
 
-Para problemas de configuração do Arduino IDE, problemas de driver USB, falhas de upload ou problemas de "o display ePaper não atualiza", consulte a seção **Troubleshooting** de [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#solução-de-problemas).
+Para problemas de configuração do Arduino IDE, problemas de driver USB, falhas de envio ou problemas de "o display ePaper não atualiza", consulte a seção **Troubleshooting** de [Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino#solução-de-problemas).
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
