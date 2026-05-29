@@ -11,13 +11,13 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-04-10'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏报废。
 
 1. 尚未完成消息传输过程
 2. 正在配置中
@@ -40,7 +40,7 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 ### 第 3 部分：刷写新固件
 
 :::caution note
-在刷写固件之前，请确保你购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的 Tracker 型号上。请`不要使用 NRF-OTA` 更新固件，否则可能导致设备完全损坏。
+在刷写固件之前，请确保你购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请`不要使用 NRF-OTA` 来更新固件，否则可能会导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -75,7 +75,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 - 在蓝牙面板中选择目标设备。
 
@@ -87,7 +87,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 - 点击 `+` 并选择目标设备。
 
@@ -111,7 +111,7 @@ import TabItem from '@theme/TabItem';
 
   步骤 2：添加新设备
 
-    点击 "+ New Connection"。
+    点击 “+ New Connection”。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -124,10 +124,10 @@ import TabItem from '@theme/TabItem';
 
  方法 2：通过串口
 
-    选择串口方式。打开设备管理器查看设备连接到哪个端口，然后在弹出的窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出的窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    你的设备会显示在列表中。点击进行连接。如果连接成功，你可以在网站上直接看到设备状态。
+    你的设备会显示在列表中。点击即可连接。如果连接成功，你可以在网站上直接看到设备状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -138,13 +138,13 @@ import TabItem from '@theme/TabItem';
 为了开始在 Mesh 网络中通信，你必须设置所在区域。该设置控制设备使用的频率范围，应根据你所在的地区进行设置。
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -152,7 +152,7 @@ import TabItem from '@theme/TabItem';
 
 **区域列表**
 
-|**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
+|**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未设置|N/A|N/A|N/A|
 |US|美国|902.0 - 928.0|100|30|
@@ -161,14 +161,14 @@ import TabItem from '@theme/TabItem';
 更多完整列表请参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。如果达到该限制，你的设备将停止发射，直到再次被允许发射为止。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意适合你需求的 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)。
 
 ### （可选）配置传感器
 
-|Sensor|Description|
+|传感器|描述|
 |-|-|
 |Temperature|✅|
 |Light|当前 App 不支持|
@@ -177,7 +177,7 @@ import TabItem from '@theme/TabItem';
 **温度传感器配置**
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 进入 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -185,7 +185,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 进入 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -196,13 +196,13 @@ import TabItem from '@theme/TabItem';
 
 **蜂鸣器和 LED 配置**
 
-||类型|输出 PIN|
+||类型|输出引脚|
 |-|-|-|
 |蜂鸣器|PWM 蜂鸣器|25|
 |LED|-|24|
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 进入 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -210,7 +210,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 进入 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -219,7 +219,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-更多详情请查看 [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/)。
+更多详情请查看 [External Notification 配置](https://meshtastic.org/docs/configuration/module/external-notification/)。
 
 :::tip
 在你更新设备配置后，设备会重启，这可能需要一些时间。
@@ -239,19 +239,19 @@ import TabItem from '@theme/TabItem';
 24:d=16,o=5,b=120:g,c6,d6,2g6
 ```
 
-**超级马里奥主题（短版）**
+**超级马里奥主题（简短版）**
 
 ```plain
 24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
 ```
 
-**马里奥金币**
+**马里奥金币音效**
 
 ```plain
 24:d=8,o=6,b=200:b,e7
 ```
 
-**马里奥能量提升**
+**马里奥变大音效**
 
 ```plain
 powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
@@ -289,7 +289,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### （可选）配置蜂鸣器
 
-蜂鸣器默认是启用的。如果你想关闭蜂鸣器，请将 `Alert Message buzzer`、`Alert bell buzzer` 和 `Use PWM bizzer` 设置为如下截图所示。
+蜂鸣器默认是启用的。如果你想禁用蜂鸣器，请将 `Alert Message buzzer`、`Alert bell buzzer` 和 `Use PWM bizzer` 设置为如下截图所示。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000e/buzzer.png" alt="pir" width={200} height="auto" /></p>
 
@@ -297,7 +297,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### 检查固件版本
 
-进入 `Settings` -> `Firmware Updates`，检查当前固件版本。
+导航到 `Settings` -> `Firmware Updates`，检查当前固件版本。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
@@ -307,7 +307,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 请勿刷写除 T1000-E 固件以外的其他固件，否则可能导致设备死机。
 :::
 
-以下固件会导致你的设备变砖：
+以下固件会使你的设备变砖：
 
 - nrf52_promicro_diy_tcxo<br/>
 - nrf52_promicro_diy_xtal<br/>
@@ -337,7 +337,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，会出现一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 会常亮，并且会出现一个名为 `T1000-E` 的驱动器。
+点击 `Enter DFU Mode`，会出现一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 会常亮，并且应该会出现一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
@@ -345,7 +345,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 <TabItem value="method2" label="方法 2">
 
-将 USB 线连接到电脑，按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮，并且会出现一个名为 `T1000-E` 的驱动器。
+将 USB 线连接到电脑，按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮，并且应该会出现一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -364,7 +364,7 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
 
-下载擦除固件并复制到驱动器中。
+下载擦除固件并复制到该驱动器中。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -380,11 +380,11 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ## 常见问题
 
-### 如何查看设备名称
+### 如何检查设备名称
 
- 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。<br/>
+ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
- 点击 `Open Serial Monitor`，将设备连接到电脑，查看串口日志，关键字为 `using nodenum`。
+ Click `Open Serial Monitor`，将设备连接到电脑，查看串口日志，关键字为 `using nodenum`。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -408,20 +408,20 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
 
-- 如果仍然无效，按住设备按键，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#device-bricked)重新安装引导程序
+- 如果仍然无效，按住设备按键，然后连接充电线，查看电脑中是否弹出一个磁盘。如果有，请[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#device-bricked)重新安装 bootloader
 
 ### 设备卡在启动循环中
 
-**现象说明：**
+**描述：**
 
-设备会不断重启，串口会反复连接和断开。
+设备会反复重启，串口会反复连接和断开。
 
 **解决方案：**
 
 - 步骤 1：尝试手动进入 DFU 模式：按住设备按键，然后**快速**连接充电线两次，绿色 LED 会常亮。
 
 :::note
-要成功进入 DFU 模式，需要快速完成此操作。你可能需要尝试多次。
+要成功进入 DFU 模式，你需要快速完成此操作。可能需要多次尝试。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -432,36 +432,36 @@ powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
 
 ### 设备变砖
 
-#### 说明
+#### 描述
 
-设备无响应，没有 LED 指示灯，无法与 App 配对。
+设备无响应，没有 LED，无法与你的 App 配对。
 
-**1）设备仍然可以进入 DFU 模式，则尝试刷写引导程序。**
+**1) 设备仍然可以进入 DFU 模式，则尝试刷写 bootloader。**
 
-#### 刷写引导程序
+#### 刷写 Bootloader
 
-- [引导程序下载](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [Bootloader 下载](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 :::danger note
-在刷写引导程序时，请确保线缆连接稳定，并且在刷写过程中**不要**断开连接。
+在刷写 bootloader 时，请确保线缆连接稳定，并且在刷写过程中**不要**断开连接。
 :::
 
 **步骤 1：安装 Adafruit-nrfutil**
 
-对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，按下 "Enter"。这样可以打开命令行。
+对于 Windows 用户，同时按下 "Win" 键和 "r" 键，然后在弹出的窗口中输入 "cmd"，点击 "Enter"。这样可以打开命令行。
 
-对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，按下 "Return"。这样可以打开命令行。
+对于 Mac 用户，同时按下 "Command" 键和 "Space" 键，以打开 Spotlight。然后输入 "termial"，点击 "Return"。这样可以打开命令行。
 
 **前置条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-在命令行中检查 python 和 pip 是否已成功安装。
+在命令行中检查 python 和 pip 是否安装成功。
 
 ```
 python --version
@@ -471,10 +471,10 @@ python --version
 python -m pip --version
 ```
 
-然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 Python。
+然后应该会出现 "Python xxx" 和 "pip xxx"。如果没有，请尝试重新安装 python。
 
 <Tabs>
-<TabItem value="pypi" label="通过 PyPI 安装">
+<TabItem value="pypi" label="从 PyPI 安装">
 
 这是推荐的方法，用于安装最新版本：
 
@@ -498,7 +498,7 @@ python -m pip show adafruit-nrfutil
 
 </TabItem>
 
-<TabItem value="sou" label="通过源码安装">
+<TabItem value="sou" label="从源码安装">
 
 如果你在使用 PyPi 安装时遇到问题，或者想要修改该工具，请使用此方法。首先克隆此仓库并进入其文件夹。
 
@@ -516,7 +516,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。这种情况下请使用 `--user` 参数：
+如果在运行 `pip3 install` 时遇到权限错误，说明你的 `pip3` 版本较旧或被设置为尝试安装到系统目录。在这种情况下请使用 `--user` 参数：
 
 ```
 pip3 install -r --user requirements.txt
@@ -546,7 +546,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**步骤 2：检查你的端口号**
+**步骤 2：检查端口号**
 
 将设备连接到电脑，并检查端口号。
 
@@ -560,21 +560,21 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 3：烧录 bootloader**
 
-在终端或命令提示符中，进入你下载 bootloader 压缩包的目录，并执行以下命令，将端口替换为你设备的正确端口：
+在终端或命令提示符中，进入你下载 bootloader 压缩包的目录，并执行以下命令，将其中的端口替换为你设备的正确端口：
 
-- **对于 Windows**：
+- **Windows 系统**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-请将 COMXX 改为你的串口号。例如，如果你的设备在 com6 上，将命令改为：
+请将 COMXX 改为你的串口号。例如，如果你的设备在 com6 上，请将命令改为：
 
 `adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p **COM6** -b 115200 --singlebank --touch 1200`
 
  部分设备在你输入此命令后会改变它们的端口号。所以如果安装失败，请再次检查端口号。
 
-- **对于其他系统**：
+- **其他系统**：
 
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
@@ -623,92 +623,53 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 #### 描述
 
-- 设备开机后，过一段时间会自动关机或重启。
+- 设备开机后，会在一段时间后自动关机或重启。
 - 串口日志运行一段时间后停止。
 
- 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中……
+ 这可能是由于在设备处于以下状态时，手动强制重启或关机导致的：尚未完成消息传输过程、正在配置中......
 
 #### 故障排查
 
- [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)执行 flash 擦除操作。
+ [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)执行 flash 擦除。
 
 ### 恢复出厂设置
 
-如果你想恢复到默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
+如果你想恢复默认设置，可以执行恢复出厂设置。你可以通过两种方式进行恢复出厂设置。
 
 - [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)对设备进行 flash 擦除。然后重新烧录最新固件。
 
 - 在 App 中点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB 重置
+### 私信发送失败
 
-NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节点的信息，包括：
+#### NodeDB 重置
 
-- **节点 ID**
-- **用户名**
-- **位置信息**
-- **信号信息（SNR）**
-- **最后一次看到的时间**
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中存储了该节点的过期信息，你需要对其进行更新。
 
-**何时需要重置**
-
-在以下情况下重置 NodeDB：
-
-- 节点列表中包含过期、重复或无效的条目。
-- 你移动到不同的 Mesh 环境并希望重新发现附近节点。
-- App 中的节点信息显示不正确或不完整。
-
-:::danger
-重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行恢复出厂设置**，也**不会移除设备的基础配置**。
-:::
-
-**从 App 中重置**
-
-1. 打开 App 并连接到目标设备。
-2. 进入 **Settings**。
-3. 点击 **Device**。
-4. 在 **Device Config** 页面滑动到最底部，找到 **Reset NodeDB**。
-5. 点击它并确认操作。
-
-**App 路径**
-
-`Settings > Device > Reset NodeDB`
-
-**示例界面**
-
-步骤 1：在 **Settings** 页面中打开 **Device**。
+打开 App 并连接到目标设备。进入 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-步骤 2：在 **Device Config** 页面点击 `Reset NodeDB`。
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-请注意以下选项之间的区别：
+#### 交换用户信息
 
-- **Reset NodeDB**：只清除节点数据库。
-- **Factory Reset**：将设备恢复到出厂设置，并移除更多配置信息。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动触发它们交换信息。
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### 重新生成私钥
+
+两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中一直失败，请尝试为其重新生成私钥。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+重启故障设备以使配置生效。
+
+:::note
+在重新生成密钥后，其他设备需要重新连接该节点。因此，最好在其他设备的节点列表中删除该节点。
 :::
-
-**重置后会发生什么**
-
-执行 **Reset NodeDB** 后，设备会清除当前存储的节点列表。随着设备继续运行，它会再次发现并记录附近的节点。
-
-你可能会观察到以下现象：
-
-- 节点列表可能会暂时变为空或变少。
-- 随着设备持续运行，节点会逐渐重新出现。
-- 之前存储的历史节点记录将不再可用。
-
-**注意事项**
-
-- 在重置之前，请确认问题确实与异常的节点列表有关。
-- 如果问题只是节点显示延迟，请先等待一段时间，看看是否会自动恢复。
-- 如果在重置 NodeDB 后问题仍然存在，请继续排查设备配置或其他可能原因。
-- 请谨慎使用 **Factory Reset**，以避免误删设备配置。
 
 ### 信号质量
 
@@ -716,7 +677,7 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的区域使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
 
 ### Pogo Pin 定义
 
@@ -725,7 +686,7 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 ## 资源
 
 - [Meshtastic 文档](https://meshtastic.org/docs/introduction/)
-- [SenseCAP T1000 Tracker 数据手册](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
+- [SenseCAP T1000 Tracker 规格书](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
 
 <JetsonLeadQuote
