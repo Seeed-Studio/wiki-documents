@@ -11,20 +11,21 @@ last_update:
   date: 3/13/2026
   author: Michelle Huang
 createdAt: '2025-06-17'
-updatedAt: '2026-03-24'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/
 ---
 
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::tip
-Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L1 Pro 的，但同样适用于 L1 系列中的所有其他产品。
+Wio Tracker L1 系列共享相同的硬件框架。尽管视频指南是针对 L1 Pro 的，但它同样适用于 L1 系列中的所有其他产品。
 :::
+
 ## 视频教程
 
 ### 第 1 部分 开箱
 
-首次使用 L1、L1 Lite 或 L1 E-Ink 型号时，在连接 USB 电源后，将电源开关向上拨动以开机。
+首次使用 L1、L1 Lite 或 L1 E-Ink 机型时，在连接 USB 电源后，将电源开关向上拨动以开机。
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -33,7 +34,7 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 ### 第 2 部分 固件烧录
 
 :::caution note
-请 `don't use NRF-OTA` 来更新固件，否则可能导致设备完全损坏。
+请 `don't use NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -47,20 +48,23 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 </div>
 
 #### 四向摇杆
+
 L1 E-Ink 固件目前不支持四向摇杆。如果你想使用摇杆，请购买其他型号。
 
 #### 菜单栏
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照 [固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录) 更新固件。
+只有 2.7 固件支持菜单栏。如果你想使用菜单栏，请按照 [固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#第-2-部分-固件烧录) 来更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### 蜂鸣器
 
 如果你想打开或关闭蜂鸣器，请先将 `update the firmware` 到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
+
 - 打开蜂鸣器
-Setting（齿轮形状图标）-> Notification -> Buzzer Action -> Disable
+Setting（齿轮形图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
-Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
+Setting（齿轮形图标）-> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -81,15 +85,16 @@ Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 ## 开始使用
 
 :::danger note
-当设备处于以下状态时，请不要手动重启或关闭电源。否则设备可能会损坏。
-1. 尚未完成消息传输过程
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+
+1. 尚未完成消息发送过程
 2. 正在配置中
 :::
 
 ### 烧录固件
 
 :::caution note
-请 `don't use NRF-OTA` 来更新固件，否则可能导致设备完全损坏。
+请 `don't use NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -106,12 +111,11 @@ Setting（齿轮形状图标）-> Notification -> Buzzer Action -> All enabled
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
-
-打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，此时应显示一个名为 `Tracker L1` 的驱动器。
+打开设备电源，点击 `Enter DFU Mode`，此时会出现一个名为 `Tracker L1` 的串口，点击并连接它，然后应该会显示一个名为 `Tracker L1` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录。
+将 UF2 文件拖入 DFU 驱动器。文件下载完成并且设备重启后，固件就会被烧录完成。
 
 ### 打开设备电源
 
@@ -155,7 +159,7 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果你想在网站上发送消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。
+如果你想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic 网站](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
@@ -172,18 +176,17 @@ import TabItem from '@theme/TabItem';
 
  方法 1：通过蓝牙
 
-    选择蓝牙方式。在弹出窗口中选择设备 ID。
+    选择蓝牙方式。在弹出的窗口中选择设备 ID。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
  方法 2：通过串口
 
-    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
+    选择串口方式。打开设备管理器查看设备连接到哪个端口。在弹出的窗口中选择该端口。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     你的设备会显示在列表中。点击进行连接。如果连接成功，你可以在网站上直接看到设备状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-
 
 ### 配置 LoRa
 
@@ -210,10 +213,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-更完整的列表请参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
+更多内容请参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期，每分钟计算一次。如果达到限制，你的设备将停止发射，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，以滚动 1 小时为周期、每分钟计算一次。当达到限制时，你的设备将停止发射，直到再次被允许。
 :::
 
 现在你已经在设备上设置了 LoRa 区域，可以继续配置任意[LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/)以满足你的需求。
@@ -227,7 +230,6 @@ import TabItem from '@theme/TabItem';
 对于 IOS，请打开 `Accurate Location`。否则，定位可能会出现偏差。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
-
 
 ### 传感器连接
 
@@ -268,7 +270,6 @@ import TabItem from '@theme/TabItem';
   </tr>
 </table>
 
-
 <Tabs>
 
 <TabItem value="ios" label="IOS">
@@ -293,27 +294,73 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Telemetryscreen.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### 屏幕连接
- - 电子墨水屏
+
+- 电子墨水屏
   [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)获取兼容的电子墨水屏。
+
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED 屏幕
 [点击这里](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)获取兼容的 OLED 屏幕。目前使用的 OLED 驱动为 SSD1306。
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
-
 ### 虚拟键盘
+
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
 2.7 版本固件现在支持虚拟键盘！你可以在设备上直接输入消息，与其他设备进行通信。请按照[固件烧录教程](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
-## 常见问题（FAQ）
+### （可选）配置铃声
+
+导航到 `Settings` -> `Ringtone Config`，然后输入你想用于外部通知的 RTTTL 铃声字符串。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+
+你可以直接粘贴以下任一 RTTTL 示例：
+
+**塞尔达传说：获得道具**
+
+```plain
+24:d=16,o=5,b=120:g,c6,d6,2g6
+```
+
+**超级马里奥主题（短版）**
+
+```plain
+24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
+```
+
+**马里奥金币**
+
+```plain
+24:d=8,o=6,b=200:b,e7
+```
+
+**马里奥变大音效**
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+
+**诺基亚铃声**
+
+```plain
+24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
+```
+
+**摩尔斯电码 CQ**
+
+```plain
+24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
+```
+## 常见问题
 
 ### 设备变砖与 Bootloader 安装
 
-**问题描述：**
+**说明：**
 
-设备没有响应，没有 LED 指示灯，无法与 App 配对。如果你在烧录自定义固件后发现设备完全无法启动，你也可以尝试重新安装 bootloader。
+设备没有响应，没有 LED 指示灯，无法与你的 App 配对。如果你在烧录自定义固件后发现设备完全无法启动，你也可以尝试重新安装 bootloader。
 
 :::danger note
 在烧录 bootloader 时，请确保线缆连接稳定，并且在烧录过程中**不要**断开连接。
@@ -327,7 +374,7 @@ import TabItem from '@theme/TabItem';
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
-- 步骤 3：拷贝 bootloader 文件
+- 步骤 3：粘贴 bootloader 文件
 
   使用下载的 bootloader 文件覆盖磁盘中的所有文件。
 
@@ -335,29 +382,29 @@ import TabItem from '@theme/TabItem';
 
   完成以上步骤后，你可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)烧录应用固件。你可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
-
 ### 无法进入 DFU 与手动进入 DFU 模式
 
-将设备连接到电脑，双击按下 `Reset` 按钮。黄色 LED 将保持常亮，并且电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到电脑，双击按下 `Reset` 按钮。黄色 LED 将保持常亮，并且在电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
-按一次 `Reset` 按钮即可退出 DFU 模式。
+单击 `Reset` 按钮即可退出 DFU 模式。
 
- ### 设备自动关机
+### 设备自动关机
 
- #### 问题描述
+#### 说明
 
- - 设备开机后，过一段时间会自动关机或重启。
- - 串口日志运行一段时间后停止。
+- 设备开机后，过一段时间会自动关机或重启。
+- 串口日志运行一段时间后停止。
 
  这可能是由于在以下状态下手动强制重启或关闭设备导致的：尚未完成消息传输过程、正在配置中等……
 
- #### 故障排查
+#### 故障排查
 
 [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
 
 ### 恢复出厂设置
+
 如果你想恢复默认设置，可以执行出厂重置。你可以通过以下两种方式进行出厂重置。
 
 - [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)查看视频。你需要执行一次 flash 擦除，然后重新烧录最新固件。
@@ -365,90 +412,35 @@ import TabItem from '@theme/TabItem';
 - 在 App 上点击 `Factory Reset` 按钮。设备将自动以出厂配置重启。
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB 重置
+### 私信发送失败
 
-NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节点的信息，包括：
+#### NodeDB 重置
 
-- **节点 ID**
-- **用户名**
-- **位置信息**
-- **信号信息（SNR）**
-- **最后一次看到的时间**
+NodeDB 是本地数据库，用于存储当前 Mesh 网络中已发现节点的信息。如果你遇到无法与某个节点通信的情况，可能是因为你的 NodeDB 中保存了该节点的过期信息，你需要对其进行更新。
 
-**何时需要重置**
-
-在以下情况下重置 NodeDB：
-
-- 节点列表中包含过期、重复或无效的条目。
-- 你移动到了不同的 Mesh 环境，并希望重新发现附近的节点。
-- App 中显示的节点信息看起来不正确或不完整。
-
-:::danger
-重置 NodeDB 只会清除存储在设备上的节点数据库。它**不会执行出厂重置**，也**不会移除设备的基础配置**。
-:::
-
-**方法一：在设备上重置**
-
-1. 打开设备上的菜单。
-2. 进入 **Node Actions / Settings**。
-3. 选择 **Reset NodeDB**。
-4. 确认重置。
-
-**示例界面**
-
-步骤 1：按下设备按键进入菜单。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB1.png" alt="Device button to enter the menu" width={300} height="auto" /></p>
-
-步骤 2：在菜单中找到 `Reset NodeDB`。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB2.png" alt="Reset NodeDB option in the device menu" width={300} height="auto" /></p>
-
-**方法二：在 App 中重置**
-
-1. 打开 App 并连接到目标设备。
-2. 进入 **Settings**。
-3. 点击 **Device**。
-4. 在 **Device Config** 页面滑动到最底部，找到 **Reset NodeDB**。
-5. 点击并确认操作。
-
-**App 路径**
-
-`Settings > Device > Reset NodeDB`
-
-**示例界面**
-
-步骤 1：在 **Settings** 页面中打开 **Device**。
+打开 App 并连接到目标设备。前往 **Settings**->**Device**->**Device Config**->**Reset NodeDB**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-步骤 2：在 **Device Config** 页面点击 `Reset NodeDB`。
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-请注意以下选项之间的区别：
+#### 交换用户信息
 
-- **Reset NodeDB**：仅清除节点数据库。
-- **Factory Reset**：将设备恢复到出厂设置，并移除更多配置数据。
+每个节点都会周期性地发送自己的节点信息，使 Mesh 中的其他节点能够“看到”和“识别”它。两个节点需要彼此交换节点信息，才能相互通信。如果你无法与列表中的某个节点收发私信，可以在 App 中手动提示它们交换信息。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### 重新生成私钥
+
+两个节点需要彼此知道对方的私钥，才能相互通信。如果某个节点在私信传输中持续失败，请尝试为其重新生成私钥。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+重启故障设备以使配置生效。
+
+:::note
+在重新生成密钥后，其他设备需要重新与该节点连接。因此，最好在其他设备的节点列表中删除该节点。
 :::
-
-**重置后会发生什么**
-
-执行 **Reset NodeDB** 后，设备会清除当前存储的节点列表。随着设备继续运行，它会再次发现并记录附近的节点。
-
-你可能会观察到以下现象：
-
-- 节点列表可能会暂时变为空或变少。
-- 随着设备持续运行，节点会逐渐重新出现。
-- 之前存储的历史节点记录将不再可用。
-
-**注意事项**
-
-- 在重置之前，请确保问题确实与节点列表异常有关。
-- 如果问题只是节点显示延迟，请先等待一段时间，观察是否会自动恢复。
-- 如果在重置 NodeDB 后问题仍然存在，请继续排查设备配置或其他可能原因。
-- 请谨慎使用 **Factory Reset**，以避免误删设备配置。
 
 ### 信号质量
 
@@ -456,16 +448,17 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为获得最佳信号效果，请在开阔、无遮挡且干扰较少的环境中使用设备。
+      为获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域中使用设备。
 
 ### 兼容天线
 
-如果你需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)获取一个。
+如果你需要为 L1 Pro 更换天线，请[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html)获取。
 
 ## 资源
+
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
 - [L1 外壳设计挑战赛](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [外形轮廓文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
@@ -474,9 +467,8 @@ NodeDB 是一个本地数据库，用于存储当前 Mesh 网络中已发现节�
 - [功耗测试与电池寿命计算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
 
 <JetsonLeadQuote
-  buttonText="获取定制报价"
+  buttonText="Request Quote of Customization"
   imageSrc="https://files.seeedstudio.com/wiki/JetsonLeadQuote-Component/Seeed_Studio_XIAO.jpg"
   imageAlt="Request Quote for XIAO"
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
-
