@@ -81,7 +81,7 @@ La versión P1-Pro tiene una batería y un módulo GPS integrados. Para la versi
 
 - Paso 3: Ensambla la carcasa.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p]
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
 :::caution note
 Asegúrate de que la carcasa esté correctamente montada y los tornillos bien apretados para mantener la integridad de impermeabilidad del dispositivo.
@@ -307,7 +307,7 @@ Dado que el dispositivo se utilizará en exteriores durante períodos prolongado
   <tr>
     <td>Temperatura y humedad</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
-  </tr]
+  </tr>
   <tr>
     <td>Temperatura, humedad y presión</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
