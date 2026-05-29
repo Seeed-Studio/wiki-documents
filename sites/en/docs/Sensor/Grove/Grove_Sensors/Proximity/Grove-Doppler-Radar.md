@@ -8,7 +8,7 @@ image: https://wiki.seeedstudio.com/Grove-Doppler-Radar/
 slug: /Grove-Doppler-Radar
 sku: 109020021
 last_update:
-  date: 01/04/2022
+  date: 05/28/2026
   author: gunengyu
 createdAt: '2023-01-05'
 updatedAt: '2026-01-07'
@@ -216,10 +216,6 @@ And if there's an object approaching the radar or passing by, the outcome will a
 <figcaption><b>Figure 3</b>. <i>Object approaching</i></figcaption>
 </figure>
 </div>
-
-:::note
-    The minimum speed accuracy that the sensor is capable of detecting is 52cm/s, which equals to 0.52m/s, 3.6km/h and 2.23mph. Additionally, the results returned by function getSpeed() are multiples of 52cm/s and are absolute values accordingly.
-:::
 
 ## Resources
 
