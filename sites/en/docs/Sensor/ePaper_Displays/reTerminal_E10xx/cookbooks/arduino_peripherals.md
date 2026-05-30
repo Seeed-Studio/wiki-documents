@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip Other cookbooks in this series
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — rendering text, graphics, and images on the ePaper screen.
-- **[Arduino Cookbook: RTC, Low Power & Audio](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, and I2S microphone recording.
+- **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
 :::
 
 ## Introduction
