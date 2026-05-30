@@ -9,16 +9,16 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/
 ---
-# reTerminal E 系列电子纸显示器概览
+# reTerminal E 系列电子墨水屏概览
 
 ## 介绍
 
-reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产品家族，专为**始终在线、低功耗信息显示**而打造。该系列包含四款型号 —— **E1001、E1002、E1003、E1004** —— 覆盖 7.3" 到 13.3" 的黑白和全彩面板，可选触控交互和长达数月的电池续航。它们共享同一软件栈（SenseCraft HMI、Home Assistant、Arduino 等），你只需学习一次，然后根据场景选择合适的外形尺寸。
+reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子墨水屏终端产品家族，专为**始终在线、低功耗信息显示**而打造。该系列包含四款型号 —— **E1001、E1002、E1003、E1004** —— 覆盖 7.3" 到 13.3" 的黑白和全彩面板，可选触控交互和数月级电池续航。它们共享同一软件栈（SenseCraft HMI、Home Assistant、Arduino 等），你只需学习一次，然后根据场景选择合适的外形尺寸。
 
-与持续耗电的传统显示器不同，reTerminal E 系列仅在重绘内容时才会消耗电流，非常适合用作数码相框、智能家居看板、零售标牌、会议室看板、课堂显示屏以及其他需要始终在线的应用场景。
+与持续耗电的传统显示屏不同，reTerminal E 系列仅在重绘内容时才会消耗电流，非常适合用作数码相框、智能家居看板、零售标牌、会议室看板、课堂显示屏以及其他需要始终在线的应用场景。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -57,7 +57,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 
 ## 规格对比
 
-四款型号均采用相同的 ESP32-S3 平台，支持 Wi-Fi 4 / Bluetooth 5.0 无线连接，板载温湿度传感器和蜂鸣器，USB-C 5 V / 1 A 供电输入，工作温度范围为 0–40 °C，并采用金属外壳。它们的差异主要体现在 **显示面板**、**刷新特性**、**电池**、**扩展能力** 和 **认证** 上：
+四款型号均采用相同的 ESP32-S3 平台，支持 Wi-Fi 4 / Bluetooth 5.0 无线连接，板载温湿度传感器和蜂鸣器，USB-C 5 V / 1 A 供电输入，以及 0–40 °C 工作温度范围，并全部采用金属外壳。它们之间的差异主要体现在 **显示面板**、**刷新特性**、**电池**、**扩展能力** 和 **认证** 上：
 
 <div class="table-center">
 	<table align="center">
@@ -88,7 +88,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 			<td align="center">800 × 480</td>
 			<td align="center">1404 × 1872</td>
 			<td align="center">1200 × 1600</td>
-		</tr>
+		</tr]
 		<tr>
 			<td align="center"><strong>局部刷新</strong></td>
 			<td align="center">✅</td>
@@ -194,7 +194,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th align="center">如果你的优先级是……</th>
+			<th align="center">如果你的优先级是…</th>
 			<th align="center">推荐型号</th>
 			<th align="center">原因</th>
 		</tr>
@@ -206,12 +206,12 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 		<tr>
 			<td>与 E1001 相同外形，但你希望呈现鲜艳的全彩内容</td>
 			<td align="center"><strong>E1002</strong></td>
-			<td>7.3" Spectra™ 6 全彩面板 —— 适合画廊、菜谱、儿童家务表、零售标牌等。注意：全彩显示以更丰富的视觉效果为代价，不支持局部刷新，整屏刷新约 15–20 s。</td>
+			<td>7.3" Spectra™ 6 全彩面板 —— 适合画廊、菜谱、儿童任务表、零售标牌。注意：全彩为更丰富的视觉效果牺牲了局部刷新（约 15–20 s 全屏刷新）。</td>
 		</tr>
 		<tr>
 			<td>需要触控交互 / 交互式仪表盘 / 大尺寸黑白阅读器</td>
 			<td align="center"><strong>E1003</strong></td>
-			<td>10.3" 16 级灰度屏，支持电容触控（HMI v1.1.2+），电池续航约 6 个月。</td>
+			<td>10.3" 16 级灰度，支持电容触控（HMI v1.1.2+），并具备 6 个月电池续航。</td>
 		</tr>
 		<tr>
 			<td>最大、最清晰、相框级别的彩色显示效果</td>
@@ -226,7 +226,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子纸显示终端产�
 		<tr>
 			<td>想要一个 TRMNL E-Ink 仪表盘</td>
 			<td align="center"><strong>E1001 / E1002</strong></td>
-			<td>这两款都获得官方支持。E1002 目前在 TRMNL 下以单色模式运行。</td>
+			<td>这两款都获得官方支持。目前在 TRMNL 下，E1002 以单色模式运行。</td>
 		</tr>
 		<tr>
 			<td>电池续航是唯一最重要的因素</td>
@@ -271,11 +271,11 @@ reTerminal E1001 配备 7.5 英寸单色电子纸显示屏，支持 4 级灰度�
   </a>
 </div><br />
 
-reTerminal E1002 配备 7.3 英寸鲜艳全彩电子纸显示屏，采用 ACeP（Advanced Color ePaper）技术。该彩色显示屏在保持电子纸技术低功耗优势的同时，支持多种颜色的更具视觉吸引力的内容，非常适合需要视觉区分和美观效果的重要应用。
+reTerminal E1002 采用生动的 7.3 英寸全彩电子纸显示屏，搭载 ACeP（Advanced Color ePaper）技术。这块彩色屏幕在保留电子纸技术低功耗优势的同时，支持多种颜色的更具视觉吸引力的内容，非常适合需要视觉区分度和美观度的应用。
 
 ### 主要特性
 
-- 7.3 英寸全彩电子纸显示屏，采用 ACeP 技术
+- 7.3 英寸全彩电子纸显示屏，搭载 ACeP 技术
 - 800×480 分辨率
 - 在保持低功耗的同时提供丰富的色彩表现
 - 非常适合画廊展示、彩色仪表盘和以视觉为导向的应用
@@ -293,15 +293,15 @@ reTerminal E1002 配备 7.3 英寸鲜艳全彩电子纸显示屏，采用 ACeP�
   </a>
 </div><br />
 
-reTerminal E1003 是一款 10.3 英寸开源单色电子纸显示屏，具备 16 级灰度和 1404×1872 像素的高分辨率，电池续航最长可达 6 个月。触控交互目前在 SenseCraft HMI 固件 v1.1.2 上获得支持。其由 ESP32-S3 驱动，原生支持 SenseCraft HMI 无代码 UI 设计，同时也支持 Arduino 和 PlatformIO 进行进一步开发。
+reTerminal E1003 是一款 10.3 英寸开源单色电子纸显示屏，具备 16 级灰度和 1404×1872 像素高分辨率，电池续航最长可达 6 个月。触控交互目前在 SenseCraft HMI 固件 v1.1.2 上获得支持。其由 ESP32-S3 驱动，原生支持 SenseCraft HMI 零代码 UI 设计，同时也支持 Arduino 和 PlatformIO 进行进一步开发。
 
-触控相关库计划在未来开源发布，从而提供更大的面板自定义灵活性。更多更新将很快发布。E1003 的 ESPHome 驱动支持也计划在未来版本中推出。
+触控相关的库计划在未来开源发布，从而提供更大的面板自定义灵活性。更多更新将很快发布。E1003 的 ESPHome 驱动支持也计划在未来版本中推出。
 
 ### 主要特性
 
 - 10.3 英寸单色电子纸显示屏，在 HMI 固件 v1.1.2 上支持触控交互
 - 16 级灰度，1404×1872 高分辨率
-- 超低功耗运行，电池续航最长可达 6 个月
+- 通过超低功耗运行实现最长 6 个月电池续航
 - 原生支持 SenseCraft HMI，并兼容 Arduino 和 PlatformIO，计划支持 ESPHome 驱动
 
 ## reTerminal E1004
@@ -317,16 +317,16 @@ reTerminal E1003 是一款 10.3 英寸开源单色电子纸显示屏，具备 16
   </a>
 </div><br />
 
-reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长可达 6 个月。由 ESP32-S3 驱动，它支持 SenseCraft HMI 进行无代码仪表盘创建和图像上传，同时也支持 Home Assistant、Arduino 和 ESP-IDF，以满足高级开发流程需求。
+reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长可达 6 个月。由 ESP32-S3 驱动，它支持 SenseCraft HMI 进行零代码仪表盘创建和图像上传，同时也支持 Home Assistant、Arduino 和 ESP-IDF，以满足高级开发流程需求。
 
 ### 主要特性
 
 - 13.3 英寸全彩电子纸显示屏
-- 在始终在线场景下电池续航最长可达 6 个月
-- ESP32-S3 平台，支持 SenseCraft HMI 无代码开发
+- 适用于始终在线场景的最长 6 个月电池续航
+- ESP32-S3 平台，支持 SenseCraft HMI 零代码开发
 - 兼容 Home Assistant、Arduino 和 ESP-IDF
 
-## SenseCraft HMI — 默认无代码平台
+## SenseCraft HMI — 默认零代码平台
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
@@ -337,15 +337,15 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
   </a>
 </div><br />
 
-每一台 reTerminal E 系列设备都预装 **SenseCraft HMI** 固件，因此你无需编写任何代码即可立即开始使用。Web 应用负责登录、仪表盘设计以及将内容空中部署到你的设备上：
+每一款 reTerminal E 系列设备都预装 **SenseCraft HMI** 固件，因此你无需编写任何代码就能立即开始使用。Web 应用负责登录、仪表盘设计以及将内容空中部署到你的设备上：
 
-- **AI Generator** — 用自然语言描述一个仪表盘，让 AI 自动为你布局。
-- **Gallery** — 将图片和幻灯片直接推送到面板，用于数码相框等场景。
-- **Canvas** — 通过拖放组件构建自定义仪表盘。
-- **RSS / Web Content** — 将实时新闻、天气、日历或任意 Web 订阅源拉取到屏幕上。
-- **触控交互** — 从 HMI 固件 v1.1.2 开始在 E1003 上获得完整支持。
+- **AI Generator** —— 用自然语言描述一个仪表盘，让 AI 自动为你布局。
+- **Gallery** —— 将图片和幻灯片直接推送到面板，用于数码相框等场景。
+- **Canvas** —— 通过拖放组件来构建自定义仪表盘。
+- **RSS / Web Content** —— 将实时新闻、天气、日历或任意 Web 订阅源拉取到屏幕上。
+- **触控交互** —— 从 HMI 固件 v1.1.2 开始在 E1003 上获得完整支持。
 
-如果你需要比无代码流程更高的控制能力，每台设备也都开放底层 ESP32-S3，因此你可以随时转到下面的应用教程进行开发。
+如果你需要比零代码流程更高的控制能力，每台设备也都开放底层 ESP32-S3，因此你可以随时转到下面的应用教程进行开发。
 
 ## 应用与教程
 
@@ -373,7 +373,7 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>按钮、蜂鸣器、电池监测、深度睡眠、多页面仪表盘。</td>
+			<td>按键、蜂鸣器、电池监测、深度睡眠、多页面仪表盘。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">计划支持</td>
@@ -390,7 +390,7 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 	</table>
 </div>
 
-### 无代码 / 可视化 UI 设计工具
+### 零代码 / 可视化 UI 设计工具
 
 <div class="table-center">
 	<table align="center">
@@ -404,7 +404,7 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_squareline_vision">Work with SquareLine Vision</a></td>
-			<td>在浏览器中拖放设计 LVGL UI，然后导出可直接编译的代码。</td>
+			<td>在浏览器中拖放 LVGL UI，然后导出可直接编译的代码。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
@@ -451,15 +451,15 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals">Arduino — 板载外设</a></td>
-			<td>驱动板载 LED、蜂鸣器、三个用户按键、SHT4x 传感器、电池监控和 microSD 卡。</td>
+			<td>驱动板载 LED、蜂鸣器、三个用户按键、SHT4x 传感器、电池监控以及 microSD 卡。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC、低功耗与音频</a></td>
-			<td>RTC 时间管理、深度睡眠 / 轻度睡眠，以及 I2S 麦克风录音（麦克风仅适用于 E1001 / E1002 / E1003）。</td>
+			<td><a href="https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC、低功耗、音频与触控</a></td>
+			<td>RTC 时间管理、深度睡眠 / 轻度睡眠、I2S 麦克风录音以及电容触控绘图（麦克风和触控仅适用于 E1003）。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -469,7 +469,7 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 </div>
 
 :::tip
-在寻找针对每款设备的入门指南（开箱、Wi-Fi 设置、固件更新）？请跳转到上方矩阵中链接的产品 Wiki：
+在寻找针对每款设备的入门指南（开箱、Wi-Fi 设置、固件更新）？请跳转到上表中链接的产品 Wiki：
 [E1001](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001) ·
 [E1002](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002) ·
 [E1003](https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1003) ·
@@ -484,25 +484,25 @@ reTerminal E1004 配备 13.3 英寸全彩电子纸显示屏，电池续航最长
 
 ## FCC 声明
 
-任何未经负责合规方明确批准的更改或修改，都可能导致用户操作本设备的授权失效。本设备符合 FCC 规则第 15 部分的规定。操作须符合以下两个条件：
+任何未经负责合规方明确批准的更改或修改，都可能导致用户操作本设备的权限失效。本设备符合 FCC 规则第 15 部分的规定。操作须符合以下两个条件：
 
 (1) 本设备不得造成有害干扰；并且
 
-(2) 本设备必须接受所接收到的任何干扰，包括可能导致不期望操作的干扰。本发射器不得与任何其他天线或发射器共址或同时运行。
+(2) 本设备必须接受所接收到的任何干扰，包括可能导致不期望操作的干扰。本发射器不得与任何其他天线或发射器共同安装或同时工作。
 
-注意：本设备已经过测试，符合 FCC 规则第 15 部分中针对 B 类数字设备的限制。这些限制旨在为住宅安装环境中防止有害干扰提供合理保护。本设备会产生、使用并能辐射射频能量，如果未按说明书安装和使用，可能会对无线电通信造成有害干扰。然而，不能保证在某一特定安装中不会发生干扰。如果本设备确实对无线电或电视接收造成有害干扰（可通过关闭和开启设备来判断），建议用户通过以下一种或多种措施尝试纠正干扰：
+注意：本设备已经过测试，符合 FCC 规则第 15 部分中针对 B 类数字设备的限制。这些限制旨在为住宅安装环境中防止有害干扰提供合理保护。本设备会产生、使用并能辐射射频能量，如果未按照说明进行安装和使用，可能会对无线电通信造成有害干扰。然而，不能保证在某一特定安装中不会发生干扰。如果本设备确实对无线电或电视接收造成有害干扰（可通过关闭和开启设备来判断），建议用户通过以下一种或多种措施尝试纠正干扰：
 
-– 重新定向或移动接收天线。
+– 重新定向或重新安置接收天线。
 
 – 增加设备与接收机之间的距离。
 
 – 将设备连接到与接收机不同的电路上的电源插座。
 
-– 咨询经销商或有经验的无线电 / 电视技术人员以获取帮助。本设备符合针对非受控环境规定的 FCC 射频暴露限制。本设备的安装和操作应确保辐射体与人体之间的最小距离为 20cm。
+– 咨询经销商或有经验的无线电/电视技术人员以获取帮助。本设备符合针对非受控环境规定的 FCC 射频暴露限制。本设备的安装和操作应确保辐射体与人体之间的最小距离为 20cm。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
