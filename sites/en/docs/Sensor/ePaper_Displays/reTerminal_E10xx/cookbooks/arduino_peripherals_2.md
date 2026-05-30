@@ -1907,7 +1907,7 @@ After tapping the screen:
 [touch] raw=(1400,1100) screen=(1400,1100)
 ```
 
-<!-- TODO: Insert photo of E1003 touch draw result -->
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/247.png" style={{width:600, height:'auto'}}/></div>
 
 ## Troubleshooting
 
