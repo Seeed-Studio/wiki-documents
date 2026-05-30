@@ -1485,7 +1485,7 @@ Quick preparation:
 The capacitive touch panel is only available on the **reTerminal E1003** (10.3" model). The E1001, E1002, and E1004 do **not** have a touch panel. If you are using any model other than E1003, skip this section.
 :::
 
-The reTerminal E1003 features a **GT911** capacitive touch controller connected via I2C. It supports multi-touch input and can detect up to 5 simultaneous touch points. Combined with the 16-level gray ePaper display, you can build interactive applications that respond to screen taps.
+The reTerminal E1003 features a **GT911** capacitive touch controller connected via I2C. Combined with the 16-level gray ePaper display, you can build interactive applications that respond to screen taps.
 
 ### Hardware Overview
 
@@ -1523,22 +1523,10 @@ The reTerminal E1003 features a **GT911** capacitive touch controller connected 
       <td>Panel resolution</td>
       <td>1872 × 1404 px</td>
     </tr>
-    <tr>
-      <td>Max touch points</td>
-      <td>5</td>
-    </tr>
   </table>
 </div>
 
 The touch controller shares the same I2C bus (GPIO19/GPIO20) with the PCF8563 RTC and the SHT4x sensor.
-
-### Installing Required Libraries
-
-The touch sketch requires the **Seeed_GFX** library, which provides the TFT_eSPI display driver and EPaper support for the reTerminal E Series.
-
-1. Open Arduino IDE and go to **Sketch → Include Library → Manage Libraries...**.
-2. Search for "**Seeed_GFX**" and install it.
-3. Make sure **PSRAM** is set to **OPI PSRAM** and **Flash** is set to **8 MB** in the Tools menu — the display buffer requires PSRAM.
 
 ### Full Sketch: E1003_TouchDraw
 
@@ -1548,39 +1536,6 @@ The complete sketch is available in the repository: [`examples/E1003_TouchDraw/E
 <summary>Click to expand the full E1003_TouchDraw.ino code</summary>
 
 ```cpp
-/*
- * E1003_TouchDraw — tap the touch panel and draw a dot at the same position.
- *
- * Compatible with : reTerminal E1003
- *
- * How to use
- * ----------
- * 1. Install the Seeed_GFX / TFT_eSPI display library used by reTerminal E.
- * 2. Arduino IDE board settings:
- *      Board      : XIAO_ESP32S3
- *      PSRAM      : OPI PSRAM    <-- REQUIRED. Display width/height will be 0 without it.
- *      Flash Size : 8 MB
- * 3. Flash to your device.
- * 4. Open a serial monitor on the carrier USB-UART bridge (GPIO43 TX / GPIO44 RX,
- *    115200 baud) for setup and error logs.
- * 5. Tap the screen. Each new touch draws a black dot at the touched position.
- *
- * Hardware notes
- * --------------
- * Display : E1003 10.3 inch 16-level gray ePaper.
- * Touch   : GT9xx / GT911-compatible I2C capacitive touch controller.
- * Bus     : I2C0
- *   SDA   -> GPIO19
- *   SCL   -> GPIO20
- *   INT   -> GPIO2
- *   RESET -> GPIO48
- *
- * Required libraries
- * ------------------
- *   Wire.h         (built-in I2C)
- *   Seeed_GFX      (provides TFT_eSPI.h and EPaper for reTerminal E)
- */
-
 #include <Arduino.h>
 #include <Wire.h>
 
