@@ -9,7 +9,7 @@ last_update:
   date: 05/21/2026
   author: Citric
 createdAt: '2026-05-15'
-updatedAt: '2026-05-21'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals/
 ---
 
@@ -712,6 +712,16 @@ Temperature: 27.38°C Humidity: 53.37%
 ## Battery Management System
 
 The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
+
+:::note
+
+The BATTERY_ENABLE_PIN on reTerminal E1003 differs from E1001/E1002/E1004.
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+Please update your code accordingly when porting examples between different reTerminal E10xx models.
+
+:::
 
 ### Simple Battery Voltage Monitoring
 
