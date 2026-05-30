@@ -713,6 +713,16 @@ Temperature: 27.38°C Humidity: 53.37%
 
 The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
 
+:::note
+
+The BATTERY_ENABLE_PIN on reTerminal E1003 differs from E1001/E1002/E1004.
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+Please update your code accordingly when porting examples between different reTerminal E10xx models.
+
+:::
+
 ### Simple Battery Voltage Monitoring
 
 ```cpp

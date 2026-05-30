@@ -311,6 +311,49 @@ The OLED will show sensor data if you enable `on screen`.
 The 2.7 version firmware now support virtual keyboard! You can type message directly on the device to communicate with other device. Follow the [Flash Firmware Tutorial](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
+### (Optional) Configure Ringtone
+
+Navigate to `Settings` -> `Ringtone Config`, then enter the RTTTL ringtone string you want to use for external notifications.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/T1000E20260410.png" alt="pir" width={500} height="auto" /></p>
+
+You can paste one of the following RTTTL examples directly:
+
+**The Legend of Zelda: Item Get**
+
+```plain
+24:d=16,o=5,b=120:g,c6,d6,2g6
+```
+
+**Super Mario Theme (Short)**
+
+```plain
+24:d=4,o=5,b=100:16e6,16e6,32p,8e6,16c6,8e6,8g6,8p,8g
+```
+
+**Mario Coin**
+
+```plain
+24:d=8,o=6,b=200:b,e7
+```
+
+**Mario Power-Up**
+
+```plain
+powerup:d=16,o=5,b=200:g,a,b,c6,d6,e6,f#6,g6,a6,b6,2c7
+```
+
+**Nokia Ringtone**
+
+```plain
+24:d=4,o=5,b=180:8e6,8d6,f#,g#,8c#6,8b,d,e,8b,8a,c#,e,2a
+```
+
+**Morse Code CQ**
+
+```plain
+24:d=16,o=6,b=120:8c,p,c,p,8c,p,c,4p,8c,p,8c,p,c,p,8c,8p
+```
 ## FAQ
 
 ### Device bricked & Bootloader installation
@@ -369,91 +412,35 @@ If you want to restore to the default settings, you can do the factory reset. Th
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB Reset
+### Direct Message Fail
 
-NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+#### NodeDB Reset
 
-- **Node ID**
-- **User Name**
-- **Location Information**
-- **Signal Information (SNR)**
-- **Last Seen Time**
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network. If you encounter a situation where you can't communicate with a certain node, it might be because your nodedB has stored outdated information for that node. You will need to update it.
 
-**When to reset**
-
-Reset NodeDB when:
-
-- The node list contains outdated, duplicate, or invalid entries.
-- You move to a different Mesh environment and want to rediscover nearby nodes.
-- Node information in the app appears incorrect or incomplete.
-
-:::danger
-Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
-:::
-
-**Method 1: Reset from the Device**
-
-1. Open the menu on the device.
-2. Go to **Node Actions / Settings**.
-3. Select **Reset NodeDB**.
-4. Confirm the reset.
-
-**Example Screens**
-
-Step 1: Press the device button to enter the menu.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB1.png" alt="Device button to enter the menu" width={300} height="auto" /></p>
-
-Step 2: Find `Reset NodeDB` in the menu.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB2.png" alt="Reset NodeDB option in the device menu" width={300} height="auto" /></p>
-
-**Method 2: Reset from the App**
-
-1. Open the app and connect to the target device.
-2. Go to **Settings**.
-3. Tap **Device**.
-4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
-5. Tap it and confirm the action.
-
-**App Path**
-
-`Settings > Device > Reset NodeDB`
-
-**Example Screens**
-
-Step 1: Open **Device** from the **Settings** page.
+Open the app and connect to the target device. Go to **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-Step 2: Tap `Reset NodeDB` on the **Device Config** page.
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-Please note the difference between the following options:
+#### Exchange User Info
 
-- **Reset NodeDB**: Only clears the node database.
-- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+Each node will periodically send its own node information, enabling other nodes in the mesh to "see" and "recognize" it. Two nodes need to exchange their node information with each other in order to be able to communicate with each other. If you are unable to send or receive private messages with another node on the list, you can manually prompt them to exchange information in the app.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### Regenerate Private Key
+
+Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+Reboot the faulty device to make the configuration function.
+
+:::note
+After the key regeneration, other device needs to reconnect with the node. So it is better to delete the node in other device's node list.
 :::
-
-**What happens after reset**
-
-After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
-
-You may observe the following:
-
-- The node list may temporarily become empty or smaller.
-- Nodes will gradually reappear as the device continues operating.
-- Previously stored historical node records will no longer be available.
-
-**Notes**
-
-- Before resetting, make sure the issue is actually related to an abnormal node list.
-- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
-- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
-- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Signal Quality
 
