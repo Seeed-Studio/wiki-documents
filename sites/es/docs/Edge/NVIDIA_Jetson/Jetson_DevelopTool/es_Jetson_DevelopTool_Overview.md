@@ -7,7 +7,7 @@ keywords:
   - DevelopTool
   - AI workbench
   - Jetson flashing
-image: https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/Reference-UI.png
+image: https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png
 slug: /jetson_developtool_overview
 last_update:
   date: 05/26/2026
@@ -19,9 +19,11 @@ url: https://wiki.seeedstudio.com/es/jetson_developtool_overview/
 
 **Seeed Jetson DevelopTool** es un banco de trabajo de desarrollo de IA todo en uno diseñado para productos Jetson de Seeed Studio. Consolida los flujos de trabajo de desarrollo de Jetson más comunes — desde el primer flasheo de firmware hasta el despliegue de aplicaciones de IA — en una única aplicación de escritorio con interfaz gráfica.
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/8_SjIEZI2lQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+<br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/ui-overview.png" style={{width:800, height:'auto'}}/></div>
 
