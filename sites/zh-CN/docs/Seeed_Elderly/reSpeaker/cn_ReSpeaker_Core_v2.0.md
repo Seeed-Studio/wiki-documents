@@ -948,8 +948,7 @@ sudo python usrer_button.py
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/CDC_Driver.png)
 
 **A5:** 当你通过 OTG 或 UART 将 ReSpeaker Core v2.0 连接到电脑时，可能会出现这种情况。
-这是因为 CDC Serial 驱动与其他 OTG 驱动发生了冲突。请卸载冲突的驱动
- 然后重新连接 ReSpeaker Core v2.0。
+这是因为 CDC Serial 驱动与其他 OTG 驱动发生了冲突。请卸载冲突的驱动,然后重新连接 ReSpeaker Core v2.0。
 
 **Q6: 如果我想使用外置天线怎么办？**
 
@@ -975,10 +974,10 @@ sudo python usrer_button.py
 
 **A8:** 请使用 USB 转 TTL 适配器直接连接到 UART，你会看到如下错误信息。
 
-__CODE_LINE_PLH__
 ```
 [    2.119560] mmcblk0: timed out sending SET_BLOCK_COUNT command, card status 0x400900
 [    2.128134] mmcblk0: command error, retrying timeout
+```
 
 根本原因是旧的 SD 卡无法在 Linux 系统下正常工作。请更换为较新的 SD 卡，这些卡支持所有 eMMC 命令，例如 ScanDisk Ultra。
 
@@ -1055,4 +1054,3 @@ __CODE_LINE_PLH__
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
