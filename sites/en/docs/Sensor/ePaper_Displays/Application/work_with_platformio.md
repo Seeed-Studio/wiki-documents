@@ -21,6 +21,8 @@ updatedAt: '2026-06-01'
 
 # Work with PlatformIO
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" style={{width:650, height:'auto'}}/></div>
+
 This page is the **PlatformIO configuration reference** for Seeed ePaper products. It focuses on the parts that are different from the Arduino IDE workflow:
 
 1. Installing PlatformIO in Visual Studio Code.
@@ -89,11 +91,11 @@ For display drawing and hardware APIs, continue using the same Arduino-style C/C
 
 **Step 1.** Download and install [Visual Studio Code](https://code.visualstudio.com/).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 2.** Open **Extensions** in VS Code, search for `PlatformIO IDE`, and install it.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 3.** Restart VS Code after the extension finishes installing.
 
@@ -107,17 +109,23 @@ If you use PlatformIO IDE in VS Code, PlatformIO Core is included with the exten
 
 **Step 1.** In **PlatformIO Home**, select **New Project**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_1.png" style={{width:1000, height:'auto'}}/></div>
 
 **Step 2.** Enter a project name.
 
-**Step 3.** Select the board that matches the MCU used by your ePaper product. For most ESP32-S3 based Seeed ePaper products, start with **Seeed Studio XIAO ESP32S3**.
+**Step 3.** Select any temporary Arduino-compatible board that lets PlatformIO create the project. This first selection is only used to generate the project folder.
 
 **Step 4.** Select **Arduino** as the framework.
 
 **Step 5.** Click **Finish** and wait until PlatformIO creates the project.
 
+**Step 6.** Open `platformio.ini` and replace the generated configuration with the Seeed configuration shown in the next sections.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
+
+:::caution
+Most Seeed Studio development boards used by this ePaper product line are maintained through Seeed's PlatformIO platform package, not only through PlatformIO's default board list. If you cannot find the exact Seeed board in the PlatformIO **New Project** window, that is expected. Create a temporary project first, then set `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` and the correct `board` ID in `platformio.ini`.
+:::
 
 After creation, the important files and folders are:
 
@@ -150,12 +158,12 @@ After creation, the important files and folders are:
 
 `platformio.ini` is the center of a PlatformIO project. Each `[env:name]` section defines one build environment. The environment tells PlatformIO which board to compile for, which framework to use, which libraries to download, and how to upload or monitor the firmware.
 
-A minimal Arduino-based ESP32-S3 ePaper environment looks like this:
+A minimal Arduino-based ESP32-S3 ePaper environment using Seeed's PlatformIO platform package looks like this:
 
 ```ini
-[env:seeed_xiao_esp32s3]
-platform = espressif32
-board = seeed_xiao_esp32s3
+[env:seeed-xiao-esp32-s3-plus]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+board = seeed-xiao-esp32-s3-plus
 framework = arduino
 monitor_speed = 115200
 lib_deps =
@@ -173,13 +181,13 @@ The most important fields are:
     </tr>
     <tr>
       <td><code>platform</code></td>
-      <td>The MCU platform package. ESP32-based products usually use <code>espressif32</code>.</td>
-      <td><code>platform = espressif32</code></td>
+      <td>The PlatformIO platform package. For Seeed boards in this guide, use Seeed's platform package URL so PlatformIO can download the board definitions.</td>
+      <td><code>platform = https://github.com/Seeed-Studio/platform-seeedboards.git</code></td>
     </tr>
     <tr>
       <td><code>board</code></td>
       <td>The PlatformIO board ID. This decides the MCU, flash layout, upload tool, and default build settings.</td>
-      <td><code>board = seeed_xiao_esp32s3</code></td>
+      <td><code>board = seeed-xiao-esp32-s3-plus</code></td>
     </tr>
     <tr>
       <td><code>framework</code></td>
@@ -223,66 +231,96 @@ Start with a shared `[env]` section for settings that are common to every Arduin
 
 ```ini
 [env]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 framework = arduino
 monitor_speed = 115200
 lib_deps =
   https://github.com/Seeed-Studio/Seeed_GFX.git
 ```
 
-Then add one `[env:...]` section for the product you are building.
+Then add one `[env:...]` section for the product you are building. The environment name after `env:` can be your own readable name, but the `board` value must match a board definition provided by the Seeed platform package.
+
+:::tip
+The Seeed platform package is downloaded automatically the first time you build the project. The first build can take longer because PlatformIO needs to download the platform package, toolchain, framework, and libraries.
+:::
 
 ### ESP32-S3 Based Products
 
-Use this family for reTerminal E Series, EE0x ESP32-S3 driver boards, and TRMNL DIY Kit custom firmware.
+Use this family for reTerminal E Series, EE0x ESP32-S3 driver boards, and TRMNL DIY Kit custom firmware. These environments share the same Seeed platform package and the same `Seeed_GFX` library dependency; the main product-specific part is still `driver.h`.
 
 ```ini
 [env:reterminal_e1001]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:reterminal_e1002]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:reterminal_e1003]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:reterminal_e1004]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:ee02]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:ee03]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:ee04]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:ee05]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:trmnl_diy_kit]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 ```
 
-For large ePaper screens or examples that allocate full-screen buffers, PSRAM may be required. If your product cookbook requires PSRAM, add the following settings to the matching environment:
+The `seeed-xiao-esp32-s3-plus` board definition in Seeed's platform package already includes the ESP32-S3 Plus flash and PSRAM settings used by many large ePaper products. If a product-specific cookbook provides a different board ID, use the cookbook value instead.
 
-```ini
-build_flags =
-  -DBOARD_HAS_PSRAM
-board_build.arduino.memory_type = qio_opi
-```
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Product</th>
+      <th>Recommended PlatformIO board ID</th>
+      <th>What still changes per product</th>
+    </tr>
+    <tr>
+      <td>reTerminal E1001</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should use the E1001 screen configuration.</td>
+    </tr>
+    <tr>
+      <td>reTerminal E1002</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should use the E1002 color screen configuration.</td>
+    </tr>
+    <tr>
+      <td>reTerminal E1003</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should use the E1003 touch ePaper configuration.</td>
+    </tr>
+    <tr>
+      <td>reTerminal E1004</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should use the E1004 large color screen configuration.</td>
+    </tr>
+    <tr>
+      <td>EE02 / EE03 / EE04 / EE05</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should match the exact driver board and ePaper panel.</td>
+    </tr>
+    <tr>
+      <td>TRMNL 7.5" (OG) DIY Kit</td>
+      <td><code>seeed-xiao-esp32-s3-plus</code></td>
+      <td><code>driver.h</code> should match the TRMNL kit display when writing custom firmware.</td>
+    </tr>
+  </table>
+</div>
 
 :::note
-The exact PSRAM mode depends on the ESP32-S3 module used by the board. Use the product cookbook or board documentation as the final reference. If the build fails after changing `board_build.arduino.memory_type`, remove the setting and confirm the correct memory mode for your board.
+If you are using a plain XIAO ESP32S3 or XIAO ESP32S3 Sense outside the ePaper products listed above, Seeed's platform package also provides <code>seeed-xiao-esp32-s3-sense</code>. Use the board ID that matches the actual hardware you are compiling for.
 :::
 
 ### XIAO 7.5" ePaper Panel
@@ -291,12 +329,7 @@ The XIAO 7.5" ePaper Panel uses the XIAO ESP32-C3 workflow.
 
 ```ini
 [env:xiao_075_epaper_panel]
-platform = espressif32
-board = seeed_xiao_esp32c3
-framework = arduino
-monitor_speed = 115200
-lib_deps =
-  https://github.com/Seeed-Studio/Seeed_GFX.git
+board = seeed-xiao-esp32-c3
 ```
 
 ### nRF52840 Based ePaper Boards
@@ -304,11 +337,15 @@ lib_deps =
 For EN04 / EN05 and other nRF52840-based ePaper development, use the Seeed board package environment pattern. The ePaper driver and pin map still need to come from the product-specific firmware or cookbook.
 
 ```ini
-[env:seeed_xiao_nrf52840]
-platform = https://github.com/Seeed-Studio/platform-seeedboards.git
-board = seeed-xiao-afruitnrf52-nrf52840
-framework = arduino
-monitor_speed = 115200
+[env:seeed-xiao-nrf52840-plus]
+board = seeed-xiao-afruitnrf52-nrf52840-plus
+```
+
+If your firmware is based on the Mbed-enabled nRF52840 Arduino core, use the matching Mbed board ID instead:
+
+```ini
+[env:seeed-xiao-mbed-nrf52840-plus]
+board = seeed-xiao-mbed-nrf52840-plus
 ```
 
 ### Seeed Platform Package for Newer XIAO Boards
@@ -429,8 +466,8 @@ Use this when the project targets only one ePaper product.
 
 ```ini
 [env:ee04]
-platform = espressif32
-board = seeed_xiao_esp32s3
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+board = seeed-xiao-esp32-s3-plus
 framework = arduino
 monitor_speed = 115200
 lib_deps =
@@ -443,22 +480,20 @@ Use this when the same source code should compile for multiple products.
 
 ```ini
 [env]
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 framework = arduino
 monitor_speed = 115200
 lib_deps =
   https://github.com/Seeed-Studio/Seeed_GFX.git
 
 [env:reterminal_e1001]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:ee04]
-platform = espressif32
-board = seeed_xiao_esp32s3
+board = seeed-xiao-esp32-s3-plus
 
 [env:xiao_075_epaper_panel]
-platform = espressif32
-board = seeed_xiao_esp32c3
+board = seeed-xiao-esp32-c3
 ```
 
 ### Fixed Upload Port
@@ -467,8 +502,8 @@ Use this only when PlatformIO cannot automatically select the correct serial por
 
 ```ini
 [env:ee04]
-platform = espressif32
-board = seeed_xiao_esp32s3
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+board = seeed-xiao-esp32-s3-plus
 framework = arduino
 monitor_speed = 115200
 upload_port = /dev/ttyACM0
@@ -491,11 +526,21 @@ This page intentionally focuses on PlatformIO environment configuration. Continu
 
 ### Q1: Why does PlatformIO not show my Seeed board in the board list?
 
-The board may not be available in your installed PlatformIO platform package yet.
+This is expected for many Seeed development boards. The board definitions used in this guide come from Seeed's PlatformIO platform package, so they may not appear in PlatformIO's default **New Project** board search before the package is installed.
 
-- Update PlatformIO platforms from **PlatformIO Home > Platforms > Updates**.
-- If the product wiki provides a Seeed platform package URL, use that URL in `platform`.
-- If a product-specific board ID is not available, use the MCU-equivalent board documented by the product cookbook.
+Use the Seeed package URL directly in `platformio.ini`:
+
+```ini
+platform = https://github.com/Seeed-Studio/platform-seeedboards.git
+```
+
+Then set `board` to the Seeed board ID used by your product, such as:
+
+```ini
+board = seeed-xiao-esp32-s3-plus
+```
+
+When you build for the first time, PlatformIO downloads the platform package and then recognizes the board ID.
 
 ### Q2: Why does the build fail with `TFT_eSPI.h` or `Seeed_GFX` not found?
 
@@ -548,8 +593,8 @@ monitor_speed = 115200
 
 - **[Docs]** [PlatformIO Project Configuration File](https://docs.platformio.org/en/stable/projectconf/index.html)
 - **[Docs]** [PlatformIO IDE for VS Code](https://docs.platformio.org/en/stable/integration/ide/pioide.html)
-- **[Docs]** [Seeed Studio XIAO ESP32S3 PlatformIO Board](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html)
-- **[Docs]** [Seeed Studio XIAO ESP32C3 PlatformIO Board](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
+- **[GitHub]** [Seeed PlatformIO Platform Package](https://github.com/Seeed-Studio/platform-seeedboards)
+- **[GitHub]** [Seeed PlatformIO Arduino Blink Example](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
 - **[GitHub]** [Seeed_GFX Library](https://github.com/Seeed-Studio/Seeed_GFX)
 - **[Tool]** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
 - **[Wiki]** [PlatformIO for Arduino-supported Boards](/Software-PlatformIO)
