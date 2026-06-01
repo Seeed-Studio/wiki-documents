@@ -31,11 +31,11 @@ La reTerminal E Serie es más que solo una pantalla de ePaper: cada modelo tambi
 
 Lo que cubre este recetario:
 
-- **Control de LED** en GPIO6 (lógica invertida).
+- **Control del LED** en GPIO6 (lógica invertida).
 - **Zumbador** para alertas y tonos musicales en GPIO45.
 - **Tres botones de usuario** (KEY0 / KEY1 / KEY2) con detección de estado con eliminación de rebotes.
 - **Sensor SHT4x** sobre I²C (GPIO19 SDA / GPIO20 SCL) usando la librería de Sensirion.
-- **Monitorización del voltaje de la batería** mediante el circuito de ADC + pin de habilitación.
+- **Monitorización de voltaje de batería** mediante el circuito de ADC + pin de habilitación.
 - **Tarjeta microSD**: montaje / detección / listado de archivos en el bus SPI compartido.
 - **Ejemplo avanzado — canalización de imagen desde tarjeta SD**: elige cualquier JPEG / BMP / PNG en la tarjeta SD, pásalo por uno de los cinco algoritmos de tramado integrados y represéntalo en el panel con ancla, modo de ajuste y escala configurables.
 
@@ -92,9 +92,9 @@ Antes de ejecutar cualquier ejemplo de abajo, ya deberías tener:
 
 Todos los sketches de este recetario imprimen información de depuración a través de `Serial1` en los pines **GPIO44 (RX) / GPIO43 (TX)** a **115200 baudios**. Abre el Monitor Serie de Arduino y selecciona el puerto y la velocidad en baudios correspondientes para seguir la salida.
 
-## Control de LED
+## Control del LED
 
-La reTerminal E Serie tiene un LED integrado que se puede controlar mediante GPIO. Ten en cuenta que la lógica del LED está invertida (LOW = ON, HIGH = OFF). El pin del LED difiere entre modelos:
+La reTerminal E Serie tiene un LED integrado que se puede controlar mediante GPIO. Ten en cuenta que la lógica del LED está invertida (LOW = encendido, HIGH = apagado). El pin del LED difiere entre modelos:
 
 <div class="table-center">
 	<table align="center">
@@ -433,7 +433,7 @@ void loop() {
 
 ## Botones de usuario
 
-La reTerminal E Serie incluye tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
+La reTerminal E Serie incorpora tres botones programables por el usuario que se pueden utilizar para varios propósitos de control. Esta sección muestra cómo leer los estados de los botones y responder a las pulsaciones usando Arduino.
 
 La reTerminal E Serie tiene tres botones conectados al ESP32-S3 a través de KEY0 (GPIO3), KEY1 (GPIO4) y KEY2 (GPIO5). Todos los botones son activos en bajo, lo que significa que leen BAJO cuando se presionan y ALTO cuando se sueltan.
 
@@ -566,7 +566,7 @@ void loop() {
 
 4. **Antirrebote**: Un simple retardo de 200 ms después de cada pulsación evita múltiples detecciones de una sola pulsación debido al rebote mecánico.
 
-5. **Salida serie**: Cada pulsación de botón desencadena un mensaje al monitor serie para depuración y verificación.
+5. **Salida serie**: Cada pulsación de botón desencadena un mensaje en el monitor serie para depuración y verificación.
 
 ---
 
@@ -689,7 +689,7 @@ void loop() {
 1. **Inicialización serie**: Usa `Serial1` con los pines 44 (RX) y 43 (TX) específicos de la reTerminal E Serie
 2. **Inicialización de I2C**: Configura I2C con los pines 19 (SDA) y 20 (SCL)
 3. **Inicialización del sensor**: Llama a `sht4x.begin(Wire, 0x44)` para inicializar el sensor SHT4x en la dirección 0x44
-4. **Lectura del número de serie**: Lee y muestra el número de serie único del sensor para verificación
+4. **Lectura del número de serie**: Lee y muestra el número de serie único del sensor para su verificación
 
 **Función loop:**
 
@@ -811,7 +811,7 @@ La reTerminal E Serie solo admite tarjetas MicroSD de hasta 64GB formateadas con
 
 ### Operaciones básicas con tarjeta SD: listar archivos
 
-Este ejemplo muestra cómo inicializar la tarjeta SD, detectar cuándo se inserta o se retira y listar todos los archivos y directorios en su raíz. El pin de habilitación de alimentación de la tarjeta SD (`SD_EN_PIN`) difiere entre modelos:
+Este ejemplo muestra cómo inicializar la tarjeta SD, detectar cuándo se inserta o se extrae y listar todos los archivos y directorios en su raíz. El pin de habilitación de alimentación de la tarjeta SD (`SD_EN_PIN`) difiere entre modelos:
 
 <div class="table-center">
 	<table align="center">
@@ -1192,7 +1192,7 @@ void loop() {
 - **Montar/Desmontar:** La función `mountSD()` habilita la alimentación de la tarjeta, configura el bus HSPI con los pines correctos y llama a `SD.begin()` para inicializar el sistema de archivos. `unmountSD()` libera los recursos.
 - **Listado de archivos:** `listRoot()` abre el directorio raíz (`/`), y `listDir()` es una función recursiva que recorre el sistema de archivos, imprimiendo los nombres de todos los archivos y directorios.
 - **`setup()`:** Inicializa `Serial1` para la salida, configura el pin de detección de tarjeta y realiza una comprobación inicial para ver si ya hay una tarjeta insertada cuando el dispositivo se enciende.
-- **`loop()`:** En lugar de comprobar constantemente la tarjeta, el código utiliza un temporizador no bloqueante (`millis()`) para comprobar si hay un cambio en el estado de la tarjeta una vez por segundo. Si se detecta un cambio (tarjeta insertada o retirada), monta o desmonta la tarjeta e imprime el estado en el monitor serie.
+- **`loop()`:** En lugar de comprobar constantemente la tarjeta, el código utiliza un temporizador no bloqueante (`millis()`) para comprobar un cambio en el estado de la tarjeta una vez por segundo. Si se detecta un cambio (tarjeta insertada o retirada), monta o desmonta la tarjeta e imprime el estado en el monitor serie.
 
 #### Resultados esperados
 
@@ -1485,7 +1485,7 @@ No necesitas instalar pngle, miniz ni nada más desde el Arduino Library Manager
 
 ### Código completo del boceto
 
-El código fuente completo `.ino` para cada variante se muestra a continuación. Todos los ajustes configurables por el usuario (ruta de la imagen, algoritmo de dithering, ancla, ajuste/escala) están en el bloque de **CONFIGURACIÓN DEL USUARIO** cerca de la parte superior; el resto del archivo es código estándar que normalmente no necesita edición.
+El código fuente completo `.ino` para cada variante se muestra a continuación. Todos los ajustes configurables por el usuario (ruta de la imagen, algoritmo de dithering, ancla, ajuste/escala) están en el bloque de **CONFIGURACIÓN DEL USUARIO** cerca de la parte superior; el resto del archivo es código estándar que normalmente no necesita editarse.
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
@@ -2238,7 +2238,7 @@ void loop() { delay(1000); }
 Los bloques de código anteriores están **ligeramente condensados** (funciones auxiliares integradas, llamadas de registro detalladas eliminadas) para mantenerlos legibles aquí. Los sketches de la biblioteca — abiertos mediante **File → Examples → Seeed_GFX → ePaper → reTerminal_SDcard_Bitmap** — contienen el registro de diagnóstico completo, toda la lógica de ajuste/anclaje y todos los comentarios.
 :::
 
-### Paso 2 — Prepara la tarjeta microSD
+### Paso 2 — Preparar la tarjeta microSD
 
 1. Formatea la tarjeta como **FAT32**.
 2. Crea una estructura de carpetas que coincida con la ruta que configurarás en el sketch; el valor predeterminado es `/img/demo.jpg`:
@@ -2295,7 +2295,7 @@ El panel es de **1200 × 1600** (~1,9 millones de píxeles, ~5,5 MB en RGB888). 
 </TabItem>
 </Tabs>
 
-### Paso 4 — Configura el sketch
+### Paso 4 — Configurar el sketch
 
 Todas las opciones ajustables por el usuario se encuentran en un bloque de configuración en la parte superior de cada archivo `.ino`. A continuación se explican los cuatro controles más importantes.
 
@@ -2332,7 +2332,7 @@ Cuando `ps_malloc` falla, el cargador imprime
 [dither] FS error buffer alloc FAILED (10358 kB) -- falling back to DITHER_NONE
 ```
 
-y cambia silenciosamente a `DITHER_NONE`. Si no quieres este modo de reserva, cambia a `DITHER_BAYER8` (ordenado, sin asignación de memoria) **o** reduce primero la imagen.
+y cambia silenciosamente a `DITHER_NONE`. Si no quieres este modo de reserva, cambia a `DITHER_BAYER8` (ordenado, sin asignación) **o** reduce primero la imagen.
 :::
 
 #### `DITHER_GAMMA` — compensación de brillo

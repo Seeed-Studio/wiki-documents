@@ -84,7 +84,7 @@ reTerminal E 系列不仅仅是一块电子纸屏幕——每一款型号还提�
 
 ### 前置条件
 
-在运行下面的任何示例之前，你应该已经完成：
+在运行下面的任何示例之前，你应该已经完成以下准备：
 
 - 已安装 **Arduino IDE**，并安装好 **ESP32 开发板包**，选择 **XIAO_ESP32S3** 开发板。
 - 有一根可用的 **USB-C 数据线**，并选择了正确的串口。
@@ -435,7 +435,7 @@ void loop() {
 
 reTerminal E 系列配备了三个用户可编程按键，可用于各种控制用途。本节演示如何读取按键状态，并在 Arduino 中响应按键按下。
 
-reTerminal E 系列有三个按键，通过 KEY0（GPIO3）、KEY1（GPIO4）和 KEY2（GPIO5）连接到 ESP32-S3。所有按键为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
+reTerminal E 系列有三个按键，通过 KEY0 (GPIO3)、KEY1 (GPIO4) 和 KEY2 (GPIO5) 连接到 ESP32-S3。所有按键为低电平有效，这意味着按下时读取为 LOW，松开时读取为 HIGH。
 
 这些按键在不同型号上的物理布局和功能有所不同：
 
@@ -562,7 +562,7 @@ void loop() {
 
 2. **引脚配置**：在 `setup()` 中，将每个按键引脚配置为 `INPUT`。
 
-3. **按键检测**：在 `loop()` 中，持续使用 `digitalRead()` 检查每个按键的状态。当按键被按下时，引脚读取为 LOW。
+3. **按键检测**：在 `loop()` 中，使用 `digitalRead()` 持续检查每个按键的状态。当按键被按下时，引脚读取为 LOW。
 
 4. **消抖**：在每次按键按下后加入简单的 200ms 延时，以防止由于机械抖动导致一次按下被多次检测。
 
@@ -600,7 +600,7 @@ reTerminal E 系列集成了一个通过 I2C 连接的 SHT4x 温湿度传感器�
 
 ### 安装所需库
 
-通过 Arduino 库管理器（**Tools > Manage Libraries...**）安装两个库：
+通过 Arduino 库管理器安装两个库（**Tools > Manage Libraries...**）：
 
 1. 搜索并安装 "**Sensirion I2C SHT4x**"
 2. 搜索并安装 "**Sensirion Core**"（依赖库）
@@ -711,7 +711,17 @@ Temperature: 27.38°C Humidity: 53.37%
 
 ## 电池管理系统
 
-reTerminal E 系列通过带分压电路的 ADC 引脚实现电池电压监测功能。
+reTerminal E 系列通过带有分压电路的 ADC 引脚实现电池电压监测功能。
+
+:::note
+
+reTerminal E1003 上的 BATTERY_ENABLE_PIN 与 E1001/E1002/E1004 不同。
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+在不同 reTerminal E10xx 型号之间移植示例时，请相应更新你的代码。
+
+:::
 
 :::note
 
@@ -799,7 +809,7 @@ Battery: 4.18 V
 
 ## 使用 MicroSD 卡
 
-对于需要额外存储空间的应用，例如数码相框或数据记录，reTerminal E 系列配备了 MicroSD 卡槽。
+对于需要额外存储空间的应用，例如数码相框或数据记录，reTerminal E 系列配备了一个 MicroSD 卡槽。
 
 如果你计划将设备用作数码相框或需要额外存储空间，请插入一张 microSD 卡。
 
@@ -1287,7 +1297,7 @@ void loop() {
     marginBottom: '20px'
   }}
 >
-  {/* Definitions for markers and filters */}
+  {/* 标记和滤镜的定义 */}
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
@@ -1297,14 +1307,14 @@ void loop() {
     </filter>
   </defs>
 
-  {/* Title */}
+  {/* 标题 */}
   <text x="525" y="40" fontFamily="sans-serif" fontSize="20" fontWeight="bold" fill="#1e293b" textAnchor="middle">
     图像处理流水线：microSD 到电子纸
   </text>
 
-  {/* ================= NODES ================= */}
+  {/* ================= 节点 ================= */}
 
-  {/* Node 1: microSD */}
+  {/* 节点 1：microSD */}
   <g transform="translate(20, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#3b82f6" strokeWidth="2" filter="url(#shadow)" />
     <path d="M55 15 v14 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 V19 l-4-4 H57 a2 2 0 0 0-2 2z m4 2 h2 v4 h-2 v-4z m4 0 h2 v4 h-2 v-4z" fill="#3b82f6" />
@@ -1312,7 +1322,7 @@ void loop() {
     <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">JPG / BMP / PNG</text>
   </g>
 
-  {/* Node 2: PSRAM */}
+  {/* 节点 2：PSRAM */}
   <g transform="translate(240, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#ef4444" strokeWidth="2" filter="url(#shadow)" />
     <path d="M57 17 v12 h20 V17 H57z m2 2 h16 v8 H59 v-8z m-4 2 h-2 v2 h2 v-2z m0 4 h-2 v2 h2 v-2z m24-4 h2 v2 h-2 v-2z m0 4 h2 v2 h-2 v-2z" fill="#ef4444" />
@@ -1320,7 +1330,7 @@ void loop() {
     <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">RGB888</text>
   </g>
 
-  {/* Node 3: Scaled Buffer */}
+  {/* 节点 3：缩放缓冲区 */}
   <g transform="translate(460, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#f59e0b" strokeWidth="2" filter="url(#shadow)" />
     <path d="M67 15 l2.3 2.3 -2.89 2.87 1.42 1.42 L70.7 18.7 73 21 V15 h-6z M55 21 l2.3-2.3 2.87 2.89 1.42-1.42 L58.7 17.3 61 15 h-6 v6z m6 12 l-2.3-2.3 2.89-2.87 -1.42-1.42 L57.3 29.3 55 27 v6h6z m12-6 l-2.3 2.3 -2.87-2.89 -1.42 1.42 2.89 2.87 L73 33 v-6z" fill="#f59e0b" />
@@ -1328,15 +1338,15 @@ void loop() {
     <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">scaled RGB888</text>
   </g>
 
-  {/* Node 4: Palette Buffer */}
+  {/* 节点 4：调色板缓冲区 */}
   <g transform="translate(680, 100)">
     <rect x="0" y="0" width="140" height="90" rx="8" fill="#f8fafc" stroke="#8b5cf6" strokeWidth="2" filter="url(#shadow)" />
     <path d="M70 14 c-5.52 0-10 4.48-10 10 s4.48 10 10 10 c1.38 0 2.5-1.12 2.5-2.5 0-.61-.23-1.17-.64-1.6-.39-.41-.61-.98-.61-1.6 0-1.38 1.12-2.5 2.5-2.5 h1.5 c2.21 0 4-1.79 4-4 0-3.86-4.48-7-10-7z m-4 7 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5-3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z m3.5 3 c-.83 0-1.5-.67-1.5-1.5 s.67-1.5 1.5-1.5 s1.5 .67 1.5 1.5 s-.67 1.5-1.5 1.5z" fill="#8b5cf6" />
     <text x="70" y="55" fontFamily="sans-serif" fontSize="14" fontWeight="bold" fill="#0f172a" textAnchor="middle">调色板缓冲区</text>
-    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">面板调色板索引</text>
+    <text x="70" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">panel-palette indices</text>
   </g>
 
-  {/* Node 5: ePaper */}
+  {/* 节点 5：电子纸 */}
   <g transform="translate(900, 100)">
     <rect x="0" y="0" width="130" height="90" rx="8" fill="#f8fafc" stroke="#10b981" strokeWidth="2" filter="url(#shadow)" />
     <path d="M77 15 H53 c-1.1 0-2 .9-2 2 v14 c0 1.1 .9 2 2 2 h24 c1.1 0 2-.9 2-2 V17 c0-1.1-.9-2-2-2z m0 16 H53 V17 h24 v14z" fill="#10b981" />
@@ -1344,21 +1354,21 @@ void loop() {
     <text x="65" y="75" fontFamily="sans-serif" fontSize="12" fill="#475569" textAnchor="middle">面板更新</text>
   </g>
 
-  {/* ================= ARROWS & LABELS ================= */}
+  {/* ================= 箭头与标签 ================= */}
 
-  {/* Arrow 1: Decode */}
+  {/* 箭头 1：解码 */}
   <g>
     <line x1="160" y1="145" x2="232" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
     <text x="196" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#3b82f6" textAnchor="middle">decode</text>
     <text x="196" y="165" fontFamily="sans-serif" fontSize="10" fill="#64748b" textAnchor="middle">pngle / jpeg / bmp</text>
-    {/* Animated Data Packet */}
+    {/* 动画数据包 */}
     <circle cy="145" r="4" fill="#3b82f6">
       <animate attributeName="cx" from="160" to="230" dur="1.5s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.2;0.8;1" dur="1.5s" repeatCount="indefinite" />
     </circle>
   </g>
 
-  {/* Arrow 2: Resize */}
+  {/* 箭头 2：缩放 */}
   <g>
     <line x1="380" y1="145" x2="452" y2="145" stroke="#94a3b8" strokeWidth="2" strokeDasharray="4,4" markerEnd="url(#arrowhead)" />
     <text x="416" y="135" fontFamily="sans-serif" fontSize="12" fontWeight="bold" fill="#ef4444" textAnchor="middle">resize</text>
@@ -1480,7 +1490,7 @@ reTerminal_SDcard_Bitmap/
 </Tabs>
 
 :::tip 自包含示例草图
-你不需要从 Arduino Library Manager 安装 pngle、miniz 或任何其他库。PNG 解码器源码就放在**每个示例文件夹内部**，因此 Arduino IDE 在编译草图时会自动将其包含进来。
+你不需要从 Arduino Library Manager 安装 pngle、miniz 或任何其他库。PNG 解码器源码就放在**每个示例文件夹内部**，因此 Arduino IDE 在编译草图时会自动将其一起编译。
 :::
 
 ### 完整草图代码
@@ -2240,8 +2250,8 @@ void loop() { delay(1000); }
 
 ### 步骤 2 — 准备 microSD 卡
 
-1. 将卡格式化为 **FAT32**。
-2. 创建一个与您在草图中设置的路径相匹配的文件夹结构——默认是 `/img/demo.jpg`：
+1. 将存储卡格式化为 **FAT32**。
+2. 创建一个与草图中将要设置的路径相匹配的文件夹结构——默认路径是 `/img/demo.jpg`：
 
    ```text
    <SD root>/
@@ -2249,7 +2259,7 @@ void loop() { delay(1000); }
        └── demo.jpg          ← or demo.png / demo.bmp
    ```
 
-3. 在上电 **之前** 将卡插入 reTerminal（热插拔也可以，但可靠性较差）。
+3. 在上电 **之前** 将存储卡插入 reTerminal（热插拔也可以，但可靠性稍差）。
 
 ### 步骤 3 — 准备你的图像
 
@@ -2257,13 +2267,13 @@ void loop() { delay(1000); }
 
 | 格式 | 适用情况 | 需要避免 |
 |---|---|---|
-| **JPEG** (`.jpg` / `.jpeg`) | 基线 8 位，YCbCr 或灰度，任意色度抽样（4:4:4 / 4:2:2 / 4:2:0）。 | 渐进式 JPEG、CMYK、仅依赖 EXIF 旋转的源文件。 |
+| **JPEG** (`.jpg` / `.jpeg`) | 基线 8 位，YCbCr 或灰度，任意色度抽样（4:4:4 / 4:2:2 / 4:2:0）。 | 渐进式 JPEG、CMYK、仅依赖 EXIF 旋转信息的源文件。 |
 | **BMP** (`.bmp`) | 24 位 BGR 未压缩，或 4 位索引色（调色板 + `BI_RGB`）。 | `BI_BITFIELDS`、RLE 压缩的 BMP。 |
 | **PNG** (`.png`) | 任意标准 PNG（8 位、16 位、调色板、隔行、RGBA）。RGBA 会在 **白色** 背景上进行合成，因为电子墨水屏是非透明的。 | 无——pngle 能处理所有标准 PNG 变体。 |
 
-文件的实际格式是通过 **magic bytes** 嗅探出来的，而不是通过扩展名。一个保存为 `.bmp` 的 JPEG 依然可以正常工作（你只会在串口日志中看到一条警告）。
+文件的实际格式是通过 **魔数** 来识别的，而不是通过扩展名。一个以 `.bmp` 保存的 JPEG 依然可以正常工作（你只会在串口日志中看到一条警告）。
 
-按面板划分的尺寸建议：
+针对不同面板的尺寸建议：
 
 <Tabs groupId="reterm-model">
 <TabItem value="e1001-bw" label="E1001 BW" default>
@@ -2374,7 +2384,7 @@ static const float       DISPLAY_SCALE = 1.0f;
 
 `DISPLAY_SCALE` 的典型取值：`0.25` 四分之一，`0.5` 一半，`1.0` 原始大小，`2.0` 2 倍。
 
-:::warning 在大面板上放大很容易导致内存不足（OOM）
+:::warning 大面板放大容易导致内存不足
 在 E1003（1872 × 1404）和 E1004（1200 × 1600）上，`DISPLAY_SCALE` 大于 `1.0` 会很快耗尽 PSRAM。加载器会打印内存不足信息并中止。建议改用裁剪或在主机端预缩放。
 :::
 
@@ -2425,7 +2435,7 @@ E1003 始终使用 16 级灰度（`initGrayMode(16)`）——该模式是这块�
 XIAO ESP32-S3 模块上的 8 MB OPI PSRAM 模块在扣除 Arduino 运行时开销后，大约有**7.9 MB 可用空间**。如果加载器无法满足一次内存分配，它会记录所需的确切大小，并在 `DISPLAY_FIT = FIT_CONTAIN` 时尝试调整大小后重试，否则会回退到 `DITHER_NONE`。
 
 :::tip 关于刷新速度
-上传后，电子墨水屏在驱动程序运行初始波形时，前几秒可能保持空白。第一次完整刷新在冷屏状态下可能需要长达几分钟——这是面板的电化学特性，而不是 Bug。后续刷新会更快。
+上传后，电子墨水屏在驱动程序运行初始波形时，可能会先空白几秒。第一次完整刷新在冷屏状态下可能需要长达几分钟——这是面板的电化学特性，而不是 Bug。后续刷新会更快。
 :::
 
 ## 故障排查

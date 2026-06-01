@@ -148,6 +148,10 @@ conda activate rebot
 
 ### Step3: Install motorbridge
 
+:::tip
+If all scanned motors show offline, install motorbridge v0.2.9.
+:::
+
 After activating the reBot virtual environment, run the following command to install motorbridge:
 
 ```bash
