@@ -39,7 +39,7 @@ Before starting the configuration, please ensure that you have prepared the foll
 1. As shown in the figure below, plug the 12V DC power cable into the device's power interface, connect one end of the USB Type-C cable to the reCamera Pro, and connect the other end to your Windows host machine (Host PC).
 2. Observe the device status indicator. When the **green light is solid**, it indicates that the device has successfully booted and entered the operating state.
 
-![System status light and cable connection diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/hardware_line.png)
+![System status light and cable connection diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_hardware_line.png)
 
 ---
 
@@ -77,7 +77,7 @@ To enable the device to access the Internet or allow wireless management within 
 3. Enable the Wi-Fi function (if it is turned off by default), and the system will automatically scan for nearby wireless networks.
 4. Select your Wi-Fi SSID from the list of available networks, enter the correct wireless password, and click connect.
 
-![Wireless network configuration steps diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/wifi_setting.png)
+![Wireless network configuration steps diagram](https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/en_wifi_setting.png)
 
 ### Wireless Remote Connection (Optional Step)
 
