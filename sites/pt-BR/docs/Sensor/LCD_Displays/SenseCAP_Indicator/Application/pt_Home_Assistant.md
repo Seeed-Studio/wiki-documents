@@ -1,107 +1,103 @@
 ---
-description: SenseCAP Indicator - Desenvolvimento de Aplicativo para Home Assistant
+description: Conecte o SenseCAP Indicator ao Home Assistant via MQTT
 title: Home Assistant - SenseCAP Indicator
 keywords:
   - SenseCAP Indicator
   - Home Assistant
+  - MQTT
   - ESP32S3
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-ha-thumbnail.jpg
 slug: /SenseCAP_Indicator_Application_Home_Assistant
 sku: E23010426,E24121301
 sidebar_position: 1
 last_update:
-  date: 10/09/2024
+  date: 05/29/2026
   author: Spencer
 createdAt: '2023-05-24'
-updatedAt: '2026-03-16'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/pt-br/SenseCAP_Indicator_Application_Home_Assistant/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# SenseCAP Indicator - Desenvolvimento de Aplicativo para Home Assistant
+# SenseCAP Indicator com Home Assistant via MQTT
 
-## Introdução
+Este guia mostra como transformar o SenseCAP Indicator em um painel complementar do Home Assistant. Após a configuração, o Indicator publica as leituras de seus sensores integrados no Home Assistant por meio de MQTT, e o Home Assistant pode enviar comandos de interruptor e controle deslizante de volta para a tela do Indicator.
 
 <div class="video-container">
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/PKMcutZDjDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/PKMcutZDjDg" title="SenseCAP Indicator Home Assistant demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <div class="button-container">
 <a class="button-style" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html">
-        Adquira Agora 🖱️
+        Adquira agora
 </a>
 </div>
 
-Liberte todo o potencial da sua casa inteligente integrando o SenseCAP Indicator ao Home Assistant. Essa combinação poderosa permite monitorar e controlar seu ambiente com uma facilidade sem precedentes.
+## O que você vai construir
 
-Aprenda como integrar perfeitamente seu SenseCAP Indicator ao Home Assistant usando MQTT neste guia abrangente.
+A integração usa três tópicos MQTT fixos:
 
-Antes de começarmos, vamos explorar suas opções para configurar o Home Assistant. O Home Assistant pode ser facilmente instalado em duas opções de hardware dedicadas:
+| Direção | Tópico | Finalidade |
+| --- | --- | --- |
+| Indicator para Home Assistant | `indicator/sensor` | Publica leituras de temperatura, umidade, CO2 e tVOC |
+| Home Assistant para Indicator | `indicator/switch/set` | Envia comandos de interruptor e controle deslizante |
+| Indicator para Home Assistant | `indicator/switch/state` | Publica o estado atual do interruptor e do controle deslizante |
+
+No lado do Home Assistant, você criará quatro entidades de sensor, seis entidades de interruptor e duas entidades numéricas. No lado do Indicator, você configurará o Wi-Fi e o broker MQTT e, em seguida, usará a tela como um painel de controle local.
+
+## Pré-requisitos
+
+- SenseCAP Indicator D1 ou hardware SenseCAP Indicator compatível
+- Uma instância do Home Assistant em execução
+- Um broker MQTT acessível tanto pelo Home Assistant quanto pelo Indicator
+- ESP-IDF v5.4.x instalado se você planeja compilar o firmware a partir do código-fonte
+- Um cabo USB para gravação e monitoramento serial
+
+Antes de continuar, leia o [guia do usuário do SenseCAP Indicator](/pt-br/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator) se você não estiver familiarizado com a placa.
+
+## 1. Prepare o Home Assistant
+
+Se você já tem o Home Assistant e um broker MQTT, pode pular para a [Etapa 3: Compile e grave o firmware](#3-compile-e-grave-o-firmware).
+
+O Home Assistant OS é o caminho mais simples porque oferece suporte a Add-ons, incluindo o broker Mosquitto e o File editor.
 
 :::note
-Com certeza, você tem várias opções para instalar o HA seguindo [Installation - Home Assistant (home-assistant.io)](https://www.home-assistant.io/installation/).
+O Home Assistant pode ser executado em vários modos de instalação. Se você usar o Home Assistant Container, os Add-ons não estarão disponíveis, portanto será necessário executar separadamente um broker MQTT como Mosquitto ou EMQX.
 :::
 
 <Tabs>
-<TabItem value='Home Assistant Green'>
+<TabItem value="Home Assistant Green" label="Home Assistant Green">
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA/HA_Green.png" style={{ width: 680, height: 'auto', "border-radius": '6.66px' }}/></div>
 
-> O acessível **[Home Assistant Green](https://www.home-assistant.io/green)** é a maneira mais fácil de começar a usar o Home Assistant. Ele é plug-and-play e vem com o Home Assistant já instalado.
+[Home Assistant Green](https://www.home-assistant.io/green) é uma forma plug-and-play de começar a usar o Home Assistant.
 
 </TabItem>
+<TabItem value="Home Assistant Yellow" label="Home Assistant Yellow">
 
-<TabItem value='Home Assistant Yellow'>
+<div align="center"><img width={680} src="https://www.home-assistant.io/images/yellow/home-assistant-yellow-exploded-and-labeled.png" style={{ width: 680, height: 'auto', "border-radius": '6.66px' }}/></div>
 
-<div align="center"><img width={680} src="https://www.home-assistant.io/images/yellow/home-assistant-yellow-exploded-and-labeled.png"style={{ width: 680, height: 'auto', "border-radius": '6.66px' }}/></div>
-
-> O **[Home Assistant Yellow](https://www.home-assistant.io/yellow)** vem pré-montado em um gabinete personalizado com um Raspberry Pi Compute Module 4 (CM4) e um dissipador de calor customizado para operação silenciosa, sem ventoinha. O CM4 é uma versão sem wireless e possui 2 GB de RAM e 16 GB de armazenamento eMMC. Vem com o Home Assistant pré-instalado.
+[Home Assistant Yellow](https://www.home-assistant.io/yellow) é um hub Home Assistant baseado no Raspberry Pi Compute Module 4.
 
 </TabItem>
 </Tabs>
 
-Para maximizar os recursos do Home Assistant, recomendamos usar Home Assistant OS ou Home Assistant Supervised. Ambas as opções oferecem recursos avançados e maior possibilidade de personalização, permitindo que você adapte sua experiência de casa inteligente exatamente às suas necessidades.
-
-Agora, vamos começar o processo de integração. Siga estas três etapas principais para fazer seu SenseCAP Indicator funcionar com o Home Assistant:
-
-1. [Instalar o Home Assistant OS](#install_HA)
-   1. [Instalar Add-ons](#mqtt-addons)
-   2. [Configurar a Integração MQTT](#mqtt-integration)
-2. [Compilar e Gravar o Firmware](#build-flash-firmware)
-3. [Adicionar Dispositivos MQTT](#add-mqtt-devices)
-4. [Configurar um Dashboard](#set-up-dashboard)
-
-## Pré-requisitos
-
-Antes de começarmos, certifique-se de ter lido o [Guia do Usuário](/pt-br/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator) da SenseCAP Indicator Board para se familiarizar com as informações de hardware e software.
-
-## Instalar Home Assistant OS {#install_HA}
-
-> Home Assistant é uma poderosa plataforma de automação residencial de código aberto que se concentra em privacidade e controle local. Ela oferece uma estrutura personalizável e flexível para gerenciar e automatizar todos os dispositivos da sua casa a partir de uma única plataforma unificada.
-
-Com o **Home Assistant Yellow** você pode seguir as instruções fornecidas [aqui](https://www.home-assistant.io/installation/yellow). Além disso, para executar em qualquer tipo de Raspberry Pi ou em um servidor local, você pode seguir este [tutorial](https://www.home-assistant.io/installation/) passo a passo.
-
-Depois de instalado, acessar esta página significa que você pode ir para o próximo passo.
+Siga o [guia de instalação oficial do Home Assistant](https://www.home-assistant.io/installation/) para o seu dispositivo. Quando a configuração inicial estiver concluída, você deverá chegar ao painel do Home Assistant.
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Installed.png"/></div>
 
-<br />
+## 2. Instale o Mosquitto e ative o MQTT
 
-:::tip Não sabe como fazer o onboarding do Home Assistant?
-Depois de instalar o Home Assistant, consulte [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) para mais detalhes.
-:::
+### Instalar Add-ons
 
-### Passo 1: Instalar Add-ons {#mqtt-addons}
+No Home Assistant OS, instale dois Add-ons:
 
-:::caution Recurso de Add-ons necessário
-O Home Assistant Yellow vem com o **Home Assistant Operating System**, que permite instalar Add-ons facilmente. No entanto, o **Home Assistant Container** não suporta Add-ons, o que significa que você precisa instalar um aplicativo de broker MQTT separado do Home Assistant. Para mais detalhes, consulte os [métodos de instalação](https://www.home-assistant.io/installation/#compare-installation-methods).
-:::
+- **Mosquitto broker** para mensagens MQTT
+- **File editor** para editar `configuration.yaml` pela interface web do Home Assistant
 
-O próximo passo é instalar o **Mosquitto Broker** e o **File Editor**. O **Mosquitto** é um broker de mensagens open source que implementa o protocolo MQTT, enquanto o **File Editor** permite modificar o arquivo `configuration.yaml` sem acessar o terminal.
-
-No Home Assistant Yellow, você pode instalar o Mosquitto Broker e o File Editor usando o recurso de Add-ons.
+Vá em **Settings** > **Add-ons** > **Add-on Store** e instale ambos os Add-ons.
 
 <div class="table-center">
   <table align="center">
@@ -116,28 +112,17 @@ No Home Assistant Yellow, você pode instalar o Mosquitto Broker e o File Editor
   </table>
 </div>
 
-:::tip
-Para conveniência, mostre o 'File editor' na barra lateral:
+Para maior conveniência, ative **Show in sidebar** para o File editor.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_editor_show.png"/></div>
 
-:::
-
-Agora temos dois add-ons.
+Após a instalação, você deverá ver ambos os Add-ons.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
 
-### Passo 2: Configurar a Integração MQTT {#mqtt-integration}
+### Ativar a integração MQTT
 
-MQTT (Message Queuing Telemetry Transport) é um protocolo de mensagens leve que é fundamental para conectar sua SenseCAP Indicator Board ao Home Assistant. Para habilitar essa funcionalidade, você precisa adicionar a [integração MQTT](https://www.home-assistant.io/integrations/mqtt) à sua configuração do Home Assistant.
-
-> Adicionar a integração MQTT permite que o Home Assistant se comunique perfeitamente com sua SenseCAP Indicator Board, possibilitando troca de dados e controle em tempo real. Essa comunicação bidirecional é essencial para monitorar dados de sensores e enviar comandos para o seu dispositivo.
-
-Para configurar a integração MQTT:
-
-1. No painel do Home Assistant, vá até a página Integrations (`Devices & Services` -> `Integrations`).
-2. Procure por "MQTT" e selecione-o na lista. (Se não for descoberto automaticamente,)
-3. Siga as instruções na tela para concluir a configuração.
+Vá em **Settings** > **Devices & services** > **Integrations**, procure por **MQTT** e siga o fluxo de configuração.
 
 <div class="table-center">
   <table align="center">
@@ -149,16 +134,12 @@ Para configurar a integração MQTT:
 </div>
 
 :::tip
-Se você estiver usando um broker MQTT não oficial (como o EMQX Broker) em vez do broker Mosquitto padrão, a descoberta automática pode não funcionar. Nesse caso, você precisará inserir manualmente o endereço IP do broker para estabelecer a conexão. Isso garante que o Home Assistant possa se comunicar com sua configuração MQTT personalizada.
+Se o Home Assistant não descobrir seu broker automaticamente, insira o host do broker manualmente. Isso é comum quando você usa um broker externo em vez do Add-on Mosquitto.
 :::
 
-### Adicionar Usuários para o Add-on MQTT
+### Criar credenciais MQTT
 
-Ao usar o add-on oficial Mosquitto Broker no Home Assistant, talvez seja necessário configurar credenciais para a conexão MQTT. Essa etapa garante uma comunicação segura entre seus dispositivos e o Home Assistant. Veja como adicionar um usuário:
-
-1. Navegue até o add-on Mosquitto broker na interface do Home Assistant.
-2. Procure pela seção ou aba "Users" dentro da configuração do add-on.
-3. Clique no botão "Add User" ou "+" para criar um novo usuário.
+Se o seu broker MQTT exigir autenticação, crie um nome de usuário e senha para o Indicator. No Add-on Mosquitto broker, adicione um usuário e mantenha as credenciais à mão; você irá inseri-las no Indicator mais tarde.
 
 <div class="table-center">
   <table align="center">
@@ -169,143 +150,74 @@ Ao usar o add-on oficial Mosquitto Broker no Home Assistant, talvez seja necess�
   </table>
 </div>
 
-[^ref]: [MQTT default credential - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/ba2fe1c04d486f802e12b763ffb6efbc71bb5d80/examples/indicator_ha/main/ha_config.h#L10C1-L14C70)
+## 3. Compile e grave o firmware
 
-4. No formulário de criação de usuário:
-   - Insira um nome de usuário de sua escolha. o padrão é `indicator-usr`[^ref].
-   - Crie uma senha forte. o padrão é `indicator-password`.
-   - Opcionalmente, você pode definir permissões específicas, se necessário.
-5. Salve as novas credenciais de usuário.
-
-:::tip
-Certifique-se de usar essas credenciais ao configurar seu SenseCAP Indicator ou qualquer outro dispositivo MQTT para se conectar ao Home Assistant.
-:::
-
-Depois de adicionar o usuário, talvez seja necessário reiniciar o add-on Mosquitto broker para que as alterações entrem em vigor. Agora você já deve conseguir estabelecer uma conexão MQTT segura usando essas credenciais.
-
-Lembre-se de atualizar as configurações MQTT do seu SenseCAP Indicator com o novo nome de usuário e senha para garantir que ele possa se comunicar com o Home Assistant.
-
-## Configurando o Projeto SenseCAP Indicator ESP32 {#build-flash-firmware}
-
-Antes de integrar o seu SenseCAP Indicator com o Home Assistant, você precisa configurar o dispositivo com o firmware apropriado. Siga estes passos para baixar, compilar e gravar o projeto no seu SenseCAP Indicator.
-
-### Etapa 1: Baixar o Projeto
-
-Existem dois projetos disponíveis para integrar o SenseCAP Indicator com o Home Assistant. Escolha o que melhor atender às suas necessidades:
-
-<Tabs groupId="project-ha">
-<TabItem value="sensecap-indicator-ha" label="sensecap-indicator-ha" default>
-
-Este projeto é especificamente projetado para integração com o Home Assistant.
-
-<div class="github_container" style={{textAlign: 'center'}}>
-<a class="github_item" href="https://github.com/Love4yzp/sensecap-indicator-ha" target="_blank" rel="noopener noreferrer">
-
-<strong><span><font color={'FFFFFF'} size={"4"}>Obter o Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-
-</a>
-</div>
-
-Ou use Git para clonar o repositório:
+O firmware atual para Home Assistant é mantido no repositório `sensecap-indicator-ha`.
 
 ```bash
 git clone https://github.com/Love4yzp/sensecap-indicator-ha
-```
-
-</TabItem>
-<TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
-
-Este projeto inclui mais exemplos e recursos para o SenseCAP Indicator.
-
-<div class="github_container" style={{textAlign: 'center'}}>
-<a class="github_item" href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32" target="_blank" rel="noopener noreferrer">
-
-<strong><span><font color={'FFFFFF'} size={"4"}>Obter o Firmware</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-
-</a>
-</div>
-
-Ou use Git para clonar o repositório:
-
-```bash
-git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
-```
-
-</TabItem>
-</Tabs>
-
-### Etapa 2: Navegar até o Diretório do Projeto
-
-Depois de ter baixado ou clonado o projeto, navegue até o diretório apropriado:
-
-<Tabs groupId="project-ha">
-<TabItem value="sensecap-indicator-ha" label="sensecap-indicator-ha">
-
-```bash
 cd sensecap-indicator-ha
 ```
 
-</TabItem>
-<TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
+Instale o ESP-IDF v5.4.x e exporte `IDF_PATH` no seu shell. Em seguida, compile, grave e abra o monitor serial:
 
 ```bash
-cd SenseCAP_Indicator_ESP32/examples/indicator_ha
+./dev build
+./dev flash
+./dev monitor
 ```
-
-</TabItem>
-</Tabs>
-
-### Etapa 3: Compilar, Gravar e Monitorar o Projeto
-
-Agora você está pronto para compilar o firmware, gravá-lo no seu SenseCAP Indicator e monitorar a saída do dispositivo. Use o seguinte comando:
-
-```bash
-idf.py -p PORT build flash monitor
-```
-
-Substitua `PORT` pela porta apropriada para o seu dispositivo (por exemplo, `COM3` no Windows ou `/dev/ttyUSB0` no Linux).
-
-:::tip
-Se você não tiver certeza sobre a porta do seu dispositivo:
-
-- No Windows: Verifique o Gerenciador de Dispositivos em "Ports (COM & LPT)"
-- No Linux/macOS: Execute `ls /dev/tty*` no terminal
-
-:::
-
-Este comando irá:
-
-1. Compilar o projeto
-2. Gravar o firmware no seu SenseCAP Indicator
-3. Abrir um monitor serial para exibir a saída do dispositivo
 
 Para sair do monitor serial, pressione `Ctrl-]`.
 
-### Etapa 4: Verificar a Configuração
+:::tip
+`./dev flash` detecta automaticamente a porta serial. Se você precisar especificar uma porta, execute `./dev flash -p /dev/ttyUSB0` ou use o nome de dispositivo serial correspondente ao seu sistema operacional.
+:::
 
-Depois de gravar o firmware, o monitor serial exibirá a saída do seu SenseCAP Indicator. Procure por mensagens indicando conexão bem-sucedida à sua rede Wi-Fi e ao broker MQTT.
+<details>
+<summary>Comandos manuais do ESP-IDF</summary>
+
+Se você preferir chamar o ESP-IDF diretamente:
+
+```bash
+. "$IDF_PATH/export.sh"
+idf.py build
+idf.py -p /dev/ttyUSB0 -b 460800 flash monitor
+```
+
+O firmware do ESP32-S3 usa ESP-IDF v5.4.x e LVGL 9. Mantenha as configurações do `sdkconfig.defaults` do projeto, especialmente `CONFIG_LV_MEM_CUSTOM=y`, PSRAM em modo OCT a 120 MHz, CPU a 240 MHz e flash QIO a 120 MHz.
+
+</details>
+
+## 4. Configure Wi-Fi e MQTT no Indicator
+
+Após a gravação, configure o Wi-Fi e o MQTT na tela sensível ao toque do Indicator. O endereço do broker MQTT deve apontar para o broker usado pelo Home Assistant.
+
+Você também pode configurar o MQTT pelo console serial:
+
+| Comando | Descrição |
+| --- | --- |
+| `mqtthelp` | Imprime exemplos de broker, tópico e payload |
+| `haconfig` | Imprime a configuração atual de MQTT e do Home Assistant |
+| `setmqtt -a <addr>` | Define o endereço do broker |
+| `setmqtt -a <addr> -c <client-id> -u <user> -p <pass>` | Define o endereço do broker, ID do cliente, nome de usuário e senha |
+
+Exemplos:
+
+```text
+setmqtt -a 192.168.1.10 -c indicator-01 -u mqtt_user -p mqtt_password
+setmqtt --addr mqtt://192.168.1.10:1883
+setmqtt --addr mqtt://broker.emqx.io
+```
+
+Depois que o `setmqtt` for bem-sucedido, a configuração será salva na memória não volátil e o cliente MQTT será reiniciado automaticamente.
 
 :::caution
-Certifique-se de que o seu SenseCAP Indicator esteja conectado à mesma rede que a sua instância do Home Assistant e que o seu broker MQTT esteja devidamente configurado e acessível.
+O Indicator e o Home Assistant devem conseguir alcançar o mesmo broker MQTT. Se eles estiverem em redes ou VLANs diferentes, verifique o roteamento, as regras de firewall e as configurações de escuta do broker.
 :::
 
-Depois de gravar e verificar com sucesso o firmware no seu SenseCAP Indicator, você estará pronto para prosseguir com a integração dele ao Home Assistant usando a integração MQTT.
+## 5. Adicione entidades MQTT ao Home Assistant
 
-Em seguida, vamos configurar o Home Assistant para reconhecer e se comunicar com o seu SenseCAP Indicator.
-
-## Adicionar Dispositivos MQTT {#add-mqtt-devices}
-
-Depois de configurar a integração MQTT no Home Assistant, o próximo passo é adicionar dispositivos MQTT. Esse processo envolve configurar o Home Assistant para reconhecer e se comunicar com a sua SenseCAP Indicator Board por meio de MQTT.
-
-### Etapa 1: Adicionar Entidades do Indicator
-
-Para adicionar as entidades do SenseCAP Indicator ao Home Assistant, você precisa modificar o arquivo `configuration.yaml`. Este arquivo é crucial para definir como o Home Assistant interage com seus dispositivos.
-
-:::tip
-Se você estiver usando o Home Assistant Yellow ou qualquer sistema com o complemento **File editor**, poderá facilmente modificar o arquivo `configuration.yaml` pela interface web. Para outras configurações, como o Home Assistant Container, talvez seja necessário modificar o arquivo via acesso ao terminal.
-:::
-
-Para modificar o arquivo `configuration.yaml`:
+O Home Assistant precisa de definições de entidades que correspondam aos tópicos do firmware. Abra o **File editor**, escolha `configuration.yaml` e adicione o seguinte bloco sob a chave de nível superior `mqtt:`.
 
 <div class="table-center">
   <table align="center">
@@ -317,15 +229,14 @@ Para modificar o arquivo `configuration.yaml`:
   </table>
 </div>
 
-1. Navegue até o complemento File editor no painel do Home Assistant.
-2. Selecione o arquivo `configuration.yaml` na lista de arquivos.
-3. Adicione a seguinte configuração MQTT ao arquivo:
+:::caution
+Não substitua todo o seu `configuration.yaml`. Se você já tiver uma seção `mqtt:`, acrescente as entradas `sensor`, `switch` e `number` dentro dessa seção existente.
+:::
 
 <details>
-<summary>Clique para expandir e copiar a configuração MQTT para o SenseCAP Indicator</summary>
+<summary>YAML de entidades MQTT</summary>
 
 ```yaml
-# Example configuration.yaml entry | SenseCAP Indicator MQTT Configuration
 mqtt:
   sensor:
     - unique_id: indicator_temperature
@@ -421,82 +332,44 @@ mqtt:
 
 </details>
 
-1. Salve as alterações no arquivo `configuration.yaml`.
-
-:::caution
-Se a sua instalação do Home Assistant não oferece suporte a add-ons (por exemplo, Home Assistant Container), você precisará modificar o arquivo `configuration.yaml` por meio de um terminal ou conexão SSH.
-:::
-
-### Etapa 2: Aplicando as alterações de configuração
-
-Após modificar o arquivo `configuration.yaml`, você precisa aplicar as alterações:
-
-1. Navegue até `Developer Tools` no painel do Home Assistant.
-2. Encontre e clique na aba "YAML".
-3. Recarregue a configuração por `ALL YAML CONFIGURATION`.
+Salve o arquivo e, em seguida, vá para **Developer Tools** > **YAML** e recarregue a configuração YAML.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_ALL_YAML.png" alt="Configuração YAML em Developer Tools"/></div>
 
-:::note
-se algo der errado, você pode
-
-- Clicar no botão "Check Configuration" para verificar suas alterações.
-- Se a verificação da configuração for aprovada, clique no botão "Restart" para aplicar a nova configuração.
-
-Após reiniciar, o Home Assistant reconhecerá as entidades do seu SenseCAP Indicator, e você deverá conseguir vê-las no seu painel. Se as entidades não aparecerem imediatamente, talvez seja necessário aguardar alguns minutos para que o processo de descoberta MQTT seja concluído.
-
-Lembre-se de garantir que o seu SenseCAP Indicator esteja devidamente configurado para publicar seus dados nos tópicos MQTT corretos, conforme definido na configuração.
+:::tip
+Se as entidades não aparecerem, use primeiro **Check configuration**. Se a configuração for válida, mas as entidades ainda não aparecerem, reinicie o Home Assistant e confirme que o Indicator está publicando em `indicator/sensor`.
 :::
 
-Seguindo estas etapas, você adicionou com sucesso seus dispositivos SenseCAP Indicator ao Home Assistant via MQTT. Agora você pode usar essas entidades em suas automações, scripts e painel para uma experiência de casa inteligente mais integrada.
+## 6. Criar um painel
 
-## Configurar Dashboard {#set-up-dashboard}
-
-A etapa final na integração do seu SenseCAP Indicator com o Home Assistant é configurar um painel personalizado. Isso permitirá que você visualize e controle com facilidade os dados e funções do seu dispositivo.
-
-### Criando um novo painel (Opcional)
-
-Se você quiser criar um painel dedicado para o seu SenseCAP Indicator:
-
-1. Navegue até `Settings -> Dashboards` na barra lateral do Home Assistant.
-2. Clique no botão "Add Dashboard".
-3. Defina um título (por exemplo, "SenseCAP Indicator") e escolha um ícone.
-4. Clique em "Create" para finalizar o novo painel.
+Você pode adicionar as novas entidades a qualquer painel. Para manter o Indicator separado, crie um painel dedicado em **Settings** > **Dashboards**.
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png" style={{width:480, height:'auto'}} alt="Criar Painel"/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png" style={{width:480, height:'auto'}} alt="Novo Painel"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Add_dashboard_info.png" style={{width:480, height:'auto'}} alt="Criar painel"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard.png" style={{width:480, height:'auto'}} alt="Novo painel"/></div></td>
     </tr>
   </table>
 </div>
 
-### Configurando o painel
-
-Para adicionar entidades do SenseCAP Indicator ao seu painel:
-
-1. Abra o painel que você quer editar.
-2. Clique no menu de três pontos no canto superior direito e selecione "Edit Dashboard".
-3. Clique no botão "TAKE CONTROL" para habilitar a configuração manual.
+Abra o painel, escolha **Edit Dashboard** e, em seguida, use o **Raw configuration editor**.
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png" style={{width:480, height:'auto'}} alt="Editar Painel"/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png" style={{width:480, height:'auto'}} alt="Assumir Controle"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png" style={{width:480, height:'auto'}} alt="Editar painel"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png" style={{width:480, height:'auto'}} alt="Assumir controle"/></div></td>
     </tr>
   </table>
 </div>
-
-4. No editor de painel, clique novamente no menu de três pontos e selecione "Raw configuration editor".
-5. Substitua o conteúdo YAML existente pela seguinte configuração:
 
 <details>
+<summary>YAML do painel</summary>
 
-<summary>Clique para copiar o YAML do Painel para alterar a interface</summary>
-
-> Observação: Isto não é para `Configuration.YAML`.
+:::caution
+Este YAML é para o editor de configuração bruta do painel Lovelace. Não cole isso em `configuration.yaml`.
+:::
 
 ```yaml
 views:
@@ -541,46 +414,96 @@ views:
 
 </details>
 
-:::caution
-Esta configuração YAML é especificamente para o painel e não deve ser adicionada ao seu arquivo `configuration.yaml`.
-:::
-
-1. Clique em "SAVE" para aplicar as alterações.
+Salve a configuração do painel.
 
 <div class="table-center">
    <table align="center">
       <tr>
          <td>
-            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png" style={{width:480, height:'auto'}} alt="Editor de Configuração Bruta"/></div>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard_config.png" style={{width:480, height:'auto'}} alt="Editor de configuração bruta"/></div>
          </td>
          <td>
-            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png" style={{width:480, height:'auto'}} alt="Salvar Configuração"/></div>
+            <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Dashboard_Save.png" style={{width:480, height:'auto'}} alt="Salvar configuração"/></div>
          </td>
       </tr>
    </table>
 </div>
 
-Parabéns! Você configurou com sucesso o painel do Home Assistant para exibir e controlar o seu SenseCAP Indicator. Agora você pode monitorar níveis de CO2, temperatura, umidade e TVOC, bem como controlar vários interruptores diretamente na interface do Home Assistant.
+Agora você deve ver as leituras dos sensores e os controles do Indicator no Home Assistant.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_data_show.gif"/></div>
 
+## Referência do protocolo MQTT
+
+Use esta seção quando quiser depurar o tráfego MQTT ou criar seus próprios cards do Home Assistant.
+
+| Tópico | Exemplo de payload |
+| --- | --- |
+| `indicator/sensor` | `{"temp":"23.5","humidity":"45","co2":"450","tvoc":"100"}` |
+| `indicator/switch/set` | `{"switch1":1,"switch5":50}` |
+| `indicator/switch/state` | `{"switch1":1,"switch2":0}` |
+
+Chaves de sensor:
+
+| Chave | Significado |
+| --- | --- |
+| `temp` | Temperatura |
+| `humidity` | Umidade relativa |
+| `co2` | Concentração de CO2 |
+| `tvoc` | Compostos orgânicos voláteis totais |
+
+Chaves de controle:
+
+| Chave | Tipo de entidade no Home Assistant | Faixa |
+| --- | --- | --- |
+| `switch1` a `switch4`, `switch6`, `switch7` | `switch` | `0` ou `1` |
+| `switch5`, `switch8` | `number` | Valor inteiro |
+
+## Solução de problemas
+
+| Sintoma | O que verificar |
+| --- | --- |
+| O Home Assistant não mostra entidades | Confirme que o YAML foi adicionado sob `mqtt:`, depois recarregue o YAML ou reinicie o Home Assistant |
+| Os valores dos sensores permanecem desconhecidos | Confirme que o Indicator está conectado ao Wi-Fi e publicando em `indicator/sensor` |
+| Os controles não atualizam o Indicator | Confirme que o Home Assistant publica em `indicator/switch/set` e que o Indicator está conectado ao mesmo broker |
+| Falha no login MQTT | Digite novamente o endereço do broker, nome de usuário e senha no Indicator ou com `setmqtt` |
+| Comando serial não está claro | Execute `mqtthelp` no console serial |
+
+## Para desenvolvedores
+
+O firmware usa um design com dois MCUs:
+
+| MCU | Função |
+| --- | --- |
+| ESP32-S3 | Display, toque, Wi-Fi, MQTT, lógica do Home Assistant, configurações e console |
+| RP2040 | Aquisição de sensores internos e Grove, retransmitida para o ESP32-S3 via UART |
+
+O firmware do ESP32-S3 é construído com ESP-IDF v5.4.x e LVGL 9. Domínios de runtime são organizados como fatias de modelo/visão: o código do modelo é responsável pelo estado, NVS, MQTT e análise de sensores; o código da visão é responsável pelos objetos LVGL e callbacks da tela sensível ao toque.
+
+Comandos úteis para desenvolvedores:
+
+```bash
+python3 scripts/dev_check.py --skip-build
+python3 scripts/dev_check.py
+./dev build
+```
+
+O simulador para PC pode ajudar ao iterar no layout da interface sem precisar gravar o hardware:
+
+```bash
+cmake -S sim -B sim/build && cmake --build sim/build -j4
+./sim/build/sensecap_sim
+```
+
 ## Recursos
 
-1. **Demo SDK**: O Demo SDK para o SenseCAP Indicator está disponível no [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
-2. Arquivo **`indicator_ha.c`**: Este arquivo contém as funções principais para a integração com o Home Assistant. Você pode vê-lo [aqui](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c).
-3. **Guia do Usuário**: O Guia do Usuário fornece informações detalhadas sobre o software e o hardware da SenseCAP Indicator Board. Você pode lê-lo [aqui](/pt-br/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator).
-4. **Guia de Instalação do Home Assistant**: Se você é novo no Home Assistant, este guia ajudará você a instalá-lo e configurá-lo. Você pode encontrá-lo [aqui](https://www.home-assistant.io/installation/).
-5. **Guia de Introdução ao ESP-IDF**: Este guia fornece todas as etapas para configurar e usar o ESP-IDF para construir projetos. Você pode acessá-lo [aqui](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
-6. [Conceitos e terminologia do Home Assistant](https://www.home-assistant.io/getting-started/concepts-terminology/)
+- [Repositório de firmware sensecap-indicator-ha](https://github.com/Love4yzp/sensecap-indicator-ha)
+- [Guia do usuário do SenseCAP Indicator](/pt-br/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)
+- [Guia de instalação do Home Assistant](https://www.home-assistant.io/installation/)
+- [Integração MQTT do Home Assistant](https://www.home-assistant.io/integrations/mqtt)
+- [Guia de início rápido do ESP-IDF v5.4](https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32s3/get-started/)
+- [SDK e exemplos do SenseCAP Indicator](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)
 
-## Referência
+## Suporte técnico
 
-- 🔗 **[Link]** [Home Assistant and MQTT: 4 Things You Could Build | EMQ (emqx.com)](https://www.emqx.com/en/blog/home-assistant-and-mqtt-4-things-you-could-build#home-assistant-mqtt-with-emqx)
-
-## Suporte Técnico
-
-**Precisa de ajuda com o seu SenseCAP Indicator? Estamos aqui para ajudar você!**
-
-Se você encontrar algum problema ou tiver dúvidas enquanto segue este tutorial, sinta-se à vontade para entrar em contato com o nosso suporte técnico. Estamos sempre aqui para ajudar!
-
-Visite o nosso [Canal Oficial da Seeed no Discord](https://discord.gg/kpY74apCWj) para fazer suas perguntas ou as [discussões no GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) para compartilhar tudo o que você quiser!
+Precisa de ajuda com o seu SenseCAP Indicator? Visite o [Canal oficial da Seeed no Discord](https://discord.gg/kpY74apCWj) ou inicie uma discussão em [Discussões do SenseCAP Indicator SDK no GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions).

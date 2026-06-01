@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 :::tip Other cookbooks in this series
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — rendering text, graphics, and images on the ePaper screen.
-- **[Arduino Cookbook: RTC, Low Power & Audio](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, and I2S microphone recording.
+- **[Arduino Cookbook: RTC, Low Power, Audio & Touch](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
 :::
 
 ## Introduction
@@ -712,6 +712,16 @@ Temperature: 27.38°C Humidity: 53.37%
 ## Battery Management System
 
 The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
+
+:::note
+
+The BATTERY_ENABLE_PIN on reTerminal E1003 differs from E1001/E1002/E1004.
+
+- E1001/E1002/E1004: BATTERY_ENABLE_PIN → GPIO21
+- E1003: BATTERY_ENABLE_PIN → IO40
+Please update your code accordingly when porting examples between different reTerminal E10xx models.
+
+:::
 
 ### Simple Battery Voltage Monitoring
 
