@@ -13,12 +13,12 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-22
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-22'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -27,6 +27,13 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -58,7 +65,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
    `/joint_states`、`FollowJointTrajectory`、`GripperCommand`、`MoveToPose` などの一般的な ROS2 インターフェースを提供し、MoveIt2、ビジュアルグラスピングパイプライン、タスクレベルシステムとの統合を容易にします。
 
 2. **すぐに使える運動学・軌道・重力補償ノード**  
-   順運動学／逆運動学、軌道実行、重力補償、RViz 可視化のサポートをすぐに使える形で提供します。
+   順運動学 / 逆運動学、軌道実行、重力補償、RViz 可視化のサポートをすぐに使える形で提供します。
 
 3. **MoveIt 2 連携**  
    完全な MoveIt 2 設定とアプリケーションデモを含み、RViz MotionPlanning プラグインによるシミュレーションプランニングと実機実行をサポートします。
@@ -100,7 +107,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
       <td>Ubuntu 24.04 + ROS2 Jazzy + Python 3.12</td>
     </tr>
     <tr>
-      <td>参照システム</td>
+      <td>参考システム</td>
       <td>Ubuntu 22.04 + ROS2 Humble + Python 3.10</td>
     </tr>
   </tbody>
@@ -127,13 +134,13 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 ls /dev/ttyACM*
 ```
 
-シリアルポートの権限を一時的に付与する必要がある場合：
+シリアルポート権限を一時的に付与する必要がある場合：
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
 ```
 
-代わりに、現在のユーザーを `dialout` グループに追加することを推奨します。変更を有効にするには、一度ログアウトしてから再度ログインしてください：
+代わりに、現在のユーザーを `dialout` グループに追加することを推奨します。変更を有効にするにはログアウトして再ログインしてください：
 
 ```bash
 sudo usermod -a -G dialout $USER
@@ -143,8 +150,8 @@ sudo usermod -a -G dialout $USER
 
 | 項目 | 推奨要件 |
 |------|------|
-| オペレーティングシステム | Ubuntu 24.04、Ubuntu 22.04 は参照用として使用可能 |
-| ROS2 | Jazzy、Humble は参照用として使用可能 |
+| オペレーティングシステム | Ubuntu 24.04、Ubuntu 22.04 は参考として使用可能 |
+| ROS2 | Jazzy、Humble は参考として使用可能 |
 | Python | システム Python。Jazzy では通常 3.12、Humble では通常 3.10 を使用 |
 
 ## インストール手順
@@ -183,8 +190,8 @@ source /opt/ros/jazzy/setup.bash
 python3 -c "import pinocchio; print('pinocchio', pinocchio.__version__)"
 ```
 
-ROS2 Humble を使用する場合は、`ros-jazzy-*` パッケージ名を `ros-humble-*` に置き換え、
-`/opt/ros/humble/setup.bash` を source してください。
+ROS2 Humble を使用する場合は、`ros-jazzy-*` パッケージ名を `ros-humble-*` に置き換え、`/opt/ros/humble/setup.bash` を source してください。
+source `/opt/ros/humble/setup.bash`.
 
 ### ステップ 3. コードリポジトリをクローンする
 
@@ -248,12 +255,12 @@ rebotarmcontroller MoveToPose
 自由度を持ちます。コントローラを有効にする前やアームに給電する前に、
 作業空間に人や障害物がないことを必ず確認してください。事故を避けるため、
 すべての動作コマンドを慎重に確認してください。危険な操作は固く
-禁止されており、その結果についてはすべて自己責任となります。**
+禁止されており、その結果については自己責任となります。**
 :::
 
 ### フルシステムを起動する
 
-フルブリングアップでは次のものを起動します：
+フル bringup では次のものが起動します：
 
 - `reBotArmController` 制御ノード
 - `robot_state_publisher`
@@ -278,7 +285,7 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0 use_rviz:=true
 ```
 
-RViz 上でモデルが小さく表示される場合は、左側の `Views` パネルからビューを調整します：
+RViz でモデルが小さすぎる場合は、左側の `Views` パネルからビューを調整します：
 
 - `Target Frame` を `base_link` に設定
 - `Distance` を `1.0` や `1.5` などに調整
@@ -307,7 +314,7 @@ ros2 run rebotarmcontroller reBotArmController
 /rebotarm
 ```
 
-したがって、すべてのトピック、サービス、アクションには `/rebotarm` がプレフィックスとして付きます。例えば：
+したがって、すべてのトピック、サービス、アクションは `/rebotarm` をプレフィックスに持ちます。例えば：
 
 ```text
 /rebotarm/joint_states
@@ -331,8 +338,8 @@ ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 |---|---|---|
 | `/rebotarm/joint_states` | `sensor_msgs/msg/JointState` | 6 軸の関節位置、速度、トルク |
 | `/rebotarm/arm_status` | `rebotarm_msgs/msg/ArmStatus` | 制御モード、有効状態、ステートマシン、エラーコード |
-| `/rebotarm/joints/<joint>/state` | `rebotarm_msgs/msg/JointMotorState` | 単一関節モーターの状態 |
-| `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | グリッパモーターの状態 |
+| `/rebotarm/joints/<joint>/state` | `rebotarm_msgs/msg/JointMotorState` | 単一関節モーター状態 |
+| `/rebotarm/gripper/state` | `rebotarm_msgs/msg/JointMotorState` | グリッパモーター状態 |
 
 例：
 
@@ -359,9 +366,9 @@ ros2 topic echo /rebotarm/arm_status --once
 
 | API | 型 | 説明 |
 |---|---|---|
-| `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | エンドエフェクタの姿勢モーション |
-| `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | 標準的なジョイント軌道互換エントリポイント |
-| `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | 標準的なグリッパーアクション |
+| `/rebotarm/move_to_pose` | `rebotarm_msgs/action/MoveToPose` | エンドエフェクタ姿勢の移動 |
+| `/rebotarm/follow_joint_trajectory` | `control_msgs/action/FollowJointTrajectory` | 標準ジョイント軌道互換のエントリポイント |
+| `/rebotarm/gripper/command` | `control_msgs/action/GripperCommand` | 標準グリッパアクション |
 
 ## 基本制御の例
 
@@ -378,7 +385,7 @@ ros2 action send_goal /rebotarm/move_to_pose rebotarm_msgs/action/MoveToPose \
   "{target_pose: {position: {x: 0.30, y: 0.0, z: 0.30}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, duration: 2.0}"
 ```
 
-### 3. ジョイントターゲットを送信する
+### 3. ジョイント目標を送信する
 
 ```bash
 ros2 action send_goal /rebotarm/follow_joint_trajectory \
@@ -405,7 +412,7 @@ source install/setup.bash
 ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM0
 ```
 
-### ジョイントモーションの例
+### ジョイント動作の例
 
 6 つすべてのジョイントを同時に制御します。単位は rad です：
 
@@ -451,7 +458,7 @@ ros2 service call /rebotarm/safe_home std_srvs/srv/Trigger
 ros2 service call /rebotarm/disable std_srvs/srv/Trigger
 ```
 
-### インタラクティブグリッパーの例
+### 対話的グリッパの例
 
 ```bash
 ros2 run rebotarmcontroller GripperControl
@@ -476,7 +483,7 @@ src/rebotarm_bringup/config/
 | ファイル | 説明 |
 |---|---|
 | `arm.yaml` | 6 つのアームジョイントのモーター、フィードバック ID、および制御パラメータ |
-| `gripper.yaml` | グリッパーモーター ID、フィードバック ID、ベンダー、および制御パラメータ |
+| `gripper.yaml` | グリッパモーター ID、フィードバック ID、ベンダー、および制御パラメータ |
 | `driver_params.yaml` | ROS パラメータの例 |
 
 一般的な launch パラメータ：
@@ -484,10 +491,10 @@ src/rebotarm_bringup/config/
 | パラメータ | デフォルト | 説明 |
 |---|---|---|
 | `arm_config` | bringup に含まれる組み込みの `arm.yaml` | アーム設定パス |
-| `gripper_config` | bringup に含まれる組み込みの `gripper.yaml` | グリッパー設定パス |
+| `gripper_config` | bringup に含まれる組み込みの `gripper.yaml` | グリッパ設定パス |
 | `channel` | 空文字列 | デフォルトで YAML を使用。空でない場合はシリアルポートを上書き |
-| `joint_state_rate` | `100.0` | `/rebotarm/joint_states` のパブリッシュレート |
-| `cmd_arbitration` | `reject` | アーム軌道実行中の低レベルコマンドの仲裁方法。`reject` または `preempt`。グリッパーの低レベルコマンドはアーム軌道をプリエンプトしません |
+| `joint_state_rate` | `100.0` | `/rebotarm/joint_states` の配信レート |
+| `cmd_arbitration` | `reject` | アーム軌道実行中の低レベルコマンドの仲裁方法。`reject` または `preempt`。グリッパの低レベルコマンドはアーム軌道をプリエンプトしません |
 | `arm_namespace` | `rebotarm` | ROS 名前空間プレフィックス |
 | `frame_id` | `base_link` | ロボットアームのベースフレーム |
 | `ee_frame_id` | `end_link` | エンドエフェクタフレーム |
@@ -495,27 +502,26 @@ src/rebotarm_bringup/config/
 
 ## 低レベルコマンドトピック
 
-ROS2 ワークスペースには、低レベルモーターデバッグ用のトピックも用意されています：
+ROS2 ワークスペースには、低レベルモータデバッグ用のトピックも用意されています：
 
 | API | 型 | 説明 |
 |---|---|---|
-| `/rebotarm/joints/<joint>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | 単一ジョイント MIT 生コマンド |
-| `/rebotarm/joints/<joint>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | 単一ジョイント位置・速度生コマンド |
-| `/rebotarm/joints/<joint>/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | 単一ジョイント速度生コマンド |
-| `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | グリッパー MIT 生コマンド |
-| `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | グリッパー位置・速度生コマンド |
-| `/rebotarm/gripper/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | グリッパー速度生コマンド |
+| `/rebotarm/joints/<joint>/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | 単一ジョイントの MIT 生コマンド |
+| `/rebotarm/joints/<joint>/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | 単一ジョイントの位置・速度生コマンド |
+| `/rebotarm/joints/<joint>/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | 単一ジョイントの速度生コマンド |
+| `/rebotarm/gripper/cmd/mit` | `rebotarm_msgs/msg/JointMitCmd` | グリッパ MIT 生コマンド |
+| `/rebotarm/gripper/cmd/pos_vel` | `rebotarm_msgs/msg/JointPosVelCmd` | グリッパ位置・速度生コマンド |
+| `/rebotarm/gripper/cmd/vel` | `rebotarm_msgs/msg/JointVelCmd` | グリッパ速度生コマンド |
 
 :::caution
-低レベルコマンドトピックはデバッグおよび実験用途を想定しています。IK、軌道計画、URDF 制限チェックは行いません。アプリケーションレベルのモーションには、`/move_to_pose`、`/follow_joint_trajectory`、`/gripper/set` などのサービスやアクションを使用することを推奨します。
+低レベルコマンドトピックはデバッグおよび実験用途を想定しています。IK、軌道計画、URDF 制限チェックは行いません。アプリケーションレベルの動作には、`/move_to_pose`、`/follow_joint_trajectory`、`/gripper/set` などのサービスやアクションを優先して使用してください。
 :::
 
 ## MoveIt 2
 
 MoveIt 2 は、ここで使用されているモーションプランニングフレームワークであり、逆運動学、
-衝突チェック、軌道計画および実行を行います。デモはそれぞれ専用のパッケージに分離されており、
-アプリケーションフローがベースドライバから分離された状態を保ちます。
-詳細については、公式の [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html) を参照してください。
+衝突チェック、軌道計画および実行を行います。デモはそれぞれ独立したパッケージに分けられており、
+アプリケーションフローがベースドライバから分離されるようになっています。詳細については、公式の [MoveIt 2 Documentation](https://moveit.picknik.ai/main/index.html) を参照してください。
 
 MoveIt 関連の内容は 2 つのパッケージに分かれています：
 
@@ -524,70 +530,68 @@ MoveIt 関連の内容は 2 つのパッケージに分かれています：
 | `rebotarm_moveit_config` | ロボットモデル、SRDF、運動学、ジョイント制限、コントローラおよび RViz 設定 |
 | `rebotarm_moveit_demos` | MoveIt 2 ベースのアプリケーションデモ |
 
-MoveIt 環境は、`ros2_control` を介したシミュレートされたハードウェアと、
-計画および実行のための `move_group` を使用します。これは、RViz 内で
-モデル、IK、軌道計画およびデモフローを検証することを目的としています。
+MoveIt 環境は、計画と実行のために `ros2_control` を介したシミュレートされたハードウェアと
+`move_group` を使用します。これは、RViz 内でモデル、IK、軌道計画、およびデモフローを検証することを目的としています。
 
-このリポジトリは実機ハードウェアもサポートします。実機を接続する前に、
+このリポジトリは実機ハードウェアもサポートしています。実機ハードウェアを接続する前に、
 アームのゼロ設定、ジョイント方向、ジョイント制限、速度
-制限およびグリッパー範囲がすべて正しいことを確認するか、リポジトリの
-デフォルト設定のままにしてください。
+制限およびグリッパ範囲がすべて正しいことを確認するか、リポジトリのデフォルト
+設定のままにしてください。
 
-### MoveIt 環境セットアップ
+### MoveIt 環境のセットアップ
 
-まず ROS2 環境が利用可能であることを確認します。現在ソースされている ROS ディストリビューション向けに、
-`ROS_DISTRO` を通じてパッケージをインストールできます：
+まず ROS2 環境が利用可能であることを確認してください。現在 source されている ROS ディストリビューション向けに、`ROS_DISTRO` を通じてパッケージをインストールできます：
 
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```bash
 sudo apt update
 sudo apt install -y \
   ros-${ROS_DISTRO}-moveit \
   ros-${ROS_DISTRO}-moveit-configs-utils \
   ros-${ROS_DISTRO}-ros2-control \
-  ros-${ROS_DISTRO}-ros2-controllers \
+
   ros-${ROS_DISTRO}-xacro
 ```
 
-MoveIt の設定とデモはこのワークスペースに含まれています。依存関係をインストールしたら、
-ワークスペースを再ビルドします：
-
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
-colcon build --symlink-install
+
 source install/setup.bash
-```
 
-MoveIt パッケージとデモのエントリポイントを確認します：
-
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```bash
-ros2 pkg list | grep rebotarm_moveit
+
 ros2 pkg executables rebotarm_moveit_demos
-```
 
-想定されるエントリには次が含まれます：
-
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```text
-rebotarm_moveit_demos draw_square
+
 rebotarm_moveit_demos pick_place
-```
 
-### MoveIt の使用
-
-MoveIt のプランニングは、RViz の GUI または ROS ノードを通じて、シミュレーションと実機の両方のシーンで使用できます。
+MoveIt のプランニングは、RViz GUI または ROS ノードを通じて、シミュレーションと実環境の両方で使用できます。
 
 #### シミュレーションで MoveIt を使用する
 
 MoveIt は RViz シミュレーションのために ros2_control 仮想ハードウェアインターフェースを使用します：
 
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```bash
-cd your/path/to/rebotarm_ros2
+
 source install/setup.bash
-ros2 launch rebotarm_moveit_config demo.launch.py
 
-デフォルトでは次が起動します：
-
-- `move_group`
+```
 - `robot_state_publisher`
 - `ros2_control_node`
 - `joint_state_broadcaster`
@@ -595,92 +599,95 @@ ros2 launch rebotarm_moveit_config demo.launch.py
 - `gripper_controller`
 - MoveIt MotionPlanning プラグイン付きの RViz
 
-RViz は自動的に開き、ロボットの URDF モデルを読み込みます。GUI 左側のパネルから
-モーションを制御できます。
+RViz は自動的に開き、ロボット URDF モデルを読み込みます。GUI 左側のパネルから
+動作を制御できます。
 
 RViz なしで MoveIt 環境を実行するには：
 
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+
 ```bash
-ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
 
-#### reBotArm ハードウェアで MoveIt を使用する
-
-実機ロボットの場合は、まず仮想コントローラではなくハードウェアインターフェースで
+```
 コントローラを起動し、その後ハードウェア用 MoveIt 環境を起動します：
 
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+
 ```bash
-ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
 
-別のターミナルで：
-
+```
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 __CODE_LINE_PLH__
 ```bash
-cd your/path/to/rebotarm_ros2
+
 source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
-
-繰り返しになりますが、実機ハードウェアで任意のデモを実行する前に、ワークスペース内に
-人や障害物がないことを確認し、RViz で計画経路を検証し、いつでも
-コントローラを停止できるようにしておいてください。
+```
 
 ### draw-square デモを実行する
 
-まず MoveIt 環境を起動し、その後別のターミナルで次を実行します：
+まず MoveIt 環境を起動し、別のターミナルで次を実行します：
 
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 ```bash
-cd your/path/to/rebotarm_ros2
+
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos draw_square.launch.py
 
-`draw_square` は、`gripper_tcp` を同一平面上の長方形の 4 つの頂点に沿って移動させます。
-デフォルトパラメータ：
-
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+
 ```text
-src/rebotarm_moveit_demos/config/draw_square.yaml
 
-一般的なパラメータ：
-
-| パラメータ | 説明 |
+```
 |---|---|
 | `start_point` | デモ開始前のジョイントリセット位置 |
 | `rectangle_center` | `base_link` における長方形の中心 |
-| `rectangle_width` / `rectangle_height` | 長方形の寸法（メートル） |
-| `tcp_rpy` | TCP の姿勢。デフォルトは下向きのグリッパー |
-| `tcp_yaw_offsets` | 大きな joint6 の巻き付きを避けるために使用される代替 IK ヨー値 |
+| `rectangle_width` / `rectangle_height` | 長方形の寸法（メートル単位） |
+| `tcp_rpy` | TCP の姿勢。デフォルトは下向きのグリッパ |
+| `tcp_yaw_offsets` | 大きな joint6 の巻き付きを避けるために使用される代替 IK yaw 値 |
 
 ### pick-place デモを実行する
 
-まず MoveIt 環境を起動し、その後別のターミナルで次を実行します：
+まず MoveIt 環境を起動し、別のターミナルで次を実行します：
 
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
+__CODE_LINE_PLH__
 __CODE_LINE_PLH__
 ```bash
-cd your/path/to/rebotarm_ros2
+
 source install/setup.bash
-ros2 launch rebotarm_moveit_demos pick_place.launch.py
 
-デフォルトパラメータ：
-
+```
 __CODE_LINE_PLH__
+__CODE_LINE_PLH__
+
 ```text
-src/rebotarm_moveit_demos/config/pick_place.yaml
 
-一般的なパラメータ：
-
-| パラメータ | 説明 |
+```
 |---|---|
 | `ready_point` | pick/place の前後で使用される準備ジョイント位置 |
 | `pick_position` | `base_link` における物体の底面中心位置 |
 | `pick_tcp_rpy` / `place_tcp_rpy` | pick および place 用の TCP 姿勢 |
-| `object_dimensions` | プランニングシーン内の物体寸法（メートル） |
-| `max_gripper_width` | グリッパーの最大開口幅。デフォルトは `0.09m` |
-| `open_gripper_position` / `closed_gripper_position` | シミュレートされた片側グリッパージョイントの開閉位置 |
-| `hardware_open_gripper_position` / `hardware_closed_gripper_position` | ハードウェアグリッパーモーターの開閉位置 |
-| `grasp_gripper_to_object_width` | 物体の幅から把持位置を計算 |
-|
+| `object_dimensions` | プランニングシーン内の物体寸法（メートル単位） |
+| `max_gripper_width` | グリッパの最大開口幅。デフォルトは `0.09m` |
+| `open_gripper_position` / `closed_gripper_position` | シミュレートされた片側グリッパジョイントの開閉位置 |
+| `hardware_open_gripper_position` / `hardware_closed_gripper_position` | ハードウェアグリッパモータの開閉位置 |
+| `grasp_gripper_to_object_width` | 物体幅から把持位置を計算 |
+
+
+
+| `grasp_gripper_to_object_width` | Compute the grasp position from object width |
 
 ### MoveIt 設定ファイル
 
@@ -720,7 +727,7 @@ ros2 launch rebotarm_bringup bringup.launch.py channel:=/dev/ttyACM1
 ps aux | grep -E "reBotArmController|ros2|python"
 ```
 
-シリアルポートを占有しているプロセスを停止してから再起動してください。アームとグリッパは同じ低レベルコントローラを共有する必要があります。アームとグリッパで同じシリアルポートを別々に開かないでください。
+シリアルポートを占有しているプロセスを停止してから再起動してください。アームとグリッパは同じ低レベル Controller を共有する必要があります。アームとグリッパで同じシリアルポートを別々に開かないでください。
 
 ### 3. Permission denied
 
@@ -730,7 +737,7 @@ ps aux | grep -E "reBotArmController|ros2|python"
 sudo usermod -a -G dialout $USER
 ```
 
-変更を有効にするには、一度ログアウトしてから再度ログインしてください。一時的なデバッグであれば、次のコマンドを実行することもできます：
+ログアウトして再ログインすると、変更が有効になります。一時的なデバッグであれば、次のコマンドを実行することもできます：
 
 ```bash
 sudo chmod 666 /dev/ttyACM0
@@ -753,7 +760,7 @@ sudo chmod 666 /dev/ttyACM0
 [RTPS_TRANSPORT_SHM Error] Failed init_port fastrtps_port7002: open_and_lock_file failed
 ```
 
-これは通常、以前の ROS2 プロセスが異常終了した後に残った FastDDS の共有メモリロックファイルが原因です。サービスやアクションが正常に応答している場合、この警告は通常制御に影響しません。
+これは通常、以前の ROS2 プロセスが異常終了した後に残った FastDDS の共有メモリロックファイルが原因です。サービスやアクションが正常に応答している場合、この警告は通常、制御に影響しません。
 
 クリーンアップするには、まず関連する ROS2 プロセスを停止し、次のコマンドを実行します：
 
@@ -775,7 +782,7 @@ Humble ユーザーも同じワークフローに従い、コマンド内の `ja
 
 ### 7. `pinocchio` が見つからない
 
-ノードや検証コマンドが次のように報告する場合：
+ノードまたは検証コマンドが次のように報告する場合：
 
 ```text
 ModuleNotFoundError: No module named 'pinocchio'
@@ -800,7 +807,7 @@ python3 -c "import pinocchio; print(pinocchio.__version__)"
 python3 -c "import sys; print('\n'.join(sys.path))"
 ```
 
-Jazzy を source した後は、次のようなパスが表示されるはずです：
+Jazzy を source した後は、次のようなパスが表示されるはずです
 `/opt/ros/jazzy/lib/python3.12/site-packages`。Humble を使用する場合は、コマンド内の `jazzy` を
 `humble` に置き換えてください。
 
