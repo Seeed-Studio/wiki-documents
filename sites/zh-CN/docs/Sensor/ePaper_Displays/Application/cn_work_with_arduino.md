@@ -1,5 +1,5 @@
 ---
-description: 参考指南：在 Arduino IDE 中驱动任意兼容的 Seeed ePaper 产品——Arduino IDE 配置、Seeed_GFX 库安装、driver.h 生成。与硬件相关的深入内容位于各产品的 cookbook 中。
+description: 从 Arduino IDE 驱动任意兼容的 Seeed ePaper 产品的参考指南——Arduino IDE 设置、Seeed_GFX 库安装、driver.h 生成。与硬件相关的深入内容位于各产品的 cookbook 中。
 title: 使用 Arduino
 keywords:
   - ePaper 显示屏
@@ -16,7 +16,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/cn/epaper_work_with_arduino/
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-27'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,17 +26,17 @@ import TabItem from '@theme/TabItem';
 
 本页是从 Arduino IDE 驱动任意兼容 Seeed ePaper 产品的**参考手册**。它涵盖了所有硬件之间相同的部分：
 
-1. 配置 Arduino IDE 和 ESP32 开发板支持。
+1. 设置 Arduino IDE 和 ESP32 开发板支持。
 2. 安装 **Seeed_GFX** 库——我们维护的 `TFT_eSPI` 分支，对 Seeed ePaper 提供一流支持。
 3. 使用 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) 为你的开发板 + 屏幕组合生成 `driver.h`。
 4. （可选）使用第三方 **GxEPD2** 库作为替代驱动。
 
-如果你需要的是**从“开箱、烧录 Hello World、点亮传感器和按键”的端到端演练**，请跳转到你所用硬件的 **cookbook**——这些页面会复用本参考文档中的样板代码，并在此基础上添加产品特定示例（外设、代码示例、故障排查）：
+若你需要的是**从“开箱、烧录 Hello World、点亮传感器和按键”的端到端演练**，请跳转到你所用硬件的 **cookbook**——这些页面会复用本参考中的样板代码，并在此基础上添加产品特定示例（外设、代码示例、故障排查）：
 
-- [reTerminal E 系列 — ePaper 显示屏 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)——涵盖 reTerminal E1001 / E1002 / E1003 / E1004，并提供同时使用 `Seeed_GFX` 和 `GxEPD2` 的 Hello World 示例。
-- [reTerminal E 系列 — 板载外设 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)——为同一批型号提供完整外设示例：LED、蜂鸣器、三个用户按键、SHT4x 传感器、电池监测、microSD 卡，以及从 SD 渲染 BMP 图片。
-- [reTerminal E 系列 — RTC、低功耗与音频 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)——RTC 时间管理、深度睡眠 / 轻度睡眠，以及 I2S 麦克风录音。
-- 更多 cookbook（XIAO 7.5" 面板、EE0x 驱动板等）会在对应产品加入平台后陆续推出。
+- [reTerminal E 系列 — ePaper Display cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)——涵盖 reTerminal E1001 / E1002 / E1003 / E1004，并提供同时使用 `Seeed_GFX` 和 `GxEPD2` 的 Hello World 示例。
+- [reTerminal E 系列 — 板载外设 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)——为同一批型号提供完整外设示例：LED、蜂鸣器、三个用户按键、SHT4x 传感器、电池监控、microSD 卡以及从 SD 渲染 BMP 图像。
+- [reTerminal E 系列 — RTC、低功耗、音频与触控 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)——RTC 时间管理、深度睡眠 / 轻度睡眠、I2S 麦克风录音以及电容触控绘图（仅 E1003）。
+- 更多 cookbook（XIAO 7.5" Panel、EE0x 驱动板等）会在对应产品加入平台后陆续推出。
 
 如果你只需要样板代码（在尚未被 cookbook 覆盖的全新产品上跑一个 `Hello World`），仅本页内容就足够了。
 
@@ -54,12 +54,12 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3（集成）</td>
-      <td>已提供 Cookbook——见上方链接</td>
+      <td>已提供 cookbook——见上方链接</td>
     </tr>
     <tr>
       <td><strong>EE02 / EE03 / EE04 / EE05</strong></td>
       <td>XIAO ESP32-S3 / ESP32-S3 Plus</td>
-      <td>搭配你的屏幕选择使用 Configuration Tool</td>
+      <td>使用 Configuration Tool 搭配你的屏幕选择</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05</strong></td>
@@ -79,17 +79,17 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>XIAO eInk Expansion Board v2 / ePaper Breakout Board</strong></td>
       <td>你插入的任意 XIAO</td>
-      <td>搭配你的 XIAO + 屏幕选择使用 Configuration Tool</td>
+      <td>使用 Configuration Tool 搭配你的 XIAO + 屏幕选择</td>
     </tr>
   </table>
 </div>
 
-## 步骤 1：配置 Arduino IDE
+## 步骤 1：设置 Arduino IDE
 
-要在 Arduino 中驱动运行在 ESP32 / ESP32-S3 / ESP32-C3 上的任意 Seeed ePaper 产品，你需要安装 Arduino IDE，并添加 ESP32 开发板支持。
+要在 Arduino 上驱动运行于 ESP32 / ESP32-S3 / ESP32-C3 的任意 Seeed ePaper 产品，你需要 Arduino IDE 加上 ESP32 开发板支持。
 
 :::tip
-如果这是你第一次使用 Arduino，请先查看 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，请先查看 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 **步骤 1.** 下载并安装 [Arduino IDE](https://www.arduino.cc/en/software)。
@@ -113,14 +113,14 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 **步骤 4.** 为你的硬件选择正确的开发板：
 
 - **reTerminal E 系列 / 带 EE04 plus 的 EE04 / TRMNL DIY Kit**：`XIAO_ESP32S3_PLUS`
-- **EE02 / EE03 / EE04 / EE05 标准版 / EN04（Arduino 路径）**：`XIAO_ESP32S3`（nRF52840 系列板卡则选择 `XIAO_nRF52840`）
+- **EE02 / EE03 / EE04 / EE05 标准版 / EN04（Arduino 路径）**：`XIAO_ESP32S3`（或基于 nRF52840 的开发板使用 `XIAO_nRF52840`）
 - **XIAO 7.5" ePaper Panel**：`XIAO_ESP32C3`
 
 如果你不确定该选哪一个，你所用产品的 cookbook 会给出说明。
 
 **步骤 5.** 通过 USB-C 连接你的硬件，并在 **Tools → Port** 中选择正确的端口。
 
-**步骤 6.** 对于 ESP32-S3 开发板（大多数 reTerminal E 系列和 EE0x 板），启用 PSRAM：
+**步骤 6.** 对于 ESP32-S3 开发板（大多数 reTerminal E 系列和 EE0x 开发板），启用 PSRAM：
 
 **Tools → PSRAM → OPI PSRAM**
 
@@ -138,7 +138,7 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
     </a>
 </div><br />
 
-**步骤 2.** 通过 **Sketch → Include Library → Add .ZIP Library**，选择刚刚下载的 ZIP 文件。
+**步骤 2.** 通过 **Sketch → Include Library → Add .ZIP Library**，选择下载的 ZIP 文件。
 
 :::note
 如果你之前安装过 `TFT_eSPI`，请暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突。
@@ -150,10 +150,10 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
 
 **步骤 1.** 选择一个示例草图：
 
-- **黑白屏**：**File → Examples → Seeed_GFX → ePaper → Basic → HelloWorld**
-- **彩色屏**：**File → Examples → Seeed_GFX → ePaper → Colorful → HelloWorld**
+- **黑白屏幕**：**File → Examples → Seeed_GFX → ePaper → Basic → HelloWorld**
+- **彩色屏幕**：**File → Examples → Seeed_GFX → ePaper → Colorful → HelloWorld**
 
-**步骤 2.** 在同一草图文件夹中，新建一个名为 `driver.h` 的文件（在 Arduino IDE 中使用新建标签页箭头）。
+**步骤 2.** 在同一草图文件夹中，新建一个名为 `driver.h` 的文件（使用 Arduino IDE 中的新标签页箭头）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -161,7 +161,7 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/gfx.jpg" style={{width:900, height:'auto'}}/></div>
 
-**步骤 4.** 复制生成的内容，并粘贴到你的 `driver.h` 中。常见配置如下：
+**步骤 4.** 复制生成的内容并粘贴到你的 `driver.h` 中。常见取值如下：
 
 <Tabs groupId="arduino-board">
 <TabItem value="reterminal-e1001" label="reTerminal E1001" default>
@@ -202,9 +202,9 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
 </TabItem>
 </Tabs>
 
-对于其他任意组合，**始终以 Configuration Tool 的输出为准**——选择你的 XIAO 开发板（如果是 reTerminal/EN04/集成套件则选 `None`）以及你接入的屏幕。
+对于其他任意组合，**始终以 Configuration Tool 的输出为准**——选择你的 XIAO 开发板（若是 reTerminal/EN04/集成套件则选 `None`）以及你接入的屏幕。
 
-**步骤 5.** 将草图上传到你的硬件。首次上电时可能只会显示部分刷新；之后的刷新会显示完整的 Hello World 示例。
+**步骤 5.** 将草图上传到你的硬件。首次上电可能只会显示部分刷新；之后的刷新会显示完整的 Hello World 示例。
 
 ## 步骤 4（可选）：改用 GxEPD2
 
@@ -218,19 +218,19 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
     </a>
 </div><br />
 
-通过 **Sketch → Include Library → Add .ZIP Library** 选择下载的 ZIP 文件进行安装。各产品的 cookbook 会在适用时给出具体的 `GxEPD2` 示例（例如 [reTerminal E 系列 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino) 展示了在 E1002 上的全彩渲染）。
+通过 **Sketch → Include Library → Add .ZIP Library** 并选择下载的 ZIP。各产品的 cookbook 会在适用时给出具体的 `GxEPD2` 示例（例如 [reTerminal E 系列 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino) 展示了在 E1002 上的全彩渲染）。
 
 ## 接下来去哪儿——Cookbook
 
-本页有意只停留在样板代码层面。与硬件相关的代码示例和端到端演练都在各自产品的 cookbook 中：
+本页有意只停留在样板代码层面。与硬件相关的代码示例和端到端演练都在各产品的 cookbook 中：
 
-- **[reTerminal E 系列 — ePaper 显示屏 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)**——在 E1001/E1002/E1003/E1004 上使用 `Seeed_GFX` 和 `GxEPD2` 运行 Hello World。
-- **[reTerminal E 系列 — 板载外设 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**——为同一批型号提供完整外设套件示例：LED 控制、蜂鸣器（无源 PWM 蜂鸣 + 旋律播放）、三按键输入、SHT4x 温湿度、电池管理、microSD 卡、从 SD 渲染 BMP 图片。
-- **[reTerminal E 系列 — RTC、低功耗与音频 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**——RTC 时间管理、深度睡眠 / 轻度睡眠，以及 I2S 麦克风录音。
+- **[reTerminal E 系列 — ePaper Display cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino)**——在 E1001/E1002/E1003/E1004 上使用 `Seeed_GFX` 和 `GxEPD2` 运行 Hello World。
+- **[reTerminal E 系列 — 板载外设 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals)**——为同一批型号提供完整外设套件示例：LED 控制、蜂鸣器（被动 PWM 蜂鸣 + 旋律播放）、三按键输入、SHT4x 温湿度、电池管理、microSD 卡、从 SD 渲染 BMP 图像。
+- **[reTerminal E 系列 — RTC、低功耗、音频与触控 cookbook](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_arduino_peripherals_2)**——RTC 时间管理、深度睡眠 / 轻度睡眠、I2S 麦克风录音以及电容触控绘图（仅 E1003）。
 - **[XIAO 7.5" ePaper Panel + Arduino](https://wiki.seeedstudio.com/cn/xiao_075inch_epaper_panel_arduino)**——基于 `Seeed_GFX` 的 XIAO ESP32-C3 全流程演练。
 - **[TRMNL 7.5" DIY Kit + Arduino](https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino)**——在自定义 Arduino 草图中使用该套件的硬件（而非 TRMNL 云平台）。
 
-当有新的电子纸产品发货时，相应的 cookbook 会被添加到每个产品的文件夹下；此主页面会更新以链接到它。
+当有新的电子纸产品发货时，相应的使用手册会被添加到每个产品的文件夹下；此主页会更新以链接到它。
 
 ## 常见问题
 
@@ -243,11 +243,11 @@ Seeed_GFX 是 `TFT_eSPI` 的一个分支，对 Seeed 显示屏提供一流支持
 
 ### 无法向开发板上传程序
 
-- 尝试使用另一根 USB-C 线缆（需为数据线，而非仅供电线）。
+- 尝试更换另一根 USB-C 线缆（需为数据线，而非仅供电线）。
 - 对于 ESP32-S3 开发板：在插入 USB 线缆前按住 **BOOT** 按钮以进入下载模式，然后松开。
 - 确认在重新插拔后，**Tools → Port** 指向正确的串口设备。
 
-如需针对特定产品进行更深入的故障排查，请查看该硬件对应的 cookbook。
+如需针对特定产品进行更深入的故障排查，请查看该硬件对应的使用手册。
 
 ## 技术支持与产品讨论
 

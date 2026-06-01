@@ -9,7 +9,7 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
@@ -458,8 +458,8 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<td align="center">✅</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC, Low Power &amp; Audio</a></td>
-			<td>RTC time management, deep sleep / light sleep, and I2S microphone recording (E1001 / E1002 / E1003 only for mic).</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2">Arduino — RTC, Low Power, Audio &amp; Touch</a></td>
+			<td>RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only for mic &amp; touch).</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>

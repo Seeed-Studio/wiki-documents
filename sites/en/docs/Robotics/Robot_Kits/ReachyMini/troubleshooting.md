@@ -20,7 +20,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-05-15'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/reachymini_troubleshooting/
 ---
 

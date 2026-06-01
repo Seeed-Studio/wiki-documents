@@ -12,20 +12,20 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 createdAt: '2023-04-24'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/reterminal-dm-flash-OS/
 ---
-# Gravar o Raspbian OS no eMMC do reTerminal DM
+# Gravar Raspbian OS na eMMC do reTerminal DM
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
-reTerminal DM é uma IHM industrial open-source de 10,1" - um Integrated Device Master para unificar o fluxo de dados e gerenciar o dispositivo local.
+O reTerminal DM é uma IHM industrial open-source de 10,1" – um Dispositivo Mestre Integrado para unificar o fluxo de dados e gerenciar o dispositivo local.
 
-Baseado no Raspberry Pi CM4 e, como um dispositivo tudo‑em‑um de Panel PC, HMI, PLC e gateway IIoT, o reTerminal DM é uma nova geração de hub de sensoriamento interativo com uma tela grande de grau industrial IP65.
+Baseado no Raspberry Pi CM4 e, como um dispositivo tudo‑em‑um de Panel PC, IHM, CLP e gateway IIoT, o reTerminal DM é uma nova geração de hub interativo de sensoriamento com uma tela grande de grau industrial IP65.
 
 Ele é equipado com rica escalabilidade e conectividade híbrida, suportando barramento CAN, RS485, RS232, porta Ethernet Gigabit e outras interfaces, bem como poderosos recursos de comunicação sem fio, como 4G, LoRa®, WiFi e BLE.
 
-> \*Os módulos 4G e LoRa® não vêm com o reTerminal DM por padrão, compre os módulos relevantes conforme necessário, para
+> \*Os módulos 4G e LoRa® não acompanham o reTerminal DM por padrão, compre os módulos relevantes de acordo com a necessidade, para
 > [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -35,35 +35,35 @@ Ele é equipado com rica escalabilidade e conectividade híbrida, suportando bar
 </div>
 
 :::note
-O Sensecraft Edge OS pode ser baixado [**aqui**](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download). Observe que este Sensecraft Edge OS é atualmente desenvolvido com base no reTerminal DM e só funciona com a versão de Produção do reTerminal DM
+O Sensecraft Edge OS pode ser baixado a partir de [**Here**](https://sourceforge.net/projects/reterminal-dm/files/Sensecraft-edge-OS-V0.3.10.tar.gz/download), observe que este Sensecraft Edge OS é atualmente desenvolvido com base no reTerminal DM e funciona apenas com a versão de Produção do reTerminal DM
 :::
 
-## Requisitos de Hardware
+## Requisitos de hardware
 
 Você precisa preparar o seguinte hardware
 
 - reTerminal DM x 1
-- Computador Host (Windows/Mac/Linux) x 1
+- Computador host (Windows/Mac/Linux) x 1
 - Cabo Ethernet x 1
-- Fonte de alimentação (12V-24V) BYO
-- Cabo USB Tipo‑C x 1
+- Adaptador de energia (12V-24V) BYO
+- Cabo USB Type-C x 1
 
-## Requisitos de Software
+## Requisitos de software
 
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
-## Etapas para Gravar o Raspbian OS
+## Etapas para gravar o Raspbian OS
 
 > **Nota:** A imagem de sistema mais recente empacotada pela Seeed, incluindo os drivers apropriados: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
-- **Passo 1.** Acione o `boot mode switch` localizado ao lado da porta USB Tipo‑C, certificando‑se de que a chave esteja configurada para `disable eMMC boot mode` de acordo com o diagrama abaixo:
+- **Passo 1.** Acione o `boot mode switch` localizado próximo à porta USB Type-C, certifique‑se de que a chave esteja ajustada para `disable eMMC boot mode` de acordo com o diagrama abaixo:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/flash.png" alt="pir" width="800" height="auto"/></p>
 
-- **Passo 2.** Use o cabo de dados USB Tipo‑C para conectar à porta Tipo‑C no reTerminal DM, como mostrado na imagem acima,
+- **Passo 2.** Use o cabo de dados USB Type-C para conectar à porta Type-C no reTerminal DM, como mostrado na imagem acima,
 
-- **Passo 3.** Conecte o cabo de alimentação da fonte de alimentação à porta de energia do reTerminal DM.
+- **Passo 3.** Conecte o cabo de alimentação da fonte de energia à porta de alimentação do reTerminal DM.
 
 :::danger
 
@@ -77,17 +77,17 @@ Agora vamos passar para a configuração de software no seu computador host. Sig
 
 ### Para Windows
 
-- **Passo 1.** Baixe o instalador **rpiboot setup** clicando **[aqui](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** para instalar os drivers necessários e a ferramenta de boot
+- **Passo 1.** Baixe o **rpiboot setup installer** clicando **[here](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** para instalar os drivers necessários e a ferramenta de boot
 
-- **Passo 2.** Conecte o reTerminal DM ao PC via cabo USB Tipo‑C
+- **Passo 2.** Conecte o reTerminal DM ao PC via cabo USB Type-C
 
 O Windows agora encontrará o hardware e instalará os drivers necessários
 
 - **Passo 3.** Procure pela ferramenta **rpiboot** que instalamos antes e abra‑a
 
-- **Passo 4.** Abra o **Explorador de Arquivos** e você verá o eMMC do Compute Module 4 exibido como um **dispositivo de armazenamento em massa USB**
+- **Passo 4.** Abra o **explorador de arquivos** e você verá a eMMC do Compute Module 4 exibida como um **dispositivo de armazenamento em massa USB**
 
-- **Passo 5.** Baixe o software **Raspberry Pi Imager** **[aqui](https://www.raspberrypi.org/software/)**
+- **Passo 5.** Baixe o software **Raspberry Pi Imager** a partir **[here](https://www.raspberrypi.org/software/)**
 
 - **Passo 6.** Abra o software Raspberry Pi Imager
 
@@ -97,13 +97,13 @@ O Windows agora encontrará o hardware e instalará os drivers necessários
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o wiFi, definir configurações de localidade** e mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar wiFi, definir configurações de localidade** e muito mais
 
-- **Passo 8.** Clique em **CHOOSE OS** e selecione o seu OS preferido
+- **Passo 8.** Clique em **CHOOSE OS** e selecione o seu sistema operacional preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Você pode selecionar outros sistemas operacionais, como **Ubuntu 64‑bit**, navegando até **Other general purpose OS**
+**NOTA:** Você pode selecionar outros sistemas operacionais, como **64-bit Ubuntu**, navegando até **Other general purpose OS**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -117,11 +117,11 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 
 - **Passo 11.** Acione o **Boot Mode switch** de volta para a posição original
 
-Agora você pode pular para **[aqui](#instalar-drivers)**
+Agora você pode pular para **[here](#instalar-drivers)**
 
 :::note
 
-Depois que as etapas acima forem concluídas e você tiver reaplicado a alimentação ao reTerminal DM, o LED de Power deverá acender em amarelo e o LED ACT deverá piscar na cor verde, mas a tela ficará em branco e sem retroiluminação. Não entre em pânico, você só precisa seguir as etapas de [install drivers](#instalar-drivers) para reviver a tela.
+Depois que as etapas acima forem concluídas e você tiver reaplicado a energia ao reTerminal DM, o LED de energia deverá acender na cor amarela e o LED ACT deverá piscar na cor verde, mas a tela ficará em branco e sem luz de fundo. Não entre em pânico, você só precisa seguir as etapas de [install drivers](#instalar-drivers) para reviver a tela.
 
 :::
 
@@ -139,13 +139,13 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Passo 2.** Instale **libusb**
+- **Passo 2.** Instale o **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Passo 3.** Instale **pkg-config**
+- **Passo 3.** Instale o **pkg-config**
 
 ```sh
 brew install pkg-config
@@ -163,9 +163,9 @@ make
 sudo ./rpiboot
 ```
 
-- **Passo 6.** Conecte o reTerminal ao seu computador Mac via cabo USB Tipo‑C
+- **Passo 6.** Conecte o reTerminal ao seu computador Mac via cabo USB Type-C
 
-- **Passo 7.** Baixe e instale o aplicativo **Raspberry Pi Imager** visitando [este link](https://www.raspberrypi.org/software/)
+- **Passo 7.** Baixe e instale o aplicativo **Raspberry Pi Imager** visitando [this link](https://www.raspberrypi.org/software/)
 
 - **Passo 8.** Abra o aplicativo **Raspberry Pi Imager**
 
@@ -175,13 +175,13 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar wifi, definir configurações de localidade** e mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar wifi, definir configurações de localidade** e muito mais
 
-- **Passo 10.** Clique em **CHOOSE OS** e selecione o seu OS preferido
+- **Passo 10.** Clique em **CHOOSE OS** e selecione o seu sistema operacional preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Você pode selecionar um sistema operacional como **Ubuntu 64‑bit**, navegando até **Other general purpose OS**
+**NOTA:** Você pode selecionar sistemas operacionais como **64-bit Ubuntu** navegando até **Other general purpose OS**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -195,11 +195,11 @@ Aguarde alguns minutos até que o processo de gravação seja concluído.
 
 - **Passo 13.** Acione o **Boot Mode switch** de volta para a posição original
 
-Agora você pode pular para **[aqui](#instalar-drivers)**
+Agora você pode pular para **[here](#instalar-drivers)**
 
 :::note
 
-Depois que as etapas acima forem concluídas e você tiver reaplicado a alimentação ao reTerminal DM, você deverá perceber que o LED de Power acende em amarelo e o LED ACT pisca em verde, mas a tela fica em branco e sem retroiluminação. Não entre em pânico, você só precisa seguir as etapas de [install drivers](#instalar-drivers) para reviver a tela.
+Depois que as etapas acima forem concluídas e você tiver reaplicado a energia ao reTerminal DM, você deverá perceber que o LED de energia acende na cor amarela e o LED ACT pisca na cor verde, mas a tela fica em branco e sem luz de fundo. Não entre em pânico, você só precisa seguir as etapas de [install drivers](#instalar-drivers) para reviver a tela.
 
 :::
 
@@ -249,7 +249,7 @@ sudo ./rpiboot
 O resultado é mostrado abaixo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Passo 7.** Conecte o reTerminal ao PC via cabo USB Tipo‑C
+- **Passo 7.** Conecte o reTerminal ao PC via cabo USB Type-C
 
 - **Passo 8.** Baixe o snap
 
@@ -272,23 +272,23 @@ rpi-imager
 O resultado é mostrado abaixo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="600" height="auto"/></p>
 
-- **Passo 11.** Pressione **CTRL + SHIFT + X** no teclado para abrir a janela **Advanced options**
+- **Passo 11.** Pressione **CTRL + SHIFT + X** no teclado para abrir a janela de **Advanced options**
 
 Defina um hostname, defina uma senha, configure o Wi‑Fi, defina as configurações de localidade
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
 
-Habilite o SSH
+Habilite SSH
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
-Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi‑Fi, definir as configurações de localidade** e mais
+Aqui você pode **definir um hostname, habilitar SSH, definir uma senha, configurar o Wi‑Fi, definir as configurações de localidade** e muito mais
 
-- **Passo 11.** Clique em **CHOOSE OS** e selecione o sistema operacional de sua preferência
+- **Passo 11.** Clique em **CHOOSE OS** e selecione o seu sistema operacional preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Você pode selecionar sistemas como **Ubuntu 64-bit** navegando até **Other general purpose OS**
+**NOTA:** Você pode selecionar sistemas como **64-bit Ubuntu** navegando até **Other general purpose OS**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -306,11 +306,11 @@ O resultado é mostrado abaixo:
 
 :::note
 
-Depois que as etapas acima terminarem e você reaplicar a energia ao reTerminal DM, você deverá perceber que o LED de energia ficará aceso em amarelo e o LED ACT piscará em verde, mas a tela ficará em branco e sem iluminação de fundo. Por favor, não entre em pânico, você só precisa seguir as etapas de [install drivers](#install-drivers) para reativar a tela.
+Depois que as etapas acima forem concluídas e você religar a alimentação do reTerminal DM, você deverá perceber que o LED de energia ficará amarelo e o LED ACT ficará piscando em verde, mas a tela ficará em branco e sem luz de fundo. Por favor, não entre em pânico, você só precisa seguir as etapas de [install drivers](#install-drivers) para reativar a tela.
 
 :::
 
-## Instalar Drivers
+## Instalar drivers
 
 ### Acessar o reTerminal DM via SSH
 
@@ -328,7 +328,7 @@ Agora conecte o cabo Ethernet ao reTerminal DM e a um roteador que esteja na mes
 
 Para testar se o seu reTerminal DM está na mesma rede que o computador host, você pode usar `ping raspberrypi.local`
 
-se você vir a seguinte saída após o comando ping, significa que ambos os dispositivos estão na mesma rede:
+se você vir a seguinte saída após o comando ping, isso significa que ambos os dispositivos estão na mesma rede:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ping.png" alt="pir" width="600" height="auto"/></p>
 
@@ -353,7 +353,7 @@ ssh pi@raspberrypi.local
 raspberry
 ```
 
-- **Passo 4.** Se você tiver efetuado login com sucesso no Raspberry Pi OS, verá a seguinte saída
+- **Passo 4.** Se você tiver feito login com sucesso no Raspberry Pi OS, verá a seguinte saída
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
@@ -378,7 +378,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 raspberry
 ```
 
-- **Passo 4.** Se você tiver efetuado login com sucesso no Raspberry Pi OS, verá a seguinte saída
+- **Passo 4.** Se você tiver feito login com sucesso no Raspberry Pi OS, verá a seguinte saída
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
@@ -388,11 +388,11 @@ O reTerminal DM vem com os drivers necessários pré-instalados de fábrica, ent
 
 :::tip
 
-**Para instalar o driver de SO de 32 bits, siga cuidadosamente as etapas abaixo:**
+**Para instalar o driver do sistema operacional de 32 bits, siga cuidadosamente as etapas abaixo:**
 
-O sistema operacional pré-instalado no reTerminal DM é de 64 bits; se você desejar instalar um SO de 32 bits, use o seguinte método para instalar os drivers DTS.
+O sistema operacional pré-instalado no reTerminal DM é de 64 bits; se você desejar instalar um sistema operacional de 32 bits, use o método a seguir para instalar os drivers DTS.
 
->⚠️Nota: Reinicie seu reTerminal DM depois de gravar o SO de 32 bits.
+>⚠️Nota: Reinicie o seu reTerminal DM depois de gravar o sistema operacional de 32 bits.
 
 Siga a etapa [**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) e, em seguida, insira o seguinte comando:
 
@@ -400,11 +400,12 @@ Siga a etapa [**Access reTerminal DM via SSH**](#access-reterminal-dm-via-ssh) e
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 ```
 
-Depois, continue o processo de [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
+Em seguida, continue o processo de [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
 
+Enquanto isso, se você estiver usando a versão oficial mais recente do Raspberry Pi OS de 32 bits, o novo kernel é incompatível com este produto, o que resultará em falhas na atualização dos drivers e em uma tela em branco. Se você realmente precisar de uma imagem de sistema operacional de 32 bits para desenvolvimento, recomendamos usar uma versão de imagem de 32 bits mais antiga.
 :::
 
-- **Passo 1.** Clone o repositório a seguir no shell SSH em que você conectou ao reTerminal DM nas etapas acima
+- **Passo 1.** Clone o seguinte repositório no shell SSH que você conectou ao reTerminal DM nas etapas acima
 
 ```sh
 sudo apt install git -y
@@ -439,7 +440,7 @@ Agora a sua tela deve acender e funcionar normalmente.
 
 ### Orientação da tela sensível ao toque
 
-**P: A orientação do painel de toque da tela está diferente da exibição da tela?**
+**P: A orientação do painel de toque da tela é diferente da exibição da tela?**
 
 **R: Siga cuidadosamente as etapas abaixo:**
 
@@ -449,15 +450,15 @@ Siga a etapa [access reTerminal DM via SSH](#access-reterminal-dm-via-ssh) e, em
 echo 'ATTRS{name}=="gt9271", ENV{LIBINPUT_CALIBRATION_MATRIX}="0  1.0  0 -1.0 0 1.0 0 0 1.0"' | sudo tee -a /etc/udev/rules.d/98-touchscreen-cal.rules
 ```
 
-Depois, reinicie:
+Em seguida, reinicie:
 
 ```sh
 sudo reboot
 ```
 
-Se a orientação da tela ainda estiver incorreta, opções adicionais para o `ENV{LIBINPUT_CALIBRATION_MATRIX}` podem ser encontradas [aqui](https://wayland.freedesktop.org/libinput/doc/1.11.3/udev_config.html).
+Se a orientação da tela ainda estiver incorreta, opções adicionais para `ENV{LIBINPUT_CALIBRATION_MATRIX}` podem ser encontradas [aqui](https://wayland.freedesktop.org/libinput/doc/1.11.3/udev_config.html).
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte técnico e discussão sobre o produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

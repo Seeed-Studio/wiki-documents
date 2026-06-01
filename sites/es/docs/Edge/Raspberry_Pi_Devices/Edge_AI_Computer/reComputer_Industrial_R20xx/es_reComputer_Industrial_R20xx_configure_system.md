@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/es/recomputer_industrial_r20xx_configure_system/
 ---
 
@@ -392,7 +392,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-Después de 10-15 segundos (tarda un tiempo en que el módulo se encienda y enumere el USB), comprueba si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar el USB), comprueba si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -400,7 +400,7 @@ ls /dev/ttyUSB*
 
 Salida /dev/ttyUSB0, etc.:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
-Abre minicom con el puerto serie y la velocidad en baudios apropiados:
+Abre minicom con el puerto serie y la velocidad en baudios adecuados:
 
 ```bash
 sudo apt update
@@ -450,7 +450,7 @@ Ejecuta el archivo:
 sudo ./power_4g.sh
 ```
 
-Después de 10-15 segundos (tarda un tiempo en que el módulo se encienda y enumere el USB), comprueba si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar el USB), comprueba si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -514,7 +514,7 @@ sudo minicom -D /dev/ttyACM2
 ```
 
 :::note
- Si hay una placa de expansión, el número debe desplazarse un lugar hacia atrás, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
+ Si hay una placa de expansión, el número debe desplazarse una posición hacia atrás, por ejemplo ***/dev/ttyAcM2***, ***/dev/ttyAcM3***.
 :::
 
 3. Las siguientes operaciones deben realizarse en ambos ACM abiertos:
@@ -529,15 +529,15 @@ sudo minicom -D /dev/ttyACM2
 :::note
 
 Tomando ACM2 y ACM3 como ejemplo:
-Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse de nuevo: ***ctrl+A***, luego pulsa ***Z*** y luego ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
-Por el contrario, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y luego  ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
+Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse de nuevo: ***ctrl+A***, luego pulsa ***Z*** y luego ***E***, y después inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 libremente y podrás ver el contenido de ACM2 en ACM3 al mismo tiempo;
+A la inversa, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse de nuevo:  ***ctrl+A***, luego pulsa  ***Z***  y luego  ***E***, y después inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 libremente y podrás ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
 ## Prueba de RS232
 
-reComputer Industrial R20xx incluye 1x puertos RS232, y los puertos COM y archivos de dispositivo correspondientes son los siguientes:
+reComputer Industrial R20xx incluye 1x puertos RS232, y los correspondientes puertos COM y archivos de dispositivo son los siguientes:
 
 | **Número de puertos RS232** | **Puerto COM** | **Etiqueta serigrafiada** | **Archivo de dispositivo** |
 |---------------------------|--------------|---------------------------|-----------------------------|
@@ -562,7 +562,7 @@ Si la placa de expansión no está conectada, necesitas cambiar ***/dev/ttyACM1*
 printf "hello seeed\r\n" > /dev/ttyACM1
 ```
 
-El Terminal 1 mostrará el contenido que el Terminal 2 solicita imprimir.
+El Terminal 1 mostrará el contenido que el Terminal 2 solicite imprimir.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.12_rs232_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## Prueba de DI (Entrada Digital)
@@ -682,7 +682,7 @@ reComputer Industrial R20xx contiene 8x puertos DO, el usuario puede configurar 
 </div>
 
 El tipo de salida de los puertos DO es transistor. Admite tensión de salida - por debajo de 60 VDC, capacidad de corriente - 500 mA.
-Para probar la funcionalidad de DO, puedes seguir estos pasos para probarlo:
+Para probar la funcionalidad de DO, puedes seguir estos pasos para probarla:
 
 1. Se ha completado la conexión entre el puerto DO de reComputer Industrial R20xx y la carga externa.
 2. Introduce el siguiente comando para establecer la salida en nivel alto o nivel bajo：
@@ -709,9 +709,15 @@ lsusb
 La ejecución de este comando debería mostrar información sobre los dispositivos USB conectados a tu sistema, incluidos los concentradores USB presentes.
 Si el concentrador USB funciona correctamente, deberías ver sus detalles listados en la salida del comando lsusb. Si no aparece en la lista, puede haber un problema con el concentrador o con su conexión al sistema. En tales casos, es posible que necesites solucionar problemas del concentrador USB o de sus conexiones.
 
-## Prueba del RTC (Reloj en Tiempo Real)
+## Prueba del RTC (reloj en tiempo real)
 
-Para probar la funcionalidad del Reloj en Tiempo Real (RTC), sigue estos pasos:
+:::note
+Dado que el dispositivo reComputer está equipado con el chip CM5, hay dos unidades RTC en el dispositivo: ① El RTC integrado de CM5 (rtc0); ② El RTC ensamblado en reComputer (rtc1).
+
+rtc0 no puede conservar los datos de tiempo. Por lo tanto, para usar la función RTC, debes especificar manualmente el número de dispositivo rtc1 al configurar la hora.
+:::
+
+Para probar la funcionalidad del reloj en tiempo real (RTC), sigue estos pasos:
 
 1. Desactiva la sincronización automática de hora:
 
@@ -720,43 +726,43 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. Establece la hora:
+2. Configura la hora:
 Configura el RTC a una fecha y hora específicas:
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
 3. Sincronizar la hora del RTC con el sistema
 Actualiza la hora del sistema para que coincida con la hora del RTC:  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
 4. Comprueba la hora del RTC:
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
 Este comando leerá y mostrará la hora almacenada en el RTC.
 
 5. Desconecta la fuente de alimentación del RTC, espera unos minutos, luego vuelve a conectarla y comprueba de nuevo la hora del RTC para ver si ha conservado la hora correcta.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
 ## Prueba del temporizador watchdog
 
-Para realizar una prueba del watchdog, sigue estos pasos:
+Para realizar una prueba de watchdog, sigue estos pasos:
 
-1. Instala el software del watchdog:
+1. Instala el software de watchdog:
 
 ```bash
 sudo apt install watchdog
 ```
 
-2. Edita el archivo de configuración del watchdog:
+2. Edita el archivo de configuración de watchdog:
 
 ```bash
 # make sure you install vim already, if haven't, can install by the command below
@@ -814,7 +820,7 @@ Estos pasos te ayudarán a probar y garantizar la funcionalidad del temporizador
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
-## Control del zumbador mediante GPIO  
+## Controlar el zumbador mediante GPIO  
 
 El GPIO correspondiente al zumbador es gpio627. Introduce el siguiente script para encender/apagar el zumbador:
 
@@ -877,9 +883,9 @@ cd usr/bin
 Este comando indica a la utilidad ATECC que use la ranura 10 (-b 10), establezca el tamaño del número de serie en 192 bits ***(-s 192)*** y genere un número de serie aleatorio ***(-c 'serial')***. La salida será el número de serie generado, como ***"01235595d3d621f0ee"***.
 Este proceso te permite interactuar con el dispositivo ATECC608A y realizar varias operaciones, como generar números de serie aleatorios.
 
-## Interacción con la EEPROM
+## Interactuar con la EEPROM
 
-Aquí están los comandos para interactuar con una EEPROM (Memoria de Solo Lectura Programable y Borrable Eléctricamente):
+Aquí están los comandos para interactuar con una EEPROM (Electrically Erasable Programmable Read-Only Memory):
 
 1. Concede permisos completos (lectura, escritura y ejecución) al archivo de dispositivo de la EEPROM:
 
@@ -908,7 +914,7 @@ sudo fdisk -l
 ```
 
 Este comando mostrará una lista de todos los discos conectados a tu sistema, incluido el SSD si se detecta correctamente. Busca las entradas que representen tu SSD. Normalmente comienzan con ***/dev/sd*** seguido de una letra (por ejemplo, ***/dev/sda, /dev/sdb,*** etc.).
-Una vez que identifiques la entrada correspondiente a tu SSD, puedes continuar con el particionado o formateo según sea necesario.
+Una vez que identifiques la entrada correspondiente a tu SSD, puedes proceder a particionarlo o formatearlo según sea necesario.
 
 ## UPS para apagado seguro
 
@@ -991,12 +997,12 @@ while True:
         os.system('sudo shutdown -h now')
 ```
 
-Guarda y sal del editor (pulsa ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
+Guarda y sal del editor (presiona ***`Ctrl+O`*** para guardar, ***`Enter`*** para confirmar y ***`Ctrl+X`*** para salir).
 
 5. Ejecuta el script.
 
 - Abre la terminal.
-- Ejecuta el siguiente comando para ejecutar el script:
+- Ejecuta el siguiente comando para correr el script:
 
 ```bash
 sudo python3 ups_shutdown.py
@@ -1008,42 +1014,42 @@ sudo python3 ups_shutdown.py
 
 6. Simular prueba de fallo de alimentación
 
-- Corta la fuente de alimentación externa.
-- Observe si el sistema guarda los datos automáticamente y se apaga.
+- Corta la alimentación externa.
+- Observa si el sistema guarda automáticamente los datos y se apaga.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
 7. Verificar el resultado
 
-- Vuelva a conectar la fuente de alimentación.
-- Compruebe si los datos del sistema están completos y si se inicia con normalidad.
+- Vuelve a conectar la alimentación.
+- Comprueba si los datos del sistema están completos y si se inicia con normalidad.
 
 :::note
 
-1. Para la función de UPS, póngase en contacto con nosotros para obtener más información.
-2. La señal de alarma es activa en nivel BAJO.
+1. Para la función de UPS, ponte en contacto con nosotros para obtener más información.
+2. La señal de alarma es activa en LOW.
 
 :::
 
 ## Acelerador de IA
 
-La ranura M.2 M-KEY 2280 del reComputer Industrial R20xx está diseñada para alojar un acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
-Si compró el producto de la serie R20xx-10, deberá adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
-El dispositivo viene con el controlador del acelerador Hailo preinstalado, por lo que puede usarlo directamente y ejecutar el caso de prueba:
+La ranura M.2 M-KEY 2280 en el reComputer Industrial R20xx está diseñada para alojar un Acelerador de IA PCIE M.2. Y la serie R20xx-12 viene preinstalada con una aceleración de IA Hailo-8 M.2 de hasta 26TOPS.
+Si compraste el producto de la serie R20xx-10, necesitarás adquirir el módulo NPU de Hailo para habilitar la funcionalidad de IA.
+El dispositivo viene con el controlador del acelerador Hailo preinstalado, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
 
-1. Vaya al directorio del caso de prueba
+1. Navega al directorio del caso de prueba
 
 ```bash
 cd /mnt/hailo-rpi5-examples/
 ```
 
-2. Inicie el entorno virtual
+2. Inicia el entorno virtual
 
 ```bash
 source ./setup_env.sh
 ```
 
-3. Ejecute el ejemplo de detección simple
+3. Ejecuta el ejemplo de detección simple
 
 ```bash
 python basic_pipelines/detection_simple.py
@@ -1051,16 +1057,16 @@ python basic_pipelines/detection_simple.py
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
-Para cerrar la aplicación, presione ***`Ctrl+C`*** .
-Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de vídeo de GStreamer se simplifica al minimizar las tareas de procesamiento de vídeo, y se utiliza el modelo YOLOv6 Nano.
+Para cerrar la aplicación, presiona ***`Ctrl+C`*** .
+Esta es una versión ligera del ejemplo de detección, centrada principalmente en demostrar el rendimiento de Hailo mientras se minimiza la carga de la CPU. La canalización interna de procesamiento de video de GStreamer se simplifica minimizando las tareas de procesamiento de video, y se utiliza el modelo YOLOv6 Nano.
 
 :::note
-Si el reComputer que compró no incluye Hailo-8 y está considerando adquirir un dispositivo Hailo para su integración, consulte la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecute los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
+Si el reComputer que compraste no incluye Hailo-8 y estás considerando adquirir un dispositivo Hailo para integrarlo, consulta la documentación oficial de Hailo (https://github.com/hailo-ai) para configurar el firmware y el entorno, y ejecutar los ejemplos para verificar que el dispositivo pueda utilizarse con normalidad.
 :::
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerle diferentes tipos de soporte y garantizar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

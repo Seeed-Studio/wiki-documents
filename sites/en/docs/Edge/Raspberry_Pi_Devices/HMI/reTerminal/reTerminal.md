@@ -623,6 +623,17 @@ raspberry
 
 reTerminal comes with the necessary drivers pre-installed out-of-the-box so you don't need to install any additional drivers. However, if you flash new OS by yourself, you need to install the necessary drivers separately. The hardware that need drivers include the **5-inch LCD, touch panel, accelerometer, light sensor, user LEDs, user buttons, RTC, buzzer, cryptographic co-processor**.
 
+:::note
+For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`.After completing the installation, remember to **reboot** reTerminal for the changes to take effect.
+
+```
+echo arm_64bit=0 | sudo tee -a /boot/config.txt
+sudo reboot
+```
+
+Meanwhile, if you are using the latest official 32-bit Raspberry Pi OS, its new kernel is incompatible with this product, which will result in failed driver updates and a blank screen. If you do need a 32-bit OS image for development, we recommend using an older 32-bit image version.
+:::
+
 - **Step 1.** Clone the following repo
 
 ```sh

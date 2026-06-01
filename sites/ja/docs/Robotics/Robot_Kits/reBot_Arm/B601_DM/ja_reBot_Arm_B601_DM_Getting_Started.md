@@ -148,6 +148,10 @@ conda activate rebot
 
 ### ステップ 3: motorbridge をインストール
 
+:::tip
+スキャンされたすべてのモーターがオフラインと表示される場合は、motorbridge v0.2.9 をインストールしてください。
+:::
+
 reBot 用の仮想環境を有効化したら、次のコマンドを実行して motorbridge をインストールします:
 
 ```bash

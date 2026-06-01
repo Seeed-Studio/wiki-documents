@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-04-21'
+updatedAt: '2026-05-22'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -147,6 +147,10 @@ conda activate rebot
 ```
 
 ### Step3: Install motorbridge
+
+:::tip
+If all scanned motors show offline, install motorbridge v0.2.9.
+:::
 
 After activating the reBot virtual environment, run the following command to install motorbridge:
 
