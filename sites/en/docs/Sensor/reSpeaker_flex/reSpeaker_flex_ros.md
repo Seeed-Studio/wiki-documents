@@ -5,7 +5,7 @@ keywords:
   - reSpeaker
   - Robotics
   - ROS2
-image: https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png
+image: https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png
 slug: /respeaker_flex_ros2_voice_pipeline
 sku: 114993700, 101991441, 114993701
 last_update:
