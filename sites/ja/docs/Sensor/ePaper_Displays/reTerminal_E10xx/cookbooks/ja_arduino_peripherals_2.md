@@ -1,10 +1,10 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — PCF8563 RTC の読み書き、ディープスリープ低消費電力戦略、および PDM マイクによるオーディオ録音を SD カードへ保存（E1001 / E1002 / E1003 のみ）。
-title: 'Arduino クックブック: RTC、低消費電力 & オーディオ (reTerminal E シリーズ)'
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け Arduino クックブック — PCF8563 RTC の読み書き、ディープスリープによる低消費電力戦略、PDM マイクによるオーディオ録音を SD カードへ保存（E1001 / E1002 / E1003）、および静電容量式タッチによる描画（E1003 のみ）。
+title: 'Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
-sidebar_label: Arduino – RTC、電源 & オーディオ
+sidebar_label: Arduino – RTC、電源、オーディオ & タッチ
 last_update:
   date: 05/27/2026
   author: Citric
@@ -16,24 +16,25 @@ url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals_2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino クックブック: RTC、低消費電力 & オーディオ (reTerminal E シリーズ)
+# Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip このシリーズの他のクックブック
-- **[Arduino クックブック: 電子ペーパー・ディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — 電子ペーパー画面へのテキスト、グラフィックス、画像の描画。
-- **[Arduino クックブック: オンボード・ペリフェラル](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** — LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カード、および SD カード画像パイプライン。
+- **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino)** — ePaper 画面へのテキスト、グラフィックス、画像の描画。
+- **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)** — LED、ブザー、ボタン、SHT4x センサ、バッテリーモニタ、microSD カード、および SD カード画像パイプライン。
 :::
 
 ## はじめに
 
-これは reTerminal E シリーズ向けペリフェラル・クックブックの第 2 弾です。[最初のペリフェラル・クックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) では基本的な入出力ペリフェラル（LED、ブザー、ボタン、SHT4x、バッテリー、SD カード）を扱いましたが、このページではさらに高度な 3 つのトピックを掘り下げます：
+これは reTerminal E シリーズ向け周辺機能クックブックの第 2 弾です。[最初の周辺機能クックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals) では基本的な I/O 周辺機能（LED、ブザー、ボタン、SHT4x、バッテリー、SD カード）を扱いましたが、このページではさらに高度な 4 つのトピックを掘り下げます：
 
-- **リアルタイムクロック (RTC)** — CR1220 コイン電池でバックアップされたオンボードの **PCF8563** RTC チップにより、メインバッテリーを取り外しても時刻を保持します。
+- **リアルタイムクロック (RTC)** — CR1220 コイン電池でバックアップされたオンボードの **PCF8563** RTC チップにより、メインバッテリーが取り外されても時刻を保持します。
 - **低消費電力モード** — ディープスリープ、ライトスリープ、および GPIO ウェイクアップ戦略により、バッテリー寿命を数日から数か月へと延ばします。
 - **PDM マイクロフォン** — オンボードの PDM デジタルマイク（E1001 / E1002 / E1003 のみ。E1004 にはマイクはありません）から音声を取得し、WAV ファイルとして microSD カードに保存します。
+- **タッチスクリーン** — E1003（10.3 インチモデル）に搭載された静電容量式タッチパネルを使用して、ePaper ディスプレイ上にドットを描画します。タッチパネルを搭載しているのは E1003 のみです。
 
-このクックブックのすべてのサンプルスケッチは [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) リポジトリに含まれており、**追加のライブラリをインストールする必要はありません** — すべて ESP32 のビルトイン API を使用します。
+このクックブックのすべてのサンプルスケッチは、[OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) リポジトリからのものです。RTC、低消費電力、マイクのスケッチは **追加ライブラリのインストールは不要** で、すべて ESP32 のビルトイン API を使用します。タッチのスケッチには **Seeed_GFX** ライブラリが必要です。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -84,18 +85,18 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-### 前提条件
+### 事前準備
 
-以下のサンプルを実行する前に、すでに次の準備ができている必要があります：
+以下のサンプルを実行する前に、次の準備ができている必要があります：
 
-- **Arduino IDE** がインストールされており、**ESP32 ボードパッケージ**（PDM マイク用に 3.0 以上）が導入され、ボードとして **XIAO_ESP32S3** が選択されていること。
-- Tools メニューで **PSRAM** が **OPI PSRAM** に、**Flash** が **8 MB** に設定されていること。
-- 動作する **USB-C データケーブル** があり、正しいシリアルポートが選択されていること。
-- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino クックブック: 電子ペーパー・ディスプレイ](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#environmental-preparation) の環境セットアップを参照してください。
+- **Arduino IDE** に **ESP32 ボードパッケージ**（PDM マイク用に 3.0 以上）をインストールし、ボードとして **XIAO_ESP32S3** を選択していること。
+- Tools メニューで **PSRAM** を **OPI PSRAM** に、**Flash** を **8 MB** に設定していること。
+- 動作する **USB-C データケーブル** があり、正しいシリアルポートを選択していること。
+- デバイスに基本的なスケッチを書き込めることを確認していること — まだの場合は、[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino#environmental-preparation) の環境セットアップを参照してください。
 
-このクックブック内のすべてのスケッチは、**GPIO44 (RX) / GPIO43 (TX)** の `Serial1` を通じて **115200 ボー**でデバッグ情報を出力します — これは Arduino IDE が自動的に開く USB-CDC `Serial` ではなく、USB-UART ブリッジ側です。Arduino シリアルモニタを開き、対応するポートとボーレートを選択してログを確認してください。
+このクックブック内のすべてのスケッチは、**GPIO44 (RX) / GPIO43 (TX)** の `Serial1` を通じて **115200 ボー**でデバッグ情報を出力します。これはキャリア基板上の USB-UART ブリッジであり、Arduino IDE が自動的に開く USB-CDC の `Serial` では **ありません**。Arduino シリアルモニタを開き、一致するポートとボーレートを選択してログを確認してください。
 
-### ハードウェア互換性の概要
+### ハードウェア対応状況の概要
 
 このクックブックのすべての機能が 4 つのモデルすべてで利用できるわけではありません。以下の表は、どの機能が使用できるかをまとめたものです：
 
@@ -123,16 +124,23 @@ import TabItem from '@theme/TabItem';
       <td>✅</td>
     </tr>
     <tr>
-      <td>ボタンウェイクアップ (KEY0)</td>
+      <td>ボタンウェイクアップ（KEY0）</td>
       <td>✅</td>
       <td>✅</td>
       <td>✅</td>
       <td>✅</td>
     </tr>
     <tr>
-      <td>PDM マイクロフォン録音</td>
+      <td>PDM マイク録音</td>
       <td>✅</td>
       <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>静電容量式タッチパネル</td>
+      <td>❌</td>
+      <td>❌</td>
       <td>✅</td>
       <td>❌</td>
     </tr>
@@ -141,15 +149,15 @@ import TabItem from '@theme/TabItem';
 
 ## リアルタイムクロック (RTC)
 
-すべての reTerminal E シリーズモデルには、NXP 製のオンボード **PCF8563** リアルタイムクロックチップが搭載されており、専用の 32.768 kHz 水晶発振子と、メインバッテリーが取り外されたり完全に放電した場合でも時刻を刻み続けるための **CR1220 コイン電池**ホルダを備えています。
+すべての reTerminal E シリーズモデルには、NXP 製のオンボード **PCF8563** リアルタイムクロックチップが搭載されており、専用の 32.768 kHz 水晶発振子と **CR1220 コイン電池** ホルダを備えています。これにより、メインバッテリーが取り外されたり完全に放電した場合でも時刻を保持できます。
 
 :::warning 電池は同梱されていません — ご自身で取り付けてください
-CR1220 コイン電池はデバイスには**同梱されていません**。CR1220 電池を別途購入し、電源を切っても RTC が時刻を保持できるように取り付ける必要があります。
+CR1220 コイン電池はデバイスには **同梱されていません**。CR1220 電池を別途購入し、RTC が電源のオン・オフをまたいで時刻を保持できるように、事前に取り付ける必要があります。
 :::
 
 ### CR1220 電池の取り付け
 
-CR1220 電池ホルダは **PCB の裏面** にあります。分解手順はモデルによって少し異なります：
+CR1220 電池ホルダは **PCB の背面** にあります。分解手順はモデルによって少し異なります：
 
 <Tabs>
 <TabItem value="e1001_e1002" label="E1001 / E1002" default>
@@ -160,7 +168,7 @@ CR1220 電池ホルダは **PCB の裏面** にあります。分解手順はモ
 
 **ステップ 1 — デバイスの電源を切る**
 
-USB-C ケーブルを取り外し、デバイスの電源が完全に切れていることを確認します。
+USB-C ケーブルを取り外し、デバイスの電源が完全にオフになっていることを確認します。
 
 **ステップ 2 — 背面カバーを取り外す**
 
@@ -172,7 +180,7 @@ PCB 上で CR1220 コイン電池ホルダ（`BT2` または `CR1220` と表示�
 
 **ステップ 4 — 電池を挿入する**
 
-CR1220 電池を **プラス (+) 面が上** になるようにホルダに入れます。カチッとはまるまで軽く押し込んでください。
+CR1220 電池を **プラス (+) 面が上** になるようにホルダに入れます。カチッと音がして固定されるまで軽く押し込みます。
 
 **ステップ 5 — 再組み立て**
 
@@ -187,7 +195,7 @@ CR1220 電池を **プラス (+) 面が上** になるようにホルダに入�
 
 **ステップ 1 — デバイスの電源を切る**
 
-USB-C ケーブルを取り外し、デバイスの電源が完全に切れていることを確認します。
+USB-C ケーブルを取り外し、デバイスの電源が完全にオフになっていることを確認します。
 
 **ステップ 2 — 背面カバーを取り外す**
 
@@ -195,15 +203,15 @@ USB-C ケーブルを取り外し、デバイスの電源が完全に切れて�
 
 **ステップ 3 — 電池ホルダを探す**
 
-PCB 上で CR1220 コイン電池ホルダ（`BT2` または `CR1220` と表示）を探します。
+PCB 上で CR1220 コイン電池ホルダー（`BT2` または `CR1220` と表示）を見つけます。
 
 **ステップ 4 — 電池を挿入する**
 
-CR1220 電池を **プラス (+) 面が上** になるようにホルダに入れます。カチッとはまるまで軽く押し込んでください。
+CR1220 電池を、**プラス（+）側が上**になるようにホルダーに入れます。カチッとはまるまで優しく押し込んでください。
 
 **ステップ 5 — 再組み立て**
 
-背面カバーを元に戻し、ネジを締めます。これで RTC は電池でバックアップされ、メイン電源が切断されても時刻を保持します。
+背面カバーを元に戻し、ネジを締めます。これで RTC はバックアップ電池で動作し、メイン電源が切断されても時刻を保持します。
 
 </TabItem>
 <TabItem value="e1004" label="E1004">
@@ -220,17 +228,17 @@ USB-C ケーブルを取り外し、デバイスの電源が完全に切れて�
 
 背面パネルの周囲にあるネジを外し、PCB が見えるように背面カバーを慎重に持ち上げて取り外します。
 
-**ステップ 3 — バッテリーホルダーを探す**
+**ステップ 3 — 電池ホルダーの位置を確認する**
 
-PCB 上で CR1220 コイン電池ホルダー（`BT2` または `CR1220` と表示）を探します。
+PCB 上で CR1220 コイン電池ホルダー（`BT2` または `CR1220` と表示）を見つけます。
 
-**ステップ 4 — バッテリーを挿入する**
+**ステップ 4 — 電池を挿入する**
 
-CR1220 バッテリーを、**プラス（+）側が上**になるようにホルダーに入れます。カチッとはまるまで軽く押し込みます。
+CR1220 電池を、**プラス（+）側が上**になるようにホルダーに入れます。カチッとはまるまで優しく押し込んでください。
 
 **ステップ 5 — 再組み立て**
 
-背面カバーを元に戻し、すべてのネジを締めます。これで RTC はバックアップバッテリーで保持され、メイン電源が切断されても時刻を保持します。
+背面カバーを元に戻し、すべてのネジを締めます。これで RTC はバックアップ電池で動作し、メイン電源が切断されても時刻を保持します。
 
 </TabItem>
 </Tabs>
@@ -249,7 +257,7 @@ CR1220 バッテリーを、**プラス（+）側が上**になるようにホ�
     </tr>
     <tr>
       <td>バス</td>
-      <td>I2C — アドレス <strong>0x51</strong>（シリコンで固定）</td>
+      <td>I2C — アドレス <strong>0x51</strong>（シリコン内で固定）</td>
     </tr>
     <tr>
       <td>SCL</td>
@@ -264,12 +272,12 @@ CR1220 バッテリーを、**プラス（+）側が上**になるようにホ�
       <td>32.768 kHz（OSCI / OSCO ピン）</td>
     </tr>
     <tr>
-      <td>バックアップバッテリー</td>
-      <td>CR1220 コイン電池 — メイン電源が切れたときも時刻を保持</td>
+      <td>バックアップ電池</td>
+      <td>CR1220 コイン電池 — メイン電源が切られている間も時刻を保持</td>
     </tr>
     <tr>
       <td>VL フラグ</td>
-      <td>バックアップバッテリー電圧が低すぎるときにチップによってセットされ、時刻が信頼できないことを示します</td>
+      <td>バックアップ電池の電圧が低すぎるときにチップによってセットされ、時刻が信頼できないことを示します</td>
     </tr>
   </table>
 </div>
@@ -279,7 +287,7 @@ CR1220 バッテリーを、**プラス（+）側が上**になるようにホ�
 完全なスケッチはリポジトリで利用できます：[`examples/RTC_PCF8563/RTC_PCF8563.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/RTC_PCF8563/RTC_PCF8563.ino)。
 
 <details>
-<summary>クリックして RTC_PCF8563.ino の全コードを展開</summary>
+<summary>クリックして RTC_PCF8563.ino の完全なコードを展開</summary>
 
 ```cpp
 // ============================================================
@@ -716,13 +724,13 @@ void loop()
 
 ### コードの動作概要
 
-このコードは、`setup()` 内で次の 5 段階の初期化シーケンスに従います：
+このコードは、`setup()` 内で次の 5 ステップの初期化シーケンスに従います：
 
 1. **I2C バスを初期化** — GPIO19（SDA）/ GPIO20（SCL）で 400 kHz に設定します。これは SHT4x センサと共有されている、reTerminal 標準の I2C ピンです。
-2. **PCF8563 をプローブ** — アドレス 0x51 でチップが応答するか確認します。
+2. **PCF8563 をプローブ** — アドレス 0x51 で応答を確認し、チップが動作していることを検証します。
 3. **チップを初期化** — STOP ビットをクリア（発振器を動作させる）、アラームフラグをクリアし、消費電力を抑えるために CLKOUT ピンを無効化します。
 4. **時刻を設定するかどうかを判断** — PCF8563 には、バックアップ電池の電圧が低下しすぎたときに自動的にセットされる **VL（Voltage Low）フラグ**があります。VL がセットされている場合（初回起動または電池交換後）、コードは初期時刻を書き込みます。そうでなければ保存されている時刻を維持します。
-5. **ESP32 のシステムクロックを同期** — PCF8563 の時刻を読み取った後に `settimeofday()` を呼び出し、標準 C の時間関数（`time()`, `localtime()`, `strftime()`）が、その後のファームウェア全体で正しい時刻を返すようにします。
+5. **ESP32 のシステムクロックを同期** — PCF8563 から時刻を読み取った後、`settimeofday()` を呼び出して、標準 C の時間関数（`time()`, `localtime()`, `strftime()`）が、その後のファームウェア全体で正しい時刻を返すようにします。
 
 `loop()` は I2C 経由で 1 秒ごとに RTC を読み取り、フォーマットされた時刻を出力します。バックアップ電池の電圧が低い場合は `[VL]` タグが表示されます。
 
@@ -801,12 +809,12 @@ ESP32-S3 は複数の電源状態をサポートしています。バッテリ�
   </table>
 </div>
 
-### フルスケッチ：LowPower_DeepSleep
+### 完全なスケッチ：LowPower_DeepSleep
 
 完全なスケッチはリポジトリで入手できます：[`examples/LowPower_DeepSleep/LowPower_DeepSleep.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/LowPower_DeepSleep/LowPower_DeepSleep.ino)。
 
 <details>
-<summary>クリックして LowPower_DeepSleep.ino の全コードを表示</summary>
+<summary>クリックして LowPower_DeepSleep.ino の全コードを展開</summary>
 
 ```cpp
 // ============================================================
@@ -890,13 +898,13 @@ void loop()
 1. **`setup()` が開始** — `RTC_DATA_ATTR` ブートカウンタをインクリメントします（この変数は ESP32-S3 の RTC メモリドメインに保持されるため、ディープスリープ後も残ります）。
 2. **ステータスを表示** — ブート回数と、チップが起床した理由（GPIO ボタンか電源オンリセットか）を表示します。
 3. **`SLEEP_DELAY_SEC` 秒待機**（デフォルト 5 秒）— シリアル出力を読む時間を確保します。
-4. **ウェイクアップソースを設定** — `esp_sleep_enable_ext1_wakeup()` でボタンピン（KEY0）を登録します。ウェイクアップレベルは `LOW` です。これはボタンがハードウェアプルアップ付きのアクティブ Low だからです。
+4. **ウェイクアップソースを設定** — `esp_sleep_enable_ext1_wakeup()` でボタンピン（KEY0）を登録します。ボタンはハードウェアプルアップでアクティブ Low なので、ウェイクアップレベルは `LOW` です。
 5. **RTC プルアップを有効化** — 通常の GPIO プルアップはディープスリープ中は無効になります。`rtc_gpio_pullup_en()` は RTC ドメインのプルアップを使用して、スリープ中もボタンラインを HIGH に保ちます。
 6. **ディープスリープへ移行** — `esp_deep_sleep_start()` により RTC ドメイン以外のすべての電源がオフになります。電流は **約 14 µA** まで低下します。
 7. **ボタンが押されると** — RTC ドメインが GPIO の立下りエッジを検出し、チップが再起動して `setup()` がステップ 1 から再度実行されます。
 
 :::tip ディープスリープが動作しているか確認する方法
-`loop()` には、本来**決して**実行されてはならない print 文が含まれています。シリアルモニタに `[ERROR] deep sleep did not start!` と表示される場合、ディープスリープは失敗しています。`[SLEEP]` の後に何も表示されない場合は、デバイスが本当にスリープ状態にあることを意味します。
+`loop()` には、本来は**決して**実行されてはならない print 文が含まれています。シリアルモニタに `[ERROR] deep sleep did not start!` と表示される場合、ディープスリープは失敗しています。`[SLEEP]` の後に何も表示されない場合は、デバイスが本当にスリープ状態にあることを意味します。
 :::
 
 ### ボタンウェイクアップピンの選択
@@ -905,8 +913,8 @@ void loop()
 
 | モデル | ウェイクアップピン | `PIN_WAKE_BTN` | 備考 |
 |---|---|---|---|
-| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | 右側のボタン（E1001/E1002 のグリーンボタン） |
-| **E1004** | GPIO4 (KEY0) | `4` | 方向ボタン右（フロントパネル） |
+| **E1001 / E1002 / E1003** | GPIO3 (KEY0) | `3` | 右側のボタン（E1001/E1002 では緑のボタン） |
+| **E1004** | GPIO4 (KEY0) | `4` | 右方向ボタン（フロントパネル） |
 
 書き込み前に、USER CONFIGURATION セクション内で該当する行のコメントを外してください。
 
@@ -945,9 +953,9 @@ ePaper アプリケーションでよく使われるパターンは次のとお�
 1. **ディープスリープからウェイクアップ**（タイマーまたはボタン）。
 2. **RTC を読み取る** — タイムスタンプ用。
 3. **センサを読み取る**（SHT4x、バッテリーなど）。
-4. **必要に応じて Wi-Fi に接続してデータを取得**。
+4. **必要に応じて Wi-Fi に接続し、データを取得**。
 5. **ePaper ディスプレイを更新** — 新しい情報を表示します。
-6. **次回のスケジュールされたウェイクアップまで再びディープスリープに入る**。
+6. **次回のスケジュールされたウェイクアップまでディープスリープに戻る**。
 
 ボタンウェイクアップに加えて**タイマーウェイクアップ**を追加するには、次の行を追加するだけです：
 
@@ -992,7 +1000,7 @@ reTerminal E1001 / E1002 / E1003 には、オンボードの **PDM（Pulse Densi
   </table>
 </div>
 
-これらのピンは E1001、E1002、E1003 間で共通です。マイク電源イネーブルピン（`GPIO38`）はロードスイッチ（TPS22916CYFPR）を制御します — 録音前に **必ず** HIGH に駆動し、録音後は電力節約のために LOW に戻すことができます。
+ピン配置は E1001、E1002、E1003 の間で同一です。マイク電源イネーブルピン（`GPIO38`）はロードスイッチ（TPS22916CYFPR）を制御します — 録音前に **必ず** HIGH に駆動し、録音後は電力節約のために LOW に戻すことができます。
 
 :::note Arduino ESP32 ≥ 3.0 が必要
 このスケッチは ESP-IDF 5.x の PDM-RX API（`driver/i2s_pdm.h`）を使用しており、これは Arduino ESP32 コア バージョン 3.0 以降でのみ利用可能です。ボードパッケージが最新であることを確認してください。
@@ -1003,7 +1011,7 @@ reTerminal E1001 / E1002 / E1003 には、オンボードの **PDM（Pulse Densi
 完全なスケッチはリポジトリで入手できます：[`examples/MicRecordToSD/MicRecordToSD.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/blob/main/examples/MicRecordToSD/MicRecordToSD.ino)。
 
 <details>
-<summary>クリックして MicRecordToSD.ino の完全なコードを展開</summary>
+<summary>MicRecordToSD.ino の完全なコードを表示するにはクリック</summary>
 
 ```cpp
 // ============================================================
@@ -1399,53 +1407,53 @@ void loop()
 
 </details>
 
-### コードの動作について
+### コードの動作概要
 
 **初期化シーケンス（`setup()`）:**
 
-1. **起動時の点滅** — 電源オンを確認するため、オンボードLEDが3回点滅します。
-2. **SDカードのマウント** — `PIN_SD_EN` を介してSDスロットに電源を供給し、HSPIバスを初期化してから `SD.begin()` を呼び出します。
-3. **PDMマイクの初期化** — これは4ステップのプロセスです：
-   - `PIN_MIC_PWR_EN`（GPIO38）を介してマイクに**電源を投入** — TPS22916ロードスイッチをHIGHに駆動します。
-   - `i2s_new_channel()` を使用して **I2Sチャネルを作成** します。
-   - `i2s_channel_init_pdm_rx_mode()` で **PDM-RXモードを設定** — サンプリングレート、ビット深度（16ビット）、モノラルモード、およびGPIOピンを設定します。
-   - **有効化とウォームアップ** — `i2s_channel_enable()` がクロックを開始し、その後シグマデルタ減算フィルタが安定するようにDMAバッファ3個分を読み出して破棄します。
+1. **起動時の点滅** — 電源投入を確認するため、オンボード LED が 3 回点滅します。
+2. **SD カードのマウント** — `PIN_SD_EN` を介して SD スロットに電源を供給し、HSPI バスを初期化してから `SD.begin()` を呼び出します。
+3. **PDM マイクの初期化** — これは 4 段階のプロセスです：
+   - `PIN_MIC_PWR_EN`（GPIO38）を介してマイクに**電源を投入** — TPS22916 ロードスイッチを HIGH に駆動します。
+   - `i2s_new_channel()` を使用して **I2S チャンネルを作成** します。
+   - `i2s_channel_init_pdm_rx_mode()` で **PDM-RX モードを設定** — サンプリングレート、ビット深度（16 ビット）、モノラルモード、および GPIO ピンを設定します。
+   - **有効化とウォームアップ** — `i2s_channel_enable()` でクロックを開始し、その後 3 個の DMA バッファを読み出して破棄し、シグマデルタ減算フィルタが安定するまで待ちます。
 
 **録音ループ（`loop()`）:**
 
-1. **ボタンのデバウンス** — KEY0を50 msのデバウンスウィンドウで読み取ります。立下りエッジ（押されたとき）で：
-   - 録音していない場合 → 録音を**開始**（WAVファイルを作成し、プレースホルダのヘッダを書き込み）。
+1. **ボタンのデバウンス** — KEY0 を 50 ms のデバウンス時間で読み取ります。立下りエッジ（押されたとき）で：
+   - 録音中でない場合 → 録音を**開始**（WAV ファイルを作成し、プレースホルダのヘッダを書き込み）。
    - 録音中の場合 → 録音を**停止**（実際のサイズでヘッダを書き換え、ファイルをクローズ）。
-2. **オーディオキャプチャ** — `i2s_channel_read()` がDMAバッファ1個分（512サンプル = 1024バイト）を200 msのタイムアウト付きで読み取ります。データは直接SDカードに書き込まれます。
+2. **オーディオキャプチャ** — `i2s_channel_read()` が 1 回につき 1 個の DMA バッファ（512 サンプル = 1024 バイト）を 200 ms のタイムアウト付きで読み取ります。データは直接 SD カードに書き込まれます。
 3. **自動停止** — `MAX_RECORD_SECS` に達すると、録音は自動的に停止します。
-4. **LED点滅** — 録音がアクティブな間、LEDは500 ms間隔で点滅します。
+4. **LED 点滅** — 録音がアクティブな間、LED は 500 ms 間隔で点滅します。
 
 ### モデル別設定
 
-このスケッチでは、USER CONFIGURATION セクション内の `#define` を **1つだけ** アンコメントする必要があります：
+このスケッチでは、USER CONFIGURATION セクション内の `#define` を **1 つだけ** アンコメントする必要があります：
 
 | モデル | `#define` | SD_EN ピン | LED ピン |
 |---|---|---|---|
 | E1001 / E1002 | `DEVICE_E1001_E1002` | GPIO16 | GPIO6 |
 | E1003 | `DEVICE_E1003` | GPIO39 | GPIO16 |
 
-### SDカードの準備
+### SD カードの準備
 
-microSDカードの挿入とフォーマット手順については、最初のペリフェラルクックブックの **[Using the MicroSD Card](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** セクションを参照してください。
+microSD カードの挿入とフォーマット手順については、最初のペリフェラルクックブックの **[Using the MicroSD Card](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals#using-the-microsd-card)** セクションを参照してください。
 
 :::note
 reTerminal E シリーズは、**64 GB** までの microSD カードをサポートし、**FAT32** 形式でフォーマットする必要があります。
 :::
 
-:::tip E1004 はSDカードを装着済みで出荷されます
-reTerminal **E1004** には、microSDカードがあらかじめ挿入されています。別途購入したり取り付けたりする必要はありません。その他のモデル（E1001 / E1002 / E1003）では、ご自身でカードを挿入する必要があります。
+:::tip E1004 は SD カードを装着済みで出荷されます
+reTerminal **E1004** には、microSD カードがあらかじめ挿入されています。別途購入したり取り付けたりする必要はありません。その他のモデル（E1001 / E1002 / E1003）の場合は、自分でカードを挿入する必要があります。
 :::
 
 クイック準備手順：
 
-1. microSDカードを **FAT32** でフォーマットします（E1004でプリインストールカードを使用する場合はこの手順をスキップ）。
+1. microSD カードを **FAT32** でフォーマットします（E1004 でプリインストール済みのカードを使用する場合はこの手順をスキップ）。
 2. スケッチは、最初の録音時に自動的に `/REC` ディレクトリを作成します。
-3. 電源を入れる前に、カードが挿入されていることを確認してください。
+3. 電源を入れる前に、カードが挿入されていることを確認します。
 
 ### 期待される出力
 
@@ -1468,8 +1476,438 @@ reTerminal **E1004** には、microSDカードがあらかじめ挿入されて�
 [REC] Stopped. 320000 bytes (10.0 s).
 ```
 
-<!-- TODO: シリアルモニタのスクリーンショットをここに挿入 -->
-<!-- TODO: PC 上で WAV ファイルが入った SD カードの写真をここに挿入 -->
+<!-- TODO: Insert serial monitor screenshot here -->
+<!-- TODO: Insert photo of SD card with WAV files on PC -->
+
+## タッチスクリーン（E1003 のみ）
+
+:::caution E1003 専用機能
+静電容量式タッチパネルは **reTerminal E1003**（10.3 インチモデル）でのみ利用可能です。E1001、E1002、および E1004 にはタッチパネルが**搭載されていません**。E1003 以外のモデルを使用している場合は、このセクションをスキップしてください。
+:::
+
+reTerminal E1003 には、I2C 接続の **GT911** 静電容量式タッチコントローラが搭載されています。16 階調グレースケールの ePaper ディスプレイと組み合わせることで、画面タップに反応するインタラクティブなアプリケーションを構築できます。
+
+### ハードウェア概要
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>タッチコントローラ</td>
+      <td>GT911 (Goodix)</td>
+    </tr>
+    <tr>
+      <td>バス</td>
+      <td>I2C0 — アドレス <strong>0x5D</strong> または <strong>0x14</strong>（自動検出）</td>
+    </tr>
+    <tr>
+      <td>SDA</td>
+      <td>GPIO19</td>
+    </tr>
+    <tr>
+      <td>SCL</td>
+      <td>GPIO20</td>
+    </tr>
+    <tr>
+      <td>INT</td>
+      <td>GPIO2</td>
+    </tr>
+    <tr>
+      <td>RESET</td>
+      <td>GPIO48</td>
+    </tr>
+    <tr>
+      <td>パネル解像度</td>
+      <td>1872 × 1404 px</td>
+    </tr>
+  </table>
+</div>
+
+タッチコントローラは、PCF8563 RTC と SHT4x センサと同じ I2C バス（GPIO19/GPIO20）を共有しています。
+
+### フルスケッチ: E1003_TouchDraw
+
+完全なスケッチはリポジトリで入手できます：[`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw)。
+
+<details>
+<summary>クリックして E1003_TouchDraw.ino の全コードを表示</summary>
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+#include "driver.h"
+#include "TFT_eSPI.h"
+#include "TouchMapper.h"
+
+// ---------- Serial status logs (carrier USB-UART bridge) ----------
+#define PIN_SERIAL_RX       44
+#define PIN_SERIAL_TX       43
+#define LOG                 Serial1
+
+// ---------- E1003 touch pins from the schematic ----------
+#define PIN_I2C_SDA         19
+#define PIN_I2C_SCL         20
+#define PIN_TOUCH_INT        2
+#define PIN_TOUCH_RESET     48
+
+// ---------- GT911 register map ----------
+#define GT911_ADDR_1      0x5D
+#define GT911_ADDR_2      0x14
+#define GT911_REG_COMMAND 0x8040
+#define GT911_REG_PRODUCT 0x8140
+#define GT911_REG_STATUS  0x814E
+#define GT911_REG_POINT1  0x814F
+#define GT911_REG_MAX_X   0x8048
+
+#define TOUCH_POLL_MS       30
+#define DRAW_MIN_MS        450
+#define DRAW_MIN_DELTA_PX   12
+#define DOT_RADIUS          10
+
+#define E1003_PANEL_WIDTH   1872
+#define E1003_PANEL_HEIGHT  1404
+
+// Set to 1 only when the panel has obvious ghosting and you want a slow
+// black-white cleanup before the example screen appears. Normal boot uses one
+// refresh in drawStartupScreen().
+#define STRONG_BOOT_CLEAR    0
+
+static EPaper display_;
+
+static uint8_t s_touchAddr = 0;
+static uint16_t s_touchMaxX = 1;
+static uint16_t s_touchMaxY = 1;
+static uint16_t s_lastRawX = 0;
+static uint16_t s_lastRawY = 0;
+static bool s_haveLastPoint = false;
+static TouchDisplayPoint s_lastPoint = {0, 0};
+static TouchDisplayPoint s_displaySize = {E1003_PANEL_WIDTH, E1003_PANEL_HEIGHT};
+static bool s_displayReady = false;
+static unsigned long s_lastPollMs = 0;
+static unsigned long s_lastDrawMs = 0;
+
+static void updateDisplaySize()
+{
+  resolveDisplaySize(static_cast<uint16_t>(display_.width()),
+                     static_cast<uint16_t>(display_.height()),
+                     E1003_PANEL_WIDTH,
+                     E1003_PANEL_HEIGHT,
+                     &s_displaySize);
+}
+
+static bool i2cRead16(uint8_t addr, uint16_t reg, uint8_t* buf, size_t len)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  if (Wire.endTransmission(false) != 0) return false;
+
+  const uint8_t got = Wire.requestFrom(addr, static_cast<uint8_t>(len));
+  if (got != len) return false;
+
+  for (size_t i = 0; i < len; i++) {
+    buf[i] = static_cast<uint8_t>(Wire.read());
+  }
+  return true;
+}
+
+static bool i2cWrite16(uint8_t addr, uint16_t reg, uint8_t value)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  Wire.write(value);
+  return Wire.endTransmission() == 0;
+}
+
+static void resetTouchController()
+{
+  pinMode(PIN_TOUCH_INT, INPUT);
+  pinMode(PIN_TOUCH_RESET, OUTPUT);
+
+  digitalWrite(PIN_TOUCH_RESET, LOW);
+  delay(20);
+  digitalWrite(PIN_TOUCH_RESET, HIGH);
+  delay(120);
+}
+
+static bool probeGt911(uint8_t addr)
+{
+  uint8_t product[4] = {};
+  if (!i2cRead16(addr, GT911_REG_PRODUCT, product, sizeof(product))) {
+    return false;
+  }
+  LOG.printf("[touch] GT9xx found at 0x%02X, product: %c%c%c%c\n",
+             addr, product[0], product[1], product[2], product[3]);
+  return true;
+}
+
+static void readTouchLimits()
+{
+  uint8_t raw[4] = {};
+  if (!i2cRead16(s_touchAddr, GT911_REG_MAX_X, raw, sizeof(raw))) {
+    s_touchMaxX = s_displaySize.x;
+    s_touchMaxY = s_displaySize.y;
+    return;
+  }
+
+  const uint16_t maxX = static_cast<uint16_t>(raw[0] | (raw[1] << 8));
+  const uint16_t maxY = static_cast<uint16_t>(raw[2] | (raw[3] << 8));
+
+  if (maxX > 0 && maxY > 0) {
+    s_touchMaxX = maxX;
+    s_touchMaxY = maxY;
+  }
+
+  LOG.printf("[touch] Touch range: %u x %u, display: %u x %u\n",
+             s_touchMaxX, s_touchMaxY, s_displaySize.x, s_displaySize.y);
+}
+
+static bool initTouch()
+{
+  resetTouchController();
+
+  if (probeGt911(GT911_ADDR_1)) {
+    s_touchAddr = GT911_ADDR_1;
+  } else if (probeGt911(GT911_ADDR_2)) {
+    s_touchAddr = GT911_ADDR_2;
+  } else {
+    LOG.println("[touch] GT9xx touch controller not found.");
+    return false;
+  }
+
+  readTouchLimits();
+  i2cWrite16(s_touchAddr, GT911_REG_COMMAND, 0x00);
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  pinMode(PIN_TOUCH_INT, INPUT_PULLUP);
+  LOG.println("[touch] Ready.");
+  return true;
+}
+
+static bool readTouchPoint(TouchDisplayPoint* point)
+{
+  uint8_t status = 0;
+  if (!i2cRead16(s_touchAddr, GT911_REG_STATUS, &status, 1)) {
+    LOG.println("[touch] Failed to read GT911 status register.");
+    return false;
+  }
+
+  const int intLevel = digitalRead(PIN_TOUCH_INT);
+  const uint8_t pointCount = status & 0x0F;
+  if (!gt911StatusRequestsRead(status, intLevel)) {
+    return false;
+  }
+
+  uint8_t raw[8] = {};
+  const bool ok = i2cRead16(s_touchAddr, GT911_REG_POINT1, raw, sizeof(raw));
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  if (!ok) {
+    LOG.println("[touch] Failed to read GT911 point data.");
+    return false;
+  }
+
+  if (pointCount == 0 && (raw[1] == 0 && raw[2] == 0 && raw[3] == 0 && raw[4] == 0)) {
+    return false;
+  }
+
+  const uint16_t rawX = static_cast<uint16_t>(raw[1] | (raw[2] << 8));
+  const uint16_t rawY = static_cast<uint16_t>(raw[3] | (raw[4] << 8));
+  s_lastRawX = rawX;
+  s_lastRawY = rawY;
+  const bool mapped = mapTouchToDisplay(rawX, rawY, s_touchMaxX, s_touchMaxY,
+                                        s_displaySize.x,
+                                        s_displaySize.y,
+                                        point);
+  return mapped;
+}
+
+static bool shouldDrawPoint(const TouchDisplayPoint& point)
+{
+  const unsigned long now = millis();
+  if (!s_haveLastPoint) return true;
+  if (now - s_lastDrawMs < DRAW_MIN_MS) return false;
+
+  const int dx = abs(static_cast<int>(point.x) - static_cast<int>(s_lastPoint.x));
+  const int dy = abs(static_cast<int>(point.y) - static_cast<int>(s_lastPoint.y));
+  return dx >= DRAW_MIN_DELTA_PX || dy >= DRAW_MIN_DELTA_PX;
+}
+
+static void drawStartupScreen(bool touchReady)
+{
+  if (!s_displayReady) return;
+
+  display_.fillSprite(TFT_WHITE);
+  display_.setTextDatum(TC_DATUM);
+  display_.setTextColor(TFT_BLACK, TFT_WHITE, true);
+  display_.setTextSize(5);
+  display_.drawString("E1003 Touch Draw", display_.width() / 2, 90);
+
+  display_.setTextSize(3);
+  display_.drawString(touchReady ? "Tap anywhere to draw dots." : "Touch controller not found.",
+                      display_.width() / 2, 180);
+  display_.drawFastHLine(80, 260, display_.width() - 160, TFT_BLACK);
+  display_.update();
+}
+
+static void drawPoint(const TouchDisplayPoint& point)
+{
+  if (!s_displayReady) return;
+
+  display_.fillCircle(point.x, point.y, DOT_RADIUS, TFT_BLACK);
+  display_.drawCircle(point.x, point.y, DOT_RADIUS + 4, TFT_GRAY_6);
+  display_.update();
+  LOG.printf("[touch] raw=(%u,%u) screen=(%u,%u)\n",
+             s_lastRawX, s_lastRawY, point.x, point.y);
+
+  s_lastPoint = point;
+  s_haveLastPoint = true;
+  s_lastDrawMs = millis();
+}
+
+static bool setupDisplay()
+{
+  LOG.printf("[display] PSRAM found: %s, free PSRAM: %u bytes\n",
+             psramFound() ? "yes" : "no",
+             static_cast<unsigned>(ESP.getFreePsram()));
+
+  if (!psramFound()) {
+    LOG.println("[display] ERROR: enable Tools -> PSRAM -> OPI PSRAM.");
+    return false;
+  }
+
+  display_.begin();
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 1-bit ePaper buffer was not created.");
+    return false;
+  }
+
+#if STRONG_BOOT_CLEAR
+  LOG.println("[display] Clearing old ePaper image...");
+  display_.fillScreen(TFT_BLACK);
+  display_.update();
+  delay(800);
+
+  display_.fillScreen(TFT_WHITE);
+  display_.update();
+  delay(800);
+#endif
+
+  display_.initGrayMode(GRAY_LEVEL16);
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 16-gray ePaper buffer was not created.");
+    return false;
+  }
+
+  LOG.printf("[display] Ready: %u x %u\n", s_displaySize.x, s_displaySize.y);
+  return true;
+}
+
+void setup()
+{
+  LOG.begin(115200, SERIAL_8N1, PIN_SERIAL_RX, PIN_SERIAL_TX);
+  delay(100);
+
+  LOG.println("========================================");
+  LOG.println("  E1003_TouchDraw - reTerminal E1003");
+  LOG.println("========================================");
+
+  s_displayReady = setupDisplay();
+  s_touchMaxX = s_displaySize.x;
+  s_touchMaxY = s_displaySize.y;
+
+  Wire.begin(PIN_I2C_SDA, PIN_I2C_SCL);
+  Wire.setClock(400000UL);
+
+  const bool touchReady = initTouch();
+  drawStartupScreen(touchReady);
+
+  if (!s_displayReady) {
+    LOG.println("[hint] Display is not ready; check PSRAM and Seeed_GFX setup.");
+  }
+}
+
+void loop()
+{
+  if (s_touchAddr == 0) {
+    delay(1000);
+    return;
+  }
+
+  const unsigned long now = millis();
+  if (now - s_lastPollMs < TOUCH_POLL_MS) return;
+  s_lastPollMs = now;
+
+  TouchDisplayPoint point = {};
+  if (readTouchPoint(&point) && shouldDrawPoint(point)) {
+    drawPoint(point);
+  }
+}
+```
+
+</details>
+
+### コードの動作概要
+
+**初期化シーケンス（`setup()`）:**
+
+1. **ePaper ディスプレイの初期化** — `setupDisplay()` は PSRAM の有無を確認します（1872×1404 のフレームバッファに必須）、EPaper オブジェクトを作成し、より滑らかな描画のために **16 階調グレーモード** に切り替えます。
+2. **I2C を初期化** — GPIO19/GPIO20 上で 400 kHz に設定します。これは PCF8563 RTC と SHT4x センサが使用するのと同じバスです。
+3. **GT911 をリセットしてプローブ** — タッチコントローラは GPIO48 を介してハードウェアリセットされ、その後 2 つの可能な I2C アドレス（0x5D と 0x14）でプローブされます。スケッチはチップが応答するアドレスを自動検出します。
+4. **タッチ解像度を読み取り** — GT911 の内部 max-X/max-Y レジスタを読み出して、タッチ座標範囲を取得します。
+5. **起動画面を描画** — ePaper に「E1003 Touch Draw」とプロンプトを表示します。
+
+**タッチポーリングループ（`loop()`）:**
+
+1. **30 ms ごとにポーリング** — GT911 のステータスレジスタを読み取り、新しいタッチイベントがあるかどうかを確認します。
+2. **タッチ座標を読み取り** — GT911 のポイントデータレジスタから生の X/Y を取得し、`mapTouchToDisplay()` を使ってディスプレイ座標にマッピングします（タッチ解像度とディスプレイ解像度の差を考慮します）。
+3. **デバウンスと距離チェック** — 新しいドットが描画されるのは次のいずれかの場合のみです：
+   - 最後に描画してから少なくとも 450 ms が経過している **または**
+   - タッチポイントが最後に描画したポイントから少なくとも 12 ピクセル移動している。
+4. **ePaper に描画** — `fillCircle()` が黒の塗りつぶしドットを描画し、`drawCircle()` がグレーのハローリングを追加し、その後 `update()` がフレームバッファを ePaper パネルに送信します。
+
+:::note ePaper refresh latency
+各 `update()` 呼び出しは ePaper のフルリフレッシュをトリガーし、E1003 パネルでは約 **1〜2 秒** かかります。これは正常であり、ePaper は高速リフレッシュディスプレイではありません。デバウンスロジック（`DRAW_MIN_MS = 450 ms`）は、リフレッシュ要求でパネルを過負荷にしないように設計されています。
+:::
+
+### 事前準備
+
+このスケッチを実行する前に：
+
+1. Arduino Library Manager から **Seeed_GFX** ライブラリをインストールします。
+2. Tools メニューで **PSRAM** を **OPI PSRAM** に設定します — PSRAM がない場合、ディスプレイバッファを確保できず、`display_.width()` は 0 を返します。
+3. **Flash Size** を **8 MB** に設定します。
+4. **XIAO_ESP32S3** ボードを選択します。
+
+### 期待される出力
+
+```
+========================================
+  E1003_TouchDraw - reTerminal E1003
+========================================
+[display] PSRAM found: yes, free PSRAM: 8159232 bytes
+[display] Ready: 1872 x 1404
+[touch] GT9xx found at 0x5D, product: 911
+[touch] Touch range: 1872 x 1404, display: 1872 x 1404
+[touch] Ready.
+```
+
+画面をタップした後：
+
+```
+[touch] raw=(468,302) screen=(468,302)
+[touch] raw=(920,756) screen=(920,756)
+[touch] raw=(1400,1100) screen=(1400,1100)
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/247.png" style={{width:600, height:'auto'}}/></div>
 
 ## トラブルシューティング
 
@@ -1477,23 +1915,23 @@ reTerminal **E1004** には、microSDカードがあらかじめ挿入されて�
 
 これは正常であり、ディープスリープが失敗したという意味では**ありません**。
 
-表示されているシリアル出力は、（ESP32-S3本体ではなく）**キャリアボード上の USB-UART ブリッジチップ** によって処理されています。ブリッジチップはUSB接続から直接給電されるため、ESP32-S3が起きているかスリープしているかに関係なくアクティブなままです。これは実際には意図的な設計であり、デバイスが高速なディープスリープサイクルに入った場合でも、常にシリアル出力を確認し、新しいファームウェアを書き込めるようにするためです。
+表示されているシリアル出力は、**キャリアボード上の USB-UART ブリッジチップ**（ESP32-S3 本体ではありません）によって処理されています。ブリッジチップは USB 接続から直接給電されるため、ESP32-S3 が起きているかスリープしているかに関係なく動作し続けます。これは実は意図的な設計であり、デバイスが高速なディープスリープサイクルに入った場合でも、常にシリアル出力を確認し、新しいファームウェアを書き込めるようにするためです。
 
 ディープスリープが本当に有効になっているか確認するには、シリアルログをチェックします：
 
 - `[SLEEP] Entering deep sleep now.` の後に無音状態が続く場合、デバイスはディープスリープ状態に**あります**。
 - `[ERROR] deep sleep did not start!` が表示される場合は、何か問題が発生しています。
 
-### Q2: シナリオごとにRTCスケッチを正しく使うにはどうすればよいですか？
+### Q2: シナリオごとに RTC スケッチを正しく使うにはどうすればよいですか？
 
 <Tabs>
 <TabItem value="scenario1" label="初回起動" default>
 
-**シナリオ：** 新品のボード、またはCR1220バッテリを交換した直後。
+**シナリオ:** 新品のボード、または CR1220 バッテリを交換した直後。
 
-何も変更する必要はありません — スケッチをそのまま書き込んでください。
+何も変更する必要はありません — そのままスケッチを書き込んでください。
 
-新品のボードでは、PCF8563の内部VL（Voltage Low）フラグは、バッテリが一度もクロックに電力を供給していないため、常に `1` になっています。スケッチは起動時にVL=1を読み取り、コンパイル時刻を自動的にRTCへ書き込みます。
+新品のボードでは、PCF8563 の内部 VL（Voltage Low）フラグは、バッテリが一度もクロックに電力を供給していないため、常に `1` になっています。スケッチは起動時に VL=1 を読み取り、コンパイル時刻を自動的に RTC に書き込みます。
 
 USER CONFIGURATION が次のようになっていることを確認してください：
 
@@ -1507,18 +1945,18 @@ USER CONFIGURATION が次のようになっていることを確認してくだ�
 </TabItem>
 <TabItem value="scenario2" label="再起動 / 再給電">
 
-**シナリオ：** ボードがすでに動作しており、その後再起動または電源の入れ直しを行った場合。
+**シナリオ:** ボードがすでに動作しており、その後再起動または電源の入れ直しを行った場合。
 
-何もする必要はありません — 電源を入れるだけです。
+特に何もする必要はありません — 電源を入れるだけです。
 
-CR1220バッテリは、メイン電源がオフの間もPCF8563を動作させ続けます。起動時にスケッチはVL=0（バッテリ正常）を読み取り、書き込みをスキップして保存されている時刻を保持します。シリアル出力には、起動直後から正しい時刻が表示されます。
+CR1220 バッテリは、メイン電源がオフの間も PCF8563 を動作させ続けます。起動時にスケッチは VL=0（バッテリ正常）を読み取り、書き込みをスキップして保存されている時刻を保持します。シリアル出力にはすぐに正しい時刻が表示されます。
 
 </TabItem>
 <TabItem value="scenario3" label="再キャリブレーション">
 
-**シナリオ：** RTCの時刻が誤っており、再キャリブレーションが必要な場合。
+**シナリオ:** RTC の時刻が誤っており、再キャリブレーションが必要な場合。
 
-**ステップ1 — 強制上書き。** `FORCE_SET_TIME` のコメントを外し、次のようにして書き込みます：
+**ステップ 1 — 強制上書き。** `FORCE_SET_TIME` のコメントを外してから、書き込みを行います：
 
 ```cpp
 #define USE_COMPILE_TIME
@@ -1527,7 +1965,7 @@ CR1220バッテリは、メイン電源がオフの間もPCF8563を動作させ�
 
 → **Upload** をクリック → 時刻はコンパイル時刻に強制的に設定されます。
 
-**ステップ2 — 強制上書きを無効化。** すぐに再びコメントアウトして、もう一度書き込みます：
+**ステップ 2 — 強制上書きを無効化。** すぐに再度コメントアウトし、もう一度書き込みます：
 
 ```cpp
 #define USE_COMPILE_TIME
@@ -1542,7 +1980,7 @@ CR1220バッテリは、メイン電源がオフの間もPCF8563を動作させ�
 
 ## 技術サポート & 製品ディスカッション
 
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
