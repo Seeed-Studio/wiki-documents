@@ -12,13 +12,13 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-29
+  date: 2026-06-01
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-29'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -52,7 +52,7 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_grasping_demo/
 YOLO是一类广泛使用的实时目标检测模型，能够在单次前向推理中同时完成目标定位与类别识别。本教程基于YOLO、Orbbec Gemini 2深度相机，搭建一个可运行的reBot Arm B601-DM桌面视觉夹取Demo，并完成从环境安装、相机接入、手眼标定到抓取调试的完整流程。
 
 <p align="center">
-  <img src="/img/rebot_arm_b601_dm_grasping_demo.gif" alt="reBot Arm B601-DM 视觉夹取 Demo" />
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM 视觉夹取 Demo" />
 </p>
 
 <div class="video-container">
