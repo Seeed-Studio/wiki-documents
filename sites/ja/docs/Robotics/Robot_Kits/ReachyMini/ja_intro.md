@@ -1,5 +1,5 @@
 ---
-description: Reachy Mini は、ハッカーや AI ビルダーのために作られた、オープンソースで表情豊かなロボットです。アプリストア、Python SDK、複数のプラットフォームオプションを備えています。
+description: Reachy Mini は、ハッカーや AI ビルダーのために作られた、オープンソースで表現力豊かなロボットです。アプリストア、Python SDK、複数のプラットフォームオプションを備えています。
 title: Reachy Mini
 slug: /reachymini_intro
 keywords:
@@ -11,13 +11,13 @@ keywords:
   - python sdk
   - ai robot
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_intro/
 ---
 
@@ -25,44 +25,43 @@ url: https://wiki.seeedstudio.com/ja/reachymini_intro/
 
 [![Discord](https://img.shields.io/badge/Discord-Join_the_Community-7289DA?logo=discord&logoColor=white)](https://discord.gg/Y7FgMqHsub)
 
-**Reachy Mini は、ハッカーや AI ビルダーのために作られた、オープンソースで表情豊かなロボットです。**
+**Reachy Mini は、ハッカーや AI ビルダーのために作られた、オープンソースで表現力豊かなロボットです。**
 
 🛒 [**Reachy Mini を購入**](https://www.hf.co/reachy-mini/)
 
-[![Reachy Mini Hello](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachy_mini_hello.gif)](https://www.pollen-robotics.com/reachy-mini/)
+[![Reachy Mini Hello](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/reachy_mini_hello.gif)](https://www.pollen-robotics.com/reachy-mini/)
 
-## ⚡️ 自分だけのロボットを組み立てて始めよう
+## ⚡️ 自分だけのロボットを作って動かそう
 
-**プラットフォームを選んで、対応するガイドにアクセスしてください：**
+**プラットフォームを選んで、対応するガイドにアクセスしましょう：**
 
-| **🤖 Reachy Mini (Wireless)** | **🔌 Reachy Mini Lite** | **💻 Simulation** |
+| **🤖 Reachy Mini (Wireless)** | **🔌 Reachy Mini Lite** | **💻 シミュレーション** |
 | :---: | :---: | :---: |
-| 完全自律型の体験。<br/>Raspberry Pi 4 + バッテリー + WiFi。 | 開発者向けバージョン。<br/>PC と USB 接続。 | ハードウェア不要。<br/>MuJoCo でプロトタイピング。 |
+| 完全自律型の体験。<br/>Raspberry Pi CM4 + バッテリー + WiFi。 | 開発者向けバージョン。<br/>USB で PC に接続。 | ハードウェアは不要。<br/>MuJoCo でプロトタイピング。 |
 | 👉 [**Wireless ガイドへ**](/ja/reachymini_platforms_reachy_mini_get_started) | 👉 [**Lite ガイドへ**](/ja/reachymini_platforms_reachy_mini_lite_get_started) | 👉 [**シミュレーションへ**](/ja/reachymini_platforms_simulation_get_started) |
 
-:::tip Pro tip
+:::tip プロ向けヒント
 [uv](https://docs.astral.sh/uv/getting-started/installation/) をインストールすると、アプリのインストールが 10〜100 倍高速になります（自動検出され、`pip` にフォールバックします）。
 :::
 
 ## 📱 アプリ & エコシステム
 
-Reachy Mini には、Hugging Face Spaces によって提供されるアプリストアが付属しています。これらのアプリは、ロボットのダッシュボードからワンクリックで直接インストールできます。
+Reachy Mini には、Hugging Face Spaces を利用したアプリストアが付属しています。Reachy Mini Control からワンクリックでこれらのアプリをインストールできます。
 
-* **🗣️ [Conversation App](https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app)：** LLM によって動作する Reachy Mini と自然に会話できます。
-* **📻 [Radio](https://huggingface.co/spaces/pollen-robotics/reachy_mini_radio)：** Reachy Mini と一緒にラジオを聴きましょう。
+* **🗣️ [Conversation App](https://huggingface.co/spaces/pollen-robotics/reachy_mini_conversation_app)：** Reachy Mini と自然な会話ができます（LLM 搭載）。
+* **📻 [Radio](https://huggingface.co/spaces/pollen-robotics/reachy_mini_radio)：** Reachy Mini と一緒にラジオを聴きましょう！
 * **👋 [Hand Tracker](https://huggingface.co/spaces/pollen-robotics/hand_tracker_v2)：** ロボットがあなたの手の動きをリアルタイムで追従します。
 
 👉 [**Hugging Face 上のすべてのアプリを閲覧**](https://hf.co/reachy-mini/#/apps)
 
-## 🚀 Reachy Mini SDK を使い始める
+## 🚀 Reachy Mini SDK をはじめよう
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/h2lyqR2eMyM"
-  frameborder="0"
-  allowfullscreen
-/>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=h2lyqR2eMyM" target="_blank">
+    <img src="https://img.youtube.com/vi/h2lyqR2eMyM/maxresdefault.jpg" width="560" alt="点击观看视频" style={{border: '1px solid #ddd', borderRadius: '8px'}} />
+    <p><i>▶️ 点击在 YouTube 上观看：Reachy Mini SDK 运行指南</i></p>
+  </a>
+</div>
 
 ### クイックルック
 ロボットを操作するのに必要なのは、**ほんの数行のコード**だけです：
@@ -80,20 +79,21 @@ with ReachyMini() as mini:
 ```
 
 ### ユーザーガイド
-* **[Installation](/ja/reachymini_sdk_installation)**: PC のセットアップに 5 分
-* **[Quickstart Guide](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の挙動を実行
-* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞くことを学びます。
-* **[AI Integrations](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
-* **[Core Concepts](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について。
-* 🤗[**自分のアプリをコミュニティと共有する**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
+* **[インストール](/ja/reachymini_sdk_installation)**：PC のセットアップに 5 分
+* **[クイックスタートガイド](/ja/reachymini_sdk_quickstart)**：Reachy Mini で最初の挙動を実行
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**：動かす・見る・話す・聞くを学びましょう。
+* **[AI 連携](/ja/reachymini_sdk_integration)**：LLM を接続し、アプリを構築して Hugging Face に公開。
+* **[アプリの構築と公開](/ja/reachymini_sdk_apps)**：Reachy Mini アプリを作成・テスト・公開・デバッグ。
+* **[コアコンセプト](/ja/reachymini_sdk_core-concept)**：アーキテクチャ、座標系、安全制限。
+* **[チュートリアル](/ja/reachymini_examples_minimal_demo)**：SDK をステップバイステップで学べるハンズオン例。
 * 📂 [**サンプルフォルダを閲覧**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
 ## 🛠 ハードウェア概要
 
 Reachy Mini ロボットはキットとして販売されており、組み立てには通常 **2〜3 時間**かかります。詳細なステップバイステップガイドは、上記でリンクされているプラットフォーム別フォルダに用意されています。
 
-* **Reachy Mini (Wireless)：** オンボード（RPi 4）で動作し、自律型で IMU を搭載。[仕様を見る](/ja/reachymini_platforms_reachy_mini_hardware)。
-* **Reachy Mini Lite：** PC 上で動作し、コンセントから給電。[仕様を見る](/ja/reachymini_platforms_reachy_mini_lite_hardware)。
+* **Reachy Mini (Wireless)：** 本体上（RPi CM4）で動作し、自律動作が可能で、IMU を搭載しています。[仕様を見る](/ja/reachymini_platforms_reachy_mini_hardware)。
+* **Reachy Mini Lite：** PC 上で動作し、コンセントから給電します。[仕様を見る](/ja/reachymini_platforms_reachy_mini_lite_hardware)。
 
 ## ❓ トラブルシューティング
 
@@ -101,10 +101,11 @@ Reachy Mini ロボットはキットとして販売されており、組み立�
 
 ## 🤝 コミュニティ & コントリビュート
 
-* **コミュニティに参加：** [Discord](https://discord.com/2bAhWfXme9) に参加して、Reachy との瞬間を共有し、一緒にアプリを作り、サポートを受けましょう。
+* **コミュニティに参加：** [Discord](https://discord.gg/2bAhWfXme9) に参加して、Reachy との瞬間を共有し、一緒にアプリを作り、サポートを受けましょう。
 * **バグを見つけましたか？** [このリポジトリ](https://github.com/pollen-robotics/reachy_mini/issues)で issue を作成してください。
+* **次のステップ：** [ロードマップ](/ja/reachymini_troubleshooting_roadmap)をチェックして、フィードバックをお寄せください！
 
 ## ライセンス
 
-このプロジェクトは Apache 2.0 License の下でライセンスされています。詳細は [LICENSE](https://github.com/pollen-robotics/reachy_mini/tree/main/LICENSE) ファイルを参照してください。
+このプロジェクトは Apache 2.0 ライセンスの下でライセンスされています。詳細は [LICENSE](https://github.com/pollen-robotics/reachy_mini/tree/main/LICENSE) ファイルを参照してください。
 ハードウェア設計ファイルは Creative Commons BY-SA-NC の下でライセンスされています。

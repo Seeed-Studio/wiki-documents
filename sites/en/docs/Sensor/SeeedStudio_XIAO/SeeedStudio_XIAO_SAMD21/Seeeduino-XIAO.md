@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: shuxu hu
 createdAt: '2023-01-16'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/Seeeduino-XIAO/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -29,7 +29,7 @@ Seeed Studio XIAO SAMD21 has 14 PINs, which can be used for 11 digital interface
     </a>
 </div>
 
-## **Documentations**
+## Documentations
 
 There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus on different areas, check the table below for reference:
 
@@ -40,11 +40,11 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 |Seeed Studio XIAO SAMD21 GPIO Usage|Seeed Studio XIAO SAMD21 with GPS(UART)|
 |Seeed Studio XIAO SAMD21 Resources|Single Cycle IOBUS|
 
-### **CircuitPython on Seeed Studio XIAO SAMD21**
+### CircuitPython on Seeed Studio XIAO SAMD21
 
 - Get started with [**CircuitPython on Seeed Studio XIAO SAMD21 **](https://wiki.seeedstudio.com/Seeeduino-XIAO-CircuitPython).
 
-## **Features**
+## Features
 
 - Powerful CPU: ARM® Cortex®-M0+ 32bit 48MHz microcontroller(SAMD21G18) with 256KB Flash,32KB SRAM.
 - Flexible compatibility: Compatible with Arduino IDE.
@@ -52,7 +52,7 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 - Small size: As small as a thumb(21x17.8mm) for wearable devices and small projects.
 - Multiple development interfaces: 11 digital/analog pins, 10 PWM Pins, 1 DAC output, 1 SWD Bonding pad interface, 1 I2C interface, 1 UART interface, 1 SPI interface.
 
-## **Specification**
+## Specification
 
 | Product Name | Seeed Studio XIAO SAMD21 |
 |-------------|-------------------------|
@@ -72,13 +72,13 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 
 ## **Hardware Overview**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-pinout-1.jpg" alt="pir" width={600} height="auto" /></p>
+### Front
 
-<p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/Seeeduino-XIAO/img/new1.png" alt="pir" width={600} height="auto" /></p>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino%20XIAO%20pinout%202.png" alt="pir" width={600} height="auto" /></p>
+### Back
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/regulator_to_3.3v.png" alt="pir" width={600} height="auto" /></p>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_SAMD21_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
 For general I/O pins:
@@ -92,7 +92,8 @@ It is critical to understand that the VIN and GND pads on the back of the XIAO S
 Please pay attention to use, do not lift the shield cover.
 :::
 
-## **Pin Map**
+## Pin Map
+
 | XIAO Pin        | Function      | Chip Pin  |   Description      |
 | :-------:      | :-----:        | :----------:         |       :---:     |
 |5V              |VBUS             |                                      | Power Input/Output     |
@@ -115,7 +116,7 @@ Please pay attention to use, do not lift the shield cover.
 |Power_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
 |USER_LED       |                 |   PA17	                              |	User Light_Yellow      |
 
-### **Enter Bootloader Mode**
+### Enter Bootloader Mode
 
 Sometimes the Seeed Studio XIAO SAMD21 port may disappear when user programming process fails. we can solve this problem by the following operation:
 
@@ -127,7 +128,7 @@ At this point, the chip enters Bootloader mode and the burn port appears again. 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
 
-### **Reset**
+### Reset
 
 If you want to reset the Seeed Studio XIAO SAMD21 , perform the following steps:
 
@@ -137,15 +138,15 @@ If you want to reset the Seeed Studio XIAO SAMD21 , perform the following steps:
 
 Please note: The behavior of the built-in LED is reversed to the one on an Arduino. On the Seeed Studio XIAO SAMD21 , the pin has to be pulled low, whereas on other micro-controllers it has to be pulled high.  
 
-### **Interrupt**
+### Interrupt
 
 All pins on Seeed Studio XIAO SAMD21 support interrupts, but two pins cannot be used at the same time: 5 pin and 7 pin. For more detail about Interrupt please check [here](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
-### **Pin Multiplexing**
+### Pin Multiplexing
 
 We don't need to configure the pins ourselves, after using the pins, you can call a function directly.
 
-#### **Digital Input and Output**
+#### Digital Input and Output
 
 - Use pin 6 as the digital pin:
 
@@ -177,7 +178,7 @@ void loop() {
 }
 ```
 
-#### **AnalogRead**
+#### AnalogRead
 
 - Use pin 6 as the analog pin:
 
@@ -203,7 +204,7 @@ void loop() {
 }
 ```
 
-#### **Serial**
+#### Serial
 
 - Use pin 6 as the TX pin of UART(RX pin of UART is pin 7):
 
@@ -220,7 +221,7 @@ void loop() {
 }
 ```
 
-#### **I2C**
+#### I2C
 
 - Use pin 5 as the SCL pin of IIC(SDA pin of IIC is pin 4):
 
@@ -257,7 +258,7 @@ void loop()
 }
 ```
 
-#### **SPI**
+#### SPI
 
 - Use pin 8 as the SCK pin of SPI(MISO pin of SPI is pin 9,MOSI pin of SPI is pin 10):
 
@@ -282,11 +283,11 @@ void loop (void) {
 }
 ```
 
-#### **QTouch**
+#### QTouch
 
 For how to use QTouch, we provide an example project: [How to Make a Fruit Piano on Seeed Studio XIAO SAMD21 ’s Q-Touch Function](https://www.seeedstudio.com/blog/2020/07/20/how-to-make-a-fruit-piano-on-seeeduino-xiaos-q-touch-function-m/).
 
-#### **Analog Input and Output**
+#### Analog Input and Output
 
 While it still has PWM-based "analog outputs", the SAMD21 also features true analog output in the form of a digital-to-analog converter (DAC). This module can produce an analog voltage between 0 and 3.3V. It can be used to produce audio with more natural sound, or as a kind of "digital potentiometer" to control analog devices.
 
@@ -312,7 +313,7 @@ You can, of course, open the serial monitor to view the voltage values stream by
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
 
-#### **DAC**
+#### DAC
 
 Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
 
@@ -354,9 +355,9 @@ void loop()
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/THonny_DAC.jpg" alt="pir" width={600} height="auto" /></p>
 
-## **Getting Started**
+## Getting Started
 
-### **Hardware**
+### Hardware
 
 **Materials required**
 
@@ -373,7 +374,7 @@ Some USB cables can only supply power and cannot transfer data. If you don't hav
 
 - Step 2. Connect the Seeed Studio XIAO SAMD21 to your computer.Then the yellow power LED should go on.
 
-### **Software**
+### Software
 
 :::note
 
@@ -444,7 +445,7 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - [How to unbrick a dead xiao using raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Thanks John_Doe for sharing.
 
-## **Resources**
+## Resources
 
 **Hardware Design**
 - **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)

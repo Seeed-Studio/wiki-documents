@@ -10,27 +10,27 @@ last_update:
   date: 1/9/2023
   author: jianjing Huang
 createdAt: '2023-01-09'
-updatedAt: '2026-03-20'
+updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/pt-br/Grove-Moisture_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/images/Moisture_sensor_.jpg" /></div>
 
-Este Sensor de Umidade pode ser usado para detectar a umidade do solo ou verificar se há água ao redor do sensor, permitindo que a planta no seu jardim possa pedir ajuda dos humanos quando estiver com sede. Este sensor é muito fácil de usar, você pode simplesmente inseri-lo no solo e ler os dados. Com este sensor, você pode fazer um pequeno projeto que permita à planta enviar uma mensagem para você como "Estou com sede agora, por favor me dê um pouco de água."
+Este Sensor de Umidade pode ser usado para detectar a umidade do solo ou verificar se há água ao redor do sensor, permitindo que a planta no seu jardim possa pedir ajuda humana quando estiver com sede. Este sensor é muito fácil de usar, você pode simplesmente inseri‑lo no solo e ler os dados. Com este sensor, você pode fazer um pequeno projeto que permita à planta enviar uma mensagem para você como "Estou com sede agora, por favor me dê um pouco de água."
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border="0" /></a></p>
 
 ## Versão
 
-| Versão do Produto              | Mudanças                                   | Data de Lançamento |
+| Versão do Produto              | Alterações                                   | Data de Lançamento |
 |------------------------------|-------------------------------------------|--------------------|
 | Grove - Moisture Sensor V1.4 | Inicial                                   | Junho de 2014      |
 
 ## Atualizável para Sensores Industriais
 
-Com o [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) e o [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) da SenseCAP, você pode facilmente transformar o Grove em um sensor LoRaWAN®. A Seeed não só ajuda você com a prototipagem, mas também oferece a possibilidade de expandir seu projeto com a série SenseCAP de robustos [sensores industriais](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
+Com o [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) e o [registrador de dados S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) da SenseCAP, você pode facilmente transformar o Grove em um sensor LoRaWAN®. A Seeed não apenas ajuda você na prototipagem, mas também oferece a possibilidade de expandir seu projeto com a série SenseCAP de robustos [sensores industriais](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
-Os sensores industriais da série SenseCAP S210x fornecem uma experiência pronta para uso para medições ambientais. Consulte o Sensor Sem Fio de Umidade do Solo, Temperatura e CE S2105, com maior desempenho e robustez para monitoramento das condições do solo. A série inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, CE e uma estação meteorológica 8 em 1. Experimente o mais recente [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para o seu próximo projeto industrial de sucesso.
+Os sensores industriais da série SenseCAP S210x fornecem uma experiência pronta para uso para monitoramento ambiental. Consulte o Sensor Sem Fio de Umidade do Solo, Temperatura e EC S2105, com maior desempenho e robustez para monitoramento das condições do solo. A série inclui sensores para umidade do solo, temperatura e umidade do ar, intensidade de luz, CO2, EC e uma estação meteorológica 8 em 1. Experimente o mais recente [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para o seu próximo projeto industrial de sucesso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
@@ -49,7 +49,7 @@ Os sensores industriais da série SenseCAP S210x fornecem uma experiência pront
     <tr>
       <td align="center">
         <a href="https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html" target="_blank">
-          <strong>S2105 Soil Moisture &amp; Temp &amp; EC</strong>
+          <strong>S2105 Umidade do Solo &amp; Temp &amp; EC</strong>
         </a>
       </td>
     </tr>
@@ -63,7 +63,7 @@ Os sensores industriais da série SenseCAP S210x fornecem uma experiência pront
 - Módulo Grove de 2,0 cm X 6,0 cm
 
 :::tip
-Para mais detalhes sobre os módulos Grove, consulte o [Grove System](https://wiki.seeedstudio.com/pt-br/Grove_System/)
+Para mais detalhes sobre módulos Grove, consulte o [Grove System](https://wiki.seeedstudio.com/pt-br/Grove_System/)
 :::
 
 ## Especificação
@@ -76,34 +76,104 @@ Para mais detalhes sobre os módulos Grove, consulte o [Grove System](https://wi
 
 ## Plataformas Suportadas
 
-| Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
-|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
+<table align="center">
+  <tr>
+    <th>Arduino</th>
+    <th>Raspberry Pi</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+</table>
 
 :::caution
-As plataformas mencionadas acima como suportadas são uma indicação da compatibilidade de software ou teórica do módulo. Na maioria dos casos, fornecemos apenas biblioteca de software ou exemplos de código para a plataforma Arduino. Não é possível fornecer biblioteca de software / código de demonstração para todas as possíveis plataformas de MCU. Portanto, os usuários precisam escrever sua própria biblioteca de software.
+As plataformas mencionadas acima como suportadas são uma indicação da compatibilidade teórica ou de software do módulo. Na maioria dos casos, fornecemos apenas biblioteca de software ou exemplos de código para a plataforma Arduino. Não é possível fornecer biblioteca de software / código de demonstração para todas as possíveis plataformas de MCU. Portanto, os usuários precisam escrever sua própria biblioteca de software.
 :::
 
 ## Ideias de Aplicação
 
-- Jardinagem Botânica
-- Detecção de Umidade
-- Medição de Consistência
+- Jardinagem botânica
+- Detecção de umidade
+- Medição de consistência
 
-## Primeiros Passos
+## Introdução
 
 :::note
 Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortemente que veja [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/) antes de começar.
 :::
+### Brincar com PlatformIO
+**Hardware**
 
+- **Passo 1.** Prepare os itens abaixo:
+
+<table align="center">
+  <tr>
+    <th>XIAO ESP32 C3</th>
+    <th>Seeed Studio Grove Base for XIAO</th>
+    <th>Grove - Soil Moisture Sensor</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991054-seeed-studio-xiao-esp32c3-45font_1.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-07bazaar881132_3.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html" target="_blank" rel="noopener noreferrer">Adquira agora</a></td>
+  </tr>
+</table>
+
+- **Passo 2.** Conecte o Grove-Moisture Sensor à porta A0 do Seeed Studio Grove Base for XIAO.
+- **Passo 3.** Conecte o XIAO ao Seeed Studio Grove Base for XIAO.
+- **Passo 4.** Conecte o XIAO ao PC por meio de um cabo USB.
+
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/xiao.jpg" /></div>
+
+**Software**
+
+- **Passo 1.** Copie o código para o PlatformIO 
+
+```cpp
+int sensorPin = A0;
+int sensorValue = 0;
+
+void setup() {
+    Serial.begin(9600);
+}
+void loop() {
+    // read the value from the sensor:
+    sensorValue = analogRead(sensorPin);
+    Serial.print("Moisture = " );
+    Serial.println(sensorValue);
+    delay(1000);
+}
+```
+
+- **Passo 2.** Veremos a umidade exibida no terminal como abaixo.
+
+```
+Moisture = 0
+Moisture = 31
+Moisture = 48
+Moisture = 139
+Moisture = 155
+Moisture = 124
+Moisture = 236
+Moisture = 218
+Moisture = 215
+Moisture = 221
+```
+Você pode encontrar algumas demonstrações práticas ou artísticas na seção "Wiki & Learn" da página de detalhes do produto.
 ### Brincar com Arduino
 
 **Hardware**
 
-- **Passo 1.** Prepare os seguintes itens:
+- **Passo 1.** Prepare os itens abaixo:
 
 | Seeeduino V4.2 | Base Shield|  Grove-Moisture Sensor |
-|--------------|-------------|-----------------|
+|--------------|-------------|-----------------| 
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Moisture_sensor_S.jpg" /></div>|
 |[Adquira agora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Adquira agora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Adquira agora](https://www.seeedstudio.com/Grove-Moisture-Sensor-p-955.html)|
 
@@ -111,7 +181,7 @@ Se esta é a primeira vez que você trabalha com Arduino, recomendamos fortement
 - **Passo 3.** Conecte o Grove - Base Shield ao Seeeduino.
 - **Passo 4.** Conecte o Seeeduino ao PC por meio de um cabo USB.
 
-<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Seeeduino_moisture.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/img/Seeeduino_moisture.jpg" /></div>
 
 :::note
 Se não tivermos o Grove Base Shield, também podemos conectar diretamente o Grove-Moisture Sensor ao Seeeduino como abaixo.
@@ -174,7 +244,7 @@ Moisture = 221
 **Passo 1.** Abra o [Codecraft](https://ide.chmakered.com/), adicione o suporte a Arduino e arraste um procedimento principal para a área de trabalho.
 
 :::note
-Se esta é a sua primeira vez usando o Codecraft, consulte também o [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/pt-br/Guide_for_Codecraft_using_Arduino/).
+Se esta é a sua primeira vez usando o Codecraft, veja também o [Guide for Codecraft using Arduino](https://wiki.seeedstudio.com/pt-br/Guide_for_Codecraft_using_Arduino/).
 :::
 
 **Passo 2.** Arraste os blocos como na imagem abaixo ou abra o arquivo cdc que pode ser baixado no final desta página.
@@ -184,10 +254,10 @@ Se esta é a sua primeira vez usando o Codecraft, consulte também o [Guide for 
 Envie o programa para o seu Arduino/Seeeduino.
 
 :::tip
-Quando o código terminar de carregar, você verá o valor de umidade exibido no Serial Monitor.
+Quando o código terminar de ser enviado, você verá o valor de umidade exibido no Serial Monitor.
 :::
 
-### Brincar com Raspberry Pi (Com Grove Base Hat para Raspberry Pi)
+### Brincar com Raspberry Pi (com Grove Base Hat para Raspberry Pi)
 
 #### Hardware
 
@@ -206,7 +276,7 @@ Quando o código terminar de carregar, você verá o valor de umidade exibido no
 
 #### Software
 
-- **Passo 1**. Siga [Setting Software](https://wiki.seeedstudio.com/pt-br/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar o ambiente de desenvolvimento.
+- **Passo 1**. Siga [Setting Software](https://wiki.seeedstudio.com/pt-br/Grove_Base_Hat_for_Raspberry_Pi/#configuração-do-ambiente-de-desenvolvimento) para configurar o ambiente de desenvolvimento.
 - **Passo 2**. Baixe o arquivo-fonte clonando a biblioteca grove.py.
 
 ```
@@ -316,7 +386,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-Se tudo correr bem, você conseguirá ver o seguinte resultado:
+Se tudo correr bem, você poderá ver o seguinte resultado:
 :::
 
 ```python
@@ -339,7 +409,6 @@ Moisture value: 1, Dry
   File "grove_moisture_sensor.py", line 71, in main
     time.sleep(1)
 KeyboardInterrupt
-
 
 ```
 
@@ -369,7 +438,7 @@ Você pode ter notado que, para a porta analógica, o número do pino na serigra
 **Software**
 
 - **Passo 1.** Siga [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar o ambiente de desenvolvimento.
-- **Passo 2.** Faça o clone (`git clone`) do repositório Github.
+- **Passo 2.** Use `git clone` no repositório do Github.
 
 ```
 cd ~
@@ -413,7 +482,7 @@ while True:
         print ("Error")
 ```
 
-- **Passo 4.** Veremos a umidade exibida no terminal como abaixo.
+- **Passo 4.** Veremos a umidade sendo exibida no terminal como abaixo.
 
 ```
 pi@raspberrypi:~/GrovePi/Software/Python $ python grove_moisture_sensor.py
@@ -430,7 +499,7 @@ pi@raspberrypi:~/GrovePi/Software/Python $ python grove_moisture_sensor.py
 
 **Hardware**
 
-O sketch a seguir demonstra uma aplicação simples de detecção de umidade no solo. Com isso, você pode saber se sua planta precisa de água ou não, observando o resultado da saída do sensor.
+O sketch a seguir demonstra uma aplicação simples de detecção de umidade no solo. Com isso, você pode saber se uma planta precisa de água ou não, observando os resultados que o sensor fornece.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/images/Moisture.jpg" /></div>
 
@@ -498,11 +567,11 @@ void loop() {
 
 ## FAQs
 
-**P1: O que a saída significa? Tensão ou contagem?**
+**P1: O que a saída significa? Tensão ou contagens?**
 
-R1: A saída são valores de tensão. Ao usar analogRead(), 5 V serão divididos por 1023. Portanto, o valor de saída = Vout * 1023/5. Quanto maior a tensão de saída, maior é a umidade.
+R1: A saída são valores de tensão. Ao usar analogRead(), 5V serão divididos por 1023. Então o valor de saída = Vout * 1023/5. Quanto maior for a tensão de saída, maior será a umidade.
 
-## Visualizador Online de Esquemático
+## Visualizador de Esquemático Online
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Moisture_Sensor/resources/Grove%20-%20Moisture%20Sensor%20v1.4.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -515,11 +584,11 @@ R1: A saída são valores de tensão. Ao usar analogRead(), 5 V serão divididos
 
 ## Projetos
 
-**Plant Monitoring System using AWS IoT**: Se você está planejando tirar férias, aqui está um ótimo projeto para acompanhar a temperatura e a umidade do solo da sua planta usando dweet.io e AWS IoT.
+**Sistema de Monitoramento de Plantas usando AWS IoT**: Se você está planejando umas férias, aqui está um ótimo projeto para acompanhar a temperatura e a umidade do solo da sua planta usando dweet.io e AWS IoT.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/carmelito/plant-monitoring-system-using-aws-iot-6cb054/embed' width='350'></iframe>
 
-## Suporte Técnico e Discussão sobre Produtos
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
@@ -532,4 +601,3 @@ Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tip
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

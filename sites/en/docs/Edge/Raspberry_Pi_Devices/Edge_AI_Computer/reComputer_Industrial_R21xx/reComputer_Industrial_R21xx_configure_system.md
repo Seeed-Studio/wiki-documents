@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/recomputer_industrial_R21xx_configure_system/
 ---
 
@@ -872,6 +872,12 @@ If the USB hub is functioning properly, you should see its details listed in the
 
 ## RTC (Real-Time Clock) Testing
 
+:::note
+Since the reComputer device is equipped with the CM5 chip, there are two RTC units on the device: ① The built-in RTC of CM5 (rtc0); ② The RTC assembled on reComputer (rtc1).
+
+rtc0 cannot retain time data. Therefore, to use the RTC function, you need to manually specify the device number rtc1 when setting the time.
+:::
+
 To test the Real-Time Clock (RTC) functionality, follow these steps:
 
 1. Disable automatic time synchronization:
@@ -885,27 +891,27 @@ sudo systemctl disable systemd-timesyncd
 Set the RTC to a specific date and time:
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
 3. Sync RTC Time to the System
 Update the system time to match the RTC time:  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
 4. Check the RTC time:
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
 This command will read and display the time stored in the RTC.
 
 5. Disconnect the power source from the RTC, wait a few minutes, then reconnect it and check the RTC time again to see if it retained the correct time.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
 ## Watchdog Timer Testing
 

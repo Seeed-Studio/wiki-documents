@@ -11,13 +11,13 @@ keywords:
   - debug
   - virtual robot
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_platforms_simulation_get_started/
 ---
 
@@ -25,76 +25,61 @@ url: https://wiki.seeedstudio.com/reachymini_platforms_simulation_get_started/
 
 You don't need a physical robot to start building! The Reachy Mini simulation runs on [MuJoCo](https://mujoco.org) and provides a realistic physics environment to prototype, test, and debug your applications.
 
-![Simulation](https://camo.githubusercontent.com/ce846352192340e1de0c054dec19d4ca185f45a26d76c3f848e50f3707e8b19c/68747470733a2f2f7777772e706f6c6c656e2d726f626f746963732e636f6d2f77702d636f6e74656e742f75706c6f6164646c6f6164732f323032352f30362f5265616368795f6d696e695f73696d756c6174696f6e2e676966)
+![Simulation](https://camo.githubusercontent.com/ce846352192340e1de0c054dec19d4ca185f45a26d76c3f848e50f3707e8b19c/68747470733a2f2f7777772e706f6c6c656e2d726f626f746963732e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032352f30362f5265616368795f6d696e695f73696d756c6174696f6e2e676966)
 
 ## 1. Installation
 
-:::danger Prerequisites
-Before setting up the simulation, you must first complete the basic installation and virtual environment setup by following the **[Installation Guide](/reachymini_sdk_installation)**. This guide assumes you already have the Reachy Mini SDK installed and your virtual environment activated.
-:::
+> **📋 Prerequisites:** Before setting up the simulation, you must first complete the basic installation and virtual environment setup by following the **[Installation Guide](/reachymini_sdk_installation)**. This guide assumes you already have the Reachy Mini SDK installed and your virtual environment activated.
 
 The simulation requires the `mujoco` python bindings. You can install them alongside the Reachy Mini software with the extra tag `[mujoco]`.
 
-:::tip With pip
+With `pip`, run:
 ```bash
 pip install "reachy-mini[mujoco]"
 ```
-:::
-
-:::tip With uv
+With `uv`, run:
 ```bash
 uv pip install "reachy-mini[mujoco]"
 ```
-:::
 
 ## 2. Running the Simulation
 
 To start the simulated robot, simply run the daemon command with the `--sim` flag:
 
-:::tip Start simulation
 ```bash
 reachy-mini-daemon --sim
 ```
-:::
 
 A window should open displaying the 3D view of the robot. You can interact with the view using your mouse (drag to rotate, right-click to pan, scroll to zoom).
 
 ### 🍎 Mac Users (Apple Silicon / Intel)
-
-:::tip macOS specific
 On macOS, MuJoCo requires a specific launcher to work correctly with the GUI. Instead of the command above, use `mjpython`:
-:::
 
 ```bash
 mjpython -m reachy_mini.daemon.app.main --sim
 ```
 
-:::warning macOS Users
-`uv` may have compatibility issues with MuJoCo on macOS. If you encounter installation or runtime problems, it's recommended to use `pip` directly instead of `uv` for MuJoCo-related packages.
-:::
+> **⚠️ macOS Users:** `uv` may have compatibility issues with MuJoCo on macOS. If you encounter installation or runtime problems, it's recommended to use `pip` directly instead of `uv` for MuJoCo-related packages.
 
-## 3. Dashboard and Apps
+## 3. Reachy Mini Control and Apps
 
-:::info
-You can access the Dashboard at **[http://localhost:8000](http://localhost:8000)**.
-:::
+You can use **Reachy Mini Control** to interact with the simulated robot. Simply open the app and connect to the local simulation.
+
+![Control App with local daemon](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-external-daemon.png)
 
 * **Apps:** You can install and run Apps! They will execute inside the simulation (e.g., the robot will move in the 3D viewer).
 
 ## 4. Scenes & Options
 
-:::info Customization
 You can customize the simulation environment using the `--scene` argument.
-:::
 
 * **`empty`** (default): Just the robot in a void.
 * **`minimal`**: Adds a table and some objects (apple, croissant, duck) to play with.
 
-:::tip Example
+**Example:**
 ```bash
 reachy-mini-daemon --sim --scene minimal
 ```
-:::
 
 ## 5. Connecting your Code
 
@@ -129,13 +114,32 @@ with ReachyMini() as mini:
 ```
 
 ## Next Steps
-
-:::info Continue learning
 * **[Python SDK](/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
 * **[AI Integrations](/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
 * **[Core Concepts](/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
-:::
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**
+<details>
+<summary><strong>Segmentation fault from <code>libgstpython.dylib</code> when using <code>mjpython</code> (macOS)</strong></summary>
+
+You may see an error like:
+
+```
+ERROR: Caught a segmentation fault while loading plugin file:
+.../gstreamer_python/lib/gstreamer-1.0/libgstpython.dylib
+```
+
+This GStreamer plugin segfault is a known issue, which also happens with the real robot, but it occurs in a parallel process and doesn't cause any visible issue. With `mjpython` however, it crashes the main process. The fix is to rename the plugin so GStreamer no longer loads it:
+
+```bash
+# Find the file inside your environment (adjust the path to match yours)
+mv $(python -c "import gstreamer_python, pathlib; print(pathlib.Path(gstreamer_python.__file__).parent / 'lib/gstreamer-1.0/libgstpython.dylib')") \
+   $(python -c "import gstreamer_python, pathlib; print(pathlib.Path(gstreamer_python.__file__).parent / 'lib/gstreamer-1.0/libgstpython_.dylib')")
+```
+
+This simply prevents GStreamer from auto-loading the plugin. It does not affect normal audio/video functionality.
+
+</details>
+
+Encountering another issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**

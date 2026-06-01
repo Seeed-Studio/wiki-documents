@@ -10,7 +10,7 @@ last_update:
   date: 4/27/2025
   author: Youjiang
 createdAt: '2023-03-02'
-updatedAt: '2026-03-24'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/recomputer_j401b_getting_start/
 ---
 
@@ -18,17 +18,22 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 # Getting start with reComputer J401B
 
+## Introduction
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.jpg"/>
 </div>
 
+The reComputer J401B series is an iteration on reComputer Classic series. The reComputer J4011B with NVIDIA Jetson Orin NX 8GB modules is a powerful and compact edge AI device with rich interfaces: 2x USB 3.2, HDMI, Ethernet, M.2 Key E for Wi-Fi module, M.2 Key M for SSD, mini-PCIe for LTE module, CAN, 40-pin and more.
+
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
-
-## Introduction
-
-The reComputer J401B series is an iteration on reComputer Classic series. The reComputer J4011B with NVIDIA Jetson Orin NX 8GB modules is a powerful and compact edge AI device with rich interfaces: 2x USB 3.2, HDMI, Ethernet, M.2 Key E for Wi-Fi module, M.2 Key M for SSD, mini-PCIe for LTE module, CAN, 40-pin and more.
 
 ## Features
 

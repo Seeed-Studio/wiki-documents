@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/t1000_e_intro/
 ---
 
@@ -18,10 +18,13 @@ url: https://wiki.seeedstudio.com/t1000_e_intro/
 
 It is a high-performance tracker designed for [Meshtastic®](https://meshtastic.org/), as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing [Meshtastic®](https://meshtastic.org/) users with a high-precision, low-power positioning and communication solution.
 
+:::note
+Available customization options: logo branding, packaging, and firmware flashing.
+:::
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/fusion_branding_firmware.html?utm_source=wiki&utm_medium=button" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>Customize Now ➜</font></span></strong></a>
 </div>
 
 <br></br>

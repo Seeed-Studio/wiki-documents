@@ -1,6 +1,6 @@
 ---
 description: reServer J2032
-title: reServer Jetson
+title: Primeros Pasos con reServer J2032
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reServer_J2032_Getting_Started
 sku: 110061403

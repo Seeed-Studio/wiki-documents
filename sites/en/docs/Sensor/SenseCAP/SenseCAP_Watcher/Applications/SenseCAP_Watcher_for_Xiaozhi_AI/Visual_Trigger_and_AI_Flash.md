@@ -19,7 +19,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-17'
-updatedAt: '2025-12-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/visual_trigger_and_ai_flash/
 ---
 
@@ -60,104 +60,107 @@ The official version will be available soon.
 Please use another method to flash the firmware for now.
 ::: -->
 
-- Prerequisites
+**Prerequisites**
 
-  - [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
+- [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 
-- Step 1. Open our platform and Select SenseCAP Watcher in Workspace
-  
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
-  
-- Step 2. Connect to our Platform by serial port
+**Step 1.** Access the SenseCAP Watcher workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`**, or use this [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37).
 
-  -  Click `Connect` 
-    
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-  - Select correct serial port (ending with “A”)
+**Step 2. Connect to our Platform by serial port**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+- Click `Connect`
 
-  :::note
-  If you are using macOS or Linux, please choose the port with the smaller number.
-  :::
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-  - Click `Connect`
-    
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
+- Select correct serial port (ending with “A”)
 
-- Step 3. Check and Update the Device Version
-  
-  - Click `Update`
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
-  
-  - Select correct serial port (ending with "B")
+:::note
+If you are using macOS or Linux, please choose the port with the smaller number.
+:::
+
+- Click `Connect`
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
+
+**Step 3. Check and Update the Device Version**
+
+- Click `Update`
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
+
+- Select correct serial port (ending with "B")
+
   :::note
   If you are using macOS or Linux, please choose the port with the bigger number.
   :::
-  
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div> 
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
-  - Click 'Connect'
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
-  
-  - Select the version you want to flash and Click `Confirm`
+- Click 'Connect'
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
 
-  - Waiting update and reboot process
+- Select the version you want to flash and Click `Confirm`
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
+
+- Waiting update and reboot process
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 
 <TabItem value="flasher1" label="Flash Download Tool">
 
-- Prerequisites
+**Prerequisites**
 
-  - **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+- **Visual Trigger Firmware v2.0.4**: [Download Link](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
-  - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
+- [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 
-- Step 1. Connect to the device(Type-C port on the bottom of the device) and Open your Flash Download Tool
+**Step 1. Connect to the device (Type-C port on the bottom of the device) and Open your Flash Download Tool**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
-- Step 2. Configure Firmware Settings
+**Step 2. Configure Firmware Settings**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
 
-- Step 3. Select COM Port and Flash Settings
+**Step 3. Select COM Port and Flash Settings**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
-  - If flashing doesn’t start after clicking START, click STOP and confirm you have selected the COM port ending with “B”.
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+- If flashing doesn’t start after clicking START, click STOP and confirm you have selected the COM port ending with “B”.
 
-- Step 4. Erase and Flash
-  - Click the `ERASE` button to clear the existing firmware
-  - Wait for the erase process to complete
-  - Click the `START` button to begin flashing
-  - You should see progress information in the log window
-  - If no progress appears or failed, try the other COM port
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 
-- Step 5. Verify Success
+**Step 4. Erase and Flash**
 
-  - The flashing process is complete when you see the success message in the log window.
+- Click the `ERASE` button to clear the existing firmware
+- Wait for the erase process to complete
+- Click the `START` button to begin flashing
+- You should see progress information in the log window
+- If no progress appears or failed, try the other COM port
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish1.jpg" style={{width:300, height:'auto'}}/></div>
+**Step 5. Verify Success**
 
-- Step 6. Restart the Device
+- The flashing process is complete when you see the success message in the log window.
 
-  - Locate the reset hole on your Watcher device
-  - Use a pin to gently press the reset button
-  - The device will restart with the new firmware
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish1.jpg" style={{width:300, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
+**Step 6. Restart the Device**
+
+- Locate the reset hole on your Watcher device
+- Use a pin to gently press the reset button
+- The device will restart with the new firmware
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
 
 </TabItem>
 
@@ -169,20 +172,21 @@ Please use another method to flash the firmware for now.
 
   - [esptool.py](https://github.com/espressif/esptool)
 
-- Step 1. Extract the downloaded firmware package and use the esptool.py to perform the flash
+**Step 1. Extract the downloaded firmware package and use the esptool.py to perform the flash**
 
-  ```shell
-  esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
-  ```
-  *(Note: Adjust the port `/dev/ttyACM0` according to your system, e.g., `COM3` on Windows)*
+```shell
+esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
+```
 
-- Step 2. Restart the Device
+*(Note: Adjust the port `/dev/ttyACM0` according to your system, e.g., `COM3` on Windows)*
 
-  - Locate the reset hole on your Watcher device
-  - Use a pin to gently press the reset button
-  - The device will restart with the new firmware
+**Step 2. Restart the Device**
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
+- Locate the reset hole on your Watcher device
+- Use a pin to gently press the reset button
+- The device will restart with the new firmware
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:300, height:'auto'}}/></div>
 
 </TabItem>
 
@@ -193,55 +197,59 @@ Please use another method to flash the firmware for now.
 
   - [Open-Source Repository (Xiaozhi AI Collaboration)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
-- Step 1. Open ESP-IDF CMD and Navigate to the project folder
-  ```shell
-  cd xiaozhi-esp32
-  ```
+**Step 1. Open ESP-IDF CMD and Navigate to the project folder**
 
-- Step 2. Set the target chip
-  ```shell
-  idf.py set-target esp32s3
-  ```
+```shell
+cd xiaozhi-esp32
+```
 
-- Step 3. Open the configuration menu
-  ```shell
-  idf.py menuconfig
-  ```
+**Step 2. Set the target chip**
 
-- Step 4. Set Board Type as SenseCAP Watcher
+```shell
+idf.py set-target esp32s3
+```
 
-  - Select the Xiaozhi Assistant
+**Step 3. Open the configuration menu**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig1.png" style={{width:700, height:'auto'}}/></div>
+```shell
+idf.py menuconfig
+```
 
-  - Select Board Type
+**Step 4. Set Board Type as SenseCAP Watcher**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig2.png" style={{width:700, height:'auto'}}/></div>
+- Select the Xiaozhi Assistant
 
-  - Select SenseCAP Watcher
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig1.png" style={{width:700, height:'auto'}}/></div>
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
+- Select Board Type
 
-- Step 5. Configure Additional Settings According to Your Needs(Optional)
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig2.png" style={{width:700, height:'auto'}}/></div>
 
-  - Default display language and AEC (Automatic Echo Cancellation / voice interruption handling)
+- Select SenseCAP Watcher
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig4.png" style={{width:700, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig3.png" style={{width:700, height:'auto'}}/></div>
 
-  - Wake words and triggers
+**Step 5. Configure Additional Settings According to Your Needs (Optional)**
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig5.png" style={{width:700, height:'auto'}}/></div>
+- Default display language and AEC (Automatic Echo Cancellation / voice interruption handling)
 
-    <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig6.png" style={{width:700, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig4.png" style={{width:700, height:'auto'}}/></div>
 
-  - Other optional parameters specific to your application
+- Wake words and triggers
 
-  - After completing your configuration, save and exit the menu
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig5.png" style={{width:700, height:'auto'}}/></div>
 
-- Step 7. Build and flash the firmware
-  ```shell
-  idf.py build flash
-  ```
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/menuconfig6.png" style={{width:700, height:'auto'}}/></div>
+
+- Other optional parameters specific to your application
+
+- After completing your configuration, save and exit the menu
+
+**Step 7. Build and flash the firmware**
+
+```shell
+idf.py build flash
+```
 
 </TabItem>
 </Tabs>
@@ -253,42 +261,47 @@ Firmware version above v2.0.3 requires saying “Turn on the inference switch”
 
 ## AI Model Flashing Process
 
-### Prerequisites
-- [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
+- Prerequisites
 
-### Step 1. Open our platform and Select SenseCAP Watcher in Workspace
-  
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
-  
-### Step 2. Connect to our Platform by serial port
+  - [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 
-- Click `Connect` 
+**Step 1.** Access the SenseCAP Watcher workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`**, or use this [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_workspace.png" style={{width:800, height:'auto'}}/></div>
+
+**Step 2. Connect to our Platform by serial port**
+
+- Click `Connect`
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
 - Select correct serial port (ending with “A”)
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
 :::note
 If you are using macOS or Linux, please choose the port with the smaller number.
 :::
 
 - Click `Connect`
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
-### Step 3. View existing model and Change a new model
+**Step 3. View existing model and Change a new model**
 
 - View Model name and Model version
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
 - Click `Select Model...` and Click the model you want to flash
-  
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
 - Click `Confirm`
-  
+
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### Step 4. Preview the effect and Adjust the parameter  
+**Step 4. Preview the effect and Adjust the parameter**
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 

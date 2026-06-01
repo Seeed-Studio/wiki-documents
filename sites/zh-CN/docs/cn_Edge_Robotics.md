@@ -80,6 +80,10 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
 
           <h3>🦾 reBot机械臂</h3>
           <div className="card-container">
+              <a href="/cn/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">reBot B601-RS 快速开始</span>
+                <span className="tag recommended">New</span>
+              </a>
               <a href="/cn/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">reBot B601-DM 快速开始</span>
                 <span className="tag recommended">New</span>
@@ -92,6 +96,9 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               </a>
               <a href="/cn/rebot_arm_b601_dm_grasping_demo/" className="content-card">
                 <span className="text">reBot B601-DM 视觉夹取 Demo</span>
+              </a>
+              <a href="/cn/rebot_arm_b601_dm_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-DM ROS2 集成</span>
               </a>
           </div>
 

@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 04/20/2026
+  date: 06/01/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-04-20'
+updatedAt: '2026-06-01'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,37 +18,86 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is April 20th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [How to Build and Flash BSP Source for Jetson Thor](https://wiki.seeedstudio.com/how_to_build_and_flash_bsp_source_for_jetson_thor/)
+### [Seeed Jetson DevelopTool Overview](https://wiki.seeedstudio.com/jetson_developtool_overview/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-kit-3.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki explains how to use the BSP source package to build and flash the **NVIDIA Jetson AGX Thor Developer Kit** from an Ubuntu host.
-
-</div>
-
-### [Connecting R1225 to AWS IoT](https://wiki.seeedstudio.com/connecting_r1225_to_aws_iot/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to connect the Seeed Studio reComputer R1225 LoRaWAN gateway to AWS IoT Core, covering gateway setup, certificate provisioning, LoRa network configuration, and the creation of device profiles, destinations, and end devices in AWS for cloud-based data management.
+**Seeed Jetson DevelopTool** is an all-in-one AI development workbench designed for Seeed Studio Jetson products. It consolidates the most common Jetson development workflows — from first-time firmware flashing to AI app deployment — into a single desktop GUI application.
 
 </div>
 
-### [Configure Static IP on reCamera](https://wiki.seeedstudio.com/configure_static_ip_on_recamera/)
+### [ROS2 Voice Pipeline on reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_ros2_voice_pipeline/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document explains how to configure a static IP address on reCamera (Buildroot system). The configuration includes three steps: edit the config file, set static network parameters, and restart the network service for verification.
+This project turns your voice into TurtleSim control using a reSpeaker XVF3800 microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
 
 </div>
+
+### [ROS2 Voice Pipeline on reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_ros2_voice_pipeline/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project turns your voice into TurtleSim control using a reSpeaker Flex microphone array and ROS2. Say “Hey Jarvis” followed by a command, and Jarvis records audio, transcribes it with Groq Whisper, interprets intent with Groq LLaMA, and responds with Groq Orpheus TTS. It is designed for fast setup with Ubuntu and ROS2 Humble, making voice-driven robot experiments easy to run.
+
+</div>
+
+### [Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document explains how to use Arduino peripheral features on the reTerminal E Series, including RTC setup, low-power mode, PDM microphone recording, and E1003 touch screen examples, with hardware compatibility notes and sample code.
+
+</div>
+
+### [Using Stream Deck to Control reCamera Gimbal](https://wiki.seeedstudio.com/using_stream_deck_to_control_recamera_gimbal/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki demonstrates how to control the reCamera Gimbal using a Stream Deck. By sending commands via the HTTP protocol from the Stream Deck, you can control the reCamera Gimbal to rotate to specific angles, turn the fill light on/off, play audio, and perform other operations.
+
+</div>
+
+### [How to Install Antenna for reComputer Super and Classic](https://wiki.seeedstudio.com/recomputer_antenna_installation/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide walks you through installing antennas on the **reComputer Super** series and the **reComputer Classic** series. The procedures differ between the two product lines, so please follow the section that matches your device.
+
+</div>
+
+### [reSpeaker Flex with XIAO Feature Updates](https://wiki.seeedstudio.com/respeaker_flex_xiao_introduction/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+We updated a series of documents for **reSpeaker Flex with XIAO**, covering audio testing, streaming, and device control features. The new guides include I2S record and playback, UDP/HTTP/MQTT streaming, DoA and VAD examples, and volume control, helping users quickly validate device capabilities and build connected audio applications.
+
+</div>
+
+- [reSpeaker Flex Record and Playback Audio Using I2S](https://wiki.seeedstudio.com/respeaker_flex_xiao_record_playback/)
+- [UDP streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_udp_streaming/)
+- [HTTP Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_http_stream/)
+- [MQTT Streaming reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_mqtt_stream/)
+- [DoA and VAD reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_doa_vad/)
+- [Volume controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_volume_control/)
 
 <!-- ## Existing Wiki Updated
 
@@ -184,5 +233,10 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.3.30th](/Seeed_Elderly/weekly_wiki/2026/wiki260330)
 - [weekly wiki on 2026.4.06th](/Seeed_Elderly/weekly_wiki/2026/wiki260406)
 - [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
+- [weekly wiki on 2026.4.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260420)
+- [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
+- [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
+- [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
 
 </details>

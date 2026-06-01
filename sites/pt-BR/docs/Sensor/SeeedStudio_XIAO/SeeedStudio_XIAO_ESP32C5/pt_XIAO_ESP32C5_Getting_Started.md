@@ -11,7 +11,7 @@ last_update:
   author: Zeller
   sidebar_position: 0
 createdAt: '2025-12-15'
-updatedAt: '2026-03-31'
+updatedAt: '2026-03-30'
 url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/
 ---
 ## Introdução
@@ -57,15 +57,15 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/
         </tr>
         <tr>
             <th>Conectividade sem fio</th>
-            <td>**Wi-Fi 6 de banda dupla 2,4 GHz e 5 GHz** e Bluetooth 5 (LE)</td>
-            <td>Wi-Fi 2,4 GHz e Bluetooth 5 (LE)</td>
-            <td>Wi-Fi 2,4 GHz e Bluetooth 5 (LE)</td>
-            <td> 2,4 GHz Wi-Fi 6, Bluetooth 5 (LE)</td>
+            <td>**Wi-Fi 6 dual-band de 2,4 GHz e 5 GHz** e Bluetooth 5 (LE)</td>
+            <td>Wi-Fi de 2,4 GHz e Bluetooth 5 (LE)</td>
+            <td>Wi-Fi de 2,4 GHz e Bluetooth 5 (LE)</td>
+            <td> Wi-Fi 6 de 2,4 GHz, Bluetooth 5 (LE)</td>
         </tr>
         <tr>
             <th>Memória</th>
-            <td>8 MB PSRAM & 8 MB Flash</td>
-            <td>8 MB PSRAM & 8 MB Flash</td>
+            <td>8 MB PSRAM e 8 MB Flash</td>
+            <td>8 MB PSRAM e 8 MB Flash</td>
             <td>400 KB SRAM, 4 MB Flash</td>
             <td>512KB SRAM , 4MB Flash</td>
         </tr>
@@ -85,10 +85,10 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/
         </tr>
         <tr>
             <th>Botões onboard</th>
-            <td>Botão Reset / Boot</td>
-            <td>Botão Reset / Boot</td>
-            <td>Botão Reset / Boot</td>
-            <td>Botão Reset / Botão Boot</td>
+            <td>Botão de Reset / Boot</td>
+            <td>Botão de Reset / Boot</td>
+            <td>Botão de Reset / Boot</td>
+            <td>Botão de Reset / Botão de Boot</td>
         </tr>
         <tr>
             <th>LEDs onboard</th>
@@ -109,35 +109,29 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/
 
 ### Recursos
 
-- **CPU poderosa:** ESP32-C5, processador RISC-V de 32 bits, single-core, que opera a até 240 MHz
-- **Subsistema Wi-Fi completo:** Subsistema Wi-Fi 6 de banda dupla (2,4 GHz e 5 GHz) em conformidade com IEEE 802.11 a/b/g/n/ac/ax, com suporte a Station, SoftAP, operação simultânea SoftAP+Station e modo promíscuo (monitor).
+- **CPU poderosa:** ESP32-C5, processador RISC-V de 32 bits single-core que opera a até 240 MHz
+- **Subsistema Wi-Fi completo:** Subsistema Wi-Fi 6 dual-band (2,4 GHz e 5 GHz) compatível com IEEE 802.11 a/b/g/n/ac/ax, com suporte a Station, SoftAP, operação simultânea SoftAP+Station e modo promíscuo (monitor).
 - **Subsistema Bluetooth LE:** Suporta recursos do Bluetooth 5 e Bluetooth mesh
 - **Melhor desempenho de RF:** Antena RF externa incluída.
 - **Chip de carregamento de bateria:** Suporta gerenciamento de carga e descarga de bateria de lítio.
 - **Ricos recursos on-chip:** 384 KB de SRAM on-chip, 320 KB de ROM
 - **Tamanho ultrapequeno:** Tão pequeno quanto um polegar (21 x 17,8 mm), formato clássico da série XIAO para dispositivos vestíveis e projetos compactos
 - **Recursos de segurança confiáveis**: Aceleradores de hardware criptográfico com suporte a AES-128/256, hashing da família SHA, HMAC, periférico dedicado de assinatura digital e Secure Boot (V2).
-- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, até 11×GPIO (compatíveis com PWM), 5×canais ADC e uma interface de almofadas de conexão JTAG (pads no lado inverso).
+- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, até 11×GPIO (com capacidade PWM), 5×canais ADC e uma interface de ilhas de solda JTAG (pads no lado reverso).
 - Componentes em um único lado, design para montagem em superfície
 
 ## Visão geral do hardware
 
-<table align="center">
- <tr>
-     <th>Diagrama de indicação do XIAO ESP32-C5</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>Lista de pinos do XIAO ESP32-C5</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/PinList_1.png" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Frente
 
- ## **Mapa de pinos**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Verso
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+## Mapa de pinos
+
 | Pino XIAO              | Função    | Pino do chip | Funções alternativas      | Descrição                    |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | Entrada/Saída de energia     |
@@ -158,8 +152,8 @@ url: https://wiki.seeedstudio.com/pt-br/xiao_esp32c5_getting_started/
 | MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG, ADC                    |
 | MTMS                   |            | GPIO2     | LP_I2C_SDA, LP_GPIO2     | JTAG, ADC                    |
-| ADC_BAT                |            | GPIO6    |                          | Ler o valor de tensão da bateria   |
-| ADC_CRL                |            | GPIO26    |                          | Controla (ativa/desativa) o circuito de medição para economizar energia.   |
+| ADC_BAT                |            | GPIO6    |                          | Leitura do valor de tensão da bateria   |
+| ADC_CRL                |            | GPIO26    |                          | Controla (habilita/desabilita) o circuito de medição para economizar energia.   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
 | Boot                   |            | GPIO28    |                          | Entrar no modo Boot          |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | Antena UFL                   |
@@ -202,13 +196,13 @@ Alguns cabos USB podem apenas fornecer energia e não transferir dados. Se você
 
 ### Software
 
-A ferramenta de programação recomendada para o XIAO ESP32-C5 é a Arduino IDE, portanto você precisa concluir a instalação do Arduino como parte da preparação de software.
+A ferramenta de programação recomendada para o XIAO ESP32-C5 é o Arduino IDE, portanto você precisa concluir a instalação do Arduino como parte da preparação de software.
 
 :::tip
 Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
 :::
 
-- **Passo 1.** Baixe e instale a versão estável da Arduino IDE de acordo com o seu sistema operacional.
+- **Passo 1.** Baixe e instale a versão estável do Arduino IDE de acordo com o seu sistema operacional.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
@@ -216,13 +210,13 @@ Se esta é a sua primeira vez usando o Arduino, recomendamos fortemente que voc�
   <br></br>
 
 - **Passo 2.** Inicie o aplicativo Arduino.
-- **Passo 3.**  Abra BOARDS MANAGER -> Pesquise **esp32** -> Instale a versão 3.3.5 ou uma versão superior
+- **Passo 3.**  Abra BOARDS MANAGER -> Pesquise **esp32** -> Instale a versão 3.3.5 ou superior
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Carregar programa
+### Enviar programa
 
-Vamos pegar como exemplo abaixo um programa de iluminação
+Vamos usar um programa de iluminação como exemplo abaixo
 
 **Passo 1.** Selecione **XIAO_ESP32C5** e a PORTA. Se você não souber qual é a PORTA, pode reconectar e remover o XIAO_ESP3-2C5 para verificar.
 
@@ -331,14 +325,14 @@ O XIAO ESP32-C5 é capaz de usar uma bateria de lítio de 3,7 V como entrada de 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento durante a soldagem.
+Tenha cuidado para não causar curto-circuito entre os terminais positivo e negativo e queimar a bateria e o equipamento ao soldar.
 :::
 
 **Instruções sobre o uso de baterias:**
 
 1. Utilize baterias qualificadas que atendam às especificações.
 2. O XIAO pode ser conectado ao seu computador por meio de cabo de dados enquanto utiliza a bateria; fique tranquilo, pois o XIAO possui um chip de proteção de circuito integrado, o que é seguro.
-3. Quando o XIAO ESP32-C5 é alimentado por uma bateria, o **LED C** acenderá. Você pode usar isso como base para determinar se o gerenciamento de carregamento foi realizado.
+3. Quando o XIAO ESP32-C5 é alimentado por bateria, o **LED C** acenderá. Você pode usar isso como base para determinar se o gerenciamento de carregamento foi realizado.
 
 ### Verificar a tensão da bateria
 
@@ -385,15 +379,15 @@ De acordo com o datasheet, a faixa efetiva de medição do ESP32-C5 cobre 0~3300
 
 **Projeto de Hardware**
 - **📄[Datasheet]** [Espressif ESP32-C5 Datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf )
-- **📄[Esquemático]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
-- **🗃️[Arquivos de Projeto de PCB]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
+- **📄[Schematic]** [Esquemático do XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf )
+- **🗃️[Arquivos de Projeto de PCB]** [Projeto KiCad do XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip )
 - **🗃️[Bibliotecas de Projeto de PCB]** 
-  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
-  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
-- **📄[Diagrama de Pinagem]** [XIAO ESP32-C5 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
+  - [Footprints KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/New_XIAO_Series_Footprints.zip)
+  - [Símbolos SCH KiCad da Série XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de Pinagem]** [Planilha de Pinagem do XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/XIAO_ESP32C5_Pinout.xlsx )
 
 **Projeto Mecânico**
-- **📄[Modelo 3D]** [XIAO ESP32-C5 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1 )
+- **📄[Modelo 3D]** [Modelo 3D do XIAO ESP32-C5](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1 )
 
 ## Suporte Técnico e Discussão sobre o Produto
 

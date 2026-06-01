@@ -24,12 +24,12 @@ import TabItem from '@theme/TabItem';
 
 ## 概述
 
-SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI 功能和易于部署的特性。本指南将引导您使用 **SenseCraft AI** 网站在 A1102 上部署官方或自定义 AI 模型，提供配置、部署和测试的分步说明。
+SenseCAP A1102 是一款功能强大的传感器设备，将先进的 AI 能力与便捷的部署方式相结合。本指南将引导你通过 **SenseCraft AI** 网站在 A1102 上部署官方或自定义 AI 模型，并提供配置、部署和测试的分步说明。
 
 <div class="info-section">
   <div class="section-header">
       <h2>在 SenseCAP A1102 上部署 AI 模型</h2>
-      <p>训练和部署您的 AI 模型：为您的 LoRaWAN 摄像头配备自定义或官方 AI 模型，实现实时分析。SenseCAP A1102 提供了将 AI 驱动的洞察引入您应用程序的灵活性。</p>
+      <p>训练并部署你的 AI 模型：为你的 LoRaWAN 摄像头加载自定义或官方 AI 模型，实现实时分析。SenseCAP A1102 能够为你的应用带来灵活的 AI 驱动洞察。</p>
   </div>
   <ul class="info-list">
       <li class="info-item">
@@ -39,8 +39,8 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
             </svg>
           </div>
           <div class="info-content">
-              <h3>使用 LoRaWAN 摄像头进行自定义 AI 模型部署</h3>
-              <p>使用 SenseCAP A1102，您可以训练自己的 AI 模型并将其直接部署到支持 LoRaWAN 的摄像头上。这允许实时目标检测。与 LoRaWAN 的无缝集成确保您的 AI 驱动洞察在现场可访问且可操作。</p>
+              <h3>结合 LoRaWAN 摄像头的自定义 AI 模型部署</h3>
+              <p>借助 SenseCAP A1102，你可以训练自己的 AI 模型并将其直接部署到支持 LoRaWAN 的摄像头上，从而实现实时目标检测。与 LoRaWAN 的无缝集成确保你的 AI 驱动洞察能够在现场被获取并付诸行动。</p>
           </div>
       </li>
       <li class="info-item">
@@ -54,7 +54,7 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
           </div>
           <div class="info-content">
               <h3>使用预训练模型或自定义模型</h3>
-              <p>SenseCAP A1102 支持广泛的预训练 AI 模型，以及使用公开可用或自定义数据集（如 Roboflow Universe 中的数据集）训练自定义模型的能力。这种灵活性使您能够轻松部署专门针对您用例定制的模型。</p>
+              <p>SenseCAP A1102 支持多种预训练 AI 模型，同时也支持使用公开或自定义数据集（例如 Roboflow Universe 上的数据集）来训练自定义模型。这种灵活性使你能够轻松部署专门针对自身应用场景定制的模型。</p>
           </div>
       </li>
       <li class="info-item">
@@ -67,34 +67,34 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
               </svg>
           </div>
           <div class="info-content">
-              <h3>多样化应用</h3>
-              <p>SenseCAP A1102 可以部署在各种实际应用中。无论是监测农业中植物叶片的健康状况、检测城市环境中的停车位占用情况，还是跟踪海洋区域中的船只位置，您的 AI 模型都可以适应您的特定需求。</p>
+              <h3>多种应用场景</h3>
+              <p>SenseCAP A1102 可部署在多种真实应用场景中。无论是用于农业中监测植物叶片健康状况、用于城市环境中检测停车位占用情况，还是用于海事领域中跟踪船舶位置，你的 AI 模型都可以根据具体需求进行适配。</p>
           </div>
       </li>
   </ul>
 </div>
 
 
-## 前提条件
+## 前置条件
 
 ### 所需硬件
 
-- SenseCAP A1102 设备  
+- SenseCAP  A1102 设备  
 - USB Type-C 数据线  
-- PC  
+- 电脑（PC）  
 
 ### 所需软件
-- [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/home)
+- [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 
 ## 官方 AI 模型部署流程
 
-### 步骤 1. 打开我们的平台并在工作区中选择 A1102
+**步骤 1.** 通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`** 进入 SenseCAP A1102 工作空间，或使用此[工作空间直达链接](https://sensecraft.seeed.cc/ai/device/local/37)。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-### 步骤 2. 通过串口连接到我们的平台
+**步骤 2. 通过串口连接到我们的平台**
 
-- 使用 Type-C 线缆将设备连接到您的 PC（确保您连接到上方的 Type-C 端口，即 Himax 串口，如下图所示）。
+- 使用 Type-C 数据线将设备连接到电脑（请确保连接的是上方的 Type-C 接口，即 Himax 串口，如下图所示）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:400, height:'auto'}}/></div>
 
@@ -102,57 +102,57 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture4.png" style={{width:1000, height:'auto'}}/></div>
 
-- 在弹出窗口中选择正确的串口并点击 `Connect`
+- 在弹出的窗口中选择正确的串口并点击 `Connect`
 
-如果选择了正确的端口，您将能够通过 Invoke 查看预览视频流，并正常进行模型选择和刷写。
+如果选择了正确的端口，你将能够通过 Invoke 查看预览视频流，并正常继续选择和烧录模型。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture5.png" style={{width:1000, height:'auto'}}/></div>
 
-### 步骤 3. 选择您要部署到设备的 AI 模型
+**步骤 3. 选择你想要部署到设备上的 AI 模型**
 
 - 点击 `Select Model`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture6.png" style={{width:500, height:'auto'}}/></div>
 
-- 从公共模型或您在 SenseCraft AI 中训练的模型中选择
+- 在 SenseCraft AI 中从 Public Models 或你自己训练的模型中进行选择
 
-- 点击模型后将开始刷写过程
+- 点击模型后将开始烧录流程
 
 :::note
-您的设备现在正在使用您部署的 AI 模型进行检测并上传结果！请导航到您的 APP 或其他平台查看。
+你的设备现在正在使用你部署的 AI 模型进行检测并上传结果！请前往你的 APP 或其他平台查看。
 :::
 
 ## 自定义 AI 模型部署流程
 
 :::warning note
-我们的 AI 模型可以训练多个类别，但由于识别结果通过 **S2100** 传输，只有**前 9 个类别**能够有效支持上报。
+我们的 AI 模型可以训练多个类别，但由于识别结果是通过 **S2100** 进行传输，因此只有**前 9 个类别**可以被有效上报。
 :::
 
-### 步骤 1. 从 Roboflow 获取您的数据集
+**步骤 1. 从 Roboflow 获取数据集**
 
-- [创建免费的 Roboflow 账户](https://app.roboflow.com/) 
+- [创建一个免费的 Roboflow 账号](https://app.roboflow.com/) 
 
-- 如果您需要开源数据集，请导航到 [Roboflow Universe](https://universe.roboflow.com/)
+- 如果你需要开源数据集，请访问 [Roboflow Universe](https://universe.roboflow.com/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p1.png" style={{width:800, height:'auto'}}/></div>
 
-- 如果您想使用自己的图片并标注它们以获取数据集，请导航到 [Roboflow](https://app.roboflow.com/) 创建一个**项目**
+- 如果你想使用自己的图片并进行标注以获取数据集，请访问 [Roboflow](https://app.roboflow.com/) 创建一个 **Project**
 
 :::warning note
-使用自己的图片时，请特别注意标签顺序。
-只有前 9 个类别（标签索引 0–8）是有效的，可以被 A1102 识别。
-如果您的数据集包含超过 9 个类别，您必须在导出模型之前通过删除其他类别来仅选择所需的九个类别。
+当使用你自己的图像时，请特别注意标签顺序。
+只有前 9 个类别（标签索引 0–8）是有效的，并且可以被 A1102 识别。
+如果你的数据集包含超过 9 个类别，你必须在导出模型前删除其他类别，仅保留所需的 9 个类别。
 :::
 
-### 步骤 2. 从 Roboflow 导出您的数据集
+**步骤 2. 从 Roboflow 导出数据集**
 
-- 点击 Overview 并检查类别
+- 点击 Overview 并检查类别（classes）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p7.png" style={{width:800, height:'auto'}}/></div>
 
 :::danger note 
-显示的类别顺序对应于标签索引顺序。因此，只有前 9 个类别（标签索引 0–8）可以在 A1102 上正确上传为识别结果。
-如果您的模型包含超过 9 个类别，您必须通过将数据集克隆到您自己的项目中、删除其他标签，然后重新导出数据集来选择您需要的九个类别。
+显示的类别顺序与标签索引顺序一一对应。因此，只有前 9 个类别（标签索引 0–8）才能在 A1102 上被正确上传为识别结果。
+如果你的模型包含超过 9 个类别，你必须通过将数据集克隆到你自己的项目中、删除其他标签，然后重新导出数据集的方式，仅保留你需要的 9 个类别。
 :::
 
 - 在项目中，点击 `Dataset`
@@ -171,25 +171,25 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p5.png" style={{width:500, height:'auto'}}/></div>
 
-- 复制 **Raw URL**，它将在 AI 模型训练过程中使用
+- 复制 **Raw URL**，该链接将在 AI 模型训练过程中使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/TrainModel/p6.png" style={{width:600, height:'auto'}}/></div>
 
-### 步骤 3. 使用数据集训练您的 AI 模型
+**步骤 3. 使用数据集训练你的 AI 模型**
 
-- 按照[模型训练快速入门](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma#training-dataset-exported-model)使用您准备的数据集训练您的 AI 模型。
+- 按照[模型训练快速入门](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma#训练-数据集-导出-模型)使用你准备好的数据集来训练 AI 模型。
 
-- 训练完成后，以 .tflite 格式导出训练好的模型，该模型将用于在设备上部署。
+- 训练完成后，将训练好的模型导出为 .tflite 格式，该文件将用于在设备上进行部署。
 
-### 步骤 4. 上传并刷写自定义 AI 模型 
+**步骤 4. 上传并烧录自定义 AI 模型**
 
-- 打开我们的[平台](https://sensecraft.seeed.cc/ai/home)并在工作区中选择 A1102
+- 通过 **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP A1102`** 进入 SenseCAP A1102 工作空间，或使用此[工作空间直达链接](https://sensecraft.seeed.cc/ai/device/local/37)。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/sensecap_a1102_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
 - 通过串口连接到我们的平台
 
-- 使用 Type-C 线缆将设备连接到您的 PC（确保您连接到上方的 Type-C 端口，即 Himax 串口，如下图所示）。
+- 使用 Type-C 数据线将设备连接到电脑（请确保连接的是上方的 Type-C 接口，即 Himax 串口，如下图所示）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:400, height:'auto'}}/></div>
 
@@ -203,25 +203,25 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture7.png" style={{width:500, height:'auto'}}/></div>
 
-- 配置您的模型信息
+- 配置你的模型信息
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture8.png" style={{width:500, height:'auto'}}/></div>
 
-- `Model File`：有关训练和导出 TFLite 模型的详细说明，请参考此[指南](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/)
+- `Model File`: 关于训练和导出 TFLite 模型的详细说明，请参考此[指南](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/)
 
-- `Object`：与模型标签顺序对应的类别名称（从 0 到 8）。仅支持最多九个类别——任何额外的类别将不会显示。
+- `Object`: 与模型标签顺序（从 0 到 8）对应的类别名称。最多仅支持 9 个类别——任何额外的类别都不会被显示。
 
-- 点击 `Send` 并等待刷写过程
+- 点击 `Send` 并等待烧录过程完成
 
 ## 在 [Seeed Portal](https://sensecap.seeed.cc/portal/#/dashboard) 中的结果分析
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture11.png" style={{width:1000, height:'auto'}}/></div>
 
-- 第一个值是数据上报时间戳
+- 第一个数值是数据上报的时间戳
 
-- 接下来的九个值表示每个类别索引（从 0 到 8）的置信度分数（measurementValue）。
+- 接下来的九个数值表示每个类别索引（从 0 到 8）的置信度分数（measurementValue）。
 
-- 最后一个值包含模型信息，包括与部署的 AI 模型相关的元数据。
+- 最后一个数值携带模型信息，包括与已部署 AI 模型相关的元数据。
 
 ## 在 [TTN](https://eu1.cloud.thethings.network/console/) 中的结果分析
 
@@ -231,17 +231,17 @@ SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI �
 
 - 前九个测量值表示每个类别索引（从 0 到 8）的置信度分数（measurementValue）。
 
-- 第十个测量值包含模型信息，包括与部署的 AI 模型相关的元数据。
+- 第十个测量值携带模型信息，包括与已部署 AI 模型相关的元数据。
 
 ## 常见问题
 
 **问：我可以上传什么类型的自定义模型？**
 
-答：您可以上传扩展名为 .tflite 的模型。您可以按照[模型训练快速入门](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/#training-dataset-exported-model)中的说明训练和导出您自己的模型。
+答：你可以上传扩展名为 .tflite 的模型。你可以按照 [Model training quick start](https://wiki.seeedstudio.com/cn/grove_vision_ai_v2_sscma/#training-dataset-exported-model) 中的说明来训练并导出你自己的模型。
 
 ## **技术支持与产品讨论**
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

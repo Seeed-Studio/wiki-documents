@@ -369,6 +369,37 @@ module.exports = (async () => {
       
       'docusaurus-plugin-image-zoom',
       'docusaurus-plugin-sass',
+      [
+        'docusaurus-plugin-copy-page-button',
+        {
+          enabledActions: ['copy', 'view', 'chatgpt', 'claude', 'gemini'],
+          labels: {
+            button: {
+              label: 'ページをコピー',
+            },
+            copy: {
+              title: 'Markdown としてコピー',
+              description: 'このページの内容を Markdown としてコピーします',
+            },
+            view: {
+              title: 'Markdown で表示',
+              description: 'このページの内容を Markdown 形式で表示します',
+            },
+            chatgpt: {
+              title: 'ChatGPT で開く',
+              description: 'このページの内容をコンテキストとして ChatGPT で開きます',
+            },
+            claude: {
+              title: 'Claude で開く',
+              description: 'このページの内容をコンテキストとして Claude で開きます',
+            },
+            gemini: {
+              title: 'Gemini で開く',
+              description: 'このページの内容をコンテキストとして Gemini で開きます',
+            },
+          },
+        },
+      ],
     ],
 
     themeConfig:
@@ -597,15 +628,22 @@ module.exports = (async () => {
               className: 'navbar_doc_right_items',
             },
             {
-              to: 'https://sensecraft.seeed.cc/ai/#/home',
-              label: 'SenseCraft AI',
+              type: 'dropdown',
+              label: 'AIプラットフォーム',
               position: 'right',
-              className: 'navbar_doc_right_items',
-            },
-            {
-              href: 'https://sensecraft.seeed.cc/ai/#/home',
-              position: 'right',
-              className: 'header-SSCMA',
+              className: 'navbar_doc_right_items ai-platform-dropdown',
+              items: [
+                {
+                  label: 'SenseCraft AI',
+                  to: 'https://sensecraft.seeed.cc/ai/#/home',
+                  className: 'ai-platform-menu-item sensecraft-ai-menu-item',
+                },
+                {
+                  label: 'reComputer AI Lab',
+                  to: 'https://sensecraft.seeed.cc/ai-lab',
+                  className: 'ai-platform-menu-item recomputer-ai-lab-menu-item',
+                },
+              ],
             },
             {
               href: 'https://github.com/Seeed-Studio/wiki-documents',

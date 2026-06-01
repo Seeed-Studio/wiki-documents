@@ -8,7 +8,7 @@ last_update:
   date: 06/29/2025
   author: Allen
 createdAt: '2025-07-16'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/
 ---
 
@@ -140,7 +140,7 @@ If your TRMNL kit far away from your router, you can move the antenna outside th
 
 ### Explore Detailed Guides
 
-#### 1. [TRMNL BYOD Ecosystem Tutorial](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
+#### 1. [TRMNL BYOD Ecosystem Tutorial](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
 
 Discover how to use the TRMNL BYOD platform with 375+ plugins, including no-code dashboard creation for your work and life.
 

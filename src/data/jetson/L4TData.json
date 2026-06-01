@@ -43,11 +43,11 @@
     {
         "product": "j4011mini",
         "l4t": "36.3.0",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz",
-        "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBKXi7tT-0STr-_p6ke0G5gAXRAlGgufMclpjSexhderiw?e=YISEtC",
+        "mirrorlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBKXi7tT-0STr-_p6ke0G5gAXRAlGgufMclpjSexhderiw?e=YISEtC",
         "filename": "mfi_recomputer-mini-orin-nx-8g-j40-6.0-36.3.0.tar.gz",
         "foldername": "mfi_recomputer-mini-orin",
-        "sha256": "3A96643CF7CF8D765FD7B1B43CA7BEEAAD97AF6094E073CE392AF6E1BAD45B91"
+        "sha256": "3956B968F2BFB9FDF37D952E83DDB703980C813156919BC367CA5E23BBDEC89F"
     },
     {
         "product": "j4012mini",
@@ -520,38 +520,38 @@
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.4.3 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcWxzMVxULFJoPMMzcb2OU4B0TrE5PUoP-3-9uh9LFgA4g?e=oAUYmS",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo",
         "mirrorlink": "",
-        "filename": "mfi_reserver-agx-orin-64g-j501-6.2-36.4.3-2025-04-02.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2026-05-06.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-6.2-36.4.3",
-        "sha256": "B6A9F41B8B42060D19F811B718E4B71FCBE699BB9EC7A50B4B24DF205003111B"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.4.3 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQaWP2i_eNlOuzhWEQYy8YkBvKksE58swLgIqCXOO4m-kg?e=D95cXx",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCcNYUtYA0RTL2GQwXFv35rAdWnduxknLXrUtQNxklpIZo",
         "mirrorlink": "",
-        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2025-04-02.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3-2026-05-06.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-gmsl-6.2-36.4.3",
-        "sha256": "AA04EFB99374DCDC89A57C039FA4E1FF5C9371B22F8ED83612AC4C799CCB2640"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.3.0 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWbP7xmg-fRAs7N-7iL42QMBaRcQvV23IITvt-uC4p2rUg?e=XZmnzC",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClLB_mdGMPQpqEw1jxTRuFAYqxZRQJZIAtiYt7-clcocI",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fszseeedstudio%5Fpartner%5Fonmschina%5Fcn%2FDocuments%2FJetson%2DImage%2FreServer%2DJ501%2Fjetpack6%2Fmfi%5Freserver%2Dagx%2Dorin%2D64g%2Dj501%2D6%2E0%2D36%2E3%2E0%2D2024%2D09%2D19%2Etar%2Egz&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fszseeedstudio%5Fpartner%5Fonmschina%5Fcn%2FDocuments%2FJetson%2DImage%2FreServer%2DJ501%2Fjetpack6&ga=1",
-        "filename": "mfi_reserver-agx-orin-64g-j501x-jp6.0-36.3.0-2024-09-19.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.0-36.3.0-2026-04-15.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-6.0-36.3.0",
-        "sha256": "4077631986A66EB3AF5FBF4FF2FBDBCCD07E4DC1AA4076414EB1F4640AF72451"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "36.3.0 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUK5fwDqq0hNgcnyXg_-qXUBa9qnRJQ0AXdcInMIJWtbZg?e=iFVAAl",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQClLB_mdGMPQpqEw1jxTRuFAYqxZRQJZIAtiYt7-clcocI",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EUmpL5LNJDRLjoC6oQg6Vv4BgQ9eA4MUl4yE43fycz667w?e=Xw5nga",
-        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-jp6.0-36.3.0-2024-09-19.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-6.0-36.3.0-2026-04-15.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-gmsl-6.0-36.3.0",
-        "sha256": "8DCFF0FFBA81B756B0C62E50F4A106B44116CC8171C05F48A328DE594D6A4CD9"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
@@ -808,20 +808,20 @@
     {
         "product": "j501mini-agx-orin-64g",
         "l4t": "36.4.4 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDxBYYGqIfaSZqJT3uPt0alAa47BjjqCGvXWhD5tBsKx1M?e=3SW4Jf",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAUQ4ithrVMQLSE274ftNcLAdScXb2OFE8LXfabvKzaGS8",
         "mirrorlink": "",
-        "filename": "mfi_recomputer-mini-agx-orin-64g-j501-6.2.1-36.4.4-2025-09-08.tar.gz",
+        "filename": "mfi_recomputer-mini-agx-orin-64g-j501-6.2.1-36.4.4-2026-02-11.tar.gz",
         "foldername": "mfi_recomputer-orin-robotics-j501",
-        "sha256": "f0efee5f265dbaef49dc14d517b269e7f6582ff9977d9193d377966f36408ec3"
+        "sha256": "F95E91C3BFB00D50EB999383F85949B4"
     },
     {
         "product": "j501mini-agx-orin-32g",
         "l4t": "36.4.4 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBohA1Z3GuSSJ7tFOQU8v22AYu8NNk9AS-1Cne78jOnSHw?e=dejuH9",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBvVrfoK43HRL2Y3PDLtz8wAUzka-auuvvWTx0J4QCrtwc",
         "mirrorlink": "",
-        "filename": "mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2025-09-08.tar.gz",
+        "filename": "mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz",
         "foldername": "mfi_recomputer-orin-robotics-j501",
-        "sha256": "0a97cbb6d708776bd97608594c60c34208b5d5dc6efbfc5553edd9c5a95802f6"
+        "sha256": "8FA6E750C2C21678168DAE377E95CE6C"
     },
     {
         "product": "j501-agx-orin-64g",

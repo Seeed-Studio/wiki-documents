@@ -14,7 +14,7 @@ last_update:
   date: 08/16/2024
   author: Frank
 createdAt: '2024-08-21'
-updatedAt: '2025-09-02'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
@@ -169,21 +169,21 @@ The device info, more info please check the follow table <br />
 
 #### **Bind to SenseCraft AI platform**
 
-SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device, only if you need to download more AI models you need to bind the device to the [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home), and you can remove the device from the platform once downloaded.
+SenseCraft AI for Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device. Only if you need to download more AI models do you need to bind the device to the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) — you can remove the device once downloaded.
 
-1. Visist [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home)<br />
-2. Register with a valid email address. The SenseCraft-AI Model Zoo account is the same as the SenseCAP cloud account, if you already have a SenseCAP Cloud account, you can log in directly.
+1. Visit [SenseCraft AI](https://sensecraft.seeed.cc/ai).<br />
+2. Register with a valid email address. The SenseCraft AI account is the same as the SenseCAP Cloud account; if you already have one, you can log in directly.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/49.png)
 
-3. Visit "Device Workspace" and click “Add Device” button.<br />
+3. Navigate to **`Models`** > **`Workspace`** > **`NVIDIA Jetson`** and click **`Add Device`**.<br />
 4. Enter a device custom name and get the bind code from device.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/50.png)
 
 5. Back to device‘s SenseCraft AI application. Click "Bind to SenseCraft AI platform",and then application will display bind code and temporary name.
 
-- Bind Code: enter the correct and valid bind code on [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home) to finish binding the device.<br />
+- Bind Code: enter the correct and valid bind code on the [SenseCraft AI platform](https://sensecraft.seeed.cc/ai) to finish binding the device.<br />
 - Temporary Name: if the bind code is duplicated then you need to enter the correct temporay name.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/51.png)

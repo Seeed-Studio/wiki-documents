@@ -15,9 +15,9 @@ last_update:
   author: LiuJunjie
 translation:
   skip:
-    - - zh-CN
+    - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-20'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 
@@ -91,6 +91,10 @@ Seeed Studio tutorials are strictly updated according to official documentation.
 4. **Nvidia Platform Compatible**
    Supports deployment via the reComputer Mini J4012 Orin NX 16GB platform.
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/PoMv3mw8SGk" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Initial System Environment
 
 **For Ubuntu x86:**
@@ -105,6 +109,10 @@ Seeed Studio tutorials are strictly updated according to official documentation.
   - Torch 2.3+
 
 ## Install LeRobot
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/mWrWeqAPDSY" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 You need to install pytorch, torchvision and other environments based on your CUDA version.
 
@@ -192,8 +200,12 @@ conda install ffmpeg -c conda-forge
 (Skip this step for PC) For Jetson JetPack 6.0+ devices (please ensure you have installed Pytorch-gpu and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) step 5 before executing this step):
 
 ```bash
-pip install opencv-python==4.10.0.84  # Install specific OpenCV version
-pip install numpy==1.26.0  # This version should be compatible with torchvision
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies via conda, for Jetson Jetpack 6.0+ only
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Install specific OpenCV version using pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This version must be compatible with torchvision
 ```
 
 ### 7. Check Pytorch and Torchvision
@@ -216,6 +228,10 @@ If the output is False, you need to reinstall Pytorch and Torchvision according 
 
 ## Calibrate the Robotic Arm
 
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/v8Ek1Ad1VWo" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 Next, you need to connect the power supply and data cable to your reBot B601-DM robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one reBot B601-DM robot to work on another. If you need to recalibrate the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
 
 First, you need to grant interface permissions by running the following commands:
@@ -227,10 +243,20 @@ sudo chmod 666 /dev/ttyACM*  # Follower arm (serial bridge)
 
 ### Calibrate the Follower Arm
 
-B601-DM will automatically calibrate once each time you execute a LeRobot-related program in this wiki.
-What you need to do is ensure that before starting, place the B601-DM in the position shown in the figure (gripper fully closed).
+B601-DM only needs to be calibrated once after assembly. Here is the calibration command. Refer to the figure for the zero position (gripper fully closed).
+
+```bash
+sudo chmod 666 /dev/ttyACM*  # follower arm (serial bridge)
+
+lerobot-calibrate \
+    --robot.type=seeed_b601_dm_follower \
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=follower1 \
+    --robot.can_adapter=damiao
+```
+
   <div align="center">
-      <img width={800} 
+      <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg" />
   </div>
 
@@ -289,6 +315,10 @@ python ./lerobot-teleoperator-rebot-arm-102/examples/read_raw_angles.py \
 </details>
 
 ## Teleoperate
+
+:::danger
+During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
+:::
 
 First grant permissions to the serial ports:
 ```bash
@@ -364,7 +394,13 @@ If you only use RealSense:
 pip install -e ".[realsense]"
 ```
 
-### 3. Detect Cameras
+### 3. Grant Permissions
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detect Cameras
 
 ```bash
 lerobot-find-cameras realsense
@@ -377,7 +413,7 @@ This step will output:
 - USB information
 - Default stream configuration
 
-### 4. RealSense Example
+### 5. RealSense Example
 
 Dual RealSense test:
 
@@ -438,7 +474,7 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. Parameter Notes
+### 6. Parameter Notes
 
 - `depth_alpha` controls the scaling factor of the depth image and can be adjusted based on the display result and target distance range.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` to improve overall stability.
@@ -467,8 +503,6 @@ providing synchronized RGB and depth streams with precise depth-to-color alignme
 </div>
 
 Gemini 336 is a new member of the Gemini 330 series. It inherits the strong depth performance of Gemini 335 and further improves depth imaging quality in reflective indoor areas, dark regions in high-dynamic scenes, and bright outdoor environments. For robotics applications, it can provide more stable, high-quality depth data for tasks such as perception, localization, and manipulation.
-
-- 🚀 Step 1: Install Orbbec SDK dependencies
 
 ### 1. Switch to the Camera Branch
 
@@ -499,7 +533,26 @@ If you only use Orbbec:
 pip install -e ".[orbbec]"
 ```
 
-### 4. Orbbec Example
+### 3. Grant Permissions
+
+```bash
+sudo chmod a+rw /dev/bus/usb/*/*
+```
+
+### 4. Detect Cameras
+
+```bash
+lerobot-find-cameras orbbec
+```
+
+This step will output:
+
+- Camera model
+- Serial number
+- USB information
+- Default stream configuration
+
+### 5. Orbbec Example
 
 
 Single Orbbec test:
@@ -540,13 +593,13 @@ lerobot-teleoperate \
     --display_data=true
 ```
 
-### 5. Parameter Notes
+### 6. Parameter Notes
 
 - `depth_alpha` controls the scaling factor of the depth image. A good starting point is `0.2`, then you can fine-tune it based on the display result.
 - If you connect three or more depth cameras, it is recommended to reduce `fps` to `15` for better stability.
 - It is recommended to keep the resolution at `640x480` for more stable display and data transfer.
 
-### 6. Common Issues
+### 7. Common Issues
 
 If you see the following error:
 
@@ -638,6 +691,11 @@ lerobot-teleoperate \
 ```
 
 ## Dataset Collection
+<!-- vidio todo -->
+
+:::danger
+During teleoperation, if the master-slave robotic arm experiences power disconnection, poor power contact, or signal line detachment, you must first stop the program code and return the robotic arm to its home zero position. Only then reconnect the power supply and restart the program. This prevents data disorder from causing robotic arm runaway and potential safety hazards.
+:::
 
 <details>
 

@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54L15 Sense のピン多重化
+title: Seeed Studio XIAO nRF54L15 Sense によるピン多重化
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
@@ -10,46 +10,78 @@ keywords:
 last_update:
   date: 7/2/2025
   author: Jason
-createdAt: '2025-09-11'
-updatedAt: '2025-09-29'
+createdAt: '2025-07-28'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
-使いやすさのため、以下のピン多重化の例はすべて **PlatformIO** で実行されます。[XIAO nRF54L5](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/) の設定と使用ガイドについては、このリンクをクリックしてください。
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+使いやすさのために、以下のピン多重化の例はすべて **PlatformIO** 上で行います。[XIAO nRF54L5](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/) の設定および使用方法ガイドについては、このリンクをクリックしてください。
 
 :::tip
-VS Code をベースに、nRF Connect SDK で以下のケースを使用したい場合は、提供された接続を参照し、app.overlay ファイルを追加して prj.conf の内容を変更してください。
+VS Code をベースとして、nRF Connect SDK 上で以下のケースを使用したい場合は、提示された接続を参照し、`app.overlay` ファイルを追加して `prj.conf` 内の内容を変更してください。
 
-[XIAO nRF54L15 オーバーレイファイルの追加と conf ファイルの変更](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+[XIAO nRF54L15 で overlay ファイルを追加し conf ファイルを変更する](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
 
 :::
 
 ## オンボードキー
 
-XIAO nRF54L15(Sense) には、デバイスの動作とファームウェアプログラミングにおいて重要な役割を果たす2つの重要な物理ボタンが搭載されています：**リセットボタン** と **ユーザーボタン** です。これらの機能を理解することは、日常使用とファームウェア更新において不可欠です。
+XIAO nRF54L15(Sense) には、デバイスの動作およびファームウェア書き込みにおいて重要な役割を果たす 2 つの物理ボタン、**Reset ボタン** と **User ボタン** が搭載されています。これらの機能を理解することは、日常的な使用やファームウェア更新のために不可欠です。
 
 ---
 
-### リセットボタン
+## ハードウェア概要
 
-リセットボタンは、デバイスでハードリセット操作を実行するために使用されます。
+<Tabs>
+<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
+
+### XIAO nRF54L15 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+
+</TabItem>
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
+
+### XIAO nRF54L15 Sense 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 Sense 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
+
+### Reset ボタン
+
+Reset ボタンは、デバイスに対してハードリセット操作を行うために使用されます。
 
 - **機能：**
-  - **強制再起動：** このボタンを押すと、現在のデバイス操作がすべて即座に中断され、電源サイクルと同様に再起動します。
-  - **スタックしたプログラムの解決：** デバイスで実行中のプログラムがクラッシュ、無限ループに入る、または応答しなくなった場合、リセットボタンを押すことが正常な動作状態に強制的に戻す最も迅速な方法です。
-  - **ファームウェアへの影響なし：** リセット操作は、デバイスにすでにプログラムされているファームウェアを消去または変更しません。現在実行中のアプリケーションを単純に再起動するだけです。
+  - **強制再起動：** このボタンを押すと、現在のすべてのデバイス動作が即座に中断され、電源の入れ直しと同様に再起動が行われます。
+  - **フリーズしたプログラムの解消：** デバイス上で動作しているプログラムがクラッシュしたり、無限ループに入ったり、応答しなくなった場合、Reset ボタンを押すことが、通常動作状態に強制的に戻す最も手早い方法です。
+  - **ファームウェアへの影響なし：** リセット操作によって、すでにデバイスに書き込まれているファームウェアが消去されたり変更されたりすることはありません。現在実行中のアプリケーションを単に再起動するだけです。
 
 ---
 
-### ユーザーボタン
+### User ボタン
 
-ユーザーボタンは、アプリケーション内で柔軟な制御を提供する多用途でプログラム可能な入力です。
+User ボタンは、多用途でプログラム可能な入力であり、アプリケーション内で柔軟な制御を提供します。
 
 **機能：**
 
-- カスタマイズ可能な入力：リセットボタンの固定機能とは異なり、ユーザーボタンのアクションは、プログラムされたファームウェアによって完全に定義されます。
+- カスタマイズ可能な入力：Reset ボタンの固定機能とは異なり、User ボタンの動作は、あなたが作成したファームウェアによって完全に定義されます。
 
-- イベントトリガー：特定のイベントをトリガーしたり、異なる機能を制御したり、アプリケーションの汎用入力として機能するようにプログラムできます。
+- イベントトリガ：特定のイベントをトリガしたり、さまざまな機能を制御したり、アプリケーション用の汎用入力として動作させるようにプログラムできます。
 
 ## デジタル
 
@@ -69,17 +101,17 @@ XIAO nRF54L15(Sense) には、デバイスの動作とファームウェアプ�
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
@@ -89,7 +121,7 @@ XIAO nRF54L15(Sense) には、デバイスの動作とファームウェアプ�
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-gpio" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -163,17 +195,17 @@ int main(void)
 
 `static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(DT_ALIAS(sw1), gpios);`
 
-- このコード行は、Zephyr のデバイスツリーシステムを利用して、sw1 という名前のエイリアスを通じてボタンの GPIO デバイス情報を取得します。このアプローチにより、コードが特定のハードウェアピンから分離され、移植性が向上します。
+- このコード行は、Zephyr のデバイスツリーシステムを利用して、`sw1` というエイリアス名を通じてボタンの GPIO デバイス情報を取得します。この方法により、コードは特定のハードウェアピンから切り離され、移植性が向上します。
 
 `static const struct gpio_dt_spec relay = GPIO_DT_SPEC_GET(DT_ALIAS(relay0), gpios);`
 
-- 同様に、このコード行は relay0 という名前のリレー GPIO デバイスの情報を取得します。
+- 同様に、このコード行は `relay0` という名前のリレー GPIO デバイスに関する情報を取得します。
 
-**デバイス準備状態チェック**
+**デバイス準備状態の確認**
 
-`if (!gpio_is_ready_dt(&button))` と `if (!gpio_is_ready_dt(&relay))`
+`if (!gpio_is_ready_dt(&button))` および `if (!gpio_is_ready_dt(&relay))`
 
-- プログラムが操作を開始する前に、コードはボタンとリレーデバイスが正常に初期化され、準備ができているかどうかをチェックします。これは Zephyr ドライバープログラミングのベストプラクティスであり、デバイスが適切に設定されていない場合にプログラムがクラッシュするのを防ぎます。
+- プログラムが何らかの操作を開始する前に、コードはボタンとリレーのデバイスが正常に初期化され、使用可能な状態かどうかを確認します。これは Zephyr ドライバプログラミングにおけるベストプラクティスであり、デバイスが正しく設定されていない場合にプログラムがクラッシュするのを防ぎます。
 
 **ピン設定**
 
@@ -183,21 +215,21 @@ int main(void)
 
 `gpio_pin_configure_dt(&relay, GPIO_OUTPUT_ACTIVE);`
 
-- このコード行は、リレーの GPIO ピンを出力モードに設定します。`GPIO_OUTPUT_ACTIVE` フラグは通常、設定後にピンがアクティブになることを示し、リレーを制御する準備をします。
+- このコード行は、リレーの GPIO ピンを出力モードに設定します。`GPIO_OUTPUT_ACTIVE` フラグは通常、リレーを制御する準備として、設定後にピンがアクティブになることを示します。
 
 **メインループロジック**
 
-`while (1):` コードは無限ループに入り、以下のアクションを継続的に実行します。
+`while (1):` コードは無限ループに入り、以下の動作を継続的に実行します。
 
 `int button_state = gpio_pin_get_dt(&button);:` 各ループで、プログラムはボタンピンの現在のレベル状態を読み取ります。
 
-`if (button_state == 0):` このロジックは、ボタンが押されているかどうかをチェックします。多くの回路設計では、ボタンを押すとピンがグランド（GND）に接続され、レベル 0（つまり、ロー）になります。
+`if (button_state == 0):` このロジックはボタンが押されているかどうかを確認します。多くの回路設計では、ボタンが押されるとピンがグラウンド（GND）に接続され、その結果レベルが0（つまり Low）になります。
 
-`gpio_pin_set_dt(&relay, 1);:` ボタンの状態が 0（押されている）の場合、リレーピンを 1（ハイ）に設定し、リレーを閉じて接続されているデバイス（例：ランプ）をオンにします。
+`gpio_pin_set_dt(&relay, 1);:` ボタン状態が0（押されている）の場合、リレーピンが1（High）に設定され、リレーが閉じて接続されているデバイス（例：ランプ）の電源がオンになります。
 
-`else:` ボタンが押されていない場合（状態が 1）、`gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを 0（ロー）に設定し、リレーを閉じて接続されているデバイスをオフにします。
+`else:` ボタンが押されていない（状態が1）場合、`perform gpio_pin_set_dt(&relay, 0);` を実行してリレーピンを0（Low）に設定し、リレーを閉じて接続されているデバイスの電源をオフにします。
 
-`k_msleep(10);:` コードは各ループの最後に 10 ミリ秒の短い遅延を追加して、CPU がビジー状態になることを避けます。これは簡単なアンチジッター処理です。これは、ボタンの物理的なジッターによる複数のトリガーを防ぎ、消費電力も削減する簡単なアンチジッター処理です。
+`k_msleep(10);:` このコードは、CPU がビジー状態になることなどを避けるために、各ループの最後に10ミリ秒の短いディレイを追加します。これは簡単なチャタリング防止処理です。ボタンの物理的なチャタリングによる複数回のトリガーを防ぐとともに、消費電力も削減します。
 
 ### 結果グラフ
 
@@ -205,7 +237,7 @@ int main(void)
 
 ## アナログ
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -216,29 +248,29 @@ int main(void)
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/10.jpg" style={{width:500, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/10.jpg" style={{width:500, height:'auto'}}/></div></td>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:500, height:'auto'}}/></div></td>
  </tr>
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -248,7 +280,7 @@ int main(void)
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-pwm" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -366,71 +398,72 @@ int main(void)
 }
 ```
 
-**ADC（アナログ-デジタル変換器）とPWM（パルス幅変調）デバイス設定**
+**ADC（アナログ-デジタルコンバータ）および PWM（パルス幅変調）デバイス設定**
 
 - pot_pwm_example ログモジュール：
 
-  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL)：これはpot_pwm_exampleという名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定に設定します。これによりデバッグが容易になります。
+  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): これは pot_pwm_example という名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定にします。これによりデバッグが容易になります。
 
-- ADC設定：
+- ADC 設定：
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif：このプリプロセッサディレクティブは、ADCチャンネル定義を含む有効なオーバーレイファイルが存在することを確認するDevice Treeチェックです。これにより、ユーザーは特定のハードウェアに対して正しい設定を提供する必要があります。
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: このプリプロセッサディレクティブは、ADC チャンネル定義を含む有効なオーバーレイファイルが存在することを保証する Device Tree チェックです。これにより、ユーザーは特定のハードウェアに対して正しい設定を提供することが必須となります。
 
-  - static const struct adc_dt_spec adc_channels[];：このコードの部分は、ZephyrのDevice Treeを活用して、設定されたすべてのADCチャンネルの情報を自動的に取得します。このアプローチにより、コードは柔軟性があり、手動設定変更なしに異なるハードウェア間で移植可能になります。
+  - static const struct adc_dt_spec adc_channels[];: このコード部分は Zephyr の Device Tree を利用して、設定されたすべての ADC チャンネルの情報を自動的に取得します。このアプローチにより、コードは異なるハードウェア間で手動の設定変更なしに柔軟かつ移植性の高いものになります。
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1：ポテンショメータが接続されているadc_channels配列内のチャンネルを指定するマクロが定義されています。
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1: adc_channels 配列のどのチャンネルにポテンショメータが接続されているかを指定するマクロを定義します。
 
-- PWM設定：
+- PWM 設定：
 
-  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));：この行は、Device Treeからエイリアスpwm_ledのPWMデバイス情報を取得します。これは、ハードウェアデバイスを検索および参照するための標準的なZephyrの手法です。
+  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: この行は Device Tree からエイリアス pwm_led に対する PWM デバイス情報を取得します。これはハードウェアデバイスを検索・参照するための、Zephyr における標準的な方法です。
 
-  - #define PWM_PERIOD_NS 1000000UL：これはPWM信号周期を1ミリ秒（1,000,000ナノ秒）として定義し、これは1 kHzの周波数に対応します。この周波数は、目に見えるちらつきを防ぐのに十分高いため、LED調光に適しています。
+  - #define PWM_PERIOD_NS 1000000UL: これはPWM信号の周期を1ミリ秒（1,000,000ナノ秒）として定義しており、1kHzの周波数に相当します。この周波数は、LEDの調光に適しており、ちらつきが目に見えない程度に十分高くなっています。
 
 **初期化とセットアップ**
 
-- ログ情報：
+- ログ情報:
 
-  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");：プログラムの開始時に情報ログメッセージが出力され、例が開始されたことをユーザーに通知します。
+  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: プログラムの開始時に情報ログメッセージを出力し、このサンプルが開始されたことをユーザーに通知します。
 
-- ADC初期化：
+- ADC の初期化:
 
-  - !adc_is_ready_dt()：ADCデバイスを使用する前に、デバイスが準備完了であることを確認するチェックが実行されます。デバイスが準備できていない場合、エラーがログに記録され、プログラムが終了します。
+  - !adc_is_ready_dt(): ADCデバイスを使用しようとする前に、そのデバイスが使用可能かどうかを確認します。デバイスが準備できていない場合はエラーが記録され、プログラムは終了します。
 
-  - adc_channel_setup_dt()：この関数は、ポテンショメータに接続された特定のADCチャンネルを、その解像度とゲインを含めて設定します。
+  - adc_channel_setup_dt(): この関数は、ポテンショメータに接続された特定のADCチャネルを設定し、その分解能やゲインなどを構成します。
 
-- PWM初期化：
+- PWM の初期化:
 
-  - !device_is_ready(led.dev)：ADCと同様に、この行はPWMデバイスが準備完了かどうかをチェックします。準備できていない場合、エラーがログに記録され、プログラムが終了します。
+  - !device_is_ready(led.dev): ADCと同様に、この行ではPWMデバイスが準備できているかどうかを確認します。準備できていない場合はエラーが記録され、プログラムは終了します。
 
-  - LOG_INF(...)：PWM周期と周波数情報が出力され、ユーザーが設定を確認できるようになります。
+  - LOG_INF(...): PWMの周期と周波数の情報を出力し、ユーザーが設定内容を確認できるようにします。
 
-- ADCシーケンス設定：
+- ADC シーケンスの設定:
 
-  - struct adc_sequence sequence：単一のADC変換操作を記述するためのadc_sequence構造体が定義されます。これは結果を格納するバッファ（adc_raw_value）、そのサイズ（sizeof(adc_raw_value)）、および使用するADC解像度を指定します。
+  - struct adc_sequence sequence: 単一のADC変換処理を記述するために adc_sequence 構造体を定義します。結果を格納するバッファ（adc_raw_value）、そのサイズ（sizeof(adc_raw_value)）、および使用するADC分解能を指定します。
 
 **メインループ**
-コードの中核ロジックは無限のwhile (1)ループ内で実行されます：
+コードの中核となるロジックは、無限の while (1) ループ内で実行されます:
 
-- ADC読み取り：
-  - adc_sequence_init_dt(): ADCシーケンスが初期化され、各読み取りで正しい設定が使用されることを保証します。
+- ADC 読み取り:
 
-  - adc_read(): これはADC変換をトリガーして、ポテンショメータからアナログ値を読み取ります。読み取りが失敗した場合、エラーがログに記録され、プログラムは100ミリ秒間一時停止してから続行します。
+  - adc_sequence_init_dt(): 各読み取りで正しい設定が使用されるように、ADCシーケンスを初期化します。
 
-  - int sensor_value = adc_raw_value;: 生のADC値がsensor_value変数に割り当てられます。
+  - adc_read(): ポテンショメータからアナログ値を読み取るためにADC変換をトリガーします。読み取りに失敗した場合はエラーが記録され、プログラムは100ミリ秒一時停止してから処理を続行します。
 
-- ADC値のPWMデューティサイクルへのマッピング:
+  - int sensor_value = adc_raw_value;: 生のADC値を sensor_value 変数に代入します。
 
-  - uint32_t max_adc_raw: これは可能な最大生ADC値を計算します。
+- ADC 値を PWM デューティ比にマッピング:
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これがコアマッピングロジックです。生ADC値（sensor_value）をPWM周期（PWM_PERIOD_NS）の範囲に比例してスケールし、LEDの明るさを調整するデューティサイクル値を取得します。
+  - uint32_t max_adc_raw: 取り得る生のADC値の最大値を計算します。
 
-- PWMデューティサイクルの設定:
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: これがマッピング処理の中核です。生のADC値（sensor_value）をPWM周期（PWM_PERIOD_NS）の範囲に比例してスケーリングし、LEDの明るさを調整するためのデューティ比の値を算出します。
 
-  - pwm_set_dt(): この関数は新しく計算されたデューティサイクル（output_duty_ns）をPWMデバイスに適用し、LEDの明るさを即座に変更します。
+- PWM デューティ比の設定:
+
+  - pwm_set_dt(): この関数は、新たに計算されたデューティ比（output_duty_ns）をPWMデバイスに適用し、LEDの明るさを即座に変更します。
 
 - 遅延:
 
-  - k_msleep(100): プログラムは各ループ後に100ミリ秒間一時停止します。これはADC読み取りとPWM更新の頻度を制御し、過度のCPU負荷を防ぎ、安定したユーザーエクスペリエンスを提供します。
+  - k_msleep(100): 各ループの後にプログラムを100ミリ秒一時停止します。これによりADC読み取りとPWM更新の頻度を制御し、CPU負荷の過剰な増加を防ぐとともに、安定したユーザー体験を提供します。
 
 ### 結果グラフ
 
@@ -438,7 +471,7 @@ int main(void)
 
 ## UART
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
@@ -453,12 +486,12 @@ int main(void)
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -469,7 +502,7 @@ int main(void)
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-gps" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -961,67 +994,67 @@ static Coordinates transform(Coordinates gps)
 
 - `gps_app` ログモジュール：
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` これは gps_app という名前のログモジュールを登録し、そのログレベルを INFO に設定します。これにより、プログラムは Zephyr のログシステムを通じて情報を出力でき、デバッグと監視に役立ちます。
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` これは gps_app という名前のログモジュールを登録し、そのログレベルを INFO に設定します。これにより、Zephyr のロギングシステムを通じて情報を出力できるようになり、デバッグやモニタリングに役立ちます。
 
 - 型定義とマクロ：
 
- -`UBYTE`, `UWORD`, `UDOUBLE:`これらは、変数の期待されるサイズを明確にすることでコードの可読性を向上させるカスタム符号なし整数型エイリアスです。
+ -`UBYTE`, `UWORD`, `UDOUBLE:`これらは、変数の想定サイズを明確にすることでコードの可読性を向上させる、符号なし整数のカスタム型エイリアスです。
 
-- `SENTENCE_SIZE, BUFFSIZE:` これらは NMEA センテンスと大きなデータバッファを格納するために使用されるバッファの固定サイズを定義します。
+- `SENTENCE_SIZE, BUFFSIZE:` これらは、NMEA センテンスやより大きなデータバッファを格納するために使用されるバッファの固定サイズを定義します。
 
-- `HOT_START, SET_NMEA_OUTPUT:`などのマクロ：これらのマクロは、L76X GPS モジュールに送信される様々な NMEA プロトコルコマンドを定義し、動作モード、出力頻度、ボーレートなどを設定します。
+- `HOT_START, SET_NMEA_OUTPUT:`のようなマクロ：これらのマクロは、L76X GPS モジュールに送信されるさまざまな NMEA プロトコルコマンドを定義し、その動作モード、出力周波数、ボーレートなどを設定します。
 
 - 構造体定義：
 
   - `GNRMC:` この構造体は、GNRMC（GPS Recommended Minimum Specific data）NMEA センテンスから解析された主要情報（経度、緯度、時刻、ステータス、方位など）を格納するために使用されます。
 
-  - `Coordinates:` 地理座標の経度と緯度を格納するシンプルな構造体です。
+  - `Coordinates:` 地理座標の経度と緯度を格納するためのシンプルな構造体です。
 
 - グローバル変数と定数：
 
-  - `buff_t:` 生の UART データを格納するために使用される BUFFSIZE サイズのグローバルバッファです。
+  - `buff_t:` BUFFSIZE サイズのグローバルバッファで、生の UART データを格納するために使用されます。
 
- -` GPS: `解析された GPS データを保持するために使用されるグローバル GNRMC 構造体インスタンスです。
+ -` GPS: `解析された GPS データを保持するためのグローバルな GNRMC 構造体インスタンスです。
 
 - `uart_dev:` UART 通信に使用される UART デバイス構造体へのポインタです。
 
-- `new_gnrmc_available:` 新しい有効な GNRMC センテンスが受信されたときに true に設定される volatile ブール型フラグで、メインループに新しいデータが処理可能であることを通知します。
+- `new_gnrmc_available:` 新しい有効な GNRMC センテンスを受信したときに true に設定される volatile なブールフラグで、メインループに新しいデータが処理可能であることを通知します。
 
 - `uart_callback() 関数:`
 
   - これは UART がデータを受信したときにトリガーされる UART 割り込みコールバック関数です。
 
-  - この関数は UART FIFO からバイト単位でデータを読み取り、改行文字 \n が検出されたときに完全なセンテンスとしてデータを処理します。
+  - この関数は UART FIFO を 1 バイトずつ読み取り、改行文字 \n が検出されたときにデータを 1 つの完全なセンテンスとして処理します。
 
 **メイン関数 main()**
 
 - システム初期化：
 
-  - `nrfx_power_constlat_mode_request():` 電源管理がリアルタイム動作を妨げないように、一定レイテンシモードを要求します。
+  - `nrfx_power_constlat_mode_request():` 電源管理がリアルタイム動作に干渉しないように、一定レイテンシモードを要求します。
 
-  - `uart_dev = DEVICE_DT_GET:` UART デバイスハンドルを取得し、device_is_ready() を使用してデバイスが準備完了かどうかを確認します。
+  - `uart_dev = DEVICE_DT_GET:` UART デバイスハンドルを取得し、device_is_ready() を使用してデバイスが使用可能かどうかを確認します。
 
-  - `uart_irq_callback_user_data_set()`と `uart_irq_rx_enable():`これらは UART 受信割り込みを設定・有効化し、uart_callback 関数を割り込みハンドラとして登録して GPS データの非同期受信を確保します。
+  - `uart_irq_callback_user_data_set()`と `uart_irq_rx_enable():`これらは UART 受信割り込みを設定および有効化し、uart_callback 関数を割り込みハンドラとして登録して GPS データの非同期受信を実現します。
 
-- GPS モジュール初期化：
+- GPS モジュールの初期化：
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):`GPS モジュールが GNRMC などの指定された NMEA センテンスのみを出力するように設定するコマンドを送信し、不要なデータトラフィックを削減します。
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):`GNRMC など、指定した NMEA センテンスのみを出力するように GPS モジュールを設定するコマンドを送信し、不要なデータトラフィックを削減します。
 
  -` L76X_Send_Command(SET_POS_FIX_1S): `GPS モジュールの位置更新頻度を 1 秒に設定します。
 
 - メインループ：
 
-  - ループは無限に実行され、new_gnrmc_available フラグを継続的にチェックします。
+  - ループは無限に実行され、常に new_gnrmc_available フラグをチェックします。
 
   - フラグが true の場合、latest_gnrmc から最新の GPS センテンスを buff_t にコピーし、その後 L76X_Gat_GNRMC() を呼び出してデータを解析します。
 
-  - 解析結果に基づいて、時刻、WGS-84 経度・緯度、および変換された百度・Google 座標を出力します。
+  - 解析結果に基づいて、時刻、WGS-84 の経度と緯度、および変換された Baidu と Google の座標を出力します。
 
-  - GPS.Status が 0 の場合、「測位失敗」メッセージを出力します。
+  - GPS.Status が 0 の場合、「positioning failed」というメッセージを出力します。
 
-  - 新しいデータが利用できない場合、「新しい GNRMC データが利用できません」と出力します。
+  - 新しいデータがない場合は、「No new GNRMC data available.」と出力します。
 
-  - k_msleep(2000): プログラムは各ループ後に 2 秒間一時停止して出力頻度を制御します。
+  - k_msleep(2000): 各ループの後にプログラムを 2 秒間一時停止し、出力頻度を制御します。
 
 ### 結果グラフ
 
@@ -1036,7 +1069,7 @@ static Coordinates transform(Coordinates gps)
 
 ## I2C
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
@@ -1051,12 +1084,12 @@ static Coordinates transform(Coordinates gps)
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1067,7 +1100,7 @@ static Coordinates transform(Coordinates gps)
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-expansion-base-for-xiao/oled" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1219,58 +1252,59 @@ int main(void) {
 
     return 0;
 }
+
 ```
 
 **ディスプレイデバイスの設定と初期化**
 
-- `main_app` ログモジュール：
+- `main_app` ログモジュール:
 
-  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL と LOG_MODULE_REGISTER(main_app, LOG_LEVEL) は、main_app という名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定に設定します。これにより、開発者は Zephyr のログシステムを通じて簡単にデバッグと情報出力を行うことができます。
+  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL と LOG_MODULE_REGISTER(main_app, LOG_LEVEL) によって、main_app という名前のログモジュールを登録し、そのログレベルをシステムのデフォルト設定にします。これにより、開発者は Zephyr のロギングシステムを通じて簡単にデバッグや情報出力を行うことができます。
 
-- `display_init()` 関数：
+- `display_init()` 関数:
 
-  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` この行は、Zephyr Device Tree から選択されたディスプレイデバイスを取得します。このアプローチにより、コードがハードウェアに依存しないことが保証されます。
+  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` この行は、Zephyr の Device Tree から選択されたディスプレイデバイスを取得します。このアプローチにより、コードはハードウェア非依存になります。
 
-  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`コードはディスプレイのピクセル形式を PIXEL_FORMAT_MONO10 に設定しようとします。これが失敗した場合、PIXEL_FORMAT_MONO01 を試します。これにより、ディスプレイがモノクロームモードで動作することが保証され、一部のディスプレイ技術（例：OLED や e-Paper）に必要です。
+  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`このコードは、ディスプレイのピクセルフォーマットを PIXEL_FORMAT_MONO10 に設定しようとします。これに失敗した場合は、PIXEL_FORMAT_MONO01 を試みます。これにより、ディスプレイがモノクロモードで動作することが保証され、OLED や e-Paper など一部のディスプレイ技術に必要となります。
 
-- `framebuffer_setup()` 関数：
+- `framebuffer_setup()` 関数:
 
-  - `cfb_framebuffer_init(dev):`これは Compact Framebuffer（CFB）を初期化します。CFB は Zephyr の軽量グラフィックスライブラリで、ディスプレイにテキストと簡単なグラフィックスを描画するために使用されます。
+  - `cfb_framebuffer_init(dev):`これは Compact Framebuffer (CFB) を初期化します。CFB は Zephyr における軽量なグラフィックスライブラリで、ディスプレイ上にテキストや簡単なグラフィックスを描画するために使用されます。
 
-  - `cfb_framebuffer_clear(dev, true):`これはフレームバッファをクリアし、その内容を即座にディスプレイに書き込み、クリーンな画面を保証します。
+  - `cfb_framebuffer_clear(dev, true):`これはフレームバッファをクリアし、その内容を直ちにディスプレイへ書き込み、画面をクリーンな状態にします。
 
-  - `display_blanking_off(dev):`これはディスプレイのブランキング機能をオフにします。これは通常、ディスプレイがデータを受信して画像を表示する準備ができたことを示す信号です。
+  - `display_blanking_off(dev):`これはディスプレイのブランキング機能をオフにします。通常、これはディスプレイがデータを受信して画像を表示する準備ができたことを示す信号です。
 
-- `select_font()` 関数：
+- `select_font()` 関数:
 
-  - `cfb_get_font_size():`この関数は利用可能なフォントをループして適切なものを見つけます。
+  - `cfb_get_font_size():`この関数は利用可能なフォントをループし、適切なフォントを探します。
 
-  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントだからです。
+  - コードは` 8x8 `ピクセルフォントを優先します。これは一般的で読みやすい小さなフォントであるためです。
 
-  - `8x8` フォントが見つからない場合、フォールバックとして最初に利用可能な非ゼロサイズのフォントを選択します。
+  - `8x8` フォントが見つからない場合は、フォールバックとして最初に見つかったサイズが 0 でないフォントを選択します。
 
   - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 適切なフォントが見つかると、それがフレームバッファの現在のフォントとして設定されます。
 
-- `print_text_by_row_col()` 関数：
+- `print_text_by_row_col()` 関数:
 
- -` int pixel_x = col * font_width; `と `int pixel_y = row * font_height;:` この関数は、テキストの行と列の座標（文字単位）をピクセル座標に変換し、テキストの配置をより直感的にします。
+ -` int pixel_x = col * font_width; `と `int pixel_y = row * font_height;:` この関数はテキストの行・列座標（文字単位）をピクセル座標に変換し、テキストの位置決めを直感的にします。
 
-- `cfb_print():` これは CFB ライブラリのコア関数で、指定されたピクセル位置にテキストを印刷するために使用されます。
+- `cfb_print():` これは指定したピクセル位置にテキストを印字するために使用される、CFB ライブラリの中核となる関数です。
 
 **メインループ**
-コードのコアロジックは無限の `while (1)`ループ内で実行されます：
+コードの中核ロジックは、無限 `while (1)`ループ内で実行されます:
 
-- 画面のクリア：`cfb_framebuffer_clear(dev, false):` 各ループの開始時に、これはディスプレイを即座にリフレッシュすることなくフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
+- 画面のクリア: `cfb_framebuffer_clear(dev, false):` 各ループの冒頭で、ディスプレイを即座にリフレッシュすることなくフレームバッファをクリアします。これにより、複数の要素を一度に描画でき、画面のちらつきを防ぎます。
 
-- テキストの印刷：
+- テキストの表示:
 
-  - 2つの文字列、`line1_text` と `line2_text` が定義されます。
+  - 2 つの文字列 `line1_text` と `line2_text` が定義されています。
 
-  - print_text_by_row_col(): カスタム関数を使用して、これら2行のテキストを画面上の指定された行と列の位置に印刷します。最初の行は `(1, 2)` に、2番目の行は `(2, 1)` に印刷されます。
+  - print_text_by_row_col(): カスタム関数を使用して、これら 2 行のテキストを画面上の指定された行と列の位置に表示します。1 行目は `(1, 2)` に、2 行目は `(2, 1)` に表示されます。
 
-  - ディスプレイのリフレッシュ：`cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイに保留中のすべての描画コマンドを一度に送信し、すべてのコンテンツを同時に表示させます。
+  - ディスプレイの更新: `cfb_framebuffer_finalize(dev)`: この関数は、フレームバッファからディスプレイへ保留中の描画コマンドを一括送信し、すべてのコンテンツを同時に表示させます。
 
-  - 遅延：`k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは1000ミリ秒（1秒）一時停止します。これは画面更新頻度を制御し、時計やセンサーデータなどの静的情報を安定した方法で表示するアプリケーションに適しています。
+  - 遅延: `k_sleep(K_MSEC(1000)):` 各ループの後、プログラムは 1000 ミリ秒（1 秒）一時停止します。これは画面の更新頻度を制御し、時計やセンサーデータなどの静的な情報を安定して表示する用途に適しています。
 
 ### 結果グラフ
 
@@ -1278,7 +1312,7 @@ int main(void) {
 
 ## SPI
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
@@ -1293,12 +1327,12 @@ int main(void) {
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1309,7 +1343,7 @@ int main(void) {
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-epaper" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -1429,49 +1463,49 @@ int main(void)
 
 **デバイス初期化:**
 
-- コードは最初に`DEVICE_DT_GET(DT_CHOSEN(zephyr_display))`を使用してデバイスツリーからディスプレイデバイスを取得します。
+- このコードはまず、`DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).` を使用してデバイスツリーからディスプレイデバイスを取得します。
 
-- 次に`device_is_ready()`を呼び出して、デバイスが適切に初期化され、動作準備ができているかを確認します。これはハードウェアとのやり取りにおいて重要な最初のステップです。
+- 次に `device_is_ready()` を呼び出して、デバイスが正しく初期化され、動作可能な状態かどうかを確認します。これはあらゆるハードウェアとやり取りする際の重要な最初のステップです。
 
-**LVGL初期化:**
+**LVGL の初期化:**
 
-- `lv_init()`はLVGLグラフィックスライブラリのエントリーポイントです。ライブラリの内部状態を初期化するため、LVGLオブジェクトを作成したり操作を実行したりする前に必ず呼び出す必要があります。
+- `lv_init()` は LVGL グラフィックスライブラリのエントリポイントです。ライブラリの内部状態を初期化するため、LVGL オブジェクトを作成したり、何らかの操作を行ったりする前に必ず呼び出す必要があります。
 
 **画面クリア:**
 
-- `display_blanking_off()`関数が呼び出されます。E-Paperディスプレイの場合、これは通常、画面上の古いコンテンツをクリアするためのフルリフレッシュをトリガーします。
+- `display_blanking_off()` 関数が呼び出されます。E-Paper ディスプレイでは、通常これは画面上の古いコンテンツを消去するためのフルリフレッシュをトリガーします。
 
-- クリーンなキャンバスをさらに確保するため、コードは`lv_scr_act()`を使用して現在のアクティブ画面を取得し、`lv_obj_set_style_bg_color()`を使用して背景色を白に設定し、ディスプレイ全体をカバーします。
+- さらにクリーンなキャンバスを確保するために、コードは `lv_scr_act()` を使用して現在アクティブなスクリーンを取得し、`lv_obj_set_style_bg_color()` を使ってその背景色を白に設定し、ディスプレイ領域全体を覆います。
 
-**画面レイアウト準備:**
+**画面レイアウトの準備:**
 
-- `lv_disp_get_hor_res()`と`lv_disp_get_ver_res()`関数を使用してディスプレイの実際の幅と高さを取得し、後でUI要素を正確に配置するのに役立ちます。
+- `lv_disp_get_hor_res()` と `lv_disp_get_ver_res()` 関数を使用して、ディスプレイの実際の幅と高さを取得します。これは後で UI 要素を正確に配置するのに役立ちます。
 
-- コードはまた、画面のパディング`(lv_obj_set_style_pad_all())`とスクロールバー`(lv_obj_set_scrollbar_mode())`を削除して、使用可能な描画エリアを最大化します。
+- また、コードはスクリーンのパディング `(lv_obj_set_style_pad_all())` とスクロールバー ` (lv_obj_set_scrollbar_mode()) ` を削除し、使用可能な描画領域を最大化します。
 
-**UI要素の作成と設定:**
+**UI 要素の作成と設定:**
 
-- パネル: `lv_obj_create(scr)`でパネルオブジェクトを作成します。`lv_obj_set_size()`と`lv_obj_align()`を使用してサイズと中央揃えを設定します。白い背景と黒い境界線を含むスタイルは、`lv_obj_set_style_bg_color()`や`lv_obj_set_style_border_color()`などの関数で設定されます。
+- パネル: `lv_obj_create(scr)` でパネルオブジェクトを作成します。そのサイズと中央揃えは `lv_obj_set_size()` と `lv_obj_align()` を使って設定します。白い背景と黒い枠線を含むスタイルは、`lv_obj_set_style_bg_color()` や `lv_obj_set_style_border_color()` などの関数で設定されます。
 
 - ラベル:
 
-  - `lv_label_create()`を使用してテキストラベルを作成します。
+  - `lv_label_create()` を使用してテキストラベルを作成します。
 
-  - `lv_label_set_text()`でラベルのテキスト内容を設定します。
+  - `lv_label_set_text()` でラベルのテキスト内容を設定します。
 
-  - `lv_obj_set_style_text_color()`とlv_obj_set_style_text_font()を使用してテキストの色とフォントサイズを設定します。
+  - `lv_obj_set_style_text_color()` と lv_obj_set_style_text_font() を使用して、テキストの色とフォントサイズを設定します。
 
-- `lv_obj_align()`関数は各ラベルを画面上の特定の位置（中央、右上、左下、右下など）に配置します。
+- `lv_obj_align()` 関数は、各ラベルを画面の特定の位置（中央、右上、左下、右下など）に配置します。
 
-四角形: forループを使用して4つの小さな四角形オブジェクトを作成します。それらのサイズ、スタイル（黒い境界線付きの白い塗りつぶし）、位置を順次設定し、画面の左上隅に水平に配置します。
+四角形: for ループを使用して 4 つの小さな四角形オブジェクトを作成します。それぞれのサイズ、スタイル（白い塗りつぶしと黒い枠線）、位置を順番に設定し、画面左上に水平方向に並べて配置します。
 
 **メインループ:**
 
-- `while(1)`ループはプログラムの継続実行部分です。
+- `while(1)` ループは、プログラムの連続実行部分です。
 
-- `lv_task_handler()`はループ内で継続的に呼び出され、UI要素の更新やイベント処理など、すべてのLVGL内部タスクを処理します。
+- `lv_task_handler()` は、UI 要素の更新やイベント処理など、すべての LVGL 内部タスクを処理するために、ループ内で継続的に呼び出されます。
 
-- `k_sleep(K_MSEC(1000))`はスレッドを1000ミリ秒間一時停止します。静的d
+- `k_sleep(K_MSEC(1000))` はスレッドを 1000 ミリ秒一時停止します。静的な d
 
 ### 結果グラフ
 
@@ -1479,7 +1513,7 @@ int main(void)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

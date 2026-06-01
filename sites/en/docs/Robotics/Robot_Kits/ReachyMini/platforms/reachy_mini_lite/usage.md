@@ -12,66 +12,59 @@ keywords:
   - sdk
   - control
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_usage/
 ---
 
 # Using Reachy Mini Lite
 
-The Lite version relies on your computer to run its intelligence. The central hub for this is the **Reachy Mini Control** application.
+Now that your robot is connected, here is how to interact with it. You can control it visually using **Reachy Mini Control** or programmatically using **Python**.
 
-:::info
-Check [this guide](/reachymini_platforms_reachy_mini_lite_get_started) if you have not installed it yet.
-:::
+Check [this guide](/reachymini_platforms_reachy_mini_lite_get_started) if you have not installed the app yet.
 
-## 1. Reachy Mini Control (Dashboard) 🖥️
+## 1. Reachy Mini Control 🖥️
 
-When you open the application, you access the complete control panel for your robot.
+**Reachy Mini Control** is the desktop app for your robot. It allows you to check the robot's status, update the system, and manage applications.
 
-:::info Status & Visualizer (Left Panel)
-* **3D View:** Shows the real-time position of the robot.
-* **Ready/Not Ready:** Indicates if the robot is correctly connected via USB.
-* **Sensors:** Monitor the microphone input and speaker volume.
-* **Logs:** See technical details and connection events at the bottom.
-:::
+Open **Reachy Mini Control** and connect your robot via USB. Once connected, you will see real-time information about your robot.
 
-## 2. Applications & Demos 📱
+* **Status & Visualizer (Left Panel):**
+    * **3D View:** Shows the real-time position of the robot.
+    * **Ready/Not Ready:** Indicates if the robot is correctly connected via USB.
+    * **Sensors:** Monitor the microphone input and speaker volume.
+    * **Logs:** See technical details and connection events at the bottom.
 
-:::tip
-You don't need to code to start having fun. The app comes with an integrated ecosystem.
-:::
+### Features
 
-### Quick Actions
+* Control the **Head** and **Antennas** using the *Controller* tab.
 
-Located at the bottom right, these are built-in demos ready to launch instantly:
-* **Expressions:** Make Reachy express emotions (Happy, Sad, Angry, etc.).
-* **Controller:** Teleoperate the robot using a game controller or sliders.
+![Controller Tab](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-controller.png)
 
-### Installing New Apps
+* Play with **Expressions**: Make your robot happy, sad, angry, and more with the built-in expressions.
 
-To extend Reachy's capabilities with community-created behaviors:
+![Expressions Tab](https://github.com/pollen-robotics/reachy_mini/raw/main/docs/assets/control-app-expressions.png)
 
-**Step 1:** Click the **"Discover apps"** button. This opens the Hugging Face Spaces store.
+## 2. Applications 📱
 
-**Step 2:** Select an app (like a Game or a Conversation demo) and click "Install".
+Reachy Mini can run "Apps" — autonomous behaviors packaged for the robot (like a Conversation demo, a Game, or a Dance).
 
-**Step 3:** Once installed, the app will appear in your "Applications" list. Simply click **"Play"** to start it.
+### How to use Apps
+1.  **Browse:** Go to the *Applications* tab on Reachy Mini Control and click on "Discover Apps". This will open the Hugging Face Spaces ecosystem, where you can find compatible apps for your robot.
+2.  **Install:** Click on the "Install" button on an app to add it to your robot.
+3.  **Launch:** Click the "Start ▶️" button on an installed app. The robot will start the behavior immediately.
+4.  **Stop:** Click the "Stop" ⏹️ button to stop the application.
 
-:::warning
-When an App is running, it controls the robot. Stop the app before trying to run your own Python scripts.
-:::
+> **Note:** When an App is running, it takes control of the robot. You cannot run Python scripts while an App is active.
 
-## 3. Coding with Python 🐍
+## 3. Coding Quickstart 🐍
 
-:::info
 Ready to write your own logic? Reachy Mini is controlled via a simple Python SDK.
-:::
 
 👉 **[Go to the SDK documentation](/reachymini_sdk_readme)** for a complete overview.
 

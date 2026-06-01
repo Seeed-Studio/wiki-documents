@@ -36,7 +36,7 @@ El Expansor de E/S para XIAO es una placa de expansión de última generación d
 - Protocolo de Comunicación: I2C
 - Dirección I2C por Defecto: 0x21 (Configurable a 0x20)
 - Voltaje de Operación: 3.3V
-- Dimensiones: 21mm x 17mm
+- Dimensiones: 21mm x 17.8mm
 
 ## Aplicaciones
 

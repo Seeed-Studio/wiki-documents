@@ -1,5 +1,5 @@
 ---
-description: MCP エンドポイントの使用ガイド
+description: mcp エンドポイントの使用ガイド
 title: MCP エンドポイント
 sidebar_position: 5
 keywords:
@@ -22,7 +22,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-10-22'
-updatedAt: '2025-12-05'
+updatedAt: '2025-12-04'
 url: https://wiki.seeedstudio.com/ja/mcp_endpoint/
 ---
 
@@ -30,41 +30,39 @@ url: https://wiki.seeedstudio.com/ja/mcp_endpoint/
 
 ## 概要
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
+このプロジェクトの実現を可能にしたオープンソースへの貢献に対し、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
 
-**MCP（Model Context Protocol）** は、リモート制御、計算、メール操作、知識検索などを可能にすることで AI の機能を拡張する強力なフレームワークです。
+**MCP (Model Context Protocol)** は、リモート制御、計算、メール操作、ナレッジ検索などを可能にすることで、AI の能力を拡張する強力なフレームワークです。
 
-MCP により、サーバーは明確に定義されたプロトコルを通じて言語モデルに呼び出し可能なツールを公開できます。これらのツールにより、モデルはデータベースのクエリ、API の呼び出し、複雑な計算の実行など、外部システムとの相互作用が可能になります。各ツールは名前によって一意に識別され、その機能を定義するメタデータによって記述されます。
+MCP により、サーバーは明確に定義されたプロトコルを通じて、言語モデルから呼び出し可能なツールを公開できます。これらのツールにより、モデルはデータベースのクエリ、API の呼び出し、複雑な計算の実行など、外部システムと対話できます。各ツールには一意の名前が割り当てられ、その機能を定義するメタデータによって説明されます。
 
-**MCP エンドポイント** は、ローカル MCP サービスと Xiaozhi AI モデルの間の橋渡しとして機能します。音声対応デバイスやその他の端末がこれらの外部機能をシームレスに活用するためのインターフェースを提供します。
+**MCP Endpoint** は、ローカルの MCP サービスと Xiaozhi AI モデルの間のブリッジとして機能します。音声対応デバイスやその他の端末が、これらの外部機能をシームレスに活用できるインターフェースを提供します。
 
-## MCP エンドポイントの取得
+## MCP Endpoint を取得する
 
-1. [SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai/home) にアクセスします
+1. **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`** の順に操作して Watcher Agent コントロールパネルにアクセスするか、[ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/37)を使用し、左サイドバーの **`Watcher Agent`** をクリックします。
 
-2. コントロールパネルにアクセスするには、ページの右上角にある Watcher Agent をクリックします。
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/watcher_agent_workspace.png" style={{width:800, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
-
-3. エージェント設定を開きます
+2. エージェント設定を開きます
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
 
-4. `MCP Setting` と `Get MCP Endpoint` をクリックします
+3. `MCP Setting` と `Get MCP Endpoint` をクリックします
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI14.png" style={{width:800, height:'auto'}}/></div>
 
-5. エンドポイントアドレスと接続ステータスを取得します
+4. Endpoint アドレスと接続ステータスを取得します
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
 
 ## MCP の例
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
+このプロジェクトの実現を可能にしたオープンソースへの貢献に対し、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
 
-以下のコードは [MCP Example Code Github](https://github.com/78/mcp-calculator) から取得できます
+[MCP Example Code Github](https://github.com/78/mcp-calculator) から以下のコードを取得できます。
 
-### MCP サーバーコードの例
+### MCP サーバーコード例
 
 ```python
   # server.py
@@ -93,19 +91,19 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
 
 ### コードの説明
 
-以下は、MCP サーバーの例の主要部分の詳細な説明です：
+以下は、MCP サーバー例の主要な部分についての詳細な説明です。
 
-- `@mcp.tool()` : 以下の関数を AI モデルによってリモートで呼び出し可能な MCP ツールとして登録します。
+- `@mcp.tool()` : 次の関数を MCP ツールとして登録し、AI モデルからリモートで呼び出せるようにします。
 
 - `def calculator(python_expression: str) -> dict`: モデルから数式を受け取るツールを定義します。
 
-- `result = eval(python_expression)` : Python の eval() を使用して式を評価します。上記でインポートされているため、math や random などのライブラリを使用できます。
+- `result = eval(python_expression)` : Python の eval() を使用して式を評価します。上部でインポートされているため、math や random などのライブラリを使用できます。
 
-- `mcp.run(transport="stdio")` : サーバーを開始します。stdio トランスポートにより、Watcher Agent や MCP クライアントとの通信が可能になります。
+- `mcp.run(transport="stdio")` : サーバーを起動します。stdio トランスポートにより、Watcher Agent や MCP クライアントと通信できます。
 
 ### クイックスタート
 
-- 要件
+- 必要条件
   - [MCP Example Code Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
@@ -114,7 +112,7 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
   - pydantic>=2.11.4
   - mcp-proxy>=0.8.2
 
-- ステップ1. リポジトリをクローンしてプロジェクトフォルダに移動します
+- ステップ1. リポジトリをクローンし、プロジェクトフォルダに移動します
 
   ```bash
   git clone https://github.com/78/mcp-calculator.git
@@ -141,18 +139,18 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
     set MCP_ENDPOINT=<your_mcp_endpoint>
     ```
 
-- ステップ4. 計算機の例を実行します
+- ステップ4. 電卓のサンプルを実行します
   ```bash
   python mcp_pipe.py calculator.py
   ```
 
-- または設定されたすべてのサーバーを実行します
+- または、設定済みのすべてのサーバーを実行します
   ```bash
   python mcp_pipe.py
   ```
 
   :::note
-  これには、サーバー設定を定義する mcp_config.json 設定ファイルが必要です。
+  これは、サーバー設定を定義する mcp_config.json 構成ファイルを必要とします。
   :::
 
 ### 実行結果
@@ -170,14 +168,14 @@ Processing request of type CallToolRequest
 Calculating formula: math.comb(10, 3), result: 120
 ```
 
-### MCP エンドポイントのステータス
+### MCP Endpoint ステータス
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
 
-- Connection Status: MCP 接続が正常に動作しているかどうかを表示します。
-- Refresh icon: MCP 接続ステータスを更新します。
-- Enabled Services: Watcher が使用できるすべての MCP サービスを一覧表示します。
-- Endpoint Address: MCP エンドポイントアドレス（公式技術サポートが必要な場合を除き、これを他の人と共有しないでください）
+- Connection Status: MCP 接続が正しく動作しているかどうかを表示します。
+- Refresh アイコン: MCP 接続ステータスを更新します。
+- Enabled Services: Watcher が使用できる MCP サービスをすべて一覧表示します。
+- Endpoint Address: mcp_endpoint_address（公式テクニカルサポートにより要求された場合を除き、他人と共有しないでください）
 
 ### 会話ログ
 
@@ -186,60 +184,60 @@ Calculating formula: math.comb(10, 3), result: 120
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP3.png" style={{width:800, height:'auto'}}/></div>
 
 ### 注意事項
-#### 1. MCP でのツールとパラメータの命名
+#### 1. MCP におけるツール名とパラメータ名
 
-ツールとそのパラメータの名前は、大規模モデルがその目的を理解できるように明確でなければなりません。
-可能な限り略語の使用を避け、ツールの機能といつ使用すべきかを説明するコメントを提供してください。
+ツールおよびそのパラメータの名前は、大規模モデルがその目的を理解できるよう、明確でなければなりません。
+可能な限り略語の使用は避け、ツールの機能と使用すべきタイミングを説明するコメントを記述してください。
 
-例えば、calculator という名前のツールはモデルにそれが計算機であることを知らせ、python_expression パラメータはモデルが Python 式を入力すべきであることを示します。
+たとえば、calculator という名前のツールであれば、モデルはそれが電卓であることを理解し、python_expression というパラメータ名から、Python の式を入力すべきであると判断できます。
 
-bing_search ツールを作成する場合、パラメータ名は keywords にすべきです。
+bing_search ツールを作成する場合、パラメータ名は keywords とするべきです。
 
-#### 2. 関数の docstring ガイダンス
+#### 2. 関数 docstring によるガイド
 
-docstring（"""...""" を使用）は、モデルにツールをいつ使用するかを指導します。
+docstring（"""...""" を使用）は、モデルに対してツールをいつ使用すべきかをガイドします。
 
-また、式で math や random ライブラリの関数を使用できることも言及できます。
+また、式の中で math および random ライブラリの関数を使用できることを記載することもできます。
 
-これら2つのライブラリは、例のコードで既にインポートされています。
+これら 2 つのライブラリは、サンプルコード内ですでにインポートされています。
 
-#### 3. 印刷ではなくログ記録
+#### 3. print の代わりにログ出力を使用する
 
-この MCP サーバーの例では標準入出力がデータ送信に使用されているため、print を使用して情報を出力することはできません。
+この MCP Server の例では、標準入出力はデータ伝送に使用されるため、情報の出力に print を使用することはできません。
 
-代わりに、デバッグとログ記録には logger を使用してください。
+代わりに logger を使用してデバッグおよびログ出力を行ってください。
 
 #### 4. 戻り値
 
-MCP の戻り値は通常、文字列または JSON です。例では、計算結果は result という名前の JSON フィールドで返されます。
+MCP の戻り値は通常、文字列または JSON です。この例では、計算結果は result という名前の JSON フィールドで返されます。
 
-戻り値の長さは通常制限されており、IoT デバイスコマンドと同様に、通常は 1024 バイト以内です。
+戻り値の長さには通常制限があり、IoT デバイスのコマンドと同様に、一般的には 1024 バイト以内です。
 
-#### 5. ツールリストの制限
+#### 5. ツールリストの上限
 
 MCP ツールリストには上限があります。
 
-後で設定ページに表示され、トークン数に基づいて計算されます。
+後に設定ページに表示され、トークン数に基づいて計算されます。
 
-注意：ツールが多すぎると、デバイスのスケジューリング効率に影響する可能性があります。
+注意: ツールが多すぎると、デバイスのスケジューリング効率に影響を与える可能性があります。
 
-#### 6. 接続制限
+#### 6. 接続数の制限
 
-各 MCP エンドポイントには同時接続数の上限があります。
+各 MCP エンドポイントには、同時接続数の上限があります。
 
-注意：この制限を超えたり、同時接続が多すぎたりすると、デバイスのパフォーマンスが低下する可能性があります。
+注意: この上限を超えたり、同時接続が多すぎたりすると、デバイスのパフォーマンスが低下する可能性があります。
 
-## 事前提供 MCP サービスの選択
+## 事前提供される MCP サービスの選択
 
-前述の MCP Setting から選択できる以下の4つの MCP サービスが利用可能です。
+前述の MCP Setting から選択できる、次の 4 つの MCP サービスが用意されています。
 
 設定を保存してデバイスを再起動すると、選択したサービスが自動的に有効になります。
 
-`×` をクリックしてサービスを削除できます
+サービスは `×` をクリックして削除できます。
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
 
-## 技術サポート
+## テクニカルサポート
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

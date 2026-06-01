@@ -10,13 +10,13 @@ keywords:
   - motion playback
   - library
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_examples_recorded_moves/
 ---
 
@@ -34,4 +34,4 @@ Or with a custom dataset:
 python recorded_moves.py --dataset path/to/your/dataset
 ```
 
-See the full example at: [recorded_moves.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/recorded_moves.py)
+See the full example at: [recorded_moves.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/recorded_moves.py)

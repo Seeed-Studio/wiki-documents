@@ -19,7 +19,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-28'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_lite_media_advanced_controls/
 ---
 
@@ -31,21 +31,9 @@ This page describes advanced settings to fine-tune the camera and sound system o
 
 The Raspberry Pi camera is mounted on a CSI-to-USB adapter and is detected by the system as a UVC camera. It can be accessed directly by any program capable of opening a camera device.
 
-### Windows and macOS
+### Camera Access
 
-Currently, the default backend for these platforms is OpenCV. The parameters can be set in the [code](https://github.com/pollen-robotics/reachy_mini/tree/main/src/reachy_mini/media/camera_opencv.py):
-
-```python
-self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self._resolution.value[0])
-self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self._resolution.value[1])
-
-# Example camera control settings:
-# self.cap.set(cv2.CAP_PROP_BRIGHTNESS, 0.5)
-# self.cap.set(cv2.CAP_PROP_CONTRAST, 0.5)
-# self.cap.set(cv2.CAP_PROP_SATURATION, 64)
-```
-
-Please refer to the Linux section below for a list of available parameters.
+The daemon manages the camera hardware and exposes frames via a local IPC endpoint or WebRTC streaming. Client-side code reads frames through the MediaManager using the LOCAL or WEBRTC backend.
 
 ### Linux
 

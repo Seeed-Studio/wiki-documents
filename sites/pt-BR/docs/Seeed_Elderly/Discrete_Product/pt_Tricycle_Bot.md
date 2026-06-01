@@ -214,7 +214,7 @@ Aqui está um exemplo simples de como fazer um Tricycle Bot com um Arduino UNO.
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%" />
 </div>
 
-1. [Monte o Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
+1. [Monte o Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introductions)
 2. Fixe os módulos Grove nas laterais e na placa superior.
 3. Conecte o Grove Buzzer ao **D4**, o Grove Ultrasonic Ranger ao **D5** e a tira de LED ao **D6** do Base Shield.
 4. Pronto!

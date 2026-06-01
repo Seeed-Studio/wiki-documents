@@ -14,8 +14,8 @@ updatedAt: '2026-01-07'
 url: https://wiki.seeedstudio.com/cn/Grove-Mech_Keycap/
 ---
 <!-- ---
-name: Grove-机械键帽
-category: 传感器
+name: Grove-Mech keycap
+category: Sensor
 bzurl: 
 oldwikiname: 
 prodimagename:
@@ -26,35 +26,35 @@ tags:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/2.jpg)
 
-Grove-机械键帽是一种带有内置 LED 的机械开关。255 全彩 RGB LED 使其能够简单方便地显示开关的状态。该键帽非常可靠，具有 20,000,000 次按压操作寿命。
+Grove-机械键帽是一款带有内置 LED 的机械开关。255 全彩 RGB LED 让你可以简单直观地显示开关的状态。该键帽非常可靠，按压寿命可达 20,000,000 次。
 
-您会发现这是一个有趣且稳定的模块，可以用于制作一些非常有趣的项目或产品。实际上，您甚至可以使用多个 Grove-机械键帽制作一个机械键盘。
+你会发现这是一个有趣且稳定的模块，可以用来制作一些非常有趣的项目或产品。实际上，你甚至可以使用多个 Grove-机械键帽制作一把机械键盘。
 
 :::tip
-20,000,000 次操作应以每分钟 300 次循环的速率连续进行，无负载。
+在无负载条件下，以每分钟 300 次的频率连续操作 20,000,000 个循环。
 :::
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" style={{maxWidth: '300px', height: 'auto'}} alt="立即获取" /></a></p>
 
 ## 特性
 
 - 可编程 LED
 - 可靠的机械结构  
-- 超长操作寿命
+- 极长的工作寿命
 
 ## 规格
 
-|项目|值|
+|项目|数值|
 |---|---|
 |工作电压|3v-5v|
-|绝缘电阻|100MΩ 最小值|
-|接触电阻|200 mΩ 最大值|
-|无负载操作寿命|20,000,000|
+|绝缘电阻|100MΩ 最小|
+|接触电阻|200 mΩ 最大|
+|无负载工作寿命|20,000,000|
 
 ## 应用
 
 - 汽车设备
-- 可视设备
+- 可视化设备
 - 家用电器
 - 信息设备
 
@@ -68,11 +68,11 @@ Grove-机械键帽是一种带有内置 LED 的机械开关。255 全彩 RGB LED
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/schametic.jpg)
 
-K1 连接到按钮，当按键打开时，**SIG1** 将通过 R2 被拉低，此时 **SIG1** 的输出应为低电平。
-当按钮被按下时，K1 将闭合，**SIG1** 将连接到 **VCC**，此时 **SIG1** 的输出变为高电平。
+K1 连接到按键，当按键断开时，**SIG1** 会被电阻 R2 下拉，此时 **SIG1** 的输出应为低电平。
+一旦按键被按下，K1 闭合，**SIG1** 将连接到 **VCC**，此时 **SIG1** 的输出变为高电平。
 
 :::note
-在本节中我们仅展示部分原理图，完整文档请参考 [资源](#资源)
+在本节中我们只向你展示部分原理图，完整文档请参考 [Resources](/cn/#资源)
 :::
 
 ## 支持的平台
@@ -82,84 +82,201 @@ K1 连接到按钮，当按键打开时，**SIG1** 将通过 R2 被拉低，此�
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg) |
 
 :::caution
-上述提到的支持平台仅表示模块的软件或理论兼容性。在大多数情况下，我们仅为 Arduino 平台提供软件库或代码示例。不可能为所有可能的 MCU 平台提供软件库或演示代码。因此，用户需要自行编写软件库。
+上面提到的受支持平台仅表示该模块在软件或理论上的兼容性。在大多数情况下，我们只为 Arduino 平台提供软件库或代码示例。不可能为所有可能的 MCU 平台提供软件库或演示代码，因此用户需要自行编写软件库。
 :::
 
 ## 入门指南
 
 :::note
-如果这是您第一次使用 Arduino，我们强烈建议您在开始之前查看 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是你第一次使用 Arduino，我们强烈建议你在开始之前先阅读 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+:::
+### 使用 PlatformIO 体验
+
+**硬件**
+
+
+<table align="center">
+  <tr>
+    <th>XIAO nRF52840 Sense</th>
+    <th>Seeed Studio Grove Base for XIAO</th>
+    <th>Grove-Mech keycap</th>
+  </tr>
+  <tr>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840sence.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width: '400px', height: 'auto'}}/></div></td>
+    <td><div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg" style={{width: '400px', height: 'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank" rel="noopener noreferrer">立即获取</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank" rel="noopener noreferrer">立即获取</a></td>
+    <td align="center"><a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank" rel="noopener noreferrer">立即获取</a></td>
+  </tr>
+</table>
+
+
+- **步骤 1.** 连接 Grove-机械键帽信号引脚：`S1` -> `D1`，`S2` -> `D2`，连接到 Seeed Studio Grove Base for XIAO。（VCC/GND 照常连接）
+- **步骤 2.** 将 Grove Base 插入 XIAO nRF52840 Sense。
+- **步骤 3.** 通过 USB 将 XIAO 连接到你的电脑。
+
+**软件** 
+
+- **步骤 1.** 在 PlatformIO 中安装 `Adafruit_NeoPixel` 库。
+- **步骤 2.** 创建一个新的草稿/项目，并粘贴下面的代码。
+- **步骤 3.** 上传到 XIAO，并打开串口监视器（波特率 115200）查看状态。
+
+**功能说明** 
+
+- 每按下一次 Grove-机械键帽，内置 RGB LED 会在一组颜色中循环切换。
+
+代码 
+```cpp
+/*
+  Grove-Mech Keycap demo for XIAO (nRF52840 Sense)
+  Wiring: S1 -> D1 (button), S2 -> D2 (pixel data)
+*/
+#include <Adafruit_NeoPixel.h>
+
+#define BUTTON_PIN 1   // D1
+#define PIXEL_PIN  2   // D2
+#define PIXEL_COUNT 1
+
+Adafruit_NeoPixel strip(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
+
+uint8_t colorPos = 0;
+bool lastState = LOW;
+unsigned long lastDebounce = 0;
+const unsigned long debounceDelay = 50;
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  strip.begin();
+  strip.show();
+  Serial.begin(115200);
+  Serial.println("Grove-Mech Keycap: ready");
+}
+
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if(WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if(WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void cycleColor() {
+  colorPos += 32; // step size
+  strip.setPixelColor(0, Wheel(colorPos));
+  strip.show();
+  Serial.print("Color pos: "); Serial.println(colorPos);
+}
+
+void loop() {
+  bool reading = digitalRead(BUTTON_PIN) == LOW ? true : false; // pressed = LOW for INPUT_PULLUP
+
+  if (reading != lastState) {
+    lastDebounce = millis();
+  }
+
+  if ((millis() - lastDebounce) > debounceDelay) {
+    // stable state
+    static bool pressed = false;
+    if (reading && !pressed) {
+      // button pressed (edge)
+      cycleColor();
+      pressed = true;
+    } else if (!reading) {
+      pressed = false;
+    }
+  }
+
+  lastState = reading;
+}
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/xiao_capkey.gif" style={{width:400, height:'auto'}}/></div>
+
+:::note
+ 如果你的接线或引脚映射不同，请相应地修改 `BUTTON_PIN` 和 `PIXEL_PIN`。
 :::
 
-### 使用 Arduino
+
+
+### 使用 Arduino 体验
 
 #### 硬件
 
 **所需材料**
 
-| Seeeduino V4.2 | Base Shield | Grove-机械按键帽 |
-|----------------|-------------|-----------------------|
-|![图片描述](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![图片描述](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![图片描述](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
-|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">立即购买</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">立即购买</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">立即购买</a>|
+| Seeeduino V4.2 | Base Shield| Grove-Mech keycap |
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
+|<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">立即获取</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">立即获取</a>|<a href="https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html" target="_blank">立即获取</a>|
 
 :::note
-**1** 请轻轻插入 USB 数据线，否则可能会损坏接口。请使用内部有 4 根线的 USB 数据线，只有 2 根线的 USB 数据线无法传输数据。如果您不确定手头的数据线是否符合要求，可以点击 [这里](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) 购买。
+**1** 请轻轻插拔 USB 线，否则可能会损坏接口。请使用内部有 4 根线的 USB 线，只有 2 根线的线缆无法传输数据。如果你不确定自己手上的线缆类型，可以点击[这里](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)购买。
 
-**2** 每个 Grove 模块在购买时都会附带一根 Grove 数据线。如果您丢失了数据线，可以点击 [这里](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) 购买。
+**2** 每个 Grove 模块在购买时都会附带一根 Grove 线缆。如果你丢失了 Grove 线缆，可以点击[这里](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html)购买。
 :::
 
-- **步骤 1.** 将 Grove-机械按键帽连接到 Grove-Base Shield 的 **D2** 端口。
+- **步骤 1.** 将 Grove-机械键帽连接到 Grove-Base Shield 的 **D2** 端口。
 
-- **步骤 2.** 将 Grove-Base Shield 插入 Seeeduino。
+- **步骤 2.** 将 Grove - Base Shield 插入 Seeeduino。
 
-- **步骤 3.** 使用 USB 数据线将 Seeeduino 连接到电脑。
+- **步骤 3.** 通过 USB 线将 Seeeduino 连接到电脑。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/light1400-1050%C2%B7.jpg)
 
 :::note
-如果没有 Grove Base Shield，我们也可以直接将 Grove-机械按键帽连接到 Seeeduino，如下所示。
+如果我们没有 Grove Base Shield，也可以像下面这样将 Grove-机械键帽直接连接到 Seeeduino。
 :::
 
-| Seeeduino     | Grove-机械按键帽       |
+| Seeeduino     | Grove-Mech keycap       |
 |---------------|-------------------------|
-| 5V            | 红色                   |
-| GND           | 黑色                   |
-| D3            | 白色                   |
-| D2            | 黄色                   |
+| 5V            | Red                     |
+| GND           | Black                   |
+| D3         | White                   |
+| D2            | Yellow                  |
 
 #### 软件
 
 - **步骤 1.** 从 Github 下载 [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip) 库。
 
-- **步骤 2.** 参考 [如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library) 为 Arduino 安装库。
+- **步骤 2.** 参考 [How to install library](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library) 为 Arduino 安装库。
 
-- **步骤 3.** 打开 Arduino IDE 并创建一个新文件，然后将以下代码复制到新文件中。
+- **步骤 3.** 打开 Arduino IDE 并创建一个新文件，然后将以下代码复制到该新文件中。
 
 ```cpp
 /**
- * 这是一个 Grove - 机械按键帽的示例。
- * 每次按下按键都会改变 SK6805 RGB LED 的颜色。SK6805 是一个与 NeoPixel 兼容的芯片。
+ * This is an exmaple of the Grove - Mech Keycap.
+ * Every press of the key will change the color the SK6805 RGB LED. The SK6805 is a NeoPixel compatible chip.
  * 
- * 致谢：
+ * Credit:
  * Adafruit_NeoPixel - https://github.com/adafruit/Adafruit_NeoPixel/blob/master/COPYING
  */
 
 #include <Adafruit_NeoPixel.h>
 
-#define BUTTON_PIN   2    // 数字 IO 引脚连接到按钮。此引脚将使用上拉电阻驱动，因此开关应暂时将引脚拉至地面。
-                          // 在高 -> 低转换时，按钮按下逻辑将执行。
+#define BUTTON_PIN   2    // Digital IO pin connected to the button.  This will be
+                          // driven with a pull-up resistor so the switch should
+                          // pull the pin to ground momentarily.  On a high -> low
+                          // transition the button press logic will execute.
 
-#define PIXEL_PIN    3    // 数字 IO 引脚连接到 NeoPixels。
+#define PIXEL_PIN    3    // Digital IO pin connected to the NeoPixels.
 
 #define PIXEL_COUNT 60
 
-// 参数 1 = 灯条中的像素数量，neopixel stick 有 8 个
-// 参数 2 = 引脚编号（大多数有效）
-// 参数 3 = 像素类型标志，根据需要相加：
-//   NEO_RGB     像素为 RGB 位流连接
-//   NEO_GRB     像素为 GRB 位流连接，适用于 neopixel stick
-//   NEO_KHZ400  400 KHz 位流（例如 FLORA 像素）
-//   NEO_KHZ800  800 KHz 位流（例如高密度 LED 灯条），适用于 neopixel stick
+// Parameter 1 = number of pixels in strip,  neopixel stick has 8
+// Parameter 2 = pin number (most are valid)
+// Parameter 3 = pixel type flags, add together as needed:
+//   NEO_RGB     Pixels are wired for RGB bitstream
+//   NEO_GRB     Pixels are wired for GRB bitstream, correct for neopixel stick
+//   NEO_KHZ400  400 KHz bitstream (e.g. FLORA pixels)
+//   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip), correct for neopixel stick
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
 
 bool oldState = LOW;
@@ -172,22 +289,22 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   strip.begin();
   strip.clear();
-  strip.show(); // 初始化所有像素为“关闭”
+  strip.show(); // Initialize all pixels to 'off'
   Serial.begin(9600); 
 }
 
 void loop()
 {
-  
-  // 获取当前按钮状态。
+
+  // Get current button state.
   bool newState = digitalRead(BUTTON_PIN);
 
-  // 检查状态是否从低变高（按钮按下）。
+  // Check if state changed from low to high (button press).
   if (newState == HIGH && oldState == LOW) {
       timecheck = millis(); 
-    // 短暂延迟以消除按钮抖动。
+    // Short delay to debounce button.
     delay(20);
-    // 检查消抖后按钮是否仍为低。
+    // Check if button is still low after debounce.
     newState = digitalRead(BUTTON_PIN);
     if (newState == HIGH){
       color_pos+=8;
@@ -219,13 +336,13 @@ void loop()
  }
   }
    }
- 
-  // 将最后的按钮状态设置为旧状态。
+
+  // Set the last button state to the old state.
   oldState = newState;
 }
 
-// 输入一个值 0 到 255 来获取颜色值。
-// 颜色是 r - g - b - 返回 r 的过渡。
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
 uint32_t Wheel(byte WheelPos) {
   WheelPos = 255 - WheelPos;
   if(WheelPos < 85) {
@@ -241,41 +358,41 @@ uint32_t Wheel(byte WheelPos) {
 
 ```
 
-- **步骤 4.** 上传示例代码。如果您不知道如何上传代码，请查看 [如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
+- **步骤 4.** 上传示例程序。如果你不知道如何上传代码，请查看 [如何上传代码](https://wiki.seeedstudio.com/cn/Upload_Code/)。
 
-- **步骤 5.** 每次按下 Grove-机械按键帽，您将看到 LED 颜色发生变化。如果按住按钮约 2 秒钟，您将看到呼吸灯效果。
+- **步骤 5.** 每次按下 Grove-Mech Keycap，你都会看到 LED 颜色发生变化。如果按住按钮大约 2 秒，你会看到呼吸灯效果。
 
-### 使用 Raspberry Pi
+### 使用 Raspberry Pi 玩转
 
 #### 硬件
 
-- **步骤 1.** 本项目使用的材料：
+- **步骤 1**. 本项目中使用的物品：
 
-| Raspberry Pi | Grove Base Hat for RasPi | Grove - 机械按键帽 |
-|--------------|------------------------------|-----------------------|
-|![图片描述](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![图片描述](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![图片描述](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
-|[立即购买](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[立即购买](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[立即购买](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
+| Raspberry pi | Grove Base Hat for RasPi| Grove - Mech Keycap|
+|--------------|-------------|-----------------|
+|![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/thumbnail.jpg)|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Mech-Keycap-p-3138.html)|
 
-- **步骤 2**. 将 Grove Base Hat 插入到树莓派中。
+- **步骤 2**. 将 Grove Base Hat 插到 Raspberry 上。
 - **步骤 3**. 将 Grove - Mech Keycap 连接到 Base Hat 的 PWM 端口（端口 12）。
 
 :::note
-对于 PWM 功能，pin 可以是以下表格中 pin 列的值，并将设备连接到对应的插槽。
+引脚可以是下表中用于 PWM 功能的任意一个值，并将设备连接到对应的插槽。
 :::
 
-|Pin|插槽|
+|Pin|Slot|
 |---|---|
 |18|D18|
 |12|PWM|
 
-- **步骤 4**. 使用 USB 数据线将树莓派连接到电脑。
+- **步骤 4**. 通过 USB 线将 Raspberry Pi 连接到电脑。
 
 ![](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/img/Mech_Hat.jpg)
 
 #### 软件
 
-- **步骤 1**. 按照 [设置软件](https://wiki.seeedstudio.com/cn/Grove_Base_Hat_for_Raspberry_Pi/#installation) 的说明配置开发环境。
-- **步骤 2**. 通过克隆 grove.py 库下载源文件。
+- **步骤 1**. 按照 [Setting Software](https://wiki.seeedstudio.com/cn/Grove_Base_Hat_for_Raspberry_Pi/#installation) 配置开发环境。
+- **步骤 2**. 通过克隆 grove.py 库来下载源文件。
 
 ```
 cd ~
@@ -283,7 +400,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-- **步骤 3**. 执行以下命令运行代码。
+- **步骤 3**. 执行下面的命令来运行代码。
 
 ```
 cd grove.py/grove
@@ -292,10 +409,10 @@ sudo python grove_mech_keycap.py 12
 ```
 
 :::caution
-Unix 有一个“安全模型”。作为普通用户，你可以执行一些操作，但不能访问同一台计算机上其他用户的文件。作为用户，你也不应该能够导致计算机停止工作。而 "/dev/mem" 允许你进行比更改 GPIO 更“危险”的操作。因此，/dev/mem 必须对普通用户进行保护。因此，为了运行此代码，你需要在命令行中输入 **sudo python grove_mech_keycap.py**。
+Unix 有一个“安全模型”。作为普通用户，你可以做一些事情，但你不应该能够访问同一台电脑上其他人的文件。并且作为用户，你不应该能够导致电脑停止工作。而“/dev/mem”允许你做的“恶作剧”远远不止修改一个 GPIO。这就是为什么必须保护 /dev/mem 不被普通用户访问。因此，为了运行这段代码，你需要在命令行中输入 **sudo python grove_mech_keycap.py**
 :::
 
-以下是 grove_mech_keycap.py 的代码。
+下面是 grove_mech_keycap.py 代码。
 
 ```python
 
@@ -305,9 +422,9 @@ from grove.factory import Factory
 
 class GroveKeycap(object):
     def __init__(self, pin):
-        # 高电平 = 按下
+        # High = pressed
         self.__btn = Factory.getButton("GPIO-HIGH", pin)
-        # 单个 WS2812 LED
+        # single WS2812 LED
         self.__led = Factory.getOneLed("WS2812-PWM", pin + 1)
         self.__on_event = None
         self.__btn.on_event(self, GroveKeycap.__handle_event)
@@ -350,9 +467,9 @@ def main():
 
     ledbtn = GroveKeycap(pin)
 
-    # 删除下面的 ''' 对以开始你的实验
+    # remove ''' pairs below to begin your experiment
     '''
-    # 自定义事件处理程序
+    # define a customized event handle your self
     def cust_on_event(index, event, tm):
         print("event with code {}, time {}".format(event, tm))
 
@@ -369,7 +486,7 @@ if __name__ == '__main__':
 ```
 
 :::tip
-如果一切正常，你将能够看到以下结果。如果单击按键帽，你会看到 "turn on LED"；如果双击按键帽，你会看到 "blink LED"；长按按键帽会显示 "turn off LED"。
+如果一切顺利，你将能够看到如下结果。如果你单击键帽，你会看到“turn on LED”，如果你双击键帽，你会看到“blink LED”。长按键帽会得到“turn off LED”。
 :::
 
 ```python
@@ -391,7 +508,7 @@ KeyboardInterrupt
 
 ```
 
-你可以通过按下 ++ctrl+c++ 来退出此程序。
+你可以通过简单地按下 ++ctrl+c++ 来退出该程序。
 
 ## 原理图在线查看器
 
@@ -400,13 +517,13 @@ KeyboardInterrupt
 
 ## 资源
 
-- **[Zip]** [Grove-Mech Keycap Eagle 文件](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Grove-Mech_Keycap_eagle.zip)
+- **[Zip]** [Grove-Mech Keycap eagle 文件](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Grove-Mech_Keycap_eagle.zip)
 - **[Zip]** [Adafruit_NeoPixel-master](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/Adafruit_NeoPixel-master.zip)
 - **[PDF]** [开关产品简介](https://files.seeedstudio.com/wiki/Grove-Mech_Keycap/res/DIP_Mech_Key.pdf)
 
 ## 项目
 
-这是该产品的介绍视频，包含简单的演示，您可以尝试一下。
+这是该产品的介绍视频，包含简单的演示，你可以试一试。
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wz1GzW2-VW4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -414,7 +531,7 @@ KeyboardInterrupt
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供各种支持，以确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
