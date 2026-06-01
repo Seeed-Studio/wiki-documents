@@ -309,16 +309,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="sensecap-portal" label="SenseCraft Data" default>
+<TabItem value="sensecap-portal" label="SenseCraft Data" default>
 
 By default, the LoRaWAN gateway forwards data to the [**SenseCraft Data**](https://sensecap.seeed.cc/portal/) platform (formerly **SenseCAP Portal**).
 
 1. Follow the [official user manual](/quick_start_with_M2_MP) to ensure your gateway is **online** and **linked to your account**.  
 2. Once the connection is verified, you can **proceed to next step(Step 2)**.
 
-  </TabItem>
+</TabItem>
 
-  <TabItem value="chirpstack" label="ChirpStack (Local LoRaWAN Server)">
+<TabItem value="chirpstack" label="ChirpStack (Local LoRaWAN Server)">
 
 If you’re using a **self-hosted ChirpStack** server integrated with your gateway, you’ll need to **redirect the gateway data** and **prepare a decoder script**.
 
@@ -334,7 +334,7 @@ If you’re using a **self-hosted ChirpStack** server integrated with your gatew
 </video>
 </div>
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ### Step 2: Install the Positioning Application
@@ -348,7 +348,7 @@ If you’d like to explore the interface first, you can check out the [live demo
 </div>
 
 <Tabs>
-  <TabItem value="sensecraft-solution" label="SenseCraft Solution (Recommended)" default>
+<TabItem value="sensecraft-solution" label="SenseCraft Solution (Recommended)" default>
 
 The easiest path — no terminal, no manual commands.
 
@@ -358,9 +358,9 @@ The easiest path — no terminal, no manual commands.
 
 When the dashboard opens, continue to [Step 3](#step-3-configure-the-application) to connect your LoRaWAN data source.
 
-  </TabItem>
+</TabItem>
 
-  <TabItem value="manual-docker" label="Manual (Docker)">
+<TabItem value="manual-docker" label="Manual (Docker)">
 
 Prefer to self-host? Open a terminal on your server and run the following command:
 
@@ -387,7 +387,7 @@ docker run -p 5173:5173 \
   - `/app/uploads` → stores uploaded files.
 - `-d` runs the application in the background.
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ---
