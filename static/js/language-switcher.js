@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-20 16:55:06 (北京时间)
-// 多语言页面: 2280 个
+// 生成时间: 2026-05-29 16:21:22 (北京时间)
+// 多语言页面: 2307 个
 
 (function() {
   'use strict';
@@ -1409,6 +1409,76 @@
     "ja",
     "pt"
   ],
+  "/jetson_developtool_app_market": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_connect_device": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_device_management": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_flash_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_installation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_remote_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_skills": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_supported_devices": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/update_orin_nano_developer_kit_to_super_kit": [
     "cn",
     "en",
@@ -1487,6 +1557,13 @@
     "pt"
   ],
   "/rtl8852be_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -1676,6 +1753,13 @@
     "pt"
   ],
   "/ai_robotics_recomputer_rugged_j40_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_antenna_installation": [
     "cn",
     "en",
     "es",
@@ -3272,6 +3356,13 @@
     "pt"
   ],
   "/use_the_motion-sensing_function_of_recamera_to_play_games": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/using_stream_deck_to_control_recamera_gimbal": [
     "cn",
     "en",
     "es",
@@ -5196,6 +5287,20 @@
     "ja",
     "pt"
   ],
+  "/atom_s": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/atom_x": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -5687,6 +5792,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_b601_rs_getting_started": [
     "cn",
     "en",
     "es",
@@ -7926,6 +8038,20 @@
     "pt"
   ],
   "/reterminal_e10xx_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals_2": [
     "cn",
     "en",
     "es",
@@ -10759,6 +10885,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
@@ -10801,7 +10934,56 @@
     "ja",
     "pt"
   ],
+  "/control_rebot_arm_using_voice_with_respeaker_flex": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_http_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_mqtt_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_udp_streaming": [
     "cn",
     "en",
     "es",
@@ -11054,6 +11236,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_ros2_voice_pipeline": [
     "cn",
     "en",
     "es",

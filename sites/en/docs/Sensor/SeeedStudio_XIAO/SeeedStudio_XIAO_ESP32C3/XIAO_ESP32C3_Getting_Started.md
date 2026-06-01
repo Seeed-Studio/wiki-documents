@@ -9,7 +9,7 @@ last_update:
   date: 08/14/2024
   author: Spencer
 createdAt: '2022-11-22'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
@@ -96,71 +96,16 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 > *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reliable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32C3 front indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/front-label-3.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32C3 back indication diagram</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/back-label-6.png" style={{width:700, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32C3 Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:1000, height:'auto'}}/></div></td>
-        <!--
-        Image Description: This image is the official pinout diagram of the Seeed Studio XIAO ESP32-C3 development board.
-        The diagram shows:
-        - The top view of the XIAO ESP32-C3 board.
-        - GPIO pin mappings, digital/analog labels, power pins, and function-specific roles (I2C, UART, SPI).
-        - Color-coded labels for each pin type.
-        Pin layout from left to right (as seen in the image):
-        === LEFT SIDE PINS (top to bottom) ===
-        - GPIO2    | A0  | D0   → Analog-capable (ADC1)
-        - GPIO3    | A1  | D1   → Analog-capable (ADC1)
-        - GPIO4    | A2  | D2   → Analog-capable (ADC1)
-        - GPIO5    | A3 (crossed out) | D3 → Analog-capable via ADC2 (not recommended)
-        - GPIO6    | SDA | D4   → I2C data line
-        - GPIO7    | SCL | D5   → I2C clock line
-        - GPIO21   | TX  | D6   → UART TX (Transmit)
-        === RIGHT SIDE PINS (top to bottom) ===
-        - 5V       → Power input/output
-        - GND      → Ground
-        - 3V3      → 3.3V power output
-        - D10      | MOSI | GPIO10 → SPI MOSI (not analog-capable)
-        - D9       | MISO | GPIO9  → SPI MISO (not analog-capable)
-        - D8       | SCK  | GPIO8  → SPI clock (not analog-capable)
-        - D7       | RX   | GPIO20 → UART RX (Receive)
-        === Pin Function Color Legend (as shown in image) ===
-        - Blue: Digital pin labels (D0–D10)
-        - Pink: Analog pin labels (A0–A2); A3 is crossed out due to ADC2 instability
-        - Green: GPIO number
-        - Teal: I2C function (SDA, SCL)
-        - Gray: UART function (TX, RX)
-        - Purple: SPI function (MOSI, MISO, SCK)
-        - Black: GND
-        - Red: Power pins (5V, 3V3)
-        === Footnote in Image ===
-        "A3(GPIO5) - Uses ADC2, which may become inoperative due to false sampling signals. 
-        For reliable analog reads, use ADC1 instead. Refer to the ESP32-C3 datasheet."
-        === Notes ===
-        - Only A0, A1, and A2 are officially supported analog pins using ADC1.
-        - A3 (GPIO5) is crossed out and discouraged due to ADC2 reliability issues.
-        - GPIO0, GPIO1 are not shown as analog pins in this image, though technically ADC1-capable.
-        - GPIOs 8–10, 20–21 are not usable for analog input.
-        - This layout helps developers identify safe and recommended pin functions when designing circuits or writing firmware.
-        End of XIAO ESP32-C3 pinout description.
-        -->
- </tr>
-</table>
+### Front
 
- ## **Pin Map**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/XIAO_ESP32-C3_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+## Pin Map
+
 | XIAO Pin        | Function  | Chip Pin  | Alternate Functions                  | Description          |
 | :-------------: | :-------: | :-------: | :---------------------------------: | :-----------------: |
 | 5V              | VBUS      |           |                                     | Power Input/Output   |
@@ -185,6 +130,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 | Boot            |           | GPIO9     |                                     | Enter Boot Mode      |
 | U.FL-R-SMT1     |           | LNA_IN    |                                     | UFL antenna          |
 | Light           |           | VCC_3V3   |                                     | CHG-LED              |
+
 ### Power Pins
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.

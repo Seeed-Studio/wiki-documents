@@ -519,73 +519,35 @@ If you want to restore the default settings, you can perform a factory reset. Th
 - Click the `Factory Reset` button in the app. The device will automatically reboot with the factory configuration.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB Reset
+### Direct Message Fail
 
-NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+#### NodeDB Reset
 
-- **Node ID**
-- **User name**
-- **Location information**
-- **Signal information (SNR)**
-- **Last seen time**
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network. If you encounter a situation where you can't communicate with a certain node, it might be because your nodedB has stored outdated information for that node. You will need to update it.
 
-**When to reset**
-
-Reset NodeDB when:
-
-- The node list contains outdated, duplicate, or invalid entries.
-- You move to a different Mesh environment and want to rediscover nearby nodes.
-- Node information in the app appears incorrect or incomplete.
-
-:::danger
-Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
-:::
-
-**Reset from the App**
-
-1. Open the app and connect to the target device.
-2. Go to **Settings**.
-3. Tap **Device**.
-4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
-5. Tap it and confirm the action.
-
-**App Path**
-
-`Settings > Device > Reset NodeDB`
-
-**Example Screens**
-
-Step 1: Open **Device** from the **Settings** page.
+Open the app and connect to the target device. Go to **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-Step 2: Tap `Reset NodeDB` on the **Device Config** page.
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-Please note the difference between the following options:
+#### Exchange User Info
 
-- **Reset NodeDB**: Only clears the node database.
-- **Factory Reset**: Restores the device to factory settings and removes additional configuration data.
+Each node will periodically send its own node information, enabling other nodes in the mesh to "see" and "recognize" it. Two nodes need to exchange their node information with each other in order to be able to communicate with each other. If you are unable to send or receive private messages with another node on the list, you can manually prompt them to exchange information in the app.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### Regenerate Private Key
+
+Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+Reboot the faulty device to make the configuration function.
+
+:::note
+After the key regeneration, other device needs to reconnect with the node. So it is better to delete the node in other device's node list.
 :::
-
-**What happens after reset**
-
-After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
-
-You may observe the following:
-
-- The node list may temporarily become empty or smaller.
-- Nodes will gradually reappear as the device continues operating.
-- Previously stored historical node records will no longer be available.
-
-**Notes**
-
-- Before resetting, make sure the issue is actually related to an abnormal node list.
-- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
-- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
-- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Power Consumption
 

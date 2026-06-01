@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO RA4M1でのピン多重化。
-title: Seeed Studio XIAO RA4M1でのピン多重化
+description: Seeed Studio XIAO RA4M1 を使用したピン多重化。
+title: Seeed Studio XIAO RA4M1 を使用したピン多重化
 keywords:
   - ra4m1
   - xiao
@@ -11,14 +11,26 @@ slug: /xiao_ra4m1_pin_multiplexing
 last_update:
   date: 08/15/2024
   author: Jason
-createdAt: '2025-05-27'
-updatedAt: '2025-09-29'
+createdAt: '2024-08-21'
+updatedAt: '2025-09-11'
 url: https://wiki.seeedstudio.com/ja/xiao_ra4m1_pin_multiplexing/
 ---
 
+## ハードウェア概要
+
+作業を始める前に、この製品の基本的なパラメータを把握しておくことが非常に重要です。次の表は、Seeed Studio XIAO RA4M1 の特性に関する情報を示しています。
+
+### 表面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### 裏面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/XIAO_RA4M1_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
 ## デジタル
 
-XIAO RA4M1は最大11個の通常のGPIOピン、6個のアナログピン、そして8個の再利用可能なIOポートを備えています。この例では、XIAO RA4M1、XIAO拡張ボード、およびリレーを使用して、異なるデジタルピンを読み書きに使用する方法を実演します。
+XIAO RA4M1 には最大 11 本の通常の GPIO ピン、6 本のアナログピン、および背面に 8 個の再利用可能な IO ポートがあります。この例では、XIAO RA4M1、XIAO 拡張ボード、およびリレーを使用して、異なるデジタルピンを読み取りおよび書き込みに使用する方法を説明します。
 
 ### ハードウェアの準備
 
@@ -36,27 +48,27 @@ XIAO RA4M1は最大11個の通常のGPIOピン、6個のアナログピン、そ
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-XIAO RA4M1またはSenseを拡張ボードに取り付け、Groveケーブルを使用してリレーを拡張ボードの**A0/D0**インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
+XIAO RA4M1 または Sense を拡張ボードに装着し、Grove ケーブルを使用してリレーを拡張ボードの **A0/D0** インターフェースに接続してください。最後に、USB-C ケーブルで XIAO をコンピュータに接続します。
 
 ### ソフトウェア実装
 
-この例では、XIAO拡張ボードに接続されたボタンを使用してリレーのオン/オフ状態を制御する実装を行います。ボタンが押されるとリレーがオンになり、ボタンが離されるとリレーがオフになります。
+この例では、XIAO 拡張ボードに接続されたボタンを使用して、リレーのオン／オフ状態を制御する方法を実装します。ボタンが押されるとリレーがオンになり、ボタンを離すとリレーがオフになります。
 
 ```c
 const int buttonPin = D1;     // the number of the pushbutton pin
@@ -85,13 +97,13 @@ void loop() {
 }
 ```
 
-すべてが順調に進めば、プログラムをアップロードした後、以下の効果が確認できるはずです。
+すべてが順調に進めば、プログラムを書き込んだ後、次のような動作が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/31.gif" style={{width:600, height:'auto'}}/></div>
 
-## デジタルをPWMとして使用
+## デジタルを PWM として使用
 
-XIAO RA4M1のすべてのGPIOピンはPWM出力をサポートしています。そのため、任意のピンを使用してPWMを出力し、ライトの明るさを調整したり、サーボを制御したり、その他の機能を実現できます。
+XIAO RA4M1 上のすべての GPIO ピンは PWM 出力をサポートしています。そのため、任意のピンを使用して PWM を出力し、ライトの明るさを調整したり、サーボを制御したり、その他の機能を実現できます。
 
 ### ハードウェアの準備
 
@@ -109,27 +121,27 @@ XIAO RA4M1のすべてのGPIOピンはPWM出力をサポートしています。
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO RA4M1またはSenseを拡張ボードに取り付け、Groveケーブルを使用してVariable Color LEDを拡張ボードのA0/D0インターフェースに接続してください。最後に、USB-CケーブルでXIAOをコンピューターに接続します。
+XIAO RA4M1 または Sense を拡張ボードに装着し、その後 Grove ケーブルを使用して Variable Color LED を拡張ボードの A0/D0 インターフェースに接続してください。最後に、USB-C ケーブルで XIAO をコンピュータに接続します。
 
 ### ソフトウェア実装
 
-この例では、PWM出力を使用してライトの明るさを制御する方法を実演します。
+この例では、PWM 出力を使用してライトの明るさを制御する方法を説明します。
 
 ```cpp
 int LED_pin = D0;    // LED connected to digital pin 10
@@ -158,23 +170,23 @@ void loop() {
 }
 ```
 
-プログラムが正常に実行されると、以下の実行効果が表示されます。
+プログラムが正常に動作すると、次のような動作結果が確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
 ## アナログ
 
-XIAO RA4M1開発ボードは、アナログセンサー値の高解像度読み取りのために最大14ビットADCを搭載しており、より正確な値を読み取ることができます。XIAO RA4M1開発ボードのアナログ-デジタル変換器（ADC）。デフォルトでは、解像度は10ビットに設定されており、アナログ読み取りの精度向上のために12ビットと14ビット解像度の両方に設定できます。
+XIAO RA4M1 開発ボードは最大 14 ビットの ADC を備えており、アナログセンサー値を高分解能で読み取ることができます。これにより、より正確な値を取得するのに役立ちます。XIAO RA4M1 開発ボード上のアナログ・デジタルコンバータ（ADC）は、デフォルトでは分解能が 10 ビットに設定されていますが、アナログ読み取りの精度を向上させるために 12 ビットおよび 14 ビットの分解能に設定することもできます。
 
-ADC精度による詳細データ
+ADC 精度ごとの詳細データ
 
-- 10ビット：0~1024
-- 12ビット：0~4096
-- 14ビット：0~16383
+- 10-bit :  0~1024
+- 12-bit :  0~4096
+- 14-bit :  0~16383
 
-次に、ADCの特性を反映するために2つのセンサーを選択します。
+次に、ADC の特性を反映するために 2 つのセンサーを選択します。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -192,22 +204,22 @@ ADC精度による詳細データ
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-p-852.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -232,7 +244,7 @@ void setup() {
   // Ten_Bite_ADC_Config(); // 10bit
   // Twelve_Bite_ADC_Config(); // 12bit
   Fourteen_Bite_ADC_Config(); // 14bit
-  
+
 }
 
 void loop() {
@@ -260,28 +272,28 @@ void Fourteen_Bite_ADC_Config() {
 }
 ```
 
-すべてが順調に進めば、プログラムをアップロードした後、以下のような効果が確認できるはずです。
+すべてが順調に進めば、プログラムを書き込んだ後に次のような効果が確認できるはずです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/33.gif" style={{width:650, height:'auto'}}/></div>
 
-## Serial
+## シリアル
 
-Arduino IDEで作業する際、シリアル通信は多くのプロジェクトにおいて重要な部分です。Arduino IDEでSerialを使用するには、まずSerial Monitorウィンドウを開く必要があります。これは、ツールバーの**Serial Monitor**アイコンをクリックするか、**Ctrl+Shift+M**のショートカットキーを押すことで実行できます。
+Arduino IDE を使用する際、シリアル通信は多くのプロジェクトで不可欠な要素です。Arduino IDE でシリアルを使用するには、まずシリアルモニタウィンドウを開く必要があります。これはツールバーの **Serial Monitor** アイコンをクリックするか、ショートカットキー **Ctrl+Shift+M** を押すことで行えます。
 
-### 一般的な使用方法
+### 一般的な使い方
 
-よく使用されるSerial関数には以下があります：
+よく使用されるシリアル関数には次のようなものがあります：
 
-- `Serial.begin()` -- 指定されたボーレートで通信を初期化します
-- `Serial.print()` -- 読み取り可能な形式でSerialポートにデータを送信します
-- `Serial.write()` -- Serialポートにバイナリデータを送信します
-- `Serial.available()` -- Serialポートから読み取り可能なデータがあるかどうかを確認します
-- `Serial.read()` -- Serialポートから1バイトのデータを読み取ります
-- `Serial.flush()` -- 送信中のシリアルデータの送信完了を待ちます
+- `Serial.begin()` -- 指定したボーレートで通信を初期化します。
+- `Serial.print()` -- 読み取り可能な形式でデータをシリアルポートに送信します。
+- `Serial.write()` -- バイナリデータをシリアルポートに送信します。
+- `Serial.available()` -- シリアルポートから読み取ることができるデータがあるかどうかを確認します。
+- `Serial.read()` -- シリアルポートから 1 バイトのデータを読み取ります。
+- `Serial.flush()` -- 送信中のシリアルデータの送信完了を待機します。
 
-これらのSerial関数を使用することで、Arduinoボードとコンピュータ間でデータの送受信が可能になり、インタラクティブなプロジェクトを作成する多くの可能性が開かれます。
+これらのシリアル関数を使用することで、Arduino ボードとコンピュータ間でデータの送受信が可能になり、インタラクティブなプロジェクトを作成するための多くの可能性が広がります。
 
-以下はサンプルプログラムです：
+以下にサンプルプログラムを示します：
 
 ```c
 void setup() {
@@ -301,17 +313,17 @@ void loop() {
     Serial.print("I received: ");
     Serial.println(incomingByte);
   }
-  
+
   // wait for a second before repeating the loop
   delay(1000);
 }
 ```
 
-### Serial1の使用方法
+### Serial1 の使用方法
 
-上記のXIAO RA4M1の具体的なパラメータのピン図によると、TXピンとRXピンがあることが確認できます。
-これはシリアル通信とは異なりますが、使用方法も非常に似ており、いくつかのパラメータを追加する必要があるだけです。
-そこで次に、チップから引き出されたピンをシリアル通信に使用します。
+上記の XIAO RA4M1 のピン図にある各種パラメータによると、TX ピンと RX ピンがあることがわかります。
+これは通常のシリアル通信とは異なりますが、いくつかのパラメータを追加する必要がある点を除けば、使い方は非常によく似ています。
+そこで次に、チップから引き出されたピンを使ってシリアル通信を行います。
 
 ```c
 
@@ -320,7 +332,7 @@ void loop() {
 void setup() {
     Serial1.begin(BAUD);
 }
- 
+
 void loop() {
   if(Serial1.available() > 0)
   {
@@ -332,7 +344,7 @@ void loop() {
 }
 ```
 
-### ソフトウェアシリアルの使用法
+### Software Serial の使用方法
 
 ```c
 #include <SoftwareSerial.h>
@@ -364,26 +376,26 @@ void loop() {
 }
 ```
 
-このプログラムでは、まず`SoftwareSerial.h`ライブラリをインクルードしてソフトウェアシリアルを使用します。次に、ピン2と3をそれぞれRXとTXとして使用して、mySerialという新しいSoftwareSerialオブジェクトを作成します。
+このプログラムでは、まず `SoftwareSerial.h` ライブラリをインクルードしてソフトウェアシリアルを使用できるようにします。次に、ピン 2 と 3 をそれぞれ RX と TX として使用し、mySerial という名前の新しい SoftwareSerial オブジェクトを作成します。
 
-`setup()`関数では、ハードウェアシリアル（`Serial.begin()`）とソフトウェアシリアル（`mySerial.begin()`）の両方を初期化します。
+`setup()` 関数では、ハードウェアシリアル（`Serial.begin()`）とソフトウェアシリアル（`mySerial.begin()`）の両方を初期化します。
 
-`loop()`関数では、`mySerial.available()`関数を使用してソフトウェアシリアルから読み取り可能なデータがあるかどうかを確認します。データがある場合は、`mySerial.read()`関数を使用して受信バイトを読み取り、dataという変数に格納します。次に、`Serial.print()`と`Serial.println()`関数を使用して、「Received data: 」に続いてdataの値をハードウェアシリアルに出力します。
+`loop()` 関数では、`mySerial.available()` 関数を使用して、ソフトウェアシリアルから読み取ることができるデータがあるかどうかを確認します。データがある場合は、`mySerial.read()` 関数を使用して受信したバイトを読み取り、data という変数に保存します。その後、`Serial.print()` と `Serial.println()` 関数を使用して、「Received data: 」という文字列に続けて data の値をハードウェアシリアルに出力します。
 
-また、`mySerial.print()`関数を使用してソフトウェアシリアルに「Hello World!」を書き込みます。これにより、XIAOからソフトウェアシリアルポートに接続されたデバイスにデータが送信されます。
+また、`mySerial.print()` 関数を使用して「Hello World!」という文字列をソフトウェアシリアルに書き込みます。これにより、XIAO からソフトウェアシリアルポートに接続されたデバイスへデータが送信されます。
 
-最後に、`delay()`関数を追加してループを繰り返す前に1秒間待機します。
+最後に、`delay()` 関数を追加して、ループを繰り返す前に 1 秒待機します。
 
 ## IIC
 
-XIAO RA4M1には、多くのセンサーのデータ送信と解析、およびOLEDスクリーンの使用に利用できるI2Cインターフェースがあります。
+XIAO RA4M1 には I2C インターフェースが搭載されており、多くのセンサーのデータ送信や解析、さらには一部の OLED 画面の使用にも利用できます。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove OLED 付き Seeed Studio Expansion Base for XIAO</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -392,34 +404,34 @@ XIAO RA4M1には、多くのセンサーのデータ送信と解析、およびO
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-XIAO拡張ボード上のOLEDディスプレイはI2Cプロトコルを使用し、ボード上のI2C回路を通じてXIAOのI2Cインターフェースに接続されています。そのため、XIAOを拡張ボードに直接接続し、プログラムを作成して画面にコンテンツを表示することができます。
+XIAO 拡張ボード上の OLED ディスプレイは I2C プロトコルを使用しており、ボード上の I2C 回路を介して XIAO の I2C インターフェースに接続されています。したがって、XIAO を拡張ボードに直接挿し込み、画面にコンテンツを表示するようにプログラムすることができます。
 
 ### ソフトウェア実装
 
-この例では、Seeed Studio Expansion Base for XIAO RA4M1のOLEDディスプレイの使用方法を紹介します。
+この例では、Seeed Studio Expansion Base for XIAO RA4M1 上の OLED ディスプレイの使用方法を紹介します。
 
-#### ステップ1. Seeed Studio XIAO RA4M1を拡張ボードに取り付け、Type-Cケーブルを接続します。
+#### ステップ 1. Seeed Studio XIAO RA4M1 を拡張ボードに取り付け、Type-C ケーブルを接続します
 
-#### ステップ2. u8g2ライブラリをインストールします。
+#### ステップ 2. u8g2 ライブラリをインストールします
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-#### ステップ3. コードをコピーしてArduino IDEに貼り付け、アップロードします。
+#### ステップ 3. コードをコピーして Arduino IDE に貼り付け、書き込みます
 
 ```c
 #include <Arduino.h>
@@ -440,21 +452,21 @@ void loop(void) {
 }
 ```
 
-コードの最初の数行では、Arduino.h、U8x8lib.h、Wire.hなどの必要なライブラリをインクルードしています。U8x8lib.hライブラリはOLEDディスプレイを制御する関数を提供し、Wire.hライブラリはI2C通信用の関数を提供します。
+コードの最初の数行では、Arduino.h、U8x8lib.h、Wire.h などの必要なライブラリをインクルードしています。U8x8lib.h ライブラリは OLED ディスプレイを制御するための関数を提供し、Wire.h ライブラリは I2C 通信のための関数を提供します。
 
-`setup()`関数では、`u8x8.begin()`関数を使用してOLEDディスプレイを初期化します。また、`u8x8.setFlipMode()`関数を使用してディスプレイのフリップモードを設定し、画面を180度回転させます。
+`setup()` 関数では、`u8x8.begin()` 関数を使用して OLED ディスプレイを初期化します。また、`u8x8.setFlipMode()` 関数を使用してディスプレイのフリップモードを設定し、画面を 180 度回転させます。
 
-`loop()`関数では、`u8x8.setFont()`関数を使用してフォントを設定し、`u8x8.setCursor()`関数を使用してディスプレイ上のカーソルの位置を指定します。最後に、`u8x8.print()`関数を使用してOLEDディスプレイに「Hello World!」という文字列を表示します。
+`loop()` 関数では、`u8x8.setFont()` 関数を使用してフォントを設定し、`u8x8.setCursor()` 関数を使用してディスプレイ上のカーソル位置を指定します。最後に、`u8x8.print()` 関数を使用して、OLED ディスプレイに「Hello World!」という文字列を表示します。
 
-XIAO RA4M1にプログラムをアップロードすると、拡張ボード上のOLEDディスプレイ画面にコンテンツが表示されます。
+XIAO RA4M1 にプログラムを書き込むと、拡張ボード上の OLED ディスプレイ画面に内容が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/21.png" style={{width:800, height:'auto'}}/></div>
 
 ## SPI
 
-RA4M1チップは複数の周辺機器を統合しており、フラッシュメモリ、ディスプレイ、センサーなどの外部SPIデバイスを接続するために使用できるSPIインターフェースを含んでいます。XIAO RA4M1は高速SPI転送モードもサポートしており、最大80MHzのSPI転送レートを実現でき、ほとんどのSPIデバイスのデータ転送ニーズを満たします。
+RA4M1 チップには複数のペリフェラルが統合されており、その中には SPI インターフェースも含まれます。これを使用して、フラッシュメモリ、ディスプレイ、センサなどの外部 SPI デバイスを接続できます。XIAO RA4M1 は高速 SPI 転送モードもサポートしており、最大 80 MHz の SPI 転送レートを実現できます。これにより、ほとんどの SPI デバイスのデータ転送ニーズを満たすことができます。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <table align="center">
  <tr>
@@ -468,28 +480,28 @@ RA4M1チップは複数の周辺機器を統合しており、フラッシュメ
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-上記のハードウェアを準備した後、ジャンパーワイヤーを使用してXIAOとOLEDのSPIインターフェースを接続します。配線方法については以下の図を参照してください。
+上記のようにハードウェアを準備したら、ジャンパワイヤを使用して XIAO と OLED の SPI インターフェースを接続します。配線方法については、次の図を参照してください。
 
 ### ソフトウェア実装
 
-次に、以下のプログラムを例として、SPIインターフェースを使用してOLED画面表示を制御する方法を紹介します。
+次に、以下のプログラムを例として、SPI インターフェースを使用して OLED 画面表示を制御する方法を紹介します。
 
-u8g2ライブラリをインストールします。
+u8g2 ライブラリをインストールします。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/olikraus/U8g2_Arduino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -498,13 +510,13 @@ u8g2ライブラリをインストールします。
 #include <U8g2lib.h>
 #include <SPI.h>
 #include <Wire.h>
- 
+
 U8G2_SH1107_128X128_1_4W_HW_SPI u8g2(U8G2_R3, /* cs=*/ D7, /* dc=*/ D4, /* reset=*/ D5);
- 
+
 void setup(void) {
   u8g2.begin();
 }
- 
+
 void loop(void) {
   u8g2.firstPage();
 
@@ -515,15 +527,15 @@ void loop(void) {
 }
 ```
 
-`setup()` 関数では、`U8G2_SH1107_128X128_1_4W_HW_SPI` クラスが、チップセレクト（cs）、データ/コマンド（dc）、リセットに使用されるピンを指定する適切なコンストラクタ引数でインスタンス化されます。その後、`u8g2.begin()` 関数が呼び出されてディスプレイを初期化します。
+`setup()` 関数では、チップセレクト (cs)、データ/コマンド (dc)、リセットに使用するピンを指定する適切なコンストラクタ引数で `U8G2_SH1107_128X128_1_4W_HW_SPI` クラスをインスタンス化します。次に、`u8g2.begin()` 関数を呼び出してディスプレイを初期化します。
 
-`loop()` 関数では、`u8g2.firstPage()`、`u8g2.setFont()`、`u8g2.drawStr()` 関数を使用してディスプレイが新しいコンテンツで更新されます。`u8g2.firstPage()` 関数は書き込み用のディスプレイバッファを設定し、`u8g2.nextPage()` は更新されたコンテンツを表示します。do-while ループは、プログラムが停止されるまでコンテンツが継続的に表示されることを保証します。
+`loop()` 関数では、`u8g2.firstPage()`、`u8g2.setFont()`、`u8g2.drawStr()` 関数を使用して、新しいコンテンツでディスプレイを更新します。`u8g2.firstPage()` 関数は書き込み用にディスプレイバッファを設定し、`u8g2.nextPage()` が更新された内容を表示します。do-while ループにより、プログラムが停止するまでコンテンツが継続的に表示されます。
 
-全体的に、このコードは U8g2 ライブラリを使用して OLED ディスプレイを制御し、テキストを表示する方法を示しています。
+全体として、このコードは U8g2 ライブラリを使用して OLED ディスプレイを制御し、その上にテキストを表示する方法を示しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-## CAN（XIAO CAN バス拡張ボード）
+## CAN(XIAO CAN Bus Expansion Board)
 
 ### ハードウェアの準備
 
@@ -539,58 +551,58 @@ void loop(void) {
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-CAN-Bus-Breakout-Board-for-XIAO-and-QT-Py-p-5702.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-#### ステップ1. 2つのCAN BusブレークアウトボードとXIAO RA4M1を準備する
+#### ステップ 1 . 2 枚の CAN Bus Breakout Board と XIAO RA4M1 を準備します
 
-#### ステップ2. これら2つのXIAO RA4M1をそれぞれCAN Busブレークアウトボードに挿入する
+#### ステップ 2 . これら 2 つの XIAO RA4M1 を、それぞれ CAN Bus Breakout Board に挿し込みます
 
-#### ステップ3. デュポンライン接続を準備する
+#### ステップ 3 . DuPont ケーブル接続を準備します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
 
 ### ソフトウェアの準備
 
-[MCP2515ボード用のArduinoライブラリ](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515)を提供しています。
+[MCP2515 ボード用の Arduino ライブラリ](https://github.com/limengdu/Arduino_CAN_BUS_MCP2515) を提供しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/Arduino_CAN_BUS_MCP2515" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
 <br />
 
-このライブラリには以下を含む複数のサンプルが含まれています：
+このライブラリには、次のようないくつかのサンプルが含まれています：
 
-- ***OBDII-PIDs*** - OBD-IIインターフェースからデータを取得
-- ***send*** - CANバスにフレームを送信
-- ***recv*** - CANバスからフレームを受信
-- ***set_mask_filter_recv*** - マスクとフィルタ設定でCANバスからフレームを受信
+- ***OBDII-PIDs*** -  OBD-II インターフェースからデータを取得
+- ***send*** - CAN バスにフレームを送信
+- ***recv*** - CAN バスからフレームを受信
+- ***set_mask_filter_recv*** - マスクとフィルタ設定を使用して CAN バスからフレームを受信
 
 ### ソフトウェア実装
 
 :::tip
-2つのXIAO RA4M1を同時に電源投入してプログラムをダウンロードすることは許可されていません。これによりシリアルポートのダウンロード時にエラーが発生します。1つをダウンロードした後、それを抜いてから、もう一方のXIAO RA4M1に電源を入れてプログラムをダウンロードし、最後に同時に電源を入れてシリアルポートメッセージを確認してください
+2 つの XIAO RA4M1 に対して同時に電源を入れたりプログラムをダウンロードしたりすることはできません。そうするとシリアルポートのダウンロード時にエラーが発生します。1 台目のダウンロードが完了したらそれを抜き、次にもう一方の XIAO RA4M1 の電源を入れてプログラムをダウンロードし、最後に両方に同時に電源を入れてシリアルポートメッセージを確認してください。
 :::
 
-**CAN書き込みコード**
+**CAN 書き込みコード**
 
 ```c
 
 /*  send a frame from can bus
 
     CAN Baudrate,
-    
+
     #define CAN_5KBPS           1
     #define CAN_10KBPS          2
     #define CAN_20KBPS          3
@@ -610,7 +622,7 @@ void loop(void) {
     #define CAN_666KBPS         17
     #define CAN_1000KBPS        18
 */
-   
+
 #include <mcp_can.h>
 #include <SPI.h>
 
@@ -636,15 +648,15 @@ void setup()
 {
     Serial.begin(115200);
     while(!Serial);
-    
+
     // below code need for OBD-II GPS Dev Kit Atemga32U4 version
     // pinMode(A3, OUTPUT);
     // digitalWrite(A3, HIGH);
-    
+
     // below code need for OBD-II GPS Dev Kit RP2040 version
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
-    
+
     while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
@@ -663,13 +675,13 @@ void loop()
 // END FILE
 ```
 
-**CAN読み取りコード**
+**CAN 読み取りコード**
 
 ```c
 /*  receive a frame from can bus
 
     CAN Baudrate,
-    
+
     #define CAN_5KBPS           1
     #define CAN_10KBPS          2
     #define CAN_20KBPS          3
@@ -722,15 +734,15 @@ void setup()
 {
     Serial.begin(115200);
     while(!Serial);
-    
+
     // below code need for OBD-II GPS Dev Kit Atemga32U4 version
     // pinMode(A3, OUTPUT);
     // digitalWrite(A3, HIGH);
-    
+
     // below code need for OBD-II GPS Dev Kit RP2040 version
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
-    
+
     while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
@@ -750,7 +762,7 @@ void loop()
         CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
 
         unsigned long canId = CAN.getCanId();
-        
+
         Serial.println("-----------------------------");
         Serial.print("Get data from ID: ");
         Serial.println(canId, HEX);
@@ -769,18 +781,18 @@ void loop()
 ```
 
 :::tip
-この例では、CAN Bus Breakout Board の端子ピン P1 の一つをはんだ付けする必要があります。そうすることで任意の速度を使用できるようになります。そうしないと 125 CAN ボーレート以下でしか使用できません。
+この例では、CAN Bus Breakout Board の端子ピン P1 のいずれかをはんだ付けする必要があります。そうして初めて任意の速度を使用できます。そうでない場合は、125 CAN ボーレート未満しか使用できません。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
 
-## CAN（その他のトランシーバー）
+## CAN（その他のトランシーバ）
 
-チュートリアルとコードを提供してくれた [Arduino](https://docs.arduino.cc/tutorials/uno-r4-minima/can/) に感謝いたします。
+[Arduino](https://docs.arduino.cc/tutorials/uno-r4-minima/can/) に、チュートリアルとコードの提供に感謝いたします。
 
 ### ハードウェアの準備
 
-CAN プロトコルでは、送信側が送信したメッセージを受信する必要があります。単純に TX と RX を接続するだけでは通信を完了することはできません。通信にはトランシーバーを接続する必要があります。ここでは、Arduino 公式の **SN65HVD230 スプリッターモジュール** を使用します。
+CAN プロトコルでは、送信側は自分が送信したメッセージを必ず受信する必要があります。TX と RX を接続するだけでは通信は完了せず、通信にはトランシーバを接続する必要があります。ここでは、Arduino 公式の **SN65HVD230 分配モジュール** を使用します。
 
 <table>
     <thead>
@@ -803,7 +815,7 @@ CAN プロトコルでは、送信側が送信したメッセージを受信す�
 
 ### ソフトウェアの準備
 
-**CAN Write コード**
+**CAN 書き込みコード**
 
 ```cpp
 /*
@@ -873,7 +885,7 @@ void loop()
 
 ```
 
-**CAN読み取りコード**
+**CAN 読み取りコード**
 
 ```cpp
 /*
@@ -918,20 +930,20 @@ void loop()
 
 ```
 
-***ターミナル抵抗器をいつ接続する必要がありますか？***
+***終端抵抗はいつ接続する必要がありますか？***
 
-- 1. 長距離通信：CANバスが長い場合（例：1メートル以上）、信号反射による通信問題を避けるため、バスの両端にターミナル抵抗器を接続する必要があります。
-- 2. マルチノード通信：複数のノードが同じCANバスに接続されている場合、ターミナル抵抗器も不可欠です。これらはバスのインピーダンス安定性を確保し、信号歪みを防ぎます。
+- 1. 長距離通信：CAN バスが長い場合（例：1 メートル以上）、信号反射による通信障害を避けるため、バスの両端に終端抵抗を接続する必要があります。
+- 2. マルチノード通信：複数のノードが同じ CAN バスに接続されている場合も、終端抵抗は不可欠です。終端抵抗はバスのインピーダンスを安定させ、信号の歪みを防ぎます。
 
-***ターミナル抵抗器をいつ切断できますか？***
+***終端抵抗はいつ外してもよいですか？***
 
-- 1. 短距離通信：一部の短距離アプリケーション（通常1メートル未満）では、信号反射が通信に与える影響が比較的小さいため、ターミナル抵抗器を省略できます。
-- 2. 単一ノード通信：バス上にノードが1つしかない場合（デバッグ環境など）で、距離が短い場合、ターミナル抵抗器を一時的に切断できます。
+- 1. 短距離通信：一部の短距離アプリケーション（通常 1 メートル未満）では、信号反射が通信に与える影響が比較的小さいため、終端抵抗を省略できる場合があります。
+- 2. シングルノード通信：バス上に 1 つのノードしかない場合（デバッグ環境など）で、かつ距離が短いときは、終端抵抗を一時的に外すことができます。
 
 <table align="center">
  <tr>
-     <th>送信側コード結果</th>
-     <th>受信側コード結果</th>
+     <th>送信側コードの結果</th>
+     <th>受信側コードの結果</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:500, height:'auto'}}/></div></td>
@@ -941,7 +953,7 @@ void loop()
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

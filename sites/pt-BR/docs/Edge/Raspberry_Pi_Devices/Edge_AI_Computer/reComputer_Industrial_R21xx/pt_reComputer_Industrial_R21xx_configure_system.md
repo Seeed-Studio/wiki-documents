@@ -1,5 +1,5 @@
 ---
-description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, DI/DO, teste de DI/DO e UPS para desligamento seguro.
+description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R21xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
 title: Configurar reComputer Industrial R21xx
 keywords:
   - Raspberry pi
@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-21'
+updatedAt: '2026-04-24'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_R21xx_configure_system/
 ---
 
@@ -41,7 +41,7 @@ cat /sys/kernel/debug/gpio
 
 ## Teste do LED USER
 
-Fornecemos LEDs em três cores, vermelho, azul e verde, para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
+Fornecemos LEDs em três cores: vermelho, azul e verde para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
 
 **1. Navegue até o diretório do LED**  
 
@@ -134,9 +134,9 @@ Este comando iniciará a varredura de dispositivos Bluetooth próximos. Você po
 
 ## LoRa® via Mini‑PCIe
 
-### Configuração LoRa® SPI  
+### Configuração de LoRa® SPI  
 
-Após instalar o LoRa® SPI no slot Mini‑PCIe 2, é possível configurar o LoRa® SPI, seguindo estas etapas:
+Após instalar o LoRa® SPI no slot 2 Mini‑PCIe, é possível configurar o LoRa® SPI, seguindo estas etapas:
 
 1. Clone o repositório **SX1302_HAL**:
 
@@ -295,7 +295,7 @@ SX1261_RESET_PIN=634     # SX1261 reset (LBT / Spectral Scan)
 # AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Comente as linhas 18, 29, 35, 42, 53 e 54, respectivamente:
+Comente, respectivamente, as linhas 18, 29, 35, 42, 53 e 54:
 
 ```bash
 ......
@@ -325,11 +325,11 @@ Modifique o parâmetro com_path, altere  ***"com_path": "/dev/spidev0.0"*** para
 sudo make
 ```
 
-Essas etapas irão configurar o LoRa® SPI e executar o encaminhador de pacotes com o arquivo de configuração especificado.
+Essas etapas irão configurar o LoRa® SPI e executar o packet forwarder com o arquivo de configuração especificado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.1_lora_spi_1.png" style={{width:800, height:'auto'}}/></div>
 
-### Configuração LoRa® USB
+### Configuração de LoRa® USB
 
 Para LoRa® USB, os comandos anteriores permanecem os mesmos que para LoRa® SPI. No entanto, o comando final precisa ser alterado para:
 
@@ -345,7 +345,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 Este comando especifica o arquivo de configuração a ser usado para LoRa® USB.
 
-## 5G Celular via M.2 B‑KEY
+## Celular 5G via M.2 B‑KEY
 
 Para interagir com um módulo 5G/4G usando comandos AT via minicom, siga estas etapas:
 
@@ -497,10 +497,10 @@ ping www.baidu.com -I usb0
 
 O reComputer Industrial R21xx inclui **2x portas RS485**. Abaixo estão suas correspondentes **portas COM** e **arquivos de dispositivo**:  
 
-| **Número de portas RS485** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
-|---------------------------|--------------|--------------------------|-----------------------------|
-| **RS485-3**               | COM3         | A3/B3/GND3               | `/dev/ttyACM2`              |
-| **RS485-4**               | COM4         | A4/B4/GND4               | `/dev/ttyACM3`              |
+| **Número de portas RS485** | **Porta COM** | **Identificação na serigrafia** | **Arquivo de dispositivo** |
+|---------------------------|--------------|----------------------|-----------------|
+| **RS485-3**               | COM3         | A3/B3/GND3           | `/dev/ttyACM2`  |
+| **RS485-4**               | COM4         | A4/B4/GND4           | `/dev/ttyACM3`  |
 
 Para testar a função RS485, você pode seguir os passos abaixo (tomando RS485_1 e RS485_2 como exemplos):
 
@@ -523,13 +523,13 @@ sudo minicom -D /dev/ttyACM2
 - Pressione ***O*** novamente para abrir a configuração, selecione Serial port setup e pressione ***Enter***; Abra todas as interfaces relacionadas a RS485, pressione ***H/I/J/K/L*** em sequência para abrir;
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Depois que todos exibirem "YES", pressione Enter para voltar e, em seguida, selecione Exit para sair.
+- Depois que todos os "YES" forem exibidos, pressione Enter para voltar e, em seguida, selecione Exit para sair.
 
 :::note
 
 Tomando ACM2 e ACM3 como exemplo:
-Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A***, depois pressione ***Z*** e então ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM2 à vontade, e poderá ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
-Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e então  ***E***, e então inicie o comando de escrita da porta serial. Neste momento, você pode imprimir strings em ACM3 à vontade, e poderá ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
+Se você quiser enviar de ACM2 para ACM3, ACM2 precisa ser configurado novamente: ***ctrl+A*** , depois pressione ***Z*** e depois ***E*** , e então inicie o comando de escrita na porta serial. Neste momento, você pode imprimir strings em ACM2 à vontade, e poderá ver o conteúdo de ACM2 em ACM3 ao mesmo tempo;
+Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser configurado novamente:  ***ctrl+A***, depois pressione  ***Z***  e depois  ***E*** , e então inicie o comando de escrita na porta serial. Neste momento, você pode imprimir strings em ACM3 à vontade, e poderá ver o conteúdo de ACM3 em ACM2 ao mesmo tempo. Como mostrado na figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -538,12 +538,12 @@ Por outro lado, se você quiser enviar de ACM3 para ACM2, ACM3 precisa ser confi
 
 O reComputer Industrial R21xx inclui **2x portas RS232**, e as correspondentes **portas COM** e **arquivos de dispositivo** são os seguintes:
 
-| **Número de portas RS232** | **Porta COM** | **Rótulo de serigrafia** | **Arquivo de dispositivo** |
-|---------------------------|--------------|--------------------------|-----------------------------|
-| **RS232-1**               | COM1         | RX1/TX1/GND1             | `/dev/ttyACM0`              |
-| **RS232-2**               | COM2         | RX2/TX2/GND2             | `/dev/ttyACM1`              |
+| **Número de portas RS232** | **Porta COM** | **Identificação na serigrafia** | **Arquivo de dispositivo** |
+|---------------------------|--------------|----------------------|-----------------|
+| **RS232-1**               | COM1         | RX1/TX1/GND1         | `/dev/ttyACM0`  |
+| **RS232-2**               | COM2         | RX2/TX2/GND2         | `/dev/ttyACM1`  |
 
-Como o RS232 é comunicação full-duplex, faça um curto-circuito entre TX e RX do RS232 diretamente para realizar um teste de loopback.
+Como o RS232 é comunicação full-duplex, faça um curto-circuito diretamente entre TX e RX do RS232 para realizar um teste de loopback.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
@@ -619,7 +619,7 @@ echo in > /sys/class/gpio/gpio588/direction
 cat /sys/class/gpio/gpio588/value
 ```
 
-3. Quando o nível externo for alto, o valor de ***/sys/class/gpio/gpio588/value*** será 0; quando o nível externo for baixo, ***/sys/class/gpio/gpio588/value*** será 1.
+3. Quando o nível externo for alto, o valor de ***/sys/class/gpio/gpio588/value*** é 0; quando o nível externo for baixo, ***/sys/class/gpio/gpio588/value*** é 1.
 
 ## DO (Saída Digital)
 
@@ -777,7 +777,7 @@ echo "can0 & can1 are up @ 500 kbit/s"
 
 ### Teste com Python-CAN
 
-[Python-CAN](https://github.com/raspberrypi/usbboot) é uma biblioteca Python multiplataforma que fornece uma interface de programação unificada para comunicação via barramento Controller Area Network (CAN), suportando uma ampla variedade de interfaces de hardware CAN e barramentos virtuais, e permitindo a implementação fácil de transmissão, recepção, filtragem de mensagens CAN, monitoramento de barramento e outras operações.
+[Python-CAN](https://github.com/raspberrypi/usbboot) é uma biblioteca Python multiplataforma que fornece uma interface de programação unificada para comunicação via barramento Controller Area Network (CAN), suportando uma ampla gama de interfaces de hardware CAN e barramentos virtuais, e permitindo a implementação fácil de transmissão, recepção, filtragem de mensagens CAN, monitoramento de barramento e outras operações.
 Da mesma forma, as interfaces CAN precisam estar fisicamente conectadas para alcançar a comunicação em loopback.
 
 1. Configure a taxa de baud CAN padrão (500 kbit/s):
@@ -872,7 +872,13 @@ Se o hub USB estiver funcionando corretamente, você deverá ver seus detalhes l
 
 ## Teste do RTC (Relógio de Tempo Real)
 
-Para testar a funcionalidade do Relógio de Tempo Real (RTC), siga estas etapas:
+:::note
+Como o dispositivo reComputer está equipado com o chip CM5, há duas unidades RTC no dispositivo: ① O RTC integrado do CM5 (rtc0); ② O RTC montado no reComputer (rtc1).
+
+rtc0 não consegue reter dados de tempo. Portanto, para usar a função RTC, você precisa especificar manualmente o número de dispositivo rtc1 ao definir a hora.
+:::
+
+Para testar a funcionalidade do Relógio de Tempo Real (RTC), siga estes passos:
 
 1. Desative a sincronização automática de horário:
 
@@ -881,37 +887,37 @@ sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
 ```
 
-2. Defina o horário:
+2. Defina a hora:
 Defina o RTC para uma data e hora específicas:
 
 ```bash
-sudo hwclock --set --date "2025-7-17 12:00:00"
+sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
-3. Sincronize o horário do RTC com o sistema
-Atualize o horário do sistema para corresponder ao horário do RTC:  
+3. Sincronize a hora do RTC com o sistema
+Atualize a hora do sistema para corresponder à hora do RTC:  
 
 ```bash
-sudo hwclock --hctosys
+sudo hwclock --hctosys -f /dev/rtc1
 ```
 
-4. Verifique o horário do RTC:
+4. Verifique a hora do RTC:
 
 ```bash
-sudo hwclock -r
+sudo hwclock -r -f /dev/rtc1
 ```
 
-Este comando irá ler e exibir o horário armazenado no RTC.
+Este comando irá ler e exibir a hora armazenada no RTC.
 
-5. Desconecte a fonte de alimentação do RTC, aguarde alguns minutos, depois reconecte-a e verifique novamente o horário do RTC para ver se ele manteve o horário correto.
+5. Desconecte a fonte de alimentação do RTC, aguarde alguns minutos, depois reconecte-a e verifique novamente a hora do RTC para ver se ele manteve a hora correta.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
 ## Teste do temporizador watchdog
 
-Para realizar um teste de watchdog, siga estas etapas:
+Para realizar um teste de watchdog, siga estes passos:
 
-1. Instale o software de watchdog:
+1. Instale o software watchdog:
 
 ```bash
 sudo apt install watchdog
@@ -953,7 +959,7 @@ priority = 1
 
 Você pode ajustar outras configurações conforme necessário.
 
-3. Certifique-se de que o serviço de watchdog está em execução:
+3. Certifique-se de que o serviço watchdog está em execução:
 
 ```bash
 sudo systemctl start watchdog
@@ -971,7 +977,7 @@ echo "c" > /proc/sysrq-trigger
 Este comando aciona um crash do kernel e deve fazer com que o watchdog reinicie o sistema.
 
 5. Monitore o sistema para confirmar que ele reinicia após o período de tempo limite especificado.
-Essas etapas ajudarão você a testar e garantir a funcionalidade do temporizador watchdog em seu sistema.
+Esses passos ajudarão você a testar e garantir a funcionalidade do temporizador watchdog em seu sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -987,7 +993,7 @@ echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
 ```  
 
-2. Desligar o buzzer :Turn off the buzzer :
+2. Desligar o buzzer: Desligar o buzzer:
 
 ```bash
 echo 627 > /sys/class/gpio/export
@@ -1005,7 +1011,7 @@ ls /dev | grep tpm
 
 **Interpretando a saída:**  
 
-Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis em seu sistema. Isso indica que o hardware TPM foi reconhecido e está acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicações relacionadas a TPM sabendo que os dispositivos estão presentes e acessíveis.
+Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis no seu sistema. Isso indica que o hardware TPM foi reconhecido e está acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicativos relacionados ao TPM sabendo que os dispositivos estão presentes e acessíveis.
 
 ## ATECC608A
 
@@ -1040,7 +1046,7 @@ Este processo permite que você interaja com o dispositivo ATECC608A e execute v
 
 ## Interagindo com a EEPROM
 
-Aqui estão os comandos para interagir com uma EEPROM (Memória Somente de Leitura Programável e Apagável Eletricamente):
+Aqui estão os comandos para interagir com uma EEPROM (Electrically Erasable Programmable Read-Only Memory):
 
 1. Conceda permissões completas (leitura, gravação e execução) ao arquivo de dispositivo da EEPROM:
 
@@ -1068,7 +1074,7 @@ Para listar os discos, incluindo o SSD, você pode usar o comando fdisk -l. Veja
 sudo fdisk -l
 ```
 
-Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele estiver devidamente detectado. Procure por entradas que representem o seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
+Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele for detectado corretamente. Procure por entradas que representem o seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
 Depois de identificar a entrada correspondente ao seu SSD, você pode prosseguir com o particionamento ou formatação conforme necessário.
 
 ## UPS para desligamento seguro
@@ -1213,13 +1219,13 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 Para fechar o aplicativo, pressione ***`Ctrl+C`*** .
-Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho da Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo do GStreamer é simplificado, minimizando as tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
+Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho do Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo do GStreamer é simplificado, minimizando as tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
 
 :::note
 Se o reComputer que você comprou não incluir o Hailo-8 e você estiver considerando adquirir um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
 :::
 
-## Suporte Técnico e Discussão de Produto
+## Suporte Técnico & Discussão de Produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

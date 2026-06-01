@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 La configuración predeterminada de la placa ya está configurada para **Thor J601**:
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ Para el primer flasheo, se recomienda el flujo dividido `prepare -> build -> fla
 Usa variables de entorno cuando necesites anular los valores predeterminados:
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \

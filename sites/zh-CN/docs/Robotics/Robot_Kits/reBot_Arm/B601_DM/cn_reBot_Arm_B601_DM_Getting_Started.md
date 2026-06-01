@@ -37,9 +37,13 @@ url: https://wiki.seeedstudio.com/cn/rebot_b601_dm_getting_started/
   <strong>6-DOF Robotic Arm · Multi-Motor Support · Kinematics Solver · Trajectory Planning · Fully Open Source</strong>
 </p>
 
-
 reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)上开源了，本文将带领你快速入门B601-DM，从组装到使用。
 本文的内容正在光速赶来，各位敬请期待。
+
+:::tip
+如果你购入的是已组装的成品套件，请直接跳到文章末尾 **第三步** 的教程视频，按照视频教程使用，无需给电机写入ID和校准零位
+:::
+
 ## 购买选项
 
 reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
@@ -53,8 +57,8 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 | **仅本体 (结构)** | ✅ | ❌ | ❌ | ✅ |  |
 | **仅本体 (电机)** | ✅ | ❌ | ✅ | ❌ |  |
 
-
 ## 第一步：组装机械臂
+
 - 开始组装前，请您务必仔细阅读以下内容。为确保您顺利完成组装并获得完整的动手体验，组装过程中请保持耐心与专注，并时刻遵循以下要点：
   1. 本套件包含大量螺丝与结构件，部分零件外观相近。组装时请耐心核对螺丝规格与零件型号，确认安装方向无误后再进行固定。
   2. 视频为四月初拍摄，后续或许会有零件微调和改动，但是不影响跟随本视频的安装效果，最终零件以出货为准。
@@ -68,7 +72,9 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 ## 第二步：写入电机ID及零点
 
 ### 电机复位前须知
+
 在进行电机参数配置前，请留意以下准备事项与安全规范：
+
 - 自备2个工装夹具（尺寸≥3英寸）以及一台24V 15A、XT30输出开关电源（请选用正规品牌产品，严禁使用劣质电源）。
 - 调试与操作过程中，请保持至少1米安全距离。
 - 禁止电机热插拔；插拔XT30 2+2接口前必须断开电源。
@@ -77,7 +83,9 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 - **请严格遵守以上规范。因违规操作、人为失误造成的一切风险与损失，卖家不承担任何责任。**
 
 ### 准备清单
+
 #### 硬件设备
+
 - [reBot Arm B601 DM 机械臂 × 1](https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html)
 - [USB-CAN 转接板 × 1](https://www.seeedstudio.com/DM-CAN-USB-Driver-Borad-p-6706.html)
 - [信号电源隔离板 × 1](https://www.seeedstudio.com/XT30-2-2-Power-Separation-Board-p-6707.html)
@@ -87,9 +95,11 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 - [美规电源线](https://www.seeedstudio.com/reServer-AC-US-p-5052.html) \ [欧规电源线](https://www.seeedstudio.com/reServer-AC-EU-p-5051.html)
 
 #### 电脑配置要求
+
 - 双系统个人电脑（Windows + Ubuntu / macOS）
 
 #### 所需软件
+
 - [DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)
 
 <div class="video-container">
@@ -107,38 +117,52 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 3. 本工具全面兼容 **Windows、Ubuntu、macOS** 操作系统。
 
 ### 步骤 1：安装 Miniforge（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
+
 ```bash
 wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
 ### 步骤 2：环境配置
+
 创建 Python 3.12 版本虚拟环境：
+
 ```
 conda create -y -n rebot python=3.12
 ```
 
 随后激活虚拟环境。**每次打开终端使用 reBot 相关功能时，都需要重新执行该激活命令**：
+
 ```bash
 conda activate rebot
 ```
 
 ### 步骤 3：安装 motorbridge
+:::tip
+如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
+:::
+
+
 激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
+
 ```bash
 pip install motorbridge
 ```
 
 ### 步骤 4：连接机械臂
+
 使用 USB 数据线将机械臂连接至电脑并接通电源后，需要为串口配置 666 权限。
+
 ```bash
 sudo chmod 666 /dev/ttyACM*
 ```
 
 ### 步骤 5：启动 MotorBridge
+
 在浏览器中打开地址 `https://rebot-devarm.w0x7ce.eu/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 以 Windows 系统为例：
+
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port COM3 --serial-baud 921600 --model 4340P --motor-id 0x01 --feedback-id 0x11 --dt-ms 20
 ```
