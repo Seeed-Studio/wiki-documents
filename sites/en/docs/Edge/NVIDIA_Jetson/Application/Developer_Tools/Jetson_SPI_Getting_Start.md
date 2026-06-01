@@ -11,13 +11,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_SPI_Getting_Start
 last_update:
-  date: 01/06/2026
+  date: 06/01/2026
   author: 
 createdAt: '2026-06-01'
-updatedAt: '2023-06-01'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/Jetson_SPI_Getting_Start/
-
-
 
 ---
 
@@ -57,7 +55,7 @@ The method in this guide can also be used as a reference for other SPI display a
 
 The reComputer J4012 Classic provides a 40-pin expansion header. SPI signals and GPIO pins can be used through this header to connect small display modules.
 
-![40-pin header pinout](https://chatgpt.com/c/images/40-pin-header.png)
+![40-pin header pinout](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_01.png)
 
 Figure 1. 40-pin header pinout of reComputer J4012 Classic
 
@@ -76,7 +74,7 @@ In this guide, an ST7789 SPI display is used as the example display module. Conn
 | CS         | Pin 24                   | SPI CS       | SPI chip select                            |
 | BLK        | Pin 17                   | 3.3V         | Backlight power, always on                 |
 
-![ST7789 SPI display wiring](https://chatgpt.com/c/images/st7789-spi-display-wiring.png)
+![ST7789 SPI display wiring](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_02.png)
 
 Figure 2. Wiring between reComputer J4012 Classic and ST7789 SPI display
 
@@ -92,21 +90,31 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 Select the 40-pin header configuration menu.
 
-![Jetson-IO main menu](https://chatgpt.com/c/images/jetson-io-main-menu.png)
+![Jetson-IO main menu](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_03.png)
 
 Figure 3. Jetson-IO main menu
 
-Enable the SPI interface required by the display.
+![Configure header pins manually](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_04.png)  
 
-![Enable SPI interface](https://chatgpt.com/c/images/enable-spi.png)
+Figure 4. Select "Configure header pins manually"
 
-Figure 4. Enable SPI interface on the 40-pin header
+![Enable spi1 function](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_05.png)  
+
+Figure 5. Enable spi1 function on the 40-pin header
 
 Save the configuration and reboot the device:
 
 ```bash
 sudo reboot
 ```
+
+After the device reboots, load the `spidev` kernel module:
+
+```bash
+sudo modprobe spidev
+```
+
+This step makes sure the Linux userspace SPI driver is available before checking or accessing `/dev/spidev*`.
 
 ## Check SPI Device
 
@@ -123,9 +131,9 @@ If SPI is enabled correctly, you may see output similar to the following:
 /dev/spidev0.1
 ```
 
-![Check SPI device node](https://chatgpt.com/c/images/check-spidev.png)
+![Check SPI device node](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_06.png)
 
-Figure 5. SPI device node generated successfully
+Figure 6. SPI device node generated successfully
 
 In this guide, the ST7789 display uses the SPI signals connected to Pin 19, Pin 23, and Pin 24. The example code uses `/dev/spidev0.0` by default. If your system generates a different SPI device node, please modify the SPI device path in the code.
 
@@ -147,6 +155,31 @@ Check whether the SPI device node exists:
 
 ```bash
 ls /dev/spidev*
+```
+
+## Export GPIO Pins
+
+Before running the display demo, export the GPIO pins used by `DC` and `RES`. The demo controls these two pins through the sysfs GPIO interface.
+
+In this guide:
+
+| Signal | 40-pin Pin | GPIO name | GPIO number |
+| ------ | ---------- | --------- | ----------- |
+| DC     | Pin 29     | `PQ.05`   | `453`       |
+| RES    | Pin 31     | `PQ.06`   | `454`       |
+
+When exporting GPIO through `/sys/class/gpio/export`, use the GPIO number instead of the GPIO name. In this guide, GPIO `453` corresponds to `PQ.05`, and GPIO `454` corresponds to `PQ.06`:
+
+```bash
+sudo sh -c 'echo 453 > /sys/class/gpio/export'
+sudo sh -c 'echo 454 > /sys/class/gpio/export'
+```
+
+After exporting, the corresponding GPIO nodes should appear as `PQ.05` and `PQ.06`. Check whether the GPIO nodes exist:
+
+```bash
+ls /sys/class/gpio/PQ.05
+ls /sys/class/gpio/PQ.06
 ```
 
 ## Run the ST7789 Display Demo
@@ -435,9 +468,9 @@ sudo ./st7789_spi
 
 If the wiring and SPI configuration are correct, the ST7789 display should continuously refresh with different colors.
 
-![ST7789 display demo result](https://chatgpt.com/c/images/display-demo-result.png)
+![ST7789 display demo result](https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_gif_01.gif)
 
-Figure 6. ST7789 display demo result
+Figure 7. ST7789 display demo result
 
 ## Code Explanation
 
@@ -672,14 +705,12 @@ The ST7789 SPI LCD was used as the example display module in this guide. For oth
 
 ## Resources
 
-- Seeed reComputer J4012 Classic product page
+- [NVIDIA® Jetson Orin™ NX 16GB AI Device - reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)
 
-- Seeed reComputer Jetson 40-pin GPIO guide
+- [reComputer J401x datasheet](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 
-- NVIDIA Jetson-IO documentation
+- [NVIDIA Jetson.GPIO mapping](https://github.com/NVIDIA/jetson-gpio/blob/master/lib/python/Jetson/GPIO/gpio_pin_data.py)
 
-- ST7789 display controller datasheet
-
-- Linux spidev documentation
-
-
+- [Linux spidev userspace API](https://docs.kernel.org/spi/spidev.html)
+  
+  
