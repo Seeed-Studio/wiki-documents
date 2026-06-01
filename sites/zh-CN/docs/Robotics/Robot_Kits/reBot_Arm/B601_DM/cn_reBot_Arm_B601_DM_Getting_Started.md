@@ -124,9 +124,13 @@ conda activate rebot
 ```
 
 ### 步骤 3：安装 motorbridge
+:::tip
+如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
+:::
+
 激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
 ```bash
-pip install motorbridge
+pip install motorbridge==0.2.9
 ```
 
 ### 步骤 4：连接机械臂
