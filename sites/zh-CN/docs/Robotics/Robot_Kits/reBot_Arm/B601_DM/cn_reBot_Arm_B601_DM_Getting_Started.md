@@ -142,11 +142,6 @@ conda activate rebot
 如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
 :::
 
-
-:::tip
-如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
-:::
-
 激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
 
 ```bash
@@ -179,12 +174,21 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 更多功能可以从我们视频中学习。
 
 # 常见问题
-  1. 电机一启动就有很大声的异响，可能是在写入ID的过程中不小心点了参数标定，这会导致电机原本出厂的转动惯量等参数被破坏。
+  1. 电机一启动就有很大声的异响？
+    - 可能是在写入ID的过程中不小心点了参数标定，这会导致电机原本出厂的转动惯量等参数被破坏。你可以用[DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)上位机将同型号正常的电机参数导出，然后再导入到异常的电机后，修改相应的CANID，点击写入参数后继续执行零点校准的流程。
 
 <div align="center">
-    <img width={800}
+    <img width={400}
     src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/csbd_zh.png" />
 </div>
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/fix_param_zh.png" />
+</div>
+
+  2. 电机所有CANID变成了一样？
+    - 在用[DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)校准零点的时候千完别点CANID旁边的读取和设置两个按钮，调试的页面是通过CAN通讯链路完成的，如果点了设置，会把CANBUS上所有的电机设置成同一个CAN
 
 
 <div class="video-container">
