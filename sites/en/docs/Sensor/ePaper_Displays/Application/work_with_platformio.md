@@ -508,9 +508,13 @@ After `platformio.ini` and `driver.h` are ready, use the PlatformIO toolbar in V
 
 If the project has multiple environments, select the target environment from the PlatformIO project tasks before building or uploading.
 
-## Optional: Set a Fixed Upload Port
+## Optional: Use the Seeed_GxEPD2 Library
 
-Most users can leave the upload port unset and let PlatformIO detect it automatically. If your computer has several serial devices connected and PlatformIO picks the wrong one, add `upload_port` to the same configuration block you copied in Step 4.
+The default examples on this page use `Seeed_GFX`. For projects that are based on the GxEPD2 display workflow, you can replace the display library dependency with Seeed's GxEPD2 fork.
+
+Use this option only when the project code is written for `Seeed_GxEPD2` / `GxEPD2` APIs. If your code follows the standard `Seeed_GFX` examples, keep `Seeed_GFX` in `lib_deps`.
+
+For example, a reTerminal E1001 configuration can be changed as follows:
 
 ```ini
 [env:reterminal_e1001]
@@ -523,11 +527,10 @@ board_build.arduino.memory_type = qio_opi
 build_flags =
     -D BOARD_HAS_PSRAM
     -I src
-lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
-upload_port = /dev/ttyACM0
+lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
 ```
 
-On Windows, the port usually looks like `COM3`. On macOS, it usually looks like `/dev/cu.usbmodemXXXX` or `/dev/cu.usbserial-XXXX`.
+Only one display library is shown here to keep the configuration clear. If your project needs additional libraries, add them under `lib_deps` as separate lines.
 
 ## Where to Go Next
 
