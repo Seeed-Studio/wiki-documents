@@ -148,6 +148,10 @@ conda activate rebot
 
 ### Etapa 3: Instalar o motorbridge
 
+:::tip
+Se todos os motores escaneados aparecerem como offline, instale o motorbridge v0.2.9.
+:::
+
 Após ativar o ambiente virtual do reBot, execute o seguinte comando para instalar o motorbridge:
 
 ```bash
