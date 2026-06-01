@@ -1502,7 +1502,7 @@ reTerminal E1003 配备了通过 I2C 连接的 **GT911** 电容式触摸控制�
     <tr>
       <td>总线</td>
       <td>I2C0 — 地址 <strong>0x5D</strong> 或 <strong>0x14</strong>（自动检测）</td>
-    </tr]
+    </tr>
     <tr>
       <td>SDA</td>
       <td>GPIO19</td>

@@ -128,7 +128,7 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 		<tr>
 			<td align="center"><strong>オンボードセンサー</strong></td>
 			<td align="center" colspan="4">温度・湿度センサー</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>オーディオ</strong></td>
 			<td align="center" colspan="4">ブザー（サウンドアラート） · マイク端子を E1001 / E1002 / E1003 に予約</td>

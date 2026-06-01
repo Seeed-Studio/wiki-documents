@@ -102,7 +102,7 @@ Los cuatro modelos comparten la misma plataforma ESP32-S3, conectividad inalámb
 			<td align="center">15–20 s</td>
 			<td align="center">2–3 s</td>
 			<td align="center">~20 s</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>Táctil</strong></td>
 			<td align="center">—</td>

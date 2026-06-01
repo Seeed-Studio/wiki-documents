@@ -88,7 +88,7 @@ reTerminal E 系列是 Seeed Studio 基于 ESP32-S3 的电子墨水屏终端产�
 			<td align="center">800 × 480</td>
 			<td align="center">1404 × 1872</td>
 			<td align="center">1200 × 1600</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>局部刷新</strong></td>
 			<td align="center">✅</td>
