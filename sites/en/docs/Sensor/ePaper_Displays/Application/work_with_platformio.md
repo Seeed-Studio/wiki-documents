@@ -477,6 +477,11 @@ Common `BOARD_SCREEN_COMBO` values used in existing ePaper documentation include
 Always regenerate `driver.h` when you change the ePaper board, display size, display color type, or driver board. A mismatched `BOARD_SCREEN_COMBO` is one of the most common reasons for a blank screen.
 :::
 
+Ultimately, the code and project framework for a complete screen product using PlatformIO should be as follows:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/249.png" style={{width:1000, height:'auto'}}/></div>
+
+
 ## Step 6: Build, Upload, and Monitor
 
 After `platformio.ini` and `driver.h` are ready, use the PlatformIO toolbar in VS Code:
@@ -586,7 +591,13 @@ The most common cause is a wrong or missing `driver.h`.
 
 ### Q4: Why does PlatformIO fail to upload to the board?
 
-Upload failures are usually caused by the USB cable, wrong serial port, or boot mode.
+For reTerminal E1003, a common cause is an upload baud rate that is too high. Set `upload_speed` to `115200` in the same environment block before checking other causes.
+
+```ini
+upload_speed = 115200
+```
+
+If the upload still fails, continue with the following checks:
 
 - Use a USB-C cable that supports data transfer.
 - Disconnect other serial devices and try again.
