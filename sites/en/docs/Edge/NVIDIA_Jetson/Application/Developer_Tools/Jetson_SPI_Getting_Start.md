@@ -9,13 +9,14 @@ keywords:
 - ST7789
 - LCD  
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Jetson_SPI_Getting_Start
+slug: /jetson_spi_getting_start
+sku: 110110145
 last_update:
   date: 06/01/2026
   author: HaoChen
 createdAt: '2026-06-01'
 updatedAt: '2026-06-01'
-url: https://wiki.seeedstudio.com/Jetson_SPI_Getting_Start/
+url: https://wiki.seeedstudio.com/jetson_spi_getting_start/
 
 ---
 
@@ -712,3 +713,12 @@ The ST7789 SPI LCD was used as the example display module in this guide. For oth
 - [NVIDIA Jetson.GPIO mapping](https://github.com/NVIDIA/jetson-gpio/blob/master/lib/python/Jetson/GPIO/gpio_pin_data.py)
 
 - [Linux spidev userspace API](https://docs.kernel.org/spi/spidev.html)
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
