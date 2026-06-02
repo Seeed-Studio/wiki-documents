@@ -712,5 +712,3 @@ The ST7789 SPI LCD was used as the example display module in this guide. For oth
 - [NVIDIA Jetson.GPIO mapping](https://github.com/NVIDIA/jetson-gpio/blob/master/lib/python/Jetson/GPIO/gpio_pin_data.py)
 
 - [Linux spidev userspace API](https://docs.kernel.org/spi/spidev.html)
-  
-  
