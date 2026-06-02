@@ -173,7 +173,7 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
 
 更多功能可以从我们视频中学习。
 
-# 常见问题
+## 常见问题
   1. 电机一启动就有很大声的异响？
     - 可能是在写入ID的过程中不小心点了参数标定，这会导致电机原本出厂的转动惯量等参数被破坏。你可以用[DM_Tools_v.1.8.0.1.exe（仅支持 Windows 系统）](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe)上位机将同型号正常的电机参数导出，然后再导入到异常的电机后，修改相应的CANID，点击写入参数后继续执行零点校准的流程。
 

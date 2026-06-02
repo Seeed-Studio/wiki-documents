@@ -181,8 +181,8 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
 
-# FAQ
-## 1. Loud abnormal noise occurs immediately after motor startup
+## FAQ
+### 1. Loud abnormal noise occurs immediately after motor startup
 - This issue usually happens when parameter calibration is accidentally triggered during ID configuration, which overwrites factory preset parameters such as motor inertia. Use **DM_Tools_v.1.8.0.1.exe (Windows-only)** available at:
 https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
 Export complete parameters from an intact motor of the same model via the host software, import these parameters into the faulty unit, update its corresponding CAN ID, save the written parameters, then proceed with zero-point calibration.
@@ -200,7 +200,7 @@ Export complete parameters from an intact motor of the same model via the host s
 [DM4310 Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4310_Default_Parameters.txt)
 [DM4340P Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
 
-## 2. All motors share identical CAN IDs
+### 2. All motors share identical CAN IDs
 - When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.
 
 
