@@ -12,7 +12,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_SPI_Getting_Start
 last_update:
   date: 06/01/2026
-  author: 
+  author: HaoChen
 createdAt: '2026-06-01'
 updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/Jetson_SPI_Getting_Start/
