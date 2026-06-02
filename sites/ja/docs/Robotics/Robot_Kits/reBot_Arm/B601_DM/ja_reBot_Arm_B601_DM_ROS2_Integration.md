@@ -13,12 +13,12 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-22
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-22'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -27,6 +27,13 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_ros2_integration/
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -579,11 +586,11 @@ MoveIt のプランニングは、RViz の GUI または ROS ノードを通じ�
 
 MoveIt は RViz シミュレーションのために ros2_control 仮想ハードウェアインターフェースを使用します：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_config demo.launch.py
+```
 
 デフォルトでは次が起動します：
 
@@ -600,26 +607,26 @@ RViz は自動的に開き、ロボットの URDF モデルを読み込みます
 
 RViz なしで MoveIt 環境を実行するには：
 
-__CODE_LINE_PLH__
 ```bash
 ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
+```
 
 #### reBotArm ハードウェアで MoveIt を使用する
 
 実機ロボットの場合は、まず仮想コントローラではなくハードウェアインターフェースで
 コントローラを起動し、その後ハードウェア用 MoveIt 環境を起動します：
 
-__CODE_LINE_PLH__
 ```bash
 ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+```
 
 別のターミナルで：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_config hardware.launch.py
+```
 
 繰り返しになりますが、実機ハードウェアで任意のデモを実行する前に、ワークスペース内に
 人や障害物がないことを確認し、RViz で計画経路を検証し、いつでも
@@ -629,18 +636,18 @@ ros2 launch rebotarm_moveit_config hardware.launch.py
 
 まず MoveIt 環境を起動し、その後別のターミナルで次を実行します：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos draw_square.launch.py
+```
 
 `draw_square` は、`gripper_tcp` を同一平面上の長方形の 4 つの頂点に沿って移動させます。
 デフォルトパラメータ：
 
-__CODE_LINE_PLH__
 ```text
 src/rebotarm_moveit_demos/config/draw_square.yaml
+```
 
 一般的なパラメータ：
 
@@ -656,17 +663,17 @@ src/rebotarm_moveit_demos/config/draw_square.yaml
 
 まず MoveIt 環境を起動し、その後別のターミナルで次を実行します：
 
-__CODE_LINE_PLH__
 ```bash
 cd your/path/to/rebotarm_ros2
 source install/setup.bash
 ros2 launch rebotarm_moveit_demos pick_place.launch.py
+```
 
 デフォルトパラメータ：
 
-__CODE_LINE_PLH__
 ```text
 src/rebotarm_moveit_demos/config/pick_place.yaml
+```
 
 一般的なパラメータ：
 
