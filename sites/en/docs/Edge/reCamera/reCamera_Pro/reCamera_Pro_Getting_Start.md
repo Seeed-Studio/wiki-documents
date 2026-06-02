@@ -15,7 +15,7 @@ last_update:
   author: Sizhao zhou
 createdAt: '2026-06-01'
 updatedAt: '2026-06-01'
-url: https://wiki.seeedstudio.com/recamera_pro_getting_started/
+url: https://wiki.seeedstudio.com/en/recamera_pro_getting_started/
 ---
 
 # reCamera Pro Quick Start Guide
