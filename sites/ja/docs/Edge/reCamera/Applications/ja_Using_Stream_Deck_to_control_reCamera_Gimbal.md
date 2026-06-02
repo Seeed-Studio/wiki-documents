@@ -1,18 +1,18 @@
 ---
-title: Stream Deck を使用して reCamera Gimbal を制御する 
+title: Stream Deck を使用して reCamera Gimbal を制御する
 description: この Wiki では、Stream Deck を使用して reCamera Gimbal を制御する方法を説明します。
 keywords:
   - reCamera Gimbal
   - 感覚制御
 slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif
 sidebar_position: 1
 last_update:
   date: 2026-05-22T00:00:00.000Z
   author: Sizhao zhou
 createdAt: '2026-05-22'
-updatedAt: '2026-05-26'
+updatedAt: '2026-05-28'
 url: https://wiki.seeedstudio.com/ja/using_stream_deck_to_control_recamera_gimbal/
 ---
 
@@ -67,7 +67,7 @@ Stream Deck 上のダイヤルを回して reCamera Gimbal の X 軸を制御し
 
 ## reCamera の設定
 
-ブラウザに reCamera Gimbal の IP アドレスを入力して Dashboard にログインします。次に、Stream Deck から送信されるコマンドを受信するために HTTP 通信ノードを設定します。
+ブラウザで reCamera Gimbal の IP アドレスを入力して Dashboard にログインします。次に、Stream Deck から送信されるコマンドを受信するために HTTP 通信ノードを設定します。
 
 ### 1. ダイヤルイベント処理（reCamera Webhook）
 
@@ -111,17 +111,17 @@ Stream Deck 上のダイヤルを回して reCamera Gimbal の X 軸を制御し
 
 | ボタン機能 | ノードタイプリンク | ロジック概要の説明 |
 | :--- | :--- | :--- |
-| **LED 切り替え** | `http in` -> `function` -> `exec` | 内部に `ledState` 変数を保持し、**0 と 1 をトグル** します。状態が 1 のときは Linux コマンドライン経由で `brightness` に書き込んで白色 LED を点灯させ、状態が 0 のときは消灯します。 |
+| **LED 切り替え** | `http in` -> `function` -> `exec` | 内部に `ledState` 変数を保持し、**0 と 1 をトグル** します。状態が 1 のときは Linux コマンドライン経由で `brightness` に書き込んで白色 LED を点灯し、状態が 0 のときは消灯します。 |
 | **音声録音** | `http in` -> `exec` | システムレベルの `arecord` ツールを呼び出し、サンプリングレート 16000Hz、モノラル形式で **5 秒間音声を録音** し、`/home/recamera/test.wav` にローカル保存します。 |
-| **音声再生** | `http in` -> `exec` | システムレベルの `aplay` ツールを呼び出し、新しく録音した `test.wav` 音声ファイルを直接 **再生** します。 |
+| **音声再生** | `http in` -> `exec` | システムレベルの `aplay` ツールを呼び出し、新しく録音した `test.wav` オーディオファイルを直接 **再生** します。 |
 
 ---
 
 ## Stream Deck の設定
 
-Stream Deck でアクションがトリガーされるたびに新しいブラウザウィンドウを開くことなくスムーズに操作できるように、組み込みの **"System -> Website"** アクションを使用し、バックグラウンドでのサイレント実行を有効にします。
+Stream Deck でアクションがトリガーされるたびに新しいブラウザウィンドウを開くことなくスムーズに操作できるようにするため、内蔵の **"System -> Website"** アクションを使用し、バックグラウンドでのサイレント実行を有効にします。
 
-> **⚠️ 前提条件**: コンピュータからデバイスの IP アドレス `192.168.31.198` に対して ping が正常に実行できることを確認してください（実際のデバイス IP アドレスに置き換えてください）。
+> **⚠️ 前提条件**: お使いのコンピュータからデバイスの IP アドレス `192.168.31.198` に対して ping が正常に実行できることを確認してください（実際のデバイス IP アドレスに置き換えてください）。
 
 ### 1. ダイヤルエリアの設定（Stream Deck）
 
@@ -136,7 +136,7 @@ Stream Deck ソフトウェアのダイヤルセクションで、各ダイヤ�
 - **反時計回り回転（ダイヤル操作）:**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=ccw`
   - **設定:** `GET request in background` にチェックを入れます
-- **押下（押下操作）:**
+- **押下（プレス操作）:**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=reset`
   - **設定:** `GET request in background` にチェックを入れます
 
@@ -155,7 +155,7 @@ Stream Deck ソフトウェアのダイヤルセクションで、各ダイヤ�
 
 #### ダイヤル 3: デジタルズーム（Zoom）
 >
-> **注記**: ズーム機構は、Dashboard 内の SVG 表示ボックスの比率を CSS を使用して制御します。
+> **注記**: ズーム機構は、Dashboard 内の SVG 表示ボックス比率を CSS を使用して制御します。
 
 - **時計回り回転:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=cw`
@@ -163,7 +163,7 @@ Stream Deck ソフトウェアのダイヤルセクションで、各ダイヤ�
 - **反時計回り回転:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=ccw`
   - **設定:** `GET request in background` にチェックを入れます
-- **押下（デフォルトに復元）:**
+- **押下（デフォルトに戻す）:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=reset`
   - **設定:** `GET request in background` にチェックを入れます
 
@@ -185,7 +185,7 @@ Stream Deck の基本ボタンセクションで、**3 つの "System -> Website
 
 ---
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます。特定のカスタマイズ目標に関するガイダンスが必要な場合や、ワークフローをさらに拡張したい場合は、いつでもお気軽にお問い合わせください。弊社は、製品をできるだけスムーズにご利用いただけるよう、複数のサポートオプションを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
