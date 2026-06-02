@@ -13,8 +13,7 @@ last_update:
   author: Kasun Thushara
 createdAt: '2026-06-01'
 updatedAt: '2026-06-01'
-url: https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control
-
+url: https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control/
 ---
 
 ## Objective
