@@ -2091,6 +2091,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_xiao_mqtt',
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_doa',
                 'Sensor/reSpeaker_flex/es_reSpeaker_flex_volume_xiao',
+                'Sensor/reSpeaker_flex/es_reSpeaker_flex_gpio',
               ],
             },
             'Sensor/reSpeaker_flex/es_reSpeaker_flex_python_control',
