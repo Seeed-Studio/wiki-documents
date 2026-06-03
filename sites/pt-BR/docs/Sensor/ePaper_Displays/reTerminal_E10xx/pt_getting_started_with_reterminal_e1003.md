@@ -9,7 +9,7 @@ last_update:
   date: 05/09/2026
   author: dimo
 createdAt: '2026-03-18'
-updatedAt: '2026-05-09'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/getting_started_with_reterminal_e1003/
 ---
 import Tabs from '@theme/Tabs';
@@ -27,13 +27,13 @@ import TabItem from '@theme/TabItem';
 
 ## Introdução
 
-O reTerminal E1003 é um display ePaper monocromático de 10,3 polegadas com suporte a toque e open-source, com 16 níveis de escala de cinza e alta resolução de 1404×1872 pixels, oferecendo até 6 meses de duração de bateria (com base em uma atualização por dia). Alimentado por ESP32-S3, ele oferece suporte nativo à nossa plataforma de UI sem código [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) para criação de dashboards de forma simples. Seja para visualização e controle de dashboards de casa inteligente, painéis de informações em escritórios ou projetos educacionais, este dispositivo pronto para uso com suporte a toque oferece visuais impressionantes e personalização flexível para atender a todas as suas necessidades.
+O reTerminal E1003 é um display ePaper monocromático open-source de 10,3 polegadas com suporte a toque, apresentando 16 níveis de escala de cinza e alta resolução de 1404×1872 pixels, com até 6 meses de duração de bateria (com base em uma atualização por dia). Alimentado por ESP32-S3, ele oferece suporte nativo à nossa plataforma de UI sem código [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) para criação de dashboards sem esforço. Seja para visualização e controle de dashboards de casa inteligente, exibição de informações em escritórios ou projetos educacionais, este dispositivo pronto para uso com toque oferece visuais impressionantes e personalização flexível para atender a todas as suas necessidades.
 
 :::tip
 A interação por toque para o reTerminal E1003 é suportada a partir do firmware v1.1.2 do [SenseCraft HMI](https://sensecraft.seeed.cc/hmi). A versão mais recente atualmente é a v1.1.4.3 — recomendamos atualizá-la para obter a melhor experiência.
-O suporte de biblioteca relacionado ao toque está planejado para um futuro lançamento open-source, oferecendo maior flexibilidade para personalizar os painéis. Mais atualizações serão compartilhadas em breve.
+O suporte de biblioteca relacionado a toque está planejado para um futuro lançamento open-source, proporcionando maior flexibilidade para personalizar painéis. Mais atualizações serão compartilhadas em breve.
 
-O suporte do ESPHome para o reTerminal E1003 está em desenvolvimento e estará disponível em uma versão futura.
+O suporte ESPHome para o reTerminal E1003 está em desenvolvimento e estará disponível em uma versão futura.
 :::
 
 ### Recursos
@@ -68,7 +68,7 @@ O suporte do ESPHome para o reTerminal E1003 está em desenvolvimento e estará 
 		<tr>
 			<td align="center"><strong>Display</strong></td>
 			<td align="center">10,3" Monocromático / 16 níveis de escala de cinza</td>
-		</tr>
+		</tr]
 		<tr>
 			<td align="center"><strong>Resolução</strong></td>
 			<td align="center">1404 x 1872 pixels</td>
@@ -117,8 +117,8 @@ O suporte do ESPHome para o reTerminal E1003 está em desenvolvimento e estará 
 
 - **Dashboards de automação residencial:** Exiba dados em tempo real da casa inteligente, como temperatura, umidade e qualidade do ar via Home Assistant.
 - **Porta-retratos eletrônico monocromático de baixo consumo:** Com o [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) ou o app, você pode enviar facilmente uma série de fotos do seu álbum remotamente. Combinado com uma grande tela e-ink monocromática de alta resolução, ele oferece exibição de imagens com consumo ultrabaixo de energia, para que você não precise mais se preocupar com a duração da bateria.
-- **Displays inteligentes para escritório:** Mostre disponibilidade de salas de reunião, agendas do escritório ou orientações de direção em displays ePaper de baixo consumo e sempre ligados.
-- **Displays de varejo e informações públicas:** Placas ePaper de baixo consumo para menus, horários ou indicadores de ocupação com longa duração de bateria.
+- **Displays inteligentes para escritório:** Mostre disponibilidade de salas de reunião, agendas de escritório ou orientações de direção em displays ePaper de baixo consumo e sempre ligados.
+- **Displays de informação para varejo e espaços públicos:** Placas ePaper de baixo consumo para menus, horários ou indicadores de ocupação com longa duração de bateria.
 
 
 ## Visão geral de hardware
@@ -132,10 +132,10 @@ O suporte do ESPHome para o reTerminal E1003 está em desenvolvimento e estará 
 5. **Interruptor de energia:** Para ligar ou desligar o dispositivo.
 6. **LED vermelho de energia:** Indica o status de carregamento da bateria.
 7. **LED verde de status:** Indica o status operacional ou de sistema atual.
-8. **Porta USB-C de dados e carregamento:** Para carregar o dispositivo e transmissão de dados.
+8. **Porta USB-C para dados e carregamento:** Para carregar o dispositivo e transmissão de dados.
 9. **Porta de expansão:** Conector de pinos fornecendo VDD, GND, I2C e GPIO para sensores, módulos ou periféricos externos.
 10. **Orifícios roscados para montagem do suporte:** Orifícios roscados na parte traseira do dispositivo para fixar o suporte.
-11. **Suporte de apoio impresso em 3D:** O suporte incluso para manter o dispositivo na posição vertical sobre uma superfície plana.
+11. **Suporte de apoio impresso em 3D:** O suporte incluído para manter o dispositivo na posição vertical sobre uma superfície plana.
 12. **Parafusos de montagem do suporte:** Parafusos usados para fixar o suporte ao dispositivo.
 
 ## Primeiros passos
@@ -241,7 +241,7 @@ Portanto, precisamos concluir as próximas etapas de configuração da rede dura
 ### Configuração de Rede
 
 <Tabs>
-<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
+<TabItem value="Network Setup via PC" label="Configuração de Rede via PC" default>
 
 **Passo 1.** Conecte-se ao ponto de acesso Wi-Fi do dispositivo a partir do seu smartphone ou computador. O nome do AP aparecerá na tela (sem necessidade de senha). As credenciais da rede são `reTerminal E1003-{MAC Address}`.
 
@@ -256,7 +256,7 @@ Se você inserir uma senha incorreta, basta digitá-la novamente e enviar de nov
 **Passo 3.** Selecione sua rede Wi-Fi local e insira a senha, depois clique em "Connect".
 
 :::note
-O display ePaper reTerminal E Series suporta apenas redes Wi-Fi de 2,4 GHz, não 5 GHz ou outras bandas.
+O reTerminal E Series ePaper Display suporta apenas redes Wi-Fi de 2,4 GHz, não 5 GHz ou outras bandas.
 :::
 
 **Passo 4.** Após a conexão bem-sucedida, o dispositivo emitirá um bipe de confirmação e exibirá uma tela com o código de pareamento.
@@ -273,7 +273,7 @@ O display ePaper reTerminal E Series suporta apenas redes Wi-Fi de 2,4 GHz, não
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/225.png" style={{width:600, height:'auto'}}/></div>
 
-**Passo 3.** Dê um nome ao seu dispositivo e insira o código de pareamento exibido na tela do dispositivo e clique em **Create**.
+**Passo 3.** Dê um nome ao seu dispositivo, insira o código de pareamento exibido na tela do dispositivo e clique em **Create**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -282,7 +282,7 @@ O display ePaper reTerminal E Series suporta apenas redes Wi-Fi de 2,4 GHz, não
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/231.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Configuração de Rede via SenseCraft APP">
 
 Este método usa o aplicativo móvel SenseCraft para configurar a rede do dispositivo e adicioná-lo à sua conta SenseCraft via Bluetooth.
 
@@ -322,7 +322,7 @@ O dispositivo só pode ser configurado por meio de uma rede Wi-Fi de 2,4 GHz.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Passo 7.** Você pode tocar no dispositivo na lista para ver sua página de **Device Detail**. A partir daí, você pode gerenciar o dispositivo e enviar fotos. Para um design de dashboard e canvas mais complexo, será solicitado que você use a versão em navegador web do SenseCraft.
+**Passo 7.** Você pode tocar no dispositivo na lista para ver sua página de **Device Detail**. A partir daí, você pode gerenciar o dispositivo e enviar fotos. Para um design de dashboard e canvas mais complexo, será solicitado que você use a versão para navegador web do SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -365,11 +365,11 @@ Você também pode verificar a versão do firmware manualmente a qualquer moment
 
 Depois que seu dispositivo estiver pareado, você poderá começar a usá-lo para exibir o que quiser. Recomendamos o **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** — uma plataforma em nuvem sem código que permite projetar e implantar conteúdo no seu reTerminal E1003 em apenas alguns cliques.
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) tem seu próprio Wiki dedicado com tutoriais completos e documentação de recursos. Para guias detalhados (configuração de conta, gravação de firmware, uso avançado do editor, implantação, etc.), consulte:
+[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) tem seu próprio Wiki dedicado com tutoriais completos e documentação de recursos. Para guias detalhados (configuração de conta, gravação de firmware, uso avançado do editor, implantação etc.), consulte:
 
 - **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
-Como este artigo é um **Guia de Introdução** do produto, não repetiremos o mesmo conteúdo aqui — a seguir mostramos apenas como exibir rapidamente algo no seu reTerminal E1003.
+Como este artigo é um **Guia de Introdução** do produto, não repetiremos o mesmo conteúdo aqui — a seguir mostraremos apenas como exibir rapidamente algo no seu reTerminal E1003.
 
 ### Início — Comece a partir de um modelo da comunidade
 
@@ -402,7 +402,7 @@ O botão de atualização na parte superior do dispositivo possui várias funç�
 
 - **Pressionar uma vez**: Atualiza manualmente o display e verifica se há novo conteúdo na plataforma SenseCraft. O buzzer emitirá um bipe para confirmar a ação. Este botão também é comumente usado para despertar o dispositivo quando ele entrou em modo de suspensão e uma atualização do painel não está imediatamente disponível.
 
-- **Pressionar e segurar** (funcionalidade futura): Ativará o modo de entrada por voz.
+- **Pressão longa** (funcionalidade futura): Ativará o modo de entrada por voz.
 
 ### Botões de navegação
 
@@ -420,7 +420,7 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
 
 **Passo 1.** Pressione e segure ambos os botões de navegação (esquerdo e direito) simultaneamente por 2 segundos.
 
-**Passo 2.** O dispositivo entrará no modo de configuração de Wi-Fi, e você poderá seguir novamente as etapas de [Network Setup](#configuração-de-rede) para se conectar a uma nova rede.
+**Passo 2.** O dispositivo entrará no modo de configuração de Wi-Fi, e você poderá seguir novamente as etapas de [Network Setup](#Network-Setup) para se conectar a uma nova rede.
 
 ### Indicadores de LED
 
@@ -431,8 +431,8 @@ Se você precisar se conectar a uma rede Wi-Fi diferente:
   - Aceso continuamente quando o cabo USB está conectado e o carregamento está em andamento
 
 - **LED verde:**
-  - Acende por aproximadamente 3 segundos a cada energização e depois apaga
-  - Fica aceso continuamente quando o cabo USB está conectado e a bateria está totalmente carregada
+  - Acende por aproximadamente 3 segundos a cada vez que o dispositivo é ligado e depois apaga
+  - Permanece aceso quando o cabo USB está conectado e a bateria está totalmente carregada
 
 
 ### Funcionamento com bateria
@@ -526,7 +526,7 @@ O conector de expansão de 6 pinos (J2) possui a seguinte pinagem:
 ### P2: Não é possível conectar ao Wi-Fi
 
 - Verifique se você está digitando a senha correta do Wi-Fi
-- Certifique-se de que sua rede Wi-Fi esteja operacional
+- Certifique-se de que sua rede Wi-Fi esteja em funcionamento
 - Verifique se o seu roteador Wi-Fi oferece suporte a redes de 2,4GHz (5GHz não é suportado)
 - Tente posicionar o dispositivo mais próximo do seu roteador Wi-Fi
 
@@ -542,7 +542,38 @@ O conector de expansão de 6 pinos (J2) possui a seguinte pinagem:
 
 - O dispositivo tentará automaticamente reconectar-se às redes conhecidas
 - Quando reconectado, o ícone de desconexão do Wi-Fi desaparecerá
-- Se não conseguir reconectar, siga o procedimento de Redefinição de rede acima
+- Se não for possível reconectar, siga o procedimento de Redefinição de rede acima
+
+### P5: Não é possível encontrar a porta serial (COM) no macOS
+
+Se o seu Mac não reconhecer o reTerminal via USB, siga este guia compacto para instalar o driver CH340/CH340K:
+
+**Passo 1. Baixar e instalar o driver**
+Baixe o driver na [página oficial da WCH](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) e execute `CH34xVCPDriver.pkg`. 
+:::tip
+Se o macOS bloquear a instalação, vá para **System Settings → Privacy & Security**, role para encontrar o software WCH bloqueado e clique em **Allow**.
+:::
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/02_installer_welcome.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/03_install_success.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Passo 2. Ativar a extensão do driver (crítico)**
+Abra o app **CH34xVCPDriver** a partir do Launchpad, clique em **Install**, depois vá para **System Settings → General → Login Items & Extensions → Driver Extensions**. Alterne **CH34xVCPDriver Extensions** para **ON** (azul).
+<div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle1.jpg" style={{ width: '48%', height: 'auto' }} />
+  <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/04_driver_extension_toggle2.jpg" style={{ width: '48%', height: 'auto' }} />
+</div>
+
+**Passo 3. Conectar e verificar**
+Certifique-se de que o **interruptor de alimentação do dispositivo esteja em ON** e use um **cabo USB-C de dados** (não apenas de carregamento). Abra o Terminal e execute:
+```bash
+ls /dev/tty.wch*
+# Expected output: /dev/tty.wchusbserialxxx
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Serial_Driver_Wiki/06_check%20installation.jpg" style={{width:500, height:'auto'}}/></div>
+
+Se você vir o caminho do dispositivo na saída, o driver foi instalado corretamente e o seu reTerminal está pronto para uso!
 
 ## Recursos
 
@@ -550,7 +581,7 @@ O conector de expansão de 6 pinos (J2) possui a seguinte pinagem:
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

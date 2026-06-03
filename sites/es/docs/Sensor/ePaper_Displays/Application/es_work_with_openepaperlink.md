@@ -1,5 +1,5 @@
 ---
-description: Controla el hardware ePaper de Seeed por Bluetooth Low Energy con los ecosistemas de código abierto OpenEPaperLink (OEPL) y OpenDisplay:cubre la XIAO ePaper Display Board EN04 y la ePaper Breakout Board para Seeed Studio XIAO.
+description: Controla el hardware ePaper de Seeed por Bluetooth Low Energy con los ecosistemas de código abierto OpenEPaperLink (OEPL) y OpenDisplay: cubre la XIAO ePaper Display Board EN04 y la ePaper Breakout Board para Seeed Studio XIAO.
 title: Trabajar con OpenEPaperLink / OpenDisplay
 keywords:
   - pantalla ePaper
@@ -10,12 +10,15 @@ keywords:
   - ePaper Breakout Board
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 slug: /EN04_opendisplay
-sidebar_position: 7
+sidebar_position: 9
 last_update:
   date: 04/28/2026
   author: dimo
 aliases:
   - /epaper_breakout_board_with_oepl
+createdAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/es/EN04_opendisplay/
+updatedAt: '2026-04-28'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -23,14 +26,14 @@ import TabItem from '@theme/TabItem';
 
 # Trabajar con OpenEPaperLink / OpenDisplay
 
-El ecosistema [OpenEPaperLink (OEPL)](https://openepaperlink.de/) y el proyecto relacionado [OpenDisplay](https://opendisplay.org/) son firmware/pilas de protocolo de código abierto para controlar pantallas de tinta electrónica. Las versiones modernas funcionan sobre **Bluetooth Low Energy**: tu teléfono, ordenador o Home Assistant se comunican directamente con el dispositivo, sin necesidad de un punto de acceso 802.15.4 dedicado.
+El ecosistema [OpenEPaperLink (OEPL)](https://openepaperlink.de/) y el proyecto relacionado [OpenDisplay](https://opendisplay.org/) son firmware/pilas de protocolo de código abierto para controlar pantallas de papel electrónico. Las versiones modernas funcionan sobre **Bluetooth Low Energy**: tu teléfono, ordenador o Home Assistant se comunican directamente con el dispositivo, sin necesidad de un punto de acceso 802.15.4 dedicado.
 
 Esta guía cubre dos rutas de hardware de Seeed hacia ese ecosistema:
 
 - **XIAO ePaper Display Board EN04**: un kit integrado que ejecuta el firmware OpenDisplay sobre BLE.
 - **ePaper Breakout Board para Seeed Studio XIAO**: una ruta DIY más modular que usa OEPL Config Builder + OEPL Image Uploader junto con una placa XIAO de la serie nRF52840.
 
-Ambos flujos comparten una filosofía común (configuración por BLE, herramientas basadas en la web, bajo consumo), pero el hardware y las herramientas de firmware/web son diferentes. Elige la pestaña que coincida con tu hardware a lo largo del artículo.
+Ambos flujos comparten una filosofía común (configuración por BLE, herramientas basadas en la web, bajo consumo), pero el hardware y las herramientas de firmware/web son diferentes. Elige la pestaña que coincida con tu hardware a lo largo de todo el artículo.
 
 ## Hardware compatible
 
@@ -53,7 +56,7 @@ Ambos flujos comparten una filosofía común (configuración por BLE, herramient
 </table>
 </div>
 
-Impulsada por **XIAO nRF52840 Plus**, la XIAO EN04 ePaper Display Board es la forma más sencilla de empezar con pantallas de tinta electrónica habilitadas para Bluetooth. Control inalámbrico directo desde tu teléfono, ordenador o Home Assistant, sin necesidad de un punto de acceso dedicado.
+Impulsada por **XIAO nRF52840 Plus**, la XIAO EN04 ePaper Display Board es la forma más sencilla de empezar con pantallas de papel electrónico habilitadas con Bluetooth. Control inalámbrico directo desde tu teléfono, ordenador o Home Assistant, sin necesidad de un punto de acceso dedicado.
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
@@ -112,7 +115,7 @@ Toda la **serie XIAO nRF52840** puede controlar este kit DIY, no solo la Sense P
 <TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
 
 **Paso 1. Conecta la pantalla a la placa controladora**  
-Alinea el cable FPC con el conector de la placa XIAO EN04 y luego asegura la pestaña.
+Alinea el cable FPC con el conector en la placa XIAO EN04 y luego asegura la pestaña.
 
 :::tip
 El lado metálico del cable FPC debe mirar hacia arriba; de lo contrario, no se mostrará ningún contenido. La mayoría de las pantallas tienen `1` y `50` impresos en el FPC; alinéalos con los números correspondientes en la placa.
@@ -126,7 +129,7 @@ Conecta el cable de la batería al conector JST de la placa controladora. Cable 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/battery.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-Verifica la polaridad dos veces. Diferentes baterías pueden tener cableados mezclados. Los cables mal alineados pueden extraerse del conector JST con una aguja y volver a insertarse correctamente.
+Comprueba dos veces la polaridad. Diferentes baterías pueden tener cableados mezclados. Los cables mal alineados pueden extraerse del conector JST con una aguja y volver a insertarse correctamente.
 :::
 
 </TabItem>
@@ -137,12 +140,12 @@ Conecta la **XIAO nRF52840 (Sense Plus)** a la **ePaper Breakout Board** y luego
 </TabItem>
 </Tabs>
 
-## Paso 2: Grabar el firmware
+## Paso 2: Flashear el firmware
 
 <Tabs groupId="oepl-hardware">
 <TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
 
-El camino más sencillo es el instalador web de OpenDisplay.
+La forma más sencilla es el instalador web de OpenDisplay.
 
 **Paso 1.** Abre el [OpenDisplay Web Installer](https://opendisplay.org/firmware/install/index.html) en un navegador.
 
@@ -193,7 +196,7 @@ La XIAO nRF52840 necesita el firmware **OEPL_BLE** antes de que OEPL Config Buil
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/hub_oepl.png" style={{width:700, height:'auto'}}/></div>
 
-**Paso 2.** Conecta la XIAO nRF52840 + Breakout Board + pantalla, enchufa la XIAO a tu ordenador mediante USB-C y luego **pulsa el botón de reinicio dos veces**. La XIAO aparecerá como una unidad USB en tu ordenador.
+**Paso 2.** Conecta la XIAO nRF52840 + Breakout Board + pantalla, conecta la XIAO a tu ordenador mediante USB-C y luego **pulsa el botón de reinicio dos veces**. La XIAO aparecerá como una unidad USB en tu ordenador.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
@@ -212,7 +215,7 @@ La XIAO nRF52840 necesita el firmware **OEPL_BLE** antes de que OEPL Config Buil
 El paso de configuración de OpenDisplay del flujo de flasheo anterior ya se encarga de esto: tu EN04 ahora debería arrancar en la pantalla de inicio de OpenDisplay y aceptar cargas de imágenes.
 
 </TabItem>
-<TabItem value="breakout" label="Placa de expansión ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
 Abre el [OEPL Config Builder](https://config.openepaperlink.org/), luego conéctate a tu XIAO mediante BLE. (Si no aparece ningún dispositivo, vuelve a flashear el firmware e inténtalo de nuevo).
 
@@ -220,22 +223,22 @@ Abre el [OEPL Config Builder](https://config.openepaperlink.org/), luego conéct
 
 Cuando veas "Connected" en la terminal, puedes usar:
 
-- **Read Config**: lee la configuración actual desde el MCU.
-- **Write Config**: escribe una nueva configuración en el MCU.
-- **Reboot**: reinicia el MCU.
+- **Read Config** — lee la configuración actual desde el MCU.
+- **Write Config** — escribe una nueva configuración en el MCU.
+- **Reboot** — reinicia el MCU.
 
 ### Panel del generador
 
 Elige variables y parámetros en el panel para componer tu configuración.
 
-- **system_config**: IC host y pines de gestión de energía.
-- **manufacturer_data**: identificador del fabricante e información de la placa.
-- **power_option**: ajustes de alimentación y suspensión.
-- **display**: información de la pantalla / panel (puede repetirse para varias pantallas).
-- **led**: configuración opcional del LED (repetible).
-- **sensor_data**: lecturas / definiciones de sensores opcionales (repetible).
-- **data_bus**: definiciones de bus (I2C / SPI / …).
-- **binary_inputs**: botones, interruptores.
+- **system_config** — IC host y pines de gestión de energía.
+- **manufacturer_data** — identificador del fabricante e información de la placa.
+- **power_option** — ajustes de alimentación y suspensión.
+- **display** — información de la pantalla / panel (se puede repetir para múltiples pantallas).
+- **led** — configuración opcional del LED (repetible).
+- **sensor_data** — lecturas / definiciones opcionales de sensores (repetible).
+- **data_bus** — definiciones de bus (I2C / SPI / …).
+- **binary_inputs** — botones, interruptores.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
@@ -243,7 +246,7 @@ Puedes exportar la configuración como `.bin`, `Hex` o `JSON`, o importar un JSO
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Configuración de ejemplo 4,26" (JSON)</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Configuración de ejemplo de 4,26" (JSON)</button></p>
 </a>
 </div>
 
@@ -257,7 +260,7 @@ Después de ajustar la configuración, haz clic en **Write Config** para guardar
 ## Paso 4: Cargar imágenes
 
 <Tabs groupId="oepl-hardware">
-<TabItem value="en04" label="Placa de pantalla XIAO ePaper EN04" default>
+<TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
 
 El proyecto OpenDisplay tiene un cargador dedicado basado en navegador.
 
@@ -274,15 +277,15 @@ Para obtener los mejores resultados:
 
 - Usa imágenes que coincidan con la resolución de tu pantalla (el panel de 7,3" es de 800×480 px).
 - Las imágenes en blanco y negro se muestran mejor en pantallas monocromas.
-- La herramienta convierte y aplica tramado automáticamente a las imágenes en color.
+- La herramienta convierte y aplica dithering automáticamente a las imágenes en color.
 :::
 
-**Paso 4.** Haz clic en **Upload Image**. El papel electrónico se actualiza y tu imagen aparece.
+**Paso 4.** Haz clic en **Upload Image**. El papel electrónico se actualiza y aparece tu imagen.
 
 También puedes crear contenido personalizado con editores de imágenes (GIMP, Photoshop), scripts de Python + Pillow, generadores de imágenes basados en la web o una integración con Home Assistant (tratada más adelante).
 
 </TabItem>
-<TabItem value="breakout" label="Placa de expansión ePaper + XIAO nRF52840">
+<TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
 El OEPL Image Uploader también es una herramienta web BLE. Las asignaciones de pines difieren del firmware de Config Builder, por lo que primero debes flashear un firmware de carga de imágenes ligeramente diferente.
 
@@ -320,7 +323,7 @@ Para integrarlo con Home Assistant, necesitas una configuración con capacidad B
 - **Home Assistant OS / Supervised** en hardware con soporte Bluetooth
 - **ESPHome Bluetooth Proxy** (recomendado para un mejor alcance; ver más abajo)
 
-**Nota:** Los dispositivos Shelly que actúan como proxies Bluetooth **no** admiten las conexiones activas que requiere OpenDisplay, por lo que no se pueden usar.
+**Nota:** Los dispositivos Shelly que actúan como proxies Bluetooth **no** admiten las conexiones activas requeridas por OpenDisplay, por lo que no se pueden usar.
 :::
 
 **Paso 1. Instalar la integración**
@@ -329,7 +332,7 @@ Para obtener instrucciones de instalación detalladas, consulta el [repositorio 
 
 La forma más sencilla es a través de **HACS** (Home Assistant Community Store):
 
-[![Abre tu instancia de Home Assistant y abre un repositorio dentro de Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
 
 :::info
 Después de instalar la integración personalizada mediante HACS, **reinicia Home Assistant** para que los cambios surtan efecto.
@@ -350,7 +353,7 @@ Aparece una nueva imagen en la pantalla, lo que confirma que Home Assistant est�
 
 ### Automatizar las actualizaciones de la pantalla
 
-El servicio principal es `open_epaper_link.drawcustom`, que te permite dibujar texto, iconos, imágenes y formas. Consulta la [documentación de drawcustom](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md) para ver la referencia completa de tipos y parámetros.
+El servicio principal es `open_epaper_link.drawcustom`, que te permite dibujar texto, iconos, imágenes y formas. Consulta la [documentación de drawcustom](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md) para ver la referencia completa de tipos/parámetros.
 
 #### Ejemplo 1: mostrar datos de sensores (Editor visual)
 
@@ -480,22 +483,22 @@ El `device_id` anterior es un marcador de posición. Encuentra el ID real de tu 
 
 ## Solución de problemas
 
-### Problemas de instalación del firmware
+### Problemas de instalación de firmware
 
-**Problema**: el PC no detecta una nueva unidad USB después de conectar la placa.
+**Problema**: El PC no detecta una nueva unidad USB después de conectar la placa.
 
-- Prueba con otro cable USB (cable de datos, no solo de alimentación).
+- Prueba con un cable USB diferente (cable de datos, no solo de alimentación).
 - Pulsa el botón de reinicio dos veces después de conectar la placa.
 
 ### Problemas de configuración
 
-**Problema**: la placa no se descubre.
+**Problema**: No se descubre la placa.
 
 - Verifica que el LED de la placa parpadea; esto confirma que el dispositivo está alimentado.
 - Intenta reiniciar la placa.
-- Vuelve a grabar el firmware.
+- Vuelve a flashear el firmware.
 
-**Problema**: la pantalla no muestra nada después de instalar el firmware.
+**Problema**: La pantalla no muestra nada después de la instalación del firmware.
 
 - Verifica la orientación del cable FPC (contactos metálicos hacia arriba).
 - Confirma que el cable está completamente insertado y bloqueado.
@@ -503,34 +506,34 @@ El `device_id` anterior es un marcador de posición. Encuentra el ID real de tu 
 
 ### Problemas de conexión Bluetooth
 
-**Problema**: no se puede encontrar el dispositivo en el emparejamiento Bluetooth.
+**Problema**: No se puede encontrar el dispositivo en el emparejamiento Bluetooth.
 
 - Asegúrate de que el dispositivo esté encendido y el firmware instalado.
-- Acércate (dentro de 2–3 m).
+- Acércate más (dentro de 2–3 m).
 - Confirma que el Bluetooth está activado en tu ordenador / teléfono.
 
-**Problema**: la conexión se corta durante la carga de la imagen.
+**Problema**: La conexión se corta durante la carga de la imagen.
 
 - Mantente cerca del dispositivo durante la carga.
-- Carga la batería suficientemente o aliméntala mediante USB.
+- Carga la batería suficientemente o aliméntalo mediante USB.
 - Evita subir imágenes muy grandes.
 - Inténtalo de nuevo en un entorno Bluetooth menos congestionado.
 
 ### Problemas de batería y alimentación
 
-**Problema**: poca duración de la batería.
+**Problema**: Poca duración de la batería.
 
 - Configura intervalos de suspensión más largos en el configurador.
 - Ejecuta siempre el firmware más reciente (cada versión mejora el consumo de energía).
 - Reduce la frecuencia de actualización de la pantalla.
 - Verifica que la batería esté completamente cargada (4,2 V para Li-Po).
 
-**Problema**: el dispositivo no carga.
+**Problema**: El dispositivo no carga.
 
 - Comprueba la polaridad (rojo = +, negro = −).
 - Verifica que el cable de carga proporcione ≥500 mA.
 - Asegúrate de que el interruptor de encendido esté en **ON**.
-- Prueba con otra fuente de alimentación USB.
+- Prueba con una fuente de alimentación USB diferente.
 
 ### Problemas con Home Assistant / Integración
 
@@ -605,7 +608,7 @@ Si te aparece "Insufficient connection slots" usando una Raspberry Pi con Home A
 
      ![Proceso de flasheo de ESPHome](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/4.png)
 
-   - En el primer flasheo, ESPHome puede descargar la herramienta `esp-idf`. Asegúrate de que tu entorno tenga acceso estable a Internet y a GitHub.
+   - En el primer flasheo, ESPHome puede descargar la cadena de herramientas `esp-idf`. Asegúrate de que tu entorno tenga acceso estable a Internet y a GitHub.
    - Después de la compilación, los registros muestran "WiFi connected" y actividad de escaneo Bluetooth.
 
 4. **Añade el proxy a Home Assistant**:
@@ -621,9 +624,9 @@ Si te aparece "Insufficient connection slots" usando una Raspberry Pi con Home A
 
 - **[GitHub]** [Firmware de OpenDisplay](https://github.com/OpenDisplay-org/Firmware)
 - **[GitHub]** [Firmware OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE)
-- **[Web Tool]** [Instalador web del firmware de OpenDisplay](https://opendisplay.org/firmware/install/index.html)
-- **[Web Tool]** [Generador de configuración de OpenDisplay](https://opendisplay.org/firmware/config/index.html)
-- **[Web Tool]** [Probador de pantalla de OpenDisplay](https://opendisplay.org/firmware/display/index.html)
+- **[Web Tool]** [Instalador web de firmware OpenDisplay](https://opendisplay.org/firmware/install/index.html)
+- **[Web Tool]** [Generador de configuración OpenDisplay](https://opendisplay.org/firmware/config/index.html)
+- **[Web Tool]** [Probador de pantalla OpenDisplay](https://opendisplay.org/firmware/display/index.html)
 - **[Web Tool]** [OEPL Config Builder](https://config.openepaperlink.org/)
 - **[Web Tool]** [OEPL Image Uploader](https://atc1441.github.io/ATC_BLE_OEPL_Image_Upload.html)
 - **[Discord]** [Comunidad OpenDisplay](https://discord.gg/WG7tbTzF9Z)
@@ -632,7 +635,7 @@ Si te aparece "Insufficient connection slots" usando una Raspberry Pi con Home A
 
 ## Soporte técnico y debate sobre el producto
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
