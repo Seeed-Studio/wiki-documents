@@ -164,14 +164,6 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="jp5" label="JetPack 5">
-    JetPack 5 使用 sysfs GPIO。
-  </TabItem>
-
-  <TabItem value="jp6" label="JetPack 6">
-    JetPack 6 使用 libgpiod。
-  </TabItem>
-</Tabs>
-
 Before running the display demo, export the GPIO pins used by `DC` and `RES`. The demo controls these two pins through the sysfs GPIO interface.
 
 In this guide:
@@ -194,6 +186,13 @@ After exporting, the corresponding GPIO nodes should appear as `PQ.05` and `PQ.0
 ls /sys/class/gpio/PQ.05
 ls /sys/class/gpio/PQ.06
 ```
+
+</TabItem>
+
+  <TabItem value="jp6" label="JetPack 6">
+    JetPack 6 使用 libgpiod。
+  </TabItem>
+</Tabs>
 
 ## Run the ST7789 Display Demo
 
