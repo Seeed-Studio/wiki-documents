@@ -17,7 +17,6 @@ last_update:
 createdAt: '2026-06-01'
 updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/jetson_spi_getting_start/
-
 ---
 
 # Use an SPI Display on reComputer J4012 Classic
@@ -160,8 +159,6 @@ ls /dev/spidev*
 
 ## Export GPIO Pins
 
-<<<<<<< Updated upstream
-=======
 <Tabs>
 <TabItem value="jp5" label="JetPack 5">
 
@@ -175,8 +172,6 @@ JetPack 6 使用 libgpiod。
 
 </TabItem>
 </Tabs>
-
->>>>>>> Stashed changes
 Before running the display demo, export the GPIO pins used by `DC` and `RES`. The demo controls these two pins through the sysfs GPIO interface.
 
 In this guide:
@@ -744,4 +739,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
