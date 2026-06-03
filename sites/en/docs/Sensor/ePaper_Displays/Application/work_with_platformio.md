@@ -568,19 +568,7 @@ board = seeed-xiao-esp32-s3-sense
 
 When you build for the first time, PlatformIO downloads the platform package and then recognizes the board ID.
 
-### Q2: Why does the build fail with `TFT_eSPI.h` or `Seeed_GFX` not found?
-
-This usually means the display library was not installed for the selected environment.
-
-Check that `lib_deps` is present in the same environment you are building:
-
-```ini
-lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
-```
-
-Then run **Clean** and **Build** again.
-
-### Q3: Why does the firmware upload successfully but the ePaper display stays blank?
+### Q2: Why does the firmware upload successfully but the ePaper display stays blank?
 
 The most common cause is a wrong or missing `driver.h`.
 
@@ -589,7 +577,7 @@ The most common cause is a wrong or missing `driver.h`.
 - Confirm the generated `BOARD_SCREEN_COMBO` is available to the source file that includes `Seeed_GFX`.
 - For ESP32-S3 products with large buffers, confirm whether the product cookbook requires PSRAM settings.
 
-### Q4: Why does PlatformIO fail to upload to the board?
+### Q3: Why does PlatformIO fail to upload to the board?
 
 For reTerminal E1003, a common cause is an upload baud rate that is too high. Set `upload_speed` to `115200` in the same environment block before checking other causes.
 
@@ -603,22 +591,6 @@ If the upload still fails, continue with the following checks:
 - Disconnect other serial devices and try again.
 - Set `upload_port` only if auto-detection chooses the wrong port.
 - For ESP32-based boards, hold the boot button while connecting USB if the board does not enter download mode automatically.
-
-### Q5: Why does the serial monitor show unreadable characters?
-
-The `monitor_speed` value does not match the firmware baud rate.
-
-If the firmware uses:
-
-```cpp
-Serial.begin(115200);
-```
-
-then `platformio.ini` should include:
-
-```ini
-monitor_speed = 115200
-```
 
 ## Resources
 
