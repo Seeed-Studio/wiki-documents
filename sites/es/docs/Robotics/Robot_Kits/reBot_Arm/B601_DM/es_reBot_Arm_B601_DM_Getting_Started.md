@@ -14,10 +14,10 @@ translation:
   skip:
     - zh-CN
 last_update:
-  date: 2026-04-13
+  date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-04-13'
+updatedAt: '2026-05-22'
 url: https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/
 ---
 
@@ -45,10 +45,10 @@ url: https://wiki.seeedstudio.com/es/rebot_b601_dm_getting_started/
 
 El contenido de esta guía se dirige hacia ti a la velocidad de la luz — ¡mantente atento!
 
-El proyecto reBot Arm ha sido publicado como código abierto en [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Esta guía te llevará a través del inicio rápido del B601-DM, desde el montaje hasta la operación.
+El proyecto reBot Arm ha sido liberado como código abierto en [GitHub](https://github.com/Seeed-Projects/reBot-DevArm). Esta guía te llevará a través del inicio rápido del B601-DM, desde el montaje hasta la operación.
 
 :::tip
-Si compraste un kit preensamblado, ve directamente al video tutorial del **Paso 3** al final de este artículo y sigue las instrucciones. No es necesario escribir los ID de los motores ni calibrar las posiciones cero.
+Si compraste un kit preensamblado, pasa directamente al video tutorial en el **Paso 3** al final de este artículo y síguelo. No es necesario escribir IDs de motor ni calibrar posiciones cero.
 :::
 
 ## Opciones de compra
@@ -89,7 +89,7 @@ Antes del montaje:
 - No conectes ni desconectes motores en caliente; corta la alimentación antes de enchufar/desenchufar la interfaz XT30 2+2.
 - No sobrecargues ni excedas la velocidad; revisa el cableado y los elementos de fijación antes de arrancar; evita entornos húmedos, de alta temperatura o con polvo.
 - Establece parámetros de programa razonables y un paro de emergencia para evitar pérdida de control.
-- **Sigue estrictamente estas normas. El vendedor no es responsable de los riesgos o responsabilidades derivados de operaciones ilegales o errores personales.**
+- **Sigue estrictamente estas normas. El vendedor no es responsable de los riesgos/responsabilidades derivados de operaciones ilegales o errores personales.**
 
 ### Lista de preparación
 
@@ -115,13 +115,13 @@ Antes del montaje:
 <iframe width="900" height="600" src="https://www.youtube.com/embed/uXuzs1qmj6A?si=lfgXXlF1awhtnvaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Step 3: Calibración del reBot Arm e introducción
+## Paso 3: Calibrar reBot Arm y primeros pasos
 
-Confiamos en que has completado el montaje del brazo robótico, la inicialización del punto cero, la configuración de ID de los motores y otros pasos de configuración siguiendo el video. Ahora estás listo para explorar oficialmente la serie de tutoriales y herramientas que hemos publicado.
+Confiamos en que has completado el montaje del brazo robótico, la inicialización del punto cero, la configuración de IDs de motor y otros pasos de configuración siguiendo el video. Ahora estás listo para explorar oficialmente la serie de tutoriales y herramientas que hemos publicado.
 
 1. Explora nuestra plataforma **MotorBridge**, una solución todo en uno que admite una lista en expansión de motores, incluidos [Damiao](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html), [Robstride](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html), [Hightorque](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html), [Myactuator](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html), Hexfellow y más. También es compatible con brazos robóticos actualizados continuamente como reBot. Diseñada para principiantes, también ofrecemos un SDK de Python que implementa la misma funcionalidad para desarrolladores.
 
-2. Experimenta las nuevas funciones y detalles de MotorBridge para el brazo robótico reBot, incluyendo ajuste del punto cero con un clic, escritura de parámetros, control de motores mediante arrastrar y soltar en la interfaz de usuario y una interfaz integrada de visualización de modelos.
+2. Experimenta las nuevas funciones y detalles de MotorBridge para el brazo robótico reBot, incluyendo ajuste de punto cero con un clic, escritura de parámetros, control de motores mediante arrastrar y soltar en la interfaz de usuario y una interfaz integrada de visualización de modelos.
 
 3. Esta herramienta es totalmente compatible con los sistemas operativos **Windows, Ubuntu y Mac**.
 
@@ -140,13 +140,17 @@ Crea un entorno virtual con Python 3.12:
 conda create -y -n rebot python=3.12
 ```
 
-Luego activa tu entorno virtual; tienes que hacer esto cada vez que abras una terminal para usar rebot:
+Luego activa tu entorno virtual; tienes que hacer esto cada vez que abras una consola para usar rebot:
 
 ```bash
 conda activate rebot
 ```
 
 ### Paso 3: Instalar motorbridge
+
+:::tip
+Si todos los motores escaneados aparecen sin conexión, instala motorbridge v0.2.9.
+:::
 
 Después de activar el entorno virtual de reBot, ejecuta el siguiente comando para instalar motorbridge:
 
@@ -164,7 +168,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### Paso 5: Abrir motorbridge
 
-Abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador, luego haz clic en help, copia el comando adecuado para tu sistema y placa controladora, comprueba la IP y el puerto, y después pulsa Enter en la terminal.
+Abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador, luego haz clic en la ayuda, copia el comando adecuado para tu sistema y placa controladora, comprueba la IP y el puerto y, a continuación, pulsa Enter en la terminal.
 
 Por ejemplo, en Windows:
 
@@ -176,6 +180,29 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
+
+## Preguntas frecuentes (FAQ)
+### 1. Se produce un ruido anormal fuerte inmediatamente después del arranque del motor
+- Este problema suele ocurrir cuando la calibración de parámetros se activa accidentalmente durante la configuración del ID, lo que sobrescribe parámetros preestablecidos de fábrica como la inercia del motor. Usa **DM_Tools_v.1.8.0.1.exe (solo Windows)** disponible en:
+https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
+Exporta los parámetros completos de un motor intacto del mismo modelo mediante el software host, importa estos parámetros en la unidad defectuosa, actualiza su correspondiente ID de CAN, guarda los parámetros escritos y luego procede con la calibración del punto cero.
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/csbd_en.png" />
+</div>
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/fix_param_en.png" />
+</div>
+
+[Parámetros predeterminados de DM4310](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4310_Default_Parameters.txt)
+[Parámetros predeterminados de DM4340P](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
+
+### 2. Todos los motores comparten IDs de CAN idénticos
+- Al realizar la calibración del punto cero mediante **DM_Tools_v.1.8.0.1.exe (solo Windows)**, evita hacer clic en los botones Read o Set junto al campo de CAN ID. La interfaz de depuración se comunica a través del bus CAN; al hacer clic en Set se unificará el CAN ID de cada motor conectado al CANBUS.
+
 
 #### Para los pasos de operación posteriores, consulta nuestro video tutorial.
 

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-29 16:21:22 (北京时间)
-// 多语言页面: 2307 个
+// 生成时间: 2026-06-02 14:33:13 (北京时间)
+// 多语言页面: 2310 个
 
 (function() {
   'use strict';
@@ -829,6 +829,13 @@
     "pt"
   ],
   "/jetson-docker-getting-started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_spi_getting_start": [
     "cn",
     "en",
     "es",
@@ -3447,6 +3454,13 @@
     "pt"
   ],
   "/recamera_hq_poe_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started": [
     "cn",
     "en",
     "es",
@@ -10886,6 +10900,13 @@
     "pt"
   ],
   "/respeaker_flex_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_gpio_control": [
     "cn",
     "en",
     "es",

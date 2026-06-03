@@ -1,18 +1,18 @@
 ---
-title: Usando o Stream Deck para controlar o reCamera Gimbal 
+title: Usando o Stream Deck para Controlar o reCamera Gimbal
 description: Este wiki demonstra como controlar o reCamera Gimbal usando um Stream Deck.
 keywords:
   - reCamera Gimbal
   - Controle sensorial
 slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif
 sidebar_position: 1
 last_update:
   date: 2026-05-22T00:00:00.000Z
   author: Sizhao zhou
 createdAt: '2026-05-22'
-updatedAt: '2026-05-26'
+updatedAt: '2026-05-28'
 url: https://wiki.seeedstudio.com/pt-br/using_stream_deck_to_control_recamera_gimbal/
 ---
 
@@ -32,7 +32,7 @@ Gire o dial no Stream Deck para controlar o eixo X do reCamera Gimbal para rota�
 
 ---
 
-## Preparação de hardware
+## Preparação de Hardware
 
 - um reCamera Gimbal
 - um Stream Deck
@@ -69,33 +69,33 @@ Gire o dial no Stream Deck para controlar o eixo X do reCamera Gimbal para rota�
 
 Digite o endereço IP do reCamera Gimbal no seu navegador para fazer login no Dashboard. Em seguida, configure os nós de comunicação HTTP para receber comandos enviados pelo Stream Deck.
 
-### 1. Tratamento de eventos do dial (Webhook da reCamera)
+### 1. Tratamento de Eventos do Dial (Webhook da reCamera)
 
-#### Processamento do eixo de guinada (Process Yaw)
+#### Processamento do Eixo de Guinada (Process Yaw)
 
-- **Tipo de nó**: `http in` -> `function` -> `set-motor-angle`
+- **Tipo de Nó**: `http in` -> `function` -> `set-motor-angle`
 
-- **Resumo da lógica**:
+- **Resumo da Lógica**:
   - O ângulo padrão é definido como `180°`.
   - Incrementa ou decrementa o ângulo em **passos de 10°** ao receber ações no sentido horário (cw) ou anti-horário (ccw).
   - Redefine o ângulo para zero quando um gatilho de reset é recebido.
   - Restringe a faixa de movimento seguro entre **0° ~ 345°**.
 
-#### Processamento do eixo de inclinação (Process Pitch)
+#### Processamento do Eixo de Pitch (Process Pitch)
 
-- **Tipo de nó**: `http in` -> `function` -> `set-motor-angle`
+- **Tipo de Nó**: `http in` -> `function` -> `set-motor-angle`
 
-- **Resumo da lógica**:
+- **Resumo da Lógica**:
   - O ângulo padrão é definido como `90°`.
   - Incrementa ou decrementa o ângulo em **passos de 10°** ao receber ações no sentido horário (cw) ou anti-horário (ccw).
   - Redefine o ângulo para zero quando um gatilho de reset é recebido.
   - Restringe a faixa de movimento seguro entre **0° ~ 180°**.
 
-#### Processamento de zoom digital (Process Zoom)
+#### Processamento de Zoom Digital (Process Zoom)
 
-- **Tipo de nó**: `http in` -> `function` -> `ui-template`
+- **Tipo de Nó**: `http in` -> `function` -> `ui-template`
 
-- **Resumo da lógica**:
+- **Resumo da Lógica**:
   - A taxa de zoom padrão é `1.0`.
   - Ajusta o nível de zoom em **passos de 0.1** durante a rotação (incremento para cw / decremento para ccw) e o restaura para `1.0` quando pressionado para resetar.
   - Limita a faixa de zoom entre **0.5x ~ 5.0x**.
@@ -107,87 +107,87 @@ Digite o endereço IP do reCamera Gimbal no seu navegador para fazer login no Da
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-node_red-config.png" alt="node-red" />
 </div>
 
-### 2. Tratamento básico de eventos de botão
+### 2. Tratamento Básico de Eventos de Botão
 
-| Função do botão | Link do tipo de nó | Descrição do resumo da lógica |
+| Função do Botão | Link do Tipo de Nó | Descrição do Resumo da Lógica |
 | :--- | :--- | :--- |
 | **Alternar LED** | `http in` -> `function` -> `exec` | Mantém uma variável interna `ledState` para **alternar entre 0 e 1**. Quando o estado é 1, grava em `brightness` via linha de comando do Linux para ligar o LED branco e o desliga quando o estado é 0. |
-| **Gravar áudio** | `http in` -> `exec` | Invoca a ferramenta de sistema `arecord` para **gravar 5 segundos de áudio** a uma taxa de amostragem de 16000Hz em formato mono, salvando-o localmente em `/home/recamera/test.wav`. |
-| **Reproduzir áudio** | `http in` -> `exec` | Invoca a ferramenta de sistema `aplay` para **reproduzir** diretamente o arquivo de áudio `test.wav` recém-gravado. |
+| **Gravar Áudio** | `http in` -> `exec` | Invoca a ferramenta de sistema `arecord` para **gravar 5 segundos de áudio** a uma taxa de amostragem de 16000Hz em formato mono, salvando-o localmente em `/home/recamera/test.wav`. |
+| **Reproduzir Áudio** | `http in` -> `exec` | Invoca a ferramenta de sistema `aplay` para **reproduzir diretamente** o arquivo de áudio `test.wav` recém-gravado. |
 
 ---
 
 ## Configuração do Stream Deck
 
-Para garantir operações suaves no Stream Deck sem abrir uma nova janela do navegador sempre que uma ação for acionada, usaremos a ação integrada **"System -> Website"** e habilitaremos a execução silenciosa em segundo plano.
+Para garantir operações suaves no Stream Deck sem abrir uma nova janela do navegador sempre que uma ação for acionada, usaremos a ação interna **"System -> Website"** e habilitaremos a execução silenciosa em segundo plano.
 
 > **⚠️ Pré-requisito**: Certifique-se de que seu computador consiga dar ping com sucesso no endereço IP do dispositivo: `192.168.31.198` (lembre-se de substituir este pelo endereço IP real do seu dispositivo).
 
-### 1. Configuração da área do dial (Stream Deck)
+### 1. Configuração da Área do Dial (Stream Deck)
 
 Na seção de dial do software do Stream Deck, arraste **3 ações separadas "System -> Website"** para cada dial e configure-as da seguinte forma:
 
-#### Dial 1: Controlar eixo de guinada (Yaw)
+#### Dial 1: Controlar Eixo de Guinada (Yaw)
 
-- **Rotação no sentido horário (operação do dial):**
+- **Rotação no Sentido Horário (Operação do Dial):**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=cw`
   - **Configuração:** Marque `GET request in background`
 
-- **Rotação no sentido anti-horário (operação do dial):**
+- **Rotação no Sentido Anti-horário (Operação do Dial):**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=ccw`
   - **Configuração:** Marque `GET request in background`
-- **Pressionar (operação de pressionar):**
+- **Pressionar (Operação de Pressionar):**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=reset`
   - **Configuração:** Marque `GET request in background`
 
-#### Dial 2: Controlar eixo de inclinação (Pitch)
+#### Dial 2: Controlar Eixo de Pitch (Pitch)
 
-- **Rotação no sentido horário:**
+- **Rotação no Sentido Horário:**
   - **URL:** `http://192.168.31.198:1880/deck/pitch?action=cw`
   - **Configuração:** Marque `GET request in background`
 
-- **Rotação no sentido anti-horário:**
+- **Rotação no Sentido Anti-horário:**
   - **URL:** `http://192.168.31.198:1880/deck/pitch?action=ccw`
   - **Configuração:** Marque `GET request in background`
 - **Pressionar:**
   - **URL:** `http://192.168.31.198:1880/deck/pitch?action=reset`
   - **Configuração:** Marque `GET request in background`
 
-#### Dial 3: Zoom digital (Zoom)
+#### Dial 3: Zoom Digital (Zoom)
 >
-> **Observação**: O mecanismo de zoom controla a proporção da caixa de exibição SVG no Dashboard usando CSS.
+> **Nota**: O mecanismo de zoom controla a proporção da caixa de exibição SVG no Dashboard usando CSS.
 
-- **Rotação no sentido horário:**
+- **Rotação no Sentido Horário:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=cw`
   - **Configuração:** Marque `GET request in background`
-- **Rotação no sentido anti-horário:**
+- **Rotação no Sentido Anti-horário:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=ccw`
   - **Configuração:** Marque `GET request in background`
-- **Pressionar (restaurar para o padrão):**
+- **Pressionar (Restaurar para o Padrão):**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=reset`
   - **Configuração:** Marque `GET request in background`
 
-### 2. Configuração da área de botões (LED, Gravar, Reproduzir)
+### 2. Configuração da Área de Botões (LED, Gravar, Reproduzir)
 
 Na seção básica de botões do Stream Deck, arraste **3 ações "System -> Website"** e configure-as da seguinte forma:
 
-| Função do botão | URL da requisição | Configurações necessárias |
+| Função do Botão | URL da Requisição | Configurações Necessárias |
 | :--- | :--- | :--- |
 | **Alternar LED** | `http://192.168.31.198:1880/deck/led` | Marque `GET request in background` |
-| **Gravar áudio** *(pressione para gravar por 5s)* | `http://192.168.31.198:1880/deck/record` | Marque `GET request in background` |
-| **Reproduzir áudio** | `http://192.168.31.198:1880/deck/play` | Marque `GET request in background` |
+| **Gravar Áudio** *(Pressione para gravar por 5s)* | `http://192.168.31.198:1880/deck/record` | Marque `GET request in background` |
+| **Reproduzir Áudio** | `http://192.168.31.198:1880/deck/play` | Marque `GET request in background` |
 
 ---
 
-## Implantando o fluxo Node-RED na reCamera
+## Implantando o Fluxo Node-RED na reCamera
 
-Primeiro, siga este guia para atualizar sua reCamera para a versão mais recente 0.2.4: [Tutorial de atualização do reCamera OS](https://wiki.seeedstudio.com/cn/recamera_os_version_control/). Se o seu dispositivo já estiver executando a versão 0.2.4, você pode pular esta etapa. Em seguida, clique no botão **"Deploy"** no canto superior direito para implantar nossos nós recém-criados na placa.
+Primeiro, siga este guia para atualizar sua reCamera para a versão mais recente 0.2.4: [reCamera OS Upgrade Tutorial](https://wiki.seeedstudio.com/cn/recamera_os_version_control/). Se o seu dispositivo já estiver executando a versão 0.2.4, você pode pular esta etapa. Em seguida, clique no botão **"Deploy"** no canto superior direito para implantar nossos nós recém-criados na placa.
 
 ---
 
-## Suporte técnico e discussão sobre o produto
+## Suporte Técnico & Discussão de Produto
 
-Obrigado por escolher nossos produtos! Se você precisar de orientação sobre metas específicas de personalização ou desejar estender ainda mais seu fluxo de trabalho, sinta-se à vontade para entrar em contato conosco. Oferecemos múltiplas opções de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Fornecemos uma variedade de canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Se você precisar de orientação sobre metas específicas de personalização ou desejar estender ainda mais seu fluxo de trabalho, sinta-se à vontade para entrar em contato conosco. Oferecemos múltiplas opções de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Fornecemos diversos canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div className="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" className="button_forum"></a>

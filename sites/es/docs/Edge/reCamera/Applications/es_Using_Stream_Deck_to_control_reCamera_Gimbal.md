@@ -1,18 +1,18 @@
 ---
-title: Uso de Stream Deck para controlar el gimbal de reCamera 
+title: Uso de Stream Deck para controlar el gimbal de reCamera
 description: Este wiki muestra cómo controlar el gimbal de reCamera usando un Stream Deck.
 keywords:
   - reCamera Gimbal
-  - Sensory control
+  - Control sensorial
 slug: /using_stream_deck_to_control_recamera_gimbal
 sku: 100029708
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif
 sidebar_position: 1
 last_update:
   date: 2026-05-22T00:00:00.000Z
   author: Sizhao zhou
 createdAt: '2026-05-22'
-updatedAt: '2026-05-26'
+updatedAt: '2026-05-28'
 url: https://wiki.seeedstudio.com/es/using_stream_deck_to_control_recamera_gimbal/
 ---
 
@@ -24,7 +24,7 @@ Este wiki muestra cómo controlar el gimbal de reCamera usando un Stream Deck. A
 
 ## Demostración
 
-Gira el dial en el Stream Deck para controlar el eje X del gimbal de reCamera para la rotación hacia la izquierda y derecha, y presiona el dial para alternar la luz LED.
+Gira el dial en el Stream Deck para controlar el eje X del gimbal de reCamera para la rotación hacia la izquierda y derecha, y presiona el dial para alternar el LED.
 
 <div style={{textAlign: 'center'}}>
   <img width="800" src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_stream-deck-demo_show.gif" alt="demo" />
@@ -34,7 +34,7 @@ Gira el dial en el Stream Deck para controlar el eje X del gimbal de reCamera pa
 
 ## Preparación de hardware
 
-- un gimbal reCamera
+- un gimbal de reCamera
 - un Stream Deck
 
 <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
@@ -125,15 +125,15 @@ Para garantizar un funcionamiento fluido en el Stream Deck sin abrir una nueva v
 
 ### 1. Configuración del área del dial (Stream Deck)
 
-En la sección del dial del software de Stream Deck, arrastra **3 acciones independientes "System -> Website"** para cada dial y configúralas de la siguiente manera:
+En la sección de diales del software de Stream Deck, arrastra **3 acciones independientes "System -> Website"** para cada dial y configúralas de la siguiente manera:
 
 #### Dial 1: Control del eje de guiñada (Yaw)
 
-- **Rotación en sentido horario (operación del dial):**
+- **Rotación en sentido horario (operación de dial):**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=cw`
   - **Configuración:** Marca `GET request in background`
 
-- **Rotación en sentido antihorario (operación del dial):**
+- **Rotación en sentido antihorario (operación de dial):**
   - **URL:** `http://192.168.31.198:1880/deck/yaw?action=ccw`
   - **Configuración:** Marca `GET request in background`
 - **Pulsación (operación de pulsación):**
@@ -163,18 +163,18 @@ En la sección del dial del software de Stream Deck, arrastra **3 acciones indep
 - **Rotación en sentido antihorario:**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=ccw`
   - **Configuración:** Marca `GET request in background`
-- **Pulsación (restaurar a los valores predeterminados):**
+- **Pulsación (restaurar a valores predeterminados):**
   - **URL:** `http://192.168.31.198:1880/deck/zoom?action=reset`
   - **Configuración:** Marca `GET request in background`
 
-### 2. Configuración del área de botones (LED, Record, Play)
+### 2. Configuración del área de botones (LED, grabar, reproducir)
 
 En la sección básica de botones del Stream Deck, arrastra **3 acciones "System -> Website"** y configúralas de la siguiente manera:
 
-| Función del botón | URL de la solicitud | Configuraciones requeridas |
+| Función del botón | URL de solicitud | Configuraciones requeridas |
 | :--- | :--- | :--- |
 | **Alternar LED** | `http://192.168.31.198:1880/deck/led` | Marca `GET request in background` |
-| **Grabar audio** *(presiona para grabar durante 5s)* | `http://192.168.31.198:1880/deck/record` | Marca `GET request in background` |
+| **Grabar audio** *(pulsa para grabar durante 5s)* | `http://192.168.31.198:1880/deck/record` | Marca `GET request in background` |
 | **Reproducir audio** | `http://192.168.31.198:1880/deck/play` | Marca `GET request in background` |
 
 ---
