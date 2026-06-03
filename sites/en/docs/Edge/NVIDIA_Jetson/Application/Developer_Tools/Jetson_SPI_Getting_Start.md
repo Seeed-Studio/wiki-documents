@@ -159,19 +159,19 @@ ls /dev/spidev*
 
 ## Export GPIO Pins
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <Tabs>
-<TabItem value="jp5" label="JetPack 5">
+  <TabItem value="jp5" label="JetPack 5">
+    JetPack 5 使用 sysfs GPIO。
+  </TabItem>
 
-JetPack 5 使用 sysfs GPIO。
-
-</TabItem>
-
-<TabItem value="jp6" label="JetPack 6">
-
-JetPack 6 使用 libgpiod。
-
-</TabItem>
+  <TabItem value="jp6" label="JetPack 6">
+    JetPack 6 使用 libgpiod。
+  </TabItem>
 </Tabs>
+
 Before running the display demo, export the GPIO pins used by `DC` and `RES`. The demo controls these two pins through the sysfs GPIO interface.
 
 In this guide:
