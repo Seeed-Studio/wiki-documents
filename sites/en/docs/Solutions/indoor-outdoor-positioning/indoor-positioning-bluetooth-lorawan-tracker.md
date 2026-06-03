@@ -12,10 +12,10 @@ keywords:
 slug: /solutions/indoor-positioning-bluetooth-lorawan-tracker
 sidebar_position: 1
 last_update:
-  date: 09/10/2025
+  date: 05/31/2026
   author: Spencer
 createdAt: '2025-09-10'
-updatedAt: '2026-01-05'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/solutions/indoor-positioning-bluetooth-lorawan-tracker/
 ---
 
@@ -33,6 +33,16 @@ The system is built around the [SenseCAP T1000 Tracker](/SenseCAP_T1000_tracker/
 
 By supporting both methods, this solution provides a versatile and easy-to-deploy system for a wide range of indoor tracking applications, from simple presence detection to more detailed coordinate-based monitoring.
 
+:::tip Deploy in minutes with SenseCraft Solution
+
+The fastest way to get this system running is through the **[Campus-level BLE Beacon Positioning System](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan)** on the **SenseCraft Solution** platform.
+
+Click **Deploy**, pick a kit size (**Starter / Standard / Enterprise**), and SenseCraft Solution walks you through every step — installing the positioning application for you (no manual Docker commands) and guiding the beacon, gateway, and tracker setup.
+
+👉 **[Deploy this solution →](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan)**
+
+:::
+
 :::tip Navigate to our bundle page
 
 Check out our [Indoor & Outdoor Integrated Positioning](https://www.seeedstudio.com/Indoor-Outdoor-Integrated-Positioning.html) bundle page for all the products you need to implement this solution.
@@ -46,7 +56,7 @@ Check out our [Indoor & Outdoor Integrated Positioning](https://www.seeedstudio.
 - **Instant SOS Alert**: Trackers include a panic button that, when pressed, immediately sends an SOS alert via LoRaWAN for rapid emergency response.
 - **Intelligent Power Management**: By using a built-in accelerometer, the tracker can report only when movement is detected and send periodic "heartbeat" signals otherwise. This dramatically extends battery life to up to 6 months with optimal settings for many asset tracking applications.
 - **Simple Deployment**: Setting up BLE beacons and LoRaWAN gateways is straightforward, getting your positioning system online quickly.
-- **Open-Source Software**: The project is fully open-source, allowing you to build and customize your own backend server using our [GitHub repository.](https://github.com/Seeed-Solution/Solution_IndoorPositioning_H5)
+- **Ready to Deploy**: Get the whole system running in minutes — one-click via the [SenseCraft Solution](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan) platform, or a single Docker command if you self-host. The application is also fully [open-source](https://github.com/Seeed-Solution/Solution_IndoorPositioning_H5) if you want to customize it.
 
 ### Use Cases
 
@@ -235,9 +245,16 @@ Before you begin, make sure you have the following:
 <img class='img-responsive' width="1280" src="https://mermaid.ink/img/pako:eNo9jk9vwjAMxb9K5HOp2tE_JIdJQDcuO41phzUcotYtFW0SpYkYVHz3BSrmk9_Pz_aboFI1AoOmV-fqKIwlH59cEl_rcm-9PpDF4pVsygJ1ry5kg6JScpzpttyjdZrshMWzuMyweFrXWs_krdwq2XStM0i-jKhOaObBe_ndjU703RVnsPPOQfdo8cAlBNCargZmjcMABjSDuEuY7gE52CMOyIH5thbmxIHLm9_RQv4oNTzXjHLtEVgj-tErp2uftehEa8TwTw3KGs1WOWmB0Sh9HAE2wS-wLA6XeULzlyyL0piuaBLABVgc0ZBmeZymyTJa0SjJbgFcH3-jcJWntz-sxGvR?type=png" alt="Indoor positioning 2d map"/>
 </div>
 
+There are two ways to deploy this system — pick one for **Step 2**:
+
+- **Recommended — SenseCraft Solution (guided):** Open the [solution page](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan), click **Deploy**, and choose a kit size. SenseCraft Solution installs the positioning application for you and guides the hardware setup end to end.
+- **Manual — self-host with Docker:** Prefer to run it yourself? Use the manual Docker path described in [Step 2](#step-2-install-the-positioning-application).
+
+Either way, every deployment follows the same five stages:
+
 1. **Deploy Beacons**: Place BLE beacons at strategic locations throughout your facility. Create a map or list documenting the unique ID of each beacon and its physical location (e.g., `Beacon_ID_01: "Main Entrance"`, `Beacon_ID_02: "Warehouse Zone A"`).
 2. **Set up the Gateway**: Connect your LoRaWAN gateway to the internet and configure it to forward packets to your chosen LoRaWAN Network Server.
-3. **Deploy the Application**: On your application server, create the logic to map the reported beacon IDs back to the physical locations you documented in Step 3.
+3. **Deploy the Application**: Install the ready-made SenseCraft Indoor Positioning application — one-click via SenseCraft Solution, or self-hosted with Docker (see [Step 2](#step-2-install-the-positioning-application)). No custom backend coding required.
 4. **Configure the Tracker**: Activate the SenseCAP T1000 and onboard it to your LoRaWAN Network Server. Ensure it is configured for BLE scanning mode.
 5. **Visualize**: As the tracker moves through the facility, it will report the nearest beacon, and your application can display its location on a dashboard or map.
 
@@ -292,16 +309,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="sensecap-portal" label="SenseCraft Data" default>
+<TabItem value="sensecap-portal" label="SenseCraft Data" default>
 
 By default, the LoRaWAN gateway forwards data to the [**SenseCraft Data**](https://sensecap.seeed.cc/portal/) platform (formerly **SenseCAP Portal**).
 
 1. Follow the [official user manual](/quick_start_with_M2_MP) to ensure your gateway is **online** and **linked to your account**.  
 2. Once the connection is verified, you can **proceed to next step(Step 2)**.
 
-  </TabItem>
+</TabItem>
 
-  <TabItem value="chirpstack" label="ChirpStack (Local LoRaWAN Server)">
+<TabItem value="chirpstack" label="ChirpStack (Local LoRaWAN Server)">
 
 If you’re using a **self-hosted ChirpStack** server integrated with your gateway, you’ll need to **redirect the gateway data** and **prepare a decoder script**.
 
@@ -317,24 +334,35 @@ If you’re using a **self-hosted ChirpStack** server integrated with your gatew
 </video>
 </div>
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ### Step 2: Install the Positioning Application
 
-Install the SenseCraft Indoor Positioning application on your server using Docker.
+The positioning application is a lightweight web service (a single Docker container) that ingests tracker data over MQTT and renders the live map. There are two ways to install it — choose the one that fits you.
+
 If you’d like to explore the interface first, you can check out the [live demo](https://indoorpositioning-demo.seeed.cc/).
 
 <div align="center">
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/app-preview.png" alt="Indoor positioning application preview"/>
 </div>
 
-#### Run the Installation Command
-
-Open a terminal on your server and run the following command:
-
 <Tabs>
-  <TabItem value="global" label="Global" default>
+<TabItem value="sensecraft-solution" label="SenseCraft Solution (Recommended)" default>
+
+The easiest path — no terminal, no manual commands.
+
+1. Open the **[Campus-level BLE Beacon Positioning System](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan)** solution page.
+2. Click **Deploy** and choose your kit size (**Starter / Standard / Enterprise**).
+3. SenseCraft Solution installs the positioning application for you — on your local machine or to a remote server over SSH — and opens the dashboard automatically once the service is healthy.
+
+When the dashboard opens, continue to [Step 3](#step-3-configure-the-application) to connect your LoRaWAN data source.
+
+</TabItem>
+
+<TabItem value="manual-docker" label="Manual (Docker)">
+
+Prefer to self-host? Open a terminal on your server and run the following command:
 
 ```shell
 docker run -p 5173:5173 \
@@ -346,14 +374,8 @@ docker run -p 5173:5173 \
 -d seeedcloud/sensecraft-indoor-positioning
 ```
 
-  </TabItem>
-
-  <TabItem value="mirror" label="Mirror">
-  For China mainland users, you could use [chsrc](https://chsrc.run/) to change source for better boost up.
-  </TabItem>
-</Tabs>
-
 > 💡 Note: Use PowerShell instead of a CMD terminal if you are running the command on Windows.
+> For China mainland users, you can use [chsrc](https://chsrc.run/) to switch the Docker registry mirror for a faster pull.
 
 **What this command does:**
 
@@ -365,9 +387,12 @@ docker run -p 5173:5173 \
   - `/app/uploads` → stores uploaded files.
 - `-d` runs the application in the background.
 
+</TabItem>
+</Tabs>
+
 ---
 
-Once the container starts successfully, open your web browser and navigate to:
+Once the application is running, open your web browser and navigate to:
 
 👉 `http://<your_server_ip>:5173`
 
@@ -669,8 +694,9 @@ You can filter the displayed trackers on the map by their associated beacon UUID
 
 ## Reference & Resource
 
-- **Landing Page**: [SenseCraft Indoor Positioning Solution](https://www.seeed.cc/solutions/campus-safety-management)
+- **Deploy with SenseCraft Solution**: [Campus-level BLE Beacon Positioning System](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan) — one-click guided deployment
 - **Docker Image**: [seeedcloud/sensecraft-indoor-positioning - Docker Hub](https://hub.docker.com/r/seeedcloud/sensecraft-indoor-positioning)
+- **Source Code**: [Solution_IndoorPositioning_H5 - GitHub](https://github.com/Seeed-Solution/Solution_IndoorPositioning_H5)
 - **Live Demo Site**: [IndoorPositioning](https://indoorpositioning-demo.seeed.cc/)
 
 ## Tips
@@ -810,6 +836,11 @@ You can use the **SenseCraft app** to configure the BC01 beacon.
 </details>
 
 ## CHANGELOG
+
+**2026-05-29:**
+
+- Restructured the deployment guide to lead with **SenseCraft Solution** one-click guided deployment (Starter / Standard / Enterprise kits), with manual Docker self-hosting kept as an alternative path.
+- Added a deploy call-to-action and refreshed the Reference & Resource links to point at the [Campus-level BLE Beacon Positioning System](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan) solution page; added the GitHub source link.
 
 **2025-11-10:**
 

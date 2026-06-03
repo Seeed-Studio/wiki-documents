@@ -10,7 +10,7 @@ last_update:
   date: 1/11/2023
   author: jianjing Huang
 createdAt: '2023-01-12'
-updatedAt: '2026-02-12'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Respeaker_V2/img/ReSpeaker_V2_front.JPG)
@@ -948,14 +948,12 @@ Then you will see the result is something like that:
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/CDC_Driver.png)
 
 **A5:** This may happen when you connect the ReSpeaker Core v2.0 with you computer via OTG or UART.
-This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver
- and connect the ReSpeaker Core v2.0 again.
+This is because the CDC Serial driver has a conflict with other OTG driver. Please uninstall the conflicted driver and connect the ReSpeaker Core v2.0 again.
 
 **Q6: What if I want to use the external antenna?**
 
 **A6:** The ReSpeaker Core v2.0 use **AP6212** to provide both WiFi and Bluetooth, they share the same antenna.
-Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it
-on the new pads, as shown below：
+Instead of the on-board antenna, you can use an external antenna. To do so, you need to remove one resistance and solder it on the new pads, as shown below：
 
 - First you need to remove the resistance in the orange box.
 - Then please solder it on the green box.

@@ -10,6 +10,7 @@ keywords:
   - Lerobot
   - Pinocchio
   - 6 DOF
+image: https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png
 slug: /rebot_b601_rs_getting_started
 translation:
   skip:
@@ -18,7 +19,7 @@ last_update:
   date: 2026-05-26T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-05-26'
-updatedAt: '2026-05-26'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/rebot_b601_rs_getting_started/
 ---
 

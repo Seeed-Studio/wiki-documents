@@ -2091,6 +2091,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_mqtt',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_doa',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_volume_xiao',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_gpio',
               ],
             },
             'Sensor/reSpeaker_flex/pt_reSpeaker_flex_python_control',
@@ -4041,6 +4042,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
               ]
             },
           ]

@@ -12,7 +12,7 @@ last_update:
   date: 10/20/2023
   author: Jessie
 createdAt: '2023-10-19'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-31'
 url: https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/
 ---
 
@@ -20,6 +20,10 @@ url: https://wiki.seeedstudio.com/IPS_For_SenseCAP_T1000_Traker/
 The chapter will provide overall guidance on how to integrate [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) into an indoor positioning solution using Traxmate.
 
 [Traxmate](https://traxmate.io/) is an loT platform that enables you or your customers to easily and efficiently deploy a comprehensive loT tracking solution, complete with seamless indoor and outdoor positioning, tracking, and routing capabilities.
+
+:::tip Looking for a self-hosted alternative?
+If you'd rather run your own dashboard without a third-party platform subscription, check out the **[Campus-level BLE Beacon Positioning System](https://www.seeed.cc/solutions/reference-designs/indoor_positioning_ble_lorawan)** — a ready-to-deploy BLE-beacon + LoRaWAN solution you can launch in one click with SenseCraft Solution (or self-host via Docker).
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/system-archi.png" alt="pir" width={800} height="auto" /></p>
 

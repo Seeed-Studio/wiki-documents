@@ -12,12 +12,12 @@ keywords:
 slug: /rebot_arm_b601_dm_grasping_demo
 sku: 100065783, 100095532, 100063143, 100045679, 100040187
 last_update:
-  date: 2026-05-20
+  date: 2026-06-01
   author: YinHaizhou
 translation:
   skip: [zh-CN]
 createdAt: '2026-04-22'
-updatedAt: '2026-05-20'
+updatedAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
 ---
 
@@ -26,6 +26,13 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">
@@ -41,26 +48,29 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_b601_dm_grasping_demo/
   <strong>奥行き認識 · 物体検出 · ハンドアイキャリブレーション · 自律把持 · 完全オープンソース</strong>
 </p>
 
-YOLO は、単一のフォワードパスでターゲットの位置特定と分類を行う、広く利用されているリアルタイム物体検出モデルファミリーです。本チュートリアルでは、YOLO と Orbbec Gemini 2 深度カメラを組み合わせて、reBot Arm B601-DM 向けのデスクトップ用ビジュアル把持デモを構築します。環境構築、カメラ統合、ハンドアイキャリブレーション、把持検証までをカバーします。
+YOLO は広く利用されているリアルタイム物体検出モデルのファミリーで、1 回のフォワードパスでターゲットの位置特定と分類を行うことができます。このチュートリアルでは、YOLO と Orbbec Gemini 2 深度カメラを組み合わせて、reBot Arm B601-DM 向けのデスクトップ用ビジュアル把持デモを構築します。環境構築、カメラ統合、ハンドアイキャリブレーション、把持検証までをカバーします。
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+<p align="center">
+  <img src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/visual_grasp/demo.gif" alt="reBot Arm B601-DM visual grasping demo" />
+</p>
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/6dqKZNh_D7k?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## プロジェクトの特長
 
-1. **YOLO + OBB による直接的な把持姿勢推定**  
+1. **YOLO + OBB からの直接把持姿勢推定**  
    このパイプラインでは、検出ボックスまたは OBB の最小外接矩形を直接使用し、短軸をグリッパの開閉方向として扱うことで、複雑な 3D 点群処理を回避します。
 
 2. **GraspNet-Baseline による 6D 把持姿勢推定（オプション）**  
-   本プロジェクトは、RGB-D 点群から 6D 把持姿勢を推定する GraspNet-Baseline（`graspnet/graspnet-baseline`）にも対応しており、YOLO のバウンディングボックスを用いてターゲット候補を選択し、より複雑な把持実験を行うことができます。
+   このプロジェクトは、RGB-D 点群から 6D 把持姿勢を推定する GraspNet-Baseline（`graspnet/graspnet-baseline`）にも対応しており、YOLO のバウンディングボックスを用いてターゲット候補を選択し、より複雑な把持実験を行うことができます。
 
 3. **軽量ロボットアームとグリッパの統合**  
    メインの把持スクリプトは `RebotArm` インターフェースを再利用し、IK、軌道制御、グリッパのステートマシンを統合しています。
 
 4. **オープンソースかつ拡張可能**  
-   すべてのソースコードは公開されており、ユーザーは自身のニーズに応じて制御アルゴリズムや動作をカスタマイズできます。
+   すべてのソースコードは公開されており、ユーザーは自分のニーズに応じて制御アルゴリズムや動作をカスタマイズできます。
 
 ## 仕様
 
@@ -145,7 +155,7 @@ sudo chmod 666 /dev/ttyUSB0
 
 ## インストール手順
 
-### ステップ 0. まずロボットアームの基本準備を完了する
+### ステップ 0. 先にロボットアームの基本準備を完了する
 
 このチュートリアルを始める前に、[reBot Arm B601-DM クイックスタート](https://wiki.seeedstudio.com/ja/rebot_b601_dm_getting_started/) の内容（ロボットアームの組み立て、ゼロ点初期化、モーター ID 設定、基本的な接続確認）を完了してください。
 
@@ -172,7 +182,7 @@ conda env create -f environment.yml -n rebotarm
 conda activate rebotarm
 ```
 
-別の環境名を使用したい場合は、コマンド内の `rebotarm` を任意の名前に置き換えてください。
+別の環境名を使いたい場合は、コマンド内の `rebotarm` を任意の名前に置き換えてください。
 
 ### ステップ 3. ロボットアーム SDK をインストールする
 
@@ -185,7 +195,7 @@ cd ../..
 
 ### ステップ 4. 深度カメラ SDK をインストールする
 
-**本プロジェクトでは Orbbec Gemini2 深度カメラを使用します。別の深度カメラを使用する場合は、そのカメラに対応する SDK をインストールし、このステップはスキップしてください。**
+**このプロジェクトでは Orbbec Gemini2 深度カメラを使用します。別の深度カメラを使用する場合は、そのカメラに対応する SDK をインストールし、このステップはスキップしてください。**
 
 Orbbec Gemini2 深度カメラは、Orbbec SDK v2 の Python ラッパーである `pyorbbecsdk` に依存します。まずはビルド済みの Python パッケージをインストールすることを推奨します：
 
@@ -213,7 +223,7 @@ pip install -e .
 git clone https://gitee.com/orbbecdeveloper/pyorbbecsdk.git
 ```
 
-ソースからインストールする場合は、`pip install -e .` を実行する前に、ネイティブ拡張が CMake でビルドされており、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリが含まれていることを確認してください。
+ソースからインストールする場合は、`pip install -e .` を実行する前に、CMake でネイティブ拡張がビルドされており、`install/lib` に `pyorbbecsdk*.so` と Orbbec の共有ライブラリが含まれていることを確認してください。
 
 上記のすべてのインストール方法がうまくいかない場合は、以下の Orbbec 公式ドキュメントを参照してください。
 
@@ -227,7 +237,7 @@ sudo udevadm trigger
 
 ### ステップ 5. GraspNet を設定する（オプション）
 
-`scripts/main.py` や `scripts/ordinary_grasp_pipeline.py` を実行するだけであれば、GraspNet は不要です。`scripts/graspnet_camera_demo.py` や `scripts/grasp.py` を実行したい場合のみ設定してください。これらは GraspNet、CUDA 対応の PyTorch、PointNet2/knn の CUDA オペレータ、および学習済みチェックポイントを必要とします。
+`scripts/main.py` や `scripts/ordinary_grasp_pipeline.py` を使用するだけであれば、GraspNet は不要です。`scripts/graspnet_camera_demo.py` や `scripts/grasp.py` を実行したい場合のみ設定してください。これらは GraspNet、CUDA 対応の PyTorch、PointNet2/knn の CUDA オペレータ、および学習済みチェックポイントを必要とします。
 
 GraspNet の `pointnet2` / `knn` 拡張は CUDA コンパイラを必要とします。開始する前に、アクティブな環境から `nvcc` が見えることを確認し、`nvcc` が報告する CUDA バージョンが、PyTorch のビルドに使用された CUDA バージョンと一致しているかを確認してください：
 
@@ -242,7 +252,7 @@ python -c "import torch; print(torch.__version__, torch.version.cuda)"
 conda install -c nvidia cuda-nvcc=13.0
 ```
 
-代わりに、現在の `nvcc` バージョンに一致する PyTorch ビルドをインストールすることもできます。2 つのバージョンが一致していないと、`pointnet2` / `knn` のビルドは `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーで失敗します。
+代わりに、現在の `nvcc` バージョンに一致する PyTorch ビルドをインストールすることもできます。2 つのバージョンは一致している必要があり、一致していない場合は `pointnet2` / `knn` のビルドが `The detected CUDA version (...) mismatches the version that was used to compile PyTorch (...)` というエラーで失敗します。
 
 ```bash
 cd sdk
@@ -251,6 +261,13 @@ cd graspnet-baseline
 
 # Install PyTorch for your CUDA version first, then install GraspNet runtime dependencies
 pip install open3d tensorboard Pillow tqdm
+
+# Configure CUDA build paths before building the local operators.
+export CUDA_HOME=$CONDA_PREFIX
+export TORCH_CUDA_ARCH_LIST="12.0"
+export CPATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPATH
+export CPLUS_INCLUDE_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/include:$CPLUS_INCLUDE_PATH
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib/python3.10/site-packages/nvidia/cu13/lib:$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 # Build CUDA operators
 cd pointnet2
@@ -263,14 +280,15 @@ cd ..
 git clone https://github.com/graspnet/graspnetAPI.git
 cd graspnetAPI
 sed -i "s/'sklearn'/'scikit-learn'/" setup.py
-sed -i "s/'numpy==1.23.4'/'numpy>=1.24.0'/" setup.py
 pip install .
 cd ../../..
 ```
 
 ***注意: 公式の graspnet-baseline リポジトリのドキュメントに従って `python setup.py install` を使用すると、CUDA / PyTorch 関連のエラーが発生する場合があります。アクティブな conda 環境にすでにインストールされている PyTorch と CUDA の構成に対して拡張をビルドするために、`pip install . --no-build-isolation` を使用することを推奨します。***
 
-***さらに、古い GraspNet API の依存関係では、非推奨となった `sklearn` パッケージ名が依然として使用されている場合があります。`sed` コマンドはこれを現在推奨されている `scikit-learn` パッケージ名に置き換え、インストール時の `The 'sklearn' PyPI package is deprecated` を回避します。また、`numpy==1.23.4` を `numpy>=1.24.0` に変更し、GraspNet API のインストールによって NumPy がダウングレードされ、ロボットアーム制御の依存関係と競合することを防ぎます。***
+***ビルド時に `fatal error: cusparse.h: No such file or directory` が発生した場合は、`find $CONDA_PREFIX -name cusparse.h` を実行し、`cusparse.h` を含むディレクトリが `CPATH` / `CPLUS_INCLUDE_PATH` に含まれていることを確認してください。conda の `cuda-toolkit` から CUDA ヘッダをインストールした場合、インクルードパスは通常、上記の pip の `nvidia/cu13/include` パスではなく、`$CONDA_PREFIX/targets/x86_64-linux/include` になります。***
+
+***さらに、古い GraspNet API 依存関係では、非推奨となった `sklearn` パッケージ名が依然として使用されている場合があります。`sed` コマンドは、インストール中に `The 'sklearn' PyPI package is deprecated` が発生するのを避けるために、現在推奨されている `scikit-learn` パッケージ名に置き換えます。古い GraspNet API 依存関係も同時にアップグレードしない限り、`transforms3d==0.3.1` が依然として `np.float` のような古い NumPy エイリアスを使用しているため、その `numpy==1.23.4` 制約は維持してください。***
 
 公式の graspnet-baseline リポジトリを参照して公式 GraspNet 学習済み重みをダウンロードし、`checkpoint-rs.tar` を次の場所に配置します：
 
@@ -278,16 +296,16 @@ cd ../../..
 sdk/graspnet-baseline/checkpoints/checkpoint-rs.tar
 ```
 
-その後、`config/default.yaml` を確認します：
+次に `config/default.yaml` を確認します：
 
 ```yaml
 graspnet:
   checkpoint: "checkpoint-rs.tar"
 ```
 
-`checkpoint` フィールドは 3 つの形式をサポートします：ファイル名の場合は `sdk/graspnet-baseline/checkpoints/` 配下で解決されます；相対パスの場合はプロジェクトルートから解決されます；絶対パスの場合はそのまま使用されます。
+`checkpoint` フィールドは 3 つの形式をサポートします：ファイル名は `sdk/graspnet-baseline/checkpoints/` 配下として解決されます；相対パスはプロジェクトルートからのパスとして解決されます；絶対パスはそのまま使用されます。
 
-### ステップ 6. 依存関係を確認する
+### Step 6. 依存関係を検証する
 
 ```bash
 python -c "import pyorbbecsdk; print('pyorbbecsdk OK')"
@@ -298,13 +316,13 @@ Orbbec カメラを初めて使用する場合は、インストール済みの 
 
 ## ハンドアイキャリブレーション
 
-完全な把持パイプラインを実行する前に、まず Eye-in-Hand のハンドアイキャリブレーションを完了させてください。
+フルの把持パイプラインを実行する前に、まず Eye-in-Hand 方式のハンドアイキャリブレーションを完了させてください。
 
 ```bash
 python scripts/collect_handeye_eih.py
 ```
 
-実行する前に、`config/default.yaml` 内の次の ArUco サイズパラメータが、実際に印刷したマーカーと一致していることを確認してください：
+実行前に、`config/default.yaml` 内の次の ArUco サイズパラメータが、実際に印刷したマーカーと一致していることを確認してください：
 
 ```yaml
 calibration:
@@ -312,15 +330,15 @@ calibration:
     marker_length_m: 0.1
 ```
 
-自動モードでは、アームがあらかじめ設定された 50 個の姿勢を走査し、ArUco マーカーが安定して検出されたときにサンプルを記録します。途中で `c` または `q` で処理を中断しても、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
+自動モードでは、アームは 50 個のプリセット姿勢を走査し、ArUco マーカーが安定して検出されたときにサンプルを記録します。`c` または `q` で処理を中断した場合でも、スクリプトは収集済みサンプルからキャリブレーション結果の計算を試みます。
 
-収集中にロボットアームを手動で動かしたい場合は、手動モードを使用します：
+サンプリング中にロボットアームを手動で動かしたい場合は、手動モードを使用します：
 
 ```bash
 python scripts/collect_handeye_eih.py --manual
 ```
 
-手動モードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視野角に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了し結果を計算します。
+手動モードでは、アームは重力補償モードに入ります。エンドエフェクタを適切な視点に動かし、`Enter` を押してキャプチャし、`c` または `q` を押して終了および結果の計算を行います。
 
 キャリブレーション結果は次の場所に保存されます：
 
@@ -328,7 +346,7 @@ python scripts/collect_handeye_eih.py --manual
 config/calibration/orbbec_gemini2/hand_eye.npz
 ```
 
-推奨サンプル数は少なくとも 5 サンプルで、15 以上を推奨します。
+推奨サンプル数は少なくとも 5 サンプルで、15 サンプル以上を推奨します。
 
 ## 実行とデバッグ
 
@@ -351,10 +369,10 @@ yolo:
     - "cup"
 ```
 
-このステップは次の点を確認するのに有用です：
+このステップは、次の点を確認するのに有用です：
 
 - カメラが正しくオープンするか
-- YOLO モデルが正しく読み込まれるか
+- YOLO モデルが正しくロードされるか
 - YOLO の物体検出が期待どおりに動作するか
 
 ### 2. 把持推定のみを検証する
@@ -381,7 +399,7 @@ grasp_pipeline:
 
 主な操作キー：
 
-- 左クリック：選択したピクセルの深度を確認
+- マウス左ボタン：選択したピクセルの深度を確認
 - `G`: 現在の最良把持姿勢を出力
 - `Q` / `Esc`: 終了
 
@@ -397,7 +415,7 @@ python scripts/main.py
 python scripts/main.py --dry-run
 ```
 
-実際に把持を実行する前に、まず `--dry-run` で姿勢と到達可能な作業空間を検証することを推奨します。
+実際の把持を実行する前に、まず `--dry-run` で姿勢と到達可能な作業空間を検証することを推奨します。
 
 `reBotArm_control_py` がデフォルトの場所にない場合は、`config/default.yaml` で指定します：
 
@@ -406,7 +424,7 @@ robot:
   repo_root: null
 ```
 
-通常は `null` のままで十分です。プログラムはまず `sdk/reBotArm_control_py` を自動検出しようとします。
+通常は `null` のままで十分です。プログラムは最初に `sdk/reBotArm_control_py` を自動検出しようとします。
 
 メインプログラムのフロー：
 
@@ -426,9 +444,9 @@ robot:
 
 3. テーブルトップ上のターゲットをリアルタイムに検出する
 4. 短軸から把持姿勢を推定する
-5. `G` を押して現在のフレームをキャプチャし把持を実行する
+5. `G` を押して現在のフレームをキャプチャし、把持を実行する
 
-実行時のキー：
+実行時のキー操作：
 
 - `G`: 現在の最良ターゲットを把持
 - `R`: ライブプレビューを再開
@@ -440,7 +458,7 @@ robot:
 python scripts/graspnet_camera_demo.py
 ```
 
-このスクリプトは、ロボットアームに接続せずに RGB-D カメラのみで GraspNet の 6D 把持姿勢推定を実行します。ライブカメラプレビューを維持し、YOLO のバウンディングボックスでターゲット領域を選択し、ターゲットの bbox によって GraspNet のフルシーン候補から実行可能なものをフィルタリングします。
+このスクリプトは、ロボットアームに接続せずに RGB-D カメラのみで GraspNet の 6D 把持姿勢推定を実行します。ライブカメラプレビューを維持し、YOLO のバウンディングボックスを使用してターゲット領域を選択し、ターゲットの bbox によって GraspNet のフルシーン候補から実行可能な候補をフィルタリングします。
 
 主な操作キー：
 
@@ -458,15 +476,15 @@ python scripts/grasp.py --dry-run
 python scripts/grasp.py --target-class "light blue coffee cup"
 ```
 
-このスクリプトは、GraspNet の推定結果をロボットアームの実行フローに接続します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションがそれをロボットベース座標系に変換し、スクリプトが IK の到達可能性を確認してから、プレグラスプ、把持、退避のモーションシーケンスを実行します。
+このスクリプトは、GraspNet の推定結果をロボットアームの実行フローに接続します。YOLO がターゲットを選択し、GraspNet が 6D 把持姿勢を出力し、ハンドアイキャリブレーションがそれをロボットベース座標系に変換し、スクリプトは IK の到達可能性を確認してから、プレグラスプ、把持、退避のモーションシーケンスを実行します。
 
-`python scripts/grasp.py` を実行すると、GraspNet による完全なロボット把持フローが開始され、実際にロボットアームを制御します。`--dry-run` はターゲット姿勢と候補フィルタリング結果を出力するだけで、把持動作は実行しません。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスに対する GraspNet 候補のみをフィルタリングして把持します。
+`python scripts/grasp.py` を実行すると、GraspNet によるフルのロボット把持フローが開始され、実際にロボットアームを制御します。`--dry-run` はターゲット姿勢と候補フィルタリング結果を出力するだけで、把持動作は実行しません。`--target-class "light blue coffee cup"` は YOLO のターゲットクラスを指定し、そのクラスに対する GraspNet 候補のみをフィルタリングして把持します。
 
 ## FAQ
 
 ### 1. `ModuleNotFoundError: No module named 'motorbridge'`
 
-これは通常、現在の Python 環境にロボットアーム SDK の依存関係がインストールされていないことを意味します。次を確認してください：
+これは通常、ロボットアーム SDK の依存関係が現在の Python 環境にインストールされていないことを意味します。次を確認してください：
 
 ```bash
 conda activate rebotarm
@@ -479,8 +497,8 @@ cd sdk/reBotArm_control_py && pip install -e .
 よくある原因：
 
 - `hand_eye.npz` が存在しない
-- ハンドアイキャリブレーションモードが `eye_in_hand` になっていない
-- ターゲット姿勢が IK で到達可能ではない
+- ハンドアイキャリブレーションモードが `eye_in_hand` ではない
+- ターゲット姿勢が IK によって到達可能ではない
 
 次を実行することを推奨します：
 
@@ -488,7 +506,7 @@ cd sdk/reBotArm_control_py && pip install -e .
 python scripts/main.py --dry-run
 ```
 
-### 3. 把持深度が不安定
+### 3. 把持深度が安定しない
 
 次の調整を試すことができます：
 
@@ -498,7 +516,7 @@ python scripts/main.py --dry-run
 
 ### 4. GraspNet が `pointnet2` から `pointnet2_utils` をインポートできないと報告する
 
-これは通常、アクティブな conda 環境で `sdk/graspnet-baseline/pointnet2` 配下のローカル CUDA 拡張がビルドされていないか、Python が別の `pointnet2` パッケージを解決していることを意味します。プロジェクト環境がアクティブであることを確認し、その同じ環境で `pointnet2` と `knn` の両方を再ビルドしてください：
+これは通常、`sdk/graspnet-baseline/pointnet2` 配下のローカル CUDA 拡張がアクティブな conda 環境でビルドされていないか、Python が別の `pointnet2` パッケージを解決していることを意味します。プロジェクト環境がアクティブであることを確認し、その同じ環境で `pointnet2` と `knn` の両方を再ビルドしてください：
 
 ```bash
 conda activate rebotarm
@@ -509,7 +527,7 @@ cd ../knn
 pip install . --no-build-isolation
 ```
 
-確認：
+次を確認します：
 
 ```bash
 python -c "from pointnet2 import pointnet2_utils; print('Submodule import works')"
@@ -517,7 +535,7 @@ python -c "from pointnet2 import pointnet2_utils; print('Submodule import works'
 
 ### 5. GraspNet 実行時に新しい GPU で CUDA アーキテクチャ互換性の問題が発生する
 
-`no kernel image is available for execution on the device` が表示されたり、PyTorch が現在の GPU CUDA ケイパビリティがサポートされていないと報告する場合、インストールされている PyTorch ホイールにその GPU アーキテクチャ向けの CUDA カーネルが含まれていない可能性があります。現在の CUDA/GPU アーキテクチャをサポートする PyTorch ビルドをインストールし、その後 GraspNet のローカル CUDA 拡張を再ビルドしてください。
+`no kernel image is available for execution on the device` が表示されたり、PyTorch が現在の GPU CUDA ケイパビリティがサポートされていないと報告する場合、インストールされている PyTorch ホイールにはその GPU アーキテクチャ向けの CUDA カーネルが含まれていない可能性があります。現在の CUDA/GPU アーキテクチャをサポートする PyTorch ビルドをインストールし、その後 GraspNet のローカル CUDA 拡張を再ビルドしてください。
 
 ```bash
 python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_name(0))"
@@ -539,7 +557,7 @@ pip install . --no-build-isolation
 python -c "import torch; print(torch.cuda.is_available())"
 ```
 
-出力が `False` の場合は、まず CUDA / PyTorch のインストールを修正してください。`True` だがエラーが残る場合は、`pointnet2` と `knn` を再ビルドします。
+出力が `False` の場合は、まず CUDA / PyTorch のインストールを修正してください。`True` だがエラーが残る場合は、`pointnet2` と `knn` を再ビルドしてください。
 
 ## お問い合わせ
 
@@ -559,4 +577,4 @@ python -c "import torch; print(torch.cuda.is_available())"
 - [pyorbbecsdk ドキュメント](https://orbbec.github.io/pyorbbecsdk/index.html)
 - [Orbbec ROS2 Wrapper](https://github.com/orbbec/OrbbecSDK_ROS2/tree/v2-main)
 - [graspnet/graspnet-baseline](https://github.com/graspnet/graspnet-baseline)
-- [Graspnet(Anygrasp) ドキュメント](https://graspnet.net/)
+- [Graspnet(Anygrasp) Docs](https://graspnet.net/)
