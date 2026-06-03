@@ -105,3 +105,4 @@ Available customization options: logo branding, packaging, and firmware flashing
 |Power on|Lights up and then flashes quickly|
 |DFU mode|Solid on|
 |Working|Random flashing|
+|Charging|Flashes at 0.5 Hz, toggling every second|
