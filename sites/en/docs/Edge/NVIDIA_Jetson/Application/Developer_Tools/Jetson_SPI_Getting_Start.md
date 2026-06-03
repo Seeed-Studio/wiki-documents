@@ -187,13 +187,6 @@ ls /sys/class/gpio/PQ.05
 ls /sys/class/gpio/PQ.06
 ```
 
-</TabItem>
-
-  <TabItem value="jp6" label="JetPack 6">
-    JetPack 6 使用 libgpiod。
-  </TabItem>
-</Tabs>
-
 ## Run the ST7789 Display Demo
 
 This section uses a C++ demo to verify that the ST7789 SPI display can work correctly on the reComputer J4012 Classic.
@@ -465,6 +458,31 @@ int main()
     return 0;
 }
 ```
+
+</TabItem>
+
+  <TabItem value="jp6" label="JetPack 6">
+
+JetPack 6 uses the character device GPIO interface. The `DC` and `RES` pins are controlled via `libgpiod`.
+
+The GPIO names for these signals are:
+
+| Signal | 40-pin Pin | GPIO name |
+| ------ | ---------- | --------- |
+| DC     | Pin 29     | PQ.05     |
+| RES    | Pin 31     | PQ.06     |
+
+Install the necessary tools and development library:
+
+```
+sudo apt update
+sudo apt install -y gpiod libgpiod-dev
+```
+
+  
+
+  </TabItem>
+</Tabs>
 
 Compile the demo:
 
