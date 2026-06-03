@@ -1,5 +1,5 @@
 ---
-description: Controla el hardware ePaper de Seeed por Bluetooth Low Energy con los ecosistemas de código abierto OpenEPaperLink (OEPL) y OpenDisplay: cubre la XIAO ePaper Display Board EN04 y la ePaper Breakout Board para Seeed Studio XIAO.
+description: Controla el hardware ePaper de Seeed por Bluetooth Low Energy con los ecosistemas de código abierto OpenEPaperLink (OEPL) y OpenDisplay - cubre la XIAO ePaper Display Board EN04 y la ePaper Breakout Board para Seeed Studio XIAO.
 title: Trabajar con OpenEPaperLink / OpenDisplay
 keywords:
   - pantalla ePaper

@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para usar PlatformIO con productos ePaper de Seeed: configuración de VS Code, estructura del proyecto, configuración de platformio.ini, configuración de Seeed_GFX y selección de entorno por producto.
+description: Guía de referencia para usar PlatformIO con productos ePaper de Seeed - configuración de VS Code, estructura del proyecto, configuración de platformio.ini, configuración de Seeed_GFX y selección de entorno por producto.
 title: Trabajar con PlatformIO
 keywords:
   - pantalla ePaper

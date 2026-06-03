@@ -220,7 +220,7 @@ Para makers que preferem montar tudo por conta própria, duas opções flexívei
 
 ## Ecossistema de Software em Resumo
 
-Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Escolha o fluxo de trabalho que corresponde ao seu nível de habilidade — você pode misturar e combinar:</td>
+Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Escolha o fluxo de trabalho que corresponde ao seu nível de habilidade — você pode misturar e combinar:
 
 <div class="table-center">
   <table align="center">
@@ -283,7 +283,7 @@ Todo produto ePaper da Seeed converge para o mesmo ecossistema de software. Esco
 
 ## Índice de Tutoriais de Aplicação
 
-Cada tutorial abaixo percorre uma plataforma de ponta a ponta:</td>
+Cada tutorial abaixo percorre uma plataforma de ponta a ponta:
 
 ### Frameworks de casa inteligente & dashboard
 

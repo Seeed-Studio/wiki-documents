@@ -287,24 +287,24 @@ Seeed Studio は、次の 3 つの製品ラインを中心に構成されたエ�
 
 ### スマートホーム & ダッシュボードフレームワーク
 
-- [Work with ESPHome](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：書き込みパス、汎用 YAML スケルトン、Home Assistant 連携。製品別クックブック：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。</td>
-- [Work with TRMNL](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl) — TRMNL クラウドプラットフォーム経由で E-Ink ダッシュボードをデプロイします。1 本の記事で reTerminal E1001/E1002、TRMNL DIY Kit、XIAO 7.5" ePaper Panel をすべてカバーしており、タブで使用するハードウェアを選択できます。</td>
+- [Work with ESPHome](https://wiki.seeedstudio.com/ja/epaper_work_with_esphome) — 主要なリファレンス：書き込みパス、汎用 YAML スケルトン、Home Assistant 連携。製品別クックブック：[reTerminal E（Basic）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)、[reTerminal E（Advanced）](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced)、[EE04](https://wiki.seeedstudio.com/ja/EE04_with_esphome_advanced)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_esphome)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_esphome)。
+- [Work with TRMNL](https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl) — TRMNL クラウドプラットフォーム経由で E-Ink ダッシュボードをデプロイします。1 本の記事で reTerminal E1001/E1002、TRMNL DIY Kit、XIAO 7.5" ePaper Panel をすべてカバーしており、タブで使用するハードウェアを選択できます。
 
 ### ノーコード / ビジュアル UI デザインツール
 
-- [Work with SenseCraft HMI](https://wiki.seeedstudio.com/ja/EE04_with_hmi) — Seeed のノーコードビジュアルインターフェースプラットフォーム。reTerminal E シリーズと EE0x ドライバボードをカバーします。</td>
-- [Work with SquareLine Vision](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision)</td>
-- [Work with EEZ Studio](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio) — reTerminal E シリーズ + EE04 の統合 LVGL ワークフロー。</td>
-- [Work with Lopaka](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka)</td>
+- [Work with SenseCraft HMI](https://wiki.seeedstudio.com/ja/EE04_with_hmi) — Seeed のノーコードビジュアルインターフェースプラットフォーム。reTerminal E シリーズと EE0x ドライバボードをカバーします。
+- [Work with SquareLine Vision](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision)
+- [Work with EEZ Studio](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio) — reTerminal E シリーズ + EE04 の統合 LVGL ワークフロー。
+- [Work with Lopaka](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka)
 
 ### コードベース開発
 
-- [Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDE セットアップ、`Seeed_GFX` ライブラリ、`driver.h` 生成。製品別クックブック：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) と [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。</td>
-- [Work with PlatformIO](https://wiki.seeedstudio.com/ja/epaper_work_with_platformio) — 主要なリファレンス：VS Code セットアップ、`platformio.ini` 設定、`Seeed_GFX` セットアップ、および製品別 PlatformIO 環境の選択。製品別クックブック：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ja/ee04_with_platformio)。</td>
+- [Work with Arduino](https://wiki.seeedstudio.com/ja/epaper_work_with_arduino) — 主要なリファレンス：IDE セットアップ、`Seeed_GFX` ライブラリ、`driver.h` 生成。製品別クックブック：reTerminal E シリーズ — [ePaper Display](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino) と [Onboard Peripherals](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals)、[TRMNL DIY Kit](https://wiki.seeedstudio.com/ja/ogdiy_kit_works_with_arduino)、[XIAO 7.5" Panel](https://wiki.seeedstudio.com/ja/xiao_075inch_epaper_panel_arduino)。
+- [Work with PlatformIO](https://wiki.seeedstudio.com/ja/epaper_work_with_platformio) — 主要なリファレンス：VS Code セットアップ、`platformio.ini` 設定、`Seeed_GFX` セットアップ、および製品別 PlatformIO 環境の選択。製品別クックブック：[EE04 / EE0x PlatformIO](https://wiki.seeedstudio.com/ja/ee04_with_platformio)。
 
 ### オープンソース ESL / OEPL
 
-- [Work with OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/ja/EN04_opendisplay) — EN04 BLE キットと ePaper Breakout Board + XIAO nRF52840 の DIY パスを 1 本の記事でカバーします。</td>
+- [Work with OpenEPaperLink / OpenDisplay](https://wiki.seeedstudio.com/ja/EN04_opendisplay) — EN04 BLE キットと ePaper Breakout Board + XIAO nRF52840 の DIY パスを 1 本の記事でカバーします。
 
 ## リソース
 
