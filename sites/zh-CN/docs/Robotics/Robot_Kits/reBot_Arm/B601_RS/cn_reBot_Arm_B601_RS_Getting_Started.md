@@ -159,7 +159,3 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can
 
 
 使用请参考视频
-
-<div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=116440455775355&bvid=BV1r9d1BuE6w&cid=37680974119&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>

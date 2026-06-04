@@ -150,6 +150,9 @@ conda activate rebot
 
 :::tip
 If all scanned motors show offline, install motorbridge v0.2.9.
+
+**Note for macOS users:**
+If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
 :::
 
 After activating the reBot virtual environment, run the following command to install motorbridge:
