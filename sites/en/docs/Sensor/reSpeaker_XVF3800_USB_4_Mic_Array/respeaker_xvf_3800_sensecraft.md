@@ -92,7 +92,7 @@ The model you are deploying is called **Lumos**. It is a lightweight speech reco
 2. Click **Confirm** to proceed with flashing the model to your device
 3. Wait for a moment while the model is being flashed to the reSpeaker XVF3800
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={800} height="auto" /></p>
 
 ### Step 8: Test Wakeword Detection
 
@@ -108,7 +108,7 @@ To test the wakeword:
 2. Observe the confidence level for the Lumos class increase
 3. Adjust the **threshold parameter** as needed to fine-tune detection sensitivity
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## Tech Support & Product Discussion
 
