@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-02 14:33:13 (北京时间)
-// 多语言页面: 2310 个
+// 生成时间: 2026-06-04 16:30:32 (北京时间)
+// 多语言页面: 2314 个
 
 (function() {
   'use strict';
@@ -3376,6 +3376,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_benchmarking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -4266,6 +4273,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -7953,6 +7967,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -11264,6 +11285,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_sensecraft": [
     "cn",
     "en",
     "es",
