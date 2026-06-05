@@ -122,7 +122,7 @@ Solution for this issue: please click [here](/deal_the_issue_of_UUID)
 
 #### Q21: How to use the IMX219 camera on NVIDIA Jetson devices?
 
-For details, please click [here](/How_to_use_Camera_IMX219)
+For details, please click [here](/how_to_use_camera_imx219)
 
 ## Tech support
 
