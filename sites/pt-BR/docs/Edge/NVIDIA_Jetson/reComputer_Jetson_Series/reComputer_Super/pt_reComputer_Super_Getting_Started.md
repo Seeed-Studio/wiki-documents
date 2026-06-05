@@ -12,7 +12,7 @@ last_update:
   date: 06/19/2025
   author: Yaohui
 createdAt: '2025-03-26'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/pt-br/recomputer_jetson_super_getting_started/
 ---
 
@@ -24,9 +24,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-A linha reComputer Super turbina o reComputer Classic, oferecendo até 1,7x mais desempenho de IA, chegando a 157 TOPS. Ela inclui modelos com Jetson Orin Nano (11410311, 11410312) e Jetson Orin NX (11410313, 11410314).
+A linha reComputer Super turbina o reComputer Classic, oferecendo até 1,7x mais desempenho, com 157 TOPS em performance de IA. Ela inclui modelos com Jetson Orin Nano (11410311, 11410312) e Jetson Orin NX (11410313, 11410314).
 Projetado tanto para desenvolvimento quanto para produção, vem com uma rica variedade de interfaces, incluindo M.2 Key E/M, Ethernet RJ45 dupla, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI e CAN. Com Jetpack 6.2 e Linux OS BSP pré-instalados, permite entrada imediata no mercado.
-Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch e ROS2/1 na borda de forma transparente, até mesmo combinando essas capacidades multimodais com aplicações de robótica para enriquecer o desenvolvimento de IA Física.
+Ele também oferece suporte a uma ampla gama de frameworks de LLM e IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch e ROS2/1 na borda de forma contínua, até mesmo combinando essas capacidades multimodais com aplicações de robótica para enriquecer o desenvolvimento de IA Física.
 
 :::note
 Opções de personalização disponíveis: identidade visual com logotipo, embalagem e gravação de firmware.
@@ -47,14 +47,14 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 ### 🔌 ​**Conectividade e interfaces ricas**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para expansibilidade  
-- ​**Portas Ethernet RJ45 duplas** para rede de alta velocidade  
+- ​**Ethernet RJ45 dupla** para rede de alta velocidade  
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
 - Suporte a ​**barramento CAN** para aplicações industriais/robóticas  
 
 ### 🛠️ ​**Pronto para desenvolvimento e produção**  
 
 - ​**Jetpack 6.2** e ​**Linux OS BSP** pré-instalados para implantação imediata  
-- Integração perfeita de IA na borda com frameworks:  
+- Integração perfeita de IA de borda com frameworks:  
   - ​**NVIDIA**, ​**Hugging Face**, ​**ONNX**, ​**PyTorch**  
   - ​**ROS2/1** para aplicações de robótica  
 - Suporta desenvolvimento de ​**IA multimodal** e ​**IA Física**  
@@ -197,7 +197,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
     <tr>
       <td>Display</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr>
+    </tr]
     <tr>
       <td>Ventoinha</td>
       <td colSpan={3}>1x conector de ventoinha de 4 pinos (5V PWM); <br />1x conector de ventoinha de 4 pinos (12V PWM);</td>
@@ -258,7 +258,7 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 </table>
 </div>
 
-## Gravar o sistema JetPack OS
+## Gravar o sistema JetPack
 
 ### Módulo compatível
 
@@ -310,7 +310,6 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <th>Versão do Jetpack</th>
       <th>Módulo Jetson</th>
-      <th> GMSL </th>
       <th>Link de download 1</th>
       <th>SHA256</th>
     </tr>
@@ -319,25 +318,21 @@ Aqui, precisamos baixar a imagem do sistema para o nosso PC com Ubuntu correspon
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">Download</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">Download</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">Download</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">Download</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
@@ -352,13 +347,13 @@ O arquivo de imagem do Jetpack6 tem aproximadamente **14,1GB** de tamanho e deve
 :::info
 Para verificar a integridade do firmware baixado, você pode comparar o valor de hash SHA256.
 
-Em uma máquina host com Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
+Em uma máquina host Ubuntu, abra o terminal e execute o comando `sha256sum <File>` para obter o valor de hash SHA256 do arquivo baixado. Se o hash resultante corresponder ao hash SHA256 fornecido na wiki, isso confirma que o firmware que você baixou está completo e intacto.
 :::
 
 ### Entrar no modo Force Recovery
 
 :::info
-Antes de podermos prosseguir para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
+Antes de prosseguirmos para as etapas de instalação, precisamos garantir que a placa esteja em modo force recovery.
 :::
 
 <details>
@@ -373,9 +368,9 @@ Antes de podermos prosseguir para as etapas de instalação, precisamos garantir
 
 **Passo 2.** Ligue o reComputer Super conectando o cabo de alimentação.
 
-**Passo 3.** Conecte o Super ao PC host com Ubuntu usando um cabo de transmissão de dados USB Type-C.
+**Passo 3.** Conecte o Super ao PC host Ubuntu com um cabo de transmissão de dados USB Type-C.
 
-**Passo 4.** No PC host com Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
+**Passo 4.** No PC host Linux, abra uma janela do Terminal e insira o comando `lsusb`. Se o conteúdo retornado tiver uma das seguintes saídas de acordo com o Jetson SoM que você usa, então a placa está em modo force recovery.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -400,7 +395,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2026-02-05.tar.gz
 ```
 
-**Passo 2:** Execute o seguinte comando para gravar o sistema JetPack no SSD NVMe:
+**Passo 2:** Execute o seguinte comando para gravar o sistema Jetpack no SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -428,7 +423,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
 
 ## Recursos
 
-- [reComputer Robotics J401 Carrier Board Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Super Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [Arquivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [Documento mecânico - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
@@ -443,7 +438,7 @@ Conclua a **Configuração do Sistema** de acordo com suas necessidades.
   triggerValue={typeof window !== 'undefined' ? window.location.href : ''}
 />
 
-## Suporte técnico e discussão de produtos
+## Suporte técnico e discussão de produto
 
 Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
