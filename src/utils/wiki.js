@@ -1,134 +1,134 @@
 const docList = [
   [
     {
-      "path": "/respeaker_flex_lekiwi",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png",
-      "title": "LeKiwi Voice Controller",
-      "date": "2026-04-28",
-      "title_cn": "LeKiwi 语音控制器",
-      "title_ja": "LeKiwi 音声コントローラ",
-      "title_es": "Controlador de voz LeKiwi",
-      "title_pt": "Controlador de Voz LeKiwi"
-    },
-    {
-      "path": "/get_started_with_meshcore_remote_terminal",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/remoteterminal/first.png",
-      "title": "Get Started with MeshCore Remote Terminal",
-      "date": "2026-04-20",
-      "title_cn": "MeshCore Remote Terminal 入门指南",
-      "title_ja": "MeshCore Remote Terminal を使い始める",
-      "title_es": "Primeros pasos con MeshCore Remote Terminal",
-      "title_pt": "Introdução ao MeshCore Remote Terminal"
-    }
-  ],
-  [
-    {
-      "path": "/get_started_with_esp32s3_meshcore",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/ESP32S3/ESP32S3Series.png",
-      "title": "Get Started with ESP32 MeshCore",
-      "date": "2026-04-20",
-      "title_cn": "ESP32 MeshCore 入门",
-      "title_ja": "ESP32 MeshCore を使い始める",
-      "title_es": "Primeros pasos con ESP32 MeshCore",
-      "title_pt": "Primeiros Passos com ESP32 MeshCore"
-    },
-    {
-      "path": "/sound_source_localization_of_recamera_gimbal",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/reCamera_reSpeaker/reCamera_reSpeaker.gif",
-      "title": "Sound source localization of reCamera Gimbal",
-      "date": "2026-04-17",
-      "title_cn": "reCamera Gimbal 的声源定位",
-      "title_ja": "reCamera Gimbal の音源定位",
-      "title_es": "Localización de fuentes de sonido con reCamera Gimbal",
-      "title_pt": "Localização de fonte sonora do reCamera Gimbal"
-    }
-  ],
-  [
-    {
-      "path": "/driving_reterminal_d1001_microphone",
-      "image": "https://files.seeedstudio.com/wiki/reTerminal_d10xx/1-reTeriminal-D1001.webp",
-      "title": "Driving reTerminal D1001 Microphone",
-      "date": "2026-04-17",
-      "title_cn": "驱动 reTerminal D1001 麦克风",
-      "title_ja": "reTerminal D1001 マイクの駆動",
-      "title_es": "Control del micrófono de reTerminal D1001",
-      "title_pt": "Acionando o Microfone do reTerminal D1001"
-    },
-    {
-      "path": "/how_to_build_and_flash_bsp_source_for_jetson_thor",
-      "image": "https://files.seeedstudio.com/wiki/other/thor-post.png",
-      "title": "How to Build and Flash BSP Source for Jetson Thor",
-      "date": "2026-04-14",
-      "title_cn": "如何为 Jetson Thor 构建和刷写 BSP 源码",
-      "title_ja": "Jetson Thor 向け BSP ソースのビルドとフラッシュ方法",
-      "title_es": "Cómo Compilar y Flashear el Código Fuente BSP para Jetson Thor",
-      "title_pt": "Como Construir e Gravar a Fonte BSP para o Jetson Thor"
-    }
-  ],
-  [
-    {
-      "path": "/configure_static_ip_on_recamera",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/static_ip_banner.png",
-      "title": "Configure Static IP on reCamera",
-      "date": "2026-04-13",
-      "title_cn": "在 reCamera 上配置静态 IP",
-      "title_ja": "reCameraでの静的IP設定",
-      "title_es": "Configurar IP estática en reCamera",
-      "title_pt": "Configurar IP Estático no reCamera"
-    },
-    {
-      "path": "/rebot_arm_b601_dm_lerobot",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/b601dm_zeroposition.jpg",
-      "title": "Getting Started with LeRobot-based reBot Arm B601-DM and reBot 102 Leader",
-      "date": "2026-04-09",
-      "title_cn": "reBot Arm B601-DM入门Lerobot",
-      "title_ja": "LeRobot ベースの reBot Arm B601-DM と reBot 102 Leader 入門",
-      "title_es": "Introducción al reBot Arm B601-DM basado en LeRobot y al reBot 102 Leader",
-      "title_pt": "Introdução ao reBot Arm B601-DM baseado em LeRobot e reBot 102 Leader"
-    }
-  ],
-  [
-    {
-      "path": "/epaper_en05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EN05/3_26_1.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EN05",
-      "date": "2026-04-08",
-      "title_cn": "XIAO ePaper Display Board - EN05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EN05 入門ガイド",
-      "title_es": "Primeros pasos con XIAO ePaper Display Board - EN05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EN05"
-    },
-    {
-      "path": "/respeaker_flex_xiao_introduction",
+      "path": "/respeaker_flex_xiao_doa_vad",
       "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg",
-      "title": "reSpeaker Flex with XIAO ESP32S3",
-      "date": "2026-04-08",
-      "title_cn": "搭配 XIAO ESP32S3 的 reSpeaker Flex",
-      "title_ja": "reSpeaker Flex with XIAO ESP32S3",
-      "title_es": "reSpeaker Flex con XIAO ESP32S3",
-      "title_pt": "reSpeaker Flex com XIAO ESP32S3"
+      "title": "DoA and VAD reSpeaker Flex with Xiao ESP32S3",
+      "date": "2026-05-29",
+      "title_cn": "使用 Xiao ESP32S3 的 DoA 和 VAD reSpeaker Flex",
+      "title_ja": "DoA と VAD reSpeaker Flex と Xiao ESP32S3",
+      "title_es": "DoA y VAD reSpeaker Flex con Xiao ESP32S3",
+      "title_pt": "DoA e VAD reSpeaker Flex com Xiao ESP32S3"
+    },
+    {
+      "path": "/reterminal_e10xx_with_arduino_peripherals_2",
+      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
+      "title": "Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)",
+      "date": "2026-05-27",
+      "title_cn": "Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）",
+      "title_ja": "Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)",
+      "title_es": "Recetario de Arduino: RTC, Bajo Consumo, Audio y Táctil (reTerminal E Serie)",
+      "title_pt": "Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Série)"
     }
   ],
   [
     {
-      "path": "/epaper_ee05",
-      "image": "https://files.seeedstudio.com/wiki/Epaper/EE05/22_2.webp",
-      "title": "Getting Started with XIAO ePaper Display Board - EE05",
-      "date": "2026-04-07",
-      "title_cn": "XIAO ePaper Display Board - EE05 入门指南",
-      "title_ja": "XIAO ePaper Display Board - EE05 入門ガイド",
-      "title_es": "Introducción a XIAO ePaper Display Board - EE05",
-      "title_pt": "Introdução à XIAO ePaper Display Board - EE05"
+      "path": "/respeaker_flex_ros2_voice_pipeline",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png",
+      "title": "ROS2 Voice Pipeline on reSpeaker Flex",
+      "date": "2026-05-27",
+      "title_cn": "在 reSpeaker Flex 上构建 ROS2 语音流水线",
+      "title_ja": "reSpeaker Flex 上の ROS2 音声パイプライン",
+      "title_es": "Canal de voz ROS2 en reSpeaker Flex",
+      "title_pt": "Pipeline de Voz ROS2 no reSpeaker Flex"
     },
     {
-      "path": "/meshcore_node_map_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/MAPPP.jpg",
-      "title": "MeshCore Node Map",
-      "date": "2026-04-3",
-      "title_cn": "MeshCore 节点地图",
-      "title_ja": "MeshCore Node Map",
-      "title_es": "Mapa de Nodos MeshCore",
-      "title_pt": "Mapa de Nós MeshCore"
+      "path": "/jetson_developtool_overview",
+      "image": "https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png",
+      "title": "Seeed Jetson DevelopTool Overview",
+      "date": "2026-05-26",
+      "title_cn": "Seeed Jetson DevelopTool 概览",
+      "title_ja": "Seeed Jetson DevelopTool 概要",
+      "title_es": "Descripción general de Seeed Jetson DevelopTool",
+      "title_pt": "Visão geral do Seeed Jetson DevelopTool"
+    }
+  ],
+  [
+    {
+      "path": "/recomputer_antenna_installation",
+      "image": "https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg",
+      "title": "How to Install Antenna for reComputer Super and Classic",
+      "date": "2026-05-26",
+      "title_cn": "如何为 reComputer Super 和 Classic 安装天线",
+      "title_ja": "reComputer Super および Classic へのアンテナの取り付け方法",
+      "title_es": "Cómo instalar la antena para reComputer Super y Classic",
+      "title_pt": "Como instalar antenas para reComputer Super e Classic"
+    },
+    {
+      "path": "/rebot_b601_rs_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
+      "title": "Getting Started with reBot Arm B601-RS",
+      "date": "2026-05-26",
+      "title_cn": "reBot Arm B601-RS 快速入门",
+      "title_ja": "reBot Arm B601-RS 入門ガイド",
+      "title_es": "Primeros pasos con reBot Arm B601-RS",
+      "title_pt": "Introdução ao reBot Arm B601-RS"
+    }
+  ],
+  [
+    {
+      "path": "/atom_s",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp",
+      "title": "Getting started with Atom-S",
+      "date": "2026-05-25",
+      "title_cn": "Atom-S 入门指南",
+      "title_ja": "Atom-S 入門ガイド",
+      "title_es": "Primeros pasos con Atom-S",
+      "title_pt": "Introdução ao Atom-S"
+    },
+    {
+      "path": "/atom_x",
+      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-x/atom_x_overview.webp",
+      "title": "Getting started with Atom-X",
+      "date": "2026-05-25",
+      "title_cn": "Atom-X 入门指南",
+      "title_ja": "Atom-X 入門ガイド",
+      "title_es": "Primeros pasos con Atom-X",
+      "title_pt": "Introdução ao uso do Atom-X"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_xvf3800_ros2_voice_pipeline",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/ros2_voice.png",
+      "title": "ROS2 Voice Pipeline on reSpeaker XVF3800",
+      "date": "2026-05-25",
+      "title_cn": "在 reSpeaker XVF3800 上构建 ROS2 语音流水线",
+      "title_ja": "reSpeaker XVF3800 上の ROS2 音声パイプライン",
+      "title_es": "Canalización de voz ROS2 en reSpeaker XVF3800",
+      "title_pt": "Pipeline de Voz ROS2 no reSpeaker XVF3800"
+    },
+    {
+      "path": "/using_stream_deck_to_control_recamera_gimbal",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "Using Stream Deck to Control reCamera Gimbal",
+      "date": "2026-05-22",
+      "title_cn": "使用Stream Deck控制reCamera Gimbal",
+      "title_ja": "Stream Deck を使用して reCamera Gimbal を制御する",
+      "title_es": "Uso de Stream Deck para controlar el gimbal de reCamera",
+      "title_pt": "Usando o Stream Deck para controlar o reCamera Gimbal"
+    }
+  ],
+  [
+    {
+      "path": "/control_rebot_arm_using_voice_with_respeaker_flex",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4.jpg",
+      "title": "Control reBot Arm using voice with reSpeaker Flex",
+      "date": "2026-05-22",
+      "title_cn": "使用 reSpeaker Flex 通过语音控制 reBot Arm",
+      "title_ja": "reSpeaker Flex を使って音声で reBot Arm を制御する",
+      "title_es": "Controlar reBot Arm usando la voz con reSpeaker Flex",
+      "title_pt": "Controle o reBot Arm usando voz com o reSpeaker Flex"
+    },
+    {
+      "path": "/respeaker_flex_soarm",
+      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/lerobot_flex.png",
+      "title": "Add Voice Interaction to Your SO-ARM10x with reSpeaker Flex",
+      "date": "2026-05-19",
+      "title_cn": "使用 reSpeaker Flex 为你的 SO-ARM10x 添加语音交互",
+      "title_ja": "reSpeaker Flex で SO-ARM10x に音声インタラクションを追加する",
+      "title_es": "Añade interacción por voz a tu SO-ARM10x con reSpeaker Flex",
+      "title_pt": "Adicione Interação por Voz ao Seu SO-ARM10x com reSpeaker Flex"
     }
   ]
 ];

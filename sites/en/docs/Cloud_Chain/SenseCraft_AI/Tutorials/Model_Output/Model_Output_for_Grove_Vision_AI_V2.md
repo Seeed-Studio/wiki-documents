@@ -10,7 +10,7 @@ last_update:
   date: 12/04/2024
   author: Citric
 createdAt: '2024-11-27'
-updatedAt: '2025-09-04'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
@@ -44,21 +44,13 @@ Before you begin, ensure that you have the following:
  </table>
 </div>
 
-## Step 1. Access the SenseCraft AI Vision Workspace and connect the Grove Vision AI V2
+## Step 1. Access the Grove Vision AI V2 Workspace and connect the device
 
-Open your web browser and navigate to the SenseCraft AI Vision Workspace page.
+Access the Grove Vision AI V2 workspace via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`Grove Vision AI V2`**, or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/36).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1733300644024" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
-    </a>
-</div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/grove_vision_ai_v2_workspace.png" style={{width:1000, height:'auto'}}/></div>
 
-From the list of available devices, select the Grove Vision AI V2.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/49.png" style={{width:1000, height:'auto'}}/></div>
-
-Using the USB-C cable, connect your Grove Vision AI V2 device to your computer. Once the device is connected, click the **Connect** button located in the top-left corner of the SenseCraft AI Vision Workspace page.
+Using the USB-C cable, connect your Grove Vision AI V2 device to your computer. Once the device is connected, click the **Connect** button located in the top-left corner of the workspace page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
 
@@ -75,7 +67,7 @@ If you want to use your own trained model, you can refer to the following two Wi
 
 ## Step 3. Access the Output Configuration Settings
 
-In the left sidebar of the Vision Workspace page, click on the **Output** option to access the output configuration settings for your Grove Vision AI V2 device.
+In the left sidebar of the workspace page, click on the **Output** option to access the output configuration settings for your Grove Vision AI V2 device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/50.png" style={{width:1000, height:'auto'}}/></div>
 

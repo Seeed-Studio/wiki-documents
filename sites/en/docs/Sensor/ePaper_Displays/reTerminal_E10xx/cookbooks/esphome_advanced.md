@@ -3,13 +3,13 @@ description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Adv
 title: ESPHome Cookbook - Advanced (reTerminal E Series)
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: ESPHome (Advanced)
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
 ---
 

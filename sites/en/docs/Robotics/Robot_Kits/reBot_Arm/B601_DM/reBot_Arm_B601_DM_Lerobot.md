@@ -17,7 +17,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2026-04-09'
-updatedAt: '2026-04-28'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/rebot_arm_b601_dm_lerobot/
 ---
 

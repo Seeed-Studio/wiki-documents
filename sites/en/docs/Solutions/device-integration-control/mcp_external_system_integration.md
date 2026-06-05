@@ -22,7 +22,7 @@ tags:
   - mcp
   - agents
 createdAt: '2025-12-01'
-updatedAt: '2026-04-07'
+updatedAt: '2026-05-07'
 url: https://wiki.seeedstudio.com/mcp_external_system_integration/
 ---
 
@@ -249,7 +249,7 @@ irm https://astral.sh/uv/install.ps1 | iex
 
 **1. Get MCP Endpoint**:
 
-Obtain your **MCP Endpoint Address** (`wss://...`) from the [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) -> Watcher Agent -> Configuration.
+Obtain your **MCP Endpoint Address** (`wss://...`) by accessing the Watcher Agent control panel via **[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`** > **`Configuration`** (or use the [direct link to the workspace](https://sensecraft.seeed.cc/ai/device/local/37) and then click **`Watcher Agent`** in the left sidebar).
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_EndPoint.png" alt="MCP_EndPoint"/>

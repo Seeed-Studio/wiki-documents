@@ -1,6 +1,6 @@
 ---
-description: MCP を介して外部業務システムを SenseCAP Watcher と連携するためのガイド
-title: 音声 AI を業務システムに導入する（MCP）
+description: MCP を介して SenseCAP Watcher と外部業務システムを連携するためのガイド
+title: あなたの業務システムに音声 AI を導入する（MCP）
 sidebar_position: 6
 keywords:
   - MCP
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
 ## 概要
 
-このガイドでは、Model Context Protocol（[MCP](https://github.com/microsoft/mcp-for-beginners/blob/main/translations/zh/00-Introduction/README.md)）を使用して、音声 AI と既存のソフトウェアエコシステムを接続する方法を説明します。REST API を MCP ツールとしてラップすることで、***SenseCAP Watcher*** が倉庫管理システム（WMS）、CRM、ERP、あるいはカスタム IT ダッシュボードなど、あなたのビジネスロジックと直接対話できるようになります。
+このガイドでは、Model Context Protocol（[MCP](https://github.com/microsoft/mcp-for-beginners/blob/main/translations/zh/00-Introduction/README.md)）を使用して、音声 AI と既存のソフトウェアエコシステムをつなぐ方法を説明します。REST API を MCP ツールとしてラップすることで、***SenseCAP Watcher*** が倉庫管理システム（WMS）、CRM、ERP、あるいはカスタム IT ダッシュボードなど、あなたのビジネスロジックと直接対話できるようになります。
 
 <table class="table-center">
   <tr>
@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 <div class="info-section">
   <div class="section-header">
       <h2><a href="https://www.seeed.cc/solutions/voicecollectionanalysis-zh-hans" target="_blank">スマート空間インタラクション</a></h2>
-      <p>音声から API へ：インテントをアクションに変換します。新しいアプリを一から構築する必要はありません。既存の WMS エンドポイントを Watcher に公開するだけで、現場の作業者がすぐに音声操作を利用できるようになります。</p>
+      <p>Voice to API：インテントをアクションに変換します。新しいアプリを一から構築する必要はありません。既存の WMS エンドポイントを Watcher に公開するだけで、現場の作業者に即座に音声制御を提供できます。</p>
   </div>
     <ul class="info-list">
         <li class="info-item">
@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
             </div>
             <div class="info-content">
                 <h3>真のハンズフリー生産性</h3>
-                <p>作業者は、手袋を着用しているときやフォークリフトを運転しているときでも、在庫を問い合わせたり出荷を記録したりできます。最大限の安全性と効率性を実現するために、目は作業に、手はハンドルに専念できます。</p>
+                <p>オペレーターは手袋をしていても、フォークリフトを運転していても、在庫を照会したり出荷を記録したりできます。最大限の安全性と効率性のために、視線は作業に、手はハンドルに保ったままにできます。</p>
             </div>
         </li>
         <li class="info-item">
@@ -80,7 +80,7 @@ import TabItem from '@theme/TabItem';
             </div>
             <div class="info-content">
                 <h3>ゼロレイテンシーなデータ同期</h3>
-                <p>紙による記録のタイムラグをなくします。音声コマンドは ERP への直接的な API 呼び出しをトリガーし、品物が移動した瞬間に在庫データが同期されます。</p>
+                <p>紙の記録による遅延を排除します。音声コマンドが ERP への直接的な API 呼び出しをトリガーし、品目が動いた瞬間に在庫データが同期されます。</p>
             </div>
         </li>
         <li class="info-item">
@@ -94,7 +94,7 @@ import TabItem from '@theme/TabItem';
             </div>
             <div class="info-content">
                 <h3>ユニバーサルなシステム相互運用性</h3>
-                <p>SAP、Oracle、またはカスタムの SQL バックエンドを利用している場合でも、システムに API があれば Watcher で制御できます。AI を導入するためにレガシーシステムを移行する必要はありません。</p>
+                <p>SAP、Oracle、カスタムの SQL バックエンドなど、どのようなシステムを使用していても、API があれば Watcher で制御できます。AI を導入するためにレガシーシステムを移行する必要はありません。</p>
             </div>
         </li>
     </ul>
@@ -102,37 +102,37 @@ import TabItem from '@theme/TabItem';
 
 ## アーキテクチャ
 
-コードを書く前に、データフローを理解することが重要です。この連携では、**MCP サーバー**が AI と社内ネットワーク間のセキュアなゲートウェイとして機能するブリッジパターンを採用しています。
+コードを書く前に、データフローを理解することが重要です。この連携はブリッジパターンに従っており、**MCP サーバー**が AI と社内ネットワークの間の安全なゲートウェイとして機能します。
 
 <div align="center">
   <img class='img-responsive' width={480} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/excalidraw-architecture.png" alt="excalidraw-architecture"/>
 </div>
 
-**主なコンポーネント：**
+**主要コンポーネント：**
 
 1. **Watcher デバイス：** 自然言語によるインテント（例：「在庫を確認して」）を取得し、クラウドに送信します。
-2. **MCP エンドポイント（クラウド）：** SenseCraft が提供するセキュアトンネルで、インテントをローカル環境に転送します。
+2. **MCP エンドポイント（クラウド）：** SenseCraft によって提供される安全なトンネルで、インテントをローカル環境に転送します。
 3. **MCP サーバー（ローカルブリッジ）：** マシン上で動作する軽量な Python スクリプトです。AI のインテントを特定のコード関数に変換します。
-4. **バックエンド API：** 実際のロジックを実行する既存の業務アプリケーション（FastAPI、Flask など）。
+4. **バックエンド API：** 実際のロジックを実行する、既存の業務アプリケーション（FastAPI、Flask など）です。
 5. **インフラストラクチャ：** バックエンドが依存するデータベースやその他のサービス。
 
-**汎用的な連携シナリオ**：
+**ユニバーサルな連携シナリオ：**
 
-このガイドではリファレンス実装として **倉庫システム** を使用しますが、このアーキテクチャはあらゆる場面に適用できます：
+このガイドでは**倉庫システム**をリファレンス実装として使用しますが、このアーキテクチャはあらゆるケースに適用できます。
 
-| **業界**        | **音声コマンド**                     | **背後で行われるシステムアクション** |
+| **業種**        | **音声コマンド**                     | **基盤となるシステムアクション** |
 | --------------- | --------------------------------- | ---------------------------- |
-| **物流**        | *「50 個入庫して」*                  | `POST /api/inventory/add`    |
-| **営業（CRM）** | *「案件ステータスを Closed に更新して」* | `PUT /api/deals/{id}/status` |
-| **IT 運用**     | *「ステージングサーバーを再起動して」*   | `POST /api/servers/restart`  |
+| **物流**        | *「50 個入庫して。」*               | `POST /api/inventory/add`    |
+| **営業（CRM）** | *「案件ステータスを Closed に更新。」* | `PUT /api/deals/{id}/status` |
+| **IT 運用**     | *「ステージングサーバーを再起動して。」* | `POST /api/servers/restart`  |
 
 ## デモ 1：音声制御倉庫システム
 
-ローカルマシン上でモックの **倉庫バックエンド** と **MCP ブリッジ** を実行し、業務環境をシミュレートします。このデモでは次のことが可能になります：
+ローカルマシン上でモックの**倉庫バックエンド**と**MCP ブリッジ**を実行し、業務環境をシミュレートします。このデモでは次のことが可能になります。
 
-- 🗣️ **在庫確認：** 「Xiaozhi Standard の在庫はいくつある？」
-- 🗣️ **データ入力：** 「Watcher Xiaozhi を 5 台入庫して」
-- 🗣️ **業務インサイト：** 「今日の在庫サマリーを教えて」
+- 🗣️ **在庫確認：**「Xiaozhi Standard は何台在庫がありますか？」
+- 🗣️ **データ入力：**「Watcher Xiaozhi を 5 台入庫して。」
+- 🗣️ **業務インサイト：**「今日の在庫サマリーは？」
 
 ### 前提条件
 
@@ -141,7 +141,7 @@ import TabItem from '@theme/TabItem';
 - **アカウント：** [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) アカウント
 
 :::note Watcher のセットアップ
-[SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37) を通じて、SenseCAP Watcher が **Xiaozhi AI** で構成されていることを確認してください。
+[SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37) から **Xiaozhi AI** を使用するように SenseCAP Watcher が設定されていることを確認してください。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecap-setup.png" alt="sensecap-setup"/>
@@ -150,7 +150,7 @@ import TabItem from '@theme/TabItem';
 
 ### ステップ 1：倉庫システムをデプロイする
 
-このデプロイには Docker を使用し、すべてのプラットフォーム（Windows、macOS、Linux）で一貫した環境を保証します。
+Windows、macOS、Linux など、すべてのプラットフォームで一貫した環境を確保するために Docker を使用してデプロイします。
 
 **1. リポジトリをクローンする：**
 
@@ -165,14 +165,14 @@ cd warehouse_system
 docker-compose -f docker-compose.prod.yml up -d
 ```
 
-この 1 つのコマンドで次のことが行われます：
+この 1 つのコマンドで次のことが行われます。
 
-- 倉庫アプリケーションサーバーをビルドして起動（ポート 2125）
+- 倉庫アプリケーションサーバー（ポート 2125）をビルドして起動
 - データベース用の永続ボリュームを作成
 
 **3. デプロイを確認する：**
 
-コンテナが起動するまで約 30 秒待ち、次を確認します：
+コンテナが起動するまで約 30 秒待ってから、次を確認します。
 
 ```bash
 docker-compose -f docker-compose.prod.yml ps
@@ -187,16 +187,16 @@ docker-compose -f docker-compose.prod.yml ps
 - **Web UI：** ブラウザで `http://localhost:2125` を開きます
 - **API ドキュメント：** `http://localhost:2125/docs` を開いて Swagger UI を表示します
 
-### ステップ 2：システムの初期設定
+### ステップ 2：システムの初期セットアップ
 
 倉庫システムには、セキュリティのためにユーザー認証と API キー管理が含まれています。MCP を接続する前に、これらを設定する必要があります。
 
 **1. 管理者アカウントを作成する：**
 
-ブラウザで `http://localhost:2125` を開きます。初回アクセス時には、登録フォームが表示されます：
+ブラウザで `http://localhost:2125` を開きます。初回アクセス時には登録フォームが表示されます。
 
-- 希望する **ユーザー名** を入力します（例：`admin`）
-- **パスワード** を入力します（例：`admin123`）
+- 希望する**ユーザー名**を入力します（例：`admin`）
+- **パスワード**を入力します（例：`admin123`）
 - **Register** をクリックします
 
 :::tip 最初のユーザーは管理者
@@ -205,15 +205,15 @@ docker-compose -f docker-compose.prod.yml ps
 
 **2. ログインしてユーザー管理に移動する：**
 
-登録後、認証情報でログインします。ナビゲーション内の **User Management** タブをクリックします。
+登録後、作成した認証情報でログインします。ナビゲーションの **User Management** タブをクリックします。
 
 **3. API キーを作成する：**
 
-User Management セクションで、**API Key Management** エリアを見つけます：
+User Management セクションで、**API Key Management** エリアを見つけます。
 
 1. キーのわかりやすい名前を入力します（例：`MCP Bridge`）
 2. **Create API Key** をクリックします
-3. **重要：** 生成された API キーはすぐにコピーしてください！表示されるのは一度きりです。
+3. **重要：** 生成された API キーはすぐにコピーしてください。表示されるのは一度きりです。
 
 API キーは次のような形式です：`wh_xxxxxxxxxxxxxxxxxxxx`
 
@@ -221,12 +221,12 @@ API キーは次のような形式です：`wh_xxxxxxxxxxxxxxxxxxxx`
 API キーは作成時に一度だけ表示されます。安全な場所に保管してください。次のステップで必要になります。
 :::
 
-### ステップ 3：MCP ブリッジを構成する
+### ステップ 3：MCP ブリッジを設定する
 
-ここから、バックエンドを AI に接続します。ブリッジコードは `mcp/` ディレクトリ内にあります。
+ここから、バックエンドを AI に接続します。ブリッジのコードは `mcp/` ディレクトリ内にあります。
 
 :::tip uv をインストールする
-MCP ブリッジは Python 環境マネージャーとして `uv` を使用します。次のコマンドでインストールします：
+MCP ブリッジは Python の環境マネージャーとして `uv` を使用します。次のコマンドでインストールします。
 
 <Tabs>
 <TabItem value="mac" label="Linux/macOS" default>
@@ -249,7 +249,7 @@ irm https://astral.sh/uv/install.ps1 | iex
 
 **1. MCP エンドポイントを取得する：**
 
-**MCP Endpoint Address**（`wss://...`）を [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) -> Watcher Agent -> Configuration から取得します。
+**MCP Endpoint Address**（`wss://...`）を取得するには、**[`SenseCraft AI`](https://sensecraft.seeed.cc/ai)** > **`Models`** > **`Workspace`** > **`SenseCAP Watcher`** > **`Watcher Agent`** > **`Configuration`** から Watcher Agent のコントロールパネルにアクセスします（または [ワークスペースへの直接リンク](https://sensecraft.seeed.cc/ai/device/local/37) を開き、左サイドバーの **`Watcher Agent`** をクリックします）。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_EndPoint.png" alt="MCP_EndPoint"/>
@@ -257,7 +257,7 @@ irm https://astral.sh/uv/install.ps1 | iex
 
 **2. API キーを設定する**:
 
-ターミナルを開き、`mcp` フォルダへ移動します:
+ターミナルを開き、`mcp` フォルダに移動します：
 
 ```bash
 cd mcp
@@ -266,10 +266,10 @@ cd mcp
 cp config.yml.example config.yml
 ```
 
-Step 2 で取得した API キーを使って `config.yml` を編集します:
+Step 2 で取得した API キーを使って `config.yml` を編集します：
 
 :::caution
-`config.yml.example` 内のデフォルトの `api_base_url` は `http://localhost:2124/api`（ローカル開発用ポート）です。今回はポート **2125** を使用する `docker-compose.prod.yml` でデプロイしているため、それに合わせて更新する必要があります。
+`config.yml.example` のデフォルトの `api_base_url` は `http://localhost:2124/api`（ローカル開発用ポート）です。`docker-compose.prod.yml` を使ってデプロイしており、こちらはポート **2125** を使用するため、それに合わせて更新する必要があります。
 :::
 
 ```yaml
@@ -312,7 +312,7 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 </Tabs>
 
-成功すると、`MCP 服务启动成功！`（MCP サービスが正常に起動しました）というメッセージが表示されます
+成功すると、`MCP 服务启动成功！`（MCP サービスが正常に起動しました）と表示されます。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/mcp-bridge-start-successfully.png" alt="mcp-bridge-start-successfully"/>
@@ -320,64 +320,64 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 ### Step 4: 動作確認
 
-すべて接続が完了しました。ここからは SenseCAP Watcher を使ってローカルシステムと対話します。
+すべて接続されました。あとは SenseCAP Watcher を使ってローカルシステムと対話します。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_connected.png" alt="MCP_connected"/>
 </div>
 
-それでは、Watcher デバイスを使って連携をテストしてみましょう！
+これで Watcher デバイスを使って連携をテストできます！
 
-### 音声コマンド例
+### 音声コマンドの例
 
-| 音声コマンド                                           | 期待される動作                                         |
+| 音声コマンド                                              | 期待される動作                                          |
 | ------------------------------------------------------ | ----------------------------------------------------- |
-| 「小智標準版の在庫を確認して」                         | `query_stock` ツールを呼び出す                        |
-| 「小智プロフェッショナル版はいくつ在庫がありますか？」 | プロフェッショナル版を指定して `query_stock` を呼び出す |
-| 「Watcher 小智標準版を 5 台入庫して」                  | 数量=5 で `stock_in` ツールを呼び出す                 |
-| 「小智を 3 台出庫して販売用に回して」                  | 数量=3 で `stock_out` ツールを呼び出す                |
-| 「今日の在庫サマリーは？」                             | `get_today_statistics` ツールを呼び出す               |
-| 「小智製品をすべて一覧表示して」                       | entity_type="material" を指定して `search` ツールを呼び出す |
+| 「Xiaozhi 標準版の在庫を確認して」                      | `query_stock` ツールを呼び出す                        |
+| 「Xiaozhi プロフェッショナル版はいくつありますか？」    | プロフェッショナル版を指定して `query_stock` を呼び出す |
+| 「Watcher Xiaozhi 標準版を 5 台入庫して」               | 数量=5 で `stock_in` ツールを呼び出す                 |
+| 「販売用に Xiaozhi を 3 台出庫して」                    | 数量=3 で `stock_out` ツールを呼び出す                |
+| 「今日の在庫サマリーは？」                              | `get_today_statistics` ツールを呼び出す               |
+| 「Xiaozhi 製品をすべて一覧表示して」                    | entity_type="material" を指定して `search` ツールを呼び出す |
 
-**裏側では何が起きているのか？**
+**バックエンドでは何が起きている？**
 
-| **コンポーネント** | **動作**                                             |
+| **コンポーネント** | **動作**                                              |
 | -------------- | -------------------------------------------------- |
-| **Watcher**    | 音声データをクラウドへ送信する。                    |
-| **MCP Bridge** | インテントを受信し、使用するツールが `query_stock` だと判断する。 |
-| **System**     | API キー認証付きで `GET /materials/product-stats` を実行する。 |
-| **Result**     | Watcher が *「現在の在庫は 150 台です。」* と音声で応答する。 |
+| **Watcher**    | 音声データをクラウドに送信します。                  |
+| **MCP Bridge** | インテントを受信し、使用するツールが `query_stock` であると判断します。 |
+| **System**     | API キー認証付きで `GET /materials/product-stats` を実行します。 |
+| **Result**     | Watcher が *「現在の在庫は 150 台です。」* と音声で応答します。 |
 
-### 期待されるレスポンス
+### 想定される応答
 
-**在庫照会:**
+**在庫照会（Query Stock）：**
 
-> 「在庫照会が完了しました。Watcher 小智標準版は現在、A-01-01 のロケーションに 150 台在庫があります。在庫ステータスは正常です。」
+> 「在庫照会は正常に完了しました。Watcher Xiaozhi 標準版は現在、ロケーション A-01-01 に 150 台在庫があります。在庫ステータスは正常です。」
 
-**入庫:**
+**入庫（Stock In）：**
 
-> 「Watcher 小智標準版を 5 台正常に入庫しました。以前の数量は 150 台、新しい数量は 155 台です。」
+> 「Watcher Xiaozhi 標準版を 5 台正常に入庫しました。入庫前の数量は 150 台、新しい数量は 155 台です。」
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="mcp-system-integration"/>
 </div>
 
-## システムへのカスタマイズ
+## 自分のシステム向けにカスタマイズする
 
-倉庫デモはあくまで出発点に過ぎません。MCP Bridge は**Provider プラグインアーキテクチャ**を採用しており、既存コードを変更する必要はありません。その代わりに、新しい Provider を作成して、ご自身のバックエンドシステムにブリッジを適合させます。
+倉庫デモはあくまで出発点にすぎません。MCP Bridge は **Provider プラグインアーキテクチャ** を採用しており、既存コードを変更する必要はありません。その代わりに、新しい Provider を作成して、ブリッジを自分のバックエンドシステムに適合させます。
 
 ### 仕組み
 
-ブリッジは責務が明確に分離されています:
+ブリッジは関心の分離が明確になっています：
 
 - **`warehouse_mcp.py`** — 6 つの固定 MCP ツール（`query_stock`、`stock_in`、`stock_out`、`search`、`resolve_name`、`get_today_statistics`）を定義します。**このファイルを変更する必要はありません。**
-- **`providers/base.py`** — インターフェース（6 メソッド）を定義する抽象基底クラス。
+- **`providers/base.py`** — インターフェース（6 つのメソッド）を定義する抽象基底クラス。
 - **`providers/default.py`** — デモ用倉庫バックエンド向けのデフォルト実装。
-- **カスタムプロバイダ** — `providers/` 内に作成する新しい `.py` ファイルで、6 つのメソッドをあなたのシステムの API に適合させます。
+- **カスタムプロバイダ** — `providers/` 内に作成する新しい `.py` ファイルで、6 つのメソッドを自分のシステムの API に合わせて実装します。
 
 ### 1. カスタムプロバイダを作成する
 
-新しいファイル `mcp/providers/my_erp.py` を作成します:
+新しいファイル `mcp/providers/my_erp.py` を作成します：
 
 ```python
 from .base import BaseProvider
@@ -414,22 +414,22 @@ class MyERPProvider(BaseProvider):
         return self.http_get("/dashboard/today")
 ```
 
-基底クラス（`BaseProvider`）は、自動的に認証ヘッダーを付与しエラー処理も行う `http_get()` と `http_post()` ヘルパーを提供するため、プロバイダ側のコードを最小限に保てます。
+基底クラス（`BaseProvider`）には、認証ヘッダーの自動付与とエラー処理を備えた `http_get()` と `http_post()` のヘルパーが組み込まれているため、プロバイダ側のコードを最小限に保てます。
 
 :::tip 自動検出
-`.py` ファイルを `mcp/providers/` に配置するだけで、ブリッジはすべての `BaseProvider` サブクラスを自動的に検出して登録します — 手動での登録は不要です。
+`.py` ファイルを `mcp/providers/` に配置するだけで構いません。ブリッジはすべての `BaseProvider` サブクラスを自動的に検出して登録するため、手動での登録は不要です。
 :::
 
 ### 2. `config.yml` で設定する
 
-まだの場合は、まずテンプレートから `config.yml` を作成します:
+まだの場合は、まずテンプレートから `config.yml` を作成します：
 
 ```bash
 cd mcp
 cp config.yml.example config.yml
 ```
 
-その後、プロバイダを切り替えて実際のサーバーを指すようにします — **コード変更は一切不要です**:
+次に、プロバイダを自分のものに切り替え、実際のサーバーを指すように設定します — **コードの変更は不要です**：
 
 ```yaml
 # Switch to your custom provider
@@ -444,13 +444,13 @@ auth:
   key: "your-production-api-key"
 ```
 
-環境変数 `WAREHOUSE_API_URL`、`WAREHOUSE_API_KEY`、`WAREHOUSE_PROVIDER` を使って設定を上書きすることもできます。
+また、環境変数 `WAREHOUSE_API_URL`、`WAREHOUSE_API_KEY`、`WAREHOUSE_PROVIDER` を使って設定を上書きすることもできます。
 
 <details>
 
 <summary>サポートされている認証方式</summary>
 
-基底クラスは `config.yml` 経由で複数の認証タイプを標準サポートしています:
+基底クラスは `config.yml` を通じて、複数の認証タイプを標準でサポートします：
 
 ```yaml
 # API Key (default)
@@ -471,7 +471,7 @@ auth:
   password: "secret"
 ```
 
-独自の認証方式（例: HMAC 署名）を使用する場合は、プロバイダ内で `get_auth_headers()` メソッドをオーバーライドしてください。
+カスタム認証（例：HMAC 署名）が必要な場合は、プロバイダ内で `get_auth_headers()` メソッドをオーバーライドしてください。
 
 </details>
 
@@ -479,9 +479,9 @@ auth:
 
 <summary>プロバイダ開発のベストプラクティス</summary>
 
-### 戻り値のフォーマット
+### 戻り値の形式
 
-戻り値は AI によって読み取られ、音声応答の生成に使われます。簡潔に保ってください（通常は 1024 バイト未満）。
+戻り値は AI によって読み取られ、音声応答の生成に使われます。簡潔に保ってください（通常 1024 バイト未満）。
 
 ```Python
 # Good — concise
@@ -501,7 +501,7 @@ return {
 
 ### エラー処理
 
-基底クラスの `http_get()` / `http_post()` は、すでに接続エラーと HTTP ステータスコードを処理します。追加の業務ロジック上のエラーについては、構造化されたエラー dict を返してください:
+基底クラスの `http_get()` / `http_post()` は、接続エラーや HTTP ステータスコードをすでに処理します。追加の業務ロジック上のエラーについては、構造化されたエラー dict を返してください：
 
 ```Python
 return {
@@ -514,7 +514,7 @@ return {
 ### ロギング
 
 :::danger print() を絶対に使わないでください
-MCP は通信に標準入出力（stdio）を使用しています。`print()` を使うとプロトコルのデータストリームが破損します。必ずロガーを使用してください:
+MCP は通信に標準入出力（stdio）を使用します。`print()` を使うとプロトコルのデータストリームが破損します。必ずロガーを使用してください：
 :::
 
 ```Python
@@ -527,35 +527,35 @@ logger.info(f"Querying stock for: {product_name}")
 
 ### 3. 本番環境へのデプロイ
 
-デモはローカルのターミナルで実行されます。長期的に 24 時間 365 日稼働させるには、次のようにします:
+デモはローカルのターミナルで動作します。長期的に 24 時間 365 日運用するには：
 
-- **Docker 化:** 環境の安定性を確保するため、`mcp/` フォルダを Docker コンテナとしてパッケージングします。
+- **Docker 化:** 環境の安定性を確保するため、`mcp/` フォルダを Docker コンテナとしてパッケージ化します。
 - **バックグラウンドサービス:** 開いたターミナルで `./start_mcp.sh` を実行する代わりに、`systemd`（Linux）や `NSSM`（Windows）を使ってスクリプトをバックグラウンドサービスとして実行します。
-- **ネットワーク:** MCP Bridge を実行するマシンが SenseCraft Cloud（`wss://...`）に接続できる安定したインターネットアクセスを持っていることを確認します。
+- **ネットワーク:** MCP Bridge を実行するマシンが、SenseCraft Cloud（`wss://...`）に接続できる安定したインターネットアクセスを持っていることを確認します。
 
 ## トラブルシューティング
 
 <details>
 <summary>❌ Docker コンテナが起動しない</summary>
 
-- **症状:** `docker-compose ps` でコンテナが "Exited" 状態になっている。
+- **症状:** `docker-compose ps` でコンテナが "Exited" 状態と表示される。
 - **解決策:**
   1. Docker Desktop が起動していることを確認する
-  2. ログを確認する: `docker-compose -f docker-compose.prod.yml logs`
+  2. ログを確認する：`docker-compose -f docker-compose.prod.yml logs`
   3. ポート 2125 が使用中でないことを確認する
-  4. 再ビルドを試す: `docker-compose -f docker-compose.prod.yml up -d --build`
+  4. 再ビルドを試す：`docker-compose -f docker-compose.prod.yml up -d --build`
 
 </details>
 
 <details>
-<summary>❌ API キーが無効（401 Unauthorized）</summary>
+<summary>❌ API キーが無効 (401 Unauthorized)</summary>
 
-- **症状:** MCP Bridge のログに `401 Unauthorized` または "Invalid API Key" が表示される。
-- **解決策:**
+- **症状:** MCP ブリッジのログに `401 Unauthorized` または "Invalid API Key" と表示される。
+- **解決方法:**
   1. `mcp/config.yml` 内の API キーが正しいか確認する
-  2. ユーザー管理画面で API キーがまだ有効であることを確認する
-  3. キーの前後に余分なスペースや引用符がないことを確認します
-  4. 新しい API キーを作成してみてください
+  2. ユーザー管理で API キーがまだ有効か確認する
+  3. キーの前後に余分なスペースや引用符がないことを確認する
+  4. 新しい API キーを作成して試す
 
 </details>
 
@@ -564,41 +564,41 @@ logger.info(f"Querying stock for: {product_name}")
 
 - **症状:** AI が "Cannot connect to backend service" と応答する。
 - **解決方法:**
-  1. コンテナが動作しているか確認します: `docker-compose -f docker-compose.prod.yml ps`
-  2. バックエンドのヘルスチェックを行います: `curl http://localhost:2125/api/dashboard/stats`
-  3. ログを確認します: `docker-compose -f docker-compose.prod.yml logs`
+  1. コンテナが動作しているか確認する: `docker-compose -f docker-compose.prod.yml ps`
+  2. バックエンドのヘルスチェックを行う: `curl http://localhost:2125/api/dashboard/stats`
+  3. ログを確認する: `docker-compose -f docker-compose.prod.yml logs`
 
 </details>
 
 <details>
 <summary>❌ MCP 接続タイムアウト</summary>
 
-- **症状:** スクリプトが "Connecting to WebSocket server..." の状態で無期限に止まる。
+- **症状:** スクリプトが "Connecting to WebSocket server..." のところで無期限に止まってしまう。
 - **解決方法:**
-  1. `MCP_ENDPOINT` が正しいか確認します（タイプミスがないかチェック）。
-  2. URL が `wss://`（セキュア WebSocket）で始まっていることを確認します。
-  3. インターネット接続（SenseCraft Cloud へのアウトバウンド通信）を確認します。
+  1. `MCP_ENDPOINT` が正しいか確認する（タイプミスがないかチェック）。
+  2. URL が `wss://`（セキュア WebSocket）で始まっていることを確認する。
+  3. インターネット接続を確認する（SenseCraft Cloud へのアウトバウンド通信）。
 
 </details>
 
 <details>
 <summary>❌ ツールが認識されない</summary>
 
-- **症状:** コマンドを話しても、AI が "I don't know how to do that" と言うか、ツールが起動しない。
+- **症状:** コマンドを話しても、AI が "I don't know how to do that" と言う、またはツールが起動しない。
 - **解決方法:**
-  1. **名前を確認:** 関数には分かりやすい英語の説明的な名前を使用します。
-  2. **Docstring を確認:** docstring が *意図* を明確に記述していることを確認します（例: "Use this to check stock"）。
-  3. **再起動:** コードを変更した後は MCP サーバースクリプトを再起動する必要があります。
+  1. **名前を確認:** 関数には明確で説明的な英語名を付ける。
+  2. **Docstring を確認:** docstring に *意図*（例: "Use this to check stock"）が明示的に記載されていることを確認する。
+  3. **再起動:** コードを変更した後は必ず MCP サーバースクリプトを再起動する。
 
 </details>
 
 <details>
-<summary>❌ 接続数上限超過</summary>
+<summary>❌ 接続数の上限超過</summary>
 
 - **症状:** エラーログに "Maximum connections reached" と表示される。
 - **解決方法:**
-  1. 各 Endpoint には接続数の上限があります。複数のターミナルで同時にスクリプトを実行していないことを確認します。
-  2. 他の接続を閉じ、数分待ってから再試行します。
+  1. 各 Endpoint には接続数の上限があります。複数のターミナルで同時にスクリプトを実行していないか確認してください。
+  2. 他の接続を閉じて、数分待ってから再試行してください。
 
 </details>
 
@@ -606,15 +606,15 @@ logger.info(f"Querying stock for: {product_name}")
 <summary>❌ 接続拒否 / WebSocket 443 がブロックされている</summary>
 
 **症状:**
-`[WinError 1225] Connection refused` が表示される、または Endpoint URL が正しいにもかかわらず、スクリプトが `Connecting to WebSocket server...` の状態で止まる。
+`[WinError 1225] Connection refused` が表示される、または Endpoint URL が正しいにもかかわらず、スクリプトが `Connecting to WebSocket server...` のところで止まってしまう。
 
 **原因:**
-**企業ファイアウォールによるブロック。** 多くのオフィスネットワーク（や VPN）は、ポート 443 であっても **WebSocket (wss://)** トラフィックや非標準プロトコルを厳しくブロックします。
+**企業ファイアウォールによるブロック。** 多くのオフィスネットワーク（または VPN）は、ポート 443 であっても **WebSocket (wss://)** トラフィックや非標準プロトコルを厳しくブロックします。
 
-**クイックな解決策:**
+**クイックソリューション:**
 
 1. **📱 「ホットスポットテスト」（推奨）**
-   オフィスネットワーク/VPN から切断し、コンピュータを **モバイルホットスポット（4G/5G）** に接続します。
+   オフィスネットワーク/VPN から切断し、コンピュータを **モバイルホットスポット (4G/5G)** に接続します。
    - *動作した場合:* オフィスネットワークが接続をブロックしています。
 
 2. **🔧 プロキシを設定する**
@@ -629,9 +629,9 @@ logger.info(f"Querying stock for: {product_name}")
 
 ## リソース
 
-- [MCP Endpoint セットアップガイド](/ja/mcp_endpoint) - MCP Endpoint の作成と管理方法について学びます。
-- [Warehouse System リポジトリ](https://github.com/suharvest/warehouse_system) - Provider の例を含む、完全なソースコード。
-- [FastMCP ドキュメント](https://github.com/PrefectHQ/fastmcp) - 高度なツール定義についてさらに深く学べます。
+- [MCP Endpoint セットアップガイド](/ja/mcp_endpoint) - MCP Endpoint の作成と管理方法を学びます。
+- [Warehouse System リポジトリ](https://github.com/suharvest/warehouse_system) - Provider の例を含む完全なソースコード。
+- [FastMCP ドキュメント](https://github.com/PrefectHQ/fastmcp) - さらに高度なツール定義について詳しく学べます。
 
 ## テクニカルサポート
 

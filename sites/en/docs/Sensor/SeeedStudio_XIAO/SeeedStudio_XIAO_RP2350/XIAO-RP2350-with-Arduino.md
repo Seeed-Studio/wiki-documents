@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP235
 slug: /xiao_rp2350_arduino
 sidebar_position: 1
 last_update:
-  date: 2024-10-30T01:39:16.136Z
-  author: Spencer
+  date: 05/27/2026
+  author: Carla
 createdAt: '2024-10-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -91,28 +91,13 @@ The Seeed Studio XIAO RP2350 board now supports programming via Arduino, thanks 
 
 ## Hardware Overview
 
-<div class="table-center">
-<table align="center">
- <tr>
-     <th>XIAO RP2350 Front Pinout</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-front.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Front Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>XIAO RP2350 Back Pinout</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>XIAO RP2350 Components</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-components.png" style={{width:480, height:'auto'}} alt="XIAO RP2350 Components" /></div></td>
- </tr>
-</table>
-</div>
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 Need more details on pinouts? Navigate to [Assets and Resources](#assets--resources) below.
 
@@ -126,14 +111,14 @@ Need more details on pinouts? Navigate to [Assets and Resources](#assets--resour
 | D0                      | Analog     | GPIO26       |                    | GPIO, ADC                            |
 | D1                      | Analog     | GPIO27       |                    | GPIO, ADC                            |
 | D2                      | Analog     | GPIO28       |                    | GPIO, ADC                            |
-| D3                      | SPIO_CSn   | GPIO5        |                    | GPIO, SPI                            |
+| D3                      | SPI0_CSn   | GPIO5        |                    | GPIO, SPI                            |
 | D4                      | SDA1       | GPIO6        |                    | GPIO, I2C Data                       |
 | D5                      | SCL1       | GPIO7        |                    | GPIO, I2C Clock                      |
 | D6                      | TX0        | GPIO0        |                    | GPIO, UART Transmit                  |
 | D7                      | RX0        | GPIO1        |                    | GPIO, UART Receive                   |
-| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, SPI Clock                      |
-| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, SPI Data                       |
-| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, SPI Data                       |
+| D8                      | SPI0_SCK   | GPIO2        |                    | GPIO, SPI Clock                      |
+| D9                      | SPI0_MISO  | GPIO4        |                    | GPIO, SPI Data                       |
+| D10                     | SPI0_MOSI  | GPIO3        |                    | GPIO, SPI Data                       |
 | D11                     | RX1        | GPIO21       |                    | GPIO, UART Receive                   |
 | D12                     | TX1        | GPIO20       |                    | GPIO, UART Transmit                  |
 | D13                     | SCL0       | GPIO17       |                    | GPIO, I2C Clock                      |
@@ -143,6 +128,7 @@ Need more details on pinouts? Navigate to [Assets and Resources](#assets--resour
 | D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, SPI Clock                      |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
 | ADC_BAT                 |            | GPIO29       |                    | Read the BAT voltage value           |
+| ADC_BAT_EN              |            | GPIO19       |                    | BAT voltage detect enable            | 
 | Reset                   |            | RUN          |                    | RUN                                  |
 | Boot                    |            | RP2040_BOOT  |                    | Enter Boot Mode                      |
 | CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
@@ -214,9 +200,55 @@ Before uploading a sketch, place your XIAO RP2350 into BOOT mode. Use one of the
 <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-firmware-upload.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
 </div>
 
+## Low Power Performance Verification
+
+The power supply design of XIAO RP2350 delivers excellent performance in low-power scenarios and can be widely applied to various low-power applications.
+
+### Battery Connection
+
+The XIAO RP2350 can be powered by a 3.7V lithium battery. You can refer to the diagram below for wiring.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_1.png" alt="pir" width="800" height="auto"/></div>
+
+:::caution
+Please be careful not to short-circuit the positive and negative terminals and burn the battery and equipment when soldering.
+:::
+
+### Flash the firmware
+
+You can use our pre-written firmware for verification and performance testing.
+
+Download [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), drag it into the file system.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
+
+:::note
+
+This UF2 firmware is compiled from a third-party source. For the firmware source code, please refer to: [pico-examples/powman/powman_timer](https://github.com/peterharperuk/pico-examples/tree/powman/powman/powman_timer)
+
+This firmware source code depends on the [pico-sdk](https://github.com/raspberrypi/pico-sdk). Before use, you need to download the relevant toolchain in a Linux environment following the steps in the pico-sdk README.
+
+Please note that due to the rapid updates of pico-sdk and the toolchain, you may encounter function parameter conflicts and other compilation errors (this example library is not maintained as an official Raspberry Pi library, and there may be version and environment gaps). If you only need to verify the low-power capability of XIAO RP2350, it is recommended to use the UF2 firmware directly for quick and convenient testing.
+
+:::
+
+### Result
+
+After instrumental testing and verification, the average current of the XIAO RP2350 is **53 μA** when entering low-power mode.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_4.jpg" alt="pir" width="800" height="auto"/></div>
+<br/>
+
+:::tip
+
+1. The average current in low-power mode measured by different instruments may vary. Please refer to the actual test results.
+2. This test result is obtained after flashing the low-power test firmware.
+3. For power consumption testing, the test wiring shall be connected to the BAT interface on the back side.
+4. Since the Arduino IDE has difficulty integrating the pico-extras library (which contains pico/sleep.h required for deep sleep), it is recommended to use the Pico SDK or the PlatformIO + arduino-pico framework for ultra-low-power development.
+
+:::
 
 ## Assets & Resources
-
 
 **Hardware Design**
 - **📄[Datasheet]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )

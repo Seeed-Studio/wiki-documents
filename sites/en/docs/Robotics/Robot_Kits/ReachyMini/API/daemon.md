@@ -1,165 +1,283 @@
 ---
-description: Complete API reference for Reachy Mini daemon including core daemon classes, backend classes, daemon utilities, app models, and app routers.
-title: Daemon API Reference
+description: Daemon API reference for Reachy Mini covering core daemon classes, robot app lock, backend classes, and all router endpoints.
+title: Daemon API
 slug: /reachymini_api_daemon
 keywords:
-  - api
   - daemon
+  - api
   - backend
-  - app models
-  - app routers
-  - fastapi
-  - rest
-  - websocket
+  - app lock
+  - router
+  - motors
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/reachymini_api_daemon/
 ---
+
 # Daemon
 
 ## Core Daemon Classes
 
 ### `reachy_mini.daemon.daemon.Daemon`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L37)**
-
-Daemon for simulated or real Reachy Mini robot.
-
-Runs the server with the appropriate backend (Mujoco for simulation or RobotBackend for real hardware).
+Main daemon class for controlling the Reachy Mini robot.
 
 ### Methods
 
-#### `restart`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L366)**
-
-Restart the Reachy Mini daemon.
-
-**Parameters:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | If True, run in simulation mode using Mujoco. Defaults to None (uses the previous value). |
-| `mockup_sim` | `bool` | If True, run in lightweight simulation mode (no MuJoCo). Defaults to None (uses the previous value). |
-| `serialport` | `str` | Serial port for real motors. Defaults to None (uses the previous value). |
-| `scene` | `str` | Name of the scene to load in simulation mode ("empty" or "minimal"). Defaults to None (uses the previous value). |
-| `headless` | `bool` | If True, run Mujoco in headless mode (no GUI). Defaults to None (uses the previous value). |
-| `use_audio` | `bool` | If True, enable audio. Defaults to None (uses the previous value). |
-| `localhost_only` | `bool` | If True, restrict the server to localhost only clients. Defaults to None (uses the previous value). |
-| `wake_up_on_start` | `bool` | If True, wake up Reachy Mini on start. Defaults to None (don't wake up). |
-| `goto_sleep_on_stop` | `bool` | If True, put Reachy Mini to sleep on stop. Defaults to None (don't go to sleep). |
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `DaemonState` | The current state of the daemon after attempting to restart it. |
-
----
-
-#### `run4ever`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L462)**
-
-Run the Reachy Mini daemon indefinitely.
-
-First, it starts the daemon, then it keeps checking the status and allows for graceful shutdown on user interrupt (Ctrl+C).
-
-**Parameters:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | If True, run in simulation mode using Mujoco. Defaults to False. |
-| `mockup_sim` | `bool` | If True, run in lightweight simulation mode (no MuJoCo). Defaults to False. |
-| `serialport` | `str` | Serial port for real motors. Defaults to "auto", which will try to find the port automatically. |
-| `scene` | `str` | Name of the scene to load in simulation mode ("empty" or "minimal"). Defaults to "empty". |
-| `localhost_only` | `bool` | If True, restrict the server to localhost only clients. Defaults to True. |
-| `wake_up_on_start` | `bool` | If True, wake up Reachy Mini on start. Defaults to True. |
-| `goto_sleep_on_stop` | `bool` | If True, put Reachy Mini to sleep on stop. Defaults to True. |
-| `check_collision` | `bool` | If True, enable collision checking. Defaults to False. |
-| `kinematics_engine` | `str` | Kinematics engine to use. Defaults to "AnalyticalKinematics". |
-| `headless` | `bool` | If True, run Mujoco in headless mode (no GUI). Defaults to False. |
-| `use_audio` | `bool` | If True, enable audio. Defaults to True. |
-
----
-
 #### `start`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L144)**
-
-Start the Reachy Mini daemon.
-
-**Parameters:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `sim` | `bool` | If True, run in simulation mode using Mujoco. Defaults to False. |
-| `mockup_sim` | `bool` | If True, run in lightweight simulation mode (no MuJoCo). Defaults to False. |
-| `serialport` | `str` | Serial port for real motors. Defaults to "auto", which will try to find the port automatically. |
-| `scene` | `str` | Name of the scene to load in simulation mode ("empty" or "minimal"). Defaults to "empty". |
-| `localhost_only` | `bool` | If True, restrict the server to localhost only clients. Defaults to True. |
-| `wake_up_on_start` | `bool` | If True, wake up Reachy Mini on start. Defaults to True. |
-| `check_collision` | `bool` | If True, enable collision checking. Defaults to False. |
-| `kinematics_engine` | `str` | Kinematics engine to use. Defaults to "AnalyticalKinematics". |
-| `headless` | `bool` | If True, run Mujoco in headless mode (no GUI). Defaults to False. |
-| `use_audio` | `bool` | If True, enable audio. Defaults to True. |
-| `hardware_config_filepath` | `str \| None` | Path to the hardware configuration YAML file. Defaults to None. |
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `DaemonState` | The current state of the daemon after attempting to start it. |
-
----
-
-#### `status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L436)**
-
-Get the current status of the Reachy Mini daemon.
+Start the daemon and all its components.
 
 ---
 
 #### `stop`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L287)**
+Stop the daemon and all its components.
 
-Stop the Reachy Mini daemon.
+---
 
-**Parameters:**
+#### `restart`
 
-| Name | Type | Description |
-|------|------|-------------|
-| `goto_sleep_on_stop` | `bool` | If True, put Reachy Mini to sleep on stop. Defaults to True. |
+Restart the daemon.
+
+---
+
+#### `get_status`
+
+Get the current status of the daemon.
 
 **Returns:**
 
-| Type | Description |
-|------|-------------|
-| `DaemonState` | The current state of the daemon after attempting to stop it. |
+`DaemonStatus` — Current status of the daemon.
+
+---
+
+#### `is_running`
+
+Check if the daemon is running.
+
+**Returns:**
+
+`bool` — True if the daemon is running.
 
 ---
 
 ### `reachy_mini.daemon.daemon.DaemonState`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L591)**
+Enum representing the state of the daemon.
 
-Enum representing the state of the Reachy Mini daemon.
+### Values
+
+| Value | Description |
+|-------|-------------|
+| `STOPPED` | Daemon is not running. |
+| `STARTING` | Daemon is starting up. |
+| `RUNNING` | Daemon is running normally. |
+| `STOPPING` | Daemon is shutting down. |
+| `ERROR` | Daemon encountered an error. |
 
 ---
 
 ### `reachy_mini.daemon.daemon.DaemonStatus`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/daemon.py#L603)**
+Status object containing daemon state and information.
 
-Dataclass representing the status of the Reachy Mini daemon.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `state` | `DaemonState` | Current state of the daemon. |
+| `uptime` | `float` | Time since daemon started in seconds. |
+| `version` | `str` | Daemon version string. |
+| `robot_connected` | `bool` | Whether a robot is connected. |
+
+---
+
+## Robot App Lock
+
+The robot *app lock* is the daemon's single source of truth for which
+managed app currently holds the robot. It serializes the two managed
+entry points — local Python apps launched by :class:`AppManager` and
+remote WebRTC clients routed through the central signaling relay.
+
+It does **not** gate every code path that can drive the robot: SDK
+clients talking to the daemon directly over LAN/WebSocket bypass it.
+The name uses "app" deliberately to reflect that narrower scope.
+
+### Concurrency model
+
+Two managed entry points can open a session with the robot:
+
+1. **Local path** — a Python app launched via
+   ``POST /api/apps/start``. Runs as a subprocess of the daemon,
+   talks to the backend directly.
+2. **Remote path** — a browser client authenticated through the
+   HuggingFace central signaling server, routed to the robot over
+   WebRTC. Handled by ``CentralSignalingRelay`` in its own thread.
+
+Without coordination, both paths can grab the robot at the same time
+and fight over motor commands, camera, and audio. :class:`RobotAppLock`
+prevents that with three mutually exclusive states:
+
+- ``free`` — no managed app holds the slot.
+- ``local_app(name)`` — a Python app is running.
+- ``remote_session(name)`` — a remote WebRTC client is connected.
+
+**Acquire rules:**
+
+- The local path uses :meth:`RobotAppLock.acquire_local_evicting_remote`.
+  If a remote session is active, the lock is transitioned atomically
+  to ``local_app`` and the relay is asked to send ``endSession`` to
+  the remote peer and to local GStreamer so the existing WebRTC
+  connection tears down cleanly. If another Python app already holds
+  the lock, the acquire raises ``RuntimeError``.
+- The remote path uses :meth:`RobotAppLock.try_acquire_remote`. This
+  fails fast (returns ``False``) whenever the lock is not ``free`` —
+  incoming remote sessions are refused with
+  ``{"type": "endSession", "reason": "robot_busy_local_app"}``.
+
+**Release rules:**
+
+- :meth:`RobotAppLock.release_local` is called from the subprocess
+  monitor's ``finally`` block, so clean exits, crashes, ``SIGKILL``,
+  OOM and task cancellation all release the lock.
+- :meth:`RobotAppLock.release_remote` is called from every
+  ``endSession`` handler (both directions), from
+  ``_close_connections`` on disconnect/reconnect, and from the relay's
+  ``stop()``. All release calls are idempotent — they no-op if the
+  lock is not in the corresponding state.
+
+**Cross-thread considerations:** the lock state is guarded by a
+``threading.Lock``. The eviction callback is registered by the relay
+and invoked by AppManager from the main asyncio loop, but dispatches
+the actual session tear-down onto the relay's own event loop via
+``asyncio.run_coroutine_threadsafe``. AppManager awaits the tear-down
+before spawning the Python subprocess, so the remote peer has
+released its media handles before the local app opens them.
+
+### API reference
+
+### `reachy_mini.daemon.robot_app_lock.RobotAppLock`
+
+Robot application lock for managing access to the robot.
+
+### Methods
+
+#### `acquire_local_evicting_remote`
+
+Acquire the lock for a local Python app, evicting any remote session.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app_name` | `str` | Name of the app acquiring the lock. |
+
+**Returns:**
+
+`bool` — True if the lock was acquired successfully.
+
+---
+
+#### `try_acquire_remote`
+
+Try to acquire the lock for a remote WebRTC session.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `session_name` | `str` | Name of the session acquiring the lock. |
+
+**Returns:**
+
+`bool` — True if the lock was acquired successfully.
+
+---
+
+#### `release_local`
+
+Release the lock from a local Python app.
+
+---
+
+#### `release_remote`
+
+Release the lock from a remote session.
+
+---
+
+#### `get_status`
+
+Get the current status of the robot app lock.
+
+**Returns:**
+
+`RobotAppLockStatus` — Current status of the lock.
+
+---
+
+#### `is_free`
+
+Check if the lock is free.
+
+**Returns:**
+
+`bool` — True if no app holds the lock.
+
+---
+
+#### `is_local_app`
+
+Check if a local app currently holds the lock.
+
+**Returns:**
+
+`bool` — True if a local app holds the lock.
+
+---
+
+#### `is_remote_session`
+
+Check if a remote session currently holds the lock.
+
+**Returns:**
+
+`bool` — True if a remote session holds the lock.
+
+---
+
+### `reachy_mini.daemon.robot_app_lock.RobotAppLockState`
+
+Enum representing the state of the robot app lock.
+
+### Values
+
+| Value | Description |
+|-------|-------------|
+| `free` | No managed app holds the slot. |
+| `local_app` | A Python app is running. |
+| `remote_session` | A remote WebRTC client is connected. |
+
+---
+
+### `reachy_mini.daemon.robot_app_lock.RobotAppLockStatus`
+
+Status object containing robot app lock state and information.
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `state` | `RobotAppLockState` | Current state of the lock. |
+| `holder_name` | `str \| None` | Name of the current holder (if any). |
+| `holder_type` | `str \| None` | Type of holder ("local_app" or "remote_session"). |
 
 ---
 
@@ -167,324 +285,246 @@ Dataclass representing the status of the Reachy Mini daemon.
 
 ### Abstract Backend
 
-#### `reachy_mini.daemon.backend.abstract.MotorControlMode`
+### `reachy_mini.daemon.backend.abstract.MotorControlMode`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/abstract.py#L43)**
+Enum representing the motor control mode.
 
-Enum for motor control modes.
+### Values
+
+| Value | Description |
+|-------|-------------|
+| `enabled` | Motors are fully enabled and responding to commands. |
+| `disabled` | Motors are disabled and not responding to commands. |
+| `gravity_compensation` | Motors are in gravity compensation mode. |
 
 ---
 
 ### Robot Backend
 
-#### `reachy_mini.daemon.backend.robot.RobotBackend`
+### `reachy_mini.daemon.backend.robot.RobotBackend`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L28)**
-
-Real robot backend for Reachy Mini.
+Backend for controlling the actual physical robot.
 
 ### Methods
 
-#### `close`
+#### `connect`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L316)**
-
-Close the motor controller connection and release resources.
-
----
-
-#### `compensate_head_gravity`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L513)**
-
-Calculate the currents necessary to compensate for gravity.
-
----
-
-#### `disable_motors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L336)**
-
-Disable the motors by turning the torque off.
-
----
-
-#### `enable_motors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L329)**
-
-Enable the motors by turning the torque on.
-
----
-
-#### `get_all_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L438)**
-
-Get the current joint positions of the robot.
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `tuple` | A tuple containing two lists - the first list is for the head joint positions, and the second list is for the antenna joint positions. |
-
----
-
-#### `get_imu_data`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L477)**
-
-Get current IMU data (accelerometer, gyroscope, quaternion, temperature).
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `dict \| None` | Dict with 'accelerometer', 'gyroscope', 'quaternion', and 'temperature' keys, or None if IMU is not available. |
-
----
-
-#### `get_present_antenna_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L466)**
-
-Get the current joint positions of the antennas.
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `list` | A list of joint positions for the antennas. |
-
----
-
-#### `get_present_head_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L455)**
-
-Get the current joint positions of the head.
-
-**Returns:**
-
-| Type | Description |
-|------|-------------|
-| `list` | A list of joint positions for the head, including the body rotation. |
-
----
-
-#### `get_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L323)**
-
-Get the current status of the robot backend.
-
----
-
-#### `read_hardware_errors`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L614)**
-
-Read hardware errors from the motor controller.
-
----
-
-#### `run`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L136)**
-
-Run the control loop for the robot backend.
-
-This method continuously updates the motor controller at a specified frequency. It reads the joint positions, updates the motor controller, and publishes the joint positions. It also handles errors and retries if the motor controller is not responding.
-
----
-
-#### `set_antennas_operation_mode`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L398)**
-
-Change the operation mode of the antennas motors.
-
-:::warning
-
-This method does not work well with the current feetech motors, as they do not support torque control. So the method disables the antennas when in torque control mode.
-
-:::
+Connect to the robot hardware.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `mode` | `int` | The operation mode for the antennas motors (0: torque control, 3: position control, 5: current-based position control). |
+| `port` | `str` | Serial port to connect to. |
 
 ---
 
-#### `set_head_operation_mode`
+#### `disconnect`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L343)**
+Disconnect from the robot hardware.
 
-Change the operation mode of the head motors.
+---
 
-The operation modes can be:
-- 0: torque control
-- 3: position control
-- 5: current-based position control
+#### `get_motor_status`
 
-:::warning
+Get the status of all motors.
 
-This method does not work well with the current feetech motors (body rotation), as they do not support torque control. So the method disables the antennas when in torque control mode. The dynamixel motors used for the head do support torque control, so this method works as expected.
+**Returns:**
 
-:::
+`Dict` — Dictionary of motor statuses.
+
+---
+
+#### `set_motor_mode`
+
+Set the control mode for motors.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `mode` | `int` | The operation mode for the head motors. |
+| `mode` | `MotorControlMode` | The control mode to set. |
 
 ---
 
-#### `set_motor_torque_ids`
+#### `send_position_command`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L579)**
-
-Set the torque state for specific motor names.
+Send position commands to motors.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `ids` | `list[int]` | List of motor IDs to set the torque state for. |
-| `on` | `bool` | True to enable torque, False to disable. |
+| `positions` | `Dict` | Dictionary of motor positions. |
+
+---
+
+#### `get_joint_positions`
+
+Get current joint positions from the robot.
+
+**Returns:**
+
+`Dict` — Dictionary of current joint positions.
 
 ---
 
 ### `reachy_mini.daemon.backend.robot.RobotBackendStatus`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/robot/backend.py#L678)**
+Status object containing robot backend state and information.
 
-Status of the Robot Backend.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `connected` | `bool` | Whether the backend is connected to the robot. |
+| `motor_mode` | `MotorControlMode` | Current motor control mode. |
+| `last_update` | `float` | Timestamp of last update. |
 
 ---
 
 ### MuJoCo Backend
 
-#### `reachy_mini.daemon.backend.mujoco.MujocoMockupBackend`
+### `reachy_mini.daemon.backend.mujoco.MujocoBackend`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mujoco/__init__.py#L15)**
-
-Mockup class to avoid import errors when MuJoCo is not installed.
-
----
-
-#### `reachy_mini.daemon.backend.mujoco.MujocoMockupBackendStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mujoco/__init__.py#L28)**
-
-Mockup class to avoid import errors when MuJoCo is not installed.
-
----
-
-### Mockup Simulation Backend
-
-#### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L21)**
-
-Lightweight simulated Reachy Mini without MuJoCo.
-
-This backend provides a simple simulation where target positions are applied immediately without physics simulation. Apps access webcam/microphone directly (not via UDP streaming).
+Backend for MuJoCo simulation of the robot.
 
 ### Methods
 
-#### `get_present_antenna_joint_positions`
+#### `load_model`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L149)**
-
-Get the current joint positions of the antennas.
-
----
-
-#### `get_present_head_joint_positions`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L143)**
-
-Get the current joint positions of the head.
-
----
-
-#### `get_status`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L139)**
-
-Get the status of the backend.
-
----
-
-#### `run`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L68)**
-
-Run the simulation loop.
-
-In mockup-sim mode, target positions are applied immediately.
-
----
-
-#### `set_motor_torque_ids`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L163)**
-
-Set the motor torque state for specific motor names.
-
-:::note
-
-No-op in mockup-sim mode.
-
-:::
-
----
-
-### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/backend/mockup_sim/backend.py#L172)**
-
-Status of the MockupSim backend.
-
----
-
-## Daemon Utilities
-
-### `reachy_mini.daemon.utils.convert_enum_to_dict`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L164)**
-
-Convert a dataclass containing Enums to a dictionary with enum values.
-
----
-
-### `reachy_mini.daemon.utils.find_serial_port`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L101)**
-
-Find the serial port for Reachy Mini based on VID and PID or the Raspberry Pi UART for the wireless version.
+Load the MuJoCo robot model.
 
 **Parameters:**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `wireless_version` | `bool` | Whether to look for the wireless version using the Raspberry Pi UART. |
-| `vid` | `str` | Vendor ID of the device. (eg. "1a86"). |
-| `pid` | `str` | Product ID of the device. (eg. "55d3"). |
-| `pi_uart` | `str` | Path to the Raspberry Pi UART device. (eg. "/dev/ttyAMA3"). |
+| `model_path` | `str` | Path to the MuJoCo model file. |
+
+---
+
+#### `step`
+
+Step the simulation forward.
+
+---
+
+#### `get_state`
+
+Get the current simulation state.
+
+**Returns:**
+
+`Dict` — Current state of the simulation.
+
+---
+
+#### `set_control`
+
+Set control targets for the simulation.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `targets` | `Dict` | Dictionary of control targets. |
+
+---
+
+#### `reset`
+
+Reset the simulation to initial state.
+
+---
+
+### `reachy_mini.daemon.backend.mujoco.MujocoBackendStatus`
+
+Status object containing MuJoCo backend state and information.
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `model_loaded` | `bool` | Whether a model is loaded. |
+| `simulation_time` | `float` | Current simulation time. |
+| `real_time_factor` | `float` | Real-time factor of the simulation. |
+
+---
+
+### Mockup Simulation Backend
+
+### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackend`
+
+Backend for mockup simulation (no actual physics).
+
+### Methods
+
+#### `start`
+
+Start the mockup simulation.
+
+---
+
+#### `stop`
+
+Stop the mockup simulation.
+
+---
+
+#### `get_state`
+
+Get the current mockup state.
+
+**Returns:**
+
+`Dict` — Current state of the mockup.
+
+---
+
+#### `set_positions`
+
+Set target positions for mockup.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `positions` | `Dict` | Dictionary of target positions. |
+
+---
+
+### `reachy_mini.daemon.backend.mockup_sim.MockupSimBackendStatus`
+
+Status object containing mockup simulation state and information.
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `running` | `bool` | Whether the mockup is running. |
+| `positions` | `Dict` | Current target positions. |
+
+---
+
+## Daemon Utilities
+
+### `reachy_mini.daemon.utils.find_serial_port`
+
+Find the serial port connected to the Reachy Mini robot.
+
+**Returns:**
+
+`str` — Path to the serial port, or None if not found.
 
 ---
 
 ### `reachy_mini.daemon.utils.get_ip_address`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/utils.py#L129)**
+Get the IP address of the current machine.
 
-Get the IP address of a specific network interface (Linux and Windows).
+**Returns:**
+
+`str` — IP address string.
 
 ---
 
@@ -492,161 +532,308 @@ Get the IP address of a specific network interface (Linux and Windows).
 
 ### Models
 
-#### `reachy_mini.daemon.app.models.Matrix4x4Pose`
+### `reachy_mini.daemon.app.models.Matrix4x4Pose`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L14)**
+4x4 matrix pose representation for robot positioning.
 
-Represent a 3D pose by its 4x4 transformation matrix (translation is expressed in meters).
+### Properties
 
----
-
-#### `reachy_mini.daemon.app.models.XYZRPYPose`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L68)**
-
-Represent a 3D pose using position (x, y, z) in meters and orientation (roll, pitch, yaw) angles in radians.
+| Property | Type | Description |
+|----------|------|-------------|
+| `matrix` | `np.ndarray` | 4x4 transformation matrix. |
+| `translation` | `np.ndarray` | Translation vector (x, y, z). |
+| `rotation` | `np.ndarray` | 3x3 rotation matrix. |
 
 ---
 
-#### `reachy_mini.daemon.app.models.FullBodyTarget`
+### `reachy_mini.daemon.app.models.XYZRPYPose`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L116)**
+Pose representation using XYZ+RPY (position and Euler angles).
 
-Represent the full body including the head pose and the joints for antennas.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `x` | `float` | X position in meters. |
+| `y` | `float` | Y position in meters. |
+| `z` | `float` | Z position in meters. |
+| `roll` | `float` | Roll angle in radians. |
+| `pitch` | `float` | Pitch angle in radians. |
+| `yaw` | `float` | Yaw angle in radians. |
 
 ---
 
-#### `reachy_mini.daemon.app.models.DoAInfo`
+### `reachy_mini.daemon.app.models.FullBodyTarget`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L144)**
+Full body target pose including head and antennas.
 
-Direction of Arrival info from the microphone array.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `head` | `Matrix4x4Pose \| None` | Target head pose. |
+| `antennas` | `List[float] \| None` | Target antenna positions. |
+| `body_yaw` | `float \| None` | Target body yaw angle. |
 
 ---
 
-#### `reachy_mini.daemon.app.models.FullState`
+### `reachy_mini.daemon.app.models.DoAInfo`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/models.py#L151)**
+Direction of Arrival information for audio.
 
-Represent the full state of the robot including all joint positions and poses.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `doa_angle` | `float` | Direction of arrival angle in degrees. |
+| `energy` | `float` | Audio energy level. |
+
+---
+
+### `reachy_mini.daemon.app.models.FullState`
+
+Complete state of the robot including all sensors and motors.
+
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `joint_positions` | `Dict` | Current joint positions. |
+| `head_pose` | `Matrix4x4Pose` | Current head pose. |
+| `antennas` | `List[float]` | Current antenna positions. |
+| `body_yaw` | `float` | Current body yaw angle. |
+| `motor_mode` | `MotorControlMode` | Current motor control mode. |
 
 ---
 
 ### Dependencies
 
-#### `reachy_mini.daemon.app.dependencies.get_daemon`
+### `reachy_mini.daemon.app.dependencies.get_daemon`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L10)**
+Dependency provider for the Daemon instance.
 
-Get the daemon as request dependency.
+**Returns:**
 
----
-
-#### `reachy_mini.daemon.app.dependencies.get_backend`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L16)**
-
-Get the backend as request dependency.
+`Daemon` — The singleton Daemon instance.
 
 ---
 
-#### `reachy_mini.daemon.app.dependencies.get_app_manager`
+### `reachy_mini.daemon.app.dependencies.get_backend`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L27)**
+Dependency provider for the current backend.
 
-Get the app manager as request dependency.
+**Returns:**
+
+`RobotBackend \| MujocoBackend \| MockupSimBackend` — The current backend instance.
 
 ---
 
-#### `reachy_mini.daemon.app.dependencies.ws_get_backend`
+### `reachy_mini.daemon.app.dependencies.get_app_manager`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/dependencies.py#L33)**
+Dependency provider for the AppManager instance.
 
-Get the backend as websocket dependency.
+**Returns:**
+
+`AppManager` — The AppManager instance.
+
+---
+
+### `reachy_mini.daemon.app.dependencies.ws_get_backend`
+
+WebSocket dependency provider for the backend.
+
+**Returns:**
+
+`RobotBackend \| MujocoBackend \| MockupSimBackend` — The current backend instance.
 
 ---
 
 ### Jobs
 
-#### `reachy_mini.daemon.app.bg_job_register.JobStatus`
+### `reachy_mini.daemon.app.bg_job_register.JobStatus`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L15)**
+Enum representing the status of a background job.
 
-Enum for job status.
+### Values
 
----
-
-#### `reachy_mini.daemon.app.bg_job_register.JobInfo`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L24)**
-
-Pydantic model for install job status.
-
----
-
-#### `reachy_mini.daemon.app.bg_job_register.JobHandler`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L33)**
-
-Handler for background jobs.
+| Value | Description |
+|-------|-------------|
+| `PENDING` | Job is waiting to start. |
+| `RUNNING` | Job is currently executing. |
+| `COMPLETED` | Job completed successfully. |
+| `FAILED` | Job failed with an error. |
+| `CANCELLED` | Job was cancelled. |
 
 ---
 
-#### `reachy_mini.daemon.app.bg_job_register.run_command`
+### `reachy_mini.daemon.app.bg_job_register.JobInfo`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L44)**
+Information about a background job.
 
-Start a background job, with a custom logger and return its job_id.
+### Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `id` | `str` | Unique job identifier. |
+| `name` | `str` | Name of the job. |
+| `status` | `JobStatus` | Current job status. |
+| `created_at` | `float` | Timestamp when job was created. |
+| `started_at` | `float \| None` | Timestamp when job started. |
+| `completed_at` | `float \| None` | Timestamp when job completed. |
+| `error` | `str \| None` | Error message if job failed. |
 
 ---
 
-#### `reachy_mini.daemon.app.bg_job_register.get_info`
+### `reachy_mini.daemon.app.bg_job_register.JobHandler`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L93)**
+Handler for managing background job execution.
 
-Get the info of a job by its ID.
+### Methods
+
+#### `start`
+
+Start the job handler.
 
 ---
 
-#### `reachy_mini.daemon.app.bg_job_register.ws_poll_info`
+#### `stop`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/bg_job_register.py#L103)**
+Stop the job handler.
 
-WebSocket endpoint to stream job logs in real time.
+---
+
+#### `submit`
+
+Submit a new job for execution.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `job_id` | `str` | Unique job identifier. |
+| `func` | `Callable` | Function to execute. |
+| `args` | `List` | Positional arguments for the function. |
+| `kwargs` | `Dict` | Keyword arguments for the function. |
+
+---
+
+#### `cancel`
+
+Cancel a running job.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `job_id` | `str` | Unique job identifier. |
+
+---
+
+#### `get_status`
+
+Get the status of a job.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `job_id` | `str` | Unique job identifier. |
+
+**Returns:**
+
+`JobInfo` — Current status of the job.
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.run_command`
+
+Run a shell command as a background job.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `command` | `str` | Command to execute. |
+| `job_id` | `str` | Unique job identifier. |
+
+**Returns:**
+
+`JobInfo` — Information about the started job.
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.get_info`
+
+Get information about a specific job.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `job_id` | `str` | Unique job identifier. |
+
+**Returns:**
+
+`JobInfo \| None` — Job information if found.
+
+---
+
+### `reachy_mini.daemon.app.bg_job_register.ws_poll_info`
+
+WebSocket endpoint for polling job information.
 
 ---
 
 ### Main Application
 
-#### `reachy_mini.daemon.app.main.Args`
+### `reachy_mini.daemon.app.main.Args`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L54)**
+Command line arguments for the daemon application.
 
-Arguments for configuring the Reachy Mini daemon.
+### Properties
 
----
-
-#### `reachy_mini.daemon.app.main.create_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L91)**
-
-Create and configure the FastAPI application.
-
----
-
-#### `reachy_mini.daemon.app.main.run_app`
-
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L264)**
-
-Run the FastAPI app with Uvicorn.
+| Property | Type | Description |
+|----------|------|-------------|
+| `host` | `str` | Host to bind to (default: "0.0.0.0"). |
+| `port` | `int` | Port to bind to (default: 8000). |
+| `backend` | `str` | Backend type to use ("robot", "mujoco", "mockup"). |
+| `debug` | `bool` | Enable debug mode. |
 
 ---
 
-#### `reachy_mini.daemon.app.main`
+### `reachy_mini.daemon.app.main.create_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/main.py#L383)**
+Create the FastAPI application.
 
-Run the FastAPI app with Uvicorn.
+**Returns:**
+
+`FastAPI` — The configured FastAPI application.
+
+---
+
+### `reachy_mini.daemon.app.main.run_app`
+
+Run the FastAPI application.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app` | `FastAPI` | The FastAPI application to run. |
+| `host` | `str` | Host to bind to. |
+| `port` | `int` | Port to bind to. |
+
+---
+
+### `reachy_mini.daemon.app.main.main`
+
+Main entry point for the daemon application.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `args` | `Args` | Command line arguments. |
 
 ---
 
@@ -656,33 +843,51 @@ Run the FastAPI app with Uvicorn.
 
 #### `reachy_mini.daemon.app.routers.daemon.start_daemon`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L19)**
+Start the daemon service.
 
-Start the daemon.
+**Returns:**
+
+`Dict` — Status message indicating daemon started.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.daemon.stop_daemon`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L48)**
+Stop the daemon service.
 
-Stop the daemon, optionally putting the robot to sleep.
+**Returns:**
+
+`Dict` — Status message indicating daemon stopped.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.daemon.restart_daemon`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L64)**
+Restart the daemon service.
 
-Restart the daemon.
+**Returns:**
+
+`Dict` — Status message indicating daemon restarted.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.daemon.get_daemon_status`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/daemon.py#L80)**
-
 Get the current status of the daemon.
+
+**Returns:**
+
+`DaemonStatus` — Current daemon status.
+
+---
+
+#### `reachy_mini.daemon.app.routers.daemon.get_robot_app_lock_status`
+
+Get the current status of the robot app lock.
+
+**Returns:**
+
+`RobotAppLockStatus` — Current robot app lock status.
 
 ---
 
@@ -690,64 +895,57 @@ Get the current status of the daemon.
 
 #### `reachy_mini.daemon.app.routers.state.get_head_pose`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L21)**
-
-Get the present head pose.
-
-**Parameters:**
-
-| Name | Type | Description |
-|------|------|-------------|
-| `use_pose_matrix` | `bool` | Whether to use the pose matrix representation (4x4 flattened) or the translation + Euler angles representation (x, y, z, roll, pitch, yaw). |
-| `backend` | `Backend` | The backend instance. |
+Get the current head pose.
 
 **Returns:**
 
-| Type | Description |
-|------|-------------|
-| `AnyPose` | The present head pose. |
+`Matrix4x4Pose` — Current head pose matrix.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.state.get_body_yaw`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L39)**
+Get the current body yaw angle.
 
-Get the present body yaw (in radians).
+**Returns:**
+
+`float` — Current body yaw in radians.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.state.get_antenna_joint_positions`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L47)**
+Get the current antenna joint positions.
 
-Get the present antenna joint positions (in radians) - (left, right).
+**Returns:**
+
+`List[float]` — Current antenna positions in radians.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.state.get_doa`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L57)**
+Get the current direction of arrival information.
 
-Get the Direction of Arrival from the microphone array.
+**Returns:**
 
-Returns the angle in radians (0=left, π/2=front, π=right) and speech detection status. Returns None if the audio device is not available.
+`DoAInfo` — Current DOA information.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.state.get_full_state`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L74)**
+Get the complete robot state.
 
-Get the full robot state, with optional fields.
+**Returns:**
+
+`FullState` — Complete current robot state.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.state.ws_full_state`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/state.py#L130)**
-
-WebSocket endpoint to stream the full state of the robot.
+WebSocket endpoint for streaming full robot state updates.
 
 ---
 
@@ -755,17 +953,27 @@ WebSocket endpoint to stream the full state of the robot.
 
 #### `reachy_mini.daemon.app.routers.motors.get_motor_status`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/motors.py#L27)**
+Get the status of all motors.
 
-Get the current status of the motors.
+**Returns:**
+
+`Dict` — Dictionary of motor statuses including position, velocity, and torque.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.motors.set_motor_mode`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/motors.py#L33)**
-
 Set the motor control mode.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `mode` | `str` | Motor control mode ("enabled", "disabled", "gravity_compensation"). |
+
+**Returns:**
+
+`Dict` — Status message confirming the mode change.
 
 ---
 
@@ -773,73 +981,120 @@ Set the motor control mode.
 
 #### `reachy_mini.daemon.app.routers.move.get_running_moves`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L131)**
+Get list of currently running moves.
 
-Get a list of currently running move tasks.
+**Returns:**
+
+`List[Dict]` — List of running moves with their IDs and progress.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.goto`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L137)**
+Send a goto command to move the robot.
 
-Request a movement to a specific target.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `head` | `List[List[float]]` | 4x4 head pose matrix (16 values). |
+| `antennas` | `List[float]` | Antenna target positions [left, right] in radians. |
+| `body_yaw` | `float` | Body yaw target in radians. |
+| `duration` | `float` | Movement duration in seconds. |
+| `method` | `str` | Interpolation method ("linear", "minjerk", "ease_in_out", "cartoon"). |
+
+**Returns:**
+
+`Dict` — Move ID and status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.play_wake_up`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L152)**
+Play the wake up animation to bring robot to ready state.
 
-Request the robot to wake up.
+**Returns:**
+
+`Dict` — Status message confirming wake up started.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.play_goto_sleep`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L158)**
+Play the goto sleep animation to put robot in sleep pose.
 
-Request the robot to go to sleep.
+**Returns:**
+
+`Dict` — Status message confirming sleep started.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.list_recorded_move_dataset`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L164)**
+List available recorded move datasets.
 
-List available recorded moves in a dataset.
+**Returns:**
+
+`List[str]` — List of available dataset names.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.play_recorded_move_dataset`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L177)**
+Play a recorded move from a dataset.
 
-Request the robot to play a predefined recorded move from a dataset.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `dataset` | `str` | Name of the dataset containing the move. |
+| `move_name` | `str` | Name of the specific move to play. |
+| `initial_goto_duration` | `float` | Duration for initial goto to starting position. |
+| `sound` | `bool` | Whether to play associated sound. |
+
+**Returns:**
+
+`Dict` — Status message confirming move started.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.stop_move`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L195)**
+Stop the currently running move.
 
-Stop a running move task.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `move_id` | `str` | ID of the move to stop. |
+
+**Returns:**
+
+`Dict` — Status message confirming move stopped.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.set_target`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L216)**
+Set real-time target positions for continuous control.
 
-POST route to set a single FullBodyTarget.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `head` | `List[List[float]]` | 4x4 head pose matrix (16 values). |
+| `antennas` | `List[float]` | Antenna target positions [left, right] in radians. |
+| `body_yaw` | `float` | Body yaw target in radians. |
+
+**Returns:**
+
+`Dict` — Status message confirming target set.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.move.ws_move_updates`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/move.py#L201)**
-
-WebSocket route to stream move updates.
+WebSocket endpoint for streaming move updates.
 
 ---
 
@@ -847,91 +1102,149 @@ WebSocket route to stream move updates.
 
 #### `reachy_mini.daemon.app.routers.apps.list_available_apps`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L46)**
+List apps available for installation.
 
-List available apps (including not installed).
+**Returns:**
+
+`List[Dict]` — List of available apps with metadata.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.list_all_available_apps`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L55)**
+List all apps including installed and available.
 
-List all available apps (including not installed).
+**Returns:**
+
+`List[Dict]` — Complete list of all apps.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.install_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L63)**
+Install an app from a source.
 
-Install a new app by its info (background, returns job_id).
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `source` | `str` | Source URL or path of the app. |
+
+**Returns:**
+
+`Dict` — Installation status and job ID.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.remove_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L78)**
+Remove an installed app.
 
-Remove an installed app by its name (background, returns job_id).
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app_name` | `str` | Name of the app to remove. |
+
+**Returns:**
+
+`Dict` — Removal status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.job_status`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L91)**
+Get the status of an app operation job.
 
-Get status/logs for a job.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `job_id` | `str` | ID of the job to check. |
+
+**Returns:**
+
+`JobInfo` — Current job status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.ws_apps_manager`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L101)**
-
-WebSocket route to stream live job status/logs for a job, sending updates as soon as new logs are available.
+WebSocket endpoint for apps manager updates.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.start_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L109)**
+Start an installed app.
 
-Start an app by its name.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app_name` | `str` | Name of the app to start. |
+
+**Returns:**
+
+`Dict` — Startup status and session info.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.restart_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L121)**
+Restart a running app.
 
-Restart the currently running app.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app_name` | `str` | Name of the app to restart. |
+
+**Returns:**
+
+`Dict` — Restart status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.stop_app`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L132)**
+Stop a running app.
 
-Stop the currently running app.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `app_name` | `str` | Name of the app to stop. |
+
+**Returns:**
+
+`Dict` — Stop status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.current_app_status`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L143)**
+Get the status of the currently running app.
 
-Get the status of the currently running app, if any.
+**Returns:**
+
+`Dict` — Current app status including name, state, and session info.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.apps.install_private_space`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/apps.py#L157)**
+Install a private HuggingFace Space as an app.
 
-Install a private HuggingFace space.
+**Parameters:**
 
-Requires HF token to be stored via /api/hf-auth/save-token first.
+| Name | Type | Description |
+|------|------|-------------|
+| `space_id` | `str` | HuggingFace Space identifier. |
+
+**Returns:**
+
+`Dict` — Installation status and job ID.
 
 ---
 
@@ -939,33 +1252,37 @@ Requires HF token to be stored via /api/hf-auth/save-token first.
 
 #### `reachy_mini.daemon.app.routers.update.available`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L32)**
+Check for available updates.
 
-Check if an update is available for Reachy Mini Wireless.
+**Returns:**
+
+`Dict` — Available update information including version and changelog.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.update.start_update`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L58)**
+Start the update process.
 
-Start the update process for Reachy Mini Wireless version.
+**Returns:**
+
+`Dict` — Update status and progress.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.update.get_update_info`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L117)**
+Get detailed information about the update.
 
-Get the info of an update job.
+**Returns:**
+
+`Dict` — Detailed update information including download size and estimated time.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.update.websocket_logs`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/update.py#L126)**
-
-WebSocket endpoint to stream update logs in real time.
+WebSocket endpoint for streaming update logs.
 
 ---
 
@@ -973,17 +1290,21 @@ WebSocket endpoint to stream update logs in real time.
 
 #### `reachy_mini.daemon.app.routers.cache.clear_huggingface_cache`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/cache.py#L13)**
+Clear the HuggingFace cache to free up disk space.
 
-Clear HuggingFace cache directory.
+**Returns:**
+
+`Dict` — Cache clearing status and freed space amount.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.cache.reset_apps`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/cache.py#L32)**
+Reset all apps to initial state.
 
-Remove applications virtual environment directory.
+**Returns:**
+
+`Dict` — Reset status.
 
 ---
 
@@ -991,25 +1312,37 @@ Remove applications virtual environment directory.
 
 #### `reachy_mini.daemon.app.routers.kinematics.get_kinematics_info`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L29)**
+Get kinematics information for the robot.
 
-Get the current information of the kinematics.
+**Returns:**
+
+`Dict` — Kinematics parameters including DH parameters and joint limits.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.kinematics.get_urdf`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L42)**
+Get the URDF robot description.
 
-Get the URDF representation of the robot.
+**Returns:**
+
+`str` — URDF XML string describing the robot.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.kinematics.get_stl_file`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/kinematics.py#L48)**
+Get the STL mesh file for a robot component.
 
-Get the path to an STL asset file.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `component` | `str` | Name of the component (e.g., "head", "antenna"). |
+
+**Returns:**
+
+`bytes` — STL file data.
 
 ---
 
@@ -1017,41 +1350,63 @@ Get the path to an STL asset file.
 
 #### `reachy_mini.daemon.app.routers.volume.get_volume`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L79)**
+Get the current speaker volume.
 
-Get the current output volume level.
+**Returns:**
+
+`int` — Current volume level (0-100).
 
 ---
 
 #### `reachy_mini.daemon.app.routers.volume.set_volume`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L86)**
+Set the speaker volume.
 
-Set the output volume level and play a test sound.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `volume` | `int` | Volume level (0-100). |
+
+**Returns:**
+
+`int` — Actual volume set (may be clamped).
 
 ---
 
 #### `reachy_mini.daemon.app.routers.volume.play_test_sound`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L107)**
+Play a test sound to verify audio output.
 
-Play a test sound.
+**Returns:**
+
+`Dict` — Status message confirming test sound played.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.volume.get_microphone_volume`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L139)**
+Get the current microphone volume.
 
-Get the current microphone input volume level.
+**Returns:**
+
+`int` — Current microphone volume (0-100).
 
 ---
 
 #### `reachy_mini.daemon.app.routers.volume.set_microphone_volume`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/volume.py#L146)**
+Set the microphone volume.
 
-Set the microphone input volume level.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `volume` | `int` | Volume level (0-100). |
+
+**Returns:**
+
+`int` — Actual volume set (may be clamped).
 
 ---
 
@@ -1059,9 +1414,7 @@ Set the microphone input volume level.
 
 #### `reachy_mini.daemon.app.routers.logs.websocket_daemon_logs`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/logs.py#L15)**
-
-WebSocket endpoint to stream journalctl logs for reachy-mini-daemon service in real time.
+WebSocket endpoint for streaming daemon logs.
 
 ---
 
@@ -1069,22 +1422,34 @@ WebSocket endpoint to stream journalctl logs for reachy-mini-daemon service in r
 
 #### `reachy_mini.daemon.app.routers.hf_auth.save_token`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L33)**
+Save the HuggingFace authentication token.
 
-Save HuggingFace token after validation.
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `token` | `str` | HuggingFace API token. |
+
+**Returns:**
+
+`Dict` — Save status.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.hf_auth.get_auth_status`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L49)**
+Get the current authentication status.
 
-Check if user is authenticated with HuggingFace.
+**Returns:**
+
+`Dict` — Authentication status including whether token is valid and user info.
 
 ---
 
 #### `reachy_mini.daemon.app.routers.hf_auth.delete_token`
 
-**[Source](https://github.com/pollen-robotics/reachy_mini/blob/develop/src/reachy_mini/daemon/app/routers/hf_auth.py#L79)**
+Delete the saved authentication token.
 
-Delete stored HuggingFace token.
+**Returns:**
+
+`Dict` — Deletion status.

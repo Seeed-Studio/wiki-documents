@@ -11,32 +11,32 @@ keywords:
   - real-time control
   - interactive
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/ja/reachymini_examples_mini_head_position_gui/
 ---
 
 # Head Position GUI
 
-このサンプルでは、Tkinter を使用したグラフィカルユーザーインターフェース (GUI) により、Reachy Mini の頭部の位置と姿勢をインタラクティブに制御できます。スライダーを使って頭部のロール、ピッチ、ヨー角度と X、Y、Z 位置を調整できるほか、ボディヨーを制御し、アンテナのアニメーション動作も確認できます。
+このサンプルでは、Tkinter を使用したグラフィカルユーザーインターフェース（GUI）を提供し、Reachy Mini の頭部の位置と姿勢をインタラクティブに制御できます。スライダーを使って頭部のロール、ピッチ、ヨー角度と X、Y、Z 位置を調整できるほか、ボディヨーを制御し、アンテナのアニメーション動作も確認できます。
 
-**機能:**
+**機能：**
 - 頭部姿勢（ロール、ピッチ、ヨー）のリアルタイム制御
 - 頭部位置（X、Y、Z）のリアルタイム制御
 - ボディヨーの制御
 - アンテナのアニメーション動作（正弦波振動）
 - 50Hz でライブ更新されるインタラクティブなスライダー
 
-**使用方法:**
+**使用方法：**
 ```bash
 python mini_head_position_gui.py
 ```
 
-すべての制御可能なパラメータ用のスライダーを備えた GUI ウィンドウが開きます。スライダーを調整すると、ロボットがリアルタイムで応答する様子が確認できます。
+すべての制御可能なパラメータ用のスライダーを備えた GUI ウィンドウが開きます。スライダーを調整すると、ロボットがリアルタイムで反応する様子が確認できます。
 
-完全なサンプルはこちら: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/mini_head_position_gui.py)
+完全なサンプルはこちらを参照してください: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/mini_head_position_gui.py)

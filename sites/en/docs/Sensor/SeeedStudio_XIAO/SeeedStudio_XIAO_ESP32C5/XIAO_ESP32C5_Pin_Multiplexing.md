@@ -11,7 +11,7 @@ last_update:
   date: 12/30/2025
   author: Zeller
 createdAt: '2025-12-30'
-updatedAt: '2026-01-19'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_esp32c5_pin_multiplexing/
 ---
 
@@ -50,20 +50,13 @@ If you have not used **PlatfromIO** before, please refer to [Platform IO with Se
 
 Before we begin, let's review all the pins that the XIAO ESP32-C5 has and its functions with the following schematic.
 
-<table align="center">
- <tr>
-     <th>XIAO ESP32-C5 indication diagram</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:600, height:'auto'}}/></div></td>
- </tr>
-    <tr>
-     <th>XIAO ESP32-C5 Pin List</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/PinList_1.png" style={{width:1000, height:'auto'}}/></div></td>
- </tr>
-</table>
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/XIAO_ESP32-C5_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Digital
 

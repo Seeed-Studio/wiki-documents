@@ -1,5 +1,5 @@
 ---
-description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂、夹爪、轨迹接口、重力补偿和 RViz 可视化集成。
+description: 本教程介绍如何基于 reBot Arm B601-DM 搭建 ROS2 控制工作空间，完成机械臂控制、RViz 可视化和 MoveIt2 集成。
 title: reBot Arm B601-DM ROS2 集成
 keywords:
   - reBot Arm
@@ -13,13 +13,13 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-04-29
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-04-29'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -29,21 +29,32 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
+
 <p align="center">
     <a href="./LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <img src="https://img.shields.io/badge/ROS2-Jazzy-blue.svg" alt="ROS2 Jazzy" />
+    <img src="https://img.shields.io/badge/ROS2-Humble | Jazzy-blue.svg" alt="ROS2 Humble | Jazzy" />
     <img src="https://img.shields.io/badge/Python-3.10%2B-blue.svg" alt="Python Version" />
-    <img src="https://img.shields.io/badge/Platform-Ubuntu%2024.04-orange.svg" alt="Platform" />
-    <img src="https://img.shields.io/badge/Hardware-B601--DM-lightgrey.svg" alt="Hardware" />
+    <img src="https://img.shields.io/badge/Version-v0.2.2-brightgreen.svg" alt="Version v0.2.2" />
+    <img src="https://img.shields.io/badge/Platform-Ubuntu%2022.04+-orange.svg" alt="Platform" />
 </p>
 
 <p align="center">
-  <strong>ROS2 控制 · 夹爪控制 · 标准轨迹接口 · 重力补偿 · RViz 可视化 · 全开源</strong>
+  <strong>ROS2 控制 · RViz 可视化 · MoveIt2 支持</strong>
 </p>
 
 本教程介绍如何在 reBot Arm B601-DM 上运行 ROS2 控制工作空间 `rebotarm_ros2`。该工作空间将底层 `reBotArm_control_py` Python SDK 封装为 ROS2 topic、service 和 action，方便用户接入上层规划、视觉抓取、RViz 可视化和二次开发流程。
+
+<div class="video-container">
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?bvid=BV1cHLU67EfN&autoplay=0" title="Bilibili video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 :::note
 本文默认以 `Ubuntu 24.04 + ROS2 Jazzy + Python 3.12` 为主要环境。ROS2 Humble / Ubuntu 22.04 可参考相同流程使用。
@@ -56,6 +67,9 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 
 2. **提供正逆运动学、轨迹规划和重力补偿等功能节点**  
    提供开箱即用的正逆运动学、轨迹规划和重力补偿等控制节点、支持RViz可视化。
+
+3. **MoveIt 2 集成**  
+   提供完整的 MoveIt 2 配置和应用 demo，支持 RViz MotionPlanning 插件进行仿真规划和真实硬件执行。
 
 ## 规格参数
 
@@ -187,8 +201,6 @@ python3 -c "import pinocchio; print('pinocchio', pinocchio.__version__)"
 优先使用 Seeed-Projects 官方仓库：
 
 ```bash
-mkdir -p ~/seeed
-cd ~/seeed
 git clone https://github.com/Seeed-Projects/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
@@ -196,8 +208,6 @@ cd rebotarm_ros2
 也可以使用当前开发仓库：
 
 ```bash
-mkdir -p ~/seeed
-cd ~/seeed
 git clone https://github.com/EclipseaHime017/reBotArmController_ROS2.git rebotarm_ros2
 cd rebotarm_ros2
 ```
@@ -213,7 +223,6 @@ python3 -m pip install --user --break-system-packages --index-url https://pypi.o
 ### 步骤 5. 获取底层 SDK
 
 ```bash
-cd ~/seeed/rebotarm_ros2
 mkdir -p third_party
 git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBotArm_control_py
 ```
@@ -221,7 +230,6 @@ git clone https://github.com/vectorBH6/reBotArm_control_py.git third_party/reBot
 ### 步骤 6. 构建工作空间
 
 ```bash
-cd ~/seeed/rebotarm_ros2
 source /opt/ros/jazzy/setup.bash
 colcon build --symlink-install
 source install/setup.bash
@@ -244,6 +252,10 @@ rebotarmcontroller MoveToPose
 ```
 
 ## 快速启动
+
+:::caution
+在正式开始使用机械臂前请注意： **机械臂的控制器具有较高自由度，启用控制器或者给机械臂上电前务必注意械臂工作空间内无人和障碍物。同时，请严格审查每一次对机械臂的运动控制，避免出现意外。严禁危险操作，造成后果自负。**
+:::
 
 ### 启动完整系统
 
@@ -315,7 +327,7 @@ ros2 run rebotarmcontroller reBotArmController
 ros2 launch rebotarm_bringup bringup.launch.py arm_namespace:=left_arm
 ```
 
-此时 `/rebotarm/joint_states` 会变为 `/left_arm/joint_states`。命名空间只影响 ROS graph 中的 topic、service、action 名字，不会自动修改 URDF 中的 TF frame 名称。
+此时 `/rebotarm/joint_states` 会变为 `/left_arm/joint_states`。
 
 ## 常用 API
 
@@ -485,7 +497,7 @@ src/rebotarm_bringup/config/
 | `gripper_config` | bringup 内置 `gripper.yaml` | 夹爪配置路径 |
 | `channel` | 空字符串 | 留空使用 YAML；非空时覆盖串口 |
 | `joint_state_rate` | `100.0` | `/rebotarm/joint_states` 发布频率 |
-| `cmd_arbitration` | `reject` | 轨迹运行中低层 command 的仲裁策略 |
+| `cmd_arbitration` | `reject` | 轨迹运行中 arm joint 低层 cmd 仲裁，`reject` 或 `preempt`；gripper 低层 cmd 不抢占 arm 轨迹 |
 | `arm_namespace` | `rebotarm` | ROS 命名空间前缀 |
 | `frame_id` | `base_link` | 机械臂基座坐标系 |
 | `ee_frame_id` | `end_link` | 末端坐标系 |
@@ -507,6 +519,181 @@ ROS2 工作空间也提供低层电机调试 topic：
 :::caution
 低层 command topic 面向调试和实验，不做 IK、轨迹规划或 URDF 合法性检查。应用层运动建议优先使用 `/move_to_pose`、`/follow_joint_trajectory`、`/gripper/set` 等 service/action。
 :::
+
+## MoveIt 2
+
+MoveIt 2 是用于机械臂运动规划的框架，这里主要负责逆解、碰撞检测、轨迹规划和轨迹执行，
+并通过独立的 demo 包将应用流程与底层驱动隔离开。
+更多内容可参考官方 [MoveIt 2 文档](https://moveit.picknik.ai/main/index.html)。
+
+MoveIt 相关内容集中在两个包：
+
+| 包 | 作用 |
+|---|---|
+| `rebotarm_moveit_config` | 机械臂模型、SRDF、运动学、joint limits、controller 和 RViz 配置 |
+| `rebotarm_moveit_demos` | 基于 MoveIt 2 的应用 demo |
+
+MoveIt 环境使用 `ros2_control` 的模拟硬件和 `move_group` 进行规划执行，适合在 RViz
+中验证模型、IK、轨迹规划和 demo 流程。
+
+本仓库同样提供了硬件接口的支持。接入真实硬件前，请先确认机械臂零点配置、关节方向、限位、
+速度和夹爪开闭范围相关配置准确或者保持仓库默认配置。
+
+### MoveIt 环境配置
+
+先确认已经加载 ROS2 环境。下面的命令会使用当前 `ROS_DISTRO` 安装对应版本依赖：
+
+```bash
+sudo apt update
+sudo apt install -y \
+  ros-${ROS_DISTRO}-moveit \
+  ros-${ROS_DISTRO}-moveit-configs-utils \
+  ros-${ROS_DISTRO}-ros2-control \
+  ros-${ROS_DISTRO}-ros2-controllers \
+  ros-${ROS_DISTRO}-xacro
+```
+
+MoveIt 相关包和 demo 已包含在本工作空间中，安装依赖后重新构建：
+
+```bash
+cd your/path/to/rebotarm_ros2
+colcon build --symlink-install
+source install/setup.bash
+```
+
+验证 MoveIt 包和 demo 入口：
+
+```bash
+ros2 pkg list | grep rebotarm_moveit
+ros2 pkg executables rebotarm_moveit_demos
+```
+
+期望至少能看到如下两个可执行 Demo：
+
+```text
+rebotarm_moveit_demos draw_square
+rebotarm_moveit_demos pick_place
+```
+
+### 使用 MoveIt
+
+MoveIt 的规划功能需要基于 RViz GUI 或者通过节点调用，可以适用于仿真或真实场景。
+
+#### 在仿真环境使用 MoveIt
+
+MoveIt 通过 ros2_control 虚拟硬件接口实现 RViz 中的仿真，首先启用
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+ros2 launch rebotarm_moveit_config demo.launch.py
+```
+
+默认会启动：
+
+- `move_group`
+- `robot_state_publisher`
+- `ros2_control_node`
+- `joint_state_broadcaster`
+- `rebotarm_controller`
+- `gripper_controller`
+- RViz MoveIt MotionPlanning 插件
+
+RViz 界面会自动弹出并加载机械臂的urdf模型，可以通过左侧的 GUI 控制面板对机械臂的运动进行控制。
+
+如果只需要后台 MoveIt 环境，不启动 RViz：
+
+```bash
+ros2 launch rebotarm_moveit_config demo.launch.py use_rviz:=false
+```
+
+#### 使用 MoveIt 控制 reBotArm
+
+在实际场景中使用 MoveIt 控制 reBotArm 需要先启动带有硬件接口的控制器而不再是虚拟控制器，
+再启动针对实际场景的 MoveIt 环境：
+
+```bash
+ros2 launch rebotarm_bringup driver.launch.py channel:=/dev/ttyACM0
+```
+
+另开终端：
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+ros2 launch rebotarm_moveit_config hardware.launch.py
+```
+
+再次重申，在真实硬件上运行任何 demo 前，请确保机械臂工作空间内无人和障碍物，先在 RViz 中确认规划路径，并随时准备停止控制器。
+
+### 运行画矩形 demo
+
+先启动 MoveIt 环境，再另开一个终端运行：
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+ros2 launch rebotarm_moveit_demos draw_square.launch.py
+```
+
+`draw_square` 会控制 `gripper_tcp` 遍历同一平面矩形的四个角点。默认参数在：
+
+```text
+src/rebotarm_moveit_demos/config/draw_square.yaml
+```
+
+常用参数：
+
+| 参数 | 说明 |
+|---|---|
+| `start_point` | demo 开始前复位到的关节位置 |
+| `rectangle_center` | 矩形中心点，坐标系为 `base_link` |
+| `rectangle_width` / `rectangle_height` | 矩形宽高，单位 m |
+| `tcp_rpy` | 末端姿态，默认让夹爪竖直朝下 |
+| `tcp_yaw_offsets` | IK 备选 yaw，用于避免 joint6 大幅绕转 |
+
+### 运行抓取放置 demo
+
+先启动 MoveIt 环境，再另开一个终端运行：
+
+```bash
+cd your/path/to/rebotarm_ros2
+source install/setup.bash
+ros2 launch rebotarm_moveit_demos pick_place.launch.py
+```
+
+默认参数在：
+
+```text
+src/rebotarm_moveit_demos/config/pick_place.yaml
+```
+
+常用参数：
+
+| 参数 | 说明 |
+|---|---|
+| `ready_point` | 抓取前后使用的预备关节位置 |
+| `pick_position` | 物体底面中心位置，坐标系为 `base_link` |
+| `pick_tcp_rpy` / `place_tcp_rpy` | 抓取和放置时的末端姿态 |
+| `object_dimensions` | MoveIt 场景中物体尺寸，单位 m |
+| `max_gripper_width` | 夹爪最大总开口，默认 `0.09m` |
+| `open_gripper_position` / `closed_gripper_position` | 仿真夹爪单侧开闭关节位置 |
+| `hardware_open_gripper_position` / `hardware_closed_gripper_position` | 硬件夹爪电机开闭位置 |
+| `grasp_gripper_to_object_width` | 是否按物体宽度计算夹取位置 |
+
+### MoveIt 配置文件
+
+| 文件 | 说明 |
+|---|---|
+| `rebotarm_moveit_config/config/rebotarm.urdf.xacro` | MoveIt 使用的机器人模型 |
+| `rebotarm_moveit_config/config/rebotarm.srdf` | MoveIt group、end effector、默认状态等语义配置 |
+| `rebotarm_moveit_config/config/kinematics.yaml` | IK solver 配置 |
+| `rebotarm_moveit_config/config/joint_limits.yaml` | MoveIt 规划使用的关节限位 |
+| `rebotarm_moveit_config/config/moveit_controllers.yaml` | MoveIt trajectory execution controller 配置 |
+| `rebotarm_moveit_config/config/ros2_controllers.yaml` | ros2_control controller 配置 |
+| `rebotarm_moveit_config/config/initial_positions.yaml` | ros2_control 模拟硬件初始关节位置 |
+| `rebotarm_moveit_demos/config/draw_square.yaml` | 画矩形 demo 参数 |
+| `rebotarm_moveit_demos/config/pick_place.yaml` | 抓取放置 demo 参数 |
 
 ## FAQ
 
