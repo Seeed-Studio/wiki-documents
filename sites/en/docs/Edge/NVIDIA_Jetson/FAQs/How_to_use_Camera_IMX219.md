@@ -1,14 +1,18 @@
 ---
-description: Use the IMX219 camera with NVIDIA Jetson devices
-title: IMX219 Camera Setup Guide
+description: This is a FAQ about Using the IMX219 camera with NVIDIA Jetson devices
+title: Using the IMX219 camera with NVIDIA Jetson devices
 keywords:
   - Jetson
   - IMX219 Camera
   - CSI Camera
 image: https://files.seeedstudio.com/wiki/imx219/IMG_20260602_165135.jpg
-slug: /How_to_use_Camera_IMX219
+slug: /how_to_use_camera_imx219
 last_update:
   date: 06/03/2026
+  auther: Dongxu Jin
+  createdAt: '2026-6-3'
+  updatedAt: '2025-6-5'
+url: https://wiki.seeedstudio.com/how_to_use_Camera_IMX219/
 ---
 
 # IMX219 Camera Setup Guide
@@ -86,3 +90,18 @@ After replacing the ISP file, restart the camera preview application. The red ti
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/imx219/Screenshot from 1970-01-01 08-32-48.png"/></div>
 
 ***⚠️ Note：Applying this ISP override file may cause a blue tint around the image if you switch back to a standard Raspberry Pi V2 camera. It is recommended to back up or restore the original ISP settings when switching between different camera modules.***
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
