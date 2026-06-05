@@ -12,7 +12,7 @@ last_update:
   auther: Dongxu Jin
   createdAt: '2026-6-3'
   updatedAt: '2025-6-5'
-url: https://wiki.seeedstudio.com/How_to_use_Camera_IMX219/
+url: https://wiki.seeedstudio.com/how_to_use_camera_imx219/
 ---
 
 # IMX219 Camera Setup Guide
