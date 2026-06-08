@@ -197,7 +197,7 @@ reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性
     <tr>
       <td>显示</td>
       <td colSpan={3}>1x HDMI 2.1</td>
-    </tr]
+    </tr>
     <tr>
       <td>风扇</td>
       <td colSpan={3}>1x 4 针风扇接口（5V PWM）；<br />1x 4 针风扇接口（12V PWM）；</td>

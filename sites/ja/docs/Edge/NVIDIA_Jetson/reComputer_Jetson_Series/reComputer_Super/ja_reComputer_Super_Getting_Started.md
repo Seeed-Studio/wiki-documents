@@ -167,7 +167,7 @@ reComputer Super シリーズは reComputer Classic を強化し、AI パフォ�
     <tr>
       <td>ストレージ</td>
       <td colSpan={4}>1x M.2 KEY M PCIe（M.2 NVMe 2280 SSD 128G 付属）</td>
-    </tr]
+    </tr>
     <tr>
       <td rowSpan={3}>ネットワーキング</td>
       <td>M.2 KEY E</td>

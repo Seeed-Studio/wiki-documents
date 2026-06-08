@@ -4082,6 +4082,7 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/ja_jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/ja_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/ja_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',

@@ -185,7 +185,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
       <td rowSpan={11}>E/S</td>
       <td >USB</td>
       <td colSpan={3}>4x USB 3.2 Type-A (5Gbps); <br />1x USB 2.0 Type-C (Modo dispositivo/Depuración);</td>
-    </tr]
+    </tr>
     <tr>
       <td>Cámara</td>
       <td colSpan={3}>4x mipi CSI(2-lane 15-Pin)</td>
