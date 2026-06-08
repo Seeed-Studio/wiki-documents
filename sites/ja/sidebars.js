@@ -4085,6 +4085,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/ja_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
