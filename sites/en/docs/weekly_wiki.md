@@ -88,26 +88,6 @@ This wiki introduces how to connect and drive an SPI display on the Seeed reComp
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ## Existing Wiki Updated
 
 ### [Meshtastic Firmware Source Code Practical Tutorial](https://wiki.seeedstudio.com/meshtastic_source_code_practical_tutorial_solar_node/)

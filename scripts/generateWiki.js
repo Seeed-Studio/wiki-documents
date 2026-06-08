@@ -50,6 +50,10 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Jetson_DevelopTool', 'Jetson_DevelopTool_Skills.md'), //5.26
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Jetson_DevelopTool', 'Jetson_DevelopTool_Supported_Devices.md'), //5.26
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Other_Devices', 'Seeed_AGX_Orin_Dev_Kit_Getting_Started.md'), //5.26
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_flex', 'reSpeaker_flex_doa.md'), //5.29
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_use_Camera_IMX219.md'), //6.3
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', '3d_enclosure.md'), //6.2
+  path.join(docsDirectory, 'Sensor', 'ePaper_Displays', 'Application', 'work_with_platformio.md'), //6.1
 ];
 
 // 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
