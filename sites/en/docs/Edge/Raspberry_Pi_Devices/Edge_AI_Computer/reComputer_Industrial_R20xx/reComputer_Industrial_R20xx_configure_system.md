@@ -752,6 +752,66 @@ This command will read and display the time stored in the RTC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
+### Use RTC1 as the System Hardware Clock 
+
+The default RTC device is rtc0, and the time synchronization service only synchronizes the system time to the default RTC device. To use rtc1 as the primary hardware clock, create custom systemd services to read the time from rtc1 during startup and periodically write the current system time back to rtc1.
+
+1. Create a Service for hctosys
+
+Create a systemd service to load the system time from rtc1 during startup.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-hctosys.service >/dev/null <<'EOF'
+[Unit]
+Description=Load system time from RTC1
+After=dev-rtc1.device
+Wants=dev-rtc1.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --hctosys --utc -f /dev/rtc1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable rtc1-hctosys.service
+```
+
+2. Create a Service for systohc
+
+Create a systemd service to save the current system time to rtc1, and a timer to run the service periodically.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-systohc.service >/dev/null <<'EOF'
+[Unit]
+Description=Save system time to RTC1
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --systohc --utc -f /dev/rtc1
+EOF
+
+sudo tee /etc/systemd/system/rtc1-systohc.timer >/dev/null <<'EOF'
+[Unit]
+Description=Periodically save system time to RTC1
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=rtc1-systohc.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now rtc1-systohc.timer
+```
+
+The timer starts two minutes after boot and updates rtc1 every ten minutes thereafter. You can adjust the interval according to your requirements.
+
 ## Watchdog Timer Testing
 
 To perform a watchdog test, follow these steps:
@@ -830,7 +890,7 @@ The GPIO corresponding to the buzzer is gpio627. Enter the following script to t
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
-```  
+```
 
 2. Turn off the buzzer :Turn off the buzzer :
 
@@ -838,7 +898,7 @@ echo 1 > /sys/class/gpio/gpio627/value
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction 
 echo 0 > /sys/class/gpio/gpio627/value
-```  
+```
 
 ## TPM 2.0
 
@@ -846,7 +906,7 @@ If you connect TPM 2.0 module to device, the following code can help check TPM c
 
 ```bash
 ls /dev | grep tpm
-```  
+```
 
 **Interpreting the Output:**  
 
@@ -860,13 +920,13 @@ To interact with the ATECC608A device and generate a random serial number, follo
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
-```  
+```
 
 2. Extract the contents of the .deb package to the current directory:
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
-```  
+```
 
 3. Navigate to the atecc Directory:
 
@@ -891,19 +951,19 @@ Here are the commands to interact with an EEPROM (Electrically Erasable Programm
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 2. Write the string "This is a test string" to the EEPROM device:
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 3. Read the contents of the EEPROM device and displays it in ***hexadecimal*** format using the hexdump utility:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
-```  
+```
 
 ## Checking SSD Detection
 
