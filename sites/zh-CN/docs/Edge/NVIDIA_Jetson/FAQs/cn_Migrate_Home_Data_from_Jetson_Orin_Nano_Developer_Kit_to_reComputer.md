@@ -12,9 +12,10 @@ keywords:
   - 迁移
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer
+sku: E2025021104, E2025032601
 last_update:
   date: 06/05/2026
-  author: Seeed Studio
+  author: Dayu
 createdAt: '2026-06-04'
 updatedAt: '2026-06-05'
 url: https://wiki.seeedstudio.com/cn/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/
