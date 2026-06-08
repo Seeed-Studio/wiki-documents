@@ -1,22 +1,22 @@
 ---
-description: Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — PCF8563 RTC read/write, deep-sleep low-power strategies, and PDM microphone audio recording to SD card (E1001 / E1002 / E1003 only).
-title: 'Arduino Cookbook: RTC, Low Power & Audio (reTerminal E Series)'
+description: Arduino cookbook for reTerminal E1001 / E1002 / E1003 / E1004 — PCF8563 RTC read/write, deep-sleep low-power strategies, PDM microphone audio recording to SD card (E1001 / E1002 / E1003), and capacitive touch drawing (E1003 only).
+title: 'Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_arduino_peripherals_2
 sidebar_position: 3
-sidebar_label: Arduino – RTC, Power & Audio
+sidebar_label: Arduino – RTC, Power, Audio & Touch
 last_update:
   date: 05/27/2026
   author: Citric
 createdAt: '2026-05-27'
-updatedAt: '2026-05-27'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Arduino Cookbook: RTC, Low Power & Audio (reTerminal E Series)
+# Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
@@ -27,13 +27,14 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-This is the second peripherals cookbook for the reTerminal E Series. While the [first peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals) covers the basic I/O peripherals (LED, buzzer, buttons, SHT4x, battery, SD card), this page dives into three more advanced topics:
+This is the second peripherals cookbook for the reTerminal E Series. While the [first peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals) covers the basic I/O peripherals (LED, buzzer, buttons, SHT4x, battery, SD card), this page dives into four more advanced topics:
 
 - **Real-Time Clock (RTC)** — the onboard **PCF8563** RTC chip backed by a CR1220 coin cell, keeping time even when the main battery is removed.
 - **Low-Power Modes** — deep sleep, light sleep, and GPIO wake-up strategies to extend battery life from days to months.
 - **PDM Microphone** — capturing audio through the onboard PDM digital microphone (E1001 / E1002 / E1003 only; E1004 does not have a microphone) and saving WAV files to the microSD card.
+- **Touch Screen** — using the onboard capacitive touch panel on the E1003 (10.3" model) to draw dots on the ePaper display. Only the E1003 has a touch panel.
 
-All example sketches in this cookbook are from the [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) repository and require **no additional library installs** — everything uses the ESP32 built-in APIs.
+All example sketches in this cookbook are from the [OSHW-reTerminal-Series-E-D](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D) repository. The RTC, low-power, and microphone sketches require **no additional library installs** — everything uses the ESP32 built-in APIs. The touch sketch requires the **Seeed_GFX** library.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D" target="_blank">
@@ -133,6 +134,13 @@ Not every feature in this cookbook is available on all four models. The table be
       <td>PDM Microphone recording</td>
       <td>✅</td>
       <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Capacitive touch panel</td>
+      <td>❌</td>
+      <td>❌</td>
       <td>✅</td>
       <td>❌</td>
     </tr>
@@ -1470,6 +1478,436 @@ Quick preparation:
 
 <!-- TODO: Insert serial monitor screenshot here -->
 <!-- TODO: Insert photo of SD card with WAV files on PC -->
+
+## Touch Screen (E1003 Only)
+
+:::caution E1003 exclusive feature
+The capacitive touch panel is only available on the **reTerminal E1003** (10.3" model). The E1001, E1002, and E1004 do **not** have a touch panel. If you are using any model other than E1003, skip this section.
+:::
+
+The reTerminal E1003 features a **GT911** capacitive touch controller connected via I2C. Combined with the 16-level gray ePaper display, you can build interactive applications that respond to screen taps.
+
+### Hardware Overview
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Touch controller</td>
+      <td>GT911 (Goodix)</td>
+    </tr>
+    <tr>
+      <td>Bus</td>
+      <td>I2C0 — address <strong>0x5D</strong> or <strong>0x14</strong> (auto-detected)</td>
+    </tr>
+    <tr>
+      <td>SDA</td>
+      <td>GPIO19</td>
+    </tr>
+    <tr>
+      <td>SCL</td>
+      <td>GPIO20</td>
+    </tr>
+    <tr>
+      <td>INT</td>
+      <td>GPIO2</td>
+    </tr>
+    <tr>
+      <td>RESET</td>
+      <td>GPIO48</td>
+    </tr>
+    <tr>
+      <td>Panel resolution</td>
+      <td>1872 × 1404 px</td>
+    </tr>
+  </table>
+</div>
+
+The touch controller shares the same I2C bus (GPIO19/GPIO20) with the PCF8563 RTC and the SHT4x sensor.
+
+### Full Sketch: E1003_TouchDraw
+
+The complete sketch is available in the repository: [`examples/E1003_TouchDraw/E1003_TouchDraw.ino`](https://github.com/Seeed-Projects/OSHW-reTerminal-Series-E-D/tree/main/examples/E1003_TouchDraw).
+
+<details>
+<summary>Click to expand the full E1003_TouchDraw.ino code</summary>
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+
+#include "driver.h"
+#include "TFT_eSPI.h"
+#include "TouchMapper.h"
+
+// ---------- Serial status logs (carrier USB-UART bridge) ----------
+#define PIN_SERIAL_RX       44
+#define PIN_SERIAL_TX       43
+#define LOG                 Serial1
+
+// ---------- E1003 touch pins from the schematic ----------
+#define PIN_I2C_SDA         19
+#define PIN_I2C_SCL         20
+#define PIN_TOUCH_INT        2
+#define PIN_TOUCH_RESET     48
+
+// ---------- GT911 register map ----------
+#define GT911_ADDR_1      0x5D
+#define GT911_ADDR_2      0x14
+#define GT911_REG_COMMAND 0x8040
+#define GT911_REG_PRODUCT 0x8140
+#define GT911_REG_STATUS  0x814E
+#define GT911_REG_POINT1  0x814F
+#define GT911_REG_MAX_X   0x8048
+
+#define TOUCH_POLL_MS       30
+#define DRAW_MIN_MS        450
+#define DRAW_MIN_DELTA_PX   12
+#define DOT_RADIUS          10
+
+#define E1003_PANEL_WIDTH   1872
+#define E1003_PANEL_HEIGHT  1404
+
+// Set to 1 only when the panel has obvious ghosting and you want a slow
+// black-white cleanup before the example screen appears. Normal boot uses one
+// refresh in drawStartupScreen().
+#define STRONG_BOOT_CLEAR    0
+
+static EPaper display_;
+
+static uint8_t s_touchAddr = 0;
+static uint16_t s_touchMaxX = 1;
+static uint16_t s_touchMaxY = 1;
+static uint16_t s_lastRawX = 0;
+static uint16_t s_lastRawY = 0;
+static bool s_haveLastPoint = false;
+static TouchDisplayPoint s_lastPoint = {0, 0};
+static TouchDisplayPoint s_displaySize = {E1003_PANEL_WIDTH, E1003_PANEL_HEIGHT};
+static bool s_displayReady = false;
+static unsigned long s_lastPollMs = 0;
+static unsigned long s_lastDrawMs = 0;
+
+static void updateDisplaySize()
+{
+  resolveDisplaySize(static_cast<uint16_t>(display_.width()),
+                     static_cast<uint16_t>(display_.height()),
+                     E1003_PANEL_WIDTH,
+                     E1003_PANEL_HEIGHT,
+                     &s_displaySize);
+}
+
+static bool i2cRead16(uint8_t addr, uint16_t reg, uint8_t* buf, size_t len)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  if (Wire.endTransmission(false) != 0) return false;
+
+  const uint8_t got = Wire.requestFrom(addr, static_cast<uint8_t>(len));
+  if (got != len) return false;
+
+  for (size_t i = 0; i < len; i++) {
+    buf[i] = static_cast<uint8_t>(Wire.read());
+  }
+  return true;
+}
+
+static bool i2cWrite16(uint8_t addr, uint16_t reg, uint8_t value)
+{
+  Wire.beginTransmission(addr);
+  Wire.write(static_cast<uint8_t>(reg >> 8));
+  Wire.write(static_cast<uint8_t>(reg & 0xFF));
+  Wire.write(value);
+  return Wire.endTransmission() == 0;
+}
+
+static void resetTouchController()
+{
+  pinMode(PIN_TOUCH_INT, INPUT);
+  pinMode(PIN_TOUCH_RESET, OUTPUT);
+
+  digitalWrite(PIN_TOUCH_RESET, LOW);
+  delay(20);
+  digitalWrite(PIN_TOUCH_RESET, HIGH);
+  delay(120);
+}
+
+static bool probeGt911(uint8_t addr)
+{
+  uint8_t product[4] = {};
+  if (!i2cRead16(addr, GT911_REG_PRODUCT, product, sizeof(product))) {
+    return false;
+  }
+  LOG.printf("[touch] GT9xx found at 0x%02X, product: %c%c%c%c\n",
+             addr, product[0], product[1], product[2], product[3]);
+  return true;
+}
+
+static void readTouchLimits()
+{
+  uint8_t raw[4] = {};
+  if (!i2cRead16(s_touchAddr, GT911_REG_MAX_X, raw, sizeof(raw))) {
+    s_touchMaxX = s_displaySize.x;
+    s_touchMaxY = s_displaySize.y;
+    return;
+  }
+
+  const uint16_t maxX = static_cast<uint16_t>(raw[0] | (raw[1] << 8));
+  const uint16_t maxY = static_cast<uint16_t>(raw[2] | (raw[3] << 8));
+
+  if (maxX > 0 && maxY > 0) {
+    s_touchMaxX = maxX;
+    s_touchMaxY = maxY;
+  }
+
+  LOG.printf("[touch] Touch range: %u x %u, display: %u x %u\n",
+             s_touchMaxX, s_touchMaxY, s_displaySize.x, s_displaySize.y);
+}
+
+static bool initTouch()
+{
+  resetTouchController();
+
+  if (probeGt911(GT911_ADDR_1)) {
+    s_touchAddr = GT911_ADDR_1;
+  } else if (probeGt911(GT911_ADDR_2)) {
+    s_touchAddr = GT911_ADDR_2;
+  } else {
+    LOG.println("[touch] GT9xx touch controller not found.");
+    return false;
+  }
+
+  readTouchLimits();
+  i2cWrite16(s_touchAddr, GT911_REG_COMMAND, 0x00);
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  pinMode(PIN_TOUCH_INT, INPUT_PULLUP);
+  LOG.println("[touch] Ready.");
+  return true;
+}
+
+static bool readTouchPoint(TouchDisplayPoint* point)
+{
+  uint8_t status = 0;
+  if (!i2cRead16(s_touchAddr, GT911_REG_STATUS, &status, 1)) {
+    LOG.println("[touch] Failed to read GT911 status register.");
+    return false;
+  }
+
+  const int intLevel = digitalRead(PIN_TOUCH_INT);
+  const uint8_t pointCount = status & 0x0F;
+  if (!gt911StatusRequestsRead(status, intLevel)) {
+    return false;
+  }
+
+  uint8_t raw[8] = {};
+  const bool ok = i2cRead16(s_touchAddr, GT911_REG_POINT1, raw, sizeof(raw));
+  i2cWrite16(s_touchAddr, GT911_REG_STATUS, 0x00);
+  if (!ok) {
+    LOG.println("[touch] Failed to read GT911 point data.");
+    return false;
+  }
+
+  if (pointCount == 0 && (raw[1] == 0 && raw[2] == 0 && raw[3] == 0 && raw[4] == 0)) {
+    return false;
+  }
+
+  const uint16_t rawX = static_cast<uint16_t>(raw[1] | (raw[2] << 8));
+  const uint16_t rawY = static_cast<uint16_t>(raw[3] | (raw[4] << 8));
+  s_lastRawX = rawX;
+  s_lastRawY = rawY;
+  const bool mapped = mapTouchToDisplay(rawX, rawY, s_touchMaxX, s_touchMaxY,
+                                        s_displaySize.x,
+                                        s_displaySize.y,
+                                        point);
+  return mapped;
+}
+
+static bool shouldDrawPoint(const TouchDisplayPoint& point)
+{
+  const unsigned long now = millis();
+  if (!s_haveLastPoint) return true;
+  if (now - s_lastDrawMs < DRAW_MIN_MS) return false;
+
+  const int dx = abs(static_cast<int>(point.x) - static_cast<int>(s_lastPoint.x));
+  const int dy = abs(static_cast<int>(point.y) - static_cast<int>(s_lastPoint.y));
+  return dx >= DRAW_MIN_DELTA_PX || dy >= DRAW_MIN_DELTA_PX;
+}
+
+static void drawStartupScreen(bool touchReady)
+{
+  if (!s_displayReady) return;
+
+  display_.fillSprite(TFT_WHITE);
+  display_.setTextDatum(TC_DATUM);
+  display_.setTextColor(TFT_BLACK, TFT_WHITE, true);
+  display_.setTextSize(5);
+  display_.drawString("E1003 Touch Draw", display_.width() / 2, 90);
+
+  display_.setTextSize(3);
+  display_.drawString(touchReady ? "Tap anywhere to draw dots." : "Touch controller not found.",
+                      display_.width() / 2, 180);
+  display_.drawFastHLine(80, 260, display_.width() - 160, TFT_BLACK);
+  display_.update();
+}
+
+static void drawPoint(const TouchDisplayPoint& point)
+{
+  if (!s_displayReady) return;
+
+  display_.fillCircle(point.x, point.y, DOT_RADIUS, TFT_BLACK);
+  display_.drawCircle(point.x, point.y, DOT_RADIUS + 4, TFT_GRAY_6);
+  display_.update();
+  LOG.printf("[touch] raw=(%u,%u) screen=(%u,%u)\n",
+             s_lastRawX, s_lastRawY, point.x, point.y);
+
+  s_lastPoint = point;
+  s_haveLastPoint = true;
+  s_lastDrawMs = millis();
+}
+
+static bool setupDisplay()
+{
+  LOG.printf("[display] PSRAM found: %s, free PSRAM: %u bytes\n",
+             psramFound() ? "yes" : "no",
+             static_cast<unsigned>(ESP.getFreePsram()));
+
+  if (!psramFound()) {
+    LOG.println("[display] ERROR: enable Tools -> PSRAM -> OPI PSRAM.");
+    return false;
+  }
+
+  display_.begin();
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 1-bit ePaper buffer was not created.");
+    return false;
+  }
+
+#if STRONG_BOOT_CLEAR
+  LOG.println("[display] Clearing old ePaper image...");
+  display_.fillScreen(TFT_BLACK);
+  display_.update();
+  delay(800);
+
+  display_.fillScreen(TFT_WHITE);
+  display_.update();
+  delay(800);
+#endif
+
+  display_.initGrayMode(GRAY_LEVEL16);
+  updateDisplaySize();
+
+  if (display_.width() == 0 || display_.height() == 0) {
+    LOG.println("[display] ERROR: 16-gray ePaper buffer was not created.");
+    return false;
+  }
+
+  LOG.printf("[display] Ready: %u x %u\n", s_displaySize.x, s_displaySize.y);
+  return true;
+}
+
+void setup()
+{
+  LOG.begin(115200, SERIAL_8N1, PIN_SERIAL_RX, PIN_SERIAL_TX);
+  delay(100);
+
+  LOG.println("========================================");
+  LOG.println("  E1003_TouchDraw - reTerminal E1003");
+  LOG.println("========================================");
+
+  s_displayReady = setupDisplay();
+  s_touchMaxX = s_displaySize.x;
+  s_touchMaxY = s_displaySize.y;
+
+  Wire.begin(PIN_I2C_SDA, PIN_I2C_SCL);
+  Wire.setClock(400000UL);
+
+  const bool touchReady = initTouch();
+  drawStartupScreen(touchReady);
+
+  if (!s_displayReady) {
+    LOG.println("[hint] Display is not ready; check PSRAM and Seeed_GFX setup.");
+  }
+}
+
+void loop()
+{
+  if (s_touchAddr == 0) {
+    delay(1000);
+    return;
+  }
+
+  const unsigned long now = millis();
+  if (now - s_lastPollMs < TOUCH_POLL_MS) return;
+  s_lastPollMs = now;
+
+  TouchDisplayPoint point = {};
+  if (readTouchPoint(&point) && shouldDrawPoint(point)) {
+    drawPoint(point);
+  }
+}
+```
+
+</details>
+
+### How the Code Works
+
+**Initialization sequence (`setup()`):**
+
+1. **Initialize the ePaper display** — `setupDisplay()` checks PSRAM availability (required for the 1872×1404 frame buffer), creates the EPaper object, and switches to **16-level gray mode** for smoother drawing.
+2. **Initialize I2C** at 400 kHz on GPIO19/GPIO20 — the same bus used by the PCF8563 RTC and SHT4x sensor.
+3. **Reset and probe the GT911** — the touch controller is hardware-reset via GPIO48, then probed at two possible I2C addresses (0x5D and 0x14). The sketch auto-detects which address the chip responds to.
+4. **Read touch resolution** — queries the GT911's internal max-X/max-Y registers to get the touch coordinate range.
+5. **Draw the startup screen** — displays "E1003 Touch Draw" and a prompt on the ePaper.
+
+**Touch polling loop (`loop()`):**
+
+1. **Poll every 30 ms** — reads the GT911 status register to check if a new touch event is available.
+2. **Read touch coordinates** — extracts the raw X/Y from the GT911 point data registers, then maps them to display coordinates using `mapTouchToDisplay()` (which accounts for any difference between touch resolution and display resolution).
+3. **Debounce and distance check** — a new dot is only drawn if:
+   - At least 450 ms have passed since the last draw, **or**
+   - The touch point has moved at least 12 pixels from the last drawn point.
+4. **Draw on the ePaper** — `fillCircle()` draws a solid black dot, `drawCircle()` adds a gray halo ring, then `update()` pushes the frame buffer to the ePaper panel.
+
+:::note ePaper refresh latency
+Each `update()` call triggers a full ePaper refresh, which takes about **1–2 seconds** on the E1003 panel. This is normal — ePaper is not a fast-refresh display. The debounce logic (`DRAW_MIN_MS = 450 ms`) is designed to avoid overwhelming the panel with refresh requests.
+:::
+
+### Prerequisites
+
+Before running this sketch:
+
+1. Install the **Seeed_GFX** library via Arduino Library Manager.
+2. Set **PSRAM** to **OPI PSRAM** in the Tools menu — without PSRAM, the display buffer cannot be allocated and `display_.width()` will return 0.
+3. Set **Flash Size** to **8 MB**.
+4. Select the **XIAO_ESP32S3** board.
+
+### Expected Output
+
+```
+========================================
+  E1003_TouchDraw - reTerminal E1003
+========================================
+[display] PSRAM found: yes, free PSRAM: 8159232 bytes
+[display] Ready: 1872 x 1404
+[touch] GT9xx found at 0x5D, product: 911
+[touch] Touch range: 1872 x 1404, display: 1872 x 1404
+[touch] Ready.
+```
+
+After tapping the screen:
+
+```
+[touch] raw=(468,302) screen=(468,302)
+[touch] raw=(920,756) screen=(920,756)
+[touch] raw=(1400,1100) screen=(1400,1100)
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/247.png" style={{width:600, height:'auto'}}/></div>
 
 ## Troubleshooting
 

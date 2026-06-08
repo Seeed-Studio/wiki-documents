@@ -16,7 +16,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_arduino/
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-30'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -35,7 +35,7 @@ For the **end-to-end "open the box, flash a hello world, light up sensors and bu
 
 - [reTerminal E Series — ePaper Display cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino) — covers reTerminal E1001 / E1002 / E1003 / E1004 with Hello World examples using both `Seeed_GFX` and `GxEPD2`.
 - [reTerminal E Series — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals) — full peripheral examples for the same models: LED, buzzer, three user buttons, SHT4x sensor, battery monitor, microSD card, and BMP image rendering from SD.
-- [reTerminal E Series — RTC, Low Power & Audio cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2) — RTC time management, deep sleep / light sleep, and I2S microphone recording.
+- [reTerminal E Series — RTC, Low Power, Audio & Touch cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2) — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
 - More cookbooks (XIAO 7.5" Panel, EE0x driver boards, …) coming as the corresponding products are added to the platform.
 
 If you only need the boilerplate (a `Hello World` on a brand-new product not yet covered by a cookbook), this page alone is enough.
@@ -226,7 +226,7 @@ This page intentionally stops at the boilerplate. The hardware-specific code sam
 
 - **[reTerminal E Series — ePaper Display cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — Hello World on E1001/E1002/E1003/E1004 with both `Seeed_GFX` and `GxEPD2`.
 - **[reTerminal E Series — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals)** — the full peripheral suite for the same models: LED control, buzzer (passive PWM beeps + melody playback), 3-button input, SHT4x temperature/humidity, battery management, microSD card, BMP image rendering from SD.
-- **[reTerminal E Series — RTC, Low Power & Audio cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, and I2S microphone recording.
+- **[reTerminal E Series — RTC, Low Power, Audio & Touch cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
 - **[XIAO 7.5" ePaper Panel + Arduino](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino)** — XIAO ESP32-C3 walk-through with `Seeed_GFX`.
 - **[TRMNL 7.5" DIY Kit + Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino)** — using the kit's hardware in custom Arduino sketches (rather than the TRMNL cloud platform).
 

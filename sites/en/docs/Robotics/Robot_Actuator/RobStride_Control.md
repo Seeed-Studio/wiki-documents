@@ -15,7 +15,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-19'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/robstride_control/
 ---
 

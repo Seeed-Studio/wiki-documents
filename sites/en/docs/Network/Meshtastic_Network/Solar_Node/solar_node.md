@@ -11,7 +11,7 @@ last_update:
   date: 3/10/2026
   author: Michelle Huang
 createdAt: '2025-04-08'
-updatedAt: '2026-04-20'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/meshtastic_solar_node/
 ---
 
@@ -137,12 +137,12 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
   </tr>
   <tr>
     <td><b>Waterproof rating</b></td>
-    <td>IPX5</td>
+    <td>IPX6</td>
   </tr>
   <tr>
     <td><b>Battery(for P1-Pro version)</b></td>
     <td>
-      <p>- 4 x 18650 lithium batteries (3350mAh each)</p>
+      <p>- 4 x 18650 lithium (NMC) batteries (3350mAh each)</p>
       <p>- Supporting Type-C and solar charging.</p>
       <p>- Discharge environment: -40～60°C</p>
       <p>- Charging environment: 0-50°C</p>

@@ -13,13 +13,13 @@ keywords:
 slug: /rebot_arm_b601_dm_ros2_integration
 sku: 100065783, 100095532
 last_update:
-  date: 2026-05-22
+  date: 2026-05-29
   author: YinHaizhou
 translation:
   skip:
     - [zh-CN]
 createdAt: '2026-04-29'
-updatedAt: '2026-05-22'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 ---
 
@@ -28,6 +28,13 @@ url: https://wiki.seeedstudio.com/cn/rebot_arm_b601_dm_ros2_integration/
 <p align="center">
   <img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="reBot Arm B601-DM" />
 </p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reBot-Arm-B601-DM-Bundle.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
+
+<br />
 
 <p align="center">
     <a href="./LICENSE">

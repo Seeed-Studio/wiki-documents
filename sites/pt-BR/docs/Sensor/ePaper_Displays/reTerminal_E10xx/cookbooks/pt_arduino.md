@@ -1,5 +1,5 @@
 ---
-description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — controle o display ePaper a partir do Arduino usando as bibliotecas Seeed_GFX e GxEPD2, incluindo exemplos Hello World mais escala de cinza de 4 níveis no E1001 e de 16 níveis no E1003.
+description: Livro de receitas Arduino para reTerminal E1001 / E1002 / E1003 / E1004 — controle o display de ePaper a partir do Arduino usando as bibliotecas Seeed_GFX e GxEPD2, incluindo exemplos Hello World mais escala de cinza de 4 níveis no E1001 e de 16 níveis no E1003.
 title: 'Livro de Receitas Arduino: Display ePaper (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
@@ -9,7 +9,7 @@ last_update:
   date: 05/15/2026
   author: dimo
 createdAt: '2025-08-21'
-updatedAt: '2026-05-15'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -20,14 +20,14 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/244.png" style={{width:650, height:'auto'}}/></div>
 
 :::tip Procurando os periféricos de hardware?
-Esta página se concentra em **controlar a tela ePaper** a partir do Arduino. Se você quiser usar o LED onboard, buzzer, botões, sensor SHT4x, monitor de bateria ou slot para cartão microSD, vá para **[Livro de Receitas Arduino: Periféricos Onboard](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)**.
+Esta página se concentra em **controlar a tela de ePaper** a partir do Arduino. Se você quiser usar o LED onboard, buzzer, botões, sensor SHT4x, monitor de bateria ou slot para cartão microSD, vá para **[Livro de Receitas Arduino: Periféricos Onboard](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals)**. Para RTC, modos de baixo consumo, microfone onboard e desenho com toque capacitivo, consulte **[Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque](https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_arduino_peripherals_2)**.
 
-O boilerplate compartilhado — configuração da IDE Arduino, pacote de placa ESP32, instalação de `Seeed_GFX`, geração de `driver.h` — também está em **[Trabalhar com Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino)**. Dê uma olhada nisso primeiro se você é novo em Arduino em ePaper da Seeed.
+O código base compartilhado — configuração da IDE Arduino, pacote de placa ESP32, instalação de `Seeed_GFX`, geração de `driver.h` — também está em **[Trabalhar com Arduino](https://wiki.seeedstudio.com/pt-br/epaper_work_with_arduino)**. Dê uma olhada nisso primeiro se você é novo em Arduino em ePaper da Seeed.
 :::
 
 ## Introdução
 
-A reTerminal E Series é a linha HMI industrial da Seeed Studio, construída sobre o XIAO ESP32-S3 e com displays ePaper integrados. Este livro de receitas percorre tudo o que você precisa para renderizar texto, gráficos e imagens na tela:
+A reTerminal E Series é a linha HMI industrial da Seeed Studio, construída sobre o XIAO ESP32-S3 e com displays de ePaper integrados. Este livro de receitas percorre tudo o que você precisa para renderizar texto, gráficos e imagens na tela:
 
 - Visão geral de hardware e links de compra para E1001 / E1002 / E1003 / E1004.
 - Configuração do ambiente da IDE Arduino para todos os quatro modelos (placa XIAO_ESP32S3, OPI PSRAM).
@@ -66,7 +66,7 @@ Para concluir este tutorial, prepare um dos seguintes dispositivos reTerminal E 
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=e1003" target="_blank" rel="noopener noreferrer">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Adquira agora 🖱️</font></span></strong>
         </a>
       </div></td>
@@ -81,7 +81,7 @@ Para concluir este tutorial, prepare um dos seguintes dispositivos reTerminal E 
 
 ### Preparação do Ambiente
 
-Para programar o Display ePaper do reTerminal E Series com Arduino, você precisará configurar a IDE Arduino com suporte a ESP32.
+Para programar o Display ePaper da reTerminal E Series com Arduino, você precisará configurar a IDE Arduino com suporte a ESP32.
 
 :::tip
 Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você consulte [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
@@ -99,7 +99,7 @@ Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você 
     </a>
 </div><br />
 
-**Passo 2.** Adicione o suporte à placa ESP32 na IDE Arduino.
+**Passo 2.** Adicione suporte à placa ESP32 na IDE Arduino.
 
 Na IDE Arduino, vá em **File > Preferences** e adicione a seguinte URL ao campo "Additional Boards Manager URLs":
 
@@ -115,13 +115,13 @@ Navegue até **Tools > Board > Boards Manager**, procure por "esp32" e instale o
 
 Vá em **Tools > Board > ESP32 Arduino** e selecione **XIAO_ESP32S3**.
 
-**Passo 5.** Conecte o Display ePaper do seu reTerminal E Series ao computador usando um cabo USB-C.
+**Passo 5.** Conecte o Display ePaper da sua reTerminal E Series ao computador usando um cabo USB-C.
 
 **Passo 6.** Selecione a porta correta em **Tools > Port**.
 
 ## Programação do Display ePaper
 
-O **reTerminal E1001 possui um display ePaper preto e branco de 7,5 polegadas**, enquanto o **reTerminal E1002 é equipado com um display ePaper colorido completo de 7,3 polegadas**. Ambos os displays oferecem excelente visibilidade em várias condições de iluminação com consumo de energia ultrabaixo, tornando-os ideais para aplicações industriais que exigem telas sempre ligadas com uso mínimo de energia.
+A **reTerminal E1001 possui um display ePaper preto e branco de 7,5 polegadas**, enquanto a **reTerminal E1002 é equipada com um display ePaper colorido de 7,3 polegadas**. Ambos os displays oferecem excelente visibilidade em várias condições de iluminação com consumo de energia ultrabaixo, tornando-os ideais para aplicações industriais que exigem telas sempre ligadas com consumo mínimo de energia.
 
 ### Usando a Biblioteca Seeed_GFX
 
@@ -138,7 +138,7 @@ Para controlar o display ePaper, usaremos a biblioteca Seeed_GFX, que fornece su
 **Passo 2.** Instale a biblioteca adicionando o arquivo ZIP na IDE Arduino. Vá em **Sketch > Include Library > Add .ZIP Library** e selecione o arquivo ZIP baixado.
 
 :::note
-Se você já instalou a biblioteca TFT_eSPI anteriormente, talvez seja necessário removê-la temporariamente ou renomeá-la na pasta de bibliotecas do Arduino para evitar conflitos, pois Seeed_GFX é um fork de TFT_eSPI com recursos adicionais para displays da Seeed Studio.
+Se você instalou anteriormente a biblioteca TFT_eSPI, talvez seja necessário removê-la temporariamente ou renomeá-la na pasta de bibliotecas do Arduino para evitar conflitos, pois Seeed_GFX é um fork de TFT_eSPI com recursos adicionais para displays da Seeed Studio.
 :::
 
 <Tabs>
@@ -164,20 +164,20 @@ Vamos explorar um exemplo simples que demonstra operações básicas de desenho 
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
 ```
 
-**Passo 5.** Faça o upload do sketch para o seu reTerminal E1001. Você deverá ver o display mostrando vários gráficos, incluindo linhas, texto e formas demonstrando as capacidades básicas de desenho.
+**Passo 5.** Faça o upload do sketch para o seu reTerminal E1001. Você deverá ver o display mostrando vários gráficos, incluindo linhas, texto e formas, demonstrando as capacidades básicas de desenho.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/148.jpg" style={{width:500, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Programming reTerminal E1002" label="Programando reTerminal E1002">
 
-#### Programando reTerminal E1002 (ePaper Colorido Completo de 7,3 polegadas)
+#### Programando reTerminal E1002 (ePaper Colorido de 7,3 polegadas)
 
-O display ePaper colorido completo suporta as cores vermelho, preto e branco, permitindo interfaces visualmente mais ricas.
+O display ePaper colorido suporta as cores vermelho, preto e branco, permitindo interfaces visualmente mais ricas.
 
 **Passo 1.** Abra o sketch de exemplo colorido da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
-**Passo 2.** Ative o OPI PSRAM na IDE Arduino: **Tools > PSRAM > OPI PSRAM**
+**Passo 2.** Ative OPI PSRAM na IDE Arduino: **Tools > PSRAM > OPI PSRAM**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -185,7 +185,7 @@ O display ePaper colorido completo suporta as cores vermelho, preto e branco, pe
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**Passo 4.** Copie o código de configuração gerado e cole-o no arquivo `driver.h`. O código deve se parecer com isto:
+**Passo 4.** Copie o código de configuração gerado e cole no arquivo `driver.h`. O código deve se parecer com isto:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -204,7 +204,7 @@ Siga o mesmo fluxo de trabalho usando a biblioteca Seeed_GFX para configurar e c
 
 **Passo 1.** Abra um sketch de exemplo da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
-**Passo 2.** Ative OPI PSRAM na Arduino IDE: **Tools > PSRAM > OPI PSRAM**
+**Passo 2.** Ative OPI PSRAM na IDE Arduino: **Tools > PSRAM > OPI PSRAM**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -212,7 +212,7 @@ Siga o mesmo fluxo de trabalho usando a biblioteca Seeed_GFX para configurar e c
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**Passo 4.** Copie o código de configuração gerado e cole-o no arquivo `driver.h` para o E1003.
+**Passo 4.** Copie o código de configuração gerado e cole no arquivo `driver.h` para o E1003.
 
 ```cpp
 #define BOARD_SCREEN_COMBO 522 // reTerminal E1003 (ED103TC2)
@@ -231,7 +231,7 @@ Use a biblioteca Seeed_GFX para configurar e controlar o display de ePaper color
 
 **Passo 1.** Abra o sketch de exemplo colorido da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Basic > HelloWorld**
 
-**Passo 2.** Ative OPI PSRAM na Arduino IDE: **Tools > PSRAM > OPI PSRAM**
+**Passo 2.** Ative OPI PSRAM na IDE Arduino: **Tools > PSRAM > OPI PSRAM**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -239,7 +239,7 @@ Use a biblioteca Seeed_GFX para configurar e controlar o display de ePaper color
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/arduino_1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**Passo 4.** Copie o código de configuração gerado e cole-o no arquivo `driver.h` para o E1004.
+**Passo 4.** Copie o código de configuração gerado e cole no arquivo `driver.h` para o E1004.
 
 ```cpp
 #define BOARD_SCREEN_COMBO 523 // reTerminal E1004 (T133A01)
@@ -254,14 +254,14 @@ Use a biblioteca Seeed_GFX para configurar e controlar o display de ePaper color
 
 ### Tons de Cinza em Múltiplos Níveis com Seeed_GFX
 
-Os sketches Hello World acima são intencionalmente mínimos para caberem em todos os modelos. Os painéis monocromáticos no E1001 e E1003 na verdade suportam tons de cinza em múltiplos níveis além do simples preto e branco — 4 níveis no E1001 e 16 níveis no E1003 — e a Seeed_GFX expõe ambos os modos por meio de `epaper.initGrayMode(...)` mais um conjunto de constantes de paleta `TFT_GRAY_*`. Os dois exemplos abaixo percorrem cada um deles.
+Os sketches Hello World acima são intencionalmente mínimos para caberem em todos os modelos. Os painéis monocromáticos no E1001 e E1003 na verdade suportam tons de cinza em múltiplos níveis além do simples preto e branco — 4 níveis no E1001 e 16 níveis no E1003 — e o Seeed_GFX expõe ambos os modos por meio de `epaper.initGrayMode(...)` mais um conjunto de constantes de paleta `TFT_GRAY_*`. Os dois exemplos abaixo percorrem cada um deles.
 
 <Tabs>
 <TabItem value="E1001 Advanced" label="E1001 — Tons de Cinza em 4 Níveis" default>
 
 #### Tons de Cinza em 4 Níveis no reTerminal E1001
 
-O painel monocromático de 7,5" do reTerminal E1001 pode renderizar **4 níveis de tons de cinza** em vez de apenas preto e branco. A Seeed_GFX expõe isso por meio de `epaper.initGrayMode(GRAY_LEVEL4)` e quatro constantes de paleta:
+O painel monocromático de 7,5" do reTerminal E1001 pode renderizar **4 níveis de tons de cinza** em vez de apenas preto e branco. O Seeed_GFX expõe isso por meio de `epaper.initGrayMode(GRAY_LEVEL4)` e quatro constantes de paleta:
 
 <div class="table-center">
 	<table align="center">
@@ -292,7 +292,7 @@ O exemplo abaixo primeiro pinta quatro faixas horizontais — uma por nível de 
 
 **Passo 1.** Abra o sketch de exemplo da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel4**. O sketch e seu `image.h` correspondente serão abertos no editor.
 
-**Passo 2.** Ative OPI PSRAM na Arduino IDE: **Tools > PSRAM > OPI PSRAM**.
+**Passo 2.** Ative OPI PSRAM na IDE Arduino: **Tools > PSRAM > OPI PSRAM**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/open_opi_psram.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -353,7 +353,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/236.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip Quer usar sua própria imagem?
-O array `L4_GRAY` em `image.h` é apenas um bitmap em tons de cinza 800×480 pré-convertido para um array em C. Para substituir pela sua própria imagem, gere novamente o array a partir de uma fonte em tons de cinza 800×480 usando qualquer conversor padrão de "imagem para array em C" e substitua `L4_GRAY` em `image.h`. O sketch em si não precisa ser alterado.
+O array `L4_GRAY` em `image.h` é apenas um bitmap em tons de cinza 800×480 pré-convertido para um array em C. Para substituir pela sua própria imagem, regenere o array a partir de uma fonte em tons de cinza 800×480 usando qualquer conversor padrão de "imagem para array em C" e substitua `L4_GRAY` em `image.h`. O sketch em si não precisa ser alterado.
 :::
 
 :::tip
@@ -365,7 +365,7 @@ A atualização em tons de cinza de 4 níveis é aproximadamente 4× mais lenta 
 
 #### Tons de Cinza em 16 Níveis no reTerminal E1003
 
-O painel de 10,3" do reTerminal E1003 eleva o nível para **16 níveis de tons de cinza** em resolução de 1404×1872. A Seeed_GFX expõe isso por meio de `epaper.initGrayMode(GRAY_LEVEL16)` e dezesseis constantes de paleta de `TFT_GRAY_0` (preto) até `TFT_GRAY_15` (branco):
+O painel de 10,3" do reTerminal E1003 eleva o nível para **16 níveis de tons de cinza** em resolução de 1404×1872. O Seeed_GFX expõe isso por meio de `epaper.initGrayMode(GRAY_LEVEL16)` e dezesseis constantes de paleta de `TFT_GRAY_0` (preto) até `TFT_GRAY_15` (branco):
 
 <div class="table-center">
 	<table align="center">
@@ -390,11 +390,11 @@ O painel de 10,3" do reTerminal E1003 eleva o nível para **16 níveis de tons d
 
 O exemplo abaixo pinta 16 faixas horizontais — uma por nível de cinza — para que você possa verificar visualmente a paleta completa no painel. A biblioteca Seeed_GFX já inclui isso como um exemplo pronto para gravação, com o `driver.h` correspondente pré-configurado para o E1003, então você não precisa conectar nada manualmente.
 
-**Passo 1.** Abra o sketch de exemplo da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**. O sketch é aberto junto com seu `driver.h` empacotado (já definido como `BOARD_SCREEN_COMBO 522` para o painel E1003 ED103TC2) — você não deve precisar editá-lo.
+**Passo 1.** Abra o sketch de exemplo da biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Gray > GrayLevel16**. O sketch é aberto junto com o `driver.h` incluído (já configurado como `BOARD_SCREEN_COMBO 522` para o painel E1003 ED103TC2) — você não deve precisar editá-lo.
 
-**Passo 2.** Ative o OPI PSRAM na Arduino IDE: **Tools > PSRAM > OPI PSRAM**.
+**Passo 2.** Ative o OPI PSRAM na IDE do Arduino: **Tools > PSRAM > OPI PSRAM**.
 
-**Passo 3.** Envie o sketch. A tela exibirá 16 faixas horizontais em escala de cinza, do preto puro na parte superior ao branco puro na parte inferior.
+**Passo 3.** Faça o upload do sketch. O display exibirá 16 faixas horizontais em escala de cinza, do preto puro na parte superior ao branco puro na parte inferior.
 
 Para referência, o sketch de exemplo é assim:
 
@@ -454,7 +454,7 @@ void loop()
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/237.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-A escala de cinza de 16 níveis é o modo de atualização mais lento neste painel, porque cada pixel precisa se estabilizar em 16 níveis de tensão em vez de 2. Use-o para conteúdo estático em estilo de foto e dashboards, e volte para o modo padrão de 1 bit para atualizações rápidas de UI.
+A escala de cinza de 16 níveis é o modo de atualização mais lento neste painel porque cada pixel precisa se estabilizar em 16 níveis de tensão em vez de 2. Use-o para conteúdo estático em estilo de foto e dashboards, e volte ao modo padrão de 1 bit para atualizações rápidas de interface.
 :::
 
 </TabItem>
@@ -462,11 +462,11 @@ A escala de cinza de 16 níveis é o modo de atualização mais lento neste pain
 
 ### Usando a biblioteca GxEPD2
 
-Além da Seeed_GFX, você também pode usar a biblioteca `GxEPD2` para controlar o display ePaper do reTerminal. A Seeed fez um fork da popular biblioteca `GxEPD2` e adicionou suporte dedicado para a série reTerminal E10xx, tornando-a a escolha recomendada para usuários do reTerminal.
+Além da Seeed_GFX, você também pode usar a biblioteca `GxEPD2` para controlar o display ePaper do reTerminal. A Seeed fez um fork da popular biblioteca `GxEPD2` e adicionou suporte dedicado para a série reTerminal E10xx, tornando-a a opção recomendada para usuários do reTerminal.
 
 **Instalando a biblioteca Seeed_GxEPD2**
 
-Para usar esta biblioteca com produtos reTerminal, você precisa instalar `Seeed_GxEPD2` — o fork personalizado da Seeed, especificamente adaptado para a série reTerminal E10xx.
+Para usar esta biblioteca com produtos reTerminal, você precisa instalar a `Seeed_GxEPD2` — o fork personalizado da Seeed, especificamente adaptado para a série reTerminal E10xx.
 
 **Passo 1.** Acesse o repositório Seeed_GxEPD2 no GitHub. Clique no botão "Code" e selecione "Download ZIP" para salvar a biblioteca no seu computador.
 
@@ -476,22 +476,22 @@ Para usar esta biblioteca com produtos reTerminal, você precisa instalar `Seeed
     </a>
 </div><br />
 
-**Passo 2.** Na Arduino IDE, instale a biblioteca a partir do arquivo baixado. Navegue até **Sketch > Include Library > Add .ZIP Library...** e selecione o arquivo ZIP que você acabou de baixar.
+**Passo 2.** Na IDE do Arduino, instale a biblioteca a partir do arquivo baixado. Navegue até **Sketch > Include Library > Add .ZIP Library...** e selecione o arquivo ZIP que você acabou de baixar.
 
 **Passo 3.** A biblioteca `Seeed_GxEPD2` requer a `Adafruit GFX Library` para funcionar, que você também deve instalar. A maneira mais fácil de fazer isso é pelo Library Manager: vá em **Tools > Manage Libraries...**, procure por "Adafruit GFX Library" e clique em "Install".
 
 :::note
-`Seeed_GxEPD2` é o fork personalizado da Seeed da biblioteca `GxEPD2` original, com drivers e otimizações dedicados para a série reTerminal E10xx. Recomendamos fortemente o uso deste fork em vez da biblioteca original para garantir total compatibilidade com o seu dispositivo reTerminal.
+`Seeed_GxEPD2` é o fork personalizado da Seeed da biblioteca original `GxEPD2`, com drivers dedicados e otimizações para a série reTerminal E10xx. Recomendamos fortemente o uso deste fork em vez da biblioteca original para garantir total compatibilidade com o seu dispositivo reTerminal.
 :::
 
 <Tabs>
 <TabItem value="Programming reTerminal E1001 GxEPD2" label="reTerminal E1001" default>
 
-#### Programando o reTerminal E1001 (Tela Preto e Branco de 7,5")
+#### Programando o reTerminal E1001 (Tela preto e branco de 7,5")
 
 O reTerminal E1001 possui um display ePaper preto e branco de 7,5" (800×480, painel GDEY075T7, controlador UC8179). O exemplo abaixo demonstra várias telas, incluindo uma tela de abertura, informações do sistema, tipografia, geometria, padrões e um layout de dashboard.
 
-Após instalar a biblioteca `Seeed_GxEPD2`, você pode encontrar este exemplo na Arduino IDE em **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001**, ou localizá-lo manualmente em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001/GxEPD2_reTerminal_E1001.ino`.
+Após instalar a biblioteca `Seeed_GxEPD2`, você pode encontrar este exemplo na IDE do Arduino em **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1001**, ou localizá-lo manualmente em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1001/GxEPD2_reTerminal_E1001.ino`.
 
 <details>
 <summary>Clique aqui para ver o código completo</summary>
@@ -2138,19 +2138,19 @@ A figura a seguir mostra o efeito real de exibição do exemplo E1003:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/240.png" style={{width:600, height:'auto'}}/></div>
 
-O código-fonte completo do exemplo E1003 (incluindo todas as 6 telas de demonstração com implementações completas para Splash, Informações do Sistema, Tipografia, Geometria, Padrões e Dashboard) está disponível no repositório em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/`. O exemplo inclui funções auxiliares para texto centralizado, cabeçalhos/rodapés de página e layouts em estilo de cartão otimizados para o grande display de 10,3".
+O código-fonte completo do exemplo E1003 (incluindo todas as 6 telas de demonstração com implementações completas para Splash, System Info, Typography, Geometry, Patterns e Dashboard) está disponível no repositório em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1003/`. O exemplo inclui funções auxiliares para texto centralizado, cabeçalhos/rodapés de página e layouts em estilo de cartão otimizados para o grande display de 10,3".
 
 </TabItem>
 <TabItem value="Programming reTerminal E1004 GxEPD2" label="reTerminal E1004">
 
-#### Programando o reTerminal E1004 (Tela de 13,3" e 6 cores)
+#### Programando o reTerminal E1004 (tela de 13,3" e 6 cores)
 
 O reTerminal E1004 possui um display ePaper de 13,3" e 6 cores (1200×1600, painel T133A01, controlador de chip duplo, Spectra 6). Ele suporta Preto, Branco, Vermelho, Verde, Azul e Amarelo. Este exemplo depende de um arquivo de driver personalizado `GxEPD2_T133A01_1200x1600.h` incluído na pasta do exemplo.
 
-Após instalar a biblioteca `Seeed_GxEPD2`, você pode encontrar este exemplo na IDE Arduino em **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004**, ou localizá-lo manualmente em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/`.
+Após instalar a biblioteca `Seeed_GxEPD2`, você pode encontrar este exemplo na Arduino IDE em **File > Examples > Seeed_GxEPD2 > GxEPD2_reTerminal_E1004**, ou localizá-lo manualmente em `Seeed_GxEPD2/examples/GxEPD2_reTerminal_E1004/`.
 
 ::::note
-O E1004 requer que o **OPI PSRAM** esteja habilitado na IDE Arduino: **Tools > PSRAM > OPI PSRAM**. O framebuffer de ~937 KB fica na PSRAM.
+O E1004 requer que o **OPI PSRAM** esteja habilitado na Arduino IDE: **Tools > PSRAM > OPI PSRAM**. O framebuffer de ~937 KB fica na PSRAM.
 ::::
 
 <details>
@@ -2788,13 +2788,13 @@ O código-fonte completo do exemplo E1004 (incluindo todas as 6 telas de demonst
 
 Além dos modos padrão em preto e branco e de 6 cores, alguns displays reTerminal suportam renderização em escala de cinza multinível. A biblioteca `Seeed_GxEPD2` inclui exemplos dedicados de escala de cinza que ignoram os drivers normais `GxEPD2_BW` / `GxEPD2_7C` e, em vez disso, controlam diretamente o controlador do display usando formas de onda LUT personalizadas, ainda aproveitando `Adafruit_GFX` para desenho.
 
-- **reTerminal E1001 (7.5" P&B)**: O controlador UC8179 suporta um modo de **escala de cinza de 4 níveis** por meio de tabelas LUT especializadas VCOM/WW/KW/WK/KK. É usado um framebuffer de 2bpp (96 KB), e cada pixel pode ser Preto, Cinza Escuro, Cinza Claro ou Branco.
-- **reTerminal E1003 (10.3" Monocromático)**: O controlador IT8951 suporta nativamente **escala de cinza de 16 níveis** por meio de seu modo de forma de onda GC16. Um framebuffer de 4bpp (~1,25 MB) é alocado na PSRAM, e cada pixel pode renderizar um de 16 níveis de cinza.
+- **reTerminal E1001 (7.5" P&B)**: O controlador UC8179 suporta um modo de **escala de cinza de 4 níveis** por meio de tabelas LUT especializadas VCOM/WW/KW/WK/KK. É usado um framebuffer de 2 bpp (96 KB), e cada pixel pode ser Preto, Cinza Escuro, Cinza Claro ou Branco.
+- **reTerminal E1003 (10.3" Monocromático)**: O controlador IT8951 suporta nativamente **escala de cinza de 16 níveis** por meio de seu modo de forma de onda GC16. Um framebuffer de 4 bpp (~1,25 MB) é alocado na PSRAM, e cada pixel pode renderizar um de 16 níveis de cinza.
 
 <Tabs>
-<TabItem value="Programming reTerminal E1001 Grayscale" label="reTerminal E1001 (4 tons de cinza)" default>
+<TabItem value="Programming reTerminal E1001 Grayscale" label="reTerminal E1001 (4-Gray)" default>
 
-#### Programando o reTerminal E1001 — escala de cinza de 4 níveis
+#### Programando o reTerminal E1001 — Escala de cinza de 4 níveis
 
 O controlador UC8179 do E1001 pode ser alternado do seu modo normal de 1 bit para um modo de escala de cinza de 4 níveis enviando tabelas LUT personalizadas (VCOM, LUTWW, LUTKW, LUTWK, LUTKK). Este exemplo cria um `Gray4Canvas` (2bpp, 96 KB) e usa `Adafruit_GFX` para desenho, depois envia dois planos de bits para o controlador para renderização em escala de cinza.
 
@@ -3594,7 +3594,7 @@ void loop() {}
 
 </details>
 
-A figura a seguir mostra o efeito real de exibição do exemplo de 16 níveis de escala de cinza do E1003:
+A figura a seguir mostra o efeito real de exibição do exemplo de escala de cinza de 16 níveis do E1003:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/243.png" style={{width:600, height:'auto'}}/></div>
 
@@ -3602,14 +3602,14 @@ A figura a seguir mostra o efeito real de exibição do exemplo de 16 níveis de
 </Tabs>
 
 ::::note
-Os displays ePaper têm uma taxa de atualização relativamente lenta. Os displays preto e branco (E1001, E1003) normalmente atualizam em 1–3 segundos, enquanto os displays de 6 cores (E1002, E1004) podem levar de 25 a 40 segundos para uma atualização completa. Este é um comportamento normal e é um compromisso em troca do consumo de energia ultrabaixo e da excelente visibilidade sem retroiluminação.
+Os displays de ePaper têm uma taxa de atualização relativamente lenta. Os displays em preto e branco (E1001, E1003) normalmente atualizam em 1–3 segundos, enquanto os displays de 6 cores (E1002, E1004) podem levar de 25 a 40 segundos para uma atualização completa. Este é um comportamento normal e é um compromisso em troca do consumo de energia ultrabaixo e da excelente visibilidade sem retroiluminação.
 ::::
 
 ## Solução de problemas
 
-### P1: Por que o display ePaper do reTerminal não mostra nada ou não atualiza ao executar o código acima?
+### P1: Por que o display de ePaper do reTerminal não mostra nada ou não atualiza ao executar o código acima?
 
-Esse problema pode ocorrer se você tiver inserido um cartão MicroSD no reTerminal. A razão é que o cartão MicroSD e o display ePaper compartilham o mesmo barramento SPI no reTerminal. Se um cartão MicroSD estiver inserido, mas seu pino de habilitação (chip select) não for gerenciado corretamente, isso pode causar um conflito no barramento SPI. Especificamente, o cartão MicroSD pode manter a linha BUSY em nível alto, o que impede o funcionamento correto do display ePaper — resultando em nenhuma atualização ou renovação da tela.
+Esse problema pode ocorrer se você tiver inserido um cartão MicroSD no reTerminal. O motivo é que o cartão MicroSD e o display de ePaper compartilham o mesmo barramento SPI no reTerminal. Se um cartão MicroSD estiver inserido, mas seu pino de habilitação (chip select) não for gerenciado corretamente, isso pode causar um conflito no barramento SPI. Especificamente, o cartão MicroSD pode manter a linha BUSY em nível alto, o que impede o funcionamento correto do display de ePaper — resultando em nenhuma atualização ou renovação da tela.
 
 ```cpp
 // Initialize SD Card
@@ -3618,9 +3618,9 @@ digitalWrite(SD_EN_PIN, HIGH);
 pinMode(SD_DET_PIN, INPUT_PULLUP);
 ```
 
-Para resolver isso, você deve garantir que o cartão MicroSD seja habilitado corretamente usando o código fornecido acima. O código inicializa e habilita o cartão MicroSD definindo os estados corretos dos pinos, o que evita conflitos no barramento SPI e permite que o cartão SD e o display ePaper funcionem juntos. Sempre use o código de inicialização recomendado ao usar um cartão MicroSD com o reTerminal para evitar esse tipo de problema.
+Para resolver isso, você deve garantir que o cartão MicroSD seja devidamente habilitado usando o código fornecido acima. O código inicializa e habilita o cartão MicroSD definindo os estados corretos dos pinos, o que evita conflitos no barramento SPI e permite que o cartão SD e o display de ePaper funcionem juntos. Sempre use o código de inicialização recomendado ao usar um cartão MicroSD com o reTerminal para evitar esse tipo de problema.
 
-Se o cartão MicroSD não for usado no seu projeto, recomendamos desligar o dispositivo e remover o cartão antes de executar o programa de exibição. Se o cartão tiver sido inserido no reTerminal, você precisará adicionar o código acima para garantir que a tela possa ser exibida corretamente, independentemente de você estar usando um cartão MicroSD ou não.
+Se o cartão MicroSD não for usado no seu projeto, recomendamos desligar o dispositivo e remover o cartão antes de executar o programa de exibição. Se o cartão tiver sido inserido no reTerminal, você precisará adicionar o código acima para garantir que a tela possa exibir corretamente, independentemente de você estar usando um cartão MicroSD ou não.
 
 ### P2: Por que não consigo enviar programas para o reTerminal?
 
@@ -3634,7 +3634,7 @@ Então, é provável que o seu Arduino IDE esteja configurado com uma velocidade
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

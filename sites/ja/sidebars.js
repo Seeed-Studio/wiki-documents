@@ -1946,6 +1946,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_picovoice',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_sensecraft',
                   ],
                 },
               ],
@@ -2074,6 +2075,7 @@ const sidebars = {
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lekiwi',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_lerobot_soarm',
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_ros',
               ],
             },
             {
@@ -2085,6 +2087,13 @@ const sidebars = {
               },
               items: [
                 'Sensor/reSpeaker_flex/ja_reSpeaker_flex_i2s_test',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_playback_record',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_udp_stream',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_http_stream',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_xiao_mqtt',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_doa',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_volume_xiao',
+                'Sensor/reSpeaker_flex/ja_reSpeaker_flex_gpio',
               ],
             },
             'Sensor/reSpeaker_flex/ja_reSpeaker_flex_python_control',
@@ -4035,6 +4044,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Jetson_SPI_Getting_Start',
               ]
             },
           ]
@@ -4075,6 +4085,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/ja_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',

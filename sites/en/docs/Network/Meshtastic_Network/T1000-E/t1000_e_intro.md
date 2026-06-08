@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/t1000_e_intro/
 ---
 
@@ -105,3 +105,4 @@ Available customization options: logo branding, packaging, and firmware flashing
 |Power on|Lights up and then flashes quickly|
 |DFU mode|Solid on|
 |Working|Random flashing|
+|Charging|Flashes at 0.5 Hz, toggling every second|

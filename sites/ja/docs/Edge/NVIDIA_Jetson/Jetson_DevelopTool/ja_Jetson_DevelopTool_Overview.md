@@ -7,7 +7,7 @@ keywords:
   - DevelopTool
   - AI ワークベンチ
   - Jetson 書き込み
-image: https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/Reference-UI.png
+image: https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png
 slug: /jetson_developtool_overview
 last_update:
   date: 05/26/2026
@@ -19,9 +19,11 @@ url: https://wiki.seeedstudio.com/ja/jetson_developtool_overview/
 
 **Seeed Jetson DevelopTool** は、Seeed Studio Jetson 製品向けに設計されたオールインワンの AI 開発ワークベンチです。初回のファームウェア書き込みから AI アプリのデプロイまで、最も一般的な Jetson 開発ワークフローを 1 つのデスクトップ GUI アプリケーションに統合します。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/8_SjIEZI2lQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+<br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/ui-overview.png" style={{width:800, height:'auto'}}/></div>
 

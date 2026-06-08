@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO nRF54L15 Sense 引脚复用
+title: 使用 Seeed Studio XIAO nRF54L15 Sense 进行引脚复用
 description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
@@ -11,55 +11,87 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2025-09-19'
+updatedAt: '2025-09-15'
 url: https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
-为了便于使用，以下所有引脚复用示例都基于 **PlatformIO**。请点击此链接查看 [XIAO nRF54L5](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/) 的配置和使用指南
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+为了便于使用，以下所有引脚复用示例都基于 **PlatformIO**。请点击此链接查看 [XIAO nRF54L5](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/) 的配置和使用指南。
 
 :::tip
-基于 VS Code，如果您想在 nRF Connect SDK 上使用以下案例，请参考提供的连接，添加 app.overlay 文件并修改 prj.conf 中的内容
+基于 VS Code，如果你想在 nRF Connect SDK 上使用以下示例，请参考所提供的连接，添加 app.overlay 文件并在 prj.conf 中修改内容。
 
-[XIAO nRF54L15 添加 overlay 文件并修改 conf 文件](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/)。
+[XIAO nRF54L15 添加 overlay 文件并修改 conf 文件](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_sense_getting_started/#/添加-overlay-并修改-conf-文件/)。
 
 :::
 
 ## 板载按键
 
-XIAO nRF54L15(Sense) 配备了两个重要的物理按键，它们在设备操作和固件编程中发挥着关键作用：**复位按键**和**用户按键**。了解它们的功能对于日常使用和固件更新至关重要。
+XIAO nRF54L15(Sense) 配备了两个在设备运行和固件编程中起关键作用的重要物理按键：**复位按键（Reset Button）** 和 **用户按键（User Button）**。理解它们的功能对于日常使用和固件更新至关重要。
 
 ---
 
-### 复位按键
+## 硬件概览
 
-复位按键用于对设备执行硬复位操作。
+<Tabs>
+<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
+
+### XIAO nRF54L15 正面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 背面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+
+</TabItem>
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
+
+### XIAO nRF54L15 Sense 正面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 Sense 背面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
+
+### 复位按键（Reset Button）
+
+Reset 按键用于对设备执行硬复位操作。
 
 - **功能：**
-  - **强制重启：** 按下此按键会立即中断所有当前设备操作并使其重启，类似于电源循环。
-  - **解决程序卡死：** 当设备运行的程序崩溃、进入无限循环或变得无响应时，按下复位按键是强制其恢复正常运行状态的最快方法。
-  - **不影响固件：** 复位操作不会擦除或更改已编程到设备中的固件。它只是重启当前运行的应用程序。
+  - **强制重启：** 按下该按键会立即中断设备当前的所有操作并使其重启，类似于断电重上电。
+  - **解决程序卡死：** 当设备运行的程序崩溃、进入死循环或无响应时，按下 Reset 按键是将其强制恢复到正常工作状态的最快方式。
+  - **不影响固件：** 复位操作不会擦除或更改已烧录到设备中的固件，它只是重新启动当前正在运行的应用程序。
 
 ---
 
-### 用户按键
+### 用户按键（User Button）
 
-用户按键是一个多功能的可编程输入，在您的应用程序中提供灵活的控制。
+User 按键是一个多功能、可编程的输入，在你的应用中提供灵活的控制方式。
 
 **功能：**
 
-- 可定制输入：与复位按键的固定功能不同，用户按键的操作完全由您编程的固件定义。
+- 可自定义输入：与功能固定的 Reset 按键不同，User 按键的行为完全由你编写的固件来定义。
 
-- 事件触发：它可以被编程来触发特定事件、控制不同功能，或作为应用程序的通用输入。
+- 事件触发：它可以被编程为触发特定事件、控制不同功能，或在你的应用中作为通用输入使用。
 
-## 数字
+## 数字 IO
 
 ### 硬件准备
 
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio XIAO 扩展底板配 Grove OLED</th>
-        <th>Grove - 继电器</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Grove - Relay</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -163,7 +195,7 @@ int main(void)
 
 `static const struct gpio_dt_spec button = GPIO_DT_SPEC_GET(DT_ALIAS(sw1), gpios);`
 
-- 这行代码利用 Zephyr 的设备树系统通过名为 sw1 的别名获取按钮的 GPIO 设备信息。这种方法将代码与特定的硬件引脚解耦，提高了可移植性。
+- 这行代码利用 Zephyr 的设备树系统，通过名为 sw1 的别名获取按键的 GPIO 设备信息。这种方式将代码与具体硬件引脚解耦，提高了可移植性。
 
 `static const struct gpio_dt_spec relay = GPIO_DT_SPEC_GET(DT_ALIAS(relay0), gpios);`
 
@@ -173,46 +205,46 @@ int main(void)
 
 `if (!gpio_is_ready_dt(&button))` 和 `if (!gpio_is_ready_dt(&relay))`
 
-- 在程序开始执行任何操作之前，代码检查按钮和继电器设备是否成功初始化并准备就绪。这是 Zephyr 驱动程序编程中的最佳实践，可防止设备未正确配置时程序崩溃。
+- 在程序开始执行任何操作之前，代码会检查按键和继电器设备是否成功初始化并处于就绪状态。这是 Zephyr 驱动编程中的最佳实践，可防止在设备未正确配置时导致程序崩溃。
 
 **引脚配置**
 
 `gpio_pin_configure_dt(&button, GPIO_INPUT);`
 
-- 这行代码将按钮的 GPIO 引脚配置为输入模式。这是读取引脚电平的必要步骤，程序将监控引脚的电压电平来确定按钮是否被按下。
+- 这行代码将按键的 GPIO 引脚配置为输入模式。这是读取引脚电平的必要步骤，程序会监测该引脚的电压水平以判断按键是否被按下。
 
 `gpio_pin_configure_dt(&relay, GPIO_OUTPUT_ACTIVE);`
 
-- 这行代码将继电器的 GPIO 引脚配置为输出模式。`GPIO_OUTPUT_ACTIVE` 标志通常表示引脚在配置后将处于活动状态，为控制继电器做准备。
+- 这行代码将继电器的 GPIO 引脚配置为输出模式。`GPIO_OUTPUT_ACTIVE` 标志通常表示该引脚在配置完成后会处于激活状态，以便控制继电器。
 
 **主循环逻辑**
 
-`while (1):` 代码进入无限循环，持续执行以下操作。
+`while (1):` 代码进入一个无限循环，持续执行以下操作。
 
-`int button_state = gpio_pin_get_dt(&button);:` 在每个循环中，程序读取按钮引脚的当前电平状态。
+`int button_state = gpio_pin_get_dt(&button);:` 在每次循环中，程序都会读取按键引脚当前的电平状态。
 
-`if (button_state == 0):` 此逻辑检查按钮是否被按下。在许多电路设计中，按钮按下时将引脚连接到地线（GND），导致电平为 0（即低电平）。
+`if (button_state == 0):` 此逻辑用于检查按钮是否被按下。在许多电路设计中，按下按钮会将引脚连接到地（GND），从而得到电平 0（即低电平）。
 
-`gpio_pin_set_dt(&relay, 1);:` 如果按钮状态为 0（按下），则将继电器引脚设置为 1（高电平），这会闭合继电器并打开连接到它的设备（例如灯）。
+`gpio_pin_set_dt(&relay, 1);:` 如果按钮状态为 0（被按下），则将继电器引脚设置为 1（高电平），这会闭合继电器并打开与其连接的设备（例如灯）。
 
-`else:` 如果按钮未被按下（状态为 1），执行 `gpio_pin_set_dt(&relay, 0);` 将继电器引脚设置为 0（低电平），这会断开继电器并关闭连接到它的设备。
+`else:` 如果按钮未被按下（状态为 1），则 `perform gpio_pin_set_dt(&relay, 0);` 将继电器引脚设置为 0（低电平），这会闭合继电器并关闭与其连接的设备。
 
-`k_msleep(10);:` 代码在每个循环结束时添加 10 毫秒的短暂延迟，以避免 CPU 忙等等。这是一个简单的防抖处理。这是一个简单的防抖处理，可防止由于按钮的物理抖动而导致的多次触发，同时也降低功耗。
+`k_msleep(10);:` 代码在每次循环结束时增加了 10 毫秒的短暂延时，以避免 CPU 一直处于忙碌状态等。这是一个简单的防抖处理。这个简单的防抖处理可以防止由于按钮的物理抖动导致的多次触发，同时也降低功耗。
 
 ### 结果图
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:700, height:'auto'}}/></div>
 
-## 模拟
+## 模拟量
 
 ### 硬件准备
 
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO nRF54L15 Sense</th>
-         <th>Grove-可变色LED</th>
-     <th>Grove-旋转角度传感器</th>
-     <th>Seeed Studio Grove Base for XIAO</th>
+         <th>Grove-Variable Color LED</th>
+     <th>Grove-Rotary Angle Sensor </th>
+     <th>Seeed Studio Grove Base for XIAO </th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -370,68 +402,68 @@ int main(void)
 
 - pot_pwm_example 日志模块：
 
-  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL)：这注册了一个名为 pot_pwm_example 的日志模块，并将其日志级别设置为系统的默认配置，这有助于调试。
+  - LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL)：这会注册一个名为 pot_pwm_example 的日志模块，并将其日志级别设置为系统的默认配置，以便于调试。
 
 - ADC 配置：
 
-  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif：这个预处理器指令是一个设备树检查，确保存在包含 ADC 通道定义的有效覆盖文件。这要求用户必须为特定硬件提供正确的配置。
+  - #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif：该预处理指令是一个设备树检查，用于确保存在包含 ADC 通道定义的有效 overlay 文件。这要求用户必须为特定硬件提供正确的配置。
 
-  - static const struct adc_dt_spec adc_channels[];：这部分代码利用 Zephyr 的设备树自动检索所有已配置 ADC 通道的信息。这种方法使代码灵活且可在不同硬件间移植，无需手动配置更改。
+  - static const struct adc_dt_spec adc_channels[];: 这部分代码利用 Zephyr 的设备树自动获取所有已配置 ADC 通道的信息。这种方式使代码在不同硬件之间具有良好的灵活性和可移植性，而无需手动修改配置。
 
-  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1：定义了一个宏来指定电位器连接到 adc_channels 数组中的哪个通道。
+  - #define POTENTIOMETER_ADC_CHANNEL_IDX 1：定义了一个宏，用于指定电位器连接在 adc_channels 数组中的哪个通道上。
 
 - PWM 配置：
 
-  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));：这行代码从设备树中检索别名 pwm_led 的 PWM 设备信息。这是 Zephyr 查找和引用硬件设备的标准做法。
+  - static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: 这一行从设备树中获取别名为 pwm_led 的 PWM 设备信息。这是 Zephyr 中查找和引用硬件设备的标准做法。
 
-  - #define PWM_PERIOD_NS 1000000UL：这定义了 PWM 信号周期为 1 毫秒（1,000,000 纳秒），对应频率为 1 kHz。这个频率非常适合 LED 调光，因为它足够高，可以防止可见的闪烁。
+  - #define PWM_PERIOD_NS 1000000UL: 这将 PWM 信号周期定义为 1 毫秒（1,000,000 纳秒），对应的频率为 1 kHz。这个频率非常适合用于 LED 调光，因为它足够高，可以避免可见的闪烁。
 
-**初始化和设置**
+**初始化与设置**
 
 - 日志信息：
 
-  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");：在程序开始时打印信息日志消息，通知用户示例已开始。
+  - LOG_INF("Starting Zephyr Potentiometer to PWM example...");: 在程序开始时打印一条信息日志，用于通知用户示例已经启动。
 
 - ADC 初始化：
 
-  - !adc_is_ready_dt()：在尝试使用 ADC 设备之前，执行检查以确认设备已就绪。如果设备未就绪，记录错误并退出程序。
+  - !adc_is_ready_dt(): 在尝试使用 ADC 设备之前，会先检查其是否已就绪。如果设备未就绪，则记录错误日志并退出程序。
 
-  - adc_channel_setup_dt()：此函数配置连接到电位器的特定 ADC 通道，包括其分辨率和增益。
+  - adc_channel_setup_dt(): 此函数配置连接到电位器的特定 ADC 通道，包括其分辨率和增益。
 
 - PWM 初始化：
 
-  - !device_is_ready(led.dev)：与 ADC 类似，这行代码检查 PWM 设备是否就绪。如果没有，记录错误并退出程序。
+  - !device_is_ready(led.dev): 与 ADC 类似，此行检查 PWM 设备是否已就绪。如果未就绪，则记录错误日志并退出程序。
 
-  - LOG_INF(...)：打印 PWM 周期和频率信息，帮助用户确认配置。
+  - LOG_INF(...): 打印 PWM 周期和频率信息，以帮助用户确认配置是否正确。
 
 - ADC 序列配置：
 
-  - struct adc_sequence sequence：定义了一个 adc_sequence 结构体来描述单个 ADC 转换操作。它指定了存储结果的缓冲区（adc_raw_value）、其大小（sizeof(adc_raw_value)）以及要使用的 ADC 分辨率。
+  - struct adc_sequence sequence: 定义一个 adc_sequence 结构体，用于描述一次 ADC 转换操作。它指定用于存储结果的缓冲区（adc_raw_value）、其大小（sizeof(adc_raw_value)），以及要使用的 ADC 分辨率。
 
 **主循环**
-代码的核心逻辑在无限 while (1) 循环中运行：
+代码的核心逻辑在一个无限的 while (1) 循环中运行：
 
 - ADC 读取：
 
-  - adc_sequence_init_dt()：初始化 ADC 序列以确保每次读取都使用正确的配置。
+  - adc_sequence_init_dt(): 初始化 ADC 序列，以确保每次读取都使用正确的配置。
 
-  - adc_read()：这触发 ADC 转换以从电位器读取模拟值。如果读取失败，记录错误，程序暂停 100 毫秒后继续。
+  - adc_read(): 触发一次 ADC 转换，从电位器读取模拟值。如果读取失败，则记录错误日志，并在继续之前让程序暂停 100 毫秒。
 
-  - int sensor_value = adc_raw_value;：将原始 ADC 值赋给 sensor_value 变量。
+  - int sensor_value = adc_raw_value;: 将原始 ADC 值赋给变量 sensor_value。
 
 - 将 ADC 值映射到 PWM 占空比：
 
-  - uint32_t max_adc_raw：这计算最大可能的原始 ADC 值。
+  - uint32_t max_adc_raw: 计算可能的最大原始 ADC 值。
 
-  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;：这是核心映射逻辑。它将原始 ADC 值（sensor_value）按比例缩放到 PWM 周期（PWM_PERIOD_NS）的范围，以获得调整 LED 亮度的占空比值。
+  - uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: 这是核心映射逻辑。它将原始 ADC 值（sensor_value）按比例缩放到 PWM 周期范围（PWM_PERIOD_NS）内，从而得到一个占空比值，用于调节 LED 的亮度。
 
 - 设置 PWM 占空比：
 
-  - pwm_set_dt()：此函数将新计算的占空比（output_duty_ns）应用到 PWM 设备，立即改变 LED 的亮度。
+  - pwm_set_dt(): 此函数将新计算出的占空比（output_duty_ns）应用到 PWM 设备上，立即改变 LED 的亮度。
 
-- 延迟：
+- 延时：
 
-  - k_msleep(100)：程序在每次循环后暂停 100 毫秒。这控制了 ADC 读取和 PWM 更新的频率，防止过度的 CPU 负载并提供稳定的用户体验。
+  - k_msleep(100): 每次循环后程序暂停 100 毫秒。这控制了 ADC 读取和 PWM 更新的频率，防止 CPU 负载过高，并提供稳定的用户体验。
 
 ### 结果图
 
@@ -476,7 +508,7 @@ int main(void)
 
 <details>
 
-<summary>软件</summary>
+<summary>Software</summary>
 
 ```c
 #include <zephyr/kernel.h>
@@ -958,71 +990,71 @@ static Coordinates transform(Coordinates gps)
 
 </details>
 
-**GPS 模块配置和初始化**
+**GPS 模块配置与初始化**
 
 - `gps_app` 日志模块：
 
- -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):`这注册了一个名为 gps_app 的日志模块，并将其日志级别设置为 INFO。这允许程序通过 Zephyr 的日志系统输出信息，这对调试和监控很有用。
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` 这会注册一个名为 gps_app 的日志模块，并将其日志级别设置为 INFO。这样程序就可以通过 Zephyr 的日志系统输出信息，有助于调试和监控。
 
 - 类型定义和宏：
 
- -`UBYTE`、`UWORD`、`UDOUBLE:`这些是自定义的无符号整数类型别名，通过明确变量的预期大小来提高代码可读性。
+ -`UBYTE`, `UWORD`, `UDOUBLE:`这些是自定义的无符号整数类型别名，通过明确变量的预期大小来提高代码可读性。
 
-- `SENTENCE_SIZE, BUFFSIZE:`这些定义了用于存储 NMEA 语句和更大数据缓冲区的固定大小。
+- `SENTENCE_SIZE, BUFFSIZE:` 这些定义了用于存储 NMEA 语句和更大数据缓冲区的固定缓冲区大小。
 
-- 宏如 `HOT_START, SET_NMEA_OUTPUT:`这些宏定义了发送到 L76X GPS 模块的各种 NMEA 协议命令，用于配置其操作模式、输出频率、波特率等。
+- 像 `HOT_START, SET_NMEA_OUTPUT:` 这样的宏定义了发送到 L76X GPS 模块的各种 NMEA 协议命令，用于配置其工作模式、输出频率、波特率等。
 
 - 结构体定义：
 
-  - `GNRMC:`此结构体用于存储从 GNRMC（GPS 推荐最小特定数据）NMEA 语句解析的关键信息，包括经度、纬度、时间、状态和基本方向。
+  - `GNRMC:` 该结构体用于存储从 GNRMC（GPS 推荐最小特定数据）NMEA 语句中解析出的关键信息，包括经度、纬度、时间、状态和方位。
 
-  - `Coordinates:`一个简单的结构体，用于存储地理坐标的经度和纬度。
+  - `Coordinates:` 一个用于存储地理坐标经度和纬度的简单结构体。
 
 - 全局变量和常量：
 
-  - `buff_t:`一个大小为 BUFFSIZE 的全局缓冲区，用于存储原始 UART 数据。
+  - `buff_t:` 一个大小为 BUFFSIZE 的全局缓冲区，用于存储原始 UART 数据。
 
- -`GPS:`一个全局 GNRMC 结构体实例，用于保存解析的 GPS 数据。
+ -` GPS: `一个全局 GNRMC 结构体实例，用于保存解析后的 GPS 数据。
 
-- `uart_dev:`指向 UART 设备结构体的指针，用于 UART 通信。
+- `uart_dev:` 指向 UART 设备结构体的指针，用于 UART 通信。
 
-- `new_gnrmc_available:`一个易失性布尔标志，当接收到新的有效 GNRMC 语句时设置为 true，通知主循环有新数据可供处理。
+- `new_gnrmc_available:` 一个易失性的布尔标志，当接收到新的有效 GNRMC 语句时被置为 true，用于通知主循环有新数据可供处理。
 
-- `uart_callback() 函数:`
+- `uart_callback() 函数：`
 
-  - 这是一个 UART 中断回调函数，当 UART 接收到数据时触发。
+  - 这是一个 UART 中断回调函数，在 UART 接收到数据时触发。
 
-  - 该函数逐字节读取 UART FIFO，当遇到换行符 \n 时将数据作为完整语句处理。
+  - 该函数逐字节读取 UART FIFO，并在遇到换行符 \n 时将数据作为完整语句进行处理。
 
 **主函数 main()**
 
 - 系统初始化：
 
-  - `nrfx_power_constlat_mode_request():`请求恒定延迟模式，确保电源管理不会干扰实时操作。
+  - `nrfx_power_constlat_mode_request():` 请求恒定延迟模式，以确保电源管理不会干扰实时操作。
 
-  - `uart_dev = DEVICE_DT_GET:`获取 UART 设备句柄，并使用 device_is_ready() 检查设备是否就绪。
+  - `uart_dev = DEVICE_DT_GET:` 获取 UART 设备句柄，并使用 device_is_ready() 检查设备是否就绪。
 
-  - `uart_irq_callback_user_data_set()`和 `uart_irq_rx_enable():`这些配置并启用 UART 接收中断，注册 uart_callback 函数作为中断处理程序，确保异步接收 GPS 数据。
+  - `uart_irq_callback_user_data_set()`和 `uart_irq_rx_enable():` 这些函数配置并启用 UART 接收中断，将 uart_callback 函数注册为中断处理程序，以确保 GPS 数据的异步接收。
 
 - GPS 模块初始化：
 
-  - `L76X_Send_Command(SET_NMEA_OUTPUT):`发送命令配置 GPS 模块仅输出指定的 NMEA 语句如 GNRMC，减少不必要的数据流量。
+  - `L76X_Send_Command(SET_NMEA_OUTPUT):` 发送一条命令，将 GPS 模块配置为仅输出指定的 NMEA 语句（如 GNRMC），以减少不必要的数据流量。
 
- -`L76X_Send_Command(SET_POS_FIX_1S):`将 GPS 模块的位置更新频率设置为 1 秒。
+ -` L76X_Send_Command(SET_POS_FIX_1S): `将 GPS 模块的位置更新频率设置为 1 秒。
 
 - 主循环：
 
-  - 循环无限运行，持续检查 new_gnrmc_available 标志。
+  - 循环无限运行，不断检查 new_gnrmc_available 标志。
 
-  - 如果标志为 true，它将最新的 GPS 语句从 latest_gnrmc 复制到 buff_t，然后调用 L76X_Gat_GNRMC() 解析数据。
+  - 如果该标志为 true，则将最新的 GPS 语句从 latest_gnrmc 复制到 buff_t，然后调用 L76X_Gat_GNRMC() 来解析数据。
 
-  - 根据解析结果，它打印时间、WGS-84 经纬度以及转换后的百度和谷歌坐标。
+  - 根据解析结果，打印时间、WGS-84 经度和纬度，以及转换后的百度和 Google 坐标。
 
-  - 如果 GPS.Status 为 0，它打印"定位失败"消息。
+  - 如果 GPS.Status 为 0，则打印“定位失败”的信息。
 
-  - 如果没有新数据可用，它打印"没有新的 GNRMC 数据可用"。
+  - 如果没有新数据可用，则打印“No new GNRMC data available.”。
 
-  - k_msleep(2000)：程序在每次循环后暂停 2 秒，以控制输出频率。
+  - k_msleep(2000): 程序在每次循环后暂停 2 秒，以控制输出频率。
 
 ### 结果图
 
@@ -1043,7 +1075,7 @@ static Coordinates transform(Coordinates gps)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>Seeed Studio XIAO 扩展底板</th>
+   <th>Seeed Studio Expansion Board Base for XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -1223,56 +1255,56 @@ int main(void) {
 
 ```
 
-**显示设备配置和初始化**
+**显示设备配置与初始化**
 
 - `main_app` 日志模块：
 
-  - #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL 和 LOG_MODULE_REGISTER(main_app, LOG_LEVEL) 注册一个名为 main_app 的日志模块，并将其日志级别设置为系统的默认配置。这使开发者能够通过 Zephyr 的日志系统轻松调试和输出信息。
+  - 使用 #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL 和 LOG_MODULE_REGISTER(main_app, LOG_LEVEL) 注册一个名为 main_app 的日志模块，并将其日志级别设置为系统的默认配置。这使开发者可以通过 Zephyr 的日志系统轻松进行调试和输出信息。
 
 - `display_init()` 函数：
 
-  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` 这行代码从 Zephyr 设备树中检索选定的显示设备。这种方法确保代码与硬件无关。
+  - `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` 这一行从 Zephyr 设备树中获取选定的显示设备。这种方式确保代码与具体硬件无关。
 
-  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`代码尝试将显示器的像素格式设置为 PIXEL_FORMAT_MONO10。如果失败，则尝试 PIXEL_FORMAT_MONO01。这确保显示器在单色模式下运行，这对某些显示技术（例如 OLED 或电子纸）是必需的。
+  - `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`代码尝试将显示屏的像素格式设置为 PIXEL_FORMAT_MONO10。如果失败，则尝试 PIXEL_FORMAT_MONO01。这样可以确保显示屏以单色模式工作，这对某些显示技术（例如 OLED 或电子纸）是必要的。
 
 - `framebuffer_setup()` 函数：
 
-  - `cfb_framebuffer_init(dev):`这初始化紧凑帧缓冲区（CFB）。CFB 是 Zephyr 中的轻量级图形库，用于在显示器上绘制文本和简单图形。
+  - `cfb_framebuffer_init(dev):`这会初始化 Compact Framebuffer（CFB）。CFB 是 Zephyr 中用于在显示屏上绘制文本和简单图形的轻量级图形库。
 
-  - `cfb_framebuffer_clear(dev, true):`这清除帧缓冲区并立即将其内容写入显示器，确保屏幕清洁。
+  - `cfb_framebuffer_clear(dev, true):`这会清空帧缓冲区并立即将其内容写入显示屏，确保屏幕处于干净状态。
 
-  - `display_blanking_off(dev):`这关闭显示器的消隐功能，通常表示显示器已准备好接收数据并显示图像。
+  - `display_blanking_off(dev):`这会关闭显示屏的 blanking 功能，通常表示显示屏已准备好接收数据并显示图像。
 
 - `select_font()` 函数：
 
-  - `cfb_get_font_size():`此函数循环遍历可用字体以找到合适的字体。
+  - `cfb_get_font_size():`该函数会遍历可用字体以找到合适的字体。
 
-  - 代码优先选择 `8x8` 像素字体，因为它是常见且易于阅读的小字体。
+  - 代码优先选择 ` 8x8 ` 像素字体，因为它是一种常见且易于阅读的小号字体。
 
-  - 如果找不到 `8x8` 字体，则选择第一个可用的非零大小字体作为备选。
+  - 如果未找到 `8x8` 字体，则选择第一个可用的非零大小字体作为回退选项。
 
-  - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 找到合适的字体后，将其设置为帧缓冲区的当前字体。
+  - `cfb_framebuffer_set_font(dev, chosen_font_idx):` 一旦找到合适的字体，就将其设置为帧缓冲区当前使用的字体。
 
 - `print_text_by_row_col()` 函数：
 
- -` int pixel_x = col * font_width; `和 `int pixel_y = row * font_height;:` 此函数将文本的行列坐标（以字符为单位）转换为像素坐标，使文本定位更加直观。
+ -` int pixel_x = col * font_width; `和 `int pixel_y = row * font_height;:` 该函数将文本的行列坐标（以字符为单位）转换为像素坐标，使文本定位更加直观。
 
 - `cfb_print():` 这是 CFB 库的核心函数，用于在指定像素位置打印文本。
 
 **主循环**
-代码的核心逻辑在无限 `while (1)`循环中运行：
+代码的核心逻辑在一个无限的 `while (1)` 循环中运行：
 
-- 清除屏幕：`cfb_framebuffer_clear(dev, false):` 在每个循环开始时，这清除帧缓冲区而不立即刷新显示器。这允许一次绘制多个元素，防止屏幕闪烁。
+- 清屏：`cfb_framebuffer_clear(dev, false):` 在每次循环开始时，清空帧缓冲区但不立即刷新显示屏。这样可以一次性绘制多个元素，避免屏幕闪烁。
 
 - 打印文本：
 
-  - 定义了两个字符串，`line1_text` 和 `line2_text`。
+  - 定义了两个字符串 `line1_text` 和 `line2_text`。
 
-  - print_text_by_row_col()：使用自定义函数在屏幕上的指定行列位置打印这两行文本。第一行在 `(1, 2)` 位置打印，第二行在 `(2, 1)` 位置打印。
+  - print_text_by_row_col()：使用自定义函数在屏幕上指定的行列位置打印这两行文本。第一行打印在 `(1, 2)`，第二行打印在 `(2, 1)`。
 
-  - 刷新显示器：`cfb_framebuffer_finalize(dev)`: 此函数一次性将所有待处理的绘制命令从帧缓冲区发送到显示器，使所有内容同时出现。
+  - 刷新显示屏：`cfb_framebuffer_finalize(dev)`：该函数一次性将帧缓冲区中所有待处理的绘图命令发送到显示屏，使所有内容同时显示出来。
 
-  - 延迟：`k_sleep(K_MSEC(1000)):` 每个循环后，程序暂停 1000 毫秒（1 秒）。这控制屏幕更新频率，适用于以稳定方式显示静态信息的应用程序，如时钟或传感器数据。
+  - 延时：`k_sleep(K_MSEC(1000)):` 每次循环后，程序暂停 1000 毫秒（1 秒）。这控制了屏幕的更新频率，适用于以稳定方式显示静态信息（如时钟或传感器数据）的应用。
 
 ### 结果图
 
@@ -1375,7 +1407,7 @@ int main(void)
     lv_obj_set_style_border_width(panel, 2, LV_STATE_DEFAULT);
     lv_obj_set_style_pad_all(panel, 10, LV_STATE_DEFAULT);
 
-    
+
     // Add text to the panel
     lv_obj_t *label = lv_label_create(panel);
     lv_label_set_text(label, "HELLO EPAPER");
@@ -1431,49 +1463,49 @@ int main(void)
 
 **设备初始化：**
 
-- 代码首先使用 `DEVICE_DT_GET(DT_CHOSEN(zephyr_display))` 从设备树中获取显示设备。
+- 代码首先使用 `DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).` 从设备树中获取显示设备。
 
-- 然后调用 `device_is_ready()` 检查设备是否已正确初始化并准备好进行操作。这是任何硬件交互的关键第一步。
+- 然后调用 `device_is_ready()` 来检查设备是否已正确初始化并准备好运行。这是进行任何硬件交互前的关键第一步。
 
 **LVGL 初始化：**
 
-- `lv_init()` 是 LVGL 图形库的入口点。必须在创建任何 LVGL 对象或执行任何操作之前调用它，因为它会初始化库的内部状态。
+- `lv_init()` 是 LVGL 图形库的入口函数。在创建任何 LVGL 对象或执行任何操作之前必须调用它，因为它会初始化库的内部状态。
 
-**屏幕清除：**
+**屏幕清空：**
 
-- 调用 `display_blanking_off()` 函数。对于电子纸显示器，这通常会触发完全刷新以清除屏幕上的任何旧内容。
+- 调用了 `display_blanking_off()` 函数。对于电子纸显示器，这通常会触发一次全屏刷新，以清除屏幕上的旧内容。
 
-- 为了进一步确保画布干净，代码使用 `lv_scr_act()` 获取当前活动屏幕，并使用 `lv_obj_set_style_bg_color()` 将其背景颜色设置为白色，覆盖整个显示区域。
+- 为了进一步确保画布干净，代码使用 `lv_scr_act()` 获取当前活动屏幕，并使用 `lv_obj_set_style_bg_color()` 将其背景颜色设置为白色，从而覆盖整个显示区域。
 
 **屏幕布局准备：**
 
-- 使用函数 `lv_disp_get_hor_res()` 和 `lv_disp_get_ver_res()` 获取显示器的实际宽度和高度，这有助于后续精确放置UI元素。
+- 使用 `lv_disp_get_hor_res()` 和 `lv_disp_get_ver_res()` 函数获取显示器的实际宽度和高度，这有助于后续精确放置 UI 元素。
 
-- 代码还移除了屏幕的内边距 `(lv_obj_set_style_pad_all())` 和滚动条 `(lv_obj_set_scrollbar_mode())` 以最大化可用的绘制区域。
+- 代码还移除了屏幕的内边距 `(lv_obj_set_style_pad_all())` 和滚动条 ` (lv_obj_set_scrollbar_mode()) `，以最大化可用绘图区域。
 
-**UI元素创建和配置：**
+**UI 元素创建与配置：**
 
-- 面板：使用 `lv_obj_create(scr)` 创建面板对象。使用 `lv_obj_set_size()` 和 `lv_obj_align()` 设置其大小和居中对齐。使用 `lv_obj_set_style_bg_color()` 和 `lv_obj_set_style_border_color()` 等函数配置其样式，包括白色背景和黑色边框。
+- 面板：使用 `lv_obj_create(scr)` 创建一个面板对象。通过 `lv_obj_set_size()` 和 `lv_obj_align()` 设置其尺寸和居中对齐。其样式（包括白色背景和黑色边框）通过 `lv_obj_set_style_bg_color()` 和 `lv_obj_set_style_border_color()` 等函数进行配置。
 
 - 标签：
 
   - 使用 `lv_label_create()` 创建文本标签。
 
-  - `lv_label_set_text()` 设置标签的文本内容。
+  - 使用 `lv_label_set_text()` 设置标签的文本内容。
 
   - 使用 `lv_obj_set_style_text_color()` 和 lv_obj_set_style_text_font() 设置文本颜色和字体大小。
 
-- `lv_obj_align()` 函数将每个标签放置在屏幕上的特定位置，如中心、右上角、左下角和右下角。
+- `lv_obj_align()` 函数将每个标签放置在屏幕上的特定位置，例如中心、右上角、左下角和右下角。
 
-方块：使用 for 循环创建四个小方块对象。依次设置它们的大小、样式（白色填充和黑色边框）和位置，将它们水平排列在屏幕左上角。
+方块：使用一个 for 循环创建四个小方块对象。依次设置它们的尺寸、样式（白色填充配黑色边框）和位置，将它们水平排列在屏幕左上角。
 
 **主循环：**
 
-- `while(1)` 循环是程序的连续执行部分。
+- `while(1)` 循环是程序持续执行的部分。
 
-- 在循环中持续调用 `lv_task_handler()` 来处理所有 LVGL 内部任务，如更新UI元素和处理事件。
+- 在循环中持续调用 `lv_task_handler()`，用于处理所有 LVGL 内部任务，例如更新 UI 元素和处理事件。
 
-- `k_sleep(K_MSEC(1000))` 暂停线程1000毫秒。对于静态显示
+- `k_sleep(K_MSEC(1000))` 让线程暂停 1000 毫秒。对于静态 d
 
 ### 结果图
 
@@ -1481,7 +1513,7 @@ int main(void)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

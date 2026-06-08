@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-27 10:57:58 (北京时间)
-// 多语言页面: 2298 个
+// 生成时间: 2026-06-04 16:30:32 (北京时间)
+// 多语言页面: 2314 个
 
 (function() {
   'use strict';
@@ -829,6 +829,13 @@
     "pt"
   ],
   "/jetson-docker-getting-started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_spi_getting_start": [
     "cn",
     "en",
     "es",
@@ -3362,6 +3369,20 @@
     "ja",
     "pt"
   ],
+  "/using_stream_deck_to_control_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_benchmarking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -3440,6 +3461,13 @@
     "pt"
   ],
   "/recamera_hq_poe_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started": [
     "cn",
     "en",
     "es",
@@ -4245,6 +4273,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -7932,6 +7967,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -8038,6 +8080,13 @@
     "pt"
   ],
   "/reterminal_e10xx_with_arduino_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals_2": [
     "cn",
     "en",
     "es",
@@ -10871,6 +10920,20 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_gpio_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
@@ -10920,7 +10983,49 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_http_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_mqtt_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_udp_streaming": [
     "cn",
     "en",
     "es",
@@ -11180,6 +11285,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_sensecraft": [
     "cn",
     "en",
     "es",

@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-04-21'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -148,6 +148,13 @@ conda activate rebot
 
 ### Step3: Install motorbridge
 
+:::tip
+If all scanned motors show offline, install motorbridge v0.2.9.
+
+**Note for macOS users:**
+If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
+:::
+
 After activating the reBot virtual environment, run the following command to install motorbridge:
 
 ```bash
@@ -176,6 +183,29 @@ motorbridge-gateway -- --bind 127.0.0.1:9002 --vendor damiao --transport dm-seri
       <img width={800}
       src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/motorbridge_help.png" />
   </div>
+
+## FAQ
+### 1. Loud abnormal noise occurs immediately after motor startup
+- This issue usually happens when parameter calibration is accidentally triggered during ID configuration, which overwrites factory preset parameters such as motor inertia. Use **DM_Tools_v.1.8.0.1.exe (Windows-only)** available at:
+https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM_Tools_v1.8.0.1.exe
+Export complete parameters from an intact motor of the same model via the host software, import these parameters into the faulty unit, update its corresponding CAN ID, save the written parameters, then proceed with zero-point calibration.
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/csbd_en.png" />
+</div>
+
+<div align="center">
+    <img width={400}
+    src="https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/fix_param_en.png" />
+</div>
+
+[DM4310 Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4310_Default_Parameters.txt)
+[DM4340P Default Parameters](https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/DM4340P_Default_Parameters.txt)
+
+### 2. All motors share identical CAN IDs
+- When performing zero-point calibration via **DM_Tools_v.1.8.0.1.exe (Windows-only)**, avoid clicking the Read or Set buttons next to the CAN ID field. The debug interface communicates over the CAN bus; clicking Set will unify the CAN ID for every motor connected on the CANBUS.
+
 
 #### For subsequent operation steps, please refer to our tutorial video.
 
