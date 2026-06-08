@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-04 16:30:32 (北京时间)
-// 多语言页面: 2314 个
+// 生成时间: 2026-06-08 16:00:14 (北京时间)
+// 多语言页面: 2316 个
 
 (function() {
   'use strict';
@@ -1346,6 +1346,13 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
     "cn",
     "en",
@@ -1361,6 +1368,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",

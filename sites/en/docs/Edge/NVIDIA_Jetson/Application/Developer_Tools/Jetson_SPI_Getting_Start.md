@@ -8,7 +8,7 @@ keywords:
 - SPI
 - ST7789
 - LCD  
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_02.png
 slug: /jetson_spi_getting_start
 sku: 110110145
 last_update:
