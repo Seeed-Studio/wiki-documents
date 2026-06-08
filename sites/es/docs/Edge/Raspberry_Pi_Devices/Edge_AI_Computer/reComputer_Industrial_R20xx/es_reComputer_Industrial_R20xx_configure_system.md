@@ -668,7 +668,7 @@ reComputer Industrial R20xx contiene 8x puertos DO, el usuario puede configurar 
       <tr>
         <td>DO6</td>
         <td>GPIO578</td>
-      </tr]
+      </tr>
       <tr>
         <td>DO7</td>
         <td>GPIO594</td>

@@ -603,7 +603,7 @@ O reComputer Industrial R20xx contém 8x portas DI, o usuário pode configurar e
       <tr>
         <td>DI6</td>
         <td>GPIO574</td>
-      </tr]
+      </tr>
       <tr>
         <td>DI7</td>
         <td>GPIO575</td>
