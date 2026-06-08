@@ -224,7 +224,7 @@ Here you can see how to connect speakers using either the 3.5mm AUX headphone ja
 
 #### Safe Mode
 
-**Safe Mode** is a special recovery mode on the **reSpeaker Flex** that allows you to flash firmware via **USB DFU** or I2C for devices like the Raspberry Pi and **ESP32**.
+**Safe Mode** is a special recovery mode on the **reSpeaker Flex** that allows you to flash firmware via **USB DFU** or I2C for devices like  **ESP32**.
 
 If you've previously flashed the **I2S firmware** and want to switch back to the **USB firmware**, you can enter **Safe Mode** and reflash the USB firmware using **USB DFU**.
 
@@ -256,8 +256,7 @@ If you've previously flashed the **I2S firmware** and want to switch back to the
 - **Power off** the device completely.
 - **Press and hold the Boot button**.
 - While holding the **Boot button, reconnect the power.**
-- The **red LED will start blinking**, confirming that the device has entered **Safe Mode.**
-Now the device is running the **Safe Mode firmware stored in the Factory partition.**
+Use the DFU util command line tool to check the DFU partitions; see the **Install DFU Util** section below for more details.
 
 ### Update firmware
 
