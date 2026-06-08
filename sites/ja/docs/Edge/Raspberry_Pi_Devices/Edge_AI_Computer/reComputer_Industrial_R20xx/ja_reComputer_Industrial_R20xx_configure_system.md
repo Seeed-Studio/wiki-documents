@@ -11,7 +11,7 @@ last_update:
   date: 09/28/2025
   author: Nolan Chen
 createdAt: '2025-09-28'
-updatedAt: '2026-04-24'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_configure_system/
 ---
 
@@ -31,7 +31,7 @@ url: https://wiki.seeedstudio.com/ja/recomputer_industrial_r20xx_configure_syste
 
 GPIO マッピングとオフセットを確認するには、次の手順に従います。
 
-1. GPIO マッピングを確認するには、次のコマンドをコピー＆ペーストします。
+1. 次のコマンドをコピー＆ペーストして、GPIO マッピングを確認します。
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -100,7 +100,7 @@ gcc spidev_test.c -o spidev_test
 ```
 
 このコマンドは、指定した SPI デバイス（**/dev/spidev10.0**）上で SPI 通信をテストし、詳細出力（ -v ）を有効にして、メッセージ "hello"（**-p hello**）を送信します。
-TPM モジュールの MISO と MOSI ピンをショートさせることで、MOSI から送信されたデータが MISO で受信されるループバックの状態を作ります。この構成により、実際のデバイスを接続せずに SPI 通信をテストできます。
+TPM モジュールの MISO と MOSI ピンをショートさせることで、MOSI から送信されたデータが MISO で受信されるループバック状態を作り出します。この構成により、実際のデバイスを接続しなくても SPI 通信をテストできます。
 
 ## Wi-Fi スキャン
 
@@ -124,13 +124,13 @@ sudo bluetoothctl
 
 このコマンドで Bluetooth 制御インターフェースが開きます。そこから、周辺の Bluetooth デバイスをスキャンするための追加コマンドを実行できます。
 
-**スキャンを有効にする：**  
+**スキャンを有効化する：**  
 
 ```bash
 scan on
 ```
 
-このコマンドで周辺の Bluetooth デバイスのスキャンが開始されます。その後、***bluetoothctl*** インターフェース内で、ペアリングや接続など、Bluetooth デバイスとやり取りするための他のコマンドを使用できます。
+このコマンドで周辺の Bluetooth デバイスのスキャンが開始されます。その後、***bluetoothctl*** インターフェース内の他のコマンドを使用して、ペアリングや接続など、Bluetooth デバイスとやり取りできます。
 
 ## Mini-PCIe 経由の LoRa®
 
@@ -343,7 +343,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.2_lora_usb_1.png" style={{width:800, height:'auto'}}/></div>
 
-このコマンドは、LoRa® USB 用に使用する設定ファイルを指定します。
+このコマンドは、LoRa® USB に使用する設定ファイルを指定します。
 
 ## M.2 B-KEY 経由の 5G セルラー
 
@@ -392,7 +392,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-10〜15 秒後（モジュールの電源オンと USB の列挙に時間がかかります）、デバイスノードが表示されるか確認します：
+10〜15 秒後（モジュールの電源投入と USB の列挙に時間がかかります）、デバイスノードが出現するか確認します：
 
 ```bash
 ls /dev/ttyUSB*
@@ -435,7 +435,7 @@ ATD<phone_number>;
 sudo nano power_4g.sh
 ```
 
-sudo nano で開き、次のコマンドを入力してから、ctrl+x を押して保存して終了します。
+sudo nano で開き、次のコマンドを入力してから ctrl+x を押して保存して終了します。
 
 ```bash
 # SIM_MUX_SEL
@@ -450,7 +450,7 @@ echo  0  >  gpio643/value
 sudo ./power_4g.sh
 ```
 
-10〜15 秒後（モジュールの電源オンと USB の列挙に時間がかかります）、デバイスノードが表示されるか確認します：
+10〜15 秒後（モジュールの電源投入と USB の列挙に時間がかかります）、デバイスノードが出現するか確認します：
 
 ```bash
 ls /dev/ttyUSB*
@@ -471,8 +471,8 @@ minicom に入ってコマンドを送信します：
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-● ***Ctrl+A,Z,E*** を順番に押します。まず AT を送信して接続されているかテストします。OK が表示されれば、接続は成功です。
-次のコマンドを実行すると、モジュールは自動的に再起動します。minicom を終了しなければ、対応する設定情報を見ることができます。
+● ***Ctrl+A,Z,E*** を順番に押します。まず AT を送信して接続されているかテストします。OK が表示されれば接続は成功です。
+次のコマンドを実行すると、モジュールは自動的に再起動します。minicom を終了しなければ、対応する設定情報を確認できます。
 ECM ダイヤルアップによるインターネット接続：
 
 ```bash
@@ -482,7 +482,7 @@ AT+QCFG="usbnet",1
 最後の行に OK と表示されれば成功です。
 
 > Note
-> デバイスはしばらく待つ必要があり、その後 ifconfig で usb0 の IP アドレスを確認できます。
+> しばらく待つ必要があり、その後 ifconfig で usb0 の IP アドレスを確認できます。
 
 ネットワーク状態と通信をテストします：
 
@@ -524,13 +524,13 @@ sudo minicom -D /dev/ttyACM2
 - さらに ***O*** を押して設定を開き、Serial port setup を選択して ***Enter*** を押します。すべての RS485 関連インターフェースを開き、***H/I/J/K/L*** を順番に押して有効にします。
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- すべてが "YES" と表示されたら、Enter を押して戻り、その後 Exit を選択して終了します。
+- すべてが "YES" と表示されたら Enter を押して戻り、その後 Exit を選択して終了します。
 
 :::note
 
 ACM2 と ACM3 を例にとります：
-ACM2 から ACM3 に送信したい場合、ACM2 を再度設定する必要があります：***ctrl+A***、次に ***Z***、さらに ***E*** を押してからシリアルポート書き込みコマンドを開始します。このとき、ACM2 で任意の文字列を出力でき、同時に ACM3 で ACM2 の内容を見ることができます。
-逆に、ACM3 から ACM2 に送信したい場合、ACM3 を再度設定する必要があります：***ctrl+A***、次に ***Z***、さらに ***E*** を押してからシリアルポート書き込みコマンドを開始します。このとき、ACM3 で任意の文字列を出力でき、同時に ACM2 で ACM3 の内容を見ることができます。図のようになります。
+ACM2 から ACM3 に送信したい場合、ACM2 を再度設定する必要があります：***ctrl+A*** を押し、次に ***Z***、さらに ***E*** を押してからシリアルポート書き込みコマンドを開始します。このとき、ACM2 で任意の文字列を出力でき、同時に ACM3 で ACM2 の内容を見ることができます。
+逆に、ACM3 から ACM2 に送信したい場合、ACM3 を再度設定する必要があります：***ctrl+A*** を押し、次に ***Z***、さらに ***E*** を押してからシリアルポート書き込みコマンドを開始します。このとき、ACM3 で任意の文字列を出力でき、同時に ACM2 で ACM3 の内容を見ることができます。図のようになります。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
@@ -567,7 +567,7 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 
 ## DI（デジタル入力）テスト
 
-reComputer Industrial R20xx には 8 つの DI ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R20xx には 8 つの DI ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -620,7 +620,7 @@ DI ポートの入力タイプは PNP です。5VDC〜24VDC の入力電圧を�
 DI の機能をテストするには、次の手順に従ってテストできます：
 
 1. reComputer Industrial R20xx の DI ポートと外部負荷との接続が完了していることを確認します。
-2. 次のコマンドを入力して GPIO のステータスを取得します：
+2. 次のコマンドを入力して GPIO の状態を取得します：
 
 ```bash
 echo 588 > /sys/class/gpio/export
@@ -632,7 +632,7 @@ cat /sys/class/gpio/gpio588/value
 
 ## DO（デジタル出力）
 
-reComputer Industrial R20xx には 8 つの DO ポートが含まれており、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
+reComputer Industrial R20xx には 8 つの DO ポートがあり、ユーザーは実際のニーズに応じてこれらのポートを設定できます。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -664,7 +664,7 @@ reComputer Industrial R20xx には 8 つの DO ポートが含まれており、
       <tr>
         <td>DO5</td>
         <td>GPIO577</td>
-      </tr>
+      </tr]
       <tr>
         <td>DO6</td>
         <td>GPIO578</td>
@@ -681,11 +681,11 @@ reComputer Industrial R20xx には 8 つの DO ポートが含まれており、
   </table>
 </div>
 
-DO ポートの出力タイプはトランジスタです。60 VDC 未満の出力電圧と、500 mA の電流容量をサポートします。
+DO ポートの出力タイプはトランジスタです。出力電圧は 60 VDC 未満、電流容量は 500 mA をサポートします。
 DO の機能をテストするには、次の手順に従ってテストできます：
 
-1. reComputer Industrial R20xx の DO ポートと外部負荷との接続を完了します。
-2. 次のコマンドを入力して、出力を High レベルまたは Low レベルに設定します：
+1. reComputer Industrial R20xx の DO ポートと外部負荷との接続を完了させます。
+2. 出力を High レベルまたは Low レベルに設定するために、次のコマンドを入力します：
 
 ```bash
 echo 638 > /sys/class/gpio/export
@@ -698,7 +698,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 ## USB ハブのテスト
 
-USB ハブをテストするには、次の手順を使用します：
+USB ハブをテストするには、次の手順を使用できます：
 
 1. ***lsusb*** コマンドを実行して、USB ハブが検出されているか確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスを一覧表示します。
 
@@ -707,17 +707,17 @@ lsusb
 ```
 
 このコマンドを実行すると、システムに接続されている USB デバイスに関する情報が表示され、その中に存在する USB ハブも含まれます。
-USB ハブが正常に動作している場合、lsusb コマンドの出力にその詳細が表示されます。表示されない場合は、ハブまたはシステムへの接続に問題がある可能性があります。そのような場合は、USB ハブまたはその接続をトラブルシューティングする必要があります。
+USB ハブが正常に動作している場合、lsusb コマンドの出力にその詳細が表示されます。表示されない場合は、ハブまたはシステムとの接続に問題がある可能性があります。そのような場合は、USB ハブまたはその接続をトラブルシューティングする必要があります。
 
 ## RTC（リアルタイムクロック）のテスト
 
 :::note
 reComputer デバイスには CM5 チップが搭載されているため、デバイス上には 2 つの RTC ユニットがあります：① CM5 の内蔵 RTC（rtc0）、② reComputer 上に実装された RTC（rtc1）です。
 
-rtc0 は時刻データを保持できません。したがって、RTC 機能を使用するには、時刻を設定する際にデバイス番号 rtc1 を手動で指定する必要があります。
+rtc0 は時刻データを保持できません。そのため、RTC 機能を使用するには、時刻を設定する際にデバイス番号 rtc1 を手動で指定する必要があります。
 :::
 
-リアルタイムクロック（RTC）機能をテストするには、次の手順に従います：
+リアルタイムクロック（RTC）の機能をテストするには、次の手順に従います：
 
 1. 自動時刻同期を無効にします：
 
@@ -734,13 +734,13 @@ sudo hwclock --set --date "2025-7-17 12:00:00" -f /dev/rtc1
 ```
 
 3. RTC 時刻をシステムに同期します
-システム時刻を RTC の時刻に合わせて更新します：  
+システム時刻を RTC 時刻に合わせて更新します：  
 
 ```bash
 sudo hwclock --hctosys -f /dev/rtc1
 ```
 
-4. RTC の時刻を確認します：
+4. RTC 時刻を確認します：
 
 ```bash
 sudo hwclock -r -f /dev/rtc1
@@ -748,9 +748,69 @@ sudo hwclock -r -f /dev/rtc1
 
 このコマンドは、RTC に保存されている時刻を読み取り、表示します。
 
-5. RTC から電源を切り離し、数分待ってから再接続し、RTC の時刻が正しく保持されているか再度確認します。
+5. RTC から電源を切り離し、数分待ってから再接続し、RTC 時刻が正しく保持されているかどうかを再度確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
+
+### RTC1 をシステムハードウェアクロックとして使用する
+
+デフォルトの RTC デバイスは rtc0 であり、時刻同期サービスはシステム時刻をデフォルトの RTC デバイスにのみ同期します。rtc1 をプライマリのハードウェアクロックとして使用するには、起動時に rtc1 から時刻を読み取り、定期的に現在のシステム時刻を書き戻すカスタム systemd サービスを作成します。
+
+1. hctosys 用のサービスを作成する
+
+起動時に rtc1 からシステム時刻を読み込む systemd サービスを作成します。
+
+```bash
+sudo tee /etc/systemd/system/rtc1-hctosys.service >/dev/null <<'EOF'
+[Unit]
+Description=Load system time from RTC1
+After=dev-rtc1.device
+Wants=dev-rtc1.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --hctosys --utc -f /dev/rtc1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable rtc1-hctosys.service
+```
+
+2. systohc 用のサービスを作成する
+
+現在のシステム時刻を rtc1 に保存する systemd サービスと、そのサービスを定期的に実行するタイマーを作成します。
+
+```bash
+sudo tee /etc/systemd/system/rtc1-systohc.service >/dev/null <<'EOF'
+[Unit]
+Description=Save system time to RTC1
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --systohc --utc -f /dev/rtc1
+EOF
+
+sudo tee /etc/systemd/system/rtc1-systohc.timer >/dev/null <<'EOF'
+[Unit]
+Description=Periodically save system time to RTC1
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=rtc1-systohc.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now rtc1-systohc.timer
+```
+
+このタイマーは、起動から 2 分後に開始し、その後 10 分ごとに rtc1 を更新します。必要に応じて間隔を調整できます。
 
 ## ウォッチドッグタイマーのテスト
 
@@ -813,16 +873,16 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-このコマンドはカーネルクラッシュを引き起こし、ウォッチドッグによってシステムが再起動されるはずです。
+このコマンドはカーネルクラッシュをトリガーし、ウォッチドッグによってシステムが再起動されるはずです。
 
 5. 指定したタイムアウト時間後にシステムが再起動することを確認するため、システムを監視します。
-これらの手順により、システム上のウォッチドッグタイマーの機能をテストし、確認できます。
+これらの手順により、システム上のウォッチドッグタイマーの機能をテストし、確認することができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
 ## GPIO によるブザーの制御  
 
-ブザーに対応する GPIO は gpio627 です。次のスクリプトを入力して、ブザーをオン／オフします：
+ブザーに対応する GPIO は gpio627 です。ブザーをオン／オフするには、次のスクリプトを入力します：
 
 1. ブザーをオンにする：
 
@@ -830,7 +890,7 @@ echo "c" > /proc/sysrq-trigger
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
-```  
+```
 
 2. ブザーをオフにする：ブザーをオフにする：
 
@@ -838,35 +898,35 @@ echo 1 > /sys/class/gpio/gpio627/value
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction 
 echo 0 > /sys/class/gpio/gpio627/value
-```  
+```
 
 ## TPM 2.0
 
-TPM 2.0 モジュールをデバイスに接続している場合、次のコードで TPM 接続を確認できます。
+TPM 2.0 モジュールをデバイスに接続した場合、次のコードで TPM 接続を確認できます。
 
 ```bash
 ls /dev | grep tpm
-```  
+```
 
 **出力の解釈：**  
 
-出力に ***tpm0*** と ***tpmrm0*** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識され、アクセス可能であることを示しており、良好な状態です。TPM 関連の機能やアプリケーションを、デバイスが存在しアクセス可能であることを前提に進めることができます。
+出力に ***tpm0*** と ***tpmrm0*** が表示される場合、TPM（Trusted Platform Module）デバイスがシステム上で検出され、利用可能であることを意味します。これは TPM ハードウェアが認識され、アクセス可能であることを示しており、良好な状態です。TPM デバイスが存在しアクセス可能であることを前提に、TPM 関連の機能やアプリケーションを使用することができます。
 
 ## ATECC608A
 
-ATECC608A デバイスとやり取りしてランダムなシリアル番号を生成するには、次の手順に従います：
+ATECC608A デバイスとやり取りし、ランダムなシリアル番号を生成するには、次の手順に従います：
 
 1. atecc-util リポジトリをクローンします：
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
-```  
+```
 
 2. .deb パッケージの内容を現在のディレクトリに展開します：
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
-```  
+```
 
 3. atecc ディレクトリに移動します：
 
@@ -885,29 +945,29 @@ cd usr/bin
 
 ## EEPROM とのやり取り
 
-EEPROM（電気的消去可能プログラマブル読み出し専用メモリ）とやり取りするためのコマンドは次のとおりです：
+EEPROM（Electrically Erasable Programmable Read-Only Memory）とやり取りするためのコマンドは次のとおりです：
 
 1. EEPROM デバイスファイルに対して、読み取り・書き込み・実行のフルパーミッションを付与します：
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 2. 文字列 "This is a test string" を EEPROM デバイスに書き込みます：
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 3. EEPROM デバイスの内容を読み取り、hexdump ユーティリティを使用して ***16 進数*** 形式で表示します：
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
-```  
+```
 
 ## SSD 検出の確認
 
-SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。手順は次のとおりです：
+SSD を含むディスクを一覧表示するには、fdisk -l コマンドを使用できます。方法は次のとおりです：
 
 ```bash
 sudo fdisk -l
@@ -918,17 +978,17 @@ SSD に対応するエントリを特定したら、必要に応じてパーテ�
 
 ## 安全なシャットダウンのための UPS
 
-CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告するために使用されます。その後、CPU はスーパーキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、"$ shutdown" を実行する必要があります。
+CPU と DC 電源入力の間の GPIO6 は、電源が落ちたときに CPU に警告を出すために使用されます。その後、CPU はスーパキャパシタのエネルギーが尽きる前にスクリプト内で緊急処理を行い、「$ shutdown」を実行する必要があります。
 この機能を使用する別の方法は、GPIO ピンの変化をトリガとしてシャットダウンを開始することです。指定された GPIO ピンは、KEY_POWER イベントを生成する入力キーとして構成されます。このイベントは systemd-logind によって処理され、シャットダウンが開始されます。
 
 1. ハードウェア接続。
 
-UPS デバイスの ***'CM5_UPS_DET'*** ピンが、R20xx デバイスの GPIO16 ピンに接続されていることを確認してください。
+UPS デバイスの ***'CM5_UPS_DET'*** ピンが R20xx デバイスの GPIO16 ピンに接続されていることを確認してください。
 
 2. 設定ファイルを変更します。
 
 - ターミナルを開きます。
-- 次のコマンドを実行して設定ファイルを編集します：
+- 設定ファイルを編集するために、次のコマンドを実行します：
 
 ```bash
 sudo nano /boot/firmware/config.txt
@@ -942,9 +1002,9 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.23_ups_for_safe_shut_down_1.png" style={{width:800, height:'auto'}}/></div>
 
-エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定、***`Ctrl+X`*** で終了）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定し、***`Ctrl+X`*** で終了します）。
 
-4. Python スクリプトを準備します
+4. Python スクリプトを準備する
 
 - 新しい Python スクリプトファイルを作成します：
 
@@ -997,7 +1057,7 @@ while True:
         os.system('sudo shutdown -h now')
 ```
 
-エディタを保存して終了します（***`Ctrl+O`*** を押して保存し、***`Enter`*** で確定し、***`Ctrl+X`*** で終了します）。
+エディタを保存して終了します（***`Ctrl+O`*** で保存し、***`Enter`*** で確定し、***`Ctrl+X`*** で終了します）。
 
 5. スクリプトを実行します。
 
@@ -1009,10 +1069,10 @@ sudo python3 ups_shutdown.py
 ```
 
 :::note
- `sudo` を使用して、スクリプトがシャットダウンコマンドを実行するために十分な権限を持つようにします。
+ シャットダウンコマンドを実行するためにスクリプトに十分な権限を与えるには、`sudo` を使用してください。
 :::
 
-6. 電源障害テストのシミュレーション
+6. 停電テストをシミュレートする
 
 - 外部電源を遮断します。
 - システムが自動的にデータを保存してシャットダウンするかどうかを確認します。
@@ -1034,7 +1094,7 @@ sudo python3 ups_shutdown.py
 ## AI アクセラレータ
 
 reComputer Industrial R20xx の M.2 M-KEY 2280 スロットは、PCIE M.2 AI アクセラレータを搭載できるように設計されています。また、R20xx-12 シリーズには最大 26TOPS の Hailo-8 M.2 AI アクセラレーションがプリインストールされています。
-R20xx-10 シリーズ製品を購入された場合は、AI 機能を有効にするために Hailo の NPU モジュールを別途購入する必要があります。
+R20xx-10 シリーズ製品を購入した場合は、AI 機能を有効にするために Hailo の NPU モジュールを購入する必要があります。
 本デバイスには Hailo アクセラレータドライバがプリインストールされているため、そのまま使用してテストケースを実行できます：
 
 1. テストケースディレクトリに移動します
@@ -1049,7 +1109,7 @@ cd /mnt/hailo-rpi5-examples/
 source ./setup_env.sh
 ```
 
-3. シンプルな検出サンプルを実行します
+3. 簡易検出サンプルを実行します
 
 ```bash
 python basic_pipelines/detection_simple.py
@@ -1061,12 +1121,12 @@ python basic_pipelines/detection_simple.py
 これは検出サンプルの軽量版であり、CPU 負荷を最小限に抑えつつ Hailo の性能を示すことに主眼を置いています。内部の GStreamer ビデオ処理パイプラインは、ビデオ処理タスクを最小限にすることで簡略化されており、YOLOv6 Nano モデルが使用されています。
 
 :::note
-購入された reComputer に Hailo-8 が含まれておらず、Hailo デバイスを購入して統合することを検討している場合は、公式の Hailo ドキュメント（https://github.com/hailo-ai）を参照して、ファームウェアと環境を構成し、サンプルを実行してデバイスが正常に使用できることを確認してください。
+購入した reComputer に Hailo-8 が含まれておらず、統合用に Hailo デバイスの購入を検討している場合は、公式の Hailo ドキュメント（https://github.com/hailo-ai）を参照してファームウェアと環境を構成し、サンプルを実行してデバイスが正常に使用できることを確認してください。
 :::
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
