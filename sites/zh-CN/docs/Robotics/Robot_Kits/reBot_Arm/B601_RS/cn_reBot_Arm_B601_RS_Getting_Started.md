@@ -1,6 +1,6 @@
 ---
-description: 本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括购买选项、组装、校准和软件配置。
-title: reBot Arm B601-DM 快速入门
+description: 本指南将帮助您快速上手 reBot Arm B601-RS 机械臂，包括购买选项、组装、校准和软件配置。
+title: reBot Arm B601-RS 快速入门
 keywords:
   - reBot
   - B601-DM
