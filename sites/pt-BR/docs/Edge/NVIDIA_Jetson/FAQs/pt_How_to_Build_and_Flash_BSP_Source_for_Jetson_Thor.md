@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 As configurações padrão da placa já estão definidas para **Thor J601**:
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ Para a primeira gravação, o fluxo dividido `prepare -> build -> flash` é reco
 Use variáveis de ambiente quando precisar substituir os padrões:
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \

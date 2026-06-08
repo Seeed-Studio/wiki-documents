@@ -14,7 +14,7 @@ last_update:
   date: 05/29/2025
   author: ZhuYaohui
 createdAt: '2023-01-12'
-updatedAt: '2026-04-23'
+updatedAt: '2026-04-30'
 url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 ---
 
@@ -81,6 +81,10 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
 
           <h3>🦾 reBot Arm</h3>
           <div className="card-container">
+              <a href="/pt-br/rebot_b601_rs_getting_started/" className="content-card">
+                <span className="text">Introdução ao reBot B601-RS</span>
+                <span className="tag recommended">Novo</span>
+              </a>
               <a href="/pt-br/rebot_b601_dm_getting_started/" className="content-card">
                 <span className="text">Introdução ao reBot B601-DM</span>
                 <span className="tag recommended">Novo</span>
@@ -92,7 +96,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
                 <span className="text">reBot com LeRobot</span>
               </a>
               <a href="/pt-br/rebot_arm_b601_dm_grasping_demo/" className="content-card">
-                <span className="text">Demo de Pega Visual do reBot</span>
+                <span className="text">Demo de Pegada Visual do reBot</span>
               </a>
               <a href="/pt-br/rebot_arm_b601_dm_ros2_integration/" className="content-card">
                 <span className="text">Integração do reBot B601-DM com ROS2</span>
@@ -163,7 +167,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
               </a>
           </div>
 
-          <h3>🖐️ Hand</h3>
+          <h3>🖐️ Mão</h3>
           <div className="card-container">
               <a href="/pt-br/hand_amazinghand/" className="content-card">
                 <span className="text">AmazingHand</span>
@@ -171,7 +175,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
               </a>
           </div>
 
-          <h3>🦀 End Effectors</h3>
+          <h3>🦀 Efetores Finais</h3>
           <div className="card-container">
               <a href="/pt-br/dm_gripper/" className="content-card">
                 <span className="text">Garra DM</span>
@@ -237,7 +241,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           </a>
       </div>
 
-      <strong>📷 Camera</strong>  
+      <strong>📷 Câmera</strong>  
 
       <div className="card-container">
           <a href="/pt-br/orbbec_gemini2/" className="content-card">
@@ -345,7 +349,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <span className="tag recommended">Novo</span>
       </a>
       <a href="/pt-br/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">SO100 Arm Isaac Sim</span>
+        <span className="text">Simulação do braço SO100 no Isaac</span>
         <span className="tag recommended">Novo</span>
       </a>
       </div>
@@ -382,7 +386,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 8h</span></div>
           <h3>Noções básicas de ROS 1: 8 aulas</h3>
           <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos</p>
-          <span className="btn-start">Aprender</span>
+          <span className="btn-start">Aprendizado</span>
         </div>
       </a>
 
@@ -393,7 +397,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 8h</span></div>
           <h3>Simulação de robô ROS 1: 7 aulas.</h3>
           <p>	Do modelamento à navegação autônoma.</p>
-          <span className="btn-start">Aprender</span>
+          <span className="btn-start">Aprendizado</span>
         </div>
       </a>
 
@@ -404,7 +408,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 8h</span></div>
           <h3>Noções básicas de ROS 2 Humble: 8 aulas</h3>
           <p>Aprenda sobre nós, tópicos, serviços e conceitos básicos</p>
-          <span className="btn-start">Aprender</span>
+          <span className="btn-start">Aprendizado</span>
         </div>
       </a>
 
@@ -469,7 +473,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
     </div>
 
     <!-- Section 2: Robot Applications -->
-    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações de Robôs</h3>
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 Aplicações em Robótica</h3>
     <div className="course-grid">
 
       <!-- Humanoid -->
@@ -477,7 +481,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
         <div className="course-cover c-human">Humanoide</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Iniciante</span> <span>⏱️ 5h</span></div>
-          <h3>Curso de robôs humanoides com pequenos servos </h3>
+          <h3>Curso de pequenos robôs humanoides com servo </h3>
           <p>Acionamento de hardware, coreografia de movimento e dança, e desenvolvimento secundário para pequenos robôs humanoides.</p>
           <span className="btn-plan">Planejamento</span>
         </div>
@@ -513,7 +517,7 @@ url: https://wiki.seeedstudio.com/pt-br/robotics_page/
           <div className="course-meta"><span className="level int">Intermediário</span> <span>⏱️ 8h</span></div>
           <h3>Curso de robôs com rodas e pernas Stackforce</h3>
           <p>Controle de equilíbrio e planejamento de movimento LQR para robôs híbridos.</p>
-          <span className="btn-start">Aprender</span>
+          <span className="btn-start">Aprendizado</span>
         </div>
       </a>
 

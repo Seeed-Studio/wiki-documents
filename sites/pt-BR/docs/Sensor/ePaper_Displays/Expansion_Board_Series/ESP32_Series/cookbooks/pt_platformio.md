@@ -1,8 +1,8 @@
 ---
-description: Livro de receitas do PlatformIO para a família XIAO ePaper Driver Board (EE0x) - visão geral de hardware, inicialização de projeto, configuração de biblioteca e programação ponta a ponta no ESP32-S3. EE04 é usado como exemplo em execução; EE02 / EE03 / EE05 compartilham o mesmo fluxo de trabalho.
+description: Livro de receitas do PlatformIO para a família XIAO ePaper Driver Board (EE0x) – visão geral de hardware, inicialização de projeto, configuração de biblioteca e programação ponta a ponta no ESP32-S3. EE04 é usado como exemplo em execução; EE02 / EE03 / EE05 compartilham o mesmo fluxo de trabalho.
 title: Livro de Receitas do PlatformIO
 keywords:
-  - display ePaper
+  - Display ePaper
   - PlatformIO
   - EE02
   - EE03
@@ -19,6 +19,7 @@ last_update:
   author: Zeller
 createdAt: '2025-10-09'
 updatedAt: '2026-04-28'
+url: https://wiki.seeedstudio.com/pt-br/ee04_with_platformio/
 ---
 
 # Livro de Receitas do PlatformIO: XIAO ePaper Driver Boards (EE0x)
@@ -30,14 +31,14 @@ Aplicável a **EE02 / EE03 / EE04 / EE05**. Como todas as quatro placas comparti
 :::
 
 :::note Procurando pelo Arduino em vez disso?
-Este livro de receitas é **específico para o PlatformIO**. Se você preferir usar a **Arduino IDE** (o caminho mais comum para nossa linha de ePaper), consulte **[Trabalhar com Arduino](/pt-br/epaper_work_with_arduino)** para o guia em nível de plataforma e o [livro de receitas Arduino do reTerminal E Series](/pt-br/reterminal_e10xx_with_arduino) para exemplos em nível de hardware que também se aplicam às placas EE0x (a Configuration Tool gera o `driver.h` correto).
+Este livro de receitas é **específico para PlatformIO**. Se você preferir usar a **Arduino IDE** (o caminho mais comum para nossa linha de ePaper), consulte **[Work with Arduino](/pt-br/epaper_work_with_arduino)** para o guia em nível de plataforma, o [reTerminal E Series — ePaper Display cookbook](/pt-br/reterminal_e10xx_with_arduino) para exemplos de renderização de display e o [reTerminal E Series — Onboard Peripherals cookbook](/pt-br/reterminal_e10xx_with_arduino_peripherals) para exemplos em nível de hardware (LED, buzzer, botões, SHT4x, bateria, microSD) que também se aplicam às placas EE0x.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_ui_1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Introdução ao PlatformIO
 
-PlatformIO é um ecossistema de desenvolvimento poderoso e altamente extensível projetado para sistemas embarcados. Ele integra perfeitamente o suporte para uma vasta gama de placas de desenvolvimento e microcontroladores, oferecendo flexibilidade incomparável. O que diferencia o PlatformIO é sua notável escalabilidade: mesmo que sua placa específica não seja suportada nativamente, sua arquitetura permite definições de placas personalizadas de forma simples.
+PlatformIO é um ecossistema de desenvolvimento poderoso e altamente extensível, projetado para sistemas embarcados. Ele integra de forma transparente o suporte a uma vasta gama de placas de desenvolvimento e microcontroladores, oferecendo flexibilidade incomparável. O que diferencia o PlatformIO é sua notável escalabilidade: mesmo que sua placa específica não seja suportada nativamente, sua arquitetura permite definições de placas personalizadas de forma simples.
 
 De forma crucial, o PlatformIO faz a ponte para desenvolvedores familiarizados com Arduino, permitindo a compilação e implantação de código no estilo Arduino simplesmente incluindo as bibliotecas relevantes.
 
@@ -48,7 +49,7 @@ Você precisa preparar uma XIAO ePaper Display Board EE04 juntamente com telas d
 <table align="center">
     <tr>
         <th>XIAO ePaper Display Board(ESP32-S3) - EE04</th>
-        <th>eInk monocromático 7,5"</th>
+        <th>7.5" Monochrome eInk</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -67,15 +68,15 @@ Você precisa preparar uma XIAO ePaper Display Board EE04 juntamente com telas d
  </table>
 </div>
 
-### Baixar o Vscode
+### Baixar o VS Code
 
-Baixe de acordo com o sistema que você está usando o [Vscode](https://code.visualstudio.com/download)
+Baixe o [Vscode](https://code.visualstudio.com/download) de acordo com o sistema que você está usando
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Instalar o PlatformIO
 
-Abra o VSCode, clique em Extensions, depois pesquise por PlatformIO e selecione para instalar. Após a conclusão da instalação, reinicie o VSCode.
+Abra o VSCode, clique em Extensões, depois pesquise por PlatformIO e selecione para instalar. Após a conclusão da instalação, reinicie o VSCode.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -88,7 +89,7 @@ Abra o VSCode, clique em Extensions, depois pesquise por PlatformIO e selecione 
 - Name: Dê um nome ao seu projeto
 - Board: Selecione Seeed Studio XIAO ESP32S3
 - Framework: Selecione Ardunio
-- Location: O caminho dos arquivos do projeto pode ser definido como um caminho personalizado ou o caminho padrão pode ser selecionado.
+- Location: O caminho dos arquivos do projeto pode ser definido como um caminho personalizado ou você pode selecionar o caminho padrão.
 - Clique em "Finish" e aguarde a conclusão da criação. Em seguida, abra o arquivo do projeto no workspace.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_2.png" style={{width:800, height:'auto'}}/></div>
@@ -113,7 +114,7 @@ Usaremos a biblioteca Seeed_GFX, que fornece suporte abrangente para vários dis
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_add_library_1.png" style={{width:800, height:'auto'}}/></div>
 
-**Passo 3.** Adicione o arquivo `driver.h`
+**Passo 3.** Adicionar o arquivo `driver.h`
 
 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
 
@@ -182,7 +183,7 @@ void loop()
 
 ### Botão de usuário
 
-O EE04 possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder a pressionamentos usando Arduino.
+O EE04 possui três botões programáveis pelo usuário que podem ser usados para vários propósitos de controle. Esta seção demonstra como ler os estados dos botões e responder a pressionamentos de botões usando Arduino.
 
 No EE04, os três botões estão conectados ao ESP32-S3:
 
@@ -296,25 +297,25 @@ Explicação do código:
    - É usada no loop para obter em tempo real o estado atual do botão, o que ajuda a determinar se o botão foi acionado.
 
 3. **`Serial.begin(baud)`** e **`Serial.println()`**  
-   - A primeira inicializa a comunicação serial (com baud rate de 115200), enquanto a segunda envia informações de texto para a porta serial. Isso é usado para exibir o estado do botão no monitor.
+   - A primeira inicializa a comunicação serial (com taxa de 115200 baud), enquanto a segunda envia informações de texto para a porta serial. Isso é usado para exibir o estado do botão no monitor.
 
 4. **`delay(ms)`**  
-   - Função: pausa o programa por um número específico de milissegundos.  
-   - Aqui é usada em dois cenários: primeiro, para aguardar a conexão da porta serial em `setup()`; segundo, para atrasar 50 ms após a mudança de estado do botão. Isso realiza o debounce de hardware ao "esperar o fim do ruído", evitando disparos falsos.
+   - Função: pausa o programa por um número especificado de milissegundos.  
+   - Aqui é usada em dois cenários: primeiro, para aguardar a conexão da porta serial em `setup()`; segundo, para atrasar 50 ms após a mudança de estado do botão. Isso realiza o debounce de hardware ao “esperar o fim do ruído”, evitando disparos falsos.
 
 - **Análise da lógica principal**
 
 1. **Detecção por comparação de estado**  
-   - Registre o "estado anterior" de cada botão (como `lastKey0State`) e leia o "estado atual" no loop.  
-   - Se o "estado atual ≠ estado anterior", isso indica que o botão foi acionado (pressionado ou solto).
+   - Registre o “estado anterior” de cada botão (como `lastKey0State`) e leia o “estado atual” no loop.  
+   - Se o “estado atual ≠ estado anterior”, isso indica que o botão foi acionado (pressionado ou solto).
 
 2. **Julgamento da ação do botão**  
-   - Quando o estado muda de HIGH para LOW: é determinado como "pressionado" (saída "pressed").  
-   - Quando o estado muda de LOW para HIGH: é determinado como "solto" (saída "released").  
-   - Após cada mudança de estado, atualize o "estado anterior" para o estado atual, que servirá como referência para a próxima comparação.
+   - Quando o estado muda de HIGH para LOW: é determinado como “pressionado” (imprime "pressed").  
+   - Quando o estado muda de LOW para HIGH: é determinado como “solto” (imprime "released").  
+   - Após cada mudança de estado, atualize o “estado anterior” para o estado atual, que servirá como referência para a próxima comparação.
 
 3. **Execução em loop**  
-   - A função `loop()` roda em um laço infinito, executando repetidamente o processo de "ler o estado → comparar o estado → exibir o resultado" para obter detecção em tempo real.
+   - A função `loop()` roda em um laço infinito, executando repetidamente o processo de “ler o estado → comparar o estado → exibir o resultado” para obter detecção em tempo real.
 
 - Demonstração do efeito:
 
@@ -325,7 +326,7 @@ O Serial Monitor pode exibir o status da porta serial.
 ### Tensão da bateria
 
 - A XIAO ePaper Display Board EE04 é alimentada por uma bateria de lítio de 3,7 V - 4,2 V. Além disso, há uma interface ADC para você medir a tensão e monitorar a tensão da bateria em tempo real.
-- O pino de medição do ADC é `A0 (GPIO1)`, e o pino de habilitação do ADC é `D5 (GPIO_6)`.
+- O pino de medição do ADC é `A0 (GPIO1)` e o pino de habilitação do ADC é `D5 (GPIO_6)`.
 
 Conexão：
 
@@ -383,7 +384,7 @@ Explicação do código:
 
 - Funções principais:
 
-  - **Aquisição da tensão da bateria**: lê a tensão da bateria após divisão resistiva via pino ADC (a tensão da bateria pode exceder a tensão de referência do ADC do Arduino, exigindo divisão antes).
+  - **Aquisição da tensão da bateria**: lê a tensão da bateria dividida por resistores através do pino ADC (a tensão da bateria pode exceder a tensão de referência do ADC do Arduino, exigindo divisão antes).
   - **Otimização de precisão**: reduz a interferência de ruído do circuito por meio da média de múltiplas amostras.
   - **Conversão de tensão**: converte o sinal digital do ADC na tensão real da bateria (considerando a razão do divisor de tensão e a tensão de referência).
   - **Saída serial**: imprime periodicamente a tensão medida via porta serial para que dispositivos externos (por exemplo, computador) possam visualizar.
@@ -392,20 +393,20 @@ Explicação do código:
 
   - `setup()` (Função de inicialização)
 
-    - **Papel**: executa uma vez no início do programa para configurar o hardware e os parâmetros.
+    - **Papel**: é executada uma vez na inicialização do programa para configurar o hardware e os parâmetros.
     - **Operações principais**:
-      - `Serial.begin(115200)`: inicializa a comunicação serial (baud rate 115200) para saída dos dados de tensão.
+      - `Serial.begin(115200)`: inicializa a comunicação serial (taxa de 115200 baud) para saída dos dados de tensão.
       - `analogReadResolution(12)`: define a resolução do ADC para 12 bits (faixa de leitura: 0~4095) para maior precisão.
       - `pinMode(BATTERY_ADC, INPUT)`: define o pino de detecção da bateria (A0) como entrada para sinais analógicos.
       - `pinMode(ADC_EN, OUTPUT)` & `digitalWrite(ADC_EN, HIGH)`: habilita o módulo ADC (para baixo consumo: ligar apenas ao medir).
 
   - `loop()` (Função de loop principal)
 
-    - **Papel**: executa repetidamente após a inicialização para detecção e saída periódica da tensão.
+    - **Papel**: é executada repetidamente após a inicialização para detecção e saída periódica da tensão.
     - **Operações principais**:
-      - Chama `readBatteryVoltage()` para obter a tensão atual da bateria.
-      - Usa `Serial.print()`/`Serial.println()` para imprimir a tensão formatada (2 casas decimais, por exemplo, "Battery Voltage: 3.82 V").
-      - `delay(500)`: define intervalo de 0,5 segundo entre as medições.
+      - Chamar `readBatteryVoltage()` para obter a tensão atual da bateria.
+      - Usar `Serial.print()`/`Serial.println()` para imprimir a tensão formatada (2 casas decimais, por exemplo, "Battery Voltage: 3.82 V").
+      - `delay(500)`: define um intervalo de 0,5 segundo entre as medições.
 
   - `readBatteryVoltage()` (Função principal de medição)
 
@@ -413,7 +414,7 @@ Explicação do código:
     - **Operações principais**:
       - **Amostragem média**: lê o ADC 10 vezes, soma e depois faz a média (reduz o ruído).
       - `analogRead(BATTERY_ADC)`: lê a tensão analógica do pino A0 (retorna 0~4095).
-      - `delay(2)`: intervalo de 2 ms entre as amostras para estabilidade.
+      - `delay(2)`: intervalo de 2 ms entre as amostras para maior estabilidade.
       - **Cálculo da tensão**: usa a fórmula `(adcValue / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO` para obter a tensão real da bateria.
       - Retorna a tensão calculada (tipo float) para uso em `loop()`.
 
@@ -423,7 +424,7 @@ Explicação do código:
 
 ## Design de UI
 
-A EE04 permite que você realize vários designs criativos, como painéis e exibição de imagens. Combinando com botões, ela possibilita a alternância entre várias páginas. Aqui está um exemplo de painel.
+A EE04 permite que você realize vários designs criativos, como painéis e exibição de imagens. Ao combinar com botões, ela possibilita a alternância entre várias páginas. Aqui está um exemplo de painel.
 
 :::tip
 Nesta rotina, a operação de desenhar o painel é realizada com base na biblioteca LVGL.
@@ -438,7 +439,7 @@ Documentação oficial da LVGL: [LVGL docs](https://docs.lvgl.io/master/examples
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/pio_dashboard_1.png" style={{width:800, height:'auto'}}/></div>
 
 - No diretório **lib**
-  - Crie uma pasta **dashboard** e então crie os arquivos `dashboard_ui.cpp` e `dashboard_ui.h`. Esses arquivos são usados principalmente para armazenar o código de desenho para LGVL.
+  - Crie a pasta **dashboard** e então crie os arquivos `dashboard_ui.cpp` e `dashboard_ui.h`. Esses arquivos são usados principalmente para armazenar o código de desenho para LGVL.
   - Crie a pasta **e1001_display** e adicione os arquivos de driver da tela `e1001_display.c` e `e1001_display.h`
   - Crie a pasta **lvgl_conf** e adicione o arquivo de configuração `lv_conf.h` da LVGL.
 

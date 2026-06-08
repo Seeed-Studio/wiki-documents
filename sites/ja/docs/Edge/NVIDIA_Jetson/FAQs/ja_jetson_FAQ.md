@@ -1,5 +1,5 @@
 ---
-description: Jetson に関するよくある質問
+description: Jetson-FAQ
 title: Jetson 使用に関する FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
@@ -12,13 +12,13 @@ url: https://wiki.seeedstudio.com/ja/Jetson_FAQ/
 ---
 
 
-このドキュメントには、Jetson シリーズ製品に関連するすべてのよくある質問が含まれています。Jetson を使用中に何らかの問題に直面している場合に非常に役立ちます。
+このドキュメントには、Jetson シリーズ製品に関連するよくある質問がすべて含まれています。Jetson を使用中に問題が発生している場合に非常に役立ちます。
 
 #### Q1: インストールのトラブルシューティング
 
 詳細については[こちら](/ja/Troubleshooting_Installation)をクリックしてください
 
-#### Q2: 受け取った reComputer の eMMC の残り容量が約 2GB しかありません。容量不足の問題をどのように解決すればよいですか？
+#### Q2: 受け取った reComputer の eMMC の空き容量が約 2GB しかありません。容量不足の問題をどのように解決すればよいですか？
 
 詳細については[こちら](/ja/solution_of_insufficient_space)をクリックしてください
 
@@ -34,21 +34,21 @@ url: https://wiki.seeedstudio.com/ja/Jetson_FAQ/
 
 詳細については[こちら](/ja/get_the_system_log_of_recomputer_j30_and_j40)をクリックしてください
 
-#### Q6: Jetson のフラッシュ中によく発生するエラー
+#### Q6: Jetson のフラッシュ中によく発生するフラッシュエラー
 
 詳細については[こちら](/ja/usb_timeout_during_flash)をクリックしてください
 
-#### Q7: デバイスをフラッシュした後、USB-A ポートや Ethernet ポートが使えない、または HDMI に表示が出ません。
-**A:** ファイルの完全性を確認してください（例えば、当社は SHA256 チェックサムを提供しています）。一部のキャリアボード（特に A60X シリーズ）では、ドライバパッチが **Linux_for_tegra** ディレクトリに正しくコピー／適用されていることを確認してください。**sudo** 権限が必要なファイルがあり、ディレクトリをコピーする際には、コマンドに **-r** パラメータが含まれていることを確認してください。
+#### Q7: デバイスをフラッシュした後、USB-A ポートや Ethernet ポートが使用できない、または HDMI に表示が出ません。
+**A:** ファイルの完全性を確認してください（例えば、当社は SHA256 チェックサムを提供しています）。一部のキャリアボード（特に A60X シリーズ）では、ドライバパッチが **Linux_for_tegra** ディレクトリに正しくコピー／適用されていることを確認してください。**sudo** 権限が必要なファイルもあり、ディレクトリをコピーする際は、コマンドに **-r** パラメータが含まれていることを確認してください。
 
 #### Q8: "sudo apt-get update && sudo apt-get upgrade" コマンドを実行した後、システムがクラッシュした／起動できない／画面が真っ黒になる／周辺機器ドライバが失われました。
-**A:** これらの問題は、**「なぜカスタムキャリアボードで apt upgrade によるシステムアップグレードを行ってはいけないのか？」** という問いに集約できます。結論としては、**カスタム／サードパーティ製** キャリアボード上では apt upgrade コマンドを実行しないでください。さらに、apt upgrade コマンドを含むスクリプトの実行や、Ubuntu の GUI アップデータツールの使用も避けてください。サーバから配布される Debian パッケージは、当社カスタムボードの特定の設計を考慮しておらず、強制的にアップグレードすると互換性の問題が発生し、デバイスが起動不能になる可能性があります。このプロセスは公式 devkit のみで互換性があります。これらの問題を解決するには、当社のガイドに従って JetPack を再フラッシュしてください。
+**A:** これらの問題は、**「なぜカスタムキャリアボードでは apt upgrade でシステムをアップグレードできないのか？」**という点に集約されます。結論としては：**絶対に** **カスタム／サードパーティ製** キャリアボード上で apt upgrade コマンドを実行しないでください。さらに、apt upgrade コマンドを含むスクリプトの実行や、Ubuntu の GUI アップデータツールの使用も避けてください。サーバから配布される Debian パッケージは、当社カスタムボードの設計を考慮しておらず、強制的にアップグレードすると非互換が発生し、デバイスが起動不能になる可能性があります。このプロセスは公式 devkit にのみ対応しています。これらの問題を解決するには、当社のガイドに従って JetPack を再フラッシュしてください。
 
-#### Q9: apt upgrade を実行できないと言われましたが、ソフトウェアパッケージはどのようにアップグレードできますか？ソフトウェアをアップグレードしないとセキュリティリスクはありますか？
+#### Q9: apt upgrade を実行できないと言われましたが、ソフトウェアパッケージはどのようにアップグレードすればよいですか？アップグレードしないとセキュリティリスクはありますか？
 
 詳細については[こちら](/ja/upgrade_software_packages_for_jetson)をクリックしてください
 
-<!-- #### Q10: Jetson デバイスのシステムバージョンを OTA（Over-the-Air）方式でアップグレードする方法
+<!-- #### Q10: How to use the OTA (Over-the-Air) method to upgrade the system version of the Jetson device. 
 
 For details, please click [here](/ja/updating_jetpack_with_ota) -->
 
@@ -59,13 +59,13 @@ For details, please click [here](/ja/updating_jetpack_with_ota) -->
 #### Q12: Jetson-nano で SPI インターフェースを有効にするにはどうすればよいですか？
 詳細については[こちら](/ja/enable_spi_interface_on_jetsonnano)をクリックしてください
 
-#### Q13: Jetson のフラッシュ処理を完了した後、SSD からシステムが起動しないことがあるのはなぜですか？
-この問題は現在、JetPack 5 をフラッシュする際に発生しており、NVIDIA によって公式に文書化されています。解決策については[こちら](/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
+#### Q13: Jetson でフラッシュ処理を完了した後、SSD からシステムが起動しないことがあるのはなぜですか？
+この問題は現在、JetPack 5 をフラッシュした際に発生しており、NVIDIA によって公式に文書化されています。解決方法については[こちら](/ja/issue_of_jetpack5_failing_to_boot_from_certain_ssd)をクリックしてください。
 
 #### Q14: Seeed の Jetson BSP 用ソースコードプロジェクトをビルドするにはどうすればよいですか？
 詳細については[こちら](/ja/how_to_build_the_source_code_project_for_seeed_jetson_bsp)をクリックしてください
 
-#### Q15: なぜ reComputer/reServer で `apt upgrade` コマンドを実行できないのですか？
+#### Q15: なぜ reComputer/reServer では `apt upgrade` コマンドを実行できないのですか？
 **reComputer/reServer** のカーネルとドライバはカスタマイズされています。`apt upgrade` コマンドを実行すると、カーネルやドライバ関連のパッケージの一部が NVIDIA 公式のリソースに置き換えられ、ソフトウェアの互換性問題を引き起こす可能性があります。<mark>したがって、サードパーティ製の Jetson プラットフォームでは `apt upgrade` を実行しないでください。</mark>
 
 関連する APT ソースをロックするには、以下の手順を参照してください。こうすることで、誤って apt upgrade を実行してしまった場合でも、影響を最小限に抑えることができます。
@@ -112,17 +112,21 @@ sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 
 詳細については[こちら](/ja/how_to_encrypt_the_disk_for_jetson)をクリックしてください
 
-#### Q18：Jetson と EtherCAT デバイス間で通信を確立するにはどうすればよいですか？
+#### Q19：Jetson と EtherCAT デバイス間で通信を確立するにはどうすればよいですか？
 
 詳細については[こちら](/ja/how_to_establish_the_ethercat_on_jetson)をクリックしてください
 
-#### Q18 Jetson カーネルに関連するものは何も変更していないのに、起動時に Jetson が UUID 関連のエラーを報告し、その後リカバリターミナルに入ってしまいます。
+#### Q20：Jetson カーネルに関連するものは何も変更していないのに、起動時に Jetson が UUID 関連のエラーを報告し、その後リカバリターミナルに入ってしまいます。
 
-この問題の解決策については、[こちら](/ja/deal_the_issue_of_UUID)をクリックしてください
+この問題の解決方法については、[こちら](/ja/deal_the_issue_of_UUID)をクリックしてください
+
+#### Q21: NVIDIA Jetson デバイスで IMX219 カメラを使用するにはどうすればよいですか？
+
+詳細については[こちら](/ja/how_to_use_camera_imx219)をクリックしてください
 
 ## 技術サポート
 
-当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを提供しています。
+当社製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じて選択いただけるよう、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -10,7 +10,7 @@ last_update:
   date: 11/02/2024
   author: Allen
 createdAt: '2024-11-13'
-updatedAt: '2025-09-11'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/XIAO_RP2350_Pin_Multiplexing/
 ---
 
@@ -19,6 +19,16 @@ url: https://wiki.seeedstudio.com/XIAO_RP2350_Pin_Multiplexing/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png" style={{width:800, height:'auto'}}/></div>
 
 Seeed Studio XIAO RP2350 has rich interfaces. There are **19 digital I/O** that can be used as **PWM pins** and **3 analog inputs** that can be used as **ADC pins**. It supports four serial communication interfaces such as **UART, I2C and SPI**. This wiki will be helpful to learn about these interfaces and implement them in your next projects!
+
+## Hardware Overview
+
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 ## Preparation
 

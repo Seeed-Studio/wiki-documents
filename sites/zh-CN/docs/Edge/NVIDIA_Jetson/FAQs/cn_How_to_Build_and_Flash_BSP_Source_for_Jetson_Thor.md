@@ -143,7 +143,7 @@ cd /other_data/thor-dev/linux_for_tegra
 
 默认的板级设置已为 **Thor J601** 配置好：
 
-- `CONFIG=recomputer-thor-carrier-j601`
+- `CONFIG=jetson-agx-thor-devkit`
 - `BOARDID=3834`
 - `BOARDSKU=0008`
 - `FAB=400`
@@ -201,7 +201,7 @@ sudo -E ./thor_build_flash.sh flash
 当需要覆盖默认值时，使用环境变量：
 
 ```bash
-CONFIG=recomputer-thor-carrier-j601 \
+CONFIG=jetson-agx-thor-devkit \
 DOWNLOAD_BASE_URL=http://192.168.1.77/jetson \
 DEFAULT_USER=seeed \
 DEFAULT_PASSWORD=seeed \

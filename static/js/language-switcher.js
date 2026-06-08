@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-05-20 10:37:45 (北京时间)
-// 多语言页面: 2279 个
+// 生成时间: 2026-06-08 16:00:14 (北京时间)
+// 多语言页面: 2316 个
 
 (function() {
   'use strict';
@@ -835,6 +835,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_spi_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Lumeo-Jetson-Getting-Started": [
     "cn",
     "en",
@@ -1339,6 +1346,13 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
     "cn",
     "en",
@@ -1354,6 +1368,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",
@@ -1403,6 +1424,76 @@
     "pt"
   ],
   "/jetson_debug_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_app_market": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_connect_device": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_device_management": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_faq": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_flash_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_installation": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_remote_development": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_skills": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/jetson_developtool_supported_devices": [
     "cn",
     "en",
     "es",
@@ -1487,6 +1578,13 @@
     "pt"
   ],
   "/rtl8852be_wireless_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/ai_robotics_seeed_agx_orin_dev_kit_getting_started": [
     "cn",
     "en",
     "es",
@@ -1676,6 +1774,13 @@
     "pt"
   ],
   "/ai_robotics_recomputer_rugged_j40_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recomputer_antenna_installation": [
     "cn",
     "en",
     "es",
@@ -3278,6 +3383,20 @@
     "ja",
     "pt"
   ],
+  "/using_stream_deck_to_control_recamera_gimbal": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_benchmarking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -3356,6 +3475,13 @@
     "pt"
   ],
   "/recamera_hq_poe_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/recamera_pro_getting_started": [
     "cn",
     "en",
     "es",
@@ -4161,6 +4287,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -5196,6 +5329,20 @@
     "ja",
     "pt"
   ],
+  "/atom_s": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/atom_x": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
     "cn",
     "en",
@@ -5687,6 +5834,13 @@
     "pt"
   ],
   "/rebot_arm_b601_dm_ros2_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/rebot_b601_rs_getting_started": [
     "cn",
     "en",
     "es",
@@ -7827,6 +7981,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -7926,6 +8087,20 @@
     "pt"
   ],
   "/reterminal_e10xx_with_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/reterminal_e10xx_with_arduino_peripherals_2": [
     "cn",
     "en",
     "es",
@@ -10759,6 +10934,20 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_gpio_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_i2s": [
     "cn",
     "en",
@@ -10780,6 +10969,13 @@
     "ja",
     "pt"
   ],
+  "/respeaker_flex_soarm": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_picovoice_nlu_keyword_spotting": [
     "cn",
     "en",
@@ -10794,7 +10990,56 @@
     "ja",
     "pt"
   ],
+  "/control_rebot_arm_using_voice_with_respeaker_flex": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_volume_control": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/respeaker_flex_xiao_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_http_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_mqtt_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_record_playback": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_flex_xiao_udp_streaming": [
     "cn",
     "en",
     "es",
@@ -11047,6 +11292,20 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_sensecraft": [
     "cn",
     "en",
     "es",
