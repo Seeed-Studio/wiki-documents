@@ -4344,6 +4344,11 @@ const sidebars = {
               label: '使用代理进行Vibe Code编程',
             },
             {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_conversation',
+              label: 'Reachy Mini接入豆包大模型API',
+            },
+            {
               type: 'category',
               label: 'Reachy Mini (无线版)',
               collapsible: true,
