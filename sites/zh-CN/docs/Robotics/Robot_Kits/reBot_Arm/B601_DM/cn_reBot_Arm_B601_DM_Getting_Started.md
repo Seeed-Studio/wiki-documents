@@ -138,8 +138,13 @@ conda activate rebot
 ```
 
 ### 步骤 3：安装 motorbridge
+
 :::tip
 如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
+
+提示 macOS 用户注意：
+如果您在 macOS 上遥操时帧率偏低，可能是沁恒（WCH）CH34x 驱动版本过旧导致。对于 **macOS 10.14 及以上版本**，系统已内置 AppleUSBCHC0M 驱动，您可以先卸载旧版驱动，改用 macOS 内置驱动，通常能有效提升帧率。
+
 :::
 
 激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
