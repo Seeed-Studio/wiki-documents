@@ -173,7 +173,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### Paso 5: Abrir motorbridge
 
-Abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador, luego haz clic en la ayuda, copia el comando adecuado para tu sistema y placa controladora, comprueba la IP y el puerto y, a continuación, pulsa Intro en la terminal.
+Abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador, luego haz clic en la ayuda, copia el comando adecuado para tu sistema y placa controladora, comprueba la IP y el puerto y, a continuación, pulsa Intro en la terminal.
 
 Por ejemplo, en Windows:
 
