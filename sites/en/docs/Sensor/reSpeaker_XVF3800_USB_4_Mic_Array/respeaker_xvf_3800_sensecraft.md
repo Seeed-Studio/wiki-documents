@@ -8,11 +8,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg
 slug: /respeaker_xvf3800_sensecraft
 sku: 114993702,114993700
-last_update: 
+last_update:
   date: 6/4/2026
   author: Kasun Thushara
 createdAt: '2026-06-04'
-updatedAt: '2026-06-04'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/
 ---
 
