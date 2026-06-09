@@ -105,3 +105,4 @@ Opções de personalização disponíveis: identidade visual com logotipo, embal
 |Ligar|Acende e depois pisca rapidamente|
 |Modo DFU|Aceso continuamente|
 |Em funcionamento|Pisca aleatoriamente|
+|Carregando|Pisca a 0,5 Hz, alternando a cada segundo|

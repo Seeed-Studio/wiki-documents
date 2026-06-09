@@ -12,13 +12,13 @@ url: https://wiki.seeedstudio.com/es/Jetson_FAQ/
 ---
 
 
-Este documento contiene todas las preguntas frecuentes relacionadas con los productos de la serie Jetson. Esto será de gran ayuda si estás teniendo algún problema al usar Jetson.
+Este documento contiene todas las preguntas frecuentes relacionadas con los productos de la serie Jetson. Esto será de gran ayuda si estás sufriendo algún problema al usar Jetson.
 
 #### P1: Solución de problemas de instalación
 
 Para más detalles, haz clic [aquí](/es/Troubleshooting_Installation)
 
-#### P2: El espacio restante en la eMMC del reComputer recibido es de solo unos 2 GB, ¿cómo resolver el problema de espacio insuficiente?
+#### P2: El espacio restante en la eMMC del reComputer recibido es de solo unos 2GB, ¿cómo resolver el problema de espacio insuficiente?
 
 Para más detalles, haz clic [aquí](/es/solution_of_insufficient_space)
 
@@ -39,12 +39,12 @@ Para más detalles, haz clic [aquí](/es/get_the_system_log_of_recomputer_j30_an
 Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 
 #### P7: No puedo usar el puerto USB-A, el puerto Ethernet o no hay visualización HDMI después de flashear el dispositivo.
-**R:** Por favor, comprueba la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256). Para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
+**R:** Verifica la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256); para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
-#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
+#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla en negro/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
 **R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas carrier personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas carrier **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que podrían dejar tu dispositivo inservible. Este proceso solo es compatible con el kit de desarrollo oficial. Para resolver estos problemas, sigue nuestra guía para volver a flashear JetPack.
 
-#### P9: ¿Cómo puedo actualizar los paquetes de software si me dices que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
+#### P9: ¿Cómo puedo actualizar los paquetes de software si me dijeron que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
 
 Para más detalles, haz clic [aquí](/es/upgrade_software_packages_for_jetson)
 
@@ -80,7 +80,7 @@ sudo apt-mark hold nvidia-l4t-core
 
 Para más detalles, haz clic [aquí](/es/how_to_build_the_ko_module_for_seeed_jetson)
 
-#### P17：¿Cómo puedo montar en Jetson (JetPack 6) un disco duro externo formateado con exFAT?
+#### P17：¿Cómo puedo montar un disco duro externo formateado con exFAT en Jetson (JetPack 6)?
 
 Primero, instala las dependencias:
 ```
@@ -88,7 +88,7 @@ sudo apt install build-essential autoconf automake libtool pkg-config
 sudo apt install git libfuse-dev
 ```
 
-Luego clona y compila desde el código fuente el controlador exFAT:
+Luego clona y compila el controlador exFAT desde el código fuente:
 ```
 git clone https://github.com/relan/exfat
 cd exfat
@@ -106,23 +106,27 @@ sudo mkdir /media/seeed/tmp-exfat   # Create a mount point
 sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
 ```
 
-Esto monta la unidad externa formateada en exFAT en `/media/seeed/tmp-exfat/` para que pueda accederse normalmente en Jetson.
+Esto monta la unidad externa formateada en exFAT en `/media/seeed/tmp-exfat/` para que pueda accederse normalmente en el Jetson.
 
 #### P18：¿Cómo cifrar el disco de Jetson antes de flashear la imagen?
 
 Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
 
-#### P18：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
+#### P19：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
 
 Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
-#### P18 No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con UUID y luego entró en el terminal de recuperación.
+#### P20： No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con UUID y luego entró en el terminal de recuperación.
 
 Solución para este problema: haz clic [aquí](/es/deal_the_issue_of_UUID)
 
+#### P21: ¿Cómo usar la cámara IMX219 en dispositivos NVIDIA Jetson?
+
+Para más detalles, haz clic [aquí](/es/how_to_use_camera_imx219)
+
 ## Soporte técnico
 
-Gracias por elegir nuestros productos. Estamos **aquí** para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos **aquí** para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

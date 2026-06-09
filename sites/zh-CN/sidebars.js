@@ -1946,6 +1946,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_picovoice',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_sensecraft',
                   ],
                 },
               ],
@@ -4044,6 +4045,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Jetson_SPI_Getting_Start',
               ]
             },
           ]
@@ -4081,9 +4083,11 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/cn_jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/cn_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/cn_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/cn_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/cn_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/cn_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
@@ -4405,6 +4409,11 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/cn_vibe-code-with-your-agent',
               label: '使用代理进行Vibe Code编程',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_conversation',
+              label: 'Reachy Mini接入豆包大模型API',
             },
             {
               type: 'category',

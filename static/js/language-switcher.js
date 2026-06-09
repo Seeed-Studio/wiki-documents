@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-02 10:41:57 (北京时间)
-// 多语言页面: 2309 个
+// 生成时间: 2026-06-08 16:00:14 (北京时间)
+// 多语言页面: 2316 个
 
 (function() {
   'use strict';
@@ -835,6 +835,13 @@
     "ja",
     "pt"
   ],
+  "/jetson_spi_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/Lumeo-Jetson-Getting-Started": [
     "cn",
     "en",
@@ -1339,6 +1346,13 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
     "cn",
     "en",
@@ -1354,6 +1368,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",
@@ -3369,6 +3390,13 @@
     "ja",
     "pt"
   ],
+  "/recamera_benchmarking": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -4259,6 +4287,13 @@
     "pt"
   ],
   "/meshtastic_kit_wio_tracker_1110": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio_tracker_l1_3d_enclosure": [
     "cn",
     "en",
     "es",
@@ -7946,6 +7981,13 @@
     "ja",
     "pt"
   ],
+  "/epaper_work_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/EE04_with_hmi": [
     "cn",
     "en",
@@ -11257,6 +11299,13 @@
     "pt"
   ],
   "/respeaker_xvf3800_ros2_voice_pipeline": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/respeaker_xvf3800_sensecraft": [
     "cn",
     "en",
     "es",

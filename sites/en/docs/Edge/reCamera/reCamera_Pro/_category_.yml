@@ -1,5 +1,5 @@
 position: 4 # float position is supported
-label: 'reCamera_Pro'
+label: 'reCamera Pro'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: recamera_pro

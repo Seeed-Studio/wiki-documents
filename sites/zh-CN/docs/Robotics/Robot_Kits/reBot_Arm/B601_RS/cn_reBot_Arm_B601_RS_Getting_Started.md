@@ -1,6 +1,6 @@
 ---
-description: 本指南将帮助您快速上手 reBot Arm B601-DM 机械臂，包括购买选项、组装、校准和软件配置。
-title: reBot Arm B601-DM 快速入门
+description: 本指南将帮助您快速上手 reBot Arm B601-RS 机械臂，包括购买选项、组装、校准和软件配置。
+title: reBot Arm B601-RS 快速入门
 keywords:
   - reBot
   - B601-DM
@@ -81,3 +81,81 @@ reBot Arm项目已经在[github](https://github.com/Seeed-Projects/reBot-DevArm)
 - 双系统个人电脑（Windows + Ubuntu / macOS）
 
 #### 所需软件
+
+
+
+## 第三步：校准机械臂及上手初体验
+
+相信你已经跟随视频完成了机械臂组装、零点初始化、电机ID配置等全部前期准备工作。现在你可以正式开始体验我们提供的一系列教程与工具。
+
+1. 探索我们的 **MotorBridge** 平台。该平台为一站式综合解决方案，支持电机种类持续扩充，涵盖[达妙电机](https://www.seeedstudio.com/DIP-Servo-Motor-24V-120RPM-Brushless-98-9mm-4P-L56-W56-H46mm-p-6660.html)、[Robstride电机](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)、[高擎电机](https://www.seeedstudio.com/Hightorque-HTDW-4438-30-NE-Gear-Motor-p-6482.html)、[脉塔电机](https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html)、Hexfellow 等多款电机，同时兼容 reBot 等持续更新迭代的机械臂产品。平台面向入门用户友好易用，同时也为开发者提供功能完全一致的 Python SDK。
+
+2. 体验专为 reBot 机械臂适配的 MotorBridge 全新功能与细节，包含一键零点校准、参数写入、界面拖拽式电机控制，以及内置模型可视化界面。
+
+3. 本工具全面兼容 **Windows、Ubuntu、macOS** 操作系统。
+
+### 步骤 1：安装 Miniforge（支持 Windows\Ubuntu\macOS\Jetson\树莓派）
+
+本教程以Ubuntu为例
+
+```bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+
+
+
+### 步骤 2：环境配置
+
+创建 Python 3.12 版本虚拟环境：
+
+```bash
+conda create -y -n rebot python=3.12
+```
+
+随后激活虚拟环境。**每次打开终端使用 reBot 相关功能时，都需要重新执行该激活命令**：
+
+```bash
+conda activate rebot
+```
+
+### 步骤 3：安装 Motorbridge
+
+激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
+
+:::tip 提示 macOS 用户注意
+如果您在 macOS 上遥操时帧率偏低，可能是沁恒（WCH）CH34x 驱动版本过旧导致。对于 **macOS 10.14 及以上版本**，系统已内置 AppleUSBCHC0M 驱动，您可以先卸载旧版驱动，改用 macOS 内置驱动，通常能有效提升帧率。
+:::
+
+```bash
+pip install motorbridge
+```
+
+### 步骤 4：连接机械臂
+
+让 PCAN-USB 设备以 1Mbps 速率工作在 CAN 总线上，供机械臂通信使用
+
+```bash
+#套件里是 PCAN-USB，通常应该直接出现 can0 或 can1
+sudo modprobe peak_usb
+ip -br link
+
+#如果出现 can0，再设置 bitrate
+sudo ip link set can0 down 2>/dev/null
+sudo ip link set can0 type can bitrate 1000000 restart-ms 100
+sudo ip link set can0 up
+```
+
+### 步骤 5：启动 MotorBridge-gateway
+
+可选（可以在web上连接机械臂测试连接）
+
+在浏览器中打开地址 `https://rebot-devarm.w0x7ce.eu/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+
+```bash
+motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0  
+```
+
+
+
+使用请参考视频
