@@ -165,7 +165,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### 步骤 5：启动 MotorBridge
 
-在浏览器中打开地址 `https://rebot-devarm.w0x7ce.eu/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+在浏览器中打开地址 `https://motorbridge.github.io/motorbridge-studio/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 以 Windows 系统为例：
 
