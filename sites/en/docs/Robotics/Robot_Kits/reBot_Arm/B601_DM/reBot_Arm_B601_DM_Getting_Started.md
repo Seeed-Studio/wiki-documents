@@ -173,7 +173,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### Step5: Open the motorbridge
 
-Open `https://rebot-devarm.w0x7ce.eu/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
+Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
 
 For example on Windows:
 

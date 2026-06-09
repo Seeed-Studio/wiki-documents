@@ -149,7 +149,7 @@ sudo ip link set can0 up
 
 Opcional (puedes conectar el brazo robótico en la web para probar la conexión)
 
-Abre `https://rebot-devarm.w0x7ce.eu/` en tu navegador, haz clic en la opción de ayuda, copia el comando correspondiente a tu sistema operativo y placa controladora, comprueba la dirección IP y el número de puerto y, a continuación, pulsa Intro en la terminal para ejecutarlo.
+Abre `https://motorbridge.github.io/motorbridge-studio/` en tu navegador, haz clic en la opción de ayuda, copia el comando correspondiente a tu sistema operativo y placa controladora, comprueba la dirección IP y el número de puerto y, a continuación, pulsa Intro en la terminal para ejecutarlo.
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0

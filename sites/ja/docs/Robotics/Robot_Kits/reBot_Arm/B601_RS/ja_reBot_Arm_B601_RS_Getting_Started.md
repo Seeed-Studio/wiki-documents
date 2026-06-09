@@ -149,7 +149,7 @@ sudo ip link set can0 up
 
 任意（Web 上でロボットアームを接続し、通信をテストできます）
 
-ブラウザで `https://rebot-devarm.w0x7ce.eu/` を開き、ヘルプオプションをクリックして、使用しているオペレーティングシステムとドライバボードに対応するコマンドをコピーします。IP アドレスとポート番号を確認し、その後ターミナルで Enter キーを押して実行します。
+ブラウザで `https://motorbridge.github.io/motorbridge-studio/` を開き、ヘルプオプションをクリックして、使用しているオペレーティングシステムとドライバボードに対応するコマンドをコピーします。IP アドレスとポート番号を確認し、その後ターミナルで Enter キーを押して実行します。
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0
