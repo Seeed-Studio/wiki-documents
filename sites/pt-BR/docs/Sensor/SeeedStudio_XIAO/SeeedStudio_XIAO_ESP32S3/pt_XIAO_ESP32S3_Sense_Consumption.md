@@ -52,6 +52,10 @@ No modo Deep-Sleep, o ESP32 desliga as CPUs, a maior parte da RAM e todos os per
 - Memória RTC FAST
 - Memória RTC SLOW
 
+:::warning
+**Periférico USB desabilitado durante o sono profundo:** Durante o sono profundo, todos os periféricos digitais, incluindo o periférico USB interno (USB-Serial-JTAG), serão desligados. **A saída serial via USB não estará disponível** enquanto o dispositivo estiver em sono profundo. Se precisar depurar, use um chip USB-UART externo conectado aos pinos UART de hardware.
+:::
+
 ### Métodos de Despertar
 
 - **Timer Wake-up：**O ESP32 pode acordar automaticamente após um tempo especificado configurando um temporizador.
@@ -731,6 +735,10 @@ Para regravar o programa após entrar no modo de sono profundo, mantenha pressio
 O modo Light Sleep é outro modo de baixo consumo de energia no ESP32 que permite ao dispositivo economizar energia enquanto ainda mantém um tempo de resposta rápido. Nesse modo, os núcleos da CPU são interrompidos, mas a RAM e alguns periféricos permanecem energizados, permitindo que o dispositivo acorde rapidamente em resposta a certos eventos.
 
 O Light Sleep é ideal para aplicações que exigem baixo consumo de energia, mas que ainda precisam manter uma conexão com WiFi ou Bluetooth, pois permite que os módulos de comunicação sem fio permaneçam ativos.
+
+:::warning
+**Periférico USB desabilitado durante o sono leve:** O periférico USB interno (USB-Serial-JTAG) será desabilitado durante o sono leve para economizar energia. Isso significa que **a saída serial via USB não estará disponível** enquanto o dispositivo estiver em sono leve. Se você estiver usando a porta USB para visualizar logs seriais, não verá nenhuma saída durante o período de sono. Para depurar, considere usar um chip USB-UART externo conectado aos pinos UART de hardware ou usar o despertar por GPIO para monitorar a saída depois que o dispositivo despertar.
+:::
 
 ### Métodos de Wake-up
 

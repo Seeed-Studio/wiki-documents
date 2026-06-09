@@ -52,6 +52,10 @@ En el modo de Sueño Profundo, el ESP32 apaga las CPUs, la mayor parte de la RAM
 - Memoria RTC FAST
 - Memoria RTC SLOW
 
+:::warning
+**Periférico USB deshabilitado durante el sueño profundo:** Durante el sueño profundo, todos los periféricos digitales, incluido el periférico USB interno (USB-Serial-JTAG), se apagarán. **La salida serial a través de USB no estará disponible** mientras el dispositivo esté en sueño profundo. Si necesitas depurar, usa un chip USB-UART externo conectado a los pines UART de hardware.
+:::
+
 ### Métodos de Despertar
 
 - **Despertar por Temporizador：**El ESP32 puede despertar automáticamente después de un tiempo especificado configurando un temporizador.
@@ -731,6 +735,10 @@ Para volver a grabar el programa después de entrar en modo de sueño profundo, 
 El modo de Sueño Ligero es otro modo de bajo consumo en el ESP32 que permite al dispositivo conservar energía mientras mantiene un tiempo de respuesta rápido. En este modo, los núcleos de la CPU se detienen, pero la RAM y algunos periféricos permanecen encendidos, permitiendo que el dispositivo se despierte rápidamente en respuesta a ciertos eventos.
 
 El Sueño Ligero es ideal para aplicaciones que requieren bajo consumo de energía pero aún necesitan mantener una conexión a WiFi o Bluetooth, ya que permite que los módulos de comunicación inalámbrica permanezcan activos.
+
+:::warning
+**Periférico USB deshabilitado durante el sueño ligero:** El periférico USB interno (USB-Serial-JTAG) se deshabilitará durante el sueño ligero para ahorrar energía. Esto significa que **la salida serial a través de USB no estará disponible** mientras el dispositivo esté en sueño ligero. Si estás usando el puerto USB para ver los registros seriales, no verás ninguna salida durante el período de sueño. Para depurar, considera usar un chip USB-UART externo conectado a los pines UART de hardware, o usar el despertar por GPIO para supervisar la salida después de que el dispositivo se despierte.
+:::
 
 ### Métodos de Despertar
 
