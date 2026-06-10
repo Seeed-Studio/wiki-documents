@@ -10,7 +10,7 @@ last_update:
   date: 11/10/2025
   author: Kasun Thushara
 createdAt: '2025-08-20'
-updatedAt: '2026-04-30'
+updatedAt: '2026-06-02'
 url: https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/
 ---
 
@@ -514,440 +514,135 @@ Wait for the installation to complete. A new Pi-Apps icon will appear in your me
 </TabItem>
 </Tabs>
 
-## How to Control reSpeaker XVF3800
+## How to Tuning parameters?
 
-The reSpeaker XVF3800 is equipped with a control interface that allows users to configure the device's operation, set or read parameter data and save parameter data on the device. Users can control the device via the USB or I2C interface. A sample host application, xvf_host (for Linux, macOS, and Raspberry Pi OS) or xvf_host.exe (for Windows), is provided to easily connect to the control interface of the reSpeaker XVF3800.
+Tuning allows users to configure parameters of the built-in audio algorithms and communicate directly with the XMOS chip.
 
-Download From [Here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/host_control)
+A dedicated Python control interface is provided for parameter configuration and device interaction.
 
-:::note
-If you would like to explore more about controlling via xvf_host, please read this [article](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md).
-:::
 
-<Tabs>
-<TabItem value="windows" label="Windows">
+[**Python Control Directory**](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)
 
-### Windows Users
+Using the provided Python scripts, you can:
 
-- Ensure ReSpeaker XVF3800 is connected via USB
-- Unzip `xvf_host.exe` into a folder like:
+* Configure built-in audio algorithm parameters
+* Retrieve DoA (Direction of Arrival) data
+* Retrieve VAD (Voice Activity Detection) data
+* Control onboard LEDs
+* Control the voice processing pipeline
+* Communicate directly with the XMOS device
+
+**System Requirements**
+
+The following dependencies are required to use the Python control interface:
+
+* Python 3.6 or later
+* `pyusb` Python library
+* `libusb` system library
+
+
+### Installation & Dependencies
+
+Install the required Python dependency using:
+
+```bash
+pip install pyusb
+```
+
+Depending on your operating system, you may also need to install the `libusb` package separately.
+
+
+
+### Usage
+
+**Basic Syntax**
+
+```bash
+python xvf_host.py [options] command [value(s)...]
+```
+
+
+
+**Command Options**
+
+| Option         | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| `-l`, `--list` | List all supported commands with detailed information |
+| `--vid`        | Set USB Vendor ID (default: `0x2886`)                 |
+| `--pid`        | Set USB Product ID (default: `0x001A`)                |
+| `--values`     | Provide values for write commands (optional)          |
+
+
+
+### Usage Examples
+
+**List Available Commands**
+
+Display all supported firmware commands.
+
+```bash
+python xvf_host.py --list
+```
+**Read Firmware Version**
+
+Retrieve the firmware version currently running on the device.
+
+```bash
+python xvf_host.py VERSION
+```
+
+**Example Output**
 
 ```text
-C:\Tools\xvf_host\
+VERSION: [2, 0, 7]
 ```
 
----
+**Read Direction of Arrival (DOA)**
 
-**Verify Installation**
+Retrieve the detected sound source direction.
 
 ```bash
-cd C:\Tools\xvf_host
-xvf_host.exe --help
+python xvf_host.py DOA_VALUE
 ```
 
----
+**Example Output**
 
-**Check Device Connection**
+```text
+DOA_VALUE: [135]
+```
+
+**Set LED Color**
+
+Configure the LED color using a hexadecimal RGB value.
 
 ```bash
-xvf_host.exe VERSION
+python xvf_host.py LED_COLOR --values 0xFF0000
 ```
 
-Expected output:
+**Set LED Brightness**
 
-```
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-VERSION 2 0 2
-```
-
----
-
-**LED Control**
-
-| Command | Example | Description |
-|--------|---------|-------------|
-| `led_effect` | `xvf_host.exe led_effect 1` | 0=off, 1=breath, 2=rainbow, 3=solid, 4=DoA |
-| `led_color` | `xvf_host.exe led_color 0xff8800` | Set hex color (orange) |
-| `led_speed` | `xvf_host.exe led_speed 1` | Set effect speed |
-| `led_brightness` | `xvf_host.exe led_brightness 255` | Set brightness |
-| `led_gammify` | `xvf_host.exe led_gammify 1` | Enable gamma correction |
-| `led_doa_color` | `xvf_host.exe led_doa_color 0x0000ff 0xff0000` | Set DoA base/directional color |
-
-🟠 Example (breath orange):
+Adjust LED brightness percentage.
 
 ```bash
-xvf_host.exe led_effect 1
-xvf_host.exe led_color 0xff8800
-xvf_host.exe led_speed 1
-xvf_host.exe led_brightness 255
+python xvf_host.py LED_BRIGHTNESS --values 50
 ```
+**Read Microphone Array Geometry**
 
-**Configuration**
+Retrieve the microphone coordinates used by the acoustic processing algorithms.
 
 ```bash
-xvf_host.exe save_configuration 1
-xvf_host.exe clear_configuration 1
+python xvf_host.py AEC_MIC_ARRAY_GEO
 ```
 
----
+**Example Output**
 
-**GPIO Control**
-
-**Read Inputs:**
-
-```bash
-xvf_host.exe GPI_READ_VALUES
+```text
+AEC_MIC_ARRAY_GEO:
+[0.033, -0.033, 0.000,
+ 0.033,  0.033, 0.000,
+-0.033,  0.033, 0.000,
+-0.033, -0.033, 0.000]
 ```
-
-Output example: `GPI_READ_VALUES 1 0 0`
-
-In this example, the return 1 0 0 means that Pin X1D09 is high level, Pin X1D13 is low level and Pin X1D34 is low level.
-
-**Read Outputs:**
-
-```bash
-xvf_host.exe GPO_READ_VALUES
-```
-
-Output example: `GPO_READ_VALUES 0 1 1 0 0`
-
-In this example, the return 0 0 0 1 0 means that Pin X0D11 is low level, Pin X0D30 is low level, Pin X0D31 is high level, Pin X0D33 is high level and Pin X0D39 is low level.
-
-**Set Output:**
-
-```bash
-xvf_host.exe GPO_WRITE_VALUE 30 1  # Turn ON mute LED
-xvf_host.exe GPO_WRITE_VALUE 30 0  # Turn OFF mute LED
-```
-
-**Direction of Arrival (DoA)**
-
-- DoA tells you which direction someone is speaking from.
-- The **LED ring** on the ReSpeaker XVF3800 shows the direction using lights.
-- You can also read the DoA values using the `xvf_host` tool.
-
-Command to check DoA values
-
-```bash
-xvf_host.exe AEC_AZIMUTH_VALUES
-```
-
-Example Output
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.91378 (52.36 deg)
-```
-
-- **Focused beam 1**: First fixed listening direction
-- **Focused beam 2**: Second fixed listening direction
-- **Free running beam**: Always scanning direction
-- **Auto selected beam**: Final beam chosen for best audio (used for DoA indication)
-
-**Speech Indication**
-
-- Speech Energy shows how strong the voice signal is — like a speech volume meter.
-- Used to detect if someone is speaking and how loud/close they are.
-- Noise, echo, and distance can affect the energy value.
-
- Command to check Speech Energy:
-
-```bash
-xvf_host.exe AEC_SPENERGY_VALUES
-```
-
-Example Output
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
-```
-
-- **Focused beam 1**: Energy of first beam
-- **Focused beam 2**: Energy of second beam
-- **Free running beam**: Energy of scanning beam
-- **Auto selected beam**: Energy of beam chosen for final output
-
-**Audio Output Channels**
-
-- The XVF3800 provides **2 audio channels**:
-  - **Left channel**: Clean, post-processed audio
-  - **Right channel**: ASR beam or echo/reference data
-
-You can **re-route** these channels to output different sources.
-
-Example commands
-
-Set left channel to Amplified Microphone 0
-
-```bash
-xvf_host.exe AUDIO_MGR_OP_L 3 0
-```
-
-Set right channel to Far End (reference) data
-
-```bash
-xvf_host.exe AUDIO_MGR_OP_R 5 0
-```
-
-Example Output:
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-```
-
-**Fixed Beam Mode**
-
-here's how to set up fixed beam mode to detect the 0–45 degree range
-
-Set azimuth angles
-
-```bash
-xvf_host.exe AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
-```
-
-Set elevation to 0
-
-```bash
-xvf_host.exe AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
-```
-
-Enable fixed beam mode
-
-```bash
-xvf_host.exe AEC_FIXEDBEAMSONOFF  1
-```
-
-**Tuning Parameters (Make It Sound Better!)**
-
-- These settings help improve **echo cancellation**, **noise suppression**, **gain**, etc.
-- **Use them when default settings aren’t good enough.**
-
- Common Parameters:
-
-| Parameter             | Meaning                                         |
-|-----------------------|-------------------------------------------------|
-| **AUDIO_MGR_REF_GAIN**   | Speaker input gain (echo signal)             |
-| **AUDIO_MGR_MIC_GAIN**   | Microphone input gain (how loud the mic hears) |
-| **AUDIO_MGR_SYS_DELAY**  | Delay between mic and speaker signals         |
-| **PP_AGCMAXGAIN**        | Max automatic gain control level              |
-| **AEC_ASROUTGAIN**       | Gain for ASR beam output                      |
-
-For deeper documentation and advanced commands, visit the official GitHub repo:  
-[ReSpeaker XVF3800 Host Control README](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)
-
----
-
-</TabItem>
-
-<TabItem value="linux" label="macOS / Linux / Raspberry Pi">
-
-### For Raspberry Pi
-
-- Connect XVF3800 via USB or I2C
-- Make `xvf_host` executable:
-
-```bash
-cd /path/to/xvf_host
-chmod +x xvf_host
-```
-
----
-
-**Verify Installation**
-
-```bash
-./xvf_host --help
-./xvf_host VERSION
-```
-
-Expected:
-
-```
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-VERSION 2 0 2
-```
-
-**Using I2C:**
-
-```bash
-./xvf_host --use i2c VERSION
-```
-
----
-
-**LED Control (Same as Windows, prefix with ./)**
-
-```bash
-./xvf_host led_effect 1
-./xvf_host led_color 0xff8800
-./xvf_host led_speed 1
-./xvf_host led_brightness 255
-```
-
-**Configuration**
-
-```bash
-./xvf_host save_configuration 1
-./xvf_host clear_configuration 1
-```
-
----
-
-**GPIO Control**
-
-```bash
-chmod +x ./xvf_host
-```
-
-**Read Inputs:**
-
-```bash
-./xvf_host GPI_READ_VALUES
-```
-
-Output example: `GPI_READ_VALUES 1 0 0`
-
-In this example, the return 1 0 0 means that Pin X1D09 is high level, Pin X1D13 is low level and Pin X1D34 is low level.
-
-**Read Outputs:**
-
-```bash
-./xvf_host GPO_READ_VALUES
-```
-
-Output example: `GPO_READ_VALUES 0 1 1 0 0`
-
-In this example, the return 0 0 0 1 0 means that Pin X0D11 is low level, Pin X0D30 is low level, Pin X0D31 is high level, Pin X0D33 is high level and Pin X0D39 is low level.
-
-**Set Outputs:**
-
-```bash
-./xvf_host GPO_WRITE_VALUE 30 1
-./xvf_host GPO_WRITE_VALUE 30 0
-```
-
-**Direction of Arrival (DoA)**
-
-- DoA tells you which direction someone is speaking from.
-- The **LED ring** on the ReSpeaker XVF3800 shows the direction using lights.
-- You can also read the DoA values using the `xvf_host` tool.
-
-Command to check DoA values
-
-```bash
-./xvf_host AEC_AZIMUTH_VALUES
-```
-
-Example Output
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.91378 (52.36 deg)
-```
-
-- **Focused beam 1**: First fixed listening direction
-- **Focused beam 2**: Second fixed listening direction
-- **Free running beam**: Always scanning direction
-- **Auto selected beam**: Final beam chosen for best audio (used for DoA indication)
-
-**Speech Indication**
-
-- Speech Energy shows how strong the voice signal is — like a speech volume meter.
-- Used to detect if someone is speaking and how loud/close they are.
-- Noise, echo, and distance can affect the energy value.
-
-Command to check Speech Energy:
-
-```bash
-./xvf_host AEC_SPENERGY_VALUES
-```
-
-Example Output
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
-```
-
-- **Focused beam 1**: Energy of first beam
-- **Focused beam 2**: Energy of second beam
-- **Free running beam**: Energy of scanning beam
-- **Auto selected beam**: Energy of beam chosen for final output
-
-**Audio Output Channels**
-
-- The XVF3800 provides **2 audio channels**:
-
-  - **Left channel**: Clean, post-processed audio
-  - **Right channel**: ASR beam or echo/reference data
-
-You can **re-route** these channels to output different sources.
-
-Example commands
-
-Set left channel to Amplified Microphone 0
-
-```bash
-./xvf_host AUDIO_MGR_OP_L 3 0
-```
-
-Set right channel to Far End (reference) data
-
-```bash
-./xvf_host AUDIO_MGR_OP_R 5 0
-```
-
-Example Output:
-
-```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
-```
-
-**Tuning Parameters (Make It Sound Better!)**
-
-- These settings help improve **echo cancellation**, **noise suppression**, **gain**, etc.
-- **Use them when default settings aren’t good enough.**
-
-**Fixed Beam Mode**
-
-here's how to set up fixed beam mode to detect the 0–45 degree range
-
-Set azimuth angles
-
-```bash
-./xvf_host AEC_FIXEDBEAMSAZIMUTH_VALUES  0.0 0.785
-```
-
-Set elevation to 0
-
-```bash
-./xvf_host AEC_FIXEDBEAMSELEVATION_VALUES  0.0 0.0
-```
-
-Enable fixed beam mode
-
-```bash
-./xvf_host AEC_FIXEDBEAMSONOFF  1
-```
-
-Common Parameters:
-
-| Parameter                  | Meaning                                        |
-| -------------------------- | ---------------------------------------------- |
-| **AUDIO_MGR_REF_GAIN**  | Speaker input gain (echo signal)               |
-| **AUDIO_MGR_MIC_GAIN**  | Microphone input gain (how loud the mic hears) |
-| **AUDIO_MGR_SYS_DELAY** | Delay between mic and speaker signals          |
-| **PP_AGCMAXGAIN**         | Max automatic gain control level               |
-| **AEC_ASROUTGAIN**        | Gain for ASR beam output                       |
-
-For deeper documentation and advanced commands, visit the official GitHub repo:
-[ReSpeaker XVF3800 Host Control README](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)
-
----
-
-</TabItem>
-</Tabs>
 
 ## Troubleshooting
 

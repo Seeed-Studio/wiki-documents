@@ -10,13 +10,13 @@ keywords:
   - frame
   - save image
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_examples_take_picture/
 ---
 
@@ -26,9 +26,9 @@ This example demonstrates how to capture a single frame from Reachy Mini's camer
 
 Run with:
 ```bash
-python take_picture.py --backend [default|gstreamer|webrtc]
+python take_picture.py --backend [default|local|webrtc]
 ```
 
 The captured image will be saved as `reachy_mini_picture.jpg` in the current directory.
 
-See the full example at: [take_picture.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/take_picture.py)
+See the full example at: [take_picture.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/take_picture.py)

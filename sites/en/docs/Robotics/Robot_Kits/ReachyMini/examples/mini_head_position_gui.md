@@ -11,13 +11,13 @@ keywords:
   - real-time control
   - interactive
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_examples_mini_head_position_gui/
 ---
 
@@ -39,4 +39,4 @@ python mini_head_position_gui.py
 
 A GUI window will open with sliders for all controllable parameters. Adjust the sliders to see the robot respond in real-time.
 
-See the full example at: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/mini_head_position_gui.py)
+See the full example at: [mini_head_position_gui.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/mini_head_position_gui.py)

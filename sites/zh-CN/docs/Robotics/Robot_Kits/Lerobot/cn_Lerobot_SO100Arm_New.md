@@ -358,7 +358,7 @@ SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注�
 :::
 
 <div align="center">
-    <img width={800} src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
+    <img width={800} src="https://files.seeedstudio.com//wiki/robotics/Sensor/Camera/Orbbec_Gemini2/gemini2_ID.png" />
 </div>
 
 ***以下是代码校准步骤，请参照上图中接线舵机进行校准***
@@ -584,6 +584,12 @@ lerobot-calibrate \
 ```
 
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
+
+:::tip
+
+由于lerobot仓库更新，在做主从臂校准时，终端没有收到5号舵机的信号属于正常现象，继续往下进行操作即可
+
+:::
 
 ### 校准领导臂
 

@@ -12,7 +12,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 createdAt: '2023-04-24'
-updatedAt: '2026-01-07'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/reterminal-dm-flash-OS/
 ---
 # reTerminal DM Flash Raspbian OS to eMMC
@@ -402,6 +402,7 @@ echo arm_64bit=0 | sudo tee -a /boot/config.txt
 
 Then continue the [**Install drivers after flashing new Raspbian OS process**](#install-reterminal-drivers-after-flashing-new-raspbian-os)
 
+Meanwhile, if you are using the latest official 32-bit Raspberry Pi OS, its new kernel is incompatible with this product, which will result in failed driver updates and a blank screen. If you do need a 32-bit OS image for development, we recommend using an older 32-bit image version.
 :::
 
 - **Step 1.** Clone the following repo in the ssh shell you have connected to reTerminal DM from the above steps

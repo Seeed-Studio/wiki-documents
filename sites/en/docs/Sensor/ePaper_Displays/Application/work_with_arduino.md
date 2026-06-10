@@ -16,7 +16,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_arduino/
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-30'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -33,14 +33,16 @@ This page is the **reference manual** for driving any compatible Seeed ePaper pr
 
 For the **end-to-end "open the box, flash a hello world, light up sensors and buttons" walkthrough**, jump to the **cookbook** for your specific hardware — those pages reuse this reference for the boilerplate and then add product-specific examples (peripherals, code samples, troubleshooting):
 
-- [reTerminal E Series Arduino cookbook](/reterminal_e10xx_with_arduino) — covers reTerminal E1001 / E1002 / E1003 / E1004 with full peripheral examples (LEDs, buzzer, buttons, SHT4x, BMS, microSD, BMP image rendering).
+- [reTerminal E Series — ePaper Display cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino) — covers reTerminal E1001 / E1002 / E1003 / E1004 with Hello World examples using both `Seeed_GFX` and `GxEPD2`.
+- [reTerminal E Series — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals) — full peripheral examples for the same models: LED, buzzer, three user buttons, SHT4x sensor, battery monitor, microSD card, and BMP image rendering from SD.
+- [reTerminal E Series — RTC, Low Power, Audio & Touch cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2) — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
 - More cookbooks (XIAO 7.5" Panel, EE0x driver boards, …) coming as the corresponding products are added to the platform.
 
 If you only need the boilerplate (a `Hello World` on a brand-new product not yet covered by a cookbook), this page alone is enough.
 
 ## Compatible Hardware
 
-Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that has an **Arduino** column ticked can run through this workflow. At a glance:
+Every Seeed ePaper product on the [main hub page](https://wiki.seeedstudio.com/seeed_epaper_displays) that has an **Arduino** column ticked can run through this workflow. At a glance:
 
 <div class="table-center">
   <table align="center">
@@ -67,12 +69,12 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td>See the dedicated [XIAO 7.5" Panel + Arduino guide](/xiao_075inch_epaper_panel_arduino)</td>
+      <td>See the dedicated [XIAO 7.5" Panel + Arduino guide](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino)</td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td>See the dedicated [TRMNL DIY Kit + Arduino guide](/ogdiy_kit_works_with_arduino)</td>
+      <td>See the dedicated [TRMNL DIY Kit + Arduino guide](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino)</td>
     </tr>
     <tr>
       <td><strong>XIAO eInk Expansion Board v2 / ePaper Breakout Board</strong></td>
@@ -216,15 +218,17 @@ To install it manually from GitHub for the latest device support:
     </a>
 </div><br />
 
-**Sketch → Include Library → Add .ZIP Library** and pick the downloaded ZIP. The product cookbooks include concrete `GxEPD2` examples where applicable (e.g. the [reTerminal E Series cookbook](/reterminal_e10xx_with_arduino) shows full-color rendering on E1002).
+**Sketch → Include Library → Add .ZIP Library** and pick the downloaded ZIP. The product cookbooks include concrete `GxEPD2` examples where applicable (e.g. the [reTerminal E Series cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino) shows full-color rendering on E1002).
 
 ## Where to go next — Cookbooks
 
 This page intentionally stops at the boilerplate. The hardware-specific code samples and end-to-end walkthroughs live in each product's cookbook:
 
-- **[reTerminal E Series Arduino cookbook](/reterminal_e10xx_with_arduino)** — Hello World on E1001/E1002/E1003/E1004, plus the full peripheral suite: LED control, buzzer (passive PWM beeps + melody playback), 3-button input, SHT4x temperature/humidity, battery management, microSD card, BMP image rendering from SD.
-- **[XIAO 7.5" ePaper Panel + Arduino](/xiao_075inch_epaper_panel_arduino)** — XIAO ESP32-C3 walk-through with `Seeed_GFX`.
-- **[TRMNL 7.5" DIY Kit + Arduino](/ogdiy_kit_works_with_arduino)** — using the kit's hardware in custom Arduino sketches (rather than the TRMNL cloud platform).
+- **[reTerminal E Series — ePaper Display cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — Hello World on E1001/E1002/E1003/E1004 with both `Seeed_GFX` and `GxEPD2`.
+- **[reTerminal E Series — Onboard Peripherals cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals)** — the full peripheral suite for the same models: LED control, buzzer (passive PWM beeps + melody playback), 3-button input, SHT4x temperature/humidity, battery management, microSD card, BMP image rendering from SD.
+- **[reTerminal E Series — RTC, Low Power, Audio & Touch cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals_2)** — RTC time management, deep sleep / light sleep, I2S microphone recording, and capacitive touch drawing (E1003 only).
+- **[XIAO 7.5" ePaper Panel + Arduino](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino)** — XIAO ESP32-C3 walk-through with `Seeed_GFX`.
+- **[TRMNL 7.5" DIY Kit + Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino)** — using the kit's hardware in custom Arduino sketches (rather than the TRMNL cloud platform).
 
 When new ePaper products ship, the corresponding cookbook is added under each product's folder; this main page is updated to link to it.
 

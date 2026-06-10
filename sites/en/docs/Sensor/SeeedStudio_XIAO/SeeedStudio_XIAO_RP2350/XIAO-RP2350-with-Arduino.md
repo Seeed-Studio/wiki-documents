@@ -5,10 +5,10 @@ image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP235
 slug: /xiao_rp2350_arduino
 sidebar_position: 1
 last_update:
-  date: 2024-10-30T01:39:16.136Z
-  author: Spencer
+  date: 05/27/2026
+  author: Carla
 createdAt: '2024-10-30'
-updatedAt: '2026-03-30'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_rp2350_arduino/
 ---
 import Tabs from '@theme/Tabs';
@@ -91,28 +91,13 @@ The Seeed Studio XIAO RP2350 board now supports programming via Arduino, thanks 
 
 ## Hardware Overview
 
-<div class="table-center">
-<table align="center">
- <tr>
-     <th>XIAO RP2350 Front Pinout</th>
- </tr>
- <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-front.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Front Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>XIAO RP2350 Back Pinout</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
- </tr>
-    <tr>
-     <th>XIAO RP2350 Components</th>
- </tr>
-    <tr>
-     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-components.png" style={{width:480, height:'auto'}} alt="XIAO RP2350 Components" /></div></td>
- </tr>
-</table>
-</div>
+### Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO_RP2350_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
 
 Need more details on pinouts? Navigate to [Assets and Resources](#assets--resources) below.
 
@@ -231,6 +216,7 @@ Please be careful not to short-circuit the positive and negative terminals and b
 
 ### Flash the firmware
 
+<<<<<<< HEAD
 In the battery sampling circuit of the XIAO RP2350, a voltage sampling solution based on the SX1801CCR is adopted. A voltage divider circuit is formed by two 470 kΩ resistors, resulting in a voltage division ratio of 2. The program uses 3.3 V as the reference voltage, and the actual battery voltage can be calculated through the voltage restoration formula.
 
 The following example uses a watchdog-reboot approach to simulate deep sleep since the Arduino IDE cannot easily integrate the pico-extras library required for true deep sleep.
@@ -375,11 +361,27 @@ void loop() {
 Then you can upload the program.
 
 Alternatively, you can use our pre-written firmware for verification and performance testing.
+=======
+You can use our pre-written firmware for verification and performance testing.
+>>>>>>> ef2e29c7c3c2fa62c9ff4368ad311ce7eadec416
 
 Download [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), drag it into the file system.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
 
+<<<<<<< HEAD
+=======
+:::note
+
+This UF2 firmware is compiled from a third-party source. For the firmware source code, please refer to: [pico-examples/powman/powman_timer](https://github.com/peterharperuk/pico-examples/tree/powman/powman/powman_timer)
+
+This firmware source code depends on the [pico-sdk](https://github.com/raspberrypi/pico-sdk). Before use, you need to download the relevant toolchain in a Linux environment following the steps in the pico-sdk README.
+
+Please note that due to the rapid updates of pico-sdk and the toolchain, you may encounter function parameter conflicts and other compilation errors (this example library is not maintained as an official Raspberry Pi library, and there may be version and environment gaps). If you only need to verify the low-power capability of XIAO RP2350, it is recommended to use the UF2 firmware directly for quick and convenient testing.
+
+:::
+
+>>>>>>> ef2e29c7c3c2fa62c9ff4368ad311ce7eadec416
 ### Result
 
 After instrumental testing and verification, the average current of the XIAO RP2350 is **53 μA** when entering low-power mode.

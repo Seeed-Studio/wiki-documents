@@ -11,9 +11,12 @@ last_update:
   date: 7/2/2025
   author: Jason
 createdAt: '2025-07-28'
-updatedAt: '2025-09-15'
+updatedAt: '2026-05-27'
 url: https://wiki.seeedstudio.com/xiao_nrf54l15_sense_pin_multiplexing/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 For ease of use, all of the following examples of pin multiplexing are on **PlatformIO**. Please click on this link for a configuration and usage guide for the [XIAO nRF54L5](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/)
 
@@ -29,6 +32,35 @@ Based on VS Code, if you want to use the following case on the nRF Connect SDK, 
 XIAO nRF54L15(Sense) comes equipped with two important physical buttons that play crucial roles in device operation and firmware programming: the **Reset Button** and the **User Button**. Understanding their functions is essential for daily use and firmware updates.
 
 ---
+
+## Hardware Overview
+
+<Tabs>
+<TabItem  value="XIAO nRF54L15" label="XIAO nRF54L15" default>
+
+### XIAO nRF54L15 Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+
+</TabItem>
+<TabItem value="XIAO nRF54L15 Sense" label="XIAO nRF54L15 Sense" default>
+
+### XIAO nRF54L15 Sense Front
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_front_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+### XIAO nRF54L15 Sense Back
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15_Sense_back_pinout.png" style={{width:1000, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
 
 ### Reset Button
 

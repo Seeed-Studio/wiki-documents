@@ -13,19 +13,19 @@ keywords:
   - goto_target
   - set_target
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
-createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+createdAt: '2026-02-27'
+updatedAt: '2026-05-15'
 url: https://wiki.seeedstudio.com/es/reachymini_sdk_python-sdk/
 ---
 
 # Referencia del SDK de Python
 
-> **💡 Recordatorio:** El SDK ahora detecta automáticamente si debe conectarse por USB/localhost o por red, así que `ReachyMini()` funciona directamente. Aun así puedes forzar un modo con `ReachyMini(connection_mode="localhost_only" | "network")` si es necesario.
+> **💡 Recordatorio:** El SDK ahora detecta automáticamente si debe conectarse por USB/localhost o por la red, por lo que `ReachyMini()` funciona directamente. Aun así puedes forzar un modo con `ReachyMini(connection_mode="localhost_only" | "network")` si es necesario.
 
 ## Movimiento
 
@@ -120,28 +120,25 @@ with ReachyMini(media_backend="default") as mini:
 ```
 
 **Formato de datos de audio:**
-- `get_audio_sample()` devuelve un array de numpy con forma `(samples, 2)` y tipo de dato `float32`, muestreado a 16kHz.
-- `push_audio_sample()` espera un array de numpy con forma `(samples, 1 or 2)` y tipo de dato `float32`, muestreado a 16kHz.
+- `get_audio_sample()` devuelve un array de numpy con forma `(samples, 2)` y tipo de dato `float32`, muestreado a 16 kHz.
+- `push_audio_sample()` espera un array de numpy con forma `(samples, 1 or 2)` y tipo de dato `float32`, muestreado a 16 kHz.
 
 En ambos casos, la información de canales y frecuencia de muestreo se puede recuperar de forma fiable con `get_input/output_audio_samplerate()` y `get_input/output_channels()`.
 
-> **⚠️ Nota:** `push_audio_sample()` es no bloqueante, lo que significa que devuelve inmediatamente mientras el audio se reproduce en segundo plano. Si necesitas esperar a que termine la reproducción, calcula la duración en función de la longitud de la muestra y la frecuencia de muestreo.
+> **⚠️ Nota:** `push_audio_sample()` no es bloqueante, lo que significa que devuelve inmediatamente mientras el audio se reproduce en segundo plano. Si necesitas esperar a que termine la reproducción, calcula la duración en función de la longitud de la muestra y la frecuencia de muestreo.
 
 ## Opciones de backend de medios
 
 Elige el backend de medios apropiado según tu versión de Reachy Mini y tus requisitos:
 
-**Reachy Mini Lite:**
-- `media_backend="default"` - Usa OpenCV para la cámara y Sounddevice para el audio (recomendado para la mayoría de usuarios)
-- `media_backend="gstreamer"` - Usa GStreamer tanto para la cámara como para el audio ([installation required](/es/reachymini_sdk_gstreamer-installation))
+- `media_backend="default"` - Detecta automáticamente el mejor backend: LOCAL cuando se ejecuta en la misma máquina que el daemon, WEBRTC cuando es remoto (recomendado para la mayoría de usuarios).
+- `media_backend="local"` - Fuerza el backend LOCAL (cámara IPC de GStreamer + audio de GStreamer). Úsalo cuando se ejecute en la misma máquina que el daemon.
+- `media_backend="webrtc"` - Fuerza el backend WEBRTC. El daemon transmite vídeo H.264 y audio Opus por WebRTC al cliente.
+- `media_backend="no_media"` - Desactiva el gestor de medios e indica al daemon que libere el hardware de cámara y audio. Úsalo cuando necesites acceso directo mediante OpenCV, sounddevice u otra biblioteca externa. El hardware se vuelve a adquirir automáticamente cuando el gestor de contexto termina. Consulta [Media Architecture - Disabling Media](/es/reachymini_sdk_media-architecture#desactivación-de-medios--acceso-directo-al-hardware) y el ejemplo [Custom Media Manager](/es/reachymini_examples_custom_media_manager).
 
-**Reachy Mini Wireless:**
-- **Ejecución local** (ejecutando en el robot con SSH): Usa automáticamente `"gstreamer"`
-- **Ejecución remota** (controlando desde tu ordenador): Usa automáticamente `"webrtc"`. Con este backend, GStreamer se ejecuta localmente en la Raspberry Pi y transmite tanto audio como vídeo al ordenador remoto usando WebRTC.
+> **💡 Consejo:** En la mayoría de las configuraciones, el backend se selecciona automáticamente según si estás ejecutando localmente o de forma remota. ¡No es necesario especificar el valor de `media_backend`!
 
-> **💡 Consejo:** Para configuraciones inalámbricas, el backend se selecciona automáticamente según si estás ejecutando localmente o de forma remota. No es necesario especificar el valor de `media_backend`.
-
-> **💡 Consejo:** Para configuraciones inalámbricas, el backend WebRTC requiere una instalación específica, consulta [gstreamer-installation.md](/es/reachymini_sdk_gstreamer-installation). Por ahora solo se admite la plataforma Linux como cliente. Otras plataformas (Windows, macOS) serán compatibles en [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
+> **💡 Consejo:** El backend WebRTC requiere que GStreamer esté instalado en la máquina cliente. Consulta [GStreamer Installation](/es/reachymini_sdk_gstreamer-installation). Por ahora solo Linux está totalmente soportado como cliente remoto. Otras plataformas (Windows, macOS) serán compatibles en [versiones futuras](https://github.com/pollen-robotics/reachy_mini/issues/572).
 
 ## Grabación de movimientos
 Puedes grabar un movimiento moviendo el robot (modo compliant) o enviando comandos, y guardarlo para reproducirlo más tarde.

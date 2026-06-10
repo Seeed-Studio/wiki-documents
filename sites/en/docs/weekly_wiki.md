@@ -5,10 +5,10 @@ keywords:
   - weekly wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/11/2026
+  date: 06/08/2026
   author: Frank
 createdAt: '2022-12-20'
-updatedAt: '2026-05-11'
+updatedAt: '2026-06-08'
 ---
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
@@ -18,75 +18,73 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is May 11th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is June 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Add Voice Interaction to Your LeKiwi Robot with reSpeaker Flex](https://wiki.seeedstudio.com/respeaker_flex_lekiwi/)
+### [reCamera Pro Quick Start Guide](https://wiki.seeedstudio.com/recamera_pro_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Control a 3-wheeled Kiwi-drive robot with your voice! This project combines a Seeed Studio XIAO ESP32 (motor controller) with a Raspberry Pi (voice processing brain), enhanced by the reSpeaker Flex for high-quality audio capture and Voice Embeddings for smarter, more personalized voice interaction. Using natural language commands, you can drive, steer, and control the robot completely hands-free with improved accuracy and responsiveness.
+This guide will assist you in completing the hardware connection, logging into the device Web interface, configuring the wireless network, and troubleshooting common connection failures.
 
 </div>
 
-### [reBot Arm B601-DM ROS2 Integration Guide](https://wiki.seeedstudio.com/rebot_arm_b601_dm_ros2_integration/)
+### [GPIO controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg" alt="pir" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial shows how to run the ROS2 control workspace `rebotarm_ros2` for the reBot Arm B601-DM. The workspace wraps the low-level `reBotArm_control_py` Python SDK into ROS2 topics, services, and actions, making it easier to integrate upper-level planning, visual grasping, RViz visualization, and custom application development.
+This guide explains how to read and control GPIO pins on the XVF3800 voice processor using the I2C interface. You’ll learn how to read GPI and GPO pin statuses, understand GPIO mappings, and identify their purpose.
 
 </div>
 
-### [UDP Face Analysis with reCamera](https://wiki.seeedstudio.com/recamera_udp_face_analysis/)
+### [YOLO11n Edge Benchmarking on reCamera](https://wiki.seeedstudio.com/recamera_benchmarking/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera-udp-face-show.gif" alt="pir" width={300} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces a real-time face analysis solution based on reCamera, using YOLO and FairFace models to detect faces and analyze age, gender, race, and emotions, while streaming annotated video frames to a PC via UDP in real time.
+With the continuous deepening of edge AI scenarios, how to run the latest generation of vision models under extremely limited power consumption has become the core demand of developers. This WIKI will hardcore demonstrate the baseline performance (Benchmark) of **reCamera** when deploying the **YOLO11n** model. Here, you will see how reCamera smoothly drives the YOLO11n object detection and instance segmentation models with only **1.5W** of power consumption.
 
 </div>
 
-### [XIAO ESP32-C5 With Zephyr(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c5_with_zephyr/)
+### [Work with PlatformIO for ePaper Displays](https://wiki.seeedstudio.com/epaper_work_with_platformio/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" alt="pir" width={500} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces how to develop with Zephyr RTOS on the XIAO ESP32-C5, including environment setup, firmware building and flashing, GPIO and USB configuration, and practical examples using display expansion boards and peripherals.
+This guide explains how to set up and configure PlatformIO for Seeed ePaper displays. You’ll learn how to install PlatformIO in Visual Studio Code, create a PlatformIO project, configure platformio.ini for compatible Seeed ePaper devices, add the Seeed_GFX library, and generate the correct driver.h file for your board and screen combination.
 
 </div>
 
-### [Get Started with MeshCore Remote Terminal](https://wiki.seeedstudio.com/get_started_with_meshcore_remote_terminal/)
+### [SenseCraft AI with reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/t2.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki will introduce [Remote Terminal for MeshCore](https://github.com/jkingsman/Remote-Terminal-for-MeshCore) (RemoteTerm) to provide an interface for [MeshCore](https://meshcore.io/) devices to transmit messages. This tutorial provides a fundamental setup for running RemoteTerm on a Raspberry Pi using the [Seeed XIAO ESP32S3 & SX1262 Kit](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) as a companion radio and [Raspberry Pi Zero 2W](https://www.seeedstudio.com/Raspberry-Pi-Zero-2-W-p-5197.html) for a compact, all-in-one MeshCore solution for power users!
+SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
 
 </div>
 
-### [How to use bacnet MS/TP with R1225](https://wiki.seeedstudio.com/how_to_use_bacnet_ms_tp_with_r1225/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/How_to_use_modbus_rs485/reComputer-R1225.jpg" alt="pir" width={600} height="auto" /></p>
+### [Migrate /home Data from Jetson Orin Nano Developer Kit to reComputer](https://wiki.seeedstudio.com/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/)
 
 <div style={{ textAlign: "justify" }}>
 
-This article mainly introduces how to perform functional testing of bacnet MS/TP protocol on reComputer R1225.We simulated a bacnet MS/TP server on reComputer R1225, and then used YABE on the W10 PC to check whether the device is present. If the device we simulated can be found normally, it means that the bacnet MS/TP communication is normal.
+This wiki shows how to use the [reComputer Classic backup to Super migration project](https://github.com/jjjadand/reComputer_classic-backup-to-super.git) to migrate only `/home` from the source Jetson Orin Nano Developer Kit to a target reComputer. In this guide, [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) are used as target examples. Flash the target reComputer with its matching Seeed JetPack 6 BSP first, then restore the `/home` package on top of that clean reComputer system.
 
 </div>
 
-### [How to use rs485 and modbus with R1225](https://wiki.seeedstudio.com/how_to_use_modbus_rs485_with_r1225/)
+### [Use an SPI Display on reComputer J4012 Classic](https://wiki.seeedstudio.com/jetson_spi_getting_start/)
 
 <div style={{ textAlign: "justify" }}>
 
-This article mainly introduces how to use the 485 communication function of reComputer R1225, and tests the RS485 and Modbus communication functions.
+This wiki introduces how to connect and drive an SPI display on the Seeed reComputer J4012 Classic. It covers the basic workflow of using an SPI display through the 40-pin header, including hardware wiring, SPI interface configuration, device node checking, dependency installation, compiling a C++ demo, and running a simple display test.
 
 </div>
 
@@ -226,5 +224,9 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.4.13th](/Seeed_Elderly/weekly_wiki/2026/wiki260413)
 - [weekly wiki on 2026.4.20th](/Seeed_Elderly/weekly_wiki/2026/wiki260420)
 - [weekly wiki on 2026.4.27th](/Seeed_Elderly/weekly_wiki/2026/wiki260427)
+- [weekly wiki on 2026.5.11th](/Seeed_Elderly/weekly_wiki/2026/wiki260511)
+- [weekly wiki on 2026.5.18th](/Seeed_Elderly/weekly_wiki/2026/wiki260518)
+- [weekly wiki on 2026.5.25th](/Seeed_Elderly/weekly_wiki/2026/wiki260525)
+- [weekly wiki on 2026.6.01st](/Seeed_Elderly/weekly_wiki/2026/wiki260601)
 
 </details>

@@ -11,16 +11,18 @@ last_update:
   date: 3/11/2026
   author: Michelle Huang
 createdAt: '2024-07-24'
-updatedAt: '2026-04-23'
+updatedAt: '2026-05-29'
 url: https://wiki.seeedstudio.com/sensecap_t1000_e/
 ---
 import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
 
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+
 1. Not finishing the message transmission process
 2. Being configured
 :::
+
 ## Video Tutorial
 
 ### Part 1: Unboxing Setup
@@ -100,14 +102,14 @@ import TabItem from '@theme/TabItem';
 
 ### Connect via Website
 
-If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now.
 
   Step 1: Open the Website
 
-[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite.
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Step 2: Add the new device 
+  Step 2: Add the new device
   
     Click "+ New Connection". 
 
@@ -130,6 +132,7 @@ If you want to text messages and communicate with other nodes in the website, yo
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ## Configuration
+
 ### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -401,11 +404,11 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 - Change the charging cable
 
-- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters: 
+- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters:
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
- 
- - If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
+
+- If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
 
 ### Device stuck in boot loop
 
@@ -449,9 +452,9 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 **Step1: Adafruit-nrfutil Installation**
 
-For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line. 
+For window user, press "Win" key and "r" key, then enter "cmd" in the pop-oyt window, click "Enter". This can open the command line.
 
-For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line. 
+For MAC user, press "Command" key and "Space" key, so that you can open Spotlight. Then enter "termial", click "Return". This can open the command line.
 
 **Prerequisites**
 
@@ -492,8 +495,6 @@ This is the installation location:
 For window user, you may need to add the  path manually. Copy the installation location showed in the last step. Then add it as followed:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/AddPath.png" alt="pir" width={1000} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -618,100 +619,64 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  Check if the port is correct, or try another port.
 
- ### Device automatically turn off
+### Device automatically turn off
 
- #### Description
+#### Description
 
- - After the device turning on, it will turn off or reboot automatically after a while. 
- - The serial port log ran for a while and then stopped.
+- After the device turning on, it will turn off or reboot automatically after a while.
+- The serial port log ran for a while and then stopped.
 
  This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
 
- #### Troubleshoot
+#### Troubleshoot
 
- [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase. 
+ [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase.
 
- ### Factory Reset
+### Factory Reset
+
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
 
 - [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to flash erase the device. And then re-flash the latest firmware.
 
-- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically.
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-### NodeDB Reset
+### Message Communication Fail
 
-NodeDB is the local database that stores information about nodes discovered in the current Mesh network, including:
+#### NodeDB Reset
 
-- **Node ID**
-- **User Name**
-- **Location Information**
-- **Signal Information (SNR)**
-- **Last Seen Time**
+NodeDB is the local database that stores information about nodes discovered in the current Mesh network. If you encounter a situation where you can't communicate with a certain node, it might be because your nodedB has stored outdated information for that node. You will need to update it.
 
-**When to reset**
-
-Reset NodeDB when:
-
-- The node list contains outdated, duplicate, or invalid entries.
-- You move to a different Mesh environment and want to rediscover nearby nodes.
-- Node information in the app appears incorrect or incomplete.
-
-:::danger
-Resetting NodeDB only clears the node database stored on the device. It **does not perform a factory reset** and **does not remove the device's basic configuration**.
-:::
-
-**Reset from the App**
-
-1. Open the app and connect to the target device.
-2. Go to **Settings**.
-3. Tap **Device**.
-4. Scroll to the bottom of the **Device Config** page and find **Reset NodeDB**.
-5. Tap it and confirm the action.
-
-**App Path**
-
-`Settings > Device > Reset NodeDB`
-
-**Example Screens**
-
-Step 1: Open **Device** from the **Settings** page.
+Open the app and connect to the target device. Go to **Settings**->**Device**->**Device Config**->**Reset NodeDB**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB3.png" alt="Device entry in Settings" width={300} height="auto" /></p>
 
-Step 2: Tap `Reset NodeDB` on the **Device Config** page.
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1nodeDB4.png" alt="Reset NodeDB button in Device Config" width={300} height="auto" /></p>
 
-:::tip
-Please note the difference between the following options:
+#### Exchange User Info
 
-- **Reset NodeDB**: Only clears the node database.
-- **Factory Reset**: Restores the device to factory settings and removes more configuration data.
+Each node will periodically send its own node information, enabling other nodes in the mesh to "see" and "recognize" it. Two nodes need to exchange their node information with each other in order to be able to communicate with each other. If you are unable to send or receive private messages with another node on the list, you can manually prompt them to exchange information in the app.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/USERINFO.png" alt="Device entry in Settings" width={300} height="auto" /></p>
+
+#### Regenerate Private Key
+
+Two nodes need to know their private key with each other in order to be able to communicate with each oher. If one node keeps failing in private message transmission, try regenerate the private key for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/RenerateKey.png" alt="Device entry in Settings" width={600} height="auto" /></p>
+
+Reboot the faulty device to make the configuration function. After the key regeneration, other device needs to reconnect with the node. So it is better to delete the node in other device's node list.
+
+:::note
+For more information about the communication with other LoRa chip, please refer to: [link](https://meshtastic.org/docs/hardware/devices/seeed-studio/sensecap/card-tracker/)
+
 :::
-
-**What happens after reset**
-
-After **Reset NodeDB** is executed, the device clears the currently stored node list. As the device continues running, it will rediscover and record nearby nodes again.
-
-You may observe the following:
-
-- The node list may temporarily become empty or smaller.
-- Nodes will gradually reappear as the device continues operating.
-- Previously stored historical node records will no longer be available.
-
-**Notes**
-
-- Before resetting, make sure the issue is actually related to an abnormal node list.
-- If the problem is only a delay in node display, wait for a while first to see whether it recovers automatically.
-- If the issue remains after resetting NodeDB, continue troubleshooting the device configuration or other possible causes.
-- Use **Factory Reset** carefully to avoid accidentally removing device configuration.
 
 ### Signal Quality
 
-  - **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
+- **SNR** reflects the quality of the communication link. Normal device usually operates above -7 dB. Device with a SNR lower than -10 dB indicates poor performance.
 
-  - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance. 
+- **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 
@@ -719,15 +684,11 @@ You may observe the following:
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/PogoPin4.png" alt="pir" width={900} height="auto" /></p>
 
-## Resource
+## Resources
 
 - [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 - [SenseCAP T1000 Tracker Datasheet](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 - [UN38.3](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/UN38.3.zip)
-
-
-
-## Resources
 
 <JetsonLeadQuote
   buttonText="Request Quote of Customization"

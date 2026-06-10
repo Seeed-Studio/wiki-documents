@@ -11,13 +11,13 @@ keywords:
   - TRMNL
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /epaper_work_with_esphome
-sidebar_position: 1
+sidebar_position: 2
 last_update:
   date: 04/28/2026
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_esphome/
-updatedAt: '2026-04-28'
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';

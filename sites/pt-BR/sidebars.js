@@ -1937,6 +1937,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_tflm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ros2',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ros2_voice_pipeline',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_voice_agent',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_xiaozhi',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora',
@@ -1944,6 +1945,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_agora_ten_framework',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_openclaw',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_picovoice',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_sensecraft',
                   ],
                 },
               ],
@@ -2070,6 +2072,9 @@ const sidebars = {
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_ros',
               ],
             },
             {
@@ -2081,6 +2086,13 @@ const sidebars = {
               },
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_i2s_test',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_playback_record',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_udp_stream',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_http_stream',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_xiao_mqtt',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_doa',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_volume_xiao',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_gpio',
               ],
             },
             'Sensor/reSpeaker_flex/pt_reSpeaker_flex_python_control',
@@ -3830,7 +3842,8 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_reComputer_Super_Getting_Started',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_reComputer_Super_Hardware_Interfaces_Usage',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_Replace_the_Thermal_Conductive_Paste_for_reComputer'
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_Replace_the_Thermal_Conductive_Paste_for_reComputer',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/pt_reComputer_Antenna_Installation'
                   ],
                 },
               ]
@@ -3872,6 +3885,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/pt_Other_Devices',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Other_Devices/pt_reBot_Arm_Jetson_Bundle',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8822CE_Wireless_Module_for_Jetson',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_RTL8852BE_Wireless_Module_for_Jetson',
@@ -3880,6 +3894,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Jetson-Mate',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_Mini_AI_Computer_T906',
+                'Edge/NVIDIA_Jetson/Other_Devices/pt_Seeed_AGX_Orin_Dev_Kit_Getting_Started',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_A203E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_A205E_Flash_System',
                 'Edge/NVIDIA_Jetson/Other_Devices/pt_reComputer_Jetson_Series_GPIO_Grove'
@@ -3982,7 +3997,8 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_J501_Mini_StarAI_Viola_Fruit_Sorting',
-                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_SoArm_by_OpenClaw_on_Jetson_Thor'
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_SoArm_by_OpenClaw_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/pt_Control_reBot_Arm_by_NemoClaw_on_Jetson_Thor',
               ]
             },
             // Managed Services
@@ -4027,9 +4043,32 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Implement_Ethercat_communication_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Distributed_llama_cpp_RPC_on_Jetson',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/pt_Jetson_SPI_Getting_Start',
               ]
             },
           ]
+        },
+        // Seeed Jetson DevelopTool
+        {
+          type: 'category',
+          label: 'Seeed Jetson DevelopTool',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Overview',
+          },
+          items: [
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Supported_Devices',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Installation',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Connect_Device',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Flash_Firmware',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Device_Management',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_App_Market',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Skills',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_Remote_Development',
+            'Edge/NVIDIA_Jetson/Jetson_DevelopTool/pt_Jetson_DevelopTool_FAQ',
+          ],
         },
         // FAQs
         {
@@ -4042,9 +4081,11 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/pt_jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/pt_Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/pt_Migrate_Home_Data_from_Jetson_Orin_Nano_Developer_Kit_to_reComputer',
             'Edge/NVIDIA_Jetson/FAQs/pt_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/pt_Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/pt_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
+            'Edge/NVIDIA_Jetson/FAQs/pt_How_to_use_Camera_IMX219',
             'Edge/NVIDIA_Jetson/FAQs/pt_Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/pt_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/pt_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
@@ -4296,6 +4337,13 @@ const sidebars = {
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_Grasping_Demo',
                 'Robotics/Robot_Kits/reBot_Arm/B601_DM/pt_reBot_Arm_B601_DM_ROS2_Integration',
               ]
+            },
+            {
+              type: 'category',
+              label: 'B601-RS',
+              items: [
+                'Robotics/Robot_Kits/reBot_Arm/B601_RS/pt_reBot_Arm_B601_RS_Getting_Started',
+              ]
             }
           ]
         },
@@ -4316,6 +4364,21 @@ const sidebars = {
               type: 'doc',
               id: 'Robotics/Robot_Kits/ReachyMini/pt_intro',
               label: 'Introdução',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_ReachyMini_Getting_Started',
+              label: 'Primeiros passos',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_AGENTS',
+              label: 'Guia do agente de IA',
+            },
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/pt_vibe-code-with-your-agent',
+              label: 'Programe com seu agente',
             },
             {
               type: 'category',
@@ -4513,6 +4576,27 @@ const sidebars = {
           items: [
             'Robotics/Robot_Kits/StackForce/pt_StackForce_Giant_Bipedal_Wheeled_Robot',
             'Robotics/Robot_Kits/StackForce/pt_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Humanoide',
+          items: [
+            {
+              type: 'category',
+              label: 'Atom-S',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-S/pt_Atom-S',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Atom-X',
+              items: [
+                'Robotics/Robot_Kits/Humanoid/Atom-X/pt_Atom-X',
+              ]
+            },
+
           ]
         },
       ]

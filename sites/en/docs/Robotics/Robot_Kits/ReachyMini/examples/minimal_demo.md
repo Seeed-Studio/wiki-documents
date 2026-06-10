@@ -11,13 +11,13 @@ keywords:
   - basic
   - getting started
 last_update:
-  date: 02/27/2026
+  date: 05/15/2026
   author: Tienjuiwong
 translation:
   skip:
     - zh-CN
 createdAt: '2026-02-27'
-updatedAt: '2026-02-27'
+updatedAt: '2026-05-18'
 url: https://wiki.seeedstudio.com/reachymini_examples_minimal_demo/
 ---
 
@@ -25,4 +25,4 @@ url: https://wiki.seeedstudio.com/reachymini_examples_minimal_demo/
 
 This code shows how to move Reachy Mini's head and antennas in a simple oscillating pattern.
 
-See the full example at: [minimal_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/develop/examples/minimal_demo.py)
+See the full example at: [minimal_demo.py](https://github.com/pollen-robotics/reachy_mini/tree/main/examples/minimal_demo.py)
