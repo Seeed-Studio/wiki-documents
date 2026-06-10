@@ -100,6 +100,9 @@ url: https://wiki.seeedstudio.com/cn/robotics_page/
               <a href="/cn/rebot_arm_b601_dm_ros2_integration/" className="content-card">
                 <span className="text">reBot B601-DM ROS2 集成</span>
               </a>
+              <a href="/cn/rebot_arm_b601_rs_ros2_integration/" className="content-card">
+                <span className="text">reBot B601-RS ROS2 集成</span>
+              </a>
           </div>
 
           <h3>🤗 Reachy</h3>
