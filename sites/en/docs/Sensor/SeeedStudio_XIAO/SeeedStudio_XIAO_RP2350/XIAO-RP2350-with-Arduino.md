@@ -216,161 +216,12 @@ Please be careful not to short-circuit the positive and negative terminals and b
 
 ### Flash the firmware
 
-<<<<<<< HEAD
-In the battery sampling circuit of the XIAO RP2350, a voltage sampling solution based on the SX1801CCR is adopted. A voltage divider circuit is formed by two 470 kΩ resistors, resulting in a voltage division ratio of 2. The program uses 3.3 V as the reference voltage, and the actual battery voltage can be calculated through the voltage restoration formula.
-
-The following example uses a watchdog-reboot approach to simulate deep sleep since the Arduino IDE cannot easily integrate the pico-extras library required for true deep sleep.
-
-<details>
-<summary>Program</summary>
-
-```cpp
-#include <Arduino.h>
-#include "hardware/powman.h"
-#include "hardware/adc.h"
-#include "hardware/watchdog.h"
-
-// ── Pin Definitions ──────────────────────────────────────────────
-#define BAT_ADC_EN    19
-#define BAT_ADC_READ  29
-#define SLEEP_SEC     30
-
-#define VOLTAGE_DIVIDER_RATIO  2.0f
-#define VBAT_LOW_THRESHOLD     3.5f
-#define SCRATCH_MAGIC          0xDEADBEEF
-
-// ── Global voltage storage (can be output via other methods, e.g., LED alert) ──────────
-static float g_vbat   = 0.0f;
-static bool  g_lowBat = false;
-
-// ── Disable ADC Peripheral ──────────────────────────────────────
-static void disableADC() {
-    adc_run(false);
-    hw_clear_bits(&adc_hw->cs, ADC_CS_EN_BITS);
-}
-
-// ── Read Battery Voltage ─────────────────────────────────────────
-static float readVbat() {
-    digitalWrite(BAT_ADC_EN, HIGH);
-    delayMicroseconds(500);
-
-    adc_init();
-    adc_gpio_init(BAT_ADC_READ);
-    adc_select_input(3);
-    analogReadResolution(12);
-    (void)analogRead(BAT_ADC_READ);   // Discard the first reading
-
-    int32_t sum = 0;
-    for (int i = 0; i < 5; i++) {
-        sum += analogRead(BAT_ADC_READ);
-        delayMicroseconds(200);
-    }
-
-    digitalWrite(BAT_ADC_EN, LOW);    // ★ Disable voltage divider immediately after sampling
-    disableADC();
-
-    return ((float)sum / 5.0f / 4095.0f * 3.3f) * VOLTAGE_DIVIDER_RATIO;
-}
-
-// ── Shut Down All Unnecessary Peripherals ─────────────────────────
-static void shutdownPeripherals() {
-    // ADC
-    digitalWrite(BAT_ADC_EN, LOW);
-    disableADC();
-
-    // Pull down all unused pins to eliminate floating leakage
-    const uint8_t unused[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18};
-    for (uint8_t pin : unused) {
-        pinMode(pin, INPUT_PULLDOWN);
-    }
-
-    // Reduce frequency to 18MHz to significantly reduce dynamic power consumption
-    set_sys_clock_khz(18000, false);
-}
-
-// ── Low-Power Wait (Watchdog Reboot to Simulate Sleep) ───────────
-static void sleepWithReboot(uint32_t seconds) {
-    // Start POWMAN Timer (LPOSC 1kHz)
-    if (!powman_timer_is_running()) powman_timer_start();
-    powman_timer_set_1khz_tick_source_lposc();
-
-    // Store wake-up target time in scratch registers
-    uint64_t wake_ms = powman_timer_get_ms() + (uint64_t)seconds * 1000ULL;
-    watchdog_hw->scratch[4] = SCRATCH_MAGIC;
-    watchdog_hw->scratch[5] = (uint32_t)(wake_ms & 0xFFFFFFFF);
-    watchdog_hw->scratch[6] = (uint32_t)(wake_ms >> 32);
-
-    shutdownPeripherals();
-
-    // Watchdog timeout reboot (max 8.3s), CPU waits in low-frequency WFE
-    rp2040.wdt_begin(8300);
-    while (true) {
-        __wfe();
-    }
-}
-
-// ─────────────────────────────────────────────────────────────────
-void setup() {
-    // First action on power-up: pull ADC_EN low
-    pinMode(BAT_ADC_EN, OUTPUT);
-    digitalWrite(BAT_ADC_EN, LOW);
-    pinMode(BAT_ADC_READ, INPUT);
-
-    // ── Check if waking up from sleep reboot ───────────────────────
-    if (watchdog_hw->scratch[4] == SCRATCH_MAGIC) {
-        if (!powman_timer_is_running()) powman_timer_start();
-        powman_timer_set_1khz_tick_source_lposc();
-
-        uint64_t wake_ms = (uint64_t)watchdog_hw->scratch[5]
-                         | ((uint64_t)watchdog_hw->scratch[6] << 32);
-        uint64_t now_ms  = powman_timer_get_ms();
-
-        if (now_ms < wake_ms) {
-            // Not time to wake up yet, continue waiting
-            sleepWithReboot((uint32_t)((wake_ms - now_ms) / 1000 + 1));
-            // Will not return
-        }
-
-        // Time to wake up, clear flag
-        watchdog_hw->scratch[4] = 0;
-    }
-
-    // ── Restore normal frequency, execute application logic ───────
-    set_sys_clock_khz(125000, true);
-
-    // Sample voltage
-    g_vbat   = readVbat();
-    g_lowBat = (g_vbat < VBAT_LOW_THRESHOLD);
-
-    // TODO: Process sampling results here
-    // Example: Turn on LED alert for low battery
-    // if (g_lowBat) { digitalWrite(LED_PIN, HIGH); delay(100); ... }
-
-    // Enter sleep mode 2 seconds after power-up
-    delay(2000);
-}
-
-void loop() {
-    sleepWithReboot(SLEEP_SEC);
-    // Will not return; restarts from setup() after wake-up
-}
-```
-
-</details>
-<br/>
-Then you can upload the program.
-
-Alternatively, you can use our pre-written firmware for verification and performance testing.
-=======
 You can use our pre-written firmware for verification and performance testing.
->>>>>>> ef2e29c7c3c2fa62c9ff4368ad311ce7eadec416
 
 Download [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 ), drag it into the file system.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/low_power_2.png" alt="pir" width="800" height="auto"/></div>
 
-<<<<<<< HEAD
-=======
 :::note
 
 This UF2 firmware is compiled from a third-party source. For the firmware source code, please refer to: [pico-examples/powman/powman_timer](https://github.com/peterharperuk/pico-examples/tree/powman/powman/powman_timer)
@@ -381,7 +232,6 @@ Please note that due to the rapid updates of pico-sdk and the toolchain, you may
 
 :::
 
->>>>>>> ef2e29c7c3c2fa62c9ff4368ad311ce7eadec416
 ### Result
 
 After instrumental testing and verification, the average current of the XIAO RP2350 is **53 μA** when entering low-power mode.
