@@ -2126,14 +2126,32 @@ const sidebars = {
                 id: 'Sensor/reSpeaker_flex/reSpeaker_flex_xiao',
               },
               items: [
-                'Sensor/reSpeaker_flex/reSpeaker_flex_i2s_test',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_playback_record',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_udp_stream',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_http_stream',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_mqtt',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_doa',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_volume_xiao',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_gpio',
+    {
+      type: 'category',
+      label: 'Playback & Recording',
+      items: [
+        'Sensor/reSpeaker_flex/reSpeaker_flex_i2s_test',
+        'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_playback_record',
+        'Sensor/reSpeaker_flex/reSpeaker_flex_volume_xiao',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Audio Streaming',
+      items: [
+        'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_udp_stream',
+        'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_http_stream',
+        'Sensor/reSpeaker_flex/reSpeaker_flex_xiao_mqtt',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Device Control',
+      items: [
+        'Sensor/reSpeaker_flex/reSpeaker_flex_gpio',
+        'Sensor/reSpeaker_flex/reSpeaker_flex_doa',
+      ],
+    },
               ],
             },
             'Sensor/reSpeaker_flex/reSpeaker_flex_python_control',
