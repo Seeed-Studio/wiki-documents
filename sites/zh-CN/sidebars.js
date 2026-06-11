@@ -1211,6 +1211,40 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO nRF54LM20A 系列',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_NCS',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Built-in-Sensor',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/cn_XIAO_nRF54LM20A-Sense_Low_Power',
+            {
+              type: 'category',
+              label: '无线连接',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A-Sense_Bluetooth_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A_Matter_Usage',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Wireless_Connection/cn_XIAO_nRF54LM20A_NFC_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: '应用',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/Application/cn_XIAO_nRF54LM20A_with_epaper_and_sdcard',
+              ],
+            },
+            // {
+            //   type: 'category',
+            //   label: 'Programming Language',
+            //   items: [
+            //     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54LM20A-Sense/XIAO_nRF54LM20A-Sense_with_MicroPython',
+            //   ],
+            // },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C3',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/cn_XIAO_ESP32C3_Getting_Started',
