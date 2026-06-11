@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 Here, I will present some simple examples to demonstrate the use of these low-power sleep modes. All ESP32 boards are versatile, and the development board I am using in this context is the XIAO ESP32S3 Sense.
 
-## Hadware Oview
+## Hadware Overview
 
 <div class="table-center">
   <table align="center">
