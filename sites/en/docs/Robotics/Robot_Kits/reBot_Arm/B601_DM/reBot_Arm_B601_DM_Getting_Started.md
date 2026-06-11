@@ -80,6 +80,20 @@ Before Assembly:
 
 ## Step 2: Reset Motors ID
 
+### AI AGENT
+
+:::tip
+This section is in beta. Please observe safety precautions during use. If AI suggestions differ from this documentation, follow this guide and seek assistance from our engineers.
+:::
+
+Let an AI AGENT assist you through this process. Copy the prompt below to your AI assistant:
+
+```text
+
+Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help me initialize the robotic arm.
+
+```
+
 ### Before Reset Motors:
   
   Before motor parameter configuration, note the following preparations and safety rules:
@@ -151,10 +165,10 @@ conda activate rebot
 ### Step3: Install motorbridge
 
 :::tip
-If all scanned motors show offline, install motorbridge v0.2.9.
 
 **Note for macOS users:**
 If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
+
 :::
 
 After activating the reBot virtual environment, run the following command to install motorbridge:
