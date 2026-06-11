@@ -1215,7 +1215,7 @@ const sidebars = {
             // },
           ],
         },
-         {
+        {
           type: 'category',
           label: 'XIAO nRF54LM20A Series',
           items: [
