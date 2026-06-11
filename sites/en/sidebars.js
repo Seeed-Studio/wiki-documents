@@ -2014,109 +2014,7 @@ const sidebars = {
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
-        {
-          type: 'category',
-          label: 'reSpeaker Lite',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
-          },
-          items: [
-            {
-              type: 'category',
-              label: 'reSpeaker Lite with XIAO ESP32S3',
-              link: {
-                type: 'doc',
-                id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
-              },
-              items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
-                {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
-                  label: 'Streams Generator',
-                },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
-              ],
-            },
-            'Sensor/ReSpeaker_Lite/respeaker_enclosure',
-          ],
-        },
-        {
-          type: 'category',
-          collapsed: true,
-          collapsible: true,
-          label: 'reSpeaker 2-Mics Pi HAT',
-          link: {
-            type: 'doc',
-            id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
-          },
-          items: [
-            {
-              type: 'category',
-              label: 'For v1 Users (Deprecated)',
-              items: [
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'For v2 Users',
-              items: [
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
-              ],
-            },
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'reSpeaker XVF 3000',
-          collapsed: true,
-          collapsible: true,
-          items: [
-            'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v3.0',
-            'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v2.0',
-            'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Sound Event Detection Module',
-          collapsed: true,
-          collapsible: true,
-          link: {
-            type: 'doc',
-            id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
-          },
-          items: [
-            'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
-            // add sub-docs here later
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
-            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
-          ],
-        },
+
         {
           type: 'category',
           label: 'reSpeaker Flex',
@@ -2181,6 +2079,112 @@ const sidebars = {
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
+        {
+          type: 'category',
+          label: 'reSpeaker Lite',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
+              link: {
+                type: 'doc',
+                id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
+              },
+              items: [
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
+                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
+                {
+                  type: 'doc',
+                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
+                  label: 'Streams Generator',
+                },
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
+                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
+              ],
+            },
+            'Sensor/ReSpeaker_Lite/respeaker_enclosure',
+          ],
+        },
+
+              {
+          type: 'category',
+          label: 'reSpeaker XVF 3000',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v3.0',
+            'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v2.0',
+            'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+          ],
+        },
+        {
+          type: 'category',
+          collapsed: true,
+          collapsible: true,
+          label: 'reSpeaker 2-Mics Pi HAT',
+          link: {
+            type: 'doc',
+            id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'For v1 Users (Deprecated)',
+              items: [
+                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'For v2 Users',
+              items: [
+                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
+                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+              ],
+            },
+            'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
+          ],
+        },
+  
+        {
+          type: 'category',
+          label: 'Sound Event Detection Module',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+          },
+          items: [
+            'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
+        
       ],
     },
     {
