@@ -1056,6 +1056,12 @@ logger:
   hardware_uart: UART0
 ```
 
+### Q3: Why does the screen not refresh in the RTC or microphone demo?
+
+If a microSD card is inserted, remove the card first and restart the device. Except for the microSD card detection demo, the other demos on this page do not need the card to be inserted. Keeping a card inserted may affect the shared SPI bus and prevent the ePaper screen from refreshing correctly.
+
+After removing the card, upload or restart the RTC or microphone demo again. The ePaper screen should refresh normally.
+
 ## Resources
 
 - **[Wiki]** [ESPHome Cookbook: Display Basics](/reterminal_e10xx_with_esphome)
