@@ -9,16 +9,16 @@ last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-05-27'
+updatedAt: '2026-05-30'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_main_page/
 ---
 # reTerminal E シリーズ 電子ペーパーディスプレイ概要
 
 ## はじめに
 
-reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパーディスプレイ端末ファミリーで、**常時表示・低消費電力の情報表示**に特化して設計されています。ラインナップは **E1001, E1002, E1003, E1004** の 4 モデルで構成され、7.3 インチから 13.3 インチまでのモノクロおよびフルカラーパネルをカバーし、タッチ操作対応モデルや、数か月単位のバッテリー駆動が可能なモデルも用意されています。すべて同じソフトウェアスタック（SenseCraft HMI、Home Assistant、Arduino など）を共有しているため、一度覚えてしまえば、あとは用途に合ったフォームファクタを選ぶだけです。
+reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパーディスプレイ端末ファミリーで、**常時表示・低消費電力の情報表示**に特化して設計されています。ラインナップは **E1001, E1002, E1003, E1004** の 4 モデルで構成され、7.3 インチから 13.3 インチまでのモノクロおよびフルカラーパネルをカバーし、タッチ操作対応や数か月単位のバッテリー駆動オプションも用意されています。すべて同じソフトウェアスタック（SenseCraft HMI、Home Assistant、Arduino など）を共有しているため、一度覚えれば、あとは用途に合ったフォームファクタを選ぶだけです。
 
-電力を継続的に消費する従来型ディスプレイとは異なり、reTerminal E シリーズはコンテンツを再描画するときにのみ電流を消費するため、デジタルフォトフレーム、スマートホームダッシュボード、小売サイネージ、会議室ボード、教室ディスプレイなど、常時表示が求められる用途に最適です。
+電力を継続的に消費する従来型ディスプレイとは異なり、reTerminal E シリーズはコンテンツを再描画するときにのみ電流を消費するため、デジタルフォトフレーム、スマートホームダッシュボード、リテールサイネージ、会議室ボード、教室ディスプレイなど、常時表示が求められる用途に最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -47,17 +47,17 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
       <td align="center"><strong>13.3" フルカラー</strong><br/>E Ink® Spectra™ 6<br/>約 6 か月バッテリー</td>
     </tr>
     <tr>
-      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer"><strong>E1001 を購入</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
-      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer"><strong>E1002 を購入</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
-      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer"><strong>E1003 を購入</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
-      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer"><strong>E1004 を購入</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1001</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1002</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1003-p-6731.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1003</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1003" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
+      <td align="center"><a href="https://www.seeedstudio.com/reTerminal-E1004-p-6692.html" target="_blank" rel="noopener noreferrer"><strong>Buy E1004</strong></a><br/><a href="https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1004" target="_blank" rel="noopener noreferrer">Wiki →</a></td>
     </tr>
   </table>
 </div>
 
 ## 仕様比較
 
-4 モデルすべてが同じ ESP32-S3 プラットフォーム、Wi-Fi 4 / Bluetooth 5.0 無線、オンボード T/H センサーとブザー、USB-C 5 V / 1 A 入力、0～40 ℃ の動作温度範囲を備え、金属筐体に収められています。違いは主に **ディスプレイパネル**、**リフレッシュ動作**、**バッテリー**、**拡張性**、**認証** にあります：
+4 つのモデルはすべて、同じ ESP32-S3 プラットフォーム、Wi-Fi 4 / Bluetooth 5.0 無線、オンボード T/H センサとブザー、USB-C 5 V / 1 A 入力、0～40 ℃の動作温度範囲を備え、金属筐体に収められています。違いは主に、**ディスプレイパネル**、**リフレッシュ動作**、**バッテリー**、**拡張性**、**認証**にあります：
 
 <div class="table-center">
 	<table align="center">
@@ -95,7 +95,7 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 			<td align="center">❌</td>
 			<td align="center">✅</td>
 			<td align="center">❌</td>
-		</tr>
+		</tr]
 		<tr>
 			<td align="center"><strong>リフレッシュ時間</strong></td>
 			<td align="center">2～5 秒</td>
@@ -126,12 +126,12 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 			<td align="center" colspan="4">2.4 GHz Wi-Fi 802.11 b/g/n + Bluetooth 5.0</td>
 		</tr>
 		<tr>
-			<td align="center"><strong>オンボードセンサー</strong></td>
-			<td align="center" colspan="4">温度・湿度センサー</td>
+			<td align="center"><strong>オンボードセンサ</strong></td>
+			<td align="center" colspan="4">温度・湿度センサ</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>オーディオ</strong></td>
-			<td align="center" colspan="4">ブザー（サウンドアラート） · マイク端子を E1001 / E1002 / E1003 に予約</td>
+			<td align="center" colspan="4">ブザー（サウンドアラート）・マイク端子を E1001 / E1002 / E1003 に予約</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>バッテリー</strong></td>
@@ -142,7 +142,7 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 		</tr>
 		<tr>
 			<td align="center"><strong>バッテリーモニタリング</strong></td>
-			<td align="center" colspan="4">✅ オンボードのバッテリー電圧モニタリング</td>
+			<td align="center" colspan="4">✅ オンボードバッテリー電圧モニタリング</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>電源入力</strong></td>
@@ -189,24 +189,24 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 
 ## 選び方
 
-以下のクイックガイドを使って、候補を 1 モデルまで絞り込みましょう。複数の行が当てはまる場合は、**最後に一致した行**が、通常もっとも適した選択です。
+以下のクイックガイドを使って、1 つのモデルに絞り込みましょう。複数の行が当てはまる場合は、**最後に一致した行**が、通常は最適な選択です。
 
 <div class="table-center">
 	<table align="center">
 		<tr>
-			<th align="center">優先したいポイント</th>
+			<th align="center">優先したいポイントが…</th>
 			<th align="center">おすすめモデル</th>
 			<th align="center">理由</th>
 		</tr>
 		<tr>
-			<td>最低コスト / 文字情報中心のボード / 高速な部分リフレッシュ</td>
+			<td>最低コスト / テキスト中心の情報ボード / 高速な部分リフレッシュ</td>
 			<td align="center"><strong>E1001</strong></td>
 			<td>7.5 インチモノクロ、4 階調グレースケール、部分リフレッシュ対応、2～5 秒のリフレッシュ時間。</td>
 		</tr>
 		<tr>
-			<td>E1001 と同じフォームファクタで、鮮やかなフルカラー表示が欲しい</td>
+			<td>E1001 と同じフォームファクタで、鮮やかなフルカラーコンテンツが欲しい</td>
 			<td align="center"><strong>E1002</strong></td>
-			<td>7.3 インチ Spectra™ 6 フルカラーパネル — ギャラリー、レシピ、子どものお手伝い表、小売サイネージなどに最適。注意：フルカラーは、より豊かなビジュアルと引き換えに部分リフレッシュがなくなり、フルリフレッシュは約 15～20 秒です。</td>
+			<td>7.3 インチ Spectra™ 6 フルカラーパネル — ギャラリー、レシピ、子どものお手伝い表、リテールサイネージに最適。注意：フルカラーは、より豊かなビジュアルと引き換えに部分リフレッシュがなくなり、フルリフレッシュは約 15～20 秒です。</td>
 		</tr>
 		<tr>
 			<td>タッチ操作 / インタラクティブなダッシュボード / 大型モノクロリーダー</td>
@@ -214,12 +214,12 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 			<td>10.3 インチ 16 階調グレースケール、静電容量式タッチ（HMI v1.1.2+）対応、6 か月バッテリー。</td>
 		</tr>
 		<tr>
-			<td>最大サイズで、もっともシャープなフォトフレーム級カラーディスプレイ</td>
+			<td>最大サイズで最もシャープな、フォトフレームグレードのカラーディスプレイ</td>
 			<td align="center"><strong>E1004</strong></td>
-			<td>13.3インチ Spectra™ 6 フルカラー、1200×1600、5000 mAh バッテリー、16 GB microSD 事前インストール済み。</td>
+			<td>13.3" Spectra™ 6 フルカラー、1200×1600、5000 mAh バッテリー、16 GB microSD プリインストール。</td>
 		</tr>
 		<tr>
-			<td>今すぐ Home Assistant / ESPHome 連携が必要</td>
+			<td>今日中に Home Assistant / ESPHome 連携が必要</td>
 			<td align="center"><strong>E1001 / E1002 / E1004</strong></td>
 			<td>E1001、E1002、E1004 では Home Assistant を直接サポートしています。E1003 での ESPHome 対応は計画中です。</td>
 		</tr>
@@ -249,11 +249,11 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
   </a>
 </div><br />
 
-reTerminal E1001 は、4 階調グレースケール対応の 7.5 インチモノクロ ePaper ディスプレイを搭載しています。800×480 の解像度により、最小限の電力消費でくっきりとしたテキストと鮮明な画像を実現します。モノクロディスプレイは、テキストの視認性とバッテリー寿命を重視するアプリケーションに最適です。
+reTerminal E1001 は、4 階調グレースケール対応の 7.5 インチ モノクロ ePaper ディスプレイを搭載しています。800×480 の解像度により、最小限の電力消費でシャープなテキストと鮮明な画像を実現します。モノクロディスプレイは、テキストの視認性とバッテリー寿命を重視するアプリケーションに最適です。
 
 ### 主な特長
 
-- 7.5 インチモノクロ ePaper ディスプレイ（4 階調グレースケール）
+- 4 階調グレースケール対応 7.5 インチ モノクロ ePaper ディスプレイ
 - 800×480 解像度
 - 超低消費電力による長時間バッテリー駆動
 - カレンダー、ToDo リスト、情報表示などテキスト中心のアプリケーションに最適
@@ -271,13 +271,13 @@ reTerminal E1001 は、4 階調グレースケール対応の 7.5 インチモ�
   </a>
 </div><br />
 
-reTerminal E1002 は、ACeP（Advanced Color ePaper）技術を採用した鮮やかな 7.3 インチフルカラー ePaper ディスプレイを搭載しています。このカラーディスプレイは、ePaper 技術の省電力性を維持しつつ、多色表示による視覚的に魅力的なコンテンツを実現し、視覚的な区別やデザイン性が重要なアプリケーションに最適です。
+reTerminal E1002 は、ACeP（Advanced Color ePaper）技術を採用した鮮やかな 7.3 インチ フルカラー ePaper ディスプレイを搭載しています。このカラーディスプレイは、ePaper 技術の省電力性を維持しつつ、多色表示による視覚的に魅力的なコンテンツを実現し、視覚的な区別やデザイン性が重要なアプリケーションに最適です。
 
 ### 主な特長
 
-- ACeP 技術を採用した 7.3 インチフルカラー ePaper ディスプレイ
+- ACeP 技術を採用した 7.3 インチ フルカラー ePaper ディスプレイ
 - 800×480 解像度
-- 低消費電力を維持しながら豊かな色表現
+- 低消費電力を維持しながら豊かな色表現を実現
 - ギャラリー表示、カラフルなダッシュボード、ビジュアル重視のアプリケーションに最適
 
 ## reTerminal E1003
@@ -293,16 +293,16 @@ reTerminal E1002 は、ACeP（Advanced Color ePaper）技術を採用した鮮�
   </a>
 </div><br />
 
-reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備えた 10.3 インチオープンソースモノクロ ePaper ディスプレイで、最長 6 か月のバッテリー寿命を実現します。タッチ操作は現在、SenseCraft HMI ファームウェア v1.1.2 でサポートされています。ESP32-S3 を搭載し、SenseCraft HMI のノーコード UI デザインをネイティブにサポートするほか、Arduino や PlatformIO によるさらなる開発も可能です。
+reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセルの高解像度を備え、最長 6 か月のバッテリー寿命を実現する 10.3 インチ オープンソース モノクロ ePaper ディスプレイです。タッチ操作は現在、SenseCraft HMI ファームウェア v1.1.2 でサポートされています。ESP32-S3 を搭載し、SenseCraft HMI のノーコード UI デザインをネイティブにサポートするほか、Arduino や PlatformIO によるさらなる開発も可能です。
 
-タッチ関連ライブラリは今後オープンソースとして公開予定であり、パネルのカスタマイズ性がさらに高まります。最新情報は順次共有されます。E1003 向け ESPHome ドライバのサポートも今後のリリースとして計画されています。
+タッチ関連ライブラリは今後オープンソースとして公開予定であり、パネルのカスタマイズ性がさらに高まります。最新情報は順次共有されます。E1003 向け ESPHome ドライバのサポートも今後のリリースで予定されています。
 
 ### 主な特長
 
-- HMI ファームウェア v1.1.2 でタッチ操作をサポートする 10.3 インチモノクロ ePaper ディスプレイ
-- 1404×1872 の高解像度を備えた 16 階調グレースケール
+- HMI ファームウェア v1.1.2 でタッチ操作をサポートする 10.3 インチ モノクロ ePaper ディスプレイ
+- 1404×1872 の高解像度と 16 階調グレースケール
 - 超低消費電力動作により最長 6 か月のバッテリー寿命
-- ネイティブ SenseCraft HMI サポートに加え、Arduino と PlatformIO に対応（ESPHome ドライバサポートも計画中）
+- ネイティブ SenseCraft HMI サポートに加え、Arduino と PlatformIO に対応し、ESPHome ドライバサポートも計画中
 
 ## reTerminal E1004
 
@@ -317,12 +317,12 @@ reTerminal E1003 は、16 階調グレースケールと 1404×1872 ピクセル
   </a>
 </div><br />
 
-reTerminal E1004 は、13.3 インチフルカラー ePaper ディスプレイと最長 6 か月のバッテリー寿命を備えています。ESP32-S3 を搭載し、SenseCraft HMI によるノーコードのダッシュボード作成と画像アップロードをサポートするほか、Home Assistant、Arduino、ESP-IDF にも対応しており、より高度な開発ワークフローを実現できます。
+reTerminal E1004 は、13.3 インチ フルカラー ePaper ディスプレイと最長 6 か月のバッテリー寿命を備えています。ESP32-S3 を搭載し、SenseCraft HMI によるノーコードのダッシュボード作成と画像アップロードをサポートするほか、Home Assistant、Arduino、ESP-IDF にも対応しており、より高度な開発ワークフローを実現できます。
 
 ### 主な特長
 
-- 13.3 インチフルカラー ePaper ディスプレイ
-- 常時表示シナリオ向けの最長 6 か月バッテリー寿命
+- 13.3 インチ フルカラー ePaper ディスプレイ
+- 常時表示シナリオ向けに最長 6 か月のバッテリー寿命
 - SenseCraft HMI ノーコード対応の ESP32-S3 プラットフォーム
 - Home Assistant、Arduino、ESP-IDF と互換
 
@@ -337,19 +337,19 @@ reTerminal E1004 は、13.3 インチフルカラー ePaper ディスプレイ�
   </a>
 </div><br />
 
-すべての reTerminal E シリーズデバイスには、出荷時から **SenseCraft HMI** ファームウェアが搭載されており、コードを 1 行も書かずにすぐに使い始めることができます。Web アプリがログイン、ダッシュボード設計、デバイスへの OTA（無線）デプロイを処理します：
+すべての reTerminal E シリーズ デバイスには、出荷時から **SenseCraft HMI** ファームウェアが搭載されており、1 行もコードを書くことなくすぐに使い始めることができます。Web アプリ側でログイン、ダッシュボード設計、デバイスへの OTA（無線）デプロイをまとめて行えます：
 
 - **AI Generator** — ダッシュボードの内容を自然文で説明すると、AI がレイアウトを自動生成します。
 - **Gallery** — デジタルフォトフレーム用途向けに、画像やスライドショーをパネルへ直接プッシュします。
 - **Canvas** — ウィジェットをドラッグ＆ドロップしてカスタムダッシュボードを構築します。
-- **RSS / Web Content** — ニュース、天気、カレンダー、任意の Web フィードなどのライブ情報を画面に表示します。
+- **RSS / Web Content** — ニュース、天気、カレンダーなど、任意の Web フィードを画面に表示します。
 - **タッチ操作** — E1003 では HMI ファームウェア v1.1.2 以降で完全サポート。
 
-ノーコードワークフロー以上の制御が必要な場合でも、各デバイスは基盤となる ESP32-S3 へアクセスできるため、いつでも以下のアプリケーションチュートリアルに進むことができます。
+ノーコードワークフロー以上の制御が必要な場合でも、各デバイスは基盤となる ESP32-S3 へアクセスできるため、いつでも以下のアプリケーションチュートリアルレベルまで掘り下げることができます。
 
 ## アプリケーション & チュートリアル
 
-SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準プラットフォームやビジュアル UI デザインツールと連携します。以下のマトリクスでは、各チュートリアルが現在どのモデルをカバーしているかを示しています。
+SenseCraft HMI 以外にも、reTerminal E シリーズは複数の業界標準プラットフォームやビジュアル UI デザインツールと連携します。下のマトリクスでは、各チュートリアルが現在どのモデルをカバーしているかを確認できます。
 
 ### スマートホーム & ダッシュボードフレームワーク
 
@@ -364,24 +364,32 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome">ESPHome — Basic Usage</a></td>
-			<td>デバイスを Home Assistant に接続し、YAML でシンプルなグラフィックを描画します。</td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
+			<td>デバイスを Home Assistant に接続し、YAML でシンプルな ePaper グラフィックスを描画します。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">計画中</td>
 			<td align="center">Home Assistant 経由</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>ボタン、ブザー、バッテリー監視、ディープスリープ、マルチページダッシュボード。</td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery &amp; Power</a></td>
+			<td>ボタン、ブザー、オンボード LED、バッテリー監視、ディープスリープ、マルチページダッシュボード。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">計画中</td>
 			<td align="center">Home Assistant 経由</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
+			<td>PCF8563 RTC の時刻同期、microSD カード検出、オンボード PDM マイクのセットアップ。</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">計画中</td>
+			<td align="center">マイクなし</td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_trmnl">Works with TRMNL</a></td>
-			<td>TRMNL プラットフォームを通じて E-Ink ダッシュボードをデプロイします。</td>
+			<td>TRMNL プラットフォーム経由で E-Ink ダッシュボードをデプロイします。</td>
 			<td align="center">✅</td>
 			<td align="center">✅ <em>(モノクロモード)</em></td>
 			<td align="center">—</td>
@@ -403,15 +411,15 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision">Work with SquareLine Vision</a></td>
-			<td>ブラウザ上で LVGL UI をドラッグ＆ドロップし、そのままコンパイル可能なコードとしてエクスポートします。</td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_squareline_vision">SquareLine Vision を使った作業</a></td>
+			<td>ブラウザ上でドラッグ＆ドロップで LVGL UI を作成し、そのままコンパイル可能なコードとしてエクスポートします。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">—</td>
 			<td align="center">—</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio">EEZ Studio を使う</a></td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_eezstudio">EEZ Studio を使った作業</a></td>
 			<td>HMI 画面をビジュアルに設計し、Arduino IDE を通してデプロイします。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -419,7 +427,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 			<td align="center">—</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka">Lopaka を使う</a></td>
+			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_lopaka">Lopaka を使った作業</a></td>
 			<td>モノクロおよびカラー ePaper レイアウト用のコードをエクスポートできる、Web ベースの描画ツールです。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -435,7 +443,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 	<table align="center">
 		<tr>
 			<th>チュートリアル</th>
-			<th>できること</th>
+			<th>内容</th>
 			<th>E1001</th>
 			<th>E1002</th>
 			<th>E1003</th>
@@ -443,7 +451,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino">Arduino — ePaper ディスプレイ</a></td>
-			<td>Seeed_GFX または GxEPD2 ライブラリを使用して、ePaper 画面にテキスト、グラフィック、画像を描画します。</td>
+			<td>Seeed_GFX または GxEPD2 ライブラリを使用して、ePaper 画面にテキスト、グラフィックス、画像を描画します。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -451,7 +459,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino_peripherals">Arduino — オンボードペリフェラル</a></td>
-			<td>オンボードの LED、ブザー、3 つのユーザーボタン、SHT4x センサー、バッテリーモニター、microSD カードを制御します。</td>
+			<td>オンボードの LED、ブザー、3 つのユーザーボタン、SHT4x センサ、バッテリーモニタ、microSD カードを制御します。</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
@@ -469,7 +477,7 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 </div>
 
 :::tip
-デバイスごとのスタートガイド（開封、Wi-Fi 設定、ファームウェア更新）をお探しですか？上のマトリクスにリンクされている製品 Wiki にジャンプしてください：
+デバイスごとのスタートガイド（開封、Wi-Fi 設定、ファームウェア更新）をお探しですか？上のマトリクスにリンクされている製品 Wiki へジャンプしてください：
 [E1001](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1001) ·
 [E1002](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002) ·
 [E1003](https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1003) ·
@@ -482,27 +490,27 @@ SenseCraft HMI に加えて、reTerminal E シリーズは複数の業界標準�
 - [ESP32-S3 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [reTerminal MIC 無線認証書](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reTerminal_MIC_Radio_Certificate.pdf)
 
-## FCC に関するお知らせ
+## FCC に関する通知
 
-適合性を担当する当事者によって明示的に承認されていない変更または改造は、ユーザーの本機器の操作権限を無効にする可能性があります。本機器は FCC 規則 Part 15 に準拠しています。動作は次の 2 つの条件に従います。
+適合性に責任を負う当事者によって明示的に承認されていない変更または改造は、ユーザーの機器の操作権限を無効にする可能性があります。本機器は FCC 規則 Part 15 に準拠しています。動作は次の 2 つの条件に従います：
 
 (1) 本機器は有害な干渉を引き起こしてはならないこと。
 
 (2) 本機器は、望ましくない動作を引き起こす可能性のある干渉を含め、受信したあらゆる干渉を受け入れなければならないこと。本送信機は、他のアンテナまたは送信機と同一場所で使用したり、共同で動作させたりしてはなりません。
 
-注：本機器は試験の結果、FCC 規則 Part 15 に基づくクラス B デジタル機器の規定値に適合していることが確認されています。これらの規定値は、住宅環境での有害な干渉に対して妥当な保護を提供するよう設計されています。本機器は無線周波エネルギーを生成、使用、および放射することがあり、取扱説明書に従って設置および使用しないと、無線通信に有害な干渉を引き起こすおそれがあります。ただし、特定の設置環境で干渉が発生しないことを保証するものではありません。本機器がラジオやテレビの受信に有害な干渉を引き起こしていると判断される場合（本機器の電源を入切することで確認できます）、ユーザーは次のいずれか 1 つ以上の対策を講じて干渉の解消を試みることを推奨します。
+注：本機器は試験の結果、FCC 規則 Part 15 に基づくクラス B デジタル機器の規定値に適合していることが確認されています。これらの規定値は、住宅環境での有害な干渉に対して妥当な保護を提供するよう設計されています。本機器は無線周波エネルギーを生成、使用、および放射することがあり、取扱説明書に従って設置および使用しないと、無線通信に有害な干渉を引き起こすおそれがあります。ただし、特定の設置環境で干渉が発生しないことを保証するものではありません。本機器がラジオやテレビの受信に有害な干渉を引き起こしていると判断される場合（機器の電源を入切することで確認できます）、ユーザーは次のいずれか、または複数の対策を講じて干渉の解消を試みることを推奨します：
 
 – 受信アンテナの向きまたは設置場所を変更する。
 
-– 機器と受信機の間の距離を離す。
+– 機器と受信機の距離を離す。
 
-– 受信機が接続されている回路とは異なる回路のコンセントに本機器を接続する。
+– 受信機が接続されている回路とは異なる回路のコンセントに機器を接続する。
 
-– 販売店または経験豊富なラジオ / テレビ技術者に相談する。本機器は、管理されていない環境に対して規定された FCC の放射線曝露制限に準拠しています。本機器は、放射部と人体との距離が 20cm 以上となるように設置および使用してください。
+– 販売店または経験豊富なラジオ / テレビ技術者に相談する。本機器は、管理されていない環境に対して規定された FCC の放射線曝露制限に準拠しています。本機器は、放射部と人体との距離が最低 20cm 以上となるように設置および使用してください。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
