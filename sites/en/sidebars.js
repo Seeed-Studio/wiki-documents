@@ -1995,7 +1995,7 @@ const sidebars = {
               collapsed: true,
               collapsible: true,
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
+                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
@@ -2143,7 +2143,7 @@ const sidebars = {
               type: 'category',
               label: 'Application',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+                //'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
               ],
             },
@@ -2200,12 +2200,31 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+            //'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
-        },       
+        },
+        
+{
+  type: 'category',
+  label: 'Applications',
+  collapsed: true,
+  collapsible: true,
+  items: [
+    {
+      type: 'category',
+      label: 'Home Assistant',
+      items: [
+        'Sensor/Sound_event_sensor/sound_event_sensor_intro_ha',
+        'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
+        'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+      ],
+    },
+  ],
+},
+        
       ],
     },
     {
