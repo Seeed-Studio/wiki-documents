@@ -18,8 +18,8 @@ url: https://wiki.seeedstudio.com/pt-br/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/flex-banner.jpg" alt="pir" width={800} height="auto" /></p>
 
-O reSpeaker Flex é um sistema de processamento de voz modular com arquitetura dividida, construído em torno do processador XMOS XVF3800, projetado especificamente para robôs e terminais de interação inteligente. Diferente dos arrays de microfones convencionais tudo‑em‑um, o Flex separa a placa principal de processamento da placa do array de microfones, conectadas por um cabo flat FPC flexível, permitindo que o array seja embutido em qualquer posição física dentro do gabinete do produto enquanto mantém a eletrônica de processamento em outro local.
-O sistema suporta duas configurações intercambiáveis de array de microfones: um **array circular de 4 microfones** para captura omnidirecional em 360°, e um **array linear de 4 microfones** para captação direcional frontal com supressão traseira. Ambas as placas se conectam à mesma placa principal por meio de uma interface FPC padronizada de 24 pinos, e o sistema opera em modo USB (UAC 2.0 plug‑and‑play) ou em modo I2S para integração embarcada. Um módulo XIAO ESP32S3 opcional pode ser soldado na placa principal para conectividade sem fio e controle expandido.
+O reSpeaker Flex é um sistema modular de processamento de voz com arquitetura dividida, construído em torno do processador XMOS XVF3800, projetado especificamente para robôs e terminais de interação inteligente. Diferente dos arrays de microfones convencionais tudo‑em‑um, o Flex separa a placa principal de processamento da placa do array de microfones, conectadas por um cabo flat FPC flexível, permitindo que o array seja embutido em qualquer posição física dentro do gabinete de um produto enquanto mantém a eletrônica de processamento em outro local.
+O sistema suporta duas configurações intercambiáveis de array de microfones: um **array circular de 4 microfones** para captura omnidirecional em 360°, e um **array linear de 4 microfones** para captação direcional frontal com supressão traseira. Ambas as placas se conectam à mesma placa principal por meio de uma interface FPC padronizada de 24 pinos, e o sistema opera em modo USB (UAC 2.0 plug‑and‑play) ou modo I2S para integração embarcada. Um módulo XIAO ESP32S3 opcional pode ser soldado na placa principal para conectividade sem fio e controle expandido.
 
 ### Série de microfones circulares
 
@@ -101,11 +101,11 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 
 - **SDK em Python**: formato de gravação, volume, parâmetros de algoritmo e roteamento de canais ajustáveis via Python
 
-## Principais componentes
+## Componentes principais
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/main_noxiao.jpg" alt="pir" width={800} height="auto" /></p>
 
-### Placa principal (Core Board)
+### Placa principal
 
 | Componente / Recurso | Descrição |
 |--------------------|------------|
@@ -120,9 +120,9 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 | **Botão RST** | Reset de hardware para o XVF3800 |
 | **Botão SafeMode (Boot)** | Mantenha pressionado durante a energização para entrar em modo seguro para recuperação de firmware |
 | **LED PWR** | Indicador verde de ligado |
-| **Ilha de depuração (Debug Pad)** | Ilha reservada para XMOS XTAG4 (não soldada de fábrica) |
+| **Ilha de depuração** | Ilha reservada para XMOS XTAG4 (não soldada de fábrica) |
 | **Headers de IO do XMOS 3800** | Pinos/ilhas expostos para I2C, I2S, 5V/GND, pinos de alto‑falante e IO restante do XVF3800 |
-| **Orifícios de fixação** | 4 × furos de montagem M3 |
+| **Orifícios de fixação** | 4 × orifícios de montagem M3 |
 | **XIAO ESP32S3** | Suporta soldagem do XIAO ESP32S3 quando usado como dispositivo host |
 | **GPIO do XIAO ESP32S3** | GPIO restante pode ser usado para IO e expansão de periféricos |
 
@@ -135,7 +135,7 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 | **Microfones** | 4× microfones PDM MEMS com espaçamento de 44 mm dispostos em um layout circular |
 | **Padrão de captação** | Captura de áudio omnidirecional em 360° |
 | **Interface** | Conector FPC para a placa principal |
-| **Montagem** | 3 × furos de montagem M3 para fixação em gabinete ou carcaça |
+| **Fixação** | 3 × orifícios de montagem M3 para fixação em gabinete ou carcaça |
 
 ### Placa do array linear
 
@@ -146,7 +146,7 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 | **Microfones** | 4× microfones PDM MEMS com espaçamento de 33 mm dispostos em um layout linear |
 | **Padrão de captação** | Padrão de captação frontal de aproximadamente 180°, com som traseiro suprimido |
 | **Interface** | Conector FPC; o cabo pode ser roteado pela lateral ou pela parte traseira |
-| **Montagem** | 2 × furos de montagem M3 |
+| **Fixação** | 2 × orifícios de montagem M3 |
 
 ### Suporte ao XIAO ESP32S3
 
@@ -154,7 +154,7 @@ O sistema suporta duas configurações intercambiáveis de array de microfones: 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/header_pinout.jpg" alt="pir" width={800} height="auto" /></p>
 
-A placa principal do reSpeaker Flex inclui uma área dedicada para soldagem de um módulo Seeed Studio XIAO ESP32S3, habilitando conectividade Wi‑Fi e Bluetooth sobre o pipeline de processamento de áudio do XVF3800. Os SKUs que incluem XIAO (-C4-1 e -L4-1) são enviados com este módulo já montado; os SKUs básicos (-C4-0 e -L4-0) deixam essa área sem população.
+A placa principal do reSpeaker Flex inclui uma área dedicada para soldagem de um módulo Seeed Studio XIAO ESP32S3, habilitando conectividade Wi‑Fi e Bluetooth além do pipeline de processamento de áudio do XVF3800. Os SKUs que incluem XIAO (-C4-1 e -L4-1) são enviados com esse módulo já montado; os SKUs básicos (-C4-0 e -L4-0) deixam essa área sem população.
 Quando o XIAO está instalado, as seguintes conexões são feitas entre ele e o XVF3800:
 
 - **Barramento I2S** — barramento duplo (reprodução e gravação) com BCLK, MCLK e LRCLK compartilhados para streaming de áudio em ambas as direções
@@ -170,7 +170,7 @@ Quando o XIAO está instalado, as seguintes conexões são feitas entre ele e o 
 
 ### Cabo FPC de 24 vias
 
-A interface do array de microfones FPC é um conector de 24 pinos, passo de 0,5 mm, com trava, e o cabo flat FPC de 20 cm incluído na caixa é chaveado para este conector.
+A interface do array de microfones FPC é um conector de 24 pinos, passo de 0,5 mm, com trava, e o cabo flat FPC de 20 cm incluído na caixa é chaveado para esse conector.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/24_fpc_cable.png" alt="pir" width={600} height="auto" /></p>
 
@@ -199,13 +199,13 @@ A interface do array de microfones FPC é um conector de 24 pinos, passo de 0,5 
 | 21 | GND | GND | Terra de isolamento de D8 | |
 | 22 | GPIO_1 | I/O | Entrada/saída de uso geral | Função de expansão |
 | 23 | GPIO_2 | I/O | Entrada/saída de uso geral | Função de expansão |
-| 24 | GND | GND | Terra de blindagem de GPIO | Absorve ruído de GPIO |
+| 24 | GND | GND | Terra de blindagem dos GPIO | Absorve ruído dos GPIO |
 
 ## Introdução
 
 ### Preparação de hardware
 
-- Cabo USB Type-C
+- Cabo USB Tipo-C
 - Computador host ou Raspberry Pi
 
 ### Preparação de software
@@ -224,7 +224,7 @@ Aqui você pode ver como conectar alto-falantes usando o conector de fone de ouv
 
 #### Modo de segurança
 
-**Safe Mode** é um modo especial de recuperação no **reSpeaker Flex** que permite gravar o firmware via **USB DFU** ou I2C para dispositivos como o Raspberry Pi e **ESP32**.
+**Safe Mode** é um modo especial de recuperação no **reSpeaker Flex** que permite gravar firmware via **USB DFU** ou I2C para dispositivos como o **ESP32**.
 
 Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware USB**, você pode entrar no **Safe Mode** e regravar o firmware USB usando **USB DFU**.
 
@@ -255,9 +255,8 @@ Se você já tiver gravado o **firmware I2S** e quiser voltar para o **firmware 
 
 - **Desligue** completamente o dispositivo.
 - **Pressione e segure o botão Boot**.
-- Enquanto mantém o **botão Boot pressionado, reconecte a alimentação.**
-- O **LED vermelho começará a piscar**, confirmando que o dispositivo entrou no **Safe Mode.**
-Agora o dispositivo está executando o **firmware Safe Mode armazenado na partição Factory.**
+- Enquanto mantém pressionado o **botão Boot, reconecte a alimentação.**
+Use a ferramenta de linha de comando DFU util para verificar as partições DFU; consulte a seção **Install DFU Util** abaixo para mais detalhes.
 
 ### Atualizar firmware
 
@@ -309,12 +308,12 @@ Conecte o reSpeaker Flex ao seu PC via cabo USB. Observe que você precisa usar 
 
 ### Instalar DFU Util
 
-`dfu-util` é uma ferramenta de linha de comando para atualização de firmware de dispositivo (Device Firmware Upgrade) via USB.
+`dfu-util` é uma ferramenta de linha de comando para atualização de firmware de dispositivo via USB.
 
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-- Baixe `dfu-util-0.11-binaries.tar.xz` e extraia, por exemplo, em `D:\dfu-util-0.11-binaries\win64\`  
+- Baixe `dfu-util-0.11-binaries.tar.xz` e extraia-o, por exemplo, em `D:\dfu-util-0.11-binaries\win64\`  
   [Download Link](http://dfu-util.sourceforge.net/)
 
 - Adicione o caminho para `dfu-util.exe` à variável de sistema `Path`:  
@@ -344,7 +343,7 @@ dfu-util -l
   - Abra o Zadig → `Options > List All Devices`  
   - Selecione `reSpeaker XVF3800 Flex`  
   - Instale o driver **WinUSB**  
-  - Desligue e ligue o dispositivo (power-cycle)  
+  - Desligue e ligue o dispositivo  
   - Execute `dfu-util -l` novamente para confirmar a detecção.
 
 </TabItem>
@@ -442,7 +441,7 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
    - **Host**: `Windows WASAPI`
    - **Recording Device**: `reSpeaker XVF3800 Flex`
    - **Channels**: `2 (Stereo)`
-   - **Sample Rate**: `16000 Hz` (tanto para o **Project** quanto para o **Default Sample Rate**)
+   - **Sample Rate**: `16000 Hz` (tanto para **Project** quanto para **Default Sample Rate**)
    - **Sample Format**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/audacity_setting_2.png" alt="pir" width={600} height="auto" /></p>
@@ -470,7 +469,7 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
 
 - **Dispositivo de gravação**: `reSpeaker 3800 Flex`
 - **Canais**: `2 (Stereo)`
-- **Taxa de amostragem**: `16000 Hz` (para **Project** e **Default Sample Rate**)
+- **Taxa de amostragem**: `16000 Hz` (para ambos **Project** e **Default Sample Rate**)
 - **Formato de amostra**: `16-bit`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac4.png" alt="pir" width={600} height="auto"/></p>
@@ -484,7 +483,7 @@ Baixe o repositório completo de firmware do GitHub aqui reSpeaker Flex XVF 3800
 
 <TabItem value="linux" label="Raspberry Pi / Linux">
 
-### Gravando no Raspberry Pi (Linha de comando)
+### Gravando no Raspberry Pi (linha de comando)
 
 1. **Encontrar o número da placa de som**:
 
@@ -516,7 +515,7 @@ arecord -D plughw:3,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 alsamixer
 ```
 
-No alsamixer, use as setas esquerda/direita para navegar até o dispositivo de som correto. Use a seta para cima para aumentar o volume.
+No alsamixer, use as teclas de seta esquerda/direita para navegar até o dispositivo de som correto. Use a tecla de seta para cima para aumentar o volume.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/alsa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -569,7 +568,7 @@ O ajuste permite que os usuários configurem parâmetros dos algoritmos de áudi
 É fornecida uma interface de controle em Python dedicada para configuração de parâmetros e interação com o dispositivo.
 
 
-[**Python Control Directory**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
+[**Diretório de controle em Python**](https://github.com/respeaker/reSpeaker_Flex/tree/main/python_control)
 
 Usando os scripts Python fornecidos, você pode:
 
@@ -584,7 +583,7 @@ Usando os scripts Python fornecidos, você pode:
 
 As seguintes dependências são necessárias para usar a interface de controle em Python:
 
-* Python 3.6 ou posterior
+* Python 3.6 ou superior
 * Biblioteca Python `pyusb`
 * Biblioteca de sistema `libusb`
 
@@ -654,7 +653,7 @@ Obtém o valor atual de Direction of Arrival (DOA) detectado pelo array de micro
 
 ## Solução de problemas
 
-### A reprodução de som pela saída do alto-falante não é suficiente?
+### A reprodução de som na saída do alto-falante não é suficiente?
 
 Se o volume de saída do alto-falante do **reSpeaker Flex** estiver muito baixo no Linux, talvez seja necessário ajustar os **níveis do mixer ALSA** para a placa de som XVF3800. Siga as etapas abaixo para aumentar o volume de saída.
 
@@ -708,17 +707,17 @@ Abra o menu Iniciar e digite Device manager. Encontre os dispositivos reSpeaker 
 
 ## Recursos
 
-[reSpeaker Flex XVF3800 Circular step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
+[Arquivo step circular do reSpeaker Flex XVF3800](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_circular_260210.step)
 
-[reSpeaker Flex XVF3800 Linear step file](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
+[Arquivo step linear do reSpeaker Flex XVF3800](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_linear.step)
 
-[reSpeaker Flex XVF3800 Core Board Step](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
+[Arquivo Step da placa principal do reSpeaker Flex XVF3800](https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeaker_xvf3800_flex_Separate.step)
 
 
 
 ## Suporte técnico e discussão sobre o produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

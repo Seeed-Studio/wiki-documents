@@ -1,5 +1,5 @@
 ---
-description: Saiba como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
+description: Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 5G，4G, RS485, RS232, teste de DI/DO e UPS para desligamento seguro.
 title: Configurar reComputer Industrial R20xx
 keywords:
   - Raspberry pi
@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/pt-br/recomputer_industrial_r20xx_configure_sy
 
 ## Visão geral
 
-Saiba como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
+Aprenda como configurar e testar componentes de hardware na série reComputer Industrial R20xx após instalar os dispositivos. Este wiki abrange mapeamento de GPIO, teste do LED USER, comunicação SPI, varredura de Wi‑Fi e Bluetooth, LoRa®, 4G, 5G, RS485, RS232, teste de DI/DO, UPS para desligamento seguro e mais.
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -37,11 +37,11 @@ Para consultar mapeamentos e offsets de GPIO, siga estas etapas:
 cat /sys/kernel/debug/gpio
 ```
 
-**Este comando exibirá os mapeamentos e offsets de GPIO**, fornecendo informações essenciais para depurar ou configurar os pinos de GPIO.
+**Este comando exibirá os mapeamentos e offsets de GPIO**, fornecendo informações essenciais para depurar ou configurar os pinos GPIO.
 
 ## Teste do LED USER
 
-Fornecemos LEDs em três cores, vermelho, azul e verde, para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar：
+Fornecemos LEDs em três cores, vermelho, azul e verde, para uso dos usuários. Você pode entrar no diretório /sys/class/leds/ para visualizar:
 
 **1. Navegue até o diretório do LED**  
 
@@ -61,7 +61,7 @@ echo 1 > /sys/class/leds/led-green/brightness
 
 Isso **acenderá** o LED correspondente.
 
-**3. Desligar LEDs (opcional)**  
+**3. Desligar os LEDs (opcional)**  
 Para **desligar** um LED específico, use:
 
 ```bash
@@ -410,13 +410,13 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 Este comando abre o minicom com a porta serial especificada (***/dev/ttyUSB2***) a uma taxa de baud de 115200.
 
-1. Quando o minicom estiver aberto, você poderá começar a enviar comandos AT para o módulo 4G. Por exemplo:
+1. Quando o minicom estiver aberto, você pode começar a enviar comandos AT para o módulo 4G. Por exemplo:
 
 ```bash
 AT
 ```
 
-Este comando verifica se o módulo está respondendo. Você deverá receber uma resposta ***"OK"*** se o módulo estiver funcionando corretamente.
+Este comando verifica se o módulo está respondendo. Você deve receber uma resposta ***"OK"*** se o módulo estiver funcionando corretamente.
 
 2. Para discar um número de telefone usando o módulo 4G, você pode usar o comando ATD seguido do número de telefone:
 
@@ -482,9 +482,9 @@ AT+QCFG="usbnet",1
 Até que a última linha mostre OK, será bem-sucedido.
 
 > Note
-> O dispositivo precisa aguardar por um tempo e então você poderá visualizar o endereço IP de usb0 em ifconfig.
+> O dispositivo precisa aguardar por um tempo e então você pode visualizar o endereço IP de usb0 em ifconfig.
 
-Testar o status da rede e a comunicação：
+Teste o status da rede e a comunicação：
 
 ```bash
 # Check network status
@@ -524,7 +524,7 @@ sudo minicom -D /dev/ttyACM2
 - Pressione ***O*** novamente para abrir a configuração, selecione Serial port setup e pressione ***Enter***; Abra todas as interfaces relacionadas a RS485, pressione ***H/I/J/K/L*** em sequência para abrir;
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Depois que todos os "YES" forem exibidos, pressione Enter para voltar e, em seguida, selecione Exit para sair.
+- Depois que todos os "YES" forem exibidos, pressione Enter para retornar e, em seguida, selecione Exit para sair.
 
 :::note
 
@@ -543,11 +543,11 @@ O reComputer Industrial R20xx inclui 1x porta RS232, e as portas COM e arquivos 
 |---------------------------|--------------|--------------------------|-----------------------------|
 | **RS232-1**               | COM1         | RX1/TX1/GND1             | `/dev/ttyACM0`              |
 
-Como o RS232 é comunicação full-duplex, faça um curto-circuito entre TX e RX do RS232 diretamente para realizar um teste de loopback.
+Como o RS232 é comunicação full-duplex, faça um curto-circuito diretamente entre TX e RX do RS232 para realizar um teste de loopback.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.12_rs232_testing_1.png" style={{width:800, height:'auto'}}/></div>
 
-Você precisa abrir dois terminais, ACM1 se a placa de expansão estiver conectada e ACM2 se a placa de expansão não estiver conectada:
+Você precisa abrir dois terminais, ACM1 se a placa de expansão estiver conectada, e ACM2 se a placa de expansão não estiver conectada:
 **Terminal 1:***
 
 ```bash
@@ -668,7 +668,7 @@ O reComputer Industrial R20xx contém 8x portas DO, o usuário pode configurar e
       <tr>
         <td>DO6</td>
         <td>GPIO578</td>
-      </tr]
+      </tr>
       <tr>
         <td>DO7</td>
         <td>GPIO594</td>
@@ -681,7 +681,7 @@ O reComputer Industrial R20xx contém 8x portas DO, o usuário pode configurar e
   </table>
 </div>
 
-O tipo de saída das portas DO é transistor. Ele suporta tensão de saída - abaixo de 60 VDC, capacidade de corrente - 500 mA.
+O tipo de saída das portas DO é transistor. Ela suporta tensão de saída - abaixo de 60 VDC, capacidade de corrente - 500 mA.
 Para testar a funcionalidade de DO, você pode seguir estas etapas para testá-la:
 
 1. A conexão entre a porta DO do reComputer Industrial R20xx e a carga externa foi concluída.
@@ -752,11 +752,71 @@ Este comando irá ler e exibir a hora armazenada no RTC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1_new.png" style={{width:800, height:'auto'}}/></div>
 
-## Teste do Temporizador Watchdog
+### Usar o RTC1 como Relógio de Hardware do Sistema 
+
+O dispositivo RTC padrão é o rtc0, e o serviço de sincronização de horário apenas sincroniza a hora do sistema com o dispositivo RTC padrão. Para usar o rtc1 como relógio de hardware principal, crie serviços systemd personalizados para ler a hora do rtc1 durante a inicialização e periodicamente gravar a hora atual do sistema de volta no rtc1.
+
+1. Crie um serviço para hctosys
+
+Crie um serviço systemd para carregar a hora do sistema a partir do rtc1 durante a inicialização.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-hctosys.service >/dev/null <<'EOF'
+[Unit]
+Description=Load system time from RTC1
+After=dev-rtc1.device
+Wants=dev-rtc1.device
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --hctosys --utc -f /dev/rtc1
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable rtc1-hctosys.service
+```
+
+2. Crie um serviço para systohc
+
+Crie um serviço systemd para salvar a hora atual do sistema em rtc1 e um timer para executar o serviço periodicamente.
+
+```bash
+sudo tee /etc/systemd/system/rtc1-systohc.service >/dev/null <<'EOF'
+[Unit]
+Description=Save system time to RTC1
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hwclock --systohc --utc -f /dev/rtc1
+EOF
+
+sudo tee /etc/systemd/system/rtc1-systohc.timer >/dev/null <<'EOF'
+[Unit]
+Description=Periodically save system time to RTC1
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Unit=rtc1-systohc.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now rtc1-systohc.timer
+```
+
+O timer é iniciado dois minutos após a inicialização e atualiza o rtc1 a cada dez minutos depois disso. Você pode ajustar o intervalo de acordo com seus requisitos.
+
+## Teste do Timer Watchdog
 
 Para realizar um teste de watchdog, siga estas etapas:
 
-1. Instale o software de watchdog:
+1. Instale o software watchdog:
 
 ```bash
 sudo apt install watchdog
@@ -798,7 +858,7 @@ priority = 1
 
 Você pode ajustar outras configurações conforme necessário.
 
-3. Certifique-se de que o serviço de watchdog está em execução:
+3. Certifique-se de que o serviço watchdog está em execução:
 
 ```bash
 sudo systemctl start watchdog
@@ -816,7 +876,7 @@ echo "c" > /proc/sysrq-trigger
 Este comando aciona um crash do kernel e deve fazer com que o watchdog reinicie o sistema.
 
 5. Monitore o sistema para confirmar que ele reinicia após o período de tempo limite especificado.
-Essas etapas ajudarão você a testar e garantir a funcionalidade do temporizador watchdog em seu sistema.
+Essas etapas ajudarão você a testar e garantir a funcionalidade do timer watchdog em seu sistema.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -824,21 +884,21 @@ Essas etapas ajudarão você a testar e garantir a funcionalidade do temporizado
 
 O GPIO correspondente ao buzzer é o gpio627. Insira o seguinte script para ligar/desligar o buzzer:
 
-1. Ligue o buzzer:
+1. Ligar o buzzer:
 
 ```bash
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction
 echo 1 > /sys/class/gpio/gpio627/value
-```  
+```
 
-2. Desligue o buzzer :Desligue o buzzer :
+2. Desligar o buzzer :Desligar o buzzer :
 
 ```bash
 echo 627 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio627/direction 
 echo 0 > /sys/class/gpio/gpio627/value
-```  
+```
 
 ## TPM 2.0
 
@@ -846,11 +906,11 @@ Se você conectar o módulo TPM 2.0 ao dispositivo, o código a seguir pode ajud
 
 ```bash
 ls /dev | grep tpm
-```  
+```
 
 **Interpretando a saída:**  
 
-Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) são detectados e estão disponíveis em seu sistema. Isso indica que o hardware TPM é reconhecido e acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicativos relacionados a TPM sabendo que os dispositivos estão presentes e acessíveis.
+Se você vir ***tpm0*** e ***tpmrm0*** na saída, isso significa que os dispositivos TPM (Trusted Platform Module) foram detectados e estão disponíveis em seu sistema. Isso indica que o hardware TPM é reconhecido e acessível, o que é um bom sinal. Você pode prosseguir usando funcionalidades ou aplicativos relacionados a TPM sabendo que os dispositivos estão presentes e acessíveis.
 
 ## ATECC608A
 
@@ -860,13 +920,13 @@ Para interagir com o dispositivo ATECC608A e gerar um número de série aleatór
 
 ```bash
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
-```  
+```
 
 2. Extraia o conteúdo do pacote .deb para o diretório atual:
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
-```  
+```
 
 3. Navegue até o diretório atecc:
 
@@ -891,19 +951,19 @@ Aqui estão os comandos para interagir com uma EEPROM (Electrically Erasable Pro
 
 ```bash
  sudo chmod 777 /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
 2. Grave a string "This is a test string" no dispositivo EEPROM:
 
 ```bash
 echo "This is a test string" > /sys/bus/i2c/devices/10-0050/eeprom
-```  
+```
 
-3. Leia o conteúdo do dispositivo EEPROM e o exiba em formato ***hexadecimal*** usando o utilitário hexdump:
+3. Leia o conteúdo do dispositivo EEPROM e exiba-o em formato ***hexadecimal*** usando o utilitário hexdump:
 
 ```bash
 cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
-```  
+```
 
 ## Verificando a Detecção do SSD
 
@@ -913,12 +973,12 @@ Para listar os discos, incluindo o SSD, você pode usar o comando fdisk -l. Veja
 sudo fdisk -l
 ```
 
-Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele for detectado corretamente. Procure por entradas que representem seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
+Este comando exibirá uma lista de todos os discos conectados ao seu sistema, incluindo o SSD se ele for detectado corretamente. Procure por entradas que representem o seu SSD. Elas normalmente começam com ***/dev/sd*** seguido por uma letra (por exemplo, ***/dev/sda, /dev/sdb,*** etc.).
 Depois de identificar a entrada correspondente ao seu SSD, você pode prosseguir com o particionamento ou formatação conforme necessário.
 
 ## UPS para Desligamento Seguro
 
-Um GPIO6 entre a CPU e a entrada de alimentação DC é usado para alertar a CPU quando a fonte de alimentação é desligada. Em seguida, a CPU deve fazer algo urgente em um script antes que a energia do supercapacitor se esgote e executar um "$ shutdown".
+Um GPIO6 entre a CPU e a entrada de alimentação DC é usado para alertar a CPU quando a fonte de alimentação é desligada. Então a CPU deve executar algo urgente em um script antes que a energia do supercapacitor se esgote e executar um "$ shutdown".
 Outra maneira de usar essa função é iniciar um desligamento quando o pino GPIO mudar. O pino GPIO fornecido é configurado como uma tecla de entrada que gera eventos KEY_POWER. Este evento é tratado pelo systemd-logind iniciando um desligamento.
 
 1. Conexão de hardware.
@@ -946,7 +1006,7 @@ Salve e saia do editor (pressione ***`Ctrl+O`*** para salvar, ***`Enter`*** para
 
 4. Prepare o script em Python
 
-- Crie um novo arquivo de script Python:
+- Crie um novo arquivo de script em Python:
 
 ```bash
 cd ~
@@ -1033,9 +1093,9 @@ sudo python3 ups_shutdown.py
 
 ## Acelerador de IA
 
-O slot M.2 M-KEY 2280 no reComputer Industrial R20xx foi projetado para acomodar o Acelerador de IA PCIE M.2. E a série R20xx-12 vem pré-instalada com um módulo Hailo-8 M.2 de Aceleração de IA de até 26TOPS.
-Se você adquiriu o produto da série R20xx-10, será necessário comprar o módulo NPU da Hailo para habilitar a funcionalidade de IA.
-O dispositivo vem pré-instalado com o driver do acelerador Hailo, portanto você pode usá-lo diretamente e executar o caso de teste:
+O slot M.2 M-KEY 2280 no reComputer Industrial R20xx foi projetado para acomodar um Acelerador de IA PCIE M.2. E a série R20xx-12 vem pré-instalada com um módulo de Aceleração de IA Hailo-8 M.2 de até 26TOPS.
+Se você comprou o produto da série R20xx-10, será necessário adquirir o módulo NPU da Hailo para habilitar a funcionalidade de IA.
+O dispositivo vem pré-instalado com o driver do acelerador Hailo, então você pode usá-lo diretamente e executar o caso de teste:
 
 1. Navegue até o diretório do caso de teste
 
@@ -1061,12 +1121,12 @@ Para fechar o aplicativo, pressione ***`Ctrl+C`*** .
 Esta é uma versão leve do exemplo de detecção, focada principalmente em demonstrar o desempenho do Hailo enquanto minimiza a carga da CPU. O pipeline interno de processamento de vídeo do GStreamer é simplificado, minimizando as tarefas de processamento de vídeo, e o modelo YOLOv6 Nano é utilizado.
 
 :::note
-Se o reComputer que você adquiriu não inclui o Hailo-8 e você está considerando comprar um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
+Se o reComputer que você comprou não inclui o Hailo-8 e você está considerando adquirir um dispositivo Hailo para integração, consulte a documentação oficial da Hailo (https://github.com/hailo-ai) para configurar o firmware e o ambiente, e execute os exemplos para verificar se o dispositivo pode ser usado normalmente.
 :::
 
-## Suporte Técnico & Discussão de Produto
+## Suporte Técnico e Discussão de Produto
 
-Obrigado por escolher nossos produtos! Estamos aqui para fornecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
+Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

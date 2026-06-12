@@ -1,5 +1,5 @@
 ---
-description: Projete interfaces profissionais baseadas em LVGL para produtos ePaper da Seeed com o EEZ Studio e depois faça o deploy usando a IDE do Arduino – funciona em toda a linha reTerminal E e na XIAO ePaper Display Board (EE04).
+description: Crie interfaces profissionais baseadas em LVGL para produtos ePaper da Seeed com o EEZ Studio e depois faça o deploy usando a IDE do Arduino – funciona em toda a linha reTerminal E e na XIAO ePaper Display Board (EE04).
 title: Trabalhar com EEZ Studio
 keywords:
   - display ePaper
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
-Este guia conduz você pelo processo de projetar uma interface de usuário profissional com a ferramenta de design visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/), gerar código LVGL e fazer o deploy em um produto ePaper da Seeed por meio da IDE do Arduino. O fluxo é o mesmo para todas as placas compatíveis — as únicas diferenças são a resolução do display e a constante de configuração do driver, que apresentamos em abas.
+Este guia conduz você pelo processo de projetar uma interface de usuário profissional com a ferramenta de design visual [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/), gerar código LVGL e implantá‑lo em um produto ePaper da Seeed por meio da IDE do Arduino. O fluxo é o mesmo para todas as placas compatíveis — as únicas diferenças são a resolução do display e a constante de configuração do driver, que apresentamos em abas.
 
 ## Hardware compatível
 
@@ -69,14 +69,14 @@ Em resumo, o EEZ Studio atua como uma ponte entre hardware e software, permitind
 ### Por que usar o EEZ Studio?
 
 - **Design visual de interface** — crie UIs complexas com um editor WYSIWYG.
-- **Prototipagem rápida** — teste e valide ideias de design rapidamente.
+- **Prototipagem rápida** — teste e valide rapidamente ideias de design.
 - **Multiplataforma** — crie aplicativos que rodam em vários sistemas operacionais e alvos embarcados.
 - **Integração de hardware** — conecte diretamente instrumentos de laboratório, dispositivos IoT e placas personalizadas.
 - **Código aberto** — conjunto de ferramentas orientado pela comunidade com suporte premium opcional.
 
 ### EEZ Studio vs. SquareLine Studio
 
-Ambos são ferramentas de design de GUI, mas têm públicos-alvo ligeiramente diferentes:
+Ambos são ferramentas de design de GUI, mas têm públicos‑alvo ligeiramente diferentes:
 
 <table>
     <thead>
@@ -89,14 +89,14 @@ Ambos são ferramentas de design de GUI, mas têm públicos-alvo ligeiramente di
             <td>GUIs embarcadas, especialmente com LVGL</td>
         </tr>
         <tr>
-            <th>Usuários-alvo</th>
+            <th>Usuários‑alvo</th>
             <td>Engenheiros, desenvolvedores de produto, makers, projetistas de instrumentos de teste/laboratório</td>
-            <td>Desenvolvedores de UI embarcada, hobbystas, projetistas de produtos IoT</td>
+            <td>Desenvolvedores de UI embarcada, hobbistas, projetistas de produtos IoT</td>
         </tr>
         <tr>
             <th>Integração de hardware</th>
             <td>Integração direta com instrumentos, dispositivos de medição, automação</td>
-            <td>Focado em geração de UI, com menos integração com dispositivos externos</td>
+            <td>Focado na geração de UI, com menos integração de dispositivos externos</td>
         </tr>
         <tr>
             <th>Código aberto</th>
@@ -105,7 +105,7 @@ Ambos são ferramentas de design de GUI, mas têm públicos-alvo ligeiramente di
         </tr>
         <tr>
             <th>Fluxo de trabalho</th>
-            <td>Prototipe, simule e controle dispositivos reais a partir de um único ambiente</td>
+            <td>Prototipe, simule e controle dispositivos reais em um único ambiente</td>
             <td>Principalmente gera código de UI para ser compilado em um projeto embarcado</td>
         </tr>
     </tbody>
@@ -131,7 +131,7 @@ Na parte superior da interface do EEZ Studio, clique em **CREATE**. Selecione o 
 
 ### Configurações do projeto
 
-Clique no ícone ⚙️ na barra de ferramentas para abrir as configurações do projeto.
+Clique no ícone ⚙️ na barra de ferramentas para abrir as Configurações do Projeto.
 
 Em **General → Build**:
 
@@ -150,7 +150,7 @@ Em **General → Display**, defina a resolução **para o seu hardware**:
 (O display de 7,5" mono no E1001 e o Spectra 6 de 7,3" no E1002 compartilham a mesma resolução de 800×480.)
 
 </TabItem>
-<TabItem value="ee04" label="EE04 + 5.83&quot; mono">
+<TabItem value="ee04" label="EE04 + 5,83&quot; mono">
 
 - **Display width**: 648
 - **Display height**: 480
@@ -164,7 +164,7 @@ Em **General → Display**, defina a resolução **para o seu hardware**:
 
 ## Etapa 3: Projetar a UI
 
-O design da UI determina diretamente a experiência do usuário. O EEZ Studio permite montar interfaces rapidamente arrastando e soltando componentes e usando **Styles**, **Fonts**, **Bitmaps**, **Themes** e **Groups** para controlar o resultado visual.
+O design da UI determina diretamente a experiência do usuário. O EEZ Studio permite montar rapidamente interfaces arrastando e soltando componentes e usando **Styles**, **Fonts**, **Bitmaps**, **Themes** e **Groups** para controlar o resultado visual.
 
 Recursos online recomendados:
 
@@ -203,7 +203,7 @@ Neste tutorial vamos construir uma página inicial simples a partir de cinco com
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a2.jpg" style={{width:900, height:'auto'}}/></div>
 
-**Etapa 3.** Adicione bitmaps pela aba **Bitmaps** à direita, dê nomes a eles, depois arraste o widget **Image** para a tela e vincule o seu bitmap.
+**Etapa 3.** Adicione bitmaps pelo painel **Bitmaps** à direita, dê nomes a eles, depois arraste o widget **Image** para a tela e vincule o seu bitmap.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a3.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -215,7 +215,7 @@ Neste tutorial vamos construir uma página inicial simples a partir de cinco com
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a6.jpg" style={{width:900, height:'auto'}}/></div>
 
-**Etapa 5.** Adicione uma **Label**, escolha a cor e depois adicione fontes pela aba **Fonts** à direita.
+**Etapa 5.** Adicione uma **Label**, escolha a cor e depois adicione fontes pelo painel **Fonts** à direita.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a7.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -228,8 +228,8 @@ Neste tutorial vamos construir uma página inicial simples a partir de cinco com
 Depois que o design estiver concluído:
 
 1. **Save** — clique no ícone de disquete ao lado de **OPEN**.
-2. **Preview** — clique em **Run** para iniciar o simulador e pré-visualizar a UI.
-3. **Compile / Build** — clique no ícone ✓ para verificar erros e depois na chave inglesa para gerar o código da UI, dados de imagem e dados de fonte.
+2. **Preview** — clique em **Run** para iniciar o simulador e pré‑visualizar a UI.
+3. **Compile / Build** — clique no ícone ✓ para verificar erros e depois na chave inglesa para gerar o código da UI, os dados de imagem e os dados de fonte.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/17.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -237,7 +237,7 @@ Uma mensagem verde **Build successful** confirma a geração do código. A saíd
 
 ## Etapa 5: Configurar a IDE Arduino
 
-Para implantar a saída do EEZ Studio no seu dispositivo ePaper da Seeed, configure a IDE Arduino com suporte a ESP32.
+Para implantar a saída do EEZ Studio no seu dispositivo Seeed ePaper, configure a IDE Arduino com suporte a ESP32.
 
 :::tip
 Se esta é a sua primeira vez usando Arduino, consulte primeiro [Getting Started with Arduino](https://wiki.seeedstudio.com/pt-br/Getting_Started_with_Arduino/).
@@ -247,7 +247,7 @@ Se esta é a sua primeira vez usando Arduino, consulte primeiro [Getting Started
 
    <div class="download_arduino_container" style={{textAlign: 'center'}}>
        <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-         <strong><span><font color={'FFFFFF'} size={"4"}>Baixar Arduino IDE</font></span></strong>
+         <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
        </a>
    </div><br />
 
@@ -282,26 +282,26 @@ Se esta é a sua primeira vez usando Arduino, consulte primeiro [Getting Started
 
 ## Etapa 6: Instalar a biblioteca Seeed_GFX
 
-Usamos a biblioteca Seeed_GFX, que fornece suporte abrangente para dispositivos de exibição da Seeed.
+Usamos a biblioteca Seeed_GFX, que fornece suporte abrangente para dispositivos de display da Seeed.
 
 1. Baixe do GitHub:
 
    <div class="github_container" style={{textAlign: 'center'}}>
        <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-       <strong><span><font color={'FFFFFF'} size={"4"}>Baixar a biblioteca</font></span></strong>
+       <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong>
        </a>
    </div><br />
 
-2. **Sketch → Include Library → Add .ZIP Library** e selecione o arquivo ZIP baixado.
+2. **Sketch → Include Library → Add .ZIP Library** e selecione o ZIP baixado.
 
    :::note
-   Se você instalou `TFT_eSPI` anteriormente, remova-o temporariamente ou renomeie-o na pasta de bibliotecas do Arduino para evitar conflitos — `Seeed_GFX` é um fork de `TFT_eSPI` com recursos adicionais para telas da Seeed.
+   Se você instalou `TFT_eSPI` anteriormente, remova-o temporariamente ou renomeie-o na pasta de bibliotecas do Arduino para evitar conflitos — `Seeed_GFX` é um fork de `TFT_eSPI` com recursos adicionais para displays Seeed.
    :::
 
 3. **Abra o exemplo de sketch correto**:
 
-   - Para telas coloridas: **File → Examples → Seeed_GFX → ePaper → Colorful → HelloWorld**
-   - Para telas monocromáticas: **File → Examples → Seeed_GFX → ePaper → Basic → HelloWorld**
+   - Para displays coloridos: **File → Examples → Seeed_GFX → ePaper → Colorful → HelloWorld**
+   - Para displays monocromáticos: **File → Examples → Seeed_GFX → ePaper → Basic → HelloWorld**
 
 4. **Crie um arquivo `driver.h`** na mesma pasta do seu sketch (use a seta de nova aba na IDE Arduino).
 
@@ -366,7 +366,7 @@ Para o EE04 você também precisa de `lv_conf.h` e da biblioteca LVGL — veja a
 
 ### Copiar a saída EEZ_UI
 
-Copie a pasta `EEZ_UI` gerada (do `src/` do seu projeto EEZ Studio) para a pasta de bibliotecas do Arduino (normalmente `~/Documents/Arduino/Libraries`).
+Copie a pasta `EEZ_UI` gerada (de `src/` do seu projeto EEZ Studio) para a pasta de bibliotecas do Arduino (normalmente `~/Documents/Arduino/Libraries`).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -467,14 +467,14 @@ void loop()
 }
 ```
 
-Observações:
+Notas:
 
-- `e1002_display_init()` inicializa o hardware da tela de e-ink.
+- `e1002_display_init()` inicializa o hardware do display de e-ink.
 - `pinMode(..., INPUT_PULLUP)` configura os pinos dos botões com resistores de pull-up internos.
 - `ui_init()` e `loadScreen()` inicializam o LVGL e carregam uma tela específica.
 - `lv_timer_handler()` processa timers e animações do LVGL.
 - Os blocos `if (lastKeyXState == HIGH && currentKeyXState == LOW)` fazem o debounce de uma borda HIGH→LOW e atualizam a página.
-- `e1002_display_should_refresh()` / `e1002_display_refresh()` gerenciam a atualização da tela de e-ink sob demanda.
+- `e1002_display_should_refresh()` / `e1002_display_refresh()` gerenciam a atualização do e-ink sob demanda.
 
 #### Telas resultantes
 
@@ -509,7 +509,7 @@ Copie a pasta **EEZ_UI** gerada para `~/Documents/Arduino/Libraries`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/upload_2.png" style={{width:800, height:'auto'}}/></div>
 
-Sketch de referência — três botões integrados (KEY1/KEY2/KEY3 = pinos 2 / 3 / 5) alternam três páginas: **Smart**, **Industry**, **Game**.
+Sketch de referência — três botões integrados (KEY1/KEY2/KEY3 = pinos 2 / 3 / 5) alternam entre três páginas: **Smart**, **Industry**, **Game**.
 
 Código de referência completo: [EEZ_UI_EE04.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EEZ_UI_EE04.zip)
 
@@ -670,7 +670,7 @@ void loop()
 - [`e1002_display.h`](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.h)
 - [`lv_conf.h`](https://files.seeedstudio.com/wiki/Epaper/EE04/lv_conf.h)
 - [Projeto de referência — EEZ_UI_EE04.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EEZ_UI_EE04.zip)
-- Gabinete 3D para 5,83" — [frente](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''front.step) / [verso](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''back.step)
+- Gabinete 3D para 5,83" — [frente](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''front.step) / [traseira](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''back.step)
 
 </TabItem>
 </Tabs>

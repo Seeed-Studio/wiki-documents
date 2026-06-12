@@ -10,7 +10,7 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2026-05-21'
+updatedAt: '2025-09-29'
 url: https://wiki.seeedstudio.com/es/t1000_e_intro/
 ---
 
@@ -63,7 +63,7 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 
 |**Capacidad de la batería**|Batería de litio recargable, 700 mAh|
 | :- | :- |
-|**Supervisión de la vida de la batería**|Nivel de batería en enlace ascendente periódico|
+|**Supervisión de la vida útil de la batería**|Nivel de batería en enlace ascendente periódico|
 |<p>**Cable de carga**</p><p>**(Adaptador no incluido)**</p>|Cable de carga magnético USB, 1 metro|
 |**Tensión de entrada de alimentación**|4.7 a 5.5 V CC|
 |**Límite de temperatura de carga**|0 a +45℃|
@@ -79,14 +79,14 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 |Alimentación al sensor|P0.4|GPIO|
 |Temperatura|P0.31|NTC (analógico)|
 |Luz|P0.29|LUX(analógico)|
-|Acelerómetro de 3 ejes<br/>(Actualmente no se utiliza en el firmware de Meshtastic)|SDA: P0.26<br/>SCL: P0.27|Vía IIC|
+|Acelerómetro de 3 ejes<br/>(Actualmente no se usa en el firmware de Meshtastic)|SDA: P0.26<br/>SCL: P0.27|Vía IIC|
 |Alimentación al acelerómetro|P1.7|GPIO|
 |LED|P0.24  |GPIO|
 |Zumbador|P0.25|GPIO|
 |Activar zumbador|P1.05|GPIO|
 |Botón|P0.6|GPIO|
 |Alimentación al sensor|P1.6|GPIO|
-|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: Reloj SPI<br/>P0.12: SPI NSS<br/>P1.10: Reinicio LoRa<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
+|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
 |GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>BAUDRATE:115200|
 
 ### Botón
@@ -95,14 +95,14 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 |- |- |- |
 |Pulsar una vez|Encender|Melodía ascendente|
 |Pulsar dos veces|Actualizar información de nodo/ubicación|-|
-|Pulsar tres veces|Encender/apagar el GPS|-|
+|Pulsar tres veces|Activar/desactivar el GPS|-|
 |Pulsar y mantener durante 5 s|Apagar|Melodía descendente|
 
 ### LED
 
 |Acción del dispositivo|Descripción|
 |- |- |
-|Encendido|Se enciende y luego parpadea rápidamente|
+|Encender|Se enciende y luego parpadea rápidamente|
 |Modo DFU|Encendido fijo|
 |Funcionando|Parpadeo aleatorio|
-|Cargando|Parpadea a 0.5 Hz, alternando cada segundo|
+|Cargando|Parpadea a 0,5 Hz, alternando cada segundo|

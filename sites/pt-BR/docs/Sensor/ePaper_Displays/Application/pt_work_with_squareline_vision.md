@@ -1,6 +1,6 @@
 ---
 description: Este artigo fornece instruções sobre como criar a interface de usuário para o display de papel da série reTerminal E no SquareLine.
-title: Trabalhando com SquareLine Vision
+title: Trabalhar com SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /reterminal_e10xx_with_squareline_vision
 sidebar_position: 6
@@ -12,22 +12,22 @@ updatedAt: '2026-01-29'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_squareline_vision/
 ---
 
-# Display de Papel da Série reTerminal E Trabalhando com SquareLine Vision
+# Display de Papel da Série reTerminal E Funcionando com SquareLine Vision
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## Introdução
 
-Quando você deseja criar seu próprio terminal inteligente, certamente espera que esse dispositivo tenha uma interface de usuário atraente e elegante. O [LVGL](https://lvgl.io/) pode alcançar isso. É a biblioteca gráfica embarcada gratuita e de código aberto mais popular para criar belas interfaces de usuário para qualquer tipo de MCU, MPU e display. Com essa biblioteca, você pode criar um grande número de belas interfaces de usuário embarcadas. Especialmente ao usar nossos produtos de papel eletrônico da Série reTerminal E, uma interface atraente é uma parte indispensável. No entanto, escrever o código da biblioteca LVGL também é uma tarefa muito complicada. Portanto, este tutorial tem como objetivo principal apresentar um editor que permite desenhar a interface de usuário simplesmente arrastando e soltando controles. O método de criação WYSIWYG (What You See Is What You Get) permite compreender melhor o efeito de apresentação final e, após desenhar a interface, você pode exportá-la como arquivos de UI do LVGL, o que simplifica muito o processo de desenvolvimento para os desenvolvedores. O nome dessa ferramenta é SquareLine Vision, uma ferramenta visual de front-end para LVGL.
+Quando você deseja criar seu próprio terminal inteligente, certamente espera que esse dispositivo tenha uma interface de usuário atraente e elegante. O [LVGL](https://lvgl.io/) pode alcançar isso. É a biblioteca gráfica embarcada gratuita e de código aberto mais popular para criar belas interfaces de usuário para qualquer tipo de MCU, MPU e display. Com essa biblioteca, você pode criar um grande número de belas interfaces de usuário embarcadas. Especialmente ao usar nossos produtos de papel eletrônico da Série reTerminal E, uma interface atraente é uma parte indispensável. No entanto, escrever o código da biblioteca LVGL também é uma tarefa muito complicada. Portanto, este tutorial tem como objetivo principal apresentar um editor que permite desenhar a UI simplesmente arrastando e soltando controles. O método de criação WYSIWYG (What You See Is What You Get) permite compreender melhor o efeito de apresentação final e, após desenhar a UI, você pode exportá-la como arquivos de UI do LVGL, o que simplifica muito o processo de desenvolvimento para os desenvolvedores. O nome dessa ferramenta é SquareLine Vision, uma ferramenta visual de front-end para LVGL.
 
-[SquareLine Vision](https://vision.squareline.io/) é um ambiente de desenvolvimento de UI baseado em navegador (Web) ou em ambiente compatível com Web, dedicado a projetar rapidamente interfaces de usuário (UI) para sistemas embarcados (como dispositivos com telas).
+[SquareLine Vision](https://vision.squareline.io/) é um ambiente de desenvolvimento de UI baseado em navegador (Web) ou em ambiente compatível com Web, dedicado ao design rápido de interfaces de usuário (UI) para sistemas embarcados (como dispositivos com telas).
 Também é uma ferramenta de **design + exportação de código**: você projeta a interface na plataforma e, em seguida, pode exportar o design como código ou recursos para execução em dispositivos embarcados. 
 
 ## Os recursos do SquareLine Vision
 
 - **Design visual de UI** – Projete interfaces bonitas e interativas visualmente com um editor de arrastar e soltar, eliminando a necessidade de criação manual de código LVGL.
-- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração entre o design e o dispositivo.
-- **Exportação com tecnologia LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilar em dispositivos embarcados, microcontroladores ou ambientes de simulação.
+- **Prototipagem rápida embarcada** – Visualize e valide instantaneamente sua UI no desktop ou no hardware de destino, reduzindo drasticamente o tempo de iteração do design até o dispositivo.
+- **Exportação com tecnologia LVGL** – Exporte perfeitamente seus designs em código-fonte limpo baseado em LVGL, pronto para compilação em dispositivos embarcados, microcontroladores ou ambientes de simulação.
 
 Com o SquareLine Vision, você pode ir do conceito ao protótipo de UI embarcada interativa em minutos — combinando flexibilidade de design, visualização em tempo real e saída LVGL pronta para produção para acelerar todo o ciclo de desenvolvimento do seu produto.
 
@@ -71,7 +71,7 @@ Toda a plataforma SquareLine Vision pode ser dividida em duas partes: **Launcher
 Na interface do **Launcher**, podemos ver as três funções principais a seguir:
 - projetos
 - lidar com importações
-- controlar configurações de conta
+- controlar configurações da conta
 
 Quando você começar a desenhar a UI, conhecerá cinco ferramentas:
 - sistema de hierarquia
@@ -143,7 +143,7 @@ Se você já tiver um arquivo .slvp, poderá importá-lo diretamente como um pro
 
 Assim que você entrar na interface de engenharia, poderá ver quatro áreas principais:
 
-- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos da UI. 
+- A Região 1 é a **Hierarchy**, usada principalmente para gerenciar a estrutura dos elementos de UI. 
 - A Região 2 é o **Simulator**, onde a UI é exibida e usada para visualizar os efeitos de apresentação de cada UI. 
 - A Região 3 é o **Inspector**, que fornece controles detalhados para o elemento atualmente selecionado. 
 - A Região 4 é a **Toolbar**, localizada na parte superior da interface do aplicativo, permitindo acesso fácil a muitas ferramentas e funções.
@@ -152,7 +152,7 @@ Assim que você entrar na interface de engenharia, poderá ver quatro áreas pri
 
 ### Design da Interface de UI
 
-O design da UI (User Interface) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
+O design de UI (Interface do Usuário) é crucial no desenvolvimento de produtos embarcados, pois determina diretamente a experiência do usuário. Uma interface esteticamente agradável, intuitiva e responsiva não apenas melhora a usabilidade do produto, como também aumenta seu apelo geral.
 
 No SquareLine Vision, você pode montar rapidamente interfaces arrastando e soltando componentes. Utilize ferramentas como Styles, Fonts, Bitmaps e Themes para controlar com precisão os efeitos visuais, criando uma experiência de usuário profissional e distinta.
 
@@ -160,7 +160,7 @@ No SquareLine Vision, você pode montar rapidamente interfaces arrastando e solt
 Este tutorial aborda apenas os controles que aparecem neste projeto. No entanto, o SquareLine Vision oferece muitas outras funcionalidades, como animações, eventos e diferentes fontes. Se você quiser explorar mais essa ferramenta, consulte [os tutoriais oficiais](https://docs.vision.squareline.io/docs/overview).
 :::
 
-#### Introdução à Hierarchy
+#### Introdução à Hierarquia
 
 Aqui você pode aninhar widgets uns dentro dos outros, criando relações pai-filho em que o widget contêiner se torna o pai e os elementos dentro dele se tornam widgets filhos. Pode-se ver que esta imagem é composta por vários contêineres, imagens e textos. Esses três controles podem ser encontrados todos na barra de ferramentas.
 
@@ -186,7 +186,7 @@ A Toolbar inclui opções para configuração do projeto, salvar seu projeto, ac
 - **Send bug report**: Fornece acesso direto ao sistema de relatório de erros.
 - **User(s)**: Exibe todos os usuários ativos que estão trabalhando atualmente no seu projeto, apoiando esforços de design colaborativo.
 - **View options**: Você pode alternar a exibição do minimapa e inserir valores precisos de zoom em porcentagem em um campo de entrada dedicado.
-- **Version**: Exibe a versão atual do SquareLine Vision na qual o seu projeto está sendo executado, garantindo que você esteja ciente do ambiente de software.
+- **Version**: Exibe a versão atual do SquareLine Vision na qual seu projeto está sendo executado, garantindo que você esteja ciente do seu ambiente de software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -287,7 +287,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
   </table>
 </div>
 
-- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Neste momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
+- **Step 1**: Abra a pasta no VScode e aguarde até que as dependências relacionadas sejam totalmente baixadas. Após abrir o projeto, abra o arquivo `.ini` e pressione `Ctrl+S`. Nesse momento, as dependências do projeto começarão a ser baixadas automaticamente. Quando você vir `Project has been successfully updated`, isso significa que o processo de download foi concluído. Quando a palavra `successful` estiver presente, isso indicará imediatamente que a instalação foi concluída com sucesso.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_2.png" style={{width:700, height:'auto'}}/></div>
 
 
@@ -300,10 +300,10 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
 
 - **Step 4**: Conecte o reTerminal ao computador usando um cabo de dados USB e selecione a porta serial apropriada para o processo de gravação. Em seguida, clique no botão `upload` para realizar o processo de gravação.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_3.png" style={{width:700, height:'auto'}}/></div>
-  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Em seguida, o reTerminal atualizará automaticamente a imagem da tela.
+  Quando o seguinte conteúdo aparecer no terminal, isso indica que o processo de gravação foi bem-sucedido. Subsequentemente, o reTerminal atualizará automaticamente a imagem da tela.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_4.png" style={{width:700, height:'auto'}}/></div>
 
-## Apresentação dos resultados
+## Apresentação do resultado
 
 <div class="table-center">
   <table align="center">
@@ -320,7 +320,7 @@ Fornecemos três modelos existentes, cada um com uma interface de UI diferente q
   </table>
 </div>
 
-## Suporte técnico e discussão sobre o produto
+## Suporte técnico e discussão de produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

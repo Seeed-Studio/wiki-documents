@@ -17,7 +17,7 @@ url: https://wiki.seeedstudio.com/es/reterminal_e10xx_with_lopaka/
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::note
-Este tutorial se basa en el uso de reTerminal E1002. Sin embargo, también se puede aplicar a reTerminal E1001. El primero tiene una pantalla de color más rica. Para una mejor experiencia, recomendamos que elijas reTerminal E1002.
+Este tutorial se basa en reTerminal E1002. Sin embargo, también se puede aplicar a reTerminal E1001. El primero tiene una pantalla de color más rica. Para una mejor experiencia, recomendamos que elijas reTerminal E1002.
 :::
 
 ## Introducción
@@ -59,7 +59,7 @@ Si es la primera vez que usas Arduino, te recomendamos encarecidamente que consu
 
 ### Configuración del IDE de Arduino
 
-**Paso 1.** Descarga e instala el [Arduino IDE](https://www.arduino.cc/en/software) y ejecuta la aplicación de Arduino.
+**Paso 1.** Descarga e instala el [Arduino IDE](https://www.arduino.cc/en/software) y ejecuta la aplicación Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -85,7 +85,7 @@ Navega a **Tools > Board > Boards Manager**, busca "esp32" e instala el paquete 
 
 Ve a **Tools > Board > ESP32 Arduino** y selecciona **XIAO_ESP32S3**.
 
-**Paso 5.** Conecta tu pantalla de tinta electrónica de la Serie reTerminal E a tu ordenador usando un cable USB-C.
+**Paso 5.** Conecta la pantalla de tinta electrónica de la Serie reTerminal E a tu ordenador usando un cable USB-C.
 
 **Paso 6.** Selecciona el puerto correcto en **Tools > Port**.
 
@@ -97,7 +97,7 @@ Lopaka es un editor gráfico diseñado específicamente para el desarrollo de gr
 
 - **[Go to Lopaka](https://lopaka.app/)**
 
-  Puedes registrarte usando una cuenta de Google o de GitHub.
+  Puedes registrarte usando una cuenta de Google o GitHub.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_1.png" style={{width:800, height:'auto'}}/>
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Interfaz principal de Lopaka</em></p>
@@ -165,14 +165,14 @@ Usaremos la biblioteca Seeed_GFX, que proporciona soporte completo para varios d
 **Paso 2.** Instala la biblioteca añadiendo el archivo ZIP en el IDE de Arduino. Ve a **Sketch > Include Library > Add .ZIP Library** y selecciona el archivo ZIP descargado.
 
 :::note
-Si has instalado previamente la biblioteca TFT_eSPI, es posible que tengas que eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para las pantallas de Seeed Studio.
+Si has instalado previamente la biblioteca TFT_eSPI, es posible que debas eliminarla temporalmente o cambiarle el nombre en la carpeta de bibliotecas de Arduino para evitar conflictos, ya que Seeed_GFX es un fork de TFT_eSPI con funciones adicionales para pantallas de Seeed Studio.
 :::
 
 ### Programación de reTerminal E1002
 
 La pantalla de tinta electrónica a todo color admite los colores rojo, negro, amarillo, verde y blanco, lo que permite interfaces visualmente más ricas.
 
-**Paso 1.** Abre el sketch de ejemplo en color de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**Paso 1.** Abre el sketch de ejemplo de color de la biblioteca Seeed_GFX: **File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
 **Paso 2.** Crea un nuevo archivo llamado `driver.h` en la misma carpeta que tu sketch, siguiendo el mismo proceso que antes.
 
@@ -180,7 +180,7 @@ La pantalla de tinta electrónica a todo color admite los colores rojo, negro, a
 
 **Paso 3.** Ve a la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) y selecciona **reTerminal E1002** de la lista de dispositivos.
 
-**Paso 4.** Copia el código de configuración generado y pégalo en el archivo `driver.h`. El código debería tener el siguiente aspecto:
+**Paso 4.** Copia el código de configuración generado y pégalo en el archivo `driver.h`. El código debería verse así:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -188,7 +188,7 @@ La pantalla de tinta electrónica a todo color admite los colores rojo, negro, a
 
 :::tip
 
-Si estás utilizando el reTerminal E1001, entonces debes copiar el siguiente código
+Si estás utilizando el reTerminal E1001, entonces deberías copiar el siguiente código
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
@@ -203,7 +203,7 @@ Si estás utilizando el reTerminal E1001, entonces debes copiar el siguiente có
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
-El reTerminal E1002 actualmente admite seis colores. Por lo tanto, debes modificar el color según la situación real.
+El reTerminal E1002 actualmente admite seis colores. Por lo tanto, necesitas modificar el color según la situación real.
 <details>
 
 <summary>Categoría de colores</summary>
@@ -220,8 +220,8 @@ Here is the 6 colors you can display:
 
 </details>
 
-- Reemplaza el parámetro en `tft.fillScreen(TFT_WHITE)` por TFF_YELLOW
-- Reemplaza el 0x4D6A en `tft.setTextColor(0x4D6A)` por TFT_GREEN.
+- Sustituye el parámetro en `tft.fillScreen(TFT_WHITE)` por TFF_YELLOW
+- Sustituye el 0x4D6A en `tft.setTextColor(0x4D6A)` por TFT_GREEN.
 - Modifica la función `setup` y reemplaza el contenido entre `tft.fillScreen(TFT_WHITE)` y `tft.update` por `draw()`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_3.png" style={{width:800, height:'auto'}}/></div>
@@ -332,9 +332,9 @@ Para completar este tutorial, prepara dispositivos reTerminal E1002:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_0.png" style={{width:800, height:'auto'}}/></div>
 
-- Ajustar parámetro <br/>
+- Parámetro de ajuste <br/>
 
-    Ajusta el tamaño adecuado. Yo lo configuré en 300×300, luego ajusté el Brillo y otros parámetros para que la imagen fuera más clara, y después la importé.<br/>
+    Ajusta el tamaño adecuado. Yo lo configuré en 300×300, luego ajusté el Brillo y otros parámetros para que la imagen fuera más clara y después la importé.<br/>
 
 <!-- **image**: [dragon](https://seeedstudio.com/wiki/reterminal_e10xx/img/dragon.png) -->
 
@@ -452,7 +452,7 @@ Para completar este tutorial, prepara dispositivos reTerminal E1002:
 
 ##### Software
 
-- Elige las herramientas adecuadas para dibujar, como rectángulos, cadenas, círculos y Paint.
+- Elige las herramientas adecuadas para dibujar, como rectángulos, cadenas, círculos y Pintar.
 - El efecto del dibujo es el siguiente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/super_mario_1.png" style={{width:800, height:'auto'}}/></div>

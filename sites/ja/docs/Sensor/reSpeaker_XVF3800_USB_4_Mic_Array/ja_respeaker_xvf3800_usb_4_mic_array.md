@@ -68,7 +68,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 | **I2C & I2S ヘッダ**         | 外部デバイスとの **I2C および I2S 通信** 用に引き出されたヘッダ。                             |
 | **未使用 IO パッド（XIAO）**     | XIAO モジュールに接続された追加の I/O はんだパッド。                                                 |
 | **I2S & I2C 通信**   | これらのプロトコルを使用して Raspberry Pi、PC などの外部ホストへの接続をサポートします。             |
-| **USB & INT-Device モード**    | 2 つの動作モード：プラグアンドプレイ USB または I2S を介した内部 INT デバイスモード。                          |
+| **USB & INT-Device モード**    | デュアルモード動作：プラグアンドプレイ USB または I2S を介した内部 INT デバイスモード。                          |
 | **一意のシリアル番号**      | 識別および複数デバイス管理のための内蔵 **デバイス SN**。                               |
 | **オープンソース互換性** | **Arduino、Raspberry Pi、PC/Mac** で動作し、**XIAO シリーズ** と互換性があります。                   |
 | **高度なオーディオ機能**   | AEC、ビームフォーミング、残響除去、**DoA 検出**、DNN ベースのノイズ抑制、60dB AGC。         |
@@ -76,12 +76,12 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 | **音質**             | **従来の XVF3000 ベース設計** と同等またはそれ以上。                                         |
 
 :::note
-ReSpeaker XVF3800 には、XIAO なしのバリアントと、XIAO ESP32S3 をオンボード搭載したバリアントの 2 種類があります。XIAO なしバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
+ReSpeaker XVF3800 には、XIAO なしのバージョンと、XIAO ESP32S3 をオンボード搭載したバージョンの 2 種類があります。XIAO なしのバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合版を使用するには、**INT-Device（I2S）モード** 用にビルドされたファームウェアを書き込む必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started) を参照してください。
 :::
 
 ### XIAO ESP32S3 サポート
 
-- 複数の出力オプションを備えたステレオ I2S 入出力；XVF3800 パラメータの設定および管理用の I2C インターフェース。
+- 複数の出力オプションを備えたステレオ I2S 入出力；XVF3800 のパラメータ設定と管理用の I2C インターフェース。
 - IO ピン経由の XIAO リセット
 - インターフェースおよびはんだパッド
 
@@ -106,7 +106,7 @@ reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5
 | X0D33        | Output (RW)   | WS2812 LED 電源制御（High = オン）                 |
 | X0D39        | Output (RW)   | 未接続                                             |
 
-## 入門ガイド
+## はじめに
 
 ### ハードウェアの準備
 
@@ -115,7 +115,7 @@ reSpeaker XVF3800 には、外部制御用に 3 本の入力ピン（GPI）と 5
 
 ### ソフトウェアの準備
 
-### 開封後すぐに使う
+### 開封してすぐに使う
 
 #### DOA（到来方向）
 
@@ -168,9 +168,9 @@ ReSpeaker 上の **ミュートボタン** は、マイクアレイからの**�
 :::note
 ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる更新方法をサポートしています。
 
-- **USB ファームウェア** は **USB DFU** のみをサポートしており、USB 接続を使用してデバイスを更新できます。ただし、**I2C DFU はサポートしていません**。
+- **USB ファームウェア** は **USB DFU** のみをサポートしており、USB 接続を使用してデバイスを更新できます。ただし、**I2C DFU には対応していません**。
 
-- **I2S ファームウェア** はその逆で、**I2C DFU** をサポートしており、I2C インターフェース経由でファームウェア更新が可能ですが、**USB DFU はサポートしていません**。
+- **I2S ファームウェア** はその逆で、**I2C DFU** をサポートしており、I2C インターフェース経由でファームウェア更新が可能ですが、**USB DFU には対応していません**。
 
 - Factory パーティションに保存されている **Safe Mode ファームウェア** が最も柔軟です。これは **USB DFU と I2C DFU の両方** をサポートします。
 
@@ -178,13 +178,13 @@ ReSpeaker XVF3800 上の各種ファームウェアは、それぞれ異なる�
 
 **Safe Mode を使用するタイミング**
 
-- ファームウェアが正しく動作していない（例：USB が認識されない、LED が期待どおりに点灯しない）。
-- 新しいファームウェアを書き込みたいが、現在のファームウェアが応答しない。
-- 誤って間違ったものを書き込んでしまい、復旧したい。
+- ファームウェアが正しく動作していない場合（例：USB が認識されない、LED が期待どおりに点灯しない）。
+- 新しいファームウェアを書き込みたいが、現在のファームウェアが応答しない場合。
+- 誤ったファームウェアを書き込んでしまい、復旧したい場合。
 
 **Safe Mode への入る方法**
 
-- デバイスの電源を完全に切ります。
+- デバイスの電源を完全にオフにします。
 - Mute ボタンを押し続けます。
 - Mute ボタンを押したまま、電源を再接続します。
 - 赤色 LED が点滅し始めます — これでデバイスが Safe Mode になったことが確認できます。
@@ -204,7 +204,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="USB" label="USB">
 
-USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用するよう設計されています。
+USB ファームウェアは、USB ハードウェアインターフェースを介して通信する際に、**Windows、Linux、macOS** などのホスト OS で使用することを想定して設計されています。
 
 2 つのファームウェアバリエーションがあります。**respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin** は **2 チャンネル** オーディオを提供し、**respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin** は **6 チャンネル** オーディオを提供します。どちらのファームウェアも **16 kHz** のサンプリングレート、**32-bit** のビット深度で動作します。
 
@@ -219,7 +219,7 @@ USB ファームウェアは、USB ハードウェアインターフェースを
 
  <TabItem value="I2S" label="I2S">
 
-I2S ファームウェアは、**XIAO ESP32S3** のようなマイコンホストにデバイスを接続して使用することを想定しています。この構成では、音声データは I2S プロトコルを使用して送信されます。
+I2S ファームウェアは、**XIAO ESP32S3** などのマイコンホストにデバイスを接続して使用することを想定しています。この構成では、音声データは I2S プロトコルを使用して送信されます。
 
 ファームウェアファイル **respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin** は [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) から入手できます。このファームウェアは **2 チャンネル** オーディオと **32-bit** のビット深度をサポートします。
 
@@ -231,7 +231,7 @@ I2S ファームウェアは、**XIAO ESP32S3** のようなマイコンホス�
 
 <TabItem value="HA" label="HA">
 
-Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう 1 つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz のサンプリングレートを持つ 2 チャンネルオーディオを使用し、Home Assistant 環境内でより良い互換性とパフォーマンスを提供します。
+Home Assistant ファームウェアは、Home Assistant との統合向けに特別に設計された、もう 1 つの I2S ベースのファームウェアです。この最適化されたファームウェアは 48 kHz のサンプリングレートによる 2 チャンネルオーディオを使用し、Home Assistant 環境内でより良い互換性とパフォーマンスを提供します。
 ファームウェアは [here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) から確認できます。
 
 | ファームウェア | チャンネル数 | 備考 |
@@ -241,7 +241,7 @@ Home Assistant ファームウェアは、Home Assistant との統合向けに�
 </TabItem>
 </Tabs>
 
-reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファームウェアを書き込むには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
+USB ケーブルで reSpeaker XVF3800 を PC に接続します。XMOS のファームウェアを書き込むには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
 
 #### DFU Util のインストール
 
@@ -264,7 +264,7 @@ dfu-util -V
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image.png" alt="pir" width={600} height="auto"/></p>
 
-- ReSpeaker XVF3800 を接続し、デバイスが検出されているか確認します。
+- ReSpeaker XVF3800 を接続し、デバイスが検出されるか確認します。
 
 ```bash
 dfu-util -l
@@ -272,7 +272,7 @@ dfu-util -l
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/image2.png" alt="pir" width={600} height="auto"/></p>
 
-> 次のようなメッセージが表示された場合：  
+> 次のメッセージが表示された場合：  
 > `Cannot open DFU device 2886:001a ... (LIBUSB_ERROR_NOT_SUPPORTED)`  
 > 以下のドライバインストール手順に進んでください。
 
@@ -385,7 +385,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/windw1.png" alt="pir" width={600} height="auto"/></p>
 
-3. 次のように設定します：
+3. 次のように設定します。
    - **Host**: `Windows WASAPI`
    - **Recording Device**: `reSpeaker 3800`
    - **Channels**: `2 (Stereo)`
@@ -411,7 +411,7 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac1.png" alt="pir" width={600} height="auto"/></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac2.png" alt="pir" width={600} height="auto"/></p>
 
-3. **Audio Setting** に移動し、次のように設定します：
+3. **Audio Setting** に移動し、次のように設定します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/mac3.png" alt="pir" width={600} height="auto"/></p>
 
@@ -468,7 +468,7 @@ arecord -D plughw:4,0 -c 2 -r 16000 -f S16_LE -d 5 output.wav
 alsamixer
 ```
 
-alsamixer では、左右の矢印キーを使って正しいサウンドデバイスに移動します。上矢印キーを使って音量を上げます。
+alsamixer では、左右の矢印キーを使用して正しいサウンドデバイスに移動します。上矢印キーを使用して音量を上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alsa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -646,7 +646,7 @@ AEC_MIC_ARRAY_GEO:
 
 ## トラブルシューティング
 
-### スピーカー出力からの再生音が十分でないですか？
+### スピーカー出力からの再生音が十分に大きくありませんか？
 
 Linux 上で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎる場合、XVF3800 サウンドカードの **ALSA ミキサーレベル** を調整する必要があるかもしれません。出力音量を上げるには、以下の手順に従ってください。
 
@@ -662,13 +662,13 @@ Linux 上で **ReSpeaker XVF3800** のスピーカー出力音量が小さすぎ
 **ステップ 2：XVF3800 サウンドカードを選択する**
 
 1. **F6** キーを押してサウンドカード選択メニューを開きます。
-2. **上下の矢印キー** を使って **XVF3800** サウンドカードをハイライトします。
+2. **上下の矢印キー** を使用して **XVF3800** サウンドカードをハイライトします。
 3. **Enter** キーを押して選択を確定します。
 
 **ステップ 3：PCM-1 の音量を調整する**
 
-1. **左右の矢印キー** を使って **PCM-1** に移動します。
-2. **上矢印キー** を使って音量レベルを **100%** まで上げます。
+1. **左右の矢印キー** を使用して **PCM-1** に移動します。
+2. **上矢印キー** を使用して音量レベルを **100%** まで上げます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
@@ -697,19 +697,19 @@ sudo apt install pavucontrol -y
 
 ### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
 
-スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差し）。すると Windows が適切なサウンドカードドライバを再インストールします。
+スタートメニューを開き、「Device manager」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、Uninstall devices を選択します。その後、デバイスを再起動します（USB を抜き差しします）。すると Windows が適切なサウンドカードドライバを再インストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
 ## リソース
 
 - [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
-- [ReSpeaker XVF3800 3D-エンクロージャー-上部ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
-- [ReSpeaker XVF3800 3D-エンクロージャー-下部ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+- [ReSpeaker XVF3800 3D-Enclosure-Up ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [ReSpeaker XVF3800 3D-Enclosure-Down ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## 技術サポートと製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
+当社の製品をお選びいただきありがとうございます。お客様が当社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

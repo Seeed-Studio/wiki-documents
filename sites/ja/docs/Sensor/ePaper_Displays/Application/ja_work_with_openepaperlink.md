@@ -1,5 +1,5 @@
 ---
-description: OpenEPaperLink (OEPL) と OpenDisplay のオープンソースエコシステムを使って、Seeed の ePaper ハードウェアを Bluetooth Low Energy 経由で駆動します — XIAO ePaper Display Board EN04 と Seeed Studio XIAO 用 ePaper Breakout Board を対象とします。
+description: OpenEPaperLink (OEPL) と OpenDisplay のオープンソースエコシステムを使って、Seeed の ePaper ハードウェアを Bluetooth Low Energy 経由で駆動します - XIAO ePaper Display Board EN04 と Seeed Studio XIAO 用 ePaper Breakout Board を対象とします。
 title: OpenEPaperLink / OpenDisplay を使う
 keywords:
   - ePaper ディスプレイ
@@ -28,12 +28,12 @@ import TabItem from '@theme/TabItem';
 
 [OpenEPaperLink (OEPL)](https://openepaperlink.de/) エコシステムと関連プロジェクトの [OpenDisplay](https://opendisplay.org/) は、電子ペーパーディスプレイを駆動するためのオープンソースのファームウェア／プロトコルスタックです。最新リリースは **Bluetooth Low Energy** 上で動作し、スマートフォンやコンピュータ、Home Assistant からデバイスへ直接通信できます。専用の 802.15.4 アクセスポイントは不要です。
 
-このガイドでは、Seeed ハードウェアからそのエコシステムへ入る 2 つのパスを扱います：
+このガイドでは、Seeed ハードウェアからそのエコシステムに入る 2 つのパスを扱います：
 
-- **XIAO ePaper Display Board EN04** — OpenDisplay ファームウェアを BLE 上で動かす一体型キット。
+- **XIAO ePaper Display Board EN04** — OpenDisplay ファームウェアを BLE 上で動作させる一体型キット。
 - **ePaper Breakout Board for Seeed Studio XIAO** — OEPL Config Builder と OEPL Image Uploader を XIAO nRF52840 シリーズボードと組み合わせて使う、よりモジュール的な DIY パス。
 
-どちらのフローも共通の思想（BLE 設定、Web ベースのツール、低消費電力）を共有していますが、ハードウェアとファームウェア／Web ツールは異なります。この記事全体を通して、自分のハードウェアに合ったタブを選択してください。
+どちらのフローも共通の思想（BLE 設定、Web ベースのツール、低消費電力）を共有していますが、ハードウェアやファームウェア／Web ツールは異なります。この記事全体を通して、自分のハードウェアに合ったタブを選択してください。
 
 ## 対応ハードウェア
 
@@ -100,7 +100,7 @@ import TabItem from '@theme/TabItem';
 
 ## なぜ OpenEPaperLink / OpenDisplay を使うのか？
 
-- **アクセスポイント不要** — Bluetooth Low Energy を使って直接通信します。802.15.4 ハードウェアは不要です。
+- **アクセスポイント不要** — 直接通信に Bluetooth Low Energy を使用します。802.15.4 ハードウェアは不要です。
 - **Web ベースのツール** — ファームウェアのインストール、デバイスの設定、画像のアップロードをブラウザから直接行えます。
 - **専用ハードウェア対応** — XIAO nRF52840 ファミリ、EN04、EE04 など。
 - **オープンソースかつ無料** — GitHub で積極的に開発されています。
@@ -114,7 +114,7 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="oepl-hardware">
 <TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
 
-**ステップ 1. ディスプレイをドライバボードに接続する**  
+**ステップ 1. ドライバボードにディスプレイを接続する**  
 FPC ケーブルを XIAO EN04 ボード上のコネクタに合わせ、ラッチを固定します。
 
 :::tip
@@ -149,18 +149,18 @@ FPC ケーブルの金属面は上向きにする必要があります。逆向�
 
 **ステップ 1.** ブラウザで [OpenDisplay Web Installer](https://opendisplay.org/firmware/install/index.html) を開きます。
 
-**ステップ 2.** デバイス一覧から **Seeed EN04 4.26** または **Seeed EN04 7.3**（もしくはお使いのディスプレイに合ったプリセット）を選択します。
+**ステップ 2.** デバイス一覧から **Seeed EN04 4.26** または **Seeed EN04 7.3**（もしくは自分のディスプレイに合ったプリセット）を選択します。
 
 **ステップ 3.** **Download Firmware** をクリックし、`NRF52840.uf2` をローカルに保存します。
 
 **ステップ 4.** EN04 ボードを USB-C で接続します。
 
-**ステップ 5.** リセットボタンを**続けて 2 回**押します。コンピュータ上に USB ドライブ（DFU モードの EN04）が表示されるので、そのドライブに `NRF52840.uf2` をコピーします。
+**ステップ 5.** リセットボタンを**素早く 2 回**押します。コンピュータ上に USB ドライブが表示されます（DFU モードの EN04）。そのドライブに `NRF52840.uf2` をコピーします。
 
 :::tip
 インストーラがうまく動作しない場合：
 
-- 別の USB ケーブルを試してください（一部のケーブルは給電専用です — データ通信対応ケーブルを使用してください）。
+- 別の USB ケーブルを試してください（一部のケーブルは給電専用なので、データ通信対応ケーブルを使用してください）。
 - EN04 のリセットボタンを 2 回押して DFU モードに再度入ります。
 - 別の USB ポートを試してください。
 :::
@@ -184,7 +184,7 @@ FPC ケーブルの金属面は上向きにする必要があります。逆向�
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-XIAO nRF52840 が OEPL Config Builder と通信できるようにするには、事前に **OEPL_BLE** ファームウェアを書き込んでおく必要があります。
+OEPL Config Builder が XIAO nRF52840 と通信できるようにするには、事前に **OEPL_BLE** ファームウェアを書き込む必要があります。
 
 **ステップ 1.** 公式 OEPL リリースページから最新の `OEPL_BLE` ファームウェアをダウンロードします。
 
@@ -212,7 +212,7 @@ XIAO nRF52840 が OEPL Config Builder と通信できるようにするには、
 <Tabs groupId="oepl-hardware">
 <TabItem value="en04" label="XIAO ePaper Display Board EN04" default>
 
-前のフラッシュ手順で行った OpenDisplay の設定ステップですでに処理されているため、現在 EN04 は OpenDisplay の起動画面で起動し、画像アップロードを受け付ける状態になっているはずです。
+前のフラッシュワークフローで行った OpenDisplay の設定ステップですでに処理されています — これで EN04 は OpenDisplay の起動画面で起動し、画像のアップロードを受け付けるようになっているはずです。
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
@@ -221,9 +221,9 @@ XIAO nRF52840 が OEPL Config Builder と通信できるようにするには、
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Connect_demo_2.png" style={{width:700, height:'auto'}}/></div>
 
-ターミナルに "Connected" と表示されたら、次の操作ができます：
+ターミナルに「Connected」と表示されたら、次の操作ができます：
 
-- **Read Config** — MCU から現在の設定を読み出します。
+- **Read Config** — MCU から現在の設定を読み取ります。
 - **Write Config** — MCU に新しい設定を書き込みます。
 - **Reboot** — MCU を再起動します。
 
@@ -232,7 +232,7 @@ XIAO nRF52840 が OEPL Config Builder と通信できるようにするには、
 パネル内で変数とパラメータを選択して、設定を作成します。
 
 - **system_config** — ホスト IC と電源管理ピン。
-- **manufacturer_data** — メーカー ID とボード情報。
+- **manufacturer_data** — メーカー識別子とボード情報。
 - **power_option** — 電源供給とスリープ設定。
 - **display** — ディスプレイ / パネル情報（複数ディスプレイ用に繰り返し可能）。
 - **led** — オプションの LED 設定（繰り返し可能）。
@@ -242,7 +242,7 @@ XIAO nRF52840 が OEPL Config Builder と通信できるようにするには、
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-設定は `.bin`、`Hex`、`JSON` としてエクスポートでき、保存済みの JSON をインポートすることもできます。4.26" スクリーン用の既製設定は以下から利用できます。
+設定は `.bin`、`Hex`、`JSON` としてエクスポートしたり、保存済みの JSON をインポートしたりできます。4.26 インチ画面用の既製設定は以下から利用できます。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -275,19 +275,19 @@ OpenDisplay プロジェクトには、専用のブラウザベースのアッ�
 :::tip
 最良の結果を得るには：
 
-- ディスプレイ解像度に一致する画像を使用します（7.3" パネルは 800×480 px）。
+- ディスプレイの解像度に一致する画像を使用します（7.3 インチパネルは 800×480 px）。
 - モノクロディスプレイでは、白黒画像が最もきれいに表示されます。
 - このツールはカラー画像を自動的に変換し、ディザリングします。
 :::
 
 **ステップ 4.** **Upload Image** をクリックします。電子ペーパーがリフレッシュされ、画像が表示されます。
 
-画像編集ソフト（GIMP、Photoshop）、Python + Pillow スクリプト、Web ベースの画像ジェネレーター、あるいは Home Assistant 連携（後述）を使ってカスタムコンテンツを作成することもできます。
+画像編集ソフト（GIMP、Photoshop）、Python + Pillow スクリプト、Web ベースの画像ジェネレーター、または Home Assistant 連携（後述）を使ってカスタムコンテンツを作成することもできます。
 
 </TabItem>
 <TabItem value="breakout" label="ePaper Breakout Board + XIAO nRF52840">
 
-OEPL Image Uploader も BLE を使う Web ツールです。Config Builder 用ファームウェアとはピン割り当てが異なるため、先に少し異なる画像アップロード用ファームウェアを書き込む必要があります。
+OEPL Image Uploader も BLE を使う Web ツールです。ピンアサインは Config Builder 用ファームウェアとは異なるため、先に少し異なる画像アップロード用ファームウェアを書き込む必要があります。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -295,7 +295,7 @@ OEPL Image Uploader も BLE を使う Web ツールです。Config Builder 用�
 </a>
 </div>
 
-**E-Paper prefix filter(s)** フィールドの値を `OEPL` に変更します。そうしないとアップローダーがデバイスを見つけられません。
+**E-Paper prefix filter(s)** フィールドで、値を `OEPL` に変更します — そうしないとアップローダーがデバイスを見つけられません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image_Upload_4.png" style={{width:350, height:'auto'}}/></div>
 
@@ -321,9 +321,9 @@ Home Assistant と連携するには、Bluetooth 対応のセットアップが�
 
 - **Home Assistant Green**（Bluetooth 内蔵）
 - Bluetooth 対応ハードウェア上の **Home Assistant OS / Supervised**
-- **ESPHome Bluetooth Proxy**（電波範囲を広げるために推奨 — 下記参照）
+- **ESPHome Bluetooth Proxy**（電波範囲向上のため推奨 — 後述）
 
-**注意:** Bluetooth プロキシとして動作する Shelly デバイスは、OpenDisplay に必要なアクティブ接続をサポートしていないため、使用できません。
+**注:** Bluetooth プロキシとして動作する Shelly デバイスは、OpenDisplay に必要なアクティブ接続をサポートして**いない**ため、使用できません。
 :::
 
 **ステップ 1. インテグレーションをインストールする**
@@ -335,25 +335,25 @@ Home Assistant と連携するには、Bluetooth 対応のセットアップが�
 [![Home Assistant インスタンスを開き、Home Assistant Community Store 内のリポジトリを開きます。](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
 
 :::info
-HACS からカスタムインテグレーションをインストールした後、変更を反映させるために **Home Assistant を再起動** してください。
+HACS からカスタムインテグレーションをインストールした後、変更を反映させるために **Home Assistant を再起動**してください。
 :::
 
 **ステップ 2. 検出されたデバイスを追加する**
 
-Home Assistant が再起動したら：
+Home Assistant が再起動して立ち上がったら：
 
 1. **Settings → Devices & services** に移動します。
 2. **Discovered** の下にある OpenDisplay デバイスを探します。
 3. **Add** をクリックします。
 4. **Name** と **Area** を設定し、**Finish** をクリックします。
 
-ディスプレイに新しい画像が表示され、Home Assistant が接続されたことが確認できます。
+新しい画像がディスプレイに表示され、Home Assistant が接続されたことが確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/pair_ha.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### ディスプレイ更新の自動化
 
-主なサービスは `open_epaper_link.drawcustom` で、テキスト、アイコン、画像、図形を描画できます。利用可能な型とパラメータの一覧は、[drawcustom ドキュメント](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md)を参照してください。
+主なサービスは `open_epaper_link.drawcustom` で、テキスト、アイコン、画像、図形を描画できます。利用可能な型とパラメータの完全なリファレンスは、[drawcustom ドキュメント](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md)を参照してください。
 
 #### 例 1 — センサーデータを表示する（ビジュアルエディタ）
 
@@ -371,7 +371,7 @@ Home Assistant が再起動したら：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/pick_target.png" style={{width:800, height:'auto'}}/></div>
 
-5. **Payload** フィールドにレイアウト設定を入力します：
+5. **Payload** フィールドに、レイアウト設定を入力します：
 
 ```yaml
 - type: "text"
@@ -411,7 +411,7 @@ Home Assistant が再起動したら：
   color: "black"
 ```
 
-:::caution エンティティ ID
+:::caution Entity IDs
 上記のエンティティ ID（例：`sensor.living_room_temperature`）はプレースホルダーです。実際の Home Assistant のエンティティ ID に置き換えてください。
 :::
 
@@ -467,15 +467,15 @@ actions:
 ```
 
 :::caution Device ID
-上記の `device_id` はプレースホルダです。実際のデバイス ID を確認するには、次の手順に従います：
+上記の `device_id` はプレースホルダーです。実際のデバイス ID を確認するには、次の手順に従います：
 
 1. ビジュアルエディタで新しいオートメーションを作成します。
 2. アクション設定で OpenDisplay デバイスを選択します。
-3. **YAML モード** に切り替えます（アクションカードの三点メニュー）。
+3. **YAML mode**（アクションカードの三点メニュー）に切り替えます。
 4. `device_id` をコピーして、あなたのオートメーションに貼り付けます。
 :::
 
-## おまけ
+## ボーナス
 
 ディスプレイをスタイリッシュにマウントしたいですか？この 3D プリントインサートは IKEA RODÅLM フォトフレームにフィットし、簡単にマウントできます：
 
@@ -487,7 +487,7 @@ actions:
 
 **問題**：ボードを接続しても、PC が新しい USB ドライブを検出しません。
 
-- 別の USB ケーブルを試してください（給電専用ではなくデータ通信対応のケーブル）。
+- 別の USB ケーブルを試してください（電源専用ではなくデータ通信対応ケーブル）。
 - ボードを接続した後にリセットボタンを 2 回押してください。
 
 ### 設定の問題
@@ -501,7 +501,7 @@ actions:
 **問題**：ファームウェアインストール後もディスプレイに何も表示されません。
 
 - FPC ケーブルの向き（金属端子が上向き）を確認します。
-- ケーブルが奥までしっかり挿入され、ラッチされていることを確認します。
+- ケーブルが最後まで差し込まれ、ラッチされていることを確認します。
 - コンフィギュレータで設定を再確認します。
 
 ### Bluetooth 接続の問題
@@ -509,15 +509,15 @@ actions:
 **問題**：Bluetooth ペアリングでデバイスが見つかりません。
 
 - デバイスの電源が入っており、ファームウェアがインストールされていることを確認します。
-- もっと近づいてください（2〜3 m 以内）。
+- もっと近づいてください（2～3 m 以内）。
 - コンピュータ / スマートフォンで Bluetooth が有効になっていることを確認します。
 
 **問題**：画像アップロード中に接続が切断されます。
 
 - アップロード中はデバイスの近くにいてください。
-- バッテリーを十分に充電するか、USB 経由で給電してください。
+- バッテリーを十分に充電するか、USB から給電してください。
 - 非常に大きな画像のアップロードは避けてください。
-- Bluetooth が混雑していない環境で再度試してください。
+- Bluetooth が混雑していない環境で再度お試しください。
 
 ### バッテリーと電源の問題
 
@@ -537,9 +537,9 @@ actions:
 
 ### Home Assistant / 連携の問題
 
-**問題**：Raspberry Pi + HA 経由でデバイスを追加するときに "Insufficient connection slots" と表示されます。
+**問題**：Raspberry Pi + HA 経由でデバイスを追加する際に "Insufficient connection slots" と表示されます。
 
-これは多くの場合、Raspberry Pi 内蔵の Bluetooth アダプタが同時接続数の上限に達しているために発生します。
+これは多くの場合、Raspberry Pi 内蔵の Bluetooth アダプタが同時接続数の上限に達していることが原因です。
 
 ![Error: Insufficient connection slots](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/1.png)
 *"Insufficient connection slots" メッセージの例。*
@@ -554,13 +554,13 @@ Raspberry Pi と Home Assistant を使用していて "Insufficient connection s
 
 - ESP32 デバイス（例：XIAO ESP32S3）。
 - Home Assistant にインストールされた ESPHome。
-- ESP32 を Pi に接続するための USB データケーブル（初回フラッシュ用）。
+- ESP32 を Pi に接続するための USB データケーブル（初回のフラッシュ用）。
 
 ### 手順付き設定ガイド
 
 1. **デバイスを接続** — XIAO ESP32S3 を Raspberry Pi の USB ポートに接続します。
 
-2. 下記の YAML を使って **新しい ESPHome 設定を作成** します：
+2. 下記の YAML を使用して、**新しい ESPHome 設定を作成**します：
 
    ![ESPHome YAML Configuration](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/2.png)
 
@@ -608,13 +608,13 @@ Raspberry Pi と Home Assistant を使用していて "Insufficient connection s
 
      ![ESPHome flashing process](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/4.png)
 
-   - 初回フラッシュ時、ESPHome が `esp-idf` ツールチェーンをダウンロードする場合があります。GitHub へ安定してアクセスできるインターネット環境を用意してください。
+   - 初回のフラッシュ時には、ESPHome が `esp-idf` ツールチェーンをダウンロードする場合があります。GitHub へ安定してアクセスできるインターネット環境を用意してください。
    - コンパイル後、ログに「WiFi connected」と Bluetooth スキャンの動作が表示されます。
 
 4. **プロキシを Home Assistant に追加**：
 
-   - Home Assistant が新しい Bluetooth Proxy を自動的に検出します。
-   - 追加が完了すると、電子ペーパーディスプレイは "insufficient slots" エラーなしでプロキシ経由で検出できるようになります。
+   - Home Assistant は新しい Bluetooth Proxy を自動的に検出します。
+   - 追加が完了すると、「insufficient slots」エラーなしで、プロキシ経由で電子ペーパーディスプレイが検出できるようになります。
 
    ![Success: Bluetooth Proxy connected](https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/esphome_proxy/5.png)
 
@@ -635,7 +635,7 @@ Raspberry Pi と Home Assistant を使用していて "Insufficient connection s
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,4 +1,4 @@
-position: 4 # float position is supported
+position: 5 # float position is supported
 label: 'Placa de desarrollo Wio Tracker 1110'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: wio_tracker_1110_dev_board_class
   title: Placa de desarrollo Wio Tracker 1110
-  description: Documentación del producto Wio Tracker 1110 Dev Board
+  description: Documentación del producto de la placa de desarrollo Wio Tracker 1110

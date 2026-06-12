@@ -1,5 +1,5 @@
 ---
-description: Diseña interfaces profesionales basadas en LVGL para productos ePaper de Seeed con EEZ Studio y luego despliega el resultado con el IDE de Arduino; funciona en toda la reTerminal E Serie y en la XIAO ePaper Display Board (EE04).
+description: Diseña interfaces profesionales basadas en LVGL para productos ePaper de Seeed con EEZ Studio y luego despliega en ellas con el IDE de Arduino; funciona tanto con la reTerminal E Serie como con la XIAO ePaper Display Board (EE04).
 title: Trabajar con EEZ Studio
 keywords:
   - pantalla ePaper
@@ -70,7 +70,7 @@ En resumen, EEZ Studio actúa como un puente entre hardware y software, permiti�
 
 - **Diseño visual de interfaces**: crea interfaces complejas con un editor WYSIWYG.
 - **Prototipado rápido**: prueba y valida ideas de diseño rápidamente.
-- **Multiplataforma**: crea aplicaciones que se ejecutan en varios sistemas operativos y destinos embebidos.
+- **Multiplataforma**: crea aplicaciones que se ejecutan en varios sistemas operativos y objetivos embebidos.
 - **Integración de hardware**: conecta directamente instrumentos de laboratorio, dispositivos IoT y placas personalizadas.
 - **Código abierto**: conjunto de herramientas impulsado por la comunidad con soporte premium opcional.
 
@@ -95,18 +95,18 @@ Ambas son herramientas de diseño de GUI, pero se dirigen a públicos ligerament
         </tr>
         <tr>
             <th>Integración de hardware</th>
-            <td>Integración directa con instrumentos, dispositivos de medición, automatización</td>
-            <td>Enfoque en la generación de UI, menor integración con dispositivos externos</td>
+            <td>Integración directa con instrumentos, dispositivos de medición y automatización</td>
+            <td>Enfoque en la generación de UI, con menos integración de dispositivos externos</td>
         </tr>
         <tr>
             <th>Código abierto</th>
-            <td>Impulsado por la comunidad, transparente, extensible (con soporte premium disponible)</td>
+            <td>Impulsado por la comunidad, transparente y extensible (con soporte premium disponible)</td>
             <td>Código cerrado, producto comercial con licenciamiento</td>
         </tr>
         <tr>
             <th>Flujo de trabajo</th>
             <td>Prototipa, simula y controla dispositivos reales desde un único entorno</td>
-            <td>Principalmente genera código de UI que se compila dentro de un proyecto embebido</td>
+            <td>Principalmente genera código de UI para compilarse en un proyecto embebido</td>
         </tr>
     </tbody>
 </table>
@@ -155,7 +155,7 @@ En **General → Display**, establece la resolución **para tu hardware**:
 - **Display width**: 648
 - **Display height**: 480
 
-(Haz coincidir los valores con la pantalla ePaper de Seeed que tengas conectada a la EE04. El ejemplo siguiente usa la pantalla monocroma de 5.83" y 648×480).
+(Haz coincidir los valores con la pantalla ePaper de Seeed que tengas conectada a la EE04. El ejemplo siguiente utiliza la pantalla monocroma de 5.83" y 648×480).
 
 </TabItem>
 </Tabs>
@@ -168,7 +168,7 @@ El diseño de la UI determina directamente la experiencia de usuario. EEZ Studio
 
 Recursos en línea recomendados:
 
-- [Coolors](https://coolors.co/) — generador de paletas de color
+- [Coolors](https://coolors.co/) — generador de paletas de colores
 - [PeisekA](https://peiseka.com/) — carta de colores
 - [iconfont](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl) — biblioteca de iconos
 - [Google Fonts](https://fonts.google.com/) — fuentes gratuitas
@@ -181,7 +181,7 @@ La barra lateral derecha:
 - **Bitmaps**: fondos, iconos, logotipos.
 - **Fonts**: renderizado de texto y compatibilidad multilingüe.
 - **Themes**: estilos de alto nivel como claro/oscuro.
-- **Groups**: ayudas de maquetación.
+- **Groups**: ayudas para el diseño de la disposición.
 
 ### Diseño de ejemplo (Hello World + Panel + Image + Line + Label)
 
@@ -215,7 +215,7 @@ En este tutorial crearemos una página de inicio sencilla a partir de cinco comp
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a6.jpg" style={{width:900, height:'auto'}}/></div>
 
-**Paso 5.** Añade una **Label**, elige el color y luego añade fuentes mediante el panel derecho **Fonts**.
+**Paso 5.** Añade un **Label**, elige el color y luego añade fuentes mediante el panel derecho **Fonts**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a7.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -237,7 +237,7 @@ Un mensaje verde de **Build successful** confirma la generación del código. La
 
 ## Paso 5: Configurar el IDE de Arduino
 
-Para desplegar la salida de EEZ Studio en tu dispositivo Seeed ePaper, configura el IDE de Arduino con soporte para ESP32.
+Para desplegar la salida de EEZ Studio en tu dispositivo ePaper de Seeed, configura el IDE de Arduino con soporte para ESP32.
 
 :::tip
 Si es la primera vez que usas Arduino, consulta primero [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
@@ -351,9 +351,9 @@ Si haces la elección incorrecta, la pantalla no mostrará nada — vuelve a com
 
 ## Paso 7: Desplegar el proyecto de EEZ Studio en Arduino
 
-Añade la salida de EEZ Studio y los helpers del driver de la plataforma a la carpeta de tu sketch y luego súbelo.
+Añade la salida de EEZ Studio y los helpers del controlador de la plataforma a la carpeta de tu sketch y luego súbelo.
 
-### Archivos de driver necesarios (todo el hardware)
+### Archivos de controlador necesarios (todo el hardware)
 
 Descarga estos archivos helper y colócalos junto a tu `.ino`:
 
@@ -505,7 +505,7 @@ Para EE04 también necesitas:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/upload_1_1.png" style={{width:800, height:'auto'}}/></div>
 
-Copia la carpeta **EEZ_UI** generada en `~/Documents/Arduino/Libraries`.
+Copia la carpeta generada **EEZ_UI** en `~/Documents/Arduino/Libraries`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/upload_2.png" style={{width:800, height:'auto'}}/></div>
 

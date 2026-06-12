@@ -3,7 +3,7 @@ description: reComputer Super 入门指南
 title: reComputer Super 入门指南
 keywords:
   - reComputer Super
-  - reComputer Super 入门指南
+  - reComputer Super Getting Started
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_getting_started
@@ -24,9 +24,9 @@ import JetsonLeadQuote from '@site/src/components/JetsonLeadQuote';
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
 </div>
 
-reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，在 AI 性能方面最高可提升 1.7 倍，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
-它面向开发与量产双重场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 与 Linux OS BSP，可帮助您快速推向市场。
-它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力 Physical AI 开发。
+reComputer Super 系列为 reComputer Classic 提供了强劲升级，在 AI 性能上带来高达 1.7 倍的提升，达到 157 TOPS。该系列包含搭载 Jetson Orin Nano（11410311, 11410312）和 Jetson Orin NX（11410313, 11410314）的型号。
+它面向开发与量产场景设计，集成了丰富的接口，包括 M.2 Key E/M、双 RJ45 以太网、Mini-PCIe、4xUSB 3.2、HDMI 2.1、4xCSI 和 CAN。预装 Jetpack 6.2 和 Linux OS BSP，可实现开箱即用、快速推向市场。
+它还支持广泛的 LLM 与 Physical AI 框架，例如 NVIDIA、Hugging Face、ONNX、PyTorch 和 ROS2/1，可在边缘侧无缝运行，并将这些多模态能力与机器人应用相结合，助力丰富的 Physical AI 开发。
 
 :::note
 可定制选项：Logo 品牌定制、包装和固件烧录。
@@ -51,15 +51,15 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
 - ​**4x USB 3.2**、​**HDMI 2.1**、​**4x CSI**（摄像头串行接口）  
 - 支持 ​**CAN 总线**，适用于工业/机器人应用  
 
-### 🛠️ ​**即插即用，适用于开发与量产**  
+### 🛠️ ​**面向开发与量产**  
 
-- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，开箱即可部署  
+- 预装 ​**Jetpack 6.2** 和 ​**Linux OS BSP**，支持开箱部署  
 - 与以下框架无缝集成边缘 AI：  
   - ​**NVIDIA**、​**Hugging Face**、​**ONNX**、​**PyTorch**  
-  - ​**ROS2/1**，用于机器人应用  
+  - 面向机器人应用的 ​**ROS2/1**  
 - 支持 ​**多模态 AI** 和 ​**Physical AI** 开发  
 
-### 🤖 ​**面向边缘 AI 与机器人优化**  
+### 🤖 ​**针对边缘 AI 与机器人优化**  
 
 - 在边缘侧融合 ​**LLM（大语言模型）** 能力与 ​**Physical AI**  
 - 非常适合机器人、工业自动化和实时 AI 推理  
@@ -73,7 +73,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
 
 - ​**Jetson Orin Nano**：12V 5A（5525 圆孔电源接口）  
 - ​**Jetson Orin NX**：19V 4.74A（5525 圆孔电源接口）  
-- 始终使用 ​**官方适配器**，并满足电源要求。  
+- 始终使用 ​**官方适配器** 并满足电源要求。  
 
 #### 2. ​**交流电源线**  
 
@@ -208,7 +208,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC 2 针；<br />1x RTC 座</td>
+      <td colSpan={3}>1x RTC 2 针；<br />1x RTC 插座</td>
     </tr>
     <tr>
       <td>LED</td>
@@ -245,7 +245,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
     <tr>
       <td>工作温度</td>
       <td colSpan={4}>-10℃~60℃</td>
-    </tr]
+    </tr>
     <tr>
       <td>质保</td>
       <td colSpan={4}>2 年</td>
@@ -302,7 +302,7 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要在 Ubuntu 主机上下载与所使用 Jetson 模块对应的系统镜像：
+在这里，我们需要根据所使用的 Jetson 模块，在 Ubuntu 主机上下载对应的系统镜像：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -310,7 +310,6 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
     <tr>
       <th>Jetpack 版本</th>
       <th>Jetson 模块</th>
-      <th> GMSL </th>
       <th>下载链接 1</th>
       <th>SHA256</th>
     </tr>
@@ -319,25 +318,21 @@ reComputer Super 系列在 reComputer Classic 的基础上实现性能飞跃，�
     <tr>
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC_1-Pv5_FDR4n5j9gQV5KQAZ_mvUQAiacz_5QTE0xdeQ8?e=LkQBPH">下载</a></td>
       <td>7a1f2085f50d77e5d86d3f01ccdc1255<br />c90a7c7d22a6ab7e4c4e3263e3148670</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCkqeSMa1GUQ57Y0K-pz0GtAYgobLanXDHP_d-rJIAzkcY?e=VqEnca">下载</a></td>
       <td>d26cbf4e16b9d5879e4b737754f65bb0<br />ea485b98760a1aa0657e07054efd8877</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAuSOue4x97QKJGLUkBabdzAamlCy6twJd68P69GlaTzws?e=hw82Sw">下载</a></td>
       <td>55a559dc6736650d45c2d787265c7e2c<br />36cd2d7f233ae58b00364aec7d82455c</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
-      <td>✅</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAdI1ka4kNkRb8wipNloxXOAUAyCwTYci47z_eLpjvh1iQ?e=9YQ5nm">下载</a></td>
       <td>51f816d57dedd6e2305acd0ae8e0ffdc<br />19aec7319e351b7a70489f7eab8d69c6</td>
     </tr>
@@ -352,13 +347,13 @@ Jetpack6 镜像文件大小约为 **14.1GB**，下载大约需要 60 分钟。�
 :::info
 要验证已下载固件的完整性，可以比较 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 以获取已下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值一致，则说明你下载的固件是完整且未损坏的。
 :::
 
 ### 进入强制恢复模式
 
 :::info
-在继续安装步骤之前，我们需要确保主板处于强制恢复模式。
+在继续安装步骤之前，我们需要确保开发板处于强制恢复模式。
 :::
 
 <details>
@@ -375,7 +370,7 @@ Jetpack6 镜像文件大小约为 **14.1GB**，下载大约需要 60 分钟。�
 
 **步骤 3.** 使用 USB Type-C 数据传输线将 Super 连接到 Ubuntu 主机电脑。
 
-**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明主板已进入强制恢复模式。
+**步骤 4.** 在 Linux 主机电脑上，打开终端窗口并输入命令 `lsusb`。如果返回的内容中根据你使用的 Jetson SoM 出现以下任一输出，则说明开发板已进入强制恢复模式。
 
 - 对于 Orin NX 16GB：**0955:7323 NVidia Corp**
 - 对于 Orin NX 8GB：**0955:7423 NVidia Corp**
@@ -428,7 +423,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 资源
 
-- [reComputer Robotics J401 载板数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [reComputer Super 数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [机械文档 - reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)

@@ -1,5 +1,5 @@
 ---
-description: Seeed の ePaper 製品向けに EEZ Studio を使って LVGL ベースのプロフェッショナルなインターフェースを設計し、その後 Arduino IDE でデプロイします。reTerminal E シリーズおよび XIAO ePaper Display Board (EE04) の両方で動作します。
+description: EEZ Studio を使って Seeed の ePaper 製品向けに LVGL ベースのプロフェッショナルなインターフェースを設計し、その後 Arduino IDE でデプロイします。reTerminal E シリーズおよび XIAO ePaper Display Board (EE04) の両方で動作します。
 title: EEZ Studio を使う
 keywords:
   - ePaper ディスプレイ
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
-このガイドでは、ビジュアルデザインツール [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) を使ってプロフェッショナルなユーザーインターフェースを設計し、LVGL コードを生成し、それを Arduino IDE 経由で Seeed の ePaper 製品にデプロイする手順を説明します。フローはサポートされているすべてのボードで共通であり、異なるのはディスプレイ解像度とドライバ設定用の定数だけです。これらの違いはタブで示します。
+このガイドでは、ビジュアルデザインツール [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) を使ってプロフェッショナルなユーザーインターフェースを設計し、LVGL コードを生成し、Arduino IDE を通して Seeed の ePaper 製品にデプロイする手順を説明します。フローはサポートされているすべてのボードで同じで、異なるのはディスプレイ解像度とドライバ設定用の定数だけです。これらの違いはタブで示します。
 
 ## 対応ハードウェア
 
@@ -62,13 +62,13 @@ import TabItem from '@theme/TabItem';
 
 ## EEZ Studio とは？
 
-EEZ Studio は、もともと計測器や組み込み機器向けに構築された、最新のビジュアルプログラミングおよび UI デザイン環境です。ドラッグ＆ドロップによる GUI デザイン、スクリプト、デバイス統合ツールを組み合わせることで、開発者、エンジニア、メイカーが、ゼロから作り直すことなくプロフェッショナルなインターフェースを素早く作成できるようにします。
+EEZ Studio は、もともと計測器や組み込み機器向けに構築された、最新のビジュアルプログラミングおよび UI デザイン環境です。ドラッグ＆ドロップによる GUI デザイン、スクリプト、デバイス統合ツールを組み合わせることで、開発者、エンジニア、メイカーが、ゼロから始めることなくプロフェッショナルなインターフェースを素早く作成できるようにします。
 
 要するに、EEZ Studio はハードウェアとソフトウェアの橋渡しを行い、ユーザー体験の設計、プロトタイピング、デプロイをより効率的に行えるようにします。
 
 ### EEZ Studio を使う理由
 
-- **ビジュアルインターフェース設計** — WYSIWYG エディタで複雑な UI を作成。
+- **ビジュアルインターフェースデザイン** — WYSIWYG エディタで複雑な UI を作成。
 - **迅速なプロトタイピング** — デザインアイデアを素早くテストして検証。
 - **クロスプラットフォーム** — 複数の OS や組み込みターゲット上で動作するアプリを構築。
 - **ハードウェア統合** — 計測器、IoT デバイス、カスタムボードに直接接続。
@@ -105,8 +105,8 @@ EEZ Studio は、もともと計測器や組み込み機器向けに構築され
         </tr>
         <tr>
             <th>ワークフロー</th>
-            <td>1つの環境から実機デバイスのプロトタイピング、シミュレーション、制御を実行</td>
-            <td>主に、組み込みプロジェクトに組み込むための UI コードを生成</td>
+            <td>1つの環境からプロトタイピング、シミュレーション、実機制御まで実行</td>
+            <td>主に組み込みプロジェクトにコンパイルするための UI コードを生成</td>
         </tr>
     </tbody>
 </table>
@@ -121,11 +121,11 @@ EEZ Studio は、もともと計測器や組み込み機器向けに構築され
 
 ## ステップ 2: LVGL プロジェクトを作成する
 
-EEZ Studio の画面上部で **CREATE** をクリックします。左側で **LVGL** テンプレートを選択します。
+EEZ Studio のインターフェース上部で **CREATE** をクリックします。左側で **LVGL** テンプレートを選択します。
 
 - **Name** — プロジェクト名を付けます（この記事では `EEZ_UI` を使用します）。
 - **LVGL Version** — ドロップダウンから `9.x` を選択します。
-- **Location** — プロジェクトファイルの保存先を選択します。
+- **Location** — プロジェクトファイルの保存場所を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/01.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -150,7 +150,7 @@ EEZ Studio の画面上部で **CREATE** をクリックします。左側で **
 (E1001 の 7.5インチ モノクロと E1002 の 7.3インチ Spectra 6 は、どちらも 800×480 の解像度を共有しています。)
 
 </TabItem>
-<TabItem value="ee04" label="EE04 + 5.83&quot; mono">
+<TabItem value="ee04" label="EE04 + 5.83&quot; モノクロ">
 
 - **Display width**: 648
 - **Display height**: 480
@@ -181,7 +181,7 @@ UI デザインはユーザー体験を直接左右します。EEZ Studio では
 - **Bitmaps** — 背景、アイコン、ロゴ。
 - **Fonts** — テキスト描画と多言語対応。
 - **Themes** — ライト／ダークなどのトップレベルスタイル。
-- **Groups** — レイアウト補助。
+- **Groups** — レイアウト用のヘルパー。
 
 ### レイアウト例（Hello World + Panel + Image + Line + Label）
 
@@ -195,15 +195,15 @@ UI デザインはユーザー体験を直接左右します。EEZ Studio では
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/15.jpg" style={{width:900, height:'auto'}}/></div>
 
-**ステップ 1.** キャンバスの背景色を変更します — キャンバスを選択し、**Color** にチェックを入れ、16進カラー値を選びます。
+**ステップ 1.** キャンバスの背景色を変更します — キャンバスを選択し、**Color** にチェックを入れ、16進数の値を選びます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a1.jpg" style={{width:900, height:'auto'}}/></div>
 
-**ステップ 2.** **Panel** をキャンバス上にドラッグし、幅と高さを調整して色を選びます。
+**ステップ 2.** **Panel** をキャンバスにドラッグし、幅と高さを調整して色を選びます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a2.jpg" style={{width:900, height:'auto'}}/></div>
 
-**ステップ 3.** 右側の **Bitmaps** パネルからビットマップを追加して名前を付け、**Image** ウィジェットをキャンバスにドラッグして、そのビットマップをバインドします。
+**ステップ 3.** 右側の **Bitmaps** パネルからビットマップを追加して名前を付け、**Image** ウィジェットをキャンバスにドラッグしてビットマップをバインドします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/a3.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -227,13 +227,13 @@ UI デザインはユーザー体験を直接左右します。EEZ Studio では
 
 デザインが完了したら、次の操作を行います。
 
-1. **保存** — **OPEN** の横にあるフロッピーディスクアイコンをクリックします。
-2. **プレビュー** — **Run** をクリックしてシミュレータを起動し、UI をプレビューします。
-3. **コンパイル／ビルド** — ✓ アイコンをクリックしてエラーをチェックし、その後レンチアイコンをクリックして UI コード、画像データ、フォントデータを生成します。
+1. **Save** — **OPEN** の横にあるフロッピーディスクアイコンをクリックします。
+2. **Preview** — **Run** をクリックしてシミュレータを起動し、UI をプレビューします。
+3. **Compile / Build** — ✓ アイコンをクリックしてエラーをチェックし、その後レンチアイコンをクリックして UI コード、画像データ、フォントデータを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/17.jpg" style={{width:500, height:'auto'}}/></div>
 
-緑色の **Build successful** メッセージが表示されれば、コード生成が成功したことを示します。出力はプロジェクトの **`src/ui`** フォルダに保存されます（必要に応じて `src/EEZ_UI` にリネームしてもかまいません）。
+緑色の **Build successful** メッセージが表示されれば、コード生成が完了したことを示します。出力はプロジェクトの **`src/ui`** フォルダに保存されます（必要に応じて `src/EEZ_UI` にリネームできます）。
 
 ## ステップ 5: Arduino IDE をセットアップする
 
@@ -305,7 +305,7 @@ Seeed ディスプレイデバイスを幅広くサポートする Seeed_GFX ラ
 
 4. スケッチと同じフォルダに **`driver.h` ファイルを作成**します（Arduino IDE の新しいタブの矢印から作成します）。
 
-5. [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を開き、ハードウェアを選択して生成された設定をコピーし、`driver.h` に貼り付けます。内容はハードウェアごとに異なります：
+5. [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) にアクセスし、ハードウェアを選択して生成された設定をコピーし、`driver.h` に貼り付けます。内容はハードウェアごとに異なります：
 
 <Tabs groupId="eez-hardware">
 <TabItem value="reterminal" label="reTerminal E1001 / E1002" default>
@@ -343,7 +343,7 @@ Seeed ディスプレイデバイスを幅広くサポートする Seeed_GFX ラ
 EE04 で別の画面サイズに交換した場合は、設定ツールから `driver.h` を再生成し、`USE_XIAO_EPAPER_DISPLAY_BOARD_EE04` の行は残しておいてください。
 
 :::tip
-誤った組み合わせを選択すると画面には何も表示されません。画面とドライバボードの組み合わせをもう一度確認してください。
+誤った選択をすると画面には何も表示されません。画面とドライバボードの組み合わせをもう一度確認してください。
 :::
 
 </TabItem>
@@ -375,7 +375,7 @@ EE04 の場合は、さらに `lv_conf.h` と LVGL ライブラリが必要で�
 <Tabs groupId="eez-hardware">
 <TabItem value="reterminal" label="reTerminal E1001 / E1002" default>
 
-リファレンススケッチ — 3 つのボタン（KEY0/KEY1/KEY2）で 3 つのページ **HOME**、**Workstation**、**Plant** を順番に切り替えます。
+リファレンススケッチ — 3 つのボタン（KEY0/KEY1/KEY2）で 3 つのページ：**HOME**、**Workstation**、**Plant** を切り替えます。
 
 完全なリファレンスコード： [E1002-EEZStudioCode.zip](https://files.seeedstudio.com/wiki/EEZStudio/E1002-EEZStudioCode.zip)
 
@@ -470,11 +470,11 @@ void loop()
 注意事項：
 
 - `e1002_display_init()` は電子ペーパーディスプレイのハードウェアを初期化します。
-- `pinMode(..., INPUT_PULLUP)` はボタンピンを内部プルアップ付き入力として設定します。
+- `pinMode(..., INPUT_PULLUP)` はボタンピンを内部プルアップ付きで設定します。
 - `ui_init()` と `loadScreen()` は LVGL を初期化し、特定の画面を読み込みます。
 - `lv_timer_handler()` は LVGL のタイマーとアニメーションを処理します。
 - `if (lastKeyXState == HIGH && currentKeyXState == LOW)` ブロックは HIGH→LOW エッジをデバウンスし、ページを更新します。
-- `e1002_display_should_refresh()` / `e1002_display_refresh()` は電子ペーパーのリフレッシュをオンデマンドで制御します。
+- `e1002_display_should_refresh()` / `e1002_display_refresh()` は必要に応じて電子ペーパーのリフレッシュを管理します。
 
 #### 表示される画面
 
@@ -496,7 +496,7 @@ void loop()
 </TabItem>
 <TabItem value="ee04" label="EE04 + 5.83&quot; mono">
 
-EE04 では、次のファイルも必要です：
+EE04 では、次のものも必要です：
 
 - [`e1002_display.cpp`](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.cpp)
 - [`e1002_display.h`](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.h)
@@ -511,7 +511,7 @@ EE04 では、次のファイルも必要です：
 
 リファレンススケッチ — 3 つのオンボードボタン（KEY1/KEY2/KEY3 = ピン 2 / 3 / 5）で 3 つのページ **Smart**、**Industry**、**Game** を切り替えます。
 
-完全なリファレンスコード: [EEZ_UI_EE04.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EEZ_UI_EE04.zip)
+完全なリファレンスコード： [EEZ_UI_EE04.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EEZ_UI_EE04.zip)
 
 ```cpp
 #include <TFT_eSPI.h>
@@ -677,7 +677,7 @@ void loop()
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

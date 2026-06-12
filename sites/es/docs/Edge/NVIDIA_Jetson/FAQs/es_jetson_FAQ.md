@@ -7,7 +7,7 @@ last_update:
   date: 7/5/2023
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-03-18'
+updatedAt: '2026-06-05'
 url: https://wiki.seeedstudio.com/es/Jetson_FAQ/
 ---
 
@@ -39,9 +39,9 @@ Para más detalles, haz clic [aquí](/es/get_the_system_log_of_recomputer_j30_an
 Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 
 #### P7: No puedo usar el puerto USB-A, el puerto Ethernet o no hay visualización HDMI después de flashear el dispositivo.
-**R:** Verifica la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256); para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
+**R:** Verifica la integridad de los archivos (por ejemplo, proporcionamos las sumas de verificación SHA256). Para algunas placas carrier (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado correctamente en el directorio **Linux_for_tegra**. Hay archivos que requieren permisos de **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
-#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla en negro/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
+#### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores de periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
 **R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas carrier personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas carrier **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que podrían dejar tu dispositivo inservible. Este proceso solo es compatible con el kit de desarrollo oficial. Para resolver estos problemas, sigue nuestra guía para volver a flashear JetPack.
 
 #### P9: ¿Cómo puedo actualizar los paquetes de software si me dijeron que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
@@ -52,7 +52,7 @@ Para más detalles, haz clic [aquí](/es/upgrade_software_packages_for_jetson)
 
 For details, please click [here](/es/updating_jetpack_with_ota) -->
 
-#### P11: ¿Qué modificaciones realiza Seeed en el BSP de Jetson de NVIDIA?
+#### P11: ¿Qué modificaciones hace Seeed al BSP de Jetson de NVIDIA?
 
 Para más detalles, haz clic [aquí](/es/differences_of_l4t_between_seeed_and_nvidia)
 
@@ -62,7 +62,7 @@ Para más detalles, haz clic [aquí](/es/enable_spi_interface_on_jetsonnano)
 #### P13: ¿Por qué a veces, después de completar el proceso de flasheo en Jetson, el sistema no arranca desde el SSD?
 Este problema ocurre actualmente al flashear JetPack 5, y NVIDIA lo ha documentado oficialmente. Para la solución, haz clic [aquí.](/es/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
-#### P14: ¿Cómo compilar el proyecto de código fuente para el BSP Jetson de Seeed?
+#### P14: ¿Cómo compilar el proyecto de código fuente para el BSP de Jetson de Seeed?
 Para más detalles, haz clic [aquí](/es/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
 #### P15: ¿Por qué no se puede ejecutar el comando `apt upgrade` en reComputer/reServer?
@@ -112,13 +112,21 @@ Esto monta la unidad externa formateada en exFAT en `/media/seeed/tmp-exfat/` pa
 
 Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
 
-#### P18：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
+#### P19：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
 
 Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
-#### P18 No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con el UUID y luego entró en la terminal de recuperación.
+#### P20： No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque Jetson informó un error relacionado con UUID y luego entró en el terminal de recuperación.
 
 Solución para este problema: haz clic [aquí](/es/deal_the_issue_of_UUID)
+
+#### P21: ¿Cómo usar la cámara IMX219 en dispositivos NVIDIA Jetson?
+
+Para más detalles, haz clic [aquí](/es/how_to_use_camera_imx219)
+
+#### P22: ¿Qué cambios aporta JetPack 7.2 al rendimiento de inferencia de Jetson AGX Orin?
+
+Para más detalles, haz clic [aquí](/es/jetpack72_deep_dive)
 
 ## Soporte técnico
 
@@ -133,4 +141,3 @@ Gracias por elegir nuestros productos. Estamos **aquí** para ofrecerte diferent
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

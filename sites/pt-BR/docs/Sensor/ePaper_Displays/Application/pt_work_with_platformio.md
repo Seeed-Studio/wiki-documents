@@ -1,8 +1,8 @@
 ---
-description: Guia de referência para usar o PlatformIO com produtos Seeed ePaper - configuração do VS Code, estrutura do projeto, configuração do platformio.ini, configuração do Seeed_GFX e seleção de ambiente por produto.
+description: Guia de referência para usar PlatformIO com produtos Seeed ePaper - configuração do VS Code, estrutura do projeto, configuração do platformio.ini, configuração do Seeed_GFX e seleção de ambiente por produto.
 title: Trabalhar com PlatformIO
 keywords:
-  - Display ePaper
+  - display ePaper
   - PlatformIO
   - platformio.ini
   - Seeed_GFX
@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" style={{width:650, height:'auto'}}/></div>
 
-Esta página é a **referência de configuração do PlatformIO** para produtos Seeed ePaper. Ela se concentra nas partes que são diferentes do fluxo de trabalho com a IDE do Arduino:
+Esta página é a **referência de configuração do PlatformIO** para produtos Seeed ePaper. Ela se concentra nas partes que são diferentes do fluxo de trabalho com Arduino IDE:
 
 1. Instalar o PlatformIO no Visual Studio Code.
 2. Entender a estrutura de projeto criada pelo PlatformIO.
@@ -96,11 +96,11 @@ Para desenho no display e APIs de hardware, continue usando o mesmo código C/C+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VSCode_1.png" style={{width:1000, height:'auto'}}/></div>
 
-**Etapa 2.** Abra **Extensions** no VS Code, pesquise por `PlatformIO IDE` e instale.
+**Etapa 2.** Abra **Extensions** no VS Code, pesquise por `PlatformIO IDE` e instale-o.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:1000, height:'auto'}}/></div>
 
-**Etapa 3.** Reinicie o VS Code depois que a extensão terminar de instalar.
+**Etapa 3.** Reinicie o VS Code depois que a extensão terminar a instalação.
 
 **Etapa 4.** Abra o **PlatformIO Home** a partir do ícone do PlatformIO na barra de atividades do VS Code.
 
@@ -125,7 +125,7 @@ Se você usar o PlatformIO IDE no VS Code, o PlatformIO Core é incluído com a 
 **Etapa 6.** Abra o `platformio.ini` e substitua a configuração gerada pela configuração da Seeed mostrada nas próximas seções.
 
 :::caution
-A maioria das placas de desenvolvimento Seeed Studio usadas por esta linha de produtos ePaper é mantida por meio do pacote de plataforma PlatformIO da Seeed, não apenas pela lista padrão de placas do PlatformIO. Se você não conseguir encontrar a placa Seeed exata na janela **New Project** do PlatformIO, isso é esperado. Crie primeiro um projeto temporário e, em seguida, defina `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` e o ID de `board` correto em `platformio.ini`.
+A maioria das placas de desenvolvimento Seeed Studio usadas por esta linha de produtos ePaper é mantida por meio do pacote de plataforma PlatformIO da Seeed, não apenas pela lista padrão de placas do PlatformIO. Se você não conseguir encontrar a placa Seeed exata na janela **New Project** do PlatformIO, isso é esperado. Crie primeiro um projeto temporário e, em seguida, defina `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` e o ID de `board` correto no `platformio.ini`.
 :::
 
 Após a criação, os arquivos e pastas importantes são:
@@ -159,7 +159,7 @@ Após a criação, os arquivos e pastas importantes são:
 
 O `platformio.ini` é o centro de um projeto PlatformIO. Cada seção `[env:name]` define um ambiente de compilação. O ambiente informa ao PlatformIO para qual placa compilar, qual framework usar, quais bibliotecas baixar e como fazer upload ou monitorar o firmware.
 
-Para iniciantes, o fluxo de trabalho mais fácil é copiar a configuração completa para o seu dispositivo a partir da [Etapa 4](#etapa-4-copiar-a-configuração-para-seu-dispositivo), colá-la em `platformio.ini` e, em seguida, criar o arquivo `driver.h` correspondente. Você não precisa combinar por conta própria uma seção base compartilhada com outra seção de dispositivo.
+Para iniciantes, o fluxo de trabalho mais fácil é copiar a configuração completa para o seu dispositivo a partir da [Etapa 4](#etapa-4-copiar-a-configuração-para-seu-dispositivo), colá-la no `platformio.ini` e, em seguida, criar o arquivo `driver.h` correspondente. Você não precisa combinar manualmente uma seção base compartilhada com outra seção de dispositivo.
 
 Os campos mais importantes são:
 
@@ -177,7 +177,7 @@ Os campos mais importantes são:
     </tr>
     <tr>
       <td><code>board</code></td>
-      <td>O ID de placa do PlatformIO. Isso define a MCU, o layout de flash, a ferramenta de upload e as configurações padrão de compilação.</td>
+      <td>O ID de placa do PlatformIO. Isso define o MCU, layout de flash, ferramenta de upload e configurações padrão de compilação.</td>
       <td><code>board = seeed-xiao-esp32-s3-sense</code></td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ Os campos mais importantes são:
     </tr>
     <tr>
       <td><code>monitor_speed</code></td>
-      <td>A taxa de baud do monitor serial. Ela deve corresponder a <code>Serial.begin(...)</code> no firmware.</td>
+      <td>A taxa de baud do monitor serial. Ela deve corresponder ao <code>Serial.begin(...)</code> no firmware.</td>
       <td><code>monitor_speed = 115200</code></td>
     </tr>
     <tr>
@@ -202,7 +202,7 @@ Os campos mais importantes são:
     </tr>
     <tr>
       <td><code>build_flags</code></td>
-      <td>Definições extras de compilador. Use isto apenas quando o cookbook do seu produto ou biblioteca exigir.</td>
+      <td>Definições extras do compilador. Use isto apenas quando o cookbook do seu produto ou biblioteca exigir.</td>
       <td><code>-DBOARD_HAS_PSRAM</code></td>
     </tr>
     <tr>
@@ -407,14 +407,14 @@ build_flags =
     -I src
 ```
 
-O driver de display, o mapeamento de pinos e as dependências de biblioteca para EN04 / EN05 devem seguir o firmware ou cookbook específico do produto em que você está se baseando.
+O driver de display, o mapeamento de pinos e as dependências de biblioteca para EN04 / EN05 devem seguir o firmware ou cookbook específico do produto a partir do qual você está desenvolvendo.
 
 </TabItem>
 </Tabs>
 
 ## Etapa 5: Adicionar `driver.h`
 
-`platformio.ini` seleciona o MCU e o ambiente de compilação. `driver.h` seleciona a combinação de placa de ePaper e tela usada pelo `Seeed_GFX`.
+O `platformio.ini` seleciona o MCU e o ambiente de compilação. O `driver.h` seleciona a combinação de placa de ePaper e tela usada pelo `Seeed_GFX`.
 
 **Etapa 1.** Abra a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 
@@ -438,7 +438,7 @@ Valores comuns de `BOARD_SCREEN_COMBO` usados na documentação existente de ePa
     <tr>
       <th>Hardware</th>
       <th>Exemplo de configuração gerada</th>
-      <th>Fonte de referência</th>
+      <th>Fonte de verdade</th>
     </tr>
     <tr>
       <td>reTerminal E1001</td>
@@ -542,19 +542,19 @@ Apenas uma biblioteca de display é mostrada aqui para manter a configuração c
 Esta página foca intencionalmente na configuração de ambiente do PlatformIO. Continue com as páginas específicas do produto para fiação, seleção de tela e comportamento do firmware:
 
 - [Trabalhar com Arduino](/pt-br/epaper_work_with_arduino) — fluxo de trabalho comum com Arduino e `Seeed_GFX`.
-- [XIAO ePaper Driver Boards PlatformIO Cookbook](/pt-br/ee04_with_platformio) — fluxo de trabalho PlatformIO para EE0x com a EE04 como exemplo prático.
+- [XIAO ePaper Driver Boards PlatformIO Cookbook](/pt-br/ee04_with_platformio) — fluxo de trabalho EE0x com PlatformIO usando a EE04 como exemplo prático.
 - [reTerminal E Series Arduino cookbook](/pt-br/reterminal_e10xx_with_arduino) — exemplos de display para E1001 / E1002 / E1003 / E1004.
 - [reTerminal E Series onboard peripherals cookbook](/pt-br/reterminal_e10xx_with_arduino_peripherals) — exemplos de botões, buzzer, monitor de bateria, sensor SHT4x e microSD.
 - [XIAO 7.5" ePaper Panel Arduino guide](/pt-br/xiao_075inch_epaper_panel_arduino) — configuração específica do produto para o painel baseado em XIAO ESP32-C3.
 - [TRMNL DIY Kit Arduino guide](/pt-br/ogdiy_kit_works_with_arduino) — caminho de firmware Arduino personalizado para o hardware do kit TRMNL.
 
-## Problemas Comuns
+## Problemas comuns
 
 ### P1: Por que o PlatformIO não mostra minha placa Seeed na lista de placas?
 
-Isso é esperado para muitas placas de desenvolvimento da Seeed. As definições de placa usadas neste guia vêm do pacote de plataforma PlatformIO da Seeed, portanto elas podem não aparecer na busca padrão de placas de **New Project** do PlatformIO antes que o pacote seja instalado.
+Isso é esperado para muitas placas de desenvolvimento da Seeed. As definições de placa usadas neste guia vêm do pacote de plataforma PlatformIO da Seeed, portanto elas podem não aparecer na pesquisa de placas do **New Project** padrão do PlatformIO antes que o pacote seja instalado.
 
-Use a URL do pacote da Seeed diretamente em `platformio.ini`:
+Use o URL do pacote da Seeed diretamente em `platformio.ini`:
 
 ```ini
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -568,7 +568,7 @@ board = seeed-xiao-esp32-s3-sense
 
 Quando você compilar pela primeira vez, o PlatformIO fará o download do pacote de plataforma e então reconhecerá o ID da placa.
 
-### P2: Por que o upload do firmware é concluído com sucesso, mas o display ePaper permanece em branco?
+### P2: Por que o firmware é enviado com sucesso, mas o display ePaper permanece em branco?
 
 A causa mais comum é um `driver.h` incorreto ou ausente.
 
@@ -577,7 +577,7 @@ A causa mais comum é um `driver.h` incorreto ou ausente.
 - Confirme se o `BOARD_SCREEN_COMBO` gerado está disponível para o arquivo-fonte que inclui `Seeed_GFX`.
 - Para produtos ESP32-S3 com buffers grandes, confirme se o cookbook do produto exige configurações de PSRAM.
 
-### P3: Por que o PlatformIO falha ao fazer upload para a placa?
+### P3: Por que o PlatformIO falha ao enviar para a placa?
 
 Para o reTerminal E1003, uma causa comum é uma taxa de baud de upload muito alta. Defina `upload_speed` como `115200` no mesmo bloco de ambiente antes de verificar outras causas.
 
@@ -597,12 +597,12 @@ Se o upload ainda falhar, continue com as seguintes verificações:
 - **[Docs]** [Arquivo de Configuração de Projeto do PlatformIO](https://docs.platformio.org/en/stable/projectconf/index.html)
 - **[Docs]** [PlatformIO IDE para VS Code](https://docs.platformio.org/en/stable/integration/ide/pioide.html)
 - **[GitHub]** [Pacote de Plataforma PlatformIO da Seeed](https://github.com/Seeed-Studio/platform-seeedboards)
-- **[GitHub]** [Exemplo Arduino Blink da Seeed para PlatformIO](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
+- **[GitHub]** [Exemplo Arduino Blink da Plataforma Seeed para PlatformIO](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
 - **[GitHub]** [Biblioteca Seeed_GFX](https://github.com/Seeed-Studio/Seeed_GFX)
 - **[Tool]** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
-- **[Wiki]** [PlatformIO para Placas Compatíveis com Arduino](/pt-br/Software-PlatformIO)
+- **[Wiki]** [PlatformIO para placas compatíveis com Arduino](/pt-br/Software-PlatformIO)
 
-## Suporte Técnico & Discussão de Produtos
+## Suporte técnico e discussão sobre produtos
 
 Obrigado por escolher nossos produtos! Estamos aqui para oferecer diferentes tipos de suporte para garantir que sua experiência com nossos produtos seja a mais tranquila possível. Oferecemos vários canais de comunicação para atender a diferentes preferências e necessidades.
 

@@ -1,6 +1,6 @@
 ---
 description: Este artigo descreve principalmente como usar o site Lopaka para criar interfaces de usuário sofisticadas e aplicá-las na série reTerminal E.
-title: Trabalhando com Lopaka
+title: Trabalhar com Lopaka
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
 slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 7
@@ -12,12 +12,12 @@ updatedAt: '2026-03-03'
 url: https://wiki.seeedstudio.com/pt-br/reterminal_e10xx_with_lopaka/
 ---
 
-# Display de ePaper da Série reTerminal E Trabalhando com Lopaka
+# Display de ePaper da Série reTerminal E Trabalhar com Lopaka
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::note
-Este tutorial é baseado no uso do reTerminal E1002. No entanto, ele também pode ser aplicado ao reTerminal E1001. O primeiro possui uma exibição de cores mais rica. Para uma melhor experiência, recomendamos que você escolha o reTerminal E1002.
+Este tutorial é baseado no uso do reTerminal E1002. No entanto, ele também pode ser aplicado ao reTerminal E1001. O primeiro possui uma tela com cores mais ricas. Para uma melhor experiência, recomendamos que você escolha o reTerminal E1002.
 :::
 
 ## Introdução
@@ -49,7 +49,7 @@ Para concluir este tutorial, prepare um dos seguintes dispositivos da Série reT
   </table>
 </div>
 
-## Preparação do Ambiente
+## Preparação do ambiente
 
 Para programar o Display de ePaper da Série reTerminal E com Arduino, você precisará configurar a IDE Arduino com suporte a ESP32.
 
@@ -71,19 +71,19 @@ Se esta é a sua primeira vez usando Arduino, recomendamos fortemente que você 
 
 **Passo 2.** Adicione o suporte à placa ESP32 na IDE Arduino.
 
-Na IDE Arduino, vá para **File > Preferences** e adicione a seguinte URL no campo "Additional Boards Manager URLs":
+Na IDE Arduino, vá em **File > Preferences** e adicione a seguinte URL ao campo "Additional Boards Manager URLs":
 
 ```url
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-**Passo 3.** Instale o pacote da placa ESP32.
+**Passo 3.** Instale o pacote de placas ESP32.
 
-Navegue até **Tools > Board > Boards Manager**, pesquise por "esp32" e instale o pacote ESP32 da Espressif Systems.
+Navegue até **Tools > Board > Boards Manager**, procure por "esp32" e instale o pacote ESP32 da Espressif Systems.
 
 **Passo 4.** Selecione a placa correta.
 
-Vá para **Tools > Board > ESP32 Arduino** e selecione **XIAO_ESP32S3**.
+Vá em **Tools > Board > ESP32 Arduino** e selecione **XIAO_ESP32S3**.
 
 **Passo 5.** Conecte o Display de ePaper da Série reTerminal E ao seu computador usando um cabo USB-C.
 
@@ -91,11 +91,11 @@ Vá para **Tools > Board > ESP32 Arduino** e selecione **XIAO_ESP32S3**.
 
 ### Registro e uso do Lopaka
 
-Lopaka é um editor gráfico projetado especificamente para desenvolvimento de gráficos embarcados. Ele permite que os usuários personalizem a criação de suas próprias interfaces de UI, possui vários recursos de fontes integrados e é muito conveniente de usar quando combinado com displays OLED, TFT ou LCD de Arduino ou ESP32. O Lopaka pode gerar automaticamente código C que pode ser aplicado diretamente aos sketches, melhorando significativamente a eficiência de desenvolvimento.
+Lopaka é um editor gráfico projetado especificamente para desenvolvimento de gráficos embarcados. Ele permite que os usuários personalizem a criação de suas próprias interfaces de usuário, possui vários recursos de fontes integrados e é muito conveniente de usar quando combinado com displays OLED, TFT ou LCD de Arduino ou ESP32. O Lopaka pode gerar automaticamente código C que pode ser aplicado diretamente aos sketches, melhorando significativamente a eficiência de desenvolvimento.
 
-**Passo 1.** [Registro](https://lopaka.app/)
+**Passo 1.** [Registered](https://lopaka.app/)
 
-- **[Ir para Lopaka](https://lopaka.app/)**
+- **[Go to Lopaka](https://lopaka.app/)**
 
   Você pode se registrar usando uma conta do Google ou do GitHub.
 
@@ -103,7 +103,7 @@ Lopaka é um editor gráfico projetado especificamente para desenvolvimento de g
 <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Interface principal do Lopaka</em></p>
 </div>
 
-**Passo 2.** Novo Projeto
+**Passo 2.** Novo projeto
 
 Clique em "NEW PROJECT" para criar um novo projeto. Em seguida, uma janela irá aparecer e você verá as seguintes telas. Preencha as informações do projeto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
@@ -114,7 +114,7 @@ Clique em "NEW PROJECT" para criar um novo projeto. Em seguida, uma janela irá 
 - **Background**: A cor de fundo da tela é preta por padrão. Para obter uma melhor exibição, eu a alterei para amarelo.
 Em seguida, clique em "SUBMIT" para criar o projeto.
 
-**Passo 3.** Introdução às Configurações Comuns
+**Passo 3.** Introdução às configurações comuns
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_4.png" style={{width:800, height:'auto'}}/></div>
 
@@ -134,14 +134,14 @@ Da esquerda para a direita
 - **Toolbar**: As funções desta linha de barras de ferramentas são Select, Paint, String, rectangle, Circle, Line e image.
 - **Slider**: Aqui, você pode ajustar o tamanho da tela, o que permite realizar operações detalhadas.
 - **Frok and SHARE**: Você pode frok os projetos de outras pessoas e compartilhar seus próprios projetos.
-- **Price Gally Blog Feedback**: Price permite que você assine diferentes níveis do Lopaka para acessar recursos adicionais. Gally é um marketplace de engenharia de código aberto. Blog é o registro de atualizações do Lopaka. Feedback serve para enviar comentários.
+- **Price Gally Blog Feedback**: Price permite que você assine diferentes níveis do Lopaka para acessar recursos adicionais. Gally é um marketplace de engenharia open-source. Blog é o registro de atualizações do Lopaka. Feedback serve para enviar comentários.
 - **Shortcuts**: Estas são algumas dicas de teclas de atalho.
 
 ### Hello World
 
-- Selecione "String" e clique na tela.
+- Selecione "String" e, em seguida, clique na tela.
 - Na coluna da direita, selecione "Font" e escolha sua fonte, como Adafruit 5×7.
-- Insira o conteúdo "Hello World!", selecione "Size" como 6 e escolha a cor que você gosta. Aqui, eu escolho verde.
+- Digite o conteúdo "Hello World!", selecione "Size" como 6 e escolha a cor que você gosta. Aqui, eu escolho verde.
 - Em seguida, mova-o para a posição central da tela. Depois disso, o código de projeto necessário será gerado em "CODE".
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
@@ -150,22 +150,22 @@ Da esquerda para a direita
 如果您使用Seeed_GFX库，采用Adafruit 5X7；如果使用GxEPD2库，则需选择FreeMonoBold9pt7b
 ::: -->
 
-#### Adicionar Biblioteca
+#### Adicionar biblioteca
 
-Usaremos a biblioteca Seeed_GFX, que fornece suporte abrangente para vários dispositivos de exibição da Seeed Studio.
+Usaremos a biblioteca Seeed_GFX, que fornece suporte abrangente para vários dispositivos de display da Seeed Studio.
 
 **Passo 1.** Baixe a biblioteca Seeed_GFX do GitHub:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Baixar a Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Baixar a biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-**Passo 2.** Instale a biblioteca adicionando o arquivo ZIP na IDE Arduino. Vá para **Sketch > Include Library > Add .ZIP Library** e selecione o arquivo ZIP baixado.
+**Passo 2.** Instale a biblioteca adicionando o arquivo ZIP na IDE Arduino. Vá em **Sketch > Include Library > Add .ZIP Library** e selecione o arquivo ZIP baixado.
 
 :::note
-Se você instalou anteriormente a biblioteca TFT_eSPI, talvez seja necessário removê-la temporariamente ou renomeá-la na pasta de bibliotecas do Arduino para evitar conflitos, pois Seeed_GFX é um fork de TFT_eSPI com recursos adicionais para displays da Seeed Studio.
+Se você já tiver instalado a biblioteca TFT_eSPI, talvez seja necessário removê-la temporariamente ou renomeá-la na pasta de bibliotecas do Arduino para evitar conflitos, pois Seeed_GFX é um fork de TFT_eSPI com recursos adicionais para displays da Seeed Studio.
 :::
 
 ### Programando o reTerminal E1002
@@ -180,7 +180,7 @@ O display de ePaper colorido completo suporta as cores vermelho, preto, amarelo,
 
 **Passo 3.** Vá para a [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) e selecione **reTerminal E1002** na lista de dispositivos.
 
-**Passo 4.** Copie o código de configuração gerado e cole-o no arquivo `driver.h`. O código deve ser semelhante a isto:
+**Passo 4.** Copie o código de configuração gerado e cole-o no arquivo `driver.h`. O código deve ser semelhante a este:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
@@ -199,7 +199,7 @@ Se você estiver usando o reTerminal E1001, então você deve copiar o seguinte 
 **Passo 5.** procedimento de alteração
 
 - Copie o código CODE da página Lopaka para o ambiente Arduino.
-- Substitua o "epaper" em minúsculas por "tft", abra a pesquisa global usando Ctrl + F, digite "epaper", depois clique em `Aa` para alternar para pesquisa sem distinção entre maiúsculas e minúsculas, em seguida digite "tft" e clique em "Substituir Globalmente"
+- Substitua o "epaper" em minúsculas por "tft", abra a busca global usando Ctrl + F, digite "epaper", depois clique em `Aa` para alternar para busca sem distinção entre maiúsculas e minúsculas, em seguida digite "tft" e clique em "Global Replace"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -298,7 +298,7 @@ O efeito é mostrado na figura a seguir.
 
 ### Exemplo
 
-Dois métodos de desenho diferentes são apresentados aqui. Você pode escolher aquele que se adapta às suas necessidades reais.
+Aqui são apresentados dois métodos de desenho diferentes. Você pode escolher aquele que se adapta às suas necessidades reais.
 
 Além disso, para demonstrar melhor o efeito, eu alterei a cor de fundo para preto.
 
@@ -332,7 +332,7 @@ Para concluir este tutorial, prepare dispositivos reTerminal E1002:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_0.png" style={{width:800, height:'auto'}}/></div>
 
-- Ajustar parâmetro <br/>
+- Parâmetro de ajuste <br/>
 
     Ajuste o tamanho apropriado. Eu defini como 300×300, depois ajustei o Brilho e outros parâmetros para deixar a imagem mais nítida e então a importei.<br/>
 

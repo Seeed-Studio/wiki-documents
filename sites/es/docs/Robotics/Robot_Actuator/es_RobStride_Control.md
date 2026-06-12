@@ -71,13 +71,13 @@ La Biblioteca de Control RobStride es una biblioteca de control de motores de al
 
 | Modelo | Par Máximo | Velocidad Máxima | Rango KP | Rango KD |
 |--------|------------|------------------|----------|----------|
-| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 14 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 410 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 195 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 200 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 5.5 Nm | 480 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 36 Nm | 480 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
 
 ---
 
@@ -536,11 +536,11 @@ void loop() {
 
 ### Reglas de asignación de ID
 
-- **0x200 + ID**: Comandos de control en modo MIT
-- **0x300 + ID**: Comandos de control en modo posición
-- **0x400 + ID**: Comandos de control en modo velocidad
-- **0x500 + ID**: Consultas de estado del sistema
-- **0x600 + ID**: Comandos de configuración del sistema
+- **0x200 + ID**: comandos de control en modo MIT
+- **0x300 + ID**: comandos de control en modo posición
+- **0x400 + ID**: comandos de control en modo velocidad
+- **0x500 + ID**: consultas de estado del sistema
+- **0x600 + ID**: comandos de configuración del sistema
 
 ### Formato del paquete de datos
 
@@ -777,13 +777,13 @@ RobStride_Control/
 └── tools/               # Helper tools
 ```
 
-### Directrices para contribuir
+### Guía para contribuir
 
 1. **Estilo de código**
-   - Python: Sigue PEP 8
-   - C++: Sigue la guía de estilo de Google C++
-   - Rust: Usa rustfmt
-   - Arduino: Sigue la guía de estilo de Arduino
+   - Python: seguir PEP 8
+   - C++: seguir la guía de estilo de Google para C++
+   - Rust: usar rustfmt
+   - Arduino: seguir la guía de estilo de Arduino
 
 2. **Convención de commits**
    ```
@@ -879,7 +879,7 @@ CMD ["./cpp/build/robstride-mit-position", "1"]
 ## Recursos
 
 - **URL del proyecto**: https://github.com/Seeed-Projects/RobStride_Control
-- **Informe de incidencias**: https://github.com/Seeed-Projects/RobStride_Control/issues
+- **Informe de problemas**: https://github.com/Seeed-Projects/RobStride_Control/issues
 - **Responsable de mantenimiento**: @tianrking
 
 
