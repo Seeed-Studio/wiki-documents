@@ -16,7 +16,7 @@ last_update:
   author: Citric
 createdAt: '2026-06-01'
 url: https://wiki.seeedstudio.com/epaper_work_with_platformio/
-updatedAt: '2026-06-01'
+updatedAt: '2026-06-03'
 ---
 
 import Tabs from '@theme/Tabs';

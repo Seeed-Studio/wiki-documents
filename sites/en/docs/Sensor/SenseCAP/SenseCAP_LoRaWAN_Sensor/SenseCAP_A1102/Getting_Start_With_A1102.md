@@ -7,10 +7,10 @@ image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.web
 slug: /sensecap_a1102
 sidebar_position: 1
 last_update:
-  date: 3/12/2025
-  author: Zeke
+  date: 6/9/2026
+  author: Janet
 createdAt: '2025-01-03'
-updatedAt: '2025-09-02'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/sensecap_a1102/
 ---
 
@@ -161,6 +161,23 @@ Since our focus here is on describing the model training process, we won't go in
 
 ![p22](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
+## Modbus Registers
+
+| Register | Address | Data Type | Access | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Device Address** | 0x0000 | uint16_t | R/W | Modbus device address. Default = 1, maximum = 247, configurable |
+| **Baud Rate** | 0x0001 | uint16_t | R/W | Modbus baud rate. Default = 96 (means 9600). Configurable. Default only supports 8N1 |
+| **Device Version** | 0x0002 | uint32_t | R | Device version information |
+| **Device ID** | 0x8000 | uint32_t | R | Device ID |
+| **Result 1** | 0x1000 | int32_t | R | Example: 1800 means 1.8 (Target 1: confidence 80) |
+| **Result 2** | 0x1002 | int32_t | R |  |
+| **Result 3** | 0x1004 | int32_t | R |  |
+| **Result 4** | 0x1006 | int32_t | R |  |
+| **Result 5** | 0x1008 | int32_t | R |  |
+| **Result 6** | 0x100A | int32_t | R |  |
+| **Result 7** | 0x100C | int32_t | R |  |
+| **Result 8** | 0x100E | int32_t | R |  |
+
 ## FAQ
 
 **What are the ideal camera settings for image capture?**
@@ -170,6 +187,10 @@ Since our focus here is on describing the model training process, we won't go in
 **How far can the SenseCAP Vision AI camera detect objects and achieve good results?**
 
 - Based on our testing with a human detection model, the camera can achieve a 70% confidence level for results within a range of 1m to 5m.
+
+**What are the differences between SenseCAP A1102 and SenseCAP A1101?**
+
+- The SenseCAP A1102 has stronger performance compared to the [SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html), offering better Vision AI capabilities, more supported models and frameworks, and the ability to transmit keyframe images via Wi-Fi (requires users to develop firmware based on the XIAO).
 
 **Is it possible to replace the camera or have a customized version of the SenseCAP Vision AI sensor?**
 
