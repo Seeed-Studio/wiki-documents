@@ -1,11 +1,11 @@
 ---
-title: AI Voice Interaction Demo Based on reCamera
+title: AI Voice Interaction with reCamera
 description: This document introduces an intelligent voice conversation demo based on reCamera using STT/LLM/TTS, demonstrating how reCamera triggers voice interaction through pose recognition and connects to the iFlytek Spark large model to implement the complete STT→LLM→TTS dialogue pipeline.
 keywords:
   - reCamera
   - AI Edge Vision
   - Voice Interaction
-slug: /ai_voice_assitant_with_recamera
+slug: /ai_voice_interaction_with_recamera
 sku: 102991897, 100029708, 108990120
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 16
@@ -14,10 +14,10 @@ last_update:
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
 updatedAt: '2026-06-10'
-url: https://wiki.seeedstudio.com/ai_voice_assitant_with_recamera/
+url: https://wiki.seeedstudio.com/ai_voice_interaction_with_recamera/
 ---
 
-# AI Voice Interaction Demo Based on reCamera
+# AI Voice Interaction with reCamera
 
 ## Introduction
 
