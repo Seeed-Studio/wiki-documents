@@ -1316,6 +1316,15 @@ Step 4. Finally, replug the cable and upload a new program. -->
 
 In this case, your device is either offline or in deep sleep mode. Please ensure it's connected to your network or wake it up from sleep mode before attempting to upload.
 
+### Q4: Why is there no serial log over USB?
+
+The reTerminal E Series uses a CH340K USB-to-UART bridge on UART0. Keep this logger setting in your YAML:
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
