@@ -1,10 +1,10 @@
 ---
-description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - Advanced peripherals (buttons, buzzer, battery monitoring, SHT4x sensor, deep sleep, multi-page dashboards).
-title: ESPHome Cookbook - Advanced (reTerminal E Series)
+description: ESPHome cookbook for reTerminal E1001 / E1002 / E1003 / E1004 - buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
+title: 'ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
-sidebar_label: ESPHome (Advanced)
+sidebar_label: 'ESPHome - I/O, Battery & Power'
 last_update:
   date: 04/28/2026
   author: Citric
@@ -16,15 +16,15 @@ url: https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome Cookbook - Advanced: reTerminal E Series
+# ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power (reTerminal E Series)
 
 :::tip Prerequisites
-This page assumes you've already worked through the [Basic ESPHome cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome).
+This page assumes you've already worked through the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) (device on Wi-Fi, Home Assistant integration online, first dashboard rendered). For the platform-level YAML skeleton and Home Assistant integration steps, see [Work with ESPHome](/epaper_work_with_esphome). For RTC, microSD card detect, and microphone setup, see [ESPHome Cookbook: RTC, SD Card & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone).
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-This article explores advanced ESPHome configurations for your reTerminal E Series ePaper Display device, building upon the foundational concepts covered in our [Basic ESPHome Usage guide](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome). If you're new to ESPHome or the reTerminal E Series, we recommend starting with the basic guide before diving into these advanced applications.
+This article covers the onboard I/O and power-related ESPHome configurations for your reTerminal E Series ePaper Display device, building upon the foundational concepts covered in our [ESPHome display cookbook](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome). If you're new to ESPHome or the reTerminal E Series, we recommend starting with the display guide before using these hardware examples.
 
 ## Hardware Capabilities
 
@@ -207,11 +207,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "m+rOiVDwjdvePoiG1zritvcD0Kl/a2zmsnuG+4IfWlw="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "710fecea969062a5775b287a54f3c0f5"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -220,7 +220,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Reterminal-E10Xx"
-    password: "tRc2fXaYE54Q"
+    password: "ChangeMe123"
 
 captive_portal:
 
@@ -645,11 +645,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "g93yP72UIyVsz9WfffaDMK+JeIQYROIFRK+VIQjkM+g="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "1ff187393ee444aa2e892779dc78e488"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -658,7 +658,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "reTerminal-E1001"
-    password: "yoUkaGlJaDpC"
+    password: "ChangeMe123"
 
 captive_portal:
 
@@ -967,11 +967,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "g93yP72UIyVsz9WfffaDMK+JeIQYROIFRK+VIQjkM+g="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "1ff187393ee444aa2e892779dc78e488"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -980,7 +980,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "reTerminal-E1002"
-    password: "yoUkaGlJaDpC"
+    password: "ChangeMe123"
 
 captive_portal:
 
