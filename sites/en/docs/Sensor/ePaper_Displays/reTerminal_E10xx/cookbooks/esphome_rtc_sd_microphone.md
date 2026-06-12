@@ -289,6 +289,10 @@ This configuration:
 - Writes the Home Assistant time back to the hardware RTC.
 - Displays the current date and time on the ePaper screen.
 
+The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/252.jpeg" style={{width:700, height:'auto'}}/></div>
+
 :::tip
 If the RTC time does not stay correct after a full power cycle, install or replace the CR1220 coin cell for the RTC backup holder.
 :::
@@ -501,6 +505,10 @@ This configuration:
 - Shows the card state on the ePaper screen.
 - Exposes `SD Card Detected` to Home Assistant as a binary sensor.
 
+The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/253.jpeg" style={{width:700, height:'auto'}}/></div>
+
 :::note How ESPHome uses the microSD card
 In this ESPHome cookbook, the microSD card is used as a device status signal. The demo checks whether a card is inserted, shows the result on the screen, and exposes the same state to Home Assistant.
 
@@ -704,6 +712,10 @@ This configuration:
 - Uses `GPIO42` as the PDM clock pin.
 - Uses `GPIO41` as the PDM data input pin.
 - Initializes the onboard microphone as `id(onboard_mic)`.
+
+The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/254.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note
 This demo only initializes the microphone hardware. A complete Home Assistant Assist voice pipeline requires additional voice assistant configuration, and recording audio directly to the SD card is better handled by the Arduino microphone examples.
@@ -1011,6 +1023,10 @@ display:
 </details>
 
 When the firmware is running, the screen shows the RTC time, SD card state, and microphone initialization status on one page.
+
+The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.jpeg" style={{width:700, height:'auto'}}/></div>
 
 ## FAQ
 
