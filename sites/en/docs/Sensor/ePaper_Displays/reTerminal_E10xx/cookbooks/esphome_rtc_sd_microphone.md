@@ -522,9 +522,9 @@ In a typical ESPHome setup, the SD card status can be used to:
 If your goal is direct SD card file read/write, refer to the Arduino SD card cookbook instead.
 :::
 
-## PDM Microphone Initialization
+## PDM Microphone Power Check
 
-This demo enables the onboard PDM microphone power rail and initializes the microphone through ESPHome's I2S audio component.
+This demo enables the onboard PDM microphone power rail and displays the microphone pin assignment on the ePaper screen. It keeps the YAML minimal so you can verify the display update first, then add the optional ESPHome I2S microphone configuration if you want to use the microphone with Home Assistant Voice Assistant.
 
 The microphone uses these pins:
 
@@ -578,20 +578,10 @@ spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
-i2s_audio:
-  i2s_lrclk_pin: GPIO42
-
 output:
   - platform: gpio
     pin: GPIO38
     id: mic_power_enable
-
-microphone:
-  - platform: i2s_audio
-    id: onboard_mic
-    adc_type: external
-    pdm: true
-    i2s_din_pin: GPIO41
 
 font:
   - file: "gfonts://Inter@700"
@@ -615,10 +605,10 @@ display:
       inverted: true
     update_interval: 300s
     lambda: |-
-      it.printf(400, 40, id(font_title), TextAlign::TOP_CENTER, "PDM Microphone Demo");
-      it.printf(400, 135, id(font_body), TextAlign::TOP_CENTER, "Microphone: initialized");
+      it.printf(400, 40, id(font_title), TextAlign::TOP_CENTER, "PDM Microphone Power");
+      it.printf(400, 135, id(font_body), TextAlign::TOP_CENTER, "Mic Power: ON");
       it.printf(400, 190, id(font_body), TextAlign::TOP_CENTER, "CLK GPIO42 / DATA GPIO41");
-      it.printf(400, 245, id(font_body), TextAlign::TOP_CENTER, "Power enable: GPIO38");
+      it.printf(400, 245, id(font_body), TextAlign::TOP_CENTER, "I2S microphone: optional");
 ```
 
 </TabItem>
@@ -665,20 +655,10 @@ spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
-i2s_audio:
-  i2s_lrclk_pin: GPIO42
-
 output:
   - platform: gpio
     pin: GPIO38
     id: mic_power_enable
-
-microphone:
-  - platform: i2s_audio
-    id: onboard_mic
-    adc_type: external
-    pdm: true
-    i2s_din_pin: GPIO41
 
 font:
   - file: "gfonts://Inter@700"
@@ -697,10 +677,10 @@ display:
       const auto BLACK = Color(0, 0, 0, 0);
       const auto BLUE = Color(0, 0, 255, 0);
 
-      it.printf(400, 40, id(font_title), BLACK, TextAlign::TOP_CENTER, "PDM Microphone Demo");
-      it.printf(400, 135, id(font_body), BLUE, TextAlign::TOP_CENTER, "Microphone: initialized");
+      it.printf(400, 40, id(font_title), BLACK, TextAlign::TOP_CENTER, "PDM Microphone Power");
+      it.printf(400, 135, id(font_body), BLUE, TextAlign::TOP_CENTER, "Mic Power: ON");
       it.printf(400, 190, id(font_body), BLACK, TextAlign::TOP_CENTER, "CLK GPIO42 / DATA GPIO41");
-      it.printf(400, 245, id(font_body), BLACK, TextAlign::TOP_CENTER, "Power enable: GPIO38");
+      it.printf(400, 245, id(font_body), BLACK, TextAlign::TOP_CENTER, "I2S microphone: optional");
 ```
 
 </TabItem>
@@ -709,16 +689,29 @@ display:
 This configuration:
 
 - Enables microphone power through `GPIO38`.
-- Uses `GPIO42` as the PDM clock pin.
-- Uses `GPIO41` as the PDM data input pin.
-- Initializes the onboard microphone as `id(onboard_mic)`.
+- Shows the PDM clock pin `GPIO42` and data pin `GPIO41` on the ePaper screen.
+- Keeps the main demo close to the RTC and microSD demos, so the display refresh can be verified before adding the audio component.
+
+If you want to expose the onboard PDM microphone to ESPHome, add the following optional block after confirming that the screen demo refreshes correctly:
+
+```yaml
+i2s_audio:
+  i2s_lrclk_pin: GPIO42
+
+microphone:
+  - platform: i2s_audio
+    id: onboard_mic
+    adc_type: external
+    pdm: true
+    i2s_din_pin: GPIO41
+```
 
 The following image shows the expected result on reTerminal E1002. The same demo works on both reTerminal E1001 and E1002. The main difference is the display output: E1001 shows a monochrome result, while E1002 can show a color result.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/254.jpeg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-This demo only initializes the microphone hardware. A complete Home Assistant Assist voice pipeline requires additional voice assistant configuration, and recording audio directly to the SD card is better handled by the Arduino microphone examples.
+This demo only verifies microphone power control and the related pin assignment on the ePaper screen. A complete Home Assistant Assist voice pipeline requires the optional microphone block above and additional voice assistant configuration. Recording audio directly to the SD card is better handled by the Arduino microphone examples.
 :::
 
 ## Demo 4: Complete RTC, SD Card and Microphone Status Dashboard
