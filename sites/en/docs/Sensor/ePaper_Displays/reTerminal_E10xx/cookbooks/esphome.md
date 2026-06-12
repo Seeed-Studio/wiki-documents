@@ -994,6 +994,15 @@ In this case, you should go to Settings -> Devices & Services -> Integrations to
 
 Try unplugging and replugging it several times, or just install the driver according to the prompts.
 
+### Q4: Why is there no serial log over USB?
+
+The reTerminal E Series uses a CH340K USB-to-UART bridge on UART0. Keep this logger setting in your YAML:
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
