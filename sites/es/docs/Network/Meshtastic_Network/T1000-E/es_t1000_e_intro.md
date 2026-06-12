@@ -105,3 +105,4 @@ Opciones de personalización disponibles: branding del logotipo, embalaje y flas
 |Encender|Se enciende y luego parpadea rápidamente|
 |Modo DFU|Encendido fijo|
 |Funcionando|Parpadeo aleatorio|
+|Cargando|Parpadea a 0,5 Hz, alternando cada segundo|

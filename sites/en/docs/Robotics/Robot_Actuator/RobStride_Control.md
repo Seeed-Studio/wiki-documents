@@ -15,7 +15,7 @@ translation:
   skip:
     - zh-CN
 createdAt: '2025-11-19'
-updatedAt: '2026-05-21'
+updatedAt: '2026-06-08'
 url: https://wiki.seeedstudio.com/robstride_control/
 ---
 
@@ -71,13 +71,13 @@ RobStride Control Library is a high-performance motor control library specifical
 
 | Model | Max Torque | Max Speed | KP Range | KD Range |
 |--------|------------|-----------|----------|----------|
-| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 17 Nm | 50 rad/s | 500.0 | 5.0 |
-| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 44 rad/s | 500.0 | 5.0 |
-| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 50 rad/s | 5000.0| 100.0|
-| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 15 rad/s | 5000.0| 100.0|
-| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 17 Nm | 33 rad/s | 500.0 | 5.0 |
-| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 60 Nm | 20 rad/s | 5000.0| 100.0|
+| [**RS-00**](https://www.seeedstudio.com/Robostride-00-Actuator-p-6664.html)  | 14 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-01**](https://www.seeedstudio.com/Robostride-01-Actuator-p-6773.html)  | 17 Nm | 315 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-02**](https://www.seeedstudio.com/Robostride-02-Actuator-p-6665.html)  | 17 Nm | 410 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-03**](https://www.seeedstudio.com/Robostride-03-Actuator-p-6774.html)  | 60 Nm | 195 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-04**](https://www.seeedstudio.com/Robostride-04-Actuator-p-6775.html)  | 120 Nm| 200 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
+| [**RS-05**](https://www.seeedstudio.com/Robostride-05-Actuator-p-6666.html)  | 5.5 Nm | 480 rpm ± 10% | 0.0 - 500.0 | 0.0 - 5.0 |
+| [**RS-06**](https://www.seeedstudio.com/Robostride-06-Actuator-p-6668.html)  | 36 Nm | 480 rpm ± 10% | 0.0 - 5000.0 | 0.0 - 100.0 |
 
 ---
 
