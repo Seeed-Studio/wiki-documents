@@ -1,6 +1,6 @@
 ---
-description: Meshtastic 向け SenseCAP Card Tracker T1000-E の概要
-title: T1000-E Tracker 概要
+description: Meshtastic 向け SenseCAP Card Tracker T1000-E の紹介
+title: T1000-E Tracker の紹介
 keywords:
   - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,13 +10,13 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-これは [Meshtastic®](https://meshtastic.org/) 向けに設計された高性能トラッカーで、クレジットカードほどのサイズであり、ポケットに簡単に収まるほか、資産に取り付けて使用できます。Semtech の LR1110、Nordic の nRF52840、Mediatek の AG3335 GPS モジュールを内蔵し、[Meshtastic®](https://meshtastic.org/) ユーザーに高精度かつ低消費電力の測位および通信ソリューションを提供します。
+これは [Meshtastic®](https://meshtastic.org/) 向けに設計された高性能トラッカーで、クレジットカードほどの小ささであり、ポケットに簡単に収まるほか、資産に取り付けて使用することもできます。Semtech の LR1110、Nordic の nRF52840、Mediatek の AG3335 GPS モジュールを内蔵しており、[Meshtastic®](https://meshtastic.org/) ユーザーに高精度かつ低消費電力の測位および通信ソリューションを提供します。
 
 :::note
 カスタマイズ可能なオプション：ロゴブランディング、パッケージング、ファームウェア書き込み。
@@ -35,10 +35,10 @@ url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 
 ### 特長
 
-- **マルチプロトコル対応**: nRF52840 と LR1110 を搭載し、Bluetooth 5.0、Thread、Zigbee、LoRa をサポートすることで、幅広いデバイスやネットワークとの互換性を実現します。
-- **強力な測位機能**: Mediatek の AG3335 GPS チップを統合し、高精度な測位サービスを提供します。
-- **拡張可能なインターフェース**: 4 つのポゴピンを備え、DFU（Device Firmware Upgrade）、シリアルログ取得、API インターフェース用の USB 接続に対応し、デバイス管理とデバッグを容易にします。
-- **オープンソース対応**: Meshtastic オープンソースメッシュネットワークプロトコルと互換性があり、長距離かつ低消費電力の通信ニーズに適しています。
+- **マルチプロトコル対応**：nRF52840 と LR1110 を搭載し、Bluetooth 5.0、Thread、Zigbee、LoRa をサポートすることで、幅広いデバイスやネットワークとの互換性を実現します。
+- **強力な測位機能**：Mediatek の AG3335 GPS チップを統合し、高精度な測位サービスを提供します。
+- **拡張可能なインターフェース**：4 つのポゴピンを備え、DFU（Device Firmware Upgrade）、シリアルログ出力、API インターフェース用の USB インターフェースをサポートし、デバイス管理とデバッグを容易にします。
+- **オープンソース対応**：Meshtastic オープンソースメッシュネットワークプロトコルと互換性があり、長距離かつ低消費電力の通信ニーズに適しています。
 
 ### 仕様
 
@@ -46,9 +46,9 @@ url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 
 |**ネットワークプロトコル**|LoRa, Bluetooth v5.1|
 | :- | :- |
-|**温度**|<p>範囲: -20 ～ 60℃</p><p>精度: ± 1℃（最小 ±0.5℃、最大 ±1℃）</p><p>分解能: 0.1℃</p>|
-|**照度**|0 ～ 100%（0% は暗、100% は最も明るい状態）|
-|**LED とブザー**|状態表示用 1\*LED および 1\* ブザー|
+|**温度**|<p>範囲：-20 ～ 60℃</p><p>精度：± 1℃（最小 ±0.5℃、最大 ±1℃）</p><p>分解能：0.1℃</p>|
+|**光**|0 ～ 100%（0% は暗、100% は最も明るい状態）|
+|**LED とブザー**|ステータス表示用 1\*LED および 1\* ブザー|
 |**ボタン**|操作用 1\* ボタン|
 |**アンテナ**|内蔵（GNSS/LoRa/Wi-Fi/BLE）|
 |**通信距離**|2 ～ 5km（アンテナ、設置方法、環境に依存）|
@@ -78,7 +78,7 @@ url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 |- |- |- |
 |センサー電源|P0.4|GPIO|
 |温度|P0.31|NTC（アナログ）|
-|照度|P0.29|LUX（アナログ）|
+|光|P0.29|LUX（アナログ）|
 |3 軸加速度センサー<br/>(Meshtastic ファームウェアでは現在未使用)|SDA: P0.26<br/>SCL: P0.27|IIC 経由|
 |加速度センサー電源|P1.7|GPIO|
 |LED|P0.24  |GPIO|
@@ -105,4 +105,4 @@ url: https://wiki.seeedstudio.com/ja/t1000_e_intro/
 |電源オン|点灯後、素早く点滅|
 |DFU モード|点灯し続ける|
 |動作中|ランダムに点滅|
-|充電中|0.5 Hz で点滅し、1 秒ごとに切り替わります|
+|充電中|0.5 Hz で点滅し、1 秒ごとにオン／オフが切り替わる|

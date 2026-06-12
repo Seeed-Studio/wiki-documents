@@ -2,7 +2,7 @@
 description: ....
 title: reBot Arm Jetson バンドル
 tags:
-  - reBot Arm 
+  - reBot Arm
   - reComputer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /rebot_arm_jetson_bundle
@@ -11,7 +11,7 @@ last_update:
   date: 05/18/2026
   author: Youjiang
 createdAt: '2026-05-18'
-updatedAt: '2026-05-18'
+updatedAt: '2026-05-19'
 url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 ---
 
@@ -20,10 +20,10 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 ## はじめに
 
 新時代の Physical AI のためのオールインワン具現化 AI 開発プラットフォーム。
-生成 AI が単に「世界を理解する」段階から、積極的に「世界とインタラクトする」段階へと進化するにつれ、ロボティクス開発は新たな時代、すなわち Physical AI の時代に突入しています。
-開発者、研究者、教育者が具現化 AI の世界へ踏み出すスピードを加速させるため、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
+生成 AI が単に「世界を理解する」段階から、積極的に「世界と相互作用する」段階へと進化するにつれ、ロボティクス開発は新たな時代、すなわち Physical AI の時代に突入しています。
+開発者、研究者、教育者が具現化 AI の世界へ踏み出すスピードを加速するために、Seeed Studio は完全オープンソースの reBot Arm B601 と最先端の NVIDIA Jetson Developer Kit を組み合わせ、強力な次世代ロボティクス開発バンドルを提供します。
 
-このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムロボット推論をエッジでローカル実行するために必要な膨大な AI 計算能力も提供します。
+このバンドルは、高精度なロボットマニピュレーション機能だけでなく、マルチモーダル AI モデルや Vision-Language Model（VLM）、リアルタイムのロボット推論をエッジ側でローカル実行するために必要な膨大な AI 計算能力も提供します。
 学習・研究から迅速なプロトタイピング、実運用まで、次世代のインテリジェントロボットを構築するための完全なプラットフォームです。
 
 <div class="table-center">
@@ -100,7 +100,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 </div>
 
 :::danger
-ここでは、NVIDIA Jetson Thor を例として使用し、Jetson で reBot Arm B601 ロボットアームを素早く制御する方法を説明します。用途に応じて、他の Jetson デバイスを選択することもできます。
+ここでは、NVIDIA Jetson Thor を例として使用し、Jetson で reBot Arm B601 ロボットアームを素早く制御する方法を説明します。ニーズに応じて、他の Jetson デバイスを選択することもできます。
 :::
 
 ## なぜこのバンドルなのか？
@@ -111,7 +111,7 @@ url: https://wiki.seeedstudio.com/ja/rebot_arm_jetson_bundle/
 
 1. クローズドなハードウェアエコシステム
 2. 不十分な AI 計算能力
-3. 断片化されたソフトウェアスタック
+3. 断片化したソフトウェアスタック
 4. 高い開発ハードル
 5. 実世界の Physical AI シナリオの検証が困難
 
@@ -120,10 +120,10 @@ reBot Arm × Jetson バンドルは、これらの課題を解決するために
 このバンドルにより、次のものが得られます：
 
 1. 完全オープンソースの 6+1 自由度ロボットアームプラットフォーム
-2. GPU によって駆動される NVIDIA のフラッグシップエッジ AI コンピューティングプラットフォーム
+2. GPU 搭載の NVIDIA フラッグシップエッジ AI コンピューティングプラットフォーム
 3. ROS1、ROS2、Isaac Sim、LeRobot のネイティブサポート
-4. マルチモーダル AI および生成 AI ワークフローへの対応
-5. 教育・研究・AI ロボティクスプロトタイピングのための統合環境
+4. マルチモーダル AI と生成 AI ワークフローへの対応
+5. 教育・研究・AI ロボティクス試作のための統合環境
 
 ## セットアップ
 
@@ -153,7 +153,7 @@ Nvidia Jetson 上で次のコマンドを実行します：
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-その後、ブラウザで `https://motorbridge.github.io/motorbridge-studio/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
+その後、ブラウザで `https://rebot-devarm.w0x7ce.eu/` を開くと、次のページが表示されます。このインターフェースから、モーターパラメータの調整、ロボットアームの状態確認、その他の操作を行うことができます。
 
 <div align="center">
     <img width={900}
@@ -170,10 +170,9 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
         marginTop: '24px'
     }}
 >
-    <a
-        href="/ja/rebot_arm_b601_dm_lerobot/"
+    <a [LINE_173]        href="/ja/rebot_arm_b601_dm_lerobot/"
         style={{
-            textDecoration: 'none',
+        textDecoration: 'none',
             color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
@@ -181,80 +180,81 @@ motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial 
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
+            }}
+        >
+    <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+            src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_bundle/lerobot.png"
                 alt="LeRobot for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
+                />
+            </div>
         <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                LeRobot で reBot Arm B601-DM を始める
-            </h3>
-        </div>
-    </a>
-    <a
-        href="/ja/rebot_arm_b601_dm_grasping_demo/"
-        style={{
-            textDecoration: 'none',
-            color: 'inherit',
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+            LeRobot で reBot Arm B601-DM を始める
+                </h3>
+            </div>
+        </a>
+    <a [LINE_199]        href="/ja/rebot_arm_b601_dm_grasping_demo/"
+    style={{
+        textDecoration: 'none',
+        color: 'inherit',
             border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
+            }}
+            >
         <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
-                alt="Visual Grasping Demo for reBot Arm B601-DM"
+    <img
+        src="https://raw.githubusercontent.com/Seeed-Projects/reBot-DevArm/main/media/v1.0.png"
+            alt="Visual Grasping Demo for reBot Arm B601-DM"
                 style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
-        <div style={{padding: '18px'}}>
-            <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                reBot Arm B601-DM ビジュアル把持デモ
+                />
+                </div>
+            <div style={{padding: '18px'}}>
+        <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
+        reBot Arm B601-DM ビジュアルグラスピングデモ
             </h3>
-        </div>
-    </a>
-    <a
-        href="/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
-        style={{
-            textDecoration: 'none',
-            color: 'inherit',
-            border: '1px solid #d9d9d9',
+                </div>
+            </a>
+        <a [LINE_225]        href="/ja/control_rebot_arm_with_nemoclaw_on_nvidia_jetson_thor/"
+    style={{
+    textDecoration: 'none',
+        color: 'inherit',
+        border: '1px solid #d9d9d9',
             borderRadius: '16px',
             overflow: 'hidden',
             background: '#443f3f',
             boxShadow: '0 8px 24px rgba(0, 0, 0, 0.06)',
             display: 'block'
-        }}
-    >
-        <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
-            <img
-                src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
-                alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
-                style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
-            />
-        </div>
-        <div style={{padding: '18px'}}>
+            }}
+            >
+            <div style={{height: '220px', padding: '12px', background: '#ffffff'}}>
+        <img
+    src="https://files.seeedstudio.com/wiki/reComputer-Jetson/rebot_arm_nemoclaw/robot_webui.png"
+        alt="Control reBot Arm with NemoClaw on Nvidia Jetson Thor"
+            style={{width: '100%', height: '100%', objectFit: 'contain', display: 'block'}}
+                />
+                </div>
+                <div style={{padding: '18px'}}>
             <h3 style={{margin: 0, fontSize: '1.05rem', lineHeight: 1.4}}>
-                Nvidia Jetson Thor 上で NemoClaw を使って reBot Arm を制御
-            </h3>
-        </div>
-    </a>
-</div>
+        Nvidia Jetson Thor 上で NemoClaw を使って reBot Arm を制御する
+        </h3>
+            </div>
+                </a>
+            </div>
 
-## 技術サポートと製品ディスカッション
+    ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選択いただける複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>

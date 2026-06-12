@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible con ESPHome y Home Assistant - rutas de flasheo, esqueleto YAML genérico y dónde encontrar el cookbook de cada producto.
+description: Guía de referencia para controlar cualquier producto Seeed ePaper compatible con ESPHome y Home Assistant: rutas de flasheo, esqueleto YAML genérico y dónde encontrar el cookbook de cada producto.
 title: Trabajar con ESPHome
 keywords:
   - pantalla ePaper
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 Esta página es el **manual de referencia** para controlar cualquier producto Seeed ePaper compatible mediante [ESPHome](https://esphome.io/) e integrarlo con [Home Assistant](https://www.home-assistant.io/). Cubre las partes que son idénticas en todo el hardware:
 
 1. Por qué elegirías ESPHome para controlar una pantalla ePaper.
-2. Las dos rutas de flasheo: **ESPHome Web Installer** (cero configuración, basado en navegador) y **ESPHome CLI / complemento de HA** (control YAML completo).
+2. Las dos rutas de flasheo: **ESPHome Web Installer** (cero configuración, basado en navegador) y **ESPHome CLI / complemento de HA** (control total del YAML).
 3. El esqueleto YAML genérico — `wifi`, `api`, `ota`, `display` — que cada producto especializa con su propio mapa de pines.
 4. Dónde se encuentra el cookbook por producto (periféricos, lambdas específicas de hardware, recetas de paneles).
 
@@ -56,27 +56,27 @@ Cada producto Seeed ePaper en la [página principal](/es/seeed_epaper_displays) 
       <td><a href="/es/EE04_with_esphome_advanced">Cookbook de EE04 con ESPHome</a></td>
     </tr>
     <tr>
-      <td><strong>Panel ePaper XIAO 7.5"</strong></td>
+      <td><strong>Panel ePaper XIAO de 7.5"</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td><a href="/es/xiao_075inch_epaper_panel_esphome">Cookbook del Panel XIAO con ESPHome</a></td>
+      <td><a href="/es/xiao_075inch_epaper_panel_esphome">Cookbook del panel XIAO con ESPHome</a></td>
     </tr>
     <tr>
       <td><strong>Kit DIY TRMNL 7.5" (OG)</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/es/ogdiy_kit_works_with_esphome">Cookbook del Kit DIY TRMNL con ESPHome</a></td>
+      <td><a href="/es/ogdiy_kit_works_with_esphome">Cookbook del kit DIY TRMNL con ESPHome</a></td>
     </tr>
   </table>
 </div>
 
 :::tip
-¿Buscas **paneles TRMNL en la nube** (sin YAML, basados en complementos) en su lugar? Consulta [Trabajar con TRMNL](/es/reterminal_e10xx_trmnl). ¿Buscas en cambio el **HMI visual sin código de Seeed**? Consulta [Trabajar con SenseCraft HMI](/es/EE04_with_hmi).
+¿Buscas **paneles TRMNL en la nube** (sin YAML, basados en complementos) en su lugar? Consulta [Trabajar con TRMNL](/es/reterminal_e10xx_trmnl). ¿Buscas en cambio la **HMI visual sin código de Seeed**? Consulta [Trabajar con SenseCraft HMI](/es/EE04_with_hmi).
 :::
 
 ## ¿Por qué ESPHome en ePaper?
 
 - **Eficiencia energética**: ePaper solo consume energía cuando la pantalla se está actualizando, así que la combinación (ESP32 + deep-sleep de ESPHome + ePaper) puede funcionar durante semanas/meses con una batería.
-- **Legible a la luz del día**: a diferencia del LCD, la pantalla se puede leer a la luz del sol; ideal para paneles de Home Assistant montados en la pared.
-- **Ciudadano nativo de HA**: una vez que el dispositivo aparece en Home Assistant, cada entidad (clima, calendario, sensor, persona, tiempo) está a un template Jinja de distancia de estar en la pared.
+- **Legible a la luz del día**: a diferencia del LCD, la pantalla es legible a la luz del sol; ideal para paneles de Home Assistant montados en la pared.
+- **Ciudadano nativo de HA**: una vez que el dispositivo aparece en Home Assistant, cada entidad (clima, calendario, sensor, persona, tiempo) está a una plantilla Jinja de distancia de estar en la pared.
 - **Local primero**: sin nube, sin bloqueo de proveedor. Todo se ejecuta en tu LAN.
 
 ## Paso 1: Elige una ruta de flasheo
@@ -84,16 +84,16 @@ Cada producto Seeed ePaper en la [página principal](/es/seeed_epaper_displays) 
 El firmware de ESPHome se puede cargar en el dispositivo de dos maneras. La elección correcta depende de si quieres escribir YAML desde cero o simplemente obtener un panel funcional rápidamente.
 
 <Tabs groupId="esphome-flash-path">
-<TabItem value="web-installer" label="Ruta A: ESPHome Web Installer (recomendada para usuarios primerizos)" default>
+<TabItem value="web-installer" label="Ruta A: ESPHome Web Installer (recomendada para usuarios principiantes)" default>
 
-Seeed aloja un firmware ZIP precompilado que se flashea en tu dispositivo a través del navegador mediante WebSerial.
+Un firmware ZIP precompilado es alojado por Seeed y flasheado en tu dispositivo a través del navegador mediante WebSerial.
 
 1. Conecta el dispositivo a tu ordenador con un cable USB-C.
 2. Abre la página de flasheo por producto (enlazada desde el cookbook de tu producto) en **Chrome** o **Edge**.
 3. Haz clic en **Connect**, elige el puerto serie y luego haz clic en **Install**.
 4. Después del flasheo, el dispositivo arranca en un portal cautivo Wi-Fi (`ESPHome-XXXX`). Conéctate, configura el Wi-Fi y el dispositivo aparecerá en Home Assistant mediante la integración de ESPHome.
 
-Esta ruta no requiere **ninguna edición de YAML**. Más adelante puedes "adoptar" el dispositivo en el panel de ESPHome si quieres empezar a personalizarlo.
+Esta ruta no requiere **editar YAML**. Más adelante puedes "adoptar" el dispositivo en el panel de ESPHome si quieres empezar a personalizarlo.
 
 </TabItem>
 <TabItem value="yaml-cli" label="Ruta B: YAML + panel de ESPHome (control total)">
@@ -105,8 +105,8 @@ Para un control completo sobre el firmware (diseños de pantalla personalizados,
 
 Flujo de trabajo:
 
-1. En el panel de ESPHome, haz clic en **+ New device** → introduce un nombre → elige la variante ESP correcta (ESP32-S3 / ESP32-C3 / etc. — el cookbook de tu producto te dirá cuál).
-2. El panel genera un `<device-name>.yaml` inicial. Sustituye su cuerpo por el YAML específico del producto de tu cookbook (consulta el Paso 2 más abajo para la estructura).
+1. En el panel de ESPHome, haz clic en **+ New device** → introduce un nombre → elige la variante correcta de ESP (ESP32-S3 / ESP32-C3 / etc. — tu cookbook de producto te dirá cuál).
+2. El panel genera un `<device-name>.yaml` inicial. Sustituye su cuerpo por el YAML específico del producto de tu cookbook (consulta el Paso 2 más abajo para la forma).
 3. Haz clic en **Install** → **Conecta al ordenador que ejecuta ESPHome** para el primer flasheo; los flasheos posteriores son inalámbricos mediante OTA.
 4. El dispositivo se une automáticamente a la integración ESPHome en Home Assistant.
 
@@ -115,7 +115,7 @@ Flujo de trabajo:
 
 ## Paso 2: Esqueleto YAML genérico
 
-Cada configuración Seeed ePaper para ESPHome sigue el mismo esquema. El cookbook de tu producto rellena las **partes específicas del producto** (sustituciones, mapa de pines, modelo de pantalla), pero la forma general siempre es:
+Cada configuración ESPHome de Seeed ePaper sigue el mismo esquema. El cookbook de tu producto rellena las **partes específicas del producto** (sustituciones, mapa de pines, modelo de pantalla), pero la forma general siempre es:
 
 ```yaml
 substitutions:
@@ -171,12 +171,12 @@ font:
     size: 24
 ```
 
-Qué es específico del producto (y se encuentra en cada cookbook):
+Qué es específico del producto (y está en cada cookbook):
 
-- `esp32.board` — `seeed_xiao_esp32s3` para E1001/E1002/EE04/Kit TRMNL; `esp32-c3-devkitm-1` para el Panel XIAO 7.5"; etc.
+- `esp32.board` — `seeed_xiao_esp32s3` para E1001/E1002/EE04/Kit TRMNL; `esp32-c3-devkitm-1` para el panel XIAO de 7.5"; etc.
 - Los mapas de pines de `spi` y `display`.
 - El valor de `model` (`7.50in-bwr`, `13.3in-spectra6`, …).
-- Cualquier periférico integrado (botones / zumbador / batería / SHT4x), cubierto en las secciones **Advanced** del cookbook correspondiente.
+- Cualquier periférico integrado (botones / zumbador / batería / SHT4x), cubierto en las secciones **Avanzadas** del cookbook correspondiente.
 
 ## Paso 3: Conectar a Home Assistant
 
@@ -189,17 +189,17 @@ Una vez que el firmware arranca y se une a tu Wi-Fi, Home Assistant detecta auto
 
 Ahora puedes arrastrar las entidades a un panel Lovelace o — mucho más interesante en ePaper — usar el bloque `display.lambda` para renderizar cualquier entidad de HA directamente en la pantalla mediante el componente [`homeassistant`](https://esphome.io/components/homeassistant.html).
 
-## Próximos pasos: Cookbooks
+## Dónde ir después — Cookbooks
 
-Esta página se detiene intencionadamente en el boilerplate. El YAML específico del producto, los ejemplos de periféricos y las recetas de extremo a extremo se encuentran en el cookbook de cada producto:
+Esta página se detiene intencionadamente en el boilerplate. El YAML específico del producto, los ejemplos de periféricos y las recetas de extremo a extremo están en el cookbook de cada producto:
 
 - **[reTerminal E Serie — ESPHome básico](/es/reterminal_e10xx_with_esphome)**: primer panel, configuración de Wi-Fi, firmware ZIP precompilado para E1001/E1002/E1003/E1004.
 - **[reTerminal E Serie — ESPHome avanzado](/es/reterminal_e10xx_with_esphome_advanced)**: botones, zumbador, monitorización de batería, sensor SHT4x, deep sleep, paneles multipágina.
 - **[Placa controladora EE04 — ESPHome](/es/EE04_with_esphome_advanced)**: integración completa con Home Assistant en el XIAO ESP32-S3 + EE04 + la pantalla ePaper que elijas.
-- **[Panel ePaper XIAO 7.5" — ESPHome](/es/xiao_075inch_epaper_panel_esphome)**: panel mínimo con ESP32-C3.
+- **[Panel ePaper XIAO de 7.5" — ESPHome](/es/xiao_075inch_epaper_panel_esphome)**: panel mínimo con ESP32-C3.
 - **[Kit DIY TRMNL 7.5" — ESPHome](/es/ogdiy_kit_works_with_esphome)**: usar el hardware del kit con ESPHome en lugar de la plataforma en la nube TRMNL.
 
-Cuando se envíen nuevos productos ePaper, se añadirá el cookbook correspondiente en la carpeta de cada producto; esta página principal se actualizará para enlazarlo.
+Cuando se envían nuevos productos ePaper, el cookbook correspondiente se añade en la carpeta de cada producto; esta página principal se actualiza para enlazarlo.
 
 ## Problemas comunes
 
@@ -207,7 +207,7 @@ Cuando se envíen nuevos productos ePaper, se añadirá el cookbook correspondie
 
 - Confirma que las cadenas `display.platform` y `model` coinciden con tu pantalla: un modelo incorrecto produce silenciosamente una actualización en blanco.
 - Comprueba que `busy_pin` y `reset_pin` estén cableados correctamente; una línea busy suelta bloqueará todas las actualizaciones.
-- Para ePaper en color (`spectra6`, `7-color`, `bwr`), la primera actualización puede tardar 25-45 segundos; espera antes de seguir depurando.
+- Para ePaper en color (`spectra6`, `7-color`, `bwr`), la primera actualización puede tardar entre 25 y 45 segundos; espera antes de seguir depurando.
 
 ### El dispositivo no aparece en Home Assistant
 

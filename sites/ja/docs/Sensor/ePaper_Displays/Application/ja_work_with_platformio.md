@@ -26,15 +26,15 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" style={{width:650, height:'auto'}}/></div>
 
-このページは、Seeed ePaper 製品向けの**PlatformIO 設定リファレンス**です。Arduino IDE ワークフローと異なる部分に焦点を当てています：
+このページは、Seeed ePaper 製品向けの**PlatformIO 設定リファレンス**です。Arduino IDE のワークフローと異なる部分に焦点を当てています：
 
 1. Visual Studio Code への PlatformIO のインストール。
 2. PlatformIO によって作成されるプロジェクト構造の理解。
-3. ボード選択、フレームワーク選択、ライブラリ依存関係、シリアルモニタ速度、書き込みオプション、ビルドフラグのためのメイン設定ファイルである `platformio.ini` の編集。
+3. ボード選択、フレームワーク選択、ライブラリ依存関係、シリアルモニタ速度、書き込みオプション、ビルドフラグのメイン設定ファイルである `platformio.ini` の編集。
 4. 各 Seeed ePaper 製品に対して正しい PlatformIO 環境を選択すること。
 5. `Seeed_GFX` を追加し、[Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を使って対応する `driver.h` を生成すること。
 
-ディスプレイ描画 API、サンプルスケッチ、ハードウェア固有のデモコードを探している場合は、[Work with Arduino](/ja/epaper_work_with_arduino) と、このページの末尾にリンクされている各製品のクックブックから始めてください。PlatformIO で使用される C/C++ コードは、通常 Arduino コードと同じです。主な違いは、プロジェクトの設定方法です。
+ディスプレイ描画 API、サンプルスケッチ、またはハードウェア固有のデモコードを探している場合は、[Work with Arduino](/ja/epaper_work_with_arduino) と、このページの末尾にリンクされている各製品のクックブックから始めてください。PlatformIO で使用される C/C++ コードは、通常 Arduino コードと同じです。主な違いは、プロジェクトの設定方法です。
 
 ## 対応ハードウェア
 
@@ -55,12 +55,12 @@ PlatformIO は、Arduino 互換のファームウェアパスを公開してい�
     <tr>
       <td><strong>EE02 / EE03 / EE04 / EE05 ドライバボード</strong></td>
       <td>XIAO ESP32-S3 ファミリ</td>
-      <td>EE0x ファミリ全体で同じ PlatformIO 構成を使用します。`BOARD_SCREEN_COMBO` の値は、選択したボードとスクリーンに応じて変わります。</td>
+      <td>EE0x ファミリ全体で同じ PlatformIO 構造を使用します。`BOARD_SCREEN_COMBO` の値は、選択したボードとスクリーンに応じて変わります。</td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY キット</strong></td>
       <td>XIAO ESP32-S3 ファミリ</td>
-      <td>TRMNL クラウドファームウェアを使用する代わりに、カスタム Arduino スタイルのファームウェアを書く場合は ESP32-S3 環境を使用します。</td>
+      <td>TRMNL クラウドファームウェアの代わりに Arduino スタイルのカスタムファームウェアを書く場合は、ESP32-S3 環境を使用します。</td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper パネル</strong></td>
@@ -70,18 +70,18 @@ PlatformIO は、Arduino 互換のファームウェアパスを公開してい�
     <tr>
       <td><strong>EN04 / EN05 および nRF52840 ベースの ePaper ボード</strong></td>
       <td>XIAO nRF52840 ファミリ</td>
-      <td>ファームウェア開発には nRF52840 の PlatformIO 環境を使用します。ePaper 固有のクックブックがまだ公開されていない場合は、このページを環境リファレンスとして使用し、ピンについては製品の回路図/クックブックを参照してください。</td>
+      <td>ファームウェア開発には nRF52840 の PlatformIO 環境を使用します。ePaper 固有のクックブックがまだ公開されていない場合は、このページを環境リファレンスとして使用し、ピンについては製品の回路図／クックブックを参照してください。</td>
     </tr>
   </table>
 </div>
 
 :::note
-PlatformIO プロジェクトは、ビルドと書き込みのための環境にすぎません。ディスプレイは依然として正しい `driver.h` に依存します。`platformio.ini` が正しくても、`driver.h` が誤ったボードやパネルを対象としている場合、ファームウェアはコンパイルと書き込みに成功しても、画面は真っ白なままになる可能性があります。
+PlatformIO プロジェクトは、ビルドと書き込みのための環境に過ぎません。ディスプレイは依然として正しい `driver.h` に依存します。`platformio.ini` が正しくても、`driver.h` が誤ったボードやパネルを対象としている場合、ファームウェアはコンパイルと書き込みに成功しても、画面は真っ白なままになる可能性があります。
 :::
 
 ## ePaper 開発に PlatformIO を使う理由
 
-PlatformIO は、ePaper プロジェクトが単一のスケッチを超えて大きくなったときに役立ちます：
+ePaper プロジェクトが単一のスケッチを超えて大きくなってきたときに、PlatformIO は役立ちます：
 
 - ボード、フレームワーク、ライブラリ、書き込み速度、シリアルモニタ速度、ビルドフラグを 1 つのバージョン管理された `platformio.ini` ファイルにまとめておけます。
 - 1 つのプロジェクト内に複数のビルド環境を定義できるため、同じコードベースで複数の Seeed ePaper 製品をターゲットにできます。
@@ -100,12 +100,12 @@ PlatformIO は、ePaper プロジェクトが単一のスケッチを超えて�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:1000, height:'auto'}}/></div>
 
-**Step 3.** 拡張機能のインストールが完了したら VS Code を再起動します。
+**Step 3.** 拡張機能のインストールが完了したら、VS Code を再起動します。
 
 **Step 4.** VS Code のアクティビティバーにある PlatformIO アイコンから **PlatformIO Home** を開きます。
 
 :::tip
-VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機能に含まれています。VS Code の外で `pio` コマンドを使いたい場合にのみ、別途 PlatformIO Core をインストールする必要があります。
+VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機能に含まれています。VS Code の外で `pio` コマンドを使いたい場合にのみ、PlatformIO Core を別途インストールする必要があります。
 :::
 
 ## ステップ 2: PlatformIO プロジェクトを作成する
@@ -116,7 +116,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
 
 **Step 2.** プロジェクト名を入力します。
 
-**Step 3.** PlatformIO にプロジェクトを作成させるための、一時的な Arduino 互換ボードを任意に選択します。この最初の選択は、プロジェクトフォルダを生成するためだけに使用されます。
+**Step 3.** PlatformIO にプロジェクトを作成させるため、一時的に使用する Arduino 互換ボードを任意に選択します。この最初の選択は、プロジェクトフォルダを生成するためだけに使用されます。
 
 **Step 4.** フレームワークとして **Arduino** を選択します。
 
@@ -125,7 +125,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
 **Step 6.** `platformio.ini` を開き、生成された設定を次のセクションに示す Seeed 用設定に置き換えます。
 
 :::caution
-この ePaper 製品ラインで使用される Seeed Studio 開発ボードのほとんどは、PlatformIO のデフォルトボード一覧だけでなく、Seeed の PlatformIO プラットフォームパッケージによって管理されています。PlatformIO の **New Project** ウィンドウで、完全に一致する Seeed ボードが見つからなくても、それは想定された動作です。まず一時的なプロジェクトを作成し、その後 `platformio.ini` で `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` と正しい `board` ID を設定してください。
+この ePaper 製品ラインで使用される Seeed Studio 開発ボードのほとんどは、PlatformIO のデフォルトボードリストだけでなく、Seeed の PlatformIO プラットフォームパッケージによってメンテナンスされています。PlatformIO の **New Project** ウィンドウで、完全に一致する Seeed ボードが見つからなくても、それは想定された動作です。まず一時的なプロジェクトを作成し、その後 `platformio.ini` で `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` と正しい `board` ID を設定してください。
 :::
 
 作成後、重要なファイルとフォルダは次のとおりです：
@@ -146,7 +146,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
     </tr>
     <tr>
       <td><code>lib/</code></td>
-      <td>任意のローカルライブラリ。この中にローカルの <code>driver.h</code> 用ヘルパーフォルダを置くと便利です。</td>
+      <td>任意のローカルライブラリ。この中にローカルの <code>driver.h</code> ヘルパーフォルダを置くと便利です。</td>
     </tr>
     <tr>
       <td><code>.pio/</code></td>
@@ -157,7 +157,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
 
 ## ステップ 3: `platformio.ini` を理解する
 
-`platformio.ini` は PlatformIO プロジェクトの中心です。各 `[env:name]` セクションが 1 つのビルド環境を定義します。環境は、どのボード向けにコンパイルするか、どのフレームワークを使うか、どのライブラリをダウンロードするか、どのようにファームウェアを書き込んだりモニタしたりするかを PlatformIO に伝えます。
+`platformio.ini` は PlatformIO プロジェクトの中心です。各 `[env:name]` セクションが 1 つのビルド環境を定義します。環境は、どのボード向けにコンパイルするか、どのフレームワークを使うか、どのライブラリをダウンロードするか、そしてファームウェアをどのように書き込み・モニタするかを PlatformIO に伝えます。
 
 初心者にとって最も簡単なワークフローは、[ステップ 4](#ステップ-4-デバイス用の設定をコピーする) から自分のデバイス用の完全な設定をコピーし、それを `platformio.ini` に貼り付けてから、対応する `driver.h` ファイルを作成することです。共通のベースセクションと別のデバイスセクションを自分で組み合わせる必要はありません。
 
@@ -219,7 +219,7 @@ VS Code で PlatformIO IDE を使用する場合、PlatformIO Core は拡張機�
 
 ## ステップ 4: デバイス用の設定をコピーする
 
-自分のデバイスタブを選び、`platformio.ini` ブロック全体をコピーして、PlatformIO プロジェクト内の `platformio.ini` ファイルに貼り付けてください。共通のベースセクションとデバイスセクションをマージする必要がないように、設定は各タブであえて繰り返されています。
+自分のデバイスタブを選び、`platformio.ini` ブロック全体をコピーして、PlatformIO プロジェクト内の `platformio.ini` ファイルに貼り付けてください。共通のベースセクションとデバイスセクションをマージする必要がないように、設定は各タブであえて繰り返しています。
 
 :::tip
 最初のビルドには時間がかかる場合があります。これは、PlatformIO が Seeed のプラットフォームパッケージ、ツールチェーン、Arduino フレームワーク、および `Seeed_GFX` ライブラリをダウンロードするためです。
@@ -244,7 +244,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-**reTerminal E1001** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1001 は次の設定を使用します：
+**reTerminal E1001** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1001 は次を使用します：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 520
@@ -269,7 +269,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-**reTerminal E1002** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1002 は次の設定を使用します：
+**reTerminal E1002** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1002 は次を使用します：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 521
@@ -294,7 +294,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-**reTerminal E1003** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1003 は次の設定を使用します：
+**reTerminal E1003** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1003 は次を使用します：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 522
@@ -319,7 +319,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-**reTerminal E1004** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1004 は次の設定を使用します：
+**reTerminal E1004** 用に生成された `driver.h` を使用します。既存の `Seeed_GFX` のサンプルでは、E1004 は次を使用します：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 523
@@ -328,7 +328,7 @@ lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 </TabItem>
 <TabItem value="ee0x" label="EE02 / EE03 / EE04 / EE05">
 
-**EE02 / EE03 / EE04 / EE05** ESP32-S3 ePaper ドライバボードには、次の設定を使用します：
+**EE02 / EE03 / EE04 / EE05** ESP32-S3 ePaper ドライバボードには次の設定を使用します：
 
 ```ini
 [env:ee0x_epaper_driver_board]
@@ -344,18 +344,18 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-お使いの EE0x ボードと ePaper パネルに合わせて `driver.h` を生成します。例えば、7.5 インチのモノクロ ePaper パネルを搭載した EE04 では、次の設定を使用します：
+お使いの EE0x ボードと ePaper パネルに合わせて `driver.h` を生成します。例えば、7.5 インチのモノクロ ePaper パネルを搭載した EE04 では次を使用します：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
-```
 
 </TabItem>
 <TabItem value="trmnl-diy-kit" label="TRMNL DIY Kit">
 
-**TRMNL 7.5 インチ (OG) DIY Kit** 上でカスタム Arduino 風ファームウェアを動かすには、次の設定を使用します：
+**TRMNL 7.5" (OG) DIY Kit** 上でカスタム Arduino 風ファームウェアを動かす場合は、次の設定を使用します：
 
+__CODE_LINE_PLH__
 ```ini
 [env:trmnl_diy_kit]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -368,15 +368,15 @@ build_flags =
     -D BOARD_HAS_PSRAM
     -I src
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
-```
 
 ビルドする前に、TRMNL DIY Kit のディスプレイ構成に合わせて `driver.h` を生成してください。
 
 </TabItem>
 <TabItem value="xiao-075-panel" label="XIAO 7.5&quot; Panel">
 
-**XIAO 7.5 インチ ePaper Panel** には次の設定を使用します：
+**XIAO 7.5" ePaper Panel** には次の設定を使用します：
 
+__CODE_LINE_PLH__
 ```ini
 [env:xiao_075_epaper_panel]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -387,15 +387,15 @@ monitor_speed = 115200
 build_flags =
     -I src
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
-```
 
-ビルドする前に、XIAO 7.5 インチ ePaper Panel 用の `driver.h` を生成してください。
+ビルドする前に、XIAO 7.5" ePaper Panel 用の `driver.h` を生成してください。
 
 </TabItem>
 <TabItem value="en04-en05" label="EN04 / EN05">
 
 **EN04 / EN05** nRF52840 ベースの ePaper ボード向けに、PlatformIO の出発点として次の設定を使用します：
 
+__CODE_LINE_PLH__
 ```ini
 [env:en04_en05]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -405,7 +405,6 @@ upload_speed = 115200
 monitor_speed = 115200
 build_flags =
     -I src
-```
 
 EN04 / EN05 のディスプレイドライバ、ピンマップ、およびライブラリ依存関係は、ベースとしている製品固有のファームウェアまたはクックブックに従う必要があります。
 
@@ -414,7 +413,7 @@ EN04 / EN05 のディスプレイドライバ、ピンマップ、およびラ�
 
 ## ステップ 5：`driver.h` を追加する
 
-`platformio.ini` は MCU とビルド環境を選択します。`driver.h` は、`Seeed_GFX` が使用する ePaper ボードと画面の組み合わせを選択します。
+`platformio.ini` は MCU とビルド環境を選択します。`driver.h` は `Seeed_GFX` が使用する ePaper ボードと画面の組み合わせを選択します。
 
 **ステップ 1.** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を開きます。
 
@@ -426,58 +425,58 @@ EN04 / EN05 のディスプレイドライバ、ピンマップ、およびラ�
 
 典型的な生成ファイルは次のようになります：
 
+__CODE_LINE_PLH__
 ```cpp
 #define BOARD_SCREEN_COMBO 502
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
-```
 
-既存の ePaper ドキュメントでよく使われる `BOARD_SCREEN_COMBO` の値には、次のようなものがあります：
+既存の ePaper ドキュメントで使用されている一般的な `BOARD_SCREEN_COMBO` の値には次のものがあります：
 
 <div class="table-center">
   <table align="center">
-    <tr>
-      <th>ハードウェア</th>
+  <tr>
+    <th>ハードウェア</th>
       <th>生成される設定の例</th>
       <th>正確な情報源</th>
-    </tr>
+      </tr>
     <tr>
-      <td>reTerminal E1001</td>
+    <td>reTerminal E1001</td>
       <td><code>#define BOARD_SCREEN_COMBO 520</code></td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
+      </tr>
     <tr>
-      <td>reTerminal E1002</td>
+    <td>reTerminal E1002</td>
       <td><code>#define BOARD_SCREEN_COMBO 521</code></td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
+      </tr>
     <tr>
-      <td>reTerminal E1003</td>
+    <td>reTerminal E1003</td>
       <td><code>#define BOARD_SCREEN_COMBO 522</code></td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
+      </tr>
     <tr>
-      <td>reTerminal E1004</td>
+    <td>reTerminal E1004</td>
       <td><code>#define BOARD_SCREEN_COMBO 523</code></td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
+      </tr>
     <tr>
-      <td>EE04 + 7.5 インチ モノクロ ePaper</td>
+    <td>EE04 + 7.5" モノクロ ePaper</td>
       <td><code>#define BOARD_SCREEN_COMBO 502</code><br/><code>#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04</code></td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
+      </tr>
     <tr>
-      <td>その他の EE0x / 画面の組み合わせ</td>
+    <td>その他の EE0x / 画面の組み合わせ</td>
       <td>ボードと画面ごとに生成</td>
       <td>Seeed GFX Configuration Tool</td>
-    </tr>
-  </table>
-</div>
+      </tr>
+    </table>
+  </div>
 
 :::caution
-ePaper ボード、ディスプレイサイズ、ディスプレイのカラータイプ、またはドライバボードを変更した場合は、必ず `driver.h` を再生成してください。不一致の `BOARD_SCREEN_COMBO` は、画面が真っ黒（何も表示されない）になる最も一般的な原因の 1 つです。
+ePaper ボード、ディスプレイサイズ、ディスプレイのカラータイプ、またはドライバボードを変更した場合は、必ず `driver.h` を再生成してください。不一致の `BOARD_SCREEN_COMBO` は、画面が真っ白になる最も一般的な原因の 1 つです。
 :::
 
-最終的に、PlatformIO を使用する完成したスクリーン製品向けのコードとプロジェクトフレームワークは、次のようになります：
+最終的に、PlatformIO を使用する完成したスクリーン製品向けのコードとプロジェクトフレームワークは次のようになります：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/249.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -488,39 +487,40 @@ ePaper ボード、ディスプレイサイズ、ディスプレイのカラー�
 
 <div class="table-center">
   <table align="center">
-    <tr>
-      <th>アクション</th>
+  <tr>
+    <th>操作</th>
       <th>動作内容</th>
-    </tr>
+      </tr>
     <tr>
-      <td><strong>Build</strong></td>
-      <td>選択された環境をコンパイルし、ボード、フレームワーク、ライブラリ、およびコードの互換性をチェックします。</td>
-    </tr>
+    <td><strong>Build</strong></td>
+      <td>選択された環境をコンパイルし、ボード、フレームワーク、ライブラリ、コードの互換性をチェックします。</td>
+      </tr>
     <tr>
-      <td><strong>Upload</strong></td>
+    <td><strong>Upload</strong></td>
       <td>選択されたアップロードプロトコルを通じて、接続されたデバイスにファームウェアをアップロードします。</td>
-    </tr>
+      </tr>
     <tr>
-      <td><strong>Monitor</strong></td>
+    <td><strong>Monitor</strong></td>
       <td><code>monitor_speed</code> のボーレートを使用してシリアルモニタを開きます。</td>
-    </tr>
+      </tr>
     <tr>
-      <td><strong>Clean</strong></td>
+    <td><strong>Clean</strong></td>
       <td>以前のビルド出力を削除します。ボードパッケージ、PSRAM 設定、または主要なビルドフラグを変更した後に使用します。</td>
-    </tr>
-  </table>
-</div>
+      </tr>
+    </table>
+  </div>
 
-プロジェクトに複数の環境がある場合は、ビルドまたはアップロードを行う前に、PlatformIO プロジェクトタスクからターゲット環境を選択してください。
+プロジェクトに複数の環境がある場合は、ビルドまたはアップロードを行う前に、PlatformIO プロジェクトタスクからターゲット環境を選択します。
 
 ## オプション：Seeed_GxEPD2 ライブラリを使用する
 
 このページのデフォルトのサンプルは `Seeed_GFX` を使用しています。GxEPD2 ディスプレイワークフローに基づくプロジェクトでは、ディスプレイライブラリの依存関係を Seeed の GxEPD2 フォークに置き換えることができます。
 
-このオプションは、プロジェクトコードが `Seeed_GxEPD2` / `GxEPD2` API 向けに書かれている場合にのみ使用してください。コードが標準の `Seeed_GFX` サンプルに従っている場合は、`lib_deps` に `Seeed_GFX` を残してください。
+このオプションは、プロジェクトコードが `Seeed_GxEPD2` / `GxEPD2` の API 向けに書かれている場合にのみ使用してください。コードが標準の `Seeed_GFX` サンプルに従っている場合は、`lib_deps` に `Seeed_GFX` を残しておきます。
 
 例えば、reTerminal E1001 の設定は次のように変更できます：
 
+__CODE_LINE_PLH__
 ```ini
 [env:reterminal_e1001]
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
@@ -533,26 +533,26 @@ build_flags =
     -D BOARD_HAS_PSRAM
     -I src
 lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
-```
 
-ここでは設定を分かりやすくするために、ディスプレイライブラリを 1 つだけ示しています。プロジェクトで追加のライブラリが必要な場合は、`lib_deps` の下に別行として追加してください。
+ここでは設定を分かりやすくするために、1 つのディスプレイライブラリのみを示しています。プロジェクトで追加のライブラリが必要な場合は、`lib_deps` の下に別行として追加してください。
 
 ## 次のステップ
 
 このページは意図的に PlatformIO の環境設定に焦点を当てています。配線、画面の選択、ファームウェアの挙動については、製品固有のページを続けて参照してください：
 
-- [Work with Arduino](/ja/epaper_work_with_arduino) — 一般的な Arduino と `Seeed_GFX` のワークフロー。
+- [Work with Arduino](/ja/epaper_work_with_arduino) — 共通の Arduino と `Seeed_GFX` ワークフロー。
 - [XIAO ePaper Driver Boards PlatformIO Cookbook](/ja/ee04_with_platformio) — EE04 を実行例とした EE0x の PlatformIO ワークフロー。
 - [reTerminal E Series Arduino cookbook](/ja/reterminal_e10xx_with_arduino) — E1001 / E1002 / E1003 / E1004 向けのディスプレイサンプル。
 - [reTerminal E Series onboard peripherals cookbook](/ja/reterminal_e10xx_with_arduino_peripherals) — ボタン、ブザー、バッテリーモニタ、SHT4x センサ、microSD のサンプル。
 - [XIAO 7.5" ePaper Panel Arduino guide](/ja/xiao_075inch_epaper_panel_arduino) — XIAO ESP32-C3 ベースパネル向けの製品固有セットアップ。
 - [TRMNL DIY Kit Arduino guide](/ja/ogdiy_kit_works_with_arduino) — TRMNL キットハードウェア向けのカスタム Arduino ファームウェア手順。
+- [TRMNL DIY Kit Arduino guide](/ogdiy_kit_works_with_arduino) — custom Arduino firmware path for the TRMNL kit hardware.
 
 ## よくある問題
 
 ### Q1: なぜ PlatformIO のボード一覧に Seeed ボードが表示されないのですか？
 
-多くの Seeed 開発ボードでは、これは想定された動作です。このガイドで使用しているボード定義は Seeed の PlatformIO プラットフォームパッケージに含まれているため、そのパッケージをインストールする前は、PlatformIO のデフォルトの **New Project** ボード検索には表示されない場合があります。
+多くの Seeed 開発ボードではこれは想定された動作です。このガイドで使用しているボード定義は Seeed の PlatformIO プラットフォームパッケージに含まれているため、そのパッケージをインストールする前は、PlatformIO のデフォルトの **New Project** ボード検索には表示されない場合があります。
 
 `platformio.ini` で Seeed パッケージの URL を直接使用します：
 
@@ -560,22 +560,22 @@ lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
 platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 ```
 
-次に、`board` をお使いの製品で使用されている Seeed のボード ID に設定します。例えば：
+次に、`board` をお使いの製品で使用されている Seeed ボード ID に設定します。例：
 
 ```ini
 board = seeed-xiao-esp32-s3-sense
 ```
 
-最初にビルドするときに、PlatformIO がプラットフォームパッケージをダウンロードし、その後ボード ID を認識します。
+最初にビルドするとき、PlatformIO はプラットフォームパッケージをダウンロードし、その後ボード ID を認識します。
 
-### Q2: なぜファームウェアの書き込みは成功するのに ePaper ディスプレイが真っ黒のままなのですか？
+### Q2: なぜファームウェアの書き込みは成功するのに ePaper ディスプレイが真っ黒（無表示）のままなのですか？
 
 最も一般的な原因は、`driver.h` が間違っている、または存在しないことです。
 
 - [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) を使って `driver.h` を再生成します。
 - 選択したボードとディスプレイが実際のハードウェアと一致していることを確認します。
 - 生成された `BOARD_SCREEN_COMBO` が、`Seeed_GFX` をインクルードしているソースファイルから参照可能であることを確認します。
-- 大きなバッファを持つ ESP32-S3 製品の場合、製品クックブックで PSRAM 設定が必要かどうかを確認します。
+- 大きなバッファを持つ ESP32-S3 製品では、その製品のクックブックで PSRAM 設定が必要かどうかを確認します。
 
 ### Q3: なぜ PlatformIO がボードへの書き込みに失敗するのですか？
 
@@ -588,7 +588,7 @@ upload_speed = 115200
 それでも書き込みに失敗する場合は、次の点を確認してください：
 
 - データ転送に対応した USB-C ケーブルを使用します。
-- 他のシリアルデバイスを取り外してから再試行します。
+- 他のシリアルデバイスを切断してから再試行します。
 - 自動検出で誤ったポートが選択される場合のみ `upload_port` を設定します。
 - ESP32 ベースのボードでは、ボードが自動的にダウンロードモードに入らない場合、USB を接続する間ブートボタンを押し続けます。
 

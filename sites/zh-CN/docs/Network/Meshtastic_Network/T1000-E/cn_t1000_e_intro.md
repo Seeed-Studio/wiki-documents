@@ -10,13 +10,13 @@ last_update:
   date: 7/1/2024
   author: Jessie
 createdAt: '2024-09-05'
-updatedAt: '2025-09-29'
+updatedAt: '2026-05-21'
 url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-这是一款为 [Meshtastic®](https://meshtastic.org/) 设计的高性能追踪器，小巧如信用卡，可轻松放入口袋或固定在资产上。其内置 Semtech 的 LR1110、Nordic 的 nRF52840 和 Mediatek 的 AG3335 GPS 模块，为 [Meshtastic®](https://meshtastic.org/) 用户提供高精度、低功耗的定位与通信解决方案。
+这是一款为 [Meshtastic®](https://meshtastic.org/) 设计的高性能追踪器，体积小巧如信用卡，可轻松放入口袋或固定在资产上。其内置 Semtech 的 LR1110、Nordic 的 nRF52840 和 Mediatek 的 AG3335 GPS 模块，为 [Meshtastic®](https://meshtastic.org/) 用户提供高精度、低功耗的定位与通信解决方案。
 
 :::note
 可定制选项：Logo 品牌定制、包装和固件烧录。
@@ -35,10 +35,10 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 
 ### 特性
 
-- **多协议支持**：搭载 nRF52840 和 LR1110，支持 Bluetooth 5.0、Thread、Zigbee 和 LoRa，确保与多种设备和网络兼容。
+- **多协议支持**：搭载 nRF52840 和 LR1110，支持 Bluetooth 5.0、Thread、Zigbee 和 LoRa，确保与多种设备和网络的兼容性。
 - **强大的定位能力**：集成 Mediatek 的 AG3335 GPS 芯片，提供高精度定位服务。
-- **可扩展接口**：设计有 4 个 pogo pin，支持用于 DFU（设备固件升级）、串口日志和 API 接口的 USB 接口，简化设备管理和调试。
-- **开源支持**：兼容 Meshtastic 开源自组网协议，适用于远距离、低功耗通信需求。
+- **可扩展接口**：设计有四个弹簧针（pogo pin），支持用于 DFU（设备固件升级）、串口日志和 API 接口的 USB 接口，简化设备管理和调试。
+- **开源支持**：兼容 Meshtastic 开源自组网协议，适用于远距离和低功耗通信需求。
 
 ### 规格
 
@@ -64,7 +64,7 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 |**电池容量**|可充电锂电池，700mAh|
 | :- | :- |
 |**电池寿命监测**|周期性上行电池电量|
-|<p>**充电线缆**</p><p>**（不含适配器）**</p>|USB 磁吸充电线，1 米|
+|<p>**充电线缆**</p><p>**（不含适配器）**</p>|USB 磁吸充电线缆，1 米|
 |**电源输入电压**|4.7 至 5.5V DC|
 |**充电温度范围**|0 至 +45℃|
 
@@ -76,16 +76,16 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 
 ||||
 |- |- |- |
-|传感器电源|P0.4|GPIO|
+|传感器供电|P0.4|GPIO|
 |温度|P0.31|NTC（模拟）|
 |光照|P0.29|LUX（模拟）|
 |三轴加速度计<br/>(当前在 Meshtastic 固件中未使用)|SDA: P0.26<br/>SCL: P0.27|通过 IIC|
-|加速度计电源|P1.7|GPIO|
+|加速度计供电|P1.7|GPIO|
 |LED|P0.24  |GPIO|
 |蜂鸣器|P0.25|GPIO|
 |蜂鸣器使能|P1.05|GPIO|
 |按键|P0.6|GPIO|
-|传感器电源|P1.6|GPIO|
+|传感器供电|P1.6|GPIO|
 |LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
 |GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>BAUDRATE:115200|
 
@@ -102,7 +102,7 @@ url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 
 |设备动作|说明|
 |- |- |
-|开机|先常亮后快速闪烁|
+|开机|先常亮然后快速闪烁|
 |DFU 模式|常亮|
 |工作中|随机闪烁|
-|充电中|以 0.5 Hz 闪烁，每秒切换一次|
+|充电中|以 0.5 Hz 频率闪烁，每秒切换一次|

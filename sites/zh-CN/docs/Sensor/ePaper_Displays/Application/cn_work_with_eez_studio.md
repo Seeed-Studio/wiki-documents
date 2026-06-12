@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/eez.jpg" style={{width:600, height:'auto'}}/></div>
 
-本指南将带你完成以下流程：使用可视化设计工具 [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) 设计专业用户界面，生成 LVGL 代码，并通过 Arduino IDE 将其部署到 Seeed ePaper 产品上。对于每一块受支持的开发板，流程都是相同的——唯一的区别是显示分辨率和驱动配置常量，我们已经通过选项卡的方式呈现出来。
+本指南将带你完成以下流程：使用可视化设计工具 [**EEZ Studio**](https://www.envox.eu/studio/studio-introduction/) 设计专业用户界面，生成 LVGL 代码，并通过 Arduino IDE 将其部署到 Seeed ePaper 产品上。对于每一块受支持的开发板，流程都是相同的——唯一的差异在于显示分辨率和驱动配置常量，我们会通过选项卡的方式呈现出来。
 
 ## 兼容硬件
 
@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
     </tr>
     <tr>
       <td align="center">7.5" 单色 / 7.3" Spectra 6 / 10.3" 单色 / 13.3" Spectra 6</td>
-      <td align="center">通用驱动板——可搭配我们任意 24-pin 或 50-pin 的 Seeed ePaper 屏幕使用</td>
+      <td align="center">通用驱动——可搭配我们任意 24-pin 或 50-pin 的 Seeed ePaper 屏幕使用</td>
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -68,11 +68,11 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
 
 ### 为什么要使用 EEZ Studio？
 
-- **可视化界面设计** —— 使用所见即所得编辑器创建复杂 UI。
-- **快速原型开发** —— 快速测试和验证设计想法。
-- **跨平台** —— 构建可在多个操作系统和嵌入式目标上运行的应用。
-- **硬件集成** —— 可直接连接实验室仪器、物联网设备和自定义开发板。
-- **开源** —— 社区驱动的工具集，可选付费高级支持。
+- **可视化界面设计**——使用所见即所得编辑器创建复杂 UI。
+- **快速原型开发**——快速测试和验证设计想法。
+- **跨平台**——构建可在多个操作系统和嵌入式目标上运行的应用。
+- **硬件集成**——可直接连接实验室仪器、物联网设备和自定义开发板。
+- **开源**——由社区驱动的工具集，可选付费高级支持。
 
 ### EEZ Studio 与 SquareLine Studio 的对比
 
@@ -101,12 +101,12 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
         <tr>
             <th>开源情况</th>
             <td>社区驱动、透明且可扩展（提供高级付费支持）</td>
-            <td>闭源商业产品，需要授权许可</td>
+            <td>闭源商业产品，采用授权许可模式</td>
         </tr>
         <tr>
-            <th>工作流程</th>
+            <th>工作流</th>
             <td>在同一环境中完成原型设计、仿真并控制真实设备</td>
-            <td>主要用于生成 UI 代码，再编译进嵌入式工程</td>
+            <td>主要用于生成 UI 代码并编译进嵌入式工程</td>
         </tr>
     </tbody>
 </table>
@@ -123,15 +123,15 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
 
 在 EEZ Studio 界面顶部点击 **CREATE**。在左侧选择 **LVGL** 模板：
 
-- **Name** —— 给你的项目起一个名字（本文中我们使用 `EEZ_UI`）。
-- **LVGL Version** —— 在下拉菜单中选择 `9.x`。
-- **Location** —— 选择保存项目文件的位置。
+- **Name**——为你的项目起一个名字（本文中我们使用 `EEZ_UI`）。
+- **LVGL Version**——在下拉框中选择 `9.x`。
+- **Location**——选择保存项目文件的位置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/01.jpg" style={{width:900, height:'auto'}}/></div>
 
 ### 项目设置
 
-点击工具栏上的 ⚙️ 图标打开 Project Settings（项目设置）。
+点击工具栏上的 ⚙️ 图标打开 Project Settings。
 
 在 **General → Build** 下：
 
@@ -147,7 +147,7 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
 - **Display width**: 800
 - **Display height**: 480
 
-（E1001 上的 7.5" 单色屏和 E1002 上的 7.3" Spectra 6 屏共享相同的 800×480 分辨率。）
+(E1001 上的 7.5" 单色屏和 E1002 上的 7.3" Spectra 6 屏共享相同的 800×480 分辨率。)
 
 </TabItem>
 <TabItem value="ee04" label="EE04 + 5.83&quot; 单色">
@@ -155,7 +155,7 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
 - **Display width**: 648
 - **Display height**: 480
 
-（请将数值设置为与你插在 EE04 上的 Seeed ePaper 屏幕相匹配。下面的示例使用的是 5.83" 648×480 单色屏。）
+(请将数值设置为你插在 EE04 上的那块 Seeed ePaper 屏幕的分辨率。下面的示例使用的是 5.83" 648×480 单色屏。)
 
 </TabItem>
 </Tabs>
@@ -164,24 +164,24 @@ EEZ Studio 是一个现代化的可视化编程和 UI 设计环境，最初是�
 
 ## 步骤 3：设计 UI
 
-UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速搭建界面，并使用 **Styles**、**Fonts**、**Bitmaps**、**Themes** 和 **Groups** 来控制最终的视觉效果。
+UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件，并结合使用 **Styles**、**Fonts**、**Bitmaps**、**Themes** 和 **Groups** 来控制视觉效果，从而快速搭建界面。
 
 推荐的在线资源：
 
-- [Coolors](https://coolors.co/) —— 配色方案生成器
-- [PeisekA](https://peiseka.com/) —— 色卡
-- [iconfont](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl) —— 图标库
-- [Google Fonts](https://fonts.google.com/) —— 免费字体
+- [Coolors](https://coolors.co/)——配色方案生成器
+- [PeisekA](https://peiseka.com/)——色卡
+- [iconfont](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl)——图标库
+- [Google Fonts](https://fonts.google.com/)——免费字体
 
 右侧边栏：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/04.jpg" style={{width:900, height:'auto'}}/></div>
 
-- **Styles** —— 用于统一和复用界面元素的视觉属性。
-- **Bitmaps** —— 背景、图标、Logo。
-- **Fonts** —— 文本渲染和多语言支持。
-- **Themes** —— 亮/暗主题等顶层样式。
-- **Groups** —— 布局辅助工具。
+- **Styles**——用于统一和复用界面元素的视觉属性。
+- **Bitmaps**——背景、图标、Logo。
+- **Fonts**——文本渲染和多语言支持。
+- **Themes**——浅色/深色等顶层样式。
+- **Groups**——布局辅助工具。
 
 ### 示例布局（Hello World + Panel + Image + Line + Label）
 
@@ -227,13 +227,13 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速
 
 在设计完成之后：
 
-1. **保存** —— 点击 **OPEN** 旁边的软盘图标。
-2. **预览** —— 点击 **Run** 启动模拟器并预览 UI。
-3. **编译 / 构建** —— 点击 ✓ 图标检查错误，然后点击扳手图标生成 UI 代码、图像数据和字体数据。
+1. **保存**——点击 **OPEN** 旁边的软盘图标。
+2. **预览**——点击 **Run** 启动模拟器并预览 UI。
+3. **编译 / 构建**——点击 ✓ 图标检查错误，然后点击扳手图标生成 UI 代码、图像数据和字体数据。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/17.jpg" style={{width:500, height:'auto'}}/></div>
 
-绿色的 **Build successful** 消息表示代码生成成功。输出会生成在项目的 **`src/ui`** 文件夹中（如果你愿意，可以将其重命名为 `src/EEZ_UI`）。
+绿色的 **Build successful** 消息表示代码生成成功。输出会放在项目的 **`src/ui`** 文件夹中（如果你愿意，可以将其重命名为 `src/EEZ_UI`）。
 
 ## 步骤 5：配置 Arduino IDE
 
@@ -247,11 +247,11 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速
 
    <div class="download_arduino_container" style={{textAlign: 'center'}}>
        <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
-         <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+         <strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong>
        </a>
    </div><br />
 
-2. **添加 ESP32 开发板支持**：在 **File → Preferences** 中，在 **Additional Boards Manager URLs** 中添加：
+2. **添加 ESP32 开发板支持**：在 **File → Preferences** 中，将以下内容添加到 **Additional Boards Manager URLs**：
 
    ```text
    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -288,14 +288,14 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速
 
    <div class="github_container" style={{textAlign: 'center'}}>
        <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-       <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong>
+       <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong>
        </a>
    </div><br />
 
 2. 在 Arduino 中选择 **Sketch → Include Library → Add .ZIP Library**，然后选择刚刚下载的 ZIP 文件。
 
    :::note
-   如果你之前安装过 `TFT_eSPI`，请暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突——`Seeed_GFX` 是 `TFT_eSPI` 的一个分支，增加了对 Seeed 显示屏的额外特性。
+   如果你之前安装过 `TFT_eSPI`，请暂时从 Arduino 库文件夹中移除或重命名它，以避免冲突——`Seeed_GFX` 是 `TFT_eSPI` 的一个分支，针对 Seeed 显示屏增加了额外功能。
    :::
 
 3. **打开正确的示例草图**：
@@ -303,7 +303,7 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速
    - 彩色显示屏：**File → Examples → Seeed_GFX → ePaper → Colorful → HelloWorld**
    - 单色显示屏：**File → Examples → Seeed_GFX → ePaper → Basic → HelloWorld**
 
-4. 在与你的草图相同的文件夹中**创建一个 `driver.h` 文件**（在 Arduino IDE 中使用新建标签页箭头）。
+4. 在与你的草图相同的文件夹中创建一个 `driver.h` 文件（使用 Arduino IDE 中的新标签箭头）。
 
 5. 打开 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)，选择你的硬件，复制生成的配置，并粘贴到 `driver.h` 中。具体内容会因硬件不同而有所差异：
 
@@ -355,18 +355,18 @@ UI 设计直接决定用户体验。EEZ Studio 允许你通过拖拽组件快速
 
 ### 所有硬件通用的驱动文件
 
-下载以下辅助文件，并将它们放在你的 `.ino` 文件旁边：
+下载以下辅助文件，并将它们放在 `.ino` 文件旁边：
 
 - [`e1002_display.cpp`](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.cpp)
 - [`e1002_display.h`](https://files.seeedstudio.com/wiki/EEZStudio/e1002_display.h)
 
-对于 EE04，你还需要 `lv_conf.h` 和 LVGL 库——请参见下方 EE04 选项卡。
+对于 EE04，你还需要 `lv_conf.h` 和 LVGL 库——见下方 EE04 选项卡。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/00.png" style={{width:800, height:'auto'}}/></div>
 
 ### 复制 EEZ_UI 输出
 
-将生成的 `EEZ_UI` 文件夹（来自 EEZ Studio 项目的 `src/`）复制到 Arduino 库文件夹中（通常为 `~/Documents/Arduino/Libraries`）。
+将生成的 `EEZ_UI` 文件夹（来自 EEZ Studio 项目的 `src/`）复制到 Arduino 的 libraries 文件夹中（通常为 `~/Documents/Arduino/Libraries`）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/7.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -469,9 +469,9 @@ void loop()
 
 说明：
 
-- `e1002_display_init()` 用于初始化电子墨水显示硬件。
+- `e1002_display_init()` 初始化电子墨水显示硬件。
 - `pinMode(..., INPUT_PULLUP)` 将按键引脚配置为带内部上拉的输入。
-- `ui_init()` 和 `loadScreen()` 用于初始化 LVGL 并加载指定界面。
+- `ui_init()` 和 `loadScreen()` 初始化 LVGL 并加载指定界面。
 - `lv_timer_handler()` 处理 LVGL 的定时器和动画。
 - `if (lastKeyXState == HIGH && currentKeyXState == LOW)` 这些代码块对 HIGH→LOW 边沿进行消抖并更新页面。
 - `e1002_display_should_refresh()` / `e1002_display_refresh()` 按需管理电子墨水屏的刷新。
@@ -509,7 +509,7 @@ void loop()
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/upload_2.png" style={{width:800, height:'auto'}}/></div>
 
-参考示例草图——通过三个板载按键（KEY1/KEY2/KEY3 = 引脚 2 / 3 / 5）循环切换三页：**Smart**、**Industry**、**Game**。
+参考示例草图——通过三个板载按键（KEY1/KEY2/KEY3 = 引脚 2 / 3 / 5）循环切换三个页面：**Smart**、**Industry**、**Game**。
 
 完整参考代码：[EEZ_UI_EE04.zip](https://files.seeedstudio.com/wiki/Epaper/EE04/EEZ_UI_EE04.zip)
 

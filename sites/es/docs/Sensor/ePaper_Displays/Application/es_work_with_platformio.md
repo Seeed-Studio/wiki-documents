@@ -1,5 +1,5 @@
 ---
-description: Guía de referencia para usar PlatformIO con productos ePaper de Seeed - configuración de VS Code, estructura del proyecto, configuración de platformio.ini, configuración de Seeed_GFX y selección de entorno por producto.
+description: Guía de referencia para usar PlatformIO con productos ePaper de Seeed: configuración de VS Code, estructura del proyecto, configuración de platformio.ini, configuración de Seeed_GFX y selección de entorno por producto.
 title: Trabajar con PlatformIO
 keywords:
   - pantalla ePaper
@@ -30,7 +30,7 @@ Esta página es la **referencia de configuración de PlatformIO** para los produ
 
 1. Instalar PlatformIO en Visual Studio Code.
 2. Entender la estructura del proyecto creada por PlatformIO.
-3. Editar `platformio.ini`, el archivo de configuración principal para la selección de placa, selección de framework, dependencias de librerías, velocidad del monitor serie, opciones de carga y flags de compilación.
+3. Editar `platformio.ini`, el archivo de configuración principal para la selección de placa, selección de framework, dependencias de librerías, velocidad del monitor serie, opciones de carga y banderas de compilación.
 4. Elegir el entorno de PlatformIO correcto para cada producto ePaper de Seeed.
 5. Añadir `Seeed_GFX` y generar el `driver.h` correspondiente con la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 
@@ -38,7 +38,7 @@ Si buscas APIs de dibujo para la pantalla, ejemplos de sketches o código de dem
 
 ## Hardware compatible
 
-PlatformIO puede utilizarse con el flujo de trabajo basado en código para productos ePaper de Seeed que exponen una ruta de firmware compatible con Arduino. Usa esta página para preparar el proyecto de PlatformIO y luego selecciona el `driver.h` correcto para tu placa y pantalla.
+PlatformIO puede utilizarse con el flujo de trabajo basado en código para los productos ePaper de Seeed que exponen una ruta de firmware compatible con Arduino. Usa esta página para preparar el proyecto de PlatformIO y luego selecciona el `driver.h` correcto para tu placa y pantalla.
 
 <div class="table-center">
   <table align="center">
@@ -53,7 +53,7 @@ PlatformIO puede utilizarse con el flujo de trabajo basado en código para produ
       <td>Usa un entorno PlatformIO para ESP32-S3 y luego genera `driver.h` para el modelo exacto de reTerminal.</td>
     </tr>
     <tr>
-      <td><strong>Placas driver EE02 / EE03 / EE04 / EE05</strong></td>
+      <td><strong>Placas controladoras EE02 / EE03 / EE04 / EE05</strong></td>
       <td>Familia XIAO ESP32-S3</td>
       <td>Usa la misma estructura de PlatformIO en toda la familia EE0x. El valor de `BOARD_SCREEN_COMBO` cambia con la placa y la pantalla seleccionadas.</td>
     </tr>
@@ -83,7 +83,7 @@ El proyecto de PlatformIO es solo el entorno de compilación y carga. La pantall
 
 PlatformIO es útil cuando tu proyecto ePaper crece más allá de un único sketch:
 
-- Mantiene la placa, el framework, las librerías, la velocidad de carga, la velocidad del monitor serie y los flags de compilación en un único archivo `platformio.ini` bajo control de versiones.
+- Mantiene la placa, el framework, las librerías, la velocidad de carga, la velocidad del monitor serie y las banderas de compilación en un único archivo `platformio.ini` bajo control de versiones.
 - Puede definir múltiples entornos de compilación en un solo proyecto, de modo que la misma base de código pueda dirigirse a varios productos ePaper de Seeed.
 - Descarga las librerías mediante `lib_deps`, lo que hace que el proyecto sea más fácil de reproducir en otro ordenador.
 - Proporciona tareas de compilación, carga, limpieza y monitor serie dentro de VS Code.
@@ -125,7 +125,7 @@ Si usas PlatformIO IDE en VS Code, PlatformIO Core viene incluido con la extensi
 **Paso 6.** Abre `platformio.ini` y reemplaza la configuración generada con la configuración de Seeed que se muestra en las siguientes secciones.
 
 :::caution
-La mayoría de las placas de desarrollo de Seeed Studio utilizadas por esta línea de productos ePaper se mantienen a través del paquete de plataforma de PlatformIO de Seeed, no solo a través de la lista de placas predeterminada de PlatformIO. Si no puedes encontrar la placa exacta de Seeed en la ventana **New Project** de PlatformIO, es lo esperado. Primero crea un proyecto temporal y luego establece `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` y el ID de `board` correcto en `platformio.ini`.
+La mayoría de las placas de desarrollo de Seeed Studio utilizadas por esta línea de productos ePaper se mantienen a través del paquete de plataforma PlatformIO de Seeed, no solo a través de la lista de placas predeterminada de PlatformIO. Si no puedes encontrar la placa exacta de Seeed en la ventana **New Project** de PlatformIO, es lo esperado. Crea primero un proyecto temporal y luego establece `platform = https://github.com/Seeed-Studio/platform-seeedboards.git` y el ID de `board` correcto en `platformio.ini`.
 :::
 
 Tras la creación, los archivos y carpetas importantes son:
@@ -138,11 +138,11 @@ Tras la creación, los archivos y carpetas importantes son:
     </tr>
     <tr>
       <td><code>platformio.ini</code></td>
-      <td>Archivo de configuración principal de PlatformIO. Este es el archivo más importante en esta guía.</td>
+      <td>Archivo principal de configuración de PlatformIO. Este es el archivo más importante en esta guía.</td>
     </tr>
     <tr>
       <td><code>src/main.cpp</code></td>
-      <td>Archivo fuente principal del firmware. Aquí va el código de estilo Arduino.</td>
+      <td>Archivo principal de código fuente del firmware. El código de estilo Arduino va aquí.</td>
     </tr>
     <tr>
       <td><code>lib/</code></td>
@@ -159,7 +159,7 @@ Tras la creación, los archivos y carpetas importantes son:
 
 `platformio.ini` es el centro de un proyecto PlatformIO. Cada sección `[env:name]` define un entorno de compilación. El entorno le indica a PlatformIO para qué placa compilar, qué framework usar, qué librerías descargar y cómo cargar o monitorizar el firmware.
 
-Para principiantes, el flujo de trabajo más sencillo es copiar la configuración completa para tu dispositivo desde el [Paso 4](#paso-4-copiar-la-configuración-para-tu-dispositivo), pegarla en `platformio.ini` y luego crear el archivo `driver.h` correspondiente. No necesitas combinar por tu cuenta una sección base compartida con otra sección de dispositivo.
+Para principiantes, el flujo de trabajo más sencillo es copiar la configuración completa para tu dispositivo desde el [Paso 4](#Paso-4-Copiar-la-configuración-para-tu-dispositivo), pegarla en `platformio.ini` y luego crear el archivo `driver.h` correspondiente. No necesitas combinar por tu cuenta una sección base compartida con otra sección de dispositivo.
 
 Los campos más importantes son:
 
@@ -172,7 +172,7 @@ Los campos más importantes son:
     </tr>
     <tr>
       <td><code>platform</code></td>
-      <td>El paquete de plataforma de PlatformIO. Para las placas de Seeed en esta guía, usa la URL del paquete de plataforma de Seeed para que PlatformIO pueda descargar las definiciones de placas.</td>
+      <td>El paquete de plataforma de PlatformIO. Para las placas de Seeed en esta guía, usa la URL del paquete de plataforma de Seeed para que PlatformIO pueda descargar las definiciones de placa.</td>
       <td><code>platform = https://github.com/Seeed-Studio/platform-seeedboards.git</code></td>
     </tr>
     <tr>
@@ -344,7 +344,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 ```
 
-Genera `driver.h` para tu placa EE0x exacta y panel ePaper. Por ejemplo, EE04 con un panel ePaper monocromo de 7,5" utiliza:
+Genera `driver.h` para tu placa EE0x y panel de ePaper exactos. Por ejemplo, EE04 con un panel de ePaper monocromo de 7,5" utiliza:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502
@@ -394,7 +394,7 @@ Genera `driver.h` para el XIAO 7.5" ePaper Panel antes de compilar.
 </TabItem>
 <TabItem value="en04-en05" label="EN04 / EN05">
 
-Utiliza esta configuración como punto de partida de PlatformIO para las placas ePaper basadas en nRF52840 **EN04 / EN05**:
+Utiliza esta configuración como punto de partida de PlatformIO para las placas de ePaper basadas en nRF52840 **EN04 / EN05**:
 
 ```ini
 [env:en04_en05]
@@ -407,14 +407,14 @@ build_flags =
     -I src
 ```
 
-El controlador de pantalla, el mapa de pines y las dependencias de bibliotecas para EN04 / EN05 deben seguir el firmware específico del producto o el cookbook desde el que estés compilando.
+El controlador de pantalla, el mapa de pines y las dependencias de bibliotecas para EN04 / EN05 deben seguir el firmware específico del producto o el cookbook desde el que estés construyendo.
 
 </TabItem>
 </Tabs>
 
 ## Paso 5: Añadir `driver.h`
 
-`platformio.ini` selecciona el MCU y el entorno de compilación. `driver.h` selecciona la combinación de placa ePaper y pantalla utilizada por `Seeed_GFX`.
+`platformio.ini` selecciona el MCU y el entorno de compilación. `driver.h` selecciona la combinación de placa de ePaper y pantalla utilizada por `Seeed_GFX`.
 
 **Paso 1.** Abre la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 
@@ -431,7 +431,7 @@ Un archivo generado típico se ve así:
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-Los valores comunes de `BOARD_SCREEN_COMBO` utilizados en la documentación ePaper existente incluyen:
+Los valores comunes de `BOARD_SCREEN_COMBO` utilizados en la documentación existente de ePaper incluyen:
 
 <div class="table-center">
   <table align="center">
@@ -474,10 +474,10 @@ Los valores comunes de `BOARD_SCREEN_COMBO` utilizados en la documentación ePap
 </div>
 
 :::caution
-Vuelve a generar siempre `driver.h` cuando cambies la placa ePaper, el tamaño de la pantalla, el tipo de color de la pantalla o la placa controladora. Un `BOARD_SCREEN_COMBO` que no coincide es una de las razones más comunes de una pantalla en blanco.
+Vuelve a generar siempre `driver.h` cuando cambies la placa de ePaper, el tamaño de la pantalla, el tipo de color de la pantalla o la placa controladora. Un `BOARD_SCREEN_COMBO` que no coincide es una de las razones más comunes de una pantalla en blanco.
 :::
 
-En última instancia, el código y el framework de proyecto para un producto de pantalla completo usando PlatformIO deberían ser los siguientes:
+En última instancia, el código y el framework de proyecto para un producto de pantalla completo que use PlatformIO deberían ser los siguientes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/249.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -517,7 +517,7 @@ Si el proyecto tiene múltiples entornos, selecciona el entorno de destino desde
 
 Los ejemplos predeterminados de esta página utilizan `Seeed_GFX`. Para proyectos que se basan en el flujo de trabajo de pantalla GxEPD2, puedes reemplazar la dependencia de la biblioteca de pantalla con el fork GxEPD2 de Seeed.
 
-Utiliza esta opción solo cuando el código del proyecto esté escrito para las APIs `Seeed_GxEPD2` / `GxEPD2`. Si tu código sigue los ejemplos estándar de `Seeed_GFX`, mantén `Seeed_GFX` en `lib_deps`.
+Utiliza esta opción solo cuando el código del proyecto esté escrito para las APIs de `Seeed_GxEPD2` / `GxEPD2`. Si tu código sigue los ejemplos estándar de `Seeed_GFX`, mantén `Seeed_GFX` en `lib_deps`.
 
 Por ejemplo, una configuración de reTerminal E1001 se puede cambiar de la siguiente manera:
 
@@ -535,24 +535,24 @@ build_flags =
 lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
 ```
 
-Aquí solo se muestra una biblioteca de pantalla para mantener la configuración clara. Si tu proyecto necesita bibliotecas adicionales, añádelas en `lib_deps` como líneas separadas.
+Aquí solo se muestra una biblioteca de pantalla para mantener clara la configuración. Si tu proyecto necesita bibliotecas adicionales, añádelas bajo `lib_deps` como líneas separadas.
 
-## Dónde ir a continuación
+## Próximos pasos
 
-Esta página se centra intencionadamente en la configuración del entorno PlatformIO. Continúa con las páginas específicas del producto para el cableado, la selección de pantalla y el comportamiento del firmware:
+Esta página se centra intencionadamente en la configuración del entorno PlatformIO. Continúa con las páginas específicas de producto para el cableado, la selección de pantalla y el comportamiento del firmware:
 
 - [Trabajar con Arduino](/es/epaper_work_with_arduino) — flujo de trabajo común de Arduino y `Seeed_GFX`.
-- [XIAO ePaper Driver Boards PlatformIO Cookbook](/es/ee04_with_platformio) — flujo de trabajo PlatformIO de EE0x con EE04 como ejemplo práctico.
+- [XIAO ePaper Driver Boards PlatformIO Cookbook](/es/ee04_with_platformio) — flujo de trabajo PlatformIO para EE0x con EE04 como ejemplo práctico.
 - [reTerminal E Serie Arduino cookbook](/es/reterminal_e10xx_with_arduino) — ejemplos de pantalla para E1001 / E1002 / E1003 / E1004.
 - [reTerminal E Serie cookbook de periféricos integrados](/es/reterminal_e10xx_with_arduino_peripherals) — ejemplos de botones, zumbador, monitor de batería, sensor SHT4x y microSD.
-- [Guía Arduino del panel ePaper XIAO 7.5"](/es/xiao_075inch_epaper_panel_arduino) — configuración específica del producto para el panel basado en XIAO ESP32-C3.
+- [Guía Arduino del XIAO 7.5" ePaper Panel](/es/xiao_075inch_epaper_panel_arduino) — configuración específica del producto para el panel basado en XIAO ESP32-C3.
 - [Guía Arduino del TRMNL DIY Kit](/es/ogdiy_kit_works_with_arduino) — ruta de firmware Arduino personalizado para el hardware del TRMNL kit.
 
 ## Problemas comunes
 
 ### P1: ¿Por qué PlatformIO no muestra mi placa Seeed en la lista de placas?
 
-Esto es lo esperado para muchas placas de desarrollo de Seeed. Las definiciones de placa utilizadas en esta guía provienen del paquete de plataforma de Seeed para PlatformIO, por lo que puede que no aparezcan en la búsqueda de placas del **Nuevo proyecto** predeterminado de PlatformIO antes de que se instale el paquete.
+Esto es lo esperado para muchas placas de desarrollo de Seeed. Las definiciones de placa utilizadas en esta guía provienen del paquete de plataforma de PlatformIO de Seeed, por lo que puede que no aparezcan en la búsqueda de placas de **New Project** predeterminada de PlatformIO antes de que se instale el paquete.
 
 Utiliza la URL del paquete de Seeed directamente en `platformio.ini`:
 
@@ -572,7 +572,7 @@ Cuando compiles por primera vez, PlatformIO descargará el paquete de plataforma
 
 La causa más común es un `driver.h` incorrecto o ausente.
 
-- Regenera `driver.h` con la [herramienta de configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/).
+- Regenera `driver.h` con la [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/).
 - Confirma que la placa y la pantalla seleccionadas coinciden con el hardware real.
 - Confirma que el `BOARD_SCREEN_COMBO` generado está disponible para el archivo fuente que incluye `Seeed_GFX`.
 - Para productos ESP32-S3 con búferes grandes, confirma si el recetario del producto requiere configuraciones de PSRAM.
@@ -597,14 +597,14 @@ Si la carga sigue fallando, continúa con las siguientes comprobaciones:
 - **[Docs]** [Archivo de configuración de proyecto de PlatformIO](https://docs.platformio.org/en/stable/projectconf/index.html)
 - **[Docs]** [PlatformIO IDE para VS Code](https://docs.platformio.org/en/stable/integration/ide/pioide.html)
 - **[GitHub]** [Paquete de plataforma PlatformIO de Seeed](https://github.com/Seeed-Studio/platform-seeedboards)
-- **[GitHub]** [Ejemplo de parpadeo Arduino de Seeed para PlatformIO](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
+- **[GitHub]** [Ejemplo de parpadeo Arduino de Seeed PlatformIO](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
 - **[GitHub]** [Biblioteca Seeed_GFX](https://github.com/Seeed-Studio/Seeed_GFX)
-- **[Tool]** [Herramienta de configuración Seeed GFX](https://seeed-studio.github.io/Seeed_GFX/)
+- **[Tool]** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
 - **[Wiki]** [PlatformIO para placas compatibles con Arduino](/es/Software-PlatformIO)
 
 ## Soporte técnico y debate sobre productos
 
-Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

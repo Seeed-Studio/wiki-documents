@@ -1,5 +1,5 @@
 ---
-description: 使用 PlatformIO 搭配 Seeed ePaper 产品的参考指南——VS Code 安装、项目结构、platformio.ini 配置、Seeed_GFX 设置以及按产品选择环境。
+description: 使用 PlatformIO 搭配 Seeed ePaper 产品的参考指南——VS Code 设置、项目结构、platformio.ini 配置、Seeed_GFX 设置以及按产品选择环境。
 title: 使用 PlatformIO 开发
 keywords:
   - ePaper 显示屏
@@ -60,17 +60,17 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY 套件</strong></td>
       <td>XIAO ESP32-S3 系列</td>
-      <td>当你编写自定义 Arduino 风格固件、而不是使用 TRMNL 云固件时，请使用 ESP32-S3 环境。</td>
+      <td>当你编写自定义 Arduino 风格固件而不是使用 TRMNL 云固件时，请使用 ESP32-S3 环境。</td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper 面板</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td>使用 XIAO ESP32-C3 的 PlatformIO 环境，然后参考产品菜谱进行与屏幕对应的 `driver.h` 配置。</td>
+      <td>使用 XIAO ESP32-C3 的 PlatformIO 环境，然后参考产品菜谱完成与屏幕对应的 `driver.h` 配置。</td>
     </tr>
     <tr>
       <td><strong>EN04 / EN05 以及基于 nRF52840 的 ePaper 板卡</strong></td>
       <td>XIAO nRF52840 系列</td>
-      <td>在固件开发中使用 nRF52840 的 PlatformIO 环境。如果尚未发布针对某款 ePaper 的专用菜谱，请将本页作为环境参考，并结合产品原理图/菜谱获取引脚信息。</td>
+      <td>使用 nRF52840 的 PlatformIO 环境进行固件开发。如果尚未发布针对某款 ePaper 的专用菜谱，请将本页作为环境参考，并结合产品原理图/菜谱获取引脚信息。</td>
     </tr>
   </table>
 </div>
@@ -88,7 +88,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 - 它通过 `lib_deps` 下载库，使项目更容易在另一台电脑上复现。
 - 它在 VS Code 中提供构建、上传、清理和串口监视器任务。
 
-在显示绘图和硬件 API 方面，继续使用 Arduino 菜谱中相同的 Arduino 风格 C/C++ 代码即可。PlatformIO 主要改变的是项目布局和配置方式。
+在显示绘图和硬件 API 方面，继续使用 Arduino 菜谱中相同的 Arduino 风格 C/C++ 代码。PlatformIO 主要改变的是项目布局和配置方式。
 
 ## 步骤 1：安装 VS Code 和 PlatformIO
 
@@ -100,7 +100,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:1000, height:'auto'}}/></div>
 
-**步骤 3。** 扩展安装完成后重启 VS Code。
+**步骤 3。** 在扩展安装完成后重启 VS Code。
 
 **步骤 4。** 从 VS Code 活动栏中的 PlatformIO 图标打开 **PlatformIO Home**。
 
@@ -108,7 +108,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 如果你在 VS Code 中使用 PlatformIO IDE，PlatformIO Core 已包含在扩展中。只有当你希望在 VS Code 之外使用 `pio` 命令时，才需要单独安装 PlatformIO Core。
 :::
 
-## 步骤 2：创建一个 PlatformIO 项目
+## 步骤 2：创建 PlatformIO 项目
 
 **步骤 1。** 在 **PlatformIO Home** 中选择 **New Project**。
 
@@ -159,7 +159,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 
 `platformio.ini` 是 PlatformIO 项目的核心。每个 `[env:name]` 段定义一个构建环境。环境会告诉 PlatformIO 要为哪块开发板编译、使用哪个框架、下载哪些库，以及如何上传或监视固件。
 
-对于初学者，最简单的工作流是从 [步骤 4](#step-4-copy-the-configuration-for-your-device) 复制适用于你设备的完整配置，粘贴到 `platformio.ini` 中，然后创建匹配的 `driver.h` 文件。你不需要自己把一个共享基础段和另一个设备段合并起来。
+对于初学者，最简单的工作流是从 [步骤 4](#step-4-copy-the-configuration-for-your-device) 复制适用于你设备的完整配置，粘贴到 `platformio.ini` 中，然后创建匹配的 `driver.h` 文件。你不需要自己将一个共享基础段与另一个设备段合并。
 
 最重要的字段包括：
 
@@ -187,7 +187,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
     </tr>
     <tr>
       <td><code>monitor_speed</code></td>
-      <td>串口监视器波特率。应与固件中的 <code>Serial.begin(...)</code> 保持一致。</td>
+      <td>串口监视器波特率。它应与固件中的 <code>Serial.begin(...)</code> 保持一致。</td>
       <td><code>monitor_speed = 115200</code></td>
     </tr>
     <tr>
@@ -202,12 +202,12 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
     </tr>
     <tr>
       <td><code>build_flags</code></td>
-      <td>额外的编译器定义。仅在产品菜谱或库有要求时使用。</td>
+      <td>额外的编译器定义。仅当你的产品菜谱或库有要求时才使用。</td>
       <td><code>-DBOARD_HAS_PSRAM</code></td>
     </tr>
     <tr>
       <td><code>upload_port</code></td>
-      <td>可选的固定串口。如果你更喜欢 PlatformIO 自动检测，可以不设置。</td>
+      <td>可选的固定串口。如果你更喜欢 PlatformIO 自动检测，请保持未设置。</td>
       <td><code>upload_port = /dev/ttyACM0</code></td>
     </tr>
   </table>
@@ -219,7 +219,7 @@ PlatformIO 项目只是构建和上传环境。显示仍然依赖正确的 `driv
 
 ## 步骤 4：复制适用于你设备的配置
 
-选择与你设备对应的标签页，复制整个 `platformio.ini` 代码块，并将其粘贴到 PlatformIO 项目中的 `platformio.ini` 文件里。每个标签页中都刻意完整重复了配置，因此你不需要把共享基础段和设备段手动合并。
+选择你的设备标签页，复制整个 `platformio.ini` 代码块，并将其粘贴到 PlatformIO 项目中的 `platformio.ini` 文件里。每个标签页中都刻意完整重复了配置，因此你不需要将共享基础段与设备段合并。
 
 :::tip
 第一次构建可能会花费更长时间，因为 PlatformIO 需要下载 Seeed 的平台包、工具链、Arduino 框架以及 `Seeed_GFX` 库。
@@ -394,7 +394,7 @@ lib_deps = https://github.com/Seeed-Studio/Seeed_GFX
 </TabItem>
 <TabItem value="en04-en05" label="EN04 / EN05">
 
-将此配置用作 **EN04 / EN05** 基于 nRF52840 的 ePaper 板卡在 PlatformIO 中的起点：
+将此配置用作 **EN04 / EN05** 基于 nRF52840 的 ePaper 板卡的 PlatformIO 起点：
 
 ```ini
 [env:en04_en05]
@@ -506,12 +506,12 @@ EN04 / EN05 的显示驱动、引脚映射和库依赖应遵循你所基于的�
     </tr>
     <tr>
       <td><strong>Clean</strong></td>
-      <td>删除之前的构建输出。在更改板卡包、PSRAM 设置或主要构建标志后使用此操作。</td>
+      <td>删除之前的构建输出。在更改板卡包、PSRAM 设置或主要构建标志后使用。</td>
     </tr>
   </table>
 </div>
 
-如果项目有多个环境，请在构建或烧录之前，从 PlatformIO 项目任务中选择目标环境。
+如果项目包含多个环境，请在构建或烧录之前，从 PlatformIO 项目任务中选择目标环境。
 
 ## 可选：使用 Seeed_GxEPD2 库
 
@@ -519,7 +519,7 @@ EN04 / EN05 的显示驱动、引脚映射和库依赖应遵循你所基于的�
 
 仅当项目代码是为 `Seeed_GxEPD2` / `GxEPD2` API 编写时才使用此选项。如果你的代码遵循标准的 `Seeed_GFX` 示例，请在 `lib_deps` 中保留 `Seeed_GFX`。
 
-例如，可以将 reTerminal E1001 的配置修改为如下所示：
+例如，可以将 reTerminal E1001 配置修改为如下所示：
 
 ```ini
 [env:reterminal_e1001]
@@ -535,7 +535,7 @@ build_flags =
 lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
 ```
 
-此处仅展示一个显示库以保持配置清晰。如果你的项目需要额外的库，请在 `lib_deps` 下以单独的行添加它们。
+此处仅展示一个显示库，以保持配置清晰。如果你的项目需要额外的库，请在 `lib_deps` 下以单独的行添加它们。
 
 ## 接下来去哪里
 
@@ -545,14 +545,14 @@ lib_deps = https://github.com/Seeed-Projects/Seeed_GxEPD2
 - [XIAO ePaper Driver Boards PlatformIO Cookbook](/cn/ee04_with_platformio) — 以 EE04 为运行示例的 EE0x PlatformIO 工作流。
 - [reTerminal E 系列 Arduino cookbook](/cn/reterminal_e10xx_with_arduino) — 适用于 E1001 / E1002 / E1003 / E1004 的显示示例。
 - [reTerminal E 系列板载外设 cookbook](/cn/reterminal_e10xx_with_arduino_peripherals) — 按键、蜂鸣器、电池监测、SHT4x 传感器和 microSD 示例。
-- [XIAO 7.5" ePaper Panel Arduino 指南](/cn/xiao_075inch_epaper_panel_arduino) — 基于 XIAO ESP32-C3 面板的产品专用设置。
-- [TRMNL DIY Kit Arduino 指南](/cn/ogdiy_kit_works_with_arduino) — 面向 TRMNL Kit 硬件的自定义 Arduino 固件路径。
+- [XIAO 7.5" ePaper Panel Arduino 指南](/cn/xiao_075inch_epaper_panel_arduino) — 针对基于 XIAO ESP32-C3 面板的产品专用设置。
+- [TRMNL DIY Kit Arduino 指南](/cn/ogdiy_kit_works_with_arduino) — 面向 TRMNL 套件硬件的自定义 Arduino 固件路径。
 
 ## 常见问题
 
 ### Q1：为什么 PlatformIO 的板卡列表中没有显示我的 Seeed 开发板？
 
-对于许多 Seeed 开发板来说，这是预期行为。本指南中使用的板卡定义来自 Seeed 的 PlatformIO 平台包，因此在安装该平台包之前，它们可能不会出现在 PlatformIO 默认的 **New Project** 板卡搜索中。
+对于许多 Seeed 开发板，这是预期行为。本指南中使用的板卡定义来自 Seeed 的 PlatformIO 平台包，因此在安装该平台包之前，它们可能不会出现在 PlatformIO 默认的 **New Project** 板卡搜索中。
 
 在 `platformio.ini` 中直接使用 Seeed 的平台包 URL：
 
@@ -575,7 +575,7 @@ board = seeed-xiao-esp32-s3-sense
 - 使用 [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/) 重新生成 `driver.h`。
 - 确认所选的开发板和显示屏与实际硬件相匹配。
 - 确认生成的 `BOARD_SCREEN_COMBO` 对包含 `Seeed_GFX` 的源文件是可见的。
-- 对于具有大缓冲区的 ESP32-S3 产品，确认产品使用手册中是否要求设置 PSRAM。
+- 对于具有大缓冲区的 ESP32-S3 产品，确认产品菜谱中是否要求设置 PSRAM。
 
 ### Q3：为什么 PlatformIO 无法向开发板上传固件？
 
@@ -589,22 +589,22 @@ upload_speed = 115200
 
 - 使用支持数据传输的 USB-C 线缆。
 - 断开其他串口设备后再试。
-- 仅在自动检测选择了错误端口时才设置 `upload_port`。
+- 仅当自动检测选择了错误的端口时才设置 `upload_port`。
 - 对于基于 ESP32 的开发板，如果开发板不会自动进入下载模式，请在连接 USB 时按住 boot 按钮。
 
 ## 资源
 
-- **[Docs]** [PlatformIO 项目配置文件](https://docs.platformio.org/en/stable/projectconf/index.html)
-- **[Docs]** [适用于 VS Code 的 PlatformIO IDE](https://docs.platformio.org/en/stable/integration/ide/pioide.html)
+- **[文档]** [PlatformIO 项目配置文件](https://docs.platformio.org/en/stable/projectconf/index.html)
+- **[文档]** [VS Code 的 PlatformIO IDE](https://docs.platformio.org/en/stable/integration/ide/pioide.html)
 - **[GitHub]** [Seeed PlatformIO 平台包](https://github.com/Seeed-Studio/platform-seeedboards)
 - **[GitHub]** [Seeed PlatformIO Arduino Blink 示例](https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/arduino-blink)
 - **[GitHub]** [Seeed_GFX 库](https://github.com/Seeed-Studio/Seeed_GFX)
-- **[Tool]** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
+- **[工具]** [Seeed GFX Configuration Tool](https://seeed-studio.github.io/Seeed_GFX/)
 - **[Wiki]** [适用于 Arduino 支持开发板的 PlatformIO](/cn/Software-PlatformIO)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

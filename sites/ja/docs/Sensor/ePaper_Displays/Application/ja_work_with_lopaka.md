@@ -89,9 +89,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **Step 6.** **Tools > Port** から正しいポートを選択します。
 
-### Lopaka の登録と使用
+### Lopaka の登録と利用
 
-Lopaka は、組み込みグラフィックス開発専用に設計されたグラフィックエディタです。ユーザーが独自の UI インターフェースをカスタマイズして作成できるようにし、複数のフォントリソースを内蔵しており、Arduino や ESP32 の OLED、TFT、LCD ディスプレイと組み合わせて使用すると非常に便利です。Lopaka はスケッチに直接適用できる C コードを自動生成でき、開発効率を大幅に向上させます。
+Lopaka は、組み込みグラフィックス開発専用に設計されたグラフィックエディタです。ユーザーは独自の UI インターフェースを自由に作成でき、複数のフォントリソースが内蔵されており、Arduino や ESP32 の OLED、TFT、LCD ディスプレイと組み合わせて使用すると非常に便利です。Lopaka はスケッチに直接適用できる C コードを自動生成でき、開発効率を大幅に向上させます。
 
 **Step 1.** [登録](https://lopaka.app/)
 
@@ -109,8 +109,8 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_3.png" style={{width:800, height:'auto'}}/></div>
 
 - **Titile**: プロジェクト名。ここでは hello を選択しました。
-- **Platform**: 開発に選択したプラットフォーム。reTeerminal E シリーズでは AdfruitGFX Color を使用します。
-- **Screen**: 画面サイズの選択。"Custom" をクリックしてサイズをカスタマイズします。reTeerminal E シリーズの画面サイズは 800×480 です。
+- **Platform**: 開発に選択したプラットフォーム。reTerminal E シリーズでは AdfruitGFX Color を使用します。
+- **Screen**: 画面サイズの選択。"Custom" をクリックしてサイズをカスタマイズします。reTerminal E シリーズの画面サイズは 800×480 です。
 - **Background**: 画面の背景色。デフォルトでは黒です。より良い表示のため、ここでは黄色に変更しました。
 その後、"SUBMIT" をクリックしてプロジェクトを作成します。
 
@@ -118,8 +118,8 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/create_project_4.png" style={{width:800, height:'auto'}}/></div>
 
-- **Layers**：レイヤー名。カスタム命名がサポートされています。
-- **Screens**：複数のスクリーンを作成でき、異なるアイデアを保存するのに役立ちます。
+- **Layers**：レイヤー名。任意の名前を付けることができます。
+- **Screens**：複数のスクリーンを作成でき、異なるアイデアを保存することができます。
 - **CODE**：生成されるコードは C 言語です。
 - **IMAGES**：Lopaka の公式画像タイプです。
 - **Code settings**：生成されるコードの設定です。すべての項目にチェックを入れることをおすすめします。
@@ -131,9 +131,9 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 左から右へ
 
 - **"Gear"**: プロジェクトを管理します。ここではプロジェクト名の再定義、画面サイズや背景色の調整ができますが、Platform の変更は、プロジェクトを削除または再作成しない限りサポートされていません。
-- **Toolbar**: この行のツールバーの機能は、Select、Paint、String、Rectangle、Circle、Line、Image です。
+- **Toolbar**: この行のツールバーの機能は、選択、塗りつぶし、文字列、長方形、円、線、画像です。
 - **Slider**: ここではキャンバスのサイズを調整でき、細かい操作が可能になります。
-- **Frok and SHARE**: 他の人のプロジェクトを frok したり、自分のプロジェクトを共有したりできます。
+- **Frok and SHARE**: 他の人のプロジェクトをフォークしたり、自分のプロジェクトを共有したりできます。
 - **Price Gally Blog Feedback**: Price では、Lopaka のさまざまなレベルを購読して追加機能にアクセスできます。Gally はオープンソースのエンジニアリングマーケットプレイスです。Blog は Lopaka の更新ログです。Feedback はフィードバックを送信するためのものです。
 - **Shortcuts**: いくつかのショートカットキーのヒントです。
 
@@ -142,7 +142,7 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 - "String" を選択し、キャンバスをクリックします。
 - 右側のカラムで "Font" を選択し、Adafruit 5×7 などのフォントを選びます。
 - "Hello World!" と入力し、"Size" を 6 に設定し、好みの色を選択します。ここでは緑を選びました。
-- その後、画面の中央位置に移動します。そのあと、「CODE」内に必要なプロジェクトコードが生成されます。
+- その後、画面の中央位置に移動します。これで、必要なプロジェクトコードが "CODE" 内に生成されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -165,7 +165,7 @@ Lopaka は、組み込みグラフィックス開発専用に設計されたグ�
 **Step 2.** Arduino IDE で ZIP ファイルを追加してライブラリをインストールします。**Sketch > Include Library > Add .ZIP Library** に移動し、ダウンロードした ZIP ファイルを選択します。
 
 :::note
-以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino ライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio のディスプレイ向けに追加機能を備えた TFT_eSPI のフォークであるためです。
+以前に TFT_eSPI ライブラリをインストールしている場合、競合を避けるために、一時的に Arduino ライブラリフォルダから削除するか名前を変更する必要があるかもしれません。Seeed_GFX は、Seeed Studio 製ディスプレイ向けの追加機能を備えた TFT_eSPI のフォークであるためです。
 :::
 
 ### reTerminal E1002 のプログラミング
@@ -199,7 +199,7 @@ reTerminal E1001 を使用している場合は、次のコードをコピーし
 **Step 5.** 修正手順
 
 - Lopaka ページの CODE コードを Arduino 環境にコピーします。
-- 小文字の "epaper" を "tft" に置き換えます。Ctrl + F でグローバル検索を開き、"epaper" と入力してから `Aa` をクリックして大文字と小文字を区別しない検索に切り替え、その後 "tft" と入力して「Global Replace」をクリックします。
+- 小文字の "epaper" を "tft" に置き換えます。Ctrl + F でグローバル検索を開き、"epaper" を入力してから `Aa` をクリックして大文字と小文字を区別しない検索に切り替え、その後 "tft" を入力して「Global Replace」をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/hello_world_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -220,7 +220,7 @@ Here is the 6 colors you can display:
 
 </details>
 
-- `tft.fillScreen(TFT_WHITE)` のパラメータを TFF_YELLOW に置き換えます。
+- `tft.fillScreen(TFT_WHITE)` のパラメータを TFF_YELLOW に置き換えます
 - `tft.setTextColor(0x4D6A)` の 0x4D6A を TFT_GREEN に置き換えます。
 - `setup` 関数を修正し、`tft.fillScreen(TFT_WHITE)` と `tft.update` の間の内容を `draw()` に置き換えます。
 
@@ -415,12 +415,12 @@ void loop()
 
 </details>
 :::tip
-無料版の Lopaka を使用している場合、インポートした画像は画像全体の色変更のみサポートされ、画像の特定の細部の変更はサポートされません。
+無料版の Lopaka を使用している場合、インポートした画像は画像全体の色変更のみがサポートされ、画像の特定の細部の変更はサポートされません。
 :::
 
 - 効果の提示
 
-  プログラムをアップロードし、電子ペーパー画面がリフレッシュされるのを待ちます。
+  プログラムをアップロードし、電子ペーパー画面がリフレッシュされるまで待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/dragon_3.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -461,7 +461,7 @@ void loop()
 
 <details>
 
-<summary>Code</summary>
+<summary>コード</summary>
 
 ```cpp
 /*This is a 6-color electronic ink screen, which can only display 6 colors. 

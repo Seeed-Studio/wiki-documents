@@ -1,6 +1,6 @@
 ---
 description: reTerminal E1003 es una pantalla de papel electrónico monocromática de código abierto de 10,3 pulgadas que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con compatibilidad con interacción táctil en el firmware HMI v1.1.2.
-title: Introducción a reTerminal E1003
+title: Primeros pasos con reTerminal E1003
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.webp
 slug: /getting_started_with_reterminal_e1003
 sidebar_position: 4
@@ -15,7 +15,7 @@ url: https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1003/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Introducción a reTerminal E1003
+# Primeros pasos con reTerminal E1003
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1003/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-reTerminal E1003 es una pantalla de papel electrónico monocromática de 10,3 pulgadas con soporte táctil y de código abierto, que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con una duración de batería de hasta 6 meses (basado en una actualización por día). Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz de usuario sin código [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) para una creación de paneles de control sin esfuerzo. Ya sea para visualización y control de paneles de hogar inteligente, pantallas de información de oficina o proyectos educativos, este dispositivo listo para usar con función táctil ofrece imágenes impresionantes y una personalización flexible para satisfacer todas tus necesidades.
+reTerminal E1003 es una pantalla de papel electrónico monocromática de 10,3 pulgadas con soporte táctil y de código abierto, que ofrece 16 niveles de escala de grises y una alta resolución de 1404×1872 píxeles, con una duración de batería de hasta 6 meses (basada en una actualización por día). Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz de usuario sin código [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) para una creación de paneles sencilla. Ya sea para visualización y control de paneles de hogar inteligente, pantallas de información en oficinas o proyectos educativos, este dispositivo listo para usar con función táctil ofrece imágenes impresionantes y una personalización flexible para satisfacer todas tus necesidades.
 
 :::tip
 La interacción táctil para reTerminal E1003 es compatible a partir del firmware v1.1.2 de [SenseCraft HMI](https://sensecraft.seeed.cc/hmi). La versión más reciente actualmente es la v1.1.4.3; recomendamos actualizar a ella para obtener la mejor experiencia.
@@ -38,7 +38,7 @@ El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará dispon
 
 ### Características
 
-- Actualización completa de 3 segundos para paneles de control ePaper más rápidos y receptivos
+- Actualización completa en 3 segundos para paneles de papel electrónico más rápidos y con mejor respuesta
 - Crea interfaces interactivas fácilmente con [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) y compatibilidad táctil
 - Imágenes nítidas con pantalla de papel electrónico de 16 niveles de escala de grises y alta resolución
 - Hasta 6 meses de duración de batería (basado en una actualización por día)
@@ -63,11 +63,11 @@ El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará dispon
 		</tr>
 		<tr>
 			<td align="center"><strong>Almacenamiento</strong></td>
-			<td align="center">Flash de 32 MB; admite una tarjeta microSD</td>
+			<td align="center">Flash de 32 MB; admite tarjeta microSD</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Pantalla</strong></td>
-			<td align="center">10,3" Monocromática / 16 niveles de escala de grises</td>
+			<td align="center">10,3" monocromática / 16 niveles de escala de grises</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Resolución</strong></td>
@@ -79,7 +79,7 @@ El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará dispon
 		</tr>
 		<tr>
 			<td align="center"><strong>Conectividad inalámbrica</strong></td>
-			<td align="center">Wi-Fi 2,4GHz 802.11 b/g/n, Bluetooth 5.0</td>
+			<td align="center">Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 5.0</td>
 		</tr>
 		<tr>
 			<td align="center"><strong>Sensores</strong></td>
@@ -102,7 +102,7 @@ El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará dispon
 			<td align="center">USB-C 5V/1A</td>
 		</tr>
 		<tr>
-			<td align="center"><strong>Temperatura de funcionamiento</strong></td>
+			<td align="center"><strong>Temperatura de trabajo</strong></td>
 			<td align="center">0-40°C</td>
 		</tr>
 		<tr>
@@ -115,39 +115,39 @@ El soporte de ESPHome para reTerminal E1003 está en desarrollo y estará dispon
 
 ## Aplicaciones
 
-- **Paneles de control para automatización del hogar:** Muestra datos en tiempo real del hogar inteligente como temperatura, humedad y calidad del aire mediante Home Assistant.
-- **Marco de fotos electrónico monocromático de bajo consumo:** Con [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) o la app, puedes subir fácilmente una serie de fotos de tu álbum de forma remota. Combinado con una gran pantalla de tinta electrónica monocromática de alta resolución, ofrece una visualización de imágenes de ultra bajo consumo, para que ya no tengas que preocuparte por la duración de la batería.
-- **Pantallas inteligentes para oficina:** Muestra la disponibilidad de salas de reuniones, horarios de oficina o señalización direccional en pantallas ePaper de bajo consumo y siempre encendidas.
-- **Pantallas de información para comercios y espacios públicos:** Señalización ePaper de bajo consumo para menús, horarios o indicadores de ocupación con larga duración de batería.
+- **Paneles de automatización del hogar:** Muestra en tiempo real datos del hogar inteligente como temperatura, humedad y calidad del aire a través de Home Assistant.
+- **Marco de fotos electrónico monocromático de bajo consumo:** Con [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) o la app, puedes subir fácilmente una serie de fotos de tu álbum de forma remota. Combinado con una gran pantalla de tinta electrónica monocromática de alta resolución, ofrece una visualización de imágenes de ultra bajo consumo, para que no tengas que preocuparte por la duración de la batería.
+- **Pantallas inteligentes para oficinas:** Muestra la disponibilidad de salas de reuniones, horarios de oficina o señalización direccional en pantallas de papel electrónico de bajo consumo y siempre encendidas.
+- **Pantallas de información para comercios y espacios públicos:** Señalización de papel electrónico de bajo consumo para menús, horarios o indicadores de ocupación con larga duración de batería.
 
 
-## Descripción del hardware
+## Descripción general del hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/208.png" style={{width:1000, height:'auto'}}/></div>
 
-1. **Botón de actualización de pantalla:** Situado en la parte superior del dispositivo para la actualización manual de la pantalla.
+1. **Botón de actualización de pantalla:** Situado en la parte superior del dispositivo para actualizar la pantalla manualmente.
 2. **Botones de avance y retroceso de página:** Situados en la parte superior del dispositivo para navegar entre páginas.
-3. **Área de la antena Wi-Fi:** Situada en la parte inferior del dispositivo para la conectividad Wi-Fi.
+3. **Zona de la antena Wi-Fi:** Situada en la parte inferior del dispositivo para la conectividad Wi-Fi.
 4. **Ranura para tarjeta MicroSD / TF:** Para almacenamiento ampliable (FAT32, hasta 32GB).
 5. **Interruptor de encendido:** Para encender o apagar el dispositivo.
 6. **LED rojo de alimentación:** Indica el estado de carga de la batería.
 7. **LED verde de estado:** Indica el estado operativo o del sistema actual.
 8. **Puerto USB-C de datos y carga:** Para cargar el dispositivo y la transmisión de datos.
 9. **Puerto de expansión:** Cabecera de pines que proporciona conexiones VDD, GND, I2C y GPIO para sensores, módulos o periféricos externos.
-10. **Orificios roscados para montaje del soporte:** Orificios roscados en la parte posterior del dispositivo para fijar el soporte.
+10. **Orificios roscados para el soporte:** Orificios roscados en la parte posterior del dispositivo para fijar el soporte.
 11. **Soporte de apoyo impreso en 3D:** El soporte incluido como accesorio para mantener el dispositivo en posición vertical sobre una superficie plana.
 12. **Tornillos de montaje del soporte:** Tornillos utilizados para fijar el soporte al dispositivo.
 
 ## Primeros pasos
 
-El reTerminal E1003 viene preinstalado con firmware que es compatible con **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**, una plataforma sin código que te permite diseñar y desplegar paneles de control personalizados sin esfuerzo.
+El reTerminal E1003 viene preinstalado con firmware que es compatible con **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**, una plataforma sin código que te permite diseñar y desplegar paneles personalizados sin esfuerzo.
 
 ### Preparativos
 
-**Paso 1.** Desempaqueta tu reTerminal E1003 y asegúrate de que todos los componentes estén incluidos:
+**Paso 1.** Desempaqueta tu reTerminal E1003 y asegúrate de que se incluyen todos los componentes:
 
-- Pantalla ePaper reTerminal E1003
-- Cable USB Tipo-C
+- Pantalla de papel electrónico reTerminal E1003
+- Cable USB tipo C
 - Guía de inicio rápido
 - Destornillador
 - Tornillos
@@ -155,7 +155,7 @@ El reTerminal E1003 viene preinstalado con firmware que es compatible con **[Sen
 
 **Paso 2.** (Opcional) Instala el soporte de apoyo impreso en 3D para colocar el dispositivo en posición vertical:
 
-Localiza el soporte de apoyo impreso en 3D incluido en el paquete. Coloca el soporte contra la zona de montaje designada en la parte posterior del reTerminal E1003 donde se encuentran las tuercas incrustadas. Utiliza un destornillador para fijar el soporte al dispositivo apretando los tornillos en las tuercas incrustadas en la parte posterior del reTerminal E1003. Una vez fijado de forma segura, coloca el reTerminal E1003 sobre una superficie plana donde el soporte lo mantendrá en posición vertical.
+Localiza el soporte de apoyo impreso en 3D incluido en el paquete. Coloca el soporte contra la zona de montaje designada en la parte posterior del reTerminal E1003 donde se encuentran las tuercas incrustadas. Utiliza un destornillador para fijar el soporte al dispositivo apretando los tornillos en las tuercas incrustadas en la parte posterior del reTerminal E1003. Una vez fijado de forma segura, coloca el reTerminal E1003 sobre una superficie plana donde el soporte lo mantenga en posición vertical.
 
 :::note
 El soporte proporciona un ángulo de visión fijo y no se puede ajustar. Esta posición fija está diseñada para ofrecer una visibilidad óptima en la mayoría de los escenarios de uso.
@@ -164,7 +164,7 @@ El soporte proporciona un ángulo de visión fijo y no se puede ajustar. Esta po
 **Paso 3.** (Opcional) Inserta una tarjeta microSD si planeas usar el dispositivo como marco de fotos digital o necesitas almacenamiento adicional.
 
 :::note
-La pantalla ePaper reTerminal E Serie solo admite tarjetas MicroSD de hasta 32GB en formato FAT32.  
+La pantalla de papel electrónico reTerminal E Serie solo admite tarjetas MicroSD de hasta 32GB en formato FAT32.  
 La tarjeta SD de 32GB viene formateada como exFAT por defecto. Después de formatearla a FAT32, se puede montar correctamente y utilizar para almacenar imágenes.
 :::
 
@@ -202,7 +202,7 @@ Abre la app **CH34xVCPDriver** desde Launchpad, haz clic en **Install**, luego v
 </div>
 
 **Paso 3. Conecta y verifica**
-Asegúrate de que el **interruptor de encendido del dispositivo esté ON** y utiliza un **cable USB-C de datos** (no solo de carga). Abre Terminal y ejecuta:
+Asegúrate de que el **interruptor de encendido del dispositivo esté en ON** y utiliza un **cable USB-C de datos** (no solo de carga). Abre Terminal y ejecuta:
 ```bash
 ls /dev/tty.wch*
 # Expected output: /dev/tty.wchusbserialxxx
@@ -241,7 +241,7 @@ Por lo tanto, debemos completar los siguientes pasos de configuración de red du
 ### Configuración de red
 
 <Tabs>
-<TabItem value="Network Setup via PC" label="Configuración de red mediante PC" default>
+<TabItem value="Network Setup via PC" label="Network Setup via PC" default>
 
 **Paso 1.** Conéctate al punto de acceso Wi‑Fi del dispositivo desde tu teléfono inteligente o computadora. El nombre del AP aparecerá en la pantalla (no se requiere contraseña). Las credenciales de la red son `reTerminal E1003-{MAC Address}`.
 
@@ -256,7 +256,7 @@ Si introduces una contraseña incorrecta, simplemente vuelve a introducirla y en
 **Paso 3.** Selecciona tu red Wi‑Fi local e introduce la contraseña, luego haz clic en "Connect".
 
 :::note
-La pantalla de tinta electrónica reTerminal E Serie solo admite redes Wi‑Fi de 2,4 GHz, no de 5 GHz ni otras bandas.
+La pantalla de tinta electrónica reTerminal E Serie solo admite redes Wi‑Fi de 2,4 GHz, no de 5 GHz ni de otras bandas.
 :::
 
 **Paso 4.** Una vez que la conexión sea exitosa, el dispositivo emitirá un pitido de confirmación y mostrará una pantalla con el código de emparejamiento.
@@ -273,20 +273,20 @@ La pantalla de tinta electrónica reTerminal E Serie solo admite redes Wi‑Fi d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/225.png" style={{width:600, height:'auto'}}/></div>
 
-**Paso 3.** Nombra tu dispositivo e introduce el código de emparejamiento que se muestra en la pantalla de tu dispositivo y haz clic en **Create**.
+**Paso 3.** Asigna un nombre a tu dispositivo e introduce el código de emparejamiento que se muestra en la pantalla de tu dispositivo y haz clic en **Create**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
-**Paso 4.** Una vez emparejado, el dispositivo mostrará un mensaje que te pedirá que crees tu primer panel.
+**Paso 4.** Una vez emparejado, el dispositivo mostrará un mensaje invitándote a crear tu primer panel.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/231.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup via SenseCraft APP" label="Configuración de red mediante SenseCraft APP">
+<TabItem value="Network Setup via SenseCraft APP" label="Network Setup via SenseCraft APP">
 
 Este método utiliza la aplicación móvil SenseCraft para configurar la red del dispositivo y añadirlo a tu cuenta de SenseCraft mediante Bluetooth.
 
-Primero, descarga la aplicación SenseCraft. Puedes encontrarla buscando "SenseCraft" en Google Play Store o Apple App Store. Alternativamente, puedes descargarla desde este sitio web.
+Primero, descarga la aplicación SenseCraft. Puedes encontrarla buscando "SenseCraft" en Google Play Store o en Apple App Store. Alternativamente, puedes descargarla desde este sitio web.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -294,7 +294,7 @@ Primero, descarga la aplicación SenseCraft. Puedes encontrarla buscando "SenseC
     </a>
 </div><br />
 
-**Paso 1.** Abre la aplicación SenseCraft, inicia sesión en tu cuenta y ve a la pestaña **User**. Toca **Device Bluetooth Configuration** para comenzar el proceso.
+**Paso 1.** Abre la aplicación SenseCraft, inicia sesión en tu cuenta y navega a la pestaña **User**. Toca **Device Bluetooth Configuration** para comenzar el proceso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -318,7 +318,7 @@ El dispositivo solo se puede configurar mediante una red Wi‑Fi de 2,4 GHz.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 6.** Tu reTerminal aparecerá ahora en tu lista de dispositivos en la pestaña principal **Device** de la aplicación, conectado correctamente a tu cuenta de SenseCraft.
+**Paso 6.** Tu reTerminal ahora aparecerá en tu lista de dispositivos en la pestaña principal **Device** de la aplicación, conectado correctamente a tu cuenta de SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -333,7 +333,7 @@ El dispositivo solo se puede configurar mediante una red Wi‑Fi de 2,4 GHz.
 
 Después de que el dispositivo se añada correctamente a tu cuenta de SenseCraft, la plataforma comprobará automáticamente la versión del firmware. Si hay un firmware más reciente disponible, se te pedirá que lo actualices.
 
-También puedes comprobar manualmente la versión del firmware en cualquier momento:
+También puedes comprobar la versión del firmware manualmente en cualquier momento:
 
 **Paso 1.** En la página **Device**, busca tu reTerminal E1003 para ver sus detalles y toma nota de la **versión actual del firmware**.
 
@@ -347,9 +347,9 @@ También puedes comprobar manualmente la versión del firmware en cualquier mome
 
 1. **Selecciona tu dispositivo** — conecta el reTerminal E1003 a tu computadora mediante el cable USB‑C, asegúrate de que el interruptor de encendido esté en **ON**, luego haz clic en **Select** y elige tu dispositivo de la lista.
 
-2. **Selecciona el firmware** — elige el firmware más reciente del menú desplegable de versiones.
+2. **Selecciona el firmware** — elige el firmware más reciente en el menú desplegable de versiones.
 
-3. **Flash** — haz clic en **Flash** y espera a que se complete la actualización. Activa **Full Flash** solo si quieres restablecer el dispositivo al estado de fábrica (se borrarán todos los datos, ajustes y diseños).
+3. **Flash** — haz clic en **Flash** y espera a que la actualización se complete. Activa **Full Flash** solo si quieres restablecer el dispositivo al estado de fábrica (todos los datos, ajustes y diseños se borrarán).
 
 :::note
 
@@ -357,29 +357,29 @@ También puedes comprobar manualmente la versión del firmware en cualquier mome
 
 2. No es posible flashear el firmware correctamente cuando el dispositivo está apagado o en modo de suspensión. Si seleccionas el puerto correcto para tu dispositivo pero nunca ves el progreso de flasheo del firmware, puede que necesites activar el dispositivo presionando el botón **Refresh** en la parte superior de la unidad e intentarlo de nuevo.
 
-3. **Haz un Flash estándar** para mantener tu configuración: se conservan el Wi‑Fi, los diseños desplegados y las imágenes. **Haz un Full Flash para empezar desde cero**: se borran todos los datos, ajustes y diseños (estado de fábrica).
+3. **Haz un Flash estándar** para mantener tu configuración: se conservan el Wi‑Fi, los diseños desplegados y las imágenes. **Haz un Full Flash para empezar desde cero**: todos los datos, ajustes y diseños se borran (estado de fábrica).
 
 :::
 
 ## Muestra contenido en tu reTerminal E1003
 
-Una vez que tu dispositivo esté emparejado, puedes empezar a usarlo para mostrar lo que quieras. Recomendamos **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**, una plataforma en la nube sin código que te permite diseñar y desplegar contenido en tu reTerminal E1003 con solo unos pocos clics.
+Una vez que tu dispositivo esté emparejado, puedes empezar a usarlo para mostrar lo que quieras. Recomendamos **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**, una plataforma en la nube sin código que te permite diseñar y desplegar contenido en tu reTerminal E1003 en solo unos pocos clics.
 
 [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) tiene su propio Wiki dedicado con tutoriales completos y documentación de funciones. Para guías detalladas (configuración de cuenta, flasheo de firmware, uso avanzado del editor, despliegue, etc.), consulta:
 
 - **[SenseCraft HMI Wiki](https://sensecraft-hmi-docs.seeed.cc/en/)**
 
-Dado que este artículo es una **Guía de Inicio Rápido** del producto, no repetiremos el mismo contenido aquí: a continuación solo se muestra cómo visualizar algo rápidamente en tu reTerminal E1003.
+Dado que este artículo es una **Guía de inicio rápido** del producto, no repetiremos el mismo contenido aquí: a continuación solo se muestra cómo visualizar algo rápidamente en tu reTerminal E1003.
 
 ### Inicio — Comenzar desde una plantilla de la comunidad
 
-La forma más rápida de mostrar algo en tu pantalla es comenzar desde una plantilla ya preparada. En la página de **Inicio** de [SenseCraft HMI](https://sensecraft.seeed.cc/hmi), encontrarás una colección grande y en continuo crecimiento de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplícalo en tu reTerminal E1003 con un solo clic.
+La forma más rápida de mostrar algo en tu pantalla es comenzar desde una plantilla ya preparada. En la página de **Home** de [SenseCraft HMI](https://sensecraft.seeed.cc/hmi), encontrarás una colección grande y en continuo crecimiento de plantillas aportadas por la comunidad: paneles de control, relojes, paneles meteorológicos, muros de citas, calendarios, marcos de fotos y más. Explora la galería, elige el diseño que más te guste y desplícalo en tu reTerminal E1003 con un solo clic.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/206.png" style={{width:1000, height:'auto'}}/></div>
 
-### Espacio de trabajo — Gestiona y diseña tu propio contenido
+### Workspace — Gestiona y diseña tu propio contenido
 
-La página de **Espacio de trabajo** es donde gestionas todas las páginas y el contenido que se muestra en el dispositivo actualmente vinculado. Desde aquí puedes:
+La página de **Workspace** es donde gestionas todas las páginas y el contenido que se muestra en el dispositivo actualmente vinculado. Desde aquí puedes:
 
 - Crear y organizar tus propias páginas de diseño desde cero
 - Subir imágenes y organizarlas en presentaciones de diapositivas
@@ -420,7 +420,7 @@ Si necesitas conectarte a una red Wi‑Fi diferente:
 
 **Paso 1.** Mantén pulsados ambos botones de navegación (izquierdo y derecho) simultáneamente durante 2 segundos.
 
-**Paso 2.** El dispositivo entrará en modo de configuración Wi‑Fi y podrás seguir de nuevo los pasos de [Network Setup](#configuración-de-red) para conectarte a una nueva red.
+**Paso 2.** El dispositivo entrará en modo de configuración Wi‑Fi y podrás seguir de nuevo los pasos de [Network Setup](#network-setup) para conectarte a una nueva red.
 
 ### Indicadores LED
 
@@ -532,16 +532,16 @@ El conector de expansión de 6 pines (J2) tiene la siguiente distribución de pi
 
 ### P3: La pantalla no se actualiza
 
-- Pulsa el botón de actualización para forzar manualmente una actualización
+- Pulsa el botón de actualización para activar una actualización manualmente
 - Verifica que el dispositivo esté conectado a la red Wi‑Fi (sin icono de desconexión en la esquina)
-- Comprueba en tu cuenta de SenseCraft que el panel esté correctamente desplegado
+- Comprueba tu cuenta de SenseCraft para asegurarte de que el panel esté correctamente desplegado
 - Si el problema persiste, intenta reiniciar el dispositivo
 - Si el dispositivo sigue sin responder después de reiniciarlo, vuelve a flashear el firmware correspondiente en la plataforma [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) y comprueba si se restaura la actualización normal
 
 ### P4: Se perdió la conexión de red
 
 - El dispositivo intentará reconectarse automáticamente a las redes conocidas
-- Cuando se reconecte, el icono de desconexión de Wi‑Fi desaparecerá
+- Cuando se vuelva a conectar, el icono de desconexión de Wi‑Fi desaparecerá
 - Si no puede reconectarse, sigue el procedimiento de Restablecimiento de red anterior
 
 ### P5: No se puede encontrar el puerto serie (COM) en macOS
