@@ -501,8 +501,17 @@ This configuration:
 - Shows the card state on the ePaper screen.
 - Exposes `SD Card Detected` to Home Assistant as a binary sensor.
 
-:::note ESPHome SD card scope
-This ESPHome demo detects card insertion. It does not provide general-purpose file read/write operations such as opening files, creating folders, or recording WAV files to the SD card. For direct SD card file operations, use the Arduino SD card cookbook.
+:::note How ESPHome uses the microSD card
+In this ESPHome cookbook, the microSD card is used as a device status signal. The demo checks whether a card is inserted, shows the result on the screen, and exposes the same state to Home Assistant.
+
+This is because ESPHome is mainly designed for sensors, switches, displays, and Home Assistant automation. It is not usually used as a local file manager on the device. Tasks such as opening files, creating folders, writing logs, or recording WAV audio directly to the SD card are better handled with Arduino, where your firmware controls the SD card filesystem directly.
+
+In a typical ESPHome setup, the SD card status can be used to:
+- show whether storage is physically available;
+- trigger Home Assistant automations when a card is inserted or removed;
+- display hardware health information together with RTC, battery, and microphone status.
+
+If your goal is direct SD card file read/write, refer to the Arduino SD card cookbook instead.
 :::
 
 ## PDM Microphone Initialization
