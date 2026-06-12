@@ -10,8 +10,8 @@ slug: /how_to_use_camera_imx219
 last_update:
   date: 06/03/2026
   auther: Dongxu Jin
-  createdAt: '2026-6-3'
-  updatedAt: '2025-6-5'
+createdAt: '2026-06-03'
+updatedAt: '2026-06-05'
 url: https://wiki.seeedstudio.com/ja/how_to_use_camera_imx219/
 ---
 

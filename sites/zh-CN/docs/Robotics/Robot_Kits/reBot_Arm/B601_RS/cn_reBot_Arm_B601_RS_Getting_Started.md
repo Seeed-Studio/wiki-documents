@@ -150,7 +150,7 @@ sudo ip link set can0 up
 
 可选（可以在web上连接机械臂测试连接）
 
-在浏览器中打开地址 `https://rebot-devarm.w0x7ce.eu/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+在浏览器中打开地址 `https://motorbridge.github.io/motorbridge-studio/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 ```bash
 motorbridge-gateway -- --bind 127.0.0.1:9002 --transport socketcan --channel can0  

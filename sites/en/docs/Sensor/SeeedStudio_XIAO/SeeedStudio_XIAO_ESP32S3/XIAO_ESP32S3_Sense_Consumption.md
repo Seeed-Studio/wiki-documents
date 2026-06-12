@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 Here, I will present some simple examples to demonstrate the use of these low-power sleep modes. All ESP32 boards are versatile, and the development board I am using in this context is the XIAO ESP32S3 Sense.
 
-## Hadware Oview
+## Hadware Overview
 
 <div class="table-center">
   <table align="center">
@@ -51,6 +51,10 @@ In Deep-Sleep mode, the ESP32 powers off the CPUs, most of the RAM, and all digi
 - ULP coprocessor
 - RTC FAST memory
 - RTC SLOW memory
+
+:::warning
+**USB Peripheral Disabled During Deep Sleep:** All digital peripherals including the internal USB peripheral (USB-Serial-JTAG) will be powered off during Deep Sleep. **Serial output over USB will not be available** while the device is in Deep Sleep. If you need to debug, use an external USB-UART chip connected to the hardware UART pins.
+:::
 
 ### Wake-up Methods
 
@@ -731,6 +735,10 @@ To re-burn the program after entering deep sleep mode, hold down the boot button
 Light Sleep mode is another low-power mode in the ESP32 that allows the device to conserve energy while still maintaining a quick response time. In this mode, the CPU cores are halted, but the RAM and some peripherals remain powered on, allowing the device to wake up quickly in response to certain events.
 
 Light Sleep is ideal for applications that require low power consumption but still need to maintain a connection to WiFi or Bluetooth, as it allows the wireless communication modules to remain active.
+
+:::warning
+**USB Peripheral Disabled During Light Sleep:** The internal USB peripheral (USB-Serial-JTAG) will be disabled during Light Sleep for power saving. This means **Serial output over USB will not be available** while the device is in Light Sleep. If you are using the USB port to view Serial logs, you will not see any output during the sleep period. To debug, consider using an external USB-UART chip connected to the hardware UART pins, or use GPIO wake-up to monitor output after the device wakes up.
+:::
 
 ### Wake-up Methods
 

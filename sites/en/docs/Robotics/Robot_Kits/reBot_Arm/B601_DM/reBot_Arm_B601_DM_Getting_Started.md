@@ -17,7 +17,7 @@ last_update:
   date: 2026-04-13T00:00:00.000Z
   author: LiuJunjie
 createdAt: '2026-04-13'
-updatedAt: '2026-06-02'
+updatedAt: '2026-06-09'
 url: https://wiki.seeedstudio.com/rebot_b601_dm_getting_started/
 ---
 
@@ -79,6 +79,20 @@ Before Assembly:
 </div>
 
 ## Step 2: Reset Motors ID
+
+### AI AGENT
+
+:::tip
+This section is in beta. Please observe safety precautions during use. If AI suggestions differ from this documentation, follow this guide and seek assistance from our engineers.
+:::
+
+Let an AI AGENT assist you through this process. Copy the prompt below to your AI assistant:
+
+```text
+
+Please follow the workflow in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help me initialize the robotic arm.
+
+```
 
 ### Before Reset Motors:
   
@@ -151,10 +165,10 @@ conda activate rebot
 ### Step3: Install motorbridge
 
 :::tip
-If all scanned motors show offline, install motorbridge v0.2.9.
 
 **Note for macOS users:**
 If you experience low frame rates during teleoperation on macOS, it may be caused by an outdated WCH CH34x driver. For **macOS 10.14 and later**, the system includes a built-in `AppleUSBCHC0M` driver. You can uninstall the old driver and switch to the macOS built-in driver, which should effectively improve frame rates.
+
 :::
 
 After activating the reBot virtual environment, run the following command to install motorbridge:
@@ -173,7 +187,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### Step5: Open the motorbridge
 
-Open `https://rebot-devarm.w0x7ce.eu/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
+Open `https://motorbridge.github.io/motorbridge-studio/` in your browser, then click the help,Copy the command suitable for your system and driver board, check the IP and port, then press Enter in the terminal.
 
 For example on Windows:
 

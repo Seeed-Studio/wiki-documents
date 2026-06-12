@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-06-04 16:30:32 (北京时间)
-// 多语言页面: 2314 个
+// 生成时间: 2026-06-11 10:16:20 (北京时间)
+// 多语言页面: 2327 个
 
 (function() {
   'use strict';
@@ -1346,6 +1346,13 @@
     "ja",
     "pt"
   ],
+  "/how_to_use_camera_imx219": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
   "/issue_of_jetpack5_failing_to_boot_from_certain_ssd": [
     "cn",
     "en",
@@ -1361,6 +1368,13 @@
     "pt"
   ],
   "/make_diy_bsp_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer": [
     "cn",
     "en",
     "es",
@@ -3979,6 +3993,20 @@
     "pt"
   ],
   "/lora-e5_relay": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_command_list": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/wio-s3_wireless_module_introduction": [
     "cn",
     "en",
     "es",
@@ -12251,6 +12279,69 @@
     "pt"
   ],
   "/xiao_nrf54l15_zigbee": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_epaper_and_sdcard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_bluetooth_lowpower": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_matter": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_nfc": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_onboard": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_with_low_power": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_ncs": [
+    "cn",
+    "en",
+    "es",
+    "ja",
+    "pt"
+  ],
+  "/xiao_nrf54lm20a_pin_multiplexing": [
     "cn",
     "en",
     "es",

@@ -71,6 +71,20 @@ reBot Arm B601-DM 提供多种配置选项，以满足不同用户的需求。
 
 ## 第二步：写入电机ID及零点
 
+### AI AGNET
+
+:::tip
+该部分内容处于测试阶段，请在使用过程中注意安全操作，并且AI如果给出的提示与本文内容不符，请以本文为准，并向我们的工程师取得帮助
+:::
+
+尝试让AI AGENT来协助你完成这一过程,将下方提示词复制给你的 AI 助手
+
+```text
+
+请参考 AGENTS.md（https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/zh/AGENTS.md）中的流程，帮助用户完成新机械臂的初始化。
+
+```
+
 ### 电机复位前须知
 
 在进行电机参数配置前，请留意以下准备事项与安全规范：
@@ -142,7 +156,6 @@ conda activate rebot
 ### 步骤 3：安装 motorbridge
 
 :::tip
-如果发现电机扫描所有电机都是离线，请安装motorbridge0.2.9
 
 提示 macOS 用户注意：
 如果您在 macOS 上遥操时帧率偏低，可能是沁恒（WCH）CH34x 驱动版本过旧导致。对于 **macOS 10.14 及以上版本**，系统已内置 AppleUSBCHC0M 驱动，您可以先卸载旧版驱动，改用 macOS 内置驱动，通常能有效提升帧率。
@@ -152,7 +165,7 @@ conda activate rebot
 激活 reBot 虚拟环境后，执行以下命令安装 motorbridge：
 
 ```bash
-pip install motorbridge==0.2.9
+pip install motorbridge
 ```
 
 ### 步骤 4：连接机械臂
@@ -165,7 +178,7 @@ sudo chmod 666 /dev/ttyACM*
 
 ### 步骤 5：启动 MotorBridge
 
-在浏览器中打开地址 `https://rebot-devarm.w0x7ce.eu/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
+在浏览器中打开地址 `https://motorbridge.github.io/motorbridge-studio/`，点击帮助选项，根据你的操作系统与所用驱动板复制对应指令，核对 IP 地址与端口号后，在终端中按下回车运行。
 
 以 Windows 系统为例：
 

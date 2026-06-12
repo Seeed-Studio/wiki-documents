@@ -153,7 +153,7 @@ uv pip install motorbridge
 motorbridge-gateway --bind 127.0.0.1:9002 --vendor damiao --transport dm-serial --serial-port /dev/ttyACM0 --serial-baud 921600 --dt-ms 20
 ```
 
-然后在浏览器中打开 `https://rebot-devarm.w0x7ce.eu/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态并执行其他操作。
+然后在浏览器中打开 `https://motorbridge.github.io/motorbridge-studio/`，你将看到如下页面。通过该界面，你可以调整电机参数、查看机械臂状态并执行其他操作。
 
 <div align="center">
     <img width={900}
