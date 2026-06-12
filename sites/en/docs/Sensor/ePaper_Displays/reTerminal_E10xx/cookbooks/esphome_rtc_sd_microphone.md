@@ -1,5 +1,5 @@
 ---
-description: ESPHome cookbook for reTerminal E1001 / E1002 - PCF8563 RTC time sync, microSD card power and detect pins, and onboard PDM microphone initialization.
+description: ESPHome cookbook for reTerminal E1001 / E1002 - standalone demos for PCF8563 RTC time sync, microSD card detection, onboard PDM microphone initialization, and a combined hardware status dashboard.
 title: 'ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
@@ -18,235 +18,99 @@ import TabItem from '@theme/TabItem';
 
 # ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)
 
-:::tip Read the display cookbook first
-This page assumes your reTerminal E Series device is already running ESPHome, connected to Wi-Fi, and visible in Home Assistant. If you have not flashed a first display example yet, start with **[ESPHome Cookbook: Display Basics](/reterminal_e10xx_with_esphome)**. For buttons, buzzer, LED, battery monitoring, SHT4x, and deep sleep, see **[ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced)**.
+:::tip Prerequisites
+This page assumes you have already completed the [ESPHome display cookbook for reTerminal E Series](/reterminal_e10xx_with_esphome) and your device is online in Home Assistant. For buttons, buzzer, LED, battery monitoring, SHT4x, and deep sleep, see [ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced).
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-## Introduction
+This cookbook continues the reTerminal E Series ESPHome examples with three onboard hardware blocks that are not covered in the display and I/O cookbooks:
 
-The first ESPHome cookbook focuses on the ePaper display, and the second cookbook covers everyday onboard peripherals such as buttons, buzzer, LED, battery monitoring, the SHT4x sensor, and deep sleep. This page covers three additional hardware blocks that are useful for more complete Home Assistant devices:
+- **PCF8563 RTC** - read hardware time from the onboard RTC and sync it from Home Assistant.
+- **microSD card slot** - enable the SD power rail and report whether a card is inserted.
+- **PDM microphone** - enable the onboard microphone power rail and initialize the PDM microphone through ESPHome.
 
-- **PCF8563 RTC** - keeps calendar time through an external real-time clock chip on the I²C bus.
-- **microSD card slot** - provides card insertion detection and a switchable SD power rail.
-- **PDM microphone** - initializes the onboard digital microphone so it can be referenced by ESPHome audio features.
-
-The examples below currently target **reTerminal E1001** and **reTerminal E1002**, matching the tested ESPHome hardware examples for these two models.
+Each section below is organized as a small standalone ESPHome demo. You can copy one complete YAML example, replace the API and OTA placeholders, and upload it directly from ESPHome.
 
 :::note Model coverage
-The RTC and microSD hardware are available across the reTerminal E Series hardware family, but the ready-to-copy ESPHome display examples on this page are provided for E1001 and E1002. The onboard microphone examples apply to models with the PDM microphone hardware; E1004 does not include the microphone.
+The ready-to-copy examples in this page are written for **reTerminal E1001** and **reTerminal E1002**, matching the tested ESPHome hardware examples. The onboard microphone examples apply to models that include the PDM microphone hardware; reTerminal E1004 does not include the microphone.
 :::
 
-## Hardware Pin Summary
+## Hardware Capabilities
+
+The following pins are used by the demos in this cookbook.
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Hardware Block</th>
+      <th>Function</th>
       <th>ESPHome Component</th>
       <th>Pin / Address</th>
-      <th>Purpose</th>
     </tr>
     <tr>
       <td>PCF8563 RTC</td>
       <td><code>time.pcf8563</code></td>
-      <td>I²C address <code>0x51</code>, SDA <code>GPIO19</code>, SCL <code>GPIO20</code></td>
-      <td>Read hardware time on boot and write Home Assistant time back to the RTC.</td>
-    </tr>
-    <tr>
-      <td>microSD SPI bus</td>
-      <td><code>spi</code></td>
-      <td>SCLK <code>GPIO7</code>, MOSI <code>GPIO9</code>, MISO <code>GPIO8</code></td>
-      <td>Shared SPI bus used by the ePaper display and the SD card interface.</td>
-    </tr>
-    <tr>
-      <td>microSD power enable</td>
-      <td><code>output.gpio</code></td>
-      <td><code>GPIO16</code></td>
-      <td>Turns on the SD card power rail during boot.</td>
+      <td>I2C address <code>0x51</code>, SDA <code>GPIO19</code>, SCL <code>GPIO20</code></td>
     </tr>
     <tr>
       <td>microSD card detect</td>
       <td><code>binary_sensor.gpio</code></td>
       <td><code>GPIO15</code>, active LOW</td>
-      <td>Reports whether a card is inserted.</td>
     </tr>
     <tr>
-      <td>PDM microphone power</td>
+      <td>microSD power enable</td>
+      <td><code>output.gpio</code></td>
+      <td><code>GPIO16</code></td>
+    </tr>
+    <tr>
+      <td>PDM microphone power enable</td>
       <td><code>output.gpio</code></td>
       <td><code>GPIO38</code></td>
-      <td>Enables microphone power before the audio bus starts.</td>
     </tr>
     <tr>
       <td>PDM microphone clock</td>
       <td><code>i2s_audio</code></td>
       <td><code>GPIO42</code></td>
-      <td>Provides the PDM clock signal.</td>
     </tr>
     <tr>
       <td>PDM microphone data</td>
       <td><code>microphone.i2s_audio</code></td>
       <td><code>GPIO41</code></td>
-      <td>Receives microphone data from the onboard PDM microphone.</td>
+    </tr>
+    <tr>
+      <td>Shared SPI bus</td>
+      <td><code>spi</code></td>
+      <td>CLK <code>GPIO7</code>, MOSI <code>GPIO9</code>, MISO <code>GPIO8</code></td>
     </tr>
   </table>
 </div>
 
-## Prerequisites
-
-- A reTerminal E1001 or reTerminal E1002 already added to ESPHome.
-- Home Assistant with the ESPHome integration enabled.
-- Wi-Fi credentials stored in ESPHome `secrets.yaml`.
-- For RTC time retention after power loss, install a CR1220 coin cell in the RTC battery holder.
-- For SD card detection, insert a formatted microSD card into the card slot.
-
-:::caution Keep your API and OTA secrets private
-The examples use placeholders such as `REPLACE_WITH_YOUR_API_KEY` and `REPLACE_WITH_YOUR_OTA_PASSWORD`. Do not publish your real API encryption key, OTA password, Wi-Fi password, or Home Assistant token in a public repository.
+:::caution Keep your secrets private
+The examples use placeholders such as `REPLACE_WITH_YOUR_API_KEY` and `REPLACE_WITH_YOUR_OTA_PASSWORD`. Do not publish your real API encryption key, OTA password, Wi-Fi password, or Home Assistant token.
 :::
 
-## Step 1: Add the Shared Buses and Power Enables
+## RTC Time Sync
 
-Add the shared SPI, I²C, and I²S bus definitions after `captive_portal:` in your ESPHome YAML. These buses are the foundation for the RTC, SD card detect circuit, microphone, and display.
+This demo reads time from the onboard **PCF8563 RTC** and displays it on the ePaper screen. When Home Assistant syncs time to the device, ESPHome writes that time back to the hardware RTC.
 
-```yaml
-spi:
-  clk_pin: GPIO7
-  mosi_pin: GPIO9
-  miso_pin: GPIO8
+The RTC uses the shared I2C bus:
 
-i2c:
-  scl: GPIO20
-  sda: GPIO19
+- SDA: `GPIO19`
+- SCL: `GPIO20`
+- RTC address: `0x51`
 
-i2s_audio:
-  i2s_lrclk_pin: GPIO42
-
-output:
-  - platform: gpio
-    pin: GPIO16
-    id: bsp_sd_enable
-
-  - platform: gpio
-    pin: GPIO38
-    id: mic_power_enable
-```
-
-Then enable the SD card and microphone power rails during boot:
-
-```yaml
-esphome:
-  name: reterminal-e1001
-  friendly_name: reTerminal_E1001
-  on_boot:
-    priority: 600
-    then:
-      - output.turn_on: bsp_sd_enable
-      - output.turn_on: mic_power_enable
-      - delay: 200ms
-      - pcf8563.read_time:
-```
-
-For E1002, keep the same boot sequence and change only the device name:
-
-```yaml
-esphome:
-  name: reterminal-e1002
-  friendly_name: reTerminal_E1002
-  on_boot:
-    priority: 600
-    then:
-      - output.turn_on: bsp_sd_enable
-      - output.turn_on: mic_power_enable
-      - delay: 200ms
-      - pcf8563.read_time:
-```
-
-## Step 2: Configure the PCF8563 RTC
-
-The PCF8563 is connected to the same I²C bus as the onboard SHT4x sensor. In ESPHome, you can read the RTC on boot and write the Home Assistant time back to the RTC after Home Assistant syncs.
-
-```yaml
-time:
-  - platform: pcf8563
-    id: rtc_time
-    address: 0x51
-    update_interval: never
-
-  - platform: homeassistant
-    on_time_sync:
-      then:
-        - pcf8563.write_time:
-```
-
-This configuration does two things:
-
-- `pcf8563.read_time` reads the hardware RTC during boot.
-- `pcf8563.write_time` writes the current Home Assistant time back to the PCF8563 after synchronization.
-
-:::tip
-If the displayed RTC time is wrong after a full power cycle, check whether the CR1220 coin cell is installed and still healthy. Without the coin cell, the PCF8563 cannot retain time when the main battery and USB power are removed.
-:::
-
-## Step 3: Add microSD Card Detection
-
-ESPHome can read the card-detect pin as a binary sensor. The card-detect signal is active LOW, so the GPIO sensor is configured with `inverted: true`.
-
-```yaml
-binary_sensor:
-  - platform: gpio
-    pin:
-      number: GPIO15
-      mode: INPUT_PULLUP
-      inverted: true
-    id: sd_card_detect
-    name: "SD Card Detected"
-```
-
-:::note ESPHome SD card scope
-This example reports whether a card is inserted and enables the SD card power rail. ESPHome does not provide the same general-purpose SD file operations as an Arduino sketch, such as opening arbitrary files, creating folders, or recording WAV files directly from this YAML. For direct file read/write workflows, use the Arduino SD card cookbook instead.
-:::
-
-## Step 4: Initialize the PDM Microphone
-
-The onboard PDM microphone uses an I²S audio interface in PDM mode. The microphone power rail must be enabled before the microphone is used.
-
-```yaml
-microphone:
-  - platform: i2s_audio
-    id: onboard_mic
-    adc_type: external
-    pdm: true
-    i2s_din_pin: GPIO41
-```
-
-This initializes the onboard microphone so ESPHome audio-related features can reference `id(onboard_mic)`.
-
-:::note
-A full Home Assistant Assist voice pipeline may require additional Home Assistant and ESPHome configuration beyond microphone initialization, especially if you also want local wake-word detection or audio output. This page only covers the onboard microphone hardware setup.
-:::
-
-## Step 5: Display RTC, SD, and Microphone Status
-
-The following complete examples show a simple hardware status dashboard:
-
-- RTC date and time from the PCF8563.
-- microSD insertion status from `GPIO15`.
-- microphone hardware status from the configured PDM pins.
+You can use this example by replacing the placeholder values and uploading the complete YAML to your device.
 
 <Tabs>
 <TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 esphome:
-  name: reterminal-e1001
-  friendly_name: reTerminal_E1001
+  name: reterminal-e1001-rtc-demo
+  friendly_name: reTerminal_E1001_RTC_Demo
   on_boot:
     priority: 600
     then:
-      - output.turn_on: bsp_sd_enable
-      - output.turn_on: mic_power_enable
-      - delay: 200ms
       - pcf8563.read_time:
 
 esp32:
@@ -269,7 +133,623 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   ap:
-    ssid: "reTerminal-E1001"
+    ssid: "E1001-RTC-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+time:
+  - platform: pcf8563
+    id: rtc_time
+    address: 0x51
+    update_interval: never
+
+  - platform: homeassistant
+    on_time_sync:
+      then:
+        - pcf8563.write_time:
+        - component.update: epaper_display
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 26
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.50inv2
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      it.printf(400, 40, id(font_title), TextAlign::TOP_CENTER, "RTC Time Sync Demo");
+      auto now = id(rtc_time).now();
+      if (now.is_valid()) {
+        it.strftime(400, 135, id(font_title), TextAlign::TOP_CENTER, "%Y-%m-%d", now);
+        it.strftime(400, 190, id(font_title), TextAlign::TOP_CENTER, "%H:%M:%S", now);
+        ESP_LOGD("rtc_demo", "RTC time is valid");
+      } else {
+        it.printf(400, 150, id(font_body), TextAlign::TOP_CENTER, "RTC: waiting for sync");
+        ESP_LOGW("rtc_demo", "RTC time is not valid yet");
+      }
+```
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+esphome:
+  name: reterminal-e1002-rtc-demo
+  friendly_name: reTerminal_E1002_RTC_Demo
+  on_boot:
+    priority: 600
+    then:
+      - pcf8563.read_time:
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1002-RTC-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+time:
+  - platform: pcf8563
+    id: rtc_time
+    address: 0x51
+    update_interval: never
+
+  - platform: homeassistant
+    on_time_sync:
+      then:
+        - pcf8563.write_time:
+        - component.update: epaper_display
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 26
+
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: Seeed-reTerminal-E1002
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK = Color(0, 0, 0, 0);
+      const auto RED = Color(255, 0, 0, 0);
+      const auto BLUE = Color(0, 0, 255, 0);
+
+      it.printf(400, 40, id(font_title), BLACK, TextAlign::TOP_CENTER, "RTC Time Sync Demo");
+      auto now = id(rtc_time).now();
+      if (now.is_valid()) {
+        it.strftime(400, 135, id(font_title), BLUE, TextAlign::TOP_CENTER, "%Y-%m-%d", now);
+        it.strftime(400, 190, id(font_title), BLUE, TextAlign::TOP_CENTER, "%H:%M:%S", now);
+        ESP_LOGD("rtc_demo", "RTC time is valid");
+      } else {
+        it.printf(400, 150, id(font_body), RED, TextAlign::TOP_CENTER, "RTC: waiting for sync");
+        ESP_LOGW("rtc_demo", "RTC time is not valid yet");
+      }
+```
+
+</TabItem>
+</Tabs>
+
+This configuration:
+
+- Reads the PCF8563 RTC once during boot.
+- Uses Home Assistant time as the source of truth after the device connects.
+- Writes the Home Assistant time back to the hardware RTC.
+- Displays the current date and time on the ePaper screen.
+
+:::tip
+If the RTC time does not stay correct after a full power cycle, install or replace the CR1220 coin cell for the RTC backup holder.
+:::
+
+## MicroSD Card Detection
+
+This demo reports whether a microSD card is inserted. It also turns on the SD card power rail through `GPIO16`.
+
+The card detect pin is active LOW, so the binary sensor uses `inverted: true`.
+
+You can use this example by replacing the placeholder values and uploading the complete YAML to your device.
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
+```yaml
+esphome:
+  name: reterminal-e1001-sd-demo
+  friendly_name: reTerminal_E1001_SD_Demo
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - delay: 200ms
+      - component.update: epaper_display
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1001-SD-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+output:
+  - platform: gpio
+    pin: GPIO16
+    id: bsp_sd_enable
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO15
+      mode: INPUT_PULLUP
+      inverted: true
+    id: sd_card_detect
+    name: "SD Card Detected"
+    on_press:
+      then:
+        - logger.log: "SD card inserted"
+        - component.update: epaper_display
+    on_release:
+      then:
+        - logger.log: "SD card removed"
+        - component.update: epaper_display
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 28
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.50inv2
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      it.printf(400, 40, id(font_title), TextAlign::TOP_CENTER, "microSD Card Detection");
+      if (id(sd_card_detect).state) {
+        it.printf(400, 160, id(font_body), TextAlign::TOP_CENTER, "SD Card: inserted");
+      } else {
+        it.printf(400, 160, id(font_body), TextAlign::TOP_CENTER, "SD Card: not detected");
+      }
+      it.printf(400, 230, id(font_body), TextAlign::TOP_CENTER, "Detect pin: GPIO15");
+```
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+esphome:
+  name: reterminal-e1002-sd-demo
+  friendly_name: reTerminal_E1002_SD_Demo
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - delay: 200ms
+      - component.update: epaper_display
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1002-SD-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+  miso_pin: GPIO8
+
+output:
+  - platform: gpio
+    pin: GPIO16
+    id: bsp_sd_enable
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO15
+      mode: INPUT_PULLUP
+      inverted: true
+    id: sd_card_detect
+    name: "SD Card Detected"
+    on_press:
+      then:
+        - logger.log: "SD card inserted"
+        - component.update: epaper_display
+    on_release:
+      then:
+        - logger.log: "SD card removed"
+        - component.update: epaper_display
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 28
+
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: Seeed-reTerminal-E1002
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK = Color(0, 0, 0, 0);
+      const auto RED = Color(255, 0, 0, 0);
+      const auto GREEN = Color(0, 255, 0, 0);
+
+      it.printf(400, 40, id(font_title), BLACK, TextAlign::TOP_CENTER, "microSD Card Detection");
+      if (id(sd_card_detect).state) {
+        it.printf(400, 160, id(font_body), GREEN, TextAlign::TOP_CENTER, "SD Card: inserted");
+      } else {
+        it.printf(400, 160, id(font_body), RED, TextAlign::TOP_CENTER, "SD Card: not detected");
+      }
+      it.printf(400, 230, id(font_body), BLACK, TextAlign::TOP_CENTER, "Detect pin: GPIO15");
+```
+
+</TabItem>
+</Tabs>
+
+This configuration:
+
+- Enables SD card power through `GPIO16`.
+- Reads the card-detect signal from `GPIO15`.
+- Shows the card state on the ePaper screen.
+- Exposes `SD Card Detected` to Home Assistant as a binary sensor.
+
+:::note ESPHome SD card scope
+This ESPHome demo detects card insertion. It does not provide general-purpose file read/write operations such as opening files, creating folders, or recording WAV files to the SD card. For direct SD card file operations, use the Arduino SD card cookbook.
+:::
+
+## PDM Microphone Initialization
+
+This demo enables the onboard PDM microphone power rail and initializes the microphone through ESPHome's I2S audio component.
+
+The microphone uses these pins:
+
+- Power enable: `GPIO38`
+- PDM clock: `GPIO42`
+- PDM data: `GPIO41`
+
+You can use this example by replacing the placeholder values and uploading the complete YAML to your device.
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
+```yaml
+esphome:
+  name: reterminal-e1001-mic-demo
+  friendly_name: reTerminal_E1001_Mic_Demo
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: mic_power_enable
+      - delay: 200ms
+      - logger.log: "PDM microphone power enabled"
+      - component.update: epaper_display
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1001-Mic-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+i2s_audio:
+  i2s_lrclk_pin: GPIO42
+
+output:
+  - platform: gpio
+    pin: GPIO38
+    id: mic_power_enable
+
+microphone:
+  - platform: i2s_audio
+    id: onboard_mic
+    adc_type: external
+    pdm: true
+    i2s_din_pin: GPIO41
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 26
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.50inv2
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      it.printf(400, 40, id(font_title), TextAlign::TOP_CENTER, "PDM Microphone Demo");
+      it.printf(400, 135, id(font_body), TextAlign::TOP_CENTER, "Microphone: initialized");
+      it.printf(400, 190, id(font_body), TextAlign::TOP_CENTER, "CLK GPIO42 / DATA GPIO41");
+      it.printf(400, 245, id(font_body), TextAlign::TOP_CENTER, "Power enable: GPIO38");
+```
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+esphome:
+  name: reterminal-e1002-mic-demo
+  friendly_name: reTerminal_E1002_Mic_Demo
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: mic_power_enable
+      - delay: 200ms
+      - logger.log: "PDM microphone power enabled"
+      - component.update: epaper_display
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1002-Mic-Demo"
+    password: "ChangeMe123"
+
+captive_portal:
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+i2s_audio:
+  i2s_lrclk_pin: GPIO42
+
+output:
+  - platform: gpio
+    pin: GPIO38
+    id: mic_power_enable
+
+microphone:
+  - platform: i2s_audio
+    id: onboard_mic
+    adc_type: external
+    pdm: true
+    i2s_din_pin: GPIO41
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font_title
+    size: 32
+  - file: "gfonts://Inter@700"
+    id: font_body
+    size: 26
+
+display:
+  - platform: epaper_spi
+    id: epaper_display
+    model: Seeed-reTerminal-E1002
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK = Color(0, 0, 0, 0);
+      const auto BLUE = Color(0, 0, 255, 0);
+
+      it.printf(400, 40, id(font_title), BLACK, TextAlign::TOP_CENTER, "PDM Microphone Demo");
+      it.printf(400, 135, id(font_body), BLUE, TextAlign::TOP_CENTER, "Microphone: initialized");
+      it.printf(400, 190, id(font_body), BLACK, TextAlign::TOP_CENTER, "CLK GPIO42 / DATA GPIO41");
+      it.printf(400, 245, id(font_body), BLACK, TextAlign::TOP_CENTER, "Power enable: GPIO38");
+```
+
+</TabItem>
+</Tabs>
+
+This configuration:
+
+- Enables microphone power through `GPIO38`.
+- Uses `GPIO42` as the PDM clock pin.
+- Uses `GPIO41` as the PDM data input pin.
+- Initializes the onboard microphone as `id(onboard_mic)`.
+
+:::note
+This demo only initializes the microphone hardware. A complete Home Assistant Assist voice pipeline requires additional voice assistant configuration, and recording audio directly to the SD card is better handled by the Arduino microphone examples.
+:::
+
+## Demo 4: Complete RTC, SD Card and Microphone Status Dashboard
+
+This demo combines the three features above into one hardware status page:
+
+1. RTC date and time from the PCF8563.
+2. microSD card insertion status from `GPIO15`.
+3. PDM microphone initialization status.
+
+For a better understanding, run the single-function demos first before trying this combined example.
+
+<details>
+<summary>Click here to view the full code</summary>
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
+```yaml
+esphome:
+  name: reterminal-e1001-hardware-status
+  friendly_name: reTerminal_E1001_Hardware_Status
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - output.turn_on: mic_power_enable
+      - delay: 200ms
+      - pcf8563.read_time:
+      - component.update: epaper_display
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+logger:
+  hardware_uart: UART0
+
+api:
+  encryption:
+    key: "REPLACE_WITH_YOUR_API_KEY"
+
+ota:
+  - platform: esphome
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "E1001-HW-Status"
     password: "ChangeMe123"
 
 captive_portal:
@@ -305,6 +785,7 @@ time:
     on_time_sync:
       then:
         - pcf8563.write_time:
+        - component.update: epaper_display
 
 microphone:
   - platform: i2s_audio
@@ -321,6 +802,12 @@ binary_sensor:
       inverted: true
     id: sd_card_detect
     name: "SD Card Detected"
+    on_press:
+      then:
+        - component.update: epaper_display
+    on_release:
+      then:
+        - component.update: epaper_display
 
 font:
   - file: "gfonts://Inter@700"
@@ -363,9 +850,9 @@ display:
         it.printf(30, 155, id(font_medium), "SD Card: not detected");
       }
 
-      it.printf(30, 215, id(font_medium), "PDM Mic: enabled");
-      it.printf(30, 265, id(font_small), "I2C: SDA GPIO19 / SCL GPIO20");
-      it.printf(30, 295, id(font_small), "SD SPI: CLK GPIO7 / MOSI GPIO9 / MISO GPIO8");
+      it.printf(30, 215, id(font_medium), "PDM Mic: initialized");
+      it.printf(30, 265, id(font_small), "RTC: I2C address 0x51");
+      it.printf(30, 295, id(font_small), "SD: DET GPIO15 / EN GPIO16");
       it.printf(30, 325, id(font_small), "Mic: CLK GPIO42 / DATA GPIO41 / EN GPIO38");
 ```
 
@@ -374,8 +861,8 @@ display:
 
 ```yaml
 esphome:
-  name: reterminal-e1002
-  friendly_name: reTerminal_E1002
+  name: reterminal-e1002-hardware-status
+  friendly_name: reTerminal_E1002_Hardware_Status
   on_boot:
     priority: 600
     then:
@@ -383,6 +870,7 @@ esphome:
       - output.turn_on: mic_power_enable
       - delay: 200ms
       - pcf8563.read_time:
+      - component.update: epaper_display
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -404,7 +892,7 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   ap:
-    ssid: "reTerminal-E1002"
+    ssid: "E1002-HW-Status"
     password: "ChangeMe123"
 
 captive_portal:
@@ -440,6 +928,7 @@ time:
     on_time_sync:
       then:
         - pcf8563.write_time:
+        - component.update: epaper_display
 
 microphone:
   - platform: i2s_audio
@@ -456,6 +945,12 @@ binary_sensor:
       inverted: true
     id: sd_card_detect
     name: "SD Card Detected"
+    on_press:
+      then:
+        - component.update: epaper_display
+    on_release:
+      then:
+        - component.update: epaper_display
 
 font:
   - file: "gfonts://Inter@700"
@@ -495,29 +990,24 @@ display:
         it.printf(30, 155, id(font_medium), RED, "SD Card: not detected");
       }
 
-      it.printf(30, 215, id(font_medium), BLUE, "PDM Mic: enabled");
-      it.printf(30, 265, id(font_small), BLACK, "I2C: SDA GPIO19 / SCL GPIO20");
-      it.printf(30, 295, id(font_small), BLACK, "SD SPI: CLK GPIO7 / MOSI GPIO9 / MISO GPIO8");
+      it.printf(30, 215, id(font_medium), BLUE, "PDM Mic: initialized");
+      it.printf(30, 265, id(font_small), BLACK, "RTC: I2C address 0x51");
+      it.printf(30, 295, id(font_small), BLACK, "SD: DET GPIO15 / EN GPIO16");
       it.printf(30, 325, id(font_small), BLACK, "Mic: CLK GPIO42 / DATA GPIO41 / EN GPIO38");
 ```
 
 </TabItem>
 </Tabs>
 
-## Expected Result
+</details>
 
-After the firmware is uploaded and the device reconnects to Home Assistant:
+When the firmware is running, the screen shows the RTC time, SD card state, and microphone initialization status on one page.
 
-- The display shows the RTC time after the first successful Home Assistant time sync.
-- The `SD Card Detected` binary sensor appears in Home Assistant.
-- Inserting or removing a microSD card changes the `SD Card Detected` state.
-- The screen shows `PDM Mic: enabled` after the microphone power rail and I²S microphone configuration are initialized.
-
-## Troubleshooting
+## FAQ
 
 ### Q1: Why does the screen show "RTC: waiting for sync"?
 
-The device has not received a valid time yet. Confirm that the device is connected to Wi-Fi, the ESPHome API is connected to Home Assistant, and Home Assistant has the correct system time. After Home Assistant syncs time, ESPHome writes the time back to the PCF8563 RTC.
+The device has not received valid time yet. Confirm that Wi-Fi is connected, the ESPHome API is connected to Home Assistant, and Home Assistant has the correct system time. After Home Assistant syncs time, ESPHome writes the time back to the PCF8563 RTC.
 
 ### Q2: Why does the RTC time disappear after removing power?
 
@@ -531,11 +1021,15 @@ Check three things:
 - Make sure `bsp_sd_enable` on `GPIO16` is turned on during boot.
 - Keep `GPIO15` configured as `INPUT_PULLUP` with `inverted: true`, because the detect signal is active LOW.
 
-### Q4: Can ESPHome record microphone audio directly to the SD card?
+### Q4: Can ESPHome read and write files on the microSD card?
 
-Not with the simple YAML shown in this page. The microphone snippet initializes the onboard PDM microphone for ESPHome audio features, while the SD card snippet only powers the SD rail and reads the detect pin. If your goal is to record WAV files to the SD card, use the Arduino microphone and SD examples instead.
+This page only uses ESPHome to enable the SD power rail and read the card-detect pin. General file operations such as listing files, reading images, creating folders, or saving audio files are better handled by the Arduino SD card examples.
 
-### Q5: Why is there no serial log over USB?
+### Q5: Can ESPHome record microphone audio directly to the SD card?
+
+Not with the simple YAML shown in this page. The microphone demo initializes the onboard PDM microphone hardware. If your goal is to record WAV files to the SD card, use the Arduino microphone and SD examples instead.
+
+### Q6: Why is there no serial log over USB?
 
 The reTerminal E Series uses a CH340K USB-to-UART bridge on UART0. Keep this logger setting in your YAML:
 
@@ -549,9 +1043,10 @@ logger:
 - **[Wiki]** [ESPHome Cookbook: Display Basics](/reterminal_e10xx_with_esphome)
 - **[Wiki]** [ESPHome Cookbook: Buttons, Buzzer, LED, Battery & Low Power](/reterminal_e10xx_with_esphome_advanced)
 - **[Wiki]** [Work with ESPHome](/epaper_work_with_esphome)
+- **[Wiki]** [Arduino Cookbook: Onboard Peripherals](/reterminal_e10xx_with_arduino_peripherals)
 - **[Wiki]** [Arduino Cookbook: RTC, Low Power, Audio & Touch](/reterminal_e10xx_with_arduino_peripherals_2)
 - **[Documentation]** [ESPHome Time Component](https://esphome.io/components/time/)
-- **[Documentation]** [ESPHome I²S Audio Component](https://esphome.io/components/i2s_audio.html)
+- **[Documentation]** [ESPHome I2S Audio Component](https://esphome.io/components/i2s_audio.html)
 
 ## Tech Support & Product Discussion
 
