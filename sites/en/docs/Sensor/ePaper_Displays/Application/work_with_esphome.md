@@ -48,7 +48,7 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/reterminal_e10xx_with_esphome">Basic</a> · <a href="/reterminal_e10xx_with_esphome_advanced">Advanced (peripherals)</a></td>
+      <td><a href="/reterminal_e10xx_with_esphome">Display</a> · <a href="/reterminal_e10xx_with_esphome_advanced">I/O & power</a> · <a href="/reterminal_e10xx_with_esphome_rtc_sd_microphone">RTC, SD & mic</a></td>
     </tr>
     <tr>
       <td><strong>EE04 driver board</strong></td>
@@ -193,8 +193,9 @@ You can now drag the entities into a Lovelace dashboard, or — much more intere
 
 This page intentionally stops at the boilerplate. The product-specific YAML, peripheral examples, and end-to-end recipes live in each product's cookbook:
 
-- **[reTerminal E Series — Basic ESPHome](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, pre-built firmware ZIP for E1001/E1002/E1003/E1004.
-- **[reTerminal E Series — Advanced ESPHome](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, battery monitoring, SHT4x sensor, deep sleep, multi-page dashboards.
+- **[reTerminal E Series — ESPHome Display](/reterminal_e10xx_with_esphome)** — first dashboard, Wi-Fi setup, pre-built firmware ZIP, and ePaper drawing examples for E1001/E1002/E1003/E1004.
+- **[reTerminal E Series — ESPHome I/O, Battery & Power](/reterminal_e10xx_with_esphome_advanced)** — buttons, buzzer, onboard LED, battery monitoring, SHT4x sensor, deep sleep, and multi-page dashboards.
+- **[reTerminal E1001 / E1002 — ESPHome RTC, SD & Microphone](/reterminal_e10xx_with_esphome_rtc_sd_microphone)** — PCF8563 RTC time sync, microSD card power/detect pins, and onboard PDM microphone setup.
 - **[EE04 driver board — ESPHome](/EE04_with_esphome_advanced)** — full Home Assistant integration on the XIAO ESP32-S3 + EE04 + your choice of ePaper screen.
 - **[XIAO 7.5" ePaper Panel — ESPHome](/xiao_075inch_epaper_panel_esphome)** — minimal ESP32-C3 dashboard.
 - **[TRMNL 7.5" DIY Kit — ESPHome](/ogdiy_kit_works_with_esphome)** — using the kit hardware with ESPHome instead of the TRMNL cloud platform.
@@ -217,7 +218,7 @@ When new ePaper products ship, the corresponding cookbook is added under each pr
 
 ### Battery drains faster than expected
 
-ePaper only saves power when the rest of the SoC is also asleep. Add a `deep_sleep` block (see the Advanced cookbook for your product) and lower the `update_interval`.
+ePaper only saves power when the rest of the SoC is also asleep. Add a `deep_sleep` block (see the I/O, battery, and low-power cookbook for your product) and lower the `update_interval`.
 
 For deeper troubleshooting on a specific product, check the cookbook for that hardware.
 
