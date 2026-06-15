@@ -2120,13 +2120,6 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'TensorFlow',
-      items: [
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
-      ],
-    },
 
     {
       type: 'category',
@@ -2236,8 +2229,15 @@ const sidebars = {
       type: 'category',
       label: 'Speech Recognition',
       items: [
-            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+               {
+      type: 'category',
+      label: 'TensorFlow',
+      items: [
+        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+        'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
+        'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+      ],
+    },
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',                
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
