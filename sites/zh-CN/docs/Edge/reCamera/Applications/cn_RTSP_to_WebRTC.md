@@ -13,7 +13,7 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/cn/rtsp_to_webrtc_with_recamera/
 ---
 
@@ -22,17 +22,17 @@ url: https://wiki.seeedstudio.com/cn/rtsp_to_webrtc_with_recamera/
 ## 介绍
 
 当你希望**将 reCamera 的视频流集成到自己的 Web 应用中**，或者通过浏览器以低延迟**远程**查看摄像头画面时，可以参考本示例。
-本项目通过 **RTSP 协议**推送 reCamera 的视频，将推理结果通过 **mqtt out** 节点传输到 PC 端，然后在 PC 端将 RTSP 视频流与推理结果进行融合并转换为 **WebRTC** 格式，使任意浏览器无需插件即可实时播放带推理结果的视频流。它提供了一种**“解放” reCamera 视频流**的方式——一旦视频流可以通过 RTSP 输出，你就可以轻松地：
+本项目通过 **RTSP 协议**推送 reCamera 的视频流，通过 **mqtt out** 节点将推理结果传输到 PC 端，然后在 PC 端将 RTSP 视频流与推理结果进行融合并转换为 **WebRTC** 格式，使任意浏览器无需插件即可实时播放带推理结果的视频流。它提供了一种**“解放” reCamera 视频流**的方式——一旦视频流可以通过 RTSP 输出，你就可以轻松地：
 
-- **集成到自己的 Web 应用或管理平台中**：将实时视频画面嵌入现有的看板、监控系统或 IoT 平台。
+- **集成到自己的 Web 应用或管理平台中**：将实时视频画面嵌入现有的看板、监控系统或物联网平台。
 
-- **多设备视频聚合**：在同一网页上同时查看多路 reCamera 画面，构建多通道视频监控墙。
+- **多设备视频聚合**：在同一网页上同时查看多路 reCamera 画面，搭建多通道视频监控墙。
 
 - **远程访问与跨网络穿透**：借助 WebRTC 的 NAT 穿透能力，即使处于不同网络环境，也能以低延迟查看 reCamera 的实时画面。
 
-- **为 AI 推理结果可视化提供传输通道**：reCamera 完成边缘 AI 推理后，将推理结果随视频一同输出，PC 端可在浏览器中实时展示 AI 分析结果，适用于构建远程巡检、智能安防等应用。
+- **为 AI 推理结果可视化提供传输通道**：reCamera 在边缘侧完成 AI 推理后，将推理结果随视频一同输出，PC 端可在浏览器中实时展示 AI 分析结果，适用于搭建远程巡检、智能安防等应用。
 
-本示例展示了一种方法，将 **reCamera 从一个独立的视觉设备转变为可被任意 Web 系统集成的视频源**。我们希望这个项目能启发你探索更多 reCamera 与 Web 技术结合的可能性。
+本示例展示了一种方法，可以**将 reCamera 从一台独立的视觉设备转变为可被任意 Web 系统集成的视频源**。我们希望这个项目能启发你，探索 reCamera 与 Web 技术结合的更多可能性。
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif" />
 </div>
@@ -121,7 +121,7 @@ url: https://wiki.seeedstudio.com/cn/rtsp_to_webrtc_with_recamera/
 
 首先，按照官方入门指南完成 reCamera 的基础配置：[reCamera Getting Started](https://wiki.seeedstudio.com/cn/recamera_getting_started/)
 
-完成初始设置后，确保设备已上电并正确连接到网络。
+完成初始配置后，确保设备已上电并正确连接到网络。
 然后，通过浏览器访问地址 192.168.42.1 登录 reCamera，进入 **Node-RED** 工作空间。
 
 如果你能够成功访问如下图所示的 Node-RED 流程界面，则说明配置已完成。
@@ -132,12 +132,12 @@ url: https://wiki.seeedstudio.com/cn/rtsp_to_webrtc_with_recamera/
 
 ### 步骤 2：配置 RTSP 推流
 
-reCamera 内置 RTSP 推流功能，可以通过 Node-RED 流程轻松配置。你只需要在流程中部署两个节点。关于 SenseCraft AI 教程，请参考链接 [Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/cn/recamera_getting_started/#access-recamera-preview-dashboard)。
+reCamera 内置 RTSP 推流功能，可以通过 Node-RED 流程轻松配置。你只需要在流程中部署两个节点即可。关于 SenseCraft AI 教程，请参考链接 [Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/cn/recamera_getting_started/#access-recamera-preview-dashboard)。
 
 
 #### 2.1 导入并配置 Camera 节点
 
-从左侧拖拽 **Camera Node** 到工作区，双击进入配置界面，你可以根据需要设置分辨率、帧率等参数。按照下图所示的流程导入并配置 Camera 节点。
+从左侧拖拽 **Camera Node** 到工作区，双击进入配置界面，可根据需要设置分辨率、帧率等参数。按照下图所示的流程导入并配置 Camera 节点。
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/nodeimport1sum1.png" />
 </div>
@@ -165,7 +165,7 @@ rtsp://admin:admin@192.168.42.1:554/live
 </div>
 #### 2.4 导入 MQTT Out 节点
 
-从左侧拖拽 **MQTT Out Node** 到工作区，并按照下图设置 MQTT Broker 地址以及与服务器通信的主题（topic）。
+从左侧拖拽 **MQTT Out Node** 到工作区，并按照下图设置 MQTT Broker 地址以及与服务器通信的主题。
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/mqttimportsum.png" />
@@ -190,7 +190,7 @@ WebRTC 中转服务运行在 PC 上，负责接收 RTSP 流和 MQTT 消息，将
 
 #### 3.2 获取代码并安装依赖
 
-从[仓库](https://github.com/hunter5299/Node-Red-project/tree/main/rtsp_to_webrtc)获取 RTSP 到 WebRTC 的 Python 项目代码。将项目代码下载到 PC 后，进入项目目录并安装 Python 依赖：
+从[仓库](https://github.com/hunter5299/Node-Red-project/tree/main/rtsp_to_webrtc)获取 RTSP 转 WebRTC 的 Python 项目代码。将项目代码下载到 PC 后，进入项目目录并安装 Python 依赖：
 
 ```bash
 cd rtsp_to_webrtc
@@ -204,7 +204,7 @@ pip install -r requirements.txt
 | 文件 | 说明 |
 |------|------|
 | `server.py` | WebRTC 信令服务器，启动内嵌 MQTT Broker，处理浏览器连接请求并建立 WebRTC 会话 |
-| `mqtt_broker.py` | 内嵌 MQTT 3.1.1 Broker（纯 asyncio 实现）及订阅客户端，接收来自 reCamera Node-RED 推送的 YOLO 推理结果 |
+| `mqtt_broker.py` | 内嵌 MQTT 3.1.1 Broker（纯 asyncio 实现）及订阅客户端，接收从 reCamera 的 Node-RED 推送的 YOLO 推理结果 |
 | `detection_store.py` | 推理结果存储模块，缓存最新的检测框和标签数据，用于视频帧叠加渲染 |
 | `video_sources.py` | 视频协议抽象层 |
 | `index.html` | 前端播放器页面，提供协议选择和 WebRTC 视频播放功能 |
@@ -249,7 +249,7 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 | `--port` | `8080` | 服务器监听端口 |
 | `--source` | `rtsp://admin:admin@192.168.42.1:554/live` | 默认视频源地址 |
 
-> **注意：** 请确保 PC 的防火墙允许 8080 端口（或你指定的端口）的入站连接，并且 PC 与 reCamera 处于同一局域网中。
+> **注意：** 请确保 PC 的防火墙允许 8080 端口（或你指定的端口）的入站连接，并确保 PC 与 reCamera 处于同一局域网中。
 
 ### 步骤 4：运行 Demo
 
@@ -276,10 +276,10 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 整个系统的高层工作流程如下：
 
 1. **视频采集与 AI 推理**
-   reCamera 通过摄像头持续采集视频，使用 YOLO11n 模型进行目标检测推理，并获取边界框和标签结果。
+   reCamera 通过摄像头持续采集视频，使用 YOLO11n 模型进行目标检测推理，并获得边界框和标签结果。
 
 2. **RTSP 推流与 MQTT 结果传输**
-   reCamera 通过 RTSP 协议向网络推送编码后的视频，同时通过 MQTT 协议（主题：`yolo11n_result`）将推理结果发布到 PC 上的嵌入式 MQTT Broker。
+   reCamera 通过 RTSP 协议向网络推送编码后的视频流，同时通过 MQTT 协议（主题：`yolo11n_result`）将推理结果发布到 PC 上内嵌的 MQTT Broker。
 
 3. **视频接收与推理结果融合**
    PC 服务使用 OpenCV + FFmpeg 后台线程持续从 RTSP 流中读取最新视频帧，从 detection_store 中获取最新推理结果，并将边界框和标签叠加到视频帧上。
@@ -292,11 +292,11 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 
 ## 注意事项
 
-- reCamera 的 RTSP 流默认仅支持 **1-2 路并发连接**。如果其他程序（如 VLC）已经占用了 RTSP 连接，WebRTC 服务可能无法接收视频流。请在使用前关闭其他连接到 RTSP 流的程序。
+- reCamera 的 RTSP 流默认仅支持 **1-2 路并发连接**。如果其他程序（如 VLC）已经占用了 RTSP 连接，WebRTC 服务可能无法接收到视频流。请在使用前关闭其他连接到 RTSP 流的程序。
 - 如果遇到 `aiortc` 安装失败，请确保已安装 **Microsoft C++ Build Tools**（Windows）或 `gcc`/`make` 工具（Linux）。
 - 如果在服务器日志中出现 `non-existing PPS` 错误，这是由于尚未接收到关键帧所致，属于正常现象。关键帧到达后（约 1 秒）会自动恢复。
 - 如需更改服务端口，请使用 `python server.py --port <port_number>` 指定其他端口。
-- 如果出现视频延迟较高的情况，请检查网络带宽是否充足，并确保 PC 与 reCamera 之间的网络连接稳定。
+- 如果你遇到视频延迟较高的问题，请检查网络带宽是否充足，并确保 PC 与 reCamera 之间的网络连接稳定。
 
 ## 技术支持与产品讨论
 

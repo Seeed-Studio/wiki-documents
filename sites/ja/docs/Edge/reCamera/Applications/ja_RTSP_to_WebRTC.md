@@ -1,6 +1,6 @@
 ---
-title: reCamera を用いた RTSP から WebRTC へのリアルタイム動画配信
-description: 本ドキュメントでは、reCamera を使用して RTSP プロトコル経由で PC に動画を配信し、PC 側で RTSP ストリームを WebRTC 形式に変換することで、ブラウザ上で低遅延のリアルタイム動画再生を実現する方法を紹介します。
+title: reCamera を使った RTSP から WebRTC へのリアルタイム動画配信
+description: このドキュメントでは、reCamera を使用して RTSP プロトコル経由で PC に動画を配信し、PC 側で RTSP ストリームを WebRTC 形式に変換することで、ブラウザ上で低遅延のリアルタイム動画再生を実現する方法を紹介します。
 keywords:
   - reCamera
   - RTSP
@@ -13,24 +13,24 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/ja/rtsp_to_webrtc_with_recamera/
 ---
 
-# reCamera を用いた RTSP から WebRTC へのリアルタイム動画配信
+# reCamera を使った RTSP から WebRTC へのリアルタイム動画配信
 
 ## はじめに
 
-**reCamera の映像ストリームを自分の Web アプリケーションに統合したい場合**や、ブラウザを通じて**遠隔から**低遅延でカメラ映像を閲覧したい場合は、このデモを参考にしてください。
-このプロジェクトでは、reCamera の映像を **RTSP プロトコル**で配信し、推論結果を **mqtt out** ノードを介して PC に送信します。その後、PC 側で RTSP ストリームと推論結果を合成し、**WebRTC** 形式に変換することで、どのブラウザからでもプラグイン不要でリアルタイムに推論付き映像ストリームを再生できるようにします。これにより、**reCamera の映像ストリームを「解放」する**手段を提供します。一度 RTSP 経由で映像ストリームを出力できるようになれば、次のようなことが容易に行えます：
+**reCamera の映像ストリームを自分の Web アプリケーションに統合したい場合**や、ブラウザを通じてカメラ映像を**リモートで**低遅延表示したい場合は、このデモを参考にしてください。
+このプロジェクトでは、reCamera の映像を **RTSP プロトコル**で配信し、推論結果を **mqtt out** ノードを介して PC に送信し、その後 PC 側で RTSP ストリームと推論結果を合成して **WebRTC** 形式に変換します。これにより、どのブラウザからでもプラグイン不要でリアルタイムに推論付き映像ストリームを再生できます。これは **reCamera の映像ストリームを「解放」する** 方法を提供するものであり、一度 RTSP 経由で映像ストリームを出力できるようになれば、次のようなことが容易に行えます：
 
-- **自分の Web アプリケーションや管理プラットフォームに統合**：既存のダッシュボード、監視システム、IoT プラットフォームなどにライブ映像を埋め込むことができます。
+- **自分の Web アプリケーションや管理プラットフォームに統合**：既存のダッシュボード、監視システム、IoT プラットフォームにライブ映像を埋め込むことができます。
 
-- **複数デバイスの映像集約**：同一の Web ページ上で複数の reCamera 映像を同時に表示し、多チャンネルのビデオ監視ウォールを構築できます。
+- **マルチデバイス映像集約**：同一の Web ページ上で複数の reCamera 映像を同時に表示し、多チャンネルのビデオ監視ウォールを構築できます。
 
-- **リモートアクセスおよびネットワーク越え通信**：WebRTC の NAT トラバーサル機能により、異なるネットワーク環境下でも reCamera のライブ映像を低遅延で閲覧できます。
+- **リモートアクセスとネットワーク越え通信**：WebRTC の NAT トラバーサル機能により、異なるネットワーク環境下でも reCamera のライブ映像を低遅延で閲覧できます。
 
-- **AI 推論結果の可視化のための伝送チャネルを提供**：reCamera でエッジ AI 推論を実行した後、映像とともに推論結果を出力し、PC 側のブラウザで AI 解析結果をリアルタイム表示できます。遠隔点検、スマートセキュリティなどのアプリケーション構築に適しています。
+- **AI 推論結果可視化の伝送チャネルを提供**：reCamera がエッジ AI 推論を実行した後、その推論結果を映像とともに出力し、PC 側でブラウザ上に AI 解析結果をリアルタイム表示できます。遠隔点検、スマートセキュリティなどのアプリケーション構築に適しています。
 
 このデモでは、**reCamera を単体のビジュアルデバイスから、あらゆる Web システムが統合可能な映像ソースへと変換するアプローチ**を示します。本プロジェクトが、reCamera と Web 技術を組み合わせたさらなる可能性を探求するきっかけとなれば幸いです。
 <div align="center">
@@ -42,21 +42,21 @@ url: https://wiki.seeedstudio.com/ja/rtsp_to_webrtc_with_recamera/
 
 | ステージ | 実行場所 | 使用技術 / プロトコル | 説明 |
 |------|----------|-----------------|------|
-| 映像取得 & エンコード | reCamera | カメラ + H.264 エンコード | 映像を取得しエンコードします |
-| AI 推論 | reCamera | YOLO11n モデル | 映像フレームに対して AI 物体検出推論を実行します |
-| RTSP ストリーミング | reCamera | RTSP プロトコル（ポート 554） | RTSP プロトコルを介してネットワークへ映像を配信します |
-| MQTT 推論結果送信 | reCamera → PC サーバー | MQTT プロトコル（ポート 1883） | 推論結果（バウンディングボックス、ラベル）を MQTT で PC に送信します |
-| 映像受信 & デコード | PC サーバー | OpenCV + FFmpeg | RTSP ストリームを受信し、生フレームにデコードします |
-| 推論結果と映像の合成 | PC サーバー | detection_store + OpenCV | 映像フレーム上に AI 検出ボックスとラベルを重ねて表示します |
-| WebRTC エンコード & 送信 | PC サーバー | aiortc | 合成済み映像フレームを WebRTC 形式にエンコードして送信します |
-| リアルタイム再生 | PC ブラウザ | WebRTC | 推論結果付き映像をブラウザで低遅延再生します |
+| 映像取得 & エンコード | reCamera | カメラ + H.264 エンコード | 映像を取得しエンコードする |
+| AI 推論 | reCamera | YOLO11n モデル | 映像フレームに対して AI 物体検出推論を実行 |
+| RTSP ストリーミング | reCamera | RTSP プロトコル（ポート 554） | RTSP プロトコルで映像をネットワークに配信 |
+| MQTT 推論結果送信 | reCamera → PC サーバー | MQTT プロトコル（ポート 1883） | 推論結果（バウンディングボックス、ラベル）を MQTT 経由で PC に送信 |
+| 映像受信 & デコード | PC サーバー | OpenCV + FFmpeg | RTSP ストリームを受信し、生フレームにデコード |
+| 推論結果と映像の合成 | PC サーバー | detection_store + OpenCV | 映像フレーム上に AI 検出ボックスとラベルをオーバーレイ表示 |
+| WebRTC エンコード & 送信 | PC サーバー | aiortc | 合成済み映像フレームを WebRTC 形式にエンコードして送信 |
+| リアルタイム再生 | PC ブラウザ | WebRTC | 推論結果付き映像をブラウザで低遅延再生 |
 
 ## ハードウェアの準備
 
 このデモを実行するには、以下のハードウェアが必要です。
 
 - **reCamera デバイス 1 台**（すべての reCamera バリアントに対応）
-- **PC 1 台**（WebRTC ブリッジサービスを実行するため。reCamera と同一 LAN 上にある必要があります）
+- **PC 1 台**（WebRTC ブリッジサービスを実行、reCamera と同一 LAN 上にある必要があります）
 
 導入ニーズに応じて、**任意のバージョンの reCamera** を選択できます。
 
@@ -117,27 +117,27 @@ url: https://wiki.seeedstudio.com/ja/rtsp_to_webrtc_with_recamera/
 
 ## デモのセットアップ
 
-### ステップ 1: reCamera の設定
+### ステップ 1：reCamera の設定
 
 まず、公式の入門ガイドに従って reCamera の基本設定を完了してください：[reCamera Getting Started](https://wiki.seeedstudio.com/ja/recamera_getting_started/)
 
-初期セットアップが完了したら、デバイスの電源がオンになっており、ネットワークに正しく接続されていることを確認します。
-次に、ブラウザでアドレス 192.168.42.1 にアクセスして reCamera にログインし、**Node-RED** ワークスペースに入ります。
+初期セットアップが完了したら、デバイスの電源が入っており、ネットワークに正しく接続されていることを確認します。
+次に、ブラウザで 192.168.42.1 にアクセスして reCamera にログインし、**Node-RED** ワークスペースに入ります。
 
-下図のように Node-RED のフローインターフェースに正常にアクセスできれば、設定は完了です。
+下図のように Node-RED のフロー画面に正常にアクセスできれば、設定は完了です。
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/dashboarddownload5.png" />
 </div>
 
-### ステップ 2: RTSP ストリーミングの設定
+### ステップ 2：RTSP ストリーミングの設定
 
 reCamera には RTSP ストリーミング機能が内蔵されており、Node-RED のフローを通じて簡単に設定できます。フロー内に 2 つのノードを配置するだけで済みます。SenseCraft AI のチュートリアルについては、[Access SenseCraft AI reCamera Dashboard](https://wiki.seeedstudio.com/ja/recamera_getting_started/#access-recamera-preview-dashboard) のリンクを参照してください。
 
 
 #### 2.1 カメラノードのインポートと設定
 
-左側から **Camera Node** をワークスペースにドラッグし、ダブルクリックして設定画面を開きます。必要に応じて解像度やフレームレートなどのパラメータを設定できます。下図のフローに従ってカメラノードをインポートおよび設定してください。
+左側から **Camera Node** をワークスペースにドラッグし、ダブルクリックして設定画面を開きます。必要に応じて解像度やフレームレートなどのパラメータを設定します。下図のフローに従ってカメラノードをインポートおよび設定してください。
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/nodeimport1sum1.png" />
 </div>
@@ -165,7 +165,7 @@ rtsp://admin:admin@192.168.42.1:554/live
 </div>
 #### 2.4 MQTT Out ノードのインポート
 
-左側から **MQTT Out Node** をワークスペースにドラッグし、下図に従って MQTT ブローカーアドレスとサーバーとの通信に使用するトピックを設定します。
+左側から **MQTT Out Node** をワークスペースにドラッグし、下図に従ってサーバーと通信するための MQTT ブローカーアドレスとトピックを設定します。
 
 <div align="center">
   <img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/mqttimportsum.png" />
@@ -175,9 +175,9 @@ rtsp://admin:admin@192.168.42.1:554/live
 
 設定が完了したら、右上の **Deploy** をクリックしてフローをデプロイします。これで reCamera は RTSP プロトコル経由でストリーミングを開始します。
 
-### ステップ 3: PC 上に WebRTC 変換サービスをデプロイ
+### ステップ 3：PC 上に WebRTC 変換サービスをデプロイ
 
-WebRTC ブリッジサービスは PC 上で動作し、RTSP ストリームと MQTT メッセージを受信し、推論結果と映像ストリームを合成して WebRTC 形式に変換し、ブラウザでのリアルタイム再生を可能にします。
+WebRTC ブリッジサービスは PC 上で動作し、RTSP ストリームと MQTT メッセージを受信し、推論結果を映像ストリームと合成して WebRTC 形式に変換し、ブラウザでのリアルタイム再生を可能にします。
 
 #### 3.1 前提条件
 
@@ -186,7 +186,7 @@ PC に以下の環境がインストールされていることを確認して�
 - **Python 3.8+**
 - **pip** パッケージマネージャ
 
-> **注意：** Windows で `aiortc` をインストールする場合、事前に Microsoft C++ Build Tools をインストールする必要がある場合があります。[Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) からダウンロードしてインストールできます。
+> **注意：** Windows で `aiortc` をインストールする場合、事前に Microsoft C++ Build Tools をインストールしておく必要がある場合があります。[Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) からダウンロードしてインストールできます。
 
 #### 3.2 コードの取得と依存関係のインストール
 
@@ -199,15 +199,15 @@ pip install -r requirements.txt
 
 #### 3.3 プロジェクトファイルの説明
 
-プロジェクトには、次のコアファイルが含まれます。
+このプロジェクトには、次のコアファイルが含まれています。
 
 | ファイル | 説明 |
 |------|------|
-| `server.py` | WebRTC シグナリングサーバー。組み込み MQTT Broker を起動し、ブラウザからの接続要求を処理して WebRTC セッションを確立します |
-| `mqtt_broker.py` | 組み込み MQTT 3.1.1 Broker（純粋な asyncio 実装）および購読クライアントで、reCamera の Node-RED からプッシュされる YOLO 推論結果を受信します |
-| `detection_store.py` | 推論結果の保存モジュールで、映像フレームへのオーバーレイ描画用に最新の検出ボックスとラベルデータをキャッシュします |
+| `server.py` | WebRTC シグナリングサーバー。組み込み MQTT Broker を起動し、ブラウザからの接続要求を処理して WebRTC セッションを確立します。 |
+| `mqtt_broker.py` | 組み込み MQTT 3.1.1 Broker（純粋な asyncio 実装）および購読クライアント。reCamera の Node-RED からプッシュされる YOLO 推論結果を受信します。 |
+| `detection_store.py` | 推論結果の保存モジュール。映像フレームへのオーバーレイ描画用に、最新の検出ボックスとラベルデータをキャッシュします。 |
 | `video_sources.py` | 映像プロトコル抽象化レイヤー |
-| `index.html` | フロントエンドプレーヤーページで、プロトコル選択と WebRTC 動画再生機能を提供します |
+| `index.html` | フロントエンドプレーヤーページ。プロトコル選択と WebRTC 動画再生機能を提供します。 |
 | `requirements.txt` | Python 依存関係リスト |
 
 #### 3.4 サービスを起動する
@@ -218,7 +218,7 @@ pip install -r requirements.txt
 python server.py
 ```
 
-サービスが起動すると、次のようなログ出力が表示されます：
+サービスが起動すると、次のログ出力が表示されます：
 
 ```
 INFO:webrtc-server:Starting server on http://0.0.0.0:8080
@@ -254,7 +254,7 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 ### Step 4: デモを実行する
 
 1. reCamera が RTSP ストリーミング用に設定され、ワークフローがデプロイされていることを確認します
-2. PC 上で `server.py` が起動して動作していることを確認します
+2. PC 上で `server.py` が起動して実行中であることを確認します
 3. PC のブラウザで `http://localhost:8080` にアクセスします
 4. ページ上でプロトコル（RTSP）を選択し、reCamera の RTSP ストリームアドレスを入力します（デフォルトで入力済み）
 5. **"Start Playing"** ボタンをクリックします
@@ -266,7 +266,7 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
 
 接続に成功すると、ページには次の情報が表示されます：
 
-- **ビデオフィード**：reCamera の映像をリアルタイム表示
+- **ビデオフィード**：reCamera の映像をリアルタイムに表示
 - **接続ステータス**：ページ左上の緑色の接続ステータスインジケータ
 - **ストリーム情報**：ビデオストリームアドレス、接続状態、ICE 接続状態、ビデオ解像度を表示
 - **操作ログ**：ページ下部に詳細な接続ログを表示
@@ -279,20 +279,20 @@ python server.py --source rtsp://admin:admin@192.168.42.1:554/live --port 8080
    reCamera はカメラを通じて継続的にビデオを取得し、YOLO11n モデルを使用して物体検出推論を行い、バウンディングボックスとラベルの結果を取得します。
 
 2. **RTSP ストリーミングと MQTT 結果送信**
-   reCamera はエンコードされたビデオを RTSP プロトコルでネットワークにストリーミングすると同時に、推論結果を MQTT プロトコル（トピック：`yolo11n_result`）で PC 上の組み込み MQTT Broker にパブリッシュします。
+   reCamera はエンコードされたビデオを RTSP プロトコルでネットワークにストリーミングし、同時に推論結果を MQTT プロトコル（トピック：`yolo11n_result`）で PC 上の組み込み MQTT Broker にパブリッシュします。
 
 3. **ビデオ受信と推論結果の融合**
-   PC サービスは OpenCV + FFmpeg のバックグラウンドスレッドを使用して RTSP ストリームから最新のビデオフレームを継続的に読み取り、detection_store から最新の推論結果を取得し、バウンディングボックスとラベルをビデオフレームにオーバーレイします。
+   PC サービスは OpenCV + FFmpeg のバックグラウンドスレッドを使用して RTSP ストリームから最新のビデオフレームを継続的に読み取り、detection_store から最新の推論結果を取得し、バウンディングボックスとラベルをビデオフレームに重ね合わせます。
 
-4. **WebRTC エンコードと送信**
-   ブラウザが接続要求を開始すると、PC は aiortc ライブラリを通じて融合されたビデオフレームを WebRTC 形式にエンコードし、送信用の WebRTC PeerConnection を確立します。
+4. **WebRTC エンコードと伝送**
+   ブラウザが接続要求を開始すると、PC は aiortc ライブラリを通じて融合されたビデオフレームを WebRTC 形式にエンコードし、伝送のために WebRTC PeerConnection を確立します。
 
 5. **ブラウザでのリアルタイム再生**
    ブラウザは WebRTC 経由でビデオストリームを受信し、プラグインをインストールすることなく、AI 推論の注釈付きビデオをリアルタイムで再生します。
 
 ## 注意事項
 
-- reCamera の RTSP ストリームは、デフォルトでは **1～2 接続の同時接続** のみをサポートします。ほかのプログラム（VLC など）がすでに RTSP 接続を占有している場合、WebRTC サービスはビデオストリームを受信できないことがあります。使用前に、RTSP ストリームに接続しているほかのプログラムを閉じてください。
+- reCamera の RTSP ストリームは、デフォルトでは **1〜2 の同時接続** のみをサポートします。ほかのプログラム（VLC など）がすでに RTSP 接続を占有している場合、WebRTC サービスはビデオストリームを受信できないことがあります。使用前に、RTSP ストリームに接続しているほかのプログラムを閉じてください。
 - `aiortc` のインストールに失敗する場合は、**Microsoft C++ Build Tools**（Windows）または `gcc` / `make` ツール（Linux）がインストールされていることを確認してください。
 - サーバーログに `non-existing PPS` エラーが表示される場合、これはキーフレームがまだ受信されていないことが原因であり、正常な挙動です。キーフレームが到着すると（約 1 秒後）、自動的に復旧します。
 - サービスのポートを変更するには、`python server.py --port <port_number>` を使用して別のポートを指定します。
