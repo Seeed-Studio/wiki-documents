@@ -14,6 +14,10 @@ url: https://wiki.seeedstudio.com/reterminal_e10xx_main_page/
 ---
 # reTerminal E Series ePaper Display Overview
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::
+
 ## Introduction
 
 The reTerminal E Series is Seeed Studio's family of ESP32-S3-powered ePaper display terminals, purpose-built for **always-on, low-power information display**. The lineup spans four models — **E1001, E1002, E1003, E1004** — covering monochrome and full-color panels from 7.3" to 13.3", with options for touch interaction and multi-month battery life. They all share the same software stack (SenseCraft HMI, Home Assistant, Arduino, and more), so you only have to learn it once and then pick the form-factor that fits your scenario.

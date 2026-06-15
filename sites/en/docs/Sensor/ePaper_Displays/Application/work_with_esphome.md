@@ -25,6 +25,10 @@ import TabItem from '@theme/TabItem';
 
 # Work with ESPHome
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before installing ESPHome or other development tools, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::
+
 This page is the **reference manual** for driving any compatible Seeed ePaper product through [ESPHome](https://esphome.io/) and integrating it with [Home Assistant](https://www.home-assistant.io/). It covers the parts that are identical across all hardware:
 
 1. Why you'd choose ESPHome to drive an ePaper display.

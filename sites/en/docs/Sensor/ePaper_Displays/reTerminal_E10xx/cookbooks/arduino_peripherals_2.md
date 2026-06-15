@@ -20,6 +20,10 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/246.png" style={{width:600, height:'auto'}}/></div>
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before installing Arduino IDE or other development tools, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::
+
 :::tip Other cookbooks in this series
 - **[Arduino Cookbook: ePaper Display](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino)** — rendering text, graphics, and images on the ePaper screen.
 - **[Arduino Cookbook: Onboard Peripherals](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino_peripherals)** — LED, buzzer, buttons, SHT4x sensor, battery monitor, microSD card, and the SD-card image pipeline.

@@ -24,6 +24,10 @@ import TabItem from '@theme/TabItem';
 
 # Work with Arduino
 
+:::tip Try demos without setting up a development environment
+If you want to quickly preview project results or try the basic demo firmware before installing Arduino IDE or other development tools, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+:::
+
 This page is the **reference manual** for driving any compatible Seeed ePaper product from the Arduino IDE. It covers the parts that are identical across all hardware:
 
 1. Setting up the Arduino IDE and ESP32 board support.
