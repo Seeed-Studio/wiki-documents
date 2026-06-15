@@ -86,39 +86,37 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
 - **Native HA citizen** — once the device shows up in Home Assistant, every entity (climate, calendar, sensor, person, weather) is one Jinja template away from being on the wall.
 - **Local-first** — no cloud, no vendor lock-in. Everything runs on your LAN.
 
-## Step 1: Pick a flashing path
+## Step 1: Generate ESPHome YAML and flash your firmware
 
-ESPHome firmware can be loaded onto the device in two ways. The right choice depends on whether you want to write YAML from scratch or just get a working dashboard fast.
+The easiest way to start is to use the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. The hub can generate an ESPHome YAML file from your device and feature selections, so you do not need to assemble the first configuration by hand.
 
-<Tabs groupId="esphome-flash-path">
-<TabItem value="web-installer" label="Path A: ESPHome Web Installer (recommended for first-time users)" default>
+Recommended workflow:
 
-A pre-built firmware ZIP is hosted by Seeed and flashed to your device through the browser via WebSerial.
+1. Open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/) in desktop Chrome or Edge.
+2. Select **ESPHome** as the platform.
+3. Select your device.
+4. In the setup step, choose the features you want to enable, such as display, buttons, battery, sensors, RTC, SD card, microphone, or deep sleep if they are available for your device.
+5. Let the page generate the matching ESPHome YAML.
+6. Use **Copy to clipboard** or **Download file** to export the generated YAML.
+7. Paste or import the YAML into your ESPHome dashboard.
+8. Focus your manual editing on the part that matters most for your project: ePaper display content, Home Assistant entities, layout, fonts, and refresh behavior.
 
-1. Plug the device into your computer with a USB-C cable.
-2. Open the per-product flashing page (linked from the cookbook for your product) in **Chrome** or **Edge**.
-3. Click **Connect**, pick the serial port, then click **Install**.
-4. After flashing, the device boots into a Wi-Fi captive portal (`ESPHome-XXXX`). Connect, set Wi-Fi, and the device will appear in Home Assistant via the ESPHome integration.
+:::tip
+The Firmware Hub is the recommended starting point for new users because it handles much of the device-specific YAML structure. Use the cookbooks when you want to understand the generated configuration, combine advanced features, or build a custom layout from smaller examples.
+:::
 
-This path requires **no YAML editing**. You can later "adopt" the device in the ESPHome dashboard if you want to start customising it.
+Run the ESPHome dashboard as either:
 
-</TabItem>
-<TabItem value="yaml-cli" label="Path B: YAML + ESPHome dashboard (full control)">
+- a Home Assistant Add-on (recommended if you already run HA OS / HA Supervised), or
+- a standalone Python CLI (`pip install esphome` then `esphome dashboard config/`).
 
-For complete control over the firmware (custom display layouts, custom sensors, multi-page dashboards, deep sleep tuning, OTA updates), run the **ESPHome dashboard** as either:
+Manual cookbook workflow:
 
-- a Home Assistant **Add-on** (recommended if you already run HA OS / HA Supervised), or
-- a standalone **Python CLI** (`pip install esphome` then `esphome dashboard config/`).
-
-Workflow:
-
-1. In the ESPHome dashboard, click **+ New device** → enter a name → pick the right ESP variant (ESP32-S3 / ESP32-C3 / etc. — your product cookbook will tell you which).
-2. The dashboard generates a starter `<device-name>.yaml`. Replace its body with the product-specific YAML from your cookbook (see Step 2 below for the shape).
-3. Click **Install** → **Plug into the computer running ESPHome** for the first flash; subsequent flashes are wireless via OTA.
-4. The device joins the ESPHome integration in Home Assistant automatically.
-
-</TabItem>
-</Tabs>
+1. Open the cookbook for your hardware (see the table above) and copy the YAML example you need.
+2. In the ESPHome dashboard, click + New device, enter a name, and pick the ESP variant listed in your cookbook (ESP32-S3, ESP32-C3, etc.).
+3. Replace the generated starter file with your configuration. Combine cookbook sections only if you need multiple features on one device.
+4. Click Install → Plug into this computer for the first USB flash. After `wifi`, `api`, and `ota` are set up, later updates can go over Wi-Fi.
+5. When the device is online, it appears in Home Assistant through the ESPHome integration.
 
 ## Step 2: Generic YAML skeleton
 
