@@ -1,13 +1,13 @@
 ---
 description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
-title: reSpeaker XVF3800 Control Wakeword and NLU with Pico-voice
+title: reSpeaker Control Wakeword and NLU with Pico-voice
 keywords:
   - reSpeaker
   - python
   - picovoice
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_picovoice
-sku: 114993700
+sku: 114993700,100005504,100099135
 last_update:
   date: 3/24/2026
   author: Kasun Thushara
@@ -48,7 +48,7 @@ This demo showcases how wake word detection using Picovoice Porcupine works toge
 
 A wake word in robotic embedded systems enables **event-driven processing**, allowing the device to stay in a low-power listening state and only activate heavy speech processing when needed. This significantly reduces CPU, memory, and energy consumption on resource-constrained hardware like microcontrollers and edge devices. It also acts as a **gating mechanism** in the audio pipeline, filtering out irrelevant noise and preventing unnecessary activations of speech recognition and control logic. From a privacy perspective, wake word detection ensures that audio is only captured or transmitted after explicit user intent is detected, keeping most data processing on-device. Additionally, it improves human-robot interaction by providing a natural trigger for engagement, helping the system distinguish between ambient conversation and directed commands.
 
-Using a wake word together with an advanced mic array system like reSpeaker XVF3800 enables **efficient and reliable** voice interaction in embodied systems. The wake word ensures the system only activates full speech processing when needed, reducing power consumption and CPU usage on embedded hardware. The mic array enhances this by providing **beamforming, noise suppression, and direction detection on Circular mic array**, allowing accurate wake word recognition even in noisy environments. This combination minimizes false triggers and improves overall system responsiveness. It also supports better human-robot interaction by ensuring the device responds only when explicitly addressed and can focus on the correct speaker.
+Using a wake word together with an advanced mic array system like reSpeaker  enables **efficient and reliable** voice interaction in embodied systems. The wake word ensures the system only activates full speech processing when needed, reducing power consumption and CPU usage on embedded hardware. The mic array enhances this by providing **beamforming, noise suppression, and direction detection on Circular mic array**, allowing accurate wake word recognition even in noisy environments. This combination minimizes false triggers and improves overall system responsiveness. It also supports better human-robot interaction by ensuring the device responds only when explicitly addressed and can focus on the correct speaker.
 
 ## How to Use Wakeword with Pico-voice
 
