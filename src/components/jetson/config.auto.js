@@ -1875,6 +1875,20 @@ export const physicalAIList = [
     },
     "lastUpdated": "03/25/2026",
     "author": "Youjiang"
+  },
+  {
+    "name": {
+      "en": "reBot Arm B601-DM GraspNet Visual Grasping on Jetson"
+    },
+    "img": "https://files.seeedstudio.com/wiki/graspnet/front-graspnet.png",
+    "URL": {
+      "en": "https://wiki.seeedstudio.com/rebot_arm_b601_dm_graspnet_visual_grasping"
+    },
+    "category": {
+      "en": []
+    },
+    "lastUpdated": "06/15/2026",
+    "author": "Seeed Studio"
   }
 ]
 
