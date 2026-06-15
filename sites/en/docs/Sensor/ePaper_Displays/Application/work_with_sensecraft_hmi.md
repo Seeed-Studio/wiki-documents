@@ -192,7 +192,24 @@ After the device is running HMI firmware, connect it to your local Wi-Fi network
 
 **Step 1.** Connect your phone or computer to the Wi-Fi access point shown on the ePaper screen. This temporary access point does not require a password.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:500, height:'auto'}}/></div>
+The access point name depends on the device type. For an ePaper Display Board with a separate screen, the name may appear as `ePaper DIY Kit-xxxx`. For a reTerminal E Series device, the name may appear as `reTerminal E100x-xxxx`. In both cases, `xxxx` usually represents the last four characters of the MAC address.
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>ePaper Display Board + Screen</th>
+      <th>reTerminal E Series</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi31.png" style={{width:360, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:360, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td>AP name example: <code>ePaper DIY Kit-xxxx</code></td>
+      <td>AP name example: <code>reTerminal E100x-xxxx</code></td>
+    </tr>
+  </table>
+</div>
 
 **Step 2.** Scan the QR code on the ePaper screen. If the configuration page does not open automatically, open a browser and visit `192.168.4.1`.
 
