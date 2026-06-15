@@ -19,6 +19,28 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_nfc/
 # NFC for XIAO nRF54LM20A Sense
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_NFC.png" style={{width:400, height:'auto'}}/></div>
+
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 <br/>
 Near Field Communication (NFC) is a technology for wireless transfer of small amounts of data between two devices. It uses very simple communication protocols and, therefore, allows quicker connection than Bluetooth® Low Energy. However, because NFC uses magnetic induction to enable communication, the devices must be very close (< 10 cm) to connect.】
 

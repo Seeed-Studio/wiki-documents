@@ -20,6 +20,28 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_matter/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/XIAO_nRF54LM20A_Matter.png" style={{width:600, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+
 ## Introduction
 
 Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Seires supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios.

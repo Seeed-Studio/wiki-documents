@@ -20,6 +20,28 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_ble/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_ble.png" style={{width:400, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
+
 Bluetooth Low Energy (BLE) is a low-power wireless communication standard introduced in Bluetooth 4.0. Designed for intermittent small-data transmission, it enables wireless connectivity within tens of meters while maintaining an ultra-low average current consumption at the microampere level. It is widely applied in wearable devices, smart home sensors, indoor positioning and industrial IoT scenarios.
 
 Powered by the nRF54LM20A SoC, the XIAO nRF54LM20A Seires supports Bluetooth LE, Matter, Thread, Zigbee and 2.4GHz proprietary protocols, delivering a peak data rate of 4 Mbps ideal for low-latency scenarios. It also features support for Bluetooth Channel Sounding and Bluetooth Mesh. This article illustrates its BLE functionality via three progressive sample programs, starting with basic broadcast Beacon transmission, and further extending to bidirectional UART communication and real-time sensor data uploading.
