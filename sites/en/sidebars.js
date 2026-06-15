@@ -1998,8 +1998,8 @@ const sidebars = {
                 //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
                 //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                 //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2_voice_pipeline',
+                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
+                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2_voice_pipeline',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
@@ -2218,10 +2218,14 @@ const sidebars = {
       type: 'category',
       label: 'Robotics',
       items: [
+
+
+
             'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
             'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
             'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
+            'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
       ],
     },
 
