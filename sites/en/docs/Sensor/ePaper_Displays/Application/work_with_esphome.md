@@ -17,7 +17,7 @@ last_update:
   author: dimo
 createdAt: '2026-04-28'
 url: https://wiki.seeedstudio.com/epaper_work_with_esphome/
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-15'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -26,7 +26,13 @@ import TabItem from '@theme/TabItem';
 # Work with ESPHome
 
 :::tip Try demos without setting up a development environment
-If you want to quickly preview project results or try the basic demo firmware before installing ESPHome or other development tools, open the [reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/). You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+If you want to quickly preview project results or try the basic demo firmware before setting up a development environment, open the **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**. You can choose a supported reTerminal E Series device and flash demo firmware directly from a browser.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Firmware Flasher 🖱️</font></span></strong>
+    </a>
+</div><br />
 :::
 
 This page is the **reference manual** for driving any compatible Seeed ePaper product through [ESPHome](https://esphome.io/) and integrating it with [Home Assistant](https://www.home-assistant.io/). It covers the parts that are identical across all hardware:
@@ -52,29 +58,26 @@ Every Seeed ePaper product on the [main hub page](/seeed_epaper_displays) that h
     <tr>
       <td><strong>reTerminal E1001 / E1002 / E1003 / E1004</strong></td>
       <td>XIAO ESP32-S3</td>
-      <td><a href="/reterminal_e10xx_with_esphome">Display</a> · <a href="/reterminal_e10xx_with_esphome_advanced">I/O & power</a> · <a href="/reterminal_e10xx_with_esphome_rtc_sd_microphone">RTC, SD & mic</a></td>
+      <td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome/">Display basics, HA integration & drawing</a> · <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced/">Buttons, buzzer, LED, battery, SHT4x & deep sleep</a> · <a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/">RTC, SD card & microphone</a></td>
     </tr>
     <tr>
       <td><strong>EE04 driver board</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/EE04_with_esphome_advanced">EE04 ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/EE04_with_esphome_advanced/">EE04 ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>XIAO 7.5" ePaper Panel</strong></td>
       <td>XIAO ESP32-C3</td>
-      <td><a href="/xiao_075inch_epaper_panel_esphome">XIAO Panel ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome/">XIAO Panel ESPHome cookbook</a></td>
     </tr>
     <tr>
       <td><strong>TRMNL 7.5" (OG) DIY Kit</strong></td>
       <td>XIAO ESP32-S3 Plus</td>
-      <td><a href="/ogdiy_kit_works_with_esphome">TRMNL DIY Kit ESPHome cookbook</a></td>
+      <td><a href="https://wiki.seeedstudio.com/ogdiy_kit_works_with_esphome/">TRMNL DIY Kit ESPHome cookbook</a></td>
     </tr>
   </table>
 </div>
 
-:::tip
-Looking for **TRMNL cloud dashboards** (no YAML, plug-in based) instead? See [Work with TRMNL](/reterminal_e10xx_trmnl). Looking for **Seeed's no-code visual HMI** instead? See [Work with SenseCraft HMI](/EE04_with_hmi).
-:::
 
 ## Why ESPHome on ePaper?
 
