@@ -95,7 +95,7 @@ reTerminal E シリーズは、Seeed Studio の ESP32-S3 搭載電子ペーパ�
 			<td align="center">❌</td>
 			<td align="center">✅</td>
 			<td align="center">❌</td>
-		</tr]
+		</tr>
 		<tr>
 			<td align="center"><strong>リフレッシュ時間</strong></td>
 			<td align="center">2～5 秒</td>

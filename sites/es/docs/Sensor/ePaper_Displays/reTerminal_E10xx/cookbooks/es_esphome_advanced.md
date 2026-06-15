@@ -1,5 +1,5 @@
 ---
-description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004: botones, zumbador, LED integrado, monitorización de batería, sensor SHT4x, deep sleep y paneles de control multipágina.
+description: Recetario de ESPHome para reTerminal E1001 / E1002 / E1003 / E1004 - botones, zumbador, LED integrado, monitorización de batería, sensor SHT4x, deep sleep y paneles de control multipágina.
 title: 'Recetario ESPHome: Botones, Zumbador, LED, Batería y Bajo Consumo (reTerminal E Serie)'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
