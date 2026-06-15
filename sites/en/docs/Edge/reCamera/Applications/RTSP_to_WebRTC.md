@@ -13,7 +13,7 @@ last_update:
   date: 06/10/2026
   author: Xuanjun Zhu
 createdAt: '2026-06-10'
-updatedAt: '2026-06-10'
+updatedAt: '2026-06-15'
 url: https://wiki.seeedstudio.com/rtsp_to_webrtc_with_recamera/
 ---
 
