@@ -22,69 +22,88 @@ Today is June 15th, and a brand new week has begun! Check out what Seeed Studio 
 
 ## Latest Wiki Launched
 
-### [reCamera Pro Quick Start Guide](https://wiki.seeedstudio.com/recamera_pro_getting_started/)
+### [Getting Started with Seeed Studio XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/get_start_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide will assist you in completing the hardware connection, logging into the device Web interface, configuring the wireless network, and troubleshooting common connection failures.
+Seeed Studio XIAO nRF54LM20A Sense is a compact, ultra-low-power wireless development board built around Nordic Semiconductor’s nRF54LM20A SoC. It combines a 128 MHz Arm Cortex-M33 processor, 512 KB RAM, 2 MB on-chip NVM, multiprotocol 2.4 GHz wireless connectivity, onboard IMU, digital microphone, 8MB external flash, IPEX antenna connector, and nPM1300 PMIC for advanced battery-powered IoT, wearable, smart sensing, and edge AI applications.
 
 </div>
 
-### [GPIO controlling reSpeaker Flex with Xiao ESP32S3](https://wiki.seeedstudio.com/respeaker_flex_xiao_gpio_control/)
+### [Wio-S3 Wireless Module Introduction](https://wiki.seeedstudio.com/wio-s3_wireless_module_introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-S3/Wio-S3-Wireless-Module-with-IPEX.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to read and control GPIO pins on the XVF3800 voice processor using the I2C interface. You’ll learn how to read GPI and GPO pin statuses, understand GPIO mappings, and identify their purpose.
+[Wio-S3 wireless module](https://www.seeedstudio.com/Wio-S3-Wireless-Module-p-6832.html) is embedded with the [ESP32-S3R8](https://www.espressif.com/en/products/socs/esp32-s3/) dual core Xtensa® LX7 MCU and the long range [SX1262 LoRa chip](https://www.semtech.com/products/wireless-rf/lora-connect/sx1262). It supports LoRaWAN frequency plan on EU868, US915 and more, as well as **2.4GHz Wi-Fi and BLE 5.0 connectivity**. It integrates 16MB Flash and 8MB PSRAM, making it ideal for edge AI processing.
 
 </div>
 
-### [YOLO11n Edge Benchmarking on reCamera](https://wiki.seeedstudio.com/recamera_benchmarking/)
+### [Driving E-Paper and SD Card with XIAO nRF54LM20A Sense](https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_epaper_and_sdcard/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/epaper_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-With the continuous deepening of edge AI scenarios, how to run the latest generation of vision models under extremely limited power consumption has become the core demand of developers. This WIKI will hardcore demonstrate the baseline performance (Benchmark) of **reCamera** when deploying the **YOLO11n** model. Here, you will see how reCamera smoothly drives the YOLO11n object detection and instance segmentation models with only **1.5W** of power consumption.
+The XIAO nRF54LM20A supports development with peripheral modules of the XIAO series and is fully compatible with the entire development ecosystem of XIAO products. This article demonstrates its ecosystem compatibility using the ePaper driver and MicroSD card read/write functions of the XIAO series as examples.
 
 </div>
 
-### [Work with PlatformIO for ePaper Displays](https://wiki.seeedstudio.com/epaper_work_with_platformio/)
+### [AI Voice Interaction Demo Based on reCamera](https://wiki.seeedstudio.com/ai_voice_assitant_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/248.png" alt="pir" width={500} height="auto" /></p>
+<div align="center">
+  <video width="600" controls>
+    <source src="https://raw.githubusercontent.com/hunter5299/Node-Red-project/main/reCamera_ai_voice_assitant/testVedioFinal.mp4" type="video/mp4" />
+    Your browser does not support video playback.
+  </video>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to set up and configure PlatformIO for Seeed ePaper displays. You’ll learn how to install PlatformIO in Visual Studio Code, create a PlatformIO project, configure platformio.ini for compatible Seeed ePaper devices, add the Seeed_GFX library, and generate the correct driver.h file for your board and screen combination.
+This project demonstrates a way to interact with reCamera through natural language. After visual reasoning triggers audio recording, reCamera sends the recording to the server, processes it through the complete **STT (Speech-to-Text) → LLM (Large Language Model Reasoning) → TTS (Text-to-Speech)** pipeline, and the synthesized voice is returned to reCamera for playback, enabling natural language conversation.
 
 </div>
 
-### [SenseCraft AI with reSpeaker XVF3800](https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/)
+### [RTSP to WebRTC Real-Time Video Streaming with reCamera](https://wiki.seeedstudio.com/rtsp_to_webrtc_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
+This project streams reCamera's video through the **RTSP protocol**, transmits inference results to the PC via the **mqtt out** node, then merges the RTSP stream with inference results on the PC side and converts it to **WebRTC** format, allowing any browser to play the inference video stream in real time without plugins.
 
 </div>
 
-### [Migrate /home Data from Jetson Orin Nano Developer Kit to reComputer](https://wiki.seeedstudio.com/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer/)
+### [ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki shows how to use the [reComputer Classic backup to Super migration project](https://github.com/jjjadand/reComputer_classic-backup-to-super.git) to migrate only `/home` from the source Jetson Orin Nano Developer Kit to a target reComputer. In this guide, [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) and [reComputer Super J4012](https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html) are used as target examples. Flash the target reComputer with its matching Seeed JetPack 6 BSP first, then restore the `/home` package on top of that clean reComputer system.
+This project uses **ESPHome** to enable reTerminal E Series' onboard **PCF8563 RTC**, **microSD card detection**, and **PDM microphone**, synchronizes RTC time with **Home Assistant**, displays real-time status on the ePaper screen, and provides ready-to-use YAML examples for **reTerminal E1001** and **E1002**.
 
 </div>
 
-### [Use an SPI Display on reComputer J4012 Classic](https://wiki.seeedstudio.com/jetson_spi_getting_start/)
+### [Real-Time QR Code Recognition on reCamera](https://wiki.seeedstudio.com/recamera_qrcode_udp/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki introduces how to connect and drive an SPI display on the Seeed reComputer J4012 Classic. It covers the basic workflow of using an SPI display through the 40-pin header, including hardware wiring, SPI interface configuration, device node checking, dependency installation, compiling a C++ demo, and running a simple display test.
+This example demonstrates how to build a **real-time QR code recognition system** using reCamera. The system captures live video frames through the camera, decodes QR codes using the **ZXing** library, and pushes the video frames (JPEG) along with the recognition results to a PC via **UDP** for display.
+
+</div>
+
+### [JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?](https://wiki.seeedstudio.com/jetpack72_deep_dive/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/flash-page.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This FAQ summarizes why JetPack 7.2 matters for Jetson AGX Orin users, what Seeed measured when comparing JetPack 7.2 with JetPack 6.2, and how to evaluate an upgrade path with Seeed Jetson DevelopTool.
 
 </div>
 
