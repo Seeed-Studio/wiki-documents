@@ -1,13 +1,13 @@
 ---
 description: Perguntas frequentes sobre Jetson
-title: FAQs sobre o uso do Jetson
+title: FAQs para uso do Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Jetson_FAQ
 last_update:
   date: 7/5/2023
   author: Seraphina
 createdAt: '2025-04-11'
-updatedAt: '2026-03-18'
+updatedAt: '2026-06-05'
 url: https://wiki.seeedstudio.com/pt-br/Jetson_FAQ/
 ---
 
@@ -18,7 +18,7 @@ Este documento contém todas as perguntas frequentes relacionadas aos produtos d
 
 Para mais detalhes, clique [aqui](/pt-br/Troubleshooting_Installation)
 
-#### P2: O espaço restante no eMMC do reComputer recebido é de apenas cerca de 2 GB. Como resolver o problema de espaço insuficiente?
+#### P2: O espaço restante no eMMC do reComputer recebido é de apenas cerca de 2GB. Como resolver o problema de espaço insuficiente?
 
 Para mais detalhes, clique [aqui](/pt-br/solution_of_insufficient_space)
 
@@ -65,8 +65,8 @@ Esse problema ocorre atualmente ao gravar o JetPack 5, e a NVIDIA o documentou o
 #### P14: Como compilar o projeto de código-fonte para o BSP Jetson da Seeed?
 Para mais detalhes, clique [aqui](/pt-br/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
-#### P15: Por que o comando `apt upgrade` não pode ser executado no reComputer/reServer?
-Os kernels e drivers do **reComputer/reServer** são personalizados. Se o comando `apt upgrade` for executado, alguns pacotes relacionados ao kernel e aos drivers podem ser substituídos pelos recursos oficiais da NVIDIA, o que pode causar problemas de compatibilidade de software. <mark>Portanto, não execute `apt upgrade` em nenhuma plataforma Jetson de terceiros.</mark>
+#### P15: Por que o comando `apt upgrade` não pode ser executado em reComputer/reServer?
+Os kernels e drivers do **reComputer/reServer** são personalizados. Se o comando `apt upgrade` for executado, alguns pacotes relacionados a kernel e drivers podem ser substituídos pelos recursos oficiais da NVIDIA, o que pode causar problemas de compatibilidade de software. <mark>Portanto, não execute `apt upgrade` em nenhuma plataforma Jetson de terceiros.</mark>
 
 Você pode consultar as instruções a seguir para bloquear as fontes APT relevantes. Dessa forma, se o apt upgrade for executado acidentalmente, o impacto será minimizado:
 ```bash
@@ -116,13 +116,17 @@ Para mais detalhes, clique [aqui](/pt-br/how_to_encrypt_the_disk_for_jetson)
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_establish_the_ethercat_on_jetson)
 
-#### P20： Não modifiquei nada relacionado ao kernel do Jetson, mas durante a inicialização o Jetson relatou um erro relacionado ao UUID e então entrou no terminal de recuperação.
+#### P20： Não modifiquei nada relacionado ao kernel do Jetson, mas durante a inicialização o Jetson relatou um erro relacionado a UUID e então entrou no terminal de recuperação.
 
 Solução para esse problema: clique [aqui](/pt-br/deal_the_issue_of_UUID)
 
 #### P21: Como usar a câmera IMX219 em dispositivos NVIDIA Jetson?
 
 Para mais detalhes, clique [aqui](/pt-br/how_to_use_camera_imx219)
+
+#### P22: Quais mudanças o JetPack 7.2 traz para o desempenho de inferência do Jetson AGX Orin?
+
+Para mais detalhes, clique [aqui](/pt-br/jetpack72_deep_dive)
 
 ## Suporte técnico
 
@@ -137,4 +141,3 @@ Obrigado por escolher nossos produtos! Estamos **aqui** para oferecer diferentes
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
