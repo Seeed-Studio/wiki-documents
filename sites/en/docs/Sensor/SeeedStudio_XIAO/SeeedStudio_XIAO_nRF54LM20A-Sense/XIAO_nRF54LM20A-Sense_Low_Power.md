@@ -20,6 +20,27 @@ url: https://wiki.seeedstudio.com/xiao_nrf54lm20a_with_low_power/
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54LM20A/getting_start/xiao_nrf54lm20a_power.png" style={{width:400, height:'auto'}}/></div>
 
+<div className="table-center">
+  <table align="center">
+        <div className="get_one_now_container" style={{textAlign: 'center'}}>
+          <a
+            className="get_one_now_item"
+            href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF54LM20A-Sense-p-6840.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>
+              <span>
+                <font color="#FFFFFF" size="4">
+                  Get One Now 🖱️
+                </font>
+              </span>
+            </strong>
+          </a>
+        </div>
+  </table>
+</div>
+
 The XIAO nRF54LM20A is built around the nRF54LM20 SoC and features ultra-low power consumption. Its outstanding low-power performance effectively extends device runtime for battery-critical applications such as wearables, IoT end nodes and remote sensing units. This document describes how to implement and deploy various low-power modes on the XIAO nRF54LM20A.
 
 :::tip

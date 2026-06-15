@@ -1,10 +1,11 @@
 ---
-description: Raspberry Pi、XIAO ESP32、ReSpeaker Lite、および音声埋め込みを使用した音声制御 Kiwi ドライブロボット。ハンズフリーでインテリジェントなロボット制御を実現します。
-title: reSpeaker Flex で LeKiwi ロボットに音声インタラクションを追加
+description: Raspberry Pi、XIAO ESP32、ReSpeaker Lite、および音声埋め込みを使用して、音声で操作できるKiwiドライブロボットを実現し、インテリジェントなハンズフリー制御を行います。
+title: reSpeaker で LeKiwi ロボットに音声インタラクションを追加する 
 keywords:
   - reSpeaker flex
   - LeKiwi
   - xvf3800
+
 image: https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png
 slug: /respeaker_flex_lekiwi
 sku: 100005504,100099135,100070894,100026178
@@ -12,8 +13,8 @@ last_update:
   date: 04/28/2026
   author: Kasun Thushara
 createdAt: '2026-04-28'
-updatedAt: '2026-04-28'
-url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
+updatedAt: '2026-05-08'
+url: https://wiki.seeedstudio.com/ja/respeaker_flex_lekiwi/
 ---
 
 
@@ -21,7 +22,7 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/banner_javis.png" alt="pir" width={800} height="auto" /></p>
 
-3 輪 Kiwi ドライブロボットを音声で操作しましょう！このプロジェクトでは、Seeed Studio XIAO ESP32（モータコントローラ）と Raspberry Pi（音声処理ブレイン）を組み合わせ、reSpeaker Flex による高品質な音声取得と Voice Embeddings による、よりスマートでパーソナライズされた音声インタラクションを実現します。自然言語コマンドを使って、ロボットの走行、操舵、制御を完全ハンズフリーで行うことができ、精度と応答性も向上します。
+3輪Kiwiドライブロボットを音声で操作しましょう！このプロジェクトでは、Seeed Studio XIAO ESP32（モータコントローラ）と Raspberry Pi（音声処理用ブレイン）を組み合わせ、reSpeaker による高品質な音声取得と Voice Embeddings による、よりスマートでパーソナライズされた音声インタラクションを実現します。自然な言葉でコマンドを出すだけで、ロボットの走行、操舵、制御を完全ハンズフリーで行うことができ、精度と応答性も向上します。
 
 ## 必要なハードウェア
 
@@ -29,14 +30,12 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
   <tr>
     <th>LeKiwi キット</th>
     <th>XIAO ESP32S3</th>
-    <th>reSpeaker Flex XVF3800 Circular</th>
     <th>Raspberry Pi 5</th>
 
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114090065-lekiwi-kit_1.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102010634-seeed-studio-xiao-esp32s3-_pre-soldered_-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg" style={{width:500, height:'auto'}}/></div></td>
     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
 
   </tr>
@@ -52,17 +51,96 @@ url: https://wiki.seeedstudio.com/ja/respeaker_flex_introduction/
       </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-      </a>
-    </div></td>
-    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
     </div></td>
   </tr>
 </table>
+
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+
+<table>
+  <tr>
+    <th>reSpeaker Flex XVF3800 Circular</th>
+    <th></th>
+    <th>reSpeaker XVF3800</th>
+  </tr>
+
+  <tr>
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Circular-4withXIAOESP32S3.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+
+    <td
+      style={{
+        textAlign: 'center',
+        verticalAlign: 'middle',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        padding: '0 20px'
+      }}
+    >
+      または
+    </td>
+
+    <td>
+      <div style={{ textAlign: 'center' }}>
+        <img
+          src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg"
+          style={{ width: 300, height: 'auto' }}
+        />
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/reSpeaker-Flex-XVF3800-Circular-4-p-6737.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+
+    <td></td>
+
+    <td>
+      <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+        <a
+          className="get_one_now_item"
+          href="https://www.seeedstudio.com/ReSpeaker-XVF3800-USB-Mic-Array-p-6488.html"
+          target="_blank"
+        >
+          <strong>
+            <span>
+              <font color={'FFFFFF'} size={'4'}>
+                今すぐ入手 🖱️
+              </font>
+            </span>
+          </strong>
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## サービス
 
@@ -77,7 +155,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 1. ウェイクワードを話します（デフォルト：**"Hey Jarvis"**）
 2. Raspberry Pi があなたのコマンドを録音します
 3. **Groq Whisper** が音声をテキストに書き起こします
-4. **LLaMA 3** がロボットが取るべき動作を判断します
+4. **LLaMA 3** がロボットが取るべきアクションを判断します
 5. **Groq Orpheus TTS** が応答を音声で読み上げます
 6. シリアルコマンドが ESP32 に送信され、モータを駆動します
 
@@ -85,7 +163,7 @@ You speak → Wake word detected → Audio recorded → Whisper STT → LLaMA LL
 
 ## XIAO ESP32（モータコントローラ）の準備
 
-ESP32 は Arduino スケッチを実行し、**Kiwi ドライブの運動学**を用いて 3 つの車輪を物理的に駆動します。Raspberry Pi から送られてくる 1 文字のシリアルコマンド（`w`、`s`、`a`、`d` など）を受信し、それを協調したモータ速度に変換します。
+ESP32 は Arduino スケッチを実行し、**Kiwi-drive キネマティクス**を用いて3つの車輪を物理的に駆動します。Raspberry Pi から送られてくる1文字のシリアルコマンド（`w`、`s`、`a`、`d` など）を受信し、それを協調したモータ速度に変換します。
 
 ### ステップ 1 — モータ ID を設定する
 
@@ -100,37 +178,37 @@ ESP32 は Arduino スケッチを実行し、**Kiwi ドライブの運動学**�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reSpeaker_flex/hardware_lekiwi_1.png" alt="pir" width={800} height="auto" /></p>
 
-公式の Seeed Studio 動画チュートリアルに従って、シャーシの組み立て、ホイールの取り付け、サーボの配線を行ってください：
+公式の Seeed Studio 動画チュートリアルに従って、シャーシの組み立て、ホイールの取り付け、サーボの配線を行ってください。
 
- [LeKiwi 組み立てチュートリアル](https://wiki.seeedstudio.com/ja/lerobot_lekiwi/#組み立て)
+ [LeKiwi 組み立てチュートリアル](https://wiki.seeedstudio.com/ja/lerobot_lekiwi/#assembly)
 
 :::info
-完了する必要があるのは**物理的な組み立て**だけです。このプロジェクトでは別の構成を使用するため、LeRobot GitHub リポジトリのクローンに関する手順はすべてスキップしてください。
+完了する必要があるのは**物理的な組み立て**のみです。このプロジェクトでは別の構成を使用するため、LeRobot GitHub リポジトリのクローンに関する手順はすべてスキップしてください。
 :::
 
 ### ステップ 3 — Arduino スケッチを書き込む
 
 スケッチ（`lekiwi_motor_control.ino`）は次のことを行います：
 
-- 3 つのサーボすべてを **位置モード** で初期化し、センタリングしてから **ホイール（連続回転）モード** に切り替えます
-- USB シリアルポートで 1 文字のコマンドを待ち受けます
-- **Kiwi ドライブの運動学**を使用して、各車輪の正しい速度を計算します
-- **ナッジモード**（短いバースト後に自動停止）のみをサポートします
+- 3つのサーボすべてを**位置モード**で初期化しセンタリングした後、**ホイール（連続回転）モード**に切り替えます
+- USB シリアルポートで1文字コマンドを待ち受けます
+- **Kiwi-drive キネマティクス**を使用して、各車輪の正しい速度を計算します
+- **ナッジモード**のみをサポートします（短いバースト駆動後、自動停止）
 **シリアルコマンドリファレンス：**
 
 | キー | 動作 |
 |-----|--------|
-| `w` | 前方にナッジ |
-| `s` | 後方にナッジ |
+| `w` | 前進ナッジ |
+| `s` | 後退ナッジ |
 | `a` | 左旋回ナッジ |
 | `d` | 右旋回ナッジ |
-| `q` | 左へ平行移動ナッジ |
-| `e` | 右へ平行移動ナッジ |
+| `q` | 左平行移動ナッジ |
+| `e` | 右平行移動ナッジ |
 | `x` / Space | 緊急停止 |
 | `+` / `-` | ナッジ時間の増加 / 減少 |
 | `*` / `/` | ナッジ速度の増加 / 減少 |
 
-**SCServo** ライブラリをインストールした Arduino IDE 経由でスケッチを書き込みます。シリアルモニタを **115200 ボー**に設定し、3 つのサーボすべてが `OK` を返すことを確認してください。
+Arduino IDE から **SCServo** ライブラリをインストールした状態でスケッチを書き込みます。シリアルモニタを **115200 ボー**に設定し、3つのサーボすべてが `OK` を返すことを確認してください。
 
 <details>
 <summary>Arduino コード</summary>
@@ -463,7 +541,7 @@ void loop() {
 
 </details>
 
-## Raspberry Pi（Voice Brain）の準備
+## Raspberry Pi（音声ブレイン）の準備
 
 ### ステップ 1 — Groq API キーを取得する
 
@@ -498,11 +576,11 @@ pip install -r requirements.txt
 python3 download_model.py
 ```
 
-これは、事前学習済みの **"Hey Jarvis"** モデル（およびその他）を openwakeword から `~/.openwakeword/` にダウンロードします。
+これにより、事前学習済みの **"Hey Jarvis"** モデル（およびその他）が openwakeword から `~/.openwakeword/` にダウンロードされます。
 
 ### ステップ 5 — マイクのインデックスを確認する
 
-**ReSpeaker Flex** を USB 経由で接続し、次を実行します：
+USB 経由で **reSpeaker** を接続し、次を実行します：
 
 ```bash
 python3 list_mics.py
@@ -518,7 +596,7 @@ Available audio INPUT devices:
   [2] USB PnP Sound Device  (rate=16000Hz)
 ```
 
-ReSpeaker の横の角括弧内の番号をメモします — それが `MIC_INDEX` です。
+ReSpeaker の横の角括弧内の数字をメモします — それが `MIC_INDEX` です。
 
 ### ステップ 6 — ESP32 のシリアルポートを確認する
 
@@ -548,7 +626,7 @@ cp config.env.example config.env
 nano config.env
 ```
 
-更新すべき主な設定項目：
+更新すべき主な設定：
 
 ```env
 # Your Groq API key (required)
@@ -561,7 +639,7 @@ MIC_INDEX=1
 SERIAL_PORT=/dev/ttyACM0
 ```
 
-その他はすべて、入門用としてデフォルトのままで構いません。
+それ以外は、入門用としてデフォルトのままにしておいて構いません。
 
 ---
 
@@ -573,7 +651,7 @@ SERIAL_PORT=/dev/ttyACM0
 python3 pipeline.py
 ```
 
-次のように表示されるはずです：
+次のような表示が出るはずです：
 
 ```
 ======================================================
@@ -605,7 +683,7 @@ python3 pipeline.py
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに合わせて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

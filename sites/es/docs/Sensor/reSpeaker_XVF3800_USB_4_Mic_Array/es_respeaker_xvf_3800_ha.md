@@ -1,26 +1,26 @@
 ---
-description: Experimenta el poder del ReSpeaker XVF3800 USB 4-Mic Array—un arreglo de micrófonos circular avanzado con AEC, beamforming, supresión de ruido y captura de voz de 360°. Emparejado con el compacto XIAO ESP32S3, ofrece control de voz de alto rendimiento para dispositivos inteligentes, robótica y aplicaciones IoT. Únete a nosotros mientras demostramos la integración perfecta con Home Assistant para controlar dispositivos usando comandos de voz.
-title: Control de Voz para Hogar Inteligente con Home Assistant
+description: Experimenta la potencia del ReSpeaker XVF3800 USB 4-Mic Array - una avanzada matriz circular de micrófonos con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinado con el compacto XIAO ESP32S3, ofrece un control por voz de alto rendimiento para dispositivos inteligentes, robótica y aplicaciones IoT. Acompáñanos mientras demostramos una integración perfecta con Home Assistant para controlar dispositivos mediante comandos de voz.
+title: Control por voz para el hogar inteligente con Home Assistant y reSpeaker XVF3800
 keywords:
   - reSpeaker
   - XIAO
   - ESP32S3
   - Home Assistant
-image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
+image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/display.webp
 slug: /respeaker_xvf3800_xiao_home_assistant
 last_update:
   date: 9/17/2025
   author: Kasun Thushara
 createdAt: '2025-07-31'
-updatedAt: '2025-09-29'
+updatedAt: '2026-04-22'
 url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_home_assistant/
 ---
 
-## Descripción General
+## Descripción general
 
-Habla con espacios inteligentes con el nuevo **ReSpeaker XMOS XVF3800 con XIAO ESP32S3** enciende las luces, sube el volumen de la música, o incluso pregunta sobre el clima usando la voz
+Habla con espacios inteligentes con el nuevo **ReSpeaker XMOS XVF3800 con XIAO ESP32S3**: enciende o apaga las luces, sube el volumen de la música o incluso pregunta por el clima usando la voz.
 
-En este capítulo usaremos el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 HA Voice Assistant para conectar el interruptor inteligente Sonoff y realizar control de voz del interruptor de luz.
+En este capítulo usaremos el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 y el asistente de voz de Home Assistant para conectar el interruptor inteligente Sonoff y así lograr el control por voz del interruptor de la luz.
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -33,12 +33,12 @@ En este capítulo usaremos el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 HA Voice A
   </iframe>
 </div>
 
-## Hardware Requerido
+## Hardware necesario
 
 <table align="center">
   <tr>
       <th>ReSpeaker XVF3800 con XIAO ESP32S3</th>
-        <th>Dispositivo Home Assistant</th>
+        <th>Dispositivo con Home Assistant</th>
         <th>Sonoff BASICR2</th>
   </tr>
   <tr>
@@ -49,103 +49,103 @@ En este capítulo usaremos el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 HA Voice A
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Standard-Version-with-CM4-p-5809.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Sonoff-BasicR2-p-5514.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
 </table>
 
-## Actualización de Firmware
+## Actualización de firmware
 
-Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware XMOS a
-Descarga el firmware desde aquí. En tu computadora, conecta el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 y ejecuta el en nuestra guía:
+Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware de XMOS.
+Descarga el firmware desde aquí. En tu ordenador, conecta el ReSpeaker XMOS XVF3800 con XIAO ESP32S3 y ejecuta lo indicado en nuestra guía:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
 :::note
-El arreglo de micrófonos XVF3800 necesita un MCLK de 12.288 MHz para funcionar, pero ESPHome (usado en Home Assistant) no puede generarlo debido a limitaciones del API. Este firmware hace que el XVF3800 actúe como el maestro I2S en su lugar, para que pueda generar sus propios relojes sin necesitar MCLK del ESP32.
+La matriz de micrófonos XVF3800 necesita un MCLK de 12,288 MHz para funcionar, pero ESPHome (usado en Home Assistant) no puede generarlo debido a las limitaciones del API. Este firmware hace que el XVF3800 actúe como maestro I2S, de modo que pueda generar sus propios relojes sin necesitar MCLK del ESP32.
 Nuestro firmware soluciona esta limitación, por lo que el micrófono funciona correctamente con Home Assistant.
 :::
 
-Puedes descargar el Firmware desde [Aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
+Puedes descargar el firmware desde [aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
-La guía de instalación está [Aquí](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#update-firmware)
+La guía de instalación está [aquí](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#actualizar-firmware)
 
 ## Preparar ReSpeaker XMOS XVF3800 con XIAO ESP32S3
 
-Ve a **Home Assistant > Configuración > Complementos**.
+Ve a **Home Assistant > Settings > Add-ons**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en **Tienda de Complementos** (generalmente en la parte inferior derecha)
+Haz clic en **Add-on Store** (normalmente en la parte inferior derecha)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-Bajo **Complementos oficiales**, busca e instala **ESPHome Device Builder**.
+En **Official add-ons**, busca e instala **ESPHome Device Builder**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
-Después de la instalación, haz clic en **Iniciar** para ejecutar el complemento ESPHome.
+Después de la instalación, haz clic en **Start** para ejecutar el complemento ESPHome.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_Start.PNG" alt="pir" width={800} height="auto" /></p>
 
-Habilita **Iniciar al arrancar, Watchdog y Mostrar en la barra lateral** para un acceso más fácil.
+Activa **Start on Boot, Watchdog y Show in Sidebar** para un acceso más sencillo.
 
 Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
-Haz clic en **+ NUEVO DISPOSITIVO**.
+Haz clic en **+ NEW DEVICE**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-Cuando se te solicite, haz clic en **OMITIR** – crearemos la configuración manualmente.
+Cuando se te solicite, haz clic en **SKIP**; crearemos la configuración manualmente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-Selecciona tu nueva entrada de dispositivo y haz clic en **EDITAR**.
+Selecciona la nueva entrada de tu dispositivo y haz clic en **EDIT**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
 
-Reemplaza el contenido con tu **configuración YAML** personalizada
+Sustituye el contenido por tu configuración personalizada en **YAML**
 
 :::important
-Puedes encontrar el archivo YAML desde [Aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)
+Puedes encontrar el archivo YAML [aquí](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration/tree/main/config)
 :::
 
-Una vez que tu YAML esté guardado, haz clic en **INSTALAR**.
+Una vez que tu YAML esté guardado, haz clic en **INSTALL**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_yaml.PNG" alt="pir" width={800} height="auto" /></p>
 
-Elige **Descarga Manual**
+Elige **Manual Download**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
 Espera a que el firmware se compile.
 
-Descarga el archivo de firmware .bin generado a tu computadora.
+Descarga el archivo de firmware .bin generado en tu ordenador.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
 
-Conecta la placa **ESP32-S3** (con XVF3800 conectado) a tu PC usando un **cable USB Tipo-C**.
+Conecta la placa **ESP32-S3** (con el XVF3800 conectado) a tu PC usando un **cable USB tipo C**.
 
 Abre [**Web-ESPHome**](https://web.esphome.io/?dashboard_wizard) en Chrome o Edge.
 
-Haz clic en **CONECTAR** y elige el puerto serie apropiado
+Haz clic en **CONNECT** y elige el puerto serie adecuado
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
 
-Una vez conectado, haz clic en **INSTALAR**
+Una vez conectado, haz clic en **INSTALL**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_install.PNG" alt="pir" width={500} height="auto" /></p>
 
@@ -153,57 +153,57 @@ Selecciona el archivo .bin que acabas de descargar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_bin_write.PNG" alt="pir" width={500} height="auto" /></p>
 
-Espera a que la instalación se complete (puede tomar unos minutos).
+Espera a que la instalación se complete (puede tardar unos minutos).
 
-Después del éxito, verás un mensaje de confirmación.
+Cuando finalice correctamente, verás un mensaje de confirmación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
 
-Regresa a **Home Assistant > Configuración > Dispositivos y Servicios**.
+Vuelve a **Home Assistant > Settings > Devices & Services**.
 
-Deberías ver **ESPHome** listado como una integración descubierta.
+Deberías ver **ESPHome** listado como una integración detectada.
 
-Haz clic en **CONFIGURAR**, luego **Enviar** para finalizar la configuración.
+Haz clic en **CONFIGURE** y luego en **Submit** para finalizar la configuración.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_discover.PNG" alt="pir" width={800} height="auto" /></p>
 
-## Agregar tu dispositivo inteligente
+## Añade tu dispositivo inteligente
 
-Configura el dispositivo **Sonoff BASICR2** según el manual del usuario del fabricante. Necesitarás crear una cuenta eWELink.
+Configura el dispositivo **Sonoff BASICR2** según el manual de usuario del fabricante. Necesitarás crear una cuenta eWELink.
 
 ### Instalar HACS
 
-Si no está ya instalado, sigue la guía oficial para configurar la [**Tienda de la Comunidad de Home Assistant**](https://hacs.xyz/docs/use/):
+Si aún no está instalado, sigue la guía oficial para configurar la [**Home Assistant Community Store**](https://hacs.xyz/docs/use/):
 
 Abre **HACS** desde la barra lateral.
-Busca **Sonoff LAN** en la sección de Búsqueda.
+Busca **Sonoff LAN** en la sección de búsqueda.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_HACS.PNG" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en **Instalar** para agregar la integración.
+Haz clic en **Install** para añadir la integración.
 Reinicia Home Assistant para aplicar los cambios.
 
 ### Sonoff
 
-Navega a **Configuración → Dispositivos y Servicios**.
-Haz clic en **Agregar Integración**.
+Ve a **Settings → Devices & Services**.
+Haz clic en **Add Integration**.
 Busca y selecciona **Sonoff**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_sonoff.PNG" alt="pir" width={800} height="auto" /></p>
 
-Ingresa las **credenciales de tu cuenta eWeLink** para autenticarte.
+Introduce tus **credenciales de la cuenta eWeLink** para autenticarte.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/credentials.png" alt="pir" width={500} height="auto" /></p>
 
-Una vez conectado exitosamente, verás las entidades asociadas listadas bajo:
-**Configuración → Dispositivos y Servicios → Entidades**
+Una vez conectado correctamente, verás las entidades asociadas listadas en:
+**Settings → Devices & Services → Entities**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff-id.png" alt="pir" width={800} height="auto" /></p>
 
-## Asistente de Voz con Nabu Cloud
+## Asistente de voz con Nabu Cloud
 
-En esta demostración, estamos mostrando cómo conectar con **Home Assistant Cloud (Nabu Casa)** usando voz. La configuración es simple, y puedes aprovechar una **prueba gratuita de un mes** para explorar todas sus capacidades.
-Con la **palabra de activación** incorporada: "Okay Nabu", puedes activar comandos de voz sin esfuerzo e **integrarte perfectamente** con dispositivos y servicios **en cualquier lugar, en cualquier momento** — todo sin configuraciones complejas.
+En esta demostración, mostramos cómo conectarse con **Home Assistant Cloud (Nabu Casa)** usando la voz. La configuración es sencilla y puedes aprovechar un **mes de prueba gratuito** para explorar todas sus capacidades.
+Con la **palabra de activación** integrada: “Okay Nabu”, puedes activar comandos de voz sin esfuerzo e **integrarte sin problemas** con dispositivos y servicios **en cualquier lugar y en cualquier momento**, todo ello sin configuraciones complejas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_voice.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -213,7 +213,7 @@ Con la **palabra de activación** incorporada: "Okay Nabu", puedes activar coman
 
 ### WiFi
 
-Esta sección configura cómo tu dispositivo se conecta a Wi-Fi.
+Esta sección configura cómo tu dispositivo se conecta a Wi‑Fi.
 
 ```yml
 wifi:
@@ -221,18 +221,18 @@ wifi:
   password: !secret wifi_password
 ```
 
-- **ssid & password**: Tomados de tu archivo secrets.yaml para que tu contraseña no sea visible en texto plano.
-- **Events**: Ejecuta acciones cuando Wi-Fi se conecta o desconecta:
+- **ssid y contraseña**: Tomados de tu archivo secrets.yaml para que tu contraseña no sea visible en texto plano.
+- **Eventos**: Ejecuta acciones cuando el Wi‑Fi se conecta o se desconecta:
   - on_connect:
     - Detiene la configuración BLE improv.
-    - Ejecuta el script control_leds (efecto LED para Wi-Fi conectado).
+    - Ejecuta el script control_leds (efecto LED para Wi‑Fi conectado).
 
   - on_disconnect:
-    - Ejecuta el script control_leds (efecto LED para Wi-Fi desconectado).
+    - Ejecuta el script control_leds (efecto LED para Wi‑Fi desconectado).
 
 ### Bus I²C
 
-I²C es una línea de comunicación que permite a tu ESP32 hablar con otros chips como el micrófono o el códec de audio.
+I²C es una línea de comunicación que permite a tu ESP32 comunicarse con otros chips como el micrófono o el códec de audio.
 
 ```yml
 i2c:
@@ -243,10 +243,10 @@ i2c:
   frequency: 100kHz
 ```
 
-- **id**: Un nombre para referenciar este bus en otro lugar.
-- **sda** / scl: Pines utilizados para datos y reloj.
-- **scan**: Verifica dispositivos conectados al inicio.
-- **frequency**: Velocidad de comunicación (100kHz es estándar).
+- **id**: Un nombre para hacer referencia a este bus en otras partes.
+- **sda** / scl: Pines usados para datos y reloj.
+- **scan**: Comprueba los dispositivos conectados al inicio.
+- **frequency**: Velocidad de comunicación (100kHz es el estándar).
 
 ### Interruptores
 
@@ -325,9 +325,9 @@ switch:
 
 </details>
 
-Los interruptores son "botones" controlados por software en Home Assistant. Controlan características como sonido, temporizadores o alarmas.
+Los interruptores son “botones” controlados por software en Home Assistant. Controlan funciones como sonido, temporizadores o alarmas.
 
-**Interruptor de Sonido de Palabra de Activación**: Controla el audio de la palabra de activación.
+**Interruptor de sonido de palabra de activación**: Controla el audio de la palabra de activación.
 
 ```yml
 # Wake Word Sound Switch.
@@ -340,11 +340,11 @@ Los interruptores son "botones" controlados por software en Home Assistant. Cont
     restore_mode: RESTORE_DEFAULT_ON
 ```
 
-**Interruptor Interno de Temporizador Sonando**:
+**Interruptor interno de timbre de temporizador**:
 
-- Rastrea si un temporizador está activo.
-- on_turn_on: Reduce otro audio en -20dB, inicia sonido del temporizador, actualiza LED, se detiene automáticamente después de 15 min.
-- on_turn_off: Detiene temporizador, restaura volumen, actualiza LED.
+- Registra si un temporizador está activo.
+- on_turn_on: Reduce el volumen de otros audios en -20dB, inicia el sonido del temporizador, actualiza el LED y se detiene automáticamente después de 15 min.
+- on_turn_off: Detiene el temporizador, restaura el volumen y actualiza el LED.
 
 ```yml
 # Internal switch to track when a timer is ringing on the device.
@@ -357,7 +357,7 @@ Los interruptores son "botones" controlados por software en Home Assistant. Cont
     ...
 ```
 
-**Interruptor de Alarma Activada**:
+**Interruptor de alarma activada**:
 
 ```yml
 # Defines if alarm is active
@@ -369,8 +369,8 @@ Los interruptores son "botones" controlados por software en Home Assistant. Cont
     ...
 ```
 
-- Rastrea el estado de la alarma.
-- Ejecuta script LED cuando está encendido/apagado.
+- Registra el estado de la alarma.
+- Ejecuta el script de LED cuando se enciende o apaga.
 
 ### Sensores
 
@@ -421,9 +421,9 @@ text_sensor:
 
 </details>
 
-Este bloque YAML añade controles y sensores para temporizadores, alarmas y brillo LED. Te permite ajustar el brillo del anillo LED con un deslizador, rastrear el próximo temporizador (tiempo + nombre), y mostrar la hora de la alarma y la hora actual del dispositivo en Home Assistant.
+Este bloque YAML añade controles y sensores para temporizadores, alarmas y brillo del LED. Te permite ajustar el brillo del anillo LED con un control deslizante, seguir el próximo temporizador (hora + nombre) y mostrar la hora de la alarma y la hora actual del dispositivo en Home Assistant.
 
-**Brillo del Anillo LED**:
+**Brillo del anillo LED**:
 
 ```yml
 number:
@@ -434,11 +434,11 @@ number:
     ...
 ```
 
-- Permite al usuario ajustar el brillo con un deslizador.
-- min_value / max_value definen límites.
-- restore_value mantiene la configuración anterior después del reinicio.
+- Permite al usuario ajustar el brillo con un control deslizante.
+- min_value / max_value definen los límites.
+- restore_value mantiene el ajuste anterior después de reiniciar.
 
-**Próximo Temporizador**
+**Próximo temporizador**
 
 ```yml
 sensor:
@@ -450,9 +450,9 @@ sensor:
 ```
 
 - Muestra el tiempo restante para el próximo temporizador.
-- Se actualiza solo cuando un temporizador cambia (ahorra recursos).
+- Se actualiza solo cuando cambia un temporizador (ahorra recursos).
 
-**Hora de Alarma y Hora del Dispositivo**
+**Hora de la alarma y hora del dispositivo**
 
 ```yml
 text_sensor:
@@ -463,9 +463,9 @@ text_sensor:
     ...
 ```
 
-- Muestra la alarma actual y la hora del sistema ESP32.
+- Muestra la alarma actual y la hora del sistema del ESP32.
 
-### Efectos LED en intervalo
+### Efectos LED por intervalo
 
 ```yml
 interval:
@@ -499,12 +499,12 @@ interval:
 
 - Los intervalos ejecutan código repetidamente en segundo plano.
 - 50ms: Ejecuta código 20 veces por segundo.
-- Controla animaciones LED basadas en el estado del sistema o efecto seleccionado.
+- Controla las animaciones LED según el estado del sistema o el efecto seleccionado.
 
-### Control LED
+### Control de LED
 
 <details>
-<summary>Control LED</summary>
+<summary>Control de LED</summary>
 
 ```yml
  script:
@@ -1288,7 +1288,7 @@ interval:
 
 </details>
 
-**Controlador Central (led_set_effect)**
+**Controlador central (led_set_effect)**
 
 ```yml
 script:
@@ -1307,52 +1307,52 @@ script:
 ```
 
 - Gestiona todos los efectos LED en un solo lugar.
-- Puede establecer dinámicamente el tipo de efecto, color (R/G/B) y velocidad.
-- Utiliza scripts de actualización para movimiento suave.
-- El efecto apagado inmediatamente apaga los LEDs.
+- Puede configurar dinámicamente el tipo de efecto, el color (R/G/B) y la velocidad.
+- Usa scripts de actualización para un movimiento fluido.
+- El efecto de apagado apaga los LED inmediatamente.
 
-**Scripts Individuales**
+**Scripts individuales**
 
-- Cada animación (respirar, arcoíris, cometa, parpadeo, tic de temporizador, visualización de volumen, haz LED) tiene su propio script.
+- Cada animación (respiración, arcoíris, cometa, centelleo, tic de temporizador, visualización de volumen, haz LED) tiene su propio script.
 - Hace que el sistema sea modular y fácil de mantener.
-- Se activa periódicamente por led_animation_interval o por el controlador central.
+- Se activa periódicamente mediante led_animation_interval o por el controlador central.
 
-| Estado del Dispositivo  | Efecto LED             |
+| Estado del dispositivo   | Efecto LED             |
 |------------------------|----------------------|
-| Fallo de inicio        | Respirar rojo         |
-| Modo Improv BLE        | Parpadeo cálido       |
-| Inicialización         | Parpadeo azul         |
-| Sin conexión HA        | Parpadeo rojo         |
-| Asistente de voz esperando          | Haz púrpura           |
-| Asistente de voz escuchando         | Haz púrpura brillante |
-| Asistente de voz pensando           | Respirar púrpura      |
-| Asistente de voz respondiendo       | Cometa púrpura        |
-| Error del asistente de voz          | Respirar rojo         |
-| Asistente de voz inactivo           | LEDs apagados         |
-| Temporizador sonando   | Respirar púrpura rápido |
+| Fallo de inicio        | Respiración roja      |
+| Modo Improv BLE        | Centelleo cálido      |
+| Inicialización         | Centelleo azul        |
+| Sin conexión HA        | Centelleo rojo        |
+| Asistente de voz en espera          | Haz púrpura          |
+| Asistente de voz escuchando         | Haz púrpura brillante|
+| Asistente de voz pensando           | Respiración púrpura  |
+| Asistente de voz respondiendo       | Cometa púrpura       |
+| Error del asistente de voz          | Respiración roja     |
+| Asistente de voz inactivo           | LED apagados         |
+| Temporizador sonando   | Respiración púrpura rápida |
 | Cambio de volumen      | Visualización temporal |
 
-#### Cómo Funciona el Control LED (Resumen del Flujo)
+#### Cómo funciona el control de LED (visión general del flujo)
 
-1. **Activar un Efecto**
+1. **Activación de un efecto**
 
-   - Cuando algo sucede (ej., fallo de inicio, asistente de voz escuchando, temporizador sonando), se ejecuta un script.
-   - Ese script llama al **controlador LED central** (`led_set_effect`) y le dice:
+   - Cuando ocurre algo (por ejemplo, fallo de inicio, asistente de voz escuchando, temporizador sonando), se ejecuta un script.
+   - Ese script llama al **controlador central de LED** (`led_set_effect`) y le indica:
 
-     - **qué efecto** ejecutar (ej., respirar, arcoíris, cometa)
+     - **qué efecto** ejecutar (por ejemplo, respiración, arcoíris, cometa)
      - **qué color** (valores R, G, B)
      - **qué tan rápido** (velocidad).
 
-   Si el inicio falla → `led_set_effect` se llama con efecto = *respirar*, color = rojo.
+   Si el inicio falla → se llama a `led_set_effect` con effect = *breathe*, color = rojo.
 
-2. **Controlador Central (bucle de intervalo)**
+2. **Controlador central (bucle de intervalo)**
 
-   - Cada **50ms** (20 veces por segundo), el bucle `led_animation_interval` verifica cuál es el **efecto actual**.
-   - Basado en ese nombre de efecto, **reenvía el control** al script de actualización correspondiente.
+   - Cada **50 ms** (20 veces por segundo), el bucle `led_animation_interval` comprueba cuál es el **efecto actual**.
+   - En función de ese nombre de efecto, **reenvía el control** al script de actualización correspondiente.
 
-     - Si efecto = *respirar* → ejecuta `update_breathe_effect`.
-     - Si efecto = *arcoíris* → ejecuta `update_rainbow_effect`.
-     - Y así sucesivamente para parpadeo, cometa, tic de temporizador, haz LED, etc.
+     - Si effect = *breathe* → ejecuta `update_breathe_effect`.
+     - Si effect = *rainbow* → ejecuta `update_rainbow_effect`.
+     - Y así sucesivamente para centelleo, cometa, tic de temporizador, haz LED, etc.
 
 Este bucle actúa como un **despachador**: decide *qué script de animación ejecutar a continuación*.
 
@@ -1388,14 +1388,14 @@ interval:
 
 ```
 
-3. **Script de Actualización de Efecto**
+3. **Script de actualización de efecto**
 
-   - Cada efecto tiene su propio script que calcula los colores LED fotograma por fotograma.
-   - Ejemplo: **efecto respirar**
+   - Cada efecto tiene su propio script que calcula los colores de los LED fotograma a fotograma.
+   - Ejemplo: **efecto de respiración**
 
-     - Usa una onda sinusoidal para desvanecer el brillo hacia arriba y hacia abajo suavemente.
-     - Multiplica el brillo por la configuración global del anillo LED (velocidad, deslizador de brillo, color R/G/B).
-     - Construye un array de colores para los 12 LEDs.
+     - Usa una onda sinusoidal para subir y bajar el brillo suavemente.
+     - Multiplica el brillo por los ajustes globales del anillo LED (velocidad, control deslizante de brillo, color R/G/B).
+     - Construye una matriz de colores para los 12 LED.
      - Envía los colores al anillo LED Respeaker.
 
 Ejemplo:
@@ -1428,11 +1428,11 @@ Ejemplo:
 
 ```
 
-Esto hace que las animaciones sean suaves, dinámicas y personalizables.
+Esto hace que las animaciones sean fluidas, dinámicas y personalizables.
 
-### Configuración de Audio
+### Configuración de audio
 
-**Entrada / Salida I²S**
+**Entrada / salida I²S**
 
 I²S (Inter-IC Sound) es una conexión digital que permite al ESP32 enviar y recibir audio de alta calidad a chips como códecs, micrófonos y altavoces.
 
@@ -1464,11 +1464,11 @@ i2s_audio:
 
 **Micrófono**
 
-- Captura audio del array de micrófonos I²S / códec.
-- GPIO43: Pin donde entra los datos de audio del micrófono.
-- Frecuencia de muestreo 48 kHz, 32-bit: Grabación de alta calidad (estéreo, 2 canales).
+- Captura audio desde la matriz de micrófonos I²S / códec.
+- GPIO43: Pin por donde entra el dato de audio del micrófono.
+- Frecuencia de muestreo 48 kHz, 32 bits: Grabación de alta calidad (estéreo, 2 canales).
 - adc_type: external: Usa el códec externo (no el ADC integrado del ESP32).
-- i2s_mode: secondary: ESP32 sigue el reloj del códec (modo esclavo).
+- i2s_mode: secondary: El ESP32 sigue el reloj del códec (modo esclavo).
 
 ```yml
 microphone:
@@ -1486,11 +1486,11 @@ microphone:
 
 **Altavoz**
 
-- Envía audio al altavoz a través del códec (AIC3104 DAC).
-- GPIO44: Pin donde sale el audio digital.
-- 48 kHz, 32-bit estéreo: Reproducción de alta calidad.
-- buffer_duration 100ms: Mantiene el audio suave (previene fallos).
-- timeout: never: Mantiene el canal del altavoz activo (no se apagará).
+- Envía audio al altavoz a través del códec (DAC AIC3104).
+- GPIO44: Pin por donde sale el audio digital.
+- 48 kHz, 32 bits estéreo: Reproducción de alta calidad.
+- buffer_duration 100 ms: Mantiene el audio fluido (evita cortes).
+- timeout: never: Mantiene el canal del altavoz activo (no se apaga).
 
 ```yml
 speaker:
@@ -1511,7 +1511,7 @@ speaker:
 
 **Mezclador**
 
-- Combina múltiples flujos de audio (medios + anuncios) en una salida.
+- Combina múltiples flujos de audio (medios + avisos) en una sola salida.
 
 ```yml
   # Virtual speakers to combine the announcement and media streams together into one output
@@ -1526,9 +1526,9 @@ speaker:
         timeout: never
 ```
 
-**Remuestreadores**
+**Resamplers**
 
-- Asegura que todas las fuentes de audio coincidan en frecuencia de muestreo y profundidad de bits.
+- Garantizan que todas las fuentes de audio coincidan en frecuencia de muestreo y profundidad de bits.
 
 ```yml
   # Vritual speakers to resample each pipelines' audio, if necessary, as the mixer speaker requires the same sample rate
@@ -1544,9 +1544,9 @@ speaker:
     bits_per_sample: 16
 ```
 
-**Reproductor de Medios**
+**Reproductor multimedia**
 
-- Controla volumen, silencio, reproducción y ducking (reduce el volumen de medios durante anuncios).
+- Controla volumen, silencio, reproducción y ducking (reduce el volumen de los medios durante los avisos).
 - Sonidos precargados para eventos (temporizador, palabra de activación, errores).
 
 ```yml
@@ -1564,12 +1564,12 @@ media_player:
 
 ### Integración Respeaker XVF3800
 
-- dirección i2c: 0x2C
+- Dirección i2c: 0x2C
 - ID: respeaker
-- Interruptor de Silencio del Micrófono: Se actualiza cada 1 segundo, reproduce sonido al alternar.
-- Reporte de Versión DFU: Reporta firmware cada 120s.
-- Sensor de Dirección del Haz: Rastrea el haz de voz (solo interno).
-- Gestión de Firmware: Auto-flashea firmware XVF3800 si es necesario.
+- Interruptor de silencio del micrófono: Se actualiza cada 1 segundo, reproduce un sonido al cambiar.
+- Informe de versión DFU: Informa el firmware cada 120 s.
+- Sensor de dirección de haz: Rastrea el haz de voz (solo interno).
+- Gestión de firmware: Flashea automáticamente el firmware XVF3800 si es necesario.
 
 ```yml
 respeaker_xvf3800:
@@ -1626,21 +1626,21 @@ micro_wake_word:
   ....
 ```
 
-Detecta tus palabras de activación (como "Okay Nabu") e inicia el asistente de voz.
+Detecta tus palabras de activación (como “Okay Nabu”) y inicia el asistente de voz.
 
 - id: mww → Nombre de referencia.
 - microphone: i2s_mics, 1 canal.
-- stop_after_detection: false → Mantiene la escucha continua.
-- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop (comando de parada interno; puedes agregar el tuyo propio).
+- stop_after_detection: false → Sigue escuchando continuamente.
+- okay_nabu, kenobi, hey_jarvis, hey_mycroft, stop (comando de parada interno; puedes añadir los tuyos propios).
 - vad probability_cutoff: 0.05 → Sensibilidad del habla.
 
-**En Detección (si el micrófono no está silenciado)**
+**Al detectar (si el micrófono no está silenciado)**  
 
-- Detiene temporizadores, anuncios o asistente de voz si están activos.
-- Reproduce sonido de activación (si está habilitado).
+- Detiene temporizadores, anuncios o el asistente de voz si está activo.
+- Reproduce el sonido de activación (si está habilitado).
 - Inicia el asistente de voz para comandos.
 
-### Asistente de Voz
+### Asistente de voz
 
 ```yml
 voice_assistant:
@@ -1656,38 +1656,38 @@ voice_assistant:
   ....
 ```
 
-Controla el comportamiento e interacciones de tu asistente de voz (VA).
+Controla el comportamiento y las interacciones de tu asistente de voz (VA).
 
-- **Micrófono y medios**: Usa i2s_mics y un reproductor de medios externo.
-- **Palabra de activación**: Vinculado a mww pero la palabra de activación no es requerida (use_wake_word: false).
-- **Configuración de audio**: Supresión de ruido desactivada, ganancia automática 0 dB, volumen normal.
+- **Micrófono y medios**: Usa i2s_mics y un reproductor multimedia externo.
+- **Palabra de activación**: Vinculado a mww pero la palabra de activación no es obligatoria (use_wake_word: false).
+- **Ajustes de audio**: Supresión de ruido desactivada, ganancia automática 0 dB, volumen normal.
 
 #### Eventos / Qué sucede
 
-- **on_client_connected**: Inicia VA, actualiza LEDs, desmutea micrófono si es necesario.
-- **on_client_disconnected**: Detiene VA, reinicia LEDs.
-- **on_error: Muestra estado de error en LEDs**; reproduce sonido local si falla la autenticación en la nube.
-- **on_start**: Reduce el volumen de medios (ducking) cuando inicia VA.
-- **on_listening / on_stt_vad_start / on_stt_vad_end**: Actualiza la fase de VA y LEDs durante la escucha y el procesamiento.
-- **on_intent_progress / on_tts_start / on_tts_end**: Maneja el habla, actualiza LEDs, puede activar script de palabra de parada.
-- **on_stt_end**: Envía evento de texto reconocido.
-- **on_end**: Detiene VA, reinicia LEDs, termina ducking.
+- **on_client_connected**: Inicia el VA, actualiza los LED, reactiva el micrófono si es necesario.
+- **on_client_disconnected**: Detiene el VA, restablece los LED.
+- **on_error: Muestra el estado de error en los LED**; reproduce un sonido local si falla la autenticación en la nube.
+- **on_start**: Reduce el volumen de los medios (ducking) cuando se inicia el VA.
+- **on_listening / on_stt_vad_start / on_stt_vad_end**: Actualiza la fase del VA y los LED durante la escucha y el procesamiento.
+- **on_intent_progress / on_tts_start / on_tts_end**: Gestiona el habla, actualiza los LED y puede activar el script de palabra de parada.
+- **on_stt_end**: Envía el evento de texto reconocido.
+- **on_end**: Detiene el VA, restablece los LED, finaliza el ducking.
 
-#### Eventos de temporizador
+#### Eventos del temporizador
 
 - on_timer_started / on_timer_updated / on_timer_cancelled / on_timer_finished / on_timer_tick:
-  - Actualiza estados y nombres de temporizadores.
-  - Actualiza LEDs.
-  - Reduce las actualizaciones de LED a cada 5 segundos para temporizador en funcionamiento.
+  - Actualiza los estados y nombres de los temporizadores.
+  - Actualiza los LED.
+  - Reduce las actualizaciones de LED a cada 5 segundos para el temporizador en cuenta atrás.
 
-## Agradecimientos Especiales
+## Agradecimientos especiales
 
-Queremos agradecer a FormatBCE por crear este increíble archivo YAML para el Seeed Studio ReSpeaker XVF3800.
+Nos gustaría agradecer a FormatBCE por crear este increíble archivo YAML para el Seeed Studio ReSpeaker XVF3800.
 Apóyalo en su [GitHub](https://github.com/formatBCE/Respeaker-XVF3800-ESPHome-integration)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

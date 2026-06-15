@@ -1,6 +1,82 @@
 const docList = [
   [
     {
+      "path": "/recamera_qrcode_udp",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/qrcode_udp/testvideo.gif",
+      "title": "Real-Time QR Code Recognition on reCamera",
+      "date": "2026-06-15",
+      "title_cn": "在 reCamera 上进行实时二维码识别",
+      "title_ja": "reCamera でのリアルタイム QR コード認識",
+      "title_es": "Reconocimiento de códigos QR en tiempo real en reCamera",
+      "title_pt": "Reconhecimento de Código QR em Tempo Real na reCamera"
+    },
+    {
+      "path": "/bulk_configuration_chirpstack",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp",
+      "title": "Bulk Configuration of the ChirpStack on M2 Gateway",
+      "date": "2026-06-12",
+      "title_cn": "在 M2 网关上批量配置 ChirpStack",
+      "title_ja": "M2 Gateway 上の ChirpStack の一括設定",
+      "title_es": "Configuración masiva de ChirpStack en M2 Gateway",
+      "title_pt": "Configuração em Massa do ChirpStack no M2 Gateway"
+    }
+  ],
+  [
+    {
+      "path": "/reterminal_e10xx_with_esphome_rtc_sd_microphone",
+      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
+      "title": "ESPHome Cookbook: RTC, SD Card & Microphone (reTerminal E Series)",
+      "date": "2026-06-12",
+      "title_cn": "ESPHome 使用手册：RTC、SD 卡与麦克风（reTerminal E 系列）",
+      "title_ja": "ESPHome クックブック: RTC、SD カード & マイク (reTerminal E シリーズ)",
+      "title_es": "Recetario ESPHome: RTC, Tarjeta SD y Micrófono (reTerminal E Serie)",
+      "title_pt": "Livro de Receitas ESPHome: RTC, Cartão SD e Microfone (reTerminal E Série)"
+    },
+    {
+      "path": "/jetpack72_deep_dive",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/7f7f32ef807b8c2c2215b49801c56084/1/-/1-e26020301-recomputer-jetson-agx-orin_-developer-kit-gmsl-bundle.jpg",
+      "title": "JetPack 7.2 Deep Dive: What Changes for Jetson AGX Orin Inference?",
+      "date": "2026-06-11",
+      "title_cn": "JetPack 7.2 深度解析：Jetson AGX Orin 推理发生了哪些变化？",
+      "title_ja": "JetPack 7.2 徹底解説：Jetson AGX Orin の推論はどう変わるのか？",
+      "title_es": "Análisis profundo de JetPack 7.2: ¿Qué cambia para la inferencia en Jetson AGX Orin?",
+      "title_pt": "Análise Detalhada do JetPack 7.2: O que muda para a inferência no Jetson AGX Orin?"
+    }
+  ],
+  [
+    {
+      "path": "/ai_voice_interaction_with_recamera",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "AI Voice Interaction with reCamera",
+      "date": "2026-06-10",
+      "title_cn": "使用 reCamera 实现 AI 语音交互",
+      "title_ja": "reCamera による AI 音声インタラクション",
+      "title_es": "Interacción de voz con IA con reCamera",
+      "title_pt": "Interação de Voz com IA usando reCamera"
+    },
+    {
+      "path": "/rtsp_to_webrtc_with_recamera",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/RTSP_to_WebRTC/test.gif",
+      "title": "RTSP to WebRTC Real-Time Video Streaming with reCamera",
+      "date": "2026-06-10",
+      "title_cn": "使用 reCamera 实现 RTSP 到 WebRTC 的实时视频流",
+      "title_ja": "reCamera を使った RTSP から WebRTC へのリアルタイム動画配信",
+      "title_es": "Transmisión de vídeo en tiempo real de RTSP a WebRTC con reCamera",
+      "title_pt": "Transmissão de Vídeo em Tempo Real de RTSP para WebRTC com reCamera"
+    }
+  ],
+  [
+    {
+      "path": "/wio-s3_wireless_module_introduction",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Wio-S3/Wio-S3-Wireless-Module-with-IPEX.webp",
+      "title": "Wio-S3 Wireless Module Introduction",
+      "date": "2026-06-09",
+      "title_cn": "Wio-S3 无线模组介绍",
+      "title_ja": "Wio-S3 ワイヤレスモジュール概要",
+      "title_es": "Introducción al módulo inalámbrico Wio-S3",
+      "title_pt": "Introdução ao Módulo Sem Fio Wio-S3"
+    },
+    {
       "path": "/migrate_home_data_from_jetson_orin_nano_developer_kit_to_recomputer",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp",
       "title": "Migrate /home Data from Jetson Orin Nano Developer Kit to reComputer",
@@ -9,7 +85,9 @@ const docList = [
       "title_ja": "Jetson Orin Nano Developer Kit から reComputer へ /home データを移行する",
       "title_es": "Migrar datos de /home desde Jetson Orin Nano Developer Kit a reComputer",
       "title_pt": "Migrar dados de /home do Jetson Orin Nano Developer Kit para o reComputer"
-    },
+    }
+  ],
+  [
     {
       "path": "/respeaker_xvf3800_sensecraft",
       "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_5.jpg",
@@ -19,9 +97,7 @@ const docList = [
       "title_ja": "reSpeaker XVF3800 で SenseCraft AI を使う",
       "title_es": "SenseCraft AI con reSpeaker XVF3800",
       "title_pt": "SenseCraft AI com reSpeaker XVF3800"
-    }
-  ],
-  [
+    },
     {
       "path": "/recamera_benchmarking",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/yolo_benchmark/yolo-benchmark-seg.gif",
@@ -31,7 +107,9 @@ const docList = [
       "title_ja": "reCamera における YOLO11n エッジベンチマーク",
       "title_es": "Benchmarking perimetral de YOLO11n en reCamera",
       "title_pt": "Benchmarking de Borda do YOLO11n na reCamera"
-    },
+    }
+  ],
+  [
     {
       "path": "/jetson_spi_getting_start",
       "image": "https://files.seeedstudio.com/wiki/Jetson_SPI_Getting_Start/reComputer-J4012-Classic_SPI_picture_02.png",
@@ -41,9 +119,7 @@ const docList = [
       "title_ja": "reComputer J4012 Classic で SPI ディスプレイを使用する",
       "title_es": "Usar una pantalla SPI en reComputer J4012 Classic",
       "title_pt": "Usar um display SPI no reComputer J4012 Classic"
-    }
-  ],
-  [
+    },
     {
       "path": "/recamera_pro_getting_started",
       "image": "https://files.seeedstudio.com/wiki/reCamera-Pro/getting_started/reCamera_Pro_LOG.png",
@@ -53,82 +129,6 @@ const docList = [
       "title_ja": "reCamera Pro クイックスタートガイド",
       "title_es": "Guía de inicio rápido de reCamera Pro",
       "title_pt": "Guia de Início Rápido do reCamera Pro"
-    },
-    {
-      "path": "/respeaker_flex_xiao_gpio_control",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/reSpeakerFlexXVF3800Linear-4withXIAOESP32S3.jpg",
-      "title": "GPIO controlling reSpeaker Flex with Xiao ESP32S3",
-      "date": "2026-06-01",
-      "title_cn": "使用 Xiao ESP32S3 通过 GPIO 控制 reSpeaker Flex",
-      "title_ja": "GPIO を使用して Xiao ESP32S3 から reSpeaker Flex を制御する",
-      "title_es": "Controlar reSpeaker Flex mediante GPIO con Xiao ESP32S3",
-      "title_pt": "Controle de GPIO do reSpeaker Flex com Xiao ESP32S3"
-    }
-  ],
-  [
-    {
-      "path": "/reterminal_e10xx_with_arduino_peripherals_2",
-      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp",
-      "title": "Arduino Cookbook: RTC, Low Power, Audio & Touch (reTerminal E Series)",
-      "date": "2026-05-27",
-      "title_cn": "Arduino 菜谱：RTC、低功耗、音频与触摸（reTerminal E 系列）",
-      "title_ja": "Arduino クックブック: RTC、低消費電力、オーディオ & タッチ (reTerminal E シリーズ)",
-      "title_es": "Recetario de Arduino: RTC, Bajo Consumo, Audio y Táctil (reTerminal E Serie)",
-      "title_pt": "Livro de Receitas Arduino: RTC, Baixo Consumo, Áudio e Toque (reTerminal E Série)"
-    },
-    {
-      "path": "/respeaker_flex_ros2_voice_pipeline",
-      "image": "https://files.seeedstudio.com/wiki/reSpeaker_flex/flex_ros_banner.png",
-      "title": "ROS2 Voice Pipeline on reSpeaker Flex",
-      "date": "2026-05-27",
-      "title_cn": "在 reSpeaker Flex 上构建 ROS2 语音流水线",
-      "title_ja": "reSpeaker Flex 上の ROS2 音声パイプライン",
-      "title_es": "Canal de voz ROS2 en reSpeaker Flex",
-      "title_pt": "Pipeline de Voz ROS2 no reSpeaker Flex"
-    }
-  ],
-  [
-    {
-      "path": "/jetson_developtool_overview",
-      "image": "https://files.seeedstudio.com/wiki/Seeed-Jetson-DevelopTool/video-cover-recomputer-guide-en.png",
-      "title": "Seeed Jetson DevelopTool Overview",
-      "date": "2026-05-26",
-      "title_cn": "Seeed Jetson DevelopTool 概览",
-      "title_ja": "Seeed Jetson DevelopTool 概要",
-      "title_es": "Descripción general de Seeed Jetson DevelopTool",
-      "title_pt": "Visão geral do Seeed Jetson DevelopTool"
-    },
-    {
-      "path": "/recomputer_antenna_installation",
-      "image": "https://files.seeedstudio.com/wiki/Antenna-Installation-Guide/image1.jpg",
-      "title": "How to Install Antenna for reComputer Super and Classic",
-      "date": "2026-05-26",
-      "title_cn": "如何为 reComputer Super 和 Classic 安装天线",
-      "title_ja": "reComputer Super および Classic へのアンテナの取り付け方法",
-      "title_es": "Cómo instalar la antena para reComputer Super y Classic",
-      "title_pt": "Como instalar antenas para reComputer Super e Classic"
-    }
-  ],
-  [
-    {
-      "path": "/rebot_b601_rs_getting_started",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/rebot_arm/RS5_56.png",
-      "title": "Getting Started with reBot Arm B601-RS",
-      "date": "2026-05-26",
-      "title_cn": "reBot Arm B601-RS 快速入门",
-      "title_ja": "reBot Arm B601-RS をはじめよう",
-      "title_es": "Primeros pasos con reBot Arm B601-RS",
-      "title_pt": "Introdução ao reBot Arm B601-RS"
-    },
-    {
-      "path": "/atom_s",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/humanoid/atom-s/product_photo.webp",
-      "title": "Getting started with Atom-S",
-      "date": "2026-05-25",
-      "title_cn": "Atom-S 入门指南",
-      "title_ja": "Atom-S 入門ガイド",
-      "title_es": "Primeros pasos con Atom-S",
-      "title_pt": "Introdução ao Atom-S"
     }
   ]
 ];
