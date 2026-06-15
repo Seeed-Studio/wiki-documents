@@ -2023,16 +2023,7 @@ const sidebars = {
             id: 'Sensor/reSpeaker_flex/reSpeaker_flex_intro',
           },
           items: [
-            {
-              type: 'category',
-              label: 'Application',
-              items: [
-                //'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
-                //'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
-                //'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
-                'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
-              ],
-            },
+   
             {
               type: 'category',
               label: 'reSpeaker Flex with Xiao',
