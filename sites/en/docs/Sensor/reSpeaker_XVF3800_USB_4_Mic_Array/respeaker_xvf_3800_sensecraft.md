@@ -40,6 +40,13 @@ The required firmware file is:
 
 Follow your device's standard DFU (Device Firmware Update) [procedure](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware) to flash this file to the reSpeaker XVF3800.
 
+If you are using a reSpeaker Lite, please ensure that it is running the correct firmware version.
+
+The required firmware file is:
+> `respeaker_lite_i2s_dfu_firmware_v1.0.9.bin`
+
+Follow your device's standard DFU (Device Firmware Update) [procedure](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#firmware-download) to flash this file to the reSpeaker Lite.
+
 
 ### Step 2: Navigate to SenseCraft AI Platform
 
