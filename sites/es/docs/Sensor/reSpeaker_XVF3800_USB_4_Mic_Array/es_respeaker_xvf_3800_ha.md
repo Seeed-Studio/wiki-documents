@@ -1,5 +1,5 @@
 ---
-description: Experimenta la potencia del ReSpeaker XVF3800 USB 4-Mic Array: una avanzada matriz circular de micrófonos con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinado con el compacto XIAO ESP32S3, ofrece un control por voz de alto rendimiento para dispositivos inteligentes, robótica y aplicaciones IoT. Acompáñanos mientras demostramos una integración perfecta con Home Assistant para controlar dispositivos mediante comandos de voz.
+description: Experimenta la potencia del ReSpeaker XVF3800 USB 4-Mic Array - una avanzada matriz circular de micrófonos con AEC, conformación de haz, supresión de ruido y captura de voz de 360°. Combinado con el compacto XIAO ESP32S3, ofrece un control por voz de alto rendimiento para dispositivos inteligentes, robótica y aplicaciones IoT. Acompáñanos mientras demostramos una integración perfecta con Home Assistant para controlar dispositivos mediante comandos de voz.
 title: Control por voz para el hogar inteligente con Home Assistant y reSpeaker XVF3800
 keywords:
   - reSpeaker
