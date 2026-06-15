@@ -319,7 +319,7 @@ lerobot-teleoperate \
     --robot.can_adapter=damiao \
     --teleop.type=rebot_arm_102_leader \
     --teleop.port=/dev/ttyUSB0 \
-    --teleop.id=rebot_arm_102_leader \
+    --teleop.id=rebot_arm_102_leader
 ```
 
 

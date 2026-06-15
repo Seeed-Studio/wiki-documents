@@ -364,20 +364,28 @@ Beyond SenseCraft HMI, the reTerminal E Series integrates with several industry-
 			<th>E1004</th>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Basic Usage</a></td>
-			<td>Plug the device into Home Assistant and draw simple graphics with YAML.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome">ESPHome — Display</a></td>
+			<td>Plug the device into Home Assistant and draw simple ePaper graphics with YAML.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
 		</tr>
 		<tr>
-			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — Advanced Usage</a></td>
-			<td>Buttons, buzzer, battery monitoring, deep sleep, multi-page dashboards.</td>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced">ESPHome — I/O, Battery &amp; Power</a></td>
+			<td>Buttons, buzzer, onboard LED, battery monitoring, deep sleep, multi-page dashboards.</td>
 			<td align="center">✅</td>
 			<td align="center">✅</td>
 			<td align="center">Planned</td>
 			<td align="center">via Home Assistant</td>
+		</tr>
+		<tr>
+			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_rtc_sd_microphone">ESPHome — RTC, SD &amp; Microphone</a></td>
+			<td>PCF8563 RTC time sync, microSD card detect, and onboard PDM microphone setup.</td>
+			<td align="center">✅</td>
+			<td align="center">✅</td>
+			<td align="center">Planned</td>
+			<td align="center">No mic</td>
 		</tr>
 		<tr>
 			<td><a href="https://wiki.seeedstudio.com/reterminal_e10xx_trmnl">Works with TRMNL</a></td>
