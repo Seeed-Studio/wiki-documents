@@ -1,34 +1,34 @@
 ---
-description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome クックブック - 上級ペリフェラル（ボタン、ブザー、バッテリー監視、SHT4x センサ、ディープスリープ、複数ページのダッシュボード）。
-title: ESPHome クックブック - 上級編 (reTerminal E シリーズ)
+description: reTerminal E1001 / E1002 / E1003 / E1004 向け ESPHome クックブック - ボタン、ブザー、オンボード LED、バッテリー監視、SHT4x センサー、ディープスリープ、およびマルチページダッシュボード。
+title: 'ESPHome クックブック: ボタン、ブザー、LED、バッテリー & 省電力（reTerminal E シリーズ）'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 4
-sidebar_label: ESPHome (Advanced)
+sidebar_label: 'ESPHome - I/O、バッテリー & 電源'
 last_update:
   date: 04/28/2026
   author: Citric
 createdAt: '2025-07-25'
-updatedAt: '2026-04-28'
+updatedAt: '2026-05-20'
 url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome_advanced/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome クックブック - 上級編: reTerminal E シリーズ
+# ESPHome クックブック: ボタン、ブザー、LED、バッテリー & 省電力（reTerminal E シリーズ）
 
 :::tip 前提条件
-このページでは、すでに [reTerminal E シリーズ向け ESPHome 基本クックブック](/ja/reterminal_e10xx_with_esphome)（デバイスを Wi-Fi に接続、Home Assistant との連携完了、最初のダッシュボードが表示済み）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンや Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。
+このページでは、すでに [reTerminal E シリーズ向け ESPHome ディスプレイクックブック](/ja/reterminal_e10xx_with_esphome)（デバイスが Wi-Fi に接続され、Home Assistant との連携がオンラインで、最初のダッシュボードが表示されている状態）を一通り終えていることを前提とします。プラットフォームレベルの YAML スケルトンと Home Assistant 連携手順については、[ESPHome を使う](/ja/epaper_work_with_esphome) を参照してください。RTC、microSD カード検出、マイクの設定については、[ESPHome クックブック: RTC、SD カード & マイク](/ja/reterminal_e10xx_with_esphome_rtc_sd_microphone) を参照してください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-この記事では、reTerminal E シリーズ ePaper Display デバイス向けの高度な ESPHome 設定について、[ESPHome 基本使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎概念を踏まえて解説します。ESPHome や reTerminal E シリーズを初めて扱う場合は、まず基本ガイドから始めてから、ここで紹介する応用例に進むことをおすすめします。
+この記事では、[ESPHome ディスプレイクックブック](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome) で扱った基礎的な概念を踏まえつつ、reTerminal E シリーズ ePaper Display デバイスのオンボード I/O と電源関連の ESPHome 設定について説明します。ESPHome や reTerminal E シリーズを初めて扱う場合は、ここで紹介するハードウェア例を使う前に、まずディスプレイガイドから始めることをおすすめします。
 
 ## ハードウェア機能
 
-reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assistant から活用できる複数のハードウェアコンポーネントが搭載されています：
+reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assistant で活用できる複数のハードウェアコンポーネントが搭載されています：
 
 - 3 つのプログラマブルボタン（GPIO3、GPIO4、GPIO5）
 
@@ -38,7 +38,7 @@ reTerminal E シリーズ ePaper Display には、ESPHome を通じて Home Assi
 
 - オンボード LED（GPIO6）
 
-- 温度・湿度センサ（I²C インターフェース）
+- 温度・湿度センサー（I²C インターフェース）
 
 ここでは、これら各コンポーネントを実際のアプリケーションでどのように使うかを見ていきます。
 
@@ -116,13 +116,13 @@ light:
 - ボタン 1 を押したときに LED を短く点滅させるように設定
 - ボタン 2 を押したときに LED をダブルブリンクパターンで点滅させるように設定
 - ボタン 3 を押したときに LED のオン／オフをトグルするように設定
-- LED を Home Assistant 上で制御可能な light エンティティとして利用できるようにする
+- LED を Home Assistant から制御可能なライトエンティティとして利用できるようにする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/45.gif" style={{width:250, height:'auto'}}/></div>
 
 ### ブザー制御
 
-reTerminal E シリーズ ePaper Display には、GPIO45 に接続されたブザーが搭載されており、音によるフィードバックに利用できます。ここでは、その設定方法を説明します：
+reTerminal E シリーズ ePaper Display には、可聴フィードバックに使用できるブザーが GPIO45 上に搭載されています。ここでは、その設定方法を説明します：
 
 この例を使用するには、以下のコードをコピーして、Yaml ファイル内の `captive_portal` コード行の後に貼り付けてください。
 
@@ -176,7 +176,7 @@ binary_sensor:
 この設定では、次のことを行います：
 
 - ブザーを PWM 出力として設定
-- ブザーを制御するための light エンティティを作成
+- ブザーを制御するためのライトエンティティを作成
 - ボタン 1 を押したときに短いビープパターンを再生するように設定
 
 :::tip
@@ -207,11 +207,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "m+rOiVDwjdvePoiG1zritvcD0Kl/a2zmsnuG+4IfWlw="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "710fecea969062a5775b287a54f3c0f5"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -220,7 +220,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Reterminal-E10Xx"
-    password: "tRc2fXaYE54Q"
+    password: "ChangeMe123"
 
 captive_portal:
 
@@ -270,8 +270,8 @@ sensor:
 この設定では、次のことを行います：
 
 - ADC を通じてバッテリー電圧を読み取る
-- キャリブレーションカーブを用いて電圧をバッテリー残量（パーセンテージ）に変換
-- 生の電圧値とパーセンテージの両方を Home Assistant で利用可能にする
+- キャリブレーションカーブを用いて電圧をバッテリー残量（パーセンテージ）に変換する
+- 生の電圧値とパーセンテージの両方を Home Assistant で利用できるようにする
 
 :::caution
 バッテリーレベルを測定するには、**GPIO21** ピンを有効にする必要があります。これを有効にしない場合、GPIO1 からバッテリー電圧値を読み取ることはできません。
@@ -279,9 +279,9 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
-## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして取得
+## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして取得する
 
-この例では、Home Assistant のダッシュボードをスクリーンショットとして取得し、それを reTerminal E シリーズに表示する方法を示します。
+この例では、Home Assistant ダッシュボードのスクリーンショットを取得し、それを reTerminal E シリーズに表示する方法を示します。
 
 ### [Puppet](https://github.com/balloob/home-assistant-addons) アドオンのインストール
 
@@ -293,17 +293,17 @@ sensor:
 </a>
 </div>
 
-ステップ 2. アドオンのページで "INSTALL" ボタンをクリックし、インストールが完了するまで待ちます。
+ステップ 2. アドオンページで "INSTALL" ボタンをクリックし、インストールが完了するまで待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/48.png" style={{width:1000, height:'auto'}}/></div>
 
 ### アクセストークンの作成
 
-ステップ 3. インストール後、Puppet アドオンの Configuration ページに移動します。ここでトークンを入力する必要があることが分かります。このアドオン用のアクセストークンを作成しましょう。
+ステップ 3. インストール後、Puppet アドオンの Configuration ページに移動します。ここでわかるように、トークンを入力する必要があります。このアドオン用のアクセストークンを作成しましょう。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/49.png" style={{width:800, height:'auto'}}/></div>
 
-ステップ 4. Home Assistant の左下に表示されている自分のユーザー名をクリックしてプロフィール画面に移動し、ページ下部の "Long-Lived Access Tokens" を選択します。
+ステップ 4. Home Assistant の左下にあるあなたのユーザー名をクリックしてプロフィール画面を開き、ページ下部の "Long-Lived Access Tokens" を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/50.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -321,7 +321,7 @@ sensor:
 
 ### Screenshot API を理解する
 
-Puppet アドオンは、ポート 10000 上でサーバーを起動し、任意の Home Assistant ページのスクリーンショットを生成します。使い方は次のとおりです：
+Puppet アドオンは、任意の Home Assistant ページのスクリーンショットを生成するサーバーをポート 10000 で起動します。使い方は次のとおりです：
 
 #### 基本的なスクリーンショット URL 形式
 
@@ -333,7 +333,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480
 
 #### 電子ペーパー向けの最適化
 
-電子ペーパーディスプレイの場合は、`eink` パラメータを追加してカラーパレットを減らします：
+電子ペーパーディスプレイの場合、`eink` パラメータを追加してカラーパレットを減らします：
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
@@ -482,10 +482,10 @@ display:
 ## デモ 3: ディープスリープモード
 
 :::tip
-ディープスリーププログラムを使い始める場合は、右側の白いボタンを優先的に使用し、右側の白いボタンをスリープ解除ボタンとして設定することを強くお勧めします。こうすることで、プログラムを更新したいときに、デバイスがスリープ中でシリアルポート経由でプログラムをアップロードできないという気まずい状況を避けることができます。
+Deep Sleep プログラムを使い始める場合は、右側の白いボタンを優先的に使用し、そのボタンをスリープ解除ボタンとして設定することを強くお勧めします。こうすることで、プログラムを更新したいときに、デバイスがスリープしていてシリアルポート経由でプログラムをアップロードできないという気まずい状況を避けられます。
 :::
 
-この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E シリーズ ePaper Display をバッテリー駆動のアプリケーションに適したものにする方法を示します。
+この例では、ディープスリープモードを使用して消費電力を大幅に削減し、reTerminal E シリーズ ePaper Display をバッテリー駆動アプリケーションに適したものにする方法を示します。
 
 以下のコードをコピーして、Yaml ファイル内の `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -592,7 +592,7 @@ display:
 この設定では：
 
 - スリープサイクル間で保持されるカウンタを作成します
-- デバイスを 30 秒間起動し、その後 3 分間スリープするように設定します
+- デバイスが 30 秒間起動し、その後 3 分間スリープするように設定します
 - 現在の起床回数でディスプレイを更新します
 - オプションで、ボタンでデバイスを起床させるように設定します
 
@@ -603,10 +603,10 @@ display:
 ## デモ 4: 総合的なサンプル
 
 :::tip
-よりよく理解するために、この総合的なサンプルを試す前に、まず上記の基本的なサンプルを実行することを強くお勧めします。
+よりよく理解するために、この総合的なサンプルに取り組む前に、まず上記の基本的なサンプルを実行することを強くお勧めします。
 :::
 
-この高度なサンプルは、複数の機能を組み合わせて、reTerminal E シリーズ向けの完全なダッシュボードソリューションを構成します。以下を実現します：
+この高度なサンプルは、複数の機能を組み合わせて、reTerminal E シリーズ向けの完全なダッシュボードソリューションを構築します。以下を実現します：
 
 1. 天気と室内環境の表示
 2. アイコン付きのバッテリー監視
@@ -615,7 +615,7 @@ display:
 5. バッテリー監視
 
 <details>
-<summary>完全なコードを表示するにはここをクリック</summary>
+<summary>完全なコードを見るにはここをクリック</summary>
 
 <Tabs>
 <TabItem value="For E1001" label="E1001 向け" default>
@@ -645,11 +645,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "g93yP72UIyVsz9WfffaDMK+JeIQYROIFRK+VIQjkM+g="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "1ff187393ee444aa2e892779dc78e488"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -658,7 +658,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "reTerminal-E1001"
-    password: "yoUkaGlJaDpC"
+    password: "ChangeMe123"
 
 captive_portal:
 
@@ -967,11 +967,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "g93yP72UIyVsz9WfffaDMK+JeIQYROIFRK+VIQjkM+g="
+    key: "REPLACE_WITH_YOUR_API_KEY"
 
 ota:
   - platform: esphome
-    password: "1ff187393ee444aa2e892779dc78e488"
+    password: "REPLACE_WITH_YOUR_OTA_PASSWORD"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -980,7 +980,7 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "reTerminal-E1002"
-    password: "yoUkaGlJaDpC"
+    password: "ChangeMe123"
 
 captive_portal:
 
@@ -1264,7 +1264,7 @@ display:
 
 </details>
 
-設定が正常にアップロードされ実行されると、reTerminal E シリーズ ePaper Display に環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
+設定が正常にアップロードされ実行されると、reTerminal E シリーズ ePaper Display に、環境データ、時刻、バッテリー状態を含む包括的なダッシュボードが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -1316,9 +1316,18 @@ Step 4. Finally, replug the cable and upload a new program. -->
 
 この場合、デバイスがオフラインであるか、ディープスリープモードになっている可能性があります。アップロードを試みる前に、ネットワークに接続されていること、またはスリープモードから復帰していることを確認してください。
 
-## 技術サポートと製品ディスカッション
+### Q4: なぜ USB 経由でシリアルログが出力されないのですか？
 
-当社の製品をお選びいただきありがとうございます。お客様が当社製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルを提供しています。
+reTerminal E シリーズは、UART0 上で CH340K USB-UART ブリッジを使用しています。YAML では次の logger 設定を維持してください：
+
+```yaml
+logger:
+  hardware_uart: UART0
+```
+
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただきありがとうございます。弊社は、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
