@@ -40,7 +40,7 @@ Version 1.0 of this guide focuses on a reliable single-Jetson deployment and dai
   <tr>
     <td>
       <div style={{ textAlign: 'center' }}>
-        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/48035b5512857d0ab907b31a092da78f/1/-/1-e26051901-rebot-arm-b601-dm-bundle-with-jetson-orin.jpg" style={{ width: 600, height: 'auto' }} />
+        <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-e26052001-rebot-arm-b601-dm-bundle-with-jetson-thor.jpg" style={{ width: 600, height: 'auto' }} />
       </div>
     </td>
   </tr>
@@ -54,10 +54,6 @@ Version 1.0 of this guide focuses on a reliable single-Jetson deployment and dai
     </td>
   </tr>
 </table>
-</div>
-
-<div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## What You Will Build
@@ -617,6 +613,12 @@ GraspNet runs out of memory: reduce `--num-point`, reduce `--cloud-crop-nsample`
 - GraspNet API: https://github.com/graspnet/graspnetAPI
 - Orbbec pyorbbecsdk: https://github.com/orbbec/pyorbbecsdk
 - Install Pytorch for reComputer Jetson: https://wiki.seeedstudio.com/install_torch_on_recomputer/
+
+## Demo Video
+
+<div align="center">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/_44o0oZ9nqI" title="reBot Arm B601-DM GraspNet Visual Grasping Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Tech Support & Product Discussion
 
