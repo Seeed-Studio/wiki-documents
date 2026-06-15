@@ -1989,7 +1989,7 @@ const sidebars = {
               collapsed: true,
               collapsible: true,
               items: [
-                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ha',
+                // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ha',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_edgeimpulse',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_tflm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ros2',
@@ -2022,9 +2022,8 @@ const sidebars = {
               label: 'Aplicações',
               items: [
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_picovoice',
-                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
-                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
-                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_rebot_arm',
+                // 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
+                // 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_rebot_arm',
                 'Sensor/reSpeaker_flex/pt_reSpeaker_flex_ros',
               ],
             },
@@ -2089,29 +2088,52 @@ const sidebars = {
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_xiao_respeaker',
               },
               items: [
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_i2s_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_rgb_test',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_volume',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_button',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_record_and_play',
-                // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_i2s_rgb', // commented out
                 {
-                  type: 'doc',
-                  id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_generator',
-                  label: 'Gerador de streams',
+                  type: 'category',
+                  label: 'Reprodução e gravação',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_i2s_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_record_and_play',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_volume',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_player_spiffs',
+                  ],
                 },
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_print',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_memory',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_player_spiffs',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_mqtt',
-                'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_i2s_tflite',
+                {
+                  type: 'category',
+                  label: 'Streaming',
+                  items: [
+                    {
+                      type: 'doc',
+                      id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_generator',
+                      label: 'Streams Generator',
+                    },
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_print',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_memory',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_mqtt',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'TensorFlow',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_streams_i2s_tflite',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'Controle do dispositivo',
+                  items: [
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_rgb_test',
+                    'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/pt_respeaker_button',
+                  ],
+                },
               ],
             },
             {
               type: 'category',
               label: 'Aplicação',
               items: [
-                'Sensor/ReSpeaker_Lite/Application/pt_respeaker_lite_ha',
+                // 'Sensor/ReSpeaker_Lite/Application/pt_respeaker_lite_ha',
                 'Sensor/ReSpeaker_Lite/Application/pt_respeaker_lite_pi5',
               ],
             },
@@ -2168,10 +2190,36 @@ const sidebars = {
             id: 'Sensor/Sound_event_sensor/pt_sound_event_sensor_intro',
           },
           items: [
-            'Sensor/Sound_event_sensor/pt_sound_event_sensor_intro_ha',
+            // 'Sensor/Sound_event_sensor/pt_sound_event_sensor_intro_ha',
             // add sub-docs here later
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_setup',
             // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_configuration',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Aplicações',
+          collapsed: true,
+          collapsible: true,
+          items: [
+            {
+              type: 'category',
+              label: 'Home Assistant',
+              items: [
+                'Sensor/Sound_event_sensor/pt_sound_event_sensor_intro_ha',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/pt_respeaker_xvf_3800_ha',
+                'Sensor/ReSpeaker_Lite/Application/pt_respeaker_lite_ha',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Robótica',
+              items: [
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lekiwi',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_lerobot_soarm',
+                'Sensor/reSpeaker_flex/pt_reSpeaker_flex_rebot_arm',
+              ],
+            },
           ],
         },
       ],
