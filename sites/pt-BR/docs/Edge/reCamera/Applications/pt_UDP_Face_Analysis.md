@@ -17,7 +17,7 @@ last_update:
   date: 04/30/2026
   author: Samuel
 createdAt: '2026-04-30'
-updatedAt: '2026-04-30'
+updatedAt: '2026-05-06'
 url: https://wiki.seeedstudio.com/pt-br/recamera_udp_face_analysis/
 ---
 
@@ -47,7 +47,7 @@ O aplicativo em C++ é executado na reCamera e envia quadros de vídeo juntament
 
 Para configurar esta demonstração, você precisa:
 
-1. Compilar o programa em C++ na reCamera
+1. Fazer a cross-compilação do programa em C++ no seu PC
 2. Executar o executável compilado na reCamera
 3. Executar o script receptor em Python no seu PC
 
@@ -64,11 +64,11 @@ export PATH='current compile chain path'/host-tools/gcc/riscv64-linux-musl-x86_6
 ```
 
 Primeiro, certifique-se de que você tem os modelos necessários:
-- `yolo_face.cvimodel` - modelo de detecção de rosto YOLO
-- `age_gender_race.cvimodel` - modelo FairFace para idade/gênero/raça
-- `emotion.cvimodel` - modelo de reconhecimento de emoções
+- `yolo_face.cvimodel` - Modelo de detecção de rosto YOLO
+- `age_gender_race.cvimodel` - Modelo FairFace para idade/gênero/raça
+- `emotion.cvimodel` - Modelo de reconhecimento de emoções
 
-Você pode baixar estes três arquivos de modelo a partir do [lançamento sscma-example-sg200x v1.0.1](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1), ou treinar seus próprios modelos e então quantizá-los/convertê-los para o formato `.cvimodel`.
+Você pode baixar esses três arquivos de modelo a partir do [lançamento sscma-example-sg200x v1.0.1](https://github.com/RobotXTeam/sscma-example-sg200x/releases/tag/v1.0.1), ou treinar seus próprios modelos e então quantizá-los/convertê-los para o formato `.cvimodel`.
 
 Navegue até o diretório da solução e compile:
 
@@ -120,10 +120,10 @@ chmod +x face_udp
 | `emotion.cvimodel` | Modelo de emoções (obrigatório) | - |
 | `single\|multi` | Tipo de head YOLO | multi |
 | `threshold` | Limiar de detecção | 0.5 (multi) / 0.7 (single) |
-| `skip` | Inferência a cada N quadros | 3 (multi) / 1 (single) |
+| `skip` | Inferir a cada N quadros | 3 (multi) / 1 (single) |
 | `udp_ip` | Endereço IP do PC para UDP | - |
 | `udp_port` | Número da porta UDP | - |
-| `log_every_n_infer` | Imprime log a cada N inferências | 20 |
+| `log_every_n_infer` | Imprimir log a cada N inferências | 20 |
 
 #### Comandos de Exemplo
 
@@ -195,7 +195,7 @@ O PC exibirá uma janela mostrando:
   - Gênero (Masculino/Feminino)
   - Faixa etária
   - Classificação de raça
-  - Emoção (raiva/nojo/medo/feliz/triste/surpreso/neutro)
+  - Emoção (angry/disgust/fear/happy/sad/surprise/neutral)
 
 
 
@@ -217,7 +217,7 @@ Se o PC não receber dados:
 
 ### Erro ao Carregar o Modelo
 
-Se o modelo falhar ao carregar:
+Se o modelo não carregar:
 - Verifique se os arquivos de modelo foram enviados para `/home/recamera/`
 - Verifique as permissões de arquivo com `ls -la`
 - Certifique-se de que há espaço de armazenamento suficiente
