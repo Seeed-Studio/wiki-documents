@@ -1996,17 +1996,17 @@ const sidebars = {
               collapsible: true,
               items: [
                 //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2_voice_pipeline',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2_voice_pipeline',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
-                //'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
               ],
             },
@@ -2023,7 +2023,16 @@ const sidebars = {
             id: 'Sensor/reSpeaker_flex/reSpeaker_flex_intro',
           },
           items: [
-   
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/reSpeaker_flex/reSpeaker_flex_picovoice',
+                //'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
+                //'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
+                'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
+              ],
+            },
             {
               type: 'category',
               label: 'reSpeaker Flex with Xiao',
@@ -2078,52 +2087,6 @@ const sidebars = {
           },
           items: [
             {
-<<<<<<< HEAD
-  type: 'category',
-  label: 'reSpeaker Lite with XIAO ESP32S3',
-  link: {
-    type: 'doc',
-    id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
-  },
-  items: [
- {
-      type: 'category',
-      label: 'Playback & Recording',
-      items: [
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Streaming',
-      items: [
-        {
-          type: 'doc',
-          id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
-          label: 'Streams Generator',
-        },
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
-      ],
-    },
-
-
-    {
-      type: 'category',
-      label: 'Device Control',
-      items: [
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
-      ],
-    },
-  ],
-},
-=======
               type: 'category',
               label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
@@ -2172,7 +2135,6 @@ const sidebars = {
                 },
               ],
             },
->>>>>>> c85424c99acc4178273e534ed280f73fda0d7be9
             {
               type: 'category',
               label: 'Application',
@@ -2218,6 +2180,7 @@ const sidebars = {
               label: 'For v2 Users',
               items: [
                 'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
+                'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
               ],
             },
             'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
@@ -2240,44 +2203,6 @@ const sidebars = {
           ],
         },  
         {
-<<<<<<< HEAD
-      type: 'category',
-      label: 'Robotics',
-      items: [
-
-
-
-            'Sensor/reSpeaker_flex/reSpeaker_flex_lekiwi',
-            'Sensor/reSpeaker_flex/reSpeaker_flex_lerobot_soarm',
-            'Sensor/reSpeaker_flex/reSpeaker_flex_rebot_arm',
-            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
-            'Sensor/reSpeaker_flex/reSpeaker_flex_ros',
-      ],
-    },
-
-            {
-      type: 'category',
-      label: 'Speech Recognition',
-      items: [
-               {
-      type: 'category',
-      label: 'TensorFlow',
-      items: [
-        'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
-        'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
-        'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
-      ],
-    },
-            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',                
-            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_picovoice',
-            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_sensecraft',
-      ],
-    },
-    
-  ],
-},
-        
-=======
           type: 'category',
           label: 'Applications',
           collapsed: true,
@@ -2303,7 +2228,6 @@ const sidebars = {
             },
           ],
         },
->>>>>>> c85424c99acc4178273e534ed280f73fda0d7be9
       ],
     },
     {
