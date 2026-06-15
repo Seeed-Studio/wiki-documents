@@ -118,70 +118,131 @@ Manual cookbook workflow:
 4. Click Install → Plug into this computer for the first USB flash. After `wifi`, `api`, and `ota` are set up, later updates can go over Wi-Fi.
 5. When the device is online, it appears in Home Assistant through the ESPHome integration.
 
-## Step 2: Generic YAML skeleton
+## Step 2: Understand the generated YAML structure
 
-Every Seeed ePaper ESPHome configuration follows the same outline. The cookbook for your product fills in the **product-specific bits** (substitutions, pin map, screen model) — but the overall shape is always:
+Every Seeed ePaper ESPHome configuration follows the same basic structure, but the hardware values are not universal. Use the Firmware Hub or the cookbook for your product as the source of truth for the board type, bus pins, power-enable pins, display platform, display model, and onboard peripherals.
+
+The block below is a **structure guide**, not a ready-to-flash configuration. It shows where each kind of setting usually appears after you generate or copy a product-specific YAML file:
 
 ```yaml
 substitutions:
   device_name: my-epaper
+  friendly_name: My ePaper Display
 
 esphome:
   name: ${device_name}
-  friendly_name: ${device_name}
+  friendly_name: ${friendly_name}
+  # Optional. Some products enable power rails or read sensors during boot.
+  # Keep this section from the generated YAML if your device needs it.
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: <power_enable_output_id>
+      - delay: 200ms
 
-# Pick the right platform for your hardware.
-# - reTerminal E Series & EE04 & TRMNL Kit: esp32 with framework: arduino (S3 variant)
-# - XIAO 7.5" Panel: esp32 with framework: arduino (C3 variant)
+# Board and framework come from the Firmware Hub or your cookbook.
 esp32:
-  board: seeed_xiao_esp32s3   # see your cookbook
+  board: <board_from_generated_yaml>
   framework:
     type: arduino
 
 logger:
+  # Some ESP32-S3 products use a USB-to-UART bridge.
+  # Keep hardware_uart from the generated YAML if it is present.
+  # hardware_uart: UART0
+
 api:
   encryption:
     key: !secret api_key
+
 ota:
   - platform: esphome
     password: !secret ota_password
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   ap:
     ssid: "${device_name} Fallback"
 
-# SPI bus that drives the ePaper - exact pins come from the cookbook
-spi:
-  clk_pin: GPIO13
-  mosi_pin: GPIO11
+captive_portal:
 
-# The display block - the model + pin map are the part that's
-# different per product. The cookbook gives you the right values.
-display:
-  - platform: waveshare_epaper
-    id: epaper
-    cs_pin: GPIO9
-    dc_pin: GPIO15
-    busy_pin: GPIO12
-    reset_pin: GPIO14
-    model: 7.50inv2
-    update_interval: never   # we'll trigger refreshes from automations
-    lambda: |-
-      it.print(0, 0, id(roboto_24), "Hello, ePaper!");
+# Buses are hardware-specific. Do not reuse pins from another product.
+spi:
+  clk_pin: <spi_clk_from_generated_yaml>
+  mosi_pin: <spi_mosi_from_generated_yaml>
+  miso_pin: <spi_miso_if_required>
+
+i2c:
+  scl: <i2c_scl_if_required>
+  sda: <i2c_sda_if_required>
+
+i2s_audio:
+  # Only needed when your generated YAML enables a microphone.
+  i2s_lrclk_pin: <i2s_clock_if_required>
 
 font:
-  - file: "fonts/Roboto-Regular.ttf"
-    id: roboto_24
+  - file: "gfonts://Inter@700"
+    id: font_medium
     size: 24
+
+# Outputs are often used for LEDs, buzzers, or power-enable circuits.
+output:
+  - platform: gpio
+    id: <output_id_from_generated_yaml>
+    pin: <gpio_from_generated_yaml>
+
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: <output_id_from_generated_yaml>
+
+time:
+  - platform: homeassistant
+    id: ha_time
+
+sensor:
+  # Add Home Assistant, onboard, or template sensors here.
+  - platform: homeassistant
+    id: outdoor_temperature
+    entity_id: sensor.outdoor_temperature
+
+binary_sensor:
+  # Add buttons or status inputs here if your hardware provides them.
+  - platform: gpio
+    id: button_1
+    pin: <button_gpio_from_generated_yaml>
+
+display:
+  - platform: <display_platform_from_generated_yaml>
+    id: epaper_display
+    # Keep the model and pin map from the generated YAML or cookbook.
+    model: <display_model_from_generated_yaml>
+    cs_pin: <display_cs_from_generated_yaml>
+    dc_pin: <display_dc_from_generated_yaml>
+    reset_pin: <display_reset_from_generated_yaml>
+    busy_pin: <display_busy_from_generated_yaml>
+    update_interval: never
+    lambda: |-
+      it.print(0, 0, id(font_medium), "Hello, ePaper!");
 ```
 
-What's product-specific (and lives in each cookbook):
+Keep these values from the Firmware Hub or the cookbook:
 
-- `esp32.board` — `seeed_xiao_esp32s3` for E1001/E1002/EE04/TRMNL Kit; `esp32-c3-devkitm-1` for XIAO 7.5" Panel; etc.
-- The `spi` and `display` pin maps.
-- The `model` value (`7.50in-bwr`, `13.3in-spectra6`, …).
-- Any onboard peripherals (buttons / buzzer / battery / SHT4x) — covered in the **Advanced** sections of the relevant cookbook.
+- `esp32.board` and any logger settings such as `hardware_uart`.
+- `spi`, `i2c`, and `i2s_audio` pins.
+- Power-enable `output` blocks for display, battery measurement, SD card, microphone, or other onboard circuits.
+- Button, battery, RTC, SHT4x, SD card, microphone, buzzer, and LED definitions.
+- The `display.platform`, `model`, pin map, reset behavior, busy-pin behavior, and update interval.
+
+The parts you usually customize are:
+
+- `substitutions`, device name, and friendly name.
+- `wifi`, `api`, and `ota` secrets.
+- `font` choices and sizes.
+- Home Assistant `sensor`, `binary_sensor`, `text_sensor`, or `time` entities that provide the data you want to draw.
+- The `display.lambda` block, where you design the actual ePaper screen layout.
+- Refresh behavior, such as `update_interval`, button-triggered refreshes, or deep sleep timing.
 
 ## Step 3: Connect to Home Assistant
 
