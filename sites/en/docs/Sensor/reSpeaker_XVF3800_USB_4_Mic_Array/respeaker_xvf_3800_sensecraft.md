@@ -1,6 +1,6 @@
 ---
-description: SenseCraft AI is a no-code/low-code AIoT platform from Seeed Studio that lets you deploy pre-trained AI models to edge devices like the reSpeaker XVF3800. With the wakeword "Lumio," this setup enables voice-controlled AI applications—no complex coding required.
-title: SenseCraft AI with reSpeaker XVF3800
+description: SenseCraft AI is a no-code/low-code AIoT platform from Seeed Studio that lets you deploy pre-trained AI models to edge devices like the reSpeaker . With the wakeword "Lumio," this setup enables voice-controlled AI applications—no complex coding required.
+title: SenseCraft AI with reSpeaker 
 keywords:
   - SenseCraft
   - reSpeaker XVF3800
@@ -19,7 +19,7 @@ url: https://wiki.seeedstudio.com/respeaker_xvf3800_sensecraft/
 
 ## Introduction
 
-SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker XVF3800. This guide focuses on configuring the reSpeaker XVF3800 for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
+SenseCraft AI is Seeed Studio's no-code/low-code AI platform that simplifies deploying pre-trained artificial intelligence models to edge devices such as the reSpeaker . This guide focuses on configuring the reSpeaker  for wakeword detection using the custom trigger "Lumio," enabling voice-activated control for your projects without writing complex code. With SenseCraft AI, you can quickly test, preview, and integrate wakeword events into your hardware workflows. The platform also allows you to create and upload your own custom models for detecting specific sound events and custom wakewords, giving you full flexibility to tailor voice interactions to your unique application needs.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -90,7 +90,7 @@ The model you are deploying is called **Lumos**. It is a lightweight speech reco
 
 1. A dialog box will appear with model details
 2. Click **Confirm** to proceed with flashing the model to your device
-3. Wait for a moment while the model is being flashed to the reSpeaker XVF3800
+3. Wait for a moment while the model is being flashed to the reSpeaker 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/sensecraft/sense_4.jpg" alt="pir" width={800} height="auto" /></p>
 
