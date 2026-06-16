@@ -114,6 +114,19 @@ If you cannot open the Web interface after connecting the Type-C cable, it is us
   Your browser does not support playing this video.
 </video>
 
+
+### Q2: After connecting the reCamera to the computer via the USB cable, the computer was unable to access the internet
+
+If your MAC computer fails to access the internet after connecting the reCamera via a USB cable, it is because the virtual network card will take over the WIFI of your MAC, preventing your MAC from connecting to the internet. Please follow the steps below to solve the problem:
+
+1. Open the ***System Settings of your MAC -> Network***.
+2. In the lower right corner (or the bottom right side), locate an icon which is a ***circle with three dots '...' inside*** (or a downward arrow, depending on your MAC version).
+3. Click ***Set Service Order...(Set Service Order...)***.
+4. In the popped-up list, drag the WIFI to the top to ensure it is placed before the USB virtual network card (such as USB_Gadget).
+5. Click "OK" to save. Then, when using the MAC for internet access, it will preferentially use the WIFI connection. Only when accessing the reCamera will it use the USB connection.
+
+---
+
 ## Technical Support and Product Discussion
 
 Thank you for choosing our products! We are here to provide you with various support to ensure your experience with our products is as smooth as possible. We offer multiple communication channels to meet different preferences and needs.
