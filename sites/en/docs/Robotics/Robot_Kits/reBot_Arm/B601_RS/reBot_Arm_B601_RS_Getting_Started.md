@@ -71,7 +71,7 @@ The content of this guide is racing towards you at the speed of light — stay t
 2. (Beta version) Let an agent help you initialize the robotic arm. Copy the following content and send it to the agent:
 
 ```text
-Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-RS-Skills/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
+Please follow the process in AGENTS.md (https://github.com/Welt-liu/reBot-B601-Agent-Guide/blob/main/en/AGENTS.md) to help the user complete the initialization of a new robotic arm.
 ```
 
   Note: If you purchased a pre-assembled kit, please tell the agent during the motor ID writing step: "I purchased a pre-assembled kit, please scan motors 1–7 to verify they are all online, do not rewrite the motor IDs."
@@ -214,8 +214,12 @@ Open the address [motorbridge-studio](https://motorbridge.github.io/motorbridge-
 
 
 ```bash
-motorbridge-gateway -- --bind 127.0.0.1:9002  
+motorbridge-gateway --bind 127.0.0.1:9002  
 ```
 
 
-Please refer to the video for usage.
+Please refer to the video for usage. Before operating the robotic arm, you need to reset the zero point again.
+
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/WcjDPm8GUDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
