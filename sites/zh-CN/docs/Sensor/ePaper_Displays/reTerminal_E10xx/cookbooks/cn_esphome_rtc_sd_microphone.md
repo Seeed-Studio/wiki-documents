@@ -1,10 +1,10 @@
 ---
-description: 适用于 reTerminal E1001 / E1002 的 ESPHome 使用手册——用于 PCF8563 RTC 时间同步、microSD 卡检测、板载 PDM 麦克风初始化以及组合硬件状态仪表盘的独立示例。
-title: 'ESPHome 使用手册：RTC、SD 卡与麦克风（reTerminal E 系列）'
+description: 适用于 reTerminal E1001 / E1002 的 ESPHome 菜谱 - 独立演示 PCF8563 RTC 时间同步、microSD 卡检测、板载 PDM 麦克风初始化，以及组合硬件状态仪表盘。
+title: 'ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）'
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_rtc_sd_microphone
 sidebar_position: 5
-sidebar_label: 'ESPHome - RTC, SD & Microphone'
+sidebar_label: 'ESPHome - RTC、SD 与麦克风'
 last_update:
   date: 06/12/2026
   author: Citric
@@ -16,29 +16,39 @@ url: https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_rtc_sd_microp
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ESPHome 使用手册：RTC、SD 卡与麦克风（reTerminal E 系列）
+# ESPHome 菜谱：RTC、SD 卡与麦克风（reTerminal E 系列）
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/251.jpeg" style={{width:1000, height:'auto'}}/></div><br />
 
 :::tip 前置条件
-本页面假设你已经完成了 [reTerminal E 系列的 ESPHome 显示使用手册](/cn/reterminal_e10xx_with_esphome)，并且你的设备已经在 Home Assistant 中在线。关于按键、蜂鸣器、LED、电池监控、SHT4x 和深度睡眠，请参阅 [ESPHome 使用手册：按键、蜂鸣器、LED、电池与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)。
+本页假设你已经完成了 [reTerminal E 系列的 ESPHome 显示菜谱](/cn/reterminal_e10xx_with_esphome)，并且你的设备已经在 Home Assistant 中在线。关于按键、蜂鸣器、LED、电池监控、SHT4x 和深度睡眠，请参阅 [ESPHome 菜谱：按键、蜂鸣器、LED、电池与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
+:::tip 在不搭建开发环境的情况下体验演示
+如果你想在搭建开发环境之前快速预览项目效果或体验基础演示固件，请打开 **[reTerminal E-Series Firmware Hub](https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/)**。你可以选择受支持的 reTerminal E 系列设备，并直接通过浏览器烧录演示固件。
 
-本使用手册在 reTerminal E 系列 ESPHome 示例的基础上，继续介绍三个在显示与 I/O 使用手册中尚未覆盖的板载硬件模块：
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-projects.github.io/OSHW-reTerminal-Series-E-D/" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 固件烧录工具 🖱️</font></span></strong>
+    </a>
+</div><br />
+:::
+
+本菜谱在 reTerminal E 系列 ESPHome 示例的基础上，继续介绍三个在显示与 I/O 菜谱中尚未覆盖的板载硬件模块：
 
 - **PCF8563 RTC** - 从板载 RTC 读取硬件时间，并从 Home Assistant 同步时间。
 - **microSD 卡槽** - 使能 SD 供电电源轨，并上报是否插入了卡。
 - **PDM 麦克风** - 使能板载麦克风供电电源轨，并通过 ESPHome 初始化 PDM 麦克风。
 
-下方每个小节都组织为一个独立的 ESPHome 演示示例。你可以复制一个完整的 YAML 示例，替换 API 和 OTA 占位符，然后直接从 ESPHome 上传。
+下面每一节都组织为一个小型的独立 ESPHome 演示。你可以复制一个完整的 YAML 示例，替换 API 和 OTA 占位符，然后直接从 ESPHome 上传。
 
 :::note 适用机型
-本页面中可直接复制的示例是为 **reTerminal E1001** 和 **reTerminal E1002** 编写的，与已测试的 ESPHome 硬件示例相匹配。板载麦克风示例适用于包含 PDM 麦克风硬件的机型；reTerminal E1004 不包含麦克风。
+本页中可直接复制的示例是为 **reTerminal E1001** 和 **reTerminal E1002** 编写的，与已测试的 ESPHome 硬件示例相匹配。板载麦克风示例适用于包含 PDM 麦克风硬件的机型；reTerminal E1004 不包含麦克风。
 :::
 
 ## 硬件能力
 
-本使用手册中的演示示例会用到以下引脚。
+本菜谱中的演示使用了以下引脚。
 
 <div class="table-center">
   <table align="center">
@@ -86,7 +96,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 :::caution 保护你的敏感信息
-这些示例使用了诸如 `REPLACE_WITH_YOUR_API_KEY` 和 `REPLACE_WITH_YOUR_OTA_PASSWORD` 之类的占位符。请不要公开你的真实 API 加密密钥、OTA 密码、Wi-Fi 密码或 Home Assistant 令牌。
+这些示例使用了诸如 `REPLACE_WITH_YOUR_API_KEY` 和 `REPLACE_WITH_YOUR_OTA_PASSWORD` 之类的占位符。不要公开你的真实 API 加密密钥、OTA 密码、Wi-Fi 密码或 Home Assistant 令牌。
 :::
 
 ## RTC 时间同步
@@ -282,10 +292,10 @@ display:
 </TabItem>
 </Tabs>
 
-该配置将会：
+该配置：
 
 - 在启动时读取一次 PCF8563 RTC。
-- 在设备连接后，将 Home Assistant 的时间作为唯一可信时间源。
+- 在设备连接后，将 Home Assistant 的时间作为唯一可信来源。
 - 将 Home Assistant 的时间写回到硬件 RTC。
 - 在电子纸屏幕上显示当前日期和时间。
 
@@ -690,7 +700,7 @@ display:
 
 - 通过 `GPIO38` 启用麦克风电源。
 - 在电子纸屏幕上显示 PDM 时钟引脚 `GPIO42` 和数据引脚 `GPIO41`。
-- 使主演示尽量接近 RTC 和 microSD 演示，以便在添加音频组件之前先验证显示刷新。
+- 使主演示与 RTC 和 microSD 演示保持接近，这样在添加音频组件之前可以先验证显示刷新。
 
 如果你想将板载 PDM 麦克风暴露给 ESPHome，请在确认屏幕演示能够正确刷新后，添加以下可选代码块：
 
@@ -722,7 +732,7 @@ microphone:
 2. 来自 `GPIO15` 的 microSD 卡插入状态。
 3. PDM 麦克风初始化状态。
 
-为了更好地理解，建议先运行单功能演示，再尝试此组合示例。
+为便于理解，建议先运行单功能演示，再尝试此组合示例。
 
 <details>
 <summary>点击此处查看完整代码</summary>
@@ -1017,37 +1027,17 @@ display:
 
 当固件运行时，屏幕会在一个页面上显示 RTC 时间、SD 卡状态和麦克风初始化状态。
 
-下图展示了在 reTerminal E1002 上的预期结果。相同的演示在 reTerminal E1001 和 E1002 上都可以运行。主要区别在于显示输出：E1001 显示的是单色结果，而 E1002 可以显示彩色结果。
+下图展示了在 reTerminal E1002 上的预期结果。相同的演示在 reTerminal E1001 和 E1002 上都可以运行。主要区别在于显示输出：E1001 显示单色结果，而 E1002 可以显示彩色结果。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/255.jpeg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/250.jpeg" style={{width:700, height:'auto'}}/></div>
 
 ## 常见问题
 
 ### 问题 1：为什么屏幕显示 “RTC: waiting for sync”？
 
-设备尚未接收到有效时间。请确认 Wi-Fi 已连接、ESPHome API 已连接到 Home Assistant，并且 Home Assistant 的系统时间是正确的。在 Home Assistant 完成时间同步后，ESPHome 会将时间写回到 PCF8563 RTC。
+设备尚未接收到有效时间。请确认 Wi-Fi 已连接、ESPHome API 已连接到 Home Assistant，并且 Home Assistant 的系统时间正确。在 Home Assistant 同步时间后，ESPHome 会将时间写回到 PCF8563 RTC。
 
-### 问题 2：为什么断电后 RTC 时间会消失？
-
-当主电池和 USB 供电被移除时，PCF8563 需要一颗 CR1220 纽扣电池来保持计时。请安装或更换纽扣电池，重新启动设备，并让 Home Assistant 同步一次时间。
-
-### 问题 3：为什么 Home Assistant 总是显示 SD 卡未检测到？
-
-请检查以下三点：
-
-- 确认卡已完全插入卡槽。
-- 确保在启动过程中 `GPIO16` 上的 `bsp_sd_enable` 已打开。
-- 保持 `GPIO15` 配置为 `INPUT_PULLUP` 且 `inverted: true`，因为检测信号为低电平有效。
-
-### 问题 4：ESPHome 能否在 microSD 卡上读写文件？
-
-本页面只使用 ESPHome 打开 SD 供电轨并读取卡检测引脚。诸如列出文件、读取图像、创建文件夹或保存音频文件等通用文件操作，更适合使用 Arduino SD 卡示例来完成。
-
-### 问题 5：ESPHome 能否将麦克风音频直接录制到 SD 卡？
-
-仅凭本页面展示的简单 YAML 无法实现。麦克风示例只初始化了板载 PDM 麦克风硬件。如果你的目标是将 WAV 文件录制到 SD 卡，请改用 Arduino 的麦克风和 SD 示例。
-
-### 问题 6：为什么通过 USB 没有串口日志？
+### 问题 2：为什么通过 USB 没有串口日志？
 
 reTerminal E 系列在 UART0 上使用 CH340K USB 转 UART 转换芯片。请在你的 YAML 中保留以下日志设置：
 
@@ -1056,25 +1046,25 @@ logger:
   hardware_uart: UART0
 ```
 
-### 问题 3：为什么在 RTC 或麦克风示例中屏幕不刷新？
+### 问题 3：为什么在 RTC 或麦克风演示中屏幕不刷新？
 
-如果插入了 microSD 卡，请先取出卡并重启设备。除了 microSD 卡检测示例外，本页面中的其他示例都不需要插入卡。保持插卡可能会影响共享的 SPI 总线，从而导致电子纸屏幕无法正常刷新。
+如果插入了 microSD 卡，请先取出卡并重启设备。除了 microSD 卡检测演示外，本页中的其他演示都不需要插入卡。保持插卡状态可能会影响共享的 SPI 总线，从而导致电子纸屏幕无法正确刷新。
 
-取出卡后，请重新上传或重启 RTC 或麦克风示例。电子纸屏幕应能正常刷新。
+取出卡后，再次上传或重启 RTC 或麦克风演示。电子纸屏幕应能正常刷新。
 
 ## 资源
 
-- **[Wiki]** [ESPHome 使用手册：显示基础](/cn/reterminal_e10xx_with_esphome)
-- **[Wiki]** [ESPHome 使用手册：按键、蜂鸣器、LED、电池与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)
+- **[Wiki]** [ESPHome Cookbook：显示基础](/cn/reterminal_e10xx_with_esphome)
+- **[Wiki]** [ESPHome Cookbook：按键、蜂鸣器、LED、电池与低功耗](/cn/reterminal_e10xx_with_esphome_advanced)
 - **[Wiki]** [与 ESPHome 协同工作](/cn/epaper_work_with_esphome)
-- **[Wiki]** [Arduino 使用手册：板载外设](/cn/reterminal_e10xx_with_arduino_peripherals)
-- **[Wiki]** [Arduino 使用手册：RTC、低功耗、音频与触摸](/cn/reterminal_e10xx_with_arduino_peripherals_2)
-- **[Documentation]** [ESPHome Time 组件](https://esphome.io/components/time/)
-- **[Documentation]** [ESPHome I2S Audio 组件](https://esphome.io/components/i2s_audio.html)
+- **[Wiki]** [Arduino Cookbook：板载外设](/cn/reterminal_e10xx_with_arduino_peripherals)
+- **[Wiki]** [Arduino Cookbook：RTC、低功耗、音频与触摸](/cn/reterminal_e10xx_with_arduino_peripherals_2)
+- **[Documentation]** [ESPHome 时间组件](https://esphome.io/components/time/)
+- **[Documentation]** [ESPHome I2S 音频组件](https://esphome.io/components/i2s_audio.html)
 
 ## 技术支持与产品讨论
 
-感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们将为您提供多种支持，确保您在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
