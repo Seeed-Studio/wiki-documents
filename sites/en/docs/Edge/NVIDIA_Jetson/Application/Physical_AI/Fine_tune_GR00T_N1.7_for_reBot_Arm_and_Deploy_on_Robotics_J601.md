@@ -3,9 +3,10 @@ description: This wiki explains how to fine-tune NVIDIA Isaac GR00T N1.7 for the
 title: Fine-tune GR00T N1.7 for reBot Arm and Deploy on Jetson Thor
 keywords:
   - Jetson Thor
-  - Robotics
+  - Robotics J601
   - reBot Arm
   - gr00t n1.7
+  - reComputer
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /fine_tune_gr00t_n1.7_for_rebot_arm_and_deploy_on_robotics_j601
 sku:  E26052001
